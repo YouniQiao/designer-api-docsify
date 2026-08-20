@@ -1,6 +1,12 @@
 # AudioVolumeGroupManager
 
-This interface implements volume management for an audio group. Before calling any API in AudioVolumeGroupManager, you must use [getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager) to obtain an AudioVolumeGroupManager instance. &gt; **NOTE：**&gt; &gt; - The initial APIs of this interface are supported since API version 9.
+This interface implements volume management for an audio group.
+
+Before calling any API in AudioVolumeGroupManager, you must use [getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager) to obtain an AudioVolumeGroupManager instance.
+
+> **NOTE：**
+> 
+> - The initial APIs of this interface are supported since API version 9.
 
 **Since:** 23
 
@@ -45,9 +51,9 @@ Adjusts system volume by step for target volume type. This method uses an asynch
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by callback. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by callback. |
 
 **Examples**
@@ -99,9 +105,9 @@ Adjusts system volume by step for target volume type. This method uses a promise
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by promise. |
 
 **Examples**
@@ -145,9 +151,9 @@ Adjusts system volume by step, volume type is decided by system. This method use
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by callback. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by callback. |
 
 **Examples**
@@ -199,9 +205,9 @@ Adjusts system volume by step, volume type is decided by system. This method use
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by promise. |
 
 **Examples**
@@ -248,9 +254,9 @@ Obtains the active volume type in the calling moment. This method returns in syn
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
 **Examples**
 
@@ -410,10 +416,10 @@ Mutes or unmutes the microphone. This method uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 **Examples**
 
@@ -458,10 +464,10 @@ Mutes or unmutes the microphone. This method uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters missing. 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters missing. 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 **Examples**
 

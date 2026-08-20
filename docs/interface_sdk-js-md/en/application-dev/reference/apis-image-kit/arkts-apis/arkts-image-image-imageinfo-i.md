@@ -76,7 +76,11 @@ Whether the image is an HDR image. The value **true** means an HDR image, and **
 mimeType: string
 ```
 
-Actual image format (MIME type). The supported formats for image decoding and image encoding are different. Do not directly use the actual image format obtained after decoding as the value of **format** in [PackingOption](arkts-image-image-packingoption-i.md) during image encoding. You can use the **supportedFormats** property of ImageSource and ImagePacker to view the supported formats for decoding and encoding.
+Actual image format (MIME type).
+
+The supported formats for image decoding and image encoding are different. Do not directly use the actual image format obtained after decoding as the value of **format** in [PackingOption](arkts-image-image-packingoption-i.md) during image encoding.
+
+You can use the **supportedFormats** property of ImageSource and ImagePacker to view the supported formats for decoding and encoding.
 
 **Type:** string
 

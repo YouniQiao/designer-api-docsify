@@ -2,6 +2,8 @@
 
 GwpAsan Options.
 
+@interface GwpAsanOptions
+
 **Since:** 23
 
 <!--Device-hidebug-interface GwpAsanOptions--><!--Device-hidebug-interface GwpAsanOptions-End-->

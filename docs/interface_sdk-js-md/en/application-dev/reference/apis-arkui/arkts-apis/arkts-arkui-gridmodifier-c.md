@@ -2,6 +2,8 @@
 
 Defines Grid Modifier
 
+@extends GridAttribute @implements AttributeModifier&lt;GridAttribute&gt;
+
 **Inheritance/Implementation:** GridModifier extends GridAttribute and implements AttributeModifier<GridAttribute>
 
 **Since:** 20

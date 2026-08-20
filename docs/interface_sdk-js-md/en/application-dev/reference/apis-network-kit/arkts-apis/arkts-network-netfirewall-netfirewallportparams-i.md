@@ -1,4 +1,4 @@
-# NetFirewallPortParams(Network Firewall)
+# NetFirewallPortParams
 
 Defines the port parameters of a firewall rule.
 

@@ -61,7 +61,7 @@ class UIServiceExt extends UIServiceExtensionAbility {
 onCreate(want: Want): void
 ```
 
-[UIServiceExtensionContext](../../apis-na/arkts-apis/arkts-na-uiserviceextensioncontext-c-sys.md)生命周期创建接口，执行初始化 业务逻辑操作。
+[UIServiceExtensionContext](../../apis-default/arkts-apis/arkts-uiserviceextensioncontext-c-sys.md)生命周期创建接口，执行初始化 业务逻辑操作。
 
 **起始版本：** 23
 
@@ -115,7 +115,7 @@ onData(proxy: UIServiceHostProxy, data: Record<string, Object>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | proxy | [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) | 是 | 往客户端发送数据的Proxy。 |
-| data | Record&lt;string, Object&gt; | 是 | 表示接收到的数据。 |
+| data | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | 表示接收到的数据。 |
 
 **示例**
 
@@ -152,7 +152,7 @@ onData(proxy: UIServiceHostProxy, data: Record<string, RecordData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | proxy | [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) | 是 | 往客户端发送数据的Proxy。 |
-| data | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | 表示接收到的数据。 |
+| data | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | 表示接收到的数据。 |
 
 ## onDestroy
 
@@ -340,7 +340,7 @@ context: UIServiceExtensionContext
 
 UIServiceExtension的上下文环境，继承自[ExtensionContext](arkts-ability-app-ability-extensionability-extensionability-c.md)。
 
-**类型：** [UIServiceExtensionContext](../../apis-na/arkts-apis/arkts-na-uiserviceextensioncontext-c-sys.md)
+**类型：** [UIServiceExtensionContext](../../apis-default/arkts-apis/arkts-uiserviceextensioncontext-c-sys.md)
 
 **起始版本：** 23
 

@@ -2,6 +2,8 @@
 
 表示媒体资源的播放状态的枚举。
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-avMusicTemplate-enum PlaybackState--><!--Device-avMusicTemplate-enum PlaybackState-End-->
@@ -14,7 +16,9 @@
 PLAYBACK_STATE_PREPARE = 0
 ```
 
-准备中状态。 表示媒体文件尚未准备好播放，媒体正在加载或缓冲中。
+准备中状态。
+
+表示媒体文件尚未准备好播放，媒体正在加载或缓冲中。
 
 **起始版本：** 23
 

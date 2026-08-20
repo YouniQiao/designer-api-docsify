@@ -1,4 +1,4 @@
-# KeyCode(键值)
+# KeyCode
 
 按键设备的键值，按键设备包括键盘、光盘、游戏手柄等。
 
@@ -84,7 +84,11 @@ KEYCODE_SEARCH = 9
 KEYCODE_MEDIA_PLAY_PAUSE = 10
 ```
 
-多媒体键：播放/暂停。 与KEYCODE_PLAYPAUSE的区别为： KEYCODE_PLAYPAUSE是较早的定义，KEYCODE_MEDIA_PLAY_PAUSE为现代媒体键设备设计，常见于较新的媒体键设备。
+多媒体键：播放/暂停。
+
+与KEYCODE_PLAYPAUSE的区别为：
+
+KEYCODE_PLAYPAUSE是较早的定义，KEYCODE_MEDIA_PLAY_PAUSE为现代媒体键设备设计，常见于较新的媒体键设备。
 
 **起始版本：** 23
 

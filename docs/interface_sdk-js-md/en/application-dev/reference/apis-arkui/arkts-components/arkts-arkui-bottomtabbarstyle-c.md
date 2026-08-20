@@ -33,7 +33,7 @@ A constructor used to create a **BottomTabBarStyle** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | ResourceStr \| TabBarSymbol | Yes | Image for the tab.<br>**Since:** 12 |
+| icon | ResourceStr \| [TabBarSymbol](arkts-arkui-tabbarsymbol-c.md) | Yes | Image for the tab.<br>**Since:** 12 |
 | text | ResourceStr | Yes | Text for the tab. |
 
 ## iconStyle
@@ -178,7 +178,7 @@ Static constructor used to create a **BottomTabBarStyle** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | ResourceStr \| TabBarSymbol | Yes | Image for the tab.<br>**Since:** 12 |
+| icon | ResourceStr \| [TabBarSymbol](arkts-arkui-tabbarsymbol-c.md) | Yes | Image for the tab.<br>**Since:** 12 |
 | text | ResourceStr | Yes | Text for the tab. |
 
 **Return value:**

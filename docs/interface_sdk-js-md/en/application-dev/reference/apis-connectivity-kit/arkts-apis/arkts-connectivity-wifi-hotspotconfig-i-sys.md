@@ -2,6 +2,8 @@
 
 Wi-Fi hotspot configuration information.
 
+@interface HotspotConfig
+
 **Since:** 7
 
 **Deprecated since:** 9

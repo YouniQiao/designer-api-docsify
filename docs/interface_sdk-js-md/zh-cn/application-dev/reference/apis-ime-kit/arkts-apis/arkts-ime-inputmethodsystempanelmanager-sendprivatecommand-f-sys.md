@@ -28,7 +28,7 @@ function sendPrivateCommand(commandData: Record<string, CommandDataType>): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| commandData | Record&lt;string, CommandDataType&gt; | 是 | 将要发送的命令数据。最大大小32KB。 |
+| commandData | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, CommandDataType&gt; | 是 | 将要发送的命令数据。最大大小32KB。 |
 
 **返回值：**
 
@@ -40,6 +40,6 @@ function sendPrivateCommand(commandData: Record<string, CommandDataType>): Promi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800026](../errorcode-inputmethod-framework.md#12800026-输入法系统面板错误) | input method system panel error. Possible causes: 1. the system panel not connected. 2. ipc failed due to the large amount of data transferred or other reasons. 3. the caller is not system panel. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+| [12800026](../errorcode-inputmethod-framework.md#12800026-输入法系统面板错误) | input method system panel error. Possible causes: 1. the system panel not connected. 2. ipc failed due to the large amount of data transferred or other reasons. 3. the caller is not system panel. |
 

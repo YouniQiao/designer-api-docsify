@@ -1,6 +1,13 @@
 # CustomContentDialog
 
-自定义内容区弹出框，同时支持定义操作区按钮样式。 &gt; **说明：** &gt; &gt; 当弹框高度不足时，触发全局滚动的规格为contentBuilder被压缩，压缩至小于100vp时启动全局滚动。 &gt; &gt; CustomContentDialog内容区的滚动需由开发者自定义，内容区自定义滚动必须配合属性nestedScroll，nestedScroll({ scrollForward: &gt; NestedScrollMode.PARALLEL, scrollBackward: NestedScrollMode.PARALLEL })
+自定义内容区弹出框，同时支持定义操作区按钮样式。
+
+> **说明：**
+> 
+> 当弹框高度不足时，触发全局滚动的规格为contentBuilder被压缩，压缩至小于100vp时启动全局滚动。
+> 
+> CustomContentDialog内容区的滚动需由开发者自定义，内容区自定义滚动必须配合属性nestedScroll，nestedScroll({ scrollForward:
+> NestedScrollMode.PARALLEL, scrollBackward: NestedScrollMode.PARALLEL })
 
 **起始版本：** 12
 
@@ -23,7 +30,7 @@ buttons?: ButtonOptions[]
 
 弹出框操作区按钮，最多支持4个按钮。
 
-**类型：** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)[]
+**类型：** [ButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-dialog-buttonoptions-c.md)[]
 
 **起始版本：** 12
 
@@ -81,7 +88,9 @@ contentAreaPadding?: Padding
 controller: CustomDialogController
 ```
 
-弹出框控制器，用于控制弹出框的显示和隐藏。 **说明：** 未使用@Require装饰，构造时不强制校验参数。
+弹出框控制器，用于控制弹出框的显示和隐藏。
+
+**说明：** 未使用@Require装饰，构造时不强制校验参数。
 
 **类型：** CustomDialogController
 
@@ -121,7 +130,11 @@ localizedContentAreaPadding?: LocalizedPadding
 primaryTitle?: ResourceStr
 ```
 
-弹出框标题。 默认不设置或设置为undefined，弹出框标题不显示。 **说明：** 标题超过两行会显示“...”。
+弹出框标题。
+
+默认不设置或设置为undefined，弹出框标题不显示。
+
+**说明：** 标题超过两行会显示“...”。
 
 **类型：** ResourceStr
 
@@ -141,7 +154,11 @@ primaryTitle?: ResourceStr
 secondaryTitle?: ResourceStr
 ```
 
-弹出框辅助文本。 默认不设置或设置为undefined，弹出框辅助文本不显示。 **说明：** 辅助文本超过两行会显示“...”。
+弹出框辅助文本。
+
+默认不设置或设置为undefined，弹出框辅助文本不显示。
+
+**说明：** 辅助文本超过两行会显示“...”。
 
 **类型：** ResourceStr
 
@@ -163,7 +180,7 @@ theme?: Theme | CustomTheme
 
 主题信息，可以是CustomTheme或从onWillApplyTheme中获取的Theme实例。
 
-**类型：** [Theme](../../apis-na/arkts-apis/arkts-na-arkui-theme-theme-i.md) \| [CustomTheme](../../apis-na/arkts-apis/arkts-na-arkui-theme-customtheme-i.md)
+**类型：** [Theme](../../apis-default/arkts-apis/arkts-arkui-theme-theme-i.md) \| [CustomTheme](../../apis-default/arkts-apis/arkts-arkui-theme-customtheme-i.md)
 
 **起始版本：** 12
 
@@ -181,7 +198,9 @@ theme?: Theme | CustomTheme
 themeColorMode?: ThemeColorMode
 ```
 
-自定义弹出框深浅色模式。 默认值：ThemeColorMode.SYSTEM
+自定义弹出框深浅色模式。
+
+默认值：ThemeColorMode.SYSTEM
 
 **类型：** ThemeColorMode
 

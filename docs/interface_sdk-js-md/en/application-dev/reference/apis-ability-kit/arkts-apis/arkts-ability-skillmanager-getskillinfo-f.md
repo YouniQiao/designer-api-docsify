@@ -47,9 +47,9 @@ Obtains SkillInfo of a specified application based on bundleName, moduleName and
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17700093 | The specified skillName is not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module is not found. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
+| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module is not found. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
+| 17700093 | The specified skillName is not found. |
 

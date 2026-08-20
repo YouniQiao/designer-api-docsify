@@ -43,7 +43,13 @@ A constructor used to create an **ArcSliderStyleOptions** instance.
   activeTrackThickness?: number
 ```
 
-Stroke width of the arc slider when it is in an enlarged state, in vp. Default value: **24** Value range: [24, 36]. If the value is invalid, the default value is used.
+Stroke width of the arc slider when it is in an enlarged state, in vp.
+
+Default value: **24**
+
+Value range: [24, 36]. If the value is invalid, the default value is used.
+
+@Trace
 
 **Type:** number
 
@@ -64,7 +70,11 @@ Stroke width of the arc slider when it is in an enlarged state, in vp. Default v
   selectedColor?: string
 ```
 
-Highlight color of the stroke. Default value: **#FF5EA1FF**
+Highlight color of the stroke.
+
+Default value: **#FF5EA1FF**
+
+@Trace
 
 **Type:** string
 
@@ -85,7 +95,13 @@ Highlight color of the stroke. Default value: **#FF5EA1FF**
   trackBlur?: number
 ```
 
-Blur effect applied to the stroke background, in vp. Default value: **20** If a value less than 0 is set, the default is used.
+Blur effect applied to the stroke background, in vp.
+
+Default value: **20**
+
+If a value less than 0 is set, the default is used.
+
+@Trace
 
 **Type:** number
 
@@ -106,7 +122,11 @@ Blur effect applied to the stroke background, in vp. Default value: **20** If a 
   trackColor?: string
 ```
 
-Background color of the stroke. Default value: **#33FFFFFF**
+Background color of the stroke.
+
+Default value: **#33FFFFFF**
+
+@Trace
 
 **Type:** string
 
@@ -127,7 +147,13 @@ Background color of the stroke. Default value: **#33FFFFFF**
   trackThickness?: number
 ```
 
-Stroke width of the arc slider in the normal state, in vp. Default value: **5** Value range: [5, 16]. If the value is invalid, the default value is used.
+Stroke width of the arc slider in the normal state, in vp.
+
+Default value: **5**
+
+Value range: [5, 16]. If the value is invalid, the default value is used.
+
+@Trace
 
 **Type:** number
 

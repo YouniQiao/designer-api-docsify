@@ -87,8 +87,8 @@ Unregisters the callback listener for **connectionAccepted** events. This API us
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
 ## offServerStopped
 
@@ -118,8 +118,8 @@ Unregisters the callback listener for **serverStopped** events. This API uses an
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
 ## off('connectionAccepted')
 
@@ -150,8 +150,8 @@ Unregisters the callback listener for **connectionAccepted** event. This API mus
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
 **Examples**
 
@@ -209,8 +209,8 @@ Unregisters the callback listener for **serverStopped** event. This API must be 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
 **Examples**
 
@@ -267,8 +267,8 @@ Registers a callback listener for **connectionAccepted** events. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
 ## onServerStopped
 
@@ -298,8 +298,8 @@ Registers a callback listener for **serverStopped** events. This API uses an asy
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
 ## on('connectionAccepted')
 
@@ -330,8 +330,8 @@ Registers a callback listener for **connectionAccepted** events. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
 **Examples**
 
@@ -389,8 +389,8 @@ Registers a callback listener for **serverStopped** events. This API uses an asy
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
 **Examples**
 
@@ -441,9 +441,9 @@ Starts a server so that it can be connected by the client. A maximum of 10 serve
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390300](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390300-internal-error) | Internal error. |
-| [32390202](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390202-number-of-services-exceeding-the-limit) | The number of servers exceeds the limit. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390202](../errorcode-link-enhance.md#32390202-number-of-services-exceeding-the-limit) | The number of servers exceeds the limit. |
+| [32390300](../errorcode-link-enhance.md#32390300-internal-error) | Internal error. |
 
 **Examples**
 

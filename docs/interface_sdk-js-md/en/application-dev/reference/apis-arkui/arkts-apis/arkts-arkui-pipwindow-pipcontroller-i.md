@@ -1,6 +1,8 @@
 # PiPController
 
-Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks. Before calling any of the following APIs, you must use [PiPWindow.create()](arkts-arkui-pipwindow-create-f.md) to create a PiPController instance.
+Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.
+
+Before calling any of the following APIs, you must use [PiPWindow.create()](arkts-arkui-pipwindow-create-f.md) to create a PiPController instance.
 
 **Since:** 26.0.0
 
@@ -765,7 +767,9 @@ this.pipController.on('stateChange', (state: PiPWindow.PiPState, reason: string)
 setAutoStartEnabled(enable: boolean): void
 ```
 
-Sets whether to automatically start the PiP window when the application's main window which can start the PiP window transitions to the background. By default, the PiP window is not automatically started. If the XComponent approach is used to implement PiP and the **Navigation** component is used for route management , the system caches the top stack information with the specified navigation ID upon the first call of **setAutoStartEnabled(true)**.
+Sets whether to automatically start the PiP window when the application's main window which can start the PiP window transitions to the background. By default, the PiP window is not automatically started.
+
+If the XComponent approach is used to implement PiP and the **Navigation** component is used for route management , the system caches the top stack information with the specified navigation ID upon the first call of **setAutoStartEnabled(true)**.
 
 **Since:** 26.0.0
 
@@ -779,7 +783,7 @@ Sets whether to automatically start the PiP window when the application's main w
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | If the PiP window needs to be automatically started when the application's main window transitions to the background, set this parameter to **true**. Otherwise, set this parameter to **false**. If the PiP feature under **Settings** &gt; **System** &gt; **Multi-window** is disabled, the PiP window will not be automatically started when the application's main window transitions to the background even if this parameter is set to **true**. |
+| enable | boolean | Yes | If the PiP window needs to be automatically started when the application's main window transitions to the background, set this parameter to **true**. Otherwise, set this parameter to **false**. If the PiP feature under **Settings**    > **System** > **Multi-window** is disabled, the PiP window will not be automatically started when the application's main window transitions to the background even if this parameter is set to **true**. |
 
 **Examples**
 
@@ -851,11 +855,11 @@ Starts a PiP window. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300034](../errorcode-window.md#1300034-operation-of-the-float-view-conflicts-with-those-of-other-floating-windows) | This operation conflicts with other floating windows. Possible cause: App has already started float view.<br>**Applicable version:** 26.0.0 and later |
-| [1300015](../errorcode-window.md#1300015-repeated-pip-operations) | Repeated PiP operation. |
-| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause: Internal error, failed to show the PiP window. such as insufficient resources or abnormal window service. |
-| [1300013](../errorcode-window.md#1300013-failure-in-creating-a-pip-window) | Failed to create the PiP window. Possible causes: <br>1.PiP configuration parameters are invalid, such as pipOption or context is null. <br>2.The XComponentController or main window is null. <br>3.The main window is not shown (non-auto-start scenario). <br>4.Navigation component operation failed. |
 | [1300012](../errorcode-window.md#1300012-abnormal-pip-window-status) | The PiP window state is abnormal. Possible causes: <br>1.The PiP controller has been destroyed. <br>2.The PiP window is not created or has been destroyed. |
+| [1300013](../errorcode-window.md#1300013-failure-in-creating-a-pip-window) | Failed to create the PiP window. Possible causes: <br>1.PiP configuration parameters are invalid, such as pipOption or context is null. <br>2.The XComponentController or main window is null. <br>3.The main window is not shown (non-auto-start scenario). <br>4.Navigation component operation failed. |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause: Internal error, failed to show the PiP window. such as insufficient resources or abnormal window service. |
+| [1300015](../errorcode-window.md#1300015-repeated-pip-operations) | Repeated PiP operation. |
+| [1300034](../errorcode-window.md#1300034-operation-of-the-float-view-conflicts-with-those-of-other-floating-windows) | This operation conflicts with other floating windows. Possible cause: App has already started float view.<br>**Applicable version:** 26.0.0 and later |
 
 **Examples**
 
@@ -896,8 +900,8 @@ Stops a PiP window. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [1300011](../errorcode-window.md#1300011-failure-in-destroying-a-pip-window) | Failed to destroy the PiP window. Possible cause: Internal error, the window type is not a PiP window. |
-| [1300015](../errorcode-window.md#1300015-repeated-pip-operations) | Repeated PiP operation. |
 | [1300012](../errorcode-window.md#1300012-abnormal-pip-window-status) | The PiP window state is abnormal. Possible cause: The PiP window is not created or has been destroyed. |
+| [1300015](../errorcode-window.md#1300015-repeated-pip-operations) | Repeated PiP operation. |
 
 **Examples**
 

@@ -1,4 +1,4 @@
-# DeleteStorageOptions(数据存储)
+# DeleteStorageOptions
 
 **起始版本：** 3
 

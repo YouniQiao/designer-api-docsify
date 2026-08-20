@@ -2,6 +2,8 @@
 
 This enumeration value is used to identify various types of business ability info
 
+@enum { number }
+
 **Since:** 23
 
 <!--Device-businessAbilityRouter-export enum BusinessType--><!--Device-businessAbilityRouter-export enum BusinessType-End-->

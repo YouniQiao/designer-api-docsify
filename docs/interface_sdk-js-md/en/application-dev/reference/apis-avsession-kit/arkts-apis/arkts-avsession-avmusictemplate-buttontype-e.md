@@ -2,6 +2,8 @@
 
 Enumeration of button type.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-avMusicTemplate-enum ButtonType--><!--Device-avMusicTemplate-enum ButtonType-End-->

@@ -12,7 +12,11 @@ import { systemManager } from '@kit.MDMKit';
 function notifyUpdatePackages(admin: Want, packageInfo: UpdatePackageInfo): Promise<void>
 ```
 
-Notifies the system of the update packages. In intranet updates, call this API to notify the system of the update packages, and then call [systemManager.setOtaUpdatePolicy](arkts-mdm-systemmanager-setotaupdatepolicy-f.md) to set the update policy. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is time-consuming. Subsequent calls to other synchronous APIs in the application main thread must wait &gt; for the asynchronous return of this API.
+Notifies the system of the update packages. In intranet updates, call this API to notify the system of the update packages, and then call [systemManager.setOtaUpdatePolicy](arkts-mdm-systemmanager-setotaupdatepolicy-f.md) to set the update policy. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is time-consuming. Subsequent calls to other synchronous APIs in the application main thread must wait &gt; for the asynchronous return of this API.
 
 **Since:** 12
 
@@ -41,11 +45,11 @@ Notifies the system of the update packages. In intranet updates, call this API t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9201004](../errorcode-enterpriseDeviceManager.md#9201004-update-package-not-exist-or-fails-to-be-parsed) | The update packages do not exist or analyzing failed. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [9201004](../errorcode-enterpriseDeviceManager.md#9201004-update-package-not-exist-or-fails-to-be-parsed) | The update packages do not exist or analyzing failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 

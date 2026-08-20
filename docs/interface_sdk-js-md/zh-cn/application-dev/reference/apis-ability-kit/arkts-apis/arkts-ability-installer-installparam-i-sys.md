@@ -202,7 +202,11 @@ userId?: int
 verifyCodeParams?: Array<VerifyCodeParam>
 ```
 
-代码签名文件参数，默认值为空。 **说明：** 从API version 10开始支持，从API version 11开始不再维护，应用的代码签名文件将集成到安装包中，不再需要通过本接口指定安装包的代码签名文件。
+代码签名文件参数，默认值为空。
+
+**说明：**
+
+从API version 10开始支持，从API version 11开始不再维护，应用的代码签名文件将集成到安装包中，不再需要通过本接口指定安装包的代码签名文件。
 
 **类型：** Array&lt;[VerifyCodeParam](arkts-ability-installer-verifycodeparam-i-sys.md)&gt;
 

@@ -2,6 +2,8 @@
 
 用于创建可在共享RenderContext的多个场景（[Scene](arkts-arkgraphics3d-scene-c.md)）中共享的渲染资源。
 
+@interface RenderResourceFactory
+
 **起始版本：** 23
 
 <!--Device-unnamed-export interface RenderResourceFactory--><!--Device-unnamed-export interface RenderResourceFactory-End-->

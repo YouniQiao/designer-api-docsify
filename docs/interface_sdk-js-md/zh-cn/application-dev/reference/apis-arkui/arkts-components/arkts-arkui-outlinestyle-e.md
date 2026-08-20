@@ -2,6 +2,8 @@
 
 外描边样式。
 
+@enum { number }
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare enum OutlineStyle--><!--Device-unnamed-declare enum OutlineStyle-End-->

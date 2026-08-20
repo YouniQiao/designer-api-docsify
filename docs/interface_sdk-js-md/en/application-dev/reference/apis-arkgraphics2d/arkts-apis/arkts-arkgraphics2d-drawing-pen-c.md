@@ -1,6 +1,12 @@
 # Pen
 
-Defines a pen, which is used to describe the style and color to outline a shape. &gt; **NOTE：**&gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - The module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
+Defines a pen, which is used to describe the style and color to outline a shape.
+
+> **NOTE：**
+> 
+> - This module uses the physical pixel unit, px.
+> 
+> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
 
 **Since:** 23
 

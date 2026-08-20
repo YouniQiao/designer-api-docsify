@@ -39,6 +39,6 @@ import { sim } from '@kit.TelephonyKit';
 
 
 let simLabel: sim.SimLabel = sim.getSimLabelSync(0);
-console.info(`The sim state is:` + simLabel);
+console.info(`The sim label is:` + simLabel);
 ```
 

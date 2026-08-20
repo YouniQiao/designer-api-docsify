@@ -1,4 +1,4 @@
-# KeysInfo(Defines the DRM capability.)
+# KeysInfo
 
 Defines the status information of a media key.
 

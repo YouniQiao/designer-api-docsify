@@ -40,7 +40,9 @@ Date options.
 displayMode?: DisplayMode
 ```
 
-Display mode of the picker. Default value: DisplayMode.DATE
+Display mode of the picker.
+
+Default value: DisplayMode.DATE
 
 **Type:** [DisplayMode](arkts-arkui-arkui-advanced-datepickercomponent-displaymode-e.md)
 

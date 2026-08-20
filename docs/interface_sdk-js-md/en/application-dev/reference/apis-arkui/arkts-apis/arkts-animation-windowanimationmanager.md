@@ -2,6 +2,8 @@
 
 Window animation manager.
 
+@namespace windowAnimationManager
+
 **Since:** 23
 
 <!--Device-unnamed-declare namespace windowAnimationManager--><!--Device-unnamed-declare namespace windowAnimationManager-End-->

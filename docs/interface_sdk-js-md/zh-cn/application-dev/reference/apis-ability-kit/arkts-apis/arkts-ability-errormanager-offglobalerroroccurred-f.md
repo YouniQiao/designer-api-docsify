@@ -12,7 +12,9 @@ import { errorManager } from '@kit.AbilityKit';
 function off(type: 'globalErrorOccurred', observer?: GlobalObserver): void
 ```
 
-注销错误观测器，注销之前注册在同一线程的callback全局监听。 如果传入的回调不在通过on方法注册的回调队列中，将抛出16300004错误码，因此建议使用try-catch逻辑进行处理。
+注销错误观测器，注销之前注册在同一线程的callback全局监听。
+
+如果传入的回调不在通过on方法注册的回调队列中，将抛出16300004错误码，因此建议使用try-catch逻辑进行处理。
 
 **起始版本：** 18
 

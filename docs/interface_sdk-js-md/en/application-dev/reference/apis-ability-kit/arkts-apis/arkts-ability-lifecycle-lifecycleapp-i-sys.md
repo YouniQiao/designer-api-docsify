@@ -2,6 +2,8 @@
 
 interface of app lifecycle.
 
+@interface LifecycleApp
+
 **Since:** 7
 
 <!--Device-unnamed-export declare interface LifecycleApp--><!--Device-unnamed-export declare interface LifecycleApp-End-->

@@ -2,6 +2,8 @@
 
 Module for AI-generated images using UI Component.
 
+@namespace imageGeneration
+
 **Since:** 23
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.

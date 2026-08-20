@@ -1,8 +1,16 @@
 # StepperItem
 
-The **StepperItem** component represents a page component used within a Stepper container. > **NOTE** > - This component is supported since API version 8 and deprecated since API version 22. You are advised to use > Swiper instead. > Updates will be marked with a superscript to indicate their
+The **StepperItem** component represents a page component used within a Stepper container.
 
-## Child Components This component supports only one child component.
+> **NOTE**
+
+> - This component is supported since API version 8 and deprecated since API version 22. You are advised to use > Swiper instead.
+
+> Updates will be marked with a superscript to indicate their
+
+## Child Components
+
+This component supports only one child component.
 
 ## StepperItem
 
@@ -10,7 +18,9 @@ The **StepperItem** component represents a page component used within a Stepper 
 StepperItem()
 ```
 
-Creates a page component for the Stepper container. &gt; **NOTE：**
+Creates a page component for the Stepper container.
+
+> **NOTE：**
 
 **Since:** 8
 
@@ -30,5 +40,4 @@ Creates a page component for the Stepper container. &gt; **NOTE：**
 
 | Name | Description |
 | --- | --- |
-| [ItemState](arkts-arkui-itemstate-e.md) | Display status of **nextLabel** in the stepper. |
 

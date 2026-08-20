@@ -27,7 +27,7 @@ function on(eventType: string, callback: OnPushEventCallback | OnRequestEventCal
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventType | string | 是 | 监听的事件类型，可选值为："push"、"request"。"push"：指组件提供方向使用方主动推送数据。"request"：指组件使用方向提供方主动请求数据。 |
-| callback | [OnPushEventCallback](arkts-arkui-plugincomponentmanager-onpusheventcallback-t.md) \| [OnRequestEventCallback](arkts-arkui-plugincomponentmanager-onrequesteventcallback-t.md) | 是 | 对应监听回调， push事件对应回调类型为OnPushEventCallback，request事件对应回调类型为OnRequestEventCallback。 |
+| callback | [OnPushEventCallback](../../apis-default/arkts-apis/arkts-plugincomponentmanager-onpusheventcallback-t.md) \| [OnRequestEventCallback](../../apis-default/arkts-apis/arkts-plugincomponentmanager-onrequesteventcallback-t.md) | 是 | 对应监听回调， push事件对应回调类型为OnPushEventCallback，request事件对应回调类型为OnRequestEventCallback。 |
 
 **示例**
 

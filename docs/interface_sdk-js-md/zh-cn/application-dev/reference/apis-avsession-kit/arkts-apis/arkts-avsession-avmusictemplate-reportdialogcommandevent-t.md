@@ -6,6 +6,8 @@ type ReportDialogCommandEvent = (type: DialogControlType, buttonInfo: DialogInfo
 
 对话框命令上报事件。
 
+@对话框控制类型。def { function } ReportDialogCommandEvent
+
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。

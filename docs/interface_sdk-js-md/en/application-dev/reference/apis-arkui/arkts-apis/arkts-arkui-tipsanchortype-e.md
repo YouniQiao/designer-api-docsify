@@ -2,6 +2,8 @@
 
 Follow position type.
 
+@enum { number }
+
 **Since:** 20
 
 <!--Device-unnamed-declare enum TipsAnchorType--><!--Device-unnamed-declare enum TipsAnchorType-End-->

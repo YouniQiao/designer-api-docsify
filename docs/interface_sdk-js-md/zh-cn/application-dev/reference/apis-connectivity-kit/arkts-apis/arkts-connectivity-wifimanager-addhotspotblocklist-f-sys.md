@@ -35,10 +35,10 @@ function addHotspotBlockList(stationInfo: StationInfo): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: 1.Incorrect parameter types. 2.Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | System API is not allowed called by Non-system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: 1.Incorrect parameter types. 2.Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [2601000](../errorcode-wifi.md#2601000-hotspot模块异常) | Operation failed. |
 
 **示例**

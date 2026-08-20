@@ -12,7 +12,13 @@ import { text } from '@kit.ArkGraphics2D';
 function setTextUndefinedGlyphDisplay(noGlyphShow: TextUndefinedGlyphDisplay): void
 ```
 
-设置字符映射到.notdef（未定义）字形时要使用的字形类型。 调用此接口后，后续渲染的文本若包含未定义字形，均按此设置显示。 此配置会影响显示字体中未定义字符的方式： - 默认使用字体的.notdef字形设计。 - 开启后，缺失字形的字符将以豆腐块形式显示。
+设置字符映射到.notdef（未定义）字形时要使用的字形类型。
+
+调用此接口后，后续渲染的文本若包含未定义字形，均按此设置显示。
+
+此配置会影响显示字体中未定义字符的方式：
+
+- 默认使用字体的.notdef字形设计。 - 开启后，缺失字形的字符将以豆腐块形式显示。
 
 **起始版本：** 23
 

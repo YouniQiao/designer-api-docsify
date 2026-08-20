@@ -15,7 +15,9 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function scan(): boolean
 ```
 
-Scans Wi-Fi hotspot. &lt;p&gt;This API works in asynchronous mode.&lt;/p&gt;
+Scans Wi-Fi hotspot.
+
+&lt;p&gt;This API works in asynchronous mode.&lt;/p&gt;
 
 **Since:** 6
 

@@ -22,7 +22,9 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 filter(name: string): boolean
 ```
 
-Filtering function, which determines whether the specified file name should be included in the file list. Note: This function is frequently invoked. Avoid time-consuming operations, such as file I/O and network requests.
+Filtering function, which determines whether the specified file name should be included in the file list.
+
+Note: This function is frequently invoked. Avoid time-consuming operations, such as file I/O and network requests.
 
 **Since:** 26.0.0
 

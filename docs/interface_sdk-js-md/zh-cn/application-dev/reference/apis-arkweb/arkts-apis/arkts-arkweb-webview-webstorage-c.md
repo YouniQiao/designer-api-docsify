@@ -42,7 +42,15 @@ static deleteAllData(incognito?: boolean): void
 static deleteOrigin(origin: string): void
 ```
 
-清除指定源所使用的存储。 &gt; **说明：** &gt; &gt; 方法调用关系： &gt; &gt; origin参数应从getOrigins()方法获取。 &gt; &gt; 建议先调用getOrigins()获取源列表，再调用deleteOrigin()清除指定源存储。
+清除指定源所使用的存储。
+
+> **说明：**
+> 
+> 方法调用关系：
+> 
+> origin参数应从getOrigins()方法获取。
+> 
+> 建议先调用getOrigins()获取源列表，再调用deleteOrigin()清除指定源存储。
 
 **起始版本：** 9
 
@@ -71,7 +79,15 @@ static deleteOrigin(origin: string): void
 static getOriginQuota(origin: string): Promise<number>
 ```
 
-以Promise方式异步获取指定源的Web SQL数据库和HTML5支持的Web存储API的存储配额，配额以字节为单位。 &gt; **说明：** &gt; &gt; 方法调用关系： &gt; &gt; origin参数应从getOrigins()方法获取。 &gt; &gt; 建议先调用getOrigins()获取源列表，再调用getOriginQuota()获取指定源配额。
+以Promise方式异步获取指定源的Web SQL数据库和HTML5支持的Web存储API的存储配额，配额以字节为单位。
+
+> **说明：**
+> 
+> 方法调用关系：
+> 
+> origin参数应从getOrigins()方法获取。
+> 
+> 建议先调用getOrigins()获取源列表，再调用getOriginQuota()获取指定源配额。
 
 **起始版本：** 9
 
@@ -106,7 +122,15 @@ static getOriginQuota(origin: string): Promise<number>
 static getOriginQuota(origin: string, callback: AsyncCallback<number>): void
 ```
 
-使用callback回调异步获取指定源的Web SQL数据库和HTML5支持的Web存储API的存储配额，配额以字节为单位。 &gt; **说明：** &gt; &gt; 方法调用关系： &gt; &gt; origin参数应从getOrigins()方法获取。 &gt; &gt; 建议先调用getOrigins()获取源列表，再调用getOriginQuota()获取指定源配额。
+使用callback回调异步获取指定源的Web SQL数据库和HTML5支持的Web存储API的存储配额，配额以字节为单位。
+
+> **说明：**
+> 
+> 方法调用关系：
+> 
+> origin参数应从getOrigins()方法获取。
+> 
+> 建议先调用getOrigins()获取源列表，再调用getOriginQuota()获取指定源配额。
 
 **起始版本：** 9
 
@@ -121,7 +145,7 @@ static getOriginQuota(origin: string, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | origin | string | 是 | 指定源的字符串索引。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 指定源的存储配额。 <br>number是long型整数，范围为[-2147483648, 2147483647]。 <br>单位：byte。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 指定源的存储配额。 <br>number是long型整数，范围为[-2147483648, 2147483647]。 <br>单位：byte。 |
 
 **错误码：**
 
@@ -136,7 +160,15 @@ static getOriginQuota(origin: string, callback: AsyncCallback<number>): void
 static getOriginUsage(origin: string): Promise<number>
 ```
 
-以Promise方式异步获取指定源的Web SQL数据库和HTML5支持的Web存储API的存储量，存储量以字节为单位。 &gt; **说明：** &gt; &gt; 方法调用关系： &gt; &gt; origin参数应从getOrigins()方法获取。 &gt; &gt; 建议先调用getOrigins()获取源列表，再调用getOriginUsage()获取指定源使用量。
+以Promise方式异步获取指定源的Web SQL数据库和HTML5支持的Web存储API的存储量，存储量以字节为单位。
+
+> **说明：**
+> 
+> 方法调用关系：
+> 
+> origin参数应从getOrigins()方法获取。
+> 
+> 建议先调用getOrigins()获取源列表，再调用getOriginUsage()获取指定源使用量。
 
 **起始版本：** 9
 
@@ -171,7 +203,15 @@ static getOriginUsage(origin: string): Promise<number>
 static getOriginUsage(origin: string, callback: AsyncCallback<number>): void
 ```
 
-以回调方式异步获取指定源的Web SQL数据库和HTML5支持的Web存储API的存储量，存储量以字节为单位。 &gt; **说明：** &gt; &gt; 方法调用关系： &gt; &gt; origin参数应从getOrigins()方法获取。 &gt; &gt; 建议先调用getOrigins()获取源列表，再调用getOriginUsage()获取指定源使用量。
+以回调方式异步获取指定源的Web SQL数据库和HTML5支持的Web存储API的存储量，存储量以字节为单位。
+
+> **说明：**
+> 
+> 方法调用关系：
+> 
+> origin参数应从getOrigins()方法获取。
+> 
+> 建议先调用getOrigins()获取源列表，再调用getOriginUsage()获取指定源使用量。
 
 **起始版本：** 9
 
@@ -186,7 +226,7 @@ static getOriginUsage(origin: string, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | origin | string | 是 | 指定源的字符串索引 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 指定源的存储量。 <br>单位：byte。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 指定源的存储量。 <br>单位：byte。 |
 
 **错误码：**
 
@@ -244,7 +284,7 @@ static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[WebStorageOrigin](arkts-arkweb-webview-webstorageorigin-i.md)&gt;&gt; | 是 | 以数组方式返回源的信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[WebStorageOrigin](arkts-arkweb-webview-webstorageorigin-i.md)&gt;&gt; | 是 | 以数组方式返回源的信息。 |
 
 **错误码：**
 

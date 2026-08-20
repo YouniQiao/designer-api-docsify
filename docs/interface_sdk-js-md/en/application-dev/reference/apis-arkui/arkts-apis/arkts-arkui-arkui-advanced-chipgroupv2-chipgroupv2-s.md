@@ -14,6 +14,24 @@ Defines chipGroupV2.
 import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUI';
 ```
 
+## build
+
+```TypeScript
+build(): void
+```
+
+Build function for ChipGroupV2
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2-build(): void--><!--Device-ChipGroupV2-build(): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## $items
 
 ```TypeScript

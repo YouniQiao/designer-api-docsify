@@ -2,6 +2,8 @@
 
 ScrollOffset
 
+@interface ScrollOffset
+
 **Since:** 6
 
 <!--Device-unnamed-export interface ScrollOffset--><!--Device-unnamed-export interface ScrollOffset-End-->

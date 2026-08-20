@@ -37,9 +37,9 @@ Unregisters the listener with the specified bundle name and ability name. This A
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. The bundleName or abilityName is invalid or empty. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. The application does not have the required permission to access distributed data. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [2000001](../../apis-distributedservice-kit/errorcode-conversation.md#2000001-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. The bundleName or abilityName is invalid or empty. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [2000001](../errorcode-conversation.md#2000001-internal-error) | Internal error. |
 

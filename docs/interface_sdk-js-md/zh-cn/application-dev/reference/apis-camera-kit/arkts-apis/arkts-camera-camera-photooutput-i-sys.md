@@ -49,10 +49,10 @@ Starts the burst mode, in which users can capture a series of photos in quick su
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 **示例**
 
@@ -99,9 +99,9 @@ Confirms photo capture. This API is generally used in night photo mode when user
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 **示例**
 
@@ -144,10 +144,10 @@ Enables deferred delivery of a certain type.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 **示例**
 
@@ -183,9 +183,9 @@ Enable auto cloud image enhancement
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## enableAutoHighQualityPhoto
 
@@ -213,10 +213,10 @@ Enables automatic high quality for photos. Before using this API, call [isAutoHi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | session is not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 **示例**
 
@@ -254,10 +254,10 @@ Enable depth data delivery.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## enableOffline
 
@@ -279,9 +279,9 @@ Enable offline processing.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | session is not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## enableOriginalImageGeneration
 
@@ -311,8 +311,8 @@ Enable original image generation.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## enableQuickThumbnail
 
@@ -340,10 +340,10 @@ Enables or disables the quick thumbnail feature. This API takes effect after [ad
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect.<br>**适用版本：** 12+ |
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | session is not running. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12+ |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect.<br>**适用版本：** 12+ |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
 
 **示例**
 
@@ -406,10 +406,10 @@ Enable raw image image delivery.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## isAutoCloudImageEnhancementSupported
 
@@ -437,8 +437,8 @@ Confirm if the auto cloud image enhancement is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## isAutoHighQualityPhotoSupported
 
@@ -466,9 +466,9 @@ Checks whether automatic high quality is supported for photos.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | session is not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 **示例**
 
@@ -512,10 +512,10 @@ Checks whether deferred delivery of a certain type is enabled.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 **示例**
 
@@ -559,10 +559,10 @@ Checks whether deferred delivery of a certain type is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 **示例**
 
@@ -600,9 +600,9 @@ Check if the depth data delivery is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## isOfflineSupported
 
@@ -630,8 +630,8 @@ Confirm if offline processing is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## isOriginalImageGenerationSupported
 
@@ -661,8 +661,8 @@ Confirm if original image generation supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## isQuickThumbnailSupported
 
@@ -754,9 +754,9 @@ Confirm if the raw image delivery is supported
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## offDeferredPhotoProxyAvailable
 
@@ -778,7 +778,7 @@ Unsubscribes deferred photo proxy available event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | 否 | Callback used to get the DeferredPhotoProxy. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | 否 | Callback used to get the DeferredPhotoProxy. |
 
 **错误码：**
 
@@ -806,7 +806,7 @@ Unsubscribes offline Delivery finished events. This method is valid only after e
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | Callback used to get offline Delivery finished events. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 否 | Callback used to get offline Delivery finished events. |
 
 **错误码：**
 
@@ -834,7 +834,7 @@ Unsubscribes from camera thumbnail events. This method is valid only after enabl
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 否 | Callback used to get the quick thumbnail. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | 否 | Callback used to get the quick thumbnail. |
 
 ## off('deferredPhotoProxyAvailable')
 
@@ -857,7 +857,7 @@ Unsubscribes from events indicating available thumbnail proxies.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deferredPhotoProxyAvailable' | 是 | Event type. The value is fixed at **'deferredPhotoProxyAvailable'**. The event can be listened for when a photoOutput instance is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | 否 | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('deferredPhotoProxyAvailable')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | 否 | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('deferredPhotoProxyAvailable')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **错误码：**
 
@@ -907,7 +907,7 @@ Unsubscribes offline Delivery finished events. This method is valid only after e
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'offlineDeliveryFinished' | 是 | Event type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | Callback used to get offline Delivery finished events. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 否 | Callback used to get offline Delivery finished events. |
 
 **错误码：**
 
@@ -936,7 +936,7 @@ Unsubscribes from quick thumbnail output events.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'quickThumbnail' | 是 | Event type. The value is fixed at **'quickThumbnail'**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 否 | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('quickThumbnail')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | 否 | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('quickThumbnail')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **示例**
 
@@ -966,7 +966,7 @@ Subscribes deferred photo proxy available event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | 是 | Callback used to get the DeferredPhotoProxy. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | 是 | Callback used to get the DeferredPhotoProxy. |
 
 **错误码：**
 
@@ -994,7 +994,7 @@ Subscribes offline Delivery finished events. This method is valid only after ena
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to get offline Delivery finished events. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to get offline Delivery finished events. |
 
 **错误码：**
 
@@ -1022,7 +1022,7 @@ Subscribes to camera thumbnail events. This method is valid only after enableQui
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | Callback used to get the quick thumbnail. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | 是 | Callback used to get the quick thumbnail. |
 
 ## on('deferredPhotoProxyAvailable')
 
@@ -1045,7 +1045,7 @@ Subscribes to events indicating available thumbnail proxies. This API uses an as
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deferredPhotoProxyAvailable' | 是 | Event type. The value is fixed at **'deferredPhotoProxyAvailable'**. The event can be listened for when a photoOutput instance is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | 是 | Callback used to return the thumbnail proxy. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | 是 | Callback used to return the thumbnail proxy. |
 
 **错误码：**
 
@@ -1095,7 +1095,7 @@ Subscribes offline Delivery finished events. This method is valid only after ena
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'offlineDeliveryFinished' | 是 | Event type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to get offline Delivery finished events. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to get offline Delivery finished events. |
 
 **错误码：**
 
@@ -1124,7 +1124,7 @@ Subscribes to quick thumbnail output events. This API uses an asynchronous callb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'quickThumbnail' | 是 | Event type. The value is fixed at **'quickThumbnail'**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | Callback that returns a PixelMap instance. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | 是 | Callback that returns a PixelMap instance. |
 
 **示例**
 
@@ -1201,6 +1201,6 @@ Set edit data.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 

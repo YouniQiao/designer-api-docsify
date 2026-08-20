@@ -38,8 +38,8 @@ Permanently deletes a file or directory from the **Recently deleted** list.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | 13900002 | No such file or directory |
+| 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
 **Examples**

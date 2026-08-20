@@ -2,6 +2,8 @@
 
 Rotation execution results.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-mechanicManager-export enum Result--><!--Device-mechanicManager-export enum Result-End-->

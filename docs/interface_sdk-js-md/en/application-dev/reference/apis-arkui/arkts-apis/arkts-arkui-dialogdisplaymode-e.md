@@ -2,6 +2,8 @@
 
 Dialog display mode.
 
+@enum { DialogDisplayMode }
+
 **Since:** 26.0.0
 
 <!--Device-unnamed-declare enum DialogDisplayMode--><!--Device-unnamed-declare enum DialogDisplayMode-End-->

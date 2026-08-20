@@ -19,7 +19,9 @@ Describes the text line spacing style.
 constructor(lineSpacing: LengthMetrics, options?: LineSpacingOptions)
 ```
 
-A constructor used to create a text line spacing style. **Since**: 26.0.0
+A constructor used to create a text line spacing style.
+
+**Since**: 26.0.0
 
 **Since:** 26.0.0
 
@@ -44,7 +46,11 @@ A constructor used to create a text line spacing style. **Since**: 26.0.0
 readonly lineSpacing: number
 ```
 
-Text line spacing. Value range: [0, +∞) Unit: [vp
+Text line spacing.
+
+Value range: [0, +∞)
+
+Unit: [vp
 
 **Type:** number
 

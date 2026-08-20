@@ -2,7 +2,10 @@
 
 The controller for the **TextArea** component inherits from TextContentControllerBase. The APIs involved are as follows:<!--Del--> system API getText and other APIs like<!--DelEnd--> getTextContentRect, getTextContentLineCount, getCaretOffset, addText, deleteText, getSelection, clearPreviewText, setStyledPlaceholder, and deleteBackward.
 
-## Objects to Import ```ts controller: TextAreaController = new TextAreaController(); ```
+## Objects to Import
+
+```ts
+controller: TextAreaController = new TextAreaController(); ```
 
 **Inheritance/Implementation:** TextAreaController extends TextContentControllerBase
 

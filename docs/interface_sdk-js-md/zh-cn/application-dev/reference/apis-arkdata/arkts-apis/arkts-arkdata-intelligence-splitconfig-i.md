@@ -1,6 +1,8 @@
-# SplitConfig(智慧数据平台)
+# SplitConfig
 
 管理文本分块的配置信息。
+
+@interface SplitConfig
 
 **起始版本：** 23
 

@@ -1,6 +1,6 @@
 # CheckBoxGroupConfiguration
 
-You must customize this class to implement the ContentModifier interface. For details, see contentModifier.
+You must customize this class to implement the ContentModifier interface. For details, see [contentModifier](arkts-arkui-checkboxgroup-attribute.md#contentmodifier).
 
 **Inheritance/Implementation:** CheckBoxGroupConfiguration extends CommonConfiguration<CheckBoxGroupConfiguration>
 

@@ -1,4 +1,4 @@
-# NetFirewallOrderType(Network Firewall)
+# NetFirewallOrderType
 
 Enumerates the sorting order of firewall rules, which can be ascending or descending.
 

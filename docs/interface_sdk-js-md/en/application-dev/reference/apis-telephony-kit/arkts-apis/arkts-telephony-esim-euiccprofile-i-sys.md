@@ -2,6 +2,8 @@
 
 Information about an embedded profile (subscription) on an eUICC.
 
+@interface EuiccProfile
+
 **Since:** 23
 
 <!--Device-eSIM-export interface EuiccProfile--><!--Device-eSIM-export interface EuiccProfile-End-->

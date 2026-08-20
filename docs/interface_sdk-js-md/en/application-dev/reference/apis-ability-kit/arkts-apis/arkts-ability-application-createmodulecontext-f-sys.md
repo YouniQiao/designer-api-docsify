@@ -12,7 +12,13 @@ import { application } from '@kit.AbilityKit';
 export function createModuleContext(context: Context, bundleName: string, moduleName: string): Promise<Context>
 ```
 
-Creates the context for a module. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - Starting from API version 18, the context can obtain the &gt; [process name](arkts-ability-context-c.md) of the current &gt; application. The **processName** property in the context created by **createModuleContext** is the same as the &gt; **processName** property in the input parameter **Context**. The values of other properties are obtained based on &gt; the input parameters **Context**, **bundleName**, and **moduleName**. &gt; &gt; - Creating a module context involves resource querying and initialization, which can be time-consuming. In &gt; scenarios where application fluidity is critical, avoid frequently or repeatedly calling the &gt; **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
+Creates the context for a module. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - Starting from API version 18, the context can obtain the &gt; [process name](arkts-ability-context-c.md) of the current &gt; application. The **processName** property in the context created by **createModuleContext** is the same as the &gt; **processName** property in the input parameter **Context**. The values of other properties are obtained based on &gt; the input parameters **Context**, **bundleName**, and **moduleName**.
+> 
+> - Creating a module context involves resource querying and initialization, which can be time-consuming. In &gt; scenarios where application fluidity is critical, avoid frequently or repeatedly calling the &gt; **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
 
 **Since:** 23
 
@@ -44,9 +50,9 @@ Creates the context for a module. This API uses a promise to return the result. 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 **Examples**
 

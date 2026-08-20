@@ -27,13 +27,13 @@ function onP2pPeerDeviceChange(callback: Callback<WifiP2pDevice[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice[]&gt; | 是 | 状态改变回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WifiP2pDevice[]&gt; | 是 | 状态改变回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [2801000](../errorcode-wifi.md#2801000-p2p模块异常) | Operation failed. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 

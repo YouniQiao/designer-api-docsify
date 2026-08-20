@@ -1,8 +1,14 @@
 # Radio
 
-单选框，提供单选类型的用户交互选择项。 > **说明：** > > - API version 12开始，Radio选中默认样式由RadioIndicatorType.DOT变为RadioIndicatorType.TICK。 > - 该组件默认有margin间距，默认值为：{&nbsp;top: '14px',&nbsp;right: '14px',&nbsp;bottom: '14px',& > nbsp;left: '14px' }。
+单选框，提供单选类型的用户交互选择项。
 
-## 子组件 无
+> **说明：** > > - API version 12开始，Radio选中默认样式由RadioIndicatorType.DOT变为RadioIndicatorType.TICK。
+
+> - 该组件默认有margin间距，默认值为：{&nbsp;top: '14px',&nbsp;right: '14px',&nbsp;bottom: '14px',& > nbsp;left: '14px' }。
+
+## 子组件
+
+无
 
 ## Radio
 
@@ -34,19 +40,14 @@ Radio(options: RadioOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [RadioConfiguration](arkts-arkui-radioconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自CommonConfiguration。 |
-| [RadioOptions](arkts-arkui-radiooptions-i.md) | 单选框的信息。 |
-| [RadioStyle](arkts-arkui-radiostyle-i.md) | 单选框的样式。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md) | 单选框选中状态改变时触发的回调函数类型定义。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [RadioIndicatorType](arkts-arkui-radioindicatortype-e.md) | 单选框的样式。 |
 

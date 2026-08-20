@@ -6,7 +6,9 @@
 const DATA_ROAMING_STATUS: string
 ```
 
-Specifies whether data roaming is enabled. &lt;p&gt;If the value is {@code true}, data roaming is enabled. If the value is {@code false}, data roaming is disabled.
+Specifies whether data roaming is enabled.
+
+&lt;p&gt;If the value is {@code true}, data roaming is enabled. If the value is {@code false}, data roaming is disabled.
 
 **Since:** 23
 

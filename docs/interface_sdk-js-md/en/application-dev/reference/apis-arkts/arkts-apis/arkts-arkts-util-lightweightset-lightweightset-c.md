@@ -310,7 +310,11 @@ for(let i = 0; i < 10; i++) {
 equal(obj: Object): boolean
 ```
 
-Checks whether the elements of this LightWeightSet are the same as those of **obj**. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 12. There is no substitute API.
+Checks whether the elements of this LightWeightSet are the same as those of **obj**.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 12. There is no substitute API.
 
 **Since:** 8
 

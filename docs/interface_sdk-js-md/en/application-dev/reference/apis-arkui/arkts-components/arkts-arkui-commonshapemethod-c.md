@@ -2,6 +2,8 @@
 
 CommonShapeMethod
 
+@extends CommonMethod&lt;T&gt;
+
 **Inheritance/Implementation:** CommonShapeMethod extends CommonMethod<T>
 
 **Since:** 11

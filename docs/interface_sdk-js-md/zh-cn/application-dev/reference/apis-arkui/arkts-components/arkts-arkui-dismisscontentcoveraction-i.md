@@ -2,6 +2,8 @@
 
 Component content cover dismiss
 
+@interface DismissContentCoverAction
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare interface DismissContentCoverAction--><!--Device-unnamed-declare interface DismissContentCoverAction-End-->

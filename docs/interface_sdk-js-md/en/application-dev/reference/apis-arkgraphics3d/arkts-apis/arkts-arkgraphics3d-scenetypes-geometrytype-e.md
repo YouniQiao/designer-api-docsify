@@ -2,6 +2,8 @@
 
 Enumerates the geometry types.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-unnamed-export enum GeometryType--><!--Device-unnamed-export enum GeometryType-End-->

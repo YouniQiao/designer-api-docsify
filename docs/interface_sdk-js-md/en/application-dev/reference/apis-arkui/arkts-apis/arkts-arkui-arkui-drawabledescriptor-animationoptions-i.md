@@ -20,7 +20,11 @@ import { DrawableDescriptor, LayeredDrawableDescriptor, PixelMapDrawableDescript
 autoPlay?: boolean
 ```
 
-Whether to enable autoplay. **true** to enable, **false** otherwise. The default value is **true**.
+Whether to enable autoplay.
+
+**true** to enable, **false** otherwise.
+
+The default value is **true**.
 
 **Type:** boolean
 
@@ -42,7 +46,15 @@ Whether to enable autoplay. **true** to enable, **false** otherwise. The default
 duration?: number
 ```
 
-Total playback duration for the image sequence. For **PixelMap** arrays, the default value is 1s per image. For local or application resources, the duration is determined by the playback delay embedded in the image resource. Unit: ms. Value range: [0, +∞). Negative values are treated as the default value.
+Total playback duration for the image sequence.
+
+For **PixelMap** arrays, the default value is 1s per image. For local or application resources, the duration is determined by the playback delay embedded in the image resource.
+
+Unit: ms.
+
+Value range: [0, +∞).
+
+Negative values are treated as the default value.
 
 **Type:** number
 
@@ -62,7 +74,13 @@ Total playback duration for the image sequence. For **PixelMap** arrays, the def
 frameDurations?: Array<number>
 ```
 
-Per-frame playback duration. The setting overrides **duration** if specified. If **duration** and **frameDurations** are set, **duration** is ignored. If the value of **frameDurations** is inconsistent with the image count, animation timing distributes across the total duration. Unit: ms.
+Per-frame playback duration. The setting overrides **duration** if specified.
+
+If **duration** and **frameDurations** are set, **duration** is ignored.
+
+If the value of **frameDurations** is inconsistent with the image count, animation timing distributes across the total duration.
+
+Unit: ms.
 
 **Type:** Array&lt;number&gt;
 
@@ -82,7 +100,11 @@ Per-frame playback duration. The setting overrides **duration** if specified. If
 iterations?: number
 ```
 
-Number of playback times for the image sequence. A value of **-1** indicates infinite playback, **0** indicates no playback, and a value greater than 0 represents the number of playback times. The default value is **1**.
+Number of playback times for the image sequence.
+
+A value of **-1** indicates infinite playback, **0** indicates no playback, and a value greater than 0 represents the number of playback times.
+
+The default value is **1**.
 
 **Type:** number
 
@@ -102,7 +124,9 @@ Number of playback times for the image sequence. A value of **-1** indicates inf
 stopMode?: AnimationStopMode
 ```
 
-Sets the stop mode for an animation. The default value is **AnimationStopMode.FIRST_FRAME**, indicating that the animation returns to the first frame when it stops.
+Sets the stop mode for an animation.
+
+The default value is **AnimationStopMode.FIRST_FRAME**, indicating that the animation returns to the first frame when it stops.
 
 **Type:** [AnimationStopMode](arkts-arkui-arkui-drawabledescriptor-animationstopmode-e.md)
 

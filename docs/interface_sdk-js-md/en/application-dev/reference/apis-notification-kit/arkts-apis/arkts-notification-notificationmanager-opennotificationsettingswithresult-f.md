@@ -12,7 +12,9 @@ import { notificationManager } from '@kit.NotificationKit';
 function openNotificationSettingsWithResult(context: UIAbilityContext): Promise<NotificationSetting>
 ```
 
-Opens the notification settings page of the application, which is presented in a semi-modal window and can be used to set notification switches, notification reminder methods, etc. This API uses a promise to return the user-set status when the semi-modal window is closed. Unlike openNotificationSettings, this API returns a NotificationSetting object when the semi-modal window is closed. You can determine whether the user has enabled the notification permission based on the returned result, thereby deciding subsequent logic.
+Opens the notification settings page of the application, which is presented in a semi-modal window and can be used to set notification switches, notification reminder methods, etc. This API uses a promise to return the user-set status when the semi-modal window is closed.
+
+Unlike openNotificationSettings, this API returns a NotificationSetting object when the semi-modal window is closed. You can determine whether the user has enabled the notification permission based on the returned result, thereby deciding subsequent logic.
 
 **Since:** 26.0.0
 
@@ -46,8 +48,8 @@ isNotificationEnabled checks whether notification
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600018](../errorcode-notification.md#1600018-notification-settings-page-already-displayed) | The notification settings window is already displayed. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| [1600018](../errorcode-notification.md#1600018-notification-settings-page-already-displayed) | The notification settings window is already displayed. |
 
 **Examples**
 

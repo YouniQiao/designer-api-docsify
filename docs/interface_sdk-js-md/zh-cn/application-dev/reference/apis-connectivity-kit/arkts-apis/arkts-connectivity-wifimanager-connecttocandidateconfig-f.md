@@ -35,9 +35,9 @@ function connectToCandidateConfig(networkId: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [2501000](../errorcode-wifi.md#2501000-sta内部异常) | Operation failed. |
 | [2501001](../errorcode-wifi.md#2501001-sta功能未打开) | Wi-Fi STA disabled. |
 
@@ -91,13 +91,13 @@ function connectToCandidateConfig(settings: ConnectSettings): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [2501006](../errorcode-wifi.md#2501006-用户拒绝连接请求) | The user refused the action. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2501007](../errorcode-wifi.md#2501007-参数校验失败) | Parameter validation failed. |
-| [2501005](../errorcode-wifi.md#2501005-用户未响应连接请求) | The user does not respond. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [2501000](../errorcode-wifi.md#2501000-sta内部异常) | Operation failed. |
 | [2501001](../errorcode-wifi.md#2501001-sta功能未打开) | Wi-Fi STA disabled. |
+| [2501005](../errorcode-wifi.md#2501005-用户未响应连接请求) | The user does not respond. |
+| [2501006](../errorcode-wifi.md#2501006-用户拒绝连接请求) | The user refused the action. |
+| [2501007](../errorcode-wifi.md#2501007-参数校验失败) | Parameter validation failed. |
 
 **示例**
 

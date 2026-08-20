@@ -47,7 +47,7 @@ Sets the internal buffer size for the current library function. This API uses a 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Examples**
 
@@ -189,8 +189,8 @@ Clears all pending output of the file. Closes the file and releases the decompre
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17800006](../errorcode-zlib.md#17800006-memory-allocation-failure) | Memory allocation failed. |
-| [17800004](../errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800006](../../apis-ability-kit/errorcode-zlib.md#17800006-memory-allocation-failure) | Memory allocation failed. |
 
 **Examples**
 
@@ -256,7 +256,7 @@ Implements the same functions as that of **gzclose()** for reading only. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17800004](../errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 **Examples**
 
@@ -324,8 +324,8 @@ Implements the same functions as that of **gzclose()** for writing or appending.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17800006](../errorcode-zlib.md#17800006-memory-allocation-failure) | Memory allocation failed. |
-| [17800004](../errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800006](../../apis-ability-kit/errorcode-zlib.md#17800006-memory-allocation-failure) | Memory allocation failed. |
 
 **Examples**
 
@@ -460,7 +460,7 @@ Associates gzip file with the file descriptor (fd) and opens the file for readin
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800002](../errorcode-zlib.md#17800002-incorrect-file-or-access-mode) | No such file or access mode error. |
+| [17800002](../../apis-ability-kit/errorcode-zlib.md#17800002-incorrect-file-or-access-mode) | No such file or access mode error. |
 
 **Examples**
 
@@ -598,7 +598,7 @@ Describes the last error message that reported for the file. This API uses a pro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17800004](../errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 **Examples**
 
@@ -684,7 +684,7 @@ Flushes all pending output into a compressed file. This API uses a promise to re
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 **Examples**
 
@@ -760,7 +760,7 @@ Decompresses and reads data from a gzip file. This API uses a promise to return 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Examples**
 
@@ -845,7 +845,7 @@ Compresses data blocks that are declared with size and nitems from the buffer an
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Examples**
 
@@ -917,7 +917,7 @@ Reads and decompresses a byte from a file. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17800009](../errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Examples**
 
@@ -994,7 +994,7 @@ Reads bytes from a compressed file until len-1 characters are read, a newline ch
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Examples**
 
@@ -1065,7 +1065,7 @@ Returns the current compressed read or write offset of the file. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17800009](../errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Examples**
 
@@ -1140,7 +1140,7 @@ Opens the .gz file in the specified path for reading and decompressing, or compr
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800002](../errorcode-zlib.md#17800002-incorrect-file-or-access-mode) | No such file or access mode error. |
+| [17800002](../../apis-ability-kit/errorcode-zlib.md#17800002-incorrect-file-or-access-mode) | No such file or access mode error. |
 
 **Examples**
 
@@ -1214,8 +1214,8 @@ Converts and formats the parameters under the control of the string format and t
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
-| [17800004](../errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Examples**
 
@@ -1289,7 +1289,7 @@ Compresses **char** converted to an unsigned character and writes it to a file. 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Examples**
 
@@ -1363,7 +1363,7 @@ Compresses the given null-terminated strings and writes them to the file, exclud
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Examples**
 
@@ -1437,7 +1437,7 @@ Reads a maximum of **len** uncompressed bytes from a file and decompresses them 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Examples**
 
@@ -1513,7 +1513,7 @@ Repositions the file pointer to the beginning of the file. This feature is appli
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17800009](../errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Examples**
 
@@ -1590,7 +1590,7 @@ Sets the start position to the offset position relative to the next **gzread** o
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Examples**
 
@@ -1665,7 +1665,7 @@ Dynamically updates the compression level and compression strategy of a file. Th
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 **Examples**
 
@@ -1733,7 +1733,7 @@ Returns the start position of the next **gzread** or **gzwrite** in the file. Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17800009](../errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Examples**
 
@@ -1807,7 +1807,7 @@ Pushes **c** back into the input stream so that it will be read as the first cha
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Examples**
 
@@ -1885,7 +1885,7 @@ Compresses the uncompressed bytes of the declared length in the buffer and write
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Examples**
 

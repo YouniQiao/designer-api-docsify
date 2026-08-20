@@ -1,5 +1,7 @@
 # GradientMode
 
+@brief 枚举，输入法渐变模式。 <br> | 名称 | 值 | 说明 | | ------------ | -- | ------------------ | | NONE | 0 | 不使用渐变模式。 | | LINEAR_GRADIENT | 1 | 线性渐变。 |
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-export enum GradientMode--><!--Device-inputMethodEngine-export enum GradientMode-End-->
@@ -12,6 +14,8 @@
 NONE = 0
 ```
 
+@brief 不使用渐变模式。
+
 **起始版本：** 23
 
 <!--Device-GradientMode-NONE = 0--><!--Device-GradientMode-NONE = 0-End-->
@@ -23,6 +27,8 @@ NONE = 0
 ```TypeScript
 LINEAR_GRADIENT = 1
 ```
+
+@brief 线性渐变。
 
 **起始版本：** 23
 

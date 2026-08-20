@@ -2,6 +2,8 @@
 
 RectObj
 
+@interface RectObj
+
 **Since:** 6
 
 <!--Device-unnamed-export interface RectObj--><!--Device-unnamed-export interface RectObj-End-->

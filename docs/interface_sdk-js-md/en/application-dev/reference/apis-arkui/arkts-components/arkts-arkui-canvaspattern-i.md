@@ -1,6 +1,6 @@
 # CanvasPattern
 
-**CanvasPattern** represents an object, created by the createPattern API, describing an image filling pattern based on the image and repetition mode.
+*CanvasPattern** represents an object, created by the createPattern API, describing an image filling pattern based on the image and repetition mode.
 
 **Since:** 8
 

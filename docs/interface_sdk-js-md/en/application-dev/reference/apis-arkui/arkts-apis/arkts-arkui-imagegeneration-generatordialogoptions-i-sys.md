@@ -2,6 +2,8 @@
 
 Parameters used to open the ImageGeneratorDialog.
 
+@interface GeneratorDialogOptions
+
 **Since:** 23
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.

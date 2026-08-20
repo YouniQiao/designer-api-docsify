@@ -1,6 +1,12 @@
 # Font
 
-Describes the attributes used for text rendering, such as size and typeface. &gt; **NOTE：**&gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - This module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
+Describes the attributes used for text rendering, such as size and typeface.
+
+> **NOTE：**
+> 
+> - This module uses the physical pixel unit, px.
+> 
+> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
 
 **Since:** 23
 
@@ -903,7 +909,11 @@ Measures the width of a single character with font features. If the typeface of 
 measureText(text: string, encoding: TextEncoding): double
 ```
 
-Measures the text width. &gt; **NOTE：**&gt; &gt; This API is used to measure the text width of the original string. To measure the text width after typesetting, &gt; call [measure.measureText](../../../reference/apis-arkui/arkts-apis-uicontext-measureutils.md#measuretext12).
+Measures the text width.
+
+> **NOTE：**
+> 
+> This API is used to measure the text width of the original string. To measure the text width after typesetting, &gt; call [measure.measureText](../../../reference/apis-arkui/arkts-apis-uicontext-measureutils.md#measuretext12).
 
 **Since:** 23
 

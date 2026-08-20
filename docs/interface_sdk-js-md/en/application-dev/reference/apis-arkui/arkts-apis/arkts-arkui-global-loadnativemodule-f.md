@@ -11,7 +11,15 @@
 export declare function loadNativeModule(moduleName: string): Object
 ```
 
-The **loadNativeModule** API is used to synchronously and dynamically load a native module, that is, only load the required module at a time. Using this API increases the time for loading the .so file. You need to evaluate the impact on the functionality. &gt; **NOTE：**&gt; &gt; The name of the module loaded by **loadNativeModule** is the name provided in **dependencies** in the &gt; **oh-package.json5** file of the dependency. &gt; &gt; **loadNativeModule** can be used only to load native modules in the UI main thread. &gt; &gt; Dependencies must be configured for the API call regardless of whether the parameter is a constant string or &gt; variable expression.
+The **loadNativeModule** API is used to synchronously and dynamically load a native module, that is, only load the required module at a time. Using this API increases the time for loading the .so file. You need to evaluate the impact on the functionality.
+
+> **NOTE：**
+> 
+> The name of the module loaded by **loadNativeModule** is the name provided in **dependencies** in the &gt; **oh-package.json5** file of the dependency.
+> 
+> **loadNativeModule** can be used only to load native modules in the UI main thread.
+> 
+> Dependencies must be configured for the API call regardless of whether the parameter is a constant string or &gt; variable expression.
 
 **Since:** 12
 

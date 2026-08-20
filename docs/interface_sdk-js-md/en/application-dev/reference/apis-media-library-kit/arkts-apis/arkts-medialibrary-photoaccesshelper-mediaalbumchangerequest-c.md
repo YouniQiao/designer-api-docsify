@@ -41,8 +41,8 @@ Add assets to the album.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000016 | Operation Not Support |
 | 14000011 | System inner fail |
+| 14000016 | Operation Not Support |
 
 ## constructor
 
@@ -77,7 +77,11 @@ Constructor used to initialize a new object.
 getAlbum(): Album
 ```
 
-Obtains the album in the current album change request. &gt; **NOTE：**&gt; &gt; For the change request for creating an album, this API returns **null** before &gt; [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) is called &gt; to apply the changes.
+Obtains the album in the current album change request.
+
+> **NOTE：**
+> 
+> For the change request for creating an album, this API returns **null** before &gt; [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) is called &gt; to apply the changes.
 
 **Since:** 11
 
@@ -149,8 +153,8 @@ Removes assets from the album.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000016 | Operation Not Support |
 | 14000011 | System inner fail |
+| 14000016 | Operation Not Support |
 
 ## setAlbumName
 
@@ -158,7 +162,15 @@ Removes assets from the album.
 setAlbumName(name: string): void
 ```
 
-Sets the album name. The album name must meet the following requirements: - The total length of the album name must be between 1 and 255 characters. - It must not contain any invalid characters, which are: . \ / : * ? " ' ` &lt; &gt; | { } [ ] - It is case-insensitive. - Duplicate album names are not allowed.
+Sets the album name.
+
+The album name must meet the following requirements:
+
+- The total length of the album name must be between 1 and 255 characters. - It must not contain any invalid characters, which are:
+
+. \ / : ? " ' ` &lt; &gt; | { } [ ]
+
+- It is case-insensitive. - Duplicate album names are not allowed.
 
 **Since:** 23
 

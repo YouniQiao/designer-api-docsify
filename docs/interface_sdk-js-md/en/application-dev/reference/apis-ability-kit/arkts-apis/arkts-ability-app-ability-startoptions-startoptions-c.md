@@ -40,7 +40,15 @@ Operation class used to handle the result of an application launch request.
 displayId?: long
 ```
 
-Display ID, which is an integer greater than or equal to -1. - The value **-1** means the current screen. - The value **0** means the primary screen. - A positive integer means a specific screen with that ID. **NOTE：**Starting from API version 14, the default value is **-1**, indicating the current screen. In versions earlier than API version 14, the default value is **0**, indicating the primary screen.
+Display ID, which is an integer greater than or equal to -1.
+
+- The value **-1** means the current screen. - The value **0** means the primary screen. - A positive integer means a specific screen with that ID.
+
+**NOTE：**
+
+Starting from API version 14, the default value is **-1**, indicating the current screen.
+
+In versions earlier than API version 14, the default value is **0**, indicating the primary screen.
 
 **Type:** long
 
@@ -60,7 +68,11 @@ Display ID, which is an integer greater than or equal to -1. - The value **-1** 
 hideStartWindow?: boolean
 ```
 
-Whether to hide the starting window for the UIAbility of the current application upon startup. The options include **true** (yes) and **false** (no). For details about the starting window and its specifications, see [StartWindow](../../../quick-start/module-configuration-file.md#startwindow). **Constraints**: 1. This property takes effect only on tablets in free windows mode and 2-in-1 devices. 2. This property applies only for an attempt to launch the UIAbility of the current application.
+Whether to hide the starting window for the UIAbility of the current application upon startup. The options include **true** (yes) and **false** (no). For details about the starting window and its specifications, see [StartWindow](../../../quick-start/module-configuration-file.md#startwindow).
+
+**Constraints**:
+
+1. This property takes effect only on tablets in free windows mode and 2-in-1 devices. 2. This property applies only for an attempt to launch the UIAbility of the current application.
 
 **Type:** boolean
 
@@ -78,7 +90,11 @@ Whether to hide the starting window for the UIAbility of the current application
 maxWindowHeight?: int
 ```
 
-Maximum height of the window, in vp. You can call getWindowLimitsVP to obtain the size limit of the current window. **Constraints**: This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
+Maximum height of the window, in vp. You can call getWindowLimitsVP to obtain the size limit of the current window.
+
+**Constraints**:
+
+This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** int
 
@@ -96,7 +112,11 @@ Maximum height of the window, in vp. You can call getWindowLimitsVP to obtain th
 maxWindowWidth?: int
 ```
 
-Maximum width of the window, in vp. You can call getWindowLimitsVP to obtain the size limit of the current window. **Constraints**: This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
+Maximum width of the window, in vp. You can call getWindowLimitsVP to obtain the size limit of the current window.
+
+**Constraints**:
+
+This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** int
 
@@ -114,7 +134,11 @@ Maximum width of the window, in vp. You can call getWindowLimitsVP to obtain the
 minWindowHeight?: int
 ```
 
-Minimum height of the window, in vp. You can call getWindowLimitsVP to obtain the size limit of the current window. **Constraints**: This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
+Minimum height of the window, in vp. You can call getWindowLimitsVP to obtain the size limit of the current window.
+
+**Constraints**:
+
+This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** int
 
@@ -132,7 +156,11 @@ Minimum height of the window, in vp. You can call getWindowLimitsVP to obtain th
 minWindowWidth?: int
 ```
 
-Minimum width of the window, in vp. You can call getWindowLimitsVP to obtain the size limit of the current window. **Constraints**: This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
+Minimum width of the window, in vp. You can call getWindowLimitsVP to obtain the size limit of the current window.
+
+**Constraints**:
+
+This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** int
 
@@ -150,7 +178,11 @@ Minimum width of the window, in vp. You can call getWindowLimitsVP to obtain the
 processMode?: contextConstant.ProcessMode
 ```
 
-Process mode of the UIAbility after it is started. **Constraints**: 1. This property takes effect only on 2-in-1 devices and tablets. 2. This property takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability). 3. **processMode** and **startupVisibility** must be set in pair.
+Process mode of the UIAbility after it is started.
+
+**Constraints**:
+
+1. This property takes effect only on 2-in-1 devices and tablets. 2. This property takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability). 3. **processMode** and **startupVisibility** must be set in pair.
 
 **Type:** contextConstant.ProcessMode
 
@@ -186,7 +218,11 @@ The type of split ratio preference.
 startWindowBackgroundColor?: string
 ```
 
-Background color of the window for the UIAbility of the current application upon startup. The value is in ARGB format, for example, **#E5FFFFFF**. If this property is not set, the value of **startWindowBackground** in the **module.json5** file is used by default. **Constraints**: - This property does not take effect for the UIAbility of another application. - This property takes effect only on 2-in-1 devices and tablets. - This property takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).
+Background color of the window for the UIAbility of the current application upon startup. The value is in ARGB format, for example, **#E5FFFFFF**. If this property is not set, the value of **startWindowBackground** in the **module.json5** file is used by default.
+
+**Constraints**:
+
+- This property does not take effect for the UIAbility of another application. - This property takes effect only on 2-in-1 devices and tablets. - This property takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).
 
 **Type:** string
 
@@ -204,7 +240,11 @@ Background color of the window for the UIAbility of the current application upon
 startWindowIcon?: image.PixelMap
 ```
 
-Icon displayed on the starting window for the UIAbility of the current application upon startup. If this property is not set, the value of **startWindowIcon** in the **module.json5** file is used by default. **Constraints**: - This property does not take effect for the UIAbility of another application. - This property takes effect only on 2-in-1 devices and tablets. - This property takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability). - The maximum size of an image used as the startup icon is 600 MB.
+Icon displayed on the starting window for the UIAbility of the current application upon startup. If this property is not set, the value of **startWindowIcon** in the **module.json5** file is used by default.
+
+**Constraints**:
+
+- This property does not take effect for the UIAbility of another application. - This property takes effect only on 2-in-1 devices and tablets. - This property takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability). - The maximum size of an image used as the startup icon is 600 MB.
 
 **Type:** image.PixelMap
 
@@ -222,7 +262,11 @@ Icon displayed on the starting window for the UIAbility of the current applicati
 startupVisibility?: contextConstant.StartupVisibility
 ```
 
-Visibility status of the UIAbility after it is started. If the target UIAbility is set to invisible, the window of the target UIAbility is not displayed in the foreground, there is no icon in the dock, and the **onForeground** lifecycle of the target UIAbility is not triggered. **Constraints**: 1. This property takes effect only on 2-in-1 devices and tablets. 2. This property takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability). 3. **processMode** and **startupVisibility** must be set in pair.
+Visibility status of the UIAbility after it is started. If the target UIAbility is set to invisible, the window of the target UIAbility is not displayed in the foreground, there is no icon in the dock, and the **onForeground** lifecycle of the target UIAbility is not triggered.
+
+**Constraints**:
+
+1. This property takes effect only on 2-in-1 devices and tablets. 2. This property takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability). 3. **processMode** and **startupVisibility** must be set in pair.
 
 **Type:** contextConstant.StartupVisibility
 
@@ -240,7 +284,15 @@ Visibility status of the UIAbility after it is started. If the target UIAbility 
 supportWindowModes?: Array<bundleManager.SupportWindowMode>
 ```
 
-Window mode supported by the UIAbility when it is started. The supported window mode specifies whether to display the maximize, minimize, or split-screen button. If this property is not set, the value of **supportWindowMode** configured under [abilities](../../../quick-start/module-configuration-file.md#abilities) in the [module.json5](../../../quick-start/module-configuration-file.md) file corresponding to the UIAbility is used by default. - **FULL_SCREEN**: full-screen mode. - **FLOATING**: floating window mode. - **SPLIT**: split-screen mode. Generally, **FULL_SCREEN** or **FLOATING** must be used together. You are not advised to configure only **SPLIT**. If only **SPLIT** is configured, the window on 2-in-1 devices is in floating window mode by default and can transition to the split-screen mode, and the window on tablets is in full-screen mode by default and can transition to the split-screen mode. When **FULL_SCREEN** and **SPLIT** are both configured for a [freeform window](../../../windowmanager/window-terminology.md#freeform-window), the window will be started in floating window mode if the value of [targetAPIVersion](../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) is less than 15 , and in full-screen mode if the value is greater than or equal to 15. **Constraints**: <!--RP1-->This property takes effect only on 2-in-1 devices and tablets.<!--RP1End-->
+Window mode supported by the UIAbility when it is started. The supported window mode specifies whether to display the maximize, minimize, or split-screen button. If this property is not set, the value of **supportWindowMode** configured under [abilities](../../../quick-start/module-configuration-file.md#abilities) in the [module.json5](../../../quick-start/module-configuration-file.md) file corresponding to the UIAbility is used by default.
+
+- **FULL_SCREEN**: full-screen mode. - **FLOATING**: floating window mode. - **SPLIT**: split-screen mode. Generally, **FULL_SCREEN** or **FLOATING** must be used together. You are not advised to configure only **SPLIT**. If only **SPLIT** is configured, the window on 2-in-1 devices is in floating window mode by default and can transition to the split-screen mode, and the window on tablets is in full-screen mode by default and can transition to the split-screen mode.
+
+When **FULL_SCREEN** and **SPLIT** are both configured for a [freeform window](../../../windowmanager/window-terminology.md#freeform-window), the window will be started in floating window mode if the value of [targetAPIVersion](../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) is less than 15 , and in full-screen mode if the value is greater than or equal to 15.
+
+**Constraints**:
+
+<!--RP1-->This property takes effect only on 2-in-1 devices and tablets.<!--RP1End-->
 
 **Type:** Array&lt;bundleManager.SupportWindowMode&gt;
 
@@ -276,7 +328,13 @@ Parameters for the window for the UIAbility upon startup.
 windowHeight?: int
 ```
 
-Window height, in px. The value range is [**minWindowHeight**, **maxWindowHeight**], with the unit being vp. You can call [vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert it to the corresponding px value. **Constraints**: This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
+Window height, in px.
+
+The value range is [**minWindowHeight**, **maxWindowHeight**], with the unit being vp. You can call [vp2px](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#vp2px) to convert it to the corresponding px value.
+
+**Constraints**:
+
+This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** int
 
@@ -294,7 +352,11 @@ Window height, in px. The value range is [**minWindowHeight**, **maxWindowHeight
 windowLeft?: int
 ```
 
-Distance the window moves along the x-axis, with the top-left vertex of the screen specified by **displayId** as the starting point. The unit is px. A positive value means moving to the right, and a negative value means moving to the left. The value is an integer. Non-integer values will be rounded down. When the top-left vertex of the window exceeds the screen area of the specified **displayId**, the window is restricted to be visible only within the screen range of the specified **displayId**. When configuring this field, you are advised to configure **windowTop** at the same time. **Constraints**: This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
+Distance the window moves along the x-axis, with the top-left vertex of the screen specified by **displayId** as the starting point. The unit is px. A positive value means moving to the right, and a negative value means moving to the left. The value is an integer. Non-integer values will be rounded down. When the top-left vertex of the window exceeds the screen area of the specified **displayId**, the window is restricted to be visible only within the screen range of the specified **displayId**. When configuring this field, you are advised to configure **windowTop** at the same time.
+
+**Constraints**:
+
+This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** int
 
@@ -330,7 +392,11 @@ Window mode for the UIAbility upon startup. For details, see [WindowMode](arkts-
 windowTop?: int
 ```
 
-Distance the window moves along the y-axis, with the top-left vertex of the screen specified by **displayId** as the starting point. The unit is px. A positive value means moving downward, and a negative value means moving upward. The value is an integer. Non-integer values will be rounded down. When the top of the window exceeds the screen area of the specified **displayId**, the window is restricted to be visible only within the screen range of the specified **displayId**. When configuring this field, you are advised to also configure **windowLeft**. **Constraints**: This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
+Distance the window moves along the y-axis, with the top-left vertex of the screen specified by **displayId** as the starting point. The unit is px. A positive value means moving downward, and a negative value means moving upward. The value is an integer. Non-integer values will be rounded down. When the top of the window exceeds the screen area of the specified **displayId**, the window is restricted to be visible only within the screen range of the specified **displayId**. When configuring this field, you are advised to also configure **windowLeft**.
+
+**Constraints**:
+
+This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** int
 
@@ -348,7 +414,13 @@ Distance the window moves along the y-axis, with the top-left vertex of the scre
 windowWidth?: int
 ```
 
-Window width, in px. The value range is [**minWindowWidth**, **maxWindowWidth**], with the unit being vp. You can call [vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert it to the corresponding px value. **Constraints**: This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
+Window width, in px.
+
+The value range is [**minWindowWidth**, **maxWindowWidth**], with the unit being vp. You can call [vp2px](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#vp2px) to convert it to the corresponding px value.
+
+**Constraints**:
+
+This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** int
 
@@ -366,7 +438,11 @@ Window width, in px. The value range is [**minWindowWidth**, **maxWindowWidth**]
 withAnimation?: boolean
 ```
 
-Whether animation effects are used for the UIAbility upon startup. **true** if used, **false** otherwise. **Constraints**: 1. This property takes effect only on 2-in-1 devices and tablets. 2. The caller and target must be the same application.
+Whether animation effects are used for the UIAbility upon startup. **true** if used, **false** otherwise.
+
+**Constraints**:
+
+1. This property takes effect only on 2-in-1 devices and tablets. 2. The caller and target must be the same application.
 
 **Type:** boolean
 

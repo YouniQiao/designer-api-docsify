@@ -41,8 +41,8 @@ Adds the permission for applications to access the serial port. This API is open
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application |
 | [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
 | [35700002](../errorcode-busmanager-serial.md#35700002-parameter-error) | Invalid parameter. |
 | [35700008](../errorcode-busmanager-serial.md#35700008-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application |
 

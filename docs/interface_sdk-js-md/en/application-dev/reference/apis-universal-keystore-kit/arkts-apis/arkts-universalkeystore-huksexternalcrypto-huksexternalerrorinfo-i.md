@@ -1,4 +1,4 @@
-# HuksExternalErrorInfo(External Key Management)
+# HuksExternalErrorInfo
 
 Defines detailed error information.
 

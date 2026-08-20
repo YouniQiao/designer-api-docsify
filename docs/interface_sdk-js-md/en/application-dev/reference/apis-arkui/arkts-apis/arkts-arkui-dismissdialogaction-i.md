@@ -1,4 +1,4 @@
-# DismissDialogAction(CustomDialog)
+# DismissDialogAction
 
 Provides information about the action to dismiss the dialog box.
 

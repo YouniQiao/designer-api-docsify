@@ -1,6 +1,8 @@
-# RefreshModifier(Refresh modifier file，defines modifier and function.)
+# RefreshModifier
 
 Defines Refresh Modifier
+
+@extends RefreshAttribute @implements AttributeModifier&lt;RefreshAttribute&gt;
 
 **Inheritance/Implementation:** RefreshModifier extends RefreshAttribute and implements AttributeModifier<RefreshAttribute>
 

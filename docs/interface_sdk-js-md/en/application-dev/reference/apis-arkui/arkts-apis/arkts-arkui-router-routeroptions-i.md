@@ -1,8 +1,8 @@
 # RouterOptions
 
-Describes the page routing options.
+**Since:** 23
 
-**Since:** 8
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-router-interface RouterOptions--><!--Device-router-interface RouterOptions-End-->
 
@@ -20,13 +20,15 @@ import { router } from '@kit.ArkUI';
 params?: Object
 ```
 
-Data that needs to be passed to the target page during redirection. The received data becomes invalid when the page is switched to another page. The target page can use **router.getParams()** to obtain the passed parameters, for example, **this.keyValue** (**keyValue** is the value of a key in **params**). In the web-like paradigm, these parameters can be directly used on the target page. If the field specified by **key** already exists on the target page, the passed value of the key will be displayed. **NOTE：**The **params** parameter can only carry serializable data. Objects returned by methods and system APIs (for example, **PixelMap** objects defined and returned by media APIs) cannot be passed. To pass such objects, extract from them the basic type attributes to be passed, and then construct objects of the object type.
+Data that needs to be passed to the destination page during navigation. After the destination page is displayed, the parameter can be directly used for the page.
 
 **Type:** Object
 
-**Since:** 8
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RouterOptions-params?: Object--><!--Device-RouterOptions-params?: Object-End-->
 
@@ -38,11 +40,13 @@ Data that needs to be passed to the target page during redirection. The received
 recoverable?: boolean
 ```
 
-Whether the corresponding page is recoverable. Default value: **true**. **true**: The corresponding page is recoverable. **false**: The corresponding page is not recoverable. **NOTE：**If an application is switched to the background and is later closed by the system due to resource constraints or other reasons, a page marked as recoverable can be restored by the system when the application is brought back to the foreground. For more details, see [UIAbility Backup and Restore](../../../application-models/ability-recover-guideline.md).
+Set router page stack can be recovered after application is destroyed. When router page stack is recovered, top page will be recovered, other page recovered when it backs. the default value is 'true'.
 
 **Type:** boolean
 
-**Since:** 14
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-RouterOptions-recoverable?: boolean--><!--Device-RouterOptions-recoverable?: boolean-End-->
 
@@ -54,13 +58,13 @@ Whether the corresponding page is recoverable. Default value: **true**. **true**
 url: string
 ```
 
-URL of the target page, in either of the following formats: - Absolute path of the page. The value is available in the pages list in the **config.json** file, for example: - pages/index/index - pages/detail/detail - special value. If the value of **url** is **"/"**, the application navigates to the home page. By default, the home page is set to the first item in the **src** value array.
+URI of the destination page, which supports the following formats: 1. Absolute path of the page, which is provided by the pages list in the config.json file. Example: pages/index/index pages/detail/detail 2. Particular path. If the URI is a slash (/), the home page is displayed.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-RouterOptions-url: string--><!--Device-RouterOptions-url: string-End-->
 

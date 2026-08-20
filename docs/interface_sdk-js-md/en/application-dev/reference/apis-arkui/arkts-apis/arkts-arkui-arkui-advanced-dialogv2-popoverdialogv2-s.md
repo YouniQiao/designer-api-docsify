@@ -2,6 +2,8 @@
 
 Declare struct PopoverDialogV2
 
+@struct { PopoverDialogV2 }
+
 **Since:** 18
 
 <!--Device-unnamed-export declare struct PopoverDialogV2--><!--Device-unnamed-export declare struct PopoverDialogV2-End-->

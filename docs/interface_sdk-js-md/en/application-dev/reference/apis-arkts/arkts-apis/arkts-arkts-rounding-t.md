@@ -1,4 +1,4 @@
-# Rounding(Defines the Decimal for ArkTS. Decimal support arbitrary precision decimal operation.)
+# Rounding
 
 ```TypeScript
 type Rounding = int

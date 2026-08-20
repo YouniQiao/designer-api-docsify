@@ -1,6 +1,10 @@
 # ZoomQuery
 
-ZoomQuery provides APIs to query the zoom feature of a device camera, including the API to obtain the supported zoom ratio range. &gt; **NOTE：**&gt; &gt; - This interface was first introduced in API version 12. In this version, a compatibility change was made that &gt; preserved the initial version information of inner elements. As a result, you might see outer element's @since &gt; version number being higher than that of the inner elements. However, this discrepancy does not affect the &gt; functionality of the interface.
+ZoomQuery provides APIs to query the zoom feature of a device camera, including the API to obtain the supported zoom ratio range.
+
+> **NOTE：**
+> 
+> - This interface was first introduced in API version 12. In this version, a compatibility change was made that &gt; preserved the initial version information of inner elements. As a result, you might see outer element's
 
 **Since:** 23
 
@@ -43,8 +47,8 @@ Obtains the equivalent focal length information list in the current mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 24 |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 
 **Examples**
 
@@ -91,6 +95,6 @@ Checks whether zoom center point is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 

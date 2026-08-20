@@ -25,5 +25,5 @@ import { Filter, FilterParams, FilterResult, FilterType } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [FilterType](arkts-arkui-arkui-advanced-filter-filtertype-e.md) | Declare FilterType |
+| [FilterType](arkts-arkui-arkui-advanced-filter-filtertype-e.md) | Declare FilterType @enum { FilterType } |
 

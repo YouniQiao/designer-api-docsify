@@ -43,12 +43,12 @@ function snoozeNotification(hashCode: string, delayTime: long): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1600028](../errorcode-notification.md#1600028-当前通知不支持该接口) | This notification is not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 | [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
+| [1600028](../errorcode-notification.md#1600028-当前通知不支持该接口) | This notification is not supported. |
 
 **示例**
 

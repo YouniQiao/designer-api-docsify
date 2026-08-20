@@ -2,6 +2,8 @@
 
 The state of Wi-Fi connection enumeration.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-wifiManager-export enum ConnState--><!--Device-wifiManager-export enum ConnState-End-->

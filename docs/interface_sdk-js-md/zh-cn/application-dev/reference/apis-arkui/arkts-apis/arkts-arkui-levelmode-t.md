@@ -1,4 +1,4 @@
-# LevelMode(ActionSheet)
+# LevelMode
 
 ```TypeScript
 declare type LevelMode = import('../api/@ohos.promptAction').LevelMode

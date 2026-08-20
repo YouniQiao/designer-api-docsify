@@ -2,6 +2,8 @@
 
 Defines the capability type.
 
+@enum { number }
+
 **Since:** 6
 
 **Deprecated since:** 9

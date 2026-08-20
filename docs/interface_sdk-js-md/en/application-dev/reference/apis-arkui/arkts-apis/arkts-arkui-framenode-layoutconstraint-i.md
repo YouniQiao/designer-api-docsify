@@ -16,7 +16,7 @@ maxSize: Size
 
 Maximum size.
 
-**Type:** [Size](arkts-arkui-graphics-size-i.md)
+**Type:** [Size](../../apis-default/arkts-apis/arkts-graphics-size-i.md)
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ minSize: Size
 
 Minimum size.
 
-**Type:** [Size](arkts-arkui-graphics-size-i.md)
+**Type:** [Size](../../apis-default/arkts-apis/arkts-graphics-size-i.md)
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ percentReference: Size
 
 Size reference for calculating the percentage of a child node.
 
-**Type:** [Size](arkts-arkui-graphics-size-i.md)
+**Type:** [Size](../../apis-default/arkts-apis/arkts-graphics-size-i.md)
 
 **Since:** 12
 

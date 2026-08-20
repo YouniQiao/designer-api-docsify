@@ -2,6 +2,8 @@
 
 ItemAlign enumeration description
 
+@enum { number }
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare enum ItemAlign--><!--Device-unnamed-declare enum ItemAlign-End-->

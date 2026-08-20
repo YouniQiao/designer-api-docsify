@@ -34,7 +34,9 @@ readonly bundleName: string
 readonly descriptionId?: long
 ```
 
-应用描述Id。 **模型约束：** 此接口仅可在Stage模型下使用。
+应用描述Id。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **类型：** long
 

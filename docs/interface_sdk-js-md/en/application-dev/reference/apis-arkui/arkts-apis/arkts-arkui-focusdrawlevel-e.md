@@ -2,6 +2,8 @@
 
 Type of focus draw level.
 
+@enum {number}
+
 **Since:** 19
 
 <!--Device-unnamed-declare enum FocusDrawLevel--><!--Device-unnamed-declare enum FocusDrawLevel-End-->

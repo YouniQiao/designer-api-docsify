@@ -34,7 +34,7 @@ Unsubscribe the event of acl state changed from a remote device. If the applicat
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API when the short-range chip is not inserted on 2in1 device. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API when the short-range chip is not inserted on 2in1 device. |
 | 2900099 | Internal system error. For example, IPC error. Detailed error messages can be used to assist in locating the problem. |
 

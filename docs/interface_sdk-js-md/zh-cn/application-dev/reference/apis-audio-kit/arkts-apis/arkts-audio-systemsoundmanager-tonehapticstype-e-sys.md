@@ -2,6 +2,8 @@
 
 枚举，系统铃音的振动类型。
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-systemSoundManager-enum ToneHapticsType--><!--Device-systemSoundManager-enum ToneHapticsType-End-->

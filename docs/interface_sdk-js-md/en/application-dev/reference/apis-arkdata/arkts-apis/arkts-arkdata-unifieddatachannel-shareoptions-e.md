@@ -14,7 +14,7 @@ Enumerates the options for using **UnifiedData** in a device.
 IN_APP = 0
 ```
 
-**UnifiedData** can be used only in the same application of a device.
+*UnifiedData** can be used only in the same application of a device.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ IN_APP = 0
 CROSS_APP = 1
 ```
 
-**UnifiedData** can be used across applications of a device.
+*UnifiedData** can be used across applications of a device.
 
 **Since:** 23
 

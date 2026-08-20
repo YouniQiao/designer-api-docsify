@@ -2,6 +2,8 @@
 
 Indicates the SIM card states.
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-sim-export enum SimState--><!--Device-sim-export enum SimState-End-->

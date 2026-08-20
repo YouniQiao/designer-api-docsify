@@ -13,7 +13,11 @@ import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrustLevel: AuthTrustLevel): AuthInstance
 ```
 
-Obtains an **AuthInstance** instance for user authentication. &gt; **NOTE：**&gt; &gt; Each **AuthInstance** can perform authentication only once. To perform authentication again, obtain a new &gt; **AuthInstance**.
+Obtains an **AuthInstance** instance for user authentication.
+
+> **NOTE：**
+> 
+> Each **AuthInstance** can perform authentication only once. To perform authentication again, obtain a new &gt; **AuthInstance**.
 
 **Since:** 9
 
@@ -44,9 +48,9 @@ Obtains an **AuthInstance** instance for user authentication. &gt; **NOTE：**&g
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [12500006](../errorcode-useriam.md#12500006-unsupported-authentication-trust-level) | The authentication trust level is not supported. |
-| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) | The authentication type is not supported. |
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) | The authentication type is not supported. |
+| [12500006](../errorcode-useriam.md#12500006-unsupported-authentication-trust-level) | The authentication trust level is not supported. |
 
 **Examples**
 

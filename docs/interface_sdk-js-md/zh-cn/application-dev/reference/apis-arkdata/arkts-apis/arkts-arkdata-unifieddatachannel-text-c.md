@@ -22,9 +22,19 @@ import { unifiedDataChannel } from '@kit.ArkData';
 details?: Record<string, string>
 ```
 
-是一个字典类型对象，key和value都是string类型，用于描述文本内容。例如，可生成一个details内容为 { "title":"标题", "content":"内容" } 的数据对象，用于描述一篇文章。非必填字段，默认值为空字典对象。
+是一个字典类型对象，key和value都是string类型，用于描述文本内容。例如，可生成一个details内容为
 
-**类型：** Record&lt;string, string&gt;
+{
+
+"title":"标题",
+
+"content":"内容"
+
+}
+
+的数据对象，用于描述一篇文章。非必填字段，默认值为空字典对象。
+
+**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string&gt;
 
 **起始版本：** 10
 

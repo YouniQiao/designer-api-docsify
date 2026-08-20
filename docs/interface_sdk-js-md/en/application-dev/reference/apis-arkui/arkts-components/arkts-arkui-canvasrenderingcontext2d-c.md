@@ -1,6 +1,20 @@
 # CanvasRenderingContext2D
 
-After the **CanvasRenderingContext2D** object is bound to the **Canvas** component, you can draw shapes, texts, and images on the **Canvas** component. &gt; **NOTE：**&gt; &gt; * It is recommended that the **CanvasRenderingContext2D** object and the **Canvas** component be &gt; encapsulated into the same custom component, ensuring a one-to-one correspondence and consistent &gt; lifecycle between them. &gt; &gt; * When you call drawing APIs in this module, the commands are stored in the associated **Canvas** &gt; component's command queue. These commands are only executed when the current frame enters the &gt; rendering phase and the associated **Canvas** component is visible. Therefore, when the **Canvas** &gt; component is invisible (for example, off-screen or hidden), avoid frequent drawing calls to prevent &gt; command queue buildup and excessive memory usage. For best practices, see &gt; [Controlling Canvas Rendering Based on Component Visibility](../../../ui/arkts-drawing-customization-on-canvas.md#controlling-canvas-rendering-based-on-component-visibility). &gt; &gt; * The following path-related APIs apply only to paths created within **CanvasRenderingContext2D** &gt; and do not affect paths defined in &gt; [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md) &gt; or [Path2D](arkts-arkui-path2d-c.md): &gt; [beginPath](#beginpath), [moveTo](#moveto), [lineTo](#lineto), [closePath](#closepath), &gt; [bezierCurveTo](#beziercurveto), [quadraticCurveTo](#quadraticcurveto), [arc](#arc), &gt; [arcTo](#arcto), [ellipse](#ellipse), [rect](#rect), and [roundRect](#roundrect20). &gt; &gt; * When the width or height of the **Canvas** component exceeds 8000 px, rendering via the CPU &gt; causes significant performance degradation.
+After the **CanvasRenderingContext2D** object is bound to the **Canvas** component, you can draw shapes, texts, and images on the **Canvas** component.
+
+> **NOTE：**
+> 
+> It is recommended that the **CanvasRenderingContext2D** object and the **Canvas** component be &gt; encapsulated into the same custom component, ensuring a one-to-one correspondence and consistent &gt; lifecycle between them.
+> 
+> When you call drawing APIs in this module, the commands are stored in the associated **Canvas**
+> component's command queue. These commands are only executed when the current frame enters the &gt; rendering phase and the associated **Canvas** component is visible. Therefore, when the **Canvas**
+> component is invisible (for example, off-screen or hidden), avoid frequent drawing calls to prevent &gt; command queue buildup and excessive memory usage. For best practices, see &gt; [Controlling Canvas Rendering Based on Component Visibility](../../../ui/arkts-drawing-customization-on-canvas.md#controlling-canvas-rendering-based-on-component-visibility).
+> 
+> The following path-related APIs apply only to paths created within **CanvasRenderingContext2D**
+> and do not affect paths defined in &gt; [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md) &gt; or [Path2D](arkts-arkui-path2d-c.md):
+> [beginPath](#beginpath), [moveTo](#moveto), [lineTo](#lineto), [closePath](#closepath), &gt; [bezierCurveTo](#beziercurveto), [quadraticCurveTo](#quadraticcurveto), [arc](#arc), &gt; [arcTo](#arcto), [ellipse](#ellipse), [rect](#rect), and [roundRect](#roundrect20).
+> 
+> When the width or height of the **Canvas** component exceeds 8000 px, rendering via the CPU &gt; causes significant performance degradation.
 
 **Inheritance/Implementation:** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md)
 
@@ -72,7 +86,13 @@ Creates a **CanvasRenderingContext2D** object, allowing for initial configuratio
 static getContext2DFromDrawingContext(drawingContext: DrawingRenderingContext, options?: RenderingContextOptions): CanvasRenderingContext2D
 ```
 
-Obtains a **CanvasRenderingContext2D** object from a **DrawingRenderingContext** object. This **CanvasRenderingContext2D** object is bound to the same **Canvas** component as the input **DrawingRenderingContext** object. &gt; **NOTE：**&gt; &gt; - The **CanvasRenderingContext2D** object obtained via this API cannot be used as a &gt; parameter to create a Canvas &gt; component. Otherwise, the application crashes. &gt; &gt; - If the input **DrawingRenderingContext** object is not bound to a **Canvas** component, &gt; an error code is returned.
+Obtains a **CanvasRenderingContext2D** object from a **DrawingRenderingContext** object. This **CanvasRenderingContext2D** object is bound to the same **Canvas** component as the input **DrawingRenderingContext** object.
+
+> **NOTE：**
+> 
+> - The **CanvasRenderingContext2D** object obtained via this API cannot be used as a &gt; parameter to create a Canvas &gt; component. Otherwise, the application crashes.
+> 
+> - If the input **DrawingRenderingContext** object is not bound to a **Canvas** component, &gt; an error code is returned.
 
 **Since:** 23
 
@@ -171,7 +191,17 @@ Unsubscribes from the event when a **CanvasRenderingContext2D** object is unboun
 on(type: 'onAttach', callback: Callback<void>): void
 ```
 
-Subscribes to the event when a **CanvasRenderingContext2D** object is bound to a **Canvas** component. &gt; **NOTE：**&gt; &gt; A **CanvasRenderingContext2D** object can only be bound to one **Canvas** component &gt; at a time.<br> &gt; When a **CanvasRenderingContext2D** object is bound to a **Canvas** component, the &gt; **onAttach** callback is triggered, indicating that the &gt; [canvas](#canvas) &gt; object is accessible.<br> &gt; Avoid performing drawing operations in the **onAttach** callback. Make sure the &gt; **Canvas** component has completed its &gt; onReady &gt; event before performing any drawing.<br> &gt; The **onAttach** callback is triggered when:<br> &gt; 1. A **Canvas** component is created and bound to a **CanvasRenderingContext2D** &gt; object.<br> &gt; 2. A **CanvasRenderingContext2D** object is bound to a new **Canvas** component.
+Subscribes to the event when a **CanvasRenderingContext2D** object is bound to a **Canvas** component.
+
+> **NOTE：**
+> 
+> A **CanvasRenderingContext2D** object can only be bound to one **Canvas** component &gt; at a time.<br>
+> When a **CanvasRenderingContext2D** object is bound to a **Canvas** component, the &gt; **onAttach** callback is triggered, indicating that the &gt; [canvas](#canvas) &gt; object is accessible.<br>
+> Avoid performing drawing operations in the **onAttach** callback. Make sure the &gt; **Canvas** component has completed its &gt; [onReady](arkts-arkui-canvas-attribute.md#onready) &gt; event before performing any drawing.<br>
+> The **onAttach** callback is triggered when:<br>
+> 1. A **Canvas** component is created and bound to a **CanvasRenderingContext2D**
+> object.<br>
+> 2. A **CanvasRenderingContext2D** object is bound to a new **Canvas** component.
 
 **Since:** 13
 
@@ -202,7 +232,15 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is bound to a
 on(type: 'onDetach', callback: Callback<void>): void
 ```
 
-Subscribes to the event when a **CanvasRenderingContext2D** object is unbound from a **Canvas** component. &gt; **NOTE：**&gt; &gt; When a **CanvasRenderingContext2D** object is unbound from a **Canvas** component, &gt; the **onDetach** callback is triggered. In this case, cease any drawing operations.<br> &gt; The **onDetach** callback is triggered when:<br> &gt; 1. A **Canvas** component is destroyed and unbound from a **CanvasRenderingContext2D** &gt; object.<br> &gt; 2. A **CanvasRenderingContext2D** object is bound to a different **Canvas** component, &gt; causing the existing binding to be released.
+Subscribes to the event when a **CanvasRenderingContext2D** object is unbound from a **Canvas** component.
+
+> **NOTE：**
+> 
+> When a **CanvasRenderingContext2D** object is unbound from a **Canvas** component, &gt; the **onDetach** callback is triggered. In this case, cease any drawing operations.<br>
+> The **onDetach** callback is triggered when:<br>
+> 1. A **Canvas** component is destroyed and unbound from a **CanvasRenderingContext2D**
+> object.<br>
+> 2. A **CanvasRenderingContext2D** object is bound to a different **Canvas** component, &gt; causing the existing binding to be released.
 
 **Since:** 13
 
@@ -233,7 +271,13 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is unbound fr
 startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 ```
 
-Configures and starts the AI analyzer. This API uses a promise to return the result. Before use, set enableAnalyzer to **true** to enable the image AI analyzer.<br>Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API.<br> Repeated calls to this method before completion trigger an error callback. For the sample code, see the code for **stopImageAnalyzer**. &gt; **NOTE：**&gt; &gt; The image analysis type cannot be dynamically modified. &gt; When image changes are detected, the analysis result is automatically destroyed. You can &gt; call this API again to start analysis. &gt; This API depends on device capabilities. If it is called on an incompatible device, an &gt; error code is returned.
+Configures and starts the AI analyzer. This API uses a promise to return the result. Before use, set [enableAnalyzer](arkts-arkui-canvas-attribute.md#enableanalyzer) to **true** to enable the image AI analyzer.<br>Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API.<br> Repeated calls to this method before completion trigger an error callback. For the sample code, see the code for **stopImageAnalyzer**.
+
+> **NOTE：**
+> 
+> The image analysis type cannot be dynamically modified.
+> When image changes are detected, the analysis result is automatically destroyed. You can &gt; call this API again to start analysis.
+> This API depends on device capabilities. If it is called on an incompatible device, an &gt; error code is returned.
 
 **Since:** 12
 
@@ -262,8 +306,8 @@ Configures and starts the AI analyzer. This API uses a promise to return the res
 | Error Code ID | Error Message |
 | --- | --- |
 | [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai-image-analysis-not-supported) | Image analysis feature is unsupported. |
-| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai-image-analysis-terminated) | Image analysis is stopped. |
 | [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai-image-analysis-already-in-progress) | Image analysis is currently being executed. |
+| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai-image-analysis-terminated) | Image analysis is stopped. |
 
 ## stopImageAnalyzer
 
@@ -271,7 +315,12 @@ Configures and starts the AI analyzer. This API uses a promise to return the res
 stopImageAnalyzer(): void
 ```
 
-Stops AI image analysis. The content displayed by the AI image analyzer will be destroyed. &gt; **NOTE：**&gt; &gt; If this API is called when the **startImageAnalyzer** API has not yet returned any result, &gt; an error is reported. &gt; This feature depends on device capabilities.
+Stops AI image analysis. The content displayed by the AI image analyzer will be destroyed.
+
+> **NOTE：**
+> 
+> If this API is called when the **startImageAnalyzer** API has not yet returned any result, &gt; an error is reported.
+> This feature depends on device capabilities.
 
 **Since:** 12
 
@@ -320,7 +369,9 @@ Creates a data URL that contains a representation of an image. This API involves
 readonly canvas: FrameNode
 ```
 
-FrameNode instance of the **Canvas** component associated with **CanvasRenderingContext2D**. It can be used to listen for the visibility status of the associated **Canvas** component. Default value: **null**
+FrameNode instance of the **Canvas** component associated with **CanvasRenderingContext2D**. It can be used to listen for the visibility status of the associated **Canvas** component.
+
+Default value: **null**
 
 **Type:** [FrameNode](arkts-arkui-framenode-t.md)
 
@@ -340,7 +391,9 @@ FrameNode instance of the **Canvas** component associated with **CanvasRendering
 readonly height: number
 ```
 
-Component height. Default unit: vp
+Component height.
+
+Default unit: vp
 
 **Type:** number
 
@@ -360,7 +413,9 @@ Component height. Default unit: vp
 readonly width: number
 ```
 
-Component width. Default unit: vp
+Component width.
+
+Default unit: vp
 
 **Type:** number
 

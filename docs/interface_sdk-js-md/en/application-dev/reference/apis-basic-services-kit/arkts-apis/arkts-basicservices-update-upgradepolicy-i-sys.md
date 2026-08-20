@@ -22,7 +22,9 @@ import { update } from '@kit.BasicServicesKit';
 autoUpgradePeriods: Array<UpgradePeriod>
 ```
 
-Automatic update period. This parameter is optional and is used when the automatic upgrade needs to be performed in a specified period (for example, at night). If this parameter is not passed, the value is an empty array **[]** by default, indicating that the automatic upgrade period is not limited and the upgrade can be performed at any time.
+Automatic update period.
+
+This parameter is optional and is used when the automatic upgrade needs to be performed in a specified period (for example, at night). If this parameter is not passed, the value is an empty array **[]** by default, indicating that the automatic upgrade period is not limited and the upgrade can be performed at any time.
 
 **Type:** Array&lt;[UpgradePeriod](arkts-basicservices-update-upgradeperiod-i-sys.md)&gt;
 
@@ -40,7 +42,9 @@ Automatic update period. This parameter is optional and is used when the automat
 autoUpgradeStrategy: boolean
 ```
 
-Automatic upgrade policy. The value **true** indicates that automatic upgrade is enabled, which is applicable to scenarios where the system needs to automatically complete the upgrade process to improve user experience. The value **false** indicates that automatic upgrade is disabled, which is applicable to scenarios where users need to manually confirm the upgrade to prevent unexpected upgrade or ensure that users are informed. Select a value based on user experience requirements and the upgrade control policy.
+Automatic upgrade policy.
+
+The value **true** indicates that automatic upgrade is enabled, which is applicable to scenarios where the system needs to automatically complete the upgrade process to improve user experience. The value **false** indicates that automatic upgrade is disabled, which is applicable to scenarios where users need to manually confirm the upgrade to prevent unexpected upgrade or ensure that users are informed. Select a value based on user experience requirements and the upgrade control policy.
 
 **Type:** boolean
 
@@ -58,7 +62,9 @@ Automatic upgrade policy. The value **true** indicates that automatic upgrade is
 downloadStrategy: boolean
 ```
 
-Automatic download policy. The value **true** indicates that automatic download is enabled, which is applicable to scenarios where the system is expected to automatically detect and download the new version to reduce manual operations. The value **false** indicates that automatic download is disabled, which is applicable to scenarios where users need to manually confirm the download, preventing using the mobile data or storage space in the background. Select a value based on user preferences and mobile data policies.
+Automatic download policy.
+
+The value **true** indicates that automatic download is enabled, which is applicable to scenarios where the system is expected to automatically detect and download the new version to reduce manual operations. The value **false** indicates that automatic download is disabled, which is applicable to scenarios where users need to manually confirm the download, preventing using the mobile data or storage space in the background. Select a value based on user preferences and mobile data policies.
 
 **Type:** boolean
 

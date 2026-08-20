@@ -34,8 +34,8 @@ Checks whether calling bundle is allow notify(e.g. sound & vibration) when syste
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35200001](../errorcode-intelligentScene.md#35200001-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [35200001](../errorcode-intelligentScene.md#35200001-internal-error) | Internal error. |
 
 **Examples**
 

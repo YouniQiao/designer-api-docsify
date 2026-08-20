@@ -1,4 +1,4 @@
-# Router(页面路由)
+# Router
 
 通过不同的uri访问不同的页面。
 
@@ -186,7 +186,11 @@ static getState(): RouterState
 static push(options: RouterOptions): void
 ```
 
-跳转到应用内的指定页面。 &gt; **说明：** &gt; &gt; 页面路由栈支持的最大Page数量为32。
+跳转到应用内的指定页面。
+
+> **说明：**
+> 
+> 页面路由栈支持的最大Page数量为32。
 
 **起始版本：** 3
 

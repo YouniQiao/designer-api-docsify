@@ -1,4 +1,4 @@
-# TextStyle(AlertDialog)
+# TextStyle
 
 弹窗中message的文本样式，包含文本截断方式等。
 
@@ -19,7 +19,9 @@
 wordBreak?: WordBreak
 ```
 
-弹窗message内容的文本截断方式。 默认值：WordBreak.BREAK_ALL
+弹窗message内容的文本截断方式。
+
+默认值：WordBreak.BREAK_ALL
 
 **类型：** WordBreak
 

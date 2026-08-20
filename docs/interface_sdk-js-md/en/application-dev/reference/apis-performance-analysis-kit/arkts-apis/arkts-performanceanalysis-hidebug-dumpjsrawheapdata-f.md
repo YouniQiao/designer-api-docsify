@@ -12,7 +12,13 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 function dumpJsRawHeapData(needGC?: boolean): Promise<string>
 ```
 
-Dumps the original heap snapshot of the VM for the current thread and generates a .rawheap file. This API uses a promise to return the result. The file can be converted into a heapsnapshot file using rawheap-translator for parsing. &gt; **NOTE：**&gt; &gt; This API is resource-consuming. Therefore, the calling frequency and times are strictly limited. You need to &gt; delete the files immediately after processing them. &gt; &gt; This API is valid only when the **Developer options** is enabled.
+Dumps the original heap snapshot of the VM for the current thread and generates a .rawheap file. This API uses a promise to return the result. The file can be converted into a heapsnapshot file using rawheap-translator for parsing.
+
+> **NOTE：**
+> 
+> This API is resource-consuming. Therefore, the calling frequency and times are strictly limited. You need to &gt; delete the files immediately after processing them.
+> 
+> This API is valid only when the **Developer options** is enabled.
 
 **Since:** 26.1.0
 
@@ -38,14 +44,14 @@ Dumps the original heap snapshot of the VM for the current thread and generates 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11400109](../errorcode-hiviewdfx-hidebug.md#11400109-waiting-for-the-child-dump-process-times-out) | Timeout while waiting for the child process to finish. |
-| [11400108](../errorcode-hiviewdfx-hidebug.md#11400108-failed-to-wait-for-the-child-dump-process-to-finish) | Failed to wait for the child process to finish. |
-| [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-node-api) | Napi interface call exception. |
-| [11400110](../errorcode-hiviewdfx-hidebug.md#11400110-insufficient-disk-space) | Disk remaining space too low. |
-| [11400107](../errorcode-hiviewdfx-hidebug.md#11400107-failed-to-fork-the-child-dump-process) | Fork operation failed. |
 | [11400106](../errorcode-hiviewdfx-hidebug-trace.md#11400106-api-call-quota-exceeded) | Quota exceeded. |
-| [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-failed-to-create-a-dump-file) | Failed to create dump file. |
+| [11400107](../errorcode-hiviewdfx-hidebug.md#11400107-failed-to-fork-the-child-dump-process) | Fork operation failed. |
+| [11400108](../errorcode-hiviewdfx-hidebug.md#11400108-failed-to-wait-for-the-child-dump-process-to-finish) | Failed to wait for the child process to finish. |
+| [11400109](../errorcode-hiviewdfx-hidebug.md#11400109-waiting-for-the-child-dump-process-times-out) | Timeout while waiting for the child process to finish. |
+| [11400110](../errorcode-hiviewdfx-hidebug.md#11400110-insufficient-disk-space) | Disk remaining space too low. |
+| [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-node-api) | Napi interface call exception. |
 | [11400112](../errorcode-hiviewdfx-hidebug.md#11400112-repeated-data-dump) | Repeated data dump. |
+| [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-failed-to-create-a-dump-file) | Failed to create dump file. |
 
 **Examples**
 
@@ -95,14 +101,14 @@ Dumps the original heap snapshot of the VM for the current thread. The API uses 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11400109](../errorcode-hiviewdfx-hidebug.md#11400109-waiting-for-the-child-dump-process-times-out) | Timeout while waiting for the child process to finish. |
-| [11400108](../errorcode-hiviewdfx-hidebug.md#11400108-failed-to-wait-for-the-child-dump-process-to-finish) | Failed to wait for the child process to finish. |
-| [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-node-api) | Napi interface call exception. |
-| [11400110](../errorcode-hiviewdfx-hidebug.md#11400110-insufficient-disk-space) | Disk remaining space too low. |
-| [11400107](../errorcode-hiviewdfx-hidebug.md#11400107-failed-to-fork-the-child-dump-process) | Fork operation failed. |
 | [11400106](../errorcode-hiviewdfx-hidebug-trace.md#11400106-api-call-quota-exceeded) | Quota exceeded. |
-| [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-failed-to-create-a-dump-file) | Failed to create dump file. |
+| [11400107](../errorcode-hiviewdfx-hidebug.md#11400107-failed-to-fork-the-child-dump-process) | Fork operation failed. |
+| [11400108](../errorcode-hiviewdfx-hidebug.md#11400108-failed-to-wait-for-the-child-dump-process-to-finish) | Failed to wait for the child process to finish. |
+| [11400109](../errorcode-hiviewdfx-hidebug.md#11400109-waiting-for-the-child-dump-process-times-out) | Timeout while waiting for the child process to finish. |
+| [11400110](../errorcode-hiviewdfx-hidebug.md#11400110-insufficient-disk-space) | Disk remaining space too low. |
+| [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-node-api) | Napi interface call exception. |
 | [11400112](../errorcode-hiviewdfx-hidebug.md#11400112-repeated-data-dump) | Repeated data dump. |
+| [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-failed-to-create-a-dump-file) | Failed to create dump file. |
 
 
 ## dumpJsRawHeapData
@@ -111,7 +117,9 @@ Dumps the original heap snapshot of the VM for the current thread. The API uses 
 function dumpJsRawHeapData(needGC: boolean, needClean: boolean, processDump: boolean): Promise<Array<string>>
 ```
 
-Dump the raw heap snapshot of the JavaScript Virtual Machine for the current thread. The generated file will be stored in a folder within the application directory. However, since this file is usually large, the system imposes restrictions on the frequency and number of calls to this function. Consequently, you might fail to obtain the dump file due to quota limitations. These failures will persist until the quota is regularly refreshed by the system. Therefore, it is advisable to delete the file immediately after you have finished processing it. Moreover, it is recommended that you use this function in the gray - release version.
+Dump the raw heap snapshot of the JavaScript Virtual Machine for the current thread.
+
+The generated file will be stored in a folder within the application directory. However, since this file is usually large, the system imposes restrictions on the frequency and number of calls to this function. Consequently, you might fail to obtain the dump file due to quota limitations. These failures will persist until the quota is regularly refreshed by the system. Therefore, it is advisable to delete the file immediately after you have finished processing it. Moreover, it is recommended that you use this function in the gray - release version.
 
 **Since:** 26.1.0
 
@@ -141,12 +149,12 @@ Dump the raw heap snapshot of the JavaScript Virtual Machine for the current thr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11400109](../errorcode-hiviewdfx-hidebug.md#11400109-waiting-for-the-child-dump-process-times-out) | Timeout while waiting for the child process to finish. |
-| [11400108](../errorcode-hiviewdfx-hidebug.md#11400108-failed-to-wait-for-the-child-dump-process-to-finish) | Failed to wait for the child process to finish. |
-| [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-node-api) | Napi interface call exception. |
-| [11400110](../errorcode-hiviewdfx-hidebug.md#11400110-insufficient-disk-space) | Disk remaining space too low. |
-| [11400107](../errorcode-hiviewdfx-hidebug.md#11400107-failed-to-fork-the-child-dump-process) | Fork operation failed. |
 | [11400106](../errorcode-hiviewdfx-hidebug-trace.md#11400106-api-call-quota-exceeded) | Quota exceeded. |
-| [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-failed-to-create-a-dump-file) | Failed to create dump file. |
+| [11400107](../errorcode-hiviewdfx-hidebug.md#11400107-failed-to-fork-the-child-dump-process) | Fork operation failed. |
+| [11400108](../errorcode-hiviewdfx-hidebug.md#11400108-failed-to-wait-for-the-child-dump-process-to-finish) | Failed to wait for the child process to finish. |
+| [11400109](../errorcode-hiviewdfx-hidebug.md#11400109-waiting-for-the-child-dump-process-times-out) | Timeout while waiting for the child process to finish. |
+| [11400110](../errorcode-hiviewdfx-hidebug.md#11400110-insufficient-disk-space) | Disk remaining space too low. |
+| [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-node-api) | Napi interface call exception. |
 | [11400112](../errorcode-hiviewdfx-hidebug.md#11400112-repeated-data-dump) | Repeated data dump. |
+| [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-failed-to-create-a-dump-file) | Failed to create dump file. |
 

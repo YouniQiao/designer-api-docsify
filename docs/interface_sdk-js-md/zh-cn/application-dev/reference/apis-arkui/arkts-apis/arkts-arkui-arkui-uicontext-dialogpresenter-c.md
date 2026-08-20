@@ -97,7 +97,12 @@ present(options?: dialog.DialogStyleOptions): Promise<DialogResult>
 present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>, options?: dialog.DialogCustomOptions): Promise<DialogResult>
 ```
 
-提供一个自定义样式的对话框，其中包含所提供的内容。 content参数通过联合类型接受CustomBuilder或ComponentContent： -CustomBuilder：自定义对话框内容的生成器函数。 - ComponentContent：支持状态驱动更新的ComponentContent。 &gt; **说明：**&gt; isModal = true和showInSubWindow = true不能同时使用。
+提供一个自定义样式的对话框，其中包含所提供的内容。
+
+content参数通过联合类型接受CustomBuilder或ComponentContent： -CustomBuilder：自定义对话框内容的生成器函数。 - ComponentContent：支持状态驱动更新的ComponentContent。
+
+> **说明：**
+> isModal = true和showInSubWindow = true不能同时使用。
 
 **起始版本：** 26.1.0
 
@@ -113,7 +118,7 @@ present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | CustomBuilder \| [CustomBuilderWithId](../../apis-na/arkts-apis/arkts-na-custombuilderwithid-t.md) \| ComponentContent&lt;Object&gt; | 是 | 自定义对话框内容。 |
+| content | [CustomBuilder](../../apis-default/arkts-apis/arkts-custombuilder-t.md) \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) \| ComponentContent&lt;Object&gt; | 是 | 自定义对话框内容。 |
 | options | dialog.DialogCustomOptions | 否 | 自定义对话框选项。 |
 
 **返回值：**

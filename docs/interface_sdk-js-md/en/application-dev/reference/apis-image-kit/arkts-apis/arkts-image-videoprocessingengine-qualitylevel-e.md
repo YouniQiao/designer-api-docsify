@@ -1,6 +1,6 @@
 # QualityLevel
 
-Levels of processing quality for detail enhancement.
+Levels of processing quality for detail enhancement. @enum {int}
 
 **Since:** 23
 

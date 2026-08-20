@@ -20,6 +20,6 @@ Callback to be invoked when an item in a **PhotoPickerComponent** is clicked.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| itemInfo | [ItemInfo](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-iteminfo-c.md) | Yes | Type of the clicked item, which can be a thumbnail item or a camera item. |
-| clickType | [ClickType](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-clicktype-e.md) | Yes | Enumerates the click operation types. |
+| itemInfo | [ItemInfo](arkts-medialibrary-file-photopickercomponent-iteminfo-c.md) | Yes | Type of the clicked item, which can be a thumbnail item or a camera item. |
+| clickType | [ClickType](arkts-medialibrary-file-photopickercomponent-clicktype-e.md) | Yes | Enumerates the click operation types. |
 

@@ -2,6 +2,8 @@
 
 interface of data lifecycle.
 
+@interface LifecycleData
+
 **Since:** 7
 
 <!--Device-unnamed-export declare interface LifecycleData--><!--Device-unnamed-export declare interface LifecycleData-End-->

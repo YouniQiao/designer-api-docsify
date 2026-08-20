@@ -22,7 +22,9 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 generateKeyPair(callback: AsyncCallback<KeyPair>): void
 ```
 
-Generates a key pair using this asymmetric key generator. This API uses an asynchronous callback to return the result. <br>If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, a key pair will be randomly generated. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain a key pair that is consistent with the specified key parameters.
+Generates a key pair using this asymmetric key generator. This API uses an asynchronous callback to return the result.
+
+<br>If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, a key pair will be randomly generated. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain a key pair that is consistent with the specified key parameters.
 
 **Since:** 23
 
@@ -45,8 +47,8 @@ Generates a key pair using this asymmetric key generator. This API uses an async
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: Incorrect parameter types; |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
 **Examples**
 
@@ -97,7 +99,9 @@ function testGenerateKeyPair() {
 generateKeyPair(): Promise<KeyPair>
 ```
 
-Generates a key pair using this asymmetric key generator. This API uses a promise to return the result. <br>If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, a key pair will be randomly generated. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain a key pair that is consistent with the specified key parameters.
+Generates a key pair using this asymmetric key generator. This API uses a promise to return the result.
+
+<br>If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, a key pair will be randomly generated. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain a key pair that is consistent with the specified key parameters.
 
 **Since:** 23
 
@@ -120,8 +124,8 @@ Generates a key pair using this asymmetric key generator. This API uses a promis
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
 **Examples**
 
@@ -172,7 +176,11 @@ function testGenerateKeyPair() {
 generateKeyPairSync(): KeyPair
 ```
 
-Generates a key pair using this asymmetric key generator. This API returns the result synchronously. <br>If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, a key pair will be randomly generated. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain a key pair that is consistent with the specified key parameters. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, generateKeyPair. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Generates a key pair using this asymmetric key generator. This API returns the result synchronously.
+
+<br>If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, a key pair will be randomly generated. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain a key pair that is consistent with the specified key parameters.
+
+<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, generateKeyPair. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 
@@ -193,8 +201,8 @@ Generates a key pair using this asymmetric key generator. This API returns the r
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
 **Examples**
 
@@ -250,7 +258,9 @@ function testGenerateKeyPairSync() {
 generatePriKey(callback: AsyncCallback<PriKey>): void
 ```
 
-Generates a private key using this asymmetric key generator. This API uses an asynchronous callback to return the result. <br>If [PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) is used to create a key generator, the key generator generates the specified private key. If [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) is used to create a key generator, you can obtain the specified private key from the key pair generated.
+Generates a private key using this asymmetric key generator. This API uses an asynchronous callback to return the result.
+
+<br>If [PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) is used to create a key generator, the key generator generates the specified private key. If [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) is used to create a key generator, you can obtain the specified private key from the key pair generated.
 
 **Since:** 23
 
@@ -273,8 +283,8 @@ Generates a private key using this asymmetric key generator. This API uses an as
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: Mandatory parameters are left unspecified. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
 **Examples**
 
@@ -325,7 +335,9 @@ function testGeneratePriKey() {
 generatePriKey(): Promise<PriKey>
 ```
 
-Generates a private key using this asymmetric key generator. This API uses a promise to return the result. <br>If a key parameter of the [PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, a private key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain the private key from the key pair generated.
+Generates a private key using this asymmetric key generator. This API uses a promise to return the result.
+
+<br>If a key parameter of the [PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, a private key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain the private key from the key pair generated.
 
 **Since:** 23
 
@@ -348,8 +360,8 @@ Generates a private key using this asymmetric key generator. This API uses a pro
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
 **Examples**
 
@@ -400,7 +412,11 @@ function testGeneratePriKey() {
 generatePriKeySync(): PriKey
 ```
 
-Generates a private key using this asymmetric key generator. This API returns the result synchronously. <br>If a key parameter of the [PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, a private key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain the private key from the key pair generated. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [generatePriKey](#generateprikey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Generates a private key using this asymmetric key generator. This API returns the result synchronously.
+
+<br>If a key parameter of the [PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, a private key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain the private key from the key pair generated.
+
+<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [generatePriKey](#generateprikey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 
@@ -421,8 +437,8 @@ Generates a private key using this asymmetric key generator. This API returns th
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
 **Examples**
 
@@ -476,7 +492,9 @@ function testGeneratePriKeySync() {
 generatePubKey(callback: AsyncCallback<PubKey>): void
 ```
 
-Generates a public key using this asymmetric key generator. This API uses an asynchronous callback to return the result. <br>If a key parameter of the [PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, the specified public key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain the specified public key from the key pair generated.
+Generates a public key using this asymmetric key generator. This API uses an asynchronous callback to return the result.
+
+<br>If a key parameter of the [PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, the specified public key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain the specified public key from the key pair generated.
 
 **Since:** 23
 
@@ -499,8 +517,8 @@ Generates a public key using this asymmetric key generator. This API uses an asy
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: Incorrect parameter types; |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
 **Examples**
 
@@ -551,7 +569,9 @@ function testGeneratePubKey() {
 generatePubKey(): Promise<PubKey>
 ```
 
-Generates a public key using this asymmetric key generator. This API uses a promise to return the result. <br>If a key parameter of the [PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, the specified public key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain the specified public key from the key pair generated.
+Generates a public key using this asymmetric key generator. This API uses a promise to return the result.
+
+<br>If a key parameter of the [PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, the specified public key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain the specified public key from the key pair generated.
 
 **Since:** 23
 
@@ -574,8 +594,8 @@ Generates a public key using this asymmetric key generator. This API uses a prom
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
 **Examples**
 
@@ -626,7 +646,11 @@ function testGeneratePubKey() {
 generatePubKeySync(): PubKey
 ```
 
-Generates a public key using this asymmetric key generator. This API returns the result synchronously. <br>If [PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) is used to create a key generator, the key generator generates the specified public key. If [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) is used to create a key generator, you can obtain the specified public key from the key pair generated. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [generatePubKey](#generatepubkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Generates a public key using this asymmetric key generator. This API returns the result synchronously.
+
+<br>If [PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) is used to create a key generator, the key generator generates the specified public key. If [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) is used to create a key generator, you can obtain the specified public key from the key pair generated.
+
+<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [generatePubKey](#generatepubkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 
@@ -647,8 +671,8 @@ Generates a public key using this asymmetric key generator. This API returns the
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
 **Examples**
 

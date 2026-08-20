@@ -2,6 +2,8 @@
 
 Sets the spacing, main axis alignment method, cross axis alignment method, and main axis arrangement direction of the horizontal linear layout algorithm.
 
+@interface RowLayoutAlgorithmOptions
+
 **Since:** 24
 
 <!--Device-unnamed-interface RowLayoutAlgorithmOptions--><!--Device-unnamed-interface RowLayoutAlgorithmOptions-End-->
@@ -14,9 +16,13 @@ Sets the spacing, main axis alignment method, cross axis alignment method, and m
 alignItems?: VerticalAlign
 ```
 
-Vertical alignment mode of all child components. Default value: **VerticalAlign.Center** Invalid values are treated as the default value.
+Vertical alignment mode of all child components.
 
-**Type:** [VerticalAlign](../../apis-na/arkts-apis/arkts-na-enums-verticalalign-e.md)
+Default value: **VerticalAlign.Center**
+
+Invalid values are treated as the default value.
+
+**Type:** [VerticalAlign](../../apis-default/arkts-apis/arkts-enums-verticalalign-e.md)
 
 **Default:** VerticalAlign.Center
 
@@ -38,7 +44,11 @@ Vertical alignment mode of all child components. Default value: **VerticalAlign.
 isReverse?: boolean
 ```
 
-Whether to reverse the horizontal arrangement of child components. **true** indicates to reverse the horizontal arrangement of child components. The horizontal direction is affected by the common attribute [direction](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction). If the [direction](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction) attribute takes effect, the arrangement is reversed again. **false** indicates to arrange child components in the horizontal direction in normal order. Default value: **false** Invalid values are treated as the default value.
+Whether to reverse the horizontal arrangement of child components. **true** indicates to reverse the horizontal arrangement of child components. The horizontal direction is affected by the common attribute [direction](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction). If the [direction](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction) attribute takes effect, the arrangement is reversed again. **false** indicates to arrange child components in the horizontal direction in normal order.
+
+Default value: **false**
+
+Invalid values are treated as the default value.
 
 **Type:** boolean
 
@@ -62,9 +72,13 @@ Whether to reverse the horizontal arrangement of child components. **true** indi
 justifyContent?: FlexAlign
 ```
 
-Horizontal alignment mode of all child components. Default value: **FlexAlign.Start** Invalid values are treated as the default value.
+Horizontal alignment mode of all child components.
 
-**Type:** [FlexAlign](../../apis-na/arkts-apis/arkts-na-enums-flexalign-e.md)
+Default value: **FlexAlign.Start**
+
+Invalid values are treated as the default value.
+
+**Type:** [FlexAlign](../../apis-default/arkts-apis/arkts-enums-flexalign-e.md)
 
 **Default:** FlexAlign.Start
 
@@ -86,9 +100,13 @@ Horizontal alignment mode of all child components. Default value: **FlexAlign.St
 space?: LengthMetrics
 ```
 
-Horizontal spacing between elements in a horizontal layout. Default value: **LengthMetrics.vp(0)** Invalid values are treated as the default value.
+Horizontal spacing between elements in a horizontal layout.
 
-**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+Default value: **LengthMetrics.vp(0)**
+
+Invalid values are treated as the default value.
+
+**Type:** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 

@@ -12,7 +12,9 @@ import { formHost } from '@kit.FormKit';
 function onFormUninstall(callback: Callback<string>): void
 ```
 
-Listens to the event of uninstall form. You can use this method to listen to the event of uninstall form.
+Listens to the event of uninstall form.
+
+You can use this method to listen to the event of uninstall form.
 
 **Since:** 23
 
@@ -32,6 +34,6 @@ Listens to the event of uninstall form. You can use this method to listen to the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 

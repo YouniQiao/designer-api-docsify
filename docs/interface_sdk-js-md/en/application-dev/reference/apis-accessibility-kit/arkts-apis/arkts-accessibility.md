@@ -25,7 +25,7 @@ import { GesturePoint } from '@kit.AccessibilityKit';
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md) | Enumerates executable actions for accessibility node elements. An accessibility node element refers to a component on the UI that can perform accessibility operations, such as a button or text input box. |
+| [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md) | Enumerates executable actions for accessibility node elements. |
 | [AccessibilityEventType](arkts-accessibility-accessibility-accessibilityeventtype-e-sys.md) | Enumerates accessibility event types. |
 | [AccessibilityFocusScene](arkts-accessibility-accessibility-accessibilityfocusscene-e-sys.md) | Enumerates the focus scenarios for accessibility. |
 | [AccessibilitySourceType](arkts-accessibility-accessibility-accessibilitysourcetype-e-sys.md) | Enumerates the source types of accessibility nodes. |

@@ -46,8 +46,8 @@ clone(title: string): Promise<PhotoAsset>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## close
@@ -62,7 +62,7 @@ close(fd: number, callback: AsyncCallback<void>): void
 
 **废弃版本：** 11
 
-**替代接口：** [close](../../apis-na/arkts-apis/arkts-na-fileio-close-f.md)
+**替代接口：** [close](../../apis-default/arkts-apis/arkts-fileio-close-f.md)
 
 <!--Device-PhotoAsset-close(fd: number, callback: AsyncCallback<void>): void--><!--Device-PhotoAsset-close(fd: number, callback: AsyncCallback<void>): void-End-->
 
@@ -73,14 +73,14 @@ close(fd: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | fd | number | 是 | 文件描述符。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当关闭当前文件成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当关闭当前文件成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| 13900020 | Invalid argument. |
 | 14000011 | System inner fail |
 
 ## close
@@ -95,7 +95,7 @@ close(fd: number): Promise<void>
 
 **废弃版本：** 11
 
-**替代接口：** [close](../../apis-na/arkts-apis/arkts-na-fileio-close-f.md)
+**替代接口：** [close](../../apis-default/arkts-apis/arkts-fileio-close-f.md)
 
 <!--Device-PhotoAsset-close(fd: number): Promise<void>--><!--Device-PhotoAsset-close(fd: number): Promise<void>-End-->
 
@@ -117,8 +117,8 @@ close(fd: number): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## commitModify
@@ -143,17 +143,17 @@ commitModify(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当修改文件元数据成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当修改文件元数据成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
-| 14000001 | Invalid display name |
-| 13900012 | Permission denied<br>**适用版本：** 10+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 11+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 13900012 | Permission denied<br>**适用版本：** 10+ |
+| 13900020 | Invalid argument |
+| 14000001 | Invalid display name |
 | 14000011 | System inner fail |
 
 ## commitModify
@@ -184,11 +184,11 @@ commitModify(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
-| 14000001 | Invalid display name |
-| 13900012 | Permission denied<br>**适用版本：** 10+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 11+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 13900012 | Permission denied<br>**适用版本：** 10+ |
+| 13900020 | Invalid argument |
+| 14000001 | Invalid display name |
 | 14000011 | System inner fail |
 
 ## get
@@ -232,13 +232,15 @@ get(member: string): MemberType
 getReadOnlyFd(callback: AsyncCallback<number>): void
 ```
 
-以只读方式打开当前文件。使用callback异步回调。 使用完毕后调用close释放文件描述符。
+以只读方式打开当前文件。使用callback异步回调。
+
+使用完毕后调用close释放文件描述符。
 
 **起始版本：** 10
 
 **废弃版本：** 11
 
-**替代接口：** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md)
+**替代接口：** [open](../../apis-default/arkts-apis/arkts-fileio-open-f.md)
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
@@ -250,15 +252,15 @@ getReadOnlyFd(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当打开当前文件成功，err为undefined，data为文件描述符； 否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数。当打开当前文件成功，err为undefined，data为文件描述符； 否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## getReadOnlyFd
@@ -267,13 +269,15 @@ getReadOnlyFd(callback: AsyncCallback<number>): void
 getReadOnlyFd(): Promise<number>
 ```
 
-以只读方式打开当前文件。使用promise异步回调。 返回的文件描述符在使用完毕后需要调用close进行释放。
+以只读方式打开当前文件。使用promise异步回调。
+
+返回的文件描述符在使用完毕后需要调用close进行释放。
 
 **起始版本：** 10
 
 **废弃版本：** 11
 
-**替代接口：** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md)
+**替代接口：** [open](../../apis-default/arkts-apis/arkts-fileio-open-f.md)
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
@@ -291,9 +295,9 @@ getReadOnlyFd(): Promise<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## getThumbnail
@@ -318,15 +322,15 @@ getThumbnail(callback: AsyncCallback<image.PixelMap>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | 回调函数。当获取文件的缩略图成功，err为undefined， data为缩略图的PixelMap；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | 是 | 回调函数。当获取文件的缩略图成功，err为undefined， data为缩略图的PixelMap；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 13900012 | Permission denied |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## getThumbnail
@@ -352,15 +356,15 @@ getThumbnail(size: image.Size, callback: AsyncCallback<image.PixelMap>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | size | image.Size | 是 | 缩略图尺寸。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | 回调函数。当获取文件的缩略图成功，err为undefined， data为缩略图的PixelMap；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | 是 | 回调函数。当获取文件的缩略图成功，err为undefined， data为缩略图的PixelMap；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## getThumbnail
@@ -397,9 +401,9 @@ getThumbnail(size?: image.Size): Promise<image.PixelMap>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## set
@@ -427,8 +431,8 @@ set(member: string, value: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| 13900020 | Invalid argument |
 | 14000014 | The provided member must be a property name of PhotoKey. |
 
 ## displayName

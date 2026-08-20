@@ -1,6 +1,8 @@
 # Storage
 
-提供获取和修改存储数据的接口。 下列接口都需先使用[data_storage.getStorage](arkts-arkdata-storage-getstorage-f.md)或 [data_storage.getStorageSync](arkts-arkdata-storage-getstoragesync-f.md)获取到Storage实例，再通过此实例调用对应接口。
+提供获取和修改存储数据的接口。
+
+下列接口都需先使用[data_storage.getStorage](arkts-arkdata-storage-getstorage-f.md)或 [data_storage.getStorageSync](arkts-arkdata-storage-getstoragesync-f.md)获取到Storage实例，再通过此实例调用对应接口。
 
 **起始版本：** 6
 
@@ -37,7 +39,7 @@ clear(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **示例**
 
@@ -127,7 +129,7 @@ delete(key: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要获取的存储key名称，不能为空。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **示例**
 
@@ -228,7 +230,7 @@ flush(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **示例**
 
@@ -319,7 +321,7 @@ get(key: string, defValue: ValueType, callback: AsyncCallback<ValueType>): void
 | --- | --- | --- | --- |
 | key | string | 是 | 要获取的存储key名称，不能为空。 |
 | defValue | ValueType | 是 | 默认返回值。支持number、string、boolean。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ValueType&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ValueType&gt; | 是 | 回调函数。 |
 
 **示例**
 
@@ -430,7 +432,7 @@ has(key: string, callback: AsyncCallback<boolean>): boolean
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要获取的存储key名称，不能为空。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。 |
 
 **返回值：**
 
@@ -551,7 +553,7 @@ off(type: 'change', callback: Callback<StorageObserver>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'change' | 是 | 事件类型，固定值'change'，表示数据变更。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StorageObserver](arkts-arkdata-storage-storageobserver-i.md)&gt; | 是 | 需要取消的回调对象实例。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[StorageObserver](arkts-arkdata-storage-storageobserver-i.md)&gt; | 是 | 需要取消的回调对象实例。 |
 
 **示例**
 
@@ -583,7 +585,7 @@ on(type: 'change', callback: Callback<StorageObserver>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'change' | 是 | 事件类型，固定值'change'，表示数据变更。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StorageObserver](arkts-arkdata-storage-storageobserver-i.md)&gt; | 是 | 回调对象实例。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[StorageObserver](arkts-arkdata-storage-storageobserver-i.md)&gt; | 是 | 回调对象实例。 |
 
 **示例**
 
@@ -618,7 +620,7 @@ put(key: string, value: ValueType, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | key | string | 是 | 要修改的存储的key，不能为空。 |
 | value | ValueType | 是 | 存储的新值。支持number、string、boolean。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **示例**
 

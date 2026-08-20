@@ -2,6 +2,8 @@
 
 Controls the transparency of materials.
 
+@interface Blend
+
 **Since:** 23
 
 <!--Device-unnamed-export interface Blend--><!--Device-unnamed-export interface Blend-End-->

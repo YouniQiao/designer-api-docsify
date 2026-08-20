@@ -6,9 +6,18 @@
 export declare const ArcList: ArcListInterface
 ```
 
-The **ArcList** component is a circular layout container that displays a series of list items in an arc shape. It is suitable for presenting homogeneous data, such as images and text, in a continuous, multi-row format. &gt; **NOTE：**&gt; - This component is supported since API version 18. Updates will be marked with a &gt; superscript to indicate their earliest API version. &gt; &gt; - This component can be used on phones, PCs, 2-in-1 devices, tablets, TVs, and wearables. &gt; In API version 22 and earlier versions, a compilation warning will be reported when this &gt; component is used on phones, PCs, 2-in-1 devices, tablets, and TVs, but the component can &gt; still run properly.
+The **ArcList** component is a circular layout container that displays a series of list items in an arc shape. It is suitable for presenting homogeneous data, such as images and text, in a continuous, multi-row format.
 
-### Child Components Only the ArcListItem component is supported.
+> **NOTE：**
+
+> - This component is supported since API version 18. Updates will be marked with a &gt; superscript to indicate their earliest API version.
+> 
+> - This component can be used on phones, PCs, 2-in-1 devices, tablets, TVs, and wearables.
+> In API version 22 and earlier versions, a compilation warning will be reported when this &gt; component is used on phones, PCs, 2-in-1 devices, tablets, and TVs, but the component can &gt; still run properly.
+
+### Child Components
+
+Only the ArcListItem component is supported.
 
 **Since:** 18
 
@@ -40,9 +49,19 @@ Defines ArcList Component instance.
 export declare const ArcListItem: ArcListItemInterface
 ```
 
-The **ArcListItem** component is used to display individual child components in an ArcList component and must be used in conjunction with **ArcList**. &gt; **NOTE：**&gt; - This component can be used only as a child of ArcList. &gt; &gt; - When this component is used with &gt; [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), its child components are &gt; created when it is created. When this component is used with &gt; [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) or &gt; [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), or when the parent component is &gt; ArcList, its child components are created when it is laid out. &gt; &gt; - This component can be used on phones, PCs, 2-in-1 devices, tablets, TVs, and wearables. In API version 22 and &gt; earlier versions, a compilation warning will be reported when this component is used on phones, PCs, 2-in-1 devices &gt; , tablets, and TVs, but the component can still run properly.
+The **ArcListItem** component is used to display individual child components in an ArcList component and must be used in conjunction with **ArcList**.
 
-### Child Components This component can contain a single child component.
+> **NOTE：**
+
+> - This component can be used only as a child of ArcList.
+> 
+> - When this component is used with &gt; [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), its child components are &gt; created when it is created. When this component is used with &gt; [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) or &gt; [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), or when the parent component is &gt; ArcList, its child components are created when it is laid out.
+> 
+> - This component can be used on phones, PCs, 2-in-1 devices, tablets, TVs, and wearables. In API version 22 and &gt; earlier versions, a compilation warning will be reported when this component is used on phones, PCs, 2-in-1 devices &gt; , tablets, and TVs, but the component can still run properly.
+
+### Child Components
+
+This component can contain a single child component.
 
 **Since:** 18
 

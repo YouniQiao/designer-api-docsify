@@ -1,6 +1,12 @@
 # VideoSession
 
-VideoSession inherits from [Session](arkts-camera-camera-session-i.md), [Flash](arkts-camera-camera-flash-i.md), [AutoExposure](arkts-camera-camera-autoexposure-i.md), [WhiteBalance](arkts-camera-camera-whitebalance-i.md), [Focus](arkts-camera-camera-focus-i.md), [Zoom](arkts-camera-camera-zoom-i.md), [Stabilization](arkts-camera-camera-stabilization-i.md), [ColorManagement](arkts-camera-camera-colormanagement-i.md), [AutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md), [Macro](arkts-camera-camera-macro-i-sys.md), [ControlCenter](arkts-camera-camera-controlcenter-i.md), [ManualExposure](../../../reference/apis-camera-kit/arkts-apis-camera-ManualExposure.md), [ManualFocus](../../../reference/apis-camera-kit/arkts-apis-camera-ManualFocus.md), [ManualIso](../../../reference/apis-camera-kit/arkts-apis-camera-ManualIso.md), [OIS](../../../reference/apis-camera-kit/arkts-apis-camera-OIS.md), and [Aperture](../../../reference/apis-camera-kit/arkts-apis-camera-Aperture.md). It implements a video session, which provides operations on the flash, exposure, white balance, focus, zoom, video stabilization, color space, macro mode and controller, manual exposure, manual focus, manual ISO, optical image stabilization, and aperture. **VideoSession** is provided for the default video recording mode. It applies to common scenarios. It supports recording at various resolutions (such as 720p and 1080p) and frame rates (such as 30 fps and 60 fps).
+VideoSession inherits from [Session](arkts-camera-camera-session-i.md), [Flash](arkts-camera-camera-flash-i.md), [AutoExposure](arkts-camera-camera-autoexposure-i.md), [WhiteBalance](arkts-camera-camera-whitebalance-i.md), [Focus](arkts-camera-camera-focus-i.md), [Zoom](arkts-camera-camera-zoom-i.md), [Stabilization](arkts-camera-camera-stabilization-i.md), [ColorManagement](arkts-camera-camera-colormanagement-i.md), [AutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md), [Macro](arkts-camera-camera-macro-i-sys.md), [ControlCenter](arkts-camera-camera-controlcenter-i.md), [ManualExposure](../../../reference/apis-camera-kit/arkts-apis-camera-ManualExposure.md), [ManualFocus](../../../reference/apis-camera-kit/arkts-apis-camera-ManualFocus.md), [ManualIso](../../../reference/apis-camera-kit/arkts-apis-camera-ManualIso.md), [OIS](../../../reference/apis-camera-kit/arkts-apis-camera-OIS.md), and [Aperture](../../../reference/apis-camera-kit/arkts-apis-camera-Aperture.md).
+
+It implements a video session, which provides operations on the flash, exposure, white balance, focus, zoom, video stabilization, color space, macro mode and controller, manual exposure, manual focus, manual ISO, optical image stabilization, and aperture.
+
+**VideoSession** is provided for the default video recording mode. It applies to common scenarios. It supports recording at various resolutions (such as 720p and 1080p) and frame rates (such as 30 fps and 60 fps).
+
+@extends Session, Flash, AutoExposure, Focus, Zoom, Stabilization, ColorManagement [since 11 - 12] @extends AutoDeviceSwitch [since 13 - 18] @extends Session, Flash, AutoExposure, Focus, Zoom, Stabilization, ColorManagement, AutoDeviceSwitch, Macro [since 19 - 19] @extends Session, Flash, AutoExposure, WhiteBalance, Focus, Zoom, Stabilization, ColorManagement, ControlCenter, AutoDeviceSwitch, Macro [since 20 - 24] @extends Session, Flash, AutoExposure, WhiteBalance, Focus, Zoom, Stabilization, ColorManagement, ControlCenter, AutoDeviceSwitch, Macro, ManualExposure, ManualFocus, ManualIso, OIS, Aperture [since 26.0.0]
 
 **Inheritance/Implementation:** VideoSession extends [Session](arkts-camera-camera-session-i.md), [Flash](arkts-camera-camera-flash-i.md), [AutoExposure](arkts-camera-camera-autoexposure-i.md), [WhiteBalance](arkts-camera-camera-whitebalance-i.md), [Focus](arkts-camera-camera-focus-i.md), [Zoom](arkts-camera-camera-zoom-i.md), [Stabilization](arkts-camera-camera-stabilization-i.md), [ColorManagement](arkts-camera-camera-colormanagement-i.md), [ControlCenter](arkts-camera-camera-controlcenter-i.md), [AutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md), [Macro](arkts-camera-camera-macro-i-sys.md), [ManualExposure](arkts-camera-camera-manualexposure-i.md), [ManualFocus](arkts-camera-camera-manualfocus-i-sys.md), [ManualIso](arkts-camera-camera-manualiso-i-sys.md), [OIS](arkts-camera-camera-ois-i.md), [Aperture](arkts-camera-camera-aperture-i-sys.md)
 
@@ -572,7 +578,11 @@ Subscribes to system pressure level event callback.
 on(type: 'autoDeviceSwitchStatusChange', callback: AsyncCallback<AutoDeviceSwitchStatus>): void
 ```
 
-Subscribes to automatic camera switch status change events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to automatic camera switch status change events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 13
 
@@ -595,7 +605,11 @@ Subscribes to automatic camera switch status change events. This API uses an asy
 on(type: 'controlCenterEffectStatusChange', callback: AsyncCallback<ControlCenterStatusInfo>): void
 ```
 
-Subscribes to events indicating that the camera controller effect status changes. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to events indicating that the camera controller effect status changes. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 20
 
@@ -618,7 +632,11 @@ Subscribes to events indicating that the camera controller effect status changes
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to **VideoSession** error events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to **VideoSession** error events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 11
 
@@ -641,7 +659,11 @@ Subscribes to **VideoSession** error events. This API uses an asynchronous callb
 on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 ```
 
-Subscribes to focus state change events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to focus state change events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 11
 
@@ -664,7 +686,11 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void
 ```
 
-Subscribes to smooth zoom state change events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to smooth zoom state change events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 11
 
@@ -687,7 +713,11 @@ Subscribes to smooth zoom state change events. This API uses an asynchronous cal
 on(type: 'systemPressureLevelChange', callback: AsyncCallback<SystemPressureLevel>): void
 ```
 
-Subscribes to system pressure level change events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to system pressure level change events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 20
 
@@ -739,7 +769,13 @@ Preconfigures this session.
 setQualityPrioritization(quality: QualityPrioritization): void
 ```
 
-Sets the priority level for video recording quality. &gt; **NOTE：**&gt; &gt; - The default value is **HIGH_QUALITY**. Switching to **POWER_BALANCE** will compromise video recording quality &gt; to achieve lower power usage. The extent of power conservation achieved varies depending on the platform. &gt; &gt; - It is recommended that this API be called between &gt; [commitConfig](arkts-camera-camera-session-i.md#commitconfig) and &gt; [start](arkts-camera-camera-session-i.md#start).
+Sets the priority level for video recording quality.
+
+> **NOTE：**
+> 
+> - The default value is **HIGH_QUALITY**. Switching to **POWER_BALANCE** will compromise video recording quality &gt; to achieve lower power usage. The extent of power conservation achieved varies depending on the platform.
+> 
+> - It is recommended that this API be called between &gt; [commitConfig](arkts-camera-camera-session-i.md#commitconfig) and &gt; [start](arkts-camera-camera-session-i.md#start).
 
 **Since:** 23
 

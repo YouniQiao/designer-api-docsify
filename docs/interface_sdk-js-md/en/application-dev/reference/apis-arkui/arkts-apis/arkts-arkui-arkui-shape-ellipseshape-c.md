@@ -1,6 +1,8 @@
 # EllipseShape
 
-Represents an ellipse shape used in the **clipShape** and **maskShape** APIs. This API inherits from [BaseShape](../../apis-na/arkts-apis/arkts-na-arkui-shape-baseshape-c.md).
+Represents an ellipse shape used in the **clipShape** and **maskShape** APIs.
+
+This API inherits from [BaseShape](../../apis-default/arkts-apis/arkts-arkui-shape-baseshape-c.md).
 
 **Inheritance/Implementation:** EllipseShape extends BaseShape<EllipseShape>
 
@@ -40,5 +42,5 @@ A constructor used to create a **EllipseShape** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ShapeSize](../../apis-na/arkts-apis/arkts-na-arkui-shape-shapesize-i.md) | No | Size of the shape. |
+| options | [ShapeSize](../../apis-default/arkts-apis/arkts-arkui-shape-shapesize-i.md) | No | Size of the shape. |
 

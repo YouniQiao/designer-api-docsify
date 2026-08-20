@@ -1,4 +1,4 @@
-# HuksExternalCryptoTag(External Key Management)
+# HuksExternalCryptoTag
 
 Enumerates the tags used to invoke parameters.
 

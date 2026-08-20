@@ -1,0 +1,75 @@
+# RangeError
+
+Represents an error that occurs when provided collection index is out of range
+
+**Inheritance/Implementation:** RangeError extends Error
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+<!--Device-unnamed-export class RangeError--><!--Device-unnamed-export class RangeError-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## Modules to Import
+
+```TypeScript
+```
+
+## $_invoke
+
+```TypeScript
+static $_invoke(message?: string, options?: ErrorOptions): RangeError
+```
+
+Constructs a new RangeError instance with provided message and error specific information
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RangeError-static $_invoke(message?: string, options?: ErrorOptions): RangeError--><!--Device-RangeError-static $_invoke(message?: string, options?: ErrorOptions): RangeError-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | string | No | Error text. |
+| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | No | Error options. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| RangeError |  |
+
+## constructor
+
+```TypeScript
+constructor(message?: string, options?: ErrorOptions)
+```
+
+Constructs a new RangeError instance with provided message and error specific information
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RangeError-constructor(message?: string, options?: ErrorOptions)--><!--Device-RangeError-constructor(message?: string, options?: ErrorOptions)-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | string | No | Error text. |
+| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | No | Error options. |
+

@@ -2,6 +2,8 @@
 
 表示远端分布式设备支持的会话类型枚举。
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-avSession-enum DistributedSessionType--><!--Device-avSession-enum DistributedSessionType-End-->

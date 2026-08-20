@@ -12,13 +12,17 @@ import { router } from '@kit.ArkUI';
 function getLength(): string
 ```
 
-Obtains the number of pages in the current stack. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
+Obtains the number of pages in the current stack.
+
+> **NOTE：**
+> 
+> - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
 
 **Since:** 8
 
 **Deprecated since:** 18
 
-**Substitutes:** [getLength](arkts-arkui-arkui-uicontext-router-c.md#getlength)
+**Substitutes:** [getLength](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#getlength)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

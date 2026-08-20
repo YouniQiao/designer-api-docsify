@@ -1,8 +1,10 @@
-# Environment(System API)
+# Environment
 
 Environment提供设备环境状态的查询能力，可将系统环境变量（如深浅色模式、语言、字体缩放、布局方向等）注入AppStorage，使应用能够感知和响应设备环境变化。具体UI使用说明，详见 [Environment：设备环境查询](../../../ui/state-management/arkts-environment.md)。
 
-## 内置环境变量说明 | key                  | 类型            | 说明                                                         | | -------------------- | --------------- | ------------------------------------------------------------ | | accessibilityEnabled | string          | 无障碍屏幕朗读是否启用。当无法获取环境变量中的accessibilityEnabled的值时，将通过envProp、envProps等接口传入的开发者指定的默认值添加到AppStorage中。 | | colorMode            | ColorMode       | 深浅色模式，可选值为：<br>- **ColorMode.LIGHT：浅色模式**；<br>- **ColorMode.DARK**：深色模式。 | | fontScale            | number          | 字体大小比例。                                               | | fontWeightScale      | number          | 字重比例。                                                   | | layoutDirection      | LayoutDirection | 布局方向类型，可选值为：<br>- **LayoutDirection.LTR**：从左到右；<br>- **LayoutDirection.RTL**：从右到左；<br>- **LayoutDirection.Auto**：跟随系统。 | | languageCode         | string          | 当前系统语言，小写字母，例如zh。                             |
+## 内置环境变量说明
+
+| key | 类型 | 说明 | | -------------------- | --------------- | ------------------------------------------------------------ | | accessibilityEnabled | string | 无障碍屏幕朗读是否启用。当无法获取环境变量中的accessibilityEnabled的值时，将通过envProp、envProps等接口传入的开发者指定的默认值添加到AppStorage中。 | | colorMode | ColorMode | 深浅色模式，可选值为：<br>- **ColorMode.LIGHT：浅色模式**；<br>- **ColorMode.DARK**：深色模式。 | | fontScale | number | 字体大小比例。 | | fontWeightScale | number | 字重比例。 | | layoutDirection | LayoutDirection | 布局方向类型，可选值为：<br>- **LayoutDirection.LTR**：从左到右；<br>- **LayoutDirection.RTL**：从右到左；<br>- **LayoutDirection.Auto**：跟随系统。 | | languageCode | string | 当前系统语言，小写字母，例如zh。 |
 
 **起始版本：** 7
 
@@ -21,7 +23,9 @@ Environment提供设备环境状态的查询能力，可将系统环境变量（
 static EnvProp<S>(key: string, value: S): boolean
 ```
 
-将[Environment](../../../ui/state-management/arkts-environment.md)的内置环境变量key存入 [AppStorage](../../../ui/state-management/arkts-appstorage.md)中。如果系统中未查询到Environment环境变量key的值，则使用默认值value存入 AppStorage并返回true。如果AppStorage中已经有对应的key，则返回false。 在没有调用EnvProp的情况下，直接使用AppStorage读取环境变量，将无法获取到对应的环境变量值。建议在应用启动时调用该接口。
+将[Environment](../../../ui/state-management/arkts-environment.md)的内置环境变量key存入 [AppStorage](../../../ui/state-management/arkts-appstorage.md)中。如果系统中未查询到Environment环境变量key的值，则使用默认值value存入 AppStorage并返回true。如果AppStorage中已经有对应的key，则返回false。
+
+在没有调用EnvProp的情况下，直接使用AppStorage读取环境变量，将无法获取到对应的环境变量值。建议在应用启动时调用该接口。
 
 **起始版本：** 7
 
@@ -37,7 +41,7 @@ static EnvProp<S>(key: string, value: S): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 环境变量名称，支持的范围详见内置环境变量说明。 |
+| key | string | 是 | 环境变量名称，支持的范围详见[内置环境变量说明](#内置环境变量说明)。 |
 | value | S | 是 | 查询不到环境变量key时，则使用value作为默认值存入AppStorage中。 |
 
 **返回值：**
@@ -122,7 +126,9 @@ let keys: Array<string> = Environment.Keys(); // keys 包含 accessibilityEnable
 static envProp<S>(key: string, value: S): boolean
 ```
 
-将[Environment](../../../ui/state-management/arkts-environment.md)的内置环境变量key存入 [AppStorage](../../../ui/state-management/arkts-appstorage.md)中。如果系统中未查询到Environment环境变量key的值，则使用默认值value存入 AppStorage并返回true。如果AppStorage中已经有对应的key，则返回false。 在没有调用envProp的情况下，直接使用AppStorage读取环境变量，将无法获取到对应的环境变量值。建议在应用启动时调用该接口。
+将[Environment](../../../ui/state-management/arkts-environment.md)的内置环境变量key存入 [AppStorage](../../../ui/state-management/arkts-appstorage.md)中。如果系统中未查询到Environment环境变量key的值，则使用默认值value存入 AppStorage并返回true。如果AppStorage中已经有对应的key，则返回false。
+
+在没有调用envProp的情况下，直接使用AppStorage读取环境变量，将无法获取到对应的环境变量值。建议在应用启动时调用该接口。
 
 **起始版本：** 10
 
@@ -136,7 +142,7 @@ static envProp<S>(key: string, value: S): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 环境变量名称，支持的范围详见内置环境变量说明。 |
+| key | string | 是 | 环境变量名称，支持的范围详见[内置环境变量说明](#内置环境变量说明)。 |
 | value | S | 是 | 查询不到环境变量key时，则使用value作为默认值存入AppStorage中。 |
 
 **返回值：**

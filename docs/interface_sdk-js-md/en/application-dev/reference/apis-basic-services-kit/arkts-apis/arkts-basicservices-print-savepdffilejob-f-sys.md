@@ -43,8 +43,8 @@ Save the pdf file for a print job.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13100007 | Save file failed. |
-| [13100006](../errorcode-print.md#13100006-invalid-print-job) | Invalid job ID. |
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [13100006](../errorcode-print.md#13100006-invalid-print-job) | Invalid job ID. |
+| 13100007 | Save file failed. |
 

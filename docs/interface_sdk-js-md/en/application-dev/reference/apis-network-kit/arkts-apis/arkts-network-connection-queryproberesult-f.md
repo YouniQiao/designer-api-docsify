@@ -12,7 +12,11 @@ import { connection } from '@kit.NetworkKit';
 function queryProbeResult(destination: string, duration: int): Promise<ProbeResultInfo>
 ```
 
-Queries network probe results. If an exception (for example, network disconnection) occurs and the request fails to be sent, the API immediately returns the result without performing subsequent probe. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is used to perform network probe on a target host for a period of time to obtain the packet loss rate &gt; and RTT information.
+Queries network probe results. If an exception (for example, network disconnection) occurs and the request fails to be sent, the API immediately returns the result without performing subsequent probe. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is used to perform network probe on a target host for a period of time to obtain the packet loss rate &gt; and RTT information.
 
 **Since:** 26.0.0
 
@@ -41,7 +45,7 @@ Queries network probe results. If an exception (for example, network disconnecti
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | Internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

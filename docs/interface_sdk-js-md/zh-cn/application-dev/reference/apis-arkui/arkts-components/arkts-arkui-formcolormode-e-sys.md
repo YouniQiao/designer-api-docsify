@@ -1,4 +1,4 @@
-# FormColorMode(系统接口)（系统接口）
+# FormColorMode（系统接口）
 
 卡片色彩模式枚举。
 

@@ -26,7 +26,7 @@ Uninitializes the connected NFC tag.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [3200101](../errorcode-nfc.md#3200101-abnormal-active-nfc-tag-status) | Connected NFC tag running state is abnormal in service. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

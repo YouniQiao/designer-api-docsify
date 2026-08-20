@@ -2,6 +2,8 @@
 
 Declare CustomDialog AlertDialogV2.
 
+@struct { AlertDialogV2 }
+
 **Since:** 18
 
 <!--Device-unnamed-export declare struct AlertDialogV2--><!--Device-unnamed-export declare struct AlertDialogV2-End-->

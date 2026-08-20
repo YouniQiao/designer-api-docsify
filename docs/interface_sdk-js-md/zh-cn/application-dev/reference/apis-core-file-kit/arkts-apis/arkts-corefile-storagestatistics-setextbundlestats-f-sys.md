@@ -12,7 +12,11 @@ import { storageStatistics } from '@kit.CoreFileKit';
 function setExtBundleStats(userId: int, stats: ExtBundleStats): Promise<void>
 ```
 
-系统应用或系统服务上报自身的空间占用信息。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 入参stats中的flag为false时，businessName必须为某个应用的包名。
+系统应用或系统服务上报自身的空间占用信息。使用Promise异步回调。
+
+> **说明：**
+> 
+> 入参stats中的flag为false时，businessName必须为某个应用的包名。
 
 **起始版本：** 23
 
@@ -43,11 +47,11 @@ function setExtBundleStats(userId: int, stats: ExtBundleStats): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13600011 | Failed to report the specified business space usage. |
-| 13600010 | The input parameter is invalid. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | 13600001 | IPC error. |
+| 13600010 | The input parameter is invalid. |
+| 13600011 | Failed to report the specified business space usage. |
 
 **示例**
 

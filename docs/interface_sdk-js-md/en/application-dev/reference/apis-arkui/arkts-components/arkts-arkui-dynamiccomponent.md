@@ -1,8 +1,12 @@
 # DynamicComponent
 
-**DynamicComponent** is designed to support the embedding and display of UIs provided by independent .abc files within the current page, with the displayed content running in a worker thread. It is typically used in modular development scenarios where .abc pages are dynamically loaded.
+*DynamicComponent** is designed to support the embedding and display of UIs provided by independent .abc files within the current page, with the displayed content running in a worker thread.
 
-## Child Components None
+It is typically used in modular development scenarios where .abc pages are dynamically loaded.
+
+## Child Components
+
+None
 
 ## DynamicComponent
 
@@ -34,12 +38,9 @@ Creates a **DynamicComponent** component to display the .abc UI running in the w
 
 | Name | Description |
 | --- | --- |
-| [DynamicOptions](arkts-arkui-dynamicoptions-i-sys.md) | Defines the parameters to be passed during **DynamicComponent** construction. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [ErrorCallback](arkts-arkui-errorcallback-t-sys.md) | Defines the error callback type, which is used to receive exception information. |
-| [Worker](arkts-arkui-worker-t-sys.md) | Defines the worker thread object for running the .abc file. |
 

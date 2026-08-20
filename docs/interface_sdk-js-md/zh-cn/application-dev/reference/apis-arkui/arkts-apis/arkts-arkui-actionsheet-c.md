@@ -1,10 +1,10 @@
-# ActionSheet(ActionSheet)
+# ActionSheet
 
 **起始版本：** 8
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [showActionSheet](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#showactionsheet)
+**替代接口：** [showActionSheet](arkts-arkui-arkui-uicontext-uicontext-c.md#showactionsheet)
 
 <!--Device-unnamed-declare class ActionSheet--><!--Device-unnamed-declare class ActionSheet-End-->
 
@@ -21,13 +21,19 @@
 static show(value: ActionSheetOptions)
 ```
 
-定义列表弹窗并弹出。 &gt; **说明：** showActionSheet需先获取[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)实例后再进行调用。 &gt; 从API version 10开始，可以通过使用[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)中的 &gt; [showActionSheet](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#showactionsheet)来明确UI的执行上下文。
+定义列表弹窗并弹出。
+
+> **说明：**
+
+showActionSheet需先获取[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)实例后再进行调用。
+
+> 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的 &gt; [showActionSheet](arkts-arkui-arkui-uicontext-uicontext-c.md#showactionsheet)来明确UI的执行上下文。
 
 **起始版本：** 8
 
 **废弃版本：** 18
 
-**替代接口：** [showActionSheet](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#showactionsheet)
+**替代接口：** [showActionSheet](arkts-arkui-arkui-uicontext-uicontext-c.md#showactionsheet)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -15,7 +15,9 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function off(type: 'hotspotStaJoin', callback?: Callback<StationInfo>): void
 ```
 
-Unsubscribe Wi-Fi hotspot sta join events. &lt;p&gt;All callback functions will be deregistered If there is no specific callback parameter.&lt;/p&gt;
+Unsubscribe Wi-Fi hotspot sta join events.
+
+&lt;p&gt;All callback functions will be deregistered If there is no specific callback parameter.&lt;/p&gt;
 
 **Since:** 7
 

@@ -1,6 +1,8 @@
 # Picture
 
-An image that contains special information can be decoded into a picture object, which generally contains the main picture, auxiliary picture, and metadata. The main picture contains most information about the image and is mainly used to render the image. The auxiliary picture is used to store data related to but different from the main picture, revealing more comprehensive details. The metadata is generally used to store information about the image file. The picture object class is used to read or write picture objects. Before calling any API in Picture, you must use [image.createPicture](arkts-image-image-createpicture-f.md) to create a Picture object. Images occupy a large amount of memory. When you finish using a Picture instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+An image that contains special information can be decoded into a picture object, which generally contains the main picture, auxiliary picture, and metadata. The main picture contains most information about the image and is mainly used to render the image. The auxiliary picture is used to store data related to but different from the main picture, revealing more comprehensive details. The metadata is generally used to store information about the image file. The picture object class is used to read or write picture objects. Before calling any API in Picture, you must use [image.createPicture](arkts-image-image-createpicture-f.md) to create a Picture object.
+
+Images occupy a large amount of memory. When you finish using a Picture instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 23
 
@@ -126,7 +128,9 @@ Obtains the hdr pixel map. This method uses a promise to return the PixelMap obj
 getHdrComposedPixelmapWithOptions(options?: HdrComposeOptions): Promise<PixelMap | undefined>
 ```
 
-Composites an HDR image and returns PixelMap of the image. Composition options (such as PixelMapFormat) can be passed. This API uses a promise to return the result. The Picture object that calls this API must contain the main picture, gain map, and metadata.
+Composites an HDR image and returns PixelMap of the image. Composition options (such as PixelMapFormat) can be passed. This API uses a promise to return the result.
+
+The Picture object that calls this API must contain the main picture, gain map, and metadata.
 
 **Since:** 23
 
@@ -265,7 +269,9 @@ Obtains the metadata of main picture.
 hdrComposeToMainPixelmap(): Promise<void>
 ```
 
-Invokes the VPE algorithm to compose the main pixelmap and gainmap. The composed result will replace the main pixelmap of the current picture object. The Picture object that calls this API must contain the main pixelmap, gain map.
+Invokes the VPE algorithm to compose the main pixelmap and gainmap. The composed result will replace the main pixelmap of the current picture object.
+
+The Picture object that calls this API must contain the main pixelmap, gain map.
 
 **Since:** 26.0.0
 
@@ -311,8 +317,8 @@ Marshals this Picture object and writes it to a MessageSequence object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
 
 ## release
 
@@ -320,7 +326,11 @@ Marshals this Picture object and writes it to a MessageSequence object.
 release(): void
 ```
 
-Releases this Picture object. Images occupy a large amount of memory. When you finish using a Picture instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this Picture object.
+
+Images occupy a large amount of memory. When you finish using a Picture instance, call this API to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 23
 

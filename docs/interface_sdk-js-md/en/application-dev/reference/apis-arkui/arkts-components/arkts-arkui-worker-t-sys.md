@@ -1,4 +1,4 @@
-# Worker(System API) (System API)
+# Worker (System API)
 
 ```TypeScript
 declare type Worker = import('../api/@ohos.worker').default.Worker

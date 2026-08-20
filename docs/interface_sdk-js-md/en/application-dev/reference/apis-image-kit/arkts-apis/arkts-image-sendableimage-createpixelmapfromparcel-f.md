@@ -36,15 +36,15 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. |
-| [62980177](../errorcode-image.md#62980177-abnormal-api-environment) | Abnormal API environment. |
 | [62980096](../errorcode-image.md#62980096-operation-failed) | Operation failed. |
+| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. |
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
-| [62980179](../errorcode-image.md#62980179-abnormal-buffer-size) | Abnormal buffer size. |
+| [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) | Failed to get the data. |
+| [62980177](../errorcode-image.md#62980177-abnormal-api-environment) | Abnormal API environment. |
 | [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the PixelMap. |
+| [62980179](../errorcode-image.md#62980179-abnormal-buffer-size) | Abnormal buffer size. |
 | [62980180](../errorcode-image.md#62980180-failure-in-mapping-the-file-descriptor) | FD mapping failed. |
 | [62980246](../errorcode-image.md#62980246-failure-in-reading-the-pixelmap) | Failed to read the PixelMap. |
-| [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) | Failed to get the data. |
 
 **Examples**
 

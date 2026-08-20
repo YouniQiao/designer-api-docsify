@@ -1,0 +1,41 @@
+# JsonElementDeserializable
+
+可序列化为JSON的类型所实现的接口。 实现该接口的类可以转换为JsonElement。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
+<!--Device-jsonx-export interface JsonElementDeserializable--><!--Device-jsonx-export interface JsonElementDeserializable-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+```
+
+## fromJSON
+
+```TypeScript
+fromJSON(jsonElem: JsonElement): void
+```
+
+将JsonElement反序列化到该对象中。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-JsonElementDeserializable-fromJSON(jsonElem: JsonElement): void--><!--Device-JsonElementDeserializable-fromJSON(jsonElem: JsonElement): void-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| jsonElem | [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | 是 | 待反序列化的JsonElement。 |
+

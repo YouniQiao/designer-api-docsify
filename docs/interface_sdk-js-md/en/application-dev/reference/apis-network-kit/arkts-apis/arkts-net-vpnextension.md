@@ -1,6 +1,24 @@
 # @ohos.net.vpnExtension
 
-This module implements virtual private network (VPN) management, such as starting and stopping a third-party VPN. Third-party VPNs refer to VPN services provided by third parties. They usually support more security and privacy functions and more comprehensive customization options. Currently, the VPN capabilities provided to third-party applications are primarily used for creating virtual NICs and configuring VPN routing information. The connection tunnel process and internal connection protocols need to be implemented by the applications themselves. &gt; **NOTE：**&gt; &gt; The following modules cannot be referenced in the VpnExtensionAbility, as doing so may cause the program to exit &gt; abnormally: &gt; - [@ohos.contact (Contacts)](../../apis-contacts-kit/arkts-apis/arkts-contact.md) &gt; - [@ohos.geolocation](../../apis-location-kit/arkts-apis/arkts-geolocation.md), &gt; [@ohos.geoLocationManager (Geolocation Manager)](../../apis-location-kit/arkts-apis/arkts-geolocationmanager.md) &gt; - [@ohos.multimedia.audio (Audio Management)](../../apis-audio-kit/arkts-apis/arkts-multimedia-audio.md) &gt; - [@ohos.multimedia.camera (Camera Management)](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md) &gt; - [@ohos.telephony.call (Call)](../../apis-telephony-kit/arkts-apis/arkts-telephony-call.md) &gt; - [@ohos.telephony.sim (SIM Management)](../../apis-telephony-kit/arkts-apis/arkts-telephony-sim.md) &gt; - [@ohos.telephony.sms (SMS)](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms.md)
+This module implements virtual private network (VPN) management, such as starting and stopping a third-party VPN. Third-party VPNs refer to VPN services provided by third parties. They usually support more security and privacy functions and more comprehensive customization options. Currently, the VPN capabilities provided to third-party applications are primarily used for creating virtual NICs and configuring VPN routing information. The connection tunnel process and internal connection protocols need to be implemented by the applications themselves.
+
+> **NOTE：**
+> 
+> The following modules cannot be referenced in the VpnExtensionAbility, as doing so may cause the program to exit &gt; abnormally:
+
+> - [@ohos.contact (Contacts)](../../apis-contacts-kit/arkts-apis/arkts-contact.md)
+
+> - [@ohos.geolocation](../../apis-location-kit/arkts-apis/arkts-geolocation.md), &gt; [@ohos.geoLocationManager (Geolocation Manager)](../../apis-location-kit/arkts-apis/arkts-geolocationmanager.md)
+
+> - [@ohos.multimedia.audio (Audio Management)](../../apis-audio-kit/arkts-apis/arkts-multimedia-audio.md)
+
+> - [@ohos.multimedia.camera (Camera Management)](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md)
+
+> - [@ohos.telephony.call (Call)](../../apis-telephony-kit/arkts-apis/arkts-telephony-call.md)
+
+> - [@ohos.telephony.sim (SIM Management)](../../apis-telephony-kit/arkts-apis/arkts-telephony-sim.md)
+
+> - [@ohos.telephony.sms (SMS)](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms.md)
 
 **Since:** 11
 
@@ -20,7 +38,7 @@ import { vpnExtension } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [createVpnConnection](arkts-network-vpnextension-createvpnconnection-f.md) | Creates a **VpnConnection** object. &gt; **NOTE：**&gt; &gt; Before calling **createVpnConnection**, call **startVpnExtensionAbility** to enable the VPN function. |
+| [createVpnConnection](arkts-network-vpnextension-createvpnconnection-f.md) | Creates a **VpnConnection** object. |
 | [createVpnObserver](arkts-network-vpnextension-createvpnobserver-f.md) | Creates a VPN observer object. It is used to listen for VPN-related events. |
 | [startVpnExtensionAbility](arkts-network-vpnextension-startvpnextensionability-f.md) | Enables the VPN extension ability. This API uses a promise to return the result. |
 | [stopVpnExtensionAbility](arkts-network-vpnextension-stopvpnextensionability-f.md) | Stops the VPN extension ability. This API uses a promise to return the result. |

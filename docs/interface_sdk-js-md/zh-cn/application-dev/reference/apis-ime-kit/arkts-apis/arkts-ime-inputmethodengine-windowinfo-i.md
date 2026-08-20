@@ -1,5 +1,7 @@
 # WindowInfo
 
+@brief 窗口信息。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-export interface WindowInfo--><!--Device-inputMethodEngine-export interface WindowInfo-End-->
@@ -18,6 +20,8 @@ import { inputMethodEngine } from '@kit.IMEKit';
 rect: window.Rect
 ```
 
+@brief 窗口矩形区域。
+
 **类型：** window.Rect
 
 **起始版本：** 23
@@ -31,6 +35,8 @@ rect: window.Rect
 ```TypeScript
 status: window.WindowStatusType
 ```
+
+@brief 窗口模式类型。
 
 **类型：** window.WindowStatusType
 

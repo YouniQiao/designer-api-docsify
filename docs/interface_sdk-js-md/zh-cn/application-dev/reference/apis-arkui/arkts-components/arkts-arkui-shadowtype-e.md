@@ -2,6 +2,8 @@
 
 阴影类型。
 
+@enum { number }
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare enum ShadowType--><!--Device-unnamed-declare enum ShadowType-End-->

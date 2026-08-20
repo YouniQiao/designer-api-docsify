@@ -12,7 +12,9 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function on(type: 'openDLPFile', listener: Callback<AccessedDLPFileInfo>): void
 ```
 
-监听打开DLP文件。调用成功后，当DLP文件被打开时会触发回调通知当前应用。仅支持在非DLP沙箱应用中调用。 当应用需要在DLP文件打开后执行特定操作（如记录日志、更新界面）时，可注册该监听。
+监听打开DLP文件。调用成功后，当DLP文件被打开时会触发回调通知当前应用。仅支持在非DLP沙箱应用中调用。
+
+当应用需要在DLP文件打开后执行特定操作（如记录日志、更新界面）时，可注册该监听。
 
 **起始版本：** 10
 
@@ -25,7 +27,7 @@ function on(type: 'openDLPFile', listener: Callback<AccessedDLPFileInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'openDLPFile' | 是 | 监听事件类型。固定值为'openDLPFile'：打开DLP文件事件。 |
-| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AccessedDLPFileInfo](arkts-dataprotection-dlppermission-accesseddlpfileinfo-i.md)&gt; | 是 | DLP文件打开事件的回调。在当前应用的沙箱应用打开DLP文件时，通知当前应用。 |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AccessedDLPFileInfo](arkts-dataprotection-dlppermission-accesseddlpfileinfo-i.md)&gt; | 是 | DLP文件打开事件的回调。在当前应用的沙箱应用打开DLP文件时，通知当前应用。 |
 
 **错误码：**
 

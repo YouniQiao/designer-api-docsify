@@ -39,12 +39,12 @@ Identifies sensitive content in a specified file based on the configured policy 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19110003](../errorcode-dlp.md#19110003-file-not-supported) | The file is not supported. Possible causes: 1. The file path does not exist. 2. The file type is not supported. 3. The file permission is not supported. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [19110002](../errorcode-dlp.md#19110002-file-sensitive-content-identification-timed-out) | Sensitive file content identification timed out. |
-| [19110001](../errorcode-dlp.md#19110001-invalid-parameter) | Parameter error. Possible causes: 1. Incorrect policy format. 2. Invalid parameter range. |
-| [19110004](../errorcode-dlp.md#19110004-system-function-abnormal) | A system error has occurred. |
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [19110001](../errorcode-dlp.md#19110001-invalid-parameter) | Parameter error. Possible causes: 1. Incorrect policy format. 2. Invalid parameter range. |
+| [19110002](../errorcode-dlp.md#19110002-file-sensitive-content-identification-timed-out) | Sensitive file content identification timed out. |
+| [19110003](../errorcode-dlp.md#19110003-file-not-supported) | The file is not supported. Possible causes: 1. The file path does not exist. 2. The file type is not supported. 3. The file permission is not supported. |
+| [19110004](../errorcode-dlp.md#19110004-system-function-abnormal) | A system error has occurred. |
 
 **Examples**
 

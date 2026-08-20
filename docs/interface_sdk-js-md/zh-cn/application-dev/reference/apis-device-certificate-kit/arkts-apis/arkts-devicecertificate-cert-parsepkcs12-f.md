@@ -41,9 +41,9 @@ function parsePkcs12(data: Uint8Array, config: Pkcs12ParsingConfig): Pkcs12Data
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 | [19030008](../errorcode-cert.md#19030008-私钥密码错误) | Maybe wrong password. |
 
@@ -438,9 +438,9 @@ function parsePkcs12(data: Uint8Array, password: string): Promise<Pkcs12Data>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
 | [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes: <br>1. The length of the data is zero or too large; <br>2. The length of the password is too large. |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 | [19030008](../errorcode-cert.md#19030008-私钥密码错误) | Maybe wrong password. |
 

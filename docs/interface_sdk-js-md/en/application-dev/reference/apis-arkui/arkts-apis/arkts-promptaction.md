@@ -1,6 +1,12 @@
 # @ohos.promptAction
 
-This module provides API for creating and displaying toasts, dialog boxes, and action menus. &gt; **NOTE：**&gt; &gt; - This module cannot be used in the file declaration of the [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md). In &gt; other words, the APIs of this module can be used only after a component instance is created; they cannot be called &gt; in the lifecycle of the UIAbility. &gt; &gt; - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used &gt; where [the UI context is ambiguous](../../../ui/arkts-global-interface.md#ambiguous-ui-context). For details, see &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md). It is recommended that you use the dialog box APIs provided by &gt; **UIContext**<!--Del-->, except for UI-less scenarios such as &gt; [ServiceExtensionAbility](../../../application-models/serviceextensionability-sys.md)<!--DelEnd-->.
+This module provides API for creating and displaying toasts, dialog boxes, and action menus.
+
+> **NOTE：**
+> 
+> - This module cannot be used in the file declaration of the [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md). In &gt; other words, the APIs of this module can be used only after a component instance is created; they cannot be called &gt; in the lifecycle of the UIAbility.
+> 
+> - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used &gt; where [the UI context is ambiguous](../../../ui/arkts-global-interface.md#ambiguous-ui-context). For details, see &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md). It is recommended that you use the dialog box APIs provided by &gt; **UIContext**<!--Del-->, except for UI-less scenarios such as &gt; [ServiceExtensionAbility](../../../application-models/serviceextensionability-sys.md)<!--DelEnd-->.
 
 ## Modules to Import
 
@@ -14,7 +20,7 @@ import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [promptAction](arkts-arkui-promptaction-n.md) | This module provides API for creating and displaying toasts, dialog boxes, and action menus. &gt; **NOTE：**&gt; &gt; - This module cannot be used in the file declaration of the [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md). In &gt; other words, the APIs of this module can be used only after a component instance is created; they cannot be called &gt; in the lifecycle of the UIAbility. &gt; &gt; - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used &gt; where [the UI context is ambiguous](../../../ui/arkts-global-interface.md#ambiguous-ui-context). For details, see &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md). It is recommended that you use the dialog box APIs provided by &gt; **UIContext**<!--Del-->, except for UI-less scenarios such as &gt; [ServiceExtensionAbility](../../../application-models/serviceextensionability-sys.md)<!--DelEnd-->. |
+| [promptAction](arkts-arkui-promptaction-n.md) | This module provides API for creating and displaying toasts, dialog boxes, and action menus. |
 
 ### Classes
 

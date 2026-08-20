@@ -2,6 +2,8 @@
 
 Defines the particle configs.
 
+@interface ParticleConfigs
+
 **Since:** 10
 
 <!--Device-unnamed-interface ParticleConfigs--><!--Device-unnamed-interface ParticleConfigs-End-->

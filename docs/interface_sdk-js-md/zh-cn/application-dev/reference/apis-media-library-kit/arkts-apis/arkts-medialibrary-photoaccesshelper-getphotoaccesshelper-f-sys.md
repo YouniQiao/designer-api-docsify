@@ -43,9 +43,9 @@ function getPhotoAccessHelper(context: Context, userId: int): PhotoAccessHelper
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
+| 13900020 | Invalid argument |
 
 **示例**
 

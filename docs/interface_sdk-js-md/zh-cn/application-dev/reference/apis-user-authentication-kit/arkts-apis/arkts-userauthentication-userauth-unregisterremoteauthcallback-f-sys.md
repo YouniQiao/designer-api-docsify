@@ -46,7 +46,7 @@ try {
   console.info('Remote auth callback unregistered successfully');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`failed to unregister remote auth callback. Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`Failed to unregister remote auth callback. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 

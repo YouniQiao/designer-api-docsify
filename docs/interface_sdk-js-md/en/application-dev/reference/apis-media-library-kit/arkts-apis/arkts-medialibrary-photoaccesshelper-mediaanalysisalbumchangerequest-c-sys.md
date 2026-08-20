@@ -44,8 +44,8 @@ Constructor.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 
 **Examples**
 
@@ -112,9 +112,9 @@ Creates a MediaAnalysisAlbumChangeRequest instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. <br>Possible causes: <br>1. The input parameter is not within the valid range. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## createAnalysisAlbumRequest
 
@@ -126,7 +126,15 @@ static createAnalysisAlbumRequest(
     ): MediaAnalysisAlbumChangeRequest
 ```
 
-Creates a change request for the **Analysis** album. &gt; **NOTE：**&gt; &gt; The album name must meet the following requirements: &gt; &gt; - The album name string length ranges from 1 to 255. &gt; &gt; - The album name cannot contain any of the following characters:.. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+Creates a change request for the **Analysis** album.
+
+> **NOTE：**
+> 
+> The album name must meet the following requirements:
+> 
+> - The album name string length ranges from 1 to 255.
+> 
+> - The album name cannot contain any of the following characters:.. \ / : ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 23
 
@@ -156,9 +164,9 @@ Creates a change request for the **Analysis** album. &gt; **NOTE：**&gt; &gt; T
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. <br>Possible causes: <br>1. The input parameter is not within the valid range. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **Examples**
 
@@ -206,9 +214,9 @@ Sets the default cover image for the smart album.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. <br>Possible causes: <br>1. The input parameter is not within the valid range. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **Examples**
 
@@ -287,9 +295,9 @@ Sets the sequence of assets in the **Analysis** album.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **Examples**
@@ -342,7 +350,9 @@ async function example(context: Context) {
 setRelationship(relationship: string): Promise<void>
 ```
 
-Sets the relationships of a person in the portrait album. The supported relationship names include: | Unique ID | Description | | ---------- | ------- | | me | Me| | son | Son| | daughter | Daughter| | wife | Wife| | husband | Husband| | father | Father| | mother | Mother| | colleague | Colleague| | friend | Friend| | classmate | Classmate| | best_friend_female | Best female friend| | boyfriend | Boyfriend| | girlfriend | Girlfriend| | family | Family| | maternal_grandfather | Maternal grandfather| | maternal_grandmother | Maternal grandmother| | paternal_grandfather | Paternal grandfather| | paternal_grandmother | Paternal grandmother| | older_brother | Older brother| | older_sister | Older sister| | younger_brother | Younger brother| | younger_sister | Younger sister| | relative | Relative| | other | Other|
+Sets the relationships of a person in the portrait album.
+
+The supported relationship names include: | Unique ID | Description | | ---------- | ------- | | me | Me| | son | Son| | daughter | Daughter| | wife | Wife| | husband | Husband| | father | Father| | mother | Mother| | colleague | Colleague| | friend | Friend| | classmate | Classmate| | best_friend_female | Best female friend| | boyfriend | Boyfriend| | girlfriend | Girlfriend| | family | Family| | maternal_grandfather | Maternal grandfather| | maternal_grandmother | Maternal grandmother| | paternal_grandfather | Paternal grandfather| | paternal_grandmother | Paternal grandmother| | older_brother | Older brother| | older_sister | Older sister| | younger_brother | Younger brother| | younger_sister | Younger sister| | relative | Relative| | other | Other|
 
 **Since:** 26.0.0
 
@@ -370,10 +380,10 @@ Sets the relationships of a person in the portrait album. The supported relation
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. <br>Possible causes: <br>1. The input parameter is not within the valid range. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **Examples**
 

@@ -1,6 +1,6 @@
 # AccessibilityRoleType
 
-Enumerates the component role types used by screen readers.
+Enumerates the component role types used by screen readers. @enum { number }
 
 **Since:** 18
 

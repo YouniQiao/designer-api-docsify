@@ -2,6 +2,8 @@
 
 Enumerates the particle types.
 
+@enum { string }
+
 **Since:** 10
 
 <!--Device-unnamed-declare enum ParticleType--><!--Device-unnamed-declare enum ParticleType-End-->

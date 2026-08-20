@@ -1,4 +1,4 @@
-# TabContentBuilder(Provides an advanced struct of tabs for atomic services)
+# TabContentBuilder
 
 ```TypeScript
 export type TabContentBuilder = () => void

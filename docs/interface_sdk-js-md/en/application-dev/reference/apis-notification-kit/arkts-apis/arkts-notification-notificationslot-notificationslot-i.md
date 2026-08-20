@@ -14,7 +14,9 @@ The **NotificationSlot** module provides APIs for defining the notification slot
 badgeFlag?: boolean
 ```
 
-Whether to display the badge. The default value is **true**. - **true**: Display the badge. - **false**: Do not display the badge.
+Whether to display the badge. The default value is **true**.
+
+- **true**: Display the badge. - **false**: Do not display the badge.
 
 **Type:** boolean
 
@@ -30,7 +32,9 @@ Whether to display the badge. The default value is **true**. - **true**: Display
 bypassDnd?: boolean
 ```
 
-Whether to bypass Do Not Disturb mode in the system. The default value is **false**. - **true**: Bypass Do Not Disturb mode, and notifications will still be alerted in Do Not Disturb mode. - **false**: Do not bypass Do Not Disturb mode, and notifications will not be alerted in Do Not Disturb mode.
+Whether to bypass Do Not Disturb mode in the system. The default value is **false**.
+
+- **true**: Bypass Do Not Disturb mode, and notifications will still be alerted in Do Not Disturb mode. - **false**: Do not bypass Do Not Disturb mode, and notifications will not be alerted in Do Not Disturb mode.
 
 **Type:** boolean
 
@@ -62,7 +66,9 @@ Description of the notification channel. The size cannot exceed 243 bytes, and t
 readonly enabled?: boolean
 ```
 
-Whether to allow notifications of this slot type to be published. - **true**: yes. - **false**: no.
+Whether to allow notifications of this slot type to be published.
+
+- **true**: yes. - **false**: no.
 
 **Type:** boolean
 
@@ -114,7 +120,9 @@ Indicator color of the notification. This is a reserved capability and is not su
 lightEnabled?: boolean
 ```
 
-Whether to enable the light. The default value is **false**. - **true**: yes. - **false**: no.
+Whether to enable the light. The default value is **false**.
+
+- **true**: yes. - **false**: no.
 
 **Type:** boolean
 
@@ -214,7 +222,9 @@ Channel type.
 vibrationEnabled?: boolean
 ```
 
-Whether to enable vibration. The default value is **false**. - **true**: yes. - **false**: no.
+Whether to enable vibration. The default value is **false**.
+
+- **true**: yes. - **false**: no.
 
 **Type:** boolean
 

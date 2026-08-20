@@ -2,6 +2,8 @@
 
 Control margin status of ExceptionPromptV2.
 
+@enum { number }
+
 **Since:** 26.0.0
 
 <!--Device-unnamed-export declare enum MarginTypeV2--><!--Device-unnamed-export declare enum MarginTypeV2-End-->

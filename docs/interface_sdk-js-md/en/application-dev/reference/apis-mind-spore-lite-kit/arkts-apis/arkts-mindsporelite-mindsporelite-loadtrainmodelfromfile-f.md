@@ -43,9 +43,9 @@ Load train model from file
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1000009 | Failed to create native training model from path. Possible causes: 1. The model file is incorrect; 2. The training configuration is incorrect. |
-| 1000008 | Invalid model path in training. Possible causes: 1. The model path is null; 2. The model path does not exist. |
 | 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect. |
+| 1000008 | Invalid model path in training. Possible causes: 1. The model path is null; 2. The model path does not exist. |
+| 1000009 | Failed to create native training model from path. Possible causes: 1. The model file is incorrect; 2. The training configuration is incorrect. |
 
 **Examples**
 

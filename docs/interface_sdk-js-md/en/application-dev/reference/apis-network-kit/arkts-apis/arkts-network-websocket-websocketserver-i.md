@@ -47,8 +47,8 @@ Closes a WebSocket connection. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2302006 | websocket connection does not exist. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 2302006 | websocket connection does not exist. |
 
 **Examples**
 
@@ -92,7 +92,13 @@ localServer.on('connect', (connection: webSocket.WebSocketConnection) => {
 listAllConnections(): WebSocketConnection[]
 ```
 
-Obtains information about all clients connected to the server. **Required permission**: ohos.permission.INTERNET &gt; **NOTE：**&gt; &gt; This API is called asynchronously. The **await** keyword needs to be used to wait until the asynchronous &gt; operation is complete, ensuring that information about all clients connected to the server can be correctly &gt; obtained.
+Obtains information about all clients connected to the server.
+
+**Required permission**: ohos.permission.INTERNET
+
+> **NOTE：**
+> 
+> This API is called asynchronously. The **await** keyword needs to be used to wait until the asynchronous &gt; operation is complete, ensuring that information about all clients connected to the server can be correctly &gt; obtained.
 
 **Since:** 23
 
@@ -243,7 +249,12 @@ Cancels listening for the error events of a WebSocket Server.
 off(type: 'close', callback?: ClientConnectionCloseCallback): void
 ```
 
-Unsubscribes from WebSocketServer close events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. &gt; If you do not pass the callback, you will cancel listening for all events.
+Unsubscribes from WebSocketServer close events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
+> If you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 19
 
@@ -274,7 +285,12 @@ localServer.off('close');
 off(type: 'connect', callback?: Callback<WebSocketConnection>): void
 ```
 
-Unsubscribes from WebSocketServer connection events (the connection between the client and server is successfully established). This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. &gt; If you do not pass the callback, you will cancel listening for all events.
+Unsubscribes from WebSocketServer connection events (the connection between the client and server is successfully established). This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
+> If you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 19
 
@@ -305,7 +321,12 @@ localServer.off('connect');
 off(type: 'error', callback?: ErrorCallback): void
 ```
 
-Unsubscribes from WebSocketServer error events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. &gt; If you do not pass the callback, you will cancel listening for all events.
+Unsubscribes from WebSocketServer error events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
+> If you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 19
 
@@ -336,7 +357,12 @@ localServer.off('error');
 off(type: 'messageReceive', callback?: Callback<WebSocketMessage>): void
 ```
 
-Unsubscribes from the WebSocketServer event of receiving client messages. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. &gt; If you do not pass the callback, you will cancel listening for all events.
+Unsubscribes from the WebSocketServer event of receiving client messages. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
+> If you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 19
 
@@ -582,7 +608,12 @@ localServer.on('messageReceive', (message: webSocket.WebSocketMessage) => {
 send(data: string | ArrayBuffer, connection: WebSocketConnection): Promise<boolean>
 ```
 
-Sends data through the WebSocket connection. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; The **send** API can be called only after a **connect** event is listened. &gt; **Required permission**: ohos.permission.INTERNET
+Sends data through the WebSocket connection. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> The **send** API can be called only after a **connect** event is listened.
+> **Required permission**: ohos.permission.INTERNET
 
 **Since:** 23
 
@@ -609,8 +640,8 @@ Sends data through the WebSocket connection. This API uses a promise to return t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2302006 | websocket connection does not exist. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 2302006 | websocket connection does not exist. |
 
 **Examples**
 
@@ -657,7 +688,12 @@ localServer.on('connect', async (connection: webSocket.WebSocketConnection) => {
 start(config: WebSocketServerConfig): Promise<boolean>
 ```
 
-Starts the WebSocketServer service based on the specified **config**. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; You are advised not to listen for the same port when calling this API multiple times. &gt; **Required permission**: ohos.permission.INTERNET
+Starts the WebSocketServer service based on the specified **config**. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> You are advised not to listen for the same port when calling this API multiple times.
+> **Required permission**: ohos.permission.INTERNET
 
 **Since:** 24
 
@@ -683,12 +719,12 @@ Starts the WebSocketServer service based on the specified **config**. This API u
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) | Websocket certificate file does not exist. |
+| [2302004](../errorcode-net-webSocket.md#2302004-listening-failed-on-the-specified-nic) | Can't listen on the given NIC. |
+| [2302005](../errorcode-net-webSocket.md#2302005-listening-failed-on-the-specified-port) | Can't listen on the given Port. |
 | [2302999](../errorcode-net-webSocket.md#2302999-internal-error) | Websocket other unknown error. |
 | [2302007](../errorcode-net-webSocket.md#2302007-listening-port-already-occupied) | Websocket port already occupied.<br>**Applicable version:** 24 and later |
-| [2302005](../errorcode-net-webSocket.md#2302005-listening-failed-on-the-specified-port) | Can't listen on the given Port. |
-| [2302004](../errorcode-net-webSocket.md#2302004-listening-failed-on-the-specified-nic) | Can't listen on the given NIC. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 

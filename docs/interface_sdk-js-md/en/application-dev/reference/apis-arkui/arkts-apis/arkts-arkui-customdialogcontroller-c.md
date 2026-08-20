@@ -1,8 +1,17 @@
-# CustomDialogController(CustomDialog)
+# CustomDialogController
 
 Defines the controller of the custom dialog box.
 
-## Objects to Import ```ts dialogController : CustomDialogController | null = new CustomDialogController(CustomDialogControllerOptions) ``` > **NOTE** > > - **CustomDialogController** is effective only when it is a member variable of the @CustomDialog and @Component > decorated struct and is defined in the @Component decorated struct. For details, see the following example. > > - You can pass in multiple other controllers in the CustomDialog to open one or more other CustomDialogs in the > CustomDialog. In this case, you must place the controller pointing to the self behind all controllers. For details, > see > [Example 1: Opening Nested Dialog Boxes](../../../reference/apis-arkui/arkui-ts/ts-methods-custom-dialog-box.md#example-1-opening-nested-dialog-boxes). >
+## Objects to Import
+
+```ts
+dialogController : CustomDialogController | null = new CustomDialogController(CustomDialogControllerOptions) ```
+
+> **NOTE：**
+> 
+> - **CustomDialogController** is effective only when it is a member variable of the @CustomDialog and @Component &gt; decorated struct and is defined in the @Component decorated struct. For details, see the following example.
+> 
+> - You can pass in multiple other controllers in the CustomDialog to open one or more other CustomDialogs in the &gt; CustomDialog. In this case, you must place the controller pointing to the self behind all controllers. For details, &gt; see &gt; [Example 1: Opening Nested Dialog Boxes](../../../reference/apis-arkui/arkui-ts/ts-methods-custom-dialog-box.md#example-1-opening-nested-dialog-boxes). &gt;
 
 **Since:** 7
 
@@ -35,7 +44,15 @@ close()
 constructor(value: CustomDialogControllerOptions)
 ```
 
-Constructor for a custom dialog box. &gt; **NOTE：**&gt; &gt; Custom dialog box parameters do not support dynamic updates. However, by setting **customStyle** to **true** and &gt; configuring attributes such as background color, &gt; background blur, &gt; and width/height on the custom component, dynamic updates can be achieved through state variables &gt; bound to these attributes. &gt; &gt; If **CustomDialogController** is used as a global variable to implement global custom dialog boxes, the previous &gt; dialog box cannot be closed after a new value is assigned to the controller. You are advised to close the dialog &gt; box before reassigning the value. &gt; &gt; When a custom dialog box is started within another custom dialog box, you are advised not to close the latter &gt; custom dialog box directly.
+Constructor for a custom dialog box.
+
+> **NOTE：**
+> 
+> Custom dialog box parameters do not support dynamic updates. However, by setting **customStyle** to **true** and &gt; configuring attributes such as background color, &gt; background blur, &gt; and width/height on the custom component, dynamic updates can be achieved through state variables &gt; bound to these attributes.
+> 
+> If **CustomDialogController** is used as a global variable to implement global custom dialog boxes, the previous &gt; dialog box cannot be closed after a new value is assigned to the controller. You are advised to close the dialog &gt; box before reassigning the value.
+> 
+> When a custom dialog box is started within another custom dialog box, you are advised not to close the latter &gt; custom dialog box directly.
 
 **Since:** 7
 
@@ -81,7 +98,11 @@ Obtains the state of the custom dialog box.
 open()
 ```
 
-Opens the content of the custom dialog box. This API can be called multiple times. If the dialog box is displayed in a subwindow, no new subwindow is allowed. &gt; **NOTE：**&gt; &gt; **CustomDialog** with subwindow display (**showInSubwindow** set to **true**) is not supported in input method &gt; windows. For details, see the constraints in &gt; [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) &gt; of the input method framework documentation.
+Opens the content of the custom dialog box. This API can be called multiple times. If the dialog box is displayed in a subwindow, no new subwindow is allowed.
+
+> **NOTE：**
+> 
+> **CustomDialog** with subwindow display (**showInSubwindow** set to **true**) is not supported in input method &gt; windows. For details, see the constraints in &gt; [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) &gt; of the input method framework documentation.
 
 **Since:** 7
 

@@ -2,6 +2,8 @@
 
 旋转轴限位状态
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-mechanicManager-export enum RotationAxisLimited--><!--Device-mechanicManager-export enum RotationAxisLimited-End-->

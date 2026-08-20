@@ -14,7 +14,9 @@ Enumerates the operation modes for the routing stack.
 STANDARD = 0
 ```
 
-Default routing stack operation mode. In this mode, push operations add the specified **NavDestination** page to the stack; replace operations replace the current top **NavDestination** page.
+Default routing stack operation mode.
+
+In this mode, push operations add the specified **NavDestination** page to the stack; replace operations replace the current top **NavDestination** page.
 
 **Since:** 12
 

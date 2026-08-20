@@ -1,5 +1,7 @@
 # InputWindowInfo
 
+@brief 输入法软键盘的窗口信息。
+
 **起始版本：** 23
 
 <!--Device-inputMethod-export interface InputWindowInfo--><!--Device-inputMethod-export interface InputWindowInfo-End-->
@@ -22,6 +24,8 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```TypeScript
 userId?: int
 ```
+
+@brief 显示输入法窗口的用户ID。 <br> <br>该属性仅系统应用可以使用。
 
 **类型：** int
 

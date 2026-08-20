@@ -1,4 +1,4 @@
-# MediaKeySystemInfo(Defines the DRM capability.)
+# MediaKeySystemInfo
 
 Defines the DRM information for encrypted content.
 

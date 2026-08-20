@@ -12,7 +12,11 @@ import { statistics } from '@kit.NetworkKit';
 function getSockfdTxBytes(sockfd: int, callback: AsyncCallback<long>): void
 ```
 
-Obtains the uplink traffic of the specified socket (in bytes). This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; It is recommended to use this API when the socket is connected. Otherwise, the corresponding traffic data cannot &gt; be queried after the socket is closed.
+Obtains the uplink traffic of the specified socket (in bytes). This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> It is recommended to use this API when the socket is connected. Otherwise, the corresponding traffic data cannot &gt; be queried after the socket is closed.
 
 **Since:** 23
 
@@ -56,7 +60,11 @@ statistics.getSockfdTxBytes(sockfd, (error: BusinessError, stats: number) => {
 function getSockfdTxBytes(sockfd: int): Promise<long>
 ```
 
-Obtains the uplink traffic (in bytes) of the specified socket. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; It is recommended to use this API when the socket is connected. Otherwise, the corresponding traffic data cannot &gt; be queried after the socket is closed.
+Obtains the uplink traffic (in bytes) of the specified socket. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> It is recommended to use this API when the socket is connected. Otherwise, the corresponding traffic data cannot &gt; be queried after the socket is closed.
 
 **Since:** 23
 

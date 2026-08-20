@@ -2,6 +2,8 @@
 
 The module provides the capability to interact with agents in the system.
 
+@namespace agentManager
+
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.

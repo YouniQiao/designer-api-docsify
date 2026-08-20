@@ -2,6 +2,8 @@
 
 The definition of play information.
 
+@interface PlayInfo
+
 **Since:** 23
 
 <!--Device-avMusicTemplate-interface PlayInfo--><!--Device-avMusicTemplate-interface PlayInfo-End-->

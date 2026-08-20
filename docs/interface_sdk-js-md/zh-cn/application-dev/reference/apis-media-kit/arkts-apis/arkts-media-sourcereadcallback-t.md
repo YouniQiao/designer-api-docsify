@@ -4,7 +4,11 @@
 type SourceReadCallback = (uuid: long, requestedOffset: long, requestedLength: long) => void
 ```
 
-由应用实现此回调函数，应用需记录读取请求，并在数据充足时通过对应的MediaSourceLoadingRequest对象的 respondData 方法推送数据。 &gt; **注意：** &gt; &gt; 客户端在处理完请求后应立刻返回。
+由应用实现此回调函数，应用需记录读取请求，并在数据充足时通过对应的MediaSourceLoadingRequest对象的 respondData 方法推送数据。
+
+> **注意：**
+> 
+> 客户端在处理完请求后应立刻返回。
 
 **起始版本：** 23
 

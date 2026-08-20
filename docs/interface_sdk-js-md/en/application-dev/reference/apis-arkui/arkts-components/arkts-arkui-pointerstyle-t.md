@@ -4,7 +4,11 @@
 declare type PointerStyle = import('../api/@ohos.multimodalInput.pointer').default.PointerStyle
 ```
 
-Defines the pointer style. &gt; **NOTE：**&gt; &gt; Directly using **cursorControl** can lead to the issue of &gt; [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the &gt; [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) object using the **getUIContext()** API and then obtain the &gt; **cursorControl** bound to the instance using the &gt; getCursorController API.
+Defines the pointer style.
+
+> **NOTE：**
+> 
+> Directly using **cursorControl** can lead to the issue of &gt; [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object using the **getUIContext()** API and then obtain the &gt; **cursorControl** bound to the instance using the &gt; getCursorController API.
 
 **Since:** 11
 

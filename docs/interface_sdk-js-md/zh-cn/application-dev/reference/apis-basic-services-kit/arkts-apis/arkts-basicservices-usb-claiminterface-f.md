@@ -14,7 +14,9 @@ import { serialManager } from '@kit.BasicServicesKit';
 function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolean): number
 ```
 
-注册通信接口。 需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md)获取设备信息以及interfaces；调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md)获取设备请求权限；调 用[usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md)接口得到devicepipe作为参数。
+注册通信接口。
+
+需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md)获取设备信息以及interfaces；调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md)获取设备请求权限；调 用[usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md)接口得到devicepipe作为参数。
 
 **起始版本：** 8
 

@@ -21,7 +21,11 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 delete(callback: AsyncCallback<boolean>): void
 ```
 
-移除下载的任务，使用callback异步回调。 &gt; **说明：** &gt; &gt; 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+移除下载的任务，使用callback异步回调。
+
+> **说明：**
+> 
+> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
 **起始版本：** 23
 
@@ -35,7 +39,7 @@ delete(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示移除下载任务成功；返回false表示移除下载任务失败。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示移除下载任务成功；返回false表示移除下载任务失败。 |
 
 **错误码：**
 
@@ -105,7 +109,11 @@ try {
 delete(): Promise<boolean>
 ```
 
-移除下载的任务，使用Promise异步回调。 &gt; **说明：** &gt; &gt; 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+移除下载的任务，使用Promise异步回调。
+
+> **说明：**
+> 
+> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
 **起始版本：** 23
 
@@ -183,7 +191,11 @@ try {
 getTaskInfo(callback: AsyncCallback<DownloadInfo>): void
 ```
 
-查询下载的任务，使用callback异步回调。 &gt; **说明：** &gt; &gt; 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+查询下载的任务，使用callback异步回调。
+
+> **说明：**
+> 
+> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
 **起始版本：** 23
 
@@ -197,7 +209,7 @@ getTaskInfo(callback: AsyncCallback<DownloadInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DownloadInfo&gt; | 是 | 回调函数。当查询下载任务操作成功，err为undefined，data为获取到的DownloadInfo对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;DownloadInfo&gt; | 是 | 回调函数。当查询下载任务操作成功，err为undefined，data为获取到的DownloadInfo对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -267,7 +279,11 @@ try {
 getTaskInfo(): Promise<DownloadInfo>
 ```
 
-查询下载任务的信息，使用Promise异步回调。 &gt; **说明：** &gt; &gt; 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+查询下载任务的信息，使用Promise异步回调。
+
+> **说明：**
+> 
+> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
 **起始版本：** 23
 
@@ -347,7 +363,11 @@ try {
 getTaskMimeType(callback: AsyncCallback<string>): void
 ```
 
-查询下载任务的 MimeType（HTTP中表示资源的媒体类型），使用callback异步回调。 &gt; **说明：** &gt; &gt; 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+查询下载任务的 MimeType（HTTP中表示资源的媒体类型），使用callback异步回调。
+
+> **说明：**
+> 
+> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
 **起始版本：** 23
 
@@ -361,7 +381,7 @@ getTaskMimeType(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当查询下载任务MimeType成功，err为undefined，data为获取到的下载任务的MimeType的对象；否则为错误对 象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当查询下载任务MimeType成功，err为undefined，data为获取到的下载任务的MimeType的对象；否则为错误对 象。 |
 
 **错误码：**
 
@@ -431,7 +451,11 @@ try {
 getTaskMimeType(): Promise<string>
 ```
 
-查询下载的任务的MimeType(HTTP中表示资源的媒体类型)，使用Promise异步回调。 &gt; **说明：** &gt; &gt; 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+查询下载的任务的MimeType(HTTP中表示资源的媒体类型)，使用Promise异步回调。
+
+> **说明：**
+> 
+> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
 **起始版本：** 23
 
@@ -1645,7 +1669,11 @@ try {
 on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): void
 ```
 
-订阅下载任务进度事件，使用callback异步回调。 &gt; **说明：** &gt; &gt; 应用处于后台时，为满足功耗性能要求，不支持调用此接口进行回调。
+订阅下载任务进度事件，使用callback异步回调。
+
+> **说明：**
+> 
+> 应用处于后台时，为满足功耗性能要求，不支持调用此接口进行回调。
 
 **起始版本：** 6
 
@@ -1757,7 +1785,11 @@ try {
 pause(callback: AsyncCallback<void>): void
 ```
 
-暂停下载正在运行中的任务，使用callback异步回调。 &gt; **说明：** &gt; &gt; 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [suspend](#suspend)替代。
+暂停下载正在运行中的任务，使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [suspend](#suspend)替代。
 
 **起始版本：** 7
 
@@ -1775,7 +1807,7 @@ pause(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当暂停下载任务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当暂停下载任务成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1801,7 +1833,11 @@ downloadTask.pause((err: BusinessError) => {
 pause(): Promise<void>
 ```
 
-暂停下载正在运行中的任务，使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 7开始支持，从API version 9开始废弃，建议使用[suspend](#suspend)替代。
+暂停下载正在运行中的任务，使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[suspend](#suspend)替代。
 
 **起始版本：** 7
 
@@ -1843,7 +1879,11 @@ downloadTask.pause().then(() => {
 query(callback: AsyncCallback<DownloadInfo>): void
 ```
 
-查询下载任务，返回下载任务的信息，使用callback异步回调。 &gt; **说明：** &gt; &gt; 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [getTaskInfo](#gettaskinfo)替代。
+查询下载任务，返回下载任务的信息，使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [getTaskInfo](#gettaskinfo)替代。
 
 **起始版本：** 7
 
@@ -1861,7 +1901,7 @@ query(callback: AsyncCallback<DownloadInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DownloadInfo&gt; | 是 | 回调函数。当查询下载任务成功，err为undefined，data为获取到的DownloadInfo对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;DownloadInfo&gt; | 是 | 回调函数。当查询下载任务成功，err为undefined，data为获取到的DownloadInfo对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -1887,7 +1927,11 @@ downloadTask.query((err: BusinessError, downloadInfo: request.DownloadInfo)=>{
 query(): Promise<DownloadInfo>
 ```
 
-查询下载任务，返回下载任务的信息，使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 7开始支持，从API version 9开始废弃,建议使用[getTaskInfo](#gettaskinfo)替代。
+查询下载任务，返回下载任务的信息，使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃,建议使用[getTaskInfo](#gettaskinfo)替代。
 
 **起始版本：** 7
 
@@ -1929,7 +1973,11 @@ downloadTask.query().then((downloadInfo) => {
 queryMimeType(callback: AsyncCallback<string>): void
 ```
 
-查询下载的任务的MimeType，使用callback异步回调。 &gt; **说明：** &gt; &gt; 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [getTaskMimeType](#gettaskmimetype)替代。
+查询下载的任务的MimeType，使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [getTaskMimeType](#gettaskmimetype)替代。
 
 **起始版本：** 7
 
@@ -1947,7 +1995,7 @@ queryMimeType(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当查询下载任务的MimeType成功，err为undefined，data为获取到的任务的MimeType对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当查询下载任务的MimeType成功，err为undefined，data为获取到的任务的MimeType对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -1973,7 +2021,11 @@ downloadTask.queryMimeType((err: BusinessError, data: string)=>{
 queryMimeType(): Promise<string>
 ```
 
-查询下载任务的MimeType，使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 7开始支持，从API version 9开始废弃，建议使用[getTaskMimeType](#gettaskmimetype)替代。
+查询下载任务的MimeType，使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[getTaskMimeType](#gettaskmimetype)替代。
 
 **起始版本：** 7
 
@@ -2015,7 +2067,11 @@ downloadTask.queryMimeType().then((data: string) => {
 remove(callback: AsyncCallback<boolean>): void
 ```
 
-移除下载的任务，使用callback异步回调。 &gt; **说明：** &gt; &gt; 从API version 6开始支持，从API version 9开始废弃，建议使用 &gt; [delete](arkts-basicservices-request-uploadtask-i.md#delete)替代。
+移除下载的任务，使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用 &gt; [delete](arkts-basicservices-request-uploadtask-i.md#delete)替代。
 
 **起始版本：** 6
 
@@ -2033,7 +2089,7 @@ remove(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示移除下载任务成功；返回false表示移除下载任务失败。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示移除下载任务成功；返回false表示移除下载任务失败。 |
 
 **错误码：**
 
@@ -2059,7 +2115,11 @@ downloadTask.remove((err, result)=>{
 remove(): Promise<boolean>
 ```
 
-移除下载的任务，使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 6开始支持，从API version 9开始废弃，建议使用[delete](arkts-basicservices-request-uploadtask-i.md#delete)替代。
+移除下载的任务，使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用[delete](arkts-basicservices-request-uploadtask-i.md#delete)替代。
 
 **起始版本：** 6
 
@@ -2101,7 +2161,11 @@ downloadTask.remove().then((result) => {
 restore(callback: AsyncCallback<boolean>): void
 ```
 
-重新启动被暂停的下载任务，使用callback异步回调。 &gt; **说明：** &gt; &gt; 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+重新启动被暂停的下载任务，使用callback异步回调。
+
+> **说明：**
+> 
+> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
 **起始版本：** 23
 
@@ -2115,7 +2179,7 @@ restore(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示重新启动已暂停的下载任务成功；返回false表示重新启动下载任务失败。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示重新启动已暂停的下载任务成功；返回false表示重新启动下载任务失败。 |
 
 **错误码：**
 
@@ -2185,7 +2249,11 @@ try {
 restore(): Promise<boolean>
 ```
 
-重新启动被暂停的下载任务，使用Promise异步回调。 &gt; **说明：** &gt; &gt; 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+重新启动被暂停的下载任务，使用Promise异步回调。
+
+> **说明：**
+> 
+> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
 **起始版本：** 23
 
@@ -2265,7 +2333,11 @@ try {
 resume(callback: AsyncCallback<void>): void
 ```
 
-重新启动被暂停的下载任务，使用callback异步回调。 &gt; **说明：** &gt; &gt; 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [restore](#restore)替代。
+重新启动被暂停的下载任务，使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [restore](#restore)替代。
 
 **起始版本：** 7
 
@@ -2283,7 +2355,7 @@ resume(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当重新启动已暂停的下载任务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当重新启动已暂停的下载任务成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -2309,7 +2381,11 @@ downloadTask.resume((err: BusinessError) => {
 resume(): Promise<void>
 ```
 
-重新启动被暂停的下载任务，使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 7开始支持，从API version 9开始废弃，建议使用[restore](#restore)替代。
+重新启动被暂停的下载任务，使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[restore](#restore)替代。
 
 **起始版本：** 7
 
@@ -2351,7 +2427,11 @@ downloadTask.resume().then(() => {
 suspend(callback: AsyncCallback<boolean>): void
 ```
 
-暂停下载正在运行中的任务，已暂停的任务可被[restore](#restore)恢复，使用callback异步回调。 &gt; **说明：** &gt; &gt; 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+暂停下载正在运行中的任务，已暂停的任务可被[restore](#restore)恢复，使用callback异步回调。
+
+> **说明：**
+> 
+> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
 **起始版本：** 23
 
@@ -2365,7 +2445,7 @@ suspend(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示暂停下载任务成功；返回false表示暂停下载任务失败。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示暂停下载任务成功；返回false表示暂停下载任务失败。 |
 
 **错误码：**
 
@@ -2435,7 +2515,11 @@ try {
 suspend(): Promise<boolean>
 ```
 
-暂停下载正在运行中的任务，已暂停的任务可被[restore](#restore)恢复，使用Promise异步回调。 &gt; **说明：** &gt; &gt; 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+暂停下载正在运行中的任务，已暂停的任务可被[restore](#restore)恢复，使用Promise异步回调。
+
+> **说明：**
+> 
+> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
 **起始版本：** 23
 

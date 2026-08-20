@@ -1,6 +1,8 @@
 # AutoExposure
 
-AutoExposure继承自[AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md)。 自动曝光类，对设备自动曝光（AE）操作。
+AutoExposure继承自[AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md)。
+
+自动曝光类，对设备自动曝光（AE）操作。
 
 **继承/实现关系：** AutoExposure extends [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md)
 
@@ -23,7 +25,11 @@ import { cameraPicker } from '@kit.CameraKit';
 getExposureMode(): ExposureMode
 ```
 
-获取当前曝光模式。 &gt; **说明：** &gt; &gt; 若未通过[setExposureMode](#setexposuremode)接口进行设置，直接调用该接口查询当前曝光模式，会返回无效值。
+获取当前曝光模式。
+
+> **说明：**
+> 
+> 若未通过[setExposureMode](#setexposuremode)接口进行设置，直接调用该接口查询当前曝光模式，会返回无效值。
 
 **起始版本：** 23
 
@@ -123,7 +129,7 @@ offExposureStateChange(callback?: Callback<ExposureState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureState](arkts-camera-camera-exposurestate-e.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback，callback对象如果为空或为匿名函数，则取消所有callback。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ExposureState](arkts-camera-camera-exposurestate-e.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback，callback对象如果为空或为匿名函数，则取消所有callback。 |
 
 ## onExposureStateChange
 
@@ -147,7 +153,7 @@ onExposureStateChange(callback: Callback<ExposureState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureState](arkts-camera-camera-exposurestate-e.md)&gt; | 是 | 回调函数，返回当前曝光状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ExposureState](arkts-camera-camera-exposurestate-e.md)&gt; | 是 | 回调函数，返回当前曝光状态。 |
 
 ## setExposureBias
 
@@ -155,7 +161,9 @@ onExposureStateChange(callback: Callback<ExposureState>): void
 setExposureBias(exposureBias: double): void
 ```
 
-设置曝光补偿，曝光补偿值（EV）。 进行设置之前，建议先通过方法[getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange)查询支持的范围。
+设置曝光补偿，曝光补偿值（EV）。
+
+进行设置之前，建议先通过方法[getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange)查询支持的范围。
 
 **起始版本：** 23
 
@@ -175,8 +183,8 @@ setExposureBias(exposureBias: double): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 12+ |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 12+ |
 
 ## setExposureMode
 
@@ -204,8 +212,8 @@ setExposureMode(aeMode: ExposureMode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 19+ |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 19+ |
 
 ## setMeteringPoint
 
@@ -213,7 +221,9 @@ setExposureMode(aeMode: ExposureMode): void
 setMeteringPoint(point: Point): void
 ```
 
-设置曝光区域中心点，曝光点应在0-1坐标系内，该坐标系左上角为{0，0}，右下角为{1，1}。 此坐标系是以设备充电口在右侧时的横向设备方向为基准的，例如应用的预览界面布局以设备充电口在下侧时的竖向方向为基准，布局宽高为{w，h}，且触摸点为{x，y}，则转换后的坐标点为{y/h，1-x/w}。
+设置曝光区域中心点，曝光点应在0-1坐标系内，该坐标系左上角为{0，0}，右下角为{1，1}。
+
+此坐标系是以设备充电口在右侧时的横向设备方向为基准的，例如应用的预览界面布局以设备充电口在下侧时的竖向方向为基准，布局宽高为{w，h}，且触摸点为{x，y}，则转换后的坐标点为{y/h，1-x/w}。
 
 **起始版本：** 23
 

@@ -1,4 +1,4 @@
-# Value(Defines the Decimal for ArkTS. Decimal support arbitrary precision decimal operation.)
+# Value
 
 ```TypeScript
 type Value = string | double | Decimal

@@ -2,6 +2,8 @@
 
 Contract request data
 
+@interface ContractRequestData
+
 **Since:** 23
 
 <!--Device-eSIM-export interface ContractRequestData--><!--Device-eSIM-export interface ContractRequestData-End-->

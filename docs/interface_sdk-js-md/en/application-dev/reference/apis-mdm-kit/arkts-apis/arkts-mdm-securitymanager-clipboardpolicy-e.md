@@ -1,4 +1,4 @@
-# ClipboardPolicy(Security Management)
+# ClipboardPolicy
 
 Represents a device clipboard policy.
 

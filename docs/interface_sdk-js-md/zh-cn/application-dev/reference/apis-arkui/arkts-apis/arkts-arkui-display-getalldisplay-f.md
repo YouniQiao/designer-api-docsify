@@ -28,7 +28,7 @@ function getAllDisplay(callback: AsyncCallback<Array<Display>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Display](arkts-arkui-display-display-i.md)&gt;&gt; | 是 | 回调函数。返回当前所有的Display对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[Display](arkts-arkui-display-display-i.md)&gt;&gt; | 是 | 回调函数。返回当前所有的Display对象。 |
 
 **示例**
 

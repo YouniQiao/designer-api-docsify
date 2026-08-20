@@ -1,6 +1,10 @@
 # PdfConfiguration
 
-Input parameter of the [createPdf](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#createpdf) function. &gt; **NOTE：**&gt; &gt; The number of pixels is calculated as follows: Number of pixels = 96 x Number of inches.
+Input parameter of the [createPdf](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#createpdf) function.
+
+> **NOTE：**
+> 
+> The number of pixels is calculated as follows: Number of pixels = 96 x Number of inches.
 
 **Since:** 14
 
@@ -20,7 +24,13 @@ import { webview } from '@kit.ArkWeb';
 height: number
 ```
 
-Page Height. Value range: greater than or equal to 0. If the value is out of range, it is set to 0. Unit: inch. Recommended value: A4 paper page height 11.69 inches.
+Page Height.
+
+Value range: greater than or equal to 0. If the value is out of range, it is set to 0.
+
+Unit: inch.
+
+Recommended value: A4 paper page height 11.69 inches.
 
 **Type:** number
 
@@ -38,7 +48,11 @@ Page Height. Value range: greater than or equal to 0. If the value is out of ran
 marginBottom: number
 ```
 
-Bottom margin. The value range is [0.0, half of the page height). If the value is not within the value range, set it to **0.0**. Unit: inch.
+Bottom margin.
+
+The value range is [0.0, half of the page height). If the value is not within the value range, set it to **0.0**.
+
+Unit: inch.
 
 **Type:** number
 
@@ -56,7 +70,11 @@ Bottom margin. The value range is [0.0, half of the page height). If the value i
 marginLeft: number
 ```
 
-Left margin. The value range is [0.0, half of the page width). If the value is not within the value range, set it to **0.0**. Unit: inch.
+Left margin.
+
+The value range is [0.0, half of the page width). If the value is not within the value range, set it to **0.0**.
+
+Unit: inch.
 
 **Type:** number
 
@@ -74,7 +92,11 @@ Left margin. The value range is [0.0, half of the page width). If the value is n
 marginRight: number
 ```
 
-Right margin. The value range is [0.0, half of the page width). If the value is not within the value range, set it to **0.0**. Unit: inch.
+Right margin.
+
+The value range is [0.0, half of the page width). If the value is not within the value range, set it to **0.0**.
+
+Unit: inch.
 
 **Type:** number
 
@@ -92,7 +114,11 @@ Right margin. The value range is [0.0, half of the page width). If the value is 
 marginTop: number
 ```
 
-Top margin. The value range is [0.0, half of the page height). If the value is not within the value range, set it to **0.0**. Unit: inch.
+Top margin.
+
+The value range is [0.0, half of the page height). If the value is not within the value range, set it to **0.0**.
+
+Unit: inch.
 
 **Type:** number
 
@@ -110,7 +136,11 @@ Top margin. The value range is [0.0, half of the page height). If the value is n
 scale?: number
 ```
 
-Scale multiple. The value range is [0.0, 2.0]. If the value is less than 0.0, set it to **0.0**. If the value is greater than 2. 0, set it to **2.0**. Default value: **1.0**
+Scale multiple.
+
+The value range is [0.0, 2.0]. If the value is less than 0.0, set it to **0.0**. If the value is greater than 2. 0, set it to **2.0**.
+
+Default value: **1.0**
 
 **Type:** number
 
@@ -128,7 +158,9 @@ Scale multiple. The value range is [0.0, 2.0]. If the value is less than 0.0, se
 shouldPrintBackground?: boolean
 ```
 
-Whether to print the background color. The value **true** means to print the background color, and **false** means the opposite. Default value: **false**.
+Whether to print the background color. The value **true** means to print the background color, and **false** means the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -146,7 +178,13 @@ Whether to print the background color. The value **true** means to print the bac
 width: number
 ```
 
-Page Width. Value range: greater than or equal to 0. If the value is out of range, it is set to 0. Unit: inch. Recommended value: A4 paper page width 8.27 inches.
+Page Width.
+
+Value range: greater than or equal to 0. If the value is out of range, it is set to 0.
+
+Unit: inch.
+
+Recommended value: A4 paper page width 8.27 inches.
 
 **Type:** number
 

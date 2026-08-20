@@ -1,6 +1,14 @@
 # MessageHandler
 
-Represents a custom communication object. &gt; **NOTE：**&gt; &gt; You can register this object to receive custom communication data sent by the edit box application attached to &gt; the input method application. When the custom communication data is received, the &gt; [onMessage](#onmessage) callback in &gt; this object is triggered. &gt; &gt; This object is globally unique. After multiple registrations, only the last registered object is valid and &gt; retained, and the [onTerminated](#onterminated) callback of the &gt; penultimate registered object is triggered. &gt; &gt; If this object is unregistered, its [onTerminated](#onterminated) &gt; callback will be triggered.
+Represents a custom communication object.
+
+> **NOTE：**
+> 
+> You can register this object to receive custom communication data sent by the edit box application attached to &gt; the input method application. When the custom communication data is received, the &gt; [onMessage](#onmessage) callback in &gt; this object is triggered.
+> 
+> This object is globally unique. After multiple registrations, only the last registered object is valid and &gt; retained, and the [onTerminated](#onterminated) callback of the &gt; penultimate registered object is triggered.
+> 
+> If this object is unregistered, its [onTerminated](#onterminated) &gt; callback will be triggered.
 
 **Since:** 23
 
@@ -20,7 +28,14 @@ import { inputMethodEngine } from '@kit.IMEKit';
 onMessage(msgId: string, msgParam?: ArrayBuffer): void
 ```
 
-Receives the custom data callback sent by the edit box application attached to the input method application. &gt; **NOTE：**&gt; &gt; This callback is triggered when the registered [MessageHandler](#messagehandler) &gt; receives custom communication data sent by the edit box application attached to the input method application. &gt; &gt; The **msgId** parameter is mandatory, and the **msgParam** parameter is optional. If only the custom **msgId** &gt; data is received, confirm it with the data sender.
+Receives the custom data callback sent by the edit box application attached to the input method application.
+
+> **NOTE：**
+> 
+> This callback is triggered when the registered [MessageHandler](#messagehandler) &gt; receives custom communication data sent by the edit box application attached to the input method application.
+> 
+> The **msgId** parameter is mandatory, and the **msgParam** parameter is optional. If only the custom **msgId**
+> data is received, confirm it with the data sender.
 
 **Since:** 15
 
@@ -61,7 +76,13 @@ inputMethodEngine.getInputMethodAbility()
 onTerminated(): void
 ```
 
-Listens for MessageHandler termination. &gt; **NOTE：**&gt; &gt; When an application registers a new [MessageHandler](#messagehandler) object, the &gt; [onTerminated](#onterminated) callback of the penultimate registered &gt; [MessageHandler](#messagehandler) object is triggered. &gt; &gt; When an application unregisters a new [MessageHandler](#messagehandler) object, the &gt; [onTerminated](#onterminated) callback of the registered &gt; [MessageHandler](#messagehandler) object is triggered.
+Listens for MessageHandler termination.
+
+> **NOTE：**
+> 
+> When an application registers a new [MessageHandler](#messagehandler) object, the &gt; [onTerminated](#onterminated) callback of the penultimate registered &gt; [MessageHandler](#messagehandler) object is triggered.
+> 
+> When an application unregisters a new [MessageHandler](#messagehandler) object, the &gt; [onTerminated](#onterminated) callback of the registered &gt; [MessageHandler](#messagehandler) object is triggered.
 
 **Since:** 15
 

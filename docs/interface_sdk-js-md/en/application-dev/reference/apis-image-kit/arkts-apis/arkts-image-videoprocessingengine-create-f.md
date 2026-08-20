@@ -33,8 +33,8 @@ Create an image processing instance.
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function create can not work correctly due to limited <br>device capabilities. |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
 | [29200003](../errorcode-videoprocessingengine.md#29200003-creation-failure) | Failed to create image processing instance. For example, <br>the number of instances exceeds the upper limit. |
+| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
 
 **Examples**
 

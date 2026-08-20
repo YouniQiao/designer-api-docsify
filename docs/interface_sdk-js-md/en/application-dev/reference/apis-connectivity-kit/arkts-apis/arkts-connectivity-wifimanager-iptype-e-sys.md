@@ -2,6 +2,8 @@
 
 Wi-Fi IP type enumeration.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-wifiManager-enum IpType--><!--Device-wifiManager-enum IpType-End-->

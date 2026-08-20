@@ -40,12 +40,12 @@ function installFont(path: string): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [31100106](../errorcode-font-manager.md#31100106-其他错误导致安装失败) | The system ability works abnormally. |
-| [31100104](../errorcode-font-manager.md#31100104-字体文件已安装) | The font file is installed. |
-| [31100105](../errorcode-font-manager.md#31100105-已安装字体文件超过最大数量) | Exceeded the maximum number of installed files. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [31100101](../errorcode-font-manager.md#31100101-字体文件不存在) | The font does not exist. |
 | [31100102](../errorcode-font-manager.md#31100102-字体文件不支持安装) | The font is not supported. |
 | [31100103](../errorcode-font-manager.md#31100103-字体文件拷贝失败) | Failed to copy the font file. |
-| [31100101](../errorcode-font-manager.md#31100101-字体文件不存在) | The font does not exist. |
+| [31100104](../errorcode-font-manager.md#31100104-字体文件已安装) | The font file is installed. |
+| [31100105](../errorcode-font-manager.md#31100105-已安装字体文件超过最大数量) | Exceeded the maximum number of installed files. |
+| [31100106](../errorcode-font-manager.md#31100106-其他错误导致安装失败) | The system ability works abnormally. |
 

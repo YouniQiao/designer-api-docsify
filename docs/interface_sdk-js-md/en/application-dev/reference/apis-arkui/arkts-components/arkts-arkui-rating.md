@@ -1,8 +1,18 @@
 # Rating
 
-The **Rating** component provides a rating bar. > **NOTE** > - If the parent node of the **Rating** component has fixed dimensions, you must also specify the width and height > for the **Rating** component, or set its parent node's clip > attribute to **true**.
+The **Rating** component provides a rating bar.
 
-## Child Components Not supported ###### Sequential Keyboard Navigation Specifications | Key        | Description                       | |------------|-----------------------------| | Tab        | Switch the focus between components.                   | | Left and right arrow keys  | Increase or decrease the rating on preview at the specified step, without changing the actual rating.| | Home       | Move the focus to the first star, without changing the actual rating.         | | End        | Move the focus to the last star, without changing the actual rating.        | | Space/Enter | Submit the rating result based on the current rating.              |
+> **NOTE**
+
+> - If the parent node of the **Rating** component has fixed dimensions, you must also specify the width and height > for the **Rating** component, or set its parent node's clip > attribute to **true**.
+
+## Child Components
+
+Not supported
+
+## Sequential Keyboard Navigation Specifications
+
+| Key | Description | |------------|-----------------------------| | Tab | Switch the focus between components. | | Left and right arrow keys | Increase or decrease the rating on preview at the specified step, without changing the actual rating.| | Home | Move the focus to the first star, without changing the actual rating. | | End | Move the focus to the last star, without changing the actual rating. | | Space/Enter | Submit the rating result based on the current rating. |
 
 ## Rating
 
@@ -32,13 +42,9 @@ Rating(options?: RatingOptions)
 
 | Name | Description |
 | --- | --- |
-| [RatingConfiguration](arkts-arkui-ratingconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from CommonConfiguration. |
-| [RatingOptions](arkts-arkui-ratingoptions-i.md) | Provides configuration options for the **Rating** component. &gt; **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. &gt; While historical version information is preserved for anonymous objects, there may be cases where the outer element &gt; 's @since version number is higher than inner elements'. This does not affect interface usability. |
-| [StarStyleOptions](arkts-arkui-starstyleoptions-i.md) | Provides style settings for the selected, unselected, and partially selected stars in the **Rating** component. &gt; **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. &gt; While historical version information is preserved for anonymous objects, there may be cases where the outer element &gt; 's @since version number is higher than inner elements'. This does not affect interface usability. &gt; **NOTE：**&gt; &gt; The string type can be used to load network images and local images. When a relative path is used to reference a &gt; local image, for example, **Image("common/test.jpg")**, the **common** directory must be placed at the same level &gt; as the **pages** directory. Base64-encoded strings are also supported. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnRatingChangeCallback](arkts-arkui-onratingchangecallback-t.md) | Defines the callback triggered when the rating value changes. |
 

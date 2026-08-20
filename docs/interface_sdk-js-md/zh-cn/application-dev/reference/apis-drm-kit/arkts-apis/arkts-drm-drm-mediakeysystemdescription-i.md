@@ -1,4 +1,4 @@
-# MediaKeySystemDescription(Defines the DRM capability.)
+# MediaKeySystemDescription
 
 插件信息。
 

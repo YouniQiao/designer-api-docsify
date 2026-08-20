@@ -13,7 +13,11 @@ import { inputDeviceCooperate } from '@kit.InputKit';
 function getDeviceIds(callback: AsyncCallback<Array<number>>): void
 ```
 
-Obtains the IDs of all input devices. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. Use &gt; [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md) instead.
+Obtains the IDs of all input devices. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. Use &gt; [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md) instead.
 
 **Since:** 8
 
@@ -64,7 +68,11 @@ struct Index {
 function getDeviceIds(): Promise<Array<number>>
 ```
 
-Obtains the IDs of all input devices. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. Use &gt; [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md) instead.
+Obtains the IDs of all input devices. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. Use &gt; [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md) instead.
 
 **Since:** 8
 

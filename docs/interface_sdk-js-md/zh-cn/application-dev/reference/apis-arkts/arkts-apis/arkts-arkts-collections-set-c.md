@@ -1,6 +1,13 @@
 # Set
 
-一种存储唯一值的非线性数据结构，能够高效地进行元素存在性检测和去重操作。 &gt; **说明：**&gt; &gt; - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 &gt; 本节使用以下标识来表示泛型的使用： - T：Type，支持[Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。 **装饰器类型：** \@Sendable
+一种存储唯一值的非线性数据结构，能够高效地进行元素存在性检测和去重操作。
+
+> **说明：**
+> 
+> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
+> 本节使用以下标识来表示泛型的使用：
+
+- T：Type，支持[Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。 **装饰器类型：** \@Sendable
 
 **起始版本：** 12
 
@@ -34,7 +41,7 @@ import { collections } from '@kit.ArkTS';
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 迭代器对象。 |
 
 **错误码：**
 
@@ -211,7 +218,7 @@ entries(): IterableIterator<[T, T]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[T, T]&gt; | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的键值对。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[T, T]&gt; | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的键值对。 |
 
 **错误码：**
 
@@ -304,7 +311,7 @@ keys(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的键。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的键。 |
 
 **错误码：**
 
@@ -333,7 +340,7 @@ values(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的值。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的值。 |
 
 **错误码：**
 

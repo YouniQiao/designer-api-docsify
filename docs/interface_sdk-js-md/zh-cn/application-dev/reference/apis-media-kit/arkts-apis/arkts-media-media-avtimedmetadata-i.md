@@ -40,7 +40,7 @@ contents: Record<string, object>
 
 Key-value pair set corresponding to time primitive information
 
-**类型：** Record&lt;string, object&gt;
+**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, object&gt;
 
 **起始版本：** 26.0.0
 

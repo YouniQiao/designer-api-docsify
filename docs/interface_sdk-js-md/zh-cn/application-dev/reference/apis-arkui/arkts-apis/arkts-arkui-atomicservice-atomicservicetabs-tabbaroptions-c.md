@@ -1,4 +1,4 @@
-# TabBarOptions(Provides an advanced struct of tabs for atomic services)
+# TabBarOptions
 
 页签选项。
 

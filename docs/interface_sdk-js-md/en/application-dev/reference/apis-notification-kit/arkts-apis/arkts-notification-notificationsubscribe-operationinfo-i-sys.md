@@ -58,7 +58,9 @@ Index of the non-live view button or live view auxiliary area that the user taps
 operationType?: int
 ```
 
-Operation type. - **0**: The user taps the non-live view. - **1**: The user taps the non-live view button. - **32**: The user taps the live view. - **33**: The user taps the live view auxiliary area.
+Operation type.
+
+- **0**: The user taps the non-live view. - **1**: The user taps the non-live view button. - **32**: The user taps the live view. - **33**: The user taps the live view auxiliary area.
 
 **Type:** int
 

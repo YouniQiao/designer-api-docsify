@@ -1,4 +1,4 @@
-# ShowActionMenuOptions(弹窗)
+# ShowActionMenuOptions
 
 定义ShowActionMenu的选项。
 

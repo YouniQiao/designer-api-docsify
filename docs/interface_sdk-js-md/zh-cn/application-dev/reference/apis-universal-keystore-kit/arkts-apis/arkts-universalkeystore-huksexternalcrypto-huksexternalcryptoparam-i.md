@@ -1,4 +1,4 @@
-# HuksExternalCryptoParam(External Key Management)
+# HuksExternalCryptoParam
 
 表示调用接口使用的param数组的类型。
 

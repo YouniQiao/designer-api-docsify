@@ -2,6 +2,8 @@
 
 枚举Skill类型。
 
+@enum { int }
+
 **起始版本：** 26.0.0
 
 <!--Device-unnamed-export enum SkillType--><!--Device-unnamed-export enum SkillType-End-->

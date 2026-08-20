@@ -38,11 +38,11 @@ Sets the container reading configuration for ContainerReader component. Configur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ContainerReaderInfo](arkts-arkui-arkui-components-containerreader-containerreaderinfo-i.md) | Yes | The configuration options for container reading |
+| value | [ContainerReaderInfo](../../apis-default/arkts-apis/arkts-arkui-components-containerreader-containerreaderinfo-i.md) | Yes | The configuration options for container reading |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md) |  |
+| [ContainerReaderAttribute](../../apis-default/arkts-apis/arkts-arkui-components-containerreader-containerreaderattribute-i.md) |  |
 

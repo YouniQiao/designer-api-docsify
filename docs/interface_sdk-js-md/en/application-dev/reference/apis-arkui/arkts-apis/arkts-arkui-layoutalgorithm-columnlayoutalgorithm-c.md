@@ -1,6 +1,10 @@
 # ColumnLayoutAlgorithm
 
-Vertical linear layout algorithm class. &gt; **NOTE：**&gt; &gt; The object of the **ColumnLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as &gt; the input parameter of the &gt; [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the &gt; layout algorithm.
+Vertical linear layout algorithm class.
+
+> **NOTE：**
+> 
+> The object of the **ColumnLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as &gt; the input parameter of the &gt; [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the &gt; layout algorithm.
 
 **Inheritance/Implementation:** ColumnLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md)
 
@@ -42,9 +46,13 @@ Constructs the vertical linear layout algorithm class.
 @Trace public alignItems?: HorizontalAlign
 ```
 
-Horizontal alignment mode of all child components. Default value: **HorizontalAlign.Center** Invalid values are treated as the default value.
+Horizontal alignment mode of all child components.
 
-**Type:** [HorizontalAlign](../../apis-na/arkts-apis/arkts-na-enums-horizontalalign-e.md)
+Default value: **HorizontalAlign.Center**
+
+Invalid values are treated as the default value.
+
+**Type:** [HorizontalAlign](../../apis-default/arkts-apis/arkts-enums-horizontalalign-e.md)
 
 **Since:** 24
 
@@ -64,7 +72,11 @@ Horizontal alignment mode of all child components. Default value: **HorizontalAl
 @Trace public isReverse?: boolean
 ```
 
-Whether to reverse the vertical arrangement of child components. **true** indicates to reverse the vertical arrangement of child components. **false** indicates to arrange child components in the vertical direction in normal order. Default value: **false** Invalid values are treated as the default value.
+Whether to reverse the vertical arrangement of child components. **true** indicates to reverse the vertical arrangement of child components. **false** indicates to arrange child components in the vertical direction in normal order.
+
+Default value: **false**
+
+Invalid values are treated as the default value.
 
 **Type:** boolean
 
@@ -86,9 +98,13 @@ Whether to reverse the vertical arrangement of child components. **true** indica
 @Trace public justifyContent?: FlexAlign
 ```
 
-Vertical alignment mode of all child components. Default value: **FlexAlign.Start** Invalid values are treated as the default value.
+Vertical alignment mode of all child components.
 
-**Type:** [FlexAlign](../../apis-na/arkts-apis/arkts-na-enums-flexalign-e.md)
+Default value: **FlexAlign.Start**
+
+Invalid values are treated as the default value.
+
+**Type:** [FlexAlign](../../apis-default/arkts-apis/arkts-enums-flexalign-e.md)
 
 **Since:** 24
 
@@ -108,9 +124,13 @@ Vertical alignment mode of all child components. Default value: **FlexAlign.Star
 @Trace public space?: LengthMetrics
 ```
 
-Vertical spacing between elements in a vertical layout. Default value: **LengthMetrics.vp(0)** Invalid values are treated as the default value.
+Vertical spacing between elements in a vertical layout.
 
-**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+Default value: **LengthMetrics.vp(0)**
+
+Invalid values are treated as the default value.
+
+**Type:** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
 
 **Since:** 24
 

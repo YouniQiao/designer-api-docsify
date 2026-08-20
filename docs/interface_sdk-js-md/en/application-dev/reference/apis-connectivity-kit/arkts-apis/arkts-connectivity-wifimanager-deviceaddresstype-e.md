@@ -1,6 +1,6 @@
 # DeviceAddressType
 
-Wi-Fi device address( mac / bssid ) type.
+Wi-Fi device address( mac / bssid ) type. @enum { int }
 
 **Since:** 23
 

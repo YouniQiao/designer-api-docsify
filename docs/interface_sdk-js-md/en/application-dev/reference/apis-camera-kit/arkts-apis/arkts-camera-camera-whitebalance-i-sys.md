@@ -1,6 +1,8 @@
 # WhiteBalance (System API)
 
-**WhiteBalance** inherits from [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md). It provides APIs to process white balance, including obtaining and setting the white balance mode and white balance value.
+*WhiteBalance** inherits from [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md).
+
+It provides APIs to process white balance, including obtaining and setting the white balance mode and white balance value.
 
 **Inheritance/Implementation:** WhiteBalance extends [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md)
 
@@ -47,8 +49,8 @@ Obtains the current white balance value.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 19 |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getWhiteBalanceGains
 
@@ -78,8 +80,8 @@ Gets RGB white balance gain values.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getWhiteBalanceMode
 
@@ -109,8 +111,8 @@ Obtains the white balance mode in use.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 19 |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setWhiteBalance
 
@@ -140,9 +142,9 @@ Sets a white balance value. Before the setting, run [getWhiteBalanceRange](arkts
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 19 |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 19 |
 
 ## setWhiteBalanceGains
 
@@ -172,8 +174,8 @@ Sets RGB white balance gain values.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setWhiteBalanceMode
 
@@ -203,7 +205,7 @@ Sets a white balance mode. Before the setting, run [isWhiteBalanceModeSupported]
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 19 |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 19 |
 

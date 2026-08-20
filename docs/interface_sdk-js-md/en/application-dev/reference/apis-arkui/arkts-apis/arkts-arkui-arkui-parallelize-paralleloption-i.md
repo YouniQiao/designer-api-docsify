@@ -2,6 +2,8 @@
 
 Describe the options for the ParallelizeUI.
 
+@interface ParallelOption
+
 **Since:** 23
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.

@@ -1,6 +1,10 @@
 # OverlayOptions
 
-> **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 12. &gt; While historical version information is preserved for anonymous objects, there may be cases where the outer element &gt; 's @since version number is higher than inner elements'. This does not affect interface usability. &gt; **NOTE：**&gt; &gt; When both **align** and **offset** are set, the effects are combined. The overlay is first aligned relative to the &gt; component and then offset from its current upper left corner.
+
+> **NOTE：**
+> 
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 12.
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element &gt; 's
 
 **Since:** 12
 
@@ -19,7 +23,9 @@
 align?: Alignment
 ```
 
-Alignment of the overlay relative to the component. Default value: **TopStart**
+Alignment of the overlay relative to the component.
+
+Default value: **TopStart**
 
 **Type:** Alignment
 

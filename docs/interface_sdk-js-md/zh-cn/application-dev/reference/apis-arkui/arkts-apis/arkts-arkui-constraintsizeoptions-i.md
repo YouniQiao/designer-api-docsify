@@ -2,6 +2,8 @@
 
 Defines the constrain size options.
 
+@interface ConstraintSizeOptions
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare interface ConstraintSizeOptions--><!--Device-unnamed-declare interface ConstraintSizeOptions-End-->

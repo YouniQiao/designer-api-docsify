@@ -39,7 +39,7 @@ Constructor for the smart gesture handling result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isConsumed | boolean | Yes | Whether to consume the current smart gesture.<br/>**true**: The smart gesture is consumed. If [selectedProposal](#selectedproposal) is not set, the system default action handling is used. If **selectedProposal** is set, the custom action handling is used.<br/>**false**: The smart gesture is not consumed, and the system treats it as unhandled. |
+| isConsumed | boolean | Yes | Whether to consume the current smart gesture.<br/>**true**: The smart gesture is consumed. If [selectedProposal](../../apis-default/arkts-apis/arkts-arkui-uicontext-gesturehandlingresolution-c.md#selectedproposal) is not set, the system default action handling is used. If **selectedProposal** is set, the custom action handling is used.<br/>**false**: The smart gesture is not consumed, and the system treats it as unhandled. |
 
 ## isConsumed
 
@@ -47,7 +47,11 @@ Constructor for the smart gesture handling result.
 isConsumed: boolean
 ```
 
-Whether to consume the current smart gesture. **true**: The smart gesture is consumed. If **selectedProposal** is not set, the system default action handling is used. If **selectedProposal** is set, the custom action handling is used. **false**: The smart gesture is not consumed, and the system treats it as unhandled.
+Whether to consume the current smart gesture.
+
+**true**: The smart gesture is consumed. If **selectedProposal** is not set, the system default action handling is used. If **selectedProposal** is set, the custom action handling is used.
+
+**false**: The smart gesture is not consumed, and the system treats it as unhandled.
 
 **Type:** boolean
 
@@ -67,9 +71,13 @@ Whether to consume the current smart gesture. **true**: The smart gesture is con
 selectedProposal?: BaseGestureHandlingProposal
 ```
 
-The smart gesture handling behavior specified by the user. When **isConsumed** is **true**: If **selectedProposal** is not set, the system default action handling is used. If **selectedProposal** is set, the custom action handling is used. When **isConsumed** is **false**, the **selectedProposal** setting does not take effect.
+The smart gesture handling behavior specified by the user.
 
-**Type:** [BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md)
+When **isConsumed** is **true**: If **selectedProposal** is not set, the system default action handling is used. If **selectedProposal** is set, the custom action handling is used.
+
+When **isConsumed** is **false**, the **selectedProposal** setting does not take effect.
+
+**Type:** [BaseGestureHandlingProposal](../../apis-default/arkts-apis/arkts-arkui-uicontext-basegesturehandlingproposal-c.md)
 
 **Since:** 26.0.0
 

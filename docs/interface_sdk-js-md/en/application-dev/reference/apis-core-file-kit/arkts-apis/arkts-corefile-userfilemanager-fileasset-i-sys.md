@@ -32,7 +32,7 @@ Closes a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [close](../../apis-na/arkts-apis/arkts-na-fileio-close-f.md)
+**Substitutes:** [close](../../apis-default/arkts-apis/arkts-fileio-close-f.md)
 
 <!--Device-FileAsset-close(fd: number, callback: AsyncCallback<void>): void--><!--Device-FileAsset-close(fd: number, callback: AsyncCallback<void>): void-End-->
 
@@ -91,7 +91,7 @@ Closes this file. This API uses a promise to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [close](../../apis-na/arkts-apis/arkts-na-fileio-close-f.md)
+**Substitutes:** [close](../../apis-default/arkts-apis/arkts-fileio-close-f.md)
 
 <!--Device-FileAsset-close(fd: number): Promise<void>--><!--Device-FileAsset-close(fd: number): Promise<void>-End-->
 
@@ -437,7 +437,15 @@ async function example(mgr: userFileManager.UserFileManager) {
 getExif(callback: AsyncCallback<string>): void
 ```
 
-Obtains the EXIF data from a JPG image and returns a JSON string. This API uses an asynchronous callback to return the result. For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md). | Key Value | Description | | --------------------------------------- | ----------------- | | BitsPerSample | Number of bits per sample.| | Orientation | Image orientation.| | ImageLength | Image length.| | ImageWidth | Image width.| | GPSLatitude | GPS latitude of the image.| | GPSLongitude | GPS longitude of the image.| | GPSLatitudeRef | Longitude reference, for example, W or E.| | GPSLongitudeRef | Latitude reference, for example, N or S.| | DateTimeOriginal | Shooting time.| | ExposureTime | Exposure time.| | SceneType | Scene type.| | ISOSpeedRatings | ISO sensitivity or speed.| | FNumber | f-number.| | DateTime | Modification time.| | GPSTimeStamp | GPS timestamp.| | GPSDateStamp | GPS date stamp.| | ImageDescription | Image description.| | Make | Manufacturer.| | MakeNote | Manufacturer.| | Model | Model.| | PhotoMode | Photo mode.| | SensitivityType | Sensitivity type.| | StandardOutputSensitivity | Standard output sensitivity.| | RecommendedExposureIndex | Recommended exposure index.| | ApertureValue | Aperture value.| | MeteringMode | Metering mode.| | LightSource | Light source.| | Flash | Flash status.| | FocalLength | Focal length.| | UserComment | User comments.| | PixelXDimension | Pixel X dimension.| | PixelYDimension | Pixel Y dimension.| | WhiteBalance | White balance.| | FocalLengthIn35mmFilm | Focal length in 35 mm film.| | ExposureBiasValue | Exposure compensation.| &gt; **NOTE：**&gt; &gt; This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all_exif and &gt; [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md).USER_COMMENT. The two fields need to be passed to &gt; **fetchColumns**.
+Obtains the EXIF data from a JPG image and returns a JSON string. This API uses an asynchronous callback to return the result.
+
+For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).
+
+| Key Value | Description | | --------------------------------------- | ----------------- | | BitsPerSample | Number of bits per sample.| | Orientation | Image orientation.| | ImageLength | Image length.| | ImageWidth | Image width.| | GPSLatitude | GPS latitude of the image.| | GPSLongitude | GPS longitude of the image.| | GPSLatitudeRef | Longitude reference, for example, W or E.| | GPSLongitudeRef | Latitude reference, for example, N or S.| | DateTimeOriginal | Shooting time.| | ExposureTime | Exposure time.| | SceneType | Scene type.| | ISOSpeedRatings | ISO sensitivity or speed.| | FNumber | f-number.| | DateTime | Modification time.| | GPSTimeStamp | GPS timestamp.| | GPSDateStamp | GPS date stamp.| | ImageDescription | Image description.| | Make | Manufacturer.| | MakeNote | Manufacturer.| | Model | Model.| | PhotoMode | Photo mode.| | SensitivityType | Sensitivity type.| | StandardOutputSensitivity | Standard output sensitivity.| | RecommendedExposureIndex | Recommended exposure index.| | ApertureValue | Aperture value.| | MeteringMode | Metering mode.| | LightSource | Light source.| | Flash | Flash status.| | FocalLength | Focal length.| | UserComment | User comments.| | PixelXDimension | Pixel X dimension.| | PixelYDimension | Pixel Y dimension.| | WhiteBalance | White balance.| | FocalLengthIn35mmFilm | Focal length in 35 mm film.| | ExposureBiasValue | Exposure compensation.|
+
+> **NOTE：**
+> 
+> This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all_exif and &gt; [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md).USER_COMMENT. The two fields need to be passed to &gt; **fetchColumns**.
 
 **Since:** 10
 
@@ -511,7 +519,15 @@ async function example(mgr: userFileManager.UserFileManager) {
 getExif(): Promise<string>
 ```
 
-Obtains the EXIF data from a JPG image and returns a JSON string. This API uses a promise to return the result. For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md). | Key Value | Description | | --------------------------------------- | ----------------- | | BitsPerSample | Number of bits per sample.| | Orientation | Image orientation.| | ImageLength | Image length.| | ImageWidth | Image width.| | GPSLatitude | GPS latitude of the image.| | GPSLongitude | GPS longitude of the image.| | GPSLatitudeRef | Longitude reference, for example, W or E.| | GPSLongitudeRef | Latitude reference, for example, N or S.| | DateTimeOriginal | Shooting time.| | ExposureTime | Exposure time.| | SceneType | Scene type.| | ISOSpeedRatings | ISO sensitivity or speed.| | FNumber | f-number.| | DateTime | Modification time.| | GPSTimeStamp | GPS timestamp.| | GPSDateStamp | GPS date stamp.| | ImageDescription | Image description.| | Make | Manufacturer.| | MakeNote | Manufacturer.| | Model | Model.| | PhotoMode | Photo mode.| | SensitivityType | Sensitivity type.| | StandardOutputSensitivity | Standard output sensitivity.| | RecommendedExposureIndex | Recommended exposure index.| | ApertureValue | Aperture value.| | MeteringMode | Metering mode.| | LightSource | Light source.| | Flash | Flash status.| | FocalLength | Focal length.| | UserComment | User comments.| | PixelXDimension | Pixel X dimension.| | PixelYDimension | Pixel Y dimension.| | WhiteBalance | White balance.| | FocalLengthIn35mmFilm | Focal length in 35 mm film.| | ExposureBiasValue | Exposure compensation.| &gt; **NOTE：**&gt; &gt; This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all_exif and &gt; [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md).USER_COMMENT. The two fields need to be passed to &gt; **fetchColumns**.
+Obtains the EXIF data from a JPG image and returns a JSON string. This API uses a promise to return the result.
+
+For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).
+
+| Key Value | Description | | --------------------------------------- | ----------------- | | BitsPerSample | Number of bits per sample.| | Orientation | Image orientation.| | ImageLength | Image length.| | ImageWidth | Image width.| | GPSLatitude | GPS latitude of the image.| | GPSLongitude | GPS longitude of the image.| | GPSLatitudeRef | Longitude reference, for example, W or E.| | GPSLongitudeRef | Latitude reference, for example, N or S.| | DateTimeOriginal | Shooting time.| | ExposureTime | Exposure time.| | SceneType | Scene type.| | ISOSpeedRatings | ISO sensitivity or speed.| | FNumber | f-number.| | DateTime | Modification time.| | GPSTimeStamp | GPS timestamp.| | GPSDateStamp | GPS date stamp.| | ImageDescription | Image description.| | Make | Manufacturer.| | MakeNote | Manufacturer.| | Model | Model.| | PhotoMode | Photo mode.| | SensitivityType | Sensitivity type.| | StandardOutputSensitivity | Standard output sensitivity.| | RecommendedExposureIndex | Recommended exposure index.| | ApertureValue | Aperture value.| | MeteringMode | Metering mode.| | LightSource | Light source.| | Flash | Flash status.| | FocalLength | Focal length.| | UserComment | User comments.| | PixelXDimension | Pixel X dimension.| | PixelYDimension | Pixel Y dimension.| | WhiteBalance | White balance.| | FocalLengthIn35mmFilm | Focal length in 35 mm film.| | ExposureBiasValue | Exposure compensation.|
+
+> **NOTE：**
+> 
+> This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all_exif and &gt; [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md).USER_COMMENT. The two fields need to be passed to &gt; **fetchColumns**.
 
 **Since:** 10
 
@@ -750,13 +766,17 @@ async function example(mgr: userFileManager.UserFileManager) {
 open(mode: string, callback: AsyncCallback<number>): void
 ```
 
-Opens this file asset. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; The write operations are mutually exclusive. After a write operation is complete, you must call **close** to &gt; close the file.
+Opens this file asset. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> The write operations are mutually exclusive. After a write operation is complete, you must call **close** to &gt; close the file.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md)
+**Substitutes:** [open](../../apis-default/arkts-apis/arkts-fileio-open-f.md)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO or ohos.permission.READ_AUDIO or ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.WRITE_AUDIO
 
@@ -799,13 +819,17 @@ async function example(mgr: userFileManager.UserFileManager) {
 open(mode: string): Promise<number>
 ```
 
-Opens this file asset. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; The write operations are mutually exclusive. After a write operation is complete, you must call **close** to &gt; close the file.
+Opens this file asset. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> The write operations are mutually exclusive. After a write operation is complete, you must call **close** to &gt; close the file.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md)
+**Substitutes:** [open](../../apis-default/arkts-apis/arkts-fileio-open-f.md)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO or ohos.permission.READ_AUDIO or ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.WRITE_AUDIO
 
@@ -908,7 +932,9 @@ async function example(mgr: userFileManager.UserFileManager) {
 setHidden(hiddenState: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets a file to hidden state. This API uses an asynchronous callback to return the result. The private files set to hidden state are located in the private album (in hidden state) and are not open to third-party applications. After obtaining private files from the private album, users can set **hiddenState** to **false** to remove them from the private album.
+Sets a file to hidden state. This API uses an asynchronous callback to return the result.
+
+The private files set to hidden state are located in the private album (in hidden state) and are not open to third-party applications. After obtaining private files from the private album, users can set **hiddenState** to **false** to remove them from the private album.
 
 **Since:** 10
 
@@ -935,8 +961,8 @@ Sets a file to hidden state. This API uses an asynchronous callback to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | if parameter is invalid |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| 13900020 | if parameter is invalid |
 
 **Examples**
 
@@ -970,7 +996,9 @@ async function example(mgr: userFileManager.UserFileManager) {
 setHidden(hiddenState: boolean): Promise<void>
 ```
 
-Sets this file asset to the hidden state. This API uses a promise to return the result. The private files set to hidden state are located in the private album (in hidden state) and are not open to third-party applications. After obtaining private files from the private album, users can set **hiddenState** to **false** to remove them from the private album.
+Sets this file asset to the hidden state. This API uses a promise to return the result.
+
+The private files set to hidden state are located in the private album (in hidden state) and are not open to third-party applications. After obtaining private files from the private album, users can set **hiddenState** to **false** to remove them from the private album.
 
 **Since:** 10
 
@@ -1002,8 +1030,8 @@ Sets this file asset to the hidden state. This API uses a promise to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | if parameter is invalid |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| 13900020 | if parameter is invalid |
 
 **Examples**
 
@@ -1039,7 +1067,11 @@ async function example(mgr: userFileManager.UserFileManager) {
 setUserComment(userComment: string, callback: AsyncCallback<void>): void
 ```
 
-Sets user comment information of an image or video. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can only be used to set user comment information of an image or video.
+Sets user comment information of an image or video. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API can only be used to set user comment information of an image or video.
 
 **Since:** 10
 
@@ -1066,8 +1098,8 @@ Sets user comment information of an image or video. This API uses an asynchronou
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 
 **Examples**
 
@@ -1106,7 +1138,11 @@ async function example(mgr: userFileManager.UserFileManager) {
 setUserComment(userComment: string): Promise<void>
 ```
 
-Sets user comment information of an image or video. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can only be used to set user comment information of an image or video.
+Sets user comment information of an image or video. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API can only be used to set user comment information of an image or video.
 
 **Since:** 10
 
@@ -1138,8 +1174,8 @@ Sets user comment information of an image or video. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 
 **Examples**
 

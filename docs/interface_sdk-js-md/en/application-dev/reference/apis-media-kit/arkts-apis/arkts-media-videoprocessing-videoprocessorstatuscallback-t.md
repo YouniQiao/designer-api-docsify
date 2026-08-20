@@ -1,4 +1,4 @@
-# VideoProcessorStatusCallback(Provides the capability of video quality processing.)
+# VideoProcessorStatusCallback
 
 ```TypeScript
 type VideoProcessorStatusCallback = (status: VideoProcessorStatus) => void

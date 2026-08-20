@@ -46,10 +46,10 @@ createCalendar(calendarAccount: CalendarAccount): Promise<Calendar>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 | [401](../../errorcode-universal.md#401-参数检查失败) | 参数检查失败，可能原因: <br>1. 必填参数为空； <br>2. 参数类型不正确。 |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
 | [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 
 **示例**
 
@@ -93,16 +93,16 @@ createCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calenda
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | calendarAccount | [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | 是 | 日历账户信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar&gt; | 是 | 回调函数，当创建账户成功时，err为undefined，data为创建成功的Calendar；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Calendar&gt; | 是 | 回调函数，当创建账户成功时，err为undefined，data为创建成功的Calendar；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 | [401](../../errorcode-universal.md#401-参数检查失败) | 参数检查失败，可能原因: <br>1. 必填参数为空； <br>2. 参数类型不正确。 |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
 | [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 
 **示例**
 
@@ -162,10 +162,10 @@ deleteCalendar(calendar: Calendar): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 | [401](../../errorcode-universal.md#401-参数检查失败) | 参数检查失败，可能原因: <br>1. 必填参数为空； <br>2. 参数类型不正确。 |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
 | [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 
 **示例**
 
@@ -220,16 +220,16 @@ deleteCalendar(calendar: Calendar, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | calendar | Calendar | 是 | 即将删除的Calendar对象。无法删除默认账户。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当删除账户成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当删除账户成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 | [401](../../errorcode-universal.md#401-参数检查失败) | 参数检查失败，可能原因: <br>1. 必填参数为空； <br>2. 参数类型不正确。 |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
 | [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 
 **示例**
 
@@ -339,10 +339,10 @@ getAllCalendars(): Promise<Calendar[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 | [401](../../errorcode-universal.md#401-参数检查失败) | 参数检查失败，可能原因: 参数类型不正确。 |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
 | [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 
 **示例**
 
@@ -385,16 +385,16 @@ getAllCalendars(callback: AsyncCallback<Calendar[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar[]&gt; | 是 | 回调函数，当查询账户成功时，err为undefined，data为查询到的Calendar数组；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Calendar[]&gt; | 是 | 回调函数，当查询账户成功时，err为undefined，data为查询到的Calendar数组；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 | [401](../../errorcode-universal.md#401-参数检查失败) | 参数检查失败，可能原因: <br>1. 必填参数为空； <br>2. 参数类型不正确。 |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
 | [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 
 **示例**
 
@@ -451,11 +451,11 @@ getCalendar(calendarAccount?: CalendarAccount): Promise<Calendar>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 | [401](../../errorcode-universal.md#401-参数检查失败) | 参数检查失败，可能原因: 参数类型不正确。 |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 | [23900003](../errorcode-calendarManager.md#23900003-未找到指定的账户) | 未找到指定的账户。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 
 **示例**
 
@@ -496,17 +496,17 @@ getCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | calendarAccount | [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | 是 | 指定日历账户信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar&gt; | 是 | 回调函数，当查询账户成功时，err为undefined，data为查询到的Calendar；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Calendar&gt; | 是 | 回调函数，当查询账户成功时，err为undefined，data为查询到的Calendar；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 | [401](../../errorcode-universal.md#401-参数检查失败) | 参数检查失败，可能原因: 参数类型不正确。 |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 | [23900003](../errorcode-calendarManager.md#23900003-未找到指定的账户) | 未找到指定的账户。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 
 **示例**
 
@@ -558,16 +558,16 @@ getCalendar(callback: AsyncCallback<Calendar>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar&gt; | 是 | 回调函数，当查询账户成功时，err为undefined，data为查询到的Calendar；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Calendar&gt; | 是 | 回调函数，当查询账户成功时，err为undefined，data为查询到的Calendar；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 | [401](../../errorcode-universal.md#401-参数检查失败) | 参数检查失败，可能原因: <br>1. 必填参数为空； <br>2. 参数类型不正确。 |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
 | [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 
 **示例**
 

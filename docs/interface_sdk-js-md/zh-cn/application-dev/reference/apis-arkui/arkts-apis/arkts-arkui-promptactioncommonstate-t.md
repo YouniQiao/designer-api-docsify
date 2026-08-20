@@ -1,4 +1,4 @@
-# PromptActionCommonState(CustomDialog)
+# PromptActionCommonState
 
 ```TypeScript
 declare type PromptActionCommonState = import('../api/@ohos.promptAction').promptAction.CommonState

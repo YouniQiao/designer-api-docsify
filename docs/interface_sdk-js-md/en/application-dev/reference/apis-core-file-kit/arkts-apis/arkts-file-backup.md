@@ -2,6 +2,8 @@
 
 Module providing backup and restore capabilities.
 
+@namespace backup
+
 **Since:** 23
 
 <!--Device-unnamed-declare namespace backup--><!--Device-unnamed-declare namespace backup-End-->

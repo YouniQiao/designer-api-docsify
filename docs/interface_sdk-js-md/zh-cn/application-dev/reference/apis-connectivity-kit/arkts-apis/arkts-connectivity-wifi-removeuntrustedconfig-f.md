@@ -15,7 +15,9 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function removeUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>
 ```
 
-移除不可信网络配置，使用Promise异步回调。 &lt;p&gt;该方法一次移除一个配置。
+移除不可信网络配置，使用Promise异步回调。
+
+&lt;p&gt;该方法一次移除一个配置。
 
 **起始版本：** 7
 
@@ -81,7 +83,9 @@ try {
 function removeUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<boolean>): void
 ```
 
-移除不可信网络配置，使用callback异步回调。 &lt;p&gt;该方法一次移除一个配置。
+移除不可信网络配置，使用callback异步回调。
+
+&lt;p&gt;该方法一次移除一个配置。
 
 **起始版本：** 7
 
@@ -100,7 +104,7 @@ function removeUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | config | WifiDeviceConfig | 是 | WLAN配置信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 |  |
 
 **示例**
 

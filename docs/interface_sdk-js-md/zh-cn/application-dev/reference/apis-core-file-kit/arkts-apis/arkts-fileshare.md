@@ -2,6 +2,8 @@
 
 提供文件分享能力。
 
+@namespace fileShare
+
 **起始版本：** 23
 
 <!--Device-unnamed-declare namespace fileShare--><!--Device-unnamed-declare namespace fileShare-End-->

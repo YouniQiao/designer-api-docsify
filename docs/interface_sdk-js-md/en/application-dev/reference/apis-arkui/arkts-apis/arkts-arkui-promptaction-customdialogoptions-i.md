@@ -1,8 +1,8 @@
 # CustomDialogOptions
 
-Extends [BaseDialogOptions](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md) to provide enhanced customization capabilities for the dialog box.
+Extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md) to provide enhanced customization capabilities for the dialog box.
 
-**Inheritance/Implementation:** CustomDialogOptions extends [BaseDialogOptions](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md)
+**Inheritance/Implementation:** CustomDialogOptions extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md)
 
 **Since:** 11
 

@@ -1,4 +1,4 @@
-# DisableAlertBeforeBackPageOptions(页面路由)
+# DisableAlertBeforeBackPageOptions
 
 定义DisableAlertBeforeBackPage参数选项。
 

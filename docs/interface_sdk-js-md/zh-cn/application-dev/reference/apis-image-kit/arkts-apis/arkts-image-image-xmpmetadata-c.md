@@ -74,8 +74,8 @@ Obtains the XMP metadata as a blob.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Memory copy failed. |
 | [7600301](../errorcode-image.md#7600301-申请内存失败) | Memory alloc failed. |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Memory copy failed. |
 
 ## getTag
 
@@ -138,7 +138,7 @@ Get all XMP tags from specified path.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Record&lt;string, [XMPTag](arkts-image-image-xmptag-i.md)&gt;&gt; | A Promise instance used to return all XMP tags. |
+| Promise&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [XMPTag](arkts-image-image-xmptag-i.md)&gt;&gt; | A Promise instance used to return all XMP tags. |
 
 **错误码：**
 

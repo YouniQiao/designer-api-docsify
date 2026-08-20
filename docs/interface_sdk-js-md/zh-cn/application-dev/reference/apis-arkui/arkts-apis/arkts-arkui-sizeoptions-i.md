@@ -2,6 +2,8 @@
 
 定义尺寸选项。
 
+@interface SizeOptions
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare interface SizeOptions--><!--Device-unnamed-declare interface SizeOptions-End-->

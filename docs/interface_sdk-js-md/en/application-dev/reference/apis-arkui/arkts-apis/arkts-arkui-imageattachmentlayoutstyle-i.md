@@ -19,7 +19,11 @@ Defines the ImageAttachment Layout Style.
 borderRadius?: LengthMetrics | BorderRadiuses
 ```
 
-Radius of the image border corners. Default value: **0**. Unit: vp
+Radius of the image border corners.
+
+Default value: **0**.
+
+Unit: vp
 
 **Type:** LengthMetrics \| BorderRadiuses
 
@@ -39,7 +43,11 @@ Radius of the image border corners. Default value: **0**. Unit: vp
 margin?: LengthMetrics | Margin
 ```
 
-Image margin. Default value: **0**. Unit: vp
+Image margin.
+
+Default value: **0**.
+
+Unit: vp
 
 **Type:** LengthMetrics \| Margin
 
@@ -59,7 +67,11 @@ Image margin. Default value: **0**. Unit: vp
 padding?: LengthMetrics | Padding
 ```
 
-Image padding. Default value: **0**. Unit: vp
+Image padding.
+
+Default value: **0**.
+
+Unit: vp
 
 **Type:** LengthMetrics \| Padding
 

@@ -42,11 +42,11 @@ Adds a SSAP service.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 36100044 | NearLink standard UUID not allowed. |
+| 36100003 | NearLink disabled. |
 | 36100043 | Invalid UUID. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100099 | Operation failed. |
 
 ## close
 
@@ -70,9 +70,9 @@ Closes this {@code Server} object and unregisters its callbacks.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## notifyPropertyChanged
 
@@ -109,12 +109,12 @@ Notifies the client that the value of a property on the server has changed.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 36100044 | NearLink standard UUID not allowed. |
-| 36100043 | Invalid UUID in property. |
+| 36100003 | NearLink disabled. |
 | 36100041 | Invalid address. |
+| 36100043 | Invalid UUID in property. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100099 | Operation failed. |
 
 ## offConnectionStateChange
 
@@ -210,7 +210,9 @@ Unsubscribes from property write events from the client.
 onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 ```
 
-Subscribes to server connection state changed events. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned.
+Subscribes to server connection state changed events.
+
+This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned.
 
 **Since:** 26.0.0
 
@@ -232,7 +234,9 @@ Subscribes to server connection state changed events. This event is accessible o
 onMtuChange(callback: Callback<int>): void
 ```
 
-Subscribes to MTU changed events. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
+Subscribes to MTU changed events.
+
+This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
 
 **Since:** 26.0.0
 
@@ -254,7 +258,9 @@ Subscribes to MTU changed events. This event is accessible only to applications 
 onPropertyRead(callback: Callback<PropertyReadRequest>): void
 ```
 
-Subscribes to property read events from the client. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned.
+Subscribes to property read events from the client.
+
+This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned.
 
 **Since:** 26.0.0
 
@@ -276,7 +282,9 @@ Subscribes to property read events from the client. This event is accessible onl
 onPropertyWrite(callback: Callback<PropertyWriteRequest>): void
 ```
 
-Subscribes to property write events from the client. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned.
+Subscribes to property write events from the client.
+
+This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned.
 
 **Since:** 26.0.0
 
@@ -320,11 +328,11 @@ Removes a specific SSAP service.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 36100044 | NearLink standard UUID not allowed. |
+| 36100003 | NearLink disabled. |
 | 36100043 | Invalid UUID. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100099 | Operation failed. |
 
 ## sendResponse
 
@@ -354,8 +362,8 @@ Responds to read or write requests from the client.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 36100003 | NearLink disabled. |
 | 36100041 | Invalid address. |
+| 36100099 | Operation failed. |
 

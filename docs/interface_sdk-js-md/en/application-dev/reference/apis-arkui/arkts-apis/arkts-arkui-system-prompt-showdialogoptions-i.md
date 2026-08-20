@@ -2,6 +2,8 @@
 
 Defines the option of show dialog.
 
+@interface ShowDialogOptions
+
 **Since:** 11
 
 <!--Device-unnamed-export interface ShowDialogOptions--><!--Device-unnamed-export interface ShowDialogOptions-End-->

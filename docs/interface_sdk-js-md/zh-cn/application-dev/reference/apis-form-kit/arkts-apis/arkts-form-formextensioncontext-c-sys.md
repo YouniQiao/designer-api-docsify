@@ -1,6 +1,8 @@
 # FormExtensionContext
 
-FormExtensionContext模块是[FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md)的上下文环境，继承自 [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。 FormExtensionContext模块提供FormExtensionAbility具有的接口和能力。
+FormExtensionContext模块是[FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md)的上下文环境，继承自 [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。
+
+FormExtensionContext模块提供FormExtensionAbility具有的接口和能力。
 
 **继承/实现关系：** FormExtensionContext extends ExtensionContext
 
@@ -45,18 +47,18 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000004](../../apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) | Can not start invisible component. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000053](../../apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
 | [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
+| [16000004](../../apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) | Can not start invisible component. |
+| [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
+| [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
 | [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000053](../../apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
+| [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
 
 **示例**
 
@@ -177,15 +179,15 @@ disconnectServiceExtensionAbility(connection: long, callback: AsyncCallback<void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | connection | long | 是 | 在 [connectServiceExtensionAbility](#connectserviceextensionability)中返回的number。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当Ability与绑定的服务类型的Ability解绑成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当Ability与绑定的服务类型的Ability解绑成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 **示例**
 
@@ -296,8 +298,8 @@ disconnectServiceExtensionAbility(connection: long): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 **示例**
 
@@ -399,18 +401,18 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 包含bundleName，abilityName以及用户自定义参数用于拉起Ability。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当拉起一个应用的Ability成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当拉起一个应用的Ability成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | An IPC connection error happened. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
-| 16500101 | The application is not a system application.<br>**适用版本：** 9 - 11 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) | An IPC connection error happened. |
 | [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
+| 16500101 | The application is not a system application.<br>**适用版本：** 9 - 11 |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 
 **示例**
 
@@ -510,12 +512,12 @@ startAbility(want: Want): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | An IPC connection error happened. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
-| 16500101 | The application is not a system application.<br>**适用版本：** 9 - 11 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) | An IPC connection error happened. |
 | [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
+| 16500101 | The application is not a system application.<br>**适用版本：** 9 - 11 |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 
 **示例**
 

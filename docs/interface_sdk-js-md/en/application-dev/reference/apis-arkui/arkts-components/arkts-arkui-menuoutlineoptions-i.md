@@ -19,7 +19,9 @@ Defines the outline of the drop-down menu.
 color?: ResourceColor | EdgeColors
 ```
 
-Color of the outline. Default value: **#19ffffff**
+Color of the outline.
+
+Default value: **#19ffffff**
 
 **Type:** ResourceColor \| EdgeColors
 
@@ -39,7 +41,9 @@ Color of the outline. Default value: **#19ffffff**
 width?: Dimension | EdgeOutlineWidths
 ```
 
-Width of the outline. Percentage values are not supported. Default value: **0**
+Width of the outline. Percentage values are not supported.
+
+Default value: **0**
 
 **Type:** Dimension \| EdgeOutlineWidths
 

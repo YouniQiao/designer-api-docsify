@@ -22,7 +22,7 @@ additions: Record<string, RecordData>
 
 设置其他附加属性数据。格式为键值对。
 
-**类型：** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
+**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 23
 

@@ -2,6 +2,8 @@
 
 Declare AdvancedDialogV2Button.
 
+@class AdvancedDialogV2Button
+
 **Since:** 18
 
 <!--Device-unnamed-export declare class AdvancedDialogV2Button--><!--Device-unnamed-export declare class AdvancedDialogV2Button-End-->
@@ -68,7 +70,7 @@ Sets the Button Callback.
 
 Sets the background color of a button.
 
-**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -179,7 +181,7 @@ Set the availability of the button.
 
 Sets the Button Text Color.
 
-**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
 
 **Since:** 18
 

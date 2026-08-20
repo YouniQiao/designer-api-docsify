@@ -1,6 +1,6 @@
 # WebMessageExt
 
-Implements a **WebMessageExt** object that received and sent by the [WebMessagePort](../../apis-na/arkts-apis/arkts-na-webview-webmessageport-i.md) API.
+Implements a **WebMessageExt** object that received and sent by the [WebMessagePort](../../apis-default/arkts-apis/arkts-webview-webmessageport-i.md) API.
 
 **Since:** 10
 
@@ -202,7 +202,7 @@ Obtains the type of the data object. For details about the sample code, see onMe
 
 | Type | Description |
 | --- | --- |
-| [WebMessageType](../../apis-na/arkts-apis/arkts-na-webview-webmessagetype-e.md) | Data types supported by the [webMessagePort]{ |
+| [WebMessageType](../../apis-default/arkts-apis/arkts-webview-webmessagetype-e.md) | Data types supported by the [webMessagePort]{ |
 
 ## setArray
 
@@ -398,7 +398,7 @@ Sets the type for the data object. For details about the sample code, see onMess
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [WebMessageType](../../apis-na/arkts-apis/arkts-na-webview-webmessagetype-e.md) | Yes | Data types supported by the [webMessagePort](../../apis-na/arkts-apis/arkts-na-webview-webmessageport-i.md) API. |
+| type | [WebMessageType](../../apis-default/arkts-apis/arkts-webview-webmessagetype-e.md) | Yes | Data types supported by the [webMessagePort](../../apis-default/arkts-apis/arkts-webview-webmessageport-i.md) API. |
 
 **Error codes:**
 

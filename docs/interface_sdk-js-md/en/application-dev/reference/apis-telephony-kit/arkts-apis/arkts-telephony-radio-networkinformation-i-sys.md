@@ -2,6 +2,8 @@
 
 Obtains the network information.
 
+@interface NetworkInformation
+
 **Since:** 23
 
 <!--Device-radio-export interface NetworkInformation--><!--Device-radio-export interface NetworkInformation-End-->

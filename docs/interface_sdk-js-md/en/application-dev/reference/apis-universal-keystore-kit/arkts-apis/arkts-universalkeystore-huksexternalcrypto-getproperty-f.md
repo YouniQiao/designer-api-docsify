@@ -12,7 +12,11 @@ import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 function getProperty(resourceId: string, propertyId: string, params?: Array<HuksExternalCryptoParam>): Promise<Array<HuksExternalCryptoParam>>
 ```
 
-Obtains a property value. This API uses a promise to return the result. The **propertyId** indicates the ID of the property to be queried. Currently, only the SKF API names defined in GMT 0016-2023 can be used as property IDs. The supported IDs are as follows: - SKF_EnumDev - SKF_GetDevInfo - SKF_EnumApplication - SKF_EnumContainer
+Obtains a property value. This API uses a promise to return the result.
+
+The **propertyId** indicates the ID of the property to be queried. Currently, only the SKF API names defined in GMT 0016-2023 can be used as property IDs. The supported IDs are as follows:
+
+- SKF_EnumDev - SKF_GetDevInfo - SKF_EnumApplication - SKF_EnumContainer
 
 **Since:** 22
 
@@ -40,16 +44,16 @@ Obtains a property value. This API uses a promise to return the result. The **pr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12000023](../errorcode-huks.md#12000023-unauthenticated-ukey-pin) | The UKey PIN is not authenticated. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | API is not supported. |
-| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | If the UKey driver operation failed. Possible causes: 1. Error reported when the provider accesses the SKF interface of UKey. |
 | [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
-| [12000021](../errorcode-huks.md#12000021-ukey-pin-locked) | The UKey PIN is locked. |
-| [12000020](../errorcode-huks.md#12000020-dependent-module-error) | If the provider operation failed. Possible causes: 1. The provider experienced an internal processing error. |
-| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | Input parameter is invalid. Possible causes: 1. The resourceId or propertyId length is invalid. 2. The params contains invalid tags or invalid value types. |
-| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | If the memory is insufficient. |
-| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter is abnormal. This error may occur if the process function is not found, or due to other issues. |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | If the UKey driver operation failed. Possible causes: 1. Error reported when the provider accesses the SKF interface of UKey. |
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | If the cached resource ID is not found. |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter is abnormal. This error may occur if the process function is not found, or due to other issues. |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | If the memory is insufficient. |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | Input parameter is invalid. Possible causes: 1. The resourceId or propertyId length is invalid. 2. The params contains invalid tags or invalid value types. |
+| [12000020](../errorcode-huks.md#12000020-dependent-module-error) | If the provider operation failed. Possible causes: 1. The provider experienced an internal processing error. |
+| [12000021](../errorcode-huks.md#12000021-ukey-pin-locked) | The UKey PIN is locked. |
+| [12000023](../errorcode-huks.md#12000023-unauthenticated-ukey-pin) | The UKey PIN is not authenticated. |
 | [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) | If the provider or UKey is busy. |
 
 **Examples**

@@ -40,7 +40,7 @@ ellipticalGradientBlur(blurRadius: double, center: EllipticalMaskCenter,
 | blurRadius | double | 是 | 模糊半径，取正整数，单位为px，模糊半径大于60px时自动截断。 模糊效果与所设置的模糊半径值成正比，值越大效果越明显。 |
 | center | [EllipticalMaskCenter](arkts-arkgraphics2d-effectkit-ellipticalmaskcenter-t-sys.md) | 是 | 椭圆形遮罩的中心点坐标。 |
 | maskRadius | [EllipticalMaskRadius](arkts-arkgraphics2d-effectkit-ellipticalmaskradius-t-sys.md) | 是 | 椭圆形遮罩在X轴和Y轴方向的半径。 |
-| fractionStops | [FractionStop](../../apis-na/arkts-apis/arkts-na-fractionstop-t.md)[] | 是 | 渐变模糊位置与程度数组。数组元素为二元数组，第一个元素表示位置，第二个元素表示模糊程度。 位置取值范围为[0, 1]，椭圆中心对应位置0，椭圆边界对应位置1。模糊程度取值范围为[0, 1]，0表示无模糊，大于1的值自动转为1。 位置参数值需严格递增，数组长度不能小于2，最大为12。 |
+| fractionStops | [FractionStop](../../apis-default/arkts-apis/arkts-fractionstop-t.md)[] | 是 | 渐变模糊位置与程度数组。数组元素为二元数组，第一个元素表示位置，第二个元素表示模糊程度。 位置取值范围为[0, 1]，椭圆中心对应位置0，椭圆边界对应位置1。模糊程度取值范围为[0, 1]，0表示无模糊，大于1的值自动转为1。 位置参数值需严格递增，数组长度不能小于2，最大为12。 |
 
 **返回值：**
 

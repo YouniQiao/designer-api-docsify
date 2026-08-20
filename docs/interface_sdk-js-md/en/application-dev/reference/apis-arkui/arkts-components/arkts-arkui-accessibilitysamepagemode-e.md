@@ -1,6 +1,6 @@
 # AccessibilitySamePageMode
 
-Enumerates the same-page modes for cross-process embedded components and their host applications.
+Enumerates the same-page modes for cross-process embedded components and their host applications. @enum { number }
 
 **Since:** 18
 

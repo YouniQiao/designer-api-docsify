@@ -1,8 +1,12 @@
 # ImageAnimator
 
-提供帧动画组件来实现逐帧播放图片的能力，可以配置需要播放的图片列表，每张图片可以配置时长。 > **说明：** > > - 该组件从API版本26.0.0开始支持WithTheme。
+提供帧动画组件来实现逐帧播放图片的能力，可以配置需要播放的图片列表，每张图片可以配置时长。
 
-## 子组件 无
+> **说明：** > > - 该组件从API版本26.0.0开始支持WithTheme。
+
+## 子组件
+
+无
 
 ## ImageAnimator
 
@@ -28,5 +32,4 @@ ImageAnimator()
 
 | 名称 | 说明 |
 | --- | --- |
-| [ImageFrameInfo](arkts-arkui-imageframeinfo-i.md) | 图片帧信息集合。 |
 

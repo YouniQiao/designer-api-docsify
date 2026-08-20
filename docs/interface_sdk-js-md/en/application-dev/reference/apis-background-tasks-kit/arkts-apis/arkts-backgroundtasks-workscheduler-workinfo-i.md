@@ -38,7 +38,9 @@ Ability name in the bundle.
 batteryLevel?: int
 ```
 
-Battery level. Value range: [0, 100]
+Battery level.
+
+Value range: [0, 100]
 
 **Type:** int
 
@@ -146,7 +148,9 @@ Idle wait time, in milliseconds.
 isCharging?: boolean
 ```
 
-Whether the device needs to enter the charging state. The default value is **false**. - **true**: The device needs to enter the charging state to trigger deferred task scheduling. - **false**: The device does not need to enter the charging state to trigger deferred task scheduling.
+Whether the device needs to enter the charging state. The default value is **false**.
+
+- **true**: The device needs to enter the charging state to trigger deferred task scheduling. - **false**: The device does not need to enter the charging state to trigger deferred task scheduling.
 
 **Type:** boolean
 
@@ -164,7 +168,9 @@ Whether the device needs to enter the charging state. The default value is **fal
 isDeepIdle?: boolean
 ```
 
-Whether the device needs to enter the idle state to trigger deferred task scheduling. The default value is **false**. - **true**: The device needs to enter the idle state to trigger deferred task scheduling. - **false**: The device does not need to enter the idle state to trigger deferred task scheduling.
+Whether the device needs to enter the idle state to trigger deferred task scheduling. The default value is **false**.
+
+- **true**: The device needs to enter the idle state to trigger deferred task scheduling. - **false**: The device does not need to enter the idle state to trigger deferred task scheduling.
 
 **Type:** boolean
 
@@ -182,7 +188,9 @@ Whether the device needs to enter the idle state to trigger deferred task schedu
 isPersisted?: boolean
 ```
 
-Whether the registered deferred task can be saved in the system. The default value is **false**. - **true**: The task can be saved. That is, the task can be restored after the system restarts. - **false**: The task cannot be saved.
+Whether the registered deferred task can be saved in the system. The default value is **false**.
+
+- **true**: The task can be saved. That is, the task can be restored after the system restarts. - **false**: The task cannot be saved.
 
 **Type:** boolean
 
@@ -200,7 +208,9 @@ Whether the registered deferred task can be saved in the system. The default val
 isRepeat?: boolean
 ```
 
-Whether the task is repeated. The default value is **false**. - **true**: The task is repeated. - **false**: The task is not repeated.
+Whether the task is repeated. The default value is **false**.
+
+- **true**: The task is repeated. - **false**: The task is not repeated.
 
 **Type:** boolean
 

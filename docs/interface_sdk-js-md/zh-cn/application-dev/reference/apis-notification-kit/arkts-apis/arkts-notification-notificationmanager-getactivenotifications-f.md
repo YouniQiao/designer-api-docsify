@@ -12,7 +12,9 @@ import { notificationManager } from '@kit.NotificationKit';
 function getActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void
 ```
 
-获取当前应用未删除的通知列表。使用callback异步回调。 用于查询当前应用在通知中心中所有存量通知的详细信息列表，包括每条通知的ID、标签、内容、创建时间等。
+获取当前应用未删除的通知列表。使用callback异步回调。
+
+用于查询当前应用在通知中心中所有存量通知的详细信息列表，包括每条通知的ID、标签、内容、创建时间等。
 
 **起始版本：** 23
 
@@ -28,7 +30,7 @@ setBadgeNumber 设置角标个数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NotificationRequest&gt;&gt; | 是 | 回调函数。当获取未删除的通知列表成功，err为undefined，data为获取到的通知列表，否则为错 误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;NotificationRequest&gt;&gt; | 是 | 回调函数。当获取未删除的通知列表成功，err为undefined，data为获取到的通知列表，否则为错 误对象。 |
 
 **错误码：**
 
@@ -78,7 +80,9 @@ notificationManager.getActiveNotifications(getActiveNotificationsCallback);
 function getActiveNotifications(): Promise<Array<NotificationRequest>>
 ```
 
-获取当前应用未删除的通知列表。使用Promise异步回调。 用于查询当前应用在通知中心中所有存量通知的详细信息列表，包括每条通知的ID、标签、内容、创建时间等。
+获取当前应用未删除的通知列表。使用Promise异步回调。
+
+用于查询当前应用在通知中心中所有存量通知的详细信息列表，包括每条通知的ID、标签、内容、创建时间等。
 
 **起始版本：** 23
 

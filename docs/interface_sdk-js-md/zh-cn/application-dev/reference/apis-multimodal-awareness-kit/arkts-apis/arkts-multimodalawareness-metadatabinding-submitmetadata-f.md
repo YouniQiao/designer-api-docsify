@@ -32,7 +32,7 @@ function submitMetadata(metadata: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-文件创建失败) | Internal handling failed. |
+| [32100001](../errorcode-metadataBinding.md#32100001-文件创建失败) | Internal handling failed. |
 
 **示例**
 

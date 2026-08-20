@@ -2,6 +2,8 @@
 
 描述WLAN加密类型。
 
+@enum { number } WifiSecurityType
+
 **起始版本：** 6
 
 **废弃版本：** 9

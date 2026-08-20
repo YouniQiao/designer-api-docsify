@@ -36,9 +36,9 @@ close(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
 | [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## connect
 
@@ -68,9 +68,9 @@ connect(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
 | [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## disconnect
 
@@ -100,9 +100,9 @@ disconnect(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
 | [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## getServices
 
@@ -132,9 +132,9 @@ getServices(): Promise<Service[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
 | [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## offConnectionStateChange
 
@@ -156,7 +156,7 @@ offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | 否 | 用于监听连接状态改变事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | 否 | 用于监听连接状态改变事件的回调。 |
 
 ## offMtuChange
 
@@ -178,7 +178,7 @@ offMtuChange(callback?: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 用于监听mtu变化事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 否 | 用于监听mtu变化事件的回调。 |
 
 ## offPropertyChange
 
@@ -200,7 +200,7 @@ offPropertyChange(callback?: Callback<Property>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | 否 | 用于监听属性值变更事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | 否 | 用于监听属性值变更事件的回调。 |
 
 ## onConnectionStateChange
 
@@ -208,7 +208,9 @@ offPropertyChange(callback?: Callback<Property>): void
 onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 ```
 
-订阅客户端连接状态更改事件。 只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。 如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。 回调返回真实设备地址，否则返回随机设备地址。
+订阅客户端连接状态更改事件。
+
+只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。 如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。 回调返回真实设备地址，否则返回随机设备地址。
 
 **起始版本：** 26.0.0
 
@@ -222,7 +224,7 @@ onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | 是 | 用于监听连接状态改变事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | 是 | 用于监听连接状态改变事件的回调。 |
 
 ## onMtuChange
 
@@ -230,7 +232,9 @@ onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 onMtuChange(callback: Callback<int>): void
 ```
 
-订阅MTU变化事件。 只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。
+订阅MTU变化事件。
+
+只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。
 
 **起始版本：** 26.0.0
 
@@ -244,7 +248,7 @@ onMtuChange(callback: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 用于监听mtu变化事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | 用于监听mtu变化事件的回调。 |
 
 ## onPropertyChange
 
@@ -252,7 +256,9 @@ onMtuChange(callback: Callback<int>): void
 onPropertyChange(callback: Callback<Property>): void
 ```
 
-订阅属性值变更事件。 只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。
+订阅属性值变更事件。
+
+只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。
 
 **起始版本：** 26.0.0
 
@@ -266,7 +272,7 @@ onPropertyChange(callback: Callback<Property>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | 是 | 用于监听属性值更改事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | 是 | 用于监听属性值更改事件的回调。 |
 
 ## readProperty
 
@@ -302,11 +308,11 @@ readProperty(property: Property): Promise<Property>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) | NearLink standard UUID not allowed. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
 | [36100043](../errorcode-nearlink-service.md#36100043-无效uuid) | Invalid UUID in property. |
+| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) | NearLink standard UUID not allowed. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
 
 ## requestMtuSize
 
@@ -342,9 +348,9 @@ requestMtuSize(mtu: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
 | [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## setPropertyNotification
 
@@ -381,11 +387,11 @@ setPropertyNotification(property: Property, enable: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) | NearLink standard UUID not allowed. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
 | [36100043](../errorcode-nearlink-service.md#36100043-无效uuid) | Invalid UUID in property. |
+| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) | NearLink standard UUID not allowed. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
 
 ## writeProperty
 
@@ -422,9 +428,9 @@ writeProperty(property: Property, writeType: PropertyWriteType): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) | NearLink standard UUID not allowed. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
 | [36100043](../errorcode-nearlink-service.md#36100043-无效uuid) | Invalid UUID in property. |
+| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) | NearLink standard UUID not allowed. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
 

@@ -49,8 +49,8 @@ Checks whether collaborative playback is enabled for the specified device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 **Examples**
 
@@ -194,9 +194,9 @@ Enables or disables collaborative playback for the specified device. Currently, 
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Possible causes: 1. The specified device is not an A2DP device. 2. The specified device is not connected. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 **Examples**
 

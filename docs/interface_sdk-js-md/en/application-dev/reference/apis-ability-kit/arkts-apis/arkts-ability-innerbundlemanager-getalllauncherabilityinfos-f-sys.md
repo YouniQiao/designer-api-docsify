@@ -12,7 +12,11 @@ import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
 function getAllLauncherAbilityInfos(userId: number, callback: AsyncCallback<Array<LauncherAbilityInfo>>): void
 ```
 
-Obtains the information about all launcher abilities. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API has been supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md) &gt; instead.
+Obtains the information about all launcher abilities. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md) &gt; instead.
 
 **Since:** 8
 
@@ -42,7 +46,11 @@ Obtains the information about all launcher abilities. This API uses an asynchron
 function getAllLauncherAbilityInfos(userId: number): Promise<Array<LauncherAbilityInfo>>
 ```
 
-Obtains the information about all launcher abilities. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API has been supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md) &gt; instead.
+Obtains the information about all launcher abilities. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md) &gt; instead.
 
 **Since:** 8
 

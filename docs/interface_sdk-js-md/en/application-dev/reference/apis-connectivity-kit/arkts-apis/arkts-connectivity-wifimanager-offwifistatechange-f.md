@@ -13,7 +13,9 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function offWifiStateChange(callback?: Callback<int>): void
 ```
 
-Unsubscribe Wi-Fi status change events. All callback functions will be deregistered If there is no specific callback parameter.
+Unsubscribe Wi-Fi status change events.
+
+All callback functions will be deregistered If there is no specific callback parameter.
 
 **Since:** 23
 
@@ -33,7 +35,7 @@ Unsubscribe Wi-Fi status change events. All callback functions will be deregiste
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 

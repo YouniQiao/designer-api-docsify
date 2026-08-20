@@ -2,6 +2,8 @@
 
 Focus Priority
 
+@enum { number }
+
 **Since:** 23
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.

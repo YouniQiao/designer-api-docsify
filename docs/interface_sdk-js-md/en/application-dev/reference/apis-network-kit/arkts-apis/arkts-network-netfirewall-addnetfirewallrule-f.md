@@ -12,7 +12,52 @@ import { netFirewall } from '@kit.NetworkKit';
 function addNetFirewallRule(rule: NetFirewallRule): Promise<int>
 ```
 
-Adds a firewall rule for the system user ID. The supported rule types are IP, Domain, and DNS. This API uses a promise to return the result. &gt; **Description** &gt; &gt; 1. The priority of firewall rules is described as follows (there is no requirement on the call sequence of &gt; [setNetFirePolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md) and &gt; [addNetFirewallRule](#addnetfirewallrule)): &gt; &gt; - Call [setNetFirePolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md) to set the default policy to **DENY** and call &gt; [addNetFirewallRule](#addnetfirewallrule) to add an explicit rule. The priorities of the rules &gt; are as follows: &gt; &gt; - Explicit denying rule &gt; &gt; - Explicit allowing rule &gt; &gt; - Default denying policy &gt; &gt; - Call [setNetFirePolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md) to set the default policy to **ALLOW** and call &gt; [addNetFirewallRule](#addnetfirewallrule) to add an explicit rule. The priorities of the rules &gt; are as follows: &gt; &gt; - Explicit allowing rule &gt; &gt; - Explicit denying rule &gt; &gt; - Default allowing policy &gt; &gt; - When the IP address rule and domain name rule of the firewall conflict (the IP of the domain name resolution is &gt; the same as that in the IP address rule, and the rule behavior conflicts): &gt; &gt; - If the access is performed using a domain name, the domain name rule has a higher priority than the IP address &gt; rule and is not affected by the rule of the IP parsed from the domain name. &gt; &gt; - If the access is performed using an IP address, the following rules are followed: &gt; &gt; - If the domain name rule allows the access and the domain name resolution has been performed, the IP address &gt; denying rule or the default denying policy will not take effect, and the access using the IP address will be &gt; allowed. &gt; &gt; - If the domain name rule allows the access and the domain name resolution has not been performed, the IP address &gt; denying rule or the default denying policy will take effect, and the access using the IP address will be denied. &gt; &gt; - If the domain name rule denies the access, the IP address allowing rule or the default policy will take effect, &gt; and the access using the IP address will be allowed. &gt; &gt; 2. Supplementary description of rule types: &gt; &gt; - When the input parameter **rule.type** of **addNetFirewallRule** is set to **RULE_IP**: &gt; &gt; - If **rule.action** is set to **RULE_ALLOW** and **rule.localIps** and **rule.remoteIps** are not configured, &gt; the rule takes effect as full IP range access is allowed. &gt; &gt; - If **rule.action** is set to **RULE_DENY** and **rule.localIps** and **rule.remoteIps** are not configured, the &gt; rule takes effect as full IP range access is denied. &gt; &gt; - If **rule.type** of **addNetFirewallRule** is set to **RULE_DOMAIN** and **rule.domains** is not configured, &gt; the rule does not take effect. &gt; &gt; 3. Description of the upper limit for adding firewall rules: &gt; &gt; - A maximum of 1000 firewall rules can be added for a single system user ID. If this limit is exceeded, error &gt; code **29400001** is reported. &gt; &gt; - A maximum of 2000 firewall rules can be added for all system user IDs. If this limit is exceeded, error code &gt; **29400001** is reported. &gt; &gt; - A maximum of 100 fuzzy domain name rules can be added for all system user IDs. If this limit is exceeded, error &gt; code **29400005** is reported. &gt; **Required permission**: ohos.permission.MANAGE_NET_FIREWALL
+Adds a firewall rule for the system user ID. The supported rule types are IP, Domain, and DNS. This API uses a promise to return the result.
+
+> **Description**
+> 
+> 1. The priority of firewall rules is described as follows (there is no requirement on the call sequence of &gt; [setNetFirePolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md) and &gt; [addNetFirewallRule](#addnetfirewallrule)):
+> 
+> - Call [setNetFirePolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md) to set the default policy to **DENY** and call &gt; [addNetFirewallRule](#addnetfirewallrule) to add an explicit rule. The priorities of the rules &gt; are as follows:
+> 
+> - Explicit denying rule &gt;
+> - Explicit allowing rule &gt;
+> - Default denying policy &gt;
+> - Call [setNetFirePolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md) to set the default policy to **ALLOW** and call &gt; [addNetFirewallRule](#addnetfirewallrule) to add an explicit rule. The priorities of the rules &gt; are as follows:
+> 
+> - Explicit allowing rule &gt;
+> - Explicit denying rule &gt;
+> - Default allowing policy &gt;
+> - When the IP address rule and domain name rule of the firewall conflict (the IP of the domain name resolution is &gt; the same as that in the IP address rule, and the rule behavior conflicts):
+> 
+> - If the access is performed using a domain name, the domain name rule has a higher priority than the IP address &gt; rule and is not affected by the rule of the IP parsed from the domain name.
+> 
+> - If the access is performed using an IP address, the following rules are followed:
+> 
+> - If the domain name rule allows the access and the domain name resolution has been performed, the IP address &gt; denying rule or the default denying policy will not take effect, and the access using the IP address will be &gt; allowed.
+> 
+> - If the domain name rule allows the access and the domain name resolution has not been performed, the IP address &gt; denying rule or the default denying policy will take effect, and the access using the IP address will be denied.
+> 
+> - If the domain name rule denies the access, the IP address allowing rule or the default policy will take effect, &gt; and the access using the IP address will be allowed.
+> 
+> 2. Supplementary description of rule types:
+> 
+> - When the input parameter **rule.type** of **addNetFirewallRule** is set to **RULE_IP**:
+> 
+> - If **rule.action** is set to **RULE_ALLOW** and **rule.localIps** and **rule.remoteIps** are not configured, &gt; the rule takes effect as full IP range access is allowed.
+> 
+> - If **rule.action** is set to **RULE_DENY** and **rule.localIps** and **rule.remoteIps** are not configured, the &gt; rule takes effect as full IP range access is denied.
+> 
+> - If **rule.type** of **addNetFirewallRule** is set to **RULE_DOMAIN** and **rule.domains** is not configured, &gt; the rule does not take effect.
+> 
+> 3. Description of the upper limit for adding firewall rules:
+> 
+> - A maximum of 1000 firewall rules can be added for a single system user ID. If this limit is exceeded, error &gt; code **29400001** is reported.
+> 
+> - A maximum of 2000 firewall rules can be added for all system user IDs. If this limit is exceeded, error code &gt; **29400001** is reported.
+> 
+> - A maximum of 100 fuzzy domain name rules can be added for all system user IDs. If this limit is exceeded, error &gt; code **29400005** is reported.
+> **Required permission**: ohos.permission.MANAGE_NET_FIREWALL
 
 **Since:** 15
 
@@ -38,18 +83,18 @@ Adds a firewall rule for the system user ID. The supported rule types are IP, Do
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [29400000](../errorcode-net-netfirewall.md#29400000-specified-user-does-not-exist) | The specified user does not exist. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
-| [29400001](../errorcode-net-netfirewall.md#29400001-number-of-firewall-rules-exceeds-the-maximum) | The number of firewall rules exceeds the maximum. |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Operation failed. Cannot connect to service. |
-| [29400002](../errorcode-net-netfirewall.md#29400002-number-of-ip-address-rules-in-the-firewall-rule-exceeds-the-maximum) | The number of IP address rules in the firewall rule exceeds the maximum. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [29400000](../errorcode-net-netfirewall.md#29400000-specified-user-does-not-exist) | The specified user does not exist. |
+| [29400001](../errorcode-net-netfirewall.md#29400001-number-of-firewall-rules-exceeds-the-maximum) | The number of firewall rules exceeds the maximum. |
+| [29400002](../errorcode-net-netfirewall.md#29400002-number-of-ip-address-rules-in-the-firewall-rule-exceeds-the-maximum) | The number of IP address rules in the firewall rule exceeds the maximum. |
 | [29400003](../errorcode-net-netfirewall.md#29400003-number-of-port-rules-in-the-firewall-rule-exceeds-the-maximum) | The number of port rules in the firewall rule exceeds the maximum. |
 | [29400004](../errorcode-net-netfirewall.md#29400004-number-of-domain-name-rules-in-the-firewall-rule-exceeds-the-maximum) | The number of domain rules in the firewall rule exceeds the maximum. |
 | [29400005](../errorcode-net-netfirewall.md#29400005-number-of-fuzzy-domain-name-rules-exceeds-the-maximum) | The number of domain rules exceeds the maximum. |
 | [29400007](../errorcode-net-netfirewall.md#29400007-dns-rule-duplication) | The dns rule is duplication. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 

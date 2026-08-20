@@ -2,6 +2,8 @@
 
 Rotation execution results.
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-mechanicManager-export enum Result--><!--Device-mechanicManager-export enum Result-End-->

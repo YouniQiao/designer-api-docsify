@@ -41,8 +41,8 @@ Creates a Model instance file description
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1000007 | Failed to create native model from file descriptor (fd). Possible causes: 1. The file descriptor (fd) is incorrect; 2. The model file is damaged. |
 | 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect. |
+| 1000007 | Failed to create native model from file descriptor (fd). Possible causes: 1. The file descriptor (fd) is incorrect; 2. The model file is damaged. |
 
 **Examples**
 
@@ -90,8 +90,8 @@ Create a Model instance from file description
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1000007 | Failed to create native model from file descriptor (fd). Possible causes: 1. The file descriptor (fd) is incorrect; 2. The model file is damaged. |
 | 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect. |
+| 1000007 | Failed to create native model from file descriptor (fd). Possible causes: 1. The file descriptor (fd) is incorrect; 2. The model file is damaged. |
 
 **Examples**
 
@@ -141,8 +141,8 @@ Create a Model instance from file description
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1000007 | Failed to create native model from file descriptor (fd). Possible causes: 1. The file descriptor (fd) is incorrect; 2. The model file is damaged. |
 | 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect. |
+| 1000007 | Failed to create native model from file descriptor (fd). Possible causes: 1. The file descriptor (fd) is incorrect; 2. The model file is damaged. |
 
 **Examples**
 

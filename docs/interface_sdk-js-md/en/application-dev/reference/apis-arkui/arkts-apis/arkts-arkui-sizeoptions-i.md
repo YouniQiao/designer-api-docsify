@@ -2,6 +2,8 @@
 
 Defines the size options.
 
+@interface SizeOptions
+
 **Since:** 11
 
 <!--Device-unnamed-declare interface SizeOptions--><!--Device-unnamed-declare interface SizeOptions-End-->

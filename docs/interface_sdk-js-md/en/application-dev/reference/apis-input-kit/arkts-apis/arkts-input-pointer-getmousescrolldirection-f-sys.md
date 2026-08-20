@@ -34,9 +34,9 @@ Obtains the scroll direction of the mouse wheel. This API uses a promise to retu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
 
 **Examples**
 

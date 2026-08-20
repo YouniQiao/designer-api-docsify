@@ -47,7 +47,13 @@ isLockMetadataObjectTrackingSupported(): boolean
 lockMetadataObjectTracking(point: Point): void
 ```
 
-锁定对特定元数据对象（如猫脸、狗脸）的追踪。 &gt; **说明：** &gt; &gt; - 该功能以point所指向的点所在的对象为追踪对象，如果该点不存在追踪对象，则功能不生效。 &gt; &gt; - 被锁定追踪的对象离开取景范围超过三秒或调用解锁追踪后，锁定追踪自动取消。
+锁定对特定元数据对象（如猫脸、狗脸）的追踪。
+
+> **说明：**
+> 
+> - 该功能以point所指向的点所在的对象为追踪对象，如果该点不存在追踪对象，则功能不生效。
+> 
+> - 被锁定追踪的对象离开取景范围超过三秒或调用解锁追踪后，锁定追踪自动取消。
 
 **起始版本：** 26.0.0
 
@@ -90,7 +96,7 @@ Unsubscribes from error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to get the metadata output errors. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | Callback used to get the metadata output errors. |
 
 ## offMetadataObjectsAvailable
 
@@ -110,7 +116,7 @@ Unsubscribes from metadata objects available event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MetadataObject](arkts-camera-camera-metadataobject-i.md)&gt;&gt; | 否 | Callback used to get the available metadata objects. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[MetadataObject](arkts-camera-camera-metadataobject-i.md)&gt;&gt; | 否 | Callback used to get the available metadata objects. |
 
 ## off('error')
 
@@ -133,7 +139,7 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 监听事件，固定为'error'，metadataOutput创建成功后可监听。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## off('metadataObjectsAvailable')
 
@@ -156,7 +162,7 @@ off(type: 'metadataObjectsAvailable', callback?: AsyncCallback<Array<MetadataObj
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'metadataObjectsAvailable' | 是 | 监听事件，固定为'metadataObjectsAvailable'，metadataOutput创建成功后可监听。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MetadataObject](arkts-camera-camera-metadataobject-i.md)&gt;&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有 callback。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[MetadataObject](arkts-camera-camera-metadataobject-i.md)&gt;&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有 callback。 |
 
 ## onError
 
@@ -176,7 +182,7 @@ Subscribes to error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to get the metadata output errors. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | Callback used to get the metadata output errors. |
 
 ## onMetadataObjectsAvailable
 
@@ -196,7 +202,7 @@ Subscribes to metadata objects available event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MetadataObject](arkts-camera-camera-metadataobject-i.md)&gt;&gt; | 是 | Callback used to get the available metadata objects. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[MetadataObject](arkts-camera-camera-metadataobject-i.md)&gt;&gt; | 是 | Callback used to get the available metadata objects. |
 
 ## on('error')
 
@@ -204,7 +210,11 @@ Subscribes to metadata objects available event callback.
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-监听metadata流的错误，通过注册回调函数获取结果。使用callback异步回调。 &gt; **说明：** &gt; &gt; 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+监听metadata流的错误，通过注册回调函数获取结果。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 10
 
@@ -219,7 +229,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 监听事件，固定为'error'，metadataOutput创建成功后可监听。metadata接口使用错误时触发该事件并返回对应错误码，比如调用 [start](#start)，[CameraOutput.release](arkts-camera-camera-cameraoutput-i.md#release)接口时发生 错误返回对应错误信息。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，用于获取错误信息。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | 回调函数，用于获取错误信息。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 ## on('metadataObjectsAvailable')
 
@@ -227,7 +237,11 @@ on(type: 'error', callback: ErrorCallback): void
 on(type: 'metadataObjectsAvailable', callback: AsyncCallback<Array<MetadataObject>>): void
 ```
 
-监听检测到的metadata对象，通过注册回调函数获取结果。使用callback异步回调。 &gt; **说明：** &gt; &gt; 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+监听检测到的metadata对象，通过注册回调函数获取结果。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 10
 
@@ -242,7 +256,7 @@ on(type: 'metadataObjectsAvailable', callback: AsyncCallback<Array<MetadataObjec
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'metadataObjectsAvailable' | 是 | 监听事件，固定为'metadataObjectsAvailable'，metadataOutput创建成功后可监听。 <br>检测到有效的metadata数据时，触发该事件发生并返回相应的metadata数据。如果输入错误字段，则不会创建有效监听。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MetadataObject](arkts-camera-camera-metadataobject-i.md)&gt;&gt; | 是 | 回调函数，用于获取metadata数据。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[MetadataObject](arkts-camera-camera-metadataobject-i.md)&gt;&gt; | 是 | 回调函数，用于获取metadata数据。 |
 
 ## start
 
@@ -264,7 +278,7 @@ start(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开始输出metadata成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当开始输出metadata成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -322,7 +336,7 @@ stop(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止输出metadata成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当停止输出metadata成功，err为undefined，否则为错误对象。 |
 
 ## stop
 

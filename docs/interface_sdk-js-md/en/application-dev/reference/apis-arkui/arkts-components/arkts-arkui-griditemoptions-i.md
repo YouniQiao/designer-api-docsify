@@ -19,7 +19,13 @@ Defines the style of a grid item.
 style?: GridItemStyle
 ```
 
-Style of the grid item. Default value: **GridItemStyle.NONE**. If this parameter is set to **GridItemStyle.NONE**, no style is applied. If this parameter is set to **GridItemStyle.PLAIN**, the grid item is in hover or press style depending on the state.
+Style of the grid item.
+
+Default value: **GridItemStyle.NONE**.
+
+If this parameter is set to **GridItemStyle.NONE**, no style is applied.
+
+If this parameter is set to **GridItemStyle.PLAIN**, the grid item is in hover or press style depending on the state.
 
 **Type:** [GridItemStyle](arkts-arkui-griditemstyle-e.md)
 

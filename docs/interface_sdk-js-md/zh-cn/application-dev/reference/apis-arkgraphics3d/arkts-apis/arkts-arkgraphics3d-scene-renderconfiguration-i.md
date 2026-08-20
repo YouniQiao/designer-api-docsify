@@ -2,6 +2,8 @@
 
 渲染配置接口。
 
+@interface RenderConfiguration
+
 **起始版本：** 23
 
 <!--Device-unnamed-export interface RenderConfiguration--><!--Device-unnamed-export interface RenderConfiguration-End-->
@@ -14,7 +16,7 @@
 shadowResolution?: Vec2
 ```
 
-表示全局阴影贴图分辨率，单位为像素（px）。默认值为undefined，表示阴影贴图分辨率设置为1024 * 1024。 输入的值需要大于0才能正确生效。如果输入值为浮点数则自动截取整数部分；如果输入值小于或等于0则无视该输入，维持原有配置。
+表示全局阴影贴图分辨率，单位为像素（px）。默认值为undefined，表示阴影贴图分辨率设置为1024 1024。 输入的值需要大于0才能正确生效。如果输入值为浮点数则自动截取整数部分；如果输入值小于或等于0则无视该输入，维持原有配置。
 
 **类型：** [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md)
 

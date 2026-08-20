@@ -31,5 +31,5 @@ export declare function AddFormMenuItem(
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 待发布功能组件的want信息。 |
 | componentId | string | 是 | 应用内功能组件ID，组件ID对应的界面与待添加的服务卡片界面相似。 |
-| options | AddFormOptions | 否 | 添加卡片选项。 |
+| options | [AddFormOptions](arkts-arkui-arkui-advanced-formmenu-addformoptions-i.md) | 否 | 添加卡片选项。 |
 

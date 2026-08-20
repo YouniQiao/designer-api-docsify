@@ -2,6 +2,8 @@
 
 Enumeration of flags used to control what content is populated in a SkillInfo. Multiple flags can be combined using bitwise OR, for example GET_SKILL_INFO_WITH_SRC_ENTRIES | GET_SKILL_INFO_WITH_DESCRIPTION.
 
+@enum { int }
+
 **Since:** 26.0.0
 
 <!--Device-skillManager-export enum SkillInfoFlag--><!--Device-skillManager-export enum SkillInfoFlag-End-->

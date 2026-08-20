@@ -20,7 +20,9 @@ import { relationalStore } from '@kit.ArkData';
 transactionType?: TransactionType
 ```
 
-Transaction object type. Default value: **DEFERRED**.
+Transaction object type.
+
+Default value: **DEFERRED**.
 
 **Type:** [TransactionType](arkts-arkdata-relationalstore-transactiontype-e.md)
 

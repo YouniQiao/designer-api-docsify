@@ -1,6 +1,8 @@
 # Focus
 
-Focus继承自[FocusQuery](arkts-camera-camera-focusquery-i.md)。 对焦类，对设备对焦操作。
+Focus继承自[FocusQuery](arkts-camera-camera-focusquery-i.md)。
+
+对焦类，对设备对焦操作。
 
 **继承/实现关系：** Focus extends [FocusQuery](arkts-camera-camera-focusquery-i.md)
 
@@ -138,7 +140,9 @@ lockFocusTracking(focusPoint: Point): void
 setFocusMode(afMode: FocusMode): void
 ```
 
-设置对焦模式。 进行设置之前，需要先检查设备是否支持指定的焦距模式，可使用方法[isFocusModeSupported](arkts-camera-camera-focusquery-i.md#isfocusmodesupported)。
+设置对焦模式。
+
+进行设置之前，需要先检查设备是否支持指定的焦距模式，可使用方法[isFocusModeSupported](arkts-camera-camera-focusquery-i.md#isfocusmodesupported)。
 
 **起始版本：** 23
 
@@ -166,7 +170,9 @@ setFocusMode(afMode: FocusMode): void
 setFocusPoint(point: Point): void
 ```
 
-设置焦点，焦点应在0-1坐标系内，该坐标系左上角为{0，0}，右下角为{1，1}。 此坐标系是以设备充电口在右侧时的横向设备方向为基准的，例如应用的预览界面布局以设备充电口在下侧时的竖向方向为基准，布局宽高为{w，h}，且触碰点为{x，y}，则转换后的坐标点为{y/h，1-x/w}。
+设置焦点，焦点应在0-1坐标系内，该坐标系左上角为{0，0}，右下角为{1，1}。
+
+此坐标系是以设备充电口在右侧时的横向设备方向为基准的，例如应用的预览界面布局以设备充电口在下侧时的竖向方向为基准，布局宽高为{w，h}，且触碰点为{x，y}，则转换后的坐标点为{y/h，1-x/w}。
 
 **起始版本：** 23
 

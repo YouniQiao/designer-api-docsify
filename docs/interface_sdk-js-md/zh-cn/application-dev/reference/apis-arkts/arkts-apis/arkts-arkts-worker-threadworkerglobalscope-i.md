@@ -51,11 +51,11 @@ Worker线程调用宿主线程上注册的对象的指定方法，此调用对Wo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200019](../errorcode-utils.md#10200019-调用未注册对象的方法错误) | The globalCallObject is not registered. |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200021](../errorcode-utils.md#10200021-全局调用等待超时错误) | The global call exceeds the timeout. |
 | [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200019](../errorcode-utils.md#10200019-调用未注册对象的方法错误) | The globalCallObject is not registered. |
 | [10200020](../errorcode-utils.md#10200020-调用注册对象上的方法类型错误) | The method to be called is not callable or is an async method or a generator. |
+| [10200021](../errorcode-utils.md#10200021-全局调用等待超时错误) | The global call exceeds the timeout. |
 
 **示例**
 
@@ -173,8 +173,8 @@ Worker线程通过转移对象所有权的方式向宿主线程发送消息。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
 | [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
 
 **示例**
 
@@ -227,8 +227,8 @@ Worker线程通过转移对象所有权或拷贝数据的方式向宿主线程�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
 | [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
 
 **示例**
 
@@ -259,7 +259,15 @@ workerPort.onmessage = (e: MessageEvents): void => {
 postMessageAtFront?(message: Object, priority: Priority, transfer?: ArrayBuffer[]): void
 ```
 
-Worker线程通过转移对象所有权的方式向宿主线程发送插队消息，并插入到对应优先级队列的队头。 除Worker线程向主线程发送的场景外，该接口与postMessage功能一致。 &gt; **说明：** &gt; &gt; - 如果是Worker线程向宿主线程发送插队的消息，消息能够插队并且按优先级进行发送。 &gt; &gt; - 如果是Worker线程之间发送插队的消息，消息只能插队，没有优先级。 &gt; &gt; - postMessage和postMessageWithSharedSendable接口向宿主线程发送消息，默认是HIGH优先级，无插队效果。
+Worker线程通过转移对象所有权的方式向宿主线程发送插队消息，并插入到对应优先级队列的队头。 除Worker线程向主线程发送的场景外，该接口与postMessage功能一致。
+
+> **说明：**
+> 
+> - 如果是Worker线程向宿主线程发送插队的消息，消息能够插队并且按优先级进行发送。
+> 
+> - 如果是Worker线程之间发送插队的消息，消息只能插队，没有优先级。
+> 
+> - postMessage和postMessageWithSharedSendable接口向宿主线程发送消息，默认是HIGH优先级，无插队效果。
 
 **起始版本：** 26.0.0
 
@@ -283,8 +291,8 @@ Worker线程通过转移对象所有权的方式向宿主线程发送插队消�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
 | [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
 
 **示例**
 
@@ -395,8 +403,8 @@ Worker线程向宿主线程发送消息，消息中的Sendable对象通过引用
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
 | [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
 
 **示例**
 

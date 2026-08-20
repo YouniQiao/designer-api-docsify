@@ -2,6 +2,8 @@
 
 Defines the struct of AccessibilityActionOptions that can affect operation under accessibility.
 
+@interface AccessibilityActionOptions
+
 **Since:** 23
 
 <!--Device-unnamed-declare interface AccessibilityActionOptions--><!--Device-unnamed-declare interface AccessibilityActionOptions-End-->

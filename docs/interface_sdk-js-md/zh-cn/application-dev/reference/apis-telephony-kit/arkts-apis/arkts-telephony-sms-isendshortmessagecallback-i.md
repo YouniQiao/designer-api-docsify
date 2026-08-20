@@ -20,7 +20,11 @@ import { sms } from '@kit.TelephonyKit';
 isLastPart: boolean
 ```
 
-指定这是否是长短信的最后一部分。默认为false。 -true：是 -false：否
+指定这是否是长短信的最后一部分。默认为false。
+
+-true：是
+
+-false：否
 
 **类型：** boolean
 

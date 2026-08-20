@@ -2,6 +2,8 @@
 
 Indicates the results of manual network scan
 
+@interface NetworkSearchRealTimeResult
+
 **Since:** 23
 
 <!--Device-radio-export interface NetworkSearchRealTimeResult--><!--Device-radio-export interface NetworkSearchRealTimeResult-End-->

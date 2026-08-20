@@ -167,8 +167,8 @@ Unsubscribes from the system audio separation effect enabled state change event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## onAudioSeparationEffectEnabledChange
 
@@ -228,9 +228,9 @@ Sets current audio effect properties.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Possible causes: 1. More than one effect property name of the same effect property category are in the input array. 2. The input audioEffectProperties are not supported by the current device. 3. The name or category of the input audioEffectProperties is incorrect. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Possible causes: 1. More than one effect property name of the same effect property category are in the input array. 2. The input audioEffectProperties are not supported by the current device. 3. The name or category of the input audioEffectProperties is incorrect. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. |
 
 **Examples**
@@ -286,11 +286,11 @@ Sets audio separation effect enable or disable for specific application process,
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio service error occurs like service died. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Effect is not supported in this device. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio service error occurs like service died. |
 
 ## setAudioSeparationEffectVolume
 
@@ -329,9 +329,9 @@ Sets audio separation effect volume for specific volume type. This API uses a pr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio service error occurs like service died. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Effect is not supported in this device. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio service error occurs like service died. |
 

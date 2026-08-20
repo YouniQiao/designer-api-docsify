@@ -1,0 +1,52 @@
+# AsymmetricTransitionOption
+
+Defines the option of asymmetric transition.
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+<!--Device-unnamed-export declare interface AsymmetricTransitionOption--><!--Device-unnamed-export declare interface AsymmetricTransitionOption-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## appear
+
+```TypeScript
+appear: TransitionEffect
+```
+
+TransitionEffect used for appearing
+
+**Type:** [TransitionEffect](arkts-common-transitioneffect-c.md)
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AsymmetricTransitionOption-appear: TransitionEffect--><!--Device-AsymmetricTransitionOption-appear: TransitionEffect-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## disappear
+
+```TypeScript
+disappear: TransitionEffect
+```
+
+TransitionEffect used for disappearing
+
+**Type:** [TransitionEffect](arkts-common-transitioneffect-c.md)
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AsymmetricTransitionOption-disappear: TransitionEffect--><!--Device-AsymmetricTransitionOption-disappear: TransitionEffect-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

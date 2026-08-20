@@ -52,7 +52,15 @@ httpRequest.destroy();
 enableAutoCookie(enable: boolean): void
 ```
 
-Sets whether to automatically carry and share cookies. That is, whether to automatically reuse the cookies delivered by the server among multiple requests of the same **HttpRequest** instance. &gt; **NOTE：**&gt; &gt; (1) The default value is **false**, indicating that cookies are not automatically carried. &gt; (2) If the value is changed from **false** to **true**, the setting takes effect when the **request** API is &gt; called to initiate a request, and cookies are automatically shared. &gt; (3) If the value is changed from **true** to **false**, the cookie sharing status stored in the current &gt; instance is cleared.
+Sets whether to automatically carry and share cookies. That is, whether to automatically reuse the cookies delivered by the server among multiple requests of the same **HttpRequest** instance.
+
+> **NOTE：**
+> 
+> (1) The default value is **false**, indicating that cookies are not automatically carried.
+
+> (2) If the value is changed from **false** to **true**, the setting takes effect when the **request** API is &gt; called to initiate a request, and cookies are automatically shared.
+
+> (3) If the value is changed from **true** to **false**, the cookie sharing status stored in the current &gt; instance is cleared.
 
 **Since:** 26.0.0
 
@@ -655,7 +663,15 @@ httpRequest.once("headersReceive", (header: Object) => {
 request(url: string, callback: AsyncCallback<HttpResponse>): void
 ```
 
-Initiates an HTTP request to a given URL. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set &gt; **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call &gt; [requestInStream](#requestinstream) to &gt; initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions &gt; earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold &gt; will fail to be received. &gt; (2) If you need to pass in cookies, add them to the **options** parameter. &gt; (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an &gt; HTTP request.
+Initiates an HTTP request to a given URL. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set &gt; **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call &gt; [requestInStream](#requestinstream) to &gt; initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions &gt; earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold &gt; will fail to be received.
+
+> (2) If you need to pass in cookies, add them to the **options** parameter.
+
+> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an &gt; HTTP request.
 
 **Since:** 23
 
@@ -678,40 +694,40 @@ Initiates an HTTP request to a given URL. This API uses an asynchronous callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
-| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
-| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
-| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
-| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
-| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
-| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
-| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
-| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
-| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
+| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
+| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
+| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
+| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
+| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
+| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
 | [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
+| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
 | [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
-| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
-| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
 | [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
-| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
+| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
+| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
 | [2300028](../errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
+| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
+| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
+| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
+| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
+| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
+| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
+| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
+| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
+| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
+| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
+| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
+| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
+| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
+| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
 | [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
 | [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
 | [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
 | 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 and later |
-| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
-| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
-| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
-| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
-| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
-| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
-| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
-| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
-| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
 
 **Examples**
 
@@ -755,7 +771,15 @@ httpRequest.request("EXAMPLE_URL", (err: Error, data: http.HttpResponse) => {
 request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>): void
 ```
 
-Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set &gt; **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call &gt; [requestInStream](#requestinstream) to &gt; initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions &gt; earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold &gt; will fail to be received. &gt; (2) If you need to pass in cookies, add them to the **options** parameter. &gt; (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an &gt; HTTP request.
+Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set &gt; **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call &gt; [requestInStream](#requestinstream) to &gt; initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions &gt; earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold &gt; will fail to be received.
+
+> (2) If you need to pass in cookies, add them to the **options** parameter.
+
+> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an &gt; HTTP request.
 
 **Since:** 23
 
@@ -779,40 +803,40 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
-| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
-| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
-| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
-| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
-| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
-| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
-| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
-| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
-| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
+| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
+| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
+| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
+| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
+| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
+| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
 | [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
+| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
 | [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
-| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
-| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
 | [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
-| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
+| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
+| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
 | [2300028](../errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
+| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
+| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
+| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
+| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
+| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
+| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
+| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
+| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
+| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
+| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
+| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
+| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
+| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
+| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
 | [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
 | [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
 | [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
 | 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 and later |
-| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
-| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
-| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
-| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
-| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
-| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
-| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
-| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
-| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
 
 **Examples**
 
@@ -902,7 +926,15 @@ httpRequest.request("EXAMPLE_URL", options, (err: Error, data: http.HttpResponse
 request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>
 ```
 
-Initiates an HTTP request containing specified options to a given URL. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set &gt; **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call &gt; [requestInStream](#requestinstream) to &gt; initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions &gt; earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold &gt; will fail to be received. &gt; (2) If you need to pass in cookies, add them to the **options** parameter. &gt; (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an &gt; HTTP request.
+Initiates an HTTP request containing specified options to a given URL. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set &gt; **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call &gt; [requestInStream](#requestinstream) to &gt; initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions &gt; earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold &gt; will fail to be received.
+
+> (2) If you need to pass in cookies, add them to the **options** parameter.
+
+> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an &gt; HTTP request.
 
 **Since:** 23
 
@@ -931,40 +963,40 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
-| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
-| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
-| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
-| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
-| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
-| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
-| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
-| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
-| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
+| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
+| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
+| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
+| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
+| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
+| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
 | [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
+| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
 | [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
-| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
-| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
 | [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
-| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
+| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
+| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
 | [2300028](../errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
+| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
+| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
+| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
+| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
+| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
+| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
+| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
+| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
+| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
+| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
+| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
+| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
+| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
+| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
 | [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
 | [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
 | [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
 | 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 and later |
-| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
-| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
-| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
-| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
-| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
-| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
-| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
-| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
-| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
 
 **Examples**
 
@@ -1059,40 +1091,40 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
-| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
-| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
-| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
-| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
-| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
-| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
-| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
-| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
-| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
+| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
+| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
+| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
+| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
+| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
+| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
 | [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
+| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
 | [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
-| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
-| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
 | [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
-| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
+| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
+| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
 | [2300028](../errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
+| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
+| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
+| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
+| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
+| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
+| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
+| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
+| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
+| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
+| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
+| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
+| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
+| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
+| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
 | [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
 | [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
 | [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
 | 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 and later |
-| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
-| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
-| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
-| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
-| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
-| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
-| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
-| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
-| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
 
 **Examples**
 
@@ -1154,40 +1186,40 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
-| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
-| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
-| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
-| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
-| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
-| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
-| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
-| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
-| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
+| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
+| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
+| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
+| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
+| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
+| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
 | [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
+| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
 | [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
-| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
-| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
 | [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
-| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
+| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
+| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
 | [2300028](../errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
+| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
+| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
+| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
+| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
+| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
+| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
+| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
+| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
+| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
+| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
+| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
+| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
+| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
+| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
 | [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
 | [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
 | [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
 | 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 and later |
-| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
-| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
-| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
-| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
-| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
-| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
-| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
-| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
-| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
 
 **Examples**
 
@@ -1298,40 +1330,40 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
-| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
-| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
-| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
-| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
-| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
-| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
-| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
-| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
-| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
+| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
+| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
+| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
+| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
+| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
+| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
 | [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
+| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
 | [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
-| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
-| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
 | [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
-| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
+| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
+| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
 | [2300028](../errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
+| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
+| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
+| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
+| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
+| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
+| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
+| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
+| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
+| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
+| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
+| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
+| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
+| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
+| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
 | [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
 | [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
 | [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
 | 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 and later |
-| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
-| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
-| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
-| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
-| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
-| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
-| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
-| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
-| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
 
 **Examples**
 
@@ -1391,7 +1423,20 @@ promise.then((data: number) => {
 requestSync(url: string, options?: HttpRequestOptions): HttpResponse
 ```
 
-Initiates an HTTP network request based on the URL and related configuration options (optional). This API returns the response synchronously. &gt; **NOTE：**&gt; &gt; (1) This API can receive data of up to 50 MB. To receive more than 50 MB of data, set the **maxLimit** &gt; parameter in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md). &gt; (2) If you need to pass in cookies, add them to the **options** parameter. &gt; (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an &gt; HTTP request. &gt; (4) This API is synchronous and blocks the current thread until an HTTP response or error code is returned. **Required permission**: ohos.permission.INTERNET
+Initiates an HTTP network request based on the URL and related configuration options (optional). This API returns the response synchronously.
+
+> **NOTE：**
+> 
+> (1) This API can receive data of up to 50 MB. To receive more than 50 MB of data, set the **maxLimit**
+> parameter in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md).
+
+> (2) If you need to pass in cookies, add them to the **options** parameter.
+
+> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an &gt; HTTP request.
+
+> (4) This API is synchronous and blocks the current thread until an HTTP response or error code is returned.
+
+**Required permission**: ohos.permission.INTERNET
 
 **Since:** 26.0.0
 
@@ -1420,37 +1465,37 @@ Initiates an HTTP network request based on the URL and related configuration opt
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
-| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
-| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
-| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
-| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
-| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
-| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
+| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
+| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
+| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
+| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
+| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
 | [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
-| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
-| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
-| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
+| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
 | [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
+| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
 | [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
-| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
-| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
 | [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
-| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
+| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
+| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
 | [2300028](../errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
-| [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
-| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain. |
-| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted. |
-| 2300996 | The request was intercepted by the HTTP global interceptor. |
 | [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
-| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
 | [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
-| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
-| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
+| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
 | [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
-| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
-| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
+| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
+| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
 | [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
+| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
+| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
+| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
+| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
+| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
+| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
+| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
+| 2300996 | The request was intercepted by the HTTP global interceptor. |
+| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted. |
+| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain. |
+| [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
 

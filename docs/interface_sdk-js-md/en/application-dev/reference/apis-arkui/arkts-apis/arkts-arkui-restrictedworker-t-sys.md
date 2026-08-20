@@ -1,4 +1,4 @@
-# RestrictedWorker(System API) (System API)
+# RestrictedWorker (System API)
 
 ```TypeScript
 declare type RestrictedWorker = import('../api/@ohos.worker').default.RestrictedWorker

@@ -1,6 +1,8 @@
 # TouchController
 
-Provides the capability of simulating touch operations. The simulated touch operation sequence must meet the following requirements: 1. All touch points must share the same **displayId**. 2. Each touch point must begin with a **touchDown()** call, followed by zero or more **touchMove()** calls, and end with an **touchUp()** call.
+Provides the capability of simulating touch operations. The simulated touch operation sequence must meet the following requirements:
+
+1. All touch points must share the same **displayId**. 2. Each touch point must begin with a **touchDown()** call, followed by zero or more **touchMove()** calls, and end with an **touchUp()** call.
 
 **Since:** 26.0.0
 
@@ -48,10 +50,10 @@ Presses down a touch point. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [4300001](../errorcode-inputeventclient.md#4300001-status-error) | Invalid input event sequence. Possible causes: <br> 1. The touch point is touching the display; 2. The touch point ID is not within the valid range [0,9]. |
 | [4300002](../errorcode-inputeventclient.md#4300002-display-does-not-exist) | The display does not exist. |
 | [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## touchMove
 
@@ -87,9 +89,9 @@ Moves a touch point. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [4300001](../errorcode-inputeventclient.md#4300001-status-error) | Invalid input event sequence. Possible causes: <br> 1. The touch point is not touching the display; 2. The touch point ID is not within the valid range [0,9]. |
 | [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## touchUp
 
@@ -125,7 +127,7 @@ Releases a touch point. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [4300001](../errorcode-inputeventclient.md#4300001-status-error) | Invalid input event sequence. Possible causes: <br> 1. The touch point is not touching the display; 2. The touch point ID is not within the valid range [0,9]. |
 | [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 

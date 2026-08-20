@@ -1,4 +1,4 @@
-# GrantedBundleInfo(Some common definitions)
+# GrantedBundleInfo
 
 描述已授权的包信息。
 

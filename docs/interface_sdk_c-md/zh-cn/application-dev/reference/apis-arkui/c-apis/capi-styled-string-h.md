@@ -375,8 +375,8 @@ ArkUI_StyledString* OH_ArkUI_StyledString_Create(OH_Drawing_TypographyStyle* sty
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_Drawing_TypographyStyle](../ArkGraphics2D/capi-drawing-oh-drawing-typographystyle.md)* style | 指向OH_Drawing_TypographyStyle的指针，由[OH_Drawing_CreateTypographyStyle](../ArkGraphics2D/capi-drawing-text-typography-h.md#oh_drawing_createtypographystyle)获取。 |
-| [OH_Drawing_FontCollection](../ArkGraphics2D/capi-drawing-oh-drawing-fontcollection.md)* collection | 指向OH_Drawing_FontCollection的指针，由{@link OH_Drawing_CreateFontCollection}获取。 |
+| OH_Drawing_TypographyStyle* style | 指向OH_Drawing_TypographyStyle的指针，由[OH_Drawing_CreateTypographyStyle](../ArkGraphics2D/capi-drawing-text-typography-h.md#oh_drawing_createtypographystyle)获取。 |
+| OH_Drawing_FontCollection* collection | 指向OH_Drawing_FontCollection的指针，由{@link OH_Drawing_CreateFontCollection}获取。 |
 
 **返回：**
 
@@ -423,7 +423,7 @@ void OH_ArkUI_StyledString_PushTextStyle(ArkUI_StyledString* handle, OH_Drawing_
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_StyledString](capi-arkui-nativemodule-arkui-styledstring.md)* handle | 指向ArkUI_StyledString对象的指针。 |
-| [OH_Drawing_TextStyle](../ArkGraphics2D/capi-drawing-oh-drawing-textstyle.md)* style | 指向OH_Drawing_TextStyle对象的指针，由[OH_Drawing_CreateTextStyle](../ArkGraphics2D/capi-drawing-text-typography-h.md#oh_drawing_createtextstyle)创建获取。 |
+| OH_Drawing_TextStyle* style | 指向OH_Drawing_TextStyle对象的指针，由[OH_Drawing_CreateTextStyle](../ArkGraphics2D/capi-drawing-text-typography-h.md#oh_drawing_createtextstyle)创建获取。 |
 
 ### OH_ArkUI_StyledString_AddText()
 
@@ -491,7 +491,7 @@ OH_Drawing_Typography* OH_ArkUI_StyledString_CreateTypography(ArkUI_StyledString
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_Drawing_Typography*](../ArkGraphics2D/capi-drawing-oh-drawing-typography.md) | 指向OH_Drawing_Typography对象的指针。如果对象返回空指针，表示创建失败， \n          失败的原因是handle参数为空指针。 |
+| OH_Drawing_Typography* | 指向OH_Drawing_Typography对象的指针。如果对象返回空指针，表示创建失败， \n          失败的原因是handle参数为空指针。 |
 
 ### OH_ArkUI_StyledString_AddPlaceholder()
 
@@ -5348,7 +5348,7 @@ ArkUI_ErrorCode OH_ArkUI_ImageAttachment_SetMargin(OH_ArkUI_ImageAttachment* ima
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | 指向[OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)对象的指针。 |
-| [ArkUI_Margin](capi-arkui-nativemodule-arkui-margin.md) margin | 图片外边距，单位为vp。 |
+| ArkUI_Margin margin | 图片外边距，单位为vp。 |
 
 **返回：**
 
@@ -5373,7 +5373,7 @@ ArkUI_ErrorCode OH_ArkUI_ImageAttachment_GetMargin(const OH_ArkUI_ImageAttachmen
 | 参数项 | 描述 |
 | -- | -- |
 | [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | 指向[OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)对象的指针。 |
-| [ArkUI_Margin](capi-arkui-nativemodule-arkui-margin.md)* margin | 图片外边距，单位为vp。 |
+| ArkUI_Margin* margin | 图片外边距，单位为vp。 |
 
 **返回：**
 
@@ -5398,7 +5398,7 @@ ArkUI_ErrorCode OH_ArkUI_ImageAttachment_SetPadding(OH_ArkUI_ImageAttachment* im
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | 指向[OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)对象的指针。 |
-| [ArkUI_Margin](capi-arkui-nativemodule-arkui-margin.md) padding | 图片内边距，单位为vp。 |
+| ArkUI_Margin padding | 图片内边距，单位为vp。 |
 
 **返回：**
 
@@ -5423,7 +5423,7 @@ ArkUI_ErrorCode OH_ArkUI_ImageAttachment_GetPadding(const OH_ArkUI_ImageAttachme
 | 参数项 | 描述 |
 | -- | -- |
 | [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | 指向[OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)对象的指针。 |
-| [ArkUI_Margin](capi-arkui-nativemodule-arkui-margin.md)* padding | 图片内边距，单位为vp。 |
+| ArkUI_Margin* padding | 图片内边距，单位为vp。 |
 
 **返回：**
 
@@ -5715,7 +5715,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorChangeEvent_GetRangeBefore(const OH_ArkUI_Tex
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md)* event | 指向[OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md)对象的指针。 |
+| const OH_ArkUI_TextEditorChangeEvent* event | 指向[OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md)对象的指针。 |
 | uint32_t* start | 待替换内容范围的起始索引。 |
 | uint32_t* end | 待替换内容范围的结束索引。 |
 
@@ -5741,7 +5741,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorChangeEvent_GetReplacementStyledString(const 
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md)* event | 指向[OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md)对象的指针。 |
+| const OH_ArkUI_TextEditorChangeEvent* event | 指向[OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md)对象的指针。 |
 | ArkUI_StyledString_Descriptor* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
 
 **返回：**
@@ -5766,7 +5766,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorChangeEvent_GetPreviewStyledString(const OH_A
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md)* event | 指向[OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md)对象的指针。 |
+| const OH_ArkUI_TextEditorChangeEvent* event | 指向[OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md)对象的指针。 |
 | ArkUI_StyledString_Descriptor* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
 
 **返回：**
@@ -5839,7 +5839,7 @@ ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetRectsForRange(ArkUI_TextLayoutMana
 | int32_t end | 结束位置索引，end取值需要大于等于start，否则会返回参数异常。 |
 | OH_Drawing_RectWidthStyle widthStyle | 矩形区域宽度样式。 |
 | OH_Drawing_RectHeightStyle heightStyle | 矩形区域高度样式。 |
-| [OH_Drawing_TextBox](../ArkGraphics2D/capi-drawing-oh-drawing-textbox.md)** outTextBoxes | 指向OH_Drawing_TextBox对象的二级指针。 |
+| OH_Drawing_TextBox** outTextBoxes | 指向OH_Drawing_TextBox对象的二级指针。 |
 
 **返回：**
 
@@ -5866,7 +5866,7 @@ ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetGlyphPositionAtCoordinate(ArkUI_Te
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | 指向ArkUI_TextLayoutManager对象的指针。 |
 | double dx | 相对于控件的x坐标，单位为px。 |
 | double dy | 相对于控件的y坐标，单位为px。 |
-| [OH_Drawing_PositionAndAffinity](../ArkGraphics2D/capi-drawing-oh-drawing-positionandaffinity.md)** outPos | 指向OH_Drawing_PositionAndAffinity对象的二级指针。 |
+| OH_Drawing_PositionAndAffinity** outPos | 指向OH_Drawing_PositionAndAffinity对象的二级指针。 |
 
 **返回：**
 
@@ -5919,7 +5919,7 @@ ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetCharacterPositionAtCoordinate(ArkU
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | 指向[ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)对象的指针。 |
 | double dx | 相对于控件的x坐标，单位为px。 |
 | double dy | 相对于控件的y坐标，单位为px。 |
-| [OH_Drawing_PositionAndAffinity](../ArkGraphics2D/capi-drawing-oh-drawing-positionandaffinity.md)** outPos | 指向[OH_Drawing_PositionAndAffinity](../ArkGraphics2D/capi-drawing-oh-drawing-positionandaffinity.md)对象的二级指针。 |
+| OH_Drawing_PositionAndAffinity** outPos | 指向[OH_Drawing_PositionAndAffinity](../ArkGraphics2D/capi-drawing-oh-drawing-positionandaffinity.md)对象的二级指针。 |
 
 **返回：**
 
@@ -5947,7 +5947,7 @@ ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetCharacterPositionAtCoordinateWithE
 | double dx | 相对于控件的x坐标，单位为px。 |
 | double dy | 相对于控件的y坐标，单位为px。 |
 | [OH_ArkUI_TextEncoding](capi-styled-string-h.md#oh_arkui_textencoding) encoding | 字符索引范围使用的编码类型。 |
-| [OH_Drawing_PositionAndAffinity](../ArkGraphics2D/capi-drawing-oh-drawing-positionandaffinity.md)** outPos | 指向[OH_Drawing_PositionAndAffinity](../ArkGraphics2D/capi-drawing-oh-drawing-positionandaffinity.md)对象的二级指针。 |
+| OH_Drawing_PositionAndAffinity** outPos | 指向[OH_Drawing_PositionAndAffinity](../ArkGraphics2D/capi-drawing-oh-drawing-positionandaffinity.md)对象的二级指针。 |
 
 **返回：**
 
@@ -5972,9 +5972,9 @@ ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetGlyphRangeForCharacterRange(ArkUI_
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | 指向[ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)对象的指针。 |
-| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)* charRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的指针，表示字符索引范围。 |
-| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)** outGlyphRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的二级指针，表示字形索引范围。 |
-| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)** outActualCharRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的二级指针，表示实际的字符索引范围。 |
+| OH_Drawing_Range* charRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的指针，表示字符索引范围。 |
+| OH_Drawing_Range** outGlyphRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的二级指针，表示字形索引范围。 |
+| OH_Drawing_Range** outActualCharRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的二级指针，表示实际的字符索引范围。 |
 
 **返回：**
 
@@ -6003,10 +6003,10 @@ ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetGlyphRangeForCharacterRangeWithEnc
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | 指向[ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)对象的指针。 |
-| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)* charRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的指针，表示字符索引范围。 |
+| OH_Drawing_Range* charRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的指针，表示字符索引范围。 |
 | [OH_ArkUI_TextEncoding](capi-styled-string-h.md#oh_arkui_textencoding) encoding | 字符索引范围使用的编码类型。 |
-| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)** outGlyphRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的指针，表示字符索引范围。 |
-| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)** outActualCharRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的二级指针，表示字形索引范围。 |
+| OH_Drawing_Range** outGlyphRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的指针，表示字符索引范围。 |
+| OH_Drawing_Range** outActualCharRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的二级指针，表示字形索引范围。 |
 
 **返回：**
 
@@ -6031,9 +6031,9 @@ ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetCharacterRangeForGlyphRange(ArkUI_
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | 指向[ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)对象的指针。 |
-| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)* glyphRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的指针，表示字形索引范围。 |
-| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)** outCharRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的二级指针，表示字符索引范围。 |
-| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)** outActualGlyphRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的二级指针，表示实际的字形索引范围。 |
+| OH_Drawing_Range* glyphRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的指针，表示字形索引范围。 |
+| OH_Drawing_Range** outCharRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的二级指针，表示字符索引范围。 |
+| OH_Drawing_Range** outActualGlyphRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的二级指针，表示实际的字形索引范围。 |
 
 **返回：**
 
@@ -6062,10 +6062,10 @@ ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetCharacterRangeForGlyphRangeWithEnc
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | 指向[ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)对象的指针。 |
-| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)* glyphRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的指针，表示字形索引范围。 |
+| OH_Drawing_Range* glyphRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的指针，表示字形索引范围。 |
 | [OH_ArkUI_TextEncoding](capi-styled-string-h.md#oh_arkui_textencoding) encoding | 字符索引范围使用的编码类型。 |
-| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)** outCharRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的二级指针，表示字符索引范围。 |
-| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)** outActualGlyphRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的二级指针，表示实际的字形索引范围。 |
+| OH_Drawing_Range** outCharRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的二级指针，表示字符索引范围。 |
+| OH_Drawing_Range** outActualGlyphRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的二级指针，表示实际的字形索引范围。 |
 
 **返回：**
 

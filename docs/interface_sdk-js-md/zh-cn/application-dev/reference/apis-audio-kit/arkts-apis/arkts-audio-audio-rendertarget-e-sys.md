@@ -1,6 +1,6 @@
 # RenderTarget（系统接口）
 
-Audio render target.
+Audio render target. @enum { int }
 
 **起始版本：** 23
 

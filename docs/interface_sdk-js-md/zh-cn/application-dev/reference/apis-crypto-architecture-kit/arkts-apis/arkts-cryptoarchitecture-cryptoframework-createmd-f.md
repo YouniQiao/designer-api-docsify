@@ -12,7 +12,9 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createMd(algName: string): Md
 ```
 
-创建消息摘要实例。 <br>支持的规格详见 [MD消息摘要算法规格](../../../security/CryptoArchitectureKit/crypto-generate-message-digest-overview.md#支持的算法与规格)。
+创建消息摘要实例。
+
+<br>支持的规格详见 [MD消息摘要算法规格](../../../security/CryptoArchitectureKit/crypto-generate-message-digest-overview.md#支持的算法与规格)。
 
 **起始版本：** 23
 

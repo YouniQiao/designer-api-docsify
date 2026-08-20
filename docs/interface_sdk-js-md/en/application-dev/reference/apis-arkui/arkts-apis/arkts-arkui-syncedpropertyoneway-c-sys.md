@@ -1,4 +1,4 @@
-# SyncedPropertyOneWay(System API) (System API)
+# SyncedPropertyOneWay (System API)
 
 Inherits from [SubscribedAbstractProperty&lt;T&gt;](arkts-arkui-subscribedabstractproperty-c.md). Represents a property with one-way synchronization.
 

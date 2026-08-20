@@ -1,4 +1,4 @@
-# KeysInfo(Defines the DRM capability.)
+# KeysInfo
 
 媒体密钥中密钥信息。
 

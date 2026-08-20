@@ -2,6 +2,8 @@
 
 Defines the personalized lock information.
 
+@interface LockInfo
+
 **Since:** 23
 
 <!--Device-sim-export interface LockInfo--><!--Device-sim-export interface LockInfo-End-->

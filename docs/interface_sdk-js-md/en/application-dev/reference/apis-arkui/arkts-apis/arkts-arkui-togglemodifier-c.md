@@ -2,6 +2,8 @@
 
 Defines Toggle Modifier
 
+@extends ToggleAttribute @implements AttributeModifier&lt;ToggleAttribute&gt;
+
 **Inheritance/Implementation:** ToggleModifier extends ToggleAttribute and implements AttributeModifier<ToggleAttribute>
 
 **Since:** 20
@@ -32,5 +34,5 @@ Defines the normal update attribute function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instance | [ToggleAttribute](../../apis-na/arkts-apis/arkts-na-toggle-toggleattribute-i.md) | Yes |  |
+| instance | [ToggleAttribute](../../apis-default/arkts-components/arkts-toggle-attribute.md) | Yes |  |
 

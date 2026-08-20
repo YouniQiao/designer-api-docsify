@@ -12,7 +12,9 @@ import { serialManager } from '@kit.BasicServicesKit';
 function getAttribute(portId: int): Readonly<SerialAttribute>
 ```
 
-获取指定串口的配置参数。需先调用[open](arkts-basicservices-serialmanager-open-f.md)打开串口后才能获取配置。通常在设备初始化后、需要查看当前通信参数配置、调试串口通信问题时调用此接口。 **前置条件：** - 需要先调用[getPortList](arkts-basicservices-serialmanager-getportlist-f.md)获取端口号 - 需要先调用[requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md)申请访问权限 - 需要先调用[open](arkts-basicservices-serialmanager-open-f.md)打开串口
+获取指定串口的配置参数。需先调用[open](arkts-basicservices-serialmanager-open-f.md)打开串口后才能获取配置。通常在设备初始化后、需要查看当前通信参数配置、调试串口通信问题时调用此接口。
+
+**前置条件：** - 需要先调用[getPortList](arkts-basicservices-serialmanager-getportlist-f.md)获取端口号 - 需要先调用[requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md)申请访问权限 - 需要先调用[open](arkts-basicservices-serialmanager-open-f.md)打开串口
 
 **起始版本：** 23
 
@@ -37,7 +39,7 @@ function getAttribute(portId: int): Readonly<SerialAttribute>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |  |
-| [31400005](../errorcode-usb.md#31400005-设备未打开) |  |
-| [31400003](../errorcode-usb.md#31400003-端口号不存在) |  |
 | [31400001](../errorcode-usb.md#31400001-串口服务异常) |  |
+| [31400003](../errorcode-usb.md#31400003-端口号不存在) |  |
+| [31400005](../errorcode-usb.md#31400005-设备未打开) |  |
 

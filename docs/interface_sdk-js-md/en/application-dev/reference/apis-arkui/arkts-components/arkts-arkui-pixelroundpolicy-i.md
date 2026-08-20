@@ -2,6 +2,8 @@
 
 Enumerates the directions of pixel rounding at the component level.
 
+@interface PixelRoundPolicy
+
 **Since:** 11
 
 <!--Device-unnamed-declare interface PixelRoundPolicy--><!--Device-unnamed-declare interface PixelRoundPolicy-End-->

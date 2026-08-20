@@ -165,7 +165,11 @@ bundleName: string
 componentType?: string
 ```
 
-应与事件源组件类型对应，默认值为空。 例如： - 按钮Button类型-&gt;'Button'。 - 图片Image类型-&gt;'Image'。
+应与事件源组件类型对应，默认值为空。
+
+例如：
+
+- 按钮Button类型-&gt;'Button'。 - 图片Image类型-&gt;'Image'。
 
 **类型：** string
 

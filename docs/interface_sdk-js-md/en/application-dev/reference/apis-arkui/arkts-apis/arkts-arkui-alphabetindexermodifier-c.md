@@ -2,6 +2,8 @@
 
 Defines AlphabetIndexer Modifier
 
+@extends AlphabetIndexerAttribute @implements AttributeModifier&lt;AlphabetIndexerAttribute&gt;
+
 **Inheritance/Implementation:** AlphabetIndexerModifier extends AlphabetIndexerAttribute and implements AttributeModifier<AlphabetIndexerAttribute>
 
 **Since:** 20
@@ -32,5 +34,5 @@ Defines the normal update attribute function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instance | AlphabetIndexerAttribute | Yes |  |
+| instance | [AlphabetIndexerAttribute](../../apis-default/arkts-components/arkts-alphabetindexer-attribute.md) | Yes |  |
 

@@ -2,6 +2,8 @@
 
 Defines GridRow Modifier
 
+@implements GridRowAttribute, AttributeModifier&lt;GridRowAttribute&gt;
+
 **Inheritance/Implementation:** GridRowModifier implements GridRowAttribute, AttributeModifier<GridRowAttribute>
 
 **Since:** 23

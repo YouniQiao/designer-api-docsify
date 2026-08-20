@@ -2,6 +2,8 @@
 
 Define the drag event parameters
 
+@interface DragEventParam
+
 **Since:** 23
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.

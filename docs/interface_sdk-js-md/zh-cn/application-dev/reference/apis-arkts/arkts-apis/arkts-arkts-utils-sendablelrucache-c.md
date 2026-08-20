@@ -100,7 +100,7 @@ entries(): IterableIterator<[K, V]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | 返回键值对的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回键值对的迭代器。 |
 
 ## get
 

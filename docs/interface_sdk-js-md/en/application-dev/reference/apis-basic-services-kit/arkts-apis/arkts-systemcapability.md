@@ -1,6 +1,6 @@
 # @ohos.systemCapability
 
-Provides interfaces to get system capability.
+Provides interfaces to get system capability. @namespace systemCapability
 
 **Since:** 23
 

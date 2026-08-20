@@ -12,7 +12,9 @@ import { formHost } from '@kit.FormKit';
 function offGetFormRect(callback?: formInfo.GetFormRectInfoCallback): void
 ```
 
-Cancels listening to the event of get form rect. You can use this method to cancel listening to the event of get form rect.
+Cancels listening to the event of get form rect.
+
+You can use this method to cancel listening to the event of get form rect.
 
 **起始版本：** 23
 

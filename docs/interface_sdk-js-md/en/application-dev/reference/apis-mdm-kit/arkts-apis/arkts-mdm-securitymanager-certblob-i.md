@@ -1,4 +1,4 @@
-# CertBlob(Security Management)
+# CertBlob
 
 Represents the certificate information.
 

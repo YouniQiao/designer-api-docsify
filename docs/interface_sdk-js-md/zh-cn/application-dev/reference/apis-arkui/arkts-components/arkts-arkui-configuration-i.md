@@ -2,6 +2,8 @@
 
 Defines the data type of the interface restriction.
 
+@interface Configuration
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare interface Configuration--><!--Device-unnamed-declare interface Configuration-End-->

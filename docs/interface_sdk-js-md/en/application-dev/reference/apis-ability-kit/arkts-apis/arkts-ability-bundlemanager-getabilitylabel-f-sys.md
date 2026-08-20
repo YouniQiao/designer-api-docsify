@@ -12,7 +12,9 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAbilityLabel(bundleName: string, moduleName: string, abilityName: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the ability label based on the given bundle name, module name, and ability name. This API uses an asynchronous callback to return the result. No permission is required for obtaining the caller's own information.
+Obtains the ability label based on the given bundle name, module name, and ability name. This API uses an asynchronous callback to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 23
 
@@ -37,15 +39,15 @@ Obtains the ability label based on the given bundle name, module name, and abili
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [17700029](../errorcode-bundle.md#17700029-disabled-ability) | The specified ability is disabled. |
-| [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified moduleName is not found. |
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified abilityName is not found. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
+| [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
+| [17700029](../errorcode-bundle.md#17700029-disabled-ability) | The specified ability is disabled. |
 
 **Examples**
 
@@ -79,7 +81,9 @@ try {
 function getAbilityLabel(bundleName: string, moduleName: string, abilityName: string): Promise<string>
 ```
 
-Obtains the ability label based on the given bundle name, module name, and ability name. This API uses a promise to return the result. No permission is required for obtaining the caller's own information.
+Obtains the ability label based on the given bundle name, module name, and ability name. This API uses a promise to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 23
 
@@ -109,15 +113,15 @@ Obtains the ability label based on the given bundle name, module name, and abili
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [17700029](../errorcode-bundle.md#17700029-disabled-ability) | The specified ability is disabled. |
-| [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified moduleName is not found. |
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified abilityName is not found. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
+| [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
+| [17700029](../errorcode-bundle.md#17700029-disabled-ability) | The specified ability is disabled. |
 
 **Examples**
 

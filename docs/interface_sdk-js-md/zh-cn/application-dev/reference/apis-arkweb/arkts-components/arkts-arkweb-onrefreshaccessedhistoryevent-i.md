@@ -24,7 +24,9 @@ import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 isMainFrame?: boolean
 ```
 
-是否是主文档触发。 true表示是主文档触发，false表示不是主文档触发。
+是否是主文档触发。
+
+true表示是主文档触发，false表示不是主文档触发。
 
 **类型：** boolean
 

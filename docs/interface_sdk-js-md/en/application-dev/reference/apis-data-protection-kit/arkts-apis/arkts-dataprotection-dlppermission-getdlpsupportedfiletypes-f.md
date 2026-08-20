@@ -12,7 +12,9 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function getDLPSupportedFileTypes(): Promise<Array<string>>
 ```
 
-Obtains the file name extension types that support DLP. After the API is successfully called, the list of supported file types is returned, indicating the types of files that can be used to generate DLP files. This API uses a promise to return the result. This API is used to obtain the types of files that can be used to generate DLP files. If the current file type is in the list, it can be encrypted.
+Obtains the file name extension types that support DLP. After the API is successfully called, the list of supported file types is returned, indicating the types of files that can be used to generate DLP files. This API uses a promise to return the result.
+
+This API is used to obtain the types of files that can be used to generate DLP files. If the current file type is in the list, it can be encrypted.
 
 **Since:** 10
 
@@ -55,7 +57,9 @@ try {
 function getDLPSupportedFileTypes(callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains the file name extension types that support DLP. After the API is successfully called, the list of supported file types is returned, indicating the types of files that can be used to generate DLP files. This API uses an asynchronous callback to return the result. This API is used to obtain the types of files that can be used to generate DLP files. If the current file type is in the list, it can be encrypted.
+Obtains the file name extension types that support DLP. After the API is successfully called, the list of supported file types is returned, indicating the types of files that can be used to generate DLP files. This API uses an asynchronous callback to return the result.
+
+This API is used to obtain the types of files that can be used to generate DLP files. If the current file type is in the list, it can be encrypted.
 
 **Since:** 10
 

@@ -12,7 +12,11 @@ import { curves } from '@kit.ArkUI';
 function steps(count: number, end: boolean): string
 ```
 
-构造阶梯曲线对象。 &gt; **说明：** &gt; &gt; 从API version 7开始支持，从API version 9开始废弃。建议使用[Curves. stepsCurve](arkts-arkui-curves-stepscurve-f.md)替代。
+构造阶梯曲线对象。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用[Curves. stepsCurve](arkts-arkui-curves-stepscurve-f.md)替代。
 
 **起始版本：** 7
 

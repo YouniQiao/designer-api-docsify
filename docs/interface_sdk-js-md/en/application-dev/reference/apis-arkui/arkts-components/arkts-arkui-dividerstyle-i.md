@@ -1,0 +1,121 @@
+# DividerStyle
+
+Describes the divider style.
+
+**Since:** 10
+
+<!--Device-unnamed-interface DividerStyle--><!--Device-unnamed-interface DividerStyle-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+```
+
+## color
+
+```TypeScript
+color?: ResourceColor
+```
+
+Color of the divider.
+
+Default value: **#33182431**
+
+**Type:** ResourceColor
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DividerStyle-color?: ResourceColor--><!--Device-DividerStyle-color?: ResourceColor-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## endMargin
+
+```TypeScript
+endMargin?: Length
+```
+
+Distance between the divider and the bottom of the sidebar. It cannot be set in percentage.
+
+Default value: **0.0**
+
+Unit: vp
+
+Value range: [0, +∞)
+
+**Type:** Length
+
+**Default:** 0
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DividerStyle-endMargin?: Length--><!--Device-DividerStyle-endMargin?: Length-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## startMargin
+
+```TypeScript
+startMargin?: Length
+```
+
+Distance between the divider and the top of the sidebar. It cannot be set in percentage.
+
+Default value: **0.0**
+
+Unit: vp
+
+Value range: [0, +∞)
+
+**Type:** Length
+
+**Default:** 0
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DividerStyle-startMargin?: Length--><!--Device-DividerStyle-startMargin?: Length-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## strokeWidth
+
+```TypeScript
+strokeWidth: Length
+```
+
+Width of the divider. It cannot be set in percentage.
+
+Default value: **0.0**
+
+Unit: vp
+
+Value range: [0, +∞)
+
+**Type:** Length
+
+**Default:** 0
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DividerStyle-strokeWidth: Length--><!--Device-DividerStyle-strokeWidth: Length-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

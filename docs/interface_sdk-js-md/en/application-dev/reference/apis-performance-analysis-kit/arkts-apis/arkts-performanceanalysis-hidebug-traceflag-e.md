@@ -2,6 +2,8 @@
 
 Describes types of trace collection threads, including the main thread and all threads.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-hidebug-enum TraceFlag--><!--Device-hidebug-enum TraceFlag-End-->

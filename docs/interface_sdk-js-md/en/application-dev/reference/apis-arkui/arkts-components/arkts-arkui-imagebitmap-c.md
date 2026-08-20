@@ -160,7 +160,9 @@ Transfer a Resource object to construct an ImageBitmap object.
 readonly height: number
 ```
 
-Pixel height of the **ImageBitmap** object. Default unit: vp
+Pixel height of the **ImageBitmap** object.
+
+Default unit: vp
 
 **Type:** number
 
@@ -180,7 +182,9 @@ Pixel height of the **ImageBitmap** object. Default unit: vp
 readonly width: number
 ```
 
-Pixel width of the **ImageBitmap** object. Default unit: vp
+Pixel width of the **ImageBitmap** object.
+
+Default unit: vp
 
 **Type:** number
 

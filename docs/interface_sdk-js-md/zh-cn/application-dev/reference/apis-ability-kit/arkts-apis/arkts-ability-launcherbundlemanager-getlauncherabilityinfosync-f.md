@@ -39,10 +39,10 @@ function getLauncherAbilityInfoSync(bundleName: string, userId: int): Array<Laun
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not support. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Verify permission denied. |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not support. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 
 **示例**
 

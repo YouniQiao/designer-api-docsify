@@ -2,6 +2,8 @@
 
 气泡的显示状态。
 
+@interface PopupStateChangeParam
+
 **起始版本：** 18
 
 <!--Device-unnamed-declare interface PopupStateChangeParam--><!--Device-unnamed-declare interface PopupStateChangeParam-End-->

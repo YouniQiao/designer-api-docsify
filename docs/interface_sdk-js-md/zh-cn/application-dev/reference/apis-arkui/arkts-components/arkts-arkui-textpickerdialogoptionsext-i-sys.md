@@ -21,7 +21,14 @@
 distortionMode?: DistortionMode
 ```
 
-设置系统材质下弹窗的非线性动画模式。当需要自定义弹窗的非线性动画效果时传入此参数。 &gt; **默认值：** DistortionMode.DISTORTION_AUTO &gt; **系统接口：** 此接口为系统接口。 &gt; **说明：** 当取值为 DISTORTION_AUTO 时，需设置 &gt; [ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md) 类型材质方可生效， &gt; 并依据设备算力档位自动生效非线性效果（高中档算力设备生效，低档算力设备不生效）。非线性动画会增加渲染开销，建议在低端设备上谨慎使用。 &gt; 各枚举取值含义请参见DistortionMode。
+设置系统材质下弹窗的非线性动画模式。当需要自定义弹窗的非线性动画效果时传入此参数。
+
+> **默认值：** DistortionMode.DISTORTION_AUTO
+
+> **系统接口：** 此接口为系统接口。
+
+> **说明：** 当取值为 DISTORTION_AUTO 时，需设置 &gt; [ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md) 类型材质方可生效， &gt; 并依据设备算力档位自动生效非线性效果（高中档算力设备生效，低档算力设备不生效）。非线性动画会增加渲染开销，建议在低端设备上谨慎使用。
+> 各枚举取值含义请参见DistortionMode。
 
 **类型：** DistortionMode
 
@@ -43,7 +50,14 @@ distortionMode?: DistortionMode
 edgeLightMode?: EdgeLightMode
 ```
 
-设置系统材质下弹窗的流光动画模式。当需要自定义弹窗的流光动画效果时传入此参数。 &gt; **默认值：** EdgeLightMode.EDGELIGHT_AUTO &gt; **系统接口：** 此接口为系统接口。 &gt; **说明：** 当取值为 EDGELIGHT_AUTO 时，需设置 &gt; [ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md) 类型材质方可生效， &gt; 并依据设备算力档位自动生效流光效果（高档算力设备生效，中低档算力设备不生效）。流光动画会增加渲染开销，建议在低端设备上谨慎使用。 &gt; 各枚举取值含义请参见EdgeLightMode。
+设置系统材质下弹窗的流光动画模式。当需要自定义弹窗的流光动画效果时传入此参数。
+
+> **默认值：** EdgeLightMode.EDGELIGHT_AUTO
+
+> **系统接口：** 此接口为系统接口。
+
+> **说明：** 当取值为 EDGELIGHT_AUTO 时，需设置 &gt; [ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md) 类型材质方可生效， &gt; 并依据设备算力档位自动生效流光效果（高档算力设备生效，中低档算力设备不生效）。流光动画会增加渲染开销，建议在低端设备上谨慎使用。
+> 各枚举取值含义请参见EdgeLightMode。
 
 **类型：** EdgeLightMode
 

@@ -1,6 +1,6 @@
 # PolicyType（系统接口）
 
-Enumerates type.
+Enumerates type. @enum { int }
 
 **起始版本：** 23
 

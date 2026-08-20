@@ -2,6 +2,8 @@
 
 The location info used in gesture event.
 
+@interface EventLocationInfo
+
 **Since:** 23
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.

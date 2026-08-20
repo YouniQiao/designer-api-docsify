@@ -1,6 +1,12 @@
 # ContextMenuController
 
-Provides the capability to control the closing of context menus. &gt; **NOTE：**&gt; &gt; - The initial APIs of this class are supported since API version 12. &gt; &gt; - In the following API examples, you must first use &gt; [getContextMenuController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcontextmenucontroller) in **UIContext** to obtain a &gt; **ContextMenuController** instance, and then call the APIs using the obtained instance.
+Provides the capability to control the closing of context menus.
+
+> **NOTE：**
+> 
+> - The initial APIs of this class are supported since API version 12.
+> 
+> - In the following API examples, you must first use &gt; [getContextMenuController()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcontextmenucontroller) in **UIContext** to obtain a &gt; **ContextMenuController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 12
 

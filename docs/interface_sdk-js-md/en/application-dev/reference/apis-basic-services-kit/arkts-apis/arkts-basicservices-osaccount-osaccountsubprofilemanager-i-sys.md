@@ -52,13 +52,13 @@ Creates an OS account sub-profile.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target OS account is being operated. |
-| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted OS account. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | The OS account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300402](../errorcode-account.md#12300402-number-of-os-account-sub-profiles-has-reached-the-upper-limit) | The number of sub-profiles under the OS account has reached limit. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | The OS account not found. |
+| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted OS account. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target OS account is being operated. |
+| [12300402](../errorcode-account.md#12300402-number-of-os-account-sub-profiles-has-reached-the-upper-limit) | The number of sub-profiles under the OS account has reached limit. |
 
 ## deleteOsAccountSubProfile
 
@@ -97,12 +97,12 @@ Deletes an OS account sub-profile.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The OS account or sub-profile is being operated. |
-| [12300403](../errorcode-account.md#12300403-restricted-os-account-sub-profile) | Restricted sub-profile cannot be deleted. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The OS account or sub-profile is being operated. |
 | [12300401](../errorcode-account.md#12300401-os-account-sub-profile-not-found) | Sub-profile not found. |
+| [12300403](../errorcode-account.md#12300403-restricted-os-account-sub-profile) | Restricted sub-profile cannot be deleted. |
 | [12300404](../errorcode-account.md#12300404-foreground-sub-profile-of-the-os-account-cannot-be-deleted) | The foreground sub-profile cannot be deleted. |
 
 ## getOsAccountForegroundSubProfileId
@@ -171,9 +171,9 @@ Gets the foreground sub-profile ID of a specified OS account.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | OS account not found. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | OS account not found. |
 | [12300401](../errorcode-account.md#12300401-os-account-sub-profile-not-found) | The foreground sub-profile not found. |
 
 ## getOsAccountLocalIdForSubProfile
@@ -367,10 +367,10 @@ Gets the ID list of sub-profile of a specified OS account.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | OS account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | OS account not found. |
 
 ## offOsAccountSubProfileEvent
 
@@ -434,9 +434,9 @@ Subscribes to OS account sub-profile events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid event. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid event. |
 
 ## switchOsAccountSubProfile
 
@@ -475,11 +475,11 @@ Switches to an OS account sub-profile.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The OS account or sub-profile is being operated. |
-| [12300403](../errorcode-account.md#12300403-restricted-os-account-sub-profile) | Restricted sub-profile cannot be switched to foreground. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The OS account or sub-profile is being operated. |
 | [12300401](../errorcode-account.md#12300401-os-account-sub-profile-not-found) | Sub-profile not found. |
+| [12300403](../errorcode-account.md#12300403-restricted-os-account-sub-profile) | Restricted sub-profile cannot be switched to foreground. |
 | [12300405](../errorcode-account.md#12300405-foreground-sub-profile-with-a-logged-in-distributed-account-cannot-be-directly-switched-to-the-background) | The foreground sub-profile bound with a logged-in distributed account cannot be directly switched to background. |
 

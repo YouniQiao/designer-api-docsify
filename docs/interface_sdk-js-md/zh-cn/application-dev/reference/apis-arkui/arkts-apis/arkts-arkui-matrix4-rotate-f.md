@@ -12,7 +12,9 @@ import { matrix4 } from '@kit.ArkUI';
 function rotate(options: RotateOption): Matrix4Transit
 ```
 
-Matrix的旋转函数，可以为当前矩阵增加x轴/y轴/z轴旋转效果。 &gt; **说明：**
+Matrix的旋转函数，可以为当前矩阵增加x轴/y轴/z轴旋转效果。
+
+> **说明：**
 
 **起始版本：** 7
 

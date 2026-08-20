@@ -40,9 +40,9 @@ Adjusts the position of the file offset pointer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900038 | Value too large for defined data type |
 | 13900008 | Bad file descriptor |
+| 13900020 | Invalid argument |
 | 13900026 | Illegal seek |
+| 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
 

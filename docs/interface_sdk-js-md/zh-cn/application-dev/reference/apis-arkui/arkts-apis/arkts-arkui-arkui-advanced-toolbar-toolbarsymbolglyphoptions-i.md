@@ -1,0 +1,63 @@
+# ToolBarSymbolGlyphOptions
+
+ToolBarSymbolGlyphOptions定义图标的属性。
+
+**起始版本：** 23
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
+<!--Device-unnamed-export interface ToolBarSymbolGlyphOptions--><!--Device-unnamed-export interface ToolBarSymbolGlyphOptions-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from '@kit.ArkUI';
+import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, ToolBarV2ItemText, ToolBarV2ItemTextOptions, ToolBarV2ItemIconType, ToolBarV2ItemImage, ToolBarV2ItemImageOptions, ToolBarV2, ToolBarV2Item, ToolBarV2ItemOptions, ToolBarV2Modifier, ToolBarV2ItemAction } from '@kit.ArkUI';
+```
+
+## activated
+
+```TypeScript
+activated?: SymbolGlyphModifier
+```
+
+工具栏symbol图标激活态样式。
+
+默认值：fontColor：\$r('sys.color.icon_emphasize')，fontSize：24vp。
+
+**类型：** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
+
+**起始版本：** 23
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ToolBarSymbolGlyphOptions-activated?: SymbolGlyphModifier--><!--Device-ToolBarSymbolGlyphOptions-activated?: SymbolGlyphModifier-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## normal
+
+```TypeScript
+normal?: SymbolGlyphModifier
+```
+
+工具栏symbol图标普通态样式。
+
+默认值：fontColor：\$r('sys.color.icon_primary')，fontSize：24vp。
+
+**类型：** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
+
+**起始版本：** 23
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ToolBarSymbolGlyphOptions-normal?: SymbolGlyphModifier--><!--Device-ToolBarSymbolGlyphOptions-normal?: SymbolGlyphModifier-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+

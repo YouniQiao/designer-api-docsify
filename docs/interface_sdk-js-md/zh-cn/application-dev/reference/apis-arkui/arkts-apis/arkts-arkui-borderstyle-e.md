@@ -2,6 +2,8 @@
 
 Border Style
 
+@enum { number }
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare enum BorderStyle--><!--Device-unnamed-declare enum BorderStyle-End-->

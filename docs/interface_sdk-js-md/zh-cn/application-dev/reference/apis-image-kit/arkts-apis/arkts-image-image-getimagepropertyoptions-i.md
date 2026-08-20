@@ -1,6 +1,10 @@
 # GetImagePropertyOptions
 
-表示查询图片属性的索引。 &gt; **说明：** &gt; &gt; [ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md)代替。
+表示查询图片属性的索引。
+
+> **说明：**
+> 
+> [ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md)代替。
 
 **起始版本：** 7
 

@@ -34,7 +34,7 @@ Queries whether the current device supports ranging capability.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 34900053 | The ranging service is disabled. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

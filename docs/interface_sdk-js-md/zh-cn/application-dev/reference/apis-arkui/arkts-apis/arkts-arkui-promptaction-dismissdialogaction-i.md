@@ -22,7 +22,7 @@ dismiss: Callback<void>
 
 Dialog关闭回调函数。开发者需要退出时调用，不需要退出时无需调用。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **起始版本：** 12
 

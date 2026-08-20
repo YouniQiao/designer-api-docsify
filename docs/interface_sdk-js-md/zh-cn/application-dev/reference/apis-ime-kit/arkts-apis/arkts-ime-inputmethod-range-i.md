@@ -1,5 +1,7 @@
 # Range
 
+@brief 文本的选中范围。
+
 **起始版本：** 23
 
 <!--Device-inputMethod-export interface Range--><!--Device-inputMethod-export interface Range-End-->
@@ -23,6 +25,8 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 end: int
 ```
 
+@brief 选中文本的末字符在编辑框的索引值。该参数应为大于或等于0的整数，不超过文本实际长度，end值要大于start值。
+
 **类型：** int
 
 **起始版本：** 23
@@ -36,6 +40,8 @@ end: int
 ```TypeScript
 start: int
 ```
+
+@brief 选中文本的首字符在编辑框的索引值。该参数应为大于或等于0的整数，不超过文本实际长度。
 
 **类型：** int
 

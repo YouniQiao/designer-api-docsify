@@ -1,6 +1,12 @@
 # AudioRenderer
 
-This interface provides APIs for audio rendering. Before calling any API in AudioRenderer, you must use [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md) to create an AudioRenderer instance. &gt; **NOTE：**&gt; &gt; - The initial APIs of this interface are supported since API version 8.
+This interface provides APIs for audio rendering.
+
+Before calling any API in AudioRenderer, you must use [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md) to create an AudioRenderer instance.
+
+> **NOTE：**
+> 
+> - The initial APIs of this interface are supported since API version 8.
 
 **Since:** 23
 
@@ -247,7 +253,13 @@ Obtains the timestamp of the current playback position, measured in nanoseconds 
 getAudioTimestampInfo(): Promise<AudioTimestampInfo>
 ```
 
-Obtains the timestamp and position information of an output audio stream. It adapts to the speed adjustment interface. This API uses a promise to return the result. This information is commonly used for audio and video synchronization. Note that when the actual playback position (**framePosition**) is 0, the timestamp remains fixed until the stream begins to play. The playback position is also reset when **Flush** is called. Additionally, changes in the audio stream route, such as switching devices or output types, will reset the playback position, whereas the timestamp keeps increasing. You are advised to call this API to obtain the corresponding value only when the actual playback position and timestamp are stable. This API adapts to the speed adjustment interface. For example, if the playback speed is set to 2x, the rate at which the playback position increases is also twice the normal speed.
+Obtains the timestamp and position information of an output audio stream. It adapts to the speed adjustment interface. This API uses a promise to return the result.
+
+This information is commonly used for audio and video synchronization.
+
+Note that when the actual playback position (**framePosition**) is 0, the timestamp remains fixed until the stream begins to play. The playback position is also reset when **Flush** is called.
+
+Additionally, changes in the audio stream route, such as switching devices or output types, will reset the playback position, whereas the timestamp keeps increasing. You are advised to call this API to obtain the corresponding value only when the actual playback position and timestamp are stable. This API adapts to the speed adjustment interface. For example, if the playback speed is set to 2x, the rate at which the playback position increases is also twice the normal speed.
 
 **Since:** 23
 
@@ -273,7 +285,13 @@ Obtains the timestamp and position information of an output audio stream. It ada
 getAudioTimestampInfoSync(): AudioTimestampInfo
 ```
 
-Obtains the timestamp and position information of an output audio stream. It adapts to the speed adjustment interface. This API returns the result synchronously. This information is commonly used for audio and video synchronization. Note that when the actual playback position (**framePosition**) is 0, the timestamp remains fixed until the stream begins to play. The playback position is also reset when **Flush** is called. Additionally, changes in the audio stream route, such as switching devices or output types, will reset the playback position, whereas the timestamp keeps increasing. You are advised to call this API to obtain the corresponding value only when the actual playback position and timestamp are stable. This API adapts to the speed adjustment interface. For example, if the playback speed is set to 2x, the rate at which the playback position increases is also twice the normal speed.
+Obtains the timestamp and position information of an output audio stream. It adapts to the speed adjustment interface. This API returns the result synchronously.
+
+This information is commonly used for audio and video synchronization.
+
+Note that when the actual playback position (**framePosition**) is 0, the timestamp remains fixed until the stream begins to play. The playback position is also reset when **Flush** is called.
+
+Additionally, changes in the audio stream route, such as switching devices or output types, will reset the playback position, whereas the timestamp keeps increasing. You are advised to call this API to obtain the corresponding value only when the actual playback position and timestamp are stable. This API adapts to the speed adjustment interface. For example, if the playback speed is set to 2x, the rate at which the playback position increases is also twice the normal speed.
 
 **Since:** 23
 
@@ -419,7 +437,15 @@ Obtains the output device information of the audio stream. This API returns the 
 getLatency(type: AudioLatencyType): int
 ```
 
-Obtains the estimated latency of the current audio route. &gt; **NOTE：**&gt; &gt; - The estimated latency of a wireless audio device may be inaccurate. The result is for reference only. &gt; &gt; - Since the latency is not counted in the real-time buffer, you are advised to obtain the latency only when the &gt; audio playback starts to avoid frequent calls. Otherwise, the API call may be blocked due to route switching. &gt; &gt; - You are advised to use [getAudioTimestampInfo](#getaudiotimestampinfo) or &gt; [getAudioTimestampInfoSync](#getaudiotimestampinfosync) to implement audio and video &gt; synchronization after the audio is output to the hardware.
+Obtains the estimated latency of the current audio route.
+
+> **NOTE：**
+> 
+> - The estimated latency of a wireless audio device may be inaccurate. The result is for reference only.
+> 
+> - Since the latency is not counted in the real-time buffer, you are advised to obtain the latency only when the &gt; audio playback starts to avoid frequent calls. Otherwise, the API call may be blocked due to route switching.
+> 
+> - You are advised to use [getAudioTimestampInfo](#getaudiotimestampinfo) or &gt; [getAudioTimestampInfoSync](#getaudiotimestampinfosync) to implement audio and video &gt; synchronization after the audio is output to the hardware.
 
 **Since:** 23
 
@@ -445,8 +471,8 @@ Obtains the estimated latency of the current audio route. &gt; **NOTE：**&gt; &
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permitted in release state. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permitted in release state. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System internal error, like audio service error. |
 
 ## getLoudnessGain
@@ -1423,7 +1449,11 @@ Subscribes audio data callback. The event is triggered when audio buffer is avai
 on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void
 ```
 
-Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result. The AudioRenderer instance proactively gains the focus when the **start** event occurs and releases the focus when the **pause** or **stop** event occurs. Therefore, you do not need to request to gain or release the focus. After this API is called, an [InterruptEvent](arkts-audio-audio-interruptevent-i.md) is received when the AudioRenderer instance fails to obtain the focus or an audio interruption event occurs (for example, the audio stream is interrupted by others). It is recommended that the application perform further processing based on the **InterruptEvent** information. For details, see [Introduction to Audio Focus](../../../media/audio/audio-playback-concurrency.md).
+Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result.
+
+The AudioRenderer instance proactively gains the focus when the **start** event occurs and releases the focus when the **pause** or **stop** event occurs. Therefore, you do not need to request to gain or release the focus.
+
+After this API is called, an [InterruptEvent](arkts-audio-audio-interruptevent-i.md) is received when the AudioRenderer instance fails to obtain the focus or an audio interruption event occurs (for example, the audio stream is interrupted by others). It is recommended that the application perform further processing based on the **InterruptEvent** information. For details, see [Introduction to Audio Focus](../../../media/audio/audio-playback-concurrency.md).
 
 **Since:** 9
 
@@ -1451,7 +1481,9 @@ Subscribes to the audio interruption event, which is triggered when the audio fo
 on(type: 'markReach', frame: long, callback: Callback<long>): void
 ```
 
-Subscribes to the mark reached event, which is triggered (only once) when the number of frames rendered reaches the value of the **frame** parameter. This API uses an asynchronous callback to return the result. For example, if **frame** is set to **100**, the callback is invoked when the number of rendered frames reaches the 100th frame.
+Subscribes to the mark reached event, which is triggered (only once) when the number of frames rendered reaches the value of the **frame** parameter. This API uses an asynchronous callback to return the result.
+
+For example, if **frame** is set to **100**, the callback is invoked when the number of rendered frames reaches the 100th frame.
 
 **Since:** 8
 
@@ -1529,7 +1561,9 @@ Subscribes to the change event of audio output devices and reasons, which is tri
 on(type: 'periodReach', frame: long, callback: Callback<long>): void
 ```
 
-Subscribes to the period reached event, which is triggered each time the number of frames rendered reaches the value of the **frame** parameter. In other words, the information is reported periodically. This API uses an asynchronous callback to return the result. For example, if **frame** is set to **10**, the callback is invoked each time 10 frames are rendered, for example , when the number of frames rendered reaches the 10th frame, 20th frame, and 30th frame.
+Subscribes to the period reached event, which is triggered each time the number of frames rendered reaches the value of the **frame** parameter. In other words, the information is reported periodically. This API uses an asynchronous callback to return the result.
+
+For example, if **frame** is set to **10**, the callback is invoked each time 10 frames are rendered, for example , when the number of frames rendered reaches the 10th frame, 20th frame, and 30th frame.
 
 **Since:** 8
 
@@ -1572,7 +1606,9 @@ Subscribes to the audio renderer state change event, which is triggered when the
 on(type: 'writeData', callback: AudioRendererWriteDataCallback): void
 ```
 
-Subscribes to the audio data write event, which is triggered when audio data needs to be written. This API uses an asynchronous callback to return the result. The callback function is used only to write audio data. Do not call AudioRenderer APIs in it.
+Subscribes to the audio data write event, which is triggered when audio data needs to be written. This API uses an asynchronous callback to return the result.
+
+The callback function is used only to write audio data. Do not call AudioRenderer APIs in it.
 
 **Since:** 11
 
@@ -1759,9 +1795,9 @@ Sets the audio channel blending mode. This API returns the result synchronously.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
 
 ## setDefaultOutputDevice
 
@@ -1793,9 +1829,9 @@ Temporarily changes the current audio device This function applies on audiorende
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
 
 ## setIndependentAudioSessionStrategy
 
@@ -1803,7 +1839,11 @@ Temporarily changes the current audio device This function applies on audiorende
 setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: int): void
 ```
 
-Sets the independent audio session strategy and behavior parameters. &gt; **NOTE：**&gt; &gt; If this API is called while an audio renderer is running, you must call the &gt; [start](#start) API again for &gt; the settings to take effect.
+Sets the independent audio session strategy and behavior parameters.
+
+> **NOTE：**
+> 
+> If this API is called while an audio renderer is running, you must call the &gt; [start](#start) API again for &gt; the settings to take effect.
 
 **Since:** 24
 
@@ -1824,8 +1864,8 @@ Sets the independent audio session strategy and behavior parameters. &gt; **NOTE
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
 
 ## setInterruptMode
 
@@ -1995,7 +2035,9 @@ Sets the render rate. This API uses a promise to return the result.
 setSilentModeAndMixWithOthers(on: boolean): void
 ```
 
-Sets the silent mode in concurrent playback for the audio stream. If the silent mode in concurrent playback is enabled, the system mutes the audio stream and does not interrupt other audio streams. If the silent mode in concurrent playback is disabled, the audio stream can gain focus based on the system focus strategy.
+Sets the silent mode in concurrent playback for the audio stream.
+
+If the silent mode in concurrent playback is enabled, the system mutes the audio stream and does not interrupt other audio streams. If the silent mode in concurrent playback is disabled, the audio stream can gain focus based on the system focus strategy.
 
 **Since:** 23
 

@@ -20,9 +20,11 @@ import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeLis
 container?: OnContainerCallback
 ```
 
-绑定在节点上的右键子组件，子组件由@Builder修饰。 默认值：() =&gt; void
+绑定在节点上的右键子组件，子组件由@Builder修饰。
 
-**类型：** [OnContainerCallback](arkts-arkui-oncontainercallback-t.md)
+默认值：() =&gt; void
+
+**类型：** [OnContainerCallback](../../apis-default/arkts-apis/arkts-oncontainercallback-t.md)
 
 **起始版本：** 26.0.0
 
@@ -40,7 +42,13 @@ container?: OnContainerCallback
 currentNodeId?: number
 ```
 
-当前子节点Id。 取值范围：大于等于-1。 不能为根节点id，不能为null，否则会抛出异常。且不能设置两个相同的currentNodeId。 默认值：-1
+当前子节点Id。
+
+取值范围：大于等于-1。
+
+不能为根节点id，不能为null，否则会抛出异常。且不能设置两个相同的currentNodeId。
+
+默认值：-1
 
 **类型：** number
 
@@ -60,9 +68,11 @@ currentNodeId?: number
 editIcon?: ResourceStr
 ```
 
-编辑图标。 默认值：空字符串。
+编辑图标。
 
-**类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+默认值：空字符串。
+
+**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 
@@ -80,9 +90,11 @@ editIcon?: ResourceStr
 icon?: ResourceStr
 ```
 
-图标。 默认值：空字符串。
+图标。
 
-**类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+默认值：空字符串。
+
+**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 
@@ -100,7 +112,11 @@ icon?: ResourceStr
 isFolder?: boolean
 ```
 
-是否是目录。 默认值：false true：是目录，false：不是目录。
+是否是目录。
+
+默认值：false
+
+true：是目录，false：不是目录。
 
 **类型：** boolean
 
@@ -120,7 +136,11 @@ isFolder?: boolean
 parentNodeId?: number
 ```
 
-父节点Id。 取值范围：大于等于-1。 默认值：-1，根节点id值为-1。若设置数值小于-1，该节点无效，不显示在树视图上。
+父节点Id。
+
+取值范围：大于等于-1。
+
+默认值：-1，根节点id值为-1。若设置数值小于-1，该节点无效，不显示在树视图上。
 
 **类型：** number
 
@@ -140,9 +160,11 @@ parentNodeId?: number
 primaryTitle?: ResourceStr
 ```
 
-主标题。 默认值：空字符串。
+主标题。
 
-**类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+默认值：空字符串。
+
+**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 
@@ -160,9 +182,11 @@ primaryTitle?: ResourceStr
 secondaryTitle?: ResourceStr
 ```
 
-副标题。 默认值：空字符串。
+副标题。
 
-**类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+默认值：空字符串。
+
+**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 
@@ -180,9 +204,11 @@ secondaryTitle?: ResourceStr
 selectedIcon?: ResourceStr
 ```
 
-选中图标。 默认值：空字符串。
+选中图标。
 
-**类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+默认值：空字符串。
+
+**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 
@@ -200,9 +226,11 @@ selectedIcon?: ResourceStr
 symbolEditIconStyle?: SymbolGlyphModifier
 ```
 
-Symbol编辑图标样式，优先级大于editIcon。 默认值：undefined，编辑时显示与非编辑态一样
+Symbol编辑图标样式，优先级大于editIcon。
 
-**类型：** SymbolGlyphModifier
+默认值：undefined，编辑时显示与非编辑态一样
+
+**类型：** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
 
 **起始版本：** 26.0.0
 
@@ -220,9 +248,11 @@ Symbol编辑图标样式，优先级大于editIcon。 默认值：undefined，�
 symbolIconStyle?: SymbolGlyphModifier
 ```
 
-Symbol图标样式，显示优先级大于icon，同时设置symbolIconStyle和icon，只显示Symbol图标。 默认值：undefined，表示不显示Symbol图标。
+Symbol图标样式，显示优先级大于icon，同时设置symbolIconStyle和icon，只显示Symbol图标。
 
-**类型：** SymbolGlyphModifier
+默认值：undefined，表示不显示Symbol图标。
+
+**类型：** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
 
 **起始版本：** 26.0.0
 
@@ -240,9 +270,11 @@ Symbol图标样式，显示优先级大于icon，同时设置symbolIconStyle和i
 symbolSelectedIconStyle?: SymbolGlyphModifier
 ```
 
-Symbol选中图标样式，优先级大于selectedIcon。 默认值：undefined，选中时显示与未选中一样
+Symbol选中图标样式，优先级大于selectedIcon。
 
-**类型：** SymbolGlyphModifier
+默认值：undefined，选中时显示与未选中一样
+
+**类型：** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
 
 **起始版本：** 26.0.0
 

@@ -12,7 +12,11 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 function setAppResourceLimit(type: string, value: int, enableDebugLog: boolean): void
 ```
 
-设置应用的文件描述符数量、线程数量、JS内存或Native内存资源限制。 主要应用场景在于构造内存泄漏故障。 &gt; **注意** &gt; &gt; 打开设置中的开发者选项后，在开发者选项列表中找到"系统资源泄漏日志"并启用，重启设备后接口生效。
+设置应用的文件描述符数量、线程数量、JS内存或Native内存资源限制。 主要应用场景在于构造内存泄漏故障。
+
+> **注意**
+> 
+> 打开设置中的开发者选项后，在开发者选项列表中找到"系统资源泄漏日志"并启用，重启设备后接口生效。
 
 **起始版本：** 12
 

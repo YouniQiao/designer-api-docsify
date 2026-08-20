@@ -2,6 +2,8 @@
 
 Enumerates the app rotation.
 
+@enum { number }
+
 **Since:** 12
 
 <!--Device-unnamed-declare enum AppRotation--><!--Device-unnamed-declare enum AppRotation-End-->

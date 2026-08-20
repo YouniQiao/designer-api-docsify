@@ -112,7 +112,7 @@ Allow close.
 
 Set config for default close icon when 'allowClose' is true.
 
-**Type:** [ChipV2CloseConfig](arkts-arkui-arkui-advanced-chipv2-chipv2closeconfig-i.md)
+**Type:** [ChipV2CloseConfig](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2closeconfig-i.md)
 
 **Since:** 26.0.0
 
@@ -133,7 +133,7 @@ Set config for default close icon when 'allowClose' is true.
 
 Chip label.
 
-**Type:** [ChipV2Label](arkts-arkui-arkui-advanced-chipv2-chipv2label-c.md)
+**Type:** [ChipV2Label](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2label-c.md)
 
 **Since:** 26.0.0
 
@@ -154,7 +154,7 @@ Chip label.
 
 Prefix icon.
 
-**Type:** [ChipV2PrefixImageIcon](arkts-arkui-arkui-advanced-chipv2-chipv2prefiximageicon-c.md)
+**Type:** [ChipV2PrefixImageIcon](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2prefiximageicon-c.md)
 
 **Since:** 26.0.0
 
@@ -175,7 +175,7 @@ Prefix icon.
 
 Prefix symbol icon.
 
-**Type:** [ChipV2PrefixSymbolIcon](arkts-arkui-arkui-advanced-chipv2-chipv2prefixsymbolicon-c.md)
+**Type:** [ChipV2PrefixSymbolIcon](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2prefixsymbolicon-c.md)
 
 **Since:** 26.0.0
 
@@ -196,7 +196,7 @@ Prefix symbol icon.
 
 Suffix icon.
 
-**Type:** [ChipV2SuffixImageIcon](arkts-arkui-arkui-advanced-chipv2-chipv2suffiximageicon-c.md)
+**Type:** [ChipV2SuffixImageIcon](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2suffiximageicon-c.md)
 
 **Since:** 26.0.0
 
@@ -217,7 +217,7 @@ Suffix icon.
 
 Suffix symbol icon.
 
-**Type:** [ChipV2SuffixSymbolIcon](arkts-arkui-arkui-advanced-chipv2-chipv2suffixsymbolicon-c.md)
+**Type:** [ChipV2SuffixSymbolIcon](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2suffixsymbolicon-c.md)
 
 **Since:** 26.0.0
 

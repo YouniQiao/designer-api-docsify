@@ -2,6 +2,8 @@
 
 Path2D
 
+@interface Path2D
+
 **Since:** 4
 
 <!--Device-unnamed-export interface Path2D--><!--Device-unnamed-export interface Path2D-End-->

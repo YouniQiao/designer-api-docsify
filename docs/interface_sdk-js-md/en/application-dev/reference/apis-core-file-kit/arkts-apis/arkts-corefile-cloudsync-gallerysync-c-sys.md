@@ -67,9 +67,9 @@ Unsubscribes from sync progress event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
 ## offProgress
@@ -127,9 +127,9 @@ Removes the specified callback from the device-cloud sync progress.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
 **Examples**
@@ -174,9 +174,9 @@ Removes all callbacks from the device-cloud sync progress.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
 **Examples**
@@ -219,9 +219,9 @@ Subscribes to sync progress change event. This method uses a callback to get syn
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
 ## on_progress
@@ -253,9 +253,9 @@ Registers a listener for the device-cloud sync progress.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
 **Examples**
@@ -296,12 +296,12 @@ Starts device-cloud sync. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
-| 22400001 | Cloud status not ready. |
-| 22400003 | Low battery level. |
-| 22400002 | Network unavailable. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
+| 22400001 | Cloud status not ready. |
+| 22400002 | Network unavailable. |
+| 22400003 | Low battery level. |
 
 **Examples**
 
@@ -349,12 +349,12 @@ Starts device-cloud sync. This API uses an asynchronous callback to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
-| 22400001 | Cloud status not ready. |
-| 22400003 | Low battery level. |
-| 22400002 | Network unavailable. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
+| 22400001 | Cloud status not ready. |
+| 22400002 | Network unavailable. |
+| 22400003 | Low battery level. |
 
 **Examples**
 
@@ -378,7 +378,11 @@ gallerySync.start((err: BusinessError) => {
 stop(): Promise<void>
 ```
 
-Stops device-cloud sync. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; Calling **stop** will stop the sync process. To resume the sync, call &gt; [start](#start).
+Stops device-cloud sync. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> Calling **stop** will stop the sync process. To resume the sync, call &gt; [start](#start).
 
 **Since:** 23
 
@@ -400,9 +404,9 @@ Stops device-cloud sync. This API uses a promise to return the result. &gt; **NO
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
 
 **Examples**
 
@@ -424,7 +428,11 @@ gallerySync.stop().then(() => {
 stop(callback: AsyncCallback<void>): void
 ```
 
-Stops device-cloud sync. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Calling **stop** will stop the sync process. To resume the sync, call &gt; [start](#start).
+Stops device-cloud sync. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Calling **stop** will stop the sync process. To resume the sync, call &gt; [start](#start).
 
 **Since:** 23
 
@@ -446,9 +454,9 @@ Stops device-cloud sync. This API uses an asynchronous callback to return the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 
 **Examples**
 

@@ -1107,8 +1107,8 @@ Sets a session ID. This API uses an asynchronous callback to return the result. 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. The sessionId allows only letters, digits, and underscores(_), and cannot exceed 128 in length. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. The sessionId allows only letters, digits, and underscores(_), and cannot exceed 128 in length. |
 | [15400001](../errorcode-distributed-dataObject.md#15400001-failed-to-create-the-in-memory-database) | Failed to create the in-memory database. |
 
 **Examples**
@@ -1151,8 +1151,8 @@ Exits all sessions. This API uses an asynchronous callback to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.<br>**Applicable version:** 9 - 19 |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Incorrect parameter types. |
 | [15400001](../errorcode-distributed-dataObject.md#15400001-failed-to-create-the-in-memory-database) | Failed to create the in-memory database. |
 
 **Examples**
@@ -1200,8 +1200,8 @@ Sets a session ID or exits the distributed network. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. The sessionId allows only letters, digits, and underscores(_), and cannot exceed 128 in length. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. The sessionId allows only letters, digits, and underscores(_), and cannot exceed 128 in length. |
 | [15400001](../errorcode-distributed-dataObject.md#15400001-failed-to-create-the-in-memory-database) | Failed to create the in-memory database. |
 
 **Examples**

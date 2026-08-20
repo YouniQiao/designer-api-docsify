@@ -38,13 +38,13 @@ Synchronizes the cached data of a file to storage. This API uses a promise to re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | 13900005 | I/O error |
 | 13900008 | Bad file descriptor |
+| 13900020 | Invalid argument |
 | 13900025 | No space left on device |
+| 13900027 | Read-only file system |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-| 13900027 | Read-only file system |
 
 
 ## fsync
@@ -72,11 +72,11 @@ Synchronizes the cached data of a file to storage. This API uses an asynchronous
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | 13900005 | I/O error |
 | 13900008 | Bad file descriptor |
+| 13900020 | Invalid argument |
 | 13900025 | No space left on device |
+| 13900027 | Read-only file system |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-| 13900027 | Read-only file system |
 

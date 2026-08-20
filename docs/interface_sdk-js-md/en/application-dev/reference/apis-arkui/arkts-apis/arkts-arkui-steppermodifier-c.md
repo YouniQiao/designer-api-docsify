@@ -2,13 +2,15 @@
 
 Defines Stepper Modifier
 
-**Inheritance/Implementation:** StepperModifier extends StepperAttribute and implements AttributeModifier<StepperAttribute>
+@extends StepperAttribute @implements AttributeModifier&lt;StepperAttribute&gt;
+
+**Inheritance/Implementation:** StepperModifier extends [StepperAttribute](../arkts-components/arkts-arkui-stepper-attribute.md#stepperattribute) and implements AttributeModifier<StepperAttribute>
 
 **Since:** 20
 
 **Deprecated since:** 22
 
-**Substitutes:** [SwiperModifier](../../apis-na/arkts-apis/arkts-na-swipermodifier-c.md)
+**Substitutes:** [SwiperModifier](../../apis-default/arkts-apis/arkts-swipermodifier-c.md)
 
 <!--Device-unnamed-export declare class StepperModifier--><!--Device-unnamed-export declare class StepperModifier-End-->
 
@@ -40,5 +42,5 @@ Defines the normal update attribute function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instance | StepperAttribute | Yes |  |
+| instance | [StepperAttribute](../arkts-components/arkts-arkui-stepper-attribute.md) | Yes |  |
 

@@ -2,6 +2,8 @@
 
 ImageRepeat enumeration description
 
+@enum { number }
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare enum ImageRepeat--><!--Device-unnamed-declare enum ImageRepeat-End-->

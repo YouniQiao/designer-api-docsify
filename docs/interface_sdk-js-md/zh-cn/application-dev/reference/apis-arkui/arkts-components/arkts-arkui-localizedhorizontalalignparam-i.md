@@ -2,6 +2,8 @@
 
 Defines the localized horizontal align param of relative container.
 
+@interface LocalizedHorizontalAlignParam
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare interface LocalizedHorizontalAlignParam--><!--Device-unnamed-declare interface LocalizedHorizontalAlignParam-End-->

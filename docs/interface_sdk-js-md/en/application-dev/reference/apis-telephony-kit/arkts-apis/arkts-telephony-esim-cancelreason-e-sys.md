@@ -2,6 +2,8 @@
 
 The reason for canceling a profile download session.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-eSIM-export enum CancelReason--><!--Device-eSIM-export enum CancelReason-End-->

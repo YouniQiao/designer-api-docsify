@@ -41,7 +41,9 @@ Audio content type.
 rendererFlags: int
 ```
 
-Flags that control the renderer behavior. Set this parameter to **0**.
+Flags that control the renderer behavior.
+
+Set this parameter to **0**.
 
 **Type:** int
 

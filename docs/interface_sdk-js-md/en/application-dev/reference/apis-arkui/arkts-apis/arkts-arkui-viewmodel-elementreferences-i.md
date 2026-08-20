@@ -1,6 +1,6 @@
 # ElementReferences
 
-Element References
+Element References @interface ElementReferences
 
 **Since:** 4
 

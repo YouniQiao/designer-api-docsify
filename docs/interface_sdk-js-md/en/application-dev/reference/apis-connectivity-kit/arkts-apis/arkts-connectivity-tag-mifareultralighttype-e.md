@@ -2,6 +2,8 @@
 
 MifareUltralight Type definition
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-tag-enum MifareUltralightType--><!--Device-tag-enum MifareUltralightType-End-->

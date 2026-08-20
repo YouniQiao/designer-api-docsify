@@ -1,6 +1,12 @@
 # WebDownloadItem
 
-WebDownloadItem is a class in the ArkWeb framework used to represent and manage a single download task. Through the callback parameters of [WebDownloadDelegate](../../apis-na/arkts-apis/arkts-na-webview-webdownloaddelegate-c.md), an app can obtain a WebDownloadItem instance and then query and control the download task, including starting the download to a specified path, querying the download progress and status, pausing/resuming/canceling the task, and serializing failed tasks for later recovery. &gt; **NOTE：**&gt; &gt; - During the download process, the download progress is notified to the user through WebDownloadDelegate, and the &gt; user can operate the download task through the WebDownloadItem parameter. &gt; &gt; - The maximum length of the download file path (including the file name) supported by WebDownloadItem is 255 &gt; bytes<!--RP1--><!--RP1End-->.
+WebDownloadItem is a class in the ArkWeb framework used to represent and manage a single download task. Through the callback parameters of [WebDownloadDelegate](../../apis-default/arkts-apis/arkts-webview-webdownloaddelegate-c.md), an app can obtain a WebDownloadItem instance and then query and control the download task, including starting the download to a specified path, querying the download progress and status, pausing/resuming/canceling the task, and serializing failed tasks for later recovery.
+
+> **NOTE：**
+> 
+> - During the download process, the download progress is notified to the user through WebDownloadDelegate, and the &gt; user can operate the download task through the WebDownloadItem parameter.
+> 
+> - The maximum length of the download file path (including the file name) supported by WebDownloadItem is 255 &gt; bytes<!--RP1--><!--RP1End-->.
 
 **Since:** 11
 
@@ -56,7 +62,7 @@ Deserializes the serialized byte array into a **WebDownloadItem** object.
 
 | Type | Description |
 | --- | --- |
-| [WebDownloadItem](../../apis-na/arkts-apis/arkts-na-webview-webdownloaditem-c.md) | WebDownloadItem** object. |
+| [WebDownloadItem](../../apis-default/arkts-apis/arkts-webview-webdownloaditem-c.md) | WebDownloadItem** object. |
 
 **Error codes:**
 
@@ -150,7 +156,7 @@ Obtains the download error code.
 
 | Type | Description |
 | --- | --- |
-| [WebDownloadErrorCode](../../apis-na/arkts-apis/arkts-na-webview-webdownloaderrorcode-e.md) | Error code when the download fails. |
+| [WebDownloadErrorCode](../../apis-default/arkts-apis/arkts-webview-webdownloaderrorcode-e.md) | Error code when the download fails. |
 
 ## getMethod
 
@@ -304,7 +310,7 @@ Obtains the download state.
 
 | Type | Description |
 | --- | --- |
-| [WebDownloadState](../../apis-na/arkts-apis/arkts-na-webview-webdownloadstate-e.md) | Download state. |
+| [WebDownloadState](../../apis-default/arkts-apis/arkts-webview-webdownloadstate-e.md) | Download state. |
 
 ## getSuggestedFileName
 
@@ -444,7 +450,11 @@ Serializes the failed download to a byte array.
 start(downloadPath: string): void
 ```
 
-Starts downloading to the specified directory. The parameter specifies the disk storage path (including the file name) of the download file. &gt; **NOTE：**&gt; &gt; This API must be used in the **onBeforeDownload** callback of **WebDownloadDelegate**. If it is not called in &gt; the callback, the download task remains in the PENDING state and is downloaded to a temporary directory. After &gt; the target path is specified by **WebDownloadItem.start**, the temporary files are renamed to the target path &gt; and the unfinished files are directly downloaded to the target path. If you do not want to download the file to &gt; the temporary directory before invoking **WebDownloadItem.start**, you can call **WebDownloadItem.cancel** to &gt; cancel the current download task and then call **WebDownloadManager.resumeDownload** to resume the task.
+Starts downloading to the specified directory. The parameter specifies the disk storage path (including the file name) of the download file.
+
+> **NOTE：**
+> 
+> This API must be used in the **onBeforeDownload** callback of **WebDownloadDelegate**. If it is not called in &gt; the callback, the download task remains in the PENDING state and is downloaded to a temporary directory. After &gt; the target path is specified by **WebDownloadItem.start**, the temporary files are renamed to the target path &gt; and the unfinished files are directly downloaded to the target path. If you do not want to download the file to &gt; the temporary directory before invoking **WebDownloadItem.start**, you can call **WebDownloadItem.cancel** to &gt; cancel the current download task and then call **WebDownloadManager.resumeDownload** to resume the task.
 
 **Since:** 11
 

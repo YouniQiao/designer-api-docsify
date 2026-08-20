@@ -2,6 +2,8 @@
 
 interface of formError.
 
+@namespace formError
+
 **Since:** 23
 
 <!--Device-unnamed-declare namespace formError--><!--Device-unnamed-declare namespace formError-End-->

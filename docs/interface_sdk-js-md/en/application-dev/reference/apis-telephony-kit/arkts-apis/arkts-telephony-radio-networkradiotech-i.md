@@ -2,6 +2,8 @@
 
 Describes the radio access technology (RAT) of registered network.
 
+@interface NetworkRadioTech
+
 **Since:** 23
 
 <!--Device-radio-export interface NetworkRadioTech--><!--Device-radio-export interface NetworkRadioTech-End-->

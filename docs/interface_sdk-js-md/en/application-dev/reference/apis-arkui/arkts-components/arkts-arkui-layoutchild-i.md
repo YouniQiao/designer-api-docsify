@@ -2,6 +2,8 @@
 
 Sub component info passed from framework when layout and measure happens.
 
+@interface LayoutChild
+
 **Since:** 9
 
 **Deprecated since:** 10

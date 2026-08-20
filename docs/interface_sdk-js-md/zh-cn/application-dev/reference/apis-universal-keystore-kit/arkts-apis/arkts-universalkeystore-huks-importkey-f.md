@@ -13,7 +13,11 @@ import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 function importKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void
 ```
 
-导入明文密钥，使用Callback方式回调异步返回结果。 &gt; **说明：** &gt; &gt; 从API version 8开始支持，从API version 9开始废弃，建议使用 &gt; [huks.importKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-importkeyitem-f.md) &gt; 替代。
+导入明文密钥，使用Callback方式回调异步返回结果。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用 &gt; [huks.importKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-importkeyitem-f.md) &gt; 替代。
 
 **起始版本：** 8
 
@@ -31,7 +35,7 @@ function importKey(keyAlias: string, options: HuksOptions, callback: AsyncCallba
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 密钥别名。密钥别名的最大长度为128字节，建议不包含个人信息等敏感词汇。 |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | 用于导入时所需TAG和需要导入的密钥。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | 是 | 回调函数。当导入密钥成功时，err为undefined，data为获取到的HuksResult；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | 是 | 回调函数。当导入密钥成功时，err为undefined，data为获取到的HuksResult；否则为错误对象。 |
 
 **示例**
 
@@ -88,7 +92,11 @@ huks.importKey(keyAlias, options, (err, data) => {
 function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
 ```
 
-导入明文密钥。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 8开始支持，从API version 9开始废弃，建议使用 &gt; [huks.importKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-importkeyitem-f.md)替代。
+导入明文密钥。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用 &gt; [huks.importKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-importkeyitem-f.md)替代。
 
 **起始版本：** 8
 

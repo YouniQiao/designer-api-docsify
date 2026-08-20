@@ -1,6 +1,12 @@
 # ComponentUtils
 
-Provides API for obtaining the coordinates and size of the drawing area of a component. &gt; **NOTE：**&gt; &gt; - The initial APIs of this class are supported since API version 10. &gt; &gt; - In the following API examples, you must first use [getComponentUtils()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentutils) in &gt; **UIContext** to obtain a **ComponentUtils** instance, and then call the APIs using the obtained instance.
+Provides API for obtaining the coordinates and size of the drawing area of a component.
+
+> **NOTE：**
+> 
+> - The initial APIs of this class are supported since API version 10.
+> 
+> - In the following API examples, you must first use [getComponentUtils()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcomponentutils) in &gt; **UIContext** to obtain a **ComponentUtils** instance, and then call the APIs using the obtained instance.
 
 **Since:** 10
 
@@ -23,7 +29,11 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 getRectangleById(id: string): componentUtils.ComponentInfo
 ```
 
-Obtains the size, position, translation, scaling, rotation, and affine matrix information of the specified component. &gt; **NOTE：**&gt; &gt; This API should be called after the target component's layout is complete to obtain its size information. It is &gt; recommended that you use this API within onAppear.
+Obtains the size, position, translation, scaling, rotation, and affine matrix information of the specified component.
+
+> **NOTE：**
+> 
+> This API should be called after the target component's layout is complete to obtain its size information. It is &gt; recommended that you use this API within onAppear.
 
 **Since:** 10
 

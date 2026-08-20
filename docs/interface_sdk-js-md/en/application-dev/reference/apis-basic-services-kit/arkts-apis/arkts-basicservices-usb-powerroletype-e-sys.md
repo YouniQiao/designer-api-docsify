@@ -1,4 +1,4 @@
-# PowerRoleType(USB Manager) (System API)
+# PowerRoleType (System API)
 
 Enumerates power role types.
 

@@ -27,7 +27,7 @@ function subscribeToEvent(subscriber: CommonEventSubscriber, callback: Callback<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | subscriber | CommonEventSubscriber | 是 | 表示订阅者对象。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;CommonEventData&gt; | 是 | 表示接收公共事件数据的回调函数。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;CommonEventData&gt; | 是 | 表示接收公共事件数据的回调函数。 |
 
 **返回值：**
 
@@ -41,8 +41,8 @@ function subscribeToEvent(subscriber: CommonEventSubscriber, callback: Callback<
 | --- | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [1500007](../errorcode-CommonEventService.md#1500007-ipc请求发送失败) | Failed to send the message to the common event service. |
-| [1500010](../errorcode-CommonEventService.md#1500010-订阅者数量超限) | The count of subscriber exceeds system specification. |
 | [1500008](../errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) | Failed to initialize the common event service. |
+| [1500010](../errorcode-CommonEventService.md#1500010-订阅者数量超限) | The count of subscriber exceeds system specification. |
 
 **示例**
 

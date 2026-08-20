@@ -1,6 +1,8 @@
 # Window
 
-Represents a window instance, which is the basic unit managed by the window manager. In the following API examples, you must use [getLastWindow()](arkts-arkui-window-getlastwindow-f.md), [createWindow()](arkts-arkui-window-createwindow-f.md), or [findWindow()](arkts-arkui-window-findwindow-f.md) to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
+Represents a window instance, which is the basic unit managed by the window manager.
+
+In the following API examples, you must use [getLastWindow()](arkts-arkui-window-getlastwindow-f.md), [createWindow()](arkts-arkui-window-createwindow-f.md), or [findWindow()](arkts-arkui-window-findwindow-f.md) to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
 
 **Since:** 23
 
@@ -22,7 +24,15 @@ import { window } from '@kit.ArkUI';
 attachLayoutToParentWindow(anchorInfo?: WindowAnchorInfo, attachOptions?: SubWindowAttachOptions): Promise<void>
 ```
 
-Attaches a first-level child window to the main window to maintain a fixed relative position. This API uses a promise to return the result. The relative position is represented by the anchor point offset between the child window and the parent window. The child window and the parent window use the same window anchor point. &gt; **NOTE：**&gt; &gt; - Only first-level child windows can call this API. The child window must be in floating window mode &gt; (that is, the window mode is **window.WindowStatusType.FLOATING**). &gt; &gt; - After the child window calls this API, the display position of the child window immediately follows the &gt; main window and the relative position remains unchanged. In addition, the size and mode changes of the main &gt; window can be listened to. The effect will persist unless the &gt; [detachLayoutToParentWindow()](#detachlayouttoparentwindow) API is called for detaching. &gt; &gt; -After the child window calls this API, calling APIs such as &gt; [moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto), &gt; [maximize()](arkts-arkui-window-window-i.md#maximize), and &gt; [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setfollowparentwindowlayoutenabled) &gt; to change the window position, or dragging and moving or dragging and resizing the child window through mouse &gt; or touch operations will not take effect.
+Attaches a first-level child window to the main window to maintain a fixed relative position. This API uses a promise to return the result. The relative position is represented by the anchor point offset between the child window and the parent window. The child window and the parent window use the same window anchor point.
+
+> **NOTE：**
+> 
+> - Only first-level child windows can call this API. The child window must be in floating window mode &gt; (that is, the window mode is **window.WindowStatusType.FLOATING**).
+> 
+> - After the child window calls this API, the display position of the child window immediately follows the &gt; main window and the relative position remains unchanged. In addition, the size and mode changes of the main &gt; window can be listened to. The effect will persist unless the &gt; [detachLayoutToParentWindow()](#detachlayouttoparentwindow) API is called for detaching.
+> 
+> -After the child window calls this API, calling APIs such as &gt; [moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto), &gt; [maximize()](arkts-arkui-window-window-i.md#maximize), and &gt; [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setfollowparentwindowlayoutenabled) &gt; to change the window position, or dragging and moving or dragging and resizing the child window through mouse &gt; or touch operations will not take effect.
 
 **Since:** 24
 
@@ -51,12 +61,12 @@ Attaches a first-level child window to the main window to maintain a fixed relat
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function attachLayoutToParentWindow can not work correctly due to limited device capabilities. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: 1. Invalid window type. Only subwindows are supported; 2. The current window's parent window is not a main window; 3. Only level-1 subwindows are supported. |
 | [1300010](../errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) | The operation in the current window status is invalid. Possible cause: 1. The subwindow is following its parent window's layout. 2. The subwindow is not in the floating mode. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## bindDialogTarget
 
@@ -91,10 +101,10 @@ Binds the modal window to the target window. After the binding is successful, th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
 **Examples**
 
@@ -176,10 +186,10 @@ Binds the modal window to the target window. After the binding is successful, th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
 **Examples**
 
@@ -268,10 +278,10 @@ Binds the modal window to the target window. After the binding is successful, th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
 **Examples**
 
@@ -341,10 +351,10 @@ Binds the modal window to the target window. After the binding is successful, th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
 **Examples**
 
@@ -394,7 +404,16 @@ export default class ServiceExtAbility extends ServiceExtensionAbility {
 detachLayoutToParentWindow(): Promise<void>
 ```
 
-Detach a first-level child window from the main window to cancel a fixed relative position. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - When the child window calls this API, the child window must be in the attached state. &gt; &gt; - After detached by calling this API, the child window retains its position during attaching. &gt; You can drag the child window to change its size and position. &gt; &gt; - After the detaching, calling APIs such as &gt; [moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto) or &gt; [maximize()](arkts-arkui-window-window-i.md#maximize), and &gt; [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setfollowparentwindowlayoutenabled) &gt; to change the window position, or dragging and moving or dragging and resizing the child window through mouse &gt; or touch operations will take effect.
+Detach a first-level child window from the main window to cancel a fixed relative position. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - When the child window calls this API, the child window must be in the attached state.
+> 
+> - After detached by calling this API, the child window retains its position during attaching.
+> You can drag the child window to change its size and position.
+> 
+> - After the detaching, calling APIs such as &gt; [moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto) or &gt; [maximize()](arkts-arkui-window-window-i.md#maximize), and &gt; [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setfollowparentwindowlayoutenabled) &gt; to change the window position, or dragging and moving or dragging and resizing the child window through mouse &gt; or touch operations will take effect.
 
 **Since:** 24
 
@@ -416,12 +435,12 @@ Detach a first-level child window from the main window to cancel a fixed relativ
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function detachLayoutToParentWindow cannot work correctly due to limited device capabilities. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: 1. Invalid window type. Only subwindows are supported; 2. Only level-1 subwindows are supported. |
 | [1300010](../errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) | The operation in the current window status is invalid. Possible cause: The subwindow is not attached to the main window. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## enableDrag
 
@@ -429,7 +448,9 @@ Detach a first-level child window from the main window to cancel a fixed relativ
 enableDrag(enable: boolean): Promise<void>
 ```
 
-Enables or disables window dragging. This API takes effect only for system windows, application child windows, global floating windows, and modal windows. This API uses a promise to return the result. After window dragging is enabled, the window can be resized using the mouse or touch operations.
+Enables or disables window dragging. This API takes effect only for system windows, application child windows, global floating windows, and modal windows. This API uses a promise to return the result.
+
+After window dragging is enabled, the window can be resized using the mouse or touch operations.
 
 **Since:** 23
 
@@ -455,11 +476,11 @@ Enables or disables window dragging. This API takes effect only for system windo
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 14 - 19 |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: 1.Invalid window type. Only system windows, application child windows, global floating windows and modal windows are supported. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 14 - 19 |
 
 ## getRotationLocked
 
@@ -487,10 +508,10 @@ Checks whether the [system window](../../../windowmanager/window-terminology.md#
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function getRotationLocked can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | 1300029 | This window type is invalid. Possible cause: A non-system window calls this API. |
 
 **Examples**
@@ -530,9 +551,9 @@ Obtains the transition animation controller.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -566,8 +587,8 @@ Hides this window. This API uses an asynchronous callback to return the result. 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 
 **Examples**
 
@@ -610,8 +631,8 @@ Hides this window. This API uses a promise to return the result. This API takes 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 
 **Examples**
 
@@ -632,7 +653,9 @@ promise.then(() => {
 hideNonSystemFloatingWindows(shouldHide: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to hide non-system floating windows (where [windowType](arkts-arkui-window-windowtype-e.md) is **TYPE_FLOAT**). This API uses an asynchronous callback to return the result. A non-system floating window is a floating window created by a non-system application. By default, the main window of a system application can be displayed together with a non-system floating window. This means that the main window may be blocked by an upper-layer non-system floating window. If the **shouldHide** parameter is set to **true**, all non-system floating windows are hidden, so that the main window will never be blocked by a non- system floating window.
+Sets whether to hide non-system floating windows (where [windowType](arkts-arkui-window-windowtype-e.md) is **TYPE_FLOAT**). This API uses an asynchronous callback to return the result.
+
+A non-system floating window is a floating window created by a non-system application. By default, the main window of a system application can be displayed together with a non-system floating window. This means that the main window may be blocked by an upper-layer non-system floating window. If the **shouldHide** parameter is set to **true**, all non-system floating windows are hidden, so that the main window will never be blocked by a non- system floating window.
 
 **Since:** 23
 
@@ -653,12 +676,12 @@ Sets whether to hide non-system floating windows (where [windowType](arkts-arkui
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 **Examples**
 
@@ -711,7 +734,9 @@ export default class EntryAbility extends UIAbility {
 hideNonSystemFloatingWindows(shouldHide: boolean): Promise<void>
 ```
 
-Sets whether to hide non-system floating windows (where [windowType](arkts-arkui-window-windowtype-e.md) is **TYPE_FLOAT**). This API uses a promise to return the result. A non-system floating window is a floating window created by a non-system application. By default, the main window of a system application can be displayed together with a non-system floating window. This means that the main window may be blocked by an upper-layer non-system floating window. If the **shouldHide** parameter is set to **true**, all non-system floating windows are hidden, so that the main window will never be blocked by a non- system floating window.
+Sets whether to hide non-system floating windows (where [windowType](arkts-arkui-window-windowtype-e.md) is **TYPE_FLOAT**). This API uses a promise to return the result.
+
+A non-system floating window is a floating window created by a non-system application. By default, the main window of a system application can be displayed together with a non-system floating window. This means that the main window may be blocked by an upper-layer non-system floating window. If the **shouldHide** parameter is set to **true**, all non-system floating windows are hidden, so that the main window will never be blocked by a non- system floating window.
 
 **Since:** 23
 
@@ -737,12 +762,12 @@ Sets whether to hide non-system floating windows (where [windowType](arkts-arkui
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 **Examples**
 
@@ -815,10 +840,10 @@ Hides this window and plays an animation during the process. This API uses an as
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 
 **Examples**
 
@@ -861,10 +886,10 @@ Hides this window and plays an animation during the process. This API uses a pro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 
 **Examples**
 
@@ -905,11 +930,11 @@ Checks whether the main window is in full-screen mode across multiple displays. 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 **Examples**
 
@@ -954,11 +979,11 @@ Unsubscribes from events indicating whether the main window is in full-screen mo
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A nonsystem application calls a system API. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A nonsystem application calls a system API. |
 
 ## off('mainWindowFullScreenAcrossDisplaysChanged')
 
@@ -987,11 +1012,11 @@ Unsubscribes from events indicating whether the main window is in full-screen mo
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created; 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 **Examples**
 
@@ -1037,11 +1062,11 @@ Subscribes to events indicating whether the main window is in full-screen mode a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A nonsystem application calls a system API. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A nonsystem application calls a system API. |
 
 ## on('mainWindowFullScreenAcrossDisplaysChanged')
 
@@ -1070,11 +1095,11 @@ Subscribes to events indicating whether the main window is in full-screen mode a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 **Examples**
 
@@ -1115,10 +1140,10 @@ Sets the opacity for this window. This API can be used only when you [customize 
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -1136,7 +1161,9 @@ try {
 raiseAboveTarget(windowId: int, callback: AsyncCallback<void>): void
 ```
 
-Raises a child window above a target child window. This API uses an asynchronous callback to return the result. Before calling this API, ensure that the child window to raise and the target child window have been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed for each.
+Raises a child window above a target child window. This API uses an asynchronous callback to return the result.
+
+Before calling this API, ensure that the child window to raise and the target child window have been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed for each.
 
 **Since:** 23
 
@@ -1157,12 +1184,12 @@ Raises a child window above a target child window. This API uses an asynchronous
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: Mandatory parameters are left unspecified. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. The window or target window is not shown. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only subwindows are supported. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [1300009](../errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. Possible cause: The parent window does not exist or has been destroyed. |
 
 **Examples**
@@ -1213,7 +1240,9 @@ export default class EntryAbility extends UIAbility {
 raiseAboveTarget(windowId: int): Promise<void>
 ```
 
-Raises a child window above a target child window. This API uses a promise to return the result. Before calling this API, ensure that the child window to raise and the target child window have been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed for each.
+Raises a child window above a target child window. This API uses a promise to return the result.
+
+Before calling this API, ensure that the child window to raise and the target child window have been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed for each.
 
 **Since:** 23
 
@@ -1239,12 +1268,12 @@ Raises a child window above a target child window. This API uses a promise to re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: Mandatory parameters are left unspecified. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. The window or target window is not shown. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only subwindows are supported. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [1300009](../errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. Possible cause: The parent window does not exist or has been destroyed. |
 
 **Examples**
@@ -1293,7 +1322,13 @@ export default class EntryAbility extends UIAbility {
 raiseMainWindowAboveTarget(windowId: int): Promise<void>
 ```
 
-Moves the main window above another main window within the same application, with child windows following their parents' layer change. This API uses a promise to return the result. This API can be called only by the main window of a system application. You need to pass the ID of the target main window. Both the calling window and the target window must be in the same application process, displayed on the same physical screen, below the lock screen layer, not topmost, not modal, and have no application-modal child windows. - If the application's main window or its child windows currently have focus, calling this API to lower the layer will cause the window to lose focus automatically, and the highest-layered application window will gain focus. - If the main window calls this API to move above the current focused window, the highest-layered window among the raised main window and its child windows will gain focus. If the main window calls this API without moving above the current focused window, the focus remains unchanged.
+Moves the main window above another main window within the same application, with child windows following their parents' layer change. This API uses a promise to return the result.
+
+This API can be called only by the main window of a system application.
+
+You need to pass the ID of the target main window. Both the calling window and the target window must be in the same application process, displayed on the same physical screen, below the lock screen layer, not topmost, not modal, and have no application-modal child windows.
+
+- If the application's main window or its child windows currently have focus, calling this API to lower the layer will cause the window to lose focus automatically, and the highest-layered application window will gain focus. - If the main window calls this API to move above the current focused window, the highest-layered window among the raised main window and its child windows will gain focus. If the main window calls this API without moving above the current focused window, the focus remains unchanged.
 
 **Since:** 23
 
@@ -1319,12 +1354,12 @@ Moves the main window above another main window within the same application, wit
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. 2. Invalid parameter length. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported, and target must not be modal or topmost. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. 2. Invalid parameter length. |
 
 **Examples**
 
@@ -1454,7 +1489,9 @@ export default class RaiseMainWindowAbility extends UIAbility {
 raiseToAppTop(callback: AsyncCallback<void>): void
 ```
 
-Raises the application child window to the top layer of the application. This API uses an asynchronous callback to return the result. Before calling this API, ensure that the child window has been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed.
+Raises the application child window to the top layer of the application. This API uses an asynchronous callback to return the result.
+
+Before calling this API, ensure that the child window has been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed.
 
 **Since:** 23
 
@@ -1474,10 +1511,10 @@ Raises the application child window to the top layer of the application. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. The window is not shown. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only subwindows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. The window is not shown. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only subwindows are supported. |
 | [1300009](../errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. Possible cause: The parent window does not exist or has been destroyed. |
 
 **Examples**
@@ -1519,7 +1556,11 @@ export default class EntryAbility extends UIAbility {
 requestFocus(isFocused: boolean): Promise<void>
 ```
 
-Allows this window to proactively request to gain or lose focus. This API uses a promise to return the result. A value is returned as long as the API is successfully called. The return value does not indicate that the window has gained or lost focus. You can use [on('windowEvent')](arkts-arkui-window-window-i.md#onrotationchange) to listen for the focus status of the window. When a focus request is sent, whether the window can successfully gain focus depends on its capability of being focused and its current visibility. To gain focus, the window must be capable of receiving focus and in a visible state (actively displayed and not hidden or destroyed). Conversely, once a blur request is sent, the window will lose focus without any conditions.
+Allows this window to proactively request to gain or lose focus. This API uses a promise to return the result. A value is returned as long as the API is successfully called. The return value does not indicate that the window has gained or lost focus. You can use [on('windowEvent')](arkts-arkui-window-window-i.md#onrotationchange) to listen for the focus status of the window.
+
+When a focus request is sent, whether the window can successfully gain focus depends on its capability of being focused and its current visibility. To gain focus, the window must be capable of receiving focus and in a visible state (actively displayed and not hidden or destroyed).
+
+Conversely, once a blur request is sent, the window will lose focus without any conditions.
 
 **Since:** 23
 
@@ -1545,11 +1586,11 @@ Allows this window to proactively request to gain or lose focus. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, non-system application uses system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, non-system application uses system API. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
 **Examples**
 
@@ -1591,10 +1632,10 @@ Sets the rotation parameters for this window. This API can be used only when you
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -1639,10 +1680,10 @@ Sets the scale parameters for this window. This API can be used only when you [c
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -1666,7 +1707,11 @@ try {
 setBackdropBlur(radius: double): void
 ```
 
-Blurs the background of this window. The window background refers to the lower-layer area covered by the window, which is the same as the window size. To make the blur effect visible, you must set the window background transparent by calling [setWindowBackgroundColor](arkts-arkui-window-window-i.md#setwindowbackgroundcolor).
+Blurs the background of this window.
+
+The window background refers to the lower-layer area covered by the window, which is the same as the window size.
+
+To make the blur effect visible, you must set the window background transparent by calling [setWindowBackgroundColor](arkts-arkui-window-window-i.md#setwindowbackgroundcolor).
 
 **Since:** 23
 
@@ -1686,10 +1731,10 @@ Blurs the background of this window. The window background refers to the lower-l
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -1769,10 +1814,10 @@ Blurs this window.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -1810,10 +1855,10 @@ Sets the radius of the rounded corners for this window.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Invalid window type. Only subwindows and float windows are supported. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -1831,7 +1876,11 @@ try {
 setDefaultDensityEnabled(enabled: boolean): void
 ```
 
-Sets whether the window uses the default density of the current screen. In the stage model, you need to call this API after [loadContent()](arkts-arkui-window-window-i.md#loadcontent) or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent). If this API is not called, the default density is not used. If this API, [setDefaultDensityEnabled(true)](arkts-arkui-window-windowstage-i.md#setdefaultdensityenabled) , and [setCustomDensity](arkts-arkui-window-windowstage-i.md#setcustomdensity) are all called, the setting from the last called API will be applied.
+Sets whether the window uses the default density of the current screen. In the stage model, you need to call this API after [loadContent()](arkts-arkui-window-window-i.md#loadcontent) or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent).
+
+If this API is not called, the default density is not used.
+
+If this API, [setDefaultDensityEnabled(true)](arkts-arkui-window-windowstage-i.md#setdefaultdensityenabled) , and [setCustomDensity](arkts-arkui-window-windowstage-i.md#setcustomdensity) are all called, the setting from the last called API will be applied.
 
 **Since:** 23
 
@@ -1851,9 +1900,9 @@ Sets whether the window uses the default density of the current screen. In the s
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 **Examples**
 
@@ -1895,10 +1944,10 @@ Sets whether the main window is forbidden to move in split-screen mode. This API
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
 **Examples**
 
@@ -1971,10 +2020,10 @@ Sets whether the main window is forbidden to move in split-screen mode. This API
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
 **Examples**
 
@@ -2043,11 +2092,11 @@ Adds or deletes the handwriting flag for this window. After this flag is added, 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
 **Examples**
 
@@ -2073,7 +2122,9 @@ try {
 setMainWindowRaiseByClickEnabled(enable: boolean): Promise<void>
 ```
 
-Sets whether to enable the main window to raise itself by click. This API uses a promise to return the result. By default, clicking the main window raises both the main window and its associated child windows. Disabling this feature (by passing **false**) prevents the main window and its child windows from being raised when the main window is clicked, preserving their current state. However, clicking on a child window still raises both the child window and the main window together.
+Sets whether to enable the main window to raise itself by click. This API uses a promise to return the result.
+
+By default, clicking the main window raises both the main window and its associated child windows. Disabling this feature (by passing **false**) prevents the main window and its child windows from being raised when the main window is clicked, preserving their current state. However, clicking on a child window still raises both the child window and the main window together.
 
 **Since:** 23
 
@@ -2099,11 +2150,11 @@ Sets whether to enable the main window to raise itself by click. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. The window is not shown. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 **Examples**
 
@@ -2144,7 +2195,11 @@ export default class EntryAbility extends UIAbility {
 setRaiseByClickEnabled(enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to enable a child window to raise itself by click. This API uses an asynchronous callback to return the result. Generally, when a user clicks a child window, the child window is displayed on the top. If the **enable** parameter is set to **false**, the child window is not displayed on the top when being clicked. Before calling this API, ensure that the child window has been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed.
+Sets whether to enable a child window to raise itself by click. This API uses an asynchronous callback to return the result.
+
+Generally, when a user clicks a child window, the child window is displayed on the top. If the **enable** parameter is set to **false**, the child window is not displayed on the top when being clicked.
+
+Before calling this API, ensure that the child window has been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed.
 
 **Since:** 23
 
@@ -2165,12 +2220,12 @@ Sets whether to enable a child window to raise itself by click. This API uses an
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. The window is not shown. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only subwindows are supported. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [1300009](../errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. Possible cause: The parent window does not exist or has been destroyed. |
 
 **Examples**
@@ -2216,7 +2271,22 @@ export default class EntryAbility extends UIAbility {
 setRotationLocked(locked: boolean): Promise<void>
 ```
 
-Allows a [system window](../../../windowmanager/window-terminology.md#system-window) to lock or unlock its own screen-rotation behavior. When locked, the window's orientation remains unchanged. When unlocked, the window's orientation follows the main window's orientation, the system rotation-lock button, and the device's physical rotation sensor. If this API is called by a non-system window, error code 1300029 is thrown. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - If the main window sets the display orientation via &gt; [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation) &gt; while rotation is locked, the window restores the last orientation request when brought to the foreground after &gt; unlocking. &gt; &gt; - If the system window sets the display orientation via &gt; [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation) &gt; while rotation is locked, the window restores the last orientation request when brought to the foreground with &gt; the highest level after unlocking. The rotation lock set by a lower-level window using **setRotationLocked** &gt; does not hinder the system window at a higher level to set the display orientation by calling &gt; [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation) &gt; . &gt; &gt; - If the sensor orientation changes while rotation is locked, the last sensor orientation is restored after &gt; unlocking. &gt; &gt; - If the application calls &gt; [setOrientation()](arkts-arkui-screen-screen-i-sys.md#setorientation) &gt; to set the screen orientation while rotation is locked, that screen?orientation setting is ignored. &gt; &gt; - When rotation is unlocked, the application's display orientation is determined based on the main window's &gt; display orientation set via &gt; [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation) &gt; , the sensor orientation, and more. For details, see &gt; [Window Rotation Overview](../../../windowmanager/window-rotation.md#overview). &gt; &gt; - The API does not affect the launch orientation set by the **orientation** under &gt; [**abilities** in the module.json5 file](../../../quick-start/module-configuration-file.md#abilities) of the &gt; application.
+Allows a [system window](../../../windowmanager/window-terminology.md#system-window) to lock or unlock its own screen-rotation behavior. When locked, the window's orientation remains unchanged. When unlocked, the window's orientation follows the main window's orientation, the system rotation-lock button, and the device's physical rotation sensor. If this API is called by a non-system window, error code 1300029 is thrown. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - If the main window sets the display orientation via &gt; [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation) &gt; while rotation is locked, the window restores the last orientation request when brought to the foreground after &gt; unlocking.
+> 
+> - If the system window sets the display orientation via &gt; [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation) &gt; while rotation is locked, the window restores the last orientation request when brought to the foreground with &gt; the highest level after unlocking. The rotation lock set by a lower-level window using **setRotationLocked**
+> does not hinder the system window at a higher level to set the display orientation by calling &gt; [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation) &gt; .
+> 
+> - If the sensor orientation changes while rotation is locked, the last sensor orientation is restored after &gt; unlocking.
+> 
+> - If the application calls &gt; [setOrientation()](arkts-arkui-screen-screen-i-sys.md#setorientation) &gt; to set the screen orientation while rotation is locked, that screen?orientation setting is ignored.
+> 
+> - When rotation is unlocked, the application's display orientation is determined based on the main window's &gt; display orientation set via &gt; [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation) &gt; , the sensor orientation, and more. For details, see &gt; [Window Rotation Overview](../../../windowmanager/window-rotation.md#overview).
+> 
+> - The API does not affect the launch orientation set by the **orientation** under &gt; [**abilities** in the module.json5 file](../../../quick-start/module-configuration-file.md#abilities) of the &gt; application.
 
 **Since:** 23
 
@@ -2242,10 +2312,10 @@ Allows a [system window](../../../windowmanager/window-terminology.md#system-win
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function setRotationLocked can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | 1300029 | This window type is invalid. |
 
 **Examples**
@@ -2291,10 +2361,10 @@ Sets the shadow for the window borders.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, modal windows and subwindows are supported. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -2312,7 +2382,9 @@ try {
 setSingleFrameComposerEnabled(enable: boolean): Promise<void>
 ```
 
-Enables or disables the single-frame composer. This API uses a promise to return the result. The single-frame composer is mainly used in scenarios that require extremely low interaction latency. It reduces the screen display latency of the rendering node.
+Enables or disables the single-frame composer. This API uses a promise to return the result.
+
+The single-frame composer is mainly used in scenarios that require extremely low interaction latency. It reduces the screen display latency of the rendering node.
 
 **Since:** 23
 
@@ -2338,10 +2410,10 @@ Enables or disables the single-frame composer. This API uses a promise to return
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 **Examples**
 
@@ -2367,7 +2439,9 @@ try {
 setSnapshotSkip(isSkip: boolean): void
 ```
 
-Sets whether to ignore this window during screen capture, recording, or casting. This API is typically used in situations where you want to prevent screen capture, recording, or casting. If you want the window to always be ignored during screen capture, recording, or casting while it is in the foreground, listen for window lifecycle changes using [on('windowEvent')](arkts-arkui-window-window-i.md#onrotationchange) . Set **isSkip** to **false** when the window is in the background and **true** when it is in the foreground.
+Sets whether to ignore this window during screen capture, recording, or casting. This API is typically used in situations where you want to prevent screen capture, recording, or casting.
+
+If you want the window to always be ignored during screen capture, recording, or casting while it is in the foreground, listen for window lifecycle changes using [on('windowEvent')](arkts-arkui-window-window-i.md#onrotationchange) . Set **isSkip** to **false** when the window is in the background and **true** when it is in the foreground.
 
 **Since:** 23
 
@@ -2387,9 +2461,9 @@ Sets whether to ignore this window during screen capture, recording, or casting.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## setTitleButtonVisible
 
@@ -2397,7 +2471,9 @@ Sets whether to ignore this window during screen capture, recording, or casting.
 setTitleButtonVisible(isMaximizeVisible: boolean, isMinimizeVisible: boolean, isSplitVisible: boolean): void
 ```
 
-Shows or hides the maximize, minimize, and split-screen buttons on the title bar of the main window. This API takes effect only for the title bar buttons (maximize, minimize, and split-screen) that are available in the current scenario.
+Shows or hides the maximize, minimize, and split-screen buttons on the title bar of the main window.
+
+This API takes effect only for the title bar buttons (maximize, minimize, and split-screen) that are available in the current scenario.
 
 **Since:** 23
 
@@ -2419,11 +2495,11 @@ Shows or hides the maximize, minimize, and split-screen buttons on the title bar
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 **Examples**
 
@@ -2495,12 +2571,12 @@ Called by the main window to place the window above all the other windows. This 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 **Examples**
 
@@ -2562,11 +2638,11 @@ Sets the touchable areas for this window. By default, the entire window is touch
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: Invalid parameter range. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**Applicable version:** 26.0.0 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 - 24 |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: Invalid parameter range. |
 
 ## setWakeUpScreen
 
@@ -2594,10 +2670,10 @@ Wakes up the screen.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
 **Examples**
 
@@ -2637,10 +2713,10 @@ Adds or deletes the watermark flag for this window. This API uses an asynchronou
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300008](../errorcode-window.md#1300008-display-device-exception) | The display device is abnormal. |
 
 **Examples**
@@ -2695,11 +2771,11 @@ Adds or deletes the watermark flag for this window. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300008](../errorcode-window.md#1300008-display-device-exception) | The display device is abnormal. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -2725,7 +2801,9 @@ try {
 setWindowContainerModalColor(activeColor: string, inactiveColor: string): void
 ```
 
-Sets the background color of the main window container for both when it has focus and when it does not. In the stage model, you need to call this API after [loadContent()](arkts-arkui-window-window-i.md#loadcontent) or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent). The background color you set here covers the entire window, including both the title bar and the content area. If you also use [setWindowBackgroundColor()](arkts-arkui-window-window-i.md#setwindowbackgroundcolor), the content area shows the window background color, whereas the title bar shows the container background color.
+Sets the background color of the main window container for both when it has focus and when it does not. In the stage model, you need to call this API after [loadContent()](arkts-arkui-window-window-i.md#loadcontent) or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent).
+
+The background color you set here covers the entire window, including both the title bar and the content area. If you also use [setWindowBackgroundColor()](arkts-arkui-window-window-i.md#setwindowbackgroundcolor), the content area shows the window background color, whereas the title bar shows the container background color.
 
 **Since:** 23
 
@@ -2749,11 +2827,11 @@ Sets the background color of the main window container for both when it has focu
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**Applicable version:** 26.0.0 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 20 - 24 |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**Applicable version:** 26.0.0 and later |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 20 - 24 |
 
 **Examples**
 
@@ -2826,10 +2904,10 @@ Sets the mode of the main window. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Invalid window type. Only main windows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Invalid window type. Only main windows are supported. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
 **Examples**
 
@@ -2893,10 +2971,10 @@ Sets the mode of the main window. This API uses an asynchronous callback to retu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Invalid window type. Only main windows are supported. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
 **Examples**
 
@@ -3046,10 +3124,10 @@ Shows this window and plays an animation during the process. This API uses an as
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 
 **Examples**
 
@@ -3092,10 +3170,10 @@ Shows this window and plays an animation during the process. This API uses a pro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 
 **Examples**
 
@@ -3144,13 +3222,13 @@ Starts moving this window. The window moves along with the cursor only when this
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
-| [1300001](../errorcode-window.md#1300001-repeated-operation) | Repeated operation. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: Invalid parameter range. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type, main windows are not supported in non-free window mode. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300001](../errorcode-window.md#1300001-repeated-operation) | Repeated operation. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type, main windows are not supported in non-free window mode. |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: Invalid parameter range. |
 
 ## translate
 
@@ -3178,10 +3256,10 @@ Sets the translation parameters for this window. This API can be used only when 
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 **Examples**
 

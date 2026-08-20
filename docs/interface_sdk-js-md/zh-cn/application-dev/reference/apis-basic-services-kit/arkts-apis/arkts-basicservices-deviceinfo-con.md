@@ -6,7 +6,29 @@
 const ODID: string
 ```
 
-ODID（Open Developer Identifier，开发者匿名设备标识符）。 **ODID值会在以下场景重新生成：** 手机恢复出厂设置。 同一设备上同一个开发者(developerId相同)的应用全部卸载后重新安装时。 **ODID生成规则：** 根据签名信息里developerId解析出的groupId生成，developerId规则为groupId.developerId，若无groupId则取整个developerId作为groupId。 同一设备上运行的同一个开发者(developerId相同)的应用，ODID相同。 同一个设备上不同开发者(developerId不同)的应用，ODID不同。 不同设备上同一个开发者(developerId相同)的应用，ODID不同。 不同设备上不同开发者(developerId不同)的应用，ODID不同。 **说明：**数据长度为37字节(包含结束符)。 示例：1234a567-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+ODID（Open Developer Identifier，开发者匿名设备标识符）。
+
+**ODID值会在以下场景重新生成：**
+
+手机恢复出厂设置。
+
+同一设备上同一个开发者(developerId相同)的应用全部卸载后重新安装时。
+
+**ODID生成规则：**
+
+根据签名信息里developerId解析出的groupId生成，developerId规则为groupId.developerId，若无groupId则取整个developerId作为groupId。
+
+同一设备上运行的同一个开发者(developerId相同)的应用，ODID相同。
+
+同一个设备上不同开发者(developerId不同)的应用，ODID不同。
+
+不同设备上同一个开发者(developerId相同)的应用，ODID不同。
+
+不同设备上不同开发者(developerId不同)的应用，ODID不同。
+
+**说明：**数据长度为37字节(包含结束符)。
+
+示例：1234a567-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 
 **起始版本：** 12
 
@@ -20,7 +42,9 @@ ODID（Open Developer Identifier，开发者匿名设备标识符）。 **ODID�
 const abiList: string
 ```
 
-应用二进制接口（Abi）。 示例：arm64-v8a
+应用二进制接口（Abi）。
+
+示例：arm64-v8a
 
 **起始版本：** 6
 
@@ -34,7 +58,9 @@ const abiList: string
 const bootCount: number
 ```
 
-当前设备重启次数，获取失败时返回-1。 示例：100
+当前设备重启次数，获取失败时返回-1。
+
+示例：100
 
 **起始版本：** 21
 
@@ -48,7 +74,9 @@ const bootCount: number
 const bootloaderVersion: string
 ```
 
-Bootloader版本号，用于标识设备启动引导程序的版本信息。 示例：bootloader
+Bootloader版本号，用于标识设备启动引导程序的版本信息。
+
+示例：bootloader
 
 **起始版本：** 6
 
@@ -78,7 +106,9 @@ const brand: string
 const buildHost: string
 ```
 
-构建主机。 示例：default
+构建主机。
+
+示例：default
 
 **起始版本：** 6
 
@@ -92,7 +122,9 @@ const buildHost: string
 const buildRootHash: string
 ```
 
-构建版本Hash。 示例：default
+构建版本Hash。
+
+示例：default
 
 **起始版本：** 6
 
@@ -106,7 +138,9 @@ const buildRootHash: string
 const buildTime: string
 ```
 
-构建时间。 示例：default
+构建时间。
+
+示例：default
 
 **起始版本：** 6
 
@@ -120,7 +154,9 @@ const buildTime: string
 const buildType: string
 ```
 
-构建类型。 示例：default
+构建类型。
+
+示例：default
 
 **起始版本：** 6
 
@@ -134,7 +170,9 @@ const buildType: string
 const buildUser: string
 ```
 
-构建用户。 示例：default
+构建用户。
+
+示例：default
 
 **起始版本：** 6
 
@@ -148,7 +186,9 @@ const buildUser: string
 const buildVersion: number
 ```
 
-Build版本号，标识编译构建的版本号，值为osFullName中的第四位数值，建议直接使用deviceInfo.buildVersion获取，可提升效率，不建议开发者自主解析osFullName获取。 示例：1
+Build版本号，标识编译构建的版本号，值为osFullName中的第四位数值，建议直接使用deviceInfo.buildVersion获取，可提升效率，不建议开发者自主解析osFullName获取。
+
+示例：1
 
 **起始版本：** 6
 
@@ -162,7 +202,11 @@ Build版本号，标识编译构建的版本号，值为osFullName中的第四�
 const chipType: string
 ```
 
-当前设备CPU芯片型号。 **使用场景**：用于根据芯片型号进行性能适配、设备特性识别、兼容性检查等场景，不同芯片型号可能具有不同的GPU性能、AI加速能力等特性。 示例：xxxxx
+当前设备CPU芯片型号。
+
+**使用场景**：用于根据芯片型号进行性能适配、设备特性识别、兼容性检查等场景，不同芯片型号可能具有不同的GPU性能、AI加速能力等特性。
+
+示例：xxxxx
 
 **起始版本：** 21
 
@@ -176,7 +220,9 @@ const chipType: string
 const deviceColor: string
 ```
 
-当前设备颜色。如果无法获取，则返回空字符串 示例：gold
+当前设备颜色。如果无法获取，则返回空字符串
+
+示例：gold
 
 **起始版本：** 26.0.0
 
@@ -192,7 +238,9 @@ const deviceColor: string
 const deviceType: string
 ```
 
-设备类型。详细请参考[deviceTypes标签](../../../quick-start/module-configuration-file.md#devicetypes标签)。 示例：<!--RP1-->wearable<!--RP1End-->
+设备类型。详细请参考[deviceTypes标签](../../../quick-start/module-configuration-file.md#devicetypes标签)。
+
+示例：<!--RP1-->wearable<!--RP1End-->
 
 **起始版本：** 6
 
@@ -208,7 +256,13 @@ const deviceType: string
 const diskSN: string
 ```
 
-硬盘序列号，该接口在执行期间会拉起临时进程，当系统负载较高时，可能引发阻塞风险。为确保应用主线程的响应性能，建议避免在主线程中调用。设备信息因设备而异且固定不变，可在首次获取后缓存在本地，避免每次使用时重复获取，以提升性能。 **说明：**该字段只能在部分2in1设备上进行查询，其他设备查询结果为空。 需要权限：ohos.permission.ACCESS_DISK_PHY_INFO (该权限只允许系统应用及企业类应用申请) 示例：2502EM400567
+硬盘序列号，该接口在执行期间会拉起临时进程，当系统负载较高时，可能引发阻塞风险。为确保应用主线程的响应性能，建议避免在主线程中调用。设备信息因设备而异且固定不变，可在首次获取后缓存在本地，避免每次使用时重复获取，以提升性能。
+
+**说明：**该字段只能在部分2in1设备上进行查询，其他设备查询结果为空。
+
+需要权限：ohos.permission.ACCESS_DISK_PHY_INFO (该权限只允许系统应用及企业类应用申请)
+
+示例：2502EM400567
 
 **起始版本：** 15
 
@@ -224,7 +278,9 @@ const diskSN: string
 const displayVersion: string
 ```
 
-产品版本。 示例：<!--RP8-->XXX X.X.X.X<!--RP8End-->
+产品版本。
+
+示例：<!--RP8-->XXX X.X.X.X<!--RP8End-->
 
 **起始版本：** 6
 
@@ -238,7 +294,9 @@ const displayVersion: string
 const distributionOSApiName: string
 ```
 
-发行版系统API版本名称<!--Del-->，由发行方定义<!--DelEnd-->。 <!--RP16--> **说明：**不建议用于版本号判断。 示例：5.0.1<!--RP16End-->
+发行版系统API版本名称<!--Del-->，由发行方定义<!--DelEnd-->。
+
+<!--RP16--> **说明：**不建议用于版本号判断。 示例：5.0.1<!--RP16End-->
 
 **起始版本：** 13
 
@@ -252,7 +310,9 @@ const distributionOSApiName: string
 const distributionOSApiVersion: number
 ```
 
-发行版系统API版本<!--Del-->，由发行方定义<!--DelEnd-->。<!--RP15--><!--RP15End--> 示例：50001
+发行版系统API版本<!--Del-->，由发行方定义<!--DelEnd-->。<!--RP15--><!--RP15End-->
+
+示例：50001
 
 **起始版本：** 10
 
@@ -266,7 +326,9 @@ const distributionOSApiVersion: number
 const distributionOSName: string
 ```
 
-发行版系统名称<!--Del-->，由发行方定义<!--DelEnd-->。 示例：OpenHarmony
+发行版系统名称<!--Del-->，由发行方定义<!--DelEnd-->。
+
+示例：OpenHarmony
 
 **起始版本：** 10
 
@@ -280,7 +342,9 @@ const distributionOSName: string
 const distributionOSReleaseType: string
 ```
 
-发行版系统类型<!--Del-->，由发行方定义<!--DelEnd-->。 示例：Release
+发行版系统类型<!--Del-->，由发行方定义<!--DelEnd-->。
+
+示例：Release
 
 **起始版本：** 10
 
@@ -294,7 +358,9 @@ const distributionOSReleaseType: string
 const distributionOSVersion: string
 ```
 
-发行版系统版本号<!--Del-->，由发行方定义<!--DelEnd-->。<!--RP11--><!--RP11End--> 示例：5.0.0
+发行版系统版本号<!--Del-->，由发行方定义<!--DelEnd-->。<!--RP11--><!--RP11End-->
+
+示例：5.0.0
 
 **起始版本：** 10
 
@@ -308,7 +374,9 @@ const distributionOSVersion: string
 const featureVersion: number
 ```
 
-Feature版本号，标识规划的新特性版本，值为osFullName中的第三位数值，建议直接使用deviceInfo.featureVersion获取，可提升效率，不建议开发者自主解析osFullName获取。 示例：0
+Feature版本号，标识规划的新特性版本，值为osFullName中的第三位数值，建议直接使用deviceInfo.featureVersion获取，可提升效率，不建议开发者自主解析osFullName获取。
+
+示例：0
 
 **起始版本：** 6
 
@@ -322,7 +390,9 @@ Feature版本号，标识规划的新特性版本，值为osFullName中的第三
 const firstApiVersion: number
 ```
 
-首个版本系统软件API版本。 示例：3
+首个版本系统软件API版本。
+
+示例：3
 
 **起始版本：** 6
 
@@ -336,7 +406,9 @@ const firstApiVersion: number
 const hardwareModel: string
 ```
 
-硬件版本号。 示例：<!--RP6-->TASA00CVN1<!--RP6End-->
+硬件版本号。
+
+示例：<!--RP6-->TASA00CVN1<!--RP6End-->
 
 **起始版本：** 6
 
@@ -350,7 +422,13 @@ const hardwareModel: string
 const hardwareProfile: string
 ```
 
-硬件Profile。 **说明：** 从API version 6 开始支持，从API version 9 开始废弃，建议使用[系统能力SystemCapability](../../../reference/syscap.md)替代。 示例：default
+硬件Profile。
+
+**说明：**
+
+从API version 6 开始支持，从API version 9 开始废弃，建议使用[系统能力SystemCapability](../../../reference/syscap.md)替代。
+
+示例：default
 
 **起始版本：** 6
 
@@ -366,7 +444,9 @@ const hardwareProfile: string
 const incrementalVersion: string
 ```
 
-差异版本号，是编译时生成的ohos的版本号。 示例：6.1.1.120
+差异版本号，是编译时生成的ohos的版本号。
+
+示例：6.1.1.120
 
 **起始版本：** 6
 
@@ -380,7 +460,9 @@ const incrementalVersion: string
 const majorVersion: number
 ```
 
-Major版本号，随主版本更新增加，值为osFullName中的第一位数值，建议直接使用deviceInfo.majorVersion获取，可提升效率，不建议开发者自主解析osFullName获取。 示例：5
+Major版本号，随主版本更新增加，值为osFullName中的第一位数值，建议直接使用deviceInfo.majorVersion获取，可提升效率，不建议开发者自主解析osFullName获取。
+
+示例：5
 
 **起始版本：** 6
 
@@ -408,7 +490,9 @@ const manufacture: string
 const marketName: string
 ```
 
-外部产品系列。 示例：<!--RP2-->Mate XX<!--RP2End-->
+外部产品系列。
+
+示例：<!--RP2-->Mate XX<!--RP2End-->
 
 **起始版本：** 6
 
@@ -422,7 +506,9 @@ const marketName: string
 const osFullName: string
 ```
 
-系统版本，版本格式<!--RP12-->OpenHarmony-x.x.x.x，其中x表示数字占位符。<!--RP12End-->如需获取版本号各段数值，建议直接使用majorVersion、seniorVersion、featureVersion、buildVersion字段，可提升效率，不建议解析osFullName获取。 示例：<!--RP10-->OpenHarmony-5.0.0.1<!--RP10End-->
+系统版本，版本格式<!--RP12-->OpenHarmony-x.x.x.x，其中x表示数字占位符。<!--RP12End-->如需获取版本号各段数值，建议直接使用majorVersion、seniorVersion、featureVersion、buildVersion字段，可提升效率，不建议解析osFullName获取。
+
+示例：<!--RP10-->OpenHarmony-5.0.0.1<!--RP10End-->
 
 **起始版本：** 6
 
@@ -438,7 +524,15 @@ const osFullName: string
 const osReleaseType: string
 ```
 
-系统的发布类型，取值为： - Canary：面向特定开发者发布的早期预览版本，不承诺API稳定性。 - Beta：面向开发者公开发布的Beta版本，不承诺API稳定性。 - Release：面向开发者公开发布的正式版本，承诺API稳定性。 示例：<!--RP9-->Canary/Beta/Release<!--RP9End-->
+系统的发布类型，取值为：
+
+- Canary：面向特定开发者发布的早期预览版本，不承诺API稳定性。
+
+- Beta：面向开发者公开发布的Beta版本，不承诺API稳定性。
+
+- Release：面向开发者公开发布的正式版本，承诺API稳定性。
+
+示例：<!--RP9-->Canary/Beta/Release<!--RP9End-->
 
 **起始版本：** 6
 
@@ -452,7 +546,11 @@ const osReleaseType: string
 const performanceClass: PerformanceClassLevel
 ```
 
-描述设备能力等级，基于CPU、内存、存储读写性能和屏幕分辨率等因素综合评估。 **使用场景**：用于根据设备能力进行性能适配，如调整动画复杂度、选择不同质量的资源、动态控制功能特性等。 示例：0
+描述设备能力等级，基于CPU、内存、存储读写性能和屏幕分辨率等因素综合评估。
+
+**使用场景**：用于根据设备能力进行性能适配，如调整动画复杂度、选择不同质量的资源、动态控制功能特性等。
+
+示例：0
 
 **起始版本：** 19
 
@@ -466,7 +564,9 @@ const performanceClass: PerformanceClassLevel
 const productModel: string
 ```
 
-认证型号。 示例：<!--RP4-->TAS-AL00<!--RP4End-->
+认证型号。
+
+示例：<!--RP4-->TAS-AL00<!--RP4End-->
 
 **起始版本：** 6
 
@@ -482,7 +582,9 @@ const productModel: string
 const productModelAlias: string
 ```
 
-认证型号别名。 示例：TAS-AL00
+认证型号别名。
+
+示例：TAS-AL00
 
 **起始版本：** 14
 
@@ -498,7 +600,9 @@ const productModelAlias: string
 const productSeries: string
 ```
 
-产品系列。 示例：<!--RP3-->TAS<!--RP3End-->
+产品系列。
+
+示例：<!--RP3-->TAS<!--RP3End-->
 
 **起始版本：** 6
 
@@ -512,7 +616,9 @@ const productSeries: string
 const sdkApiVersion: number
 ```
 
-系统软件API版本。 示例：12
+系统软件API版本。
+
+示例：12
 
 **起始版本：** 6
 
@@ -528,7 +634,11 @@ const sdkApiVersion: number
 const sdkMinorApiVersion: number
 ```
 
-系统软件Minor API版本。从API 26.0.0 版本开始，系统API版本格式：sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion。 26.0.0 示例：0
+系统软件Minor API版本。从API 26.0.0 版本开始，系统API版本格式：sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion。
+
+26.0.0
+
+示例： 如果系统API版本为26.0.2，则sdkMinorApiVersion为0。 如果系统API版本为26.1.2，则sdkMinorApiVersion为1。
 
 **起始版本：** 26.0.0
 
@@ -546,7 +656,11 @@ const sdkMinorApiVersion: number
 const sdkPatchApiVersion: number
 ```
 
-系统软件Patch API版本。从API 26.0.0 版本开始，系统API版本格式：sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion。 26.0.0 示例：0
+系统软件Patch API版本。从API 26.0.0 版本开始，系统API版本格式：sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion。
+
+26.0.0
+
+示例： 如果系统API版本为26.2.0，则sdkPatchApiVersion为0。 如果系统API版本为26.2.1，则sdkPatchApiVersion为1。
 
 **起始版本：** 26.0.0
 
@@ -564,7 +678,9 @@ const sdkPatchApiVersion: number
 const securityPatchTag: string
 ```
 
-安全补丁级别。 示例：<!--RP7-->2021/01/01<!--RP7End-->
+安全补丁级别。
+
+示例：<!--RP7-->2021/01/01<!--RP7End-->
 
 **起始版本：** 6
 
@@ -578,7 +694,9 @@ const securityPatchTag: string
 const seniorVersion: number
 ```
 
-Senior版本号，随局部架构、重大特性增加，值为osFullName中的第二位数值，建议直接使用deviceInfo.seniorVersion获取，可提升效率，不建议开发者自主解析osFullName获取。 示例：0
+Senior版本号，随局部架构、重大特性增加，值为osFullName中的第二位数值，建议直接使用deviceInfo.seniorVersion获取，可提升效率，不建议开发者自主解析osFullName获取。
+
+示例：0
 
 **起始版本：** 6
 
@@ -592,7 +710,13 @@ Senior版本号，随局部架构、重大特性增加，值为osFullName中的�
 const serial: string
 ```
 
-设备序列号SN(Serial Number)，该接口在执行期间会拉起临时进程，当系统负载较高时，可能引发阻塞风险。为确保应用主线程的响应性能，建议避免在主线程中调用。设备信息因设备而异且固定不变，可在首次获取后缓存在本地，避免每次使用时重复获取，以提升性能。 **说明：**可作为设备唯一识别码。 需要权限：ohos.permission.sec.ACCESS_UDID(该权限只允许系统应用及企业类应用申请) 示例：序列号随设备差异
+设备序列号SN(Serial Number)，该接口在执行期间会拉起临时进程，当系统负载较高时，可能引发阻塞风险。为确保应用主线程的响应性能，建议避免在主线程中调用。设备信息因设备而异且固定不变，可在首次获取后缓存在本地，避免每次使用时重复获取，以提升性能。
+
+**说明：**可作为设备唯一识别码。
+
+需要权限：ohos.permission.sec.ACCESS_UDID(该权限只允许系统应用及企业类应用申请)
+
+示例：序列号随设备差异
 
 **起始版本：** 6
 
@@ -608,7 +732,9 @@ const serial: string
 const softwareModel: string
 ```
 
-内部软件子型号。 示例：<!--RP5-->TAS-AL00<!--RP5End-->
+内部软件子型号。
+
+示例：<!--RP5-->TAS-AL00<!--RP5End-->
 
 **起始版本：** 6
 
@@ -622,7 +748,13 @@ const softwareModel: string
 const udid: string
 ```
 
-设备UDID，该接口在执行期间会拉起临时进程，当系统负载较高时，可能引发阻塞风险。为确保应用主线程的响应性能，建议避免在主线程中调用。设备信息因设备而异且固定不变，可在首次获取后缓存在本地，避免每次使用时重复获取，以提升性能。 **说明：**数据长度为65字节(包含结束符)。可作为设备唯一识别码。 需要权限：ohos.permission.sec.ACCESS_UDID(该权限只允许系统应用及企业类应用申请) 示例：9D6AABD147XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXE5536412
+设备UDID，该接口在执行期间会拉起临时进程，当系统负载较高时，可能引发阻塞风险。为确保应用主线程的响应性能，建议避免在主线程中调用。设备信息因设备而异且固定不变，可在首次获取后缓存在本地，避免每次使用时重复获取，以提升性能。
+
+**说明：**数据长度为65字节(包含结束符)。可作为设备唯一识别码。
+
+需要权限：ohos.permission.sec.ACCESS_UDID(该权限只允许系统应用及企业类应用申请)
+
+示例：9D6AABD147XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXE5536412
 
 **起始版本：** 7
 

@@ -1,4 +1,4 @@
-# TabBarPosition(Provides an advanced struct of tabs for atomic services)
+# TabBarPosition
 
 设置页签栏位置，默认值为TabBarPosition.BOTTOM。
 

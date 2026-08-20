@@ -12,7 +12,9 @@ import { uiAppearance } from '@kit.ArkUI';
 function setDarkMode(mode: DarkMode, callback: AsyncCallback<void>): void
 ```
 
-Sets the system color mode. This API uses an asynchronous callback to return the result. **Permission required**: ohos.permission.UPDATE_CONFIGURATION
+Sets the system color mode. This API uses an asynchronous callback to return the result.
+
+**Permission required**: ohos.permission.UPDATE_CONFIGURATION
 
 **Since:** 10
 
@@ -28,16 +30,16 @@ Sets the system color mode. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [DarkMode](../../apis-na/arkts-apis/arkts-na-uiappearance-darkmode-e.md) | Yes | indicates the dark-mode to set |
+| mode | [DarkMode](../../apis-default/arkts-apis/arkts-uiappearance-darkmode-e.md) | Yes | indicates the dark-mode to set |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of setDarkMode |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 
@@ -66,7 +68,9 @@ try {
 function setDarkMode(mode: DarkMode): Promise<void>
 ```
 
-Sets the system color mode. This API uses a promise to return the result. **Permission required**: ohos.permission.UPDATE_CONFIGURATION
+Sets the system color mode. This API uses a promise to return the result.
+
+**Permission required**: ohos.permission.UPDATE_CONFIGURATION
 
 **Since:** 10
 
@@ -82,7 +86,7 @@ Sets the system color mode. This API uses a promise to return the result. **Perm
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [DarkMode](../../apis-na/arkts-apis/arkts-na-uiappearance-darkmode-e.md) | Yes | indicates the dark-mode to set |
+| mode | [DarkMode](../../apis-default/arkts-apis/arkts-uiappearance-darkmode-e.md) | Yes | indicates the dark-mode to set |
 
 **Return value:**
 
@@ -94,9 +98,9 @@ Sets the system color mode. This API uses a promise to return the result. **Perm
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 

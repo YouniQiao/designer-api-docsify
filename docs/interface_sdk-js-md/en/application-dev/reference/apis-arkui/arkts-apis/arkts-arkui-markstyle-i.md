@@ -2,6 +2,8 @@
 
 Define the style of checkbox mark.
 
+@interface MarkStyle
+
 **Since:** 11
 
 <!--Device-unnamed-declare interface MarkStyle--><!--Device-unnamed-declare interface MarkStyle-End-->

@@ -12,7 +12,11 @@ import { zlib } from '@kit.BasicServicesKit';
 function compressFile(inFile: string, outFile: string, options: Options, callback: AsyncCallback<void>): void
 ```
 
-Compresses a file. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive &gt; periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
+Compresses a file. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive &gt; periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
 
 **Since:** 23
 
@@ -36,8 +40,8 @@ Compresses a file. This API uses an asynchronous callback to return the result. 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [900001](../errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
-| [900002](../errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
+| [900001](../../apis-ability-kit/errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
+| [900002](../../apis-ability-kit/errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
 
 **Examples**
 
@@ -75,7 +79,11 @@ try {
 function compressFile(inFile: string, outFile: string, options: Options): Promise<void>
 ```
 
-Compresses a file. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive &gt; periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
+Compresses a file. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive &gt; periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
 
 **Since:** 23
 
@@ -104,8 +112,8 @@ Compresses a file. This API uses a promise to return the result. &gt; **NOTE：*
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [900001](../errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
-| [900002](../errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
+| [900001](../../apis-ability-kit/errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
+| [900002](../../apis-ability-kit/errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
 
 **Examples**
 

@@ -35,16 +35,16 @@ getAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<PhotoAsset>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 是 | 检索选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;PhotoAsset&gt;&gt; | 是 | 回调函数。当获取相册中的文件成功，err为undefined，data为获取到的图片和视频数据结果集 [FetchResult](arkts-file-photoaccesshelper.md)；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FetchResult&lt;PhotoAsset&gt;&gt; | 是 | 回调函数。当获取相册中的文件成功，err为undefined，data为获取到的图片和视频数据结果集 [FetchResult](arkts-file-photoaccesshelper.md)；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 12+ |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**适用版本：** 10 - 11 |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 12+ |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## getAssets
@@ -81,10 +81,10 @@ getAssets(options: FetchOptions): Promise<FetchResult<PhotoAsset>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 20+ |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**适用版本：** 10 - 19 |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 20+ |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## albumName

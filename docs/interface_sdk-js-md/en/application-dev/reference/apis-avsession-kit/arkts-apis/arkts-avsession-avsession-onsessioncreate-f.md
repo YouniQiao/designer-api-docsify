@@ -32,6 +32,6 @@ Register session create callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 

@@ -21,7 +21,9 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 content: ResourceStr
 ```
 
-操作确认弹出框内容。 默认不设置或设置为undefined，确认弹出框内容不显示。
+操作确认弹出框内容。
+
+默认不设置或设置为undefined，确认弹出框内容不显示。
 
 **类型：** ResourceStr
 
@@ -41,7 +43,9 @@ content: ResourceStr
 controller: CustomDialogController
 ```
 
-操作确认弹出框控制器，用于控制弹出框的显示和隐藏。 **说明：** 未使用@Require装饰，构造时不强制校验参数。
+操作确认弹出框控制器，用于控制弹出框的显示和隐藏。
+
+**说明：** 未使用@Require装饰，构造时不强制校验参数。
 
 **类型：** CustomDialogController
 
@@ -61,9 +65,11 @@ controller: CustomDialogController
 primaryButton?: ButtonOptions
 ```
 
-操作确认弹出框左侧按钮。 默认不设置或设置为undefined，确认弹出框左侧按钮不显示。
+操作确认弹出框左侧按钮。
 
-**类型：** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
+默认不设置或设置为undefined，确认弹出框左侧按钮不显示。
+
+**类型：** [ButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-dialog-buttonoptions-c.md)
 
 **起始版本：** 10
 
@@ -81,7 +87,11 @@ primaryButton?: ButtonOptions
 primaryTitle?: ResourceStr
 ```
 
-操作确认弹出框一级标题。 默认不设置或设置为undefined，确认弹出框一级标题不显示。 **说明：** 标题超过两行会显示“...”。
+操作确认弹出框一级标题。
+
+默认不设置或设置为undefined，确认弹出框一级标题不显示。
+
+**说明：** 标题超过两行会显示“...”。
 
 **类型：** ResourceStr
 
@@ -101,9 +111,11 @@ primaryTitle?: ResourceStr
 secondaryButton?: ButtonOptions
 ```
 
-操作确认弹出框右侧按钮。 默认不设置或设置为undefined，确认弹出框右侧按钮不显示。
+操作确认弹出框右侧按钮。
 
-**类型：** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
+默认不设置或设置为undefined，确认弹出框右侧按钮不显示。
+
+**类型：** [ButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-dialog-buttonoptions-c.md)
 
 **起始版本：** 10
 
@@ -121,7 +133,11 @@ secondaryButton?: ButtonOptions
 secondaryTitle?: ResourceStr
 ```
 
-操作确认弹出框二级标题。 默认不设置或设置为undefined，确认弹出框二级标题不显示。 **说明：** 标题超过两行会显示“...”。
+操作确认弹出框二级标题。
+
+默认不设置或设置为undefined，确认弹出框二级标题不显示。
+
+**说明：** 标题超过两行会显示“...”。
 
 **类型：** ResourceStr
 
@@ -143,7 +159,7 @@ theme?: Theme | CustomTheme
 
 主题信息，可以是CustomTheme或从onWillApplyTheme中获取的Theme实例。
 
-**类型：** [Theme](../../apis-na/arkts-apis/arkts-na-arkui-theme-theme-i.md) \| [CustomTheme](../../apis-na/arkts-apis/arkts-na-arkui-theme-customtheme-i.md)
+**类型：** [Theme](../../apis-default/arkts-apis/arkts-arkui-theme-theme-i.md) \| [CustomTheme](../../apis-default/arkts-apis/arkts-arkui-theme-customtheme-i.md)
 
 **起始版本：** 12
 
@@ -161,7 +177,9 @@ theme?: Theme | CustomTheme
 themeColorMode?: ThemeColorMode
 ```
 
-自定义弹出框深浅色模式。 默认值：ThemeColorMode.SYSTEM
+自定义弹出框深浅色模式。
+
+默认值：ThemeColorMode.SYSTEM
 
 **类型：** ThemeColorMode
 

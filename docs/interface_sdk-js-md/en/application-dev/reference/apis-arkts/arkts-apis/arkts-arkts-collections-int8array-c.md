@@ -1,6 +1,11 @@
 # Int8Array
 
-A linear data structure that is implemented on [ArkTS ArrayBuffer](../../apis-na/arkts-apis/arkts-collections.md). &gt; **NOTE：**&gt; &gt; - This module can be imported only to ArkTS files (with the file name extension .ets). &gt; **Decorator**: \@Sendable
+A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-n.md).
+
+> **NOTE：**
+> 
+> - This module can be imported only to ArkTS files (with the file name extension .ets).
+> **Decorator**: \@Sendable
 
 **Since:** 12
 
@@ -785,6 +790,8 @@ static of(...items: number[]): Int8Array
 ```
 
 Creates an ArkTS Int8Array with a variable number of parameters.
+
+@static [since 18 - 21]
 
 **Since:** 18
 

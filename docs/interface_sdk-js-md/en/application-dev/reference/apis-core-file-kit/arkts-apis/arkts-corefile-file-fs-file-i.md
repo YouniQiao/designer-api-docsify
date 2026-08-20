@@ -41,8 +41,8 @@ Obtains the parent directory of this file object.
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900005 | I/O error |
-| 14300002 | Invalid URI |
 | 13900042 | Unknown error |
+| 14300002 | Invalid URI |
 
 **Examples**
 
@@ -85,9 +85,9 @@ Applies an exclusive lock or a shared lock on this file in blocking mode. This A
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
 | 13900020 | Invalid argument |
 | 13900034 | Operation would block |
-| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
 | 13900043 | No record locks available |
 
@@ -131,9 +131,9 @@ Applies an exclusive lock or a shared lock on this file in blocking mode. This A
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
 | 13900020 | Invalid argument |
 | 13900034 | Operation would block |
-| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
 | 13900043 | No record locks available |
 
@@ -163,9 +163,9 @@ Applies an exclusive lock or a shared lock on this file in blocking mode. This A
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
 | 13900020 | Invalid argument |
 | 13900034 | Operation would block |
-| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
 | 13900043 | No record locks available |
 
@@ -194,9 +194,9 @@ Applies an exclusive lock or a shared lock on this file in non-blocking mode.
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
 | 13900020 | Invalid argument |
 | 13900034 | Operation would block |
-| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
 | 13900043 | No record locks available |
 
@@ -229,9 +229,9 @@ Unlocks a file. This API returns the result synchronously.
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
 | 13900020 | Invalid argument |
 | 13900034 | Operation would block |
-| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
 | 13900043 | No record locks available |
 

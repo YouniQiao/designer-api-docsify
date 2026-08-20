@@ -1,6 +1,8 @@
 # ArcAlphabetIndexerAttribute
 
-除支持通用属性外，还支持以下属性： 除支持通用事件外，还支持以下事件：
+除支持通用属性外，还支持以下属性：
+
+除支持通用事件外，还支持以下事件：
 
 **继承/实现关系：** ArcAlphabetIndexerAttribute extends CommonMethod<ArcAlphabetIndexerAttribute>
 
@@ -190,7 +192,11 @@ popupBackground(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 popupBackgroundBlurStyle(style: Optional<BlurStyle>): ArcAlphabetIndexerAttribute
 ```
 
-设置提示弹窗的背景模糊材质。未通过该接口设置时，默认为关闭模糊，对应取值为BlurStyle中的NONE。 &gt; **说明：** &gt; 当通过popupBackgroundBlurStyle设置弹窗气泡的背景模糊材质时，不建议再通过 &gt; [popupBackground](#popupbackground)设置背景色。
+设置提示弹窗的背景模糊材质。未通过该接口设置时，默认为关闭模糊，对应取值为BlurStyle中的NONE。
+
+> **说明：**
+
+> 当通过popupBackgroundBlurStyle设置弹窗气泡的背景模糊材质时，不建议再通过 &gt; [popupBackground](#popupbackground)设置背景色。
 
 **起始版本：** 18
 

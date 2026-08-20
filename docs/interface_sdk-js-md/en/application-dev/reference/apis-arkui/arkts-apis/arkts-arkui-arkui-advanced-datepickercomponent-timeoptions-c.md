@@ -1,6 +1,8 @@
 # TimeOptions
 
-TimeOptions defines options for the time picker. Inherits from [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md).
+TimeOptions defines options for the time picker.
+
+Inherits from [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md).
 
 **Inheritance/Implementation:** TimeOptions extends [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)
 
@@ -22,7 +24,9 @@ import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode,
 format?: TimeFormat
 ```
 
-Defines the format of the time picker. Default value: TimeFormat.HOUR_MINUTE
+Defines the format of the time picker.
+
+Default value: TimeFormat.HOUR_MINUTE
 
 **Type:** [TimeFormat](arkts-arkui-arkui-advanced-datepickercomponent-timeformat-e.md)
 
@@ -44,7 +48,11 @@ Defines the format of the time picker. Default value: TimeFormat.HOUR_MINUTE
 useMilitaryTime?: boolean
 ```
 
-Specifies whether to display time in 24-hour format. - true: Time is displayed in 24-hour format. - false: Time is displayed in 12-hour format. Default value: false
+Specifies whether to display time in 24-hour format.
+
+- true: Time is displayed in 24-hour format. - false: Time is displayed in 12-hour format.
+
+Default value: false
 
 **Type:** boolean
 

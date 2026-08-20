@@ -12,7 +12,9 @@ import { notificationManager } from '@kit.NotificationKit';
 function removeAllSlots(callback: AsyncCallback<void>): void
 ```
 
-Removes all notification slots for this application. This API uses an asynchronous callback to return the result. After deletion, all notification slots and their configurations of the current application will be permanently removed. When notifications are published subsequently, the system will automatically create slots of the corresponding types. Notifications already published through these slots are not affected and can still be viewed in the notification center. This is suitable for scenarios where all slot configurations need to be cleared at once.
+Removes all notification slots for this application. This API uses an asynchronous callback to return the result.
+
+After deletion, all notification slots and their configurations of the current application will be permanently removed. When notifications are published subsequently, the system will automatically create slots of the corresponding types. Notifications already published through these slots are not affected and can still be viewed in the notification center. This is suitable for scenarios where all slot configurations need to be cleared at once.
 
 **Since:** 23
 
@@ -65,7 +67,9 @@ notificationManager.removeAllSlots(removeAllSlotsCallback);
 function removeAllSlots(): Promise<void>
 ```
 
-Removes all notification slots for this application. This API uses a promise to return the result. After deletion, all notification slots and their configurations of the current application will be permanently removed. When notifications are published subsequently, the system will automatically create slots of the corresponding types. Notifications already published through these slots are not affected and can still be viewed in the notification center. This is suitable for scenarios where all slot configurations need to be cleared at once.
+Removes all notification slots for this application. This API uses a promise to return the result.
+
+After deletion, all notification slots and their configurations of the current application will be permanently removed. When notifications are published subsequently, the system will automatically create slots of the corresponding types. Notifications already published through these slots are not affected and can still be viewed in the notification center. This is suitable for scenarios where all slot configurations need to be cleared at once.
 
 **Since:** 23
 

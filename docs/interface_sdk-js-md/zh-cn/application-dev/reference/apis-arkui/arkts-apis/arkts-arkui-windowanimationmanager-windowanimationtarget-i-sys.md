@@ -22,7 +22,7 @@ import { windowAnimationManager } from '@kit.ArkUI';
 readonly abilityName: string
 ```
 
-/* 动画目标窗口所对应的Ability名称。
+/* 动画目标窗口所对应的Ability名称。 @readonly
 
 **类型：** string
 
@@ -40,7 +40,7 @@ readonly abilityName: string
 readonly bundleName: string
 ```
 
-动画目标窗口所对应的包名。
+动画目标窗口所对应的包名。 @readonly
 
 **类型：** string
 
@@ -58,7 +58,7 @@ readonly bundleName: string
 readonly missionId: int
 ```
 
-/* 任务ID，多任务中用于与ability进行匹配。
+/* 任务ID，多任务中用于与ability进行匹配。 @readonly
 
 **类型：** int
 
@@ -76,7 +76,7 @@ readonly missionId: int
 readonly windowBounds: RRect
 ```
 
-/* 动画目标窗口所对应的实际大小。
+/* 动画目标窗口所对应的实际大小。 @readonly
 
 **类型：** RRect
 

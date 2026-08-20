@@ -1,6 +1,6 @@
 # EffectFlag（系统接口）
 
-Enumerates audio effect flags.
+Enumerates audio effect flags. @enum { int }
 
 **起始版本：** 23
 

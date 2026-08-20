@@ -1,6 +1,10 @@
-# AtomicServiceMenuBar(系统接口)（系统接口）
+# AtomicServiceMenuBar（系统接口）
 
-依赖当前原子化服务的UI上下文，创建AtomicServiceMenuBar对象，用于操控右上角菜单功能胶囊的显隐状态。 &gt; **说明：** &gt; &gt; 该组件从API version 23开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+依赖当前原子化服务的UI上下文，创建AtomicServiceMenuBar对象，用于操控右上角菜单功能胶囊的显隐状态。
+
+> **说明：**
+> 
+> 该组件从API version 23开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **起始版本：** 23
 

@@ -1,6 +1,12 @@
 # AudioRoutingManager
 
-This interface implements audio routing management. Before calling any API in AudioRoutingManager, you must use [getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager) to obtain an AudioRoutingManager instance. &gt; **NOTE：**&gt; &gt; - The initial APIs of this interface are supported since API version 9.
+This interface implements audio routing management.
+
+Before calling any API in AudioRoutingManager, you must use [getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager) to obtain an AudioRoutingManager instance.
+
+> **NOTE：**
+> 
+> - The initial APIs of this interface are supported since API version 9.
 
 **Since:** 23
 
@@ -51,9 +57,9 @@ Exclude output devices. After calling this function successfully, audio will not
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permisson denied.<br>**Applicable version:** 18 - 22 |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 **Examples**
 
@@ -149,8 +155,8 @@ Get excluded devices by filter.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 **Examples**
 
@@ -197,8 +203,8 @@ Get the preferred input device for the target audio capturer filter.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 **Examples**
 
@@ -254,8 +260,8 @@ Get the preferred output devices by the target audio renderer filter.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 **Examples**
 
@@ -423,8 +429,8 @@ Subscribes to preferred input device change events. When the preferred device fo
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## onPreferredOutputDeviceChangeByFilter
@@ -454,8 +460,8 @@ Subscribes to prefer output device change events. When preferred device for targ
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## on('preferredOutputDeviceChangeByFilter')
@@ -486,8 +492,8 @@ Subscribes to prefer output device change events. When preferred device for targ
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 **Examples**
@@ -540,8 +546,8 @@ Restores the output device for the specified audio renderer filter to the defaul
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## selectInputDevice
 
@@ -689,8 +695,8 @@ Select the input device with desired AudioCapturer. This method uses a promise t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 **Examples**
 
@@ -1010,8 +1016,8 @@ Select the output device with desired AudioRenderer. This method uses a promise 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 **Examples**
@@ -1086,9 +1092,9 @@ Unexclude output devices. This function will unexclude target output devices bel
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permisson denied.<br>**Applicable version:** 18 - 22 |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 **Examples**
 
@@ -1157,9 +1163,9 @@ Unexclude output devices. This function will unexclude all output devices belong
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permisson denied.<br>**Applicable version:** 18 - 22 |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 **Examples**
 

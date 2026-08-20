@@ -1,4 +1,4 @@
-# USBConfig(USB Manager)
+# USBConfig
 
 USB配置，一个[USBDevice](arkts-basicservices-usb-usbdevice-i.md)中可以含有多个配置。
 

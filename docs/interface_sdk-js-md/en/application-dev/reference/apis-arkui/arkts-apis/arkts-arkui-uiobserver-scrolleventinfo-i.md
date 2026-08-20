@@ -2,6 +2,8 @@
 
 ScrollEvent info.
 
+@interface ScrollEventInfo
+
 **Since:** 12
 
 <!--Device-uiObserver-export interface ScrollEventInfo--><!--Device-uiObserver-export interface ScrollEventInfo-End-->
@@ -82,7 +84,7 @@ scrollEvent: ScrollEventType
 
 Changed ScrollEvent type.
 
-**Type:** [ScrollEventType](../../apis-na/arkts-apis/arkts-na-uiobserver-scrolleventtype-e.md)
+**Type:** [ScrollEventType](arkts-arkui-uiobserver-scrolleventtype-e.md)
 
 **Since:** 12
 

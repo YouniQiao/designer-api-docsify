@@ -53,7 +53,9 @@ path: string
 responseCode: int
 ```
 
-上传任务返回码。返回0表示上传任务成功，返回其它值表示上传任务失败，具体请参见message参数中的上传任务结果描述信息。 此处推荐使用 [request.agent.create](arkts-basicservices-agent-create-f.md)创建上传 任务，并获取标准错误码处理异常分支。
+上传任务返回码。返回0表示上传任务成功，返回其它值表示上传任务失败，具体请参见message参数中的上传任务结果描述信息。
+
+此处推荐使用 [request.agent.create](arkts-basicservices-agent-create-f.md)创建上传 任务，并获取标准错误码处理异常分支。
 
 **类型：** int
 

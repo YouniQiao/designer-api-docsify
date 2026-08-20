@@ -79,7 +79,11 @@ selectionPanel?.hide().then(() => {
 moveTo(x: int, y: int): Promise<void>
 ```
 
-移动划词面板至屏幕全局坐标系下的指定位置，支持移动到扩展屏上。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md)获取到Panel实例后调用。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 20开始支持，从API version 24开始废弃。
+移动划词面板至屏幕全局坐标系下的指定位置，支持移动到扩展屏上。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md)获取到Panel实例后调用。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 20开始支持，从API version 24开始废弃。
 
 **起始版本：** 20
 
@@ -151,7 +155,7 @@ off(type: 'destroyed', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'destroyed' | 是 | 取消订阅的事件类型，固定取值为'destroyed'。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 需要取消的回调函数（即之前通过on方法订阅时的回调实例）。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 需要取消的回调函数（即之前通过on方法订阅时的回调实例）。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -185,7 +189,7 @@ off(type: 'hidden', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hidden' | 是 | 取消订阅的事件类型，固定取值为'hidden'。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 需要取消的回调函数（即之前通过on方法订阅时的回调实例）。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 需要取消的回调函数（即之前通过on方法订阅时的回调实例）。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -219,7 +223,7 @@ on(type: 'destroyed', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'destroyed' | 是 | 设置监听类型，固定取值为'destroyed'。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f-sys.md)销毁面板时触发。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数，调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f-sys.md)销毁面板时触发。 |
 
 **示例**
 
@@ -255,7 +259,7 @@ on(type: 'hidden', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hidden' | 是 | 设置监听类型，固定取值为'hidden'。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，面板隐藏时触发。面板可通过调用[hide](#hide)主动隐藏，或在失焦时自动隐藏。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数，面板隐藏时触发。面板可通过调用[hide](#hide)主动隐藏，或在失焦时自动隐藏。 |
 
 **示例**
 

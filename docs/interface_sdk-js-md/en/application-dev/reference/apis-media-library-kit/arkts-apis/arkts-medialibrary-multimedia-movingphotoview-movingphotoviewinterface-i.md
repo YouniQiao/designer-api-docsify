@@ -2,6 +2,8 @@
 
 Defines the moving photo view interface.
 
+@interface MovingPhotoViewInterface
+
 **Since:** 12
 
 <!--Device-unnamed-interface MovingPhotoViewInterface--><!--Device-unnamed-interface MovingPhotoViewInterface-End-->

@@ -2,6 +2,8 @@
 
 Defines ripple field options.
 
+@interface RippleFieldOptions
+
 **Since:** 22
 
 <!--Device-unnamed-declare interface RippleFieldOptions--><!--Device-unnamed-declare interface RippleFieldOptions-End-->

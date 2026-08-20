@@ -14,7 +14,7 @@ Defines the subtype of a continuous task. It is usually used together with the m
 SUBMODE_CAR_KEY_NORMAL_NOTIFICATION = 1
 ```
 
-**CAR_KEY** type. It is of the normal text notification type.
+*CAR_KEY** type. It is of the normal text notification type.
 
 **Since:** 24
 

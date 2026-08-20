@@ -20,7 +20,7 @@ import { imageGeneration } from '@kit.ArkUI';
 static readonly ORIGIN: ColorContent
 ```
 
-重置fillColor接口，效果上与不设置 fillColor一致。
+重置[fillColor](arkts-arkui-image-attribute.md#fillcolor)接口，效果上与不设置 [fillColor](arkts-arkui-image-attribute.md#fillcolor)一致。
 
 **类型：** [ColorContent](arkts-arkui-colorcontent-c.md)
 

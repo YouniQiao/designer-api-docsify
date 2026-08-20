@@ -134,8 +134,8 @@ lockAsync<T, U>(callback: AsyncLockCallback<T>, mode: AsyncLockMode,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200031](../errorcode-utils.md#10200031-lockasync超时) | Timeout exceeded. |
 | [10200030](../errorcode-utils.md#10200030-锁不存在) | The lock does not exist. |
+| [10200031](../errorcode-utils.md#10200031-lockasync超时) | Timeout exceeded. |
 
 ## query
 

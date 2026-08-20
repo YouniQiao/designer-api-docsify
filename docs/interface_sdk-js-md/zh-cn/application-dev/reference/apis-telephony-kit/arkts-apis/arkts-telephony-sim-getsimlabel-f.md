@@ -25,16 +25,16 @@ Obtains the SIM card label.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | int | 是 | SIM card slot ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SimLabel](arkts-telephony-sim-simlabel-i.md)&gt; | 是 | Callback used to return the SIM card label. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SimLabel](arkts-telephony-sim-simlabel-i.md)&gt; | 是 | Callback used to return the SIM card label. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
-| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
 **示例**
 
@@ -78,10 +78,10 @@ function getSimLabel(slotId: int): Promise<SimLabel>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
-| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
 **示例**
 
@@ -92,7 +92,7 @@ import { sim } from '@kit.TelephonyKit';
 sim.getSimLabel(0).then((data: sim.SimLabel) => {
   console.info(`getSimLabel success, promise: data->${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
-  console.error(`getSimState failed, promise: err->${JSON.stringify(err)}`);
+  console.error(`getSimLabel failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 

@@ -2,6 +2,8 @@
 
 Defines Column Modifier
 
+@implements ColumnAttribute, AttributeModifier&lt;ColumnAttribute&gt;
+
 **Inheritance/Implementation:** ColumnModifier implements ColumnAttribute, AttributeModifier<ColumnAttribute>
 
 **Since:** 23

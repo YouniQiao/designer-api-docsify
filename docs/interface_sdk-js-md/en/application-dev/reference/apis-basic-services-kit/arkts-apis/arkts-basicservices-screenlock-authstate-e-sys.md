@@ -2,6 +2,8 @@
 
 Indicates the screen lock authentication state.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-screenLock-enum AuthState--><!--Device-screenLock-enum AuthState-End-->

@@ -1,4 +1,4 @@
-# DynamicOptions(System API)（系统接口）
+# DynamicOptions（系统接口）
 
 用于在DynamicComponent构造时传递参数。
 

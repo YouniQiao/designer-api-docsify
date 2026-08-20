@@ -33,8 +33,8 @@ Open the NFC settings page.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16900020](../errorcode-settings.md#16900020-failed-to-open-the-settings-page) | Failed to open the settings page via redirection. |
 | [16900010](../errorcode-settings.md#16900010-parameter-check-failed) | Parameter error. |
+| [16900020](../errorcode-settings.md#16900020-failed-to-open-the-settings-page) | Failed to open the settings page via redirection. |
 
 **Examples**
 

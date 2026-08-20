@@ -1,6 +1,8 @@
 # TimePickerDialogOptions
 
-Defines the configuration options of the time picker dialog box. Inherited from [TimePickerOptions](arkts-arkui-timepickeroptions-i.md).
+Defines the configuration options of the time picker dialog box.
+
+Inherited from [TimePickerOptions](arkts-arkui-timepickeroptions-i.md).
 
 **Inheritance/Implementation:** TimePickerDialogOptions extends [TimePickerOptions](arkts-arkui-timepickeroptions-i.md)
 

@@ -1,6 +1,6 @@
 # FilterType
 
-Declare FilterType
+Declare FilterType @enum { FilterType }
 
 **Since:** 22
 

@@ -407,7 +407,9 @@ async function example(mgr: userFileManager.UserFileManager) {
 getNextObject(callback: AsyncCallback<T>): void
 ```
 
-Obtains the next file asset in the result set. This API uses an asynchronous callback to return the result. Before using this API, you must use [isAfterLast()](#isafterlast) to check whether the current position is the end of the result set.
+Obtains the next file asset in the result set. This API uses an asynchronous callback to return the result.
+
+Before using this API, you must use [isAfterLast()](#isafterlast) to check whether the current position is the end of the result set.
 
 **Since:** 9
 
@@ -461,7 +463,9 @@ async function example(mgr: userFileManager.UserFileManager) {
 getNextObject(): Promise<T>
 ```
 
-Obtains the next file asset in the result set. This API uses a promise to return the result. Before using this API, you must use [isAfterLast()](#isafterlast) to check whether the current position is the end of the result set.
+Obtains the next file asset in the result set. This API uses a promise to return the result.
+
+Before using this API, you must use [isAfterLast()](#isafterlast) to check whether the current position is the end of the result set.
 
 **Since:** 9
 

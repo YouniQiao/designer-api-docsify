@@ -2,6 +2,8 @@
 
 需要查询的文件或目录的信息。
 
+@interface PathPolicyInfo
+
 **起始版本：** 23
 
 <!--Device-fileShare-export interface PathPolicyInfo--><!--Device-fileShare-export interface PathPolicyInfo-End-->

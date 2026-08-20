@@ -2,6 +2,8 @@
 
 P2P device status.
 
+@enum { number } P2pDeviceStatus
+
 **Since:** 8
 
 **Deprecated since:** 9

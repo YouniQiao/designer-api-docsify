@@ -2,6 +2,8 @@
 
 定义滚动条边距选项。
 
+@interface ScrollBarMargin
+
 **起始版本：** 20
 
 <!--Device-unnamed-declare interface ScrollBarMargin--><!--Device-unnamed-declare interface ScrollBarMargin-End-->

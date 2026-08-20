@@ -20,7 +20,9 @@ import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, 
 id?: string
 ```
 
-标题id。需要为标题设置id的时候设置此参数，缺省时不设置此参数。 默认值：undefined，表示不设置标题id。
+标题id。需要为标题设置id的时候设置此参数，缺省时不设置此参数。
+
+默认值：undefined，表示不设置标题id。
 
 **类型：** string
 
@@ -40,9 +42,13 @@ id?: string
 primaryTitle?: ResourceStr
 ```
 
-标题内容。 当[SubHeaderV2](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2-s.md)中同时使用primaryTitle、secondaryTitle、icon属性时，primaryTitle将不会显示。 默认值：undefined
+标题内容。
 
-**类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+当[SubHeaderV2](../../apis-default/arkts-apis/arkts-arkui-advanced-subheaderv2-subheaderv2-s.md)中同时使用primaryTitle、secondaryTitle、icon属性时，primaryTitle将不会显示。
+
+默认值：undefined
+
+**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 18
 
@@ -60,9 +66,11 @@ primaryTitle?: ResourceStr
 primaryTitleModifier?: TextModifier
 ```
 
-设置标题文本属性，如设置主标题颜色、字体大小、字重等。 默认值：undefined
+设置标题文本属性，如设置主标题颜色、字体大小、字重等。
 
-**类型：** TextModifier
+默认值：undefined
+
+**类型：** [TextModifier](arkts-arkui-textmodifier-c.md)
 
 **起始版本：** 18
 
@@ -80,9 +88,11 @@ primaryTitleModifier?: TextModifier
 secondaryTitle?: ResourceStr
 ```
 
-副标题内容。 默认值：undefined
+副标题内容。
 
-**类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+默认值：undefined
+
+**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 18
 
@@ -100,9 +110,11 @@ secondaryTitle?: ResourceStr
 secondaryTitleModifier?: TextModifier
 ```
 
-设置副标题文本属性，如设置副标题颜色、字体大小、字重等。 默认值：undefined
+设置副标题文本属性，如设置副标题颜色、字体大小、字重等。
 
-**类型：** TextModifier
+默认值：undefined
+
+**类型：** [TextModifier](arkts-arkui-textmodifier-c.md)
 
 **起始版本：** 18
 
@@ -120,9 +132,13 @@ secondaryTitleModifier?: TextModifier
 titleAccessibilityText?: ResourceStr
 ```
 
-设置标题自定义朗读内容。 默认值：undefined 值为undefined时，默认朗读组件显示的标题内容。
+设置标题自定义朗读内容。
 
-**类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+默认值：undefined
+
+值为undefined时，默认朗读组件显示的标题内容。
+
+**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 23
 

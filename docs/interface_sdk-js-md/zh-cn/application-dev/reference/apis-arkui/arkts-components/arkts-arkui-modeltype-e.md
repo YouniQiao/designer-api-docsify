@@ -1,6 +1,6 @@
-# ModelType(Defines 3D component)
+# ModelType
 
-模型类型枚举
+模型类型枚举 @enum { number }
 
 **起始版本：** 12
 

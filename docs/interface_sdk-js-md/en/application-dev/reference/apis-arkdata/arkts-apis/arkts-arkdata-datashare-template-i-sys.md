@@ -43,7 +43,11 @@ Predicates to use. When [**on**](arkts-arkdata-datashare-datasharehelper-i-sys.m
 scheduler: string
 ```
 
-Template scheduler SQL, which is embedded with a custom function. Currently, the **remindTimer** function is embedded. The **remindTimer** triggers a subscription-based update in specified scenarios. The scheduler SQL statement is triggered when: 1. The subscribed data is modified. 2. The first subscription is added to the corresponding database.
+Template scheduler SQL, which is embedded with a custom function. Currently, the **remindTimer** function is embedded. The **remindTimer** triggers a subscription-based update in specified scenarios.
+
+The scheduler SQL statement is triggered when:
+
+1. The subscribed data is modified. 2. The first subscription is added to the corresponding database.
 
 **Type:** string
 

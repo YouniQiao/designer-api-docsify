@@ -38,7 +38,7 @@ extraInfo?: Record<string, RecordData>
 
 实况通知附加内容。默认为空。
 
-**类型：** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 23
 
@@ -54,7 +54,9 @@ extraInfo?: Record<string, RecordData>
 isLocalUpdateOnly?: boolean
 ```
 
-实况窗是否只在本地更新。默认为false。 - true：是。 - false：否。
+实况窗是否只在本地更新。默认为false。
+
+- true：是。 - false：否。
 
 **类型：** boolean
 
@@ -74,7 +76,7 @@ pictureInfo?: Record<string, Array<image.PixelMap>>
 
 实况通知附加内容中的图片信息。默认为空。
 
-**类型：** Record&lt;string, Array&lt;image.PixelMap&gt;&gt;
+**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Array&lt;image.PixelMap&gt;&gt;
 
 **起始版本：** 23
 

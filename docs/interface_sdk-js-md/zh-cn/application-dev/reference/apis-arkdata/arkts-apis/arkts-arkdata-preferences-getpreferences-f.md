@@ -12,7 +12,9 @@ import { preferences } from '@kit.ArkData';
 function getPreferences(context: Context, name: string, callback: AsyncCallback<Preferences>): void
 ```
 
-获取Preferences实例，通过name进行参数设置，使用callback异步回调。 应用首次调用该接口获取某个Preferences实例后，该实例会被缓存起来，后续再次调用时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。
+获取Preferences实例，通过name进行参数设置，使用callback异步回调。
+
+应用首次调用该接口获取某个Preferences实例后，该实例会被缓存起来，后续再次调用时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。
 
 **起始版本：** 23
 
@@ -28,7 +30,7 @@ function getPreferences(context: Context, name: string, callback: AsyncCallback<
 | --- | --- | --- | --- |
 | context | Context | 是 | 应用上下文。 <br>FA模型的应用Context定义见Context。 <br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 |
 | name | string | 是 | Preferences实例的名称。名称长度需大于零且小于等于255字节，名称中不能包含'/'且不能以'/'结尾。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Preferences&gt; | 是 | 回调函数。当获取Preferences实例成功，err为undefined，返回Preferences实例；否则err为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Preferences&gt; | 是 | 回调函数。当获取Preferences实例成功，err为undefined，返回Preferences实例；否则err为错误对象。 |
 
 **错误码：**
 
@@ -111,7 +113,9 @@ class EntryAbility extends UIAbility {
 function getPreferences(context: Context, options: Options, callback: AsyncCallback<Preferences>): void
 ```
 
-获取Preferences实例，通过Options进行参数设置，使用callback异步回调。 应用首次调用该接口获取某个Preferences实例后，该实例会被缓存起来，后续再次调用时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。
+获取Preferences实例，通过Options进行参数设置，使用callback异步回调。
+
+应用首次调用该接口获取某个Preferences实例后，该实例会被缓存起来，后续再次调用时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。
 
 **起始版本：** 23
 
@@ -127,7 +131,7 @@ function getPreferences(context: Context, options: Options, callback: AsyncCallb
 | --- | --- | --- | --- |
 | context | Context | 是 | 应用上下文。 <br>FA模型的应用Context定义见Context。 <br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 |
 | options | Options | 是 | 与Preferences实例相关的配置选项。name字段为必填字段，名称长度需大于零且小于等于255字节，名称中不能包含'/'且不能以'/'结尾。dataGroupId和 storageType为可选字段。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Preferences&gt; | 是 | 回调函数。当获取Preferences实例成功，err为undefined，返回Preferences实例；否则err为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Preferences&gt; | 是 | 回调函数。当获取Preferences实例成功，err为undefined，返回Preferences实例；否则err为错误对象。 |
 
 **错误码：**
 
@@ -217,7 +221,9 @@ class EntryAbility extends UIAbility {
 function getPreferences(context: Context, name: string): Promise<Preferences>
 ```
 
-获取Preferences实例，通过name进行参数设置，使用Promise异步回调。 应用首次调用该接口获取某个Preferences实例后，该实例会被缓存起来，后续再次调用时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。
+获取Preferences实例，通过name进行参数设置，使用Promise异步回调。
+
+应用首次调用该接口获取某个Preferences实例后，该实例会被缓存起来，后续再次调用时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。
 
 **起始版本：** 23
 
@@ -318,7 +324,9 @@ class EntryAbility extends UIAbility {
 function getPreferences(context: Context, options: Options): Promise<Preferences>
 ```
 
-获取Preferences实例，通过Options进行参数设置，使用Promise异步回调。 应用首次调用该接口获取某个Preferences实例后，该实例会被缓存起来，后续再次调用时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。
+获取Preferences实例，通过Options进行参数设置，使用Promise异步回调。
+
+应用首次调用该接口获取某个Preferences实例后，该实例会被缓存起来，后续再次调用时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。
 
 **起始版本：** 23
 

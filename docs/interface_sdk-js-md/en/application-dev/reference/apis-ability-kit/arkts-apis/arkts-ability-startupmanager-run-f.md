@@ -12,7 +12,11 @@ import { startupManager } from '@kit.AbilityKit';
 function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>
 ```
 
-Runs startup tasks or loads .so files. &gt; **NOTE：**&gt; &gt; This API cannot be used to run startup tasks defined in a feature-type HAP. To run those tasks, use &gt; [startupManager.run](#run) &gt; .
+Runs startup tasks or loads .so files.
+
+> **NOTE：**
+> 
+> This API cannot be used to run startup tasks defined in a feature-type HAP. To run those tasks, use &gt; [startupManager.run](#run) &gt; .
 
 **Since:** 23
 
@@ -26,7 +30,7 @@ Runs startup tasks or loads .so files. &gt; **NOTE：**&gt; &gt; This API cannot
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startupTasks | Array&lt;string&gt; | Yes | Array of [StartupTask](../../apis-na/arkts-apis/arkts-na-app-appstartup-startuptask-startuptask-c.md) names or names of .so files to be preloaded. |
+| startupTasks | Array&lt;string&gt; | Yes | Array of [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md) names or names of .so files to be preloaded. |
 | config | [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | No | Configuration for the timeout duration and listener of startup tasks in AppStartup. |
 
 **Return value:**
@@ -40,11 +44,11 @@ Runs startup tasks or loads .so files. &gt; **NOTE：**&gt; &gt; This API cannot
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [28800004](../errorcode-ability.md#28800004-executing-the-startup-task-times-out) | Running startup tasks timeout. |
-| [28800003](../errorcode-ability.md#28800003-error-occurs-during-task-startup) | An error occurred while running the startup tasks. |
-| [28800002](../errorcode-ability.md#28800002-circular-dependencies-between-startup-tasks) | The startup tasks have circular dependencies. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [28800001](../errorcode-ability.md#28800001-startup-task-or-dependency-not-found) | Startup task or its dependency not found. |
+| [28800002](../errorcode-ability.md#28800002-circular-dependencies-between-startup-tasks) | The startup tasks have circular dependencies. |
+| [28800003](../errorcode-ability.md#28800003-error-occurs-during-task-startup) | An error occurred while running the startup tasks. |
+| [28800004](../errorcode-ability.md#28800004-executing-the-startup-task-times-out) | Running startup tasks timeout. |
 
 **Examples**
 
@@ -96,8 +100,8 @@ Runs startup tasks or loads .so files. You can specify [AbilityStageContext](ark
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startupTasks | Array&lt;string&gt; | Yes | Array of [StartupTask](../../apis-na/arkts-apis/arkts-na-app-appstartup-startuptask-startuptask-c.md) names or names of .so files to be preloaded. |
-| context | common.AbilityStageContext | Yes | AbilityStage context that executes the [StartupTask](../../apis-na/arkts-apis/arkts-na-app-appstartup-startuptask-startuptask-c.md). It is passed as an input parameter to [init](../../apis-na/arkts-apis/arkts-na-app-appstartup-startuptask-startuptask-c.md#init) of the task. |
+| startupTasks | Array&lt;string&gt; | Yes | Array of [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md) names or names of .so files to be preloaded. |
+| context | common.AbilityStageContext | Yes | AbilityStage context that executes the [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md). It is passed as an input parameter to [init](arkts-ability-app-appstartup-startuptask-startuptask-c.md#init) of the task. |
 | config | [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | Yes | Configuration for the timeout duration and listener of startup tasks in AppStartup. |
 
 **Return value:**
@@ -110,11 +114,11 @@ Runs startup tasks or loads .so files. You can specify [AbilityStageContext](ark
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [28800004](../errorcode-ability.md#28800004-executing-the-startup-task-times-out) | Running startup tasks timeout. |
-| [28800003](../errorcode-ability.md#28800003-error-occurs-during-task-startup) | An error occurred while running the startup tasks. |
-| [28800002](../errorcode-ability.md#28800002-circular-dependencies-between-startup-tasks) | The startup tasks have circular dependencies. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [28800001](../errorcode-ability.md#28800001-startup-task-or-dependency-not-found) | Startup task or its dependency not found. |
+| [28800002](../errorcode-ability.md#28800002-circular-dependencies-between-startup-tasks) | The startup tasks have circular dependencies. |
+| [28800003](../errorcode-ability.md#28800003-error-occurs-during-task-startup) | An error occurred while running the startup tasks. |
+| [28800004](../errorcode-ability.md#28800004-executing-the-startup-task-times-out) | Running startup tasks timeout. |
 
 **Examples**
 

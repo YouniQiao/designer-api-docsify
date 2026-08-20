@@ -2,6 +2,8 @@
 
 The policy rules of the profile.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-eSIM-export enum PolicyRules--><!--Device-eSIM-export enum PolicyRules-End-->

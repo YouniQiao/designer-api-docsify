@@ -1,5 +1,7 @@
 # SystemPanelInsets
 
+@brief 输入法软键盘相对系统面板的偏移区域。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-interface SystemPanelInsets--><!--Device-inputMethodEngine-interface SystemPanelInsets-End-->
@@ -18,6 +20,8 @@ import { inputMethodEngine } from '@kit.IMEKit';
 readonly bottom: int
 ```
 
+@brief 键盘区域的下边界到系统面板区域下边界的距离，单位为px，该参数为整数。
+
 **类型：** int
 
 **起始版本：** 23
@@ -32,6 +36,8 @@ readonly bottom: int
 readonly left: int
 ```
 
+@brief 键盘区域的左边界到系统面板区域左边界的距离，单位为px，该参数为整数。
+
 **类型：** int
 
 **起始版本：** 23
@@ -45,6 +51,8 @@ readonly left: int
 ```TypeScript
 readonly right: int
 ```
+
+@brief 键盘区域的右边界到系统面板区域右边界的距离，单位为px，该参数为整数。
 
 **类型：** int
 

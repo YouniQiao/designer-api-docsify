@@ -34,6 +34,7 @@ import { storageStatistics } from '@kit.CoreFileKit';
 | [getAllExtBundleStats](arkts-corefile-storagestatistics-getallextbundlestats-f-sys.md) | Obtains the space usage of all system applications or system services of a specified user. This API uses a promise to return the result. |
 | [getBundleStats](arkts-corefile-storagestatistics-getbundlestats-f-sys.md) | Obtains the storage space of an application, in bytes. This API uses an asynchronous callback to return the result. |
 | [getBundleStats](arkts-corefile-storagestatistics-getbundlestats-f-sys.md) | Obtains the storage space of an application, in bytes. This API uses a promise to return the result. |
+| [getBundleStats](arkts-corefile-storagestatistics-getbundlestats-f-sys.md) | Obtains the storage space of an application, in bytes. This API uses a promise to return the result. |
 | [getExtBundleStats](arkts-corefile-storagestatistics-getextbundlestats-f-sys.md) | Obtains the space usage of a specified user, system application bundle name, or system service name. This API uses a promise to return the result. |
 | [getFreeSize](arkts-corefile-storagestatistics-getfreesize-f-sys.md) | Obtains the available space (in bytes) of the built-in storage. This API uses an asynchronous callback to return the result. |
 | [getFreeSize](arkts-corefile-storagestatistics-getfreesize-f-sys.md) | Obtains the available space (in bytes) of the built-in storage. This API uses a promise to return the result. |
@@ -53,7 +54,7 @@ import { storageStatistics } from '@kit.CoreFileKit';
 | [getUserStorageStats](arkts-corefile-storagestatistics-getuserstoragestats-f-sys.md) | Obtains the storage statistics of the specified user, in bytes. This API uses a promise to return the result. |
 | [getUserStorageStats](arkts-corefile-storagestatistics-getuserstoragestats-f-sys.md) | Obtains the storage statistics of the specified user, in bytes. This API uses an asynchronous callback to return the result. |
 | [listUserdataDirInfo](arkts-corefile-storagestatistics-listuserdatadirinfo-f-sys.md) | Queries the space usage of the **\/data** directory on the user device. This API uses a promise to return the result. |
-| [setExtBundleStats](arkts-corefile-storagestatistics-setextbundlestats-f-sys.md) | Reports the space usage of system applications or system services. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; If the value of **flag** in **stats** is **false**, the value of **businessName** must be the bundle name of an &gt; application. |
+| [setExtBundleStats](arkts-corefile-storagestatistics-setextbundlestats-f-sys.md) | Reports the space usage of system applications or system services. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 ### Interfaces
@@ -67,8 +68,17 @@ import { storageStatistics } from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
+| [BundleStatsOptions](arkts-corefile-storagestatistics-bundlestatsoptions-i-sys.md) | Options for obtaining the bundle statistics. |
 | [ExtBundleStats](arkts-corefile-storagestatistics-extbundlestats-i-sys.md) | Details the space usage of system applications or system services. |
 | [StorageStats](arkts-corefile-storagestatistics-storagestats-i-sys.md) | Get the user storage statistics. |
 | [UserdataDirInfo](arkts-corefile-storagestatistics-userdatadirinfo-i-sys.md) | Details the space usage of the **\/data** directory on the user device. |
+<!--DelEnd-->
+
+<!--Del-->
+### Enums(System API)
+
+| Name | Description |
+| --- | --- |
+| [GetBundleStatsFlag](arkts-corefile-storagestatistics-getbundlestatsflag-e-sys.md) | Enumerates the flags for obtaining the bundle statistics. |
 <!--DelEnd-->
 

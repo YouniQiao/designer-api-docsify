@@ -2,6 +2,8 @@
 
 Defines the layer mask of a node.
 
+@interface LayerMask
+
 **Since:** 23
 
 <!--Device-unnamed-export interface LayerMask--><!--Device-unnamed-export interface LayerMask-End-->

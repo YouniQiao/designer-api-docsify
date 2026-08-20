@@ -52,14 +52,14 @@ addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, externalUri: string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation is not allowed, e.g. ringtone to add is not customized. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. Possible causes: 1. The target file size exceeds 2 GB; 2. Failed to find the specified file; 3. System sound manager service error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [20700006](../errorcode-audio-ringtone-sys.md#20700006-rom空间不足) | Insufficient ROM space.<br>**适用版本：** 20+ |
-| [20700005](../errorcode-audio-ringtone-sys.md#20700005-文件个数超过限制) | The number of files exceeds the limit.<br>**适用版本：** 20+ |
 | [20700004](../errorcode-audio-ringtone-sys.md#20700004-数据大小超过限制) | Data size exceeds the limit. Note: This error is returned when the file size is between 200MB and 2GB.<br>**适用版本：** 20+ |
+| [20700005](../errorcode-audio-ringtone-sys.md#20700005-文件个数超过限制) | The number of files exceeds the limit.<br>**适用版本：** 20+ |
+| [20700006](../errorcode-audio-ringtone-sys.md#20700006-rom空间不足) | Insufficient ROM space.<br>**适用版本：** 20+ |
 
 **示例**
 
@@ -127,14 +127,14 @@ addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: int, offset?: l
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation is not allowed, e.g. ringtone to add is not customized. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. Possible causes: 1. The target file size exceeds 2 GB; 2. Failed to find the specified file; 3. Ringtone library error. 4. System sound manager service error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [20700006](../errorcode-audio-ringtone-sys.md#20700006-rom空间不足) | Insufficient ROM space.<br>**适用版本：** 20+ |
-| [20700005](../errorcode-audio-ringtone-sys.md#20700005-文件个数超过限制) | The number of files exceeds the limit.<br>**适用版本：** 20+ |
 | [20700004](../errorcode-audio-ringtone-sys.md#20700004-数据大小超过限制) | Data size exceeds the limit. Note: This error is returned when the file size is between 200MB and 2GB.<br>**适用版本：** 20+ |
+| [20700005](../errorcode-audio-ringtone-sys.md#20700005-文件个数超过限制) | The number of files exceeds the limit.<br>**适用版本：** 20+ |
+| [20700006](../errorcode-audio-ringtone-sys.md#20700006-rom空间不足) | Insufficient ROM space.<br>**适用版本：** 20+ |
 
 **示例**
 
@@ -197,9 +197,9 @@ close(fd: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 **示例**
 
@@ -251,9 +251,9 @@ getAlarmToneAttrList(context: BaseContext): Promise<ToneAttrsArray>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 **示例**
 
@@ -304,9 +304,9 @@ getAlarmToneUri(context: BaseContext): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 **示例**
 
@@ -357,8 +357,8 @@ getCurrentRingtoneAttribute(type: RingtoneType): Promise<ToneAttrs>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 
 **示例**
 
@@ -407,9 +407,9 @@ getDefaultAlarmToneAttrs(context: BaseContext): Promise<ToneAttrs>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 **示例**
 
@@ -461,9 +461,9 @@ getDefaultRingtoneAttrs(context: BaseContext, type: RingtoneType): Promise<ToneA
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 **示例**
 
@@ -516,9 +516,9 @@ getDefaultSystemToneAttrs(context: BaseContext, type: SystemToneType): Promise<T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 **示例**
 
@@ -571,11 +571,11 @@ getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<To
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. For example, the input URI is not used for tones. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 **示例**
 
@@ -602,7 +602,13 @@ getMockHapticRingtonePlayer(
       context: BaseContext, type: RingtoneType, ringtoneUri: string): Promise<RingtonePlayer | null>
 ```
 
-获取模拟触觉铃声播放器，根据指定的铃声类型和铃音文件URI，播放该铃音文件对应的振动文件及其模拟触觉声音文件。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 调用该接口前，请确保传入的ringtoneUri在系统中存在，否则会出现异常和错误。例如无法播放匹配的触觉声音文件。 &gt; &gt; - 通过该接口获取实例后，在服务终止时需主动调用RingtonePlayer的 &gt; [release](arkts-audio-ringtoneplayer-ringtoneplayer-i-sys.md#release)方法释放播放器资源。
+获取模拟触觉铃声播放器，根据指定的铃声类型和铃音文件URI，播放该铃音文件对应的振动文件及其模拟触觉声音文件。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 调用该接口前，请确保传入的ringtoneUri在系统中存在，否则会出现异常和错误。例如无法播放匹配的触觉声音文件。
+> 
+> - 通过该接口获取实例后，在服务终止时需主动调用RingtonePlayer的 &gt; [release](arkts-audio-ringtoneplayer-ringtoneplayer-i-sys.md#release)方法释放播放器资源。
 
 **起始版本：** 26.0.0
 
@@ -632,9 +638,9 @@ getMockHapticRingtonePlayer(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. The ringtone database access timed out or encountered an error. It is recommended to restart your phone. |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter verification failed. Possible causes: 1.The type exceeds the valid range, please use the RingtoneType enum for input. 2.The ringtoneUri does not exist or is incorrectly formatted, please use the ringtoneUri returned by the [addCustomizedTone](#addcustomizedtone). |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter verification failed. Possible causes: 1.The type exceeds the valid range, please use the RingtoneType enum for input. 2.The ringtoneUri does not exist or is incorrectly formatted, please use the ringtoneUri returned by the [addCustomizedTone](#addcustomizedtone). |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. The ringtone database access timed out or encountered an error. It is recommended to restart your phone. |
 
 **示例**
 
@@ -665,7 +671,13 @@ systemSoundManagerInstance.getMockHapticRingtonePlayer(context, type, ringtoneUr
 getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<RingtonePlayer | null>
 ```
 
-获取模拟触觉铃声播放器，根据指定的触觉文件URI播放振动文件及其对应的模拟触觉声音文件。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 调用该接口前，请确保传入的hapticUri在系统中存在，否则会出现异常和错误。例如无法播放匹配的触觉声音文件。 &gt; &gt; - 通过该接口获取实例后，在服务终止时需主动调用RingtonePlayer的 &gt; [release](arkts-audio-ringtoneplayer-ringtoneplayer-i-sys.md#release)方法释放播放器资源。
+获取模拟触觉铃声播放器，根据指定的触觉文件URI播放振动文件及其对应的模拟触觉声音文件。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 调用该接口前，请确保传入的hapticUri在系统中存在，否则会出现异常和错误。例如无法播放匹配的触觉声音文件。
+> 
+> - 通过该接口获取实例后，在服务终止时需主动调用RingtonePlayer的 &gt; [release](arkts-audio-ringtoneplayer-ringtoneplayer-i-sys.md#release)方法释放播放器资源。
 
 **起始版本：** 26.0.0
 
@@ -694,9 +706,9 @@ getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<Ri
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. The ringtone database access timed out or encountered an error. It is recommended to restart your phone. |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter verification failed. The hapticUri does not exist or is incorrectly formatted. Ensure it is a JSON file and that it exists in the system's file system. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter verification failed. The hapticUri does not exist or is incorrectly formatted. Ensure it is a JSON file and that it exists in the system's file system. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. The ringtone database access timed out or encountered an error. It is recommended to restart your phone. |
 
 **示例**
 
@@ -753,9 +765,9 @@ getRingtoneAttrList(context: BaseContext, type: RingtoneType): Promise<ToneAttrs
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 **示例**
 
@@ -808,8 +820,8 @@ getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePla
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 **示例**
 
@@ -919,9 +931,9 @@ getRingtoneUri(context: BaseContext, type: RingtoneType): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 **示例**
 
@@ -967,7 +979,7 @@ getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCal
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
 | type | RingtoneType | 是 | 待获取播放器的系统铃声的类型。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RingtonePlayer&gt; | 是 | 回调函数。当获取系统铃声播放器成功，err为undefined data为获取到的系统铃声播放器；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;RingtonePlayer&gt; | 是 | 回调函数。当获取系统铃声播放器成功，err为undefined data为获取到的系统铃声播放器；否则为错误对象。 |
 
 **示例**
 
@@ -1070,7 +1082,7 @@ getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallba
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
 | type | RingtoneType | 是 | 待获取的系统铃声的类型。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取系统铃声uri成功，err为undefined， data为获取到的系统铃声uri；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当获取系统铃声uri成功，err为undefined， data为获取到的系统铃声uri；否则为错误对象。 |
 
 **示例**
 
@@ -1176,9 +1188,9 @@ getSystemToneAttrList(context: BaseContext, type: SystemToneType): Promise<ToneA
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 **示例**
 
@@ -1231,8 +1243,8 @@ getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemT
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 **示例**
 
@@ -1342,9 +1354,9 @@ getSystemToneUri(context: BaseContext, type: SystemToneType): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 **示例**
 
@@ -1397,10 +1409,10 @@ getToneHapticsList(context: BaseContext, isSynced: boolean): Promise<ToneHaptics
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 **示例**
 
@@ -1452,10 +1464,10 @@ getToneHapticsSettings(context: BaseContext, type: ToneHapticsType): Promise<Ton
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 **示例**
 
@@ -1508,9 +1520,9 @@ openAlarmTone(context: BaseContext, uri: string): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | 20700001 | Tone type mismatch, e.g. tone of uri is notification instead of alarm. |
 
 **示例**
@@ -1564,11 +1576,11 @@ openToneHaptics(context: BaseContext, hapticsUri: string): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. For example, the input URI is not one for haptics. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 **示例**
 
@@ -1678,11 +1690,11 @@ removeCustomizedTone(context: BaseContext, uri:string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation is not allowed, e.g. ringtone of this uri is not customized. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 **示例**
 
@@ -1793,9 +1805,9 @@ setAlarmToneUri(context: BaseContext, uri: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | 20700001 | Tone type mismatch, e.g. tone of input uri is not an alarm tone. |
 
 **示例**
@@ -1850,9 +1862,9 @@ setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 **示例**
 
@@ -1900,7 +1912,7 @@ setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
 | uri | string | 是 | 被设置的系统铃声的uri，资源支持 可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md)。 |
 | type | RingtoneType | 是 | 被设置的系统铃声的类型。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置系统铃声uri成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置系统铃声uri成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -2010,9 +2022,9 @@ setSystemToneUri(context: BaseContext, uri: string, type: SystemToneType): Promi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 **示例**
 
@@ -2067,11 +2079,11 @@ setToneHapticsSettings(context: BaseContext, type: ToneHapticsType, settings: To
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. For example, the input URI is not valid. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 **示例**
 

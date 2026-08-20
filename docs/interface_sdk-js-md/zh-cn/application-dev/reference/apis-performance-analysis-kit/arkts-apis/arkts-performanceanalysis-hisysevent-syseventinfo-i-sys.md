@@ -78,7 +78,7 @@ params?: Record<string, boolean | int | double | string | bigint | boolean[] | i
 
 事件参数。
 
-**类型：** Record&lt;string, boolean \| int \| double \| string \| bigint \| boolean[] \| int[] \| double[] \| string[] \| bigint[]&gt; \| null \| undefined
+**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, boolean \| int \| double \| string \| bigint \| boolean[] \| int[] \| double[] \| string[] \| bigint[]&gt; \| null \| undefined
 
 **起始版本：** 23
 

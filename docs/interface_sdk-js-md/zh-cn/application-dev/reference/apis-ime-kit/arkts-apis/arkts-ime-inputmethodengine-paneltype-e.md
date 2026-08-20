@@ -1,5 +1,7 @@
 # PanelType
 
+@brief 输入法面板类型枚举。 <br> | 名称 | 值 | 说明 | | ------------ | -- | ------------------ | | SOFT_KEYBOARD | 0 | 软键盘类型。 | | STATUS_BAR | 1 | 状态栏类型。 |
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-export enum PanelType--><!--Device-inputMethodEngine-export enum PanelType-End-->
@@ -12,6 +14,8 @@
 SOFT_KEYBOARD = 0
 ```
 
+@brief 软键盘类型。
+
 **起始版本：** 23
 
 <!--Device-PanelType-SOFT_KEYBOARD = 0--><!--Device-PanelType-SOFT_KEYBOARD = 0-End-->
@@ -23,6 +27,8 @@ SOFT_KEYBOARD = 0
 ```TypeScript
 STATUS_BAR
 ```
+
+@brief 状态栏类型。
 
 **起始版本：** 23
 

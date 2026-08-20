@@ -1,5 +1,13 @@
 # @ohos.resourceManager
 
+本模块提供应用资源和系统资源的访问能力，允许应用根据当前的[Configuration](arkts-localization-resourcemanager-configuration-c.md)配置，获取最匹配的应用资源或系统资源，支持国际化资源匹配和多设备适配。具 体匹配规则参考[资源匹配](../../../quick-start/resource-categories-and-access.md#资源匹配)。Configuration配置包括语言-文字-国家地区、横竖屏、颜色模式、Mcc（移动国家码）和Mnc（移动网络码）、设备类型、屏幕密度。  
+**使用场景**：  
+- 应用国际化：根据用户语言和地区自动获取匹配的字符串资源。 - 多设备适配：根据设备类型、屏幕密度获取合适的媒体资源。 - 动态资源配置：根据设备状态（横竖屏、颜色模式等）获取对应配置的资源。  
+**使用说明**：  
+- FA模型需要先导入模块，再调用[getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md)接口获取资源管理对象。 - 从API version 9开始，Stage模型无需导入模块，支持通过Context获取资源管理resourceManager对象。Context的更多介绍请参考 [应用上下文Context](../../../application-models/application-context-stage.md)。  
+ ```ts
+ import { UIAbility } from '
+
 **起始版本：** -1
 
 <!--Device-unnamed-declare namespace resourceManager--><!--Device-unnamed-declare namespace resourceManager-End-->
@@ -44,7 +52,7 @@ import { resourceManager } from '@kit.LocalizationKit';
 | 名称 | 说明 |
 | --- | --- |
 | [ColorMode](arkts-localization-resourcemanager-colormode-e.md) | 用于表示当前设备颜色模式。 |
-| [DeviceType](arkts-localization-resourcemanager-devicetype-e.md) | 用于表示当前设备类型。 <!--RP1--> <!--RP1End--> |
+| [DeviceType](arkts-localization-resourcemanager-devicetype-e.md) | 用于表示当前设备类型。 |
 | [Direction](arkts-localization-resourcemanager-direction-e.md) | 用于表示设备屏幕方向。 |
 | [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md) | 用于表示当前设备屏幕密度。 |
 

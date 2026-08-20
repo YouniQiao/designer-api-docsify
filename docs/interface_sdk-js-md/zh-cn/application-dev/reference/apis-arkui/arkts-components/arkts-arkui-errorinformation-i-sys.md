@@ -1,4 +1,4 @@
-# ErrorInformation(系统接口)（系统接口）
+# ErrorInformation（系统接口）
 
 卡片错误信息。
 

@@ -12,7 +12,9 @@ import { connection } from '@kit.NetworkKit';
 function isDefaultNetMeteredSync(): boolean
 ```
 
-Checks whether the data traffic over the current network is metered. For example, data traffic over Wi-Fi is not metered, whereas that over cellular networks is. This API returns the result synchronously. **Required permission**: ohos.permission.GET_NETWORK_INFO
+Checks whether the data traffic over the current network is metered. For example, data traffic over Wi-Fi is not metered, whereas that over cellular networks is. This API returns the result synchronously.
+
+**Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 10
 
@@ -32,9 +34,9 @@ Checks whether the data traffic over the current network is metered. For example
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 

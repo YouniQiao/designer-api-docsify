@@ -12,7 +12,9 @@ import { connection } from '@kit.NetworkKit';
 function isDefaultNetMetered(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the data traffic over the current default network is metered. For example, data traffic over Wi-Fi is not metered, whereas that over cellular networks is. This API uses an asynchronous callback to return the result. **Required permission**: ohos.permission.GET_NETWORK_INFO
+Checks whether the data traffic over the current default network is metered. For example, data traffic over Wi-Fi is not metered, whereas that over cellular networks is. This API uses an asynchronous callback to return the result.
+
+**Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 9
 
@@ -32,10 +34,10 @@ Checks whether the data traffic over the current default network is metered. For
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 
@@ -56,7 +58,9 @@ connection.isDefaultNetMetered((error: BusinessError, data: boolean) => {
 function isDefaultNetMetered(): Promise<boolean>
 ```
 
-Checks whether the data traffic over the current default network is metered. For example, data traffic over Wi-Fi is not metered, whereas that over cellular networks is. This API uses a promise to return the result. **Required permission**: ohos.permission.GET_NETWORK_INFO
+Checks whether the data traffic over the current default network is metered. For example, data traffic over Wi-Fi is not metered, whereas that over cellular networks is. This API uses a promise to return the result.
+
+**Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 9
 
@@ -76,9 +80,9 @@ Checks whether the data traffic over the current default network is metered. For
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 

@@ -1,6 +1,6 @@
 # KeyEvent
 
-按键事件。 [EnterpriseAdminExtensionAbility.onKeyEvent](../../apis-na/arkts-apis/arkts-na-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) 按键事件回调触发时，传递当前按键事件信息。
+按键事件。 [EnterpriseAdminExtensionAbility.onKeyEvent](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) 按键事件回调触发时，传递当前按键事件信息。
 
 **起始版本：** 23
 

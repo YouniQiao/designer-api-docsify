@@ -1,6 +1,8 @@
 # domain
 
-Provides domain name constants. | Name| Type | Read Only | Description | | --- | ------ | ------ | ---------- | | OS | string | Yes| System domain.|
+Provides domain name constants.
+
+| Name| Type | Read Only | Description | | --- | ------ | ------ | ---------- | | OS | string | Yes| System domain.|
 
 **Since:** 23
 

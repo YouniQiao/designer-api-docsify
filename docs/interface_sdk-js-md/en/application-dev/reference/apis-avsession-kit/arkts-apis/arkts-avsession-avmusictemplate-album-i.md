@@ -2,6 +2,8 @@
 
 The definition of Album.
 
+@extends MediaEntity @interface Album
+
 **Inheritance/Implementation:** Album extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)
 
 **Since:** 23

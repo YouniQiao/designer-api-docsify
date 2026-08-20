@@ -2,6 +2,8 @@
 
 Defines Particle Modifier
 
+@extends ParticleAttribute @implements AttributeModifier&lt;ParticleAttribute&gt;
+
 **Inheritance/Implementation:** ParticleModifier extends ParticleAttribute and implements AttributeModifier<ParticleAttribute>
 
 **Since:** 23

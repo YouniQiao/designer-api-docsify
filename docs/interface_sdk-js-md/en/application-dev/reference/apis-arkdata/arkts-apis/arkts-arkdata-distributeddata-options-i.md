@@ -24,7 +24,9 @@ import { distributedDataObject } from '@kit.ArkData';
 autoSync?: boolean
 ```
 
-Whether to automatically synchronize database files. The default value is **false**, which means the database files are manually synchronized. ohos.permission.DISTRIBUTED_DATASYNC
+Whether to automatically synchronize database files. The default value is **false**, which means the database files are manually synchronized.
+
+ohos.permission.DISTRIBUTED_DATASYNC
 
 **Type:** boolean
 

@@ -2,6 +2,8 @@
 
 Corresponding to a file's data. Filedata is useful when doing IPC with the backup service.
 
+@interface FileData
+
 **Since:** 23
 
 <!--Device-backup-interface FileData--><!--Device-backup-interface FileData-End-->

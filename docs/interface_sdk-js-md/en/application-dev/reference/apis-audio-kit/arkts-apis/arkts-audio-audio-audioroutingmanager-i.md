@@ -1,6 +1,12 @@
 # AudioRoutingManager
 
-This interface implements audio routing management. Before calling any API in AudioRoutingManager, you must use [getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager) to obtain an AudioRoutingManager instance. &gt; **NOTE：**&gt; &gt; - The initial APIs of this interface are supported since API version 9.
+This interface implements audio routing management.
+
+Before calling any API in AudioRoutingManager, you must use [getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager) to obtain an AudioRoutingManager instance.
+
+> **NOTE：**
+> 
+> - The initial APIs of this interface are supported since API version 9.
 
 **Since:** 23
 
@@ -916,7 +922,9 @@ Subscribes to the event indicating that the connection status of an audio device
 on(type: 'micBlockStatusChanged', callback: Callback<DeviceBlockStatusInfo>): void
 ```
 
-Subscribes to the microphone blocked status change event. This API uses an asynchronous callback to return the result. Before using this API, check whether the current device supports microphone blocking detection. This event is triggered when the microphone blocked status changes during recording. Currently, this API takes effect only for the microphone on the local device.
+Subscribes to the microphone blocked status change event. This API uses an asynchronous callback to return the result.
+
+Before using this API, check whether the current device supports microphone blocking detection. This event is triggered when the microphone blocked status changes during recording. Currently, this API takes effect only for the microphone on the local device.
 
 **Since:** 13
 
@@ -1002,7 +1010,11 @@ Subscribes to the change event of the input device with the highest priority, wh
 setCommunicationDevice(deviceType: CommunicationDeviceType, active: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets a communication device to the active state. This API uses an asynchronous callback to return the result. This API will be deprecated in a later version due to function design is changed. You are not advised to use it. You are advised to use the [AVCastPicker component](../../../media/avsession/using-switch-call-devices.md) provided by AVSession to switch between call devices.
+Sets a communication device to the active state. This API uses an asynchronous callback to return the result.
+
+This API will be deprecated in a later version due to function design is changed. You are not advised to use it.
+
+You are advised to use the [AVCastPicker component](../../../media/avsession/using-switch-call-devices.md) provided by AVSession to switch between call devices.
 
 **Since:** 23
 
@@ -1024,7 +1036,11 @@ Sets a communication device to the active state. This API uses an asynchronous c
 setCommunicationDevice(deviceType: CommunicationDeviceType, active: boolean): Promise<void>
 ```
 
-Sets a communication device to the active state. This API uses a promise to return the result. This API will be deprecated in a later version due to function design is changed. You are not advised to use it. You are advised to use the [AVCastPicker component](../../../media/avsession/using-switch-call-devices.md) provided by AVSession to switch between call devices.
+Sets a communication device to the active state. This API uses a promise to return the result.
+
+This API will be deprecated in a later version due to function design is changed. You are not advised to use it.
+
+You are advised to use the [AVCastPicker component](../../../media/avsession/using-switch-call-devices.md) provided by AVSession to switch between call devices.
 
 **Since:** 23
 

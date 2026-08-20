@@ -14,7 +14,9 @@ import { window } from '@kit.ArkUI';
 function getLastWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void
 ```
 
-获取当前应用内层级最高的子窗口，使用callback异步回调。 若无应用子窗口或子窗口未调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)进行显示，则返回应用主 窗口。
+获取当前应用内层级最高的子窗口，使用callback异步回调。
+
+若无应用子窗口或子窗口未调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)进行显示，则返回应用主 窗口。
 
 **起始版本：** 23
 
@@ -29,7 +31,7 @@ function getLastWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | Current application context. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 | Callback used to return the top window obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 | Callback used to return the top window obtained. |
 
 **错误码：**
 
@@ -135,7 +137,9 @@ export default class EntryAbility extends UIAbility {
 function getLastWindow(ctx: BaseContext): Promise<Window>
 ```
 
-获取当前应用内层级最高的子窗口，使用Promise异步回调。 若无应用子窗口或子窗口未调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)进行显示，则返回应用主 窗口。
+获取当前应用内层级最高的子窗口，使用Promise异步回调。
+
+若无应用子窗口或子窗口未调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)进行显示，则返回应用主 窗口。
 
 **起始版本：** 23
 

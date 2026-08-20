@@ -1,6 +1,12 @@
 # ImageSource
 
-The **ImageSource** class provides APIs to obtain image information. Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-image-createimagesource-f.md) to create an ImageSource instance. All APIs in ImageSource cannot be called concurrently. Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+The **ImageSource** class provides APIs to obtain image information.
+
+Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-image-createimagesource-f.md) to create an ImageSource instance.
+
+All APIs in ImageSource cannot be called concurrently.
+
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 23
 
@@ -49,7 +55,11 @@ Obtains raw data from an image.
 createPicture(options?: DecodingOptionsForPicture): Promise<Picture>
 ```
 
-Creates a Picture object based on decoding options. This API uses a promise to return the result. Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-image-picture-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates a Picture object based on decoding options. This API uses a promise to return the result.
+
+Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-image-picture-i.md#release) to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 13
 
@@ -115,7 +125,11 @@ Creates a Picture object based on image decoding parameters. This method uses a 
 createPictureAtIndex(index: int): Promise<Picture>
 ```
 
-Creates a **Picture** object using a specified image (only GIF and HEIF&lt;sup&gt;23+&lt;/sup&gt; images currently). This API uses a promise to return the result. Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-image-picture-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates a **Picture** object using a specified image (only GIF and HEIF&lt;sup&gt;23+&lt;/sup&gt; images currently). This API uses a promise to return the result.
+
+Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-image-picture-i.md#release) to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 20
 
@@ -140,10 +154,10 @@ Creates a **Picture** object using a specified image (only GIF and HEIF&lt;sup&g
 | Error Code ID | Error Message |
 | --- | --- |
 | [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
 | [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decoding failed. |
+| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
 | [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options. For example, index is invalid. |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decoding failed. |
 
 ## createPictureAtIndex
 
@@ -176,10 +190,10 @@ Decodes an image at the specified index into a Picture object.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
 | [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decoding failed. |
+| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
 | [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options. For example, index is invalid. |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decoding failed. |
 
 ## createPixelMap
 
@@ -187,7 +201,17 @@ Decodes an image at the specified index into a Picture object.
 createPixelMap(options?: DecodingOptions): Promise<PixelMap>
 ```
 
-Creates a PixelMap object based on decoding options. This API uses a promise to return the result. This API uses a promise to return the result. Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](#createpixelmapusingallocator) . This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md). &gt; **NOTE：**&gt; &gt; - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance. &gt; &gt; - Images occupy a large amount of memory. When you finish using a PixelMap instance, call &gt; [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. &gt; &gt; - Before releasing the instance, ensure that all asynchronous operations associated with the instance have &gt; finished and the instance is no longer needed.
+Creates a PixelMap object based on decoding options. This API uses a promise to return the result. This API uses a promise to return the result.
+
+Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](#createpixelmapusingallocator) . This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
+
+> **NOTE：**
+> 
+> - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.
+> 
+> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call &gt; [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
+> 
+> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have &gt; finished and the instance is no longer needed.
 
 **Since:** 7
 
@@ -243,7 +267,17 @@ Creates a PixelMap object based on image decoding parameters. This method uses a
 createPixelMap(callback: AsyncCallback<PixelMap>): void
 ```
 
-Creates a PixelMap object based on the default parameters. This API uses an asynchronous callback to return the result. Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](#createpixelmapusingallocator) . This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md). &gt; **NOTE：**&gt; &gt; - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance. &gt; &gt; - Images occupy a large amount of memory. When you finish using a PixelMap instance, call &gt; [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. &gt; &gt; - Before releasing the instance, ensure that all asynchronous operations associated with the instance have &gt; finished and the instance is no longer needed.
+Creates a PixelMap object based on the default parameters. This API uses an asynchronous callback to return the result.
+
+Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](#createpixelmapusingallocator) . This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
+
+> **NOTE：**
+> 
+> - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.
+> 
+> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call &gt; [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
+> 
+> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have &gt; finished and the instance is no longer needed.
 
 **Since:** 7
 
@@ -287,7 +321,17 @@ Creates a PixelMap object. This method uses a callback to return the object.
 createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap>): void
 ```
 
-Creates a PixelMap object based on decoding options. This API uses a promise to return the result. This API uses an asynchronous callback to return the result. Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](#createpixelmapusingallocator) . This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md). &gt; **NOTE：**&gt; &gt; - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance. &gt; &gt; - Images occupy a large amount of memory. When you finish using a PixelMap instance, call &gt; [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. &gt; &gt; - Before releasing the instance, ensure that all asynchronous operations associated with the instance have &gt; finished and the instance is no longer needed.
+Creates a PixelMap object based on decoding options. This API uses a promise to return the result. This API uses an asynchronous callback to return the result.
+
+Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](#createpixelmapusingallocator) . This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
+
+> **NOTE：**
+> 
+> - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.
+> 
+> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call &gt; [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
+> 
+> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have &gt; finished and the instance is no longer needed.
 
 **Since:** 7
 
@@ -333,7 +377,19 @@ Creates a PixelMap object based on image decoding parameters. This method uses a
 createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>
 ```
 
-Creates an array of PixelMap objects based on decoding options. This API uses a promise to return the result. For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image. &gt; **NOTE：**&gt; &gt; - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance. &gt; &gt; - Images occupy a large amount of memory. When you finish using a PixelMap instance, call &gt; [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. &gt; &gt; - Before releasing the instance, ensure that all asynchronous operations associated with the instance have &gt; finished and the instance is no longer needed. &gt; &gt; - This function decodes all frames at once. If the number of frames is high or the size of individual frames is &gt; large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component &gt; for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this &gt; function.
+Creates an array of PixelMap objects based on decoding options. This API uses a promise to return the result.
+
+For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image.
+
+> **NOTE：**
+> 
+> - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.
+> 
+> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call &gt; [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
+> 
+> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have &gt; finished and the instance is no longer needed.
+> 
+> - This function decodes all frames at once. If the number of frames is high or the size of individual frames is &gt; large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component &gt; for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this &gt; function.
 
 **Since:** 23
 
@@ -361,15 +417,15 @@ Creates an array of PixelMap objects based on decoding options. This API uses a 
 | [62980099](../errorcode-image.md#62980099-data-error-in-the-shared-memory) | The shared memory data is abnormal. |
 | [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
 | [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
 | [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 | [62980109](../errorcode-image.md#62980109-cropping-error) | Failed to crop the image. |
-| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
 | [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 | [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
 | [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
+| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
+| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
+| [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
 
 ## createPixelMapList
 
@@ -377,7 +433,19 @@ Creates an array of PixelMap objects based on decoding options. This API uses a 
 createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void
 ```
 
-Creates an array of PixelMap objects based on the default parameters. This API uses an asynchronous callback to return the result. For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image. &gt; **NOTE：**&gt; &gt; - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance. &gt; &gt; - Images occupy a large amount of memory. When you finish using a PixelMap instance, call &gt; [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. &gt; &gt; - Before releasing the instance, ensure that all asynchronous operations associated with the instance have &gt; finished and the instance is no longer needed. &gt; &gt; - This function decodes all frames at once. If the number of frames is high or the size of individual frames is &gt; large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component &gt; for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this &gt; function.
+Creates an array of PixelMap objects based on the default parameters. This API uses an asynchronous callback to return the result.
+
+For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image.
+
+> **NOTE：**
+> 
+> - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.
+> 
+> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call &gt; [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
+> 
+> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have &gt; finished and the instance is no longer needed.
+> 
+> - This function decodes all frames at once. If the number of frames is high or the size of individual frames is &gt; large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component &gt; for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this &gt; function.
 
 **Since:** 23
 
@@ -399,15 +467,15 @@ Creates an array of PixelMap objects based on the default parameters. This API u
 | [62980099](../errorcode-image.md#62980099-data-error-in-the-shared-memory) | The shared memory data is abnormal. |
 | [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
 | [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
 | [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 | [62980109](../errorcode-image.md#62980109-cropping-error) | Failed to crop the image. |
-| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
 | [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 | [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
 | [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
+| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
+| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
+| [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
 
 ## createPixelMapList
 
@@ -415,7 +483,19 @@ Creates an array of PixelMap objects based on the default parameters. This API u
 createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<PixelMap>>): void
 ```
 
-Creates an array of PixelMap objects based on decoding options. This API uses an asynchronous callback to return the result. For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image. &gt; **NOTE：**&gt; &gt; - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance. &gt; &gt; - Images occupy a large amount of memory. When you finish using a PixelMap instance, call &gt; [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. &gt; &gt; - Before releasing the instance, ensure that all asynchronous operations associated with the instance have &gt; finished and the instance is no longer needed. &gt; &gt; - This function decodes all frames at once. If the number of frames is high or the size of individual frames is &gt; large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component &gt; for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this &gt; function.
+Creates an array of PixelMap objects based on decoding options. This API uses an asynchronous callback to return the result.
+
+For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image.
+
+> **NOTE：**
+> 
+> - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.
+> 
+> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call &gt; [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
+> 
+> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have &gt; finished and the instance is no longer needed.
+> 
+> - This function decodes all frames at once. If the number of frames is high or the size of individual frames is &gt; large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component &gt; for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this &gt; function.
 
 **Since:** 23
 
@@ -438,15 +518,15 @@ Creates an array of PixelMap objects based on decoding options. This API uses an
 | [62980099](../errorcode-image.md#62980099-data-error-in-the-shared-memory) | The shared memory data is abnormal. |
 | [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
 | [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
 | [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 | [62980109](../errorcode-image.md#62980109-cropping-error) | Failed to crop the image. |
-| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
 | [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 | [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
 | [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
+| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
+| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
+| [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
 
 ## createPixelMapSync
 
@@ -454,7 +534,17 @@ Creates an array of PixelMap objects based on decoding options. This API uses an
 createPixelMapSync(options?: DecodingOptions): PixelMap
 ```
 
-Creates a PixelMap object based on decoding options. This API returns the result synchronously. Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. Starting from API version 15, you are advised to use [createPixelMapUsingAllocatorSync](#createpixelmapusingallocatorsync) . This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md). &gt; **NOTE：**&gt; &gt; This API operates synchronously and will block the current thread during execution. It should not be invoked &gt; from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For &gt; details, see &gt; [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
+Creates a PixelMap object based on decoding options. This API returns the result synchronously.
+
+Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+
+Starting from API version 15, you are advised to use [createPixelMapUsingAllocatorSync](#createpixelmapusingallocatorsync) . This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
+
+> **NOTE：**
+> 
+> This API operates synchronously and will block the current thread during execution. It should not be invoked &gt; from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For &gt; details, see &gt; [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
 
 **Since:** 12
 
@@ -506,7 +596,15 @@ Create a PixelMap object based on image decoding parameters synchronously.
 createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType): Promise<PixelMap>
 ```
 
-Creates a PixelMap object based on decoding options and memory type. This API uses a promise to return the result. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md). &gt; **NOTE：**&gt; &gt; - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance. &gt; &gt; - Images occupy a large amount of memory. When you finish using a PixelMap instance, call &gt; [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. &gt; &gt; - Before releasing the instance, ensure that all asynchronous operations associated with the instance have &gt; finished and the instance is no longer needed.
+Creates a PixelMap object based on decoding options and memory type. This API uses a promise to return the result. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
+
+> **NOTE：**
+> 
+> - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.
+> 
+> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call &gt; [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
+> 
+> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have &gt; finished and the instance is no longer needed.
 
 **Since:** 15
 
@@ -531,14 +629,14 @@ Creates a PixelMap object based on decoding options and memory type. This API us
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. This status code is thrown when an error occurs during the process of checking size. |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
 | [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
-| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
+| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. This status code is thrown when an error occurs during the process of checking size. |
 | [7700201](../errorcode-image.md#7700201-unsupported-memory-allocation-type) | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
 | [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options, e.g, cannot convert image into desired pixel format. |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
+| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
 
 ## createPixelMapUsingAllocator
 
@@ -573,12 +671,12 @@ Creates a PixelMap based on decoding parameters, the memory type used by the Pix
 | Error Code ID | Error Message |
 | --- | --- |
 | [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
 | [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
-| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
+| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
 | [7700201](../errorcode-image.md#7700201-unsupported-memory-allocation-type) | Unsupported allocator type. For example, use share memory to decode HDR image as only DMA supported HDR metadata. |
 | [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options, For example, unsupported desiredPixelFormat causes a failure in converting an imagge into the desired pixel format. |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
+| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
 
 ## createPixelMapUsingAllocatorSync
 
@@ -586,7 +684,15 @@ Creates a PixelMap based on decoding parameters, the memory type used by the Pix
 createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap
 ```
 
-Creates a PixelMap object based on decoding options and memory type. This API returns the result synchronously. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md). Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. &gt; **NOTE：**&gt; &gt; This API operates synchronously and will block the current thread during execution. It should not be invoked &gt; from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For &gt; details, see &gt; [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
+Creates a PixelMap object based on decoding options and memory type. This API returns the result synchronously. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
+
+Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+
+> **NOTE：**
+> 
+> This API operates synchronously and will block the current thread during execution. It should not be invoked &gt; from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For &gt; details, see &gt; [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
 
 **Since:** 15
 
@@ -611,14 +717,14 @@ Creates a PixelMap object based on decoding options and memory type. This API re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. This status code is thrown when an error occurs during the process of checking size. |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
 | [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
-| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
+| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. This status code is thrown when an error occurs during the process of checking size. |
 | [7700201](../errorcode-image.md#7700201-unsupported-memory-allocation-type) | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
 | [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options, e.g, cannot convert image into desired pixel format. |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
+| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
 
 ## createPixelMapUsingAllocatorSync
 
@@ -652,12 +758,12 @@ Creates a PixelMap based on decoding parameters synchronously, the memory type u
 | Error Code ID | Error Message |
 | --- | --- |
 | [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
 | [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
-| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
+| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
 | [7700201](../errorcode-image.md#7700201-unsupported-memory-allocation-type) | Unsupported allocator type. For example, use share memory to decode HDR image as only DMA supported HDR metadata. |
 | [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options, For example, unsupported desiredPixelFormat cause a failure in converting an image into the desired pixel format. |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
+| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
 
 ## createThumbnail
 
@@ -691,12 +797,12 @@ Creates a thumbnail image based on image decoding parameters. This method uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
 | [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
-| [7700305](../errorcode-image.md#7700305-thumbnail-generation-failed) | Thumbnail generation failed. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decode failed. |
+| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
 | [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter, e.g, invalid generate size. |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decode failed. |
 | [7700303](../errorcode-image.md#7700303-image-does-not-contain-thumbnail-data) | Image does not carry thumbnail data. |
+| [7700305](../errorcode-image.md#7700305-thumbnail-generation-failed) | Thumbnail generation failed. |
 
 ## createThumbnailSync
 
@@ -730,12 +836,12 @@ Synchronously creates a thumbnail image based on image decoding parameters. This
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
 | [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
-| [7700305](../errorcode-image.md#7700305-thumbnail-generation-failed) | Thumbnail generation failed. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decode failed. |
+| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
 | [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter, e.g, invalid generate size. |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decode failed. |
 | [7700303](../errorcode-image.md#7700303-image-does-not-contain-thumbnail-data) | Image does not carry thumbnail data. |
+| [7700305](../errorcode-image.md#7700305-thumbnail-generation-failed) | Thumbnail generation failed. |
 
 ## getDelayTimeList
 
@@ -762,13 +868,13 @@ Obtains an array of delay times. This API uses a promise to return the result. T
 | Error Code ID | Error Message |
 | --- | --- |
 | [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980149](../errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
 | [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
 | [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
 | [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
+| [62980149](../errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
 
 ## getDelayTimeList
 
@@ -795,13 +901,13 @@ Obtains an array of delay times. This API uses an asynchronous callback to retur
 | Error Code ID | Error Message |
 | --- | --- |
 | [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980149](../errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
 | [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
 | [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
 | [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
+| [62980149](../errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
 
 ## getDisposalTypeList
 
@@ -829,8 +935,8 @@ Obtains the list of disposal types. This API uses a promise to return the result
 | --- | --- |
 | [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
 | [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980149](../errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
 | [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
+| [62980149](../errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
 
 ## getFrameCount
 
@@ -856,15 +962,15 @@ Obtains the number of frames. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
 | [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
 | [62980112](../errorcode-image.md#62980112-image-format-mismatch) | The image format does not match. |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 | [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
 | [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
 | [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
+| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
 
 ## getFrameCount
 
@@ -890,15 +996,15 @@ Obtains the number of frames. This API uses an asynchronous callback to return t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
 | [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
 | [62980112](../errorcode-image.md#62980112-image-format-mismatch) | The image format does not match. |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 | [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
 | [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
 | [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
+| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
 
 ## getImageInfo
 
@@ -1052,7 +1158,11 @@ Get image information from image source.
 getImageInfoSync(index?: int): ImageInfo
 ```
 
-Obtains the image information with the specified index. This API returns the result synchronously. &gt; **NOTE：**&gt; &gt; This API operates synchronously and will block the current thread during execution. It should not be invoked &gt; from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For &gt; details, see &gt; [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
+Obtains the image information with the specified index. This API returns the result synchronously.
+
+> **NOTE：**
+> 
+> This API operates synchronously and will block the current thread during execution. It should not be invoked &gt; from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For &gt; details, see &gt; [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
 
 **Since:** 12
 
@@ -1104,7 +1214,9 @@ Get image information from image source synchronously.
 getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|null>>
 ```
 
-Obtains the values of properties with the given names in this image. This API uses a promise to return the result. This API applies only to images that are in JPEG, PNG, HEIF, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/sup&gt;format and contain Exif information. (The supported formats may vary depending on the hardware.)
+Obtains the values of properties with the given names in this image. This API uses a promise to return the result.
+
+This API applies only to images that are in JPEG, PNG, HEIF, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/sup&gt;format and contain Exif information. (The supported formats may vary depending on the hardware.)
 
 **Since:** 12
 
@@ -1128,11 +1240,11 @@ Obtains the values of properties with the given names in this image. This API us
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; 3.Parameter verification failed; |
 | [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
 | [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
 
 ## getImageProperties
 
@@ -1164,10 +1276,10 @@ Obtains the value of properties in an image. This method uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
 | [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
 | [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
 
 ## getImageProperty
 
@@ -1175,7 +1287,9 @@ Obtains the value of properties in an image. This method uses a promise to retur
 getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<string>
 ```
 
-Obtains the value of a property with the specified index in this image. This API uses a promise to return the result. This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/ sup&gt; format and contain Exif information. (The supported formats may vary depending on the hardware.)
+Obtains the value of a property with the specified index in this image. This API uses a promise to return the result.
+
+This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/ sup&gt; format and contain Exif information. (The supported formats may vary depending on the hardware.)
 
 **Since:** 23
 
@@ -1200,18 +1314,18 @@ Obtains the value of a property with the specified index in this image. This API
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types;3.Parameter verification failed; |
 | [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980112](../errorcode-image.md#62980112-image-format-mismatch) | The image format does not match. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 | [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
-| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
-| [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
-| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
 | [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
+| [62980112](../errorcode-image.md#62980112-image-format-mismatch) | The image format does not match. |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
+| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
+| [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
+| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
 
 ## getImageProperty
 
@@ -1219,7 +1333,9 @@ Obtains the value of a property with the specified index in this image. This API
 getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>
 ```
 
-Obtains the value of a property with the specified index in this image. This API uses a promise to return the result. This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+Obtains the value of a property with the specified index in this image. This API uses a promise to return the result.
+
+This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
 
 **Since:** 7
 
@@ -1250,7 +1366,9 @@ Obtains the value of a property with the specified index in this image. This API
 getImageProperty(key: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the value of a property with the specified index in this image. This API uses an asynchronous callback to return the result. This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+Obtains the value of a property with the specified index in this image. This API uses an asynchronous callback to return the result.
+
+This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
 
 **Since:** 7
 
@@ -1301,7 +1419,14 @@ Obtains the value of a property in this image. This API uses an asynchronous cal
 getImagePropertySync(key: PropertyKey): string
 ```
 
-Obtains the value of a specified Exif property. This API returns the result synchronously. &gt; **NOTE：**&gt; &gt; - This API applies only to images that are in JPEG, PNG, HEIF, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/sup&gt;format &gt; and contain Exif information. (The supported formats may vary depending on the hardware.) &gt; &gt; - Exif information is metadata of the image, including shooting time, camera model, aperture, focal length, and &gt; ISO. &gt; &gt; - This API operates synchronously and will block the current thread during execution. It should not be invoked &gt; from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For &gt; details, see &gt; [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
+Obtains the value of a specified Exif property. This API returns the result synchronously.
+
+> **NOTE：**
+> 
+> - This API applies only to images that are in JPEG, PNG, HEIF, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/sup&gt;format &gt; and contain Exif information. (The supported formats may vary depending on the hardware.) &gt;
+> - Exif information is metadata of the image, including shooting time, camera model, aperture, focal length, and &gt; ISO.
+> 
+> - This API operates synchronously and will block the current thread during execution. It should not be invoked &gt; from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For &gt; details, see &gt; [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
 
 **Since:** 20
 
@@ -1369,7 +1494,13 @@ Obtains the value of a property in the image.
 modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>
 ```
 
-Modifies the values of properties in this image. This API uses a promise to return the result. This API applies only to images that are in JPEG, PNG, HEIF, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.) &gt; **NOTE：**&gt; &gt; The property byte length is changed when the **modifyImageProperties** API is called to modify the values of &gt; properties. Currently, you can call the API in an ImageSource instance created based on a file descriptor or &gt; path, but not an ImageSource instance created based on buffers.
+Modifies the values of properties in this image. This API uses a promise to return the result.
+
+This API applies only to images that are in JPEG, PNG, HEIF, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+
+> **NOTE：**
+> 
+> The property byte length is changed when the **modifyImageProperties** API is called to modify the values of &gt; properties. Currently, you can call the API in an ImageSource instance created based on a file descriptor or &gt; path, but not an ImageSource instance created based on buffers.
 
 **Since:** 12
 
@@ -1394,9 +1525,9 @@ Modifies the values of properties in this image. This API uses a promise to retu
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; 3.Parameter verification failed; |
-| [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) | The EXIF data failed to be written to the file. |
-| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
 | [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
+| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
+| [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) | The EXIF data failed to be written to the file. |
 
 ## modifyImageProperties
 
@@ -1428,9 +1559,9 @@ Modify the value of properties in an image with the specified keys.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) | The EXIF data failed to be written to the file. |
-| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
 | [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
+| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
+| [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) | The EXIF data failed to be written to the file. |
 
 ## modifyImagePropertiesEnhanced
 
@@ -1438,7 +1569,15 @@ Modify the value of properties in an image with the specified keys.
 modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<void>
 ```
 
-Modifies image properties in batches. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - Calling this API to modify properties alters the property byte length. You are advised to create an &gt; [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by passing a &gt; file descriptor or an &gt; [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by &gt; passing a URI. &gt; &gt; - This API modifies batch data in memory and writes the data to the file in a single operation. It is more &gt; efficient than &gt; [modifyImageProperties](#modifyimageproperties) &gt; . &gt; &gt; - This API applies only to images that are in JPEG, PNG, HEIF, or WEBP format and contain the Exif information.
+Modifies image properties in batches. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - Calling this API to modify properties alters the property byte length. You are advised to create an &gt; [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by passing a &gt; file descriptor or an &gt; [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by &gt; passing a URI.
+> 
+> - This API modifies batch data in memory and writes the data to the file in a single operation. It is more &gt; efficient than &gt; [modifyImageProperties](#modifyimageproperties) &gt; .
+> 
+> - This API applies only to images that are in JPEG, PNG, HEIF, or WEBP format and contain the Exif information.
 
 **Since:** 23
 
@@ -1463,8 +1602,8 @@ Modifies image properties in batches. This API uses a promise to return the resu
 | Error Code ID | Error Message |
 | --- | --- |
 | [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700304](../errorcode-image.md#7700304-failed-to-write-image-information-to-the-file) | Failed to write image properties to the file. |
 | [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. For example, the property key is not supported, or the property value is invalid. |
+| [7700304](../errorcode-image.md#7700304-failed-to-write-image-information-to-the-file) | Failed to write image properties to the file. |
 
 ## modifyImageProperty
 
@@ -1472,7 +1611,13 @@ Modifies image properties in batches. This API uses a promise to return the resu
 modifyImageProperty(key: PropertyKey, value: string): Promise<void>
 ```
 
-Modifies the value of a property in this image. This API uses a promise to return the result. This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.) &gt; **NOTE：**&gt; &gt; The property byte length is changed when the **modifyImageProperty** API is called to modify the value of a &gt; property. Currently, you can call the API in an ImageSource instance created based on a file descriptor or path &gt; , but not an ImageSource instance created based on buffers.
+Modifies the value of a property in this image. This API uses a promise to return the result.
+
+This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+
+> **NOTE：**
+> 
+> The property byte length is changed when the **modifyImageProperty** API is called to modify the value of a &gt; property. Currently, you can call the API in an ImageSource instance created based on a file descriptor or path &gt; , but not an ImageSource instance created based on buffers.
 
 **Since:** 23
 
@@ -1498,10 +1643,10 @@ Modifies the value of a property in this image. This API uses a promise to retur
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; |
-| [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) | The EXIF data failed to be written to the file. |
+| [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
 | [62980133](../errorcode-image.md#62980133-image-property-value-out-of-range) | The EXIF data is out of range. |
 | [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
-| [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
+| [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) | The EXIF data failed to be written to the file. |
 
 ## modifyImageProperty
 
@@ -1509,7 +1654,13 @@ Modifies the value of a property in this image. This API uses a promise to retur
 modifyImageProperty(key: string, value: string): Promise<void>
 ```
 
-Modifies the value of a property in this image. This API uses a promise to return the result. This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.) &gt; **NOTE：**&gt; &gt; - The property byte length is changed when the **modifyImageProperty** API is called to modify the value of a &gt; property. Currently, you can call the API in an ImageSource instance created based on a file descriptor or path &gt; , but not an ImageSource instance created based on buffers.
+Modifies the value of a property in this image. This API uses a promise to return the result.
+
+This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+
+> **NOTE：**
+> 
+> - The property byte length is changed when the **modifyImageProperty** API is called to modify the value of a &gt; property. Currently, you can call the API in an ImageSource instance created based on a file descriptor or path &gt; , but not an ImageSource instance created based on buffers.
 
 **Since:** 9
 
@@ -1540,7 +1691,13 @@ Modifies the value of a property in this image. This API uses a promise to retur
 modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void
 ```
 
-Modifies the value of a property in this image. This API uses an asynchronous callback to return the result. This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.) &gt; **NOTE：**&gt; &gt; - The property byte length is changed when the **modifyImageProperty** API is called to modify the value of a &gt; property. Currently, you can call the API in an ImageSource instance created based on a file descriptor or path &gt; , but not an ImageSource instance created based on buffers.
+Modifies the value of a property in this image. This API uses an asynchronous callback to return the result.
+
+This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+
+> **NOTE：**
+> 
+> - The property byte length is changed when the **modifyImageProperty** API is called to modify the value of a &gt; property. Currently, you can call the API in an ImageSource instance created based on a file descriptor or path &gt; , but not an ImageSource instance created based on buffers.
 
 **Since:** 9
 
@@ -1566,7 +1723,28 @@ Modifies the value of a property in this image. This API uses an asynchronous ca
 readImageMetadata(propertyKeys?: string[], index?: int): Promise<ImageMetadata>
 ```
 
-Reads image metadata. You can use **propertyKeys** to specify the keys of metadata. This API uses a promise to return the result. This API applies only to images that are in JPEG, PNG, HEIF, WEBP, or DNG format and contain Exif information. ( The supported formats may vary depending on the hardware.) &gt; **NOTE：**&gt; &gt; When reading a DNG image, this API applies special handling to some **propertyKeys**. For details about the &gt; values of the following properties, see [PropertyKey](arkts-image-image-propertykey-e.md): &gt; &gt; - **NewSubfileType**, **ImageWidth**, **ImageLength**, **DefaultCropSize**, **Orientation**, **Compression**, &gt; **PhotometricInterpretation**, **PlanarConfiguration**, **RowsPerStrip**, **StripOffsets**, **StripByteCounts** &gt; , **SamplesPerPixel**, **BitsPerSample**, **YCbCrCoefficients**, **YCbCrSubSampling**, **YCbCrPositioning**, &gt; **ReferenceBlackWhite**, **XResolution**, **YResolution**, and **ResolutionUnit**: For these properties, values &gt; related to the main image are returned. &gt; &gt; - **ImageUniqueID**: The value is verified based on the specifications. If the value fails to comply with the &gt; specifications, an empty string is returned. &gt; &gt; - **ExifVersion**, **FlashpixVersion**, and **ColorSpace**: If the image does not contain these properties, an &gt; error code is returned. &gt; &gt; - **DNGVersion**: If the value is earlier than **1.0.0.0**, **1.0.0.0** is returned. &gt; &gt; - **GPSVersionID**: If there is no valid GPS data, the GPS version number is cleared and **0** is returned. &gt; &gt; - **GPSAltitudeRef**: If **GPSAltitude** is not set, this property is set to **0xFFFFFFFF**. &gt; &gt; - **ISOSpeedRatings**: If its value is **0** or **65535**, the recommended exposure index is used first. If the &gt; recommended exposure index does not exist, the standard output sensitivity, ISO speed, and exposure index are &gt; used in sequence.
+Reads image metadata. You can use **propertyKeys** to specify the keys of metadata. This API uses a promise to return the result.
+
+This API applies only to images that are in JPEG, PNG, HEIF, WEBP, or DNG format and contain Exif information. ( The supported formats may vary depending on the hardware.)
+
+> **NOTE：**
+> 
+> When reading a DNG image, this API applies special handling to some **propertyKeys**. For details about the &gt; values of the following properties, see [PropertyKey](arkts-image-image-propertykey-e.md):
+> 
+> - **NewSubfileType**, **ImageWidth**, **ImageLength**, **DefaultCropSize**, **Orientation**, **Compression**, &gt; **PhotometricInterpretation**, **PlanarConfiguration**, **RowsPerStrip**, **StripOffsets**, **StripByteCounts**
+> , **SamplesPerPixel**, **BitsPerSample**, **YCbCrCoefficients**, **YCbCrSubSampling**, **YCbCrPositioning**, &gt; **ReferenceBlackWhite**, **XResolution**, **YResolution**, and **ResolutionUnit**: For these properties, values &gt; related to the main image are returned.
+> 
+> - **ImageUniqueID**: The value is verified based on the specifications. If the value fails to comply with the &gt; specifications, an empty string is returned.
+> 
+> - **ExifVersion**, **FlashpixVersion**, and **ColorSpace**: If the image does not contain these properties, an &gt; error code is returned.
+> 
+> - **DNGVersion**: If the value is earlier than **1.0.0.0**, **1.0.0.0** is returned.
+> 
+> - **GPSVersionID**: If there is no valid GPS data, the GPS version number is cleared and **0** is returned.
+> 
+> - **GPSAltitudeRef**: If **GPSAltitude** is not set, this property is set to **0xFFFFFFFF**.
+> 
+> - **ISOSpeedRatings**: If its value is **0** or **65535**, the recommended exposure index is used first. If the &gt; recommended exposure index does not exist, the standard output sensitivity, ISO speed, and exposure index are &gt; used in sequence.
 
 **Since:** 23
 
@@ -1594,8 +1772,8 @@ Reads image metadata. You can use **propertyKeys** to specify the keys of metada
 | Error Code ID | Error Message |
 | --- | --- |
 | [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: 1. The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
 | [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. |
+| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: 1. The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
 
 ## readImageMetadataByType
 
@@ -1603,7 +1781,17 @@ Reads image metadata. You can use **propertyKeys** to specify the keys of metada
 readImageMetadataByType(metadataTypes?: MetadataType[], index?: int): Promise<ImageMetadata>
 ```
 
-Reads the metadata of an image source. You can use **metadataTypes** to specify the metadata types. If **metadataTypes** is not specified, all supported metadata is returned. This API uses a promise to return the result. This API applies only to images that are in JPEG, PNG, HEIF, WEBP, DNG, or HEIFS format. (The supported formats may vary depending on the hardware.) &gt; **NOTE：**&gt; &gt; - **EXIF_METADATA** applies to JPEG, PNG, HEIF, WEBP, and DNG images. &gt; &gt; - **HEIFS_METADATA** applies to HEIFS images. &gt; &gt; - If the input **MetadataType** does not match the image format, error code **7700102** will be returned.
+Reads the metadata of an image source. You can use **metadataTypes** to specify the metadata types. If **metadataTypes** is not specified, all supported metadata is returned. This API uses a promise to return the result.
+
+This API applies only to images that are in JPEG, PNG, HEIF, WEBP, DNG, or HEIFS format. (The supported formats may vary depending on the hardware.)
+
+> **NOTE：**
+> 
+> - **EXIF_METADATA** applies to JPEG, PNG, HEIF, WEBP, and DNG images.
+> 
+> - **HEIFS_METADATA** applies to HEIFS images.
+> 
+> - If the input **MetadataType** does not match the image format, error code **7700102** will be returned.
 
 **Since:** 24
 
@@ -1631,8 +1819,8 @@ Reads the metadata of an image source. You can use **metadataTypes** to specify 
 | Error Code ID | Error Message |
 | --- | --- |
 | [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: 1.The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
 | [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. |
+| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: 1.The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
 
 ## release
 
@@ -1640,7 +1828,11 @@ Reads the metadata of an image source. You can use **metadataTypes** to specify 
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases this ImageSource instance. This API uses an asynchronous callback to return the result. Images occupy a large amount of memory. When you finish using an ImageSource instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this ImageSource instance. This API uses an asynchronous callback to return the result.
+
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call this API to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 23
 
@@ -1662,7 +1854,11 @@ Releases this ImageSource instance. This API uses an asynchronous callback to re
 release(): Promise<void>
 ```
 
-Releases this ImageSource instance. This API uses a promise to return the result. Images occupy a large amount of memory. When you finish using an ImageSource instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this ImageSource instance. This API uses a promise to return the result.
+
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call this API to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 23
 
@@ -1743,7 +1939,16 @@ Updates incremental data. This API uses an asynchronous callback to return the r
 writeImageMetadata(imageMetadata: ImageMetadata): Promise<void>
 ```
 
-Modifies image properties in batches. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - Calling this API to modify properties alters the property byte length. You are advised to create an &gt; [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by passing a &gt; file descriptor or an &gt; [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by &gt; passing a URI. &gt; &gt; - This API modifies batch data in memory and writes the data to the file in a single operation. It is more &gt; efficient than &gt; [modifyImageProperties](#modifyimageproperties) &gt; . &gt; &gt; - This API applies only to images that are in JPEG, PNG, or HEIF format and contain the Exif information. &gt; Before modifying properties, use the **supportedFormats** property to check whether the device supports Exif &gt; information read/write in HEIF format.
+Modifies image properties in batches. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - Calling this API to modify properties alters the property byte length. You are advised to create an &gt; [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by passing a &gt; file descriptor or an &gt; [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by &gt; passing a URI.
+> 
+> - This API modifies batch data in memory and writes the data to the file in a single operation. It is more &gt; efficient than &gt; [modifyImageProperties](#modifyimageproperties) &gt; .
+> 
+> - This API applies only to images that are in JPEG, PNG, or HEIF format and contain the Exif information.
+> Before modifying properties, use the **supportedFormats** property to check whether the device supports Exif &gt; information read/write in HEIF format.
 
 **Since:** 23
 
@@ -1770,8 +1975,8 @@ Modifies image properties in batches. This API uses a promise to return the resu
 | Error Code ID | Error Message |
 | --- | --- |
 | [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: The imageSource object is released. |
 | [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. |
+| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: The imageSource object is released. |
 
 ## supportedFormats
 

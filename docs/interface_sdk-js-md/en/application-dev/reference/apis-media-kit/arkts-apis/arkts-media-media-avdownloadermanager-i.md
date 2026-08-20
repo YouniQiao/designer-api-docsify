@@ -302,8 +302,8 @@ Suspending the download of a specified task
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the offline download task manager. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 
 ## release
 
@@ -375,8 +375,8 @@ Resuming Offline Download of a Specified Task
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the offline download task manager. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 
 ## setRequestTimeout
 

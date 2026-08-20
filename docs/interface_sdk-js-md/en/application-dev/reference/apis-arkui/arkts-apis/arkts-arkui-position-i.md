@@ -2,6 +2,8 @@
 
 Defines the position.
 
+@interface Position
+
 **Since:** 11
 
 <!--Device-unnamed-declare interface Position--><!--Device-unnamed-declare interface Position-End-->

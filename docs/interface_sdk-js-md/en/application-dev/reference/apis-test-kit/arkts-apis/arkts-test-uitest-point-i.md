@@ -41,6 +41,8 @@ x: int
 
 Horizontal coordinate of a coordinate point, in pixels. The value is an integer greater than or equal to 0.
 
+@readonly [since 9-19]
+
 **Type:** int
 
 **Since:** 23
@@ -58,6 +60,8 @@ y: int
 ```
 
 Vertical coordinate of a coordinate point, in pixels. The value is an integer greater than or equal to 0.
+
+@readonly [since 9-19]
 
 **Type:** int
 

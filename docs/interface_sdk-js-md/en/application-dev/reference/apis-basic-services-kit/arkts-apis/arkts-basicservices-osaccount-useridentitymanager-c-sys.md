@@ -45,21 +45,21 @@ Adds credential information, including the credential type, subtype, and token (
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300091 | Cross-device communication failed.<br>**Applicable version:** 23 and later |
-| 12300090 | Cross-device capability not supported.<br>**Applicable version:** 23 and later |
-| [12300115](../errorcode-account.md#12300115-user-authentication-passwords-reached-the-limit) | The number of credentials reaches the upper limit. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
-| [12300116](../errorcode-account.md#12300116-failed-to-verify-the-credential-complexity) | Credential complexity verification failed.<br>**Applicable version:** 12 and later |
-| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
-| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted account.<br>**Applicable version:** 12 and later |
-| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The operation timeout. |
-| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid credentialInfo, i.e. authType or authSubType. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid credentialInfo, i.e. authType or authSubType. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
+| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted account.<br>**Applicable version:** 12 and later |
+| 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
+| 12300090 | Cross-device capability not supported.<br>**Applicable version:** 23 and later |
+| 12300091 | Cross-device communication failed.<br>**Applicable version:** 23 and later |
 | [12300101](../errorcode-account.md#12300101-incorrect-credential) | The token is invalid. |
+| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
+| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
+| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The operation timeout. |
+| [12300115](../errorcode-account.md#12300115-user-authentication-passwords-reached-the-limit) | The number of credentials reaches the upper limit. |
+| [12300116](../errorcode-account.md#12300116-failed-to-verify-the-credential-complexity) | Credential complexity verification failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -123,11 +123,11 @@ Cancels an entry based on the challenge value.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid challenge. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid challenge. |
 
 **Examples**
 
@@ -172,12 +172,12 @@ Closes this session to terminate IDM.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types.<br>**Applicable version:** 12 and later |
-| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted account.<br>**Applicable version:** 12 and later |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types.<br>**Applicable version:** 12 and later |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally.<br>**Applicable version:** 12 and later |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
+| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted account.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -245,13 +245,13 @@ Deletes user credential information.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid credentialId. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300102](../errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid credentialId. |
 | [12300101](../errorcode-account.md#12300101-incorrect-credential) | The token is invalid. |
+| [12300102](../errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
 
 **Examples**
 
@@ -303,9 +303,9 @@ Deletes a user with an authentication token. This API uses an asynchronous callb
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300101](../errorcode-account.md#12300101-incorrect-credential) | The token is invalid. |
 
@@ -412,9 +412,9 @@ Obtains authentication information of the specified type. This API uses an async
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
 **Examples**
@@ -473,9 +473,9 @@ Obtains authentication information. This API uses a promise to return the result
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
 **Examples**
@@ -530,11 +530,11 @@ Obtains authentication information. This API uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid options. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid options. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
 **Examples**
@@ -594,14 +594,14 @@ Obtains the ID of the enrolled credential based on the credential type and accou
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300102](../errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
+| [12300102](../errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
+| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
 
 **Examples**
 
@@ -718,11 +718,11 @@ Subscribes to one or more credential change events. This API uses a callback to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) | One or more credential types are not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | One or more credential types are invalid. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | One or more credential types are invalid. |
+| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) | One or more credential types are not supported. |
 
 **Examples**
 
@@ -778,9 +778,9 @@ Opens a session to obtain the challenge value. This API uses an asynchronous cal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 **Examples**
@@ -837,11 +837,11 @@ Opens a session. This API returns a challenge value, which can be used to determ
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted account.<br>**Applicable version:** 12 and later |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
+| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted account.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -891,16 +891,16 @@ Updates credential information. This API uses an asynchronous callback to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
-| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
-| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid credentialInfo, i.e. authType or authSubType. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300102](../errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid credentialInfo, i.e. authType or authSubType. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
 | [12300101](../errorcode-account.md#12300101-incorrect-credential) | The token is invalid. |
+| [12300102](../errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
+| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
+| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
+| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
 | [12300116](../errorcode-account.md#12300116-failed-to-verify-the-credential-complexity) | Credential complexity verification failed.<br>**Applicable version:** 12 and later |
 
 **Examples**

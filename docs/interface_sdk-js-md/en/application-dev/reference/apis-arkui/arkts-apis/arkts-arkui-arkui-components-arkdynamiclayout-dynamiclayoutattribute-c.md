@@ -1,6 +1,16 @@
 # DynamicLayoutAttribute
 
-The universal attributes are supported. &gt; **NOTE：**&gt; &gt; - When the layout algorithm is [RowLayoutAlgorithm](arkts-arkui-layoutalgorithm-rowlayoutalgorithm-c.md) or &gt; [ColumnLayoutAlgorithm](arkts-arkui-layoutalgorithm-columnlayoutalgorithm-c.md), &gt; the [Flex layout](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-flex-layout.md) attributes set &gt; for child components take effect. &gt; &gt; - When the layout algorithm is [StackLayoutAlgorithm](arkts-arkui-layoutalgorithm-stacklayoutalgorithm-c.md), &gt; the layoutGravity attribute set for child components takes effect. &gt; &gt; - When the layout algorithm is &gt; [CustomLayoutAlgorithm](arkts-arkui-layoutalgorithm-customlayoutalgorithm-c.md), &gt; the [setMeasuredSize](../../apis-na/arkts-apis/arkts-na-framenode-c.md#setmeasuredsize) method of the &gt; [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) component of **DynamicLayout** has a higher priority than the &gt; sizing and border styling attributes. The &gt; [measure](../../apis-na/arkts-apis/arkts-na-framenode-c.md#measure) and [layout](../../apis-na/arkts-apis/arkts-na-framenode-c.md#layout) methods &gt; of the child component [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) have a higher priority than the &gt; ignoreLayoutSafeArea attribute. The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
+The universal attributes are supported.
+
+> **NOTE：**
+> 
+> - When the layout algorithm is [RowLayoutAlgorithm](arkts-arkui-layoutalgorithm-rowlayoutalgorithm-c.md) or &gt; [ColumnLayoutAlgorithm](arkts-arkui-layoutalgorithm-columnlayoutalgorithm-c.md), &gt; the [Flex layout](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-flex-layout.md) attributes set &gt; for child components take effect.
+> 
+> - When the layout algorithm is [StackLayoutAlgorithm](arkts-arkui-layoutalgorithm-stacklayoutalgorithm-c.md), &gt; the layoutGravity attribute set for child components takes effect.
+> 
+> - When the layout algorithm is &gt; [CustomLayoutAlgorithm](arkts-arkui-layoutalgorithm-customlayoutalgorithm-c.md), &gt; the [setMeasuredSize](../../apis-default/arkts-apis/arkts-framenode-c.md#setmeasuredsize) method of the &gt; [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) component of **DynamicLayout** has a higher priority than the &gt; sizing and border styling attributes. The &gt; [measure](../../apis-default/arkts-apis/arkts-framenode-c.md#measure) and [layout](../../apis-default/arkts-apis/arkts-framenode-c.md#layout) methods &gt; of the child component [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) have a higher priority than the &gt; ignoreLayoutSafeArea attribute.
+
+The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
 
 **Inheritance/Implementation:** DynamicLayoutAttribute extends CommonMethod<DynamicLayoutAttribute>
 

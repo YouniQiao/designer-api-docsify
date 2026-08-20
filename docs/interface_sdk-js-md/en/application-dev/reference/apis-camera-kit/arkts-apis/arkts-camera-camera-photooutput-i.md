@@ -180,7 +180,9 @@ Enables or disables automatic extended gain map delivery.
 enableMirror(enabled: boolean): void
 ```
 
-Enables or disables dynamic photo capture. Before calling this API, check whether moving photo capture is supported by calling [isMovingPhotoSupported](#ismovingphotosupported) and whether mirroring is supported by calling [isMirrorSupported](#ismirrorsupported).
+Enables or disables dynamic photo capture.
+
+Before calling this API, check whether moving photo capture is supported by calling [isMovingPhotoSupported](#ismovingphotosupported) and whether mirroring is supported by calling [isMirrorSupported](#ismirrorsupported).
 
 **Since:** 23
 
@@ -232,8 +234,8 @@ Enables or disables the feature of taking moving photos.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## getActiveProfile
@@ -270,7 +272,9 @@ Obtains the profile that takes effect currently.
 getPhotoRotation(deviceDegree?: int): ImageRotation
 ```
 
-Obtains the photo rotation angle. - Device' natural orientation: the default orientation for using a device. For example, the default orientation of the bar-type phone is in portrait mode, with the charging port facing downward. - Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode. Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation.
+Obtains the photo rotation angle.
+
+- Device' natural orientation: the default orientation for using a device. For example, the default orientation of the bar-type phone is in portrait mode, with the charging port facing downward. - Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode. Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation.
 
 **Since:** 23
 
@@ -693,7 +697,11 @@ Unsubscribes from capture ready events.
 off(type: 'captureStart', callback?: AsyncCallback<number>): void
 ```
 
-Unsubscribes from capture start events. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Unsubscribes from capture start events.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
@@ -899,7 +907,13 @@ Subscribes capture end event callback.
 onCapturePhotoAvailable(callback: Callback<CapturePhoto>): void
 ```
 
-Subscribes to the events of returning full-quality images and uncompressed images. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; - You cannot call &gt; [offCapturePhotoAvailable](#offcapturephotoavailable) &gt; to unregister the callback in the callback listened by this API. &gt; &gt; - This API can be used to register listeners only when uncompressed images in the YUV format are captured.
+Subscribes to the events of returning full-quality images and uncompressed images. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> - You cannot call &gt; [offCapturePhotoAvailable](#offcapturephotoavailable) &gt; to unregister the callback in the callback listened by this API.
+> 
+> - This API can be used to register listeners only when uncompressed images in the YUV format are captured.
 
 **Since:** 23
 
@@ -1043,7 +1057,9 @@ Subscribes frame shutter end event callback.
 onPhotoAssetAvailable(callback: AsyncCallback<photoAccessHelper.PhotoAsset>): void
 ```
 
-Subscribes to photo asset event callback. This API processes deferred photo delivery data by quickly displaying low-quality images to give users the impression of faster photo capture, while also generating high-quality images to maintain the final output quality. For details about the design specifications, see [Optimizing Deferred Photo Delivery](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-camera-shot2see).
+Subscribes to photo asset event callback.
+
+This API processes deferred photo delivery data by quickly displaying low-quality images to give users the impression of faster photo capture, while also generating high-quality images to maintain the final output quality. For details about the design specifications, see [Optimizing Deferred Photo Delivery](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-camera-shot2see).
 
 **Since:** 23
 
@@ -1083,7 +1099,11 @@ Subscribes photo available event callback.
 on(type: 'captureEnd', callback: AsyncCallback<CaptureEndInfo>): void
 ```
 
-Subscribes to capture end events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to capture end events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
@@ -1106,7 +1126,11 @@ Subscribes to capture end events. This API uses an asynchronous callback to retu
 on(type: 'captureReady', callback: AsyncCallback<void>): void
 ```
 
-Subscribes to capture ready events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to capture ready events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 12
 
@@ -1129,7 +1153,11 @@ Subscribes to capture ready events. This API uses an asynchronous callback to re
 on(type: 'captureStart', callback: AsyncCallback<number>): void
 ```
 
-Subscribes to capture start events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to capture start events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
@@ -1154,7 +1182,11 @@ Subscribes to capture start events. This API uses an asynchronous callback to re
 on(type: 'captureStartWithInfo', callback: AsyncCallback<CaptureStartInfo>): void
 ```
 
-Subscribes to capture start events. This API uses an asynchronous callback to return the [capture start ID](arkts-camera-camera-capturestartinfo-i.md). &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to capture start events. This API uses an asynchronous callback to return the [capture start ID](arkts-camera-camera-capturestartinfo-i.md).
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 11
 
@@ -1177,7 +1209,11 @@ Subscribes to capture start events. This API uses an asynchronous callback to re
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to PhotoOutput error events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to PhotoOutput error events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
@@ -1200,7 +1236,11 @@ Subscribes to PhotoOutput error events. This API uses an asynchronous callback t
 on(type: 'estimatedCaptureDuration', callback: AsyncCallback<double>): void
 ```
 
-Subscribes to estimated capture duration events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to estimated capture duration events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 12
 
@@ -1246,7 +1286,11 @@ Subscribes to frame shutter events. This API uses an asynchronous callback to re
 on(type: 'frameShutterEnd', callback: AsyncCallback<FrameShutterEndInfo>): void
 ```
 
-Subscribes to frame shutter end events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to frame shutter end events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 12
 
@@ -1269,7 +1313,11 @@ Subscribes to frame shutter end events. This API uses an asynchronous callback t
 on(type: 'photoAssetAvailable', callback: AsyncCallback<photoAccessHelper.PhotoAsset>): void
 ```
 
-Subscribes to photo asset available events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to photo asset available events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 12
 
@@ -1292,7 +1340,11 @@ Subscribes to photo asset available events. This API uses an asynchronous callba
 on(type: 'photoAvailable', callback: AsyncCallback<Photo>): void
 ```
 
-Subscribes to the events of returning available photos. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to the events of returning available photos. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 11
 
@@ -1343,7 +1395,9 @@ Sets a video codec type for moving photos.
 setPhotoQualityPrioritization(qualityPrioritization: PhotoQualityPrioritization): void
 ```
 
-Sets the photo quality prioritization strategy. Before setting the strategy, you can call [isPhotoQualityPrioritizationSupported](#isphotoqualityprioritizationsupported) to check whether the device supports the specified photo quality prioritization strategy.
+Sets the photo quality prioritization strategy.
+
+Before setting the strategy, you can call [isPhotoQualityPrioritizationSupported](#isphotoqualityprioritizationsupported) to check whether the device supports the specified photo quality prioritization strategy.
 
 **Since:** 24
 
@@ -1363,6 +1417,6 @@ Sets the photo quality prioritization strategy. Before setting the strategy, you
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error, reconfiguring streams is needed to recover from failure. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 

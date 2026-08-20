@@ -1,5 +1,7 @@
 # Direction
 
+@brief 光标移动方向。
+
 **起始版本：** 23
 
 <!--Device-inputMethod-export enum Direction--><!--Device-inputMethod-export enum Direction-End-->
@@ -11,6 +13,8 @@
 ```TypeScript
 CURSOR_UP = 1
 ```
+
+@brief 向上。 <br> <br>使用场景：输入法请求光标向上移动时使用，如多行文本中上移光标。
 
 **起始版本：** 23
 
@@ -24,6 +28,8 @@ CURSOR_UP = 1
 CURSOR_DOWN
 ```
 
+@brief 向下。 <br> <br>使用场景：输入法请求光标向下移动时使用。
+
 **起始版本：** 23
 
 <!--Device-Direction-CURSOR_DOWN--><!--Device-Direction-CURSOR_DOWN-End-->
@@ -36,6 +42,8 @@ CURSOR_DOWN
 CURSOR_LEFT
 ```
 
+@brief 向左。 <br> <br>使用场景：输入法请求光标向左移动时使用，如删除左侧字符前移动光标。
+
 **起始版本：** 23
 
 <!--Device-Direction-CURSOR_LEFT--><!--Device-Direction-CURSOR_LEFT-End-->
@@ -47,6 +55,8 @@ CURSOR_LEFT
 ```TypeScript
 CURSOR_RIGHT
 ```
+
+@brief 向右。 <br> <br>使用场景：输入法请求光标向右移动时使用。
 
 **起始版本：** 23
 

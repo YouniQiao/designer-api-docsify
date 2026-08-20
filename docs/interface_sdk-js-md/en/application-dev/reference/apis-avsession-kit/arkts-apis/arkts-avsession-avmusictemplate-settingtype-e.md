@@ -2,6 +2,8 @@
 
 Enumeration of setting type.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-avMusicTemplate-enum SettingType--><!--Device-avMusicTemplate-enum SettingType-End-->

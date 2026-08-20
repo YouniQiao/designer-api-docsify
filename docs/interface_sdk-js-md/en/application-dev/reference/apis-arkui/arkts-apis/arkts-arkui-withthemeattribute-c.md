@@ -1,6 +1,8 @@
-# WithThemeAttribute(Defines WithTheme component.)
+# WithThemeAttribute
 
-The universal attributes are not supported. The universal events are not supported.
+The universal attributes are not supported.
+
+The universal events are not supported.
 
 **Since:** 12
 

@@ -2,6 +2,8 @@
 
 表示音频数据回调结果的枚举。
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-audio-enum AudioDataCallbackResult--><!--Device-audio-enum AudioDataCallbackResult-End-->

@@ -1,6 +1,6 @@
 # SimLabel
 
-定义SIM卡标签信息。
+定义SIM卡标签信息。 @interface SimLabel
 
 **起始版本：** 23
 

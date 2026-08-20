@@ -12,7 +12,13 @@ import { uriPermissionManager } from '@kit.AbilityKit';
 function revokeUriPermission(uri: string, targetBundleName: string, callback: AsyncCallback<number>): void
 ```
 
-Revokes the URI permission from an application. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; - This API can be used to revoke the URI permission of another application obtained by this application or URI &gt; permission granted by this application. &gt; &gt; - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
+Revokes the URI permission from an application. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> - This API can be used to revoke the URI permission of another application obtained by this application or URI &gt; permission granted by this application.
+> 
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
 
 **Since:** 10
 
@@ -37,12 +43,12 @@ Revokes the URI permission from an application. This API uses an asynchronous ca
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 19 and later |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 10 - 11 |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 19 and later |
 
 **Examples**
 
@@ -68,7 +74,13 @@ uriPermissionManager.revokeUriPermission(uri, targetBundleName, (error) => {
 function revokeUriPermission(uri: string, targetBundleName: string, callback: AsyncCallback<void>): void
 ```
 
-Revokes the URI permission from an application. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; - This API can be used to revoke the URI permission of another application obtained by this application or URI &gt; permission granted by this application. &gt; &gt; - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
+Revokes the URI permission from an application. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> - This API can be used to revoke the URI permission of another application obtained by this application or URI &gt; permission granted by this application.
+> 
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
 
 **Since:** 23
 
@@ -90,9 +102,9 @@ Revokes the URI permission from an application. This API uses an asynchronous ca
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Connect to system server failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
 
 
@@ -102,7 +114,13 @@ Revokes the URI permission from an application. This API uses an asynchronous ca
 function revokeUriPermission(uri: string, targetBundleName: string): Promise<number>
 ```
 
-Revokes the URI permission from an application. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - This API can be used to revoke the URI permission of another application obtained by this application or URI &gt; permission granted by this application. &gt; &gt; - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
+Revokes the URI permission from an application. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - This API can be used to revoke the URI permission of another application obtained by this application or URI &gt; permission granted by this application.
+> 
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
 
 **Since:** 10
 
@@ -132,12 +150,12 @@ Revokes the URI permission from an application. This API uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 19 and later |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 10 - 11 |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 19 and later |
 
 **Examples**
 
@@ -163,7 +181,13 @@ uriPermissionManager.revokeUriPermission(uri, targetBundleName)
 function revokeUriPermission(uri: string, targetBundleName: string): Promise<void>
 ```
 
-Revokes the URI permission from an application. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - This API can be used to revoke the URI permission of another application obtained by this application or URI &gt; permission granted by this application. &gt; &gt; - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
+Revokes the URI permission from an application. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - This API can be used to revoke the URI permission of another application obtained by this application or URI &gt; permission granted by this application.
+> 
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
 
 **Since:** 23
 
@@ -190,9 +214,9 @@ Revokes the URI permission from an application. This API uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Connect to system server failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
 
 
@@ -202,7 +226,15 @@ Revokes the URI permission from an application. This API uses a promise to retur
 function revokeUriPermission(uri: string, targetBundleName: string, appCloneIndex: int): Promise<void>
 ```
 
-Revokes the URI permission from an application. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - This API can be used to revoke the URI permission of another application obtained by this application or URI &gt; permission granted by this application. &gt; &gt; - This API can be used to revoke the URI permissions granted to a cloned application. You need to specify the &gt; application bundle name and index of the cloned application. &gt; &gt; - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
+Revokes the URI permission from an application. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - This API can be used to revoke the URI permission of another application obtained by this application or URI &gt; permission granted by this application.
+> 
+> - This API can be used to revoke the URI permissions granted to a cloned application. You need to specify the &gt; application bundle name and index of the cloned application.
+> 
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
 
 **Since:** 23
 
@@ -230,12 +262,12 @@ Revokes the URI permission from an application. This API uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 19 and later |
-| [16000081](../errorcode-ability.md#16000081-failed-to-obtain-the-target-application-information) | Failed to obtain the target application information. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
+| [16000081](../errorcode-ability.md#16000081-failed-to-obtain-the-target-application-information) | Failed to obtain the target application information. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 19 and later |
 
 **Examples**
 

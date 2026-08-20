@@ -1,6 +1,8 @@
 # AVMetadataExtractor
 
-AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtain metadata and thumbnails from media assets. Before calling any API of AVMetadataExtractor, you must use [media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md) to create an AVMetadataExtractor instance. For details about the demo of obtaining audio or video metadata and video thumbnails, see [Using AVMetadataExtractor to Extract Audio and Video Metadata (ArkTS)](../../../media/media/avmetadataextractor.md).
+AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtain metadata and thumbnails from media assets. Before calling any API of AVMetadataExtractor, you must use [media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md) to create an AVMetadataExtractor instance.
+
+For details about the demo of obtaining audio or video metadata and video thumbnails, see [Using AVMetadataExtractor to Extract Audio and Video Metadata (ArkTS)](../../../media/media/avmetadataextractor.md).
 
 **Since:** 23
 
@@ -171,9 +173,9 @@ Obtains a video thumbnail. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
-| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
 
 ## fetchFrameByTime
 
@@ -181,7 +183,7 @@ Obtains a video thumbnail. This API uses a promise to return the result.
 fetchFrameByTime(timeUs: long, options: AVImageQueryOptions, param: PixelMapParams): Promise<image.PixelMap | undefined>
 ```
 
-It will decode the given video resource. Then fetch a picture at @timeUs according the given @options and @param .
+It will decode the given video resource. Then fetch a picture at @timeUs according the given @options and
 
 **Since:** 23
 
@@ -208,9 +210,9 @@ It will decode the given video resource. Then fetch a picture at @timeUs accordi
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
-| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
 
 ## fetchFrameByTimeWithTimeout
 
@@ -249,10 +251,10 @@ Obtains a video thumbnail. You can set the maximum timeout interval (**timeoutMs
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
-| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 | [5400104](../errorcode-media.md#5400104-operation-timeout) | Operation timeout. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
 
 ## fetchFramesByTimes
 
@@ -261,7 +263,13 @@ fetchFramesByTimes(timesUs: long[], queryOption: AVImageQueryOptions, param: Pix
         callback: OnFrameFetched): void
 ```
 
-Obtains video thumbnails in batches. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; - The given video resource is decoded first, and then image frames are extracted from each time point in the &gt; **timesUs** array based on the provided **options** and **param**. &gt; &gt; - When each image extraction is complete, the system calls the callback function and passes the extraction &gt; result. Note that the execution order of the callback function may be inconsistent with the time points in the &gt; **timesUs** array.
+Obtains video thumbnails in batches. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> - The given video resource is decoded first, and then image frames are extracted from each time point in the &gt; **timesUs** array based on the provided **options** and **param**.
+> 
+> - When each image extraction is complete, the system calls the callback function and passes the extraction &gt; result. Note that the execution order of the callback function may be inconsistent with the time points in the &gt; **timesUs** array.
 
 **Since:** 23
 
@@ -285,11 +293,11 @@ Obtains video thumbnails in batches. This API uses an asynchronous callback to r
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
-| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext not permitted. |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
 | [5400104](../errorcode-media.md#5400104-operation-timeout) | Fetch timeout, Returned by callback. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. e.g. The size of timesUs is larger than 4096. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext not permitted. |
 
 ## fetchFramesByTimesWithTimeout
 
@@ -298,7 +306,15 @@ fetchFramesByTimesWithTimeout(timesUs: long[], queryOption: AVImageQueryOptions,
       timeoutMs: long, callback: OnFrameFetched): void
 ```
 
-Obtains video thumbnails in batches. You can set the maximum timeout interval (**timeoutMs**) for obtaining each thumbnail. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; - The given video resource is decoded first, and then image frames are extracted from each time point in the &gt; **timesUs** array based on the provided **options** and **param**. &gt; &gt; - When each image extraction is complete, the system calls the callback function and passes the extraction &gt; result. Note that the execution order of the callback function may be inconsistent with the time points in the &gt; **timesUs** array. &gt; &gt; - The **timeoutMs** parameter indicates the maximum timeout interval for obtaining each thumbnail frame, not &gt; the entire batch thumbnail extraction process.
+Obtains video thumbnails in batches. You can set the maximum timeout interval (**timeoutMs**) for obtaining each thumbnail. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> - The given video resource is decoded first, and then image frames are extracted from each time point in the &gt; **timesUs** array based on the provided **options** and **param**.
+> 
+> - When each image extraction is complete, the system calls the callback function and passes the extraction &gt; result. Note that the execution order of the callback function may be inconsistent with the time points in the &gt; **timesUs** array.
+> 
+> - The **timeoutMs** parameter indicates the maximum timeout interval for obtaining each thumbnail frame, not &gt; the entire batch thumbnail extraction process.
 
 **Since:** 26.0.0
 
@@ -323,11 +339,11 @@ Obtains video thumbnails in batches. You can set the maximum timeout interval (*
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
-| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext not permitted. |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
 | [5400104](../errorcode-media.md#5400104-operation-timeout) | Fetch timeout, Returned by callback. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. e.g. The size of timesUs is larger than 4096. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext not permitted. |
 
 ## fetchMetadata
 
@@ -354,8 +370,8 @@ Obtains the media metadata. This API uses an asynchronous callback to return the
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
-| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
 
 ## fetchMetadata
 
@@ -382,8 +398,8 @@ Obtains media metadata. This API uses an asynchronous callback to return the res
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
-| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
 
 ## fetchMetadata
 
@@ -410,8 +426,8 @@ Obtains the media metadata. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
-| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
 
 ## fetchMetadata
 
@@ -438,8 +454,8 @@ Obtains media metadata. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
-| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
 
 ## fetchMetadataWithTimeout
 
@@ -474,10 +490,10 @@ Obtains the media metadata. You can set the maximum timeout interval (**timeoutM
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
-| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 | [5400104](../errorcode-media.md#5400104-operation-timeout) | Operation timeout. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
 
 ## release
 
@@ -558,7 +574,9 @@ Sets the data source for a network on-demand resource. Only network metadata ( [
 dataSrc ?: AVDataSrcDescriptor
 ```
 
-Streaming media resource descriptor, which specifies the data source. Before obtaining metadata, you must set the data source through either **fdSrc** or **dataSrc**. When an application obtains a media file from the remote, you can set **dataSrc** to obtain the metadata before the application finishes the downloading.
+Streaming media resource descriptor, which specifies the data source. Before obtaining metadata, you must set the data source through either **fdSrc** or **dataSrc**.
+
+When an application obtains a media file from the remote, you can set **dataSrc** to obtain the metadata before the application finishes the downloading.
 
 **Type:** [AVDataSrcDescriptor](arkts-media-media-avdatasrcdescriptor-i.md)
 
@@ -574,7 +592,13 @@ Streaming media resource descriptor, which specifies the data source. Before obt
 fdSrc ?: AVFileDescriptor
 ```
 
-Media file descriptor, which specifies the data source. Before obtaining metadata, you must set the data source through either **fdSrc** or **dataSrc**. There is a media file that stores continuous assets, the address offset is 0, and the byte length is 100. Its file descriptor is **AVFileDescriptor { fd = resourceHandle; offset = 0; length = 100; }**. **NOTE：**After the resource handle (FD) is transferred to an AVMetadataExtractor instance, do not use the resource handle to perform other read and write operations, including but not limited to transferring this handle to other AVPlayer, AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance. Competition occurs when multiple AVMetadataExtractor use the same resource handle to read and write files at the same time, resulting in errors in obtaining data.
+Media file descriptor, which specifies the data source. Before obtaining metadata, you must set the data source through either **fdSrc** or **dataSrc**.
+
+There is a media file that stores continuous assets, the address offset is 0, and the byte length is 100. Its file descriptor is **AVFileDescriptor { fd = resourceHandle; offset = 0; length = 100; }**.
+
+**NOTE：**
+
+After the resource handle (FD) is transferred to an AVMetadataExtractor instance, do not use the resource handle to perform other read and write operations, including but not limited to transferring this handle to other AVPlayer, AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance. Competition occurs when multiple AVMetadataExtractor use the same resource handle to read and write files at the same time, resulting in errors in obtaining data.
 
 **Type:** [AVFileDescriptor](arkts-media-media-avfiledescriptor-i.md)
 

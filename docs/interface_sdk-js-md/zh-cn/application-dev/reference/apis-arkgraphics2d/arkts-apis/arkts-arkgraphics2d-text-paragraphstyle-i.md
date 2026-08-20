@@ -74,7 +74,11 @@ breakStrategy?: BreakStrategy
 compressHeadPunctuation?: boolean
 ```
 
-设置文本排版时是否使能行首标点压缩。true表示使能行首标点压缩，false表示不使能行首标点压缩，默认值为false。 **说明：** 1. 需要字体文件支持[FontFeature](arkts-arkgraphics2d-text-fontfeature-i.md)中的"ss08"特性，否则无法压缩。 2. 在行首标点压缩范围内的标点才在本特性作用范围内。 行首压缩的标点范围: | 标点 | Unicode码位 | Unicode名称 | |---------|---------|-------------| | 「 | U+300C | LEFT CORNER BRACKET | | 『 | U+300E | LEFT WHITE CORNER BRACKET | | " | U+201C | LEFT DOUBLE QUOTATION MARK | | ' | U+2018 | LEFT SINGLE QUOTATION MARK | | （ | U+FF08 | FULLWIDTH LEFT PARENTHESIS | | 《 | U+300A | LEFT DOUBLE ANGLE BRACKET | | 〈 | U+3008 | LEFT ANGLE BRACKET | | 【 | U+3010 | LEFT BLACK LENTICULAR BRACKET | | 〖 | U+3016 | LEFT WHITE LENTICULAR BRACKET | | 〔 | U+3014 | LEFT TORTOISE SHELL BRACKET | | ［ | U+FF3B | FULLWIDTH LEFT SQUARE BRACKET | | ｛ | U+FF5B | FULLWIDTH LEFT CURLY BRACKET |
+设置文本排版时是否使能行首标点压缩。true表示使能行首标点压缩，false表示不使能行首标点压缩，默认值为false。
+
+**说明：**
+
+1. 需要字体文件支持[FontFeature](arkts-arkgraphics2d-text-fontfeature-i.md)中的"ss08"特性，否则无法压缩。 2. 在行首标点压缩范围内的标点才在本特性作用范围内。 行首压缩的标点范围: | 标点 | Unicode码位 | Unicode名称 | |---------|---------|-------------| | 「 | U+300C | LEFT CORNER BRACKET | | 『 | U+300E | LEFT WHITE CORNER BRACKET | | " | U+201C | LEFT DOUBLE QUOTATION MARK | | ' | U+2018 | LEFT SINGLE QUOTATION MARK | | （ | U+FF08 | FULLWIDTH LEFT PARENTHESIS | | 《 | U+300A | LEFT DOUBLE ANGLE BRACKET | | 〈 | U+3008 | LEFT ANGLE BRACKET | | 【 | U+3010 | LEFT BLACK LENTICULAR BRACKET | | 〖 | U+3016 | LEFT WHITE LENTICULAR BRACKET | | 〔 | U+3014 | LEFT TORTOISE SHELL BRACKET | | ［ | U+FF3B | FULLWIDTH LEFT SQUARE BRACKET | | ｛ | U+FF5B | FULLWIDTH LEFT CURLY BRACKET |
 
 **类型：** boolean
 

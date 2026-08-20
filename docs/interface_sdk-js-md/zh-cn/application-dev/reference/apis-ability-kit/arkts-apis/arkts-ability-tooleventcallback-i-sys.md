@@ -2,6 +2,8 @@
 
 ToolEventCallback用于接收CLI工具进程运行期间产生的会话事件。
 
+@interface ToolEventCallback
+
 **起始版本：** 26.0.0
 
 <!--Device-unnamed-export interface ToolEventCallback--><!--Device-unnamed-export interface ToolEventCallback-End-->

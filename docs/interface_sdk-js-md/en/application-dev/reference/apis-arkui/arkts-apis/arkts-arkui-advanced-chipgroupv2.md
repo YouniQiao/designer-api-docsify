@@ -23,6 +23,7 @@ import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2It
 | Name | Description |
 | --- | --- |
 | [ChipGroupV2](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2-s.md) | Defines chipGroupV2. |
+| [ChipGroupV2IconGroupSuffix](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2icongroupsuffix-s.md) | Defines IconGroupSuffix. |
 
 ### Interfaces
 

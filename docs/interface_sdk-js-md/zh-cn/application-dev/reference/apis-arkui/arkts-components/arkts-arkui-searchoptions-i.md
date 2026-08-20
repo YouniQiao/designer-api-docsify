@@ -1,6 +1,10 @@
 # SearchOptions
 
-Search初始化参数。 &gt; **说明：** &gt; &gt; 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+Search初始化参数。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素
 
 **起始版本：** 18
 
@@ -37,7 +41,19 @@ controller?: SearchController
 icon?: string
 ```
 
-设置搜索图标路径，默认使用系统搜索图标。 **说明：** icon的数据源支持[使用相对路径显示图片](../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#示例25使用相对路径显示图片)和网络图片。 - 支持的图片格式包括png、jpg、bmp、svg、gif、pixelmap和heif。 - 支持Base64字符串。格式data:image/[png|jpeg|bmp|webp|heif];base64,[base64 data], 其中[base64 data]为Base64字符串数据。 如果与属性searchIcon同时设置，则searchIcon优先。 Wearable设备上默认图标大小为16vp。
+设置搜索图标路径，默认使用系统搜索图标。
+
+**说明：**
+
+icon的数据源支持[使用相对路径显示图片](../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#示例25使用相对路径显示图片)和网络图片。
+
+- 支持的图片格式包括png、jpg、bmp、svg、gif、pixelmap和heif。
+
+- 支持Base64字符串。格式data:image/[png|jpeg|bmp|webp|heif];base64,[base64 data], 其中[base64 data]为Base64字符串数据。
+
+如果与属性searchIcon同时设置，则searchIcon优先。
+
+Wearable设备上默认图标大小为16vp。
 
 **类型：** string
 
@@ -75,7 +91,7 @@ value?: string | Bindable<string>
 
 Text input in the search text box.
 
-**类型：** string \| [Bindable](../../apis-na/arkts-apis/arkts-na-common-bindable-i.md)&lt;string&gt;
+**类型：** string \| [Bindable](../../apis-default/arkts-apis/arkts-common-bindable-i.md)&lt;string&gt;
 
 **起始版本：** 20
 

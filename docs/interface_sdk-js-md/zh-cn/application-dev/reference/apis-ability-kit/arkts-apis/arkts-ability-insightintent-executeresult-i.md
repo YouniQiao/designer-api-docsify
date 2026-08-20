@@ -42,7 +42,11 @@ code: int
 flags?: int
 ```
 
-意图执行返回给系统入口的URI列表的授权权限。 **说明：** 该参数仅支持FLAG_AUTH_READ_URI_PERMISSION、FLAG_AUTH_WRITE_URI_PERMISSION、FLAG_AUTH_READ_URI_PERMISSION| FLAG_AUTH_WRITE_URI_PERMISSION。权限介绍见[Flags](arkts-ability-wantconstant-flags-e.md)。
+意图执行返回给系统入口的URI列表的授权权限。
+
+**说明：**
+
+该参数仅支持FLAG_AUTH_READ_URI_PERMISSION、FLAG_AUTH_WRITE_URI_PERMISSION、FLAG_AUTH_READ_URI_PERMISSION| FLAG_AUTH_WRITE_URI_PERMISSION。权限介绍见[Flags](arkts-ability-wantconstant-flags-e.md)。
 
 **类型：** int
 
@@ -64,7 +68,7 @@ result?: Record<string, RecordData>
 
 Indicates execute result.
 
-**类型：** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 23
 

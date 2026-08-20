@@ -42,8 +42,8 @@ Obtains the window object corresponding to the current UIExtension to notify the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 **Examples**
 
@@ -119,9 +119,9 @@ Sends data to the UIExtensionComponent.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 
 **Examples**
 
@@ -185,8 +185,8 @@ Send data from an ui extension to an ui extension component.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## setReceiveDataCallback
 
@@ -216,9 +216,9 @@ Sets a callback to receive data from the UIExtensionComponent. This API uses an 
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 
 **Examples**
 
@@ -275,8 +275,8 @@ Sets the callback for the ui extension to receive data from an ui extension comp
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: Failed to communicate with dependency module. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: Failed to communicate with dependency module. |
 
 ## setReceiveDataForResultCallback
 
@@ -306,9 +306,9 @@ Sets a callback with a return value to receive data from the UIExtensionComponen
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 
 **Examples**
 
@@ -366,8 +366,8 @@ Sets the callback with return value for the ui extension to receive data from an
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: Failed to communicate with dependency module. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: Failed to communicate with dependency module. |
 
 ## setWindowBackgroundColor
 
@@ -397,9 +397,9 @@ Sets the background color for the loading page of the UIExtensionAbility. This A
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 
 **Examples**
 
@@ -436,7 +436,13 @@ export default class UIExtAbility extends UIExtensionAbility {
 startAbility(want: Want, callback: AsyncCallback<void>): void
 ```
 
-Starts an ability. This API uses an asynchronous callback to return the result. UI extension uses this method to start a specific ability.If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). &gt; &gt; The application where the UIExtensionComponent is located must be running in the foreground and gain focus.
+Starts an ability. This API uses an asynchronous callback to return the result. UI extension uses this method to start a specific ability.If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
+
+> **NOTE：**
+> 
+> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> 
+> The application where the UIExtensionComponent is located must be running in the foreground and gain focus.
 
 **Since:** 23
 
@@ -459,24 +465,24 @@ Starts an ability. This API uses an asynchronous callback to return the result. 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
-| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
 **Examples**
 
@@ -507,7 +513,13 @@ export default class UIExtAbility extends UIExtensionAbility {
 startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void
 ```
 
-Starts an ability with **options** specified. This API uses an asynchronous callback to return the result. UI extension uses this method to start a specific ability.If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). &gt; &gt; The application where the UIExtensionComponent is located must be running in the foreground and gain focus.
+Starts an ability with **options** specified. This API uses an asynchronous callback to return the result. UI extension uses this method to start a specific ability.If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
+
+> **NOTE：**
+> 
+> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> 
+> The application where the UIExtensionComponent is located must be running in the foreground and gain focus.
 
 **Since:** 23
 
@@ -531,22 +543,22 @@ Starts an ability with **options** specified. This API uses an asynchronous call
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
-| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
 | [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
-| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
 **Examples**
 
@@ -581,7 +593,13 @@ export default class UIExtAbility extends UIExtensionAbility {
 startAbility(want: Want, options?: StartOptions): Promise<void>
 ```
 
-Starts an ability. This API uses a promise to return the result. UI extension uses this method to start a specific ability.If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). &gt; &gt; The application where the UIExtensionComponent is located must be running in the foreground and gain focus.
+Starts an ability. This API uses a promise to return the result. UI extension uses this method to start a specific ability.If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
+
+> **NOTE：**
+> 
+> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> 
+> The application where the UIExtensionComponent is located must be running in the foreground and gain focus.
 
 **Since:** 23
 
@@ -610,24 +628,24 @@ Starts an ability. This API uses a promise to return the result. UI extension us
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
-| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
 **Examples**
 
@@ -685,24 +703,24 @@ Starts an ability as the caller. The initial ability places its caller informati
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
-| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
 **Examples**
 
@@ -762,22 +780,22 @@ Starts an ability as the caller, with **options** specified. The initial ability
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
-| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
 | [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
-| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
 **Examples**
 
@@ -846,24 +864,24 @@ Starts an ability as the caller. The initial ability places its caller informati
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
-| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
 **Examples**
 
@@ -903,7 +921,17 @@ export default class UIExtAbility extends UIExtensionAbility {
 startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 ```
 
-Starts an ability and returns the result to the caller after the ability is terminated. This API uses an asynchronous callback to return the result. If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC. An ability can be terminated in the following ways: - Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability. The result is returned to the caller. - If an exception occurs, for example, the ability is killed, an error message, in which **resultCode** is **-1**, is returned to the caller. - If different applications call this API to start an ability that uses the singleton mode and then call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). &gt; &gt; The application where the UIExtensionComponent is located must be running in the foreground and gain focus.
+Starts an ability and returns the result to the caller after the ability is terminated. This API uses an asynchronous callback to return the result. If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
+
+An ability can be terminated in the following ways:
+
+- Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability. The result is returned to the caller. - If an exception occurs, for example, the ability is killed, an error message, in which **resultCode** is **-1**, is returned to the caller. - If different applications call this API to start an ability that uses the singleton mode and then call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
+
+> **NOTE：**
+> 
+> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> 
+> The application where the UIExtensionComponent is located must be running in the foreground and gain focus.
 
 **Since:** 23
 
@@ -926,24 +954,24 @@ Starts an ability and returns the result to the caller after the ability is term
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
-| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
 **Examples**
 
@@ -974,7 +1002,16 @@ export default class UIExtAbility extends UIExtensionAbility {
 startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback<AbilityResult>): void
 ```
 
-Starts an ability with **options** specified and returns the result to the caller after the ability is terminated. This API uses an asynchronous callback to return the result. If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC. An ability can be terminated in the following ways: - Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability. The result is returned to the caller. - If an exception occurs, for example, the ability is killed, an error message, in which **resultCode** is **-1**, is returned to the caller. - If different applications call this API to start an ability that uses the singleton mode and then call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). &gt; The application where the UIExtensionComponent is located must be running in the foreground and gain focus.
+Starts an ability with **options** specified and returns the result to the caller after the ability is terminated. This API uses an asynchronous callback to return the result. If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
+
+An ability can be terminated in the following ways:
+
+- Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability. The result is returned to the caller. - If an exception occurs, for example, the ability is killed, an error message, in which **resultCode** is **-1**, is returned to the caller. - If different applications call this API to start an ability that uses the singleton mode and then call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
+
+> **NOTE：**
+> 
+> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> The application where the UIExtensionComponent is located must be running in the foreground and gain focus.
 
 **Since:** 23
 
@@ -998,22 +1035,22 @@ Starts an ability with **options** specified and returns the result to the calle
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
-| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
 | [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
-| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
 **Examples**
 
@@ -1048,7 +1085,16 @@ export default class UIExtAbility extends UIExtensionAbility {
 startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult>
 ```
 
-Starts an ability and returns the result to the caller after the ability is terminated. This API uses a promise to return the result. If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC. An ability can be terminated in the following ways: - Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability. The result is returned to the caller. - If an exception occurs, for example, the ability is killed, an error message, in which **resultCode** is **-1**, is returned to the caller. - If different applications call this API to start an ability that uses the singleton mode and then call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). &gt; The application where the UIExtensionComponent is located must be running in the foreground and gain focus.
+Starts an ability and returns the result to the caller after the ability is terminated. This API uses a promise to return the result. If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
+
+An ability can be terminated in the following ways:
+
+- Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability. The result is returned to the caller. - If an exception occurs, for example, the ability is killed, an error message, in which **resultCode** is **-1**, is returned to the caller. - If different applications call this API to start an ability that uses the singleton mode and then call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
+
+> **NOTE：**
+> 
+> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> The application where the UIExtensionComponent is located must be running in the foreground and gain focus.
 
 **Since:** 23
 
@@ -1077,24 +1123,24 @@ Starts an ability and returns the result to the caller after the ability is term
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
-| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
 **Examples**
 

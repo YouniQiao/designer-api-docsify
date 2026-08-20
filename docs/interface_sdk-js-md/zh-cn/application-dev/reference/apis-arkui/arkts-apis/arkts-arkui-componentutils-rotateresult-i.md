@@ -22,7 +22,9 @@ import { componentUtils } from '@kit.ArkUI';
 angle: double
 ```
 
-旋转角度。 单位: deg
+旋转角度。
+
+单位: deg
 
 **类型：** double
 
@@ -42,7 +44,9 @@ angle: double
 centerX: double
 ```
 
-变换中心点x轴坐标。 单位: vp
+变换中心点x轴坐标。
+
+单位: vp
 
 **类型：** double
 
@@ -62,7 +66,9 @@ centerX: double
 centerY: double
 ```
 
-变换中心点y轴坐标。 单位: vp
+变换中心点y轴坐标。
+
+单位: vp
 
 **类型：** double
 

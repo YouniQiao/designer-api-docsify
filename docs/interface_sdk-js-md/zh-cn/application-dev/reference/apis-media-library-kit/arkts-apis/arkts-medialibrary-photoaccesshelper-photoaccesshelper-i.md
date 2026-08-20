@@ -48,8 +48,8 @@ applyChanges(mediaChangeRequest: MediaChangeRequest): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
 ## checkPhotoUrisReadPermission
@@ -84,8 +84,8 @@ checkPhotoUrisReadPermission(uris: string[]): Promise<Map<string, MediaAssetPerm
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario-specific parameters are incorrect. Possible causes are as follows: <br>1. The length of the input parameter queue is greater than 500. <br>2. The input parameter is null or undefined. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## createAsset
 
@@ -93,7 +93,9 @@ checkPhotoUrisReadPermission(uris: string[]): Promise<Map<string, MediaAssetPerm
 createAsset(photoType: PhotoType, extension: string, options: CreateOptions, callback: AsyncCallback<string>): void
 ```
 
-指定文件类型、后缀和创建选项，创建图片或视频资源。使用callback方式返回结果。 在未申请相册管理模块权限'ohos.permission.WRITE_IMAGEVIDEO'时，可以使用安全控件或授权弹窗的方式创建媒体资源，详情请参考 [保存媒体库资源](../../../media/medialibrary/photoAccessHelper-savebutton.md)。
+指定文件类型、后缀和创建选项，创建图片或视频资源。使用callback方式返回结果。
+
+在未申请相册管理模块权限'ohos.permission.WRITE_IMAGEVIDEO'时，可以使用安全控件或授权弹窗的方式创建媒体资源，详情请参考 [保存媒体库资源](../../../media/medialibrary/photoAccessHelper-savebutton.md)。
 
 **起始版本：** 23
 
@@ -112,16 +114,16 @@ createAsset(photoType: PhotoType, extension: string, options: CreateOptions, cal
 | photoType | PhotoType | 是 | 创建的文件类型，IMAGE或者VIDEO类型。 |
 | extension | string | 是 | 文件名后缀参数，例如：'jpg'。 |
 | options | [CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | 是 | 创建选项，当前仅支持'title'，例如{title: 'testPhoto'}。 <br>**注意：** <br>传入'subtype'选项，配置不生效，仅支持保存DEFAULT类型图片。 <br>文件名中不允许出现非法英文字符，包括： . .. \ / : ? " ' ` &lt; &gt; \| { } [ ] |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | callback返回创建的图片和视频的uri。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | callback返回创建的图片和视频的uri。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 11+ |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**适用版本：** 10+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 11+ |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## createAsset
@@ -130,7 +132,9 @@ createAsset(photoType: PhotoType, extension: string, options: CreateOptions, cal
 createAsset(photoType: PhotoType, extension: string, callback: AsyncCallback<string>): void
 ```
 
-指定文件类型和后缀，创建图片或视频资源，使用callback方式返回结果。 在未申请相册管理模块权限'ohos.permission.WRITE_IMAGEVIDEO'时，可以使用安全控件或授权弹窗的方式创建媒体资源，详情请参考 [保存媒体库资源](../../../media/medialibrary/photoAccessHelper-savebutton.md)。
+指定文件类型和后缀，创建图片或视频资源，使用callback方式返回结果。
+
+在未申请相册管理模块权限'ohos.permission.WRITE_IMAGEVIDEO'时，可以使用安全控件或授权弹窗的方式创建媒体资源，详情请参考 [保存媒体库资源](../../../media/medialibrary/photoAccessHelper-savebutton.md)。
 
 **起始版本：** 23
 
@@ -148,16 +152,16 @@ createAsset(photoType: PhotoType, extension: string, callback: AsyncCallback<str
 | --- | --- | --- | --- |
 | photoType | PhotoType | 是 | 创建的文件类型，IMAGE或者VIDEO类型。 |
 | extension | string | 是 | 文件名后缀参数，例如：'jpg'。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | callback返回创建的图片和视频的uri。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | callback返回创建的图片和视频的uri。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 11+ |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**适用版本：** 10+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 11+ |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## createAsset
@@ -166,7 +170,9 @@ createAsset(photoType: PhotoType, extension: string, callback: AsyncCallback<str
 createAsset(photoType: PhotoType, extension: string, options?: CreateOptions): Promise<string>
 ```
 
-指定文件类型、后缀和创建选项，创建图片或视频资源，以Promise方式返回结果。 在未申请相册管理模块权限'ohos.permission.WRITE_IMAGEVIDEO'时，可以使用安全控件或授权弹窗的方式创建媒体资源，详情请参考 [保存媒体库资源](../../../media/medialibrary/photoAccessHelper-savebutton.md)。
+指定文件类型、后缀和创建选项，创建图片或视频资源，以Promise方式返回结果。
+
+在未申请相册管理模块权限'ohos.permission.WRITE_IMAGEVIDEO'时，可以使用安全控件或授权弹窗的方式创建媒体资源，详情请参考 [保存媒体库资源](../../../media/medialibrary/photoAccessHelper-savebutton.md)。
 
 **起始版本：** 23
 
@@ -196,10 +202,10 @@ createAsset(photoType: PhotoType, extension: string, options?: CreateOptions): P
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 11+ |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**适用版本：** 10+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 11+ |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## createAssetWithShortTermPermission
@@ -208,7 +214,9 @@ createAsset(photoType: PhotoType, extension: string, options?: CreateOptions): P
 createAssetWithShortTermPermission(photoCreationConfig: PhotoCreationConfig): Promise<string>
 ```
 
-接口提供给应用调用，支持首次调用后拉起保存确认弹框。在用户同意保存后返回已创建并授予保存权限的uri，支持应用使用uri写入图片/视频。 在用户"同意"后的5分钟之内，同一个应用再次调用接口，支持无需弹框确认自动返回已授权的uri给应用，支持应用保存图片/视频。退出应用会结束授权，再次进入需要重新弹出弹框进行确认授权。
+接口提供给应用调用，支持首次调用后拉起保存确认弹框。在用户同意保存后返回已创建并授予保存权限的uri，支持应用使用uri写入图片/视频。
+
+在用户"同意"后的5分钟之内，同一个应用再次调用接口，支持无需弹框确认自动返回已授权的uri给应用，支持应用保存图片/视频。退出应用会结束授权，再次进入需要重新弹出弹框进行确认授权。
 
 **起始版本：** 26.0.0
 
@@ -234,8 +242,8 @@ createAssetWithShortTermPermission(photoCreationConfig: PhotoCreationConfig): Pr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 ## createAssetWithShortTermPermissionEx
@@ -244,7 +252,13 @@ createAssetWithShortTermPermission(photoCreationConfig: PhotoCreationConfig): Pr
 createAssetWithShortTermPermissionEx(creationSetting: CreationSetting): Promise<string>
 ```
 
-应用调用该接口后，系统会首次拉起保存确认弹框。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 用户同意保存后，接口将返回已创建并授予保存权限的URI，应用可使用该URI写入图片/视频。 &gt; &gt; - 在用户同意后的5分钟内，若同一应用再次调用此接口，系统将无需弹框确认，直接返回已授权的URI，供应用保存图片/视频。退出应用会结束授权，再次进入需要重新弹出弹框进行确认授权。
+应用调用该接口后，系统会首次拉起保存确认弹框。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 用户同意保存后，接口将返回已创建并授予保存权限的URI，应用可使用该URI写入图片/视频。
+> 
+> - 在用户同意后的5分钟内，若同一应用再次调用此接口，系统将无需弹框确认，直接返回已授权的URI，供应用保存图片/视频。退出应用会结束授权，再次进入需要重新弹出弹框进行确认授权。
 
 **起始版本：** 26.0.0
 
@@ -281,7 +295,11 @@ createAssetWithShortTermPermissionEx(creationSetting: CreationSetting): Promise<
 createDeleteRequest(uriList: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-创建一个弹出框来删除照片，删除的文件进入到回收站，使用callback方式返回结果。 &gt; **说明：** &gt; &gt; 从API version 10开始支持，从API version 11开始废弃。
+创建一个弹出框来删除照片，删除的文件进入到回收站，使用callback方式返回结果。
+
+> **说明：**
+> 
+> 从API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -300,15 +318,15 @@ createDeleteRequest(uriList: Array<string>, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uriList | Array&lt;string&gt; | 是 | 待删除的媒体文件uri数组，最大删除数量300。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | callback返回void。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | callback返回void。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## createDeleteRequest
@@ -317,7 +335,11 @@ createDeleteRequest(uriList: Array<string>, callback: AsyncCallback<void>): void
 createDeleteRequest(uriList: Array<string>): Promise<void>
 ```
 
-创建一个弹出框来删除照片，删除的文件进入到回收站，使用Promise方式返回结果。 &gt; **说明：** &gt; &gt; 从API version 10开始支持，从API version 11开始废弃。
+创建一个弹出框来删除照片，删除的文件进入到回收站，使用Promise方式返回结果。
+
+> **说明：**
+> 
+> 从API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -347,9 +369,9 @@ createDeleteRequest(uriList: Array<string>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## createPhotoAsset
@@ -358,7 +380,9 @@ createDeleteRequest(uriList: Array<string>): Promise<void>
 createPhotoAsset(photoType: PhotoType, extension: string, title?: string): Promise<string>
 ```
 
-指定文件类型、后缀和标题，创建图片或视频资源。使用Promise异步回调。 在未申请相册管理模块权限'ohos.permission.WRITE_IMAGEVIDEO'时，可以使用安全控件或授权弹窗的方式创建媒体资源，详情请参考 [开发指南](../../../media/medialibrary/photoAccessHelper-savebutton.md)。
+指定文件类型、后缀和标题，创建图片或视频资源。使用Promise异步回调。
+
+在未申请相册管理模块权限'ohos.permission.WRITE_IMAGEVIDEO'时，可以使用安全控件或授权弹窗的方式创建媒体资源，详情请参考 [开发指南](../../../media/medialibrary/photoAccessHelper-savebutton.md)。
 
 **起始版本：** 23
 
@@ -390,9 +414,9 @@ createPhotoAsset(photoType: PhotoType, extension: string, title?: string): Promi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes: <br>1. The extension format is unsupported <br>2. Title contains unsupported character, such as . .. \ / : ? " ' ` &lt; &gt; \| { } [ ] <br>3. The title is an empty string <br>4. The total length of title and extension is more than 255 |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## getAlbumIdByLpath
 
@@ -400,7 +424,11 @@ createPhotoAsset(photoType: PhotoType, extension: string, title?: string): Promi
 getAlbumIdByLpath(lpath: string): Promise<int>
 ```
 
-根据相册的虚拟路径获取媒体库相册的ID。使用Promise异步回调。 该接口仅支持以下相册：相机相册（'/DCIM/Camera'）、截图相册（'/Pictures/Screenshots'）和屏幕录制相册（'/Pictures/Screenrecords'）。 ​**模型约束**： 此接口仅可在Stage模型下使用。
+根据相册的虚拟路径获取媒体库相册的ID。使用Promise异步回调。
+
+该接口仅支持以下相册：相机相册（'/DCIM/Camera'）、截图相册（'/Pictures/Screenshots'）和屏幕录制相册（'/Pictures/Screenrecords'）。
+
+​**模型约束**： 此接口仅可在Stage模型下使用。
 
 **起始版本：** 23
 
@@ -426,8 +454,8 @@ getAlbumIdByLpath(lpath: string): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The lpath is invalid, such as null, undefined and empty. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 
 ## getAlbums
 
@@ -440,7 +468,9 @@ getAlbums(
     ): void
 ```
 
-根据检索选项和相册类型获取相册，使用callback方式返回结果。 获取相册前，确保相册已存在。
+根据检索选项和相册类型获取相册，使用callback方式返回结果。
+
+获取相册前，确保相册已存在。
 
 **起始版本：** 23
 
@@ -457,16 +487,16 @@ getAlbums(
 | type | AlbumType | 是 | 相册类型。 |
 | subtype | AlbumSubtype | 是 | 相册子类型。 |
 | options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 是 | 检索选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | 是 | callback返回获取相册的结果集。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FetchResult&lt;Album&gt;&gt; | 是 | callback返回获取相册的结果集。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 12+ |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**适用版本：** 10 - 11 |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 12+ |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## getAlbums
@@ -475,7 +505,9 @@ getAlbums(
 getAlbums(type: AlbumType, subtype: AlbumSubtype, callback: AsyncCallback<FetchResult<Album>>): void
 ```
 
-根据相册类型获取相册，使用callback方式返回结果。 获取相册前需先保证相册存在。
+根据相册类型获取相册，使用callback方式返回结果。
+
+获取相册前需先保证相册存在。
 
 **起始版本：** 23
 
@@ -491,16 +523,16 @@ getAlbums(type: AlbumType, subtype: AlbumSubtype, callback: AsyncCallback<FetchR
 | --- | --- | --- | --- |
 | type | AlbumType | 是 | 相册类型。 |
 | subtype | AlbumSubtype | 是 | 相册子类型。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | 是 | callback返回获取相册的结果集。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FetchResult&lt;Album&gt;&gt; | 是 | callback返回获取相册的结果集。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 12+ |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**适用版本：** 10 - 11 |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 12+ |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## getAlbums
@@ -509,7 +541,9 @@ getAlbums(type: AlbumType, subtype: AlbumSubtype, callback: AsyncCallback<FetchR
 getAlbums(type: AlbumType, subtype: AlbumSubtype, options?: FetchOptions): Promise<FetchResult<Album>>
 ```
 
-根据检索选项和相册类型获取相册，使用Promise方式返回结果。 在获取相册之前，确保相册已存在。
+根据检索选项和相册类型获取相册，使用Promise方式返回结果。
+
+在获取相册之前，确保相册已存在。
 
 **起始版本：** 23
 
@@ -537,10 +571,10 @@ getAlbums(type: AlbumType, subtype: AlbumSubtype, options?: FetchOptions): Promi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 12+ |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**适用版本：** 10 - 11 |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 12+ |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## getAssets
@@ -564,16 +598,16 @@ getAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<PhotoAsset>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 是 | 检索选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;PhotoAsset&gt;&gt; | 是 | 回调函数。当获取相册中的文件成功，err为undefined，data为获取到的图片和视频数据结果集 [FetchResult](arkts-file-photoaccesshelper.md)；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FetchResult&lt;PhotoAsset&gt;&gt; | 是 | 回调函数。当获取相册中的文件成功，err为undefined，data为获取到的图片和视频数据结果集 [FetchResult](arkts-file-photoaccesshelper.md)；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 12+ |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**适用版本：** 10 - 11 |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 12+ |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## getAssets
@@ -610,9 +644,9 @@ getAssets(options: FetchOptions): Promise<FetchResult<PhotoAsset>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900012 | Permission denied<br>**适用版本：** 10 - 19 |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 20+ |
+| 13900012 | Permission denied<br>**适用版本：** 10 - 19 |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## getBurstAssets
@@ -764,14 +798,14 @@ offMediaLibraryAvailability(callback? : Callback<MediaLibraryAvailability>):void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaLibraryAvailability](arkts-medialibrary-photoaccesshelper-medialibraryavailability-i.md)&gt; | 否 | 回调函数，返回取消 [onMediaLibraryAvailability](#onmedialibraryavailability) 注册时指定的callback监听。不填时，则取消对媒体库可用性变化的所有监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaLibraryAvailability](arkts-medialibrary-photoaccesshelper-medialibraryavailability-i.md)&gt; | 否 | 回调函数，返回取消 [onMediaLibraryAvailability](#onmedialibraryavailability) 注册时指定的callback监听。不填时，则取消对媒体库可用性变化的所有监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## offPhotoAlbumChange
 
@@ -793,14 +827,14 @@ offPhotoAlbumChange(callback?: Callback<AlbumChangeInfos>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | Callback used for unsubscription. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | Callback used for unsubscription. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## offPhotoChange
@@ -823,14 +857,14 @@ offPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | Callback used for unsubscription. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | Callback used for unsubscription. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## offSinglePhotoAlbumChange
@@ -839,7 +873,9 @@ offPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void
 offSinglePhotoAlbumChange(album?: Album, callback?: Callback<AlbumChangeInfos>): void
 ```
 
-取消对单个相册的监听。具体规则如下： 1. 不携带任何参数时，取消所有单个相册监听。 2. 携带album，不携带callback时，取消该album下所有callback监听。 3. 携带album和callback时，仅取消指定callback监听。
+取消对单个相册的监听。具体规则如下：
+
+1. 不携带任何参数时，取消所有单个相册监听。 2. 携带album，不携带callback时，取消该album下所有callback监听。 3. 携带album和callback时，仅取消指定callback监听。
 
 **起始版本：** 23
 
@@ -854,14 +890,14 @@ offSinglePhotoAlbumChange(album?: Album, callback?: Callback<AlbumChangeInfos>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | album | Album | 否 | 取消监听相册。取消监听后,有相册发生变化时,不再通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 用于取消订阅的回调。不携带时，取消album参数下所有callback。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 用于取消订阅的回调。不携带时，取消album参数下所有callback。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## offSinglePhotoChange
@@ -870,7 +906,9 @@ offSinglePhotoAlbumChange(album?: Album, callback?: Callback<AlbumChangeInfos>):
 offSinglePhotoChange(asset?: PhotoAsset, callback?: Callback<PhotoAssetChangeInfos>): void
 ```
 
-取消单个资产的监听。具体规则如下： 1. 不携带参数时，取消所有单个资产监听。 2. 携带asset，不携带callback时，取消该asset下所有callback监听。 3. 携带asset和callback时，仅取消指定callback监听。
+取消单个资产的监听。具体规则如下：
+
+1. 不携带参数时，取消所有单个资产监听。 2. 携带asset，不携带callback时，取消该asset下所有callback监听。 3. 携带asset和callback时，仅取消指定callback监听。
 
 **起始版本：** 23
 
@@ -885,14 +923,14 @@ offSinglePhotoChange(asset?: PhotoAsset, callback?: Callback<PhotoAssetChangeInf
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | asset | PhotoAsset | 否 | 取消监听资产。取消asset资产监听后,当asset发生变化时,不再通过callback返回变更信息。不携带时，取消注册过的所有单个资产监听。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 用于取消订阅的回调。不携带时，取消asset参数下所有callback。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 用于取消订阅的回调。不携带时，取消asset参数下所有callback。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## off('photoAlbumChange')
@@ -916,14 +954,14 @@ off(type: 'photoAlbumChange', callback?: Callback<AlbumChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'photoAlbumChange' | 是 | 取消监听相册，取值为'photoAlbumChange'。取消监听后，有相册发生变化时，不再通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 取消 [on('photoAlbumChange')](#onphotochange) 注册时指定的callback监听；不填时，则取消对'photoAlbumChange'的所有监听。 <br>**注意：** <br>取消注册的callback后，有相册发生变化时，不会进入此回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 取消 [on('photoAlbumChange')](#onphotochange) 注册时指定的callback监听；不填时，则取消对'photoAlbumChange'的所有监听。 <br>**注意：** <br>取消注册的callback后，有相册发生变化时，不会进入此回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. <br>Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. <br>Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## off('photoChange')
@@ -947,14 +985,14 @@ off(type: 'photoChange', callback?: Callback<PhotoAssetChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'photoChange' | 是 | 取消监听媒体资产，取值为'photoChange'。取消监听后，有资产发生变化时，不再通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 取消 [on('photoChange')](#onphotochange) 注册时指定的callback监听；不填时，则取消对'photoChange'的所有监听。 <br>**注意：** <br>取消注册的callback后，有资产发生变化时，不会进入此回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 取消 [on('photoChange')](#onphotochange) 注册时指定的callback监听；不填时，则取消对'photoChange'的所有监听。 <br>**注意：** <br>取消注册的callback后，有资产发生变化时，不会进入此回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## onMediaLibraryAvailability
@@ -979,15 +1017,15 @@ onMediaLibraryAvailability(callback: Callback<MediaLibraryAvailability>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaLibraryAvailability](arkts-medialibrary-photoaccesshelper-medialibraryavailability-i.md)&gt; | 是 | 回调函数，返回媒体库可用性信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaLibraryAvailability](arkts-medialibrary-photoaccesshelper-medialibraryavailability-i.md)&gt; | 是 | 回调函数，返回媒体库可用性信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario-specific parameters are incorrect. Possible causes are as follows: <br>1. The input parameter is null or undefined. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## onPhotoAlbumChange
 
@@ -1009,14 +1047,14 @@ onPhotoAlbumChange(callback: Callback<AlbumChangeInfos>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | Callback used to notify the application of the changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | Callback used to notify the application of the changes. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## onPhotoChange
@@ -1039,14 +1077,14 @@ onPhotoChange(callback: Callback<PhotoAssetChangeInfos>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | Callback used to notify the application of the changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | Callback used to notify the application of the changes. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## onSinglePhotoAlbumChange
@@ -1070,14 +1108,14 @@ onSinglePhotoAlbumChange(album: Album, callback: Callback<AlbumChangeInfos>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | album | Album | 是 | 注册单个监听的媒体相册。注册完成后，当该相册发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 返回变更的媒体相册信息 [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)。 <br>**注意：** <br>该接口可以注册多个不同的callback监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 返回变更的媒体相册信息 [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)。 <br>**注意：** <br>该接口可以注册多个不同的callback监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## onSinglePhotoChange
@@ -1101,14 +1139,14 @@ onSinglePhotoChange(asset: PhotoAsset, callback: Callback<PhotoAssetChangeInfos>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | asset | PhotoAsset | 是 | 注册单个监听的媒体资产。注册完成后，有资产发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的媒体资产信息 PhotoAssetChangeInfos。 <br>**注意：** <br>该接口可以注册多个不同的callback监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的媒体资产信息 PhotoAssetChangeInfos。 <br>**注意：** <br>该接口可以注册多个不同的callback监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## on('photoAlbumChange')
@@ -1132,14 +1170,14 @@ on(type: 'photoAlbumChange', callback: Callback<AlbumChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'photoAlbumChange' | 是 | 注册监听相册，取值为'photoAlbumChange'。注册完成后，有相册发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 返回变更的相册信息 [AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)。 <br>**注意：** <br>该接口可以注册多个不同的callback监听， [off('photoAlbumChange')](#offphotochange) 既可以关闭所有监听，也可以关闭指定callback监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 返回变更的相册信息 [AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)。 <br>**注意：** <br>该接口可以注册多个不同的callback监听， [off('photoAlbumChange')](#offphotochange) 既可以关闭所有监听，也可以关闭指定callback监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## on('photoChange')
@@ -1163,14 +1201,14 @@ on(type: 'photoChange', callback: Callback<PhotoAssetChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'photoChange' | 是 | 注册监听媒体资产，取值为'photoChange'。注册完成后，有资产发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的媒体资产信息 [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)。 <br>**注意：** <br>该接口可以注册多个不同的callback监听， [off('photoChange')](#offphotochange) 既可以关闭所有监听，也可以关闭指定callback监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的媒体资产信息 [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)。 <br>**注意：** <br>该接口可以注册多个不同的callback监听， [off('photoChange')](#offphotochange) 既可以关闭所有监听，也可以关闭指定callback监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. <br>Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. <br>Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## registerChange
@@ -1193,15 +1231,15 @@ registerChange(uri: string, forChildUris: boolean, callback: Callback<ChangeData
 | --- | --- | --- | --- |
 | uri | string | 是 | PhotoAsset的uri, Album的uri或[DefaultChangeUri](arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md)的值。 |
 | forChildUris | boolean | 是 | 是否模糊监听。uri为相册uri时：forChildUris为true，能监听到相册中文件的变化。如果是false，只能监听相册本身变化；uri为 photoAsset时：forChildUris为true、false没有区别；uri为DefaultChangeUri时：forChildUris必须为true，如果为false将找不到该uri，收不到任何消息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeData&gt; | 是 | 返回要监听的[ChangeData](arkts-medialibrary-photoaccesshelper-changedata-i.md)。注：uri可以注册多个不同的 callback监听，[unRegisterChange](#unregisterchange)可以关闭该uri所有监听，也可以关闭指定 callback的监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeData&gt; | 是 | 返回要监听的[ChangeData](arkts-medialibrary-photoaccesshelper-changedata-i.md)。注：uri可以注册多个不同的 callback监听，[unRegisterChange](#unregisterchange)可以关闭该uri所有监听，也可以关闭指定 callback的监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
+| 13900020 | Invalid argument |
 
 ## release
 
@@ -1209,7 +1247,9 @@ registerChange(uri: string, forChildUris: boolean, callback: Callback<ChangeData
 release(callback: AsyncCallback<void>): void
 ```
 
-释放PhotoAccessHelper实例。使用callback异步回调。 当后续不需要使用PhotoAccessHelper实例中的方法时调用。
+释放PhotoAccessHelper实例。使用callback异步回调。
+
+当后续不需要使用PhotoAccessHelper实例中的方法时调用。
 
 **起始版本：** 23
 
@@ -1221,14 +1261,14 @@ release(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调表示成功还是失败。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调表示成功还是失败。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## release
@@ -1237,7 +1277,9 @@ release(callback: AsyncCallback<void>): void
 release(): Promise<void>
 ```
 
-释放PhotoAccessHelper实例。使用Promise异步回调。 当后续不需要使用PhotoAccessHelper实例中的方法时调用。
+释放PhotoAccessHelper实例。使用Promise异步回调。
+
+当后续不需要使用PhotoAccessHelper实例中的方法时调用。
 
 **起始版本：** 23
 
@@ -1255,8 +1297,8 @@ release(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## requestPhotoUrisReadPermission
@@ -1300,7 +1342,9 @@ requestPhotoUrisReadPermission(srcFileUris: Array<string>): Promise<Array<string
 requestPhotoUrisReadPermissionEx(srcFileUris: Array<string>): Promise<RequestReadPermissionResult>
 ```
 
-应用调用接口为未授权的URI授权。使用promise异步回调。 返回授权结果，其中包含已创建并授予保存权限的URI列表以及无效的URI列表。
+应用调用接口为未授权的URI授权。使用promise异步回调。
+
+返回授权结果，其中包含已创建并授予保存权限的URI列表以及无效的URI列表。
 
 **起始版本：** 26.0.0
 
@@ -1336,7 +1380,9 @@ requestPhotoUrisReadPermissionEx(srcFileUris: Array<string>): Promise<RequestRea
 setAssetCompatibleCapability(capability: AssetCompatibleCapability): Promise<void>
 ```
 
-配置资产兼容能力。系统会对特殊的资产（如高分辨率资产）进行兼容性处理，如果开发者希望获得原始资产需要向系统注册兼容能力。 ​
+配置资产兼容能力。系统会对特殊的资产（如高分辨率资产）进行兼容性处理，如果开发者希望获得原始资产需要向系统注册兼容能力。
+
+​
 
 **起始版本：** 24
 
@@ -1362,8 +1408,8 @@ setAssetCompatibleCapability(capability: AssetCompatibleCapability): Promise<voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The capability is invalid. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## showAssetsCreationDialog
 
@@ -1371,7 +1417,13 @@ setAssetCompatibleCapability(capability: AssetCompatibleCapability): Promise<voi
 showAssetsCreationDialog(srcFileUris: Array<string>, photoCreationConfigs: Array<PhotoCreationConfig>): Promise<Array<string>>
 ```
 
-调用接口显示保存确认弹窗。如果用户同意保存，将返回一个已创建并授予保存权限的URI列表（此列表永久生效），应用可使用这些URI写入图片或视频。如果用户拒绝保存，将返回一个空列表。 弹框需显示应用名称，但无法直接获取。因此，调用此接口时，请确保[module.json5配置文件](../../../quick-start/module-configuration-file.md)中的 `abilities`标签已配置`label`和`icon`项。需要注意的是，图标不受`abilities`标签中的`icon`项影响，不支持修改。 &gt; **说明：** &gt; &gt; 当传入URI为沙箱路径时，可正常保存图片/视频，但无界面预览。
+调用接口显示保存确认弹窗。如果用户同意保存，将返回一个已创建并授予保存权限的URI列表（此列表永久生效），应用可使用这些URI写入图片或视频。如果用户拒绝保存，将返回一个空列表。
+
+弹框需显示应用名称，但无法直接获取。因此，调用此接口时，请确保[module.json5配置文件](../../../quick-start/module-configuration-file.md)中的 `abilities`标签已配置`label`和`icon`项。需要注意的是，图标不受`abilities`标签中的`icon`项影响，不支持修改。
+
+> **说明：**
+> 
+> 当传入URI为沙箱路径时，可正常保存图片/视频，但无界面预览。
 
 **起始版本：** 26.0.0
 
@@ -1407,7 +1459,15 @@ showAssetsCreationDialog(srcFileUris: Array<string>, photoCreationConfigs: Array
 showAssetsCreationDialogEx(srcFileUris: Array<string>, creationSettings: Array<CreationSetting>): Promise<Array<string>>
 ```
 
-调用接口显示保存确认弹窗。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 用户同意后，返回已创建并授予保存权限的URI列表，该列表永久有效，支持写入图片/视频。用户拒绝时，返回空列表。 &gt; &gt; - 弹框需显示应用名称，名称和图标需在[module.json5配置文件](../../../quick-start/module-configuration-file.md)的`abilities`标签中配置 &gt; `label`和`icon`项。 &gt; &gt; - 当传入URI为沙箱路径时，可正常保存图片或视频，但不显示界面预览。
+调用接口显示保存确认弹窗。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 用户同意后，返回已创建并授予保存权限的URI列表，该列表永久有效，支持写入图片/视频。用户拒绝时，返回空列表。
+> 
+> - 弹框需显示应用名称，名称和图标需在[module.json5配置文件](../../../quick-start/module-configuration-file.md)的`abilities`标签中配置 &gt; `label`和`icon`项。
+> 
+> - 当传入URI为沙箱路径时，可正常保存图片或视频，但不显示界面预览。
 
 **起始版本：** 26.0.0
 
@@ -1444,7 +1504,15 @@ showAssetsCreationDialogEx(srcFileUris: Array<string>, creationSettings: Array<C
 showSingleAssetCreationDialogEx(srcFileUri: string, creationSetting: CreationSetting, isImageFullyDisplayed: boolean): Promise<string>
 ```
 
-针对单个图片/视频调用接口显示保存确认弹窗。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 如果用户同意保存，将返回一个已创建并授予保存权限的URI（此URI永久生效），应用可使用这个URI写入图片或视频。如果用户拒绝保存，将返回一个空字符串。 &gt; &gt; - 弹框需显示应用名称，但无法直接获取。因此，调用此接口时，请确保[module.json5配置文件](../../../quick-start/module-configuration-file.md)中的 &gt; `abilities`标签已配置`label`和`icon`项。需要注意的是，图标不受`abilities`标签中的`icon`项影响，不支持修改。 &gt; &gt; - 当传入URI为沙箱路径时，可正常保存图片/视频，但无界面预览。
+针对单个图片/视频调用接口显示保存确认弹窗。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 如果用户同意保存，将返回一个已创建并授予保存权限的URI（此URI永久生效），应用可使用这个URI写入图片或视频。如果用户拒绝保存，将返回一个空字符串。
+> 
+> - 弹框需显示应用名称，但无法直接获取。因此，调用此接口时，请确保[module.json5配置文件](../../../quick-start/module-configuration-file.md)中的 &gt; `abilities`标签已配置`label`和`icon`项。需要注意的是，图标不受`abilities`标签中的`icon`项影响，不支持修改。
+> 
+> - 当传入URI为沙箱路径时，可正常保存图片/视频，但无界面预览。
 
 **起始版本：** 26.0.0
 
@@ -1495,13 +1563,13 @@ unRegisterChange(uri: string, callback?: Callback<ChangeData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | PhotoAsset的uri, Album的uri或[DefaultChangeUri](arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md)的值。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeData&gt; | 否 | 取消 [registerChange](#registerchange)注册时的callback的监听，不填时，取消该uri的所有监听。注： off指定注册的callback后不会进入此回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeData&gt; | 否 | 取消 [registerChange](#registerchange)注册时的callback的监听，不填时，取消该uri的所有监听。注： off指定注册的callback后不会进入此回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
+| 13900020 | Invalid argument |
 

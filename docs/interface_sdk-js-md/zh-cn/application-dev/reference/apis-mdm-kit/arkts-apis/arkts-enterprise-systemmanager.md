@@ -1,6 +1,10 @@
 # @ohos.enterprise.systemManager
 
-本模块提供系统管理能力，包括NTP时间服务器设置、OTA升级策略管理、系统更新管理、按键事件处理策略、日志收集、设备激活锁管理等功能。适用于企业设备管理场景，帮助企业管理员统一管控设备系统配置、升级策略和安全策略，提升企业设备管理效率 和安全性。 &gt; **说明：** &gt; &gt; 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。
+本模块提供系统管理能力，包括NTP时间服务器设置、OTA升级策略管理、系统更新管理、按键事件处理策略、日志收集、设备激活锁管理等功能。适用于企业设备管理场景，帮助企业管理员统一管控设备系统配置、升级策略和安全策略，提升企业设备管理效率 和安全性。
+
+> **说明：**
+> 
+> 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。
 
 **起始版本：** 12
 
@@ -23,7 +27,7 @@ import { systemManager } from '@kit.MDMKit';
 | 名称 | 说明 |
 | --- | --- |
 | [addDisallowedNearLinkProtocols](arkts-mdm-systemmanager-adddisallowednearlinkprotocols-f.md) | 为指定用户添加禁用的星闪协议名单。NearLink Kit（星闪服务）提供一种低功耗、高速率的短距离通信服务，支持星闪设备之间的连接、数据交互。本接口对键盘、手写笔等系统服务和系统应用 不生效。 |
-| [addKeyEventPolicies](arkts-mdm-systemmanager-addkeyeventpolicies-f.md) | 添加按键事件处理策略。系统触发按键事件时，若匹配下发的按键事件策略，将通过 [EnterpriseAdminExtensionAbility.onKeyEvent](../../apis-na/arkts-apis/arkts-na-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) 回调通知MDM应用，并携带匹配策略的按键事件信息。 |
+| [addKeyEventPolicies](arkts-mdm-systemmanager-addkeyeventpolicies-f.md) | 添加按键事件处理策略。系统触发按键事件时，若匹配下发的按键事件策略，将通过 [EnterpriseAdminExtensionAbility.onKeyEvent](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) 回调通知MDM应用，并携带匹配策略的按键事件信息。 |
 | [finishLogCollected](arkts-mdm-systemmanager-finishlogcollected-f.md) | 删除本MDM应用在当前用户下收集到的设备日志。 |
 | [getAutoUnlockAfterReboot](arkts-mdm-systemmanager-getautounlockafterreboot-f.md) | 获取设备是否重启自动解锁。适用于需要验证设备重启解锁策略是否正确配置的场景，帮助企业管理员确认设备自动解锁功能状态。 |
 | [getAutoUnlockAfterReboot](arkts-mdm-systemmanager-getautounlockafterreboot-f.md) | 获取设备是否重启自动解锁。适用于需要验证设备重启解锁策略是否正确配置的场景，帮助企业管理员确认设备自动解锁功能状态。 |
@@ -44,18 +48,18 @@ import { systemManager } from '@kit.MDMKit';
 | [setActivationLockDisabled](arkts-mdm-systemmanager-setactivationlockdisabled-f.md) | 禁用/启用设备激活锁。设备激活锁被禁用后，将无法使用查找设备功能。该功能只适用于特定设备 |
 | [setAutoUnlockAfterReboot](arkts-mdm-systemmanager-setautounlockafterreboot-f.md) | 设置设备重启自动解锁，仅针对无锁屏密码设备生效。适用于企业无人值守设备或需要快速重启恢复服务的场景，避免因手动解锁导致的设备停机时间，提升设备运维效率和业务连续性。 |
 | [setInstallLocalEnterpriseAppEnabled](arkts-mdm-systemmanager-setinstalllocalenterpriseappenabled-f.md) | 设置是否支持本地安装企业应用。设置为支持安装后，具备本地安装能力的PC/2in1企业设备可本地双击应用安装包，安装签名证书分发类型为enterprise_normal的企业应用。 |
-| [setInstallLocalEnterpriseAppEnabledForAccount](arkts-mdm-systemmanager-setinstalllocalenterpriseappenabledforaccount-f.md) | 设置指定用户下是否支持本地安装企业应用。在具备本地安装能力的PC/2in1企业设备上下发支持本地企业应用策略后，用户可以在桌面或者文件管理器直接双击企业应用安装包，即可直接安装企业应用。 仅支持enterprise_normal或enterprise_mdm签名类型的企业应用。 |
+| [setInstallLocalEnterpriseAppEnabledForAccount](arkts-mdm-systemmanager-setinstalllocalenterpriseappenabledforaccount-f.md) | 设置指定用户下是否支持本地安装企业应用。在具备本地安装能力的PC/2in1企业设备上下发支持本地企业应用策略后，用户可以在桌面或者文件管理器直接双击企业应用安装包，即可直接安装企业应用。 |
 | [setNTPServer](arkts-mdm-systemmanager-setntpserver-f.md) | 设置NTP(Network Time Protocol)时间服务器。设置成功后，系统将使用指定的NTP服务器进行时间同步，校准系统时间。适用于企业设备需要统一时间同步的场景，确保企业设备时间与标准时间保持一致，避免因时间不准确导致 的业务问题，如日志时间戳不一致、证书验证失败等。 |
 | [setOtaUpdateNonceEnable](arkts-mdm-systemmanager-setotaupdatenonceenable-f.md) | 设置OTA更新时Nonce的启用状态（默认为启用状态）。启用后，系统将在OTA更新过程中校验Nonce的有效性，从而防止重放攻击，提升系统安全性。 |
 | [setOtaUpdatePolicy](arkts-mdm-systemmanager-setotaupdatepolicy-f.md) | 设置升级策略。设置成功后，系统将按照指定的策略类型进行OTA升级处理，不同策略类型对应不同的升级行为。内网升级场景下，需要先调用 [systemManager.notifyUpdatePackages](arkts-mdm-systemmanager-notifyupdatepackages-f.md)接口通知系统更新包，再调用该接口设置升级策略。 |
-| [startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md) | 开始收集设备上已生成并存储至硬盘的[FaultType](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-faultlogger-faulttype-e.md)类型的faultlog日志，不支持收集未存储至硬盘的faultlog日志、应用业 务日志和系统运行日志。 - 调用接口后，系统会启动一个日志收集任务，任务启动后接口立即返回。任务可能会因为系统性能等原因导致收集失败。 - 允许多个MDM应用调用，不同MDM应用在不同用户下收集的日志分开保存，互不影响。同一时间只允许一个MDM应用启动日志收集任务，在任务执行完成前调用本接口会返回错误码9201009，任务执行完成后，允许其他MDM应用调用。 - 任务执行完成后，通过 [EnterpriseAdminExtensionAbility.onLogCollected](../../apis-na/arkts-apis/arkts-na-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onlogcollected) 回调函数通知给MDM应用，系统将已收集的日志文件挂载到MDM应用沙箱路径，MDM应用可以在回调函数中读取已收集的日志。 - 如果日志收集任务执行超过5分钟， [EnterpriseAdminExtensionAbility.onLogCollected](../../apis-na/arkts-apis/arkts-na-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onlogcollected) 回调函数会返回日志收集任务失败。 - 应用取走日志后，建议调用[systemManager.finishLogCollected](arkts-mdm-systemmanager-finishlogcollected-f.md)删除已收集到的日志。 |
+| [startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md) | 开始收集设备上已生成并存储至硬盘的[FaultType](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-faultlogger-faulttype-e.md)类型的faultlog日志，不支持收集未存储至硬盘的faultlog日志、应用业 务日志和系统运行日志。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
 | [ErrorInfo](arkts-mdm-systemmanager-errorinfo-i.md) | 系统更新错误信息。 |
-| [KeyEvent](arkts-mdm-systemmanager-keyevent-i.md) | 按键事件。 [EnterpriseAdminExtensionAbility.onKeyEvent](../../apis-na/arkts-apis/arkts-na-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) 按键事件回调触发时，传递当前按键事件信息。 |
+| [KeyEvent](arkts-mdm-systemmanager-keyevent-i.md) | 按键事件。 [EnterpriseAdminExtensionAbility.onKeyEvent](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) 按键事件回调触发时，传递当前按键事件信息。 |
 | [KeyEventPolicy](arkts-mdm-systemmanager-keyeventpolicy-i.md) | 按键事件处理策略。按键事件发生时，仅拦截响应已下发按键事件处理策略的按键。对于未下发按键事件处理策略的按键事件，系统执行原先的响应逻辑。 |
 | [KeyItem](arkts-mdm-systemmanager-keyitem-i.md) | 其他按键信息。当前[KeyCode](arkts-mdm-systemmanager-keycode-e.md)事件发生时，其他已被按下的按键信息。 |
 | [NotifyDescription](arkts-mdm-systemmanager-notifydescription-i.md) | 企业自定义更新通知说明。 |
@@ -71,7 +75,7 @@ import { systemManager } from '@kit.MDMKit';
 | 名称 | 说明 |
 | --- | --- |
 | [KeyAction](arkts-mdm-systemmanager-keyaction-e.md) | 按键动作。 |
-| [KeyCode](arkts-mdm-systemmanager-keycode-e.md) | 按键编码。添加按键事件处理策略[addKeyEventPolicies](arkts-mdm-systemmanager-addkeyeventpolicies-f.md)、删除按键事件处理策略 [removeKeyEventPolicies](arkts-mdm-systemmanager-removekeyeventpolicies-f.md)、获取按键事件处理策略 [getKeyEventPolicies](arkts-mdm-systemmanager-getkeyeventpolicies-f.md)和按键事件回调 [onKeyEvent](../../apis-na/arkts-apis/arkts-na-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent)接口通过 按键编码映射到设备对应实际按键。 |
+| [KeyCode](arkts-mdm-systemmanager-keycode-e.md) | 按键编码。添加按键事件处理策略[addKeyEventPolicies](arkts-mdm-systemmanager-addkeyeventpolicies-f.md)、删除按键事件处理策略 [removeKeyEventPolicies](arkts-mdm-systemmanager-removekeyeventpolicies-f.md)、获取按键事件处理策略 [getKeyEventPolicies](arkts-mdm-systemmanager-getkeyeventpolicies-f.md)和按键事件回调 [onKeyEvent](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent)接口通过 按键编码映射到设备对应实际按键。 |
 | [KeyPolicy](arkts-mdm-systemmanager-keypolicy-e.md) | 按键策略。MDM应用下发按键策略的按键编码与系统按键事件匹配后的系统行为。 |
 | [NearLinkProtocol](arkts-mdm-systemmanager-nearlinkprotocol-e.md) | 星闪协议枚举。 |
 | [PackageType](arkts-mdm-systemmanager-packagetype-e.md) | 系统更新包类型。 |

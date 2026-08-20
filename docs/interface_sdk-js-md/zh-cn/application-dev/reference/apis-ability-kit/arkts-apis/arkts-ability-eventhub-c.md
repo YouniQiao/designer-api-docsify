@@ -142,7 +142,9 @@ export default class EntryAbility extends UIAbility {
 off(event: string, callback?: Function): void
 ```
 
-取消订阅指定事件。 - 传入callback：取消指定的callback对指定事件的订阅，当该事件触发后，将不会回调该callback。 - 不传callback：取消所有callback对指定事件的订阅。
+取消订阅指定事件。
+
+- 传入callback：取消指定的callback对指定事件的订阅，当该事件触发后，将不会回调该callback。 - 不传callback：取消所有callback对指定事件的订阅。
 
 **起始版本：** 23
 
@@ -204,7 +206,11 @@ export default class EntryAbility extends UIAbility {
 on(event: string, callback: Function): void
 ```
 
-订阅指定事件。 &gt; **说明：** &gt; &gt; callback被emit触发时，调用方是EventHub对象，如果要修改callback中this的指向，可以使用箭头函数。
+订阅指定事件。
+
+> **说明：**
+> 
+> callback被emit触发时，调用方是EventHub对象，如果要修改callback中this的指向，可以使用箭头函数。
 
 **起始版本：** 23
 

@@ -1,5 +1,7 @@
 # PanelRect
 
+@brief 输入法面板位置大小信息。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-export interface PanelRect--><!--Device-inputMethodEngine-export interface PanelRect-End-->
@@ -18,6 +20,8 @@ import { inputMethodEngine } from '@kit.IMEKit';
 landscapeRect: window.Rect
 ```
 
+@brief 横屏状态时输入法面板窗口的位置大小。
+
 **类型：** window.Rect
 
 **起始版本：** 23
@@ -31,6 +35,8 @@ landscapeRect: window.Rect
 ```TypeScript
 portraitRect: window.Rect
 ```
+
+@brief 竖屏状态时输入法面板窗口的位置大小。
 
 **类型：** window.Rect
 

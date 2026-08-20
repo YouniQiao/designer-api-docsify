@@ -2,6 +2,8 @@
 
 Provides fileshare APIS
 
+@namespace fileShare
+
 **Since:** 23
 
 <!--Device-unnamed-declare namespace fileShare--><!--Device-unnamed-declare namespace fileShare-End-->

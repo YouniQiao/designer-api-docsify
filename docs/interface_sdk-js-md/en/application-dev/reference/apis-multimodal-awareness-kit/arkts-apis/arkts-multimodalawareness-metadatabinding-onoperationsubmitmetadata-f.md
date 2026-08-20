@@ -31,6 +31,6 @@ Subscribes to a system event to obtain the encoded metadata.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
-| [32100004](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100004-subscription-failed) | Subscribe Failed. Possible causes: <br>1. Abnormal system capability. <br>2. IPC communication abnormality. <br>3. Algorithm loading exception. |
+| [32100001](../errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
+| [32100004](../errorcode-metadataBinding.md#32100004-subscription-failed) | Subscribe Failed. Possible causes: <br>1. Abnormal system capability. <br>2. IPC communication abnormality. <br>3. Algorithm loading exception. |
 

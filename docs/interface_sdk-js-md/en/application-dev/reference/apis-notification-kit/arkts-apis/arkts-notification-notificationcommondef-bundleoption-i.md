@@ -1,4 +1,4 @@
-# BundleOption(Some common definitions)
+# BundleOption
 
 Describes the **BundleOption** information, that is, the bundle information of an application.
 

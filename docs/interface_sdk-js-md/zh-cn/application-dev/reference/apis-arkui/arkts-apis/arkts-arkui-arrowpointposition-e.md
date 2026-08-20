@@ -2,6 +2,8 @@
 
 ArrowPointPosition enumeration description
 
+@enum { string }
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare enum ArrowPointPosition--><!--Device-unnamed-declare enum ArrowPointPosition-End-->

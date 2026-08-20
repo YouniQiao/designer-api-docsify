@@ -29,8 +29,8 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 | [getConnectionState](arkts-connectivity-datatransfer-getconnectionstate-f.md) | Obtains the connection status for data transfer. |
 | [offConnectionStateChanged](arkts-connectivity-datatransfer-offconnectionstatechanged-f.md) | Unsubscribes from the connection state change event. |
 | [offReadData](arkts-connectivity-datatransfer-offreaddata-f.md) | Unsubscribes from the event reported when data is read from the port. |
-| [onConnectionStateChanged](arkts-connectivity-datatransfer-onconnectionstatechanged-f.md) | Subscribes to the connection state change event. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. |
-| [onReadData](arkts-connectivity-datatransfer-onreaddata-f.md) | Subscribes to the event reported when data is read from the port. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. |
+| [onConnectionStateChanged](arkts-connectivity-datatransfer-onconnectionstatechanged-f.md) | Subscribes to the connection state change event. |
+| [onReadData](arkts-connectivity-datatransfer-onreaddata-f.md) | Subscribes to the event reported when data is read from the port. |
 | [writeData](arkts-connectivity-datatransfer-writedata-f.md) | Writes data by address and UUID. |
 
 ### Interfaces

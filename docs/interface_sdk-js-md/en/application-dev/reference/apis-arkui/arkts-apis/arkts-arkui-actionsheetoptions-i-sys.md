@@ -1,4 +1,4 @@
-# ActionSheetOptions(ActionSheet)
+# ActionSheetOptions
 
 Provides **ActionSheet** configuration options.
 

@@ -20,9 +20,9 @@ import { webview } from '@kit.ArkWeb';
 errCode: WebBlanklessErrorCode
 ```
 
-Error code of blankless loading. For details, see [WebBlanklessErrorCode](../../apis-na/arkts-apis/arkts-na-webview-webblanklesserrorcode-e.md).
+Error code of blankless loading. For details, see [WebBlanklessErrorCode](../../apis-default/arkts-apis/arkts-webview-webblanklesserrorcode-e.md).
 
-**Type:** [WebBlanklessErrorCode](../../apis-na/arkts-apis/arkts-na-webview-webblanklesserrorcode-e.md)
+**Type:** [WebBlanklessErrorCode](../../apis-default/arkts-apis/arkts-webview-webblanklesserrorcode-e.md)
 
 **Since:** 20
 

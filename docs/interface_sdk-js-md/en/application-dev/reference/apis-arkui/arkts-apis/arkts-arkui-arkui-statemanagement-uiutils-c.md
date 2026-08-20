@@ -45,8 +45,8 @@ Dynamically adds a listener to the state variable of state management V2. For de
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [130001](../errorcode-stateManagement.md#130001-invalid-path-for-addmonitorclearmonitor) | The path is invalid. |
 | [130000](../errorcode-stateManagement.md#130000-invalid-target-object-for-addmonitorclearmonitor) | The target is not a custom component instance or V2 class instance. |
+| [130001](../errorcode-stateManagement.md#130001-invalid-path-for-addmonitorclearmonitor) | The path is invalid. |
 | [130002](../errorcode-stateManagement.md#130002-invalid-callback-for-addmonitorclearmonitor) | monitorCallback is not a function or an anonymous function. |
 
 ## applySync
@@ -302,8 +302,8 @@ Deletes the listener added to the state variable of the state management V2 by c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [130001](../errorcode-stateManagement.md#130001-invalid-path-for-addmonitorclearmonitor) | The path is invalid. |
 | [130000](../errorcode-stateManagement.md#130000-invalid-target-object-for-addmonitorclearmonitor) | The target is not a custom component instance or V2 class instance. |
+| [130001](../errorcode-stateManagement.md#130001-invalid-path-for-addmonitorclearmonitor) | The path is invalid. |
 | [130002](../errorcode-stateManagement.md#130002-invalid-callback-for-addmonitorclearmonitor) | monitorCallback is not a function or an anonymous function. |
 
 ## enableV2Compatibility
@@ -399,8 +399,8 @@ Processes all state variable modifications before this API call and synchronizes
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [140002](../errorcode-stateManagement.md#140002-invalid-invocation-of-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Monitor |
 | [140001](../errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Computed |
+| [140002](../errorcode-stateManagement.md#140002-invalid-invocation-of-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Monitor |
 
 **Examples**
 
@@ -469,8 +469,8 @@ Synchronously updates all state variable modifications before this API call, inc
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [140002](../errorcode-stateManagement.md#140002-invalid-invocation-of-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Monitor |
 | [140001](../errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Computed |
+| [140002](../errorcode-stateManagement.md#140002-invalid-invocation-of-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Monitor |
 
 **Examples**
 
@@ -875,7 +875,9 @@ struct Index {
 static makeV1Observed<T extends object>(source: T): T
 ```
 
-Wraps an unobservable object into an object that is observable by V1 state management. This API is equivalent to @ Observed and can be used to initialize @ObjectLink. This API can be used together with [enableV2Compatibility](#enablev2compatibility) in scenarios where state management V1 and V2 are used together. For details, see [Mixed Use of State Management V1 and V2 (API Version 19 and Later)](../../../ui/state-management/arkts-v1-v2-mixusage.md).
+Wraps an unobservable object into an object that is observable by V1 state management. This API is equivalent to @ Observed and can be used to initialize @ObjectLink.
+
+This API can be used together with [enableV2Compatibility](#enablev2compatibility) in scenarios where state management V1 and V2 are used together. For details, see [Mixed Use of State Management V1 and V2 (API Version 19 and Later)](../../../ui/state-management/arkts-v1-v2-mixusage.md).
 
 **Since:** 19
 
@@ -891,7 +893,7 @@ Wraps an unobservable object into an object that is observable by V1 state manag
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | T | Yes | Data source. Common classes, Array, Map, Set, and Date types are supported. <br>[@arkts.collections](../../apis-na/arkts-apis/arkts-collections.md) (ArkTS containers) and classes decorated with [@Sendable](../../../arkts-utils/arkts-sendable.md) are not supported. <br>**undefined** and **null** are not supported. V2 state management data and the return value of [makeObserved](#makeobserved) are not supported. |
+| source | T | Yes | Data source. Common classes, Array, Map, Set, and Date types are supported. <br>[@arkts.collections](../../apis-arkts/arkts-apis/arkts-arkts-collections-n.md) (ArkTS containers) and classes decorated with [@Sendable](../../../arkts-utils/arkts-sendable.md) are not supported. <br>**undefined** and **null** are not supported. V2 state management data and the return value of [makeObserved](#makeobserved) are not supported. |
 
 **Return value:**
 

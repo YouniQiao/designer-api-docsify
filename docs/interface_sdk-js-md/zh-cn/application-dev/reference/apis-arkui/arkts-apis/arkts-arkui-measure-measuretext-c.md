@@ -1,4 +1,4 @@
-# MeasureText(Text Measurement)
+# MeasureText
 
 定义测算文本相关接口。
 
@@ -20,7 +20,15 @@ import { MeasureText, MeasureOptions } from '@kit.ArkUI';
 static measureText(options: MeasureOptions): number
 ```
 
-计算指定文本作为单行文本显示时的宽度。如果文本包含多行（由换行符`\n`分隔），则返回其中最长的行的宽度。 &gt; **说明：** &gt; &gt; -measureText需要先通过[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)中的 &gt; [getMeasureUtils](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getmeasureutils)方法获取 &gt; [MeasureUtils](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)对象，然后通过该对象进行调用。且直接使用measureText可能导致 &gt; [UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。 &gt; &gt; - 从API version 12开始，可以通过使用[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)中的 &gt; [getMeasureUtils](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getmeasureutils)方法获取当前UI上下文关 &gt; 联的[MeasureUtils](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)对象。 &gt; &gt; - measureText接口的计算结果始终是单行文本的宽度，入参options中配置的布局约束（如constraintWidth、maxLines）对measureText的结果没有影响。如果需要计算布局约束下的宽度，请使用 &gt; [measureTextSize](../../../reference/apis-arkui/arkts-apis-uicontext-measureutils.md#measuretextsize12)方法。
+计算指定文本作为单行文本显示时的宽度。如果文本包含多行（由换行符`\n`分隔），则返回其中最长的行的宽度。
+
+> **说明：**
+> 
+> -measureText需要先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的 &gt; [getMeasureUtils](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getmeasureutils)方法获取 &gt; [MeasureUtils](arkts-arkui-arkui-uicontext-uicontext-c.md)对象，然后通过该对象进行调用。且直接使用measureText可能导致 &gt; [UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。
+> 
+> - 从API version 12开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的 &gt; [getMeasureUtils](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getmeasureutils)方法获取当前UI上下文关 &gt; 联的[MeasureUtils](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
+> 
+> - measureText接口的计算结果始终是单行文本的宽度，入参options中配置的布局约束（如constraintWidth、maxLines）对measureText的结果没有影响。如果需要计算布局约束下的宽度，请使用 &gt; [measureTextSize](../../../reference/apis-arkui/arkts-apis-uicontext-measureutils.md#measuretextsize12)方法。
 
 **起始版本：** 9
 
@@ -78,7 +86,13 @@ struct Index {
 static measureTextSize(options: MeasureOptions): SizeOptions
 ```
 
-计算指定文本的宽度和高度。 &gt; **说明：** &gt; &gt; -measureTextSize需要先通过[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)中的 &gt; [getMeasureUtils](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getmeasureutils)方法获取 &gt; [MeasureUtils](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)对象，然后通过该对象进行调用。且直接使用measureTextSize可能导致 &gt; [UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。 &gt; &gt; - 从API version 12开始，可以通过使用[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)中的 &gt; [getMeasureUtils](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getmeasureutils)方法获取当前UI上下文关 &gt; 联的[MeasureUtils](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)对象。
+计算指定文本的宽度和高度。
+
+> **说明：**
+> 
+> -measureTextSize需要先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的 &gt; [getMeasureUtils](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getmeasureutils)方法获取 &gt; [MeasureUtils](arkts-arkui-arkui-uicontext-uicontext-c.md)对象，然后通过该对象进行调用。且直接使用measureTextSize可能导致 &gt; [UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。
+> 
+> - 从API version 12开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的 &gt; [getMeasureUtils](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getmeasureutils)方法获取当前UI上下文关 &gt; 联的[MeasureUtils](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 10
 
@@ -104,7 +118,7 @@ static measureTextSize(options: MeasureOptions): SizeOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| [SizeOptions](../../apis-na/arkts-apis/arkts-na-units-sizeoptions-i.md) | 返回文本所占布局宽度和高度。<br/>**说明:** <br/>文本宽度以及高度返回值单位均为px。 |
+| [SizeOptions](../../apis-default/arkts-apis/arkts-units-sizeoptions-i.md) | 返回文本所占布局宽度和高度。<br/>**说明:** <br/>文本宽度以及高度返回值单位均为px。 |
 
 **示例**
 

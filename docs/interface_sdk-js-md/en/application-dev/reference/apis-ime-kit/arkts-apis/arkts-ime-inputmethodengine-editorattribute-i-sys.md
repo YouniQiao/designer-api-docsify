@@ -20,7 +20,9 @@ import { inputMethodEngine } from '@kit.IMEKit';
 readonly fluidLightMode?: FluidLightMode
 ```
 
-Fluid light mode. If this attribute is not specified or is set to an invalid value, the fluid light mode is not used by default. This attribute is available only to system applications.
+Fluid light mode. If this attribute is not specified or is set to an invalid value, the fluid light mode is not used by default.
+
+This attribute is available only to system applications.
 
 **Type:** [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md)
 

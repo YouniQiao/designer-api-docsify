@@ -2,6 +2,8 @@
 
 Describes the physical memory information of the application process.
 
+@interface RssInfo
+
 **Since:** 24
 
 <!--Device-hidebug-interface RssInfo--><!--Device-hidebug-interface RssInfo-End-->

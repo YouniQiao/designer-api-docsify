@@ -1,6 +1,10 @@
 # DlpConnManager
 
-Calls **registerPlugin** and **unregisterPlugin** to register or unregister callback capabilities in the SA. &gt; **NOTE：**&gt; &gt; **registerPlugin** registers callback capabilities in the SA, and **unregisterPlugin** unregisters callback &gt; capabilities from the SA.
+Calls **registerPlugin** and **unregisterPlugin** to register or unregister callback capabilities in the SA.
+
+> **NOTE：**
+> 
+> **registerPlugin** registers callback capabilities in the SA, and **unregisterPlugin** unregisters callback &gt; capabilities from the SA.
 
 **Since:** 21
 
@@ -36,8 +40,8 @@ Represents a constructor for instantiating [DlpConnManager](#dlpconnmanager).
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
 
 ## registerPlugin
 
@@ -45,7 +49,11 @@ Represents a constructor for instantiating [DlpConnManager](#dlpconnmanager).
 static registerPlugin(plugin: DlpConnPlugin): number
 ```
 
-Registers a callback with the SA. &gt; **NOTE：**&gt; &gt; **registerPlugin** registers the callback with the SA.
+Registers a callback with the SA.
+
+> **NOTE：**
+> 
+> **registerPlugin** registers the callback with the SA.
 
 **Since:** 21
 
@@ -73,12 +81,12 @@ Registers a callback with the SA. &gt; **NOTE：**&gt; &gt; **registerPlugin** r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
-| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
+| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
+| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
 
 ## unregisterPlugin
 
@@ -86,7 +94,13 @@ Registers a callback with the SA. &gt; **NOTE：**&gt; &gt; **registerPlugin** r
 static unregisterPlugin(): void
 ```
 
-Unregisters a callback from the SA. This API unregisters a callback and releases resources when an application exits, ensuring that the callback capability is correctly released. &gt; **NOTE：**&gt; &gt; **unregisterPlugin** unregisters a plug-in from the SA.
+Unregisters a callback from the SA.
+
+This API unregisters a callback and releases resources when an application exits, ensuring that the callback capability is correctly released.
+
+> **NOTE：**
+> 
+> **unregisterPlugin** unregisters a plug-in from the SA.
 
 **Since:** 21
 
@@ -102,10 +116,10 @@ Unregisters a callback from the SA. This API unregisters a callback and releases
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
-| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
+| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
+| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
 

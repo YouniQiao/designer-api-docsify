@@ -1,4 +1,4 @@
-# InputMethodExtraConfig(The extra config of edit box.)
+# InputMethodExtraConfig
 
 Represents the extension information of an input method.
 

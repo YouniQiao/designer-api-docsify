@@ -2,6 +2,8 @@
 
 VerticalAlign enumeration description
 
+@enum { number }
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare enum VerticalAlign--><!--Device-unnamed-declare enum VerticalAlign-End-->

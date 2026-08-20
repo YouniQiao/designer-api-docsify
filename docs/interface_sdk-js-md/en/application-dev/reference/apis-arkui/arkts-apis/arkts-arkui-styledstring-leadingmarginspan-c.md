@@ -56,6 +56,6 @@ Draw the leading margin span.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | Yes |  |
+| context | [DrawContext](../../apis-default/arkts-apis/arkts-graphics-drawcontext-c.md) | Yes |  |
 | drawInfo | [LeadingMarginSpanDrawInfo](arkts-arkui-styledstring-leadingmarginspandrawinfo-i.md) | Yes |  |
 

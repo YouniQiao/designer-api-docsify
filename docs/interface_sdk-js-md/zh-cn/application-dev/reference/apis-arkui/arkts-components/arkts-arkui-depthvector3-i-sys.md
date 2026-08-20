@@ -2,6 +2,8 @@
 
 深度空间中的三维向量。
 
+@interface DepthVector3
+
 **起始版本：** 26.0.0
 
 <!--Device-unnamed-declare interface DepthVector3--><!--Device-unnamed-declare interface DepthVector3-End-->

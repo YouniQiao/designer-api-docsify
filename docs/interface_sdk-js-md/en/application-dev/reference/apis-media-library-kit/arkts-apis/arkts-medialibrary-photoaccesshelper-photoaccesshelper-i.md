@@ -48,8 +48,8 @@ Applies media changes. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
 ## checkPhotoUrisReadPermission
@@ -84,8 +84,8 @@ Query whether the assets exist and whether the invoker has read permission on th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scenario-specific parameters are incorrect. Possible causes are as follows: <br>1. The length of the input parameter queue is greater than 500. <br>2. The input parameter is null or undefined. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## createAsset
 
@@ -93,7 +93,9 @@ Query whether the assets exist and whether the invoker has read permission on th
 createAsset(photoType: PhotoType, extension: string, options: CreateOptions, callback: AsyncCallback<string>): void
 ```
 
-Creates an image or video asset with the specified file type, file name extension, and options. This API uses an asynchronous callback to return the result. If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component or an authorization pop-up. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
+Creates an image or video asset with the specified file type, file name extension, and options. This API uses an asynchronous callback to return the result.
+
+If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component or an authorization pop-up. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
 
 **Since:** 23
 
@@ -118,10 +120,10 @@ Creates an image or video asset with the specified file type, file name extensio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied<br>**Applicable version:** 11 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**Applicable version:** 10 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied<br>**Applicable version:** 11 and later |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## createAsset
@@ -130,7 +132,9 @@ Creates an image or video asset with the specified file type, file name extensio
 createAsset(photoType: PhotoType, extension: string, callback: AsyncCallback<string>): void
 ```
 
-Creates an image or video asset with the specified file type and file name extension. This API uses an asynchronous callback to return the result. If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component or an authorization pop-up. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
+Creates an image or video asset with the specified file type and file name extension. This API uses an asynchronous callback to return the result.
+
+If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component or an authorization pop-up. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
 
 **Since:** 23
 
@@ -154,10 +158,10 @@ Creates an image or video asset with the specified file type and file name exten
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied<br>**Applicable version:** 11 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**Applicable version:** 10 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied<br>**Applicable version:** 11 and later |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## createAsset
@@ -166,7 +170,9 @@ Creates an image or video asset with the specified file type and file name exten
 createAsset(photoType: PhotoType, extension: string, options?: CreateOptions): Promise<string>
 ```
 
-Creates an image or video asset with the specified file type, file name extension, and options. This API uses a promise to return the result. If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component or an authorization pop-up. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
+Creates an image or video asset with the specified file type, file name extension, and options. This API uses a promise to return the result.
+
+If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component or an authorization pop-up. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
 
 **Since:** 23
 
@@ -196,10 +202,10 @@ Creates an image or video asset with the specified file type, file name extensio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied<br>**Applicable version:** 11 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**Applicable version:** 10 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied<br>**Applicable version:** 11 and later |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## createAssetWithShortTermPermission
@@ -208,7 +214,9 @@ Creates an image or video asset with the specified file type, file name extensio
 createAssetWithShortTermPermission(photoCreationConfig: PhotoCreationConfig): Promise<string>
 ```
 
-Creates an asset with a temporary permission of the given period. When this API is called by an application for the first time, a dialog box will be displayed for the user to confirm whether to save the asset. If the user agrees to save the asset, the asset instance will be created and the file URI granted with the save permission will be returned. The application can write the asset based on the URI. Within 5 minutes after the user agrees to save the asset, if the same application calls this API again, the authorized URI can be automatically returned without the need to display the confirmation dialog box. Exiting the application will terminate the authorization, and the user need to re-trigger the dialog box for authorization confirmation when the application is re-launched.
+Creates an asset with a temporary permission of the given period. When this API is called by an application for the first time, a dialog box will be displayed for the user to confirm whether to save the asset. If the user agrees to save the asset, the asset instance will be created and the file URI granted with the save permission will be returned. The application can write the asset based on the URI.
+
+Within 5 minutes after the user agrees to save the asset, if the same application calls this API again, the authorized URI can be automatically returned without the need to display the confirmation dialog box. Exiting the application will terminate the authorization, and the user need to re-trigger the dialog box for authorization confirmation when the application is re-launched.
 
 **Since:** 26.0.0
 
@@ -234,8 +242,8 @@ Creates an asset with a temporary permission of the given period. When this API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 ## createAssetWithShortTermPermissionEx
@@ -244,7 +252,13 @@ Creates an asset with a temporary permission of the given period. When this API 
 createAssetWithShortTermPermissionEx(creationSetting: CreationSetting): Promise<string>
 ```
 
-Displays the dialog box for the first time for the user to confirm whether to save the asset. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - After the user agrees to save the asset, the API returns the URI of the created asset that has the save &gt; permission. The application can use the URI to write the image or video. &gt; &gt; - Within 5 minutes after the user agrees to save the asset, if the same application calls this API again, the &gt; system directly returns the authorized URI for the application to save the image or video without displaying a &gt; confirmation dialog box. Exiting the application will terminate the authorization, and the user need to re- &gt; trigger the dialog box for authorization confirmation when the application is re-launched.
+Displays the dialog box for the first time for the user to confirm whether to save the asset. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - After the user agrees to save the asset, the API returns the URI of the created asset that has the save &gt; permission. The application can use the URI to write the image or video.
+> 
+> - Within 5 minutes after the user agrees to save the asset, if the same application calls this API again, the &gt; system directly returns the authorized URI for the application to save the image or video without displaying a &gt; confirmation dialog box. Exiting the application will terminate the authorization, and the user need to re- &gt; trigger the dialog box for authorization confirmation when the application is re-launched.
 
 **Since:** 26.0.0
 
@@ -306,9 +320,9 @@ Creates a dialog box for deleting media files. This API uses an asynchronous cal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## createDeleteRequest
@@ -347,9 +361,9 @@ Creates a dialog box for deleting media files. This API uses a promise to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## createPhotoAsset
@@ -358,7 +372,9 @@ Creates a dialog box for deleting media files. This API uses a promise to return
 createPhotoAsset(photoType: PhotoType, extension: string, title?: string): Promise<string>
 ```
 
-Creates an image or video resource with the specified file type, extension, and title. This API uses a promise to return the result. If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component or an authorization pop-up. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
+Creates an image or video resource with the specified file type, extension, and title. This API uses a promise to return the result.
+
+If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component or an authorization pop-up. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
 
 **Since:** 23
 
@@ -390,9 +406,9 @@ Creates an image or video resource with the specified file type, extension, and 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: <br>1. The extension format is unsupported <br>2. Title contains unsupported character, such as . .. \ / : ? " ' ` &lt; &gt; \| { } [ ] <br>3. The title is an empty string <br>4. The total length of title and extension is more than 255 |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## getAlbumIdByLpath
 
@@ -400,7 +416,9 @@ Creates an image or video resource with the specified file type, extension, and 
 getAlbumIdByLpath(lpath: string): Promise<int>
 ```
 
-Obtains the album ID in the media library based on the album's virtual path. This API uses a promise to return the result. This API supports the following albums: camera application album, screenshot application album, and screen recording application album.
+Obtains the album ID in the media library based on the album's virtual path. This API uses a promise to return the result.
+
+This API supports the following albums: camera application album, screenshot application album, and screen recording application album.
 
 **Since:** 23
 
@@ -426,8 +444,8 @@ Obtains the album ID in the media library based on the album's virtual path. Thi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The lpath is invalid, such as null, undefined and empty. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 
 ## getAlbums
 
@@ -440,7 +458,9 @@ getAlbums(
     ): void
 ```
 
-Obtains albums based on the specified options and album type. This API uses an asynchronous callback to return the result. Before the operation, ensure that the albums to obtain exist.
+Obtains albums based on the specified options and album type. This API uses an asynchronous callback to return the result.
+
+Before the operation, ensure that the albums to obtain exist.
 
 **Since:** 23
 
@@ -463,10 +483,10 @@ Obtains albums based on the specified options and album type. This API uses an a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**Applicable version:** 10 - 11 |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied<br>**Applicable version:** 12 and later |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## getAlbums
@@ -475,7 +495,9 @@ Obtains albums based on the specified options and album type. This API uses an a
 getAlbums(type: AlbumType, subtype: AlbumSubtype, callback: AsyncCallback<FetchResult<Album>>): void
 ```
 
-Obtains albums by type. This API uses an asynchronous callback to return the result. Before the operation, ensure that the albums to obtain exist.
+Obtains albums by type. This API uses an asynchronous callback to return the result.
+
+Before the operation, ensure that the albums to obtain exist.
 
 **Since:** 23
 
@@ -497,10 +519,10 @@ Obtains albums by type. This API uses an asynchronous callback to return the res
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**Applicable version:** 10 - 11 |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied<br>**Applicable version:** 12 and later |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## getAlbums
@@ -509,7 +531,9 @@ Obtains albums by type. This API uses an asynchronous callback to return the res
 getAlbums(type: AlbumType, subtype: AlbumSubtype, options?: FetchOptions): Promise<FetchResult<Album>>
 ```
 
-Obtains albums based on the specified options and album type. This API uses a promise to return the result. Before the operation, ensure that the albums to obtain exist.
+Obtains albums based on the specified options and album type. This API uses a promise to return the result.
+
+Before the operation, ensure that the albums to obtain exist.
 
 **Since:** 23
 
@@ -537,10 +561,10 @@ Obtains albums based on the specified options and album type. This API uses a pr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**Applicable version:** 10 - 11 |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied<br>**Applicable version:** 12 and later |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## getAssets
@@ -570,10 +594,10 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**Applicable version:** 10 - 11 |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied<br>**Applicable version:** 12 and later |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## getAssets
@@ -610,9 +634,9 @@ Obtains image and video assets. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900012 | Permission denied<br>**Applicable version:** 10 - 19 |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied<br>**Applicable version:** 20 and later |
+| 13900012 | Permission denied<br>**Applicable version:** 10 - 19 |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## getBurstAssets
@@ -770,8 +794,8 @@ Unsubscribes to changes of medialibrary availability.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## offPhotoAlbumChange
 
@@ -799,8 +823,8 @@ Unsubscribes from album changes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
 ## offPhotoChange
@@ -829,8 +853,8 @@ Unsubscribes from changes of photos and videos.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
 ## offSinglePhotoAlbumChange
@@ -839,7 +863,9 @@ Unsubscribes from changes of photos and videos.
 offSinglePhotoAlbumChange(album?: Album, callback?: Callback<AlbumChangeInfos>): void
 ```
 
-Unregisters a listener for a single album. Note the following: 1. If no parameter is specified, all listeners for the single albums are unregistered. 2. If **album** is specified but **callback** is not specified, all callback listeners of the album are unregistered. 3. If both **album** and **callback** are specified, only the specified callback listener is unregistered.
+Unregisters a listener for a single album. Note the following:
+
+1. If no parameter is specified, all listeners for the single albums are unregistered. 2. If **album** is specified but **callback** is not specified, all callback listeners of the album are unregistered. 3. If both **album** and **callback** are specified, only the specified callback listener is unregistered.
 
 **Since:** 23
 
@@ -860,8 +886,8 @@ Unregisters a listener for a single album. Note the following: 1. If no paramete
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
 ## offSinglePhotoChange
@@ -870,7 +896,9 @@ Unregisters a listener for a single album. Note the following: 1. If no paramete
 offSinglePhotoChange(asset?: PhotoAsset, callback?: Callback<PhotoAssetChangeInfos>): void
 ```
 
-Unregisters the listener for a single asset. Note the following: 1. If no parameter is specified, all listeners for the single assets are unregistered. 2. If **asset** is specified but **callback** is not specified, all callback listeners of the **asset** are unregistered. 3. If both **asset** and **callback** are specified, only the specified callback listener is unregistered.
+Unregisters the listener for a single asset. Note the following:
+
+1. If no parameter is specified, all listeners for the single assets are unregistered. 2. If **asset** is specified but **callback** is not specified, all callback listeners of the **asset** are unregistered. 3. If both **asset** and **callback** are specified, only the specified callback listener is unregistered.
 
 **Since:** 23
 
@@ -891,8 +919,8 @@ Unregisters the listener for a single asset. Note the following: 1. If no parame
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
 ## off('photoAlbumChange')
@@ -922,8 +950,8 @@ Unregisters a listener for the **'photoAlbumChange'** event to stop monitoring a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. <br>Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. <br>Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
 ## off('photoChange')
@@ -953,8 +981,8 @@ Unregisters the listener for the **'photoChange'** event to stop monitoring medi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
 ## onMediaLibraryAvailability
@@ -985,9 +1013,9 @@ Subscribes to changes of medialibrary availability.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scenario-specific parameters are incorrect. Possible causes are as follows: <br>1. The input parameter is null or undefined. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## onPhotoAlbumChange
 
@@ -1015,8 +1043,8 @@ Subscribes to album changes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
 ## onPhotoChange
@@ -1045,8 +1073,8 @@ Subscribes to changes of photos and videos.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
 ## onSinglePhotoAlbumChange
@@ -1076,8 +1104,8 @@ Registers a listener for changes of a single common asset. This API uses an asyn
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
 ## onSinglePhotoChange
@@ -1107,8 +1135,8 @@ Registers a listener for changes of a single common asset. This API uses an asyn
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
 ## on('photoAlbumChange')
@@ -1138,8 +1166,8 @@ Registers a listener for the **'photoAlbumChange'** event to monitor album chang
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
 ## on('photoChange')
@@ -1169,8 +1197,8 @@ Registers a listener for the **'photoChange'** event to monitor media asset chan
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. <br>Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. <br>Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
 ## registerChange
@@ -1199,9 +1227,9 @@ Registers listening for the specified URI. This API uses a callback to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
+| 13900020 | Invalid argument |
 
 ## release
 
@@ -1209,7 +1237,9 @@ Registers listening for the specified URI. This API uses a callback to return th
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases the **PhotoAccessHelper** instance. This API uses an asynchronous callback to return the result. Call this API when the APIs of the PhotoAccessHelper instance are no longer used.
+Releases the **PhotoAccessHelper** instance. This API uses an asynchronous callback to return the result.
+
+Call this API when the APIs of the PhotoAccessHelper instance are no longer used.
 
 **Since:** 23
 
@@ -1227,8 +1257,8 @@ Releases the **PhotoAccessHelper** instance. This API uses an asynchronous callb
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## release
@@ -1237,7 +1267,9 @@ Releases the **PhotoAccessHelper** instance. This API uses an asynchronous callb
 release(): Promise<void>
 ```
 
-Releases the **PhotoAccessHelper** instance. This API uses a promise to return the result. Call this API when the APIs of the PhotoAccessHelper instance are no longer used.
+Releases the **PhotoAccessHelper** instance. This API uses a promise to return the result.
+
+Call this API when the APIs of the PhotoAccessHelper instance are no longer used.
 
 **Since:** 23
 
@@ -1255,8 +1287,8 @@ Releases the **PhotoAccessHelper** instance. This API uses a promise to return t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## requestPhotoUrisReadPermission
@@ -1300,7 +1332,9 @@ requestPhotoUrisReadPermission(srcFileUris: Array<string>): Promise<Array<string
 requestPhotoUrisReadPermissionEx(srcFileUris: Array<string>): Promise<RequestReadPermissionResult>
 ```
 
-Grants the read permission for unauthorized URIs. This API uses a promise to return the authorization result. It contains the list of URIs that have been created and granted the save permission and the list of invalid URIs.
+Grants the read permission for unauthorized URIs. This API uses a promise to return the authorization result.
+
+It contains the list of URIs that have been created and granted the save permission and the list of invalid URIs.
 
 **Since:** 26.0.0
 
@@ -1362,8 +1396,8 @@ Sets the asset compatibility capability. The system performs compatibility proce
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The capability is invalid. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## showAssetsCreationDialog
 
@@ -1371,7 +1405,13 @@ Sets the asset compatibility capability. The system performs compatibility proce
 showAssetsCreationDialog(srcFileUris: Array<string>, photoCreationConfigs: Array<PhotoCreationConfig>): Promise<Array<string>>
 ```
 
-Displays a dialog box for the user to confirm whether to save the images or videos. If the user agrees to save the images or videos, this API returns a list of URIs that have been created and granted save permissions (this list is permanent), and the application can use these URIs to write the images or videos. If the user declines to save the images or videos, this API returns an empty list. The dialog box must display the application name, but this cannot be directly obtained. Therefore, before calling this API, ensure that the **label** and **icon** items are configured in the **abilities** tag in the [module.json5 configuration file](../../../quick-start/module-configuration-file.md). Note that the icon is not affected by the **icon** item in the **abilities** tag and cannot be modified. &gt; **NOTE：**&gt; &gt; If the passed URI is a sandbox path, images or videos can be saved but cannot be previewed.
+Displays a dialog box for the user to confirm whether to save the images or videos. If the user agrees to save the images or videos, this API returns a list of URIs that have been created and granted save permissions (this list is permanent), and the application can use these URIs to write the images or videos. If the user declines to save the images or videos, this API returns an empty list.
+
+The dialog box must display the application name, but this cannot be directly obtained. Therefore, before calling this API, ensure that the **label** and **icon** items are configured in the **abilities** tag in the [module.json5 configuration file](../../../quick-start/module-configuration-file.md). Note that the icon is not affected by the **icon** item in the **abilities** tag and cannot be modified.
+
+> **NOTE：**
+> 
+> If the passed URI is a sandbox path, images or videos can be saved but cannot be previewed.
 
 **Since:** 26.0.0
 
@@ -1407,7 +1447,15 @@ Displays a dialog box for the user to confirm whether to save the images or vide
 showAssetsCreationDialogEx(srcFileUris: Array<string>, creationSettings: Array<CreationSetting>): Promise<Array<string>>
 ```
 
-Displays a dialog box for the user to confirm whether to save the images or videos. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - If the user agrees, the list of created URIs with the save permission granted is returned. The list is &gt; permanently valid and supports image or video writing. If the user rejects, an empty list is returned. &gt; &gt; - The application name and icon need to be displayed in the dialog box. The name and icon need to be configured &gt; in the **label** and **icon** items in the **abilities** tag of the &gt; [module.json5 configuration file](../../../quick-start/module-configuration-file.md). &gt; &gt; - When the passed URI is a sandbox path, images or videos can be saved properly, but the preview is not &gt; displayed.
+Displays a dialog box for the user to confirm whether to save the images or videos. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - If the user agrees, the list of created URIs with the save permission granted is returned. The list is &gt; permanently valid and supports image or video writing. If the user rejects, an empty list is returned.
+> 
+> - The application name and icon need to be displayed in the dialog box. The name and icon need to be configured &gt; in the **label** and **icon** items in the **abilities** tag of the &gt; [module.json5 configuration file](../../../quick-start/module-configuration-file.md).
+> 
+> - When the passed URI is a sandbox path, images or videos can be saved properly, but the preview is not &gt; displayed.
 
 **Since:** 26.1.0
 
@@ -1444,7 +1492,15 @@ Displays a dialog box for the user to confirm whether to save the images or vide
 showSingleAssetCreationDialogEx(srcFileUri: string, creationSetting: CreationSetting, isImageFullyDisplayed: boolean): Promise<string>
 ```
 
-Displays a dialog box for the user to confirm whether to save an image or video. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - If the user agrees to save the images or videos, this API returns a URI that has been created and granted &gt; with the save permission (this URI is permanent), and the application can use this URI to write the image or &gt; video. If the user declines to save the image or video, this API returns an empty string. &gt; &gt; - The dialog box must display the application name, but this cannot be directly obtained. Therefore, before &gt; calling this API, ensure that the **label** and **icon** items are configured in the **abilities** tag in the &gt; [module.json5 configuration file](../../../quick-start/module-configuration-file.md). Note that the icon is &gt; not affected by the **icon** item in the **abilities** tag and cannot be modified. &gt; &gt; - If the passed URI is a sandbox path, images or videos can be saved but cannot be previewed.
+Displays a dialog box for the user to confirm whether to save an image or video. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - If the user agrees to save the images or videos, this API returns a URI that has been created and granted &gt; with the save permission (this URI is permanent), and the application can use this URI to write the image or &gt; video. If the user declines to save the image or video, this API returns an empty string.
+> 
+> - The dialog box must display the application name, but this cannot be directly obtained. Therefore, before &gt; calling this API, ensure that the **label** and **icon** items are configured in the **abilities** tag in the &gt; [module.json5 configuration file](../../../quick-start/module-configuration-file.md). Note that the icon is &gt; not affected by the **icon** item in the **abilities** tag and cannot be modified.
+> 
+> - If the passed URI is a sandbox path, images or videos can be saved but cannot be previewed.
 
 **Since:** 26.0.0
 
@@ -1501,7 +1557,7 @@ Unregisters listening for the specified URI. Multiple callbacks can be registere
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
+| 13900020 | Invalid argument |
 

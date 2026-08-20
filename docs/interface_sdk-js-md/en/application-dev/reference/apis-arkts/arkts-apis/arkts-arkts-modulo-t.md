@@ -1,4 +1,4 @@
-# Modulo(Defines the Decimal for ArkTS. Decimal support arbitrary precision decimal operation.)
+# Modulo
 
 ```TypeScript
 type Modulo = int

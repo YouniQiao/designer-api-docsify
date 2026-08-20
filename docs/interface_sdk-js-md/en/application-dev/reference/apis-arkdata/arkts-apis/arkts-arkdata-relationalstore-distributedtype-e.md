@@ -14,7 +14,9 @@ Enumerates the distributed database table types. Use the enum name rather than t
 DISTRIBUTED_DEVICE = 0
 ```
 
-Distributed database table synced between devices. SystemCapability.DistributedDataManager.RelationalStore.Core
+Distributed database table synced between devices.
+
+SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since:** 23
 
@@ -28,7 +30,9 @@ Distributed database table synced between devices. SystemCapability.DistributedD
 DISTRIBUTED_CLOUD = 1
 ```
 
-Distributed database table synced between a device and the cloud. SystemCapability.DistributedDataManager.CloudSync.Client
+Distributed database table synced between a device and the cloud.
+
+SystemCapability.DistributedDataManager.CloudSync.Client
 
 **Since:** 23
 

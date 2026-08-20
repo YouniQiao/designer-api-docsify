@@ -1,4 +1,4 @@
-# FormRenderingMode(系统接口)（系统接口）
+# FormRenderingMode（系统接口）
 
 卡片渲染模式枚举
 

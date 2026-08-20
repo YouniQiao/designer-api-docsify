@@ -41,13 +41,13 @@ Obtains the default application based on a system-defined application type, a fi
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [17700025](../errorcode-bundle.md#17700025-invalid-type) | The specified type is invalid. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [17700023](../errorcode-bundle.md#17700023-default-application-does-not-exist) | The specified default app does not exist. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
+| [17700023](../errorcode-bundle.md#17700023-default-application-does-not-exist) | The specified default app does not exist. |
+| [17700025](../errorcode-bundle.md#17700025-invalid-type) | The specified type is invalid. |
 
 **Examples**
 

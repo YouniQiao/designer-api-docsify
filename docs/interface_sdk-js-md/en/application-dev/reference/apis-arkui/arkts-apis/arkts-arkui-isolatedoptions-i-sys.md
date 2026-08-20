@@ -1,4 +1,4 @@
-# IsolatedOptions(System API) (System API)
+# IsolatedOptions (System API)
 
 Describes the optional construction parameters during **IsolatedComponent** construction.
 

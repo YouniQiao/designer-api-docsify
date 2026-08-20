@@ -2,6 +2,8 @@
 
 This module provides settings data access abilities.
 
+@namespace settings
+
 ## Modules to Import
 
 ```TypeScript

@@ -2,6 +2,8 @@
 
 Declare CustomDialog LoadingDialogV2
 
+@struct { LoadingDialogV2 }
+
 **Since:** 18
 
 <!--Device-unnamed-export declare struct LoadingDialogV2--><!--Device-unnamed-export declare struct LoadingDialogV2-End-->

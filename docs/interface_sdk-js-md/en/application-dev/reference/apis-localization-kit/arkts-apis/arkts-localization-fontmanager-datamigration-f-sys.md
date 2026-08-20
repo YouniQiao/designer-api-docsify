@@ -40,8 +40,8 @@ Data migration API used during device upgrades to start a migration task, provid
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [31100110](../errorcode-font-manager.md#31100110-failed-to-call-the-api-due-to-system-errors) | Call failed due to system error. |
-| [31100111](../errorcode-font-manager.md#31100111-migration-task-being-executed) | Data migration is in progress. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [31100110](../errorcode-font-manager.md#31100110-failed-to-call-the-api-due-to-system-errors) | Call failed due to system error. |
+| [31100111](../errorcode-font-manager.md#31100111-migration-task-being-executed) | Data migration is in progress. |
 

@@ -1,6 +1,10 @@
 # FlashQuery
 
-FlashQuery provides APIs to query the flash status and mode of a camera device. &gt; **NOTE：**&gt; &gt; - This interface was first introduced in API version 12. In this version, a compatibility change was made that &gt; preserved the initial version information of inner elements. As a result, you might see outer element's @since &gt; version number being higher than that of the inner elements. However, this discrepancy does not affect the &gt; functionality of the interface.
+FlashQuery provides APIs to query the flash status and mode of a camera device.
+
+> **NOTE：**
+> 
+> - This interface was first introduced in API version 12. In this version, a compatibility change was made that &gt; preserved the initial version information of inner elements. As a result, you might see outer element's
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # SensibilityType (System API)
 
-Enumerates sensibility type.
+Enumerates sensibility type. @enum {number}
 
 **Since:** 23
 

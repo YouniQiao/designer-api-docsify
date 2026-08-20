@@ -2,6 +2,8 @@
 
 The definition of command to be sent to the session
 
+@interface AVControlCommand [since 10 - 11]
+
 **Since:** 23
 
 <!--Device-avSession-interface AVControlCommand--><!--Device-avSession-interface AVControlCommand-End-->

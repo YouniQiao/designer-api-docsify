@@ -1,6 +1,6 @@
 # CameraTrackingLayout
 
-Enumerates the camera tracking layouts.
+Enumerates the camera tracking layouts. @enum { int }
 
 **Since:** 23
 

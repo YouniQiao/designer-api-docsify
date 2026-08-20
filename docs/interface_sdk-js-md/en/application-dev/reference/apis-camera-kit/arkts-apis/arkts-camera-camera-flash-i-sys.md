@@ -1,6 +1,8 @@
 # Flash
 
-**Flash** inherits from [FlashQuery](arkts-camera-camera-flashquery-i.md). It provides APIs related to the flash.
+*Flash** inherits from [FlashQuery](arkts-camera-camera-flashquery-i.md).
+
+It provides APIs related to the flash.
 
 **Inheritance/Implementation:** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md)
 
@@ -23,7 +25,9 @@ import { cameraPicker } from '@kit.CameraKit';
 enableLcdFlash(enabled: boolean): void
 ```
 
-Enables or disables the LCD flash. Before the setting, call [isLcdFlashSupported](arkts-camera-camera-flashquery-i-sys.md#islcdflashsupported) to check whether the device supports the LCD flash.
+Enables or disables the LCD flash.
+
+Before the setting, call [isLcdFlashSupported](arkts-camera-camera-flashquery-i-sys.md#islcdflashsupported) to check whether the device supports the LCD flash.
 
 **Since:** 23
 
@@ -43,8 +47,8 @@ Enables or disables the LCD flash. Before the setting, call [isLcdFlashSupported
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 **Examples**
 

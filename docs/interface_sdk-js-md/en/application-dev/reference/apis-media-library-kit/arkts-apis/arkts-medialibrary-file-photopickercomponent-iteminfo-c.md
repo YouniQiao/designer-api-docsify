@@ -1,8 +1,10 @@
 # ItemInfo
 
-It inherits from [BaseItemInfo](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-baseiteminfo-c.md), adding the parameter **itemType**. Represents basic image and video information.
+It inherits from [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md), adding the parameter **itemType**.
 
-**Inheritance/Implementation:** ItemInfo extends [BaseItemInfo](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-baseiteminfo-c.md)
+Represents basic image and video information.
+
+**Inheritance/Implementation:** ItemInfo extends [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md)
 
 **Since:** 12
 
@@ -24,7 +26,7 @@ itemType?: ItemType
 
 Type of the item, which can be **THUMBNAIL** or **CAMERA**.
 
-**Type:** [ItemType](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-itemtype-e.md)
+**Type:** [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md)
 
 **Since:** 12
 

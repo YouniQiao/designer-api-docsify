@@ -2,6 +2,8 @@
 
 Indicates the Authentication type
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-sim-export enum AuthType--><!--Device-sim-export enum AuthType-End-->

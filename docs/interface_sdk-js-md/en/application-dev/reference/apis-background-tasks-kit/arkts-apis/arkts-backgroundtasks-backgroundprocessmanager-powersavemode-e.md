@@ -1,4 +1,4 @@
-# PowerSaveMode(Background Child Process Management)
+# PowerSaveMode
 
 Specifies the power saving mode.
 

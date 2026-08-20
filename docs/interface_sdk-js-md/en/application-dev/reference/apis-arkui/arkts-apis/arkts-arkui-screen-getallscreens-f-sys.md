@@ -33,8 +33,8 @@ Obtains all screens. This API uses an asynchronous callback to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 
 **Examples**
 
@@ -85,8 +85,8 @@ Obtains all screens. This API uses an asynchronous callback to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 
 
 ## getAllScreens
@@ -115,8 +115,8 @@ Obtains all screens. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 
 **Examples**
 
@@ -170,6 +170,6 @@ Obtains all screens. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 

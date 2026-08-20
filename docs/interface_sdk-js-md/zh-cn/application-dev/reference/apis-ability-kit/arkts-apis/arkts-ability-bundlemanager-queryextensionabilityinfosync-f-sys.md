@@ -13,7 +13,9 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: Extensi
     extensionAbilityFlags: int, userId?: int): Array<ExtensionAbilityInfo>
 ```
 
-以同步方法根据给定的want、extensionAbilityType、extensionAbilityFlags和userId获取ExtensionAbilityInfo。 获取调用方自身的信息时不需要权限。
+以同步方法根据给定的want、extensionAbilityType、extensionAbilityFlags和userId获取ExtensionAbilityInfo。
+
+获取调用方自身的信息时不需要权限。
 
 **起始版本：** 23
 
@@ -44,13 +46,13 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: Extensi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
-| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified userId is invalid. |
-| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified extensionAbility is not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
+| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified extensionAbility is not found. |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified userId is invalid. |
+| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
 
 **示例**
 
@@ -109,7 +111,9 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string,
     extensionAbilityFlags: int, userId?: int): Array<ExtensionAbilityInfo>
 ```
 
-根据给定的want、extensionAbilityType、extensionAbilityFlags和userId获取ExtensionAbilityInfo，使用同步方式返回结果。 获取调用方自身的信息时不需要权限。
+根据给定的want、extensionAbilityType、extensionAbilityFlags和userId获取ExtensionAbilityInfo，使用同步方式返回结果。
+
+获取调用方自身的信息时不需要权限。
 
 **起始版本：** 23
 
@@ -140,13 +144,13 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
-| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified userId is invalid. |
-| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified extensionAbility is not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
+| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified extensionAbility is not found. |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified userId is invalid. |
+| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
 
 **示例**
 
@@ -205,7 +209,9 @@ function queryExtensionAbilityInfoSync(extensionAbilityType: string, extensionAb
     userId?: int): Array<ExtensionAbilityInfo>
 ```
 
-根据给定的extensionAbilityType、extensionAbilityFlags和userId获取ExtensionAbilityInfo。 获取调用方自身的信息时不需要权限。
+根据给定的extensionAbilityType、extensionAbilityFlags和userId获取ExtensionAbilityInfo。
+
+获取调用方自身的信息时不需要权限。
 
 **起始版本：** 23
 
@@ -235,11 +241,11 @@ function queryExtensionAbilityInfoSync(extensionAbilityType: string, extensionAb
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter extensionAbilityType is empty. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified userId is invalid. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter extensionAbilityType is empty. |
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified extensionAbility is not found. |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified userId is invalid. |
 
 **示例**
 

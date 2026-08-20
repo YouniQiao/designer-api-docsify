@@ -2,6 +2,8 @@
 
 Indicates the Dsds Mode.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-sim-export enum DsdsMode--><!--Device-sim-export enum DsdsMode-End-->

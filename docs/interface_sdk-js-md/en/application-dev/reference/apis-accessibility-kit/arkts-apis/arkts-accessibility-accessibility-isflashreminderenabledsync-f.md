@@ -16,7 +16,9 @@ import { GesturePoint } from '@kit.AccessibilityKit';
 function isFlashReminderEnabledSync(): boolean
 ```
 
-Checks whether flash alerts mode is enabled. This API is the synchronous version of [accessibility.isFlashReminderEnabled](arkts-accessibility-accessibility-isflashreminderenabled-f.md) (asynchronous version). They have the same functionality. Use this API if you need to obtain the result immediately. Use the asynchronous version if you need to query in non-blocking scenarios.
+Checks whether flash alerts mode is enabled.
+
+This API is the synchronous version of [accessibility.isFlashReminderEnabled](arkts-accessibility-accessibility-isflashreminderenabled-f.md) (asynchronous version). They have the same functionality. Use this API if you need to obtain the result immediately. Use the asynchronous version if you need to query in non-blocking scenarios.
 
 **Since:** 23
 

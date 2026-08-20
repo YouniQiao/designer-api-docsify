@@ -2,6 +2,8 @@
 
 The &lt;swiper&gt; component provides a swiper container.
 
+@interface SwiperElement
+
 **Since:** 4
 
 <!--Device-unnamed-export interface SwiperElement--><!--Device-unnamed-export interface SwiperElement-End-->

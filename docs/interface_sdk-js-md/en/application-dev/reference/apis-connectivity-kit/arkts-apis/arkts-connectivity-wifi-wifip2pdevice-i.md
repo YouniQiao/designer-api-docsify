@@ -2,6 +2,8 @@
 
 P2P device information.
 
+@interface WifiP2pDevice
+
 **Since:** 8
 
 **Deprecated since:** 9

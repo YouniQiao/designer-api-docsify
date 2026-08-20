@@ -22,7 +22,15 @@ import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 createAsset(displayName: string): Promise<PhotoAsset>
 ```
 
-指定待创建的图片或者视频的文件名，创建图片或视频资源。使用Promise异步回调。 待创建的文件名参数规格为： - 应包含有效文件主名和图片或视频扩展名。 - 文件名字符串长度为1~255。 - 文件主名中不允许出现的非法英文字符。 API18开始，非法字符包括：\ / : * ? " &lt; &gt; | API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+指定待创建的图片或者视频的文件名，创建图片或视频资源。使用Promise异步回调。
+
+待创建的文件名参数规格为：
+
+- 应包含有效文件主名和图片或视频扩展名。 - 文件名字符串长度为1~255。 - 文件主名中不允许出现的非法英文字符。
+
+API18开始，非法字符包括：\ / : ? " &lt; &gt; |
+
+API10-17，非法字符包括：. .. \ / : ? " ' ` &lt; &gt; | { } [ ]
 
 **起始版本：** 12
 
@@ -50,11 +58,11 @@ createAsset(displayName: string): Promise<PhotoAsset>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000001 | Invalid display name. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| 13900020 | Invalid argument. |
+| 14000001 | Invalid display name. |
 | 14000011 | Internal system error. |
 
 **示例**
@@ -81,7 +89,15 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 createAsset(displayName: string, options: photoAccessHelper.PhotoCreateOptions): Promise<PhotoAsset>
 ```
 
-指定待创建的图片或者视频的文件名和创建选项，创建图片或视频资源。使用Promise异步回调。 待创建的文件名参数规格为： - 应包含有效文件主名和图片或视频扩展名。 - 文件名字符串长度为1~255。 - 文件主名中不允许出现的非法英文字符。 API18开始，非法字符包括： \ / : * ? " &lt; &gt; | API10-17，非法字符包括： . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+指定待创建的图片或者视频的文件名和创建选项，创建图片或视频资源。使用Promise异步回调。
+
+待创建的文件名参数规格为：
+
+- 应包含有效文件主名和图片或视频扩展名。 - 文件名字符串长度为1~255。 - 文件主名中不允许出现的非法英文字符。
+
+API18开始，非法字符包括： \ / : ? " &lt; &gt; |
+
+API10-17，非法字符包括： . .. \ / : ? " ' ` &lt; &gt; | { } [ ]
 
 **起始版本：** 12
 
@@ -110,11 +126,11 @@ createAsset(displayName: string, options: photoAccessHelper.PhotoCreateOptions):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000001 | Invalid display name. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| 13900020 | Invalid argument. |
+| 14000001 | Invalid display name. |
 | 14000011 | Internal system error. |
 
 **示例**
@@ -176,9 +192,9 @@ getHiddenAlbums(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 ## getPhotoAssets
@@ -215,9 +231,9 @@ getPhotoAssets(assetsData: photoAccessHelper.ValuesBucket[]): Promise<PhotoAsset
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes: <br>1. Invalid value type in ValuesBucket; <br>2. Missing required column in ValuesBucket; <br>3. Array size exceeds 500. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -280,8 +296,8 @@ Fetch shared photo assets.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 

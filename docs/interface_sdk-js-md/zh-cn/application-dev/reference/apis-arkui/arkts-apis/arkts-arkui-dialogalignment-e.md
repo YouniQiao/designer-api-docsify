@@ -1,4 +1,4 @@
-# DialogAlignment(AlertDialog)
+# DialogAlignment
 
 警告弹窗的对齐方式。
 

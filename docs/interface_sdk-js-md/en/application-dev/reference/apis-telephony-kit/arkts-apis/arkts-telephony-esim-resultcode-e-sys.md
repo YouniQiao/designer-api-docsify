@@ -2,6 +2,8 @@
 
 Result state.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-eSIM-export enum ResultCode--><!--Device-eSIM-export enum ResultCode-End-->

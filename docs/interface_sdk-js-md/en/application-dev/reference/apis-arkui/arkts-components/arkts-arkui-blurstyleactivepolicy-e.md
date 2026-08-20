@@ -2,6 +2,8 @@
 
 Enumerates the policies for activating the blur style.
 
+@enum { number }
+
 **Since:** 14
 
 <!--Device-unnamed-declare enum BlurStyleActivePolicy--><!--Device-unnamed-declare enum BlurStyleActivePolicy-End-->

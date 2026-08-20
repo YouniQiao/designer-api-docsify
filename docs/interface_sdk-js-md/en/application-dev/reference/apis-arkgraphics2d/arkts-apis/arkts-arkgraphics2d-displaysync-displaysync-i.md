@@ -138,7 +138,7 @@ Sets the expected frame rate range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rateRange | [ExpectedFrameRateRange](../../apis-na/arkts-apis/arkts-na-common-expectedframeraterange-i.md) | Yes | Expected frame rate range. |
+| rateRange | [ExpectedFrameRateRange](../../apis-default/arkts-apis/arkts-common-expectedframeraterange-i.md) | Yes | Expected frame rate range. |
 
 **Error codes:**
 

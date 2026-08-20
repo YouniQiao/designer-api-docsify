@@ -2,6 +2,8 @@
 
 Type of window width breakpoint.
 
+@enum { number }
+
 **起始版本：** 22
 
 <!--Device-unnamed-declare enum WidthBreakpoint--><!--Device-unnamed-declare enum WidthBreakpoint-End-->

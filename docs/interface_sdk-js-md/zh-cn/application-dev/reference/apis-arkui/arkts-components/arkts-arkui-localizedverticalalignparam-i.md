@@ -2,6 +2,8 @@
 
 Defines the localized vertical align param of relative container.
 
+@interface LocalizedVerticalAlignParam
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare interface LocalizedVerticalAlignParam--><!--Device-unnamed-declare interface LocalizedVerticalAlignParam-End-->

@@ -2,6 +2,8 @@
 
 定义位置。
 
+@interface Position
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare interface Position--><!--Device-unnamed-declare interface Position-End-->

@@ -1,6 +1,11 @@
 # Uint8ClampedArray
 
-一种线性数据结构，底层基于[ArkTS ArrayBuffer](../../apis-na/arkts-apis/arkts-collections.md)实现。 &gt; **说明：**&gt; &gt; - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 &gt; **装饰器类型**：\@Sendable
+一种线性数据结构，底层基于[ArkTS ArrayBuffer](arkts-collections.md)实现。
+
+> **说明：**
+> 
+> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
+> **装饰器类型**：\@Sendable
 
 **起始版本：** 12
 
@@ -34,7 +39,7 @@ import { collections } from '@kit.ArkTS';
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;number&gt; | 返回一个迭代器对象，迭代出数字。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 返回一个迭代器对象，迭代出数字。 |
 
 **错误码：**
 
@@ -175,7 +180,7 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;number&gt; \| ArrayBuffer | 是 | 用于构造ArkTS Uint8ClampedArray的对象。 |
+| array | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; \| ArrayBuffer | 是 | 用于构造ArkTS Uint8ClampedArray的对象。 |
 
 **错误码：**
 
@@ -241,7 +246,7 @@ copyWithin(target: number, start: number, end?: number): Uint8ClampedArray
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 修改后的Uint8ClampedArray。 |
+| Uint8ClampedArray | 修改后的Uint8ClampedArray。 |
 
 **错误码：**
 
@@ -270,7 +275,7 @@ entries(): IterableIterator<[number, number]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[number, number]&gt; | 新的迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, number]&gt; | 新的迭代器对象。 |
 
 **错误码：**
 
@@ -299,7 +304,7 @@ every(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 | 用于测试的断言函数。 |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint8ClampedArray&gt; | 是 | 用于测试的断言函数。 |
 
 **返回值：**
 
@@ -342,7 +347,7 @@ fill(value: number, start?: number, end?: number): Uint8ClampedArray
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 填充后的ArkTS Uint8ClampedArray。 |
+| Uint8ClampedArray | 填充后的ArkTS Uint8ClampedArray。 |
 
 **错误码：**
 
@@ -371,13 +376,13 @@ filter(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): Uint8Clampe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 | 用于元素过滤的断言函数。 |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint8ClampedArray&gt; | 是 | 用于元素过滤的断言函数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 过滤后的ArkTS Uint8ClampedArray。 |
+| Uint8ClampedArray | 过滤后的ArkTS Uint8ClampedArray。 |
 
 **错误码：**
 
@@ -406,7 +411,7 @@ find(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): number | unde
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 | 用于元素查找的断言函数。 |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint8ClampedArray&gt; | 是 | 用于元素查找的断言函数。 |
 
 **返回值：**
 
@@ -441,7 +446,7 @@ findIndex(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 | 用于元素查找的断言函数。 |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint8ClampedArray&gt; | 是 | 用于元素查找的断言函数。 |
 
 **返回值：**
 
@@ -476,7 +481,7 @@ forEach(callbackFn: TypedArrayForEachCallback<number, Uint8ClampedArray>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayForEachCallback](arkts-arkts-collections-typedarrayforeachcallback-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 | 用于对每个元素执行的回调函数。 |
+| callbackFn | [TypedArrayForEachCallback](arkts-arkts-collections-typedarrayforeachcallback-t.md)&lt;number, Uint8ClampedArray&gt; | 是 | 用于对每个元素执行的回调函数。 |
 
 **错误码：**
 
@@ -505,13 +510,13 @@ static from(arrayLike: ArrayLike<number>): Uint8ClampedArray
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;number&gt; | 是 | 用于构造ArkTS Uint8ClampedArray的ArrayLike对象。 |
+| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; | 是 | 用于构造ArkTS Uint8ClampedArray的ArrayLike对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 新创建的ArkTS Uint8ClampedArray对象。 |
+| Uint8ClampedArray | 新创建的ArkTS Uint8ClampedArray对象。 |
 
 ## from
 
@@ -533,14 +538,14 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;T&gt; | 是 | 用于构造ArrayLike对象。 |
+| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; | 是 | 用于构造ArrayLike对象。 |
 | mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;T, number&gt; | 是 | 映射函数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 新创建的ArkTS Uint8ClampedArray对象。 |
+| Uint8ClampedArray | 新创建的ArkTS Uint8ClampedArray对象。 |
 
 ## from
 
@@ -569,7 +574,7 @@ static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, num
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 新创建的ArkTS Uint8ClampedArray对象。 |
+| Uint8ClampedArray | 新创建的ArkTS Uint8ClampedArray对象。 |
 
 ## includes
 
@@ -698,7 +703,7 @@ keys(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;number&gt; | 新的迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 新的迭代器对象。 |
 
 **错误码：**
 
@@ -763,13 +768,13 @@ map(callbackFn: TypedArrayMapCallback<number, Uint8ClampedArray>): Uint8ClampedA
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayMapCallback](arkts-arkts-collections-typedarraymapcallback-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 | 回调函数，接收至多三个参数。 map方法对数组中的每个元素调用一次callbackfn函数。 |
+| callbackFn | [TypedArrayMapCallback](arkts-arkts-collections-typedarraymapcallback-t.md)&lt;number, Uint8ClampedArray&gt; | 是 | 回调函数，接收至多三个参数。 map方法对数组中的每个元素调用一次callbackfn函数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 新ArkTS Uint8ClampedArray对象。 |
+| Uint8ClampedArray | 新ArkTS Uint8ClampedArray对象。 |
 
 **错误码：**
 
@@ -804,7 +809,7 @@ static of(...items: number[]): Uint8ClampedArray
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 新的ArkTS Uint8ClampedArray实例。可能的错误原因：1.必填参数未指定； <br>2.参数类型不正确；3.参数校验失败。 |
+| Uint8ClampedArray | 新的ArkTS Uint8ClampedArray实例。可能的错误原因：1.必填参数未指定； <br>2.参数类型不正确；3.参数校验失败。 |
 
 ## reduce
 
@@ -826,7 +831,7 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8ClampedArray>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 | 归约函数，接收至多四个参数。 reduce方法对数组中的每个元素调用一次callbackfn函数。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Uint8ClampedArray&gt; | 是 | 归约函数，接收至多四个参数。 reduce方法对数组中的每个元素调用一次callbackfn函数。 |
 
 **返回值：**
 
@@ -861,7 +866,7 @@ reduce<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint8ClampedA
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 | 归约函数，接收至多四个参数。 reduce方法对数组中的每个元素调用一次callbackfn函数。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Uint8ClampedArray&gt; | 是 | 归约函数，接收至多四个参数。 reduce方法对数组中的每个元素调用一次callbackfn函数。 |
 | initialValue | U | 是 | 如果指定了initialValue，则将其作为开始累加的初始值。 首次调用callbackfn函数时会将该值作为参数传入，而不是使用数组元素值。 |
 
 **返回值：**
@@ -897,7 +902,7 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Cla
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 | 对Uint8ClampedArray中的每个元素调用的函数。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Uint8ClampedArray&gt; | 是 | 对Uint8ClampedArray中的每个元素调用的函数。 |
 | initialValue | U | 是 | 作为回调函数首次调用的第一个参数的值。 <br>如果未提供初始值，则使用Uint8ClampedArray的最后一个元素， <br>并且回调函数将从倒数第二个元素开始调用。 |
 
 **返回值：**
@@ -933,7 +938,7 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint8ClampedArr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 | 对Uint8ClampedArray中的每个元素调用的函数。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Uint8ClampedArray&gt; | 是 | 对Uint8ClampedArray中的每个元素调用的函数。 |
 
 **返回值：**
 
@@ -968,7 +973,7 @@ reverse(): Uint8ClampedArray
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 反转后的ArkTS Uint8ClampedArray对象。 |
+| Uint8ClampedArray | 反转后的ArkTS Uint8ClampedArray对象。 |
 
 **错误码：**
 
@@ -997,7 +1002,7 @@ set(array: ArrayLike<number>, offset?: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;number&gt; | 是 | 用于设置的ArrayLike对象。 |
+| array | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; | 是 | 用于设置的ArrayLike对象。 |
 | offset | number | 否 | 写入的起始位置。默认为0。 |
 
 **错误码：**
@@ -1034,7 +1039,7 @@ slice(start?: number, end?: number): Uint8ClampedArray
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 新的ArkTS Uint8ClampedArray对象。 |
+| Uint8ClampedArray | 新的ArkTS Uint8ClampedArray对象。 |
 
 **错误码：**
 
@@ -1063,7 +1068,7 @@ some(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 | 用于测试的断言函数。 |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint8ClampedArray&gt; | 是 | 用于测试的断言函数。 |
 
 **返回值：**
 
@@ -1104,7 +1109,7 @@ sort(compareFn?: TypedArrayCompareFn<number>): Uint8ClampedArray
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 排序后的ArkTS Uint8ClampedArray对象。 |
+| Uint8ClampedArray | 排序后的ArkTS Uint8ClampedArray对象。 |
 
 **错误码：**
 
@@ -1140,7 +1145,7 @@ subarray(begin?: number, end?: number): Uint8ClampedArray
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 新的ArkTS Uint8ClampedArray对象。 |
+| Uint8ClampedArray | 新的ArkTS Uint8ClampedArray对象。 |
 
 **错误码：**
 
@@ -1227,7 +1232,7 @@ values(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;number&gt; | 新的迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 新的迭代器对象。 |
 
 **错误码：**
 

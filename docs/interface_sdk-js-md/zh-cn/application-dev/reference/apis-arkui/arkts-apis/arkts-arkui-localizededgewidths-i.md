@@ -2,6 +2,8 @@
 
 Defines the localized border width property.
 
+@interface LocalizedEdgeWidths
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare interface LocalizedEdgeWidths--><!--Device-unnamed-declare interface LocalizedEdgeWidths-End-->

@@ -49,7 +49,13 @@ let runner: taskpool.AsyncRunner = new taskpool.AsyncRunner(5);
 constructor(name: string, runningCapacity: number, waitingCapacity?: number)
 ```
 
-AsyncRunner的构造函数，用于创建一个**AsyncRunner**实例。构造一个全局异步队列，如果队列名称与已有名称相同， 将返回同一个异步队列。 &gt; **说明：** &gt; &gt; - 底层通过单例模式确保创建同名的异步队列时，获取同一个实例。 &gt; &gt; - 无法修改并发度和等待任务列表容量。
+AsyncRunner的构造函数，用于创建一个**AsyncRunner**实例。构造一个全局异步队列，如果队列名称与已有名称相同， 将返回同一个异步队列。
+
+> **说明：**
+> 
+> - 底层通过单例模式确保创建同名的异步队列时，获取同一个实例。
+> 
+> - 无法修改并发度和等待任务列表容量。
 
 **起始版本：** 18
 
@@ -79,7 +85,23 @@ let runner:taskpool.AsyncRunner = new taskpool.AsyncRunner("runner1", 5, 5);
 execute(task: Task, priority?: Priority): Promise<Object>
 ```
 
-执行异步任务。使用该方法前需要先构造**AsyncRunner**实例。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 不支持执行任务组中的任务。 &gt; &gt; - 不支持执行串行队列中的任务。 &gt; &gt; - 不支持执行其他异步队列任务。 &gt; &gt; - 不支持执行周期性任务。 &gt; &gt; - 不支持执行延迟任务。 &gt; &gt; - 不支持执行存在依赖的任务。 &gt; &gt; - 不支持执行已执行过的任务。
+执行异步任务。使用该方法前需要先构造**AsyncRunner**实例。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 不支持执行任务组中的任务。
+> 
+> - 不支持执行串行队列中的任务。
+> 
+> - 不支持执行其他异步队列任务。
+> 
+> - 不支持执行周期性任务。
+> 
+> - 不支持执行延迟任务。
+> 
+> - 不支持执行存在依赖的任务。
+> 
+> - 不支持执行已执行过的任务。
 
 **起始版本：** 18
 
@@ -106,11 +128,11 @@ execute(task: Task, priority?: Priority): Promise<Object>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200025](../errorcode-utils.md#10200025-串行队列中添加了存在依赖的任务) | dependent task not allowed. |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs. |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again. |
 | [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200025](../errorcode-utils.md#10200025-串行队列中添加了存在依赖的任务) | dependent task not allowed. |
+| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again. |
 | [10200054](../errorcode-utils.md#10200054-异步队列任务被丢弃) | The asyncRunner task is discarded. |
+| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs. |
 
 **示例**
 

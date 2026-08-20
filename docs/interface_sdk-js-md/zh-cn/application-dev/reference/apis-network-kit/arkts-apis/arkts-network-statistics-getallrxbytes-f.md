@@ -26,7 +26,7 @@ function getAllRxBytes(callback: AsyncCallback<long>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数。当成功获取到流量数据时，error为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | 是 | 回调函数。当成功获取到流量数据时，error为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -34,8 +34,8 @@ function getAllRxBytes(callback: AsyncCallback<long>): void
 | --- | --- |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
-| [2103011](../errorcode-net-statistics.md#2103011-系统map创建失败) | Failed to create a system map. |
 | [2103005](../errorcode-net-statistics.md#2103005-读取系统map失败) | Failed to read the system map. |
+| [2103011](../errorcode-net-statistics.md#2103011-系统map创建失败) | Failed to create a system map. |
 
 **示例**
 
@@ -92,8 +92,8 @@ function getAllRxBytes(): Promise<long>
 | --- | --- |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
-| [2103011](../errorcode-net-statistics.md#2103011-系统map创建失败) | Failed to create a system map. |
 | [2103005](../errorcode-net-statistics.md#2103005-读取系统map失败) | Failed to read the system map. |
+| [2103011](../errorcode-net-statistics.md#2103011-系统map创建失败) | Failed to create a system map. |
 
 **示例**
 

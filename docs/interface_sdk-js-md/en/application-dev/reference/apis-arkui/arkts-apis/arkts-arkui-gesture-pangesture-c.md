@@ -2,6 +2,8 @@
 
 Defines PanGesture.
 
+@extends Gesture
+
 **Inheritance/Implementation:** PanGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
 
 **Since:** 23

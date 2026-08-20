@@ -1,8 +1,10 @@
 # RouterMode
 
-Enumerates the routing modes.
+Router Mode
 
-**Since:** 9
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-router-export enum RouterMode--><!--Device-router-export enum RouterMode-End-->
 
@@ -14,11 +16,13 @@ Enumerates the routing modes.
 Standard
 ```
 
-Multi-instance mode. It is the default routing mode. The target page is added to the top of the page stack, regardless of whether a page with the same URL exists in the stack. **NOTE：**If no routing mode is used, the navigation will be carried out according to the default multi-instance mode.
+Default route mode. The page will be added to the top of the page stack.
 
-**Since:** 9
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RouterMode-Standard--><!--Device-RouterMode-Standard-End-->
 
@@ -30,11 +34,13 @@ Multi-instance mode. It is the default routing mode. The target page is added to
 Single
 ```
 
-Singleton mode. If the URL of the target page already exists in the page stack, the page is moved to the top of the stack. If the URL of the target page does not exist in the page stack, the page is redirected to in multi-instance mode.
+Single route mode. If the target page already has the same url page in the page stack, the same url page closest to the top of the stack will be moved to the top of the stack. If the target page url does not exist in the page stack, route will use default route mode.
 
-**Since:** 9
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RouterMode-Single--><!--Device-RouterMode-Single-End-->
 

@@ -1,4 +1,4 @@
-# SubscribaleAbstract(System API) (System API)
+# SubscribaleAbstract (System API)
 
 Defines the Subscribale base class.
 

@@ -2,6 +2,8 @@
 
 Enumerates the emitter shapes of a particle.
 
+@enum { string }
+
 **Since:** 10
 
 <!--Device-unnamed-declare enum ParticleEmitterShape--><!--Device-unnamed-declare enum ParticleEmitterShape-End-->

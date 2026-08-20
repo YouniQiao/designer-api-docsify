@@ -98,7 +98,7 @@ import { JSON } from '@kit.ArkTS';
 | [HeapMemoryInfo](arkts-arkts-util-heapmemoryinfo-i.md) | 描述 ArkTS-VM 的堆内存信息，或当前进程的共享堆内存信息。 |
 | [HeapMemoryThreshold](arkts-arkts-util-heapmemorythreshold-i.md) | 描述 GC 后触发已注册回调的堆内存预警阈值。 |
 | [MultithreadingDetectionOptions](arkts-arkts-util-multithreadingdetectionoptions-i.md) | 多线程安全检测功能参数配置。 |
-| [ScopeComparable](arkts-arkts-util-scopecomparable-i.md) | **ScopeComparable** 类型的值用于实现 **compareTo** 方法。因此，请确保输入参数是可比较的。 |
+| [ScopeComparable](arkts-arkts-util-scopecomparable-i.md) | *ScopeComparable** 类型的值用于实现 **compareTo** 方法。因此，请确保输入参数是可比较的。 |
 | [TextDecoderOptions](arkts-arkts-util-textdecoderoptions-i.md) | 描述解码相关的选项，包含 **fatal** 和 **ignoreBOM**。 |
 
 ### 枚举

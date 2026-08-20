@@ -30,17 +30,14 @@ SceneOptions used by constructor
 
 | Name | Description |
 | --- | --- |
-| [SceneOptions](arkts-arkui-sceneoptions-i.md) | Scene options used by 3D scene control |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [Scene](arkts-arkui-scene-t.md) | Provides methods for controlling the 3d scene |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ModelType](arkts-arkui-modeltype-e.md) | The enum of model type |
 

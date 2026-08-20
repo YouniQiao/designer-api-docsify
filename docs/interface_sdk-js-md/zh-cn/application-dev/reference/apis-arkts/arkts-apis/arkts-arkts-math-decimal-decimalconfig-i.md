@@ -1,4 +1,4 @@
-# DecimalConfig(定义ArkTS的Decimal类型。Decimal支持任意精度的十进制运算。)
+# DecimalConfig
 
 提供Decimal的配置属性，可使用Decimal.set方法进行配置。
 

@@ -1,4 +1,4 @@
-# DataCallback(跨设备唤醒与消息传输)（系统接口）
+# DataCallback（系统接口）
 
 ```TypeScript
 type DataCallback = (deviceId: string, msg: ArrayBuffer) => void

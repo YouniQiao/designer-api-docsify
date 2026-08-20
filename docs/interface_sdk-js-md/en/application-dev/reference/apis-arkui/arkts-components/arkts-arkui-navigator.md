@@ -2,7 +2,9 @@
 
 The **Navigator** component provides redirection.
 
-## Child Components Supported
+## Child Components
+
+Supported
 
 ## Navigator
 
@@ -56,5 +58,4 @@ Called when using the navigator.
 
 | Name | Description |
 | --- | --- |
-| [NavigationType](arkts-arkui-navigationtype-e.md) | Navigation type. |
 

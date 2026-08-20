@@ -15,7 +15,9 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function setHotspotConfig(config: HotspotConfig): boolean
 ```
 
-Sets the hotspot for a device. &lt;p&gt;Only OPEN and WPA2 PSK hotspot can be configured.
+Sets the hotspot for a device.
+
+&lt;p&gt;Only OPEN and WPA2 PSK hotspot can be configured.
 
 **Since:** 7
 

@@ -2,6 +2,8 @@
 
 Obtains network information status.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-radio-export enum NetworkInformationState--><!--Device-radio-export enum NetworkInformationState-End-->

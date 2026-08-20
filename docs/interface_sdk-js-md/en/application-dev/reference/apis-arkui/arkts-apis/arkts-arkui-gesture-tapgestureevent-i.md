@@ -2,6 +2,8 @@
 
 Defines event info for tap gesture.
 
+@extends BaseGestureEvent @interface TapGestureEvent
+
 **Inheritance/Implementation:** TapGestureEvent extends [BaseGestureEvent](arkts-arkui-gesture-basegestureevent-i.md)
 
 **Since:** 23

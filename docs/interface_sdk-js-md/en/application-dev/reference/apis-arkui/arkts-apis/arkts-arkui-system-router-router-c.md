@@ -1,4 +1,4 @@
-# Router(Page Routing)
+# Router
 
 The **Router** module provides APIs to access pages through URIs.
 
@@ -24,7 +24,11 @@ import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, Ena
 static back(options?: BackRouterOptions): void
 ```
 
-Returns to the previous or a specified page. &gt; **NOTE：**&gt; &gt; In the example, the **uri** field indicates the page route, which is specified by the **pages** list in the &gt; configuration file.
+Returns to the previous or a specified page.
+
+> **NOTE：**
+> 
+> In the example, the **uri** field indicates the page route, which is specified by the **pages** list in the &gt; configuration file.
 
 **Since:** 3
 
@@ -186,7 +190,11 @@ Obtains state information about the current page.
 static push(options: RouterOptions): void
 ```
 
-Navigates to a specified page in the application. &gt; **NOTE：**&gt; &gt; The page routing stack supports a maximum of 32 pages.
+Navigates to a specified page in the application.
+
+> **NOTE：**
+> 
+> The page routing stack supports a maximum of 32 pages.
 
 **Since:** 3
 

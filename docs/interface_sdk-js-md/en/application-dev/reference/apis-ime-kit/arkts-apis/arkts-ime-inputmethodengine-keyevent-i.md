@@ -20,7 +20,9 @@ import { inputMethodEngine } from '@kit.IMEKit';
 readonly keyAction: int
 ```
 
-Key event type. - **2**: keydown event. - **3**: keyup event.
+Key event type.
+
+- **2**: keydown event. - **3**: keyup event.
 
 **Type:** int
 

@@ -1,4 +1,4 @@
-# MatchResult(Identify sensitive file)
+# MatchResult
 
 Displays the identification result of sensitive content.
 

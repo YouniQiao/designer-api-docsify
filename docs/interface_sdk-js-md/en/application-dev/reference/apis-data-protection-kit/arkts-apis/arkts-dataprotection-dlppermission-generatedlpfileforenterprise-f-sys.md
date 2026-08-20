@@ -12,7 +12,13 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, property: DLPProperty, customProperty: CustomProperty): Promise<void>
 ```
 
-Encrypts a plaintext file to generate a DLP file for an enterprise account. This API can be called only by enterprise accounts. This API uses a promise to return the result. This API encrypts a plaintext file to generate a DLP file that can be accessed only by enterprise accounts, implementing enterprise-level file permission management. &gt; **NOTE：**&gt; &gt; This API can be called only by enterprise accounts. Enterprises need to set up their own enterprise account &gt; servers. This API generates a DLP file, which is an encrypted file that can be accessed only by accounts &gt; authorized by the enterprise server.
+Encrypts a plaintext file to generate a DLP file for an enterprise account. This API can be called only by enterprise accounts. This API uses a promise to return the result.
+
+This API encrypts a plaintext file to generate a DLP file that can be accessed only by enterprise accounts, implementing enterprise-level file permission management.
+
+> **NOTE：**
+> 
+> This API can be called only by enterprise accounts. Enterprises need to set up their own enterprise account &gt; servers. This API generates a DLP file, which is an encrypted file that can be accessed only by accounts &gt; authorized by the enterprise server.
 
 **Since:** 20
 
@@ -43,16 +49,16 @@ Encrypts a plaintext file to generate a DLP file for an enterprise account. This
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
-| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100005](../errorcode-dlp.md#19100005-credential-authentication-server-error) | Credential authentication server error. |
-| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs.<br>**Applicable version:** 20 and later |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
+| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
+| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
+| [19100005](../errorcode-dlp.md#19100005-credential-authentication-server-error) | Credential authentication server error. |
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
 | [19100014](../errorcode-dlp.md#19100014-account-not-logged-in) | Account not logged in. |
 
 **Examples**

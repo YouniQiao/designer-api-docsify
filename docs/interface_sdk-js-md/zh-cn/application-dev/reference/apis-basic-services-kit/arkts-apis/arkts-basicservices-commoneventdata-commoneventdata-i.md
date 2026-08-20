@@ -90,7 +90,7 @@ parameters?: Record<string, RecordData>
 
 表示订阅者接收到的公共事件的附加信息。该字段取值与发布者使用 [commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md) 发布公共事件时，通过[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md)中的`parameters`字段传递的数据一致。
 
-**类型：** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
+**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 23
 

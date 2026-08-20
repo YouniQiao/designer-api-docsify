@@ -2,6 +2,8 @@
 
 The enum of reasons for destroying partner agent extension ability.
 
+@enum { int }
+
 **Since:** 26.0.0
 
 <!--Device-partnerAgent-export enum PartnerAgentExtensionAbilityDestroyReason--><!--Device-partnerAgent-export enum PartnerAgentExtensionAbilityDestroyReason-End-->

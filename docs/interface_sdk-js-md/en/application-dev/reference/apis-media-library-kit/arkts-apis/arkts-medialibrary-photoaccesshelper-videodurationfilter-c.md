@@ -20,7 +20,9 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 extraVideoDuration?: int
 ```
 
-Maximum video duration in **FilterOperator.BETWEEN** mode. The default value is **-1**. The unit is milliseconds (ms).
+Maximum video duration in **FilterOperator.BETWEEN** mode. The default value is **-1**.
+
+The unit is milliseconds (ms).
 
 **Type:** int
 
@@ -38,7 +40,9 @@ Maximum video duration in **FilterOperator.BETWEEN** mode. The default value is 
 filterOperator: FilterOperator
 ```
 
-Filter operator. For example, files can be filtered based on being greater than or less than a certain file size.
+Filter operator.
+
+For example, files can be filtered based on being greater than or less than a certain file size.
 
 **Type:** [FilterOperator](arkts-medialibrary-photoaccesshelper-filteroperator-e.md)
 
@@ -56,7 +60,9 @@ Filter operator. For example, files can be filtered based on being greater than 
 videoDuration: int
 ```
 
-Video duration used for filtering. The unit is milliseconds (ms).
+Video duration used for filtering.
+
+The unit is milliseconds (ms).
 
 **Type:** int
 

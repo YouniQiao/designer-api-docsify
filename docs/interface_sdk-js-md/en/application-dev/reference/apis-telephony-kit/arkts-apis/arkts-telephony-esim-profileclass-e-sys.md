@@ -2,6 +2,8 @@
 
 The Profile class.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-eSIM-export enum ProfileClass--><!--Device-eSIM-export enum ProfileClass-End-->

@@ -1,6 +1,8 @@
 # Button属性/事件
 
-除支持通用属性外，还支持以下属性： 支持通用事件。
+除支持通用属性外，还支持以下属性：
+
+支持通用事件。
 
 **继承/实现关系：** ButtonAttribute extends CommonMethod<ButtonAttribute>
 
@@ -21,7 +23,11 @@
 buttonStyle(value: ButtonStyleMode)
 ```
 
-设置Button组件的样式和重要程度。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过 backgroundColor、 [fontColor](#fontcolor)和[role](#role)接口设置，实际显示效果以最后一次设置为准。 &gt; **说明：** &gt; &gt; 从API version 12开始，该接口支持在attributeModifier中调用。
+设置Button组件的样式和重要程度。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过 backgroundColor、 [fontColor](#fontcolor)和[role](#role)接口设置，实际显示效果以最后一次设置为准。
+
+> **说明：**
+> 
+> 从API version 12开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
 
@@ -71,7 +77,11 @@ contentModifier(modifier: ContentModifier<ButtonConfiguration>)
 controlSize(value: ControlSize)
 ```
 
-设置Button组件的尺寸。 &gt; **说明：** &gt; &gt; 从API version 12开始，该接口支持在attributeModifier中调用。
+设置Button组件的尺寸。
+
+> **说明：**
+> 
+> 从API version 12开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
 

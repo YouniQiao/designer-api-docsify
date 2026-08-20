@@ -2,6 +2,8 @@
 
 Declare custom content dialog
 
+@struct { CustomContentDialogV2 }
+
 **Since:** 18
 
 <!--Device-unnamed-export declare struct CustomContentDialogV2--><!--Device-unnamed-export declare struct CustomContentDialogV2-End-->

@@ -80,9 +80,9 @@ Background opacity of the picker. The value range is [0, 1]. **0** indicates com
 badgeConfig?: BadgeConfig
 ```
 
-Badge configuration. Currently, the **PhotoPickerComponent** supports only one type of badge. For details, see [BadgeType](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-badgetype-e.md).
+Badge configuration. Currently, the **PhotoPickerComponent** supports only one type of badge. For details, see [BadgeType](arkts-medialibrary-file-photopickercomponent-badgetype-e.md).
 
-**Type:** [BadgeConfig](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-badgeconfig-c.md)
+**Type:** [BadgeConfig](arkts-medialibrary-file-photopickercomponent-badgeconfig-c.md)
 
 **Since:** 21
 
@@ -98,7 +98,11 @@ Badge configuration. Currently, the **PhotoPickerComponent** supports only one t
 checkBoxColor?: string
 ```
 
-Background color of the check box. The value is an 8-digit hexadecimal color code. The first two digits indicate the transparency, and the last six digits indicate the RGB color value. For example, '#FFFFFFFF' indicates a white opaque background, and '#80FF0000' indicates a semi-transparent red background.
+Background color of the check box.
+
+The value is an 8-digit hexadecimal color code. The first two digits indicate the transparency, and the last six digits indicate the RGB color value.
+
+For example, '#FFFFFFFF' indicates a white opaque background, and '#80FF0000' indicates a semi-transparent red background.
 
 **Type:** string
 
@@ -154,7 +158,9 @@ Information for restoring the PhotoPicker's state from the last exit.
 edgeEffect?: EdgeEffect
 ```
 
-Scrolling effect when the Picker grid page reaches the edge. The default value is EdgeEffect.Spring.
+Scrolling effect when the Picker grid page reaches the edge.
+
+The default value is EdgeEffect.Spring.
 
 **Type:** EdgeEffect
 
@@ -264,7 +270,9 @@ Whether to support multiple selections by sliding. **true**: yes; **false**: no.
 isSlidingSupported?: boolean
 ```
 
-Whether scrolling in the **PhotoPickerComponent** is enabled. The value **true** means that scrolling is not blocked and the component responds to user scroll gestures. The value **false** means that scrolling is blocked and the component does not respond to user scroll gestures. The default value is **true**.
+Whether scrolling in the **PhotoPickerComponent** is enabled. The value **true** means that scrolling is not blocked and the component responds to user scroll gestures. The value **false** means that scrolling is blocked and the component does not respond to user scroll gestures.
+
+The default value is **true**.
 
 **Type:** boolean
 
@@ -306,7 +314,7 @@ maxSelectedReminderMode?: ReminderMode
 
 Mode of the reminder when the number of selected items reaches the maximum. The options are **NONE**, **TOAST**, and **MASK**. The default value **TOAST**.
 
-**Type:** [ReminderMode](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-remindermode-e.md)
+**Type:** [ReminderMode](arkts-medialibrary-file-photopickercomponent-remindermode-e.md)
 
 **Since:** 12
 
@@ -344,7 +352,7 @@ orientation?: PickerOrientation
 
 Sliding preview direction of the grid page. The options are **HORIZONTAL** and **VERTICAL**. The default value is **VERTICAL**. (This parameter is supported since API version 20. In earlier versions, the system defaults to vertical.)
 
-**Type:** [PickerOrientation](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-pickerorientation-e.md)
+**Type:** [PickerOrientation](arkts-medialibrary-file-photopickercomponent-pickerorientation-e.md)
 
 **Since:** 12
 
@@ -362,7 +370,7 @@ photoBrowserBackgroundColorMode?: PickerColorMode
 
 Background color of the photo browser page. The options are **AUTO**, **LIGHT**, and **DARK**. The default value is **AUTO**.
 
-**Type:** [PickerColorMode](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-pickercolormode-e.md)
+**Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 12
 
@@ -434,7 +442,7 @@ preselectedInfos?: Array<PreselectedInfo>
 
 Array of information previously selected by the user, so that the PhotoPickerComponent identified by **pickerIndex** can display the information.
 
-**Type:** Array&lt;[PreselectedInfo](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-preselectedinfo-c.md)&gt;
+**Type:** Array&lt;[PreselectedInfo](arkts-medialibrary-file-photopickercomponent-preselectedinfo-c.md)&gt;
 
 **Since:** 21
 
@@ -452,7 +460,7 @@ selectMode?: SelectMode
 
 Select mode, which can be **SINGLE_SELECT** or **MULTI_SELECT**. The default value is **MULTI_SELECT**.
 
-**Type:** [SelectMode](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-selectmode-e.md)
+**Type:** [SelectMode](arkts-medialibrary-file-photopickercomponent-selectmode-e.md)
 
 **Since:** 12
 
@@ -470,7 +478,7 @@ singleLineConfig?: SingleLineConfig
 
 Single-line display mode of a grid page. In single-line mode, the component does not provide functions for viewing a larger image. The component does not support callbacks related to large images, and the PickerController does not support APIs related to large images, making API calls ineffective.
 
-**Type:** [SingleLineConfig](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-singlelineconfig-c.md)
+**Type:** [SingleLineConfig](arkts-medialibrary-file-photopickercomponent-singlelineconfig-c.md)
 
 **Since:** 20
 
@@ -486,9 +494,11 @@ Single-line display mode of a grid page. In single-line mode, the component does
 uiComponentColorMode?: PickerColorMode
 ```
 
-Picker color mode. Dark/Light color mode (excluding the background color) of other components on the Picker grid page, including the search box, camera entry, safety tips for using Gallery, and recommendation bubble. This attribute is usually used together with **backgroundColor**. The default value is **PickerColorMode.AUTO**, which follows the system's dark/light color mode. When setting this attribute, avoid using **PickerColorMode.LIGHT** with a dark backgroundColor, as it may make components or text hard to see. Avoid using **PickerColorMode.DARK** with a light backgroundColor for the same reason.
+Picker color mode. Dark/Light color mode (excluding the background color) of other components on the Picker grid page, including the search box, camera entry, safety tips for using Gallery, and recommendation bubble. This attribute is usually used together with **backgroundColor**. The default value is **PickerColorMode.AUTO**, which follows the system's dark/light color mode.
 
-**Type:** [PickerColorMode](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-pickercolormode-e.md)
+When setting this attribute, avoid using **PickerColorMode.LIGHT** with a dark backgroundColor, as it may make components or text hard to see. Avoid using **PickerColorMode.DARK** with a light backgroundColor for the same reason.
+
+**Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 20
 

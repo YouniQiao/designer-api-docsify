@@ -1,6 +1,6 @@
 # AVInputCastPicker
 
-Picker used to show available input devices.
+Picker used to show available input devices. @struct { AVInputCastPicker }
 
 **Since:** 20
 
@@ -23,7 +23,7 @@ import { AVInputCastPicker } from '@kit.AVSessionKit';
 
 Custom picker.
 
-**Type:** CustomBuilder
+**Type:** [CustomBuilder](../../apis-default/arkts-apis/arkts-custombuilder-t.md)
 
 **Since:** 20
 

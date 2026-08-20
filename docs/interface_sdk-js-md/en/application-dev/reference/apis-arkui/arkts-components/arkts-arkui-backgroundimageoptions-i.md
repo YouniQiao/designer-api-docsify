@@ -2,6 +2,8 @@
 
 Define the options for background image.
 
+@interface BackgroundImageOptions
+
 **Since:** 18
 
 <!--Device-unnamed-interface BackgroundImageOptions--><!--Device-unnamed-interface BackgroundImageOptions-End-->

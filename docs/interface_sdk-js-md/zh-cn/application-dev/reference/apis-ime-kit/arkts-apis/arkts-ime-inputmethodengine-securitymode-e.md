@@ -1,5 +1,7 @@
 # SecurityMode
 
+@brief 输入法的安全模式，如BASIC或FULL。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-export enum SecurityMode--><!--Device-inputMethodEngine-export enum SecurityMode-End-->
@@ -12,6 +14,8 @@
 BASIC = 0
 ```
 
+@brief 基础访问模式，基础打字模式，会限制网络访问。
+
 **起始版本：** 23
 
 <!--Device-SecurityMode-BASIC = 0--><!--Device-SecurityMode-BASIC = 0-End-->
@@ -23,6 +27,8 @@ BASIC = 0
 ```TypeScript
 FULL
 ```
+
+@brief 完全访问模式，不做限制，可以访问网络。
 
 **起始版本：** 23
 

@@ -1,6 +1,8 @@
 # Calendar
 
-In the following API examples, you need to use [createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createcalendar) or getCalendar() to obtain a **Calendar** object before calling related APIs.
+In the following API examples, you need to use [createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createcalendar) or getCalendar() to obtain
+
+a **Calendar** object before calling related APIs.
 
 **Since:** 10
 
@@ -50,8 +52,8 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -112,8 +114,8 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -177,8 +179,8 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -244,8 +246,8 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -663,8 +665,8 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -732,8 +734,8 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -789,7 +791,9 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
 getEvents(callback: AsyncCallback<Event[]>):void
 ```
 
-Obtains all events in the current calendar. This API uses an asynchronous callback to return the result. For versions earlier than API version 20, the default fields to be obtained include id, type, title, startTime, endTime, isAllDay, description, timeZone, location, service, attendee, and reminderTime. Since API version 20, the default fields to be obtained include id, type, title, startTime, endTime, isAllDay, description, timeZone, location, service, attendee, reminderTime, and identifier. The field is not returned if it is empty.
+Obtains all events in the current calendar. This API uses an asynchronous callback to return the result.
+
+For versions earlier than API version 20, the default fields to be obtained include id, type, title, startTime, endTime, isAllDay, description, timeZone, location, service, attendee, and reminderTime. Since API version 20, the default fields to be obtained include id, type, title, startTime, endTime, isAllDay, description, timeZone, location, service, attendee, reminderTime, and identifier. The field is not returned if it is empty.
 
 **Since:** 10
 
@@ -811,8 +815,8 @@ Obtains all events in the current calendar. This API uses an asynchronous callba
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -844,7 +848,9 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 openEventEditPage(id: number): Promise<void>
 ```
 
-Obtains the event instance that meets the viewing or editing condition in a calendar based on the event ID. This API uses a promise to return the result. This API can be used to view and edit calendar events in the system calendar.
+Obtains the event instance that meets the viewing or editing condition in a calendar based on the event ID. This API uses a promise to return the result.
+
+This API can be used to view and edit calendar events in the system calendar.
 
 **Since:** 26.0.0
 
@@ -872,8 +878,8 @@ Obtains the event instance that meets the viewing or editing condition in a cale
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23900005](../errorcode-calendarManager.md#23900005-event-not-editable) | This event cannot be edited. |
 | [23900001](../errorcode-calendarManager.md#23900001-parameter-value-error) | Parameter value error. |
+| [23900005](../errorcode-calendarManager.md#23900005-event-not-editable) | This event cannot be edited. |
 
 ## queryEventInstances
 
@@ -914,8 +920,8 @@ Queries the event instance with a specified event key in a calendar. This API us
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 

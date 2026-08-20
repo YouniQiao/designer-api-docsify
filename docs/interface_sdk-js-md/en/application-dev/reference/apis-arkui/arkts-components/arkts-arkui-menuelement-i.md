@@ -37,7 +37,11 @@ Action triggered when a menu item is clicked.
 enabled?: boolean
 ```
 
-Whether to enable interactions with the menu item. **true**: yes; **false**: no Default value: **true**.
+Whether to enable interactions with the menu item.
+
+**true**: yes; **false**: no
+
+Default value: **true**.
 
 **Type:** boolean
 

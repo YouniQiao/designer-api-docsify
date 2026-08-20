@@ -42,7 +42,7 @@ Updates the VPN pop-up authorization status.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 

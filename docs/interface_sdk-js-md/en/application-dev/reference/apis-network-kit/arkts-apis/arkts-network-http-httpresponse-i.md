@@ -54,7 +54,9 @@ Original cookies returned by the server. How to process the cookies is up to you
 header: Object
 ```
 
-Response header. The return value is a string in JSON format. If you want to use specific content in the response, you need to implement parsing of that content. Common fields and parsing methods are as follows: - content-type: header['content-type'] - status-line: header['status-line'] - date: header.date/header['date'] - server: header.server/header['server']
+Response header. The return value is a string in JSON format. If you want to use specific content in the response, you need to implement parsing of that content. Common fields and parsing methods are as follows:
+
+- content-type: header['content-type'] - status-line: header['status-line'] - date: header.date/header['date'] - server: header.server/header['server']
 
 **Type:** Object
 
@@ -106,7 +108,11 @@ Result code for an HTTP request. If the callback function is successfully execut
 result: string | Object | ArrayBuffer
 ```
 
-Response content returned based on **Content-type** in the response header. If **HttpRequestOptions** does not contain the **expectDataType** field, the response content is returned according to the following rules: - application/json: string in JSON format - application/octet-stream: ArrayBuffer - image: ArrayBuffer - Others: string If **HttpRequestOptions** contains the **expectDataType** field, the response content must be of the same type as the data returned by the server.
+Response content returned based on **Content-type** in the response header. If **HttpRequestOptions** does not contain the **expectDataType** field, the response content is returned according to the following rules:
+
+- application/json: string in JSON format - application/octet-stream: ArrayBuffer - image: ArrayBuffer - Others: string
+
+If **HttpRequestOptions** contains the **expectDataType** field, the response content must be of the same type as the data returned by the server.
 
 **Type:** string \| Object \| ArrayBuffer
 

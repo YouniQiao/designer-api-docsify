@@ -22,7 +22,11 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 crlDownloadURI?: string
 ```
 
-表示用于CRL请求的备选下载地址。 &gt; **说明：** &gt; &gt; 当前URI只针对实体证书生效。
+表示用于CRL请求的备选下载地址。
+
+> **说明：**
+> 
+> 当前URI只针对实体证书生效。
 
 **类型：** string
 
@@ -96,7 +100,11 @@ ocspResponderCert?: X509Cert
 ocspResponderURI?: string
 ```
 
-表示用于OCSP请求的备选服务器URI地址，支持HTTP/HTTPS，具体配置由与服务器协商决定。 &gt; **说明：** &gt; &gt; 当前URI只针对实体证书生效。
+表示用于OCSP请求的备选服务器URI地址，支持HTTP/HTTPS，具体配置由与服务器协商决定。
+
+> **说明：**
+> 
+> 当前URI只针对实体证书生效。
 
 **类型：** string
 

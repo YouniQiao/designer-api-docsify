@@ -14,7 +14,9 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 declare function accessSync(path: string, mode?: AccessModeType): boolean
 ```
 
-Checks whether a file or directory exists or has the operation permission. This API returns the result synchronously. If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
+Checks whether a file or directory exists or has the operation permission. This API returns the result synchronously.
+
+If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
 
 **Since:** 9
 
@@ -41,18 +43,18 @@ Checks whether a file or directory exists or has the operation permission. This 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900005 | I/O error |
-| 13900023 | Text file busy |
-| 13900033 | Too many symbolic links encountered |
 | 13900002 | No such file or directory |
-| 13900018 | Not a directory |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
+| 13900018 | Not a directory |
+| 13900020 | Invalid argument |
+| 13900023 | Text file busy |
 | 13900030 | File name too long |
-| 13900008 | Bad file descriptor |
+| 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
-| 13900011 | Out of memory |
 
 
 ## accessSync
@@ -61,7 +63,9 @@ Checks whether a file or directory exists or has the operation permission. This 
 declare function accessSync(path: string, mode: AccessModeType, flag: AccessFlagType): boolean
 ```
 
-Checks whether a file or directory is stored locally or has the operation permission. This API returns the result synchronously. If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
+Checks whether a file or directory is stored locally or has the operation permission. This API returns the result synchronously.
+
+If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
 
 **Since:** 12
 
@@ -87,14 +91,14 @@ Checks whether a file or directory is stored locally or has the operation permis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | 13900005 | I/O error |
-| 13900023 | Text file busy |
-| 13900033 | Too many symbolic links encountered |
-| 13900018 | Not a directory |
+| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
+| 13900018 | Not a directory |
+| 13900020 | Invalid argument |
+| 13900023 | Text file busy |
 | 13900030 | File name too long |
-| 13900011 | Out of memory |
+| 13900033 | Too many symbolic links encountered |
 

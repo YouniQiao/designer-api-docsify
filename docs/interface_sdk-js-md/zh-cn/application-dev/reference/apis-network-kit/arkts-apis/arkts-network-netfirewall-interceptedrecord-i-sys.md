@@ -1,4 +1,4 @@
-# InterceptedRecord(网络防火墙)（系统接口）
+# InterceptedRecord（系统接口）
 
 拦截记录。
 

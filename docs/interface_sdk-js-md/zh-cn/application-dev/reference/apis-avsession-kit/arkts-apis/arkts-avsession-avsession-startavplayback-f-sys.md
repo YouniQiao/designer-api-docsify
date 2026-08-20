@@ -41,15 +41,15 @@ function startAVPlayback(bundleName: string, assetId: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 
 **示例**
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { avSession } from '@kit.AVSessionKit';
 
 avSession.startAVPlayback("com.example.myapplication", "121278").then(() => {
   console.info('Succeeded in starting AV playback.');
@@ -93,7 +93,7 @@ function startAVPlayback(bundleName: string, assetId: string, info: CommandInfo)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 

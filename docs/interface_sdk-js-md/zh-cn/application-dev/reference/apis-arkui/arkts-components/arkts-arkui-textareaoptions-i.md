@@ -37,7 +37,11 @@ controller?: TextAreaController
 placeholder?: ResourceStr
 ```
 
-设置无输入时的提示文本。输入内容后，提示文本不显示。 仅设置placeholder属性时，手柄依然跟随拖动，手柄松开后光标停留在文字开头位置。 默认值：空字符串，不设置时不显示提示文本。
+设置无输入时的提示文本。输入内容后，提示文本不显示。
+
+仅设置placeholder属性时，手柄依然跟随拖动，手柄松开后光标停留在文字开头位置。
+
+默认值：空字符串，不设置时不显示提示文本。
 
 **类型：** ResourceStr
 
@@ -55,7 +59,15 @@ placeholder?: ResourceStr
 text?: ResourceStr
 ```
 
-设置输入框当前的文本内容。默认值：空字符串。 建议通过onChange事件将状态变量与文本实时绑定， 避免组件刷新时TextArea中的文本内容异常。 从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。 从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
+设置输入框当前的文本内容。默认值：空字符串。
+
+建议通过onChange事件将状态变量与文本实时绑定，
+
+避免组件刷新时TextArea中的文本内容异常。
+
+从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+
+从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
 **类型：** ResourceStr
 

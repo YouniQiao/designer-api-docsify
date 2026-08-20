@@ -29,7 +29,7 @@ function resolveLocalService(context: Context, serviceInfo: LocalServiceInfo,
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用的上下文。 <br>FA模型的应用Context定义见Context。 <br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 |
 | serviceInfo | [LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md) | 是 | MDNS服务的信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | 是 | Callback used to return the result. If the operation is successful, **error** is **undefined** and **data** is the MDNS服务的信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | 是 | Callback used to return the result. If the operation is successful, **error** is **undefined** and **data** is the MDNS服务的信息。 |
 
 **错误码：**
 
@@ -37,8 +37,8 @@ function resolveLocalService(context: Context, serviceInfo: LocalServiceInfo,
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2204003](../errorcode-net-mdns.md#2204003-重复注册) | Callback duplicated. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+| [2204003](../errorcode-net-mdns.md#2204003-重复注册) | Callback duplicated. |
 | [2204006](../errorcode-net-mdns.md#2204006-解析服务超时) | Request timeout. |
 | [2204010](../errorcode-net-mdns.md#2204010-发送消息失败) | Failed to send the message. |
 
@@ -106,8 +106,8 @@ function resolveLocalService(context: Context, serviceInfo: LocalServiceInfo): P
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2204003](../errorcode-net-mdns.md#2204003-重复注册) | Callback duplicated. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+| [2204003](../errorcode-net-mdns.md#2204003-重复注册) | Callback duplicated. |
 | [2204006](../errorcode-net-mdns.md#2204006-解析服务超时) | Request timeout. |
 | [2204010](../errorcode-net-mdns.md#2204010-发送消息失败) | Failed to send the message. |
 

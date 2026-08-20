@@ -2,6 +2,8 @@
 
 Definition callback of receiving the query data.
 
+@interface Querier
+
 **Since:** 12
 
 <!--Device-securityGuard-interface Querier--><!--Device-securityGuard-interface Querier-End-->

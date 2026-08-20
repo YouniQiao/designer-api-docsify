@@ -32,8 +32,8 @@ Called when a saving request fails to be processed.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 **Examples**
 
@@ -126,8 +126,8 @@ Called when a saving request is successfully processed.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 **Examples**
 

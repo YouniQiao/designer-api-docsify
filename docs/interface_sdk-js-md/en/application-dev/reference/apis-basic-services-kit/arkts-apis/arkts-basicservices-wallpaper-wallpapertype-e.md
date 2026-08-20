@@ -2,6 +2,8 @@
 
 Indicates wallpaper type.
 
+@enum { int } WallpaperType
+
 **Since:** 23
 
 <!--Device-wallpaper-enum WallpaperType--><!--Device-wallpaper-enum WallpaperType-End-->

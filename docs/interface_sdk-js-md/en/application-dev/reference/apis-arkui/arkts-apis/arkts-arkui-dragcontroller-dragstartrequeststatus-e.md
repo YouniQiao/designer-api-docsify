@@ -2,6 +2,8 @@
 
 Define the status for the application to notify the framework whether to execute drag.
 
+@enum { number }
+
 **Since:** 23
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.

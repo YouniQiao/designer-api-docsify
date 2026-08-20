@@ -2,6 +2,8 @@
 
 Device attach states.
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-mechanicManager-export enum AttachState--><!--Device-mechanicManager-export enum AttachState-End-->

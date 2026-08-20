@@ -49,10 +49,10 @@ Obtains the device icon. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Get data from cloud fail. |
+| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| [11600106](../errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Get data from cloud fail. |
 
 **Examples**
 
@@ -118,11 +118,11 @@ Obtains the list of network devices according to the specified filter options.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Parameter verification failed; |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Parameter verification failed; |
+| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| [11600107](../errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
 
 **Examples**
 
@@ -182,11 +182,11 @@ Obtains the list of devices under the same account. This API uses a promise to r
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 500. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
-| [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Get data from cloud fail. |
+| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| [11600106](../errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Get data from cloud fail. |
+| [11600107](../errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
 
 **Examples**
 
@@ -243,10 +243,10 @@ Query device identification by device IDs.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 | [201](../../errorcode-universal.md#201-permission-denied) | User permission verify failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
 **Examples**
 
@@ -310,9 +310,9 @@ Obtains the local device's display name with the specified length. This API uses
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
 
 **Examples**
 
@@ -370,9 +370,9 @@ Query the device operating system type by device network ID.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | User permission verify failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
 | 11600110 | Invalid network ID. |
 
 ## offReplyResult
@@ -581,9 +581,9 @@ Updates the device list. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 500. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
 
 **Examples**
 
@@ -634,9 +634,9 @@ Replies to the user's UI operation. This API can be used only by the PIN HAP of 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified actionResult is greater than 255. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified actionResult is greater than 255. |
 
 **Examples**
 
@@ -688,9 +688,9 @@ Restores the local device name by resetting the network settings.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain the service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain the service. |
 
 **Examples**
 
@@ -731,9 +731,9 @@ Restores the local device name.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain the service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain the service. |
 
 **Examples**
 
@@ -779,10 +779,10 @@ Sets the heartbeat broadcast policy.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
 
 **Examples**
 
@@ -836,12 +836,12 @@ Sets the local device name. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
-| [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Failed to get data from the cloud. |
-| [11600108](../../apis-distributedservice-kit/errorcode-device-manager.md#11600108-unlawful-information-in-device-name) | The device name contains non-compliant content. |
+| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| [11600106](../errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Failed to get data from the cloud. |
+| [11600107](../errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
+| [11600108](../errorcode-device-manager.md#11600108-unlawful-information-in-device-name) | The device name contains non-compliant content. |
 
 **Examples**
 
@@ -899,12 +899,12 @@ Sets the remote device name. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
-| [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Failed to get data from the cloud. |
-| [11600108](../../apis-distributedservice-kit/errorcode-device-manager.md#11600108-unlawful-information-in-device-name) | The device name contains non-compliant content. |
+| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| [11600106](../errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Failed to get data from the cloud. |
+| [11600107](../errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
+| [11600108](../errorcode-device-manager.md#11600108-unlawful-information-in-device-name) | The device name contains non-compliant content. |
 
 **Examples**
 

@@ -2,6 +2,8 @@
 
 定义懒加载列布局属性。
 
+@extends CommonMethod&lt;LazyColumnLayoutAttribute&gt;
+
 **继承/实现关系：** LazyColumnLayoutAttribute extends CommonMethod<LazyColumnLayoutAttribute>
 
 **起始版本：** 26.0.0
@@ -38,13 +40,13 @@ alignItems(value: HorizontalAlign | undefined): LazyColumnLayoutAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [HorizontalAlign](../../apis-na/arkts-apis/arkts-na-enums-horizontalalign-e.md) \| undefined | 是 | 行内容的水平对齐。 <br>默认值为HorizontalAlign.Center。 |
+| value | [HorizontalAlign](../../apis-default/arkts-apis/arkts-enums-horizontalalign-e.md) \| undefined | 是 | 行内容的水平对齐。 <br>默认值为HorizontalAlign.Center。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyColumnLayoutAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
 
 ## footer
 
@@ -68,13 +70,13 @@ footer(builder: CustomBuilder | undefined): LazyColumnLayoutAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | CustomBuilder \| undefined | 是 | footer生成器函数 <br>传入undefined移除footer。 |
+| builder | [CustomBuilder](../../apis-default/arkts-apis/arkts-custombuilder-t.md) \| undefined | 是 | footer生成器函数 <br>传入undefined移除footer。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyColumnLayoutAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
 
 ## header
 
@@ -98,13 +100,13 @@ header(builder: CustomBuilder | undefined): LazyColumnLayoutAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | CustomBuilder \| undefined | 是 | header生成器函数 <br>传递undefined将移除header。 |
+| builder | [CustomBuilder](../../apis-default/arkts-apis/arkts-custombuilder-t.md) \| undefined | 是 | header生成器函数 <br>传递undefined将移除header。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyColumnLayoutAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
 
 ## onVisibleIndexesChange
 
@@ -128,13 +130,13 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): La
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnVisibleIndexesChangeCallback](../../apis-na/arkts-apis/arkts-na-onvisibleindexeschangecallback-t.md) \| undefined | 是 | 回调函数，当可见区域中子组件的索引发生变化时触发。 <br>传递undefined将取消注册回调。 |
+| callback | [OnVisibleIndexesChangeCallback](../../apis-default/arkts-apis/arkts-onvisibleindexeschangecallback-t.md) \| undefined | 是 | 回调函数，当可见区域中子组件的索引发生变化时触发。 <br>传递undefined将取消注册回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyColumnLayoutAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
 
 ## space
 
@@ -158,13 +160,13 @@ space(space: LengthMetrics | undefined): LazyColumnLayoutAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| space | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 | 行之间的间距。 <br>默认值为0。<br>范围：[0, +∞)。 |
+| space | [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) \| undefined | 是 | 行之间的间距。 <br>默认值为0。<br>范围：[0, +∞)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyColumnLayoutAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
 
 ## sticky
 
@@ -188,11 +190,11 @@ sticky(sticky: StickyStyle | undefined): LazyColumnLayoutAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sticky | [StickyStyle](../../apis-na/arkts-apis/arkts-na-list-stickystyle-e.md) \| undefined | 是 | header和footer吸顶吸底样式。 |
+| sticky | [StickyStyle](../../apis-default/arkts-components/arkts-list-stickystyle-e.md) \| undefined | 是 | header和footer吸顶吸底样式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyColumnLayoutAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
 

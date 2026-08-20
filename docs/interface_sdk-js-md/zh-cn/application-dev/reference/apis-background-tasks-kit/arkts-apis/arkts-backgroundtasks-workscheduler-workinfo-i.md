@@ -38,7 +38,9 @@ abilityName: string
 batteryLevel?: int
 ```
 
-电量。 取值范围：[0, 100]
+电量。
+
+取值范围：[0, 100]
 
 **类型：** int
 
@@ -146,7 +148,9 @@ idleWaitTime?: int
 isCharging?: boolean
 ```
 
-是否充电，默认为false。 - true表示充电触发延迟任务回调。 - false表示不充电触发延迟任务回调。
+是否充电，默认为false。
+
+- true表示充电触发延迟任务回调。 - false表示不充电触发延迟任务回调。
 
 **类型：** boolean
 
@@ -164,7 +168,9 @@ isCharging?: boolean
 isDeepIdle?: boolean
 ```
 
-是否要求设备进入空闲状态，默认为false。 - true表示需要。 - false表示不需要。
+是否要求设备进入空闲状态，默认为false。
+
+- true表示需要。 - false表示不需要。
 
 **类型：** boolean
 
@@ -182,7 +188,9 @@ isDeepIdle?: boolean
 isPersisted?: boolean
 ```
 
-注册的延迟任务是否可保存在系统中，默认为false。 - true表示可保存，即系统重启后，任务可恢复。 - false表示不可保存。
+注册的延迟任务是否可保存在系统中，默认为false。
+
+- true表示可保存，即系统重启后，任务可恢复。 - false表示不可保存。
 
 **类型：** boolean
 
@@ -200,7 +208,9 @@ isPersisted?: boolean
 isRepeat?: boolean
 ```
 
-是否循环任务，默认为false。 - true表示循环任务。 - false表示非循环任务。
+是否循环任务，默认为false。
+
+- true表示循环任务。 - false表示非循环任务。
 
 **类型：** boolean
 
@@ -238,7 +248,7 @@ parameters?: Record<string, int | double | string | boolean>
 
 携带参数信息。
 
-**类型：** Record&lt;string, int \| double \| string \| boolean&gt;
+**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, int \| double \| string \| boolean&gt;
 
 **起始版本：** 23
 

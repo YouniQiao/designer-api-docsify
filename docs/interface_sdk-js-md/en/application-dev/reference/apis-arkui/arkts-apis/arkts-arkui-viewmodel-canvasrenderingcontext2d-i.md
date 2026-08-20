@@ -2,6 +2,8 @@
 
 CanvasRenderingContext2D allows you to draw rectangles, text, images, and other objects on a canvas. You can call getContext('2d') on canvas to obtain a CanvasRenderingContext2D object.
 
+@interface CanvasRenderingContext2D
+
 **Since:** 4
 
 <!--Device-unnamed-export interface CanvasRenderingContext2D--><!--Device-unnamed-export interface CanvasRenderingContext2D-End-->

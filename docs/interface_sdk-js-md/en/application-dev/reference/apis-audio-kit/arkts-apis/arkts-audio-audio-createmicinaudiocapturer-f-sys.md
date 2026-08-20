@@ -43,11 +43,11 @@ Obtains a special [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) instance
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied, including background recording. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio system internal error, such as system process crash. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Capturer creation is not supported, may caused by following problems: <br> 1. Source type is unsupported for this capturer, only [SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT](arkts-audio-audio-sourcetype-e-sys.md#source_type_unprocessed_voice_assistant) is supported currently. <br> 2. Echo reference signal's config is unsupported, echo reference's sampling rate and format must be the same as MicIn audio data currently. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio system internal error, such as system process crash. |
 
 **Examples**
 

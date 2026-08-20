@@ -2,6 +2,8 @@
 
 Describes the rendering parameters.
 
+@interface RenderParameters
+
 **Since:** 23
 
 <!--Device-unnamed-export interface RenderParameters--><!--Device-unnamed-export interface RenderParameters-End-->

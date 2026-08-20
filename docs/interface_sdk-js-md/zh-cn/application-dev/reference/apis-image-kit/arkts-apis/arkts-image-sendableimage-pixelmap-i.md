@@ -22,7 +22,9 @@ import { sendableImage } from '@kit.ImageKit';
 applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<void>
 ```
 
-Apply color space of pixelmap, the pixels will be changed by input color space. This method uses a promise to return the result. This method is used to change color space of PixelMap. Pixel data will be changed by calling this method. If you want to set the colorspace property of PixelMap only, use method {@Link #setColorSpace(colorSpaceManager.ColorSpaceManager)}.
+Apply color space of pixelmap, the pixels will be changed by input color space. This method uses a promise to return the result.
+
+This method is used to change color space of PixelMap. Pixel data will be changed by calling this method. If you want to set the colorspace property of PixelMap only, use method {@Link #setColorSpace(colorSpaceManager.ColorSpaceManager)}.
 
 **起始版本：** 12
 
@@ -47,9 +49,9 @@ Apply color space of pixelmap, the pixels will be changed by input color space. 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
 | [62980104](../errorcode-image.md#62980104-图片初始化错误) | Failed to initialize the internal object. |
 | [62980108](../errorcode-image.md#62980108-图片颜色转换错误) | Failed to convert the color space. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
 
 **示例**
 
@@ -391,9 +393,9 @@ Get color space of pixelmap.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | If the image parameter invalid. |
 | [62980101](../errorcode-image.md#62980101-图片输入数据错误) | If the image data abnormal. |
 | [62980103](../errorcode-image.md#62980103-图片类型不支持) | If the image data unsupport. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | If the image parameter invalid. |
 
 **示例**
 
@@ -577,8 +579,8 @@ Marshalling PixelMap and write into MessageSequence.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) | IPC error. |
 | [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) | IPC error. |
 
 **示例**
 
@@ -1155,7 +1157,9 @@ function scaleSync(pixelMap: sendableImage.PixelMap) {
 setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void
 ```
 
-Set color space of pixelmap. This method is only used to set the colorspace property of PixelMap, while all pixel data remains the same after calling this method. If you want to change colorspace for all pixels, use method {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)}.
+Set color space of pixelmap.
+
+This method is only used to set the colorspace property of PixelMap, while all pixel data remains the same after calling this method. If you want to change colorspace for all pixels, use method {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)}.
 
 **起始版本：** 12
 
@@ -1173,8 +1177,8 @@ Set color space of pixelmap. This method is only used to set the colorspace prop
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | If the image parameter invalid. |
 | [62980111](../errorcode-image.md#62980111-图片源数据不完整) | If the operation invalid. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | If the image parameter invalid. |
 
 **示例**
 
@@ -1318,9 +1322,9 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
 | [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) | IPC error. |
 | [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
 
 **示例**
 

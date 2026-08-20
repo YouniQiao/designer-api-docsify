@@ -13,7 +13,13 @@ import { serialManager } from '@kit.BasicServicesKit';
 function usbCancelTransfer(transfer: UsbDataTransferParams): void
 ```
 
-取消异步传输请求。适用于需要主动终止未完成USB数据传输的场景，如用户手动取消长时间数据传输、传输超时后的错误恢复、应用切换时中止当前传输等。 &gt; **说明：** &gt; &gt; 主动取消尚未完成的USB数据传输请求（如usbSubmitTransfer提交的传输）。 &gt; 在调用该接口前需要通过[usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) claim通信接口。
+取消异步传输请求。适用于需要主动终止未完成USB数据传输的场景，如用户手动取消长时间数据传输、传输超时后的错误恢复、应用切换时中止当前传输等。
+
+> **说明：**
+> 
+> 主动取消尚未完成的USB数据传输请求（如usbSubmitTransfer提交的传输）。
+
+> 在调用该接口前需要通过[usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) claim通信接口。
 
 **起始版本：** 23
 
@@ -31,11 +37,11 @@ function usbCancelTransfer(transfer: UsbDataTransferParams): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14400011](../errorcode-usb.md#14400011-未找到正在进行的传输) | The transfer is not in progress, or is already complete or cancelled. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [14400010](../errorcode-usb.md#14400010-无法识别的错误) | Other USB error. Possible causes:  <br>1.Unrecognized discard error code. |
-| [14400008](../errorcode-usb.md#14400008-没有设备连接已断开) | No such device (it may have been disconnected). |
 | [14400001](../errorcode-usb.md#14400001-usb设备访问权限被拒绝) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
+| [14400008](../errorcode-usb.md#14400008-没有设备连接已断开) | No such device (it may have been disconnected). |
+| [14400010](../errorcode-usb.md#14400010-无法识别的错误) | Other USB error. Possible causes:  <br>1.Unrecognized discard error code. |
+| [14400011](../errorcode-usb.md#14400011-未找到正在进行的传输) | The transfer is not in progress, or is already complete or cancelled. |
 
 **示例**
 

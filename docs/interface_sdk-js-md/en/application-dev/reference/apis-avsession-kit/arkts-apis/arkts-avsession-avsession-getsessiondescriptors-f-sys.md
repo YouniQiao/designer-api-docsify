@@ -34,13 +34,13 @@ Get session descriptors of the system based on different session category.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[Readonly](../../apis-na/arkts-apis/arkts-na-readonly-t.md)&lt;[AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i-sys.md)&gt;&gt;&gt; | Promise for an array of AVSessionDescriptors |
+| Promise&lt;Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;[AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i-sys.md)&gt;&gt;&gt; | Promise for an array of AVSessionDescriptors |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 

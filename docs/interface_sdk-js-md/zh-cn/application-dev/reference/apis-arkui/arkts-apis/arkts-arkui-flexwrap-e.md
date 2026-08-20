@@ -2,6 +2,8 @@
 
 FlexWrap enumeration description
 
+@enum { number }
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare enum FlexWrap--><!--Device-unnamed-declare enum FlexWrap-End-->

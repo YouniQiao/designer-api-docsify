@@ -2,6 +2,8 @@
 
 Obtains the network selection mode option.
 
+@interface NetworkSelectionModeOptions
+
 **Since:** 23
 
 <!--Device-radio-export interface NetworkSelectionModeOptions--><!--Device-radio-export interface NetworkSelectionModeOptions-End-->

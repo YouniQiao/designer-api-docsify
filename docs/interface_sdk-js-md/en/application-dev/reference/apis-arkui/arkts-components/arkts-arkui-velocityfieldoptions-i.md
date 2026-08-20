@@ -2,6 +2,8 @@
 
 Parameter used to describe the velocity field of particles.
 
+@interface VelocityFieldOptions
+
 **Since:** 22
 
 <!--Device-unnamed-declare interface VelocityFieldOptions--><!--Device-unnamed-declare interface VelocityFieldOptions-End-->

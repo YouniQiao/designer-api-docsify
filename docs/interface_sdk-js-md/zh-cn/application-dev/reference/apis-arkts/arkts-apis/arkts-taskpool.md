@@ -1,6 +1,8 @@
 # @ohos.taskpool
 
-任务池（taskpool）为应用程序提供多线程运行环境，降低资源消耗并提升系统性能，开发者无需关心线程的生命周期。 使用任务池API可创建后台任务（Task），执行或取消任务等操作。理论上，任务池API允许创建的任务数量不受限制，但由于内存限制， 不建议无限制地创建大量任务。此外，不建议在任务中执行阻塞操作，尤其是无限期阻塞操作，因为阻塞操作会占用工作线程，影响其他任务的调度和应用性能。 创建同一优先级的任务时，可以自行决定其执行顺序。任务的实际执行顺序与任务提交到任务池的顺序一致。任务的默认优先级为MEDIUM。 当同一时间待执行的任务数量大于任务池工作线程数量，任务池会根据负载均衡机制进行扩容，增加工作线程数量，减少整体等待时长。 同样，当执行的任务数量减少，工作线程数量大于执行任务数量，部分工作线程处于空闲状态，任务池会根据负载均衡机制进行缩容，减少工作线程数量。 任务池API返回错误码。如需了解各错误码的详细信息，请参阅文档[语言基础类库错误码](../errorcode-utils.md)。 请查阅[TaskPool注意事项](../../../arkts-utils/taskpool-introduction.md#taskpool注意事项)，了解使用TaskPool时的相关注意点。 文档中涉及以下任务概念： - 任务组任务：对应为[TaskGroup](arkts-arkts-taskpool-taskgroup-c.md)任务。 - 串行队列任务：对应为[SequenceRunner](arkts-arkts-taskpool-sequencerunner-c.md)任务。 - 异步队列任务：对应为[AsyncRunner](arkts-arkts-taskpool-asyncrunner-c.md)任务。 - 周期任务：由[executePeriodically](arkts-arkts-taskpool-executeperiodically-f.md)执行的任务。
+任务池（taskpool）为应用程序提供多线程运行环境，降低资源消耗并提升系统性能，开发者无需关心线程的生命周期。 使用任务池API可创建后台任务（Task），执行或取消任务等操作。理论上，任务池API允许创建的任务数量不受限制，但由于内存限制， 不建议无限制地创建大量任务。此外，不建议在任务中执行阻塞操作，尤其是无限期阻塞操作，因为阻塞操作会占用工作线程，影响其他任务的调度和应用性能。 创建同一优先级的任务时，可以自行决定其执行顺序。任务的实际执行顺序与任务提交到任务池的顺序一致。任务的默认优先级为MEDIUM。 当同一时间待执行的任务数量大于任务池工作线程数量，任务池会根据负载均衡机制进行扩容，增加工作线程数量，减少整体等待时长。 同样，当执行的任务数量减少，工作线程数量大于执行任务数量，部分工作线程处于空闲状态，任务池会根据负载均衡机制进行缩容，减少工作线程数量。 任务池API返回错误码。如需了解各错误码的详细信息，请参阅文档[语言基础类库错误码](../errorcode-utils.md)。 请查阅[TaskPool注意事项](../../../arkts-utils/taskpool-introduction.md#taskpool注意事项)，了解使用TaskPool时的相关注意点。 文档中涉及以下任务概念：
+
+- 任务组任务：对应为[TaskGroup](arkts-arkts-taskpool-taskgroup-c.md)任务。 - 串行队列任务：对应为[SequenceRunner](arkts-arkts-taskpool-sequencerunner-c.md)任务。 - 异步队列任务：对应为[AsyncRunner](arkts-arkts-taskpool-asyncrunner-c.md)任务。 - 周期任务：由[executePeriodically](arkts-arkts-taskpool-executeperiodically-f.md)执行的任务。
 
 **起始版本：** 9
 
@@ -20,9 +22,9 @@ import { taskpool } from '@kit.ArkTS';
 
 | 名称 | 说明 |
 | --- | --- |
-| [cancel](arkts-arkts-taskpool-cancel-f.md) | 取消任务池中的任务。 - 当任务在taskpool等待队列中，取消该任务后该任务将不再执行，并返回任务被取消的异常。 - 当任务已经在taskpool工作线程执行，取消该任务并不影响任务继续执行。执行结果在catch分支返回，开发者可搭配isCanceled方法对任务取消行为作出响应。 - taskpool.cancel对其之前的taskpool.execute、taskpool.executeDelayed或taskpool.executePeriodically生效。 从API version 20开始，支持在执行cancel操作后，在catch分支里使用BusinessError&lt; [taskpool.TaskResult](arkts-arkts-taskpool-taskresult-i.md)&gt;的泛型标记，来获取任务中抛出的异常信息或最终的执行结果。 |
+| [cancel](arkts-arkts-taskpool-cancel-f.md) | 取消任务池中的任务。 - 当任务在taskpool等待队列中，取消该任务后该任务将不再执行，并返回任务被取消的异常。 - 当任务已经在taskpool工作线程执行，取消该任务并不影响任务继续执行。执行结果在catch分支返回，开发者可搭配isCanceled方法对任务取消行为作出响应。 - taskpool.cancel对其之前的taskpool.execute、taskpool.executeDelayed或taskpool.executePeriodically生效。 |
 | [cancel](arkts-arkts-taskpool-cancel-f.md) | 取消任务池中的任务组。如果任务组中的任务未全部执行结束，则整个任务组的执行结果返回undefined。 从API version 20开始，支持在执行cancel操作后，在catch分支里使用BusinessError&lt; [taskpool.TaskResult](arkts-arkts-taskpool-taskresult-i.md)&gt;的泛型标记，来获取任务中抛出的异常信息或最终的执行结果。 |
-| [cancel](arkts-arkts-taskpool-cancel-f.md) | 通过任务ID取消任务池中的任务。 - 如果任务在taskpool等待队列中，取消后任务将不再执行，并返回任务取消的异常。 - 当任务已经在taskpool工作线程执行，取消该任务并不影响任务继续执行。执行结果在catch分支返回，开发者可搭配isCanceled方法对任务取消行为作出响应。 - taskpool.cancel对其之前的taskpool.execute、taskpool.executeDelayed或taskpool.executePeriodically生效。 - 在其他线程调用taskpool.cancel时，需注意其行为是异步的，可能导致在cancel调用之后的taskpool.execute或taskpool.executeDelayed的任务被取消。 从API version 20开始，支持在执行cancel操作后，在catch分支里使用BusinessError&lt; [taskpool.TaskResult](arkts-arkts-taskpool-taskresult-i.md)&gt;的泛型标记。这可以用来获取任务中抛出的异常信息或最终的执行结果。 |
+| [cancel](arkts-arkts-taskpool-cancel-f.md) | 通过任务ID取消任务池中的任务。 - 如果任务在taskpool等待队列中，取消后任务将不再执行，并返回任务取消的异常。 - 当任务已经在taskpool工作线程执行，取消该任务并不影响任务继续执行。执行结果在catch分支返回，开发者可搭配isCanceled方法对任务取消行为作出响应。 - taskpool.cancel对其之前的taskpool.execute、taskpool.executeDelayed或taskpool.executePeriodically生效。 - 在其他线程调用taskpool.cancel时，需注意其行为是异步的，可能导致在cancel调用之后的taskpool.execute或taskpool.executeDelayed的任务被取消。 |
 | [execute](arkts-arkts-taskpool-execute-f.md) | 将待执行的函数放入taskpool的内部任务队列，函数不会立即执行，而是等待分发到工作线程执行。在当前执行模式下， 不支持取消任务。使用Promise异步回调。 |
 | [execute](arkts-arkts-taskpool-execute-f.md) | 校验并发函数的参数类型和返回类型后，将函数添加到taskpool的任务队列。在当前执行模式下，不支持取消任务。使用Promise异步回调。 |
 | [execute](arkts-arkts-taskpool-execute-f.md) | 将创建好的任务添加到taskpool的内部任务队列中，任务不会立即执行，而是等待分发到工作线程执行。当前模式支持设置任务优先级和通过cancel取消任务。使用Promise异步回调。 |
@@ -66,7 +68,7 @@ import { taskpool } from '@kit.ArkTS';
 | 名称 | 说明 |
 | --- | --- |
 | [Priority](arkts-arkts-taskpool-priority-e.md) | 表示所创建任务（Task）执行时的优先级。工作线程优先级跟随任务优先级更新，对应关系参考QoS等级定义。 |
-| [State](arkts-arkts-taskpool-state-e.md) | 表示任务（Task）状态的枚举。 状态转换规则如下： - 当任务创建成功后，调用execute，任务进入taskpool等待队列，状态设置为WAITING。 - 任务从等待队列出来进入taskpool工作线程中，任务状态更新为RUNNING。 - 当任务执行完成，返回结果后，如果任务再次被执行，则状态重置为WAITING。 - 当主动cancel任务时，将任务状态更新为CANCELED。 |
+| [State](arkts-arkts-taskpool-state-e.md) | 表示任务（Task）状态的枚举。 |
 
 ### 类型
 

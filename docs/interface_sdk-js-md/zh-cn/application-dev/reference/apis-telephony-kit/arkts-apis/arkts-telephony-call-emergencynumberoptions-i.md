@@ -20,7 +20,9 @@ import { call } from '@kit.TelephonyKit';
 slotId?: int
 ```
 
-卡槽ID： - 卡槽1：`0`。 - 卡槽2：`1`。
+卡槽ID：
+
+- 卡槽1：`0`。 - 卡槽2：`1`。
 
 **类型：** int
 

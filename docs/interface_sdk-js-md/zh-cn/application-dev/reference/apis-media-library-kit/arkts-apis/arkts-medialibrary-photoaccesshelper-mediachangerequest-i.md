@@ -1,6 +1,10 @@
 # MediaChangeRequest
 
-媒体变更请求，资产变更请求和相册变更请求的父类型。 &gt; **注意**： &gt; &gt; 媒体变更请求需要在调用[applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges)后才会 &gt; 提交生效。
+媒体变更请求，资产变更请求和相册变更请求的父类型。
+
+> **注意**：
+> 
+> 媒体变更请求需要在调用[applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges)后才会 &gt; 提交生效。
 
 **起始版本：** 23
 
@@ -20,7 +24,9 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 readonly comment: string
 ```
 
-用于MediaChangeRequest类型校验。 如果类（如[MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md)或 [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md)）对象可以访问，就说明该类是MediaChangeRequest的实现类。
+用于MediaChangeRequest类型校验。
+
+如果类（如[MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md)或 [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md)）对象可以访问，就说明该类是MediaChangeRequest的实现类。
 
 **类型：** string
 

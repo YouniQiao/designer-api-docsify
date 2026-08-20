@@ -1,6 +1,11 @@
 # AdComponent
 
-This module provides the capability of displaying ads, covering native, roll, splash, and other ad styles. &gt; **NOTE：**&gt; &gt; To ensure that ads can be displayed correctly, this API must be used in conjunction with the ad request API. &gt; For effects and usage methods, refer to &gt; [Native Ads](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ads-publisher-service-native), &gt; [Roll Ads](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ads-publisher-service-roll), &gt; and [Splash Ads](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ads-publisher-service-splash) &gt; integration and display.
+This module provides the capability of displaying ads, covering native, roll, splash, and other ad styles.
+
+> **NOTE：**
+> 
+> To ensure that ads can be displayed correctly, this API must be used in conjunction with the ad request API.
+> For effects and usage methods, refer to &gt; [Native Ads](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ads-publisher-service-native), &gt; [Roll Ads](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ads-publisher-service-roll), &gt; and [Splash Ads](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ads-publisher-service-splash) &gt; integration and display.
 
 **Since:** 11
 
@@ -55,7 +60,9 @@ Application self-rendered ad style. The application self-rendered ad style is a 
 ads: advertising.Advertisement[]
 ```
 
-Array of ad objects. NOTE: For non-roll ad types, the component only displays the first data in the array.
+Array of ad objects.
+
+NOTE: For non-roll ad types, the component only displays the first data in the array.
 
 **Type:** advertising.Advertisement[]
 

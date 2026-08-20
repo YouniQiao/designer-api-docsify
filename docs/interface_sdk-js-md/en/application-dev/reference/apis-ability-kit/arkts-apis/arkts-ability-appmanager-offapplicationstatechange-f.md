@@ -33,8 +33,8 @@ Unregister application state observer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 
 ## offApplicationStateChange
@@ -69,6 +69,6 @@ Unregister application state observer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 

@@ -1,6 +1,6 @@
 # MediaInfo
 
-Represents a **MediaInfo** object used as a parameter of the [CreateNativeMediaPlayerCallback](../../apis-na/arkts-apis/arkts-na-webview-createnativemediaplayercallback-t.md) callback. The object contains information about media on the web page. The application may create, based on the information, a player that takes over media playback of the web page.
+Represents a **MediaInfo** object used as a parameter of the [CreateNativeMediaPlayerCallback](../../apis-default/arkts-apis/arkts-webview-createnativemediaplayercallback-t.md) callback. The object contains information about media on the web page. The application may create, based on the information, a player that takes over media playback of the web page.
 
 **Since:** 12
 
@@ -54,7 +54,9 @@ Value of the **controlslist** attribute in **&lt;video&gt;** or **&lt;audio&gt;*
 controlsShown: boolean
 ```
 
-Whether the `&lt;video&gt;` or `&lt;audio&gt;` element has the `controls` attribute. The value **true** indicates that it has, and **false** indicates that it does not.
+Whether the `&lt;video&gt;` or `&lt;audio&gt;` element has the `controls` attribute.
+
+The value **true** indicates that it has, and **false** indicates that it does not.
 
 **Type:** boolean
 
@@ -106,7 +108,7 @@ mediaSrcList: MediaSourceInfo[]
 
 Source of the media. There may be multiple sources. The application needs to select a supported source to play.
 
-**Type:** [MediaSourceInfo](../../apis-na/arkts-apis/arkts-na-webview-mediasourceinfo-c.md)[]
+**Type:** [MediaSourceInfo](../../apis-default/arkts-apis/arkts-webview-mediasourceinfo-c.md)[]
 
 **Since:** 12
 
@@ -140,7 +142,9 @@ Type of the media.
 muted: boolean
 ```
 
-Whether muted playback is required. The value **true** indicates muted playback, and **false** indicates non-muted playback.
+Whether muted playback is required.
+
+The value **true** indicates muted playback, and **false** indicates non-muted playback.
 
 **Type:** boolean
 
@@ -178,7 +182,7 @@ preload: Preload
 
 Whether preloading is required.
 
-**Type:** [Preload](../../apis-na/arkts-apis/arkts-na-webview-preload-e.md)
+**Type:** [Preload](../../apis-default/arkts-apis/arkts-webview-preload-e.md)
 
 **Since:** 12
 
@@ -196,7 +200,7 @@ surfaceInfo: NativeMediaPlayerSurfaceInfo
 
 Surface information used for same-layer rendering.
 
-**Type:** [NativeMediaPlayerSurfaceInfo](../../apis-na/arkts-apis/arkts-na-webview-nativemediaplayersurfaceinfo-c.md)
+**Type:** [NativeMediaPlayerSurfaceInfo](../../apis-default/arkts-apis/arkts-webview-nativemediaplayersurfaceinfo-c.md)
 
 **Since:** 12
 

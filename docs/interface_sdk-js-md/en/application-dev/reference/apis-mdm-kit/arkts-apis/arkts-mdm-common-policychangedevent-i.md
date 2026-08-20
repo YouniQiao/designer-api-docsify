@@ -1,6 +1,8 @@
 # PolicyChangedEvent
 
-Defines the policy change event. This API is used as a callback input parameter of [onAdminPolicyChanged](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onadminpolicychanged).
+Defines the policy change event.
+
+This API is used as a callback input parameter of [onAdminPolicyChanged](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onadminpolicychanged).
 
 **Since:** 26.0.0
 

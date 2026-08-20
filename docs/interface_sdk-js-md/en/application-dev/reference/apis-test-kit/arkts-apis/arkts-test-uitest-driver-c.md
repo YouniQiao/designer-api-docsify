@@ -47,9 +47,9 @@ Asserts whether a component matches the specified attributes exists on the curre
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000003](../errorcode-uitest.md#17000003-assertion-failure) | Assertion failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000003](../errorcode-uitest.md#17000003-assertion-failure) | Assertion failed. |
 
 **Examples**
 
@@ -1034,7 +1034,11 @@ async function demo() {
 getDisplayDensity(): Promise<Point>
 ```
 
-Obtains the display density of the current device. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This method can only be used to obtain the display density of the home screen. To obtain the display density &gt; of a specified screen, use [getDisplayDensity](#getdisplaydensity)(displayId: number).
+Obtains the display density of the current device. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This method can only be used to obtain the display density of the home screen. To obtain the display density &gt; of a specified screen, use [getDisplayDensity](#getdisplaydensity)(displayId: number).
 
 **Since:** 23
 
@@ -1121,7 +1125,11 @@ async function demo() {
 getDisplayRotation(): Promise<DisplayRotation>
 ```
 
-Obtains the display rotation of the current device. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This method can only be used to obtain the display rotation of the home screen. To obtain the display rotation &gt; of a specified screen, use [getDisplayRotation](#getdisplayrotation)(displayId: number).
+Obtains the display rotation of the current device. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This method can only be used to obtain the display rotation of the home screen. To obtain the display rotation &gt; of a specified screen, use [getDisplayRotation](#getdisplayrotation)(displayId: number).
 
 **Since:** 23
 
@@ -1208,7 +1216,11 @@ async function demo() {
 getDisplaySize(): Promise<Point>
 ```
 
-Obtains the display size of the current device. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This method can only be used to obtain the display size of the home screen. To obtain the display size of a &gt; specified screen, use [getDisplaySize](#getdisplaysize)(displayId: number).
+Obtains the display size of the current device. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This method can only be used to obtain the display size of the home screen. To obtain the display size of a &gt; specified screen, use [getDisplaySize](#getdisplaysize)(displayId: number).
 
 **Since:** 23
 
@@ -1295,7 +1307,11 @@ async function demo() {
 injectKnucklePointerAction(pointers: PointerMatrix, speed?: int): Promise<void>
 ```
 
-Simulates a multi-point knuckle scrolling operation. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; If the knuckle gesture is disabled on the device<!--RP4--><!--RP4End-->, 17000005 is returned.
+Simulates a multi-point knuckle scrolling operation. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> If the knuckle gesture is disabled on the device<!--RP4--><!--RP4End-->, 17000005 is returned.
 
 **Since:** 23
 
@@ -1323,8 +1339,8 @@ Simulates a multi-point knuckle scrolling operation. This API uses a promise to 
 | Error Code ID | Error Message |
 | --- | --- |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 **Examples**
 
@@ -1724,7 +1740,11 @@ async function demo() {
 knuckleKnock(pointers: Array<Point>, times: int): Promise<void>
 ```
 
-Simulates a knuckle knock on the display. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; If the knuckle gesture is disabled on the device<!--RP4--><!--RP4End-->, 17000005 is returned.
+Simulates a knuckle knock on the display. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> If the knuckle gesture is disabled on the device<!--RP4--><!--RP4End-->, 17000005 is returned.
 
 **Since:** 23
 
@@ -1752,8 +1772,8 @@ Simulates a knuckle knock on the display. This API uses a promise to return the 
 | Error Code ID | Error Message |
 | --- | --- |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 **Examples**
 
@@ -2636,7 +2656,11 @@ async function demo() {
 pressBack(): Promise<void>
 ```
 
-Simulates pressing the Back button. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This method only simulates pressing the Back button on the home screen. To simulate pressing the Back button &gt; on a specified screen, use pressBack(displayId: number).
+Simulates pressing the Back button. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This method only simulates pressing the Back button on the home screen. To simulate pressing the Back button &gt; on a specified screen, use pressBack(displayId: number).
 
 **Since:** 23
 
@@ -3269,8 +3293,8 @@ Simulates a two-finger scroll gesture on the touchpad. This API uses a promise t
 | Error Code ID | Error Message |
 | --- | --- |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 **Examples**
 
@@ -3486,7 +3510,11 @@ async function demo() {
 triggerPenKey(key: PenKey, mode: PenMode, operation: PenKeyOperation, options?: PenKeyOperationOptions): Promise<void>
 ```
 
-Trigger pen key operation. Supported combinations: - HANDWRITING mode: HANDWRITING key with CLICK or DOUBLE_CLICK operation. - AIR_MOUSE mode: AIR_MOUSE key with CLICK or DOUBLE_CLICK operation (requires point in options), HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK operation. Other combinations will result in a BusinessError 17000007.
+Trigger pen key operation.
+
+Supported combinations:
+
+- HANDWRITING mode: HANDWRITING key with CLICK or DOUBLE_CLICK operation. - AIR_MOUSE mode: AIR_MOUSE key with CLICK or DOUBLE_CLICK operation (requires point in options), HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK operation. Other combinations will result in a BusinessError 17000007.
 
 **Since:** 26.0.0
 
@@ -3516,8 +3544,8 @@ Trigger pen key operation. Supported combinations: - HANDWRITING mode: HANDWRITI
 | Error Code ID | Error Message |
 | --- | --- |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. Unsupported key, mode, and operation combination. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. Unsupported key, mode, and operation combination. |
 
 ## waitForComponent
 

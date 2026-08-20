@@ -1,4 +1,4 @@
-# USBRequestDirection(USB Manager)
+# USBRequestDirection
 
 请求方向。
 

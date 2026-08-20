@@ -25,12 +25,12 @@ import { Request, DownloadRequestOptions, DownloadResponse, OnDownloadCompleteOp
 
 | Name | Description |
 | --- | --- |
-| [DownloadRequestOptions(Upload and Download)](arkts-basicservices-system-request-downloadrequestoptions-i.md) | > **NOTE：**&gt; &gt; This API has been supported since API version 3 and deprecated since API version 9. You are advised to use &gt; [UploadConfig](arkts-basicservices-agent-config-i.md) instead. |
+| [DownloadRequestOptions(Upload and Download)](arkts-basicservices-system-request-downloadrequestoptions-i.md) | > **NOTE：** >  > This API has been supported since API version 3 and deprecated since API version 9. You are advised to use &gt; [UploadConfig](arkts-basicservices-agent-config-i.md) instead. |
 | [DownloadResponse(Upload and Download)](arkts-basicservices-system-request-downloadresponse-i.md) |  |
 | [OnDownloadCompleteOptions(Upload and Download)](arkts-basicservices-system-request-ondownloadcompleteoptions-i.md) |  |
 | [OnDownloadCompleteResponse(Upload and Download)](arkts-basicservices-system-request-ondownloadcompleteresponse-i.md) |  |
 | [RequestData(Upload and Download)](arkts-basicservices-system-request-requestdata-i.md) |  |
 | [RequestFile(Upload and Download)](arkts-basicservices-system-request-requestfile-i.md) |  |
-| [UploadRequestOptions(Upload and Download)](arkts-basicservices-system-request-uploadrequestoptions-i.md) | > **NOTE：**&gt; &gt; This API has been supported since API version 3 and deprecated since API version 9. You are advised to use &gt; [UploadConfig](arkts-basicservices-agent-config-i.md) instead. |
+| [UploadRequestOptions(Upload and Download)](arkts-basicservices-system-request-uploadrequestoptions-i.md) | > **NOTE：** >  > This API has been supported since API version 3 and deprecated since API version 9. You are advised to use &gt; [UploadConfig](arkts-basicservices-agent-config-i.md) instead. |
 | [UploadResponse(Upload and Download)](arkts-basicservices-system-request-uploadresponse-i.md) |  |
 

@@ -22,7 +22,11 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 addResource(type: ResourceType, fileUri: string): void
 ```
 
-Adds resources from the application sandbox based on the file URI. For details about the data source, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md). &gt; **NOTE：**&gt; &gt; For the same asset change request, this API cannot be repeatedly called after the resource is successfully &gt; added. For a moving photo, you can call this API twice to add the image and video resources.
+Adds resources from the application sandbox based on the file URI. For details about the data source, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+
+> **NOTE：**
+> 
+> For the same asset change request, this API cannot be repeatedly called after the resource is successfully &gt; added. For a moving photo, you can call this API twice to add the image and video resources.
 
 **Since:** 23
 
@@ -44,9 +48,9 @@ Adds resources from the application sandbox based on the file URI. For details a
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000016 | Operation Not Support |
 | 13900002 | The file corresponding to the URI is not in the app sandbox. |
 | 14000011 | System inner fail |
+| 14000016 | Operation Not Support |
 
 ## addResource
 
@@ -54,7 +58,11 @@ Adds resources from the application sandbox based on the file URI. For details a
 addResource(type: ResourceType, data: ArrayBuffer): void
 ```
 
-Adds a resource using **ArrayBuffer** data. &gt; **NOTE：**&gt; &gt; For the same asset change request, this API cannot be repeatedly called after the resource is successfully &gt; added. For a moving photo, you can call this API twice to add the image and video resources.
+Adds a resource using **ArrayBuffer** data.
+
+> **NOTE：**
+> 
+> For the same asset change request, this API cannot be repeatedly called after the resource is successfully &gt; added. For a moving photo, you can call this API twice to add the image and video resources.
 
 **Since:** 23
 
@@ -76,8 +84,8 @@ Adds a resource using **ArrayBuffer** data. &gt; **NOTE：**&gt; &gt; For the sa
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000016 | Operation Not Support |
 | 14000011 | System inner fail |
+| 14000016 | Operation Not Support |
 
 ## constructor
 
@@ -190,7 +198,9 @@ Create an asset change request based on the file type and filename extension.
 static createImageAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest
 ```
 
-Creates an image asset change request. For details about data source of the asset to be created, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+Creates an image asset change request.
+
+For details about data source of the asset to be created, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
 
 **Since:** 11
 
@@ -255,8 +265,8 @@ Creates an image asset change request.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | 23800101 | The file corresponding to the URI is not in the app sandbox. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## createVideoAssetRequest
 
@@ -264,7 +274,9 @@ Creates an image asset change request.
 static createVideoAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest
 ```
 
-Creates a video asset change request. For details about data source of the asset to be created, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+Creates a video asset change request.
+
+For details about data source of the asset to be created, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
 
 **Since:** 11
 
@@ -325,8 +337,8 @@ Creates a video asset change request.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | 23800101 | The file corresponding to the URI is not in the app sandbox. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## deleteAssets
 
@@ -361,8 +373,8 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
 ## deleteAssets
@@ -398,9 +410,9 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000002 | The uri format is incorrect or does not exist. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | 14000011 | System inner fail |
 
 ## deleteAssetsToTrashWithUris
@@ -436,9 +448,9 @@ Deletes media assets. This API uses a promise to return the result. The deleted 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: <br>1. context is null or invalid; <br>2. The uri format is incorrect or does not exist. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## discardCameraPhoto
 
@@ -458,8 +470,8 @@ Discards the photo taken by the camera.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14000016 | Operation Not Support |
 | 14000011 | Internal system error |
+| 14000016 | Operation Not Support |
 
 ## getAsset
 
@@ -467,7 +479,11 @@ Discards the photo taken by the camera.
 getAsset(): PhotoAsset
 ```
 
-Obtains the asset in this asset change request. &gt; **NOTE：**&gt; &gt; For the change request used to create an asset, this API returns **null** before &gt; [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) is called &gt; to apply the changes.
+Obtains the asset in this asset change request.
+
+> **NOTE：**
+> 
+> For the change request used to create an asset, this API returns **null** before &gt; [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) is called &gt; to apply the changes.
 
 **Since:** 11
 
@@ -524,7 +540,11 @@ Obtains the asset in this asset change request.
 getWriteCacheHandler(): Promise<int>
 ```
 
-Obtains the handler used for writing a file to cache. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; For the same asset change request, this API cannot be repeatedly called after a temporary file write handle is &gt; successfully obtained.
+Obtains the handler used for writing a file to cache. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> For the same asset change request, this API cannot be repeatedly called after a temporary file write handle is &gt; successfully obtained.
 
 **Since:** 23
 
@@ -544,10 +564,10 @@ Obtains the handler used for writing a file to cache. This API uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
-| 14000016 | Operation Not Support |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 14000011 | System inner fail. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
+| 14000016 | Operation Not Support |
 
 ## saveCameraPhoto
 
@@ -567,8 +587,8 @@ Saves the photo taken by the camera.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14000016 | Operation Not Support |
 | 14000011 | System inner fail |
+| 14000016 | Operation Not Support |
 
 ## saveCameraPhoto
 
@@ -594,8 +614,8 @@ Saves the photo taken by the camera.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14000016 | Operation Not Support |
 | 14000011 | System inner fail |
+| 14000016 | Operation Not Support |
 
 ## setOrientation
 

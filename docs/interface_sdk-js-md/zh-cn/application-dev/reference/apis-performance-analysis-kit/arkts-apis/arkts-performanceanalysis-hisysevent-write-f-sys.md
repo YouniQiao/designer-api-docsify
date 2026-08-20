@@ -39,14 +39,14 @@ function write(info: SysEventInfo): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [11200001](../errorcode-hisysevent-sys.md#11200001-非法的事件领域) | Invalid event domain. |
 | [11200002](../errorcode-hisysevent-sys.md#11200002-非法的事件名称) | Invalid event name. |
 | [11200003](../errorcode-hisysevent-sys.md#11200003-环境异常) | Abnormal environment. |
-| [11200051](../errorcode-hisysevent-sys.md#11200051-非法的事件参数) | Invalid event parameter. |
-| [11200001](../errorcode-hisysevent-sys.md#11200001-非法的事件领域) | Invalid event domain. |
-| [11200054](../errorcode-hisysevent-sys.md#11200054-数组类型的事件参数值的长度超过限制) | The number of event parameters of the array type exceeds the limit. |
 | [11200004](../errorcode-hisysevent-sys.md#11200004-事件长度超过限制) | The event length exceeds the limit. |
+| [11200051](../errorcode-hisysevent-sys.md#11200051-非法的事件参数) | Invalid event parameter. |
 | [11200052](../errorcode-hisysevent-sys.md#11200052-字符串类型的事件参数值的长度超过限制) | The size of the event parameter of the string type exceeds the limit. |
 | [11200053](../errorcode-hisysevent-sys.md#11200053-事件参数的数量超过限制) | The number of event parameters exceeds the limit. |
+| [11200054](../errorcode-hisysevent-sys.md#11200054-数组类型的事件参数值的长度超过限制) | The number of event parameters of the array type exceeds the limit. |
 
 **示例**
 
@@ -146,21 +146,21 @@ function write(info: SysEventInfo, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | info | [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md) | 是 | 系统事件。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，可以在回调函数中处理接口返回值。 <br/>- 0表示事件校验成功，事件正常异步写入事件文件； <br/>- 正值表示事件打点存在异常，但可以正常写入； <br/>- 负值表示事件打点失败。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，可以在回调函数中处理接口返回值。 <br/>- 0表示事件校验成功，事件正常异步写入事件文件； <br/>- 正值表示事件打点存在异常，但可以正常写入； <br/>- 负值表示事件打点失败。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [11200001](../errorcode-hisysevent-sys.md#11200001-非法的事件领域) | Invalid event domain. |
 | [11200002](../errorcode-hisysevent-sys.md#11200002-非法的事件名称) | Invalid event name. |
 | [11200003](../errorcode-hisysevent-sys.md#11200003-环境异常) | Abnormal environment. |
-| [11200051](../errorcode-hisysevent-sys.md#11200051-非法的事件参数) | Invalid event parameter. |
-| [11200001](../errorcode-hisysevent-sys.md#11200001-非法的事件领域) | Invalid event domain. |
-| [11200054](../errorcode-hisysevent-sys.md#11200054-数组类型的事件参数值的长度超过限制) | The number of event parameters of the array type exceeds the limit. |
 | [11200004](../errorcode-hisysevent-sys.md#11200004-事件长度超过限制) | The event length exceeds the limit. |
+| [11200051](../errorcode-hisysevent-sys.md#11200051-非法的事件参数) | Invalid event parameter. |
 | [11200052](../errorcode-hisysevent-sys.md#11200052-字符串类型的事件参数值的长度超过限制) | The size of the event parameter of the string type exceeds the limit. |
 | [11200053](../errorcode-hisysevent-sys.md#11200053-事件参数的数量超过限制) | The number of event parameters exceeds the limit. |
+| [11200054](../errorcode-hisysevent-sys.md#11200054-数组类型的事件参数值的长度超过限制) | The number of event parameters of the array type exceeds the limit. |
 
 **示例**
 

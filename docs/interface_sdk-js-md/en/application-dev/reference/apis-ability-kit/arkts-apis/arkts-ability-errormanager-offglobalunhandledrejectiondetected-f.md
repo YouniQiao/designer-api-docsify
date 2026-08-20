@@ -12,7 +12,9 @@ import { errorManager } from '@kit.AbilityKit';
 function off(type: 'globalUnhandledRejectionDetected', observer?: GlobalObserver): void
 ```
 
-Unregisters a rejected promise observer. After the deregistration, promise exceptions in the process cannot be listened for. If the observer passed in is not in the observer queue registered via the **on** API, error code 16300004 is thrown. Therefore, you are advised to handle this using **try-catch** logic.
+Unregisters a rejected promise observer. After the deregistration, promise exceptions in the process cannot be listened for.
+
+If the observer passed in is not in the observer queue registered via the **on** API, error code 16300004 is thrown. Therefore, you are advised to handle this using **try-catch** logic.
 
 **Since:** 18
 

@@ -2,6 +2,8 @@
 
 Provides the border information of the child component.
 
+@interface LayoutBorderInfo
+
 **Since:** 9
 
 **Deprecated since:** 10

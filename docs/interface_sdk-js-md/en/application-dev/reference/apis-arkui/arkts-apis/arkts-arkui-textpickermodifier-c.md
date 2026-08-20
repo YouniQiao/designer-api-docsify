@@ -2,6 +2,8 @@
 
 Defines TextPicker Modifier
 
+@implements { TextPickerAttribute, AttributeModifier&lt;TextPickerAttribute&gt; }
+
 **Inheritance/Implementation:** TextPickerModifier implements TextPickerAttribute, AttributeModifier<TextPickerAttribute>
 
 **Since:** 23

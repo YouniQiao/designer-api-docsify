@@ -2,6 +2,8 @@
 
 Provides methods to operate or manage NFC tag.
 
+@namespace tag
+
 **Since:** 23
 
 <!--Device-unnamed-declare namespace tag--><!--Device-unnamed-declare namespace tag-End-->

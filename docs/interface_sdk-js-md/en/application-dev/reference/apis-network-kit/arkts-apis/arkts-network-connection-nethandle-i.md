@@ -1,6 +1,8 @@
 # NetHandle
 
-Represents the network handle. Before invoking **NetHandle** APIs, call **getNetHandle** to obtain a **NetHandle** object. For example, you can call [getDefaultNet](arkts-network-connection-getdefaultnet-f.md) to obtain the network handle of the default network.
+Represents the network handle.
+
+Before invoking **NetHandle** APIs, call **getNetHandle** to obtain a **NetHandle** object. For example, you can call [getDefaultNet](arkts-network-connection-getdefaultnet-f.md) to obtain the network handle of the default network.
 
 **Since:** 23
 
@@ -225,11 +227,11 @@ Obtains the first IP address by using the network specified by **NetHandle** to 
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 
@@ -285,11 +287,11 @@ Obtains the first IP address by using the network specified by **NetHandle** to 
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 
@@ -337,11 +339,11 @@ Obtains all IP addresses by using the network specified by **NetHandle** to reso
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 
@@ -399,11 +401,11 @@ Obtains all IP addresses by using the network specified by **NetHandle** to reso
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 
@@ -457,10 +459,10 @@ Performs DNS resolution using the network specified by **NetHandle** based on th
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 

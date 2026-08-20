@@ -43,9 +43,9 @@ Checks the validity period of this X.509 certificate.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [19030003](../errorcode-cert.md#19030003-certificate-has-not-taken-effect) | The certificate has not taken effect. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030003](../errorcode-cert.md#19030003-certificate-has-not-taken-effect) | The certificate has not taken effect. |
 | [19030004](../errorcode-cert.md#19030004-certificate-expired) | The certificate has expired. |
 
 **Examples**
@@ -187,8 +187,8 @@ Obtains the CRL distribution points of this X.509 certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 **Examples**
@@ -341,9 +341,9 @@ Obtains the serialized X.509 certificate data. This API uses an asynchronous cal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 **Examples**
@@ -419,9 +419,9 @@ Obtains the serialized X.509 certificate data. This API uses a promise to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 **Examples**
@@ -494,8 +494,8 @@ Obtains the usage of the extended key of this X.509 certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 **Examples**
@@ -582,8 +582,8 @@ Obtains the certificate extension object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 **Examples**
@@ -651,7 +651,11 @@ async function certGetExtensionsObject() {
 getIssuerAltNames(): DataArray
 ```
 
-Obtains the Issuer Alternative Names (IANs) of this X.509 certificate. &gt; **NOTE：**&gt; &gt; The obtained IANs contain a string terminator.
+Obtains the Issuer Alternative Names (IANs) of this X.509 certificate.
+
+> **NOTE：**
+> 
+> The obtained IANs contain a string terminator.
 
 **Since:** 23
 
@@ -671,8 +675,8 @@ Obtains the Issuer Alternative Names (IANs) of this X.509 certificate. &gt; **NO
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 **Examples**
@@ -737,7 +741,12 @@ cert.createX509Cert(encodingBlob, (error, x509Cert) => {
 getIssuerName(): DataBlob
 ```
 
-Obtains the issuer name of this X.509 certificate. &gt; **NOTE：**&gt; &gt; - The obtained X.509 certificate issuer name ends with a NUL terminator (value 0). Determine whether to remove &gt; this terminator based on your business requirements. &gt; - The obtained certificate issuer name is ASCII-encoded. When converted to a string, it is a distinguished name &gt; string that starts with a slash (/) and uses slashes (/) to separate relative distinguished names.
+Obtains the issuer name of this X.509 certificate.
+
+> **NOTE：**
+> 
+> - The obtained X.509 certificate issuer name ends with a NUL terminator (value 0). Determine whether to remove &gt; this terminator based on your business requirements.
+> - The obtained certificate issuer name is ASCII-encoded. When converted to a string, it is a distinguished name &gt; string that starts with a slash (/) and uses slashes (/) to separate relative distinguished names.
 
 **Since:** 23
 
@@ -757,8 +766,8 @@ Obtains the issuer name of this X.509 certificate. &gt; **NOTE：**&gt; &gt; - T
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 **Examples**
@@ -840,9 +849,9 @@ Obtains the issuer name of this X.509 certificate based on the encoding type.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: <br>1. The value of encodingType is not in the EncodingType enumeration range. |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 **Examples**
@@ -931,8 +940,8 @@ Obtains the X.500 distinguished name object of the X.509 certificate issuer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 **Examples**
@@ -1026,9 +1035,9 @@ Obtains the fields in the X.509 certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 **Examples**
@@ -1191,8 +1200,8 @@ Obtains the expiration time of this X.509 certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 **Examples**
@@ -1269,8 +1278,8 @@ Obtains the start time of this X.509 certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 **Examples**
@@ -1402,7 +1411,11 @@ cert.createX509Cert(encodingBlob, (error, x509Cert) => {
 getSerialNumber(): number
 ```
 
-Obtains the X.509 certificate serial number. &gt; **NOTE：**&gt; &gt; This API is supported since API version 9 and deprecated since API version 10. Use &gt; [X509Cert.getCertSerialNumber()](#getcertserialnumber) instead.
+Obtains the X.509 certificate serial number.
+
+> **NOTE：**
+> 
+> This API is supported since API version 9 and deprecated since API version 10. Use &gt; [X509Cert.getCertSerialNumber()](#getcertserialnumber) instead.
 
 **Since:** 9
 
@@ -1487,8 +1500,8 @@ Obtains the signature data of this X.509 certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 **Examples**
@@ -1565,8 +1578,8 @@ Obtains the signing algorithm of this X.509 certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 **Examples**
@@ -1643,8 +1656,8 @@ Obtains the object identifier (OID) of the X.509 certificate signing algorithm. 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 **Examples**
@@ -1720,9 +1733,9 @@ Obtains the signing algorithm parameters of this X.509 certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | This operation is not supported. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 **Examples**
@@ -1793,7 +1806,11 @@ cert.createX509Cert(encodingBlob, (error, x509Cert) => {
 getSubjectAltNames(): DataArray
 ```
 
-Obtains the Subject Alternative Names (SANs) of this X.509 certificate. &gt; **NOTE：**&gt; &gt; The obtained SANs contain a string terminator.
+Obtains the Subject Alternative Names (SANs) of this X.509 certificate.
+
+> **NOTE：**
+> 
+> The obtained SANs contain a string terminator.
 
 **Since:** 23
 
@@ -1813,8 +1830,8 @@ Obtains the Subject Alternative Names (SANs) of this X.509 certificate. &gt; **N
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 **Examples**
@@ -1881,7 +1898,13 @@ cert.createX509Cert(encodingBlob, (error, x509Cert) => {
 getSubjectName(encodingType?: EncodingType): DataBlob
 ```
 
-Obtains the subject name of this X.509 certificate. &gt; **NOTE：**&gt; &gt; - If the encodingType parameter is not set, the obtained certificate subject name ends with a &gt; NUL terminator (value 0). Determine whether to remove this terminator based on your business requirements. &gt; - If the encodingType parameter is not set, the obtained certificate subject name is ASCII-encoded. When &gt; converted to a string, it is a distinguished name string that starts with a slash (/) and uses slashes (/) to &gt; separate relative distinguished names. &gt; - It is recommended to set the encodingType parameter to EncodingType.ENCODING_UTF8. The obtained certificate &gt; subject name is a distinguished name string that uses commas (,) to separate relative distinguished names.
+Obtains the subject name of this X.509 certificate.
+
+> **NOTE：**
+> 
+> - If the encodingType parameter is not set, the obtained certificate subject name ends with a &gt; NUL terminator (value 0). Determine whether to remove this terminator based on your business requirements.
+> - If the encodingType parameter is not set, the obtained certificate subject name is ASCII-encoded. When &gt; converted to a string, it is a distinguished name string that starts with a slash (/) and uses slashes (/) to &gt; separate relative distinguished names.
+> - It is recommended to set the encodingType parameter to EncodingType.ENCODING_UTF8. The obtained certificate &gt; subject name is a distinguished name string that uses commas (,) to separate relative distinguished names.
 
 **Since:** 23
 
@@ -1907,10 +1930,10 @@ Obtains the subject name of this X.509 certificate. &gt; **NOTE：**&gt; &gt; - 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Incorrect parameter types; <br>2. Parameter verification failed.<br>**Applicable version:** 12 and later |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Incorrect parameter types; <br>2. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -1991,8 +2014,8 @@ Obtains the X.500 distinguished name object of the X.509 certificate subject.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 **Examples**
@@ -2142,8 +2165,8 @@ Obtains the hash value of the data in DER format.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 **Examples**
@@ -2339,8 +2362,8 @@ Converts the object data into a string.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 **Examples**
@@ -2434,9 +2457,9 @@ Converts this object into a string in the specified encoding format.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: <br>1. The value of encodingType is not in the EncodingType enumeration range. |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 **Examples**

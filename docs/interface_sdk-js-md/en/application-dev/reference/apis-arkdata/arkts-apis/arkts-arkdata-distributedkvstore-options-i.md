@@ -20,7 +20,11 @@ import { distributedKVStore } from '@kit.ArkData';
 autoSync?: boolean
 ```
 
-Whether to enable auto sync across devices. The default value is **false**, indicating that only manual sync is supported. If this parameter is set to **true**, <!--RP1-->it takes effect only in [device collaboration using cross-device calls](../../../application-models/hop-multi-device-collaboration.md#using-cross-device-call) .<!--RP1End--> SystemCapability.DistributedDataManager.KVStore.Core ohos.permission.DISTRIBUTED_DATASYNC
+Whether to enable auto sync across devices. The default value is **false**, indicating that only manual sync is supported. If this parameter is set to **true**, <!--RP1-->it takes effect only in [device collaboration using cross-device calls](../../../application-models/hop-multi-device-collaboration.md#using-cross-device-call) .<!--RP1End-->
+
+SystemCapability.DistributedDataManager.KVStore.Core
+
+ohos.permission.DISTRIBUTED_DATASYNC
 
 **Type:** boolean
 
@@ -40,7 +44,9 @@ Whether to enable auto sync across devices. The default value is **false**, indi
 backup?: boolean
 ```
 
-Whether to back up the database files. The value **true** means to back up the database files, and the value **false** means the opposite. The default value is **true**. SystemCapability.DistributedDataManager.KVStore.Core
+Whether to back up the database files. The value **true** means to back up the database files, and the value **false** means the opposite. The default value is **true**.
+
+SystemCapability.DistributedDataManager.KVStore.Core
 
 **Type:** boolean
 
@@ -58,7 +64,9 @@ Whether to back up the database files. The value **true** means to back up the d
 createIfMissing?: boolean
 ```
 
-Whether to create a database when database files do not exist. The value **true** means to create a database, and the value **false** means the opposite. The default value is **true**. SystemCapability.DistributedDataManager.KVStore.Core
+Whether to create a database when database files do not exist. The value **true** means to create a database, and the value **false** means the opposite. The default value is **true**.
+
+SystemCapability.DistributedDataManager.KVStore.Core
 
 **Type:** boolean
 
@@ -76,7 +84,9 @@ Whether to create a database when database files do not exist. The value **true*
 encrypt?: boolean
 ```
 
-Whether to encrypt the database files. The value **true** means to encrypt the database files, and the value **false** means the opposite. The default value is **false**. SystemCapability.DistributedDataManager.KVStore.Core
+Whether to encrypt the database files. The value **true** means to encrypt the database files, and the value **false** means the opposite. The default value is **false**.
+
+SystemCapability.DistributedDataManager.KVStore.Core
 
 **Type:** boolean
 
@@ -94,7 +104,9 @@ Whether to encrypt the database files. The value **true** means to encrypt the d
 kvStoreType?: KVStoreType
 ```
 
-Type of the KV store to create. The default value is **DEVICE_COLLABORATION**, which indicates a device KV store. SystemCapability.DistributedDataManager.KVStore.Core
+Type of the KV store to create. The default value is **DEVICE_COLLABORATION**, which indicates a device KV store.
+
+SystemCapability.DistributedDataManager.KVStore.Core
 
 **Type:** KVStoreType
 
@@ -130,7 +142,9 @@ Specifies the root directory relative to the database
 schema?: Schema
 ```
 
-Schema that defines the values stored in the KV store. The default value is **undefined**, which means no schema is used. SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+Schema that defines the values stored in the KV store. The default value is **undefined**, which means no schema is used.
+
+SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 **Type:** Schema
 

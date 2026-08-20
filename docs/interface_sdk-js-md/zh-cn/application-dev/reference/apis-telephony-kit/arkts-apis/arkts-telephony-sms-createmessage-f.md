@@ -26,17 +26,17 @@ function createMessage(pdu: Array<int>, specification: string, callback: AsyncCa
 | --- | --- | --- | --- |
 | pdu | Array&lt;int&gt; | 是 | 协议数据单元，从收到的信息中获取。 |
 | specification | string | 是 | 短信协议类型。<br/>- 3gpp：表示GSM/UMTS/LTE SMS。<br/>- 3gpp2：表示CDMA SMS。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ShortMessage](arkts-telephony-sms-shortmessage-i.md)&gt; | 是 | 获取短信实例的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ShortMessage](arkts-telephony-sms-shortmessage-i.md)&gt; | 是 | 获取短信实例的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
-| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
 **示例**
 
@@ -89,10 +89,10 @@ function createMessage(pdu: Array<int>, specification: string): Promise<ShortMes
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
-| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
 **示例**
 

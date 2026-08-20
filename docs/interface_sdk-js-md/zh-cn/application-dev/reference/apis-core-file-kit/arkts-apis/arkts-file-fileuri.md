@@ -2,6 +2,8 @@
 
 提供文件URI相关接口，可用于URI与应用沙箱路径之间的转换。
 
+@namespace fileUri
+
 **起始版本：** 23
 
 <!--Device-unnamed-declare namespace fileUri--><!--Device-unnamed-declare namespace fileUri-End-->

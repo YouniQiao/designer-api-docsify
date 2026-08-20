@@ -1,6 +1,8 @@
 # @ohos.telephony.call
 
-The **call** module provides call management functions, including making calls, redirecting to the dial screen, obtaining the call status, and formatting phone numbers. To subscribe to call status changes, use [`observer.on('callStateChange')`](arkts-telephony-observer-onnetworkstatechange-f.md).
+The **call** module provides call management functions, including making calls, redirecting to the dial screen, obtaining the call status, and formatting phone numbers.
+
+To subscribe to call status changes, use [`observer.on('callStateChange')`](arkts-telephony-observer-onnetworkstatechange-f.md).
 
 **Since:** 23
 
@@ -20,14 +22,14 @@ import { call } from '@kit.TelephonyKit';
 
 | Name | Description |
 | --- | --- |
-| [dial](arkts-telephony-call-dial-f.md) | Initiates a call. You can set call options as needed. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 6 and deprecated since API version 9. The substitute API is available &gt; only for system applications. |
-| [dial](arkts-telephony-call-dial-f.md) | Initiates a call. You can set call options as needed. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 6 and deprecated since API version 9. The substitute API is available &gt; only for system applications. |
-| [dial](arkts-telephony-call-dial-f.md) | Initiates a call. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 6 and deprecated since API version 9. The substitute API is available &gt; only for system applications. |
-| [formatPhoneNumber](arkts-telephony-call-formatphonenumber-f.md) | Formats a phone number based on specified formatting options. This API uses an asynchronous callback to return the result. A formatted phone number is a standard numeric string, for example, 555 0100. |
-| [formatPhoneNumber](arkts-telephony-call-formatphonenumber-f.md) | Formats a phone number based on specified formatting options. This API uses a promise to return the result. A formatted phone number is a standard numeric string, for example, 555 0100. |
-| [formatPhoneNumber](arkts-telephony-call-formatphonenumber-f.md) | Formats a phone number. This API uses an asynchronous callback to return the result. A formatted phone number is a standard numeric string, for example, 555 0100. |
-| [formatPhoneNumberToE164](arkts-telephony-call-formatphonenumbertoe164-f.md) | Converts a phone number into the E.164 format. This API uses an asynchronous callback to return the result. The phone number must match the specified country code. For example, for a China phone number, the country code must be **CN**. Otherwise, **null** will be returned. |
-| [formatPhoneNumberToE164](arkts-telephony-call-formatphonenumbertoe164-f.md) | Converts a phone number into the E.164 format. This API uses a promise to return the result. The phone number must match the specified country code. For example, for a China phone number, the country code must be **CN**. Otherwise, **null** will be returned. All country codes are supported. |
+| [dial](arkts-telephony-call-dial-f.md) | Initiates a call. You can set call options as needed. This API uses an asynchronous callback to return the result. |
+| [dial](arkts-telephony-call-dial-f.md) | Initiates a call. You can set call options as needed. This API uses a promise to return the result. |
+| [dial](arkts-telephony-call-dial-f.md) | Initiates a call. This API uses an asynchronous callback to return the result. |
+| [formatPhoneNumber](arkts-telephony-call-formatphonenumber-f.md) | Formats a phone number based on specified formatting options. This API uses an asynchronous callback to return the result. |
+| [formatPhoneNumber](arkts-telephony-call-formatphonenumber-f.md) | Formats a phone number based on specified formatting options. This API uses a promise to return the result. |
+| [formatPhoneNumber](arkts-telephony-call-formatphonenumber-f.md) | Formats a phone number. This API uses an asynchronous callback to return the result. |
+| [formatPhoneNumberToE164](arkts-telephony-call-formatphonenumbertoe164-f.md) | Converts a phone number into the E.164 format. This API uses an asynchronous callback to return the result. |
+| [formatPhoneNumberToE164](arkts-telephony-call-formatphonenumbertoe164-f.md) | Converts a phone number into the E.164 format. This API uses a promise to return the result. |
 | [getCallState](arkts-telephony-call-getcallstate-f.md) | Obtains the call status. This API uses an asynchronous callback to return the result. |
 | [getCallState](arkts-telephony-call-getcallstate-f.md) | Obtains the call status. This API uses a promise to return the result. |
 | [getCallStateSync](arkts-telephony-call-getcallstatesync-f.md) | Obtains the call status. |
@@ -154,8 +156,8 @@ import { call } from '@kit.TelephonyKit';
 | [on_mmiCodeResult](arkts-telephony-call-onmmicoderesult-f-sys.md) | Subscribes to **mmiCodeResult** events. This API uses an asynchronous callback to return the result. |
 | [on_peerDimensionsChange](arkts-telephony-call-onpeerdimensionschange-f-sys.md) | Subscribes to **peerDimensionsChange** events. This API uses an asynchronous callback to return the result. |
 | [on_postDialDelay](arkts-telephony-call-onpostdialdelay-f-sys.md) | Subscribes to **postDialDelay** events. This API uses an asynchronous callback to return the result. |
-| [postDialProceed](arkts-telephony-call-postdialproceed-f-sys.md) | Continues a call by playing a post-dial DTMF string. This API uses an asynchronous callback to return the result. If the called number is in the format of "common phone number + semicolon (;) + DTMF string", for example, **400xxxxxxx;123**, and the listening for **postDialDelay** events is enabled, the system reports a **postDialDelay** event when the call is connected. The application can then call this API to send DTMF tones. |
-| [postDialProceed](arkts-telephony-call-postdialproceed-f-sys.md) | Continues a call by playing a post-dial DTMF string. This API uses a promise to return the result. If the called number is in the format of "common phone number + semicolon (;) + DTMF string", for example, **400xxxxxxx;123**, and the listening for **postDialDelay** events is enabled, the system reports a **postDialDelay** event when the call is connected. The application can then call this API to send DTMF tones. |
+| [postDialProceed](arkts-telephony-call-postdialproceed-f-sys.md) | Continues a call by playing a post-dial DTMF string. This API uses an asynchronous callback to return the result. |
+| [postDialProceed](arkts-telephony-call-postdialproceed-f-sys.md) | Continues a call by playing a post-dial DTMF string. This API uses a promise to return the result. |
 | [preloadCallUI](arkts-telephony-call-preloadcallui-f-sys.md) | Preload callUI. |
 | [rejectCall](arkts-telephony-call-rejectcall-f-sys.md) | Rejects a call. This API uses an asynchronous callback to return the result. |
 | [rejectCall](arkts-telephony-call-rejectcall-f-sys.md) | Rejects a call. This API uses a promise to return the result. |

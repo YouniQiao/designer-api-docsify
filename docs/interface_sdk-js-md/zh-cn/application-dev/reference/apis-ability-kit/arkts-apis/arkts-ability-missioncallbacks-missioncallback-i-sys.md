@@ -2,6 +2,8 @@
 
 任务回调已注册
 
+@interface MissionCallback
+
 **起始版本：** 23
 
 <!--Device-unnamed-export interface MissionCallback--><!--Device-unnamed-export interface MissionCallback-End-->

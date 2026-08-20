@@ -1,4 +1,4 @@
-# HuksExternalCryptoTagType(External Key Management)
+# HuksExternalCryptoTagType
 
 Enumerates the external encrypted data types.
 

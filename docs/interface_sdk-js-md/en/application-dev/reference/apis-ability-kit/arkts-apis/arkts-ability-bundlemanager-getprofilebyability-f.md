@@ -12,7 +12,10 @@ import { bundleManager } from '@kit.AbilityKit';
 function getProfileByAbility(moduleName: string, abilityName: string, metadataName: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains the JSON string array of the current application's configuration file based on the given module name, ability name, and metadata name (name configured under **metadata** in [abilities](../../../quick-start/module-configuration-file.md#abilities) of the **module.json5** file). This API uses an asynchronous callback to return the result. &gt; NOTE &gt; &gt; If the profile uses the resource reference format, the return value retains this format (for example, &gt; **\$string:res_id**). You can obtain the referenced resources through related APIs of the &gt; [resource manager module](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md).
+Obtains the JSON string array of the current application's configuration file based on the given module name, ability name, and metadata name (name configured under **metadata** in [abilities](../../../quick-start/module-configuration-file.md#abilities) of the **module.json5** file). This API uses an asynchronous callback to return the result.
+
+> NOTE &gt;
+> If the profile uses the resource reference format, the return value retains this format (for example, &gt; **\$string:res_id**). You can obtain the referenced resources through related APIs of the &gt; [resource manager module](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md).
 
 **Since:** 23
 
@@ -36,10 +39,10 @@ Obtains the JSON string array of the current application's configuration file ba
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700029](../errorcode-bundle.md#17700029-disabled-ability) | The specified ability is disabled. |
-| [17700024](../errorcode-bundle.md#17700024-profile-does-not-exist) | Failed to get the profile because there is no profile in the HAP. |
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified moduleName is not existed. |
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified abilityName is not existed. |
+| [17700024](../errorcode-bundle.md#17700024-profile-does-not-exist) | Failed to get the profile because there is no profile in the HAP. |
+| [17700029](../errorcode-bundle.md#17700029-disabled-ability) | The specified ability is disabled. |
 
 **Examples**
 
@@ -73,7 +76,10 @@ try {
 function getProfileByAbility(moduleName: string, abilityName: string, metadataName?: string): Promise<Array<string>>
 ```
 
-Obtains the JSON string array of the current application's configuration file based on the given module name, ability name, and metadata name (name configured under **metadata** in [abilities](../../../quick-start/module-configuration-file.md#abilities) of the **module.json5** file). This API uses a promise to return the result. &gt; NOTE &gt; &gt; If the profile uses the resource reference format, the return value retains this format (for example, &gt; **\$string:res_id**). You can obtain the referenced resources through related APIs of the &gt; [resource manager module](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md).
+Obtains the JSON string array of the current application's configuration file based on the given module name, ability name, and metadata name (name configured under **metadata** in [abilities](../../../quick-start/module-configuration-file.md#abilities) of the **module.json5** file). This API uses a promise to return the result.
+
+> NOTE &gt;
+> If the profile uses the resource reference format, the return value retains this format (for example, &gt; **\$string:res_id**). You can obtain the referenced resources through related APIs of the &gt; [resource manager module](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md).
 
 **Since:** 23
 
@@ -102,10 +108,10 @@ Obtains the JSON string array of the current application's configuration file ba
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700029](../errorcode-bundle.md#17700029-disabled-ability) | The specified ability is disabled. |
-| [17700024](../errorcode-bundle.md#17700024-profile-does-not-exist) | Failed to get the profile because there is no profile in the HAP. |
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified moduleName is not existed. |
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified abilityName is not existed. |
+| [17700024](../errorcode-bundle.md#17700024-profile-does-not-exist) | Failed to get the profile because there is no profile in the HAP. |
+| [17700029](../errorcode-bundle.md#17700029-disabled-ability) | The specified ability is disabled. |
 
 **Examples**
 

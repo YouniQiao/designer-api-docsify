@@ -19,7 +19,9 @@
 static readonly DIRECTION: WritableSystemEnvKey<Direction>
 ```
 
-[@Env](../../../reference/apis-arkui/arkui-ts/ts-env-system-property.md#env)变量参数，通过@Env(WritableEnvKey.DIRECTION)可 获取Direction枚举类型的值。 当该装饰器声明在[@Component](../../../ui/state-management/arkts-create-custom-components.md#component)或 [@ComponentV2](../../../ui/state-management/arkts-create-custom-components.md#componentv2)中时，用于获取窗口所在屏幕的布局方向。
+[@Env](../../../reference/apis-arkui/arkui-ts/ts-env-system-property.md#env)变量参数，通过@Env(WritableEnvKey.DIRECTION)可 获取Direction枚举类型的值。
+
+当该装饰器声明在[@Component](../../../ui/state-management/arkts-create-custom-components.md#component)或 [@ComponentV2](../../../ui/state-management/arkts-create-custom-components.md#componentv2)中时，用于获取窗口所在屏幕的布局方向。
 
 **类型：** [WritableSystemEnvKey](arkts-arkui-writablesystemenvkey-c.md)&lt;Direction&gt;
 
@@ -39,7 +41,9 @@ static readonly DIRECTION: WritableSystemEnvKey<Direction>
 static readonly FONT_SCALE: WritableSystemEnvKey<double>
 ```
 
-[@Env](../../../reference/apis-arkui/arkui-ts/ts-env-system-property.md#env)变量参数，通过@Env(WritableEnvKey.FONT_SCALE) 可获取number类型的值，取值无上限，小于等于0的值按0处理。 当该装饰器声明在[@Component](../../../ui/state-management/arkts-create-custom-components.md#component)或 [@ComponentV2](../../../ui/state-management/arkts-create-custom-components.md#componentv2)中时，用于为后代组件提供局部字体缩放倍数。
+[@Env](../../../reference/apis-arkui/arkui-ts/ts-env-system-property.md#env)变量参数，通过@Env(WritableEnvKey.FONT_SCALE) 可获取number类型的值，取值无上限，小于等于0的值按0处理。
+
+当该装饰器声明在[@Component](../../../ui/state-management/arkts-create-custom-components.md#component)或 [@ComponentV2](../../../ui/state-management/arkts-create-custom-components.md#componentv2)中时，用于为后代组件提供局部字体缩放倍数。
 
 **类型：** [WritableSystemEnvKey](arkts-arkui-writablesystemenvkey-c.md)&lt;double&gt;
 

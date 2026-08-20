@@ -12,7 +12,11 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 function getGraphicsMemorySync(): int
 ```
 
-使用同步方式获取应用显存总大小（gl + graph）。 &gt; **注意** &gt; &gt; 由于该接口涉及多次跨进程通信，其耗时可能达到秒级。为了避免引入性能问题，建议不要在主线程调用该接口，推荐使用异步接口`getGraphicsMemory`。
+使用同步方式获取应用显存总大小（gl + graph）。
+
+> **注意**
+> 
+> 由于该接口涉及多次跨进程通信，其耗时可能达到秒级。为了避免引入性能问题，建议不要在主线程调用该接口，推荐使用异步接口`getGraphicsMemory`。
 
 **起始版本：** 23
 

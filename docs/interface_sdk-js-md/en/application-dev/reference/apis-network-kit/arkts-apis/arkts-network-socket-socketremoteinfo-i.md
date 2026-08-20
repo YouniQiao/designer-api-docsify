@@ -36,7 +36,11 @@ Peer IP address.
 family: 'IPv4' | 'IPv6'
 ```
 
-Network protocol type. - IPv4 - IPv6 The default value is **IPv4**.
+Network protocol type.
+
+- IPv4 - IPv6
+
+The default value is **IPv4**.
 
 **Type:** 'IPv4' \| 'IPv6'
 

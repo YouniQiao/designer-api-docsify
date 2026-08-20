@@ -2,6 +2,8 @@
 
 系统材质类型枚举。
 
+@enum { number } [since 23 - 24]
+
 **起始版本：** 23
 
 <!--Device-uiMaterial-enum MaterialType--><!--Device-uiMaterial-enum MaterialType-End-->

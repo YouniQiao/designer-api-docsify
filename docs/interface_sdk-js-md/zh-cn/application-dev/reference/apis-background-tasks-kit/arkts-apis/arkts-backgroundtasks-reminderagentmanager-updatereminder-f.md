@@ -40,8 +40,8 @@ function updateReminder(reminderId: int, reminderReq: ReminderRequest): Promise<
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-提醒不存在) | The reminder does not exist. |
-| [1700007](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-参数错误) | If the input parameter is not valid parameter. |
+| [1700003](../errorcode-reminderAgentManager.md#1700003-提醒不存在) | The reminder does not exist. |
+| [1700007](../errorcode-reminderAgentManager.md#1700007-参数错误) | If the input parameter is not valid parameter. |
 
 **示例**
 

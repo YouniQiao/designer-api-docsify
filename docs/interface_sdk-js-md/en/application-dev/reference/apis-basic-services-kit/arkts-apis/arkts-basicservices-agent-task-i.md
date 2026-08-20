@@ -1,6 +1,10 @@
 # Task
 
-Implements an upload or download task. Before using this API, you must obtain a **Task** object, from a promise through [request.agent.create](arkts-basicservices-agent-create-f.md) or from a callback through [request.agent.create](arkts-basicservices-agent-create-f.md). &gt; **NOTE：**&gt; &gt; The **Task** object and its mounting callback function are released and automatically reclaimed by the system &gt; after the **remove** method is called.
+Implements an upload or download task. Before using this API, you must obtain a **Task** object, from a promise through [request.agent.create](arkts-basicservices-agent-create-f.md) or from a callback through [request.agent.create](arkts-basicservices-agent-create-f.md).
+
+> **NOTE：**
+> 
+> The **Task** object and its mounting callback function are released and automatically reclaimed by the system &gt; after the **remove** method is called.
 
 **Since:** 23
 
@@ -201,7 +205,11 @@ Disables the wait callback.
 off(event: 'completed', callback?: (progress: Progress) => void): void
 ```
 
-Unsubscribes from task completion events. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+Unsubscribes from task completion events.
+
+> **NOTE：**
+> 
+> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 10
 
@@ -231,7 +239,11 @@ Unsubscribes from task completion events. &gt; **NOTE：**&gt; &gt; For details 
 off(event: 'failed', callback?: (progress: Progress) => void): void
 ```
 
-Unsubscribes from task failure events. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+Unsubscribes from task failure events.
+
+> **NOTE：**
+> 
+> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 10
 
@@ -261,7 +273,11 @@ Unsubscribes from task failure events. &gt; **NOTE：**&gt; &gt; For details abo
 off(event: 'faultOccur', callback?: Callback<Faults>): void
 ```
 
-Unsubscribes from task failure events. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+Unsubscribes from task failure events.
+
+> **NOTE：**
+> 
+> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 20
 
@@ -288,7 +304,11 @@ Unsubscribes from task failure events. &gt; **NOTE：**&gt; &gt; For details abo
 off(event: 'pause', callback?: (progress: Progress) => void): void
 ```
 
-Unsubscribes from the foreground task pause event. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+Unsubscribes from the foreground task pause event.
+
+> **NOTE：**
+> 
+> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 11
 
@@ -315,7 +335,11 @@ Unsubscribes from the foreground task pause event. &gt; **NOTE：**&gt; &gt; For
 off(event: 'progress', callback?: (progress: Progress) => void): void
 ```
 
-Unsubscribes from task progress events. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+Unsubscribes from task progress events.
+
+> **NOTE：**
+> 
+> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 10
 
@@ -345,7 +369,11 @@ Unsubscribes from task progress events. &gt; **NOTE：**&gt; &gt; For details ab
 off(event: 'remove', callback?: (progress: Progress) => void): void
 ```
 
-Unsubscribes from the task removal event. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+Unsubscribes from the task removal event.
+
+> **NOTE：**
+> 
+> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 11
 
@@ -372,7 +400,11 @@ Unsubscribes from the task removal event. &gt; **NOTE：**&gt; &gt; For details 
 off(event: 'response', callback?: Callback<HttpResponse>): void
 ```
 
-Unsubscribes from task response headers. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+Unsubscribes from task response headers.
+
+> **NOTE：**
+> 
+> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 12
 
@@ -401,7 +433,11 @@ Unsubscribes from task response headers. &gt; **NOTE：**&gt; &gt; For details a
 off(event: 'resume', callback?: (progress: Progress) => void): void
 ```
 
-Unsubscribes from foreground task resume events. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+Unsubscribes from foreground task resume events.
+
+> **NOTE：**
+> 
+> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 11
 
@@ -428,7 +464,11 @@ Unsubscribes from foreground task resume events. &gt; **NOTE：**&gt; &gt; For d
 off(event: 'wait', callback?: Callback<WaitingReason>): void
 ```
 
-Unsubscribes from task waiting events. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+Unsubscribes from task waiting events.
+
+> **NOTE：**
+> 
+> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 20
 
@@ -635,7 +675,11 @@ Enables the wait callback. This callback is triggered when the task changes from
 on(event: 'completed', callback: (progress: Progress) => void): void
 ```
 
-Subscribes to task completion events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+Subscribes to task completion events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 10
 
@@ -665,7 +709,11 @@ Subscribes to task completion events. This API uses an asynchronous callback to 
 on(event: 'failed', callback: (progress: Progress) => void): void
 ```
 
-Subscribes to task failure events. This API uses an asynchronous callback to return the result. You can call [request.agent.show](arkts-basicservices-agent-show-f.md) to view the error cause. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+Subscribes to task failure events. This API uses an asynchronous callback to return the result. You can call [request.agent.show](arkts-basicservices-agent-show-f.md) to view the error cause.
+
+> **NOTE：**
+> 
+> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 10
 
@@ -695,7 +743,11 @@ Subscribes to task failure events. This API uses an asynchronous callback to ret
 on(event: 'faultOccur', callback: Callback<Faults>): void
 ```
 
-Subscribes to task failure events. This API uses a callback to return the result. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+Subscribes to task failure events. This API uses a callback to return the result.
+
+> **NOTE：**
+> 
+> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 20
 
@@ -722,7 +774,11 @@ Subscribes to task failure events. This API uses a callback to return the result
 on(event: 'pause', callback: (progress: Progress) => void): void
 ```
 
-Subscribes to task pause events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+Subscribes to task pause events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 11
 
@@ -749,7 +805,11 @@ Subscribes to task pause events. This API uses an asynchronous callback to retur
 on(event: 'progress', callback: (progress: Progress) => void): void
 ```
 
-Subscribes to task progress changes. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+Subscribes to task progress changes. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 10
 
@@ -779,7 +839,11 @@ Subscribes to task progress changes. This API uses an asynchronous callback to r
 on(event: 'remove', callback: (progress: Progress) => void): void
 ```
 
-Subscribes to task removal events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+Subscribes to task removal events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 11
 
@@ -806,7 +870,11 @@ Subscribes to task removal events. This API uses an asynchronous callback to ret
 on(event: 'response', callback: Callback<HttpResponse>): void
 ```
 
-Subscribes to task response headers. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+Subscribes to task response headers. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 12
 
@@ -835,7 +903,11 @@ Subscribes to task response headers. This API uses an asynchronous callback to r
 on(event: 'resume', callback: (progress: Progress) => void): void
 ```
 
-Subscribes to task resume events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+Subscribes to task resume events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 11
 
@@ -862,7 +934,11 @@ Subscribes to task resume events. This API uses an asynchronous callback to retu
 on(event: 'wait', callback: Callback<WaitingReason>): void
 ```
 
-Subscribes to task wait events. This API uses a callback to return the result. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+Subscribes to task wait events. This API uses a callback to return the result.
+
+> **NOTE：**
+> 
+> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 20
 
@@ -907,9 +983,9 @@ Pauses a task that is waiting, running, or retrying. A paused task can be resume
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
+| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 
 ## pause
 
@@ -935,9 +1011,9 @@ Pauses a task that is waiting, running, or retrying. A paused task can be resume
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
+| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 
 ## resume
 
@@ -966,9 +1042,9 @@ Resumes a paused task. This API uses an asynchronous callback to return the resu
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
+| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 
 ## resume
 
@@ -997,9 +1073,9 @@ Resumes a paused task. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
+| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 
 ## setMaxSpeed
 
@@ -1040,7 +1116,15 @@ Sets the maximum number of bytes that can be transmitted by a task per second. T
 start(callback: AsyncCallback<void>): void
 ```
 
-Starts a task. This API uses an asynchronous callback to return the result. Tasks in the following states can be started: 1. Task created by **request.agent.create**. 2. Download tasks that are created by **request.agent.create** but have failed or paused. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+Starts a task. This API uses an asynchronous callback to return the result.
+
+Tasks in the following states can be started:
+
+1. Task created by **request.agent.create**. 2. Download tasks that are created by **request.agent.create** but have failed or paused.
+
+> **NOTE：**
+> 
+> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 23
 
@@ -1063,8 +1147,8 @@ Starts a task. This API uses an asynchronous callback to return the result. Task
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 
 ## start
 
@@ -1072,7 +1156,15 @@ Starts a task. This API uses an asynchronous callback to return the result. Task
 start(): Promise<void>
 ```
 
-Starts a task. This API uses a promise to return the result. Tasks in the following states can be started: 1. Task created by **request.agent.create**. 2. Download tasks that are created by **request.agent.create** but have failed or paused. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+Starts a task. This API uses a promise to return the result.
+
+Tasks in the following states can be started:
+
+1. Task created by **request.agent.create**. 2. Download tasks that are created by **request.agent.create** but have failed or paused.
+
+> **NOTE：**
+> 
+> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 23
 
@@ -1095,8 +1187,8 @@ Starts a task. This API uses a promise to return the result. Tasks in the follow
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 
 ## stop
 
@@ -1124,8 +1216,8 @@ Stops a task that is running, waiting, or retrying. A paused task can be resumed
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 
 ## stop
 
@@ -1153,8 +1245,8 @@ Stops a task that is running, waiting, or retrying. A paused task can be resumed
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 
 ## config
 

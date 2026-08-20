@@ -1,6 +1,10 @@
 # AtomicFile
 
-AtomicFile is a class used to perform atomic read and write operations on files. A temporary file is written and renamed to the original file location, which ensures file integrity. If the write operation fails, the temporary file is deleted without modifying the original file content. You can call **finishWrite()** or **failWrite()** to write or roll back file content.
+AtomicFile is a class used to perform atomic read and write operations on files.
+
+A temporary file is written and renamed to the original file location, which ensures file integrity. If the write operation fails, the temporary file is deleted without modifying the original file content.
+
+You can call **finishWrite()** or **failWrite()** to write or roll back file content.
 
 **Since:** 15
 
@@ -63,8 +67,8 @@ Deletes the **AtomicFile** class, including the original files and temporary fil
 | 13900001 |  |
 | 13900002 |  |
 | 13900012 |  |
-| 13900042 |  |
 | 13900027 |  |
+| 13900042 |  |
 
 **Examples**
 
@@ -184,7 +188,9 @@ try {
 getBaseFile(): File
 ```
 
-Obtains the file object through the **AtomicFile** object. The FD needs to be closed by calling **close()**.
+Obtains the file object through the **AtomicFile** object.
+
+The FD needs to be closed by calling **close()**.
 
 **Since:** 15
 
@@ -202,8 +208,8 @@ Obtains the file object through the **AtomicFile** object. The FD needs to be cl
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900005 |  |
 | 13900002 |  |
+| 13900005 |  |
 | 13900012 |  |
 | 13900042 |  |
 
@@ -352,7 +358,11 @@ try {
 startWrite(): WriteStream
 ```
 
-Starts to write new file data in the **WriteStream** object returned. If the file does not exist, create a file. Call **finishWrite()** if the write operation is successful; call **failWrite()** if the write operation fails.
+Starts to write new file data in the **WriteStream** object returned.
+
+If the file does not exist, create a file.
+
+Call **finishWrite()** if the write operation is successful; call **failWrite()** if the write operation fails.
 
 **Since:** 15
 
@@ -373,8 +383,8 @@ Starts to write new file data in the **WriteStream** object returned. If the fil
 | 13900001 |  |
 | 13900002 |  |
 | 13900012 |  |
-| 13900042 |  |
 | 13900027 |  |
+| 13900042 |  |
 
 **Examples**
 

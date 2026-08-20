@@ -12,7 +12,9 @@ import { ranging } from '@kit.ConnectivityKit';
 function onRangingStateChange(callback: Callback<RangingStateChangeInfo>): void
 ```
 
-Registers a callback to receive ranging state change notifications. Notifies state changes for both active ranging and passive ranging operations.
+Registers a callback to receive ranging state change notifications.
+
+Notifies state changes for both active ranging and passive ranging operations.
 
 **Since:** 26.0.0
 
@@ -34,7 +36,7 @@ Registers a callback to receive ranging state change notifications. Notifies sta
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) | Internal system error. For example, Internal object is invalid. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

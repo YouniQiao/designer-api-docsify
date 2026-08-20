@@ -1,6 +1,18 @@
 # ParticleAnnulusRegion
 
-Configures the annular emitter area. &gt; **NOTE：**&gt; &gt; - If the value of outerRadius or innerRadius is less than 0 or uses the percentage unit, the value is considered as &gt; 0. &gt; &gt; - If the value of outerRadius is less than that of innerRadius, the smaller value is used as the new inner radius &gt; and the larger value is used as the new outer radius. &gt; &gt; - If the value of endAngle is less than that of startAngle, the smaller value is used as the new start angle and &gt; the larger value is used as the new end angle. &gt; &gt; 
+Configures the annular emitter area.
+
+> **NOTE：**
+> 
+> - If the value of outerRadius or innerRadius is less than 0 or uses the percentage unit, the value is considered as &gt; 0.
+> 
+> - If the value of outerRadius is less than that of innerRadius, the smaller value is used as the new inner radius &gt; and the larger value is used as the new outer radius.
+> 
+> - If the value of endAngle is less than that of startAngle, the smaller value is used as the new start angle and &gt; the larger value is used as the new end angle.
+> 
+> 
+
+@interface ParticleAnnulusRegion
 
 **Since:** 20
 

@@ -1,4 +1,4 @@
-# ParamsInterface(Page Routing)
+# ParamsInterface
 
 ```TypeScript
 type ParamsInterface = {

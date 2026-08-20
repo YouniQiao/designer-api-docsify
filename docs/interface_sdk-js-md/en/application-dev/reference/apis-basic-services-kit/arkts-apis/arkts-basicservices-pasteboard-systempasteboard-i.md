@@ -506,10 +506,10 @@ Obtains the PasteData from the system pasteboard with system progress. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [12900007](../errorcode-pasteboard.md#12900007-file-copying-failure) | Invalid destUri or file system error. |
-| [12900003](../errorcode-pasteboard.md#12900003-another-copy-or-paste-operation-in-progress) | Another copy or paste operation is in progress. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [12900003](../errorcode-pasteboard.md#12900003-another-copy-or-paste-operation-in-progress) | Another copy or paste operation is in progress. |
+| [12900007](../errorcode-pasteboard.md#12900007-file-copying-failure) | Invalid destUri or file system error. |
 | [12900008](../errorcode-pasteboard.md#12900008-progress-startup-failure) | Failed to start progress. |
 | [12900009](../errorcode-pasteboard.md#12900009-progress-reporting-exception) | Progress exits abnormally. |
 | [12900010](../errorcode-pasteboard.md#12900010-data-obtaining-failure) | System error occurred during paste execution. |
@@ -701,8 +701,8 @@ Obtains a **PasteData** object from the system pasteboard. This API uses a promi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [27787277](../errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) | Another copy or paste operation is in progress. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [27787277](../errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) | Another copy or paste operation is in progress. |
 
 **Examples**
 
@@ -752,8 +752,8 @@ Obtains a **UnifiedData** object from the system pasteboard. This API returns th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12900005](../errorcode-pasteboard.md#12900005-request-timeout) | Excessive processing time for internal data. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [12900005](../errorcode-pasteboard.md#12900005-request-timeout) | Excessive processing time for internal data. |
 
 **Examples**
 

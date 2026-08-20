@@ -2,6 +2,8 @@
 
 Manifest file information in incremental data. FileManifestData is useful when doing IPC with the backup service.
 
+@interface FileManifestData
+
 **Since:** 23
 
 <!--Device-backup-interface FileManifestData--><!--Device-backup-interface FileManifestData-End-->

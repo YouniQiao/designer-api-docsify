@@ -1,4 +1,4 @@
-# RepeatItem(Defines Repeat component.)
+# RepeatItem
 
 数据项类型。
 

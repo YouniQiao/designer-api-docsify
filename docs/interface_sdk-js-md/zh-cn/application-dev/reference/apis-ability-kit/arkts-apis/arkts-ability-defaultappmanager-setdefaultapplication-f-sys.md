@@ -31,19 +31,19 @@ function setDefaultApplication(type: string, elementName: ElementName, userId: i
 | type | string | 是 | 要设置的应用类型，取 [ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md)中的值，或者符合媒体类型格式的文件类型，或者 [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)类型。 |
 | elementName | [ElementName](arkts-ability-elementname-i.md) | 是 | 要设置为默认应用的组件信息。 |
 | userId | int | 是 | 表示用户ID，可以通过 [getOsAccountLocalId接口](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当设置默认应用成功时，err返回undefined。否则回调函数返回 具体错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)，当设置默认应用成功时，err返回undefined。否则回调函数返回 具体错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [17700028](../errorcode-bundle.md#17700028-输入的ability与type不匹配) | The specified ability does not match the type. |
-| [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
+| [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
+| [17700028](../errorcode-bundle.md#17700028-输入的ability与type不匹配) | The specified ability does not match the type. |
 
 **示例**
 
@@ -165,18 +165,18 @@ function setDefaultApplication(type: string, elementName: ElementName, callback:
 | --- | --- | --- | --- |
 | type | string | 是 | 要设置的应用类型，取 [ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md)中的值，或者符合媒体类型格式的文件类型，或者 [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)类型。 |
 | elementName | [ElementName](arkts-ability-elementname-i.md) | 是 | 要设置为默认应用的组件信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当设置默认应用成功时，err返回undefined。否则回调函数返回 具体错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)，当设置默认应用成功时，err返回undefined。否则回调函数返回 具体错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [17700028](../errorcode-bundle.md#17700028-输入的ability与type不匹配) | The specified ability does not match the type. |
-| [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
+| [17700028](../errorcode-bundle.md#17700028-输入的ability与type不匹配) | The specified ability does not match the type. |
 
 **示例**
 
@@ -308,13 +308,13 @@ function setDefaultApplication(type: string, elementName: ElementName, userId?: 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [17700028](../errorcode-bundle.md#17700028-输入的ability与type不匹配) | The specified ability does not match the type. |
-| [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
+| [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
+| [17700028](../errorcode-bundle.md#17700028-输入的ability与type不匹配) | The specified ability does not match the type. |
 
 **示例**
 

@@ -1,6 +1,26 @@
 # @ohos.net.vpnExtension
 
-三方VPN管理模块，支持三方VPN的启动和停止功能。三方VPN是指由第三方提供的VPN服务，它们通常提供更多的功能和更广泛的网络连接选项，包括更多的安全和隐私功能，以及更全面的定制选项。当前提供三方VPN能力主要用于创建虚拟网卡及配置 VPN路由信息，连接隧道过程及内部连接的协议需要应用内部自行实现。 &gt; **说明：** &gt; &gt; 本模块首批接口从 API version 11 开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 &gt; 以下模块不支持在VpnExtensionAbility中引用，可能会导致程序异常退出。 &gt; - [@ohos.contact (联系人)](../../apis-contacts-kit/arkts-apis/arkts-contact.md) &gt; - @ohos.geolocation、 &gt; @ohos.geoLocationManager (位置服务) &gt; - [@ohos.multimedia.audio(音频管理)](../../apis-audio-kit/arkts-apis/arkts-multimedia-audio.md) &gt; - [@ohos.multimedia.camera(相机管理)](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md) &gt; - [@ohos.telephony.call (拨打电话)](../../apis-telephony-kit/arkts-apis/arkts-telephony-call.md) &gt; - [@ohos.telephony.sim (SIM卡管理)](../../apis-telephony-kit/arkts-apis/arkts-telephony-sim.md) &gt; - [@ohos.telephony.sms (短信服务)](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms.md)
+三方VPN管理模块，支持三方VPN的启动和停止功能。三方VPN是指由第三方提供的VPN服务，它们通常提供更多的功能和更广泛的网络连接选项，包括更多的安全和隐私功能，以及更全面的定制选项。当前提供三方VPN能力主要用于创建虚拟网卡及配置 VPN路由信息，连接隧道过程及内部连接的协议需要应用内部自行实现。
+
+> **说明：**
+> 
+> 本模块首批接口从 API version 11 开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+
+> 以下模块不支持在VpnExtensionAbility中引用，可能会导致程序异常退出。
+
+> - [@ohos.contact (联系人)](../../apis-contacts-kit/arkts-apis/arkts-contact.md)
+
+> - @ohos.geolocation、 &gt; @ohos.geoLocationManager (位置服务)
+
+> - [@ohos.multimedia.audio(音频管理)](../../apis-audio-kit/arkts-apis/arkts-multimedia-audio.md)
+
+> - [@ohos.multimedia.camera(相机管理)](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md)
+
+> - [@ohos.telephony.call (拨打电话)](../../apis-telephony-kit/arkts-apis/arkts-telephony-call.md)
+
+> - [@ohos.telephony.sim (SIM卡管理)](../../apis-telephony-kit/arkts-apis/arkts-telephony-sim.md)
+
+> - [@ohos.telephony.sms (短信服务)](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms.md)
 
 **起始版本：** 11
 

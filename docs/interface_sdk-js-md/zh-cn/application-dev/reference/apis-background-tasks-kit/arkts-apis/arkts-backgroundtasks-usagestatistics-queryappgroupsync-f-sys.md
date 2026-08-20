@@ -34,16 +34,16 @@ function queryAppGroupSync(): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [10100002](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10100002-获取应用分组信息失败) | Failed to get the application group information. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [10000001](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000001-内存操作失败) | Memory operation failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [10000002](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000002-ipc-parcel-write-failed) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; <br> 2. Failed to apply for memory. |
-| [10000003](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000003-系统服务操作失败) | Failed to get system ability manager. |
-| [10000004](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000004-通信失败) | Failed to access the device usage service. |
-| [10000005](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000005-应用未安装) | Application is not installed. |
-| [10000006](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) | Failed to get the application information. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [10000001](../errorcode-DeviceUsageStatistics.md#10000001-内存操作失败) | Memory operation failed. |
+| [10000002](../errorcode-DeviceUsageStatistics.md#10000002-ipc-parcel-write-failed) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; <br> 2. Failed to apply for memory. |
+| [10000003](../errorcode-DeviceUsageStatistics.md#10000003-系统服务操作失败) | Failed to get system ability manager. |
+| [10000004](../errorcode-DeviceUsageStatistics.md#10000004-通信失败) | Failed to access the device usage service. |
+| [10000005](../errorcode-DeviceUsageStatistics.md#10000005-应用未安装) | Application is not installed. |
+| [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) | Failed to get the application information. |
+| [10100002](../errorcode-DeviceUsageStatistics.md#10100002-获取应用分组信息失败) | Failed to get the application group information. |
 
 **示例**
 
@@ -88,17 +88,17 @@ function queryAppGroupSync(bundleName: string): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [10100002](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10100002-获取应用分组信息失败) | Failed to get the application group information. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [10000001](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000001-内存操作失败) | Memory operation failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [10000002](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000002-ipc-parcel-write-failed) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; <br> 2. Failed to apply for memory. |
-| [10000003](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000003-系统服务操作失败) | Failed to get system ability manager. |
-| [10000004](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000004-通信失败) | Failed to access the device usage service. |
-| [10000005](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000005-应用未安装) | Application is not installed. |
-| [10000006](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) | Failed to get the application information. |
+| [10000001](../errorcode-DeviceUsageStatistics.md#10000001-内存操作失败) | Memory operation failed. |
+| [10000002](../errorcode-DeviceUsageStatistics.md#10000002-ipc-parcel-write-failed) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; <br> 2. Failed to apply for memory. |
+| [10000003](../errorcode-DeviceUsageStatistics.md#10000003-系统服务操作失败) | Failed to get system ability manager. |
+| [10000004](../errorcode-DeviceUsageStatistics.md#10000004-通信失败) | Failed to access the device usage service. |
+| [10000005](../errorcode-DeviceUsageStatistics.md#10000005-应用未安装) | Application is not installed. |
+| [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) | Failed to get the application information. |
+| [10100002](../errorcode-DeviceUsageStatistics.md#10100002-获取应用分组信息失败) | Failed to get the application group information. |
 
 **示例**
 

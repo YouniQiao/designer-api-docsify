@@ -1,4 +1,4 @@
-# DisableAlertBeforeBackPageOptions(Page Routing)
+# DisableAlertBeforeBackPageOptions
 
 Defines the **DisableAlertBeforeBackPage** parameter.
 

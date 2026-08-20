@@ -19,11 +19,11 @@ import { MarginTypeV2, PromptOptionsV2, PromptOptionsV2Config, ExceptionPromptV2
 
 | Name | Description |
 | --- | --- |
-| [PromptOptions](arkts-arkui-arkui-advanced-exceptionprompt-promptoptions-i.md) | Configuration parameter of ExceptionPrompt. |
+| [PromptOptions](arkts-arkui-arkui-advanced-exceptionprompt-promptoptions-i.md) | Configuration parameter of ExceptionPrompt. @interface PromptOptions |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [MarginType](arkts-arkui-arkui-advanced-exceptionprompt-margintype-e.md) | Control margin status of ExceptionPrompt. |
+| [MarginType](arkts-arkui-arkui-advanced-exceptionprompt-margintype-e.md) | Control margin status of ExceptionPrompt. @enum { number } |
 

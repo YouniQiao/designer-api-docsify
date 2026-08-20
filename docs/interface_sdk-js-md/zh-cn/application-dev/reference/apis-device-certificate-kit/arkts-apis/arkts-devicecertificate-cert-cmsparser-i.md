@@ -1,6 +1,10 @@
 # CmsParser
 
-提供解析、验签和解封装CMS消息的API。 &gt; **说明：** &gt; &gt; PKCS #7是用于存储签名或加密数据的标准语法。注意CMS是PKCS #7的扩展，PKCS #7支持的数据类型包括数据、签名数据、封装数据、 &gt; 签名和封装数据、摘要数据、加密数据。常用于保护数据的完整性和机密性。
+提供解析、验签和解封装CMS消息的API。
+
+> **说明：**
+> 
+> PKCS #7是用于存储签名或加密数据的标准语法。注意CMS是PKCS #7的扩展，PKCS #7支持的数据类型包括数据、签名数据、封装数据、 &gt; 签名和封装数据、摘要数据、加密数据。常用于保护数据的完整性和机密性。
 
 **起始版本：** 23
 
@@ -48,9 +52,9 @@ decryptEnvelopedData(config: CmsEnvelopedDecryptionConfig): Promise<Uint8Array>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
 | [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes: <br>1. The private key is invalid or not supported; <br>2. The recipient certificate is invalid or not supported. |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -169,9 +173,9 @@ getCerts(type: CmsCertType): Promise<Array<X509Cert>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
 | [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes: <br>1. The value of type is invalid or not supported. |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -317,8 +321,8 @@ getContentData(): Promise<Uint8Array>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -462,8 +466,8 @@ getContentType(): CmsContentType
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -588,7 +592,11 @@ async function testCmsVerifyTest() {
 setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>
 ```
 
-设置CMS消息数据。使用Promise方式返回结果。 &gt; **说明：** &gt; &gt; 支持PEM和DER格式的CMS消息。**string**对应PEM格式，**Uint8Array**对应DER格式。
+设置CMS消息数据。使用Promise方式返回结果。
+
+> **说明：**
+> 
+> 支持PEM和DER格式的CMS消息。**string**对应PEM格式，**Uint8Array**对应DER格式。
 
 **起始版本：** 23
 
@@ -615,9 +623,9 @@ setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
 | [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes: <br>1. The length of the data is zero or too large; <br>2. The type of the cmsFormat is invalid or not supported. |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -766,11 +774,11 @@ verifySignedData(config: CmsVerificationConfig): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
 | [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes: <br>1. The trustCerts of config is empty; <br>2. The length of the contentData of config is zero or too large; <br>3. The contentDataFormat of config is invalid or not supported. |
-| [19030003](../errorcode-cert.md#19030003-证书尚未生效) | The certificate has not taken effect. |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
+| [19030003](../errorcode-cert.md#19030003-证书尚未生效) | The certificate has not taken effect. |
 | [19030004](../errorcode-cert.md#19030004-证书过期) | The certificate has expired. |
 | [19030005](../errorcode-cert.md#19030005-无法获取证书的颁发者) | Failed to obtain the certificate issuer. |
 

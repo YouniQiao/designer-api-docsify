@@ -2,6 +2,8 @@
 
 The definition of the tab page.
 
+@interface MediaTab
+
 **Since:** 23
 
 <!--Device-avMusicTemplate-interface MediaTab--><!--Device-avMusicTemplate-interface MediaTab-End-->

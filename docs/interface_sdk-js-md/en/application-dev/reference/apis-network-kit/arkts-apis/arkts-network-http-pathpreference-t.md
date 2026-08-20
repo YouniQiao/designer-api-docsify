@@ -4,7 +4,13 @@
 export type PathPreference = 'auto' | 'primaryCellular' | 'secondaryCellular'
 ```
 
-Enumerates the types of networks specified in an HTTP request. &gt; **NOTE：**&gt; &gt; It is recommended that this parameter be used in scenarios such as network concurrency. &gt; If the specified network is not activated, the system uses the default network.
+Enumerates the types of networks specified in an HTTP request.
+
+> **NOTE：**
+> 
+> It is recommended that this parameter be used in scenarios such as network concurrency.
+
+> If the specified network is not activated, the system uses the default network.
 
 **Since:** 23
 

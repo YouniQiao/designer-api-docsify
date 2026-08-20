@@ -2,6 +2,8 @@
 
 Result the metadata for a downloadableProfile.
 
+@interface GetDownloadableProfileMetadataResult
+
 **Since:** 23
 
 <!--Device-eSIM-export interface GetDownloadableProfileMetadataResult--><!--Device-eSIM-export interface GetDownloadableProfileMetadataResult-End-->

@@ -1,6 +1,6 @@
 # @ohos.multimodalAwareness.spatialAwareness
 
-This module provides the capability to subscribe to report the distance measurement result.
+This module provides the capability to subscribe to report the distance measurement result. @namespace spatialAwareness
 
 **Since:** 23
 
@@ -36,9 +36,9 @@ import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
 
 | Name | Description |
 | --- | --- |
-| [DistanceMeasurementConfigParams](arkts-multimodalawareness-spatialawareness-distancemeasurementconfigparams-i-sys.md) | Configuration parameters for the distance measurement interface |
-| [DistanceMeasurementResponse](arkts-multimodalawareness-spatialawareness-distancemeasurementresponse-i-sys.md) | Interface for distance measurement result |
-| [DoorPositionResponse](arkts-multimodalawareness-spatialawareness-doorpositionresponse-i-sys.md) | Interface for indoor or outdoor identify result |
+| [DistanceMeasurementConfigParams](arkts-multimodalawareness-spatialawareness-distancemeasurementconfigparams-i-sys.md) | Configuration parameters for the distance measurement interface @interface DistanceMeasurementConfigParams |
+| [DistanceMeasurementResponse](arkts-multimodalawareness-spatialawareness-distancemeasurementresponse-i-sys.md) | Interface for distance measurement result @interface DistanceMeasurementResponse |
+| [DoorPositionResponse](arkts-multimodalawareness-spatialawareness-doorpositionresponse-i-sys.md) | Interface for indoor or outdoor identify result @interface DoorPositionResponse |
 <!--DelEnd-->
 
 <!--Del-->
@@ -48,7 +48,7 @@ import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
 | --- | --- |
 | [DistanceRank](arkts-multimodalawareness-spatialawareness-distancerank-e-sys.md) | Enum for distance rank. |
 | [PositionRelativeToDoor](arkts-multimodalawareness-spatialawareness-positionrelativetodoor-e-sys.md) | Enum for identification result inside and outside the door |
-| [ReportingMode](arkts-multimodalawareness-spatialawareness-reportingmode-e-sys.md) | Enum for distance measurement result reporting modes. |
+| [ReportingMode](arkts-multimodalawareness-spatialawareness-reportingmode-e-sys.md) | Enum for distance measurement result reporting modes. @enum { int } ReportingMode |
 | [TechnologyType](arkts-multimodalawareness-spatialawareness-technologytype-e-sys.md) | Enum for distance measurement technology types. |
 <!--DelEnd-->
 

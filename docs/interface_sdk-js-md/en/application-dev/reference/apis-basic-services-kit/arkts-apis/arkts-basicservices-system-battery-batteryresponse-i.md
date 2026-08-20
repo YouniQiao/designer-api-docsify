@@ -22,7 +22,9 @@ import { Battery, BatteryResponse, GetStatusOptions } from '@kit.BasicServicesKi
 charging: boolean
 ```
 
-Whether the battery is being charged. The value **true** indicates that the battery is being charged; **false** indicates the opposite. The default value is **false**. Note: This API is no longer maintained since API version 6 except for lite wearables. You are advised to use batteryInfo.chargingStatus instead.
+Whether the battery is being charged. The value **true** indicates that the battery is being charged; **false** indicates the opposite. The default value is **false**.
+
+Note: This API is no longer maintained since API version 6 except for lite wearables. You are advised to use batteryInfo.chargingStatus instead.
 
 **Type:** boolean
 
@@ -30,7 +32,7 @@ Whether the battery is being charged. The value **true** indicates that the batt
 
 **Deprecated since:** 6
 
-**Substitutes:** [chargingStatus](arkts-basicservices-batteryinfo-con.md#chargingstatus)
+**Substitutes:** [chargingStatus](arkts-basicservices-batteryinfo-chargingstatus-f.md)
 
 <!--Device-BatteryResponse-charging: boolean--><!--Device-BatteryResponse-charging: boolean-End-->
 
@@ -42,7 +44,9 @@ Whether the battery is being charged. The value **true** indicates that the batt
 level: number
 ```
 
-Current battery level in percent, which ranges from **0.00** to **1.00**. Note: This API is no longer maintained since API version 6 except for lite wearables. You are advised to use batteryInfo.batterySOC instead.
+Current battery level in percent, which ranges from **0.00** to **1.00**.
+
+Note: This API is no longer maintained since API version 6 except for lite wearables. You are advised to use batteryInfo.batterySOC instead.
 
 **Type:** number
 
@@ -50,7 +54,7 @@ Current battery level in percent, which ranges from **0.00** to **1.00**. Note: 
 
 **Deprecated since:** 6
 
-**Substitutes:** [batterySOC](arkts-basicservices-batteryinfo-con.md#batterysoc)
+**Substitutes:** [batterySOC](arkts-basicservices-batteryinfo-batterysoc-f.md)
 
 <!--Device-BatteryResponse-level: number--><!--Device-BatteryResponse-level: number-End-->
 

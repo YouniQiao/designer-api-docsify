@@ -12,7 +12,9 @@ import { userAccessCtrl } from '@kit.UserAuthenticationKit';
 function verifyAuthToken(authToken: Uint8Array, allowableDuration: int): Promise<AuthToken>
 ```
 
-验证认证令牌。该接口用于校验AuthToken的有效性，包括完整性校验和时效性校验，校验通过后返回解析后的AuthToken详细信息。使用Promise异步回调。 完整性校验通过验证AuthToken的数字签名确保令牌未被篡改；时效性校验通过比对AuthToken的签发时间与当前时间，并结合allowableDuration参数判断令牌是否在有效期内。
+验证认证令牌。该接口用于校验AuthToken的有效性，包括完整性校验和时效性校验，校验通过后返回解析后的AuthToken详细信息。使用Promise异步回调。
+
+完整性校验通过验证AuthToken的数字签名确保令牌未被篡改；时效性校验通过比对AuthToken的签发时间与当前时间，并结合allowableDuration参数判断令牌是否在有效期内。
 
 **起始版本：** 23
 
@@ -41,11 +43,11 @@ function verifyAuthToken(authToken: Uint8Array, allowableDuration: int): Promise
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
-| [12500015](../errorcode-useriam.md#12500015-authtoken完整性校验失败) | AuthToken integrity check failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Called by non-system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
 | [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| [12500015](../errorcode-useriam.md#12500015-authtoken完整性校验失败) | AuthToken integrity check failed. |
 | [12500016](../errorcode-useriam.md#12500016-authtoken过期) | AuthToken has expired. |
 
 **示例**
@@ -88,25 +90,25 @@ try {
   // 需要调用UserAuthInstance的start()接口，启动认证后，才能通过onResult获取到认证结果。
   userAuthInstance.on('result', {
     onResult: (result) => {
-        if (!result.token) {
-            console.error('userAuthInstance callback result.token is null');
-            return;
-        }
-        try {
-          // 发起AuthToken验证请求。
-          userAccessCtrl.verifyAuthToken(result.token, allowableDuration)
-              .then((retAuthToken: userAccessCtrl.AuthToken) => {
-                  Object.keys(retAuthToken).forEach((key) => {
-                      // 处理业务逻辑。
-                      console.info(`retAuthToken key:${key}`);
-                  })
-              }).catch ((error: BusinessError) => {
-                  console.error(`verify authToken failed. Code is ${error?.code}, message is ${error?.message}`);
-              })
-        } catch (error) {
-          const err: BusinessError = error as BusinessError;
-          console.error(`verify authToken failed. Code is ${err?.code}, message is ${err?.message}`);
-        }
+      if (!result.token) {
+        console.error('userAuthInstance callback result.token is null');
+        return;
+      }
+      try {
+        // 发起AuthToken验证请求。
+        userAccessCtrl.verifyAuthToken(result.token, allowableDuration)
+          .then((retAuthToken: userAccessCtrl.AuthToken) => {
+            Object.keys(retAuthToken).forEach((key) => {
+              // 处理业务逻辑。
+              console.info(`retAuthToken key:${key}`);
+            });
+          }).catch((error: BusinessError) => {
+            console.error(`Failed to verify authToken. Code: ${error.code}, message: ${error.message}`);
+          });
+      } catch (error) {
+        const err: BusinessError = error as BusinessError;
+        console.error(`Failed to verify authToken. Code: ${err.code}, message: ${err.message}`);
+      }
     }
   });
   console.info('auth on successfully.');
@@ -115,7 +117,7 @@ try {
   console.info('auth start successfully.');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`auth failed. Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 
@@ -154,9 +156,9 @@ try {
       userAccessCtrl.verifyAuthToken(result.token!, allowableDuration)
         .then((retAuthToken: userAccessCtrl.AuthToken) => {
           console.info('retAuthToken: ' + JSON.stringify(retAuthToken));
-        }).catch ((error) => {
-        console.error(`verify authToken failed. Code is ${error?.code}, message is ${error?.message}`);
-      })
+        }).catch((error) => {
+          console.error(`Failed to verify auth token. Code: ${error.code}, message: ${error.message}`);
+        });
     }
   });
   console.info('auth on successfully.');
@@ -165,7 +167,7 @@ try {
   console.info('auth start successfully.');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`auth failed. Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 

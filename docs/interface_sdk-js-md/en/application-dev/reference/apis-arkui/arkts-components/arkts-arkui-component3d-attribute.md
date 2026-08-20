@@ -1,5 +1,7 @@
 # Component3D properties/events
 
+@extends CommonMethod&lt;Component3DAttribute&gt;
+
 **Inheritance/Implementation:** Component3DAttribute extends CommonMethod<Component3DAttribute>
 
 **Since:** 12

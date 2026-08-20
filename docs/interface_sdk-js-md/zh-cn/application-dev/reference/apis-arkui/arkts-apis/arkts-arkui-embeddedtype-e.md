@@ -2,6 +2,8 @@
 
 Enum of EmbeddedType
 
+@enum { number }
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare enum EmbeddedType--><!--Device-unnamed-declare enum EmbeddedType-End-->

@@ -1,6 +1,6 @@
 # AccessibilityActionInterceptResult
 
-intercept action的枚举
+intercept action的枚举 @enum { number }
 
 **起始版本：** 20
 

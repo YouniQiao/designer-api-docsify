@@ -103,7 +103,9 @@ Trigger the event callbacks.
 off(event: string, callback?: Function): void
 ```
 
-Unsubscribes from an event. - If **callback** is specified, this API unsubscribes from the given event with the specified callback. - If **callback** is not specified, this API unsubscribes from the given event with all callbacks.
+Unsubscribes from an event.
+
+- If **callback** is specified, this API unsubscribes from the given event with the specified callback. - If **callback** is not specified, this API unsubscribes from the given event with all callbacks.
 
 **Since:** 23
 
@@ -165,7 +167,11 @@ export default class EntryAbility extends UIAbility {
 on(event: string, callback: Function): void
 ```
 
-Subscribes to an event. &gt; **NOTE：**&gt; &gt; When the callback is triggered by **emit**, the invoker is the EventHub object. To change the direction of &gt; **this** in **callback**, use an arrow function.
+Subscribes to an event.
+
+> **NOTE：**
+> 
+> When the callback is triggered by **emit**, the invoker is the EventHub object. To change the direction of &gt; **this** in **callback**, use an arrow function.
 
 **Since:** 23
 

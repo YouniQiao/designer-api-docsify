@@ -1,6 +1,8 @@
 # EapData
 
-EAP信息。 ​**系统能力**​：SystemCapability.Communication.NetManager.Eap
+EAP信息。
+
+​**系统能力**​：SystemCapability.Communication.NetManager.Eap
 
 **起始版本：** 20
 

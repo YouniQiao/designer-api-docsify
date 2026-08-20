@@ -2,6 +2,8 @@
 
 Declare the options of AdvancedDialogV2Button
 
+@interface AdvancedDialogV2ButtonOptions
+
 **Since:** 18
 
 <!--Device-unnamed-export declare interface AdvancedDialogV2ButtonOptions--><!--Device-unnamed-export declare interface AdvancedDialogV2ButtonOptions-End-->
@@ -42,7 +44,7 @@ background?: ColorMetrics
 
 Sets the background color of a button.
 
-**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -148,7 +150,7 @@ fontColor?: ColorMetrics
 
 Sets the Button Text Color.
 
-**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
 
 **Since:** 18
 

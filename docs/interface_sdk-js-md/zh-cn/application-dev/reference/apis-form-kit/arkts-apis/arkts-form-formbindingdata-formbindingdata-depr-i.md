@@ -1,4 +1,4 @@
-# FormBindingData(卡片数据绑定类)
+# FormBindingData
 
 FormBindingData提供卡片数据绑定的能力，用于存储卡片需要展示的数据。
 

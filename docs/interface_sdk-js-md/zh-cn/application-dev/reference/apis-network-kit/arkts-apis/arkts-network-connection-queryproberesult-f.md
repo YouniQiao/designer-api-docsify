@@ -12,7 +12,11 @@ import { connection } from '@kit.NetworkKit';
 function queryProbeResult(destination: string, duration: int): Promise<ProbeResultInfo>
 ```
 
-查询网络探测结果。若出现异常（例如断网），导致发送请求失败，则接口会立即返回，不再进行后续探测。本接口使用Promise方式作为异步方法。 &gt; **说明：** &gt; &gt; 此接口用于对目标主机进行一段持续时间的网络探测，以获取丢包率和RTT信息。
+查询网络探测结果。若出现异常（例如断网），导致发送请求失败，则接口会立即返回，不再进行后续探测。本接口使用Promise方式作为异步方法。
+
+> **说明：**
+> 
+> 此接口用于对目标主机进行一段持续时间的网络探测，以获取丢包率和RTT信息。
 
 **起始版本：** 26.0.0
 
@@ -41,9 +45,9 @@ function queryProbeResult(destination: string, duration: int): Promise<ProbeResu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | Internal error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 **示例**
 

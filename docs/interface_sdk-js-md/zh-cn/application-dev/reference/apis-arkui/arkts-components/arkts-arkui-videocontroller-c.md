@@ -2,7 +2,10 @@
 
 一个VideoController对象可以控制一个或多个Video。
 
-## 导入对象 ```ts let controller: VideoController = new VideoController(); ```
+## 导入对象
+
+```ts
+let controller: VideoController = new VideoController(); ```
 
 **起始版本：** 7
 
@@ -109,7 +112,11 @@ reset(): void
 setCurrentTime(value: number)
 ```
 
-指定视频播放的进度位置。 &gt; **说明：** &gt; &gt; 如需从视频内的某一时间点开始播放，应关闭自动播放，在视频准备完成后先跳转再播放。
+指定视频播放的进度位置。
+
+> **说明：**
+> 
+> 如需从视频内的某一时间点开始播放，应关闭自动播放，在视频准备完成后先跳转再播放。
 
 **起始版本：** 7
 
@@ -131,7 +138,11 @@ setCurrentTime(value: number)
 setCurrentTime(value: number, seekMode: SeekMode)
 ```
 
-指定视频播放的进度位置，并指定跳转模式。 &gt; **说明：** &gt; &gt; 如需从视频内的某一时间点开始播放，应关闭自动播放，在视频准备完成后先跳转再播放。
+指定视频播放的进度位置，并指定跳转模式。
+
+> **说明：**
+> 
+> 如需从视频内的某一时间点开始播放，应关闭自动播放，在视频准备完成后先跳转再播放。
 
 **起始版本：** 8
 

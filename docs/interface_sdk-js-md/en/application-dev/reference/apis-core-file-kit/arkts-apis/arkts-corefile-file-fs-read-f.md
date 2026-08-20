@@ -47,15 +47,15 @@ Reads file data. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900004 | Interrupted system call |
-| 13900020 | Invalid argument |
 | 13900005 | I/O error |
-| 13900034 | Operation would block |
-| 13900019 | Is a directory |
-| 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
-| 13900013 | Bad address |
 | 13900008 | Bad file descriptor |
 | 13900010 | Try again |
+| 13900013 | Bad address |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900034 | Operation would block |
 | 13900042 | Unknown error |
+| 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
 
 
 ## read
@@ -87,13 +87,13 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900004 | Interrupted system call |
-| 13900020 | Invalid argument |
 | 13900005 | I/O error |
-| 13900034 | Operation would block |
-| 13900019 | Is a directory |
-| 13900013 | Bad address |
 | 13900008 | Bad file descriptor |
 | 13900010 | Try again |
+| 13900013 | Bad address |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900034 | Operation would block |
 | 13900042 | Unknown error |
 
 
@@ -132,12 +132,12 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900004 | Interrupted system call |
-| 13900020 | Invalid argument |
 | 13900005 | I/O error |
-| 13900034 | Operation would block |
-| 13900019 | Is a directory |
-| 13900013 | Bad address |
 | 13900008 | Bad file descriptor |
 | 13900010 | Try again |
+| 13900013 | Bad address |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900034 | Operation would block |
 | 13900042 | Unknown error |
 

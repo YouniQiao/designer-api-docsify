@@ -1,6 +1,10 @@
 # DragController
 
-提供发起主动拖拽的能力，当应用接收到触摸或长按等事件时可以主动发起拖拽的动作，并在其中携带拖拽信息。 &gt; **说明：** &gt; &gt; 以下API需先使用UIContext中的[getDragController()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取DragController实例，再通过此实例调用对应方法。
+提供发起主动拖拽的能力，当应用接收到触摸或长按等事件时可以主动发起拖拽的动作，并在其中携带拖拽信息。
+
+> **说明：**
+> 
+> 以下API需先使用UIContext中的[getDragController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取DragController实例，再通过此实例调用对应方法。
 
 **起始版本：** 11
 
@@ -54,7 +58,11 @@ cancelDataLoading(key: string): void
 createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: dragController.DragInfo): dragController.DragAction
 ```
 
-创建拖拽的Action对象，需要显式指定拖拽背板图（可多个），以及拖拽的数据，跟手点等信息；当通过一个已创建的Action对象发起的拖拽未结束时，无法再次创建新的Action对象，接口会抛出异常；当Action对象的生命周期结束 后，注册在该对象上的回调函数会失效，因此需要在一个尽量长的作用域下持有该对象，并在每次发起拖拽前通过createDragAction返回新的对象覆盖旧值。 &gt; **说明：** &gt; &gt; 建议控制传递的拖拽背板数量，传递过多容易导致拖起的效率问题。
+创建拖拽的Action对象，需要显式指定拖拽背板图（可多个），以及拖拽的数据，跟手点等信息；当通过一个已创建的Action对象发起的拖拽未结束时，无法再次创建新的Action对象，接口会抛出异常；当Action对象的生命周期结束 后，注册在该对象上的回调函数会失效，因此需要在一个尽量长的作用域下持有该对象，并在每次发起拖拽前通过createDragAction返回新的对象覆盖旧值。
+
+> **说明：**
+> 
+> 建议控制传递的拖拽背板数量，传递过多容易导致拖起的效率问题。
 
 **起始版本：** 11
 
@@ -70,7 +78,7 @@ createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: dra
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| customArray | Array&lt;CustomBuilder \| [DragItemInfo](../../apis-na/arkts-apis/arkts-na-common-dragiteminfo-i.md)&gt; | 是 | 拖拽发起后跟手效果所拖拽的对象。 |
+| customArray | Array&lt;[CustomBuilder](../../apis-default/arkts-apis/arkts-custombuilder-t.md) \| [DragItemInfo](../../apis-default/arkts-apis/arkts-common-dragiteminfo-i.md)&gt; | 是 | 拖拽发起后跟手效果所拖拽的对象。 |
 | dragInfo | dragController.DragInfo | 是 | 拖拽信息。 |
 
 **返回值：**
@@ -83,8 +91,8 @@ createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: dra
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal handling failed. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal handling failed. |
 
 ## enableDropDisallowedBadge
 
@@ -133,16 +141,16 @@ executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragI
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| custom | CustomBuilder \| [DragItemInfo](../../apis-na/arkts-apis/arkts-na-common-dragiteminfo-i.md) | 是 | 拖拽发起后跟手效果所拖拽的对象。 <br/> **说明：** <br/>不支持全局builder。如果builder中使用了 Image组件，应尽量开启同步加载，即配置Image的syncLoad为true。该builder只用于生成当次拖拽中显示的图 片。builder的根组件宽高为0时，无法生成拖拽显示的图片导致拖拽失败。builder的修改不会同步到当前正在拖拽的图片，对builder的修改需要在下一次拖拽时生效。 |
+| custom | [CustomBuilder](../../apis-default/arkts-apis/arkts-custombuilder-t.md) \| [DragItemInfo](../../apis-default/arkts-apis/arkts-common-dragiteminfo-i.md) | 是 | 拖拽发起后跟手效果所拖拽的对象。 <br/> **说明：** <br/>不支持全局builder。如果builder中使用了 Image组件，应尽量开启同步加载，即配置Image的syncLoad为true。该builder只用于生成当次拖拽中显示的图 片。builder的根组件宽高为0时，无法生成拖拽显示的图片导致拖拽失败。builder的修改不会同步到当前正在拖拽的图片，对builder的修改需要在下一次拖拽时生效。 |
 | dragInfo | dragController.DragInfo | 是 | 拖拽信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;dragController.DragEventParam&gt; | 是 | 拖拽结束返回结果的回调<br/>- event：拖拽事件信息，仅包括拖拽结果。<br/>- extraParams：拖拽事件额外信息。<br>**起始版本：** 12 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;dragController.DragEventParam&gt; | 是 | 拖拽结束返回结果的回调<br/>- event：拖拽事件信息，仅包括拖拽结果。<br/>- extraParams：拖拽事件额外信息。<br>**起始版本：** 12 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal handling failed. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal handling failed. |
 
 ## executeDrag
 
@@ -167,7 +175,7 @@ executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragI
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| custom | CustomBuilder \| [DragItemInfo](../../apis-na/arkts-apis/arkts-na-common-dragiteminfo-i.md) | 是 | 拖拽发起后跟手效果所拖拽的对象。 |
+| custom | [CustomBuilder](../../apis-default/arkts-apis/arkts-custombuilder-t.md) \| [DragItemInfo](../../apis-default/arkts-apis/arkts-common-dragiteminfo-i.md) | 是 | 拖拽发起后跟手效果所拖拽的对象。 |
 | dragInfo | dragController.DragInfo | 是 | 拖拽信息。 |
 
 **返回值：**
@@ -181,8 +189,8 @@ executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragI
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal handling failed. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal handling failed. |
 
 ## getDragPreview
 

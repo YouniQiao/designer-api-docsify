@@ -20,7 +20,9 @@ import { bundleManager } from '@kit.MDMKit';
 installFlag?: number
 ```
 
-Installation flag. **0** (default value) indicates fresh installation of the application, **1** indicates overlay installation of the application, and **2** indicates installation-free.
+Installation flag.
+
+**0** (default value) indicates fresh installation of the application, **1** indicates overlay installation of the application, and **2** indicates installation-free.
 
 **Type:** number
 

@@ -1,4 +1,4 @@
-# MediaKeySystem(Defines the DRM capability.)
+# MediaKeySystem
 
 MediaKeySystem manages MediaKeySystem instances, handles device certificate (DRM certificate) requests and processing, creates sessions, manages offline media keys, obtains DRM metrics, and obtain device configurations. Before calling any API in MediaKeySystem, you must use [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md) to create a MediaKeySystem instance.
 
@@ -41,8 +41,8 @@ Clears offline media keys with the specified IDs.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed.Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 ## createMediaKeySession
 
@@ -76,10 +76,10 @@ Creates a MediaKeySession instance with the specified content protection level.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.The param level exceeds reasonable range, please use value in ContentProtectionLevel. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 ## createMediaKeySession
 
@@ -111,10 +111,10 @@ Create a MediaKeySession instance with level.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.The param level exceeds reasonable range, please use value in ContentProtectionLevel. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 ## createMediaKeySession
 
@@ -142,9 +142,9 @@ Creates a MediaKeySession instance with the default content protection level.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## createMediaKeySession
 
@@ -170,9 +170,9 @@ Create a MediaKeySession instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## destroy
 
@@ -194,8 +194,8 @@ Destroys this MediaKeySystem instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 ## generateKeySystemRequest
 
@@ -223,8 +223,8 @@ Generates a request to obtain a device certificate for the MediaKeySystem. This 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 ## getCertificateStatus
 
@@ -252,8 +252,8 @@ Obtains the status of the device certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 ## getConfigurationByteArray
 
@@ -288,8 +288,8 @@ Obtains the value of a configuration item in the form of a byte array.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 ## getConfigurationString
 
@@ -324,8 +324,8 @@ Obtains the value of a configuration item in the form of a string.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed, the param's length is zero or too big(exceeds 4096 Bytes). |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 ## getMaxContentProtectionLevel
 
@@ -353,8 +353,8 @@ Obtains the maximum content protection level supported by the current DRM soluti
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 ## getOfflineMediaKeyIds
 
@@ -382,8 +382,8 @@ Obtains the IDs of offline media keys.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 ## getOfflineMediaKeyStatus
 
@@ -418,8 +418,8 @@ Obtains the status of offline media keys with the specified IDs.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 ## getStatistics
 
@@ -447,8 +447,8 @@ Obtains the DRM metrics, including the number of active sessions, plugin version
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 ## offKeySystemRequired
 
@@ -595,8 +595,8 @@ Processes the response to a previously generated device certificate request. Thi
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 ## setConfigurationByteArray
 
@@ -626,8 +626,8 @@ Sets a configuration item in the form of a byte array.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 ## setConfigurationString
 
@@ -657,6 +657,6 @@ Sets a configuration item in the form of a string.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 

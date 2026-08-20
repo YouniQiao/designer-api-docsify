@@ -2,6 +2,8 @@
 
 Provide an interface for the text style of picker
 
+@interface PickerTextStyle
+
 **Since:** 11
 
 <!--Device-unnamed-declare interface PickerTextStyle--><!--Device-unnamed-declare interface PickerTextStyle-End-->

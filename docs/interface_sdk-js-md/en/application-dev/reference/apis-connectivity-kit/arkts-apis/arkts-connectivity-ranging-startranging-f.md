@@ -35,11 +35,11 @@ Initiates ranging with a specified device. If the link to the target device is a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 34900052 | The specified type of ranging service is not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| 34900051 | The device has already initiated ranging. |
+| 34900052 | The specified type of ranging service is not supported. |
 | 34900053 | The ranging service is disabled. |
 | 34900054 | The parameter value does not meet specifications. |
-| 34900051 | The device has already initiated ranging. |
 | [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) | Internal system error. For example, Internal object is invalid. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

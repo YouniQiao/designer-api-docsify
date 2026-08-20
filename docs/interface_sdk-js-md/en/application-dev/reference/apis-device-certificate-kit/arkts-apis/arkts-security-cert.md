@@ -41,8 +41,8 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 | [createX509CertChain](arkts-devicecertificate-cert-createx509certchain-f.md) | Creates an **X509CertChain** instance. This API uses a promise to return the result. |
 | [createX509CertChain](arkts-devicecertificate-cert-createx509certchain-f.md) | Creates an **X509CertChain** instance. This API uses an asynchronous callback to return the result. |
 | [createX509CertChain](arkts-devicecertificate-cert-createx509certchain-f.md) | Creates an X.509 certificate chain object based on the specified certificates. This API returns the result synchronously. |
-| [createX509Crl](arkts-devicecertificate-cert-createx509crl-f.md) | Creates an **X509Crl** instance. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 9 and deprecated since API version 11. Use &gt; [cert.createX509CRL()](arkts-devicecertificate-cert-createx509crl-f.md) instead. |
-| [createX509Crl](arkts-devicecertificate-cert-createx509crl-f.md) | Creates an **X509Crl** instance. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 9 and deprecated since API version 11. Use &gt; [cert.createX509CRL()](arkts-devicecertificate-cert-createx509crl-f.md) instead. |
+| [createX509Crl](arkts-devicecertificate-cert-createx509crl-f.md) | Creates an **X509Crl** instance. This API uses an asynchronous callback to return the result. |
+| [createX509Crl](arkts-devicecertificate-cert-createx509crl-f.md) | Creates an **X509Crl** instance. This API uses a promise to return the result. |
 | [generateCsr](arkts-devicecertificate-cert-generatecsr-f.md) | Generates a CSR. |
 | [parsePkcs12](arkts-devicecertificate-cert-parsepkcs12-f.md) | Parses P12. |
 | [parsePkcs12](arkts-devicecertificate-cert-parsepkcs12-f.md) | Parses P12. This API uses a promise to return the result. |
@@ -62,16 +62,16 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 | [CertValidationParams](arkts-devicecertificate-cert-certvalidationparams-i.md) | Parameters for certificate validation. |
 | [CertValidationResult](arkts-devicecertificate-cert-certvalidationresult-i.md) | Result of certificate validation. |
 | [CmsEnvelopedDecryptionConfig](arkts-devicecertificate-cert-cmsenvelopeddecryptionconfig-i.md) | Configuration used for decrypting CMS enveloped data. |
-| [CmsGenerator](arkts-devicecertificate-cert-cmsgenerator-i.md) | Provides APIs for generating the messages in CMS format. &gt; **NOTE：**&gt; &gt; PKCS #7 is a standard syntax for storing signed or encrypted data. CMS is an extension of PKCS #7. PKCS #7 &gt; supports data types including data, signed data, enveloped data, signed and enveloped data, digested &gt; data, and encrypted data. It is often used to protect data integrity and confidentiality. |
+| [CmsGenerator](arkts-devicecertificate-cert-cmsgenerator-i.md) | Provides APIs for generating the messages in CMS format. |
 | [CmsGeneratorOptions](arkts-devicecertificate-cert-cmsgeneratoroptions-i.md) | Represents the configuration for generating a CMS message. |
 | [CmsKeyAgreeRecipientInfo](arkts-devicecertificate-cert-cmskeyagreerecipientinfo-i.md) | Represents KeyAgree recipient information for CMS enveloped data. |
 | [CmsKeyTransRecipientInfo](arkts-devicecertificate-cert-cmskeytransrecipientinfo-i.md) | Represents KeyTrans recipient information for CMS enveloped data. |
-| [CmsParser](arkts-devicecertificate-cert-cmsparser-i.md) | Provides APIs for parsing, verifying, and decrypting CMS messages. &gt; **NOTE：**&gt; &gt; PKCS #7 is a standard syntax for storing signed or encrypted data. CMS is an extension of PKCS #7. PKCS #7 &gt; supports data types including data, signed data, enveloped data, signed and enveloped data, digested &gt; data, and encrypted data. It is often used to protect data integrity and confidentiality. |
-| [CmsRecipientInfo](arkts-devicecertificate-cert-cmsrecipientinfo-i.md) | Represents recipient information for the CMS message. &gt; **NOTE：**&gt; &gt; At least one recipient needs to be set. |
+| [CmsParser](arkts-devicecertificate-cert-cmsparser-i.md) | Provides APIs for parsing, verifying, and decrypting CMS messages. |
+| [CmsRecipientInfo](arkts-devicecertificate-cert-cmsrecipientinfo-i.md) | Represents recipient information for the CMS message. |
 | [CmsSignerConfig](arkts-devicecertificate-cert-cmssignerconfig-i.md) | Represents the configuration of the CMS signer. |
 | [CmsVerificationConfig](arkts-devicecertificate-cert-cmsverificationconfig-i.md) | Represents CMS verification configuration. |
-| [CsrAttribute](arkts-devicecertificate-cert-csrattribute-i.md) | Defines the CSR attribute representation. <br>CSR attribute field. Currently, only string-type attribute fields are supported. The attribute value added to the CSR is encoded in UTF-8 format. The common type is challengePassword. |
-| [CsrGenerationConfig](arkts-devicecertificate-cert-csrgenerationconfig-i.md) | Configuration parameters for generating a CSR, including the subject name, digest algorithm, attribute, and output format. &gt; **NOTE：**&gt; &gt; - subject is an X500DistinguishedName object. &gt; &gt; - mdName indicates the digest algorithm name. Currently, SHA1, SHA256, SHA384, and SHA512 are supported. &gt; &gt; - attributes is an optional parameter that specifies the attribute types and attribute values specified in &gt; PKCS #9 to generate a CSR. For example, challengePassword. &gt; &gt; - outFormat specifies the format of the output CSR. If the format is not specified, the PEM format is used by &gt; default. |
+| [CsrAttribute](arkts-devicecertificate-cert-csrattribute-i.md) | Defines the CSR attribute representation. |
+| [CsrGenerationConfig](arkts-devicecertificate-cert-csrgenerationconfig-i.md) | Configuration parameters for generating a CSR, including the subject name, digest algorithm, attribute, and output format. |
 | [DataArray](arkts-devicecertificate-cert-dataarray-i.md) | Defines a list of data arrays. |
 | [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | Encapsulates binary data. The core field **data** is of the Uint8Array type. |
 | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | Represents an encoded binary data block. |
@@ -90,8 +90,8 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 | [X509CertChain](arkts-devicecertificate-cert-x509certchain-i.md) | Provides APIs for managing the X.509 certificate chain. |
 | [X509CertMatchParameters](arkts-devicecertificate-cert-x509certmatchparameters-i.md) | Defines the parameters used to match a certificate. If no parameter is specified, all certificates are matched. |
 | [X509CertRevokedParams](arkts-devicecertificate-cert-x509certrevokedparams-i.md) | Parameters for checking certificate revocation status. |
-| [X509Crl](arkts-devicecertificate-cert-x509crl-i.md) | Provides APIs for X.509 CRL operations. &gt; **NOTE：**&gt; &gt; This API is supported since API version 9 and deprecated since API version 11. Use [X509CRL()](arkts-devicecertificate-cert-x509crl-i.md) &gt; instead. |
-| [X509CrlEntry](arkts-devicecertificate-cert-x509crlentry-i.md) | Provides APIs for operating on a revoked certificate entry in a CRL. &gt; **NOTE：**&gt; &gt; This API is supported since API version 9 and deprecated since API version 11. Use &gt; [X509CRLEntry()](arkts-devicecertificate-cert-x509crlentry-i.md) instead. |
+| [X509Crl](arkts-devicecertificate-cert-x509crl-i.md) | Provides APIs for X.509 CRL operations. |
+| [X509CrlEntry](arkts-devicecertificate-cert-x509crlentry-i.md) | Provides APIs for operating on a revoked certificate entry in a CRL. |
 | [X509TrustAnchor](arkts-devicecertificate-cert-x509trustanchor-i.md) | Represents an X.509 trust anchor, which is used to verify the certificate chain. The certificate or public key in the trust anchor is used as the trusted root to verify the certificate chain. |
 
 ### Enums

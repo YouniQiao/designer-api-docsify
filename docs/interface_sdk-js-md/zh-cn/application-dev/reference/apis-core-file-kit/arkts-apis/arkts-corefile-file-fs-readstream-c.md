@@ -96,8 +96,8 @@ seek(offset: number, whence?: WhenceType): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error |
+| 13900020 | Invalid argument |
 | 13900026 | Illegal seek |
 | 13900042 | Unknown error |
 

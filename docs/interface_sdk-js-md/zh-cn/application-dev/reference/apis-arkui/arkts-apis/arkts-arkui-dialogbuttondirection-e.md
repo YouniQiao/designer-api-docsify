@@ -1,4 +1,4 @@
-# DialogButtonDirection(AlertDialog)
+# DialogButtonDirection
 
 警告弹窗中按钮的对齐方式。
 

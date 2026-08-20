@@ -2,6 +2,8 @@
 
 Enum of EmbeddedType
 
+@enum { number }
+
 **Since:** 12
 
 <!--Device-unnamed-declare enum EmbeddedType--><!--Device-unnamed-declare enum EmbeddedType-End-->

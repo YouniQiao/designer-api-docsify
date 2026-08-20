@@ -22,7 +22,9 @@ import { componentUtils } from '@kit.ArkUI';
 x: double
 ```
 
-x轴平移距离。 单位: vp
+x轴平移距离。
+
+单位: vp
 
 **类型：** double
 
@@ -42,7 +44,9 @@ x轴平移距离。 单位: vp
 y: double
 ```
 
-y轴平移距离。 单位: vp
+y轴平移距离。
+
+单位: vp
 
 **类型：** double
 
@@ -62,7 +66,9 @@ y轴平移距离。 单位: vp
 z: double
 ```
 
-z轴平移距离。 单位: vp
+z轴平移距离。
+
+单位: vp
 
 **类型：** double
 

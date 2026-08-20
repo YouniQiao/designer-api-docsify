@@ -36,9 +36,11 @@ code: ProgressCode
 details: Record<string, TableDetails>
 ```
 
-表示端云同步各表的统计信息。 键表示表名，值表示该表的端云同步过程统计信息。
+表示端云同步各表的统计信息。
 
-**类型：** Record&lt;string, [TableDetails](arkts-arkdata-relationalstore-tabledetails-i.md)&gt;
+键表示表名，值表示该表的端云同步过程统计信息。
+
+**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [TableDetails](arkts-arkdata-relationalstore-tabledetails-i.md)&gt;
 
 **起始版本：** 23
 

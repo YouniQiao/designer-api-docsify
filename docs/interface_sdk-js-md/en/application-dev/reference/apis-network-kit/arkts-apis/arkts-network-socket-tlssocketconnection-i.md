@@ -1,6 +1,10 @@
 # TLSSocketConnection
 
-Defines a **TLSSocketConnection** object, that is, the connection between the TLSSocket client and the server. Before calling TLSSocketConnection APIs, you need to obtain a **TLSSocketConnection** object. &gt; **NOTE：**&gt; &gt; The TLSSocket client can call related APIs through the **TLSSocketConnection** object only after a connection is &gt; successfully established between the TLSSocket client and the server.
+Defines a **TLSSocketConnection** object, that is, the connection between the TLSSocket client and the server. Before calling TLSSocketConnection APIs, you need to obtain a **TLSSocketConnection** object.
+
+> **NOTE：**
+> 
+> The TLSSocket client can call related APIs through the **TLSSocketConnection** object only after a connection is &gt; successfully established between the TLSSocket client and the server.
 
 **Since:** 10
 
@@ -39,10 +43,10 @@ Closes a **TLSSocketServer** connection. This API uses an asynchronous callback 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
 | [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 **Examples**
 
@@ -111,10 +115,10 @@ Closes a **TLSSocketServer** connection. This API uses a promise to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
 | [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 **Examples**
 
@@ -181,10 +185,10 @@ Obtains the cipher suite negotiated by both communication parties after a **TLSS
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
 
@@ -252,10 +256,10 @@ Obtains the cipher suite negotiated by both communication parties after a **TLSS
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
 
@@ -303,7 +307,11 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 getLocalAddress(): Promise<NetAddress>
 ```
 
-Obtains the local socket address of a **TLSSocketConnection** connection. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; Call this API only after the **TLSSocketServer** connection is successfully established.
+Obtains the local socket address of a **TLSSocketConnection** connection. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> Call this API only after the **TLSSocketServer** connection is successfully established.
 
 **Since:** 12
 
@@ -528,8 +536,8 @@ Obtains the digital certificate of the peer end after a **TLSSocketServer** conn
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 ## getRemoteCertificate
 
@@ -555,8 +563,8 @@ Obtains the digital certificate of the peer end after a **TLSSocketServer** conn
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 ## getSignatureAlgorithms
 
@@ -583,8 +591,8 @@ Obtains the signing algorithm negotiated by both communication parties after a *
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
 
@@ -652,8 +660,8 @@ Obtains the signing algorithm negotiated by both communication parties after a *
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
 
@@ -701,7 +709,15 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 getSocketFd(): Promise<int>
 ```
 
-Obtains the file descriptor of a TLSSocketConnection connection. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - Call this API only after the **TLSSocketServer** connection is successfully established. &gt; &gt; - This API returns **-1** in abnormal cases such as disconnection and socket closed (for example, after the &gt; close API is called). &gt; &gt; - The lifecycle of the file descriptor is managed by the system. The application can use the &gt; [close](arkts-network-socket-tcpsocketconnection-i.md#close) method to close the socket &gt; connection, instead of directly operating the file descriptor.
+Obtains the file descriptor of a TLSSocketConnection connection. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - Call this API only after the **TLSSocketServer** connection is successfully established.
+> 
+> - This API returns **-1** in abnormal cases such as disconnection and socket closed (for example, after the &gt; close API is called).
+> 
+> - The lifecycle of the file descriptor is managed by the system. The application can use the &gt; [close](arkts-network-socket-tcpsocketconnection-i.md#close) method to close the socket &gt; connection, instead of directly operating the file descriptor.
 
 **Since:** 23
 
@@ -1212,11 +1228,11 @@ Sends a message to the client after a **TLSSocketServer** connection is establis
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
 | [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
-| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 **Examples**
 
@@ -1292,11 +1308,11 @@ Sends a message to the server after a **TLSSocketServer** connection is establis
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
 | [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
-| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 **Examples**
 

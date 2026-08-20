@@ -2,6 +2,8 @@
 
 Obtains NR cell information.
 
+@interface NrCellInformation
+
 **Since:** 23
 
 <!--Device-radio-export interface NrCellInformation--><!--Device-radio-export interface NrCellInformation-End-->

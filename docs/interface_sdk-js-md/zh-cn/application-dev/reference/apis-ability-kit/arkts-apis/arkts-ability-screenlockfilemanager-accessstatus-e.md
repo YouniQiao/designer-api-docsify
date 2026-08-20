@@ -1,4 +1,4 @@
-# AccessStatus(锁屏敏感数据管理)
+# AccessStatus
 
 表示锁屏下敏感数据访问权限申请状态的枚举。
 

@@ -1,6 +1,6 @@
 # AVCastPickerStyle
 
-Definition of av cast picker style
+Definition of av cast picker style @enum { int }
 
 **Since:** 23
 

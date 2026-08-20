@@ -12,7 +12,9 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function getOriginalFileName(fileName: string): string
 ```
 
-Obtains the original name of a DLP file. This API returns the result synchronously. Determine the file type based on the original file name extension and select an application to open the file.
+Obtains the original name of a DLP file. This API returns the result synchronously.
+
+Determine the file type based on the original file name extension and select an application to open the file.
 
 **Since:** 10
 

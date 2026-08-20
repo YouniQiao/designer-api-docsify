@@ -12,7 +12,9 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function getDLPSupportedFileTypes(): Promise<Array<string>>
 ```
 
-查询当前可支持权限设置和校验的文件扩展名类型列表。调用成功后返回支持的文件类型列表，用于判断哪些文件类型可进行DLP权限管理。使用Promise异步回调。 该接口用于获取支持DLP权限管理的文件类型列表，以便决定当前文件是否可以进行加密。
+查询当前可支持权限设置和校验的文件扩展名类型列表。调用成功后返回支持的文件类型列表，用于判断哪些文件类型可进行DLP权限管理。使用Promise异步回调。
+
+该接口用于获取支持DLP权限管理的文件类型列表，以便决定当前文件是否可以进行加密。
 
 **起始版本：** 10
 
@@ -52,7 +54,9 @@ dlpPermission.getDLPSupportedFileTypes().then((fileTypes) => { // 获取支持DL
 function getDLPSupportedFileTypes(callback: AsyncCallback<Array<string>>): void
 ```
 
-查询当前可支持权限设置和校验的文件扩展名类型列表。调用成功后返回支持的文件类型列表，用于判断哪些文件类型可进行DLP权限管理。使用callback异步回调。 该接口用于获取支持DLP权限管理的文件类型列表，以便决定当前文件是否可以进行加密。
+查询当前可支持权限设置和校验的文件扩展名类型列表。调用成功后返回支持的文件类型列表，用于判断哪些文件类型可进行DLP权限管理。使用callback异步回调。
+
+该接口用于获取支持DLP权限管理的文件类型列表，以便决定当前文件是否可以进行加密。
 
 **起始版本：** 10
 
@@ -64,7 +68,7 @@ function getDLPSupportedFileTypes(callback: AsyncCallback<Array<string>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
 
 **错误码：**
 

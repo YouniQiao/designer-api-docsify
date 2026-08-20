@@ -1,6 +1,10 @@
 # ApplicationContext
 
-ApplicationContext inherits from Context and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting. &gt; **NOTE：**&gt; &gt; The APIs of this module can be used only in the stage model.
+ApplicationContext inherits from Context and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting.
+
+> **NOTE：**
+> 
+> The APIs of this module can be used only in the stage model.
 
 **Inheritance/Implementation:** ApplicationContext extends Context
 
@@ -42,8 +46,8 @@ Obtains information about the running processes. This API uses a promise to retu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## getProcessRunningInformation
 
@@ -77,8 +81,8 @@ Obtains information about the running processes. This API uses an asynchronous c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## preloadUIExtensionAbility
 
@@ -86,7 +90,13 @@ Obtains information about the running processes. This API uses an asynchronous c
 preloadUIExtensionAbility(want: Want): Promise<void>
 ```
 
-Preloads a UIExtensionAbility instance. This API uses a promise to return the result. The preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility and waits to be loaded by the current application. A UIExtensionAbility instance can be preloaded for multiple times. Each time a preloaded UIExtensionAbility instance is loaded, the next preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility. | Name| Type| Mandatory| Description| | -------- | -------- | -------- | -------- | | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes| Want information of the UIExtensionAbility.|
+Preloads a UIExtensionAbility instance. This API uses a promise to return the result.
+
+The preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility and waits to be loaded by the current application.
+
+A UIExtensionAbility instance can be preloaded for multiple times. Each time a preloaded UIExtensionAbility instance is loaded, the next preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility.
+
+| Name| Type| Mandatory| Description| | -------- | -------- | -------- | -------- | | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes| Want information of the UIExtensionAbility.|
 
 **Since:** 23
 
@@ -116,14 +126,14 @@ Preloads a UIExtensionAbility instance. This API uses a promise to return the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 **Examples**
 
@@ -169,7 +179,9 @@ export default class EntryAbility extends UIAbility {
 registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallback): number
 ```
 
-Registers a listener to monitor the ability lifecycle of the application. This API uses an asynchronous callback to return the result. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
+Registers a listener to monitor the ability lifecycle of the application. This API uses an asynchronous callback to return the result.
+
+&lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
 
 **Since:** 9
 
@@ -223,7 +235,7 @@ Register environment callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| environmentCallback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | Yes | Callback used to return the ID of the registered listener. |
+| environmentCallback | [EnvironmentCallback](../../apis-default/arkts-apis/arkts-app-ability-environmentcallback-environmentcallback-i.md) | Yes | Callback used to return the ID of the registered listener. |
 
 **Return value:**
 
@@ -237,7 +249,9 @@ Register environment callback.
 unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<void>): void
 ```
 
-Unregisters the listener that monitors the ability lifecycle of the application. This API uses an asynchronous callback to return the result. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
+Unregisters the listener that monitors the ability lifecycle of the application. This API uses an asynchronous callback to return the result.
+
+&lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
 
 **Since:** 9
 
@@ -266,7 +280,9 @@ Unregisters the listener that monitors the ability lifecycle of the application.
 unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>
 ```
 
-Unregisters a listener for the lifecycle of a UIAbility within the application. This API uses a promise to return the result. It can be called only on the main thread. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
+Unregisters a listener for the lifecycle of a UIAbility within the application. This API uses a promise to return the result. It can be called only on the main thread.
+
+&lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
 
 **Since:** 9
 

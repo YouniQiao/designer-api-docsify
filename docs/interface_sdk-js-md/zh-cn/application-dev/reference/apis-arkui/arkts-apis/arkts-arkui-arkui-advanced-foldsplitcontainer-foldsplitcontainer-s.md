@@ -1,6 +1,12 @@
 # FoldSplitContainer
 
-FoldSplitContainer分栏布局，实现折叠屏二分栏、三分栏在展开态（设备完全展开状态）、悬停态（设备半折叠状态）以及折叠态（设备完全折叠状态）的区域控制。适用于折叠屏应用的响应式布局适配场景，可帮助开发者实现多屏状态下的智 能分栏布局，提升用户体验。折叠状态详情可参考[display.FoldStatus](arkts-arkui-display-foldstatus-e.md)。 &gt; **说明：** &gt; &gt; - 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 &gt; &gt; - 窗口宽度小于等于600vp时默认使用二分栏，窗口宽度大于600vp时在上下分栏的同时可支持扩展区域，窗口宽度大于600vp且在横屏半折状态下可触发悬停态布局。悬停态布局时会增加折痕区的避让并且扩展区域不可以贯穿折痕区，悬停态可 &gt; 设置不展示扩展区域，详情请参考[示例](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-FoldSplitContainer.md#示例)。
+FoldSplitContainer分栏布局，实现折叠屏二分栏、三分栏在展开态（设备完全展开状态）、悬停态（设备半折叠状态）以及折叠态（设备完全折叠状态）的区域控制。适用于折叠屏应用的响应式布局适配场景，可帮助开发者实现多屏状态下的智 能分栏布局，提升用户体验。折叠状态详情可参考[display.FoldStatus](arkts-arkui-display-foldstatus-e.md)。
+
+> **说明：**
+> 
+> - 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+> 
+> - 窗口宽度小于等于600vp时默认使用二分栏，窗口宽度大于600vp时在上下分栏的同时可支持扩展区域，窗口宽度大于600vp且在横屏半折状态下可触发悬停态布局。悬停态布局时会增加折痕区的避让并且扩展区域不可以贯穿折痕区，悬停态可 &gt; 设置不展示扩展区域，详情请参考[示例](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-FoldSplitContainer.md#示例)。
 
 **起始版本：** 12
 
@@ -21,9 +27,11 @@ import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayout
   animationOptions?: AnimateParam | null
 ```
 
-设置动画效果相关的参数，null表示关闭动效。 默认值：null
+设置动画效果相关的参数，null表示关闭动效。
 
-**类型：** [AnimateParam](../../apis-na/arkts-apis/arkts-na-common-animateparam-i.md) \| null
+默认值：null
+
+**类型：** [AnimateParam](../../apis-default/arkts-apis/arkts-common-animateparam-i.md) \| null
 
 **起始版本：** 12
 
@@ -65,7 +73,7 @@ import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayout
 
 扩展区域回调函数，用于构建扩展区域的UI内容。当需要实现三分栏布局或需要显示额外内容区域时传入此参数，不需要扩展区域时可省略此参数。回调函数无参数无返回值，不传入时没有对应区域。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **起始版本：** 12
 
@@ -148,7 +156,7 @@ onHoverStatusChange?: OnHoverStatusChangeHandler
 
 主要区域回调函数，用于构建主要区域的UI内容。回调函数无参数无返回值，在组件布局时被调用。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **起始版本：** 12
 
@@ -169,7 +177,7 @@ onHoverStatusChange?: OnHoverStatusChangeHandler
 
 次要区域回调函数，用于构建次要区域的UI内容。回调函数无参数无返回值，在组件布局时被调用。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **起始版本：** 12
 

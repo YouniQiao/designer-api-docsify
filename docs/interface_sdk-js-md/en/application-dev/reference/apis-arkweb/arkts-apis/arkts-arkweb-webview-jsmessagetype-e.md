@@ -1,6 +1,6 @@
 # JsMessageType
 
-Enumerates the data types of the results returned after the [runJavaScriptExt](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#runjavascriptext) API is executed.
+Enumerates the data types of the results returned after the [runJavaScriptExt](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#runjavascriptext) API is executed.
 
 **Since:** 10
 

@@ -1,4 +1,4 @@
-# EventInfo(Defines the DRM capability.)
+# EventInfo
 
 事件信息。
 

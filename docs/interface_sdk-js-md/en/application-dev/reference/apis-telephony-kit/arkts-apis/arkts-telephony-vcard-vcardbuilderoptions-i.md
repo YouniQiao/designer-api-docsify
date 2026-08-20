@@ -2,6 +2,8 @@
 
 Indicates the options for VCard export.
 
+@interface VCardBuilderOptions
+
 **Since:** 23
 
 <!--Device-vcard-export interface VCardBuilderOptions--><!--Device-vcard-export interface VCardBuilderOptions-End-->

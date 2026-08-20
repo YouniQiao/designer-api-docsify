@@ -2,6 +2,8 @@
 
 This module provides app domain verification info.
 
+@namespace appDomainVerify
+
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.

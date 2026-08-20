@@ -12,7 +12,9 @@ import { uiAppearance } from '@kit.ArkUI';
 function setFontWeightScale(fontWeightScale: number): Promise<void>
 ```
 
-Sets the system font weight scale. **Permission required**: ohos.permission.UPDATE_CONFIGURATION
+Sets the system font weight scale.
+
+**Permission required**: ohos.permission.UPDATE_CONFIGURATION
 
 **Since:** 12
 
@@ -40,9 +42,9 @@ Sets the system font weight scale. **Permission required**: ohos.permission.UPDA
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
 
 **Examples**
 

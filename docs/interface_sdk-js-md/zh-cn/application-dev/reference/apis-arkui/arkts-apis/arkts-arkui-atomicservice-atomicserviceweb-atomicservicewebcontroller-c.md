@@ -265,7 +265,13 @@ refresh(): void
 setCustomUserAgent(userAgent: string): void
 ```
 
-设置自定义用户代理，会覆盖系统的用户代理。 建议在onControllerAttached回调事件中设置User-Agent，设置方式请参考示例。不建议将User-Agent设置在onLoadIntercept回调事件中，在部分场景下可能出现设置失败。 &gt; **说明：** &gt; &gt; 当Web组件src设置了url，且未在onControllerAttached回调事件中设置User-Agent，再调用setCustomUserAgent方法时，可能会出现加载的页面与实际设置User-Agent不符的异常现 &gt; 象。
+设置自定义用户代理，会覆盖系统的用户代理。
+
+建议在onControllerAttached回调事件中设置User-Agent，设置方式请参考示例。不建议将User-Agent设置在onLoadIntercept回调事件中，在部分场景下可能出现设置失败。
+
+> **说明：**
+> 
+> 当Web组件src设置了url，且未在onControllerAttached回调事件中设置User-Agent，再调用setCustomUserAgent方法时，可能会出现加载的页面与实际设置User-Agent不符的异常现 &gt; 象。
 
 **起始版本：** 12
 

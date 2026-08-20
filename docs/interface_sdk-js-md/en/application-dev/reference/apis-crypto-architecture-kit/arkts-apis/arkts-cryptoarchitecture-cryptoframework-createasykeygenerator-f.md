@@ -12,7 +12,9 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createAsyKeyGenerator(algName: string): AsyKeyGenerator
 ```
 
-Creates an **AsyKeyGenerator** instance based on the specified algorithm. <br>For details about the supported specifications, see Asymmetric Key Generation and Conversion Specifications .
+Creates an **AsyKeyGenerator** instance based on the specified algorithm.
+
+<br>For details about the supported specifications, see Asymmetric Key Generation and Conversion Specifications .
 
 **Since:** 23
 

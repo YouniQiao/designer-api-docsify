@@ -1,6 +1,10 @@
 # LocalSocketConnection
 
-LocalSocketConnection连接，即LocalSocket客户端与服务端的会话连接。在调用LocalSocketConnection的方法前，需要先获取LocalSocketConnection对象。 &gt; **说明：** &gt; &gt; 客户端与服务端成功建立连接后，才能通过返回的LocalSocketConnection对象调用相应的接口。
+LocalSocketConnection连接，即LocalSocket客户端与服务端的会话连接。在调用LocalSocketConnection的方法前，需要先获取LocalSocketConnection对象。
+
+> **说明：**
+> 
+> 客户端与服务端成功建立连接后，才能通过返回的LocalSocketConnection对象调用相应的接口。
 
 **起始版本：** 11
 
@@ -123,7 +127,15 @@ server.listen(localAddr).then(() => {
 getSocketFd(): Promise<int>
 ```
 
-获取LocalSocketConnection连接的文件描述符。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 成功建立连接后，才可调用此方法。 &gt; &gt; - 连接断开、Socket已关闭（如调用close后）等异常情况下调用本接口会返回-1。 &gt; &gt; - 文件描述符的生命周期由系统管理，应用可以通过[close](arkts-network-socket-localsocket-i.md#close)方法关闭Socket连接，避免直接操作文件描述符进行关闭。
+获取LocalSocketConnection连接的文件描述符。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 成功建立连接后，才可调用此方法。
+> 
+> - 连接断开、Socket已关闭（如调用close后）等异常情况下调用本接口会返回-1。
+> 
+> - 文件描述符的生命周期由系统管理，应用可以通过[close](arkts-network-socket-localsocket-i.md#close)方法关闭Socket连接，避免直接操作文件描述符进行关闭。
 
 **起始版本：** 23
 
@@ -184,7 +196,7 @@ off(type: 'close', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'close' | 是 | 取消订阅的事件类型。'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **错误码：**
 
@@ -228,7 +240,7 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 取消订阅的事件类型。'error'：error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **错误码：**
 
@@ -272,7 +284,7 @@ off(type: 'message', callback?: Callback<LocalSocketMessageInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'message' | 是 | 取消订阅的事件类型。'message'：接收消息事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalSocketMessageInfo](arkts-network-socket-localsocketmessageinfo-i.md)&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalSocketMessageInfo](arkts-network-socket-localsocketmessageinfo-i.md)&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **错误码：**
 
@@ -322,7 +334,7 @@ on(type: 'close', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'close' | 是 | 订阅的事件类型。'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 以callback的形式异步返回会话关闭的结果。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 以callback的形式异步返回会话关闭的结果。 |
 
 **错误码：**
 
@@ -362,7 +374,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 订阅的事件类型。'error'：error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 以callback的形式异步返回出现错误的结果。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | 以callback的形式异步返回出现错误的结果。 |
 
 **错误码：**
 
@@ -402,7 +414,7 @@ on(type: 'message', callback: Callback<LocalSocketMessageInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'message' | 是 | 订阅的事件类型。'message'：接收消息事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalSocketMessageInfo](arkts-network-socket-localsocketmessageinfo-i.md)&gt; | 是 | 以callback的形式异步返回接收到的来自客户端的消息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalSocketMessageInfo](arkts-network-socket-localsocketmessageinfo-i.md)&gt; | 是 | 以callback的形式异步返回接收到的来自客户端的消息。 |
 
 **错误码：**
 
@@ -448,7 +460,11 @@ server.on('connect', (connection: socket.LocalSocketConnection) => {
 send(options: LocalSendOptions): Promise<void>
 ```
 
-通过LocalSocketConnection连接对象发送数据。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 服务端与客户端建立连接后，服务端通过connect事件回调得到LocalSocketConnection连接对象后，才可使用连接对象调用此方法。
+通过LocalSocketConnection连接对象发送数据。使用Promise异步回调。
+
+> **说明：**
+> 
+> 服务端与客户端建立连接后，服务端通过connect事件回调得到LocalSocketConnection连接对象后，才可使用连接对象调用此方法。
 
 **起始版本：** 11
 
@@ -472,8 +488,8 @@ send(options: LocalSendOptions): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 2301011 | Operation would block. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| 2301011 | Operation would block. |
 
 **示例**
 

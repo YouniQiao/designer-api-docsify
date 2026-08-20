@@ -39,7 +39,7 @@ function queryDevices(busType?: int): Array<Readonly<Device>>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permission check failed. |
-| [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-扩展外设驱动服务异常或bustype参数错误) | ExternalDeviceManager service exception or busType parameter error. |
+| [22900001](../errorcode-deviceManager.md#22900001-扩展外设驱动服务异常或bustype参数错误) | ExternalDeviceManager service exception or busType parameter error. |
 
 **示例**
 

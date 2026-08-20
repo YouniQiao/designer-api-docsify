@@ -25,7 +25,7 @@ Shows a text picker in the given settings.
 
 **Deprecated since:** 18
 
-**Substitutes:** [showTextPickerDialog](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#showtextpickerdialog)
+**Substitutes:** [showTextPickerDialog](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#showtextpickerdialog)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

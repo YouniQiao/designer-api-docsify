@@ -22,7 +22,11 @@ import { cliManager } from '@kit.AbilityKit';
 background?: boolean
 ```
 
-表示任务是否后台执行。 true：后台执行，false：前台执行。 默认值：false。
+表示任务是否后台执行。
+
+true：后台执行，false：前台执行。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -66,7 +70,7 @@ timeout?: long
 yieldMs?: long
 ```
 
-任务前台执行时长。取值范围：0 ~ 1000 * timeout。默认值：0。单位：ms。
+任务前台执行时长。取值范围：0 ~ 1000 timeout。默认值：0。单位：ms。
 
 **类型：** long
 

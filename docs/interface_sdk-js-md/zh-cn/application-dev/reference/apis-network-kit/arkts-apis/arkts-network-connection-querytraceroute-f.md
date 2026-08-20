@@ -12,7 +12,11 @@ import { connection } from '@kit.NetworkKit';
 function queryTraceRoute(destination: string, option?: TraceRouteOptions): Promise<TraceRouteInfo[]>
 ```
 
-查询网络路由跟踪信息，使用Promise方式作为异步方法。 &gt; **说明：** &gt; &gt; 应用调用该接口需申请精确位置权限。<!--RP1-->根据[申请位置权限开发指导](../../../device/location/location-permission-guidelines.md)&lt;!--RP1End- &gt; -&gt;，调用方需同时申请ohos.permission.APPROXIMATELY_LOCATION和ohos.permission.LOCATION。
+查询网络路由跟踪信息，使用Promise方式作为异步方法。
+
+> **说明：**
+> 
+> 应用调用该接口需申请精确位置权限。<!--RP1-->根据[申请位置权限开发指导](../../../device/location/location-permission-guidelines.md)&lt;!--RP1End- &gt; -&gt;，调用方需同时申请ohos.permission.APPROXIMATELY_LOCATION和ohos.permission.LOCATION。
 
 **起始版本：** 26.0.0
 
@@ -41,9 +45,9 @@ function queryTraceRoute(destination: string, option?: TraceRouteOptions): Promi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | Internal error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 **示例**
 

@@ -76,8 +76,8 @@ Queries a contact based on the specified email. This API uses an asynchronous ca
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 **Examples**
 
@@ -176,8 +176,8 @@ Queries a contact based on the specified email and holder. This API uses an asyn
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 **Examples**
 
@@ -278,8 +278,8 @@ Queries a contact based on the specified email and attributes. This API uses an 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 **Examples**
 
@@ -383,8 +383,8 @@ Queries a contact based on the specified email, holder, and attributes. This API
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 **Examples**
 
@@ -501,8 +501,8 @@ Queries a contact based on the specified email, holder, and attributes. This API
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 **Examples**
 

@@ -1,6 +1,8 @@
 # WindowStage
 
-窗口管理器。管理各个基本窗口单元，即[Window](arkts-arkui-window-n.md)实例。 下列API示例中都需在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)函数中使用WindowStage 的实例调用对应方法。
+窗口管理器。管理各个基本窗口单元，即[Window](arkts-arkui-window-n.md)实例。
+
+下列API示例中都需在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)函数中使用WindowStage 的实例调用对应方法。
 
 **起始版本：** 23
 
@@ -22,7 +24,9 @@ import { window } from '@kit.ArkUI';
 disableWindowDecor(): void
 ```
 
-禁止窗口装饰。 禁止窗口装饰后，当主窗口进入全屏沉浸状态时，此时鼠标Hover到上方窗口标题栏热区上会显示悬浮标题栏。若想禁用悬浮标题栏显示，请使用 [setTitleAndDockHoverShown()](arkts-arkui-window-window-i.md#settitleanddockhovershown)接口。
+禁止窗口装饰。
+
+禁止窗口装饰后，当主窗口进入全屏沉浸状态时，此时鼠标Hover到上方窗口标题栏热区上会显示悬浮标题栏。若想禁用悬浮标题栏显示，请使用 [setTitleAndDockHoverShown()](arkts-arkui-window-window-i.md#settitleanddockhovershown)接口。
 
 **起始版本：** 23
 
@@ -38,9 +42,9 @@ disableWindowDecor(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 **示例**
 
@@ -89,11 +93,11 @@ removeImageForRecent(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**适用版本：** 26.0.0+ |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 22 - 24 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
 ## setImageForRecent
 
@@ -101,7 +105,10 @@ removeImageForRecent(): Promise<void>
 setImageForRecent(imageResource: long | image.PixelMap, value: ImageFit): Promise<void>
 ```
 
-设置应用在多任务中和Dock栏悬停时显示的图片，使用Promise异步回调。 &gt; **说明：** &gt; &gt; 调用该接口前，建议先通过loadContent方法或者setUIContent &gt; 方法完成页面加载。如果应用窗口未完成页面加载就直接调用该接口，功能将不会生效。此时多任务中只显示应用启动页。
+设置应用在多任务中和Dock栏悬停时显示的图片，使用Promise异步回调。   
+> **说明：**
+> 
+> 调用该接口前，建议先通过loadContent方法或者setUIContent &gt; 方法完成页面加载。如果应用窗口未完成页面加载就直接调用该接口，功能将不会生效。此时多任务中只显示应用启动页。
 
 **起始版本：** 23
 
@@ -133,12 +140,12 @@ setImageForRecent(imageResource: long | image.PixelMap, value: ImageFit): Promis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. The WindowStage is running in the background. 3. Internal task error. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. Invalid parameter range. 2. Invalid parameter length. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**适用版本：** 26.0.0+ |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 22 - 24 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. The WindowStage is running in the background. 3. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. Invalid parameter range. 2. Invalid parameter length. |
 
 ## setImageForRecent
 
@@ -146,7 +153,10 @@ setImageForRecent(imageResource: long | image.PixelMap, value: ImageFit): Promis
 setImageForRecent(imgResourceId: number, value: ImageFit): Promise<void>
 ```
 
-设置应用在多任务中和Dock栏悬停时显示的图片，使用Promise异步回调。 &gt; **说明：** &gt; &gt; 调用该接口前，建议先通过loadContent方法或者setUIContent &gt; 方法完成页面加载。如果应用窗口未完成页面加载就直接调用该接口，功能将不会生效。此时多任务中只显示应用启动页。
+设置应用在多任务中和Dock栏悬停时显示的图片，使用Promise异步回调。   
+> **说明：**
+> 
+> 调用该接口前，建议先通过loadContent方法或者setUIContent &gt; 方法完成页面加载。如果应用窗口未完成页面加载就直接调用该接口，功能将不会生效。此时多任务中只显示应用启动页。
 
 **起始版本：** 19
 
@@ -175,11 +185,11 @@ setImageForRecent(imgResourceId: number, value: ImageFit): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. Invalid parameter range. 2. Invalid parameter length. 3. Incorrect parameter format. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 **示例**
 

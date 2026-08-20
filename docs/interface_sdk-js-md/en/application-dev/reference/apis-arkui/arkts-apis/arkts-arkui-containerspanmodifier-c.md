@@ -2,6 +2,8 @@
 
 Defines ContainerSpan Modifier
 
+@implements { ContainerSpanAttribute, AttributeModifier&lt;ContainerSpanAttribute&gt; }
+
 **Inheritance/Implementation:** ContainerSpanModifier implements ContainerSpanAttribute, AttributeModifier<ContainerSpanAttribute>
 
 **Since:** 23

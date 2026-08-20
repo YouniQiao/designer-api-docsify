@@ -35,8 +35,8 @@ constructor(dateTimeFormat: Intl.DateTimeFormat | SimpleDateTimeFormat,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dateTimeFormat | Intl.DateTimeFormat \| [SimpleDateTimeFormat](arkts-localization-i18n-simpledatetimeformat-c.md) | 是 | 用于格式化时间日期的对象。 |
-| options | [StyledDateTimeFormatOptions](arkts-localization-i18n-styleddatetimeformatoptions-i.md) | 否 |  |
+| dateTimeFormat | Intl.DateTimeFormat \| [SimpleDateTimeFormat](../../apis-default/arkts-apis/arkts-i18n-simpledatetimeformat-c.md) | 是 | 用于格式化时间日期的对象。 |
+| options | [StyledDateTimeFormatOptions](../../apis-default/arkts-apis/arkts-i18n-styleddatetimeformatoptions-i.md) | 否 |  |
 
 **示例**
 

@@ -43,8 +43,8 @@ Execute a command. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 35600031 | Maximum number of processes has been reached. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| 35600031 | Maximum number of processes has been reached. |
 | 35600050 | System Error. 1. Failed to connect to the system service; 2. The system service failed to communicate with the dependent module. |
 

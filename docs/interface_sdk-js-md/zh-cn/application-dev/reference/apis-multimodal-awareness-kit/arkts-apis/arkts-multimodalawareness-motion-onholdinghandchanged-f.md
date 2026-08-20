@@ -26,16 +26,16 @@ function onHoldingHandChanged(callback: Callback<HoldingHandStatus>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HoldingHandStatus](arkts-multimodalawareness-motion-holdinghandstatus-e.md)&gt; | 是 | 回调函数，返回握持手状态信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[HoldingHandStatus](arkts-multimodalawareness-motion-holdinghandstatus-e.md)&gt; | 是 | 回调函数，返回握持手状态信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work correctly due to limited <br> device capabilities. |
-| [31500001](../../apis-multimodalawareness-kit/errorcode-motion.md#31500001-服务异常) | Service exception. |
-| [31500002](../../apis-multimodalawareness-kit/errorcode-motion.md#31500002-订阅失败) | Subscribe Failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. An attempt was made to subscribe holdingHandChanged <br> event forbidden by permission: ohos.permission.DETECT_GESTURE. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work correctly due to limited <br> device capabilities. |
+| [31500001](../errorcode-motion.md#31500001-服务异常) | Service exception. |
+| [31500002](../errorcode-motion.md#31500002-订阅失败) | Subscribe Failed. |
 
 **示例**
 

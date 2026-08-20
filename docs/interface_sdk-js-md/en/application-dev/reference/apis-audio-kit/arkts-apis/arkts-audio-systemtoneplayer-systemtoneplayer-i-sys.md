@@ -78,8 +78,8 @@ Obtains the haptics style of the ringtone. This API returns the result synchrono
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
 
 **Examples**
 
@@ -121,8 +121,8 @@ Obtains the supported haptics styles. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
 
 **Examples**
 
@@ -160,8 +160,8 @@ Obtains the title of a system tone. This API uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 
 **Examples**
 
@@ -201,8 +201,8 @@ Unsubscribes the error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
 
 ## offPlayFinished
 
@@ -230,8 +230,8 @@ Unsubscribes the play finished events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
 
 ## off('error')
 
@@ -260,8 +260,8 @@ Unsubscribes from error events that occur during ringtone playback. This API use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
 
 **Examples**
 
@@ -308,8 +308,8 @@ Unsubscribes from the event indicating that the ringtone playback is finished. T
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
 
 **Examples**
 
@@ -353,8 +353,8 @@ Subscribes the error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
 
 ## onPlayFinished
 
@@ -383,8 +383,8 @@ Subscribes the play finished events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
 
 ## on('error')
 
@@ -413,8 +413,8 @@ Subscribes to error events that occur during ringtone playback. This API uses an
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
 
 **Examples**
 
@@ -432,7 +432,9 @@ systemTonePlayer.on('error', (err: BusinessError) => {
 on(type: 'playFinished', streamId: int, callback: Callback<int>): void
 ```
 
-Subscribes to the event indicating that the ringtone playback is finished. This API uses an asynchronous callback to return the result. The object to listen for is an audio stream specified by **streamId**. If **streamId** is set to **0**, this API subscribes to the playback complete event of all audio streams of the player.
+Subscribes to the event indicating that the ringtone playback is finished. This API uses an asynchronous callback to return the result.
+
+The object to listen for is an audio stream specified by **streamId**. If **streamId** is set to **0**, this API subscribes to the playback complete event of all audio streams of the player.
 
 **Since:** 18
 
@@ -454,8 +456,8 @@ Subscribes to the event indicating that the ringtone playback is finished. This 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
 
 **Examples**
 
@@ -503,9 +505,9 @@ Prepares to play a system tone. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 **Examples**
 
@@ -585,10 +587,10 @@ Sets the scale of the audio volume. No result is returned.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter check error. For example, value is outside [0,1]. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 **Examples**
 
@@ -611,7 +613,9 @@ try {
 setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void
 ```
 
-Sets a haptics style of the ringtone. Before calling this API, call [getSupportedHapticsFeatures](#getsupportedhapticsfeatures) to obtain the supported haptics styles. The setting fails if the haptics style to set is not supported.
+Sets a haptics style of the ringtone.
+
+Before calling this API, call [getSupportedHapticsFeatures](#getsupportedhapticsfeatures) to obtain the supported haptics styles. The setting fails if the haptics style to set is not supported.
 
 **Since:** 23
 
@@ -631,10 +635,10 @@ Sets a haptics style of the ringtone. Before calling this API, call [getSupporte
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 **Examples**
 
@@ -685,10 +689,10 @@ Start playing the system tone. By default, the audio and haptic will not be mute
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 
 **Examples**
 
@@ -740,9 +744,9 @@ Stops playing a system tone. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 **Examples**
 

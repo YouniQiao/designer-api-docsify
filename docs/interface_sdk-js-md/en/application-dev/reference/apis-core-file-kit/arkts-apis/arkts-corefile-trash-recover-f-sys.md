@@ -38,8 +38,8 @@ Recovers a file or directory from the trash.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | 13900002 | No such file or directory |
+| 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
 **Examples**

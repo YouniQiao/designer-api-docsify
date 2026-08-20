@@ -19,7 +19,9 @@
 menuType?: MenuType
 ```
 
-自定义选择菜单类型。 默认值：MenuType.SELECTION_MENU。
+自定义选择菜单类型。
+
+默认值：MenuType.SELECTION_MENU。
 
 **类型：** MenuType
 
@@ -119,9 +121,13 @@ onMenuShow?: MenuCallback
 previewMenuOptions?: PreviewMenuOptions
 ```
 
-预览菜单的选项。该参数只在RichEditor中生效。 从API版本26.0.0开始，该参数在Text组件中也生效。 不传入时，预览菜单使用默认配置。
+预览菜单的选项。该参数只在RichEditor中生效。
 
-**类型：** PreviewMenuOptions
+从API版本26.0.0开始，该参数在Text组件中也生效。
+
+不传入时，预览菜单使用默认配置。
+
+**类型：** [PreviewMenuOptions](arkts-arkui-previewmenuoptions-i.md)
 
 **起始版本：** 18
 

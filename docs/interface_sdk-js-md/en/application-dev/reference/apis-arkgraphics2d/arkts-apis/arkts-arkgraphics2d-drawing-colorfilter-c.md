@@ -1,6 +1,12 @@
 # ColorFilter
 
-Defines a color filter. &gt; **NOTE：**&gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - This module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
+Defines a color filter.
+
+> **NOTE：**
+> 
+> - This module uses the physical pixel unit, px.
+> 
+> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
 
 **Since:** 23
 

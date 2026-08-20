@@ -1,4 +1,0 @@
-# lazyGridLayout
-
-## Summary
-

@@ -2,6 +2,8 @@
 
 ContinueCallback registered for notify continue result.
 
+@interface ContinueCallback
+
 **起始版本：** 23
 
 <!--Device-unnamed-export interface ContinueCallback--><!--Device-unnamed-export interface ContinueCallback-End-->

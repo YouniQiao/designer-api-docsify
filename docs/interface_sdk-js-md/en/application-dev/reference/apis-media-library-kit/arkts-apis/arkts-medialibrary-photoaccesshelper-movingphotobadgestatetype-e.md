@@ -2,6 +2,8 @@
 
 Enumerates the types of the moving photo badge.
 
+@enum { int } MovingPhotoBadgeStateType
+
 **Since:** 26.0.0
 
 <!--Device-photoAccessHelper-export enum MovingPhotoBadgeStateType--><!--Device-photoAccessHelper-export enum MovingPhotoBadgeStateType-End-->

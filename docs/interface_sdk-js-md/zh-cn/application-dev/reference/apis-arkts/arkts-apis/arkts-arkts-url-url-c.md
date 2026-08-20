@@ -1,4 +1,4 @@
-# URL(URL字符串解析)
+# URL
 
 用于解析和构造完整URL。
 
@@ -84,7 +84,12 @@ let a = new url.URL();
 static parseURL(url: string, base?: string | URL): URL
 ```
 
-解析URL字符串，返回解析后的URL对象。该对象包含协议、主机、端口、路径和查询参数等URL组成部分。 &gt; **说明：** &gt; &gt; 当入参url是相对URL时，调用该接口解析后的URL并不是简单地将入参url和base直接拼接。 &gt; url内容为相对路径格式时，会相对于base的当前目录进行解析，包括base中path字段最后一个斜杠前的所有路径片段， &gt; 但不包括其后的部分（参照示例中url1）。url内容为指向根目录的格式时，会相对于base的原始地址（origin）进行解析（参照示例中url2）。
+解析URL字符串，返回解析后的URL对象。该对象包含协议、主机、端口、路径和查询参数等URL组成部分。
+
+> **说明：**
+> 
+> 当入参url是相对URL时，调用该接口解析后的URL并不是简单地将入参url和base直接拼接。
+> url内容为相对路径格式时，会相对于base的当前目录进行解析，包括base中path字段最后一个斜杠前的所有路径片段， &gt; 但不包括其后的部分（参照示例中url1）。url内容为指向根目录的格式时，会相对于base的原始地址（origin）进行解析（参照示例中url2）。
 
 **起始版本：** 23
 
@@ -340,7 +345,11 @@ pathname: string
 port: string
 ```
 
-获取和设置URL的端口部分。当port为当前protocol的默认端口时，port将被解析为空字符串。 &gt; **说明：** &gt; &gt; 在解析URL字符串时，如果入参中的port内容是当前protocol的默认端口，那么port将被解析为空字符串。默认端口为：http为80，https为443，ftp为21，gopher为70，ws为80， &gt; wss为443。
+获取和设置URL的端口部分。当port为当前protocol的默认端口时，port将被解析为空字符串。
+
+> **说明：**
+> 
+> 在解析URL字符串时，如果入参中的port内容是当前protocol的默认端口，那么port将被解析为空字符串。默认端口为：http为80，https为443，ftp为21，gopher为70，ws为80， &gt; wss为443。
 
 **类型：** string
 

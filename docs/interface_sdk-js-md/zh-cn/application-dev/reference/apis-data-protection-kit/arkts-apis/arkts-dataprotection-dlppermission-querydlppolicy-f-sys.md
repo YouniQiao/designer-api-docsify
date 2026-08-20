@@ -12,7 +12,13 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function queryDlpPolicy(dlpFd: number): Promise<string>
 ```
 
-在DLP文件中解析文件头，获取DLP明文策略。返回的策略JSON字符串包含[DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md)和 [CustomProperty](arkts-dataprotection-dlppermission-customproperty-i.md)信息。使用Promise异步回调。 该接口可用于在查看DLP文件权限配置等场景中，获取文件的策略信息以便进行分析。 &gt; **说明：** &gt; &gt; 该接口仅支持企业账号调用。
+在DLP文件中解析文件头，获取DLP明文策略。返回的策略JSON字符串包含[DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md)和 [CustomProperty](arkts-dataprotection-dlppermission-customproperty-i.md)信息。使用Promise异步回调。
+
+该接口可用于在查看DLP文件权限配置等场景中，获取文件的策略信息以便进行分析。
+
+> **说明：**
+> 
+> 该接口仅支持企业账号调用。
 
 **起始版本：** 20
 
@@ -40,16 +46,16 @@ function queryDlpPolicy(dlpFd: number): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19100003](../errorcode-dlp.md#19100003-加解密超时) | Credential task time out. |
-| [19100002](../errorcode-dlp.md#19100002-加解密出错) | Credential service busy due to too many tasks or duplicate tasks. |
-| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
-| [19100005](../errorcode-dlp.md#19100005-凭据认证服务器错误) | Credential authentication server error. |
-| [19100004](../errorcode-dlp.md#19100004-凭据服务错误) | Credential service error. |
-| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs.<br>**适用版本：** 20+ |
-| [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) | Failed to operate the DLP file. |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
+| [19100002](../errorcode-dlp.md#19100002-加解密出错) | Credential service busy due to too many tasks or duplicate tasks. |
+| [19100003](../errorcode-dlp.md#19100003-加解密超时) | Credential task time out. |
+| [19100004](../errorcode-dlp.md#19100004-凭据服务错误) | Credential service error. |
+| [19100005](../errorcode-dlp.md#19100005-凭据认证服务器错误) | Credential authentication server error. |
 | [19100008](../errorcode-dlp.md#19100008-非dlp文件) | The file is not a DLP file. |
+| [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) | Failed to operate the DLP file. |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
 | [19100013](../errorcode-dlp.md#19100013-用户无权限) | The user does not have the permission. |
 
 **示例**

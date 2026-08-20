@@ -2,7 +2,7 @@
 
 Defines accessibility config of suffix symbol.
 
-**Inheritance/Implementation:** ChipV2SuffixSymbolIconConfig extends [ChipV2SymbolIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2symboliconconfig-i.md)
+**Inheritance/Implementation:** ChipV2SuffixSymbolIconConfig extends [ChipV2SymbolIconConfig](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2symboliconconfig-i.md)
 
 **Since:** 26.0.0
 
@@ -44,7 +44,7 @@ activatedAccessibility?: ChipV2AccessibilityConfig
 
 Set activated accessibility config for suffix symbol.
 
-**Type:** [ChipV2AccessibilityConfig](arkts-arkui-arkui-advanced-chipv2-chipv2accessibilityconfig-i.md)
+**Type:** [ChipV2AccessibilityConfig](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2accessibilityconfig-i.md)
 
 **Since:** 26.0.0
 
@@ -64,7 +64,7 @@ normalAccessibility?: ChipV2AccessibilityConfig
 
 Set normal accessibility config for suffix symbol.
 
-**Type:** [ChipV2AccessibilityConfig](arkts-arkui-arkui-advanced-chipv2-chipv2accessibilityconfig-i.md)
+**Type:** [ChipV2AccessibilityConfig](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2accessibilityconfig-i.md)
 
 **Since:** 26.0.0
 

@@ -26,7 +26,7 @@ function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoRecorder](arkts-media-multimedia-media-videorecorder-i-sys.md)&gt; | 是 | 回调函数，返回VideoRecorder实例，失败时返回null。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[VideoRecorder](arkts-media-multimedia-media-videorecorder-i-sys.md)&gt; | 是 | 回调函数，返回VideoRecorder实例，失败时返回null。 |
 
 **错误码：**
 
@@ -72,14 +72,14 @@ function createVideoRecorder(callback: AsyncCallback<VideoRecorder | undefined>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoRecorder](arkts-media-multimedia-media-videorecorder-i-sys.md) \| undefined&gt; | 是 | 回调函数，返回VideoRecorder实例，失败时返回null。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[VideoRecorder](arkts-media-multimedia-media-videorecorder-i-sys.md) \| undefined&gt; | 是 | 回调函数，返回VideoRecorder实例，失败时返回null。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
 
 
 ## createVideoRecorder
@@ -156,6 +156,6 @@ function createVideoRecorder(): Promise<VideoRecorder | undefined>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
 

@@ -19,9 +19,11 @@ import { ComposeTitleBarV2, ComposeTitleBarV2MenuItem, ComposeTitleBarV2MenuItem
 accessibilityDescription?: ResourceStr
 ```
 
-标题栏右侧自定义按钮的无障碍描述，用于向用户详细解释组件功能和操作后果。组件被选中时，系统先播报文本属性，再播报无障碍描述内容。item属性不支持设置该属性。 默认值为“单指双击即可执行”。
+标题栏右侧自定义按钮的无障碍描述，用于向用户详细解释组件功能和操作后果。组件被选中时，系统先播报文本属性，再播报无障碍描述内容。item属性不支持设置该属性。
 
-**类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+默认值为“单指双击即可执行”。
+
+**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 18
 
@@ -39,7 +41,19 @@ accessibilityDescription?: ResourceStr
 accessibilityLevel?: string
 ```
 
-标题栏右侧自定义按钮无障碍重要性，控制当前项是否可被无障碍辅助服务识别。仅适用于menuItems中的项，不适用于item参数。 支持的值为： "auto"：等同于"yes"。 "yes"：可被无障碍辅助服务识别。 "no"：不可被无障碍辅助服务识别。 "no-hide-descendants"：当前项及其子组件均不可被识别。 默认值："auto"。item参数不支持设置该属性。
+标题栏右侧自定义按钮无障碍重要性，控制当前项是否可被无障碍辅助服务识别。仅适用于menuItems中的项，不适用于item参数。
+
+支持的值为：
+
+"auto"：等同于"yes"。
+
+"yes"：可被无障碍辅助服务识别。
+
+"no"：不可被无障碍辅助服务识别。
+
+"no-hide-descendants"：当前项及其子组件均不可被识别。
+
+默认值："auto"。item参数不支持设置该属性。
 
 **类型：** string
 
@@ -61,9 +75,11 @@ accessibilityLevel?: string
 accessibilityText?: ResourceStr
 ```
 
-标题栏右侧自定义按钮的无障碍文本。当组件无文本属性时，屏幕朗读不会播报，设置此属性后屏幕朗读可播报该内容，帮助用户了解选中的组件。item属性不支持设置该属性。 默认值：有label时默认值为当前项label属性内容，未设置label时默认值为空字符串。
+标题栏右侧自定义按钮的无障碍文本。当组件无文本属性时，屏幕朗读不会播报，设置此属性后屏幕朗读可播报该内容，帮助用户了解选中的组件。item属性不支持设置该属性。
 
-**类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+默认值：有label时默认值为当前项label属性内容，未设置label时默认值为空字符串。
+
+**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 18
 
@@ -101,7 +117,11 @@ action?: () => void
 isEnabled?: boolean
 ```
 
-是否启用。默认值：false。 true表示启用，false表示禁用。 item参数不支持触发isEnabled属性。
+是否启用。默认值：false。
+
+true表示启用，false表示禁用。
+
+item参数不支持触发isEnabled属性。
 
 **类型：** boolean
 
@@ -123,7 +143,7 @@ label?: ResourceStr
 
 图标标签描述，用于设置图标的辅助文本信息。当未设置accessibilityText时，label可作为无障碍文本的默认值。
 
-**类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 13
 
@@ -143,7 +163,7 @@ symbolStyle?: SymbolGlyphModifier
 
 Symbol图标资源，优先级大于value，item左侧头像不支持设置该属性。不设置时使用value属性指定的图标资源。
 
-**类型：** SymbolGlyphModifier
+**类型：** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
 
 **起始版本：** 18
 
@@ -163,7 +183,7 @@ value: ResourceStr
 
 图标资源。如果同时设置了symbolStyle属性，则symbolStyle优先级更高。
 
-**类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 10
 

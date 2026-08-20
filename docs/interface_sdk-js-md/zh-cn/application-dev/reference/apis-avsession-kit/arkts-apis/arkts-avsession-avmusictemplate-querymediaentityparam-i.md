@@ -2,6 +2,8 @@
 
 查询媒体实例参数的定义。
 
+@interface QueryMediaEntityParam
+
 **起始版本：** 23
 
 <!--Device-avMusicTemplate-interface QueryMediaEntityParam--><!--Device-avMusicTemplate-interface QueryMediaEntityParam-End-->

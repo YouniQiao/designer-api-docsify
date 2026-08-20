@@ -36,7 +36,7 @@ Register session destroy event
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.function onAVMusicTemplateDestroy can not work correctly due to limited device capabilities. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verify failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.function onAVMusicTemplateDestroy can not work correctly due to limited device capabilities. |
 

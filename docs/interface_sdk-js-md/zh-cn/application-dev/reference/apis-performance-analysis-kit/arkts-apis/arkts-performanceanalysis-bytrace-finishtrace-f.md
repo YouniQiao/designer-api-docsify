@@ -11,7 +11,12 @@
 function finishTrace(name: string, taskId: number): void
 ```
 
-标记一个时间片跟踪事件的结束。 &gt; **说明：** &gt; &gt; - finishTrace的name和taskId必须与流程开始的startTrace对应参数值一致。 &gt; - 从API version 7开始支持，从API version 8开始废弃。
+标记一个时间片跟踪事件的结束。
+
+> **说明：**
+> 
+> - finishTrace的name和taskId必须与流程开始的startTrace对应参数值一致。
+> - 从API version 7开始支持，从API version 8开始废弃。
 
 **起始版本：** 7
 

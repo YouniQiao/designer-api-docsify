@@ -2,6 +2,8 @@
 
 The definition of QR code Information.
 
+@interface QrCodeInfo
+
 **Since:** 23
 
 <!--Device-avMusicTemplate-interface QrCodeInfo--><!--Device-avMusicTemplate-interface QrCodeInfo-End-->

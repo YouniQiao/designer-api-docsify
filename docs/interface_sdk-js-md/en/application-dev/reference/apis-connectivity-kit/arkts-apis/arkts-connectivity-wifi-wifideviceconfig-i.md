@@ -2,6 +2,8 @@
 
 Wi-Fi device configuration information.
 
+@interface WifiDeviceConfig
+
 **Since:** 6
 
 **Deprecated since:** 9

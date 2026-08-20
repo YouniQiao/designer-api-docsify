@@ -6,6 +6,8 @@ type RecordData = undefined | null | Object | Record<string, RecordData> | Array
 
 RecordData is used for input parameter obj of the equal function
 
+@FaAndStageModel
+
 **Since:** 23
 
 <!--Device-preferences-type RecordData = undefined | null | Object | Record<string, RecordData> | Array<RecordData>--><!--Device-preferences-type RecordData = undefined | null | Object | Record<string, RecordData> | Array<RecordData>-End-->

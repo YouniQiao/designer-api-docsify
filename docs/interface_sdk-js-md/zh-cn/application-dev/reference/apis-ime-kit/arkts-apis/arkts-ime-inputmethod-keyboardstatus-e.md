@@ -1,5 +1,7 @@
 # KeyboardStatus
 
+@brief 输入法软键盘状态。
+
 **起始版本：** 23
 
 <!--Device-inputMethod-export enum KeyboardStatus--><!--Device-inputMethod-export enum KeyboardStatus-End-->
@@ -11,6 +13,8 @@
 ```TypeScript
 NONE = 0
 ```
+
+@brief NONE。 <br> <br>使用场景：表示键盘状态尚未确定或无法判断时使用。
 
 **起始版本：** 23
 
@@ -24,6 +28,8 @@ NONE = 0
 HIDE = 1
 ```
 
+@brief 隐藏状态。 <br> <br>使用场景：表示当前软键盘处于隐藏状态。
+
 **起始版本：** 23
 
 <!--Device-KeyboardStatus-HIDE = 1--><!--Device-KeyboardStatus-HIDE = 1-End-->
@@ -35,6 +41,8 @@ HIDE = 1
 ```TypeScript
 SHOW = 2
 ```
+
+@brief 显示状态。 <br> <br>使用场景：表示当前软键盘处于显示状态。
 
 **起始版本：** 23
 

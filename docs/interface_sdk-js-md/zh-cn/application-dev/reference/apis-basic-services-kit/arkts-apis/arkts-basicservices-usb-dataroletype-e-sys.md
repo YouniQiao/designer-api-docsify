@@ -1,4 +1,4 @@
-# DataRoleType(USB Manager)（系统接口）
+# DataRoleType（系统接口）
 
 数据角色类型。
 

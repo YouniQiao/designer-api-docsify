@@ -16,7 +16,7 @@ axis?: Axis
 
 定义懒加载布局的主轴方向。
 
-**类型：** [Axis](../../apis-na/arkts-apis/arkts-na-enums-axis-e.md)
+**类型：** [Axis](../../apis-default/arkts-apis/arkts-enums-axis-e.md)
 
 **默认值：** Axis.Vertical
 

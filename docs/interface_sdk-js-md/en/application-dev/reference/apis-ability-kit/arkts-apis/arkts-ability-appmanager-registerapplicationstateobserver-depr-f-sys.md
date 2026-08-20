@@ -31,7 +31,7 @@ Register application state observer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [ApplicationStateObserver](../../apis-na/arkts-apis/arkts-na-applicationstateobserver-i.md) | Yes | The application state observer. |
+| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | The application state observer. |
 
 **Return value:**
 

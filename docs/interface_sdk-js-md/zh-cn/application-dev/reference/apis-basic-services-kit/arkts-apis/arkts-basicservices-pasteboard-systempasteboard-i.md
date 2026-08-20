@@ -36,7 +36,7 @@ clear(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功清空时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当成功清空时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -114,7 +114,7 @@ clearData(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功清空时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当成功清空时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -360,7 +360,7 @@ getData(callback: AsyncCallback<PasteData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | 是 | 回调函数。当读取成功，err为undefined，data为返回的系统剪贴板数据；否则返回错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | 是 | 回调函数。当读取成功，err为undefined，data为返回的系统剪贴板数据；否则返回错误对象。 |
 
 **错误码：**
 
@@ -548,10 +548,10 @@ getDataWithProgress(params: GetDataParams): Promise<PasteData>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [12900007](../errorcode-pasteboard.md#12900007-文件拷贝失败) | Invalid destUri or file system error. |
-| [12900003](../errorcode-pasteboard.md#12900003-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| [12900003](../errorcode-pasteboard.md#12900003-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
+| [12900007](../errorcode-pasteboard.md#12900007-文件拷贝失败) | Invalid destUri or file system error. |
 | [12900008](../errorcode-pasteboard.md#12900008-启动进度条hap失败) | Failed to start progress. |
 | [12900009](../errorcode-pasteboard.md#12900009-进度上报异常) | Progress exits abnormally. |
 | [12900010](../errorcode-pasteboard.md#12900010-获取粘贴数据失败) | System error occurred during paste execution. |
@@ -696,7 +696,7 @@ getPasteData(callback: AsyncCallback<PasteData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | 是 | 回调函数。当读取成功，err为undefined，data为返回的系统剪贴板数据；否则返回错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | 是 | 回调函数。当读取成功，err为undefined，data为返回的系统剪贴板数据；否则返回错误对象。 |
 
 **错误码：**
 
@@ -784,8 +784,8 @@ getUnifiedData(): Promise<unifiedDataChannel.UnifiedData>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [27787277](../errorcode-pasteboard.md#27787277-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [27787277](../errorcode-pasteboard.md#27787277-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
 
 **示例**
 
@@ -857,8 +857,8 @@ getUnifiedDataSync(): unifiedDataChannel.UnifiedData
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12900005](../errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [12900005](../errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
 
 **示例**
 
@@ -894,7 +894,7 @@ hasData(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，用于接收剪贴板是否有内容的判断结果。返回true表示系统剪贴板中有内容，返回false表示系统剪贴板中没有内容。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数，用于接收剪贴板是否有内容的判断结果。返回true表示系统剪贴板中有内容，返回false表示系统剪贴板中没有内容。 |
 
 **错误码：**
 
@@ -1061,7 +1061,7 @@ hasPasteData(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 返回true表示系统剪贴板中有内容，返回false表示系统剪贴板中没有内容。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 返回true表示系统剪贴板中有内容，返回false表示系统剪贴板中没有内容。 |
 
 **错误码：**
 
@@ -1213,7 +1213,9 @@ try {
 offRemoteUpdate(callback?: UpdateCallback): void
 ```
 
-取消订阅跨设备剪贴板内容变化事件。 - 与onRemoteUpdate()方法配合使用，取消订阅的是通过onRemoteUpdate()订阅的事件监听。 - 必须在已订阅的情况下才能调用。 - 如果callback参数未填，清除本应用的所有远端监听回调；否则清除指定远端监听回调。
+取消订阅跨设备剪贴板内容变化事件。
+
+- 与onRemoteUpdate()方法配合使用，取消订阅的是通过onRemoteUpdate()订阅的事件监听。 - 必须在已订阅的情况下才能调用。 - 如果callback参数未填，清除本应用的所有远端监听回调；否则清除指定远端监听回调。
 
 **起始版本：** 23
 
@@ -1273,7 +1275,9 @@ systemPasteboard.offUpdate(listener);
 off(type: 'update', callback?: () => void): void
 ```
 
-取消订阅系统剪贴板内容变化事件。 - 与on('update')方法配合使用，取消订阅的是通过on('update')订阅的事件监听。 - 必须在已订阅的情况下才能调用。 - 如果callback参数未填，清除本应用的所有监听回调；否则清除指定监听回调。
+取消订阅系统剪贴板内容变化事件。
+
+- 与on('update')方法配合使用，取消订阅的是通过on('update')订阅的事件监听。 - 必须在已订阅的情况下才能调用。 - 如果callback参数未填，清除本应用的所有监听回调；否则清除指定监听回调。
 
 **起始版本：** 7
 
@@ -1310,7 +1314,9 @@ systemPasteboard.off('update', listener);
 onRemoteUpdate(callback: UpdateCallback): void
 ```
 
-订阅跨设备剪贴板内容变化事件，当远端设备系统剪贴板中内容变化时触发用户程序的回调。 - 订阅后必须在不再需要监听时调用 [offRemoteUpdate](#offremoteupdate) 取消订阅。 - 未取消订阅会导致回调函数持续监听远端变化，造成内存泄漏。 - 建议在组件/页面销毁时取消订阅。
+订阅跨设备剪贴板内容变化事件，当远端设备系统剪贴板中内容变化时触发用户程序的回调。
+
+- 订阅后必须在不再需要监听时调用 [offRemoteUpdate](#offremoteupdate) 取消订阅。 - 未取消订阅会导致回调函数持续监听远端变化，造成内存泄漏。 - 建议在组件/页面销毁时取消订阅。
 
 **起始版本：** 23
 
@@ -1370,7 +1376,9 @@ systemPasteboard.onUpdate(listener);
 on(type: 'update', callback: () => void): void
 ```
 
-订阅系统剪贴板内容变化事件，当系统剪贴板中内容变化时触发用户程序的回调。调用此方法后，系统将在剪贴板服务中注册监听器，剪贴板内容被写入、清空或修改时触发回调。 可注册多个监听器，需在适当时机调用off取消监听以释放资源。当应用需要实时响应剪贴板内容变化时使用，如自动检测剪贴板中的特定格式数据、实现智能粘贴建议等场景。 - 订阅后必须在不再需要监听时调用off('update')取消订阅。 - 未取消订阅会导致回调函数持续监听剪贴板变化，可能造成内存泄漏或多次回调触发。 - 建议在组件/页面销毁时取消订阅。
+订阅系统剪贴板内容变化事件，当系统剪贴板中内容变化时触发用户程序的回调。调用此方法后，系统将在剪贴板服务中注册监听器，剪贴板内容被写入、清空或修改时触发回调。 可注册多个监听器，需在适当时机调用off取消监听以释放资源。当应用需要实时响应剪贴板内容变化时使用，如自动检测剪贴板中的特定格式数据、实现智能粘贴建议等场景。
+
+- 订阅后必须在不再需要监听时调用off('update')取消订阅。 - 未取消订阅会导致回调函数持续监听剪贴板变化，可能造成内存泄漏或多次回调触发。 - 建议在组件/页面销毁时取消订阅。
 
 **起始版本：** 7
 
@@ -1422,7 +1430,7 @@ setData(data: PasteData, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | data | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | 是 | PasteData对象，设置后会将该数据写入系统剪贴板，供应用读取和粘贴使用。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当写入成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当写入成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1577,7 +1585,7 @@ setPasteData(data: PasteData, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | data | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | 是 | PasteData对象。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当写入成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当写入成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

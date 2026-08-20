@@ -20,7 +20,7 @@ import { avSession } from '@kit.AVSessionKit';
 | --- | --- |
 | [createAVSession](arkts-avsession-avsession-createavsession-f.md) | 创建会话对象，一个应用程序仅允许存在一个会话，重复创建会失败，结果通过callback异步回调方式返回。 |
 | [createAVSession](arkts-avsession-avsession-createavsession-f.md) | 创建会话对象，一个应用进程仅允许存在一个会话，重复创建会失败，结果通过Promise异步回调方式返回。 |
-| [getAVSession](arkts-avsession-avsession-getavsession-f.md) | 获取会话对象。使用Promise异步回调。 该接口可将当前进程已创建过的会话对象返回，如果没有创建过会话对象，该接口调用会失败并抛出异常。 |
+| [getAVSession](arkts-avsession-avsession-getavsession-f.md) | 获取会话对象。使用Promise异步回调。 |
 | [isDesktopLyricSupported](arkts-avsession-avsession-isdesktoplyricsupported-f.md) | 设备是否支持桌面歌词功能。使用Promise异步回调。 |
 | [offSessionCreate](arkts-avsession-avsession-offsessioncreate-f.md) | Unregister session create callback |
 | [offSessionDestroy](arkts-avsession-avsession-offsessiondestroy-f.md) | Unregister session destroy callback |
@@ -34,16 +34,16 @@ import { avSession } from '@kit.AVSessionKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [castAudio](arkts-avsession-avsession-castaudio-f-sys.md) | 投播会话到指定设备列表。结果通过callback异步回调方式返回。 需要导入`ohos.multimedia.audio`模块获取AudioDeviceDescriptor的相关描述。 |
-| [castAudio](arkts-avsession-avsession-castaudio-f-sys.md) | 投播会话到指定设备列表。结果通过Promise异步回调方式返回。 调用此接口之前，需要导入`ohos.multimedia.audio`模块获取AudioDeviceDescriptor的相关描述。 |
+| [castAudio](arkts-avsession-avsession-castaudio-f-sys.md) | 投播会话到指定设备列表。结果通过callback异步回调方式返回。 |
+| [castAudio](arkts-avsession-avsession-castaudio-f-sys.md) | 投播会话到指定设备列表。结果通过Promise异步回调方式返回。 |
 | [castAudioSession](arkts-avsession-avsession-castaudiosession-f-sys.md) | Cast Audio to the remote devices or cast back local device |
 | [castAudioSession](arkts-avsession-avsession-castaudiosession-f-sys.md) | Cast Audio to the remote devices or cast back local device |
 | [castAudioSessionAll](arkts-avsession-avsession-castaudiosessionall-f-sys.md) | Cast all the media audio to the remote devices or cast back local device |
 | [createController](arkts-avsession-avsession-createcontroller-f-sys.md) | 根据会话ID创建会话控制器。使用callback异步回调。 |
 | [createController](arkts-avsession-avsession-createcontroller-f-sys.md) | 根据会话ID创建会话控制器。使用Promise异步回调。 |
-| [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md) | 设备建立连接后，获取投播控制器。结果通过callback异步回调方式返回。 此功能在本端和远端都可以使用，通过该接口可以获取一个相同的控制器，进行投播音频的播放控制。 |
+| [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md) | 设备建立连接后，获取投播控制器。结果通过callback异步回调方式返回。 |
 | [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md) | Register a callback to retrieve an avsession cast controller. This function can be used at both side to get the same controller to do the playback control. |
-| [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md) | 设备建立连接后，获取投播控制器。结果通过Promise方式返回。 此功能在本端和远端都可以使用，通过该接口可以获取一个相同的控制器，进行投播音频的播放控制。 |
+| [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md) | 设备建立连接后，获取投播控制器。结果通过Promise方式返回。 |
 | [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md) | Get the current session's remote controller client. If the avsession is not under casting state, the controller will return undefined. |
 | [getAllSessionDescriptors](arkts-avsession-avsession-getallsessiondescriptors-f-sys.md) | 获取所有设置过媒体信息且注册过控制回调的会话的描述符信息。使用callback异步回调。 |
 | [getAllSessionDescriptors](arkts-avsession-avsession-getallsessiondescriptors-f-sys.md) | 获取所有设置过媒体信息且注册过控制回调的会话的描述符信息。结果通过Promise异步回调方式返回。 |
@@ -163,7 +163,7 @@ import { avSession } from '@kit.AVSessionKit';
 | --- | --- |
 | [AVCastCategory](arkts-avsession-avsession-avcastcategory-e.md) | 投播的类别枚举。 |
 | [AVSessionErrorCode](arkts-avsession-avsession-avsessionerrorcode-e.md) | 会话发生错误时的错误码。 |
-| [BackgroundPlayMode](arkts-avsession-avsession-backgroundplaymode-e.md) | 表示session支持的后台播放模式的枚举。 \| 名称 \| 值 \| 说明 \| \| ------------------------- \| - \| ----------------------- \| \| ENABLE_BACKGROUND_PLAY \| 0 \| 支持后台播放。 \| \| DISABLE_BACKGROUND_PLAY \| 1 \| 不支持后台播放。 \| |
+| [BackgroundPlayMode](arkts-avsession-avsession-backgroundplaymode-e.md) | 表示session支持的后台播放模式的枚举。 |
 | [CallState](arkts-avsession-avsession-callstate-e.md) | 表示通话状态的枚举。 |
 | [CallerType](arkts-avsession-avsession-callertype-e.md) | 表示调用方来源类型的枚举。 |
 | [CastDisplayState](arkts-avsession-avsession-castdisplaystate-e.md) | 投播显示设备状态的枚举。 |
@@ -176,7 +176,7 @@ import { avSession } from '@kit.AVSessionKit';
 | [PlaybackState](arkts-avsession-avsession-playbackstate-e.md) | 表示媒体播放状态的枚举。 |
 | [ProtocolType](arkts-avsession-avsession-protocoltype-e.md) | 远端设备支持的协议类型的枚举。 |
 | [ResolutionLevel](arkts-avsession-avsession-resolutionlevel-e.md) | 枚举，设备所支持的分辨率。 |
-| [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md) | 表示session支持的快进快退时间间隔的枚举。 \| 名称 \| 值 \| 说明 \| \| ---------------------- \| -- \| ----------------------- \| \| SECONDS_10 \| 10 \| 时间为10秒。 \| \| SECONDS_15 \| 15 \| 时间为15秒。 \| \| SECONDS_30 \| 30 \| 时间为30秒。 \| |
+| [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md) | 表示session支持的快进快退时间间隔的枚举。 |
 
 <!--Del-->
 ### 枚举（系统接口）
@@ -198,7 +198,7 @@ import { avSession } from '@kit.AVSessionKit';
 | [AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md) |  |
 | [AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md) | The type of control command |
 | [AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md) | 应用可选择设置优先级的播控组件类型 |
-| [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md) | 当前会话支持的会话类型。 该类型可取的值为下表字符串。 |
+| [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md) | 当前会话支持的会话类型。 |
 | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | The connection event supplied by system to indicate device state and information. |
 | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | The general process funcation with an event and arguments. |
 | [ExtraInfo](arkts-avsession-avsession-extrainfo-t.md) | The extra info object. |

@@ -1,6 +1,10 @@
 # IntentDecoratorInfo
 
-意图装饰器的通用属性，用于定义意图的基本信息（包括意图名称、意图版本号）。适用于本模块的所有装饰器。 &gt; **说明：** &gt; &gt; 如果根据schema与intentVersion字段，在标准意图列表存在匹配的标准意图，系统会将intentName、domain、llmDescription、keywords、parameters、result字段均设置为标准 &gt; 意图的相应字段值。
+意图装饰器的通用属性，用于定义意图的基本信息（包括意图名称、意图版本号）。适用于本模块的所有装饰器。
+
+> **说明：**
+> 
+> 如果根据schema与intentVersion字段，在标准意图列表存在匹配的标准意图，系统会将intentName、domain、llmDescription、keywords、parameters、result字段均设置为标准 &gt; 意图的相应字段值。
 
 **起始版本：** 20
 
@@ -81,7 +85,9 @@ domain: string
 icon?: ResourceStr
 ```
 
-表示意图图标，用于在AI入口显示。 - 当取值为字符串类型时，表示图标读取网络资源。 - 当取值为Resource时，表示图标读取本地资源。
+表示意图图标，用于在AI入口显示。
+
+- 当取值为字符串类型时，表示图标读取网络资源。 - 当取值为Resource时，表示图标读取本地资源。
 
 **类型：** ResourceStr
 
@@ -183,7 +189,7 @@ parameters?: Record<string, Object>
 
 表示意图参数的数据格式声明，用于意图调用时定义入参的数据格式。取值参见 [各垂域意图Schema](https://developer.huawei.com/consumer/cn/doc/service/intents-schema-0000001901962713)
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;
 
 **起始版本：** 20
 
@@ -203,7 +209,7 @@ result?: Record<string, Object>
 
 表示意图调用返回结果的数据格式声明，用于定义意图调用返回结果的数据格式。
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;
 
 **起始版本：** 20
 

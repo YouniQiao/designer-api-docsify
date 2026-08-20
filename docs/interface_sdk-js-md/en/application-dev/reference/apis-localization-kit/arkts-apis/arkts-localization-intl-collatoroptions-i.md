@@ -1,8 +1,10 @@
 # CollatorOptions
 
-Defines the options for creating a **Collator** object. Since API version 9, the attributes in **CollatorOptions** are optional.
+Defines the options for creating a Collator object.
 
 **Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-intl-export interface CollatorOptions--><!--Device-intl-export interface CollatorOptions-End-->
 
@@ -20,13 +22,13 @@ import { intl } from '@kit.LocalizationKit';
 caseFirst?: string
 ```
 
-Whether case is taken into account for the locale's collation rules. The value can be: **upper**: Uppercase letters come first. **lower**: Lowercase letters come first. - **false**: The default collation rules of the locale are used. The default value is **false**.
+Whether upper case or lower case is sorted first. The value can be "upper", "lower", or "false". The default value is "false".
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-CollatorOptions-caseFirst?: string--><!--Device-CollatorOptions-caseFirst?: string-End-->
 
@@ -38,13 +40,13 @@ Whether case is taken into account for the locale's collation rules. The value c
 collation?: string
 ```
 
-Collation rules for the locale. The value can be: **big5han**: Pinyin sorting for Latin letters. **compat**: compatibility sorting, only for Arabic. **dict**: dictionary-style sorting, only for Singhalese. **direct**: binary code point sorting. **ducet**: sorting according to the Unicode collation element table. **eor**: sorting according to the European collation rules. **gb2312**: Pinyin sorting, only for Chinese. **phonebk**: phone book-style sorting. **phonetic**: phonetic sorting. **pinyin**: Pinyin sorting. **reformed**: reformed sorting, only for Swedish. **searchjl**: special sorting for Korean initial consonant search. **stroke**: stroke sorting for Chinese. **trad**: traditional-style sorting, for example, Spanish. **unihan**: radical-stroke sorting for Han characters, only for Chinese, Japanese, and Korean. **zhuyin**: Zhuyin sorting, only for Chinese. The default value is **default**.
+Collation rule. The value can be any of the following: "big5han", "compat", "dict", "direct", "ducet", "eor", "gb2312", "phonebk", "phonetic", "pinyin", "reformed", "searchjl", "stroke", "trad", "unihan", or "zhuyin". The default value is "default".
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-CollatorOptions-collation?: string--><!--Device-CollatorOptions-collation?: string-End-->
 
@@ -56,13 +58,13 @@ Collation rules for the locale. The value can be: **big5han**: Pinyin sorting fo
 ignorePunctuation?: boolean
 ```
 
-Whether to ignore punctuation. The value **true** means to ignore punctuation, and the value **false** means the opposite. The default value is **false**.
+Whether to ignore punctuation. The value "true" means to ignore punctuation, and the value "false" means the opposite. The default value is "false".
 
 **Type:** boolean
 
-**Since:** 8
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-CollatorOptions-ignorePunctuation?: boolean--><!--Device-CollatorOptions-ignorePunctuation?: boolean-End-->
 
@@ -74,13 +76,13 @@ Whether to ignore punctuation. The value **true** means to ignore punctuation, a
 localeMatcher?: string
 ```
 
-Locale matching algorithm. The options are as follows: **lookup**: fuzzy match. **best fit**: exact match. The default value is **best fit**.
+Locale matching algorithm. The value can be "lookup" or "best fit". The default value is "best fit".
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-CollatorOptions-localeMatcher?: string--><!--Device-CollatorOptions-localeMatcher?: string-End-->
 
@@ -92,13 +94,13 @@ Locale matching algorithm. The options are as follows: **lookup**: fuzzy match. 
 numeric?: boolean
 ```
 
-Whether numeric sorting is used. The options are as follows: - **true**: Numeric sorting is used. For example, '1' &lt; '2' &lt; '10' &lt; '11'. - **false**: Numeric sorting is not used. For example, '1' &lt; '10' &lt; '11' &lt; '2'. The default value is **false**.
+Whether to use numeric collation. The value "true" means to use numeric collation, and the value "false" means the opposite. The default value is "false".
 
 **Type:** boolean
 
-**Since:** 8
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-CollatorOptions-numeric?: boolean--><!--Device-CollatorOptions-numeric?: boolean-End-->
 
@@ -110,13 +112,13 @@ Whether numeric sorting is used. The options are as follows: - **true**: Numeric
 sensitivity?: string
 ```
 
-Differences in the strings that lead to non-zero return values. The options are as follows: - **base**: Different letters are considered unequal, for example, 'a' ≠ 'b', 'a' = 'á', 'a' = 'A'. - **accent**: Different letters or same letters with different pronunciations are considered unequal, for example , 'a' ≠ 'b', 'a' ≠ 'á', 'a' = 'A'. - **case**: Different letters or same letters with different cases are considered unequal, for example, 'a' ≠ 'b' , 'a' = 'á', 'a' ≠ 'A'. - **variant**: Different letters, pronunciations, other distinguishing marks, or cases are all considered unequal , for example, 'a' ≠ 'b', 'a' ≠ 'á', 'a' ≠ 'A'. The default value is **variant**.
+Differences in the strings that lead to non-zero return values. The value can be "base", "accent", "case", or "letiant". The default value is "variant".
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-CollatorOptions-sensitivity?: string--><!--Device-CollatorOptions-sensitivity?: string-End-->
 
@@ -128,13 +130,13 @@ Differences in the strings that lead to non-zero return values. The options are 
 usage?: string
 ```
 
-Purpose of comparison. The options are as follows: - **sort**: sorting. - **search**: search for matched strings. The default value is **sort**.
+Whether the comparison is for sorting or for searching. The value can be "sort" or "search". The default value is "sort".
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-CollatorOptions-usage?: string--><!--Device-CollatorOptions-usage?: string-End-->
 

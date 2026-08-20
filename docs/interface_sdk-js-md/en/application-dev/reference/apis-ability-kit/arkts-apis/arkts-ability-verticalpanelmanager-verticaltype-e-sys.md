@@ -2,6 +2,8 @@
 
 Provides vertical type definition.
 
+@enum { string } VerticalType
+
 **Since:** 23
 
 <!--Device-verticalPanelManager-export enum VerticalType--><!--Device-verticalPanelManager-export enum VerticalType-End-->

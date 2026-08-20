@@ -37,6 +37,6 @@ function getConnectedVpnAppInfo(): Promise<Array<string>>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [19900002](../errorcode-net-vpn.md#19900002-系统内部错误) | System internal error. |
 | [19900001](../errorcode-net-vpn.md#19900001-无效参数) | Invalid parameter value. |
+| [19900002](../errorcode-net-vpn.md#19900002-系统内部错误) | System internal error. |
 

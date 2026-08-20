@@ -1,4 +1,4 @@
-# DeviceNodeInfo(Cross-Device Wakeup and Message Transfer) (System API)
+# DeviceNodeInfo (System API)
 
 Defines the device node information, including the network ID, device name, device type ID, near-field status, and UDID.
 

@@ -1,6 +1,6 @@
 # WifiChannelWidth
 
-Describes the wifi channel width.
+Describes the wifi channel width. @enum { int }
 
 **Since:** 23
 

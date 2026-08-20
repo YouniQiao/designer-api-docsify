@@ -1,6 +1,8 @@
 # SingleKVStore
 
-SingleKVStore数据库实例，提供增加数据、删除数据和订阅数据变更、订阅数据端端同步完成的方法。 在调用SingleKVStore的方法前，需要先通过 getKVStore 构建一个SingleKVStore实例。
+SingleKVStore数据库实例，提供增加数据、删除数据和订阅数据变更、订阅数据端端同步完成的方法。
+
+在调用SingleKVStore的方法前，需要先通过 getKVStore 构建一个SingleKVStore实例。
 
 **起始版本：** 23
 
@@ -37,7 +39,7 @@ delete(predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | 指示筛选条件，不允许为null。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。成功时err为undefined，失败时err为错误对象。 [ |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。成功时err为undefined，失败时err为错误对象。 [ |
 
 **错误码：**
 
@@ -108,7 +110,7 @@ getResultSet(predicates: dataSharePredicates.DataSharePredicates, callback: Asyn
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | 指示筛选条件，不允许为null。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | 是 | 回调函数，获取与指定Predicates对象匹配的KVStoreResultSet对象。 [ |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | 是 | 回调函数，获取与指定Predicates对象匹配的KVStoreResultSet对象。 [ |
 
 **错误码：**
 
@@ -179,7 +181,7 @@ putBatch(value: Array<ValuesBucket>, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | 是 | 表示要插入的数据。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。成功时err为undefined，失败时err为错误对象。 [ |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。成功时err为undefined，失败时err为错误对象。 [ |
 
 **错误码：**
 
@@ -250,14 +252,14 @@ putValuesBuckets(value: Array<ValuesBucket>, callback: AsyncCallback<void>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | 是 | 表示要插入的数据。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 [ |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 [ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
 
 ## putValuesBuckets
 
@@ -293,6 +295,6 @@ putValuesBuckets(value: Array<ValuesBucket>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
 

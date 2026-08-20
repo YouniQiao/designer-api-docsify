@@ -47,7 +47,9 @@ A constructor used to create a **HierarchicalSymbolEffect** instance, which come
 fillStyle?: EffectFillStyle
 ```
 
-Effect fill style. Default value: **EffectFillStyle.CUMULATIVE**
+Effect fill style.
+
+Default value: **EffectFillStyle.CUMULATIVE**
 
 **Type:** [EffectFillStyle](arkts-arkui-effectfillstyle-e.md)
 

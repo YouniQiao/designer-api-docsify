@@ -1,6 +1,6 @@
 # EvaluationResultCode (System API)
 
-Enumerates evaluation result code.
+Enumerates evaluation result code. @enum {number}
 
 **Since:** 23
 

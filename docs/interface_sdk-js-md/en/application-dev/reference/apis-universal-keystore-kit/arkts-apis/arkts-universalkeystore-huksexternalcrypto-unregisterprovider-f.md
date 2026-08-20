@@ -39,13 +39,13 @@ Unregisters a specified external Provider. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | check permission failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | api is not supported. |
 | [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
-| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the input parameter is invalid. |
-| [201](../../errorcode-universal.md#201-permission-denied) | check permission failed. |
-| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient. |
-| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter is abnormal. This may happen for several reasons, such as the model already being unloaded. |
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | the provider is not found. |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter is abnormal. This may happen for several reasons, such as the model already being unloaded. |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient. |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the input parameter is invalid. |
 
 **Examples**
 

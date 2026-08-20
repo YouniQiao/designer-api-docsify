@@ -2,6 +2,8 @@
 
 Defines ColumnSplit Modifier
 
+@implements ColumnSplitAttribute, AttributeModifier&lt;ColumnSplitAttribute&gt;
+
 **Inheritance/Implementation:** ColumnSplitModifier implements ColumnSplitAttribute, AttributeModifier<ColumnSplitAttribute>
 
 **Since:** 23

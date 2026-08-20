@@ -184,7 +184,9 @@ Indicates is custom accessibility enabled.
 isEcc: boolean
 ```
 
-Whether the call is an ECC. The default value is **false**. - **true**: yes - **false**: no
+Whether the call is an ECC. The default value is **false**.
+
+- **true**: yes - **false**: no
 
 **Type:** boolean
 
@@ -274,7 +276,9 @@ Indicates the rtt state.
 speakerphoneOn: boolean
 ```
 
-Whether the speakerphone is used to answer a call. The default value is **false**. - **true**: yes - **false**: no
+Whether the speakerphone is used to answer a call. The default value is **false**.
+
+- **true**: yes - **false**: no
 
 **Type:** boolean
 

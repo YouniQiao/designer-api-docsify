@@ -1,4 +1,4 @@
-# PasswordPolicy(安全管理)
+# PasswordPolicy
 
 设备锁屏口令策略。
 

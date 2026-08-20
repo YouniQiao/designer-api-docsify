@@ -12,7 +12,9 @@ import { data } from '@kit.TelephonyKit';
 function getCellularDataState(callback: AsyncCallback<DataConnectState>): void
 ```
 
-Obtains the cellular data connection status. This API uses an asynchronous callback to return the result. **Required permission**: ohos.permission.GET_NETWORK_INFO
+Obtains the cellular data connection status. This API uses an asynchronous callback to return the result.
+
+**Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
@@ -57,7 +59,9 @@ data.getCellularDataState((err: BusinessError, contextData: data.DataConnectStat
 function getCellularDataState(): Promise<DataConnectState>
 ```
 
-Obtains the cellular data connection status. This API uses a promise to return the result. **Required permission**: ohos.permission.GET_NETWORK_INFO
+Obtains the cellular data connection status. This API uses a promise to return the result.
+
+**Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 

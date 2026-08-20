@@ -2,6 +2,8 @@
 
 Bundle monitor
 
+@namespace bundleMonitor
+
 **Since:** 23
 
 <!--Device-unnamed-declare namespace bundleMonitor--><!--Device-unnamed-declare namespace bundleMonitor-End-->

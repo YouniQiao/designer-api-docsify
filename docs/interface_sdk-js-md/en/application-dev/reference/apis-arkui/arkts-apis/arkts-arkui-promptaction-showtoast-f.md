@@ -12,7 +12,15 @@ import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 function showToast(options: ShowToastOptions): void
 ```
 
-Creates and displays a toast. &gt; **NOTE：**&gt; &gt; - This API is supported since API version 9 and deprecated since API version 18. You are advised to use showToast instead. Before calling this API, you need to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction) method in [UIContext](arkts-apis-uicontext-uicontext.md). Directly using **showToast** can lead to the issue of [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). &gt; &gt; - Since API version 10, you can use the [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction) API in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object associated with the current UI context. &gt; &gt; - The toast has a fixed style and does not support content customization. For specific supported capabilities, see ShowToastOptions.
+Creates and displays a toast.
+
+> **NOTE：**
+> 
+> - This API is supported since API version 9 and deprecated since API version 18. You are advised to use showToast instead. Before calling this API, you need to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getpromptaction) method in [UIContext](arkts-apis-uicontext-uicontext.md). Directly using **showToast** can lead to the issue of [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context).
+> 
+> - Since API version 10, you can use the [getPromptAction](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getpromptaction) API in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object associated with the current UI context.
+> 
+> - The toast has a fixed style and does not support content customization. For specific supported capabilities, see ShowToastOptions.
 
 **Since:** 9
 
@@ -36,8 +44,8 @@ Creates and displays a toast. &gt; **NOTE：**&gt; &gt; - This API is supported 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 **Examples**
 

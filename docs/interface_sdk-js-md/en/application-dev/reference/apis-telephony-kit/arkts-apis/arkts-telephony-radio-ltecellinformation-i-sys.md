@@ -2,6 +2,8 @@
 
 Obtains LTE cell information.
 
+@interface LteCellInformation
+
 **Since:** 23
 
 <!--Device-radio-export interface LteCellInformation--><!--Device-radio-export interface LteCellInformation-End-->

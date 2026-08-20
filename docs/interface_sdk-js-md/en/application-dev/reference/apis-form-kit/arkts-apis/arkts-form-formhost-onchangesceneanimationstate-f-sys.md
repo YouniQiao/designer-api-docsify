@@ -12,7 +12,9 @@ import { formHost } from '@kit.FormKit';
 function onChangeSceneAnimationState(callback: Callback<formInfo.ChangeSceneAnimationStateRequest>): void
 ```
 
-Listens to the event of change scene animation state. You can use this method to listen to the event of change scene animation state.
+Listens to the event of change scene animation state.
+
+You can use this method to listen to the event of change scene animation state.
 
 **Since:** 23
 

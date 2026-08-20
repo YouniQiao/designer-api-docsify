@@ -30,7 +30,7 @@ function createSubscriber(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | subscribeInfo | CommonEventSubscribeInfo | 是 | 表示订阅信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;CommonEventSubscriber&gt; | 是 | 回调函数，用于接收创建的订阅者对象。当公共事件订阅者 创建成功时，err为undefined，data为创建成功的CommonEventSubscriber订阅者对象；创建失败时，err为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;CommonEventSubscriber&gt; | 是 | 回调函数，用于接收创建的订阅者对象。当公共事件订阅者 创建成功时，err为undefined，data为创建成功的CommonEventSubscriber订阅者对象；创建失败时，err为错误对象。 |
 
 **错误码：**
 

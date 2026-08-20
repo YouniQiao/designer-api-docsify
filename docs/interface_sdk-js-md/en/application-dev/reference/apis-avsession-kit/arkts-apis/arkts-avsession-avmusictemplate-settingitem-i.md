@@ -2,6 +2,8 @@
 
 The definition of setting Information.
 
+@interface SettingItem
+
 **Since:** 23
 
 <!--Device-avMusicTemplate-interface SettingItem--><!--Device-avMusicTemplate-interface SettingItem-End-->

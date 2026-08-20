@@ -43,12 +43,12 @@ function getPermissionUsedTypeInfos(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. A database error occurs. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. PermissionName exceeds 256 characters. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system app. Interface caller is not a system app. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. PermissionName exceeds 256 characters. |
 | [12100002](../errorcode-access-token.md#12100002-tokenid不存在) | The input tokenId does not exist. |
 | [12100003](../errorcode-access-token.md#12100003-权限名不存在) | The input permissionName does not exist. |
+| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. A database error occurs. |
 
 **示例**
 

@@ -1,6 +1,9 @@
 # BoidsSimWorld（系统接口）
 
-群组模拟世界对象，用于管理群组模拟的生命周期及组件。 &gt; **说明：** &gt; 使用以下接口前，需先通过[BoidsSimPlugin.getDefaultBoidsSimWorld](arkts-arkgraphics3d-sceneboidssim-boidssimplugin-c-sys.md#getdefaultboidssimworld)获取群组模拟世界实例。
+群组模拟世界对象，用于管理群组模拟的生命周期及组件。
+
+> **说明：**
+> 使用以下接口前，需先通过[BoidsSimPlugin.getDefaultBoidsSimWorld](arkts-arkgraphics3d-sceneboidssim-boidssimplugin-c-sys.md#getdefaultboidssimworld)获取群组模拟世界实例。
 
 **起始版本：** 26.0.0
 

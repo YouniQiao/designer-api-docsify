@@ -38,7 +38,11 @@ Policy for the APP_CRASH event the value true means to the minidump capture capa
 extendPcLrPrinting?: boolean
 ```
 
-The policy for APP_CRASH event. Whether to print the memory values before and after the PC and LR registers in crash logs. The value **true** means to print the memory values of 248 bytes before and 256 bytes after the PC and LR on 64- bit system, or 124 bytes before and 128 bytes after on 32-bit systems. The value **false** means to print the memory values of 16 bytes before and 232 bytes after the PC and LR on 64- bit system, or 8 bytes before and 116 bytes after on 32-bit systems. The default value is **false**.
+The policy for APP_CRASH event. Whether to print the memory values before and after the PC and LR registers in crash logs. The value **true** means to print the memory values of 248 bytes before and 256 bytes after the PC and LR on 64- bit system, or 124 bytes before and 128 bytes after on 32-bit systems.
+
+The value **false** means to print the memory values of 16 bytes before and 232 bytes after the PC and LR on 64- bit system, or 8 bytes before and 116 bytes after on 32-bit systems.
+
+The default value is **false**.
 
 **Type:** boolean
 
@@ -74,7 +78,15 @@ The policy for APP_CRASH event. Truncation size for crash logs. The value ranges
 pageSwitchLogEnable?: boolean
 ```
 
-Whether to enable the page switching log for APP_CRASH event. **true**: yes. **false**: no. The default value is **false**. Note: The enabling behavior of an application takes effect only in its current lifecycle. In the same lifecycle, the enabling status of the last successful call is used. After the application restarts, you need to set the enabling status again.
+Whether to enable the page switching log for APP_CRASH event.
+
+**true**: yes.
+
+**false**: no.
+
+The default value is **false**.
+
+Note: The enabling behavior of an application takes effect only in its current lifecycle. In the same lifecycle, the enabling status of the last successful call is used. After the application restarts, you need to set the enabling status again.
 
 **Type:** boolean
 
@@ -92,7 +104,13 @@ Whether to enable the page switching log for APP_CRASH event. **true**: yes. **f
 simplifyVmaPrinting?: boolean
 ```
 
-The policy for APP_CRASH event. Whether to print the mapping information of all virtual memory areas (VMAs) in the crash log, that is, the **Maps** field in the crash log. The value **true** means to print only the VMA mapping information of the addresses in the crash log to reduce the log size. The value **false** means to print all VMA mapping information. The default value is **false**.
+The policy for APP_CRASH event. Whether to print the mapping information of all virtual memory areas (VMAs) in the crash log, that is, the **Maps** field in the crash log.
+
+The value **true** means to print only the VMA mapping information of the addresses in the crash log to reduce the log size.
+
+The value **false** means to print all VMA mapping information.
+
+The default value is **false**.
 
 **Type:** boolean
 

@@ -21,5 +21,5 @@ type DomainPluginBindAccountFunc = (domainAccountInfo: DomainAccountInfo,
 | --- | --- | --- | --- |
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 表示域账号信息。 |
 | localId | int | 是 | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示绑定结果回调。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 表示绑定结果回调。 |
 

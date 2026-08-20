@@ -2,6 +2,8 @@
 
 Describes the sampling modes used during texture sampling.
 
+@interface { Sampler }
+
 **Since:** 23
 
 <!--Device-unnamed-export interface Sampler--><!--Device-unnamed-export interface Sampler-End-->

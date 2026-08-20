@@ -1,6 +1,6 @@
 # ScopeComparable
 
-**ScopeComparable** 类型的值用于实现 **compareTo** 方法。因此，请确保输入参数是可比较的。
+*ScopeComparable** 类型的值用于实现 **compareTo** 方法。因此，请确保输入参数是可比较的。
 
 **起始版本：** 7
 

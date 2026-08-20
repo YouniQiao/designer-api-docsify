@@ -1,4 +1,4 @@
-# MediaKeySession(Defines the DRM capability.)
+# MediaKeySession
 
 支持媒体密钥管理。在调用MediaKeySession方法之前，必须使用 [createMediaKeySession](arkts-drm-drm-mediakeysystem-i.md#createmediakeysession) 获取一个MediaKeySession实例。
 
@@ -40,8 +40,8 @@ checkMediaKeyStatus(): MediaKeyStatus[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 ## clearMediaKeys
 
@@ -63,8 +63,8 @@ clearMediaKeys(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 ## destroy
 
@@ -86,8 +86,8 @@ destroy(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 ## generateMediaKeyRequest
 
@@ -124,9 +124,9 @@ generateMediaKeyRequest(mimeType: string, initData: Uint8Array, mediaKeyType: in
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [401](../../errorcode-universal.md#401-参数检查失败) |  |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## generateOfflineReleaseRequest
 
@@ -161,8 +161,8 @@ generateOfflineReleaseRequest(mediaKeyId: Uint8Array): Promise<Uint8Array>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 ## getContentProtectionLevel
 
@@ -190,8 +190,8 @@ getContentProtectionLevel(): ContentProtectionLevel
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 ## offExpirationUpdate
 
@@ -389,7 +389,9 @@ off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void
 off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void
 ```
 
-注销密钥请求事件监听。使用callback异步回调。 该接口用于注销已在on('keyRequired')中注册的监听，当播放DRM节目需要获取媒体密钥时触发的事件。
+注销密钥请求事件监听。使用callback异步回调。
+
+该接口用于注销已在on('keyRequired')中注册的监听，当播放DRM节目需要获取媒体密钥时触发的事件。
 
 **起始版本：** 11
 
@@ -786,8 +788,8 @@ processMediaKeyResponse(response: Uint8Array): Promise<Uint8Array>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 ## processOfflineReleaseResponse
 
@@ -795,7 +797,9 @@ processMediaKeyResponse(response: Uint8Array): Promise<Uint8Array>
 processOfflineReleaseResponse(mediaKeyId: Uint8Array, response: Uint8Array): Promise<void>
 ```
 
-处理离线媒体密钥释放响应。使用Promise异步回调。 如果设备上的DRM解决方案不支持离线媒体密钥释放，将抛出错误码24700101。
+处理离线媒体密钥释放响应。使用Promise异步回调。
+
+如果设备上的DRM解决方案不支持离线媒体密钥释放，将抛出错误码24700101。
 
 **起始版本：** 23
 
@@ -823,8 +827,8 @@ processOfflineReleaseResponse(mediaKeyId: Uint8Array, response: Uint8Array): Pro
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 ## requireSecureDecoderModule
 
@@ -859,8 +863,8 @@ requireSecureDecoderModule(mimeType: string): boolean
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 ## restoreOfflineMediaKeys
 
@@ -895,6 +899,6 @@ restoreOfflineMediaKeys(mediaKeyId: Uint8Array): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 

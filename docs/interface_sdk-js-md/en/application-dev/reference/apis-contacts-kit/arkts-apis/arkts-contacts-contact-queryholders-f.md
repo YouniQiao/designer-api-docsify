@@ -74,8 +74,8 @@ Queries all applications that have created contacts. This API uses an asynchrono
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 **Examples**
 
@@ -169,8 +169,8 @@ Queries all applications that have created contacts. This API uses a promise to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 **Examples**
 

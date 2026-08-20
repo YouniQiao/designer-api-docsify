@@ -2,6 +2,8 @@
 
 Streaming configuration parameters.
 
+@interface StreamParam
+
 **起始版本：** 23
 
 <!--Device-abilityConnectionManager-interface StreamParam--><!--Device-abilityConnectionManager-interface StreamParam-End-->

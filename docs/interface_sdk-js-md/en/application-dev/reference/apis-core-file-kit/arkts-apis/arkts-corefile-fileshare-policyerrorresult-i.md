@@ -2,6 +2,8 @@
 
 Failed policy result on URI.
 
+@interface { object }
+
 **Since:** 23
 
 <!--Device-fileShare-export interface PolicyErrorResult--><!--Device-fileShare-export interface PolicyErrorResult-End-->

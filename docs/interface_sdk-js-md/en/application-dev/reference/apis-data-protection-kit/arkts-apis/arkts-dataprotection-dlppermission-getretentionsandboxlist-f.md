@@ -12,7 +12,9 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function getRetentionSandboxList(bundleName?: string): Promise<Array<RetentionSandboxInfo>>
 ```
 
-Obtains the sandbox applications in the retention state of an application. This API can be called only in non-DLP sandbox applications. This API uses a promise to return the result. This API is used to query the sandbox retention information of a specified application, so that the sandbox environment in the retention state can be checked or managed.
+Obtains the sandbox applications in the retention state of an application. This API can be called only in non-DLP sandbox applications. This API uses a promise to return the result.
+
+This API is used to query the sandbox retention information of a specified application, so that the sandbox environment in the retention state can be checked or managed.
 
 **Since:** 10
 
@@ -65,7 +67,9 @@ async function ExampleFunction() {
 function getRetentionSandboxList(bundleName: string, callback: AsyncCallback<Array<RetentionSandboxInfo>>): void
 ```
 
-Obtains the sandbox applications in the retention state of an application. This API uses an asynchronous callback to return the result. This API is used to query the sandbox retention information of a specified application, so that the sandbox environment in the retention state can be checked or managed.
+Obtains the sandbox applications in the retention state of an application. This API uses an asynchronous callback to return the result.
+
+This API is used to query the sandbox retention information of a specified application, so that the sandbox environment in the retention state can be checked or managed.
 
 **Since:** 10
 
@@ -116,7 +120,9 @@ try {
 function getRetentionSandboxList(callback: AsyncCallback<Array<RetentionSandboxInfo>>): void
 ```
 
-Obtains the sandbox applications in the retention state of an application. This API uses an asynchronous callback to return the result. This API is used to query the sandbox retention information of a specified application, so that the sandbox environment in the retention state can be checked or managed.This API can be called only in non-DLP sandbox applications.
+Obtains the sandbox applications in the retention state of an application. This API uses an asynchronous callback to return the result.
+
+This API is used to query the sandbox retention information of a specified application, so that the sandbox environment in the retention state can be checked or managed.This API can be called only in non-DLP sandbox applications.
 
 **Since:** 10
 

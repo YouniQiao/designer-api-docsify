@@ -2,6 +2,8 @@
 
 Image display mode.
 
+@enum { number }
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare enum ImageFit--><!--Device-unnamed-declare enum ImageFit-End-->

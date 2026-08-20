@@ -2,6 +2,8 @@
 
 Information related to eUICC chips/devices.
 
+@interface EuiccInfo
+
 **Since:** 23
 
 <!--Device-eSIM-export interface EuiccInfo--><!--Device-eSIM-export interface EuiccInfo-End-->

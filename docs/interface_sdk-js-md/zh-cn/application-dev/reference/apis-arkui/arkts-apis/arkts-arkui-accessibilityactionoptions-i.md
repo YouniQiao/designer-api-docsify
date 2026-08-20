@@ -2,6 +2,8 @@
 
 包含无障碍操作的参数的结构体。
 
+@interface AccessibilityActionOptions
+
 **起始版本：** 23
 
 <!--Device-unnamed-declare interface AccessibilityActionOptions--><!--Device-unnamed-declare interface AccessibilityActionOptions-End-->

@@ -2,6 +2,8 @@
 
 用于设置被切割的图片在边框上的重复方式。
 
+@enum { number }
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare enum RepeatMode--><!--Device-unnamed-declare enum RepeatMode-End-->

@@ -18,5 +18,5 @@ Called when items are selected after the maximum count has been reached.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exceedMaxCountType | [MaxCountType](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-maxcounttype-e.md) | Yes | Type of the maximum count that has been reached. It can be the maximum count of selected images, maximum count of selected videos, or maximum count of selected images and videos. |
+| exceedMaxCountType | [MaxCountType](arkts-medialibrary-file-photopickercomponent-maxcounttype-e.md) | Yes | Type of the maximum count that has been reached. It can be the maximum count of selected images, maximum count of selected videos, or maximum count of selected images and videos. |
 

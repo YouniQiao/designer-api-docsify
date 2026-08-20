@@ -12,7 +12,15 @@ import { applicationManager } from '@kit.MDMKit';
 function addAllowedRunningBundles(admin: Want, appIdentifiers: Array<string>, accountId: number): void
 ```
 
-Adds applications to the application running trustlist. Only applications in the trustlist are allowed to run under the specified user. &gt; **NOTE：**&gt; &gt; 1. Most APIs provided by MDM Kit are available only to MDM applications. When using this API, add the MDM &gt; application to the application running trustlist. Otherwise, the MDM application will be prohibited from running, &gt; blocking the API call. For details about whether the API is open only to MDM applications, see the module &gt; description. &gt; &gt; 2. If the application running blocklist is not empty, this API cannot be used to add applications to the running &gt; trustlist. Otherwise, the error code 9200010 is reported. APIs related to the application running blocklist &gt; include [addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md), &gt; [addDisallowedRunningBundles](arkts-mdm-applicationmanager-adddisallowedrunningbundles-f-sys.md), &gt; [addDisallowedRunningBundles](arkts-mdm-applicationmanager-adddisallowedrunningbundles-f-sys.md), and &gt; [addDisallowedRunningBundles](arkts-mdm-applicationmanager-adddisallowedrunningbundles-f-sys.md). &gt; &gt; 3. This API only takes effect for third-party applications. System applications are not subject to this list and &gt; are allowed to run by default.
+Adds applications to the application running trustlist. Only applications in the trustlist are allowed to run under the specified user.
+
+> **NOTE：**
+> 
+> 1. Most APIs provided by MDM Kit are available only to MDM applications. When using this API, add the MDM &gt; application to the application running trustlist. Otherwise, the MDM application will be prohibited from running, &gt; blocking the API call. For details about whether the API is open only to MDM applications, see the module &gt; description.
+> 
+> 2. If the application running blocklist is not empty, this API cannot be used to add applications to the running &gt; trustlist. Otherwise, the error code 9200010 is reported. APIs related to the application running blocklist &gt; include [addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md), &gt; [addDisallowedRunningBundles](arkts-mdm-applicationmanager-adddisallowedrunningbundles-f-sys.md), &gt; [addDisallowedRunningBundles](arkts-mdm-applicationmanager-adddisallowedrunningbundles-f-sys.md), and &gt; [addDisallowedRunningBundles](arkts-mdm-applicationmanager-adddisallowedrunningbundles-f-sys.md).
+> 
+> 3. This API only takes effect for third-party applications. System applications are not subject to this list and &gt; are allowed to run by default.
 
 **Since:** 21
 
@@ -36,11 +44,11 @@ Adds applications to the application running trustlist. Only applications in the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
-| [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) | A conflict policy has been configured. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) | A conflict policy has been configured. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 **Examples**
 

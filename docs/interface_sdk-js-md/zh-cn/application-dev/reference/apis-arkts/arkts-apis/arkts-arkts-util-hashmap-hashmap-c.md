@@ -35,7 +35,7 @@ $_iterator(): IterableIterator<[K, V]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | HashMap的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | HashMap的迭代器。 |
 
 **示例**
 
@@ -66,7 +66,10 @@ for (let item of hashMap) {
 [Symbol.iterator](): IterableIterator<[K, V]>
 ```
 
-返回一个迭代器，迭代器的每一项都是一个包含键和值的数组[K, V]。 &gt; **说明：** &gt; &gt; 不建议在Symbol.iterator迭代过程中使用set、remove方法，因其可能导致迭代过程中的状态异常，如需在遍历中插入或删除元素，建议使用for循环来进行安全的插入与删除操作。
+返回一个迭代器，迭代器的每一项都是一个包含键和值的数组[K, V]。   
+> **说明：**
+> 
+> 不建议在Symbol.iterator迭代过程中使用set、remove方法，因其可能导致迭代过程中的状态异常，如需在遍历中插入或删除元素，建议使用for循环来进行安全的插入与删除操作。
 
 **起始版本：** 8
 
@@ -80,7 +83,7 @@ for (let item of hashMap) {
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | 返回包含此HashMap中所有键值对的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回包含此HashMap中所有键值对的迭代器。 |
 
 **错误码：**
 
@@ -219,7 +222,10 @@ let hashMap: HashMap<string, int> = new HashMap<string, int>();
 entries(): IterableIterator<[K, V]>
 ```
 
-返回此HashMap中包含的键值对的新迭代器对象。 &gt; **说明：** &gt; &gt; 不建议在entries迭代过程中使用set、remove方法，因其可能导致迭代过程中的状态异常，如需在遍历中插入或删除元素，建议使用for循环来进行安全的插入与删除操作。
+返回此HashMap中包含的键值对的新迭代器对象。   
+> **说明：**
+> 
+> 不建议在entries迭代过程中使用set、remove方法，因其可能导致迭代过程中的状态异常，如需在遍历中插入或删除元素，建议使用for循环来进行安全的插入与删除操作。
 
 **起始版本：** 23
 
@@ -233,7 +239,7 @@ entries(): IterableIterator<[K, V]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | 返回包含此HashMap中所有键值对的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回包含此HashMap中所有键值对的迭代器。 |
 
 **错误码：**
 
@@ -303,7 +309,10 @@ for(let i = 0; i < 10; i++) {
 forEach(callbackFn: (value?: V, key?: K, map?: HashMap<K, V>) => void, thisArg?: Object): void
 ```
 
-在遍历过程中对每个元素调用一次回调函数。 &gt; **说明：** &gt; &gt; 不建议在forEach遍历过程中使用set、remove方法，因其可能导致迭代过程中的状态异常，如需在遍历中插入或删除元素，建议使用for循环来进行安全的插入与删除操作。
+在遍历过程中对每个元素调用一次回调函数。   
+> **说明：**
+> 
+> 不建议在forEach遍历过程中使用set、remove方法，因其可能导致迭代过程中的状态异常，如需在遍历中插入或删除元素，建议使用for循环来进行安全的插入与删除操作。
 
 **起始版本：** 8
 
@@ -627,7 +636,10 @@ console.info("result = ", result) // result = true
 keys(): IterableIterator<K>
 ```
 
-返回新迭代器对象，包含此HashMap中所有的键。 &gt; **说明：** &gt; &gt; 不建议在keys迭代过程中使用set、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
+返回新迭代器对象，包含此HashMap中所有的键。   
+> **说明：**
+> 
+> 不建议在keys迭代过程中使用set、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
 
 **起始版本：** 23
 
@@ -641,7 +653,7 @@ keys(): IterableIterator<K>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;K&gt; | 返回包含此HashMap中所有key的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; | 返回包含此HashMap中所有key的迭代器。 |
 
 **错误码：**
 
@@ -935,7 +947,10 @@ console.info("result:", result);  // result: true
 values(): IterableIterator<V>
 ```
 
-返回新迭代器对象，包含此HashMap中所有键对应的值。 &gt; **说明：** &gt; &gt; 不建议在values迭代过程中使用set、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
+返回新迭代器对象，包含此HashMap中所有键对应的值。   
+> **说明：**
+> 
+> 不建议在values迭代过程中使用set、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
 
 **起始版本：** 23
 
@@ -949,7 +964,7 @@ values(): IterableIterator<V>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;V&gt; | 返回包含此HashMap中所有value的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;V&gt; | 返回包含此HashMap中所有value的迭代器。 |
 
 **错误码：**
 

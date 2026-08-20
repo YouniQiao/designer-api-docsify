@@ -12,7 +12,13 @@ import { mediaquery } from '@kit.ArkUI';
 function matchMediaSync(condition: string): MediaQueryListener
 ```
 
-Sets the media query condition. This API returns the corresponding media query listener. &gt; **NOTE：**&gt; &gt; - This API is supported since API version 7 and deprecated since API version 18. You are advised to use &gt; [matchMediaSync](arkts-arkui-arkui-uicontext-mediaquery-c.md#matchmediasync) instead. Before calling this API, you &gt; need to obtain the [MediaQuery](arkts-arkui-arkui-uicontext-mediaquery-c.md) object using the &gt; [getMediaQuery](arkts-arkui-arkui-uicontext-uicontext-c.md#getmediaquery) method in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md). &gt; &gt; - Since API version 10, you can use the &gt; [getMediaQuery](arkts-arkui-arkui-uicontext-uicontext-c.md#getmediaquery) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the &gt; [MediaQuery](arkts-arkui-arkui-uicontext-mediaquery-c.md) object associated with the current UI context.
+Sets the media query condition. This API returns the corresponding media query listener.
+
+> **NOTE：**
+> 
+> - This API is supported since API version 7 and deprecated since API version 18. You are advised to use &gt; [matchMediaSync](../../apis-default/arkts-apis/arkts-arkui-uicontext-mediaquery-c.md#matchmediasync) instead. Before calling this API, you &gt; need to obtain the [MediaQuery](../../apis-default/arkts-apis/arkts-arkui-uicontext-mediaquery-c.md) object using the &gt; [getMediaQuery](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getmediaquery) method in &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md).
+> 
+> - Since API version 10, you can use the &gt; [getMediaQuery](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getmediaquery) API in &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the &gt; [MediaQuery](../../apis-default/arkts-apis/arkts-arkui-uicontext-mediaquery-c.md) object associated with the current UI context.
 
 **Since:** 7
 

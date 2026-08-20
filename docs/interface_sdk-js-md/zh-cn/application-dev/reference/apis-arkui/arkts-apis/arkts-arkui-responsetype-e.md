@@ -2,6 +2,8 @@
 
 ResponseType for contextMenu
 
+@enum { number }
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare enum ResponseType--><!--Device-unnamed-declare enum ResponseType-End-->

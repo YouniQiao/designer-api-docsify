@@ -2,6 +2,8 @@
 
 FlexAlign enumeration description.
 
+@enum { number }
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare enum FlexAlign--><!--Device-unnamed-declare enum FlexAlign-End-->

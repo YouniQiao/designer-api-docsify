@@ -2,6 +2,8 @@
 
 The definition of QueryMediaEntityParam.
 
+@interface QueryMediaEntityParam
+
 **Since:** 23
 
 <!--Device-avMusicTemplate-interface QueryMediaEntityParam--><!--Device-avMusicTemplate-interface QueryMediaEntityParam-End-->

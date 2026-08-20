@@ -17,7 +17,9 @@ declare function listFileSync(
 ): string[]
 ```
 
-默认以同步方式列出当前目录下所有文件名和目录名，返回文件名数组，支持按后缀、文件名等条件过滤。 可通过配置ListFileOptions中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。
+默认以同步方式列出当前目录下所有文件名和目录名，返回文件名数组，支持按后缀、文件名等条件过滤。
+
+可通过配置ListFileOptions中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。
 
 **起始版本：** 9
 
@@ -32,7 +34,7 @@ declare function listFileSync(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 目录的应用沙箱路径。 |
-| options | [ListFileOptions](../../apis-na/arkts-apis/arkts-na-file-fs-listfileoptions-i.md) | 否 | 文件过滤选项。默认不进行过滤。<br>**起始版本：** 11 |
+| options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | 否 | 文件过滤选项。默认不进行过滤。<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -45,8 +47,8 @@ declare function listFileSync(
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900002 | No such file or directory |
-| 13900018 | Not a directory |
 | 13900008 | Bad file descriptor |
-| 13900042 | Unknown error |
 | 13900011 | Out of memory |
+| 13900018 | Not a directory |
+| 13900042 | Unknown error |
 

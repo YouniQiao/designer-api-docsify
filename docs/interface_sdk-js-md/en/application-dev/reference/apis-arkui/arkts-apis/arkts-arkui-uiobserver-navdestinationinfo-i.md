@@ -162,7 +162,7 @@ state: NavDestinationState
 
 State of the **NavDestination** component.
 
-**Type:** [NavDestinationState](../../apis-na/arkts-apis/arkts-na-uiobserver-navdestinationstate-e.md)
+**Type:** [NavDestinationState](arkts-arkui-uiobserver-navdestinationstate-e.md)
 
 **Since:** 11
 

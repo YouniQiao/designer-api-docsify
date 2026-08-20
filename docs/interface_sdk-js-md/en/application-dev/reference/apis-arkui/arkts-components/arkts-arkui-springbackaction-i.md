@@ -2,6 +2,8 @@
 
 Defines sheet spring back action
 
+@interface SpringBackAction
+
 **Since:** 12
 
 <!--Device-unnamed-declare interface SpringBackAction--><!--Device-unnamed-declare interface SpringBackAction-End-->

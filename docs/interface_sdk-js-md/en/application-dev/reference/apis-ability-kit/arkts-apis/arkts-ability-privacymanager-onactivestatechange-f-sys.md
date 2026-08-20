@@ -14,7 +14,14 @@ function onActiveStateChange(
     callback: Callback<ActiveChangeResponse>): void
 ```
 
-Subscribes to permission usage status change events for a specified permission list. Permission usage status changes are triggered by calls to [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md) and [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md). After a successful subscription, when the permission usage status changes, the callback function is triggered, returning an [ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md) object containing details of the permission usage status change. This API uses an asynchronous callback to return the result. Multiple callback functions are allowed to be subscribed for the same permissionList. &gt; **NOTE：**&gt; It is not allowed to subscribe the same callback function using two permissionLists that have an intersection. &gt; That is, if two permissionLists contain the same permission name, the same callback function cannot be used for subscription. &gt; This API is typically used in conjunction with [offActiveStateChange](arkts-ability-privacymanager-offactivestatechange-f-sys.md). When listening is no longer needed, offActiveStateChange should be called to unsubscribe.
+Subscribes to permission usage status change events for a specified permission list. Permission usage status changes are triggered by calls to [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md) and [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md). After a successful subscription, when the permission usage status changes, the callback function is triggered, returning an [ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md) object containing details of the permission usage status change. This API uses an asynchronous callback to return the result.
+
+Multiple callback functions are allowed to be subscribed for the same permissionList.
+
+> **NOTE：**
+> It is not allowed to subscribe the same callback function using two permissionLists that have an intersection.
+> That is, if two permissionLists contain the same permission name, the same callback function cannot be used for subscription.
+> This API is typically used in conjunction with [offActiveStateChange](arkts-ability-privacymanager-offactivestatechange-f-sys.md). When listening is no longer needed, offActiveStateChange should be called to unsubscribe.
 
 **Since:** 23
 
@@ -39,11 +46,11 @@ Subscribes to permission usage status change events for a specified permission l
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The permissionList exceeds the size limit, or the permissionNames in the list are all invalid. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The permissionList exceeds the size limit, or the permissionNames in the list are all invalid. |
 | [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | The API is used repeatedly with the same input. |
 | [12100005](../errorcode-access-token.md#12100005-listener-overflows) | The registration time has exceeded the limit. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
+| [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
 

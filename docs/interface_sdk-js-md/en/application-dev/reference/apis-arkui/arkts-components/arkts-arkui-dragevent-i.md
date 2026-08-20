@@ -65,8 +65,8 @@ Obtains drag-related data.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [190002](../errorcode-drag-event.md#190002-data-retrieval-error) | Data error. |
 | [190001](../errorcode-drag-event.md#190001-data-not-found) | Data not found. |
+| [190002](../errorcode-drag-event.md#190002-data-retrieval-error) | Data error. |
 
 ## getDisplayId
 
@@ -446,7 +446,9 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 getX(): number
 ```
 
-Obtains the x-coordinate of the drag point relative to the upper left corner of the window, in vp. &gt; **NOTE：**
+Obtains the x-coordinate of the drag point relative to the upper left corner of the window, in vp.
+
+> **NOTE：**
 
 **Since:** 7
 
@@ -470,7 +472,9 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 getY(): number
 ```
 
-Obtains the y-coordinate of the drag point relative to the upper left corner of the window, in vp. &gt; **NOTE：**
+Obtains the y-coordinate of the drag point relative to the upper left corner of the window, in vp.
+
+> **NOTE：**
 
 **Since:** 7
 
@@ -606,7 +610,7 @@ Asynchronously obtains drag data and notifies you of the current data synchroniz
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | Yes | Parameters for obtaining drag data, including the target path, file conflict options, and progress bar type. You can use the [cancelDataLoading](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c.md#canceldataloading) API to cancel data loading during data transmission. |
+| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | Yes | Parameters for obtaining drag data, including the target path, file conflict options, and progress bar type. You can use the [cancelDataLoading](../../apis-default/arkts-apis/arkts-arkui-uicontext-dragcontroller-c.md#canceldataloading) API to cancel data loading during data transmission. |
 
 **Return value:**
 
@@ -647,7 +651,9 @@ Set the uniqueId or uniqueId array of components that need to be automatically h
 dragBehavior: DragBehavior
 ```
 
-Copy or paste mode. Default value: **DragBehavior.COPY**
+Copy or paste mode.
+
+Default value: **DragBehavior.COPY**
 
 **Type:** [DragBehavior](arkts-arkui-dragbehavior-e.md)
 
@@ -669,7 +675,15 @@ Copy or paste mode. Default value: **DragBehavior.COPY**
 useCustomDropAnimation: boolean
 ```
 
-Whether to disable the default drop animation when the dragging ends. If this parameter is set to **true**, the default drop animation is disabled, and the custom one is used. If this parameter is not set or is set to **false**, the default drop animation takes effect. When [setResult](#setresult) is set to **DRAG_SUCCESSFUL**, a shrink-out animation takes effect. Otherwise, an expand-out animation takes effect. When the default drop animation is not disabled, avoid implementing custom animations to prevent conflicts. Default value: **false**
+Whether to disable the default drop animation when the dragging ends.
+
+If this parameter is set to **true**, the default drop animation is disabled, and the custom one is used.
+
+If this parameter is not set or is set to **false**, the default drop animation takes effect. When [setResult](#setresult) is set to **DRAG_SUCCESSFUL**, a shrink-out animation takes effect. Otherwise, an expand-out animation takes effect.
+
+When the default drop animation is not disabled, avoid implementing custom animations to prevent conflicts.
+
+Default value: **false**
 
 **Type:** boolean
 

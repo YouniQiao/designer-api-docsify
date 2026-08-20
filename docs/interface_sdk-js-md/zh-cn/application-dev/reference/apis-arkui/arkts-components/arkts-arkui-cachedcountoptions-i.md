@@ -19,7 +19,13 @@
 independent?: boolean
 ```
 
-cachedCount是否按实际子组件个数计算。 设置为true时，cachedCount按实际子组件个数计算，不按组计算。 设置为false时，如果displayCount.swipeByGroup=true，则cachedCount按组计算，否则按实际子组件个数计算。 默认值：false
+[cachedCount](arkts-arkui-swiper-attribute.md#cachedcount)是否按实际子组件个数计算。
+
+设置为true时，cachedCount按实际子组件个数计算，不按组计算。
+
+设置为false时，如果displayCount.swipeByGroup=true，则cachedCount按组计算，否则按实际子组件个数计算。
+
+默认值：false
 
 **类型：** boolean
 
@@ -43,7 +49,13 @@ cachedCount是否按实际子组件个数计算。 设置为true时，cachedCoun
 isShown?: boolean
 ```
 
-预加载范围内的节点是否进行绘制。 设置为true时，预加载范围内的节点进行绘制。 设置为false时，预加载范围内的节点不进行绘制。 默认值：false
+预加载范围内的节点是否进行绘制。
+
+设置为true时，预加载范围内的节点进行绘制。
+
+设置为false时，预加载范围内的节点不进行绘制。
+
+默认值：false
 
 **类型：** boolean
 

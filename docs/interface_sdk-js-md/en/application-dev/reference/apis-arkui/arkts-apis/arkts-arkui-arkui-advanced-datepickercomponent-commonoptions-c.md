@@ -1,6 +1,16 @@
 # CommonOptions
 
-CommonOptions defines common options for the date time picker. &gt; **Description:** &gt; &gt; - For Date usage, refer to &gt; [TimePickerOptions](../../../reference/apis-arkui/arkui-ts/ts-basic-components-timepicker.md#timepickeroptions)。 &gt; &gt; - The text size of DatePickerComponent changes based on the total number of columns displayed. When the number of &gt; columns is 6 or more, the text size is 14vp; in other cases, it is 16vp. When the component width is too narrow, &gt; text may be truncated. &gt; &gt; - When parameters are omitted or set to undefined, default values are used. &gt; &gt; - In [DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md), setting start, end, and selected only takes effect for the date part (year, &gt; month, day). In [TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md), setting start, end, and selected only takes effect for the time &gt; part (hour, minute, second).
+CommonOptions defines common options for the date time picker.
+
+> **Description:**
+> 
+> - For Date usage, refer to &gt; [TimePickerOptions](../../../reference/apis-arkui/arkui-ts/ts-basic-components-timepicker.md#timepickeroptions)。
+> 
+> - The text size of DatePickerComponent changes based on the total number of columns displayed. When the number of &gt; columns is 6 or more, the text size is 14vp; in other cases, it is 16vp. When the component width is too narrow, &gt; text may be truncated.
+> 
+> - When parameters are omitted or set to undefined, default values are used.
+> 
+> - In [DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md), setting start, end, and selected only takes effect for the date part (year, &gt; month, day). In [TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md), setting start, end, and selected only takes effect for the time &gt; part (hour, minute, second).
 
 **Since:** 26.0.0
 
@@ -20,7 +30,17 @@ import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode,
 enableHapticFeedback?: boolean
 ```
 
-Enables or disables haptic feedback. Default value: true - true: Enable haptic feedback. - false: Disable haptic feedback. **Description**: 1. When set to true, its effectiveness depends on whether the system's hardware supports it. 2. To enable haptic feedback, you need to configure the requestPermissions field in the project's [module.json5](../../../quick-start/module-configuration-file.md) to enable vibration permission, as follows: "requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
+Enables or disables haptic feedback.
+
+Default value: true
+
+- true: Enable haptic feedback. - false: Disable haptic feedback.
+
+**Description**:
+
+1. When set to true, its effectiveness depends on whether the system's hardware supports it. 2. To enable haptic feedback, you need to configure the requestPermissions field in the project's [module.json5](../../../quick-start/module-configuration-file.md) to enable vibration permission, as follows:
+
+"requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
 
 **Type:** boolean
 
@@ -42,7 +62,15 @@ Enables or disables haptic feedback. Default value: true - true: Enable haptic f
 end?: Date
 ```
 
-End date or time of the picker. Default value: Date(2100, 12, 31, 23, 59, 59) Value range: [Date(0, 0, 1, 0, 0, 0), Date(10000, 11, 31,23, 59, 59)] **Description:** When end is set to a valid value, loop does not take effect.
+End date or time of the picker.
+
+Default value: Date(2100, 12, 31, 23, 59, 59)
+
+Value range: [Date(0, 0, 1, 0, 0, 0), Date(10000, 11, 31,23, 59, 59)]
+
+**Description:**
+
+When end is set to a valid value, loop does not take effect.
 
 **Type:** Date
 
@@ -62,7 +90,11 @@ End date or time of the picker. Default value: Date(2100, 12, 31, 23, 59, 59) Va
 loop?: boolean
 ```
 
-Sets whether to enable loop mode. - true: Enable loop mode. - false: Disable loop mode. Default value: true
+Sets whether to enable loop mode.
+
+- true: Enable loop mode. - false: Disable loop mode.
+
+Default value: true
 
 **Type:** boolean
 
@@ -146,7 +178,15 @@ Selected date. Default value is the current system date or time.
 start?: Date
 ```
 
-Start date or time of the picker. Default value: Date(1970, 0, 1, 0, 0, 0) Value range: [Date(0, 0, 1, 0, 0, 0), Date(10000, 11, 31,23, 59, 59)] **Description:** When start is set to a valid value, loop does not take effect.
+Start date or time of the picker.
+
+Default value: Date(1970, 0, 1, 0, 0, 0)
+
+Value range: [Date(0, 0, 1, 0, 0, 0), Date(10000, 11, 31,23, 59, 59)]
+
+**Description:**
+
+When start is set to a valid value, loop does not take effect.
 
 **Type:** Date
 

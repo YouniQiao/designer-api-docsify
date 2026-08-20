@@ -2,6 +2,8 @@
 
 Defines the DownloadFileButton style option.
 
+@interface DownloadStyleOptions
+
 **Since:** 12
 
 <!--Device-unnamed-export interface DownloadStyleOptions--><!--Device-unnamed-export interface DownloadStyleOptions-End-->
@@ -148,7 +150,7 @@ layoutDirection?: DownloadLayoutDirection
 
 Layout direction.
 
-**Type:** [DownloadLayoutDirection](../../apis-na/arkts-apis/arkts-na-arkui-advanced-downloadfilebutton-downloadlayoutdirection-e.md)
+**Type:** [DownloadLayoutDirection](arkts-arkui-arkui-advanced-downloadfilebutton-downloadlayoutdirection-e.md)
 
 **Since:** 12
 

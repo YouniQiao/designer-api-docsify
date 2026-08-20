@@ -158,7 +158,9 @@ All child elements.
 clickable: boolean
 ```
 
-Whether the element is clickable. The value **true** indicates that the element is clickable, and **false** indicates the opposite. Default value: **false**.
+Whether the element is clickable. The value **true** indicates that the element is clickable, and **false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -174,7 +176,9 @@ Whether the element is clickable. The value **true** indicates that the element 
 componentId: long
 ```
 
-ID of the component to which the element belongs. Default value: **-1**.
+ID of the component to which the element belongs.
+
+Default value: **-1**.
 
 **Type:** long
 
@@ -270,7 +274,9 @@ Description of the element. Set this parameter based on site requirements. No sp
 editable: boolean
 ```
 
-Whether the element is editable. The value **true** indicates that the element is editable, and **false** indicates the opposite. Default value: **false**.
+Whether the element is editable. The value **true** indicates that the element is editable, and **false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -318,7 +324,9 @@ Error status.
 extraInfo?: string
 ```
 
-Extended attribute used to define properties of specific components. The default value is an empty string. It includes: - CheckboxGroupSelectedStatus: indicates the selection state of the CheckboxGroup component, where **0** indicates selected, **1** indicates partially selected, and **2** indicates unselected. - Row: row information of the focused item in the Grid component, indicating the row number of the item. - Column: column information of the focused item in the Grid component, indicating the column number of the item. - ListItemIndex: row information of the focused item in the List component, indicating the row number of the current item. - SideBarContainerStates: indicates the expanded state of expandable components (SideBarContainer, Select), where **0** indicates collapsed and **1** indicates expanded. - ToggleType: indicates the specific type of the Toggle component, where **0** indicates Checkbox, **1** indicates Switch, and **2** indicates Button. - BindSheet: indicates the display height state of the BindSheet half-modal dialog box component, where **0** indicates large height display state, **1** indicates medium height display state, and **2** indicates small height display state. - hasRegisteredHover: indicates whether the component has registered the onAccessibilityHover event callback. The value **1** indicates that the component has registered the event callback. This field is not used if the callback is not registered. - direction: indicates the layout direction of the List component, where "vertical" indicates vertical and " horizontal" indicates horizontal. - expandedState: indicates the expanded state of a ListItem in the List component, where "expanded" indicates expanded and "collapsed" indicates collapsed. - componentTypeDescription: detailed information about the component type, serving as a supplementary description for componentType.
+Extended attribute used to define properties of specific components. The default value is an empty string. It includes:
+
+- CheckboxGroupSelectedStatus: indicates the selection state of the CheckboxGroup component, where **0** indicates selected, **1** indicates partially selected, and **2** indicates unselected. - Row: row information of the focused item in the Grid component, indicating the row number of the item. - Column: column information of the focused item in the Grid component, indicating the column number of the item. - ListItemIndex: row information of the focused item in the List component, indicating the row number of the current item. - SideBarContainerStates: indicates the expanded state of expandable components (SideBarContainer, Select), where **0** indicates collapsed and **1** indicates expanded. - ToggleType: indicates the specific type of the Toggle component, where **0** indicates Checkbox, **1** indicates Switch, and **2** indicates Button. - BindSheet: indicates the display height state of the BindSheet half-modal dialog box component, where **0** indicates large height display state, **1** indicates medium height display state, and **2** indicates small height display state. - hasRegisteredHover: indicates whether the component has registered the onAccessibilityHover event callback. The value **1** indicates that the component has registered the event callback. This field is not used if the callback is not registered. - direction: indicates the layout direction of the List component, where "vertical" indicates vertical and " horizontal" indicates horizontal. - expandedState: indicates the expanded state of a ListItem in the List component, where "expanded" indicates expanded and "collapsed" indicates collapsed. - componentTypeDescription: detailed information about the component type, serving as a supplementary description for componentType.
 
 **Type:** string
 
@@ -334,7 +342,9 @@ Extended attribute used to define properties of specific components. The default
 focusable: boolean
 ```
 
-Whether the element is focusable. The value **true** indicates that the element is focusable, and **false** indicates the opposite. Default value: **false**.
+Whether the element is focusable. The value **true** indicates that the element is focusable, and **false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -414,7 +424,9 @@ Alias of the element.
 isActive: boolean
 ```
 
-Whether the element is active. The value **true** indicates that the element is active and **false** indicates the opposite. Default value: **true**.
+Whether the element is active. The value **true** indicates that the element is active and **false** indicates the opposite.
+
+Default value: **true**.
 
 **Type:** boolean
 
@@ -430,7 +442,9 @@ Whether the element is active. The value **true** indicates that the element is 
 isEnable: boolean
 ```
 
-Whether the element is enabled. The value **true** indicates that the element is enabled, and **false** indicates the opposite. Default value: **false**.
+Whether the element is enabled. The value **true** indicates that the element is enabled, and **false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -446,7 +460,9 @@ Whether the element is enabled. The value **true** indicates that the element is
 isFocused: boolean
 ```
 
-Whether the element is focused. The value **true** indicates that the element is focused, and **false** indicates the opposite. Default value: **false**.
+Whether the element is focused. The value **true** indicates that the element is focused, and **false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -462,7 +478,9 @@ Whether the element is focused. The value **true** indicates that the element is
 isHint: boolean
 ```
 
-Whether the element is a hint. The value **true** indicates that the element is a hint, and **false** indicates the opposite. Default value: **false**.
+Whether the element is a hint. The value **true** indicates that the element is a hint, and **false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -478,7 +496,9 @@ Whether the element is a hint. The value **true** indicates that the element is 
 isPassword: boolean
 ```
 
-Whether the element is a password. The value **true** indicates that the element is a password, and **false** indicates the opposite. Default value: **false**.
+Whether the element is a password. The value **true** indicates that the element is a password, and **false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -494,7 +514,9 @@ Whether the element is a password. The value **true** indicates that the element
 isVisible: boolean
 ```
 
-Whether the element is visible. The value **true** indicates that the element is visible, and **false** indicates the opposite. Default value: **false**.
+Whether the element is visible. The value **true** indicates that the element is visible, and **false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -574,7 +596,9 @@ Whether the element is long-clickable. The value **true** indicates that the ele
 offset: double
 ```
 
-For scrollable components such as **List** and **Grid**, this attribute indicates the pixel offset of the content area relative to the top coordinate of the component. The unit is pixel (px). Default value: **0**.
+For scrollable components such as **List** and **Grid**, this attribute indicates the pixel offset of the content area relative to the top coordinate of the component. The unit is pixel (px).
+
+Default value: **0**.
 
 **Type:** double
 
@@ -622,7 +646,9 @@ Parent element of the element.
 pluralLineSupported: boolean
 ```
 
-Whether the element supports multiple lines of text. The value **true** indicates that the element supports multiple lines of text, and **false** indicates the opposite. Default value: **false**.
+Whether the element supports multiple lines of text. The value **true** indicates that the element supports multiple lines of text, and **false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -718,7 +744,9 @@ Whether the element is scrollable. The value **true** indicates that the element
 selected: boolean
 ```
 
-Whether the element is selected. The value **true** indicates that the element is selected, and **false** indicates the opposite. Default value: **false**.
+Whether the element is selected. The value **true** indicates that the element is selected, and **false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -846,7 +874,9 @@ Window type of the element.
 valueMax: double
 ```
 
-Maximum value. Default value: **0**.
+Maximum value.
+
+Default value: **0**.
 
 **Type:** double
 
@@ -862,7 +892,9 @@ Maximum value. Default value: **0**.
 valueMin: double
 ```
 
-Minimum value. Default value: **0**.
+Minimum value.
+
+Default value: **0**.
 
 **Type:** double
 
@@ -878,7 +910,9 @@ Minimum value. Default value: **0**.
 valueNow: double
 ```
 
-Current value. Default value: **0**.
+Current value.
+
+Default value: **0**.
 
 **Type:** double
 
@@ -894,7 +928,9 @@ Current value. Default value: **0**.
 windowId: int
 ```
 
-Window ID. Default value: **-1**.
+Window ID.
+
+Default value: **-1**.
 
 **Type:** int
 

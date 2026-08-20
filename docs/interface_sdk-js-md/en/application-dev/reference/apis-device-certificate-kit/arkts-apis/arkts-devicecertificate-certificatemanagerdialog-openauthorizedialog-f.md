@@ -40,11 +40,11 @@ Opens the authorization page of the certificate management dialog box to grant a
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. A mandatory parameter is left unspecified. 2. Incorrect parameter type. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | The certificate management application Hap is not preinstalled in the system, and the capability is not supported.<br>**Applicable version:** 26.0.0 and later |
 | [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 | [29700002](../errorcode-certManagerDialog.md#29700002-operation-canceled) | The user cancels the authorization. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 **Examples**
 
@@ -104,12 +104,12 @@ Opens the Certificate Credential Authorization page of the Certificate Managemen
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [29700007](../errorcode-certManagerDialog.md#29700007-no-available-authorization-certificate) | No available certificate for authorization. Possible causes: 1. No certificate matches the filter criteria; 2. All certificates have been deleted. |
-| [29700006](../errorcode-certManagerDialog.md#29700006-failed-to-validate-the-input-parameter) | Indicates that the input parameters validation failed. for example, the parameter format is incorrect or the value range is invalid. |
 | [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error; 4. Call other service failed. Please try again. |
 | [29700002](../errorcode-certManagerDialog.md#29700002-operation-canceled) | The user cancels the authorization. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [29700006](../errorcode-certManagerDialog.md#29700006-failed-to-validate-the-input-parameter) | Indicates that the input parameters validation failed. for example, the parameter format is incorrect or the value range is invalid. |
+| [29700007](../errorcode-certManagerDialog.md#29700007-no-available-authorization-certificate) | No available certificate for authorization. Possible causes: 1. No certificate matches the filter criteria; 2. All certificates have been deleted. |
 
 **Examples**
 

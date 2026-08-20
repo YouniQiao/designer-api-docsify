@@ -20,7 +20,9 @@ import { observer } from '@kit.TelephonyKit';
 slotId: int
 ```
 
-卡槽ID。 - 0：卡槽1。 - 1：卡槽2。
+卡槽ID。
+
+- 0：卡槽1。 - 1：卡槽2。
 
 **类型：** int
 

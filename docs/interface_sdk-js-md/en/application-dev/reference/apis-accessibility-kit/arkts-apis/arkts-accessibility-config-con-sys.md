@@ -70,7 +70,9 @@ Indicates the color correction feature status. Used together with daltonizationC
 const ignoreRepeatClick: Config<boolean>
 ```
 
-Whether to ignore repeated clicks. This parameter must be used together with **repeatClickInterval**. The value **true** indicates that the feature of ignoring repeated clicks is enabled, and **false** indicates the opposite. Default value: **false**
+Whether to ignore repeated clicks. This parameter must be used together with **repeatClickInterval**. The value **true** indicates that the feature of ignoring repeated clicks is enabled, and **false** indicates the opposite.
+
+Default value: **false**
 
 **Since:** 23
 

@@ -1,4 +1,4 @@
-# ReceiveCallback(System API)（系统接口）
+# ReceiveCallback（系统接口）
 
 ```TypeScript
 declare type ReceiveCallback = import('../api/@ohos.base').Callback<Record<string, Object>>

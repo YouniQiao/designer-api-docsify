@@ -36,15 +36,15 @@ function grantUriPermission(
 | uri | string | 是 | 公共目录文件URI。 |
 | bundleName | string | 是 | 分享目标的包名。 |
 | flag | wantConstant.Flags | 是 | 授权的权限，可取wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION或 wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步授权之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步授权之后的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | 14300001 | IPC error |
 
 **示例**
@@ -109,9 +109,9 @@ function grantUriPermission(uri: string, bundleName: string, flag: wantConstant.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | 14300001 | IPC error |
 
 **示例**
@@ -174,10 +174,10 @@ function grantUriPermission(policies: Array<PolicyInfo>, targetBundleName: strin
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| 13900001 | Operation not permitted. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 13900001 | Operation not permitted. |
 | 13900011 | Out of memory. |
 
 **示例**

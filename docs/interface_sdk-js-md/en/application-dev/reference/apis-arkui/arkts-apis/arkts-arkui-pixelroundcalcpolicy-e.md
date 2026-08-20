@@ -2,6 +2,8 @@
 
 Pixel Round Direction
 
+@enum { number }
+
 **Since:** 11
 
 <!--Device-unnamed-declare enum PixelRoundCalcPolicy--><!--Device-unnamed-declare enum PixelRoundCalcPolicy-End-->

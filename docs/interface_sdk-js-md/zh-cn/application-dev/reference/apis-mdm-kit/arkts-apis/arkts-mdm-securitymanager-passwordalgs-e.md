@@ -1,4 +1,4 @@
-# PasswordAlgs(安全管理)
+# PasswordAlgs
 
 处理口令数据使用的加密算法。
 

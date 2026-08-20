@@ -1,6 +1,12 @@
 # PhotoSession
 
-**PhotoSession** inherits from [Session](arkts-camera-camera-session-i.md), [Flash](arkts-camera-camera-flash-i.md), [AutoExposure](arkts-camera-camera-autoexposure-i.md), [WhiteBalance](arkts-camera-camera-whitebalance-i.md), [Focus](arkts-camera-camera-focus-i.md), [Zoom](arkts-camera-camera-zoom-i.md), [ColorManagement](arkts-camera-camera-colormanagement-i.md), [AutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md), [Macro](arkts-camera-camera-macro-i-sys.md), [ManualExposure](../../../reference/apis-camera-kit/arkts-apis-camera-ManualExposure.md), [ManualFocus](../../../reference/apis-camera-kit/arkts-apis-camera-ManualFocus.md), [ManualIso](../../../reference/apis-camera-kit/arkts-apis-camera-ManualIso.md), [OIS](../../../reference/apis-camera-kit/arkts-apis-camera-OIS.md), and [Aperture](../../../reference/apis-camera-kit/arkts-apis-camera-Aperture.md). It implements a photo session, which provides operations on the flash, exposure, white balance, focus, zoom, color space, macro mode, manual exposure, manual focus, manual ISO setting, optical image stabilization (OIS), and aperture. **PhotoSession** is provided for the default photo mode. It is used to take standard photos. It supports multiple photo formats and resolutions, which are suitable for most daily photo capture scenarios.
+*PhotoSession** inherits from [Session](arkts-camera-camera-session-i.md), [Flash](arkts-camera-camera-flash-i.md), [AutoExposure](arkts-camera-camera-autoexposure-i.md), [WhiteBalance](arkts-camera-camera-whitebalance-i.md), [Focus](arkts-camera-camera-focus-i.md), [Zoom](arkts-camera-camera-zoom-i.md), [ColorManagement](arkts-camera-camera-colormanagement-i.md), [AutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md), [Macro](arkts-camera-camera-macro-i-sys.md), [ManualExposure](../../../reference/apis-camera-kit/arkts-apis-camera-ManualExposure.md), [ManualFocus](../../../reference/apis-camera-kit/arkts-apis-camera-ManualFocus.md), [ManualIso](../../../reference/apis-camera-kit/arkts-apis-camera-ManualIso.md), [OIS](../../../reference/apis-camera-kit/arkts-apis-camera-OIS.md), and [Aperture](../../../reference/apis-camera-kit/arkts-apis-camera-Aperture.md).
+
+It implements a photo session, which provides operations on the flash, exposure, white balance, focus, zoom, color space, macro mode, manual exposure, manual focus, manual ISO setting, optical image stabilization (OIS), and aperture.
+
+**PhotoSession** is provided for the default photo mode. It is used to take standard photos. It supports multiple photo formats and resolutions, which are suitable for most daily photo capture scenarios.
+
+@extends Session, Flash, AutoExposure, Focus, Zoom, ColorManagement [since 11 - 12] @extends Session, Flash, AutoExposure, Focus, Zoom, ColorManagement, AutoDeviceSwitch [since 13 - 18] @extends Session, Flash, AutoExposure, Focus, Zoom, ColorManagement, AutoDeviceSwitch, Macro [since 19 - 19] @extends Session, Flash, AutoExposure, WhiteBalance, Focus, Zoom, ColorManagement, AutoDeviceSwitch, Macro [since 20 - 23] @extends Session, Flash, AutoExposure, WhiteBalance, Focus, Zoom, ColorManagement, AutoDeviceSwitch, Macro, ManualExposure, ManualFocus, ManualIso, OIS, Aperture [since 24]
 
 **Inheritance/Implementation:** PhotoSession extends [Session](arkts-camera-camera-session-i.md), [Flash](arkts-camera-camera-flash-i.md), [AutoExposure](arkts-camera-camera-autoexposure-i.md), [WhiteBalance](arkts-camera-camera-whitebalance-i.md), [Focus](arkts-camera-camera-focus-i.md), [Zoom](arkts-camera-camera-zoom-i.md), [ColorManagement](arkts-camera-camera-colormanagement-i.md), [AutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md), [Macro](arkts-camera-camera-macro-i-sys.md), [ManualExposure](arkts-camera-camera-manualexposure-i.md), [ManualFocus](arkts-camera-camera-manualfocus-i-sys.md), [ManualIso](arkts-camera-camera-manualiso-i-sys.md), [OIS](arkts-camera-camera-ois-i.md), [Aperture](arkts-camera-camera-aperture-i-sys.md)
 
@@ -509,7 +515,11 @@ Subscribes to system pressure level event callback.
 on(type: 'autoDeviceSwitchStatusChange', callback: AsyncCallback<AutoDeviceSwitchStatus>): void
 ```
 
-Subscribes to automatic camera switch status change events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to automatic camera switch status change events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 13
 
@@ -532,7 +542,11 @@ Subscribes to automatic camera switch status change events. This API uses an asy
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to **PhotoSession** error events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to **PhotoSession** error events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 11
 
@@ -555,7 +569,11 @@ Subscribes to **PhotoSession** error events. This API uses an asynchronous callb
 on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 ```
 
-Subscribes to focus state change events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to focus state change events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 11
 
@@ -578,7 +596,11 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void
 ```
 
-Subscribes to smooth zoom state change events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to smooth zoom state change events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 11
 
@@ -601,7 +623,11 @@ Subscribes to smooth zoom state change events. This API uses an asynchronous cal
 on(type: 'systemPressureLevelChange', callback: AsyncCallback<SystemPressureLevel>): void
 ```
 
-Subscribes to system pressure level change events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to system pressure level change events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 20
 

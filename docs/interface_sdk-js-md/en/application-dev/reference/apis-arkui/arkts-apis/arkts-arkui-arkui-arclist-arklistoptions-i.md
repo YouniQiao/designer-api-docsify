@@ -24,7 +24,7 @@ header?: ComponentContentBase
 
 Describes the header.
 
-**Type:** [ComponentContentBase](../../apis-na/arkts-apis/arkts-na-componentcontent-componentcontentbase-c.md)
+**Type:** [ComponentContentBase](../../apis-default/arkts-apis/arkts-componentcontent-componentcontentbase-c.md)
 
 **Since:** 23
 

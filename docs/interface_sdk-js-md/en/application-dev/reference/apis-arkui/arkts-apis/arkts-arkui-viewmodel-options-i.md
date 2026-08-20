@@ -1,6 +1,6 @@
 # Options
 
-Options type
+Options type @interface Options
 
 **Since:** 4
 

@@ -1,6 +1,8 @@
 # @ohos.reminderAgent
 
-The **reminderAgent** module provides APIs for publishing scheduled reminders through the reminder agent. You can use the APIs to create scheduled reminders for countdown timers, calendar events, and alarm clocks. When the created reminders are published, the timing and pop-up notification functions of your application will be taken over by the reminder agent in the background when your application is frozen or exits.
+The **reminderAgent** module provides APIs for publishing scheduled reminders through the reminder agent.
+
+You can use the APIs to create scheduled reminders for countdown timers, calendar events, and alarm clocks. When the created reminders are published, the timing and pop-up notification functions of your application will be taken over by the reminder agent in the background when your application is frozen or exits.
 
 **Since:** 7
 

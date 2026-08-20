@@ -1,4 +1,4 @@
-# USBDevicePipe(USB Manager)
+# USBDevicePipe
 
 Represents a USB device pipe, which is used to determine a USB device.
 

@@ -1,6 +1,6 @@
 # WifiP2PConfig
 
-P2P配置。
+P2P配置。 @interface WifiP2PConfig
 
 **起始版本：** 8
 

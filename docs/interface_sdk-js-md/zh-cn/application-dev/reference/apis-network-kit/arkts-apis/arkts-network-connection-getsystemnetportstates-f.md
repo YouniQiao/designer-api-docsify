@@ -12,7 +12,14 @@ import { connection } from '@kit.NetworkKit';
 function getSystemNetPortStates(): Promise<NetPortStatesInfo>
 ```
 
-获取系统当前监听的所有TCP、UDP端口信息，以及监听端口进程的PID、UID，支持IPv4和IPv6。 &gt; **说明：** &gt; &gt; 该接口获取系统当前监听的TCP、UDP端口信息，详细字段包括： &gt; &gt;   TCP端口字段：本地地址、本地端口、远端地址、远端端口、TCP连接状态、进程PID、进程UID &gt; &gt;   UDP端口字段：本地地址、本地端口、进程PID 、进程UID
+获取系统当前监听的所有TCP、UDP端口信息，以及监听端口进程的PID、UID，支持IPv4和IPv6。
+
+> **说明：**
+> 
+> 该接口获取系统当前监听的TCP、UDP端口信息，详细字段包括：
+> 
+>   TCP端口字段：本地地址、本地端口、远端地址、远端端口、TCP连接状态、进程PID、进程UID &gt;
+>   UDP端口字段：本地地址、本地端口、进程PID 、进程UID
 
 **起始版本：** 24
 
@@ -34,9 +41,9 @@ function getSystemNetPortStates(): Promise<NetPortStatesInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 **示例**
 

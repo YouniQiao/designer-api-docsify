@@ -2,6 +2,8 @@
 
 Indicates the personalized lock types.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-sim-export enum PersoLockType--><!--Device-sim-export enum PersoLockType-End-->

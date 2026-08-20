@@ -40,9 +40,9 @@ Uninstalls an installed font file from the system font library by font name. Thi
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [31100107](../errorcode-font-manager.md#31100107-uninstalled-font-file-not-exist) | The font file does not exist. |
 | [31100108](../errorcode-font-manager.md#31100108-failed-to-delete-font-file) | Failed to delete the font file. |
 | [31100109](../errorcode-font-manager.md#31100109-uninstallation-failed-due-to-other-errors) | The system ability works abnormally. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 

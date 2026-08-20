@@ -12,7 +12,9 @@ import { i18n } from '@kit.LocalizationKit';
 export function getSystemLocale(): string
 ```
 
-> [System.getSystemLocale](arkts-localization-i18n-system-c.md#getsystemlocaleinstance)代替。 &gt; 获取系统区域ID。
+
+> [System.getSystemLocale](../../apis-default/arkts-apis/arkts-i18n-system-c.md#getsystemlocaleinstance)代替。
+> 获取系统区域ID。
 
 **起始版本：** 7
 

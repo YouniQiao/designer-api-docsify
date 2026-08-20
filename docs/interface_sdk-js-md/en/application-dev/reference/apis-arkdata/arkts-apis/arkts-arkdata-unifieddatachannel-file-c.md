@@ -22,7 +22,17 @@ import { unifiedDataChannel } from '@kit.ArkData';
 details?: Record<string, string>
 ```
 
-A dictionary type object, where both the key and value are of the string type and are used to describe file information. For example, a data object with the following content can be created to describe a file: { "name":"File name", "type":"File type" } The default value is an empty dictionary object.
+A dictionary type object, where both the key and value are of the string type and are used to describe file information. For example, a data object with the following content can be created to describe a file:
+
+{
+
+"name":"File name",
+
+"type":"File type"
+
+}
+
+The default value is an empty dictionary object.
 
 **Type:** Record&lt;string, string&gt;
 

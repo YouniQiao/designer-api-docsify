@@ -27,7 +27,7 @@ function createMediaSourceWithUrl(url: string, headers?: Record<string, string>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | 流媒体预下载媒体来源url，支持的流媒体格式：HLS、HTTP-FLV、Dash、Https。<br> - 本地m3u8的fd路径。 |
-| headers | Record&lt;string, string&gt; | 否 | 支持流媒体预下载HttpHeader自定义。不传时为网络请求默认的HttpHeader。<br>**起始版本：** 13 |
+| headers | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string&gt; | 否 | 支持流媒体预下载HttpHeader自定义。不传时为网络请求默认的HttpHeader。<br>**起始版本：** 13 |
 
 **返回值：**
 
@@ -62,7 +62,7 @@ Creates a media source for streaming media to be pre-downloaded.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | : Url of the media source. The following streaming media formats are supported: HLS, HTTP-FLV, DASH, and HTTPS. |
-| headers | Record&lt;string, string&gt; | 否 | : Headers attached to network request while player request data. |
+| headers | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string&gt; | 否 | : Headers attached to network request while player request data. |
 
 **返回值：**
 

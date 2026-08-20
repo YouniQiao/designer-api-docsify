@@ -49,8 +49,8 @@ addEvent(event: Event): Promise<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 
 **示例**
 
@@ -108,14 +108,14 @@ addEvent(event: Event, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | Event | 是 | Event对象。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，当添加日程成功时，err为undefined，data为日程id；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数，当添加日程成功时，err为undefined，data为日程id；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 
 **示例**
 
@@ -182,8 +182,8 @@ addEvents(events: Event[]): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 
 **示例**
 
@@ -246,14 +246,14 @@ addEvents(events: Event[], callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | events | Event[] | 是 | Event对象数组。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当添加日程成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当添加日程成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 
 **示例**
 
@@ -383,7 +383,7 @@ deleteEvent(id: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | number | 是 | 日程id，传入的日程id为整数，表示已创建日程的id，是日程的唯一标识符。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当删除日程成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当删除日程成功时，err为undefined；否则为错误对象。 |
 
 **示例**
 
@@ -527,7 +527,7 @@ deleteEvents(ids: number[], callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ids | number[] | 是 | 日程id数组。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当删除多个日程成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当删除多个日程成功时，err为undefined；否则为错误对象。 |
 
 **示例**
 
@@ -702,8 +702,8 @@ getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise<Event[
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 
 **示例**
 
@@ -769,14 +769,14 @@ getEvents(eventFilter: EventFilter, eventKey: (keyof Event)[], callback: AsyncCa
 | --- | --- | --- | --- |
 | eventFilter | [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | 是 | 查询条件。 |
 | eventKey | (keyof Event)[] | 是 | 查询字段。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Event[]&gt; | 是 | 回调函数，当查询日程成功时，err为undefined，data为查询到的Event数组；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Event[]&gt; | 是 | 回调函数，当查询日程成功时，err为undefined，data为查询到的Event数组；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 
 **示例**
 
@@ -855,14 +855,14 @@ getEvents(callback: AsyncCallback<Event[]>):void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Event[]&gt; | 是 | 回调函数，当查询日程成功时，err为undefined，data为查询到的Event数组；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Event[]&gt; | 是 | 回调函数，当查询日程成功时，err为undefined，data为查询到的Event数组；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 
 **示例**
 
@@ -925,8 +925,8 @@ Opens the event edit page.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900005](../errorcode-calendarManager.md#23900005-该日程不支持编辑) | 该日程不支持编辑。 |
 | [23900001](../errorcode-calendarManager.md#23900001-参数值错误) | 参数值错误。 |
+| [23900005](../errorcode-calendarManager.md#23900005-该日程不支持编辑) | 该日程不支持编辑。 |
 
 **示例**
 
@@ -1017,8 +1017,8 @@ queryEventInstances(start: number, end: number, ids?: number[], eventKey?: (keyo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 
 **示例**
 
@@ -1141,7 +1141,7 @@ setConfig(config: CalendarConfig, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | config | [CalendarConfig](arkts-calendar-calendarmanager-calendarconfig-i.md) | 是 | 日历配置信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当设置Config成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当设置Config成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -1268,7 +1268,7 @@ updateEvent(event: Event, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | Event | 是 | Event对象。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当更新日程成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当更新日程成功时，err为undefined；否则为错误对象。 |
 
 **示例**
 

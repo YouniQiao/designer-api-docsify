@@ -20,7 +20,7 @@ import { policy } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [getNetAccessPolicy](arkts-network-policy-getnetaccesspolicy-f.md) | Queries the network access policy of an application (whether cellular or Wi-Fi network access is allowed). You can check the policy by choosing **Settings** &gt; **Mobile network** &gt; **Manage data usage** &gt; **Network access**. This API uses a promise to return the result. |
+| [getNetAccessPolicy](arkts-network-policy-getnetaccesspolicy-f.md) | Queries the network access policy of an application (whether cellular or Wi-Fi network access is allowed). You can check the policy by choosing **Settings**  > **Mobile network** > **Manage data usage** > **Network access**. This API uses a promise to return the result. |
 | [showAppNetPolicySettings](arkts-network-policy-showappnetpolicysettings-f.md) | Sets whether the current application can connect to the Wi-Fi or cellular network. You can call this API to open the network access settings page of the current application and set the network access permission of the application. This API uses a promise to return the result. |
 
 <!--Del-->

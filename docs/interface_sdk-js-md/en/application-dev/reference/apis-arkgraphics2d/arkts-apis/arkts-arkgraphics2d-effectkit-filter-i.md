@@ -20,7 +20,11 @@ import { effectKit } from '@kit.ArkGraphics2D';
 blur(radius: double): Filter
 ```
 
-Adds the blur effect to the effect chain and returns the instance of the chain. The shader tile mode uses DECAL. To specify the tile mode, use the blur(radius: double, tileMode: TileMode) API. It is commonly used in scenarios such as background blurring, privacy information masking, frosted glass background effect, and pop-up window background blur. &gt; **NOTE：**&gt; &gt; This API provides the blur effect for static images. To provide the real-time blur effect for components, use dynamic blur.
+Adds the blur effect to the effect chain and returns the instance of the chain. The shader tile mode uses DECAL. To specify the tile mode, use the blur(radius: double, tileMode: TileMode) API. It is commonly used in scenarios such as background blurring, privacy information masking, frosted glass background effect, and pop-up window background blur.
+
+> **NOTE：**
+> 
+> This API provides the blur effect for static images. To provide the real-time blur effect for components, use dynamic blur.
 
 **Since:** 23
 
@@ -113,7 +117,11 @@ struct Index {
 blur(radius: double, tileMode: TileMode): Filter
 ```
 
-Adds the blur effect to the effect chain and returns the instance of the chain. It supports selecting the shader effect tile mode. It is commonly used in scenarios such as background blurring, privacy information masking, frosted glass background effect, and pop-up window background blur. &gt; **NOTE：**&gt; &gt; This API provides the blur effect for static images. To provide the real-time blur effect for components, use dynamic blur.
+Adds the blur effect to the effect chain and returns the instance of the chain. It supports selecting the shader effect tile mode. It is commonly used in scenarios such as background blurring, privacy information masking, frosted glass background effect, and pop-up window background blur.
+
+> **NOTE：**
+> 
+> This API provides the blur effect for static images. To provide the real-time blur effect for components, use dynamic blur.
 
 **Since:** 23
 
@@ -296,7 +304,11 @@ struct Index {
 getEffectPixelMap(): Promise<image.PixelMap>
 ```
 
-Obtains image.PixelMap of the source image to which the effect chain has been added. CPU rendering is used by default. This API uses a promise to return the result. To specify the rendering mode, use the getEffectPixelMap(useCpuRender: boolean) API. It is commonly used in scenarios where the processed image needs to be saved or displayed. &gt; **NOTE：**&gt; &gt; This method uses CPU rendering by default. The shader tile mode supports only DECAL, and other modes (CLAMP, REPEAT, MIRROR) are not supported. To use GPU rendering or learn about the impact of rendering modes on TileMode, see TileMode and getEffectPixelMap(useCpuRender: boolean).
+Obtains image.PixelMap of the source image to which the effect chain has been added. CPU rendering is used by default. This API uses a promise to return the result. To specify the rendering mode, use the getEffectPixelMap(useCpuRender: boolean) API. It is commonly used in scenarios where the processed image needs to be saved or displayed.
+
+> **NOTE：**
+> 
+> This method uses CPU rendering by default. The shader tile mode supports only DECAL, and other modes (CLAMP, REPEAT, MIRROR) are not supported. To use GPU rendering or learn about the impact of rendering modes on TileMode, see TileMode and getEffectPixelMap(useCpuRender: boolean).
 
 **Since:** 23
 
@@ -394,7 +406,11 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getPixelMap(): image.PixelMap
 ```
 
-Obtains image.PixelMap of the source image to which the effect chain has been added. It is commonly used in scenarios where the processed image needs to be saved or displayed. &gt; **NOTE：**&gt; &gt; This API is supported since API version 9 and deprecated since API version 11. Use getEffectPixelMap instead.
+Obtains image.PixelMap of the source image to which the effect chain has been added. It is commonly used in scenarios where the processed image needs to be saved or displayed.
+
+> **NOTE：**
+> 
+> This API is supported since API version 9 and deprecated since API version 11. Use getEffectPixelMap instead.
 
 **Since:** 9
 

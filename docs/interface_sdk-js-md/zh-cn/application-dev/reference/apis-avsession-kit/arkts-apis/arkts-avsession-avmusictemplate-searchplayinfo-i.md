@@ -2,6 +2,8 @@
 
 搜播信息的定义。
 
+@interface SearchPlayInfo
+
 **起始版本：** 23
 
 <!--Device-avMusicTemplate-interface SearchPlayInfo--><!--Device-avMusicTemplate-interface SearchPlayInfo-End-->

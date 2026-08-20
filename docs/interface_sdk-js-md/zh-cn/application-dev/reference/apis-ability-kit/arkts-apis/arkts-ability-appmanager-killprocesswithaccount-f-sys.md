@@ -12,7 +12,11 @@ import { appManager } from '@kit.AbilityKit';
 function killProcessWithAccount(bundleName: string, accountId: int): Promise<void>
 ```
 
-终止account进程。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 当accountId为当前用户时，不需要校验ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限。
+终止account进程。使用Promise异步回调。
+
+> **说明：**
+> 
+> 当accountId为当前用户时，不需要校验ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限。
 
 **起始版本：** 23
 
@@ -43,10 +47,10 @@ function killProcessWithAccount(bundleName: string, accountId: int): Promise<voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 **示例**
 
@@ -79,7 +83,11 @@ function killProcessWithAccount(bundleName: string, accountId: int, clearPageSta
     Promise<void>
 ```
 
-终止account进程。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 当accountId为当前用户时，不需要校验ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限。
+终止account进程。使用Promise异步回调。
+
+> **说明：**
+> 
+> 当accountId为当前用户时，不需要校验ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限。
 
 **起始版本：** 23
 
@@ -110,10 +118,10 @@ function killProcessWithAccount(bundleName: string, accountId: int, clearPageSta
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | If the input parameter is not valid parameter. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | If the input parameter is not valid parameter. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 **示例**
 
@@ -147,7 +155,11 @@ try {
 function killProcessWithAccount(bundleName: string, accountId: int, callback: AsyncCallback<void>): void
 ```
 
-终止account进程。使用callback异步回调。 &gt; **说明：** &gt; &gt; 当accountId为当前用户时，不需要校验ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限。
+终止account进程。使用callback异步回调。
+
+> **说明：**
+> 
+> 当accountId为当前用户时，不需要校验ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限。
 
 **起始版本：** 23
 
@@ -167,16 +179,16 @@ function killProcessWithAccount(bundleName: string, accountId: int, callback: As
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
 | accountId | int | 是 | 系统账号的账号ID，详情参考 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以回调方式返回接口运行结果，可进行错误处理或其他自定义处理。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 以回调方式返回接口运行结果，可进行错误处理或其他自定义处理。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 **示例**
 

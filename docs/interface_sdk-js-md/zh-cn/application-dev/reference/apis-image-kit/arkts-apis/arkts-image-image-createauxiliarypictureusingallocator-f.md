@@ -13,7 +13,13 @@ function createAuxiliaryPictureUsingAllocator(auxiliaryPictureInfo: AuxiliaryPic
     allocatorType?: AllocatorType, pixels?: ArrayBuffer): AuxiliaryPicture
 ```
 
-使用指定的内存类型，根据辅助图信息和像素数据创建辅助图对象。 &gt; **说明：** &gt; &gt; - 在处理此接口返回的AuxiliaryPicture时，需要考虑内存中每行像素所占的空间的影响。 &gt; &gt; - 创建的辅助图像会使用输入的像素进行初始化。
+使用指定的内存类型，根据辅助图信息和像素数据创建辅助图对象。
+
+> **说明：**
+> 
+> - 在处理此接口返回的AuxiliaryPicture时，需要考虑内存中每行像素所占的空间的影响。
+> 
+> - 创建的辅助图像会使用输入的像素进行初始化。
 
 **起始版本：** 24
 
@@ -41,8 +47,8 @@ function createAuxiliaryPictureUsingAllocator(auxiliaryPictureInfo: AuxiliaryPic
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter, size.height or size.width is less than or equal to 0. |
 | [7600205](../errorcode-image.md#7600205-不支持的内存格式或像素格式) | Unsupported allocator type, e.g., use shared memory to create a gainmap as only DMA supported hdr metadata. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter, size.height or size.width is less than or equal to 0. |
 | [7600301](../errorcode-image.md#7600301-申请内存失败) | Alloc memory failed. |
 
 **示例**

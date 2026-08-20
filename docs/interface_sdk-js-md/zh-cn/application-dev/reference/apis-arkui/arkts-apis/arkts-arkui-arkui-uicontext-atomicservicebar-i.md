@@ -39,7 +39,7 @@ Get size and position of the bar.
 
 | 类型 | 说明 |
 | --- | --- |
-| [Frame](arkts-arkui-graphics-frame-i.md) | The size and position of bar in vp relative to window. |
+| [Frame](../../apis-default/arkts-apis/arkts-graphics-frame-i.md) | The size and position of bar in vp relative to window. |
 
 ## onBarRectChange
 
@@ -63,7 +63,7 @@ onBarRectChange(callback: Callback<Frame>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Frame](arkts-arkui-graphics-frame-i.md)&gt; | 是 | 回调函数的参数为Frame。当传入的callback为undefined时表示取消监听appbar组件的大小变化。 回调函数触发时，回调函数的参数不可能为undefined或者null。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Frame](../../apis-default/arkts-apis/arkts-graphics-frame-i.md)&gt; | 是 | 回调函数的参数为Frame。当传入的callback为undefined时表示取消监听appbar组件的大小变化。 回调函数触发时，回调函数的参数不可能为undefined或者null。 |
 
 ## setBackgroundColor
 
@@ -87,7 +87,7 @@ Set the background color of the bar.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [Nullable](../../apis-na/arkts-apis/arkts-na-nullable-t.md)&lt;[Color](../../apis-na/arkts-apis/arkts-na-enums-color-e.md) \| number \| string&gt; | 是 | the color to set, undefined indicates using default. |
+| color | [Nullable](../../apis-default/arkts-apis/arkts-nullable-t.md)&lt;[Color](../../apis-default/arkts-apis/arkts-enums-color-e.md) \| number \| string&gt; | 是 | the color to set, undefined indicates using default. |
 
 ## setIconColor
 
@@ -111,7 +111,7 @@ Set the color of the icon on the bar.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [Nullable](../../apis-na/arkts-apis/arkts-na-nullable-t.md)&lt;[Color](../../apis-na/arkts-apis/arkts-na-enums-color-e.md) \| number \| string&gt; | 是 | the color to set to icon, undefined indicates using default. |
+| color | [Nullable](../../apis-default/arkts-apis/arkts-nullable-t.md)&lt;[Color](../../apis-default/arkts-apis/arkts-enums-color-e.md) \| number \| string&gt; | 是 | the color to set to icon, undefined indicates using default. |
 
 ## setTitleContent
 
@@ -159,7 +159,7 @@ Set the font style of the bar's title.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| font | [FontStyle](../../apis-na/arkts-apis/arkts-na-enums-fontstyle-e.md) | 是 | the font style of the bar's title. |
+| font | [FontStyle](../../apis-default/arkts-apis/arkts-enums-fontstyle-e.md) | 是 | the font style of the bar's title. |
 
 ## setVisible
 

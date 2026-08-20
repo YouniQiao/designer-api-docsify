@@ -41,8 +41,8 @@ Listen on component event once, additional listening options can be set.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## onceDialogShow
 
@@ -122,8 +122,8 @@ Listen on window change once, additional listening options can be set.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## once_componentEventOccur('componentEventOccur')
 
@@ -154,8 +154,8 @@ Starts listening for component operation events of the specified type with exten
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 **Examples**
 
@@ -309,8 +309,8 @@ Starts listening for window change events of the specified type with extended co
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 **Examples**
 

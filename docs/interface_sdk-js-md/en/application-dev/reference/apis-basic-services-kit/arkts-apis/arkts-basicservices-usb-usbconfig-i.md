@@ -1,4 +1,4 @@
-# USBConfig(USB Manager)
+# USBConfig
 
 Represents the USB configuration. One [USBDevice](arkts-basicservices-usb-usbdevice-i.md) can contain multiple **USBConfig** instances.
 

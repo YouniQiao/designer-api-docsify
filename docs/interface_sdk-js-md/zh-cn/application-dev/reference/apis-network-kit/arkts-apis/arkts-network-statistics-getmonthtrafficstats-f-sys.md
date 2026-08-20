@@ -42,8 +42,8 @@ function getMonthTrafficStats(simId: int): Promise<long>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Nonsystem applications use system APIs. |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
 

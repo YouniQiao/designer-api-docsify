@@ -2,6 +2,8 @@
 
 Defines the localized padding property.
 
+@interface LocalizedPadding
+
 **Since:** 12
 
 <!--Device-unnamed-declare interface LocalizedPadding--><!--Device-unnamed-declare interface LocalizedPadding-End-->

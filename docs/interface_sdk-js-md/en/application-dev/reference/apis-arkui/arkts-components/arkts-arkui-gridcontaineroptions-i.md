@@ -2,6 +2,8 @@
 
 Defines the options of GridContainer.
 
+@interface GridContainerOptions
+
 **Since:** 7
 
 **Deprecated since:** 9

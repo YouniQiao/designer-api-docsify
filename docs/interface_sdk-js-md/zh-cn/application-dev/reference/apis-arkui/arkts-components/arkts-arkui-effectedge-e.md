@@ -2,6 +2,8 @@
 
 表示当前边缘效果要生效的边缘。
 
+@enum { number }
+
 **起始版本：** 18
 
 <!--Device-unnamed-declare enum EffectEdge--><!--Device-unnamed-declare enum EffectEdge-End-->

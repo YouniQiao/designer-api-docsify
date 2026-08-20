@@ -70,7 +70,7 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 | [CmsRecipientInfo](arkts-devicecertificate-cert-cmsrecipientinfo-i.md) | CMS封装数据的接收者信息。 |
 | [CmsSignerConfig](arkts-devicecertificate-cert-cmssignerconfig-i.md) | 表示Cms签名者的配置选项。 |
 | [CmsVerificationConfig](arkts-devicecertificate-cert-cmsverificationconfig-i.md) | CMS验签的配置。 |
-| [CsrAttribute](arkts-devicecertificate-cert-csrattribute-i.md) | 定义CSR属性表示。 <br>CSR属性字段，当前仅支持字符串类型的属性字段，属性值添加到CSR中编码为utf-8。常见的type为challengePassword。 |
+| [CsrAttribute](arkts-devicecertificate-cert-csrattribute-i.md) | 定义CSR属性表示。 |
 | [CsrGenerationConfig](arkts-devicecertificate-cert-csrgenerationconfig-i.md) | 用于生成CSR的配置参数，包含主体名称、扩展、摘要算法、输出格式等。 |
 | [DataArray](arkts-devicecertificate-cert-dataarray-i.md) | 数据数组的列表。 |
 | [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 二进制数据的封装接口，核心字段data为Uint8Array类型。 |

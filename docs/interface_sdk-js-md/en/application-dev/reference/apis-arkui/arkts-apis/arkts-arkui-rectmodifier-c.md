@@ -2,35 +2,17 @@
 
 Defines Rect Modifier
 
-**Inheritance/Implementation:** RectModifier extends RectAttribute and implements AttributeModifier<RectAttribute>
+@implements RectAttribute, AttributeModifier&lt;RectAttribute&gt;
 
-**Since:** 20
+**Inheritance/Implementation:** RectModifier implements RectAttribute, AttributeModifier<RectAttribute>
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-export declare class RectModifier--><!--Device-unnamed-export declare class RectModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## applyNormalAttribute
-
-```TypeScript
-applyNormalAttribute?(instance: RectAttribute): void
-```
-
-Defines the normal update attribute function.
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RectModifier-applyNormalAttribute?(instance: RectAttribute): void--><!--Device-RectModifier-applyNormalAttribute?(instance: RectAttribute): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| instance | RectAttribute | Yes |  |
 

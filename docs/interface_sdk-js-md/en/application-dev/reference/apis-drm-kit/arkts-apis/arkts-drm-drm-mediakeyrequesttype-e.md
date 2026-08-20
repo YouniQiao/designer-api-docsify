@@ -1,4 +1,4 @@
-# MediaKeyRequestType(Defines the DRM capability.)
+# MediaKeyRequestType
 
 Enumerates the types of media key requests.
 

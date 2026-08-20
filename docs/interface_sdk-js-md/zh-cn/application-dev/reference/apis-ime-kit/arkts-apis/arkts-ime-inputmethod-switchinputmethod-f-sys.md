@@ -17,6 +17,8 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function switchInputMethod(bundleName: string, subtypeId?: string): Promise<void>
 ```
 
+@brief 切换输入法，使用promise异步回调。
+
 **起始版本：** 23
 
 **需要权限：** ohos.permission.CONNECT_IME_ABILITY
@@ -44,10 +46,10 @@ function switchInputMethod(bundleName: string, subtypeId?: string): Promise<void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800005](../errorcode-inputmethod-framework.md#12800005-配置持久化失败) | configuration persistence error. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | permissions check fails. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800005](../errorcode-inputmethod-framework.md#12800005-配置持久化失败) | configuration persistence error. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 **示例**

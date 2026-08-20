@@ -50,12 +50,12 @@ Calls the method of a server.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| 36100044 | NearLink standard UUID not allowed. |
+| 36100003 | NearLink disabled. |
 | 36100043 | Invalid UUID. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100099 | Operation failed. |
 
 ## offEventNotify
 
@@ -87,7 +87,9 @@ Unsubscribes from event notifications.
 onEventNotify(callback: Callback<Event>): void
 ```
 
-Subscribes to event notifications. This event is accessible only to system applications that granted the ohos.permission.NEARLINK_ACCESS permission.
+Subscribes to event notifications.
+
+This event is accessible only to system applications that granted the ohos.permission.NEARLINK_ACCESS permission.
 
 **Since:** 26.0.0
 
@@ -141,12 +143,12 @@ Reads the descriptor of a server.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| 36100044 | NearLink standard UUID not allowed. |
+| 36100003 | NearLink disabled. |
 | 36100043 | Invalid UUID in descriptor. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100099 | Operation failed. |
 
 ## setPropertyIndication
 
@@ -185,13 +187,13 @@ Enables or disables indication of a property when value changed.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
-| 36100030 | The connection is not established. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| 36100044 | NearLink standard UUID not allowed. |
+| 36100003 | NearLink disabled. |
+| 36100030 | The connection is not established. |
 | 36100043 | Invalid UUID in property. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100099 | Operation failed. |
 
 ## writeDescriptor
 
@@ -199,7 +201,9 @@ Enables or disables indication of a property when value changed.
 writeDescriptor(descriptor: PropertyDescriptor): Promise<void>
 ```
 
-Writes the descriptor of a server. This method does not support writing client property configuration descriptors. To write client property configuration descriptors, call [setPropertyNotification](arkts-connectivity-ssap-client-i.md#setpropertynotification) or [setPropertyIndication](#setpropertyindication) instead.
+Writes the descriptor of a server.
+
+This method does not support writing client property configuration descriptors. To write client property configuration descriptors, call [setPropertyNotification](arkts-connectivity-ssap-client-i.md#setpropertynotification) or [setPropertyIndication](#setpropertyindication) instead.
 
 **Since:** 26.0.0
 
@@ -229,10 +233,10 @@ Writes the descriptor of a server. This method does not support writing client p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| 36100044 | NearLink standard UUID not allowed. |
+| 36100003 | NearLink disabled. |
 | 36100043 | Invalid UUID in descriptor. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100099 | Operation failed. |
 

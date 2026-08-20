@@ -21,7 +21,9 @@ import { audioHaptic } from '@kit.AudioKit';
 capturerFlags: int
 ```
 
-录制流行为标志。 设置为0即可。
+录制流行为标志。
+
+设置为0即可。
 
 **类型：** int
 

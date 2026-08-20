@@ -2,6 +2,8 @@
 
 This indicates that the eSIM card performs the profile management operation synchronously. Includes methods defined by GSMA Spec (SGP.22) and customized methods.
 
+@namespace eSIM
+
 **Since:** 23
 
 <!--Device-unnamed-declare namespace eSIM--><!--Device-unnamed-declare namespace eSIM-End-->

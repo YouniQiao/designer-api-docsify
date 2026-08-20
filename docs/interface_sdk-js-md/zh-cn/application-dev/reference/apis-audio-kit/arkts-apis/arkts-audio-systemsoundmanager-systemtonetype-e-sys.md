@@ -2,6 +2,8 @@
 
 枚举，系统铃声类型。
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-systemSoundManager-enum SystemToneType--><!--Device-systemSoundManager-enum SystemToneType-End-->

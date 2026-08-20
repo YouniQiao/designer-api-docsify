@@ -1,6 +1,6 @@
 # DialogButtonStyle
 
-The Button Style of dialog,
+The Button Style of dialog, @enum { number }
 
 **起始版本：** 11
 

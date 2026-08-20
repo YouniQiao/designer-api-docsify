@@ -23,7 +23,11 @@ import { advertising } from '@kit.AdsKit';
 adContentClassification?: string
 ```
 
-Sets the maximum ad content rating. W: ages 3+, all audiences. PI: ages 7+, parental guidance. J: ages 12+, teen. A: ages 16+/18+, adult audience. If not set, the business logic prevails.
+Sets the maximum ad content rating.
+
+W: ages 3+, all audiences. PI: ages 7+, parental guidance. J: ages 12+, teen. A: ages 16+/18+, adult audience.
+
+If not set, the business logic prevails.
 
 **Type:** string
 
@@ -41,7 +45,11 @@ Sets the maximum ad content rating. W: ages 3+, all audiences. PI: ages 7+, pare
 nonPersonalizedAd?: number
 ```
 
-Sets whether to request only non-personalized ads. 0: Request both personalized and non-personalized ads. 1: Request only non-personalized ads. If not set, the business logic prevails.
+Sets whether to request only non-personalized ads.
+
+0: Request both personalized and non-personalized ads. 1: Request only non-personalized ads.
+
+If not set, the business logic prevails.
 
 **Type:** number
 
@@ -59,7 +67,11 @@ Sets whether to request only non-personalized ads. 0: Request both personalized 
 tagForChildProtection?: number
 ```
 
-Whether you want your content to be treated as child-directed for purposes of COPPA. -1: Default value, unspecified. 0: No. 1: Yes. The default value is -1.
+Whether you want your content to be treated as child-directed for purposes of COPPA.
+
+-1: Default value, unspecified. 0: No. 1: Yes.
+
+The default value is -1.
 
 **Type:** number
 

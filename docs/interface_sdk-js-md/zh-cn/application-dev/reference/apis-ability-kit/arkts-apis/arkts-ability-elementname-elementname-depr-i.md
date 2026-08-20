@@ -1,6 +1,10 @@
 # ElementName
 
-ElementName信息，通过接口 Context.getElementName获取。 &gt; **说明：** &gt; &gt; 从API version 9开始，该模块不再维护，建议使用[bundleManager-ElementName](#elementname)替代。
+ElementName信息，通过接口 Context.getElementName获取。
+
+> **说明：**
+> 
+> 从API version 9开始，该模块不再维护，建议使用[bundleManager-ElementName](#elementname)替代。
 
 **起始版本：** 7
 

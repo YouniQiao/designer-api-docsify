@@ -1,5 +1,7 @@
 # Range
 
+@brief 选中的文本范围。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-export interface Range--><!--Device-inputMethodEngine-export interface Range-End-->
@@ -18,6 +20,8 @@ import { inputMethodEngine } from '@kit.IMEKit';
 end: int
 ```
 
+@brief 选中文本的末字符在编辑框的索引值。
+
 **类型：** int
 
 **起始版本：** 23
@@ -31,6 +35,8 @@ end: int
 ```TypeScript
 start: int
 ```
+
+@brief 选中文本的首字符在编辑框的索引值。
 
 **类型：** int
 

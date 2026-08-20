@@ -1,6 +1,11 @@
 # UsedScene
 
-> **说明：** &gt; &gt; 从API version 7开始支持，从API version 9开始废弃，建议使用[UsedScene](#usedscene)替代。 描述权限使用的场景和时机。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[UsedScene](#usedscene)替代。
+
+描述权限使用的场景和时机。
 
 **起始版本：** 7
 

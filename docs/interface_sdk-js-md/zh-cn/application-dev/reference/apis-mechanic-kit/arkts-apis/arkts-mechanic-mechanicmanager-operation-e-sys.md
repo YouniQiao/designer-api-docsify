@@ -2,6 +2,8 @@
 
 用户操作
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-mechanicManager-export enum Operation--><!--Device-mechanicManager-export enum Operation-End-->

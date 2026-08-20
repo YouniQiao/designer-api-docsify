@@ -209,7 +209,11 @@ udp.close().then(() => {
 getLocalAddress(): Promise<NetAddress>
 ```
 
-Obtains the local socket address of a **UDPSocket** connection. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **bind** is successfully called.
+Obtains the local socket address of a **UDPSocket** connection. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **bind** is successfully called.
 
 **Since:** 12
 
@@ -261,7 +265,15 @@ udp.bind(bindAddr).then(() => {
 getSocketFd(): Promise<int>
 ```
 
-Obtains the UDPSocket file descriptor. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - This API can be called only after &gt; [bind](#bind) is successfully called. &gt; &gt; - This API returns **-1** in abnormal cases such as bind exceptions or socket closed (for example, after close &gt; is called). &gt; &gt; - The lifecycle of the file descriptor is managed by the system. The application can use the &gt; [close](#close) method to close the socket connection, &gt; instead of directly operating the file descriptor.
+Obtains the UDPSocket file descriptor. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - This API can be called only after &gt; [bind](#bind) is successfully called.
+> 
+> - This API returns **-1** in abnormal cases such as bind exceptions or socket closed (for example, after close &gt; is called).
+> 
+> - The lifecycle of the file descriptor is managed by the system. The application can use the &gt; [close](#close) method to close the socket connection, &gt; instead of directly operating the file descriptor.
 
 **Since:** 23
 
@@ -313,7 +325,11 @@ udp.bind(bindAddr)
 getState(callback: AsyncCallback<SocketStateBase>): void
 ```
 
-Obtains the status of the UDP socket connection. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **bind** is successfully called.
+Obtains the status of the UDP socket connection. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **bind** is successfully called.
 
 **Since:** 7
 
@@ -368,7 +384,11 @@ udp.bind(bindAddr, (err: BusinessError) => {
 getState(): Promise<SocketStateBase>
 ```
 
-Obtains the status of the UDP socket connection. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **bind** is successfully called.
+Obtains the status of the UDP socket connection. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **bind** is successfully called.
 
 **Since:** 7
 
@@ -738,7 +758,9 @@ udp.on('message', (value: socket.SocketMessageInfo) => {
 send(options: UDPSendOptions, callback: AsyncCallback<void>): void
 ```
 
-Sends data over a UDP socket connection. This API uses an asynchronous callback to return the result. Before sending data, call [UDPSocket.bind()](#bind) to bind the IP address and port. Call the API in the worker thread or taskpool thread as this operation is time-consuming.
+Sends data over a UDP socket connection. This API uses an asynchronous callback to return the result.
+
+Before sending data, call [UDPSocket.bind()](#bind) to bind the IP address and port. Call the API in the worker thread or taskpool thread as this operation is time-consuming.
 
 **Since:** 7
 
@@ -760,15 +782,15 @@ Sends data over a UDP socket connection. This API uses an asynchronous callback 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2301207](../errorcode-net-socket.md#2301207-invalid-user-name-or-password-for-socks5-authentication) | Socks5 username or password is invalid.<br>**Applicable version:** 18 and later |
-| [2301206](../errorcode-net-socket.md#2301206-failed-to-connect-to-the-proxy-server-via-socks5) | Socks5 failed to connect to the proxy server.<br>**Applicable version:** 18 and later |
-| [2301211](../errorcode-net-socket.md#2301211-failed-to-receive-messages-via-socks5) | Socks5 failed to receive the message.<br>**Applicable version:** 18 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2301210](../errorcode-net-socket.md#2301210-failed-to-send-messages-via-socks5) | Socks5 failed to send the message.<br>**Applicable version:** 18 and later |
-| [2301209](../errorcode-net-socket.md#2301209-authentication-mode-negotiation-failed-for-socks5) | Socks5 failed to negotiate the authentication method.<br>**Applicable version:** 18 and later |
+| [2301206](../errorcode-net-socket.md#2301206-failed-to-connect-to-the-proxy-server-via-socks5) | Socks5 failed to connect to the proxy server.<br>**Applicable version:** 18 and later |
+| [2301207](../errorcode-net-socket.md#2301207-invalid-user-name-or-password-for-socks5-authentication) | Socks5 username or password is invalid.<br>**Applicable version:** 18 and later |
 | [2301208](../errorcode-net-socket.md#2301208-failed-to-connect-to-the-remote-server-via-socks5) | Socks5 failed to connect to the remote server.<br>**Applicable version:** 18 and later |
-| [2301213](../errorcode-net-socket.md#2301213-failed-to-deserialize-messages-for-socks5) | Socks5 deserialization error.<br>**Applicable version:** 18 and later |
+| [2301209](../errorcode-net-socket.md#2301209-authentication-mode-negotiation-failed-for-socks5) | Socks5 failed to negotiate the authentication method.<br>**Applicable version:** 18 and later |
+| [2301210](../errorcode-net-socket.md#2301210-failed-to-send-messages-via-socks5) | Socks5 failed to send the message.<br>**Applicable version:** 18 and later |
+| [2301211](../errorcode-net-socket.md#2301211-failed-to-receive-messages-via-socks5) | Socks5 failed to receive the message.<br>**Applicable version:** 18 and later |
 | [2301212](../errorcode-net-socket.md#2301212-failed-to-serialize-messages-for-socks5) | Socks5 serialization error.<br>**Applicable version:** 18 and later |
+| [2301213](../errorcode-net-socket.md#2301213-failed-to-deserialize-messages-for-socks5) | Socks5 deserialization error.<br>**Applicable version:** 18 and later |
 
 **Examples**
 
@@ -857,7 +879,9 @@ udp.send(sendOptions, (err: BusinessError) => {
 send(options: UDPSendOptions): Promise<void>
 ```
 
-Sends data over a UDP socket connection. This API uses a promise to return the result. Before sending data, call [UDPSocket.bind()](#bind) to bind the IP address and port. Call the API in the worker thread or taskpool thread as this operation is time-consuming.
+Sends data over a UDP socket connection. This API uses a promise to return the result.
+
+Before sending data, call [UDPSocket.bind()](#bind) to bind the IP address and port. Call the API in the worker thread or taskpool thread as this operation is time-consuming.
 
 **Since:** 7
 
@@ -884,15 +908,15 @@ Sends data over a UDP socket connection. This API uses a promise to return the r
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2301207](../errorcode-net-socket.md#2301207-invalid-user-name-or-password-for-socks5-authentication) | Socks5 username or password is invalid.<br>**Applicable version:** 18 and later |
-| [2301206](../errorcode-net-socket.md#2301206-failed-to-connect-to-the-proxy-server-via-socks5) | Socks5 failed to connect to the proxy server.<br>**Applicable version:** 18 and later |
-| [2301211](../errorcode-net-socket.md#2301211-failed-to-receive-messages-via-socks5) | Socks5 failed to receive the message.<br>**Applicable version:** 18 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2301210](../errorcode-net-socket.md#2301210-failed-to-send-messages-via-socks5) | Socks5 failed to send the message.<br>**Applicable version:** 18 and later |
-| [2301209](../errorcode-net-socket.md#2301209-authentication-mode-negotiation-failed-for-socks5) | Socks5 failed to negotiate the authentication method.<br>**Applicable version:** 18 and later |
+| [2301206](../errorcode-net-socket.md#2301206-failed-to-connect-to-the-proxy-server-via-socks5) | Socks5 failed to connect to the proxy server.<br>**Applicable version:** 18 and later |
+| [2301207](../errorcode-net-socket.md#2301207-invalid-user-name-or-password-for-socks5-authentication) | Socks5 username or password is invalid.<br>**Applicable version:** 18 and later |
 | [2301208](../errorcode-net-socket.md#2301208-failed-to-connect-to-the-remote-server-via-socks5) | Socks5 failed to connect to the remote server.<br>**Applicable version:** 18 and later |
-| [2301213](../errorcode-net-socket.md#2301213-failed-to-deserialize-messages-for-socks5) | Socks5 deserialization error.<br>**Applicable version:** 18 and later |
+| [2301209](../errorcode-net-socket.md#2301209-authentication-mode-negotiation-failed-for-socks5) | Socks5 failed to negotiate the authentication method.<br>**Applicable version:** 18 and later |
+| [2301210](../errorcode-net-socket.md#2301210-failed-to-send-messages-via-socks5) | Socks5 failed to send the message.<br>**Applicable version:** 18 and later |
+| [2301211](../errorcode-net-socket.md#2301211-failed-to-receive-messages-via-socks5) | Socks5 failed to receive the message.<br>**Applicable version:** 18 and later |
 | [2301212](../errorcode-net-socket.md#2301212-failed-to-serialize-messages-for-socks5) | Socks5 serialization error.<br>**Applicable version:** 18 and later |
+| [2301213](../errorcode-net-socket.md#2301213-failed-to-deserialize-messages-for-socks5) | Socks5 deserialization error.<br>**Applicable version:** 18 and later |
 
 **Examples**
 
@@ -975,7 +999,11 @@ udp.send(sendOptions).then(() => {
 setExtraOptions(options: UDPExtraOptions, callback: AsyncCallback<void>): void
 ```
 
-Sets other properties of the **UDPSocket** object. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **bind** is successfully called.
+Sets other properties of the **UDPSocket** object. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **bind** is successfully called.
 
 **Since:** 7
 
@@ -1040,7 +1068,11 @@ udp.bind(bindAddr, (err: BusinessError) => {
 setExtraOptions(options: UDPExtraOptions): Promise<void>
 ```
 
-Sets other properties of the **UDPSocket** object. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **bind** is successfully called.
+Sets other properties of the **UDPSocket** object. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **bind** is successfully called.
 
 **Since:** 7
 

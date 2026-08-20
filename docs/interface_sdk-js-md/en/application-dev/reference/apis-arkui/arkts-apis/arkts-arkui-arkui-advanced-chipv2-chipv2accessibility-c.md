@@ -36,7 +36,7 @@ The constructor of ChipV2Accessibility
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ChipV2AccessibilityConfig](arkts-arkui-arkui-advanced-chipv2-chipv2accessibilityconfig-i.md) | Yes | config of accessibility. config is mandatory. |
+| config | [ChipV2AccessibilityConfig](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2accessibilityconfig-i.md) | Yes | config of accessibility. config is mandatory. |
 
 ## accessibilityDescription
 

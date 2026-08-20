@@ -20,7 +20,11 @@ import { formInfo } from '@kit.FormKit';
 readonly enableBlurBackground?: boolean
 ```
 
-卡片是否使用模糊背板。 - true：开启模糊背板。 - false：关闭模糊背板。
+卡片是否使用模糊背板。
+
+- true：开启模糊背板。
+
+- false：关闭模糊背板。
 
 **类型：** boolean
 
@@ -56,7 +60,9 @@ readonly funInteractionParams?: FunInteractionParams
 readonly groupId?: string
 ```
 
-表示一组卡片的共同id。多张卡片的groupId相同且resizable为true时，多张卡片的supportDimensions配置共享。例如，卡片A和B的groupId相同且resizable均为true，则卡片A可以调整 为卡片A和B的supportDimensions配置中的任意尺寸。 推荐多张卡片功能相同且需要调整卡片尺寸时配置。
+表示一组卡片的共同id。多张卡片的groupId相同且resizable为true时，多张卡片的supportDimensions配置共享。例如，卡片A和B的groupId相同且resizable均为true，则卡片A可以调整 为卡片A和B的supportDimensions配置中的任意尺寸。
+
+推荐多张卡片功能相同且需要调整卡片尺寸时配置。
 
 **类型：** string
 
@@ -74,7 +80,11 @@ readonly groupId?: string
 isFontScaleFollowSystem?: boolean
 ```
 
-卡片的字体缩放是否跟随系统，默认值为true。 - true：字体缩放跟随系统。 - false：字体缩放不会跟随系统。
+卡片的字体缩放是否跟随系统，默认值为true。
+
+- true：字体缩放跟随系统。
+
+- false：字体缩放不会跟随系统。
 
 **类型：** boolean
 
@@ -94,7 +104,11 @@ isFontScaleFollowSystem?: boolean
 readonly isPrivacySensitive?: boolean
 ```
 
-卡片是否是隐私敏感卡片。 - true：是隐私敏感卡片。 - false：不是隐私敏感卡片。
+卡片是否是隐私敏感卡片。
+
+- true：是隐私敏感卡片。
+
+- false：不是隐私敏感卡片。
 
 **类型：** boolean
 
@@ -114,7 +128,11 @@ readonly isPrivacySensitive?: boolean
 readonly isStandbyAdapted?: boolean
 ```
 
-卡片是否已适配灵动显示规则。 - true：已适配灵动显示。 - false：未适配灵动显示。
+卡片是否已适配灵动显示规则。
+
+- true：已适配灵动显示。
+
+- false：未适配灵动显示。
 
 **类型：** boolean
 
@@ -134,7 +152,11 @@ readonly isStandbyAdapted?: boolean
 readonly isStandbySupported?: boolean
 ```
 
-卡片是否支持在灵动显示界面展示。 - true：支持灵动显示。 - false：不支持灵动显示。
+卡片是否支持在灵动显示界面展示。
+
+- true：支持灵动显示。
+
+- false：不支持灵动显示。
 
 **类型：** boolean
 
@@ -154,7 +176,11 @@ readonly isStandbySupported?: boolean
 readonly isTemplateForm?: boolean
 ```
 
-表示卡片是否是模板卡。 - true：是模板卡。 - false：不是模板卡。
+表示卡片是否是模板卡。
+
+- true：是模板卡。
+
+- false：不是模板卡。
 
 **类型：** boolean
 
@@ -172,7 +198,9 @@ readonly isTemplateForm?: boolean
 readonly previewImages?: Array<int>
 ```
 
-卡片预览图资源ID。 **说明：** 值为正整数的数组。
+卡片预览图资源ID。
+
+**说明：** 值为正整数的数组。
 
 **类型：** Array&lt;int&gt;
 
@@ -210,7 +238,11 @@ readonly renderingMode?: RenderingMode
 readonly resizable?: boolean
 ```
 
-表示是否可以拖拽卡片调整大小。调整值必须在该卡片或者同groupId卡片的supportDimensions配置列表中。 - true：可以调整大小。 - false：不可以调整大小。
+表示是否可以拖拽卡片调整大小。调整值必须在该卡片或者同groupId卡片的supportDimensions配置列表中。
+
+- true：可以调整大小。
+
+- false：不可以调整大小。
 
 **类型：** boolean
 

@@ -2,6 +2,8 @@
 
 CaretOffset info.
 
+@interface CaretOffset
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare interface CaretOffset--><!--Device-unnamed-declare interface CaretOffset-End-->

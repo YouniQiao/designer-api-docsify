@@ -12,7 +12,9 @@ import { sendablePreferences } from '@kit.ArkData';
 function deletePreferences(context: Context, options: Options): Promise<void>
 ```
 
-从缓存中删除指定的Preferences实例，若Preferences实例有对应的持久化文件，则同时删除其持久化文件。使用Promise异步回调。 调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题。
+从缓存中删除指定的Preferences实例，若Preferences实例有对应的持久化文件，则同时删除其持久化文件。使用Promise异步回调。
+
+调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题。
 
 **起始版本：** 12
 
@@ -41,10 +43,10 @@ function deletePreferences(context: Context, options: Options): Promise<void>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [15501001](../errorcode-preferences.md#15501001-上下文环境非stage模型) | The operations is supported in stage mode only. |
-| [15500010](../errorcode-preferences.md#15500010-删除用户首选项持久化文件失败) | Failed to delete the user preferences persistence file. |
-| [15501002](../errorcode-preferences.md#15501002-options中传入的datagroupid参数非法) | Invalid dataGroupId. |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [15500010](../errorcode-preferences.md#15500010-删除用户首选项持久化文件失败) | Failed to delete the user preferences persistence file. |
+| [15501001](../errorcode-preferences.md#15501001-上下文环境非stage模型) | The operations is supported in stage mode only. |
+| [15501002](../errorcode-preferences.md#15501002-options中传入的datagroupid参数非法) | Invalid dataGroupId. |
 
 **示例**
 

@@ -33,8 +33,8 @@ Obtain multiple Wi-Fi connection information when Wi-Fi linked in MLO(Muti-Link 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 | [2501001](../errorcode-wifi.md#2501001-sta-disabled) | Wi-Fi STA disabled. |
 

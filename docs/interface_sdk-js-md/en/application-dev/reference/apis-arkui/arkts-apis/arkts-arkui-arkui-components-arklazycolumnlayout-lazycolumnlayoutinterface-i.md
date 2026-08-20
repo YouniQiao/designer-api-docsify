@@ -2,6 +2,8 @@
 
 Defines the lazy column layout component.
 
+@interface LazyColumnLayoutInterface
+
 **Since:** 26.0.0
 
 <!--Device-unnamed-export interface LazyColumnLayoutInterface--><!--Device-unnamed-export interface LazyColumnLayoutInterface-End-->
@@ -36,5 +38,5 @@ Construct the lazy column layout attribute.
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+| [LazyColumnLayoutAttribute](../../apis-default/arkts-apis/arkts-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
 

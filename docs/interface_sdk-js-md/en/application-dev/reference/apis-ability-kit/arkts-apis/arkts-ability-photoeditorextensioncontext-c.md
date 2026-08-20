@@ -2,6 +2,8 @@
 
 The context of Photo Editor extension. It allows access to PhotoEditorExtension-specific resources.
 
+@extends ExtensionContext
+
 **Inheritance/Implementation:** PhotoEditorExtensionContext extends ExtensionContext
 
 **Since:** 23
@@ -41,10 +43,10 @@ Save image data by image pixmap.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [29600003](../errorcode-ability.md#29600003-image-too-large) | Image too big. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Params error. Possible causes: 1.Mandatory parameters are left unspecified. <br>2.Incorrect parameter types. |
-| [29600002](../errorcode-ability.md#29600002-internal-error-during-image-editing) | Image input error. |
 | [29600001](../errorcode-ability.md#29600001-internal-error-during-image-editing) | Internal error. |
+| [29600002](../errorcode-ability.md#29600002-internal-error-during-image-editing) | Image input error. |
+| [29600003](../errorcode-ability.md#29600003-image-too-large) | Image too big. |
 
 **Examples**
 
@@ -118,10 +120,10 @@ Save image data by uri.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [29600003](../errorcode-ability.md#29600003-image-too-large) | Image too big. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Params error. Possible causes: 1.Mandatory parameters are left unspecified. <br>2.Incorrect parameter types. |
-| [29600002](../errorcode-ability.md#29600002-internal-error-during-image-editing) | Image input error. |
 | [29600001](../errorcode-ability.md#29600001-internal-error-during-image-editing) | Internal error. |
+| [29600002](../errorcode-ability.md#29600002-internal-error-during-image-editing) | Image input error. |
+| [29600003](../errorcode-ability.md#29600003-image-too-large) | Image too big. |
 
 **Examples**
 

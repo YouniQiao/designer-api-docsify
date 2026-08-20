@@ -1,6 +1,11 @@
 # ConnectionProperties
 
-Defines the network connection properties. &gt; **NOTE：**&gt; &gt; The values of **linkAddresses**, **routes**, and **dnses** may be empty. You need to protect the empty values. &gt; You are advised to check whether the objects exist before using the values.
+Defines the network connection properties.
+
+> **NOTE：**
+> 
+> The values of **linkAddresses**, **routes**, and **dnses** may be empty. You need to protect the empty values.
+> You are advised to check whether the objects exist before using the values.
 
 **Since:** 23
 

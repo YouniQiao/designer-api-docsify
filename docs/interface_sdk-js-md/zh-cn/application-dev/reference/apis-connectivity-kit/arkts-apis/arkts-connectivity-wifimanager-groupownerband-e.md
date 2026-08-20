@@ -2,6 +2,8 @@
 
 P2P群组带宽。
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-wifiManager-enum GroupOwnerBand--><!--Device-wifiManager-enum GroupOwnerBand-End-->

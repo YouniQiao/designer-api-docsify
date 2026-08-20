@@ -1,4 +1,4 @@
-# PluginErrorCallback(System API)（系统接口）
+# PluginErrorCallback（系统接口）
 
 ```TypeScript
 declare type PluginErrorCallback = (info: PluginErrorData) => void

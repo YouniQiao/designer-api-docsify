@@ -1,8 +1,8 @@
 # PixelMapDrawableDescriptor
 
-支持通过传入PixelMap创建PixelMapDrawableDescriptor对象。 继承自[DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)。
+支持通过传入PixelMap创建PixelMapDrawableDescriptor对象。 继承自[DrawableDescriptor](../../apis-default/arkts-apis/arkts-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)。
 
-**继承/实现关系：** PixelMapDrawableDescriptor extends [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md)
+**继承/实现关系：** PixelMapDrawableDescriptor extends [DrawableDescriptor](../../apis-default/arkts-apis/arkts-arkui-drawabledescriptor-drawabledescriptor-c.md)
 
 **起始版本：** 12
 

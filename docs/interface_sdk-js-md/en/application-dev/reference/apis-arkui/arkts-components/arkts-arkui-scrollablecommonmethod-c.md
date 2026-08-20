@@ -2,6 +2,8 @@
 
 CommonScrollableMethod
 
+@extends CommonMethod&lt;T&gt;
+
 **Inheritance/Implementation:** ScrollableCommonMethod extends CommonMethod<T>
 
 **Since:** 12

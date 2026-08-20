@@ -40,8 +40,8 @@ Specifies the callback function to be invoked.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
 
 **Examples**
 

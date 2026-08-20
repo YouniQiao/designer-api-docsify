@@ -95,10 +95,10 @@ function getPermissionUsedRecordToggleStatus(subProfileId: int): Promise<boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The specified subProfileId does not exist for the current user. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system app. Interface caller is not a system app. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The specified subProfileId does not exist for the current user. |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 **示例**

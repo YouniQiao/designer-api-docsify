@@ -2,6 +2,8 @@
 
 Defines Checkbox Modifier
 
+@extends CheckboxAttribute @implements AttributeModifier&lt;CheckboxAttribute&gt;
+
 **Inheritance/Implementation:** CheckboxModifier extends CheckboxAttribute and implements AttributeModifier<CheckboxAttribute>
 
 **Since:** 20

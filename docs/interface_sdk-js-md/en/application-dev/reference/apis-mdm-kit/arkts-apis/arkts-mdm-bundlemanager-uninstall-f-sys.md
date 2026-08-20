@@ -12,7 +12,11 @@ import { bundleManager } from '@kit.MDMKit';
 function uninstall(admin: Want, bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-Uninstalls an application of the current user without retaining the bundle data. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Error code **401** will be returned if this API is called to uninstall an application that is either a non- &gt; removable pre-installed application or one configured as non-uninstallable via the &gt; [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md) API.
+Uninstalls an application of the current user without retaining the bundle data. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Error code **401** will be returned if this API is called to uninstall an application that is either a non- &gt; removable pre-installed application or one configured as non-uninstallable via the &gt; [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md) API.
 
 **Since:** 10
 
@@ -42,11 +46,11 @@ Uninstalls an application of the current user without retaining the bundle data.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -76,7 +80,11 @@ bundleManager.uninstall(wantTemp, 'bundleName', (err) => {
 function uninstall(admin: Want, bundleName: string, userId: number, callback: AsyncCallback<void>): void
 ```
 
-Uninstalls an application of the specified user without retaining the bundle data This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Error code **401** will be returned if this API is called to uninstall an application that is either a non- &gt; removable pre-installed application or one configured as non-uninstallable via the &gt; [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md) API.
+Uninstalls an application of the specified user without retaining the bundle data This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Error code **401** will be returned if this API is called to uninstall an application that is either a non- &gt; removable pre-installed application or one configured as non-uninstallable via the &gt; [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md) API.
 
 **Since:** 10
 
@@ -107,11 +115,11 @@ Uninstalls an application of the specified user without retaining the bundle dat
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -141,7 +149,11 @@ bundleManager.uninstall(wantTemp, 'bundleName', 100, (err) => {
 function uninstall(admin: Want, bundleName: string, isKeepData: boolean, callback: AsyncCallback<void>): void
 ```
 
-Uninstalls an application of the current user. The **isKeepData** parameter specifies whether to retain the bundle data. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Error code **401** will be returned if this API is called to uninstall an application that is either a non- &gt; removable pre-installed application or one configured as non-uninstallable via the &gt; [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md) API.
+Uninstalls an application of the current user. The **isKeepData** parameter specifies whether to retain the bundle data. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Error code **401** will be returned if this API is called to uninstall an application that is either a non- &gt; removable pre-installed application or one configured as non-uninstallable via the &gt; [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md) API.
 
 **Since:** 10
 
@@ -172,11 +184,11 @@ Uninstalls an application of the current user. The **isKeepData** parameter spec
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -206,7 +218,11 @@ bundleManager.uninstall(wantTemp, 'bundleName', true, (err) => {
 function uninstall(admin: Want, bundleName: string, userId: number, isKeepData: boolean, callback: AsyncCallback<void>): void
 ```
 
-Uninstalls an application of the specified user. The **isKeepData** parameter specifies whether to retain the bundle data. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Error code **401** will be returned if this API is called to uninstall an application that is either a non- &gt; removable pre-installed application or one configured as non-uninstallable via the &gt; [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md) API.
+Uninstalls an application of the specified user. The **isKeepData** parameter specifies whether to retain the bundle data. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Error code **401** will be returned if this API is called to uninstall an application that is either a non- &gt; removable pre-installed application or one configured as non-uninstallable via the &gt; [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md) API.
 
 **Since:** 10
 
@@ -238,11 +254,11 @@ Uninstalls an application of the specified user. The **isKeepData** parameter sp
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 

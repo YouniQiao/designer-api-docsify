@@ -96,8 +96,8 @@ Adjusts the position of the writeable stream offset pointer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error |
+| 13900020 | Invalid argument |
 | 13900026 | Illegal seek |
 | 13900042 | Unknown error |
 

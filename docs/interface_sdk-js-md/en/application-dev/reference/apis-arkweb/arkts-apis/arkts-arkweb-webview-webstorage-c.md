@@ -1,6 +1,12 @@
 # WebStorage
 
-Implements a **WebStorage** object to manage the Web SQL database and HTML5 Web Storage APIs. All **Web** components in an application share a **WebStorage** object. &gt; **NOTE：**&gt; &gt; - You must load the **Web** component before calling the APIs in **WebStorage**. &gt; &gt; - After the ArkWeb kernel is upgraded to M132, the Web SQL database management becomes invalid because the kernel &gt; discards Web SQL. For details about the ArkWeb kernel version, see &gt; [Constraints](../../../web/web-component-overview.md#constraints).
+Implements a **WebStorage** object to manage the Web SQL database and HTML5 Web Storage APIs. All **Web** components in an application share a **WebStorage** object.
+
+> **NOTE：**
+> 
+> - You must load the **Web** component before calling the APIs in **WebStorage**.
+> 
+> - After the ArkWeb kernel is upgraded to M132, the Web SQL database management becomes invalid because the kernel &gt; discards Web SQL. For details about the ArkWeb kernel version, see &gt; [Constraints](../../../web/web-component-overview.md#constraints).
 
 **Since:** 9
 
@@ -56,7 +62,7 @@ Deletes all data in the specified origin.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| origin | string | Yes | Index of the origin, which is obtained through [getOrigins](../../apis-na/arkts-apis/arkts-na-webview-webstorage-c.md#getorigins). |
+| origin | string | Yes | Index of the origin, which is obtained through [getOrigins](../../apis-default/arkts-apis/arkts-webview-webstorage-c.md#getorigins). |
 
 **Error codes:**
 
@@ -215,7 +221,7 @@ Obtains information about origins that are currently using the Web SQL Database 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[WebStorageOrigin](../../apis-na/arkts-apis/arkts-na-webview-webstorageorigin-i.md)&gt;&gt; | Promise used to return the information about the origins. |
+| Promise&lt;Array&lt;[WebStorageOrigin](../../apis-default/arkts-apis/arkts-webview-webstorageorigin-i.md)&gt;&gt; | Promise used to return the information about the origins. |
 
 **Error codes:**
 
@@ -244,7 +250,7 @@ Obtains information about origins that are currently using the Web SQL Database 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[WebStorageOrigin](../../apis-na/arkts-apis/arkts-na-webview-webstorageorigin-i.md)&gt;&gt; | Yes | Callback used to return the information about the origins. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[WebStorageOrigin](../../apis-default/arkts-apis/arkts-webview-webstorageorigin-i.md)&gt;&gt; | Yes | Callback used to return the information about the origins. |
 
 **Error codes:**
 

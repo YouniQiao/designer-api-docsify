@@ -2,6 +2,8 @@
 
 Wi-Fi station information.
 
+@interface StationInfo
+
 **Since:** 7
 
 **Deprecated since:** 9

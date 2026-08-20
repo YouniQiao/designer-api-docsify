@@ -2,6 +2,8 @@
 
 Describes the network registration state.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-radio-export enum RegState--><!--Device-radio-export enum RegState-End-->

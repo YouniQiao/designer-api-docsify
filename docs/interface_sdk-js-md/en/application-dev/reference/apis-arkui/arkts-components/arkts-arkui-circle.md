@@ -56,5 +56,4 @@ set the value.
 
 | Name | Description |
 | --- | --- |
-| [CircleOptions](arkts-arkui-circleoptions-i.md) | Describes the options of the circle. |
 

@@ -13,7 +13,11 @@ function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo,
     callback: AsyncCallback<DragEventParam>): void
 ```
 
-Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Since API version 11, you can use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) object &gt; associated with the current UI context.
+Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Since API version 11, you can use the [getDragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getdragcontroller) API in &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [DragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-dragcontroller-c.md) object &gt; associated with the current UI context.
 
 **Since:** 10
 
@@ -41,12 +45,12 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
 
 **Examples**
 
-You are advised to use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) to obtain the DragController object associated with the current UI context.
+You are advised to use the [getDragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getdragcontroller) to obtain the DragController object associated with the current UI context.
 
 ```TypeScript
 import { dragController } from '@kit.ArkUI';
@@ -132,7 +136,11 @@ struct DragControllerPage {
 function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo): Promise<DragEventParam>
 ```
 
-Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; Since API version 11, you can use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) object &gt; associated with the current UI context.
+Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> Since API version 11, you can use the [getDragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getdragcontroller) API in &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [DragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-dragcontroller-c.md) object &gt; associated with the current UI context.
 
 **Since:** 10
 
@@ -166,12 +174,12 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
 
 **Examples**
 
-You are advised to use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) to obtain the DragController object associated with the current UI context.
+You are advised to use the [getDragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getdragcontroller) to obtain the DragController object associated with the current UI context.
 
 ```TypeScript
 import { dragController } from '@kit.ArkUI';

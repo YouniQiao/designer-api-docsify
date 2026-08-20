@@ -1,4 +1,4 @@
-# USBControlRequestType(USB Manager)
+# USBControlRequestType
 
 Enumerates control request types.
 

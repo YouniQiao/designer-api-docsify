@@ -39,20 +39,22 @@ function startDeviceLogging(url: string, maxSize?: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 **示例**
 
 ```TypeScript
 import { fileIo } from '@kit.CoreFileKit';
 
-let file = await fileIo.open("filePath");
-let url = file.fd.toString();
-avSession.startDeviceLogging(url, 2048).then(() => {
-  console.info('Succeeded in starting device logging.');
-})
+async function startDeviceLogging() {
+  let file = await fileIo.open("filePath");
+  let url = file.fd.toString();
+  avSession.startDeviceLogging(url, 2048).then(() => {
+    console.info('Succeeded in starting device logging.');
+  });
+}
 ```
 

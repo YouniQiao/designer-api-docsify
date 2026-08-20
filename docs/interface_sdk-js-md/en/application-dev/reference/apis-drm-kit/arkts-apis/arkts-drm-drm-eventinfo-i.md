@@ -1,4 +1,4 @@
-# EventInfo(Defines the DRM capability.)
+# EventInfo
 
 Defines the DRM event information.
 

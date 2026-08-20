@@ -2,6 +2,8 @@
 
 Defines the download content options.
 
+@interface DownloadContentOptions
+
 **Since:** 12
 
 <!--Device-unnamed-export interface DownloadContentOptions--><!--Device-unnamed-export interface DownloadContentOptions-End-->
@@ -22,7 +24,7 @@ icon?: DownloadIconStyle
 
 DownloadFileButton icon Style.
 
-**Type:** [DownloadIconStyle](../../apis-na/arkts-apis/arkts-na-arkui-advanced-downloadfilebutton-downloadiconstyle-e.md)
+**Type:** [DownloadIconStyle](arkts-arkui-arkui-advanced-downloadfilebutton-downloadiconstyle-e.md)
 
 **Since:** 12
 
@@ -40,7 +42,7 @@ text?: DownloadDescription
 
 DownloadFileButton description.
 
-**Type:** [DownloadDescription](../../apis-na/arkts-apis/arkts-na-arkui-advanced-downloadfilebutton-downloaddescription-e.md)
+**Type:** [DownloadDescription](arkts-arkui-arkui-advanced-downloadfilebutton-downloaddescription-e.md)
 
 **Since:** 12
 

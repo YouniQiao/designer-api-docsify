@@ -2,7 +2,10 @@
 
 Search组件的控制器继承自TextContentControllerBase，涉及的接口有 getTextContentRect、 getTextContentLineCount、 getCaretOffset、addText、 deleteText、getSelection 、clearPreviewText、 setStyledPlaceholder、 deleteBackward、 scrollToVisible<!--Del-->以及系统接口 getText<!--DelEnd-->。
 
-## 导入对象 ```ts controller: SearchController = new SearchController(); ```
+## 导入对象
+
+```ts
+controller: SearchController = new SearchController(); ```
 
 **继承/实现关系：** SearchController extends TextContentControllerBase
 
@@ -61,7 +64,15 @@ SearchController的构造函数。
 setTextSelection(selectionStart: number, selectionEnd: number, options?: SelectionOptions): void
 ```
 
-组件在获焦状态下，调用该接口设置文本选择区域并高亮显示，且只有在selectionStart小于selectionEnd时，文字才会被选取并高亮显示。 &gt; **说明：** &gt; &gt; - 如果selectionStart或selectionEnd被赋值为undefined时，当作0处理。 &gt; &gt; - 如果selectionMenuHidden被赋值为true或设备为2in1时，即使options被赋值为MenuPolicy.SHOW，调用setTextSelection也不弹出菜单。 &gt; &gt; - 如果选中的文本含有emoji表情时，表情的起始位置包含在设置的文本选中区域内就会被选中。
+组件在获焦状态下，调用该接口设置文本选择区域并高亮显示，且只有在selectionStart小于selectionEnd时，文字才会被选取并高亮显示。
+
+> **说明：**
+> 
+> - 如果selectionStart或selectionEnd被赋值为undefined时，当作0处理。
+> 
+> - 如果selectionMenuHidden被赋值为true或设备为2in1时，即使options被赋值为MenuPolicy.SHOW，调用setTextSelection也不弹出菜单。
+> 
+> - 如果选中的文本含有emoji表情时，表情的起始位置包含在设置的文本选中区域内就会被选中。
 
 **起始版本：** 12
 

@@ -1,4 +1,4 @@
-# USBDevice(USB Manager)
+# USBDevice
 
 USB设备信息。
 

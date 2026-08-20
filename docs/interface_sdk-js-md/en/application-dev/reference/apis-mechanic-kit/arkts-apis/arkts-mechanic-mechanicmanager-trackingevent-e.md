@@ -1,6 +1,6 @@
 # TrackingEvent
 
-Enumerates the tracking events.
+Enumerates the tracking events. @enum { int }
 
 **Since:** 23
 

@@ -2,6 +2,8 @@
 
 The state of Wi-Fi connection enumeration.
 
+@enum { number } ConnState
+
 **Since:** 6
 
 **Deprecated since:** 9

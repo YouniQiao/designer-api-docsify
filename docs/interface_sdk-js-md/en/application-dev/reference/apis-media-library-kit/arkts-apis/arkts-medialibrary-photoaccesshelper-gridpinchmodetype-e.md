@@ -2,6 +2,8 @@
 
 Enumeration type of grid pinch mode.
 
+@enum { int } GridPinchModeType
+
 **Since:** 26.1.0
 
 <!--Device-photoAccessHelper-export enum GridPinchModeType--><!--Device-photoAccessHelper-export enum GridPinchModeType-End-->

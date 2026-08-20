@@ -12,7 +12,9 @@ import { image } from '@kit.ImageKit';
 function createPixelMapFromPixelsSync(pixels: ArrayBuffer, param: InitializationOptions): PixelMap
 ```
 
-Creates a PixelMap from existing pixel data. The pixel data will be copied and converted to the specified pixel format to initialize the PixelMap. The following pixel formats are not supported for PixelMap creation: RGBA_1010102, YCBCR_P010, YCRCB_P010, ASTC_4x4.
+Creates a PixelMap from existing pixel data. The pixel data will be copied and converted to the specified pixel format to initialize the PixelMap.
+
+The following pixel formats are not supported for PixelMap creation: RGBA_1010102, YCBCR_P010, YCRCB_P010, ASTC_4x4.
 
 **起始版本：** 26.0.0
 
@@ -43,10 +45,10 @@ Creates a PixelMap from existing pixel data. The pixel data will be copied and c
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600305](../errorcode-image.md#7600305-创建pixelmap失败) | Failed to create the PixelMap. Possible causes: 1. Failed to perform pixel format conversion. 2. Internal data is corrupted. Please check the logs for detailed information. |
-| [7600207](../errorcode-image.md#7600207-不支持的数据格式) | Unsupported pixel format. |
 | [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible cause: Size of the pixel data buffer does not match InitializationOptions.size. |
+| [7600207](../errorcode-image.md#7600207-不支持的数据格式) | Unsupported pixel format. |
 | [7600301](../errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600305](../errorcode-image.md#7600305-创建pixelmap失败) | Failed to create the PixelMap. Possible causes: 1. Failed to perform pixel format conversion. 2. Internal data is corrupted. Please check the logs for detailed information. |
 
 **示例**
 

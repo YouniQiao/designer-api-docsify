@@ -12,7 +12,17 @@ import { connection } from '@kit.NetworkKit';
 function getDnsAscii(host: string, flag?: ConversionProcess): string
 ```
 
-Converts the host name from Unicode to ASCII and controls the conversion behavior through the optional conversion process parameter (**conversionProcess**). &gt; **NOTE：**&gt; &gt; If **conversionProcess** is set to **NO_CONFIGURATION**, only the domain names corresponding to the Unicode &gt; characters that have been officially allocated can be converted. &gt; When **conversionProcess** is set to **ALLOW_UNASSIGNED**, domain names that contain Unicode characters that have &gt; not been assigned meanings can be converted. &gt; If **conversionProcess** is set to **USE_STD3_ASCII_RULES**, the generated ASCII domain name is forcibly checked &gt; based on the STD-3 ASCII rule (RFC 1123 standard) during the conversion. &gt; Digits and English letters in the input parameters are not transcoded.
+Converts the host name from Unicode to ASCII and controls the conversion behavior through the optional conversion process parameter (**conversionProcess**).
+
+> **NOTE：**
+> 
+> If **conversionProcess** is set to **NO_CONFIGURATION**, only the domain names corresponding to the Unicode &gt; characters that have been officially allocated can be converted.
+
+> When **conversionProcess** is set to **ALLOW_UNASSIGNED**, domain names that contain Unicode characters that have &gt; not been assigned meanings can be converted.
+
+> If **conversionProcess** is set to **USE_STD3_ASCII_RULES**, the generated ASCII domain name is forcibly checked &gt; based on the STD-3 ASCII rule (RFC 1123 standard) during the conversion.
+
+> Digits and English letters in the input parameters are not transcoded.
 
 **Since:** 23
 

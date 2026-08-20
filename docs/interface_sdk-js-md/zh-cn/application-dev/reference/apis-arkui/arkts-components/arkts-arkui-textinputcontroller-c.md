@@ -2,7 +2,10 @@
 
 TextInput组件的控制器继承自TextContentControllerBase，涉及的接口有 getTextContentRect、 getTextContentLineCount、 getCaretOffset、addText、 deleteText、getSelection 、clearPreviewText、 setStyledPlaceholder、 deleteBackward、 scrollToVisible<!--Del-->以及系统接口 getText<!--DelEnd-->。
 
-## 导入对象 ```ts controller: TextInputController = new TextInputController(); ```
+## 导入对象
+
+```ts
+controller: TextInputController = new TextInputController(); ```
 
 **继承/实现关系：** TextInputController extends TextContentControllerBase
 

@@ -136,7 +136,9 @@ server.close();
 notifyCharacteristicChanged(deviceId: string, notifyCharacteristic: NotifyCharacteristic): boolean
 ```
 
-Sends a notification of a change in a specified local characteristic. This method should be called for every BLE peripheral device that has requested notifications.
+Sends a notification of a change in a specified local characteristic.
+
+This method should be called for every BLE peripheral device that has requested notifications.
 
 **Since:** 7
 

@@ -93,7 +93,9 @@ try {
 offDestroy(callback?: Callback<void>): void
 ```
 
-Unregisters the callback used to listen for the destroy event of the word selection panel. This API uses an asynchronous callback to return the result. **ArkTS mode:** This API applies only to ArkTS-Sta.
+Unregisters the callback used to listen for the destroy event of the word selection panel. This API uses an asynchronous callback to return the result.
+
+**ArkTS mode:** This API applies only to ArkTS-Sta.
 
 **Since:** 24
 
@@ -128,7 +130,9 @@ try {
 offHide(callback?: Callback<void>): void
 ```
 
-Unregisters the callback used to listen for the hide event of the word selection panel. This API uses an asynchronous callback to return the result. **ArkTS mode:** This API applies only to ArkTS-Sta.
+Unregisters the callback used to listen for the hide event of the word selection panel. This API uses an asynchronous callback to return the result.
+
+**ArkTS mode:** This API applies only to ArkTS-Sta.
 
 **Since:** 24
 
@@ -163,7 +167,9 @@ try {
 onDestroy(callback: Callback<void>): void
 ```
 
-Registers a callback to listen for the destroy event of the word selection panel. This API uses an asynchronous callback to return the result. **ArkTS mode:** This API applies only to ArkTS-Sta.
+Registers a callback to listen for the destroy event of the word selection panel. This API uses an asynchronous callback to return the result.
+
+**ArkTS mode:** This API applies only to ArkTS-Sta.
 
 **Since:** 24
 
@@ -200,7 +206,9 @@ try {
 onHide(callback: Callback<void>): void
 ```
 
-Registers a callback to listen for the hide event of the word selection panel. This API uses an asynchronous callback to return the result. **ArkTS mode:** This API applies only to ArkTS-Sta.
+Registers a callback to listen for the hide event of the word selection panel. This API uses an asynchronous callback to return the result.
+
+**ArkTS mode:** This API applies only to ArkTS-Sta.
 
 **Since:** 24
 

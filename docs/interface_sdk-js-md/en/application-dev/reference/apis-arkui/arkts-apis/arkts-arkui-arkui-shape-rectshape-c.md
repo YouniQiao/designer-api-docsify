@@ -1,6 +1,8 @@
 # RectShape
 
-Represents a rectangle shape used in the **clipShape** and **maskShape** APIs. This API inherits from [BaseShape](../../apis-na/arkts-apis/arkts-na-arkui-shape-baseshape-c.md).
+Represents a rectangle shape used in the **clipShape** and **maskShape** APIs.
+
+This API inherits from [BaseShape](../../apis-default/arkts-apis/arkts-arkui-shape-baseshape-c.md).
 
 **Inheritance/Implementation:** RectShape extends BaseShape<RectShape>
 
@@ -40,7 +42,7 @@ A constructor used to create a **RectShape** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RectShapeOptions](../../apis-na/arkts-apis/arkts-na-arkui-shape-rectshapeoptions-i.md) \| [RoundRectShapeOptions](../../apis-na/arkts-apis/arkts-na-arkui-shape-roundrectshapeoptions-i.md) | No | Rectangle parameters. |
+| options | [RectShapeOptions](../../apis-default/arkts-apis/arkts-arkui-shape-rectshapeoptions-i.md) \| [RoundRectShapeOptions](../../apis-default/arkts-apis/arkts-arkui-shape-roundrectshapeoptions-i.md) | No | Rectangle parameters. |
 
 ## radius
 
@@ -72,7 +74,7 @@ Sets the radius of the rectangle border corners.
 
 | Type | Description |
 | --- | --- |
-| [RectShape](../../apis-na/arkts-apis/arkts-na-arkui-shape-rectshape-c.md) | RectShape** object. |
+| [RectShape](../../apis-default/arkts-apis/arkts-arkui-shape-rectshape-c.md) | RectShape** object. |
 
 ## radiusHeight
 
@@ -104,7 +106,7 @@ Sets the radius height of the rectangle border corners.
 
 | Type | Description |
 | --- | --- |
-| [RectShape](../../apis-na/arkts-apis/arkts-na-arkui-shape-rectshape-c.md) | RectShape** object. |
+| [RectShape](../../apis-default/arkts-apis/arkts-arkui-shape-rectshape-c.md) | RectShape** object. |
 
 ## radiusWidth
 
@@ -136,5 +138,5 @@ Sets the radius width of the rectangle border corners.
 
 | Type | Description |
 | --- | --- |
-| [RectShape](../../apis-na/arkts-apis/arkts-na-arkui-shape-rectshape-c.md) | RectShape** object. |
+| [RectShape](../../apis-default/arkts-apis/arkts-arkui-shape-rectshape-c.md) | RectShape** object. |
 

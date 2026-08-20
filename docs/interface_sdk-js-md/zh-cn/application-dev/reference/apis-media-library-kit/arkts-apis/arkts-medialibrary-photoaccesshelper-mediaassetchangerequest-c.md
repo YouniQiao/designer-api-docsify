@@ -1,6 +1,12 @@
 # MediaAssetChangeRequest
 
-MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md). 资产变更请求。 &gt; **说明：** &gt; &gt; - 本Class首批接口从API version 11开始支持。
+MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md).
+
+资产变更请求。
+
+> **说明：**
+> 
+> - 本Class首批接口从API version 11开始支持。
 
 **继承/实现关系：** MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md)
 
@@ -22,7 +28,11 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 addResource(type: ResourceType, fileUri: string): void
 ```
 
-通过文件URI从应用沙箱添加资源，待添加资源的数据来源可参考 [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md). &gt; **注意：** &gt; &gt; 对于同一个资产变更请求，成功添加资源后不支持重复调用该接口。对于动态照片，可调用两次该接口分别添加图片和视频资源。
+通过文件URI从应用沙箱添加资源，待添加资源的数据来源可参考 [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+
+> **注意：**
+> 
+> 对于同一个资产变更请求，成功添加资源后不支持重复调用该接口。对于动态照片，可调用两次该接口分别添加图片和视频资源。
 
 **起始版本：** 23
 
@@ -44,9 +54,9 @@ addResource(type: ResourceType, fileUri: string): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000016 | Operation Not Support |
 | 13900002 | The file corresponding to the URI is not in the app sandbox. |
 | 14000011 | System inner fail |
+| 14000016 | Operation Not Support |
 
 ## addResource
 
@@ -54,7 +64,11 @@ addResource(type: ResourceType, fileUri: string): void
 addResource(type: ResourceType, data: ArrayBuffer): void
 ```
 
-通过ArrayBuffer数据添加资源。 &gt; **注意：** &gt; &gt; 对于同一个资产变更请求，成功添加资源后不支持重复调用该接口。对于动态照片，可调用两次该接口分别添加图片和视频资源。
+通过ArrayBuffer数据添加资源。
+
+> **注意：**
+> 
+> 对于同一个资产变更请求，成功添加资源后不支持重复调用该接口。对于动态照片，可调用两次该接口分别添加图片和视频资源。
 
 **起始版本：** 23
 
@@ -76,8 +90,8 @@ addResource(type: ResourceType, data: ArrayBuffer): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000016 | Operation Not Support |
 | 14000011 | System inner fail |
+| 14000016 | Operation Not Support |
 
 ## constructor
 
@@ -190,7 +204,9 @@ static createAssetRequest(context: Context, photoType: PhotoType, extension: str
 static createImageAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest
 ```
 
-创建图片资产变更请求。 指定待创建资产的数据来源，可参考 [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+创建图片资产变更请求。
+
+指定待创建资产的数据来源，可参考 [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
 
 **起始版本：** 11
 
@@ -255,8 +271,8 @@ static createImageAssetRequest(context: Context, fileUri: string): MediaAssetCha
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | 23800101 | The file corresponding to the URI is not in the app sandbox. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## createVideoAssetRequest
 
@@ -264,7 +280,9 @@ static createImageAssetRequest(context: Context, fileUri: string): MediaAssetCha
 static createVideoAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest
 ```
 
-创建视频资产变更请求。 指定待创建资产的数据来源，可参考 [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+创建视频资产变更请求。
+
+指定待创建资产的数据来源，可参考 [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
 
 **起始版本：** 11
 
@@ -325,8 +343,8 @@ static createVideoAssetRequest(context: Context, fileUri: string): MediaAssetCha
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | 23800101 | The file corresponding to the URI is not in the app sandbox. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## deleteAssets
 
@@ -361,8 +379,8 @@ static deleteAssets(context: Context, assets: Array<PhotoAsset>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
 ## deleteAssets
@@ -398,9 +416,9 @@ static deleteAssets(context: Context, uriList: Array<string>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000002 | The uri format is incorrect or does not exist. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | 14000011 | System inner fail |
 
 ## deleteAssetsToTrashWithUris
@@ -436,9 +454,9 @@ Deletes media assets. This API uses a promise to return the result. The deleted 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes: <br>1. context is null or invalid; <br>2. The uri format is incorrect or does not exist. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## discardCameraPhoto
 
@@ -458,8 +476,8 @@ discardCameraPhoto(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14000016 | Operation Not Support |
 | 14000011 | Internal system error |
+| 14000016 | Operation Not Support |
 
 ## getAsset
 
@@ -467,7 +485,13 @@ discardCameraPhoto(): void
 getAsset(): PhotoAsset
 ```
 
-获取当前资产变更请求中的资产。 &gt; **注意：** &gt; &gt; 对于创建资产的变更请求，在调用接口 &gt; &gt; [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) &gt; &gt; 的提交生效之前，该接口会返回null。
+获取当前资产变更请求中的资产。
+
+> **注意：**
+> 
+> 对于创建资产的变更请求，在调用接口 &gt;
+> [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) &gt;
+> 的提交生效之前，该接口会返回null。
 
 **起始版本：** 11
 
@@ -524,7 +548,11 @@ getAsset(): PhotoAsset | null
 getWriteCacheHandler(): Promise<int>
 ```
 
-获取临时文件写句柄。使用Promise异步回调。 &gt; **注意：** &gt; &gt; 对于同一个资产变更请求，不支持在成功获取临时文件写句柄后，重复调用该接口。
+获取临时文件写句柄。使用Promise异步回调。
+
+> **注意：**
+> 
+> 对于同一个资产变更请求，不支持在成功获取临时文件写句柄后，重复调用该接口。
 
 **起始版本：** 23
 
@@ -544,10 +572,10 @@ getWriteCacheHandler(): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
-| 14000016 | Operation Not Support |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 14000011 | System inner fail. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
+| 14000016 | Operation Not Support |
 
 ## saveCameraPhoto
 
@@ -567,8 +595,8 @@ saveCameraPhoto(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14000016 | Operation Not Support |
 | 14000011 | System inner fail |
+| 14000016 | Operation Not Support |
 
 ## saveCameraPhoto
 
@@ -594,8 +622,8 @@ saveCameraPhoto(imageFileType: ImageFileType): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14000016 | Operation Not Support |
 | 14000011 | System inner fail |
+| 14000016 | Operation Not Support |
 
 ## setOrientation
 
@@ -659,7 +687,9 @@ setTitle(title: string): void
 readonly comment: string
 ```
 
-用于MediaChangeRequest类型校验。 如果类（如[MediaAssetChangeRequest](#mediaassetchangerequest)或 [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md)）对象可以访问，就说明该类是MediaChangeRequest的实现类。
+用于MediaChangeRequest类型校验。
+
+如果类（如[MediaAssetChangeRequest](#mediaassetchangerequest)或 [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md)）对象可以访问，就说明该类是MediaChangeRequest的实现类。
 
 **类型：** string
 

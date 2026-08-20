@@ -19,7 +19,9 @@ Describes the position, width, and height of a component.
 height: number
 ```
 
-Content height. Unit: vp.
+Content height.
+
+Unit: vp.
 
 **Type:** number
 
@@ -39,7 +41,9 @@ Content height. Unit: vp.
 width: number
 ```
 
-Content width. Unit: vp.
+Content width.
+
+Unit: vp.
 
 **Type:** number
 
@@ -59,7 +63,9 @@ Content width. Unit: vp.
 x: number
 ```
 
-X-coordinate. Unit: vp.
+X-coordinate.
+
+Unit: vp.
 
 **Type:** number
 
@@ -79,7 +85,9 @@ X-coordinate. Unit: vp.
 y: number
 ```
 
-Y-coordinate. Unit: vp.
+Y-coordinate.
+
+Unit: vp.
 
 **Type:** number
 

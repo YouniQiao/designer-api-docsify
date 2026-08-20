@@ -41,10 +41,10 @@ function deleteSysVpnConfig(vpnId: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) | Invalid parameter value. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
-| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Operation failed. Cannot connect to service. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) | Invalid parameter value. |
+| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Operation failed. Cannot connect to service. |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
 

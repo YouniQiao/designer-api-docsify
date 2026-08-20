@@ -2,6 +2,8 @@
 
 Defines the resource which can use ASTC.
 
+@interface ASTCResource
+
 **Since:** 12
 
 <!--Device-unnamed-interface ASTCResource--><!--Device-unnamed-interface ASTCResource-End-->

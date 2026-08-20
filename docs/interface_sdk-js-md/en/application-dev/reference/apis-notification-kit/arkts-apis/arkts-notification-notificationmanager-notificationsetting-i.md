@@ -20,7 +20,9 @@ import { notificationManager } from '@kit.NotificationKit';
 badgeNumberEnabled?: boolean
 ```
 
-Whether to enable the display of notification badges. - **true**: enable. - **false**: disable.
+Whether to enable the display of notification badges.
+
+- **true**: enable. - **false**: disable.
 
 **Type:** boolean
 
@@ -38,7 +40,9 @@ Whether to enable the display of notification badges. - **true**: enable. - **fa
 bannerEnabled?: boolean
 ```
 
-Whether to enable banner notification. - **true**: enable. - **false**: disable.
+Whether to enable banner notification.
+
+- **true**: enable. - **false**: disable.
 
 **Type:** boolean
 
@@ -56,7 +60,9 @@ Whether to enable banner notification. - **true**: enable. - **false**: disable.
 lockScreenEnabled?: boolean
 ```
 
-Whether to enable lock screen notification. - **true**: enable. - **false**: disable.
+Whether to enable lock screen notification.
+
+- **true**: enable. - **false**: disable.
 
 **Type:** boolean
 
@@ -74,7 +80,9 @@ Whether to enable lock screen notification. - **true**: enable. - **false**: dis
 notificationEnabled?: boolean
 ```
 
-Whether to enable the application notification. - **true**: enable. - **false**: disable.
+Whether to enable the application notification.
+
+- **true**: enable. - **false**: disable.
 
 **Type:** boolean
 
@@ -92,7 +100,9 @@ Whether to enable the application notification. - **true**: enable. - **false**:
 soundEnabled: boolean
 ```
 
-Whether to enable ringtone. - **true**: enable. - **false**: disable.
+Whether to enable ringtone.
+
+- **true**: enable. - **false**: disable.
 
 **Type:** boolean
 
@@ -108,7 +118,9 @@ Whether to enable ringtone. - **true**: enable. - **false**: disable.
 vibrationEnabled: boolean
 ```
 
-Whether to enable vibration. - **true**: enable. - **false**: disable.
+Whether to enable vibration.
+
+- **true**: enable. - **false**: disable.
 
 **Type:** boolean
 

@@ -12,7 +12,11 @@ import { emitter } from '@kit.BasicServicesKit';
 function emit(eventId: string, data?: EventData): void
 ```
 
-发送指定事件。 该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见[线程间通信对象](../../../arkts-utils/serializable-overview.md)。目前不支持使用 [@State装饰器](../../../ui/state-management/arkts-state.md)、 [@Observed装饰器](../../../ui/state-management/arkts-observed-and-objectlink.md)等装饰器修饰的复杂类型数据。 该接口发布某个事件后，不保证该事件立刻执行，执行时间取决于事件队列里面的事件数量以及各事件的执行效率。
+发送指定事件。
+
+该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见[线程间通信对象](../../../arkts-utils/serializable-overview.md)。目前不支持使用 [@State装饰器](../../../ui/state-management/arkts-state.md)、 [@Observed装饰器](../../../ui/state-management/arkts-observed-and-objectlink.md)等装饰器修饰的复杂类型数据。
+
+该接口发布某个事件后，不保证该事件立刻执行，执行时间取决于事件队列里面的事件数量以及各事件的执行效率。
 
 **起始版本：** 11
 
@@ -49,7 +53,9 @@ emitter.emit("eventId", eventData);
 function emit(eventId: string): void
 ```
 
-发送指定事件。 该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见ArkTS-Sta并发迁移规则
+发送指定事件。
+
+该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见ArkTS-Sta并发迁移规则
 
 **起始版本：** 23
 
@@ -76,7 +82,9 @@ emitter.emit("eventId");
 function emit(eventId: string, data: EventData): void
 ```
 
-发送指定事件。 该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见ArkTS-Sta并发迁移规则
+发送指定事件。
+
+该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见ArkTS-Sta并发迁移规则
 
 **起始版本：** 23
 
@@ -115,7 +123,11 @@ emitter.emit("eventId", eventData);
 function emit<T>(eventId: string, data?: GenericEventData<T>): void
 ```
 
-发送指定事件。 该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见[线程间通信对象](../../../arkts-utils/serializable-overview.md)。目前不支持使用 [@State装饰器](../../../ui/state-management/arkts-state.md)、 [@Observed装饰器](../../../ui/state-management/arkts-observed-and-objectlink.md)等装饰器修饰的复杂类型数据。 该接口发布某个事件后，不保证该事件立刻执行，执行时间取决于事件队列里面的事件数量以及各事件的执行效率。
+发送指定事件。
+
+该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见[线程间通信对象](../../../arkts-utils/serializable-overview.md)。目前不支持使用 [@State装饰器](../../../ui/state-management/arkts-state.md)、 [@Observed装饰器](../../../ui/state-management/arkts-observed-and-objectlink.md)等装饰器修饰的复杂类型数据。
+
+该接口发布某个事件后，不保证该事件立刻执行，执行时间取决于事件队列里面的事件数量以及各事件的执行效率。
 
 **起始版本：** 12
 
@@ -159,7 +171,9 @@ emitter.emit("eventId", eventData);
 function emit<T>(eventId: string, data: GenericEventData<T>): void
 ```
 
-发送指定事件。 该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见ArkTS-Sta并发迁移规则
+发送指定事件。
+
+该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见ArkTS-Sta并发迁移规则
 
 **起始版本：** 23
 
@@ -181,7 +195,11 @@ function emit<T>(eventId: string, data: GenericEventData<T>): void
 function emit(eventId: string, options: Options, data?: EventData): void
 ```
 
-发送指定优先级事件。 该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见[线程间通信对象](../../../arkts-utils/serializable-overview.md)。目前不支持使用 [@State装饰器](../../../ui/state-management/arkts-state.md)、 [@Observed装饰器](../../../ui/state-management/arkts-observed-and-objectlink.md)等装饰器修饰的复杂类型数据。 该接口发布某个事件后，不保证该事件立刻执行，执行时间取决于事件队列里面的事件数量以及各事件的执行效率。
+发送指定优先级事件。
+
+该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见[线程间通信对象](../../../arkts-utils/serializable-overview.md)。目前不支持使用 [@State装饰器](../../../ui/state-management/arkts-state.md)、 [@Observed装饰器](../../../ui/state-management/arkts-observed-and-objectlink.md)等装饰器修饰的复杂类型数据。
+
+该接口发布某个事件后，不保证该事件立刻执行，执行时间取决于事件队列里面的事件数量以及各事件的执行效率。
 
 **起始版本：** 11
 
@@ -225,7 +243,9 @@ emitter.emit("eventId", options, eventData);
 function emit(eventId: string, options: Options): void
 ```
 
-发送指定优先级事件。 该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见ArkTS-Sta并发迁移规则
+发送指定优先级事件。
+
+该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见ArkTS-Sta并发迁移规则
 
 **起始版本：** 23
 
@@ -257,7 +277,9 @@ emitter.emit("eventId", options);
 function emit(eventId: string, options: Options, data: EventData): void
 ```
 
-发送指定优先级事件。 该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见ArkTS-Sta并发迁移规则
+发送指定优先级事件。
+
+该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见ArkTS-Sta并发迁移规则
 
 **起始版本：** 23
 
@@ -299,7 +321,11 @@ emitter.emit("eventId", options, eventData);
 function emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void
 ```
 
-发送指定优先级事件。 该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见[线程间通信对象](../../../arkts-utils/serializable-overview.md)。目前不支持使用 [@State装饰器](../../../ui/state-management/arkts-state.md)、 [@Observed装饰器](../../../ui/state-management/arkts-observed-and-objectlink.md)等装饰器修饰的复杂类型数据。 该接口发布某个事件后，不保证该事件立刻执行，执行时间取决于事件队列里面的事件数量以及各事件的执行效率。
+发送指定优先级事件。
+
+该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见[线程间通信对象](../../../arkts-utils/serializable-overview.md)。目前不支持使用 [@State装饰器](../../../ui/state-management/arkts-state.md)、 [@Observed装饰器](../../../ui/state-management/arkts-observed-and-objectlink.md)等装饰器修饰的复杂类型数据。
+
+该接口发布某个事件后，不保证该事件立刻执行，执行时间取决于事件队列里面的事件数量以及各事件的执行效率。
 
 **起始版本：** 12
 
@@ -373,7 +399,9 @@ emitter.emit("eventId", options, eventData);
 function emit<T>(eventId: string, options: Options, data: GenericEventData<T>): void
 ```
 
-发送指定优先级事件。 该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见ArkTS-Sta并发迁移规则
+发送指定优先级事件。
+
+该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见ArkTS-Sta并发迁移规则
 
 **起始版本：** 23
 

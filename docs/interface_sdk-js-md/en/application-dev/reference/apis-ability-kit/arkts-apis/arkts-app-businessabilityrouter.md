@@ -2,6 +2,8 @@
 
 This module is used to obtain business ability information of various applications installed on the current device.
 
+@namespace businessAbilityRouter
+
 **Since:** 23
 
 <!--Device-unnamed-declare namespace businessAbilityRouter--><!--Device-unnamed-declare namespace businessAbilityRouter-End-->

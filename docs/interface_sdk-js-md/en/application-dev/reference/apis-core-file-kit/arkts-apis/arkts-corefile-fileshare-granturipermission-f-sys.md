@@ -42,9 +42,9 @@ Provides grant uri permission for app
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | 14300001 | IPC error |
 
 **Examples**
@@ -108,9 +108,9 @@ Provides grant uri permission for app
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | 14300001 | IPC error |
 
 **Examples**
@@ -172,10 +172,10 @@ Grant URI permissions for an application.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 13900001 | Operation not permitted. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| 13900001 | Operation not permitted. |
 | 13900011 | Out of memory. |
 
 **Examples**

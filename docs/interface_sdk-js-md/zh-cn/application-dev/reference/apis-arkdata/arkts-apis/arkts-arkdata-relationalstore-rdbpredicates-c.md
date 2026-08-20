@@ -456,7 +456,11 @@ having(conditions: string, args?: Array<ValueType>): RdbPredicates
 in(field: string, value: Array<ValueType>): RdbPredicates
 ```
 
-配置谓词条件，表示字段`field`的值必须在给定的`value`列表内。该方法等同于SQL语句中的"IN"。 &gt; **说明：** &gt; &gt; `value`集合不能为空。如果传入空集，此条件将失效，导致操作针对所有数据（如全量查询、更新或删除）。请在调用前判断`value`是否为空集，避免误操作。
+配置谓词条件，表示字段`field`的值必须在给定的`value`列表内。该方法等同于SQL语句中的"IN"。
+
+> **说明：**
+> 
+> `value`集合不能为空。如果传入空集，此条件将失效，导致操作针对所有数据（如全量查询、更新或删除）。请在调用前判断`value`是否为空集，避免误操作。
 
 **起始版本：** 9
 
@@ -509,7 +513,13 @@ inAllDevices(): RdbPredicates
 inDevices(devices: Array<string>): RdbPredicates
 ```
 
-同步分布式数据库时连接到组网内指定的远程设备。 &gt; **说明：** &gt; &gt; 其中devices通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。 &gt; &gt; 调用 &gt; [sync](arkts-arkdata-relationalstore-rdbstore-i.md#sync) &gt; 接口同步数据库时，在入参谓词中调用inDevices接口以选择设备。如果不调用inDevices接口，则默认连接组网内所有的设备。
+同步分布式数据库时连接到组网内指定的远程设备。
+
+> **说明：**
+> 
+> 其中devices通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。
+> 
+> 调用 &gt; [sync](arkts-arkdata-relationalstore-rdbstore-i.md#sync) &gt; 接口同步数据库时，在入参谓词中调用inDevices接口以选择设备。如果不调用inDevices接口，则默认连接组网内所有的设备。
 
 **起始版本：** 23
 

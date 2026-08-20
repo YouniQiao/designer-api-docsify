@@ -45,8 +45,8 @@ Obtains the color effect in use.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 **示例**
 
@@ -83,8 +83,8 @@ Sets a color effect. Before the setting, call [getSupportedColorEffects](arkts-c
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 **示例**
 

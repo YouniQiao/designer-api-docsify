@@ -26,9 +26,9 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 | [offAcbStateChange](arkts-connectivity-remotedevice-offacbstatechange-f.md) | Unsubscribes from the NearLink ACB connection status change event. |
 | [offConnectionStateChange](arkts-connectivity-remotedevice-offconnectionstatechange-f.md) | Unsubscribes from NearLink connection state change events. |
 | [offPairingStateChange](arkts-connectivity-remotedevice-offpairingstatechange-f.md) | Unsubscribes from NearLink pairing state change events. |
-| [onAcbStateChange](arkts-connectivity-remotedevice-onacbstatechange-f.md) | Subscribes to the NearLink ACB connection status change event. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned. |
-| [onConnectionStateChange](arkts-connectivity-remotedevice-onconnectionstatechange-f.md) | Subscribes to NearLink connection state change events. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned. |
-| [onPairingStateChange](arkts-connectivity-remotedevice-onpairingstatechange-f.md) | Subscribes to NearLink pairing state change events. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned. |
+| [onAcbStateChange](arkts-connectivity-remotedevice-onacbstatechange-f.md) | Subscribes to the NearLink ACB connection status change event. |
+| [onConnectionStateChange](arkts-connectivity-remotedevice-onconnectionstatechange-f.md) | Subscribes to NearLink connection state change events. |
+| [onPairingStateChange](arkts-connectivity-remotedevice-onpairingstatechange-f.md) | Subscribes to NearLink pairing state change events. |
 
 <!--Del-->
 ### Functions(System API)
@@ -36,7 +36,7 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 | Name | Description |
 | --- | --- |
 | [offPairingRequest](arkts-connectivity-remotedevice-offpairingrequest-f-sys.md) | Unsubscribes from pairing request events from remote NearLink devices. |
-| [onPairingRequest](arkts-connectivity-remotedevice-onpairingrequest-f-sys.md) | Subscribes to pairing request events from remote NearLink devices. This event is accessible only to system applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned. |
+| [onPairingRequest](arkts-connectivity-remotedevice-onpairingrequest-f-sys.md) | Subscribes to pairing request events from remote NearLink devices. |
 <!--DelEnd-->
 
 ### Interfaces

@@ -46,7 +46,11 @@ Goes to a specified page.
 changeIndex(index: number, animationMode?: SwiperAnimationMode | boolean)
 ```
 
-Moves to a specific page. &gt; **NOTE：**&gt; &gt; This API itself supports jumping without animation (set **animationMode** to **false** or &gt; **SwiperAnimationMode.NO_ANIMATION**). Avoid starting an animation with **changeIndex** and then interrupt it &gt; with **finishAnimation** to achieve animation-free jumping.
+Moves to a specific page.
+
+> **NOTE：**
+> 
+> This API itself supports jumping without animation (set **animationMode** to **false** or &gt; **SwiperAnimationMode.NO_ANIMATION**). Avoid starting an animation with **changeIndex** and then interrupt it &gt; with **finishAnimation** to achieve animation-free jumping.
 
 **Since:** 15
 
@@ -91,7 +95,16 @@ A constructor used to create a **SwiperController** object.
 fakeDragBy(offset: number): boolean
 ```
 
-Sets the drag distance of drag simulation. &gt; **NOTE：**&gt; &gt; - The drag distance of drag simulation depends on the layout. You are advised to call this API before the layout, &gt; so that the drag effect can be displayed after the current frame layout. If this API is called multiple times &gt; before the layout, only the drag distance passed in the last call takes effect during the current frame layout. &gt; &gt; - In the loop scenario where loop is set to **true**, if the drag distance of drag &gt; simulation is greater than the total layout length, the drag distance will be adjusted to the distance required &gt; to drag just far enough to display the first child node (when dragging toward the start of the layout) or the &gt; last child node (when dragging toward the end of the layout). &gt; &gt; - The onGestureSwipe and &gt; onContentWillScroll events are not triggered during the drag. The &gt; customContentTransition event is triggered before the layout. &gt; Since the actual drag distance may be adjusted during the layout, if the passed drag distance is too large, the &gt; returned node display information may be inconsistent with the layout result when the event is triggered.
+Sets the drag distance of drag simulation.
+
+> **NOTE：**
+> 
+> - The drag distance of drag simulation depends on the layout. You are advised to call this API before the layout, &gt; so that the drag effect can be displayed after the current frame layout. If this API is called multiple times &gt; before the layout, only the drag distance passed in the last call takes effect during the current frame layout.
+> 
+> - In the loop scenario where [loop](arkts-arkui-swiper-attribute.md#loop) is set to **true**, if the drag distance of drag &gt; simulation is greater than the total layout length, the drag distance will be adjusted to the distance required &gt; to drag just far enough to display the first child node (when dragging toward the start of the layout) or the &gt; last child node (when dragging toward the end of the layout).
+> 
+> - The [onGestureSwipe](arkts-arkui-swiper-attribute.md#ongestureswipe) and &gt; [onContentWillScroll](arkts-arkui-swiper-attribute.md#oncontentwillscroll) events are not triggered during the drag. The &gt; [customContentTransition](arkts-arkui-swiper-attribute.md#customcontenttransition) event is triggered before the layout.
+> Since the actual drag distance may be adjusted during the layout, if the passed drag distance is too large, the &gt; returned node display information may be inconsistent with the layout result when the event is triggered.
 
 **Since:** 23
 
@@ -173,7 +186,15 @@ Obtains whether drag simulation is enabled.
 preloadItems(indices: Optional<Array<number>>): Promise<void>
 ```
 
-Preloads child nodes for **Swiper**. After this API is called, all specified child nodes will be loaded at once. Therefore, for performance considerations, it is recommended that you load child nodes in batches. This API uses a promise to return the result. If the **SwiperController** object is not bound to any **Swiper** component, any attempt to call APIs on it will result in a JavaScript exception, together with the error code 100004. Therefore, you are advised to use **try-catch** to handle potential exceptions when calling APIs on **SwiperController**. When combining with [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) and custom components, be aware that [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) only retains custom components within the cache range. Components outside this range are removed. Therefore, make sure the indexes of nodes to be preloaded via this API are within the cache range to avoid issues. &gt; **NOTE：**&gt; &gt; **preloadItems** of **Swiper** needs to be called after **Swiper** is created. You are advised to control the &gt; first preloading in the onAppear lifecycle of **Swiper**.
+Preloads child nodes for **Swiper**. After this API is called, all specified child nodes will be loaded at once. Therefore, for performance considerations, it is recommended that you load child nodes in batches. This API uses a promise to return the result.
+
+If the **SwiperController** object is not bound to any **Swiper** component, any attempt to call APIs on it will result in a JavaScript exception, together with the error code 100004. Therefore, you are advised to use **try-catch** to handle potential exceptions when calling APIs on **SwiperController**.
+
+When combining with [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) and custom components, be aware that [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) only retains custom components within the cache range. Components outside this range are removed. Therefore, make sure the indexes of nodes to be preloaded via this API are within the cache range to avoid issues.
+
+> **NOTE：**
+> 
+> **preloadItems** of **Swiper** needs to be called after **Swiper** is created. You are advised to control the &gt; first preloading in the onAppear lifecycle of **Swiper**.
 
 **Since:** 18
 
@@ -212,7 +233,7 @@ Preloads child nodes for **Swiper**. After this API is called, all specified chi
 showNext()
 ```
 
-Turns to the next page. The page turning includes a transition animation, with the duration set by the duration attribute of the **Swiper** component.
+Turns to the next page. The page turning includes a transition animation, with the duration set by the [duration](arkts-arkui-swiper-attribute.md#duration) attribute of the **Swiper** component.
 
 **Since:** 7
 
@@ -230,7 +251,7 @@ Turns to the next page. The page turning includes a transition animation, with t
 showPrevious()
 ```
 
-Turns to the previous page. The page turning includes a transition animation, with the duration set by the duration attribute of the **Swiper** component.
+Turns to the previous page. The page turning includes a transition animation, with the duration set by the [duration](arkts-arkui-swiper-attribute.md#duration) attribute of the **Swiper** component.
 
 **Since:** 7
 
@@ -248,7 +269,13 @@ Turns to the previous page. The page turning includes a transition animation, wi
 startFakeDrag(): boolean
 ```
 
-Enables drag simulation. &gt; **NOTE：**&gt; &gt; - If the **Swiper** component is dragged using real gestures or the drag simulation is enabled, the API returns &gt; **false**, indicating that the operation fails. &gt; &gt; - Simulated drag cannot trigger nested scrolling.
+Enables drag simulation.
+
+> **NOTE：**
+> 
+> - If the **Swiper** component is dragged using real gestures or the drag simulation is enabled, the API returns &gt; **false**, indicating that the operation fails.
+> 
+> - Simulated drag cannot trigger nested scrolling.
 
 **Since:** 23
 
@@ -274,7 +301,11 @@ Enables drag simulation. &gt; **NOTE：**&gt; &gt; - If the **Swiper** component
 stopFakeDrag(): boolean
 ```
 
-Disables drag simulation. &gt; **NOTE：**&gt; &gt; After drag simulation is enabled, it will end if a real drag gesture is received.
+Disables drag simulation.
+
+> **NOTE：**
+> 
+> After drag simulation is enabled, it will end if a real drag gesture is received.
 
 **Since:** 23
 

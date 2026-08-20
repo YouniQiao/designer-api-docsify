@@ -40,11 +40,11 @@ Obtains an extended attribute of a file or directory. This API returns the resul
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
-| 13900037 | No data available |
-| 13900038 | Value too large for defined data type |
-| 13900007 | Arg list too long |
 | 13900002 | No such file or directory |
+| 13900007 | Arg list too long |
 | 13900012 | Permission denied |
 | 13900031 | Function not implemented |
+| 13900037 | No data available |
+| 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
 

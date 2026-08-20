@@ -36,7 +36,7 @@ $_iterator(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | TreeSet的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | TreeSet的迭代器。 |
 
 **示例**
 
@@ -77,7 +77,7 @@ while(temp != undefined) {
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 返回包含TreeSet中所有元素的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回包含TreeSet中所有元素的迭代器。 |
 
 **错误码：**
 
@@ -352,7 +352,7 @@ entries(): IterableIterator<[T, T]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[T, T]&gt; | 返回包含TreeSet中所有元素键值对的迭代器对象，每个键值对中键与值相同，均为元素本身。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[T, T]&gt; | 返回包含TreeSet中所有元素键值对的迭代器对象，每个键值对中键与值相同，均为元素本身。 |
 
 **错误码：**
 
@@ -1006,7 +1006,7 @@ values(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 返回包含TreeSet中所有元素的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回包含TreeSet中所有元素的迭代器。 |
 
 **错误码：**
 

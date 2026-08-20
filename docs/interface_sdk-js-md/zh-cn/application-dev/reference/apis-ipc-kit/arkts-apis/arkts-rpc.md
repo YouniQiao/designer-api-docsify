@@ -20,7 +20,7 @@ import { rpc } from '@kit.IPCKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 提供与匿名共享内存对象相关的方法，包括创建、关闭、映射和取消映射Ashmem、从Ashmem读取数据和写入数据、获取Ashmem大小、设置Ashmem保护。 共享内存只适用与本设备内跨进程通信。 - 大数据传输：传输大量数据(如图片、文件)时使用共享内存提升效率。 - 跨进程数据共享：多个进程需要共享访问同一块内存数据。 - 传输效率问题：大数据通过共享内存传输避免序列化开销，提升传输效率。 - 内存复用问题：多进程可共享访问同一内存，避免数据拷贝。 - 提升传输性能：共享内存机制大幅提升大数据传输效率。 - 减少内存占用：避免数据多次拷贝，节省内存资源。 |
+| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 提供与匿名共享内存对象相关的方法，包括创建、关闭、映射和取消映射Ashmem、从Ashmem读取数据和写入数据、获取Ashmem大小、设置Ashmem保护。 |
 | [CallingInfo](arkts-ipc-rpc-callinginfo-c.md) | IPC上下文信息，包括PID和UID、本端和对端设备ID、检查接口调用是否在同一设备上。 |
 | [IPCSkeleton](arkts-ipc-rpc-ipcskeleton-c.md) | 用于获取IPC上下文信息，包括获取UID和PID、获取本端和对端设备ID、检查接口调用是否在同一设备上。 |
 | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | 该接口可用于查询或获取接口描述符、添加或删除死亡通知、转储对象状态到特定文件、发送消息。 |

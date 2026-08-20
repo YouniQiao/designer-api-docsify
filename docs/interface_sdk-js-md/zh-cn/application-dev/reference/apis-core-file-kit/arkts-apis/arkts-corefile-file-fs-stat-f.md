@@ -40,19 +40,19 @@ declare function stat(file: string | number): Promise<Stat>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
 | 13900018 | Not a directory |
 | 13900030 | File name too long |
 | 13900031 | Function not implemented |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900038 | Value too large for defined data type |
 | 13900033 | Too many symbolic links encountered |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900008 | Bad file descriptor |
+| 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
-| 13900011 | Out of memory |
 
 
 ## stat
@@ -76,23 +76,23 @@ declare function stat(file: string | number, callback: AsyncCallback<Stat>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | file | string \| number | 是 | 文件或目录的应用沙箱路径path、URI或已打开的文件描述符fd。<br>**说明：**从API version 22开始，支持传入URI。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | 是 | 异步获取文件或目录的信息之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | 是 | 异步获取文件或目录的信息之后的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
 | 13900018 | Not a directory |
 | 13900030 | File name too long |
 | 13900031 | Function not implemented |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900038 | Value too large for defined data type |
 | 13900033 | Too many symbolic links encountered |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900008 | Bad file descriptor |
+| 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
-| 13900011 | Out of memory |
 

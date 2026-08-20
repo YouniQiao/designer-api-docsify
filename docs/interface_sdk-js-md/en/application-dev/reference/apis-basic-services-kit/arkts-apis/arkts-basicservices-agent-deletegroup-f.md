@@ -13,7 +13,9 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 function deleteGroup(gid: string): Promise<void>
 ```
 
-Deletes a specified group. No task ID can be added to the group. This API uses a promise to return the result. When all tasks in a group are succeeded, failed, or removed and the group is deleted, the completion and failure notifications of this group are displayed.
+Deletes a specified group. No task ID can be added to the group. This API uses a promise to return the result.
+
+When all tasks in a group are succeeded, failed, or removed and the group is deleted, the completion and failure notifications of this group are displayed.
 
 **Since:** 23
 
@@ -38,6 +40,6 @@ Deletes a specified group. No task ID can be added to the group. This API uses a
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
-| [21900008](../errorcode-request.md#21900008-task-group-not-found-or-deleted) | Group deleted or not found. |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900008](../errorcode-request.md#21900008-task-group-not-found-or-deleted) | Group deleted or not found. |
 

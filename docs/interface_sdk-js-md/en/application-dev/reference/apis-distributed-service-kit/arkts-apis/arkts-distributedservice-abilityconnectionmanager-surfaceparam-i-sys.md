@@ -2,6 +2,8 @@
 
 Surface configuration parameters.
 
+@interface SurfaceParam
+
 **Since:** 23
 
 <!--Device-abilityConnectionManager-interface SurfaceParam--><!--Device-abilityConnectionManager-interface SurfaceParam-End-->

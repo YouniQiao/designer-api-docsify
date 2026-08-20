@@ -40,8 +40,8 @@ Enable haptics when the ringer mode is silent mode. This function should be call
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operate not permit in current state. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operate not permit in current state. |
 
 ## isHapticsIntensityAdjustmentSupported
 
@@ -131,9 +131,9 @@ Set haptics intensity for this player. This method uses a promise to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Function is not supported in current device. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operate not permit in current state. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter out of range. |
 
 ## setHapticsRamp
@@ -170,8 +170,8 @@ Set haptics intensity ramp effect for this player. This method uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Function is not supported in current device. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operate not permit in current state. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter out of range. |
 

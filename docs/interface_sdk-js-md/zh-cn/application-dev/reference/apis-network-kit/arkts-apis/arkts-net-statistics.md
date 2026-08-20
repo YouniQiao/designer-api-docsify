@@ -1,6 +1,12 @@
 # @ohos.net.statistics
 
-流量管理模块提供获取设备网络流量数据的能力。该模块支持从多个维度查询数据包的流量使用情况，例如： - 支持获取指定网卡的上/下行流量数据； - 支持获取所有网卡的总流量数据，便于查看设备整体网络使用情况； - 支持根据应用uid获取指定应用的流量数据，帮助开发者监控应用的网络资源消耗； - 支持获取指定socket的流量统计，为细粒度的网络性能分析提供数据基础； - 支持获取应用在指定时间段内的历史流量使用情况，便于分析应用的长期网络使用趋势。 &gt; **说明：** &gt; &gt; 本模块首批接口从 API version 10 开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+流量管理模块提供获取设备网络流量数据的能力。该模块支持从多个维度查询数据包的流量使用情况，例如：
+
+- 支持获取指定网卡的上/下行流量数据； - 支持获取所有网卡的总流量数据，便于查看设备整体网络使用情况； - 支持根据应用uid获取指定应用的流量数据，帮助开发者监控应用的网络资源消耗； - 支持获取指定socket的流量统计，为细粒度的网络性能分析提供数据基础； - 支持获取应用在指定时间段内的历史流量使用情况，便于分析应用的长期网络使用趋势。
+
+> **说明：**
+> 
+> 本模块首批接口从 API version 10 开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **起始版本：** 23
 
@@ -50,7 +56,7 @@ import { statistics } from '@kit.NetworkKit';
 | [getMonthTrafficStats](arkts-network-statistics-getmonthtrafficstats-f-sys.md) | 获取蜂窝实时下行流量，使用 callback 异步回调。 |
 | [getTrafficPlanInfo](arkts-network-statistics-gettrafficplaninfo-f-sys.md) | 获取流量计划信息。 |
 | [getTrafficStatsByIface](arkts-network-statistics-gettrafficstatsbyiface-f-sys.md) | 获取指定网卡历史流量信息，使用 callback 异步回调。 |
-| [getTrafficStatsByIface](arkts-network-statistics-gettrafficstatsbyiface-f-sys.md) | 获取指定网卡历史流量信息，使用 Promise 异步回调。 \| 参数名 \| 类型 \| 必填 \| 说明 \| \| --------- \| ------------------------- \| ---- \| --------------------------------------------------- \| \| ifaceInfo \| [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md) \| 是 \| 指定查询的网卡信息，参见[IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md)。 \| |
+| [getTrafficStatsByIface](arkts-network-statistics-gettrafficstatsbyiface-f-sys.md) | 获取指定网卡历史流量信息，使用 Promise 异步回调。 |
 | [getTrafficStatsByNetwork](arkts-network-statistics-gettrafficstatsbynetwork-f-sys.md) | 获取指定时间段内所有应用在指定网络中的流量使用详情，使用 Promise 异步回调。 |
 | [getTrafficStatsByUid](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md) | 获取指定应用历史流量信息，使用 callback 异步回调。 |
 | [getTrafficStatsByUid](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md) | 获取指定应用历史流量信息，使用 Promise 异步回调。 |
@@ -98,6 +104,6 @@ import { statistics } from '@kit.NetworkKit';
 | 名称 | 说明 |
 | --- | --- |
 | [NetStatsInfoSequence](arkts-network-statistics-netstatsinfosequence-t-sys.md) | [NetStatsInfoSequenceItem](arkts-network-statistics-netstatsinfosequenceitem-i-sys.md)的数组。 |
-| [UidNetStatsInfo](arkts-network-statistics-uidnetstatsinfo-t-sys.md) | [NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md) for every UID. Key is UID. [NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md) for every UID. Key is UID. @syscap SystemCapability.Communication.NetManager.Core [NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md) for every UID. Key is UID. @systemapi Hide this for inner system use. [NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md) for every UID. Key is UID. @since 12 dynamic [NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md) for every UID. Key is UID./ export type UidNetStatsInfo = { [uid: int]: NetStatsInfo; }; /** [NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md) for every UID. Key is UID. |
+| [UidNetStatsInfo](arkts-network-statistics-uidnetstatsinfo-t-sys.md) | [NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md) for every UID. Key is UID. [NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md) for every UID. Key is UID. |
 <!--DelEnd-->
 

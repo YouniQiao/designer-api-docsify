@@ -1,6 +1,11 @@
 # @ohos.enterprise.applicationManager
 
-本模块提供应用管理能力，包括管理应用运行禁止名单、应用运行允许名单、开机自启动应用名单、保活应用名单、不可关停应用名单、后台防冻结应用名单、允许发送通知应用名单、允许跨设备应用名单等。适用于企业设备管理场景，可实现应用运行权限管控、开 机自启动管理、保活应用管理等，提升企业设备安全性和合规性。 &gt; **说明：** &gt; &gt; 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。 &gt; [applicationManager.isAppKioskAllowed](arkts-mdm-applicationmanager-isappkioskallowed-f.md)除外，该接口对所有应用开放。
+本模块提供应用管理能力，包括管理应用运行禁止名单、应用运行允许名单、开机自启动应用名单、保活应用名单、不可关停应用名单、后台防冻结应用名单、允许发送通知应用名单、允许跨设备应用名单等。适用于企业设备管理场景，可实现应用运行权限管控、开 机自启动管理、保活应用管理等，提升企业设备安全性和合规性。
+
+> **说明：**
+> 
+> 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。
+> [applicationManager.isAppKioskAllowed](arkts-mdm-applicationmanager-isappkioskallowed-f.md)除外，该接口对所有应用开放。
 
 **起始版本：** 10
 
@@ -22,18 +27,18 @@ import { applicationManager } from '@kit.MDMKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [addAllowedDistributeAbilityConnBundles](arkts-mdm-applicationmanager-addalloweddistributeabilityconnbundles-f.md) | 为指定用户下的特定分布式业务添加允许跨设备的应用名单。即名单中的应用可以不受 [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md)的限制， 通过使用该特定分布式业务跨设备传输数据。 当前支持的分布式业务类型有：[协同业务](arkts-mdm-applicationmanager-servicetype-e.md)。 |
+| [addAllowedDistributeAbilityConnBundles](arkts-mdm-applicationmanager-addalloweddistributeabilityconnbundles-f.md) | 为指定用户下的特定分布式业务添加允许跨设备的应用名单。即名单中的应用可以不受 [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md)的限制， 通过使用该特定分布式业务跨设备传输数据。 |
 | [addAllowedNotificationBundles](arkts-mdm-applicationmanager-addallowednotificationbundles-f.md) | 添加允许发送通知的应用名单。设置通知允许名单后，不在此名单内的应用无法发送通知。 |
 | [addAllowedRunningBundles](arkts-mdm-applicationmanager-addallowedrunningbundles-f.md) | 添加应用至应用运行允许名单，添加至允许名单的应用允许在指定用户下运行，不在允许名单的应用不允许在指定用户下运行。 |
 | [addAutoStartApps](arkts-mdm-applicationmanager-addautostartapps-f.md) | 为当前用户添加开机自启动应用名单。通过本接口添加至自启动名单的应用，禁止用户在设备上手动取消应用自启动，但可通过 [removeAutoStartApps](arkts-mdm-applicationmanager-removeautostartapps-f.md)接口将应用从自启动名单中移除。 |
-| [addAutoStartApps](arkts-mdm-applicationmanager-addautostartapps-f.md) | 为指定用户添加开机自启动应用名单，并设置是否禁止该用户手动取消应用自启动。 通过本接口、[addAutoStartApps](arkts-mdm-applicationmanager-addautostartapps-f.md)接口均可添加开机自启动应用名单，两个接口的设置可同时生效。同一用户下，开机自启动应用名单最多支持 包含10个应用。例如：若当前名单中已有3个应用，则最多还能通过本接口为当前用户添加7个应用。 |
+| [addAutoStartApps](arkts-mdm-applicationmanager-addautostartapps-f.md) | 为指定用户添加开机自启动应用名单，并设置是否禁止该用户手动取消应用自启动。 |
 | [addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md) | 添加应用至应用运行禁止名单，添加至禁止名单的应用不允许在当前/指定用户下运行。从API version 21开始，如果应用运行允许名单 [addAllowedRunningBundles](arkts-mdm-applicationmanager-addallowedrunningbundles-f.md)非空，就不能再通过本接口添加应用运行禁止名单，否则会报9200010冲突错误 码。 |
 | [addDockApp](arkts-mdm-applicationmanager-adddockapp-f.md) | 根据位置索引添加应用到PC/2in1设备的底部快捷栏，添加后用户可以通过点击快捷栏的应用图标直接启动应用，应用图标为应用在桌面上显示的默认图标。 |
-| [addFreezeExemptedApps](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md) | 为指定用户添加后台防冻结应用名单，仅可对已安装应用设置该策略。若参数列表中存在未安装应用，则返回9200012错误码。若设置策略后，名单中有应用被卸载，则卸载的应用将从名单中移除。若添加已存在于名单中的应用，返回成功，但已设置策略 名单中不会重复添加该应用。 冻结操作：对目标应用的挂起、软件资源代理、硬件资源代理和高功耗管控等操作。 |
+| [addFreezeExemptedApps](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md) | 为指定用户添加后台防冻结应用名单，仅可对已安装应用设置该策略。若参数列表中存在未安装应用，则返回9200012错误码。若设置策略后，名单中有应用被卸载，则卸载的应用将从名单中移除。若添加已存在于名单中的应用，返回成功，但已设置策略 名单中不会重复添加该应用。 |
 | [addHideLauncherIcon](arkts-mdm-applicationmanager-addhidelaunchericon-f.md) | 添加隐藏桌面应用图标名单。 |
-| [addKeepAliveApps](arkts-mdm-applicationmanager-addkeepaliveapps-f.md) | 添加保活应用名单，添加后将自动保活应用进程。在开机和应用被杀死后，由系统主动拉起应用进程。 通过本接口添加至保活名单的应用，禁止用户在设备上手动取消保活，但可通过 [removeKeepAliveApps](arkts-mdm-applicationmanager-removekeepaliveapps-f.md)接口将应用从保活名单中移除。 如果将应用添加至应用禁止运行名单[addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md)，就不能将应用添 加至保活应用名单，否则会报9200010冲突错误码。 如果需要在Phone/Tablet设备使用类似功能，可以调用[addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md)或者 [addFreezeExemptedApps](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md)接口，具体功能请参考相关文档。 |
-| [addKeepAliveApps](arkts-mdm-applicationmanager-addkeepaliveapps-f.md) | 添加保活应用名单，并设置是否禁止用户手动取消保活，添加后将自动保活应用进程。在开机和应用被杀死后，由系统主动拉起应用进程。 通过本接口、[addKeepAliveApps](arkts-mdm-applicationmanager-addkeepaliveapps-f.md)接口均可添加保活应用名单，两个接口的设置可同时生效。同一用户下，保活应用名单最多支持包含5个应 用。例如：若当前名单中已有3个应用，则最多还能通过本接口为当前用户添加2个应用。 如果通过[addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md)接口将应用添加至应用禁止运行名单，就不能 将应用添加至保活应用名单，否则会报9200010冲突错误码。 如果需要在Phone/Tablet设备使用类似功能，可以调用[addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md)或者 [addFreezeExemptedApps](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md)接口，具体功能请参考相关文档。 |
-| [addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md) | 为指定用户添加不可关停应用名单，仅可对已安装应用设置该策略。若参数列表中存在未安装应用，则返回9200012错误码。若设置策略后，名单中有应用被卸载，则卸载的应用将从名单中移除。若添加已存在于名单中的应用，返回成功，但已设置策略名 单中不会重复添加该应用。 不可关停应用在Phone和Tablet设备的效果：用户不能在任务中心上滑关闭应用；在设置-应用和元服务中点击应用名称进入详情页面后，页面中的强行停止按钮呈灰色不可用，页面中的停用按钮功能无效。 不可关停应用在PC/2in1设备的效果：用户在设置-应用和元服务中点击应用名称进入详情页面后，页面中的强行停止按钮呈灰色不可用，页面中的停用按钮功能无效。 从API版本26.0.0开始，调用 [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md)接口禁用 [SUPER_HUB](arkts-mdm-restrictions-featureforaccount-e.md)后，再调用该接口将中转站添加到不可关停应用名单时，会发生策略冲突，抛出9 200010错误码。 |
+| [addKeepAliveApps](arkts-mdm-applicationmanager-addkeepaliveapps-f.md) | 添加保活应用名单，添加后将自动保活应用进程。在开机和应用被杀死后，由系统主动拉起应用进程。 |
+| [addKeepAliveApps](arkts-mdm-applicationmanager-addkeepaliveapps-f.md) | 添加保活应用名单，并设置是否禁止用户手动取消保活，添加后将自动保活应用进程。在开机和应用被杀死后，由系统主动拉起应用进程。 |
+| [addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md) | 为指定用户添加不可关停应用名单，仅可对已安装应用设置该策略。若参数列表中存在未安装应用，则返回9200012错误码。若设置策略后，名单中有应用被卸载，则卸载的应用将从名单中移除。若添加已存在于名单中的应用，返回成功，但已设置策略名 单中不会重复添加该应用。 |
 | [clearUpApplicationData](arkts-mdm-applicationmanager-clearupapplicationdata-f.md) | 清除应用产生的所有数据。 |
 | [getAllowedDistributeAbilityConnBundles](arkts-mdm-applicationmanager-getalloweddistributeabilityconnbundles-f.md) | 获取指定用户下特定分布式业务的允许跨设备应用名单。 |
 | [getAllowedKioskApps](arkts-mdm-applicationmanager-getallowedkioskapps-f.md) | 获取允许在Kiosk模式下运行的应用。 |
@@ -75,8 +80,8 @@ import { applicationManager } from '@kit.MDMKit';
 | [removeKeepAliveApps](arkts-mdm-applicationmanager-removekeepaliveapps-f.md) | 移除保活应用名单中的指定应用。 |
 | [removeUserNonStopApps](arkts-mdm-applicationmanager-removeusernonstopapps-f.md) | 为指定用户删除不可关停应用名单。删除后，用户可以在设备上正常关停该应用。执行删除策略时，若参数列表中包含未安装应用，删除操作仍能成功执行；已安装的应用将被删除，未安装的应用不影响删除操作。 |
 | [setAbilityDisabled](arkts-mdm-applicationmanager-setabilitydisabled-f.md) | 设置是否禁用指定应用（系统应用和三方应用均支持）的Ability组件。当前仅支持UIAbility类型，禁用后无法拉起此Ability组件的用户界面。 |
-| [setAllowedKioskApps](arkts-mdm-applicationmanager-setallowedkioskapps-f.md) | 设置允许在Kiosk模式下运行的应用。 Kiosk模式为系统层面提供的一种应用运行模式，该模式下会将设备锁定在单个应用或者一组应用运行，同时对锁屏状态、状态栏、手势操作和关键功能进行控制，防止用户在设备上启动其它应用或执行其它操作。 |
-| [setKioskFeatures](arkts-mdm-applicationmanager-setkioskfeatures-f.md) | 设置Kiosk模式的特征。通过本接口可以控制在Kiosk模式下能否进入通知中心、控制中心。 从API version 24开始，新增支持设置是否允许底部上滑进入最近任务栏，左滑或右滑悬停展示侧边DOCK栏。 在非Kiosk模式下，本接口可以正常调用，但是不会生效，进入Kiosk模式后才会生效。 |
+| [setAllowedKioskApps](arkts-mdm-applicationmanager-setallowedkioskapps-f.md) | 设置允许在Kiosk模式下运行的应用。 |
+| [setKioskFeatures](arkts-mdm-applicationmanager-setkioskfeatures-f.md) | 设置Kiosk模式的特征。通过本接口可以控制在Kiosk模式下能否进入通知中心、控制中心。 |
 
 <!--Del-->
 ### 函数（系统接口）

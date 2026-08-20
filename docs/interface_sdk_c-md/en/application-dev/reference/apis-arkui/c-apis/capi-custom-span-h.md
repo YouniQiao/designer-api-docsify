@@ -155,7 +155,7 @@ Sets the width for a custom span.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_CustomSpanMetrics](capi-arkui-nativemodule-arkui-customspanmetrics.md)* metrics | Indicates the pointer to a <b>CustomSpanMetrics</b> instance. |
-| float width | Indicates the width, in px. The width should be greater than 0. |
+| float width | Indicates the width, in vp. The width should be greater than 0. |
 
 **Returns**:
 
@@ -180,7 +180,7 @@ Sets the height for a custom span.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_CustomSpanMetrics](capi-arkui-nativemodule-arkui-customspanmetrics.md)* metrics | Indicates the pointer to a <b>CustomSpanMetrics</b> instance. |
-| width | Indicates the height, in px. The width should be greater than 0. |
+| float height | Indicates the height, in vp. The height should be greater than 0. |
 
 **Returns**:
 

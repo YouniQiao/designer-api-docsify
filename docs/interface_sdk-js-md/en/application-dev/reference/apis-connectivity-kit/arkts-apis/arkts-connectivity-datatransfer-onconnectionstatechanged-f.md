@@ -12,7 +12,9 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 function onConnectionStateChanged(callback: Callback<ConnectionResult>): void
 ```
 
-Subscribes to the connection state change event. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
+Subscribes to the connection state change event.
+
+This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
 
 **Since:** 26.0.0
 

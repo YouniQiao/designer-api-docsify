@@ -24,7 +24,7 @@ data: KVObject
 
 Defines data.
 
-**Type:** [KVObject](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-kvobject-t.md)
+**Type:** [KVObject](../../apis-default/arkts-apis/arkts-plugincomponentmanager-kvobject-t.md)
 
 **Since:** 9
 
@@ -42,7 +42,7 @@ extraData: KVObject
 
 Defines extraData.
 
-**Type:** [KVObject](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-kvobject-t.md)
+**Type:** [KVObject](../../apis-default/arkts-apis/arkts-plugincomponentmanager-kvobject-t.md)
 
 **Since:** 9
 

@@ -2,6 +2,8 @@
 
 Provides methods to operate or manage NFC card emulation.
 
+@namespace cardEmulation
+
 **Since:** 23
 
 <!--Device-unnamed-declare namespace cardEmulation--><!--Device-unnamed-declare namespace cardEmulation-End-->

@@ -1,6 +1,8 @@
 # Display
 
-Implements a Display instance, with attributes and APIs defined. Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md) to obtain a Display instance.
+Implements a Display instance, with attributes and APIs defined.
+
+Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md) to obtain a Display instance.
 
 **Since:** 23
 
@@ -20,7 +22,11 @@ import { display } from '@kit.ArkUI';
 getAvailableArea(): Promise<Rect>
 ```
 
-Obtains the available area of the display of the current device. This API uses a promise to return the result. The available area is the space left for applications after the system UI (such as the status bar and dock bar) is accounted for. This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets, but does not work for other device types. To obtain the available area on the current device screen, you can use the width and height attributes in Display.
+Obtains the available area of the display of the current device. This API uses a promise to return the result.
+
+The available area is the space left for applications after the system UI (such as the status bar and dock bar) is accounted for.
+
+This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets, but does not work for other device types. To obtain the available area on the current device screen, you can use the width and height attributes in Display.
 
 **Since:** 23
 
@@ -275,7 +281,9 @@ try {
 offAvailableAreaChange(callback?: Callback<Rect>): void
 ```
 
-Unregister the callback for available area changes. This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets. If being called on other device types, it does not take effect and no error is reported.
+Unregister the callback for available area changes.
+
+This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets. If being called on other device types, it does not take effect and no error is reported.
 
 **Since:** 23
 
@@ -301,7 +309,9 @@ Unregister the callback for available area changes. This API can be properly cal
 off(type: 'availableAreaChange', callback?: Callback<Rect>): void
 ```
 
-Unsubscribes from changes of the available area on the display of the current device. This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets. If being called on other device types, it does not take effect and no error is reported.
+Unsubscribes from changes of the available area on the display of the current device.
+
+This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets. If being called on other device types, it does not take effect and no error is reported.
 
 **Since:** 12
 
@@ -349,7 +359,9 @@ try {
 onAvailableAreaChange(callback: Callback<Rect>): void
 ```
 
-Register the callback for available area changes. This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets. If being called on other device types, it does not take effect and no error is reported.
+Register the callback for available area changes.
+
+This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets. If being called on other device types, it does not take effect and no error is reported.
 
 **Since:** 23
 
@@ -375,7 +387,9 @@ Register the callback for available area changes. This API can be properly calle
 on(type: 'availableAreaChange', callback: Callback<Rect>): void
 ```
 
-Subscribes to changes of the available area on the display of the current device. This callback function is triggered when the screen rotates, the freeform mode is enabled or disabled, or the visibility of system components such as the dock bar and status bar changes, and returns the available area information. This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets. If being called on other device types, it does not take effect and no error is reported.
+Subscribes to changes of the available area on the display of the current device. This callback function is triggered when the screen rotates, the freeform mode is enabled or disabled, or the visibility of system components such as the dock bar and status bar changes, and returns the available area information.
+
+This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets. If being called on other device types, it does not take effect and no error is reported.
 
 **Since:** 12
 
@@ -441,7 +455,9 @@ Whether the display is alive. The value **true** indicates that the display is a
 availableHeight: long
 ```
 
-eight of the available area, in px. The value is an integer greater than 0. This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets, but does not work for other device types. To obtain the height of the available area on the current device screen, you can use the height attribute.
+eight of the available area, in px. The value is an integer greater than 0.
+
+This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets, but does not work for other device types. To obtain the height of the available area on the current device screen, you can use the height attribute.
 
 **Type:** long
 
@@ -459,7 +475,9 @@ eight of the available area, in px. The value is an integer greater than 0. This
 availableWidth: long
 ```
 
-Width of the available area, in px. The value is an integer greater than 0. This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets, but does not work for other device types. To obtain the width of the available area on the current device screen, you can use the width attribute.
+Width of the available area, in px. The value is an integer greater than 0.
+
+This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets, but does not work for other device types. To obtain the width of the available area on the current device screen, you can use the width attribute.
 
 **Type:** long
 

@@ -1,6 +1,12 @@
 # ImagePacker
 
-The **ImagePacker** class provides APIs to compress and encode images. Before calling any API in ImagePacker, you must use [image.createImagePacker](arkts-image-image-createimagepacker-f.md) to create an ImagePacker instance. During encoding, do not modify or release the ImageSource, PixelMap, or Picture object that is being used as the input. Otherwise, a crash or other undefined behavior may occur. Images occupy a large amount of memory. When you finish using an ImagePacker instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. Currently, the following formats are supported: jpeg, webp, png, heic&lt;sup&gt;12+&lt;/sup&gt;, and gif&lt;sup&gt;18+&lt;/sup&gt;. (The supported formats may vary depending on the hardware. You can refer to the **supportedFormats** property of ImagePacker to see which ones are supported.)
+The **ImagePacker** class provides APIs to compress and encode images.
+
+Before calling any API in ImagePacker, you must use [image.createImagePacker](arkts-image-image-createimagepacker-f.md) to create an ImagePacker instance. During encoding, do not modify or release the ImageSource, PixelMap, or Picture object that is being used as the input. Otherwise, a crash or other undefined behavior may occur.
+
+Images occupy a large amount of memory. When you finish using an ImagePacker instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+
+Currently, the following formats are supported: jpeg, webp, png, heic&lt;sup&gt;12+&lt;/sup&gt;, and gif&lt;sup&gt;18+&lt;/sup&gt;. (The supported formats may vary depending on the hardware. You can refer to the **supportedFormats** property of ImagePacker to see which ones are supported.)
 
 **Since:** 23
 
@@ -47,8 +53,8 @@ Compresses or packs an image into a file and uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7800301](../errorcode-image.md#7800301-encoding-failure) | Encode failed. |
 | [7800202](../errorcode-image.md#7800202-invalid-imagepacker-parameter) | Invalid parameter. Possible causes: 1. Invalid FD; 2. Compression algorithm mismatch. |
+| [7800301](../errorcode-image.md#7800301-encoding-failure) | Encode failed. |
 
 ## packBinaryImageToTiffFile
 
@@ -84,8 +90,8 @@ Compresses or packs an image into a file and uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7800301](../errorcode-image.md#7800301-encoding-failure) | Encode failed. |
 | [7800202](../errorcode-image.md#7800202-invalid-imagepacker-parameter) | Invalid parameter. Possible causes: 1. Invalid FD; 2. Compression algorithm mismatch. |
+| [7800301](../errorcode-image.md#7800301-encoding-failure) | Encode failed. |
 
 ## packToData
 
@@ -120,13 +126,13 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | If the parameter is invalid. |
 | [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
 | [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
 | [62980119](../errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
 | [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 | [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
 | [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
 
@@ -136,7 +142,11 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>
 ```
 
-Compresses or re-encodes an image. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; If error code 401 is returned, the parameters are abnormal. The possible cause is that the PixelMap object is &gt; released in advance. You need to check the code and ensure that the PixelMap object is released after this API &gt; is called.
+Compresses or re-encodes an image. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> If error code 401 is returned, the parameters are abnormal. The possible cause is that the PixelMap object is &gt; released in advance. You need to check the code and ensure that the PixelMap object is released after this API &gt; is called.
 
 **Since:** 23
 
@@ -163,13 +173,13 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | If the parameter is invalid. |
 | [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
 | [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
 | [62980119](../errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
 | [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 | [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
 | [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
 
@@ -234,13 +244,13 @@ Encodes the image source into a file based on the specified encoding parameters.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
 | [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
 | [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
 | [62980119](../errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
 | [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 | [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
 | [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
 
@@ -276,13 +286,13 @@ Encodes the image source into a file based on the specified encoding parameters.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
 | [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
 | [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
 | [62980119](../errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
 | [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 | [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
 | [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
 
@@ -292,7 +302,11 @@ Encodes the image source into a file based on the specified encoding parameters.
 packToFile(source: PixelMap, fd: int, options: PackingOption, callback: AsyncCallback<void>): void
 ```
 
-Encodes the PixelMap into a file based on the specified encoding parameters. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap &gt; object is released in advance. You need to check the code and ensure that the PixelMap object is released after &gt; this API is called.
+Encodes the PixelMap into a file based on the specified encoding parameters. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap &gt; object is released in advance. You need to check the code and ensure that the PixelMap object is released after &gt; this API is called.
 
 **Since:** 23
 
@@ -313,13 +327,13 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
 | [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
 | [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
 | [62980119](../errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
 | [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 | [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
 | [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
 
@@ -329,7 +343,11 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 packToFile(source: PixelMap, fd: int, options: PackingOption): Promise<void>
 ```
 
-Encodes the PixelMap into a file based on the specified encoding parameters. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap &gt; object is released in advance. You need to check the code and ensure that the PixelMap object is released after &gt; this API is called.
+Encodes the PixelMap into a file based on the specified encoding parameters. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap &gt; object is released in advance. You need to check the code and ensure that the PixelMap object is released after &gt; this API is called.
 
 **Since:** 23
 
@@ -355,13 +373,13 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
 | [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
 | [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
 | [62980119](../errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
 | [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 | [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
 | [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
 
@@ -502,7 +520,11 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBuffer>): void
 ```
 
-Compresses or re-encodes an image. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the &gt; PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is &gt; released after this API is called.
+Compresses or re-encodes an image. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the &gt; PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is &gt; released after this API is called.
 
 **Since:** 8
 
@@ -530,7 +552,11 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 packing(source: PixelMap, option: PackingOption): Promise<ArrayBuffer>
 ```
 
-Compresses or re-encodes an image. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the &gt; PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is &gt; released after this API is called.
+Compresses or re-encodes an image. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the &gt; PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is &gt; released after this API is called.
 
 **Since:** 8
 
@@ -597,7 +623,11 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases this ImagePacker instance. This API uses an asynchronous callback to return the result. Images occupy a large amount of memory. When you finish using an ImagePacker instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this ImagePacker instance. This API uses an asynchronous callback to return the result.
+
+Images occupy a large amount of memory. When you finish using an ImagePacker instance, call this API to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 23
 
@@ -617,7 +647,11 @@ Releases this ImagePacker instance. This API uses an asynchronous callback to re
 release(): Promise<void>
 ```
 
-Releases this ImagePacker instance. This API uses a promise to return the result. Images occupy a large amount of memory. When you finish using an ImagePacker instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this ImagePacker instance. This API uses a promise to return the result.
+
+Images occupy a large amount of memory. When you finish using an ImagePacker instance, call this API to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 23
 

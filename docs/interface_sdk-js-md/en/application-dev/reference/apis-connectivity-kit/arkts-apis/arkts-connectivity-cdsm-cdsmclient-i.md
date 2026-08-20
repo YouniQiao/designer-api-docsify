@@ -42,9 +42,9 @@ Gets the coordinated devices set information.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## offCdsmInfoChange
 
@@ -74,7 +74,9 @@ Unsubscribes from coordinated devices set information change event.
 onCdsmInfoChange(callback: Callback<CdsmInfo>): void
 ```
 
-Subscribes to coordinated devices set information change event. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned.
+Subscribes to coordinated devices set information change event.
+
+This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned.
 
 **Since:** 26.0.0
 

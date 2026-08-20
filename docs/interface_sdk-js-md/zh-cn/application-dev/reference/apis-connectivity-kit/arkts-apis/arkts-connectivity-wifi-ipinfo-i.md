@@ -2,6 +2,8 @@
 
 WLAN IP信息。
 
+@interface IpInfo
+
 **起始版本：** 7
 
 **废弃版本：** 9

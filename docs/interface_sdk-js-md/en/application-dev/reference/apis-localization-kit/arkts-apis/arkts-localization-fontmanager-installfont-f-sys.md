@@ -40,12 +40,12 @@ Installs a font file from a specified path into the system font library. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [31100106](../errorcode-font-manager.md#31100106-font-file-installation-failed-due-to-other-errors) | The system ability works abnormally. |
-| [31100104](../errorcode-font-manager.md#31100104-font-file-already-installed) | The font file is installed. |
-| [31100105](../errorcode-font-manager.md#31100105-number-of-installed-font-files-reaching-the-maximum) | Exceeded the maximum number of installed files. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [31100101](../errorcode-font-manager.md#31100101-font-file-not-exist) | The font does not exist. |
 | [31100102](../errorcode-font-manager.md#31100102-failed-to-install-font-file) | The font is not supported. |
 | [31100103](../errorcode-font-manager.md#31100103-failed-to-copy-font-file) | Failed to copy the font file. |
-| [31100101](../errorcode-font-manager.md#31100101-font-file-not-exist) | The font does not exist. |
+| [31100104](../errorcode-font-manager.md#31100104-font-file-already-installed) | The font file is installed. |
+| [31100105](../errorcode-font-manager.md#31100105-number-of-installed-font-files-reaching-the-maximum) | Exceeded the maximum number of installed files. |
+| [31100106](../errorcode-font-manager.md#31100106-font-file-installation-failed-due-to-other-errors) | The system ability works abnormally. |
 

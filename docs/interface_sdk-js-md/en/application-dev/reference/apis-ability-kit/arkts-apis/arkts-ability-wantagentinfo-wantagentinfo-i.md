@@ -82,7 +82,9 @@ Extra information about how the Want starts an ability. If there is no extra inf
 operationType?: wantAgent.OperationType
 ```
 
-Operation type. This attribute is supported since API version 7 and deprecated since API version 11. You are advised to use actionType&lt;sup&gt;11+&lt;/sup&gt; instead.
+Operation type.
+
+This attribute is supported since API version 7 and deprecated since API version 11. You are advised to use actionType&lt;sup&gt;11+&lt;/sup&gt; instead.
 
 **Type:** wantAgent.OperationType
 
@@ -122,7 +124,9 @@ Custom request code, which is used to identify the operation to execute.
 wantAgentFlags?: Array<wantAgent.WantAgentFlags>
 ```
 
-Array of flags for using the WantAgent object. This attribute is supported since API version 7 and deprecated since API version 11. You are advised to use actionFlags&lt;sup&gt;11+&lt;/sup&gt; instead.
+Array of flags for using the WantAgent object.
+
+This attribute is supported since API version 7 and deprecated since API version 11. You are advised to use actionFlags&lt;sup&gt;11+&lt;/sup&gt; instead.
 
 **Type:** Array&lt;wantAgent.WantAgentFlags&gt;
 

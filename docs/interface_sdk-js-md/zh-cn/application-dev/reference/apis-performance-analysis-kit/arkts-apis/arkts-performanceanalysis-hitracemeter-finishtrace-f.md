@@ -12,7 +12,11 @@ import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 function finishTrace(name: string, taskId: int): void
 ```
 
-标记一个异步跟踪耗时任务的结束。调用成功后，完成该任务的跟踪。 finishTrace的name和taskId必须与流程开始的[startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md)对应参数值一致。 从API version 19开始，建议使用[finishAsyncTrace()](arkts-performanceanalysis-hitracemeter-finishasynctrace-f.md)接口（需与 [startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md)接口配套使用）。
+标记一个异步跟踪耗时任务的结束。调用成功后，完成该任务的跟踪。
+
+finishTrace的name和taskId必须与流程开始的[startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md)对应参数值一致。
+
+从API version 19开始，建议使用[finishAsyncTrace()](arkts-performanceanalysis-hitracemeter-finishasynctrace-f.md)接口（需与 [startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md)接口配套使用）。
 
 **起始版本：** 23
 

@@ -20,7 +20,11 @@ import { appAccount } from '@kit.BasicServicesKit';
 addAccount(name: string, callback: AsyncCallback<void>): void
 ```
 
-Adds an application account with the given name. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [createAccount](#createaccount) &gt; instead.
+Adds an application account with the given name. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [createAccount](#createaccount) &gt; instead.
 
 **Since:** 7
 
@@ -55,7 +59,11 @@ appAccountManager.addAccount('WangWu', (err: BusinessError) => {
 addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void
 ```
 
-Adds an application account name and additional information. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [createAccount](#createaccount) &gt; instead.
+Adds an application account name and additional information. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [createAccount](#createaccount) &gt; instead.
 
 **Since:** 7
 
@@ -91,7 +99,11 @@ appAccountManager.addAccount('LiSi', 'token101', (err: BusinessError) => {
 addAccount(name: string, extraInfo?: string): Promise<void>
 ```
 
-Adds an application account name and additional information. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [createAccount](#createaccount) &gt; instead.
+Adds an application account name and additional information. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [createAccount](#createaccount) &gt; instead.
 
 **Since:** 7
 
@@ -139,7 +151,11 @@ addAccountImplicitly(
     ): void
 ```
 
-Adds an application account implicitly based on the specified owner. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [createAccountImplicitly](#createaccountimplicitly) &gt; instead.
+Adds an application account implicitly based on the specified owner. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [createAccountImplicitly](#createaccountimplicitly) &gt; instead.
 
 **Since:** 8
 
@@ -188,12 +204,12 @@ Authenticates an application account. This API uses an asynchronous callback to 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or authType. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or authType. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
 | [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 
 **Examples**
 
@@ -276,12 +292,12 @@ Authenticates an application account. This API uses an asynchronous callback to 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner, authType or options. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner, authType or options. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
 | [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 
 **Examples**
 
@@ -366,12 +382,12 @@ Authenticates an application account. This API uses an asynchronous callback to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner, authType or options. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner, authType or options. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
 | [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 
 ## authenticate
 
@@ -385,7 +401,11 @@ authenticate(
     ): void
 ```
 
-Authenticates an application account. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [auth](#auth) &gt; instead.
+Authenticates an application account. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [auth](#auth) &gt; instead.
 
 **Since:** 8
 
@@ -435,12 +455,12 @@ Checks whether an application account has specific labels. This API uses an asyn
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or labels. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or labels. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
 | [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 
 **Examples**
 
@@ -496,12 +516,12 @@ Checks whether an application account has specific labels. This API uses a promi
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or labels. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or labels. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
 | [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 
 **Examples**
 
@@ -549,9 +569,9 @@ Checks whether an application can access the data of an account. This API uses a
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or bundleName. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or bundleName. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 **Examples**
 
@@ -605,9 +625,9 @@ Checks whether an application can access the data of an account. This API uses a
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or bundleName. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or bundleName. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 **Examples**
 
@@ -632,7 +652,11 @@ try {
 checkAppAccountSyncEnable(name: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether data synchronization is enabled for an application account. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [checkDataSyncEnabled](#checkdatasyncenabled) &gt; instead.
+Checks whether data synchronization is enabled for an application account. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [checkDataSyncEnabled](#checkdatasyncenabled) &gt; instead.
 
 **Since:** 7
 
@@ -673,7 +697,11 @@ appAccountManager.checkAppAccountSyncEnable('ZhangSan', (err: BusinessError, res
 checkAppAccountSyncEnable(name: string): Promise<boolean>
 ```
 
-Checks whether data synchronization is enabled for an application account. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [checkDataSyncEnabled](#checkdatasyncenabled) instead.
+Checks whether data synchronization is enabled for an application account. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [checkDataSyncEnabled](#checkdatasyncenabled) instead.
 
 **Since:** 7
 
@@ -738,11 +766,11 @@ Checks the visibility of an authorization token of the specified authentication 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300107](../errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or bundleName. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or bundleName. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300107](../errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
 
 **Examples**
 
@@ -796,11 +824,11 @@ Checks the visibility of an authorization token of the specified authentication 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300107](../errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or bundleName. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or bundleName. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300107](../errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
 
 **Examples**
 
@@ -847,11 +875,11 @@ Checks whether data synchronization is enabled for an application account. This 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 **Examples**
 
@@ -904,11 +932,11 @@ Checks whether data synchronization is enabled for an application account. This 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 **Examples**
 
@@ -938,7 +966,11 @@ checkOAuthTokenVisibility(
     ): void
 ```
 
-Checks the visibility of an authorization token of the specified authentication type to an application. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [checkAuthTokenVisibility](#checkauthtokenvisibility) &gt; instead.
+Checks the visibility of an authorization token of the specified authentication type to an application. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [checkAuthTokenVisibility](#checkauthtokenvisibility) &gt; instead.
 
 **Since:** 8
 
@@ -980,7 +1012,11 @@ appAccountManager.checkOAuthTokenVisibility('LiSi', 'getSocialData', 'com.exampl
 checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>
 ```
 
-Checks the visibility of an authorization token of the specified authentication type to an application. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [checkAuthTokenVisibility](#checkauthtokenvisibility) &gt; instead.
+Checks the visibility of an authorization token of the specified authentication type to an application. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [checkAuthTokenVisibility](#checkauthtokenvisibility) &gt; instead.
 
 **Since:** 8
 
@@ -1045,10 +1081,10 @@ Creates an application account with the given name. This API uses an asynchronou
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300007](../errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
 | [12300004](../errorcode-account.md#12300004-account-already-exists) | Account already exists. |
+| [12300007](../errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
 
 **Examples**
 
@@ -1096,10 +1132,10 @@ Creates an application account with custom data. This API uses an asynchronous c
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or options. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300007](../errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or options. |
 | [12300004](../errorcode-account.md#12300004-account-already-exists) | Account already exists. |
+| [12300007](../errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
 
 **Examples**
 
@@ -1157,10 +1193,10 @@ Creates an application account with custom data. This API uses a promise to retu
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or options. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300007](../errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or options. |
 | [12300004](../errorcode-account.md#12300004-account-already-exists) | Account already exists. |
+| [12300007](../errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
 
 **Examples**
 
@@ -1210,12 +1246,12 @@ Creates an application account implicitly based on the specified account owner. 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
 | [12300007](../errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 
 **Examples**
 
@@ -1289,12 +1325,12 @@ Creates an application account implicitly based on the specified account owner a
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid owner or options. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid owner or options. |
 | [12300007](../errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 
 **Examples**
 
@@ -1351,7 +1387,11 @@ struct Index {
 deleteAccount(name: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes an application account. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [removeAccount](#removeaccount) &gt; instead.
+Deletes an application account. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [removeAccount](#removeaccount) &gt; instead.
 
 **Since:** 7
 
@@ -1386,7 +1426,11 @@ appAccountManager.deleteAccount('ZhaoLiu', (err: BusinessError) => {
 deleteAccount(name: string): Promise<void>
 ```
 
-Deletes an application account. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [removeAccount](#removeaccount) &gt; instead.
+Deletes an application account. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [removeAccount](#removeaccount) &gt; instead.
 
 **Since:** 7
 
@@ -1450,11 +1494,11 @@ Deletes the authorization token of the specified authentication type for an appl
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300107](../errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner, authType or token. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner, authType or token. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300107](../errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
 
 **Examples**
 
@@ -1509,11 +1553,11 @@ Deletes the authorization token of the specified authentication type for an appl
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300107](../errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner, authType or token. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner, authType or token. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300107](../errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
 
 **Examples**
 
@@ -1559,9 +1603,9 @@ Deletes the credential of the specified type from an application account. This A
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or credentialType. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or credentialType. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12300102](../errorcode-account.md#12300102-credential-not-found) | Credential not found. |
 
 **Examples**
@@ -1615,9 +1659,9 @@ Deletes the credential of the specified type from an application account. This A
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or credentialType. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or credentialType. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12300102](../errorcode-account.md#12300102-credential-not-found) | Credential not found. |
 
 **Examples**
@@ -1643,7 +1687,11 @@ try {
 deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes the authorization token of the specified authentication type for an application account. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [deleteAuthToken](#deleteauthtoken) &gt; instead.
+Deletes the authorization token of the specified authentication type for an application account. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [deleteAuthToken](#deleteauthtoken) &gt; instead.
 
 **Since:** 8
 
@@ -1686,7 +1734,11 @@ appAccountManager.deleteOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSoci
 deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>
 ```
 
-Deletes the authorization token of the specified authentication type for an application account. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [deleteAuthToken](#deleteauthtoken) &gt; instead.
+Deletes the authorization token of the specified authentication type for an application account. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [deleteAuthToken](#deleteauthtoken) &gt; instead.
 
 **Since:** 8
 
@@ -1731,7 +1783,11 @@ appAccountManager.deleteOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSoci
 disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-Disables an application account from accessing an application. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setAppAccess](#setappaccess) &gt; instead.
+Disables an application account from accessing an application. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setAppAccess](#setappaccess) &gt; instead.
 
 **Since:** 7
 
@@ -1767,7 +1823,11 @@ appAccountManager.disableAppAccess('ZhangSan', 'com.example.accountjsdemo', (err
 disableAppAccess(name: string, bundleName: string): Promise<void>
 ```
 
-Disables an application account from accessing an application. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setAppAccess](#setappaccess) &gt; instead.
+Disables an application account from accessing an application. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setAppAccess](#setappaccess) &gt; instead.
 
 **Since:** 7
 
@@ -1810,7 +1870,11 @@ appAccountManager.disableAppAccess('ZhangSan', 'com.example.accountjsdemo').then
 enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-Enables an application account to access an application. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setAppAccess](#setappaccess) &gt; instead.
+Enables an application account to access an application. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setAppAccess](#setappaccess) &gt; instead.
 
 **Since:** 7
 
@@ -1850,7 +1914,11 @@ appAccountManager.enableAppAccess('ZhangSan', 'com.example.accountjsdemo', (err:
 enableAppAccess(name: string, bundleName: string): Promise<void>
 ```
 
-Enables an application account to access an application. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setAppAccess](#setappaccess) &gt; instead.
+Enables an application account to access an application. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setAppAccess](#setappaccess) &gt; instead.
 
 **Since:** 7
 
@@ -1893,7 +1961,11 @@ appAccountManager.enableAppAccess('ZhangSan', 'com.example.accountjsdemo').then(
 getAccountCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the credential of an application account. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getCredential](#getcredential) &gt; instead.
+Obtains the credential of an application account. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getCredential](#getcredential) &gt; instead.
 
 **Since:** 7
 
@@ -1933,7 +2005,11 @@ appAccountManager.getAccountCredential('ZhangSan', 'credentialType001', (err: Bu
 getAccountCredential(name: string, credentialType: string): Promise<string>
 ```
 
-Obtains the credential of an application account. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getCredential](#getcredential) &gt; instead.
+Obtains the credential of an application account. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getCredential](#getcredential) &gt; instead.
 
 **Since:** 7
 
@@ -1976,7 +2052,11 @@ appAccountManager.getAccountCredential('ZhangSan', 'credentialType001').then((da
 getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains additional information of an application account. Additional information refers to other information that can be converted to the string type. It cannot contain sensitive information, such as the application account password and token. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getCustomData](#getcustomdata) &gt; instead.
+Obtains additional information of an application account. Additional information refers to other information that can be converted to the string type. It cannot contain sensitive information, such as the application account password and token. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getCustomData](#getcustomdata) &gt; instead.
 
 **Since:** 7
 
@@ -2015,7 +2095,11 @@ appAccountManager.getAccountExtraInfo('ZhangSan', (err: BusinessError, result: s
 getAccountExtraInfo(name: string): Promise<string>
 ```
 
-Obtains additional information of an application account. Additional information refers to other information that can be converted to the string type. It cannot contain sensitive information, such as the application account password and token. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getCustomData](#getcustomdata) instead.
+Obtains additional information of an application account. Additional information refers to other information that can be converted to the string type. It cannot contain sensitive information, such as the application account password and token. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getCustomData](#getcustomdata) instead.
 
 **Since:** 7
 
@@ -2076,8 +2160,8 @@ Obtains the application accounts that can be accessed by the invoker based on th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
 | [12400001](../errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
 
 **Examples**
@@ -2130,8 +2214,8 @@ Obtains the application accounts that can be accessed by the invoker based on th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
 | [12400001](../errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
 
 **Examples**
@@ -2158,7 +2242,11 @@ try {
 getAllAccessibleAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-Obtains information about all accessible application accounts. This API uses an asynchronous callback to return the result. This method applies to the following accounts: <br> Accounts of this application. <br> Accounts of third-party applications. To obtain such information, <br> your application must have gained authorization from the third-party applications. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getAllAccounts](#getallaccounts) &gt; instead.
+Obtains information about all accessible application accounts. This API uses an asynchronous callback to return the result. This method applies to the following accounts: <br> Accounts of this application. <br> Accounts of third-party applications. To obtain such information, <br> your application must have gained authorization from the third-party applications.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getAllAccounts](#getallaccounts) &gt; instead.
 
 **Since:** 7
 
@@ -2198,7 +2286,11 @@ appAccountManager.getAllAccessibleAccounts((err: BusinessError, data: appAccount
 getAllAccessibleAccounts(): Promise<Array<AppAccountInfo>>
 ```
 
-Obtains information about all accessible application accounts. This API uses a promise to return the result. This method applies to the following accounts: <br> Accounts of this application. <br> Accounts of third-party applications. To obtain such information, <br> your application must have gained authorization from the third-party applications. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getAllAccounts](#getallaccounts) instead.
+Obtains information about all accessible application accounts. This API uses a promise to return the result. This method applies to the following accounts: <br> Accounts of this application. <br> Accounts of third-party applications. To obtain such information, <br> your application must have gained authorization from the third-party applications.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getAllAccounts](#getallaccounts) instead.
 
 **Since:** 7
 
@@ -2325,7 +2417,11 @@ try {
 getAllAccounts(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-Obtains the application accounts that can be accessed by the invoker based on the application account owner. This API uses an asynchronous callback to return the result. This method applies to the following accounts: <br> Accounts of this application. <br> Accounts of third-party applications. To obtain such information, <br> your application must have gained authorization from the third-party applications. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getAccountsByOwner](#getaccountsbyowner) &gt; instead.
+Obtains the application accounts that can be accessed by the invoker based on the application account owner. This API uses an asynchronous callback to return the result. This method applies to the following accounts: <br> Accounts of this application. <br> Accounts of third-party applications. To obtain such information, <br> your application must have gained authorization from the third-party applications.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getAccountsByOwner](#getaccountsbyowner) &gt; instead.
 
 **Since:** 7
 
@@ -2367,7 +2463,11 @@ appAccountManager.getAllAccounts(selfBundle, (err: BusinessError, data: appAccou
 getAllAccounts(owner: string): Promise<Array<AppAccountInfo>>
 ```
 
-Obtains the application accounts that can be accessed by the invoker based on the application account owner. This API uses a promise to return the result. This method applies to the following accounts: <br> Accounts of this application. <br> Accounts of third-party applications. To obtain such information, <br> your application must have gained authorization from the third-party applications. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getAccountsByOwner](#getaccountsbyowner) instead.
+Obtains the application accounts that can be accessed by the invoker based on the application account owner. This API uses a promise to return the result. This method applies to the following accounts: <br> Accounts of this application. <br> Accounts of third-party applications. To obtain such information, <br> your application must have gained authorization from the third-party applications.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getAccountsByOwner](#getaccountsbyowner) instead.
 
 **Since:** 7
 
@@ -2433,9 +2533,9 @@ Obtains all tokens visible to the invoker for an application account. This API u
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or owner. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or owner. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 **Examples**
 
@@ -2489,9 +2589,9 @@ Obtains all tokens visible to the invoker for an application account. This API u
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or owner. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or owner. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 **Examples**
 
@@ -2517,7 +2617,11 @@ try {
 getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void
 ```
 
-Obtains all tokens visible to the invoker for an application account. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAllAuthTokens](#getallauthtokens) &gt; instead.
+Obtains all tokens visible to the invoker for an application account. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAllAuthTokens](#getallauthtokens) &gt; instead.
 
 **Since:** 8
 
@@ -2558,7 +2662,11 @@ appAccountManager.getAllOAuthTokens('LiSi', 'com.example.accountjsdemo',
 getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>
 ```
 
-Obtains all tokens visible to the invoker for an application account. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAllAuthTokens](#getallauthtokens) instead.
+Obtains all tokens visible to the invoker for an application account. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAllAuthTokens](#getallauthtokens) instead.
 
 **Since:** 8
 
@@ -2602,7 +2710,11 @@ appAccountManager.getAllOAuthTokens('LiSi', 'com.example.accountjsdemo').then((
 getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the associated data of an application account based on the specified key. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getCustomData](#getcustomdata) &gt; instead.
+Obtains the associated data of an application account based on the specified key. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getCustomData](#getcustomdata) &gt; instead.
 
 **Since:** 7
 
@@ -2642,7 +2754,11 @@ appAccountManager.getAssociatedData('ZhangSan', 'k001', (err: BusinessError, res
 getAssociatedData(name: string, key: string): Promise<string>
 ```
 
-Obtains data associated with an application account. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getCustomData](#getcustomdata) instead.
+Obtains data associated with an application account. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getCustomData](#getcustomdata) instead.
 
 **Since:** 7
 
@@ -2705,9 +2821,9 @@ Obtains the authenticator callback for an authentication session. This API uses 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300108](../errorcode-account.md#12300108-authentication-session-not-found) | Session not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid sessionId. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid sessionId. |
+| [12300108](../errorcode-account.md#12300108-authentication-session-not-found) | Session not found. |
 
 **Examples**
 
@@ -2775,9 +2891,9 @@ Obtains the authenticator callback for an authentication session. This API uses 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300108](../errorcode-account.md#12300108-authentication-session-not-found) | Session not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid sessionId. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid sessionId. |
+| [12300108](../errorcode-account.md#12300108-authentication-session-not-found) | Session not found. |
 
 **Examples**
 
@@ -2838,11 +2954,11 @@ Obtains the authorization list of the specified authentication type for an appli
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300107](../errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or authType. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or authType. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300107](../errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
 
 **Examples**
 
@@ -2894,11 +3010,11 @@ Obtains the authorization list of the specified authentication type for an appli
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300107](../errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or authType. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or authType. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300107](../errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
 
 **Examples**
 
@@ -2944,11 +3060,11 @@ Obtains the authorization token of the specified authentication type for an appl
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300107](../errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or authType. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or authType. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300107](../errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
 
 **Examples**
 
@@ -3002,11 +3118,11 @@ Obtains the authorization token of the specified authentication type for an appl
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300107](../errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or authType. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or authType. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300107](../errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
 
 **Examples**
 
@@ -3031,7 +3147,11 @@ try {
 getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void
 ```
 
-Obtains the authenticator callback for an authentication session. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAuthCallback](#getauthcallback) &gt; instead.
+Obtains the authenticator callback for an authentication session. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAuthCallback](#getauthcallback) &gt; instead.
 
 **Since:** 8
 
@@ -3082,7 +3202,11 @@ export default class EntryAbility extends UIAbility {
 getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>
 ```
 
-Obtains the authenticator callback for an authentication session. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAuthCallback](#getauthcallback) instead.
+Obtains the authenticator callback for an authentication session. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAuthCallback](#getauthcallback) instead.
 
 **Since:** 8
 
@@ -3136,7 +3260,11 @@ export default class EntryAbility extends UIAbility {
 getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void
 ```
 
-Obtains the authenticator information of an application. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [queryAuthenticatorInfo](#queryauthenticatorinfo) &gt; instead.
+Obtains the authenticator information of an application. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [queryAuthenticatorInfo](#queryauthenticatorinfo) &gt; instead.
 
 **Since:** 8
 
@@ -3176,7 +3304,11 @@ appAccountManager.getAuthenticatorInfo('com.example.accountjsdemo',
 getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 ```
 
-Obtains the authenticator information of an application. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [queryAuthenticatorInfo](#queryauthenticatorinfo) instead.
+Obtains the authenticator information of an application. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [queryAuthenticatorInfo](#queryauthenticatorinfo) instead.
 
 **Since:** 8
 
@@ -3240,9 +3372,9 @@ Obtains the credential of an application account. This API uses an asynchronous 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or credentialType. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or credentialType. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12300102](../errorcode-account.md#12300102-credential-not-found) | Credential not found. |
 
 **Examples**
@@ -3296,9 +3428,9 @@ Obtains the credential of an application account. This API uses a promise to ret
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or credentialType. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or credentialType. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12300102](../errorcode-account.md#12300102-credential-not-found) | Credential not found. |
 
 **Examples**
@@ -3345,9 +3477,9 @@ Obtains the custom data of an application account based on the specified key. Th
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or key. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or key. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12400002](../errorcode-account.md#12400002-custom-data-not-found) | Custom data not found. |
 
 **Examples**
@@ -3401,9 +3533,9 @@ Obtains the custom data of an application account based on the specified key. Th
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or key. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or key. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12400002](../errorcode-account.md#12400002-custom-data-not-found) | Custom data not found |
 
 **Examples**
@@ -3455,9 +3587,9 @@ Obtains the custom data of an application account based on the specified key. Th
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or key. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or key. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12400002](../errorcode-account.md#12400002-custom-data-not-found) | Custom data not found. |
 
 **Examples**
@@ -3480,7 +3612,11 @@ try {
 getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains the authorization list of the specified authentication type for an application account. The authorization list contains all authorized bundles. The token authorization list is set by [setOAuthTokenVisibility](#setoauthtokenvisibility) . This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAuthList](#getauthlist) &gt; instead.
+Obtains the authorization list of the specified authentication type for an application account. The authorization list contains all authorized bundles. The token authorization list is set by [setOAuthTokenVisibility](#setoauthtokenvisibility) . This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAuthList](#getauthlist) &gt; instead.
 
 **Since:** 8
 
@@ -3520,7 +3656,11 @@ appAccountManager.getOAuthList('LiSi', 'getSocialData', (err: BusinessError, dat
 getOAuthList(name: string, authType: string): Promise<Array<string>>
 ```
 
-Obtains the authorization list of the specified authentication type for an application account. The authorization list contains all authorized bundles. The token authorization list is set by [setOAuthTokenVisibility](#setoauthtokenvisibility) . This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAuthList](#getauthlist) instead.
+Obtains the authorization list of the specified authentication type for an application account. The authorization list contains all authorized bundles. The token authorization list is set by [setOAuthTokenVisibility](#setoauthtokenvisibility) . This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAuthList](#getauthlist) instead.
 
 **Since:** 8
 
@@ -3563,7 +3703,11 @@ appAccountManager.getOAuthList('LiSi', 'getSocialData').then((data: string[]) =>
 getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the authorization token of the specified authentication type for an application account. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAuthToken](#getauthtoken) &gt; instead.
+Obtains the authorization token of the specified authentication type for an application account. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAuthToken](#getauthtoken) &gt; instead.
 
 **Since:** 8
 
@@ -3605,7 +3749,11 @@ appAccountManager.getOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialD
 getOAuthToken(name: string, owner: string, authType: string): Promise<string>
 ```
 
-Obtains the authorization token of the specified authentication type for an application account. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAuthToken](#getauthtoken) &gt; instead.
+Obtains the authorization token of the specified authentication type for an application account. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAuthToken](#getauthtoken) &gt; instead.
 
 **Since:** 8
 
@@ -3695,8 +3843,8 @@ Unsubscribes from account information changes.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
 
 **Examples**
 
@@ -3727,7 +3875,11 @@ try {
 off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void
 ```
 
-Unsubscribes from account information changes. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [off('accountChange')](#offchange) &gt; instead.
+Unsubscribes from account information changes.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [off('accountChange')](#offchange) &gt; instead.
 
 **Since:** 7
 
@@ -3791,8 +3943,8 @@ Subscribes to the change events of accounts of the specified owners.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid owners. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid owners. |
 
 ## on('accountChange')
 
@@ -3820,8 +3972,8 @@ Subscribes to account information changes of apps.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or owners. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or owners. |
 | [12400001](../errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
 
 **Examples**
@@ -3847,7 +3999,11 @@ try {
 on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
 ```
 
-Subscribes to account information changes of apps. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [on('accountChange')](#onchange) &gt; instead.
+Subscribes to account information changes of apps.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [on('accountChange')](#onchange) &gt; instead.
 
 **Since:** 7
 
@@ -3910,8 +4066,8 @@ Obtains the authenticator information of an application. This API uses an asynch
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
 | [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 
 **Examples**
@@ -3965,8 +4121,8 @@ Obtains the authenticator information of an application. This API uses a promise
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
 | [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 
 **Examples**
@@ -4013,9 +4169,9 @@ Removes an application account. This API uses an asynchronous callback to return
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 **Examples**
 
@@ -4067,9 +4223,9 @@ Removes an application account. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 **Examples**
 
@@ -4114,10 +4270,10 @@ Selects the accounts that can be accessed by the invoker based on the options. T
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid options. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid options. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 
 **Examples**
 
@@ -4174,10 +4330,10 @@ Selects the accounts that can be accessed by the invoker based on the options. T
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid options. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid options. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 
 **Examples**
 
@@ -4205,7 +4361,11 @@ try {
 setAccountCredential(name: string, credentialType: string, credential: string, callback: AsyncCallback<void>): void
 ```
 
-Sets a credential for an application account. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setCredential](#setcredential) &gt; instead.
+Sets a credential for an application account. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setCredential](#setcredential) &gt; instead.
 
 **Since:** 7
 
@@ -4246,7 +4406,11 @@ appAccountManager.setAccountCredential('ZhangSan', 'credentialType001', 'credent
 setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>
 ```
 
-Sets a credential for an application account. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setCredential](#setcredential) &gt; instead.
+Sets a credential for an application account. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setCredential](#setcredential) &gt; instead.
 
 **Since:** 7
 
@@ -4290,7 +4454,11 @@ appAccountManager.setAccountCredential('ZhangSan', 'credentialType001', 'credent
 setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void
 ```
 
-Sets additional information for an application account. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setCustomData](#setcustomdata) &gt; instead.
+Sets additional information for an application account. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setCustomData](#setcustomdata) &gt; instead.
 
 **Since:** 7
 
@@ -4330,7 +4498,11 @@ appAccountManager.setAccountExtraInfo('ZhangSan', 'Tk002', (err: BusinessError) 
 setAccountExtraInfo(name: string, extraInfo: string): Promise<void>
 ```
 
-Sets additional information for an application account. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setCustomData](#setcustomdata) &gt; instead.
+Sets additional information for an application account. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setCustomData](#setcustomdata) &gt; instead.
 
 **Since:** 7
 
@@ -4394,11 +4566,11 @@ Sets the access to the data of an account for an application. This API uses an a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12400005](../errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit.<br>**Applicable version:** 14 and later |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or bundleName. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or bundleName. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12400001](../errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
+| [12400005](../errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit.<br>**Applicable version:** 14 and later |
 
 **Examples**
 
@@ -4451,11 +4623,11 @@ Sets the access to the data of an account for an application. This API uses a pr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12400005](../errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit.<br>**Applicable version:** 14 and later |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or bundleName. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or bundleName. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12400001](../errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
+| [12400005](../errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit.<br>**Applicable version:** 14 and later |
 
 **Examples**
 
@@ -4480,7 +4652,11 @@ try {
 setAppAccountSyncEnable(name: string, isEnable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets data synchronization for an application account. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setDataSyncEnabled](#setdatasyncenabled) &gt; instead.
+Sets data synchronization for an application account. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setDataSyncEnabled](#setdatasyncenabled) &gt; instead.
 
 **Since:** 7
 
@@ -4522,7 +4698,11 @@ appAccountManager.setAppAccountSyncEnable('ZhangSan', true, (err: BusinessError)
 setAppAccountSyncEnable(name: string, isEnable: boolean): Promise<void>
 ```
 
-Sets data synchronization for an application account. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setDataSyncEnabled](#setdatasyncenabled) &gt; instead.
+Sets data synchronization for an application account. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setDataSyncEnabled](#setdatasyncenabled) &gt; instead.
 
 **Since:** 7
 
@@ -4567,7 +4747,11 @@ appAccountManager.setAppAccountSyncEnable('ZhangSan', true).then(() => {
 setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void
 ```
 
-Sets data to be associated with an application account. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setCustomData](#setcustomdata) &gt; instead.
+Sets data to be associated with an application account. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setCustomData](#setcustomdata) &gt; instead.
 
 **Since:** 7
 
@@ -4608,7 +4792,11 @@ appAccountManager.setAssociatedData('ZhangSan', 'k001', 'v001', (err: BusinessEr
 setAssociatedData(name: string, key: string, value: string): Promise<void>
 ```
 
-Sets data to be associated with an application account. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setCustomData](#setcustomdata) &gt; instead.
+Sets data to be associated with an application account. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setCustomData](#setcustomdata) &gt; instead.
 
 **Since:** 7
 
@@ -4674,10 +4862,10 @@ Sets an authorization token of the specific authentication type for an applicati
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or token. |
-| [12400004](../errorcode-account.md#12400004-token-count-reached-the-limit) | The number of tokens reaches the upper limit. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or token. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12400004](../errorcode-account.md#12400004-token-count-reached-the-limit) | The number of tokens reaches the upper limit. |
 
 **Examples**
 
@@ -4731,10 +4919,10 @@ Sets an authorization token of the specific authentication type for an applicati
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or token. |
-| [12400004](../errorcode-account.md#12400004-token-count-reached-the-limit) | The number of tokens reaches the upper limit. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or token. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12400004](../errorcode-account.md#12400004-token-count-reached-the-limit) | The number of tokens reaches the upper limit. |
 
 **Examples**
 
@@ -4787,12 +4975,12 @@ Sets the visibility of an authorization token to an application. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300107](../errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12400005](../errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or bundleName. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or bundleName. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300107](../errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
 | [12400001](../errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
+| [12400005](../errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit. |
 
 **Examples**
 
@@ -4847,12 +5035,12 @@ Sets the visibility of an authorization token to an application. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300107](../errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12400005](../errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or bundleName. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or bundleName. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300107](../errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
 | [12400001](../errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
+| [12400005](../errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit. |
 
 **Examples**
 
@@ -4897,11 +5085,11 @@ Sets the authenticator attributes of an application. This API uses an asynchrono
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
 | [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 
 **Examples**
 
@@ -4952,11 +5140,11 @@ Sets the authenticator properties. This API uses an asynchronous callback to ret
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid owner or options. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid owner or options. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
 | [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 
 **Examples**
 
@@ -5012,9 +5200,9 @@ Sets a credential for an application account. This API uses an asynchronous call
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, credentialType or credential. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, credentialType or credential. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 **Examples**
 
@@ -5068,9 +5256,9 @@ Sets a credential for an application account. This API uses a promise to return 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, credentialType or credential. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, credentialType or credential. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 **Examples**
 
@@ -5117,9 +5305,9 @@ Sets custom data for an application account. This API uses an asynchronous callb
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, key or value. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, key or value. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12400003](../errorcode-account.md#12400003-custom-data-records-reached-the-limit) | The number of custom data reaches the upper limit. |
 
 **Examples**
@@ -5174,9 +5362,9 @@ Sets custom data for an application account. This API uses a promise to return t
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, key or value. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, key or value. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12400003](../errorcode-account.md#12400003-custom-data-records-reached-the-limit) | The number of custom data reaches the upper limit. |
 
 **Examples**
@@ -5224,11 +5412,11 @@ Sets data synchronization for an application account. This API uses an asynchron
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 **Examples**
 
@@ -5278,11 +5466,11 @@ Sets data synchronization for an application account. This API uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 **Examples**
 
@@ -5307,7 +5495,11 @@ try {
 setOAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void
 ```
 
-Sets an authorization token of the specific authentication type for an application account. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [setAuthToken](#setauthtoken) &gt; instead.
+Sets an authorization token of the specific authentication type for an application account. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [setAuthToken](#setauthtoken) &gt; instead.
 
 **Since:** 8
 
@@ -5348,7 +5540,11 @@ appAccountManager.setOAuthToken('LiSi', 'getSocialData', 'xxxx', (err: BusinessE
 setOAuthToken(name: string, authType: string, token: string): Promise<void>
 ```
 
-Sets an authorization token of the specific authentication type for an application account. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [setAuthToken](#setauthtoken) &gt; instead.
+Sets an authorization token of the specific authentication type for an application account. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [setAuthToken](#setauthtoken) &gt; instead.
 
 **Since:** 8
 
@@ -5398,7 +5594,11 @@ setOAuthTokenVisibility(
     ): void
 ```
 
-Sets the visibility of an authorization token to an application. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [setAuthTokenVisibility](#setauthtokenvisibility) &gt; instead.
+Sets the visibility of an authorization token to an application. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [setAuthTokenVisibility](#setauthtokenvisibility) &gt; instead.
 
 **Since:** 8
 
@@ -5441,7 +5641,11 @@ appAccountManager.setOAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.
 setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>
 ```
 
-Sets the visibility of an authorization token to an application. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [setAuthTokenVisibility](#setauthtokenvisibility) &gt; instead.
+Sets the visibility of an authorization token to an application. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [setAuthTokenVisibility](#setauthtokenvisibility) &gt; instead.
 
 **Since:** 8
 
@@ -5507,12 +5711,12 @@ Verifies the credential of an application account. This API uses an asynchronous
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or owner. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or owner. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
 | [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 
 **Examples**
 
@@ -5564,12 +5768,12 @@ Verifies the user credential. This API uses an asynchronous callback to return t
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or options. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or options. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
 | [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
 
 **Examples**
 

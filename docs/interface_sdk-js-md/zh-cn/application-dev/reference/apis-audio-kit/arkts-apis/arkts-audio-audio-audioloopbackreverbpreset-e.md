@@ -2,6 +2,8 @@
 
 表示返听混响模式的枚举。
 
+@enum { int }
+
 **起始版本：** 24
 
 <!--Device-audio-enum AudioLoopbackReverbPreset--><!--Device-audio-enum AudioLoopbackReverbPreset-End-->

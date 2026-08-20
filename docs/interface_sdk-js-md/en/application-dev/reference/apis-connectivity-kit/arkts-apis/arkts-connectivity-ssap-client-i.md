@@ -36,9 +36,9 @@ Closes the client.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## connect
 
@@ -68,9 +68,9 @@ Connects to the server.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## disconnect
 
@@ -100,9 +100,9 @@ Disconnects from or stops an ongoing connection to a server.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## getServices
 
@@ -132,9 +132,9 @@ Starts discovering all services on server.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## offConnectionStateChange
 
@@ -208,7 +208,9 @@ Unsubscribe property value changed event.
 onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 ```
 
-Subscribes to client connection state changed events. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned.
+Subscribes to client connection state changed events.
+
+This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned.
 
 **Since:** 26.0.0
 
@@ -230,7 +232,9 @@ Subscribes to client connection state changed events. This event is accessible o
 onMtuChange(callback: Callback<int>): void
 ```
 
-Subscribes to MTU changed events. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
+Subscribes to MTU changed events.
+
+This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
 
 **Since:** 26.0.0
 
@@ -252,7 +256,9 @@ Subscribes to MTU changed events. This event is accessible only to applications 
 onPropertyChange(callback: Callback<Property>): void
 ```
 
-Subscribe property value changed event. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
+Subscribe property value changed event.
+
+This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
 
 **Since:** 26.0.0
 
@@ -302,11 +308,11 @@ Reads the property of a server.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 36100044 | NearLink standard UUID not allowed. |
+| 36100003 | NearLink disabled. |
 | 36100043 | Invalid UUID in property. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100099 | Operation failed. |
 
 ## requestMtuSize
 
@@ -342,9 +348,9 @@ Negotiate the MTU size with server. The negotiation result needs to be obtained 
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## setPropertyNotification
 
@@ -381,11 +387,11 @@ Enables or disables notification of a property when value changed.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 36100044 | NearLink standard UUID not allowed. |
+| 36100003 | NearLink disabled. |
 | 36100043 | Invalid UUID in property. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100099 | Operation failed. |
 
 ## writeProperty
 
@@ -422,9 +428,9 @@ Writes the property of a server.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 36100044 | NearLink standard UUID not allowed. |
+| 36100003 | NearLink disabled. |
 | 36100043 | Invalid UUID in property. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100099 | Operation failed. |
 

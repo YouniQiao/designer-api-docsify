@@ -2,6 +2,8 @@
 
 Corresponding to a file's metadata. FileMeta is useful when doing IPC with the backup service.
 
+@interface FileMeta
+
 **Since:** 23
 
 <!--Device-backup-interface FileMeta--><!--Device-backup-interface FileMeta-End-->

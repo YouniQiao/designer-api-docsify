@@ -1,4 +1,4 @@
-# PluginComponentTemplate(System API) (System API)
+# PluginComponentTemplate (System API)
 
 PluginComponentTemplate
 

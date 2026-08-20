@@ -2,6 +2,8 @@
 
 Describes the configuration parameters for raycasting, defining the behavior of raycasting.
 
+@interface RaycastParameters
+
 **Since:** 23
 
 <!--Device-unnamed-export interface RaycastParameters--><!--Device-unnamed-export interface RaycastParameters-End-->

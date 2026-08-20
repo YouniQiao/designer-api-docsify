@@ -167,7 +167,7 @@ static getFirstDayOfWeek(): WeekDay
 
 | 类型 | 说明 |
 | --- | --- |
-| [WeekDay](arkts-localization-i18n-weekday-e.md) | 周起始日。 |
+| [WeekDay](../../apis-default/arkts-apis/arkts-i18n-weekday-e.md) | 周起始日。 |
 
 **示例**
 
@@ -408,13 +408,15 @@ let systemLanguages: Array<string> = i18n.System.getSystemLanguages();
 static getSystemLocale(): string
 ```
 
-> [System.getSystemLocaleInstance](#getsystemlocaleinstance)代替。 &gt; 获取系统当前设置的区域。
+
+> [System.getSystemLocaleInstance](../../apis-default/arkts-apis/arkts-i18n-system-c.md#getsystemlocaleinstance)代替。
+> 获取系统当前设置的区域。
 
 **起始版本：** 9
 
 **废弃版本：** 20
 
-**替代接口：** [getSystemLocaleInstance](#getsystemlocaleinstance)
+**替代接口：** [getSystemLocaleInstance](../../apis-default/arkts-apis/arkts-i18n-system-c.md#getsystemlocaleinstance)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -516,7 +518,7 @@ static getTemperatureName(type: TemperatureType): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) | 是 | 温度单位。 |
+| type | [TemperatureType](../../apis-default/arkts-apis/arkts-i18n-temperaturetype-e.md) | 是 | 温度单位。 |
 
 **返回值：**
 
@@ -565,7 +567,7 @@ static getTemperatureType(): TemperatureType
 
 | 类型 | 说明 |
 | --- | --- |
-| [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) | 温度单位。 |
+| [TemperatureType](../../apis-default/arkts-apis/arkts-i18n-temperaturetype-e.md) | 温度单位。 |
 
 **示例**
 

@@ -2,6 +2,8 @@
 
 Describes memory information of the application process.
 
+@interface NativeMemInfo
+
 **Since:** 23
 
 <!--Device-hidebug-interface NativeMemInfo--><!--Device-hidebug-interface NativeMemInfo-End-->

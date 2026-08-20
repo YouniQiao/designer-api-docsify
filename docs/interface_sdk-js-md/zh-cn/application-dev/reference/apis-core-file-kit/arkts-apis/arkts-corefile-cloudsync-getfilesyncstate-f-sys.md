@@ -41,12 +41,12 @@ function getFileSyncState(uri: Array<string>): Promise<Array<FileSyncState>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
-| 13900002 | No such file or directory. |
-| 14000002 | Invalid uri. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | 13600001 | IPC error. |
+| 13900002 | No such file or directory. |
+| 14000002 | Invalid uri. |
 
 **示例**
 
@@ -104,18 +104,18 @@ function getFileSyncState(uri: Array<string>, callback: AsyncCallback<Array<File
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | Array&lt;string&gt; | 是 | 待获取同步状态的uri。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[FileSyncState](arkts-corefile-cloudsync-filesyncstate-e-sys.md)&gt;&gt; | 是 | 回调函数。异步获取文件状态。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[FileSyncState](arkts-corefile-cloudsync-filesyncstate-e-sys.md)&gt;&gt; | 是 | 回调函数。异步获取文件状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
-| 13900002 | No such file or directory. |
-| 14000002 | Invalid uri. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | 13600001 | IPC error. |
+| 13900002 | No such file or directory. |
+| 14000002 | Invalid uri. |
 
 **示例**
 
@@ -190,15 +190,15 @@ function getFileSyncState(uri: string): FileSyncState
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900004 | Interrupted system call |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | 13900002 | No such file or directory. |
-| 14000002 | Invalid uri. |
-| 13900012 | Permission denied by the file system |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| 13900031 | Function not implemented |
+| 13900004 | Interrupted system call |
 | 13900010 | Try again |
+| 13900012 | Permission denied by the file system |
+| 13900031 | Function not implemented |
 | 13900042 | Unknown error |
+| 14000002 | Invalid uri. |
 
 **示例**
 

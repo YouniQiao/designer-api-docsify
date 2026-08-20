@@ -20,7 +20,16 @@ import { webview } from '@kit.ArkWeb';
 accessBackward(): boolean
 ```
 
-Checks whether going to the previous page can be performed on the current page. You can use [getBackForwardEntries](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getbackforwardentries) to obtain the historical information list of the current WebView and use [accessStep](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#accessstep) to determine whether to move forward or backward based on the specified number of steps. &gt; **NOTE：**&gt; &gt; If [setCustomUserAgent](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#setcustomuseragent) is called when the **Web** &gt; component is loaded for the first time, the value of **accessBackward** may be **false** when there are &gt; multiple historical entries. That is, there is no backward entry. You are advised to call the &gt; **setCustomUserAgent** method to set a user agent before using **loadUrl** to load a specific page. &gt; &gt; Causes: When the **Web** component is loaded for the first time, calling &gt; [setCustomUserAgent](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#setcustomuseragent) causes the component to reload and &gt; retain the initial history entry. Then the new entry replaces the initial history entry and no new history &gt; entry is generated. As a result, the value of **accessBackward** is false.
+Checks whether going to the previous page can be performed on the current page.
+
+You can use [getBackForwardEntries](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getbackforwardentries) to obtain the historical information list of the current WebView and use [accessStep](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#accessstep) to determine whether to move forward or backward based on the specified number of steps.
+
+> **NOTE：**
+> 
+> If [setCustomUserAgent](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setcustomuseragent) is called when the **Web**
+> component is loaded for the first time, the value of **accessBackward** may be **false** when there are &gt; multiple historical entries. That is, there is no backward entry. You are advised to call the &gt; **setCustomUserAgent** method to set a user agent before using **loadUrl** to load a specific page.
+> 
+> Causes: When the **Web** component is loaded for the first time, calling &gt; [setCustomUserAgent](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setcustomuseragent) causes the component to reload and &gt; retain the initial history entry. Then the new entry replaces the initial history entry and no new history &gt; entry is generated. As a result, the value of **accessBackward** is false.
 
 **Since:** 9
 
@@ -48,7 +57,9 @@ Checks whether going to the previous page can be performed on the current page. 
 accessForward(): boolean
 ```
 
-Checks whether going to the next page can be performed on the current page. You can use [getBackForwardEntries](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getbackforwardentries) to obtain the historical information list of the current WebView and use [accessStep](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#accessstep) to determine whether to move forward or backward based on the specified number of steps.
+Checks whether going to the next page can be performed on the current page.
+
+You can use [getBackForwardEntries](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getbackforwardentries) to obtain the historical information list of the current WebView and use [accessStep](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#accessstep) to determine whether to move forward or backward based on the specified number of steps.
 
 **Since:** 9
 
@@ -140,7 +151,15 @@ Adds a list of domain names that bypass intelligent tracking prevention.
 avoidVisibleViewportBottom(avoidHeight: number): void
 ```
 
-Sets the bottom avoidance height of the visible viewport on the web page. &gt; **NOTE：**&gt; &gt; - The valid value range of **avoidHeight** is [0, height of the **Web** component]. Values outside this range &gt; are adjusted to the nearest boundary. &gt; &gt; - When a non-zero value is specified for **avoidHeight**, the position and size of the **Web** component remain &gt; unchanged, but the visible viewport shift upwards by the specified height, lifting the web page content by the &gt; **avoidHeight**. This API is used to customize the avoidance area at the bottom of a web page. It is not &gt; recommended that this API be used when the editable area of the web page is tapped to pull up the keyboard. If &gt; this API is used in this scenario, the keyboard avoidance mode is set to **OVERLAYS_CONTENT**. &gt; &gt; - When the height of this API is set to **0**, the web page content can be restored, and the keyboard avoidance &gt; mode is specified by keyboardAvoidMode().
+Sets the bottom avoidance height of the visible viewport on the web page.
+
+> **NOTE：**
+> 
+> - The valid value range of **avoidHeight** is [0, height of the **Web** component]. Values outside this range &gt; are adjusted to the nearest boundary.
+> 
+> - When a non-zero value is specified for **avoidHeight**, the position and size of the **Web** component remain &gt; unchanged, but the visible viewport shift upwards by the specified height, lifting the web page content by the &gt; **avoidHeight**. This API is used to customize the avoidance area at the bottom of a web page. It is not &gt; recommended that this API be used when the editable area of the web page is tapped to pull up the keyboard. If &gt; this API is used in this scenario, the keyboard avoidance mode is set to **OVERLAYS_CONTENT**.
+> 
+> - When the height of this API is set to **0**, the web page content can be restored, and the keyboard avoidance &gt; mode is specified by keyboardAvoidMode().
 
 **Since:** 20
 
@@ -158,8 +177,8 @@ Sets the bottom avoidance height of the visible viewport on the web page. &gt; *
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | This functionality is not supported. |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | This functionality is not supported. |
 
 ## backOrForward
 
@@ -167,7 +186,9 @@ Sets the bottom avoidance height of the visible viewport on the web page. &gt; *
 backOrForward(step: number): void
 ```
 
-Performs a specific number of steps forward or backward on the current page based on the history stack. No redirection will be performed if the corresponding page does not exist in the history stack. Because the previously loaded web pages are used for the operation, no page reloading is involved.
+Performs a specific number of steps forward or backward on the current page based on the history stack. No redirection will be performed if the corresponding page does not exist in the history stack.
+
+Because the previously loaded web pages are used for the operation, no page reloading is involved.
 
 **Since:** 9
 
@@ -196,7 +217,7 @@ Performs a specific number of steps forward or backward on the current page base
 backward(): void
 ```
 
-Moves to the previous page based on the history stack. This API is generally used together with [accessBackward](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#accessbackward).
+Moves to the previous page based on the history stack. This API is generally used together with [accessBackward](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#accessbackward).
 
 **Since:** 9
 
@@ -218,7 +239,13 @@ Moves to the previous page based on the history stack. This API is generally use
 static clearBlanklessLoadingCache(keys?: Array<string>) : void
 ```
 
-Clears the blankless loading cache of the page with a specified key value. In an applet or web application, when the content changes significantly during page loading, an obvious scene change may occur. If you are concerned about this change, you can use this API to clear the page cache. &gt; **NOTE：**&gt; &gt; - After the page is cleared, the optimization effect appears when the page is loaded for the third time.
+Clears the blankless loading cache of the page with a specified key value.
+
+In an applet or web application, when the content changes significantly during page loading, an obvious scene change may occur. If you are concerned about this change, you can use this API to clear the page cache.
+
+> **NOTE：**
+> 
+> - After the page is cleared, the optimization effect appears when the page is loaded for the third time.
 
 **Since:** 20
 
@@ -230,7 +257,7 @@ Clears the blankless loading cache of the page with a specified key value. In an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | No | Key value list on the pages using the blankless optimization solution. The **key** value has been specified in [getBlanklessInfoWithKey](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getblanklessinfowithkey).<br>Default value: key list of all pages cached by the blankless optimization solution.<br>Valid value range: The key length cannot exceed 2048 characters, and the number of keys must be less than or equal to 100. The key value is the same as that input to the **Web** component during page loading.<br>Invalid value setting behavior: If **undefined** or **null** is passed, error code **401** is thrown. If the key length exceeds 2048, the key does not take effect. If the key length exceeds 100, the first 100 values are used. If the key is empty, the default value is used. |
+| keys | Array&lt;string&gt; | No | Key value list on the pages using the blankless optimization solution. The **key** value has been specified in [getBlanklessInfoWithKey](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getblanklessinfowithkey).<br>Default value: key list of all pages cached by the blankless optimization solution.<br>Valid value range: The key length cannot exceed 2048 characters, and the number of keys must be less than or equal to 100. The key value is the same as that input to the **Web** component during page loading.<br>Invalid value setting behavior: If **undefined** or **null** is passed, error code **401** is thrown. If the key length exceeds 2048, the key does not take effect. If the key length exceeds 100, the first 100 values are used. If the key is empty, the default value is used. |
 
 **Error codes:**
 
@@ -338,7 +365,7 @@ Deletes all domain names from the list of domain names added through the **addIn
 clearMatches(): void
 ```
 
-Clears the matches found through [searchAllAsync](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#searchallasync).
+Clears the matches found through [searchAllAsync](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#searchallasync).
 
 **Since:** 9
 
@@ -360,7 +387,7 @@ Clears the matches found through [searchAllAsync](../../apis-na/arkts-apis/arkts
 static clearPrefetchedResource(cacheKeyList: Array<string>): void
 ```
 
-Clears the cache of prefetched resources based on the specified cache key list. The cache key in the input parameter must be the prefetched resource cache key specified by [prefetchResource](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#prefetchresource).
+Clears the cache of prefetched resources based on the specified cache key list. The cache key in the input parameter must be the prefetched resource cache key specified by [prefetchResource](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#prefetchresource).
 
 **Since:** 12
 
@@ -486,7 +513,17 @@ Disables the camera capture of the current web page.
 constructor(webTag?: string)
 ```
 
-Constructs a **WebviewController** object. &gt; **NOTE：**&gt; &gt; - No parameter: new webview.WebviewController() indicates an empty constructor. No parameter is required when &gt; the C API is not used. &gt; &gt; - Parameter is a valid string: new webview.WebviewController("xxx"), used for developers to distinguish &gt; multiple instances and call methods under the corresponding instance. &gt; &gt; - Empty parameter: new webview.WebviewController("") or new webview.WebviewController(undefined). In this &gt; scenario, the parameter is meaningless and cannot distinguish multiple instances. **undefined** is returned &gt; directly, and developers need to check whether the return value is normal. &gt; &gt; After the **Web** component is destroyed, it is unbound from WebViewController. Subsequently, calling non- &gt; static methods of WebviewController will throw a &gt; [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) &gt; exception. Pay attention to the call timing and catch exceptions to prevent abnormal process exit.
+Constructs a **WebviewController** object.
+
+> **NOTE：**
+> 
+> - No parameter: new webview.WebviewController() indicates an empty constructor. No parameter is required when &gt; the C API is not used.
+> 
+> - Parameter is a valid string: new webview.WebviewController("xxx"), used for developers to distinguish &gt; multiple instances and call methods under the corresponding instance.
+> 
+> - Empty parameter: new webview.WebviewController("") or new webview.WebviewController(undefined). In this &gt; scenario, the parameter is meaningless and cannot distinguish multiple instances. **undefined** is returned &gt; directly, and developers need to check whether the return value is normal.
+> 
+> After the **Web** component is destroyed, it is unbound from WebViewController. Subsequently, calling non- &gt; static methods of WebviewController will throw a &gt; [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) &gt; exception. Pay attention to the call timing and catch exceptions to prevent abnormal process exit.
 
 **Since:** 11
 
@@ -522,8 +559,8 @@ Obtains the data stream of a specified web page using an asynchronous callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configuration | [PdfConfiguration](../../apis-na/arkts-apis/arkts-na-webview-pdfconfiguration-i.md) | Yes | Parameters required for creating a PDF file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PdfData](../../apis-na/arkts-apis/arkts-na-webview-pdfdata-c.md)&gt; | Yes | Callback used to return the data stream of an online PDF file. |
+| configuration | [PdfConfiguration](../../apis-default/arkts-apis/arkts-webview-pdfconfiguration-i.md) | Yes | Parameters required for creating a PDF file. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PdfData](../../apis-default/arkts-apis/arkts-webview-pdfdata-c.md)&gt; | Yes | Callback used to return the data stream of an online PDF file. |
 
 **Error codes:**
 
@@ -552,13 +589,13 @@ Obtains the data stream of a specified web page using a promise.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configuration | [PdfConfiguration](../../apis-na/arkts-apis/arkts-na-webview-pdfconfiguration-i.md) | Yes | Parameters required for creating a PDF file. |
+| configuration | [PdfConfiguration](../../apis-default/arkts-apis/arkts-webview-pdfconfiguration-i.md) | Yes | Parameters required for creating a PDF file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[PdfData](../../apis-na/arkts-apis/arkts-na-webview-pdfdata-c.md)&gt; | Promise used to return the result. It returns a web page PDF data stream (a PdfData object containing PDF binary data represented as an ArrayBuffer). |
+| Promise&lt;[PdfData](../../apis-default/arkts-apis/arkts-webview-pdfdata-c.md)&gt; | Promise used to return the result. It returns a web page PDF data stream (a PdfData object containing PDF binary data represented as an ArrayBuffer). |
 
 **Error codes:**
 
@@ -593,14 +630,14 @@ Creates web message ports.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[WebMessagePort](../../apis-na/arkts-apis/arkts-na-webview-webmessageport-i.md)&gt; | List of web message ports. |
+| Array&lt;[WebMessagePort](../../apis-default/arkts-apis/arkts-webview-webmessageport-i.md)&gt; | List of web message ports. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed.<br>**Applicable version:** 10 and later |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed.<br>**Applicable version:** 10 and later |
 
 ## createWebPrintDocumentAdapter
 
@@ -655,14 +692,14 @@ Grants the cross-domain request and fetch request permissions for custom protoco
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| schemes | Array&lt;[WebCustomScheme](../../apis-na/arkts-apis/arkts-na-webview-webcustomscheme-i.md)&gt; | Yes | Array of up to 10 custom schemes. |
+| schemes | Array&lt;[WebCustomScheme](../../apis-default/arkts-apis/arkts-webview-webcustomscheme-i.md)&gt; | Yes | Array of up to 10 custom schemes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100020](../errorcode-webview.md#17100020-failed-to-register-custom-schemes) | Failed to register custom schemes.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
+| [17100020](../errorcode-webview.md#17100020-failed-to-register-custom-schemes) | Failed to register custom schemes.<br>**Applicable version:** 12 and later |
 
 ## customizeSchemes
 
@@ -684,7 +721,7 @@ Grants the cross-domain request and fetch request permissions for custom protoco
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| schemes | Array&lt;[WebCustomScheme](../../apis-na/arkts-apis/arkts-na-webview-webcustomscheme-i.md)&gt; | Yes | Array of up to 10 custom schemes. |
+| schemes | Array&lt;[WebCustomScheme](../../apis-default/arkts-apis/arkts-webview-webcustomscheme-i.md)&gt; | Yes | Array of up to 10 custom schemes. |
 | lazyInitWebEngine | boolean | Yes | Whether to skip WebEngine initialization in the API. <br>The value **true** means to skip the WebEngine initialization and store the registered schemes temporarily. When the WebEngine is initialized, the schemes are transferred to the WebEngine. The value false means to initialize the WebEngine automatically in the API. |
 
 **Error codes:**
@@ -700,7 +737,7 @@ Grants the cross-domain request and fetch request permissions for custom protoco
 deleteJavaScriptRegister(name: string): void
 ```
 
-Deletes a JavaScript object with the specified name on the application side that is registered with the window using [registerJavaScriptProxy](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#registerjavascriptproxy) or javaScriptProxy. The deletion takes effect after the page is reloaded.
+Deletes a JavaScript object with the specified name on the application side that is registered with the window using [registerJavaScriptProxy](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#registerjavascriptproxy) or javaScriptProxy. The deletion takes effect after the page is reloaded.
 
 **Since:** 9
 
@@ -730,7 +767,11 @@ Deletes a JavaScript object with the specified name on the application side that
 enableAdsBlock(enable: boolean): void
 ```
 
-Enables ad blocking. &gt; **NOTE：**&gt; &gt; - The ad blocking feature works only for the release-type application, not the debug-type application.
+Enables ad blocking.
+
+> **NOTE：**
+> 
+> - The ad blocking feature works only for the release-type application, not the debug-type application.
 
 **Since:** 12
 
@@ -751,8 +792,8 @@ Enables ad blocking. &gt; **NOTE：**&gt; &gt; - The ad blocking feature works o
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Parameter string is too long. 3.Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## enableAdvancedSecurityMode
 
@@ -760,7 +801,14 @@ Enables ad blocking. &gt; **NOTE：**&gt; &gt; - The ad blocking feature works o
 static enableAdvancedSecurityMode(securityParams: SecurityParams): void
 ```
 
-Disables specific web engine capabilities by configuring security feature options to reduce the attack surface. Typical use cases include: apps with high security requirements (such as financial and government apps) should enable advanced security mode to disable unnecessary web engine capabilities. &gt; **NOTE：**&gt; &gt; - This API is a global static API. It only needs to be called once during the entire app lifecycle and does not &gt; need to be called repeatedly. &gt; &gt; - It must be called before [initializeWebEngine()](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#initializewebengine). &gt; Otherwise, the setting does not take effect.
+Disables specific web engine capabilities by configuring security feature options to reduce the attack surface. Typical use cases include: apps with high security requirements (such as financial and government apps) should enable advanced security mode to disable unnecessary web engine capabilities.
+
+> **NOTE：**
+> 
+> - This API is a global static API. It only needs to be called once during the entire app lifecycle and does not &gt; need to be called repeatedly.
+> 
+> - It must be called before [initializeWebEngine()](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#initializewebengine).
+> Otherwise, the setting does not take effect.
 
 **Since:** 26.0.0
 
@@ -774,7 +822,7 @@ Disables specific web engine capabilities by configuring security feature option
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| securityParams | [SecurityParams](../../apis-na/arkts-apis/arkts-na-webview-securityparams-i.md) | Yes | Security feature option configuration. |
+| securityParams | [SecurityParams](../../apis-default/arkts-apis/arkts-webview-securityparams-i.md) | Yes | Security feature option configuration. |
 
 ## enableBackForwardCache
 
@@ -782,7 +830,9 @@ Disables specific web engine capabilities by configuring security feature option
 static enableBackForwardCache(features: BackForwardCacheSupportedFeatures): void
 ```
 
-Enables the back-forward cache of a **Web** component. You can specify whether to add a specific page to the back -forward cache. This API must be called before [initializeWebEngine()](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#initializewebengine) initializes the kernel.
+Enables the back-forward cache of a **Web** component. You can specify whether to add a specific page to the back -forward cache.
+
+This API must be called before [initializeWebEngine()](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#initializewebengine) initializes the kernel.
 
 **Since:** 12
 
@@ -794,7 +844,7 @@ Enables the back-forward cache of a **Web** component. You can specify whether t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| features | [BackForwardCacheSupportedFeatures](../../apis-na/arkts-apis/arkts-na-webview-backforwardcachesupportedfeatures-c.md) | Yes | Features of the pages, which allow them to be added to the back-forward cache. |
+| features | [BackForwardCacheSupportedFeatures](../../apis-default/arkts-apis/arkts-webview-backforwardcachesupportedfeatures-c.md) | Yes | Features of the pages, which allow them to be added to the back-forward cache. |
 
 ## enableIntelligentTrackingPrevention
 
@@ -822,9 +872,9 @@ Enables intelligent tracking prevention.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## enablePrivateNetworkAccess
 
@@ -832,7 +882,13 @@ Enables intelligent tracking prevention.
 static enablePrivateNetworkAccess(enable: boolean): void
 ```
 
-Sets the private network access check feature. After this feature is enabled, the **Web** component performs CORS preflight on private network requests (such as requests for accessing local servers or intranet resources). It sends an OPTIONS preflight request to obtain explicit authorization from the target server and then transmits the actual data. Disabling this feature will skip the security check. &gt; **NOTE：**&gt; &gt; The private network access check feature currently takes effect mainly for Web Worker scenarios.
+Sets the private network access check feature.
+
+After this feature is enabled, the **Web** component performs CORS preflight on private network requests (such as requests for accessing local servers or intranet resources). It sends an OPTIONS preflight request to obtain explicit authorization from the target server and then transmits the actual data. Disabling this feature will skip the security check.
+
+> **NOTE：**
+> 
+> The private network access check feature currently takes effect mainly for Web Worker scenarios.
 
 **Since:** 20
 
@@ -852,7 +908,13 @@ Sets the private network access check feature. After this feature is enabled, th
 enableSafeBrowsing(enable: boolean): void
 ```
 
-Enables the safe browsing feature. This feature is forcibly enabled and cannot be disabled for identified untrusted websites. By default, this feature does not take effect. OpenHarmony provides only the malicious website blocking web UI. The website risk detection and web UI display features are implemented by the vendor. You are advised to listen for [DidStartNavigation](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/content/public/browser/web_contents_observer.h) and [DidRedirectNavigation](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/content/public/browser/web_contents_observer.h) in **WebContentsObserver** for detection. &gt; **NOTE：**&gt; &gt; This API does not take effect.
+Enables the safe browsing feature. This feature is forcibly enabled and cannot be disabled for identified untrusted websites.
+
+By default, this feature does not take effect. OpenHarmony provides only the malicious website blocking web UI. The website risk detection and web UI display features are implemented by the vendor. You are advised to listen for [DidStartNavigation](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/content/public/browser/web_contents_observer.h) and [DidRedirectNavigation](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/content/public/browser/web_contents_observer.h) in **WebContentsObserver** for detection.
+
+> **NOTE：**
+> 
+> This API does not take effect.
 
 **Since:** 11
 
@@ -896,7 +958,15 @@ Enables the full drawing capability for the web page. This API works only during
 executeAIPageCommand(command: string): Promise<string>
 ```
 
-Executes `AIPageCommand` asynchronously. This API uses a promise to return the result. The command type and command parameters are specified through the `command` parameter in JSON string format. &gt; **NOTE：**&gt; &gt; - The return format varies for different commands. For details, see &gt; [AIPageCommand](../../../reference/apis-arkweb/arkts-apis-webview-AIPageCommand.md) and &gt; [AIPageInteraction](../../../reference/apis-arkweb/arkts-apis-webview-AIPageInteraction.md). &gt; &gt; - When a command cannot be dispatched or has no result to return, the promise may return an empty string. &gt; &gt; - When the return value is not empty, it is a JSON string. The app can parse it with `JSON.parse` before use.
+Executes `AIPageCommand` asynchronously. This API uses a promise to return the result. The command type and command parameters are specified through the `command` parameter in JSON string format.
+
+> **NOTE：**
+> 
+> - The return format varies for different commands. For details, see &gt; [AIPageCommand](../../../reference/apis-arkweb/arkts-apis-webview-AIPageCommand.md) and &gt; [AIPageInteraction](../../../reference/apis-arkweb/arkts-apis-webview-AIPageInteraction.md).
+> 
+> - When a command cannot be dispatched or has no result to return, the promise may return an empty string.
+> 
+> - When the return value is not empty, it is a JSON string. The app can parse it with `JSON.parse` before use.
 
 **Since:** 26.0.0
 
@@ -931,7 +1001,7 @@ Executes `AIPageCommand` asynchronously. This API uses a promise to return the r
 forward(): void
 ```
 
-Moves forward by one page in the history stack. Generally used together with [accessForward](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#accessforward).
+Moves forward by one page in the history stack. Generally used together with [accessForward](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#accessforward).
 
 **Since:** 9
 
@@ -965,7 +1035,7 @@ Obtains the current ArkWeb kernel version.
 
 | Type | Description |
 | --- | --- |
-| [ArkWebEngineVersion](../../apis-na/arkts-apis/arkts-na-webview-arkwebengineversion-e.md) | The ArkWeb kernel version defined by [ArkWebEngineVersion]{ |
+| [ArkWebEngineVersion](../../apis-default/arkts-apis/arkts-webview-arkwebengineversion-e.md) | The ArkWeb kernel version defined by [ArkWebEngineVersion]{ |
 
 ## getAttachState
 
@@ -985,7 +1055,7 @@ Checks whether the current **WebViewController** is bound to a **Web** component
 
 | Type | Description |
 | --- | --- |
-| [ControllerAttachState](../../apis-na/arkts-apis/arkts-na-webview-controllerattachstate-e.md) | Attach status of **WebViewController** and the **Web** component. |
+| [ControllerAttachState](../../apis-default/arkts-apis/arkts-webview-controllerattachstate-e.md) | Attach status of **WebViewController** and the **Web** component. |
 
 ## getBackForwardEntries
 
@@ -993,7 +1063,11 @@ Checks whether the current **WebViewController** is bound to a **Web** component
 getBackForwardEntries(): BackForwardList
 ```
 
-Obtains the historical information list of the current WebView. &gt; **NOTE：**&gt; &gt; onLoadIntercept is triggered when the loading starts. At this time, no &gt; historical node is generated. Therefore, the historical stack obtained by calling **getBackForwardEntries** in &gt; **onLoadIntercept** does not include the page that is being loaded.
+Obtains the historical information list of the current WebView.
+
+> **NOTE：**
+> 
+> onLoadIntercept is triggered when the loading starts. At this time, no &gt; historical node is generated. Therefore, the historical stack obtained by calling **getBackForwardEntries** in &gt; **onLoadIntercept** does not include the page that is being loaded.
 
 **Since:** 9
 
@@ -1007,7 +1081,7 @@ Obtains the historical information list of the current WebView. &gt; **NOTE：**
 
 | Type | Description |
 | --- | --- |
-| [BackForwardList](../../apis-na/arkts-apis/arkts-na-webview-backforwardlist-i.md) | The history list of the current WebView. |
+| [BackForwardList](../../apis-default/arkts-apis/arkts-webview-backforwardlist-i.md) | The history list of the current WebView. |
 
 **Error codes:**
 
@@ -1021,7 +1095,20 @@ Obtains the historical information list of the current WebView. &gt; **NOTE：**
 getBlanklessInfoWithKey(key: string) : BlanklessInfo
 ```
 
-Obtains the prediction information about blankless loading (for details, see [BlanklessInfo](../../apis-na/arkts-apis/arkts-na-webview-blanklessinfo-i.md)) and starts to generate the loading transition frame. The application determines whether to enable blankless loading based on the information. This API must be used together with the [setBlanklessLoadingWithKey](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#setblanklessloadingwithkey) API before the page loading API is triggered or in **onLoadIntercept**, and after the **WebViewController** is bound to the **Web** component. &gt; **NOTE：**&gt; &gt; - The default size of the persistent cache capacity is 30 MB (about 30 pages). You can set the cache capacity &gt; by calling [setBlanklessLoadingCacheCapacity](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#setblanklessloadingcachecapacity) &gt; . For details, see the description of this API. When the maximum capacity is exceeded, the cache is updated &gt; based on the Least Recently Used (LRU) mechanism. The persistent cache data that has been stored for more than &gt; seven days is automatically cleared. After the cache is cleared, the optimization effect appears when the page &gt; is loaded for the third time. &gt; &gt; - If the snapshot similarity (**similarity** in [BlanklessInfo](../../apis-na/arkts-apis/arkts-na-webview-blanklessinfo-i.md)) &gt; is extremely low, check whether the **key** value is correct. &gt; &gt; - After this API is called, page loading snapshot detection and transition frame generation calculation are &gt; enabled, which generates certain resource overhead. &gt; &gt; - Blankless loading consumes certain resources, which depends on the resolution of the **Web** component. When &gt; the width and height of the resolution are respectively **w** and **h**, the peak memory usage increases by &gt; about **12 × w × h** B in the page-opening phase. After the page is opened, the memory is reclaimed, which does &gt; not affect the stable memory usage. When the size of the solid-state application cache is increased, the &gt; increased cache of each page is about **w × h/10** B and the cache is located in the application cache. &gt; &gt; - Add the **ohos.permission.INTERNET** and **ohos.permission.GET_NETWORK_INFO** permissions to **module.json5** &gt; . For details, see &gt; [Declaring Permissions in the Configuration File](../../../security/AccessToken/declare-permissions.md#declaring-permissions-in-the-configuration-file).
+Obtains the prediction information about blankless loading (for details, see [BlanklessInfo](../../apis-default/arkts-apis/arkts-webview-blanklessinfo-i.md)) and starts to generate the loading transition frame. The application determines whether to enable blankless loading based on the information. This API must be used together with the [setBlanklessLoadingWithKey](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setblanklessloadingwithkey) API before the page loading API is triggered or in **onLoadIntercept**, and after the **WebViewController** is bound to the **Web** component.
+
+> **NOTE：**
+> 
+> - The default size of the persistent cache capacity is 30 MB (about 30 pages). You can set the cache capacity &gt; by calling [setBlanklessLoadingCacheCapacity](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setblanklessloadingcachecapacity) &gt; . For details, see the description of this API. When the maximum capacity is exceeded, the cache is updated &gt; based on the Least Recently Used (LRU) mechanism. The persistent cache data that has been stored for more than &gt; seven days is automatically cleared. After the cache is cleared, the optimization effect appears when the page &gt; is loaded for the third time.
+> 
+> - If the snapshot similarity (**similarity** in [BlanklessInfo](../../apis-default/arkts-apis/arkts-webview-blanklessinfo-i.md)) &gt; is extremely low, check whether the **key** value is correct.
+> 
+> - After this API is called, page loading snapshot detection and transition frame generation calculation are &gt; enabled, which generates certain resource overhead.
+> 
+> - Blankless loading consumes certain resources, which depends on the resolution of the **Web** component. When &gt; the width and height of the resolution are respectively **w** and **h**, the peak memory usage increases by &gt; about **12 × w × h** B in the page-opening phase. After the page is opened, the memory is reclaimed, which does &gt; not affect the stable memory usage. When the size of the solid-state application cache is increased, the &gt; increased cache of each page is about **w × h/10** B and the cache is located in the application cache.
+> 
+> - Add the **ohos.permission.INTERNET** and **ohos.permission.GET_NETWORK_INFO** permissions to **module.json5**
+> . For details, see &gt; [Declaring Permissions in the Configuration File](../../../security/AccessToken/declare-permissions.md#declaring-permissions-in-the-configuration-file).
 
 **Since:** 20
 
@@ -1039,7 +1126,7 @@ Obtains the prediction information about blankless loading (for details, see [Bl
 
 | Type | Description |
 | --- | --- |
-| [BlanklessInfo](../../apis-na/arkts-apis/arkts-na-webview-blanklessinfo-i.md) | Prediction information about blankless loading, including the first screen similarity and first screen loading duration. The application determines whether to enable blankless loading based on the prediction information. |
+| [BlanklessInfo](../../apis-default/arkts-apis/arkts-webview-blanklessinfo-i.md) | Prediction information about blankless loading, including the first screen similarity and first screen loading duration. The application determines whether to enable blankless loading based on the prediction information. |
 
 **Error codes:**
 
@@ -1110,7 +1197,9 @@ Obtains the certificate information of the current website. When the **Web** com
 getCustomUserAgent(): string
 ```
 
-Obtains a custom user agent. For details about the default **User-Agent**, see [Developing User-Agent](../../../web/web-default-userAgent.md).
+Obtains a custom user agent.
+
+For details about the default **User-Agent**, see [Developing User-Agent](../../../web/web-default-userAgent.md).
 
 **Since:** 10
 
@@ -1138,7 +1227,11 @@ Obtains a custom user agent. For details about the default **User-Agent**, see [
 static getDefaultUserAgent(): string
 ```
 
-Obtains the default user agent. This API can be called only in the UI thread. For details about the default **User-Agent**, see [Developing User-Agent](../../../web/web-default-userAgent.md).
+Obtains the default user agent.
+
+This API can be called only in the UI thread.
+
+For details about the default **User-Agent**, see [Developing User-Agent](../../../web/web-default-userAgent.md).
 
 **Since:** 14
 
@@ -1218,7 +1311,7 @@ Obtains the element type of the area being clicked.
 
 **Deprecated since:** 18
 
-**Substitutes:** [getLastHitTest](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getlasthittest)
+**Substitutes:** [getLastHitTest](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getlasthittest)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1230,7 +1323,7 @@ Obtains the element type of the area being clicked.
 
 | Type | Description |
 | --- | --- |
-| [WebHitTestType](../../apis-na/arkts-apis/arkts-na-webview-webhittesttype-e.md) | Element type of the area being clicked. |
+| [WebHitTestType](../../apis-default/arkts-apis/arkts-webview-webhittesttype-e.md) | Element type of the area being clicked. |
 
 **Error codes:**
 
@@ -1250,7 +1343,7 @@ Obtains the element information of the area being clicked.
 
 **Deprecated since:** 18
 
-**Substitutes:** [getLastHitTest](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getlasthittest)
+**Substitutes:** [getLastHitTest](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getlasthittest)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1262,7 +1355,7 @@ Obtains the element information of the area being clicked.
 
 | Type | Description |
 | --- | --- |
-| [HitTestValue](../../apis-na/arkts-apis/arkts-na-webview-hittestvalue-i.md) | Element information of the area being clicked. |
+| [HitTestValue](../../apis-default/arkts-apis/arkts-webview-hittestvalue-i.md) | Element information of the area being clicked. |
 
 **Error codes:**
 
@@ -1288,7 +1381,7 @@ Obtains the element information of the area being clicked last time.
 
 | Type | Description |
 | --- | --- |
-| [HitTestValue](../../apis-na/arkts-apis/arkts-na-webview-hittestvalue-i.md) | Element information of the area being clicked. |
+| [HitTestValue](../../apis-default/arkts-apis/arkts-webview-hittestvalue-i.md) | Element information of the area being clicked. |
 
 **Error codes:**
 
@@ -1302,7 +1395,7 @@ Obtains the element information of the area being clicked last time.
 getLastJavascriptProxyCallingFrameUrl(): string
 ```
 
-Injects a JavaScript object into the window object through [registerJavaScriptProxy](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#registerjavascriptproxy) or javaScriptProxy. This API obtains the URL of the frame that last called the injected object.
+Injects a JavaScript object into the window object through [registerJavaScriptProxy](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#registerjavascriptproxy) or javaScriptProxy. This API obtains the URL of the frame that last called the injected object.
 
 **Since:** 12
 
@@ -1344,7 +1437,7 @@ Queries the audio and video playback status of the current web page.
 
 | Type | Description |
 | --- | --- |
-| [MediaPlaybackState](../../apis-na/arkts-apis/arkts-na-webview-mediaplaybackstate-e.md) | Playback control status of the current web page. The options are **NONE**, **PLAYING**, **PAUSED**, and **STOPPED**. |
+| [MediaPlaybackState](../../apis-default/arkts-apis/arkts-webview-mediaplaybackstate-e.md) | Playback control status of the current web page. The options are **NONE**, **PLAYING**, **PAUSED**, and **STOPPED**. |
 
 **Error codes:**
 
@@ -1358,7 +1451,9 @@ Queries the audio and video playback status of the current web page.
 getOriginalUrl(): string
 ```
 
-Obtains the original URL of the current page. Risk warning: If you want to obtain the URL for JavaScriptProxy communication API authentication, use [getLastJavascriptProxyCallingFrameUrl&lt;sup&gt;12+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getlastjavascriptproxycallingframeurl).
+Obtains the original URL of the current page.
+
+Risk warning: If you want to obtain the URL for JavaScriptProxy communication API authentication, use [getLastJavascriptProxyCallingFrameUrl&lt;sup&gt;12+&lt;/sup&gt;](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getlastjavascriptproxycallingframeurl).
 
 **Since:** 9
 
@@ -1508,7 +1603,7 @@ Obtains the ArkWeb render subprocess mode.
 
 | Type | Description |
 | --- | --- |
-| [RenderProcessMode](../../apis-na/arkts-apis/arkts-na-webview-renderprocessmode-e.md) | Render subprocess mode. <br>You can call **getRenderProcessMode()** to obtain the ArkWeb child render process mode of the current device. The enumerated value **0** indicates the single child render process mode, and **1** indicates the multi-child render process mode. <br>If the obtained value is not an enumerated value of **RenderProcessMode**, the multi-render subprocess mode is used by default. |
+| [RenderProcessMode](../../apis-default/arkts-apis/arkts-webview-renderprocessmode-e.md) | Render subprocess mode. <br>You can call **getRenderProcessMode()** to obtain the ArkWeb child render process mode of the current device. The enumerated value **0** indicates the single child render process mode, and **1** indicates the multi-child render process mode. <br>If the obtained value is not an enumerated value of **RenderProcessMode**, the multi-render subprocess mode is used by default. |
 
 ## getScrollOffset
 
@@ -1606,7 +1701,7 @@ Queries the currently effective site isolation mode.
 
 | Type | Description |
 | --- | --- |
-| [SiteIsolationMode](../../apis-na/arkts-apis/arkts-na-webview-siteisolationmode-e.md) | Site isolation mode. <br>getSiteIsolationMode() queries the currently effective site isolation mode. |
+| [SiteIsolationMode](../../apis-default/arkts-apis/arkts-webview-siteisolationmode-e.md) | Site isolation mode. <br>getSiteIsolationMode() queries the currently effective site isolation mode. |
 
 ## getSubframeErrorPageEnabled
 
@@ -1642,7 +1737,11 @@ Queries whether the subframe error page feature is enabled.
 getSurfaceId(): string
 ```
 
-Obtains the ID of the surface corresponding to ArkWeb. The ID can be used to capture a screenshot of the web page. &gt; **NOTE：**&gt; &gt; This API is valid only when the **Web** component rendering mode is **ASYNC_RENDER**. The value of &gt; **getSurfaceId** can be obtained only after the **Web** component is initialized.
+Obtains the ID of the surface corresponding to ArkWeb. The ID can be used to capture a screenshot of the web page.
+
+> **NOTE：**
+> 
+> This API is valid only when the **Web** component rendering mode is **ASYNC_RENDER**. The value of &gt; **getSurfaceId** can be obtained only after the **Web** component is initialized.
 
 **Since:** 12
 
@@ -1720,7 +1819,9 @@ Obtains the URL of the current page.
 getUserAgent(): string
 ```
 
-Obtains the default user agent of this web page. For details about the default **User-Agent**, see [Developing User-Agent](../../../web/web-default-userAgent.md).
+Obtains the default user agent of this web page.
+
+For details about the default **User-Agent**, see [Developing User-Agent](../../../web/web-default-userAgent.md).
 
 **Since:** 9
 
@@ -1780,13 +1881,13 @@ Obtains the UserAgentMetadata information of a user agent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userAgent | string | Yes | Information about the custom user agent. You can use [getUserAgent](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getuseragent) to obtain the current default user agent. |
+| userAgent | string | Yes | Information about the custom user agent. You can use [getUserAgent](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getuseragent) to obtain the current default user agent. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [UserAgentMetadata](../../apis-na/arkts-apis/arkts-na-webview-useragentmetadata-c.md) | [UserAgentMetadata]{ |
+| [UserAgentMetadata](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md) | [UserAgentMetadata]{ |
 
 ## getWebId
 
@@ -1880,7 +1981,13 @@ Checks whether this page contains images. This API uses an asynchronous callback
 static initializeWebEngine(): void
 ```
 
-Loads the dynamic library file of the web engine through this API before the **Web** component is initialized, so as to improve startup performance. It also automatically preconnects to frequently visited websites in history. &gt; **NOTE：**&gt; &gt; - **initializeWebEngine** cannot be called in an asynchronous thread. Otherwise, the system breaks down. &gt; &gt; - **initializeWebEngine** takes effect globally and needs to be called only once in an application lifecycle.
+Loads the dynamic library file of the web engine through this API before the **Web** component is initialized, so as to improve startup performance. It also automatically preconnects to frequently visited websites in history.
+
+> **NOTE：**
+> 
+> - **initializeWebEngine** cannot be called in an asynchronous thread. Otherwise, the system breaks down.
+> 
+> - **initializeWebEngine** takes effect globally and needs to be called only once in an application lifecycle.
 
 **Since:** 9
 
@@ -1896,7 +2003,17 @@ Loads the dynamic library file of the web engine through this API before the **W
 injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void
 ```
 
-Injects local offline resources to the memory cache to improve the initial page startup speed. Resources in the memory cache are automatically managed by the ArkWeb engine. When the injected resources are excessive and cause significant memory pressure, the engine will automatically release unused resources. It is advisable to avoid injecting a large number of resources into the memory cache. Under normal circumstances, the validity period of the resources is controlled by the provided Cache-Control or Expires response header, with a default validity period of 86,400 seconds, which is one day. The MIME type of the resources is configured through the provided Content-Type response header. The Content-Type must comply with standards; otherwise, the resources cannot be used correctly. For resources of type MODULE_JS, a valid MIME type must be provided. For other types, the MIME type is optional. Resources injected in this mode can be loaded only through HTML tags. If a **script** tag on the web page uses the **crossorigin** attribute, the **Cross-Origin** response header must be set in the **responseHeaders** parameter of the API. The value for this header should be **anonymous** or **use-credentials**. After **webview.WebviewController.SetRenderProcessMode(webview.RenderProcessMode.MULTIPLE)** is called, the application starts the multi-rendering process mode. This API does not take effect in this scenario.
+Injects local offline resources to the memory cache to improve the initial page startup speed.
+
+Resources in the memory cache are automatically managed by the ArkWeb engine. When the injected resources are excessive and cause significant memory pressure, the engine will automatically release unused resources. It is advisable to avoid injecting a large number of resources into the memory cache.
+
+Under normal circumstances, the validity period of the resources is controlled by the provided Cache-Control or Expires response header, with a default validity period of 86,400 seconds, which is one day.
+
+The MIME type of the resources is configured through the provided Content-Type response header. The Content-Type must comply with standards; otherwise, the resources cannot be used correctly. For resources of type MODULE_JS, a valid MIME type must be provided. For other types, the MIME type is optional.
+
+Resources injected in this mode can be loaded only through HTML tags. If a **script** tag on the web page uses the **crossorigin** attribute, the **Cross-Origin** response header must be set in the **responseHeaders** parameter of the API. The value for this header should be **anonymous** or **use-credentials**.
+
+After **webview.WebviewController.SetRenderProcessMode(webview.RenderProcessMode.MULTIPLE)** is called, the application starts the multi-rendering process mode. This API does not take effect in this scenario.
 
 **Since:** 12
 
@@ -1908,7 +2025,7 @@ Injects local offline resources to the memory cache to improve the initial page 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceMaps | Array&lt;[OfflineResourceMap](../../apis-na/arkts-apis/arkts-na-webview-offlineresourcemap-i.md)&gt; | Yes | Configuration object for local offline resources. A maximum of 30 resources can be injected in a single call, with a maximum size of 10 MB per individual resource. |
+| resourceMaps | Array&lt;[OfflineResourceMap](../../apis-default/arkts-apis/arkts-webview-offlineresourcemap-i.md)&gt; | Yes | Configuration object for local offline resources. A maximum of 30 resources can be injected in a single call, with a maximum size of 10 MB per individual resource. |
 
 **Error codes:**
 
@@ -1972,7 +2089,9 @@ Checks whether ad blocking is enabled.
 isAdsBlockEnabledForCurPage(): boolean
 ```
 
-Checks whether ad blocking is enabled on this web page. After ads blocking is enabled for the **Web** component, this feature is enabled for all web pages by default. You can call [addAdsBlockDisallowedList](../../apis-na/arkts-apis/arkts-na-webview-adsblockmanager-c.md#addadsblockdisallowedlist) to disable the feature for specific domains.
+Checks whether ad blocking is enabled on this web page.
+
+After ads blocking is enabled for the **Web** component, this feature is enabled for all web pages by default. You can call [addAdsBlockDisallowedList](../../apis-default/arkts-apis/arkts-webview-adsblockmanager-c.md#addadsblockdisallowedlist) to disable the feature for specific domains.
 
 **Since:** 12
 
@@ -2000,7 +2119,9 @@ Checks whether ad blocking is enabled on this web page. After ads blocking is en
 static isAutoPreconnectEnabled(): boolean
 ```
 
-Queries the automatic preconnection status of the Web kernel. If the automatic preconnection status of the Web kernel is not set by using [setAutoPreconnect](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#setautopreconnect), automatic preconnection is enabled by default, and **true** is returned.
+Queries the automatic preconnection status of the Web kernel.
+
+If the automatic preconnection status of the Web kernel is not set by using [setAutoPreconnect](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setautopreconnect), automatic preconnection is enabled by default, and **true** is returned.
 
 **Since:** 21
 
@@ -2068,8 +2189,8 @@ Obtains whether the **Web** component has enabled intelligent tracking preventio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## isPrivateNetworkAccessEnabled
 
@@ -2077,7 +2198,11 @@ Obtains whether the **Web** component has enabled intelligent tracking preventio
 static isPrivateNetworkAccessEnabled(): boolean
 ```
 
-Obtains whether the private network access check feature is enabled for the **Web** component. &gt; **NOTE：**&gt; &gt; The private network access check feature currently takes effect mainly for Web Worker scenarios.
+Obtains whether the private network access check feature is enabled for the **Web** component.
+
+> **NOTE：**
+> 
+> The private network access check feature currently takes effect mainly for Web Worker scenarios.
 
 **Since:** 20
 
@@ -2119,7 +2244,23 @@ Checks whether the safe browsing feature is enabled for this web page.
 loadData(data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string): void
 ```
 
-Loads specified data. When both **baseUrl** and **historyUrl** are empty: If **encoding** is not base64 (including null values), ASCII encoding is used for octets within the secure URL character range, and the standard %xx hexadecimal encoding of the URL is used for octets outside the secure URL character range. **data** must be encoded using Base64 or any hash (#) in the content must be encoded as %23. Otherwise, hash (#) is considered as the end of the content, and the remaining text is used as the document fragment identifier. &gt; **NOTE：**&gt; &gt; - To load a local image, you can assign a space to either **baseUrl** or **historyUrl**. For details, see the &gt; sample code. &gt; &gt; - In the scenario of loading a local image, **baseUrl** and **historyUrl** cannot be both empty. Otherwise, the &gt; image cannot be loaded. &gt; &gt; - If the rich text in HTML contains special characters such as hash (#), you are advised to set the values of &gt; **baseUrl** and **historyUrl** to spaces. &gt; &gt; - To load texts, you need to set &gt; `&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"&gt;` to avoid inconsistent &gt; font sizes.
+Loads specified data.
+
+When both **baseUrl** and **historyUrl** are empty:
+
+If **encoding** is not base64 (including null values), ASCII encoding is used for octets within the secure URL character range, and the standard %xx hexadecimal encoding of the URL is used for octets outside the secure URL character range.
+
+**data** must be encoded using Base64 or any hash (#) in the content must be encoded as %23. Otherwise, hash (#) is considered as the end of the content, and the remaining text is used as the document fragment identifier.
+
+> **NOTE：**
+> 
+> - To load a local image, you can assign a space to either **baseUrl** or **historyUrl**. For details, see the &gt; sample code.
+> 
+> - In the scenario of loading a local image, **baseUrl** and **historyUrl** cannot be both empty. Otherwise, the &gt; image cannot be loaded.
+> 
+> - If the rich text in HTML contains special characters such as hash (#), you are advised to set the values of &gt; **baseUrl** and **historyUrl** to spaces.
+> 
+> - To load texts, you need to set &gt; `&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"&gt;` to avoid inconsistent &gt; font sizes.
 
 **Since:** 9
 
@@ -2198,7 +2339,7 @@ Deregisters the attach state event of **WebViewController**. After the deregistr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'controllerAttachStateChange' | Yes | Attach state event of **WebViewController**, whose value is fixed to **controllerAttachStateChange**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControllerAttachState](../../apis-na/arkts-apis/arkts-na-webview-controllerattachstate-e.md)&gt; | No | Callback triggered when the attach state of **WebViewController** changes. By default, this parameter is left blank. If **Callback** is specified, only the specified callback is deregistered. Otherwise, all callbacks will be deregistered. <br>If **null** or **undefined** is passed, error code **401** is thrown. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControllerAttachState](../../apis-default/arkts-apis/arkts-webview-controllerattachstate-e.md)&gt; | No | Callback triggered when the attach state of **WebViewController** changes. By default, this parameter is left blank. If **Callback** is specified, only the specified callback is deregistered. Otherwise, all callbacks will be deregistered. <br>If **null** or **undefined** is passed, error code **401** is thrown. |
 
 ## onActive
 
@@ -2206,7 +2347,11 @@ Deregisters the attach state event of **WebViewController**. After the deregistr
 onActive(): void
 ```
 
-Called when the **Web** component enters the active state. The application can interact with the user while in the active foreground state, and it remains in this state until the focus is moved away from it due to some event (for example, an incoming call is received or the device screen is turned off). If the page was previously in the inactive state, the event listener registered through document.addEventListener ('visibilitychange',...) in the H5 page will be triggered, and document.visibilityState changes from "hidden" to "visible".
+Called when the **Web** component enters the active state.
+
+The application can interact with the user while in the active foreground state, and it remains in this state until the focus is moved away from it due to some event (for example, an incoming call is received or the device screen is turned off).
+
+If the page was previously in the inactive state, the event listener registered through document.addEventListener ('visibilitychange',...) in the H5 page will be triggered, and document.visibilityState changes from "hidden" to "visible".
 
 **Since:** 9
 
@@ -2228,7 +2373,9 @@ Called when the **Web** component enters the active state. The application can i
 onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void
 ```
 
-Registers a callback function. After enableNativeMediaPlayer is used to enable the app to take over web page media playback, the registered callback function is triggered when media is played on the web page. If the application does not take over media playback on the web page, this callback is not invoked.
+Registers a callback function. After enableNativeMediaPlayer is used to enable the app to take over web page media playback, the registered callback function is triggered when media is played on the web page.
+
+If the application does not take over media playback on the web page, this callback is not invoked.
 
 **Since:** 12
 
@@ -2242,7 +2389,7 @@ Registers a callback function. After enableNativeMediaPlayer is used to enable t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [CreateNativeMediaPlayerCallback](../../apis-na/arkts-apis/arkts-na-webview-createnativemediaplayercallback-t.md) | Yes | Callback when the application takes over media playback on the web page. |
+| callback | [CreateNativeMediaPlayerCallback](../../apis-default/arkts-apis/arkts-webview-createnativemediaplayercallback-t.md) | Yes | Callback when the application takes over media playback on the web page. |
 
 ## onInactive
 
@@ -2250,7 +2397,9 @@ Registers a callback function. After enableNativeMediaPlayer is used to enable t
 onInactive(): void
 ```
 
-Called when the **Web** component enters the inactive state. You can implement the behavior to perform after the application loses focus. When this API is called, any content that can be safely paused, such as animations and geographical locations, is paused as much as possible. However, the JavaScript is not paused. To pause the JavaScript globally, use [pauseAllTimers](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#pausealltimers). To reactivate the **Web** component, use [onActive](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#onactive).
+Called when the **Web** component enters the inactive state. You can implement the behavior to perform after the application loses focus.
+
+When this API is called, any content that can be safely paused, such as animations and geographical locations, is paused as much as possible. However, the JavaScript is not paused. To pause the JavaScript globally, use [pauseAllTimers](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#pausealltimers). To reactivate the **Web** component, use [onActive](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#onactive).
 
 **Since:** 9
 
@@ -2285,7 +2434,7 @@ Registers the attach state event of **WebViewController**, which obtains the att
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'controllerAttachStateChange' | Yes | Attach state event of **WebViewController**, whose value is fixed to **controllerAttachStateChange**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControllerAttachState](../../apis-na/arkts-apis/arkts-na-webview-controllerattachstate-e.md)&gt; | Yes | Callback triggered when the attach state of **WebViewController** changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControllerAttachState](../../apis-default/arkts-apis/arkts-webview-controllerattachstate-e.md)&gt; | Yes | Callback triggered when the attach state of **WebViewController** changes. |
 
 ## pageDown
 
@@ -2373,7 +2522,7 @@ Pauses all audio and video on a web page.
 static pauseAllTimers(): void
 ```
 
-Pauses all WebView timers. While the timers are paused, timer operations such as setInterval and setTimeout in the web page are suspended. It is recommended to pause timers when the app enters the background and resume them when the app returns to the foreground, so as to save resources. This API can be used in pair with [resumeAllTimers](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#resumealltimers)() to avoid timer state confusion.
+Pauses all WebView timers. While the timers are paused, timer operations such as setInterval and setTimeout in the web page are suspended. It is recommended to pause timers when the app enters the background and resume them when the app returns to the foreground, so as to save resources. This API can be used in pair with [resumeAllTimers](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#resumealltimers)() to avoid timer state confusion.
 
 **Since:** 12
 
@@ -2395,7 +2544,13 @@ Pauses all WebView timers. While the timers are paused, timer operations such as
 pauseMicrophone(): void
 ```
 
-Pauses microphone capture on the current web page. &gt; **NOTE：**&gt; &gt; Differences from resumeMicrophone and stopMicrophone: &gt; &gt; pauseMicrophone only pauses microphone capture and can be restored through resumeMicrophone; stopMicrophone &gt; stops capture and releases resources.
+Pauses microphone capture on the current web page.
+
+> **NOTE：**
+> 
+> Differences from resumeMicrophone and stopMicrophone:
+> 
+> pauseMicrophone only pauses microphone capture and can be restored through resumeMicrophone; stopMicrophone &gt; stops capture and releases resources.
 
 **Since:** 23
 
@@ -2430,7 +2585,7 @@ Sends a web message to an HTML window.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the message to send. |
-| ports | Array&lt;[WebMessagePort](../../apis-na/arkts-apis/arkts-na-webview-webmessageport-i.md)&gt; | Yes | Message ports for sending the message. |
+| ports | Array&lt;[WebMessagePort](../../apis-default/arkts-apis/arkts-webview-webmessageport-i.md)&gt; | Yes | Message ports for sending the message. |
 | uri | string | Yes | URI for receiving the message. |
 
 **Error codes:**
@@ -2446,7 +2601,7 @@ Sends a web message to an HTML window.
 postUrl(url: string, postData: ArrayBuffer): void
 ```
 
-Loads a URL with postData using the "POST" method. If the URL is not a network URL, the [loadUrl](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#loadurl) method is used to load the URL, and the postData parameter is ignored.
+Loads a URL with postData using the "POST" method. If the URL is not a network URL, the [loadUrl](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#loadurl) method is used to load the URL, and the postData parameter is ignored.
 
 **Since:** 11
 
@@ -2477,7 +2632,9 @@ Loads a URL with postData using the "POST" method. If the URL is not a network U
 precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: CacheOptions): Promise<number>
 ```
 
-Precompiles JavaScript to generate the bytecode cache or update the existing bytecode cache based on the provided parameters. The API determines whether to update the existing bytecode cache based on the provided file information, E-Tag response header, and Last-Modified response header.
+Precompiles JavaScript to generate the bytecode cache or update the existing bytecode cache based on the provided parameters.
+
+The API determines whether to update the existing bytecode cache based on the provided file information, E-Tag response header, and Last-Modified response header.
 
 **Since:** 12
 
@@ -2491,7 +2648,7 @@ Precompiles JavaScript to generate the bytecode cache or update the existing byt
 | --- | --- | --- | --- |
 | url | string | Yes | Network address corresponding to the local JavaScript file, that is, the network address used when the service web page requests the server version of the file. The network address supports only the HTTP and HTTPS protocols and contains a maximum of 2048 characters. If the cache corresponding to the network address is invalid, the service web page requests the corresponding resource through the network. |
 | script | string \| Uint8Array | Yes | Text content of the local JavaScript. The content cannot be empty. |
-| cacheOptions | [CacheOptions](../../apis-na/arkts-apis/arkts-na-webview-cacheoptions-i.md) | Yes | Whether to update the bytecode cache. |
+| cacheOptions | [CacheOptions](../../apis-default/arkts-apis/arkts-webview-cacheoptions-i.md) | Yes | Whether to update the bytecode cache. |
 
 **Return value:**
 
@@ -2512,7 +2669,21 @@ Precompiles JavaScript to generate the bytecode cache or update the existing byt
 prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void
 ```
 
-Prefetches resources in the background for a page that is likely to be accessed in the near future, without executing the page JavaScript code or presenting the page. This can significantly reduce the load time for the prefetched page. &gt; **NOTE：**&gt; &gt; - The downloaded page resources are cached for about five minutes. After this period, the **Web** component &gt; automatically releases them. &gt; &gt; - **prefetchPage** can also normally prefetch 302 redirect pages. &gt; &gt; - When **prefetchPage** is executed first and then the page is loaded, the prefetched resources are loaded &gt; directly from the cache. &gt; &gt; - When multiple URLs are prefetched consecutively with **prefetchPage**, only the first one takes effect. &gt; &gt; - **prefetchPage** has a time limit. Multiple prefetches cannot be performed within 500 ms. &gt; &gt; - **prefetchPage** caches all resources except those with the Cache-Control: no-store header. If a Vary &gt; response header or Cache-Control: no-store header exists, or the downloaded page resources have been cached for &gt; more than five minutes, the resources are revalidated before use.
+Prefetches resources in the background for a page that is likely to be accessed in the near future, without executing the page JavaScript code or presenting the page. This can significantly reduce the load time for the prefetched page.
+
+> **NOTE：**
+> 
+> - The downloaded page resources are cached for about five minutes. After this period, the **Web** component &gt; automatically releases them.
+> 
+> - **prefetchPage** can also normally prefetch 302 redirect pages.
+> 
+> - When **prefetchPage** is executed first and then the page is loaded, the prefetched resources are loaded &gt; directly from the cache.
+> 
+> - When multiple URLs are prefetched consecutively with **prefetchPage**, only the first one takes effect.
+> 
+> - **prefetchPage** has a time limit. Multiple prefetches cannot be performed within 500 ms.
+> 
+> - **prefetchPage** caches all resources except those with the Cache-Control: no-store header. If a Vary &gt; response header or Cache-Control: no-store header exists, or the downloaded page resources have been cached for &gt; more than five minutes, the resources are revalidated before use.
 
 **Since:** 10
 
@@ -2542,7 +2713,17 @@ Prefetches resources in the background for a page that is likely to be accessed 
 prefetchPage(url: string, additionalHeaders?: Array<WebHeader>, prefetchOptions?: PrefetchOptions): void
 ```
 
-Prefetches resources in the background for a page that is likely to be accessed in the near future, without executing the page JavaScript code or presenting the page. This can significantly reduce the load time for the prefetched page. &gt; **NOTE：**&gt; &gt; - The downloaded page resources are cached for about five minutes. After this period, the **Web** component &gt; automatically releases them. &gt; &gt; - **prefetchPage** can also normally prefetch 302 redirect pages. &gt; &gt; - When **prefetchPage** is executed first and then the page is loaded, the prefetched resources are loaded &gt; directly from the cache. &gt; &gt; - **prefetchPage** caches all resources except those with the Cache-Control: no-store header. If a Vary &gt; response header or Cache-Control: no-store header exists, or the downloaded page resources have been cached for &gt; more than five minutes, the resources are revalidated before use.
+Prefetches resources in the background for a page that is likely to be accessed in the near future, without executing the page JavaScript code or presenting the page. This can significantly reduce the load time for the prefetched page.
+
+> **NOTE：**
+> 
+> - The downloaded page resources are cached for about five minutes. After this period, the **Web** component &gt; automatically releases them.
+> 
+> - **prefetchPage** can also normally prefetch 302 redirect pages.
+> 
+> - When **prefetchPage** is executed first and then the page is loaded, the prefetched resources are loaded &gt; directly from the cache.
+> 
+> - **prefetchPage** caches all resources except those with the Cache-Control: no-store header. If a Vary &gt; response header or Cache-Control: no-store header exists, or the downloaded page resources have been cached for &gt; more than five minutes, the resources are revalidated before use.
 
 **Since:** 21
 
@@ -2556,7 +2737,7 @@ Prefetches resources in the background for a page that is likely to be accessed 
 | --- | --- | --- | --- |
 | url | string | Yes | URL to preload. |
 | additionalHeaders | Array&lt;WebHeader&gt; | No | Additional HTTP request headers for the URL. <br>Default value: [] |
-| prefetchOptions | [PrefetchOptions](../../apis-na/arkts-apis/arkts-na-webview-prefetchoptions-c.md) | No | Options for customizing the prefetch behavior. <br>The minimum interval between two prefetches is 500 ms. By default, Cache-Control: no-store in the response header is not ignored. |
+| prefetchOptions | [PrefetchOptions](../../apis-default/arkts-apis/arkts-webview-prefetchoptions-c.md) | No | Options for customizing the prefetch behavior. <br>The minimum interval between two prefetches is 500 ms. By default, Cache-Control: no-store in the response header is not ignored. |
 
 **Error codes:**
 
@@ -2572,7 +2753,9 @@ static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeade
                             cacheValidTime?: number): void
 ```
 
-Prefetches resource requests based on specified request information and additional HTTP request headers, saves them to the memory cache, and specifies the cache key and validity period to accelerate loading. Currently, only POST requests with Content-Type of application/x-www-form-urlencoded are supported. A maximum of six POST requests can be prefetched. To prefetch a seventh one, use [clearPrefetchedResource](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#clearprefetchedresource) to clear unnecessary POST request caches. Otherwise, the earliest prefetched POST cache is automatically cleared. To use the prefetched resource cache, developers need to add the key-value pair "ArkWebPostCacheKey" to the request header of the actual POST request, with the value being the cacheKey of the corresponding cache. Resources in the memory cache are automatically managed by the kernel. When too many resources are injected, causing excessive memory pressure, the kernel automatically releases unused resources. However, injecting a large number of resources into the memory cache should still be avoided.
+Prefetches resource requests based on specified request information and additional HTTP request headers, saves them to the memory cache, and specifies the cache key and validity period to accelerate loading. Currently, only POST requests with Content-Type of application/x-www-form-urlencoded are supported. A maximum of six POST requests can be prefetched. To prefetch a seventh one, use [clearPrefetchedResource](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#clearprefetchedresource) to clear unnecessary POST request caches. Otherwise, the earliest prefetched POST cache is automatically cleared. To use the prefetched resource cache, developers need to add the key-value pair "ArkWebPostCacheKey" to the request header of the actual POST request, with the value being the cacheKey of the corresponding cache.
+
+Resources in the memory cache are automatically managed by the kernel. When too many resources are injected, causing excessive memory pressure, the kernel automatically releases unused resources. However, injecting a large number of resources into the memory cache should still be avoided.
 
 **Since:** 12
 
@@ -2684,7 +2867,26 @@ registerJavaScriptProxy(jsObject: object, name: string, methodList: Array<string
         asyncMethodList?: Array<string>, permission?: string): void
 ```
 
-Registers a proxy for interaction between the application and web pages loaded by the **Web** component. Registers a JavaScript object with the window. APIs of this object can then be invoked in the window. For the example, see [Invoking Application Functions on the Frontend Page](../../../web/web-in-page-app-function-invoking.md). &gt; **NOTE：**&gt; &gt; - The **registerJavaScriptProxy** API must be used together with the **deleteJavaScriptRegister** API to &gt; prevent memory leak. &gt; &gt; - It is recommended that **registerJavaScriptProxy** be used only with trusted URLs and over secure HTTPS &gt; connections. Injecting JavaScript objects into untrusted web components can expose your application to &gt; malicious attacks. &gt; &gt; - After **registerJavaScriptProxy** is called, the application exposes the registered JavaScript object to all &gt; page frames. &gt; &gt; - If a **registerJavaScriptProxy** is both registered in the synchronous and asynchronous lists, it is called &gt; asynchronously by default. &gt; &gt; - You should register **registerJavaScriptProxy** either in synchronous list or in asynchronous list. &gt; Otherwise, this API fails to be registered. &gt; &gt; - After the HTML5 thread submits an asynchronous JavaScript task to the ETS main thread, the HTML5 thread can &gt; continue to execute subsequent tasks without waiting for the task execution to complete and return a result. In &gt; this way, scenarios where the HTML5 thread is blocked due to long-running JavaScript tasks or a congested ETS &gt; thread can be effectively reduced. However, an asynchronous JavaScript task cannot return a value, and a task &gt; execution sequence cannot be ensured. Therefore, you should determine whether to use a synchronous or &gt; asynchronous function based on a specific scenario. &gt; &gt; - The injected object does not appear in JavaScript until the page is reloaded.
+Registers a proxy for interaction between the application and web pages loaded by the **Web** component. Registers a JavaScript object with the window. APIs of this object can then be invoked in the window.
+
+For the example, see [Invoking Application Functions on the Frontend Page](../../../web/web-in-page-app-function-invoking.md).
+
+> **NOTE：**
+> 
+> - The **registerJavaScriptProxy** API must be used together with the **deleteJavaScriptRegister** API to &gt; prevent memory leak.
+> 
+> - It is recommended that **registerJavaScriptProxy** be used only with trusted URLs and over secure HTTPS &gt; connections. Injecting JavaScript objects into untrusted web components can expose your application to &gt; malicious attacks.
+> 
+> - After **registerJavaScriptProxy** is called, the application exposes the registered JavaScript object to all &gt; page frames.
+> 
+> - If a **registerJavaScriptProxy** is both registered in the synchronous and asynchronous lists, it is called &gt; asynchronously by default.
+> 
+> - You should register **registerJavaScriptProxy** either in synchronous list or in asynchronous list.
+> Otherwise, this API fails to be registered.
+> 
+> - After the HTML5 thread submits an asynchronous JavaScript task to the ETS main thread, the HTML5 thread can &gt; continue to execute subsequent tasks without waiting for the task execution to complete and return a result. In &gt; this way, scenarios where the HTML5 thread is blocked due to long-running JavaScript tasks or a congested ETS &gt; thread can be effectively reduced. However, an asynchronous JavaScript task cannot return a value, and a task &gt; execution sequence cannot be ensured. Therefore, you should determine whether to use a synchronous or &gt; asynchronous function based on a specific scenario.
+> 
+> - The injected object does not appear in JavaScript until the page is reloaded.
 
 **Since:** 9
 
@@ -2823,7 +3025,9 @@ Requests focus for the specified component.
 restoreWebState(state: Uint8Array) : void
 ```
 
-Restores the page status history from the serialized data of the current WebView. If the value of **state** is too large, exceptions may occur. It is recommended that the page status history be not restored when the **state** value is greater than 512 KB.
+Restores the page status history from the serialized data of the current WebView.
+
+If the value of **state** is too large, exceptions may occur. It is recommended that the page status history be not restored when the **state** value is greater than 512 KB.
 
 **Since:** 9
 
@@ -2916,7 +3120,19 @@ Resumes microphone capture on the current web page. Before using the microphone 
 runJavaScript(script: string): Promise<string>
 ```
 
-Executes a JavaScript script asynchronously in the context of the current page. This API uses a promise to return the script execution result. This method and its callback must be used on the UI thread. &gt; **NOTE：**&gt; &gt; - The JavaScript status is no longer retained during navigation operations (such as **loadUrl**). For example, &gt; the global variables and functions defined before **loadUrl** is called do not exist in the loaded page. &gt; &gt; - It is recommended that the app use **registerJavaScriptProxy** to ensure that the JavaScript status can be &gt; retained across page navigation. &gt; &gt; - Currently, passing objects is not supported. Passing structs is supported. &gt; &gt; - Executing asynchronous methods cannot obtain return values. Determine whether to use synchronous or &gt; asynchronous methods based on the specific context. &gt; &gt; - The string data type passed from the frontend page to the app side is treated as JSON-formatted data and &gt; needs to be deserialized with JSON.parse.
+Executes a JavaScript script asynchronously in the context of the current page. This API uses a promise to return the script execution result. This method and its callback must be used on the UI thread.
+
+> **NOTE：**
+> 
+> - The JavaScript status is no longer retained during navigation operations (such as **loadUrl**). For example, &gt; the global variables and functions defined before **loadUrl** is called do not exist in the loaded page.
+> 
+> - It is recommended that the app use **registerJavaScriptProxy** to ensure that the JavaScript status can be &gt; retained across page navigation.
+> 
+> - Currently, passing objects is not supported. Passing structs is supported.
+> 
+> - Executing asynchronous methods cannot obtain return values. Determine whether to use synchronous or &gt; asynchronous methods based on the specific context.
+> 
+> - The string data type passed from the frontend page to the app side is treated as JSON-formatted data and &gt; needs to be deserialized with JSON.parse.
 
 **Since:** 9
 
@@ -2952,7 +3168,19 @@ Executes a JavaScript script asynchronously in the context of the current page. 
 runJavaScript(script: string, callback: AsyncCallback<string>): void
 ```
 
-Executes a JavaScript script asynchronously in the context of the current page. This API uses an asynchronous callback to return the script execution result. This method and its callback must be used on the UI thread. &gt; **NOTE：**&gt; &gt; - The JavaScript status is no longer retained during navigation operations (such as **loadUrl**). For example, &gt; the global variables and functions defined before **loadUrl** is called do not exist in the loaded page. &gt; &gt; - It is recommended that the app use **registerJavaScriptProxy** to ensure that the JavaScript status can be &gt; retained across page navigation. &gt; &gt; - Currently, passing objects is not supported. Passing structs is supported. &gt; &gt; - Executing asynchronous methods cannot obtain return values. Determine whether to use synchronous or &gt; asynchronous methods based on the specific context. &gt; &gt; - The string data type passed from the frontend page to the app side is treated as JSON-formatted data and &gt; needs to be deserialized with JSON.parse.
+Executes a JavaScript script asynchronously in the context of the current page. This API uses an asynchronous callback to return the script execution result. This method and its callback must be used on the UI thread.
+
+> **NOTE：**
+> 
+> - The JavaScript status is no longer retained during navigation operations (such as **loadUrl**). For example, &gt; the global variables and functions defined before **loadUrl** is called do not exist in the loaded page.
+> 
+> - It is recommended that the app use **registerJavaScriptProxy** to ensure that the JavaScript status can be &gt; retained across page navigation.
+> 
+> - Currently, passing objects is not supported. Passing structs is supported.
+> 
+> - Executing asynchronous methods cannot obtain return values. Determine whether to use synchronous or &gt; asynchronous methods based on the specific context.
+> 
+> - The string data type passed from the frontend page to the app side is treated as JSON-formatted data and &gt; needs to be deserialized with JSON.parse.
 
 **Since:** 9
 
@@ -2983,7 +3211,11 @@ Executes a JavaScript script asynchronously in the context of the current page. 
 runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>
 ```
 
-Executes a JavaScript script asynchronously and returns the script execution result through a promise. **runJavaScriptExt** can be invoked only after **loadUrl** is executed, for example, in onPageEnd. &gt; **NOTE：**&gt; &gt; - The string data type passed from the frontend page to the app side is treated as JSON-formatted data and &gt; needs to be deserialized with JSON.parse.
+Executes a JavaScript script asynchronously and returns the script execution result through a promise. **runJavaScriptExt** can be invoked only after **loadUrl** is executed, for example, in onPageEnd.
+
+> **NOTE：**
+> 
+> - The string data type passed from the frontend page to the app side is treated as JSON-formatted data and &gt; needs to be deserialized with JSON.parse.
 
 **Since:** 10
 
@@ -3003,7 +3235,7 @@ Executes a JavaScript script asynchronously and returns the script execution res
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[JsMessageExt](../../apis-na/arkts-apis/arkts-na-webview-jsmessageext-c.md)&gt; | Promise used to return the script execution result. |
+| Promise&lt;[JsMessageExt](../../apis-default/arkts-apis/arkts-webview-jsmessageext-c.md)&gt; | Promise used to return the script execution result. |
 
 **Error codes:**
 
@@ -3018,7 +3250,11 @@ Executes a JavaScript script asynchronously and returns the script execution res
 runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessageExt>): void
 ```
 
-Executes a JavaScript script. This API uses an asynchronous callback to return the script execution result. **runJavaScriptExt** can be invoked only after **loadUrl** is executed. For example, it can be invoked in **onPageEnd**. &gt; **NOTE：**&gt; &gt; - The string data type passed from the frontend page to the app side is treated as JSON-formatted data and &gt; needs to be deserialized with JSON.parse.
+Executes a JavaScript script. This API uses an asynchronous callback to return the script execution result. **runJavaScriptExt** can be invoked only after **loadUrl** is executed. For example, it can be invoked in **onPageEnd**.
+
+> **NOTE：**
+> 
+> - The string data type passed from the frontend page to the app side is treated as JSON-formatted data and &gt; needs to be deserialized with JSON.parse.
 
 **Since:** 10
 
@@ -3033,7 +3269,7 @@ Executes a JavaScript script. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | script | string \| ArrayBuffer | Yes | JavaScript script.<br>**Since:** 12 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[JsMessageExt](../../apis-na/arkts-apis/arkts-na-webview-jsmessageext-c.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[JsMessageExt](../../apis-default/arkts-apis/arkts-webview-jsmessageext-c.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -3230,7 +3466,13 @@ Serializes the page status history of the current WebView.
 static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void
 ```
 
-Sets the ArkWeb kernel version. If the system does not support the specified version, the setting does not take effect and the system default kernel is used (see [Constraints](../../../web/web-component-overview.md#constraints)). This API is a global static API and must be executed before **initializeWebEngine** is called. If any **Web** component has been loaded, the setting does not take effect. Typical use case: when features or compatibility requirements of a specific kernel version are needed, you can switch to the corresponding kernel version. &gt; **NOTE：**&gt; &gt; - **setActiveWebEngineVersion** cannot be called in an asynchronous thread. &gt; &gt; - **setActiveWebEngineVersion** takes effect globally and needs to be called only once in an application &gt; lifecycle.
+Sets the ArkWeb kernel version. If the system does not support the specified version, the setting does not take effect and the system default kernel is used (see [Constraints](../../../web/web-component-overview.md#constraints)). This API is a global static API and must be executed before **initializeWebEngine** is called. If any **Web** component has been loaded, the setting does not take effect. Typical use case: when features or compatibility requirements of a specific kernel version are needed, you can switch to the corresponding kernel version.
+
+> **NOTE：**
+> 
+> - **setActiveWebEngineVersion** cannot be called in an asynchronous thread.
+> 
+> - **setActiveWebEngineVersion** takes effect globally and needs to be called only once in an application &gt; lifecycle.
 
 **Since:** 20
 
@@ -3242,7 +3484,7 @@ Sets the ArkWeb kernel version. If the system does not support the specified ver
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| engineVersion | [ArkWebEngineVersion](../../apis-na/arkts-apis/arkts-na-webview-arkwebengineversion-e.md) | Yes | ArkWeb kernel version. |
+| engineVersion | [ArkWebEngineVersion](../../apis-default/arkts-apis/arkts-webview-arkwebengineversion-e.md) | Yes | ArkWeb kernel version. |
 
 ## setAppCustomUserAgent
 
@@ -3250,7 +3492,11 @@ Sets the ArkWeb kernel version. If the system does not support the specified ver
 static setAppCustomUserAgent(userAgent: string) : void
 ```
 
-Sets the application-level custom user agent, which will overwrite the system user agent and take effect for all **Web** components in the application. If you need to set the application-level custom user agent, you are advised to call the **setAppCustomUserAgent** method to set the **User-Agent** before creating the **Web** component, and then create the **Web** component with the specified src or load the page using [loadUrl](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#loadurl). For details about the default **User-Agent** definition, application scenarios, and API priorities, see [Developing User-Agent](../../../web/web-default-userAgent.md).
+Sets the application-level custom user agent, which will overwrite the system user agent and take effect for all **Web** components in the application.
+
+If you need to set the application-level custom user agent, you are advised to call the **setAppCustomUserAgent** method to set the **User-Agent** before creating the **Web** component, and then create the **Web** component with the specified src or load the page using [loadUrl](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#loadurl).
+
+For details about the default **User-Agent** definition, application scenarios, and API priorities, see [Developing User-Agent](../../../web/web-default-userAgent.md).
 
 **Since:** 20
 
@@ -3262,7 +3508,7 @@ Sets the application-level custom user agent, which will overwrite the system us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userAgent | string | Yes | Information about the custom user agent. It is recommended that you obtain the current default user agent through [getDefaultUserAgent](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getdefaultuseragent) and then customize the obtained user agent. |
+| userAgent | string | Yes | Information about the custom user agent. It is recommended that you obtain the current default user agent through [getDefaultUserAgent](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getdefaultuseragent) and then customize the obtained user agent. |
 
 ## setAudioMuted
 
@@ -3299,7 +3545,9 @@ Mutes the web page. Typical use cases include: the app needs to control the web 
 static setAutoPreconnect(enabled: boolean): void
 ```
 
-Sets the automatic preconnection status of the Web kernel. If this API is not set, automatic preconnection is enabled by default. This API must be called before [initializeWebEngine()](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#initializewebengine) initializes the kernel or a **Web** component is created. If any **Web** component has been loaded, the setting does not take effect.
+Sets the automatic preconnection status of the Web kernel. If this API is not set, automatic preconnection is enabled by default.
+
+This API must be called before [initializeWebEngine()](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#initializewebengine) initializes the kernel or a **Web** component is created. If any **Web** component has been loaded, the setting does not take effect.
 
 **Since:** 21
 
@@ -3331,7 +3579,7 @@ Sets the back-forward cache options of the **Web** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [BackForwardCacheOptions](../../apis-na/arkts-apis/arkts-na-webview-backforwardcacheoptions-c.md) | Yes | Options to control the back-forward cache of the **Web** component. |
+| options | [BackForwardCacheOptions](../../apis-default/arkts-apis/arkts-webview-backforwardcacheoptions-c.md) | Yes | Options to control the back-forward cache of the **Web** component. |
 
 **Error codes:**
 
@@ -3377,7 +3625,18 @@ Sets the persistent cache capacity of the blankless loading solution and returns
 setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCode
 ```
 
-Sets whether to enable blankless loading. This API must be used together with [getBlanklessInfoWithKey](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getblanklessinfowithkey). &gt; **NOTE：**&gt; &gt; - This API must be called after the page loading API is triggered. Other restrictions are the same as those of &gt; [getBlanklessInfoWithKey](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getblanklessinfowithkey). &gt; &gt; - The page must be loaded in the component that calls this API. &gt; &gt; - When the similarity is low, the system will deem the scene change too abrupt and frame insertion will fail. &gt; &gt; - Add the **ohos.permission.INTERNET** and **ohos.permission.GET_NETWORK_INFO** permissions to **module.json5** &gt; . For details, see &gt; [Declaring Permissions in the Configuration File](../../../security/AccessToken/declare-permissions.md#declaring-permissions-in-the-configuration-file).
+Sets whether to enable blankless loading. This API must be used together with [getBlanklessInfoWithKey](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getblanklessinfowithkey).
+
+> **NOTE：**
+> 
+> - This API must be called after the page loading API is triggered. Other restrictions are the same as those of &gt; [getBlanklessInfoWithKey](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getblanklessinfowithkey).
+> 
+> - The page must be loaded in the component that calls this API.
+> 
+> - When the similarity is low, the system will deem the scene change too abrupt and frame insertion will fail.
+> 
+> - Add the **ohos.permission.INTERNET** and **ohos.permission.GET_NETWORK_INFO** permissions to **module.json5**
+> . For details, see &gt; [Declaring Permissions in the Configuration File](../../../security/AccessToken/declare-permissions.md#declaring-permissions-in-the-configuration-file).
 
 **Since:** 20
 
@@ -3396,7 +3655,7 @@ Sets whether to enable blankless loading. This API must be used together with [g
 
 | Type | Description |
 | --- | --- |
-| [WebBlanklessErrorCode](../../apis-na/arkts-apis/arkts-na-webview-webblanklesserrorcode-e.md) | Whether the API is successfully called. For details, see [WebBlanklessErrorCode]{ |
+| [WebBlanklessErrorCode](../../apis-default/arkts-apis/arkts-webview-webblanklesserrorcode-e.md) | Whether the API is successfully called. For details, see [WebBlanklessErrorCode]{ |
 
 **Error codes:**
 
@@ -3411,7 +3670,17 @@ setBlanklessLoadingWithParams(key: string,
       param: BlanklessLoadingParam) : WebBlanklessErrorCode
 ```
 
-Sets the configuration parameters for frame interpolation during blankless loading. This API must be used with [getBlanklessInfoWithKey](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getblanklessinfowithkey). Compared with [setBlanklessLoadingWithKey](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#setblanklessloadingwithkey), this API supports more parameter settings for frame interpolation during blankless loading, including the frame interpolation duration, cache data validity period, and custom callback after frame interpolation is complete. &gt; **NOTE：**&gt; &gt; - This API must be called after the page loading API is triggered. Other restrictions are the same as those of &gt; [getBlanklessInfoWithKey](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getblanklessinfowithkey). &gt; &gt; - The page must be loaded in the component that calls this API. &gt; &gt; - When the similarity is low, the system will deem the scene change too abrupt and frame insertion will fail. &gt; &gt; - Add the **ohos.permission.INTERNET** and **ohos.permission.GET_NETWORK_INFO** permissions to &gt; **module.json5**. For details, see &gt; [Declaring Permissions in the Configuration File](../../../security/AccessToken/declare-permissions.md#declaring-permissions-in-the-configuration-file).
+Sets the configuration parameters for frame interpolation during blankless loading. This API must be used with [getBlanklessInfoWithKey](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getblanklessinfowithkey). Compared with [setBlanklessLoadingWithKey](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setblanklessloadingwithkey), this API supports more parameter settings for frame interpolation during blankless loading, including the frame interpolation duration, cache data validity period, and custom callback after frame interpolation is complete.
+
+> **NOTE：**
+> 
+> - This API must be called after the page loading API is triggered. Other restrictions are the same as those of &gt; [getBlanklessInfoWithKey](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getblanklessinfowithkey).
+> 
+> - The page must be loaded in the component that calls this API.
+> 
+> - When the similarity is low, the system will deem the scene change too abrupt and frame insertion will fail.
+> 
+> - Add the **ohos.permission.INTERNET** and **ohos.permission.GET_NETWORK_INFO** permissions to &gt; **module.json5**. For details, see &gt; [Declaring Permissions in the Configuration File](../../../security/AccessToken/declare-permissions.md#declaring-permissions-in-the-configuration-file).
 
 **Since:** 23
 
@@ -3426,13 +3695,13 @@ Sets the configuration parameters for frame interpolation during blankless loadi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key value that uniquely identifies the page. This value must be the same as the **key** value of the **getBlanklessInfoWithKey** API. <br>The value cannot be empty and can contain a maximum of 2048 characters. <br>When an invalid value is set, the error code **WebBlanklessErrorCode** is returned, and the API does not take effect. |
-| param | [BlanklessLoadingParam](../../apis-na/arkts-apis/arkts-na-webview-blanklessloadingparam-i.md) | Yes | Parameters for frame interpolation of blankless loading. |
+| param | [BlanklessLoadingParam](../../apis-default/arkts-apis/arkts-webview-blanklessloadingparam-i.md) | Yes | Parameters for frame interpolation of blankless loading. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [WebBlanklessErrorCode](../../apis-na/arkts-apis/arkts-na-webview-webblanklesserrorcode-e.md) | API calling result. |
+| [WebBlanklessErrorCode](../../apis-default/arkts-apis/arkts-webview-webblanklesserrorcode-e.md) | API calling result. |
 
 **Error codes:**
 
@@ -3474,7 +3743,18 @@ Sets the network connection timeout interval. You can use the **onErrorReceive**
 setCustomUserAgent(userAgent: string): void
 ```
 
-Sets a custom user agent, which will overwrite the default user agent. &gt; **NOTE：**&gt; &gt; - When **src** of the **Web** component is set to a URL, it is recommended to set **User-Agent** in the &gt; onControllerAttached callback. Do not set it in the &gt; **onLoadIntercept** callback, as this may cause the setting to fail or lead to unexpected results. &gt; &gt; - If **User-Agent** is not set in the **onControllerAttached** callback, calling **setCustomUserAgent** later &gt; may cause an anomaly where the loaded page does not match the actually set **User-Agent**. &gt; &gt; - When **src** of the **Web** component is not set to a URL, it is recommended to call **setCustomUserAgent** &gt; to set **User-Agent** first, and then use **loadUrl** to load a specific page. &gt; &gt; - For the definition and usage scenarios of the default **User-Agent**, see &gt; User-Agent Development Guide.
+Sets a custom user agent, which will overwrite the default user agent.
+
+> **NOTE：**
+> 
+> - When **src** of the **Web** component is set to a URL, it is recommended to set **User-Agent** in the &gt; onControllerAttached callback. Do not set it in the &gt; **onLoadIntercept** callback, as this may cause the setting to fail or lead to unexpected results.
+> 
+> - If **User-Agent** is not set in the **onControllerAttached** callback, calling **setCustomUserAgent** later &gt; may cause an anomaly where the loaded page does not match the actually set **User-Agent**.
+> 
+> - When **src** of the **Web** component is not set to a URL, it is recommended to call **setCustomUserAgent**
+> to set **User-Agent** first, and then use **loadUrl** to load a specific page.
+> 
+> - For the definition and usage scenarios of the default **User-Agent**, see &gt; User-Agent Development Guide.
 
 **Since:** 10
 
@@ -3488,7 +3768,7 @@ Sets a custom user agent, which will overwrite the default user agent. &gt; **NO
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userAgent | string | Yes | Information about the custom user agent. It is recommended that you obtain the current default user agent through [getUserAgent](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getuseragent) and then customize the obtained user agent. |
+| userAgent | string | Yes | Information about the custom user agent. It is recommended that you obtain the current default user agent through [getUserAgent](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getuseragent) and then customize the obtained user agent. |
 
 **Error codes:**
 
@@ -3517,7 +3797,7 @@ Sets a **WebDownloadDelegate** for the current **Web** component. The delegate i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| delegate | [WebDownloadDelegate](../../apis-na/arkts-apis/arkts-na-webview-webdownloaddelegate-c.md) | Yes | Delegate used to receive the download progress. |
+| delegate | [WebDownloadDelegate](../../apis-default/arkts-apis/arkts-webview-webdownloaddelegate-c.md) | Yes | Delegate used to receive the download progress. |
 
 **Error codes:**
 
@@ -3531,7 +3811,9 @@ Sets a **WebDownloadDelegate** for the current **Web** component. The delegate i
 setErrorPageEnabled(enable: boolean): void
 ```
 
-Sets whether to enable the default error page. When this API is set to true, if an error occurs during page loading, the onOverrideErrorPage callback is triggered. You can customize the error display page in the callback.
+Sets whether to enable the default error page.
+
+When this API is set to true, if an error occurs during page loading, the onOverrideErrorPage callback is triggered. You can customize the error display page in the callback.
 
 **Since:** 20
 
@@ -3557,7 +3839,17 @@ Sets whether to enable the default error page. When this API is set to true, if 
 setErrorPageEnabled(enable: boolean, includeSubframe: boolean): void
 ```
 
-Sets whether to enable the mainframe error page feature, and controls whether to also enable the subframe error page feature. When **enable** is set to **true**, an error page is displayed when a mainframe loading error occurs: if the onOverrideErrorPage callback is set, the user-defined error page is displayed; if not, the default error page provided by ArkWeb is displayed. When both **enable** and **includeSubframe** are set to **true**, an error page is also displayed when a subframe loading error occurs, and the **onOverrideErrorPage** callback also takes effect for subframes. &gt; **NOTE：**&gt; &gt; - When **enable** is set to **false**, the error page feature for both mainframe and subframe is disabled &gt; regardless of the value of **includeSubframe**. &gt; &gt; - When **includeSubframe** is set to **false**, the behavior of this API is the same as that of &gt; [setErrorPageEnabled](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#seterrorpageenabled)&lt;sup&gt;20+&lt;/sup&gt;, that &gt; is, only the mainframe error page feature is enabled, and the subframe error page feature is not enabled. &gt; &gt; - You can use errorPageEvent.request.isMainFrame() to determine whether &gt; the error source is a mainframe or a subframe, so as to set the corresponding custom error page in the &gt; **onOverrideErrorPage** callback.
+Sets whether to enable the mainframe error page feature, and controls whether to also enable the subframe error page feature.
+
+When **enable** is set to **true**, an error page is displayed when a mainframe loading error occurs: if the onOverrideErrorPage callback is set, the user-defined error page is displayed; if not, the default error page provided by ArkWeb is displayed. When both **enable** and **includeSubframe** are set to **true**, an error page is also displayed when a subframe loading error occurs, and the **onOverrideErrorPage** callback also takes effect for subframes.
+
+> **NOTE：**
+> 
+> - When **enable** is set to **false**, the error page feature for both mainframe and subframe is disabled &gt; regardless of the value of **includeSubframe**.
+> 
+> - When **includeSubframe** is set to **false**, the behavior of this API is the same as that of &gt; [setErrorPageEnabled](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#seterrorpageenabled)&lt;sup&gt;20+&lt;/sup&gt;, that &gt; is, only the mainframe error page feature is enabled, and the subframe error page feature is not enabled.
+> 
+> - You can use errorPageEvent.request.isMainFrame() to determine whether &gt; the error source is a mainframe or a subframe, so as to set the corresponding custom error page in the &gt; **onOverrideErrorPage** callback.
 
 **Since:** 26.0.0
 
@@ -3630,7 +3922,7 @@ Sets how the **Web** component uses HTTPDNS for DNS resolution.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| secureDnsMode | [SecureDnsMode](../../apis-na/arkts-apis/arkts-na-webview-securednsmode-e.md) | Yes | Mode in which HTTPDNS is used. |
+| secureDnsMode | [SecureDnsMode](../../apis-default/arkts-apis/arkts-webview-securednsmode-e.md) | Yes | Mode in which HTTPDNS is used. |
 | secureDnsConfig | string | Yes | Information about the HTTPDNS server to use, which must use HTTPS. Only one HTTPDNS server can be configured. |
 
 **Error codes:**
@@ -3674,7 +3966,27 @@ Sets the **window.navigator.onLine** attribute in JavaScript.
 setPathAllowingUniversalAccess(pathList: Array<string>): void
 ```
 
-Sets a path list. When the file protocol accesses resources in the path list, cross-origin access to local files and other online resources is allowed. In addition, when a path list is set, the file protocol only allows access to resources in the path list. Typical use case: used when the **Web** component needs to be allowed to access local resource files across origins while restricting the access scope to ensure security. (The behavior of fileAccess will be overridden by the behavior of this API.) Using setPathAllowingUniversalAccess to relax cross-origin access restrictions on directories is a high-risk operation. Based on the principle of least privilege, the paths for el1 and el2 are fixed. The paths in the path list must conform to one of the following path formats: 1. A subdirectory of the app file directory. (The app file directory is obtained through [Context.filesDir] (../../../reference/apis-ability-kit/js-apis-inner-application-context.md#properties) in Ability Kit.) For example: * /data/storage/el2/base/files/example * /data/storage/el2/base/haps/entry/files/example 2. The app resource directory or its subdirectory. (The app resource directory is obtained through [Context.resourceDir] (../../../reference/apis-ability-kit/js-apis-inner-application-context.md#properties) in Ability Kit.) For example: * /data/storage/el1/bundle/entry/resource/resfile * /data/storage/el1/bundle/entry/resource/resfile/example 3. Since API version 21, the app cache directory and its subdirectory are also included. (The app cache directory is obtained through [Context.cacheDir] (../../../reference/apis-ability-kit/js-apis-inner-application-context.md#properties) in Ability Kit.) For example: * /data/storage/el2/base/cache * /data/storage/el2/base/haps/entry/cache/example * The **cache/web** directory is not allowed. If it is included, an exception with the code **401** will be thrown. If the **cache** directory is set, **cache/web** cannot be accessed. 4. Since API version 21, the app temporary directory and its subdirectory are also included. (The app temporary directory is obtained through [Context.tempDir] (../../../reference/apis-ability-kit/js-apis-inner-application-context.md#properties) in Ability Kit.) For example: * /data/storage/el2/base/temp * /data/storage/el2/base/haps/entry/temp/example If a path in the list is not of the preceding paths, error code 401 is reported and the path list fails to be set. When the path list is set to empty, the accessible files for the file protocol are subject to the behavior of the fileAccess.
+Sets a path list. When the file protocol accesses resources in the path list, cross-origin access to local files and other online resources is allowed. In addition, when a path list is set, the file protocol only allows access to resources in the path list. Typical use case: used when the **Web** component needs to be allowed to access local resource files across origins while restricting the access scope to ensure security. (The behavior of fileAccess will be overridden by the behavior of this API.)
+
+Using setPathAllowingUniversalAccess to relax cross-origin access restrictions on directories is a high-risk operation. Based on the principle of least privilege, the paths for el1 and el2 are fixed. The paths in the path list must conform to one of the following path formats:
+
+1. A subdirectory of the app file directory. (The app file directory is obtained through [Context.filesDir] (../../../reference/apis-ability-kit/js-apis-inner-application-context.md#properties) in Ability Kit.) For example:
+
+/data/storage/el2/base/files/example /data/storage/el2/base/haps/entry/files/example
+
+2. The app resource directory or its subdirectory. (The app resource directory is obtained through [Context.resourceDir] (../../../reference/apis-ability-kit/js-apis-inner-application-context.md#properties) in Ability Kit.) For example:
+
+/data/storage/el1/bundle/entry/resource/resfile /data/storage/el1/bundle/entry/resource/resfile/example
+
+3. Since API version 21, the app cache directory and its subdirectory are also included. (The app cache directory is obtained through [Context.cacheDir] (../../../reference/apis-ability-kit/js-apis-inner-application-context.md#properties) in Ability Kit.) For example:
+
+/data/storage/el2/base/cache /data/storage/el2/base/haps/entry/cache/example The **cache/web** directory is not allowed. If it is included, an exception with the code **401** will be thrown. If the **cache** directory is set, **cache/web** cannot be accessed.
+
+4. Since API version 21, the app temporary directory and its subdirectory are also included. (The app temporary directory is obtained through [Context.tempDir] (../../../reference/apis-ability-kit/js-apis-inner-application-context.md#properties) in Ability Kit.) For example:
+
+/data/storage/el2/base/temp /data/storage/el2/base/haps/entry/temp/example
+
+If a path in the list is not of the preceding paths, error code 401 is reported and the path list fails to be set. When the path list is set to empty, the accessible files for the file protocol are subject to the behavior of the fileAccess.
 
 **Since:** 12
 
@@ -3744,7 +4056,7 @@ Sets the ArkWeb rendering subprocess mode. You can select the appropriate mode b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [RenderProcessMode](../../apis-na/arkts-apis/arkts-na-webview-renderprocessmode-e.md) | Yes | Render subprocess mode. <br>You can call [getRenderProcessMode()](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getrenderprocessmode) to view the ArkWeb rendering subprocess mode of the current device. The enumerated value **0** indicates the single render subprocess mode, and **1** indicates the multi-render subprocess mode. <br>By default, mobile phones use the single render subprocess mode, and tablets and PCs/2in1 devices use the multi-render subprocess mode. <br>If an invalid number other than the enumerated value of **RenderProcessMode** is passed, the multi-render subprocess mode is used by default. |
+| mode | [RenderProcessMode](../../apis-default/arkts-apis/arkts-webview-renderprocessmode-e.md) | Yes | Render subprocess mode. <br>You can call [getRenderProcessMode()](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getrenderprocessmode) to view the ArkWeb rendering subprocess mode of the current device. The enumerated value **0** indicates the single render subprocess mode, and **1** indicates the multi-render subprocess mode. <br>By default, mobile phones use the single render subprocess mode, and tablets and PCs/2in1 devices use the multi-render subprocess mode. <br>If an invalid number other than the enumerated value of **RenderProcessMode** is passed, the multi-render subprocess mode is used by default. |
 
 **Error codes:**
 
@@ -3773,7 +4085,7 @@ Sets whether this web page is scrollable.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Whether this web page is scrollable. <br>The value **true** indicates that this web page is scrollable, and **false** indicates the opposite. <br>Default value: **true**. |
-| type | [ScrollType](../../apis-na/arkts-apis/arkts-na-webview-scrolltype-e.md) | No | Scrolling type supported by the web page. The default value is supported. <br> - If the value of **enable** is set to **false**, the specified **ScrollType** is disabled. If **ScrollType** is set to the default value, all scrolling types are disabled. <br> - If the value of **enable** is set to **true**, all scrolling types are enabled regardless of the value of **ScrollType**. <br>If **null** or **undefined** is passed, error code **401** is thrown. |
+| type | [ScrollType](../../apis-default/arkts-apis/arkts-webview-scrolltype-e.md) | No | Scrolling type supported by the web page. The default value is supported. <br> - If the value of **enable** is set to **false**, the specified **ScrollType** is disabled. If **ScrollType** is set to the default value, all scrolling types are disabled. <br> - If the value of **enable** is set to **true**, all scrolling types are enabled regardless of the value of **ScrollType**. <br>If **null** or **undefined** is passed, error code **401** is thrown. |
 
 **Error codes:**
 
@@ -3788,7 +4100,15 @@ Sets whether this web page is scrollable.
 static setScrollbarMode(scrollbarMode: ScrollbarMode): void
 ```
 
-Sets the global scrollbar mode in the web page. When this API is not explicitly called, [ScrollbarMode.OVERLAY_LAYOUT_SCROLLBAR](../../apis-na/arkts-apis/arkts-na-webview-scrollbarmode-e.md) is used by default, indicating that the scroll bar is not always displayed. &gt; **NOTE：**&gt; &gt; - You can set whether to always display the web scrollbar of the current application based on the scrollbar &gt; mode. &gt; &gt; - If the forceDisplayScrollBar API is set at the same time as this &gt; API, the setting of **forceDisplayScrollBar** does not take effect. &gt; &gt; - This API must be called before WebViewController is bound to a **Web** component.
+Sets the global scrollbar mode in the web page. When this API is not explicitly called, [ScrollbarMode.OVERLAY_LAYOUT_SCROLLBAR](../../apis-default/arkts-apis/arkts-webview-scrollbarmode-e.md) is used by default, indicating that the scroll bar is not always displayed.
+
+> **NOTE：**
+> 
+> - You can set whether to always display the web scrollbar of the current application based on the scrollbar &gt; mode.
+> 
+> - If the forceDisplayScrollBar API is set at the same time as this &gt; API, the setting of **forceDisplayScrollBar** does not take effect.
+> 
+> - This API must be called before WebViewController is bound to a **Web** component.
 
 **Since:** 23
 
@@ -3800,7 +4120,7 @@ Sets the global scrollbar mode in the web page. When this API is not explicitly 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scrollbarMode | [ScrollbarMode](../../apis-na/arkts-apis/arkts-na-webview-scrollbarmode-e.md) | Yes | Scroll bar mode. |
+| scrollbarMode | [ScrollbarMode](../../apis-default/arkts-apis/arkts-webview-scrollbarmode-e.md) | Yes | Scroll bar mode. |
 
 ## setServiceWorkerWebSchemeHandler
 
@@ -3823,7 +4143,7 @@ Sets a WebSchemeHandler for all **Web** components of the current app, used to i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | scheme | string | Yes | Protocol to be intercepted. |
-| handler | [WebSchemeHandler](../../apis-na/arkts-apis/arkts-na-webview-webschemehandler-c.md) | Yes | Interceptor that intercepts this protocol. |
+| handler | [WebSchemeHandler](../../apis-default/arkts-apis/arkts-webview-webschemehandler-c.md) | Yes | Interceptor that intercepts this protocol. |
 
 **Error codes:**
 
@@ -3837,7 +4157,15 @@ Sets a WebSchemeHandler for all **Web** components of the current app, used to i
 static setSiteIsolationMode(mode: SiteIsolationMode): void
 ```
 
-Sets the site isolation mode. The site isolation mechanism isolates websites from different origins in different rendering processes to reduce the cross-domain attack surface. For example, on devices such as PCs, when site isolation mode is not enabled, the original process model assigns one rendering process per tab. After site isolation is enabled, iframes from different origins within a tab can run in independent rendering processes. For third-party applications that load only trusted web pages, you can disable this functionality to improve performance, reduce memory usage, and reduce interception of cross-domain access. The default value varies according to the device. [SiteIsolationMode.STRICT](../../apis-na/arkts-apis/arkts-na-webview-siteisolationmode-e.md) is used for PCs and tablets, and [SiteIsolationMode.PARTIAL](../../apis-na/arkts-apis/arkts-na-webview-siteisolationmode-e.md) is used for phones. In [Secure Shield mode](../../../web/web-secure-shield-mode.md), strict site isolation is used. &gt; **NOTE：**&gt; &gt; Strict site isolation cannot be set in single-process mode. &gt; &gt; This API can be called only once during initialization. The site isolation mode cannot be repeatedly changed.
+Sets the site isolation mode. The site isolation mechanism isolates websites from different origins in different rendering processes to reduce the cross-domain attack surface. For example, on devices such as PCs, when site isolation mode is not enabled, the original process model assigns one rendering process per tab. After site isolation is enabled, iframes from different origins within a tab can run in independent rendering processes.
+
+For third-party applications that load only trusted web pages, you can disable this functionality to improve performance, reduce memory usage, and reduce interception of cross-domain access. The default value varies according to the device. [SiteIsolationMode.STRICT](../../apis-default/arkts-apis/arkts-webview-siteisolationmode-e.md) is used for PCs and tablets, and [SiteIsolationMode.PARTIAL](../../apis-default/arkts-apis/arkts-webview-siteisolationmode-e.md) is used for phones. In [Secure Shield mode](../../../web/web-secure-shield-mode.md), strict site isolation is used.
+
+> **NOTE：**
+> 
+> Strict site isolation cannot be set in single-process mode.
+> 
+> This API can be called only once during initialization. The site isolation mode cannot be repeatedly changed.
 
 **Since:** 21
 
@@ -3849,7 +4177,7 @@ Sets the site isolation mode. The site isolation mechanism isolates websites fro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [SiteIsolationMode](../../apis-na/arkts-apis/arkts-na-webview-siteisolationmode-e.md) | Yes | Site isolation mode. <br>The default value depends on the device type and device mode. For PCs and tablets, strict site isolation is used by default. For phones, partial site isolation is used by default. In Secure Shield mode, strict site isolation is used by default. |
+| mode | [SiteIsolationMode](../../apis-default/arkts-apis/arkts-webview-siteisolationmode-e.md) | Yes | Site isolation mode. <br>The default value depends on the device type and device mode. For PCs and tablets, strict site isolation is used by default. For phones, partial site isolation is used by default. In Secure Shield mode, strict site isolation is used by default. |
 
 **Error codes:**
 
@@ -3863,7 +4191,9 @@ Sets the site isolation mode. The site isolation mechanism isolates websites fro
 static setSocketIdleTimeout(timeout: number): void
 ```
 
-Sets the timeout interval for used sockets to stay idle in the **Web** component. If the value is different from the timeout interval of existing idle sockets, the existing idle sockets are cleared according to the new value. If this API is not used to set the timeout interval for idle sockets, the default value **300s** is used for the **Web** component.
+Sets the timeout interval for used sockets to stay idle in the **Web** component. If the value is different from the timeout interval of existing idle sockets, the existing idle sockets are cleared according to the new value.
+
+If this API is not used to set the timeout interval for idle sockets, the default value **300s** is used for the **Web** component.
 
 **Since:** 21
 
@@ -3895,7 +4225,7 @@ Sets the automatic control mode of the soft keyboard. When this API is not expli
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [WebSoftKeyboardBehaviorMode](../../apis-na/arkts-apis/arkts-na-webview-websoftkeyboardbehaviormode-e.md) | Yes | Behavior mode of the web soft keyboard. |
+| mode | [WebSoftKeyboardBehaviorMode](../../apis-default/arkts-apis/arkts-webview-websoftkeyboardbehaviormode-e.md) | Yes | Behavior mode of the web soft keyboard. |
 
 **Error codes:**
 
@@ -3958,8 +4288,8 @@ Sets a URL trust list for the Web. Only URLs in the trust list are allowed to be
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Initialization error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
 
 ## setUserAgentClientHintsEnabled
 
@@ -3967,7 +4297,14 @@ Sets a URL trust list for the Web. Only URLs in the trust list are allowed to be
 static setUserAgentClientHintsEnabled(enabled: boolean): void
 ```
 
-Sets whether to enable the User-Agent Client Hints feature. &gt; **NOTE：**&gt; &gt; User-Agent Client Hints (UA-CH) is a privacy protection mechanism that replaces the traditional **User-Agent** &gt; string. It transfers client information through on-demand requests and structured data, reducing the risk of &gt; excessive tracking. &gt; &gt; If this method is not used, the User-Agent Client Hints feature is disabled by default.
+Sets whether to enable the User-Agent Client Hints feature.
+
+> **NOTE：**
+> 
+> User-Agent Client Hints (UA-CH) is a privacy protection mechanism that replaces the traditional **User-Agent**
+> string. It transfers client information through on-demand requests and structured data, reducing the risk of &gt; excessive tracking.
+> 
+> If this method is not used, the User-Agent Client Hints feature is disabled by default.
 
 **Since:** 24
 
@@ -3987,7 +4324,11 @@ Sets whether to enable the User-Agent Client Hints feature. &gt; **NOTE：**&gt;
 static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void
 ```
 
-Sets a custom user agent for a specific website, which overwrites the system user agent and takes effect for all **Web** components in the application. To set a custom user agent for a specific website, you are advised to call the **setUserAgentForHosts** method to set **User-Agent** before creating a **Web** component, and then create a **Web** component with a specified src or use [loadUrl](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#loadurl) to load a specific page. For details about the default **User-Agent** definition, application scenarios, and API priorities, see [Developing User-Agent](../../../web/web-default-userAgent.md).
+Sets a custom user agent for a specific website, which overwrites the system user agent and takes effect for all **Web** components in the application.
+
+To set a custom user agent for a specific website, you are advised to call the **setUserAgentForHosts** method to set **User-Agent** before creating a **Web** component, and then create a **Web** component with a specified src or use [loadUrl](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#loadurl) to load a specific page.
+
+For details about the default **User-Agent** definition, application scenarios, and API priorities, see [Developing User-Agent](../../../web/web-default-userAgent.md).
 
 **Since:** 20
 
@@ -3999,7 +4340,7 @@ Sets a custom user agent for a specific website, which overwrites the system use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userAgent | string | Yes | Information about the custom user agent. It is recommended that you obtain the current default user agent through [getDefaultUserAgent](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getdefaultuseragent) and then customize the obtained user agent. |
+| userAgent | string | Yes | Information about the custom user agent. It is recommended that you obtain the current default user agent through [getDefaultUserAgent](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getdefaultuseragent) and then customize the obtained user agent. |
 | hosts | Array&lt;string&gt; | Yes | List of domain names related to the custom user agent. Only the latest list is retained each time the API is called. The maximum number of entries is 20,000, and the excessive entries are automatically truncated. |
 
 ## setUserAgentMetadata
@@ -4008,7 +4349,17 @@ Sets a custom user agent for a specific website, which overwrites the system use
 setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void
 ```
 
-Sets the **UserAgentMetadata** corresponding to the **User-Agent**. &gt; **NOTE：**&gt; &gt; User-Agent Metadata is used to populate user agent client hints. It can provide the brand and version &gt; information of the client, the brand and major version of the underlying operating system, and detailed &gt; information about the underlying device. &gt; &gt; The user agent can be set through setCustomUserAgent, setAppCustomUserAgent, or setUserAgentForHosts. &gt; &gt; If no UserAgentMetadata is found based on the overridden User-Agent, and the overridden User-Agent contains the &gt; system default User-Agent, the system default value is used. &gt; &gt; If no UserAgentMetadata is found based on the overridden User-Agent, but the overridden User-Agent does not &gt; contain the system default user agent, only low-level user agent client hints are generated.
+Sets the **UserAgentMetadata** corresponding to the **User-Agent**.
+
+> **NOTE：**
+> 
+> User-Agent Metadata is used to populate user agent client hints. It can provide the brand and version &gt; information of the client, the brand and major version of the underlying operating system, and detailed &gt; information about the underlying device.
+> 
+> The user agent can be set through setCustomUserAgent, setAppCustomUserAgent, or setUserAgentForHosts.
+> 
+> If no UserAgentMetadata is found based on the overridden User-Agent, and the overridden User-Agent contains the &gt; system default User-Agent, the system default value is used.
+> 
+> If no UserAgentMetadata is found based on the overridden User-Agent, but the overridden User-Agent does not &gt; contain the system default user agent, only low-level user agent client hints are generated.
 
 **Since:** 24
 
@@ -4020,8 +4371,8 @@ Sets the **UserAgentMetadata** corresponding to the **User-Agent**. &gt; **NOTE�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userAgent | string | Yes | Information about the custom user agent. You can use [getUserAgent](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getuseragent) to obtain the current default user agent. |
-| metaData | [UserAgentMetadata](../../apis-na/arkts-apis/arkts-na-webview-useragentmetadata-c.md) | Yes | UserAgentMetadata** corresponding to the user agent. You can use [getUserAgentMetadata](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getuseragentmetadata) to obtain the current default value and then modify it using the corresponding method. |
+| userAgent | string | Yes | Information about the custom user agent. You can use [getUserAgent](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getuseragent) to obtain the current default user agent. |
+| metaData | [UserAgentMetadata](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md) | Yes | UserAgentMetadata** corresponding to the user agent. You can use [getUserAgentMetadata](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getuseragentmetadata) to obtain the current default value and then modify it using the corresponding method. |
 
 ## setWebDebuggingAccess
 
@@ -4029,7 +4380,9 @@ Sets the **UserAgentMetadata** corresponding to the **User-Agent**. &gt; **NOTE�
 static setWebDebuggingAccess(webDebuggingAccess: boolean): void
 ```
 
-Sets whether to enable web debugging. For details, see [Debugging Frontend Pages by Using DevTools](../../../web/web-debugging-with-devtools.md). NOTE: Enabling web debugging allows users to check and modify the internal status of the web page, which poses security risks. Therefore, you are advised not to enable this feature in the officially released version of the application.
+Sets whether to enable web debugging. For details, see [Debugging Frontend Pages by Using DevTools](../../../web/web-debugging-with-devtools.md).
+
+NOTE: Enabling web debugging allows users to check and modify the internal status of the web page, which poses security risks. Therefore, you are advised not to enable this feature in the officially released version of the application.
 
 **Since:** 9
 
@@ -4057,7 +4410,13 @@ Sets whether to enable web debugging. For details, see [Debugging Frontend Pages
 static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void
 ```
 
-Sets whether to enable wireless web debugging. By default, wireless web debugging is disabled. * If no port is specified, this API is equivalent to the [setWebDebuggingAccess](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#setwebdebuggingaccess) API. In this case, ArkWeb starts a local domain socket listener. * When a port is specified, ArkWeb starts a TCP socket listener. In this case, you can debug the web page wirelessly. For details, see [Wireless Debugging](../../../web/web-debugging-with-devtools.md#wireless-debugging). A port number smaller than 1024 is a well-known or system port and can be enabled only with privileges in the operating system. Therefore, the value of port must be greater than 1024. Otherwise, the API throws an exception. NOTE: Enabling web debugging allows users to check and modify the internal status of the web page, which poses security risks. Therefore, you are advised not to enable this feature in the officially released version of the application.
+Sets whether to enable wireless web debugging. By default, wireless web debugging is disabled.
+
+If no port is specified, this API is equivalent to the [setWebDebuggingAccess](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setwebdebuggingaccess) API. In this case, ArkWeb starts a local domain socket listener. When a port is specified, ArkWeb starts a TCP socket listener. In this case, you can debug the web page wirelessly. For details, see [Wireless Debugging](../../../web/web-debugging-with-devtools.md#wireless-debugging).
+
+A port number smaller than 1024 is a well-known or system port and can be enabled only with privileges in the operating system. Therefore, the value of port must be greater than 1024. Otherwise, the API throws an exception.
+
+NOTE: Enabling web debugging allows users to check and modify the internal status of the web page, which poses security risks. Therefore, you are advised not to enable this feature in the officially released version of the application.
 
 **Since:** 20
 
@@ -4084,7 +4443,11 @@ Sets whether to enable wireless web debugging. By default, wireless web debuggin
 static setWebDestroyMode(mode: WebDestroyMode): void
 ```
 
-Sets the destroy mode of the **Web** component. The destroy mode of the **Web** component affects the time when web kernel resources, such as the JavaScript running context and rendering context, are released. The default value is [WebDestroyMode.NORMAL_MODE](../../apis-na/arkts-apis/arkts-na-webview-webdestroymode-e.md) (normal mode), indicating that the system determines the destroy time. You can set [WebDestroyMode.FAST_MODE](../../apis-na/arkts-apis/arkts-na-webview-webdestroymode-e.md) (fast mode) to destroy resources immediately, improving performance in specific scenarios. &gt; **NOTE：**&gt; &gt; [WebDestroyMode.FAST_MODE](../../apis-na/arkts-apis/arkts-na-webview-webdestroymode-e.md) changes the time when the **Web** component is &gt; destroyed. When it is used, pay attention to the incorrect implementation that depends on the destroy time of &gt; the **Web** component. For example, when a **WebViewController** is called in fast mode rather than using &gt; [WebDestroyMode.NORMAL_MODE](../../apis-na/arkts-apis/arkts-na-webview-webdestroymode-e.md), the unbinding exception (**17100001**) is more &gt; likely to be triggered. In this case, the application needs to capture the exception, or use &gt; [getAttachState](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getattachstate) to obtain the attach state to avoid stability &gt; problems.
+Sets the destroy mode of the **Web** component. The destroy mode of the **Web** component affects the time when web kernel resources, such as the JavaScript running context and rendering context, are released. The default value is [WebDestroyMode.NORMAL_MODE](../../apis-default/arkts-apis/arkts-webview-webdestroymode-e.md) (normal mode), indicating that the system determines the destroy time. You can set [WebDestroyMode.FAST_MODE](../../apis-default/arkts-apis/arkts-webview-webdestroymode-e.md) (fast mode) to destroy resources immediately, improving performance in specific scenarios.
+
+> **NOTE：**
+> 
+> [WebDestroyMode.FAST_MODE](../../apis-default/arkts-apis/arkts-webview-webdestroymode-e.md) changes the time when the **Web** component is &gt; destroyed. When it is used, pay attention to the incorrect implementation that depends on the destroy time of &gt; the **Web** component. For example, when a **WebViewController** is called in fast mode rather than using &gt; [WebDestroyMode.NORMAL_MODE](../../apis-default/arkts-apis/arkts-webview-webdestroymode-e.md), the unbinding exception (**17100001**) is more &gt; likely to be triggered. In this case, the application needs to capture the exception, or use &gt; [getAttachState](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getattachstate) to obtain the attach state to avoid stability &gt; problems.
 
 **Since:** 20
 
@@ -4096,7 +4459,7 @@ Sets the destroy mode of the **Web** component. The destroy mode of the **Web** 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [WebDestroyMode](../../apis-na/arkts-apis/arkts-na-webview-webdestroymode-e.md) | Yes | Destroy mode of the **Web** component. <br>Default value: **WebDestroyMode.NORMAL_MODE |
+| mode | [WebDestroyMode](../../apis-default/arkts-apis/arkts-webview-webdestroymode-e.md) | Yes | Destroy mode of the **Web** component. <br>Default value: **WebDestroyMode.NORMAL_MODE |
 
 ## setWebSchemeHandler
 
@@ -4104,7 +4467,7 @@ Sets the destroy mode of the **Web** component. The destroy mode of the **Web** 
 setWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void
 ```
 
-Sets a [WebSchemeHandler](../../apis-na/arkts-apis/arkts-na-webview-webschemehandler-c.md) for the **Web** component. The [WebSchemeHandler](../../apis-na/arkts-apis/arkts-na-webview-webschemehandler-c.md) class is used to intercept requests of a specified scheme.
+Sets a [WebSchemeHandler](../../apis-default/arkts-apis/arkts-webview-webschemehandler-c.md) for the **Web** component. The [WebSchemeHandler](../../apis-default/arkts-apis/arkts-webview-webschemehandler-c.md) class is used to intercept requests of a specified scheme.
 
 **Since:** 12
 
@@ -4119,7 +4482,7 @@ Sets a [WebSchemeHandler](../../apis-na/arkts-apis/arkts-na-webview-webschemehan
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | scheme | string | Yes | Protocol to be intercepted. |
-| handler | [WebSchemeHandler](../../apis-na/arkts-apis/arkts-na-webview-webschemehandler-c.md) | Yes | Interceptor that intercepts this protocol. |
+| handler | [WebSchemeHandler](../../apis-default/arkts-apis/arkts-webview-webschemehandler-c.md) | Yes | Interceptor that intercepts this protocol. |
 
 **Error codes:**
 
@@ -4370,7 +4733,9 @@ Stores this web page. This API uses an asynchronous callback to return the resul
 terminateRenderProcess(): boolean
 ```
 
-Terminates this render process. Calling this API will destroy the associated render process. If the render process has not been started or has been destroyed, there is no impact. In addition, destroying the render process affects all other instances associated with the render process.
+Terminates this render process.
+
+Calling this API will destroy the associated render process. If the render process has not been started or has been destroyed, there is no impact. In addition, destroying the render process affects all other instances associated with the render process.
 
 **Since:** 12
 
@@ -4410,7 +4775,7 @@ Clears the cache occupied by **Web** component based on the specified memory pre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | [PressureLevel](../../apis-na/arkts-apis/arkts-na-webview-pressurelevel-e.md) | Yes | Pressure level of the memory to be cleared. |
+| level | [PressureLevel](../../apis-default/arkts-apis/arkts-webview-pressurelevel-e.md) | Yes | Pressure level of the memory to be cleared. |
 
 **Error codes:**
 
@@ -4424,7 +4789,7 @@ Clears the cache occupied by **Web** component based on the specified memory pre
 waitForAttached(timeout: number): Promise<ControllerAttachState>
 ```
 
-Asynchronously waits for the **WebViewController** to be attached to the **Web** component. If the attachment is complete or times out, a callback is triggered to return the current [ControllerAttachState](../../apis-na/arkts-apis/arkts-na-webview-controllerattachstate-e.md) through a promise.
+Asynchronously waits for the **WebViewController** to be attached to the **Web** component. If the attachment is complete or times out, a callback is triggered to return the current [ControllerAttachState](../../apis-default/arkts-apis/arkts-webview-controllerattachstate-e.md) through a promise.
 
 **Since:** 20
 
@@ -4442,7 +4807,7 @@ Asynchronously waits for the **WebViewController** to be attached to the **Web**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ControllerAttachState](../../apis-na/arkts-apis/arkts-na-webview-controllerattachstate-e.md)&gt; | Promise used to return the current [ControllerAttachState]{ |
+| Promise&lt;[ControllerAttachState](../../apis-default/arkts-apis/arkts-webview-controllerattachstate-e.md)&gt; | Promise used to return the current [ControllerAttachState]{ |
 
 ## warmupServiceWorker
 
@@ -4478,7 +4843,15 @@ Warms up ServiceWorker to improve the loading speed of the first screen page (on
 webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): void
 ```
 
-Obtains the full drawing result of the web page. &gt; **NOTE：**&gt; &gt; - This API does not support concurrent calls. &gt; &gt; - Only supports taking snapshots of resources on the rendering process: static images and text. &gt; &gt; - If the page contains a video, a placeholder image of the video is displayed in the snapshot. If there is no &gt; placeholder image, a blank area is displayed.
+Obtains the full drawing result of the web page.
+
+> **NOTE：**
+> 
+> - This API does not support concurrent calls.
+> 
+> - Only supports taking snapshots of resources on the rendering process: static images and text.
+> 
+> - If the page contains a video, a placeholder image of the video is displayed in the snapshot. If there is no &gt; placeholder image, a blank area is displayed.
 
 **Since:** 12
 
@@ -4492,8 +4865,8 @@ Obtains the full drawing result of the web page. &gt; **NOTE：**&gt; &gt; - Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [SnapshotInfo](../../apis-na/arkts-apis/arkts-na-webview-snapshotinfo-i.md) | Yes | Information for obtaining the full drawing result. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SnapshotResult](../../apis-na/arkts-apis/arkts-na-webview-snapshotresult-i.md)&gt; | Yes | Callback used to return the result. |
+| info | [SnapshotInfo](../../apis-default/arkts-apis/arkts-webview-snapshotinfo-i.md) | Yes | Information for obtaining the full drawing result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SnapshotResult](../../apis-default/arkts-apis/arkts-webview-snapshotresult-i.md)&gt; | Yes | Callback used to return the result. |
 
 ## zoom
 
@@ -4521,9 +4894,9 @@ Zooms in or out of this web page. This API is effective only when zoomAccess is 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100004](../errorcode-webview.md#17100004-function-not-enabled) | Function not enabled. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| [17100004](../errorcode-webview.md#17100004-function-not-enabled) | Function not enabled. |
 
 ## zoomIn
 
@@ -4545,8 +4918,8 @@ Zooms in on this web page by 25%.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100004](../errorcode-webview.md#17100004-function-not-enabled) | Function not enabled. |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| [17100004](../errorcode-webview.md#17100004-function-not-enabled) | Function not enabled. |
 
 ## zoomOut
 
@@ -4568,6 +4941,6 @@ Zooms out of this web page by 20%.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100004](../errorcode-webview.md#17100004-function-not-enabled) | Function not enabled. |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| [17100004](../errorcode-webview.md#17100004-function-not-enabled) | Function not enabled. |
 

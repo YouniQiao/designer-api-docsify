@@ -1,8 +1,12 @@
 # GridLayoutAlgorithm
 
-网格布局算法类。 &gt; **说明：** &gt; &gt; GridLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为[DynamicLayout](../../apis-na/arkts-apis/arkts-na-arkui-components-arkdynamiclayout-dynamiclayout-f.md)组件的入 &gt; 参指定布局算法。
+网格布局算法类。
 
-**继承/实现关系：** GridLayoutAlgorithm implements [LayoutAlgorithm](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-i.md)
+> **说明：**
+> 
+> GridLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为DynamicLayout组件的入 &gt; 参指定布局算法。
+
+**继承/实现关系：** GridLayoutAlgorithm implements [LayoutAlgorithm](../../apis-default/arkts-apis/arkts-layoutalgorithm-i.md)
 
 **起始版本：** 24
 
@@ -32,7 +36,7 @@ constructor(option?: GridLayoutAlgorithmOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | [GridLayoutAlgorithmOptions](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-gridlayoutalgorithmoptions-i.md) | 否 | 网格布局算法的构造入参，设置网格布局的列数、列间距、行间距。 |
+| option | [GridLayoutAlgorithmOptions](../../apis-default/arkts-apis/arkts-layoutalgorithm-gridlayoutalgorithmoptions-i.md) | 否 | 网格布局算法的构造入参，设置网格布局的列数、列间距、行间距。 |
 
 ## columnsGap
 
@@ -40,9 +44,15 @@ constructor(option?: GridLayoutAlgorithmOptions)
 @Trace public columnsGap?: LengthMetrics
 ```
 
-列与列之间的间距。 默认值：LengthMetrics.vp(0) 非法值：按默认值处理。 装饰器类型：@Trace
+列与列之间的间距。
 
-**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+默认值：LengthMetrics.vp(0)
+
+非法值：按默认值处理。
+
+装饰器类型：@Trace
+
+**类型：** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
 
 **默认值：** LengthMetrics.vp(0)
 
@@ -62,9 +72,15 @@ constructor(option?: GridLayoutAlgorithmOptions)
 @Trace public columnsTemplate?: string | ItemFillPolicy
 ```
 
-设置当前网格布局的列数。 默认值：'1fr' 非法值：按默认值处理。 装饰器类型：@Trace
+设置当前网格布局的列数。
 
-**类型：** string \| [ItemFillPolicy](../../apis-na/arkts-apis/arkts-na-units-itemfillpolicy-i.md)
+默认值：'1fr'
+
+非法值：按默认值处理。
+
+装饰器类型：@Trace
+
+**类型：** string \| [ItemFillPolicy](../../apis-default/arkts-apis/arkts-units-itemfillpolicy-i.md)
 
 **默认值：** '1fr'
 
@@ -84,9 +100,15 @@ constructor(option?: GridLayoutAlgorithmOptions)
 @Trace public rowsGap?: LengthMetrics
 ```
 
-行与行之间的间距。 默认值：LengthMetrics.vp(0) 非法值：按默认值处理。 装饰器类型：@Trace
+行与行之间的间距。
 
-**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+默认值：LengthMetrics.vp(0)
+
+非法值：按默认值处理。
+
+装饰器类型：@Trace
+
+**类型：** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
 
 **默认值：** LengthMetrics.vp(0)
 

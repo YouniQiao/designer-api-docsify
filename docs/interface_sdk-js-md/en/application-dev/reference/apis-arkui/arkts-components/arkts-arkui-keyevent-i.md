@@ -73,7 +73,9 @@ ID of the input device that triggers the key event.
 intentionCode: IntentionCode
 ```
 
-Intention corresponding to the key. Default value: **IntentionCode.INTENTION_UNKNOWN**.
+Intention corresponding to the key.
+
+Default value: **IntentionCode.INTENTION_UNKNOWN**.
 
 **Type:** [IntentionCode](arkts-arkui-intentioncode-t.md)
 

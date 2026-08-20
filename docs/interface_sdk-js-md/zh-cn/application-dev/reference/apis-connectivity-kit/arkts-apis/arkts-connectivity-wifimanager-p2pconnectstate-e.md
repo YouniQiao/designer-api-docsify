@@ -2,6 +2,8 @@
 
 P2P连接状态。
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-wifiManager-enum P2pConnectState--><!--Device-wifiManager-enum P2pConnectState-End-->

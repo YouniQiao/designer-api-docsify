@@ -2,6 +2,8 @@
 
 Wi-Fi connection information.
 
+@interface WifiLinkedInfo
+
 **Since:** 6
 
 **Deprecated since:** 9

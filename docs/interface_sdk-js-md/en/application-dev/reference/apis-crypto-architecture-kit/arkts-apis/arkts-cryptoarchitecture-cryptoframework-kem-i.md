@@ -49,10 +49,10 @@ Key decapsulation operation. Using the receiver's private key, executed by the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
 ## decapsulateSync
 
@@ -60,7 +60,9 @@ Key decapsulation operation. Using the receiver's private key, executed by the r
 decapsulateSync(priKey: PriKey, wrappedKey: Uint8Array): Uint8Array
 ```
 
-Key decapsulation operation. Using the receiver's private key, executed by the receiver, to decapsulate the shared key from the ciphertext. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [decapsulate](#decapsulate). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Key decapsulation operation. Using the receiver's private key, executed by the receiver, to decapsulate the shared key from the ciphertext.
+
+<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [decapsulate](#decapsulate). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 26.0.0
 
@@ -89,10 +91,10 @@ Key decapsulation operation. Using the receiver's private key, executed by the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
 ## encapsulate
 
@@ -129,10 +131,10 @@ Key encapsulation operation. Using the recipient's public key, executed by the s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
 ## encapsulateSync
 
@@ -140,7 +142,9 @@ Key encapsulation operation. Using the recipient's public key, executed by the s
 encapsulateSync(pubKey: PubKey, ikme: Uint8Array | null): KemEncapResult
 ```
 
-Key encapsulation operation. Using the recipient's public key, executed by the sender, to generate and encapsulate a shared key. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [encapsulate](#encapsulate). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Key encapsulation operation. Using the recipient's public key, executed by the sender, to generate and encapsulate a shared key.
+
+<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [encapsulate](#encapsulate). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 26.0.0
 
@@ -169,8 +173,8 @@ Key encapsulation operation. Using the recipient's public key, executed by the s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 

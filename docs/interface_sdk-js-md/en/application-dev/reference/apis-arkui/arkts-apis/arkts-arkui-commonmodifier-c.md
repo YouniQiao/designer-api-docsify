@@ -2,6 +2,8 @@
 
 Defines Common Modifier
 
+@extends CommonAttribute @implements AttributeModifier&lt;CommonAttribute&gt;
+
 **Inheritance/Implementation:** CommonModifier extends CommonAttribute and implements AttributeModifier<CommonAttribute>
 
 **Since:** 20

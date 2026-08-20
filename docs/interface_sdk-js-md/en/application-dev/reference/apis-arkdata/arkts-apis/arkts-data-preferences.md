@@ -1,6 +1,10 @@
 # @ohos.data.preferences
 
-The **Preferences** module provides APIs for processing data in the form of key-value (KV) pairs, including querying, modifying, and persisting KV pairs. The key is of string type, and the value can be a number, string, boolean value, or an array of numbers, strings, or boolean values. The user preference persistent files are stored in the [preferencesDir](../../../application-models/application-context-stage.md#obtaining-application-file-paths) directory. Before creating a preferences object, ensure that the **preferencesDir** directory is readable and writeable. The [encryption level](../../apis-ability-kit/arkts-apis/arkts-ability-contextconstant-areamode-e.md) of the persistent file directory determines the access to the files. For details, see [Application File Directory and Application File Path](../../../file-management/app-sandbox-directory.md#application-file-directory-and-application-file-path) . &gt; **NOTE：**&gt; &gt; Preferences are not thread-safe and may cause file damage and data loss when used in multi-process scenarios. Do &gt; not use preferences in multi-process scenarios.
+The **Preferences** module provides APIs for processing data in the form of key-value (KV) pairs, including querying, modifying, and persisting KV pairs. The key is of string type, and the value can be a number, string, boolean value, or an array of numbers, strings, or boolean values. The user preference persistent files are stored in the [preferencesDir](../../../application-models/application-context-stage.md#obtaining-application-file-paths) directory. Before creating a preferences object, ensure that the **preferencesDir** directory is readable and writeable. The [encryption level](../../apis-ability-kit/arkts-apis/arkts-ability-contextconstant-areamode-e.md) of the persistent file directory determines the access to the files. For details, see [Application File Directory and Application File Path](../../../file-management/app-sandbox-directory.md#application-file-directory-and-application-file-path) .
+
+> **NOTE：**
+> 
+> Preferences are not thread-safe and may cause file damage and data loss when used in multi-process scenarios. Do &gt; not use preferences in multi-process scenarios.
 
 **Since:** 23
 
@@ -48,7 +52,7 @@ import { preferences } from '@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [StorageType](arkts-arkdata-preferences-storagetype-e.md) | Enumerates the storage types of preferences. &gt; **NOTE：**&gt; &gt; - Before using this mode, you are advised to call **isStorageTypeSupported** to check whether this storage type &gt; is supported. &gt; &gt; - Once the storage type is selected and data instances are obtained via **getPreferences()**, the storage type &gt; cannot be changed. &gt; &gt; - Data cannot be directly migrated between the **Preferences** instances that use different storage types. To &gt; migrate data between them, you need to read the data to be migrated and then write the data. &gt; &gt; - If you need to change the storage directory of preferences, you cannot move or overwrite files. Instead, you &gt; need to read the data and then write the data. |
+| [StorageType](arkts-arkdata-preferences-storagetype-e.md) | Enumerates the storage types of preferences. |
 
 ### Types
 

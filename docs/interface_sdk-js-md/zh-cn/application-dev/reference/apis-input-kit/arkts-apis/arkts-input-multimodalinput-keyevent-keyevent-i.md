@@ -2,6 +2,8 @@
 
 按键事件。
 
+@interface KeyEvent [since 9 - 11]
+
 **继承/实现关系：** KeyEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md)
 
 **起始版本：** 23

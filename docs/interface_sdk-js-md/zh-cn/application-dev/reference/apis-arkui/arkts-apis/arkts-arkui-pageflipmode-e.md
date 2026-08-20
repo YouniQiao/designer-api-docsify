@@ -1,6 +1,6 @@
 # PageFlipMode
 
-Page flip mode of Swiper and Tabs on mouse wheel event.
+Page flip mode of Swiper and Tabs on mouse wheel event. @enum { number } PageFlipMode
 
 **起始版本：** 15
 

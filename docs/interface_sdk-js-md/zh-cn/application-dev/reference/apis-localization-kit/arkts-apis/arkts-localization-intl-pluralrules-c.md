@@ -1,4 +1,4 @@
-# PluralRules(国际化-Intl)
+# PluralRules
 
 提供获取单复数类型的能力。
 
@@ -72,7 +72,7 @@ constructor(locale: string | Array<string>, options?: PluralRulesOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | locale | string \| Array&lt;string&gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
-| options | [PluralRulesOptions](arkts-localization-intl-pluralrulesoptions-i.md) | 否 | 创建单复数对象时设置的配置项。 <br>默认值：所有属性都取默认值时的配置项。 |
+| options | PluralRulesOptions | 否 | 创建单复数对象时设置的配置项。 <br>默认值：所有属性都取默认值时的配置项。 |
 
 **示例**
 

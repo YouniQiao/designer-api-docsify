@@ -1,4 +1,4 @@
-# StatusInfoResult(DLP) (System API)
+# StatusInfoResult (System API)
 
 Describes the DLP settings.
 

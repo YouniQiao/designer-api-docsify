@@ -2,6 +2,8 @@
 
 Configuration result for AI-generated image tasks.
 
+@interface GenerateImageTaskResult
+
 **Since:** 23
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.

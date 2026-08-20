@@ -2,6 +2,8 @@
 
 Enumeration type of grid level.
 
+@enum { int } GridLevel
+
 **Since:** 26.1.0
 
 <!--Device-photoAccessHelper-export enum GridLevel--><!--Device-photoAccessHelper-export enum GridLevel-End-->

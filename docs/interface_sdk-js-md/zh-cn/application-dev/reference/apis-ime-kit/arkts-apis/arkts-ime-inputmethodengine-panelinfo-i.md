@@ -1,5 +1,7 @@
 # PanelInfo
 
+@brief 输入法面板属性。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-export interface PanelInfo--><!--Device-inputMethodEngine-export interface PanelInfo-End-->
@@ -18,6 +20,8 @@ import { inputMethodEngine } from '@kit.IMEKit';
 flag?: PanelFlag
 ```
 
+@brief 面板的状态类型。
+
 **类型：** PanelFlag
 
 **默认值：** FLG_FIXED
@@ -33,6 +37,8 @@ flag?: PanelFlag
 ```TypeScript
 type: PanelType
 ```
+
+@brief 面板的类型。
 
 **类型：** PanelType
 

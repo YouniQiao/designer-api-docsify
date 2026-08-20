@@ -14,7 +14,9 @@ Describes options for cross-device notifications. Not supported currently.
 isDistributed?: boolean
 ```
 
-Whether cross-device notifications are supported. The default value is **true**. - **true**: cross-device notifications are supported. - **false**: cross-device notifications are not supported.
+Whether cross-device notifications are supported. The default value is **true**.
+
+- **true**: cross-device notifications are supported. - **false**: cross-device notifications are not supported.
 
 **Type:** boolean
 

@@ -57,7 +57,15 @@ A constructor used to create a **TabsController** object.
 preloadItems(indices: Optional<Array<number>>): Promise<void>
 ```
 
-Preloads child nodes. After this API is called, all specified child nodes will be loaded at once. Therefore, for performance considerations, it is recommended that you load child nodes in batches. &gt; **NOTE：**&gt; &gt; - **preloadItems** of **Tabs** needs to be called after **Tabs** is created. You are advised to control the first &gt; preloading in the onAppear lifecycle of **Tabs**. &gt; &gt; - If the **TabsController** object is not bound to any **Tabs** component, a JavaScript exception will be thrown &gt; when this API is called. Therefore, you are advised to use **try-catch** to handle potential exceptions when &gt; calling this API. &gt; &gt; - When using **preloadItems** to preload tabs, you are advised to use **ComponentContent** to customize the &gt; content displayed on the tab bar. For details, see &gt; [Example 10](../../../reference/apis-arkui/arkui-ts/ts-container-tabcontent.md#example-10-setting-tabbar-using-componentcontent).
+Preloads child nodes. After this API is called, all specified child nodes will be loaded at once. Therefore, for performance considerations, it is recommended that you load child nodes in batches.
+
+> **NOTE：**
+> 
+> - **preloadItems** of **Tabs** needs to be called after **Tabs** is created. You are advised to control the first &gt; preloading in the onAppear lifecycle of **Tabs**.
+> 
+> - If the **TabsController** object is not bound to any **Tabs** component, a JavaScript exception will be thrown &gt; when this API is called. Therefore, you are advised to use **try-catch** to handle potential exceptions when &gt; calling this API.
+> 
+> - When using **preloadItems** to preload tabs, you are advised to use **ComponentContent** to customize the &gt; content displayed on the tab bar. For details, see &gt; [Example 10](../../../reference/apis-arkui/arkui-ts/ts-container-tabcontent.md#example-10-setting-tabbar-using-componentcontent).
 
 **Since:** 12
 
@@ -93,7 +101,11 @@ Preloads child nodes. After this API is called, all specified child nodes will b
 setTabBarOpacity(opacity: number): void
 ```
 
-Sets the opacity of the tab bar. &gt; **NOTE：**&gt; &gt; When a **Tabs** component is bound to a scrollable container using APIs like &gt; [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable) &gt; or bindTabsToNestedScrollable](../arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable13), scrolling the &gt; container will trigger the display and hide animations of the tab bar for all **Tabs** components bound to it. In &gt; this case, any **TabBar** opacity set via the **setTabBarOpacity** API will be overridden. Therefore, avoid using &gt; **bindTabsToScrollable**, **bindTabsToNestedScrollable**, and **setTabBarOpacity** simultaneously.
+Sets the opacity of the tab bar.
+
+> **NOTE：**
+> 
+> When a **Tabs** component is bound to a scrollable container using APIs like &gt; [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable) &gt; or bindTabsToNestedScrollable](../arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable13), scrolling the &gt; container will trigger the display and hide animations of the tab bar for all **Tabs** components bound to it. In &gt; this case, any **TabBar** opacity set via the **setTabBarOpacity** API will be overridden. Therefore, avoid using &gt; **bindTabsToScrollable**, **bindTabsToNestedScrollable**, and **setTabBarOpacity** simultaneously.
 
 **Since:** 13
 
@@ -117,7 +129,11 @@ Sets the opacity of the tab bar. &gt; **NOTE：**&gt; &gt; When a **Tabs** compo
 setTabBarTranslate(translate: TranslateOptions): void
 ```
 
-Sets the translation distance of the tab bar. &gt; **NOTE：**&gt; &gt; When a **Tabs** component is bound to a scrollable container using APIs like &gt; [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable) &gt; or bindTabsToNestedScrollable](../arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable13), scrolling the &gt; container will trigger the display and hide animations of the tab bar for all **Tabs** components bound to it. In &gt; this case, calling the **setTabBarTranslate** API has no effect. Therefore, avoid using **bindTabsToScrollable**, &gt; **bindTabsToNestedScrollable**, and **setTabBarTranslate** simultaneously.
+Sets the translation distance of the tab bar.
+
+> **NOTE：**
+> 
+> When a **Tabs** component is bound to a scrollable container using APIs like &gt; [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable) &gt; or bindTabsToNestedScrollable](../arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable13), scrolling the &gt; container will trigger the display and hide animations of the tab bar for all **Tabs** components bound to it. In &gt; this case, calling the **setTabBarTranslate** API has no effect. Therefore, avoid using **bindTabsToScrollable**, &gt; **bindTabsToNestedScrollable**, and **setTabBarTranslate** simultaneously.
 
 **Since:** 13
 

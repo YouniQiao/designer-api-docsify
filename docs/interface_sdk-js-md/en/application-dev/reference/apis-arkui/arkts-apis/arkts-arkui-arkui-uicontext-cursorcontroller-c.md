@@ -1,6 +1,12 @@
 # CursorController
 
-Provides the capability to set cursor styles. &gt; **NOTE：**&gt; &gt; - The initial APIs of this class are supported since API version 12. &gt; &gt; - In the following API examples, you must first use [getCursorController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcursorcontroller) in &gt; **UIContext** to obtain a **CursorController** instance, and then call the APIs using the obtained instance.
+Provides the capability to set cursor styles.
+
+> **NOTE：**
+> 
+> - The initial APIs of this class are supported since API version 12.
+> 
+> - In the following API examples, you must first use [getCursorController()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcursorcontroller) in &gt; **UIContext** to obtain a **CursorController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 12
 
@@ -41,7 +47,11 @@ Restores the default cursor style.
 setCursor(value: PointerStyle): void
 ```
 
-Sets the cursor style. &gt; **NOTE：**&gt; &gt; This API does not take effect immediately. The cursor style will be updated in the next rendering frame.
+Sets the cursor style.
+
+> **NOTE：**
+> 
+> This API does not take effect immediately. The cursor style will be updated in the next rendering frame.
 
 **Since:** 12
 
@@ -57,7 +67,7 @@ Sets the cursor style. &gt; **NOTE：**&gt; &gt; This API does not take effect i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PointerStyle](arkts-arkui-pointerstyle-t.md) | Yes | Pointer style. |
+| value | [PointerStyle](../../apis-default/arkts-apis/arkts-pointerstyle-t.md) | Yes | Pointer style. |
 
 ## setCustomCursor
 
@@ -65,7 +75,11 @@ Sets the cursor style. &gt; **NOTE：**&gt; &gt; This API does not take effect i
 setCustomCursor(value: image.PixelMap, focusX?: int, focusY?: int): void
 ```
 
-Sets the custom cursor style. &gt; **NOTE：**&gt; &gt; This API does not take effect immediately. The cursor style will be updated in the next rendering frame.
+Sets the custom cursor style.
+
+> **NOTE：**
+> 
+> This API does not take effect immediately. The cursor style will be updated in the next rendering frame.
 
 **Since:** 26.0.0
 

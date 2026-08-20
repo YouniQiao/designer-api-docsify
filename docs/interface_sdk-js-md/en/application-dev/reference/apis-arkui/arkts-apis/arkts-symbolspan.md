@@ -1,4 +1,0 @@
-# symbolSpan
-
-## Summary
-

@@ -1,6 +1,18 @@
 # Image
 
-The **Image** component is usually used to display images in applications. It supports data sources of the following types: [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md), ResourceStr, and [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md). Supported image formats include PNG, JPG, JPEG, BMP, SVG, WEBP, GIF, HEIF, and TIFF. Note that the APNG and SVGA formats are not supported. > **NOTE** > - This component supports the TIFF image format since API version 23. > > - When keyboard shortcuts are used to copy an **Image** component, the **Image** component must be in a focused > state. For instructions on how to set focus, see > [Setting Whether a Component Is Focusable] > (../../../ui/arkts-common-events-focus-event.md#setting-whether-a-component-is-focusable). > By default, the **Image** component is not focusable. To enable it to gain focus, set both the > focusable and focusOnTouch attributes to > **true**. > > - The **Image** component supports SVG image sources. For details about SVG tags, see SVG Tags. > > - For animated images, animation playback is disabled by default and depends on the visibility of the **Image** > component. When the component is visible, the animation is started through the callback. When the component is > invisible, the animation is stopped. The visibility status of the **Image** component can be identified through the > > [onVisibleAreaChange] > onVisibleAreaChange > event. If the value of **ratios** is greater than 0, the component is visible. > > - For details about how to resolve white block issues during image loading, see > [Solution to White Image Blocks] > (https://developer.huawei.com/consumer/en/doc/best-practices/bpta-image-white-lump-solution). > For details about how to address slow image loading, see > [Optimizing Preset Image Loading] > (https://developer.huawei.com/consumer/en/doc/best-practices/bpta-texture-compression-improve- > performance#section91526132216). > Required Permissions The **ohos.permission.INTERNET** permission is required for using online images. For details about how to apply for a permission, see [Declaring Permissions](../../../security/AccessToken/declare-permissions.md). Child Components Not supported
+The **Image** component is usually used to display images in applications. It supports data sources of the following types: [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md), ResourceStr, and [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md). Supported image formats include PNG, JPG, JPEG, BMP, SVG, WEBP, GIF, HEIF, and TIFF. Note that the APNG and SVGA formats are not supported.
+
+> **NOTE**
+
+> - This component supports the TIFF image format since API version 23. > > - When keyboard shortcuts are used to copy an **Image** component, the **Image** component must be in a focused > state. For instructions on how to set focus, see > [Setting Whether a Component Is Focusable] > (../../../ui/arkts-common-events-focus-event.md#setting-whether-a-component-is-focusable). > By default, the **Image** component is not focusable. To enable it to gain focus, set both the > focusable and focusOnTouch attributes to > **true**. > > - The **Image** component supports SVG image sources. For details about SVG tags, see SVG Tags. > > - For animated images, animation playback is disabled by default and depends on the visibility of the **Image** > component. When the component is visible, the animation is started through the callback. When the component is > invisible, the animation is stopped. The visibility status of the **Image** component can be identified through the > > [onVisibleAreaChange] > onVisibleAreaChange > event. If the value of **ratios** is greater than 0, the component is visible. > > - For details about how to resolve white block issues during image loading, see > [Solution to White Image Blocks] > (https://developer.huawei.com/consumer/en/doc/best-practices/bpta-image-white-lump-solution). > For details about how to address slow image loading, see > [Optimizing Preset Image Loading] > (https://developer.huawei.com/consumer/en/doc/best-practices/bpta-texture-compression-improve- > performance#section91526132216). >
+
+Required Permissions
+
+The **ohos.permission.INTERNET** permission is required for using online images. For details about how to apply for a permission, see [Declaring Permissions](../../../security/AccessToken/declare-permissions.md).
+
+Child Components
+
+Not supported
 
 ## Image
 
@@ -8,7 +20,39 @@ The **Image** component is usually used to display images in applications. It su
 Image(src: PixelMap | ResourceStr | DrawableDescriptor)
 ```
 
-Obtains an image from the specified source for subsequent rendering and display. If the **Image** component fails to obtain the image or the obtained image size is 0, the **Image** component is automatically resized to 0 and does not follow the layout constraints of its parent component. By default, the **Image** component crops images to keep their center. For example, if the component has the same width and height, it crops any image whose width and height are different, so as to keep its center. If the **Image** component does not have its width and height set, its size adapts to that of its parent component once the image is successfully loaded. &gt; **NOTE：**&gt; &gt; - Passing a URL directly to an **Image** component may lead to potential performance issues, such as: (1) Large &gt; images cannot be downloaded in advance during loading, resulting in a long display time of white blocks; (2) &gt; Small images set to load synchronously may block the UI thread in a weak network environment, causing screen &gt; freezes; (3) In a rapidly scrolling waterfall flow, images that are about to be displayed cannot be downloaded in &gt; advance, resulting in many white blocks during scrolling. Performance issues may manifest differently in &gt; different scenarios. To minimize these issues, separate the network download part from the display of the &gt; **Image** component, and download in advance or asynchronously. For details about how to resolve white block &gt; issues during image loading, see &gt; [Solution to White Image Blocks] &gt; (https://developer.huawei.com/consumer/en/doc/best-practices/bpta-image-white-lump-solution). &gt; For details about how to address slow image loading, see &gt; [Optimizing Preset Image Loading] &gt; (https://developer.huawei.com/consumer/en/doc/best-practices/bpta-texture-compression-improve-performance). &gt; &gt; &gt; - When **src** is switched from a valid value (an image resource that can be parsed and loaded correctly) to an &gt; invalid value (an image path that cannot be parsed or loaded), the component retains the previously successfully &gt; loaded image content without clearing or resetting it. &gt; &gt; - If the input parameter is of the [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) type, the **Image** &gt; component can detect data changes only when the **PixelMap** object is updated to point to a new instance. If &gt; modifications are made to the content of the **PixelMap** object, such as pixel values, but the reference to the &gt; object remains the same, the **Image** component will not recognize these modifications as a data change. &gt; &gt; - If the input parameter of the **Image** component is a Base64 string, the standard format of the Base64 string &gt; is **data:image/subtype;base64,Base64EncodedData**. In this format, **subtype** indicates the type declaration, &gt; **Base64EncodedData** indicates the Base64-encoded data, and other values are fixed strings. For example, the &gt; input parameter of a PNG image is **data:image/png;base64,iVBORw0KGgo...**. &gt; &gt; &gt; &gt; 1. **image/subType** declares the data type. The **Image** component does not enforce that the declared type &gt; exactly matches the actual image format decoded from Base64. In some scenarios, the image may still display &gt; correctly even if the declared type does not match the actual format. To prevent future behavior changes or &gt; unknown issues, it is recommended that the declared type always match the actual image format. &gt; &gt; &gt; &gt; 2. The **Image** component does not support the wildcard syntax: **data:image/*;base64,Base64EncodedData**. &gt; The **subType** must explicitly declare the specific image type. &gt; &gt; &gt; &gt; 3. The **Image** component does not support loading SVG images in Base64 string format.
+Obtains an image from the specified source for subsequent rendering and display.
+
+If the **Image** component fails to obtain the image or the obtained image size is 0, the **Image** component is automatically resized to 0 and does not follow the layout constraints of its parent component.
+
+By default, the **Image** component crops images to keep their center. For example, if the component has the same width and height, it crops any image whose width and height are different, so as to keep its center.
+
+If the **Image** component does not have its width and height set, its size adapts to that of its parent component once the image is successfully loaded.
+
+> **NOTE：**
+> 
+> - Passing a URL directly to an **Image** component may lead to potential performance issues, such as: (1) Large &gt; images cannot be downloaded in advance during loading, resulting in a long display time of white blocks; (2) &gt; Small images set to load synchronously may block the UI thread in a weak network environment, causing screen &gt; freezes; (3) In a rapidly scrolling waterfall flow, images that are about to be displayed cannot be downloaded in &gt; advance, resulting in many white blocks during scrolling. Performance issues may manifest differently in &gt; different scenarios. To minimize these issues, separate the network download part from the display of the &gt; **Image** component, and download in advance or asynchronously. For details about how to resolve white block &gt; issues during image loading, see &gt; [Solution to White Image Blocks] &gt; (https://developer.huawei.com/consumer/en/doc/best-practices/bpta-image-white-lump-solution).
+> For details about how to address slow image loading, see &gt; [Optimizing Preset Image Loading] &gt; (https://developer.huawei.com/consumer/en/doc/best-practices/bpta-texture-compression-improve-performance).
+> 
+> 
+> - When **src** is switched from a valid value (an image resource that can be parsed and loaded correctly) to an &gt; invalid value (an image path that cannot be parsed or loaded), the component retains the previously successfully &gt; loaded image content without clearing or resetting it.
+> 
+> - If the input parameter is of the [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) type, the **Image**
+> component can detect data changes only when the **PixelMap** object is updated to point to a new instance. If &gt; modifications are made to the content of the **PixelMap** object, such as pixel values, but the reference to the &gt; object remains the same, the **Image** component will not recognize these modifications as a data change.
+> 
+> - If the input parameter of the **Image** component is a Base64 string, the standard format of the Base64 string &gt; is **data:image/subtype;base64,Base64EncodedData**. In this format, **subtype** indicates the type declaration, &gt; **Base64EncodedData** indicates the Base64-encoded data, and other values are fixed strings. For example, the &gt; input parameter of a PNG image is **data:image/png;base64,iVBORw0KGgo...**.
+> 
+> 
+> 
+> 1. **image/subType** declares the data type. The **Image** component does not enforce that the declared type &gt; exactly matches the actual image format decoded from Base64. In some scenarios, the image may still display &gt; correctly even if the declared type does not match the actual format. To prevent future behavior changes or &gt; unknown issues, it is recommended that the declared type always match the actual image format.
+> 
+> 
+> 
+> 2. The **Image** component does not support the wildcard syntax: **data:image/*;base64,Base64EncodedData**.
+> The **subType** must explicitly declare the specific image type.
+> 
+> 
+> 
+> 3. The **Image** component does not support loading SVG images in Base64 string format.
 
 **Since:** 7
 
@@ -137,31 +181,14 @@ Set src and ai options to obtain images
 
 | Name | Description |
 | --- | --- |
-| [ImageAlt](arkts-arkui-imagealt-i.md) | Sets the placeholder image. |
-| [ImageError](arkts-arkui-imageerror-i.md) | Describes the object returned by the image loading error callback. This event is not triggered if the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md). |
-| [ImageSourceSize](arkts-arkui-imagesourcesize-i.md) | Defines source size of image. |
-| [ResizableOptions](arkts-arkui-resizableoptions-i.md) | Defines the resizable image options. **Figure 1** Effect of Setting EdgeWidths  |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [BusinessError](arkts-arkui-businesserror-t.md) | Represents the error information returned when an error occurs during image loading. The table below describes the **ImageError** error codes. The **error** property of **ImageError** contains error details with **code** and **message** fields, representing the error code and error message, respectively. |
-| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | Represents a parameter object for the **Image** component. |
-| [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) | Represents a color filter object. |
-| [DrawingLattice](arkts-arkui-drawinglattice-t.md) | Represents a matrix grid object that divides an image into a rectangular grid. |
-| [ImageErrorCallback](arkts-arkui-imageerrorcallback-t.md) | Triggered when an error occurs during image loading. This event is not triggered if the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md). |
-| [ImageMatrix](arkts-arkui-imagematrix-t.md) | Represents the current matrix object. |
-| [RequestDownloadInfo](arkts-arkui-requestdownloadinfo-t.md) | Describes the download information when an online image fails to load or encounters an exception. This object contains resource information, network information, and performance statistics of the download task, which can be used to locate the cause of the loading exception. |
-| [ResolutionQuality](arkts-arkui-resolutionquality-t-sys.md) | Enumerates all the levels available for the image resolution quality. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [DynamicRangeMode](arkts-arkui-dynamicrangemode-e.md) | Describes the dynamic range of the image to be displayed. |
-| [ImageContent](arkts-arkui-imagecontent-e.md) | Defines the image content. |
-| [ImageInterpolation](arkts-arkui-imageinterpolation-e.md) | Interpolation effect of the image. |
-| [ImageRenderMode](arkts-arkui-imagerendermode-e.md) | Interpolation effect of the image. |
-| [ImageRotateOrientation](arkts-arkui-imagerotateorientation-e.md) | Describes the desired display orientation for image content. |
 

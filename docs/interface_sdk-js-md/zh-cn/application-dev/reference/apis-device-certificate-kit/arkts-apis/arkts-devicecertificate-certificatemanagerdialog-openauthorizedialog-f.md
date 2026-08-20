@@ -40,11 +40,11 @@ function openAuthorizeDialog(context: common.Context): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. A mandatory parameter is left unspecified. 2. Incorrect parameter type. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | The certificate management application Hap is not preinstalled in the system, and the capability is not supported.<br>**适用版本：** 26.0.0+ |
 | [29700001](../errorcode-certManagerDialog.md#29700001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 | [29700002](../errorcode-certManagerDialog.md#29700002-操作取消) | The user cancels the authorization. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 **示例**
 
@@ -106,12 +106,12 @@ function openAuthorizeDialog(context: common.Context, authorizeRequest: Authoriz
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [29700007](../errorcode-certManagerDialog.md#29700007-无可用授权证书) | No available certificate for authorization. Possible causes: 1. No certificate matches the filter criteria; 2. All certificates have been deleted. |
-| [29700006](../errorcode-certManagerDialog.md#29700006-入参校验失败) | Indicates that the input parameters validation failed. for example, the parameter format is incorrect or the value range is invalid. |
 | [29700001](../errorcode-certManagerDialog.md#29700001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error; 4. Call other service failed. Please try again. |
 | [29700002](../errorcode-certManagerDialog.md#29700002-操作取消) | The user cancels the authorization. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [29700006](../errorcode-certManagerDialog.md#29700006-入参校验失败) | Indicates that the input parameters validation failed. for example, the parameter format is incorrect or the value range is invalid. |
+| [29700007](../errorcode-certManagerDialog.md#29700007-无可用授权证书) | No available certificate for authorization. Possible causes: 1. No certificate matches the filter criteria; 2. All certificates have been deleted. |
 
 **示例**
 

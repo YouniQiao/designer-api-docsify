@@ -106,7 +106,7 @@ Called when a process is created.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| processData | [ProcessData](../../apis-na/arkts-apis/arkts-na-processdata-t.md) | Yes | Process data. |
+| processData | [ProcessData](arkts-ability-processdata-t.md) | Yes | Process data. |
 
 ## onProcessDied
 
@@ -126,7 +126,7 @@ Called when a process is destroyed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| processData | [ProcessData](../../apis-na/arkts-apis/arkts-na-processdata-t.md) | Yes | Process data. |
+| processData | [ProcessData](arkts-ability-processdata-t.md) | Yes | Process data. |
 
 ## onProcessStateChanged
 
@@ -146,5 +146,5 @@ Called when the process state is changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| processData | [ProcessData](../../apis-na/arkts-apis/arkts-na-processdata-t.md) | Yes | Process data. |
+| processData | [ProcessData](arkts-ability-processdata-t.md) | Yes | Process data. |
 

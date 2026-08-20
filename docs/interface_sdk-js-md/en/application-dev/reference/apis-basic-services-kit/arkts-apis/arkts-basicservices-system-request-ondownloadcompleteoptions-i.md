@@ -1,4 +1,4 @@
-# OnDownloadCompleteOptions(Upload and Download)
+# OnDownloadCompleteOptions
 
 **Since:** 3
 

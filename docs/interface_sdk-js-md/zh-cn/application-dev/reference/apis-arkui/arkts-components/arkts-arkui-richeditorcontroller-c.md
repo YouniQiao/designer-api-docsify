@@ -1,8 +1,15 @@
 # RichEditorController
 
-RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md)。 &gt; **说明：** &gt; &gt; 当内容的长度超过组件显示区域的高度时，调用插入接口（例如[addTextSpan](#addtextspan)、 &gt; [addImageSpan](#addimagespan)、[addBuilderSpan](#addbuilderspan) &gt; 、[addSymbolSpan](#addsymbolspan)），组件会自动滚动内容使得插入内容末尾可见。
+RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md)。
 
-## 导入对象 ```ts controller: RichEditorController = new RichEditorController(); ```
+> **说明：**
+> 
+> 当内容的长度超过组件显示区域的高度时，调用插入接口（例如[addTextSpan](#addtextspan)、 &gt; [addImageSpan](#addimagespan)、[addBuilderSpan](#addbuilderspan) &gt; 、[addSymbolSpan](#addsymbolspan)），组件会自动滚动内容使得插入内容末尾可见。
+
+## 导入对象
+
+```ts
+controller: RichEditorController = new RichEditorController(); ```
 
 **继承/实现关系：** RichEditorController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md)
 
@@ -23,7 +30,32 @@ RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-r
 addBuilderSpan(value: CustomBuilder, options?: RichEditorBuilderSpanOptions): number
 ```
 
-在RichEditor中添加用户自定义布局（BuilderSpan）。 &gt; **说明：** &gt; &gt; - RichEditor组件添加占位Span，占位Span调用系统的measure方法计算真实的长宽和位置。 &gt; &gt; - 可通过[RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md)设置此builder在RichEditor中的index（一个文字为一个单位）。 &gt; &gt; - 此占位Span不可获焦，支持拖拽，支持部分通用属性，占位、删除等能力等同于ImageSpan，长度视为一个文字。 &gt; &gt; - 支持通过bindSelectionMenu设置自定义菜单。 &gt; &gt; - 不支持通过[getSpans](#getspans)，[getSelection](#getselection)， &gt; onSelect，aboutToDelete获取 &gt; builderSpan信息。 &gt; &gt; - 不支持通过[updateSpanStyle](#updatespanstyle)， &gt; [updateParagraphStyle](#updateparagraphstyle)等方式更新builder。 &gt; &gt; - 对此builder节点进行复制或粘贴不生效。 &gt; &gt; - builder的布局约束由RichEditor传入，如果builder里最外层组件不设置大小，则会用RichEditor的大小作为maxSize。 &gt; &gt; - builder的手势相关事件机制与通用手势事件相同，如果builder中未设置透传，则仅有builder中的子组件响应。 &gt; &gt; - 如果组件光标闪烁，插入后光标位置更新为新插入builder的后面。 &gt; &gt; - 对[addBuilderSpan](#addbuilderspan)的节点文本， &gt; enableDataDetector、 &gt; dataDetectorConfig、 &gt; enableSelectedDataDetector功能不会生效。 &gt; 通用属性仅支持size、padding、margin、 &gt; aspectRatio、borderStyle、 &gt; borderWidth、borderColor、 &gt; borderRadius、 &gt; backgroundColor、 &gt; backgroundBlurStyle &gt; 、opacity、 &gt; blur、 &gt; backdropBlur、 &gt; shadow、 &gt; grayscale、 &gt; brightness、saturate &gt; 、contrast、 &gt; invert、 &gt; sepia、 &gt; hueRotate、 &gt; colorBlend、 &gt; linearGradientBlur、 &gt; clip、mask、 &gt; foregroundBlurStyle &gt; 、accessibilityGroup、 &gt; accessibilityText、 &gt; accessibilityDescription、 &gt; accessibilityLevel、 &gt; sphericalEffect、 &gt; lightUpEffect、 &gt; pixelStretchEffect。
+在RichEditor中添加用户自定义布局（BuilderSpan）。
+
+> **说明：**
+> 
+> - RichEditor组件添加占位Span，占位Span调用系统的measure方法计算真实的长宽和位置。
+> 
+> - 可通过[RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md)设置此builder在RichEditor中的index（一个文字为一个单位）。
+> 
+> - 此占位Span不可获焦，支持拖拽，支持部分通用属性，占位、删除等能力等同于ImageSpan，长度视为一个文字。
+> 
+> - 支持通过[bindSelectionMenu](arkts-arkui-richeditor-attribute.md#bindselectionmenu)设置自定义菜单。
+> 
+> - 不支持通过[getSpans](#getspans)，[getSelection](#getselection)， &gt; [onSelect](arkts-arkui-richeditor-attribute.md#onselect)，[aboutToDelete](arkts-arkui-richeditor-attribute.md#abouttodelete)获取 &gt; builderSpan信息。
+> 
+> - 不支持通过[updateSpanStyle](#updatespanstyle)， &gt; [updateParagraphStyle](#updateparagraphstyle)等方式更新builder。
+> 
+> - 对此builder节点进行复制或粘贴不生效。
+> 
+> - builder的布局约束由RichEditor传入，如果builder里最外层组件不设置大小，则会用RichEditor的大小作为maxSize。
+> 
+> - builder的手势相关事件机制与通用手势事件相同，如果builder中未设置透传，则仅有builder中的子组件响应。
+> 
+> - 如果组件光标闪烁，插入后光标位置更新为新插入builder的后面。
+> 
+> - 对[addBuilderSpan](#addbuilderspan)的节点文本， &gt; [enableDataDetector](arkts-arkui-richeditor-attribute.md#enabledatadetector)、 &gt; [dataDetectorConfig](arkts-arkui-richeditor-attribute.md#datadetectorconfig)、 &gt; [enableSelectedDataDetector](arkts-arkui-richeditor-attribute.md#enableselecteddatadetector)功能不会生效。
+> 通用属性仅支持size、padding、margin、 &gt; aspectRatio、borderStyle、 &gt; borderWidth、borderColor、 &gt; borderRadius、 &gt; backgroundColor、 &gt; backgroundBlurStyle &gt; 、opacity、 &gt; blur、 &gt; backdropBlur、 &gt; shadow、 &gt; grayscale、 &gt; brightness、saturate &gt; 、contrast、 &gt; invert、 &gt; sepia、 &gt; hueRotate、 &gt; colorBlend、 &gt; linearGradientBlur、 &gt; clip、mask、 &gt; foregroundBlurStyle &gt; 、accessibilityGroup、 &gt; accessibilityText、 &gt; accessibilityDescription、 &gt; accessibilityLevel、 &gt; sphericalEffect、 &gt; lightUpEffect、 &gt; pixelStretchEffect。
 
 **起始版本：** 11
 
@@ -54,7 +86,9 @@ addBuilderSpan(value: CustomBuilder, options?: RichEditorBuilderSpanOptions): nu
 addImageSpan(value: PixelMap | ResourceStr, options?: RichEditorImageSpanOptions): number
 ```
 
-添加图片内容。如果组件光标闪烁，插入后光标位置更新为新插入图片的后面。当controller未绑定组件或绑定controller的组件被释放时，该接口调用无效。 该接口为同步接口，在弱网环境下，直接添加网络图片可能会阻塞UI线程造成冻屏问题。不建议直接添加网络图片。
+添加图片内容。如果组件光标闪烁，插入后光标位置更新为新插入图片的后面。当controller未绑定组件或绑定controller的组件被释放时，该接口调用无效。
+
+该接口为同步接口，在弱网环境下，直接添加网络图片可能会阻塞UI线程造成冻屏问题。不建议直接添加网络图片。
 
 **起始版本：** 10
 
@@ -85,7 +119,9 @@ addImageSpan(value: PixelMap | ResourceStr, options?: RichEditorImageSpanOptions
 addSymbolSpan(value: Resource, options?: RichEditorSymbolSpanOptions ): number
 ```
 
-在RichEditor中添加图标小符号（SymbolSpan）。如果组件光标闪烁，插入后光标位置更新为新插入SymbolSpan的后面。 SymbolSpan暂不支持手势、复制操作和拖拽处理。
+在RichEditor中添加图标小符号（SymbolSpan）。如果组件光标闪烁，插入后光标位置更新为新插入SymbolSpan的后面。
+
+SymbolSpan暂不支持手势、复制操作和拖拽处理。
 
 **起始版本：** 11
 
@@ -351,7 +387,11 @@ updateParagraphStyle(value: RichEditorParagraphStyleOptions): void
 updateSpanStyle(value: RichEditorUpdateTextSpanStyleOptions | RichEditorUpdateImageSpanStyleOptions | RichEditorUpdateSymbolSpanStyleOptions): void
 ```
 
-更新文本、图片或SymbolSpan样式。 若只更新了一个Span的部分内容，则会根据更新部分、未更新部分将该Span拆分为多个Span。当controller未绑定组件或绑定controller的组件被释放时，该接口调用无效。 使用该接口更新文本、图片或SymbolSpan样式时默认不会关闭自定义文本选择菜单。
+更新文本、图片或SymbolSpan样式。
+
+若只更新了一个Span的部分内容，则会根据更新部分、未更新部分将该Span拆分为多个Span。当controller未绑定组件或绑定controller的组件被释放时，该接口调用无效。
+
+使用该接口更新文本、图片或SymbolSpan样式时默认不会关闭自定义文本选择菜单。
 
 **起始版本：** 10
 

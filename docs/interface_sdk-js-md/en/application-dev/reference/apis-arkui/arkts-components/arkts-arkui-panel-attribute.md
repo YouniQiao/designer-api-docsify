@@ -1,0 +1,342 @@
+# Panel properties/events
+
+Pane Attribute.
+
+**Inheritance/Implementation:** PanelAttribute extends CommonMethod<PanelAttribute>
+
+**Since:** 7
+
+**Deprecated since:** 12
+
+<!--Device-unnamed-declare class PanelAttribute--><!--Device-unnamed-declare class PanelAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+```
+
+## backgroundMask
+
+```TypeScript
+backgroundMask(color: ResourceColor)
+```
+
+Called when the panel background mask is requested.
+
+**Since:** 9
+
+**Deprecated since:** 12
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PanelAttribute-backgroundMask(color: ResourceColor): PanelAttribute--><!--Device-PanelAttribute-backgroundMask(color: ResourceColor): PanelAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | ResourceColor | Yes |  |
+
+## customHeight
+
+```TypeScript
+customHeight(value: Dimension | PanelHeight)
+```
+
+Sets the height. It is valid only when PanelType is set to Custom.
+
+**Since:** 10
+
+**Deprecated since:** 12
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PanelAttribute-customHeight(value: Dimension | PanelHeight): PanelAttribute--><!--Device-PanelAttribute-customHeight(value: Dimension | PanelHeight): PanelAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Dimension \| [PanelHeight](arkts-arkui-panelheight-e.md) | Yes | value - Content height to set. |
+
+## dragBar
+
+```TypeScript
+dragBar(value: boolean)
+```
+
+Called when determining whether dragbar exists.
+
+**Since:** 7
+
+**Deprecated since:** 12
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PanelAttribute-dragBar(value: boolean): PanelAttribute--><!--Device-PanelAttribute-dragBar(value: boolean): PanelAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes |  |
+
+## fullHeight
+
+```TypeScript
+fullHeight(value: number | string)
+```
+
+Called when the height in the full state is specified.
+
+**Since:** 7
+
+**Deprecated since:** 12
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PanelAttribute-fullHeight(value: number | string): PanelAttribute--><!--Device-PanelAttribute-fullHeight(value: number | string): PanelAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| string | Yes |  |
+
+## halfHeight
+
+```TypeScript
+halfHeight(value: number | string)
+```
+
+Called when the height in the half state is specified.
+
+**Since:** 7
+
+**Deprecated since:** 12
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PanelAttribute-halfHeight(value: number | string): PanelAttribute--><!--Device-PanelAttribute-halfHeight(value: number | string): PanelAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| string | Yes |  |
+
+## miniHeight
+
+```TypeScript
+miniHeight(value: number | string)
+```
+
+Called when the height in the mini state is specified.
+
+**Since:** 7
+
+**Deprecated since:** 12
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PanelAttribute-miniHeight(value: number | string): PanelAttribute--><!--Device-PanelAttribute-miniHeight(value: number | string): PanelAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| string | Yes |  |
+
+## mode
+
+```TypeScript
+mode(value: PanelMode)
+```
+
+Called when the initial state of the slidable panel is set.
+
+**Since:** 7
+
+**Deprecated since:** 12
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PanelAttribute-mode(value: PanelMode): PanelAttribute--><!--Device-PanelAttribute-mode(value: PanelMode): PanelAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [PanelMode](arkts-arkui-panelmode-e.md) | Yes |  |
+
+## onChange
+
+```TypeScript
+onChange(
+    event: (
+    /**
+     * Width of content area.
+     *
+     * @syscap SystemCapability.ArkUI.ArkUI.Full
+     * @FaAndStageModel
+     * @atomicservice
+     * @since 7 dynamiconly
+     * @deprecated since 12
+     */
+      width: number,
+
+    /**
+     * Height of content area.
+     *
+     * @syscap SystemCapability.ArkUI.ArkUI.Full
+     * @FaAndStageModel
+     * @atomicservice
+     * @since 7 dynamiconly
+     * @deprecated since 12
+     */
+      height: number,
+
+    /**
+     * Initial state.
+     *
+     * @syscap SystemCapability.ArkUI.ArkUI.Full
+     * @FaAndStageModel
+     * @atomicservice
+     * @since 7 dynamiconly
+     * @deprecated since 12
+     */
+      mode: PanelMode,
+    ) => void,
+  )
+```
+
+Called when the state of the slidable panel changes.
+
+**Since:** 7
+
+**Deprecated since:** 12
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PanelAttribute-onChange(    event: (    /**     * Width of content area.     *     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @FaAndStageModel     * @atomicservice     * @since 7 dynamiconly     * @deprecated since 12     */      width: number,    /**     * Height of content area.     *     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @FaAndStageModel     * @atomicservice     * @since 7 dynamiconly     * @deprecated since 12     */      height: number,    /**     * Initial state.     *     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @FaAndStageModel     * @atomicservice     * @since 7 dynamiconly     * @deprecated since 12     */      mode: PanelMode,    ) => void,  ): PanelAttribute--><!--Device-PanelAttribute-onChange(    event: (    /**     * Width of content area.     *     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @FaAndStageModel     * @atomicservice     * @since 7 dynamiconly     * @deprecated since 12     */      width: number,    /**     * Height of content area.     *     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @FaAndStageModel     * @atomicservice     * @since 7 dynamiconly     * @deprecated since 12     */      height: number,    /**     * Initial state.     *     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @FaAndStageModel     * @atomicservice     * @since 7 dynamiconly     * @deprecated since 12     */      mode: PanelMode,    ) => void,  ): PanelAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (     /**      * Width of content area.      *      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @FaAndStageModel      * @atomicservice      * @since 7 dynamiconly      * @deprecated since 12      */       width: number,      /**      * Height of content area.      *      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @FaAndStageModel      * @atomicservice      * @since 7 dynamiconly      * @deprecated since 12      */       height: number,      /**      * Initial state.      *      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @FaAndStageModel      * @atomicservice      * @since 7 dynamiconly      * @deprecated since 12      */       mode: PanelMode,     ) =&gt; void | Yes |  |
+
+## onHeightChange
+
+```TypeScript
+onHeightChange(callback: (value: number) => void)
+```
+
+Called when height of the panel is changed
+
+**Since:** 9
+
+**Deprecated since:** 12
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PanelAttribute-onHeightChange(callback: (value: number) => void): PanelAttribute--><!--Device-PanelAttribute-onHeightChange(callback: (value: number) => void): PanelAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (value: number) =&gt; void | Yes |  |
+
+## show
+
+```TypeScript
+show(value: boolean)
+```
+
+Called when the panel slidable panel pops up.
+
+**Since:** 7
+
+**Deprecated since:** 12
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PanelAttribute-show(value: boolean): PanelAttribute--><!--Device-PanelAttribute-show(value: boolean): PanelAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes |  |
+
+## showCloseIcon
+
+```TypeScript
+showCloseIcon(value: boolean)
+```
+
+Called when the panel show close icon.
+
+**Since:** 10
+
+**Deprecated since:** 12
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PanelAttribute-showCloseIcon(value: boolean): PanelAttribute--><!--Device-PanelAttribute-showCloseIcon(value: boolean): PanelAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | used to set whether to display the close icon. |
+
+## type
+
+```TypeScript
+type(value: PanelType)
+```
+
+Called when the slidable panel type is set.
+
+**Since:** 7
+
+**Deprecated since:** 12
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PanelAttribute-type(value: PanelType): PanelAttribute--><!--Device-PanelAttribute-type(value: PanelType): PanelAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [PanelType](arkts-arkui-paneltype-e.md) | Yes |  |
+

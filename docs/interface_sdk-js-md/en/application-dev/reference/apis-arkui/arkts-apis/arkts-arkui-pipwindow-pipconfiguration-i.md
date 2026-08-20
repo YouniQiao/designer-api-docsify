@@ -22,7 +22,7 @@ componentController: XComponentController
 
 Original XComponent controller.
 
-**Type:** [XComponentController](../../apis-na/arkts-apis/arkts-na-xcomponent-xcomponentcontroller-c.md)
+**Type:** [XComponentController](../../apis-default/arkts-components/arkts-xcomponent-xcomponentcontroller-c.md)
 
 **Since:** 26.0.0
 
@@ -110,7 +110,15 @@ A list of optional component groups of the PiP controller. An application can co
 cornerAdsorptionEnabled?: boolean
 ```
 
-Whether the PiP window automatically snaps to screen corners. When this feature is enabled, the screen is divided into four hot zones (top-left, top-right, bottom-left, and bottom-right). When users lift their finger while dragging the PiP window within a hot zone, the PiP window is automatically snapped to the nearest corner. **true**: enables corner snapping. **false**: disables corner snapping. The default value is **true**. This API can be properly called on phones and tablets. If it is called on other device types, it has no effect.
+Whether the PiP window automatically snaps to screen corners. When this feature is enabled, the screen is divided into four hot zones (top-left, top-right, bottom-left, and bottom-right). When users lift their finger while dragging the PiP window within a hot zone, the PiP window is automatically snapped to the nearest corner.
+
+**true**: enables corner snapping.
+
+**false**: disables corner snapping.
+
+The default value is **true**.
+
+This API can be properly called on phones and tablets. If it is called on other device types, it has no effect.
 
 **Type:** boolean
 
@@ -148,7 +156,15 @@ Custom UI controller, which is used to implement the custom UI features on the P
 defaultWindowSizeType?: int
 ```
 
-Size of the PiP window that the current app starts for the first time. **0**: no size is set. The PiP window is started based on the size before the PiP window of the previous application is closed. **1**: small window. **2**: large window. If no value is passed, **0** is used.
+Size of the PiP window that the current app starts for the first time.
+
+**0**: no size is set. The PiP window is started based on the size before the PiP window of the previous application is closed.
+
+**1**: small window.
+
+**2**: large window.
+
+If no value is passed, **0** is used.
 
 **Type:** int
 
@@ -188,7 +204,7 @@ localStorage?: LocalStorage
 
 A page-level UI state storage unit. In multi-instance scenarios, it can be used to track the UI state storage object of the main window instance. If no value is passed, you cannot retrieve the main window's UI storage object through the PiP window.
 
-**Type:** [LocalStorage](../../apis-na/arkts-apis/arkts-na-localstorage-localstorage-c.md)
+**Type:** [LocalStorage](../../apis-default/arkts-apis/arkts-localstorage-localstorage-c.md)
 
 **Since:** 26.0.0
 
@@ -204,7 +220,9 @@ A page-level UI state storage unit. In multi-instance scenarios, it can be used 
 navigationId?: string
 ```
 
-ID of the **Navigation** component. If no value is passed, the page does not need to be cached. 1. When the UIAbility uses Navigation to manage pages, set the ID of the **Navigation** component for the PiP controller. This ensures that the original page can be restored from the PiP window. 2. When the UIAbility uses [Router](arkts-router.md) to manage pages, you do not need to set the ID of the **Navigation** component for the PiP controller. 3. If the UIAbility has only one page, you do not need to set the navigation ID. The original page can be restored from the PiP window.
+ID of the **Navigation** component. If no value is passed, the page does not need to be cached.
+
+1. When the UIAbility uses Navigation to manage pages, set the ID of the **Navigation** component for the PiP controller. This ensures that the original page can be restored from the PiP window. 2. When the UIAbility uses [Router](arkts-router.md) to manage pages, you do not need to set the ID of the **Navigation** component for the PiP controller. 3. If the UIAbility has only one page, you do not need to set the navigation ID. The original page can be restored from the PiP window.
 
 **Type:** string
 

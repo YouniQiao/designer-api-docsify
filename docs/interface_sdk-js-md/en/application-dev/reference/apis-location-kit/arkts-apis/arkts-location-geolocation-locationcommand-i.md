@@ -2,6 +2,8 @@
 
 Location subsystem command structure
 
+@interface LocationCommand
+
 **Since:** 8
 
 **Deprecated since:** 9

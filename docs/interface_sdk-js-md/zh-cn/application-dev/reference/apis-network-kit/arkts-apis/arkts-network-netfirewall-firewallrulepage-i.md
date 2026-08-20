@@ -1,4 +1,4 @@
-# FirewallRulePage(网络防火墙)
+# FirewallRulePage
 
 防火墙规则页信息结构。
 

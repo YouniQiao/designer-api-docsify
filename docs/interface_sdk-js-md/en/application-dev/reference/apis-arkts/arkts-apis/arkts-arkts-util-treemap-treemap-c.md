@@ -557,8 +557,8 @@ Returns the least element greater than or equal to the specified key if the key 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getHigherKey method cannot be bound. |
 | [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getHigherKey method cannot be bound. |
 
 ## getLastKey
 
@@ -677,8 +677,8 @@ Returns the greatest element smaller than or equal to the specified key if the k
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLowerKey method cannot be bound. |
 | [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLowerKey method cannot be bound. |
 
 ## hasKey
 

@@ -2,6 +2,8 @@
 
 Define scrollbar margin options.
 
+@interface ScrollBarMargin
+
 **Since:** 20
 
 <!--Device-unnamed-declare interface ScrollBarMargin--><!--Device-unnamed-declare interface ScrollBarMargin-End-->

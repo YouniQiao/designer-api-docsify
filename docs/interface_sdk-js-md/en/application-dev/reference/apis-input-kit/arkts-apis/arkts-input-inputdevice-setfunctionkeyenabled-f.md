@@ -40,10 +40,10 @@ Specifies whether to enable a function key (for example, **CapsLock**). This API
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
-| [3900003](../errorcode-inputdevice.md#3900003-api-call-failed-for-a-non-input-application) | It is prohibited for non-input applications. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [3900002](../errorcode-inputdevice.md#3900002-keyboard-not-connected) | There is currently no keyboard device connected. |
+| [3900003](../errorcode-inputdevice.md#3900003-api-call-failed-for-a-non-input-application) | It is prohibited for non-input applications. |
 
 **Examples**
 

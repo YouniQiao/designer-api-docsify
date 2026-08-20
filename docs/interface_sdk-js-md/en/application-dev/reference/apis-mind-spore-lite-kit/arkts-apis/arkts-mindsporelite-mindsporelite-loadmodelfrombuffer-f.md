@@ -41,10 +41,10 @@ Create a Model instance from buffer
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1000005 | Failed to create native model from buffer. Possible causes: 1. The buffer size is incorrect; 2. The buffer file is damaged. |
-| 1000004 | Model buffer error. Possible causes: 1. The buffer size is 0; 2. The buffer is a null pointer. |
-| 1000003 | Error in model loading method. Possible causes: 1. The loading method must be path, buffer, or fd. |
 | 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect. |
+| 1000003 | Error in model loading method. Possible causes: 1. The loading method must be path, buffer, or fd. |
+| 1000004 | Model buffer error. Possible causes: 1. The buffer size is 0; 2. The buffer is a null pointer. |
+| 1000005 | Failed to create native model from buffer. Possible causes: 1. The buffer size is incorrect; 2. The buffer file is damaged. |
 
 **Examples**
 
@@ -99,10 +99,10 @@ Create a Model instance from buffer
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1000005 | Failed to create native model from buffer. Possible causes: 1. The buffer size is incorrect; 2. The buffer file is damaged. |
-| 1000004 | Model buffer error. Possible causes: 1. The buffer size is 0; 2. The buffer is a null pointer. |
-| 1000003 | Error in model loading method. Possible causes: 1. The loading method must be path, buffer, or fd. |
 | 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect. |
+| 1000003 | Error in model loading method. Possible causes: 1. The loading method must be path, buffer, or fd. |
+| 1000004 | Model buffer error. Possible causes: 1. The buffer size is 0; 2. The buffer is a null pointer. |
+| 1000005 | Failed to create native model from buffer. Possible causes: 1. The buffer size is incorrect; 2. The buffer file is damaged. |
 
 **Examples**
 
@@ -159,10 +159,10 @@ Create a Model instance from buffer
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1000005 | Failed to create native model from buffer. Possible causes: 1. The buffer size is incorrect; 2. The buffer file is damaged. |
-| 1000004 | Model buffer error. Possible causes: 1. The buffer size is 0; 2. The buffer is a null pointer. |
-| 1000003 | Error in model loading method. Possible causes: 1. The loading method must be path, buffer, or fd. |
 | 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect. |
+| 1000003 | Error in model loading method. Possible causes: 1. The loading method must be path, buffer, or fd. |
+| 1000004 | Model buffer error. Possible causes: 1. The buffer size is 0; 2. The buffer is a null pointer. |
+| 1000005 | Failed to create native model from buffer. Possible causes: 1. The buffer size is incorrect; 2. The buffer file is damaged. |
 
 **Examples**
 

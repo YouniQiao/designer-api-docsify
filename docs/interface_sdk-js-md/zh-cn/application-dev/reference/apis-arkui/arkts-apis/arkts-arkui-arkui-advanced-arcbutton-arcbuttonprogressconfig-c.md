@@ -20,7 +20,9 @@ import { ArcButton, ArcButtonOptions, ArcButtonProgressConfig, ArcButtonPosition
 color?: ResourceColor
 ```
 
-进度条前景色。如果组件设置了背景色（[backgroundColor](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-arcbuttonoptions-c.md)），进度条前景色默认值取组件背景色。进度条前景色不受按钮样式（ [ArcButtonStyleMode](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)）设置影响。进度条背景色仅依赖进度条前景色设置，取进度条前景色的25%透明度。 默认值："#1F71FF"，显示为蓝色。
+进度条前景色。如果组件设置了背景色（[backgroundColor](../../apis-default/arkts-apis/arkts-arkui-advanced-arcbutton-arcbuttonoptions-c.md)），进度条前景色默认值取组件背景色。进度条前景色不受按钮样式（ [ArcButtonStyleMode](../../apis-default/arkts-apis/arkts-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)）设置影响。进度条背景色仅依赖进度条前景色设置，取进度条前景色的25%透明度。
+
+默认值："#1F71FF"，显示为蓝色。
 
 **类型：** ResourceColor
 
@@ -40,7 +42,11 @@ color?: ResourceColor
 total?: number
 ```
 
-进度的最大值。 默认值：100 取值范围：[0, 2147483647]，设置0或超出取值范围取默认值为100。
+进度的最大值。
+
+默认值：100
+
+取值范围：[0, 2147483647]，设置0或超出取值范围取默认值为100。
 
 **类型：** number
 
@@ -62,7 +68,11 @@ total?: number
 value: number
 ```
 
-进度条当前值。设置小于0的数值时置为0，设置大于total的数值时置为total。 默认值：0 取值范围：[0, total]
+进度条当前值。设置小于0的数值时置为0，设置大于total的数值时置为total。
+
+默认值：0
+
+取值范围：[0, total]
 
 **类型：** number
 

@@ -1,8 +1,12 @@
 # Rect
 
-矩形绘制组件，用于在界面中绘制矩形图形，支持设置填充颜色、边框样式、圆角等属性。 > **说明：** > > 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 > > 该组件从API version 20开始支持使用AttributeUpdater类的 > updateConstructorParams接口更新构造参数。
+矩形绘制组件，用于在界面中绘制矩形图形，支持设置填充颜色、边框样式、圆角等属性。
 
-## 子组件 无
+> **说明：** > > 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 > > 该组件从API version 20开始支持使用AttributeUpdater类的 > updateConstructorParams接口更新构造参数。
+
+## 子组件
+
+无
 
 ## Rect
 
@@ -62,6 +66,4 @@ Rect(
 
 | 名称 | 说明 |
 | --- | --- |
-| [RectOptions](arkts-arkui-rectoptions-i.md) | 用于描述矩形绘制组件的绘制属性。 @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
-| [RoundedRectOptions](arkts-arkui-roundedrectoptions-i.md) | 用于描述圆角矩形绘制组件的绘制属性。 @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
 

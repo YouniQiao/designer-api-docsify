@@ -1,4 +1,4 @@
-# PortModeType(USB Manager)（系统接口）
+# PortModeType（系统接口）
 
 USB端口模式类型。
 

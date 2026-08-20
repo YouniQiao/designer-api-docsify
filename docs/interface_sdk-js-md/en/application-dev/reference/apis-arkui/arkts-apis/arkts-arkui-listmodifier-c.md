@@ -2,6 +2,8 @@
 
 Defines List Modifier
 
+@extends ListAttribute @implements AttributeModifier&lt;ListAttribute&gt;
+
 **Inheritance/Implementation:** ListModifier extends ListAttribute and implements AttributeModifier<ListAttribute>
 
 **Since:** 20

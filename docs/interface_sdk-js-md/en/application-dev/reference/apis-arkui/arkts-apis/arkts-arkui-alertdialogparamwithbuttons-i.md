@@ -1,4 +1,4 @@
-# AlertDialogParamWithButtons(AlertDialog)
+# AlertDialogParamWithButtons
 
 Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md).
 

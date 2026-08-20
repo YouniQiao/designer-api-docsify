@@ -42,7 +42,7 @@ Query all disposed rules under the current user for the specified bundle name.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application is not allowed to call a system API. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 

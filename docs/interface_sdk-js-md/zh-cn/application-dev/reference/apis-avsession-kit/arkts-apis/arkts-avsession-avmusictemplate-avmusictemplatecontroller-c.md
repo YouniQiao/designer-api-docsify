@@ -1,6 +1,10 @@
 # AVMusicTemplateController
 
-音频模板控制器，可以获得音频模板控制器唯一的标识，用于与接入音频模板的媒体应用数据交互。 &gt; **说明：** &gt; &gt; - 本模块仅适用于API version 23及以上版本的Car设备。
+音频模板控制器，可以获得音频模板控制器唯一的标识，用于与接入音频模板的媒体应用数据交互。
+
+> **说明：**
+> 
+> - 本模块仅适用于API version 23及以上版本的Car设备。
 
 **起始版本：** 23
 
@@ -40,10 +44,10 @@ clearSearchHistory(): Promise<OperResult>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 
 ## destroy
 
@@ -106,10 +110,10 @@ downloadMediaEntity(controlType: DownloadControlType, mediaEntity: MediaEntity):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 
 ## executeAction
 
@@ -144,10 +148,10 @@ executeAction(actionType: string, params: string): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 
 ## favoriteMediaEntity
 
@@ -182,10 +186,10 @@ favoriteMediaEntity(actionType: MediaFavoriteType, mediaEntity: MediaEntity): Pr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 
 ## handleMemberPurchase
 
@@ -219,10 +223,10 @@ handleMemberPurchase(info: MemberPurchaseInfo): Promise<DialogInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 
 ## login
 
@@ -257,10 +261,10 @@ login(controlType: LoginType, id?: string): Promise<QrCodeInfo[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 
 ## offCurrentSingleChange
 
@@ -282,14 +286,14 @@ offCurrentSingleChange(callback?: Callback<Single>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Single&gt; | 否 | 回调函数，返回当前单曲的信息。不填该参数则注销该类型对应的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Single&gt; | 否 | 回调函数，返回当前单曲的信息。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offCustomElementsChange
@@ -318,8 +322,8 @@ offCustomElementsChange(callback?: ReportCustomElementsChangeEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offDialogCommandChange
@@ -348,8 +352,8 @@ offDialogCommandChange(callback?: ReportDialogCommandEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offDownloadMediaEntityStatusChange
@@ -372,14 +376,14 @@ offDownloadMediaEntityStatusChange(callback?: Callback<MediaEntity>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)&gt; | 否 | 回调函数，返回媒体实体信息。不填该参数则注销该类型对应的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)&gt; | 否 | 回调函数，返回媒体实体信息。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offExtensionAbilityChange
@@ -408,8 +412,8 @@ offExtensionAbilityChange(callback?: ReportExecuteAbilityEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offMediaEntitiesChange
@@ -432,14 +436,14 @@ offMediaEntitiesChange(callback?: Callback<MediaEntity[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]&gt; | 否 | 回调函数，返回媒体实体数组。不填该参数则注销该类型对应的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]&gt; | 否 | 回调函数，返回媒体实体数组。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offPlaylistChange
@@ -462,14 +466,14 @@ offPlaylistChange(callback?: Callback<PageMediaEntity>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | 否 | 回调函数，返回标签页媒体实体信息。不填该参数则注销该类型对应的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | 否 | 回调函数，返回标签页媒体实体信息。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offReportExecuteAction
@@ -498,8 +502,8 @@ offReportExecuteAction(callback?: ReportExecuteActionEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offSettingsChange
@@ -522,14 +526,14 @@ offSettingsChange(callback?: Callback<SettingItem[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[]&gt; | 否 | 回调函数，用于接收并处理设置项数组。不填该参数则注销该类型对应的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[]&gt; | 否 | 回调函数，用于接收并处理设置项数组。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offTabContentChange
@@ -558,8 +562,8 @@ offTabContentChange(callback?: ReportTabContentEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offUserInfoChange
@@ -582,14 +586,14 @@ offUserInfoChange(callback?: Callback<UserInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserInfo&gt; | 否 | 回调函数，返回用户信息。不填该参数则注销该类型对应的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;UserInfo&gt; | 否 | 回调函数，返回用户信息。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onCurrentSingleChange
@@ -612,14 +616,14 @@ onCurrentSingleChange(callback: Callback<Single>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Single&gt; | 是 | 回调函数，返回当前单曲的信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Single&gt; | 是 | 回调函数，返回当前单曲的信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onCustomElementsChange
@@ -648,8 +652,8 @@ onCustomElementsChange(callback: ReportCustomElementsChangeEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onDialogCommandChange
@@ -678,8 +682,8 @@ onDialogCommandChange(callback: ReportDialogCommandEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onDownloadMediaEntityStatusChange
@@ -702,14 +706,14 @@ onDownloadMediaEntityStatusChange(callback: Callback<MediaEntity>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)&gt; | 是 | 回调函数，返回媒体实体信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)&gt; | 是 | 回调函数，返回媒体实体信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onExtensionAbilityChange
@@ -738,8 +742,8 @@ onExtensionAbilityChange(callback: ReportExecuteAbilityEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onMediaEntitiesChange
@@ -762,14 +766,14 @@ onMediaEntitiesChange(callback: Callback<MediaEntity[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]&gt; | 是 | 回调函数，返回媒体实体数组。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]&gt; | 是 | 回调函数，返回媒体实体数组。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onPlaylistChange
@@ -792,14 +796,14 @@ onPlaylistChange(callback: Callback<PageMediaEntity>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | 是 | 回调函数，返回标签页媒体实体信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | 是 | 回调函数，返回标签页媒体实体信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onReportExecuteAction
@@ -828,8 +832,8 @@ onReportExecuteAction(callback: ReportExecuteActionEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onSettingsChange
@@ -852,14 +856,14 @@ onSettingsChange(callback: Callback<SettingItem[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[]&gt; | 是 | 回调函数，返回设置项数组。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[]&gt; | 是 | 回调函数，返回设置项数组。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onTabContentChange
@@ -888,8 +892,8 @@ onTabContentChange(callback: ReportTabContentEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onUserInfoChange
@@ -912,14 +916,14 @@ onUserInfoChange(callback: Callback<UserInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserInfo&gt; | 是 | 回调函数，参数为用户信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;UserInfo&gt; | 是 | 回调函数，参数为用户信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## playForSearch
@@ -955,10 +959,10 @@ playForSearch(command: SearchPlayInfoType, args: SearchPlayInfo): Promise<OperRe
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 
 ## playMediaEntity
 
@@ -992,10 +996,10 @@ playMediaEntity(mediaEntity: MediaEntity): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 
 ## queryCompilation
 
@@ -1030,10 +1034,10 @@ queryCompilation(compilationId: string, pageIndex: int): Promise<PageMediaEntity
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 
 ## queryCompilationByKeyword
 
@@ -1067,10 +1071,10 @@ queryCompilationByKeyword(keyword: string): Promise<Compilation[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 
 ## queryCurrentSingle
 
@@ -1098,10 +1102,10 @@ queryCurrentSingle(): Promise<Single>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 
 ## queryCustomContent
 
@@ -1135,10 +1139,10 @@ queryCustomContent(queryType: CustomType[]): Promise<CustomElement>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 
 ## queryHotWords
 
@@ -1166,10 +1170,10 @@ queryHotWords(): Promise<string[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 
 ## queryMainTabs
 
@@ -1197,10 +1201,10 @@ queryMainTabs(): Promise<MediaTab[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 
 ## queryMediaEntity
 
@@ -1234,10 +1238,10 @@ queryMediaEntity(params: QueryMediaEntityParam): Promise<PageMediaEntity>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 
 ## queryMediaEntityByKeyword
 
@@ -1273,10 +1277,10 @@ queryMediaEntityByKeyword(keyword: string, searchType: EntityType, pageIndex: in
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 
 ## queryMediaTabContent
 
@@ -1310,10 +1314,10 @@ queryMediaTabContent(tabId: string): Promise<MediaTabContent>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 
 ## queryMemberPurchase
 
@@ -1347,10 +1351,10 @@ queryMemberPurchase(memberPurchaseType: MemberPurchaseType): Promise<MemberPurch
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 
 ## queryPlaylist
 
@@ -1385,10 +1389,10 @@ queryPlaylist(pageIndex: int, sort: Sort): Promise<PageMediaEntity>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 
 ## queryRecommendMediaEntityList
 
@@ -1416,10 +1420,10 @@ queryRecommendMediaEntityList(): Promise<MediaEntity[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 
 ## querySearchHistory
 
@@ -1447,10 +1451,10 @@ querySearchHistory(): Promise<string[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 
 ## reportProblemAndAdvice
 
@@ -1484,10 +1488,10 @@ reportProblemAndAdvice(advice: string): Promise<OperResult>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 
 ## requestDialogInfo
 
@@ -1522,10 +1526,10 @@ requestDialogInfo(actionType: DialogActionType, actionInfo?: DialogActionInfo): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 
 ## updateSettings
 
@@ -1559,10 +1563,10 @@ updateSettings(settingItem: SettingItem): Promise<SettingItem>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
 
 ## isDestroy
 

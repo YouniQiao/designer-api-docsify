@@ -17,7 +17,9 @@ declare function listFileSync(
 ): string[]
 ```
 
-Lists the names of all files and directories in the current directory. This API returns the result synchronously. Filtering is supported. You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/).
+Lists the names of all files and directories in the current directory. This API returns the result synchronously. Filtering is supported.
+
+You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/).
 
 **Since:** 9
 
@@ -45,8 +47,8 @@ Lists the names of all files and directories in the current directory. This API 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900002 | No such file or directory |
-| 13900018 | Not a directory |
 | 13900008 | Bad file descriptor |
-| 13900042 | Unknown error |
 | 13900011 | Out of memory |
+| 13900018 | Not a directory |
+| 13900042 | Unknown error |
 

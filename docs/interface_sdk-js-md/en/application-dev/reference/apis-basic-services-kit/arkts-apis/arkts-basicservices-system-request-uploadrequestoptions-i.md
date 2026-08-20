@@ -1,6 +1,9 @@
-# UploadRequestOptions(Upload and Download)
+# UploadRequestOptions
 
-> **NOTE：**&gt; &gt; This API has been supported since API version 3 and deprecated since API version 9. You are advised to use &gt; [UploadConfig](arkts-basicservices-agent-config-i.md) instead.
+
+> **NOTE：**
+> 
+> This API has been supported since API version 3 and deprecated since API version 9. You are advised to use &gt; [UploadConfig](arkts-basicservices-agent-config-i.md) instead.
 
 **Since:** 3
 

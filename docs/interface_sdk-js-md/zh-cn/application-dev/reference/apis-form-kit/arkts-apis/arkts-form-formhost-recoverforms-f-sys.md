@@ -42,12 +42,12 @@ function recoverForms(formIds: Array<string>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
-| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permissions denied. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | caller is not system app. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
+| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 
 
 ## recoverForms
@@ -75,16 +75,16 @@ function recoverForms(formIds: Array<string>, callback: AsyncCallback<void>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | 是 | 卡片标识数组。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当恢复卡片成功时，error为undefined；否则抛出异常。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当恢复卡片成功时，error为undefined；否则抛出异常。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
-| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permissions denied. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | caller is not system app. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
+| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 

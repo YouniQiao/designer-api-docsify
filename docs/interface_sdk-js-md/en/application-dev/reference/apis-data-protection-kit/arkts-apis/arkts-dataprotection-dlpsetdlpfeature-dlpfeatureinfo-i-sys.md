@@ -1,4 +1,4 @@
-# DLPFeatureInfo(DLP) (System API)
+# DLPFeatureInfo (System API)
 
 Sets the DLP status.
 

@@ -20,7 +20,9 @@ import { vibrator } from '@kit.SensorServiceKit';
 deviceId?: int
 ```
 
-Device ID. The default value is **-1**, indicating the local device. Since API version 19, you can use [getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md) or [on](arkts-sensorservice-vibrator-onvibratorstatechange-f.md) to query the device ID. This API can be used in atomic services since API version 19.
+Device ID. The default value is **-1**, indicating the local device. Since API version 19, you can use [getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md) or [on](arkts-sensorservice-vibrator-onvibratorstatechange-f.md) to query the device ID.
+
+This API can be used in atomic services since API version 19.
 
 **Type:** int
 

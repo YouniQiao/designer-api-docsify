@@ -1,6 +1,8 @@
 # ApplicationInstance
 
-应用的实例数据。 该接口目前在[addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md)、 [removeUserNonStopApps](arkts-mdm-applicationmanager-removeusernonstopapps-f.md)、 [addFreezeExemptedApps](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md)、 [removeFreezeExemptedApps](arkts-mdm-applicationmanager-removefreezeexemptedapps-f.md)接口 中作为入参使用。
+应用的实例数据。
+
+该接口目前在[addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md)、 [removeUserNonStopApps](arkts-mdm-applicationmanager-removeusernonstopapps-f.md)、 [addFreezeExemptedApps](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md)、 [removeFreezeExemptedApps](arkts-mdm-applicationmanager-removefreezeexemptedapps-f.md)接口 中作为入参使用。
 
 **起始版本：** 22
 
@@ -56,7 +58,9 @@ appIdentifier: string
 appIndex: number
 ```
 
-应用分身索引。取值范围：大于等于0的整数。 appIndex可以通过[getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getappcloneidentity-f.md)接口获取。
+应用分身索引。取值范围：大于等于0的整数。
+
+appIndex可以通过[getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getappcloneidentity-f.md)接口获取。
 
 **类型：** number
 

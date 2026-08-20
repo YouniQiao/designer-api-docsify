@@ -2,7 +2,19 @@
 
 The **Badge** component is a container that can be attached to another component for notification and reminder purposes.
 
-## Child Components This component supports only one child component. > **NOTE** > > - Allowed child component types: built-in and custom components, including rendering control types ( > [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md), ForEach, and > LazyForEach). > > - A custom component defaults to a width and height of 0. You must explicitly set its width and height; otherwise, > the **Badge** component will not be displayed. > > - When there are multiple child components, only the last child component is displayed on the UI. However, the > status update of other child components will still cause the badge and its child components to be re-rendered. > > - Child component layout is independent and does not automatically adjust to avoid overlapping with the badge.
+## Child Components
+
+This component supports only one child component.
+
+> **NOTE：**
+> 
+> - Allowed child component types: built-in and custom components, including rendering control types ( &gt; [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md), ForEach, and &gt; LazyForEach).
+> 
+> - A custom component defaults to a width and height of 0. You must explicitly set its width and height; otherwise, &gt; the **Badge** component will not be displayed.
+> 
+> - When there are multiple child components, only the last child component is displayed on the UI. However, the &gt; status update of other child components will still cause the badge and its child components to be re-rendered.
+> 
+> - Child component layout is independent and does not automatically adjust to avoid overlapping with the badge.
 
 ## Badge
 
@@ -58,14 +70,9 @@ Creates a badge with the given string.
 
 | Name | Description |
 | --- | --- |
-| [BadgeParam](arkts-arkui-badgeparam-i.md) | Provides basic parameters for creating a badge. |
-| [BadgeParamWithNumber](arkts-arkui-badgeparamwithnumber-i.md) | Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md) and has all attributes of **BadgeParam**. |
-| [BadgeParamWithString](arkts-arkui-badgeparamwithstring-i.md) | Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md) and has all attributes of **BadgeParam**. |
-| [BadgeStyle](arkts-arkui-badgestyle-i.md) | Describes the badge style. It includes the font color, font size, badge color, badge size, etc. &gt; **NOTE：**&gt; &gt; - When **borderWidth** is set to a value greater than 0 and **borderColor** is different from **badgeColor**, the &gt; badge is drawn before the border. Edge pixels are anti-aliased, which produces semi-transparent pixels. This causes &gt; the border in **badgeColor** to become visible at the four corners. To implement related scenarios, it is &gt; recommended that you use the Text component with its &gt; outline attribute instead of the **Badge** component. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [BadgePosition](arkts-arkui-badgeposition-e.md) | Enumerates the display positions of a badge. |
 

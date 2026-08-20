@@ -1,6 +1,8 @@
 # LazyForEach
 
-> **说明** > 开发者指南见：[LazyForEach开发者指南](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)。 LazyForEach是一种懒加载渲染控制组件，从提供的数据源中按需迭代数据并创建相应组件。在大量子组件的场景下，LazyForEach与缓存列表项、动态预加载、组件复用等方法配合使用，可以进一步提升滑动帧率并降低应用内存占用。
+> **说明** > 开发者指南见：[LazyForEach开发者指南](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)。
+
+LazyForEach是一种懒加载渲染控制组件，从提供的数据源中按需迭代数据并创建相应组件。在大量子组件的场景下，LazyForEach与缓存列表项、动态预加载、组件复用等方法配合使用，可以进一步提升滑动帧率并降低应用内存占用。
 
 ## LazyForEach
 
@@ -41,7 +43,11 @@ LazyForEach(
   )
 ```
 
-LazyForEach从提供的数据源中按需迭代数据，并在每次迭代过程中创建相应的组件。当在滚动容器中使用了LazyForEach，框架会根据滚动容器可视区域按需创建组件，当组件滑出可视区域外时，框架会进行组件销毁回收以降低内存占 用。 &gt; **说明：**&gt; &gt; 从API版本26.0.0开始，LazyForEach支持传入[LazyForEachOptions](arkts-arkui-lazyforeachoptions-i.md)，用于使能自定义组件冻结和配置内存优化策略、资源释放策略。
+LazyForEach从提供的数据源中按需迭代数据，并在每次迭代过程中创建相应的组件。当在滚动容器中使用了LazyForEach，框架会根据滚动容器可视区域按需创建组件，当组件滑出可视区域外时，框架会进行组件销毁回收以降低内存占 用。
+
+> **说明：**
+> 
+> 从API版本26.0.0开始，LazyForEach支持传入[LazyForEachOptions](arkts-arkui-lazyforeachoptions-i.md)，用于使能自定义组件冻结和配置内存优化策略、资源释放策略。
 
 **起始版本：** 26.0.0
 
@@ -68,31 +74,14 @@ LazyForEach从提供的数据源中按需迭代数据，并在每次迭代过程
 
 | 名称 | 说明 |
 | --- | --- |
-| [DataAddOperation](arkts-arkui-dataaddoperation-i.md) | 添加数据操作。 |
-| [DataChangeListener](arkts-arkui-datachangelistener-i.md) | 数据变化监听器，用于在数据源发生变化时通知LazyForEach组件进行相应的渲染更新，支持数据添加、删除、改变、移动、交换、重载等多种数据变化类型的监听。 |
-| [DataChangeOperation](arkts-arkui-datachangeoperation-i.md) | 改变数据操作。 |
-| [DataDeleteOperation](arkts-arkui-datadeleteoperation-i.md) | 删除数据操作。 |
-| [DataExchangeOperation](arkts-arkui-dataexchangeoperation-i.md) | 交换数据操作。 |
-| [DataMoveOperation](arkts-arkui-datamoveoperation-i.md) | 移动数据操作。 |
-| [DataReloadOperation](arkts-arkui-datareloadoperation-i.md) | 重载所有数据操作，并配置是否允许在更新过程中复用旧的子组件。当onDatasetChange含有DataOperationType.RELOAD操作时，其余操作全部失效，框架会自己调用keyGenerator进行键值比对。 配置允许在更新过程中复用旧的子组件，并和[@Reusable](../../../ui/state-management/arkts-reusable.md)/ [@ReusableV2](../../../ui/state-management/arkts-new-reusableV2.md)配合使用时，优先使用复用池中的组件，若复用池中无可复用的组件，而LazyForEach的旧子组件中 有可复用的组件，该组件将被回收，并复用为新的子组件。当LazyForEach的旧子组件中也没有可复用的组件时，将创建新的子组件。 配置允许在更新过程中复用旧的子组件，未使用@Reusable/@ReusableV2时，键值没有变化的数据项会使用原先的子组件，键值发生变化的会重建子组件。 配置不允许在更新过程中复用旧的子组件，键值没有变化的数据项会使用原先的子组件，键值发生变化的数据项，若使用了@Reusable/@ReusableV2且复用池中有可用的组件，将复用旧组件，否则将创建新的子组件。 |
-| [ExchangeIndex](arkts-arkui-exchangeindex-i.md) | 定义交换数据的位置。 |
-| [ExchangeKey](arkts-arkui-exchangekey-i.md) | 定义交换数据的新键值。 |
-| [IDataSource](arkts-arkui-idatasource-i.md) | LazyForEach的数据源，开发者需要实现该接口以提供数据访问和数据变化通知能力，包括获取数据总数、按索引获取数据、注册和注销数据变化监听器等。 |
-| [LazyForEachOptions](arkts-arkui-lazyforeachoptions-i.md) | 用于配置LazyForEach的资源释放策略、内存优化策略，以及是否使能自定义组件冻结。 |
-| [MoveIndex](arkts-arkui-moveindex-i.md) | 定义移动数据的位置。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [DataOperation](arkts-arkui-dataoperation-t.md) | 数据操作类型。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [DataOperationType](arkts-arkui-dataoperationtype-e.md) | 枚举类型，数据操作说明。 |
-| [LazyForEachCustomComponentFreezeMode](arkts-arkui-lazyforeachcustomcomponentfreezemode-e.md) | 选择是否使能自定义组件冻结。 |
-| [LazyForEachMemOptStrategy](arkts-arkui-lazyforeachmemoptstrategy-e.md) | LazyForEach内存优化策略枚举。 |
-| [LazyForEachReleaseStrategy](arkts-arkui-lazyforeachreleasestrategy-e.md) | 选择LazyForEach的资源释放策略。 |
 

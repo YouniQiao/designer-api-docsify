@@ -1,6 +1,11 @@
-# AlertDialogButtonBaseOptions(AlertDialog)
+# AlertDialogButtonBaseOptions
 
-Defines the button style of the alert dialog box. &gt; **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. &gt; While historical version information is preserved for anonymous objects, there may be cases where the outer element &gt; 's @since version number is higher than inner elements'. This does not affect interface usability.
+Defines the button style of the alert dialog box.
+
+> **NOTE：**
+> 
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element &gt; 's
 
 **Since:** 18
 
@@ -81,7 +86,11 @@ Whether the button is the default focus. Default value: **false**. **true**: The
 enabled?: boolean
 ```
 
-Whether to respond when the button is clicked. Default value: **true** **true**: Respond when the button is clicked. **false**: Do not respond when the button is clicked.
+Whether to respond when the button is clicked.
+
+Default value: **true**
+
+**true**: Respond when the button is clicked. **false**: Do not respond when the button is clicked.
 
 **Type:** boolean
 
@@ -123,7 +132,9 @@ Font color of the button.
 style?: DialogButtonStyle
 ```
 
-Style of the button. Default value: **DialogButtonStyle.DEFAULT**
+Style of the button.
+
+Default value: **DialogButtonStyle.DEFAULT**
 
 **Type:** DialogButtonStyle
 

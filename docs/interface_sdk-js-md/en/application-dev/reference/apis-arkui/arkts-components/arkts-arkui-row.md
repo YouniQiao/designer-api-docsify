@@ -8,7 +8,11 @@ The **Row** component lays out child components horizontally. > **NOTE** > > If 
 Row(options?: RowOptions)
 ```
 
-Creates a horizontal linear layout container. You can set the spacing between child components. &gt; **NOTE：**&gt; &gt; Excessive component nesting (either too deep a hierarchy or too many nested components) incurs significant &gt; performance overhead. For performance purposes, you are advised to remove redundant nodes to simplify the &gt; component tree, use layout boundaries to reduce redundant layout calculations, properly apply rendering control &gt; syntax and layout component methods to minimize unnecessary re-renders and computations. For details about the &gt; best practices, see &gt; [Layout Optimization](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-improve-layout-performance) &gt; .
+Creates a horizontal linear layout container. You can set the spacing between child components.
+
+> **NOTE：**
+> 
+> Excessive component nesting (either too deep a hierarchy or too many nested components) incurs significant &gt; performance overhead. For performance purposes, you are advised to remove redundant nodes to simplify the &gt; component tree, use layout boundaries to reduce redundant layout calculations, properly apply rendering control &gt; syntax and layout component methods to minimize unnecessary re-renders and computations. For details about the &gt; best practices, see &gt; [Layout Optimization](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-improve-layout-performance) &gt; .
 
 **Since:** 7
 
@@ -58,6 +62,4 @@ Creates a horizontal linear layout container. You can set the spacing between ch
 
 | Name | Description |
 | --- | --- |
-| [RowOptions](arkts-arkui-rowoptions-i.md) | Sets the spacing between child components of the **Row** component. &gt; **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. &gt; While starting version information is preserved for historical anonymous objects, there may be cases where the &gt; outer element's @since version number is higher than inner element's. This does not affect interface usability. |
-| [RowOptionsV2](arkts-arkui-rowoptionsv2-i.md) | Sets the spacing between child components of the **Row** component. &gt; **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. &gt; While starting version information is preserved for historical anonymous objects, there may be cases where the &gt; outer element's @since version number is higher than inner element's. This does not affect interface usability. |
 

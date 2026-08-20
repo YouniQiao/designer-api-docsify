@@ -1,4 +1,4 @@
-# ReceiveCallback(System API) (System API)
+# ReceiveCallback (System API)
 
 ```TypeScript
 declare type ReceiveCallback = import('../api/@ohos.base').Callback<Record<string, Object>>

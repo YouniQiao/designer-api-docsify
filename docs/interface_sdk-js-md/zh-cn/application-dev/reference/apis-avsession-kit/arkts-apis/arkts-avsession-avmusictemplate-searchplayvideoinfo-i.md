@@ -2,6 +2,8 @@
 
 搜播的视频信息的定义。
 
+@interface SearchPlayVideoInfo
+
 **起始版本：** 23
 
 <!--Device-avMusicTemplate-interface SearchPlayVideoInfo--><!--Device-avMusicTemplate-interface SearchPlayVideoInfo-End-->

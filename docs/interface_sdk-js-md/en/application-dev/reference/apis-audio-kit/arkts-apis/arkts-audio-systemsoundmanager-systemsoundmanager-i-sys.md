@@ -52,14 +52,14 @@ Add customized tone into ringtone library.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation is not allowed, e.g. ringtone to add is not customized. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. Possible causes: 1. The target file size exceeds 2 GB; 2. Failed to find the specified file; 3. System sound manager service error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [20700006](../errorcode-audio-ringtone-sys.md#20700006-insufficient-rom-space) | Insufficient ROM space.<br>**Applicable version:** 20 and later |
-| [20700005](../errorcode-audio-ringtone-sys.md#20700005-file-count-exceeds-the-upper-limit) | The number of files exceeds the limit.<br>**Applicable version:** 20 and later |
 | [20700004](../errorcode-audio-ringtone-sys.md#20700004-data-size-exceeds-the-upper-limit) | Data size exceeds the limit. Note: This error is returned when the file size is between 200MB and 2GB.<br>**Applicable version:** 20 and later |
+| [20700005](../errorcode-audio-ringtone-sys.md#20700005-file-count-exceeds-the-upper-limit) | The number of files exceeds the limit.<br>**Applicable version:** 20 and later |
+| [20700006](../errorcode-audio-ringtone-sys.md#20700006-insufficient-rom-space) | Insufficient ROM space.<br>**Applicable version:** 20 and later |
 
 **Examples**
 
@@ -127,14 +127,14 @@ Add customized tone into ringtone library.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation is not allowed, e.g. ringtone to add is not customized. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. Possible causes: 1. The target file size exceeds 2 GB; 2. Failed to find the specified file; 3. Ringtone library error. 4. System sound manager service error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [20700006](../errorcode-audio-ringtone-sys.md#20700006-insufficient-rom-space) | Insufficient ROM space.<br>**Applicable version:** 20 and later |
-| [20700005](../errorcode-audio-ringtone-sys.md#20700005-file-count-exceeds-the-upper-limit) | The number of files exceeds the limit.<br>**Applicable version:** 20 and later |
 | [20700004](../errorcode-audio-ringtone-sys.md#20700004-data-size-exceeds-the-upper-limit) | Data size exceeds the limit. Note: This error is returned when the file size is between 200MB and 2GB.<br>**Applicable version:** 20 and later |
+| [20700005](../errorcode-audio-ringtone-sys.md#20700005-file-count-exceeds-the-upper-limit) | The number of files exceeds the limit.<br>**Applicable version:** 20 and later |
+| [20700006](../errorcode-audio-ringtone-sys.md#20700006-insufficient-rom-space) | Insufficient ROM space.<br>**Applicable version:** 20 and later |
 
 **Examples**
 
@@ -197,9 +197,9 @@ Close fd.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 **Examples**
 
@@ -251,9 +251,9 @@ Gets attribute list of alarm tones.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 **Examples**
 
@@ -304,9 +304,9 @@ Gets uri of the current alarm tone.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 **Examples**
 
@@ -357,8 +357,8 @@ Gets the ringtone attribute which is in use.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 
 **Examples**
 
@@ -407,9 +407,9 @@ Gets attributes of the default alarm tone.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 **Examples**
 
@@ -461,9 +461,9 @@ Gets attributes of the default ringtone.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 **Examples**
 
@@ -516,9 +516,9 @@ Gets attributes of the default system tone.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 **Examples**
 
@@ -571,11 +571,11 @@ Get attributes of haptics which is synchronized with one tone. If no haptics is 
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. For example, the input URI is not used for tones. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 **Examples**
 
@@ -630,9 +630,9 @@ Obtains a mock haptic ringtone player for playing vibration files and their corr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. The ringtone database access timed out or encountered an error. It is recommended to restart your phone. |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter verification failed. The hapticUri does not exist or is incorrectly formatted. Ensure it is a JSON file and that it exists in the system's file system. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter verification failed. The hapticUri does not exist or is incorrectly formatted. Ensure it is a JSON file and that it exists in the system's file system. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. The ringtone database access timed out or encountered an error. It is recommended to restart your phone. |
 
 ## getMockHapticRingtonePlayer
 
@@ -670,9 +670,9 @@ Obtains a mock haptic ringtone player for playing vibration files and their corr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. The ringtone database access timed out or encountered an error. It is recommended to restart your phone. |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter verification failed. Possible causes: 1.The type exceeds the valid range, please use the RingtoneType enum for input. 2.The ringtoneUri does not exist or is incorrectly formatted, please use the ringtoneUri returned by the [addCustomizedTone](#addcustomizedtone). |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter verification failed. Possible causes: 1.The type exceeds the valid range, please use the RingtoneType enum for input. 2.The ringtoneUri does not exist or is incorrectly formatted, please use the ringtoneUri returned by the [addCustomizedTone](#addcustomizedtone). |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. The ringtone database access timed out or encountered an error. It is recommended to restart your phone. |
 
 ## getRingtoneAttrList
 
@@ -707,9 +707,9 @@ Gets attribute list of ringtones.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 **Examples**
 
@@ -762,8 +762,8 @@ Gets the ringtone player.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 **Examples**
 
@@ -853,9 +853,9 @@ Gets the ringtone uri.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 **Examples**
 
@@ -1110,9 +1110,9 @@ Gets attribute list of alarm tones.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 **Examples**
 
@@ -1165,8 +1165,8 @@ Gets the system tone player.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 **Examples**
 
@@ -1256,9 +1256,9 @@ Gets the system tone uri.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 **Examples**
 
@@ -1311,10 +1311,10 @@ Get haptics list.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 **Examples**
 
@@ -1366,10 +1366,10 @@ Get haptics settings.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 **Examples**
 
@@ -1422,9 +1422,9 @@ Open alarm tone file.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | 20700001 | Tone type mismatch, e.g. tone of uri is notification instead of alarm. |
 
 **Examples**
@@ -1478,11 +1478,11 @@ Open haptics.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. For example, the input URI is not one for haptics. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 **Examples**
 
@@ -1589,11 +1589,11 @@ Remove customized tone in ringtone library.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation is not allowed, e.g. ringtone of this uri is not customized. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 **Examples**
 
@@ -1701,9 +1701,9 @@ Sets uri of the current alarm tone.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | 20700001 | Tone type mismatch, e.g. tone of input uri is not an alarm tone. |
 
 **Examples**
@@ -1758,9 +1758,9 @@ Sets the ringtone uri to system.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 **Examples**
 
@@ -1918,9 +1918,9 @@ Sets the system tone uri to system.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 **Examples**
 
@@ -1975,11 +1975,11 @@ Set haptics settings.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. For example, the input URI is not valid. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 **Examples**
 

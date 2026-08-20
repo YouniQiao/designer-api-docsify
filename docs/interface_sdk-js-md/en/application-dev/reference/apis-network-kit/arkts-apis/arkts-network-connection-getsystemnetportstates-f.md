@@ -12,7 +12,14 @@ import { connection } from '@kit.NetworkKit';
 function getSystemNetPortStates(): Promise<NetPortStatesInfo>
 ```
 
-Obtains information about all TCP and UDP ports currently listened by the system, and the PID and UID of the processes that listen for the ports. Both IPv4 and IPv6 addresses are supported. &gt; **NOTE：**&gt; &gt; This API is used to obtain information about the TCP and UDP ports currently listened by the system. The detailed &gt; fields are as follows: &gt; &gt; TCP port fields: local address, local port, remote address, remote port, TCP connection status, process PID, and &gt; process UID &gt; &gt; UDP port fields: local address, local port, process PID, and process UID
+Obtains information about all TCP and UDP ports currently listened by the system, and the PID and UID of the processes that listen for the ports. Both IPv4 and IPv6 addresses are supported.
+
+> **NOTE：**
+> 
+> This API is used to obtain information about the TCP and UDP ports currently listened by the system. The detailed &gt; fields are as follows:
+> 
+> TCP port fields: local address, local port, remote address, remote port, TCP connection status, process PID, and &gt; process UID &gt;
+> UDP port fields: local address, local port, process PID, and process UID
 
 **Since:** 24
 
@@ -34,9 +41,9 @@ Obtains information about all TCP and UDP ports currently listened by the system
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 

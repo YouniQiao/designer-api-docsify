@@ -69,7 +69,7 @@ import { JSON } from '@kit.ArkTS';
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | 返回以键值对形式的二维数组。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回以键值对形式的二维数组。 |
 
 **示例**
 
@@ -92,7 +92,11 @@ for (let value of pro) {
 afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void
 ```
 
-在移除值后执行后续操作。后续操作必须由开发者实现。该 API 在删除操作期间会被调用，例如 [get&lt;sup&gt;9+&lt;/sup&gt;](#get)、[put&lt;sup&gt;9+&lt;/sup&gt;](#put)、 [remove&lt;sup&gt;9+&lt;/sup&gt;](#remove)、[clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) 和 [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updatecapacity)。 &gt; **NOTE：**&gt; &gt; 如果在调用 [clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) 和 &gt; [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updatecapacity) 后执行回调方法，并且输入的 **key** 和 &gt; **value** 参数为 MapIterator 类型，请参考示例 2 执行后续操作。
+在移除值后执行后续操作。后续操作必须由开发者实现。该 API 在删除操作期间会被调用，例如 [get&lt;sup&gt;9+&lt;/sup&gt;](#get)、[put&lt;sup&gt;9+&lt;/sup&gt;](#put)、 [remove&lt;sup&gt;9+&lt;/sup&gt;](#remove)、[clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) 和 [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updatecapacity)。
+
+> **NOTE：**
+> 
+> 如果在调用 [clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) 和 &gt; [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updatecapacity) 后执行回调方法，并且输入的 **key** 和 &gt; **value** 参数为 MapIterator 类型，请参考示例 2 执行后续操作。
 
 **起始版本：** 9
 
@@ -300,7 +304,7 @@ entries(): IterableIterator<[K, V]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | 可迭代的数组。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 可迭代的数组。 |
 
 **示例**
 

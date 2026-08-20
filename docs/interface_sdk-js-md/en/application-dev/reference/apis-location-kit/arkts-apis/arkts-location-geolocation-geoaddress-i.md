@@ -2,6 +2,8 @@
 
 Data struct describes geographic locations.
 
+@interface GeoAddress
+
 **Since:** 7
 
 **Deprecated since:** 9

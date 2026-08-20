@@ -2,6 +2,8 @@
 
 Provides APIs for mobile applications to access different SEs in mobile devices, such as SIMs or embedded SEs. See "Open Mobile API Specification".
 
+@namespace omapi
+
 **Since:** 10
 
 <!--Device-unnamed-declare namespace omapi--><!--Device-unnamed-declare namespace omapi-End-->

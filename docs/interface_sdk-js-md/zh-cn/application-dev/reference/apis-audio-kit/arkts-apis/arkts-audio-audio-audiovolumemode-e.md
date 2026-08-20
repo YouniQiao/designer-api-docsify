@@ -2,6 +2,8 @@
 
 表示音量模式的枚举。
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-audio-enum AudioVolumeMode--><!--Device-audio-enum AudioVolumeMode-End-->

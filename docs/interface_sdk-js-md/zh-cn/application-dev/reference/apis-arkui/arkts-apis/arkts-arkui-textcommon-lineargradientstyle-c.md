@@ -42,7 +42,9 @@ constructor(options: LinearGradientOptions)
 options: LinearGradientOptions
 ```
 
-显示为线性渐变效果。 [LinearGradientOptions](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-gradient-color.md#lineargradientoptions18对象说明) 中的direction默认值按 [GradientDirection](../../../reference/apis-arkui/arkui-ts/ts-appendix-enums.md#gradientdirection)中的NONE处理。
+显示为线性渐变效果。
+
+[LinearGradientOptions](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-gradient-color.md#lineargradientoptions18对象说明) 中的direction默认值按 [GradientDirection](../../../reference/apis-arkui/arkui-ts/ts-appendix-enums.md#gradientdirection)中的NONE处理。
 
 **类型：** [LinearGradientOptions](../arkts-components/arkts-arkui-lineargradientoptions-i.md)
 

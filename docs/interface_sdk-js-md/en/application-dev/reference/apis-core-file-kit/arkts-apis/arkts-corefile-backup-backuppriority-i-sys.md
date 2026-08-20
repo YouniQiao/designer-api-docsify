@@ -2,6 +2,8 @@
 
 Control backup and restore priority sequence
 
+@interface BackupPriority
+
 **Since:** 23
 
 <!--Device-backup-interface BackupPriority--><!--Device-backup-interface BackupPriority-End-->

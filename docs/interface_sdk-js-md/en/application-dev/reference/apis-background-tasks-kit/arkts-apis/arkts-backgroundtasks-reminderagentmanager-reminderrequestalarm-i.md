@@ -1,6 +1,8 @@
 # ReminderRequestAlarm
 
-ReminderRequestAlarm extends ReminderRequest Defines a reminder for an alarm.
+ReminderRequestAlarm extends ReminderRequest
+
+Defines a reminder for an alarm.
 
 **Inheritance/Implementation:** ReminderRequestAlarm extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)
 

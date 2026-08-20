@@ -12,7 +12,11 @@ import { dialogRequest } from '@kit.AbilityKit';
 function getRequestCallback(want: Want): RequestCallback
 ```
 
-Obtains the request callback from Want. &gt; **NOTE：**&gt; &gt; This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes, &gt; the request callback can be obtained from Want. If this API is used in other scenarios, no return value is &gt; obtained.
+Obtains the request callback from Want.
+
+> **NOTE：**
+> 
+> This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes, &gt; the request callback can be obtained from Want. If this API is used in other scenarios, no return value is &gt; obtained.
 
 **Since:** 23
 

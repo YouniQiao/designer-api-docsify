@@ -1,4 +1,4 @@
-# MediaKeyStatus(Defines the DRM capability.)
+# MediaKeyStatus
 
 媒体密钥状态。
 

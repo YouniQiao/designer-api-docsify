@@ -2,6 +2,8 @@
 
 Provides interfaces for initiating location requests, ending the location service, and obtaining the location result cached by the system.
 
+@namespace geolocation
+
 **Since:** 7
 
 **Deprecated since:** 9

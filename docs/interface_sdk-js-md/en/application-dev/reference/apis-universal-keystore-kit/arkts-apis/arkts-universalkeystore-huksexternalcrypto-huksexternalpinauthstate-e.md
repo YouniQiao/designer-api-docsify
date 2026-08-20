@@ -1,4 +1,4 @@
-# HuksExternalPinAuthState(External Key Management)
+# HuksExternalPinAuthState
 
 Enumerates the Ukey PIN authentication states.
 

@@ -1,6 +1,12 @@
 # Path
 
-A compound geometric path consisting of line segments, arcs, quadratic Bezier curves, and cubic Bezier curves. &gt; **NOTE：**&gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - The module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
+A compound geometric path consisting of line segments, arcs, quadratic Bezier curves, and cubic Bezier curves.
+
+> **NOTE：**
+> 
+> - This module uses the physical pixel unit, px.
+> 
+> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
 
 **Since:** 23
 
@@ -20,7 +26,9 @@ import { drawing } from '@kit.ArkGraphics2D';
 addArc(rect: common2D.Rect, startAngle: double, sweepAngle: double): void
 ```
 
-Adds an arc to this path. When **startAngle** and **sweepAngle** meet the following conditions, an oval instead of an arc is added: 1. The result of **startAngle** modulo 90 is close to 0. 2. The value of **sweepAngle** is not in the range of (-360, 360). In other cases, this API adds an arc by applying the result of **sweepAngle** modulo 360 to the path.
+Adds an arc to this path. When **startAngle** and **sweepAngle** meet the following conditions, an oval instead of an arc is added:
+
+1. The result of **startAngle** modulo 90 is close to 0. 2. The value of **sweepAngle** is not in the range of (-360, 360). In other cases, this API adds an arc by applying the result of **sweepAngle** modulo 360 to the path.
 
 **Since:** 23
 
@@ -213,7 +221,15 @@ Adds a rounded rectangle to a path in the specified direction. When the path dir
 approximate(acceptableError: number): Array<number>
 ```
 
-Converts the existing path into an approximate path consisting of consecutive line segments. &gt; **NOTE：**&gt; &gt; - Avoid setting **acceptableError** to **0** as it heavily divides the curve path, significantly impacting &gt; performance and memory usage. &gt; &gt; - Setting a high **acceptableError** simplifies the path greatly by keeping only essential points, potentially &gt; distorting the original shape. &gt; &gt; - When you set a high **acceptableError** for curves such as ellipses, the fitting process often simplifies &gt; them to polygons by keeping just the start and end points of their Bezier curve segments.
+Converts the existing path into an approximate path consisting of consecutive line segments.
+
+> **NOTE：**
+> 
+> - Avoid setting **acceptableError** to **0** as it heavily divides the curve path, significantly impacting &gt; performance and memory usage.
+> 
+> - Setting a high **acceptableError** simplifies the path greatly by keeping only essential points, potentially &gt; distorting the original shape.
+> 
+> - When you set a high **acceptableError** for curves such as ellipses, the fitting process often simplifies &gt; them to polygons by keeping just the start and end points of their Bezier curve segments.
 
 **Since:** 20
 

@@ -1,6 +1,10 @@
 # MediaAssetProgressHandler
 
-媒体资产进度处理器，应用于onProgress方法中获取媒体资产进度。 &gt; **说明：** &gt; &gt; - 本Interface首批接口从API version 15开始支持。
+媒体资产进度处理器，应用于onProgress方法中获取媒体资产进度。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 15开始支持。
 
 **起始版本：** 23
 

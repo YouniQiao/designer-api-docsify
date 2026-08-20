@@ -170,7 +170,15 @@ Whether the volume can be removed. Currently, only removable storage devices are
 state: int
 ```
 
-Volume status. **0**: The volume is unmounted. **1**: The volume is being checked. **2**: The volume is mounted. **3**: The volume is being ejected.
+Volume status.
+
+**0**: The volume is unmounted.
+
+**1**: The volume is being checked.
+
+**2**: The volume is mounted.
+
+**3**: The volume is being ejected.
 
 **Type:** int
 

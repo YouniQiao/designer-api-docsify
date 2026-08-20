@@ -1,5 +1,7 @@
 # AnchoredColorMode
 
+@enum { number }
+
 **Since:** 26.0.0
 
 <!--Device-unnamed-declare enum AnchoredColorMode--><!--Device-unnamed-declare enum AnchoredColorMode-End-->

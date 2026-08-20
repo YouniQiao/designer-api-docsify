@@ -1,6 +1,6 @@
 # MarginType
 
-Control margin status of ExceptionPrompt.
+Control margin status of ExceptionPrompt. @enum { number }
 
 **Since:** 12
 

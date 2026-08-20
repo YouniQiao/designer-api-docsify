@@ -1,4 +1,4 @@
-# LevelOrder(AlertDialog)
+# LevelOrder
 
 ```TypeScript
 declare type LevelOrder = import('../api/@ohos.promptAction').LevelOrder

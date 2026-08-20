@@ -1,5 +1,7 @@
 # EnterKeyType
 
+@brief Enter键的功能类型。
+
 **起始版本：** 23
 
 <!--Device-inputMethod-export enum EnterKeyType--><!--Device-inputMethod-export enum EnterKeyType-End-->
@@ -11,6 +13,8 @@
 ```TypeScript
 UNSPECIFIED = 0
 ```
+
+@brief 未指定。 <br> <br>使用场景：编辑框不指定Enter键具体功能时使用。
 
 **起始版本：** 23
 
@@ -24,6 +28,8 @@ UNSPECIFIED = 0
 NONE
 ```
 
+@brief NONE。 <br> <br>使用场景：Enter键无特定行为，仅作为换行或普通按键使用。
+
 **起始版本：** 23
 
 <!--Device-EnterKeyType-NONE--><!--Device-EnterKeyType-NONE-End-->
@@ -35,6 +41,8 @@ NONE
 ```TypeScript
 GO
 ```
+
+@brief 前往。 <br> <br>使用场景：适用于URL输入框，Enter键触发"前往"操作，如打开链接。
 
 **起始版本：** 23
 
@@ -48,6 +56,8 @@ GO
 SEARCH
 ```
 
+@brief 查找。 <br> <br>使用场景：适用于搜索框，Enter键触发搜索操作。
+
 **起始版本：** 23
 
 <!--Device-EnterKeyType-SEARCH--><!--Device-EnterKeyType-SEARCH-End-->
@@ -59,6 +69,8 @@ SEARCH
 ```TypeScript
 SEND
 ```
+
+@brief 发送。 <br> <br>使用场景：适用于消息发送框，Enter键触发发送操作。
 
 **起始版本：** 23
 
@@ -72,6 +84,8 @@ SEND
 NEXT
 ```
 
+@brief 下一步。 <br> <br>使用场景：适用于多步骤表单，Enter键跳转到下一个输入框。
+
 **起始版本：** 23
 
 <!--Device-EnterKeyType-NEXT--><!--Device-EnterKeyType-NEXT-End-->
@@ -83,6 +97,8 @@ NEXT
 ```TypeScript
 DONE
 ```
+
+@brief 完成。 <br> <br>使用场景：适用于单步骤表单的最后输入框，Enter键表示输入完成。
 
 **起始版本：** 23
 
@@ -96,6 +112,8 @@ DONE
 PREVIOUS
 ```
 
+@brief 上一步。 <br> <br>使用场景：适用于多步骤表单，Enter键跳转到上一个输入框。
+
 **起始版本：** 23
 
 <!--Device-EnterKeyType-PREVIOUS--><!--Device-EnterKeyType-PREVIOUS-End-->
@@ -107,6 +125,8 @@ PREVIOUS
 ```TypeScript
 NEWLINE
 ```
+
+@brief 换行。 <br> <br>使用场景：适用于多行文本编辑框，Enter键插入换行符。
 
 **起始版本：** 23
 

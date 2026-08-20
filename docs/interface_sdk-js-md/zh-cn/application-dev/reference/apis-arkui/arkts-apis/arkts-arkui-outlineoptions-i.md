@@ -2,6 +2,8 @@
 
 定义外描边的参数选项
 
+@interface OutlineOptions
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare interface OutlineOptions--><!--Device-unnamed-declare interface OutlineOptions-End-->

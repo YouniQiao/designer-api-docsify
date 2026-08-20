@@ -24,7 +24,9 @@ import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 firstScreenPaintTime: number
 ```
 
-Time when the first screen paint is completed for the page pointed to by url. Unit: ms.
+Time when the first screen paint is completed for the page pointed to by url.
+
+Unit: ms.
 
 **Type:** number
 
@@ -40,7 +42,9 @@ Time when the first screen paint is completed for the page pointed to by url. Un
 navigationStartTime: number
 ```
 
-Time when navigation starts for the page pointed to by url. Unit: ms.
+Time when navigation starts for the page pointed to by url.
+
+Unit: ms.
 
 **Type:** number
 

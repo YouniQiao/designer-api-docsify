@@ -14,7 +14,9 @@ Enum for crypto extension ability result code, used by HuksCryptoExtensionResult
 HUKS_CRYPTO_EXTENSION_ERR_EXTENSION_FAIL = 34800000
 ```
 
-An error occurred in the crypto extension. Possible causes: 1. The input parameter is invalid. 2. The crypto extension encountered an unresolvable error state.
+An error occurred in the crypto extension. Possible causes:
+
+1. The input parameter is invalid. 2. The crypto extension encountered an unresolvable error state.
 
 **Since:** 22
 
@@ -30,7 +32,9 @@ An error occurred in the crypto extension. Possible causes: 1. The input paramet
 HUKS_CRYPTO_EXTENSION_ERR_UKEY_NOT_EXIST = 34800001
 ```
 
-The UKey does not exist. Possible causes: 1. The UKey has been removed. 2. The crypto extension maintained an error UKey state.
+The UKey does not exist. Possible causes:
+
+1. The UKey has been removed. 2. The crypto extension maintained an error UKey state.
 
 **Since:** 22
 
@@ -78,7 +82,9 @@ The UKey PIN is not authenticated. Please verify the UKey PIN first.
 HUKS_CRYPTO_EXTENSION_ERR_HANDLE_NOT_EXIST = 34800004
 ```
 
-The handle does not exist. Possible causes: 1. The handle you entered is invalid. 2. The states of huks service and crypto extension are inconsistent. Due to an exception, the handle held by huks service was not released.
+The handle does not exist. Possible causes:
+
+1. The handle you entered is invalid. 2. The states of huks service and crypto extension are inconsistent. Due to an exception, the handle held by huks service was not released.
 
 **Since:** 22
 

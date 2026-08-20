@@ -397,14 +397,14 @@ loadFontSyncWithCheck(name: string, path: string | Resource, index?: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [25900008](../errorcode-drawing.md#25900008-文件损坏) | Corrupted file. |
-| [25900003](../errorcode-drawing.md#25900003-打开文件失败) | Failed to open the file. |
-| [25900002](../errorcode-drawing.md#25900002-文件未找到) | File not found. |
 | [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. |
-| [25900007](../errorcode-drawing.md#25900007-文件为空) | Empty file. |
-| [25900006](../errorcode-drawing.md#25900006-读取文件失败) | Failed to read the file. |
-| [25900005](../errorcode-drawing.md#25900005-获取文件大小失败) | Failed to get the file size. |
+| [25900002](../errorcode-drawing.md#25900002-文件未找到) | File not found. |
+| [25900003](../errorcode-drawing.md#25900003-打开文件失败) | Failed to open the file. |
 | [25900004](../errorcode-drawing.md#25900004-文件定位失败) | File seek failed. |
+| [25900005](../errorcode-drawing.md#25900005-获取文件大小失败) | Failed to get the file size. |
+| [25900006](../errorcode-drawing.md#25900006-读取文件失败) | Failed to read the file. |
+| [25900007](../errorcode-drawing.md#25900007-文件为空) | Empty file. |
+| [25900008](../errorcode-drawing.md#25900008-文件损坏) | Corrupted file. |
 
 **示例**
 
@@ -524,14 +524,14 @@ loadFontWithCheck(name: string, path: string | Resource, index?: int): Promise<v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [25900008](../errorcode-drawing.md#25900008-文件损坏) | Corrupted file. |
-| [25900003](../errorcode-drawing.md#25900003-打开文件失败) | Failed to open the file. |
-| [25900002](../errorcode-drawing.md#25900002-文件未找到) | File not found. |
 | [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. |
-| [25900007](../errorcode-drawing.md#25900007-文件为空) | Empty file. |
-| [25900006](../errorcode-drawing.md#25900006-读取文件失败) | Failed to read the file. |
-| [25900005](../errorcode-drawing.md#25900005-获取文件大小失败) | Failed to get the file size. |
+| [25900002](../errorcode-drawing.md#25900002-文件未找到) | File not found. |
+| [25900003](../errorcode-drawing.md#25900003-打开文件失败) | Failed to open the file. |
 | [25900004](../errorcode-drawing.md#25900004-文件定位失败) | File seek failed. |
+| [25900005](../errorcode-drawing.md#25900005-获取文件大小失败) | Failed to get the file size. |
+| [25900006](../errorcode-drawing.md#25900006-读取文件失败) | Failed to read the file. |
+| [25900007](../errorcode-drawing.md#25900007-文件为空) | Empty file. |
+| [25900008](../errorcode-drawing.md#25900008-文件损坏) | Corrupted file. |
 
 **示例**
 
@@ -691,7 +691,13 @@ struct Index {
 unloadFont(name: string): Promise<void>
 ```
 
-卸载指定的自定义字体。使用Promise异步回调。 使用此接口卸载字体别名所对应的自定义字体后，对应的自定义字体将不再可用。 所有使用该字体别名的排版对象都应该被销毁重建。 - 卸载不存在的字体别名不会产生任何效果且不会抛出错误。 - 此操作仅影响后续字体使用。 - 卸载正在使用的字体可能导致文本渲染异常（如乱码或字形缺失）。
+卸载指定的自定义字体。使用Promise异步回调。
+
+使用此接口卸载字体别名所对应的自定义字体后，对应的自定义字体将不再可用。
+
+所有使用该字体别名的排版对象都应该被销毁重建。
+
+- 卸载不存在的字体别名不会产生任何效果且不会抛出错误。 - 此操作仅影响后续字体使用。 - 卸载正在使用的字体可能导致文本渲染异常（如乱码或字形缺失）。
 
 **起始版本：** 23
 
@@ -793,7 +799,13 @@ struct UnloadFontTest {
 unloadFontSync(name: string): void
 ```
 
-卸载指定的自定义字体，此接口为同步接口。 使用此接口卸载字体别名所对应的自定义字体后，对应的自定义字体将不再可用。 所有使用该字体别名的排版对象都应该被销毁重建。 - 卸载不存在的字体别名不会产生任何效果且不会抛出错误。 - 此操作仅影响后续字体使用。 - 卸载正在使用的字体可能导致文本渲染异常（如乱码或字形缺失）。
+卸载指定的自定义字体，此接口为同步接口。
+
+使用此接口卸载字体别名所对应的自定义字体后，对应的自定义字体将不再可用。
+
+所有使用该字体别名的排版对象都应该被销毁重建。
+
+- 卸载不存在的字体别名不会产生任何效果且不会抛出错误。 - 此操作仅影响后续字体使用。 - 卸载正在使用的字体可能导致文本渲染异常（如乱码或字形缺失）。
 
 **起始版本：** 23
 

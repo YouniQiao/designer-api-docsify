@@ -12,7 +12,13 @@ import { config } from '@kit.AccessibilityKit';
 function onSeniorModeStateChangeForApp(callback: Callback<AppSeniorModeInfo>): void
 ```
 
-监听所有应用“长辈模式”的状态变化事件。使用callback异步回调。 &gt; **说明：** &gt; &gt; - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。 &gt; &gt; - 调用此方法后，务必在组件实例销毁前（如aboutToDisappear生命周期中）使用 &gt; [config.offSeniorModeStateChangeForApp](arkts-accessibility-config-offseniormodestatechangeforapp-f-sys.md) &gt; 取消监听，否则可能会导致崩溃。
+监听所有应用“长辈模式”的状态变化事件。使用callback异步回调。
+
+> **说明：**
+> 
+> - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
+> 
+> - 调用此方法后，务必在组件实例销毁前（如aboutToDisappear生命周期中）使用 &gt; [config.offSeniorModeStateChangeForApp](arkts-accessibility-config-offseniormodestatechangeforapp-f-sys.md) &gt; 取消监听，否则可能会导致崩溃。
 
 **起始版本：** 26.0.0
 
@@ -30,7 +36,7 @@ function onSeniorModeStateChangeForApp(callback: Callback<AppSeniorModeInfo>): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AppSeniorModeInfo](arkts-accessibility-config-appseniormodeinfo-i-sys.md)&gt; | 是 | 回调函数。返回被修改的应用“长辈模式”信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AppSeniorModeInfo](arkts-accessibility-config-appseniormodeinfo-i-sys.md)&gt; | 是 | 回调函数。返回被修改的应用“长辈模式”信息。 |
 
 **错误码：**
 

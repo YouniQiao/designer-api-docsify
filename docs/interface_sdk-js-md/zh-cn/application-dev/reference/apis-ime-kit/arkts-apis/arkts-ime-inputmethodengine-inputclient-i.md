@@ -1,5 +1,7 @@
 # InputClient
 
+@brief InputClient是输入法客户端对象，代表当前绑定到输入法应用的编辑框客户端。InputClient实例通过InputMethodAbility的 on('inputStart') 事件回调获取，每个绑定事件对应一个InputClient实例，输入法应用通过该实例与编辑框进行文本交互。 <br> <br>核心功能概述： <br> <br>- 文本获取：通过[getForward](#getforward) /[getForwardSync](#getforwardsync)获取光标前的文本，通过 [getBackward](#getbackward)/ [getBackwardSync](#getbackwardsync)获取光标后的文本，用于分析已输入内容并提供智能补全。 <br>- 文本编辑：通过 [insertText](#inserttext)/ [insertTextSync](#inserttextsync)插入文本，通过 [deleteForward](#deleteforward)/ [deleteForwardSync](#deleteforwardsync)删除光标前的文本，通过 [deleteBackward](#deletebackward) /[deleteBackwardSync](#deletebackwardsync)删除光标后的文本。 <br>- 功能键与光标：通过 [sendKeyFunction](#sendkeyfunction) 发送功能键（如回车键），通过 [moveCursor](#movecursor)/ [moveCursorSync](#movecursorsync)移动光标。 <br>- 选区操作：通过 [selectByRange](#selectbyrange)/ [selectByRangeSync](#selectbyrangesync)按范围选中文本，通过 [selectByMovement](#selectbymovement) /[selectByMovementSync](#selectbymovementsync)按方向选中文本。 <br>- 编辑框属性：通过 [getEditorAttribute](#geteditorattribute) /[getEditorAttributeSync](#geteditorattributesync)获取编辑框属性信息（输入类型、回车键类型等），据此调整键 盘布局。 <br>- 文本预览：通过[setPreviewText](#setpreviewtext)/ [setPreviewTextSync](#setpreviewtextsync)设置预览文本，通过 [finishTextPreview](#finishtextpreview)/ [finishTextPreviewSync](#finishtextpreviewsync)结束文本预览。 <br>- 私有通信：通过[sendPrivateCommand](#sendprivatecommand)向应用发送私有命令，通过 [sendMessage](#sendmessage)/ [recvMessage](#recvmessage)进行消息通信。 <br> <br>注意事项： <br> <br>- InputClient实例与当前绑定的编辑框关联，当编辑框失去焦点或输入法解绑时，该实例可能失效。 <br>- 同名Sync后缀接口为同步接口，阻塞主线程，容易影响UI交互，需谨慎使用。 <br> <br>下列API均需使用 on('inputStart') 获取到InputClient实例后，通过实例调用。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-interface InputClient--><!--Device-inputMethodEngine-interface InputClient-End-->
@@ -18,6 +20,8 @@ import { inputMethodEngine } from '@kit.IMEKit';
 deleteBackward(length: int, callback: AsyncCallback<boolean>): void
 ```
 
+@brief 删除光标后固定长度的文本。使用callback异步回调。 <br> <br>使用场景：实现删除键功能、删除光标后的字符、快速修正输入、实现自定义删除逻辑等。 <br> <br>使用后效果：成功时返回true，编辑框中光标后指定长度的文本被删除。
+
 **起始版本：** 23
 
 <!--Device-InputClient-deleteBackward(length: int, callback: AsyncCallback<boolean>): void--><!--Device-InputClient-deleteBackward(length: int, callback: AsyncCallback<boolean>): void-End-->
@@ -29,15 +33,15 @@ deleteBackward(length: int, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | length | int | 是 | 文本长度。不能小于0。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当光标后固定长度的文本删除成功，err为undefined，data为true；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当光标后固定长度的文本删除成功，err为undefined，data为true；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **示例**
 
@@ -85,6 +89,8 @@ inputClient.deleteBackward(length, (err: BusinessError, result: boolean) => {
 deleteBackward(length: int): Promise<boolean>
 ```
 
+@brief 删除光标后固定长度的文本。使用promise异步回调。
+
 **起始版本：** 23
 
 <!--Device-InputClient-deleteBackward(length: int): Promise<boolean>--><!--Device-InputClient-deleteBackward(length: int): Promise<boolean>-End-->
@@ -107,9 +113,9 @@ deleteBackward(length: int): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **示例**
 
@@ -153,6 +159,12 @@ inputClient.deleteBackward(length).then((result: boolean) => {
 deleteBackwardSync(length: int): void
 ```
 
+@brief 删除光标后固定长度的文本。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 <br>
+> [deleteBackward](#deletebackward)。
+
 **起始版本：** 23
 
 <!--Device-InputClient-deleteBackwardSync(length: int): void--><!--Device-InputClient-deleteBackwardSync(length: int): void-End-->
@@ -169,9 +181,9 @@ deleteBackwardSync(length: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **示例**
 
@@ -195,6 +207,8 @@ inputClient.deleteBackwardSync(length);
 deleteForward(length: int, callback: AsyncCallback<boolean>): void
 ```
 
+@brief 删除光标前固定长度的文本。使用callback异步回调。 <br> <br>使用场景：实现退格键功能、逐字删除输入、删除错误的输入、实现自定义删除逻辑等。 <br> <br>使用后效果：成功时返回true，编辑框中光标前指定长度的文本被删除。
+
 **起始版本：** 23
 
 <!--Device-InputClient-deleteForward(length: int, callback: AsyncCallback<boolean>): void--><!--Device-InputClient-deleteForward(length: int, callback: AsyncCallback<boolean>): void-End-->
@@ -206,15 +220,15 @@ deleteForward(length: int, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | length | int | 是 | 文本长度。不能小于0。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当光标前固定长度的文本删除成功，err为undefined，data为true；当光标前固定长度的文本删除失败，err为 undefined，data为false；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当光标前固定长度的文本删除成功，err为undefined，data为true；当光标前固定长度的文本删除失败，err为 undefined，data为false；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **示例**
 
@@ -262,6 +276,8 @@ inputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
 deleteForward(length: int): Promise<boolean>
 ```
 
+@brief 删除光标前固定长度的文本。使用promise异步回调。
+
 **起始版本：** 23
 
 <!--Device-InputClient-deleteForward(length: int): Promise<boolean>--><!--Device-InputClient-deleteForward(length: int): Promise<boolean>-End-->
@@ -284,9 +300,9 @@ deleteForward(length: int): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **示例**
 
@@ -330,6 +346,13 @@ inputClient.deleteForward(length).then((result: boolean) => {
 deleteForwardSync(length: int): void
 ```
 
+@brief 删除光标前固定长度的文本。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 <br>
+> [deleteForward](#deleteforward) <br>
+> 。
+
 **起始版本：** 23
 
 <!--Device-InputClient-deleteForwardSync(length: int): void--><!--Device-InputClient-deleteForwardSync(length: int): void-End-->
@@ -346,9 +369,9 @@ deleteForwardSync(length: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **示例**
 
@@ -371,6 +394,11 @@ inputClient.deleteForwardSync(length);
 ```TypeScript
 finishTextPreview(): Promise<void>
 ```
+
+@brief 结束预上屏。使用promise异步回调。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 若当前输入框已有预上屏状态文本，调用此接口后，预上屏内容将被系统正式上屏。
 
 **起始版本：** 23
 
@@ -409,6 +437,14 @@ inputClient.finishTextPreview().then(() => {
 finishTextPreviewSync(): void
 ```
 
+@brief 结束预上屏。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 <br>
+> [finishTextPreview](#finishtextpreview)。 <br>
+> <br>
+> 若当前输入框已有预上屏状态文本，调用此接口后，预上屏内容将被系统正式上屏。
+
 **起始版本：** 23
 
 <!--Device-InputClient-finishTextPreviewSync(): void--><!--Device-InputClient-finishTextPreviewSync(): void-End-->
@@ -433,6 +469,8 @@ inputClient.finishTextPreviewSync();
 ```TypeScript
 getAttachOptions(): AttachOptions
 ```
+
+@brief 获取绑定输入法时的附加选项。
 
 **起始版本：** 19
 
@@ -465,6 +503,8 @@ console.info(`Succeeded in getting AttachOptions, AttachOptions is ${attachOptio
 getAttachOptions(): AttachOptions | null
 ```
 
+@brief 获取绑定输入法时的附加选项。
+
 **起始版本：** 23
 
 <!--Device-InputClient-getAttachOptions(): AttachOptions | null--><!--Device-InputClient-getAttachOptions(): AttachOptions | null-End-->
@@ -483,6 +523,8 @@ getAttachOptions(): AttachOptions | null
 getBackward(length: int, callback: AsyncCallback<string>): void
 ```
 
+@brief 获取光标后固定长度的文本。使用callback异步回调。
+
 **起始版本：** 23
 
 <!--Device-InputClient-getBackward(length: int, callback: AsyncCallback<string>): void--><!--Device-InputClient-getBackward(length: int, callback: AsyncCallback<string>): void-End-->
@@ -494,14 +536,14 @@ getBackward(length: int, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | length | int | 是 | 文本长度。不能小于0。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当光标后固定长度的文本获取成功，err为undefined，data为获取到的文本；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当光标后固定长度的文本获取成功，err为undefined，data为获取到的文本；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
 
 **示例**
@@ -542,6 +584,8 @@ inputClient.getBackward(length, (err: BusinessError, text: string) => {
 getBackward(length: int): Promise<string>
 ```
 
+@brief 获取光标后固定长度的文本。使用promise异步回调。
+
 **起始版本：** 23
 
 <!--Device-InputClient-getBackward(length: int): Promise<string>--><!--Device-InputClient-getBackward(length: int): Promise<string>-End-->
@@ -564,8 +608,8 @@ getBackward(length: int): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
 
 **示例**
@@ -602,6 +646,12 @@ inputClient.getBackward(length).then((text: string) => {
 getBackwardSync(length: int): string
 ```
 
+@brief 获取光标后固定长度的文本。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 <br>
+> [getBackward](#getbackward)。
+
 **起始版本：** 23
 
 <!--Device-InputClient-getBackwardSync(length: int): string--><!--Device-InputClient-getBackwardSync(length: int): string-End-->
@@ -624,8 +674,8 @@ getBackwardSync(length: int): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
 
 **示例**
@@ -652,6 +702,11 @@ console.info(`Succeeded in getting backward, text: ${text}`);
 getCallingWindowInfo(): Promise<WindowInfo>
 ```
 
+@brief 获取当前拉起输入法的输入框所在应用窗口信息。使用promise异步回调。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 本接口仅适用于适配使用[Panel](arkts-ime-inputmethodengine-panel-i.md)作为软键盘窗口的输入法应用。
+
 **起始版本：** 12
 
 <!--Device-InputClient-getCallingWindowInfo(): Promise<WindowInfo>--><!--Device-InputClient-getCallingWindowInfo(): Promise<WindowInfo>-End-->
@@ -669,8 +724,8 @@ getCallingWindowInfo(): Promise<WindowInfo>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
 | [12800012](../errorcode-inputmethod-framework.md#12800012-软键盘类型面板未创建) | the input method panel does not exist. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
 
 **示例**
 
@@ -691,6 +746,11 @@ inputClient.getCallingWindowInfo().then((windowInfo: inputMethodEngine.WindowInf
 getCallingWindowInfo(): Promise<WindowInfo | null>
 ```
 
+@brief 获取当前拉起输入法的输入框所在应用窗口信息。使用promise异步回调。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 本接口仅适用于适配使用[Panel](arkts-ime-inputmethodengine-panel-i.md)作为软键盘窗口的输入法应用。
+
 **起始版本：** 23
 
 <!--Device-InputClient-getCallingWindowInfo(): Promise<WindowInfo | null>--><!--Device-InputClient-getCallingWindowInfo(): Promise<WindowInfo | null>-End-->
@@ -708,14 +768,16 @@ getCallingWindowInfo(): Promise<WindowInfo | null>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
 | [12800012](../errorcode-inputmethod-framework.md#12800012-软键盘类型面板未创建) | the input method panel does not exist. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
 
 ## getEditorAttribute
 
 ```TypeScript
 getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void
 ```
+
+@brief 获取编辑框属性值。使用callback异步回调。 <br> <br>使用场景：根据编辑框类型调整输入法界面、根据编辑框配置提供不同的输入建议、实现特定输入逻辑、适配不同类型的输入框等。 <br> <br>使用后效果：返回编辑框属性信息（包括inputPattern输入类型和enterKeyType回车键类型），输入法应用据此调整键盘布局。
 
 **起始版本：** 9
 
@@ -727,7 +789,7 @@ getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | 是 | 回调函数。当编辑框属性值获取成功，err为undefined，data为编辑框属性值；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | 是 | 回调函数。当编辑框属性值获取成功，err为undefined，data为编辑框属性值；否则为错误对象。 |
 
 **错误码：**
 
@@ -756,6 +818,8 @@ inputClient.getEditorAttribute((err: BusinessError, editorAttribute: inputMethod
 getEditorAttribute(callback: AsyncCallback<EditorAttribute | null>): void
 ```
 
+@brief 获取编辑框属性值。使用callback异步回调。 <br> <br>使用场景：根据编辑框类型调整输入法界面、根据编辑框配置提供不同的输入建议、实现特定输入逻辑、适配不同类型的输入框等。 <br> <br>使用后效果：返回编辑框属性信息（包括inputPattern输入类型和enterKeyType回车键类型），输入法应用据此调整键盘布局。
+
 **起始版本：** 23
 
 <!--Device-InputClient-getEditorAttribute(callback: AsyncCallback<EditorAttribute | null>): void--><!--Device-InputClient-getEditorAttribute(callback: AsyncCallback<EditorAttribute | null>): void-End-->
@@ -766,7 +830,7 @@ getEditorAttribute(callback: AsyncCallback<EditorAttribute | null>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md) \| null&gt; | 是 | 回调函数。当编辑框属性值获取成功，err为undefined，data为编辑框属性值；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md) \| null&gt; | 是 | 回调函数。当编辑框属性值获取成功，err为undefined，data为编辑框属性值；否则为错误对象。 |
 
 **错误码：**
 
@@ -779,6 +843,8 @@ getEditorAttribute(callback: AsyncCallback<EditorAttribute | null>): void
 ```TypeScript
 getEditorAttribute(): Promise<EditorAttribute>
 ```
+
+@brief 获取编辑框属性值。使用promise异步回调。
 
 **起始版本：** 9
 
@@ -817,6 +883,8 @@ inputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.Editor
 getEditorAttribute(): Promise<EditorAttribute | null>
 ```
 
+@brief 获取编辑框属性值。使用promise异步回调。
+
 **起始版本：** 23
 
 <!--Device-InputClient-getEditorAttribute(): Promise<EditorAttribute | null>--><!--Device-InputClient-getEditorAttribute(): Promise<EditorAttribute | null>-End-->
@@ -840,6 +908,13 @@ getEditorAttribute(): Promise<EditorAttribute | null>
 ```TypeScript
 getEditorAttributeSync(): EditorAttribute
 ```
+
+@brief 获取编辑框属性值。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 <br>
+> [getEditorAttribute](#geteditorattribute) <br>
+> 。
 
 **起始版本：** 10
 
@@ -873,6 +948,13 @@ console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
 getEditorAttributeSync(): EditorAttribute | null
 ```
 
+@brief 获取编辑框属性值。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 <br>
+> [getEditorAttribute](#geteditorattribute) <br>
+> 。
+
 **起始版本：** 23
 
 <!--Device-InputClient-getEditorAttributeSync(): EditorAttribute | null--><!--Device-InputClient-getEditorAttributeSync(): EditorAttribute | null-End-->
@@ -897,6 +979,8 @@ getEditorAttributeSync(): EditorAttribute | null
 getForward(length: int, callback: AsyncCallback<string>): void
 ```
 
+@brief 获取光标前固定长度的文本。使用callback异步回调。 <br> <br>使用场景：分析已输入文本内容以提供智能补全建议、检查文本格式、实现文本预测功能、实现文本语义分析等。 使用后效果：成功时返回光标前指定长度的文本字符串，输入法应用可据此更新候选词或输入建议。
+
 **起始版本：** 23
 
 <!--Device-InputClient-getForward(length: int, callback: AsyncCallback<string>): void--><!--Device-InputClient-getForward(length: int, callback: AsyncCallback<string>): void-End-->
@@ -908,14 +992,14 @@ getForward(length: int, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | length | int | 是 | 文本长度。不能小于0。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当光标前固定长度的文本获取成功，err为undefined，data为获取到的文本；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当光标前固定长度的文本获取成功，err为undefined，data为获取到的文本；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
 
 **示例**
@@ -956,6 +1040,8 @@ inputClient.getForward(length, (err: BusinessError, text: string) => {
 getForward(length: int): Promise<string>
 ```
 
+@brief 获取光标前固定长度的文本。使用promise异步回调。
+
 **起始版本：** 23
 
 <!--Device-InputClient-getForward(length: int): Promise<string>--><!--Device-InputClient-getForward(length: int): Promise<string>-End-->
@@ -978,8 +1064,8 @@ getForward(length: int): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
 
 **示例**
@@ -1016,6 +1102,12 @@ inputClient.getForward(length).then((text: string) => {
 getForwardSync(length: int): string
 ```
 
+@brief 获取光标前固定长度的文本。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口[getForward](#getforward) <br>
+> 。
+
 **起始版本：** 23
 
 <!--Device-InputClient-getForwardSync(length: int): string--><!--Device-InputClient-getForwardSync(length: int): string-End-->
@@ -1038,8 +1130,8 @@ getForwardSync(length: int): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
 
 **示例**
@@ -1066,6 +1158,8 @@ console.info(`Succeeded in getting forward, text: ${text}`);
 getTextIndexAtCursor(callback: AsyncCallback<int>): void
 ```
 
+@brief 获取光标所在处的文本索引。使用callback异步回调。
+
 **起始版本：** 23
 
 <!--Device-InputClient-getTextIndexAtCursor(callback: AsyncCallback<int>): void--><!--Device-InputClient-getTextIndexAtCursor(callback: AsyncCallback<int>): void-End-->
@@ -1076,7 +1170,7 @@ getTextIndexAtCursor(callback: AsyncCallback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。当文本索引获取成功，err为undefined，index为光标所在处的文本索引；否则err为错误对象，index为 undefined。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 回调函数。当文本索引获取成功，err为undefined，index为光标所在处的文本索引；否则err为错误对象，index为 undefined。 |
 
 **错误码：**
 
@@ -1120,6 +1214,8 @@ inputClient.getTextIndexAtCursor((err: BusinessError, index: int) => {
 ```TypeScript
 getTextIndexAtCursor(): Promise<int>
 ```
+
+@brief 获取光标所在处的文本索引。使用promise异步回调。
 
 **起始版本：** 23
 
@@ -1172,6 +1268,12 @@ inputClient.getTextIndexAtCursor().then((index: int) => {
 getTextIndexAtCursorSync(): int
 ```
 
+@brief 获取光标所在处的文本索引。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 <br>
+> [getTextIndexAtCursor](#gettextindexatcursor)。
+
 **起始版本：** 23
 
 <!--Device-InputClient-getTextIndexAtCursorSync(): int--><!--Device-InputClient-getTextIndexAtCursorSync(): int-End-->
@@ -1213,6 +1315,8 @@ console.info(`Succeeded in getTextIndexAtCursorSync, index: ${index}`);
 insertText(text: string, callback: AsyncCallback<boolean>): void
 ```
 
+@brief 插入文本。使用callback异步回调。 <br> <br>使用场景：插入候选词、插入特殊符号、实现文本自动补全、快速插入常用短语等。 <br> <br>使用后效果：成功时返回true，文本已插入到编辑框光标位置。
+
 **起始版本：** 23
 
 <!--Device-InputClient-insertText(text: string, callback: AsyncCallback<boolean>): void--><!--Device-InputClient-insertText(text: string, callback: AsyncCallback<boolean>): void-End-->
@@ -1224,15 +1328,15 @@ insertText(text: string, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 文本内容。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当文本插入成功，err为undefined，data为true；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当文本插入成功，err为undefined，data为true；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **示例**
 
@@ -1259,6 +1363,8 @@ inputClient.insertText('test', (err: BusinessError, result: boolean) => {
 insertText(text: string): Promise<boolean>
 ```
 
+@brief 插入文本。使用promise异步回调。
+
 **起始版本：** 23
 
 <!--Device-InputClient-insertText(text: string): Promise<boolean>--><!--Device-InputClient-insertText(text: string): Promise<boolean>-End-->
@@ -1281,9 +1387,9 @@ insertText(text: string): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **示例**
 
@@ -1307,6 +1413,12 @@ inputClient.insertText('test').then((result: boolean) => {
 insertTextSync(text: string): void
 ```
 
+@brief 插入文本。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 <br>
+> [insertText](#inserttext)。
+
 **起始版本：** 23
 
 <!--Device-InputClient-insertTextSync(text: string): void--><!--Device-InputClient-insertTextSync(text: string): void-End-->
@@ -1323,9 +1435,9 @@ insertTextSync(text: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **示例**
 
@@ -1339,6 +1451,8 @@ inputClient.insertTextSync('test');
 moveCursor(direction: int, callback: AsyncCallback<void>): void
 ```
 
+@brief 移动光标。使用callback异步回调。 <br> <br>使用场景：实现光标移动到特定位置、实现上下左右移动光标功能、实现快速定位、实现自定义光标控制等。 <br> <br>使用后效果：成功时编辑框中的光标按指定方向移动一步。direction取值，1为上移，2为下移，3为左移，4为右移。
+
 **起始版本：** 23
 
 <!--Device-InputClient-moveCursor(direction: int, callback: AsyncCallback<void>): void--><!--Device-InputClient-moveCursor(direction: int, callback: AsyncCallback<void>): void-End-->
@@ -1350,14 +1464,14 @@ moveCursor(direction: int, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | direction | int | 是 | 光标移动方向。<br/>- 当值为1时，表示向上。<br/>- 当值为2时，表示向下。<br/>- 当值为3时，表示向左。<br/>- 当值为4时，表示向右。不能小于0。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当光标移动成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当光标移动成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **示例**
 
@@ -1378,6 +1492,8 @@ inputClient.moveCursor(inputMethodEngine.Direction.CURSOR_UP, (err: BusinessErro
 ```TypeScript
 moveCursor(direction: int): Promise<void>
 ```
+
+@brief 移动光标。使用promise异步回调。
 
 **起始版本：** 23
 
@@ -1401,8 +1517,8 @@ moveCursor(direction: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **示例**
 
@@ -1422,6 +1538,12 @@ inputClient.moveCursor(inputMethodEngine.Direction.CURSOR_UP).then(() => {
 moveCursorSync(direction: int): void
 ```
 
+@brief 移动光标。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 <br>
+> [moveCursor](#movecursor)。
+
 **起始版本：** 23
 
 <!--Device-InputClient-moveCursorSync(direction: int): void--><!--Device-InputClient-moveCursorSync(direction: int): void-End-->
@@ -1438,8 +1560,8 @@ moveCursorSync(direction: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **示例**
 
@@ -1453,6 +1575,8 @@ inputClient.moveCursorSync(inputMethodEngine.Direction.CURSOR_UP);
 offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void
 ```
 
+@brief 取消订阅附加选项变更（attachOptionsDidChange）事件，停止监听输入法附加配置项的变更动作。
+
 **起始版本：** 23
 
 <!--Device-InputClient-offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void--><!--Device-InputClient-offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void-End-->
@@ -1463,7 +1587,7 @@ offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | 否 | 可选参数，需取消的目标回调函数：传入指定回调函数实例时，仅取消该回调的订阅；不传入时，取消所有 attachOptionsDidChange事件的订阅。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AttachOptions&gt; | 否 | 可选参数，需取消的目标回调函数：传入指定回调函数实例时，仅取消该回调的订阅；不传入时，取消所有 attachOptionsDidChange事件的订阅。 |
 
 **示例**
 
@@ -1489,6 +1613,8 @@ inputMethodEngine.getInputMethodAbility()
 off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void
 ```
 
+@brief 取消订阅绑定输入法时的附加选项变更事件。使用callback异步回调。
+
 **起始版本：** 19
 
 <!--Device-InputClient-off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void--><!--Device-InputClient-off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void-End-->
@@ -1500,7 +1626,7 @@ off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'attachOptionsDidChange' | 是 | 绑定输入法时的附加选项变更事件，固定取值为'attachOptionsDidChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | 否 | 取消订阅的回调函数。参数不填写时，默认取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AttachOptions&gt; | 否 | 取消订阅的回调函数。参数不填写时，默认取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -1522,6 +1648,8 @@ console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
 onAttachOptionsDidChange(callback: Callback<AttachOptions>): void
 ```
 
+@brief 订阅绑定输入法时的附加选项变更事件。使用callback异步回调。
+
 **起始版本：** 23
 
 <!--Device-InputClient-onAttachOptionsDidChange(callback: Callback<AttachOptions>): void--><!--Device-InputClient-onAttachOptionsDidChange(callback: Callback<AttachOptions>): void-End-->
@@ -1532,7 +1660,7 @@ onAttachOptionsDidChange(callback: Callback<AttachOptions>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | 是 | 回调函数，返回绑定输入法时的附加选项。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AttachOptions&gt; | 是 | 回调函数，返回绑定输入法时的附加选项。 |
 
 **示例**
 
@@ -1558,6 +1686,8 @@ inputMethodEngine.getInputMethodAbility()
 on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void
 ```
 
+@brief 订阅绑定输入法时的附加选项变更事件。使用callback异步回调。
+
 **起始版本：** 19
 
 <!--Device-InputClient-on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void--><!--Device-InputClient-on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void-End-->
@@ -1569,7 +1699,7 @@ on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'attachOptionsDidChange' | 是 | 绑定输入法时的附加选项变更事件，固定取值为'attachOptionsDidChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | 是 | 回调函数，返回绑定输入法时的附加选项。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AttachOptions&gt; | 是 | 回调函数，返回绑定输入法时的附加选项。 |
 
 **错误码：**
 
@@ -1599,6 +1729,15 @@ console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
 ```TypeScript
 recvMessage(msgHandler?: MessageHandler): void
 ```
+
+@brief 注册或取消注册Messagehandler。 <br> <br>   
+> **说明：** <br>
+> <br>
+> [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md)对象全局唯一，多次注册仅保留最后一次注册的对象及有效性，并触发上一个已注册对象的 <br>
+> [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated)回调函数。 <br>
+> <br>
+> 未填写参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md)，并会触发被取消注册对象中 <br>
+> [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated)回调函数。
 
 **起始版本：** 23
 
@@ -1644,6 +1783,8 @@ inputMethodEngine.getInputMethodAbility()
 selectByMovement(movement: Movement, callback: AsyncCallback<void>): void
 ```
 
+@brief 根据光标移动方向选中文本。使用callback异步回调。
+
 **起始版本：** 23
 
 <!--Device-InputClient-selectByMovement(movement: Movement, callback: AsyncCallback<void>): void--><!--Device-InputClient-selectByMovement(movement: Movement, callback: AsyncCallback<void>): void-End-->
@@ -1655,14 +1796,14 @@ selectByMovement(movement: Movement, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | movement | Movement | 是 | 选中时光标移动的方向。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功发送选中事件后，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当成功发送选中事件后，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **示例**
 
@@ -1686,6 +1827,8 @@ inputClient.selectByMovement(movement, (err: BusinessError) => {
 selectByMovement(movement: Movement): Promise<void>
 ```
 
+@brief 根据光标移动方向选中文本。使用promise异步回调。
+
 **起始版本：** 23
 
 <!--Device-InputClient-selectByMovement(movement: Movement): Promise<void>--><!--Device-InputClient-selectByMovement(movement: Movement): Promise<void>-End-->
@@ -1708,8 +1851,8 @@ selectByMovement(movement: Movement): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **示例**
 
@@ -1731,6 +1874,12 @@ inputClient.selectByMovement(movement).then(() => {
 selectByMovementSync(movement: Movement): void
 ```
 
+@brief 根据光标移动方向选中文本。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 <br>
+> [selectByMovement](#selectbymovement)。
+
 **起始版本：** 23
 
 <!--Device-InputClient-selectByMovementSync(movement: Movement): void--><!--Device-InputClient-selectByMovementSync(movement: Movement): void-End-->
@@ -1747,8 +1896,8 @@ selectByMovementSync(movement: Movement): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **示例**
 
@@ -1764,6 +1913,8 @@ inputClient.selectByMovementSync(movement);
 selectByRange(range: Range, callback: AsyncCallback<void>): void
 ```
 
+@brief 根据索引范围选中文本。使用callback异步回调。
+
 **起始版本：** 23
 
 <!--Device-InputClient-selectByRange(range: Range, callback: AsyncCallback<void>): void--><!--Device-InputClient-selectByRange(range: Range, callback: AsyncCallback<void>): void-End-->
@@ -1775,14 +1926,14 @@ selectByRange(range: Range, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | range | Range | 是 | 选中文本的范围。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功发送选中事件后，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当成功发送选中事件后，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **示例**
 
@@ -1807,6 +1958,8 @@ inputClient.selectByRange(range, (err: BusinessError) => {
 selectByRange(range: Range): Promise<void>
 ```
 
+@brief 根据索引范围选中文本。使用promise异步回调。
+
 **起始版本：** 23
 
 <!--Device-InputClient-selectByRange(range: Range): Promise<void>--><!--Device-InputClient-selectByRange(range: Range): Promise<void>-End-->
@@ -1829,8 +1982,8 @@ selectByRange(range: Range): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **示例**
 
@@ -1853,6 +2006,13 @@ inputClient.selectByRange(range).then(() => {
 selectByRangeSync(range: Range): void
 ```
 
+@brief 根据索引范围选中文本。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 <br>
+> [selectByRange](#selectbyrange) <br>
+> 。
+
 **起始版本：** 23
 
 <!--Device-InputClient-selectByRangeSync(range: Range): void--><!--Device-InputClient-selectByRangeSync(range: Range): void-End-->
@@ -1869,8 +2029,8 @@ selectByRangeSync(range: Range): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **示例**
 
@@ -1887,6 +2047,17 @@ inputClient.selectByRangeSync(range);
 sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void
 ```
 
+@brief 发送扩展编辑操作。使用callback异步回调。 <br> <br>使用场景：输入法应用需要触发编辑框的扩展编辑功能。例如：用户点击键盘上的剪切按钮时发送CUT操作；用户点击复制按钮时发送COPY操作；用户点击粘贴按钮时发送PASTE操作；用户点击全选按钮时发送SELECT_ALL操作；自定义 <br> <br>工具栏中集成编辑快捷操作。 <br> <br>   
+> **说明：**<br>
+> <br>
+> 输入法应用调用该接口向编辑框发送扩展编辑操作，编辑框监听相应事件 <br>
+> on('handleExtendAction') <br>
+> ，从而进一步做出处理。 <br>
+> <br>
+> 编辑框响应[ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md)的PASTE命令时，需要编辑框应用申请 <br>
+> [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) <br>
+> 权限。
+
 **起始版本：** 23
 
 <!--Device-InputClient-sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void--><!--Device-InputClient-sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void-End-->
@@ -1898,14 +2069,14 @@ sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | action | ExtendAction | 是 | 要发送的扩展操作。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。发送成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。发送成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
 
 **示例**
@@ -1927,6 +2098,17 @@ inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY, (err: Business
 ```TypeScript
 sendExtendAction(action: ExtendAction): Promise<void>
 ```
+
+@brief 发送扩展编辑操作。使用promise异步回调。 <br> <br>   
+> **说明：**<br>
+> <br>
+> 输入法应用调用该接口向编辑框发送扩展编辑操作，编辑框监听相应事件 <br>
+> on('handleExtendAction') <br>
+> ，从而进一步做出处理。 <br>
+> <br>
+> 编辑框响应[ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md)的PASTE命令时，需要编辑框应用申请 <br>
+> [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) <br>
+> 权限。
 
 **起始版本：** 23
 
@@ -1950,8 +2132,8 @@ sendExtendAction(action: ExtendAction): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
 
 **示例**
@@ -1972,6 +2154,8 @@ inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY).then(() => {
 sendKeyFunction(action: int, callback: AsyncCallback<boolean>): void
 ```
 
+@brief 发送功能键。使用callback异步回调。
+
 **起始版本：** 23
 
 <!--Device-InputClient-sendKeyFunction(action: int, callback: AsyncCallback<boolean>): void--><!--Device-InputClient-sendKeyFunction(action: int, callback: AsyncCallback<boolean>): void-End-->
@@ -1983,14 +2167,14 @@ sendKeyFunction(action: int, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | action | int | 是 | 功能键键值。<br/>- 当值为0时，表示无效按键。<br/>- 当值为1时，表示确认键（即回车键）。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当功能键发送成功，err为undefined，data为true；当功能键发送失败，err为undefined，data为 false；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当功能键发送成功，err为undefined，data为true；当功能键发送失败，err为undefined，data为 false；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **示例**
 
@@ -2040,6 +2224,8 @@ inputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) => {
 sendKeyFunction(action: int): Promise<boolean>
 ```
 
+@brief 发送功能键。使用promise异步回调。
+
 **起始版本：** 23
 
 <!--Device-InputClient-sendKeyFunction(action: int): Promise<boolean>--><!--Device-InputClient-sendKeyFunction(action: int): Promise<boolean>-End-->
@@ -2062,8 +2248,8 @@ sendKeyFunction(action: int): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **示例**
 
@@ -2107,6 +2293,13 @@ inputClient.sendKeyFunction(action).then((result: boolean) => {
 sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 ```
 
+@brief 发送自定义通信至已绑定当前输入法应用的编辑框应用。使用Promise异步回调。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 该接口需要编辑框与输入法绑定并进入编辑状态，且输入法应用处于完整体验模式时才能调用。 <br>
+> <br>
+> msgId最大限制256B，msgParam最大限制128KB。
+
 **起始版本：** 23
 
 <!--Device-InputClient-sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>--><!--Device-InputClient-sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>-End-->
@@ -2130,12 +2323,12 @@ sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Incorrect parameter length. |
-| [12800016](../errorcode-inputmethod-framework.md#12800016-输入法客户端未处于编辑状态) | input method client is not editable. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) | input method client detached. |
-| [12800015](../errorcode-inputmethod-framework.md#12800015-消息接收端无法接收自定义通信数据) | the other side does not accept the request. |
 | [12800014](../errorcode-inputmethod-framework.md#12800014-输入法应用非完全访问模式) | the input method is in basic mode. |
+| [12800015](../errorcode-inputmethod-framework.md#12800015-消息接收端无法接收自定义通信数据) | the other side does not accept the request. |
+| [12800016](../errorcode-inputmethod-framework.md#12800016-输入法客户端未处于编辑状态) | input method client is not editable. |
 
 **示例**
 
@@ -2157,6 +2350,15 @@ inputClient.sendMessage(msgId, msgParam).then(() => {
 sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>
 ```
 
+@brief 发送私有数据至需要与输入法应用通信的系统其他部分。使用promise异步回调。 <br> <br>   
+> **说明:** <br>
+> <br>
+> - 私有数据通道是系统预置输入法应用与系统特定组件（如文本框、桌面应用等）的通信机制，常用于设备级厂商在特定设备上实现自定义的输入法功能。 <br>
+> <br>
+> - 私有数据规格限制：总大小32KB，数量限制5条。 <br>
+> <br>
+> - 私有数据默认发送给文本框，如果需要发送给桌面应用，请在私有数据中携带一条`{'sys_cmd':1}`数据。
+
 **起始版本：** 23
 
 <!--Device-InputClient-sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>--><!--Device-InputClient-sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>-End-->
@@ -2167,7 +2369,7 @@ sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| commandData | Record&lt;string, CommandDataType&gt; | 是 | 私有数据。 |
+| commandData | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, CommandDataType&gt; | 是 | 私有数据。 |
 
 **返回值：**
 
@@ -2179,8 +2381,8 @@ sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) | not the preconfigured default input method. |
 
 **示例**
@@ -2209,6 +2411,8 @@ inputMethodEngine.getInputMethodAbility().on('inputStart', (kbController, textIn
 setPreviewText(text: string, range: Range): Promise<void>
 ```
 
+@brief 设置预上屏文本。使用promise异步回调。
+
 **起始版本：** 23
 
 <!--Device-InputClient-setPreviewText(text: string, range: Range): Promise<void>--><!--Device-InputClient-setPreviewText(text: string, range: Range): Promise<void>-End-->
@@ -2232,8 +2436,8 @@ setPreviewText(text: string, range: Range): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800011](../errorcode-inputmethod-framework.md#12800011-当前输入框不支持预上屏) | text preview not supported. |
 
 **示例**
@@ -2257,6 +2461,11 @@ inputClient.setPreviewText('test', range).then(() => {
 setPreviewTextSync(text: string, range: Range): void
 ```
 
+@brief 设置预上屏文本。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口[setPreviewText](#setpreviewtext)。
+
 **起始版本：** 23
 
 <!--Device-InputClient-setPreviewTextSync(text: string, range: Range): void--><!--Device-InputClient-setPreviewTextSync(text: string, range: Range): void-End-->
@@ -2274,8 +2483,8 @@ setPreviewTextSync(text: string, range: Range): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800011](../errorcode-inputmethod-framework.md#12800011-当前输入框不支持预上屏) | text preview not supported. |
 
 **示例**

@@ -12,7 +12,9 @@ import { connection } from '@kit.NetworkKit';
 function reportNetDisconnected(netHandle: NetHandle, callback: AsyncCallback<void>): void
 ```
 
-Reports the network unavailability to the network management module. This API uses an asynchronous callback to return the result. **Permission required**: ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
+Reports the network unavailability to the network management module. This API uses an asynchronous callback to return the result.
+
+**Permission required**: ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
 **Since:** 8
 
@@ -33,11 +35,11 @@ Reports the network unavailability to the network management module. This API us
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 
@@ -67,7 +69,9 @@ connection.getDefaultNet((error: BusinessError, netHandle: connection.NetHandle)
 function reportNetDisconnected(netHandle: NetHandle): Promise<void>
 ```
 
-Reports the network unavailability to the network management module. This API uses a promise to return the result. **Permission required**: ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
+Reports the network unavailability to the network management module. This API uses a promise to return the result.
+
+**Permission required**: ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
 **Since:** 8
 
@@ -93,11 +97,11 @@ Reports the network unavailability to the network management module. This API us
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 

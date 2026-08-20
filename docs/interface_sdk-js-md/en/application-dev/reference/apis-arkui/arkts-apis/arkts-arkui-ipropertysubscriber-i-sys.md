@@ -1,4 +1,4 @@
-# IPropertySubscriber(System API) (System API)
+# IPropertySubscriber (System API)
 
 Provides an interface for attribute subscribers.
 

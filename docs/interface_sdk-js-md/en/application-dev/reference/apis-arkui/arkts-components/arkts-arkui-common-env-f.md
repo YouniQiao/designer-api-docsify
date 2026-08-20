@@ -33,5 +33,5 @@ Defining Env PropertyDecorator. On API 26.0.0 and above, the parameter also supp
 
 | Type | Description |
 | --- | --- |
-| [PropertyDecorator](../../apis-na/arkts-apis/arkts-na-propertydecorator-t.md) | Env decorator |
+| [PropertyDecorator](../../apis-default/arkts-apis/arkts-propertydecorator-t.md) | Env decorator |
 

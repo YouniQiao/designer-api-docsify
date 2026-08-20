@@ -1,4 +1,4 @@
-# ClipboardPolicy(安全管理)
+# ClipboardPolicy
 
 设备剪贴板策略。
 

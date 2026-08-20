@@ -26,5 +26,5 @@ Called when the system shares the form.
 
 | 类型 | 说明 |
 | --- | --- |
-| Record&lt;string, Object&gt; | Returns the wantParams object. |
+| [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | Returns the wantParams object. |
 

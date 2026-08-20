@@ -14,7 +14,9 @@
 GET_BUNDLE_INFO_ONLY_WITH_LAUNCHER_ABILITY = 0x00001000
 ```
 
-用于获取仅包含有桌面图标的应用的bundleInfo。它仅在 [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md) 接口中生效。 **系统API：** 该标记仅支持在系统API中使用。
+用于获取仅包含有桌面图标的应用的bundleInfo。它仅在 [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md) 接口中生效。
+
+**系统API：** 该标记仅支持在系统API中使用。
 
 **起始版本：** 23
 
@@ -30,7 +32,9 @@ GET_BUNDLE_INFO_ONLY_WITH_LAUNCHER_ABILITY = 0x00001000
 GET_BUNDLE_INFO_OF_ANY_USER = 0x00002000
 ```
 
-用于获取任意用户安装的bundleInfo。它不能单独使用，需要与GET_BUNDLE_INFO_WITH_APPLICATION一起使用。它仅在 [getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md) 、 [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md) 接口生效。 **系统API：** 该标记仅支持在系统API中使用。
+用于获取任意用户安装的bundleInfo。它不能单独使用，需要与GET_BUNDLE_INFO_WITH_APPLICATION一起使用。它仅在 [getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md) 、 [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md) 接口生效。
+
+**系统API：** 该标记仅支持在系统API中使用。
 
 **起始版本：** 23
 
@@ -46,7 +50,9 @@ GET_BUNDLE_INFO_OF_ANY_USER = 0x00002000
 GET_BUNDLE_INFO_EXCLUDE_CLONE = 0x00004000
 ```
 
-用于获取去除分身应用而仅包含主应用的bundleInfo。它仅在 [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md) 接口中生效。 **系统API：** 该标记仅支持在系统API中使用。
+用于获取去除分身应用而仅包含主应用的bundleInfo。它仅在 [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md) 接口中生效。
+
+**系统API：** 该标记仅支持在系统API中使用。
 
 **起始版本：** 23
 
@@ -62,7 +68,9 @@ GET_BUNDLE_INFO_EXCLUDE_CLONE = 0x00004000
 GET_BUNDLE_INFO_WITH_CLOUD_KIT = 0x00008000
 ```
 
-用于获取启用端云文件同步能力或者端云结构化数据同步能力的应用的bundleInfo。它仅在 [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md) 接口中生效。 **系统API：** 该标记仅支持在系统API中使用。
+用于获取启用端云文件同步能力或者端云结构化数据同步能力的应用的bundleInfo。它仅在 [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md) 接口中生效。
+
+**系统API：** 该标记仅支持在系统API中使用。
 
 **起始版本：** 23
 

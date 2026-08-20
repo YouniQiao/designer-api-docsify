@@ -1,6 +1,10 @@
 # SensorType
 
-表示要订阅或取消订阅的传感器类型。 &gt; **说明：** &gt; &gt; 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.SensorId](arkts-sensorservice-sensor-sensorid-e.md)替代。
+表示要订阅或取消订阅的传感器类型。
+
+> **说明：**
+> 
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.SensorId](arkts-sensorservice-sensor-sensorid-e.md)替代。
 
 **起始版本：** 8
 

@@ -1,4 +1,4 @@
-# USBControlRequestType(USB Manager)
+# USBControlRequestType
 
 控制请求类型。
 

@@ -1,4 +1,4 @@
-# HiTraceTracepointType(Distributed Tracing)
+# HiTraceTracepointType
 
 Enumerates trace point types.
 

@@ -32,7 +32,9 @@ REQUIRE_ABILITY_LIST = 'requireAbilityList'
 SUPPORT_URL_CASTING = 'url-cast'
 ```
 
-作为setExtras)}接口，给REQUIRE_ABILITY_LIST键传入能力列 表的值，用于通知系统当前应用支持URL投播功能。 setExtras)}接口传入入参 `{[avSession.ExtraKey.REQUIRE_ABILITY_LIST]: [avSession.ExtraKey.SUPPORT_URL_CASTING]}`表示当前应用支持投播功能。
+作为setExtras)}接口，给REQUIRE_ABILITY_LIST键传入能力列 表的值，用于通知系统当前应用支持URL投播功能。
+
+setExtras)}接口传入入参 `{[avSession.ExtraKey.REQUIRE_ABILITY_LIST]: [avSession.ExtraKey.SUPPORT_URL_CASTING]}`表示当前应用支持投播功能。
 
 **起始版本：** 26.0.0
 
@@ -50,7 +52,9 @@ SUPPORT_URL_CASTING = 'url-cast'
 DLNA_CURRENT_URI_METADATA = 'CurrentURIMetadata'
 ```
 
-[AVMediaDescription](arkts-avsession-avsession-avmediadescription-i.md)中extras属性可传入的键，值传入string类型。 用于DLNA投播场景下，在发送给对端的报文中，为CurrentURIMetaData标签添加内容。
+[AVMediaDescription](arkts-avsession-avsession-avmediadescription-i.md)中extras属性可传入的键，值传入string类型。
+
+用于DLNA投播场景下，在发送给对端的报文中，为CurrentURIMetaData标签添加内容。
 
 **起始版本：** 26.0.0
 
@@ -68,7 +72,9 @@ DLNA_CURRENT_URI_METADATA = 'CurrentURIMetadata'
 DLNA_DIDL_LITE = 'DIDL-Lite'
 ```
 
-[AVMediaDescription](arkts-avsession-avsession-avmediadescription-i.md)中extras属性可传入的键，值传入string类型。 用于DLNA投播场景下，在发送给对端的报文中，为DIDL-Lite标签添加内容。
+[AVMediaDescription](arkts-avsession-avsession-avmediadescription-i.md)中extras属性可传入的键，值传入string类型。
+
+用于DLNA投播场景下，在发送给对端的报文中，为DIDL-Lite标签添加内容。
 
 **起始版本：** 26.0.0
 

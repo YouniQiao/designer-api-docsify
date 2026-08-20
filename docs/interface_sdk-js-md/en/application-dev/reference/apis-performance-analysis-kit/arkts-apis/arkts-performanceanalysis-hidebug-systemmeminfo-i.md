@@ -2,6 +2,8 @@
 
 Describes the system memory information, including the total memory, free memory, and available memory.
 
+@interface SystemMemInfo
+
 **Since:** 23
 
 <!--Device-hidebug-interface SystemMemInfo--><!--Device-hidebug-interface SystemMemInfo-End-->

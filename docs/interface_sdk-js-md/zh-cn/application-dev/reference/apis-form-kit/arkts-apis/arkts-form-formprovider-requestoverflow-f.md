@@ -12,7 +12,13 @@ import { formProvider } from '@kit.FormKit';
 function requestOverflow(formId: string, overflowInfo: formInfo.OverflowInfo): Promise<void>
 ```
 
-卡片提供方发起互动卡片动效请求，只针对[场景动效类型互动卡片](../../../form/arkts-ui-widget-configuration.md#sceneanimationparams标签)生效，使用Promise 异步回调。其中相关的方法为[cancelOverflow()](arkts-form-formprovider-canceloverflow-f.md)：取消互动卡片动效请求，用于取消已发起的动效。 &gt; **说明：** &gt; &gt; 1. 该接口在省电模式场景下不可使用，会报16501000错误码。 &gt; &gt; 2. 当设备热档位进入HOT场景并且没有点击事件的场景下，该接口会报16501000错误码；当热档位进入OVERHEATED时，任何情况下都会报16501000错误码。热档位信息具体可参考 &gt; [热档位信息](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-thermal-thermallevel-e.md)。
+卡片提供方发起互动卡片动效请求，只针对[场景动效类型互动卡片](../../../form/arkts-ui-widget-configuration.md#sceneanimationparams标签)生效，使用Promise 异步回调。其中相关的方法为[cancelOverflow()](arkts-form-formprovider-canceloverflow-f.md)：取消互动卡片动效请求，用于取消已发起的动效。
+
+> **说明：**
+> 
+> 1. 该接口在省电模式场景下不可使用，会报16501000错误码。
+> 
+> 2. 当设备热档位进入HOT场景并且没有点击事件的场景下，该接口会报16501000错误码；当热档位进入OVERHEATED时，任何情况下都会报16501000错误码。热档位信息具体可参考 &gt; [热档位信息](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-thermal-thermallevel-e.md)。
 
 **起始版本：** 23
 
@@ -39,14 +45,14 @@ function requestOverflow(formId: string, overflowInfo: formInfo.OverflowInfo): P
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function requestOverflow can not work correctly due to limited device capabilities. |
-| [16501001](../errorcode-form.md#16501001-卡片id不存在) | The ID of the form to be operated does not exist. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
-| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
-| [16501011](../errorcode-form.md#16501011-卡片不支持调用当前接口) | The form cannot support this operation. |
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
+| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 | [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+| [16501001](../errorcode-form.md#16501001-卡片id不存在) | The ID of the form to be operated does not exist. |
+| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
+| [16501011](../errorcode-form.md#16501011-卡片不支持调用当前接口) | The form cannot support this operation. |
 
 **示例**
 

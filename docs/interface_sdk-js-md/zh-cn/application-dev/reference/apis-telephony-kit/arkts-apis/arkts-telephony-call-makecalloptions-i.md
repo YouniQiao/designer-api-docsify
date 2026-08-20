@@ -20,7 +20,9 @@ import { call } from '@kit.TelephonyKit';
 isCustomAccessibility?: boolean
 ```
 
-应用是否支持自定义无障碍能力，默认为false。true表示支持，false表示不支持。 **起始版本:** 26.0.0
+应用是否支持自定义无障碍能力，默认为false。true表示支持，false表示不支持。
+
+**起始版本:** 26.0.0
 
 **类型：** boolean
 

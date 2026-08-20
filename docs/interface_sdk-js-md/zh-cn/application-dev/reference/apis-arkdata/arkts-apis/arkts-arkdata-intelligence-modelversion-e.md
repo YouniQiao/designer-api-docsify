@@ -1,6 +1,8 @@
-# ModelVersion(智慧数据平台)
+# ModelVersion
 
 模型版本枚举。
+
+@enum { int }
 
 **起始版本：** 23
 

@@ -44,8 +44,8 @@ constructor(album: Album)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 
 **示例**
 
@@ -112,9 +112,9 @@ static createAnalysisAlbumRequest(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. <br>Possible causes: <br>1. The input parameter is not within the valid range. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## createAnalysisAlbumRequest
 
@@ -126,7 +126,15 @@ static createAnalysisAlbumRequest(
     ): MediaAnalysisAlbumChangeRequest
 ```
 
-创建智慧相册的变更请求。 &gt; **说明：**&gt; &gt; 相册名的参数规格如下： &gt; &gt; - 相册名字符串长度的取值范围为[1, 255]。 &gt; &gt; - 不允许出现非法英文字符，包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+创建智慧相册的变更请求。
+
+> **说明：**
+> 
+> 相册名的参数规格如下：
+> 
+> - 相册名字符串长度的取值范围为[1, 255]。
+> 
+> - 不允许出现非法英文字符，包括：. .. \ / : ? " ' ` &lt; &gt; | { } [ ]
 
 **起始版本：** 23
 
@@ -156,9 +164,9 @@ static createAnalysisAlbumRequest(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. <br>Possible causes: <br>1. The input parameter is not within the valid range. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -206,9 +214,9 @@ setDefaultCoverUri(coverUri: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. <br>Possible causes: <br>1. The input parameter is not within the valid range. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -287,9 +295,9 @@ setOrderPosition(assets: Array<PhotoAsset>, position: Array<int>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
@@ -342,7 +350,9 @@ async function example(context: Context) {
 setRelationship(relationship: string): Promise<void>
 ```
 
-设置人像相册中的人物关系。 支持的人物关系名称范围： | 唯一标识 | 含义 | | ---------- | ------- | | me | 我 | | son | 儿子 | | daughter | 女儿 | | wife | 妻子 | | husband | 丈夫 | | father | 爸爸 | | mother | 妈妈 | | colleague | 同事 | | friend | 朋友 | | classmate | 同学 | | best_friend_female | 闺蜜 | | boyfriend | 男朋友 | | girlfriend | 女朋友 | | family | 家人 | | maternal_grandfather | 外公 | | maternal_grandmother | 外婆 | | paternal_grandfather | 爷爷 | | paternal_grandmother | 奶奶 | | older_brother | 哥哥 | | older_sister | 姐姐 | | younger_brother | 弟弟 | | younger_sister | 妹妹 | | relative | 亲戚 | | other | 其他 |
+设置人像相册中的人物关系。
+
+支持的人物关系名称范围： | 唯一标识 | 含义 | | ---------- | ------- | | me | 我 | | son | 儿子 | | daughter | 女儿 | | wife | 妻子 | | husband | 丈夫 | | father | 爸爸 | | mother | 妈妈 | | colleague | 同事 | | friend | 朋友 | | classmate | 同学 | | best_friend_female | 闺蜜 | | boyfriend | 男朋友 | | girlfriend | 女朋友 | | family | 家人 | | maternal_grandfather | 外公 | | maternal_grandmother | 外婆 | | paternal_grandfather | 爷爷 | | paternal_grandmother | 奶奶 | | older_brother | 哥哥 | | older_sister | 姐姐 | | younger_brother | 弟弟 | | younger_sister | 妹妹 | | relative | 亲戚 | | other | 其他 |
 
 **起始版本：** 26.0.0
 
@@ -370,10 +380,10 @@ setRelationship(relationship: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. <br>Possible causes: <br>1. The input parameter is not within the valid range. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 

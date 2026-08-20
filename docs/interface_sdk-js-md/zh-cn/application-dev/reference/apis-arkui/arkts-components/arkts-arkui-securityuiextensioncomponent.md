@@ -1,8 +1,12 @@
 # SecurityUIExtensionComponent
 
-**SecurityUIExtensionComponent**用于将其他应用提供的UI嵌入到当前页面中。显示的内容运行在另一个进程中，当前应用不参与其布局和渲染。 通常用于需要进程隔离的模块化开发场景。目前，**SecurityUIExtensionComponent**只能启动PhotoPicker类型的**UIExtensionAbility**。
+*SecurityUIExtensionComponent**用于将其他应用提供的UI嵌入到当前页面中。显示的内容运行在另一个进程中，当前应用不参与其布局和渲染。
 
-## 子组件 无
+通常用于需要进程隔离的模块化开发场景。目前，**SecurityUIExtensionComponent**只能启动PhotoPicker类型的**UIExtensionAbility**。
+
+## 子组件
+
+无
 
 ## SecurityUIExtensionComponent
 
@@ -38,13 +42,9 @@ SecurityUIExtensionComponent(
 
 | 名称 | 说明 |
 | --- | --- |
-| [SecurityUIExtensionOptions](arkts-arkui-securityuiextensionoptions-i-sys.md) | 用于构造SecurityUIExtensionComponent时传递参数。 |
-| [SecurityUIExtensionProxy](arkts-arkui-securityuiextensionproxy-i-sys.md) | 用于在双方建立连接成功后，向被拉起的Ability发送数据，以及订阅和取消订阅事件回调。 |
-| [TerminationInfo](arkts-arkui-terminationinfo-i-sys.md) | 用于表示被拉起的UIExtensionAbility正常退出时的返回结果。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [SecurityDpiFollowStrategy](arkts-arkui-securitydpifollowstrategy-e-sys.md) | 定义SecurityUIExtensionComponent内容分辨率跟随策略的枚举。 |
 

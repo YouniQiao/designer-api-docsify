@@ -38,6 +38,6 @@ function notifyMetadataBindingEvent(bundleName: string): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-文件创建失败) | Internal handling failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission check failed. A non-system application uses the system API. |
+| [32100001](../errorcode-metadataBinding.md#32100001-文件创建失败) | Internal handling failed. |
 

@@ -2,6 +2,8 @@
 
 对话框动作信息的定义。
 
+@interface DialogActionInfo
+
 **起始版本：** 23
 
 <!--Device-avMusicTemplate-interface DialogActionInfo--><!--Device-avMusicTemplate-interface DialogActionInfo-End-->

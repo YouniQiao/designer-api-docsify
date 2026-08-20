@@ -12,7 +12,11 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<int>): void
 ```
 
-Publishes a reminder. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after the &gt; [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md) &gt; permission is obtained. &gt;
+Publishes a reminder. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after the &gt; [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md) &gt; permission is obtained. &gt;
 
 **Since:** 23
 
@@ -33,10 +37,10 @@ Publishes a reminder. This API uses an asynchronous callback to return the resul
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter is not valid parameter. |
-| [1700001](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700001-notification-disabled) | Notification is not enabled. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [1700002](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700002-too-many-reminders) | The number of reminders exceeds the limit. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter is not valid parameter. |
+| [1700001](../errorcode-reminderAgentManager.md#1700001-notification-disabled) | Notification is not enabled. |
+| [1700002](../errorcode-reminderAgentManager.md#1700002-too-many-reminders) | The number of reminders exceeds the limit. |
 
 **Examples**
 
@@ -65,7 +69,11 @@ reminderAgentManager.publishReminder(timer, (err: BusinessError, reminderId: num
 function publishReminder(reminderReq: ReminderRequest): Promise<int>
 ```
 
-Publishes a reminder. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after the &gt; [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md) &gt; permission is obtained. &gt;
+Publishes a reminder. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after the &gt; [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md) &gt; permission is obtained. &gt;
 
 **Since:** 23
 
@@ -91,10 +99,10 @@ Publishes a reminder. This API uses a promise to return the result. &gt; **NOTE�
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter is not valid parameter. |
-| [1700001](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700001-notification-disabled) | Notification is not enabled. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [1700002](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700002-too-many-reminders) | The number of reminders exceeds the limit. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter is not valid parameter. |
+| [1700001](../errorcode-reminderAgentManager.md#1700001-notification-disabled) | Notification is not enabled. |
+| [1700002](../errorcode-reminderAgentManager.md#1700002-too-many-reminders) | The number of reminders exceeds the limit. |
 
 **Examples**
 

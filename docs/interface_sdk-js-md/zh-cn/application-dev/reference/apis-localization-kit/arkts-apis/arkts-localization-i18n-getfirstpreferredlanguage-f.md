@@ -18,7 +18,7 @@ export function getFirstPreferredLanguage(): string
 
 **废弃版本：** 9
 
-**替代接口：** [getFirstPreferredLanguage](arkts-localization-i18n-system-c.md#getfirstpreferredlanguage)
+**替代接口：** [getFirstPreferredLanguage](../../apis-default/arkts-apis/arkts-i18n-system-c.md#getfirstpreferredlanguage)
 
 <!--Device-i18n-export function getFirstPreferredLanguage(): string--><!--Device-i18n-export function getFirstPreferredLanguage(): string-End-->
 

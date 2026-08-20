@@ -24,7 +24,7 @@ function unregisterThermalLevelCallback(callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，用来执行取消热档位变化回调后的资源回收等操作，无返回值。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 回调函数，用来执行取消热档位变化回调后的资源回收等操作，无返回值。 |
 
 **错误码：**
 

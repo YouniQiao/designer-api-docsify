@@ -37,7 +37,7 @@ $_iterator(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
 
 **示例**
 
@@ -88,7 +88,7 @@ while(!temp.done) {
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 返回一个迭代器，遍历该迭代器可依次获取ArrayList中的每个元素。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个迭代器，遍历该迭代器可依次获取ArrayList中的每个元素。 |
 
 **错误码：**
 
@@ -792,8 +792,8 @@ insert(element: T, index: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The insert method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The insert method cannot be bound. |
 
 **示例**
 
@@ -965,8 +965,8 @@ removeByIndex(index: int): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The removeByIndex method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "index" is out of range. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The removeByIndex method cannot be bound. |
 
 **示例**
 
@@ -1023,8 +1023,8 @@ removeByRange(fromIndex: int, toIndex: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The removeByRange method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of fromIndex or toIndex is out of range. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The removeByRange method cannot be bound. |
 
 **示例**
 
@@ -1233,8 +1233,8 @@ subArrayList(fromIndex: int, toIndex: int): ArrayList<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The subArrayList method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of fromIndex or toIndex is out of range. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The subArrayList method cannot be bound. |
 
 **示例**
 

@@ -1,6 +1,8 @@
 # AudioManager
 
-This interface implements audio volume and device management. Before calling any API in AudioManager, you must use [getAudioManager](arkts-audio-audio-getaudiomanager-f.md) to obtain an AudioManager instance.
+This interface implements audio volume and device management.
+
+Before calling any API in AudioManager, you must use [getAudioManager](arkts-audio-audio-getaudiomanager-f.md) to obtain an AudioManager instance.
 
 **Since:** 23
 
@@ -793,7 +795,7 @@ Mutes a volume type. This method uses an asynchronous callback to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [AVVolumePanel](../../apis-na/arkts-apis/arkts-na-multimedia-avvolumepanel-avvolumepanel-s.md)
+**Substitutes:** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
 
 <!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>): void--><!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -819,7 +821,7 @@ Mutes a volume type. This method uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [AVVolumePanel](../../apis-na/arkts-apis/arkts-na-multimedia-avvolumepanel-avvolumepanel-s.md)
+**Substitutes:** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
 
 <!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>--><!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>-End-->
 
@@ -1002,7 +1004,9 @@ Subscribes to the event indicating that the connection status of an audio device
 on(type: 'interrupt', interrupt: AudioInterrupt, callback: Callback<InterruptAction>): void
 ```
 
-Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result. Same as [on('audioInterrupt')](arkts-audio-audio-audiorenderer-i.md#onaudiointerrupt) , this API is used to listen for focus changes. However, this API is used in scenarios without audio streams (no AudioRenderer instance is created), such as frequency modulation (FM) and voice wakeup.
+Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result.
+
+Same as [on('audioInterrupt')](arkts-audio-audio-audiorenderer-i.md#onaudiointerrupt) , this API is used to listen for focus changes. However, this API is used in scenarios without audio streams (no AudioRenderer instance is created), such as frequency modulation (FM) and voice wakeup.
 
 **Since:** 7
 
@@ -1258,7 +1262,7 @@ Sets the volume for a volume type. This method uses an asynchronous callback to 
 
 **Deprecated since:** 9
 
-**Substitutes:** [AVVolumePanel](../../apis-na/arkts-apis/arkts-na-multimedia-avvolumepanel-avvolumepanel-s.md)
+**Substitutes:** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
 
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -1286,7 +1290,7 @@ Sets the volume for a volume type. This method uses a promise to return the resu
 
 **Deprecated since:** 9
 
-**Substitutes:** [AVVolumePanel](../../apis-na/arkts-apis/arkts-na-multimedia-avvolumepanel-avvolumepanel-s.md)
+**Substitutes:** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
 
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
 

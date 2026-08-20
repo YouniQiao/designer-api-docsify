@@ -1,4 +1,4 @@
-# WithEnvInterface(定义WithEnv组件，允许为子组件设置环境属性。)
+# WithEnvInterface
 
 ```TypeScript
 export declare type WithEnvInterface = () => WithEnvAttribute

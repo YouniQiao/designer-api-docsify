@@ -23,7 +23,13 @@ import { cameraPicker } from '@kit.CameraKit';
 enableBandwidthCompression(enabled: boolean): void
 ```
 
-Enables preview bandwidth compression. Before enabling this feature, you can call [isBandwidthCompressionSupported](#isbandwidthcompressionsupported) to check whether the device supports preview bandwidth compression. &gt; **NOTE：**&gt; &gt; This function must be called prior to &gt; [Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig). Otherwise, the &gt; preview output stream format will be affected.
+Enables preview bandwidth compression.
+
+Before enabling this feature, you can call [isBandwidthCompressionSupported](#isbandwidthcompressionsupported) to check whether the device supports preview bandwidth compression.
+
+> **NOTE：**
+> 
+> This function must be called prior to &gt; [Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig). Otherwise, the &gt; preview output stream format will be affected.
 
 **Since:** 23
 
@@ -53,7 +59,9 @@ Enables preview bandwidth compression. Before enabling this feature, you can cal
 getActiveFrameRate(): FrameRateRange
 ```
 
-Obtains the configured frame rate range. This API is valid only after [setFrameRate](#setframerate) is called to set a frame rate range for preview streams.
+Obtains the configured frame rate range.
+
+This API is valid only after [setFrameRate](#setframerate) is called to set a frame rate range for preview streams.
 
 **Since:** 23
 
@@ -103,7 +111,9 @@ Obtains the profile that takes effect currently.
 getPreviewRotation(displayRotation?: int): ImageRotation
 ```
 
-Obtains the preview rotation angle. - Device' natural orientation: the default orientation for using a device. For example, the default orientation of the bar-type phone is in portrait mode, with the charging port facing downward. - Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode. Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation. - [Screen Rotation](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-multi-device-window-direction): indicates the clockwise rotation angle of the device screen.
+Obtains the preview rotation angle.
+
+- Device' natural orientation: the default orientation for using a device. For example, the default orientation of the bar-type phone is in portrait mode, with the charging port facing downward. - Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode. Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation. - [Screen Rotation](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-multi-device-window-direction): indicates the clockwise rotation angle of the device screen.
 
 **Since:** 23
 
@@ -397,7 +407,11 @@ Subscribes frame start event callback.
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to PreviewOutput error events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to PreviewOutput error events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
@@ -420,7 +434,11 @@ Subscribes to PreviewOutput error events. This API uses an asynchronous callback
 on(type: 'frameEnd', callback: AsyncCallback<void>): void
 ```
 
-Subscribes to preview frame end events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to preview frame end events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
@@ -443,7 +461,11 @@ Subscribes to preview frame end events. This API uses an asynchronous callback t
 on(type: 'frameStart', callback: AsyncCallback<void>): void
 ```
 
-Subscribes to preview frame start events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to preview frame start events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
@@ -466,7 +488,13 @@ Subscribes to preview frame start events. This API uses an asynchronous callback
 setFrameRate(minFps: int, maxFps: int): void
 ```
 
-Sets a frame rate range for preview streams. The range must be within the supported frame rate range, which can be obtained by calling [getSupportedFrameRates](#getsupportedframerates). &gt; **NOTE：**&gt; &gt; This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md) or &gt; [VideoSession](arkts-camera-camera-videosession-i.md) mode.
+Sets a frame rate range for preview streams. The range must be within the supported frame rate range,
+
+which can be obtained by calling [getSupportedFrameRates](#getsupportedframerates).
+
+> **NOTE：**
+> 
+> This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md) or &gt; [VideoSession](arkts-camera-camera-videosession-i.md) mode.
 
 **Since:** 23
 

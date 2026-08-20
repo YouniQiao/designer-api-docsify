@@ -12,7 +12,11 @@ import { storageStatistics } from '@kit.CoreFileKit';
 function setExtBundleStats(userId: int, stats: ExtBundleStats): Promise<void>
 ```
 
-Reports the space usage of system applications or system services. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; If the value of **flag** in **stats** is **false**, the value of **businessName** must be the bundle name of an &gt; application.
+Reports the space usage of system applications or system services. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> If the value of **flag** in **stats** is **false**, the value of **businessName** must be the bundle name of an &gt; application.
 
 **Since:** 23
 
@@ -43,11 +47,11 @@ Reports the space usage of system applications or system services. This API uses
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13600011 | Failed to report the specified business space usage. |
-| 13600010 | The input parameter is invalid. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600001 | IPC error. |
+| 13600010 | The input parameter is invalid. |
+| 13600011 | Failed to report the specified business space usage. |
 
 **Examples**
 

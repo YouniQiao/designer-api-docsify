@@ -1,6 +1,10 @@
 # UserAuthIcon
 
-The **userAuthIcon** module is a UI component module of the OpenHarmony user identity and access management (UserIAM) system. It provides an out-of-the-box authentication icon component (**UserAuthIcon**). This component is used to display the face or fingerprint authentication icon in the application UI. It supports custom icon colors and sizes, and tapping the icon launches the system authentication dialog box component. This module applies to the following scenarios: - Quickly integrating the face or fingerprint authentication entry into the application UI. - Displaying biometric authentication icons in a unified style. - Tapping the icon to trigger the system-level authentication process.
+The **userAuthIcon** module is a UI component module of the OpenHarmony user identity and access management (UserIAM) system. It provides an out-of-the-box authentication icon component (**UserAuthIcon**). This component is used to display the face or fingerprint authentication icon in the application UI. It supports custom icon colors and sizes, and tapping the icon launches the system authentication dialog box component.
+
+This module applies to the following scenarios:
+
+- Quickly integrating the face or fingerprint authentication entry into the application UI. - Displaying biometric authentication icons in a unified style. - Tapping the icon to trigger the system-level authentication process.
 
 **Since:** 12
 
@@ -78,7 +82,9 @@ Icon height, with an aspect ratio of 1:1. Percentage strings are not supported. 
 onAuthResult: (result: userAuth.UserAuthResult) => void
 ```
 
-Result callback. This callback is triggered after a user completes authentication. The callback parameters include the authentication result code (**result**), authentication token (**token**), and authentication type ( **authType**). Your application needs to process the authentication result in this callback. For example, if the authentication is successful, your application can obtain the token for subsequent security operations. If the authentication fails, your application can prompt the user to try again. Note:The application must request the **ohos.permission.ACCESS_BIOMETRIC** permission. Otherwise, it will only display the icon and cannot start the authentication component.
+Result callback. This callback is triggered after a user completes authentication. The callback parameters include the authentication result code (**result**), authentication token (**token**), and authentication type ( **authType**). Your application needs to process the authentication result in this callback. For example, if the authentication is successful, your application can obtain the token for subsequent security operations. If the authentication fails, your application can prompt the user to try again.
+
+Note:The application must request the **ohos.permission.ACCESS_BIOMETRIC** permission. Otherwise, it will only display the icon and cannot start the authentication component.
 
 **Type:** (result: userAuth.UserAuthResult) =&gt; void
 

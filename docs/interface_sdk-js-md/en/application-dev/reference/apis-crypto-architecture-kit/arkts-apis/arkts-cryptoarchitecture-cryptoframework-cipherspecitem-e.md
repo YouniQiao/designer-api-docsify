@@ -1,6 +1,8 @@
 # CipherSpecItem
 
-Enumerates encryption and decryption parameters, which can be set by using [setCipherSpec](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#setcipherspec) and obtained by using [getCipherSpec](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#getcipherspec). <br>Currently, only RSA and SM2 are supported. For details, see Asymmetric Key Encryption and Decryption Algorithm Specifications .
+Enumerates encryption and decryption parameters, which can be set by using [setCipherSpec](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#setcipherspec) and obtained by using [getCipherSpec](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#getcipherspec).
+
+<br>Currently, only RSA and SM2 are supported. For details, see Asymmetric Key Encryption and Decryption Algorithm Specifications .
 
 **Since:** 23
 
@@ -70,7 +72,7 @@ Message digest algorithm for the MGF1 mask generation used with the PKCS1_OAEP p
 OAEP_MGF1_PSRC_UINT8ARR = 103
 ```
 
-**pSource** byte stream used with the PKCS1_OAEP padding mode in RSA.
+*pSource** byte stream used with the PKCS1_OAEP padding mode in RSA.
 
 **Since:** 23
 

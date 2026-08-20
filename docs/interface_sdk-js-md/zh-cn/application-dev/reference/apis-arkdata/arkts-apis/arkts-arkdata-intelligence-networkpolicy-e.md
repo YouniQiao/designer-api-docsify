@@ -1,4 +1,4 @@
-# NetworkPolicy(智慧数据平台)
+# NetworkPolicy
 
 下载云侧模型的网络策略枚举。
 

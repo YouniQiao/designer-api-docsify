@@ -2,6 +2,8 @@
 
 Describes the radio access technology.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-radio-export enum RadioTechnology--><!--Device-radio-export enum RadioTechnology-End-->

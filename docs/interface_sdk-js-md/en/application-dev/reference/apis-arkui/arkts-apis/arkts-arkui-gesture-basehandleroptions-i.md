@@ -1,6 +1,6 @@
 # BaseHandlerOptions
 
-Defines the BaseHandlerOptions options.
+Defines the BaseHandlerOptions options. @interface BaseHandlerOptions
 
 **Since:** 23
 

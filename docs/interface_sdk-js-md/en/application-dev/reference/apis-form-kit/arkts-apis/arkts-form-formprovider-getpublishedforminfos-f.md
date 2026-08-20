@@ -12,7 +12,11 @@ import { formProvider } from '@kit.FormKit';
 function getPublishedFormInfos(): Promise<Array<formInfo.FormInfo>>
 ```
 
-Obtains the information of all widgets that have been added to the home screen on the device. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This field is supported since API version 18 and deprecated since API version 20. You are advised to use &gt; [getPublishedRunningFormInfos](arkts-form-formprovider-getpublishedrunningforminfos-f.md) instead.
+Obtains the information of all widgets that have been added to the home screen on the device. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This field is supported since API version 18 and deprecated since API version 20. You are advised to use &gt; [getPublishedRunningFormInfos](arkts-form-formprovider-getpublishedrunningforminfos-f.md) instead.
 
 **Since:** 18
 
@@ -36,9 +40,9 @@ Obtains the information of all widgets that have been added to the home screen o
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
 **Examples**
 

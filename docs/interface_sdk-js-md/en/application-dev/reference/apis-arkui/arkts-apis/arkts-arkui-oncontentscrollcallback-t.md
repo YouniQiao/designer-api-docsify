@@ -1,18 +1,16 @@
 # OnContentScrollCallback
 
 ```TypeScript
-export type OnContentScrollCallback = (totalOffsetX: double, totalOffsetY: double) => void
+declare type OnContentScrollCallback = (totalOffsetX: number, totalOffsetY: number) => void
 ```
 
-Defines a TextInput callback when onContentScroll. Anonymous Object Rectification.
+Called when the text content is scrolled.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export type OnContentScrollCallback = (totalOffsetX: double, totalOffsetY: double) => void--><!--Device-unnamed-export type OnContentScrollCallback = (totalOffsetX: double, totalOffsetY: double) => void-End-->
+<!--Device-unnamed-declare type OnContentScrollCallback = (totalOffsetX: number, totalOffsetY: number) => void--><!--Device-unnamed-declare type OnContentScrollCallback = (totalOffsetX: number, totalOffsetY: number) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,6 +18,6 @@ Defines a TextInput callback when onContentScroll. Anonymous Object Rectificatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| totalOffsetX | double | Yes | The text is offset in px on the horizontal axis of the content area. |
-| totalOffsetY | double | Yes | The text is offset in px on the vertical axis of the content area. |
+| totalOffsetX | number | Yes | Offset of the horizontal coordinate of the upper left corner of the text relative to the horizontal coordinate of the upper left corner of the entire content input area. |
+| totalOffsetY | number | Yes | Offset of the vertical coordinate of the upper left corner of the text relative to the vertical coordinate of the upper left corner of the entire content input area. |
 

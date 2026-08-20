@@ -12,7 +12,11 @@ import { applicationManager } from '@kit.MDMKit';
 function setKioskFeatures(admin: Want, features: Array<KioskFeature>): void
 ```
 
-Sets the features of the kiosk mode. You can use this API to control whether the notification center and control panel can be accessed in kiosk mode. Since API version 24, you can set whether to allow users to swipe up from the bottom to access the recent taskbar and swipe left or right to display the side dock. In non-kiosk mode, this API can be called normally but does not take effect. The settings will take effect after kiosk mode is enabled.
+Sets the features of the kiosk mode. You can use this API to control whether the notification center and control panel can be accessed in kiosk mode.
+
+Since API version 24, you can set whether to allow users to swipe up from the bottom to access the recent taskbar and swipe left or right to display the side dock.
+
+In non-kiosk mode, this API can be called normally but does not take effect. The settings will take effect after kiosk mode is enabled.
 
 **Since:** 20
 
@@ -35,10 +39,10 @@ Sets the features of the kiosk mode. You can use this API to control whether the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 
 **Examples**
 

@@ -52,19 +52,14 @@ PasteButton(options: PasteButtonOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [PasteButtonOptions](arkts-arkui-pastebuttonoptions-i.md) | 用于设置粘贴控件的图标、文本、按钮类型等属性。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [PasteButtonCallback](arkts-arkui-pastebuttoncallback-t.md) | 点击粘贴控件触发该回调。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [PasteButtonOnClickResult](arkts-arkui-pastebuttononclickresult-e.md) | 粘贴控件点击后的授权结果。 |
-| [PasteDescription](arkts-arkui-pastedescription-e.md) | 粘贴控件的文本描述。 |
-| [PasteIconStyle](arkts-arkui-pasteiconstyle-e.md) | 粘贴控件的图标风格。 |
 

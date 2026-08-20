@@ -1,6 +1,11 @@
 # DlpConnPlugin
 
-Registers the callback capability with the system ability (SA). This API is used in the **registerPlugin** API. &gt; **NOTE：**&gt; &gt; [registerPlugin](arkts-dataprotection-dlppermission-dlpconnmanager-c.md#registerplugin) requires identical parameters to this API. &gt; [connectServer](#connectserver) is called by the SA and the parameters are &gt; returned through the callback.
+Registers the callback capability with the system ability (SA). This API is used in the **registerPlugin** API.
+
+> **NOTE：**
+> 
+> [registerPlugin](arkts-dataprotection-dlppermission-dlpconnmanager-c.md#registerplugin) requires identical parameters to this API.
+> [connectServer](#connectserver) is called by the SA and the parameters are &gt; returned through the callback.
 
 **Since:** 21
 
@@ -20,7 +25,13 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 connectServer(requestId: string, requestData: string, callback: Callback<string>): void
 ```
 
-This API is called by the SA. After the request of connecting to the cloud server is processed, the result is returned the SA using a callback. This API can be used in enterprise account authentication and cloud permission verification to enable communication between the SA and the cloud server. &gt; **NOTE：**&gt; &gt; **connectServer** indicates a call from the system capability side to the frontend.
+This API is called by the SA. After the request of connecting to the cloud server is processed, the result is returned the SA using a callback.
+
+This API can be used in enterprise account authentication and cloud permission verification to enable communication between the SA and the cloud server.
+
+> **NOTE：**
+> 
+> **connectServer** indicates a call from the system capability side to the frontend.
 
 **Since:** 21
 
@@ -44,7 +55,7 @@ This API is called by the SA. After the request of connecting to the cloud serve
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

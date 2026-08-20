@@ -22,7 +22,7 @@ context: UIAbilityContext | UIContext
 
 Context information corresponding to **Navigation** component that triggers page switching.
 
-**Type:** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
+**Type:** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)
 
 **Since:** 12
 
@@ -42,7 +42,7 @@ from: NavDestinationInfo | NavBar
 
 Source page for page switching.
 
-**Type:** NavDestinationInfo \| [NavBar](../../apis-na/arkts-apis/arkts-na-navbar-t.md)
+**Type:** NavDestinationInfo \| [NavBar](../../apis-default/arkts-components/arkts-navbar-t.md)
 
 **Since:** 12
 
@@ -62,7 +62,7 @@ operation: NavigationOperation
 
 Page switching operation type.
 
-**Type:** [NavigationOperation](../../apis-na/arkts-apis/arkts-na-navigation-navigationoperation-e.md)
+**Type:** [NavigationOperation](../../apis-default/arkts-components/arkts-navigation-navigationoperation-e.md)
 
 **Since:** 12
 
@@ -82,7 +82,7 @@ to: NavDestinationInfo | NavBar
 
 Destination page for page switching.
 
-**Type:** NavDestinationInfo \| [NavBar](../../apis-na/arkts-apis/arkts-na-navbar-t.md)
+**Type:** NavDestinationInfo \| [NavBar](../../apis-default/arkts-components/arkts-navbar-t.md)
 
 **Since:** 12
 

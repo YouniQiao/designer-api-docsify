@@ -8,10 +8,21 @@ import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@k
 
 ## 汇总
 
+### 函数
+
+| 名称 | 说明 |
+| --- | --- |
+| [ArcList](arkts-arkui-arkui-arclist-arclist-f.md) | 创建弧形列表实例，传入弧形列表配置项参数。 |
+| [ArcList](arkts-arkui-arkui-arclist-arclist-f.md) | 定义ArcList组件。 |
+| [ArcListItem](arkts-arkui-arkui-arclist-arclistitem-f.md) | 创建弧形列表子组件。 |
+| [ArcListItem](arkts-arkui-arkui-arclist-arclistitem-f.md) | 定义ArcListItem组件。 |
+
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) | 除支持通用属性外，还支持以下属性： |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md) | 除支持通用属性外，还支持以下属性： |
 | [ArkListOptions](arkts-arkui-arkui-arclist-arklistoptions-i.md) | 包含创建ArcList组件的基础参数。 |
 
 ### 类型

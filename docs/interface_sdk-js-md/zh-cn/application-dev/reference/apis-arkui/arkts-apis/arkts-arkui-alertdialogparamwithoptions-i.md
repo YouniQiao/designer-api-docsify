@@ -1,4 +1,4 @@
-# AlertDialogParamWithOptions(AlertDialog)
+# AlertDialogParamWithOptions
 
 继承自[AlertDialogParam](arkts-arkui-alertdialogparam-i.md)。
 

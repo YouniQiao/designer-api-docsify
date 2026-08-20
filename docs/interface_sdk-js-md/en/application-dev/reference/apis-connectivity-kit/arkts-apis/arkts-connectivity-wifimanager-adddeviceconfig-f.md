@@ -39,9 +39,9 @@ Add Wi-Fi connection configuration to the device. The configuration will be upda
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 | [2501001](../errorcode-wifi.md#2501001-sta-disabled) | Wi-Fi STA disabled. |
 
@@ -94,9 +94,9 @@ Add Wi-Fi connection configuration to the device. The configuration will be upda
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 | [2501001](../errorcode-wifi.md#2501001-sta-disabled) | Wi-Fi STA disabled. |
 

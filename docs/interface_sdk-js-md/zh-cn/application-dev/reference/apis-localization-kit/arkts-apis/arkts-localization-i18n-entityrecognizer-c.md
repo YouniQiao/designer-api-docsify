@@ -83,7 +83,7 @@ findEntityInfo(text: string): Array<EntityInfoItem>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[EntityInfoItem](arkts-localization-i18n-entityinfoitem-i.md)&gt; | 文本中的实体信息列表。 |
+| Array&lt;[EntityInfoItem](../../apis-default/arkts-apis/arkts-i18n-entityinfoitem-i.md)&gt; | 文本中的实体信息列表。 |
 
 **错误码：**
 

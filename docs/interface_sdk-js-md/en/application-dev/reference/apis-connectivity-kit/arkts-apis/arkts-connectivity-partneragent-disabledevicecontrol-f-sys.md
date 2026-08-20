@@ -42,9 +42,9 @@ Disables device control for a bound device.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [34900001](../errorcode-fusionConnectivity.md#34900001-device-not-registered) | The device is not bound. |
 | [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) | Internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 

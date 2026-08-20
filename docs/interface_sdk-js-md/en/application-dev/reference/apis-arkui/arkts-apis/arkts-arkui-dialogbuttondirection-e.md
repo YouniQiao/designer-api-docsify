@@ -1,4 +1,4 @@
-# DialogButtonDirection(AlertDialog)
+# DialogButtonDirection
 
 Enumerates the alignment modes of the buttons in the alert dialog box.
 

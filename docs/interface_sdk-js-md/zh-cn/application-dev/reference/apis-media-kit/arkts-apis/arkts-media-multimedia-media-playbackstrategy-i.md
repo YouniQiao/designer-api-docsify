@@ -90,7 +90,9 @@ Audio language.
 preferredBufferDuration?: int
 ```
 
-Chooses a preferred buffer duration. &lt;p&gt;The preferred buffer duration in the playback policy, is used to set the buffer size. For details, see Online Video Frame Freezing Optimization Practice.&lt;/p&gt;
+Chooses a preferred buffer duration.
+
+&lt;p&gt;The preferred buffer duration in the playback policy, is used to set the buffer size. For details, see Online Video Frame Freezing Optimization Practice.&lt;/p&gt;
 
 **类型：** int
 

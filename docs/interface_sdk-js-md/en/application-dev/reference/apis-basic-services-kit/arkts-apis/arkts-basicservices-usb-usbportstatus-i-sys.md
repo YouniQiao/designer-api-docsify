@@ -1,4 +1,4 @@
-# USBPortStatus(USB Manager) (System API)
+# USBPortStatus (System API)
 
 Enumerates USB port roles.
 

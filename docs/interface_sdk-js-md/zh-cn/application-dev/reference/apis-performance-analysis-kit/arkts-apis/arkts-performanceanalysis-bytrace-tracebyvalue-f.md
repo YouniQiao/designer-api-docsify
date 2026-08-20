@@ -11,7 +11,11 @@
 function traceByValue(name: string, count: number): void
 ```
 
-标记预追踪耗时任务的数值变量，该变量的数值会不断变化。traceByValue可独立使用，用于记录某个数值变量的变化轨迹。 &gt; **说明：** &gt; &gt; - 从API version 7开始支持，从API version 8开始废弃。
+标记预追踪耗时任务的数值变量，该变量的数值会不断变化。traceByValue可独立使用，用于记录某个数值变量的变化轨迹。
+
+> **说明：**
+> 
+> - 从API version 7开始支持，从API version 8开始废弃。
 
 **起始版本：** 7
 

@@ -1,4 +1,4 @@
-# USBPortStatus(USB Manager)（系统接口）
+# USBPortStatus（系统接口）
 
 USB设备端口角色信息。
 

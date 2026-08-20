@@ -1,4 +1,4 @@
-# DeviceEncryptionStatus(安全管理)（系统接口）
+# DeviceEncryptionStatus（系统接口）
 
 设备管理应用的文件系统加密状态。
 

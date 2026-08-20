@@ -14,7 +14,11 @@ Defines the key information about an image or video file.
 URI = 'uri'
 ```
 
-URI of the file. **Note：**: Only the [DataSharePredicates.equalTo](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md#equalto) predicate can be used for this field during photo query.
+URI of the file.
+
+**Note：**:
+
+Only the [DataSharePredicates.equalTo](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md#equalto) predicate can be used for this field during photo query.
 
 **Since:** 23
 
@@ -46,7 +50,9 @@ Type of the file.
 DISPLAY_NAME = 'display_name'
 ```
 
-File name displayed. The file name must meet the following requirements: - A valid file name must include a base name and a supported image or video extension. - The file name length ranges from 1 to 255. - The base name must not contain any invalid characters, which are:.. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+File name displayed. The file name must meet the following requirements:
+
+- A valid file name must include a base name and a supported image or video extension. - The file name length ranges from 1 to 255. - The base name must not contain any invalid characters, which are:.. \ / : ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 23
 
@@ -222,7 +228,11 @@ Title of the file.
 DATE_ADDED_MS = 'date_added_ms'
 ```
 
-Unix timestamp when the file was created, in milliseconds. **Note：**: The photos queried cannot be sorted based on this field.
+Unix timestamp when the file was created, in milliseconds.
+
+**Note：**:
+
+The photos queried cannot be sorted based on this field.
 
 **Since:** 23
 
@@ -238,7 +248,11 @@ Unix timestamp when the file was created, in milliseconds. **Note：**: The phot
 DATE_MODIFIED_MS = 'date_modified_ms'
 ```
 
-Unix timestamp when the file was modified, in milliseconds. This value is updated when the file content is modified, but not when the file name is modified. **Note：**: The photos queried cannot be sorted based on this field.
+Unix timestamp when the file was modified, in milliseconds. This value is updated when the file content is modified, but not when the file name is modified.
+
+**Note：**:
+
+The photos queried cannot be sorted based on this field.
 
 **Since:** 23
 

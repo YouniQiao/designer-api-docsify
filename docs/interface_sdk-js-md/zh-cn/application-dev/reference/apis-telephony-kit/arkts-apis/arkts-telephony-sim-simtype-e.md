@@ -2,6 +2,8 @@
 
 Indicates the SIM card type.
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-sim-export enum SimType--><!--Device-sim-export enum SimType-End-->

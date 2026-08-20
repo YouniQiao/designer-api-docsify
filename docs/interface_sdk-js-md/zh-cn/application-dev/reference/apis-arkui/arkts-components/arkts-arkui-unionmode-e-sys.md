@@ -34,7 +34,11 @@ SMOOTH_UNION = 0
 GRAVITY_UNION = 1
 ```
 
-引力作用下的融合形变效果。 **说明：** 设置该类型时，需要结合 useUnionEffect并设置 GravityCenterOptions的gravityCenter为true才能生效。
+引力作用下的融合形变效果。
+
+**说明：**
+
+设置该类型时，需要结合 useUnionEffect并设置 GravityCenterOptions的gravityCenter为true才能生效。
 
 **起始版本：** 26.0.0
 

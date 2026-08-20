@@ -1,4 +1,4 @@
-# StatusInfoResult(设置数据防泄漏入口)（系统接口）
+# StatusInfoResult（系统接口）
 
 DLP特性开关状态设置的结果信息。
 

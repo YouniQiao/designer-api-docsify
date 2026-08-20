@@ -48,8 +48,8 @@ addRoute(routes: RouteInfo[], vpnId?: string): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) | Invalid parameter value. |
-| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
 | [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Operation failed. Cannot connect to service. |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
 
 ## create
 
@@ -57,7 +57,11 @@ addRoute(routes: RouteInfo[], vpnId?: string): Promise<void>
 create(config: VpnConfig): Promise<int>
 ```
 
-使用config创建一个VPN网络。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 建议在不需要VPN网络的时候配对调用[destroy()](#destroy)或 &gt; [destroy(vpnId: string)](#destroy)接口销毁启动的VPN网络，并执行资源清理等操作。
+使用config创建一个VPN网络。使用Promise异步回调。
+
+> **说明：**
+> 
+> 建议在不需要VPN网络的时候配对调用[destroy()](#destroy)或 &gt; [destroy(vpnId: string)](#destroy)接口销毁启动的VPN网络，并执行资源清理等操作。
 
 **起始版本：** 11
 
@@ -81,10 +85,10 @@ create(config: VpnConfig): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) | Invalid parameter value. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
+| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) | Invalid parameter value. |
 | [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Operation failed. Cannot connect to service. |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
 | [2203001](../errorcode-net-vpn.md#2203001-vpn创建失败) | VPN creation denied, please check the user type. |
 | [2203002](../errorcode-net-vpn.md#2203002-vpn已存在) | VPN exist already, please execute destroy first. |
 
@@ -201,8 +205,8 @@ delRoute(routes: RouteInfo[], vpnId?: string): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) | Invalid parameter value. |
-| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
 | [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Operation failed. Cannot connect to service. |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
 
 ## destroy
 
@@ -229,8 +233,8 @@ destroy(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
 | [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Operation failed. Cannot connect to service. |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
 
 **示例**
 
@@ -283,8 +287,8 @@ destroy(vpnId: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19900002](../errorcode-net-vpn.md#19900002-系统内部错误) | System internal error. |
 | [19900001](../errorcode-net-vpn.md#19900001-无效参数) | Invalid parameter value. |
+| [19900002](../errorcode-net-vpn.md#19900002-系统内部错误) | System internal error. |
 
 **示例**
 
@@ -313,7 +317,13 @@ export default class MyVpnExtAbility extends VpnExtensionAbility {
 generateVpnId(): Promise<string>
 ```
 
-生成VPN唯一标识。使用Promise异步回调。 如需使用系统多VPN能力，需调用该接口生成vpnId，配置到VpnConfig中。 &gt; **注意** &gt; &gt; 当前系统多VPN能力仅支持IPv4。
+生成VPN唯一标识。使用Promise异步回调。
+
+如需使用系统多VPN能力，需调用该接口生成vpnId，配置到VpnConfig中。
+
+> **注意**
+> 
+> 当前系统多VPN能力仅支持IPv4。
 
 **起始版本：** 20
 
@@ -331,8 +341,8 @@ generateVpnId(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19900002](../errorcode-net-vpn.md#19900002-系统内部错误) | System internal error. |
 | [19900001](../errorcode-net-vpn.md#19900001-无效参数) | Invalid parameter value. |
+| [19900002](../errorcode-net-vpn.md#19900002-系统内部错误) | System internal error. |
 
 **示例**
 
@@ -384,10 +394,10 @@ protect(socketFd: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) | Invalid parameter value. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
+| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) | Invalid parameter value. |
 | [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Operation failed. Cannot connect to service. |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
 | [2203004](../errorcode-net-vpn.md#2203004-无效描述符) | Invalid socket file descriptor. |
 
 **示例**

@@ -14,7 +14,11 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 declare function symlink(target: string, srcPath: string): Promise<void>
 ```
 
-Creates a symbolic link based on a file path. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; Since API version 11, this API cannot be used by third-party applications.
+Creates a symbolic link based on a file path. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> Since API version 11, this API cannot be used by third-party applications.
 
 **Since:** 9
 
@@ -39,20 +43,20 @@ Creates a symbolic link based on a file path. This API uses a promise to return 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900018 | Not a directory |
-| 13900030 | File name too long |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900005 | I/O error |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900015 | File exists |
-| 13900008 | Bad file descriptor |
+| 13900018 | Not a directory |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900030 | File name too long |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-| 13900011 | Out of memory |
 
 
 ## symlink
@@ -61,7 +65,11 @@ Creates a symbolic link based on a file path. This API uses a promise to return 
 declare function symlink(target: string, srcPath: string, callback: AsyncCallback<void>): void
 ```
 
-Creates a symbolic link based on the file path. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Since API version 11, this API cannot be used by third-party applications.
+Creates a symbolic link based on the file path. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Since API version 11, this API cannot be used by third-party applications.
 
 **Since:** 9
 
@@ -81,18 +89,18 @@ Creates a symbolic link based on the file path. This API uses an asynchronous ca
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900018 | Not a directory |
-| 13900030 | File name too long |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900005 | I/O error |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900015 | File exists |
-| 13900008 | Bad file descriptor |
+| 13900018 | Not a directory |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900030 | File name too long |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-| 13900011 | Out of memory |
 

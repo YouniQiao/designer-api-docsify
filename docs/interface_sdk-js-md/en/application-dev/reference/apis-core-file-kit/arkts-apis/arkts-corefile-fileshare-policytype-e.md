@@ -2,6 +2,8 @@
 
 Indicates the policy type of the path.
 
+@enum { int } policyType
+
 **Since:** 23
 
 <!--Device-fileShare-export enum PolicyType--><!--Device-fileShare-export enum PolicyType-End-->

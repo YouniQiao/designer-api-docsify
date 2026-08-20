@@ -12,7 +12,15 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 function setEventConfig(name: string, config: Record<string, ParamType>): Promise<void>
 ```
 
-事件相关的配置参数设置方法，使用Promise方式作为异步回调。在同一生命周期中，可以通过事件名称，设置事件相关的配置参数。 不同的事件有不同的配置项，目前仅支持以下事件： - MAIN_THREAD_JANK（参数配置详见 [主线程超时事件检测](../../../dfx/hiappevent-watcher-mainthreadjank-events.md#seteventconfig接口参数设置说明)） - APP_CRASH（参数配置详见[崩溃日志配置参数设置介绍](../../../dfx/hiappevent-watcher-crash-events.md#自定义规格设置)） - RESOURCE_OVERLIMIT（参数配置详见[资源泄漏事件检测](../../../dfx/hiappevent-watcher-resourceleak-events.md#自定义规格设置)） &gt; **说明：** &gt; &gt; 从API版本26.0.0开始，configEventPolicy已支持本接口所有设置，推荐使用[configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md)。
+事件相关的配置参数设置方法，使用Promise方式作为异步回调。在同一生命周期中，可以通过事件名称，设置事件相关的配置参数。
+
+不同的事件有不同的配置项，目前仅支持以下事件：
+
+- MAIN_THREAD_JANK（参数配置详见 [主线程超时事件检测](../../../dfx/hiappevent-watcher-mainthreadjank-events.md#seteventconfig接口参数设置说明)） - APP_CRASH（参数配置详见[崩溃日志配置参数设置介绍](../../../dfx/hiappevent-watcher-crash-events.md#自定义规格设置)） - RESOURCE_OVERLIMIT（参数配置详见[资源泄漏事件检测](../../../dfx/hiappevent-watcher-resourceleak-events.md#自定义规格设置)）
+
+> **说明：**
+> 
+> 从API版本26.0.0开始，configEventPolicy已支持本接口所有设置，推荐使用[configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md)。
 
 **起始版本：** 23
 
@@ -27,7 +35,7 @@ function setEventConfig(name: string, config: Record<string, ParamType>): Promis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 事件名称。 |
-| config | Record&lt;string, [ParamType](arkts-performanceanalysis-hiappevent-paramtype-t.md)&gt; | 是 | 事件自定义参数对象。参数名和参数值规格定义如下： <br>- 参数名为string类型，要求非空，且参数名长度需在1024个字符以内。 <br>- 参数值为ParamType类型，参数值长度需在1024个字符以内。 |
+| config | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [ParamType](arkts-performanceanalysis-hiappevent-paramtype-t.md)&gt; | 是 | 事件自定义参数对象。参数名和参数值规格定义如下： <br>- 参数名为string类型，要求非空，且参数名长度需在1024个字符以内。 <br>- 参数值为ParamType类型，参数值长度需在1024个字符以内。 |
 
 **返回值：**
 

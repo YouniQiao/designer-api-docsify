@@ -1,4 +1,4 @@
-# HuksExternalPinAuthState(External Key Management)
+# HuksExternalPinAuthState
 
 枚举PIN认证的状态
 

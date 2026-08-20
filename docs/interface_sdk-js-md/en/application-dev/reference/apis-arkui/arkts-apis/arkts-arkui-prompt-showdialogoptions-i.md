@@ -2,11 +2,13 @@
 
 Defines the option of show dialog.
 
+@interface ShowDialogOptions
+
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [ShowDialogOptions](../../apis-na/arkts-apis/arkts-na-promptaction-showdialogoptions-i.md)
+**Substitutes:** [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md)
 
 <!--Device-prompt-interface ShowDialogOptions--><!--Device-prompt-interface ShowDialogOptions-End-->
 
@@ -33,7 +35,7 @@ Array of buttons in the dialog box. The array structure is {text:'button', color
 
 **Deprecated since:** 9
 
-**Substitutes:** [buttons](../../apis-na/arkts-apis/arkts-na-promptaction-showdialogoptions-i.md#buttons)
+**Substitutes:** [buttons](arkts-arkui-promptaction-showdialogoptions-i.md#buttons)
 
 <!--Device-ShowDialogOptions-buttons?: [Button, Button?, Button?]--><!--Device-ShowDialogOptions-buttons?: [Button, Button?, Button?]-End-->
 
@@ -53,7 +55,7 @@ Text body.
 
 **Deprecated since:** 9
 
-**Substitutes:** [message](../../apis-na/arkts-apis/arkts-na-promptaction-showdialogoptions-i.md#message)
+**Substitutes:** [message](arkts-arkui-promptaction-showdialogoptions-i.md#message)
 
 <!--Device-ShowDialogOptions-message?: string--><!--Device-ShowDialogOptions-message?: string-End-->
 
@@ -73,7 +75,7 @@ Title of the text to display.
 
 **Deprecated since:** 9
 
-**Substitutes:** [title](../../apis-na/arkts-apis/arkts-na-promptaction-showdialogoptions-i.md#title)
+**Substitutes:** [title](arkts-arkui-promptaction-showdialogoptions-i.md#title)
 
 <!--Device-ShowDialogOptions-title?: string--><!--Device-ShowDialogOptions-title?: string-End-->
 

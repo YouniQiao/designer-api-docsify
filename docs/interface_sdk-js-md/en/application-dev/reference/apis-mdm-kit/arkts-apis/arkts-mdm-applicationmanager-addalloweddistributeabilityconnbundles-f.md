@@ -12,7 +12,16 @@ import { applicationManager } from '@kit.MDMKit';
 function addAllowedDistributeAbilityConnBundles(admin: Want, appIdentifiers: Array<string>, serviceType: ServiceType, accountId: number): void
 ```
 
-Adds the cross-device application trustlist for a specific distributed service for a specified user. Applications in the trustlist can use the specific distributed service to transfer data across devices without being subject to the restrictions imposed by [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md). Currently, the following distributed service type is supported: [collaboration service](arkts-mdm-applicationmanager-servicetype-e.md). &gt; **NOTE：**&gt; &gt; 1. Before calling this API to set the application list allowed to use a specific distributed service, you must &gt; have already disabled one-way data transmission between devices (which is used for transferring data to other &gt; devices) via &gt; [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md). &gt; Otherwise, error code 9201043 is thrown. &gt; 2. When one-way data transmission between devices is re-enabled, the application list allowed to use the specific &gt; distributed service that was set via this API is automatically cleared.
+Adds the cross-device application trustlist for a specific distributed service for a specified user. Applications in the trustlist can use the specific distributed service to transfer data across devices without being subject to the restrictions imposed by [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md).
+
+Currently, the following distributed service type is supported: [collaboration service](arkts-mdm-applicationmanager-servicetype-e.md).
+
+> **NOTE：**
+> 
+> 1. Before calling this API to set the application list allowed to use a specific distributed service, you must &gt; have already disabled one-way data transmission between devices (which is used for transferring data to other &gt; devices) via &gt; [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md).
+> Otherwise, error code 9201043 is thrown.
+
+> 2. When one-way data transmission between devices is re-enabled, the application list allowed to use the specific &gt; distributed service that was set via this API is automatically cleared.
 
 **Since:** 26.0.0
 
@@ -37,9 +46,9 @@ Adds the cross-device application trustlist for a specific distributed service f
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
 | [9201043](../errorcode-enterpriseDeviceManager.md#9201043-prerequisites-for-calling-the-api-not-met) | Prerequisites for the API call have not been satisfied. For example, distributed outgoing transmission is not disallowed before adding the distributed bidirectional collaboration trustlist. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 

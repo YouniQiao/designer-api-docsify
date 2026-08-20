@@ -2,6 +2,8 @@
 
 HorizontalAlign enumeration description.
 
+@enum { number }
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare enum HorizontalAlign--><!--Device-unnamed-declare enum HorizontalAlign-End-->

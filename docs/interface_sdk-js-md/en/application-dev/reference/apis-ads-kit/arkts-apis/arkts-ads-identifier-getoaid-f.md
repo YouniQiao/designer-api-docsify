@@ -12,7 +12,11 @@ import { identifier } from '@kit.AdsKit';
 function getOAID(callback: AsyncCallback<string>): void
 ```
 
-Obtains the OAID. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; The setting item of cross-app association access permission was named app tracking access permission &gt; in HarmonyOS NEXT Developer Beta5 and earlier versions.
+Obtains the OAID. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> The setting item of cross-app association access permission was named app tracking access permission &gt; in HarmonyOS NEXT Developer Beta5 and earlier versions.
 
 **Since:** 10
 
@@ -55,7 +59,11 @@ identifier.getOAID((err: BusinessError, data: string) => {
 function getOAID(): Promise<string>
 ```
 
-Obtains the OAID. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; The setting item of cross-app association access permission was named app tracking access permission &gt; in HarmonyOS NEXT Developer Beta5 and earlier versions.
+Obtains the OAID. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> The setting item of cross-app association access permission was named app tracking access permission &gt; in HarmonyOS NEXT Developer Beta5 and earlier versions.
 
 **Since:** 10
 

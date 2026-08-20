@@ -36,7 +36,7 @@ EditableSaveButtonV2的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [EditableSaveButtonV2Options](../../apis-na/arkts-apis/arkts-na-arkui-advanced-editabletitlebarv2-editablesavebuttonv2options-i.md) | 否 | 保存按钮配置选项。 |
+| options | [EditableSaveButtonV2Options](../../apis-default/arkts-apis/arkts-arkui-advanced-editabletitlebarv2-editablesavebuttonv2options-i.md) | 否 | 保存按钮配置选项。 |
 
 ## defaultFocus
 
@@ -45,7 +45,13 @@ EditableSaveButtonV2的构造函数。
   public defaultFocus: boolean
 ```
 
-是否默认获取焦点。 true：获焦。 false：不获焦。 默认值：false。
+是否默认获取焦点。
+
+true：获焦。
+
+false：不获焦。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -68,7 +74,13 @@ EditableSaveButtonV2的构造函数。
   public isRequired: boolean
 ```
 
-是否显示保存按钮。 true：显示保存按钮。 false：不显示保存按钮。 默认值：true。
+是否显示保存按钮。
+
+true：显示保存按钮。
+
+false：不显示保存按钮。
+
+默认值：true。
 
 **类型：** boolean
 
@@ -93,7 +105,7 @@ EditableSaveButtonV2的构造函数。
 
 点击保存按钮的回调函数。未设置时点击按钮无响应。
 
-**类型：** [OnActionCallback](../../apis-na/arkts-apis/arkts-na-onactioncallback-t.md)
+**类型：** [OnActionCallback](../../apis-default/arkts-apis/arkts-onactioncallback-t.md)
 
 **起始版本：** 26.0.0
 

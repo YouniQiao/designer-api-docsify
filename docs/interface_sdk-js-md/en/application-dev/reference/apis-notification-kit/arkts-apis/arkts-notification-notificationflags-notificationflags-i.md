@@ -1,4 +1,4 @@
-# NotificationFlags(Some states and flags for notifications)
+# NotificationFlags
 
 Defines the notification flags.
 
@@ -48,6 +48,8 @@ soundEnabled?: NotificationFlagStatus
 
 Settings of sound for the notification. The default value is **TYPE_NONE**. This parameter becomes writable starting from API version 23. Only TYPE_CLOSE takes effect.
 
+@readonly [since 8 - 22]
+
 **Type:** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e-sys.md)
 
 **Since:** 23
@@ -63,6 +65,8 @@ vibrationEnabled?: NotificationFlagStatus
 ```
 
 Settings of vibration for the notification. The default value is **TYPE_NONE**. This parameter becomes writable starting from API version 23. Only TYPE_CLOSE takes effect.
+
+@readonly [since 8 - 22]
 
 **Type:** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e-sys.md)
 

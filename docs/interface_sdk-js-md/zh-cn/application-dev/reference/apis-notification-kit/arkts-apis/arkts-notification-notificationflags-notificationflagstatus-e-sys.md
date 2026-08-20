@@ -1,4 +1,4 @@
-# NotificationFlagStatus(Some states and flags for notifications)（系统接口）
+# NotificationFlagStatus（系统接口）
 
 描述通知标志状态。
 

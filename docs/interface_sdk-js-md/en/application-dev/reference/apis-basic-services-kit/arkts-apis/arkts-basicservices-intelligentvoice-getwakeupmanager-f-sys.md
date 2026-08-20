@@ -34,10 +34,10 @@ Obtains an [WakeupManager](arkts-basicservices-intelligentvoice-wakeupmanager-i-
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) | System error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [22700101](../errorcode-intelligentVoice.md#22700101-insufficient-memory) | No memory. |
+| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) | System error. |
 
 **Examples**
 

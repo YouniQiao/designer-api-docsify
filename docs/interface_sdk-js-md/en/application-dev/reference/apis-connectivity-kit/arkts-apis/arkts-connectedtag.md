@@ -2,6 +2,8 @@
 
 Provides methods to operate or manage Connected Tag.
 
+@namespace connectedTag
+
 **Since:** 8
 
 <!--Device-unnamed-declare namespace connectedTag--><!--Device-unnamed-declare namespace connectedTag-End-->

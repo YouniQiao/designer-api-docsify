@@ -1,8 +1,14 @@
 # @ohos.matrix4
 
-Provides matrix transformation capabilities for components, including translation, rotation, and scaling. For details, see Transformation. **Matrix4** can be used in the following scenarios: In Transformation, the transform API uses the **Matrix4** object to display the matrix transformation in two-dimensional transformation, and the transform3D API uses the **Matrix4** object to set the three-dimensional transformation matrix for a component.
+Used to do matrix operations
 
-**Since:** 7
+@namespace matrix4
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace matrix4--><!--Device-unnamed-declare namespace matrix4-End-->
 
@@ -20,24 +26,17 @@ import { matrix4 } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [combine](arkts-arkui-matrix4-combine-f.md) | Combines the effects of two matrices to generate a new matrix object. |
-| [copy](arkts-arkui-matrix4-copy-f.md) | Copies this matrix object. |
-| [identity](arkts-arkui-matrix4-identity-f.md) | Constructs an identity matrix. |
-| [init](arkts-arkui-matrix4-init-f.md) | Matrix constructor, which is used to create a 4 x 4 matrix with the input parameters. Column-major order is used. |
-| [invert](arkts-arkui-matrix4-invert-f.md) | Inverts this matrix object. |
-| [rotate](arkts-arkui-matrix4-rotate-f.md) | Rotates this matrix object along the x, y, and z axes. |
-| [scale](arkts-arkui-matrix4-scale-f.md) | Scales this matrix object along the x, y, and z axes. |
-| [transformPoint](arkts-arkui-matrix4-transformpoint-f.md) | Applies the current transformation effect to a coordinate point. |
-| [translate](arkts-arkui-matrix4-translate-f.md) | Translates this matrix object along the x, y, and z axes. |
+| [identity](arkts-arkui-matrix4-identity-f.md) | Matrix initialization function, which can return an identity matrix object. |
+| [init](arkts-arkui-matrix4-init-f.md) | Constructor of Matrix, which can create a fourth-order matrix based on the input parameters. The matrix is column-first. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Implements a **Matrix4Transit** object. |
-| [Point](arkts-arkui-matrix4-point-i.md) | Defines the data structure of a coordinate point. |
-| [PolyToPolyOptions](arkts-arkui-matrix4-polytopolyoptions-i.md) | Describes the configuration options for polygon-to-polygon transformation mapping. |
-| [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) | Describes the rotation parameters. |
-| [ScaleOption](arkts-arkui-matrix4-scaleoption-i.md) | Describes the scale parameters. |
-| [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | Describes the translation parameters. |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Matrix4Transit. |
+| [Point](arkts-arkui-matrix4-point-i.md) | Set poly to poly point. |
+| [PolyToPolyOptions](arkts-arkui-matrix4-polytopolyoptions-i.md) | Set poly to poly point options. |
+| [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) | Set Rotation Parameters. |
+| [ScaleOption](arkts-arkui-matrix4-scaleoption-i.md) | Set scaling parameters |
+| [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | Set translation parameters |
 

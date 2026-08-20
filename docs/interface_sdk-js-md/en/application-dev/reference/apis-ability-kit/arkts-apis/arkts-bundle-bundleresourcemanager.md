@@ -1,6 +1,12 @@
 # @ohos.bundle.bundleResourceManager
 
-The module provides APIs for obtaining resource information, including [BundleResourceInfo](arkts-ability-bundleresourceinfo-i-sys.md) and [LauncherAbilityResourceInfo](arkts-ability-launcherabilityresourceinfo-i-sys.md). &gt; **NOTE：**&gt; &gt; Starting from API version 12, this module supports query of icons and names of disabled applications and &gt; applications installed by all users. &gt; &gt; The APIs provided by this module are system APIs.
+The module provides APIs for obtaining resource information, including [BundleResourceInfo](arkts-ability-bundleresourceinfo-i-sys.md) and [LauncherAbilityResourceInfo](arkts-ability-launcherabilityresourceinfo-i-sys.md).
+
+> **NOTE：**
+> 
+> Starting from API version 12, this module supports query of icons and names of disabled applications and &gt; applications installed by all users.
+> 
+> The APIs provided by this module are system APIs.
 
 **Since:** 23
 
@@ -50,6 +56,6 @@ import { bundleResourceManager } from '@kit.AbilityKit';
 | Name | Description |
 | --- | --- |
 | [BundleResourceInfo](arkts-ability-bundleresourcemanager-bundleresourceinfo-t-sys.md) | Defines the icon and name of an application. |
-| [LauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-launcherabilityresourceinfo-t-sys.md) | Defines the entry icon and name of an application. <!--no_check--> |
+| [LauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-launcherabilityresourceinfo-t-sys.md) | Defines the entry icon and name of an application. |
 <!--DelEnd-->
 

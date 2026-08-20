@@ -2,6 +2,8 @@
 
 The definition of dialog information.
 
+@interface DialogInfo
+
 **Since:** 23
 
 <!--Device-avMusicTemplate-interface DialogInfo--><!--Device-avMusicTemplate-interface DialogInfo-End-->

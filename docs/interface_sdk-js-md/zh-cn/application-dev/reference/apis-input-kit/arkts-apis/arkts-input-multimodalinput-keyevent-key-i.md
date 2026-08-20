@@ -2,6 +2,8 @@
 
 按键。
 
+@interface Key [since 9 - 11]
+
 **起始版本：** 23
 
 <!--Device-unnamed-export declare interface Key--><!--Device-unnamed-export declare interface Key-End-->

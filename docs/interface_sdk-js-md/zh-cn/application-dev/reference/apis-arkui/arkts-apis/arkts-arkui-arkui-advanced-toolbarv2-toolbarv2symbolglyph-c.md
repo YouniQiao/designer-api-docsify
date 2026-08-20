@@ -1,0 +1,82 @@
+# ToolBarV2SymbolGlyph
+
+Defines toolBarV2 symbolGlyph.
+
+**起始版本：** 18
+
+<!--Device-unnamed-export class ToolBarV2SymbolGlyph--><!--Device-unnamed-export class ToolBarV2SymbolGlyph-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, ToolBarV2ItemText, ToolBarV2ItemTextOptions, ToolBarV2ItemIconType, ToolBarV2ItemImage, ToolBarV2ItemImageOptions, ToolBarV2, ToolBarV2Item, ToolBarV2ItemOptions, ToolBarV2Modifier, ToolBarV2ItemAction } from '@kit.ArkUI';
+```
+
+## constructor
+
+```TypeScript
+constructor(options: ToolBarV2SymbolGlyphOptions)
+```
+
+The constructor used to create a ToolBarV2SymbolGlyph object.
+
+**起始版本：** 18
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ToolBarV2SymbolGlyph-constructor(options: ToolBarV2SymbolGlyphOptions)--><!--Device-ToolBarV2SymbolGlyph-constructor(options: ToolBarV2SymbolGlyphOptions)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [ToolBarV2SymbolGlyphOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-toolbarv2-toolbarv2symbolglyphoptions-i.md) | 是 | symbol info. |
+
+## activated
+
+```TypeScript
+@Trace
+  activated?: SymbolGlyphModifier
+```
+
+Modifier of toolbarV2's activated symbol.
+
+**类型：** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
+
+**起始版本：** 18
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ToolBarV2SymbolGlyph-@Trace  activated?: SymbolGlyphModifier--><!--Device-ToolBarV2SymbolGlyph-@Trace  activated?: SymbolGlyphModifier-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## normal
+
+```TypeScript
+@Trace
+  normal: SymbolGlyphModifier
+```
+
+Modifier of toolbarV2's normal symbol.
+
+**类型：** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
+
+**起始版本：** 18
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ToolBarV2SymbolGlyph-@Trace  normal: SymbolGlyphModifier--><!--Device-ToolBarV2SymbolGlyph-@Trace  normal: SymbolGlyphModifier-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+

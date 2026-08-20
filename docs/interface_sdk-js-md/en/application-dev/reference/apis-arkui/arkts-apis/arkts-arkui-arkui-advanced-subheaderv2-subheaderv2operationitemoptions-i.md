@@ -20,7 +20,9 @@ import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, 
 accessibilityDescription?: ResourceStr
 ```
 
-Accessibility description. Default value: **"Double-tap to activate"**
+Accessibility description.
+
+Default value: **"Double-tap to activate"**
 
 **Type:** ResourceStr
 
@@ -40,7 +42,19 @@ Accessibility description. Default value: **"Double-tap to activate"**
 accessibilityLevel?: string
 ```
 
-Accessibility level of the icon on the right side of the subheader. The options are as follows: **"auto"**: The icon's recognizability by accessibility services is determined by the accessibility grouping service and ArkUI. **"yes"**: The icon can be recognized by accessibility services. **"no"**: The icon cannot be recognized by accessibility services. **"no-hide-descendants"**: Neither the icon nor its child components can be recognized by accessibility services. Default value: **"yes"**
+Accessibility level of the icon on the right side of the subheader.
+
+The options are as follows:
+
+**"auto"**: The icon's recognizability by accessibility services is determined by the accessibility grouping service and ArkUI.
+
+**"yes"**: The icon can be recognized by accessibility services.
+
+**"no"**: The icon cannot be recognized by accessibility services.
+
+**"no-hide-descendants"**: Neither the icon nor its child components can be recognized by accessibility services.
+
+Default value: **"yes"**
 
 **Type:** string
 
@@ -62,7 +76,9 @@ Accessibility level of the icon on the right side of the subheader. The options 
 accessibilityText?: ResourceStr
 ```
 
-Accessibility text of the icon on the right side of the subheader. Default value: **undefined**
+Accessibility text of the icon on the right side of the subheader.
+
+Default value: **undefined**
 
 **Type:** ResourceStr
 
@@ -122,7 +138,13 @@ Content of the item in the operation area.
 defaultFocus?: boolean
 ```
 
-Whether to receive default focus. **true**: Receive default focus. **false**: Do not receive default focus. Default value: **false**
+Whether to receive default focus.
+
+**true**: Receive default focus.
+
+**false**: Do not receive default focus.
+
+Default value: **false**
 
 **Type:** boolean
 

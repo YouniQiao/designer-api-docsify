@@ -38,11 +38,11 @@ function getPublishedRunningFormInfoById(formId: string): Promise<formInfo.Runni
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
-| [16501001](../errorcode-form.md#16501001-卡片id不存在) | The ID of the form to be operated does not exist. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
 | [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+| [16501001](../errorcode-form.md#16501001-卡片id不存在) | The ID of the form to be operated does not exist. |
+| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
 
 **示例**
 

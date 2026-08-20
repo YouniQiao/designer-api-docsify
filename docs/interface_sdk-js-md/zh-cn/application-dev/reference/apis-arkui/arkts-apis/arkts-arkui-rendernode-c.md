@@ -1,6 +1,12 @@
 # RenderNode
 
-提供自绘制渲染节点RenderNode，支持开发者通过C API进行开发，完成自定义绘制需求。RenderNode还支持渲染节点树管理（添加、删除、查询子节点）、背景色与不透明度等视觉属性设置、变换（缩放、旋转、平移、变换矩阵）、阴影 、边框、遮罩与裁剪、模糊效果等能力，适用于在Stage模型下进行自定义渲染与节点树管理的场景。 &gt; **说明：** &gt; &gt; - 不建议对BuilderNode中的RenderNode进行修改操作。BuilderNode中持有的FrameNode仅用于将该 &gt; BuilderNode作为子节点挂载到其他FrameNode上，对该FrameNode或对应的RenderNode进行属性设置与子节点操作可能会产生未定义行为，包括但不限于显示异常、事件异常、稳定性问题等。 &gt; &gt; - RenderNode对象不支持使用JSON序列化。
+提供自绘制渲染节点RenderNode，支持开发者通过C API进行开发，完成自定义绘制需求。RenderNode还支持渲染节点树管理（添加、删除、查询子节点）、背景色与不透明度等视觉属性设置、变换（缩放、旋转、平移、变换矩阵）、阴影 、边框、遮罩与裁剪、模糊效果等能力，适用于在Stage模型下进行自定义渲染与节点树管理的场景。
+
+> **说明：**
+> 
+> - 不建议对BuilderNode中的RenderNode进行修改操作。BuilderNode中持有的FrameNode仅用于将该 &gt; BuilderNode作为子节点挂载到其他FrameNode上，对该FrameNode或对应的RenderNode进行属性设置与子节点操作可能会产生未定义行为，包括但不限于显示异常、事件异常、稳定性问题等。
+> 
+> - RenderNode对象不支持使用JSON序列化。
 
 **起始版本：** 11
 
@@ -30,7 +36,7 @@ appendChild(node: RenderNode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [RenderNode](arkts-arkui-rendernode-c.md) | 是 | 需要添加的RenderNode。 |
+| node | [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) | 是 | 需要添加的RenderNode。 |
 
 **错误码：**
 
@@ -227,7 +233,7 @@ struct Index {
 dispose(): void
 ```
 
-立即释放当前RenderNode。调用此方法后，RenderNode将解除与后端实体节点的引用关系，再次调用该节点的接口可能会出现crash或返回默认值。可通过 [isDisposed](#isdisposed)接口查询节点是否已释放。
+立即释放当前RenderNode。调用此方法后，RenderNode将解除与后端实体节点的引用关系，再次调用该节点的接口可能会出现crash或返回默认值。可通过 [isDisposed](../../apis-default/arkts-apis/arkts-rendernode-c.md#isdisposed)接口查询节点是否已释放。
 
 **起始版本：** 12
 
@@ -299,7 +305,13 @@ struct Index {
 draw(context: DrawContext): void
 ```
 
-绘制方法，需要开发者进行实现。该方法会在RenderNode进行绘制时被调用。 该接口的[DrawContext](arkts-arkui-graphics-drawcontext-c.md)中的Canvas是用于记录指令的临时Canvas，并非节点的真实Canvas。使用请参见 [调整自定义绘制Canvas的变换矩阵](../../../ui/arkts-user-defined-arktsNode-renderNode.md#调整自定义绘制canvas的变换矩阵)。 &gt; **说明：** &gt; &gt; RenderNode初始化时，会调用两次draw方法。第一次调用是在首次创建FrameNode时触发Render流程，第二次调用是在首次设置modifier时触发绘制。后续绘制流程皆由modifier触发。
+绘制方法，需要开发者进行实现。该方法会在RenderNode进行绘制时被调用。
+
+该接口的[DrawContext](../../apis-default/arkts-apis/arkts-graphics-drawcontext-c.md)中的Canvas是用于记录指令的临时Canvas，并非节点的真实Canvas。使用请参见 [调整自定义绘制Canvas的变换矩阵](../../../ui/arkts-user-defined-arktsNode-renderNode.md#调整自定义绘制canvas的变换矩阵)。
+
+> **说明：**
+> 
+> RenderNode初始化时，会调用两次draw方法。第一次调用是在首次创建FrameNode时触发Render流程，第二次调用是在首次设置modifier时触发绘制。后续绘制流程皆由modifier触发。
 
 **起始版本：** 11
 
@@ -315,7 +327,7 @@ draw(context: DrawContext): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | 是 | 图形绘制上下文。 |
+| context | [DrawContext](../../apis-default/arkts-apis/arkts-graphics-drawcontext-c.md) | 是 | 图形绘制上下文。 |
 
 **示例**
 
@@ -491,7 +503,7 @@ getChild(index: number): RenderNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) \| null | 子节点。若该RenderNode不包含所查询的子节点，则返回空对象null。 |
+| [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) \| null | 子节点。若该RenderNode不包含所查询的子节点，则返回空对象null。 |
 
 **示例**
 
@@ -646,7 +658,7 @@ getFirstChild(): RenderNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) \| null | 首个子节点。若该RenderNode不包含子节点，则返回空对象null。 |
+| [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) \| null | 首个子节点。若该RenderNode不包含子节点，则返回空对象null。 |
 
 **示例**
 
@@ -736,7 +748,7 @@ getNextSibling(): RenderNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) \| null | 当前RenderNode的下一个同级节点。若该RenderNode不包含下一个同级节点，则返回空对象null。 |
+| [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) \| null | 当前RenderNode的下一个同级节点。若该RenderNode不包含下一个同级节点，则返回空对象null。 |
 
 **示例**
 
@@ -831,7 +843,7 @@ getPreviousSibling(): RenderNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) \| null | 当前RenderNode的上一个同级节点。若该RenderNode不包含上一个同级节点，则返回空对象null。 |
+| [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) \| null | 当前RenderNode的上一个同级节点。若该RenderNode不包含上一个同级节点，则返回空对象null。 |
 
 **示例**
 
@@ -926,8 +938,8 @@ insertChildAfter(child: RenderNode, sibling: RenderNode | null): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| child | [RenderNode](arkts-arkui-rendernode-c.md) | 是 | 需要添加的子节点。 |
-| sibling | [RenderNode](arkts-arkui-rendernode-c.md) \| null | 是 | 新节点将插入到该节点之后。若该参数设置为空，则新节点将插入到首个子节点之前。 |
+| child | [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) | 是 | 需要添加的子节点。 |
+| sibling | [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) \| null | 是 | 新节点将插入到该节点之后。若该参数设置为空，则新节点将插入到首个子节点之前。 |
 
 **错误码：**
 
@@ -1007,7 +1019,7 @@ struct Index {
 invalidate(): void
 ```
 
-该方法会触发RenderNode的重新渲染，重新渲染时会调用[draw](#draw)方法。若开发者继承了RenderNode并实现了draw方法，调用invalidate()后将重新执行draw方 法中的绘制逻辑。
+该方法会触发RenderNode的重新渲染，重新渲染时会调用[draw](../../apis-default/arkts-apis/arkts-rendernode-c.md#draw)方法。若开发者继承了RenderNode并实现了draw方法，调用invalidate()后将重新执行draw方 法中的绘制逻辑。
 
 **起始版本：** 11
 
@@ -1206,7 +1218,7 @@ removeChild(node: RenderNode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [RenderNode](arkts-arkui-rendernode-c.md) | 是 | 需要删除的子节点。 |
+| node | [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) | 是 | 需要删除的子节点。 |
 
 **示例**
 

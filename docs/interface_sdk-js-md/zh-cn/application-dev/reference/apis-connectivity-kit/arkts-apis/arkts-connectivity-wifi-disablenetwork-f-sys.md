@@ -15,7 +15,9 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function disableNetwork(netId: number): boolean
 ```
 
-去使能网络配置。 &lt;p&gt;去使能的网络将不再被关联。
+去使能网络配置。
+
+&lt;p&gt;去使能的网络将不再被关联。
 
 **起始版本：** 7
 

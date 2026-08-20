@@ -41,13 +41,13 @@ function getDefaultApplicationSync(type: string, userId?: int): BundleInfo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [17700023](../errorcode-bundle.md#17700023-指定的默认应用不存在) | The specified default app does not exist. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
+| [17700023](../errorcode-bundle.md#17700023-指定的默认应用不存在) | The specified default app does not exist. |
+| [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
 
 **示例**
 

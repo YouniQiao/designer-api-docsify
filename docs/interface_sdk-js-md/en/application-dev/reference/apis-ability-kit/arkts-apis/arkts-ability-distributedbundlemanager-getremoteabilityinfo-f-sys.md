@@ -35,14 +35,14 @@ Obtains information about the remote ability that matches the given element name
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability name is not found. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability name is not found. |
+| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
+| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
 
 **Examples**
 
@@ -105,14 +105,14 @@ Obtains information about the remote ability that matches the given element name
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability name is not found. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability name is not found. |
+| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
+| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
 
 **Examples**
 
@@ -168,14 +168,14 @@ Obtains information about the remote abilities that match the given element name
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability name is not found. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability name is not found. |
+| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
+| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
 
 **Examples**
 
@@ -245,14 +245,14 @@ Obtains information about the remote abilities that match the given element name
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability name is not found. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability name is not found. |
+| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
+| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
 
 **Examples**
 
@@ -316,14 +316,14 @@ Obtains information about the remote ability that matches the given element name
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability name is not found. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability name is not found. |
+| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
+| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
 
 **Examples**
 
@@ -387,14 +387,14 @@ Obtains information about the remote ability that matches the given element name
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability name is not found. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability name is not found. |
+| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
+| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
 
 **Examples**
 
@@ -451,14 +451,14 @@ Obtains information about the remote abilities that match the given element name
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability name is not found. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability name is not found. |
+| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
+| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
 
 **Examples**
 
@@ -529,14 +529,14 @@ Obtains information about the remote abilities that match the given element name
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability name is not found. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability name is not found. |
+| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
+| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
 
 **Examples**
 

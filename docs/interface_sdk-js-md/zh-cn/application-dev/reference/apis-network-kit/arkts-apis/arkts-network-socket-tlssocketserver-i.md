@@ -20,7 +20,11 @@ import { socket } from '@kit.NetworkKit';
 close(): Promise<void>
 ```
 
-TLSSocketServer停止监听并释放通过[listen](arkts-network-socket-tcpsocketserver-i.md#listen)方法绑定的端口。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 该方法不会关闭已有连接。如需关闭，请调用[TLSSocketConnection](arkts-network-socket-tlssocketconnection-i.md)的 &gt; [close](arkts-network-socket-tcpsocketconnection-i.md#close)方法。
+TLSSocketServer停止监听并释放通过[listen](arkts-network-socket-tcpsocketserver-i.md#listen)方法绑定的端口。使用Promise异步回调。
+
+> **说明：**
+> 
+> 该方法不会关闭已有连接。如需关闭，请调用[TLSSocketConnection](arkts-network-socket-tlssocketconnection-i.md)的 &gt; [close](arkts-network-socket-tcpsocketconnection-i.md#close)方法。
 
 **起始版本：** 20
 
@@ -40,8 +44,8 @@ TLSSocketServer停止监听并释放通过[listen](arkts-network-socket-tcpsocke
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 
 **示例**
 
@@ -88,7 +92,11 @@ tlsServer.listen(tlsConnectOptions).then(() => {
 getCertificate(callback: AsyncCallback<X509CertRawData>): void
 ```
 
-在TLSSocketServer通信连接成功之后，获取本地的数字证书，使用callback异步回调。 &gt; **说明：** &gt; &gt; listen方法调用成功后，才可调用此方法。
+在TLSSocketServer通信连接成功之后，获取本地的数字证书，使用callback异步回调。
+
+> **说明：**
+> 
+> listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
 
@@ -100,16 +108,16 @@ getCertificate(callback: AsyncCallback<X509CertRawData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | 是 | 回调函数，成功返回本地的证书，失败返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | 是 | 回调函数，成功返回本地的证书，失败返回错误码、错误信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
-| [2303504](../errorcode-net-socket.md#2303504-查找x509时出错) | An error occurred when verifying the X.509 certificate. |
 | [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
+| [2303504](../errorcode-net-socket.md#2303504-查找x509时出错) | An error occurred when verifying the X.509 certificate. |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 
 ## getCertificate
 
@@ -117,7 +125,11 @@ getCertificate(callback: AsyncCallback<X509CertRawData>): void
 getCertificate(): Promise<X509CertRawData>
 ```
 
-在TLSSocketServer通信连接之后，获取本地的数字证书，使用Promise异步回调。 &gt; **说明：** &gt; &gt; listen方法调用成功后，才可调用此方法。
+在TLSSocketServer通信连接之后，获取本地的数字证书，使用Promise异步回调。
+
+> **说明：**
+> 
+> listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
 
@@ -135,9 +147,9 @@ getCertificate(): Promise<X509CertRawData>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
-| [2303504](../errorcode-net-socket.md#2303504-查找x509时出错) | An error occurred when verifying the X.509 certificate. |
 | [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
+| [2303504](../errorcode-net-socket.md#2303504-查找x509时出错) | An error occurred when verifying the X.509 certificate. |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 
 ## getLocalAddress
 
@@ -145,7 +157,11 @@ getCertificate(): Promise<X509CertRawData>
 getLocalAddress(): Promise<NetAddress>
 ```
 
-获取TLSSocketServer的本地Socket地址。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 在TLSSocketServer通信连接成功之后，才可调用此方法。
+获取TLSSocketServer的本地Socket地址。使用Promise异步回调。
+
+> **说明：**
+> 
+> 在TLSSocketServer通信连接成功之后，才可调用此方法。
 
 **起始版本：** 12
 
@@ -187,7 +203,11 @@ tlsServer.getLocalAddress().then((localAddress: socket.NetAddress) => {
 getProtocol(callback: AsyncCallback<string>): void
 ```
 
-在TLSSocketServer通信连接成功之后，获取通信的协议版本，使用callback异步回调。 &gt; **说明：** &gt; &gt; listen方法调用成功后，才可调用此方法。
+在TLSSocketServer通信连接成功之后，获取通信的协议版本，使用callback异步回调。
+
+> **说明：**
+> 
+> listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
 
@@ -199,16 +219,16 @@ getProtocol(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回通信的协议。失败返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，返回通信的协议。失败返回错误码、错误信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
-| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) | An error occurred in the TLS system call. |
 | [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
+| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) | An error occurred in the TLS system call. |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 
 **示例**
 
@@ -256,7 +276,11 @@ tlsServer.getProtocol((err: BusinessError, data: string) => {
 getProtocol(): Promise<string>
 ```
 
-在TLSSocketServer通信连接成功之后，获取通信的协议版本，使用Promise异步回调。 &gt; **说明：** &gt; &gt; listen方法调用成功后，才可调用此方法。
+在TLSSocketServer通信连接成功之后，获取通信的协议版本，使用Promise异步回调。
+
+> **说明：**
+> 
+> listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
 
@@ -274,9 +298,9 @@ getProtocol(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
-| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) | An error occurred in the TLS system call. |
 | [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
+| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) | An error occurred in the TLS system call. |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 
 **示例**
 
@@ -322,7 +346,15 @@ tlsServer.getProtocol().then((data: string) => {
 getSocketFd(): Promise<int>
 ```
 
-获取TLSSocketServer监听端口绑定的文件描述符。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - [listen](arkts-network-socket-tcpsocketserver-i.md#listen)方法调用成功后，才可调用此方法。多次调用listen时，会获取最新监听端口绑定的文件描述符。 &gt; &gt; - 监听异常、Socket已关闭（如调用close后）等异常情况下调用本接口会返回-1。 &gt; &gt; - 文件描述符的生命周期由系统管理，应用可以通过[close](arkts-network-socket-tcpsocketserver-i.md#close)方法关闭Socket连接，避免直接操作文件描述符进行关闭。
+获取TLSSocketServer监听端口绑定的文件描述符。使用Promise异步回调。
+
+> **说明：**
+> 
+> - [listen](arkts-network-socket-tcpsocketserver-i.md#listen)方法调用成功后，才可调用此方法。多次调用listen时，会获取最新监听端口绑定的文件描述符。
+> 
+> - 监听异常、Socket已关闭（如调用close后）等异常情况下调用本接口会返回-1。
+> 
+> - 文件描述符的生命周期由系统管理，应用可以通过[close](arkts-network-socket-tcpsocketserver-i.md#close)方法关闭Socket连接，避免直接操作文件描述符进行关闭。
 
 **起始版本：** 23
 
@@ -388,7 +420,11 @@ tlsServer.listen(tlsConnectOptions).then(() => {
 getState(callback: AsyncCallback<SocketStateBase>): void
 ```
 
-在TLSSocketServer的listen成功之后，获取TLSSocketServer状态。使用callback异步回调。 &gt; **说明：** &gt; &gt; listen方法调用成功后，才可调用此方法。
+在TLSSocketServer的listen成功之后，获取TLSSocketServer状态。使用callback异步回调。
+
+> **说明：**
+> 
+> listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
 
@@ -400,15 +436,15 @@ getState(callback: AsyncCallback<SocketStateBase>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | 是 | 回调函数。成功返回TLSSocketServer状态，失败返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | 是 | 回调函数。成功返回TLSSocketServer状态，失败返回错误码、错误信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 | [2303188](../errorcode-net-socket.md#2303188-非套接字的套接字操作) | Socket operation on non-socket. |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 
 **示例**
 
@@ -456,7 +492,11 @@ tlsServer.getState((err: BusinessError, data: socket.SocketStateBase) => {
 getState(): Promise<SocketStateBase>
 ```
 
-在TLSSocketServer的listen成功之后，获取TLSSocketServer状态。使用Promise异步回调。 &gt; **说明：** &gt; &gt; listen方法调用成功后，才可调用此方法。
+在TLSSocketServer的listen成功之后，获取TLSSocketServer状态。使用Promise异步回调。
+
+> **说明：**
+> 
+> listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
 
@@ -474,8 +514,8 @@ getState(): Promise<SocketStateBase>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 | [2303188](../errorcode-net-socket.md#2303188-非套接字的套接字操作) | Socket operation on non-socket. |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 
 **示例**
 
@@ -521,7 +561,11 @@ tlsServer.getState().then(() => {
 listen(options: TLSConnectOptions, callback: AsyncCallback<void>): void
 ```
 
-绑定IP地址和端口，在TLSSocketServer上bind成功之后，监听客户端的连接，创建和初始化TLS会话，实现建立连接过程，加载证书秘钥并验证，使用callback异步回调。 &gt; **注意：** &gt; &gt; IP地址设置为0.0.0.0时，可以监听本机所有地址。
+绑定IP地址和端口，在TLSSocketServer上bind成功之后，监听客户端的连接，创建和初始化TLS会话，实现建立连接过程，加载证书秘钥并验证，使用callback异步回调。
+
+> **注意：**
+> 
+> IP地址设置为0.0.0.0时，可以监听本机所有地址。
 
 **起始版本：** 10
 
@@ -536,24 +580,24 @@ listen(options: TLSConnectOptions, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [TLSConnectOptions](arkts-network-socket-tlsconnectoptions-i.md) | 是 | TLSSocketServer连接所需要的参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，成功返回空，失败返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，成功返回空，失败返回错误码、错误信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
-| [2303506](../errorcode-net-socket.md#2303506-关闭tls连接失败) | Failed to close the TLS connection. |
-| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) | An error occurred in the TLS system call. |
-| [2303111](../errorcode-net-socket.md#2303111-资源暂时不可用请重试) | Resource temporarily unavailable. Try again. |
-| [2303109](../errorcode-net-socket.md#2303109-错误文件编号) | Bad file number. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2303199](../errorcode-net-socket.md#2303199-不能分配请求的地址) | Cannot assign requested address. |
-| [2303503](../errorcode-net-socket.md#2303503-tls写入错误) | An error occurred when writing data on the TLS socket. |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
+| [2303109](../errorcode-net-socket.md#2303109-错误文件编号) | Bad file number. |
+| [2303111](../errorcode-net-socket.md#2303111-资源暂时不可用请重试) | Resource temporarily unavailable. Try again. |
 | [2303198](../errorcode-net-socket.md#2303198-网络地址已被使用) | Address already in use. |
-| [2303502](../errorcode-net-socket.md#2303502-tls读取错误) | An error occurred when reading data on the TLS socket. |
+| [2303199](../errorcode-net-socket.md#2303199-不能分配请求的地址) | Cannot assign requested address. |
 | [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
+| [2303502](../errorcode-net-socket.md#2303502-tls读取错误) | An error occurred when reading data on the TLS socket. |
+| [2303503](../errorcode-net-socket.md#2303503-tls写入错误) | An error occurred when writing data on the TLS socket. |
+| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) | An error occurred in the TLS system call. |
+| [2303506](../errorcode-net-socket.md#2303506-关闭tls连接失败) | Failed to close the TLS connection. |
 
 **示例**
 
@@ -620,17 +664,17 @@ listen(options: TLSConnectOptions): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
-| [2303506](../errorcode-net-socket.md#2303506-关闭tls连接失败) | Failed to close the TLS connection. |
-| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) | An error occurred in the TLS system call. |
-| [2303111](../errorcode-net-socket.md#2303111-资源暂时不可用请重试) | Resource temporarily unavailable. Try again. |
-| [2303109](../errorcode-net-socket.md#2303109-错误文件编号) | Bad file number. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2303199](../errorcode-net-socket.md#2303199-不能分配请求的地址) | Cannot assign requested address. |
-| [2303503](../errorcode-net-socket.md#2303503-tls写入错误) | An error occurred when writing data on the TLS socket. |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
+| [2303109](../errorcode-net-socket.md#2303109-错误文件编号) | Bad file number. |
+| [2303111](../errorcode-net-socket.md#2303111-资源暂时不可用请重试) | Resource temporarily unavailable. Try again. |
 | [2303198](../errorcode-net-socket.md#2303198-网络地址已被使用) | Address already in use. |
-| [2303502](../errorcode-net-socket.md#2303502-tls读取错误) | An error occurred when reading data on the TLS socket. |
+| [2303199](../errorcode-net-socket.md#2303199-不能分配请求的地址) | Cannot assign requested address. |
 | [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
+| [2303502](../errorcode-net-socket.md#2303502-tls读取错误) | An error occurred when reading data on the TLS socket. |
+| [2303503](../errorcode-net-socket.md#2303503-tls写入错误) | An error occurred when writing data on the TLS socket. |
+| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) | An error occurred in the TLS system call. |
+| [2303506](../errorcode-net-socket.md#2303506-关闭tls连接失败) | Failed to close the TLS connection. |
 
 **示例**
 
@@ -672,7 +716,13 @@ tlsServer.listen(tlsConnectOptions).then(() => {
 off(type: 'connect', callback?: Callback<TLSSocketConnection>): void
 ```
 
-取消订阅TLSSocketServer的连接事件。使用callback异步回调。 &gt; **说明：** &gt; &gt; listen方法调用成功后，才可调用此方法。 &gt; &gt; 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+取消订阅TLSSocketServer的连接事件。使用callback异步回调。
+
+> **说明：**
+> 
+> listen方法调用成功后，才可调用此方法。
+> 
+> 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 10
 
@@ -685,7 +735,7 @@ off(type: 'connect', callback?: Callback<TLSSocketConnection>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connect' | 是 | 订阅的事件类型。'connect'：连接事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TLSSocketConnection](arkts-network-socket-tlssocketconnection-i.md)&gt; | 否 | 回调函数。失败时返回错误码、错误信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[TLSSocketConnection](arkts-network-socket-tlssocketconnection-i.md)&gt; | 否 | 回调函数。失败时返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -740,7 +790,13 @@ tlsServer.off('connect');
 off(type: 'error', callback?: ErrorCallback): void
 ```
 
-取消订阅TLSSocketServer连接的error事件。使用callback异步回调。 &gt; **说明：** &gt; &gt; listen方法调用成功后，才可调用此方法。 &gt; &gt; 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+取消订阅TLSSocketServer连接的error事件。使用callback异步回调。
+
+> **说明：**
+> 
+> listen方法调用成功后，才可调用此方法。
+> 
+> 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 10
 
@@ -753,7 +809,7 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 订阅的事件类型。'error'：error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。失败时返回错误码、错误信息。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | 回调函数。失败时返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -808,7 +864,11 @@ tlsServer.off('error');
 on(type: 'connect', callback: Callback<TLSSocketConnection>): void
 ```
 
-订阅TLSSocketServer的连接事件。使用callback异步回调。 &gt; **说明：** &gt; &gt; listen方法调用成功后，才可调用此方法。
+订阅TLSSocketServer的连接事件。使用callback异步回调。
+
+> **说明：**
+> 
+> listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
 
@@ -821,7 +881,7 @@ on(type: 'connect', callback: Callback<TLSSocketConnection>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connect' | 是 | 订阅的事件类型。'connect'：连接事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TLSSocketConnection](arkts-network-socket-tlssocketconnection-i.md)&gt; | 是 | 回调函数。失败时返回错误码、错误信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[TLSSocketConnection](arkts-network-socket-tlssocketconnection-i.md)&gt; | 是 | 回调函数。失败时返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -871,7 +931,11 @@ tlsServer.listen(tlsConnectOptions).then(() => {
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-订阅TLSSocketServer连接的error事件。使用callback异步回调。 &gt; **说明：** &gt; &gt; listen方法调用成功后，才可调用此方法。
+订阅TLSSocketServer连接的error事件。使用callback异步回调。
+
+> **说明：**
+> 
+> listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
 
@@ -884,7 +948,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 订阅的事件类型。'error'：error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数。失败时返回错误码、错误信息。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | 回调函数。失败时返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -934,7 +998,11 @@ tlsServer.on('error', (err: BusinessError) => {
 setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void
 ```
 
-在TLSSocketServer的listen成功之后，设置TLSSocketServer连接的其他属性。使用callback异步回调。 &gt; **说明：** &gt; &gt; listen方法调用成功后，才可调用此方法。
+在TLSSocketServer的listen成功之后，设置TLSSocketServer连接的其他属性。使用callback异步回调。
+
+> **说明：**
+> 
+> listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
 
@@ -947,15 +1015,15 @@ setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | 是 | TLSSocketServer连接的其他属性。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。成功返回空，失败返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。成功返回空，失败返回错误码、错误信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 | [2303188](../errorcode-net-socket.md#2303188-非套接字的套接字操作) | Socket operation on non-socket. |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 
 **示例**
 
@@ -1019,7 +1087,11 @@ tlsServer.setExtraOptions(tcpExtraOptions, (err: BusinessError) => {
 setExtraOptions(options: TCPExtraOptions): Promise<void>
 ```
 
-在TLSSocketServer的listen成功之后，设置TLSSocketServer连接的其他属性，使用Promise异步回调。 &gt; **说明：** &gt; &gt; listen方法调用成功后，才可调用此方法。
+在TLSSocketServer的listen成功之后，设置TLSSocketServer连接的其他属性，使用Promise异步回调。
+
+> **说明：**
+> 
+> listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
 
@@ -1044,8 +1116,8 @@ setExtraOptions(options: TCPExtraOptions): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 | [2303188](../errorcode-net-socket.md#2303188-非套接字的套接字操作) | Socket operation on non-socket. |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 
 **示例**
 

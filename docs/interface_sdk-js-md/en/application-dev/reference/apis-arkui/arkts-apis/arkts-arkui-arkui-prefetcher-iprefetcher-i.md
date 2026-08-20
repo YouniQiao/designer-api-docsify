@@ -1,4 +1,4 @@
-# IPrefetcher(Prefetching)
+# IPrefetcher
 
 Provides the prefetching capability. It works with **LazyForEach** to prefetch data items when users swipe through container components such as **List** and **Grid**, improving user browsing experience.
 
@@ -36,7 +36,7 @@ Sets the prefetching-capable data source to bind to the **Prefetcher**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataSource | [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md) | Yes | Prefetching-capable data source. |
+| dataSource | [IDataSourcePrefetching](../../apis-default/arkts-apis/arkts-arkui-prefetcher-idatasourceprefetching-i.md) | Yes | Prefetching-capable data source. |
 
 ## visibleAreaChanged
 

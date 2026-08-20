@@ -36,9 +36,9 @@ function offPreloadedUIExtensionAbilityDestroyed(callback?: PreloadedUIExtension
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: Memory operation error. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: Memory operation error. |
 
 **示例**
 

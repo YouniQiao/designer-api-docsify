@@ -56,7 +56,9 @@ Whether the selected media file is the original image. **true** if yes, **false*
 movingPhotoBadgeStates: Array<MovingPhotoBadgeStateType>
 ```
 
-Array of moving photo badge states for the media files selected from Gallery. If **isMovingPhotoBadgeShown** is set to **true**, this array contains the moving photo badge states. Otherwise, it is empty.
+Array of moving photo badge states for the media files selected from Gallery.
+
+If **isMovingPhotoBadgeShown** is set to **true**, this array contains the moving photo badge states. Otherwise, it is empty.
 
 **Type:** Array&lt;[MovingPhotoBadgeStateType](arkts-medialibrary-photoaccesshelper-movingphotobadgestatetype-e.md)&gt;
 
@@ -74,7 +76,9 @@ Array of moving photo badge states for the media files selected from Gallery. If
 photoUris: Array<string>
 ```
 
-URIs of the media files selected. This URI array can be used only by calling the [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets) API through temporary authorization. For details, see [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
+URIs of the media files selected.
+
+This URI array can be used only by calling the [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets) API through temporary authorization. For details, see [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
 **Type:** Array&lt;string&gt;
 

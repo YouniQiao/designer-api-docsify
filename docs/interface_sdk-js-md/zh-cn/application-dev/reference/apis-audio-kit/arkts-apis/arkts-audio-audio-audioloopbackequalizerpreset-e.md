@@ -2,6 +2,8 @@
 
 表示返听均衡器类型的枚举。
 
+@enum { int }
+
 **起始版本：** 24
 
 <!--Device-audio-enum AudioLoopbackEqualizerPreset--><!--Device-audio-enum AudioLoopbackEqualizerPreset-End-->

@@ -20,3 +20,10 @@ import { CompletionHandlerForAtomicService, FailureCode } from '@kit.AbilityKit'
 | --- | --- |
 | [FailureCode](arkts-ability-app-ability-completionhandlerforatomicservice-failurecode-e.md) | 打开原子化服务失败的特定错误码。 |
 
+### 类型
+
+| 名称 | 说明 |
+| --- | --- |
+| [OnAtomicServiceRequestFailureFn](arkts-ability-onatomicservicerequestfailurefn-t.md) | 打开原子化服务失败时的回调函数。 |
+| [OnAtomicServiceRequestSuccessFn](arkts-ability-onatomicservicerequestsuccessfn-t.md) | 打开原子化服务成功时的回调函数。 |
+

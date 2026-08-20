@@ -36,7 +36,7 @@ constructor(options: SubHeaderV2TitleOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [SubHeaderV2TitleOptions](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2titleoptions-i.md) | 是 | 标题内容信息。 |
+| options | [SubHeaderV2TitleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-subheaderv2-subheaderv2titleoptions-i.md) | 是 | 标题内容信息。 |
 
 ## id
 
@@ -45,7 +45,9 @@ constructor(options: SubHeaderV2TitleOptions)
   id?: string
 ```
 
-标题id。需要为标题设置id的时候设置此参数，缺省时不设置此参数。 默认值：undefined，表示不设置标题id。
+标题id。需要为标题设置id的时候设置此参数，缺省时不设置此参数。
+
+默认值：undefined，表示不设置标题id。
 
 **类型：** string
 
@@ -68,7 +70,7 @@ constructor(options: SubHeaderV2TitleOptions)
 
 The first line text of content area.
 
-**类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 18
 
@@ -89,7 +91,7 @@ The first line text of content area.
 
 Text modifier for primary title.
 
-**类型：** TextModifier
+**类型：** [TextModifier](arkts-arkui-textmodifier-c.md)
 
 **起始版本：** 18
 
@@ -110,7 +112,7 @@ Text modifier for primary title.
 
 The secondary line text of content area.
 
-**类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 18
 
@@ -131,7 +133,7 @@ The secondary line text of content area.
 
 Text modifier for secondary title.
 
-**类型：** TextModifier
+**类型：** [TextModifier](arkts-arkui-textmodifier-c.md)
 
 **起始版本：** 18
 
@@ -150,9 +152,13 @@ Text modifier for secondary title.
   titleAccessibilityText?: ResourceStr
 ```
 
-设置标题自定义朗读内容。 默认值：undefined 值为undefined时，默认朗读组件显示的标题内容。
+设置标题自定义朗读内容。
 
-**类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+默认值：undefined
+
+值为undefined时，默认朗读组件显示的标题内容。
+
+**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 23
 

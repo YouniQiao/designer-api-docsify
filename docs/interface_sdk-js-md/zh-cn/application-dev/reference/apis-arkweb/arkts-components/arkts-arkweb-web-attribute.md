@@ -48,7 +48,17 @@ aiSessionOptions(aiSessions: Array<AISessionEvent>)
 allowWindowOpenMethod(flag : boolean)
 ```
 
-设置网页是否可以通过JavaScript自动打开新窗口。 &gt; **说明：** &gt; &gt; - 该属性仅在[javaScriptAccess](#javascriptaccess)开启时生效。 &gt; &gt; - 该属性在[multiWindowAccess](#multiwindowaccess)开启时打开新窗口，关闭时打开本地窗口。 &gt; &gt; - 该属性的默认值与系统属性`persist.web.allowWindowOpenMethod.enabled`保持一致，如果未设置系统属性则默认值为false。 &gt; &gt; - 通过`hdc shell param get persist.web.allowWindowOpenMethod.enabled` 检查是否开启系统属性 &gt; `persist.web.allowWindowOpenMethod.enabled`。若属性值为1代表开启系统属性；若属性值为0或不存在，代表未开启系统属性，可通过命令 &gt; `hdc shell param set persist.web.allowWindowOpenMethod.enabled 1` 开启系统属性。
+设置网页是否可以通过JavaScript自动打开新窗口。
+
+> **说明：**
+> 
+> - 该属性仅在[javaScriptAccess](#javascriptaccess)开启时生效。
+> 
+> - 该属性在[multiWindowAccess](#multiwindowaccess)开启时打开新窗口，关闭时打开本地窗口。
+> 
+> - 该属性的默认值与系统属性`persist.web.allowWindowOpenMethod.enabled`保持一致，如果未设置系统属性则默认值为false。
+> 
+> - 通过`hdc shell param get persist.web.allowWindowOpenMethod.enabled` 检查是否开启系统属性 &gt; `persist.web.allowWindowOpenMethod.enabled`。若属性值为1代表开启系统属性；若属性值为0或不存在，代表未开启系统属性，可通过命令 &gt; `hdc shell param set persist.web.allowWindowOpenMethod.enabled 1` 开启系统属性。
 
 **起始版本：** 10
 
@@ -114,7 +124,17 @@ bindSelectionMenu(elementType: WebElementType, content: CustomBuilder, responseT
 blankScreenDetectionConfig(detectConfig: BlankScreenDetectionConfig)
 ```
 
-设置白屏检测的策略配置，如使能开关、检测时间和检测策略等。当属性没有显式调用时，默认关闭白屏检测。 &gt; **说明：** &gt; &gt; - 根据detectConfig的配置，在网页加载后检测到白屏或者近似白屏现象，可触发回调[onDetectedBlankScreen](#ondetectedblankscreen)。 &gt; &gt; - 设置后下次导航生效。 &gt; &gt; - 当用户与网页发生交互后，不再会继续检查是否白屏。 &gt; &gt; - 不支持layoutMode为WebLayoutMode.FIT_CONTENT的场景。
+设置白屏检测的策略配置，如使能开关、检测时间和检测策略等。当属性没有显式调用时，默认关闭白屏检测。
+
+> **说明：**
+> 
+> - 根据detectConfig的配置，在网页加载后检测到白屏或者近似白屏现象，可触发回调[onDetectedBlankScreen](#ondetectedblankscreen)。
+> 
+> - 设置后下次导航生效。
+> 
+> - 当用户与网页发生交互后，不再会继续检查是否白屏。
+> 
+> - 不支持layoutMode为WebLayoutMode.FIT_CONTENT的场景。
 
 **起始版本：** 22
 
@@ -220,7 +240,11 @@ cacheMode(cacheMode: CacheMode)
 copyOptions(value: CopyOptions)
 ```
 
-设置剪贴板复制范围选项。该属性没有显式调用时，默认支持复制后在当前设备所有应用内粘贴。 &gt; **说明：** &gt; &gt; 当设置为CopyOptions.None时，[dataDetectorConfig](#datadetectorconfig)中的enablePreviewMenu配置项无效。当 &gt; [enableDataDetector](#enabledatadetector)设置为true且此属性设置为CopyOptions.LocalDevice时，AI菜单功能将被激活。
+设置剪贴板复制范围选项。该属性没有显式调用时，默认支持复制后在当前设备所有应用内粘贴。
+
+> **说明：**
+> 
+> 当设置为CopyOptions.None时，[dataDetectorConfig](#datadetectorconfig)中的enablePreviewMenu配置项无效。当 &gt; [enableDataDetector](#enabledatadetector)设置为true且此属性设置为CopyOptions.LocalDevice时，AI菜单功能将被激活。
 
 **起始版本：** 11
 
@@ -242,7 +266,9 @@ copyOptions(value: CopyOptions)
 darkMode(mode: WebDarkMode)
 ```
 
-设置Web深色模式。当属性没有显式调用时，默认关闭。 当深色模式开启时，Web将启用媒体查询prefers-color-scheme中网页所定义的深色样式，若网页未定义深色样式，则保持原状。如需开启强制深色模式，建议配合 [forceDarkAccess](#forcedarkaccess)使用。深色模式具体用法可参考[Web深色模式适配](../../../web/web-set-dark-mode.md)。
+设置Web深色模式。当属性没有显式调用时，默认关闭。
+
+当深色模式开启时，Web将启用媒体查询prefers-color-scheme中网页所定义的深色样式，若网页未定义深色样式，则保持原状。如需开启强制深色模式，建议配合 [forceDarkAccess](#forcedarkaccess)使用。深色模式具体用法可参考[Web深色模式适配](../../../web/web-set-dark-mode.md)。
 
 **起始版本：** 9
 
@@ -264,7 +290,13 @@ darkMode(mode: WebDarkMode)
 dataDetectorConfig(config: TextDataDetectorConfig)
 ```
 
-设置文本识别配置。 需配合[enableDataDetector](#enabledatadetector)一起使用，设置enableDataDetector为true时，dataDetectorConfig的配置 才能生效。 当两个实体A、B重叠时，按以下规则保留实体： 1. 若A&nbsp;⊂&nbsp;B，则保留B，反之则保留A。 2. 当A&nbsp;⊄&nbsp;B且B&nbsp;⊄&nbsp;A时，若A.start&nbsp;&lt;&nbsp;B.start，则保留A，反之则保留B。
+设置文本识别配置。
+
+需配合[enableDataDetector](#enabledatadetector)一起使用，设置enableDataDetector为true时，dataDetectorConfig的配置 才能生效。
+
+当两个实体A、B重叠时，按以下规则保留实体：
+
+1. 若A&nbsp;⊂&nbsp;B，则保留B，反之则保留A。 2. 当A&nbsp;⊄&nbsp;B且B&nbsp;⊄&nbsp;A时，若A.start&nbsp;&lt;&nbsp;B.start，则保留A，反之则保留B。
 
 **起始版本：** 20
 
@@ -284,7 +316,11 @@ dataDetectorConfig(config: TextDataDetectorConfig)
 databaseAccess(databaseAccess: boolean)
 ```
 
-设置Web SQL数据库存储API权限，若未显式调用，此权限默认关闭。 &gt; **说明：** &gt; &gt; - 本接口在ArkWeb内核升级到M132版本后因内核废弃Web SQL，对Web SQL数据库的控制失效。ArkWeb内核版本参考ArkWeb简介 &gt; [约束与限制](../../../web/web-component-overview.md#约束与限制)。
+设置Web SQL数据库存储API权限，若未显式调用，此权限默认关闭。
+
+> **说明：**
+> 
+> - 本接口在ArkWeb内核升级到M132版本后因内核废弃Web SQL，对Web SQL数据库的控制失效。ArkWeb内核版本参考ArkWeb简介 &gt; [约束与限制](../../../web/web-component-overview.md#约束与限制)。
 
 **起始版本：** 8
 
@@ -306,7 +342,9 @@ databaseAccess(databaseAccess: boolean)
 defaultFixedFontSize(size: number)
 ```
 
-设置网页的默认等宽字体大小。对于html前端使用monospace字体且未指定font-size样式的元素，将按此值渲染字体大小。 当属性没有显式调用时，默认等宽字体大小为13。
+设置网页的默认等宽字体大小。对于html前端使用monospace字体且未指定font-size样式的元素，将按此值渲染字体大小。
+
+当属性没有显式调用时，默认等宽字体大小为13。
 
 **起始版本：** 9
 
@@ -328,7 +366,9 @@ defaultFixedFontSize(size: number)
 defaultFontSize(size: number)
 ```
 
-设置网页的默认字体大小。对于html前端使用非monospace字体且未指定font-size样式的元素，将按此值渲染字体大小。 当属性没有显式调用时，网页的默认字体大小为16。
+设置网页的默认字体大小。对于html前端使用非monospace字体且未指定font-size样式的元素，将按此值渲染字体大小。
+
+当属性没有显式调用时，网页的默认字体大小为16。
 
 **起始版本：** 9
 
@@ -394,7 +434,26 @@ domStorageAccess(domStorageAccess: boolean)
 editMenuOptions(editMenu: EditMenuOptions)
 ```
 
-设置Web组件自定义文本选择菜单。 &gt; **说明：** &gt; &gt; 本接口与bindSelectionMenu功能类似，差异如下： &gt; &gt; - editMenuOptions：在系统默认菜单风格基础上添加扩展项，触发条件不变。 &gt; &gt; - [bindSelectionMenu](#bindselectionmenu)：完全自定义菜单风格和触发条件，由开发者定义。 &gt; &gt; 两者不宜同时使用，建议根据自定义程度需求选择。 &gt; 用户可以通过该属性设置自定义的文本菜单。 在onCreateMenu中，可以修改、增加、删除菜单选项，如果希望不显示文本菜单，需要返回空数组。 在onMenuItemClick中，可以自定义菜单选项的回调函数。该函数在菜单选项被点击后触发，并根据返回值决定是否执行系统默认的回调。返回true 不执行系统回调，返回false继续执行系统回调。 在[onPrepareMenu&lt;sup&gt;20+&lt;/sup&gt;](../../../reference/apis-arkui/arkui-ts/ts-text-common.md#属性-1)中，当文本选择区域变化后显示菜单之前触发该 回调，可在该回调中进行修改、增加、删除菜单选项，实现动态更新菜单。 本接口在与[selectionMenuOptions&lt;sup&gt;(deprecated)&lt;/sup&gt;](#selectionmenuoptions)同时使用时，会使 selectionMenuOptions&lt;sup&gt;(deprecated)&lt;/sup&gt;不生效。
+设置Web组件自定义文本选择菜单。
+
+> **说明：**
+> 
+> 本接口与bindSelectionMenu功能类似，差异如下：
+> 
+> - editMenuOptions：在系统默认菜单风格基础上添加扩展项，触发条件不变。
+> 
+> - [bindSelectionMenu](#bindselectionmenu)：完全自定义菜单风格和触发条件，由开发者定义。
+> 
+> 两者不宜同时使用，建议根据自定义程度需求选择。
+> 用户可以通过该属性设置自定义的文本菜单。
+
+在onCreateMenu中，可以修改、增加、删除菜单选项，如果希望不显示文本菜单，需要返回空数组。
+
+在onMenuItemClick中，可以自定义菜单选项的回调函数。该函数在菜单选项被点击后触发，并根据返回值决定是否执行系统默认的回调。返回true 不执行系统回调，返回false继续执行系统回调。
+
+在[onPrepareMenu&lt;sup&gt;20+&lt;/sup&gt;](../../../reference/apis-arkui/arkui-ts/ts-text-common.md#属性-1)中，当文本选择区域变化后显示菜单之前触发该 回调，可在该回调中进行修改、增加、删除菜单选项，实现动态更新菜单。
+
+本接口在与[selectionMenuOptions&lt;sup&gt;(deprecated)&lt;/sup&gt;](#selectionmenuoptions)同时使用时，会使 selectionMenuOptions&lt;sup&gt;(deprecated)&lt;/sup&gt;不生效。
 
 **起始版本：** 12
 
@@ -414,7 +473,15 @@ editMenuOptions(editMenu: EditMenuOptions)
 enableAutoFill(value: boolean)
 ```
 
-设置是否启用网页自动填充，默认开启。 <!--RP1--> &gt; **说明：** &gt; &gt; 本接口的自动填充功能，依赖“智能填充服务”和“密码填充服务”的支持。 <!--RP1End-->
+设置是否启用网页自动填充，默认开启。
+
+<!--RP1-->
+
+> **说明：**
+> 
+> 本接口的自动填充功能，依赖“智能填充服务”和“密码填充服务”的支持。
+
+<!--RP1End-->
 
 **起始版本：** 23
 
@@ -434,7 +501,20 @@ enableAutoFill(value: boolean)
 enableDataDetector(enable: boolean)
 ```
 
-设置是否识别网页文本特殊实体，如邮件、电话、网址等。该接口依赖设备底层具备文本识别能力，否则设置无效。该属性没有显式调用时，默认不启用。 &gt; **说明：** &gt; &gt; [dataDetectorConfig](#datadetectorconfig)和 &gt; [enableSelectedDataDetector](#enableselecteddatadetector)等属性依赖此属性开启时才能正常生效。 &gt; 当enableDataDetector设置为true，同时不设置[dataDetectorConfig](#datadetectorconfig)属性时，默认识别所有类型的实体，所识别实体的 &gt; color和decoration会被更改为如下样式： <!--code_no_check--> 当enableDataDetector设置为true且[copyOptions](#copyoptions)设置为CopyOptions.LocalDevice时，AI菜单功能将被激活。此时，在 网页中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括TextMenuItemId中的url（打开链接）、email（新建邮件）、phoneNumber（呼叫）、address （导航至该位置）、dateTime（新建日程提醒）。 AI菜单生效时，需在选中范围内，包括一个完整的AI实体，才能展示对应的选项。该菜单项与TextMenuItemId中的askAI菜单项不同时出现。 示例使用场景详见[使用Web组件的智能分词能力](../../../web/web-data-detector.md)。
+设置是否识别网页文本特殊实体，如邮件、电话、网址等。该接口依赖设备底层具备文本识别能力，否则设置无效。该属性没有显式调用时，默认不启用。
+
+> **说明：**
+> 
+> [dataDetectorConfig](#datadetectorconfig)和 &gt; [enableSelectedDataDetector](#enableselecteddatadetector)等属性依赖此属性开启时才能正常生效。
+> 当enableDataDetector设置为true，同时不设置[dataDetectorConfig](#datadetectorconfig)属性时，默认识别所有类型的实体，所识别实体的 &gt; color和decoration会被更改为如下样式：
+
+<!--code_no_check-->
+
+当enableDataDetector设置为true且[copyOptions](#copyoptions)设置为CopyOptions.LocalDevice时，AI菜单功能将被激活。此时，在 网页中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括TextMenuItemId中的url（打开链接）、email（新建邮件）、phoneNumber（呼叫）、address （导航至该位置）、dateTime（新建日程提醒）。
+
+AI菜单生效时，需在选中范围内，包括一个完整的AI实体，才能展示对应的选项。该菜单项与TextMenuItemId中的askAI菜单项不同时出现。
+
+示例使用场景详见[使用Web组件的智能分词能力](../../../web/web-data-detector.md)。
 
 **起始版本：** 20
 
@@ -454,7 +534,13 @@ enableDataDetector(enable: boolean)
 enableDefaultContextMenu(enable: boolean)
 ```
 
-设置是否启用默认右键上下文菜单。不调用该方法时，默认不启用。默认菜单仅支持CUT、COPY、PASTE、SELECT_ALL菜单项。 &gt; **说明：** &gt; &gt; - 当设置了[onContextMenuShow](#oncontextmenushow)回调并在回调中返回true时，本接口的设置不生效。 &gt; &gt; - 默认菜单项会受[editMenuOptions](#editmenuoptions)控制，通过该属性可以自定义菜单选项。
+设置是否启用默认右键上下文菜单。不调用该方法时，默认不启用。默认菜单仅支持CUT、COPY、PASTE、SELECT_ALL菜单项。
+
+> **说明：**
+> 
+> - 当设置了[onContextMenuShow](#oncontextmenushow)回调并在回调中返回true时，本接口的设置不生效。
+> 
+> - 默认菜单项会受[editMenuOptions](#editmenuoptions)控制，通过该属性可以自定义菜单选项。
 
 **起始版本：** 24
 
@@ -498,7 +584,11 @@ enableDrag(value: boolean)
 enableFollowSystemFontWeight(follow: boolean)
 ```
 
-设置Web组件是否开启字重跟随系统设置变化。当属性没有显式调用时，Web组件默认字重不跟随系统设置变化。 &gt; **说明：** &gt; &gt; 目前该能力只支持前端文本元素跟随变化，暂不支持canvas元素、内嵌docx和pdf格式中的文本跟随变化。
+设置Web组件是否开启字重跟随系统设置变化。当属性没有显式调用时，Web组件默认字重不跟随系统设置变化。
+
+> **说明：**
+> 
+> 目前该能力只支持前端文本元素跟随变化，暂不支持canvas元素、内嵌docx和pdf格式中的文本跟随变化。
 
 **起始版本：** 18
 
@@ -518,7 +608,14 @@ enableFollowSystemFontWeight(follow: boolean)
 enableFullscreenVideoOverlay(enabled: boolean)
 ```
 
-设置 Web 组件是否开启覆盖式全屏播放功能。当属性没有显式调用时，默认不开启该能力。 &gt; **说明：** &gt; &gt; - 当前只支持H264、H265解码格式的视频。 &gt; &gt; - 只有视频元素发出的全屏请求才会响应。 &gt; 26.0.0
+设置 Web 组件是否开启覆盖式全屏播放功能。当属性没有显式调用时，默认不开启该能力。
+
+> **说明：**
+> 
+> - 当前只支持H264、H265解码格式的视频。
+> 
+> - 只有视频元素发出的全屏请求才会响应。
+> 26.0.0
 
 **起始版本：** 26.0.0
 
@@ -560,7 +657,15 @@ enableHapticFeedback(enabled: boolean)
 enableImageAnalyzer(enable: boolean)
 ```
 
-设置是否启用网页图片AI分析，当前支持图片文字识别功能。属性未显式调用时，该功能默认开启。 &gt; **说明：** &gt; &gt; 长按或鼠标悬停在图片文字上时，触发图片AI分析，可以选中图片中的文字。能够触发分析的图片规格如下。 &gt; &gt; - 图片的原始长宽均不小于100px。 &gt; &gt; - 在[设备类型](../../../quick-start/module-configuration-file.md#devicetypes标签)不为2in1的设备上，需要图片渲染宽度超过网页宽度的80%。
+设置是否启用网页图片AI分析，当前支持图片文字识别功能。属性未显式调用时，该功能默认开启。
+
+> **说明：**
+> 
+> 长按或鼠标悬停在图片文字上时，触发图片AI分析，可以选中图片中的文字。能够触发分析的图片规格如下。
+> 
+> - 图片的原始长宽均不小于100px。
+> 
+> - 在[设备类型](../../../quick-start/module-configuration-file.md#devicetypes标签)不为2in1的设备上，需要图片渲染宽度超过网页宽度的80%。
 
 **起始版本：** 23
 
@@ -580,7 +685,12 @@ enableImageAnalyzer(enable: boolean)
 enableMediaNetworkProxy(enabled: boolean)
 ```
 
-设置Web组件是否开启媒体资源网络请求代理功能。当属性没有显式调用时，默认不开启该能力。 &gt; **说明：** &gt; &gt; - 当前只支持HLS流媒体视频。 &gt; 26.0.0
+设置Web组件是否开启媒体资源网络请求代理功能。当属性没有显式调用时，默认不开启该能力。
+
+> **说明：**
+> 
+> - 当前只支持HLS流媒体视频。
+> 26.0.0
 
 **起始版本：** 26.0.0
 
@@ -602,7 +712,11 @@ enableMediaNetworkProxy(enabled: boolean)
 enableNativeEmbedMode(enabled: boolean)
 ```
 
-设置是否开启同层渲染功能。当该方法没有显式调用时，默认不开启同层渲染功能。 &gt; **说明：** &gt; &gt; [registerNativeEmbedRule](#registernativeembedrule)和 &gt; [nativeEmbedOptions](#nativeembedoptions)等接口依赖此属性开启时才生效。
+设置是否开启同层渲染功能。当该方法没有显式调用时，默认不开启同层渲染功能。
+
+> **说明：**
+> 
+> [registerNativeEmbedRule](#registernativeembedrule)和 &gt; [nativeEmbedOptions](#nativeembedoptions)等接口依赖此属性开启时才生效。
 
 **起始版本：** 11
 
@@ -669,7 +783,13 @@ enableScrollDirectionalLock(value: boolean, type: ScrollDirectionalLockType)
 enableSelectedDataDetector(enable: boolean)
 ```
 
-设置是否启用文本选择的AI菜单功能，启用后可识别选区中的邮件、电话、网址、日期、地址等，并在文本选择菜单中展示对应的AI菜单项。默认启用AI菜单功能。 AI菜单功能启用时，在网页中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括TextMenuItemId中的url（打开链接）、email（新建邮件）、phoneNumber（ 呼叫）、address（导航前往）、dateTime（新建日程）。 AI菜单生效时，需在选中范围内，包括一个完整的AI实体，才能展示对应的选项。该菜单项与TextMenuItemId中的askAI菜单项不同时出现。 示例使用场景详见[使用Web组件的智能分词能力](../../../web/web-data-detector.md)。
+设置是否启用文本选择的AI菜单功能，启用后可识别选区中的邮件、电话、网址、日期、地址等，并在文本选择菜单中展示对应的AI菜单项。默认启用AI菜单功能。
+
+AI菜单功能启用时，在网页中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括TextMenuItemId中的url（打开链接）、email（新建邮件）、phoneNumber（ 呼叫）、address（导航前往）、dateTime（新建日程）。
+
+AI菜单生效时，需在选中范围内，包括一个完整的AI实体，才能展示对应的选项。该菜单项与TextMenuItemId中的askAI菜单项不同时出现。
+
+示例使用场景详见[使用Web组件的智能分词能力](../../../web/web-data-detector.md)。
 
 **起始版本：** 22
 
@@ -753,7 +873,15 @@ forceDarkAccess(access: boolean)
 forceDisplayScrollBar(enabled: boolean)
 ```
 
-设置滚动条是否常驻。在常驻状态下，当页面大小超过一页时，滚动条出现且不消失。该属性没有显式调用时，默认设置滚动条不常驻。 全量展开模式下不支持滚动条常驻，即layoutMode为WebLayoutMode.FIT_CONTENT模式时，参数enabled为false。 &gt; **说明：** &gt; &gt; - 该接口在当前应用的所有Web组件中全局生效。多个Web组件设置不同值时，以首次设置的值为准。 &gt; &gt; - 若同时调用[setScrollbarMode](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#setscrollbarmode)，该接口设置不生效。
+设置滚动条是否常驻。在常驻状态下，当页面大小超过一页时，滚动条出现且不消失。该属性没有显式调用时，默认设置滚动条不常驻。
+
+全量展开模式下不支持滚动条常驻，即layoutMode为WebLayoutMode.FIT_CONTENT模式时，参数enabled为false。
+
+> **说明：**
+> 
+> - 该接口在当前应用的所有Web组件中全局生效。多个Web组件设置不同值时，以首次设置的值为准。
+> 
+> - 若同时调用[setScrollbarMode](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#setscrollbarmode)，该接口设置不生效。
 
 **起始版本：** 14
 
@@ -837,7 +965,13 @@ gestureFocusMode(mode: GestureFocusMode)
 horizontalScrollBarAccess(horizontalScrollBar: boolean)
 ```
 
-设置是否显示横向滚动条，包括系统默认滚动条和用户自定义滚动条。该属性没有显式调用时，默认显示。 &gt; **说明：** &gt; &gt; - 通过[@State](../../../ui/state-management/arkts-state.md)变量控制横向滚动条的隐藏/显示后，需要调用 &gt; [controller.refresh()](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh)生效。 &gt; &gt; - 通过[@State](../../../ui/state-management/arkts-state.md)变量频繁动态改变时，建议切换开关变量和Web组件一一对应。
+设置是否显示横向滚动条，包括系统默认滚动条和用户自定义滚动条。该属性没有显式调用时，默认显示。
+
+> **说明：**
+> 
+> - 通过[@State](../../../ui/state-management/arkts-state.md)变量控制横向滚动条的隐藏/显示后，需要调用 &gt; [controller.refresh()](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh)生效。
+> 
+> - 通过[@State](../../../ui/state-management/arkts-state.md)变量频繁动态改变时，建议切换开关变量和Web组件一一对应。
 
 **起始版本：** 9
 
@@ -925,7 +1059,19 @@ javaScriptAccess(javaScriptAccess: boolean)
 javaScriptOnDocumentEnd(scripts: Array<ScriptItem>)
 ```
 
-将JavaScript脚本注入到Web组件中，当指定页面或者文档加载完成时，该脚本将在其来源与scriptRules匹配的任何页面中执行。当属性没有显式调用时，默认不将JavaScript脚本注入到Web组件中。 &gt; **说明：** &gt; &gt; - 该脚本将在页面的任何JavaScript代码之后运行，并且DOM树此时已经加载、渲染完毕。 &gt; &gt; - 该脚本按照字典序执行，非数组本身顺序。 &gt; &gt; - 内容相同的脚本多次注入时将被静默去重，不展示，不提醒，使用首次注入时的scriptRules。 &gt; &gt; - 本接口不支持[UrlRegexRule](arkts-arkweb-urlregexrule-i.md)。 &gt; &gt; - 建议使用[runJavaScriptOnDocumentEnd](#runjavascriptondocumentend)代替。
+将JavaScript脚本注入到Web组件中，当指定页面或者文档加载完成时，该脚本将在其来源与scriptRules匹配的任何页面中执行。当属性没有显式调用时，默认不将JavaScript脚本注入到Web组件中。
+
+> **说明：**
+> 
+> - 该脚本将在页面的任何JavaScript代码之后运行，并且DOM树此时已经加载、渲染完毕。
+> 
+> - 该脚本按照字典序执行，非数组本身顺序。
+> 
+> - 内容相同的脚本多次注入时将被静默去重，不展示，不提醒，使用首次注入时的scriptRules。
+> 
+> - 本接口不支持[UrlRegexRule](arkts-arkweb-urlregexrule-i.md)。
+> 
+> - 建议使用[runJavaScriptOnDocumentEnd](#runjavascriptondocumentend)代替。
 
 **起始版本：** 11
 
@@ -947,7 +1093,19 @@ javaScriptOnDocumentEnd(scripts: Array<ScriptItem>)
 javaScriptOnDocumentStart(scripts: Array<ScriptItem>)
 ```
 
-将JavaScript脚本注入到Web组件中，当指定页面或者文档开始加载时，该脚本将在其来源与scriptRules匹配的任何页面中执行。当属性没有显式调用时，默认不将JavaScript脚本注入到Web组件中。 &gt; **说明：** &gt; &gt; - 网页文档根元素（HTML Element）创建后、但尚未加载任何其他内容之前注入脚本。 &gt; &gt; - 该脚本按照字典序执行，非数组本身顺序，若需数组本身顺序，建议使用[runJavaScriptOnDocumentStart](#runjavascriptondocumentstart) &gt; 接口。 &gt; &gt; - 内容相同的脚本多次注入时将被静默去重，不展示，不提醒，使用首次注入时的scriptRules。 &gt; &gt; - 本接口不支持[UrlRegexRule](arkts-arkweb-urlregexrule-i.md)。 &gt; &gt; - 建议使用[runJavaScriptOnDocumentStart](#runjavascriptondocumentstart)代替。
+将JavaScript脚本注入到Web组件中，当指定页面或者文档开始加载时，该脚本将在其来源与scriptRules匹配的任何页面中执行。当属性没有显式调用时，默认不将JavaScript脚本注入到Web组件中。
+
+> **说明：**
+> 
+> - 网页文档根元素（HTML Element）创建后、但尚未加载任何其他内容之前注入脚本。
+> 
+> - 该脚本按照字典序执行，非数组本身顺序，若需数组本身顺序，建议使用[runJavaScriptOnDocumentStart](#runjavascriptondocumentstart) &gt; 接口。
+> 
+> - 内容相同的脚本多次注入时将被静默去重，不展示，不提醒，使用首次注入时的scriptRules。
+> 
+> - 本接口不支持[UrlRegexRule](arkts-arkweb-urlregexrule-i.md)。
+> 
+> - 建议使用[runJavaScriptOnDocumentStart](#runjavascriptondocumentstart)代替。
 
 **起始版本：** 11
 
@@ -969,7 +1127,17 @@ javaScriptOnDocumentStart(scripts: Array<ScriptItem>)
 javaScriptProxy(javaScriptProxy: JavaScriptProxy)
 ```
 
-将javaScriptProxy中的ArkTS对象注册到Web组件中，该对象将使用JavaScriptProxy中指定的名称注册到网页的所有框架中，包括所有iframe，这使得JavaScript可以调用 javaScriptProxy中ArkTS对象的方法。 &gt; **说明：** &gt; &gt; javaScriptProxy接口需要和 &gt; [deleteJavaScriptRegister&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#deletejavascriptregister) &gt; 接口配合使用，防止内存泄漏。 &gt; &gt; javaScriptProxy对象的所有参数不支持更新。 &gt; &gt; 注册javaScriptProxy对象时，同步与异步列表请至少选择一项不为空，可同时注册两类方法。 &gt; &gt; 此接口只支持注册一个对象，若需要注册多个对象请使用 &gt; [registerJavaScriptProxy&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#registerjavascriptproxy) &gt; 。
+将javaScriptProxy中的ArkTS对象注册到Web组件中，该对象将使用JavaScriptProxy中指定的名称注册到网页的所有框架中，包括所有iframe，这使得JavaScript可以调用 javaScriptProxy中ArkTS对象的方法。
+
+> **说明：**
+> 
+> javaScriptProxy接口需要和 &gt; [deleteJavaScriptRegister&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#deletejavascriptregister) &gt; 接口配合使用，防止内存泄漏。
+> 
+> javaScriptProxy对象的所有参数不支持更新。
+> 
+> 注册javaScriptProxy对象时，同步与异步列表请至少选择一项不为空，可同时注册两类方法。
+> 
+> 此接口只支持注册一个对象，若需要注册多个对象请使用 &gt; [registerJavaScriptProxy&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#registerjavascriptproxy) &gt; 。
 
 **起始版本：** 8
 
@@ -1013,7 +1181,9 @@ keyboardAppearance(mode: WebKeyboardAppearanceMode)
 keyboardAvoidMode(mode: WebKeyboardAvoidMode)
 ```
 
-Web组件自定义软件键盘避让模式。 当UIContext设置的键盘避让模式为[KeyboardAvoidMode.RESIZE](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-keyboardavoidmode-e.md)模式时，该接口功能不生效。
+Web组件自定义软件键盘避让模式。
+
+当UIContext设置的键盘避让模式为[KeyboardAvoidMode.RESIZE](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md)模式时，该接口功能不生效。
 
 **起始版本：** 12
 
@@ -1035,7 +1205,33 @@ Web组件自定义软件键盘避让模式。 当UIContext设置的键盘避让�
 layoutMode(mode: WebLayoutMode)
 ```
 
-设置Web布局模式。当属性没有显式调用时，默认Web布局跟随系统模式（WebLayoutMode.NONE）。常见问题请参考[Web组件大小自适应页面内容布局](../../../web/web-fit-content.md)。 &gt; **说明：** &gt; &gt; 目前只支持两种Web布局模式，分别为 &gt; &gt; - Web布局跟随系统（`WebLayoutMode.NONE`）。 &gt; &gt; - Web组件高度基于前端页面高度的自适应网页布局（`WebLayoutMode.FIT_CONTENT`）。 &gt; &gt; Web组件高度基于前端页面自适应布局有如下限制： &gt; &gt; - 当layoutMode设置为WebLayoutMode.FIT_CONTENT &gt; &gt; - [forceDisplayScrollBar](#forcedisplayscrollbar)不支持常驻 &gt; &gt; - [blankScreenDetectionConfig](#blankscreendetectionconfig)不生效 &gt; &gt; - 如果Web组件宽或长度超过7680px，请在Web组件创建的时候指定`RenderMode.SYNC_RENDER`模式，否则会整个白屏。 &gt; &gt; - Web组件创建后不支持动态切换layoutMode模式。 &gt; &gt; - Web组件宽高规格：指定`RenderMode.ASYNC_RENDER`模式时，分别不超过7680px。 &gt; &gt; - 频繁更改页面宽高会触发Web组件重新布局，影响体验。 &gt; &gt; - 不支持瀑布流网页（下拉到底部加载更多）。 &gt; &gt; - 不支持宽度自适应，仅支持高度自适应。 &gt; &gt; - 由于高度自适应网页高度，您无法通过修改组件高度属性来修改组件高度。
+设置Web布局模式。当属性没有显式调用时，默认Web布局跟随系统模式（WebLayoutMode.NONE）。常见问题请参考[Web组件大小自适应页面内容布局](../../../web/web-fit-content.md)。
+
+> **说明：**
+> 
+> 目前只支持两种Web布局模式，分别为 &gt;
+> - Web布局跟随系统（`WebLayoutMode.NONE`）。
+> 
+> - Web组件高度基于前端页面高度的自适应网页布局（`WebLayoutMode.FIT_CONTENT`）。
+> 
+> Web组件高度基于前端页面自适应布局有如下限制：
+> 
+> - 当layoutMode设置为WebLayoutMode.FIT_CONTENT &gt;
+> - [forceDisplayScrollBar](#forcedisplayscrollbar)不支持常驻 &gt;
+> - [blankScreenDetectionConfig](#blankscreendetectionconfig)不生效 &gt;
+> - 如果Web组件宽或长度超过7680px，请在Web组件创建的时候指定`RenderMode.SYNC_RENDER`模式，否则会整个白屏。
+> 
+> - Web组件创建后不支持动态切换layoutMode模式。
+> 
+> - Web组件宽高规格：指定`RenderMode.ASYNC_RENDER`模式时，分别不超过7680px。
+> 
+> - 频繁更改页面宽高会触发Web组件重新布局，影响体验。
+> 
+> - 不支持瀑布流网页（下拉到底部加载更多）。
+> 
+> - 不支持宽度自适应，仅支持高度自适应。
+> 
+> - 由于高度自适应网页高度，您无法通过修改组件高度属性来修改组件高度。
 
 **起始版本：** 11
 
@@ -1057,7 +1253,17 @@ layoutMode(mode: WebLayoutMode)
 mediaOptions(options: WebMediaOptions)
 ```
 
-设置Web媒体播放的策略，其中包括：Web中的音频在重新获焦后能够自动续播的有效期、应用内多个Web实例的音频是否独占。当该属性未显式设置时，默认Web中的音频重新获焦后无法自动续播、应用内多个Web实例的音频是独占的。 &gt; **说明：** &gt; &gt; - 同一Web实例中的多个音频均视为同一音频。 &gt; &gt; - 该媒体播放策略将同时管控有声视频。 &gt; &gt; - 建议为所有Web组件设置相同的[audioExclusive](arkts-arkweb-webmediaoptions-i.md)值。 &gt; &gt; - 音视频互相打断在应用内和应用间生效，续播只在应用间生效。
+设置Web媒体播放的策略，其中包括：Web中的音频在重新获焦后能够自动续播的有效期、应用内多个Web实例的音频是否独占。当该属性未显式设置时，默认Web中的音频重新获焦后无法自动续播、应用内多个Web实例的音频是独占的。
+
+> **说明：**
+> 
+> - 同一Web实例中的多个音频均视为同一音频。
+> 
+> - 该媒体播放策略将同时管控有声视频。
+> 
+> - 建议为所有Web组件设置相同的[audioExclusive](arkts-arkweb-webmediaoptions-i.md)值。
+> 
+> - 音视频互相打断在应用内和应用间生效，续播只在应用间生效。
 
 **起始版本：** 10
 
@@ -1101,7 +1307,11 @@ mediaPlayGestureAccess(access: boolean)
 metaViewport(enabled: boolean)
 ```
 
-设置meta标签的viewport属性是否可用。当属性没有显式调用时，默认支持meta标签的viewport属性。 &gt; **说明：** &gt; &gt; - 当前通过User-Agent中是否含有"Mobile"字段来判断是否开启前端HTML页面中meta标签的viewport属性。当User-Agent中不含有"Mobile"字段时，meta标签中viewport属性默认关 &gt; 闭，此时可通过显式设置metaViewport属性为true来覆盖关闭状态。
+设置meta标签的viewport属性是否可用。当属性没有显式调用时，默认支持meta标签的viewport属性。
+
+> **说明：**
+> 
+> - 当前通过User-Agent中是否含有"Mobile"字段来判断是否开启前端HTML页面中meta标签的viewport属性。当User-Agent中不含有"Mobile"字段时，meta标签中viewport属性默认关 &gt; 闭，此时可通过显式设置metaViewport属性为true来覆盖关闭状态。
 
 **起始版本：** 12
 
@@ -1123,7 +1333,9 @@ metaViewport(enabled: boolean)
 minFontSize(size: number)
 ```
 
-设置网页字体大小最小值。对于html前端元素，若元素字体大小低于该接口设置值，将采用接口设置值渲染字体大小。 当属性没有显式调用时，默认网页字体大小最小值为8。
+设置网页字体大小最小值。对于html前端元素，若元素字体大小低于该接口设置值，将采用接口设置值渲染字体大小。
+
+当属性没有显式调用时，默认网页字体大小最小值为8。
 
 **起始版本：** 9
 
@@ -1145,7 +1357,13 @@ minFontSize(size: number)
 minLogicalFontSize(size: number)
 ```
 
-设置网页逻辑字体大小最小值。 对于html前端未指定font-size样式的元素： 1. 若元素字体大小低于该接口设置值，将采用接口设置值渲染字体大小。 2. 若minLogicalFontSize和minFontSize同时设置时，对于未指定font-size样式元素，将采用两者中的较大值。 当属性没有显式调用时，默认网页逻辑字体大小最小值为8。
+设置网页逻辑字体大小最小值。
+
+对于html前端未指定font-size样式的元素：
+
+1. 若元素字体大小低于该接口设置值，将采用接口设置值渲染字体大小。 2. 若minLogicalFontSize和minFontSize同时设置时，对于未指定font-size样式元素，将采用两者中的较大值。
+
+当属性没有显式调用时，默认网页逻辑字体大小最小值为8。
 
 **起始版本：** 9
 
@@ -1189,7 +1407,9 @@ mixedMode(mixedMode: MixedMode)
 multiWindowAccess(multiWindow: boolean)
 ```
 
-设置是否开启多窗口权限。当属性没有显式调用时，默认不开启。 使能多窗口权限时，需要实现onWindowNew事件，示例代码参考[onWindowNew](#onwindownew)。
+设置是否开启多窗口权限。当属性没有显式调用时，默认不开启。
+
+使能多窗口权限时，需要实现onWindowNew事件，示例代码参考[onWindowNew](#onwindownew)。
 
 **起始版本：** 9
 
@@ -1231,7 +1451,17 @@ nativeEmbedOptions(options?: EmbedOptions)
 nestedScroll(value: NestedScrollOptions | NestedScrollOptionsExt)
 ```
 
-调用以设置嵌套滚动选项。 &gt; **说明：** &gt; &gt; - 可以设置上下左右四个方向，或者设置向前、向后两个方向的嵌套滚动模式，实现与父组件的滚动联动。 &gt; &gt; - 支持嵌套滚动的容器：Grid、List、Scroll、Swiper、 &gt; Tabs、WaterFlow、Refresh、 &gt; bindSheet。 &gt; &gt; - 支持嵌套滚动的输入事件：使用手势、鼠标、触控板。 &gt; &gt; - 嵌套滚动场景下，由于Web滚动到边缘时会优先触发过滚动的过界回弹效果，建议设置[overScrollMode](#overscrollmode)为 &gt; `OverScrollMode.NEVER`，避免影响此场景的用户体验。
+调用以设置嵌套滚动选项。
+
+> **说明：**
+> 
+> - 可以设置上下左右四个方向，或者设置向前、向后两个方向的嵌套滚动模式，实现与父组件的滚动联动。
+> 
+> - 支持嵌套滚动的容器：Grid、List、Scroll、Swiper、 &gt; Tabs、WaterFlow、Refresh、 &gt; bindSheet。
+> 
+> - 支持嵌套滚动的输入事件：使用手势、鼠标、触控板。
+> 
+> - 嵌套滚动场景下，由于Web滚动到边缘时会优先触发过滚动的过界回弹效果，建议设置[overScrollMode](#overscrollmode)为 &gt; `OverScrollMode.NEVER`，避免影响此场景的用户体验。
 
 **起始版本：** 11
 
@@ -1253,7 +1483,13 @@ nestedScroll(value: NestedScrollOptions | NestedScrollOptionsExt)
 onActivateContent(callback: Callback<void>)
 ```
 
-Web页面触发window.open(url, name)时，会根据name查找是否存在已绑定的Web实例。若存在，该实例将收到此回调以通知应用需将其展示至前端；若不存在，则通过 [onWindowNew](#onwindownew)通知应用创建新Web实例。 &gt; **说明：** &gt; &gt; - 通过name绑定Web实例‌：需在[onWindowNew](#onwindownew)回调中调用event.handler.setWebController方法，并传入新Web实例的 &gt; controller，以完成绑定。 &gt; &gt; - name‌命名需符合正则表达式[a-zA-Z0-9_]+。当该name被用作\&lt;a&gt;或\&lt;form&gt;标签的target属性值时，已绑定的Web实例同样会触发此回调。
+Web页面触发window.open(url, name)时，会根据name查找是否存在已绑定的Web实例。若存在，该实例将收到此回调以通知应用需将其展示至前端；若不存在，则通过 [onWindowNew](#onwindownew)通知应用创建新Web实例。
+
+> **说明：**
+> 
+> - 通过name绑定Web实例‌：需在[onWindowNew](#onwindownew)回调中调用event.handler.setWebController方法，并传入新Web实例的 &gt; controller，以完成绑定。
+> 
+> - name‌命名需符合正则表达式[a-zA-Z0-9_]+。当该name被用作\&lt;a&gt;或\&lt;form&gt;标签的target属性值时，已绑定的Web实例同样会触发此回调。
 
 **起始版本：** 20
 
@@ -1339,7 +1575,11 @@ onAudioStateChanged(callback: Callback<OnAudioStateChangedEvent>)
 onBeforeUnload(callback: Callback<OnBeforeUnloadEvent, boolean>)
 ```
 
-即将完成页面刷新或关闭当前页面时触发此回调。 &gt; **说明：** &gt; &gt; - 如果当前Web组件没有得到焦点，刷新或关闭当前页面时onBeforeUnload不会触发。
+即将完成页面刷新或关闭当前页面时触发此回调。
+
+> **说明：**
+> 
+> - 如果当前Web组件没有得到焦点，刷新或关闭当前页面时onBeforeUnload不会触发。
 
 **起始版本：** 8
 
@@ -1361,7 +1601,17 @@ onBeforeUnload(callback: Callback<OnBeforeUnloadEvent, boolean>)
 onCameraCaptureStateChange(callback: OnCameraCaptureStateChangeCallback)
 ```
 
-通知应用当前网页的摄像头状态，摄像头有三个状态：无状态、捕获中、暂停中。使用callback异步回调。 可以通过startCamera，stopCamera，closeCamera这三个接口来切换摄像头的状态。这三个接口分别对应开启，暂停，停止摄像头功能。示例使用场景详见 [startCamera](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#startcamera)。 &gt; **说明：** &gt; &gt; 当前网页正在使用摄像头时，返回在捕获中状态。 &gt; &gt; 当前网页暂停使用摄像头时，返回暂停中状态。 &gt; &gt; 当前网页完全没有使用摄像头时，返回无状态。
+通知应用当前网页的摄像头状态，摄像头有三个状态：无状态、捕获中、暂停中。使用callback异步回调。
+
+可以通过startCamera，stopCamera，closeCamera这三个接口来切换摄像头的状态。这三个接口分别对应开启，暂停，停止摄像头功能。示例使用场景详见 [startCamera](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#startcamera)。
+
+> **说明：**
+> 
+> 当前网页正在使用摄像头时，返回在捕获中状态。
+> 
+> 当前网页暂停使用摄像头时，返回暂停中状态。
+> 
+> 当前网页完全没有使用摄像头时，返回无状态。
 
 **起始版本：** 23
 
@@ -1381,7 +1631,15 @@ onCameraCaptureStateChange(callback: OnCameraCaptureStateChangeCallback)
 onClientAuthenticationRequest(callback: Callback<OnClientAuthenticationEvent>)
 ```
 
-通知用户收到SSL客户端证书请求事件。 &gt; **说明：** &gt; &gt; - Web组件有三种响应方式：[ClientAuthenticationHandler.confirm](arkts-arkweb-clientauthenticationhandler-c.md#confirm)（ &gt; 继续）、[ClientAuthenticationHandler.cancel](arkts-arkweb-clientauthenticationhandler-c.md#cancel)（取消）或 &gt; [ClientAuthenticationHandler.ignore](arkts-arkweb-clientauthenticationhandler-c.md#ignore)（忽略）。 &gt; &gt; - 如果调用ClientAuthenticationHandler.confirm或ClientAuthenticationHandler.cancel，ArkWeb会将认证结果存储在内存中（在应用程序的生命周期内），并且不会 &gt; 对相同的主机和端口再次调用onClientAuthenticationRequest()。如果调用onClientAuthenticationRequest.ignore，ArkWeb则不会存储该认证结果。 &gt; &gt; - 需配置"ohos.permission.ACCESS_CERT_MANAGER"权限。
+通知用户收到SSL客户端证书请求事件。
+
+> **说明：**
+> 
+> - Web组件有三种响应方式：[ClientAuthenticationHandler.confirm](arkts-arkweb-clientauthenticationhandler-c.md#confirm)（ &gt; 继续）、[ClientAuthenticationHandler.cancel](arkts-arkweb-clientauthenticationhandler-c.md#cancel)（取消）或 &gt; [ClientAuthenticationHandler.ignore](arkts-arkweb-clientauthenticationhandler-c.md#ignore)（忽略）。
+> 
+> - 如果调用ClientAuthenticationHandler.confirm或ClientAuthenticationHandler.cancel，ArkWeb会将认证结果存储在内存中（在应用程序的生命周期内），并且不会 &gt; 对相同的主机和端口再次调用onClientAuthenticationRequest()。如果调用onClientAuthenticationRequest.ignore，ArkWeb则不会存储该认证结果。
+> 
+> - 需配置"ohos.permission.ACCESS_CERT_MANAGER"权限。
 
 **起始版本：** 9
 
@@ -1491,7 +1749,11 @@ onContextMenuShow(callback: Callback<OnContextMenuShowEvent, boolean>)
 onControllerAttached(callback: () => void)
 ```
 
-当Controller成功绑定到Web组件时触发该回调，并且该Controller必须为WebviewController，且禁止在该事件回调前调用Web组件相关的接口，否则会抛出js-error异常。 因该回调调用时网页还未加载，无法在回调中使用有关操作网页的接口，例如[zoomIn](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#zoomin)、 [zoomOut](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#zoomout)等，可以使用 [loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl)、 [getWebId](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#getwebid)等操作网页不相关的接口。 组件生命周期详情可参考[Web组件的生命周期](../../../web/web-event-sequence.md)。
+当Controller成功绑定到Web组件时触发该回调，并且该Controller必须为WebviewController，且禁止在该事件回调前调用Web组件相关的接口，否则会抛出js-error异常。
+
+因该回调调用时网页还未加载，无法在回调中使用有关操作网页的接口，例如[zoomIn](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#zoomin)、 [zoomOut](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#zoomout)等，可以使用 [loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl)、 [getWebId](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#getwebid)等操作网页不相关的接口。
+
+组件生命周期详情可参考[Web组件的生命周期](../../../web/web-event-sequence.md)。
 
 **起始版本：** 10
 
@@ -1535,7 +1797,11 @@ onDataResubmitted(callback: Callback<OnDataResubmittedEvent>)
 onDetectedBlankScreen(callback: OnDetectBlankScreenCallback)
 ```
 
-Web组件检测到白屏时触发此回调。 &gt; **说明：** &gt; &gt; - 需配合[blankScreenDetectionConfig](#blankscreendetectionconfig)使用。否则，默认关闭白屏检测功能，不会返回检测到白屏时的回调函数。
+Web组件检测到白屏时触发此回调。
+
+> **说明：**
+> 
+> - 需配合[blankScreenDetectionConfig](#blankscreendetectionconfig)使用。否则，默认关闭白屏检测功能，不会返回检测到白屏时的回调函数。
 
 **起始版本：** 22
 
@@ -1689,7 +1955,17 @@ onFirstMeaningfulPaint(callback: OnFirstMeaningfulPaintCallback)
 onFirstScreenPaint(callback: OnFirstScreenPaintCallback)
 ```
 
-网页首屏渲染结束时触发此回调，使用callback异步回调。 &gt; **说明：** &gt; &gt; - 首屏渲染（First Screen Paint，FSP），记录了视口内图片、文本或视频元素完成渲染所需的时间，是衡量页面首次加载到渲染完成的核心性能指标。当一定时间内视口内没有可见元素超出历史绘制区域时，将视口内元素绘制的 &gt; 历史最大的时刻视为首屏渲染完成时刻。 &gt; &gt; - 接口在首屏绘制完成后，需要等待一定时间没有新的渲染信息需要处理后，才会上报回调。接口回调时刻和首屏渲染完成时刻不同。 &gt; &gt; - 渲染未完成时，若用户输入或滚动页面，将会立即上报回调函数。 &gt; &gt; - 该接口适用于在即时加载场景下获取首屏渲染时间，在预加载或预渲染场景下使用无法达到预期。
+网页首屏渲染结束时触发此回调，使用callback异步回调。
+
+> **说明：**
+> 
+> - 首屏渲染（First Screen Paint，FSP），记录了视口内图片、文本或视频元素完成渲染所需的时间，是衡量页面首次加载到渲染完成的核心性能指标。当一定时间内视口内没有可见元素超出历史绘制区域时，将视口内元素绘制的 &gt; 历史最大的时刻视为首屏渲染完成时刻。
+> 
+> - 接口在首屏绘制完成后，需要等待一定时间没有新的渲染信息需要处理后，才会上报回调。接口回调时刻和首屏渲染完成时刻不同。
+> 
+> - 渲染未完成时，若用户输入或滚动页面，将会立即上报回调函数。
+> 
+> - 该接口适用于在即时加载场景下获取首屏渲染时间，在预加载或预渲染场景下使用无法达到预期。
 
 **起始版本：** 23
 
@@ -1863,7 +2139,11 @@ onInputmethodAttached(callback: OnInputmethodAttachedCallback)
 onIntelligentTrackingPreventionResult(callback: OnIntelligentTrackingPreventionCallback)
 ```
 
-智能防跟踪功能使能时，当追踪者cookie被拦截时触发该回调。 &gt; **说明：** &gt; &gt; - 需要使用release包，debug包不生效。
+智能防跟踪功能使能时，当追踪者cookie被拦截时触发该回调。
+
+> **说明：**
+> 
+> - 需要使用release包，debug包不生效。
 
 **起始版本：** 12
 
@@ -1973,7 +2253,15 @@ onLargestContentfulPaint(callback: OnLargestContentfulPaintCallback)
 onLoadFinished(callback: Callback<OnLoadFinishedEvent>)
 ```
 
-通知宿主应用页面已加载完成。此方法仅在主frame加载完成时被调用。对于片段跳转（即导航至#fragment_id），onLoadFinished同样会被触发。 &gt; **说明：** &gt; &gt; - 片段导航也会触发onLoadFinished，但onPageEnd不会被触发。 &gt; &gt; - 如果主框架在页面完全加载之前被自动重定向，onLoadFinished只会触发一次。onPageEnd会在每次主框架导航时触发。 &gt; &gt; - 当弹出窗口的文档在加载之前被JavaScript修改时，它将模拟触发onLoadStarted，并将URL设置为空，因为显示当前正在加载的URL可能不安全。onPageBegin将不会被模拟。
+通知宿主应用页面已加载完成。此方法仅在主frame加载完成时被调用。对于片段跳转（即导航至#fragment_id），onLoadFinished同样会被触发。
+
+> **说明：**
+> 
+> - 片段导航也会触发onLoadFinished，但onPageEnd不会被触发。
+> 
+> - 如果主框架在页面完全加载之前被自动重定向，onLoadFinished只会触发一次。onPageEnd会在每次主框架导航时触发。
+> 
+> - 当弹出窗口的文档在加载之前被JavaScript修改时，它将模拟触发onLoadStarted，并将URL设置为空，因为显示当前正在加载的URL可能不安全。onPageBegin将不会被模拟。
 
 **起始版本：** 20
 
@@ -1993,7 +2281,11 @@ onLoadFinished(callback: Callback<OnLoadFinishedEvent>)
 onLoadIntercept(callback: Callback<OnLoadInterceptEvent, boolean>)
 ```
 
-当Web组件加载url之前触发该回调，用于判断是否阻止此次访问。 &gt; **说明：** &gt; &gt; - onLoadIntercept无法获取到完整的headers，如需获取完整headers建议在[onInterceptRequest](#oninterceptrequest)或者通过 &gt; WebSchemeHandler的 &gt; onRequestStart &gt; 中获取。
+当Web组件加载url之前触发该回调，用于判断是否阻止此次访问。
+
+> **说明：**
+> 
+> - onLoadIntercept无法获取到完整的headers，如需获取完整headers建议在[onInterceptRequest](#oninterceptrequest)或者通过 &gt; WebSchemeHandler的 &gt; onRequestStart &gt; 中获取。
 
 **起始版本：** 10
 
@@ -2015,7 +2307,11 @@ onLoadIntercept(callback: Callback<OnLoadInterceptEvent, boolean>)
 onLoadStarted(callback: Callback<OnLoadStartedEvent>)
 ```
 
-通知宿主应用页面开始加载。此方法在每次主frame加载时调用一次，因此对于包含iframes或frameset的页面，onLoadStarted仅针对主frame调用一次。这意味着当嵌入式frame的内容发生变化时，如点击 iframe中的链接或Fragment跳转（即跳转到#fragment_id的导航）等，不会调用onLoadStarted。 &gt; **说明：** &gt; &gt; - 当弹出窗口的文档在加载之前被JavaScript修改时，它将模拟触发onLoadStarted，并将URL设置为空，因为显示当前正在加载的URL可能不安全。onPageBegin将不会被模拟。
+通知宿主应用页面开始加载。此方法在每次主frame加载时调用一次，因此对于包含iframes或frameset的页面，onLoadStarted仅针对主frame调用一次。这意味着当嵌入式frame的内容发生变化时，如点击 iframe中的链接或Fragment跳转（即跳转到#fragment_id的导航）等，不会调用onLoadStarted。
+
+> **说明：**
+> 
+> - 当弹出窗口的文档在加载之前被JavaScript修改时，它将模拟触发onLoadStarted，并将URL设置为空，因为显示当前正在加载的URL可能不安全。onPageBegin将不会被模拟。
 
 **起始版本：** 20
 
@@ -2035,7 +2331,23 @@ onLoadStarted(callback: Callback<OnLoadStartedEvent>)
 onMicrophoneCaptureStateChange(callback: OnMicrophoneCaptureStateChangeCallback)
 ```
 
-通知应用当前网页中麦克风状态，麦克风有三个状态：未工作、捕获中、暂停中。使用callback异步回调。 可以通过resumeMicrophone，pauseMicrophone，stopMicrophone这三个接口来切换麦克风的状态。这三个接口功能分别对应解除暂停，暂停，停止麦克风。示例使用场景详见 [resumeMicrophone&lt;sup&gt;23+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#resumemicrophone)。 &gt; **说明：** &gt; &gt; 当前网页正在使用麦克风时，返回捕获中状态；当前网页暂停使用麦克风时，返回暂停中状态；当前网页完全没有使用麦克风时，返回未工作状态。 &gt; &gt; 当前麦克风处于捕获中状态时，设置暂停使用，当前麦克风变为暂停中状态。可通过ArkWeb设置麦克风开始使用状态进行恢复捕捉。 &gt; &gt; 当前麦克风处于捕获中状态时，设置停止使用，当前麦克风停止捕捉，麦克风变为未工作状态。除非重新前端开始捕捉，否则无法恢复。 &gt; &gt; 当前麦克风处于暂停中状态时，设置开始使用，当前麦克风继续捕捉，变为捕获中状态。 &gt; &gt; 当前麦克风处于暂停中状态时，设置停止使用，当前麦克风停止捕捉，变为未工作状态。除非重新前端开始捕捉，否则无法恢复。 &gt; &gt; 当前麦克风处于未工作状态时，设置开始使用以及暂停使用，麦克风状态均不发生变化。
+通知应用当前网页中麦克风状态，麦克风有三个状态：未工作、捕获中、暂停中。使用callback异步回调。
+
+可以通过resumeMicrophone，pauseMicrophone，stopMicrophone这三个接口来切换麦克风的状态。这三个接口功能分别对应解除暂停，暂停，停止麦克风。示例使用场景详见 [resumeMicrophone&lt;sup&gt;23+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#resumemicrophone)。
+
+> **说明：**
+> 
+> 当前网页正在使用麦克风时，返回捕获中状态；当前网页暂停使用麦克风时，返回暂停中状态；当前网页完全没有使用麦克风时，返回未工作状态。
+> 
+> 当前麦克风处于捕获中状态时，设置暂停使用，当前麦克风变为暂停中状态。可通过ArkWeb设置麦克风开始使用状态进行恢复捕捉。
+> 
+> 当前麦克风处于捕获中状态时，设置停止使用，当前麦克风停止捕捉，麦克风变为未工作状态。除非重新前端开始捕捉，否则无法恢复。
+> 
+> 当前麦克风处于暂停中状态时，设置开始使用，当前麦克风继续捕捉，变为捕获中状态。
+> 
+> 当前麦克风处于暂停中状态时，设置停止使用，当前麦克风停止捕捉，变为未工作状态。除非重新前端开始捕捉，否则无法恢复。
+> 
+> 当前麦克风处于未工作状态时，设置开始使用以及暂停使用，麦克风状态均不发生变化。
 
 **起始版本：** 23
 
@@ -2077,7 +2389,15 @@ onNativeEmbedGestureEvent(callback: (event: NativeEmbedTouchInfo) => void)
 onNativeEmbedLifecycleChange(callback: (event: NativeEmbedDataInfo) => void)
 ```
 
-当同层标签生命周期变化时触发该回调。 &gt; **说明：** &gt; &gt; - 本接口与onNativeEmbedVisibilityChange都监控同层标签状态，但监控维度不同。 onNativeEmbedLifecycleChange监控生命周期状态（如CREATE/UPDATE/DESTROY/ENTER_BFCACHE/LEAVE_BFCACHE），适用于处理标签的创建、销毁、缓存等生命周期事件。 onNativeEmbedVisibilityChange监控视口内的可见性变化（Visible/Hidden），适用于处理标签滚动进出视口的场景。两者可根据实际需求配合使用或单独使用。
+当同层标签生命周期变化时触发该回调。
+
+> **说明：**
+> 
+> - 本接口与onNativeEmbedVisibilityChange都监控同层标签状态，但监控维度不同。
+
+onNativeEmbedLifecycleChange监控生命周期状态（如CREATE/UPDATE/DESTROY/ENTER_BFCACHE/LEAVE_BFCACHE），适用于处理标签的创建、销毁、缓存等生命周期事件。
+
+onNativeEmbedVisibilityChange监控视口内的可见性变化（Visible/Hidden），适用于处理标签滚动进出视口的场景。两者可根据实际需求配合使用或单独使用。
 
 **起始版本：** 11
 
@@ -2099,7 +2419,9 @@ onNativeEmbedLifecycleChange(callback: (event: NativeEmbedDataInfo) => void)
 onNativeEmbedMouseEvent(callback: MouseInfoCallback)
 ```
 
-在同层标签上执行以下行为时触发该回调： - 使用鼠标左键、中键、右键进行点击或长按。 - 使用触摸板进行对应鼠标左键、中键、右键点击长按的操作。
+在同层标签上执行以下行为时触发该回调：
+
+- 使用鼠标左键、中键、右键进行点击或长按。 - 使用触摸板进行对应鼠标左键、中键、右键点击长按的操作。
 
 **起始版本：** 20
 
@@ -2203,7 +2525,15 @@ onOverScroll(callback: Callback<OnOverScrollEvent>)
 onOverrideErrorPage(callback: OnOverrideErrorPageCallback)
 ```
 
-网页加载遇到错误时触发该回调，可用于设置自定义错误页替换ArkWeb提供的默认错误页。默认仅mainframe加载出错时触发；启用subframe错误页功能后，subframe加载出错时也会触发。 &gt; **说明：** &gt; &gt; - 该功能需通过调用 &gt; [setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled)&lt;sup &gt; &gt;20+&lt;/sup&gt;启用mainframe错误页功能后才会生效。如需同时启用subframe错误页功能，请调用 &gt; [setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled) &gt; 接口并将includeSubframe设置为true。 &gt; &gt; - 通过[errorPageEvent.request.isMainFrame()](arkts-arkweb-webresourcerequest-c.md#ismainframe)判断请求来源是mainframe还是subframe，以便在回调中 &gt; 分别设置对应的自定义错误页。 &gt; &gt; - 通过[errorPageEvent.error.getErrorCode()](arkts-arkweb-webresourceerror-c.md#geterrorcode)获取的错误码大于0代表http协议错误，小于0代表网络错误。
+网页加载遇到错误时触发该回调，可用于设置自定义错误页替换ArkWeb提供的默认错误页。默认仅mainframe加载出错时触发；启用subframe错误页功能后，subframe加载出错时也会触发。
+
+> **说明：**
+> 
+> - 该功能需通过调用 &gt; [setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled)&lt;sup &gt; &gt;20+&lt;/sup&gt;启用mainframe错误页功能后才会生效。如需同时启用subframe错误页功能，请调用 &gt; [setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled) &gt; 接口并将includeSubframe设置为true。
+> 
+> - 通过[errorPageEvent.request.isMainFrame()](arkts-arkweb-webresourcerequest-c.md#ismainframe)判断请求来源是mainframe还是subframe，以便在回调中 &gt; 分别设置对应的自定义错误页。
+> 
+> - 通过[errorPageEvent.error.getErrorCode()](arkts-arkweb-webresourceerror-c.md#geterrorcode)获取的错误码大于0代表http协议错误，小于0代表网络错误。
 
 **起始版本：** 20
 
@@ -2223,7 +2553,15 @@ onOverrideErrorPage(callback: OnOverrideErrorPageCallback)
 onOverrideUrlLoading(callback: OnOverrideUrlLoadingCallback)
 ```
 
-当URL将要加载到当前Web中时触发该回调，让宿主应用程序有机会获得控制权，判断是否阻止Web加载URL。 &gt; **说明：** &gt; &gt; - POST请求不会触发该回调。 &gt; &gt; - iframe加载HTTP(s)协议或about:blank时不会触发该回调，而加载非HTTP(s)协议的跳转会触发；调用loadUrl(url: string)主动触发的跳转不会触发该回调。 &gt; &gt; - 不要在回调中使用相同的URL调用loadUrl(url: string)方法，然后返回true。 这样会不必要地中止当前加载，并用相同的URL发起一次新的加载。 要继续加载当前请求URL的正确做法是直接返回false，而不 &gt; 是调用loadUrl(url: string)。
+当URL将要加载到当前Web中时触发该回调，让宿主应用程序有机会获得控制权，判断是否阻止Web加载URL。
+
+> **说明：**
+> 
+> - POST请求不会触发该回调。
+> 
+> - iframe加载HTTP(s)协议或about:blank时不会触发该回调，而加载非HTTP(s)协议的跳转会触发；调用loadUrl(url: string)主动触发的跳转不会触发该回调。
+> 
+> - 不要在回调中使用相同的URL调用loadUrl(url: string)方法，然后返回true。 这样会不必要地中止当前加载，并用相同的URL发起一次新的加载。 要继续加载当前请求URL的正确做法是直接返回false，而不 &gt; 是调用loadUrl(url: string)。
 
 **起始版本：** 12
 
@@ -2439,7 +2777,13 @@ onRefreshAccessedHistory(callback: Callback<OnRefreshAccessedHistoryEvent>)
 onRenderExited(callback: Callback<OnRenderExitedEvent>)
 ```
 
-应用渲染进程异常退出时触发该回调。 多个Web组件可能共享单个渲染进程，每个受影响的Web组件都会触发该回调。 应用处理该回调时，可以调用绑定的webviewController相关接口来恢复页面。例如[refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh) 、[loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl)等。 组件生命周期回调详情可参考[Web组件的生命周期](../../../web/web-event-sequence.md)。
+应用渲染进程异常退出时触发该回调。
+
+多个Web组件可能共享单个渲染进程，每个受影响的Web组件都会触发该回调。
+
+应用处理该回调时，可以调用绑定的webviewController相关接口来恢复页面。例如[refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh) 、[loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl)等。
+
+组件生命周期回调详情可参考[Web组件的生命周期](../../../web/web-event-sequence.md)。
 
 **起始版本：** 9
 
@@ -2461,7 +2805,13 @@ onRenderExited(callback: Callback<OnRenderExitedEvent>)
 onRenderExited(callback: (event?: { detail: object }) => boolean)
 ```
 
-应用渲染进程因错误或崩溃退出时触发回调。 多个Web组件可能共享单个渲染进程，每个受影响的Web组件都会触发该回调。 应用处理该回调时，可以调用绑定的WebViewController接口来恢复页面。例如[refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh)、 [loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl)等。 详情可参考[Web组件的生命周期](../../../web/web-event-sequence.md)。
+应用渲染进程因错误或崩溃退出时触发回调。
+
+多个Web组件可能共享单个渲染进程，每个受影响的Web组件都会触发该回调。
+
+应用处理该回调时，可以调用绑定的WebViewController接口来恢复页面。例如[refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh)、 [loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl)等。
+
+详情可参考[Web组件的生命周期](../../../web/web-event-sequence.md)。
 
 **起始版本：** 8
 
@@ -2485,7 +2835,11 @@ onRenderExited(callback: (event?: { detail: object }) => boolean)
 onRenderProcessNotResponding(callback: OnRenderProcessNotRespondingCallback)
 ```
 
-渲染进程无响应时触发该回调函数。如果Web组件无法处理输入事件，或者无法在合理的时间范围内导航到新的URL，则认为网页进程无响应，并将触发该回调。 只要网页进程一直无响应，此回调仍可能会持续触发，直到网页进程再次响应，此时[onRenderProcessResponding](#onrenderprocessresponding)将会触发。 应用可以通过WebviewController接口 [terminateRenderProcess](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#terminaterenderprocess)来终止关联的渲染进程，这可能会影响 同一渲染进程的其他Web组件。
+渲染进程无响应时触发该回调函数。如果Web组件无法处理输入事件，或者无法在合理的时间范围内导航到新的URL，则认为网页进程无响应，并将触发该回调。
+
+只要网页进程一直无响应，此回调仍可能会持续触发，直到网页进程再次响应，此时[onRenderProcessResponding](#onrenderprocessresponding)将会触发。
+
+应用可以通过WebviewController接口 [terminateRenderProcess](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#terminaterenderprocess)来终止关联的渲染进程，这可能会影响 同一渲染进程的其他Web组件。
 
 **起始版本：** 12
 
@@ -2569,7 +2923,13 @@ onResourceLoad(callback: Callback<OnResourceLoadEvent>)
 onSafeBrowsingCheckFinish(callback: OnSafeBrowsingCheckResultCallback)
 ```
 
-网站安全风险检查结束时触发的回调。 &gt; **说明：** &gt; &gt; - 需要使用release包，debug包不生效。 &gt; &gt; - 开启未成年模式，设置网页内容拦截，触发回调。
+网站安全风险检查结束时触发的回调。
+
+> **说明：**
+> 
+> - 需要使用release包，debug包不生效。
+> 
+> - 开启未成年模式，设置网页内容拦截，触发回调。
 
 **起始版本：** 21
 
@@ -2589,7 +2949,13 @@ onSafeBrowsingCheckFinish(callback: OnSafeBrowsingCheckResultCallback)
 onSafeBrowsingCheckResult(callback: OnSafeBrowsingCheckResultCallback)
 ```
 
-收到网站安全风险检查结果时触发的回调。 &gt; **说明：** &gt; &gt; - 需要使用release包，debug包不生效。 &gt; &gt; - 开启未成年模式，设置网页内容拦截，触发回调。
+收到网站安全风险检查结果时触发的回调。
+
+> **说明：**
+> 
+> - 需要使用release包，debug包不生效。
+> 
+> - 开启未成年模式，设置网页内容拦截，触发回调。
 
 **起始版本：** 11
 
@@ -2655,7 +3021,15 @@ onScreenCaptureRequest(callback: Callback<OnScreenCaptureRequestEvent>)
 onScroll(callback: Callback<OnScrollEvent>)
 ```
 
-通知网页全局滚动位置。 &gt; **说明：** &gt; &gt; 通知的是页面全局滚动位置，局部滚动位置的变化是无法触发此回调。 &gt; &gt; 判断页面是否是全局滚动，在滚动前后打印window.pageYOffset或者window.pageXOffset。 &gt; &gt; 如果是全局滚动，window.pageYOffset或者window.pageXOffset的值在滚动前后会有变化，反之没有变化。
+通知网页全局滚动位置。
+
+> **说明：**
+> 
+> 通知的是页面全局滚动位置，局部滚动位置的变化是无法触发此回调。
+> 
+> 判断页面是否是全局滚动，在滚动前后打印window.pageYOffset或者window.pageXOffset。
+> 
+> 如果是全局滚动，window.pageYOffset或者window.pageXOffset的值在滚动前后会有变化，反之没有变化。
 
 **起始版本：** 9
 
@@ -2721,7 +3095,13 @@ onShowFileSelector(callback: Callback<OnShowFileSelectorEvent, boolean>)
 onSslErrorEvent(callback: OnSslErrorEventCallback)
 ```
 
-通知用户加载资源（主资源+子资源）时发生SSL错误，如果只想处理主资源的SSL错误，请用[isMainFrame](arkts-arkweb-webresourcerequest-c.md#ismainframe)字段进行区分。 &gt; **说明：** &gt; &gt; - 主资源：浏览器加载网页的入口文件，通常是HTML文档。 &gt; &gt; - 子资源：主资源中引用的依赖文件，由主资源解析过程中遇到特定标签时触发加载。
+通知用户加载资源（主资源+子资源）时发生SSL错误，如果只想处理主资源的SSL错误，请用[isMainFrame](arkts-arkweb-webresourcerequest-c.md#ismainframe)字段进行区分。
+
+> **说明：**
+> 
+> - 主资源：浏览器加载网页的入口文件，通常是HTML文档。
+> 
+> - 子资源：主资源中引用的依赖文件，由主资源解析过程中遇到特定标签时触发加载。
 
 **起始版本：** 12
 
@@ -2743,7 +3123,19 @@ onSslErrorEvent(callback: OnSslErrorEventCallback)
 onSslErrorEventReceive(callback: Callback<OnSslErrorEventReceiveEvent>)
 ```
 
-通知用户加载资源时发生SSL错误，只支持主资源。 如果需要支持子资源，请使用[OnSslErrorEvent](#onsslerrorevent)接口。 &gt; **说明：** &gt; &gt; - 主资源：浏览器加载网页的入口文件，通常是HTML文档。 &gt; &gt; - 子资源：主资源中引用的依赖文件，由主资源解析过程中遇到特定标签时触发加载。 &gt; &gt; - 应用程序需要调用[handler.handleCancel()](arkts-arkweb-sslerrorhandler-c.md#handlecancel)或 &gt; [handler.handleConfirm()](arkts-arkweb-sslerrorhandler-c.md#handleconfirm)处理该回调，如果没有处理该回调则默认取消资源加载。handleConfirm()或者 &gt; handleCancel()的行为可能会被记录下来，以便为将来的SSL错误做出响应。 &gt; &gt; - 应用程序可以用于显示自定义错误页面或静默记录问题。
+通知用户加载资源时发生SSL错误，只支持主资源。
+
+如果需要支持子资源，请使用[OnSslErrorEvent](#onsslerrorevent)接口。
+
+> **说明：**
+> 
+> - 主资源：浏览器加载网页的入口文件，通常是HTML文档。
+> 
+> - 子资源：主资源中引用的依赖文件，由主资源解析过程中遇到特定标签时触发加载。
+> 
+> - 应用程序需要调用[handler.handleCancel()](arkts-arkweb-sslerrorhandler-c.md#handlecancel)或 &gt; [handler.handleConfirm()](arkts-arkweb-sslerrorhandler-c.md#handleconfirm)处理该回调，如果没有处理该回调则默认取消资源加载。handleConfirm()或者 &gt; handleCancel()的行为可能会被记录下来，以便为将来的SSL错误做出响应。
+> 
+> - 应用程序可以用于显示自定义错误页面或静默记录问题。
 
 **起始版本：** 9
 
@@ -2789,7 +3181,15 @@ onSslErrorReceive(callback: (event?: { handler: Function, error: object }) => vo
 onTextSelectionChange(callback: TextSelectionChangeCallback)
 ```
 
-设置Web组件选区文本改变时的回调函数。 &gt; **说明：** &gt; &gt; - 支持手势选中、鼠标选中以及JS选中选区。 &gt; &gt; - 使用上述方式选中内容结束后触发回调。 &gt; &gt; - 使用同样方式选中和上一次相同内容时，不触发回调；使用不同方式选中和上一次相同内容时，依然触发。
+设置Web组件选区文本改变时的回调函数。
+
+> **说明：**
+> 
+> - 支持手势选中、鼠标选中以及JS选中选区。
+> 
+> - 使用上述方式选中内容结束后触发回调。
+> 
+> - 使用同样方式选中和上一次相同内容时，不触发回调；使用不同方式选中和上一次相同内容时，依然触发。
 
 **起始版本：** 23
 
@@ -2941,7 +3341,15 @@ onWindowExit(callback: () => void)
 onWindowNew(callback: Callback<OnWindowNewEvent>)
 ```
 
-在开启multiWindowAccess（多窗口访问）属性的情况下，通知应用有新建窗口请求。如需获取更丰富的窗口信息建议使用onWindowNewExt。 若不调用[setWebController](arkts-arkweb-controllerhandler-c.md#setwebcontroller)接口，会造成渲染进程阻塞。 如果没有创建新窗口，调用[setWebController](arkts-arkweb-controllerhandler-c.md#setwebcontroller)接口时设置成null，通知Web没有创建新窗口。 新窗口需避免直接覆盖在原Web组件上，且应与主页面以相同形式明确显示其URL（如地址栏）以防止用户混淆。若无法实现可信的URL可视化管理，则需考虑禁止创建新窗口。 需注意：新窗口请求来源无法可靠追溯，可能由第三方iframe发起，应用需默认采取沙箱隔离、限制权限等防御性措施以确保安全。
+在开启multiWindowAccess（多窗口访问）属性的情况下，通知应用有新建窗口请求。如需获取更丰富的窗口信息建议使用onWindowNewExt。
+
+若不调用[setWebController](arkts-arkweb-controllerhandler-c.md#setwebcontroller)接口，会造成渲染进程阻塞。
+
+如果没有创建新窗口，调用[setWebController](arkts-arkweb-controllerhandler-c.md#setwebcontroller)接口时设置成null，通知Web没有创建新窗口。
+
+新窗口需避免直接覆盖在原Web组件上，且应与主页面以相同形式明确显示其URL（如地址栏）以防止用户混淆。若无法实现可信的URL可视化管理，则需考虑禁止创建新窗口。
+
+需注意：新窗口请求来源无法可靠追溯，可能由第三方iframe发起，应用需默认采取沙箱隔离、限制权限等防御性措施以确保安全。
 
 **起始版本：** 9
 
@@ -2963,7 +3371,17 @@ onWindowNew(callback: Callback<OnWindowNewEvent>)
 onWindowNewExt(callback: Callback<OnWindowNewExtEvent>)
 ```
 
-在启用[multiWindowAccess](#multiwindowaccess)的情况下，通知应用有新建窗口请求。 &gt; **说明：** &gt; &gt; - 若不调用[setWebController](arkts-arkweb-controllerhandler-c.md#setwebcontroller)接口，会造成渲染进程阻塞。 &gt; &gt; - 若未创建新窗口，调用[setWebController](arkts-arkweb-controllerhandler-c.md#setwebcontroller)接口并设置成null，通知Web未创建新窗口。 &gt; &gt; - 新窗口需避免直接覆盖在原Web组件上，且应与主页面以相同形式明确显示其URL（如地址栏）以防止用户混淆。若无法确保URL的显示和验证机制可靠，则需考虑禁止创建新窗口。 &gt; &gt; - 新窗口请求来源无法可靠追溯，可能由第三方iframe发起，应用需默认采取沙箱隔离、限制权限等防御性措施以确保安全。
+在启用[multiWindowAccess](#multiwindowaccess)的情况下，通知应用有新建窗口请求。
+
+> **说明：**
+> 
+> - 若不调用[setWebController](arkts-arkweb-controllerhandler-c.md#setwebcontroller)接口，会造成渲染进程阻塞。
+> 
+> - 若未创建新窗口，调用[setWebController](arkts-arkweb-controllerhandler-c.md#setwebcontroller)接口并设置成null，通知Web未创建新窗口。
+> 
+> - 新窗口需避免直接覆盖在原Web组件上，且应与主页面以相同形式明确显示其URL（如地址栏）以防止用户混淆。若无法确保URL的显示和验证机制可靠，则需考虑禁止创建新窗口。
+> 
+> - 新窗口请求来源无法可靠追溯，可能由第三方iframe发起，应用需默认采取沙箱隔离、限制权限等防御性措施以确保安全。
 
 **起始版本：** 23
 
@@ -3007,7 +3425,13 @@ onlineImageAccess(onlineImageAccess: boolean)
 optimizeParserBudget(optimizeParserBudget: boolean)
 ```
 
-设置是否开启分段解析HTML优化。当属性没有显式调用时，默认使用解析时间作为HTML分段解析的分段点。 ArkWeb内核在解析HTML文档结构时采取分段解析策略，旨在避免过多占用主线程资源，并使网页具有渐进式加载能力。ArkWeb内核默认使用解析时间作为分段点，当单次解析时间超过阈值时，会中断解析，随后进行布局和渲染操作。 开启优化后，ArkWeb内核将不仅检查解析时间是否超出限制，还会额外判断解析的Token（HTML文档的最小解析单位，例如`&lt;div&gt;`、`attr="xxx"`等）数量是否超过内核规定的阈值，并下调此阈值。当页面的FCP（ First Contentful Paint 首次内容绘制）触发时会恢复成默认的中断判断逻辑。这将使得网页在FCP到来之前的解析操作更频繁，从而提高首帧内容被提前解析完成并进入渲染阶段的可能性，同时有效缩减首帧渲染的工作量，最终实 现FCP时间提前。 由于页面的FCP触发时会恢复成默认分段解析逻辑，因此分段解析HTML优化仅对每个Web组件加载的首个页面生效。
+设置是否开启分段解析HTML优化。当属性没有显式调用时，默认使用解析时间作为HTML分段解析的分段点。
+
+ArkWeb内核在解析HTML文档结构时采取分段解析策略，旨在避免过多占用主线程资源，并使网页具有渐进式加载能力。ArkWeb内核默认使用解析时间作为分段点，当单次解析时间超过阈值时，会中断解析，随后进行布局和渲染操作。
+
+开启优化后，ArkWeb内核将不仅检查解析时间是否超出限制，还会额外判断解析的Token（HTML文档的最小解析单位，例如`&lt;div&gt;`、`attr="xxx"`等）数量是否超过内核规定的阈值，并下调此阈值。当页面的FCP（ First Contentful Paint 首次内容绘制）触发时会恢复成默认的中断判断逻辑。这将使得网页在FCP到来之前的解析操作更频繁，从而提高首帧内容被提前解析完成并进入渲染阶段的可能性，同时有效缩减首帧渲染的工作量，最终实 现FCP时间提前。
+
+由于页面的FCP触发时会恢复成默认分段解析逻辑，因此分段解析HTML优化仅对每个Web组件加载的首个页面生效。
 
 **起始版本：** 15
 
@@ -3117,7 +3541,13 @@ pinchSmooth(isEnabled: boolean)
 registerNativeEmbedRule(tag: string, type:string)
 ```
 
-注册使用同层渲染的HTML标签名和类型。标签名仅支持使用&lt;object\&gt;和&lt;embed\&gt;。标签类型只能使用ASCII可显示字符。 若指定类型与W3C定义的&lt;object\&gt;或&lt;embed\&gt;标准类型重合，ArkWeb内核将其识别为非同层标签。 本接口同样受enableNativeEmbedMode接口控制，在未使能同层渲染时本接口无效。在不使用本接口的情况下，ArkWeb内核默认将"native/"前缀类型的&lt;embed\&gt;标签识别为同层标签。 具体使用详情请参考[同层渲染](../../../web/web-same-layer.md#web页面中同层渲染输入框)指南。
+注册使用同层渲染的HTML标签名和类型。标签名仅支持使用&lt;object\&gt;和&lt;embed\&gt;。标签类型只能使用ASCII可显示字符。
+
+若指定类型与W3C定义的&lt;object\&gt;或&lt;embed\&gt;标准类型重合，ArkWeb内核将其识别为非同层标签。
+
+本接口同样受enableNativeEmbedMode接口控制，在未使能同层渲染时本接口无效。在不使用本接口的情况下，ArkWeb内核默认将"native/"前缀类型的&lt;embed\&gt;标签识别为同层标签。
+
+具体使用详情请参考[同层渲染](../../../web/web-same-layer.md#web页面中同层渲染输入框)指南。
 
 **起始版本：** 12
 
@@ -3160,7 +3590,15 @@ rotateRenderEffect(effect: WebRotateEffect)
 runJavaScriptOnDocumentEnd(scripts: Array<ScriptItem>)
 ```
 
-将JavaScript脚本注入到Web组件中，当指定页面或者文档加载完成时，该脚本将在其来源与scriptRules匹配的任何页面中执行。当属性没有显式调用时，默认不将JavaScript脚本注入到Web组件中。 &gt; **说明：** &gt; &gt; - 该脚本将在页面的任何JavaScript代码之后运行，并且DOM树此时已经加载、渲染完毕。 &gt; &gt; - 该脚本按照数组本身顺序执行。 &gt; &gt; - 内容相同的脚本多次注入时将被静默去重，不展示，不提醒，使用首次注入时的scriptRules。
+将JavaScript脚本注入到Web组件中，当指定页面或者文档加载完成时，该脚本将在其来源与scriptRules匹配的任何页面中执行。当属性没有显式调用时，默认不将JavaScript脚本注入到Web组件中。
+
+> **说明：**
+> 
+> - 该脚本将在页面的任何JavaScript代码之后运行，并且DOM树此时已经加载、渲染完毕。
+> 
+> - 该脚本按照数组本身顺序执行。
+> 
+> - 内容相同的脚本多次注入时将被静默去重，不展示，不提醒，使用首次注入时的scriptRules。
 
 **起始版本：** 15
 
@@ -3180,7 +3618,15 @@ runJavaScriptOnDocumentEnd(scripts: Array<ScriptItem>)
 runJavaScriptOnDocumentStart(scripts: Array<ScriptItem>)
 ```
 
-将JavaScript脚本注入到Web组件中，当指定页面或者文档开始加载时，该脚本将在其来源与scriptRules匹配的任何页面中执行。当属性没有显式调用时，默认不将JavaScript脚本注入到Web组件中。 &gt; **说明：** &gt; &gt; - 网页文档根元素（HTML Element）创建后、但尚未加载任何其他内容之前注入脚本。 &gt; &gt; - 该脚本按照数组本身顺序执行。 &gt; &gt; - 内容相同的脚本多次注入时将被静默去重，不展示，不提醒，使用首次注入时的scriptRules。
+将JavaScript脚本注入到Web组件中，当指定页面或者文档开始加载时，该脚本将在其来源与scriptRules匹配的任何页面中执行。当属性没有显式调用时，默认不将JavaScript脚本注入到Web组件中。
+
+> **说明：**
+> 
+> - 网页文档根元素（HTML Element）创建后、但尚未加载任何其他内容之前注入脚本。
+> 
+> - 该脚本按照数组本身顺序执行。
+> 
+> - 内容相同的脚本多次注入时将被静默去重，不展示，不提醒，使用首次注入时的scriptRules。
 
 **起始版本：** 15
 
@@ -3200,7 +3646,13 @@ runJavaScriptOnDocumentStart(scripts: Array<ScriptItem>)
 runJavaScriptOnHeadEnd(scripts: Array<ScriptItem>)
 ```
 
-将JavaScript脚本注入到Web组件中，当页面DOM树head标签解析完成时，该脚本将在其来源与scriptRules匹配的任何页面中执行。当属性没有显式调用时，默认不将JavaScript脚本注入到Web组件中。 &gt; **说明：** &gt; &gt; - 该脚本按照数组本身顺序执行。 &gt; &gt; - 内容相同的脚本多次注入时将被静默去重，不展示，不提醒，使用首次注入时的scriptRules。
+将JavaScript脚本注入到Web组件中，当页面DOM树head标签解析完成时，该脚本将在其来源与scriptRules匹配的任何页面中执行。当属性没有显式调用时，默认不将JavaScript脚本注入到Web组件中。
+
+> **说明：**
+> 
+> - 该脚本按照数组本身顺序执行。
+> 
+> - 内容相同的脚本多次注入时将被静默去重，不展示，不提醒，使用首次注入时的scriptRules。
 
 **起始版本：** 15
 
@@ -3242,7 +3694,13 @@ scrollbarLayoutPolicy(policy: ScrollbarLayoutPolicy)
 selectionMenuOptions(expandedMenuOptions: Array<ExpandedMenuItemOptions>)
 ```
 
-Web组件自定义菜单扩展项接口，允许用户设置扩展项的文本内容、图标、回调方法。 该接口只支持选中纯文本，当选中内容包含图片及其他非文本内容时，action信息中会显示乱码。 &gt; **说明：** &gt; &gt; 本接口在与[editMenuOptions](#editmenuoptions)同时使用时，本接口不生效。
+Web组件自定义菜单扩展项接口，允许用户设置扩展项的文本内容、图标、回调方法。
+
+该接口只支持选中纯文本，当选中内容包含图片及其他非文本内容时，action信息中会显示乱码。
+
+> **说明：**
+> 
+> 本接口在与[editMenuOptions](#editmenuoptions)同时使用时，本接口不生效。
 
 **起始版本：** 12
 
@@ -3290,7 +3748,21 @@ tableData(tableData: boolean)
 textAutosizing(textAutosizing: boolean)
 ```
 
-设置Web组件是否开启文本字体大小自动调整。当属性没有显式调用时，Web组件默认开启文本字体大小自动调整。 文本字体大小自动调整生效后，对于字号过小的文本将自动加大字号至16px~32px，避免屏幕较小（默认视口宽度 &lt; 980px）的设备因为缺少移动端适配出现字体过小的可读性问题。 &gt; **说明：** &gt; &gt; - 文本字体大小自动调整生效需要满足的前置条件： &gt; &gt; - 设备形态为：Phone、Tablet、Wearable、TV。 &gt; &gt; - Web组件视口宽度 &lt; 980px。 &gt; &gt; - 页面文本量大，页面文本的字号*字符数 ≥ 3920。 &gt; &gt; - 前端无metaViewport设置，或metaViewport设置中无"width"和"initial-scale"属性。
+设置Web组件是否开启文本字体大小自动调整。当属性没有显式调用时，Web组件默认开启文本字体大小自动调整。
+
+文本字体大小自动调整生效后，对于字号过小的文本将自动加大字号至16px~32px，避免屏幕较小（默认视口宽度 &lt; 980px）的设备因为缺少移动端适配出现字体过小的可读性问题。
+
+&gt; **说明：**
+> 
+> - 文本字体大小自动调整生效需要满足的前置条件：
+> 
+> - 设备形态为：Phone、Tablet、Wearable、TV。
+> 
+> - Web组件视口宽度 &lt; 980px。
+&gt; 
+> - 页面文本量大，页面文本的字号*字符数 ≥ 3920。
+> 
+> - 前端无metaViewport设置，或metaViewport设置中无"width"和"initial-scale"属性。
 
 **起始版本：** 12
 
@@ -3382,7 +3854,13 @@ userAgent(userAgent: string)
 verticalScrollBarAccess(verticalScrollBar: boolean)
 ```
 
-设置是否显示纵向滚动条，包括系统默认滚动条和用户自定义滚动条。该属性没有显式调用时，默认显示。 &gt; **说明：** &gt; &gt; - 通过@State变量控制纵向滚动条的隐藏/显示后，需要调用controller.refresh()生效。 &gt; &gt; - 通过@State变量频繁动态改变时，建议切换开关变量和Web组件一一对应。
+设置是否显示纵向滚动条，包括系统默认滚动条和用户自定义滚动条。该属性没有显式调用时，默认显示。
+
+> **说明：**
+> 
+> - 通过@State变量控制纵向滚动条的隐藏/显示后，需要调用controller.refresh()生效。
+> 
+> - 通过@State变量频繁动态改变时，建议切换开关变量和Web组件一一对应。
 
 **起始版本：** 9
 
@@ -3404,7 +3882,9 @@ verticalScrollBarAccess(verticalScrollBar: boolean)
 webCursiveFont(family: string)
 ```
 
-设置网页的cursive font字体库，用于渲染html前端使用cursive字体的元素。 当属性没有显式调用时，默认网页的cursive font字体库为cursive。
+设置网页的cursive font字体库，用于渲染html前端使用cursive字体的元素。
+
+当属性没有显式调用时，默认网页的cursive font字体库为cursive。
 
 **起始版本：** 9
 
@@ -3426,7 +3906,9 @@ webCursiveFont(family: string)
 webFantasyFont(family: string)
 ```
 
-设置网页的fantasy font字体库，用于渲染html前端使用fantasy字体的元素。 当属性没有显式调用时，默认网页的fantasy font字体库为fantasy。
+设置网页的fantasy font字体库，用于渲染html前端使用fantasy字体的元素。
+
+当属性没有显式调用时，默认网页的fantasy font字体库为fantasy。
 
 **起始版本：** 9
 
@@ -3448,7 +3930,9 @@ webFantasyFont(family: string)
 webFixedFont(family: string)
 ```
 
-设置网页的fixed font字体库，用于渲染html前端使用monospace字体的元素。 当属性没有显式调用时，默认网页的fixed font字体库为monospace。
+设置网页的fixed font字体库，用于渲染html前端使用monospace字体的元素。
+
+当属性没有显式调用时，默认网页的fixed font字体库为monospace。
 
 **起始版本：** 9
 
@@ -3470,7 +3954,9 @@ webFixedFont(family: string)
 webSansSerifFont(family: string)
 ```
 
-设置网页的sans-serif font字体库，用于渲染html前端使用sans-serif字体的元素。 当属性没有显式调用时，默认网页的sans-serif font字体库为sans-serif。
+设置网页的sans-serif font字体库，用于渲染html前端使用sans-serif字体的元素。
+
+当属性没有显式调用时，默认网页的sans-serif font字体库为sans-serif。
 
 **起始版本：** 9
 
@@ -3492,7 +3978,9 @@ webSansSerifFont(family: string)
 webSerifFont(family: string)
 ```
 
-设置网页的serif font字体库，用于渲染html前端使用serif字体的元素。 当属性没有显式调用时，默认网页的serif font字体库为serif。
+设置网页的serif font字体库，用于渲染html前端使用serif字体的元素。
+
+当属性没有显式调用时，默认网页的serif font字体库为serif。
 
 **起始版本：** 9
 
@@ -3514,7 +4002,9 @@ webSerifFont(family: string)
 webStandardFont(family: string)
 ```
 
-设置网页的standard font字体库，用于渲染html前端未指定字体样式的元素。 当属性没有显式调用时，默认网页的standard font字体库为sans-serif。
+设置网页的standard font字体库，用于渲染html前端未指定字体样式的元素。
+
+当属性没有显式调用时，默认网页的standard font字体库为sans-serif。
 
 **起始版本：** 9
 
@@ -3582,7 +4072,9 @@ zoomAccess(zoomAccess: boolean)
 zoomControlAccess(zoomControlAccess: boolean)
 ```
 
-设置是否允许通过组合按键（Ctrl+'-/+'或Ctrl+鼠标滚轮/触摸板）进行缩放。 当属性没有显式调用时，默认允许通过组合按键进行缩放。
+设置是否允许通过组合按键（Ctrl+'-/+'或Ctrl+鼠标滚轮/触摸板）进行缩放。
+
+当属性没有显式调用时，默认允许通过组合按键进行缩放。
 
 **起始版本：** 22
 

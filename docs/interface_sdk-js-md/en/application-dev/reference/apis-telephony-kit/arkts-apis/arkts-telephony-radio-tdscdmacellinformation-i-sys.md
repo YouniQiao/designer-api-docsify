@@ -2,6 +2,8 @@
 
 Obtains TDSCDMA cell information.
 
+@interface TdscdmaCellInformation
+
 **Since:** 23
 
 <!--Device-radio-export interface TdscdmaCellInformation--><!--Device-radio-export interface TdscdmaCellInformation-End-->

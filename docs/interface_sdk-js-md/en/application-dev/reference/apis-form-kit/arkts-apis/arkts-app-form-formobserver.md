@@ -2,6 +2,8 @@
 
 Interface of formObserver.
 
+@namespace formObserver
+
 **Since:** 23
 
 <!--Device-unnamed-declare namespace formObserver--><!--Device-unnamed-declare namespace formObserver-End-->

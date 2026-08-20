@@ -12,7 +12,12 @@ import { formHost } from '@kit.FormKit';
 function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>, callback: AsyncCallback<void>): void
 ```
 
-Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework &gt; checks whether the destination is proper and whether the widget has the redirection permission, and then &gt; triggers redirection accordingly. For a widget that is added to a widget host and has a router proxy configured, &gt; in the case of router-based redirection, the widget framework does not trigger redirection for the widget. &gt; - Only one router proxy can be set for a widget. If multiple proxies are set, only the last proxy takes effect.
+Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework &gt; checks whether the destination is proper and whether the widget has the redirection permission, and then &gt; triggers redirection accordingly. For a widget that is added to a widget host and has a router proxy configured, &gt; in the case of router-based redirection, the widget framework does not trigger redirection for the widget.
+> - Only one router proxy can be set for a widget. If multiple proxies are set, only the last proxy takes effect.
 
 **Since:** 23
 
@@ -36,13 +41,13 @@ Sets a router proxy for widgets and obtains the Want information required for re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
-| [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
 
 
 ## setRouterProxy
@@ -51,7 +56,13 @@ Sets a router proxy for widgets and obtains the Want information required for re
 function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>): Promise<void>
 ```
 
-Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses a promise to return the result. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework &gt; checks whether the destination is proper and whether the widget has the redirection permission, and then &gt; triggers redirection accordingly. For a widget that is added to a widget host and has a router proxy configured, &gt; in the case of router-based redirection, the widget framework does not trigger redirection for the widget. &gt; &gt; - Only one router proxy can be set for a widget. If multiple proxies are set, only the last proxy takes effect.
+Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses a promise to return the result. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework &gt; checks whether the destination is proper and whether the widget has the redirection permission, and then &gt; triggers redirection accordingly. For a widget that is added to a widget host and has a router proxy configured, &gt; in the case of router-based redirection, the widget framework does not trigger redirection for the widget.
+> 
+> - Only one router proxy can be set for a widget. If multiple proxies are set, only the last proxy takes effect.
 
 **Since:** 23
 
@@ -80,11 +91,11 @@ Sets a router proxy for widgets and obtains the Want information required for re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
-| [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
 

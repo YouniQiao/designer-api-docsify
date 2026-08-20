@@ -1,6 +1,8 @@
-# ModelConfig(智慧数据平台)
+# ModelConfig
 
 管理嵌入模型的配置信息。
+
+@interface ModelConfig
 
 **起始版本：** 23
 

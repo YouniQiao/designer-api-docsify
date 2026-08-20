@@ -1,0 +1,32 @@
+# FormMenuItemStyle
+
+**起始版本：** 23
+
+<!--Device-unnamed-export interface FormMenuItemStyle--><!--Device-unnamed-export interface FormMenuItemStyle-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { AddFormMenuItem, FormMenuItemStyle, AddFormOptions } from '@kit.ArkUI';
+```
+
+## options
+
+```TypeScript
+options?: MenuItemOptions
+```
+
+Defines options of the form menu.
+
+**类型：** MenuItemOptions
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FormMenuItemStyle-options?: MenuItemOptions--><!--Device-FormMenuItemStyle-options?: MenuItemOptions-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+

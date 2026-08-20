@@ -18,7 +18,7 @@ Navigates to a specified page in the application.
 
 **Deprecated since:** 9
 
-**Substitutes:** [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl)(options: router.RouterOptions)
+**Substitutes:** [pushUrl](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#pushurl)(options: router.RouterOptions)
 
 <!--Device-router-function push(options: RouterOptions): void--><!--Device-router-function push(options: RouterOptions): void-End-->
 

@@ -26,5 +26,5 @@ type DeleteFn = (
 | --- | --- | --- | --- |
 | uri | string | 是 | Indicates the database table storing the data to delete. |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | Indicates filter criteria. If this parameter is null, all data records will be deleted by default. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | Returns the number of data records deleted. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | Returns the number of data records deleted. |
 

@@ -2,6 +2,8 @@
 
 Defines the options of border.
 
+@interface BorderOptions
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare interface BorderOptions--><!--Device-unnamed-declare interface BorderOptions-End-->

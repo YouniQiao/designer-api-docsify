@@ -2,6 +2,8 @@
 
 Defines the response of ShowDialog.
 
+@interface ShowDialogSuccessResponse
+
 **Since:** 11
 
 <!--Device-unnamed-export interface ShowDialogSuccessResponse--><!--Device-unnamed-export interface ShowDialogSuccessResponse-End-->

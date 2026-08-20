@@ -2,6 +2,8 @@
 
 Defining Environment variable enumeration value.
 
+@enum { string }
+
 **Since:** 22
 
 <!--Device-unnamed-declare enum SystemProperties--><!--Device-unnamed-declare enum SystemProperties-End-->

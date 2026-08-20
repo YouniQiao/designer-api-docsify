@@ -42,11 +42,11 @@ function getAllExtBundleStats(userId: int): Promise<Array<ExtBundleStats>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13600013 | Failed to query all business space usage. |
-| 13600010 | The input parameter is invalid. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | 13600001 | IPC error. |
+| 13600010 | The input parameter is invalid. |
+| 13600013 | Failed to query all business space usage. |
 
 **示例**
 

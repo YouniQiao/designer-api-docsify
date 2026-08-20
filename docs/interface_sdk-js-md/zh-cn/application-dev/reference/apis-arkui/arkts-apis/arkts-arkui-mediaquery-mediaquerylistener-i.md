@@ -1,8 +1,10 @@
 # MediaQueryListener
 
-媒体查询的句柄，并包含了申请句柄时的首次查询结果。媒体查询根据设置的条件语句，比如'(width &lt;= 600vp)'，比较系统信息，若首次查询时相关信息未初始化，matches返回false。 继承自[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)。
+媒体查询的句柄，并包含了申请句柄时的首次查询结果。媒体查询根据设置的条件语句，比如'(width &lt;= 600vp)'，比较系统信息，若首次查询时相关信息未初始化，matches返回false。
 
-**继承/实现关系：** MediaQueryListener extends [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)
+继承自[MediaQueryResult](../../apis-default/arkts-apis/arkts-mediaquery-mediaqueryresult-i.md)。
+
+**继承/实现关系：** MediaQueryListener extends [MediaQueryResult](../../apis-default/arkts-apis/arkts-mediaquery-mediaqueryresult-i.md)
 
 **起始版本：** 7
 
@@ -39,7 +41,7 @@ off(type: 'change', callback?: Callback<MediaQueryResult>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'change' | 是 | 必须填写字符串'change'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | 否 | 需要取消注册的回调，如果参数缺省则注销该句柄下所有的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaQueryResult](../../apis-default/arkts-apis/arkts-mediaquery-mediaqueryresult-i.md)&gt; | 否 | 需要取消注册的回调，如果参数缺省则注销该句柄下所有的回调。 |
 
 **示例**
 
@@ -64,7 +66,11 @@ listener.off('change', onPortrait) // 注销回调
 on(type: 'change', callback: Callback<MediaQueryResult>): void
 ```
 
-通过句柄向对应的查询条件注册回调，当媒体属性发生变更时会触发该回调。 &gt; **说明：** &gt; &gt; 注册的回调中不允许进一步调用on或off。
+通过句柄向对应的查询条件注册回调，当媒体属性发生变更时会触发该回调。
+
+> **说明：**
+> 
+> 注册的回调中不允许进一步调用on或off。
 
 **起始版本：** 7
 
@@ -81,7 +87,7 @@ on(type: 'change', callback: Callback<MediaQueryResult>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'change' | 是 | 必须填写字符串'change'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | 是 | 向媒体查询注册的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaQueryResult](../../apis-default/arkts-apis/arkts-mediaquery-mediaqueryresult-i.md)&gt; | 是 | 向媒体查询注册的回调。 |
 
 **示例**
 

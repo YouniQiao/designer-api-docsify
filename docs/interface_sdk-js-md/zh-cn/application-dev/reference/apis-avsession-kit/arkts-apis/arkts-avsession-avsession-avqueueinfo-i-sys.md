@@ -2,6 +2,8 @@
 
 歌单（歌曲列表）的相关属性。
 
+@interface AVQueueInfo
+
 **起始版本：** 23
 
 <!--Device-avSession-interface AVQueueInfo--><!--Device-avSession-interface AVQueueInfo-End-->

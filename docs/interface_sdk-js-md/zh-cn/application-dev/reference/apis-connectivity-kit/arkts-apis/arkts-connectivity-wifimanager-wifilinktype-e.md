@@ -1,6 +1,6 @@
 # WifiLinkType
 
-WLAN连接类型。
+WLAN连接类型。 @enum { int }
 
 **起始版本：** 23
 

@@ -33,7 +33,7 @@ function updateForm(
 | --- | --- | --- | --- |
 | formId | string | 是 | 请求更新的卡片标识。 |
 | formBindingData | formBindingData.FormBindingData | 是 | 用于更新的数据。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **示例**
 

@@ -1,4 +1,4 @@
-# ShowDialogSuccessResponse(弹窗)
+# ShowDialogSuccessResponse
 
 定义ShowDialog的响应。
 

@@ -1,6 +1,10 @@
 # HmacSpec
 
-消息认证码参数[MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md)的子类，作为HMAC计算的输入。 &gt; **说明：** &gt; &gt; mdName是必选参数，表示HMAC摘要算法。
+消息认证码参数[MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md)的子类，作为HMAC计算的输入。
+
+> **说明：**
+> 
+> mdName是必选参数，表示HMAC摘要算法。
 
 **继承/实现关系：** HmacSpec extends [MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md)
 

@@ -12,7 +12,9 @@ import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 function updateEnabledBusinessIds(templateId: Uint8Array, enabledBusinessIds: int[]): Promise<void>
 ```
 
-更新指定伴随设备模板支持的业务范围。用于修改已注册模板的启用业务ID列表，从而控制该模板可参与的业务场景。使用Promise异步回调。 生效机制：更新立即生效，下一次认证按新的业务范围判断，无需重启应用或重新认证。
+更新指定伴随设备模板支持的业务范围。用于修改已注册模板的启用业务ID列表，从而控制该模板可参与的业务场景。使用Promise异步回调。
+
+生效机制：更新立即生效，下一次认证按新的业务范围判断，无需重启应用或重新认证。
 
 **起始版本：** 23
 
@@ -43,11 +45,11 @@ function updateEnabledBusinessIds(templateId: Uint8Array, enabledBusinessIds: in
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
-| [32600003](../errorcode-useriam.md#32600003-业务id无效) | The business ID is invalid. |
-| [32600002](../errorcode-useriam.md#32600002-模板未找到) | The template is not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
+| [32600002](../errorcode-useriam.md#32600002-模板未找到) | The template is not found. |
+| [32600003](../errorcode-useriam.md#32600003-业务id无效) | The business ID is invalid. |
 
 **示例**
 

@@ -1,4 +1,4 @@
-# KeyProcessingMode(Provide some common interface for focus.)
+# KeyProcessingMode
 
 设置按键事件处理的优先级。
 

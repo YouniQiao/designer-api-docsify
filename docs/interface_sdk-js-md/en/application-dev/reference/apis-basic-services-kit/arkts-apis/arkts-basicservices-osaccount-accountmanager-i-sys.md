@@ -43,14 +43,14 @@ Activates an OS account. This API uses an asynchronous callback to return the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated.<br>**Applicable version:** 12 and later |
-| [12300009](../errorcode-account.md#12300009-account-already-activated) | Account has been activated.<br>**Applicable version:** 7 - 11 |
-| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300009](../errorcode-account.md#12300009-account-already-activated) | Account has been activated.<br>**Applicable version:** 7 - 11 |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated.<br>**Applicable version:** 12 and later |
 | [12300016](../errorcode-account.md#12300016-login-accounts-reached-the-limit) | The number of logged in accounts reaches the upper limit.<br>**Applicable version:** 12 and later |
 
 ## activateOsAccount
@@ -87,14 +87,14 @@ Activates an OS account. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated.<br>**Applicable version:** 12 and later |
-| [12300009](../errorcode-account.md#12300009-account-already-activated) | Account has been activated.<br>**Applicable version:** 7 - 11 |
-| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300009](../errorcode-account.md#12300009-account-already-activated) | Account has been activated.<br>**Applicable version:** 7 - 11 |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated.<br>**Applicable version:** 12 and later |
 | [12300016](../errorcode-account.md#12300016-login-accounts-reached-the-limit) | The number of logged in accounts reaches the upper limit.<br>**Applicable version:** 12 and later |
 
 ## activateOsAccount
@@ -132,16 +132,16 @@ Activates (Starts on the foreground or switches to) the target OS account on the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated. |
-| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300019](../errorcode-account.md#12300019-cross-display-activation-not-supported) | Cross-display activation not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300018](../errorcode-account.md#12300018-logical-display-not-found) | Display not found. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated. |
 | [12300016](../errorcode-account.md#12300016-login-accounts-reached-the-limit) | The number of logged in accounts reaches the upper limit. |
+| [12300018](../errorcode-account.md#12300018-logical-display-not-found) | Display not found. |
+| [12300019](../errorcode-account.md#12300019-cross-display-activation-not-supported) | Cross-display activation not supported. |
 
 ## bindDomainAccount
 
@@ -178,16 +178,16 @@ Binds a domain account to an OS account. This API uses a promise to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target OS account or domain account is being operated. |
-| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted OS account. Possible causes: The OS account cannot be bound. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | The OS account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid domain account information. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300022](../errorcode-account.md#12300022-domain-account-already-bound) | The domain account is already bound. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid domain account information. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | The OS account not found. |
+| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted OS account. Possible causes: The OS account cannot be bound. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target OS account or domain account is being operated. |
 | [12300021](../errorcode-account.md#12300021-os-account-already-bound) | The OS account is already bound. |
+| [12300022](../errorcode-account.md#12300022-domain-account-already-bound) | The domain account is already bound. |
 
 **Examples**
 
@@ -241,15 +241,15 @@ Creates an OS account. This API uses an asynchronous callback to return the resu
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localName or type. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localName or type. |
+| [12300004](../errorcode-account.md#12300004-account-already-exists) | Local name already exists.<br>**Applicable version:** 12 and later |
+| [12300005](../errorcode-account.md#12300005-multiple-users-not-supported) | Multi-user not supported. |
+| [12300006](../errorcode-account.md#12300006-unsupported-account-type) | Unsupported account type. |
 | [12300007](../errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts has reached the upper limit. |
 | [12300023](../errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
-| [12300006](../errorcode-account.md#12300006-unsupported-account-type) | Unsupported account type. |
-| [12300005](../errorcode-account.md#12300005-multiple-users-not-supported) | Multi-user not supported. |
-| [12300004](../errorcode-account.md#12300004-account-already-exists) | Local name already exists.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -308,17 +308,17 @@ Creates an OS account. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300015](../errorcode-account.md#12300015-duplicate-short-name) | The short name already exists.<br>**Applicable version:** 12 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localName, type or options. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
-| [12300007](../errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts has reached the upper limit. |
-| [12300023](../errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
-| [12300006](../errorcode-account.md#12300006-unsupported-account-type) | Unsupported account type. |
-| [12300005](../errorcode-account.md#12300005-multiple-users-not-supported) | Multi-user not supported. |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localName, type or options. |
 | [12300004](../errorcode-account.md#12300004-account-already-exists) | Local name already exists.<br>**Applicable version:** 12 and later |
+| [12300005](../errorcode-account.md#12300005-multiple-users-not-supported) | Multi-user not supported. |
+| [12300006](../errorcode-account.md#12300006-unsupported-account-type) | Unsupported account type. |
+| [12300007](../errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts has reached the upper limit. |
+| [12300015](../errorcode-account.md#12300015-duplicate-short-name) | The short name already exists.<br>**Applicable version:** 12 and later |
+| [12300023](../errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
 
 **Examples**
 
@@ -378,17 +378,17 @@ Creates an OS account and associates it with the specified domain account. This 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 12 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or domainInfo. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 12 and later |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or domainInfo. |
+| [12300004](../errorcode-account.md#12300004-account-already-exists) | Account already exists. |
+| [12300005](../errorcode-account.md#12300005-multiple-users-not-supported) | Multi-user not supported. |
+| [12300006](../errorcode-account.md#12300006-unsupported-account-type) | Unsupported account type. |
 | [12300007](../errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts has reached the upper limit. |
 | [12300023](../errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
-| [12300006](../errorcode-account.md#12300006-unsupported-account-type) | Unsupported account type. |
-| [12300005](../errorcode-account.md#12300005-multiple-users-not-supported) | Multi-user not supported. |
-| [12300004](../errorcode-account.md#12300004-account-already-exists) | Account already exists. |
 
 **Examples**
 
@@ -449,18 +449,18 @@ Creates an OS account and associates it with the specified domain account. This 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 12 and later |
-| [12300015](../errorcode-account.md#12300015-duplicate-short-name) | The short name already exists.<br>**Applicable version:** 12 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type, domainInfo or options. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
-| [12300007](../errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts has reached the upper limit. |
-| [12300023](../errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
-| [12300006](../errorcode-account.md#12300006-unsupported-account-type) | Unsupported account type. |
-| [12300005](../errorcode-account.md#12300005-multiple-users-not-supported) | Multi-user not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 12 and later |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type, domainInfo or options. |
 | [12300004](../errorcode-account.md#12300004-account-already-exists) | Account already exists. |
+| [12300005](../errorcode-account.md#12300005-multiple-users-not-supported) | Multi-user not supported. |
+| [12300006](../errorcode-account.md#12300006-unsupported-account-type) | Unsupported account type. |
+| [12300007](../errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts has reached the upper limit. |
+| [12300015](../errorcode-account.md#12300015-duplicate-short-name) | The short name already exists.<br>**Applicable version:** 12 and later |
+| [12300023](../errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
 
 **Examples**
 
@@ -520,13 +520,13 @@ Deactivates (logs out of) an OS account. This API uses a promise to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated. |
-| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated. |
 
 ## getBundleIdForUid
 
@@ -555,10 +555,10 @@ Obtains the bundle ID based on the specified UID. This API uses an asynchronous 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
 
 **Examples**
 
@@ -613,10 +613,10 @@ Obtains the bundle ID based on the specified UID. This API uses a promise to ret
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
 
 **Examples**
 
@@ -669,9 +669,9 @@ Obtains the bundle ID based on the specified UID. The API returns the result syn
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 **Examples**
 
@@ -723,11 +723,11 @@ Obtains all the enabled constraints of an OS account. This API uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 ## getForegroundOsAccountDisplayId
 
@@ -875,12 +875,12 @@ Obtains the constraint source information of an OS account. This API uses an asy
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or constraint. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or constraint. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 **Examples**
 
@@ -938,12 +938,12 @@ Obtains the constraint source information of an OS account. This API uses a prom
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or constraint. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or constraint. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 **Examples**
 
@@ -993,12 +993,12 @@ Obtains the profile photo of an OS account. This API uses an asynchronous callba
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 ## getOsAccountProfilePhoto
 
@@ -1034,12 +1034,12 @@ Obtains the profile photo of an OS account. This API uses a promise to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 ## getOsAccountType
 
@@ -1075,11 +1075,11 @@ Obtains the type of a specified OS account. This API uses a promise to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 **Examples**
 
@@ -1128,9 +1128,9 @@ Checks whether the current process belongs to the main OS account. This API uses
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 **Examples**
@@ -1237,11 +1237,11 @@ Checks whether an OS account is activated. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 ## isOsAccountConstraintEnabled
 
@@ -1278,11 +1278,11 @@ Checks whether a constraint is enabled for an OS account. This API uses a promis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 ## isOsAccountUnlocked
 
@@ -1318,11 +1318,11 @@ Checks whether an OS account has been verified. This API uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 **Examples**
 
@@ -1373,9 +1373,9 @@ Unsubscribes from the event indicating the completion of an OS account activatio
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
 
 ## offActivating
 
@@ -1407,9 +1407,9 @@ Unsubscribes from the event indicating that an OS account is being activated.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
 
 ## offConstraintChanged
 
@@ -1560,11 +1560,11 @@ Unsubscribes from the OS account activation states, including the states of the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
 
 **Examples**
 
@@ -1615,11 +1615,11 @@ Unsubscribes from the OS account activation states, including the states of the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
 
 **Examples**
 
@@ -1672,9 +1672,9 @@ Unsubscribes from the end of a switchover between a foreground OS account and a 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
 
 **Examples**
 
@@ -1722,9 +1722,9 @@ Unsubscribes from the switchover between a foreground OS account and a backgroun
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
 
 **Examples**
 
@@ -1770,9 +1770,9 @@ Subscribes to the event indicating the completion of an OS account activation.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
 
 ## onActivating
 
@@ -1804,9 +1804,9 @@ Subscribes to the event indicating that an OS account is being activated.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
 
 ## onConstraintChanged
 
@@ -1835,9 +1835,9 @@ Subscribes to one or more constraint change events of the OS account to which th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | One or more constraints are invalid. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | One or more constraints are invalid. |
 
 **Examples**
 
@@ -1952,11 +1952,11 @@ Subscribes to the OS account activation states, including the states of the acco
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
 
 **Examples**
 
@@ -2007,11 +2007,11 @@ Subscribes to the OS account activation states, including the states of the acco
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
 
 **Examples**
 
@@ -2064,9 +2064,9 @@ Subscribes to the end of a switchover between a foreground OS account and a back
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
 
 **Examples**
 
@@ -2119,9 +2119,9 @@ Subscribes to the switchover between a foreground OS account and a background OS
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
 
 **Examples**
 
@@ -2170,9 +2170,9 @@ Queries information about all the OS accounts created. This API uses an asynchro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 **Examples**
@@ -2318,8 +2318,8 @@ Queries the maximum number of OS accounts that can be created. This API uses an 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 **Examples**
@@ -2468,12 +2468,12 @@ Queries information about the OS account of the given ID. This API uses an async
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 ## queryOsAccountById
 
@@ -2509,12 +2509,12 @@ Queries information about the OS account of the given ID. This API uses a promis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 ## removeOsAccount
 
@@ -2545,14 +2545,14 @@ Removes an OS account. This API uses an asynchronous callback to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated on. |
-| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated on. |
 
 **Examples**
 
@@ -2612,14 +2612,14 @@ Removes an OS account. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated. |
-| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated. |
 
 **Examples**
 
@@ -2678,14 +2678,14 @@ Removes a specified OS account based on the options. This API uses a promise to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated on. |
-| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId or options. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId or options. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated on. |
 
 **Examples**
 
@@ -2744,13 +2744,13 @@ Sets or removes constraints for an OS account. This API uses an asynchronous cal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId or constraints. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId or constraints. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
 
 ## setOsAccountConstraints
 
@@ -2788,13 +2788,13 @@ Sets or removes constraints for an OS account. This API uses a promise to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId or constraints. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId or constraints. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
 
 ## setOsAccountName
 
@@ -2826,13 +2826,13 @@ Sets the name of an OS account. This API uses an asynchronous callback to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId or localName. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId or localName. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
 
 ## setOsAccountName
 
@@ -2869,13 +2869,13 @@ Sets the name of an OS account. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId or localName. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId or localName. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
 
 ## setOsAccountProfilePhoto
 
@@ -2907,13 +2907,13 @@ Sets a profile photo for an OS account. This API uses an asynchronous callback t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId or photo. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId or photo. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
 
 ## setOsAccountProfilePhoto
 
@@ -2950,13 +2950,13 @@ Sets a profile photo for an OS account. This API uses a promise to return the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId or photo. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId or photo. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
 
 ## setOsAccountType
 
@@ -2994,14 +2994,14 @@ Sets the type of a specified OS account. This API uses a promise to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated. |
-| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted OS account. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or options. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or options. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted OS account. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated. |
 | [12300023](../errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit. |
 
 **Examples**

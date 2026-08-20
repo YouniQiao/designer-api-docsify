@@ -18,7 +18,7 @@ Translates this matrix object along the x, y, and z axes.
 
 **Deprecated since:** 10
 
-**Substitutes:** [translate](../../apis-na/arkts-apis/arkts-na-matrix4-matrix4transit-i.md#translate)
+**Substitutes:** [translate](arkts-arkui-matrix4-matrix4transit-i.md#translate)
 
 <!--Device-matrix4-function translate(options: TranslateOption): Matrix4Transit--><!--Device-matrix4-function translate(options: TranslateOption): Matrix4Transit-End-->
 
@@ -28,7 +28,7 @@ Translates this matrix object along the x, y, and z axes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TranslateOption](../../apis-na/arkts-apis/arkts-na-matrix4-translateoption-i.md) | Yes | Translation configuration. |
+| options | [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | Yes | Translation configuration. |
 
 **Return value:**
 

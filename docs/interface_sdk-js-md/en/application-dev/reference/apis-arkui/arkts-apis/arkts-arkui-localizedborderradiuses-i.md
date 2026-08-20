@@ -2,6 +2,8 @@
 
 Defines the localized border radius property.
 
+@interface LocalizedBorderRadiuses
+
 **Since:** 12
 
 <!--Device-unnamed-declare interface LocalizedBorderRadiuses--><!--Device-unnamed-declare interface LocalizedBorderRadiuses-End-->

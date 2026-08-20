@@ -44,8 +44,8 @@ get input surface.it must be called between prepare completed and start.
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by callback. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -90,9 +90,9 @@ get input surface.it must be called between prepare completed and start.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by callback. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
 ## getInputSurface
@@ -123,8 +123,8 @@ get input surface. it must be called between prepare completed and start.
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by promise. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -167,9 +167,9 @@ get input surface. it must be called between prepare completed and start.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by promise. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
 ## onError
@@ -198,9 +198,9 @@ Listens for video recording error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by callback. |
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
 ## on('error')
@@ -231,9 +231,9 @@ Listens for video recording error events.
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by callback. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied.<br>**Applicable version:** 12 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
 **Examples**
 
@@ -274,8 +274,8 @@ Pauses video recording.
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by callback. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -320,8 +320,8 @@ Pauses video recording.
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by promise. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -365,11 +365,11 @@ Prepares for recording.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Return by callback. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Return by callback. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -443,11 +443,11 @@ Prepares for recording.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Return by promise. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Return by promise. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -511,8 +511,8 @@ Releases resources used for video recording.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -555,8 +555,8 @@ Releases resources used for video recording.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -598,8 +598,8 @@ Resets video recording. Before resetting video recording, you must call stop() t
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by callback. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -643,8 +643,8 @@ Resets video recording. Before resetting video recording, you must call stop() t
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by promise. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -687,8 +687,8 @@ Resumes video recording.
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by callback. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -733,8 +733,8 @@ Resumes video recording.
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by promise. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -777,8 +777,8 @@ Starts video recording.
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by callback. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -823,8 +823,8 @@ Starts video recording.
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by promise. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -867,8 +867,8 @@ Stops video recording.
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by callback. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -913,8 +913,8 @@ Stops video recording.
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by promise. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 **Examples**
 

@@ -20,7 +20,9 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 extraFileSize?: long
 ```
 
-针对FilterOperator.BETWEEN情况下，配置文件大小的上限值。默认值为-1。 单位为字节（Byte）。
+针对FilterOperator.BETWEEN情况下，配置文件大小的上限值。默认值为-1。
+
+单位为字节（Byte）。
 
 **类型：** long
 
@@ -38,7 +40,9 @@ extraFileSize?: long
 fileSize: long
 ```
 
-指定进行过滤的文件大小。 单位为字节（Byte）。
+指定进行过滤的文件大小。
+
+单位为字节（Byte）。
 
 **类型：** long
 
@@ -56,7 +60,9 @@ fileSize: long
 filterOperator: FilterOperator
 ```
 
-过滤操作符。 例如：按照大于/小于某个fileSize的方式过滤文件。
+过滤操作符。
+
+例如：按照大于/小于某个fileSize的方式过滤文件。
 
 **类型：** [FilterOperator](arkts-medialibrary-photoaccesshelper-filteroperator-e.md)
 

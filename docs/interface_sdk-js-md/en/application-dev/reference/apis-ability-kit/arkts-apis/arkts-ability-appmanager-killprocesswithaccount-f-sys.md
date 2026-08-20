@@ -12,7 +12,11 @@ import { appManager } from '@kit.AbilityKit';
 function killProcessWithAccount(bundleName: string, accountId: int): Promise<void>
 ```
 
-Kills a process by bundle name and account ID. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; The ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission is not required when **accountId** specifies the &gt; current user.
+Kills a process by bundle name and account ID. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> The ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission is not required when **accountId** specifies the &gt; current user.
 
 **Since:** 23
 
@@ -43,10 +47,10 @@ Kills a process by bundle name and account ID. This API uses a promise to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 **Examples**
 
@@ -78,7 +82,11 @@ function killProcessWithAccount(bundleName: string, accountId: int, clearPageSta
     Promise<void>
 ```
 
-Kills a process by bundle name and account ID. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; The ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission is not required when **accountId** specifies the &gt; current user.
+Kills a process by bundle name and account ID. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> The ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission is not required when **accountId** specifies the &gt; current user.
 
 **Since:** 23
 
@@ -109,10 +117,10 @@ Kills a process by bundle name and account ID. This API uses a promise to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter is not valid parameter. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter is not valid parameter. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 **Examples**
 
@@ -145,7 +153,11 @@ try {
 function killProcessWithAccount(bundleName: string, accountId: int, callback: AsyncCallback<void>): void
 ```
 
-Kills a process by bundle name and account ID. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; The ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission is not required when **accountId** specifies the &gt; current user.
+Kills a process by bundle name and account ID. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> The ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission is not required when **accountId** specifies the &gt; current user.
 
 **Since:** 23
 
@@ -171,10 +183,10 @@ Kills a process by bundle name and account ID. This API uses an asynchronous cal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 **Examples**
 

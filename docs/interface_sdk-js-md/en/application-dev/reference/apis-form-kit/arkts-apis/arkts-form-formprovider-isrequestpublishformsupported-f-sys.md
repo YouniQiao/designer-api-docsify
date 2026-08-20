@@ -32,10 +32,10 @@ Checks whether a widget can be added to the widget host. This API uses an asynch
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
 
 ## isRequestPublishFormSupported
@@ -64,7 +64,7 @@ Checks whether a widget can be added to the widget host. This API uses a promise
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 

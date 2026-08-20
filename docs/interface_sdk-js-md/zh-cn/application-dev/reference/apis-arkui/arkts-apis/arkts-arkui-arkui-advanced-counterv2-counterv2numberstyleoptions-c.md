@@ -1,8 +1,10 @@
 # CounterV2NumberStyleOptions
 
-CounterV2NumberStyleOptions定义了列表型和紧凑型CounterV2的属性和事件。 继承于[CounterV2InlineStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md)，包含该接口及 [CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md)所有属性。本节仅展示新增属性，继承属性请参见父接口。
+CounterV2NumberStyleOptions定义了列表型和紧凑型CounterV2的属性和事件。
 
-**继承/实现关系：** CounterV2NumberStyleOptions extends [CounterV2InlineStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md)
+继承于[CounterV2InlineStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md)，包含该接口及 [CounterV2CommonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-counterv2-counterv2commonoptions-c.md)所有属性。本节仅展示新增属性，继承属性请参见父接口。
+
+**继承/实现关系：** CounterV2NumberStyleOptions extends [CounterV2InlineStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md)
 
 **起始版本：** 26.0.0
 
@@ -22,7 +24,13 @@ import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type 
 label?: ResourceStr
 ```
 
-设置CounterV2的说明文本。 默认值：'' 说明：当需要在CounterV2旁边显示说明文字（如“价格”、“数量”等）时传入此参数。 值为undefined时，按默认值处理。
+设置CounterV2的说明文本。
+
+默认值：''
+
+说明：当需要在CounterV2旁边显示说明文字（如“价格”、“数量”等）时传入此参数。
+
+值为undefined时，按默认值处理。
 
 **类型：** ResourceStr
 
@@ -42,7 +50,13 @@ label?: ResourceStr
 onBlurDecrease?: VoidCallback
 ```
 
-当CounterV2组件的“减少按钮”失去焦点时，触发该回调。 使用场景：当需要在减少按钮失焦时执行自定义操作（如验证输入、保存状态等）时传入此回调。 默认值：undefined，表示不触发该回调。 值为undefined时，按默认值处理。
+当CounterV2组件的“减少按钮”失去焦点时，触发该回调。
+
+使用场景：当需要在减少按钮失焦时执行自定义操作（如验证输入、保存状态等）时传入此回调。
+
+默认值：undefined，表示不触发该回调。
+
+值为undefined时，按默认值处理。
 
 **类型：** VoidCallback
 
@@ -62,7 +76,13 @@ onBlurDecrease?: VoidCallback
 onBlurIncrease?: VoidCallback
 ```
 
-当CounterV2组件的“增加按钮”失去焦点时，触发该回调。 使用场景：当需要在增加按钮失焦时执行自定义操作（如验证输入、保存状态等）时传入此回调。 默认值：undefined，表示不触发该回调。 值为undefined时，按默认值处理。
+当CounterV2组件的“增加按钮”失去焦点时，触发该回调。
+
+使用场景：当需要在增加按钮失焦时执行自定义操作（如验证输入、保存状态等）时传入此回调。
+
+默认值：undefined，表示不触发该回调。
+
+值为undefined时，按默认值处理。
 
 **类型：** VoidCallback
 
@@ -82,7 +102,13 @@ onBlurIncrease?: VoidCallback
 onFocusDecrease?: VoidCallback
 ```
 
-当CounterV2组件的“减少按钮”获取焦点时，触发该回调。 使用场景：当需要在减少按钮获焦时执行自定义操作（如改变样式、记录日志等）时传入此回调。 默认值：undefined，表示不触发该回调。 值为undefined时，按默认值处理。
+当CounterV2组件的“减少按钮”获取焦点时，触发该回调。
+
+使用场景：当需要在减少按钮获焦时执行自定义操作（如改变样式、记录日志等）时传入此回调。
+
+默认值：undefined，表示不触发该回调。
+
+值为undefined时，按默认值处理。
 
 **类型：** VoidCallback
 
@@ -102,7 +128,13 @@ onFocusDecrease?: VoidCallback
 onFocusIncrease?: VoidCallback
 ```
 
-当CounterV2组件的“增加按钮”获取焦点时，触发该回调。 使用场景：当需要在增加按钮获焦时执行自定义操作（如改变样式、记录日志等）时传入此回调。 默认值：undefined，表示不触发该回调。 值为undefined时，按默认值处理。
+当CounterV2组件的“增加按钮”获取焦点时，触发该回调。
+
+使用场景：当需要在增加按钮获焦时执行自定义操作（如改变样式、记录日志等）时传入此回调。
+
+默认值：undefined，表示不触发该回调。
+
+值为undefined时，按默认值处理。
 
 **类型：** VoidCallback
 

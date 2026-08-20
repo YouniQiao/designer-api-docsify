@@ -1,6 +1,10 @@
 # TextSpanType
 
-Provides the span type information. &gt; **NOTE：**&gt; &gt; The system follows the priority order below when determining the menu type to display during text interactions: &gt;
+Provides the span type information.
+
+> **NOTE：**
+> 
+> The system follows the priority order below when determining the menu type to display during text interactions: &gt;
 
 **Since:** 11
 

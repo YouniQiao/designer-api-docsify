@@ -2,6 +2,8 @@
 
 Defines the lazy vertical waterflow layout component.
 
+@interface LazyVWaterFlowLayoutInterface
+
 **Since:** 26.0.0
 
 <!--Device-unnamed-export interface LazyVWaterFlowLayoutInterface--><!--Device-unnamed-export interface LazyVWaterFlowLayoutInterface-End-->

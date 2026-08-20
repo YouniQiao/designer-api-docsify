@@ -32,11 +32,9 @@ Defines the constructor of GridContainer.
 
 | Name | Description |
 | --- | --- |
-| [GridContainerOptions](arkts-arkui-gridcontaineroptions-i.md) | Defines the options of GridContainer. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [SizeType](arkts-arkui-sizetype-e.md) | Defines the size type. |
 

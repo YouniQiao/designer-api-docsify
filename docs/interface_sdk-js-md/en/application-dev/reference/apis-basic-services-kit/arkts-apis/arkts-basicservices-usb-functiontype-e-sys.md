@@ -1,4 +1,4 @@
-# FunctionType(USB Manager) (System API)
+# FunctionType (System API)
 
 Enumerates USB device function types.
 

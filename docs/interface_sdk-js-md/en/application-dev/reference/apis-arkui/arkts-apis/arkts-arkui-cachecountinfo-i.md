@@ -2,6 +2,8 @@
 
 Define cache count information.
 
+@interface CacheCountInfo
+
 **Since:** 22
 
 <!--Device-unnamed-declare interface CacheCountInfo--><!--Device-unnamed-declare interface CacheCountInfo-End-->

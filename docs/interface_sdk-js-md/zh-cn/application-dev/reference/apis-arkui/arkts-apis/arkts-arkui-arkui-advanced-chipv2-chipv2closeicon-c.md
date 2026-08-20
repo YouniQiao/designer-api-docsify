@@ -1,6 +1,8 @@
 # ChipV2CloseIcon
 
-ChipV2CloseIcon用于定义ChipV2组件关闭图标的功能属性类，包括无障碍功能属性。 继承自[ChipV2Accessibility](arkts-arkui-arkui-advanced-chipv2-chipv2accessibility-c.md)。
+ChipV2CloseIcon用于定义ChipV2组件关闭图标的功能属性类，包括无障碍功能属性。
+
+继承自[ChipV2Accessibility](arkts-arkui-arkui-advanced-chipv2-chipv2accessibility-c.md)。
 
 **继承/实现关系：** ChipV2CloseIcon extends [ChipV2Accessibility](arkts-arkui-arkui-advanced-chipv2-chipv2accessibility-c.md)
 
@@ -47,7 +49,17 @@ ChipV2CloseIcon的构造函数。
   public fontSize?: LengthMetrics
 ```
 
-设置ChipV2组件默认关闭图标的大小，不支持百分比。传入百分比时按默认值处理。 默认值： size为ChipV2Size.SMALL时，默认值：`\$r('sys.float.chip_small_font_size')`。 size不为ChipV2Size.SMALL时，默认值：`\$r('sys.float.chip_normal_font_size')` 单位：fp 值为undefined时，按默认值处理。
+设置ChipV2组件默认关闭图标的大小，不支持百分比。传入百分比时按默认值处理。
+
+默认值：
+
+size为ChipV2Size.SMALL时，默认值：`\$r('sys.float.chip_small_font_size')`。
+
+size不为ChipV2Size.SMALL时，默认值：`\$r('sys.float.chip_normal_font_size')`
+
+单位：fp
+
+值为undefined时，按默认值处理。
 
 **类型：** LengthMetrics
 

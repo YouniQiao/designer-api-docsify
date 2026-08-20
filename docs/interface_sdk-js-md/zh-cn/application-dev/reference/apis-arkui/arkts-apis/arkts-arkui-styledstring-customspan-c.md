@@ -1,6 +1,8 @@
 # CustomSpan
 
-自定义绘制Span，仅提供基类，具体实现由开发者定义。 自定义绘制Span拖拽显示的缩略图为空白。
+自定义绘制Span，仅提供基类，具体实现由开发者定义。
+
+自定义绘制Span拖拽显示的缩略图为空白。
 
 **起始版本：** 23
 
@@ -50,7 +52,7 @@ abstract onDraw(context: DrawContext, drawInfo: CustomSpanDrawInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | 是 |  |
+| context | [DrawContext](../../apis-default/arkts-apis/arkts-graphics-drawcontext-c.md) | 是 |  |
 | drawInfo | [CustomSpanDrawInfo](arkts-arkui-styledstring-customspandrawinfo-i.md) | 是 |  |
 
 ## onMeasure

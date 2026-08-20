@@ -1,6 +1,14 @@
 # EnterpriseAdminExtensionAbility
 
-This module provides the [enterprise device management extension ability](../../../mdm/mdm-kit-term.md#enterpriseadminextensionability) and is the core component of the enterprise device administrator application. **Main functions**: - Provides lifecycle management capabilities for device administrator applications (enabling, disabling, startup, and so on). - Provides application lifecycle event listening capabilities (installation, uninstallation, startup, stop, update). - Provides system account management event listening capabilities (account addition, switch, removal). - Provides system-level event callbacks for Kiosk mode, key events, log collection, and system updates. - Provides policy change event listening capabilities. **Use cases:** Enterprise device administrator application development, enterprise application lifecycle management, device security control, account management, and device O&M monitoring. To have the capabilities provided by this module, for example, to receive a notification when a device administrator application is enabled or disabled, you need to create an **EnterpriseAdminExtensionAbility** instance for the device administrator application and overload related APIs.
+This module provides the [enterprise device management extension ability](../../../mdm/mdm-kit-term.md#enterpriseadminextensionability) and is the core component of the enterprise device administrator application.
+
+**Main functions**:
+
+- Provides lifecycle management capabilities for device administrator applications (enabling, disabling, startup, and so on). - Provides application lifecycle event listening capabilities (installation, uninstallation, startup, stop, update). - Provides system account management event listening capabilities (account addition, switch, removal). - Provides system-level event callbacks for Kiosk mode, key events, log collection, and system updates. - Provides policy change event listening capabilities.
+
+**Use cases:** Enterprise device administrator application development, enterprise application lifecycle management, device security control, account management, and device O&M monitoring.
+
+To have the capabilities provided by this module, for example, to receive a notification when a device administrator application is enabled or disabled, you need to create an **EnterpriseAdminExtensionAbility** instance for the device administrator application and overload related APIs.
 
 **Since:** 12
 
@@ -149,7 +157,13 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onAdminEnabled(): void
 ```
 
-Called when the device administrator application is enabled. After an enterprise administrator or employee deploys and enables the device administrator application, the system notifies the device administrator application that the admin permission has been granted. The device administrator application can initialize policies within this callback. No registration is required. This callback is triggered by default after the device administrator application is enabled. Differences from onDeviceAdminEnabled: - **onAdminEnabled**: Triggered when the device administrator application itself is enabled, and used for the device administrator application to initialize its own policies. - **onDeviceAdminEnabled**: Triggered when a super device administrator application listens for the enabling of a normal device administrator application, and used for the super device administrator application to manage normal device administrator applications. You should choose the appropriate method based on the application type and listening scenario: normal device administrator applications should use **onAdminEnabled**, while super device administrator applications listening for the enabling of other applications should use **onDeviceAdminEnabled**.
+Called when the device administrator application is enabled. After an enterprise administrator or employee deploys and enables the device administrator application, the system notifies the device administrator application that the admin permission has been granted. The device administrator application can initialize policies within this callback. No registration is required. This callback is triggered by default after the device administrator application is enabled.
+
+Differences from onDeviceAdminEnabled:
+
+- **onAdminEnabled**: Triggered when the device administrator application itself is enabled, and used for the device administrator application to initialize its own policies. - **onDeviceAdminEnabled**: Triggered when a super device administrator application listens for the enabling of a normal device administrator application, and used for the super device administrator application to manage normal device administrator applications.
+
+You should choose the appropriate method based on the application type and listening scenario: normal device administrator applications should use **onAdminEnabled**, while super device administrator applications listening for the enabling of other applications should use **onDeviceAdminEnabled**.
 
 **Since:** 12
 
@@ -523,7 +537,13 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onKeyEvent(keyEvent: systemManager.KeyEvent): void
 ```
 
-Defines the [key event](arkts-mdm-systemmanager-keyevent-i.md) callback. The MDM application needs to deliver key event handling policies via the [systemManager.addKeyEventPolicies](arkts-mdm-systemmanager-addkeyeventpolicies-f.md) API. When a system key event is triggered, if the event matches the delivered policy, this callback will be invoked. The callback parameter [keyEvent](arkts-mdm-systemmanager-keyevent-i.md) contains information about currently triggered key events, which are introduced below. Single-key event. When a single key on the device is triggered, the [onKeyEvent](#onkeyevent) callback will be invoked twice (once on key press and once on key release). You can determine whether the key is pressed or released based on the **keyAction** property in [keyEvent](arkts-mdm-systemmanager-keyevent-i.md). The **keyItems** property in [keyEvent](arkts-mdm-systemmanager-keyevent-i.md) can be ignored for single-key events. Combined-key event. Only the power button, volume up button, and volume down button can be combined. When a user presses a key combination, the callback for the subsequently pressed key will carry information about all currently pressed keys via the **keyItems** property in [keyEvent](arkts-mdm-systemmanager-keyevent-i.md). All other response logic is consistent with that of single-key events. Long-press event. When a single key or key combination is pressed for an extended period, the [onKeyEvent](#onkeyevent) callback will be triggered continuously at an interval of 50 ms (the actual interval may be slightly longer depending on system status and performance). For each callback event, the **actionTime** property in [keyEvent](arkts-mdm-systemmanager-keyevent-i.md) remains the same as the **actionTime** property in the [keyEvent](arkts-mdm-systemmanager-keyevent-i.md) of the initial key press callback. All other response logic is consistent with that of single-key and combined key events.
+Defines the [key event](arkts-mdm-systemmanager-keyevent-i.md) callback. The MDM application needs to deliver key event handling policies via the [systemManager.addKeyEventPolicies](arkts-mdm-systemmanager-addkeyeventpolicies-f.md) API. When a system key event is triggered, if the event matches the delivered policy, this callback will be invoked. The callback parameter [keyEvent](arkts-mdm-systemmanager-keyevent-i.md) contains information about currently triggered key events, which are introduced below.
+
+Single-key event. When a single key on the device is triggered, the [onKeyEvent](#onkeyevent) callback will be invoked twice (once on key press and once on key release). You can determine whether the key is pressed or released based on the **keyAction** property in [keyEvent](arkts-mdm-systemmanager-keyevent-i.md). The **keyItems** property in [keyEvent](arkts-mdm-systemmanager-keyevent-i.md) can be ignored for single-key events.
+
+Combined-key event. Only the power button, volume up button, and volume down button can be combined. When a user presses a key combination, the callback for the subsequently pressed key will carry information about all currently pressed keys via the **keyItems** property in [keyEvent](arkts-mdm-systemmanager-keyevent-i.md). All other response logic is consistent with that of single-key events.
+
+Long-press event. When a single key or key combination is pressed for an extended period, the [onKeyEvent](#onkeyevent) callback will be triggered continuously at an interval of 50 ms (the actual interval may be slightly longer depending on system status and performance). For each callback event, the **actionTime** property in [keyEvent](arkts-mdm-systemmanager-keyevent-i.md) remains the same as the **actionTime** property in the [keyEvent](arkts-mdm-systemmanager-keyevent-i.md) of the initial key press callback. All other response logic is consistent with that of single-key and combined key events.
 
 **Since:** 23
 
@@ -644,7 +664,9 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onKioskModeEntering(bundleName: string, accountId: number): void
 ```
 
-Called when an application enters the kiosk mode. This callback contains the application bundle name and account ID. Kiosk mode is a system-level runtime mode that restricts a device to a single application or a set of applications. It controls the lock screen, status bar, gestures, and key features to prevent users from launching other applications or performing other operations on the device.
+Called when an application enters the kiosk mode. This callback contains the application bundle name and account ID.
+
+Kiosk mode is a system-level runtime mode that restricts a device to a single application or a set of applications. It controls the lock screen, status bar, gestures, and key features to prevent users from launching other applications or performing other operations on the device.
 
 **Since:** 20
 
@@ -714,7 +736,11 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onLogCollected(result: common.Result): void
 ```
 
-Callback triggered upon completion of log collection, after a log collection task is successfully created via the [systemManager.startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md) API. It contains the log collection result. &gt; **NOTE：**&gt; &gt; When log collection succeeds, the app must access the sandbox directory (**\/data/edm/log**) in its &gt; **EnterpriseAdminExtensionAbility** to retrieve the logs. For details about how to obtain logs, see the following &gt; sample code. After the app obtains the logs, you are advised to call &gt; [systemManager.finishLogCollected](arkts-mdm-systemmanager-finishlogcollected-f.md) to &gt; remove the collected logs.
+Callback triggered upon completion of log collection, after a log collection task is successfully created via the [systemManager.startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md) API. It contains the log collection result.
+
+> **NOTE：**
+> 
+> When log collection succeeds, the app must access the sandbox directory (**\/data/edm/log**) in its &gt; **EnterpriseAdminExtensionAbility** to retrieve the logs. For details about how to obtain logs, see the following &gt; sample code. After the app obtains the logs, you are advised to call &gt; [systemManager.finishLogCollected](arkts-mdm-systemmanager-finishlogcollected-f.md) to &gt; remove the collected logs.
 
 **Since:** 23
 

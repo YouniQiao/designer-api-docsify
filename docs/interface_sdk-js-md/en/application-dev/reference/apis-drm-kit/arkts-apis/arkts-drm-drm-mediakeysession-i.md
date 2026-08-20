@@ -1,4 +1,4 @@
-# MediaKeySession(Defines the DRM capability.)
+# MediaKeySession
 
 MediaKeySession implements media key management. Before calling any API in MediaKeySession, you must use [createMediaKeySession](arkts-drm-drm-mediakeysystem-i.md#createmediakeysession) to create a MediaKeySession instance.
 
@@ -40,8 +40,8 @@ Checks the status of the media keys in use.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 ## clearMediaKeys
 
@@ -63,8 +63,8 @@ Clears the media keys in use.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 ## destroy
 
@@ -86,8 +86,8 @@ Destroys this MediaKeySession instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 ## generateMediaKeyRequest
 
@@ -124,9 +124,9 @@ Generates a media key request. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## generateOfflineReleaseRequest
 
@@ -161,8 +161,8 @@ Generates a request to release offline media keys. This API uses a promise to re
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 ## getContentProtectionLevel
 
@@ -190,8 +190,8 @@ Obtains the content protection level of this media key session.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 ## offExpirationUpdate
 
@@ -786,8 +786,8 @@ Processes a media key response. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 ## processOfflineReleaseResponse
 
@@ -823,8 +823,8 @@ Processes a response to a request for releasing offline media keys. This API use
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 ## requireSecureDecoderModule
 
@@ -859,8 +859,8 @@ Checks whether secure decoding is required.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 ## restoreOfflineMediaKeys
 
@@ -895,6 +895,6 @@ Restores offline media keys. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 

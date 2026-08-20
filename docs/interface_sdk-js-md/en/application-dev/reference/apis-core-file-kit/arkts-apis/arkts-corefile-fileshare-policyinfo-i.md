@@ -2,6 +2,8 @@
 
 Policy information to manager permissions on a URI.
 
+@interface PolicyInfo
+
 **Since:** 23
 
 <!--Device-fileShare-export interface PolicyInfo--><!--Device-fileShare-export interface PolicyInfo-End-->

@@ -1,6 +1,6 @@
 # ViewModel
 
-View model
+View model @interface ViewModel
 
 **Since:** 4
 

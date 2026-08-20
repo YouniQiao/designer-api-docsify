@@ -35,7 +35,7 @@ $_iterator(): IterableIterator<[K, V]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | LightWeightMap的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | LightWeightMap的迭代器。 |
 
 **示例**
 
@@ -80,7 +80,7 @@ while(!temp.done) {
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | 返回一个迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回一个迭代器。 |
 
 **错误码：**
 
@@ -232,7 +232,7 @@ entries(): IterableIterator<[K, V]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | 返回包含此映射中所有键值对的迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回包含此映射中所有键值对的迭代器对象。 |
 
 **错误码：**
 
@@ -1035,7 +1035,7 @@ keys(): IterableIterator<K>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;K&gt; | 返回一个迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; | 返回一个迭代器。 |
 
 **错误码：**
 
@@ -1447,7 +1447,7 @@ values(): IterableIterator<V>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;V&gt; | 返回一个迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;V&gt; | 返回一个迭代器。 |
 
 **错误码：**
 

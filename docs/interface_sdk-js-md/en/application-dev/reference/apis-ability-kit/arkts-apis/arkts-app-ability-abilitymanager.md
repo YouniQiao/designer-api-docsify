@@ -20,9 +20,9 @@ import { abilityManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f.md) | Obtains the UIAbility running information. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; If the application has requested the ohos.permission.GET_RUNNING_INFO permission, it can obtain the UIAbility &gt; running information of all applications; otherwise, it can obtain the UIAbility running information of the &gt; current application. |
+| [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f.md) | Obtains the UIAbility running information. This API uses a promise to return the result. |
 | [isEmbeddedUIExtensionSupported](arkts-ability-abilitymanager-isembeddeduiextensionsupported-f.md) | Indicates whether the current device supports EmbeddedUIExtensionAbility. |
-| [restartSelfAtomicService](arkts-ability-abilitymanager-restartselfatomicservice-f.md) | Restarts the current atomic service. &gt; **NOTE：**&gt; &gt; - Currently, atomic services can be started only in an independent window. &gt; &gt; - If you call this API, &gt; ApplicationContext.restartApp(), or &gt; [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds &gt; after a successful call to this API, the system returns error code 16000064. |
+| [restartSelfAtomicService](arkts-ability-abilitymanager-restartselfatomicservice-f.md) | Restarts the current atomic service. |
 
 <!--Del-->
 ### Functions(System API)

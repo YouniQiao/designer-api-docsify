@@ -2,6 +2,8 @@
 
 Defines the ICC account information.
 
+@interface IccAccountInfo
+
 **起始版本：** 23
 
 <!--Device-sim-export interface IccAccountInfo--><!--Device-sim-export interface IccAccountInfo-End-->

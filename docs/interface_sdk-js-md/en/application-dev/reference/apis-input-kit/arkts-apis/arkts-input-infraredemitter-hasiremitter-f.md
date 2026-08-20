@@ -32,8 +32,8 @@ Checks whether the device has an infrared transmitter. This API uses a promise t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
 
 **Examples**
 

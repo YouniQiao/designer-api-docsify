@@ -2,6 +2,8 @@
 
 Describes a historical page record.
 
+@interface HistoryItem [since 9 - 11]
+
 **Since:** 9
 
 <!--Device-webview-interface HistoryItem--><!--Device-webview-interface HistoryItem-End-->
@@ -56,7 +58,7 @@ URL of the historical page.
 icon: image.PixelMap
 ```
 
-**PixelMap** object of the icon on the historical page.
+*PixelMap** object of the icon on the historical page.
 
 **Type:** image.PixelMap
 

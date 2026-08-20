@@ -4,7 +4,11 @@
 type SourceReadCallback = (uuid: long, requestedOffset: long, requestedLength: long) => void
 ```
 
-This callback function is implemented by applications to handle resource read requests. When data is available, applications should push it to the player using the [respondData](arkts-media-media-mediasourceloadingrequest-i.md#responddata) API of the corresponding MediaSourceLoadingRequest object. &gt; **NOTE：**&gt; &gt; The client must return the handle immediately after processing the request.
+This callback function is implemented by applications to handle resource read requests. When data is available, applications should push it to the player using the [respondData](arkts-media-media-mediasourceloadingrequest-i.md#responddata) API of the corresponding MediaSourceLoadingRequest object.
+
+> **NOTE：**
+> 
+> The client must return the handle immediately after processing the request.
 
 **Since:** 23
 

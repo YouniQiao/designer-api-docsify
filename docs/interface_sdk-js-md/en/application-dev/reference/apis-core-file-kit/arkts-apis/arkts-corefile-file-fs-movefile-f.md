@@ -14,7 +14,11 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 declare function moveFile(src: string, dest: string, mode?: number): Promise<void>
 ```
 
-Moves a file. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is not supported in a distributed directory.
+Moves a file. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is not supported in a distributed directory.
 
 **Since:** 9
 
@@ -40,25 +44,25 @@ Moves a file. This API uses a promise to return the result. &gt; **NOTE：**&gt;
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900016 | Cross-device link |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900028 | Too many links |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900032 | Directory not empty |
 | 13900001 | Operation not permitted |
-| 13900033 | Too many symbolic links encountered |
 | 13900002 | No such file or directory |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900014 | Device or resource busy |
 | 13900015 | File exists |
-| 13900008 | Bad file descriptor |
+| 13900016 | Cross-device link |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900028 | Too many links |
+| 13900032 | Directory not empty |
+| 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-| 13900011 | Out of memory |
 
 
 ## moveFile
@@ -67,7 +71,11 @@ Moves a file. This API uses a promise to return the result. &gt; **NOTE：**&gt;
 declare function moveFile(src: string, dest: string, callback: AsyncCallback<void>): void
 ```
 
-Moves a file and forcibly overwrites the file with the same name in the destination directory. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is not supported in a distributed directory.
+Moves a file and forcibly overwrites the file with the same name in the destination directory. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is not supported in a distributed directory.
 
 **Since:** 9
 
@@ -87,25 +95,25 @@ Moves a file and forcibly overwrites the file with the same name in the destinat
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900016 | Cross-device link |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900028 | Too many links |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900032 | Directory not empty |
 | 13900001 | Operation not permitted |
-| 13900033 | Too many symbolic links encountered |
 | 13900002 | No such file or directory |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900014 | Device or resource busy |
 | 13900015 | File exists |
-| 13900008 | Bad file descriptor |
+| 13900016 | Cross-device link |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900028 | Too many links |
+| 13900032 | Directory not empty |
+| 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-| 13900011 | Out of memory |
 
 
 ## moveFile
@@ -114,7 +122,11 @@ Moves a file and forcibly overwrites the file with the same name in the destinat
 declare function moveFile(src: string, dest: string, mode: number, callback: AsyncCallback<void>): void
 ```
 
-Moves a file with the specified mode. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is not supported in a distributed directory.
+Moves a file with the specified mode. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is not supported in a distributed directory.
 
 **Since:** 9
 
@@ -135,23 +147,23 @@ Moves a file with the specified mode. This API uses an asynchronous callback to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900016 | Cross-device link |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900028 | Too many links |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900032 | Directory not empty |
 | 13900001 | Operation not permitted |
-| 13900033 | Too many symbolic links encountered |
 | 13900002 | No such file or directory |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900014 | Device or resource busy |
 | 13900015 | File exists |
-| 13900008 | Bad file descriptor |
+| 13900016 | Cross-device link |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900028 | Too many links |
+| 13900032 | Directory not empty |
+| 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-| 13900011 | Out of memory |
 

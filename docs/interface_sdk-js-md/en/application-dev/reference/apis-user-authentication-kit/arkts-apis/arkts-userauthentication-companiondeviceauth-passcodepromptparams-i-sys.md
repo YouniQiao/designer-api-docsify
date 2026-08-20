@@ -2,6 +2,8 @@
 
 Params carried by the framework when prompting for a companion device passcode.
 
+@interface PasscodePromptParams
+
 **Since:** 26.1.0
 
 <!--Device-companionDeviceAuth-interface PasscodePromptParams--><!--Device-companionDeviceAuth-interface PasscodePromptParams-End-->

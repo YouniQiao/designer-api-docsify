@@ -1,4 +1,4 @@
-# DataRoleType(USB Manager) (System API)
+# DataRoleType (System API)
 
 Enumerates data role types.
 

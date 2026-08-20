@@ -2,6 +2,8 @@
 
 Defines the Localized align rule options of relative container.
 
+@interface LocalizedAlignRuleOptions
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare interface LocalizedAlignRuleOptions--><!--Device-unnamed-declare interface LocalizedAlignRuleOptions-End-->

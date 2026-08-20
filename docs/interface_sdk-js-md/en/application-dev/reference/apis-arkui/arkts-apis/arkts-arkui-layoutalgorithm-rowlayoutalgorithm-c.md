@@ -1,6 +1,10 @@
 # RowLayoutAlgorithm
 
-Horizontal linear layout algorithm class. &gt; **NOTE：**&gt; &gt; The object of the **RowLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as the &gt; input parameter of the &gt; [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the &gt; layout algorithm.
+Horizontal linear layout algorithm class.
+
+> **NOTE：**
+> 
+> The object of the **RowLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as the &gt; input parameter of the &gt; [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the &gt; layout algorithm.
 
 **Inheritance/Implementation:** RowLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md)
 
@@ -42,9 +46,13 @@ Constructs the horizontal linear layout algorithm class.
 @Trace public alignItems?: VerticalAlign
 ```
 
-Vertical alignment mode of all child components. Default value: **VerticalAlign.Center** Invalid values are treated as the default value.
+Vertical alignment mode of all child components.
 
-**Type:** [VerticalAlign](../../apis-na/arkts-apis/arkts-na-enums-verticalalign-e.md)
+Default value: **VerticalAlign.Center**
+
+Invalid values are treated as the default value.
+
+**Type:** [VerticalAlign](../../apis-default/arkts-apis/arkts-enums-verticalalign-e.md)
 
 **Since:** 24
 
@@ -64,7 +72,11 @@ Vertical alignment mode of all child components. Default value: **VerticalAlign.
 @Trace public isReverse?: boolean
 ```
 
-Whether to reverse the horizontal arrangement of child components. **true** indicates to reverse the horizontal arrangement of child components. The horizontal direction is affected by the common attribute [direction](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction). If the [direction](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction) attribute takes effect, the arrangement is reversed again. **false** indicates to arrange child components in the horizontal direction in normal order. Default value: **false** Invalid values are treated as the default value.
+Whether to reverse the horizontal arrangement of child components. **true** indicates to reverse the horizontal arrangement of child components. The horizontal direction is affected by the common attribute [direction](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction). If the [direction](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction) attribute takes effect, the arrangement is reversed again. **false** indicates to arrange child components in the horizontal direction in normal order.
+
+Default value: **false**
+
+Invalid values are treated as the default value.
 
 **Type:** boolean
 
@@ -86,9 +98,13 @@ Whether to reverse the horizontal arrangement of child components. **true** indi
 @Trace public justifyContent?: FlexAlign
 ```
 
-Horizontal alignment mode of all child components. Default value: **FlexAlign.Start** Invalid values are treated as the default value.
+Horizontal alignment mode of all child components.
 
-**Type:** [FlexAlign](../../apis-na/arkts-apis/arkts-na-enums-flexalign-e.md)
+Default value: **FlexAlign.Start**
+
+Invalid values are treated as the default value.
+
+**Type:** [FlexAlign](../../apis-default/arkts-apis/arkts-enums-flexalign-e.md)
 
 **Since:** 24
 
@@ -108,9 +124,13 @@ Horizontal alignment mode of all child components. Default value: **FlexAlign.St
 @Trace public space?: LengthMetrics
 ```
 
-Horizontal spacing between elements in a horizontal layout. Default value: **LengthMetrics.vp(0)** Invalid values are treated as the default value.
+Horizontal spacing between elements in a horizontal layout.
 
-**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+Default value: **LengthMetrics.vp(0)**
+
+Invalid values are treated as the default value.
+
+**Type:** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
 
 **Since:** 24
 

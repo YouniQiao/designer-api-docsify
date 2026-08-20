@@ -1,4 +1,4 @@
-# StatisticKeyValue(Defines the DRM capability.)
+# StatisticKeyValue
 
 度量记录。
 

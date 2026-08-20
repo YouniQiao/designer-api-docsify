@@ -2,6 +2,8 @@
 
 Define EdgeEffect Options.
 
+@interface EdgeEffectOptions
+
 **Since:** 12
 
 <!--Device-unnamed-declare interface EdgeEffectOptions--><!--Device-unnamed-declare interface EdgeEffectOptions-End-->

@@ -2,6 +2,8 @@
 
 设置颜色模式。
 
+@enum { number }
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare enum ThemeColorMode--><!--Device-unnamed-declare enum ThemeColorMode-End-->

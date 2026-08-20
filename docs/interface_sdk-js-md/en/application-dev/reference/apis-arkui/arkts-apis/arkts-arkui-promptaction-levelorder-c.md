@@ -42,7 +42,7 @@ Creates a dialog box level with the specified order.
 
 | Type | Description |
 | --- | --- |
-| [LevelOrder](../../apis-na/arkts-apis/arkts-na-promptaction-levelorder-c.md) | Current instance. |
+| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | Current instance. |
 
 ## getOrder
 

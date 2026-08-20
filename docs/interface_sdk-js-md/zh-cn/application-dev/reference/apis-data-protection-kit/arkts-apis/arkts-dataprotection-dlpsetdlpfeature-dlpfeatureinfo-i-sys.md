@@ -1,4 +1,4 @@
-# DLPFeatureInfo(设置数据防泄漏入口)（系统接口）
+# DLPFeatureInfo（系统接口）
 
 DLP特性开关的状态信息。
 

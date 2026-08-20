@@ -50,7 +50,7 @@ Stops an animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [FinishAnimationHandler](../../apis-na/arkts-apis/arkts-na-finishanimationhandler-t.md) | No | Callback invoked when the animation stops.<br>If no value is provided, no callback is performed. |
+| handler | [FinishAnimationHandler](../../apis-default/arkts-apis/arkts-finishanimationhandler-t.md) | No | Callback invoked when the animation stops.<br>If no value is provided, no callback is performed. |
 
 ## showNext
 
@@ -58,7 +58,7 @@ Stops an animation.
 showNext()
 ```
 
-Turns to the next page. Page turning occurs with the animation, whose duration is specified by [duration](../../apis-na/arkts-apis/arkts-na-arkui-arcswiper-arcswiperattribute-i.md#duration).
+Turns to the next page. Page turning occurs with the animation, whose duration is specified by [duration](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcswiperattribute-i.md#duration).
 
 **Since:** 18
 
@@ -74,7 +74,7 @@ Turns to the next page. Page turning occurs with the animation, whose duration i
 showPrevious()
 ```
 
-Turns to the previous page. Page turning occurs with the animation, whose duration is specified by [duration](../../apis-na/arkts-apis/arkts-na-arkui-arcswiper-arcswiperattribute-i.md#duration).
+Turns to the previous page. Page turning occurs with the animation, whose duration is specified by [duration](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcswiperattribute-i.md#duration).
 
 **Since:** 18
 

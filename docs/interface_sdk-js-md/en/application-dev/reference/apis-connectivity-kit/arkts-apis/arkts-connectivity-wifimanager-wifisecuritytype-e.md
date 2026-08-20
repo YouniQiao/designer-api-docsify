@@ -1,6 +1,6 @@
 # WifiSecurityType
 
-Describes the wifi security type.
+Describes the wifi security type. @enum { int }
 
 **Since:** 23
 

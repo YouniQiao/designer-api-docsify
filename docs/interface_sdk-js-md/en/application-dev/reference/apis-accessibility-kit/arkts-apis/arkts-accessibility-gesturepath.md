@@ -12,5 +12,5 @@ import { GesturePath } from '@kit.AccessibilityKit';
 
 | Name | Description |
 | --- | --- |
-| [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | GesturePath represents gesture path information. This module is used to create gesture path information for accessibility gesture injection. |
+| [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | GesturePath represents gesture path information. |
 

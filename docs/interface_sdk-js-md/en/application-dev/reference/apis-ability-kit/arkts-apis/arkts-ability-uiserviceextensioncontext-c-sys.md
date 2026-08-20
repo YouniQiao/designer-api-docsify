@@ -1,6 +1,12 @@
 # UIServiceExtensionContext (System API)
 
-The UIServiceExtensionContext module provides the context environment for a [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md). It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md). UIServiceExtensionContext provides access to a [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md) and APIs for operating the ability, for example, starting, terminating, connecting, and disconnecting ability. &gt; **NOTE：**&gt; &gt; - The APIs of this module must be used on the main thread, but not on child threads such as Worker and TaskPool.
+The UIServiceExtensionContext module provides the context environment for a [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md). It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md).
+
+UIServiceExtensionContext provides access to a [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md) and APIs for operating the ability, for example, starting, terminating, connecting, and disconnecting ability.
+
+> **NOTE：**
+> 
+> - The APIs of this module must be used on the main thread, but not on child threads such as Worker and TaskPool.
 
 **Inheritance/Implementation:** UIServiceExtensionContext extends ExtensionContext
 
@@ -18,7 +24,11 @@ The UIServiceExtensionContext module provides the context environment for a [UIS
 connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 ```
 
-Connects to a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) and returns the connection ID. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Connects to a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) and returns the connection ID.
+
+> **NOTE：**
+> 
+> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -47,20 +57,20 @@ Connects to a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
-| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
-| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 
 **Examples**
 
@@ -154,8 +164,8 @@ Disconnects from a [UIExtensionAbility](arkts-ability-app-ability-uiextensionabi
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 **Examples**
 
@@ -206,7 +216,11 @@ struct Page_UIServiceExtensionAbility {
 startAbility(want: Want, options?: StartOptions): Promise<void>
 ```
 
-Starts an ability. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Starts an ability. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -235,24 +249,24 @@ Starts an ability. This API uses a promise to return the result. &gt; **NOTE：*
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
-| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
 **Examples**
 
@@ -295,7 +309,11 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
     abilityStartCallback: AbilityStartCallback): Promise<void>
 ```
 
-Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) or [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) based on the type of the target ability. This API can be called only by applications running in the foreground. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) or [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) based on the type of the target ability. This API can be called only by applications running in the foreground. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 14
 
@@ -396,7 +414,11 @@ startAbilityByType(type: string, wantParam: Record<string, RecordData>,
     abilityStartCallback: AbilityStartCallback): Promise<void>
 ```
 
-Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) or [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) based on the type of the target ability. This API can be called only by applications running in the foreground. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) or [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) based on the type of the target ability. This API can be called only by applications running in the foreground. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -426,8 +448,8 @@ Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) or [UIE
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
 
 ## terminateSelf
 

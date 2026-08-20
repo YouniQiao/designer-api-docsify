@@ -1,6 +1,16 @@
 # @ohos.usbManager
 
-The **usbManager** module provides USB device management functions, including USB device list query, bulk data transfer, control transfer, and permission control on the host side as well as USB interface management, and function switch and query on the device side. &gt; **NOTE：**&gt; &gt; Perform the following steps when using the APIs with the [usbManager.USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) parameter: &gt; **Before use**: &gt; 1. Call [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md) to obtain the USB device list. &gt; 2. Call [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md) to request the temporary device access permission. &gt; 3. Call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) to obtain [usbManager.USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) as an input parameter. &gt; **After use**: &gt; Call [usbManager.closePipe](arkts-basicservices-usbmanager-closepipe-f.md) to close a USB device pipe. &gt;
+The **usbManager** module provides USB device management functions, including USB device list query, bulk data transfer, control transfer, and permission control on the host side as well as USB interface management, and function switch and query on the device side.
+
+> **NOTE：**
+> 
+> Perform the following steps when using the APIs with the [usbManager.USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) parameter:
+> **Before use**:
+> 1. Call [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md) to obtain the USB device list.
+> 2. Call [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md) to request the temporary device access permission.
+> 3. Call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) to obtain [usbManager.USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) as an input parameter.
+> **After use**:
+> Call [usbManager.closePipe](arkts-basicservices-usbmanager-closepipe-f.md) to close a USB device pipe. &gt;
 
 **Since:** 23
 
@@ -21,30 +31,30 @@ import { serialManager } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [bulkTransfer](arkts-basicservices-usbmanager-bulktransfer-f.md) | Performs bulk transfer. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; The total size of data (including **pipe**, **endpoint**, **buffer**, and **timeout**) to be transferred in a &gt; single bulk transfer must be less than 200 KB. Otherwise, the transfer fails and **-1** is returned. &gt; &gt; Before calling this API, call the &gt; [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) &gt; API to claim a communication interface. |
+| [bulkTransfer](arkts-basicservices-usbmanager-bulktransfer-f.md) | Performs bulk transfer. This API uses a promise to return the result. |
 | [cancelAccessoryRight](arkts-basicservices-usbmanager-cancelaccessoryright-f.md) | Cancels the permission of the current application to access USB accessories. You need to call [usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md) to obtain the accessory list and use [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) as a parameter. |
-| [claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) | Claims a USB device interface. &gt; **NOTE：**&gt; &gt; In USB programming, **claimInterface** is a common operation, which indicates that an application requests the &gt; operating system to release a USB interface from the kernel driver and hand over the USB interface to a user &gt; space program for control.<br> &gt; &gt; All the **claim** communication interfaces used below refer to the claim interface operations. |
+| [claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) | Claims a USB device interface. |
 | [closeAccessory](arkts-basicservices-usbmanager-closeaccessory-f.md) | Closes the accessory file descriptor. You need to call [usbManager.openAccessory](arkts-basicservices-usbmanager-openaccessory-f.md) to obtain the accessory list and use [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md) as a parameter. |
-| [closePipe](arkts-basicservices-usbmanager-closepipe-f.md) | Closes a USB device pipe. 1. Call [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md) to obtain the USB device list. 2. Call [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md) to request the device access permission. 3. Call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) to obtain **devicepipe** as an input parameter. |
-| [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) | Connects to the USB device based on the device information returned by **getDevices()**. If the USB service is abnormal, **undefined** may be returned. Check whether the return value of the API is empty. 1. Call [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md) to obtain the USB device list. 2. Call [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md) to request the device access permission. |
+| [closePipe](arkts-basicservices-usbmanager-closepipe-f.md) | Closes a USB device pipe. |
+| [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) | Connects to the USB device based on the device information returned by **getDevices()**. If the USB service is abnormal, **undefined** may be returned. Check whether the return value of the API is empty. |
 | [controlTransfer](arkts-basicservices-usbmanager-controltransfer-f.md) | Performs control transfer. This API uses a promise to return the result. |
 | [getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md) | Obtains the list of USB accessories connected to the host. |
-| [getDevices](arkts-basicservices-usbmanager-getdevices-f.md) | Obtains the list of USB devices connected to the host. &gt; **NOTE：**&gt; &gt; Third-party applications are not allowed to obtain the device serial number from the **serial** field unless they &gt; request permission using [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md) &gt; and then initiate a control transfer to obtain it. |
+| [getDevices](arkts-basicservices-usbmanager-getdevices-f.md) | Obtains the list of USB devices connected to the host. |
 | [getFileDescriptor](arkts-basicservices-usbmanager-getfiledescriptor-f.md) | Obtains a file descriptor. |
 | [getRawDescriptor](arkts-basicservices-usbmanager-getrawdescriptor-f.md) | Obtains a raw USB descriptor. If the USB service is abnormal, **undefined** may be returned. Check whether the return value of the API is empty. |
 | [hasAccessoryRight](arkts-basicservices-usbmanager-hasaccessoryright-f.md) | Checks whether the application has the permission to access the USB accessory. You need to call [usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md) to obtain the accessory list and use [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) as a parameter. |
 | [hasRight](arkts-basicservices-usbmanager-hasright-f.md) | Checks whether the application has the permission to access the device. Checks whether the user, for example, the application or system, has the device access permissions. The value ** true** is returned if the user has the device access permissions; the value **false** is returned otherwise. |
 | [openAccessory](arkts-basicservices-usbmanager-openaccessory-f.md) | Obtains the accessory handle and opens the accessory file descriptor. Then, the host can communicate with the accessory through the **read** and **write** APIs provided by Core File Kit. You need to call [usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md) to obtain the accessory list and use [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) as a parameter. |
-| [releaseInterface](arkts-basicservices-usbmanager-releaseinterface-f.md) | Releases the claimed communication interface. &gt; **NOTE：**&gt; &gt; Before calling this API, call the &gt; [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) &gt; API to claim a communication interface. |
+| [releaseInterface](arkts-basicservices-usbmanager-releaseinterface-f.md) | Releases the claimed communication interface. |
 | [removeRight](arkts-basicservices-usbmanager-removeright-f.md) | Removes the device access permission for the application. System applications are granted the device access permission by default, and calling this API will not revoke the permission. |
 | [requestAccessoryRight](arkts-basicservices-usbmanager-requestaccessoryright-f.md) | Requests the permission to access a USB accessory for a specified application. This API uses a promise to return the result. You need to call [usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md) to obtain the accessory list and use [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) as a parameter. |
 | [requestRight](arkts-basicservices-usbmanager-requestright-f.md) | Requests the temporary device access permission for the application. This API uses a promise to return the result. System applications are granted the device access permission by default, and you do not need to apply for the permission separately. |
-| [resetUsbDevice](arkts-basicservices-usbmanager-resetusbdevice-f.md) | Resets a USB peripheral. &gt; **NOTE：**&gt; &gt; Previous configurations and APIs will be reset. Ensure that the related services have been completed before &gt; calling this API. |
+| [resetUsbDevice](arkts-basicservices-usbmanager-resetusbdevice-f.md) | Resets a USB peripheral. |
 | [setConfiguration](arkts-basicservices-usbmanager-setconfiguration-f.md) | Sets the device configuration. |
-| [setInterface](arkts-basicservices-usbmanager-setinterface-f.md) | Sets a USB interface. &gt; **NOTE：**&gt; &gt; A USB interface may have multiple selection modes and supports dynamic switching. It is used to reset the &gt; endpoint to match the transmission type during data transmission. &gt; &gt; Before calling this API, call the &gt; [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) &gt; API to claim a communication interface. |
-| [usbCancelTransfer](arkts-basicservices-usbmanager-usbcanceltransfer-f.md) | Cancels an asynchronous USB data transfer request. &gt; **NOTE：**&gt; &gt; This API is used to proactively cancel an unfinished USB data transfer request (for example, the one submitted by &gt; **usbSubmitTransfer**). &gt; Before calling this API, call the &gt; [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) &gt; API to claim a communication interface. |
+| [setInterface](arkts-basicservices-usbmanager-setinterface-f.md) | Sets a USB interface. |
+| [usbCancelTransfer](arkts-basicservices-usbmanager-usbcanceltransfer-f.md) | Cancels an asynchronous USB data transfer request. |
 | [usbControlTransfer](arkts-basicservices-usbmanager-usbcontroltransfer-f.md) | Performs control transfer. This API uses a promise to return the result. |
-| [usbSubmitTransfer](arkts-basicservices-usbmanager-usbsubmittransfer-f.md) | Requests a USB data transfer. &gt; **NOTE：**&gt; &gt; This API uses an asynchronous callback to return the result. &gt; &gt; Before calling this API, call the &gt; [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) &gt; API to claim a communication interface. |
+| [usbSubmitTransfer](arkts-basicservices-usbmanager-usbsubmittransfer-f.md) | Requests a USB data transfer. |
 
 <!--Del-->
 ### Functions(System API)
@@ -84,8 +94,8 @@ import { serialManager } from '@kit.BasicServicesKit';
 | [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md) | Represents the USB device information. |
 | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Represents a USB device pipe, which is used to determine a USB device. |
 | [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md) | Represents control transfer parameters. |
-| [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md) | Represents the USB endpoint from which data is sent or received. You can obtain the USB endpoint through [USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md). &gt; **NOTE：**&gt; &gt; The host controller schedules the endpoint based on the endpoint type. &gt; &gt; The transmission characteristics are determined by the type during protocol layer packaging. |
-| [USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md) | Represents a USB interface. One [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md) object can contain multiple * *USBInterface** instances, each providing a specific function. |
+| [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md) | Represents the USB endpoint from which data is sent or received. You can obtain the USB endpoint through [USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md). |
+| [USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md) | Represents a USB interface. One [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md) object can contain multiple *USBInterface** instances, each providing a specific function. |
 | [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | As a USB data transfer interface, it is required for a client to initiate a transfer request. |
 | [UsbIsoPacketDescriptor](arkts-basicservices-usbmanager-usbisopacketdescriptor-i.md) | Describes packet information returned in real time by the transfer callback. |
 

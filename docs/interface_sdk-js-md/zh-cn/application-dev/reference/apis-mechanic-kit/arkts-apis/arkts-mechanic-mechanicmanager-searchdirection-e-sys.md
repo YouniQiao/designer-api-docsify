@@ -2,6 +2,8 @@
 
 Search direction.
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-mechanicManager-export enum SearchDirection--><!--Device-mechanicManager-export enum SearchDirection-End-->

@@ -1,6 +1,10 @@
 # ApplicationInfo
 
-The module provides application information. Unless otherwise specified, the information is obtained through [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md) . &gt; **NOTE：**&gt; &gt; The APIs of this module have been deprecated since API version 9. You are advised to use &gt; [bundleManager-ApplicationInfo](#applicationinfo) instead.
+The module provides application information. Unless otherwise specified, the information is obtained through [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md) .
+
+> **NOTE：**
+> 
+> The APIs of this module have been deprecated since API version 9. You are advised to use &gt; [bundleManager-ApplicationInfo](#applicationinfo) instead.
 
 **Since:** 7
 
@@ -256,7 +260,9 @@ ID of the application label.
 readonly metaData: Map<string, Array<CustomizeData>>
 ```
 
-Custom metadata of the application. The value is obtained by passing in GET_APPLICATION_INFO_WITH_METADATA to [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md) .
+Custom metadata of the application.
+
+The value is obtained by passing in GET_APPLICATION_INFO_WITH_METADATA to [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md) .
 
 **Type:** Map&lt;string, Array&lt;[CustomizeData](arkts-ability-customizedata-customizedata-depr-i.md)&gt;&gt;
 
@@ -342,7 +348,9 @@ Application name.
 readonly permissions: Array<string>
 ```
 
-Permissions required for accessing the application. The value is obtained by passing in GET_APPLICATION_INFO_WITH_PERMISSION to [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md) .
+Permissions required for accessing the application.
+
+The value is obtained by passing in GET_APPLICATION_INFO_WITH_PERMISSION to [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md) .
 
 **Type:** Array&lt;string&gt;
 

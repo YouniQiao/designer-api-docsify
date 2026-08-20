@@ -220,7 +220,11 @@ Subscribes to error events.
 on(type: 'depthDataAvailable', callback: AsyncCallback<DepthData>): void
 ```
 
-Subscribes to depth data availability events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to depth data availability events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 13
 
@@ -266,7 +270,11 @@ function registerDepthDataAvailable(depthDataOutput: camera.DepthDataOutput): vo
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to DepthDataOutput error events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to DepthDataOutput error events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 13
 
@@ -329,9 +337,9 @@ Starts depth data output. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 **Examples**
 
@@ -373,9 +381,9 @@ Stops depth data output. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 **Examples**
 

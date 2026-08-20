@@ -1,6 +1,10 @@
 # FrameCallback
 
-用于定义帧回调任务，可在下一帧渲染阶段或帧渲染任务结束后的空闲阶段执行。 &gt; **说明：** &gt; &gt; - 以下API需要配合[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)中的[postFrameCallback](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#postframecallback)和 &gt; [postDelayedFrameCallback](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#postdelayedframecallback)使用。开发者需要继承该类并重写 &gt; [onFrame](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-framecallback-c.md#onframe)或[onIdle](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-framecallback-c.md#onidle)方法，实现具体的业务逻辑。
+用于定义帧回调任务，可在下一帧渲染阶段或帧渲染任务结束后的空闲阶段执行。
+
+> **说明：**
+> 
+> - 以下API需要配合[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的[postFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback)和 &gt; [postDelayedFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postdelayedframecallback)使用。开发者需要继承该类并重写 &gt; [onFrame](#onframe)或[onIdle](#onidle)方法，实现具体的业务逻辑。
 
 **起始版本：** 12
 

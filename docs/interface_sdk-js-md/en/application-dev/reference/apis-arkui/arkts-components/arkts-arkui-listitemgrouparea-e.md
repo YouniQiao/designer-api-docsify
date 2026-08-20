@@ -32,7 +32,7 @@ Area other than the **ListItem**, header, and footer areas in **ListItemGroup**.
 IN_LIST_ITEM_AREA = 1
 ```
 
-**ListItem** area in **ListItemGroup**.
+*ListItem** area in **ListItemGroup**.
 
 **Since:** 12
 

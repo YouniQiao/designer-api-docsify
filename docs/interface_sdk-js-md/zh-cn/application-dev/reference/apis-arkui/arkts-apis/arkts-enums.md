@@ -33,7 +33,7 @@
 | [CrownAction](arkts-arkui-crownaction-e.md) | 旋转表冠动作。 |
 | [CrownSensitivity](arkts-arkui-crownsensitivity-e.md) | 旋转表冠灵敏度。 |
 | [Curve](arkts-arkui-curve-e.md) | 插值曲线，动效请参考<!--RP1-->[贝塞尔曲线](../../../../design/ux-design/animation-attributes.md)<!--RP1End-->。 |
-| [DialogButtonStyle](arkts-arkui-dialogbuttonstyle-e.md) | The Button Style of dialog, |
+| [DialogButtonStyle](arkts-arkui-dialogbuttonstyle-e.md) | The Button Style of dialog, @enum { number } |
 | [DialogDisplayMode](arkts-arkui-dialogdisplaymode-e.md) | Dialog display mode. |
 | [Direction](arkts-arkui-direction-e.md) | Sets the horizontal layout of elements. |
 | [DividerMode](arkts-arkui-dividermode-e.md) | Menu divider mode. |
@@ -81,7 +81,7 @@
 | [ObscuredReasons](arkts-arkui-obscuredreasons-e.md) | ObscuredReasons. |
 | [OperateIntention](arkts-arkui-operateintention-e.md) | 智慧手势原始操作意图枚举。 |
 | [OptionWidthMode](arkts-arkui-optionwidthmode-e.md) | Decide whether the width of select menu fit the trigger or content |
-| [PageFlipMode](arkts-arkui-pageflipmode-e.md) | Page flip mode of Swiper and Tabs on mouse wheel event. |
+| [PageFlipMode](arkts-arkui-pageflipmode-e.md) | Page flip mode of Swiper and Tabs on mouse wheel event. @enum { number } PageFlipMode |
 | [PixelRoundCalcPolicy](arkts-arkui-pixelroundcalcpolicy-e.md) | Pixel Round Direction |
 | [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | 像素取整模式 |
 | [Placement](arkts-arkui-placement-e.md) | Placement enumeration description |
@@ -93,7 +93,7 @@
 | [RenderStrategy](arkts-arkui-renderstrategy-e.md) | RenderStrategy 的枚举。 定义图形渲染策略。 |
 | [ResponseRegionSupportedTool](arkts-arkui-responseregionsupportedtool-e.md) | 触摸热区适用的输入工具类型。 |
 | [ResponseType](arkts-arkui-responsetype-e.md) | ResponseType for contextMenu |
-| [ScrollSource](arkts-arkui-scrollsource-e.md) | The possible source of scroll event |
+| [ScrollSource](arkts-arkui-scrollsource-e.md) | The possible source of scroll event @enum { number } ScrollSource |
 | [SharedTransitionEffectType](arkts-arkui-sharedtransitioneffecttype-e.md) | 动画类型。 |
 | [SmartGestureAction](arkts-arkui-smartgestureaction-e.md) | 智慧手势操作类型枚举。 |
 | [TextAlign](arkts-arkui-textalign-e.md) | Alignment of text. |

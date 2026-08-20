@@ -1,6 +1,8 @@
 # AudioManager
 
-音频音量和设备管理。 在使用AudioManager的接口之前，需先通过[getAudioManager](arkts-audio-audio-getaudiomanager-f.md)获取AudioManager实例。
+音频音量和设备管理。
+
+在使用AudioManager的接口之前，需先通过[getAudioManager](arkts-audio-audio-getaudiomanager-f.md)获取AudioManager实例。
 
 **起始版本：** 23
 
@@ -149,15 +151,15 @@ Obtains the values of a certain key. This method uses a promise to return the qu
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Record&lt;string, string&gt;&gt; | Promise used to return the key-value pairs. |
+| Promise&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string&gt;&gt; | Promise used to return the key-value pairs. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 **示例**
 
@@ -227,7 +229,7 @@ Listens for ringer mode change events. This method uses a callback to get ringer
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'ringerModeChange' | 是 | Type of the event to listen for. Only the ringerModeChange event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 | Callback used to get the updated ringer mode. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 | Callback used to get the updated ringer mode. |
 
 **示例**
 
@@ -262,7 +264,7 @@ Listens for system volume change events. This method uses a callback to get volu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'volumeChange' | 是 | Type of the event to listen for. Only the volumeChange event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the system volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the system volume change event. |
 
 **示例**
 
@@ -295,7 +297,7 @@ Sets the audio scene mode to change audio strategies. This method uses an asynch
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | scene | [AudioScene](arkts-audio-audio-audioscene-e.md) | 是 | Audio scene mode. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **示例**
 
@@ -374,7 +376,7 @@ Sets extra audio parameters. This method uses a promise to return the result.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mainKey | string | 是 | Main key of the audio parameters to set. |
-| kvpairs | Record&lt;string, string&gt; | 是 | Key-value pairs with subkeys and values to set. |
+| kvpairs | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string&gt; | 是 | Key-value pairs with subkeys and values to set. |
 
 **返回值：**
 
@@ -386,10 +388,10 @@ Sets extra audio parameters. This method uses a promise to return the result.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 **示例**
 

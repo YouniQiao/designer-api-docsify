@@ -22,7 +22,11 @@ import { notificationManager } from '@kit.NotificationKit';
 code: int
 ```
 
-Result code. **0**: display. **1**: no display.
+Result code.
+
+**0**: display.
+
+**1**: no display.
 
 **Type:** int
 

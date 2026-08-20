@@ -1,6 +1,9 @@
 # StackOptions
 
-> **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. The &gt; initial version information of the historical anonymous objects has been retained, which may result in the outer &gt; element's @since version number being later than the inner element's version number. However, this does not affect &gt; the use of the API.
+
+> **NOTE：**
+> 
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18. The &gt; initial version information of the historical anonymous objects has been retained, which may result in the outer &gt; element's
 
 **Since:** 18
 

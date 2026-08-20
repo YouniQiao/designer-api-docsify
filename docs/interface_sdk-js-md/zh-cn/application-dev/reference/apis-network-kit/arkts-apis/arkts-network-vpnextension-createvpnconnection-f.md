@@ -12,7 +12,11 @@ import { vpnExtension } from '@kit.NetworkKit';
 function createVpnConnection(context: VpnExtensionContext): VpnConnection
 ```
 
-创建一个三方VPN连接对象。 &gt; **说明：** &gt; &gt; 调用createVpnConnection接口前，需要先调用startVpnExtensionAbility接口启用VPN功能。
+创建一个三方VPN连接对象。
+
+> **说明：**
+> 
+> 调用createVpnConnection接口前，需要先调用startVpnExtensionAbility接口启用VPN功能。
 
 **起始版本：** 11
 

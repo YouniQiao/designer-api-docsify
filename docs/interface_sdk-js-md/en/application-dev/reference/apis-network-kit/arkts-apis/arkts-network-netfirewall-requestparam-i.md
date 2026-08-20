@@ -1,4 +1,4 @@
-# RequestParam(Network Firewall)
+# RequestParam
 
 Defines query parameters.
 

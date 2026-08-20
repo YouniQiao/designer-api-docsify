@@ -1,6 +1,10 @@
 # Task
 
-上传或下载任务。使用该方法前需要先获取Task对象，promise形式通过 [request.agent.create](arkts-basicservices-agent-create-f.md)获取， callback形式通过 [request.agent.create](arkts-basicservices-agent-create-f.md)获取。 &gt; **说明：** &gt; &gt; Task对象及其挂载回调函数会在调用remove方法后释放并被系统自动回收。
+上传或下载任务。使用该方法前需要先获取Task对象，promise形式通过 [request.agent.create](arkts-basicservices-agent-create-f.md)获取， callback形式通过 [request.agent.create](arkts-basicservices-agent-create-f.md)获取。
+
+> **说明：**
+> 
+> Task对象及其挂载回调函数会在调用remove方法后释放并被系统自动回收。
 
 **起始版本：** 23
 
@@ -73,7 +77,7 @@ Disables the 'faultOccur' callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | 否 | callback function with a `Faults` argument. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | 否 | callback function with a `Faults` argument. |
 
 ## offPause
 
@@ -153,7 +157,7 @@ Disables the response callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | 否 | callback function with an `HttpResponse` argument. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;HttpResponse&gt; | 否 | callback function with an `HttpResponse` argument. |
 
 ## offResume
 
@@ -193,7 +197,7 @@ Disables the wait callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | 否 | callback function with an `WaitingReason` argument. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | 否 | callback function with an `WaitingReason` argument. |
 
 ## off_completed
 
@@ -201,7 +205,11 @@ Disables the wait callback.
 off(event: 'completed', callback?: (progress: Progress) => void): void
 ```
 
-取消订阅任务完成事件。 &gt; **说明：** &gt; &gt; 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+取消订阅任务完成事件。
+
+> **说明：**
+> 
+> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 10
 
@@ -231,7 +239,11 @@ off(event: 'completed', callback?: (progress: Progress) => void): void
 off(event: 'failed', callback?: (progress: Progress) => void): void
 ```
 
-取消订阅任务失败事件。 &gt; **说明：** &gt; &gt; 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+取消订阅任务失败事件。
+
+> **说明：**
+> 
+> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 10
 
@@ -261,7 +273,11 @@ off(event: 'failed', callback?: (progress: Progress) => void): void
 off(event: 'faultOccur', callback?: Callback<Faults>): void
 ```
 
-取消订阅任务失败原因相关的事件。 &gt; **说明：** &gt; &gt; 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+取消订阅任务失败原因相关的事件。
+
+> **说明：**
+> 
+> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 20
 
@@ -274,7 +290,7 @@ off(event: 'faultOccur', callback?: Callback<Faults>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'faultOccur' | 是 | 订阅的事件类型。<br>- 取值为'faultOccur'，表示任务失败。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | 否 | 需要取消订阅的回调函数。若无此参数，则默认取消订阅当前类型的所有回调函数。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | 否 | 需要取消订阅的回调函数。若无此参数，则默认取消订阅当前类型的所有回调函数。 |
 
 **错误码：**
 
@@ -288,7 +304,11 @@ off(event: 'faultOccur', callback?: Callback<Faults>): void
 off(event: 'pause', callback?: (progress: Progress) => void): void
 ```
 
-取消订阅任务暂停事件。 &gt; **说明：** &gt; &gt; 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+取消订阅任务暂停事件。
+
+> **说明：**
+> 
+> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 11
 
@@ -315,7 +335,11 @@ off(event: 'pause', callback?: (progress: Progress) => void): void
 off(event: 'progress', callback?: (progress: Progress) => void): void
 ```
 
-取消订阅任务进度事件。 &gt; **说明：** &gt; &gt; 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+取消订阅任务进度事件。
+
+> **说明：**
+> 
+> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 10
 
@@ -345,7 +369,11 @@ off(event: 'progress', callback?: (progress: Progress) => void): void
 off(event: 'remove', callback?: (progress: Progress) => void): void
 ```
 
-取消订阅任务移除事件。 &gt; **说明：** &gt; &gt; 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+取消订阅任务移除事件。
+
+> **说明：**
+> 
+> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 11
 
@@ -372,7 +400,11 @@ off(event: 'remove', callback?: (progress: Progress) => void): void
 off(event: 'response', callback?: Callback<HttpResponse>): void
 ```
 
-取消订阅任务响应事件。 &gt; **说明：** &gt; &gt; 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+取消订阅任务响应事件。
+
+> **说明：**
+> 
+> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 12
 
@@ -387,7 +419,7 @@ off(event: 'response', callback?: Callback<HttpResponse>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'response' | 是 | 取消订阅的事件类型。<br>- 取值为'response'，表示任务响应。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | 否 | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;HttpResponse&gt; | 否 | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
 
 **错误码：**
 
@@ -401,7 +433,11 @@ off(event: 'response', callback?: Callback<HttpResponse>): void
 off(event: 'resume', callback?: (progress: Progress) => void): void
 ```
 
-取消订阅任务恢复事件。 &gt; **说明：** &gt; &gt; 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+取消订阅任务恢复事件。
+
+> **说明：**
+> 
+> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 11
 
@@ -428,7 +464,11 @@ off(event: 'resume', callback?: (progress: Progress) => void): void
 off(event: 'wait', callback?: Callback<WaitingReason>): void
 ```
 
-取消订阅任务等待原因相关的事件。 &gt; **说明：** &gt; &gt; 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+取消订阅任务等待原因相关的事件。
+
+> **说明：**
+> 
+> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 20
 
@@ -441,7 +481,7 @@ off(event: 'wait', callback?: Callback<WaitingReason>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'wait' | 是 | 订阅的事件类型。<br>- 取值为'wait'，表示任务等待。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | 否 | 需要取消订阅的回调函数。若无此参数，则默认取消订阅当前类型的所有回调函数。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | 否 | 需要取消订阅的回调函数。若无此参数，则默认取消订阅当前类型的所有回调函数。 |
 
 **错误码：**
 
@@ -507,7 +547,7 @@ Enables the 'faultOccur' callback. This callback is triggered when the task fail
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | 是 | callback function with a `Faults` argument. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | 是 | callback function with a `Faults` argument. |
 
 ## onPause
 
@@ -587,7 +627,7 @@ Enables the response callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | 是 | callback function with an `HttpResponse` argument. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;HttpResponse&gt; | 是 | callback function with an `HttpResponse` argument. |
 
 ## onResume
 
@@ -627,7 +667,7 @@ Enables the wait callback. This callback is triggered when the task changes from
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | 是 | callback function with an `WaitingReason` argument. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | 是 | callback function with an `WaitingReason` argument. |
 
 ## on_completed
 
@@ -635,7 +675,11 @@ Enables the wait callback. This callback is triggered when the task changes from
 on(event: 'completed', callback: (progress: Progress) => void): void
 ```
 
-订阅任务完成事件，使用callback异步回调。 &gt; **说明：** &gt; &gt; 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+订阅任务完成事件，使用callback异步回调。
+
+> **说明：**
+> 
+> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 10
 
@@ -665,7 +709,11 @@ on(event: 'completed', callback: (progress: Progress) => void): void
 on(event: 'failed', callback: (progress: Progress) => void): void
 ```
 
-订阅任务失败事件，使用callback异步回调。可通过调用 [request.agent.show](arkts-basicservices-agent-show-f.md)查看错误原因 。 &gt; **说明：** &gt; &gt; 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+订阅任务失败事件，使用callback异步回调。可通过调用 [request.agent.show](arkts-basicservices-agent-show-f.md)查看错误原因 。
+
+> **说明：**
+> 
+> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 10
 
@@ -695,7 +743,11 @@ on(event: 'failed', callback: (progress: Progress) => void): void
 on(event: 'faultOccur', callback: Callback<Faults>): void
 ```
 
-订阅任务失败原因，使用callback形式返回结果。 &gt; **说明：** &gt; &gt; 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+订阅任务失败原因，使用callback形式返回结果。
+
+> **说明：**
+> 
+> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 20
 
@@ -708,7 +760,7 @@ on(event: 'faultOccur', callback: Callback<Faults>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'faultOccur' | 是 | 订阅的事件类型。<br>- 取值为'faultOccur'，表示任务失败。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | 是 | 发生相关的事件时触发该回调方法，返回任务失败的原因。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | 是 | 发生相关的事件时触发该回调方法，返回任务失败的原因。 |
 
 **错误码：**
 
@@ -722,7 +774,11 @@ on(event: 'faultOccur', callback: Callback<Faults>): void
 on(event: 'pause', callback: (progress: Progress) => void): void
 ```
 
-订阅任务暂停事件，使用callback异步回调。 &gt; **说明：** &gt; &gt; 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+订阅任务暂停事件，使用callback异步回调。
+
+> **说明：**
+> 
+> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 11
 
@@ -749,7 +805,11 @@ on(event: 'pause', callback: (progress: Progress) => void): void
 on(event: 'progress', callback: (progress: Progress) => void): void
 ```
 
-订阅任务进度的事件，使用callback异步回调。 &gt; **说明：** &gt; &gt; 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+订阅任务进度的事件，使用callback异步回调。
+
+> **说明：**
+> 
+> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 10
 
@@ -779,7 +839,11 @@ on(event: 'progress', callback: (progress: Progress) => void): void
 on(event: 'remove', callback: (progress: Progress) => void): void
 ```
 
-订阅任务移除事件，使用callback异步回调。 &gt; **说明：** &gt; &gt; 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+订阅任务移除事件，使用callback异步回调。
+
+> **说明：**
+> 
+> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 11
 
@@ -806,7 +870,11 @@ on(event: 'remove', callback: (progress: Progress) => void): void
 on(event: 'response', callback: Callback<HttpResponse>): void
 ```
 
-订阅任务响应头，使用callback异步回调。 &gt; **说明：** &gt; &gt; 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+订阅任务响应头，使用callback异步回调。
+
+> **说明：**
+> 
+> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 12
 
@@ -821,7 +889,7 @@ on(event: 'response', callback: Callback<HttpResponse>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'response' | 是 | 订阅的事件类型。<br>- 取值为'response'，表示任务响应，请求接收到响应时触发该事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | 是 | 回调函数，发生相关的事件时触发该回调方法，返回任务响应头的数据结构。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;HttpResponse&gt; | 是 | 回调函数，发生相关的事件时触发该回调方法，返回任务响应头的数据结构。 |
 
 **错误码：**
 
@@ -835,7 +903,11 @@ on(event: 'response', callback: Callback<HttpResponse>): void
 on(event: 'resume', callback: (progress: Progress) => void): void
 ```
 
-订阅任务恢复事件，使用callback异步回调。 &gt; **说明：** &gt; &gt; 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+订阅任务恢复事件，使用callback异步回调。
+
+> **说明：**
+> 
+> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 11
 
@@ -862,7 +934,11 @@ on(event: 'resume', callback: (progress: Progress) => void): void
 on(event: 'wait', callback: Callback<WaitingReason>): void
 ```
 
-订阅任务等待原因，使用callback形式返回结果。 &gt; **说明：** &gt; &gt; 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+订阅任务等待原因，使用callback形式返回结果。
+
+> **说明：**
+> 
+> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 20
 
@@ -875,7 +951,7 @@ on(event: 'wait', callback: Callback<WaitingReason>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'wait' | 是 | 订阅的事件类型。<br>- 取值为'wait'，表示任务等待。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | 是 | 发生相关的事件时触发该回调方法，返回任务等待的原因。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | 是 | 发生相关的事件时触发该回调方法，返回任务等待的原因。 |
 
 **错误码：**
 
@@ -901,15 +977,15 @@ pause(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当暂停任务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当暂停任务成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [21900007](../errorcode-request.md#21900007-在不支持的状态上的操作) | Operation with wrong task state. |
-| [21900005](../errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10+ |
 | [13400003](../errorcode-request.md#13400003-服务异常) | Task service ability error. |
+| [21900005](../errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10+ |
+| [21900007](../errorcode-request.md#21900007-在不支持的状态上的操作) | Operation with wrong task state. |
 
 ## pause
 
@@ -935,9 +1011,9 @@ pause(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [21900007](../errorcode-request.md#21900007-在不支持的状态上的操作) | Operation with wrong task state. |
-| [21900005](../errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10+ |
 | [13400003](../errorcode-request.md#13400003-服务异常) | Task service ability error. |
+| [21900005](../errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10+ |
+| [21900007](../errorcode-request.md#21900007-在不支持的状态上的操作) | Operation with wrong task state. |
 
 ## resume
 
@@ -959,16 +1035,16 @@ resume(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当重新启动任务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当重新启动任务成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [21900007](../errorcode-request.md#21900007-在不支持的状态上的操作) | Operation with wrong task state. |
-| [21900005](../errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10+ |
 | [13400003](../errorcode-request.md#13400003-服务异常) | Task service ability error. |
+| [21900005](../errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10+ |
+| [21900007](../errorcode-request.md#21900007-在不支持的状态上的操作) | Operation with wrong task state. |
 
 ## resume
 
@@ -997,9 +1073,9 @@ resume(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [21900007](../errorcode-request.md#21900007-在不支持的状态上的操作) | Operation with wrong task state. |
-| [21900005](../errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10+ |
 | [13400003](../errorcode-request.md#13400003-服务异常) | Task service ability error. |
+| [21900005](../errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10+ |
+| [21900007](../errorcode-request.md#21900007-在不支持的状态上的操作) | Operation with wrong task state. |
 
 ## setMaxSpeed
 
@@ -1040,7 +1116,15 @@ setMaxSpeed(speed: long): Promise<void>
 start(callback: AsyncCallback<void>): void
 ```
 
-启动一个任务。使用callback异步回调。 以下状态的任务可以被启动： 1. 刚被request.agent.create接口创建的任务。 2. 使用request.agent.create接口创建的已经失败或者停止的下载任务。 &gt; **说明：** &gt; &gt; 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+启动一个任务。使用callback异步回调。
+
+以下状态的任务可以被启动：
+
+1. 刚被request.agent.create接口创建的任务。 2. 使用request.agent.create接口创建的已经失败或者停止的下载任务。
+
+> **说明：**
+> 
+> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 23
 
@@ -1056,15 +1140,15 @@ start(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开启任务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当开启任务成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [21900007](../errorcode-request.md#21900007-在不支持的状态上的操作) | Operation with wrong task state. |
 | [13400003](../errorcode-request.md#13400003-服务异常) | Task service ability error. |
+| [21900007](../errorcode-request.md#21900007-在不支持的状态上的操作) | Operation with wrong task state. |
 
 ## start
 
@@ -1072,7 +1156,15 @@ start(callback: AsyncCallback<void>): void
 start(): Promise<void>
 ```
 
-启动一个任务。使用Promise异步回调。 以下状态的任务可以被启动： 1. 刚被request.agent.create接口创建的任务。 2. 使用request.agent.create接口创建的已经失败或者停止的下载任务。 &gt; **说明：** &gt; &gt; 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+启动一个任务。使用Promise异步回调。
+
+以下状态的任务可以被启动：
+
+1. 刚被request.agent.create接口创建的任务。 2. 使用request.agent.create接口创建的已经失败或者停止的下载任务。
+
+> **说明：**
+> 
+> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 23
 
@@ -1095,8 +1187,8 @@ start(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [21900007](../errorcode-request.md#21900007-在不支持的状态上的操作) | Operation with wrong task state. |
 | [13400003](../errorcode-request.md#13400003-服务异常) | Task service ability error. |
+| [21900007](../errorcode-request.md#21900007-在不支持的状态上的操作) | Operation with wrong task state. |
 
 ## stop
 
@@ -1118,14 +1210,14 @@ stop(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止任务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当停止任务成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [21900007](../errorcode-request.md#21900007-在不支持的状态上的操作) | Operation with wrong task state. |
 | [13400003](../errorcode-request.md#13400003-服务异常) | Task service ability error. |
+| [21900007](../errorcode-request.md#21900007-在不支持的状态上的操作) | Operation with wrong task state. |
 
 ## stop
 
@@ -1153,8 +1245,8 @@ stop(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [21900007](../errorcode-request.md#21900007-在不支持的状态上的操作) | Operation with wrong task state. |
 | [13400003](../errorcode-request.md#13400003-服务异常) | Task service ability error. |
+| [21900007](../errorcode-request.md#21900007-在不支持的状态上的操作) | Operation with wrong task state. |
 
 ## config
 

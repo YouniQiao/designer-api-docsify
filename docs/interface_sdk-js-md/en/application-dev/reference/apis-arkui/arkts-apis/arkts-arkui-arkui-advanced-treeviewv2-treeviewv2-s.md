@@ -23,7 +23,7 @@ import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeLis
 
 Node data source of TreeViewV2.
 
-**Type:** [TreeControllerV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-treeviewv2-treecontrollerv2-c.md)
+**Type:** [TreeControllerV2](arkts-arkui-arkui-advanced-treeviewv2-treecontrollerv2-c.md)
 
 **Since:** 26.0.0
 

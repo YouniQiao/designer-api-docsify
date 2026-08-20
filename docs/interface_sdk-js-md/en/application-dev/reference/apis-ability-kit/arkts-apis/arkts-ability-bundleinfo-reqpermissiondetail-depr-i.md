@@ -1,6 +1,11 @@
 # ReqPermissionDetail
 
-> **NOTE：**&gt; &gt; This API has been supported since API version 7 and deprecated since API version 9. You are advised to use &gt; ReqPermissionDetail instead. Provides the detailed information of the permissions to request from the system.
+
+> **NOTE：**
+> 
+> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use &gt; ReqPermissionDetail instead.
+
+Provides the detailed information of the permissions to request from the system.
 
 **Since:** 7
 

@@ -69,7 +69,7 @@ Compares the current RationalNumber object to the given object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| another | [RationalNumber](../../apis-na/arkts-apis/arkts-na-util-rationalnumber-c.md) | Yes | An object of other rational numbers |
+| another | [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | Yes | An object of other rational numbers |
 
 **Return value:**
 
@@ -99,7 +99,7 @@ Compares the current RationalNumber object to the given object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| another | [RationalNumber](../../apis-na/arkts-apis/arkts-na-util-rationalnumber-c.md) | Yes | An object of other rational numbers |
+| another | [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | Yes | An object of other rational numbers |
 
 **Return value:**
 
@@ -119,7 +119,7 @@ A constructor used to create a **RationalNumber** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [parseRationalNumber](../../apis-na/arkts-apis/arkts-na-util-rationalnumber-c.md#parserationalnumber)
+**Substitutes:** [parseRationalNumber](#parserationalnumber)
 
 <!--Device-RationalNumber-constructor(numerator: number, denominator: number)--><!--Device-RationalNumber-constructor(numerator: number, denominator: number)-End-->
 
@@ -166,7 +166,11 @@ let rationalNumber = new util.RationalNumber();
 static createRationalFromString(rationalString: string): RationalNumber
 ```
 
-Creates a **RationalNumber** object based on the given string. &gt; **NOTE：**&gt; &gt; The **rationalString** parameter must be a string. If a decimal string is passed in, the function is not &gt; intercepted, but the error message "createRationalFromString: The type of Parameter must be integer string" is &gt; displayed.
+Creates a **RationalNumber** object based on the given string.
+
+> **NOTE：**
+> 
+> The **rationalString** parameter must be a string. If a decimal string is passed in, the function is not &gt; intercepted, but the error message "createRationalFromString: The type of Parameter must be integer string" is &gt; displayed.
 
 **Since:** 8
 
@@ -186,7 +190,7 @@ Creates a **RationalNumber** object based on the given string. &gt; **NOTE：**&
 
 | Type | Description |
 | --- | --- |
-| [RationalNumber](../../apis-na/arkts-apis/arkts-na-util-rationalnumber-c.md) | Returns a RationalNumber object generated based on the given string. |
+| [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | Returns a RationalNumber object generated based on the given string. |
 
 **Examples**
 
@@ -254,7 +258,7 @@ Obtains the greatest common divisor of two specified integers.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCommonFactor](../../apis-na/arkts-apis/arkts-na-util-rationalnumber-c.md#getcommonfactor)
+**Substitutes:** [getCommonFactor](#getcommonfactor)
 
 <!--Device-RationalNumber-static getCommonDivisor(number1: number, number2: number): number--><!--Device-RationalNumber-static getCommonDivisor(number1: number, number2: number): number-End-->
 
@@ -279,7 +283,11 @@ Obtains the greatest common divisor of two specified integers.
 static getCommonFactor(number1: number, number2: number): number
 ```
 
-Obtains the greatest common divisor of two specified integers. &gt; **NOTE：**&gt; &gt; The **number1** and **number2** parameters must be integers. If a decimal number is passed in, the function is &gt; not intercepted, but the error message "getCommonFactor: The type of Parameter must be integer" is displayed.
+Obtains the greatest common divisor of two specified integers.
+
+> **NOTE：**
+> 
+> The **number1** and **number2** parameters must be integers. If a decimal number is passed in, the function is &gt; not intercepted, but the error message "getCommonFactor: The type of Parameter must be integer" is displayed.
 
 **Since:** 9
 
@@ -516,7 +524,11 @@ console.info("result = " + result);
 static parseRationalNumber(numerator: number, denominator: number): RationalNumber
 ```
 
-Creates a **RationalNumber** instance with a given numerator and denominator. &gt; **NOTE：**&gt; &gt; The **numerator** and **denominator** parameters must be integers. If a decimal number is passed in, the &gt; function is not intercepted, but the error message "parseRationalNumber: The type of Parameter must be integer" &gt; is displayed.
+Creates a **RationalNumber** instance with a given numerator and denominator.
+
+> **NOTE：**
+> 
+> The **numerator** and **denominator** parameters must be integers. If a decimal number is passed in, the &gt; function is not intercepted, but the error message "parseRationalNumber: The type of Parameter must be integer" &gt; is displayed.
 
 **Since:** 9
 
@@ -537,7 +549,7 @@ Creates a **RationalNumber** instance with a given numerator and denominator. &g
 
 | Type | Description |
 | --- | --- |
-| [RationalNumber](../../apis-na/arkts-apis/arkts-na-util-rationalnumber-c.md) | RationalNumber** object obtained. |
+| [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | RationalNumber** object obtained. |
 
 **Examples**
 

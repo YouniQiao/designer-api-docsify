@@ -34,8 +34,8 @@ Cancels a copy task.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900012 | Permission denied by the file system |
 | 13900010 | Try again |
+| 13900012 | Permission denied by the file system |
 | 13900043 | No task can be canceled. |
 
 **Examples**
@@ -86,7 +86,12 @@ try {
 onCancel(): Promise<string>
 ```
 
-> **NOTE：**&gt; &gt; This API is supported since API version 12 and deprecated since API version 24. Subscribes to the event reported when a copy task is canceled.
+
+> **NOTE：**
+> 
+> This API is supported since API version 12 and deprecated since API version 24.
+
+Subscribes to the event reported when a copy task is canceled.
 
 **Since:** 12
 

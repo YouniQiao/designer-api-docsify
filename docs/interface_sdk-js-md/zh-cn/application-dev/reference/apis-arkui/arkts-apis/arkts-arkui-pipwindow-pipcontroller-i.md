@@ -1,6 +1,8 @@
 # PiPController
 
-画中画控制器实例。用于启动、停止画中画以及更新回调注册等。 下列API示例中都需先使用[PiPWindow.create()](arkts-arkui-pipwindow-create-f.md)方法获取到PiPController实例，再通过此实例调用对应方 法。
+画中画控制器实例。用于启动、停止画中画以及更新回调注册等。
+
+下列API示例中都需先使用[PiPWindow.create()](arkts-arkui-pipwindow-create-f.md)方法获取到PiPController实例，再通过此实例调用对应方 法。
 
 **起始版本：** 26.0.0
 
@@ -169,7 +171,7 @@ offActiveStatusChange(callback?: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 如果未传入参数，解除画中画窗口隐藏状态变化事件的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 否 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 如果未传入参数，解除画中画窗口隐藏状态变化事件的所有回调。 |
 
 **错误码：**
 
@@ -196,7 +198,7 @@ offControlEvent(callback?: Callback<ControlEventParam>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 否 | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除画中画控制面板控件动作事件的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 否 | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除画中画控制面板控件动作事件的所有回调。 |
 
 **示例**
 
@@ -245,7 +247,7 @@ offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 否 | 回调函数。返回当前画中画窗口的尺寸。 如果传入参数，则关闭该监听。如果未传入参数，解除窗口尺寸变化事件的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 否 | 回调函数。返回当前画中画窗口的尺寸。 如果传入参数，则关闭该监听。如果未传入参数，解除窗口尺寸变化事件的所有回调。 |
 
 **错误码：**
 
@@ -317,7 +319,7 @@ off(type: 'activeStatusChange', callback?: Callback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'activeStatusChange' | 是 | 事件类型，固定为'activeStatusChange'，即画中画隐藏状态变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。如果未传入参数，解除type为' activeStatusChange'的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 否 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。如果未传入参数，解除type为' activeStatusChange'的所有回调。 |
 
 **示例**
 
@@ -349,7 +351,7 @@ off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'controlEvent' | 是 | 事件类型，固定为'controlEvent'，即画中画控制面板控件动作事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 否 | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除type为'controlEvent'的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 否 | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除type为'controlEvent'的所有回调。 |
 
 **示例**
 
@@ -409,7 +411,7 @@ off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'pipWindowSizeChange' | 是 | 事件类型，固定为'pipWindowSizeChange'，即画中画窗口尺寸变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 否 | 回调函数。返回当前画中画窗口的尺寸。如果传入参数，则关闭该监听。如果未传入参数，解除type为'pipWindowSizeChange '的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 否 | 回调函数。返回当前画中画窗口的尺寸。如果传入参数，则关闭该监听。如果未传入参数，解除type为'pipWindowSizeChange '的所有回调。 |
 
 **错误码：**
 
@@ -486,7 +488,7 @@ onActiveStatusChange(callback: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 <br>画中画显示状态变化回调函数 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 <br>画中画显示状态变化回调函数 |
 
 **错误码：**
 
@@ -522,7 +524,7 @@ onControlEvent(callback: Callback<ControlEventParam>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 是 | 描述画中画控制面板控件动作事件回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 是 | 描述画中画控制面板控件动作事件回调。 |
 
 **示例**
 
@@ -624,7 +626,7 @@ onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 是 | 回调函数。返回当前画中画窗口的尺寸。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 是 | 回调函数。返回当前画中画窗口的尺寸。 |
 
 **错误码：**
 
@@ -717,7 +719,7 @@ on(type: 'activeStatusChange', callback: Callback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'activeStatusChange' | 是 | 事件类型，固定为'activeStatusChange'，即画中画隐藏状态变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 |
 
 **示例**
 
@@ -749,7 +751,7 @@ on(type: 'controlEvent', callback: Callback<ControlEventParam>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'controlEvent' | 是 | 事件类型，固定为'controlEvent'，即画中画控制面板控件动作事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 是 | 描述画中画控制面板控件动作事件回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 是 | 描述画中画控制面板控件动作事件回调。 |
 
 **示例**
 
@@ -857,7 +859,7 @@ on(type: 'pipWindowSizeChange', callback: Callback<PiPWindowSize>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'pipWindowSizeChange' | 是 | 事件类型，固定为'pipWindowSizeChange'，即画中画窗口尺寸变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 是 | 回调函数。返回当前画中画窗口的尺寸。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 是 | 回调函数。返回当前画中画窗口的尺寸。 |
 
 **错误码：**
 
@@ -938,7 +940,9 @@ this.pipController.on('stateChange', (state: PiPWindow.PiPState, reason: string)
 setAutoStartEnabled(enable: boolean): void
 ```
 
-设置是否在返回桌面时自动启动画中画，默认不自动拉起。 在使用XComponent方案实现画中画功能并结合Navigation进行路由管理时，首次调用setAutoStartEnabled(true)方法，系统会缓存当前应用传入的NavigationId的栈顶信息。
+设置是否在返回桌面时自动启动画中画，默认不自动拉起。
+
+在使用XComponent方案实现画中画功能并结合Navigation进行路由管理时，首次调用setAutoStartEnabled(true)方法，系统会缓存当前应用传入的NavigationId的栈顶信息。
 
 **起始版本：** 26.0.0
 
@@ -1018,11 +1022,11 @@ startPiP(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300034](../errorcode-window.md#1300034-闪控窗与其他悬浮窗口操作冲突) | This operation conflicts with other floating windows. Possible cause: App has already started float view.<br>**适用版本：** 26.0.0+ |
-| [1300015](../errorcode-window.md#1300015-重复操作画中画) | Repeated PiP operation. |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: Internal error, failed to show the PiP window. such as insufficient resources or abnormal window service. |
-| [1300013](../errorcode-window.md#1300013-创建画中画窗口失败) | Failed to create the PiP window. Possible causes: <br>1.PiP configuration parameters are invalid, such as pipOption or context is null. <br>2.The XComponentController or main window is null. <br>3.The main window is not shown (non-auto-start scenario). <br>4.Navigation component operation failed. |
 | [1300012](../errorcode-window.md#1300012-画中画窗口状态异常) | The PiP window state is abnormal. Possible causes: <br>1.The PiP controller has been destroyed. <br>2.The PiP window is not created or has been destroyed. |
+| [1300013](../errorcode-window.md#1300013-创建画中画窗口失败) | Failed to create the PiP window. Possible causes: <br>1.PiP configuration parameters are invalid, such as pipOption or context is null. <br>2.The XComponentController or main window is null. <br>3.The main window is not shown (non-auto-start scenario). <br>4.Navigation component operation failed. |
+| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: Internal error, failed to show the PiP window. such as insufficient resources or abnormal window service. |
+| [1300015](../errorcode-window.md#1300015-重复操作画中画) | Repeated PiP operation. |
+| [1300034](../errorcode-window.md#1300034-闪控窗与其他悬浮窗口操作冲突) | This operation conflicts with other floating windows. Possible cause: App has already started float view.<br>**适用版本：** 26.0.0+ |
 
 **示例**
 
@@ -1063,8 +1067,8 @@ stopPiP(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [1300011](../errorcode-window.md#1300011-销毁画中画窗口失败) | Failed to destroy the PiP window. Possible cause: Internal error, the window type is not a PiP window. |
-| [1300015](../errorcode-window.md#1300015-重复操作画中画) | Repeated PiP operation. |
 | [1300012](../errorcode-window.md#1300012-画中画窗口状态异常) | The PiP window state is abnormal. Possible cause: The PiP window is not created or has been destroyed. |
+| [1300015](../errorcode-window.md#1300015-重复操作画中画) | Repeated PiP operation. |
 
 **示例**
 

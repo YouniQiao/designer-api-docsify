@@ -2,6 +2,8 @@
 
 用于控制材质的透明效果。
 
+@interface Blend
+
 **起始版本：** 23
 
 <!--Device-unnamed-export interface Blend--><!--Device-unnamed-export interface Blend-End-->

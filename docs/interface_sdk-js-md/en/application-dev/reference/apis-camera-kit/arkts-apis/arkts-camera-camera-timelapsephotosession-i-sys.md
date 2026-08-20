@@ -45,8 +45,8 @@ Obtains the supported time-lapse shooting interval range.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 
 **Examples**
 
@@ -92,8 +92,8 @@ Obtains the current time-lapse shooting interval.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 **Examples**
 
@@ -139,8 +139,8 @@ Obtains the time-lapse preview type.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 **Examples**
 
@@ -186,8 +186,8 @@ Obtains the time-lapse shooting state.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 **Examples**
 
@@ -233,8 +233,8 @@ Checks whether Try AE is required.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 
 **Examples**
 
@@ -1116,9 +1116,9 @@ Sets a time-lapse shooting interval.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 **Examples**
 
@@ -1163,9 +1163,9 @@ Sets the time-lapse preview type.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 **Examples**
 
@@ -1209,9 +1209,9 @@ Sets the time-lapse shooting state.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 **Examples**
 
@@ -1249,9 +1249,9 @@ Starts to execute Try AE.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 **Examples**
 
@@ -1289,9 +1289,9 @@ Stops the execution of Try AE.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 **Examples**
 

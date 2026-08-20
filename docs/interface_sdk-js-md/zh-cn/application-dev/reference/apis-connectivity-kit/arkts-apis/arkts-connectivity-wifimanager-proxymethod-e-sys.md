@@ -1,6 +1,6 @@
 # ProxyMethod（系统接口）
 
-WLAN代理方式。
+WLAN代理方式。 @enum { int }
 
 **起始版本：** 23
 

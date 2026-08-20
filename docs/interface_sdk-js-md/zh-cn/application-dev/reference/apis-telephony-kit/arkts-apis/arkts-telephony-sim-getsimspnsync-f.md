@@ -12,7 +12,9 @@ import { sim } from '@kit.TelephonyKit';
 function getSimSpnSync(slotId: int): string
 ```
 
-Obtains the service provider name (SPN) of the SIM card in a specified slot. &lt;p&gt;The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered.
+Obtains the service provider name (SPN) of the SIM card in a specified slot.
+
+&lt;p&gt;The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered.
 
 **起始版本：** 23
 

@@ -14,7 +14,9 @@
 MEDIA_TYPE_UNSUPPORTED = -1
 ```
 
-表示未支持的类型。 **原子化服务API：** 从API version 20 开始，该接口支持在原子化服务中使用。
+表示未支持的类型。
+
+**原子化服务API：** 从API version 20 开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -30,7 +32,9 @@ MEDIA_TYPE_UNSUPPORTED = -1
 MEDIA_TYPE_AUD = 0
 ```
 
-表示音频。 **原子化服务API：** 从API version 11 开始，该接口支持在原子化服务中使用。
+表示音频。
+
+**原子化服务API：** 从API version 11 开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -46,7 +50,9 @@ MEDIA_TYPE_AUD = 0
 MEDIA_TYPE_VID = 1
 ```
 
-表示视频。 **原子化服务API：** 从API version 11 开始，该接口支持在原子化服务中使用。
+表示视频。
+
+**原子化服务API：** 从API version 11 开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -62,7 +68,9 @@ MEDIA_TYPE_VID = 1
 MEDIA_TYPE_SUBTITLE = 2
 ```
 
-表示字幕。 **原子化服务API：** 从API version 12 开始，该接口支持在原子化服务中使用。
+表示字幕。
+
+**原子化服务API：** 从API version 12 开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -78,7 +86,9 @@ MEDIA_TYPE_SUBTITLE = 2
 MEDIA_TYPE_ATTACHMENT = 3
 ```
 
-表示附件信息（如嵌入的外部文件）。 **原子化服务API：** 从API version 20 开始，该接口支持在原子化服务中使用。
+表示附件信息（如嵌入的外部文件）。
+
+**原子化服务API：** 从API version 20 开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -94,7 +104,9 @@ MEDIA_TYPE_ATTACHMENT = 3
 MEDIA_TYPE_DATA = 4
 ```
 
-表示数据。 **原子化服务API：** 从API version 20 开始，该接口支持在原子化服务中使用。
+表示数据。
+
+**原子化服务API：** 从API version 20 开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -110,7 +122,9 @@ MEDIA_TYPE_DATA = 4
 MEDIA_TYPE_TIMED_METADATA = 5
 ```
 
-表示带时间戳的元数据。 **原子化服务API：** 从API version 20 开始，该接口支持在原子化服务中使用。
+表示带时间戳的元数据。
+
+**原子化服务API：** 从API version 20 开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -126,7 +140,9 @@ MEDIA_TYPE_TIMED_METADATA = 5
 MEDIA_TYPE_AUXILIARY = 6
 ```
 
-表示辅助（轨道）信息。 **原子化服务API：** 从API version 20 开始，该接口支持在原子化服务中使用。
+表示辅助（轨道）信息。
+
+**原子化服务API：** 从API version 20 开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 

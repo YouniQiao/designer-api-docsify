@@ -1,6 +1,10 @@
 # FocusQuery
 
-提供了查询是否支持当前对焦模式的方法。 &gt; **说明：** &gt; &gt; - 本Interface的起始版本为API version 12。接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素@since版本号大于内层元素的情况，不影响接口使用。
+提供了查询是否支持当前对焦模式的方法。
+
+> **说明：**
+> 
+> - 本Interface的起始版本为API version 12。接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素
 
 **起始版本：** 23
 
@@ -41,8 +45,8 @@ Checks whether the focus assist is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
 
 **示例**
 
@@ -94,9 +98,9 @@ Checks whether a focus drive type is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 **示例**
 
@@ -148,9 +152,9 @@ Checks whether a focus range type is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 **示例**
 

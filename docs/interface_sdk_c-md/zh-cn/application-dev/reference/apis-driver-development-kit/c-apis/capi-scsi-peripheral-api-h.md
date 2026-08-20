@@ -4,6 +4,8 @@
 
 声明用于主机侧访问SCSI设备的SCSI Peripheral DDK接口。该模块基于SCSI协议标准，通过DDK驱动服务提供SCSI设备访问能力。
 
+**引用文件：** <scsi_peripheral/scsi_peripheral_api.h>
+
 **库：** libscsi.z.so
 
 **系统能力：** SystemCapability.Driver.SCSI.Extension

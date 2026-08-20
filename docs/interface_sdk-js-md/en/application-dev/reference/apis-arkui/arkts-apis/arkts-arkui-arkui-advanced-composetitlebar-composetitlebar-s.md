@@ -1,6 +1,12 @@
 # ComposeTitleBar
 
-**ComposeTitleBar** represents a common title bar that contains a title, subtitle (optional), and profile picture ( optional). It can come with a Back button for switching between pages of different levels. &gt; **NOTE：**&gt; &gt; - This component can be used only in the stage model. &gt; &gt; - If the **ComposeTitleBar** component has universal attributes and &gt; universal events configured, the compiler toolchain automatically &gt; generates an additional **__Common__** node and mounts the universal attributes and universal events on this node &gt; rather than the **ComposeTitleBar** component itself. As a result, the configured universal attributes and &gt; universal events may fail to take effect or behave as intended. For this reason, avoid using universal attributes &gt; and events with the **ComposeTitleBar** component.
+*ComposeTitleBar** represents a common title bar that contains a title, subtitle (optional), and profile picture ( optional). It can come with a Back button for switching between pages of different levels.
+
+> **NOTE：**
+> 
+> - This component can be used only in the stage model.
+> 
+> - If the **ComposeTitleBar** component has universal attributes and &gt; universal events configured, the compiler toolchain automatically &gt; generates an additional **__Common__** node and mounts the universal attributes and universal events on this node &gt; rather than the **ComposeTitleBar** component itself. As a result, the configured universal attributes and &gt; universal events may fail to take effect or behave as intended. For this reason, avoid using universal attributes &gt; and events with the **ComposeTitleBar** component.
 
 **Since:** 10
 
@@ -23,7 +29,7 @@ item?: ComposeTitleBarMenuItem
 
 A single menu item for the profile picture on the left.
 
-**Type:** [ComposeTitleBarMenuItem](arkts-arkui-arkui-advanced-composetitlebar-composetitlebarmenuitem-c.md)
+**Type:** [ComposeTitleBarMenuItem](../../apis-default/arkts-apis/arkts-arkui-advanced-composetitlebar-composetitlebarmenuitem-c.md)
 
 **Since:** 10
 
@@ -43,7 +49,7 @@ menuItems?: Array<ComposeTitleBarMenuItem>
 
 List of menu items on the right.
 
-**Type:** Array&lt;[ComposeTitleBarMenuItem](arkts-arkui-arkui-advanced-composetitlebar-composetitlebarmenuitem-c.md)&gt;
+**Type:** Array&lt;[ComposeTitleBarMenuItem](../../apis-default/arkts-apis/arkts-arkui-advanced-composetitlebar-composetitlebarmenuitem-c.md)&gt;
 
 **Since:** 10
 

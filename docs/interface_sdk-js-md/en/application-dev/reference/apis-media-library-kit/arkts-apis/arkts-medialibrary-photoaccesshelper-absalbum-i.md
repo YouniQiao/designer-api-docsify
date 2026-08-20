@@ -41,10 +41,10 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**Applicable version:** 10 - 11 |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied<br>**Applicable version:** 12 and later |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## getAssets
@@ -81,10 +81,10 @@ Obtains image and video assets. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied<br>**Applicable version:** 20 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**Applicable version:** 10 - 19 |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied<br>**Applicable version:** 20 and later |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## albumName

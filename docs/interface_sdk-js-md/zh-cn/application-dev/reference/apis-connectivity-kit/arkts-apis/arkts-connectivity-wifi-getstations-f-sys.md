@@ -15,7 +15,9 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function getStations(): Array<StationInfo>
 ```
 
-获取连接的设备。 &lt;p&gt;该方法只能在作为热点的设备上使用。
+获取连接的设备。
+
+&lt;p&gt;该方法只能在作为热点的设备上使用。
 
 **起始版本：** 7
 

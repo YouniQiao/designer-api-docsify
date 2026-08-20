@@ -2,13 +2,15 @@
 
 Defines Navigator Modifier
 
-**Inheritance/Implementation:** NavigatorModifier extends [NavigatorAttribute](../arkts-components/arkts-arkui-navigationtype-e.md#navigatorattribute) and implements AttributeModifier<NavigatorAttribute>
+@extends NavigatorAttribute @implements AttributeModifier&lt;NavigatorAttribute&gt;
+
+**Inheritance/Implementation:** NavigatorModifier extends [NavigatorAttribute](../arkts-components/arkts-arkui-navigator-attribute.md#navigatorattribute) and implements AttributeModifier<NavigatorAttribute>
 
 **Since:** 12
 
 **Deprecated since:** 20
 
-**Substitutes:** [NavigationModifier](arkts-arkui-navigationmodifier-c.md)
+**Substitutes:** [NavigationModifier](../../apis-default/arkts-apis/arkts-navigationmodifier-c.md)
 
 <!--Device-unnamed-export declare class NavigatorModifier--><!--Device-unnamed-export declare class NavigatorModifier-End-->
 
@@ -40,5 +42,5 @@ Defines the normal update attribute function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instance | NavigatorAttribute | Yes |  |
+| instance | [NavigatorAttribute](../arkts-components/arkts-arkui-navigator-attribute.md) | Yes |  |
 

@@ -13,7 +13,9 @@ import { serialManager } from '@kit.BasicServicesKit';
 function hasRight(deviceName: string): boolean
 ```
 
-判断是否有权访问该设备。 如果应用有权访问设备则返回true；无权访问设备则返回false。
+判断是否有权访问该设备。
+
+如果应用有权访问设备则返回true；无权访问设备则返回false。
 
 **起始版本：** 23
 

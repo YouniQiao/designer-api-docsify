@@ -81,7 +81,7 @@ Callback when clicking the text on the left.
 
 Configuration information of ExceptionPrompt.
 
-**Type:** [PromptOptions](arkts-arkui-arkui-advanced-exceptionprompt-promptoptions-i.md)
+**Type:** [PromptOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-exceptionprompt-promptoptions-i.md)
 
 **Since:** 12
 

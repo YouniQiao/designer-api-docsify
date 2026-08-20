@@ -40,7 +40,9 @@ embedId: string
 visibility: boolean
 ```
 
-可见性。 true表示可见，false表示不可见。
+可见性。
+
+true表示可见，false表示不可见。
 
 **类型：** boolean
 

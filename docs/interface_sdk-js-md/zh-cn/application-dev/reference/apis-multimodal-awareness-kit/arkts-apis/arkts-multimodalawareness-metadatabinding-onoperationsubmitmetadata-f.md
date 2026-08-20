@@ -25,14 +25,14 @@ function onOperationSubmitMetadata(bundleName: string, callback: Callback<int>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 第三方应用的包名。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，返回截图事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | 回调函数，返回截图事件。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-文件创建失败) | Internal handling failed. |
-| [32100004](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100004-订阅失败) | Subscribe Failed. Possible causes: <br>1. Abnormal system capability. <br>2. IPC communication abnormality. <br>3. Algorithm loading exception. |
+| [32100001](../errorcode-metadataBinding.md#32100001-文件创建失败) | Internal handling failed. |
+| [32100004](../errorcode-metadataBinding.md#32100004-订阅失败) | Subscribe Failed. Possible causes: <br>1. Abnormal system capability. <br>2. IPC communication abnormality. <br>3. Algorithm loading exception. |
 
 **示例**
 

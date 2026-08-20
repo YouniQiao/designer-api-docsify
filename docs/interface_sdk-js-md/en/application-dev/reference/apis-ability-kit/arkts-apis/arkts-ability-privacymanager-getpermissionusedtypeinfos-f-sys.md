@@ -43,12 +43,12 @@ Obtains information about how a sensitive permission is used by an application.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12100009](../errorcode-access-token.md#12100009-internal-service-error) | Common inner error. A database error occurs. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. PermissionName exceeds 256 characters. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. PermissionName exceeds 256 characters. |
 | [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) | The input tokenId does not exist. |
 | [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The input permissionName does not exist. |
+| [12100009](../errorcode-access-token.md#12100009-internal-service-error) | Common inner error. A database error occurs. |
 
 **Examples**
 

@@ -15,7 +15,9 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function addDeviceConfig(config: WifiDeviceConfig): Promise<number>
 ```
 
-添加网络配置，使用Promise异步回调。 &lt;p&gt;添加配置后，配置将被更新。&lt;/p&gt;
+添加网络配置，使用Promise异步回调。
+
+&lt;p&gt;添加配置后，配置将被更新。&lt;/p&gt;
 
 **起始版本：** 6
 
@@ -83,7 +85,9 @@ try {
 function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<number>): void
 ```
 
-添加网络配置，使用callback异步回调。 &lt;p&gt;添加配置后，配置将被更新。&lt;/p&gt;
+添加网络配置，使用callback异步回调。
+
+&lt;p&gt;添加配置后，配置将被更新。&lt;/p&gt;
 
 **起始版本：** 6
 
@@ -104,7 +108,7 @@ function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<numbe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | config | WifiDeviceConfig | 是 | WLAN配置信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 |  |
 
 **示例**
 

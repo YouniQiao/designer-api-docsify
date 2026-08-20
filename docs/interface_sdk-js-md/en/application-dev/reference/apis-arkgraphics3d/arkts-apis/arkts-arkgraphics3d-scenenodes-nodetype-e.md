@@ -2,6 +2,8 @@
 
 Enumerates the node types.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-unnamed-export enum NodeType--><!--Device-unnamed-export enum NodeType-End-->

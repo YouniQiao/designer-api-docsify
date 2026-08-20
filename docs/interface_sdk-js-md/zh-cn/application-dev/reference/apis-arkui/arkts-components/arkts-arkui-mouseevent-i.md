@@ -45,7 +45,9 @@ getCurrentLocalPosition?(): Coordinate2D
 getHistoricalPoints?(): Array<MouseHistoricalPoint>
 ```
 
-获取当前帧的所有历史点信息。历史点可用于实现更平滑的绘制效果。 该接口仅能在[MouseEvent](#mouseevent)中调用，用于获取触发[onMouse](arkts-arkui-commonmethod-c.md#onmouse)时当前帧历史点的相关信息，不同设备每帧的鼠标事件上报频率不同，一 帧通常只会上报一个鼠标事件，如果当前帧收到的[MouseEvent](#mouseevent)数目大于1，会将该帧最后一个点通过[onMouse](arkts-arkui-commonmethod-c.md#onmouse)返回，其余点作为历 史点。
+获取当前帧的所有历史点信息。历史点可用于实现更平滑的绘制效果。
+
+该接口仅能在[MouseEvent](#mouseevent)中调用，用于获取触发[onMouse](arkts-arkui-commonmethod-c.md#onmouse)时当前帧历史点的相关信息，不同设备每帧的鼠标事件上报频率不同，一 帧通常只会上报一个鼠标事件，如果当前帧收到的[MouseEvent](#mouseevent)数目大于1，会将该帧最后一个点通过[onMouse](arkts-arkui-commonmethod-c.md#onmouse)返回，其余点作为历 史点。
 
 **起始版本：** 26.0.0
 
@@ -105,7 +107,9 @@ button: MouseButton
 displayX: number
 ```
 
-鼠标位置在当前应用屏幕坐标系中的X坐标。 单位：vp
+鼠标位置在当前应用屏幕坐标系中的X坐标。
+
+单位：vp
 
 **类型：** number
 
@@ -125,7 +129,9 @@ displayX: number
 displayY: number
 ```
 
-鼠标位置在当前应用屏幕坐标系中的Y坐标。 单位：vp
+鼠标位置在当前应用屏幕坐标系中的Y坐标。
+
+单位：vp
 
 **类型：** number
 
@@ -145,7 +151,13 @@ displayY: number
 eventHandleId?: number
 ```
 
-用于事件处理的唯一标识。 取值范围：[0, +∞) **说明：** 在使用[postInputEventWithStrategy](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#postinputeventwithstrategy)接口分发事件时会使用该字段，事件每分 发一次字段会增加100000。 多次使用相同的eventHandleId进行事件分发将导致事件响应异常。仅在构造事件的时候需要对此字段赋值，其余情况开发者无需处理。
+用于事件处理的唯一标识。
+
+取值范围：[0, +∞)
+
+**说明：** 在使用[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postinputeventwithstrategy)接口分发事件时会使用该字段，事件每分 发一次字段会增加100000。
+
+多次使用相同的eventHandleId进行事件分发将导致事件响应异常。仅在构造事件的时候需要对此字段赋值，其余情况开发者无需处理。
 
 **类型：** number
 
@@ -165,7 +177,11 @@ eventHandleId?: number
 globalDisplayX?: number
 ```
 
-鼠标位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。 单位：vp 取值范围：[0, +∞)
+鼠标位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。
+
+单位：vp
+
+取值范围：[0, +∞)
 
 **类型：** number
 
@@ -185,7 +201,11 @@ globalDisplayX?: number
 globalDisplayY?: number
 ```
 
-鼠标位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。 单位：vp 取值范围：[0, +∞)
+鼠标位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。
+
+单位：vp
+
+取值范围：[0, +∞)
 
 **类型：** number
 
@@ -225,7 +245,9 @@ pressedButtons?: MouseButton[]
 rawDeltaX?: number
 ```
 
-鼠标设备在二维平面X轴的移动增量。其数值为鼠标硬件的原始移动数据，使用物理世界中鼠标移动的距离单位进行表示。上报数值由硬件本身决定，并非屏幕的物理/逻辑像素。 **说明：** API版本26.0.0之前，rawDeltaX的返回值并非鼠标硬件的原始移动数据，而是原始数据缩小了X倍，X为系统的显示大小比例。API版本26.0.0开始，rawDeltaX的返回值为鼠标硬件的原始移动数据。
+鼠标设备在二维平面X轴的移动增量。其数值为鼠标硬件的原始移动数据，使用物理世界中鼠标移动的距离单位进行表示。上报数值由硬件本身决定，并非屏幕的物理/逻辑像素。
+
+**说明：** API版本26.0.0之前，rawDeltaX的返回值并非鼠标硬件的原始移动数据，而是原始数据缩小了X倍，X为系统的显示大小比例。API版本26.0.0开始，rawDeltaX的返回值为鼠标硬件的原始移动数据。
 
 **类型：** number
 
@@ -245,7 +267,9 @@ rawDeltaX?: number
 rawDeltaY?: number
 ```
 
-鼠标设备在二维平面Y轴的移动增量。其数值为鼠标硬件的原始移动数据，使用物理世界中鼠标移动的距离单位进行表示。上报数值由硬件本身决定，并非屏幕的物理/逻辑像素。 **说明：** API版本26.0.0之前，rawDeltaY的返回值并非鼠标硬件的原始移动数据，而是原始数据缩小了X倍，X为系统的显示大小比例。API版本26.0.0开始，rawDeltaY的返回值为鼠标硬件的原始移动数据。
+鼠标设备在二维平面Y轴的移动增量。其数值为鼠标硬件的原始移动数据，使用物理世界中鼠标移动的距离单位进行表示。上报数值由硬件本身决定，并非屏幕的物理/逻辑像素。
+
+**说明：** API版本26.0.0之前，rawDeltaY的返回值并非鼠标硬件的原始移动数据，而是原始数据缩小了X倍，X为系统的显示大小比例。API版本26.0.0开始，rawDeltaY的返回值为鼠标硬件的原始移动数据。
 
 **类型：** number
 
@@ -265,7 +289,9 @@ rawDeltaY?: number
 screenX: number
 ```
 
-鼠标位置在当前应用窗口坐标系中的X坐标。 单位：vp
+鼠标位置在当前应用窗口坐标系中的X坐标。
+
+单位：vp
 
 **类型：** number
 
@@ -285,7 +311,9 @@ screenX: number
 screenY: number
 ```
 
-鼠标位置在当前应用窗口坐标系中的Y坐标。 单位：vp
+鼠标位置在当前应用窗口坐标系中的Y坐标。
+
+单位：vp
 
 **类型：** number
 
@@ -323,7 +351,9 @@ stopPropagation: () => void
 windowX: number
 ```
 
-鼠标位置在当前应用窗口坐标系中的X坐标。 单位：vp
+鼠标位置在当前应用窗口坐标系中的X坐标。
+
+单位：vp
 
 **类型：** number
 
@@ -343,7 +373,9 @@ windowX: number
 windowY: number
 ```
 
-鼠标位置在当前应用窗口坐标系中的Y坐标。 单位：vp
+鼠标位置在当前应用窗口坐标系中的Y坐标。
+
+单位：vp
 
 **类型：** number
 
@@ -363,7 +395,9 @@ windowY: number
 x: number
 ```
 
-鼠标位置在事件响应组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。 单位：vp
+鼠标位置在事件响应组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。
+
+单位：vp
 
 **类型：** number
 
@@ -381,7 +415,9 @@ x: number
 y: number
 ```
 
-鼠标位置在事件响应组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。 单位：vp
+鼠标位置在事件响应组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。
+
+单位：vp
 
 **类型：** number
 

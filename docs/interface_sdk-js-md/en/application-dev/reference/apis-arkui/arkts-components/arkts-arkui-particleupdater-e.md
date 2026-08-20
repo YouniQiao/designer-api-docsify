@@ -2,6 +2,8 @@
 
 Enumerates the updater types of a particle.
 
+@enum { string }
+
 **Since:** 10
 
 <!--Device-unnamed-declare enum ParticleUpdater--><!--Device-unnamed-declare enum ParticleUpdater-End-->

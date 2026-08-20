@@ -1,6 +1,6 @@
 # LiveFormExtensionContext
 
-**LiveFormExtensionContext**, inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md), is the context of [LiveFormExtensionAbility](arkts-form-app-form-liveformextensionability-liveformextensionability-c.md).
+*LiveFormExtensionContext**, inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md), is the context of [LiveFormExtensionAbility](arkts-form-app-form-liveformextensionability-liveformextensionability-c.md).
 
 **Inheritance/Implementation:** LiveFormExtensionContext extends ExtensionContext
 
@@ -45,10 +45,10 @@ Starts the widget provider (application) page. This API uses a promise to return
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported due to limited device capabilities. |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
-| [16501011](../errorcode-form.md#16501011-api-not-supported) | The form can not support this operation |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | An IPC connection error happened. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| [16501011](../errorcode-form.md#16501011-api-not-supported) | The form can not support this operation |
 
 **Examples**
 

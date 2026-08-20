@@ -47,7 +47,7 @@ The constructor used to create a ToolBarV2SymbolGlyph object.
 
 Modifier of toolbarV2's activated symbol.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
 
 **Since:** 18
 
@@ -68,7 +68,7 @@ Modifier of toolbarV2's activated symbol.
 
 Modifier of toolbarV2's normal symbol.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
 
 **Since:** 18
 

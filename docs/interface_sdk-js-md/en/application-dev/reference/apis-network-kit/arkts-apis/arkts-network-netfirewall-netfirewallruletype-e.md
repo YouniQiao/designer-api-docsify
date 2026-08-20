@@ -1,4 +1,4 @@
-# NetFirewallRuleType(Network Firewall)
+# NetFirewallRuleType
 
 Enumerates the firewall rule types, including IP, Domain, and DNS.
 

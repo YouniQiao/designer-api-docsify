@@ -12,7 +12,11 @@ import { pointer } from '@kit.InputKit';
 function setPointerColorSync(color: int): void
 ```
 
-设置鼠标光标颜色，使用同步方式进行设置。 &gt; **说明：** &gt; &gt; 设置和调试时，需连接外部设备，如鼠标、蓝牙等。
+设置鼠标光标颜色，使用同步方式进行设置。
+
+> **说明：**
+> 
+> 设置和调试时，需连接外部设备，如鼠标、蓝牙等。
 
 **起始版本：** 23
 
@@ -32,8 +36,8 @@ function setPointerColorSync(color: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 

@@ -2,6 +2,8 @@
 
 Linear Gradient Interface
 
+@interface LinearGradient
+
 **Since:** 11
 
 <!--Device-unnamed-declare interface LinearGradient--><!--Device-unnamed-declare interface LinearGradient-End-->

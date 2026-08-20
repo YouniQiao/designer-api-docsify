@@ -32,8 +32,8 @@ function getBatteryStats(): Promise<Array<BatteryStatsInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [4600101](../errorcode-batteryStatistics.md#4600101-连接服务失败) | Failed to connect to the service. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [4600101](../errorcode-batteryStatistics.md#4600101-连接服务失败) | Failed to connect to the service. |
 
 **示例**
 
@@ -68,15 +68,15 @@ function getBatteryStats(callback: AsyncCallback<Array<BatteryStatsInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BatteryStatsInfo](arkts-basicservices-batterystats-batterystatsinfo-i-sys.md)&gt;&gt; | 是 | 回调函数。当获取耗电信息列表成功，err为undefined，data为获取到的Array&lt; [BatteryStatsInfo](arkts-basicservices-batterystats-batterystatsinfo-i-sys.md)&gt;&gt;；否则为错误对象；AsyncCallback封装了一个BatteryStatsInfo类型的接口。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[BatteryStatsInfo](arkts-basicservices-batterystats-batterystatsinfo-i-sys.md)&gt;&gt; | 是 | 回调函数。当获取耗电信息列表成功，err为undefined，data为获取到的Array&lt; [BatteryStatsInfo](arkts-basicservices-batterystats-batterystatsinfo-i-sys.md)&gt;&gt;；否则为错误对象；AsyncCallback封装了一个BatteryStatsInfo类型的接口。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [4600101](../errorcode-batteryStatistics.md#4600101-连接服务失败) | Failed to connect to the service. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 **示例**
 

@@ -2,6 +2,8 @@
 
 测距接口执行完成后结果的上报模式。
 
+@enum { int } 测距结果上报方式
+
 **起始版本：** 23
 
 <!--Device-spatialAwareness-export enum ReportingMode--><!--Device-spatialAwareness-export enum ReportingMode-End-->

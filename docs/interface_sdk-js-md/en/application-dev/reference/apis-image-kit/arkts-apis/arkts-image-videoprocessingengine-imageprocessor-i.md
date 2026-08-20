@@ -50,8 +50,8 @@ The function generate the destinationImage from sourceImage with necessary scali
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function enhanceDetail can not work correctly due to <br>limited device capabilities. |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for <br>all of the following error conditions: <br>1 - Invalid input or output image buffer - The image buffer width(height) <br>is too large or colorspace is incorrect. <br>2 - Invalid parameter - The parameter does not contain valid information, <br>such as detail enhancer level is incorrect. |
 | [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
+| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for <br>all of the following error conditions: <br>1 - Invalid input or output image buffer - The image buffer width(height) <br>is too large or colorspace is incorrect. <br>2 - Invalid parameter - The parameter does not contain valid information, <br>such as detail enhancer level is incorrect. |
 
 **Examples**
 
@@ -102,8 +102,8 @@ The function generate the destinationImage from sourceImage with necessary scali
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function enhanceDetail can not work correctly due to <br>limited device capabilities. |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for <br>all of the following error conditions: <br>1 - Invalid input or output image buffer - The image buffer width(height) <br>is too large or colorspace is incorrect. <br>2 - Invalid parameter - The parameter does not contain valid information, <br>such as detail enhancer level is incorrect. |
 | [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
+| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for <br>all of the following error conditions: <br>1 - Invalid input or output image buffer - The image buffer width(height) <br>is too large or colorspace is incorrect. <br>2 - Invalid parameter - The parameter does not contain valid information, <br>such as detail enhancer level is incorrect. |
 
 **Examples**
 
@@ -155,9 +155,9 @@ The function generate the destinationImage from sourceImage with necessary scali
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function enhanceDetailSync can not work correctly due <br>to limited device capabilities. |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for <br>all of the following error conditions: <br>1 - Invalid input or output image buffer - The image buffer width(height) <br>is too large or colorspace is incorrect. <br>2 - Invalid parameter - The parameter does not contain valid information, <br>such as detail enhancer level is incorrect. |
 | [29200004](../errorcode-videoprocessingengine.md#29200004-processing-failure) | Failed to process image buffer. For example, the processing times out. |
 | [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
+| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for <br>all of the following error conditions: <br>1 - Invalid input or output image buffer - The image buffer width(height) <br>is too large or colorspace is incorrect. <br>2 - Invalid parameter - The parameter does not contain valid information, <br>such as detail enhancer level is incorrect. |
 
 **Examples**
 
@@ -208,9 +208,9 @@ The function generate the destinationImage from sourceImage with necessary scali
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function enhanceDetailSync can not work correctly due <br>to limited device capabilities. |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for <br>all of the following error conditions: <br>1 - Invalid input or output image buffer - The image buffer width(height) <br>is too large or colorspace is incorrect. <br>2 - Invalid parameter - The parameter does not contain valid information, <br>such as detail enhancer level is incorrect. |
 | [29200004](../errorcode-videoprocessingengine.md#29200004-processing-failure) | Failed to process image buffer. For example, the processing times out. |
 | [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
+| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for <br>all of the following error conditions: <br>1 - Invalid input or output image buffer - The image buffer width(height) <br>is too large or colorspace is incorrect. <br>2 - Invalid parameter - The parameter does not contain valid information, <br>such as detail enhancer level is incorrect. |
 
 **Examples**
 

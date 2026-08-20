@@ -16,7 +16,9 @@
 hidePanel?: boolean
 ```
 
-点击按钮时，是否隐藏通知中心。默认为false。 - true：是。 - false：否。
+点击按钮时，是否隐藏通知中心。默认为false。
+
+- true：是。 - false：否。
 
 **类型：** boolean
 

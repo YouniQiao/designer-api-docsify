@@ -19,7 +19,9 @@ Sets menu options.
 menuType?: MenuType
 ```
 
-Type of the custom context menu on selection. Default value: **MenuType.SELECTION_MENU**
+Type of the custom context menu on selection.
+
+Default value: **MenuType.SELECTION_MENU**
 
 **Type:** MenuType
 
@@ -121,7 +123,7 @@ previewMenuOptions?: PreviewMenuOptions
 
 Options of the preview menu. This parameter is valid only in **RichEditor**.
 
-**Type:** PreviewMenuOptions
+**Type:** [PreviewMenuOptions](arkts-arkui-previewmenuoptions-i.md)
 
 **Since:** 18
 

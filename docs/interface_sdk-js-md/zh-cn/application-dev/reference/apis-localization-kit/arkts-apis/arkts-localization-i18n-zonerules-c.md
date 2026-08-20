@@ -40,5 +40,5 @@ public nextTransition(date?: double): ZoneOffsetTransition
 
 | 类型 | 说明 |
 | --- | --- |
-| [ZoneOffsetTransition](arkts-localization-i18n-zoneoffsettransition-c.md) | 时区跳变对象。 |
+| [ZoneOffsetTransition](../../apis-default/arkts-apis/arkts-i18n-zoneoffsettransition-c.md) | 时区跳变对象。 |
 

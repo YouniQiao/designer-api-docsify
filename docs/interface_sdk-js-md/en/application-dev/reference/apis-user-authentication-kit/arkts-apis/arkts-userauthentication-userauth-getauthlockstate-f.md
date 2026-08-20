@@ -41,11 +41,11 @@ Queries the lockout state of the specified authentication type. This API uses a 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12500010](../errorcode-useriam.md#12500010-credential-not-enrolled) | The type of credential has not been enrolled. |
-| [12500008](../errorcode-useriam.md#12500008-parameter-verification-failed) | The parameter is out of range. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) | The authentication type is not supported. |
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) | The authentication type is not supported. |
+| [12500008](../errorcode-useriam.md#12500008-parameter-verification-failed) | The parameter is out of range. |
+| [12500010](../errorcode-useriam.md#12500010-credential-not-enrolled) | The type of credential has not been enrolled. |
 
 **Examples**
 

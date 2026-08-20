@@ -4,7 +4,13 @@
 export type PathPreference = 'auto' | 'primaryCellular' | 'secondaryCellular'
 ```
 
-HTTP请求指定特定网络的类型枚举。 &gt; **说明：** &gt; &gt; 推荐在网络并发等场景下使用。 &gt; 当指定的网络没有激活时，系统按照指定默认网络处理。
+HTTP请求指定特定网络的类型枚举。
+
+> **说明：**
+> 
+> 推荐在网络并发等场景下使用。
+
+> 当指定的网络没有激活时，系统按照指定默认网络处理。
 
 **起始版本：** 23
 

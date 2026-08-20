@@ -34,7 +34,7 @@ onCollaborate(wantParam: Record<string, Object>): AbilityConstant.CollaborateRes
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wantParam | Record&lt;string, Object&gt; | 是 | want相关参数，仅支持key值取"ohos.extra.param.key.supportCollaborateIndex"。通过该key值可以获 取到调用方传输的数据并进行相应的处理。 |
+| wantParam | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | want相关参数，仅支持key值取"ohos.extra.param.key.supportCollaborateIndex"。通过该key值可以获 取到调用方传输的数据并进行相应的处理。 |
 
 **返回值：**
 

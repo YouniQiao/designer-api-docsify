@@ -44,9 +44,9 @@ Attach a meta surface to VideoOutput.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## enableAutoDeferredVideoEnhancement
 
@@ -74,9 +74,9 @@ Enable auto deferred video enhancement if needed.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## enableAutoVideoFrameRate
 
@@ -104,8 +104,8 @@ Enable auto frame rate for video capture.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## enableMirror
 
@@ -113,7 +113,9 @@ Enable auto frame rate for video capture.
 enableMirror(enabled: boolean): void
 ```
 
-启用/关闭镜像录像。 - 调用该接口前，需要通过[isMirrorSupported](#ismirrorsupported)查询是否支录像镜像功能。 - 启用/关闭录像镜像后，需要通过[getVideoRotation](arkts-camera-camera-videooutput-i.md#getvideorotation)获取录像旋转角度以及 updateRotation更新旋转角度。
+启用/关闭镜像录像。
+
+- 调用该接口前，需要通过[isMirrorSupported](#ismirrorsupported)查询是否支录像镜像功能。 - 启用/关闭录像镜像后，需要通过[getVideoRotation](arkts-camera-camera-videooutput-i.md#getvideorotation)获取录像旋转角度以及 updateRotation更新旋转角度。
 
 **起始版本：** 23
 
@@ -135,9 +137,9 @@ enableMirror(enabled: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 14 |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 14 |
 
 ## getSupportedRotations
 
@@ -193,8 +195,8 @@ Get supported video meta types.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## isAutoDeferredVideoEnhancementEnabled
 
@@ -222,8 +224,8 @@ Confirm if auto deferred video enhancement is enabled.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## isAutoDeferredVideoEnhancementSupported
 
@@ -251,8 +253,8 @@ Confirm if auto deferred video enhancement is supported in the specific device.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## isAutoVideoFrameRateSupported
 
@@ -360,7 +362,7 @@ Unsubscribes from deferred video enhancement info callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredVideoEnhancementInfo](arkts-camera-camera-deferredvideoenhancementinfo-i-sys.md)&gt; | 否 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DeferredVideoEnhancementInfo](arkts-camera-camera-deferredvideoenhancementinfo-i-sys.md)&gt; | 否 | Callback used to return the result. |
 
 **错误码：**
 
@@ -389,7 +391,7 @@ Unsubscribes from deferred video enhancement info callback.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deferredVideoEnhancementInfo' | 是 | Event type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredVideoEnhancementInfo](arkts-camera-camera-deferredvideoenhancementinfo-i-sys.md)&gt; | 否 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DeferredVideoEnhancementInfo](arkts-camera-camera-deferredvideoenhancementinfo-i-sys.md)&gt; | 否 | Callback used to return the result. |
 
 **错误码：**
 
@@ -417,7 +419,7 @@ Subscribes deferred video enhancement info callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredVideoEnhancementInfo](arkts-camera-camera-deferredvideoenhancementinfo-i-sys.md)&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DeferredVideoEnhancementInfo](arkts-camera-camera-deferredvideoenhancementinfo-i-sys.md)&gt; | 是 | Callback used to return the result. |
 
 **错误码：**
 
@@ -446,7 +448,7 @@ Subscribes deferred video enhancement info callback.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deferredVideoEnhancementInfo' | 是 | Event type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredVideoEnhancementInfo](arkts-camera-camera-deferredvideoenhancementinfo-i-sys.md)&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DeferredVideoEnhancementInfo](arkts-camera-camera-deferredvideoenhancementinfo-i-sys.md)&gt; | 是 | Callback used to return the result. |
 
 **错误码：**
 
@@ -480,6 +482,6 @@ Set a video rotation.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 

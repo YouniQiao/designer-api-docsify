@@ -2,6 +2,8 @@
 
 表示音频设备类型的枚举（根据用途分类）。
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-audio-enum DeviceUsage--><!--Device-audio-enum DeviceUsage-End-->

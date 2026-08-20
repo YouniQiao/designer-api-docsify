@@ -13,7 +13,11 @@ import { serialManager } from '@kit.BasicServicesKit';
 function setConfiguration(pipe: USBDevicePipe, config: USBConfiguration): int
 ```
 
-设置设备配置。适用于多功能USB设备需要切换工作模式的场景，如打印机+扫描仪组合设备切换为打印模式或扫描模式、设备从低功耗配置切换到高功耗配置以启用全部功能等。调用成功后设备的配置将被切换为指定的配置，后续的数据传输和设备操作将基 于新配置进行。 &gt; **说明：** &gt; &gt; 在调用该接口前需要调用[usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) claim通信接口。
+设置设备配置。适用于多功能USB设备需要切换工作模式的场景，如打印机+扫描仪组合设备切换为打印模式或扫描模式、设备从低功耗配置切换到高功耗配置以启用全部功能等。调用成功后设备的配置将被切换为指定的配置，后续的数据传输和设备操作将基 于新配置进行。
+
+> **说明：**
+> 
+> 在调用该接口前需要调用[usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) claim通信接口。
 
 **起始版本：** 23
 

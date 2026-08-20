@@ -2,6 +2,8 @@
 
 Defines the grid container attribute from inheritance Column
 
+@extends ColumnAttribute
+
 **Inheritance/Implementation:** GridContainerAttribute extends ColumnAttribute
 
 **Since:** 7

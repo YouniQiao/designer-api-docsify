@@ -2,6 +2,8 @@
 
 Defines particle disturbance shape.
 
+@enum { number }
+
 **Since:** 12
 
 <!--Device-unnamed-declare enum DisturbanceFieldShape--><!--Device-unnamed-declare enum DisturbanceFieldShape-End-->

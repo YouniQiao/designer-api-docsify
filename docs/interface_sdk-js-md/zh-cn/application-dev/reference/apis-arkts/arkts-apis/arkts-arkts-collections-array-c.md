@@ -1,6 +1,15 @@
 # Array
 
-一种线性数据结构，底层基于数组实现，可以在ArkTS上并发实例间传递。 当需要在ArkTS上并发实例间传递Array时，可以通过传递Array引用提升传递性能。 &gt; **说明：**&gt; &gt; - 本模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 &gt; 本节使用以下标识来表示泛型的使用： - T：Type，支持 [Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。 **装饰器**：\@Sendable
+一种线性数据结构，底层基于数组实现，可以在ArkTS上并发实例间传递。
+
+当需要在ArkTS上并发实例间传递Array时，可以通过传递Array引用提升传递性能。
+
+> **说明：**
+> 
+> - 本模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
+> 本节使用以下标识来表示泛型的使用：
+
+- T：Type，支持 [Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。 **装饰器**：\@Sendable
 
 **继承/实现关系：** Array implements ConcatArray<T>
 
@@ -36,7 +45,7 @@ import { collections } from '@kit.ArkTS';
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 迭代器对象。 |
 
 **错误码：**
 
@@ -99,7 +108,7 @@ concat(...items: ConcatArray<T>[]): Array<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| items | [ConcatArray](arkts-arkts-collections-concatarray-i.md)&lt;T&gt;[] | 是 | 用于拼接ArkTS Array的一个或多个数组，省略时返回原数组的浅拷贝。 |
+| items | ConcatArray&lt;T&gt;[] | 是 | 用于拼接ArkTS Array的一个或多个数组，省略时返回原数组的浅拷贝。 |
 
 **返回值：**
 
@@ -193,6 +202,43 @@ ArkTS Array的构造函数，通过开发者提供的元素进行初始化。
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Array's constructor cannot be directly invoked. |
 
+## containsAll
+
+```TypeScript
+containsAll(elements: ArrayOrBuiltinArray<T>): boolean
+```
+
+检查指定ArkTS Array或内建Array中的所有元素是否均包含在此ArkTS Array中。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Array-containsAll(elements: ArrayOrBuiltinArray<T>): boolean--><!--Device-Array-containsAll(elements: ArrayOrBuiltinArray<T>): boolean-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| elements | [ArrayOrBuiltinArray](arkts-arkts-collections-arrayorbuiltinarray-t.md)&lt;T&gt; | 是 | 要检查的ArkTS Array或内建Array。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果指定的所有元素均包含在此Array中，则返回**true**； 否则返回**false**。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The containsAll method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification exception |
+
 ## copyWithin
 
 ```TypeScript
@@ -285,7 +331,7 @@ entries(): IterableIterator<[number, T]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[number, T]&gt; | 包含Array中每个元素的键值对的 迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, T]&gt; | 包含Array中每个元素的键值对的 迭代器对象。 |
 
 **错误码：**
 
@@ -550,7 +596,7 @@ static from<T>(arrayLike: ArrayLike<T>): Array<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;T&gt; | 是 | 用于构造ArkTS Array的对象。 |
+| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; | 是 | 用于构造ArkTS Array的对象。 |
 
 **返回值：**
 
@@ -618,7 +664,7 @@ static from<T>(arrayLike: ArrayLike<T> | Iterable<T>, mapFn: ArrayFromMapFn<T, T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;T&gt; \| Iterable&lt;T&gt; | 是 | 用于构造ArkTS Array的对象。 |
+| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; \| Iterable&lt;T&gt; | 是 | 用于构造ArkTS Array的对象。 |
 | mapFn | [ArrayFromMapFn](arkts-arkts-collections-arrayfrommapfn-t.md)&lt;T, T&gt; | 是 | 用于处理数组元素的函数。 |
 
 **返回值：**
@@ -647,7 +693,7 @@ static from<U, T>(arrayLike: ArrayLike<U> | Iterable<U>, mapFn: ArrayFromMapFn<U
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;U&gt; \| Iterable&lt;U&gt; | 是 | 用于构造ArkTS Array的对象。 |
+| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;U&gt; \| Iterable&lt;U&gt; | 是 | 用于构造ArkTS Array的对象。 |
 | mapFn | [ArrayFromMapFn](arkts-arkts-collections-arrayfrommapfn-t.md)&lt;U, T&gt; | 是 | 用于处理数组元素的函数。 |
 
 **返回值：**
@@ -811,7 +857,7 @@ keys(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;number&gt; | 包含Array中每个元素的索引的迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 包含Array中每个元素的索引的迭代器对象。 |
 
 **错误码：**
 
@@ -1127,6 +1173,43 @@ reduceRight(callbackFn: ArrayReduceCallback<T, T, Array<T>>): T
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduceRight method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+
+## retainAll
+
+```TypeScript
+retainAll(value: ArrayOrBuiltinArray<T> | ArrayElementPredicateFn<T>): boolean
+```
+
+仅保留此ArkTS Array中包含在指定ArkTS Array或内建Array中的元素，或满足指定判定函数的元素。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Array-retainAll(value: ArrayOrBuiltinArray<T> | ArrayElementPredicateFn<T>): boolean--><!--Device-Array-retainAll(value: ArrayOrBuiltinArray<T> | ArrayElementPredicateFn<T>): boolean-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ArrayOrBuiltinArray](arkts-arkts-collections-arrayorbuiltinarray-t.md)&lt;T&gt; \| [ArrayElementPredicateFn](arkts-arkts-collections-arrayelementpredicatefn-t.md)&lt;T&gt; | 是 | 允许 保留元素的ArkTS Array或内建Array，或用于测试每个元素的判定函数。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 操作结果。如果从此Array中移除了任意元素，则返回**true**； 否则返回**false**。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The retainAll method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification exception |
 
 ## reverse
 
@@ -1506,7 +1589,7 @@ values(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 包含Array中每个元素的值的迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 包含Array中每个元素的值的迭代器对象。 |
 
 **错误码：**
 

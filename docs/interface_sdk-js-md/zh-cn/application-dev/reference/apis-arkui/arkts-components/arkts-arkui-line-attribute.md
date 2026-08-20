@@ -1,0 +1,66 @@
+# Line属性/事件
+
+除支持通用属性以及[图形绘制通用属性](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-common.md)外，还支持以下 属性：
+
+**继承/实现关系：** LineAttribute extends CommonShapeMethod<LineAttribute>
+
+**起始版本：** 7
+
+<!--Device-unnamed-declare class LineAttribute--><!--Device-unnamed-declare class LineAttribute-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { CommonModifier, ColumnModifier, ColumnSplitModifier, RowModifier, RowSplitModifier, SideBarContainerModifier, BlankModifier, DividerModifier, GridColModifier, GridRowModifier, NavDestinationModifier, NavigatorModifier, StackModifier, NavigationModifier, NavRouterModifier, StepperItemModifier, TabsModifier, GridModifier, GridItemModifier, ListModifier, ListItemModifier, ListItemGroupModifier, ScrollModifier, SwiperModifier, WaterFlowModifier, ButtonModifier, CounterModifier, TextPickerModifier, TimePickerModifier, ToggleModifier, CalendarPickerModifier, CheckboxModifier, CheckboxGroupModifier, DatePickerModifier, RadioModifier, RatingModifier, SelectModifier, SliderModifier, PatternLockModifier, SpanModifier, RichEditorModifier, RefreshModifier, SearchModifier, TextAreaModifier, TextModifier, TextInputModifier, ImageSpanModifier, ImageAnimatorModifier, ImageModifier, VideoModifier, DataPanelModifier, GaugeModifier, LoadingProgressModifier, MarqueeModifier, ProgressModifier, QRCodeModifier, TextClockModifier, TextTimerModifier, LineModifier, PathModifier, PolygonModifier, PolylineModifier, RectModifier, ShapeModifier, AlphabetIndexerModifier, HyperlinkModifier, MenuModifier, MenuItemModifier, PanelModifier, SymbolGlyphModifier, AttributeUpdater, ContainerSpanModifier, SymbolSpanModifier, ParticleModifier, StepperModifier, UIPickerComponentModifier, ModifierUtils } from '@kit.ArkUI';
+```
+
+## endPoint
+
+```TypeScript
+endPoint(value: Array<any>)
+```
+
+设置直线终点坐标点（相对于Line组件绘制区域的左上角原点），支持attributeModifier动态设置属性方法，异常值按照默认值处理。
+
+**起始版本：** 7
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-LineAttribute-endPoint(value: Array<any>): LineAttribute--><!--Device-LineAttribute-endPoint(value: Array<any>): LineAttribute-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Array&lt;any&gt; | 是 | 直线终点坐标点（相对于Line组件绘制区域的左上角原点），单位vp。数组格式为[x坐标, y坐标]，数组长度必须为2，元素应为Length类型。 <br>默认值：[0, 0] <br>异常值undefined和null按照默认值处理。 |
+
+## startPoint
+
+```TypeScript
+startPoint(value: Array<any>)
+```
+
+设置直线起点坐标点（相对于Line组件绘制区域的左上角原点），支持attributeModifier动态设置属性方法，异常值按照默认值处理。
+
+**起始版本：** 7
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-LineAttribute-startPoint(value: Array<any>): LineAttribute--><!--Device-LineAttribute-startPoint(value: Array<any>): LineAttribute-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Array&lt;any&gt; | 是 | 直线起点坐标点（相对于Line组件绘制区域的左上角原点），单位vp。数组格式为[x坐标, y坐标]，数组长度必须为2，元素应为Length类型。 <br>默认值：[0, 0] <br>异常值undefined和null按照默认值处理。 |
+

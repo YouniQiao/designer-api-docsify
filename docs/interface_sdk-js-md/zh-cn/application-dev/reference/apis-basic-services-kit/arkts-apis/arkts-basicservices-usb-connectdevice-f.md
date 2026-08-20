@@ -14,7 +14,9 @@ import { serialManager } from '@kit.BasicServicesKit';
 function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 ```
 
-打开USB设备。 需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md)获取设备信息以及device，再调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md)获取设备请求权限。
+打开USB设备。
+
+需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md)获取设备信息以及device，再调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md)获取设备请求权限。
 
 **起始版本：** 8
 

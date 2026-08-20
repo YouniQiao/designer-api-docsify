@@ -166,7 +166,11 @@ let rationalNumber = new util.RationalNumber();
 static createRationalFromString(rationalString: string): RationalNumber
 ```
 
-根据给定的字符串创建一个 **RationalNumber** 对象。 &gt; **NOTE：**&gt; &gt; **rationalString** 参数必须为字符串。如果传入小数字符串，该函数不会被拦截，但会显示错误信息 &gt; "createRationalFromString: The type of Parameter must be integer string"。
+根据给定的字符串创建一个 **RationalNumber** 对象。
+
+> **NOTE：**
+> 
+> **rationalString** 参数必须为字符串。如果传入小数字符串，该函数不会被拦截，但会显示错误信息 &gt; "createRationalFromString: The type of Parameter must be integer string"。
 
 **起始版本：** 8
 
@@ -273,7 +277,11 @@ static getCommonDivisor(number1: number, number2: number): number
 static getCommonFactor(number1: number, number2: number): number
 ```
 
-获取两个指定整数的最大公约数。 &gt; **NOTE：**&gt; &gt; **number1** 和 **number2** 参数必须为整数。如果传入小数，该函数不会被拦截，但会显示错误信息 &gt; "getCommonFactor: The type of Parameter must be integer"。
+获取两个指定整数的最大公约数。
+
+> **NOTE：**
+> 
+> **number1** 和 **number2** 参数必须为整数。如果传入小数，该函数不会被拦截，但会显示错误信息 &gt; "getCommonFactor: The type of Parameter must be integer"。
 
 **起始版本：** 9
 
@@ -510,7 +518,11 @@ console.info("result = " + result);
 static parseRationalNumber(numerator: number, denominator: number): RationalNumber
 ```
 
-根据给定的分子和分母创建一个 **RationalNumber** 实例。 &gt; **NOTE：**&gt; &gt; **numerator** 和 **denominator** 参数必须为整数。如果传入小数，该函数不会被拦截，但会显示错误信息 &gt; "parseRationalNumber: The type of Parameter must be integer"。
+根据给定的分子和分母创建一个 **RationalNumber** 实例。
+
+> **NOTE：**
+> 
+> **numerator** 和 **denominator** 参数必须为整数。如果传入小数，该函数不会被拦截，但会显示错误信息 &gt; "parseRationalNumber: The type of Parameter must be integer"。
 
 **起始版本：** 9
 

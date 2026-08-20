@@ -40,15 +40,15 @@ Obtains a RDB store. You can set parameters of the RDB store as required. This i
 | Error Code ID | Error Message |
 | --- | --- |
 | [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid args. |
-| [14800017](../errorcode-data-rdb.md#14800017-key-configuration-changed) | Config changed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
-| [14800020](../errorcode-data-rdb.md#14800020-key-damaged-or-lost) | The secret key is corrupted or lost. |
-| [14801001](../errorcode-data-rdb.md#14801001-stage-model-required) | The operation is supported in the stage model only. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database. |
 | [14800010](../errorcode-data-rdb.md#14800010-invalid-database-path) | Invalid database path. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14801001](../errorcode-data-rdb.md#14801001-stage-model-required) | The operation is supported in the stage model only. |
 | [14801002](../errorcode-data-rdb.md#14801002-invalid-datagroupid-in-storeconfig) | Invalid data group ID. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800017](../errorcode-data-rdb.md#14800017-key-configuration-changed) | Config changed. |
+| [14800020](../errorcode-data-rdb.md#14800020-key-damaged-or-lost) | The secret key is corrupted or lost. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
 | [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 

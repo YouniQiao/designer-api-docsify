@@ -1,6 +1,10 @@
 # IntentDecoratorInfo
 
-Common properties for intent decorators, used to define basic information about an intent (including the intent name and version number). It applies to all decorators provided by this module. &gt; **NOTE：**&gt; &gt; If a matching intent is found in the standard intent list based on the **schema** and **intentVersion** fields, the &gt; system automatically populates the **intentName**, **domain**, **llmDescription**, **keywords**, **parameters**, &gt; and **result** fields with the values from the matching standard intent.
+Common properties for intent decorators, used to define basic information about an intent (including the intent name and version number). It applies to all decorators provided by this module.
+
+> **NOTE：**
+> 
+> If a matching intent is found in the standard intent list based on the **schema** and **intentVersion** fields, the &gt; system automatically populates the **intentName**, **domain**, **llmDescription**, **keywords**, **parameters**, &gt; and **result** fields with the values from the matching standard intent.
 
 **Since:** 20
 
@@ -81,7 +85,9 @@ Vertical domain of the intent. It is used to categorize intents by vertical fiel
 icon?: ResourceStr
 ```
 
-Icon of the intent. It is displayed in the AI entry point. - If the value is a string, the icon is read from a network resource. - If the value is a resource, the icon is read from a local resource.
+Icon of the intent. It is displayed in the AI entry point.
+
+- If the value is a string, the icon is read from a network resource. - If the value is a resource, the icon is read from a local resource.
 
 **Type:** ResourceStr
 

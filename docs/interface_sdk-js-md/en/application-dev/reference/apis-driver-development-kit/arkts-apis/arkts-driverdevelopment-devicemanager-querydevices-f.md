@@ -32,14 +32,14 @@ Queries the list of peripheral devices. If the device has no peripheral device c
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[Readonly](../../apis-na/arkts-apis/arkts-na-readonly-t.md)&lt;Device&gt;&gt; | List of peripheral devices obtained. |
+| Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;Device&gt;&gt; | List of peripheral devices obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
-| [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-externaldevicemanager-service-exception-or-bustype-parameter-error) | ExternalDeviceManager service exception or busType parameter error. |
+| [22900001](../errorcode-deviceManager.md#22900001-externaldevicemanager-service-exception-or-bustype-parameter-error) | ExternalDeviceManager service exception or busType parameter error. |
 
 **Examples**
 

@@ -1,4 +1,4 @@
-# PluginComponentTemplate(System API)（系统接口）
+# PluginComponentTemplate（系统接口）
 
 定义插件组件模板信息，用于与提供方定义的组件绑定。
 

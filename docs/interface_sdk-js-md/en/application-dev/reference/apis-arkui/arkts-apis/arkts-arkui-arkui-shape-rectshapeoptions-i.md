@@ -1,8 +1,10 @@
 # RectShapeOptions
 
-Represents the parameter of the constructor used to create a **RectShape** object. This API inherits from [ShapeSize](../../apis-na/arkts-apis/arkts-na-arkui-shape-shapesize-i.md).
+Represents the parameter of the constructor used to create a **RectShape** object.
 
-**Inheritance/Implementation:** RectShapeOptions extends [ShapeSize](../../apis-na/arkts-apis/arkts-na-arkui-shape-shapesize-i.md)
+This API inherits from [ShapeSize](../../apis-default/arkts-apis/arkts-arkui-shape-shapesize-i.md).
+
+**Inheritance/Implementation:** RectShapeOptions extends [ShapeSize](../../apis-default/arkts-apis/arkts-arkui-shape-shapesize-i.md)
 
 **Since:** 12
 
@@ -22,7 +24,13 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 radius?: number | string | Array<number | string>
 ```
 
-Radius of the rectangle border corners. When the parameter type is number, the valid value range is 0, +∞). When the parameter type is string, the value must conform to the [Length type specification. Unit: vp. If the value is invalid, 0 vp is used.
+Radius of the rectangle border corners.
+
+When the parameter type is number, the valid value range is 0, +∞). When the parameter type is string, the value must conform to the [Length type specification.
+
+Unit: vp.
+
+If the value is invalid, 0 vp is used.
 
 **Type:** number \| string \| Array&lt;number \| string&gt;
 

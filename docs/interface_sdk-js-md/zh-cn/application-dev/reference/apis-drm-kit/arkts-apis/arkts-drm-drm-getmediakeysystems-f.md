@@ -32,8 +32,8 @@ Get all media key systems supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 **示例**
 

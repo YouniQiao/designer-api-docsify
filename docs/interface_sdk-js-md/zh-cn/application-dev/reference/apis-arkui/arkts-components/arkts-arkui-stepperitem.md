@@ -1,8 +1,14 @@
 # StepperItem
 
-用作Stepper组件的页面子组件。 > **说明：** > - 从API version 8开始支持，从API version 22开始废弃，建议使用Swiper替代。
+用作Stepper组件的页面子组件。
 
-## 子组件 支持单个子组件。
+> **说明：**
+
+> - 从API version 8开始支持，从API version 22开始废弃，建议使用Swiper替代。
+
+## 子组件
+
+支持单个子组件。
 
 ## StepperItem
 
@@ -10,7 +16,11 @@
 StepperItem()
 ```
 
-创建Stepper组件的页面子组件。 &gt; **说明：** &gt; 从API version 8开始支持，从API version 22开始废弃，建议使用 &gt; [Swiper](../../../reference/apis-arkui/arkui-ts/ts-container-swiper.md#属性)替代。
+创建Stepper组件的页面子组件。
+
+> **说明：**
+
+> 从API version 8开始支持，从API version 22开始废弃，建议使用 &gt; [Swiper](../../../reference/apis-arkui/arkui-ts/ts-container-swiper.md#属性)替代。
 
 **起始版本：** 8
 
@@ -30,5 +40,4 @@ StepperItem()
 
 | 名称 | 说明 |
 | --- | --- |
-| [ItemState](arkts-arkui-itemstate-e.md) | 步骤导航器nextLabel的显示状态。 |
 

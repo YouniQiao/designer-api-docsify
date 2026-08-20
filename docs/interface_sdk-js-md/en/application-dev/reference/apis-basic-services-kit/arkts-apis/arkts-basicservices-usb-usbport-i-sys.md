@@ -1,4 +1,4 @@
-# USBPort(USB Manager) (System API)
+# USBPort (System API)
 
 Represents a USB port.
 

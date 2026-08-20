@@ -1,6 +1,11 @@
 # ColorMode
 
-> **NOTE：**&gt; &gt; This API has been supported since API version 7 and deprecated since API version 9. No substitute is provided. Enumerates the color modes of applications and widgets.
+
+> **NOTE：**
+> 
+> This API has been supported since API version 7 and deprecated since API version 9. No substitute is provided.
+
+Enumerates the color modes of applications and widgets.
 
 **Since:** 7
 

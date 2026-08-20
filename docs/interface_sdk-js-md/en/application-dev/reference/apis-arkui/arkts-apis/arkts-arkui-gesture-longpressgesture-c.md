@@ -2,6 +2,8 @@
 
 Defines LongPressGesture.
 
+@extends Gesture
+
 **Inheritance/Implementation:** LongPressGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
 
 **Since:** 23

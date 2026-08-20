@@ -2,6 +2,8 @@
 
 The class of agent extension ability. This class cannot be used in Harmony Archive(HAR).
 
+@extends ExtensionAbility
+
 **Inheritance/Implementation:** AgentExtensionAbility extends ExtensionAbility
 
 **Since:** 24

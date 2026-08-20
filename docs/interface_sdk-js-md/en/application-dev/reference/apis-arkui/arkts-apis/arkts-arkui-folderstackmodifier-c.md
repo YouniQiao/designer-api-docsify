@@ -2,6 +2,8 @@
 
 Defines FolderStack Modifier
 
+@implements FolderStackAttribute, AttributeModifier&lt;FolderStackAttribute&gt;
+
 **Inheritance/Implementation:** FolderStackModifier implements FolderStackAttribute, AttributeModifier<FolderStackAttribute>
 
 **Since:** 23

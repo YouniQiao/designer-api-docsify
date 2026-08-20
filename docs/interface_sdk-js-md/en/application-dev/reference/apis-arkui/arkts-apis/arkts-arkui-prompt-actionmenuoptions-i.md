@@ -2,11 +2,13 @@
 
 Defines the option of ShowActionMenu.
 
+@interface ActionMenuOptions
+
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [ActionMenuOptions](../../apis-na/arkts-apis/arkts-na-promptaction-actionmenuoptions-i.md)
+**Substitutes:** [ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md)
 
 <!--Device-prompt-interface ActionMenuOptions--><!--Device-prompt-interface ActionMenuOptions-End-->
 
@@ -33,7 +35,7 @@ Array of buttons in the dialog box. The array structure is {text:'button', color
 
 **Deprecated since:** 9
 
-**Substitutes:** [buttons](../../apis-na/arkts-apis/arkts-na-promptaction-actionmenuoptions-i.md#buttons)
+**Substitutes:** [buttons](arkts-arkui-promptaction-actionmenuoptions-i.md#buttons)
 
 <!--Device-ActionMenuOptions-buttons: [Button, Button?, Button?, Button?, Button?, Button?]--><!--Device-ActionMenuOptions-buttons: [Button, Button?, Button?, Button?, Button?, Button?]-End-->
 
@@ -53,7 +55,7 @@ Title of the text to display.
 
 **Deprecated since:** 9
 
-**Substitutes:** [title](../../apis-na/arkts-apis/arkts-na-promptaction-actionmenuoptions-i.md#title)
+**Substitutes:** [title](arkts-arkui-promptaction-actionmenuoptions-i.md#title)
 
 <!--Device-ActionMenuOptions-title?: string--><!--Device-ActionMenuOptions-title?: string-End-->
 

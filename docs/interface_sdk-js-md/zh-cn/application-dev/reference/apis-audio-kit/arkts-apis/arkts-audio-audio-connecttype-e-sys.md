@@ -1,6 +1,6 @@
 # ConnectType（系统接口）
 
-Connect type for device.
+Connect type for device. @enum { int }
 
 **起始版本：** 23
 

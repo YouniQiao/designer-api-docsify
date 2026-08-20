@@ -1,4 +1,4 @@
-# ProvisionRequest(Defines the DRM capability.)
+# ProvisionRequest
 
 设备证书请求。
 

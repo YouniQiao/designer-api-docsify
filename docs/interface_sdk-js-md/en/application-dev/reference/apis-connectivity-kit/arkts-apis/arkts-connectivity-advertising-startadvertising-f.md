@@ -40,10 +40,10 @@ Starts advertising.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the chip does not support it. |
 | 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 36100043 | Invalid UUID. |
 | 36100040 | Integer out of range. |
+| 36100043 | Invalid UUID. |
+| 36100099 | Operation failed. |
 

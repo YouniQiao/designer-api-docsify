@@ -58,28 +58,28 @@ auth(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300091 | Cross-device communication failed.<br>**适用版本：** 20+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid challenge, authType or authTrustLevel. |
+| [12300013](../errorcode-account.md#12300013-网络异常) | Network exception.<br>**适用版本：** 12+ |
+| 12300020 | Device hardware abnormal.<br>**适用版本：** 20+ |
 | 12300090 | Cross-device capability not supported.<br>**适用版本：** 20+ |
+| 12300091 | Cross-device communication failed.<br>**适用版本：** 20+ |
+| [12300101](../errorcode-account.md#12300101-凭据不正确) | The credential is incorrect. |
+| [12300102](../errorcode-account.md#12300102-凭据不存在) | The credential does not exist. |
+| [12300105](../errorcode-account.md#12300105-可信等级不支持) | The trust level is not supported. |
+| [12300106](../errorcode-account.md#12300106-认证类型不支持) | The authentication type is not supported. |
+| [12300109](../errorcode-account.md#12300109-认证凭据录入更新等操作被取消) | The authentication, enrollment, or update operation is canceled. |
+| [12300110](../errorcode-account.md#12300110-认证被锁定) | The authentication is locked. |
+| [12300111](../errorcode-account.md#12300111-认证超时) | The authentication time out. |
+| [12300112](../errorcode-account.md#12300112-认证服务忙) | The authentication service is busy. |
+| [12300113](../errorcode-account.md#12300113-认证服务不存在) | The authentication service does not exist.<br>**适用版本：** 12+ |
+| [12300114](../errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally.<br>**适用版本：** 12+ |
+| [12300117](../errorcode-account.md#12300117-pin码过期) | PIN is expired.<br>**适用版本：** 12+ |
+| 12300119 | Multi-factor authentication failed.<br>**适用版本：** 20+ |
 | [12300120](../errorcode-account.md#12300120-凭据已失效) | The credentials are no longer valid.<br>**适用版本：** 23+ |
 | 12300211 | Server unreachable.<br>**适用版本：** 12+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300114](../errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally.<br>**适用版本：** 12+ |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300113](../errorcode-account.md#12300113-认证服务不存在) | The authentication service does not exist.<br>**适用版本：** 12+ |
-| [12300112](../errorcode-account.md#12300112-认证服务忙) | The authentication service is busy. |
-| 12300119 | Multi-factor authentication failed.<br>**适用版本：** 20+ |
-| [12300117](../errorcode-account.md#12300117-pin码过期) | PIN is expired.<br>**适用版本：** 12+ |
-| 12300020 | Device hardware abnormal.<br>**适用版本：** 20+ |
-| [12300106](../errorcode-account.md#12300106-认证类型不支持) | The authentication type is not supported. |
-| [12300105](../errorcode-account.md#12300105-可信等级不支持) | The trust level is not supported. |
-| [12300111](../errorcode-account.md#12300111-认证超时) | The authentication time out. |
-| [12300110](../errorcode-account.md#12300110-认证被锁定) | The authentication is locked. |
-| [12300013](../errorcode-account.md#12300013-网络异常) | Network exception.<br>**适用版本：** 12+ |
-| [12300109](../errorcode-account.md#12300109-认证凭据录入更新等操作被取消) | The authentication, enrollment, or update operation is canceled. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid challenge, authType or authTrustLevel. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300102](../errorcode-account.md#12300102-凭据不存在) | The credential does not exist. |
-| [12300101](../errorcode-account.md#12300101-凭据不正确) | The credential is incorrect. |
 
 **示例**
 
@@ -173,29 +173,29 @@ auth(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300091 | Cross-device communication failed.<br>**适用版本：** 20+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid challenge, authType, authTrustLevel or options. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300013](../errorcode-account.md#12300013-网络异常) | Network exception. |
+| 12300020 | Device hardware abnormal.<br>**适用版本：** 20+ |
 | 12300090 | Cross-device capability not supported.<br>**适用版本：** 20+ |
+| 12300091 | Cross-device communication failed.<br>**适用版本：** 20+ |
+| [12300101](../errorcode-account.md#12300101-凭据不正确) | The credential is incorrect. |
+| [12300102](../errorcode-account.md#12300102-凭据不存在) | The credential does not exist. |
+| [12300105](../errorcode-account.md#12300105-可信等级不支持) | The trust level is not supported. |
+| [12300106](../errorcode-account.md#12300106-认证类型不支持) | The authentication type is not supported. |
+| [12300109](../errorcode-account.md#12300109-认证凭据录入更新等操作被取消) | The authentication, enrollment, or update operation is canceled. |
+| [12300110](../errorcode-account.md#12300110-认证被锁定) | The authentication is locked. |
+| [12300111](../errorcode-account.md#12300111-认证超时) | The authentication timeout. |
+| [12300112](../errorcode-account.md#12300112-认证服务忙) | The authentication service is busy. |
+| [12300113](../errorcode-account.md#12300113-认证服务不存在) | The authentication service does not exist. |
+| [12300114](../errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
+| [12300117](../errorcode-account.md#12300117-pin码过期) | PIN is expired. |
+| 12300119 | Multi-factor authentication failed.<br>**适用版本：** 20+ |
 | [12300120](../errorcode-account.md#12300120-凭据已失效) | The credentials are no longer valid.<br>**适用版本：** 23+ |
 | 12300211 | Server unreachable. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300114](../errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300113](../errorcode-account.md#12300113-认证服务不存在) | The authentication service does not exist. |
-| [12300112](../errorcode-account.md#12300112-认证服务忙) | The authentication service is busy. |
-| 12300119 | Multi-factor authentication failed.<br>**适用版本：** 20+ |
-| [12300117](../errorcode-account.md#12300117-pin码过期) | PIN is expired. |
-| 12300020 | Device hardware abnormal.<br>**适用版本：** 20+ |
-| [12300106](../errorcode-account.md#12300106-认证类型不支持) | The authentication type is not supported. |
-| [12300105](../errorcode-account.md#12300105-可信等级不支持) | The trust level is not supported. |
-| [12300111](../errorcode-account.md#12300111-认证超时) | The authentication timeout. |
-| [12300110](../errorcode-account.md#12300110-认证被锁定) | The authentication is locked. |
-| [12300013](../errorcode-account.md#12300013-网络异常) | Network exception. |
-| [12300109](../errorcode-account.md#12300109-认证凭据录入更新等操作被取消) | The authentication, enrollment, or update operation is canceled. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid challenge, authType, authTrustLevel or options. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300102](../errorcode-account.md#12300102-凭据不存在) | The credential does not exist. |
-| [12300101](../errorcode-account.md#12300101-凭据不正确) | The credential is incorrect. |
 
 **示例**
 
@@ -295,29 +295,29 @@ authUser(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300091 | Cross-device communication failed.<br>**适用版本：** 20+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid challenge, authType or authTrustLevel. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found.<br>**适用版本：** 12+ |
+| [12300013](../errorcode-account.md#12300013-网络异常) | Network exception.<br>**适用版本：** 12+ |
+| 12300020 | Device hardware abnormal.<br>**适用版本：** 20+ |
 | 12300090 | Cross-device capability not supported.<br>**适用版本：** 20+ |
+| 12300091 | Cross-device communication failed.<br>**适用版本：** 20+ |
+| [12300101](../errorcode-account.md#12300101-凭据不正确) | The credential is incorrect. |
+| [12300102](../errorcode-account.md#12300102-凭据不存在) | The credential does not exist. |
+| [12300105](../errorcode-account.md#12300105-可信等级不支持) | The trust level is not supported. |
+| [12300106](../errorcode-account.md#12300106-认证类型不支持) | The authentication type is not supported. |
+| [12300109](../errorcode-account.md#12300109-认证凭据录入更新等操作被取消) | The authentication, enrollment, or update operation is canceled. |
+| [12300110](../errorcode-account.md#12300110-认证被锁定) | The authentication is locked. |
+| [12300111](../errorcode-account.md#12300111-认证超时) | The authentication timeout. |
+| [12300112](../errorcode-account.md#12300112-认证服务忙) | The authentication service is busy. |
+| [12300113](../errorcode-account.md#12300113-认证服务不存在) | The authentication service does not exist.<br>**适用版本：** 12+ |
+| [12300114](../errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally.<br>**适用版本：** 12+ |
+| [12300117](../errorcode-account.md#12300117-pin码过期) | PIN is expired.<br>**适用版本：** 12+ |
+| 12300119 | Multi-factor authentication failed.<br>**适用版本：** 20+ |
 | [12300120](../errorcode-account.md#12300120-凭据已失效) | The credentials are no longer valid.<br>**适用版本：** 23+ |
 | 12300211 | Server unreachable.<br>**适用版本：** 12+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300114](../errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally.<br>**适用版本：** 12+ |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300113](../errorcode-account.md#12300113-认证服务不存在) | The authentication service does not exist.<br>**适用版本：** 12+ |
-| [12300112](../errorcode-account.md#12300112-认证服务忙) | The authentication service is busy. |
-| 12300119 | Multi-factor authentication failed.<br>**适用版本：** 20+ |
-| [12300117](../errorcode-account.md#12300117-pin码过期) | PIN is expired.<br>**适用版本：** 12+ |
-| 12300020 | Device hardware abnormal.<br>**适用版本：** 20+ |
-| [12300106](../errorcode-account.md#12300106-认证类型不支持) | The authentication type is not supported. |
-| [12300105](../errorcode-account.md#12300105-可信等级不支持) | The trust level is not supported. |
-| [12300111](../errorcode-account.md#12300111-认证超时) | The authentication timeout. |
-| [12300110](../errorcode-account.md#12300110-认证被锁定) | The authentication is locked. |
-| [12300013](../errorcode-account.md#12300013-网络异常) | Network exception.<br>**适用版本：** 12+ |
-| [12300109](../errorcode-account.md#12300109-认证凭据录入更新等操作被取消) | The authentication, enrollment, or update operation is canceled. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found.<br>**适用版本：** 12+ |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid challenge, authType or authTrustLevel. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300102](../errorcode-account.md#12300102-凭据不存在) | The credential does not exist. |
-| [12300101](../errorcode-account.md#12300101-凭据不正确) | The credential is incorrect. |
 
 **示例**
 
@@ -397,11 +397,11 @@ cancelAuth(contextID: Uint8Array): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid contextId. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid contextId. |
 
 **示例**
 
@@ -514,11 +514,11 @@ getAvailableStatus(authType: AuthType, authTrustLevel: AuthTrustLevel): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid authType or authTrustLevel. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid authType or authTrustLevel. |
 | [12300117](../errorcode-account.md#12300117-pin码过期) | PIN is expired. |
 
 **示例**
@@ -582,17 +582,17 @@ getProperty(request: GetPropertyRequest, callback: AsyncCallback<ExecutorPropert
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | request | [GetPropertyRequest](arkts-basicservices-osaccount-getpropertyrequest-i-sys.md) | 是 | 请求信息，包括认证类型和属性类型列表。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[ExecutorProperty](arkts-basicservices-osaccount-executorproperty-i-sys.md)&gt; | 是 | 回调函数。如果获取成功，err为null，data为执行器属性信息；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[ExecutorProperty](arkts-basicservices-osaccount-executorproperty-i-sys.md)&gt; | 是 | 回调函数。如果获取成功，err为null，data为执行器属性信息；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found.<br>**适用版本：** 12+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid request. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid request. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found.<br>**适用版本：** 12+ |
 | 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
 
 **示例**
@@ -691,11 +691,11 @@ getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found.<br>**适用版本：** 12+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid request. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid request. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found.<br>**适用版本：** 12+ |
 | 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
 
 **示例**
@@ -793,11 +793,11 @@ getPropertyByCredentialId(credentialId: Uint8Array, keys: Array<GetPropertyType>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid keys. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300102](../errorcode-account.md#12300102-凭据不存在) | The credential does not exist. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid keys. |
 | 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
+| [12300102](../errorcode-account.md#12300102-凭据不存在) | The credential does not exist. |
 
 **示例**
 
@@ -967,13 +967,13 @@ prepareRemoteAuth(remoteNetworkId: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300091 | Cross-device communication failed.<br>**适用版本：** 20+ |
-| 12300090 | Cross-device capability not supported.<br>**适用版本：** 20+ |
-| [12300111](../errorcode-account.md#12300111-认证超时) | Operation timeout.<br>**适用版本：** 20+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid remoteNetworkId. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid remoteNetworkId. |
+| 12300090 | Cross-device capability not supported.<br>**适用版本：** 20+ |
+| 12300091 | Cross-device communication failed.<br>**适用版本：** 20+ |
+| [12300111](../errorcode-account.md#12300111-认证超时) | Operation timeout.<br>**适用版本：** 20+ |
 
 **示例**
 
@@ -1053,17 +1053,17 @@ setProperty(request: SetPropertyRequest, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | request | [SetPropertyRequest](arkts-basicservices-osaccount-setpropertyrequest-i-sys.md) | 是 | 请求信息，包括认证类型和要设置的密钥值。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid request. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid request. |
 
 **示例**
 
@@ -1153,11 +1153,11 @@ setProperty(request: SetPropertyRequest): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid request. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid request. |
 
 **示例**
 

@@ -2,6 +2,8 @@
 
 Enumerates output type of hilog.
 
+@enum { int }
+
 **Since:** 26.0.0
 
 <!--Device-hilog-enum OutputType--><!--Device-hilog-enum OutputType-End-->

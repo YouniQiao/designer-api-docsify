@@ -38,8 +38,8 @@ Exits this input type. This API can be called only by the preconfigured default 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
 
 **Examples**
 
@@ -79,8 +79,8 @@ Exits this input type. This API can be called only by the preconfigured default 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
 
 **Examples**
 

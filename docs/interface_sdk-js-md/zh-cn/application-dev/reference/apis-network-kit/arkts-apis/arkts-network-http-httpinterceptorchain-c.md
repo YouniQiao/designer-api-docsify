@@ -20,7 +20,11 @@ import { http } from '@kit.NetworkKit';
 public addChain(chain: HttpInterceptor[]): boolean
 ```
 
-向HTTP客户端添加拦截器。 &gt; **说明：** &gt; &gt; 拦截器链中不能包含相同类型的拦截器实例。如果传入相同类型的拦截器，会抛出错误码2300802（Duplicated interceptor type in the chain）。
+向HTTP客户端添加拦截器。
+
+> **说明：**
+> 
+> 拦截器链中不能包含相同类型的拦截器实例。如果传入相同类型的拦截器，会抛出错误码2300802（Duplicated interceptor type in the chain）。
 
 **起始版本：** 22
 
@@ -46,8 +50,8 @@ public addChain(chain: HttpInterceptor[]): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 2300802 | Duplicated interceptor type in the chain. |
 | 2300801 | Parameter type not supported by the interceptor. |
+| 2300802 | Duplicated interceptor type in the chain. |
 | [2300999](../errorcode-net-http.md#2300999-内部错误) | Internal error. |
 
 ## apply
@@ -56,7 +60,15 @@ public addChain(chain: HttpInterceptor[]): boolean
 public apply(httpRequest: HttpRequest): boolean
 ```
 
-将拦截器链附加到目标HTTP请求。每个HTTP请求实例只能附加一个拦截器链。 &gt; **说明：** &gt; &gt; 将拦截器链附加到[HttpRequest](arkts-network-http-httprequest-i.md)实例后，当该实例发起HTTP请求时，会触发已附加的拦截器链中相应类型的拦截器。 &gt; 更多使用HTTP请求触发拦截器功能，可以参考[HTTP拦截器功能代码示例](../../../network/http-request.md#http拦截器)。 &gt; HTTP拦截器相关能力仅支持 &gt; [HttpRequest.request](arkts-network-http-httprequest-i.md#request)接口，目前暂 &gt; 不支持 &gt; [HttpRequest.requestInStream](arkts-network-http-httprequest-i.md#requestinstream) &gt; (流式传输)接口。
+将拦截器链附加到目标HTTP请求。每个HTTP请求实例只能附加一个拦截器链。
+
+> **说明：**
+> 
+> 将拦截器链附加到[HttpRequest](arkts-network-http-httprequest-i.md)实例后，当该实例发起HTTP请求时，会触发已附加的拦截器链中相应类型的拦截器。
+
+> 更多使用HTTP请求触发拦截器功能，可以参考[HTTP拦截器功能代码示例](../../../network/http-request.md#http拦截器)。
+
+> HTTP拦截器相关能力仅支持 &gt; [HttpRequest.request](arkts-network-http-httprequest-i.md#request)接口，目前暂 &gt; 不支持 &gt; [HttpRequest.requestInStream](arkts-network-http-httprequest-i.md#requestinstream) &gt; (流式传输)接口。
 
 **起始版本：** 22
 

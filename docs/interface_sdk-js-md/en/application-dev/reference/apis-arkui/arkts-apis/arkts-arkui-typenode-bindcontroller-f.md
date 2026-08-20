@@ -6,7 +6,7 @@
 export function bindController(node: FrameNode, controller: TextController, nodeType: 'Text'): void
 ```
 
-Binds a TextController instance to a [Text](../../apis-na/arkts-apis/arkts-na-typenode-text-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API does not support declaratively created nodes.
+Binds a TextController instance to a [Text](../../apis-default/arkts-apis/arkts-typenode-text-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ Binds a TextController instance to a [Text](../../apis-na/arkts-apis/arkts-na-ty
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | Yes | Target node for controller binding. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node for controller binding. |
 | controller | TextController | Yes | TextController** instance to bind. |
 | nodeType | 'Text' | Yes | Node type. Set to **'Text'**. |
 
@@ -30,8 +30,8 @@ Binds a TextController instance to a [Text](../../apis-na/arkts-apis/arkts-na-ty
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
 | [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
 
 **Examples**
 
@@ -87,7 +87,7 @@ struct FrameNodeTypeTest {
 export function bindController(node: FrameNode, controller: SwiperController, nodeType: 'Swiper'): void
 ```
 
-Binds a SwiperController instance to the [Swiper](../../apis-na/arkts-apis/arkts-na-typenode-swiper-t.md) node. Cross- language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API does not support declaratively created nodes.
+Binds a SwiperController instance to the [Swiper](../../apis-default/arkts-apis/arkts-typenode-swiper-t.md) node. Cross- language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -103,7 +103,7 @@ Binds a SwiperController instance to the [Swiper](../../apis-na/arkts-apis/arkts
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | Yes | Target node for controller binding. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node for controller binding. |
 | controller | SwiperController | Yes | SwiperController** instance. |
 | nodeType | 'Swiper' | Yes | Node type. Set to **'Swiper'**. |
 
@@ -111,8 +111,8 @@ Binds a SwiperController instance to the [Swiper](../../apis-na/arkts-apis/arkts
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
 | [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
 
 **Examples**
 
@@ -125,7 +125,7 @@ See the example for createNode('Swiper')12+.
 function bindController(node: FrameNode, controller: Scroller, nodeType: 'Scroll'): void
 ```
 
-Binds the Scroller to the [Scroll](../../apis-na/arkts-apis/arkts-na-typenode-scroll-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
+Binds the Scroller to the [Scroll](../../apis-default/arkts-apis/arkts-typenode-scroll-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 15
 
@@ -141,7 +141,7 @@ Binds the Scroller to the [Scroll](../../apis-na/arkts-apis/arkts-na-typenode-sc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | Yes | Target node to which the scroll controller is bound. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node to which the scroll controller is bound. |
 | controller | Scroller | Yes | Scroll controller. |
 | nodeType | 'Scroll' | Yes | Node type, which is **Scroll** in this API. |
 
@@ -165,7 +165,7 @@ typeNode.bindController(node, scroller, 'Scroll');
 export function bindController(node: FrameNode, controller: Scroller, nodeType: 'List'): void
 ```
 
-Binds a Scroller instance to the [List](../../apis-na/arkts-apis/arkts-na-typenode-list-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
+Binds a Scroller instance to the [List](../../apis-default/arkts-apis/arkts-typenode-list-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 20
 
@@ -181,7 +181,7 @@ Binds a Scroller instance to the [List](../../apis-na/arkts-apis/arkts-na-typeno
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | Yes | Target node to which the scroll controller is bound. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node to which the scroll controller is bound. |
 | controller | Scroller | Yes | Scroll controller. |
 | nodeType | 'List' | Yes | Node type. Set to **'List'**. |
 
@@ -189,8 +189,8 @@ Binds a Scroller instance to the [List](../../apis-na/arkts-apis/arkts-na-typeno
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**Applicable version:** 20 - 24 |
 | [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**Applicable version:** 20 - 24 |
 
 **Examples**
 
@@ -205,7 +205,7 @@ typeNode.bindController(node, scroller, 'List');
 export function bindController(node: FrameNode, controller: TextInputController, nodeType: 'TextInput'): void
 ```
 
-Binds the TextInputController to the [TextInput](../../apis-na/arkts-apis/arkts-na-typenode-textinput-t.md) node. Cross -language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
+Binds the TextInputController to the [TextInput](../../apis-default/arkts-apis/arkts-typenode-textinput-t.md) node. Cross -language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 20
 
@@ -221,7 +221,7 @@ Binds the TextInputController to the [TextInput](../../apis-na/arkts-apis/arkts-
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | Yes | Target node to which the input box controller is bound. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node to which the input box controller is bound. |
 | controller | TextInputController | Yes | Input box controller. |
 | nodeType | 'TextInput' | Yes | Node type. Set to **'TextInput'**. |
 
@@ -229,8 +229,8 @@ Binds the TextInputController to the [TextInput](../../apis-na/arkts-apis/arkts-
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
 | [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
 
 **Examples**
 
@@ -279,7 +279,7 @@ struct FrameNodeTypeTest {
 export function bindController(node: FrameNode, controller: Scroller, nodeType: 'WaterFlow'): void
 ```
 
-Binds a Scroller instance to the [WaterFlow](../../apis-na/arkts-apis/arkts-na-typenode-waterflow-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
+Binds a Scroller instance to the [WaterFlow](../../apis-default/arkts-apis/arkts-typenode-waterflow-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 20
 
@@ -295,7 +295,7 @@ Binds a Scroller instance to the [WaterFlow](../../apis-na/arkts-apis/arkts-na-t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | Yes | Target node to which the scroll controller is bound. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node to which the scroll controller is bound. |
 | controller | Scroller | Yes | Scroll controller. |
 | nodeType | 'WaterFlow' | Yes | Node type. Set to **'WaterFlow'**. |
 
@@ -303,8 +303,8 @@ Binds a Scroller instance to the [WaterFlow](../../apis-na/arkts-apis/arkts-na-t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**Applicable version:** 20 - 24 |
 | [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**Applicable version:** 20 - 24 |
 
 **Examples**
 
@@ -319,7 +319,7 @@ typeNode.bindController(node, scroller, 'WaterFlow');
 export function bindController(node: FrameNode, controller: TextAreaController, nodeType: 'TextArea'): void
 ```
 
-Binds a TextAreaController instance to the [TextArea](../../apis-na/arkts-apis/arkts-na-typenode-textarea-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
+Binds a TextAreaController instance to the [TextArea](../../apis-default/arkts-apis/arkts-typenode-textarea-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 20
 
@@ -335,7 +335,7 @@ Binds a TextAreaController instance to the [TextArea](../../apis-na/arkts-apis/a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | Yes | Target node to which the input box controller is bound. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node to which the input box controller is bound. |
 | controller | TextAreaController | Yes | Input box controller. |
 | nodeType | 'TextArea' | Yes | Node type. Set to **'TextArea'**. |
 
@@ -343,8 +343,8 @@ Binds a TextAreaController instance to the [TextArea](../../apis-na/arkts-apis/a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
 | [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
 
 **Examples**
 
@@ -393,7 +393,7 @@ struct FrameNodeTypeTest {
 export function bindController(node: FrameNode, controller: Scroller, nodeType: 'Grid'): void
 ```
 
-Binds a Scroller instance to the [Grid](../../apis-na/arkts-apis/arkts-na-typenode-grid-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
+Binds a Scroller instance to the [Grid](../../apis-default/arkts-apis/arkts-typenode-grid-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 20
 
@@ -409,7 +409,7 @@ Binds a Scroller instance to the [Grid](../../apis-na/arkts-apis/arkts-na-typeno
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | Yes | Target node to which the scroll controller is bound. |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Target node to which the scroll controller is bound. |
 | controller | Scroller | Yes | Scroll controller. |
 | nodeType | 'Grid' | Yes | Node type. Set to **'Grid'**. |
 
@@ -417,8 +417,8 @@ Binds a Scroller instance to the [Grid](../../apis-na/arkts-apis/arkts-na-typeno
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**Applicable version:** 20 - 24 |
 | [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**Applicable version:** 20 - 24 |
 
 **Examples**
 

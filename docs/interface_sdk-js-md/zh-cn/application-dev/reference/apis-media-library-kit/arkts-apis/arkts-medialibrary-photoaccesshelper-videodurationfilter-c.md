@@ -20,7 +20,9 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 extraVideoDuration?: int
 ```
 
-针对FilterOperator.BETWEEN情况下，配置视频时长的上限值。默认值为-1。 单位为毫秒（ms）。
+针对FilterOperator.BETWEEN情况下，配置视频时长的上限值。默认值为-1。
+
+单位为毫秒（ms）。
 
 **类型：** int
 
@@ -38,7 +40,9 @@ extraVideoDuration?: int
 filterOperator: FilterOperator
 ```
 
-过滤操作符。 例如：按照大于/小于某个fileSize的方式过滤文件。
+过滤操作符。
+
+例如：按照大于/小于某个fileSize的方式过滤文件。
 
 **类型：** [FilterOperator](arkts-medialibrary-photoaccesshelper-filteroperator-e.md)
 
@@ -56,7 +60,9 @@ filterOperator: FilterOperator
 videoDuration: int
 ```
 
-指定过滤视频的时长。 单位为毫秒（ms）。
+指定过滤视频的时长。
+
+单位为毫秒（ms）。
 
 **类型：** int
 

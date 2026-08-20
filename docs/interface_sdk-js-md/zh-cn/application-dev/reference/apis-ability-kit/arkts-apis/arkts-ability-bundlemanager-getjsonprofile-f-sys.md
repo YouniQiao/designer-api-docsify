@@ -12,7 +12,9 @@ import { bundleManager } from '@kit.AbilityKit';
 function getJsonProfile(profileType: ProfileType, bundleName: string, moduleName?: string, userId?: int): string
 ```
 
-以同步的方法根据给定的profileType、bundleName和moduleName查询相应配置文件的JSON字符串。 获取调用方自己的配置文件时不需要权限。
+以同步的方法根据给定的profileType、bundleName和moduleName查询相应配置文件的JSON字符串。
+
+获取调用方自己的配置文件时不需要权限。
 
 **起始版本：** 23
 
@@ -43,14 +45,14 @@ function getJsonProfile(profileType: ProfileType, bundleName: string, moduleName
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
-| [17700024](../errorcode-bundle.md#17700024-没有相应的配置文件) | Failed to get the profile because the specified profile is not found in the HAP. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found.<br>**适用版本：** 12+ |
-| [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified moduleName is not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
+| [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified moduleName is not found. |
+| [17700024](../errorcode-bundle.md#17700024-没有相应的配置文件) | Failed to get the profile because the specified profile is not found in the HAP. |
+| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found.<br>**适用版本：** 12+ |
 
 **示例**
 

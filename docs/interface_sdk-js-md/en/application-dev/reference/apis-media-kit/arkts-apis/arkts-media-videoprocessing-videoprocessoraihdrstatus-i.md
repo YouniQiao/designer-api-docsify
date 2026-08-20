@@ -1,4 +1,4 @@
-# VideoProcessorAiHdrStatus(Provides the capability of video quality processing.)
+# VideoProcessorAiHdrStatus
 
 Provides the AIHDR feature status.
 

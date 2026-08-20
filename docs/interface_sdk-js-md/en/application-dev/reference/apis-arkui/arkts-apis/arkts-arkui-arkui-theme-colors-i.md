@@ -22,7 +22,7 @@ alert: ResourceColor
 
 System alert Color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -42,7 +42,7 @@ backgroundEmphasize: ResourceColor
 
 System emphasize level background color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -62,7 +62,7 @@ backgroundFourth: ResourceColor
 
 System fourth level background color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -82,7 +82,7 @@ backgroundPrimary: ResourceColor
 
 System Primary level background color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -102,7 +102,7 @@ backgroundSecondary: ResourceColor
 
 System Secondary level background color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -122,7 +122,7 @@ backgroundTertiary: ResourceColor
 
 System tertiary level background color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -142,7 +142,7 @@ brand: ResourceColor
 
 System brand Color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -162,7 +162,7 @@ compBackgroundEmphasize: ResourceColor
 
 100% bright brand background color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -182,7 +182,7 @@ compBackgroundFocus: ResourceColor
 
 CompBackgroundFocus Color
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -202,7 +202,7 @@ compBackgroundGray: ResourceColor
 
 CompBackgroundGray color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -222,7 +222,7 @@ compBackgroundNeutral: ResourceColor
 
 Black neutral high gloss color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -242,7 +242,7 @@ compBackgroundPrimary: ResourceColor
 
 CompBackgroundPrimary color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -262,7 +262,7 @@ compBackgroundPrimaryContrary: ResourceColor
 
 CompBackgroundPrimaryContrary color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -282,7 +282,7 @@ compBackgroundPrimaryTran: ResourceColor
 
 CompBackgroundPrimaryTran color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -302,7 +302,7 @@ compBackgroundSecondary: ResourceColor
 
 10% black universal control background.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -322,7 +322,7 @@ compBackgroundTertiary: ResourceColor
 
 5% black universal control background.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -342,7 +342,7 @@ compCommonContrary: ResourceColor
 
 CompCommonContrary Color
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -362,7 +362,7 @@ compDivider: ResourceColor
 
 Universal Division Line Color
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -382,7 +382,7 @@ compEmphasizeSecondary: ResourceColor
 
 20% High gloss brand background color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -402,7 +402,7 @@ compEmphasizeTertiary: ResourceColor
 
 10% High gloss brand background color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -422,7 +422,7 @@ compFocusedPrimary: ResourceColor
 
 CompFocusedPrimary Color
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -442,7 +442,7 @@ compFocusedSecondary: ResourceColor
 
 CompFocusedSecondary Color
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -462,7 +462,7 @@ compFocusedTertiary: ResourceColor
 
 CompFocusedTertiary Color
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -482,7 +482,7 @@ compForegroundPrimary: ResourceColor
 
 CompForegroundPrimary color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -502,7 +502,7 @@ confirm: ResourceColor
 
 System confirm Color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -522,7 +522,7 @@ container?: ResourceColor
 
 System container Color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 26.0.0
 
@@ -542,7 +542,7 @@ fontEmphasize: ResourceColor
 
 Emphasize text color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -562,7 +562,7 @@ fontFourth: ResourceColor
 
 Fourth text color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -582,7 +582,7 @@ fontOnFourth: ResourceColor
 
 Fourth level text inversion, used on colored backgrounds.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -602,7 +602,7 @@ fontOnPrimary: ResourceColor
 
 First level text inversion, used on colored backgrounds.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -622,7 +622,7 @@ fontOnSecondary: ResourceColor
 
 Secondary level text inversion, used on colored backgrounds.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -642,7 +642,7 @@ fontOnTertiary: ResourceColor
 
 Tertiary level text inversion, used on colored backgrounds.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -662,7 +662,7 @@ fontPrimary: ResourceColor
 
 First level text color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -682,7 +682,7 @@ fontSecondary: ResourceColor
 
 Secondary text color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -702,7 +702,7 @@ fontTertiary: ResourceColor
 
 Tertiary text color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -722,7 +722,7 @@ iconEmphasize: ResourceColor
 
 Emphasize level icon color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -742,7 +742,7 @@ iconFourth: ResourceColor
 
 Fourth level icon color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -762,7 +762,7 @@ iconOnFourth: ResourceColor
 
 Fourth level icon reversed, used on a colored background.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -782,7 +782,7 @@ iconOnPrimary: ResourceColor
 
 First level icon reversed, used on a colored background.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -802,7 +802,7 @@ iconOnSecondary: ResourceColor
 
 Secondary level icon reversed, used on a colored background.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -822,7 +822,7 @@ iconOnTertiary: ResourceColor
 
 Tertiary level icon reversed, used on a colored background.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -842,7 +842,7 @@ iconPrimary: ResourceColor
 
 First level icon color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -862,7 +862,7 @@ iconSecondary: ResourceColor
 
 Secondary level icon color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -882,7 +882,7 @@ iconSubEmphasize: ResourceColor
 
 Secondary emphasize level icon color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -902,7 +902,7 @@ iconTertiary: ResourceColor
 
 Tertiary level icon color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -922,7 +922,7 @@ interactiveActive: ResourceColor
 
 Active interactive color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -942,7 +942,7 @@ interactiveClick: ResourceColor
 
 Click interactive color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -962,7 +962,7 @@ interactiveFocus: ResourceColor
 
 Focus interactive color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -982,7 +982,7 @@ interactiveHover: ResourceColor
 
 Hover interactive color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -1002,7 +1002,7 @@ interactivePressed: ResourceColor
 
 Pressed interactive color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -1022,7 +1022,7 @@ interactiveSelect: ResourceColor
 
 Select interactive color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -1042,7 +1042,7 @@ onPrimary?: ResourceColor
 
 System onPrimary Color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 26.0.0
 
@@ -1062,7 +1062,7 @@ primary?: ResourceColor
 
 System primary Color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 26.0.0
 
@@ -1082,7 +1082,7 @@ warning: ResourceColor
 
 System warning Color.
 
-**Type:** [ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)
+**Type:** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
 
 **Since:** 12
 

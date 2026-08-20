@@ -49,10 +49,10 @@ Starts the burst mode, in which users can capture a series of photos in quick su
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 **Examples**
 
@@ -99,9 +99,9 @@ Confirms photo capture. This API is generally used in night photo mode when user
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 **Examples**
 
@@ -144,10 +144,10 @@ Enables deferred delivery of a certain type.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 **Examples**
 
@@ -183,9 +183,9 @@ Enable auto cloud image enhancement
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## enableAutoHighQualityPhoto
 
@@ -213,10 +213,10 @@ Enables automatic high quality for photos. Before using this API, call [isAutoHi
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | session is not running. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 **Examples**
 
@@ -254,10 +254,10 @@ Enable depth data delivery.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## enableOffline
 
@@ -279,9 +279,9 @@ Enable offline processing.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | session is not running. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## enableOriginalImageGeneration
 
@@ -311,8 +311,8 @@ Enable original image generation.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## enableQuickThumbnail
 
@@ -340,10 +340,10 @@ Enables or disables the quick thumbnail feature. This API takes effect after [ad
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 and later |
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | session is not running. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 and later |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 and later |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -406,10 +406,10 @@ Enable raw image image delivery.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## isAutoCloudImageEnhancementSupported
 
@@ -437,8 +437,8 @@ Confirm if the auto cloud image enhancement is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## isAutoHighQualityPhotoSupported
 
@@ -466,9 +466,9 @@ Checks whether automatic high quality is supported for photos.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | session is not running. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 **Examples**
 
@@ -512,10 +512,10 @@ Checks whether deferred delivery of a certain type is enabled.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 **Examples**
 
@@ -559,10 +559,10 @@ Checks whether deferred delivery of a certain type is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 **Examples**
 
@@ -600,9 +600,9 @@ Check if the depth data delivery is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## isOfflineSupported
 
@@ -630,8 +630,8 @@ Confirm if offline processing is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## isOriginalImageGenerationSupported
 
@@ -661,8 +661,8 @@ Confirm if original image generation supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## isQuickThumbnailSupported
 
@@ -754,9 +754,9 @@ Confirm if the raw image delivery is supported
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## offDeferredPhotoProxyAvailable
 
@@ -1201,6 +1201,6 @@ Set edit data.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 

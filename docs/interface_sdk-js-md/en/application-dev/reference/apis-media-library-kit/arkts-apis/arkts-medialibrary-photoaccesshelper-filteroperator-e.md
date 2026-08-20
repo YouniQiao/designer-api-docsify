@@ -2,6 +2,8 @@
 
 Enumeration type of filter operator.
 
+@enum { int } FilterOperator
+
 **Since:** 26.0.0
 
 <!--Device-photoAccessHelper-export enum FilterOperator--><!--Device-photoAccessHelper-export enum FilterOperator-End-->

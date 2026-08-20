@@ -33,5 +33,5 @@ Defines the custom environment PropertyDecorator.
 
 | Type | Description |
 | --- | --- |
-| [PropertyDecorator](../../apis-na/arkts-apis/arkts-na-propertydecorator-t.md) | CustomEnv decorator |
+| [PropertyDecorator](../../apis-default/arkts-apis/arkts-propertydecorator-t.md) | CustomEnv decorator |
 

@@ -21,7 +21,9 @@ import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions }
 backgroundColor?: ResourceColor
 ```
 
-按钮背景色。 默认值：\$r('sys.color.ohos_id_color_foreground_contrary')
+按钮背景色。
+
+默认值：\$r('sys.color.ohos_id_color_foreground_contrary')
 
 **类型：** ResourceColor
 
@@ -41,7 +43,9 @@ backgroundColor?: ResourceColor
 borderColor?: ResourceColor
 ```
 
-按钮描边颜色。 默认值：#330A59F7
+按钮描边颜色。
+
+默认值：#330A59F7
 
 **类型：** ResourceColor
 
@@ -61,7 +65,9 @@ borderColor?: ResourceColor
 progressColor?: ResourceColor
 ```
 
-进度条颜色。 默认值：#330A59F7
+进度条颜色。
+
+默认值：#330A59F7
 
 **类型：** ResourceColor
 
@@ -81,7 +87,9 @@ progressColor?: ResourceColor
 textColor?: ResourceColor
 ```
 
-按钮文本颜色。 默认值：系统默认值（#CE000000）
+按钮文本颜色。
+
+默认值：系统默认值（#CE000000）
 
 **类型：** ResourceColor
 

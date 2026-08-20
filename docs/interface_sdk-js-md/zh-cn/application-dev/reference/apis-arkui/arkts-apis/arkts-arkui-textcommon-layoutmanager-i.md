@@ -1,6 +1,10 @@
 # LayoutManager
 
-布局管理器对象。 &gt; **说明：** &gt; &gt; 文本内容变更后，需等待布局完成才可获取到最新的布局信息。
+布局管理器对象。
+
+> **说明：**
+> 
+> 文本内容变更后，需等待布局完成才可获取到最新的布局信息。
 
 **起始版本：** 23
 
@@ -256,7 +260,9 @@ getLineCount(): int | undefined
 getLineMetrics(lineNumber: int): LineMetrics | undefined
 ```
 
-ArkTS-Sta: getLineMetrics(lineNumber: int): LineMetrics | undefined 获取指定行的行信息、文本样式信息、以及字体属性信息。
+ArkTS-Sta: getLineMetrics(lineNumber: int): LineMetrics | undefined
+
+获取指定行的行信息、文本样式信息、以及字体属性信息。
 
 **起始版本：** 23
 

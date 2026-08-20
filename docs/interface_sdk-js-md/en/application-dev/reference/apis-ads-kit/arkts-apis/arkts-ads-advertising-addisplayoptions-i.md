@@ -23,7 +23,9 @@ import { advertising } from '@kit.AdsKit';
 audioFocusType?: number
 ```
 
-Scenario type for obtaining audio focus during video playback. - 0: Obtain focus during both muted and non-muted video playback. - 1: Do not obtain focus during muted video playback. - 2: Do not obtain focus during either muted or non-muted video playback. - The related features that this API depends on are currently not supported for use, so the default value is temporarily uncertain.
+Scenario type for obtaining audio focus during video playback.
+
+- 0: Obtain focus during both muted and non-muted video playback. - 1: Do not obtain focus during muted video playback. - 2: Do not obtain focus during either muted or non-muted video playback. - The related features that this API depends on are currently not supported for use, so the default value is temporarily uncertain.
 
 **Type:** number
 
@@ -59,7 +61,11 @@ Media custom data. Used for the server to notify the media server that a user sh
 mute?: boolean
 ```
 
-Whether to mute the ad video playback. - true: Mute playback. - false: Non-mute playback. If not set, the business logic prevails.
+Whether to mute the ad video playback.
+
+- true: Mute playback. - false: Non-mute playback.
+
+If not set, the business logic prevails.
 
 **Type:** boolean
 
@@ -77,7 +83,9 @@ Whether to mute the ad video playback. - true: Mute playback. - false: Non-mute 
 useMobileDataReminder?: boolean
 ```
 
-Whether to display a pop-up notification to the user when using mobile data to play videos or download apps. - true: Display pop-up notification. - false: Do not display pop-up notification. - This parameter depends on the traffic pop-up feature, which currently does not support full functionality, so the default value is temporarily uncertain.
+Whether to display a pop-up notification to the user when using mobile data to play videos or download apps.
+
+- true: Display pop-up notification. - false: Do not display pop-up notification. - This parameter depends on the traffic pop-up feature, which currently does not support full functionality, so the default value is temporarily uncertain.
 
 **Type:** boolean
 

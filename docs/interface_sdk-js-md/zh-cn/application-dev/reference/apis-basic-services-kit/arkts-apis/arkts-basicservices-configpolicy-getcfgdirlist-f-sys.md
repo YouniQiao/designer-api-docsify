@@ -26,7 +26,7 @@ function getCfgDirList(callback: AsyncCallback<Array<string>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。当获取配置层级目录列表成功，err为undefined， data为获取到的配置层级目录列表；否则err为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。当获取配置层级目录列表成功，err为undefined， data为获取到的配置层级目录列表；否则err为错误对象。 |
 
 **错误码：**
 

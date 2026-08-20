@@ -27,7 +27,9 @@ import { pluginBundleManager } from '@kit.AbilityKit';
 function getAbilityLabel(bundleName: string, abilityName: string, callback: AsyncCallback<string>): void
 ```
 
-通过Bundle名称和Ability组件名获取应用名称，使用callback异步回调。 获取调用方自己的信息时不需要权限。
+通过Bundle名称和Ability组件名获取应用名称，使用callback异步回调。
+
+获取调用方自己的信息时不需要权限。
 
 **起始版本：** 8
 
@@ -45,7 +47,7 @@ function getAbilityLabel(bundleName: string, abilityName: string, callback: Asyn
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
 | abilityName | string | 是 | Ability名称。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 程序启动作为入参的回调函数，返回应用名称信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 程序启动作为入参的回调函数，返回应用名称信息。 |
 
 **示例**
 
@@ -71,7 +73,9 @@ bundle.getAbilityLabel(bundleName, abilityName, (err, data) => {
 function getAbilityLabel(bundleName: string, abilityName: string): Promise<string>
 ```
 
-通过Bundle名称和ability名称获取应用名称，使用Promise异步回调。 获取调用方自己的信息时不需要权限。
+通过Bundle名称和ability名称获取应用名称，使用Promise异步回调。
+
+获取调用方自己的信息时不需要权限。
 
 **起始版本：** 8
 

@@ -40,10 +40,10 @@ function getPermissionDefSync(permissionName: string): PermissionDef
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700006](../errorcode-bundle.md#17700006-查询的权限不存在) | The specified permission is not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700006](../errorcode-bundle.md#17700006-查询的权限不存在) | The specified permission is not found. |
 
 **示例**
 

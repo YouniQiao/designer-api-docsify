@@ -1,6 +1,10 @@
 # NodeAdapter
 
-NodeAdapter提供FrameNode的数据懒加载能力，通过LazyForEach实现接口功能。适用于长列表等需要按需加载节点数 据的场景，可提升渲染性能并降低内存占用。 &gt; **说明：** &gt; &gt; NodeAdapter各方法中的数值入参（如start、count、from、to）不能为负数，入参为负数时不做处理。
+NodeAdapter提供FrameNode的数据懒加载能力，通过LazyForEach实现接口功能。适用于长列表等需要按需加载节点数 据的场景，可提升渲染性能并降低内存占用。
+
+> **说明：**
+> 
+> NodeAdapter各方法中的数值入参（如start、count、from、to）不能为负数，入参为负数时不做处理。
 
 **起始版本：** 12
 
@@ -14,7 +18,11 @@ NodeAdapter提供FrameNode的数据懒加载能力，通过LazyForEach实现接�
 static attachNodeAdapter(adapter: NodeAdapter, node: FrameNode): boolean
 ```
 
-给FrameNode绑定一个NodeAdapter。一个节点只能绑定一个NodeAdapter。已经绑定NodeAdapter的再次绑定会失败并返回false。 &gt; **说明：** &gt; &gt; 支持绑定的组件：Column、Row、Stack、GridRow、Flex、Swiper、RelativeContainer、List、ListItemGroup、WaterFlow、Grid。
+给FrameNode绑定一个NodeAdapter。一个节点只能绑定一个NodeAdapter。已经绑定NodeAdapter的再次绑定会失败并返回false。
+
+> **说明：**
+> 
+> 支持绑定的组件：Column、Row、Stack、GridRow、Flex、Swiper、RelativeContainer、List、ListItemGroup、WaterFlow、Grid。
 
 **起始版本：** 12
 
@@ -30,8 +38,8 @@ static attachNodeAdapter(adapter: NodeAdapter, node: FrameNode): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| adapter | [NodeAdapter](arkts-arkui-framenode-nodeadapter-c.md) | 是 | 定义懒加载的NodeAdapter类。 |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 绑定的FrameNode节点。 |
+| adapter | [NodeAdapter](../../apis-default/arkts-apis/arkts-framenode-nodeadapter-c.md) | 是 | 定义懒加载的NodeAdapter类。 |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | 是 | 绑定的FrameNode节点。 |
 
 **返回值：**
 
@@ -79,7 +87,7 @@ static detachNodeAdapter(node: FrameNode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 要解除绑定的FrameNode节点。 |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | 是 | 要解除绑定的FrameNode节点。 |
 
 ## dispose
 
@@ -121,7 +129,7 @@ getAllAvailableItems(): Array<FrameNode>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[FrameNode](arkts-arkui-framenode-c.md)&gt; | FrameNode数据节点集合。 |
+| Array&lt;[FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md)&gt; | FrameNode数据节点集合。 |
 
 ## insertItem
 
@@ -207,7 +215,13 @@ moveItem(from: number, to: number): void
 onAttachToNode?(target: FrameNode): void
 ```
 
-FrameNode绑定NodeAdapter时回调。 &gt; **说明：** &gt; &gt; 在API版本26.0.0之前，该回调在宿主节点挂载到主树时触发。如果通过动态赋值方式设置该回调，开发者可以在调用[attachNodeAdapter](#attachnodeadapter)后 &gt; 、宿主节点挂载到主树前完成设置，并在宿主节点挂载到主树时收到该回调。 &gt; &gt; 从API版本26.0.0开始，该回调会在NodeAdapter绑定到宿主节点时立即触发，而不是在宿主节点挂载到主节点树时触发。此时宿主节点可能尚未挂载到主节点树。如果回调逻辑依赖节点已挂载（例如访问布局信息或执行动画），建议在 &gt; 该回调中注册onAppear，并将相关逻辑放入onAppear中执行。如果通过动态赋值方式设置该回调，请在调用 &gt; [attachNodeAdapter](#attachnodeadapter)前完成设置，否则回调可能无法触发。
+FrameNode绑定NodeAdapter时回调。
+
+> **说明：**
+> 
+> 在API版本26.0.0之前，该回调在宿主节点挂载到主树时触发。如果通过动态赋值方式设置该回调，开发者可以在调用[attachNodeAdapter](../../apis-default/arkts-apis/arkts-framenode-nodeadapter-c.md#attachnodeadapter)后 &gt; 、宿主节点挂载到主树前完成设置，并在宿主节点挂载到主树时收到该回调。
+> 
+> 从API版本26.0.0开始，该回调会在NodeAdapter绑定到宿主节点时立即触发，而不是在宿主节点挂载到主节点树时触发。此时宿主节点可能尚未挂载到主节点树。如果回调逻辑依赖节点已挂载（例如访问布局信息或执行动画），建议在 &gt; 该回调中注册onAppear，并将相关逻辑放入onAppear中执行。如果通过动态赋值方式设置该回调，请在调用 &gt; [attachNodeAdapter](../../apis-default/arkts-apis/arkts-framenode-nodeadapter-c.md#attachnodeadapter)前完成设置，否则回调可能无法触发。
 
 **起始版本：** 12
 
@@ -223,7 +237,7 @@ FrameNode绑定NodeAdapter时回调。 &gt; **说明：** &gt; &gt; 在API版本
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 绑定NodeAdapter的FrameNode节点。 |
+| target | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | 是 | 绑定NodeAdapter的FrameNode节点。 |
 
 ## onCreateChild
 
@@ -253,7 +267,7 @@ onCreateChild?(index: number): FrameNode
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) | 返回开发者创建的FrameNode节点。 |
+| [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | 返回开发者创建的FrameNode节点。 |
 
 ## onDetachFromNode
 
@@ -296,7 +310,7 @@ onDisposeChild?(id: number, node: FrameNode): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | number | 是 | 即将销毁的子节点id。 |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 即将销毁的FrameNode节点。 |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | 是 | 即将销毁的FrameNode节点。 |
 
 ## onGetChildId
 
@@ -351,7 +365,7 @@ onUpdateChild?(id: number, node: FrameNode): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | number | 是 | 复用节点的id。 |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 被复用的FrameNode节点。 |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | 是 | 被复用的FrameNode节点。 |
 
 ## reloadAllItems
 

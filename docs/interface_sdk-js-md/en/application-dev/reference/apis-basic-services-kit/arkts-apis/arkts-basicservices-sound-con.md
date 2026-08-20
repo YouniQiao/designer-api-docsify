@@ -6,7 +6,9 @@
 const AFFECTED_MODE_RINGER_STREAMS: string
 ```
 
-Specifies which audio streams are affected by changes on the ringing mode and Do Not Disturb (DND) mode. &lt;p&gt;If you want a specific audio stream to be affected by changes of the ringing mode and DDN mode, set the corresponding bit to {@code 1}.
+Specifies which audio streams are affected by changes on the ringing mode and Do Not Disturb (DND) mode.
+
+&lt;p&gt;If you want a specific audio stream to be affected by changes of the ringing mode and DDN mode, set the corresponding bit to {@code 1}.
 
 **Since:** 23
 
@@ -22,7 +24,9 @@ Specifies which audio streams are affected by changes on the ringing mode and Do
 const AFFECTED_MUTE_STREAMS: string
 ```
 
-Specifies which audio streams are affected by the mute mode. &lt;p&gt;If you want a specific audio stream to remain muted in mute mode, set the corresponding bit to {@code 1}.
+Specifies which audio streams are affected by the mute mode.
+
+&lt;p&gt;If you want a specific audio stream to remain muted in mute mode, set the corresponding bit to {@code 1}.
 
 **Since:** 23
 
@@ -38,7 +42,9 @@ Specifies which audio streams are affected by the mute mode. &lt;p&gt;If you wan
 const DEFAULT_ALARM_ALERT: string
 ```
 
-Indicates the storage area of the system default alarm. &lt;p&gt;You can obtain the URI of the system default alarm.
+Indicates the storage area of the system default alarm.
+
+&lt;p&gt;You can obtain the URI of the system default alarm.
 
 **Since:** 23
 
@@ -54,7 +60,9 @@ Indicates the storage area of the system default alarm. &lt;p&gt;You can obtain 
 const DEFAULT_NOTIFICATION_SOUND: string
 ```
 
-Indicates the storage area of the system default notification tone. &lt;p&gt;You can obtain the URI of the system default notification tone.
+Indicates the storage area of the system default notification tone.
+
+&lt;p&gt;You can obtain the URI of the system default notification tone.
 
 **Since:** 23
 
@@ -70,7 +78,9 @@ Indicates the storage area of the system default notification tone. &lt;p&gt;You
 const DEFAULT_RINGTONE: string
 ```
 
-Indicates the storage area of the system default ringtone. &lt;p&gt;You can obtain the URI of the system default ringtone.
+Indicates the storage area of the system default ringtone.
+
+&lt;p&gt;You can obtain the URI of the system default ringtone.
 
 **Since:** 23
 
@@ -86,7 +96,9 @@ Indicates the storage area of the system default ringtone. &lt;p&gt;You can obta
 const DTMF_TONE_TYPE_WHILE_DIALING: string
 ```
 
-Indicates the type of the dual-tone multifrequency (DTMF) tone played when dialing. &lt;p&gt;The value {@code 0} indicates the normal short sound effect, and {@code 1} indicates the long sound effect.
+Indicates the type of the dual-tone multifrequency (DTMF) tone played when dialing.
+
+&lt;p&gt;The value {@code 0} indicates the normal short sound effect, and {@code 1} indicates the long sound effect.
 
 **Since:** 23
 
@@ -102,7 +114,9 @@ Indicates the type of the dual-tone multifrequency (DTMF) tone played when diali
 const DTMF_TONE_WHILE_DIALING: string
 ```
 
-Specifies whether the DTMF tone is played when dialing. &lt;p&gt;If the value is {@code 1}, the DTMF tone is played. If the value is {@code 0}, the DTMF tone is not played.
+Specifies whether the DTMF tone is played when dialing.
+
+&lt;p&gt;If the value is {@code 1}, the DTMF tone is played. If the value is {@code 0}, the DTMF tone is not played.
 
 **Since:** 23
 
@@ -118,7 +132,9 @@ Specifies whether the DTMF tone is played when dialing. &lt;p&gt;If the value is
 const HAPTIC_FEEDBACK_STATUS: string
 ```
 
-Indicates whether the device enables haptic feedback. &lt;p&gt;The value is of the boolean type.
+Indicates whether the device enables haptic feedback.
+
+&lt;p&gt;The value is of the boolean type.
 
 **Since:** 23
 
@@ -134,7 +150,9 @@ Indicates whether the device enables haptic feedback. &lt;p&gt;The value is of t
 const SOUND_EFFECTS_STATUS: string
 ```
 
-Specifies whether the sound effects are enabled. &lt;p&gt;If the value is {@code 0}, the sound effects are disabled. If the value is {@code 1}, the sound effects are enabled.
+Specifies whether the sound effects are enabled.
+
+&lt;p&gt;If the value is {@code 0}, the sound effects are disabled. If the value is {@code 1}, the sound effects are enabled.
 
 **Since:** 23
 
@@ -150,7 +168,9 @@ Specifies whether the sound effects are enabled. &lt;p&gt;If the value is {@code
 const VIBRATE_STATUS: string
 ```
 
-Specifies whether the device vibrates for an event. This parameter is used inside the system. &lt;p&gt;If the value is {@code 1}, the device vibrates for an event. If the value is {@code 0}, the device does not vibrate for an event.
+Specifies whether the device vibrates for an event. This parameter is used inside the system.
+
+&lt;p&gt;If the value is {@code 1}, the device vibrates for an event. If the value is {@code 0}, the device does not vibrate for an event.
 
 **Since:** 23
 
@@ -166,7 +186,9 @@ Specifies whether the device vibrates for an event. This parameter is used insid
 const VIBRATE_WHILE_RINGING: string
 ```
 
-Indicates whether the device vibrates when it is ringing for an incoming call. &lt;p&gt;This constant will be used by Phone and Settings applications. The value is of the boolean type. This constant affects only the scenario where the device rings for an incoming call. It does not affect any other application or scenario.
+Indicates whether the device vibrates when it is ringing for an incoming call.
+
+&lt;p&gt;This constant will be used by Phone and Settings applications. The value is of the boolean type. This constant affects only the scenario where the device rings for an incoming call. It does not affect any other application or scenario.
 
 **Since:** 23
 

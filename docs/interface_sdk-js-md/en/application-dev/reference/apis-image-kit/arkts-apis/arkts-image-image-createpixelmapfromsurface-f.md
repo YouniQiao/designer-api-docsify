@@ -38,8 +38,8 @@ Creates a PixelMap object from surface id.
 | Error Code ID | Error Message |
 | --- | --- |
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | If the image parameter invalid. |
-| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the PixelMap. |
 | [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) | Failed to get the data. |
+| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the PixelMap. |
 
 **Examples**
 
@@ -88,8 +88,8 @@ Creates a PixelMap object from surface id.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the PixelMap. |
 | [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) | Failed to get the data. |
+| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the PixelMap. |
 
 **Examples**
 

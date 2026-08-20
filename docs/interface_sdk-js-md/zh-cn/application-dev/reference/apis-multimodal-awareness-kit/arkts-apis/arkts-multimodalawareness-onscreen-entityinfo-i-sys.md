@@ -24,7 +24,7 @@ entityInfo: Record<string, Object>
 
 感知结果实体信息，包括内容、链接、图像和其它实体。
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;
 
 **起始版本：** 23
 

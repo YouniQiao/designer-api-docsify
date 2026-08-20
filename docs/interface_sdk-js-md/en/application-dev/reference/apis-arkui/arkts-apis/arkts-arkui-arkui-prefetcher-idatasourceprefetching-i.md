@@ -1,4 +1,4 @@
-# IDataSourcePrefetching(Prefetching)
+# IDataSourcePrefetching
 
 Extends the IDataSource API to provide a data source that can be prefetched.
 

@@ -1,4 +1,4 @@
-# WithEnvInterface(Define the WithEnv component that allows setting environment properties for child components.)
+# WithEnvInterface
 
 ```TypeScript
 export declare type WithEnvInterface = () => WithEnvAttribute

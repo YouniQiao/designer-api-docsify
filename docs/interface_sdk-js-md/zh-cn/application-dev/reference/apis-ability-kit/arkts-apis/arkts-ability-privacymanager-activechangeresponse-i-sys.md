@@ -40,7 +40,9 @@ activeStatus: PermissionActiveStatus
 callingTokenId?: int
 ```
 
-接口调用方的应用身份标识，当activeStatus为INACTIVE时该值无效。 默认值：0。
+接口调用方的应用身份标识，当activeStatus为INACTIVE时该值无效。
+
+默认值：0。
 
 **类型：** int
 
@@ -132,7 +134,9 @@ tokenId: int
 usedType?: PermissionUsedType
 ```
 
-敏感权限使用类型，当activeStatus为INACTIVE时该值无效。 默认值：NORMAL_TYPE。
+敏感权限使用类型，当activeStatus为INACTIVE时该值无效。
+
+默认值：NORMAL_TYPE。
 
 **类型：** [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md)
 

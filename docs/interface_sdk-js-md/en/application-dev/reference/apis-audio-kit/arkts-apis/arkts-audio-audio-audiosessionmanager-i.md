@@ -1,6 +1,12 @@
 # AudioSessionManager
 
-This interface implements audio session management. Before calling any API in AudioSessionManager, you must use [getSessionManager](arkts-audio-audio-audiomanager-i.md#getsessionmanager) to obtain an AudioSessionManager instance. &gt; **NOTE：**&gt; &gt; - The initial APIs of this interface are supported since API version 12.
+This interface implements audio session management.
+
+Before calling any API in AudioSessionManager, you must use [getSessionManager](arkts-audio-audio-audiomanager-i.md#getsessionmanager) to obtain an AudioSessionManager instance.
+
+> **NOTE：**
+> 
+> - The initial APIs of this interface are supported since API version 12.
 
 **Since:** 23
 
@@ -111,7 +117,15 @@ Deactivates this audio session. This API uses a promise to return the result.
 enableMuteSuggestionWhenMixWithOthers(enable: boolean): void
 ```
 
-Enables mute suggestion notifications for mixed playback. Typically, when the audio mixing mode is used, if two applications plays audio at the same time, their audio streams are mixed. In certain scenarios (such as games or broadcasts), applications can mute their own audio to provide a better user experience. If this feature is enabled, mute and unmute suggestions will be sent through the [AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md) callback after the audio session state change event is subscribed to. Receiving the muted suggestion indicates that another application starts to play audio, and the played audio and the audio of this application cannot be mixed. This feature can be used only by audio sessions for which [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md) has been set and the **CONCURRENCY_MIX_WITH_OTHERS** mode has been activated. This feature takes effect only once when the audio session is activated. You need to enable it again before each activation of the audio session. For details, see [Enabling Mute Suggestion Notifications for Mixed Playback](../../../media/audio/audio-session-management.md#enabling-mute-suggestion-notifications-for-mixed-playback) .
+Enables mute suggestion notifications for mixed playback.
+
+Typically, when the audio mixing mode is used, if two applications plays audio at the same time, their audio streams are mixed. In certain scenarios (such as games or broadcasts), applications can mute their own audio to provide a better user experience.
+
+If this feature is enabled, mute and unmute suggestions will be sent through the [AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md) callback after the audio session state change event is subscribed to. Receiving the muted suggestion indicates that another application starts to play audio, and the played audio and the audio of this application cannot be mixed.
+
+This feature can be used only by audio sessions for which [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md) has been set and the **CONCURRENCY_MIX_WITH_OTHERS** mode has been activated. This feature takes effect only once when the audio session is activated. You need to enable it again before each activation of the audio session.
+
+For details, see [Enabling Mute Suggestion Notifications for Mixed Playback](../../../media/audio/audio-session-management.md#enabling-mute-suggestion-notifications-for-mixed-playback) .
 
 **Since:** 23
 
@@ -217,8 +231,8 @@ Obtains the default audio output device set by calling [setDefaultOutputDevice](
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. Return by promise. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. Return by promise. |
 
 ## getSelectedMediaInputDevice
 
@@ -618,8 +632,8 @@ Listens for audio session state change event. When the audio session state chang
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## onAvailableDeviceChange
@@ -701,8 +715,8 @@ Subscribes output device change event callback. The event is triggered when devi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## on('audioSessionDeactivated')
@@ -760,8 +774,8 @@ Subscribes to the audio session state change event, which is triggered when the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## on('availableDeviceChange')
@@ -846,8 +860,8 @@ Subscribes to the current output device change event, which is triggered when th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## selectMediaInputDevice
@@ -856,7 +870,17 @@ Subscribes to the current output device change event, which is triggered when th
 selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>
 ```
 
-Selects a media input device. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - This API is not suitable for VoIP call recording; that is, it does not apply to scenarios where &gt; [SourceType](arkts-audio-audio-sourcetype-e.md) is **SOURCE_TYPE_VOICE_COMMUNICATION**. &gt; &gt; - Before calling this API, call [getAvailableDevices](#getavailabledevices) to &gt; query the list of available input devices and select an input device from the list. &gt; &gt; - If there are recording streams of other applications with higher priorities in the system, the actual input &gt; device used will follow the input device selected by these applications. &gt; &gt; - Applications can listen for the &gt; [currentInputDeviceChanged](#onaudiosessiondeactivated) &gt; event to find out the actual input device being used.
+Selects a media input device. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - This API is not suitable for VoIP call recording; that is, it does not apply to scenarios where &gt; [SourceType](arkts-audio-audio-sourcetype-e.md) is **SOURCE_TYPE_VOICE_COMMUNICATION**.
+> 
+> - Before calling this API, call [getAvailableDevices](#getavailabledevices) to &gt; query the list of available input devices and select an input device from the list.
+> 
+> - If there are recording streams of other applications with higher priorities in the system, the actual input &gt; device used will follow the input device selected by these applications.
+> 
+> - Applications can listen for the &gt; [currentInputDeviceChanged](#onaudiosessiondeactivated) &gt; event to find out the actual input device being used.
 
 **Since:** 24
 
@@ -889,7 +913,11 @@ Selects a media input device. This API uses a promise to return the result. &gt;
 setAudioSessionBehavior(behavior: int): void
 ```
 
-Sets audio session behavior parameters. (Multiple flags can be combined.) &gt; **NOTE：**&gt; &gt; If this API is called while an audio session is active, you must call the &gt; [activateAudioSession](#activateaudiosession) API again &gt; for the settings to take effect.
+Sets audio session behavior parameters. (Multiple flags can be combined.)
+
+> **NOTE：**
+> 
+> If this API is called while an audio session is active, you must call the &gt; [activateAudioSession](#activateaudiosession) API again &gt; for the settings to take effect.
 
 **Since:** 24
 
@@ -909,8 +937,8 @@ Sets audio session behavior parameters. (Multiple flags can be combined.) &gt; *
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permitted in the current state. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permitted in the current state. |
 
 ## setAudioSessionScene
 
@@ -936,8 +964,8 @@ Sets an audio session scene.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## setBluetoothAndNearlinkPreferredRecordCategory
@@ -946,7 +974,15 @@ Sets an audio session scene.
 setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPreferredRecordCategory): Promise<void>
 ```
 
-Sets the preferred device category for recording with Bluetooth or NearLink. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - Applications can set this category before connecting to Bluetooth or NearLink devices, and the system &gt; prioritizes using the device for recording when the device is connected. &gt; &gt; - If there are recording streams of other applications with higher priorities in the system, the actual input &gt; device used will follow the input device selected by these applications. &gt; &gt; - Applications can listen for the &gt; [currentInputDeviceChanged](#onaudiosessiondeactivated) &gt; event to find out the actual input device being used.
+Sets the preferred device category for recording with Bluetooth or NearLink. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - Applications can set this category before connecting to Bluetooth or NearLink devices, and the system &gt; prioritizes using the device for recording when the device is connected.
+> 
+> - If there are recording streams of other applications with higher priorities in the system, the actual input &gt; device used will follow the input device selected by these applications.
+> 
+> - Applications can listen for the &gt; [currentInputDeviceChanged](#onaudiosessiondeactivated) &gt; event to find out the actual input device being used.
 
 **Since:** 24
 
@@ -1013,7 +1049,13 @@ Set mute hint for all capturer streams in the current audio session. It dose not
 setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 ```
 
-Sets the default audio output device. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - This API applies to the following scenario: When &gt; [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md) is set to **VoIP**, the setting takes &gt; effect immediately after the AudioSession is activated. For non-VoIP scenarios, the setting does not take &gt; effect upon AudioSession activation. Instead, the setting applies when &gt; [StreamUsage](arkts-audio-audio-streamusage-e.md) for playback is voice message, VoIP voice call, &gt; or VoIP video call. Supported devices include the earpiece, speaker, and system default device. &gt; &gt; - This API can be called at any time after an AudioSessionManager instance is created. The system records the &gt; device set by the application. However, the setting takes effect only after the AudioSession is activated. When &gt; the application starts playing, if an external device like Bluetooth headsets or wired headsets is connected, &gt; the system prioritizes audio output through the external device. Otherwise, the system uses the device set by &gt; the application.
+Sets the default audio output device. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - This API applies to the following scenario: When &gt; [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md) is set to **VoIP**, the setting takes &gt; effect immediately after the AudioSession is activated. For non-VoIP scenarios, the setting does not take &gt; effect upon AudioSession activation. Instead, the setting applies when &gt; [StreamUsage](arkts-audio-audio-streamusage-e.md) for playback is voice message, VoIP voice call, &gt; or VoIP video call. Supported devices include the earpiece, speaker, and system default device.
+> 
+> - This API can be called at any time after an AudioSessionManager instance is created. The system records the &gt; device set by the application. However, the setting takes effect only after the AudioSession is activated. When &gt; the application starts playing, if an external device like Bluetooth headsets or wired headsets is connected, &gt; the system prioritizes audio output through the external device. Otherwise, the system uses the device set by &gt; the application.
 
 **Since:** 23
 
@@ -1037,8 +1079,8 @@ Sets the default audio output device. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. Return by promise. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
+| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. Return by promise. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## setMediaOutputDevice

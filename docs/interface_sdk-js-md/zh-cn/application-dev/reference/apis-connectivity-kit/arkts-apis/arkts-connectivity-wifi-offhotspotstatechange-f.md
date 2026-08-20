@@ -15,7 +15,9 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function off(type: 'hotspotStateChange', callback?: Callback<number>): void
 ```
 
-取消订阅WLAN热点状态改变事件。 &lt;p&gt;如果没有指定callback参数，将取消注册该事件关联的所有回调函数。&lt;/p&gt;
+取消订阅WLAN热点状态改变事件。
+
+&lt;p&gt;如果没有指定callback参数，将取消注册该事件关联的所有回调函数。&lt;/p&gt;
 
 **起始版本：** 7
 
@@ -34,5 +36,5 @@ function off(type: 'hotspotStateChange', callback?: Callback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hotspotStateChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 状态改变回调函数。0:未激活，1:已激活，2:激活中，3:去激活中 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | 否 | 状态改变回调函数。0:未激活，1:已激活，2:激活中，3:去激活中 |
 

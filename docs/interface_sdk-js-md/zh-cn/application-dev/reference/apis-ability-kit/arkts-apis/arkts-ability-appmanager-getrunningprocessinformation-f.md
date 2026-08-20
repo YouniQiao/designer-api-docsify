@@ -12,7 +12,13 @@ import { appManager } from '@kit.AbilityKit';
 function getRunningProcessInformation(): Promise<Array<ProcessInformation>>
 ```
 
-获取当前应用运行进程的相关信息。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 对于API version 11之前的版本，该接口需要申请权限ohos.permission.GET_RUNNING_INFO（该权限仅系统应用可申请）。 &gt; &gt; - 从API version 11开始，该接口仅用于获取调用方自身的进程信息，不再需要申请权限。
+获取当前应用运行进程的相关信息。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 对于API version 11之前的版本，该接口需要申请权限ohos.permission.GET_RUNNING_INFO（该权限仅系统应用可申请）。
+> 
+> - 从API version 11开始，该接口仅用于获取调用方自身的进程信息，不再需要申请权限。
 
 **起始版本：** 23
 
@@ -57,7 +63,13 @@ appManager.getRunningProcessInformation().then((data) => {
 function getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInformation>>): void
 ```
 
-获取当前应用运行进程的相关信息。使用callback异步回调。 &gt; **说明：** &gt; &gt; - 对于API version 11之前的版本，该接口需要申请权限ohos.permission.GET_RUNNING_INFO（该权限仅系统应用可申请）。 &gt; &gt; - 从API version 11开始，该接口仅用于获取调用方自身的进程信息，不再需要申请权限。
+获取当前应用运行进程的相关信息。使用callback异步回调。
+
+> **说明：**
+> 
+> - 对于API version 11之前的版本，该接口需要申请权限ohos.permission.GET_RUNNING_INFO（该权限仅系统应用可申请）。
+> 
+> - 从API version 11开始，该接口仅用于获取调用方自身的进程信息，不再需要申请权限。
 
 **起始版本：** 23
 
@@ -74,7 +86,7 @@ function getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInfor
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ProcessInformation&gt;&gt; | 是 | 回调函数。当接口调用成功，err为undefined，data为当前应用运行进程的信息；否则为错误对象。可进行错误 处理或其他自定义处理。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;ProcessInformation&gt;&gt; | 是 | 回调函数。当接口调用成功，err为undefined，data为当前应用运行进程的信息；否则为错误对象。可进行错误 处理或其他自定义处理。 |
 
 **错误码：**
 

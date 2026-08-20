@@ -43,11 +43,11 @@ Updates the service scope supported by the specified companion device template. 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
-| [32600003](../errorcode-useriam.md#32600003-invalid-service-id) | The business ID is invalid. |
-| [32600002](../errorcode-useriam.md#32600002-template-not-found) | The template is not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
+| [32600002](../errorcode-useriam.md#32600002-template-not-found) | The template is not found. |
+| [32600003](../errorcode-useriam.md#32600003-invalid-service-id) | The business ID is invalid. |
 
 **Examples**
 

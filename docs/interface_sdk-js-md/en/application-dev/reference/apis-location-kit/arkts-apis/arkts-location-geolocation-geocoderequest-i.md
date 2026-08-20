@@ -2,6 +2,8 @@
 
 Configuring parameters in geocode requests
 
+@interface GeoCodeRequest
+
 **Since:** 7
 
 **Deprecated since:** 9

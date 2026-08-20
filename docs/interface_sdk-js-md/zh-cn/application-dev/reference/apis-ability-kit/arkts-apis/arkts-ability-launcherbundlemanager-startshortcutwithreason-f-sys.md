@@ -12,7 +12,9 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 function startShortcutWithReason(shortcutInfo: ShortcutInfo, startReason: string, options?: StartOptions): Promise<void>
 ```
 
-根据指定的快捷方式信息，拉起对应的Ability，并携带快捷方式的启动原因。使用Promise异步回调。 被拉起方可以通过[LaunchParam](arkts-ability-abilityconstant-launchparam-i.md)的launchReasonMessage字段获取到 启动原因，并根据启动原因进行业务逻辑处理。
+根据指定的快捷方式信息，拉起对应的Ability，并携带快捷方式的启动原因。使用Promise异步回调。
+
+被拉起方可以通过[LaunchParam](arkts-ability-abilityconstant-launchparam-i.md)的launchReasonMessage字段获取到 启动原因，并根据启动原因进行业务逻辑处理。
 
 **起始版本：** 23
 
@@ -42,9 +44,9 @@ function startShortcutWithReason(shortcutInfo: ShortcutInfo, startReason: string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not support. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Verify permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not support. |
 | [17700065](../errorcode-bundle.md#17700065-shortcutinfo结构体中指定的want不支持被拉起) | The specified shortcut want in shortcut info is not supported to be started. |
 
 **示例**

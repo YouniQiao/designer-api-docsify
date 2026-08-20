@@ -33,7 +33,7 @@ BottomTabBarStyle的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| icon | ResourceStr \| TabBarSymbol | 是 | 页签内的图片内容。当图标资源加载失败或不存在时，显示灰色图块。如果icon采用svg格式图源，需删除其内置的宽高属性。 否则，icon大小将使用svg图源内置的宽高属性值。<br>**起始版本：** 9 - 11 |
+| icon | ResourceStr \| [TabBarSymbol](arkts-arkui-tabbarsymbol-c.md) | 是 | 页签内的图片内容。当图标资源加载失败或不存在时，显示灰色图块。如果icon采用svg格式图源，需删除其内置的宽高属性。 否则，icon大小将使用svg图源内置的宽高属性值。<br>**起始版本：** 9 - 11 |
 | text | ResourceStr | 是 | 页签内的文字内容。 |
 
 ## iconStyle
@@ -178,7 +178,7 @@ BottomTabBarStyle的静态构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| icon | ResourceStr \| TabBarSymbol | 是 | 页签内的图片内容。当图标资源加载失败或不存在时，显示灰色图块。如果icon采用svg格式图源，需删除其内置的宽高属性。 否则，icon大小将使用svg图源内置的宽高属性值。<br>**起始版本：** 10 - 11 |
+| icon | ResourceStr \| [TabBarSymbol](arkts-arkui-tabbarsymbol-c.md) | 是 | 页签内的图片内容。当图标资源加载失败或不存在时，显示灰色图块。如果icon采用svg格式图源，需删除其内置的宽高属性。 否则，icon大小将使用svg图源内置的宽高属性值。<br>**起始版本：** 10 - 11 |
 | text | ResourceStr | 是 | 页签内的文字内容。 |
 
 **返回值：**

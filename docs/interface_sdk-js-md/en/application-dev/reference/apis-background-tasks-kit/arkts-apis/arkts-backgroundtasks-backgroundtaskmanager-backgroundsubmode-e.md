@@ -14,7 +14,11 @@ Defines the subtype of a continuous task.
 CAR_KEY = 1
 ```
 
-Car key. **NOTE：**1. The car key subtype takes effect only when a continuous task of the BLUETOOTH_INTERACTION type is requested. 2. Continuous tasks of this type cannot be updated through the [updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md) API.
+Car key.
+
+**NOTE：**
+
+1. The car key subtype takes effect only when a continuous task of the BLUETOOTH_INTERACTION type is requested. 2. Continuous tasks of this type cannot be updated through the [updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md) API.
 
 **Since:** 23
 

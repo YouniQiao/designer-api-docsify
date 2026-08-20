@@ -12,7 +12,7 @@ import { uiObserver } from '@kit.ArkUI';
 export function on(type: 'navDestinationUpdate', options: { navigationId: ResourceStr }, callback: Callback<NavDestinationInfo>): void
 ```
 
-监听NavDestination组件的状态变化。与 * [uiObserver.on](#onnavdestinationupdate)相比，新增了options参数，即支持指定监听的Navigation的id。
+监听NavDestination组件的状态变化。与 [uiObserver.on](#onnavdestinationupdate)相比，新增了options参数，即支持指定监听的Navigation的id。
 
 **起始版本：** 11
 
@@ -30,7 +30,7 @@ export function on(type: 'navDestinationUpdate', options: { navigationId: Resour
 | --- | --- | --- | --- |
 | type | 'navDestinationUpdate' | 是 | 监听事件，固定为'navDestinationUpdate'，即NavDestination组件的状态变化。 |
 | options | { navigationId: ResourceStr } | 是 | 指定监听的Navigation的id。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationInfo&gt; | 是 | 回调函数。返回当前的NavDestination组件状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NavDestinationInfo&gt; | 是 | 回调函数。返回当前的NavDestination组件状态。 |
 
 **示例**
 
@@ -112,5 +112,5 @@ export function on(type: 'navDestinationUpdate', callback: Callback<NavDestinati
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'navDestinationUpdate' | 是 | 监听事件，固定为'navDestinationUpdate'，即NavDestination组件的状态变化。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationInfo&gt; | 是 | 回调函数。返回当前的NavDestination组件状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NavDestinationInfo&gt; | 是 | 回调函数。返回当前的NavDestination组件状态。 |
 

@@ -14,9 +14,15 @@
 columnsGap?: LengthMetrics
 ```
 
-列与列之间的间距。 默认值：LengthMetrics.vp(0) 非法值：按默认值处理。 装饰器类型：@Trace
+列与列之间的间距。
 
-**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+默认值：LengthMetrics.vp(0)
+
+非法值：按默认值处理。
+
+装饰器类型：@Trace
+
+**类型：** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
 
 **默认值：** LengthMetrics.vp(0)
 
@@ -36,9 +42,15 @@ columnsGap?: LengthMetrics
 columnsTemplate?: string | ItemFillPolicy
 ```
 
-设置当前网格布局的列数。 默认值：'1fr' 非法值：按默认值处理。 装饰器类型：@Trace
+设置当前网格布局的列数。
 
-**类型：** string \| [ItemFillPolicy](../../apis-na/arkts-apis/arkts-na-units-itemfillpolicy-i.md)
+默认值：'1fr'
+
+非法值：按默认值处理。
+
+装饰器类型：@Trace
+
+**类型：** string \| [ItemFillPolicy](../../apis-default/arkts-apis/arkts-units-itemfillpolicy-i.md)
 
 **默认值：** '1fr'
 
@@ -58,9 +70,15 @@ columnsTemplate?: string | ItemFillPolicy
 rowsGap?: LengthMetrics
 ```
 
-行与行之间的间距。 默认值：LengthMetrics.vp(0) 非法值：按默认值处理。 装饰器类型：@Trace
+行与行之间的间距。
 
-**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+默认值：LengthMetrics.vp(0)
+
+非法值：按默认值处理。
+
+装饰器类型：@Trace
+
+**类型：** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
 
 **默认值：** LengthMetrics.vp(0)
 

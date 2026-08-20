@@ -56,7 +56,9 @@ SOURCE_TYPE_VOICE_RECOGNITION = 1
 SOURCE_TYPE_PLAYBACK_CAPTURE = 2
 ```
 
-播放音频流（内录）录制音频源。 &lt;br/
+播放音频流（内录）录制音频源。
+
+&lt;br/
 
 **起始版本：** 10
 

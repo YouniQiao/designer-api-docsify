@@ -36,8 +36,8 @@ Cancels the notification card displayed in the notification center with the agen
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-nonexistent-reminder) | The reminder does not exist. |
-| [1700007](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-invalid-parameter) | If the input parameter is not valid parameter. |
+| [1700003](../errorcode-reminderAgentManager.md#1700003-nonexistent-reminder) | The reminder does not exist. |
+| [1700007](../errorcode-reminderAgentManager.md#1700007-invalid-parameter) | If the input parameter is not valid parameter. |
 
 **Examples**
 

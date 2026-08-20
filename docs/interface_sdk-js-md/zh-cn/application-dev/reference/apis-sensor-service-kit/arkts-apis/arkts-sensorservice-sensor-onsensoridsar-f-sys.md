@@ -27,7 +27,7 @@ function on(type: SensorId.SAR, callback: Callback<SarResponse>, options?: Optio
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | SensorId.SAR | 是 | 传感器类型，该值固定为SensorId.SAR。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SarResponse](arkts-sensorservice-sensor-sarresponse-i-sys.md)&gt; | 是 | 回调函数，异步上报的传感器数据固定为SarResponse。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SarResponse](arkts-sensorservice-sensor-sarresponse-i-sys.md)&gt; | 是 | 回调函数，异步上报的传感器数据固定为SarResponse。 |
 | options | Options | 否 | 可选参数列表，用于设置传感器上报频率。默认值：200000000ns。不传入时使用默认频率。 |
 
 **错误码：**

@@ -36,7 +36,7 @@ Enables refueling awareness and subscribes to refueling awareness results. If th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [34000002](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000002-unsupported-application-or-page) | Specific capability not supported. |
-| [34000001](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000001-service-exception) | Service exception. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [34000001](../errorcode-onScreen.md#34000001-service-exception) | Service exception. |
+| [34000002](../errorcode-onScreen.md#34000002-unsupported-application-or-page) | Specific capability not supported. |
 

@@ -45,7 +45,15 @@ A constructor used to create a **SubHeaderV2SelectOptions** object.
   defaultFocus?: boolean
 ```
 
-Whether the drop-down button is the default focus. **true**: The drop-down button is the default focus. **false**: The drop-down button is not the default focus. Default value: **false** Decorator: @Trace
+Whether the drop-down button is the default focus.
+
+**true**: The drop-down button is the default focus.
+
+**false**: The drop-down button is not the default focus.
+
+Default value: **false**
+
+Decorator: @Trace
 
 **Type:** boolean
 

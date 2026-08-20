@@ -1,6 +1,6 @@
 # DoorPositionResponse (System API)
 
-Interface for indoor or outdoor identify result
+Interface for indoor or outdoor identify result @interface DoorPositionResponse
 
 **Since:** 23
 

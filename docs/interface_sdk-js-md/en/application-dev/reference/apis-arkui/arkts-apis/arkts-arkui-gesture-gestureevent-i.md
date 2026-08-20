@@ -2,6 +2,8 @@
 
 Defines event info for gesture.
 
+@extends BaseEvent @interface GestureEvent
+
 **Inheritance/Implementation:** GestureEvent extends BaseEvent
 
 **Since:** 23

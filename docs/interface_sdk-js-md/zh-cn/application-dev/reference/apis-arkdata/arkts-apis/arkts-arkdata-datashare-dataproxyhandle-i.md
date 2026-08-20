@@ -48,8 +48,8 @@ delete(uris: string[], config: DataProxyConfig): Promise<DataProxyResult[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
 | [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
 
 **示例**
 
@@ -100,8 +100,8 @@ deleteMyPublishedData(config: DataProxyConfig): Promise<DataProxyResult[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
 | [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
 
 **示例**
 
@@ -151,8 +151,8 @@ get(uris: string[], config: DataProxyConfig): Promise<DataProxyGetResult[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
 | [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
 
 **示例**
 
@@ -204,10 +204,10 @@ getValues(uri: string, config: DataProxyConfig): Promise<ValueType[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) | No permission to access the data specified by the URI. |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
-| [15700011](../errorcode-datashare.md#15700011-uri不存在) | The URI does not exist. |
 | [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700011](../errorcode-datashare.md#15700011-uri不存在) | The URI does not exist. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) | No permission to access the data specified by the URI. |
 
 ## offDataChange
 
@@ -235,7 +235,7 @@ Deregisters observers to observe proxy data change specified by the given URIs.
 | --- | --- | --- | --- |
 | uris | string[] | 是 | Indicates the uris of the data to operate. |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | Indicates the configuration of the data proxy operation. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 否 | The callback function when data changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 否 | The callback function when data changes. |
 
 **返回值：**
 
@@ -247,8 +247,8 @@ Deregisters observers to observe proxy data change specified by the given URIs.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
 | [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
 
 **示例**
 
@@ -301,7 +301,7 @@ off(
 | event | 'dataChange' | 是 | 订阅的事件/回调类型，支持的事件为'dataChange'。 |
 | uris | string[] | 是 | 表示要取消订阅的共享配置对应的URI数组。**说明：** 1. API版本26.0.0之前，数组最大长度为32；从API版本26.0.0开始，数组最大长 度为64。2. URI固定格式为`"datashareproxy://{bundleName}/{path}"`，其中bundleName为配置发布方应用的bundleName，path可随意填写，但同一应用 内不允许重复，字符串长度不超过256个字节。 |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | 表示数据代理操作的配置。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 否 | 回调函数。表示指定取消订阅的callback通知，如果为空、undefined或null，则取消订阅这些 URI下所有的通知事件。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 否 | 回调函数。表示指定取消订阅的callback通知，如果为空、undefined或null，则取消订阅这些 URI下所有的通知事件。 |
 
 **返回值：**
 
@@ -313,8 +313,8 @@ off(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
 | [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
 
 **示例**
 
@@ -365,7 +365,7 @@ Registers observers to observe proxy data change specified by the given URIs.
 | --- | --- | --- | --- |
 | uris | string[] | 是 | Indicates the uris of the data to operate. |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | Indicates the configuration of the data proxy operation. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 是 | The callback function when data changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 是 | The callback function when data changes. |
 
 **返回值：**
 
@@ -377,8 +377,8 @@ Registers observers to observe proxy data change specified by the given URIs.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
 | [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
 
 **示例**
 
@@ -414,7 +414,9 @@ on(
     ): DataProxyResult[]
 ```
 
-订阅指定URI对应共享配置变更事件。若订阅者已注册变更通知，当配置发布方修改配置时，订阅者将会接收到callback通知，通知携带数据变更类型、变化的URI、变更的共享配置内容。使用callback异步回调。该功能不允许跨用户 订阅通知，不允许订阅未发布的配置。订阅成功后若权限被收回，则后续不再通知订阅者。 触发通知：配置发布方调用[publish](#publish)、 [delete](#delete)、 [delete](#delete)接口发布、删除指定配置或者删除所有配置时会自动触 发通知。
+订阅指定URI对应共享配置变更事件。若订阅者已注册变更通知，当配置发布方修改配置时，订阅者将会接收到callback通知，通知携带数据变更类型、变化的URI、变更的共享配置内容。使用callback异步回调。该功能不允许跨用户 订阅通知，不允许订阅未发布的配置。订阅成功后若权限被收回，则后续不再通知订阅者。
+
+触发通知：配置发布方调用[publish](#publish)、 [delete](#delete)、 [delete](#delete)接口发布、删除指定配置或者删除所有配置时会自动触 发通知。
 
 **起始版本：** 20
 
@@ -431,7 +433,7 @@ on(
 | event | 'dataChange' | 是 | 订阅的事件/回调类型，支持的事件为'dataChange'，当配置发布方修改配置时，触发该事件。 |
 | uris | string[] | 是 | 表示要订阅的共享配置对应的URI数组。**说明：** 1. API版本26.0.0之前，数组最大长度为32；从API版本26.0.0开始，数组最大长度为 64。2. URI固定格式为`"datashareproxy://{bundleName}/{path}"`，其中bundleName为配置发布方应用的bundleName，path可随意填写，但同一应用内不 允许重复，字符串长度不超过256个字节。 |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | 表示数据代理操作的配置。从API版本26.0.0开始，当变更的共享配置内容长度超过 [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md)中maxValueLength字段配置的最大长度限制时，该共享配置内容会被截断。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 是 | 回调函数。当配置发布方修改配置时会回调该函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 是 | 回调函数。当配置发布方修改配置时会回调该函数。 |
 
 **返回值：**
 
@@ -443,8 +445,8 @@ on(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
 | [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
 
 **示例**
 
@@ -502,8 +504,8 @@ publish(data: ProxyData[], config: DataProxyConfig): Promise<DataProxyResult[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
 | [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
 
 **示例**
 
@@ -564,10 +566,10 @@ putValue(uri: string, key: int, value: ValueType, config: DataProxyConfig): Prom
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) | No permission to access the data specified by the URI. |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
-| [15700011](../errorcode-datashare.md#15700011-uri不存在) | The URI does not exist. |
 | [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700011](../errorcode-datashare.md#15700011-uri不存在) | The URI does not exist. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) | No permission to access the data specified by the URI. |
 
 ## removeValue
 
@@ -603,8 +605,8 @@ removeValue(uri: string, key: int, config: DataProxyConfig): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) | No permission to access the data specified by the URI. |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
-| [15700011](../errorcode-datashare.md#15700011-uri不存在) | The URI does not exist. |
 | [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700011](../errorcode-datashare.md#15700011-uri不存在) | The URI does not exist. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) | No permission to access the data specified by the URI. |
 

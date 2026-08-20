@@ -43,8 +43,8 @@ Obtains the capacity of the file mapping area.
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900052 | Mmap buffer released |
 | 13900050 | Internal resource error |
+| 13900052 | Mmap buffer released |
 
 ## flip
 
@@ -67,8 +67,8 @@ Mode reversal. That is, the limit attribute is set to the current position, and 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900052 | Mmap buffer released |
 | 13900050 | Internal resource error |
+| 13900052 | Mmap buffer released |
 
 ## getLimit
 
@@ -97,8 +97,8 @@ Obtains the upper bound of the readable and writable area of the file mapping ar
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900052 | Mmap buffer released |
 | 13900050 | Internal resource error |
+| 13900052 | Mmap buffer released |
 
 ## getPosition
 
@@ -127,8 +127,8 @@ Gets the current location of the file mapping area.
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900052 | Mmap buffer released |
 | 13900050 | Internal resource error |
+| 13900052 | Mmap buffer released |
 
 ## msync
 
@@ -156,12 +156,12 @@ Synchronizes the dirty page data in the entire file mapping area to the disk fil
 
 | Error Code ID | Error Message |
 | --- | --- |
+| 13900011 | Out of memory |
+| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
+| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
 | 13900055 | Mmap operation not supported |
-| 13900050 | Internal resource error |
-| 13900014 | Device or resource busy |
-| 13900011 | Out of memory |
 
 ## msync
 
@@ -196,12 +196,12 @@ Synchronizes the dirty page data in the specified range of the file mapping area
 
 | Error Code ID | Error Message |
 | --- | --- |
+| 13900011 | Out of memory |
+| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
+| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
 | 13900055 | Mmap operation not supported |
-| 13900050 | Internal resource error |
-| 13900014 | Device or resource busy |
-| 13900011 | Out of memory |
 
 ## msyncSync
 
@@ -223,12 +223,12 @@ Synchronizes the dirty page data of the entire file mapping area to the disk fil
 
 | Error Code ID | Error Message |
 | --- | --- |
+| 13900011 | Out of memory |
+| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
+| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
 | 13900055 | Mmap operation not supported |
-| 13900050 | Internal resource error |
-| 13900014 | Device or resource busy |
-| 13900011 | Out of memory |
 
 ## msyncSync
 
@@ -257,12 +257,12 @@ Synchronize the dirty page data in the specified range of the file mapping area 
 
 | Error Code ID | Error Message |
 | --- | --- |
+| 13900011 | Out of memory |
+| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
+| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
 | 13900055 | Mmap operation not supported |
-| 13900050 | Internal resource error |
-| 13900014 | Device or resource busy |
-| 13900011 | Out of memory |
 
 ## read
 
@@ -298,10 +298,10 @@ Reads data from the current position and moves the position backward by the numb
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900052 | Mmap buffer released |
-| 13900054 | Mmap buffer is inaccessible |
 | 13900050 | Internal resource error |
 | 13900051 | Buffer read/write out of bounds |
+| 13900052 | Mmap buffer released |
+| 13900054 | Mmap buffer is inaccessible |
 
 ## read
 
@@ -338,10 +338,10 @@ Reads data from the specified location without affecting the current location.
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900052 | Mmap buffer released |
-| 13900054 | Mmap buffer is inaccessible |
 | 13900050 | Internal resource error |
 | 13900051 | Buffer read/write out of bounds |
+| 13900052 | Mmap buffer released |
+| 13900054 | Mmap buffer is inaccessible |
 
 ## remaining
 
@@ -370,8 +370,8 @@ Obtains the number of remaining bytes between the current position (position) an
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900052 | Mmap buffer released |
 | 13900050 | Internal resource error |
+| 13900052 | Mmap buffer released |
 
 ## setLimit
 
@@ -400,8 +400,8 @@ Sets the upper bound of the readable and writable area of the file mapping area.
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900052 | Mmap buffer released |
 | 13900050 | Internal resource error |
+| 13900052 | Mmap buffer released |
 
 ## setPosition
 
@@ -430,8 +430,8 @@ Sets the current location of the file mapping area.
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900052 | Mmap buffer released |
 | 13900050 | Internal resource error |
+| 13900052 | Mmap buffer released |
 
 ## unmap
 
@@ -519,11 +519,11 @@ Writes data from the current location and moves the location backward by the num
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
+| 13900050 | Internal resource error |
+| 13900051 | Buffer read/write out of bounds |
 | 13900052 | Mmap buffer released |
 | 13900053 | Read-only mmap buffer |
 | 13900054 | Mmap buffer is inaccessible |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
 
 ## write
 
@@ -560,9 +560,9 @@ Writes data from the specified location without affecting the current location.
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
+| 13900050 | Internal resource error |
+| 13900051 | Buffer read/write out of bounds |
 | 13900052 | Mmap buffer released |
 | 13900053 | Read-only mmap buffer |
 | 13900054 | Mmap buffer is inaccessible |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
 

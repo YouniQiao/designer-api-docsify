@@ -12,7 +12,11 @@ import { wifiManager } from '@kit.MDMKit';
 function turnOnWifi(admin: Want, isForce: boolean): void
 ```
 
-打开Wi-Fi开关。适用于企业设备远程管理场景，例如管理员远程控制员工设备开启Wi-Fi或在特定策略执行时确保Wi-Fi已开启。 以下情况下，通过本接口打开Wi-Fi开关，会打开失败并提示"系统功能被禁用"： ​已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)接口禁用了Wi-Fi。需通过 [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)接口启用Wi-Fi，解决"系统功能被禁用"报错。
+打开Wi-Fi开关。适用于企业设备远程管理场景，例如管理员远程控制员工设备开启Wi-Fi或在特定策略执行时确保Wi-Fi已开启。
+
+以下情况下，通过本接口打开Wi-Fi开关，会打开失败并提示"系统功能被禁用"：
+
+​已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)接口禁用了Wi-Fi。需通过 [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)接口启用Wi-Fi，解决"系统功能被禁用"报错。
 
 **起始版本：** 20
 
@@ -35,10 +39,10 @@ function turnOnWifi(admin: Want, isForce: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) | This function is prohibited by enterprise management policies. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) | This function is prohibited by enterprise management policies. |
 
 **示例**
 

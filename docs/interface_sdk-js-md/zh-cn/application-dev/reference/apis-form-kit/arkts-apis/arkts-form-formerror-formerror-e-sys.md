@@ -1,4 +1,4 @@
-# FormError(formError)
+# FormError
 
 枚举，卡片错误码。
 
@@ -14,7 +14,9 @@
 ERR_DISTRIBUTED_SCHEDULE_FAILED = 37
 ```
 
-分布式调度失败。 **系统接口**: 此接口为系统接口。
+分布式调度失败。
+
+**系统接口**: 此接口为系统接口。
 
 **起始版本：** 23
 

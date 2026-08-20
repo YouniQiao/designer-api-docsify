@@ -2,6 +2,8 @@
 
 Defines the personalized lock information.
 
+@interface LockStatusResponse
+
 **Since:** 23
 
 <!--Device-sim-export interface LockStatusResponse--><!--Device-sim-export interface LockStatusResponse-End-->

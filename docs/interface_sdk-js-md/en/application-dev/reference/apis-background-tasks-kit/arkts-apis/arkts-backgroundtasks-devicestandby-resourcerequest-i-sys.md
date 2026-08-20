@@ -2,6 +2,8 @@
 
 The request of standby resources.
 
+@interface ResourceRequest
+
 **Since:** 23
 
 <!--Device-deviceStandby-export interface ResourceRequest--><!--Device-deviceStandby-export interface ResourceRequest-End-->

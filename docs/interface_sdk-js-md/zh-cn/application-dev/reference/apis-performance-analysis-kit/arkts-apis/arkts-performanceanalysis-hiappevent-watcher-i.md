@@ -1,6 +1,10 @@
 # Watcher
 
-提供事件观察者的参数选项。用于配置和管理事件的观察者，实现对特定事件的监听和处理。 &gt; **说明：** &gt; &gt; 不建议在回调函数中执行[removeWatcher](arkts-performanceanalysis-hiappevent-removewatcher-f.md)的操作，watcher一旦被移除，则其原有的订阅回调功能也会随之失效，可能会造成某些事件发生后无订阅回调情况。
+提供事件观察者的参数选项。用于配置和管理事件的观察者，实现对特定事件的监听和处理。
+
+> **说明：**
+> 
+> 不建议在回调函数中执行[removeWatcher](arkts-performanceanalysis-hiappevent-removewatcher-f.md)的操作，watcher一旦被移除，则其原有的订阅回调功能也会随之失效，可能会造成某些事件发生后无订阅回调情况。
 
 **起始版本：** 23
 
@@ -56,7 +60,11 @@ name: string
 onReceive?: (domain: string, appEventGroups: Array<AppEventGroup>) => void
 ```
 
-订阅实时回调函数，与回调函数onTrigger同时存在时，只触发此回调，函数入参说明如下： domain：回调事件的领域名称； appEventGroups：回调事件集合。
+订阅实时回调函数，与回调函数onTrigger同时存在时，只触发此回调，函数入参说明如下：
+
+domain：回调事件的领域名称；
+
+appEventGroups：回调事件集合。
 
 **类型：** (domain: string, appEventGroups: Array&lt;[AppEventGroup](arkts-performanceanalysis-hiappevent-appeventgroup-i.md)&gt;) =&gt; void
 
@@ -74,7 +82,13 @@ onReceive?: (domain: string, appEventGroups: Array<AppEventGroup>) => void
 onTrigger?: (curRow: int, curSize: int, holder: AppEventPackageHolder) => void
 ```
 
-订阅回调函数，需要与回调触发条件triggerCondition一同传入才会生效，函数入参说明如下： curRow：在本次回调触发时的订阅事件总数量； curSize：在本次回调触发时的订阅事件总大小，单位为byte； holder：订阅数据持有者对象，可以通过其对订阅事件进行处理。
+订阅回调函数，需要与回调触发条件triggerCondition一同传入才会生效，函数入参说明如下：
+
+curRow：在本次回调触发时的订阅事件总数量；
+
+curSize：在本次回调触发时的订阅事件总大小，单位为byte；
+
+holder：订阅数据持有者对象，可以通过其对订阅事件进行处理。
 
 **类型：** (curRow: int, curSize: int, holder: AppEventPackageHolder) =&gt; void
 

@@ -1,4 +1,4 @@
-# NetFirewallPortParams(网络防火墙)
+# NetFirewallPortParams
 
 防火墙规则端口参数。
 

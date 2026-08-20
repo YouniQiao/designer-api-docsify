@@ -34,6 +34,6 @@ create the instance of OPP server profile.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 

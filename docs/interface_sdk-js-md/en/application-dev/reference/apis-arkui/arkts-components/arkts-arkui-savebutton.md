@@ -1,6 +1,6 @@
 # SaveButton
 
-**SaveButton** is a system API for the save security control. It applies to scenarios where apps need temporary media library access permissions to save images or videos, such as saving images to albums and exporting media content. After the **SaveButton** component is integrated into an app, a confirmation dialog will appear when the user taps the component for the first time. If the user allows access, the app obtains temporary authorization to call media library APIs. For related APIs, see [Interface (PhotoAccessHelper)](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md). If the user denies access or dismisses the dialog, authorization will not be granted for this operation. No more dialog box is displayed for authorization. <br> For API version 19 and earlier, the authorization duration is 10 seconds. For API version 20 and later, the authorization duration is 1 minute. You need to call media library APIs to obtain file handles and complete temporary-authorized operations such as creating media resources within the authorization period. After authorization expires, existing file handles acquired during the valid period remain available for read and write operations. <br>**Description**</br>
+*SaveButton** is a system API for the save security control. It applies to scenarios where apps need temporary media library access permissions to save images or videos, such as saving images to albums and exporting media content. After the **SaveButton** component is integrated into an app, a confirmation dialog will appear when the user taps the component for the first time. If the user allows access, the app obtains temporary authorization to call media library APIs. For related APIs, see [Interface (PhotoAccessHelper)](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md). If the user denies access or dismisses the dialog, authorization will not be granted for this operation. No more dialog box is displayed for authorization. <br> For API version 19 and earlier, the authorization duration is 10 seconds. For API version 20 and later, the authorization duration is 1 minute. You need to call media library APIs to obtain file handles and complete temporary-authorized operations such as creating media resources within the authorization period. After authorization expires, existing file handles acquired during the valid period remain available for read and write operations. <br>**Description**</br>
 
 ## Key Enums <li>[SaveIconStyle](arkts-arkui-saveiconstyle-e.md): Enumeration of icon styles for the save button. Specifies the icon style displayed.</li> <li>[SaveDescription](arkts-arkui-savedescription-e.md): Enumeration of text descriptions for the save button. Specifies the text description displayed.</li> <li>[SaveButtonOnClickResult](arkts-arkui-savebuttononclickresult-e.md): Enumeration of click results for the save button. Indicates whether authorization succeeds after a click.</li> ###### Key APIs <li>[SaveButtonOptions](arkts-arkui-savebuttonoptions-i.md): Configuration object for the save button. Defines properties including icon, text and button type.</li> <li>[SaveButtonCallback](arkts-arkui-savebuttoncallback-t.md): Callback for save button clicks. Returns click events, authorization results and error messages.</li> ###### Child Components <li>Not supported.</li></ul>
 
@@ -52,19 +52,14 @@ Creates a save button with the specified icon, text and button type. When the us
 
 | Name | Description |
 | --- | --- |
-| [SaveButtonOptions](arkts-arkui-savebuttonoptions-i.md) | Defines options for the save button, including icon, text, and button type. &gt; **NOTE：**&gt; &gt; - You are advised to specify at least one of **icon** or **text**. &gt; - If neither **icon** nor **text** is specified, **SaveButton** is created with default styles as follows: &gt; **SaveIconStyle** defaults to **FULL_FILLED**, **SaveDescription** to **DOWNLOAD**, and **ButtonType** to &gt; **Capsule**. &gt; &gt; - The **icon**, **text**, and **buttonType** parameters do not support dynamic modification. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [SaveButtonCallback](arkts-arkui-savebuttoncallback-t.md) | Triggered when the **SaveButton** component is clicked. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [SaveButtonOnClickResult](arkts-arkui-savebuttononclickresult-e.md) | Enumerates the authorization results after the **SaveButton** component is tapped. |
-| [SaveDescription](arkts-arkui-savedescription-e.md) | Enumerates the text that can be displayed on the save button. |
-| [SaveIconStyle](arkts-arkui-saveiconstyle-e.md) | Enumerates icon styles of the **SaveButton** component. |
 

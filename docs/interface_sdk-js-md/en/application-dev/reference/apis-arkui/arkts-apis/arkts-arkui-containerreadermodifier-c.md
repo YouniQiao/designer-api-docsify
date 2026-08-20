@@ -2,7 +2,7 @@
 
 Defines ContainerReader Modifier
 
-**Inheritance/Implementation:** ContainerReaderModifier extends [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md) and implements AttributeModifier<ContainerReaderAttribute>
+**Inheritance/Implementation:** ContainerReaderModifier extends [ContainerReaderAttribute](../../apis-default/arkts-apis/arkts-arkui-components-containerreader-containerreaderattribute-i.md) and implements AttributeModifier<ContainerReaderAttribute>
 
 **Since:** 26.0.0
 
@@ -32,5 +32,5 @@ Defines the normal update attribute function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instance | [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md) | Yes |  |
+| instance | [ContainerReaderAttribute](../../apis-default/arkts-apis/arkts-arkui-components-containerreader-containerreaderattribute-i.md) | Yes |  |
 

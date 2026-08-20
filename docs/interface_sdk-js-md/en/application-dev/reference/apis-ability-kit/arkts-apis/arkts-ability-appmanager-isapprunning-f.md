@@ -12,7 +12,11 @@ import { appManager } from '@kit.AbilityKit';
 function isAppRunning(bundleName: string, appCloneIndex?: int): Promise<boolean>
 ```
 
-Checks whether the application with the specified bundle name and application clone index is running across all users. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; If the application is not installed for the current user, error code 16000073 is returned. If the application is &gt; installed for the current user, the system checks whether the application is running across all users.
+Checks whether the application with the specified bundle name and application clone index is running across all users. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> If the application is not installed for the current user, error code 16000073 is returned. If the application is &gt; installed for the current user, the system checks whether the application is running across all users.
 
 **Since:** 23
 
@@ -39,9 +43,9 @@ Checks whether the application with the specified bundle name and application cl
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid. |
 
 **Examples**

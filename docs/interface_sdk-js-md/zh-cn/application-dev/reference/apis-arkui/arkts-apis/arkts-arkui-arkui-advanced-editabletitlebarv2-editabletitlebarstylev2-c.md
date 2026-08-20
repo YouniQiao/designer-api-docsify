@@ -36,7 +36,7 @@ EditableTitleBarStyleV2的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [EditableTitleBarStyleV2Options](../../apis-na/arkts-apis/arkts-na-arkui-advanced-editabletitlebarv2-editabletitlebarstylev2options-i.md) | 否 | 标题栏样式配置选项。 |
+| options | [EditableTitleBarStyleV2Options](../../apis-default/arkts-apis/arkts-arkui-advanced-editabletitlebarv2-editabletitlebarstylev2options-i.md) | 否 | 标题栏样式配置选项。 |
 
 ## backgroundBlurStyle
 
@@ -45,7 +45,9 @@ EditableTitleBarStyleV2的构造函数。
   public backgroundBlurStyle?: BlurStyle
 ```
 
-标题栏背景模糊样式。 默认值：BlurStyle.NONE。
+标题栏背景模糊样式。
+
+默认值：BlurStyle.NONE。
 
 **类型：** BlurStyle
 
@@ -66,7 +68,9 @@ EditableTitleBarStyleV2的构造函数。
   public backgroundColor?: ResourceColor
 ```
 
-标题栏背景色。 默认值：'#00000000'。
+标题栏背景色。
+
+默认值：'#00000000'。
 
 **类型：** ResourceColor
 
@@ -87,7 +91,17 @@ EditableTitleBarStyleV2的构造函数。
   public contentMargin?: LocalizedMargin
 ```
 
-标题栏外边距，不支持设置负数。 默认值： { start: LengthMetrics.resource(\$r('sys.float.margin_left')), end: LengthMetrics.resource(\$r('sys.float.margin_right')) }。
+标题栏外边距，不支持设置负数。
+
+默认值：
+
+{
+
+start: LengthMetrics.resource(\$r('sys.float.margin_left')),
+
+end: LengthMetrics.resource(\$r('sys.float.margin_right'))
+
+}。
 
 **类型：** LocalizedMargin
 
@@ -108,7 +122,9 @@ EditableTitleBarStyleV2的构造函数。
   public safeAreaEdges?: Array<SafeAreaEdge>
 ```
 
-扩展安全区域的方向。 默认值：[SafeAreaEdge.TOP]。
+扩展安全区域的方向。
+
+默认值：[SafeAreaEdge.TOP]。
 
 **类型：** Array&lt;SafeAreaEdge&gt;
 
@@ -129,7 +145,9 @@ EditableTitleBarStyleV2的构造函数。
   public safeAreaTypes?: Array<SafeAreaType>
 ```
 
-扩展安全区域的类型。 默认值：[SafeAreaType.SYSTEM]。
+扩展安全区域的类型。
+
+默认值：[SafeAreaType.SYSTEM]。
 
 **类型：** Array&lt;SafeAreaType&gt;
 

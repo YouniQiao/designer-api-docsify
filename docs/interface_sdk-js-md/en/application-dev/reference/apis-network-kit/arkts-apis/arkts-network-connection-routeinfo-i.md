@@ -100,7 +100,9 @@ NIC name.
 isDefaultRoute: boolean
 ```
 
-Whether the route is the default one. Whether the route is the default route. The value **true** indicates that the route is the default route, and the value **false** indicates the opposite. Note: The IPv4 default route refers to the route whose destination address is **0.0.0.0/0**. The IPv6 default route refers to the route whose destination address is **::/0**.
+Whether the route is the default one. Whether the route is the default route. The value **true** indicates that the route is the default route, and the value **false** indicates the opposite.
+
+Note: The IPv4 default route refers to the route whose destination address is **0.0.0.0/0**. The IPv6 default route refers to the route whose destination address is **::/0**.
 
 **Type:** boolean
 

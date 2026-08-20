@@ -1,6 +1,6 @@
 # ProxyConfig
 
-ProxyConfig is a class in the ArkWeb framework used to configure network proxy rules. It works with [ProxyController](../../apis-na/arkts-apis/arkts-na-webview-proxycontroller-c.md) to implement proxy control over network requests of all Web components in an app. Through ProxyConfig, developers can flexibly define various proxy rules: specifying a particular proxy server for specific URLs, specifying direct server connections for certain URLs, defining rules to bypass the proxy, and more.
+ProxyConfig is a class in the ArkWeb framework used to configure network proxy rules. It works with [ProxyController](../../apis-default/arkts-apis/arkts-webview-proxycontroller-c.md) to implement proxy control over network requests of all Web components in an app. Through ProxyConfig, developers can flexibly define various proxy rules: specifying a particular proxy server for specific URLs, specifying direct server connections for certain URLs, defining rules to bypass the proxy, and more.
 
 **Since:** 15
 
@@ -66,7 +66,7 @@ Reverses the bypass rule.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reverse | boolean | Yes | Whether to reverse the bypass rule. The default value is **false**, indicating the bypass rule set in [insertBypassRule](../../apis-na/arkts-apis/arkts-na-webview-proxyconfig-c.md#insertbypassrule) is not reversed. The value **true** indicates the opposite. |
+| reverse | boolean | Yes | Whether to reverse the bypass rule. The default value is **false**, indicating the bypass rule set in [insertBypassRule](../../apis-default/arkts-apis/arkts-webview-proxyconfig-c.md#insertbypassrule) is not reversed. The value **true** indicates the opposite. |
 
 **Error codes:**
 
@@ -116,7 +116,7 @@ Obtains proxy rules.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[ProxyRule](../../apis-na/arkts-apis/arkts-na-webview-proxyrule-c.md)&gt; | Proxy rule. Each ProxyRule object represents a configured proxy rule. |
+| Array&lt;[ProxyRule](../../apis-default/arkts-apis/arkts-webview-proxyrule-c.md)&gt; | Proxy rule. Each ProxyRule object represents a configured proxy rule. |
 
 ## insertBypassRule
 
@@ -124,7 +124,7 @@ Obtains proxy rules.
 insertBypassRule(bypassRule: string): void
 ```
 
-Inserts a bypass rule, specifying which URLs should bypass the proxy and directly connect to the server. When [enableReverseBypass](../../apis-na/arkts-apis/arkts-na-webview-proxyconfig-c.md#enablereversebypass) is set to true, URLs matching bypassRule will use the proxy instead of bypassing it.
+Inserts a bypass rule, specifying which URLs should bypass the proxy and directly connect to the server. When [enableReverseBypass](../../apis-default/arkts-apis/arkts-webview-proxyconfig-c.md#enablereversebypass) is set to true, URLs matching bypassRule will use the proxy instead of bypassing it.
 
 **Since:** 15
 
@@ -152,7 +152,11 @@ Inserts a bypass rule, specifying which URLs should bypass the proxy and directl
 insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 ```
 
-Inserts a direct rule, specifying that URLs matching the schemeFilter condition will directly connect to the server. &gt; **NOTE：**&gt; &gt; - Both [insertBypassRule](../../apis-na/arkts-apis/arkts-na-webview-proxyconfig-c.md#insertbypassrule) and &gt; [bypassHostnamesWithoutPeriod](../../apis-na/arkts-apis/arkts-na-webview-proxyconfig-c.md#bypasshostnameswithoutperiod) can also implement &gt; direct URL connection. The difference lies in the matching dimension: this method matches by protocol type &gt; through schemeFilter; insertBypassRule matches by URL pattern through a bypassRule string; &gt; bypassHostnamesWithoutPeriod requires no parameters and automatically enables direct connection for hostnames &gt; without a period. You can choose the appropriate method based on the URL range that needs direct connection.
+Inserts a direct rule, specifying that URLs matching the schemeFilter condition will directly connect to the server.
+
+> **NOTE：**
+> 
+> - Both [insertBypassRule](../../apis-default/arkts-apis/arkts-webview-proxyconfig-c.md#insertbypassrule) and &gt; [bypassHostnamesWithoutPeriod](../../apis-default/arkts-apis/arkts-webview-proxyconfig-c.md#bypasshostnameswithoutperiod) can also implement &gt; direct URL connection. The difference lies in the matching dimension: this method matches by protocol type &gt; through schemeFilter; insertBypassRule matches by URL pattern through a bypassRule string; &gt; bypassHostnamesWithoutPeriod requires no parameters and automatically enables direct connection for hostnames &gt; without a period. You can choose the appropriate method based on the URL range that needs direct connection.
 
 **Since:** 15
 
@@ -166,7 +170,7 @@ Inserts a direct rule, specifying that URLs matching the schemeFilter condition 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| schemeFilter | [ProxySchemeFilter](../../apis-na/arkts-apis/arkts-na-webview-proxyschemefilter-e.md) | No | Filter used to specify URLs to be directly connected to the server. <br>Default value: **MATCH_ALL_SCHEMES**. <br>If **undefined** or **null** is passed, error code **401** will be thrown. |
+| schemeFilter | [ProxySchemeFilter](../../apis-default/arkts-apis/arkts-webview-proxyschemefilter-e.md) | No | Filter used to specify URLs to be directly connected to the server. <br>Default value: **MATCH_ALL_SCHEMES**. <br>If **undefined** or **null** is passed, error code **401** will be thrown. |
 
 **Error codes:**
 
@@ -180,7 +184,19 @@ Inserts a direct rule, specifying that URLs matching the schemeFilter condition 
 insertProxyRule(proxyRule: string, schemeFilter?: ProxySchemeFilter): void
 ```
 
-Inserts a proxy rule. URLs matching schemeFilter will use the specified proxy. If the schemeFilter parameter is not specified, the default value MATCH_ALL_SCHEMES will be used, and all URLs will use the specified proxy. The proxy format is [scheme://]host[:port]. The scheme is optional and must be HTTP, HTTPS, or SOCKS. The default value of scheme is HTTP. The host is a bracketed IPv6 literal, an IPv4 literal, or one or more labels separated by dots. The port number is optional. The default port is 80 for HTTP, 443 for HTTPS, and 1080 for SOCKS. For example: - example.com host: example.com - https://example.com scheme: https host: example.com - example.com:8888 host: example.com port: 8888 - https://example.com:8888 scheme: https host: example.com port: 8888 - 192.168.1.1 host: 192.168.1.1 - 192.168.1.1:8888 host: 192.168.1.1 port: 8888 - [10:20:30:40:50:60:70:80]
+Inserts a proxy rule. URLs matching schemeFilter will use the specified proxy. If the schemeFilter parameter is not specified, the default value MATCH_ALL_SCHEMES will be used, and all URLs will use the specified proxy.
+
+The proxy format is [scheme://]host[:port].
+
+The scheme is optional and must be HTTP, HTTPS, or SOCKS. The default value of scheme is HTTP.
+
+The host is a bracketed IPv6 literal, an IPv4 literal, or one or more labels separated by dots.
+
+The port number is optional. The default port is 80 for HTTP, 443 for HTTPS, and 1080 for SOCKS.
+
+For example:
+
+- example.com host: example.com - https://example.com scheme: https host: example.com - example.com:8888 host: example.com port: 8888 - https://example.com:8888 scheme: https host: example.com port: 8888 - 192.168.1.1 host: 192.168.1.1 - 192.168.1.1:8888 host: 192.168.1.1 port: 8888 - [10:20:30:40:50:60:70:80]
 
 **Since:** 15
 
@@ -195,7 +211,7 @@ Inserts a proxy rule. URLs matching schemeFilter will use the specified proxy. I
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | proxyRule | string | Yes | The specified proxy. |
-| schemeFilter | [ProxySchemeFilter](../../apis-na/arkts-apis/arkts-na-webview-proxyschemefilter-e.md) | No | Filter used to specify URLs that use the proxy. <br>Default value: **MATCH_ALL_SCHEMES**. <br>If **undefined** or **null** is passed, error code **401** will be thrown. |
+| schemeFilter | [ProxySchemeFilter](../../apis-default/arkts-apis/arkts-webview-proxyschemefilter-e.md) | No | Filter used to specify URLs that use the proxy. <br>Default value: **MATCH_ALL_SCHEMES**. <br>If **undefined** or **null** is passed, error code **401** will be thrown. |
 
 **Error codes:**
 
@@ -209,7 +225,7 @@ Inserts a proxy rule. URLs matching schemeFilter will use the specified proxy. I
 isReverseBypassEnabled(): boolean
 ```
 
-Obtains the value of [enableReverseBypass](../../apis-na/arkts-apis/arkts-na-webview-proxyconfig-c.md#enablereversebypass). For details, see [enableReverseBypass](../../apis-na/arkts-apis/arkts-na-webview-proxyconfig-c.md#enablereversebypass).
+Obtains the value of [enableReverseBypass](../../apis-default/arkts-apis/arkts-webview-proxyconfig-c.md#enablereversebypass). For details, see [enableReverseBypass](../../apis-default/arkts-apis/arkts-webview-proxyconfig-c.md#enablereversebypass).
 
 **Since:** 15
 

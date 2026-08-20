@@ -152,7 +152,11 @@ insertBypassRule(bypassRule: string): void
 insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 ```
 
-插入一条直连规则，指明符合schemeFilter条件的URL将直接连接到服务器。 &gt; **说明：** &gt; &gt; - 与[insertBypassRule](#insertbypassrule)和 &gt; [bypassHostnamesWithoutPeriod](#bypasshostnameswithoutperiod)均可实现URL直连，区别在于匹配维度：本方法通过 &gt; schemeFilter按协议类型匹配；insertBypassRule通过bypassRule字符串按URL模式匹配；bypassHostnamesWithoutPeriod无需传参，自动对不含点号的域名直连。可根据需要 &gt; 直连的URL范围选择合适的方法。
+插入一条直连规则，指明符合schemeFilter条件的URL将直接连接到服务器。
+
+> **说明：**
+> 
+> - 与[insertBypassRule](#insertbypassrule)和 &gt; [bypassHostnamesWithoutPeriod](#bypasshostnameswithoutperiod)均可实现URL直连，区别在于匹配维度：本方法通过 &gt; schemeFilter按协议类型匹配；insertBypassRule通过bypassRule字符串按URL模式匹配；bypassHostnamesWithoutPeriod无需传参，自动对不含点号的域名直连。可根据需要 &gt; 直连的URL范围选择合适的方法。
 
 **起始版本：** 15
 
@@ -180,7 +184,19 @@ insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 insertProxyRule(proxyRule: string, schemeFilter?: ProxySchemeFilter): void
 ```
 
-插入一条代理规则，与schemeFilter匹配的URL都会使用指定代理。如果未指定schemeFilter参数，将使用默认值MATCH_ALL_SCHEMES，所有URL都将使用指定代理。 代理格式为[scheme://]host[:port]。 scheme是可选的，必须是HTTP、HTTPS或SOCKS。scheme默认值为HTTP。 host是带括号的IPv6字面量、IPv4字面量或由点分隔的一个或多个标签。 端口号是可选的，默认HTTP为80、HTTPS为443、SOCKS为1080。 例如： - example.com host: example.com - https://example.com scheme: https host: example.com - example.com:8888 host: example.com port: 8888 - https://example.com:8888 scheme: https host: example.com port: 8888 - 192.168.1.1 host: 192.168.1.1 - 192.168.1.1:8888 host: 192.168.1.1 port: 8888 - [10:20:30:40:50:60:70:80]
+插入一条代理规则，与schemeFilter匹配的URL都会使用指定代理。如果未指定schemeFilter参数，将使用默认值MATCH_ALL_SCHEMES，所有URL都将使用指定代理。
+
+代理格式为[scheme://]host[:port]。
+
+scheme是可选的，必须是HTTP、HTTPS或SOCKS。scheme默认值为HTTP。
+
+host是带括号的IPv6字面量、IPv4字面量或由点分隔的一个或多个标签。
+
+端口号是可选的，默认HTTP为80、HTTPS为443、SOCKS为1080。
+
+例如：
+
+- example.com host: example.com - https://example.com scheme: https host: example.com - example.com:8888 host: example.com port: 8888 - https://example.com:8888 scheme: https host: example.com port: 8888 - 192.168.1.1 host: 192.168.1.1 - 192.168.1.1:8888 host: 192.168.1.1 port: 8888 - [10:20:30:40:50:60:70:80]
 
 **起始版本：** 15
 

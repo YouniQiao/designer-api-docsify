@@ -27,8 +27,8 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 | [offConnectionStateChange](arkts-connectivity-remotedevice-offconnectionstatechange-f.md) | 取消订阅星闪连接状态更改事件。 |
 | [offPairingStateChange](arkts-connectivity-remotedevice-offpairingstatechange-f.md) | 取消订阅星闪配对状态更改事件。 |
 | [onAcbStateChange](arkts-connectivity-remotedevice-onacbstatechange-f.md) | 订阅NearLink ACB连接状态变化事件。ACB采用异步双向链路。 |
-| [onConnectionStateChange](arkts-connectivity-remotedevice-onconnectionstatechange-f.md) | 订阅星闪连接状态更改事件。 如果用户有ohos.permission.GET_NEARLINK_PEER_MAC权限，则返回真实设备地址。否则返回一个随机的设备地址。 只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。 如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。 回调返回真实设备地址，否则返回随机设备地址。 |
-| [onPairingStateChange](arkts-connectivity-remotedevice-onpairingstatechange-f.md) | 订阅NearLink配对状态变更事件。 只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。 如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。 回调返回真实设备地址，否则返回随机设备地址。 |
+| [onConnectionStateChange](arkts-connectivity-remotedevice-onconnectionstatechange-f.md) | 订阅星闪连接状态更改事件。 如果用户有ohos.permission.GET_NEARLINK_PEER_MAC权限，则返回真实设备地址。否则返回一个随机的设备地址。 |
+| [onPairingStateChange](arkts-connectivity-remotedevice-onpairingstatechange-f.md) | 订阅NearLink配对状态变更事件。 |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -36,7 +36,7 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 | 名称 | 说明 |
 | --- | --- |
 | [offPairingRequest](arkts-connectivity-remotedevice-offpairingrequest-f-sys.md) | 取消订阅来自远端星闪设备的配对请求事件。 |
-| [onPairingRequest](arkts-connectivity-remotedevice-onpairingrequest-f-sys.md) | 订阅来自远程NearLink设备的配对请求事件。 如果用户被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。 回调返回真实设备地址，否则返回随机设备地址 只有授予了ohos.permission.NEARLINK_ACCESS权限的系统应用程序才能访问此事件。 如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。 回调返回真实设备地址，否则返回随机设备地址。 |
+| [onPairingRequest](arkts-connectivity-remotedevice-onpairingrequest-f-sys.md) | 订阅来自远程NearLink设备的配对请求事件。 如果用户被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。 回调返回真实设备地址，否则返回随机设备地址 |
 <!--DelEnd-->
 
 ### 接口

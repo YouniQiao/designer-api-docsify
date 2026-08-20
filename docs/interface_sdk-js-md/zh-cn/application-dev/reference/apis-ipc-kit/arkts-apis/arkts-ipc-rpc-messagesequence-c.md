@@ -20,7 +20,9 @@ import { rpc } from '@kit.IPCKit';
 static closeFileDescriptor(fd: int): void
 ```
 
-静态方法，关闭给定的文件描述符。 - 文件使用完毕后及时关闭，避免资源泄漏。 - 关闭前确保文件操作已完成。 - 不要关闭已关闭的文件描述符。 - 关闭后不能再读写文件。
+静态方法，关闭给定的文件描述符。
+
+- 文件使用完毕后及时关闭，避免资源泄漏。 - 关闭前确保文件操作已完成。 - 不要关闭已关闭的文件描述符。 - 关闭后不能再读写文件。
 
 **起始版本：** 23
 
@@ -106,7 +108,9 @@ try {
 static create(): MessageSequence
 ```
 
-静态方法，创建MessageSequence对象。调用此方法后，系统会在内存中分配一块连续的缓冲区空间，用于存储待传输的序列化数据。该对象在IPC/RPC通信中用于封装请求和响应数据。 - 创建的MessageSequence对象必须在使用完毕后调用reclaim()释放资源，否则会导致内存泄漏。 - MessageSequence对象不能跨线程使用。 - 建议在需要IPC/RPC通信时按需创建，避免频繁创建和释放。
+静态方法，创建MessageSequence对象。调用此方法后，系统会在内存中分配一块连续的缓冲区空间，用于存储待传输的序列化数据。该对象在IPC/RPC通信中用于封装请求和响应数据。
+
+- 创建的MessageSequence对象必须在使用完毕后调用reclaim()释放资源，否则会导致内存泄漏。 - MessageSequence对象不能跨线程使用。 - 建议在需要IPC/RPC通信时按需创建，避免频繁创建和释放。
 
 **起始版本：** 23
 
@@ -146,7 +150,9 @@ try {
 static dupFileDescriptor(fd: int): int
 ```
 
-静态方法，复制给定的文件描述符。 - IPC传输前复制，避免原描述符被关闭。 - 多进程共享同一文件。 - 需要独立管理文件偏移量。 - 复制后两个描述符需要分别关闭。 - 不要复制无效的文件描述符。 - 复制后独立管理生命周期。
+静态方法，复制给定的文件描述符。
+
+- IPC传输前复制，避免原描述符被关闭。 - 多进程共享同一文件。 - 需要独立管理文件偏移量。 - 复制后两个描述符需要分别关闭。 - 不要复制无效的文件描述符。 - 复制后独立管理生命周期。
 
 **起始版本：** 23
 
@@ -352,7 +358,9 @@ try {
 getSize(): int
 ```
 
-获取当前创建的MessageSequence对象的数据大小。 - 查看已写入数据的总大小。 - 判断缓冲区使用情况。 - 在数据传输前检查数据大小。
+获取当前创建的MessageSequence对象的数据大小。
+
+- 查看已写入数据的总大小。 - 判断缓冲区使用情况。 - 在数据传输前检查数据大小。
 
 **起始版本：** 23
 
@@ -468,7 +476,9 @@ try {
 readArrayBuffer(typeCode: TypeCode): ArrayBuffer
 ```
 
-从MessageSequence读取ArrayBuffer类型数据。 - 必须与[writeArrayBuffer](#writearraybuffer)配对使用。 - 读取typeCode必须与写入typeCode一致，顺序必须匹配。 - typeCode必须正确匹配，不匹配会导致数据异常或错误，建议根据业务类型选择合适的[TypeCode](arkts-ipc-rpc-typecode-e.md)。
+从MessageSequence读取ArrayBuffer类型数据。
+
+- 必须与[writeArrayBuffer](#writearraybuffer)配对使用。 - 读取typeCode必须与写入typeCode一致，顺序必须匹配。 - typeCode必须正确匹配，不匹配会导致数据异常或错误，建议根据业务类型选择合适的[TypeCode](arkts-ipc-rpc-typecode-e.md)。
 
 **起始版本：** 23
 
@@ -527,7 +537,9 @@ try {
 readAshmem(): Ashmem
 ```
 
-从MessageSequence读取匿名共享对象。使用前需先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)方法进行内存映射。 - readAshmem()获取对象。 - [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)映射内存。 - [readDataFromAshmem](arkts-ipc-rpc-ashmem-c.md#readdatafromashmem)读取数据。 - unmapAshmem()取消映射。 - closeAshmem()关闭对象。 - 必须先映射才能读取数据。 - 数据读取后需要取消映射。 - 及时关闭避免内存泄漏。
+从MessageSequence读取匿名共享对象。使用前需先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)方法进行内存映射。
+
+- readAshmem()获取对象。 - [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)映射内存。 - [readDataFromAshmem](arkts-ipc-rpc-ashmem-c.md#readdatafromashmem)读取数据。 - unmapAshmem()取消映射。 - closeAshmem()关闭对象。 - 必须先映射才能读取数据。 - 数据读取后需要取消映射。 - 及时关闭避免内存泄漏。
 
 **起始版本：** 23
 
@@ -685,7 +697,9 @@ try {
 readBooleanArray(): boolean[]
 ```
 
-从MessageSequence实例中读取布尔数组。 - 返回新创建的数组，无需预先创建。 - 数组元素为布尔值。
+从MessageSequence实例中读取布尔数组。
+
+- 返回新创建的数组，无需预先创建。 - 数组元素为布尔值。
 
 **起始版本：** 23
 
@@ -730,7 +744,9 @@ try {
 readByte(): int
 ```
 
-从MessageSequence实例中读取字节值。 - 必须与[writeByte](#writebyte)配对使用。 - 一次写入对应一次读取。
+从MessageSequence实例中读取字节值。
+
+- 必须与[writeByte](#writebyte)配对使用。 - 一次写入对应一次读取。
 
 **起始版本：** 23
 
@@ -1006,7 +1022,9 @@ try {
 readCharArray(): int[]
 ```
 
-从MessageSequence实例中读取单个字符数组。 - 返回新创建的数组，无需预先创建。 - 数组元素为字符编码，取值范围[0, 65535]。
+从MessageSequence实例中读取单个字符数组。
+
+- 返回新创建的数组，无需预先创建。 - 数组元素为字符编码，取值范围[0, 65535]。
 
 **起始版本：** 23
 
@@ -1051,7 +1069,9 @@ try {
 readDouble(): double
 ```
 
-从MessageSequence实例中读取双精度浮点值。 - 返回新创建的数组，无需预先创建。 - 数组元素为双精度浮点数。
+从MessageSequence实例中读取双精度浮点值。
+
+- 返回新创建的数组，无需预先创建。 - 数组元素为双精度浮点数。
 
 **起始版本：** 23
 
@@ -1210,7 +1230,9 @@ try {
 readException(): void
 ```
 
-从MessageSequence中读取异常。适用于接收远端服务响应后检查异常状态的场景。 - 在IPC/RPC通信的客户端使用。 - 在调用sendMessageRequest收到响应后调用。 - 在每次IPC/RPC调用后优先调用此方法。 - 如有异常立即处理并终止后续数据读取，异常处理后建议调用reclaim()释放MessageSequence对象。 - 此方法与[writeNoException](#writenoexception)方法配对使用。 - 调用顺序：服务端处理请求 → [writeNoException](#writenoexception) → 客户端收到响应 → [readException](#readexception) - 如果服务端未调用 [writeNoException](#writenoexception)，调用此方法会失败。
+从MessageSequence中读取异常。适用于接收远端服务响应后检查异常状态的场景。
+
+- 在IPC/RPC通信的客户端使用。 - 在调用sendMessageRequest收到响应后调用。 - 在每次IPC/RPC调用后优先调用此方法。 - 如有异常立即处理并终止后续数据读取，异常处理后建议调用reclaim()释放MessageSequence对象。 - 此方法与[writeNoException](#writenoexception)方法配对使用。 - 调用顺序：服务端处理请求 → [writeNoException](#writenoexception) → 客户端收到响应 → [readException](#readexception) - 如果服务端未调用 [writeNoException](#writenoexception)，调用此方法会失败。
 
 **起始版本：** 23
 
@@ -1308,7 +1330,9 @@ try {
 readFileDescriptor(): int
 ```
 
-从MessageSequence中读取文件描述符。接收端读取到的是映射后的新文件描述符编号，与发送端写入的描述符编号不同，但指向同一个文件资源。读取后建议及时使用并关闭，防止资源泄漏。 如需长期使用，可调用dupFileDescriptor复制描述符。 - 必须与[writeFileDescriptor](#writefiledescriptor)配对使用。 - 不要依赖源端的fd编号。 - 读取后需要管理生命周期。 - 建议及时使用避免资源浪费。 - 使用完毕后及时关闭。
+从MessageSequence中读取文件描述符。接收端读取到的是映射后的新文件描述符编号，与发送端写入的描述符编号不同，但指向同一个文件资源。读取后建议及时使用并关闭，防止资源泄漏。 如需长期使用，可调用dupFileDescriptor复制描述符。
+
+- 必须与[writeFileDescriptor](#writefiledescriptor)配对使用。 - 不要依赖源端的fd编号。 - 读取后需要管理生命周期。 - 建议及时使用避免资源浪费。 - 使用完毕后及时关闭。
 
 **起始版本：** 23
 
@@ -1515,7 +1539,9 @@ try {
 readInt(): int
 ```
 
-从MessageSequence实例中读取整数值。 - 整数值占用4字节存储空间。 - 存储范围：[-2^31, 2^31-1]。
+从MessageSequence实例中读取整数值。
+
+- 整数值占用4字节存储空间。 - 存储范围：[-2^31, 2^31-1]。
 
 **起始版本：** 23
 
@@ -1563,7 +1589,9 @@ try {
 readIntArray(dataIn: int[]): void
 ```
 
-从MessageSequence实例中读取整数数组，并将其写入到创建的空数组中。 - 需预先创建空数组且长度应与写入时的数组长度一致。 - 数组元素取值范围:[-2^31, 2^31-1]。
+从MessageSequence实例中读取整数数组，并将其写入到创建的空数组中。
+
+- 需预先创建空数组且长度应与写入时的数组长度一致。 - 数组元素取值范围:[-2^31, 2^31-1]。
 
 **起始版本：** 23
 
@@ -1677,7 +1705,9 @@ try {
 readInterfaceToken(): string
 ```
 
-从MessageSequence对象中读取接口描述符，接口描述符按写入MessageSequence的顺序读取，本地对象可使用该信息检验本次通信。 - 必须与[writeInterfaceToken](#writeinterfacetoken)配对使用。 - 读取前应确保缓冲区中有可读数据。 - 建议在收到IPC请求后立即读取校验。
+从MessageSequence对象中读取接口描述符，接口描述符按写入MessageSequence的顺序读取，本地对象可使用该信息检验本次通信。
+
+- 必须与[writeInterfaceToken](#writeinterfacetoken)配对使用。 - 读取前应确保缓冲区中有可读数据。 - 建议在收到IPC请求后立即读取校验。
 
 **起始版本：** 23
 
@@ -1722,7 +1752,9 @@ try {
 readLong(): long
 ```
 
-从MessageSequence实例中读取长整数值。 - 取值范围：[-2^63, 2^63-1]。 - 长整数占用8字节存储空间。
+从MessageSequence实例中读取长整数值。
+
+- 取值范围：[-2^63, 2^63-1]。 - 长整数占用8字节存储空间。
 
 **起始版本：** 23
 
@@ -1881,7 +1913,9 @@ try {
 readParcelable(dataIn: Parcelable): void
 ```
 
-从MessageSequence实例中读取成员变量到指定的对象（dataIn）。 - dataIn参数必须为已实例化的Parcelable对象。 - unmarshalling方法必须按与marshalling相同的顺序读取。 - 反序列化顺序必须与序列化顺序一致。 - 建议在unmarshalling中处理异常情况。
+从MessageSequence实例中读取成员变量到指定的对象（dataIn）。
+
+- dataIn参数必须为已实例化的Parcelable对象。 - unmarshalling方法必须按与marshalling相同的顺序读取。 - 反序列化顺序必须与序列化顺序一致。 - 建议在unmarshalling中处理异常情况。
 
 **起始版本：** 23
 
@@ -1899,9 +1933,9 @@ readParcelable(dataIn: Parcelable): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900012](../errorcode-rpc.md#1900012-js回调方法执行失败) | Failed to call the JS callback function. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect. |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900012](../errorcode-rpc.md#1900012-js回调方法执行失败) | Failed to call the JS callback function. |
 
 **示例**
 
@@ -1966,9 +2000,9 @@ readParcelableArray(parcelableArray: Parcelable[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900012](../errorcode-rpc.md#1900012-js回调方法执行失败) | Failed to call the JS callback function. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The length of the array passed when reading is not equal to the length passed when writing to the array; 5.The element does not exist in the array. |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900012](../errorcode-rpc.md#1900012-js回调方法执行失败) | Failed to call the JS callback function. |
 
 **示例**
 
@@ -2076,7 +2110,9 @@ try {
 readRawDataBuffer(size: int): ArrayBuffer
 ```
 
-从MessageSequence读取原始数据。 - 需与写入时的数据大小匹配。 - 该接口是一次性接口,不允许在一次parcel通信中多次调用。 - 大数据量传输时注意系统资源占用。 - 必须与[writeRawDataBuffer](#writerawdatabuffer)配对使用。
+从MessageSequence读取原始数据。
+
+- 需与写入时的数据大小匹配。 - 该接口是一次性接口,不允许在一次parcel通信中多次调用。 - 大数据量传输时注意系统资源占用。 - 必须与[writeRawDataBuffer](#writerawdatabuffer)配对使用。
 
 **起始版本：** 23
 
@@ -2135,7 +2171,9 @@ try {
 readRemoteObject(): IRemoteObject
 ```
 
-从MessageSequence读取远程对象。此方法用于反序列化MessageSequence对象以生成IRemoteObject。远程对象按写入MessageSequence的顺序读取。调用此方法后，会从 MessageSequence缓冲区中读取已序列化的远程对象数据，并反序列化为IRemoteObject实例。读取操作会更新内部读指针位置。 - 读取前应确保缓冲区中有可读数据。 - 如果写入的是RemoteObject，读取得到的是RemoteProxy。 - 读取失败时会抛出异常，建议使用try-catch捕获。
+从MessageSequence读取远程对象。此方法用于反序列化MessageSequence对象以生成IRemoteObject。远程对象按写入MessageSequence的顺序读取。调用此方法后，会从 MessageSequence缓冲区中读取已序列化的远程对象数据，并反序列化为IRemoteObject实例。读取操作会更新内部读指针位置。
+
+- 读取前应确保缓冲区中有可读数据。 - 如果写入的是RemoteObject，读取得到的是RemoteProxy。 - 读取失败时会抛出异常，建议使用try-catch捕获。
 
 **起始版本：** 23
 
@@ -2193,7 +2231,9 @@ try {
 readRemoteObjectArray(objects: IRemoteObject[]): void
 ```
 
-从MessageSequence读取IRemoteObject对象数组，并将其写入到创建的空数组中。适用于接收批量传递的多个远程对象的场景，如批量获取服务代理、接收多个回调接口、多服务端点管理等。 - 需预先创建空数组且长度应与写入时的数组长度一致。 - 读取失败时会抛出异常，建议使用try-catch捕获。
+从MessageSequence读取IRemoteObject对象数组，并将其写入到创建的空数组中。适用于接收批量传递的多个远程对象的场景，如批量获取服务代理、接收多个回调接口、多服务端点管理等。
+
+- 需预先创建空数组且长度应与写入时的数组长度一致。 - 读取失败时会抛出异常，建议使用try-catch捕获。
 
 **起始版本：** 23
 
@@ -2308,7 +2348,9 @@ try {
 readShort(): int
 ```
 
-从MessageSequence实例中读取短整数值。 - 必须与[writeShort](#writeshort)配对使用。 - 注意写入时的取值范围[-2^15, 2^15-1]，超出此范围会导致数据截断。
+从MessageSequence实例中读取短整数值。
+
+- 必须与[writeShort](#writeshort)配对使用。 - 注意写入时的取值范围[-2^15, 2^15-1]，超出此范围会导致数据截断。
 
 **起始版本：** 23
 
@@ -2467,7 +2509,9 @@ try {
 readString(): string
 ```
 
-从MessageSequence实例中读取字符串值。 - 先读取长度，再读取内容。
+从MessageSequence实例中读取字符串值。
+
+- 先读取长度，再读取内容。
 
 **起始版本：** 23
 
@@ -2515,7 +2559,9 @@ try {
 readStringArray(dataIn: string[]): void
 ```
 
-从MessageSequence实例中读取字符串数组，并将其写入到创建的空数组中。 - 需预先创建空数组且长度应与写入时的数组长度一致。 - 读取后dataIn数组会被填充读取的字节数据。 - 读指针向后移动相应字节数。
+从MessageSequence实例中读取字符串数组，并将其写入到创建的空数组中。
+
+- 需预先创建空数组且长度应与写入时的数组长度一致。 - 读取后dataIn数组会被填充读取的字节数据。 - 读指针向后移动相应字节数。
 
 **起始版本：** 23
 
@@ -2562,7 +2608,9 @@ try {
 readStringArray(): string[]
 ```
 
-从MessageSequence实例中读取字符串数组。 - 返回新创建的数组，无需预先创建。 - 数组单个元素的长度范围0-40959字节。
+从MessageSequence实例中读取字符串数组。
+
+- 返回新创建的数组，无需预先创建。 - 数组单个元素的长度范围0-40959字节。
 
 **起始版本：** 23
 
@@ -2607,7 +2655,9 @@ try {
 reclaim(): void
 ```
 
-释放不再使用的MessageSequence对象。 - 必须与create()方法配对使用，调用create()创建MessageSequence对象后，必须在使用完毕后调用reclaim()释放资源。未及时调用reclaim()会导致内存资源泄漏。 - 调用后对象不能再被使用。 - 建议在finally块或任务结束时调用，确保资源释放。 - 不要在异步操作中跨线程释放。
+释放不再使用的MessageSequence对象。
+
+- 必须与create()方法配对使用，调用create()创建MessageSequence对象后，必须在使用完毕后调用reclaim()释放资源。未及时调用reclaim()会导致内存资源泄漏。 - 调用后对象不能再被使用。 - 建议在finally块或任务结束时调用，确保资源释放。 - 不要在异步操作中跨线程释放。
 
 **起始版本：** 23
 
@@ -2826,7 +2876,9 @@ try {
 writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void
 ```
 
-将ArrayBuffer类型数据写入MessageSequence对象。 - 此方法与[readArrayBuffer](#readarraybuffer)方法配对使用。 - 写入的typeCode必须与读取的typeCode一致，否则会导致数据异常。 - 调用顺序：先调用writeArrayBuffer()写入数据 → 再调用[readArrayBuffer](#readarraybuffer)读取数据。 - typeCode参数决定了数据的写入和读取方式。 - 读写typeCode不匹配会导致数据解析错误。 - 必须根据实际数据类型选择正确的[TypeCode](arkts-ipc-rpc-typecode-e.md)枚举值。
+将ArrayBuffer类型数据写入MessageSequence对象。
+
+- 此方法与[readArrayBuffer](#readarraybuffer)方法配对使用。 - 写入的typeCode必须与读取的typeCode一致，否则会导致数据异常。 - 调用顺序：先调用writeArrayBuffer()写入数据 → 再调用[readArrayBuffer](#readarraybuffer)读取数据。 - typeCode参数决定了数据的写入和读取方式。 - 读写typeCode不匹配会导致数据解析错误。 - 必须根据实际数据类型选择正确的[TypeCode](arkts-ipc-rpc-typecode-e.md)枚举值。
 
 **起始版本：** 23
 
@@ -2877,7 +2929,9 @@ try {
 writeAshmem(ashmem: Ashmem): void
 ```
 
-将指定的匿名共享对象写入此MessageSequence。 - 创建Ashmem对象：Ashmem.create()。 - 映射内存并写入数据：[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem) + [writeDataToAshmem](arkts-ipc-rpc-ashmem-c.md#writedatatoashmem)。 - 将Ashmem写入MessageSequence：writeAshmem()。 - 接收端读取Ashmem：[readAshmem](#readashmem)。 - 接收端映射内存并读取数据：mapReadWriteAshmem() + readDataFromAshmem()。 - 此方法与readAshmem()方法配对使用。 - 调用顺序：writeAshmem() → 传输MessageSequence → [readAshmem](#readashmem) → [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem) → [readDataFromAshmem](arkts-ipc-rpc-ashmem-c.md#readdatafromashmem)。 - 使用前需先创建Ashmem对象并写入数据。
+将指定的匿名共享对象写入此MessageSequence。
+
+- 创建Ashmem对象：Ashmem.create()。 - 映射内存并写入数据：[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem) + [writeDataToAshmem](arkts-ipc-rpc-ashmem-c.md#writedatatoashmem)。 - 将Ashmem写入MessageSequence：writeAshmem()。 - 接收端读取Ashmem：[readAshmem](#readashmem)。 - 接收端映射内存并读取数据：mapReadWriteAshmem() + readDataFromAshmem()。 - 此方法与readAshmem()方法配对使用。 - 调用顺序：writeAshmem() → 传输MessageSequence → [readAshmem](#readashmem) → [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem) → [readDataFromAshmem](arkts-ipc-rpc-ashmem-c.md#readdatafromashmem)。 - 使用前需先创建Ashmem对象并写入数据。
 
 **起始版本：** 23
 
@@ -2934,7 +2988,9 @@ try {
 writeBoolean(val: boolean): void
 ```
 
-将布尔值写入MessageSequence实例。 - 必须与[readBoolean](#readboolean)配对使用。 - 一次写入对应一次读取。
+将布尔值写入MessageSequence实例。
+
+- 必须与[readBoolean](#readboolean)配对使用。 - 一次写入对应一次读取。
 
 **起始版本：** 23
 
@@ -2978,7 +3034,9 @@ try {
 writeBooleanArray(booleanArray: boolean[]): void
 ```
 
-将布尔数组写入MessageSequence实例。 - 必须与[readBooleanArray](#readbooleanarray)配对使用。 - 读取数组长度必须与写入数组长度一致。
+将布尔数组写入MessageSequence实例。
+
+- 必须与[readBooleanArray](#readbooleanarray)配对使用。 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 23
 
@@ -3022,7 +3080,9 @@ try {
 writeByte(val: int): void
 ```
 
-将字节值写入MessageSequence实例。调用此方法后，字节值会被以8位无符号整数形式存入缓冲区当前写指针位置，并自动更新写指针。该方法适用于传输小范围整数或标志位数据。 - 存储范围:[0, 255](无符号)或[-128, 127](有符号)。 - 数据对齐方式为字节对齐。 - 数值必须在字节范围内，超出范围可能导致数据截断。 - 读取时必须使用[readByte](#readbyte)方法配对读取。 - 不适合传输大范围数值，大范围数值建议使用[writeInt](#writeint)/ [writeLong](#writelong)等。
+将字节值写入MessageSequence实例。调用此方法后，字节值会被以8位无符号整数形式存入缓冲区当前写指针位置，并自动更新写指针。该方法适用于传输小范围整数或标志位数据。
+
+- 存储范围:[0, 255](无符号)或[-128, 127](有符号)。 - 数据对齐方式为字节对齐。 - 数值必须在字节范围内，超出范围可能导致数据截断。 - 读取时必须使用[readByte](#readbyte)方法配对读取。 - 不适合传输大范围数值，大范围数值建议使用[writeInt](#writeint)/ [writeLong](#writelong)等。
 
 **起始版本：** 23
 
@@ -3066,7 +3126,9 @@ try {
 writeByteArray(byteArray: int[]): void
 ```
 
-将字节数组写入MessageSequence实例。 - 必须与[readByteArray](#readbytearray)配对使用。 - 读取数组长度必须与写入数组长度一致。
+将字节数组写入MessageSequence实例。
+
+- 必须与[readByteArray](#readbytearray)配对使用。 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 23
 
@@ -3111,7 +3173,9 @@ try {
 writeChar(val: int): void
 ```
 
-将单个字符值写入MessageSequence实例。 - 必须与[readChar](#readchar)配对使用。 - 一次写入对应一次读取。
+将单个字符值写入MessageSequence实例。
+
+- 必须与[readChar](#readchar)配对使用。 - 一次写入对应一次读取。
 
 **起始版本：** 23
 
@@ -3155,7 +3219,9 @@ try {
 writeCharArray(charArray: int[]): void
 ```
 
-将单个字符数组写入MessageSequence实例。 - 必须与[readCharArray](#readchararray)配对使用。 - 读取数组长度必须与写入数组长度一致。
+将单个字符数组写入MessageSequence实例。
+
+- 必须与[readCharArray](#readchararray)配对使用。 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 23
 
@@ -3199,7 +3265,9 @@ try {
 writeDouble(val: double): void
 ```
 
-将双精度浮点值写入MessageSequence实例。 - 必须与[readDouble](#readdouble)配对使用。 - 一次写入对应一次读取。
+将双精度浮点值写入MessageSequence实例。
+
+- 必须与[readDouble](#readdouble)配对使用。 - 一次写入对应一次读取。
 
 **起始版本：** 23
 
@@ -3243,7 +3311,9 @@ try {
 writeDoubleArray(doubleArray: double[]): void
 ```
 
-将双精度浮点数组写入MessageSequence实例。 - 必须与[readDoubleArray](#readdoublearray)配对使用。 - 读取数组长度必须与写入数组长度一致。
+将双精度浮点数组写入MessageSequence实例。
+
+- 必须与[readDoubleArray](#readdoublearray)配对使用。 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 23
 
@@ -3287,7 +3357,9 @@ try {
 writeFileDescriptor(fd: int): void
 ```
 
-写入文件描述符到MessageSequence。 调用此方法后，文件描述符会被封装并通过Binder机制跨进程传递。接收端可通过readFileDescriptor获取文件描述符并进行文件操作。 - 文件描述符通过Binder的FD传递机制跨进程传输。 - 接收端获得的是映射后的新文件描述符。 - 实际指向同一个文件资源。 - 支持普通文件、管道、socket等多种描述符。 - 文件描述符必须是有效的、已打开的描述符。 - 写入后原描述符仍然有效，需要业务自行管理。 - 建议使用dupFileDescriptor复制后再传递。 - 传递后接收端应及时使用，避免资源浪费。 - 读取后建议及时关闭，防止资源泄漏。
+写入文件描述符到MessageSequence。 调用此方法后，文件描述符会被封装并通过Binder机制跨进程传递。接收端可通过readFileDescriptor获取文件描述符并进行文件操作。
+
+- 文件描述符通过Binder的FD传递机制跨进程传输。 - 接收端获得的是映射后的新文件描述符。 - 实际指向同一个文件资源。 - 支持普通文件、管道、socket等多种描述符。 - 文件描述符必须是有效的、已打开的描述符。 - 写入后原描述符仍然有效，需要业务自行管理。 - 建议使用dupFileDescriptor复制后再传递。 - 传递后接收端应及时使用，避免资源浪费。 - 读取后建议及时关闭，防止资源泄漏。
 
 **起始版本：** 23
 
@@ -3378,7 +3450,9 @@ try {
 writeFloatArray(floatArray: double[]): void
 ```
 
-将双精度浮点数组写入MessageSequence实例。 - 必须与[readFloatArray](#readfloatarray)配对使用。 - 读取数组长度必须与写入数组长度一致。
+将双精度浮点数组写入MessageSequence实例。
+
+- 必须与[readFloatArray](#readfloatarray)配对使用。 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 23
 
@@ -3422,7 +3496,9 @@ try {
 writeInt(val: int): void
 ```
 
-将整数值写入MessageSequence实例。 调用此方法后，整数值会被以32位有符号整数形式存入缓冲区当前写指针位置，并自动更新写指针。该方法适用于传输标准整数数据。对于小范围数值建议使用 [writeByte](#writebyte)/[writeShort](#writeshort)提高效率；对于大范围数值建议 使用[writeLong](#writelong)。 - 必须与[readInt](#readint)配对使用。 - 一次写入对应一次读取 - 占用4字节(32位)存储空间。 - 采用系统默认字节序存储。 - 超出范围会导致数据截断或写入失败。
+将整数值写入MessageSequence实例。 调用此方法后，整数值会被以32位有符号整数形式存入缓冲区当前写指针位置，并自动更新写指针。该方法适用于传输标准整数数据。对于小范围数值建议使用 [writeByte](#writebyte)/[writeShort](#writeshort)提高效率；对于大范围数值建议 使用[writeLong](#writelong)。
+
+- 必须与[readInt](#readint)配对使用。 - 一次写入对应一次读取 - 占用4字节(32位)存储空间。 - 采用系统默认字节序存储。 - 超出范围会导致数据截断或写入失败。
 
 **起始版本：** 23
 
@@ -3469,7 +3545,9 @@ try {
 writeIntArray(intArray: int[]): void
 ```
 
-将整数数组写入MessageSequence实例。 - 必须与[readIntArray](#readintarray)配对使用。 - 读取数组长度必须与写入数组长度一致。
+将整数数组写入MessageSequence实例。
+
+- 必须与[readIntArray](#readintarray)配对使用。 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 23
 
@@ -3513,7 +3591,9 @@ try {
 writeInterfaceToken(token: string): void
 ```
 
-将接口描述符写入MessageSequence对象，远端对象可使用该信息校验本次通信。适用于需要验证通信双方接口一致性的场景，如跨进程服务调用、安全通信验证以及标识服务端提供的接口类型。建议使用唯一且有意义的描述符字符串（如" com.example.service"），避免使用敏感信息，长度应小于40960。调用此方法后，接口描述符字符串会被序列化并存入MessageSequence缓冲区。远端在接收到通信请求后，可读取该描述符来验证请求来源的合法 性。 - 必须与[readInterfaceToken](#readinterfacetoken)配对使用。 - 长度超过限制会抛出参数错误异常。
+将接口描述符写入MessageSequence对象，远端对象可使用该信息校验本次通信。适用于需要验证通信双方接口一致性的场景，如跨进程服务调用、安全通信验证以及标识服务端提供的接口类型。建议使用唯一且有意义的描述符字符串（如" com.example.service"），避免使用敏感信息，长度应小于40960。调用此方法后，接口描述符字符串会被序列化并存入MessageSequence缓冲区。远端在接收到通信请求后，可读取该描述符来验证请求来源的合法 性。
+
+- 必须与[readInterfaceToken](#readinterfacetoken)配对使用。 - 长度超过限制会抛出参数错误异常。
 
 **起始版本：** 23
 
@@ -3557,7 +3637,9 @@ try {
 writeLong(val: long): void
 ```
 
-将长整数值写入MessageSequence实例。 - 必须与[readLong](#readlong)配对使用。 - 一次写入对应一次读取。
+将长整数值写入MessageSequence实例。
+
+- 必须与[readLong](#readlong)配对使用。 - 一次写入对应一次读取。
 
 **起始版本：** 23
 
@@ -3601,7 +3683,9 @@ try {
 writeLongArray(longArray: long[]): void
 ```
 
-将长整数数组写入MessageSequence实例。 - 必须与[readLongArray](#readlongarray)配对使用。 - 读取数组长度必须与写入数组长度一致。
+将长整数数组写入MessageSequence实例。
+
+- 必须与[readLongArray](#readlongarray)配对使用。 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 23
 
@@ -3645,7 +3729,9 @@ try {
 writeNoException(): void
 ```
 
-向MessageSequence写入“指示未发生异常”的信息。通常在IPC/RPC通信的服务端实现以及onRemoteMessageRequest回调中调用。 - 此方法与[readException](#readexception)方法配对使用。 - 服务端在处理请求完成后，应调用writeNoException()写入未发生异常的信息。 - 客户端在收到响应后，应调用[readException](#readexception)读取异常信息。 - 如果服务端未调用writeNoException()，客户端调用[readException](#readexception)会读取失败。
+向MessageSequence写入“指示未发生异常”的信息。通常在IPC/RPC通信的服务端实现以及onRemoteMessageRequest回调中调用。
+
+- 此方法与[readException](#readexception)方法配对使用。 - 服务端在处理请求完成后，应调用writeNoException()写入未发生异常的信息。 - 客户端在收到响应后，应调用[readException](#readexception)读取异常信息。 - 如果服务端未调用writeNoException()，客户端调用[readException](#readexception)会读取失败。
 
 **起始版本：** 23
 
@@ -3696,7 +3782,9 @@ class TestRemoteObject extends rpc.RemoteObject {
 writeParcelable(val: Parcelable): void
 ```
 
-将自定义序列化对象写入MessageSequence实例。调用此方法后，会调用Parcelable对象的marshalling方法，将对象的成员变量逐个序列化写入MessageSequence。该方法支持传输自定义数据结构对象 适用于传输复杂数据结构、业务对象、配置信息等场景。 - Parcelable接口定义了序列化和反序列化的标准方法。 - marshalling负责将对象状态写入MessageSequence。 - unmarshalling负责从MessageSequence恢复对象状态。 - 业务需自行实现具体的序列化逻辑。 - 必须传入实现了Parcelable接口的对象。 - marshalling方法必须正确实现所有成员变量的写入。 - 序列化顺序必须与反序列化顺序一致。 - 建议在marshalling中处理异常情况。 - 复杂对象可能占用较多缓冲区空间。
+将自定义序列化对象写入MessageSequence实例。调用此方法后，会调用Parcelable对象的marshalling方法，将对象的成员变量逐个序列化写入MessageSequence。该方法支持传输自定义数据结构对象 适用于传输复杂数据结构、业务对象、配置信息等场景。
+
+- Parcelable接口定义了序列化和反序列化的标准方法。 - marshalling负责将对象状态写入MessageSequence。 - unmarshalling负责从MessageSequence恢复对象状态。 - 业务需自行实现具体的序列化逻辑。 - 必须传入实现了Parcelable接口的对象。 - marshalling方法必须正确实现所有成员变量的写入。 - 序列化顺序必须与反序列化顺序一致。 - 建议在marshalling中处理异常情况。 - 复杂对象可能占用较多缓冲区空间。
 
 **起始版本：** 23
 
@@ -3760,7 +3848,9 @@ try {
 writeParcelableArray(parcelableArray: Parcelable[]): void
 ```
 
-将可序列化对象数组写入MessageSequence实例。适用于批量传输多个自定义数据结构对象的场景，如传输多条业务记录、批量配置信息、多个实体对象等。 - 必须与[readParcelableArray](#readparcelablearray)配对使用。 - 读取数组长度必须与写入数组长度一致。
+将可序列化对象数组写入MessageSequence实例。适用于批量传输多个自定义数据结构对象的场景，如传输多条业务记录、批量配置信息、多个实体对象等。
+
+- 必须与[readParcelableArray](#readparcelablearray)配对使用。 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 23
 
@@ -3827,7 +3917,13 @@ try {
 writeRawData(rawData: number[], size: number): void
 ```
 
-将原始数据写入MessageSequence对象。 &gt; **说明：** &gt; &gt; 该接口是一次性接口，不允许在一次parcel通信中多次调用该接口。 &gt; &gt; 该接口在传输数据时，当数据量较大时（超过32KB），会使用共享内存传输数据，此时需注意selinux配置。
+将原始数据写入MessageSequence对象。
+
+> **说明：**
+> 
+> 该接口是一次性接口，不允许在一次parcel通信中多次调用该接口。
+> 
+> 该接口在传输数据时，当数据量较大时（超过32KB），会使用共享内存传输数据，此时需注意selinux配置。
 
 **起始版本：** 9
 
@@ -3877,7 +3973,13 @@ try {
 writeRawDataBuffer(rawData: ArrayBuffer, size: int): void
 ```
 
-将原始数据写入MessageSequence对象。 &gt; **说明：** &gt; &gt; 该接口是一次性接口，不允许在一次parcel通信中多次调用该接口。 &gt; &gt; 该接口在传输数据时，当数据量较大时（超过32KB），会使用共享内存传输数据，此时需注意selinux配置。
+将原始数据写入MessageSequence对象。
+
+> **说明：**
+> 
+> 该接口是一次性接口，不允许在一次parcel通信中多次调用该接口。
+> 
+> 该接口在传输数据时，当数据量较大时（超过32KB），会使用共享内存传输数据，此时需注意selinux配置。
 
 **起始版本：** 23
 
@@ -3928,7 +4030,9 @@ try {
 writeRemoteObject(obj: IRemoteObject): void
 ```
 
-序列化远程对象并将其写入[MessageSequence](#messagesequence)对象。调用此方法后，IRemoteObject对象会被序列化为特定格式并存入MessageSequence的缓冲区 中，同时会更新内部写指针位置。该序列化对象可在接收端通过readRemoteObject方法反序列化读取。 - 只能写入有效的IRemoteObject对象，传入无效对象会抛出异常。 - 序列化后的对象占用固定大小的缓冲区空间。 - 写入的对象必须与对应的readRemoteObject方法配对使用。
+序列化远程对象并将其写入[MessageSequence](#messagesequence)对象。调用此方法后，IRemoteObject对象会被序列化为特定格式并存入MessageSequence的缓冲区 中，同时会更新内部写指针位置。该序列化对象可在接收端通过readRemoteObject方法反序列化读取。
+
+- 只能写入有效的IRemoteObject对象，传入无效对象会抛出异常。 - 序列化后的对象占用固定大小的缓冲区空间。 - 写入的对象必须与对应的readRemoteObject方法配对使用。
 
 **起始版本：** 23
 
@@ -3985,7 +4089,9 @@ try {
 writeRemoteObjectArray(objectArray: IRemoteObject[]): void
 ```
 
-将IRemoteObject对象数组写入MessageSequence。适用于需要传递多个远程对象的场景，如批量注册多个服务代理、传递多个回调接口、多服务端点管理等。 - 必须与[readRemoteObjectArray](#readremoteobjectarray)配对使用。 - 读取数组长度必须与写入数组长度一致。
+将IRemoteObject对象数组写入MessageSequence。适用于需要传递多个远程对象的场景，如批量注册多个服务代理、传递多个回调接口、多服务端点管理等。
+
+- 必须与[readRemoteObjectArray](#readremoteobjectarray)配对使用。 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 23
 
@@ -4041,7 +4147,9 @@ try {
 writeShort(val: int): void
 ```
 
-将短整数值写入MessageSequence实例。 - 超出范围会导致数据截断。 - 必须与[readShort](#readshort)配对使用。 - 一次写入对应一次读取。
+将短整数值写入MessageSequence实例。
+
+- 超出范围会导致数据截断。 - 必须与[readShort](#readshort)配对使用。 - 一次写入对应一次读取。
 
 **起始版本：** 23
 
@@ -4085,7 +4193,9 @@ try {
 writeShortArray(shortArray: int[]): void
 ```
 
-将短整数数组写入MessageSequence实例。 - 必须与[readShortArray](#readshortarray)配对使用。 - 读取数组长度必须与写入数组长度一致。
+将短整数数组写入MessageSequence实例。
+
+- 必须与[readShortArray](#readshortarray)配对使用。 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 23
 
@@ -4129,7 +4239,9 @@ try {
 writeString(val: string): void
 ```
 
-将字符串值写入MessageSequence实例。调用此方法后，字符串会被序列化存入缓冲区。写入时会先存储字符串长度，再存储字节数据。 - 此方法与[readString](#readstring)方法配对使用。 - 先写入长度，再写入内容。 - 支持多语言字符集。 - 长度信息便于[readString](#readstring)确定读取边界。 - 注意区分字符数和字节数，中文字符占用更多字节。 - 长字符串会占用较多缓冲区空间。 - 空字符串也可以正常写入。
+将字符串值写入MessageSequence实例。调用此方法后，字符串会被序列化存入缓冲区。写入时会先存储字符串长度，再存储字节数据。
+
+- 此方法与[readString](#readstring)方法配对使用。 - 先写入长度，再写入内容。 - 支持多语言字符集。 - 长度信息便于[readString](#readstring)确定读取边界。 - 注意区分字符数和字节数，中文字符占用更多字节。 - 长字符串会占用较多缓冲区空间。 - 空字符串也可以正常写入。
 
 **起始版本：** 23
 
@@ -4176,7 +4288,9 @@ try {
 writeStringArray(stringArray: string[]): void
 ```
 
-将字符串数组写入MessageSequence实例。 - 必须与[readStringArray](#readstringarray)配对使用。 - 读取数组长度必须与写入数组长度一致。
+将字符串数组写入MessageSequence实例。
+
+- 必须与[readStringArray](#readstringarray)配对使用。 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 23
 

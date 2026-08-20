@@ -1,6 +1,6 @@
 # @ohos.wifiManager
 
-提供操作或管理WLAN的方法。
+提供操作或管理WLAN的方法。 @namespace wifiManager
 
 **起始版本：** 23
 
@@ -73,7 +73,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 | [offWifiConnectionChange](arkts-connectivity-wifimanager-offwificonnectionchange-f.md) | 取消注册WLAN连接状态改变事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
 | [offWifiRssiChange](arkts-connectivity-wifimanager-offwifirssichange-f.md) | 取消注册WLAN接收信号强度(RSSI)变化事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
 | [offWifiScanStateChange](arkts-connectivity-wifimanager-offwifiscanstatechange-f.md) | 取消注册扫描状态改变事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
-| [offWifiStateChange](arkts-connectivity-wifimanager-offwifistatechange-f.md) | 取消注册WLAN状态改变事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
+| [offWifiStateChange](arkts-connectivity-wifimanager-offwifistatechange-f.md) | 取消注册WLAN状态改变事件。 |
 | [off_hotspotStateChange](arkts-connectivity-wifimanager-offhotspotstatechange-f.md) | 取消注册热点状态改变事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
 | [off_p2pConnectionChange](arkts-connectivity-wifimanager-offp2pconnectionchange-f.md) | 取消注册P2P连接状态改变事件。 |
 | [off_p2pDeviceChange](arkts-connectivity-wifimanager-offp2pdevicechange-f.md) | 取消注册P2P本端设备状态改变事件。 |
@@ -84,7 +84,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 | [off_wifiConnectionChange](arkts-connectivity-wifimanager-offwificonnectionchange-f.md) | 取消注册WLAN连接状态改变事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
 | [off_wifiRssiChange](arkts-connectivity-wifimanager-offwifirssichange-f.md) | 取消注册WLAN接收信号强度(RSSI)变化事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
 | [off_wifiScanStateChange](arkts-connectivity-wifimanager-offwifiscanstatechange-f.md) | 取消注册扫描状态改变事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
-| [off_wifiStateChange](arkts-connectivity-wifimanager-offwifistatechange-f.md) | 取消注册WLAN状态改变事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
+| [off_wifiStateChange](arkts-connectivity-wifimanager-offwifistatechange-f.md) | 取消注册WLAN状态改变事件。 |
 | [onHotspotStateChange](arkts-connectivity-wifimanager-onhotspotstatechange-f.md) | 注册热点状态改变事件。 |
 | [onP2pConnectionChange](arkts-connectivity-wifimanager-onp2pconnectionchange-f.md) | 注册P2P连接状态改变事件。 |
 | [onP2pDeviceChange](arkts-connectivity-wifimanager-onp2pdevicechange-f.md) | 注册P2P本端设备状态改变事件。 |
@@ -216,30 +216,30 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 | 名称 | 说明 |
 | --- | --- |
 | [ConnState](arkts-connectivity-wifimanager-connstate-e.md) | WLAN连接状态枚举。 |
-| [DeviceAddressType](arkts-connectivity-wifimanager-deviceaddresstype-e.md) | WLAN设备地址（mac/bssid）类型。 |
-| [EapMethod](arkts-connectivity-wifimanager-eapmethod-e.md) | WLAN EAP认证方式。 |
+| [DeviceAddressType](arkts-connectivity-wifimanager-deviceaddresstype-e.md) | WLAN设备地址（mac/bssid）类型。 @enum { int } |
+| [EapMethod](arkts-connectivity-wifimanager-eapmethod-e.md) | WLAN EAP认证方式。 @enum { int } |
 | [GroupOwnerBand](arkts-connectivity-wifimanager-groupownerband-e.md) | P2P群组带宽。 |
 | [P2pConnectState](arkts-connectivity-wifimanager-p2pconnectstate-e.md) | P2P连接状态。 |
 | [P2pDeviceStatus](arkts-connectivity-wifimanager-p2pdevicestatus-e.md) | P2P设备状态。 |
-| [Phase2Method](arkts-connectivity-wifimanager-phase2method-e.md) | WLAN Phase 2认证方式。 |
-| [WapiPskType](arkts-connectivity-wifimanager-wapipsktype-e.md) | 描述WAPI预共享密钥类型。 |
-| [WifiBandType](arkts-connectivity-wifimanager-wifibandtype-e.md) | WLAN频段类型。 |
+| [Phase2Method](arkts-connectivity-wifimanager-phase2method-e.md) | WLAN Phase 2认证方式。 @enum { int } |
+| [WapiPskType](arkts-connectivity-wifimanager-wapipsktype-e.md) | 描述WAPI预共享密钥类型。 @enum { int } |
+| [WifiBandType](arkts-connectivity-wifimanager-wifibandtype-e.md) | WLAN频段类型。 @enum { int } |
 | [WifiCapability](arkts-connectivity-wifimanager-wificapability-e.md) | WLAN能力 |
-| [WifiCategory](arkts-connectivity-wifimanager-wificategory-e.md) | WLAN类别。 |
-| [WifiChannelWidth](arkts-connectivity-wifimanager-wifichannelwidth-e.md) | 描述WLAN信道带宽。 |
-| [WifiLinkType](arkts-connectivity-wifimanager-wifilinktype-e.md) | WLAN连接类型。 |
-| [WifiSecurityType](arkts-connectivity-wifimanager-wifisecuritytype-e.md) | 描述WLAN加密类型。 |
-| [WifiStandard](arkts-connectivity-wifimanager-wifistandard-e.md) | WLAN标准。 |
+| [WifiCategory](arkts-connectivity-wifimanager-wificategory-e.md) | WLAN类别。 @enum { int } |
+| [WifiChannelWidth](arkts-connectivity-wifimanager-wifichannelwidth-e.md) | 描述WLAN信道带宽。 @enum { int } |
+| [WifiLinkType](arkts-connectivity-wifimanager-wifilinktype-e.md) | WLAN连接类型。 @enum { int } |
+| [WifiSecurityType](arkts-connectivity-wifimanager-wifisecuritytype-e.md) | 描述WLAN加密类型。 @enum { int } |
+| [WifiStandard](arkts-connectivity-wifimanager-wifistandard-e.md) | WLAN标准。 @enum { int } |
 
 <!--Del-->
 ### 枚举（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [DisconnectedReason](arkts-connectivity-wifimanager-disconnectedreason-e-sys.md) | WLAN断开原因。 |
+| [DisconnectedReason](arkts-connectivity-wifimanager-disconnectedreason-e-sys.md) | WLAN断开原因。 @enum { int } |
 | [IpType](arkts-connectivity-wifimanager-iptype-e-sys.md) | WLAN IP类型枚举。 |
-| [ProxyMethod](arkts-connectivity-wifimanager-proxymethod-e-sys.md) | WLAN代理方式。 |
+| [ProxyMethod](arkts-connectivity-wifimanager-proxymethod-e-sys.md) | WLAN代理方式。 @enum { int } |
 | [SuppState](arkts-connectivity-wifimanager-suppstate-e-sys.md) | supplicant状态枚举。 |
-| [WifiDetailState](arkts-connectivity-wifimanager-wifidetailstate-e-sys.md) | WLAN详细状态。 |
+| [WifiDetailState](arkts-connectivity-wifimanager-wifidetailstate-e-sys.md) | WLAN详细状态。 @enum { int } WifiDetailState |
 <!--DelEnd-->
 

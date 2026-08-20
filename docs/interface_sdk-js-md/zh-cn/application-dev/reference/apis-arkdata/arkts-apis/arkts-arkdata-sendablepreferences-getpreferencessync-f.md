@@ -12,7 +12,9 @@ import { sendablePreferences } from '@kit.ArkData';
 function getPreferencesSync(context: Context, options: Options): Preferences
 ```
 
-获取Preferences实例，此为同步接口。 应用首次调用该接口获取某个Preferences实例后，该实例会被缓存起来，后续再次调用时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。
+获取Preferences实例，此为同步接口。
+
+应用首次调用该接口获取某个Preferences实例后，该实例会被缓存起来，后续再次调用时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。
 
 **起始版本：** 12
 
@@ -41,9 +43,9 @@ function getPreferencesSync(context: Context, options: Options): Preferences
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
 | [15501001](../errorcode-preferences.md#15501001-上下文环境非stage模型) | The operations is supported in stage mode only. |
 | [15501002](../errorcode-preferences.md#15501002-options中传入的datagroupid参数非法) | Invalid dataGroupId. |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
 
 **示例**
 

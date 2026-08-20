@@ -174,6 +174,8 @@
   - [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md)
 - [@ohos.app.ability.ApplicationStateChangeCallback](arkts-app-ability-applicationstatechangecallback.md)
   - [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md)
+- [@ohos.app.ability.ApplicationStateChangeCallback](arkts-app-ability-applicationstatechangecallback.md)
+  - [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md)
 - [@ohos.app.ability.AtomicServiceOptions](arkts-app-ability-atomicserviceoptions.md)
   - [AtomicServiceOptions](arkts-ability-app-ability-atomicserviceoptions-atomicserviceoptions-c.md)
 <!--Del-->
@@ -197,6 +199,11 @@
   - [AbilityStartFailureCode](arkts-ability-app-ability-completionhandlerforabilitystartcallback-abilitystartfailurecode-e.md)
 - [@ohos.app.ability.CompletionHandlerForAtomicService](arkts-app-ability-completionhandlerforatomicservice.md)
   - [CompletionHandlerForAtomicService](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md)
+  - [FailureCode](arkts-ability-app-ability-completionhandlerforatomicservice-failurecode-e.md)
+- [@ohos.app.ability.CompletionHandlerForAtomicService](arkts-app-ability-completionhandlerforatomicservice.md)
+  - [CompletionHandlerForAtomicService](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md)
+  - [OnAtomicServiceRequestFailureFn](arkts-ability-onatomicservicerequestfailurefn-t.md)
+  - [OnAtomicServiceRequestSuccessFn](arkts-ability-onatomicservicerequestsuccessfn-t.md)
   - [FailureCode](arkts-ability-app-ability-completionhandlerforatomicservice-failurecode-e.md)
 - [@ohos.app.ability.Configuration](arkts-app-ability-configuration.md)
   - [Configuration](arkts-ability-app-ability-configuration-configuration-i.md)
@@ -1848,6 +1855,8 @@
   - [PageNodeInfo](arkts-pagenodeinfo.md)<!--DelEnd-->
     <!--Del-->
     - [PageNodeInfo(系统接口)](arkts-ability-pagenodeinfo-i-sys.md)<!--DelEnd-->
+  - [ProcessData](arkts-processdata.md)
+    - [ProcessData](arkts-ability-processdata-c.md)
   - [ProcessInformation](arkts-processinformation.md)
     - [ProcessInformation](arkts-ability-processinformation-i.md)
   - [ProcessRunningInfo](arkts-processrunninginfo.md)

@@ -1,6 +1,10 @@
 # ConnectionProperties
 
-网络连接信息。 &gt; **注意：** &gt; &gt; linkAddresses、routes和dnses可能为空，需要做好空值保护，建议使用前先判断对象是否存在。
+网络连接信息。
+
+> **注意：**
+> 
+> linkAddresses、routes和dnses可能为空，需要做好空值保护，建议使用前先判断对象是否存在。
 
 **起始版本：** 23
 

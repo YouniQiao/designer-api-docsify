@@ -12,7 +12,9 @@ import { privacyManager } from '@kit.AbilityKit';
 function startUsingPermission(tokenID: int, permissionName: Permissions): Promise<void>
 ```
 
-A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event (refer to [on](arkts-ability-privacymanager-onactivestatechange-f-sys.md) for the subscription method). This API uses a promise to return the result. After starting to use a permission, [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) must be called to stop using the permission when the usage ends.
+A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event (refer to [on](arkts-ability-privacymanager-onactivestatechange-f-sys.md) for the subscription method). This API uses a promise to return the result.
+
+After starting to use a permission, [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) must be called to stop using the permission when the usage ends.
 
 **Since:** 9
 
@@ -41,15 +43,15 @@ A system application can call this API to report the application's permission us
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, or the type of the specified tokenID is not of the application type. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, or the type of the specified tokenID is not of the application type. |
 | [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) | (Deprecated in 12) The specified tokenID does not exist or refer to an application process. |
 | [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist or is not a user_grant permission. |
 | [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | The API is used repeatedly with the same input. It means the application specified by the tokenID has been using the specified permission. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
+| [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
 
 **Examples**
 
@@ -77,7 +79,9 @@ function startUsingPermission(
   ): Promise<void>
 ```
 
-A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event (refer to [on](arkts-ability-privacymanager-onactivestatechange-f-sys.md) for the subscription method). This API uses a promise to return the result. After starting to use a permission, [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) must be called to stop using the permission when the usage ends.
+A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event (refer to [on](arkts-ability-privacymanager-onactivestatechange-f-sys.md) for the subscription method). This API uses a promise to return the result.
+
+After starting to use a permission, [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) must be called to stop using the permission when the usage ends.
 
 **Since:** 23
 
@@ -108,14 +112,14 @@ A system application can call this API to report the application's permission us
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, the type of the specified tokenID is not of the application type, or usedType is invalid. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, the type of the specified tokenID is not of the application type, or usedType is invalid. |
 | [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist or is not a user_grant permission. |
 | [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | The API is used repeatedly with the same input. It means the application specified by the tokenID has been using the specified permission. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
+| [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
 
 **Examples**
 
@@ -167,7 +171,11 @@ function startUsingPermission(
    ): Promise<void>
 ```
 
-A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event (refer to [on](arkts-ability-privacymanager-onactivestatechange-f-sys.md) for the subscription method). This API uses a promise to return the result. After starting to use a permission, [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) must be called to stop using the permission when the usage ends. When a pid is passed in, the pid must be the same as the pid passed into [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md). If the pairing relationship is not satisfied, error code 12100004 is returned.
+A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event (refer to [on](arkts-ability-privacymanager-onactivestatechange-f-sys.md) for the subscription method). This API uses a promise to return the result.
+
+After starting to use a permission, [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) must be called to stop using the permission when the usage ends.
+
+When a pid is passed in, the pid must be the same as the pid passed into [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md). If the pairing relationship is not satisfied, error code 12100004 is returned.
 
 **Since:** 26.0.0
 
@@ -201,13 +209,13 @@ A system application can call this API to report the application's permission us
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, the type of the specified tokenID is not of the application type, usedType is invalid, or the enhancedIdentity in PermissionUsingOptions exceeds 48 characters. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, the type of the specified tokenID is not of the application type, usedType is invalid, or the enhancedIdentity in PermissionUsingOptions exceeds 48 characters. |
 | [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist or is not a user_grant permission. |
 | [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | The API is used repeatedly with the same input. It means the application specified by the tokenID has been using the specified permission. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
+| [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
 
 
 ## startUsingPermission
@@ -220,7 +228,9 @@ function startUsingPermission(
   ): void
 ```
 
-A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event (refer to [on](arkts-ability-privacymanager-onactivestatechange-f-sys.md) for the subscription method). This API uses an asynchronous callback to return the result. After starting to use a permission, [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) must be called to stop using the permission when the usage ends.
+A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event (refer to [on](arkts-ability-privacymanager-onactivestatechange-f-sys.md) for the subscription method). This API uses an asynchronous callback to return the result.
+
+After starting to use a permission, [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) must be called to stop using the permission when the usage ends.
 
 **Since:** 23
 
@@ -244,15 +254,15 @@ A system application can call this API to report the application's permission us
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, or the type of the specified tokenID is not of the application type. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, or the type of the specified tokenID is not of the application type. |
 | [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) | (Deprecated in 12) The specified tokenID does not exist or refer to an application process. |
 | [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist or is not a user_grant permission. |
 | [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | The API is used repeatedly with the same input. It means the application specified by the tokenID has been using the specified permission. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
+| [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
 
 **Examples**
 

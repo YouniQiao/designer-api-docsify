@@ -16,7 +16,9 @@
 getStyledString(): MutableStyledString | undefined
 ```
 
-ArkTS-Sta: getStyledString(): MutableStyledString | undefined 获取富文本组件显示的属性字符串。
+ArkTS-Sta: getStyledString(): MutableStyledString | undefined
+
+获取富文本组件显示的属性字符串。
 
 **起始版本：** 23
 

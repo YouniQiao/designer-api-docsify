@@ -53,7 +53,7 @@ Obtains detailed information about a system error code.
 
 **Deprecated since:** 9
 
-**Substitutes:** [errnoToString](../../apis-na/arkts-apis/arkts-na-util-errnotostring-f.md)
+**Substitutes:** [errnoToString](arkts-arkts-util-errnotostring-f.md)
 
 <!--Device-util-function getErrorString(errno: number): string--><!--Device-util-function getErrorString(errno: number): string-End-->
 

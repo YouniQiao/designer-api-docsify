@@ -1,6 +1,6 @@
 # DistanceMeasurementConfigParams（系统接口）
 
-测距接口的输入参数配置。根据不同的参数配置，执行对应的算法。
+测距接口的输入参数配置。根据不同的参数配置，执行对应的算法。 @interface DistanceMeasurementConfigParams
 
 **起始版本：** 23
 

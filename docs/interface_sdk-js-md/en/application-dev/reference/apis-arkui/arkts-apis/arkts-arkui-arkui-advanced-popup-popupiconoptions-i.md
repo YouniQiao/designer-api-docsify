@@ -21,7 +21,9 @@ import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUI';
 borderRadius?: Length | BorderRadiuses
 ```
 
-Rounded corner of the icon. Default value: **\$r('sys.float.ohos_id_corner_radius_default_s')**
+Rounded corner of the icon.
+
+Default value: **\$r('sys.float.ohos_id_corner_radius_default_s')**
 
 **Type:** Length \| BorderRadiuses
 
@@ -41,7 +43,9 @@ Rounded corner of the icon. Default value: **\$r('sys.float.ohos_id_corner_radiu
 fillColor?: ResourceColor
 ```
 
-Icon fill color. This property applies only to an SVG image. By default, the icon color is not changed.
+Icon fill color. This property applies only to an SVG image.
+
+By default, the icon color is not changed.
 
 **Type:** ResourceColor
 
@@ -61,7 +65,9 @@ Icon fill color. This property applies only to an SVG image. By default, the ico
 height?: Dimension
 ```
 
-Icon height. Default value: **32VP**
+Icon height.
+
+Default value: **32VP**
 
 **Type:** Dimension
 
@@ -101,7 +107,9 @@ Icon content.
 width?: Dimension
 ```
 
-Icon width. Default value: **32VP**
+Icon width.
+
+Default value: **32VP**
 
 **Type:** Dimension
 

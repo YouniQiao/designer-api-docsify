@@ -21,7 +21,9 @@ import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExten
 onAccessibilityConnect(): void
 ```
 
-连接无障碍服务成功后的回调函数。 用户启用AccessibilityExtensionAbility时，系统服务完成连接后回调该接口，通知Ability已成功连接。开发者可在该方法中完成初始化业务逻辑操作，该方法可选择性重写。
+连接无障碍服务成功后的回调函数。
+
+用户启用AccessibilityExtensionAbility时，系统服务完成连接后回调该接口，通知Ability已成功连接。开发者可在该方法中完成初始化业务逻辑操作，该方法可选择性重写。
 
 **起始版本：** 23
 
@@ -58,7 +60,9 @@ class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
 onAccessibilityDisconnect(): void
 ```
 
-断开无障碍服务成功后的回调函数。 用户停用AccessibilityExtensionAbility时，系统服务完成断开连接后回调该接口，可在该方法中执行资源回收和退出业务操作。该方法可选择性重写。
+断开无障碍服务成功后的回调函数。
+
+用户停用AccessibilityExtensionAbility时，系统服务完成断开连接后回调该接口，可在该方法中执行资源回收和退出业务操作。该方法可选择性重写。
 
 **起始版本：** 23
 

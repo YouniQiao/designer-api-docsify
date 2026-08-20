@@ -2,6 +2,8 @@
 
 Defines the content modifier.
 
+@interface ContentModifier
+
 **Since:** 12
 
 <!--Device-unnamed-declare interface ContentModifier--><!--Device-unnamed-declare interface ContentModifier-End-->

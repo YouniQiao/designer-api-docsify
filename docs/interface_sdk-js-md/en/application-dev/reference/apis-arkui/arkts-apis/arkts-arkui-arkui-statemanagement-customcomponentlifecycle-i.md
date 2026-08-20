@@ -1,6 +1,6 @@
 # CustomComponentLifecycle
 
-**CustomComponentLifecycle** monitors the lifecycle changes of a custom component.
+*CustomComponentLifecycle** monitors the lifecycle changes of a custom component.
 
 **Since:** 23
 

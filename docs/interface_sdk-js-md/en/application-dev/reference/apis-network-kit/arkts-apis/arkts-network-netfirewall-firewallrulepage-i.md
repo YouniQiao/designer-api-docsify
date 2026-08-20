@@ -1,4 +1,4 @@
-# FirewallRulePage(Network Firewall)
+# FirewallRulePage
 
 Defines the pagination structure for firewall rules.
 

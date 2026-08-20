@@ -1,8 +1,12 @@
 # Span
 
-作为Text、ContainerSpan组件的子组件，用于显示行内文本，支持对文本的字体、颜色、大小等样式进行细粒度设置。适用于在同一行文本中混合显示 不同样式的场景，如不同字体颜色的文本、添加装饰线或阴影效果等。 > **说明：** > > 该组件从API version 10开始支持继承父组件Text的属性，即如果子组件未设置属性且父组件设置属性，则继承父组件设置的属性。支持继承的属性仅包括：fontColor、fontSize、fontStyle、 > fontWeight、decoration、letterSpacing、textCase、fontFamily、textShadow。 > > 不支持[通用属性]](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md)。若需设置通用属性， > 应使用Text进行设置，或改用属性字符串中的CustomSpan自行绘制。 > > [通用事件](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md)只支持点击事件 > onClick和悬浮事件 > onHover。
+作为Text、ContainerSpan组件的子组件，用于显示行内文本，支持对文本的字体、颜色、大小等样式进行细粒度设置。适用于在同一行文本中混合显示 不同样式的场景，如不同字体颜色的文本、添加装饰线或阴影效果等。
 
-## 子组件 无
+> **说明：** > > 该组件从API version 10开始支持继承父组件Text的属性，即如果子组件未设置属性且父组件设置属性，则继承父组件设置的属性。支持继承的属性仅包括：fontColor、fontSize、fontStyle、 > fontWeight、decoration、letterSpacing、textCase、fontFamily、textShadow。 > > 不支持[通用属性]](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md)。若需设置通用属性， > 应使用Text进行设置，或改用属性字符串中的CustomSpan自行绘制。 > > [通用事件](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md)只支持点击事件 > onClick和悬浮事件 > onHover。
+
+## 子组件
+
+无
 
 ## Span
 
@@ -34,5 +38,4 @@ Span(value: string | Resource)
 
 | 名称 | 说明 |
 | --- | --- |
-| [TextBackgroundStyle](arkts-arkui-textbackgroundstyle-i.md) | 定义Span的背景样式。 |
 

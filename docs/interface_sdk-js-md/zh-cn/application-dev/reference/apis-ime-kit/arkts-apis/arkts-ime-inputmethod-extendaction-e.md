@@ -1,5 +1,7 @@
 # ExtendAction
 
+@brief 编辑框中文本的扩展编辑操作类型，如剪切、复制等。
+
 **起始版本：** 23
 
 <!--Device-inputMethod-export enum ExtendAction--><!--Device-inputMethod-export enum ExtendAction-End-->
@@ -11,6 +13,8 @@
 ```TypeScript
 SELECT_ALL = 0
 ```
+
+@brief 全选。 <br> <br>使用场景：输入法请求全选编辑框中的文本时使用。
 
 **起始版本：** 23
 
@@ -24,6 +28,8 @@ SELECT_ALL = 0
 CUT = 3
 ```
 
+@brief 剪切。 <br> <br>使用场景：输入法请求剪切选中的文本时使用，将选中文本复制到剪贴板并删除原文本。
+
 **起始版本：** 23
 
 <!--Device-ExtendAction-CUT = 3--><!--Device-ExtendAction-CUT = 3-End-->
@@ -36,6 +42,8 @@ CUT = 3
 COPY = 4
 ```
 
+@brief 复制。 <br> <br>使用场景：输入法请求复制选中的文本时使用，将选中文本复制到剪贴板。
+
 **起始版本：** 23
 
 <!--Device-ExtendAction-COPY = 4--><!--Device-ExtendAction-COPY = 4-End-->
@@ -47,6 +55,8 @@ COPY = 4
 ```TypeScript
 PASTE = 5
 ```
+
+@brief 粘贴。 <br> <br>使用场景：输入法请求粘贴剪贴板内容时使用。
 
 **起始版本：** 23
 

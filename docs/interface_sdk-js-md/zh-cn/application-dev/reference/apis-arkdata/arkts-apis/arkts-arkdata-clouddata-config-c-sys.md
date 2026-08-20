@@ -50,16 +50,16 @@ static batchQueryLastSyncInfo(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Record&lt;string, Record&lt;string, [SyncInfo](arkts-arkdata-clouddata-syncinfo-i-sys.md)&gt;&gt;&gt; | Promise对象，返回应用包名以及对应数据库的上一次端云同步信息结果集。外层Record的键为应用 包名，内层Record的键为数据库名。 |
+| Promise&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [SyncInfo](arkts-arkdata-clouddata-syncinfo-i-sys.md)&gt;&gt;&gt; | Promise对象，返回应用包名以及对应数据库的上一次端云同步信息结果集。外层Record的键为应用 包名，内层Record的键为数据库名。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. the accountId is empty; 2. the bundlename is null; 3. the number of bundleInfos exceeds the upper limit or the number is 0. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the device does not support the device-cloud capability. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the device does not support the device-cloud capability. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. the accountId is empty; 2. the bundlename is null; 3. the number of bundleInfos exceeds the upper limit or the number is 0. |
 
 **示例**
 
@@ -114,16 +114,16 @@ static changeAppCloudSwitch(
 | accountId | string | 是 | 已登录的云账号ID。 |
 | bundleName | string | 是 | 应用包名。 |
 | status | boolean | 是 | 应用的端云协同开关信息。true为打开该应用端云开关，false为关闭该应用端云开关。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当修改单个应用端云协同开关成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当修改单个应用端云协同开关成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 **示例**
 
@@ -182,10 +182,10 @@ static changeAppCloudSwitch(accountId: string, bundleName: string, status: boole
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 **示例**
 
@@ -250,9 +250,9 @@ static changeAppCloudSwitch(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 **示例**
 
@@ -311,17 +311,17 @@ static clear(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | accountId | string | 是 | 已登录的云账号ID。 |
-| appActions | Record&lt;string, [ClearAction](arkts-arkdata-clouddata-clearaction-e-sys.md)&gt; | 是 | 要清除数据的应用信息及清除规则。<br>**起始版本：** 10 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当清除本地下载的云端数据成功，err为undefined，否则为错误对象。 |
+| appActions | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [ClearAction](arkts-arkdata-clouddata-clearaction-e-sys.md)&gt; | 是 | 要清除数据的应用信息及清除规则。<br>**起始版本：** 10 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当清除本地下载的云端数据成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 **示例**
 
@@ -371,7 +371,7 @@ static clear(accountId: string, appActions: Record<string, ClearAction>): Promis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | accountId | string | 是 | 已登录的云账号ID。 |
-| appActions | Record&lt;string, [ClearAction](arkts-arkdata-clouddata-clearaction-e-sys.md)&gt; | 是 | 要清除数据的应用信息及清除规则。<br>**起始版本：** 11 |
+| appActions | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [ClearAction](arkts-arkdata-clouddata-clearaction-e-sys.md)&gt; | 是 | 要清除数据的应用信息及清除规则。<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -383,10 +383,10 @@ static clear(accountId: string, appActions: Record<string, ClearAction>): Promis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 **示例**
 
@@ -440,8 +440,8 @@ static clear(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | accountId | string | 是 | 已登录的云账号ID。 |
-| appActions | Record&lt;string, [ClearAction](arkts-arkdata-clouddata-clearaction-e-sys.md)&gt; | 是 | 要清除数据的应用信息及清除规则。 |
-| config | Record&lt;string, [ClearConfig](arkts-arkdata-clouddata-clearconfig-i-sys.md)&gt; | 否 | 端云协同数据库级清除配置信息。键为应用包名，值为该应用数据库清除规则。清除规则优先级：表级 &gt; 数据库级 &gt; 应用级。当未配置 该参数时，默认使用应用级的数据清除方式。 |
+| appActions | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [ClearAction](arkts-arkdata-clouddata-clearaction-e-sys.md)&gt; | 是 | 要清除数据的应用信息及清除规则。 |
+| config | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [ClearConfig](arkts-arkdata-clouddata-clearconfig-i-sys.md)&gt; | 否 | 端云协同数据库级清除配置信息。键为应用包名，值为该应用数据库清除规则。清除规则优先级：表级 &gt; 数据库级 &gt; 应用级。当未配置 该参数时，默认使用应用级的数据清除方式。 |
 
 **返回值：**
 
@@ -453,9 +453,9 @@ static clear(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 **示例**
 
@@ -522,7 +522,7 @@ static cloudSync(
 | bundleName | string | 是 | 待端云同步数据的应用包名。 |
 | storeId | string | 是 | 待端云同步的数据库名。 |
 | mode | relationalStore.SyncMode | 是 | 端云同步类型。 |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;relationalStore.ProgressDetails&gt; | 是 | 同步进度回调。返回ProgressDetails实例对象。 |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;relationalStore.ProgressDetails&gt; | 是 | 同步进度回调。返回ProgressDetails实例对象。 |
 
 **返回值：**
 
@@ -534,10 +534,10 @@ static cloudSync(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Empty conditions; <br>2. Missing GROUP BY clause. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, <br>usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, <br>application which is not a system application uses system API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Empty conditions; <br>2. Missing GROUP BY clause. |
 
 **示例**
 
@@ -589,7 +589,7 @@ static cloudSyncEx(
 | --- | --- | --- | --- |
 | bundleInfo | BundleInfo | 是 | 应用包信息配置。BundleInfo的实例对象。 |
 | config | relationalStore.CloudSyncConfig | 是 | 云同步配置。 |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;relationalStore.ProgressDetails&gt; | 是 | 进度回调函数。返回ProgressDetails实例对象。 |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;relationalStore.ProgressDetails&gt; | 是 | 进度回调函数。返回ProgressDetails实例对象。 |
 
 **返回值：**
 
@@ -601,10 +601,10 @@ static cloudSyncEx(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Empty conditions. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the device does not support the device-cloud capability. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, <br>usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application is not a system application. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the device does not support the device-cloud capability. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Empty conditions. |
 
 **示例**
 
@@ -661,16 +661,16 @@ static disableCloud(accountId: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | accountId | string | 是 | 已登录的云账号ID。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当关闭端云协同成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当关闭端云协同成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 **示例**
 
@@ -726,10 +726,10 @@ static disableCloud(accountId: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 **示例**
 
@@ -776,17 +776,17 @@ static enableCloud(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | accountId | string | 是 | 已登录的云账号ID。 |
-| switches | Record&lt;string, boolean&gt; | 是 | 各应用的端云协同开关信息。true为打开该应用端云开关，false为关闭该应用端云开关。<br>**起始版本：** 11 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当打开端云协同功能成功，err为undefined，否则为错误对象。 |
+| switches | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, boolean&gt; | 是 | 各应用的端云协同开关信息。true为打开该应用端云开关，false为关闭该应用端云开关。<br>**起始版本：** 11 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当打开端云协同功能成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 **示例**
 
@@ -832,7 +832,7 @@ static enableCloud(accountId: string, switches: Record<string, boolean>): Promis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | accountId | string | 是 | 已登录的云账号ID。 |
-| switches | Record&lt;string, boolean&gt; | 是 | 各应用的端云协同开关信息。true为打开该应用端云开关，false为关闭该应用端云开关。<br>**起始版本：** 11 |
+| switches | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, boolean&gt; | 是 | 各应用的端云协同开关信息。true为打开该应用端云开关，false为关闭该应用端云开关。<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -844,10 +844,10 @@ static enableCloud(accountId: string, switches: Record<string, boolean>): Promis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 **示例**
 
@@ -903,10 +903,10 @@ static notifyDataChange(extInfo: ExtraData, userId?: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, which is usually returned by &lt;b&gt;VerifyAccessToken&lt;/b&gt;. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 **示例**
 
@@ -977,16 +977,16 @@ static notifyDataChange(extInfo: ExtraData, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | extInfo | ExtraData | 是 | 透传数据，包含通知数据变更后的应用信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当数据变更通知成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当数据变更通知成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, which is usually returned by &lt;b&gt;VerifyAccessToken&lt;/b&gt;. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 **示例**
 
@@ -1035,16 +1035,16 @@ static notifyDataChange(extInfo: ExtraData, userId: int, callback: AsyncCallback
 | --- | --- | --- | --- |
 | extInfo | ExtraData | 是 | 透传数据，包含通知数据变更后的应用信息。 |
 | userId | int | 是 | 用户ID，对应为系统中现有的用户ID。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当数据变更通知成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当数据变更通知成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, which is usually returned by &lt;b&gt;VerifyAccessToken&lt;/b&gt;. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 **示例**
 
@@ -1131,10 +1131,10 @@ static notifyDataChange(accountId: string, bundleName: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 **示例**
 
@@ -1179,16 +1179,16 @@ static notifyDataChange(accountId: string, bundleName: string, callback: AsyncCa
 | --- | --- | --- | --- |
 | accountId | string | 是 | 已登录的云账号ID。 |
 | bundleName | string | 是 | 应用包名。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当通知云端的数据变更成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当通知云端的数据变更成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 **示例**
 
@@ -1239,16 +1239,16 @@ static offSyncInfoChanged(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleInfos | Array&lt;BundleInfo&gt; | 是 | 取消订阅的应用信息数组。取值范围：数组长度为[1, 30]，超过该范围返回14800001错误码。取消订阅时应用信息的storeId需要与订 阅时保持一致。 |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Record&lt;string, [SyncInfo](arkts-arkdata-clouddata-syncinfo-i-sys.md)&gt;&gt;&gt; | 否 | 回调函数。如果传入此参数，则取消订阅指定的回调函数；如果不传此参数，则取消该 应用的所有订阅。 |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [SyncInfo](arkts-arkdata-clouddata-syncinfo-i-sys.md)&gt;&gt;&gt; | 否 | 回调函数。如果传入此参数，则取消订阅指定的回调函数；如果不传此参数，则取消该 应用的所有订阅。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. bundlename is null; <br>2. the number of bundleInfos exceeds the upper limit or the number is 0. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the device does not support the device-cloud capability. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the device does not support the device-cloud capability. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. bundlename is null; <br>2. the number of bundleInfos exceeds the upper limit or the number is 0. |
 
 **示例**
 
@@ -1317,16 +1317,16 @@ static onSyncInfoChanged(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleInfos | Array&lt;BundleInfo&gt; | 是 | 订阅的应用信息数组。取值范围：数组长度为[1, 30]，超过该范围返回14800001错误码。 |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Record&lt;string, [SyncInfo](arkts-arkdata-clouddata-syncinfo-i-sys.md)&gt;&gt;&gt; | 是 | 回调函数。返回应用包名以及对应数据库的同步信息结果集。外层Record的键为应用 包名，内层Record的键为数据库名。 |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [SyncInfo](arkts-arkdata-clouddata-syncinfo-i-sys.md)&gt;&gt;&gt; | 是 | 回调函数。返回应用包名以及对应数据库的同步信息结果集。外层Record的键为应用 包名，内层Record的键为数据库名。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. bundlename is null; <br>2. the number of bundleInfos exceeds the upper limit or the number is 0. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the device does not support the device-cloud capability. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the device does not support the device-cloud capability. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. bundlename is null; <br>2. the number of bundleInfos exceeds the upper limit or the number is 0. |
 
 **示例**
 
@@ -1382,16 +1382,16 @@ static queryLastSyncInfo(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Record&lt;string, [SyncInfo](arkts-arkdata-clouddata-syncinfo-i-sys.md)&gt;&gt; | 返回数据库名以及上一次端云同步的信息结果集。 |
+| Promise&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [SyncInfo](arkts-arkdata-clouddata-syncinfo-i-sys.md)&gt;&gt; | 返回数据库名以及上一次端云同步的信息结果集。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 **示例**
 
@@ -1447,16 +1447,16 @@ static queryStatistics(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Record&lt;string, Array&lt;[StatisticInfo](arkts-arkdata-clouddata-statisticinfo-i-sys.md)&gt;&gt;&gt; | 返回以表名为键、统计信息数组为值的结果集。 |
+| Promise&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Array&lt;[StatisticInfo](arkts-arkdata-clouddata-statisticinfo-i-sys.md)&gt;&gt;&gt; | 返回以表名为键、统计信息数组为值的结果集。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 **示例**
 
@@ -1509,10 +1509,10 @@ static setGlobalCloudStrategy(strategy: StrategyType, param?: Array<commonType.V
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 **示例**
 
@@ -1562,10 +1562,10 @@ static stopCloudSync(bundleInfos: Array<BundleInfo>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. bundlename is null; <br>2. the number of bundleInfos exceeds the upper limit or the number is 0. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the device does not support the device-cloud capability. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, <br>usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | if permission verification failed, application which is not a system application uses system API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the device does not support the device-cloud capability. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. bundlename is null; <br>2. the number of bundleInfos exceeds the upper limit or the number is 0. |
 
 **示例**
 

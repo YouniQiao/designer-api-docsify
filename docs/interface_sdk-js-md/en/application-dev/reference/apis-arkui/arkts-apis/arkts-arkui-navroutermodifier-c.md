@@ -2,13 +2,15 @@
 
 Defines NavRouter Modifier
 
-**Inheritance/Implementation:** NavRouterModifier extends NavRouterAttribute and implements AttributeModifier<NavRouterAttribute>
+@extends NavRouterAttribute @implements AttributeModifier&lt;NavRouterAttribute&gt;
+
+**Inheritance/Implementation:** NavRouterModifier extends [NavRouterAttribute](../arkts-components/arkts-arkui-navrouter-attribute.md#navrouterattribute) and implements AttributeModifier<NavRouterAttribute>
 
 **Since:** 12
 
 **Deprecated since:** 20
 
-**Substitutes:** [NavigationModifier](arkts-arkui-navigationmodifier-c.md)
+**Substitutes:** [NavigationModifier](../../apis-default/arkts-apis/arkts-navigationmodifier-c.md)
 
 <!--Device-unnamed-export declare class NavRouterModifier--><!--Device-unnamed-export declare class NavRouterModifier-End-->
 
@@ -40,5 +42,5 @@ Defines the normal update attribute function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instance | NavRouterAttribute | Yes |  |
+| instance | [NavRouterAttribute](../arkts-components/arkts-arkui-navrouter-attribute.md) | Yes |  |
 

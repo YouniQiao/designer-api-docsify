@@ -2,6 +2,8 @@
 
 Defines Blank Modifier
 
+@extends BlankAttribute @implements AttributeModifier&lt;BlankAttribute&gt;
+
 **Inheritance/Implementation:** BlankModifier implements BlankAttribute, AttributeModifier<BlankAttribute>
 
 **Since:** 23

@@ -52,7 +52,9 @@ pickerStyle?: AVCastPickerStyle
 sessionType?: AVSessionType
 ```
 
-会话类型，默认值为audio。 当前仅支持的会话类型有audio和video。如果传入voice_call或video_call，将默认按照传入audio处理。
+会话类型，默认值为audio。
+
+当前仅支持的会话类型有audio和video。如果传入voice_call或video_call，将默认按照传入audio处理。
 
 **类型：** [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md)
 

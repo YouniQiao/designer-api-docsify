@@ -17,5 +17,5 @@ The general process funcation with an event and arguments.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | 请求事件。 |
-| args | Record&lt;string, Object&gt; | 是 | arguments associated with event |
+| args | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | arguments associated with event |
 

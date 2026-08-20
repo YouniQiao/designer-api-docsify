@@ -1,6 +1,6 @@
 # AsrAecMode（系统接口）
 
-ASR AEC mode.
+ASR AEC mode. @enum { int }
 
 **起始版本：** 23
 

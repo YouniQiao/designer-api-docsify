@@ -12,7 +12,11 @@ import { font } from '@kit.ArkUI';
 function getFontByName(fontName: string): FontInfo
 ```
 
-Obtains information about a system font based on the font name. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Font](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated with &gt; the current UI context.
+Obtains information about a system font based on the font name.
+
+> **NOTE：**
+> 
+> - Since API version 10, you can use the &gt; [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Font](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated with &gt; the current UI context.
 
 **Since:** 10
 

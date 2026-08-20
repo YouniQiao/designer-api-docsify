@@ -43,9 +43,9 @@ onSetData(authSubType: AuthSubType, data: Uint8Array): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid pinSubType. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 **示例**
 

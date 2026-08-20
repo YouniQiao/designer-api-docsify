@@ -1,6 +1,14 @@
 # PathEffect
 
-路径效果对象，用于创建多种路径效果，包括虚线、圆角、离散、叠加和组合路径效果等。可通过[Pen.setPathEffect](arkts-arkgraphics2d-drawing-pen-c.md#setpatheffect)将其应用到画笔上，从而在绘制路径时改变路 径的渲染样式。 &gt; **说明：** &gt; &gt; - 本Class首批接口从API version 12开始支持。 &gt; &gt; - 本模块使用屏幕物理像素单位px。 &gt; &gt; - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+路径效果对象，用于创建多种路径效果，包括虚线、圆角、离散、叠加和组合路径效果等。可通过[Pen.setPathEffect](arkts-arkgraphics2d-drawing-pen-c.md#setpatheffect)将其应用到画笔上，从而在绘制路径时改变路 径的渲染样式。
+
+> **说明：**
+> 
+> - 本Class首批接口从API version 12开始支持。
+> 
+> - 本模块使用屏幕物理像素单位px。
+> 
+> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 23
 

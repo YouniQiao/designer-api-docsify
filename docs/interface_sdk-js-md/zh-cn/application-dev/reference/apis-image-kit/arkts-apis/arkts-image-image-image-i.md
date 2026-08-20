@@ -1,6 +1,16 @@
 # Image
 
-Image类，供ImageReceiver和ImageCreator使用，用于传输图片对象，其实际内容由生产者决定。如相机预览流提供的Image对象存储了YUV数据、相机拍照提供的Image对象存储了JPEG文件。 调用[readNextImage](arkts-image-image-imagereceiver-i.md#readnextimage)和 [readLatestImage](arkts-image-image-imagereceiver-i.md#readlatestimage)接口时会返回Image实例。 Image的属性仅支持在创建时初始化，后续无法再修改，且其属性不对图片内容产生实际影响，请以图片生产者写入的属性为准，即以向[ImageReceiver](arkts-image-image-imagereceiver-i.md)发送图片数据的发送方实 际写入的内容为准。 由于图片占用内存较大，所以当Image实例使用完成后，应主动调用[release](#release)方法及时释放内存。释放时应确保该 实例的所有异步方法均执行完成，且后续不再使用该实例。 &gt; **说明：** &gt; &gt; - 本Interface首批接口从API version 9开始支持。
+Image类，供ImageReceiver和ImageCreator使用，用于传输图片对象，其实际内容由生产者决定。如相机预览流提供的Image对象存储了YUV数据、相机拍照提供的Image对象存储了JPEG文件。
+
+调用[readNextImage](arkts-image-image-imagereceiver-i.md#readnextimage)和 [readLatestImage](arkts-image-image-imagereceiver-i.md#readlatestimage)接口时会返回Image实例。
+
+Image的属性仅支持在创建时初始化，后续无法再修改，且其属性不对图片内容产生实际影响，请以图片生产者写入的属性为准，即以向[ImageReceiver](arkts-image-image-imagereceiver-i.md)发送图片数据的发送方实 际写入的内容为准。
+
+由于图片占用内存较大，所以当Image实例使用完成后，应主动调用[release](#release)方法及时释放内存。释放时应确保该 实例的所有异步方法均执行完成，且后续不再使用该实例。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 9开始支持。
 
 **起始版本：** 23
 
@@ -20,7 +30,11 @@ import { image } from '@kit.ImageKit';
 getBufferData(): ImageBufferData | null
 ```
 
-从图像中获取ImageBufferData。 &gt; **注意：** &gt; &gt; ImageBufferData中的byteBuffer是对内部缓存的浅拷贝，当Image的生命周期结束时，便不能对byteBuffer做任何操作，否则会导致未定义行为。
+从图像中获取ImageBufferData。
+
+> **注意：**
+> 
+> ImageBufferData中的byteBuffer是对内部缓存的浅拷贝，当Image的生命周期结束时，便不能对byteBuffer做任何操作，否则会导致未定义行为。
 
 **起始版本：** 23
 
@@ -55,7 +69,7 @@ getComponent(componentType: ComponentType, callback: AsyncCallback<Component>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | componentType | ComponentType | 是 | 图像的组件类型（目前仅支持ComponentType:JPEG，实际返回格式由生产者决定，如相机）。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Component&gt; | 是 | 回调函数，当返回组件缓冲区成功，err为undefined，data为获取到的组件缓冲区；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Component&gt; | 是 | 回调函数，当返回组件缓冲区成功，err为undefined，data为获取到的组件缓冲区；否则为错误对象。 |
 
 ## getComponent
 
@@ -124,7 +138,13 @@ getMetadata(key: HdrMetadataKey): HdrMetadataValue | null
 release(callback: AsyncCallback<void>): void
 ```
 
-释放当前图像。使用callback异步回调。 在接收另一个图像前必须先释放对应资源。 由于图片占用内存较大，所以当Image实例使用完成后，应主动调用该方法，及时释放内存。 释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+释放当前图像。使用callback异步回调。
+
+在接收另一个图像前必须先释放对应资源。
+
+由于图片占用内存较大，所以当Image实例使用完成后，应主动调用该方法，及时释放内存。
+
+释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 23
 
@@ -136,7 +156,7 @@ release(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当图像释放成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当图像释放成功，err为undefined，否则为错误对象。 |
 
 ## release
 
@@ -144,7 +164,13 @@ release(callback: AsyncCallback<void>): void
 release(): Promise<void>
 ```
 
-释放当前图像。使用Promise异步回调。 在接收另一个图像前必须先释放对应资源。 由于图片占用内存较大，所以当Image实例使用完成后，应主动调用该方法，及时释放内存。 释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+释放当前图像。使用Promise异步回调。
+
+在接收另一个图像前必须先释放对应资源。
+
+由于图片占用内存较大，所以当Image实例使用完成后，应主动调用该方法，及时释放内存。
+
+释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 23
 
@@ -214,7 +240,15 @@ readonly format: int
 readonly size: Size
 ```
 
-图像大小。 如果Image对象所存储的是相机预览流数据（YUV图像数据），那么获取到的size中的宽和高分别对应YUV图像的宽和高。 如果Image对象所存储的是相机拍照流数据（JPEG图像数据），由于已是编码后的文件，size中的宽等于JPEG文件大小，高等于1。 Image对象所存储的数据是预览流还是拍照流，取决于应用将receiver中的surfaceId通过 [createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createpreviewoutput) 接口还是 [createPhotoOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createphotooutput) 接口传给相机。 相机预览与拍照最佳实践请参考[双路预览(ArkTS)](../../../media/camera/camera-dual-channel-preview.md)与 [拍照实践(ArkTS)](../../../media/camera/camera-shooting-case.md)。
+图像大小。
+
+如果Image对象所存储的是相机预览流数据（YUV图像数据），那么获取到的size中的宽和高分别对应YUV图像的宽和高。
+
+如果Image对象所存储的是相机拍照流数据（JPEG图像数据），由于已是编码后的文件，size中的宽等于JPEG文件大小，高等于1。
+
+Image对象所存储的数据是预览流还是拍照流，取决于应用将receiver中的surfaceId通过 [createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createpreviewoutput) 接口还是 [createPhotoOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createphotooutput) 接口传给相机。
+
+相机预览与拍照最佳实践请参考[双路预览(ArkTS)](../../../media/camera/camera-dual-channel-preview.md)与 [拍照实践(ArkTS)](../../../media/camera/camera-shooting-case.md)。
 
 **类型：** Size
 

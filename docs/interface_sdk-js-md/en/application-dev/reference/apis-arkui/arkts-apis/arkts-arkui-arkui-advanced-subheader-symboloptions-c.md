@@ -21,7 +21,13 @@ import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, 
 effectStrategy?: SymbolEffectStrategy
 ```
 
-Effect strategy of the symbol glyph. Default value: **SymbolEffectStrategy.NONE**. **NOTE：**For the resources referenced in **\$r('sys.symbol.ohos_*')**, only **ohos_wifi** supports the hierarchical effect.
+Effect strategy of the symbol glyph.
+
+Default value: **SymbolEffectStrategy.NONE**.
+
+**NOTE：**
+
+For the resources referenced in **\$r('sys.symbol.ohos_*')**, only **ohos_wifi** supports the hierarchical effect.
 
 **Type:** SymbolEffectStrategy
 
@@ -41,7 +47,9 @@ Effect strategy of the symbol glyph. Default value: **SymbolEffectStrategy.NONE*
 fontColor?: Array<ResourceColor>
 ```
 
-Color of the symbol glyph. Default value: depending on the rendering strategy
+Color of the symbol glyph.
+
+Default value: depending on the rendering strategy
 
 **Type:** Array&lt;ResourceColor&gt;
 
@@ -61,7 +69,13 @@ Color of the symbol glyph. Default value: depending on the rendering strategy
 fontSize?: number | string | Resource
 ```
 
-Size of the symbol glyph. For the number type, the value must be greater than or equal to 0. For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported. Default value: system default value
+Size of the symbol glyph.
+
+For the number type, the value must be greater than or equal to 0.
+
+For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.
+
+Default value: system default value
 
 **Type:** number \| string \| Resource
 
@@ -81,7 +95,13 @@ Size of the symbol glyph. For the number type, the value must be greater than or
 fontWeight?: number | FontWeight | string
 ```
 
-Weight of the symbol glyph. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings of the number type are supported, for example, **"400"**, **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in **FontWeight**. Default value: **FontWeight.Normal**.
+Weight of the symbol glyph.
+
+For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**.
+
+For the string type, only strings of the number type are supported, for example, **"400"**, **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in **FontWeight**.
+
+Default value: **FontWeight.Normal**.
 
 **Type:** number \| FontWeight \| string
 
@@ -101,7 +121,13 @@ Weight of the symbol glyph. For the number type, the value ranges from 100 to 90
 renderingStrategy?: SymbolRenderingStrategy
 ```
 
-Rendering strategy of the symbol glyph. Default value: **SymbolRenderingStrategy.SINGLE**. **NOTE：**For the resources referenced in **\$r('sys.symbol.ohos_*')**, only **ohos_trash_circle**, **ohos_folder_badge_plus**, and **ohos_lungs** support the **MULTIPLE_COLOR** modes.
+Rendering strategy of the symbol glyph.
+
+Default value: **SymbolRenderingStrategy.SINGLE**.
+
+**NOTE：**
+
+For the resources referenced in **\$r('sys.symbol.ohos_*')**, only **ohos_trash_circle**, **ohos_folder_badge_plus**, and **ohos_lungs** support the **MULTIPLE_COLOR** modes.
 
 **Type:** SymbolRenderingStrategy
 

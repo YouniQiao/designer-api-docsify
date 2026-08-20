@@ -12,7 +12,11 @@ import { geoLocationManager } from '@kit.LocationKit';
 function getPostProcessingTrack(sportsType: SportsType): Promise<Array<Location>>
 ```
 
-Obtain post-processing trajectory information under specific sport mode. Only [SKIING](arkts-location-geolocationmanager-sportstype-e.md#skiing) is supported currently. Before calling this API, you need to call [on('locationChange')](arkts-location-geolocationmanager-onlocationchange-f.md) and set the input parameter [sportsType](arkts-location-geolocationmanager-continuouslocationrequest-i-sys.md#sportstype) to the specific sport mode to start tracking. Returns data within 24 hours since tracking started; Subsequent calls return only new records.
+Obtain post-processing trajectory information under specific sport mode. Only [SKIING](arkts-location-geolocationmanager-sportstype-e.md#skiing) is supported currently.
+
+Before calling this API, you need to call [on('locationChange')](arkts-location-geolocationmanager-onlocationchange-f.md) and set the input parameter [sportsType](arkts-location-geolocationmanager-continuouslocationrequest-i-sys.md#sportstype) to the specific sport mode to start tracking.
+
+Returns data within 24 hours since tracking started; Subsequent calls return only new records.
 
 **Since:** 26.1.0
 
@@ -42,9 +46,9 @@ Obtain post-processing trajectory information under specific sport mode. Only [S
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call \\${geoLocationManager.getPostProcessingTrack} due to limited device capabilities. |
-| [3301200](../errorcode-geoLocationManager.md#3301200-failed-to-obtain-the-positioning-result) | Failed to obtain the post processing track because sports type is not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call \\${geoLocationManager.getPostProcessingTrack} due to limited device capabilities. |
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
 | [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
+| [3301200](../errorcode-geoLocationManager.md#3301200-failed-to-obtain-the-positioning-result) | Failed to obtain the post processing track because sports type is not supported. |
 

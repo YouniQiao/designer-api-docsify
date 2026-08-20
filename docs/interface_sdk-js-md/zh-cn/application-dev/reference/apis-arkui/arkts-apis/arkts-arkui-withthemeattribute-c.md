@@ -1,6 +1,8 @@
-# WithThemeAttribute(Defines WithTheme component.)
+# WithThemeAttribute
 
-不支持通用属性。 不支持通用事件。
+不支持通用属性。
+
+不支持通用事件。
 
 **起始版本：** 12
 

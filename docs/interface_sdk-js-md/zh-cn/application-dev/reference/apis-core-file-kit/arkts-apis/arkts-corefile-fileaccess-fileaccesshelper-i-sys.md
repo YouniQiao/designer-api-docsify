@@ -30,7 +30,7 @@ access(sourceFileUri: string) : Promise<boolean>
 
 **废弃版本：** 23
 
-**替代接口：** [access](../../apis-na/arkts-apis/arkts-na-fileio-access-f.md)(path: string, mode?: AccessModeType)
+**替代接口：** [access](../../apis-default/arkts-apis/arkts-fileio-access-f.md)(path: string, mode?: AccessModeType)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -56,40 +56,40 @@ access(sourceFileUri: string) : Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -130,7 +130,7 @@ access(sourceFileUri: string, callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 23
 
-**替代接口：** [access](../../apis-na/arkts-apis/arkts-na-fileio-access-f.md)(path: string, callback: AsyncCallback&lt;boolean&gt;)
+**替代接口：** [access](../../apis-default/arkts-apis/arkts-fileio-access-f.md)(path: string, callback: AsyncCallback&lt;boolean&gt;)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -145,46 +145,46 @@ access(sourceFileUri: string, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sourceFileUri | string | 是 | Indicates the selected file or directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | The callback is used to return whether it exists. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | The callback is used to return whether it exists. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -227,7 +227,7 @@ copy(sourceUri: string, destUri: string, force?: boolean): Promise<Array<CopyRes
 
 **废弃版本：** 23
 
-**替代接口：** [copy](../../apis-na/arkts-apis/arkts-na-fileio-copy-f.md)(srcUri: string, destUri: string, options?: CopyOptions)
+**替代接口：** [copy](../../apis-default/arkts-apis/arkts-fileio-copy-f.md)(srcUri: string, destUri: string, options?: CopyOptions)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -263,7 +263,7 @@ copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResul
 
 **废弃版本：** 23
 
-**替代接口：** [copy](../../apis-na/arkts-apis/arkts-na-fileio-copy-f.md)(srcUri: string, destUri: string, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [copy](../../apis-default/arkts-apis/arkts-fileio-copy-f.md)(srcUri: string, destUri: string, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -279,7 +279,7 @@ copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResul
 | --- | --- | --- | --- |
 | sourceUri | string | 是 | 待拷贝的源文件(夹)的 uri。例如：file://docs/storage/Users/currentUser/Download/1.txt。 |
 | destUri | string | 是 | 目标文件夹的 uri。例如：file://docs/storage/Users/currentUser/Download/test。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | 是 | 返回 copyresult 数组。copyResult 为复制操作失败的返回信息；复制成功无返回信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | 是 | 返回 copyresult 数组。copyResult 为复制操作失败的返回信息；复制成功无返回信息。 |
 
 **示例**
 
@@ -328,7 +328,7 @@ copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback
 
 **废弃版本：** 23
 
-**替代接口：** [copy](../../apis-na/arkts-apis/arkts-na-fileio-copy-f.md)(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [copy](../../apis-default/arkts-apis/arkts-fileio-copy-f.md)(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -345,7 +345,7 @@ copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback
 | sourceUri | string | 是 | 待拷贝的源文件(夹)的 uri。例如：file://docs/storage/Users/currentUser/Download/1.txt。 |
 | destUri | string | 是 | 目标文件夹的 uri。例如：file://docs/storage/Users/currentUser/Download/test。 |
 | force | boolean | 是 | 含有同名文件时是否强制覆盖原文件。force 为 true 时强制覆盖原文件；force 为空或 false 时不覆盖原文件。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | 是 | 返回 copyresult 数组。copyResult 为复制操作失败的返回信息；复制成功无返回信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | 是 | 返回 copyresult 数组。copyResult 为复制操作失败的返回信息；复制成功无返回信息。 |
 
 **示例**
 
@@ -394,7 +394,7 @@ copyFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 
 **废弃版本：** 23
 
-**替代接口：** [copyFile](../../apis-na/arkts-apis/arkts-na-fileio-copyfile-f.md)(src: string | number, dest: string | number, mode?: number)
+**替代接口：** [copyFile](../../apis-default/arkts-apis/arkts-fileio-copyfile-f.md)(src: string | number, dest: string | number, mode?: number)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -424,30 +424,30 @@ copyFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API |
-| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
+| 13900030 | File name too long |
+| 13900042 | Unknown error |
+| 14300001 | IPC error |
 | 14300002 | Invalid uri |
 | 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
-| 13900042 | Unknown error |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 ## copyFile
 
@@ -461,7 +461,7 @@ copyFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 
 **废弃版本：** 23
 
-**替代接口：** [copyFile](../../apis-na/arkts-apis/arkts-na-fileio-copyfile-f.md)(src: string | number, dest: string | number, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [copyFile](../../apis-default/arkts-apis/arkts-fileio-copyfile-f.md)(src: string | number, dest: string | number, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -480,36 +480,36 @@ copyFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 | sourceUri | string | 是 | 待拷贝的源文件(夹)的 uri。例如：file://docs/storage/Users/currentUser/Download/1.txt。 |
 | destUri | string | 是 | 目标文件夹的 uri。例如：file://docs/storage/Users/currentUser/Download/test。 |
 | fileName | string | 是 | 如果目标目录中有1.txt文件。就是用fileName 作为文件名进行复制。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 返回一个复制成功的文件的uri。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 返回一个复制成功的文件的uri。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API |
-| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
+| 13900030 | File name too long |
+| 13900042 | Unknown error |
+| 14300001 | IPC error |
 | 14300002 | Invalid uri |
 | 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
-| 13900042 | Unknown error |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -547,7 +547,7 @@ createFile(uri: string, displayName: string) : Promise<string>
 
 **废弃版本：** 23
 
-**替代接口：** [createRandomAccessFile](../../apis-na/arkts-apis/arkts-na-fileio-createrandomaccessfile-f.md)(file: string | File, mode?: number, options?: RandomAccessFileOptions)
+**替代接口：** [createRandomAccessFile](../../apis-default/arkts-apis/arkts-fileio-createrandomaccessfile-f.md)(file: string | File, mode?: number, options?: RandomAccessFileOptions)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -574,40 +574,40 @@ createFile(uri: string, displayName: string) : Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -650,7 +650,7 @@ createFile(uri: string, displayName: string, callback: AsyncCallback<string>): v
 
 **废弃版本：** 23
 
-**替代接口：** [createRandomAccessFile](../../apis-na/arkts-apis/arkts-na-fileio-createrandomaccessfile-f.md)(file: string | File, callback: AsyncCallback&lt;RandomAccessFile&gt;)
+**替代接口：** [createRandomAccessFile](../../apis-default/arkts-apis/arkts-fileio-createrandomaccessfile-f.md)(file: string | File, callback: AsyncCallback&lt;RandomAccessFile&gt;)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -666,46 +666,46 @@ createFile(uri: string, displayName: string, callback: AsyncCallback<string>): v
 | --- | --- | --- | --- |
 | uri | string | 是 | Represents a specific parent directory. |
 | displayName | string | 是 | Indicates the new file name, and supports with suffix. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | The callback is used to return the new file's URI. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | The callback is used to return the new file's URI. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -771,40 +771,40 @@ delete(uri: string) : Promise<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -857,46 +857,46 @@ delete(uri: string, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | Indicates the file or directory to be deleted. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -935,7 +935,7 @@ getFileInfoFromRelativePath(relativePath: string) : Promise<FileInfo>
 
 **废弃版本：** 23
 
-**替代接口：** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md)(file: string | number)
+**替代接口：** [stat](../../apis-default/arkts-apis/arkts-fileio-stat-f.md)(file: string | number)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -990,7 +990,7 @@ getFileInfoFromRelativePath(relativePath: string, callback: AsyncCallback<FileIn
 
 **废弃版本：** 23
 
-**替代接口：** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
+**替代接口：** [stat](../../apis-default/arkts-apis/arkts-fileio-stat-f.md)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1005,7 +1005,7 @@ getFileInfoFromRelativePath(relativePath: string, callback: AsyncCallback<FileIn
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | relativePath | string | 是 | Indicates the selected file or directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileInfo&gt; | 是 | The callback is used to return a fileinfo object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FileInfo&gt; | 是 | The callback is used to return a fileinfo object. |
 
 **示例**
 
@@ -1044,7 +1044,7 @@ getFileInfoFromUri(uri: string) : Promise<FileInfo>
 
 **废弃版本：** 23
 
-**替代接口：** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md)(file: string | number)
+**替代接口：** [stat](../../apis-default/arkts-apis/arkts-fileio-stat-f.md)(file: string | number)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1100,7 +1100,7 @@ getFileInfoFromUri(uri: string, callback: AsyncCallback<FileInfo>) : void
 
 **废弃版本：** 23
 
-**替代接口：** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
+**替代接口：** [stat](../../apis-default/arkts-apis/arkts-fileio-stat-f.md)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1115,7 +1115,7 @@ getFileInfoFromUri(uri: string, callback: AsyncCallback<FileInfo>) : void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | Indicates the selected file or directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileInfo&gt; | 是 | The callback is used to return a fileinfo object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FileInfo&gt; | 是 | The callback is used to return a fileinfo object. |
 
 **示例**
 
@@ -1173,40 +1173,40 @@ getRoots(): Promise<RootIterator>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -1263,46 +1263,46 @@ getRoots(callback: AsyncCallback<RootIterator>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RootIterator](arkts-corefile-fileaccess-rootiterator-i-sys.md)&gt; | 是 | The callback is used to return a RootIterator. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RootIterator](arkts-corefile-fileaccess-rootiterator-i-sys.md)&gt; | 是 | The callback is used to return a RootIterator. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -1348,7 +1348,7 @@ mkDir(parentUri: string, displayName: string) : Promise<string>
 
 **废弃版本：** 23
 
-**替代接口：** [mkdir](../../apis-na/arkts-apis/arkts-na-fileio-mkdir-f.md)(path: string)
+**替代接口：** [mkdir](../../apis-default/arkts-apis/arkts-fileio-mkdir-f.md)(path: string)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1375,40 +1375,40 @@ mkDir(parentUri: string, displayName: string) : Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -1451,7 +1451,7 @@ mkDir(parentUri: string, displayName: string, callback: AsyncCallback<string>): 
 
 **废弃版本：** 23
 
-**替代接口：** [mkdir](../../apis-na/arkts-apis/arkts-na-fileio-mkdir-f.md)(path: string, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [mkdir](../../apis-default/arkts-apis/arkts-fileio-mkdir-f.md)(path: string, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1467,46 +1467,46 @@ mkDir(parentUri: string, displayName: string, callback: AsyncCallback<string>): 
 | --- | --- | --- | --- |
 | parentUri | string | 是 | Represents a specific parent directory. |
 | displayName | string | 是 | Indicates the new directory name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | The callback is used to return the new directory's URI. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | The callback is used to return the new directory's URI. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -1546,7 +1546,7 @@ move(sourceFile: string, destFile: string) : Promise<string>
 
 **废弃版本：** 23
 
-**替代接口：** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md)(src: string, dest: string, mode?: number)
+**替代接口：** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, mode?: number)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1573,40 +1573,40 @@ move(sourceFile: string, destFile: string) : Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -1644,7 +1644,7 @@ move(sourceFile: string, destFile: string, callback: AsyncCallback<string>): voi
 
 **废弃版本：** 23
 
-**替代接口：** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md)(src: string, dest: string, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1660,46 +1660,46 @@ move(sourceFile: string, destFile: string, callback: AsyncCallback<string>): voi
 | --- | --- | --- | --- |
 | sourceFile | string | 是 | Indicates the file or directory to be moved. |
 | destFile | string | 是 | Represents the destination folder. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | The callback is used to return the generated new file or directory. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | The callback is used to return the generated new file or directory. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -1739,7 +1739,7 @@ moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 
 **废弃版本：** 23
 
-**替代接口：** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md)(src: string, dest: string, mode?: number)
+**替代接口：** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, mode?: number)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1769,30 +1769,30 @@ moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
+| 13900030 | File name too long |
+| 13900042 | Unknown error |
+| 14300001 | IPC error |
 | 14300002 | Invalid uri |
 | 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
-| 13900042 | Unknown error |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -1831,7 +1831,7 @@ moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 
 **废弃版本：** 23
 
-**替代接口：** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md)(src: string, dest: string, mode: number, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, mode: number, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1850,36 +1850,36 @@ moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 | sourceUri | string | 是 | 待移动的源文件的uri。 |
 | destUri | string | 是 | 目标文件夹的uri。 |
 | fileName | string | 是 | 冲突文件的新名称。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 新路径下的文件uri。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 新路径下的文件uri。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
+| 13900030 | File name too long |
+| 13900042 | Unknown error |
+| 14300001 | IPC error |
 | 14300002 | Invalid uri |
 | 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
-| 13900042 | Unknown error |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -1920,7 +1920,7 @@ moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<Mov
 
 **废弃版本：** 23
 
-**替代接口：** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md)(src: string, dest: string, mode?: number)
+**替代接口：** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, mode?: number)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1950,30 +1950,30 @@ moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<Mov
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
+| 13900030 | File name too long |
+| 13900042 | Unknown error |
+| 14300001 | IPC error |
 | 14300002 | Invalid uri |
 | 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
-| 13900042 | Unknown error |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 ## moveItem
 
@@ -1987,7 +1987,7 @@ moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveR
 
 **废弃版本：** 23
 
-**替代接口：** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md)(src: string, dest: string, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2005,36 +2005,36 @@ moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveR
 | --- | --- | --- | --- |
 | sourceUri | string | 是 | 待移动的源文件(夹)的uri。 |
 | destUri | string | 是 | 目标文件夹的uri。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md)&gt;&gt; | 是 | 回调返回MoveResult数组。MoveResult为移动操作失败的返回信息；移动成功无返回信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md)&gt;&gt; | 是 | 回调返回MoveResult数组。MoveResult为移动操作失败的返回信息；移动成功无返回信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
+| 13900030 | File name too long |
+| 13900042 | Unknown error |
+| 14300001 | IPC error |
 | 14300002 | Invalid uri |
 | 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
-| 13900042 | Unknown error |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -2083,7 +2083,7 @@ moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCall
 
 **废弃版本：** 23
 
-**替代接口：** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md)(src: string, dest: string, mode: number, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, mode: number, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2102,36 +2102,36 @@ moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCall
 | sourceUri | string | 是 | 待移动的源文件(夹)的uri。 |
 | destUri | string | 是 | 目标文件夹的uri。 |
 | force | boolean | 是 | 选择当存在同名文件时，是否强制覆盖文件。当force为true时，强制覆盖文件；为false时不强制覆盖文件。该参数不填，默认为false。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md)&gt;&gt; | 是 | 回调返回MoveResult数组。MoveResult为移动操作失败的返回信息；移动成功无返回信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md)&gt;&gt; | 是 | 回调返回MoveResult数组。MoveResult为移动操作失败的返回信息；移动成功无返回信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
+| 13900030 | File name too long |
+| 13900042 | Unknown error |
+| 14300001 | IPC error |
 | 14300002 | Invalid uri |
 | 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
-| 13900042 | Unknown error |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -2180,7 +2180,7 @@ openFile(uri: string, flags: OPENFLAGS) : Promise<number>
 
 **废弃版本：** 23
 
-**替代接口：** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md)(path: string, mode?: number)
+**替代接口：** [open](../../apis-default/arkts-apis/arkts-fileio-open-f.md)(path: string, mode?: number)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2207,40 +2207,40 @@ openFile(uri: string, flags: OPENFLAGS) : Promise<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -2276,7 +2276,7 @@ openFile(uri: string, flags: OPENFLAGS, callback: AsyncCallback<number>): void
 
 **废弃版本：** 23
 
-**替代接口：** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md)(path: string, callback: AsyncCallback&lt;File&gt;)
+**替代接口：** [open](../../apis-default/arkts-apis/arkts-fileio-open-f.md)(path: string, callback: AsyncCallback&lt;File&gt;)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2292,46 +2292,46 @@ openFile(uri: string, flags: OPENFLAGS, callback: AsyncCallback<number>): void
 | --- | --- | --- | --- |
 | uri | string | 是 | Indicates the path of the file to open. |
 | flags | [OPENFLAGS](arkts-corefile-fileaccess-openflags-e-sys.md) | 是 | Indicate options of opening a file. The default value is read-only. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | The callback is used to return the file descriptor. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | The callback is used to return the file descriptor. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -2370,7 +2370,7 @@ query(uri: string, metaJson: string) : Promise<string>
 
 **废弃版本：** 23
 
-**替代接口：** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md)(file: string | number)
+**替代接口：** [stat](../../apis-default/arkts-apis/arkts-fileio-stat-f.md)(file: string | number)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2427,7 +2427,7 @@ query(uri: string, metaJson: string, callback: AsyncCallback<string>) : void
 
 **废弃版本：** 23
 
-**替代接口：** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
+**替代接口：** [stat](../../apis-default/arkts-apis/arkts-fileio-stat-f.md)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2443,7 +2443,7 @@ query(uri: string, metaJson: string, callback: AsyncCallback<string>) : void
 | --- | --- | --- | --- |
 | uri | string | 是 | 所选文件或目录的uri（从[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)中获取）。 |
 | metaJson | string | 是 | json字符串，包含查询属性[FILEKEY](arkts-corefile-fileaccess-filekey-e-sys.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 返回json字符串，包括查询属性和值。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 返回json字符串，包括查询属性和值。 |
 
 **示例**
 
@@ -2484,7 +2484,7 @@ registerObserver(uri: string, notifyForDescendants: boolean, callback: Callback<
 
 **废弃版本：** 23
 
-**替代接口：** [createWatcher](../../apis-na/arkts-apis/arkts-na-fileio-createwatcher-f.md)
+**替代接口：** [createWatcher](../../apis-default/arkts-apis/arkts-fileio-createwatcher-f.md)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2500,7 +2500,7 @@ registerObserver(uri: string, notifyForDescendants: boolean, callback: Callback<
 | --- | --- | --- | --- |
 | uri | string | 是 | 文件或目录的uri。 |
 | notifyForDescendants | boolean | 是 | 监听目录时，是否监听子文件变化。true为监听；false为不监听。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NotifyMessage](arkts-corefile-fileaccess-notifymessage-i-sys.md)&gt; | 是 | 返回通知信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NotifyMessage](arkts-corefile-fileaccess-notifymessage-i-sys.md)&gt; | 是 | 返回通知信息。 |
 
 **错误码：**
 
@@ -2520,7 +2520,7 @@ rename(uri: string, displayName: string) : Promise<string>
 
 **废弃版本：** 23
 
-**替代接口：** [rename](../../apis-na/arkts-apis/arkts-na-fileio-rename-f.md)(oldPath: string, newPath: string)
+**替代接口：** [rename](../../apis-default/arkts-apis/arkts-fileio-rename-f.md)(oldPath: string, newPath: string)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2547,40 +2547,40 @@ rename(uri: string, displayName: string) : Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -2617,7 +2617,7 @@ rename(uri: string, displayName: string, callback: AsyncCallback<string>): void
 
 **废弃版本：** 23
 
-**替代接口：** [rename](../../apis-na/arkts-apis/arkts-na-fileio-rename-f.md)(oldPath: string, newPath: string, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [rename](../../apis-default/arkts-apis/arkts-fileio-rename-f.md)(oldPath: string, newPath: string, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2633,46 +2633,46 @@ rename(uri: string, displayName: string, callback: AsyncCallback<string>): void
 | --- | --- | --- | --- |
 | uri | string | 是 | Indicates the selected file or directory. |
 | displayName | string | 是 | Indicates the new directory or file name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | The callback is used to return a URI representing the new file or directory. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | The callback is used to return a URI representing the new file or directory. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -2724,7 +2724,7 @@ unregisterObserver(uri: string, callback?: Callback<NotifyMessage>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 文件或目录的uri。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NotifyMessage](arkts-corefile-fileaccess-notifymessage-i-sys.md)&gt; | 否 | 解注册uri下对应的callback。如果该参数不填，则解注册对应的所有callbackback。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NotifyMessage](arkts-corefile-fileaccess-notifymessage-i-sys.md)&gt; | 否 | 解注册uri下对应的callback。如果该参数不填，则解注册对应的所有callbackback。 |
 
 **错误码：**
 

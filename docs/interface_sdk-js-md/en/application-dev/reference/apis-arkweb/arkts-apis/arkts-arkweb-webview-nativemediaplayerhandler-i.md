@@ -1,6 +1,6 @@
 # NativeMediaPlayerHandler
 
-NativeMediaPlayerHandler is the parameter of the [CreateNativeMediaPlayerCallback](../../apis-na/arkts-apis/arkts-na-webview-createnativemediaplayercallback-t.md) callback function. When an app uses [NativeMediaPlayerBridge](../../apis-na/arkts-apis/arkts-na-webview-nativemediaplayerbridge-i.md) to take over web media playback, it must synchronize various player state changes to the ArkWeb kernel in real time. This ensures that the web JavaScript can obtain the correct player state. The ArkWeb kernel converts these states into standard HTML5 Media Events and triggers the event listeners registered in the web page, thereby ensuring the normal functioning of the web page.
+NativeMediaPlayerHandler is the parameter of the [CreateNativeMediaPlayerCallback](../../apis-default/arkts-apis/arkts-webview-createnativemediaplayercallback-t.md) callback function. When an app uses [NativeMediaPlayerBridge](../../apis-default/arkts-apis/arkts-webview-nativemediaplayerbridge-i.md) to take over web media playback, it must synchronize various player state changes to the ArkWeb kernel in real time. This ensures that the web JavaScript can obtain the correct player state. The ArkWeb kernel converts these states into standard HTML5 Media Events and triggers the event listeners registered in the web page, thereby ensuring the normal functioning of the web page.
 
 **Since:** 12
 
@@ -94,7 +94,7 @@ When an error occurs in the player, this method is called to notify the ArkWeb k
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | [MediaError](../../apis-na/arkts-apis/arkts-na-webview-mediaerror-e.md) | Yes | Error object type. |
+| error | [MediaError](../../apis-default/arkts-apis/arkts-webview-mediaerror-e.md) | Yes | Error object type. |
 | errorMessage | string | Yes | Error message. |
 
 ## handleFullscreenChanged
@@ -205,7 +205,7 @@ Called to notify the ArkWeb engine of the cache status of the player when the ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | [ReadyState](../../apis-na/arkts-apis/arkts-na-webview-readystate-e.md) | Yes | Cache status of the player. |
+| state | [ReadyState](../../apis-default/arkts-apis/arkts-webview-readystate-e.md) | Yes | Cache status of the player. |
 
 ## handleSeekFinished
 
@@ -259,7 +259,7 @@ Called to notify the ArkWeb engine of the playback status of the player when the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| status | [PlaybackStatus](../../apis-na/arkts-apis/arkts-na-webview-playbackstatus-e.md) | Yes | Player status. |
+| status | [PlaybackStatus](../../apis-default/arkts-apis/arkts-webview-playbackstatus-e.md) | Yes | Player status. |
 
 ## handleTimeUpdate
 

@@ -1,6 +1,11 @@
 # ToggleOptions
 
-Options of the toggle. &gt; **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. &gt; While historical version information is preserved for anonymous objects, there may be cases where the outer element &gt; 's @since version number is larger than inner elements'. This does not affect interface usability.
+Options of the toggle.
+
+> **NOTE：**
+> 
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element &gt; 's
 
 **Since:** 18
 
@@ -19,7 +24,15 @@ Options of the toggle. &gt; **NOTE：**&gt; &gt; To standardize anonymous object
 isOn?: boolean
 ```
 
-Whether the toggle is turned on. **true**: on. **false**: off. Default value: **false** This parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md). This property supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
+Whether the toggle is turned on.
+
+**true**: on. **false**: off.
+
+Default value: **false**
+
+This parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+
+This property supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
 **Type:** boolean
 
@@ -39,7 +52,9 @@ Whether the toggle is turned on. **true**: on. **false**: off. Default value: **
 type: ToggleType
 ```
 
-Type of the toggle. Default value: **ToggleType.Switch**
+Type of the toggle.
+
+Default value: **ToggleType.Switch**
 
 **Type:** [ToggleType](arkts-arkui-toggletype-e.md)
 

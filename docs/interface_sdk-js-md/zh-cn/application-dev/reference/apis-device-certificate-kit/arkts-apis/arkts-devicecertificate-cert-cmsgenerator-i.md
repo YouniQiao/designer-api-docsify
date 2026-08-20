@@ -1,6 +1,10 @@
 # CmsGenerator
 
-提供生成CMS（Cryptographic Message Syntax）消息的API。 &gt; **说明：** &gt; &gt; PKCS #7是用于存储签名或加密数据的标准语法。注意CMS是PKCS #7的扩展，PKCS #7支持的数据类型包括数据、签名数据、封装数据、 &gt; 签名和封装数据、摘要数据、加密数据。常用于保护数据的完整性和机密性。
+提供生成CMS（Cryptographic Message Syntax）消息的API。
+
+> **说明：**
+> 
+> PKCS #7是用于存储签名或加密数据的标准语法。注意CMS是PKCS #7的扩展，PKCS #7支持的数据类型包括数据、签名数据、封装数据、 &gt; 签名和封装数据、摘要数据、加密数据。常用于保护数据的完整性和机密性。
 
 **起始版本：** 23
 
@@ -22,7 +26,9 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 addCert(cert: X509Cert): void
 ```
 
-用于添加内容类型为SIGNED_DATA的CMS的证书，例如签名证书的颁发者证书。 <br>如果未调用addSigner接口，并且仅添加证书后，生成的CMS签名数据将只包含证书。
+用于添加内容类型为SIGNED_DATA的CMS的证书，例如签名证书的颁发者证书。
+
+<br>如果未调用addSigner接口，并且仅添加证书后，生成的CMS签名数据将只包含证书。
 
 **起始版本：** 23
 
@@ -42,9 +48,9 @@ addCert(cert: X509Cert): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -171,7 +177,9 @@ function testAddCert() {
 addRecipientInfo(recipientInfo: CmsRecipientInfo): Promise<void>
 ```
 
-为内容类型为ENVELOPED_DATA的CMS添加接收者信息。使用Promise方式返回结果。 <br>该方法至少需要设置一个接收者。
+为内容类型为ENVELOPED_DATA的CMS添加接收者信息。使用Promise方式返回结果。
+
+<br>该方法至少需要设置一个接收者。
 
 **起始版本：** 23
 
@@ -197,9 +205,9 @@ addRecipientInfo(recipientInfo: CmsRecipientInfo): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
 | [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes: <br>1. The type of recipient certificate is invalid or not supported; <br>2. The digestAlgorithm of CmsKeyAgreeRecipientInfo is invalid or not supported; <br>3. The recipientInfo does not have any recipient info. |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -291,7 +299,11 @@ async function testAddRecipientInfo() {
 addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): void
 ```
 
-用于为内容类型为SIGNED_DATA的CMS添加签名者信息。 &gt; **说明：** &gt; &gt; 自签名证书不能作为签名者。
+用于为内容类型为SIGNED_DATA的CMS添加签名者信息。
+
+> **说明：**
+> 
+> 自签名证书不能作为签名者。
 
 **起始版本：** 23
 
@@ -313,9 +325,9 @@ addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 | [19030008](../errorcode-cert.md#19030008-私钥密码错误) | Maybe wrong password. |
 
@@ -528,9 +540,9 @@ doFinal(data: Uint8Array, options?: CmsGeneratorOptions): Promise<Uint8Array | s
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -760,9 +772,9 @@ doFinalSync(data: Uint8Array, options?: CmsGeneratorOptions): Uint8Array | strin
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -967,7 +979,9 @@ function testDoFinalSync() {
 getEncryptedContentData(): Promise<Uint8Array>
 ```
 
-用于获取内容类型为ENVELOPED_DATA的CMS的加密内容数据。使用Promise方式返回结果。 <br>如果创建了类型为ENVELOPED_DATA的CmsGenerator并使用了数据分离来生成CMS封装数据，使用此方法来获取加密的内容数据。
+用于获取内容类型为ENVELOPED_DATA的CMS的加密内容数据。使用Promise方式返回结果。
+
+<br>如果创建了类型为ENVELOPED_DATA的CmsGenerator并使用了数据分离来生成CMS封装数据，使用此方法来获取加密的内容数据。
 
 **起始版本：** 23
 
@@ -987,8 +1001,8 @@ getEncryptedContentData(): Promise<Uint8Array>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -1094,7 +1108,9 @@ async function testGetEncryptedContentData() {
 setRecipientEncryptionAlgorithm(algorithm: CmsRecipientEncryptionAlgorithm): void
 ```
 
-为内容类型为ENVELOPED_DATA的CMS设置加密算法。 <br>该方法应在创建ENVELOPED_DATA类型的CmsGenerator后立即调用。如果未调用此方法，则默认使用AES_256_GCM作为加密算法。
+为内容类型为ENVELOPED_DATA的CMS设置加密算法。
+
+<br>该方法应在创建ENVELOPED_DATA类型的CmsGenerator后立即调用。如果未调用此方法，则默认使用AES_256_GCM作为加密算法。
 
 **起始版本：** 23
 
@@ -1114,9 +1130,9 @@ setRecipientEncryptionAlgorithm(algorithm: CmsRecipientEncryptionAlgorithm): voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
 | [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes: <br>1. The type of algorithm is invalid or not supported. |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**

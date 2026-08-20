@@ -2,6 +2,8 @@
 
 MifareClassic Type definition
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-tag-enum MifareClassicType--><!--Device-tag-enum MifareClassicType-End-->

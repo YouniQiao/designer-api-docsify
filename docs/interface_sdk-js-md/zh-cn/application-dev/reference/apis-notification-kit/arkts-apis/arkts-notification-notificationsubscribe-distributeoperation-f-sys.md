@@ -41,10 +41,10 @@ function distributeOperation(hashcode: string, operationInfo?: OperationInfo): P
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600010](../errorcode-notification.md#1600010-分布式操作失败) | Distributed operation failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600010](../errorcode-notification.md#1600010-分布式操作失败) | Distributed operation failed. |
 | [1600021](../errorcode-notification.md#1600021-跨设备通信超时) | Distributed operation timed out. |
 
 **示例**

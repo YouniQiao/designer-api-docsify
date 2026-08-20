@@ -2,6 +2,8 @@
 
 Provides methods for accessing Barcode tag.
 
+@extends TagSession
+
 **Inheritance/Implementation:** BarcodeTag extends TagSession
 
 **Since:** 23
@@ -38,7 +40,7 @@ Returns the barcode of a Barcode tag.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
 

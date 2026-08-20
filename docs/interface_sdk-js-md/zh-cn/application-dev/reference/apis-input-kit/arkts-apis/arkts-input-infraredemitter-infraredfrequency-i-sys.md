@@ -1,4 +1,4 @@
-# InfraredFrequency(红外管理)（系统接口）
+# InfraredFrequency（系统接口）
 
 红外信号的频率范围。
 

@@ -39,8 +39,8 @@ function getOriginalSize(compressedFile: string): Promise<long>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [900001](../errorcode-zlib.md#900001-传入的源文件错误) | The input source file is invalid. |
-| [900003](../errorcode-zlib.md#900003-传入的源文件格式错误或者已损坏) | The input source file is not in ZIP format or is damaged. |
+| [900001](../../apis-ability-kit/errorcode-zlib.md#900001-传入的源文件错误) | The input source file is invalid. |
+| [900003](../../apis-ability-kit/errorcode-zlib.md#900003-传入的源文件格式错误或者已损坏) | The input source file is not in ZIP format or is damaged. |
 
 **示例**
 

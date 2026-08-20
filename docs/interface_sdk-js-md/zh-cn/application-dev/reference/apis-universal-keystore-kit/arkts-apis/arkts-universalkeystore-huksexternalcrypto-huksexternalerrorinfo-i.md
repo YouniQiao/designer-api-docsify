@@ -1,4 +1,4 @@
-# HuksExternalErrorInfo(External Key Management)
+# HuksExternalErrorInfo
 
 详细错误信息
 

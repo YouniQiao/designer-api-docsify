@@ -12,7 +12,11 @@ import { appManager } from '@kit.AbilityKit';
 function getSupportedProcessCachePids(bundleName : string): Promise<Array<int>>
 ```
 
-查询当前应用中支持缓存后快速启动的进程PID。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 本接口仅支持获取调用者所在系统账号下的进程PID。
+查询当前应用中支持缓存后快速启动的进程PID。使用Promise异步回调。
+
+> **说明：**
+> 
+> 本接口仅支持获取调用者所在系统账号下的进程PID。
 
 **起始版本：** 23
 
@@ -42,11 +46,11 @@ function getSupportedProcessCachePids(bundleName : string): Promise<Array<int>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 **示例**
 

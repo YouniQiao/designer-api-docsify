@@ -34,7 +34,13 @@ Constructs a **BackForwardCacheSupportedFeatures** object.
 mediaTakeOver: boolean
 ```
 
-是否允许使用视频托管的页面进入前进后退缓存。 如果设置为允许，需要维护为视频元素创建的系统控件的生命周期，避免造成资源泄漏。 true：允许，false：不允许。 默认值：false。
+是否允许使用视频托管的页面进入前进后退缓存。
+
+如果设置为允许，需要维护为视频元素创建的系统控件的生命周期，避免造成资源泄漏。
+
+true：允许，false：不允许。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -50,7 +56,13 @@ mediaTakeOver: boolean
 nativeEmbed: boolean
 ```
 
-是否允许使用同层渲染的页面进入前进后退缓存。 如果设置为允许，需要维护为同层渲染元素创建的系统控件的生命周期，避免造成资源泄漏。 true：允许，false：不允许。 默认值：false。
+是否允许使用同层渲染的页面进入前进后退缓存。
+
+如果设置为允许，需要维护为同层渲染元素创建的系统控件的生命周期，避免造成资源泄漏。
+
+true：允许，false：不允许。
+
+默认值：false。
 
 **类型：** boolean
 

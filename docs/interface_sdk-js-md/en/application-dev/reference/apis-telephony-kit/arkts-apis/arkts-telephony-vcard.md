@@ -2,6 +2,8 @@
 
 Provides applications with APIs for obtaining vcard.
 
+@namespace vcard
+
 **Since:** 23
 
 <!--Device-unnamed-declare namespace vcard--><!--Device-unnamed-declare namespace vcard-End-->

@@ -2,6 +2,8 @@
 
 表示音频模板类型的枚举。
 
+@enum { string }
+
 **起始版本：** 23
 
 <!--Device-avMusicTemplate-enum AVMusicTemplateType--><!--Device-avMusicTemplate-enum AVMusicTemplateType-End-->
@@ -14,7 +16,9 @@
 DEFAULT = 'smartCar'
 ```
 
-音频模板类型的默认值。 用于标识当前音频模板应用的业务类型，开发者创建模板时可根据自身业务修改此值。
+音频模板类型的默认值。
+
+用于标识当前音频模板应用的业务类型，开发者创建模板时可根据自身业务修改此值。
 
 **起始版本：** 23
 

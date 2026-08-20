@@ -12,7 +12,11 @@ import { notificationManager } from '@kit.NotificationKit';
 function cancel(id: int, callback: AsyncCallback<void>): void
 ```
 
-Cancels a notification with the specified ID. This API uses an asynchronous callback to return the result. After cancellation, the corresponding notification will be removed from the notification center, status bar, etc., and will no longer be visible to the user. Compared with notificationManager.cancel(id, label, callback), which includes the label parameter, this API does not pass in a label and will cancel the notification matching the specified ID. When a notification is published with a non-empty label, the `notificationManager.cancel(id, label, callback)` API must be used to cancel it.
+Cancels a notification with the specified ID. This API uses an asynchronous callback to return the result.
+
+After cancellation, the corresponding notification will be removed from the notification center, status bar, etc., and will no longer be visible to the user.
+
+Compared with notificationManager.cancel(id, label, callback), which includes the label parameter, this API does not pass in a label and will cancel the notification matching the specified ID. When a notification is published with a non-empty label, the `notificationManager.cancel(id, label, callback)` API must be used to cancel it.
 
 **Since:** 23
 
@@ -68,7 +72,11 @@ notificationManager.cancel(0, cancelCallback);
 function cancel(id: int, label: string, callback: AsyncCallback<void>): void
 ```
 
-Cancels a published notification based on the notification ID and label. This API uses an asynchronous callback to return the result. After cancellation, the corresponding notification will be removed from the notification center, status bar, and other locations, and will no longer be visible to the user. This is suitable for scenarios where a specific notification with a particular tag needs to be precisely canceled. Compared with notificationManager.cancel(id, callback), which requires only the notification ID, this API additionally has the **label** parameter, allowing precise cancellation of notifications with the same ID but different labels.
+Cancels a published notification based on the notification ID and label. This API uses an asynchronous callback to return the result.
+
+After cancellation, the corresponding notification will be removed from the notification center, status bar, and other locations, and will no longer be visible to the user. This is suitable for scenarios where a specific notification with a particular tag needs to be precisely canceled.
+
+Compared with notificationManager.cancel(id, callback), which requires only the notification ID, this API additionally has the **label** parameter, allowing precise cancellation of notifications with the same ID but different labels.
 
 **Since:** 23
 
@@ -125,7 +133,9 @@ notificationManager.cancel(0, "label", cancelCallback);
 function cancel(id: int, label?: string): Promise<void>
 ```
 
-Cancels a published notification based on the notification ID and label. This API uses a promise to return the result. After cancellation, the corresponding notification will be removed from the notification center, status bar, and other locations, and will no longer be visible to the user.
+Cancels a published notification based on the notification ID and label. This API uses a promise to return the result.
+
+After cancellation, the corresponding notification will be removed from the notification center, status bar, and other locations, and will no longer be visible to the user.
 
 **Since:** 23
 

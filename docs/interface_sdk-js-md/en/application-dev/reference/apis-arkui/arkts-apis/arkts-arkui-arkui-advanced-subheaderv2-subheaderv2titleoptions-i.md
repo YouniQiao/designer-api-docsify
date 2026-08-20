@@ -40,7 +40,9 @@ Set the id of the title.
 primaryTitle?: ResourceStr
 ```
 
-Primary title. Default value: **undefined**
+Primary title.
+
+Default value: **undefined**
 
 **Type:** ResourceStr
 
@@ -60,9 +62,11 @@ Primary title. Default value: **undefined**
 primaryTitleModifier?: TextModifier
 ```
 
-Text attributes of the primary title, such as the font color, font size, and font weight. Default value: **undefined**
+Text attributes of the primary title, such as the font color, font size, and font weight.
 
-**Type:** TextModifier
+Default value: **undefined**
+
+**Type:** [TextModifier](arkts-arkui-textmodifier-c.md)
 
 **Since:** 18
 
@@ -80,7 +84,9 @@ Text attributes of the primary title, such as the font color, font size, and fon
 secondaryTitle?: ResourceStr
 ```
 
-Secondary title. Default value: **undefined**
+Secondary title.
+
+Default value: **undefined**
 
 **Type:** ResourceStr
 
@@ -100,9 +106,11 @@ Secondary title. Default value: **undefined**
 secondaryTitleModifier?: TextModifier
 ```
 
-Text attributes of the secondary title, such as the font color, font size, and font weight. Default value: **undefined**
+Text attributes of the secondary title, such as the font color, font size, and font weight.
 
-**Type:** TextModifier
+Default value: **undefined**
+
+**Type:** [TextModifier](arkts-arkui-textmodifier-c.md)
 
 **Since:** 18
 
@@ -120,7 +128,11 @@ Text attributes of the secondary title, such as the font color, font size, and f
 titleAccessibilityText?: ResourceStr
 ```
 
-Customized content to be read in the title. Default value: **undefined** If the value is **undefined**, the title content displayed by the component is read by default.
+Customized content to be read in the title.
+
+Default value: **undefined**
+
+If the value is **undefined**, the title content displayed by the component is read by default.
 
 **Type:** ResourceStr
 

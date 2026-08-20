@@ -35,7 +35,7 @@ $_iterator(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
 
 **示例**
 
@@ -74,7 +74,7 @@ while(temp != undefined) {
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 返回一个迭代器，用于按栈的存储顺序依次遍历Stack中的所有元素。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个迭代器，用于按栈的存储顺序依次遍历Stack中的所有元素。 |
 
 **错误码：**
 

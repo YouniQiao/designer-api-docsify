@@ -45,13 +45,13 @@ Clears the version conflict flag of the local file. If a conflict occurs, you ne
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
-| 13900002 | No such file or directory. |
-| 14000002 | Invalid URI. |
-| 13900012 | Permission denied by the file system. |
 | 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900002 | No such file or directory. |
 | 13900010 | Try again. |
+| 13900012 | Permission denied by the file system. |
+| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 14000002 | Invalid URI. |
+| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 **Examples**
 
@@ -136,14 +136,14 @@ Obtains the content of a file of a specified version based on the version number
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
 | 13900002 | No such file or directory. |
+| 13900010 | Try again. |
+| 13900012 | Permission denied by the file system. |
+| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | 14000002 | Invalid URI. |
 | 22400002 | Network unavailable. |
-| 13900012 | Permission denied by the file system. |
-| 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
-| 13900010 | Try again. |
+| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 ## getHistoryVersionList
 
@@ -151,7 +151,11 @@ Obtains the content of a file of a specified version based on the version number
 getHistoryVersionList(uri: string, versionNumLimit: int): Promise<Array<HistoryVersion>>
 ```
 
-Obtains the list of historical versions. The returned versions are sorted by modification time. The earlier the modification time, the later the version. This API uses a promise to return the result. If the number of cloud versions is less than the length limit, the list will be returned with the actual number of versions. If the number of cloud versions is greater than or equal to the length limit, the number of the latest versions ( specified by **versionNumLimit**) will be returned.
+Obtains the list of historical versions. The returned versions are sorted by modification time. The earlier the modification time, the later the version. This API uses a promise to return the result.
+
+If the number of cloud versions is less than the length limit, the list will be returned with the actual number of versions.
+
+If the number of cloud versions is greater than or equal to the length limit, the number of the latest versions ( specified by **versionNumLimit**) will be returned.
 
 **Since:** 23
 
@@ -176,14 +180,14 @@ Obtains the list of historical versions. The returned versions are sorted by mod
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
 | 13900002 | No such file or directory. |
+| 13900010 | Try again. |
+| 13900012 | Permission denied by the file system. |
+| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | 14000002 | Invalid URI. |
 | 22400002 | Network unavailable. |
-| 13900012 | Permission denied by the file system. |
-| 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
-| 13900010 | Try again. |
+| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 **Examples**
 
@@ -212,7 +216,9 @@ fileVersion.getHistoryVersionList(uri, limit).then((versionList: Array<cloudSync
 isFileConflict(uri: string): Promise<boolean>
 ```
 
-Obtains the version conflict flag of a local file. This API uses a promise to return the result. This API takes effect only when the application is configured for manual conflict resolution. Otherwise, conflicts are automatically resolved during synchronization, and the return value will be **false**. Once the application is configured for manual conflict resolution, calling this API returns whether the current local file conflicts with the cloud file. The application then prompts the user to handle the conflict. After the conflict is resolved, you need to call the [clearFileConflict](#clearfileconflict) method to clear the conflict flag and synchronize the file to the cloud.
+Obtains the version conflict flag of a local file. This API uses a promise to return the result. This API takes effect only when the application is configured for manual conflict resolution. Otherwise, conflicts are automatically resolved during synchronization, and the return value will be **false**.
+
+Once the application is configured for manual conflict resolution, calling this API returns whether the current local file conflicts with the cloud file. The application then prompts the user to handle the conflict. After the conflict is resolved, you need to call the [clearFileConflict](#clearfileconflict) method to clear the conflict flag and synchronize the file to the cloud.
 
 **Since:** 23
 
@@ -236,13 +242,13 @@ Obtains the version conflict flag of a local file. This API uses a promise to re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
-| 13900002 | No such file or directory. |
-| 14000002 | Invalid URI. |
-| 13900012 | Permission denied by the file system. |
 | 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900002 | No such file or directory. |
 | 13900010 | Try again. |
+| 13900012 | Permission denied by the file system. |
+| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 14000002 | Invalid URI. |
+| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 **Examples**
 
@@ -293,16 +299,16 @@ Replaces the local file with the file of a historical version. Before replacemen
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
-| 13900005 | I/O error. |
-| 22400007 | The version file specified to replace the original file does not exist. |
-| 13900002 | No such file or directory. |
-| 14000002 | Invalid URI. Possible causes: 1.originalUri invalid; 2.versionUri invalid. |
-| 13900012 | Permission denied by the file system. |
-| 13900008 | Bad file descriptor. |
 | 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900002 | No such file or directory. |
+| 13900005 | I/O error. |
+| 13900008 | Bad file descriptor. |
 | 13900010 | Try again. |
+| 13900012 | Permission denied by the file system. |
+| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 14000002 | Invalid URI. Possible causes: 1.originalUri invalid; 2.versionUri invalid. |
+| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 22400007 | The version file specified to replace the original file does not exist. |
 
 **Examples**
 

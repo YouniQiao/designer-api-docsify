@@ -20,7 +20,11 @@ import { InputMethodSubtype } from '@kit.IMEKit';
 extra?: object
 ```
 
-Mandatory. Extra information of the input method subtype. **NOTE：**- This parameter is optional since API version 10. - This parameter is reserved and currently has no specific meaning.
+Mandatory. Extra information of the input method subtype.
+
+**NOTE：**
+
+- This parameter is optional since API version 10. - This parameter is reserved and currently has no specific meaning.
 
 **Type:** object
 

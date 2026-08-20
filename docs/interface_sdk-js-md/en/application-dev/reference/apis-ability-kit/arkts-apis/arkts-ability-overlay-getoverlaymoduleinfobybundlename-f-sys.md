@@ -13,7 +13,9 @@ function getOverlayModuleInfoByBundleName(bundleName: string,
       callback: AsyncCallback<Array<OverlayModuleInfo>>): void
 ```
 
-Obtains the information about all modules with the overlay feature in another application. This API uses an asynchronous callback to return the result. No permission is required when the specified application is the caller itself.
+Obtains the information about all modules with the overlay feature in another application. This API uses an asynchronous callback to return the result.
+
+No permission is required when the specified application is the caller itself.
 
 **Since:** 23
 
@@ -39,8 +41,8 @@ Obtains the information about all modules with the overlay feature in another ap
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700032](../errorcode-bundle.md#17700032-application-does-not-contain-a-module-with-the-overlay-feature) | The specified bundle does not contain any overlay module. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
+| [17700032](../errorcode-bundle.md#17700032-application-does-not-contain-a-module-with-the-overlay-feature) | The specified bundle does not contain any overlay module. |
 
 **Examples**
 
@@ -73,7 +75,9 @@ try {
 function getOverlayModuleInfoByBundleName(bundleName: string, moduleName: string, callback: AsyncCallback<Array<OverlayModuleInfo>>): void
 ```
 
-Obtains the information about a module with the overlay feature in another application. This API uses an asynchronous callback to return the result. No permission is required when the specified application is the caller itself.
+Obtains the information about a module with the overlay feature in another application. This API uses an asynchronous callback to return the result.
+
+No permission is required when the specified application is the caller itself.
 
 **Since:** 23
 
@@ -100,9 +104,9 @@ Obtains the information about a module with the overlay feature in another appli
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module name is not found. |
 | [17700032](../errorcode-bundle.md#17700032-application-does-not-contain-a-module-with-the-overlay-feature) | The specified bundle does not contain any overlay module. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700033](../errorcode-bundle.md#17700033-module-is-not-configured-with-the-overlay-feature) | The specified module is not an overlay module. |
 
 **Examples**
@@ -137,7 +141,9 @@ try {
 function getOverlayModuleInfoByBundleName(bundleName: string, moduleName?: string): Promise<Array<OverlayModuleInfo>>
 ```
 
-Obtains the information about a module with the overlay feature in another application. This API uses a promise to return the result. No permission is required when the specified application is the caller itself.
+Obtains the information about a module with the overlay feature in another application. This API uses a promise to return the result.
+
+No permission is required when the specified application is the caller itself.
 
 **Since:** 23
 
@@ -169,9 +175,9 @@ Obtains the information about a module with the overlay feature in another appli
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module name is not found. |
 | [17700032](../errorcode-bundle.md#17700032-application-does-not-contain-a-module-with-the-overlay-feature) | The specified bundle does not contain any overlay module. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700033](../errorcode-bundle.md#17700033-module-is-not-configured-with-the-overlay-feature) | The specified module is not an overlay module. |
 
 **Examples**

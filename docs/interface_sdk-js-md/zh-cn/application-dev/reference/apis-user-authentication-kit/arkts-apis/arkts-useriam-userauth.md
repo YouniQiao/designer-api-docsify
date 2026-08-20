@@ -1,6 +1,12 @@
 # @ohos.userIAM.userAuth
 
-**userAuth**模块是OpenHarmony系统中用于用户身份认证的核心模块，提供了设备解锁、支付验证、应用登录等场景下的身份认证能力。 该模块支持多种生物特征认证方式（人脸、指纹）和密码认证（PIN），并提供不同级别的安全信任等级。从API版本26.0.0开始，新增伴随设备认证的方式。 该模块主要用于以下场景： - 设备解锁认证。 - 金融支付验证。 - 应用登录保护。 - 敏感操作确认。
+*userAuth**模块是OpenHarmony系统中用于用户身份认证的核心模块，提供了设备解锁、支付验证、应用登录等场景下的身份认证能力。
+
+该模块支持多种生物特征认证方式（人脸、指纹）和密码认证（PIN），并提供不同级别的安全信任等级。从API版本26.0.0开始，新增伴随设备认证的方式。
+
+该模块主要用于以下场景：
+
+- 设备解锁认证。 - 金融支付验证。 - 应用登录保护。 - 敏感操作确认。
 
 **起始版本：** 23
 
@@ -63,7 +69,7 @@ import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 | [IUserAuthCallback](arkts-userauthentication-userauth-iuserauthcallback-i.md) | 返回认证结果的回调对象。 |
 | [ReuseUnlockResult](arkts-userauthentication-userauth-reuseunlockresult-i.md) | 复用解锁认证结果。该接口用于配置认证结果复用的相关参数，包括复用模式和有效时长。通过合理配置认证结果复用，可以在保证安全性的前提下提升用户体验，避免用户频繁重复认证。 |
 | [TipInfo](arkts-userauthentication-userauth-tipinfo-i.md) | 表示认证过程中的提示信息，用于提供认证过程的反馈。 |
-| [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) | 用于执行用户身份认证，并支持使用统一用户身份认证控件。该接口提供了完整的用户认证能力，包括订阅认证结果、订阅认证中间状态、启动认证和取消认证等操作。通过统一认证控件，可以为用户提供标准化的认证界面和一致的认证体验。 使用以下接口前，需先通过[getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md)方法获取UserAuthInstance对象。 |
+| [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) | 用于执行用户身份认证，并支持使用统一用户身份认证控件。该接口提供了完整的用户认证能力，包括订阅认证结果、订阅认证中间状态、启动认证和取消认证等操作。通过统一认证控件，可以为用户提供标准化的认证界面和一致的认证体验。 |
 | [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md) | 用户认证结果。认证通过时，返回认证类型和认证通过的令牌信息；认证不通过时，返回相应的错误码。该接口用于描述认证完成后的结果信息，应用可通过[IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md)的 onResult回调获取此结果。 |
 | [WidgetParam](arkts-userauthentication-userauth-widgetparam-i.md) | 用户认证界面配置相关参数。该接口用于配置认证界面的显示样式和交互方式，包括标题、导航按钮文本、窗口模式等。通过合理配置这些参数，可以为用户提供清晰的认证引导和良好的交互体验。 |
 
@@ -83,7 +89,7 @@ import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [AuthTrustLevel](arkts-userauthentication-userauth-authtrustlevel-e.md) | 表示认证结果的信任等级枚举。该枚举定义了四个认证可信等级，用于描述认证结果的安全强度。认证可信等级越高，表示认证方案的活体检测能力越强、用户身份识别越精确，适用于更高安全要求的业务场景。应用应根据业务场景的安全需求选择合适的认证可 信等级。 典型场景及举例可参考[生物认证可信等级划分原则](../../../security/UserAuthenticationKit/user-authentication-overview.md#生物认证可信等级划分原则)。 |
+| [AuthTrustLevel](arkts-userauthentication-userauth-authtrustlevel-e.md) | 表示认证结果的信任等级枚举。该枚举定义了四个认证可信等级，用于描述认证结果的安全强度。认证可信等级越高，表示认证方案的活体检测能力越强、用户身份识别越精确，适用于更高安全要求的业务场景。应用应根据业务场景的安全需求选择合适的认证可 信等级。 |
 | [AuthenticationResult](arkts-userauthentication-userauth-authenticationresult-e.md) | 表示认证结果的枚举。 |
 | [FaceTips](arkts-userauthentication-userauth-facetips-e.md) | 表示人脸认证过程中提示码的枚举。 |
 | [FingerprintTips](arkts-userauthentication-userauth-fingerprinttips-e.md) | 表示指纹认证过程中提示码的枚举。 |
@@ -109,10 +115,10 @@ import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 | 名称 | 说明 |
 | --- | --- |
 | [AuthCallbackOnResultFunc](arkts-userauthentication-userauth-authcallbackonresultfunc-t.md) | 回调函数，返回认证结果。认证成功时，可以通过UserAuthResult获取到认证成功的令牌信息。 |
-| [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md) | 表示认证事件类型的关键字，作为[on](arkts-userauthentication-userauth-authinstance-i.md#on)接口的参数。 该类型为下表类型取值中的联合类型。 |
+| [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md) | 表示认证事件类型的关键字，作为[on](arkts-userauthentication-userauth-authinstance-i.md#on)接口的参数。 |
 | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | 回调函数，返回认证中间状态。该回调用于在认证过程中获取各种中间状态信息，包括每次认证不通过、冻结状态、界面加载和释放等。通过订阅这些中间状态，应用可以在认证过程中提供更精细的用户交互和状态管理。 |
 | [AuthType](arkts-userauthentication-userauth-authtype-t.md) | 表示认证类型。 |
-| [EventInfo](arkts-userauthentication-userauth-eventinfo-t.md) | 表示认证过程中事件信息的类型。 该类型为下表类型取值中的联合类型。 |
+| [EventInfo](arkts-userauthentication-userauth-eventinfo-t.md) | 表示认证过程中事件信息的类型。 |
 | [SecureLevel](arkts-userauthentication-userauth-securelevel-t.md) | 表示认证的安全级别。 |
 
 <!--Del-->

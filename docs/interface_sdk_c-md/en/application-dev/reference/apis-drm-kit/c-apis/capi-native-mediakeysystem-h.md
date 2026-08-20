@@ -4,7 +4,7 @@
 
 The file declares the MediaKeySystem APIs for DRM operations.The APIs can be used to check the support for a DRM solution, create a media key session, obtain and setconfigurations, obtain DRM metrics, obtain the content protection level, generate media key system requests, processresponses to media key system requests, listen for events, and manage offline media keys.
 
-**Library**: libnative_drm.z.so
+**Library**: libnative_drm.so
 
 **System capability**: SystemCapability.Multimedia.Drm.Core
 

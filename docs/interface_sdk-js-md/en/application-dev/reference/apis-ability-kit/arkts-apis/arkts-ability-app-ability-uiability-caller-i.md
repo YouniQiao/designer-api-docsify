@@ -48,8 +48,8 @@ Used by a Caller UIAbility to send serialized data, as agreed upon by both parti
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16200002](../errorcode-ability.md#16200002-invalid-callee) | The callee does not exist. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| [16200002](../errorcode-ability.md#16200002-invalid-callee) | The callee does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 **Examples**
@@ -144,8 +144,8 @@ Used by a Caller UIAbility to send serialized data to a Callee UIAbility and ret
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16200002](../errorcode-ability.md#16200002-invalid-callee) | The callee does not exist. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| [16200002](../errorcode-ability.md#16200002-invalid-callee) | The callee does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 **Examples**
@@ -565,8 +565,8 @@ Used by a Caller UIAbility to proactively release the connection with the Callee
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16200002](../errorcode-ability.md#16200002-invalid-callee) | The callee does not exist. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| [16200002](../errorcode-ability.md#16200002-invalid-callee) | The callee does not exist. |
 
 **Examples**
 

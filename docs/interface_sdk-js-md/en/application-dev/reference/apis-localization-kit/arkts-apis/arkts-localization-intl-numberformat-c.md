@@ -2,7 +2,9 @@
 
 Provides the API for formatting number strings.
 
-**Since:** 6
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-intl-export class NumberFormat--><!--Device-intl-export class NumberFormat-End-->
 
@@ -20,24 +22,15 @@ import { intl } from '@kit.LocalizationKit';
 constructor()
 ```
 
-Creates a **NumberFormat** object for the current system locale.
+Creates a NumberFormat object for the specified locale.
 
-**Since:** 8
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-NumberFormat-constructor()--><!--Device-NumberFormat-constructor()-End-->
 
 **System capability:** SystemCapability.Global.I18n
-
-**Examples**
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a NumberFormat object using the current system locale ID.
-let formatter: intl.NumberFormat = new intl.NumberFormat();
-```
 
 ## constructor
 
@@ -45,11 +38,11 @@ let formatter: intl.NumberFormat = new intl.NumberFormat();
 constructor(locale: string | Array<string>, options?: NumberOptions)
 ```
 
-Creates a **NumberFormat** object based on the specified locale and options.
+Creates a NumberFormat object for the specified locale.
 
-**Since:** 6
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-NumberFormat-constructor(locale: string | Array<string>, options?: NumberOptions)--><!--Device-NumberFormat-constructor(locale: string | Array<string>, options?: NumberOptions)-End-->
 
@@ -60,16 +53,7 @@ Creates a **NumberFormat** object based on the specified locale and options.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locale | string \| Array&lt;string&gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
-| options | [NumberOptions](../../apis-na/arkts-apis/arkts-na-intl-numberoptions-i.md) | No | Options for creating the **NumberFormat** object. |
-
-**Examples**
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a NumberFormat object with locale ID being en-GB, style being decimal, and notation being scientific.
-let formatter: intl.NumberFormat = new intl.NumberFormat('en-GB', { style: 'decimal', notation: 'scientific' });
-```
+| options | [NumberOptions](arkts-localization-intl-numberoptions-i.md) | No | Options for creating the NumberFormat object. |
 
 ## format
 
@@ -79,9 +63,9 @@ format(num: double): string
 
 Formats a number.
 
-**Since:** 6
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-NumberFormat-format(num: double): string--><!--Device-NumberFormat-format(num: double): string-End-->
 
@@ -91,30 +75,13 @@ Formats a number.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| num | double | Yes | Number to be formatted.<br>**Since:** 12 |
+| num | double | Yes | Number to be formatted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
 | string | Formatted number. |
-
-**Examples**
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a NumberFormat object with a locale ID array. The locale ID en-GB is valid and therefore is used.
-let formatter: intl.NumberFormat = new intl.NumberFormat(['en-GB', 'zh'], { style: 'decimal', notation: 'scientific' });
-let formattedNumber: string = formatter.format(1223); // formattedNumber = 1.223E3
-let options: intl.NumberOptions = {
-  roundingPriority: 'lessPrecision',
-  maximumFractionDigits: 3,
-  maximumSignificantDigits: 3
-}
-formatter = new intl.NumberFormat('en', options);
-let result: string = formatter.format(1.23456); // result = 1.23
-```
 
 ## formatRange
 
@@ -124,9 +91,9 @@ formatRange(startRange: double, endRange: double): string
 
 Formats a number range.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-NumberFormat-formatRange(startRange: double, endRange: double): string--><!--Device-NumberFormat-formatRange(startRange: double, endRange: double): string-End-->
 
@@ -145,26 +112,17 @@ Formats a number range.
 | --- | --- |
 | string | Formatted number range. |
 
-**Examples**
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-let formatter: intl.NumberFormat = new intl.NumberFormat('en-US', { style: 'unit', unit: 'meter' });
-let formattedRange: string = formatter.formatRange(0, 3); // formattedRange: 0–3 m
-```
-
 ## resolvedOptions
 
 ```TypeScript
 resolvedOptions(): NumberOptions
 ```
 
-Obtains the options for creating a **NumberFormat** object.
+Obtains the options for creating a NumberFormat object.
 
-**Since:** 6
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-NumberFormat-resolvedOptions(): NumberOptions--><!--Device-NumberFormat-resolvedOptions(): NumberOptions-End-->
 
@@ -174,17 +132,5 @@ Obtains the options for creating a **NumberFormat** object.
 
 | Type | Description |
 | --- | --- |
-| [NumberOptions](../../apis-na/arkts-apis/arkts-na-intl-numberoptions-i.md) | Options for creating the **NumberFormat** object. |
-
-**Examples**
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-let formatter: intl.NumberFormat = new intl.NumberFormat(['en-GB', 'zh'], { style: 'decimal', notation: 'scientific' });
-// Obtain the options of the NumberFormat object.
-let options: intl.NumberOptions = formatter.resolvedOptions();
-let style: string | undefined = options.style; // style = 'decimal'
-let notation: string | undefined = options.notation; // notation = 'scientific'
-```
+| [NumberOptions](arkts-localization-intl-numberoptions-i.md) | Options for creating the NumberFormat object. |
 

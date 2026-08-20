@@ -19,7 +19,9 @@
 color?: ResourceColor
 ```
 
-设置文本识别成功后的实体颜色。 默认值：'#ff0a59f7'，表示蓝色（不透明度为100%）
+设置文本识别成功后的实体颜色。
+
+默认值：'#ff0a59f7'，表示蓝色（不透明度为100%）
 
 **类型：** ResourceColor
 
@@ -39,7 +41,19 @@ color?: ResourceColor
 decoration?: DecorationStyleInterface
 ```
 
-设置文本识别成功后的实体装饰线样式。 默认值： { type: TextDecorationType.Underline, color: 与实体颜色一致, style: TextDecorationStyle.SOLID }
+设置文本识别成功后的实体装饰线样式。
+
+默认值：
+
+{
+
+ type: TextDecorationType.Underline,
+
+ color: 与实体颜色一致,
+
+ style: TextDecorationStyle.SOLID 
+
+}
 
 **类型：** DecorationStyleInterface
 
@@ -59,7 +73,13 @@ decoration?: DecorationStyleInterface
 enablePreviewMenu?: boolean
 ```
 
-设置是否开启文本识别长按显示预览菜单。true表示开启，false表示未开启。 默认值：false 当copyOptions设置为None时，若enablePreviewMenu设置为true，长按AI实体也不能显示预览菜单。 本接口实际支持的设备类型范围（Phone、Tablet）小于其所属系统能力支持的设备类型范围（Phone、PC/2in1、Tablet、TV、Car、Wearable）。因硬件形态限制，该接口在PC/2in1、TV、Car、 Wearable设备中调用功能不生效。
+设置是否开启文本识别长按显示预览菜单。true表示开启，false表示未开启。
+
+默认值：false
+
+当copyOptions设置为None时，若enablePreviewMenu设置为true，长按AI实体也不能显示预览菜单。
+
+本接口实际支持的设备类型范围（Phone、Tablet）小于其所属系统能力支持的设备类型范围（Phone、PC/2in1、Tablet、TV、Car、Wearable）。因硬件形态限制，该接口在PC/2in1、TV、Car、 Wearable设备中调用功能不生效。
 
 **类型：** boolean
 
@@ -79,7 +99,9 @@ enablePreviewMenu?: boolean
 onDetectResultUpdate?: Callback<string>
 ```
 
-文本识别成功后，触发onDetectResultUpdate回调。 默认值：undefined，不触发回调。
+文本识别成功后，触发onDetectResultUpdate回调。
+
+默认值：undefined，不触发回调。
 
 **类型：** Callback&lt;string&gt;
 

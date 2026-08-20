@@ -1,4 +1,4 @@
-# NetFirewallRuleDirection(网络防火墙)
+# NetFirewallRuleDirection
 
 枚举类型，防火墙规则方向，包含入站、出站。
 

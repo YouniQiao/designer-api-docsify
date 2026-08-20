@@ -22,7 +22,11 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 addResource(type: ResourceType, proxy: PhotoProxy): void
 ```
 
-Adds resources using **PhotoProxy** data. &gt; **NOTE：**&gt; &gt; For the same asset change request, this API cannot be repeatedly called after resources are successfully added.
+Adds resources using **PhotoProxy** data.
+
+> **NOTE：**
+> 
+> For the same asset change request, this API cannot be repeatedly called after resources are successfully added.
 
 **Since:** 23
 
@@ -43,10 +47,10 @@ Adds resources using **PhotoProxy** data. &gt; **NOTE：**&gt; &gt; For the same
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000016 | Operation Not Support |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
+| 14000016 | Operation Not Support |
 
 **Examples**
 
@@ -102,9 +106,9 @@ Adds a resource using fileUri from file management directory
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
 ## createAssetRequest
@@ -113,7 +117,15 @@ Adds a resource using fileUri from file management directory
 static createAssetRequest(context: Context, displayName: string, options?: PhotoCreateOptions): MediaAssetChangeRequest
 ```
 
-Creates an asset change request with the specified file name. The file name must meet the following requirements: - A valid file name must include a base name and a supported image or video extension. - The total length of the file name must be between 1 and 255 characters. - The base name must not contain any invalid characters. Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; | For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+Creates an asset change request with the specified file name.
+
+The file name must meet the following requirements:
+
+- A valid file name must include a base name and a supported image or video extension. - The total length of the file name must be between 1 and 255 characters. - The base name must not contain any invalid characters.
+
+Starting from API version 18, the following characters are considered invalid: \ / : ? " &lt; &gt; |
+
+For API versions 10 to 17, the following characters are considered invalid: . .. \ / : ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 11
 
@@ -141,9 +153,9 @@ Creates an asset change request with the specified file name. The file name must
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000001 | Invalid display name |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | System inner fail |
 
 **Examples**
@@ -201,10 +213,10 @@ Creates an asset change request with the specified file name.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 23800102 | The format or length of the display name does not meet the specifications. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## deleteAssetsPermanentlyWithUri
 
@@ -212,7 +224,13 @@ Creates an asset change request with the specified file name.
 static deleteAssetsPermanentlyWithUri(context: Context, assetUris: string[]): Promise<void>
 ```
 
-Permanently deletes images or videos in batches by URI. The deleted images or videos are not stored in the recycle bin. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - Assets that exist only on the local device, on the cloud, or on both the local device and the cloud can be &gt; permanently deleted. The deleted assets are not stored in the recycle bin. &gt; &gt; - This operation is irreversible. The deleted assets cannot be restored. Exercise caution when performing this &gt; operation.
+Permanently deletes images or videos in batches by URI. The deleted images or videos are not stored in the recycle bin. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - Assets that exist only on the local device, on the cloud, or on both the local device and the cloud can be &gt; permanently deleted. The deleted assets are not stored in the recycle bin.
+> 
+> - This operation is irreversible. The deleted assets cannot be restored. Exercise caution when performing this &gt; operation.
 
 **Since:** 24
 
@@ -243,10 +261,10 @@ Permanently deletes images or videos in batches by URI. The deleted images or vi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out; |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by nonsystem application |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: <br>1. The context is empty; <br>2. Asset uri array size is empty or bigger than 500 . |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out; |
 
 **Examples**
 
@@ -268,7 +286,15 @@ async function example(context: Context, assetUri: string) {
 static deleteCloudAssetsWithUri(context: Context, assetUris: string[]): Promise<void>
 ```
 
-Deletes cloud media assets to the trash in batches. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - If the assets are only on the local device, no changes are made. &gt; &gt; - If the assets are only in the cloud, they are moved directly to the trash. &gt; &gt; - If the assets are on both the local device and the cloud, after deletion, they only remain on the local &gt; device, and the cloud copies are moved in the trash.
+Deletes cloud media assets to the trash in batches. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - If the assets are only on the local device, no changes are made.
+> 
+> - If the assets are only in the cloud, they are moved directly to the trash.
+> 
+> - If the assets are on both the local device and the cloud, after deletion, they only remain on the local &gt; device, and the cloud copies are moved in the trash.
 
 **Since:** 26.0.0
 
@@ -297,10 +323,10 @@ Deletes cloud media assets to the trash in batches. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out; |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: <br>1. The context is empty; <br>2. Asset uri array size is empty or bigger than 500 . |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out; |
 
 **Examples**
 
@@ -321,7 +347,11 @@ async function example(context: Context, assetUri: string) {
 static deleteLocalAssetsPermanently(context: Context, assets: Array<PhotoAsset>): Promise<void>
 ```
 
-Permanently deletes images or videos in batches. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this &gt; operation.
+Permanently deletes images or videos in batches. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this &gt; operation.
 
 **Since:** 23
 
@@ -350,9 +380,9 @@ Permanently deletes images or videos in batches. This API uses a promise to retu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **Examples**
@@ -384,7 +414,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 static deleteLocalAssetsPermanentlyWithUri(context: Context, assetUris: Array<string>): Promise<void>
 ```
 
-Permanently deletes images or video assets in batches by URI. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this &gt; operation.
+Permanently deletes images or video assets in batches by URI. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this &gt; operation.
 
 **Since:** 23
 
@@ -413,9 +447,9 @@ Permanently deletes images or video assets in batches by URI. This API uses a pr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| 13900020 | Invalid argument |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## deleteLocalAssetsWithUri
@@ -424,7 +458,15 @@ Permanently deletes images or video assets in batches by URI. This API uses a pr
 static deleteLocalAssetsWithUri(context: Context, assetUris: string[]): Promise<void>
 ```
 
-Deletes local media assets to the trash in batches. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - If the assets are only on the local device, they are moved directly to the trash. &gt; &gt; - If the assets are only in the cloud, no changes are made. &gt; &gt; - If the assets are on both the local device and the cloud, after deletion, they only remain in the cloud, and &gt; the local copies are moved in the trash.
+Deletes local media assets to the trash in batches. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - If the assets are only on the local device, they are moved directly to the trash.
+> 
+> - If the assets are only in the cloud, no changes are made.
+> 
+> - If the assets are on both the local device and the cloud, after deletion, they only remain in the cloud, and &gt; the local copies are moved in the trash.
 
 **Since:** 26.0.0
 
@@ -453,10 +495,10 @@ Deletes local media assets to the trash in batches. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1.Database corrupted; <br>2.The file system is abnormal; <br>3.The IPC request timed out; |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: <br>1. The context is empty; <br>2. Asset uri array size is empty or bigger than 500 . |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1.Database corrupted; <br>2.The file system is abnormal; <br>3.The IPC request timed out; |
 
 **Examples**
 
@@ -497,8 +539,8 @@ Sets the information about the app link association.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The input parameter's length is not within the valid range. |
 
 **Examples**
@@ -550,8 +592,8 @@ Sets the status of the app link association.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Invoked by non-system applications |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The input parameter is not within the valid range. |
 
 ## setCameraEditData
@@ -580,9 +622,9 @@ Saves the camera edited data of an asset.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: 1. Database corrupted. 2. The file system is abnormal. 3. The IPC request timed out. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The input parameter is not within the valid range. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: 1. Database corrupted. 2. The file system is abnormal. 3. The IPC request timed out. |
 
 ## setCameraShotKey
 
@@ -610,8 +652,8 @@ Sets the Key for the Ultra Snapshot feature, which allows the camera to take pho
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
 **Examples**
@@ -665,9 +707,9 @@ Sets the display mode of the composite image. This API uses a promise to return 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameter verification failed. Possible causes: <br>1. The compositeDisplayMode is not within the supported range. <br>2. The original file does not exist locally in PhotoAsset. <br>3. The PhotoAsset is not a composite asset. <br>4. The original file format is not within the supported range. <br>5. The original file has been edited. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 
 **Examples**
 
@@ -720,8 +762,8 @@ Saves the edited data of an asset.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
 **Examples**
@@ -782,10 +824,10 @@ Sets the effect of this moving photo.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000016 | Operation Not Support |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
+| 14000016 | Operation Not Support |
 
 **Examples**
 
@@ -891,8 +933,8 @@ Sets the status of the app link association.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The input parameter is not within the valid range. |
 
 **Examples**
@@ -947,8 +989,8 @@ Hides this file.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
 **Examples**
@@ -1007,8 +1049,8 @@ Set 4d livephoto status.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. |
 
 ## setLocation
 
@@ -1037,8 +1079,8 @@ Sets location information.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
 **Examples**
@@ -1094,9 +1136,9 @@ Saves MovingPhoto version which is used to determine what special efficacy is su
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Parameter error, only supports 9. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
 
 ## setSupportedWatermarkType
 
@@ -1124,8 +1166,8 @@ Sets the watermark type supported by photos.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 **Examples**
@@ -1179,8 +1221,8 @@ Sets the user comment information of this media asset.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
 **Examples**
@@ -1238,8 +1280,8 @@ Set video enhancement attribute
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000016 | Operation Not Support |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
+| 14000016 | Operation Not Support |
 

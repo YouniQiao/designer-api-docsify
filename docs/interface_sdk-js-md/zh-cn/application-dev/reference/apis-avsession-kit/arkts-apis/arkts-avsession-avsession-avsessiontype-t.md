@@ -4,7 +4,9 @@
 type AVSessionType = 'audio' | 'video' | 'voice_call' | 'video_call' | 'photo'
 ```
 
-当前会话支持的会话类型。 该类型可取的值为下表字符串。
+当前会话支持的会话类型。
+
+该类型可取的值为下表字符串。
 
 **起始版本：** 23
 

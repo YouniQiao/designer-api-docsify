@@ -1,6 +1,10 @@
 # UIServiceExtensionConnectCallback
 
-UIServiceExtensionConnectCallback provides callbacks for the connection to a UIServiceExtensionAbility. &gt; **NOTE：**&gt; &gt; - The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool.
+UIServiceExtensionConnectCallback provides callbacks for the connection to a UIServiceExtensionAbility.
+
+> **NOTE：**
+> 
+> - The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool.
 
 **Since:** 23
 
@@ -14,7 +18,11 @@ UIServiceExtensionConnectCallback provides callbacks for the connection to a UIS
 onData(data: Record<string, Object>): void
 ```
 
-Called to receive data when a connection to the UIServiceExtensionAbility is established. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Called to receive data when a connection to the UIServiceExtensionAbility is established.
+
+> **NOTE：**
+> 
+> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 14
 
@@ -146,7 +154,11 @@ Called back when data is sent.
 onDisconnect(): void
 ```
 
-Called when the connection to the UIServiceExtensionAbility is interrupted. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Called when the connection to the UIServiceExtensionAbility is interrupted.
+
+> **NOTE：**
+> 
+> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 

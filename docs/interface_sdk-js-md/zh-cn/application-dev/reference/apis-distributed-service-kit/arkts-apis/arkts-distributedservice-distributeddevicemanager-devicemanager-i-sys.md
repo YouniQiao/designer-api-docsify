@@ -1,6 +1,6 @@
 # DeviceManager
 
-设备管理实例，用于获取可信设备和本地设备的相关信息。在调用DeviceManager的方法前，需要先通过createDeviceManager构建一个DeviceManager实例dmInstance。
+设备管理实例，是分布式设备管理方法的调用入口，提供设备发现、设备认证、状态监听和信息查询等能力。 在调用DeviceManager的方法前，需要先通过createDeviceManager构建一个DeviceManager实例dmInstance。
 
 **起始版本：** 23
 
@@ -49,10 +49,10 @@ getDeviceIconInfo(filterOptions: DeviceIconInfoFilterOptions): Promise<DeviceIco
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-从云端获取数据失败) | Get data from cloud fail. |
+| [11600102](../errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
+| [11600106](../errorcode-device-manager.md#11600106-从云端获取数据失败) | Get data from cloud fail. |
 
 **示例**
 
@@ -150,11 +150,11 @@ getDeviceNetworkIdList(filterOptions: NetworkIdQueryFilter): Promise<Array<strin
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Parameter verification failed; |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-需要登录账号) | A login account is required. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Parameter verification failed; |
+| [11600102](../errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
+| [11600107](../errorcode-device-manager.md#11600107-需要登录账号) | A login account is required. |
 
 **示例**
 
@@ -239,11 +239,11 @@ getDeviceProfileInfoList(filterOptions: DeviceProfileInfoFilterOptions): Promise
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 500. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-需要登录账号) | A login account is required. |
-| [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-从云端获取数据失败) | Get data from cloud fail. |
+| [11600102](../errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
+| [11600106](../errorcode-device-manager.md#11600106-从云端获取数据失败) | Get data from cloud fail. |
+| [11600107](../errorcode-device-manager.md#11600107-需要登录账号) | A login account is required. |
 
 **示例**
 
@@ -321,10 +321,10 @@ getIdentificationByDeviceIds(deviceIds: Array<string>): Array<DeviceIdentificati
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | User permission verify failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [11600101](../errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 
 **示例**
 
@@ -376,9 +376,9 @@ getLocalDisplayDeviceName(maxNameLength: int): Promise<string>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [11600102](../errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
 
 **示例**
 
@@ -457,12 +457,14 @@ getOsTypeByNetworkId(networkId: string): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | User permission verify failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| [11600110](../../apis-distributedservice-kit/errorcode-device-manager.md#11600110-无效的网络id) | Invalid network ID. |
+| [11600102](../errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
+| [11600110](../errorcode-device-manager.md#11600110-无效的网络id) | Invalid network ID. |
 
 **示例**
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -472,10 +474,27 @@ try {
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
   let networkId: string = 'test_network_id';
   let osType: number = dmInstance.getOsTypeByNetworkId(networkId);
-  console.info('getOsTypeByNetworkId result: ' + osType);
+  console.info(`getOsTypeByNetworkId result: ${osType}`);
 } catch (err) {
   let e: BusinessError = err as BusinessError;
-  console.error('getOsTypeByNetworkId errCode:' + e.code + ',errMessage:' + e.message);
+  console.error(`getOsTypeByNetworkId errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  let networkId: string = 'test_network_id';
+  let osType: int = dmInstance.getOsTypeByNetworkId(networkId);
+  console.info(`getOsTypeByNetworkId result: ${osType}`);
+} catch (err) {
+  let e = err as Error;
+  console.error(`getOsTypeByNetworkId errCode: ${e.code}, errMessage: ${e.message}`);
 }
 ```
 
@@ -501,7 +520,7 @@ offReplyResult(callback?: Callback<ReplyResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | 否 | 指示要取消注册的设备管理器 UI 状态，返回UI状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | 否 | 指示要取消注册的设备管理器 UI 状态，返回UI状态。 |
 
 **错误码：**
 
@@ -547,7 +566,7 @@ off(type: 'replyResult', callback?: Callback<{ param: string; }>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'replyResult' | 是 | 取消注册的设备管理器 UI 状态回调，固定为replyResult。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ param: string; }&gt; | 否 |  |
 
 **错误码：**
 
@@ -593,7 +612,7 @@ onReplyResult(callback: Callback<ReplyResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | 是 | 指示要注册的设备管理器 UI 状态回调，返回UI状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | 是 | 指示要注册的设备管理器 UI 状态回调，返回UI状态。 |
 
 **错误码：**
 
@@ -641,7 +660,7 @@ on(type: 'replyResult', callback: Callback<{ param: string; }>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'replyResult' | 是 | 注册的设备管理器 UI 状态回调，以便在状态改变时通知应用，固定为replyResult。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ param: string; }&gt; | 是 |  |
 
 **错误码：**
 
@@ -713,9 +732,9 @@ putDeviceProfileInfoList(deviceProfileInfoList: Array<DeviceProfileInfo>): Promi
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 500. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [11600102](../errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
 
 **示例**
 
@@ -787,9 +806,9 @@ replyUiAction(action: int, actionResult: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified actionResult is greater than 255. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified actionResult is greater than 255. |
 
 **示例**
 
@@ -865,9 +884,9 @@ restoreLocalDeivceName(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain the service. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [11600102](../errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain the service. |
 
 **示例**
 
@@ -907,9 +926,9 @@ restoreLocalDeviceName(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain the service. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [11600102](../errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain the service. |
 
 **示例**
 
@@ -954,10 +973,10 @@ setHeartbeatPolicy(policy: StrategyForHeartbeat, delayTime: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [11600102](../errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
 
 **示例**
 
@@ -1029,12 +1048,12 @@ setLocalDeviceName(deviceName: string): Promise<int>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-需要登录账号) | A login account is required. |
-| [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-从云端获取数据失败) | Failed to get data from the cloud. |
-| [11600108](../../apis-distributedservice-kit/errorcode-device-manager.md#11600108-设备名称含非法信息) | The device name contains non-compliant content. |
+| [11600102](../errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
+| [11600106](../errorcode-device-manager.md#11600106-从云端获取数据失败) | Failed to get data from the cloud. |
+| [11600107](../errorcode-device-manager.md#11600107-需要登录账号) | A login account is required. |
+| [11600108](../errorcode-device-manager.md#11600108-设备名称含非法信息) | The device name contains non-compliant content. |
 
 **示例**
 
@@ -1113,12 +1132,12 @@ setRemoteDeviceName(deviceId: string, deviceName: string): Promise<int>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-需要登录账号) | A login account is required. |
-| [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-从云端获取数据失败) | Failed to get data from the cloud. |
-| [11600108](../../apis-distributedservice-kit/errorcode-device-manager.md#11600108-设备名称含非法信息) | The device name contains non-compliant content. |
+| [11600102](../errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
+| [11600106](../errorcode-device-manager.md#11600106-从云端获取数据失败) | Failed to get data from the cloud. |
+| [11600107](../errorcode-device-manager.md#11600107-需要登录账号) | A login account is required. |
+| [11600108](../errorcode-device-manager.md#11600108-设备名称含非法信息) | The device name contains non-compliant content. |
 
 **示例**
 

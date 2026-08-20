@@ -13,7 +13,9 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: Extensi
     extensionAbilityFlags: int, userId?: int): Array<ExtensionAbilityInfo>
 ```
 
-Obtains the ExtensionAbility information based on the given want, ExtensionAbility type, ExtensionAbility flags, and user ID. This API returns the result synchronously. No permission is required for obtaining the caller's own information.
+Obtains the ExtensionAbility information based on the given want, ExtensionAbility type, ExtensionAbility flags, and user ID. This API returns the result synchronously.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 23
 
@@ -44,13 +46,13 @@ Obtains the ExtensionAbility information based on the given want, ExtensionAbili
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
-| [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified userId is invalid. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified extensionAbility is not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified extensionAbility is not found. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified userId is invalid. |
+| [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
 
 **Examples**
 
@@ -109,7 +111,9 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string,
     extensionAbilityFlags: int, userId?: int): Array<ExtensionAbilityInfo>
 ```
 
-Obtains the ExtensionAbility information based on the given Want, ExtensionAbility type, ExtensionAbility flags, and user ID. This API returns the result synchronously. No permission is required for obtaining the caller's own information.
+Obtains the ExtensionAbility information based on the given Want, ExtensionAbility type, ExtensionAbility flags, and user ID. This API returns the result synchronously.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 23
 
@@ -140,13 +144,13 @@ Obtains the ExtensionAbility information based on the given Want, ExtensionAbili
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
-| [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified userId is invalid. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified extensionAbility is not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified extensionAbility is not found. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified userId is invalid. |
+| [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
 
 **Examples**
 
@@ -205,7 +209,9 @@ function queryExtensionAbilityInfoSync(extensionAbilityType: string, extensionAb
     userId?: int): Array<ExtensionAbilityInfo>
 ```
 
-Obtains the ExtensionAbility information based on the given ExtensionAbility type, ExtensionAbility flags, and user ID. No permission is required for obtaining the caller's own information.
+Obtains the ExtensionAbility information based on the given ExtensionAbility type, ExtensionAbility flags, and user ID.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 23
 
@@ -235,11 +241,11 @@ Obtains the ExtensionAbility information based on the given ExtensionAbility typ
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter extensionAbilityType is empty. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified userId is invalid. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter extensionAbilityType is empty. |
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified extensionAbility is not found. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified userId is invalid. |
 
 **Examples**
 

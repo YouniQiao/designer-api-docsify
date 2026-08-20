@@ -1,8 +1,16 @@
 # Hyperlink
 
-The **Hyperlink** component implements a link from a location in the component to another location. > **NOTE** > > - This component must be used with the system browser.
+The **Hyperlink** component implements a link from a location in the component to another location.
 
-## Required Permissions If Internet access is required, you must apply for the **ohos.permission.INTERNET** permission. For details about how to apply for a permission, see [Declaring Permissions](../../../security/AccessToken/declare-permissions.md). ###### Child Components This component can contain the Image child component.
+> **NOTE** > > - This component must be used with the system browser.
+
+## Required Permissions
+
+If Internet access is required, you must apply for the **ohos.permission.INTERNET** permission. For details about how to apply for a permission, see [Declaring Permissions](../../../security/AccessToken/declare-permissions.md).
+
+## Child Components
+
+This component can contain the Image child component.
 
 ## Hyperlink
 

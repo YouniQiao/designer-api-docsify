@@ -35,25 +35,14 @@ Defines the DepthComponent constructor.
 
 | Name | Description |
 | --- | --- |
-| [CameraBufferCrop](arkts-arkui-camerabuffercrop-i-sys.md) | Camera buffer crop parameters. |
-| [CropOffset](arkts-arkui-cropoffset-i-sys.md) | 2D offset for crop frame. |
-| [DepthCameraParams](arkts-arkui-depthcameraparams-i-sys.md) | Camera parameters struct. |
-| [DepthComponentCompleteEvent](arkts-arkui-depthcomponentcompleteevent-i-sys.md) | Information about the background resource loaded successfully. |
-| [DepthComponentErrorEvent](arkts-arkui-depthcomponenterrorevent-i-sys.md) | Information about the background resource loading error. |
-| [DepthComponentOptions](arkts-arkui-depthcomponentoptions-i-sys.md) | Defines the options of DepthComponent. |
-| [DepthLightParams](arkts-arkui-depthlightparams-i-sys.md) | Lighting parameters struct. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [DepthComponentCompleteCallback](arkts-arkui-depthcomponentcompletecallback-t-sys.md) | Callback invoked when the background resource is loaded successfully. |
-| [DepthComponentErrorCallback](arkts-arkui-depthcomponenterrorcallback-t-sys.md) | Callback invoked when an error occurs during background resource loading. |
-| [DepthMapCallback](arkts-arkui-depthmapcallback-t-sys.md) | Callback invoked when the depth map resource is loaded. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [DepthSpaceType](arkts-arkui-depthspacetype-e-sys.md) | Depth space type enumeration. |
 

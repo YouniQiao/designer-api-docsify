@@ -2,6 +2,8 @@
 
 Defines the Listener of mediaquery.
 
+@interface MediaQueryListener @extends MediaQueryResult
+
 **Inheritance/Implementation:** MediaQueryListener extends [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)
 
 **Since:** 23

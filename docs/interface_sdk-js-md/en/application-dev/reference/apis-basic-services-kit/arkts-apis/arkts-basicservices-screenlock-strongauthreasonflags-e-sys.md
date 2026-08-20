@@ -2,6 +2,8 @@
 
 Indicates the strong authentication reason flags used to request.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-screenLock-enum StrongAuthReasonFlags--><!--Device-screenLock-enum StrongAuthReasonFlags-End-->

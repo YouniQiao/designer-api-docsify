@@ -11,7 +11,11 @@
 function startTrace(name: string, taskId: number, expectedTime?: number): void
 ```
 
-Marks the start of a timeslice trace task. &gt; **NOTE：**&gt; &gt; If multiple trace tasks with the same name need to be performed at the same time or a trace task needs to be &gt; performed multiple times concurrently, different task IDs must be specified in **startTrace**. If the trace tasks &gt; with the same name are not performed at the same time, the same task ID can be used. For details, see the &gt; bytrace.finishTrace example.
+Marks the start of a timeslice trace task.
+
+> **NOTE：**
+> 
+> If multiple trace tasks with the same name need to be performed at the same time or a trace task needs to be &gt; performed multiple times concurrently, different task IDs must be specified in **startTrace**. If the trace tasks &gt; with the same name are not performed at the same time, the same task ID can be used. For details, see the &gt; bytrace.finishTrace example.
 
 **Since:** 7
 

@@ -39,14 +39,14 @@ function setBadgeNumberByBundle(bundle: BundleOption, badgeNumber: int): Promise
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
-| [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
 | [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600017](../errorcode-notification.md#1600017-没有对应的代理关系配置) | There is no corresponding agent relationship configuration. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
+| [1600017](../errorcode-notification.md#1600017-没有对应的代理关系配置) | There is no corresponding agent relationship configuration. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
 
 **示例**

@@ -29,15 +29,15 @@ function requestPrintPreview(jobInfo: PrintJob, callback: Callback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | jobInfo | [PrintJob](arkts-basicservices-print-printjob-i-sys.md) | 是 | 打印任务信息。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 请求预览打印数据之后的回调。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | 请求预览打印数据之后的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 **示例**
 
@@ -102,9 +102,9 @@ function requestPrintPreview(jobInfo: PrintJob): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 **示例**
 

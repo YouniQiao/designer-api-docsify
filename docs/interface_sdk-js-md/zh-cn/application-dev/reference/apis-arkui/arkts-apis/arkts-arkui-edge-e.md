@@ -2,6 +2,8 @@
 
 Edge.
 
+@enum { number }
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare enum Edge--><!--Device-unnamed-declare enum Edge-End-->

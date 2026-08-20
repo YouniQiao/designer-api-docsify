@@ -43,12 +43,12 @@ Get remote device battery information.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Only can be called on phone, tablet, and 2in1 devices. Failed to call the API when the short-range chip is not inserted on 2in1 device. |
-| 2901003 | Connection not established. |
-| 2900004 | Remote device profile not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Only can be called on phone, tablet, and 2in1 devices. Failed to call the API when the short-range chip is not inserted on 2in1 device. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
+| 2900004 | Remote device profile not supported. |
 | 2900099 | Operation failed. |
+| 2901003 | Connection not established. |
 

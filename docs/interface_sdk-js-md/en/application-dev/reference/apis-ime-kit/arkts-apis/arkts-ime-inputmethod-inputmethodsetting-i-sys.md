@@ -55,11 +55,11 @@ Enables or disables an input method. This API uses a promise to return the resul
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800019](../errorcode-inputmethod-framework.md#12800019-unsupported-operation-by-default-input-method) | current operation cannot be applied to the preconfigured default input method. |
-| [12800018](../errorcode-inputmethod-framework.md#12800018-input-method-not-found) | input method is not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800018](../errorcode-inputmethod-framework.md#12800018-input-method-not-found) | input method is not found. |
+| [12800019](../errorcode-inputmethod-framework.md#12800019-unsupported-operation-by-default-input-method) | current operation cannot be applied to the preconfigured default input method. |
 
 **Examples**
 
@@ -126,14 +126,14 @@ Change the enabled state of an input method of a specified user.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800019](../errorcode-inputmethod-framework.md#12800019-unsupported-operation-by-default-input-method) | current operation cannot be applied to the preconfigured default input method. |
-| [12800018](../errorcode-inputmethod-framework.md#12800018-input-method-not-found) | input method is not found. |
-| 12800023 | the specified user does not exist. |
 | [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800018](../errorcode-inputmethod-framework.md#12800018-input-method-not-found) | input method is not found. |
+| [12800019](../errorcode-inputmethod-framework.md#12800019-unsupported-operation-by-default-input-method) | current operation cannot be applied to the preconfigured default input method. |
+| 12800023 | the specified user does not exist. |
 | 12800024 | the specified user is not in the foreground. |
+| 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
 ## getAllInputMethodsSync
 
@@ -169,12 +169,12 @@ Get all input methods sync of a specified user.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
-| 12800023 | the specified user does not exist. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| 12800023 | the specified user does not exist. |
 | 12800024 | the specified user is not in the foreground. |
+| 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
 ## getCursorInfo
 
@@ -210,12 +210,12 @@ Get the cursor information of a specified user.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1. No edit box is bound to the current input method application under the specified user. |
-| 12800023 | the specified user does not exist. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1. No edit box is bound to the current input method application under the specified user. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible causes: a system error, such as null pointer, IPC exception. |
+| 12800023 | the specified user does not exist. |
 | 12800024 | the specified user is not in the foreground. |
+| 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
 ## getDefaultInputMethodAbility
 
@@ -283,12 +283,12 @@ Get subtypes of a specified input method of a specified user.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
-| 12800023 | the specified user does not exist. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| 12800023 | the specified user does not exist. |
 | 12800024 | the specified user is not in the foreground. |
+| 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
 ## getInputMethodsSync
 
@@ -325,12 +325,12 @@ List enabled or disabled input methods sync of a specified user.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
-| 12800023 | the specified user does not exist. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| 12800023 | the specified user does not exist. |
 | 12800024 | the specified user is not in the foreground. |
+| 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
 ## isPanelShown
 
@@ -364,8 +364,8 @@ Checks whether the input method panel of a specified type is shown.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 **Examples**

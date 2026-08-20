@@ -1,6 +1,8 @@
 # AdsBlockManager
 
-AdsBlockManager is a class in the ArkWeb framework used to manage the ad filtering feature of Web components. It provides capabilities such as setting ad filtering rules, managing domain AllowedList/DisallowedList, and controlling filtering policies. All Web components in each app share a single AdsBlockManager static class. Developers can use this class to inject ad filtering configuration files that conform to the universal EasyList syntax into Web components and flexibly control the ad filtering status for specific websites. The core mechanism of AdsBlockManager is based on a two-tier AllowedList/DisallowedList strategy using domain suffix matching: the DisallowedList is used to disable ad filtering for specific websites, while the AllowedList has a higher priority and can re-enable ad filtering for certain subdomains within the scope of the DisallowedList. After successful internal parsing, ad filtering rules are persistently stored and do not need to be set again after an app restart. However, they are not persistent and must be reconfigured after an app restart.
+AdsBlockManager is a class in the ArkWeb framework used to manage the ad filtering feature of Web components. It provides capabilities such as setting ad filtering rules, managing domain AllowedList/DisallowedList, and controlling filtering policies. All Web components in each app share a single AdsBlockManager static class. Developers can use this class to inject ad filtering configuration files that conform to the universal EasyList syntax into Web components and flexibly control the ad filtering status for specific websites.
+
+The core mechanism of AdsBlockManager is based on a two-tier AllowedList/DisallowedList strategy using domain suffix matching: the DisallowedList is used to disable ad filtering for specific websites, while the AllowedList has a higher priority and can re-enable ad filtering for certain subdomains within the scope of the DisallowedList. After successful internal parsing, ad filtering rules are persistently stored and do not need to be set again after an app restart. However, they are not persistent and must be reconfigured after an app restart.
 
 **Since:** 12
 
@@ -20,7 +22,15 @@ import { webview } from '@kit.ArkWeb';
 static addAdsBlockAllowedList(domainSuffixes: Array<string>): void
 ```
 
-Adds an array of domain names to the AllowedList of this AdsBlockManager object. This API is typically used to re -enable ad filtering for certain websites in the DisallowedList. &gt; **NOTE：**&gt; &gt; - The domain names set by this API are not persistent; they need to be set again after the app is restarted. &gt; &gt; - The AllowedList has a higher priority than the DisallowedList. For example, if ['example.com'] is configured &gt; in the DisallowedList, ad filtering is disabled for all web pages under the example.com domain. To enable ad &gt; filtering for 'news.example.com', you can use addAdsBlockAllowedList(['news.example.com']). &gt; &gt; - Starting from API version 18, calling this API on a device that does not support the ad filtering feature &gt; will throw an 801 exception.
+Adds an array of domain names to the AllowedList of this AdsBlockManager object. This API is typically used to re -enable ad filtering for certain websites in the DisallowedList.
+
+> **NOTE：**
+> 
+> - The domain names set by this API are not persistent; they need to be set again after the app is restarted.
+> 
+> - The AllowedList has a higher priority than the DisallowedList. For example, if ['example.com'] is configured &gt; in the DisallowedList, ad filtering is disabled for all web pages under the example.com domain. To enable ad &gt; filtering for 'news.example.com', you can use addAdsBlockAllowedList(['news.example.com']).
+> 
+> - Starting from API version 18, calling this API on a device that does not support the ad filtering feature &gt; will throw an 801 exception.
 
 **Since:** 12
 
@@ -49,7 +59,15 @@ Adds an array of domain names to the AllowedList of this AdsBlockManager object.
 static addAdsBlockDisallowedList(domainSuffixes: Array<string>): void
 ```
 
-Adds an array of domain names to the disallowed list of this **AdsBlockManager** object. When the ad blocking feature is enabled, ad blocking for these websites will be disabled. &gt; **NOTE：**&gt; &gt; - The domain names set by this API are not persistent; they need to be set again after the app is restarted. &gt; &gt; - The ad filtering feature uses suffix matching to determine whether the domainSuffix matches the URL of the &gt; current site. For example, if the website opened in the current Web component is https://www.example.com and &gt; the DisallowedList contains 'example.com' or 'www.example.com', the suffix match succeeds, ad filtering will be &gt; disabled for this website, and ad filtering will also be disabled when accessing 'https://m.example.com'. &gt; &gt; - Starting from API version 18, calling this API on a device that does not support the ad filtering feature &gt; will throw an 801 exception.
+Adds an array of domain names to the disallowed list of this **AdsBlockManager** object. When the ad blocking feature is enabled, ad blocking for these websites will be disabled.
+
+> **NOTE：**
+> 
+> - The domain names set by this API are not persistent; they need to be set again after the app is restarted.
+> 
+> - The ad filtering feature uses suffix matching to determine whether the domainSuffix matches the URL of the &gt; current site. For example, if the website opened in the current Web component is https://www.example.com and &gt; the DisallowedList contains 'example.com' or 'www.example.com', the suffix match succeeds, ad filtering will be &gt; disabled for this website, and ad filtering will also be disabled when accessing 'https://m.example.com'.
+> 
+> - Starting from API version 18, calling this API on a device that does not support the ad filtering feature &gt; will throw an 801 exception.
 
 **Since:** 12
 
@@ -78,7 +96,13 @@ Adds an array of domain names to the disallowed list of this **AdsBlockManager**
 static clearAdsBlockAllowedList(): void
 ```
 
-Clears the allowed list of this **AdsBlockManager** object. &gt; **NOTE：**&gt; &gt; - The AllowedList of AdsBlockManager is not persistent; it needs to be set again after the app is restarted. &gt; &gt; - Starting from API version 18, calling this API on a device that does not support the ad filtering feature &gt; will throw an 801 exception.
+Clears the allowed list of this **AdsBlockManager** object.
+
+> **NOTE：**
+> 
+> - The AllowedList of AdsBlockManager is not persistent; it needs to be set again after the app is restarted.
+> 
+> - Starting from API version 18, calling this API on a device that does not support the ad filtering feature &gt; will throw an 801 exception.
 
 **Since:** 12
 
@@ -100,7 +124,13 @@ Clears the allowed list of this **AdsBlockManager** object. &gt; **NOTE：**&gt;
 static clearAdsBlockDisallowedList(): void
 ```
 
-Clears the disallowed list of this **AdsBlockManager** object. &gt; **NOTE：**&gt; &gt; - The DisallowedList of AdsBlockManager is not persistent; it needs to be set again after the app is restarted. &gt; &gt; - Starting from API version 18, calling this API on a device that does not support the ad filtering feature &gt; will throw an 801 exception.
+Clears the disallowed list of this **AdsBlockManager** object.
+
+> **NOTE：**
+> 
+> - The DisallowedList of AdsBlockManager is not persistent; it needs to be set again after the app is restarted.
+> 
+> - Starting from API version 18, calling this API on a device that does not support the ad filtering feature &gt; will throw an 801 exception.
 
 **Since:** 12
 
@@ -122,7 +152,14 @@ Clears the disallowed list of this **AdsBlockManager** object. &gt; **NOTE：**&
 static removeAdsBlockAllowedList(domainSuffixes: Array<string>): void
 ```
 
-Removes an array of domain names from the allowed list of this **AdsBlockManager** object. &gt; **NOTE：**&gt; &gt; - The AllowedList of AdsBlockManager is not persistent; it needs to be set again after the app is restarted. &gt; Removing an entry that does not exist does not trigger an exception. &gt; &gt; - Starting from API version 18, calling this API on a device that does not support the ad filtering feature &gt; will throw an 801 exception.
+Removes an array of domain names from the allowed list of this **AdsBlockManager** object.
+
+> **NOTE：**
+> 
+> - The AllowedList of AdsBlockManager is not persistent; it needs to be set again after the app is restarted.
+> Removing an entry that does not exist does not trigger an exception.
+> 
+> - Starting from API version 18, calling this API on a device that does not support the ad filtering feature &gt; will throw an 801 exception.
 
 **Since:** 12
 
@@ -151,7 +188,14 @@ Removes an array of domain names from the allowed list of this **AdsBlockManager
 static removeAdsBlockDisallowedList(domainSuffixes: Array<string>): void
 ```
 
-Removes an array of domain names from the disallowed list of this **AdsBlockManager** object. &gt; **NOTE：**&gt; &gt; - The DisallowedList of AdsBlockManager is not persistent; it needs to be set again after the app is restarted. &gt; Removing an entry that does not exist does not trigger an exception. &gt; &gt; - Starting from API version 18, calling this API on a device that does not support the ad filtering feature &gt; will throw an 801 exception.
+Removes an array of domain names from the disallowed list of this **AdsBlockManager** object.
+
+> **NOTE：**
+> 
+> - The DisallowedList of AdsBlockManager is not persistent; it needs to be set again after the app is restarted.
+> Removing an entry that does not exist does not trigger an exception.
+> 
+> - Starting from API version 18, calling this API on a device that does not support the ad filtering feature &gt; will throw an 801 exception.
 
 **Since:** 12
 
@@ -180,7 +224,13 @@ Removes an array of domain names from the disallowed list of this **AdsBlockMana
 static setAdsBlockRules(rulesFile: string, replace: boolean): void
 ```
 
-Sets a custom ad filtering configuration file that conforms to the universal EasyList syntax in the Web components. &gt; **NOTE：**&gt; &gt; - The ad filtering rules set by this API will be persistently stored after successful internal parsing; you do &gt; not need to set them again after the app is restarted. &gt; &gt; - Starting from API version 18, calling this API on a device that does not support the ad filtering feature &gt; will throw an 801 exception.
+Sets a custom ad filtering configuration file that conforms to the universal EasyList syntax in the Web components.
+
+> **NOTE：**
+> 
+> - The ad filtering rules set by this API will be persistently stored after successful internal parsing; you do &gt; not need to set them again after the app is restarted.
+> 
+> - Starting from API version 18, calling this API on a device that does not support the ad filtering feature &gt; will throw an 801 exception.
 
 **Since:** 12
 

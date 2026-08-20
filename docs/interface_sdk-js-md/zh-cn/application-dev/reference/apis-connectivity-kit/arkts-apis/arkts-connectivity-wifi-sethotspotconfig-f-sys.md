@@ -15,7 +15,9 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function setHotspotConfig(config: HotspotConfig): boolean
 ```
 
-设置热点配置信息。 &lt;p&gt;仅支持配置OPEN和WPA2 PSK热点。
+设置热点配置信息。
+
+&lt;p&gt;仅支持配置OPEN和WPA2 PSK热点。
 
 **起始版本：** 7
 

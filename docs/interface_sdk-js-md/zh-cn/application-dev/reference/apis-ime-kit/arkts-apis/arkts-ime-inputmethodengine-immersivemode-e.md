@@ -1,5 +1,7 @@
 # ImmersiveMode
 
+@brief 枚举，输入法沉浸模式。 <br> | 名称 | 值 | 说明 | | ------------ | -- | ------------------ | | NONE_IMMERSIVE | 0 | 不使用沉浸模式。 | | IMMERSIVE | 1 | 沉浸模式，由输入法应用确定沉浸模式类型。 | | LIGHT_IMMERSIVE | 2 | 浅色沉浸模式。 | | DARK_IMMERSIVE | 3 | 深色沉浸模式。 |
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-export enum ImmersiveMode--><!--Device-inputMethodEngine-export enum ImmersiveMode-End-->
@@ -11,6 +13,8 @@
 ```TypeScript
 NONE_IMMERSIVE = 0
 ```
+
+@brief 不使用沉浸模式。
 
 **起始版本：** 23
 
@@ -24,6 +28,8 @@ NONE_IMMERSIVE = 0
 IMMERSIVE
 ```
 
+@brief 沉浸模式，由输入法应用确定沉浸模式类型。
+
 **起始版本：** 23
 
 <!--Device-ImmersiveMode-IMMERSIVE--><!--Device-ImmersiveMode-IMMERSIVE-End-->
@@ -36,6 +42,8 @@ IMMERSIVE
 LIGHT_IMMERSIVE
 ```
 
+@brief 浅色沉浸模式。
+
 **起始版本：** 23
 
 <!--Device-ImmersiveMode-LIGHT_IMMERSIVE--><!--Device-ImmersiveMode-LIGHT_IMMERSIVE-End-->
@@ -47,6 +55,8 @@ LIGHT_IMMERSIVE
 ```TypeScript
 DARK_IMMERSIVE
 ```
+
+@brief 深色沉浸模式。
 
 **起始版本：** 23
 

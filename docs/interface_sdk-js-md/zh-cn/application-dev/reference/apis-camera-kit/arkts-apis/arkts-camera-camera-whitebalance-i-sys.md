@@ -1,6 +1,8 @@
 # WhiteBalance（系统接口）
 
-WhiteBalance继承自[WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md)。 提供了处理设备白平衡的相关功能，包括获取和设置白平衡模式以及白平衡值。
+WhiteBalance继承自[WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md)。
+
+提供了处理设备白平衡的相关功能，包括获取和设置白平衡模式以及白平衡值。
 
 **继承/实现关系：** WhiteBalance extends [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md)
 
@@ -47,8 +49,8 @@ getWhiteBalance(): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 19 |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## getWhiteBalanceGains
 
@@ -78,8 +80,8 @@ Gets RGB white balance gain values.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## getWhiteBalanceMode
 
@@ -109,8 +111,8 @@ getWhiteBalanceMode(): WhiteBalanceMode
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 19 |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## setWhiteBalance
 
@@ -118,7 +120,9 @@ getWhiteBalanceMode(): WhiteBalanceMode
 setWhiteBalance(whiteBalance: int): void
 ```
 
-设置手动白平衡值。 设置之前需要先检查设备支持的白平衡值范围，具体方法请参考[getWhiteBalanceRange](arkts-camera-camera-whitebalancequery-i-sys.md#getwhitebalancerange)。
+设置手动白平衡值。
+
+设置之前需要先检查设备支持的白平衡值范围，具体方法请参考[getWhiteBalanceRange](arkts-camera-camera-whitebalancequery-i-sys.md#getwhitebalancerange)。
 
 **起始版本：** 23
 
@@ -140,9 +144,9 @@ setWhiteBalance(whiteBalance: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 19 |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 19 |
 
 ## setWhiteBalanceGains
 
@@ -172,8 +176,8 @@ Sets RGB white balance gain values.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## setWhiteBalanceMode
 
@@ -203,7 +207,7 @@ setWhiteBalanceMode(mode: WhiteBalanceMode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 19 |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 19 |
 

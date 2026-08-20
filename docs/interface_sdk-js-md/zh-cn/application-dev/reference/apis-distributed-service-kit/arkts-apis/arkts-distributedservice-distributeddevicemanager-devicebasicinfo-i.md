@@ -68,7 +68,7 @@ deviceType: string
 networkId?: string
 ```
 
-设备网络标识。
+设备网络标识。未提供时默认为空字符串。
 
 **类型：** string
 

@@ -1,4 +1,4 @@
-# FocusPriority(Provide some common interface for focus.)
+# FocusPriority
 
 Sets the focus priority of a component.
 

@@ -2,6 +2,8 @@
 
 Provides methods for accessing NDEF tag.
 
+@namespace ndef
+
 **Since:** 23
 
 <!--Device-tag-namespace ndef--><!--Device-tag-namespace ndef-End-->

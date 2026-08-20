@@ -22,7 +22,7 @@ context: UIAbilityContext | UIContext
 
 Context of the router page that invokes the lifecycle callback.
 
-**Type:** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
+**Type:** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)
 
 **Since:** 11
 
@@ -142,7 +142,7 @@ state: RouterPageState
 
 State of the router page that invokes the lifecycle callback.
 
-**Type:** [RouterPageState](../../apis-na/arkts-apis/arkts-na-uiobserver-routerpagestate-e.md)
+**Type:** [RouterPageState](arkts-arkui-uiobserver-routerpagestate-e.md)
 
 **Since:** 11
 

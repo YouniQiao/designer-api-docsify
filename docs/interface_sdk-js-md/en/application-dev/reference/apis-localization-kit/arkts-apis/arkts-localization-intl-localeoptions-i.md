@@ -1,6 +1,10 @@
 # LocaleOptions
 
-Options for initializing the **Locale** object. Since API version 9, the **LocaleOptions** attribute is changed from mandatory to optional. &gt; **NOTE：**&gt; &gt; - For details about **calendar**, see Table 1 in &gt; [Calendar Setting](../../../internationalization/i18n-calendar.md).
+Options for initializing the **Locale** object. Since API version 9, the **LocaleOptions** attribute is changed from mandatory to optional.
+
+> **NOTE：**
+> 
+> - For details about **calendar**, see Table 1 in &gt; [Calendar Setting](../../../internationalization/i18n-calendar.md).
 
 **Since:** 6
 
@@ -24,7 +28,9 @@ import { intl } from '@kit.LocalizationKit';
 calendar?: string
 ```
 
-Calendar parameter. The value can be: "buddhist", "chinese", "coptic", "dangi", "ethioaa", "ethiopic", "gregory", "hebrew", "indian", "islamic", " islamic-umalqura", "islamic-tbla", "islamic-civil", "islamic-rgsa", "iso8601", "japanese", "persian", "roc", or "islamicc".
+Calendar parameter. The value can be:
+
+"buddhist", "chinese", "coptic", "dangi", "ethioaa", "ethiopic", "gregory", "hebrew", "indian", "islamic", " islamic-umalqura", "islamic-tbla", "islamic-civil", "islamic-rgsa", "iso8601", "japanese", "persian", "roc", or "islamicc".
 
 **Type:** string
 
@@ -48,7 +54,13 @@ Calendar parameter. The value can be: "buddhist", "chinese", "coptic", "dangi", 
 caseFirst?: string
 ```
 
-Whether case is taken into account for the locale's collation rules. The value can be: **upper**: Uppercase letters come first. **lower**: Lowercase letters come first. **false**: The default collation rules of the locale are used.
+Whether case is taken into account for the locale's collation rules. The value can be:
+
+**upper**: Uppercase letters come first.
+
+**lower**: Lowercase letters come first.
+
+**false**: The default collation rules of the locale are used.
 
 **Type:** string
 
@@ -72,7 +84,39 @@ Whether case is taken into account for the locale's collation rules. The value c
 collation?: string
 ```
 
-Collation rules for the locale. The value can be: **big5han**: Pinyin sorting for Latin letters. **compat**: compatibility sorting, only for Arabic. **dict**: dictionary-style sorting, only for Singhalese. **direct**: binary code point sorting. **ducet**: sorting according to the Unicode collation element table. **eor**: sorting according to the European collation rules. **gb2312**: Pinyin sorting, only for Chinese. **phonebk**: phone book-style sorting. **phonetic**: phonetic sorting. **pinyin**: Pinyin sorting. **reformed**: reformed sorting, only for Swedish. **searchjl**: special sorting for Korean initial consonant search. **stroke**: stroke sorting for Chinese. **trad**: traditional-style sorting, for example, Spanish. **unihan**: radical-stroke sorting for Han characters, only for Chinese, Japanese, and Korean. **zhuyin**: Zhuyin sorting, only for Chinese.
+Collation rules for the locale. The value can be:
+
+**big5han**: Pinyin sorting for Latin letters.
+
+**compat**: compatibility sorting, only for Arabic.
+
+**dict**: dictionary-style sorting, only for Singhalese.
+
+**direct**: binary code point sorting.
+
+**ducet**: sorting according to the Unicode collation element table.
+
+**eor**: sorting according to the European collation rules.
+
+**gb2312**: Pinyin sorting, only for Chinese.
+
+**phonebk**: phone book-style sorting.
+
+**phonetic**: phonetic sorting.
+
+**pinyin**: Pinyin sorting.
+
+**reformed**: reformed sorting, only for Swedish.
+
+**searchjl**: special sorting for Korean initial consonant search.
+
+**stroke**: stroke sorting for Chinese.
+
+**trad**: traditional-style sorting, for example, Spanish.
+
+**unihan**: radical-stroke sorting for Han characters, only for Chinese, Japanese, and Korean.
+
+**zhuyin**: Zhuyin sorting, only for Chinese.
 
 **Type:** string
 
@@ -96,7 +140,9 @@ Collation rules for the locale. The value can be: **big5han**: Pinyin sorting fo
 hourCycle?: string
 ```
 
-Hour cycle. The value can be: "h11", "h12", "h23", or  "h24".
+Hour cycle. The value can be:
+
+"h11", "h12", "h23", or  "h24".
 
 **Type:** string
 
@@ -120,7 +166,9 @@ Hour cycle. The value can be: "h11", "h12", "h23", or  "h24".
 numberingSystem?: string
 ```
 
-Numbering system. The value can be: **adlm**, **ahom**, **arab**, **arabext**, **bali**, **beng**, **bhks**, **brah**, **cakm**, **cham**, **deva**, **diak**, **fullwide**, **gong**, **gonm**, **gujr**, **guru**, **hanidec**, **hmng**, **hmnp**, **java**, **kali**, **khmr**, **knda**, **lana**, **lanatham**, **laoo**, **latn**, **lepc**, **limb**, **mathbold**, **mathdbl**, **mathmono**, **mathsanb**, **mathsans**, **mlym**, **modi**, **mong**, **mroo**, **mtei**, **mymr**, **mymrshan**, **mymrtlng**, **newa**, **nkoo**, **olck**, **orya**, **osma**, **rohg**, **saur**, **segment**, **shrd**, **sind**, **sinh**, **sora**, **sund**, **takr**, **talu**, **tamldec**, **telu**, **thai**, **tibt**, **tirh**, **vaii**, **wara**, or **wcho**.
+Numbering system. The value can be:
+
+**adlm**, **ahom**, **arab**, **arabext**, **bali**, **beng**, **bhks**, **brah**, **cakm**, **cham**, **deva**, **diak**, **fullwide**, **gong**, **gonm**, **gujr**, **guru**, **hanidec**, **hmng**, **hmnp**, **java**, **kali**, **khmr**, **knda**, **lana**, **lanatham**, **laoo**, **latn**, **lepc**, **limb**, **mathbold**, **mathdbl**, **mathmono**, **mathsanb**, **mathsans**, **mlym**, **modi**, **mong**, **mroo**, **mtei**, **mymr**, **mymrshan**, **mymrtlng**, **newa**, **nkoo**, **olck**, **orya**, **osma**, **rohg**, **saur**, **segment**, **shrd**, **sind**, **sinh**, **sora**, **sund**, **takr**, **talu**, **tamldec**, **telu**, **thai**, **tibt**, **tirh**, **vaii**, **wara**, or **wcho**.
 
 **Type:** string
 

@@ -74,8 +74,8 @@ Obtains the XMP metadata as a blob.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Memory copy failed. |
 | [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Memory copy failed. |
 
 ## getTag
 

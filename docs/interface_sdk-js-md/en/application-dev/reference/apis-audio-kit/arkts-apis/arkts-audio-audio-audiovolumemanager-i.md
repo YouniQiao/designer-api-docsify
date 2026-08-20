@@ -1,6 +1,12 @@
 # AudioVolumeManager
 
-This interface implements audio volume management. Before calling any API in AudioVolumeManager, you must use [getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager) to obtain an AudioVolumeManager instance. &gt; **NOTE：**&gt; &gt; - The initial APIs of this interface are supported since API version 9.
+This interface implements audio volume management.
+
+Before calling any API in AudioVolumeManager, you must use [getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager) to obtain an AudioVolumeManager instance.
+
+> **NOTE：**
+> 
+> - The initial APIs of this interface are supported since API version 9.
 
 **Since:** 23
 

@@ -2,6 +2,8 @@
 
 Information about an exempted application.
 
+@interface ExemptedAppInfo
+
 **Since:** 23
 
 <!--Device-deviceStandby-export interface ExemptedAppInfo--><!--Device-deviceStandby-export interface ExemptedAppInfo-End-->

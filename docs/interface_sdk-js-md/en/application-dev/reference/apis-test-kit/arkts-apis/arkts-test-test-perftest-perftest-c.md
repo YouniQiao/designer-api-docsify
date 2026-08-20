@@ -46,10 +46,10 @@ Creates a [PerfTest](#perftest) object and returns the object created. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. @static |
+| [32400001](../errorcode-perftest.md#32400001-initialization-failed) | Initialization failed. |
 | [32400002](../errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
 | [32400003](../errorcode-perftest.md#32400003-parameter-verification-failed) | Parameter verification failed. |
-| [32400001](../errorcode-perftest.md#32400001-initialization-failed) | Initialization failed. |
+| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. @static |
 
 **Examples**
 
@@ -100,8 +100,8 @@ Destroys the **PerfTest** object to release the resources occupied by the object
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [32400002](../errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
+| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Examples**
 
@@ -159,10 +159,10 @@ Obtains the measurement data of a specified performance metric. This method must
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32400006](../errorcode-perftest.md#32400006-failed-to-obtain-performance-data) | Failed to obtain the measurement result. |
-| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [32400002](../errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
 | [32400003](../errorcode-perftest.md#32400003-parameter-verification-failed) | Parameter verification failed. |
+| [32400006](../errorcode-perftest.md#32400006-failed-to-obtain-performance-data) | Failed to obtain the measurement result. |
+| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Examples**
 
@@ -214,10 +214,10 @@ Runs a performance test, iteratively executes test code segments based on the co
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [32400002](../errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
 | [32400004](../errorcode-perftest.md#32400004-failed-to-execute-the-callback) | Failed to execute the callback. Possible causes: 1. An exception is thrown in the callback. 2. Callback execution timed out. |
 | [32400005](../errorcode-perftest.md#32400005-failed-to-collect-performance-data) | Failed to collect metric data. |
-| [32400002](../errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
+| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Examples**
 

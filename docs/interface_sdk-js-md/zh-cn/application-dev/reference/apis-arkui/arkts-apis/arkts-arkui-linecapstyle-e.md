@@ -2,6 +2,8 @@
 
 LineCapStyle enumeration description
 
+@enum { number }
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare enum LineCapStyle--><!--Device-unnamed-declare enum LineCapStyle-End-->

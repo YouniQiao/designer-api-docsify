@@ -2,6 +2,8 @@
 
 认证设备结果信息。
 
+@interface BindTargetResult
+
 **起始版本：** 23
 
 <!--Device-distributedDeviceManager-interface BindTargetResult--><!--Device-distributedDeviceManager-interface BindTargetResult-End-->

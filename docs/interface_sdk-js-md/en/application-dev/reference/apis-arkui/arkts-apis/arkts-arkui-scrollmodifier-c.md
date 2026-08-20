@@ -2,6 +2,8 @@
 
 Defines Scroll Modifier
 
+@extends ScrollAttribute @implements AttributeModifier&lt;ScrollAttribute&gt;
+
 **Inheritance/Implementation:** ScrollModifier extends ScrollAttribute and implements AttributeModifier<ScrollAttribute>
 
 **Since:** 20

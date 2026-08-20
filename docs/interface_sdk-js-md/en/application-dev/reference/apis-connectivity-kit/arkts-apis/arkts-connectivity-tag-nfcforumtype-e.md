@@ -2,6 +2,8 @@
 
 NfcForum Type definition. The NDEF tag may use one of them.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-tag-enum NfcForumType--><!--Device-tag-enum NfcForumType-End-->

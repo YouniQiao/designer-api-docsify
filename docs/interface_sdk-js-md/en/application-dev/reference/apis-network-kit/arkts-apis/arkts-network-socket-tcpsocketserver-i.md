@@ -20,7 +20,11 @@ import { socket } from '@kit.NetworkKit';
 close(): Promise<void>
 ```
 
-Stops listening for events of the **TCPSocketServer** object and releases the port bound by [listen](#listen). If [listen](#listen) has been called for multiple times, all listening ports of the **TCPSocketServer** object are released when this API is called. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API does not close existing connections. To close connections, call the &gt; [close](arkts-network-socket-tcpsocketconnection-i.md#close) API of &gt; [TCPSocketConnection](arkts-network-socket-tcpsocketconnection-i.md).
+Stops listening for events of the **TCPSocketServer** object and releases the port bound by [listen](#listen). If [listen](#listen) has been called for multiple times, all listening ports of the **TCPSocketServer** object are released when this API is called. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API does not close existing connections. To close connections, call the &gt; [close](arkts-network-socket-tcpsocketconnection-i.md#close) API of &gt; [TCPSocketConnection](arkts-network-socket-tcpsocketconnection-i.md).
 
 **Since:** 20
 
@@ -40,8 +44,8 @@ Stops listening for events of the **TCPSocketServer** object and releases the po
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
 
@@ -74,7 +78,11 @@ tcpServer.listen(listenAddr).then(() => {
 getLocalAddress(): Promise<NetAddress>
 ```
 
-Obtains the local socket address of a **TCPSocketServer** connection. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **listen** is successfully called.
+Obtains the local socket address of a **TCPSocketServer** connection. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **listen** is successfully called.
 
 **Since:** 12
 
@@ -125,7 +133,15 @@ tcpServer.listen(listenAddr).then(() => {
 getSocketFd(): Promise<int>
 ```
 
-Obtains the file descriptor bound to the TCPSocketServer listening port. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - This method can be called only after the &gt; [listen](#listen) method is &gt; successfully called. When listen is called for multiple times, the file descriptor bound to the latest &gt; listening port is obtained. &gt; &gt; - This API returns **-1** in abnormal cases such as listening exceptions or socket closed (for example, after &gt; close is called). &gt; &gt; - The lifecycle of the file descriptor is managed by the system. The application can use the &gt; [close](#close) method to close the socket connection, instead of directly &gt; operating the file descriptor.
+Obtains the file descriptor bound to the TCPSocketServer listening port. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - This method can be called only after the &gt; [listen](#listen) method is &gt; successfully called. When listen is called for multiple times, the file descriptor bound to the latest &gt; listening port is obtained.
+> 
+> - This API returns **-1** in abnormal cases such as listening exceptions or socket closed (for example, after &gt; close is called).
+> 
+> - The lifecycle of the file descriptor is managed by the system. The application can use the &gt; [close](#close) method to close the socket connection, instead of directly &gt; operating the file descriptor.
 
 **Since:** 23
 
@@ -177,7 +193,11 @@ tcpServer.listen(listenAddr).then(() => {
 getState(callback: AsyncCallback<SocketStateBase>): void
 ```
 
-Obtains the status of a TCP socket server connection. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **listen** is successfully called.
+Obtains the status of a TCP socket server connection. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **listen** is successfully called.
 
 **Since:** 10
 
@@ -197,10 +217,10 @@ Obtains the status of a TCP socket server connection. This API uses an asynchron
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 
@@ -236,7 +256,11 @@ tcpServer.getState((err: BusinessError, data: socket.SocketStateBase) => {
 getState(): Promise<SocketStateBase>
 ```
 
-Obtains the status of a TCP socket server connection. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **listen** is successfully called.
+Obtains the status of a TCP socket server connection. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **listen** is successfully called.
 
 **Since:** 10
 
@@ -256,9 +280,9 @@ Obtains the status of a TCP socket server connection. This API uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 
@@ -292,7 +316,12 @@ tcpServer.getState().then((data: socket.SocketStateBase) => {
 listen(address: NetAddress, callback: AsyncCallback<void>): void
 ```
 
-Binds the IP address and port number. The port number can be specified or randomly allocated by the system. The server listens to and accepts TCP socket connections established over the socket. Multiple threads are used to process client data concurrently. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; The server uses this API to perform the **bind**, **listen**, and **accept** operations. If the **bind** &gt; operation fails, the system randomly allocates a port number.
+Binds the IP address and port number. The port number can be specified or randomly allocated by the system. The server listens to and accepts TCP socket connections established over the socket. Multiple threads are used to process client data concurrently. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> The server uses this API to perform the **bind**, **listen**, and **accept** operations. If the **bind**
+> operation fails, the system randomly allocates a port number.
 
 **Since:** 10
 
@@ -314,12 +343,12 @@ Binds the IP address and port number. The port number can be specified or random
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303111](../errorcode-net-socket.md#2303111-requested-resource-temporarily-unavailable) | Resource temporarily unavailable. Try again. |
-| [2303109](../errorcode-net-socket.md#2303109-error-file-number) | Bad file number. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2303199](../errorcode-net-socket.md#2303199-failed-to-assign-the-requested-address) | Cannot assign requested address. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303109](../errorcode-net-socket.md#2303109-error-file-number) | Bad file number. |
+| [2303111](../errorcode-net-socket.md#2303111-requested-resource-temporarily-unavailable) | Resource temporarily unavailable. Try again. |
 | [2303198](../errorcode-net-socket.md#2303198-network-address-already-in-use) | Address already in use. |
+| [2303199](../errorcode-net-socket.md#2303199-failed-to-assign-the-requested-address) | Cannot assign requested address. |
 
 **Examples**
 
@@ -348,7 +377,12 @@ tcpServer.listen(listenAddr, (err: BusinessError) => {
 listen(address: NetAddress): Promise<void>
 ```
 
-Binds the IP address and port number. The port number can be specified or randomly allocated by the system. The server listens to and accepts TCP socket connections established over the socket. Multiple threads are used to process client data concurrently. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; The server uses this API to perform the **bind**, **listen**, and **accept** operations. If the **bind** &gt; operation fails, the system randomly allocates a port number.
+Binds the IP address and port number. The port number can be specified or randomly allocated by the system. The server listens to and accepts TCP socket connections established over the socket. Multiple threads are used to process client data concurrently. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> The server uses this API to perform the **bind**, **listen**, and **accept** operations. If the **bind**
+> operation fails, the system randomly allocates a port number.
 
 **Since:** 10
 
@@ -375,12 +409,12 @@ Binds the IP address and port number. The port number can be specified or random
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303111](../errorcode-net-socket.md#2303111-requested-resource-temporarily-unavailable) | Resource temporarily unavailable. Try again. |
-| [2303109](../errorcode-net-socket.md#2303109-error-file-number) | Bad file number. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2303199](../errorcode-net-socket.md#2303199-failed-to-assign-the-requested-address) | Cannot assign requested address. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303109](../errorcode-net-socket.md#2303109-error-file-number) | Bad file number. |
+| [2303111](../errorcode-net-socket.md#2303111-requested-resource-temporarily-unavailable) | Resource temporarily unavailable. Try again. |
 | [2303198](../errorcode-net-socket.md#2303198-network-address-already-in-use) | Address already in use. |
+| [2303199](../errorcode-net-socket.md#2303199-failed-to-assign-the-requested-address) | Cannot assign requested address. |
 
 **Examples**
 
@@ -519,7 +553,11 @@ tcpServer.listen(listenAddr, (err: BusinessError) => {
 on(type: 'connect', callback: Callback<TCPSocketConnection>): void
 ```
 
-Subscribes to **connect** events of the **TCPSocketServer** object. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **listen** is successfully called.
+Subscribes to **connect** events of the **TCPSocketServer** object. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **listen** is successfully called.
 
 **Since:** 10
 
@@ -571,7 +609,11 @@ tcpServer.listen(listenAddr, (err: BusinessError) => {
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to **error** events of the **TCPSocketServer** object. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **listen** is successfully called.
+Subscribes to **error** events of the **TCPSocketServer** object. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **listen** is successfully called.
 
 **Since:** 10
 
@@ -623,7 +665,11 @@ tcpServer.listen(listenAddr, (err: BusinessError) => {
 setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void
 ```
 
-Sets other properties of the **TCPSocketServer** object. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **listen** is successfully called.
+Sets other properties of the **TCPSocketServer** object. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **listen** is successfully called.
 
 **Since:** 10
 
@@ -644,10 +690,10 @@ Sets other properties of the **TCPSocketServer** object. This API uses an asynch
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 
@@ -699,7 +745,11 @@ tcpServer.setExtraOptions(tcpExtraOptions, (err: BusinessError) => {
 setExtraOptions(options: TCPExtraOptions): Promise<void>
 ```
 
-Sets other properties of the **TCPSocketServer** object. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **listen** is successfully called.
+Sets other properties of the **TCPSocketServer** object. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **listen** is successfully called.
 
 **Since:** 10
 
@@ -725,10 +775,10 @@ Sets other properties of the **TCPSocketServer** object. This API uses a promise
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 

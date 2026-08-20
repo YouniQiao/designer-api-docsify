@@ -78,8 +78,8 @@ The maintenance of this interface has been stopped since version api 9. Please u
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
 
 
 ## createVideoRecorder
@@ -156,6 +156,6 @@ The maintenance of this interface has been stopped since version api 9. Please u
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
 

@@ -20,7 +20,13 @@ import { EditableLeftIconTypeV2, EditableTitleBarV2, EditableLeftIconV2, Editabl
 defaultFocus?: boolean
 ```
 
-是否默认获取焦点。 true：获焦。 false：不获焦。 默认值：false。
+是否默认获取焦点。
+
+true：获焦。
+
+false：不获焦。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -42,7 +48,13 @@ defaultFocus?: boolean
 isRequired?: boolean
 ```
 
-是否显示保存按钮。 true：显示保存按钮。 false：不显示保存按钮。 默认值：true。
+是否显示保存按钮。
+
+true：显示保存按钮。
+
+false：不显示保存按钮。
+
+默认值：true。
 
 **类型：** boolean
 
@@ -66,7 +78,7 @@ onAction?: OnActionCallback
 
 点击保存按钮的回调函数。未设置时点击按钮无响应。
 
-**类型：** [OnActionCallback](../../apis-na/arkts-apis/arkts-na-onactioncallback-t.md)
+**类型：** [OnActionCallback](../../apis-default/arkts-apis/arkts-onactioncallback-t.md)
 
 **起始版本：** 26.0.0
 

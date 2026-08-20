@@ -1,4 +1,4 @@
-# KeyStatus(Sensitive Data Access Management Under Lock Screen)
+# KeyStatus
 
 Enumerates the statuses of sensitive data keys under the lock screen.
 

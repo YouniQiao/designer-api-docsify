@@ -22,7 +22,13 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 convertKey(key: DataBlob, callback: AsyncCallback<SymKey>): void
 ```
 
-将指定数据转换为对称密钥。使用callback异步回调。 &gt; **说明：** &gt; &gt; 对于HMAC算法的对称密钥，如果已经在创建对称密钥生成器时指定了具体哈希算法（如指定"HMAC|SHA256"），则需要传入与哈希长度一致的二进制 &gt; 密钥数据（如传入SHA256对应256位的密钥数据）。 如果在创建对称密钥生成器时没有指定具体哈希算法，如仅指定"HMAC"，则支持传入长度在[1,4096]范围内（单位为bytes）的任意二进制密钥数据。
+将指定数据转换为对称密钥。使用callback异步回调。
+
+> **说明：**
+> 
+> 对于HMAC算法的对称密钥，如果已经在创建对称密钥生成器时指定了具体哈希算法（如指定"HMAC|SHA256"），则需要传入与哈希长度一致的二进制 &gt; 密钥数据（如传入SHA256对应256位的密钥数据）。
+
+如果在创建对称密钥生成器时没有指定具体哈希算法，如仅指定"HMAC"，则支持传入长度在[1,4096]范围内（单位为bytes）的任意二进制密钥数据。
 
 **起始版本：** 23
 
@@ -39,7 +45,7 @@ convertKey(key: DataBlob, callback: AsyncCallback<SymKey>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | DataBlob | 是 | 指定的对称密钥材料。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md)&gt; | 是 | 回调函数。当生成对称密钥成功时，err为undefined，data为获取到的SymKey；否则为 错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md)&gt; | 是 | 回调函数。当生成对称密钥成功时，err为undefined，data为获取到的SymKey；否则为 错误对象。 |
 
 **错误码：**
 
@@ -200,7 +206,13 @@ async function testConvertKey() {
 convertKeySync(key: DataBlob): SymKey
 ```
 
-将指定数据转换为对称密钥。 &gt; **说明：** &gt; &gt; 对于HMAC算法的对称密钥，如果在创建对称密钥生成器时指定了具体哈希算法（如"HMAC|SHA256"），则需要传入与哈希长度一致的二进制密钥数据 &gt;（如传入SHA256对应的256位密钥数据）。如果在创建对称密钥生成器时未指定具体哈希算法，如仅指定"HMAC"，则支持传入长度在1到4096字节范围 &gt; 内的任意二进制密钥数据。 <br><br>**说明：** <br>建议优先使用异步API，convertKey。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+将指定数据转换为对称密钥。
+
+> **说明：**
+> 
+> 对于HMAC算法的对称密钥，如果在创建对称密钥生成器时指定了具体哈希算法（如"HMAC|SHA256"），则需要传入与哈希长度一致的二进制密钥数据 &gt;（如传入SHA256对应的256位密钥数据）。如果在创建对称密钥生成器时未指定具体哈希算法，如仅指定"HMAC"，则支持传入长度在1到4096字节范围 &gt; 内的任意二进制密钥数据。
+
+<br><br>**说明：** <br>建议优先使用异步API，convertKey。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 23
 
@@ -255,7 +267,13 @@ function testConvertKeySync() {
 generateSymKey(callback: AsyncCallback<SymKey>): void
 ```
 
-获取对称密钥生成器随机生成的密钥。使用callback异步回调。 <br>目前使用OpenSSL的RAND_priv_bytes()作为底层能力生成随机密钥。 &gt; **说明：** &gt; &gt; 对于HMAC算法的对称密钥，如果在创建对称密钥生成器时指定了具体哈希算法（如"HMAC|SHA256"），则会随机生成与哈希长度一致的二进制密钥 &gt; 数据（如256位的密钥数据）。如果未指定具体哈希算法，如仅指定"HMAC"，则不支持随机生成对称密钥数据，可通过 &gt; [convertKey](#convertkey) &gt; 方式生成对称密钥数据。
+获取对称密钥生成器随机生成的密钥。使用callback异步回调。
+
+<br>目前使用OpenSSL的RAND_priv_bytes()作为底层能力生成随机密钥。
+
+> **说明：**
+> 
+> 对于HMAC算法的对称密钥，如果在创建对称密钥生成器时指定了具体哈希算法（如"HMAC|SHA256"），则会随机生成与哈希长度一致的二进制密钥 &gt; 数据（如256位的密钥数据）。如果未指定具体哈希算法，如仅指定"HMAC"，则不支持随机生成对称密钥数据，可通过 &gt; [convertKey](#convertkey) &gt; 方式生成对称密钥数据。
 
 **起始版本：** 23
 
@@ -271,14 +289,14 @@ generateSymKey(callback: AsyncCallback<SymKey>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md)&gt; | 是 | 回调函数。当生成对称密钥成功时，err为undefined，data为获取到的SymKey；否则为 错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md)&gt; | 是 | 回调函数。当生成对称密钥成功时，err为undefined，data为获取到的SymKey；否则为 错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | Invalid function call.<br>**适用版本：** 26.0.0+ |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
+| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | Invalid function call.<br>**适用版本：** 26.0.0+ |
 
 **示例**
 
@@ -314,7 +332,9 @@ function testGenerateSymKey() {
 generateSymKey(): Promise<SymKey>
 ```
 
-获取该对称密钥生成器随机生成的密钥。使用Promise异步回调。 <br>目前使用OpenSSL的RAND_priv_bytes()作为底层能力生成随机密钥。
+获取该对称密钥生成器随机生成的密钥。使用Promise异步回调。
+
+<br>目前使用OpenSSL的RAND_priv_bytes()作为底层能力生成随机密钥。
 
 **起始版本：** 23
 
@@ -336,8 +356,8 @@ generateSymKey(): Promise<SymKey>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | Invalid function call.<br>**适用版本：** 26.0.0+ |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
+| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | Invalid function call.<br>**适用版本：** 26.0.0+ |
 
 **示例**
 
@@ -382,7 +402,17 @@ async function testGenerateSymKey() {
 generateSymKeySync(): SymKey
 ```
 
-同步获取对称密钥生成器随机生成的密钥。 <br>目前使用OpenSSL的RAND_priv_bytes()作为底层能力生成随机密钥。 &gt; **说明：** &gt; &gt; 对于HMAC算法的对称密钥，如果已经在创建对称密钥生成器时指定了具体哈希算法（如指定"HMAC|SHA256"），则会随机生成与哈希长度一致的 &gt; 二进制密钥数据（如指定"HMAC|SHA256"会随机生成256位的密钥数据）。 如果在创建对称密钥生成器时没有指定具体哈希算法，如仅指定"HMAC"，则不支持随机生成对称密钥数据，可通过 [convertKeySync](#convertkeysync)方式生成对称密钥数据。 <br><br>**说明：** <br>建议优先使用异步API，[generateSymKey](#generatesymkey)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+同步获取对称密钥生成器随机生成的密钥。
+
+<br>目前使用OpenSSL的RAND_priv_bytes()作为底层能力生成随机密钥。
+
+> **说明：**
+> 
+> 对于HMAC算法的对称密钥，如果已经在创建对称密钥生成器时指定了具体哈希算法（如指定"HMAC|SHA256"），则会随机生成与哈希长度一致的 &gt; 二进制密钥数据（如指定"HMAC|SHA256"会随机生成256位的密钥数据）。
+
+如果在创建对称密钥生成器时没有指定具体哈希算法，如仅指定"HMAC"，则不支持随机生成对称密钥数据，可通过 [convertKeySync](#convertkeysync)方式生成对称密钥数据。
+
+<br><br>**说明：** <br>建议优先使用异步API，[generateSymKey](#generatesymkey)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 23
 
@@ -402,8 +432,8 @@ generateSymKeySync(): SymKey
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | Invalid function call.<br>**适用版本：** 26.0.0+ |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
+| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | Invalid function call.<br>**适用版本：** 26.0.0+ |
 
 **示例**
 

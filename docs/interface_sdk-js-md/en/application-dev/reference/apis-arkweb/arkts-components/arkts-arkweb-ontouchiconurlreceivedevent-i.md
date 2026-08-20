@@ -24,7 +24,9 @@ import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 precomposed: boolean
 ```
 
-Whether the apple-touch-icon is precomposed. **true** indicates that the apple-touch-icon is precomposed, and **false** indicates the opposite.
+Whether the apple-touch-icon is precomposed.
+
+**true** indicates that the apple-touch-icon is precomposed, and **false** indicates the opposite.
 
 **Type:** boolean
 

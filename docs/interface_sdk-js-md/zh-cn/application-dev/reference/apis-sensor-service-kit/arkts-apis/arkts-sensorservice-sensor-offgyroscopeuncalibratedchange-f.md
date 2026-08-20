@@ -27,15 +27,15 @@ Unsubscribe to uncalibrated gyroscope sensor data, {@code SensorId.GYROSCOPE_UNC
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | 否 | Parameters of sensor on the device. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GyroscopeUncalibratedResponse](arkts-sensorservice-sensor-gyroscopeuncalibratedresponse-i.md)&gt; | 否 | callback uncalibrated gyroscope data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[GyroscopeUncalibratedResponse](arkts-sensorservice-sensor-gyroscopeuncalibratedresponse-i.md)&gt; | 否 | callback uncalibrated gyroscope data. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 **示例**
 

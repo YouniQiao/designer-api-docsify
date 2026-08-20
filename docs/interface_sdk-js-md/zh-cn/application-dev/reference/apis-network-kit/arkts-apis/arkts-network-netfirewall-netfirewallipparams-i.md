@@ -1,4 +1,4 @@
-# NetFirewallIpParams(网络防火墙)
+# NetFirewallIpParams
 
 防火墙规则的IP参数，IP类型包括IPv4、IPv6，支持单个IP或IP段。
 
@@ -52,7 +52,11 @@ endIp?: string
 family?: int
 ```
 
-1：表示family地址族设置为IPv4。 2：表示family地址族设置为IPv6。 默认IPv4，其他当前不支持。
+1：表示family地址族设置为IPv4。
+
+2：表示family地址族设置为IPv6。
+
+默认IPv4，其他当前不支持。
 
 **类型：** int
 
@@ -68,7 +72,11 @@ family?: int
 mask?: int
 ```
 
-IPv4：子网掩码。 IPv6：前缀。 当type等于1时需要设置，并且仅在type等于1时有效，否则将被忽略。
+IPv4：子网掩码。
+
+IPv6：前缀。
+
+当type等于1时需要设置，并且仅在type等于1时有效，否则将被忽略。
 
 **类型：** int
 
@@ -100,7 +108,9 @@ startIp?: string
 type: int
 ```
 
-1：IP地址或子网。该场景下必须指定address和mask字段，当使用单个IP时，mask字段需设置为32。 2：IP段，该场景下必须指定startIp和endIp字段。
+1：IP地址或子网。该场景下必须指定address和mask字段，当使用单个IP时，mask字段需设置为32。
+
+2：IP段，该场景下必须指定startIp和endIp字段。
 
 **类型：** int
 

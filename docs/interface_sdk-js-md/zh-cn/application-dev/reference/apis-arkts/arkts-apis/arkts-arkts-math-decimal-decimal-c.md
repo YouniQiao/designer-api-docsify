@@ -1,4 +1,4 @@
-# Decimal(定义ArkTS的Decimal类型。Decimal支持任意精度的十进制运算。)
+# Decimal
 
 任意精度的Decimal类型。
 
@@ -2175,8 +2175,8 @@ static set(config: DecimalConfig): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200061](../errorcode-utils.md#10200061-加密方法不可用) | Crypto unavailable |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `DecimalConfig.properties` is out of range. |
+| [10200061](../errorcode-utils.md#10200061-加密方法不可用) | Crypto unavailable |
 
 ## sign
 
@@ -2456,7 +2456,9 @@ static sub(x: Value, y: Value): Decimal
 static sum(...n: Value[]): Decimal
 ```
 
-返回一个新的Decimal对象，其值为参数的和。按照precision设置有效位数，按照rounding设置舍入模式。 仅对结果进行舍入，不对中间计算结果进行舍入。
+返回一个新的Decimal对象，其值为参数的和。按照precision设置有效位数，按照rounding设置舍入模式。
+
+仅对结果进行舍入，不对中间计算结果进行舍入。
 
 **起始版本：** 23
 
@@ -3578,7 +3580,7 @@ valueOf(): string
 static readonly EUCLIDEAN: int
 ```
 
-模运算下，余数始终为正。使用欧几里得除法：q = sign(x) * floor(a / abs(x))。 取值为整数。
+模运算下，余数始终为正。使用欧几里得除法：q = sign(x) floor(a / abs(x))。 取值为整数。
 
 **类型：** int
 

@@ -1,6 +1,14 @@
 # Region
 
-Describes a region, which is used to describe the region where the shape can be drawn. &gt; **NOTE：**&gt; &gt; - The initial APIs of this class are supported since API version 12. &gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - This module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
+Describes a region, which is used to describe the region where the shape can be drawn.
+
+> **NOTE：**
+> 
+> - The initial APIs of this class are supported since API version 12.
+> 
+> - This module uses the physical pixel unit, px.
+> 
+> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
 
 **Since:** 23
 

@@ -1,6 +1,10 @@
 # EffectComponent
 
-The **EffectComponent** component defines combined special effects for child components to optimize the special effect drawing performance. > **NOTE** > - The APIs provided by this component are system APIs. > > - Currently, this component provides only combined background blur effects for child components. > > - To use this component for combined background blur effects, first replace the **backgroundBlurStyle(BlurStyle)** > attribute of the target child components with **useEffect(true)**.
+The **EffectComponent** component defines combined special effects for child components to optimize the special effect drawing performance.
+
+> **NOTE**
+
+> - The APIs provided by this component are system APIs. > > - Currently, this component provides only combined background blur effects for child components. > > - To use this component for combined background blur effects, first replace the **backgroundBlurStyle(BlurStyle)** > attribute of the target child components with **useEffect(true)**.
 
 ## EffectComponent
 
@@ -50,11 +54,9 @@ Creates an effect drawing and combination component. If no parameter is passed o
 
 | Name | Description |
 | --- | --- |
-| [EffectComponentOptions](arkts-arkui-effectcomponentoptions-i-sys.md) | Sets the construction parameters of the current EffectComponent, including the rendering layer of the EffectComponent. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [EffectLayer](arkts-arkui-effectlayer-e-sys.md) | Rendering layer of the EffectComponent. |
 

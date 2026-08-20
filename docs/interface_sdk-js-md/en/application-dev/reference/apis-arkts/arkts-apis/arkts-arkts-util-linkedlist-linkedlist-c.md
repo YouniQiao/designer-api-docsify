@@ -848,8 +848,8 @@ Removes and returns the element at the specified index in this linkedlist.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "index" is out of range. It must be &gt;= 0 && &lt;= \\${length}. Received value is: \\${index} |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
 
 ## removeFirst
 
@@ -1121,8 +1121,8 @@ Replaces an element at the specified position in this LinkedList with a given el
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The set method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
 
 **Examples**
 

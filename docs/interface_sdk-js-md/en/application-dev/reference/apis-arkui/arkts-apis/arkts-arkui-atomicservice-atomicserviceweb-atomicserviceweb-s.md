@@ -1,6 +1,10 @@
 # AtomicServiceWeb
 
-**AtomicServiceWeb** is an advanced web component offering customization to meet specific demands. It shields irrelevant APIs from the native **Web** component and extends functionality through JavaScript capabilities. &gt; **NOTE：**&gt; &gt; - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.
+*AtomicServiceWeb** is an advanced web component offering customization to meet specific demands. It shields irrelevant APIs from the native **Web** component and extends functionality through JavaScript capabilities.
+
+> **NOTE：**
+> 
+> - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.
 
 **Since:** 12
 

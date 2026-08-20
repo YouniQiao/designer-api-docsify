@@ -12,7 +12,9 @@ import { serialManager } from '@kit.BasicServicesKit';
 function write(portId: int, buffer: Uint8Array, timeout?: int): Promise<int>
 ```
 
-向串口设备异步写数据，需要先调用[open](arkts-basicservices-serialmanager-open-f.md)打开串口后才能调用此接口。每次写入数据长度不超过4KB，数据过大会导致数据丢失，长数据建议分包写入。使用Promise异步回调。适用于 向设备发送控制命令、下发配置参数、传输采集数据等场景。 **前置条件：** - 需要先调用[getPortList](arkts-basicservices-serialmanager-getportlist-f.md)获取端口号 - 需要先调用[requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md)申请访问权限 - 需要先调用[open](arkts-basicservices-serialmanager-open-f.md)打开串口
+向串口设备异步写数据，需要先调用[open](arkts-basicservices-serialmanager-open-f.md)打开串口后才能调用此接口。每次写入数据长度不超过4KB，数据过大会导致数据丢失，长数据建议分包写入。使用Promise异步回调。适用于 向设备发送控制命令、下发配置参数、传输采集数据等场景。
+
+**前置条件：** - 需要先调用[getPortList](arkts-basicservices-serialmanager-getportlist-f.md)获取端口号 - 需要先调用[requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md)申请访问权限 - 需要先调用[open](arkts-basicservices-serialmanager-open-f.md)打开串口
 
 **起始版本：** 23
 
@@ -39,11 +41,11 @@ function write(portId: int, buffer: Uint8Array, timeout?: int): Promise<int>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |  |
-| [31400007](../errorcode-usb.md#31400007-io异常) |  |
-| [31400006](../errorcode-usb.md#31400006-传输超时) |  |
-| [31400005](../errorcode-usb.md#31400005-设备未打开) |  |
-| [31400003](../errorcode-usb.md#31400003-端口号不存在) |  |
 | [31400001](../errorcode-usb.md#31400001-串口服务异常) |  |
+| [31400003](../errorcode-usb.md#31400003-端口号不存在) |  |
+| [31400005](../errorcode-usb.md#31400005-设备未打开) |  |
+| [31400006](../errorcode-usb.md#31400006-传输超时) |  |
+| [31400007](../errorcode-usb.md#31400007-io异常) |  |
 
 **示例**
 

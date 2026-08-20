@@ -2,6 +2,8 @@
 
 P2P group owner band.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-wifiManager-enum GroupOwnerBand--><!--Device-wifiManager-enum GroupOwnerBand-End-->

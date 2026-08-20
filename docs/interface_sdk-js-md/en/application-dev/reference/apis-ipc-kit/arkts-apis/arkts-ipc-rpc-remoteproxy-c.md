@@ -127,8 +127,8 @@ Obtains the interface descriptor (which is a string) of this object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
 | [1900007](../errorcode-rpc.md#1900007-failed-to-communicate-with-the-remote-object) | communication failed. |
+| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
 
 **Examples**
 

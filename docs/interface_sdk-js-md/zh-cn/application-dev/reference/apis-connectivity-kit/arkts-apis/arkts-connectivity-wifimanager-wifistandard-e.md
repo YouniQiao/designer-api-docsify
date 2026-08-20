@@ -1,6 +1,6 @@
 # WifiStandard
 
-WLAN标准。
+WLAN标准。 @enum { int }
 
 **起始版本：** 23
 

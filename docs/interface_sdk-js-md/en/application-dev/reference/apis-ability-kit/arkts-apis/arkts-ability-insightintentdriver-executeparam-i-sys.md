@@ -122,7 +122,11 @@ Intent execution mode. If an intent defined by the @InsightIntentLink decorator 
 flags?: int
 ```
 
-[Flags](arkts-ability-wantconstant-flags-e.md) of the URIs authorized by the intent caller to the intent executor during the call. **NOTE：**This parameter supports only **FLAG_AUTH_READ_URI_PERMISSION**, **FLAG_AUTH_WRITE_URI_PERMISSION**, and FLAG_AUTH_READ_URI_PERMISSION|
+[Flags](arkts-ability-wantconstant-flags-e.md) of the URIs authorized by the intent caller to the intent executor during the call.
+
+**NOTE：**
+
+This parameter supports only **FLAG_AUTH_READ_URI_PERMISSION**, **FLAG_AUTH_WRITE_URI_PERMISSION**, and FLAG_AUTH_READ_URI_PERMISSION|
 
 **Type:** int
 
@@ -222,7 +226,11 @@ List of URIs authorized by the intent caller to the intent executor during the c
 userId?: int
 ```
 
-ID of the user to which the intent belongs. **NOTE：**If the user ID of the calling application is different from the user ID of the intent, the calling application must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission.
+ID of the user to which the intent belongs.
+
+**NOTE：**
+
+If the user ID of the calling application is different from the user ID of the intent, the calling application must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission.
 
 **Type:** int
 

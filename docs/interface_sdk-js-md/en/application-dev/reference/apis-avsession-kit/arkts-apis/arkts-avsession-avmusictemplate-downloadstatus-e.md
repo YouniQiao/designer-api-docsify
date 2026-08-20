@@ -2,6 +2,8 @@
 
 Enumeration of DownloadStatus.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-avMusicTemplate-enum DownloadStatus--><!--Device-avMusicTemplate-enum DownloadStatus-End-->

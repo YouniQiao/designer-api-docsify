@@ -1,6 +1,11 @@
 # FullscreenInfo
 
-Describes whether the video is in full-screen playback mode. &gt; **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. &gt; While historical version information is preserved for anonymous objects, there may be cases where the outer &gt; element's @since version number is higher than inner elements'. This does not affect interface usability.
+Describes whether the video is in full-screen playback mode.
+
+> **NOTE：**
+> 
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
+> While historical version information is preserved for anonymous objects, there may be cases where the outer &gt; element's
 
 **Since:** 18
 

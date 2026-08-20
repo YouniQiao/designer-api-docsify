@@ -121,7 +121,15 @@ export default class EntryAbility extends UIAbility {
 createModuleContext(moduleName: string): Context
 ```
 
-Creates the context based on the module name. &gt; **NOTE：**&gt; &gt; - Only the context of other modules in the current application and the context of the intra-application HSP can &gt; be obtained. The context of other applications cannot be obtained. &gt; &gt; - This API has been supported since API version 9 and deprecated since API version 12. You are advised to use &gt; [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md) &gt; instead. Otherwise, resource acquisition may fail. &gt; &gt; - Creating a module context involves resource querying and initialization, which can be time-consuming. In &gt; scenarios where application fluidity is critical, avoid frequently or repeatedly calling the &gt; **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
+Creates the context based on the module name.
+
+> **NOTE：**
+> 
+> - Only the context of other modules in the current application and the context of the intra-application HSP can &gt; be obtained. The context of other applications cannot be obtained.
+> 
+> - This API has been supported since API version 9 and deprecated since API version 12. You are advised to use &gt; [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md) &gt; instead. Otherwise, resource acquisition may fail.
+> 
+> - Creating a module context involves resource querying and initialization, which can be time-consuming. In &gt; scenarios where application fluidity is critical, avoid frequently or repeatedly calling the &gt; **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
 
 **Since:** 9
 
@@ -592,7 +600,12 @@ Process name of the current application.
 resourceDir: string
 ```
 
-Resource directory. &gt; **NOTE: ** &gt; &gt; You are required to manually create the resfile directory in **&lt;module-name&gt;\resource**. &gt; The **resfile** directory can be accessed only in read-only mode.
+Resource directory.
+
+> **NOTE: **
+> 
+> You are required to manually create the resfile directory in **&lt;module-name&gt;\resource**.
+> The **resfile** directory can be accessed only in read-only mode.
 
 **Type:** string
 

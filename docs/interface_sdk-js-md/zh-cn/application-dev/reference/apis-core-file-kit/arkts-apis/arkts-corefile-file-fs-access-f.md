@@ -14,7 +14,9 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 declare function access(path: string, mode?: AccessModeType): Promise<boolean>
 ```
 
-检查文件或目录是否存在，或校验操作权限。使用Promise异步回调。 校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
+检查文件或目录是否存在，或校验操作权限。使用Promise异步回调。
+
+校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
 
 **起始版本：** 9
 
@@ -41,18 +43,18 @@ declare function access(path: string, mode?: AccessModeType): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900005 | I/O error |
-| 13900023 | Text file busy |
-| 13900033 | Too many symbolic links encountered |
 | 13900002 | No such file or directory |
-| 13900018 | Not a directory |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
+| 13900018 | Not a directory |
+| 13900020 | Invalid argument |
+| 13900023 | Text file busy |
 | 13900030 | File name too long |
-| 13900008 | Bad file descriptor |
+| 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
-| 13900011 | Out of memory |
 
 
 ## access
@@ -76,24 +78,24 @@ declare function access(path: string, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 文件或目录的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 异步检查文件或目录是否存在的回调。如果存在，回调返回true；否则返回false。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 异步检查文件或目录是否存在的回调。如果存在，回调返回true；否则返回false。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900005 | I/O error |
-| 13900023 | Text file busy |
-| 13900033 | Too many symbolic links encountered |
 | 13900002 | No such file or directory |
-| 13900018 | Not a directory |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
+| 13900018 | Not a directory |
+| 13900020 | Invalid argument |
+| 13900023 | Text file busy |
 | 13900030 | File name too long |
-| 13900008 | Bad file descriptor |
+| 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
-| 13900011 | Out of memory |
 
 
 ## access
@@ -102,7 +104,9 @@ declare function access(path: string, callback: AsyncCallback<boolean>): void
 declare function access(path: string, mode: AccessModeType, flag: AccessFlagType): Promise<boolean>
 ```
 
-检查文件或目录是否在本地，或校验操作权限。使用Promise异步回调。 校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
+检查文件或目录是否在本地，或校验操作权限。使用Promise异步回调。
+
+校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
 
 **起始版本：** 12
 
@@ -128,14 +132,14 @@ declare function access(path: string, mode: AccessModeType, flag: AccessFlagType
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | 13900005 | I/O error |
-| 13900023 | Text file busy |
-| 13900033 | Too many symbolic links encountered |
-| 13900018 | Not a directory |
+| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
+| 13900018 | Not a directory |
+| 13900020 | Invalid argument |
+| 13900023 | Text file busy |
 | 13900030 | File name too long |
-| 13900011 | Out of memory |
+| 13900033 | Too many symbolic links encountered |
 

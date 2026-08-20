@@ -1,6 +1,8 @@
 # ReadStream
 
-Defines a readable stream. You need to use fileIo.createReadStream to create a **ReadStream** instance, which is inherited from [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readableoptions-i.md). The data obtained by **ReadStream** is a decoded string. Currently, only the UTF-8 format is supported.
+Defines a readable stream. You need to use fileIo.createReadStream to create a **ReadStream** instance, which is inherited from [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readableoptions-i.md).
+
+The data obtained by **ReadStream** is a decoded string. Currently, only the UTF-8 format is supported.
 
 **Inheritance/Implementation:** ReadStream extends [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md)
 
@@ -96,8 +98,8 @@ Adjusts the position of the readable stream offset pointer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error |
+| 13900020 | Invalid argument |
 | 13900026 | Illegal seek |
 | 13900042 | Unknown error |
 

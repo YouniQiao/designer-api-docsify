@@ -2,6 +2,8 @@
 
 supplicant状态枚举。
 
+@enum { number } SuppState
+
 **起始版本：** 6
 
 **废弃版本：** 9

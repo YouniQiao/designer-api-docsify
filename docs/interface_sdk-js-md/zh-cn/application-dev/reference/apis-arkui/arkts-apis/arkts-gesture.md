@@ -70,7 +70,7 @@
 | [TapGestureEvent](arkts-arkui-tapgestureevent-i.md) | 继承自[BaseGestureEvent](arkts-arkui-basegestureevent-i.md)。可将该对象作为onGestureJudgeBegin的 event参数来传递。 |
 | [TapGestureHandlerOptions](arkts-arkui-tapgesturehandleroptions-i.md) | 点击手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。 |
 | [TapGestureInterface](arkts-arkui-tapgestureinterface-i.md) | 支持单击、双击和多次点击事件的识别。 |
-| [TapGestureParameters](arkts-arkui-tapgestureparameters-i.md) | 点击手势参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。 @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
+| [TapGestureParameters](arkts-arkui-tapgestureparameters-i.md) | 点击手势参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。 |
 
 ### 枚举
 

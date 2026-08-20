@@ -13,7 +13,11 @@ import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 function getUserAuthInstance(authParam: AuthParam, widgetParam: WidgetParam): UserAuthInstance
 ```
 
-Obtains a [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) instance for user authentication. The user authentication widget is also supported. This API is used to create a user authentication instance. After authentication parameters and UI parameters are configured, you can use the returned instance object to start authentication and subscribe to the authentication result. &gt; **NOTE：**&gt; Each **UserAuthInstance** can be used for authentication only once. To perform authentication again, you must &gt; obtain a new **UserAuthInstance**. After the authentication is complete (regardless of whether it is successful &gt; or fails), the instance cannot be used again.
+Obtains a [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) instance for user authentication. The user authentication widget is also supported. This API is used to create a user authentication instance. After authentication parameters and UI parameters are configured, you can use the returned instance object to start authentication and subscribe to the authentication result.
+
+> **NOTE：**
+
+> Each **UserAuthInstance** can be used for authentication only once. To perform authentication again, you must &gt; obtain a new **UserAuthInstance**. After the authentication is complete (regardless of whether it is successful &gt; or fails), the instance cannot be used again.
 
 **Since:** 23
 
@@ -41,9 +45,9 @@ Obtains a [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
-| [12500006](../errorcode-useriam.md#12500006-unsupported-authentication-trust-level) | The authentication trust level is not supported. |
-| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) | The authentication type is not supported. |
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) | The authentication type is not supported. |
+| [12500006](../errorcode-useriam.md#12500006-unsupported-authentication-trust-level) | The authentication trust level is not supported. |
 
 **Examples**
 

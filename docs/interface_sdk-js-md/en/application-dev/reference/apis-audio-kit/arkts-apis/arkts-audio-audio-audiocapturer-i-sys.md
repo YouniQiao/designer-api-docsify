@@ -1,6 +1,12 @@
 # AudioCapturer
 
-This interface provides APIs for audio capture. Before calling any API in AudioCapturer, you must use [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) to create an AudioCapturer instance. &gt; **NOTE：**&gt; &gt; - The initial APIs of this interface are supported since API version 8.
+This interface provides APIs for audio capture.
+
+Before calling any API in AudioCapturer, you must use [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) to create an AudioCapturer instance.
+
+> **NOTE：**
+> 
+> - The initial APIs of this interface are supported since API version 8.
 
 **Since:** 23
 
@@ -43,9 +49,9 @@ Unsubscribes from micIn audio data callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permitted at running state. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permitted at running state. |
 
 ## onReadMicInData
 
@@ -75,8 +81,8 @@ Subscribes to micIn audio data callback. This callback has higher priority than 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permitted at running state. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permitted at running state. |
 
 ## setInputDeviceToAccessory
 
@@ -98,6 +104,6 @@ Sets default input device of this Capturer to DEVICE_TYPE_ACCESSORY. Other captu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
 

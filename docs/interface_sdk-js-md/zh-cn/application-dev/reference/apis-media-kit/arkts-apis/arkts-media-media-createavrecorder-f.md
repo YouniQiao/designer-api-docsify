@@ -12,7 +12,11 @@ import { media } from '@kit.MediaKit';
 function createAVRecorder(callback: AsyncCallback<AVRecorder>): void
 ```
 
-创建音视频录制实例。使用callback异步回调。 &gt; **说明：** &gt; &gt; 应用可创建多个音视频录制实例，但由于设备共用音频通路，一个设备仅能有一个实例进行音频录制。创建第二个实例录制音频时，将会因为音频通路冲突导致创建失败。
+创建音视频录制实例。使用callback异步回调。
+
+> **说明：**
+> 
+> 应用可创建多个音视频录制实例，但由于设备共用音频通路，一个设备仅能有一个实例进行音频录制。创建第二个实例录制音频时，将会因为音频通路冲突导致创建失败。
 
 **起始版本：** 9
 
@@ -24,7 +28,7 @@ function createAVRecorder(callback: AsyncCallback<AVRecorder>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVRecorder](arkts-media-multimedia-media-avrecorder-i.md)&gt; | 是 | 回调函数，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVRecorder](arkts-media-multimedia-media-avrecorder-i.md)&gt; | 是 | 回调函数，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
 
 **错误码：**
 
@@ -67,7 +71,7 @@ function createAVRecorder(callback: AsyncCallback<AVRecorder | undefined>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVRecorder](arkts-media-multimedia-media-avrecorder-i.md) \| undefined&gt; | 是 | 回调函数，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVRecorder](arkts-media-multimedia-media-avrecorder-i.md) \| undefined&gt; | 是 | 回调函数，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
 
 **错误码：**
 
@@ -82,7 +86,11 @@ function createAVRecorder(callback: AsyncCallback<AVRecorder | undefined>): void
 function createAVRecorder(): Promise<AVRecorder>
 ```
 
-创建音视频录制实例。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 应用可创建多个音视频录制实例，但由于设备共用音频通路，一个设备仅能有一个实例进行音频录制。创建第二个实例录制音频时，将会因为音频通路冲突导致创建失败。
+创建音视频录制实例。使用Promise异步回调。
+
+> **说明：**
+> 
+> 应用可创建多个音视频录制实例，但由于设备共用音频通路，一个设备仅能有一个实例进行音频录制。创建第二个实例录制音频时，将会因为音频通路冲突导致创建失败。
 
 **起始版本：** 9
 

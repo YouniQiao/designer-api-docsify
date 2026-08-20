@@ -42,7 +42,7 @@ pathStack: NavPathStack
 
 Navigation组件的导航控制器。
 
-**类型：** [NavPathStack](../../apis-na/arkts-apis/arkts-na-navigation-navpathstack-c.md)
+**类型：** [NavPathStack](../../apis-default/arkts-components/arkts-navigation-navpathstack-c.md)
 
 **起始版本：** 12
 

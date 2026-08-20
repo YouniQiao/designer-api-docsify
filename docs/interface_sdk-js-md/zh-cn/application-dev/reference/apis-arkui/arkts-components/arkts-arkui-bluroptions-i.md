@@ -2,6 +2,8 @@
 
 灰阶模糊参数。
 
+@interface BlurOptions
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare interface BlurOptions--><!--Device-unnamed-declare interface BlurOptions-End-->

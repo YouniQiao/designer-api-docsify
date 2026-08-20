@@ -21,7 +21,7 @@ import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeLis
 
 | Name | Description |
 | --- | --- |
-| [TreeView](arkts-arkui-arkui-advanced-treeview-treeview-s.md) | The **TreeView** component represents a tree view used to display a hierarchical list of items. Each item can contain subitems, which may be expanded or collapsed. This component is applicable in productivity applications, such as side navigation bars in notepad, email, and Gallery applications. &gt; **NOTE：**&gt; &gt; - If the **TreeView** component has universal attributes and &gt; universal events configured, the compiler toolchain automatically &gt; generates an additional **__Common__** node and mounts the universal attributes and universal events on this node &gt; rather than the **TreeView** component itself. As a result, the configured universal attributes and universal &gt; events may fail to take effect or behave as intended. For this reason, avoid using universal attributes and events &gt; with the **TreeView** component. |
+| [TreeView](arkts-arkui-arkui-advanced-treeview-treeview-s.md) | The **TreeView** component represents a tree view used to display a hierarchical list of items. Each item can contain subitems, which may be expanded or collapsed. |
 
 ### Interfaces
 

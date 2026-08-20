@@ -19,7 +19,11 @@ Provides information about the check box.
 group?: string
 ```
 
-Group name of the check box (that is, the name of the check box group to which the check box belongs). **NOTE：**For the settings to take effect, this parameter must be used with the CheckboxGroup component.
+Group name of the check box (that is, the name of the check box group to which the check box belongs).
+
+**NOTE：**
+
+For the settings to take effect, this parameter must be used with the CheckboxGroup component.
 
 **Type:** string
 

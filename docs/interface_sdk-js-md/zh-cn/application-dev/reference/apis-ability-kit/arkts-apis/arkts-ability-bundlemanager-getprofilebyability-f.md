@@ -12,7 +12,11 @@ import { bundleManager } from '@kit.AbilityKit';
 function getProfileByAbility(moduleName: string, abilityName: string, metadataName: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-根据给定的moduleName、abilityName和metadataName（module.json5中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name）获取自身相应配置文件的json格式字符串 。使用callback异步回调。 &gt; 说明： &gt; &gt; 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 \$string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)的相 &gt; 关接口，来获取引用的资源。
+根据给定的moduleName、abilityName和metadataName（module.json5中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name）获取自身相应配置文件的json格式字符串 。使用callback异步回调。
+
+> 说明：
+> 
+> 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 \$string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)的相 &gt; 关接口，来获取引用的资源。
 
 **起始版本：** 23
 
@@ -29,17 +33,17 @@ function getProfileByAbility(moduleName: string, abilityName: string, metadataNa
 | moduleName | string | 是 | 表示Module名称。 |
 | abilityName | string | 是 | 表示UIAbility组件的名称。 |
 | metadataName | string | 是 | 表示UIAbility组件的 [元信息名称](../../../quick-start/module-configuration-file.md#metadata标签)，即module.json5配置文件中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为 undefined，data为获取到的Array&lt;string&gt;；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)，当获取成功时，err为 undefined，data为获取到的Array&lt;string&gt;；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) | The specified ability is disabled. |
-| [17700024](../errorcode-bundle.md#17700024-没有相应的配置文件) | Failed to get the profile because there is no profile in the HAP. |
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified moduleName is not existed. |
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified abilityName is not existed. |
+| [17700024](../errorcode-bundle.md#17700024-没有相应的配置文件) | Failed to get the profile because there is no profile in the HAP. |
+| [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) | The specified ability is disabled. |
 
 **示例**
 
@@ -73,7 +77,11 @@ try {
 function getProfileByAbility(moduleName: string, abilityName: string, metadataName?: string): Promise<Array<string>>
 ```
 
-根据给定的moduleName、abilityName和metadataName（module.json5中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name）获取自身相应配置文件的json格式字符串 。使用Promise异步回调。 &gt; 说明： &gt; &gt; 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 \$string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)的相 &gt; 关接口，来获取引用的资源。
+根据给定的moduleName、abilityName和metadataName（module.json5中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name）获取自身相应配置文件的json格式字符串 。使用Promise异步回调。
+
+> 说明：
+> 
+> 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 \$string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)的相 &gt; 关接口，来获取引用的资源。
 
 **起始版本：** 23
 
@@ -102,10 +110,10 @@ function getProfileByAbility(moduleName: string, abilityName: string, metadataNa
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) | The specified ability is disabled. |
-| [17700024](../errorcode-bundle.md#17700024-没有相应的配置文件) | Failed to get the profile because there is no profile in the HAP. |
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified moduleName is not existed. |
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified abilityName is not existed. |
+| [17700024](../errorcode-bundle.md#17700024-没有相应的配置文件) | Failed to get the profile because there is no profile in the HAP. |
+| [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) | The specified ability is disabled. |
 
 **示例**
 

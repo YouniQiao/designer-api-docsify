@@ -1,4 +1,4 @@
-# NetFirewallRule(Network Firewall)
+# NetFirewallRule
 
 Defines a firewall rule.
 

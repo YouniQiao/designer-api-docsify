@@ -1,8 +1,8 @@
 # EnableAlertOptions
 
-Describes the page routing state.
+**Since:** 23
 
-**Since:** 8
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-router-interface EnableAlertOptions--><!--Device-router-interface EnableAlertOptions-End-->
 
@@ -20,13 +20,15 @@ import { router } from '@kit.ArkUI';
 message: string
 ```
 
-Content displayed in the confirm dialog box.
+dialog context.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EnableAlertOptions-message: string--><!--Device-EnableAlertOptions-message: string-End-->
 

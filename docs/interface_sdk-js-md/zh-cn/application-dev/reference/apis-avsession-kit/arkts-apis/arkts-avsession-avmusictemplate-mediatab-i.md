@@ -2,6 +2,8 @@
 
 媒体标签页的定义。
 
+@interface MediaTab
+
 **起始版本：** 23
 
 <!--Device-avMusicTemplate-interface MediaTab--><!--Device-avMusicTemplate-interface MediaTab-End-->

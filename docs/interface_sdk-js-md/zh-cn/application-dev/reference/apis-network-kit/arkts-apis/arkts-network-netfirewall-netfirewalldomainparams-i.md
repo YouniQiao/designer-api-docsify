@@ -1,4 +1,4 @@
-# NetFirewallDomainParams(网络防火墙)
+# NetFirewallDomainParams
 
 防火墙规则域名参数，目前不支持中文域名。
 

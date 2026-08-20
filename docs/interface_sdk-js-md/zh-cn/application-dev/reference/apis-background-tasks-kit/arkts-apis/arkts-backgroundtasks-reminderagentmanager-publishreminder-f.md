@@ -12,7 +12,11 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<int>): void
 ```
 
-发布后台代理提醒。使用callback异步回调。 &gt; **说明：** &gt; &gt; 该接口需要申请通知弹窗权限 &gt; [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md) &gt; 后调用。 &gt;
+发布后台代理提醒。使用callback异步回调。
+
+> **说明：**
+> 
+> 该接口需要申请通知弹窗权限 &gt; [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md) &gt; 后调用。 &gt;
 
 **起始版本：** 23
 
@@ -27,16 +31,16 @@ function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<i
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | reminderReq | ReminderRequest | 是 | 需要发布的代理提醒实例。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。 当代理提醒发布成功，err为undefined，data为当前发布提醒的id；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 回调函数。 当代理提醒发布成功，err为undefined，data为当前发布提醒的id；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | If the input parameter is not valid parameter. |
-| [1700001](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700001-通知使能未开启) | Notification is not enabled. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [1700002](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700002-提醒数量超出限制) | The number of reminders exceeds the limit. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | If the input parameter is not valid parameter. |
+| [1700001](../errorcode-reminderAgentManager.md#1700001-通知使能未开启) | Notification is not enabled. |
+| [1700002](../errorcode-reminderAgentManager.md#1700002-提醒数量超出限制) | The number of reminders exceeds the limit. |
 
 **示例**
 
@@ -90,7 +94,11 @@ reminderAgentManager.publishReminder(timer, publishCallback);
 function publishReminder(reminderReq: ReminderRequest): Promise<int>
 ```
 
-发布后台代理提醒。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 该接口需要申请通知弹窗权限 &gt; [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md) &gt; 后调用。 &gt;
+发布后台代理提醒。使用Promise异步回调。
+
+> **说明：**
+> 
+> 该接口需要申请通知弹窗权限 &gt; [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md) &gt; 后调用。 &gt;
 
 **起始版本：** 23
 
@@ -116,10 +124,10 @@ function publishReminder(reminderReq: ReminderRequest): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | If the input parameter is not valid parameter. |
-| [1700001](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700001-通知使能未开启) | Notification is not enabled. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [1700002](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700002-提醒数量超出限制) | The number of reminders exceeds the limit. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | If the input parameter is not valid parameter. |
+| [1700001](../errorcode-reminderAgentManager.md#1700001-通知使能未开启) | Notification is not enabled. |
+| [1700002](../errorcode-reminderAgentManager.md#1700002-提醒数量超出限制) | The number of reminders exceeds the limit. |
 
 **示例**
 

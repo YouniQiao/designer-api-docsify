@@ -2,6 +2,8 @@
 
 Image options setted when need to get the image objects.
 
+@interface GetItemsInShapePathParams
+
 **起始版本：** 23
 
 **ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。

@@ -1765,9 +1765,9 @@ Reads the **Parcelable** object from this **MessageSequence** object to the spec
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900012](../errorcode-rpc.md#1900012-js-callback-execution-failed) | Failed to call the JS callback function. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect. |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900012](../errorcode-rpc.md#1900012-js-callback-execution-failed) | Failed to call the JS callback function. |
 
 **Examples**
 
@@ -1832,9 +1832,9 @@ Reads the **Parcelable** array from this **MessageSequence** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900012](../errorcode-rpc.md#1900012-js-callback-execution-failed) | Failed to call the JS callback function. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The length of the array passed when reading is not equal to the length passed when writing to the array; 5.The element does not exist in the array. |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900012](../errorcode-rpc.md#1900012-js-callback-execution-failed) | Failed to call the JS callback function. |
 
 **Examples**
 
@@ -3669,7 +3669,13 @@ try {
 writeRawData(rawData: number[], size: number): void
 ```
 
-Writes raw data to this **MessageSequence** object. &gt; **NOTE：**&gt; &gt; - This API cannot be called for multiple times in one parcel communication. &gt; &gt; - When the data volume is large (greater than 32 KB), the shared memory is used to transmit data. In this case, &gt; pay attention to the SELinux configuration.
+Writes raw data to this **MessageSequence** object.
+
+> **NOTE：**
+> 
+> - This API cannot be called for multiple times in one parcel communication.
+> 
+> - When the data volume is large (greater than 32 KB), the shared memory is used to transmit data. In this case, &gt; pay attention to the SELinux configuration.
 
 **Since:** 9
 
@@ -3719,7 +3725,13 @@ try {
 writeRawDataBuffer(rawData: ArrayBuffer, size: int): void
 ```
 
-Writes raw data to this **MessageSequence** object. &gt; **NOTE：**&gt; &gt; - This API cannot be called for multiple times in one parcel communication. &gt; &gt; - When the data volume is large (greater than 32 KB), the shared memory is used to transmit data. In this case, &gt; pay attention to the SELinux configuration.
+Writes raw data to this **MessageSequence** object.
+
+> **NOTE：**
+> 
+> - This API cannot be called for multiple times in one parcel communication.
+> 
+> - When the data volume is large (greater than 32 KB), the shared memory is used to transmit data. In this case, &gt; pay attention to the SELinux configuration.
 
 **Since:** 23
 

@@ -12,7 +12,13 @@ import { connection } from '@kit.NetworkKit';
 function getIpNeighTable(): Promise<Array<NetIpMacInfo>>
 ```
 
-Obtains information about entries in the IP neighbor table of the local device, including IPv4 and IPv6 entries. Each entry contains an IP address, a MAC address, and a network adapter name. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This interface is used to obtain the cached data of the IP neighbor table, not the data of all connections on the &gt; LAN. &gt; &gt; This API is used to check network exceptions and parse the mapping between IP addresses and MAC addresses.
+Obtains information about entries in the IP neighbor table of the local device, including IPv4 and IPv6 entries. Each entry contains an IP address, a MAC address, and a network adapter name. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This interface is used to obtain the cached data of the IP neighbor table, not the data of all connections on the &gt; LAN.
+> 
+> This API is used to check network exceptions and parse the mapping between IP addresses and MAC addresses.
 
 **Since:** 22
 
@@ -32,9 +38,9 @@ Obtains information about entries in the IP neighbor table of the local device, 
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 

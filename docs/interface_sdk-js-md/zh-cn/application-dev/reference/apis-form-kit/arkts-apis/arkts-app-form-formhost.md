@@ -1,6 +1,10 @@
 # @ohos.app.form.formHost
 
-formHost模块提供了卡片使用方相关接口的能力，包括对使用方同一用户下安装的卡片进行删除、释放、请求更新、获取卡片信息、状态等操作。 &gt; **说明：** &gt; &gt; 本模块接口均为系统接口。
+formHost模块提供了卡片使用方相关接口的能力，包括对使用方同一用户下安装的卡片进行删除、释放、请求更新、获取卡片信息、状态等操作。
+
+> **说明：**
+> 
+> 本模块接口均为系统接口。
 
 **起始版本：** 23
 
@@ -27,7 +31,7 @@ import { formHost } from '@kit.FormKit';
 | [acquireFormData](arkts-form-formhost-acquireformdata-f-sys.md) | 请求卡片提供方数据。使用Promise异步回调。 |
 | [acquireFormState](arkts-form-formhost-acquireformstate-f-sys.md) | 获取卡片状态。使用callback异步回调。 |
 | [acquireFormState](arkts-form-formhost-acquireformstate-f-sys.md) | 获取卡片状态。使用Promise异步回调。 |
-| [addForm](arkts-form-formhost-addform-f-sys.md) | Add a form. You can use this method to create a theme form. |
+| [addForm](arkts-form-formhost-addform-f-sys.md) | Add a form. |
 | [castToNormalForm](arkts-form-formhost-casttonormalform-f-sys.md) | 将指定的临时卡片转换为普通卡片。使用callback异步回调。 |
 | [castToNormalForm](arkts-form-formhost-casttonormalform-f-sys.md) | 将指定的临时卡片转换为普通卡片。使用Promise异步回调。 |
 | [clearRouterProxy](arkts-form-formhost-clearrouterproxy-f-sys.md) | 清除卡片跳转代理。使用callback异步回调。 |
@@ -61,11 +65,11 @@ import { formHost } from '@kit.FormKit';
 | [notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-f-sys.md) | 向卡片框架发送通知以使指定的卡片不可见。该方法调用成功后，会调用onVisibilityChange通知卡片提供方。使用Promise异步回调。 |
 | [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md) | 向卡片框架发送通知以使指定的卡片可见。该方法调用成功后，会调用onVisibilityChange通知卡片提供方。使用callback异步回调。 |
 | [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md) | 向卡片框架发送通知以使指定的卡片可见。该方法调用成功后，会调用onVisibilityChange通知卡片提供方。使用Promise异步回调。 |
-| [offChangeSceneAnimationState](arkts-form-formhost-offchangesceneanimationstate-f-sys.md) | Cancels listening to the event of change scene animation state. You can use this method to cancel listening to the event of change scene animation state. |
+| [offChangeSceneAnimationState](arkts-form-formhost-offchangesceneanimationstate-f-sys.md) | Cancels listening to the event of change scene animation state. |
 | [offDeleteFormsCallback](arkts-form-formhost-offdeleteformscallback-f-sys.md) | 取消订阅删除卡片事件。使用callback异步回调。 |
-| [offFormOverflow](arkts-form-formhost-offformoverflow-f-sys.md) | Cancels listening to the event of formOverflow. You can use this method to cancel listening to the event of formOverflow. |
-| [offFormUninstall](arkts-form-formhost-offformuninstall-f-sys.md) | Cancels listening to the event of uninstall form. You can use this method to cancel listening to the event of uninstall form. |
-| [offGetFormRect](arkts-form-formhost-offgetformrect-f-sys.md) | Cancels listening to the event of get form rect. You can use this method to cancel listening to the event of get form rect. |
+| [offFormOverflow](arkts-form-formhost-offformoverflow-f-sys.md) | Cancels listening to the event of formOverflow. |
+| [offFormUninstall](arkts-form-formhost-offformuninstall-f-sys.md) | Cancels listening to the event of uninstall form. |
+| [offGetFormRect](arkts-form-formhost-offgetformrect-f-sys.md) | Cancels listening to the event of get form rect. |
 | [offGetLiveFormStatus](arkts-form-formhost-offgetliveformstatus-f-sys.md) | Cancels Listening to the event of get live form status. |
 | [offGetWantParamsCallback](arkts-form-formhost-offgetwantparamscallback-f-sys.md) | 取消订阅获取卡片参数事件。使用callback异步回调。 |
 | [offTemplateFormDetailInfoChange](arkts-form-formhost-offtemplateformdetailinfochange-f-sys.md) | 取消订阅模板卡片静态配置信息变化。使用callback异步回调。 |
@@ -75,11 +79,11 @@ import { formHost } from '@kit.FormKit';
 | [off_formUninstall](arkts-form-formhost-offformuninstall-f-sys.md) | 取消订阅卡片卸载事件。使用callback异步回调。 |
 | [off_getFormRect](arkts-form-formhost-offgetformrect-f-sys.md) | 取消订阅卡片位置尺寸查询请求事件。使用callback异步回调。 |
 | [off_getLiveFormStatus](arkts-form-formhost-offgetliveformstatus-f-sys.md) | Cancels Listening to the event of get live form status. |
-| [onChangeSceneAnimationState](arkts-form-formhost-onchangesceneanimationstate-f-sys.md) | Listens to the event of change scene animation state. You can use this method to listen to the event of change scene animation state. |
+| [onChangeSceneAnimationState](arkts-form-formhost-onchangesceneanimationstate-f-sys.md) | Listens to the event of change scene animation state. |
 | [onDeleteFormsCallback](arkts-form-formhost-ondeleteformscallback-f-sys.md) | 订阅删除卡片事件。使用callback异步回调。 |
-| [onFormOverflow](arkts-form-formhost-onformoverflow-f-sys.md) | Listens to the event of formOverflow. You can use this method to listen to the event of formOverflow. |
-| [onFormUninstall](arkts-form-formhost-onformuninstall-f-sys.md) | Listens to the event of uninstall form. You can use this method to listen to the event of uninstall form. |
-| [onGetFormRect](arkts-form-formhost-ongetformrect-f-sys.md) | Listens to the event of get form rect. You can use this method to listen to the event of get form rect. |
+| [onFormOverflow](arkts-form-formhost-onformoverflow-f-sys.md) | Listens to the event of formOverflow. |
+| [onFormUninstall](arkts-form-formhost-onformuninstall-f-sys.md) | Listens to the event of uninstall form. |
+| [onGetFormRect](arkts-form-formhost-ongetformrect-f-sys.md) | Listens to the event of get form rect. |
 | [onGetLiveFormStatus](arkts-form-formhost-ongetliveformstatus-f-sys.md) | Listens to the event of get live form status. |
 | [onGetWantParamsCallback](arkts-form-formhost-ongetwantparamscallback-f-sys.md) | 订阅获取卡片参数事件。使用callback异步回调。 |
 | [onTemplateFormDetailInfoChange](arkts-form-formhost-ontemplateformdetailinfochange-f-sys.md) | 订阅模板卡片静态配置信息变化。使用callback异步回调。 |
@@ -106,7 +110,7 @@ import { formHost } from '@kit.FormKit';
 | [shareForm](arkts-form-formhost-shareform-f-sys.md) | 指定formId和远程设备Id进行卡片分享。使用callback异步回调。 |
 | [shareForm](arkts-form-formhost-shareform-f-sys.md) | 指定formId和远程设备Id进行卡片分享。使用Promise异步回调。 |
 | [updateFormLocation](arkts-form-formhost-updateformlocation-f-sys.md) | 更新卡片位置。 |
-| [updateFormLockedState](arkts-form-formhost-updateformlockedstate-f-sys.md) | 通知卡片管控状态更新。使用Promise异步回调。 卡片管控状态是指，应用使能了应用锁管控，对应应用的卡片也会跟随使能应用锁管控，此时卡片页面会使用加锁的蒙板样式遮罩卡片。在管控状态下，操作和使用卡片需要输入加锁时设置的密码。 |
+| [updateFormLockedState](arkts-form-formhost-updateformlockedstate-f-sys.md) | 通知卡片管控状态更新。使用Promise异步回调。 |
 | [updateFormSize](arkts-form-formhost-updateformsize-f-sys.md) | 调整卡片尺寸。 |
 <!--DelEnd-->
 

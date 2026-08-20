@@ -20,11 +20,11 @@ export type OnReceiveDataForResultCallback = (data: Record<string, RecordData>) 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | 回调函数，返回带返回值的接收的数据。 |
+| data | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | 回调函数，返回带返回值的接收的数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 返回的数据对象。 |
+| [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 返回的数据对象。 |
 

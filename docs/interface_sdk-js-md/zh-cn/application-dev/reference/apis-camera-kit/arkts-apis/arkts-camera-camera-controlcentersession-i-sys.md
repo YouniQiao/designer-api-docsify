@@ -2,6 +2,8 @@
 
 Control center session object.
 
+@extends Beauty, Aperture [since 20 - 24] @extends Beauty, Aperture, ColorEffect [since 26.0.0]
+
 **继承/实现关系：** ControlCenterSession extends [Beauty](arkts-camera-camera-beauty-i-sys.md), [Aperture](arkts-camera-camera-aperture-i-sys.md), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md)
 
 **起始版本：** 23
@@ -45,9 +47,9 @@ Enable auto-framing effect.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## getAutoFramingStatus
 
@@ -135,8 +137,8 @@ Gets the current camera device.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 
 ## isAutoFramingSupported
 
@@ -222,7 +224,7 @@ Sets the camera to be used as a camera at the specified position.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 

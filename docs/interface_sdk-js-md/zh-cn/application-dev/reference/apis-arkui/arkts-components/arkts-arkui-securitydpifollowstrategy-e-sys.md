@@ -1,4 +1,4 @@
-# SecurityDpiFollowStrategy(System API)（系统接口）
+# SecurityDpiFollowStrategy（系统接口）
 
 定义SecurityUIExtensionComponent内容分辨率跟随策略的枚举。
 

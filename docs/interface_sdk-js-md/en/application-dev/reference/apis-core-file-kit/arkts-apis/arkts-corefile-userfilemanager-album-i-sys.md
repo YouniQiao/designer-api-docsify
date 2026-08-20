@@ -277,7 +277,11 @@ async function example(mgr: userFileManager.UserFileManager) {
 deletePhotoAssets(assets: Array<FileAsset>, callback: AsyncCallback<void>): void
 ```
 
-Deletes image or video assets from the recycle bin. Before the operation, ensure that the image or video assets exist in the recycle bin. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this &gt; operation.
+Deletes image or video assets from the recycle bin. Before the operation, ensure that the image or video assets exist in the recycle bin. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this &gt; operation.
 
 **Since:** 10
 
@@ -344,7 +348,11 @@ async function example(mgr: userFileManager.UserFileManager) {
 deletePhotoAssets(assets: Array<FileAsset>): Promise<void>
 ```
 
-Deletes image or video assets from the recycle bin. Before the operation, ensure that the image or video assets exist in the recycle bin. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this &gt; operation.
+Deletes image or video assets from the recycle bin. Before the operation, ensure that the image or video assets exist in the recycle bin. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this &gt; operation.
 
 **Since:** 10
 

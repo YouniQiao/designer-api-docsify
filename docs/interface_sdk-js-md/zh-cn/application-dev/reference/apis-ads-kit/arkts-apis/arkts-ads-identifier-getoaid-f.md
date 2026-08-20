@@ -12,7 +12,11 @@ import { identifier } from '@kit.AdsKit';
 function getOAID(callback: AsyncCallback<string>): void
 ```
 
-获取开放匿名设备标识符（OAID）。使用callback异步回调。 &gt; **说明：** &gt; &gt; 设置项“跨应用关联访问权限”在HarmonyOS NEXT Developer Beta5及更早版本名称为“应用跟踪访问权限”。
+获取开放匿名设备标识符（OAID）。使用callback异步回调。
+
+> **说明：**
+> 
+> 设置项“跨应用关联访问权限”在HarmonyOS NEXT Developer Beta5及更早版本名称为“应用跟踪访问权限”。
 
 **起始版本：** 10
 
@@ -26,7 +30,7 @@ function getOAID(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回开放匿名设备标识符（OAID）。 1.如应用已配置ohos.permission.APP_TRACKING_CONSENT权限，且“跨应用关联访问权限”为“允许”，则返回OAID。 2.如应用已配置ohos.permission.APP_TRACKING_CONSENT权限，且“跨应用关联访问权限”为“禁止”，则返回 00000000-0000-0000-0000-000000000000。 3.如应用未配置ohos.permission.APP_TRACKING_CONSENT权限，则返回00000000-0000-0000-0000-000000000000。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，返回开放匿名设备标识符（OAID）。 1.如应用已配置ohos.permission.APP_TRACKING_CONSENT权限，且“跨应用关联访问权限”为“允许”，则返回OAID。 2.如应用已配置ohos.permission.APP_TRACKING_CONSENT权限，且“跨应用关联访问权限”为“禁止”，则返回 00000000-0000-0000-0000-000000000000。 3.如应用未配置ohos.permission.APP_TRACKING_CONSENT权限，则返回00000000-0000-0000-0000-000000000000。 |
 
 **错误码：**
 
@@ -56,7 +60,11 @@ identifier.getOAID((err: BusinessError, data: string) => {
 function getOAID(): Promise<string>
 ```
 
-获取开放匿名设备标识符（OAID）。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 设置项“跨应用关联访问权限”在HarmonyOS NEXT Developer Beta5及更早版本名称为“应用跟踪访问权限”。
+获取开放匿名设备标识符（OAID）。使用Promise异步回调。
+
+> **说明：**
+> 
+> 设置项“跨应用关联访问权限”在HarmonyOS NEXT Developer Beta5及更早版本名称为“应用跟踪访问权限”。
 
 **起始版本：** 10
 

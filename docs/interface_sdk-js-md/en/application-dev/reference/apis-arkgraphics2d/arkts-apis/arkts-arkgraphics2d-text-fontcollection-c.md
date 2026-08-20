@@ -281,14 +281,14 @@ Loads a custom font. This API returns the result synchronously. In this API, **n
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900008](../errorcode-drawing.md#25900008-file-damaged) | Corrupted file. |
-| [25900003](../errorcode-drawing.md#25900003-failed-to-open-the-file) | Failed to open the file. |
-| [25900002](../errorcode-drawing.md#25900002-file-not-found) | File not found. |
 | [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. |
-| [25900007](../errorcode-drawing.md#25900007-empty-file) | Empty file. |
-| [25900006](../errorcode-drawing.md#25900006-failed-to-read-the-file) | Failed to read the file. |
-| [25900005](../errorcode-drawing.md#25900005-failed-to-obtain-the-file-size) | Failed to get the file size. |
+| [25900002](../errorcode-drawing.md#25900002-file-not-found) | File not found. |
+| [25900003](../errorcode-drawing.md#25900003-failed-to-open-the-file) | Failed to open the file. |
 | [25900004](../errorcode-drawing.md#25900004-failed-to-locate-the-file) | File seek failed. |
+| [25900005](../errorcode-drawing.md#25900005-failed-to-obtain-the-file-size) | Failed to get the file size. |
+| [25900006](../errorcode-drawing.md#25900006-failed-to-read-the-file) | Failed to read the file. |
+| [25900007](../errorcode-drawing.md#25900007-empty-file) | Empty file. |
+| [25900008](../errorcode-drawing.md#25900008-file-damaged) | Corrupted file. |
 
 **Examples**
 
@@ -364,14 +364,14 @@ Loads a custom font. This API uses a promise to return the result. In this API, 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900008](../errorcode-drawing.md#25900008-file-damaged) | Corrupted file. |
-| [25900003](../errorcode-drawing.md#25900003-failed-to-open-the-file) | Failed to open the file. |
-| [25900002](../errorcode-drawing.md#25900002-file-not-found) | File not found. |
 | [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. |
-| [25900007](../errorcode-drawing.md#25900007-empty-file) | Empty file. |
-| [25900006](../errorcode-drawing.md#25900006-failed-to-read-the-file) | Failed to read the file. |
-| [25900005](../errorcode-drawing.md#25900005-failed-to-obtain-the-file-size) | Failed to get the file size. |
+| [25900002](../errorcode-drawing.md#25900002-file-not-found) | File not found. |
+| [25900003](../errorcode-drawing.md#25900003-failed-to-open-the-file) | Failed to open the file. |
 | [25900004](../errorcode-drawing.md#25900004-failed-to-locate-the-file) | File seek failed. |
+| [25900005](../errorcode-drawing.md#25900005-failed-to-obtain-the-file-size) | Failed to get the file size. |
+| [25900006](../errorcode-drawing.md#25900006-failed-to-read-the-file) | Failed to read the file. |
+| [25900007](../errorcode-drawing.md#25900007-empty-file) | Empty file. |
+| [25900008](../errorcode-drawing.md#25900008-file-damaged) | Corrupted file. |
 
 **Examples**
 
@@ -445,7 +445,13 @@ Sets whether to enable the typesetting paragraph caching. Typesetting paragraph 
 unloadFont(name: string): Promise<void>
 ```
 
-Uninstalls a specified custom font. This API uses a promise to return the result. After this API is called to unload a custom font corresponding to a font alias, the custom font is no longer available. All layout objects that use the font alias must be destroyed and recreated. - Unloading a non-existent font alias does not produce any effect and does not throw an error. - This operation only affects future font usage. - Unloading a font that is currently in use may lead to text rendering exceptions (such as garbled characters or missing glyphs).
+Uninstalls a specified custom font. This API uses a promise to return the result.
+
+After this API is called to unload a custom font corresponding to a font alias, the custom font is no longer available.
+
+All layout objects that use the font alias must be destroyed and recreated.
+
+- Unloading a non-existent font alias does not produce any effect and does not throw an error. - This operation only affects future font usage. - Unloading a font that is currently in use may lead to text rendering exceptions (such as garbled characters or missing glyphs).
 
 **Since:** 23
 
@@ -507,7 +513,13 @@ struct UnloadFontTest {
 unloadFontSync(name: string): void
 ```
 
-Uninstalls a specified custom font. This API is synchronous. After this API is called to unload a custom font corresponding to a font alias, the custom font is no longer available. All layout objects that use the font alias must be destroyed and recreated. - Unloading a non-existent font alias does not produce any effect and does not throw an error. - This operation only affects future font usage. - Unloading a font that is currently in use may lead to text rendering exceptions (such as garbled characters or missing glyphs).
+Uninstalls a specified custom font. This API is synchronous.
+
+After this API is called to unload a custom font corresponding to a font alias, the custom font is no longer available.
+
+All layout objects that use the font alias must be destroyed and recreated.
+
+- Unloading a non-existent font alias does not produce any effect and does not throw an error. - This operation only affects future font usage. - Unloading a font that is currently in use may lead to text rendering exceptions (such as garbled characters or missing glyphs).
 
 **Since:** 23
 

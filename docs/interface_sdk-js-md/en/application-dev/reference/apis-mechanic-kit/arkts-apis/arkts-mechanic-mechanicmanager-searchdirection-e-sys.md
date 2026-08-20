@@ -2,6 +2,8 @@
 
 Search direction.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-mechanicManager-export enum SearchDirection--><!--Device-mechanicManager-export enum SearchDirection-End-->

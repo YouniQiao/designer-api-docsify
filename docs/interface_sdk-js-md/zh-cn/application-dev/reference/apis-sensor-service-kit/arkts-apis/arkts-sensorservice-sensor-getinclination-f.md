@@ -25,7 +25,7 @@ function getInclination(inclinationMatrix: Array<double>, callback: AsyncCallbac
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | inclinationMatrix | Array&lt;double&gt; | 是 | 倾斜矩阵。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | 是 | 回调函数，异步返回地磁倾角，单位：rad（弧度）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;double&gt; | 是 | 回调函数，异步返回地磁倾角，单位：rad（弧度）。 |
 
 **错误码：**
 

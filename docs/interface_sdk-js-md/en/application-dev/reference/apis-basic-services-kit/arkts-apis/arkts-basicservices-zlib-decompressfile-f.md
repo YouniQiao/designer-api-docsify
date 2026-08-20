@@ -12,7 +12,13 @@ import { zlib } from '@kit.BasicServicesKit';
 function decompressFile(inFile: string, outFile: string, options: Options, callback: AsyncCallback<void>): void
 ```
 
-Decompresses a file. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive &gt; periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned. &gt; &gt; The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise, &gt; the error code 900003 is returned.
+Decompresses a file. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive &gt; periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
+> 
+> The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise, &gt; the error code 900003 is returned.
 
 **Since:** 23
 
@@ -36,9 +42,9 @@ Decompresses a file. This API uses an asynchronous callback to return the result
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [900001](../errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
-| [900003](../errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) | The input source file is not in ZIP format or is damaged.<br>**Applicable version:** 10 and later |
-| [900002](../errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
+| [900001](../../apis-ability-kit/errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
+| [900002](../../apis-ability-kit/errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
+| [900003](../../apis-ability-kit/errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) | The input source file is not in ZIP format or is damaged.<br>**Applicable version:** 10 and later |
 
 **Examples**
 
@@ -75,7 +81,13 @@ try {
 function decompressFile(inFile: string, outFile: string, callback: AsyncCallback<void>): void
 ```
 
-Decompresses a file. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive &gt; periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned. &gt; &gt; The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise, &gt; the error code 900003 is returned.
+Decompresses a file. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive &gt; periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
+> 
+> The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise, &gt; the error code 900003 is returned.
 
 **Since:** 23
 
@@ -98,9 +110,9 @@ Decompresses a file. This API uses an asynchronous callback to return the result
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [900001](../errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
-| [900003](../errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) | The input source file is not in ZIP format or is damaged. |
-| [900002](../errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
+| [900001](../../apis-ability-kit/errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
+| [900002](../../apis-ability-kit/errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
+| [900003](../../apis-ability-kit/errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) | The input source file is not in ZIP format or is damaged. |
 
 **Examples**
 
@@ -133,7 +145,13 @@ try {
 function decompressFile(inFile: string, outFile: string, options?: Options): Promise<void>
 ```
 
-Decompresses a file. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive &gt; periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned. &gt; &gt; The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise, &gt; the error code 900003 is returned.
+Decompresses a file. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive &gt; periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
+> 
+> The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise, &gt; the error code 900003 is returned.
 
 **Since:** 23
 
@@ -162,9 +180,9 @@ Decompresses a file. This API uses a promise to return the result. &gt; **NOTE�
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [900001](../errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
-| [900003](../errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) | The input source file is not in ZIP format or is damaged.<br>**Applicable version:** 10 and later |
-| [900002](../errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
+| [900001](../../apis-ability-kit/errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
+| [900002](../../apis-ability-kit/errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
+| [900003](../../apis-ability-kit/errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) | The input source file is not in ZIP format or is damaged.<br>**Applicable version:** 10 and later |
 
 **Examples**
 

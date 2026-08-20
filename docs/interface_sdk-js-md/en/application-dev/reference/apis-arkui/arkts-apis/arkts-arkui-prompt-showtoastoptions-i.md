@@ -2,11 +2,13 @@
 
 Defines the options of ShowToast.
 
+@interface ShowToastOptions
+
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [ShowToastOptions](../../apis-na/arkts-apis/arkts-na-promptaction-showtoastoptions-i.md)
+**Substitutes:** [ShowToastOptions](arkts-arkui-promptaction-showtoastoptions-i.md)
 
 <!--Device-prompt-interface ShowToastOptions--><!--Device-prompt-interface ShowToastOptions-End-->
 
@@ -33,7 +35,7 @@ The distance between toast dialog box and the bottom of screen.
 
 **Deprecated since:** 9
 
-**Substitutes:** [bottom](../../apis-na/arkts-apis/arkts-na-promptaction-showtoastoptions-i.md#bottom)
+**Substitutes:** [bottom](arkts-arkui-promptaction-showtoastoptions-i.md#bottom)
 
 <!--Device-ShowToastOptions-bottom?: string | number--><!--Device-ShowToastOptions-bottom?: string | number-End-->
 
@@ -53,7 +55,7 @@ Duration of toast dialog box. The default value is 1500. The recommended value r
 
 **Deprecated since:** 9
 
-**Substitutes:** [duration](../../apis-na/arkts-apis/arkts-na-promptaction-showtoastoptions-i.md#duration)
+**Substitutes:** [duration](arkts-arkui-promptaction-showtoastoptions-i.md#duration)
 
 <!--Device-ShowToastOptions-duration?: number--><!--Device-ShowToastOptions-duration?: number-End-->
 
@@ -73,7 +75,7 @@ Text to display.
 
 **Deprecated since:** 9
 
-**Substitutes:** [message](../../apis-na/arkts-apis/arkts-na-promptaction-showtoastoptions-i.md#message)
+**Substitutes:** [message](arkts-arkui-promptaction-showtoastoptions-i.md#message)
 
 <!--Device-ShowToastOptions-message: string--><!--Device-ShowToastOptions-message: string-End-->
 

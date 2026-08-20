@@ -2,6 +2,8 @@
 
 Enumerates the color distribution types of a particle.
 
+@enum { number }
+
 **Since:** 12
 
 <!--Device-unnamed-declare enum DistributionType--><!--Device-unnamed-declare enum DistributionType-End-->

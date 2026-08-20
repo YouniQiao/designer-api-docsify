@@ -19,7 +19,9 @@
 color?: ResourceColor
 ```
 
-光标颜色。 默认值：'#ff007dff'，表示蓝色。
+光标颜色。
+
+默认值：'#ff007dff'，表示蓝色。
 
 **类型：** ResourceColor
 
@@ -39,7 +41,9 @@ color?: ResourceColor
 width?: Length
 ```
 
-光标尺寸，不支持百分比。 默认值：'2vp'
+光标尺寸，不支持百分比。
+
+默认值：'2vp'
 
 **类型：** Length
 

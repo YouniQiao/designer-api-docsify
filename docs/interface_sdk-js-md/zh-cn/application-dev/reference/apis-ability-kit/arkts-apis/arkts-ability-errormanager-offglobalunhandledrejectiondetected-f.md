@@ -12,7 +12,9 @@ import { errorManager } from '@kit.AbilityKit';
 function off(type: 'globalUnhandledRejectionDetected', observer?: GlobalObserver): void
 ```
 
-注销被拒绝promise监听器，注销后无法监听进程中的promise异常。 如果传入的回调不在通过on方法注册的回调队列中，将抛出16300004错误码，因此建议使用try-catch逻辑进行处理。
+注销被拒绝promise监听器，注销后无法监听进程中的promise异常。
+
+如果传入的回调不在通过on方法注册的回调队列中，将抛出16300004错误码，因此建议使用try-catch逻辑进行处理。
 
 **起始版本：** 18
 

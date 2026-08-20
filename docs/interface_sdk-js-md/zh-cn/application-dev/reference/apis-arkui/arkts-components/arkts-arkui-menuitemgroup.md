@@ -1,8 +1,14 @@
 # MenuItemGroup
 
-该组件用于展示MenuItem的分组，支持设置分组的标题和尾部信息，用于组织和管理菜单项的分类结构。适用于需要在菜单中按类别组织多个菜单项的场景，通过分组清晰地展示菜单的层次结构，提升菜单的可读性和用户体验。 > **说明：** > - 该组件从API版本26.0.0开始支持WithTheme。
+该组件用于展示MenuItem的分组，支持设置分组的标题和尾部信息，用于组织和管理菜单项的分类结构。适用于需要在菜单中按类别组织多个菜单项的场景，通过分组清晰地展示菜单的层次结构，提升菜单的可读性和用户体验。
 
-## 子组件 包含MenuItem子组件。
+> **说明：**
+
+> - 该组件从API版本26.0.0开始支持WithTheme。
+
+## 子组件
+
+包含MenuItem子组件。
 
 ## MenuItemGroup
 
@@ -30,5 +36,4 @@ MenuItemGroup(value?: MenuItemGroupOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [MenuItemGroupOptions](arkts-arkui-menuitemgroupoptions-i.md) | MenuItem分组的标题和尾部信息。 |
 

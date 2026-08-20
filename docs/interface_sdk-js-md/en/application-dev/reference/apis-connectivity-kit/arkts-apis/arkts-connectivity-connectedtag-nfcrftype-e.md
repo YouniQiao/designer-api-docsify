@@ -2,6 +2,8 @@
 
 Describes the NFC RF type.
 
+@enum { number }
+
 **Since:** 8
 
 <!--Device-connectedTag-enum NfcRfType--><!--Device-connectedTag-enum NfcRfType-End-->

@@ -22,7 +22,7 @@ container?: OnContainerCallback
 
 set subcomponent binded on tree item.
 
-**Type:** [OnContainerCallback](../../apis-na/arkts-apis/arkts-na-oncontainercallback-t.md)
+**Type:** [OnContainerCallback](arkts-arkui-oncontainercallback-t.md)
 
 **Since:** 26.0.0
 
@@ -62,7 +62,7 @@ editIcon?: ResourceStr
 
 Set edit icon resource.
 
-**Type:** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+**Type:** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -82,7 +82,7 @@ icon?: ResourceStr
 
 Set the icon resource.
 
-**Type:** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+**Type:** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -142,7 +142,7 @@ primaryTitle?: ResourceStr
 
 Set primary title content.
 
-**Type:** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+**Type:** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -162,7 +162,7 @@ secondaryTitle?: ResourceStr
 
 Set secondary title content.
 
-**Type:** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+**Type:** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -182,7 +182,7 @@ selectedIcon?: ResourceStr
 
 Set selected icon resource.
 
-**Type:** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+**Type:** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -202,7 +202,7 @@ symbolEditIconStyle?: SymbolGlyphModifier
 
 Set edit symbol resource.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
 
 **Since:** 26.0.0
 
@@ -222,7 +222,7 @@ symbolIconStyle?: SymbolGlyphModifier
 
 Set the symbol resource.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
 
 **Since:** 26.0.0
 
@@ -242,7 +242,7 @@ symbolSelectedIconStyle?: SymbolGlyphModifier
 
 Set selected symbol resource.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
 
 **Since:** 26.0.0
 

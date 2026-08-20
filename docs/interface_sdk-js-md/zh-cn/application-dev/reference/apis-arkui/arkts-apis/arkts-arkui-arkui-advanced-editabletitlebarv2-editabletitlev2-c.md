@@ -36,7 +36,7 @@ EditableTitleV2的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [EditableTitleV2Options](../../apis-na/arkts-apis/arkts-na-arkui-advanced-editabletitlebarv2-editabletitlev2options-i.md) | 否 | 标题配置选项。 |
+| options | [EditableTitleV2Options](../../apis-default/arkts-apis/arkts-arkui-advanced-editabletitlebarv2-editabletitlev2options-i.md) | 否 | 标题配置选项。 |
 
 ## mainTitle
 
@@ -45,7 +45,9 @@ EditableTitleV2的构造函数。
   public mainTitle: ResourceStr
 ```
 
-主标题内容。 默认值：''，表示标题内容为空。
+主标题内容。
+
+默认值：''，表示标题内容为空。
 
 **类型：** ResourceStr
 

@@ -20,7 +20,9 @@ import { ble } from '@kit.ConnectivityKit';
 close(): void
 ```
 
-Disables a BLE peripheral device. This method unregisters the device and clears the registered callbacks and handles.
+Disables a BLE peripheral device.
+
+This method unregisters the device and clears the registered callbacks and handles.
 
 **Since:** 23
 
@@ -38,8 +40,8 @@ Disables a BLE peripheral device. This method unregisters the device and clears 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
@@ -62,7 +64,9 @@ try {
 connect(): void
 ```
 
-Connects to a BLE peripheral device. The 'BLEConnectionStateChange' event is subscribed to return the connection state.
+Connects to a BLE peripheral device.
+
+The 'BLEConnectionStateChange' event is subscribed to return the connection state.
 
 **Since:** 23
 
@@ -80,8 +84,8 @@ Connects to a BLE peripheral device. The 'BLEConnectionStateChange' event is sub
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
@@ -122,8 +126,8 @@ Disconnects from or stops an ongoing connection to a BLE peripheral device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
@@ -168,8 +172,8 @@ Get the connection status of a specific device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
@@ -216,9 +220,9 @@ Obtains the name of BLE peripheral device.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
@@ -276,9 +280,9 @@ Obtains the name of BLE peripheral device.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter.Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
@@ -336,12 +340,12 @@ Get the RSSI value of this BLE peripheral device.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 - 21 |
-| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900099 | Operation failed. |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
 
 **Examples**
 
@@ -390,12 +394,12 @@ Get the RSSI value of this BLE peripheral device.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 - 21 |
-| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900099 | Operation failed. |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
 
 **Examples**
 
@@ -442,9 +446,9 @@ Starts discovering services.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
@@ -511,9 +515,9 @@ Starts discovering services.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
@@ -568,8 +572,8 @@ Unsubscribe characteristic value changed event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## offBLEConnectionStateChange
 
@@ -597,8 +601,8 @@ Unsubscribe client connection state changed event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## offBLEMtuChange
 
@@ -628,8 +632,8 @@ Unsubscribe mtu changed event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## offBlePhyUpdate
 
@@ -659,8 +663,8 @@ Unsubscribe phy updated event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 **Examples**
 
@@ -704,8 +708,8 @@ Unsubscribe to GATT service changed event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## off('BLECharacteristicChange')
 
@@ -738,9 +742,9 @@ Unsubscribe characteristic value changed event.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 
@@ -785,9 +789,9 @@ Unsubscribe client connection state changed event.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 
@@ -832,9 +836,9 @@ Unsubscribe mtu changed event.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 
@@ -877,8 +881,8 @@ Unsubscribe to GATT service changed event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 **Examples**
 
@@ -923,8 +927,8 @@ Subscribe characteristic value changed event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## onBLEConnectionStateChange
 
@@ -954,8 +958,8 @@ Subscribe client connection state changed event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## onBLEMtuChange
 
@@ -983,8 +987,8 @@ Subscribe mtu changed event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## onBlePhyUpdate
 
@@ -1014,8 +1018,8 @@ Subscribe phy updated event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 **Examples**
 
@@ -1059,8 +1063,8 @@ Subscribe to GATT service changed event. Receiving this event indicates that the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## on('BLECharacteristicChange')
 
@@ -1093,9 +1097,9 @@ Subscribe characteristic value changed event.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 
@@ -1145,9 +1149,9 @@ Subscribe client connection state changed event.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 
@@ -1196,9 +1200,9 @@ Subscribe mtu changed event.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 
@@ -1243,8 +1247,8 @@ Subscribe to GATT service changed event. Receiving this event indicates that the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 **Examples**
 
@@ -1294,18 +1298,18 @@ Reads the characteristic of a BLE peripheral device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2901004 | The connection is congested.<br>**Applicable version:** 20 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| 2900001 | Service stopped. |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
+| 2900099 | Operation failed. |
+| 2901000 | Read forbidden. |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
+| 2901004 | The connection is congested.<br>**Applicable version:** 20 and later |
 | 2901005 | The connection is not encrypted.<br>**Applicable version:** 20 and later |
 | 2901006 | The connection is not authenticated.<br>**Applicable version:** 20 and later |
 | 2901007 | The connection is not authorized.<br>**Applicable version:** 20 and later |
-| 2901000 | Read forbidden. |
-| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
-| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 2900001 | Service stopped. |
-| 2900099 | Operation failed. |
 
 **Examples**
 
@@ -1378,18 +1382,18 @@ Reads the characteristic of a BLE peripheral device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2901004 | The connection is congested.<br>**Applicable version:** 20 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| 2900001 | Service stopped. |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
+| 2900099 | Operation failed. |
+| 2901000 | Read forbidden. |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
+| 2901004 | The connection is congested.<br>**Applicable version:** 20 and later |
 | 2901005 | The connection is not encrypted.<br>**Applicable version:** 20 and later |
 | 2901006 | The connection is not authenticated.<br>**Applicable version:** 20 and later |
 | 2901007 | The connection is not authorized.<br>**Applicable version:** 20 and later |
-| 2901000 | Read forbidden. |
-| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
-| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 2900001 | Service stopped. |
-| 2900099 | Operation failed. |
 
 **Examples**
 
@@ -1448,18 +1452,18 @@ Reads the descriptor of a BLE peripheral device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2901004 | The connection is congested.<br>**Applicable version:** 20 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| 2900001 | Service stopped. |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
+| 2900099 | Operation failed. |
+| 2901000 | Read forbidden. |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
+| 2901004 | The connection is congested.<br>**Applicable version:** 20 and later |
 | 2901005 | The connection is not encrypted.<br>**Applicable version:** 20 and later |
 | 2901006 | The connection is not authenticated.<br>**Applicable version:** 20 and later |
 | 2901007 | The connection is not authorized.<br>**Applicable version:** 20 and later |
-| 2901000 | Read forbidden. |
-| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
-| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 2900001 | Service stopped. |
-| 2900099 | Operation failed. |
 
 **Examples**
 
@@ -1525,18 +1529,18 @@ Reads the descriptor of a BLE peripheral device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2901004 | The connection is congested.<br>**Applicable version:** 20 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| 2900001 | Service stopped. |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
+| 2900099 | Operation failed. |
+| 2901000 | Read forbidden. |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
+| 2901004 | The connection is congested.<br>**Applicable version:** 20 and later |
 | 2901005 | The connection is not encrypted.<br>**Applicable version:** 20 and later |
 | 2901006 | The connection is not authenticated.<br>**Applicable version:** 20 and later |
 | 2901007 | The connection is not authorized.<br>**Applicable version:** 20 and later |
-| 2901000 | Read forbidden. |
-| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
-| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 2900001 | Service stopped. |
-| 2900099 | Operation failed. |
 
 **Examples**
 
@@ -1587,11 +1591,11 @@ Read the phy associated with the connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 2901003 | The connection is not established. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
+| 2901003 | The connection is not established. |
 
 **Examples**
 
@@ -1642,11 +1646,11 @@ Asynchronous interface for setting the mtu size of a BLE peripheral device. The 
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 2900011 | The operation is busy. The last operation is not complete. |
-| 2901003 | The connection is not established. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900099 | Operation failed. |
+| 2901003 | The connection is not established. |
 
 ## setBLEMtuSize
 
@@ -1678,9 +1682,9 @@ Set the mtu size of a BLE peripheral device.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
@@ -1732,13 +1736,13 @@ Enables or disables indication of a characteristic when value changed.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
-| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900001 | Service stopped. |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
 | 2900099 | Operation failed. |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
 
 **Examples**
 
@@ -1807,13 +1811,13 @@ Enables or disables indication of a characteristic when value changed.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
-| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900001 | Service stopped. |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
 | 2900099 | Operation failed. |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
 
 **Examples**
 
@@ -1875,13 +1879,13 @@ Enables or disables notification of a characteristic when value changed.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
-| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900001 | Service stopped. |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
 | 2900099 | Operation failed. |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
 
 **Examples**
 
@@ -1950,13 +1954,13 @@ Enables or disables indication of a characteristic when value changed.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
-| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900001 | Service stopped. |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
 | 2900099 | Operation failed. |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
 
 **Examples**
 
@@ -2016,11 +2020,11 @@ Set the preferred phy associated with the connection. Whether the phy value will
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 2901003 | The connection is not established. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
+| 2901003 | The connection is not established. |
 
 **Examples**
 
@@ -2071,12 +2075,12 @@ Update the connection parameters of the current GATT link to save power or impro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 2901003 | The connection is not established. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
+| 2901003 | The connection is not established. |
 
 **Examples**
 
@@ -2126,18 +2130,18 @@ Writes the characteristic of a BLE peripheral device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2901004 | The connection is congested.<br>**Applicable version:** 20 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| 2900001 | Service stopped. |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
+| 2900099 | Operation failed. |
+| 2901001 | Write forbidden. |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
+| 2901004 | The connection is congested.<br>**Applicable version:** 20 and later |
 | 2901005 | The connection is not encrypted.<br>**Applicable version:** 20 and later |
 | 2901006 | The connection is not authenticated.<br>**Applicable version:** 20 and later |
 | 2901007 | The connection is not authorized.<br>**Applicable version:** 20 and later |
-| 2901001 | Write forbidden. |
-| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
-| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 2900001 | Service stopped. |
-| 2900099 | Operation failed. |
 
 **Examples**
 
@@ -2209,18 +2213,18 @@ Writes the characteristic of a BLE peripheral device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2901004 | The connection is congested.<br>**Applicable version:** 20 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| 2900001 | Service stopped. |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
+| 2900099 | Operation failed. |
+| 2901001 | Write forbidden. |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
+| 2901004 | The connection is congested.<br>**Applicable version:** 20 and later |
 | 2901005 | The connection is not encrypted.<br>**Applicable version:** 20 and later |
 | 2901006 | The connection is not authenticated.<br>**Applicable version:** 20 and later |
 | 2901007 | The connection is not authorized.<br>**Applicable version:** 20 and later |
-| 2901001 | Write forbidden. |
-| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
-| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 2900001 | Service stopped. |
-| 2900099 | Operation failed. |
 
 **Examples**
 
@@ -2280,18 +2284,18 @@ Writes the descriptor of a BLE peripheral device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2901004 | The connection is congested.<br>**Applicable version:** 20 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| 2900001 | Service stopped. |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
+| 2900099 | Operation failed. |
+| 2901001 | Write forbidden. |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
+| 2901004 | The connection is congested.<br>**Applicable version:** 20 and later |
 | 2901005 | The connection is not encrypted.<br>**Applicable version:** 20 and later |
 | 2901006 | The connection is not authenticated.<br>**Applicable version:** 20 and later |
 | 2901007 | The connection is not authorized.<br>**Applicable version:** 20 and later |
-| 2901001 | Write forbidden. |
-| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
-| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 2900001 | Service stopped. |
-| 2900099 | Operation failed. |
 
 **Examples**
 
@@ -2356,18 +2360,18 @@ Writes the descriptor of a BLE peripheral device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2901004 | The connection is congested.<br>**Applicable version:** 20 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| 2900001 | Service stopped. |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
+| 2900099 | Operation failed. |
+| 2901001 | Write forbidden. |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
+| 2901004 | The connection is congested.<br>**Applicable version:** 20 and later |
 | 2901005 | The connection is not encrypted.<br>**Applicable version:** 20 and later |
 | 2901006 | The connection is not authenticated.<br>**Applicable version:** 20 and later |
 | 2901007 | The connection is not authorized.<br>**Applicable version:** 20 and later |
-| 2901001 | Write forbidden. |
-| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
-| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 2900001 | Service stopped. |
-| 2900099 | Operation failed. |
 
 **Examples**
 

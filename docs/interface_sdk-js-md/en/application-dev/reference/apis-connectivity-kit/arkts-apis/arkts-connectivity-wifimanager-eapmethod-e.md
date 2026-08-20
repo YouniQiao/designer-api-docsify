@@ -1,6 +1,6 @@
 # EapMethod
 
-Wi-Fi EAP method.
+Wi-Fi EAP method. @enum { int }
 
 **Since:** 23
 

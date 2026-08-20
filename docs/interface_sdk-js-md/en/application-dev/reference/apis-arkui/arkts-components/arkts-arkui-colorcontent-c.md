@@ -20,7 +20,7 @@ import { imageGeneration } from '@kit.ArkUI';
 static readonly ORIGIN: ColorContent
 ```
 
-Resets the fillColor API, effectively the same as not setting fillColor.
+Resets the [fillColor](arkts-arkui-image-attribute.md#fillcolor) API, effectively the same as not setting [fillColor](arkts-arkui-image-attribute.md#fillcolor).
 
 **Type:** [ColorContent](arkts-arkui-colorcontent-c.md)
 

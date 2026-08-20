@@ -2,6 +2,8 @@
 
 Enumeration type of single selection mode
 
+@enum { number } SingleSelectionMode
+
 **Since:** 26.0.0
 
 <!--Device-photoAccessHelper-export enum SingleSelectionMode--><!--Device-photoAccessHelper-export enum SingleSelectionMode-End-->

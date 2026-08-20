@@ -1,6 +1,6 @@
-# ModelType(Defines 3D component)
+# ModelType
 
-The enum of model type
+The enum of model type @enum { number }
 
 **Since:** 12
 

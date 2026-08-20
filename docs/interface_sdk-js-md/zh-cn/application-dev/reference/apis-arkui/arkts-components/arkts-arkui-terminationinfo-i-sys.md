@@ -1,4 +1,4 @@
-# TerminationInfo(System API)（系统接口）
+# TerminationInfo（系统接口）
 
 用于表示被拉起的UIExtensionAbility通过调用terminateSelfWithResult或者terminateSelf正常退出时的返回结果。
 

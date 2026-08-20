@@ -1,6 +1,8 @@
 # RdbStore
 
-Provides APIs for managing data in an RDB store. Before using the APIs of this class, use [executeSql](#executesql) to initialize the database table structure and related data.
+Provides APIs for managing data in an RDB store.
+
+Before using the APIs of this class, use [executeSql](#executesql) to initialize the database table structure and related data.
 
 **Since:** 7
 
@@ -551,7 +553,12 @@ promise.then((rowId: BusinessError) => {
 obtainDistributedTableName(device: string, table: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the distributed table name of a remote device based on the local table name of the device. The distributed table name is required when the RDB store of a remote device is queried. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; The value of **device** can be obtained by <!--RP1--> &gt; [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) &gt; . <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system &gt; applications.
+Obtains the distributed table name of a remote device based on the local table name of the device. The distributed table name is required when the RDB store of a remote device is queried. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+
+> The value of **device** can be obtained by <!--RP1-->
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) &gt; . <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system &gt; applications.
 
 **Since:** 8
 
@@ -605,7 +612,12 @@ rdbStore.obtainDistributedTableName(deviceId, "EMPLOYEE", (err: BusinessError, t
 obtainDistributedTableName(device: string, table: string): Promise<string>
 ```
 
-Obtains the distributed table name of a remote device based on the local table name of the device. The distributed table name is required when the RDB store of a remote device is queried. This API uses a promise to return the result. &gt; **NOTE：**&gt; The value of **device** can be obtained by <!--RP1--> &gt; [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) &gt; . <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system &gt; applications.
+Obtains the distributed table name of a remote device based on the local table name of the device. The distributed table name is required when the RDB store of a remote device is queried. This API uses a promise to return the result.
+
+> **NOTE：**
+
+> The value of **device** can be obtained by <!--RP1-->
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) &gt; . <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system &gt; applications.
 
 **Since:** 8
 

@@ -1,6 +1,8 @@
 # Run
 
-文本排版单元，表示一段具有相同样式属性的连续文本片段。Run由[TextLine](arkts-arkgraphics2d-text-textline-c.md)类的[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns)接 口获取。 下列API示例中都需先使用[TextLine](arkts-arkgraphics2d-text-textline-c.md)类的[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns)接口获取Run对象实例，再通过此实例调 用对应方法。
+文本排版单元，表示一段具有相同样式属性的连续文本片段。Run由[TextLine](arkts-arkgraphics2d-text-textline-c.md)类的[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns)接 口获取。
+
+下列API示例中都需先使用[TextLine](arkts-arkgraphics2d-text-textline-c.md)类的[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns)接口获取Run对象实例，再通过此实例调 用对应方法。
 
 **起始版本：** 23
 
@@ -303,7 +305,16 @@ getGlyphs(range: Range): Array<int> | undefined
 getImageBounds(): common2D.Rect
 ```
 
-获取该排版单元的图像边界，图像边界与排版字体、排版字号、字符本身都有关，相当于视觉边界，例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，用户在界面上只能看到"a b"，图像边界即为不包括带行首和 末尾空格的边界。 &gt; **说明：** &gt; &gt; 示意图展示了字符串为" a b "的图像边界。 &gt; &gt;  &gt; &gt; 示意图展示了字符串为"j"或"E"的图像边界。 &gt; &gt; 
+获取该排版单元的图像边界，图像边界与排版字体、排版字号、字符本身都有关，相当于视觉边界，例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，用户在界面上只能看到"a b"，图像边界即为不包括带行首和 末尾空格的边界。
+
+> **说明：**
+> 
+> 示意图展示了字符串为" a b "的图像边界。
+> 
+>  &gt;
+> 示意图展示了字符串为"j"或"E"的图像边界。
+> 
+> 
 
 **起始版本：** 23
 
@@ -835,7 +846,17 @@ struct Index {
 getTypographicBounds(): TypographicBounds
 ```
 
-获取该排版单元的排版边界，排版边界与排版字体、排版字号有关，与字符本身无关，例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，排版边界就包括行首和末尾空格的边界。 &gt; **说明：** &gt; &gt; 示意图展示了字符串为" a b "的排版边界。 &gt; &gt;  &gt; &gt; 示意图展示了字符串为"j"或"E"的排版边界。 &gt; &gt; ! &gt; [TypographicBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds-Character.png)
+获取该排版单元的排版边界，排版边界与排版字体、排版字号有关，与字符本身无关，例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，排版边界就包括行首和末尾空格的边界。
+
+> **说明：**
+> 
+> 示意图展示了字符串为" a b "的排版边界。
+> 
+>  &gt;
+> 示意图展示了字符串为"j"或"E"的排版边界。
+> 
+> !
+> [TypographicBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds-Character.png)
 
 **起始版本：** 23
 

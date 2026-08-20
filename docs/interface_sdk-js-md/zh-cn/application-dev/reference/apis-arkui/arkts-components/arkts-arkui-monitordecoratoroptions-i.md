@@ -1,5 +1,7 @@
 # MonitorDecoratorOptions
 
+@Monitor装饰器的配置选项。
+
 **起始版本：** 26.0.0
 
 <!--Device-unnamed-declare interface MonitorDecoratorOptions--><!--Device-unnamed-declare interface MonitorDecoratorOptions-End-->

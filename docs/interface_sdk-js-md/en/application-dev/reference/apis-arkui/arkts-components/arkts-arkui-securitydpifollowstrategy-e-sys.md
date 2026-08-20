@@ -1,4 +1,4 @@
-# SecurityDpiFollowStrategy(System API) (System API)
+# SecurityDpiFollowStrategy (System API)
 
 Defines the enum of the resolution following strategy for **SecurityUIExtensionComponent**.
 

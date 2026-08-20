@@ -12,7 +12,9 @@ import { uiAppearance } from '@kit.ArkUI';
 function setFontScale(fontScale: number): Promise<void>
 ```
 
-Sets the system font scale. **Permission required**: ohos.permission.UPDATE_CONFIGURATION
+Sets the system font scale.
+
+**Permission required**: ohos.permission.UPDATE_CONFIGURATION
 
 **Since:** 12
 
@@ -40,10 +42,10 @@ Sets the system font scale. **Permission required**: ohos.permission.UPDATE_CONF
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
 
 **Examples**
 

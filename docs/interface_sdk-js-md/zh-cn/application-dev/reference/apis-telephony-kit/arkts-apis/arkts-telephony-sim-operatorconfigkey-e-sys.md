@@ -2,6 +2,8 @@
 
 Indicates the carrier configuration keys.
 
+@enum { string }
+
 **起始版本：** 23
 
 <!--Device-sim-export enum OperatorConfigKey--><!--Device-sim-export enum OperatorConfigKey-End-->

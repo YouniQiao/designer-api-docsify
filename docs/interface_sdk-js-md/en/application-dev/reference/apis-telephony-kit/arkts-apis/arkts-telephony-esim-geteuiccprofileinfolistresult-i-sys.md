@@ -2,6 +2,8 @@
 
 Result of all eUICC profile information.
 
+@interface GetEuiccProfileInfoListResult
+
 **Since:** 23
 
 <!--Device-eSIM-export interface GetEuiccProfileInfoListResult--><!--Device-eSIM-export interface GetEuiccProfileInfoListResult-End-->

@@ -30,7 +30,11 @@ Bundle name.
 isFloatingWindowMode: boolean
 ```
 
-Whether the application is in floating window mode. **true**: The application is in floating window mode. **false**: The application is not in floating window mode.
+Whether the application is in floating window mode.
+
+**true**: The application is in floating window mode.
+
+**false**: The application is not in floating window mode.
 
 **Type:** boolean
 
@@ -46,7 +50,11 @@ Whether the application is in floating window mode. **true**: The application is
 isSplitScreenMode: boolean
 ```
 
-Whether the application is in split-screen mode. **true**: The application is in split-screen mode. **false**: The application is not in split-screen mode.
+Whether the application is in split-screen mode.
+
+**true**: The application is in split-screen mode.
+
+**false**: The application is not in split-screen mode.
 
 **Type:** boolean
 
@@ -62,7 +70,19 @@ Whether the application is in split-screen mode. **true**: The application is in
 state: int
 ```
 
-Application state. **0**: The application is being initialized. **1**: The application has been initialized and is ready. **2**: The application is running in the foreground. **3**: The application is having the focus. (This state is reserved.) **4**: The application is running in the background. **5**: The application has exited.
+Application state.
+
+**0**: The application is being initialized.
+
+**1**: The application has been initialized and is ready.
+
+**2**: The application is running in the foreground.
+
+**3**: The application is having the focus. (This state is reserved.)
+
+**4**: The application is running in the background.
+
+**5**: The application has exited.
 
 **Type:** int
 

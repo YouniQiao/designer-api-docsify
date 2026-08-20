@@ -20,7 +20,9 @@ import { vibrator } from '@kit.SensorServiceKit';
 deviceId?: int
 ```
 
-设备ID。默认值：-1，表示本地设备。使用场景：在多设备场景下需指定远程设备时设置此参数；不填写时默认控制本地设备。从API version 19开始，设备ID可以使用 [getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md)或[on](arkts-sensorservice-vibrator-onvibratorstatechange-f.md)查询。 从API version 19开始，该接口支持在原子化服务中使用。
+设备ID。默认值：-1，表示本地设备。使用场景：在多设备场景下需指定远程设备时设置此参数；不填写时默认控制本地设备。从API version 19开始，设备ID可以使用 [getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md)或[on](arkts-sensorservice-vibrator-onvibratorstatechange-f.md)查询。
+
+从API version 19开始，该接口支持在原子化服务中使用。
 
 **类型：** int
 
@@ -56,7 +58,9 @@ id?: int
 usage: Usage
 ```
 
-马达振动的使用场景。默认值：'unknown'。取值范围只允许在[Usage](arkts-sensorservice-vibrator-usage-t.md)提供的类型中选取。不同usage值对应不同的系统振动开关管控规则，开发者需根据实际业务场景选择合适的 usage值。 从API version 11开始，该接口支持在原子化服务中使用。
+马达振动的使用场景。默认值：'unknown'。取值范围只允许在[Usage](arkts-sensorservice-vibrator-usage-t.md)提供的类型中选取。不同usage值对应不同的系统振动开关管控规则，开发者需根据实际业务场景选择合适的 usage值。
+
+从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** [Usage](arkts-sensorservice-vibrator-usage-t.md)
 

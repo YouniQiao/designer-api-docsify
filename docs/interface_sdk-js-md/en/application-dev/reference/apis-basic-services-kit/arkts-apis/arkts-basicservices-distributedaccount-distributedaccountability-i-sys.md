@@ -45,10 +45,10 @@ Obtains distributed information about an OS account. This API uses an asynchrono
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 **Examples**
 
@@ -107,10 +107,10 @@ Obtains distributed information about an OS account. This API uses a promise to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 **Examples**
 
@@ -161,13 +161,13 @@ Sets the distributed information for an OS account. This API uses an asynchronou
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted OS account. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account identified by localId or by distributedInfo not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid distributedInfo. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid distributedInfo. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account identified by localId or by distributedInfo not found. |
+| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted OS account. |
 | 12300406 | The distributed account information has already been bound to a sub-profile of the target OS account.<br>**Applicable version:** 26.0.0 and later |
 
 **Examples**
@@ -227,13 +227,13 @@ Sets the distributed information for an OS account. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted OS account. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account identified by localId or by distributedInfo not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid distributedInfo. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid distributedInfo. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account identified by localId or by distributedInfo not found. |
+| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted OS account. |
 | 12300406 | The distributed account information has already been bound to a sub-profile of the target OS account.<br>**Applicable version:** 26.0.0 and later |
 
 **Examples**

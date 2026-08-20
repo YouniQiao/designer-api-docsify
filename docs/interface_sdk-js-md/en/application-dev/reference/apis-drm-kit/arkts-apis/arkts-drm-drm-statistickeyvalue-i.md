@@ -1,4 +1,4 @@
-# StatisticKeyValue(Defines the DRM capability.)
+# StatisticKeyValue
 
 Defines a key-value pair for DRM metrics.
 

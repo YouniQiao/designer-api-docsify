@@ -41,7 +41,7 @@ Subscribes to agent-powered reminder state changes. This API uses a promise to r
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [1700007](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-invalid-parameter) | If the input parameter is not valid parameter. |
+| [1700007](../errorcode-reminderAgentManager.md#1700007-invalid-parameter) | If the input parameter is not valid parameter. |
 
 **Examples**
 

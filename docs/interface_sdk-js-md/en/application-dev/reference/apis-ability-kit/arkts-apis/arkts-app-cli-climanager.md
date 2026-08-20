@@ -2,6 +2,8 @@
 
 The module provides the capability to interact with cli tools in the system.
 
+@namespace cliManager
+
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.

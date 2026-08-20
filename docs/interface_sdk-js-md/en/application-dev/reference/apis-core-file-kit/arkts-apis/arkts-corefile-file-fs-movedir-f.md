@@ -14,7 +14,11 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 declare function moveDir(src: string, dest: string, mode?: number): Promise<void>
 ```
 
-Moves the source directory to the destination directory. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is not supported in a distributed directory.
+Moves the source directory to the destination directory. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is not supported in a distributed directory.
 
 **Since:** 10
 
@@ -40,25 +44,25 @@ Moves the source directory to the destination directory. This API uses a promise
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900016 | Cross-device link |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900028 | Too many links |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900032 | Directory not empty |
 | 13900001 | Operation not permitted |
-| 13900033 | Too many symbolic links encountered |
 | 13900002 | No such file or directory |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900014 | Device or resource busy |
 | 13900015 | File exists |
-| 13900008 | Bad file descriptor |
+| 13900016 | Cross-device link |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900028 | Too many links |
+| 13900032 | Directory not empty |
+| 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-| 13900011 | Out of memory |
 
 
 ## moveDir
@@ -87,24 +91,24 @@ Moves the source directory to the destination directory. This API uses an asynch
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900016 | Cross-device link |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900028 | Too many links |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900032 | Directory not empty |
 | 13900001 | Operation not permitted |
-| 13900033 | Too many symbolic links encountered |
 | 13900002 | No such file or directory |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900014 | Device or resource busy |
-| 13900008 | Bad file descriptor |
+| 13900016 | Cross-device link |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900028 | Too many links |
+| 13900032 | Directory not empty |
+| 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-| 13900011 | Out of memory |
 
 
 ## moveDir
@@ -113,7 +117,13 @@ Moves the source directory to the destination directory. This API uses an asynch
 declare function moveDir(src: string, dest: string, callback: AsyncCallback<void, Array<ConflictFiles>>): void
 ```
 
-Moves the source directory to the destination directory. This API uses an asynchronous callback to return the result. An exception will be thrown if a directory conflict occurs, that is, the destination directory contains a directory with the same name as the source directory. &gt; **NOTE：**&gt; &gt; This API is not supported in a distributed directory.
+Moves the source directory to the destination directory. This API uses an asynchronous callback to return the result.
+
+An exception will be thrown if a directory conflict occurs, that is, the destination directory contains a directory with the same name as the source directory.
+
+> **NOTE：**
+> 
+> This API is not supported in a distributed directory.
 
 **Since:** 10
 
@@ -163,24 +173,24 @@ Moves the source directory to the destination directory. You can set the move mo
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900016 | Cross-device link |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900028 | Too many links |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900032 | Directory not empty |
 | 13900001 | Operation not permitted |
-| 13900033 | Too many symbolic links encountered |
 | 13900002 | No such file or directory |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900014 | Device or resource busy |
-| 13900008 | Bad file descriptor |
+| 13900016 | Cross-device link |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900028 | Too many links |
+| 13900032 | Directory not empty |
+| 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-| 13900011 | Out of memory |
 
 
 ## moveDir
@@ -189,7 +199,11 @@ Moves the source directory to the destination directory. You can set the move mo
 declare function moveDir(src: string, dest: string, mode: number, callback: AsyncCallback<void, Array<ConflictFiles>>): void
 ```
 
-Moves the source directory to the destination directory. You can set the move mode. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is not supported in a distributed directory.
+Moves the source directory to the destination directory. You can set the move mode. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is not supported in a distributed directory.
 
 **Since:** 10
 

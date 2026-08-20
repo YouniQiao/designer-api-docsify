@@ -1,4 +1,4 @@
-# OfflineMediaKeyStatus(Defines the DRM capability.)
+# OfflineMediaKeyStatus
 
 枚举，离线媒体密钥状态。
 

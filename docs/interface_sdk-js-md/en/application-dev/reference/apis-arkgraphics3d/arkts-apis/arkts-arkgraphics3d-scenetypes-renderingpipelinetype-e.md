@@ -2,6 +2,8 @@
 
 Enumerates the rendering pipeline types.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-unnamed-export enum RenderingPipelineType--><!--Device-unnamed-export enum RenderingPipelineType-End-->

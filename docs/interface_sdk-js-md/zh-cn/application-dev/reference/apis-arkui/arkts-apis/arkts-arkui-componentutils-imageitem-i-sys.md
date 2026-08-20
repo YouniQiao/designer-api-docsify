@@ -2,6 +2,8 @@
 
 Image object with layout information.
 
+@interface ImageItem
+
 **起始版本：** 23
 
 **ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。

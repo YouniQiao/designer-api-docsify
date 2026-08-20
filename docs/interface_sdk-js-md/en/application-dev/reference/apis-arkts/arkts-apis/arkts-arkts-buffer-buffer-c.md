@@ -2968,7 +2968,7 @@ console.info("result = " + result);
 buffer: ArrayBuffer
 ```
 
-**ArrayBuffer** object.
+*ArrayBuffer** object.
 
 **Type:** ArrayBuffer
 

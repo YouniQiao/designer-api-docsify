@@ -14,7 +14,11 @@ import { window } from '@kit.ArkUI';
 function createWindow(config: Configuration, callback: AsyncCallback<Window>): void
 ```
 
-Creates a child window or system window. This API uses an asynchronous callback to return the result. In non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, the child window created uses an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) by default. In freeform window mode, the child window created uses an immersive layout when [decorEnabled](arkts-arkui-window-configuration-i.md) is set to **false**, and it uses a non-immersive layout when this parameter is set to **true**.
+Creates a child window or system window. This API uses an asynchronous callback to return the result.
+
+In non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, the child window created uses an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) by default.
+
+In freeform window mode, the child window created uses an immersive layout when [decorEnabled](arkts-arkui-window-configuration-i.md) is set to **false**, and it uses a non-immersive layout when this parameter is set to **true**.
 
 **Since:** 23
 
@@ -38,15 +42,15 @@ Creates a child window or system window. This API uses an asynchronous callback 
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.createWindow cannot work correctly due to limited device capabilities.<br>**Applicable version:** 12 and later |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: Invalid parent window type, parent window cannot be a subWindow.<br>**Applicable version:** 12 and later |
 | [1300001](../errorcode-window.md#1300001-repeated-operation) | Repeated operation. Possible cause: The window has been created and cannot be created again. |
-| [1300006](../errorcode-window.md#1300006-abnormal-window-context) | This window context is abnormal. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: Invalid parent window type, parent window cannot be a subWindow.<br>**Applicable version:** 12 and later |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: The window type in the configuration is invalid.<br>**Applicable version:** 12 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [1300009](../errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. |
+| [1300006](../errorcode-window.md#1300006-abnormal-window-context) | This window context is abnormal. |
 | [1300008](../errorcode-window.md#1300008-display-device-exception) | The display device is abnormal.<br>**Applicable version:** 9 - 16 |
+| [1300009](../errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. |
 
 **Examples**
 
@@ -88,7 +92,11 @@ export default class EntryAbility extends UIAbility {
 function createWindow(config: Configuration): Promise<Window>
 ```
 
-Creates a child window or system window. This API uses a promise to return the result. In non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, the child window created uses an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) by default. In freeform window mode, the child window created uses an immersive layout when [decorEnabled](arkts-arkui-window-configuration-i.md) is set to **false**, and it uses a non-immersive layout when this parameter is set to **true**.
+Creates a child window or system window. This API uses a promise to return the result.
+
+In non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, the child window created uses an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) by default.
+
+In freeform window mode, the child window created uses an immersive layout when [decorEnabled](arkts-arkui-window-configuration-i.md) is set to **false**, and it uses a non-immersive layout when this parameter is set to **true**.
 
 **Since:** 23
 
@@ -117,15 +125,15 @@ Creates a child window or system window. This API uses a promise to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.createWindow cannot work correctly due to limited device capabilities.<br>**Applicable version:** 12 and later |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: Invalid parent window type, parent window cannot be a subWindow.<br>**Applicable version:** 12 and later |
 | [1300001](../errorcode-window.md#1300001-repeated-operation) | Repeated operation. Possible cause: The window has been created and cannot be created again. |
-| [1300006](../errorcode-window.md#1300006-abnormal-window-context) | This window context is abnormal. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: Invalid parent window type, parent window cannot be a subWindow.<br>**Applicable version:** 12 and later |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: The window type in the configuration is invalid.<br>**Applicable version:** 12 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [1300009](../errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. |
+| [1300006](../errorcode-window.md#1300006-abnormal-window-context) | This window context is abnormal. |
 | [1300008](../errorcode-window.md#1300008-display-device-exception) | The display device is abnormal.<br>**Applicable version:** 9 - 16 |
+| [1300009](../errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. |
 
 **Examples**
 

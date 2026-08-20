@@ -2,6 +2,8 @@
 
 the property of OverlayManager.
 
+@interface OverlayManagerOptions
+
 **起始版本：** 15
 
 <!--Device-unnamed-export interface OverlayManagerOptions--><!--Device-unnamed-export interface OverlayManagerOptions-End-->

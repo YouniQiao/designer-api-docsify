@@ -19,7 +19,7 @@ Describes the configuration of the water flow item section.
 columnsGap?: Dimension
 ```
 
-Column gap of the section. If this parameter is not set, the columnsGap of the **WaterFlow** component is used by default. If an invalid value is set, 0 vp is used.
+Column gap of the section. If this parameter is not set, the [columnsGap](arkts-arkui-waterflow-attribute.md#columnsgap) of the **WaterFlow** component is used by default. If an invalid value is set, 0 vp is used.
 
 **Type:** Dimension
 
@@ -39,7 +39,11 @@ Column gap of the section. If this parameter is not set, the columnsGap of the *
 crossCount?: number
 ```
 
-Number of columns (in vertical layout) or rows (in horizontal layout). Default value: **1** If the value is less than 1, the default value is used.
+Number of columns (in vertical layout) or rows (in horizontal layout).
+
+Default value: **1**
+
+If the value is less than 1, the default value is used.
 
 **Type:** number
 
@@ -81,7 +85,13 @@ Number of **FlowItem** components in a section. The value must be a non-negative
 margin?: Margin | Dimension
 ```
 
-Margins of the section. A value of the **Length** type specifies the margins on all the four sides. Default value: **0** Unit: vp When **margin** is set to a percentage, the width of the **WaterFlow** component is used as the base value for the top, bottom, left, and right margins.
+Margins of the section. A value of the **Length** type specifies the margins on all the four sides.
+
+Default value: **0**
+
+Unit: vp
+
+When **margin** is set to a percentage, the width of the **WaterFlow** component is used as the base value for the top, bottom, left, and right margins.
 
 **Type:** Margin \| Dimension
 
@@ -103,7 +113,11 @@ Margins of the section. A value of the **Length** type specifies the margins on 
 onGetItemMainSizeByIndex?: GetItemMainSizeByIndex
 ```
 
-Callback used to obtain the main axis size, in vp, of the water flow item at a specified index during the layout process of the **WaterFlow** component. For a vertical **WaterFlow** component, this size refers to the height, and for a horizontal **WaterFlow** component, it refers to the width. **NOTE：**1. When both **onGetItemMainSizeByIndex** and the width or height attribute of **FlowItem** are used, the main-axis size is determined by the return value of **onGetItemMainSizeByIndex**, which will override the main-axis length of **FlowItem**. 2. Using **onGetItemMainSizeByIndex** can improve the efficiency of jumping to a specific position or index in the **WaterFlow** component. Avoid mixing the use of **onGetItemMainSizeByIndex** with sections that do not have it set, as this can cause layout exceptions. 3. If **onGetItemMainSizeByIndex** returns a negative number, the height of the water flow item is 0.
+Callback used to obtain the main axis size, in vp, of the water flow item at a specified index during the layout process of the **WaterFlow** component. For a vertical **WaterFlow** component, this size refers to the height, and for a horizontal **WaterFlow** component, it refers to the width.
+
+**NOTE：**
+
+1. When both **onGetItemMainSizeByIndex** and the width or height attribute of **FlowItem** are used, the main-axis size is determined by the return value of **onGetItemMainSizeByIndex**, which will override the main-axis length of **FlowItem**. 2. Using **onGetItemMainSizeByIndex** can improve the efficiency of jumping to a specific position or index in the **WaterFlow** component. Avoid mixing the use of **onGetItemMainSizeByIndex** with sections that do not have it set, as this can cause layout exceptions. 3. If **onGetItemMainSizeByIndex** returns a negative number, the height of the water flow item is 0.
 
 **Type:** [GetItemMainSizeByIndex](arkts-arkui-getitemmainsizebyindex-t.md)
 
@@ -123,7 +137,7 @@ Callback used to obtain the main axis size, in vp, of the water flow item at a s
 rowsGap?: Dimension
 ```
 
-Row gap of the section. If this parameter is not set, the rowsGap of the **WaterFlow** component is used by default. If an invalid value is set, 0 vp is used.
+Row gap of the section. If this parameter is not set, the [rowsGap](arkts-arkui-waterflow-attribute.md#rowsgap) of the **WaterFlow** component is used by default. If an invalid value is set, 0 vp is used.
 
 **Type:** Dimension
 

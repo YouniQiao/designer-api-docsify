@@ -12,7 +12,9 @@ import { errorManager } from '@kit.AbilityKit';
 function on(type: 'loopObserver', timeout: number, observer: LoopObserver): void
 ```
 
-Registers an observer for the message processing duration of the main thread. After the registration, the execution time of a message processed by the main thread of the application can be captured. This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
+Registers an observer for the message processing duration of the main thread. After the registration, the execution time of a message processed by the main thread of the application can be captured.
+
+This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
 
 **Since:** 12
 

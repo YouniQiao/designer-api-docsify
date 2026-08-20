@@ -142,7 +142,12 @@ Listens for image arrival events. This API uses an asynchronous callback to retu
 readLatestImage(callback: AsyncCallback<Image>): void
 ```
 
-Reads the latest image from the ImageReceiver instance. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be called to receive data only after the &gt; [on](#onimagearrival) callback is triggered. &gt; When the [Image](arkts-image-image-image-i.md) object returned by this API is no longer needed, call &gt; [release](arkts-image-image-image-i.md#release) to release the &gt; object. New data can be received only after the release.
+Reads the latest image from the ImageReceiver instance. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API can be called to receive data only after the &gt; [on](#onimagearrival) callback is triggered.
+> When the [Image](arkts-image-image-image-i.md) object returned by this API is no longer needed, call &gt; [release](arkts-image-image-image-i.md#release) to release the &gt; object. New data can be received only after the release.
 
 **Since:** 23
 
@@ -162,7 +167,12 @@ Reads the latest image from the ImageReceiver instance. This API uses an asynchr
 readLatestImage(): Promise<Image>
 ```
 
-Reads the latest image from the ImageReceiver instance. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called to receive data only after the &gt; [on](#onimagearrival) callback is triggered. &gt; When the [Image](arkts-image-image-image-i.md) object returned by this API is no longer needed, call &gt; [release](arkts-image-image-image-i.md#release) to release the &gt; object. New data can be received only after the release.
+Reads the latest image from the ImageReceiver instance. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API can be called to receive data only after the &gt; [on](#onimagearrival) callback is triggered.
+> When the [Image](arkts-image-image-image-i.md) object returned by this API is no longer needed, call &gt; [release](arkts-image-image-image-i.md#release) to release the &gt; object. New data can be received only after the release.
 
 **Since:** 23
 
@@ -182,7 +192,12 @@ Reads the latest image from the ImageReceiver instance. This API uses a promise 
 readNextImage(callback: AsyncCallback<Image>): void
 ```
 
-Reads the next image from the ImageReceiver instance. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be called to receive data only after the &gt; [on](#onimagearrival) callback is triggered. &gt; When the [Image](arkts-image-image-image-i.md) object returned by this API is no longer needed, call &gt; [release](arkts-image-image-image-i.md#release) to release the &gt; object. New data can be received only after the release.
+Reads the next image from the ImageReceiver instance. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API can be called to receive data only after the &gt; [on](#onimagearrival) callback is triggered.
+> When the [Image](arkts-image-image-image-i.md) object returned by this API is no longer needed, call &gt; [release](arkts-image-image-image-i.md#release) to release the &gt; object. New data can be received only after the release.
 
 **Since:** 23
 
@@ -202,7 +217,12 @@ Reads the next image from the ImageReceiver instance. This API uses an asynchron
 readNextImage(): Promise<Image>
 ```
 
-Reads the next image from the ImageReceiver instance. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called to receive data only after the &gt; [on](#onimagearrival) callback is triggered. &gt; When the [Image](arkts-image-image-image-i.md) object returned by this API is no longer needed, call &gt; [release](arkts-image-image-image-i.md#release) to release the &gt; object. New data can be received only after the release.
+Reads the next image from the ImageReceiver instance. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API can be called to receive data only after the &gt; [on](#onimagearrival) callback is triggered.
+> When the [Image](arkts-image-image-image-i.md) object returned by this API is no longer needed, call &gt; [release](arkts-image-image-image-i.md#release) to release the &gt; object. New data can be received only after the release.
 
 **Since:** 23
 
@@ -222,7 +242,11 @@ Reads the next image from the ImageReceiver instance. This API uses a promise to
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases this ImageReceiver instance. This API uses an asynchronous callback to return the result. Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this ImageReceiver instance. This API uses an asynchronous callback to return the result.
+
+Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call this API to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 23
 
@@ -242,7 +266,11 @@ Releases this ImageReceiver instance. This API uses an asynchronous callback to 
 release(): Promise<void>
 ```
 
-Releases this ImageReceiver instance. This API uses a promise to return the result. Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this ImageReceiver instance. This API uses a promise to return the result.
+
+Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call this API to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 23
 

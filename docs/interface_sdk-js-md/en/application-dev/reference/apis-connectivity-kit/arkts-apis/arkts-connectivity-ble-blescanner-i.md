@@ -42,8 +42,8 @@ Unsubscribe BLE scan result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 2900099 | Operation failed. |
 
 ## off('BLEDeviceFind')
@@ -77,9 +77,9 @@ Unsubscribe BLE scan result.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900099 | Operation failed. |
 
 **Examples**
@@ -127,8 +127,8 @@ Subscribe BLE scan result. If the application has ohos.permission.GET_BLUETOOTH_
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 2900099 | Operation failed. |
 
 ## on('BLEDeviceFind')
@@ -164,9 +164,9 @@ Subscribe BLE scan result. On API 26.0.0 and above, if the application has ohos.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed.<br>**Applicable version:** 15 - 24 |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900099 | Operation failed. |
 
 **Examples**
@@ -222,14 +222,14 @@ Starts scanning for specified BLE devices with filters.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 2900009 | Fails to start scan as it is out of hardware resources. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900001 | Service stopped. |
-| 2902050 | Failed to start scan as Ble scan is already started by the app. |
 | 2900003 | Bluetooth disabled. |
+| 2900009 | Fails to start scan as it is out of hardware resources. |
 | 2900099 | Operation failed. |
+| 2902050 | Failed to start scan as Ble scan is already started by the app. |
 
 **Examples**
 
@@ -298,13 +298,13 @@ Starts scanning for specified BLE devices with filters.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 2900009 | Fails to start scan as it is out of hardware resources. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 2900001 | Service stopped. |
-| 2902050 | Failed to start scan as Ble scan is already started by the app. |
 | 2900003 | Bluetooth disabled. |
+| 2900009 | Fails to start scan as it is out of hardware resources. |
 | 2900099 | Operation failed. |
+| 2902050 | Failed to start scan as Ble scan is already started by the app. |
 
 ## stopScan
 
@@ -336,8 +336,8 @@ Stops BLE scanning.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |

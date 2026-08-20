@@ -33,10 +33,10 @@ Changes the time when the file was last modified.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
 | 13900012 | Permission denied |
-| 13900042 | Unknown error |
+| 13900020 | Invalid argument |
 | 13900027 | Read-only file system |
+| 13900042 | Unknown error |
 

@@ -2,6 +2,8 @@
 
 Defines the selection options.
 
+@interface SelectionOptions
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare interface SelectionOptions--><!--Device-unnamed-declare interface SelectionOptions-End-->

@@ -1,4 +1,4 @@
-# USBPort(USB Manager)（系统接口）
+# USBPort（系统接口）
 
 USB设备端口。
 

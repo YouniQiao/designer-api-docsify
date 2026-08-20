@@ -1,4 +1,4 @@
-# IsolatedOptions(System API)（系统接口）
+# IsolatedOptions（系统接口）
 
 用于在IsolatedComponent构造时传递构造参数。
 

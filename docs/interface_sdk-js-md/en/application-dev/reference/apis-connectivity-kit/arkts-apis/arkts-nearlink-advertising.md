@@ -23,7 +23,7 @@ import { advertising } from '@kit.ConnectivityKit';
 | Name | Description |
 | --- | --- |
 | [offAdvertisingStateChange](arkts-connectivity-advertising-offadvertisingstatechange-f.md) | Unsubscribes from the advertising state change event. |
-| [onAdvertisingStateChange](arkts-connectivity-advertising-onadvertisingstatechange-f.md) | Subscribes to the advertising state change event. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. |
+| [onAdvertisingStateChange](arkts-connectivity-advertising-onadvertisingstatechange-f.md) | Subscribes to the advertising state change event. |
 | [startAdvertising](arkts-connectivity-advertising-startadvertising-f.md) | Starts advertising. |
 | [stopAdvertising](arkts-connectivity-advertising-stopadvertising-f.md) | Stops advertising with advertising ID. |
 

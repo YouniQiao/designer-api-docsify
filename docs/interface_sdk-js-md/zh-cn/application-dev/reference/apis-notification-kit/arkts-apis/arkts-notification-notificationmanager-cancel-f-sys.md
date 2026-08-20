@@ -12,7 +12,9 @@ import { notificationManager } from '@kit.NotificationKit';
 function cancel(representativeBundle: BundleOption, id: int): Promise<void>
 ```
 
-代理取消当前用户其他应用的通知。使用Promise异步回调。 需要当前应用与其他应用存在代理关系，或者当前应用有ohos.permission.NOTIFICATION_AGENT_CONTROLLER权限。
+代理取消当前用户其他应用的通知。使用Promise异步回调。
+
+需要当前应用与其他应用存在代理关系，或者当前应用有ohos.permission.NOTIFICATION_AGENT_CONTROLLER权限。
 
 **起始版本：** 23
 
@@ -39,14 +41,14 @@ function cancel(representativeBundle: BundleOption, id: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600017](../errorcode-notification.md#1600017-没有对应的代理关系配置) | There is no corresponding agent relationship configuration. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 | [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
+| [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
+| [1600017](../errorcode-notification.md#1600017-没有对应的代理关系配置) | There is no corresponding agent relationship configuration. |
 
 **示例**
 

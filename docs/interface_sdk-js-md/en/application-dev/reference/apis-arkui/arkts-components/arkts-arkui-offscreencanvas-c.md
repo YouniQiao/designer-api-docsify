@@ -1,6 +1,14 @@
 # OffscreenCanvas
 
-The **OffscreenCanvas** component is used to draw custom graphics. When the Canvas component or **CanvasRenderingContext2D** object is used, rendering, animation, and user interaction usually occur on the main thread of the application. Calculations related to canvas animation and rendering may affect application performance. **OffscreenCanvas** allows for rendering off the screen. This means that some tasks can be run in a separate thread to reduce the load on the main thread. &gt; **NOTE：**&gt; &gt; **OffscreenCanvas** cannot be used in ServiceExtensionAbility. It is recommended &gt; that you use the &gt; [drawing module](../../../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing.md) &gt; for offscreen drawing in ServiceExtensionAbility.
+The **OffscreenCanvas** component is used to draw custom graphics.
+
+When the Canvas component or **CanvasRenderingContext2D** object is used, rendering, animation, and user interaction usually occur on the main thread of the application. Calculations related to canvas animation and rendering may affect application performance. **OffscreenCanvas** allows for rendering off the screen. This means that some tasks can be run in a separate thread to reduce the load on the main thread.
+
+> **NOTE：**
+> 
+> **OffscreenCanvas** cannot be used in ServiceExtensionAbility. It is recommended &gt; that you use the &gt; [drawing module](../../../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing.md) &gt; for offscreen drawing in ServiceExtensionAbility.
+
+@extends CanvasRenderer [since 8 - 10]
 
 **Since:** 8
 
@@ -127,7 +135,9 @@ Creates an **ImageBitmap** object from the most recently rendered image of the o
 height: number
 ```
 
-Height of the offscreen canvas. Default unit: vp
+Height of the offscreen canvas.
+
+Default unit: vp
 
 **Type:** number
 
@@ -147,7 +157,9 @@ Height of the offscreen canvas. Default unit: vp
 width: number
 ```
 
-Width of the offscreen canvas. Default unit: vp
+Width of the offscreen canvas.
+
+Default unit: vp
 
 **Type:** number
 

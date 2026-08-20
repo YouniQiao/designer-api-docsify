@@ -2,6 +2,8 @@
 
 Target type.
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-mechanicManager-export enum TargetType--><!--Device-mechanicManager-export enum TargetType-End-->

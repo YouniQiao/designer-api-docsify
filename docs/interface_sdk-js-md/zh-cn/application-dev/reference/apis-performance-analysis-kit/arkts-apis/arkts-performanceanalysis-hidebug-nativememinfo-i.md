@@ -116,7 +116,7 @@ sharedDirty: bigint
 vss: bigint
 ```
 
-占用的虚拟内存大小(包括共享库所占用的内存)，以KB为单位，计算方式：/proc/{pid}/statm: size * 4。
+占用的虚拟内存大小(包括共享库所占用的内存)，以KB为单位，计算方式：/proc/{pid}/statm: size 4。
 
 **类型：** bigint
 

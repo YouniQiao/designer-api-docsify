@@ -1,6 +1,11 @@
 # AbilitySubType
 
-> **NOTE：**&gt; &gt; This API has been supported since API version 7 and deprecated since API version 9. No substitute is provided. Enumerates the ability subtypes.
+
+> **NOTE：**
+> 
+> This API has been supported since API version 7 and deprecated since API version 9. No substitute is provided.
+
+Enumerates the ability subtypes.
 
 **Since:** 7
 

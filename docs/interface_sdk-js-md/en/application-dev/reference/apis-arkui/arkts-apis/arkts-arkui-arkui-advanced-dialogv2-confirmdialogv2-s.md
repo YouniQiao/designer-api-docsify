@@ -2,6 +2,8 @@
 
 Declare CustomDialog ConfirmDialogV2
 
+@struct { ConfirmDialogV2 }
+
 **Since:** 18
 
 <!--Device-unnamed-export declare struct ConfirmDialogV2--><!--Device-unnamed-export declare struct ConfirmDialogV2-End-->

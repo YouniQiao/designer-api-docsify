@@ -39,14 +39,14 @@ Registers a specified external Provider. This API uses a promise to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | api is not supported. |
-| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
-| [12000020](../errorcode-huks.md#12000020-dependent-module-error) | an error occurred in the dependent module. |
-| [12000019](../errorcode-huks.md#12000019-provider-name-already-registered) | the provider is already registered. |
-| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | the ability name param is missing. |
-| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the input parameter is invalid. |
 | [201](../../errorcode-universal.md#201-permission-denied) | check permission failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | api is not supported. |
+| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | the ability name param is missing. |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
 | [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient. |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the input parameter is invalid. |
+| [12000019](../errorcode-huks.md#12000019-provider-name-already-registered) | the provider is already registered. |
+| [12000020](../errorcode-huks.md#12000020-dependent-module-error) | an error occurred in the dependent module. |
 | [12000025](../errorcode-huks.md#12000025-resource-limit-exceeded) | the number of providers exceeds the limit. |
 
 **Examples**

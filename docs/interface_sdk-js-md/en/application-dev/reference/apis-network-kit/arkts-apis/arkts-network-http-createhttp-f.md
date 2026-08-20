@@ -12,7 +12,11 @@ import { http } from '@kit.NetworkKit';
 function createHttp(): HttpRequest
 ```
 
-Creates an HTTP request. You can use this API to initiate or destroy an HTTP request, or enable or disable listening for HTTP Response Header events. To initiate multiple HTTP requests, you must create an **HttpRequest** object for each HTTP request. An **HttpRequest** object corresponds to an HTTP request. &gt; **NOTE：**&gt; &gt; When the request is no longer needed, call destroy() to release resources. Otherwise, memory leaks may occur.
+Creates an HTTP request. You can use this API to initiate or destroy an HTTP request, or enable or disable listening for HTTP Response Header events. To initiate multiple HTTP requests, you must create an **HttpRequest** object for each HTTP request. An **HttpRequest** object corresponds to an HTTP request.
+
+> **NOTE：**
+> 
+> When the request is no longer needed, call destroy() to release resources. Otherwise, memory leaks may occur.
 
 **Since:** 23
 

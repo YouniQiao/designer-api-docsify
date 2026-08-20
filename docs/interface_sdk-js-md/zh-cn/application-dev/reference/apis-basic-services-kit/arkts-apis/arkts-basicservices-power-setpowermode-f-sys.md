@@ -29,16 +29,16 @@ function setPowerMode(mode: DevicePowerMode, callback: AsyncCallback<void>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mode | [DevicePowerMode](arkts-basicservices-power-devicepowermode-e.md) | 是 | 电源模式。各模式含义请参见DevicePowerMode枚举说明。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置电源模式成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置电源模式成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Parameter verification failed. |
-| [4900301](../errorcode-power.md#4900301-电源模式设置失败) | Setting the power mode failed.<br>**适用版本：** 23+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Parameter verification failed. |
+| [4900301](../errorcode-power.md#4900301-电源模式设置失败) | Setting the power mode failed.<br>**适用版本：** 23+ |
 
 **示例**
 
@@ -101,10 +101,10 @@ function setPowerMode(mode: DevicePowerMode): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Parameter verification failed. |
-| [4900301](../errorcode-power.md#4900301-电源模式设置失败) | Setting the power mode failed.<br>**适用版本：** 23+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Parameter verification failed. |
+| [4900301](../errorcode-power.md#4900301-电源模式设置失败) | Setting the power mode failed.<br>**适用版本：** 23+ |
 
 **示例**
 

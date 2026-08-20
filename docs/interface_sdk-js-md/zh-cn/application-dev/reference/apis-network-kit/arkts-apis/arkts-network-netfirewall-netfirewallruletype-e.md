@@ -1,4 +1,4 @@
-# NetFirewallRuleType(网络防火墙)
+# NetFirewallRuleType
 
 枚举类型，防火墙规则类型，包含IP、Domain、DNS。
 

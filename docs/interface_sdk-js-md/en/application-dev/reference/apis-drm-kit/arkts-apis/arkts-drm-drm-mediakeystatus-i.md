@@ -1,4 +1,4 @@
-# MediaKeyStatus(Defines the DRM capability.)
+# MediaKeyStatus
 
 Defines a status attribute for a media key.
 

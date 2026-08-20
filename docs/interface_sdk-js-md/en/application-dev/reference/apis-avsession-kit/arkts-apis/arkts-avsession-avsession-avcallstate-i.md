@@ -2,6 +2,8 @@
 
 Used to indicate the call state of the current call.
 
+@interface AVCallState [since 11 - 11]
+
 **Since:** 23
 
 <!--Device-avSession-interface AVCallState--><!--Device-avSession-interface AVCallState-End-->

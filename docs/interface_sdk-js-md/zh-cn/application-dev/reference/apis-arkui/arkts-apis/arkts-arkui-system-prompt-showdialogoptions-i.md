@@ -1,4 +1,4 @@
-# ShowDialogOptions(弹窗)
+# ShowDialogOptions
 
 定义显示对话框的选项。
 

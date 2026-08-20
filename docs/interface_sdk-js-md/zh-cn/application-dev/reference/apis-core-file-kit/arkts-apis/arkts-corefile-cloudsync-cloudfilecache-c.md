@@ -39,13 +39,13 @@ cleanFileCache(uri: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
-| 13900002 | No such file or directory. |
-| 14000002 | Invalid URI. |
-| 13900012 | Permission denied by the file system |
 | 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900002 | No such file or directory. |
 | 13900010 | Try again. |
+| 13900012 | Permission denied by the file system |
+| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 14000002 | Invalid URI. |
+| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 **示例**
 
@@ -208,7 +208,7 @@ Unsubscribes from cloud file cache download progress event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | 否 | callback function with a `MultiDownloadProgress` argument. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | 否 | callback function with a `MultiDownloadProgress` argument. |
 
 **错误码：**
 
@@ -253,7 +253,7 @@ Unsubscribes from cloud file cache download progress event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | 否 | callback function with a `DownloadProgress` argument. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DownloadProgress&gt; | 否 | callback function with a `DownloadProgress` argument. |
 
 **错误码：**
 
@@ -298,7 +298,7 @@ off(event: 'batchDownload', callback?: Callback<MultiDownloadProgress>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'batchDownload' | 是 | 取消订阅的事件类型，取值为'batchDownload'，表示批量缓存过程事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | 否 | 回调函数。云文件批量缓存过程事件。如果填写此参数，将取消指定的回调函数；否则，将取消当前订阅的相同事件类型的所有回 调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | 否 | 回调函数。云文件批量缓存过程事件。如果填写此参数，将取消指定的回调函数；否则，将取消当前订阅的相同事件类型的所有回 调函数。 |
 
 **错误码：**
 
@@ -345,7 +345,7 @@ off(event: 'progress', callback?: Callback<DownloadProgress>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'progress' | 是 | 取消订阅的事件类型，取值为'progress'（同步过程事件）。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | 否 | 回调函数。云文件下载过程事件。若填写，将视为取消指定的回调函数；否则为取消当前订阅的所有回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DownloadProgress&gt; | 否 | 回调函数。云文件下载过程事件。若填写，将视为取消指定的回调函数；否则为取消当前订阅的所有回调函数。 |
 
 **错误码：**
 
@@ -392,7 +392,7 @@ Subscribes to a batch of cloud file cache download progress change event. This m
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | 是 | callback function with a `MultiDownloadProgress` argument. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | 是 | callback function with a `MultiDownloadProgress` argument. |
 
 **错误码：**
 
@@ -441,7 +441,7 @@ Subscribes to cloud file cache download progress change event. This method uses 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | 是 | callback function with a `DownloadProgress` argument. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DownloadProgress&gt; | 是 | callback function with a `DownloadProgress` argument. |
 
 **错误码：**
 
@@ -485,7 +485,7 @@ on(event: 'batchDownload', callback: Callback<MultiDownloadProgress>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'batchDownload' | 是 | 订阅的事件类型，取值为'batchDownload'，表示批量缓存过程事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | 是 | 回调函数。云文件批量缓存过程事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | 是 | 回调函数。云文件批量缓存过程事件。 |
 
 **错误码：**
 
@@ -536,7 +536,7 @@ on(event: 'progress', callback: Callback<DownloadProgress>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'progress' | 是 | 订阅的事件类型，取值为'progress'（下载过程事件）。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | 是 | 回调函数。云文件下载过程事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DownloadProgress&gt; | 是 | 回调函数。云文件下载过程事件。 |
 
 **错误码：**
 
@@ -594,10 +594,10 @@ start(uri: string): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
-| 13900002 | No such file or directory. |
-| 14000002 | Invalid uri. |
-| 13900025 | No space left on device. |
 | 13600001 | IPC error. |
+| 13900002 | No such file or directory. |
+| 13900025 | No space left on device. |
+| 14000002 | Invalid uri. |
 
 **示例**
 
@@ -669,17 +669,17 @@ start(uri: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 待下载文件uri。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。异步启动云文件下载。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。异步启动云文件下载。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
-| 13900002 | No such file or directory. |
-| 14000002 | Invalid uri. |
-| 13900025 | No space left on device. |
 | 13600001 | IPC error. |
+| 13900002 | No such file or directory. |
+| 13900025 | No space left on device. |
+| 14000002 | Invalid uri. |
 
 **示例**
 
@@ -726,7 +726,9 @@ fileCache.start(uri, (err: BusinessError<void> | null): void => {
 startBatch(uris: Array<string>, fileType?: DownloadFileType): Promise<long>
 ```
 
-启动云文件批量缓存。使用Promise异步回调。 不同的批量缓存任务可以通过接口返回的任务ID区分。
+启动云文件批量缓存。使用Promise异步回调。
+
+不同的批量缓存任务可以通过接口返回的任务ID区分。
 
 **起始版本：** 23
 
@@ -751,11 +753,11 @@ startBatch(uris: Array<string>, fileType?: DownloadFileType): Promise<long>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
-| 22400004 | Exceed the maximum limit. |
-| 14000002 | Invalid uri. |
 | 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 14000002 | Invalid uri. |
+| 22400004 | Exceed the maximum limit. |
+| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 **示例**
 
@@ -810,7 +812,9 @@ fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then<long>((do
 stop(uri: string, needClean?: boolean): Promise<void>
 ```
 
-Stops downloading a file from the Drive Kit to the local device. This API uses a promise to return the result. When **stop()** is called, the current file download process terminates, and downloaded files are retained by default. You can call **start()** to resume the download.
+Stops downloading a file from the Drive Kit to the local device. This API uses a promise to return the result.
+
+When **stop()** is called, the current file download process terminates, and downloaded files are retained by default. You can call **start()** to resume the download.
 
 **起始版本：** 23
 
@@ -836,9 +840,9 @@ Stops downloading a file from the Drive Kit to the local device. This API uses a
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
+| 13600001 | IPC error. |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
-| 13600001 | IPC error. |
 
 **示例**
 
@@ -881,7 +885,9 @@ fileCache.stop(uri, true).then<void>((): void => {
 stop(uri: string, callback: AsyncCallback<void>): void
 ```
 
-异步方法停止云盘文件缓存。使用callback异步回调。 调用stop接口，当前文件下载流程会终止，不删除缓存文件，再次调用start接口重新启动下载。
+异步方法停止云盘文件缓存。使用callback异步回调。
+
+调用stop接口，当前文件下载流程会终止，不删除缓存文件，再次调用start接口重新启动下载。
 
 **起始版本：** 23
 
@@ -894,16 +900,16 @@ stop(uri: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 待下载文件uri。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。异步停止云文件下载。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。异步停止云文件下载。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
+| 13600001 | IPC error. |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
-| 13600001 | IPC error. |
 
 **示例**
 
@@ -950,7 +956,9 @@ fileCache.stop(uri, (err: BusinessError<void> | null): void => {
 stopBatch(downloadId: long, needClean?: boolean): Promise<void>
 ```
 
-停止由[startBatch](#startbatch)启动的云文件批量缓存任务。使用Promise异步回调。 调用stopBatch接口会终止当前文件批量缓存流程，未下载完成的缓存文件是否删除由needClean参数决定。
+停止由[startBatch](#startbatch)启动的云文件批量缓存任务。使用Promise异步回调。
+
+调用stopBatch接口会终止当前文件批量缓存流程，未下载完成的缓存文件是否删除由needClean参数决定。
 
 **起始版本：** 23
 
@@ -975,9 +983,9 @@ stopBatch(downloadId: long, needClean?: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
 | 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
-| 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
 
 **示例**
 

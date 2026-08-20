@@ -1,6 +1,8 @@
 # PlayParameters
 
-Describes the playback parameters of the sound pool. These parameters are used to control the playback volume, number of loops, and priority.
+Describes the playback parameters of the sound pool.
+
+These parameters are used to control the playback volume, number of loops, and priority.
 
 **Since:** 23
 
@@ -14,7 +16,9 @@ Describes the playback parameters of the sound pool. These parameters are used t
 leftVolume?: double
 ```
 
-Volume of the left channel. The value range is [0.0, 1.0], and the default value is **1.0**. When the volume exceeds the boundary value, the boundary value is automatically used.
+Volume of the left channel. The value range is [0.0, 1.0], and the default value is **1.0**.
+
+When the volume exceeds the boundary value, the boundary value is automatically used.
 
 **Type:** double
 
@@ -30,7 +34,15 @@ Volume of the left channel. The value range is [0.0, 1.0], and the default value
 loop?: int
 ```
 
-Number of loops. If this parameter is set to a value greater than or equal to 0, the number of times the content is actually played is the value of **loop** plus 1. If this parameter is set to a value less than 0, the content is played repeatedly. The default value is **0**, indicating that the content is played only once. If this parameter is set to a floating-point number, only the integer part is used.
+Number of loops.
+
+If this parameter is set to a value greater than or equal to 0, the number of times the content is actually played is the value of **loop** plus 1.
+
+If this parameter is set to a value less than 0, the content is played repeatedly.
+
+The default value is **0**, indicating that the content is played only once.
+
+If this parameter is set to a floating-point number, only the integer part is used.
 
 **Type:** int
 
@@ -64,7 +76,11 @@ Pitch of the sound. The value ranges from 0.25 to 4.0 with a step size of 0.001.
 priority?: int
 ```
 
-Priority for playing an audio stream. The value **0** indicates the lowest priority. A larger value indicates a higher priority. The playback priority is determined by comparing the values. The value must be an integer greater than or equal to 0. The default value is **0**. If this parameter is set to a negative value, it is automatically set to 0. If this parameter is set to a floating point number, only the integer part is used.
+Priority for playing an audio stream. The value **0** indicates the lowest priority. A larger value indicates a higher priority.
+
+The playback priority is determined by comparing the values. The value must be an integer greater than or equal to 0. The default value is **0**.
+
+If this parameter is set to a negative value, it is automatically set to 0. If this parameter is set to a floating point number, only the integer part is used.
 
 **Type:** int
 
@@ -96,7 +112,9 @@ Playback rate. For details, see [AudioRendererRate](../../../reference/apis-audi
 rightVolume?: double
 ```
 
-Volume of the right channel. (Currently, the volume cannot be set separately for the left and right channels. The volume set for the left channel is used.) The value range is [0.0, 1.0], and the default value is **1.0**. When the volume exceeds the boundary value, the boundary value is automatically used.
+Volume of the right channel. (Currently, the volume cannot be set separately for the left and right channels. The volume set for the left channel is used.) The value range is [0.0, 1.0], and the default value is **1.0**.
+
+When the volume exceeds the boundary value, the boundary value is automatically used.
 
 **Type:** double
 

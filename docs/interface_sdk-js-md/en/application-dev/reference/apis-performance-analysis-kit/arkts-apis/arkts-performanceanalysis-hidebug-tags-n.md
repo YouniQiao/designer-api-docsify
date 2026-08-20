@@ -2,6 +2,8 @@
 
 Provide trace tags
 
+@namespace tags
+
 **Since:** 23
 
 <!--Device-hidebug-namespace tags--><!--Device-hidebug-namespace tags-End-->

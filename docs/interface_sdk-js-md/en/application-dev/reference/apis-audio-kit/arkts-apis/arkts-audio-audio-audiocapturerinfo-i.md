@@ -21,7 +21,9 @@ import { audioHaptic } from '@kit.AudioKit';
 capturerFlags: int
 ```
 
-Flags that control the capturer behavior. Set this parameter to **0**.
+Flags that control the capturer behavior.
+
+Set this parameter to **0**.
 
 **Type:** int
 

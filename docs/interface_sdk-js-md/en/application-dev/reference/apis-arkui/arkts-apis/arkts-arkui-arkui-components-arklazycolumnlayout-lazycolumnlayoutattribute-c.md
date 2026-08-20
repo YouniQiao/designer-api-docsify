@@ -2,6 +2,8 @@
 
 Defines the lazy column layout attribute.
 
+@extends CommonMethod&lt;LazyColumnLayoutAttribute&gt;
+
 **Inheritance/Implementation:** LazyColumnLayoutAttribute extends CommonMethod<LazyColumnLayoutAttribute>
 
 **Since:** 26.0.0
@@ -38,13 +40,13 @@ Sets the horizontal alignment of the row content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [HorizontalAlign](../../apis-na/arkts-apis/arkts-na-enums-horizontalalign-e.md) \| undefined | Yes | the horizontal alignment of the row content. <br>Default value HorizontalAlign.Center. |
+| value | [HorizontalAlign](../../apis-default/arkts-apis/arkts-enums-horizontalalign-e.md) \| undefined | Yes | the horizontal alignment of the row content. <br>Default value HorizontalAlign.Center. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+| [LazyColumnLayoutAttribute](../../apis-default/arkts-apis/arkts-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
 
 ## footer
 
@@ -68,13 +70,13 @@ Sets the footer of the lazy column layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | CustomBuilder \| undefined | Yes | The footer builder function <br>Passing undefined will remove the footer. |
+| builder | [CustomBuilder](../../apis-default/arkts-apis/arkts-custombuilder-t.md) \| undefined | Yes | The footer builder function <br>Passing undefined will remove the footer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+| [LazyColumnLayoutAttribute](../../apis-default/arkts-apis/arkts-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
 
 ## header
 
@@ -98,13 +100,13 @@ Sets the header of the lazy column layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | CustomBuilder \| undefined | Yes | The header builder function <br>Passing undefined will remove the header. |
+| builder | [CustomBuilder](../../apis-default/arkts-apis/arkts-custombuilder-t.md) \| undefined | Yes | The header builder function <br>Passing undefined will remove the header. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+| [LazyColumnLayoutAttribute](../../apis-default/arkts-apis/arkts-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
 
 ## onVisibleIndexesChange
 
@@ -128,13 +130,13 @@ Triggered when the index of child components in the visible area changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnVisibleIndexesChangeCallback](../../apis-na/arkts-apis/arkts-na-onvisibleindexeschangecallback-t.md) \| undefined | Yes | callback function, triggered when the index of child components in the visible area changes. <br>Passing undefined will unregister the callback. |
+| callback | [OnVisibleIndexesChangeCallback](../../apis-default/arkts-apis/arkts-onvisibleindexeschangecallback-t.md) \| undefined | Yes | callback function, triggered when the index of child components in the visible area changes. <br>Passing undefined will unregister the callback. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+| [LazyColumnLayoutAttribute](../../apis-default/arkts-apis/arkts-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
 
 ## space
 
@@ -158,13 +160,13 @@ The spacing between rows.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| space | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes | the spacing between rows. <br>Default value: 0. <br>Range: [0, +∞). |
+| space | [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) \| undefined | Yes | the spacing between rows. <br>Default value: 0. <br>Range: [0, +∞). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+| [LazyColumnLayoutAttribute](../../apis-default/arkts-apis/arkts-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
 
 ## sticky
 
@@ -188,11 +190,11 @@ Sets sticky style for header and footer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sticky | [StickyStyle](../../apis-na/arkts-apis/arkts-na-list-stickystyle-e.md) \| undefined | Yes | The sticky style for header and footer. |
+| sticky | [StickyStyle](../../apis-default/arkts-components/arkts-list-stickystyle-e.md) \| undefined | Yes | The sticky style for header and footer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+| [LazyColumnLayoutAttribute](../../apis-default/arkts-apis/arkts-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
 

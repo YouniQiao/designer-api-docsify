@@ -1,4 +1,4 @@
-# DataType(Sensitive Data Access Management Under Lock Screen)
+# DataType
 
 Enumerates the types of sensitive data that can be accessed under the lock screen.
 

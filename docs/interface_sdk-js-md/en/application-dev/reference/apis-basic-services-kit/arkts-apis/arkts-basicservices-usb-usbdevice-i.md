@@ -1,4 +1,4 @@
-# USBDevice(USB Manager)
+# USBDevice
 
 Represents the USB device information.
 

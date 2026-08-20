@@ -14,7 +14,11 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 declare function moveFile(src: string, dest: string, mode?: number): Promise<void>
 ```
 
-移动文件至目标路径，支持设置冲突处理模式。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 该接口不支持在分布式文件路径下操作。
+移动文件至目标路径，支持设置冲突处理模式。使用Promise异步回调。
+
+> **说明：**
+> 
+> 该接口不支持在分布式文件路径下操作。
 
 **起始版本：** 9
 
@@ -40,25 +44,25 @@ declare function moveFile(src: string, dest: string, mode?: number): Promise<voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900016 | Cross-device link |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900028 | Too many links |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900032 | Directory not empty |
 | 13900001 | Operation not permitted |
-| 13900033 | Too many symbolic links encountered |
 | 13900002 | No such file or directory |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900014 | Device or resource busy |
 | 13900015 | File exists |
-| 13900008 | Bad file descriptor |
+| 13900016 | Cross-device link |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900028 | Too many links |
+| 13900032 | Directory not empty |
+| 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-| 13900011 | Out of memory |
 
 
 ## moveFile
@@ -67,7 +71,11 @@ declare function moveFile(src: string, dest: string, mode?: number): Promise<voi
 declare function moveFile(src: string, dest: string, callback: AsyncCallback<void>): void
 ```
 
-移动文件。如果移动位置存在同名文件，将强制覆盖。使用callback异步回调。 &gt; **说明：** &gt; &gt; 该接口不支持在分布式文件路径下操作。
+移动文件。如果移动位置存在同名文件，将强制覆盖。使用callback异步回调。
+
+> **说明：**
+> 
+> 该接口不支持在分布式文件路径下操作。
 
 **起始版本：** 9
 
@@ -81,31 +89,31 @@ declare function moveFile(src: string, dest: string, callback: AsyncCallback<voi
 | --- | --- | --- | --- |
 | src | string | 是 | 源文件的应用沙箱路径。 |
 | dest | string | 是 | 目标文件的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当移动文件成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当移动文件成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900016 | Cross-device link |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900028 | Too many links |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900032 | Directory not empty |
 | 13900001 | Operation not permitted |
-| 13900033 | Too many symbolic links encountered |
 | 13900002 | No such file or directory |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900014 | Device or resource busy |
 | 13900015 | File exists |
-| 13900008 | Bad file descriptor |
+| 13900016 | Cross-device link |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900028 | Too many links |
+| 13900032 | Directory not empty |
+| 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-| 13900011 | Out of memory |
 
 
 ## moveFile
@@ -114,7 +122,11 @@ declare function moveFile(src: string, dest: string, callback: AsyncCallback<voi
 declare function moveFile(src: string, dest: string, mode: number, callback: AsyncCallback<void>): void
 ```
 
-移动文件至目标路径，支持设置冲突处理模式。使用callback异步回调。 &gt; **说明：** &gt; &gt; 该接口不支持在分布式文件路径下操作。
+移动文件至目标路径，支持设置冲突处理模式。使用callback异步回调。
+
+> **说明：**
+> 
+> 该接口不支持在分布式文件路径下操作。
 
 **起始版本：** 9
 
@@ -129,29 +141,29 @@ declare function moveFile(src: string, dest: string, mode: number, callback: Asy
 | src | string | 是 | 源文件的应用沙箱路径。 |
 | dest | string | 是 | 目标文件的应用沙箱路径。 |
 | mode | number | 是 | 移动模式。若mode为0，移动位置存在同名文件时，强制移动覆盖。若mode为1，移动位置存在同名文件时，抛出异常。默认为0。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当移动文件成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当移动文件成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900016 | Cross-device link |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900028 | Too many links |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900032 | Directory not empty |
 | 13900001 | Operation not permitted |
-| 13900033 | Too many symbolic links encountered |
 | 13900002 | No such file or directory |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900014 | Device or resource busy |
 | 13900015 | File exists |
-| 13900008 | Bad file descriptor |
+| 13900016 | Cross-device link |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900028 | Too many links |
+| 13900032 | Directory not empty |
+| 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-| 13900011 | Out of memory |
 

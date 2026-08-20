@@ -1,8 +1,12 @@
-# @arkts.collections
+# @arkts.collections(Defines the collections for ArkTS)
 
-The collections module provides ArkTS containers for efficient data transfer in concurrency scenarios. The ArkTS containers provide similar functionalities as their JavaScript counterparts, except that their properties cannot be added or updated through `.` or `[]`. By default, ArkTS containers are passed by reference between concurrent instances. This means that multiple concurrent instances can simultaneously operate the same container instance. Pass-by-copy is also supported. In this mode, each concurrent instance holds an ArkTS container instance. ArkTS containers are not thread-safe. They adopt the fail-fast approach. An exception is thrown if multiple concurrent instances make structural changes to a container instance at the same time. Therefore, in multi-thread read/write scenarios, you must use the ArkTS asynchronous lock to ensure secure access to the ArkTS containers. Currently, the following ArkTS containers are provided: [Array](../../apis-na/arkts-apis/arkts-collections.md), [Map](../../apis-na/arkts-apis/arkts-collections.md), [Set](../../apis-na/arkts-apis/arkts-collections.md), TypedArray ([Int8Array](../../apis-na/arkts-apis/arkts-collections.md), [Uint8Array](../../apis-na/arkts-apis/arkts-collections.md), [Int16Array](../../apis-na/arkts-apis/arkts-collections.md), [Uint16Array](../../apis-na/arkts-apis/arkts-collections.md), [Int32Array](../../apis-na/arkts-apis/arkts-collections.md), [Uint32Array](../../apis-na/arkts-apis/arkts-collections.md), [Uint8ClampedArray](../../apis-na/arkts-apis/arkts-collections.md) and [Float32Array](../../apis-na/arkts-apis/arkts-collections.md)), [ArrayBuffer](../../apis-na/arkts-apis/arkts-collections.md), [BitVector](../../apis-na/arkts-apis/arkts-collections.md), and [ConcatArray](../../apis-na/arkts-apis/arkts-collections.md). &gt; **NOTE：**&gt; &gt; - This module can be imported only to ArkTS files (with the file name extension .ets).
+ArkTS collections.
 
-**Since:** 12
+@namespace collections
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-declare namespace collections--><!--Device-unnamed-declare namespace collections-End-->
 
@@ -20,38 +24,5 @@ import { collections } from '@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [Array](arkts-arkts-collections-array-c.md) | A linear data structure that is implemented on arrays and can be passed between ArkTS concurrent instances. Pass-by-reference is recommended for better transfer performance. &gt; **NOTE：**&gt; &gt; - This module can be imported only to ArkTS files (with the file name extension .ets). &gt; This section uses the following to identify the use of generics: - T: type, which can be any of the [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types). **Decorator**: \@Sendable |
-| [ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md) | Underlying data structure of the ArkTS TypedArray ([Int8Array](../../apis-na/arkts-apis/arkts-collections.md), [Uint8Array](../../apis-na/arkts-apis/arkts-collections.md), [Int16Array](../../apis-na/arkts-apis/arkts-collections.md), [Uint16Array](../../apis-na/arkts-apis/arkts-collections.md), [Int32Array](../../apis-na/arkts-apis/arkts-collections.md), [Uint32Array](../../apis-na/arkts-apis/arkts-collections.md), [Uint8ClampedArray](../../apis-na/arkts-apis/arkts-collections.md), and [Float32Array](../../apis-na/arkts-apis/arkts-collections.md)). &gt; **NOTE：**&gt; &gt; - This module can be imported only to ArkTS files (with the file name extension .ets). &gt; **Decorator**: \@Sendable |
-| [BitVector](arkts-arkts-collections-bitvector-c.md) | A linear data structure that is implemented on arrays. A bit vector stores bit values and provides bit-level storage and processing. &gt; **NOTE：**&gt; &gt; - This module can be imported only to ArkTS files (with the file name extension .ets). &gt; **Decorator**: \@Sendable |
-| [Float32Array](arkts-arkts-collections-float32array-c.md) | A linear data structure that is implemented on [ArkTS ArrayBuffer](../../apis-na/arkts-apis/arkts-collections.md). &gt; **NOTE：**&gt; &gt; - This module can be imported only to ArkTS files (with the file name extension .ets). &gt; **Decorator**: \@Sendable |
-| [Int16Array](arkts-arkts-collections-int16array-c.md) | A linear data structure that is implemented on [ArkTS ArrayBuffer](../../apis-na/arkts-apis/arkts-collections.md). &gt; **NOTE：**&gt; &gt; - This module can be imported only to ArkTS files (with the file name extension .ets). &gt; **Decorator**: \@Sendable |
-| [Int32Array](arkts-arkts-collections-int32array-c.md) | A linear data structure that is implemented on [ArkTS ArrayBuffer](../../apis-na/arkts-apis/arkts-collections.md). &gt; **NOTE：**&gt; &gt; - This module can be imported only to ArkTS files (with the file name extension .ets). &gt; **Decorator**: \@Sendable |
-| [Int8Array](arkts-arkts-collections-int8array-c.md) | A linear data structure that is implemented on [ArkTS ArrayBuffer](../../apis-na/arkts-apis/arkts-collections.md). &gt; **NOTE：**&gt; &gt; - This module can be imported only to ArkTS files (with the file name extension .ets). &gt; **Decorator**: \@Sendable |
-| [Map](arkts-arkts-collections-map-c.md) | A non-linear data structure. &gt; **NOTE：**&gt; &gt; - This module can be imported only to ArkTS files (with the file name extension .ets). &gt; This section uses the following to identify the use of generics: - K: key. - V: value. The K and V types must be any of the [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types). **Decorator**: \@Sendable |
-| [Set](arkts-arkts-collections-set-c.md) | A non-linear data structure. &gt; **NOTE：**&gt; &gt; - This module can be imported only to ArkTS files (with the file name extension .ets). &gt; This section uses the following to identify the use of generics: - T: type, which can be any of the [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types). **Decorator**: \@Sendable |
-| [Uint16Array](arkts-arkts-collections-uint16array-c.md) | A linear data structure that is implemented on [ArkTS ArrayBuffer](../../apis-na/arkts-apis/arkts-collections.md). &gt; **NOTE：**&gt; &gt; - This module can be imported only to ArkTS files (with the file name extension .ets). &gt; **Decorator**: \@Sendable |
-| [Uint32Array](arkts-arkts-collections-uint32array-c.md) | A linear data structure that is implemented on [ArkTS ArrayBuffer](../../apis-na/arkts-apis/arkts-collections.md). &gt; **NOTE：**&gt; &gt; - This module can be imported only to ArkTS files (with the file name extension .ets). &gt; **Decorator**: \@Sendable |
-| [Uint8Array](arkts-arkts-collections-uint8array-c.md) | A linear data structure that is implemented on [ArkTS ArrayBuffer](../../apis-na/arkts-apis/arkts-collections.md). &gt; **NOTE：**&gt; &gt; - This module can be imported only to ArkTS files (with the file name extension .ets). &gt; **Decorator**: \@Sendable |
-| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | A linear data structure that is implemented on [ArkTS ArrayBuffer](../../apis-na/arkts-apis/arkts-collections.md). &gt; **NOTE：**&gt; &gt; - This module can be imported only to ArkTS files (with the file name extension .ets). &gt; **Decorator**: \@Sendable |
-
-### Interfaces
-
-| Name | Description |
-| --- | --- |
-| [ConcatArray](arkts-arkts-collections-concatarray-i.md) | An array-like object that can be concatenated. This API extends **ISendable**. &gt; **NOTE：**&gt; &gt; - This module can be imported only to ArkTS files (with the file name extension .ets). &gt; This section uses the following to identify the use of generics: - T: type, which can be any of the [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types). |
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [ArrayFromMapFn](arkts-arkts-collections-arrayfrommapfn-t.md) | Defines the ArkTS Array reduction function, which is used by the 'from' API of the Array class. |
-| [ArrayPredicateFn](arkts-arkts-collections-arraypredicatefn-t.md) | Defines the ArkTS Array reduction function, which is used by the 'some' and 'every' APIs of the Array class to determine whether array elements meet certain test conditions. |
-| [ArrayReduceCallback](arkts-arkts-collections-arrayreducecallback-t.md) | Defines the ArkTS Array reduction function, which is used by the 'reduceRight' API of the Array class. |
-| [ISendable](arkts-arkts-collections-isendable-t.md) | 'ISendable' is the parent type of all sendable types except null and undefined. It does not have any necessary methods or properties. |
-| [TypedArrayCompareFn](arkts-arkts-collections-typedarraycomparefn-t.md) | Describes the sort function of the ArkTS typed array. |
-| [TypedArrayForEachCallback](arkts-arkts-collections-typedarrayforeachcallback-t.md) | Describes the traversal function of the ArkTS typed array. |
-| [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md) | Describes the mapping function of the ArkTS typed array. |
-| [TypedArrayMapCallback](arkts-arkts-collections-typedarraymapcallback-t.md) | Describes the conversion mapping function of the ArkTS typed array. |
-| [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md) | Describes the assertion function of the ArkTS typed array. |
-| [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md) | Describes the reduce function of the ArkTS typed array. |
+| [BitVector(Defines the collections for ArkTS)](arkts-arkts-collections-bitvector-c.md) | An ordered collections of bit values, which are either 0 or 1. If multiple threads access a BitVector instance concurrently, and at least one of the threads modifies the array structurally, it must be synchronized externally. |
 

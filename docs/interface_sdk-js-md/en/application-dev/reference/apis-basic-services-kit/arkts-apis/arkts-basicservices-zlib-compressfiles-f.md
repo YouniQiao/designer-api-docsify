@@ -41,8 +41,8 @@ Compresses multiple specified files. This API uses a promise to return the resul
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [900001](../errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
-| [900002](../errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
+| [900001](../../apis-ability-kit/errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
+| [900002](../../apis-ability-kit/errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
 
 **Examples**
 

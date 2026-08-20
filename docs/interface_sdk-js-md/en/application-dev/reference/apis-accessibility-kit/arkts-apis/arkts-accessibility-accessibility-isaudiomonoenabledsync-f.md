@@ -16,7 +16,9 @@ import { GesturePoint } from '@kit.AccessibilityKit';
 function isAudioMonoEnabledSync(): boolean
 ```
 
-Checks whether mono audio mode is enabled. This API is the synchronous version of [accessibility.isAudioMonoEnabled](arkts-accessibility-accessibility-isaudiomonoenabled-f.md) ( asynchronous version). They have the same functionality. Use this API if you need to obtain the result immediately. Use the asynchronous version if you need to query in non-blocking scenarios.
+Checks whether mono audio mode is enabled.
+
+This API is the synchronous version of [accessibility.isAudioMonoEnabled](arkts-accessibility-accessibility-isaudiomonoenabled-f.md) ( asynchronous version). They have the same functionality. Use this API if you need to obtain the result immediately. Use the asynchronous version if you need to query in non-blocking scenarios.
 
 **Since:** 23
 

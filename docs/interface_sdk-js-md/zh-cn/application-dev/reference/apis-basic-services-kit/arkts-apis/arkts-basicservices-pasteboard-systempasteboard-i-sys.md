@@ -20,7 +20,9 @@ import { pasteboard } from '@kit.BasicServicesKit';
 removeAppShareOptions(): void
 ```
 
-删除应用全局的可粘贴的范围。适用于应用需要取消之前设置的粘贴范围限制，恢复剪贴板数据默认粘贴范围的场景。 - 与setAppShareOptions()方法（应用设置本应用剪贴板数据的可粘贴范围）配合使用。 - 删除的是通过setAppShareOptions()设置的分享范围。 - 必须在已设置分享范围的情况下才能调用。
+删除应用全局的可粘贴的范围。适用于应用需要取消之前设置的粘贴范围限制，恢复剪贴板数据默认粘贴范围的场景。
+
+- 与setAppShareOptions()方法（应用设置本应用剪贴板数据的可粘贴范围）配合使用。 - 删除的是通过setAppShareOptions()设置的分享范围。 - 必须在已设置分享范围的情况下才能调用。
 
 **起始版本：** 23
 
@@ -37,8 +39,8 @@ removeAppShareOptions(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 14+ |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12 - 13 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 14+ |
 
 **示例**
 
@@ -58,7 +60,9 @@ try {
 setAppShareOptions(shareOptions: ShareOption): void
 ```
 
-应用设置本应用剪贴板数据的可粘贴范围。适用于应用需要全局限制本应用产生的剪贴板数据的粘贴范围，如金融类应用需要保护用户敏感信息的场景。 - 与removeAppShareOptions()方法（删除应用全局的可粘贴的范围）配合使用。 - 需要删除已设置的分享范围时，调用removeAppShareOptions()。 - 在何处设置就在何处删除，确保分享范围设置和删除的一致性。
+应用设置本应用剪贴板数据的可粘贴范围。适用于应用需要全局限制本应用产生的剪贴板数据的粘贴范围，如金融类应用需要保护用户敏感信息的场景。
+
+- 与removeAppShareOptions()方法（删除应用全局的可粘贴的范围）配合使用。 - 需要删除已设置的分享范围时，调用removeAppShareOptions()。 - 在何处设置就在何处删除，确保分享范围设置和删除的一致性。
 
 **起始版本：** 23
 
@@ -81,10 +85,10 @@ setAppShareOptions(shareOptions: ShareOption): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12 - 13 |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [12900006](../errorcode-pasteboard.md#12900006-设置已存在) | Settings already exist. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 14+ |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12 - 13 |
 
 **示例**
 

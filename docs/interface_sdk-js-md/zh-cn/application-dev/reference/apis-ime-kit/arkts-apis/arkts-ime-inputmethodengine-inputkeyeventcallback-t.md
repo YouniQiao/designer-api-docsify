@@ -4,6 +4,8 @@
 export type InputKeyEventCallback = (event: InputKeyEvent) => boolean
 ```
 
+@brief 按键事件（keyEvent）的回调函数类型，用于定义keyEvent事件触发时执行的回调函数格式。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-export type InputKeyEventCallback = (event: InputKeyEvent) => boolean--><!--Device-inputMethodEngine-export type InputKeyEventCallback = (event: InputKeyEvent) => boolean-End-->

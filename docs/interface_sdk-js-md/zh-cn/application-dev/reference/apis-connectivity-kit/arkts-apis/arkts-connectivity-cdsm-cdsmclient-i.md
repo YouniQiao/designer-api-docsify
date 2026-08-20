@@ -42,9 +42,9 @@ getCdsmInfo(): CdsmInfo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
 | [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## offCdsmInfoChange
 
@@ -66,7 +66,7 @@ offCdsmInfoChange(callback?: Callback<CdsmInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | 否 | 用于监听合作设备集信息的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | 否 | 用于监听合作设备集信息的回调。 |
 
 ## onCdsmInfoChange
 
@@ -74,7 +74,9 @@ offCdsmInfoChange(callback?: Callback<CdsmInfo>): void
 onCdsmInfoChange(callback: Callback<CdsmInfo>): void
 ```
 
-订阅协作设备集信息变更事件。 只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。 如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。 回调返回真实设备地址，否则返回随机设备地址。
+订阅协作设备集信息变更事件。
+
+只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。 如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。 回调返回真实设备地址，否则返回随机设备地址。
 
 **起始版本：** 26.0.0
 
@@ -88,5 +90,5 @@ onCdsmInfoChange(callback: Callback<CdsmInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | 是 | 用于监听合作设备集信息的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | 是 | 用于监听合作设备集信息的回调。 |
 

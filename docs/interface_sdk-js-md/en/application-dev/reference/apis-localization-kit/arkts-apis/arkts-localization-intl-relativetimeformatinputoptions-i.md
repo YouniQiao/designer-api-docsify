@@ -24,7 +24,9 @@ import { intl } from '@kit.LocalizationKit';
 localeMatcher?: string
 ```
 
-Locale matching algorithm. The value can be **lookup** or **best fit**. The default value is **best fit**.
+Locale matching algorithm. The value can be **lookup** or **best fit**.
+
+The default value is **best fit**.
 
 **Type:** string
 
@@ -46,7 +48,11 @@ Locale matching algorithm. The value can be **lookup** or **best fit**. The defa
 numeric?: string
 ```
 
-Format of the output result. It determines whether numeric values are used to represent relative dates or times in the formatting result. The value can be **always** or **auto**. The default value is **always**. For details about their display effects, see Table 23.
+Format of the output result. It determines whether numeric values are used to represent relative dates or times in the formatting result. The value can be **always** or **auto**.
+
+The default value is **always**.
+
+For details about their display effects, see Table 23.
 
 **Type:** string
 
@@ -68,7 +74,9 @@ Format of the output result. It determines whether numeric values are used to re
 style?: string
 ```
 
-Length of an internationalized message. The value can be **long**, **short**, or **narrow**. The default value is **long**.
+Length of an internationalized message. The value can be **long**, **short**, or **narrow**.
+
+The default value is **long**.
 
 **Type:** string
 

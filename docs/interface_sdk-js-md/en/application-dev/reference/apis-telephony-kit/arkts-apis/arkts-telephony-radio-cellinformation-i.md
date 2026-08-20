@@ -2,6 +2,8 @@
 
 Obtains current cell information.
 
+@interface CellInformation
+
 **Since:** 23
 
 <!--Device-radio-export interface CellInformation--><!--Device-radio-export interface CellInformation-End-->
@@ -20,7 +22,9 @@ import { radio } from '@kit.TelephonyKit';
 networkType: NetworkType
 ```
 
-Obtains the network type of the serving cell. An application can call this method to determine the network type that the child class uses.
+Obtains the network type of the serving cell.
+
+An application can call this method to determine the network type that the child class uses.
 
 **Type:** NetworkType
 

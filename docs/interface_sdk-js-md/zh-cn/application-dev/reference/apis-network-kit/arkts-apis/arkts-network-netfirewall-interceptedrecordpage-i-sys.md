@@ -1,4 +1,4 @@
-# InterceptedRecordPage(网络防火墙)（系统接口）
+# InterceptedRecordPage（系统接口）
 
 拦截记录分页信息。
 

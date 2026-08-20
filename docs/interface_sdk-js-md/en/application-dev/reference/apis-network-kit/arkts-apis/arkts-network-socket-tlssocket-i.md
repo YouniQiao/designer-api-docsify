@@ -20,7 +20,12 @@ import { socket } from '@kit.NetworkKit';
 bind(address: NetAddress, callback: AsyncCallback<void>): void
 ```
 
-Binds the IP address and port number. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; If the **TLSSocket** object is upgraded from a **TCPSocket** object, you do not need to execute the **bind** &gt; API.
+Binds the IP address and port number. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> If the **TLSSocket** object is upgraded from a **TCPSocket** object, you do not need to execute the **bind**
+> API.
 
 **Since:** 9
 
@@ -42,9 +47,9 @@ Binds the IP address and port number. This API uses an asynchronous callback to 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [2303198](../errorcode-net-socket.md#2303198-network-address-already-in-use) | Address already in use. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
 
@@ -72,7 +77,12 @@ tls.bind(bindAddr, (err: BusinessError) => {
 bind(address: NetAddress): Promise<void>
 ```
 
-Binds the IP address and port number. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; If the **TLSSocket** object is upgraded from a **TCPSocket** object, you do not need to execute the **bind** &gt; API.
+Binds the IP address and port number. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> If the **TLSSocket** object is upgraded from a **TCPSocket** object, you do not need to execute the **bind**
+> API.
 
 **Since:** 9
 
@@ -99,9 +109,9 @@ Binds the IP address and port number. This API uses a promise to return the resu
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [2303198](../errorcode-net-socket.md#2303198-network-address-already-in-use) | Address already in use. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
 
@@ -146,10 +156,10 @@ Closes a **TLSSocket** connection. This API uses an asynchronous callback to ret
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
 | [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 **Examples**
 
@@ -192,10 +202,10 @@ Closes a **TLSSocket** connection. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
 | [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 **Examples**
 
@@ -236,29 +246,29 @@ Sets up a **TLSSocket** connection, and creates and initializes a TLS session af
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303104](../errorcode-net-socket.md#2303104-system-call-interrupted) | Interrupted system call. |
-| [2303111](../errorcode-net-socket.md#2303111-requested-resource-temporarily-unavailable) | Resource temporarily unavailable. Try again. |
-| [2303109](../errorcode-net-socket.md#2303109-error-file-number) | Bad file number. |
-| [2303210](../errorcode-net-socket.md#2303210-connection-timeout) | Connection timed out. |
-| [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
-| [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
-| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
-| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303191](../errorcode-net-socket.md#2303191-incorrect-socket-protocol-type) | Incorrect socket protocol type. |
-| [2301207](../errorcode-net-socket.md#2301207-invalid-user-name-or-password-for-socks5-authentication) | Socks5 username or password is invalid.<br>**Applicable version:** 18 and later |
-| [2301206](../errorcode-net-socket.md#2301206-failed-to-connect-to-the-proxy-server-via-socks5) | Socks5 failed to connect to the proxy server.<br>**Applicable version:** 18 and later |
+| [2303104](../errorcode-net-socket.md#2303104-system-call-interrupted) | Interrupted system call. |
+| [2303109](../errorcode-net-socket.md#2303109-error-file-number) | Bad file number. |
+| [2303111](../errorcode-net-socket.md#2303111-requested-resource-temporarily-unavailable) | Resource temporarily unavailable. Try again. |
 | [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
-| [2301211](../errorcode-net-socket.md#2301211-failed-to-receive-messages-via-socks5) | Socks5 failed to receive the message.<br>**Applicable version:** 18 and later |
-| [2301210](../errorcode-net-socket.md#2301210-failed-to-send-messages-via-socks5) | Socks5 failed to send the message.<br>**Applicable version:** 18 and later |
-| [2301209](../errorcode-net-socket.md#2301209-authentication-mode-negotiation-failed-for-socks5) | Socks5 failed to negotiate the authentication method.<br>**Applicable version:** 18 and later |
-| [2301208](../errorcode-net-socket.md#2301208-failed-to-connect-to-the-remote-server-via-socks5) | Socks5 failed to connect to the remote server.<br>**Applicable version:** 18 and later |
-| [2303199](../errorcode-net-socket.md#2303199-failed-to-assign-the-requested-address) | Cannot assign requested address. |
+| [2303191](../errorcode-net-socket.md#2303191-incorrect-socket-protocol-type) | Incorrect socket protocol type. |
 | [2303198](../errorcode-net-socket.md#2303198-network-address-already-in-use) | Address already in use. |
-| [2301213](../errorcode-net-socket.md#2301213-failed-to-deserialize-messages-for-socks5) | Socks5 deserialization error.<br>**Applicable version:** 18 and later |
+| [2303199](../errorcode-net-socket.md#2303199-failed-to-assign-the-requested-address) | Cannot assign requested address. |
+| [2303210](../errorcode-net-socket.md#2303210-connection-timeout) | Connection timed out. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
+| [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2301206](../errorcode-net-socket.md#2301206-failed-to-connect-to-the-proxy-server-via-socks5) | Socks5 failed to connect to the proxy server.<br>**Applicable version:** 18 and later |
+| [2301207](../errorcode-net-socket.md#2301207-invalid-user-name-or-password-for-socks5-authentication) | Socks5 username or password is invalid.<br>**Applicable version:** 18 and later |
+| [2301208](../errorcode-net-socket.md#2301208-failed-to-connect-to-the-remote-server-via-socks5) | Socks5 failed to connect to the remote server.<br>**Applicable version:** 18 and later |
+| [2301209](../errorcode-net-socket.md#2301209-authentication-mode-negotiation-failed-for-socks5) | Socks5 failed to negotiate the authentication method.<br>**Applicable version:** 18 and later |
+| [2301210](../errorcode-net-socket.md#2301210-failed-to-send-messages-via-socks5) | Socks5 failed to send the message.<br>**Applicable version:** 18 and later |
+| [2301211](../errorcode-net-socket.md#2301211-failed-to-receive-messages-via-socks5) | Socks5 failed to receive the message.<br>**Applicable version:** 18 and later |
 | [2301212](../errorcode-net-socket.md#2301212-failed-to-serialize-messages-for-socks5) | Socks5 serialization error.<br>**Applicable version:** 18 and later |
+| [2301213](../errorcode-net-socket.md#2301213-failed-to-deserialize-messages-for-socks5) | Socks5 deserialization error.<br>**Applicable version:** 18 and later |
 
 **Examples**
 
@@ -442,29 +452,29 @@ Sets up a **TLSSocket** connection, and creates and initializes a TLS session af
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303104](../errorcode-net-socket.md#2303104-system-call-interrupted) | Interrupted system call. |
-| [2303111](../errorcode-net-socket.md#2303111-requested-resource-temporarily-unavailable) | Resource temporarily unavailable. Try again. |
-| [2303109](../errorcode-net-socket.md#2303109-error-file-number) | Bad file number. |
-| [2303210](../errorcode-net-socket.md#2303210-connection-timeout) | Connection timed out. |
-| [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
-| [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
-| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
-| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303191](../errorcode-net-socket.md#2303191-incorrect-socket-protocol-type) | Incorrect socket protocol type. |
-| [2301207](../errorcode-net-socket.md#2301207-invalid-user-name-or-password-for-socks5-authentication) | Socks5 username or password is invalid.<br>**Applicable version:** 18 and later |
-| [2301206](../errorcode-net-socket.md#2301206-failed-to-connect-to-the-proxy-server-via-socks5) | Socks5 failed to connect to the proxy server.<br>**Applicable version:** 18 and later |
+| [2303104](../errorcode-net-socket.md#2303104-system-call-interrupted) | Interrupted system call. |
+| [2303109](../errorcode-net-socket.md#2303109-error-file-number) | Bad file number. |
+| [2303111](../errorcode-net-socket.md#2303111-requested-resource-temporarily-unavailable) | Resource temporarily unavailable. Try again. |
 | [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
-| [2301211](../errorcode-net-socket.md#2301211-failed-to-receive-messages-via-socks5) | Socks5 failed to receive the message.<br>**Applicable version:** 18 and later |
-| [2301210](../errorcode-net-socket.md#2301210-failed-to-send-messages-via-socks5) | Socks5 failed to send the message.<br>**Applicable version:** 18 and later |
-| [2301209](../errorcode-net-socket.md#2301209-authentication-mode-negotiation-failed-for-socks5) | Socks5 failed to negotiate the authentication method.<br>**Applicable version:** 18 and later |
-| [2301208](../errorcode-net-socket.md#2301208-failed-to-connect-to-the-remote-server-via-socks5) | Socks5 failed to connect to the remote server.<br>**Applicable version:** 18 and later |
-| [2303199](../errorcode-net-socket.md#2303199-failed-to-assign-the-requested-address) | Cannot assign requested address. |
+| [2303191](../errorcode-net-socket.md#2303191-incorrect-socket-protocol-type) | Incorrect socket protocol type. |
 | [2303198](../errorcode-net-socket.md#2303198-network-address-already-in-use) | Address already in use. |
-| [2301213](../errorcode-net-socket.md#2301213-failed-to-deserialize-messages-for-socks5) | Socks5 deserialization error.<br>**Applicable version:** 18 and later |
+| [2303199](../errorcode-net-socket.md#2303199-failed-to-assign-the-requested-address) | Cannot assign requested address. |
+| [2303210](../errorcode-net-socket.md#2303210-connection-timeout) | Connection timed out. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
+| [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2301206](../errorcode-net-socket.md#2301206-failed-to-connect-to-the-proxy-server-via-socks5) | Socks5 failed to connect to the proxy server.<br>**Applicable version:** 18 and later |
+| [2301207](../errorcode-net-socket.md#2301207-invalid-user-name-or-password-for-socks5-authentication) | Socks5 username or password is invalid.<br>**Applicable version:** 18 and later |
+| [2301208](../errorcode-net-socket.md#2301208-failed-to-connect-to-the-remote-server-via-socks5) | Socks5 failed to connect to the remote server.<br>**Applicable version:** 18 and later |
+| [2301209](../errorcode-net-socket.md#2301209-authentication-mode-negotiation-failed-for-socks5) | Socks5 failed to negotiate the authentication method.<br>**Applicable version:** 18 and later |
+| [2301210](../errorcode-net-socket.md#2301210-failed-to-send-messages-via-socks5) | Socks5 failed to send the message.<br>**Applicable version:** 18 and later |
+| [2301211](../errorcode-net-socket.md#2301211-failed-to-receive-messages-via-socks5) | Socks5 failed to receive the message.<br>**Applicable version:** 18 and later |
 | [2301212](../errorcode-net-socket.md#2301212-failed-to-serialize-messages-for-socks5) | Socks5 serialization error.<br>**Applicable version:** 18 and later |
+| [2301213](../errorcode-net-socket.md#2301213-failed-to-deserialize-messages-for-socks5) | Socks5 deserialization error.<br>**Applicable version:** 18 and later |
 
 **Examples**
 
@@ -650,9 +660,9 @@ Obtains the local digital certificate after a **TLSSocket** connection is establ
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303504](../errorcode-net-socket.md#2303504-x509-failed-to-look-up-the-x509-certificate) | An error occurred when verifying the X.509 certificate. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2303504](../errorcode-net-socket.md#2303504-x509-failed-to-look-up-the-x509-certificate) | An error occurred when verifying the X.509 certificate. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 ## getCertificate
 
@@ -678,9 +688,9 @@ Obtains the local digital certificate after a **TLSSocket** connection is establ
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303504](../errorcode-net-socket.md#2303504-x509-failed-to-look-up-the-x509-certificate) | An error occurred when verifying the X.509 certificate. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2303504](../errorcode-net-socket.md#2303504-x509-failed-to-look-up-the-x509-certificate) | An error occurred when verifying the X.509 certificate. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 ## getCipherSuite
 
@@ -706,10 +716,10 @@ Obtains the cipher suite negotiated by both communication parties after a **TLSS
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
 
@@ -751,10 +761,10 @@ Obtains the cipher suite negotiated by both communication parties after a **TLSS
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
 
@@ -776,7 +786,11 @@ tls.getCipherSuite().then((data: Array<string>) => {
 getLocalAddress(): Promise<NetAddress>
 ```
 
-Obtains the local socket address of a **TLSSocket** connection. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; Call this API only after the **TLSSocketServer** connection is successfully established.
+Obtains the local socket address of a **TLSSocket** connection. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> Call this API only after the **TLSSocketServer** connection is successfully established.
 
 **Since:** 12
 
@@ -836,9 +850,9 @@ Obtains the communication protocol version after a **TLSSocket** connection is e
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
 
@@ -880,9 +894,9 @@ Obtains the communication protocol version after a **TLSSocket** connection is e
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
 
@@ -922,8 +936,8 @@ Obtains the remote address of a TLS socket connection. This API uses an asynchro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
 
@@ -965,8 +979,8 @@ Obtains the remote address of a TLS socket connection. This API uses a promise t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
 
@@ -1006,8 +1020,8 @@ Obtains the digital certificate of the server after a **TLSSocket** connection i
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 ## getRemoteCertificate
 
@@ -1033,8 +1047,8 @@ Obtains the digital certificate of the server after a **TLSSocket** connection i
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 ## getSignatureAlgorithms
 
@@ -1060,8 +1074,8 @@ Obtains the signing algorithm negotiated by both communication parties after a *
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
 
@@ -1103,8 +1117,8 @@ Obtains the signing algorithm negotiated by both communication parties after a *
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
 
@@ -1126,7 +1140,13 @@ tls.getSignatureAlgorithms().then((data: Array<string>) => {
 getSocketFd(): Promise<int>
 ```
 
-Obtains the file descriptor of the **TLSSocket** object. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - This API can be called only after **bind** is successfully called. &gt; &gt; - The lifecycle of the file descriptor is managed by the system. The application can use the &gt; [close](#close) method to close the socket connection, &gt; instead of directly operating the file descriptor.
+Obtains the file descriptor of the **TLSSocket** object. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - This API can be called only after **bind** is successfully called.
+> 
+> - The lifecycle of the file descriptor is managed by the system. The application can use the &gt; [close](#close) method to close the socket connection, &gt; instead of directly operating the file descriptor.
 
 **Since:** 16
 
@@ -1186,8 +1206,8 @@ Obtains the status of the TLS socket connection. This API uses an asynchronous c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
 
@@ -1240,8 +1260,8 @@ Obtains the status of the TLS socket connection. This API uses a promise to retu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
 
@@ -1464,7 +1484,11 @@ tls.off('message', callback);
 on(type: 'connect' | 'close', callback: Callback<void>): void
 ```
 
-Subscribes to **connect** or **close** events of the **TLSSocket** object. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **bind** is successfully called.
+Subscribes to **connect** or **close** events of the **TLSSocket** object. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **bind** is successfully called.
 
 **Since:** 9
 
@@ -1517,7 +1541,11 @@ tls.bind(bindAddr, (err: BusinessError) => {
 on(type: 'connect' | 'close', callback: Callback<void>): void
 ```
 
-Subscribes to **connect** or **close** events of the **TLSSocket** object. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **bind** is successfully called.
+Subscribes to **connect** or **close** events of the **TLSSocket** object. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **bind** is successfully called.
 
 **Since:** 9
 
@@ -1570,7 +1598,11 @@ tls.bind(bindAddr, (err: BusinessError) => {
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to **error** events of the **TLSSocket** object. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **bind** is successfully called.
+Subscribes to **error** events of the **TLSSocket** object. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **bind** is successfully called.
 
 **Since:** 9
 
@@ -1620,7 +1652,11 @@ tls.bind(bindAddr, (err: BusinessError) => {
 on(type: 'message', callback: Callback<SocketMessageInfo>): void
 ```
 
-Subscribes to **message** events of the **TLSSocket** object. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **bind** is successfully called.
+Subscribes to **message** events of the **TLSSocket** object. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **bind** is successfully called.
 
 **Since:** 9
 
@@ -1698,11 +1734,11 @@ Sends a message to the server after a **TLSSocket** connection is established. T
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
 | [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
-| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 **Examples**
 
@@ -1751,11 +1787,11 @@ Sends a message to the server after a **TLSSocket** connection is established. T
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
 | [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
-| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 **Examples**
 
@@ -1797,8 +1833,8 @@ Sets other properties of the **TCPSocket** object after **bind** is successfully
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
 
@@ -1875,8 +1911,8 @@ Sets other properties of the **TCPSocket** object after **bind** is successfully
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
 

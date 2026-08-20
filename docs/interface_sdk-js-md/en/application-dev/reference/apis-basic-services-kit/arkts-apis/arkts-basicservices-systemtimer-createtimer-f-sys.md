@@ -12,7 +12,11 @@ import { systemTimer } from '@kit.BasicServicesKit';
 function createTimer(options: TimerOptions, callback: AsyncCallback<long>): void
 ```
 
-Creates a timer. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API must be used together with &gt; [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md). Otherwise &gt; , memory leakage occurs.
+Creates a timer. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API must be used together with &gt; [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md). Otherwise &gt; , memory leakage occurs.
 
 **Since:** 23
 
@@ -33,8 +37,8 @@ Creates a timer. This API uses an asynchronous callback to return the result. &g
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. <br> 3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. <br> 3. Parameter verification failed. |
 
 **Examples**
 
@@ -66,7 +70,11 @@ try {
 function createTimer(options: TimerOptions): Promise<long>
 ```
 
-Creates a timer. This API uses a promise to return the timer ID. &gt; **NOTE：**&gt; &gt; This API must be used together with &gt; [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md). Otherwise &gt; , memory leakage occurs.
+Creates a timer. This API uses a promise to return the timer ID.
+
+> **NOTE：**
+> 
+> This API must be used together with &gt; [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md). Otherwise &gt; , memory leakage occurs.
 
 **Since:** 23
 
@@ -92,8 +100,8 @@ Creates a timer. This API uses a promise to return the timer ID. &gt; **NOTE：*
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 **Examples**
 

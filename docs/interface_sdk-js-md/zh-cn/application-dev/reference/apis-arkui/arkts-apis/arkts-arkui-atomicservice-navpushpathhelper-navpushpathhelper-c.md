@@ -1,6 +1,10 @@
-# NavPushPathHelper(Defines provides a push method for the target page in the routing table.)
+# NavPushPathHelper
 
-当跳转的目标NavDestination在不同的hsp分包且未被主包依赖时，首次运行原子化服务只会下载安装主包。此时需要使用 NavPushPathHelper先下载安装相应hsp分包，再将指定的NavDestination页面信息入栈或替换当前栈顶页面，从 而使Navigation支持动态加载hsp分包后再跳转。 &gt; **说明：** &gt; &gt; 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+当跳转的目标NavDestination在不同的hsp分包且未被主包依赖时，首次运行原子化服务只会下载安装主包。此时需要使用 NavPushPathHelper先下载安装相应hsp分包，再将指定的NavDestination页面信息入栈或替换当前栈顶页面，从 而使Navigation支持动态加载hsp分包后再跳转。
+
+> **说明：**
+> 
+> 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **起始版本：** 12
 
@@ -70,11 +74,11 @@ pushDestination(moduleName: string, info: NavPathInfo, animated?: boolean): Prom
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
 | [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
+| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
 
 ## pushDestination
 
@@ -82,7 +86,9 @@ pushDestination(moduleName: string, info: NavPathInfo, animated?: boolean): Prom
 pushDestination(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-先判断分包是否存在，若不存在，则通过moduleName下载分包，再将info指定的NavDestination页面信息入栈，使 用Promise异步回调。 具体根据options中指定不同的LaunchMode，有不同的行为。
+先判断分包是否存在，若不存在，则通过moduleName下载分包，再将info指定的NavDestination页面信息入栈，使 用Promise异步回调。
+
+具体根据options中指定不同的LaunchMode，有不同的行为。
 
 **起始版本：** 12
 
@@ -110,11 +116,11 @@ pushDestination(moduleName: string, info: NavPathInfo, options?: NavigationOptio
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
 | [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
+| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
 
 ## pushDestinationByName
 
@@ -151,11 +157,11 @@ pushDestinationByName(moduleName: string, name: string, param: Object, animated?
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
 | [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
+| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
 
 ## pushDestinationByName
 
@@ -194,11 +200,11 @@ pushDestinationByName(moduleName: string, name: string, param: Object,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
 | [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
+| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
 
 ## pushPath
 
@@ -242,7 +248,9 @@ pushPath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<voi
 pushPath(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-先判断分包是否存在，若不存在，则通过moduleName下载分包，再将info指定的NavDestination页面信息入栈，使 用Promise异步回调。 具体根据options中指定的LaunchMode不同，执行不同的跳转行为。
+先判断分包是否存在，若不存在，则通过moduleName下载分包，再将info指定的NavDestination页面信息入栈，使 用Promise异步回调。
+
+具体根据options中指定的LaunchMode不同，执行不同的跳转行为。
 
 **起始版本：** 12
 
@@ -390,7 +398,9 @@ replacePath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<
 replacePath(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-先判断分包是否存在，若不存在，则通过moduleName下载分包，再将当前页面栈栈顶退出，将info指定的 NavDestination页面信息入栈，使用Promise异步回调。 具体根据options中指定不同的LaunchMode，有不同的行为。
+先判断分包是否存在，若不存在，则通过moduleName下载分包，再将当前页面栈栈顶退出，将info指定的 NavDestination页面信息入栈，使用Promise异步回调。
+
+具体根据options中指定不同的LaunchMode，有不同的行为。
 
 **起始版本：** 12
 

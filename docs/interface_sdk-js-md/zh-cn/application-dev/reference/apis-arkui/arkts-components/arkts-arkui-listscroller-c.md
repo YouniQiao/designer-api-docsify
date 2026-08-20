@@ -1,8 +1,15 @@
 # ListScroller
 
-List组件的滚动控制器，通过它控制List组件的滚动，仅支持一对一绑定到List组件。 &gt; **说明：** &gt; &gt; ListScroller继承自Scroller，具有Scroller的全部方法。
+List组件的滚动控制器，通过它控制List组件的滚动，仅支持一对一绑定到List组件。
 
-## 导入对象 ```ts listScroller: ListScroller = new ListScroller(); ```
+> **说明：**
+> 
+> ListScroller继承自Scroller，具有Scroller的全部方法。
+
+## 导入对象
+
+```ts
+listScroller: ListScroller = new ListScroller(); ```
 
 **继承/实现关系：** ListScroller extends Scroller
 

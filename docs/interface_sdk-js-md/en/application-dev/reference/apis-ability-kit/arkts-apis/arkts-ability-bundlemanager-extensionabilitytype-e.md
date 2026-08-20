@@ -1,6 +1,8 @@
 # ExtensionAbilityType
 
-Enumerates the types of ExtensionAbility components. <!--RP2--><!--RP2End-->
+Enumerates the types of ExtensionAbility components.
+
+<!--RP2--><!--RP2End-->
 
 **Since:** 23
 
@@ -440,7 +442,7 @@ SelectionExtensionAbility: provides extended capabilities for text selection pop
 WEB_NATIVE_MESSAGING = 32
 ```
 
-[WebNativeMessagingExtensionAbility](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md): provides extended capabilities for web native message communication.
+[WebNativeMessagingExtensionAbility](../../apis-default/arkts-apis/arkts-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md): provides extended capabilities for web native message communication.
 
 **Since:** 23
 

@@ -39,10 +39,10 @@ Creates a PixelMap object based on the ID of a Surface with transformation.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600305](../errorcode-image.md#7600305-创建pixelmap失败) | Failed to create the PixelMap. |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation, e.g. on cross-platform. |
 | [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get the data from Surface. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation, e.g. on cross-platform. |
 | [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. |
+| [7600305](../errorcode-image.md#7600305-创建pixelmap失败) | Failed to create the PixelMap. |
 
 **示例**
 

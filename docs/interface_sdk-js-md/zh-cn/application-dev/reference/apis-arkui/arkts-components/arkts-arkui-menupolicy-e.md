@@ -2,6 +2,8 @@
 
 Define the menu pop-up policy
 
+@enum { number }
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare enum MenuPolicy--><!--Device-unnamed-declare enum MenuPolicy-End-->

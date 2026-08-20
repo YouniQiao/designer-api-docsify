@@ -45,13 +45,13 @@ clearFileConflict(uri: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
-| 13900002 | No such file or directory. |
-| 14000002 | Invalid URI. |
-| 13900012 | Permission denied by the file system. |
 | 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900002 | No such file or directory. |
 | 13900010 | Try again. |
+| 13900012 | Permission denied by the file system. |
+| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 14000002 | Invalid URI. |
+| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 **示例**
 
@@ -149,7 +149,7 @@ downloadHistoryVersion(uri: string, versionId: string, callback: Callback<Versio
 | --- | --- | --- | --- |
 | uri | string | 是 | 文件的URI。 |
 | versionId | string | 是 | 文件某一版本的版本号，格式以接口 [gethistoryversionlist](#gethistoryversionlist)返回为准。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VersionDownloadProgress](arkts-corefile-cloudsync-versiondownloadprogress-i.md)&gt; | 是 | 回调函数，返回下载进度。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VersionDownloadProgress](arkts-corefile-cloudsync-versiondownloadprogress-i.md)&gt; | 是 | 回调函数，返回下载进度。 |
 
 **返回值：**
 
@@ -161,14 +161,14 @@ downloadHistoryVersion(uri: string, versionId: string, callback: Callback<Versio
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
 | 13900002 | No such file or directory. |
+| 13900010 | Try again. |
+| 13900012 | Permission denied by the file system. |
+| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | 14000002 | Invalid URI. |
 | 22400002 | Network unavailable. |
-| 13900012 | Permission denied by the file system. |
-| 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
-| 13900010 | Try again. |
+| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 ## getHistoryVersionList
 
@@ -176,7 +176,11 @@ downloadHistoryVersion(uri: string, versionId: string, callback: Callback<Versio
 getHistoryVersionList(uri: string, versionNumLimit: int): Promise<Array<HistoryVersion>>
 ```
 
-获取历史版本列表，返回内容按修改时间排序，修改时间越早，位置越靠后。使用Promise异步回调。 当云上版本数量小于传入的长度限制时，按照实际版本数量返回历史版本列表。 当云上版本数量大于等于传入的长度限制时，则返回最新的versionNumLimit个版本。
+获取历史版本列表，返回内容按修改时间排序，修改时间越早，位置越靠后。使用Promise异步回调。
+
+当云上版本数量小于传入的长度限制时，按照实际版本数量返回历史版本列表。
+
+当云上版本数量大于等于传入的长度限制时，则返回最新的versionNumLimit个版本。
 
 **起始版本：** 23
 
@@ -201,14 +205,14 @@ getHistoryVersionList(uri: string, versionNumLimit: int): Promise<Array<HistoryV
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
 | 13900002 | No such file or directory. |
+| 13900010 | Try again. |
+| 13900012 | Permission denied by the file system. |
+| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | 14000002 | Invalid URI. |
 | 22400002 | Network unavailable. |
-| 13900012 | Permission denied by the file system. |
-| 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
-| 13900010 | Try again. |
+| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 **示例**
 
@@ -258,7 +262,9 @@ fileVersion.getHistoryVersionList(uri, limit).then<Array<cloudSync.HistoryVersio
 isFileConflict(uri: string): Promise<boolean>
 ```
 
-获取本地文件版本冲突标志。使用Promise异步回调。此方法只有应用在配置手动解冲突后才会生效，否则默认自动解冲突，返回值为false，由同步流程自动完成解冲突； 当应用配置手动解冲突后，调用此方法会返回当前文件是否与云侧文件产生冲突，并且由应用提示用户对冲突进行处理，在冲突解决前不会再自动同步上云。当处理完冲突后，需要调用 [clearFileConflict](#clearfileconflict)方法来清除冲突标志，后续才会继续触发同步，与云端保持一致。
+获取本地文件版本冲突标志。使用Promise异步回调。此方法只有应用在配置手动解冲突后才会生效，否则默认自动解冲突，返回值为false，由同步流程自动完成解冲突；
+
+当应用配置手动解冲突后，调用此方法会返回当前文件是否与云侧文件产生冲突，并且由应用提示用户对冲突进行处理，在冲突解决前不会再自动同步上云。当处理完冲突后，需要调用 [clearFileConflict](#clearfileconflict)方法来清除冲突标志，后续才会继续触发同步，与云端保持一致。
 
 **起始版本：** 23
 
@@ -282,13 +288,13 @@ isFileConflict(uri: string): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
-| 13900002 | No such file or directory. |
-| 14000002 | Invalid URI. |
-| 13900012 | Permission denied by the file system. |
 | 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900002 | No such file or directory. |
 | 13900010 | Try again. |
+| 13900012 | Permission denied by the file system. |
+| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 14000002 | Invalid URI. |
+| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 **示例**
 
@@ -357,16 +363,16 @@ replaceFileWithHistoryVersion(originalUri: string, versionUri: string): Promise<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
-| 13900005 | I/O error. |
-| 22400007 | The version file specified to replace the original file does not exist. |
-| 13900002 | No such file or directory. |
-| 14000002 | Invalid URI. Possible causes: 1.originalUri invalid; 2.versionUri invalid. |
-| 13900012 | Permission denied by the file system. |
-| 13900008 | Bad file descriptor. |
 | 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900002 | No such file or directory. |
+| 13900005 | I/O error. |
+| 13900008 | Bad file descriptor. |
 | 13900010 | Try again. |
+| 13900012 | Permission denied by the file system. |
+| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 14000002 | Invalid URI. Possible causes: 1.originalUri invalid; 2.versionUri invalid. |
+| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 22400007 | The version file specified to replace the original file does not exist. |
 
 **示例**
 

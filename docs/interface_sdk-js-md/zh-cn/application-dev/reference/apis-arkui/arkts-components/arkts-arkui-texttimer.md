@@ -1,8 +1,12 @@
 # TextTimer
 
-TextTimer是通过文本显示计时信息并控制其计时器状态的组件，支持正向计时与倒计时两种模式，可自定义显示格式，适用于秒表、活动倒计时等需要展示时间流逝的场景。常用于倒计时场景，如考试倒计时、限时活动、运动计时等。 组件不可见（非锁屏状态和应用后台状态）时，UI时间变动将停止（即该组件此时不会绘制），onTimer仍然会正常触发。
+TextTimer是通过文本显示计时信息并控制其计时器状态的组件，支持正向计时与倒计时两种模式，可自定义显示格式，适用于秒表、活动倒计时等需要展示时间流逝的场景。常用于倒计时场景，如考试倒计时、限时活动、运动计时等。
 
-## 子组件 无
+组件不可见（非锁屏状态和应用后台状态）时，UI时间变动将停止（即该组件此时不会绘制），[onTimer](arkts-arkui-texttimer-attribute.md#ontimer)仍然会正常触发。
+
+## 子组件
+
+无
 
 ## TextTimer
 
@@ -34,6 +38,4 @@ TextTimer(options?: TextTimerOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [TextTimerConfiguration](arkts-arkui-texttimerconfiguration-i.md) | ContentModifier接口使用的TextTimer配置。 开发者需要自定义class实现ContentModifier接口。 |
-| [TextTimerOptions](arkts-arkui-texttimeroptions-i.md) | 用于构建TextTimer组件的选项。 |
 

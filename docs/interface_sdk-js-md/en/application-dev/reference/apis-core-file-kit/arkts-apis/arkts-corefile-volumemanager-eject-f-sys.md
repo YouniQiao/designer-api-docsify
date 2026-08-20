@@ -42,9 +42,9 @@ Ejects a volume. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13600027 | Eject operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| 13600002 | Not supported filesystem. |
 | 13600001 | IPC error. |
+| 13600002 | Not supported filesystem. |
+| 13600027 | Eject operation failed. |
 

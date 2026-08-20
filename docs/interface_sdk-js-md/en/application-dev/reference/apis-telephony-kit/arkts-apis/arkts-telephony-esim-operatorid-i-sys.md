@@ -2,6 +2,8 @@
 
 Information about the eUICC chip/device.
 
+@interface OperatorId
+
 **Since:** 23
 
 <!--Device-eSIM-export interface OperatorId--><!--Device-eSIM-export interface OperatorId-End-->

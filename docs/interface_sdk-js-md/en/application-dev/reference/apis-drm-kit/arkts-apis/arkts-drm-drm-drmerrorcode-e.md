@@ -1,4 +1,4 @@
-# DrmErrorCode(Defines the DRM capability.)
+# DrmErrorCode
 
 Enumerates the DRM error codes.
 

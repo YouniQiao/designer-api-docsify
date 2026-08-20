@@ -54,7 +54,7 @@ header?: Record<string, string>
 
 HTTP request header.
 
-**类型：** Record&lt;string, string&gt;
+**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string&gt;
 
 **起始版本：** 23
 

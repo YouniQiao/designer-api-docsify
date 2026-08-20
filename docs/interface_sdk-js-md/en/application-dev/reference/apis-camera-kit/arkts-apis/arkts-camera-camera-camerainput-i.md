@@ -1,6 +1,8 @@
 # CameraInput
 
-**CameraInput** defines the camera input object. It provides camera device information used in [Session](arkts-camera-camera-session-i.md).
+*CameraInput** defines the camera input object.
+
+It provides camera device information used in [Session](arkts-camera-camera-session-i.md).
 
 **Since:** 23
 
@@ -227,7 +229,11 @@ Subscribes to error events.
 on(type: 'error', camera: CameraDevice, callback: ErrorCallback): void
 ```
 
-Subscribes to CameraInput error events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to CameraInput error events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
@@ -271,9 +277,9 @@ Opens this camera device. This API uses an asynchronous callback to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 | [7400107](../errorcode-camera.md#7400107-camera-conflict) | Can not use camera cause of conflict. |
 | [7400108](../errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) | Camera disabled cause of security reason. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## open
 
@@ -302,9 +308,9 @@ Opens this camera device. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 | [7400107](../errorcode-camera.md#7400107-camera-conflict) | Can not use camera cause of conflict. |
 | [7400108](../errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) | Camera disabled cause of security reason. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## open
 
@@ -338,9 +344,9 @@ Opens this camera device. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 | [7400107](../errorcode-camera.md#7400107-camera-conflict) | Can not use camera cause of conflict. |
 | [7400108](../errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) | Camera disabled cause of security reason. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## open
 
@@ -375,9 +381,9 @@ Opens the camera with the specified concurrency type. This API uses a promise to
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 | [7400107](../errorcode-camera.md#7400107-camera-conflict) | Can not use camera cause of conflict. |
 | [7400108](../errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) | Camera disabled cause of security reason. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## usePhysicalCameraOrientation
 

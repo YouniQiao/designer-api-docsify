@@ -2,6 +2,8 @@
 
 Defines the font used for text.
 
+@interface Font
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare interface Font--><!--Device-unnamed-declare interface Font-End-->

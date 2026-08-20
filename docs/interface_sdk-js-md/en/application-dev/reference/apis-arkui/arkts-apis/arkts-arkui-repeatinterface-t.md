@@ -1,4 +1,4 @@
-# RepeatInterface(Defines Repeat component.)
+# RepeatInterface
 
 ```TypeScript
 declare type RepeatInterface = <T>(arr: RepeatArray<T>) => RepeatAttribute<T>
@@ -28,5 +28,5 @@ Indicates the type of Repeat.
 
 | Type | Description |
 | --- | --- |
-| RepeatAttribute&lt;T&gt; | - |
+| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; | - |
 

@@ -38,14 +38,14 @@ declare function lstatSync(path: string): Stat
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900038 | Value too large for defined data type |
-| 13900033 | Too many symbolic links encountered |
 | 13900002 | No such file or directory |
-| 13900018 | Not a directory |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
+| 13900018 | Not a directory |
 | 13900030 | File name too long |
-| 13900008 | Bad file descriptor |
+| 13900033 | Too many symbolic links encountered |
+| 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
-| 13900011 | Out of memory |
 

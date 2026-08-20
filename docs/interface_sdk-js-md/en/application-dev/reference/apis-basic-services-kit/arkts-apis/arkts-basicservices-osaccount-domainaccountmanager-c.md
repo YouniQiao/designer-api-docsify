@@ -47,11 +47,11 @@ Updates information of a domain account. This API uses a promise to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | The old account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | The new account info is invalid. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | The new account info is invalid. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | The old account not found. |
 | [12300004](../errorcode-account.md#12300004-account-already-exists) | The new account already exists. |
 
 **Examples**

@@ -25,7 +25,11 @@ addAccountImplicitly(
     ): void
 ```
 
-根据指定的鉴权类型和可选项，隐式地添加应用账号。使用callback异步回调。 &gt; **说明：** &gt; &gt; 从API version 8开始支持, 从API version 9开始废弃。建议使用[createAccountImplicitly](#createaccountimplicitly)替代。
+根据指定的鉴权类型和可选项，隐式地添加应用账号。使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持, 从API version 9开始废弃。建议使用[createAccountImplicitly](#createaccountimplicitly)替代。
 
 **起始版本：** 8
 
@@ -66,7 +70,7 @@ auth(name: string, authType: string, options: Record<string, Object>, callback: 
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | authType | string | 是 | 应用账号的鉴权类型。自定义数据，最大长度为1024个字符。 |
-| options | Record&lt;string, Object&gt; | 是 | 鉴权所需要的可选项。 |
+| options | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | 鉴权所需要的可选项。 |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
 
 ## auth
@@ -89,7 +93,7 @@ auth(name: string, authType: string, options: Record<string, RecordData>, callba
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | authType | string | 是 | 应用账号的鉴权类型。自定义数据，最大长度为1024个字符。 |
-| options | Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt; | 是 | 鉴权所需要的可选项。 |
+| options | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt; | 是 | 鉴权所需要的可选项。 |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
 
 ## authenticate
@@ -104,7 +108,11 @@ authenticate(
     ): void
 ```
 
-对应用账号进行鉴权，获取OAuth令牌。使用callback异步回调。 &gt; **说明：** &gt; &gt; 从API version 8开始支持, 从API version 9开始废弃。建议使用[auth](#auth)替代。
+对应用账号进行鉴权，获取OAuth令牌。使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持, 从API version 9开始废弃。建议使用[auth](#auth)替代。
 
 **起始版本：** 8
 

@@ -14,7 +14,13 @@ Defines the information required for triggering a WantAgent object. The informat
 userId?: int
 ```
 
-User ID. The value must be greater than or equal to 0. The default value is the user ID of the caller. This API can be used only in the stage model.
+User ID.
+
+The value must be greater than or equal to 0.
+
+The default value is the user ID of the caller.
+
+This API can be used only in the stage model.
 
 **Type:** int
 

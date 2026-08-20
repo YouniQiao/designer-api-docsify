@@ -17,7 +17,13 @@ function grantUriPermission(
   ): void
 ```
 
-Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs &gt; of another application. If the application does not have this permission, it can grant only its own URI &gt; permissions. &gt; &gt; - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
+Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs &gt; of another application. If the application does not have this permission, it can grant only its own URI &gt; permissions.
+> 
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
 
 **Since:** 10
 
@@ -42,14 +48,14 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 19 and later |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) | Invalid URI flag. |
 | [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
+| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 19 and later |
 
 **Examples**
 
@@ -89,7 +95,13 @@ function grantUriPermission(
   ): void
 ```
 
-Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs &gt; of another application. If the application does not have this permission, it can grant only its own URI &gt; permissions. &gt; &gt; - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
+Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs &gt; of another application. If the application does not have this permission, it can grant only its own URI &gt; permissions.
+> 
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
 
 **Since:** 23
 
@@ -116,13 +128,13 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Connect to system server failed. |
-| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Connect to system server failed. |
 | [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) | Invalid URI flag. |
 | [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
+| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
 
 
 ## grantUriPermission
@@ -131,7 +143,13 @@ Grants the URI permission to an application. If the call is successful, the appl
 function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string): Promise<number>
 ```
 
-Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs &gt; of another application. If the application does not have this permission, it can grant only its own URI &gt; permissions. &gt; &gt; - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
+Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs &gt; of another application. If the application does not have this permission, it can grant only its own URI &gt; permissions.
+> 
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
 
 **Since:** 10
 
@@ -161,14 +179,14 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 19 and later |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) | Invalid URI flag. |
 | [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
+| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 19 and later |
 
 **Examples**
 
@@ -203,7 +221,13 @@ uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_U
 function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string): Promise<void>
 ```
 
-Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs &gt; of another application. If the application does not have this permission, it can grant only its own URI &gt; permissions. &gt; &gt; - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
+Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs &gt; of another application. If the application does not have this permission, it can grant only its own URI &gt; permissions.
+> 
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
 
 **Since:** 23
 
@@ -233,13 +257,13 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Connect to system server failed. |
-| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Connect to system server failed. |
 | [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) | Invalid URI flag. |
 | [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
+| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
 
 
 ## grantUriPermission
@@ -248,7 +272,15 @@ Grants the URI permission to an application. If the call is successful, the appl
 function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string, appCloneIndex: int): Promise<void>
 ```
 
-Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs &gt; of another application. If the application does not have this permission, it can grant only its own URI &gt; permissions. &gt; &gt; - This API can be used to grant URI access permission to a cloned application. You need to specify the &gt; application bundle name and index of the cloned application. &gt; &gt; - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
+Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs &gt; of another application. If the application does not have this permission, it can grant only its own URI &gt; permissions.
+> 
+> - This API can be used to grant URI access permission to a cloned application. You need to specify the &gt; application bundle name and index of the cloned application.
+> 
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
 
 **Since:** 23
 
@@ -279,15 +311,15 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 19 and later |
-| [16000081](../errorcode-ability.md#16000081-failed-to-obtain-the-target-application-information) | Failed to obtain the target application information. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) | Invalid URI flag. |
 | [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
+| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
+| [16000081](../errorcode-ability.md#16000081-failed-to-obtain-the-target-application-information) | Failed to obtain the target application information. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 19 and later |
 
 **Examples**
 

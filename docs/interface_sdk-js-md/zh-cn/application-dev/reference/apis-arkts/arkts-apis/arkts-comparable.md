@@ -1,0 +1,15 @@
+# Comparable
+
+## 导入模块
+
+```TypeScript
+```
+
+## 汇总
+
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [Comparable](arkts-arkts-comparable-i.md) | 可由任何支持比较的类型实现。 |
+

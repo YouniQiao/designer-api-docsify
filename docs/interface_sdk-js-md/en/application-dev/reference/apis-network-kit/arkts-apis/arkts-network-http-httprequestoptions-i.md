@@ -36,7 +36,11 @@ IP address family. You can specify an address type for domain name resolution.
 body?: string | Object | ArrayBuffer
 ```
 
-HTTP request body. After this field is set, the framework preferentially sends this field as the request body. - The value can be a string, an object, or an **ArrayBuffer**. A string is sent as the original value, an object is serialized before being sent, and an **ArrayBuffer** is sent in binary format. - If both **body** and **extraData** are configured, **body** takes precedence and **extraData** will be ignored. - This field can be used with any request method to explicitly specify the request body. **Since**: 26.0.0
+HTTP request body. After this field is set, the framework preferentially sends this field as the request body.
+
+- The value can be a string, an object, or an **ArrayBuffer**. A string is sent as the original value, an object is serialized before being sent, and an **ArrayBuffer** is sent in binary format. - If both **body** and **extraData** are configured, **body** takes precedence and **extraData** will be ignored. - This field can be used with any request method to explicitly specify the request body.
+
+**Since**: 26.0.0
 
 **Type:** string \| Object \| ArrayBuffer
 
@@ -54,7 +58,9 @@ HTTP request body. After this field is set, the framework preferentially sends t
 caData?: string
 ```
 
-CA certificate data. If this parameter is set and the certificate is valid, the system uses the specified CA certificate and the preset CA certificate. Otherwise, the system uses only the preset CA certificate. If both **caPath** and **caData** are set, **caData** is ignored by the system. Currently, only certificates in **.pem** format are supported. The maximum length is 8000 bytes. Only one certificate can be specified. A certificate chain is not allowed. The preset CA certificate is available at **\/etc/ssl/certs/cacert.pem**. This path is the sandbox mapping path, which can be obtained by using **UIAbilityContext** APIs.
+CA certificate data. If this parameter is set and the certificate is valid, the system uses the specified CA certificate and the preset CA certificate. Otherwise, the system uses only the preset CA certificate. If both **caPath** and **caData** are set, **caData** is ignored by the system. Currently, only certificates in **.pem** format are supported. The maximum length is 8000 bytes. Only one certificate can be specified. A certificate chain is not allowed.
+
+The preset CA certificate is available at **\/etc/ssl/certs/cacert.pem**. This path is the sandbox mapping path, which can be obtained by using **UIAbilityContext** APIs.
 
 **Type:** string
 
@@ -72,7 +78,9 @@ CA certificate data. If this parameter is set and the certificate is valid, the 
 caPath?: string
 ```
 
-CA certificate data. If this parameter is set and the certificate is valid, the system uses the specified CA certificate and the preset CA certificate. Otherwise, the system uses only the preset CA certificate. The CA certificate path is the sandbox mapping path, which can be obtained by using **UIAbilityContext** APIs. Currently, only **.pem** certificates are supported. The preset CA certificate is available at **\/etc/ssl/certs/cacert.pem**.
+CA certificate data. If this parameter is set and the certificate is valid, the system uses the specified CA certificate and the preset CA certificate. Otherwise, the system uses only the preset CA certificate. The CA certificate path is the sandbox mapping path, which can be obtained by using **UIAbilityContext** APIs. Currently, only **.pem** certificates are supported.
+
+The preset CA certificate is available at **\/etc/ssl/certs/cacert.pem**.
 
 **Type:** string
 
@@ -158,7 +166,9 @@ Connection timeout interval. The default value is **60000**, in ms. The input va
 customMethod?: string
 ```
 
-Custom request method. For example, when the WebDAV extension protocol is implemented, **customMethod** has a higher priority than **method**. - The default value is an empty string. The value can contain a maximum of 128 characters. If the value exceeds 1 28 characters, the setting does not take effect. - If **customMethod** meets the WebDAV extension protocol request requirements but the server does not support the request, the server response code of the request is usually 405 or 501 (the actual result depends on the server behavior). - If **customMethod** does not meet the WebDAV extension protocol request requirements, the server response code of the request is usually 400 or 405 (the actual result depends on the server behavior).
+Custom request method. For example, when the WebDAV extension protocol is implemented, **customMethod** has a higher priority than **method**.
+
+- The default value is an empty string. The value can contain a maximum of 128 characters. If the value exceeds 1 28 characters, the setting does not take effect. - If **customMethod** meets the WebDAV extension protocol request requirements but the server does not support the request, the server response code of the request is usually 405 or 501 (the actual result depends on the server behavior). - If **customMethod** does not meet the WebDAV extension protocol request requirements, the server response code of the request is usually 400 or 405 (the actual result depends on the server behavior).
 
 **Type:** string
 
@@ -174,7 +184,9 @@ Custom request method. For example, when the WebDAV extension protocol is implem
 dnsOverHttps?: string
 ```
 
-Whether to use an HTTPS server for DNS resolution. - The value must be URL-encoded in the following format: "https:// host:port/path".
+Whether to use an HTTPS server for DNS resolution.
+
+- The value must be URL-encoded in the following format: "https:// host:port/path".
 
 **Type:** string
 
@@ -190,7 +202,9 @@ Whether to use an HTTPS server for DNS resolution. - The value must be URL-encod
 dnsServers?: Array<string>
 ```
 
-Array of DNS servers used for DNS resolution. - A maximum of three DNS servers can be set. If there are more than three DNS servers, only the first three DNS servers are used. - The DNS servers must be expressed as IPv4 or IPv6 addresses.
+Array of DNS servers used for DNS resolution.
+
+- A maximum of three DNS servers can be set. If there are more than three DNS servers, only the first three DNS servers are used. - The DNS servers must be expressed as IPv4 or IPv6 addresses.
 
 **Type:** Array&lt;string&gt;
 
@@ -242,7 +256,27 @@ Type of the returned data. This parameter is not used by default. If this parame
 extraData?: string | Object | ArrayBuffer
 ```
 
-Additional data for sending a request. This parameter is not used by default. Since API version 26, you are advised to use the **body** and **queryParams** parameters preferentially. **Note：**: Do not add this parameter if no extra data is available. If this parameter must be added, set it to **undefined** or **null**. Do not pass the parameter as "". - If the HTTP request uses a POST, PUT, or DELETE method, this field serves as the content of the HTTP request and is encoded in UTF-8 format. Example: (1) If **content-Type** is **application/x-www-form-urlencoded**, the data in the request body must be encoded in the format of **key1=value1&key2=value2&key3=value3** after URL transcoding (**encodeURIComponent/encodeURI**) and this field is usually in the String format. (2) If **content-Type** is **text/xml**, this field is usually in the String format. (3) If **content-Type** is **application/json**, this field is usually in the Object format. (4) If **content-Type** is **application/octet-stream**, this field is usually in the ArrayBuffer format. (5) If **content-Type** is **multipart/form-data** and the content to be uploaded is a file, this field is usually in the ArrayBuffer format. The preceding information is for reference only and may vary according to the actual situation. - If the HTTP request uses the GET, OPTIONS, TRACE, or CONNECT method, this parameter serves as a supplement to HTTP request parameters. Parameters of the string type need to be encoded before being passed to the HTTP request. Parameters of the object type do not need to be precoded and will be directly concatenated to the URL. Parameters of the ArrayBuffer type will not be concatenated to the URL.
+Additional data for sending a request. This parameter is not used by default. Since API version 26, you are advised to use the **body** and **queryParams** parameters preferentially.
+
+**Note：**: Do not add this parameter if no extra data is available. If this parameter must be added, set it to **undefined** or **null**. Do not pass the parameter as "".
+
+- If the HTTP request uses a POST, PUT, or DELETE method, this field serves as the content of the HTTP request and is encoded in UTF-8 format.
+
+Example:
+
+(1) If **content-Type** is **application/x-www-form-urlencoded**, the data in the request body must be encoded in the format of **key1=value1&key2=value2&key3=value3** after URL transcoding (**encodeURIComponent/encodeURI**) and this field is usually in the String format.
+
+(2) If **content-Type** is **text/xml**, this field is usually in the String format.
+
+(3) If **content-Type** is **application/json**, this field is usually in the Object format.
+
+(4) If **content-Type** is **application/octet-stream**, this field is usually in the ArrayBuffer format.
+
+(5) If **content-Type** is **multipart/form-data** and the content to be uploaded is a file, this field is usually in the ArrayBuffer format.
+
+The preceding information is for reference only and may vary according to the actual situation.
+
+- If the HTTP request uses the GET, OPTIONS, TRACE, or CONNECT method, this parameter serves as a supplement to HTTP request parameters. Parameters of the string type need to be encoded before being passed to the HTTP request. Parameters of the object type do not need to be precoded and will be directly concatenated to the URL. Parameters of the ArrayBuffer type will not be concatenated to the URL.
 
 **Type:** string \| Object \| ArrayBuffer
 
@@ -260,7 +294,11 @@ Additional data for sending a request. This parameter is not used by default. Si
 header?: Object
 ```
 
-HTTP request header. If the request method is POST, PUT, DELETE, or null, the default value is {'content-Type': ' application/json'}. Otherwise, the default value is {'content-Type': 'application/x-www-form-urlencoded'}. If the header contains fields of numeric type, the maximum value must be an int64 integer. The header field supports the JSON format (as shown in Example) and the Record&lt;string, string&gt; format.
+HTTP request header. If the request method is POST, PUT, DELETE, or null, the default value is {'content-Type': ' application/json'}. Otherwise, the default value is {'content-Type': 'application/x-www-form-urlencoded'}.
+
+If the header contains fields of numeric type, the maximum value must be an int64 integer.
+
+The header field supports the JSON format (as shown in Example) and the Record&lt;string, string&gt; format.
 
 **Type:** Object
 
@@ -278,7 +316,11 @@ HTTP request header. If the request method is POST, PUT, DELETE, or null, the de
 inactivityMs?: int
 ```
 
-Maximum idle time of a connection in the connection pool. If this value is exceeded, the connection is closed. The unit is ms. The default value is 118s. The system calculates the connection idle time, rounds it down to seconds, and then compares it with the configured value. - The value range is (0, 2147483647]. If a value less than or equal to 0 is passed, the system uses the default value 118s. This parameter does not take effect when **reuseConnections** is set to **false**. **Since**: 26.0.0
+Maximum idle time of a connection in the connection pool. If this value is exceeded, the connection is closed. The unit is ms. The default value is 118s. The system calculates the connection idle time, rounds it down to seconds, and then compares it with the configured value.
+
+- The value range is (0, 2147483647]. If a value less than or equal to 0 is passed, the system uses the default value 118s. This parameter does not take effect when **reuseConnections** is set to **false**.
+
+**Since**: 26.0.0
 
 **Type:** int
 
@@ -296,7 +338,9 @@ Maximum idle time of a connection in the connection pool. If this value is excee
 maxLimit?: int
 ```
 
-Maximum number of bytes in a response. The default value is 5*1024*1024, in bytes. The maximum value is **100*1024*1024**.
+Maximum number of bytes in a response.
+
+The default value is 5*1024*1024, in bytes. The maximum value is **100*1024*1024**.
 
 **Type:** int
 
@@ -312,7 +356,9 @@ Maximum number of bytes in a response. The default value is 5*1024*1024, in byte
 maxRedirects?: int
 ```
 
-The maximum number of redirections can be specified for HttpRequest. - The default value is 30. - The value range is [0, 2147483647]. If the value is set to **0**, redirection is disabled. If the number of redirections on the server exceeds the maximum number of redirections, error code 2300047 is returned. If the value is out of the range, the default value **30** takes effect.
+The maximum number of redirections can be specified for HttpRequest.
+
+- The default value is 30. - The value range is [0, 2147483647]. If the value is set to **0**, redirection is disabled. If the number of redirections on the server exceeds the maximum number of redirections, error code 2300047 is returned. If the value is out of the range, the default value **30** takes effect.
 
 **Type:** int
 
@@ -396,7 +442,11 @@ Priority of concurrent HTTP/HTTPS requests. A larger value indicates a higher pr
 queryParams?: string | QueryParamObject
 ```
 
-Request parameters appended to the URL. - The value can be a string or a **QueryParamObject**. A string is directly appended to the URL (without repeated encoding). A **QueryParamObject** is automatically encoded and serialized by the system. - When a string is used, the leading **?** is not required. Use **&** to separate multiple parameters. - If both **queryParams** and **extraData** are configured, **queryParams** takes precedence, and the URL parameter supplementation logic in **extraData** is ignored. **Since**: 26.0.0
+Request parameters appended to the URL.
+
+- The value can be a string or a **QueryParamObject**. A string is directly appended to the URL (without repeated encoding). A **QueryParamObject** is automatically encoded and serialized by the system. - When a string is used, the leading **?** is not required. Use **&** to separate multiple parameters. - If both **queryParams** and **extraData** are configured, **queryParams** takes precedence, and the URL parameter supplementation logic in **extraData** is ignored.
+
+**Since**: 26.0.0
 
 **Type:** string \| [QueryParamObject](arkts-network-http-queryparamobject-t.md)
 
@@ -414,7 +464,9 @@ Request parameters appended to the URL. - The value can be a string or a **Query
 readTimeout?: int
 ```
 
-Read timeout duration. The default value is **60000**, in ms. The input value must be an uint32_t integer. The value **0** indicates no timeout.
+Read timeout duration. The default value is **60000**, in ms. The input value must be an uint32_t integer.
+
+The value **0** indicates no timeout.
 
 **Type:** int
 
@@ -450,7 +502,9 @@ Certificate authority (CA), which is used to verify the identity of a remote ser
 resumeFrom?: long
 ```
 
-Download start position. This field can be used only for the GET method. As stipulated in section 3.1 of RFC 723 3, servers are allowed to ignore range requests. - If the HTTP PUT method is used, do not use this option because it may conflict with other options. - The value ranges from **1** to **4294967296** (4 GB). If the value is out of this range, this field does not take effect.
+Download start position. This field can be used only for the GET method. As stipulated in section 3.1 of RFC 723 3, servers are allowed to ignore range requests.
+
+- If the HTTP PUT method is used, do not use this option because it may conflict with other options. - The value ranges from **1** to **4294967296** (4 GB). If the value is out of this range, this field does not take effect.
 
 **Type:** long
 
@@ -466,7 +520,9 @@ Download start position. This field can be used only for the GET method. As stip
 resumeTo?: long
 ```
 
-Download end position. This field can be used only for the GET method. As stipulated in section 3.1 of RFC 7233, servers are allowed to ignore range requests. - If the HTTP PUT method is used, do not use this option because it may conflict with other options. - The value ranges from **1** to **4294967296** (4 GB). If the value is out of this range, this field does not take effect.
+Download end position. This field can be used only for the GET method. As stipulated in section 3.1 of RFC 7233, servers are allowed to ignore range requests.
+
+- If the HTTP PUT method is used, do not use this option because it may conflict with other options. - The value ranges from **1** to **4294967296** (4 GB). If the value is out of this range, this field does not take effect.
 
 **Type:** long
 
@@ -482,7 +538,11 @@ Download end position. This field can be used only for the GET method. As stipul
 reuseConnections?: boolean
 ```
 
-Whether to reuse the connection for an HTTP request. The default value is **true**, meaning to reuse the existing connection. The value **false** means the opposite. This field can be used together with the **inactivityMs** field to customize the connection timeout interval. - Connection reuse means that after an HTTP request is completed, the underlying TCP connection is not immediately closed. Instead, it remains in the connection pool. If subsequent HTTP requests have the same target address, the connection can be reused, reducing the overhead of TCP and TLS handshakes and improving performance. **Since**: 26.0.0
+Whether to reuse the connection for an HTTP request. The default value is **true**, meaning to reuse the existing connection. The value **false** means the opposite. This field can be used together with the **inactivityMs** field to customize the connection timeout interval.
+
+- Connection reuse means that after an HTTP request is completed, the underlying TCP connection is not immediately closed. Instead, it remains in the connection pool. If subsequent HTTP requests have the same target address, the connection can be reused, reducing the overhead of TCP and TLS handshakes and improving performance.
+
+**Since**: 26.0.0
 
 **Type:** boolean
 
@@ -518,7 +578,9 @@ Whether to verify the server identity during a secure connection. The identity i
 sniHostName?: string
 ```
 
-Used to allow the client to declare the target domain name to the server in the TLS handshake phase by configuring the server name indication (SNI). In this way, the server can select the corresponding SSL/TLS certificate based on the domain name for encrypted communication. - The default value is an empty string. The value of **sniHostName** can contain a maximum of 255 characters. If the length limit is exceeded or the value is an empty string, the setting does not take effect.
+Used to allow the client to declare the target domain name to the server in the TLS handshake phase by configuring the server name indication (SNI). In this way, the server can select the corresponding SSL/TLS certificate based on the domain name for encrypted communication.
+
+- The default value is an empty string. The value of **sniHostName** can contain a maximum of 255 characters. If the length limit is exceeded or the value is an empty string, the setting does not take effect.
 
 **Type:** string
 
@@ -606,7 +668,9 @@ Protocol. The default value is automatically specified by the system.
 usingProxy?: boolean | HttpProxy
 ```
 
-HTTP proxy configuration. If this item is not configured, the system proxy is used by default. - If **usingProxy** is set to **true**, the default network proxy is used. If **usingProxy** is set to **false**, no proxy is used. - If **usingProxy** is of the **HttpProxy** type, the specified network proxy is used. The HttpProxy supports the **username** and **password** fields from API version 22.
+HTTP proxy configuration. If this item is not configured, the system proxy is used by default.
+
+- If **usingProxy** is set to **true**, the default network proxy is used. If **usingProxy** is set to **false**, no proxy is used. - If **usingProxy** is of the **HttpProxy** type, the specified network proxy is used. The HttpProxy supports the **username** and **password** fields from API version 22.
 
 **Type:** boolean \| HttpProxy
 

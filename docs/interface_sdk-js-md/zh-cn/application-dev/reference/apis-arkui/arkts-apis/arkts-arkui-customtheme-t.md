@@ -1,4 +1,4 @@
-# CustomTheme(Defines WithTheme component.)
+# CustomTheme
 
 ```TypeScript
 declare type CustomTheme = import('../api/@ohos.arkui.theme').CustomTheme

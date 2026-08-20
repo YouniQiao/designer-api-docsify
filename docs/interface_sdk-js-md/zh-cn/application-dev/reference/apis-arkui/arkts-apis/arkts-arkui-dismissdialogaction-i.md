@@ -1,4 +1,4 @@
-# DismissDialogAction(CustomDialog)
+# DismissDialogAction
 
 Dialog关闭的信息。
 

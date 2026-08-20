@@ -277,27 +277,27 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动UIAbility组件的want信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当接口调用成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当接口调用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000061](../errorcode-ability.md#16000061-不支持的操作) | Operation not supported. |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
 | [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
 | [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
 | [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
 | [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
+| [16000061](../errorcode-ability.md#16000061-不支持的操作) | Operation not supported. |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
 
 **示例**
 
@@ -417,21 +417,21 @@ startAbility(want: Want): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000061](../errorcode-ability.md#16000061-不支持的操作) | Operation not supported. |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
 | [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
 | [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
 | [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
 | [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
+| [16000061](../errorcode-ability.md#16000061-不支持的操作) | Operation not supported. |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
 
 **示例**
 

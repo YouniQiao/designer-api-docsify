@@ -2,6 +2,8 @@
 
 Defines the session of RootScene.
 
+@interface RootSceneSession
+
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.

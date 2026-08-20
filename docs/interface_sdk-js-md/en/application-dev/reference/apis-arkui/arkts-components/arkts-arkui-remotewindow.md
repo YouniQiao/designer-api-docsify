@@ -30,6 +30,4 @@ Called when the remote window interface is used.
 
 | Name | Description |
 | --- | --- |
-| [RRect](arkts-arkui-rrect-i-sys.md) | Round rect. |
-| [WindowAnimationTarget](arkts-arkui-windowanimationtarget-i-sys.md) | Window animation target. |
 

@@ -40,10 +40,10 @@ Clear search history.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## destroy
 
@@ -106,10 +106,10 @@ Download media entity.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## executeAction
 
@@ -144,10 +144,10 @@ Execute action.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## favoriteMediaEntity
 
@@ -182,10 +182,10 @@ Favorite media entity.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## handleMemberPurchase
 
@@ -219,10 +219,10 @@ Handle member purchase.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## login
 
@@ -257,10 +257,10 @@ Login.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## offCurrentSingleChange
 
@@ -288,8 +288,8 @@ Unregister report current single callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offCustomElementsChange
@@ -318,8 +318,8 @@ Unregister report custom elements change callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offDialogCommandChange
@@ -348,8 +348,8 @@ Unregister report dialog command callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offDownloadMediaEntityStatusChange
@@ -378,8 +378,8 @@ Unregister report download media entity status callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offExtensionAbilityChange
@@ -408,8 +408,8 @@ Unregister report extension ability callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offMediaEntitiesChange
@@ -438,8 +438,8 @@ Unregister report media entities change callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offPlaylistChange
@@ -468,8 +468,8 @@ Unregister report playlist callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offReportExecuteAction
@@ -498,8 +498,8 @@ Unregister report execute action callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offSettingsChange
@@ -528,8 +528,8 @@ Unregister report settings callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offTabContentChange
@@ -558,8 +558,8 @@ Unregister report tab content callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offUserInfoChange
@@ -588,8 +588,8 @@ Unregister report user info callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onCurrentSingleChange
@@ -618,8 +618,8 @@ Register report current single callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onCustomElementsChange
@@ -648,8 +648,8 @@ Register report custom elements change callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onDialogCommandChange
@@ -678,8 +678,8 @@ Register report dialog command callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onDownloadMediaEntityStatusChange
@@ -708,8 +708,8 @@ Register report download media entity status callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onExtensionAbilityChange
@@ -738,8 +738,8 @@ Register report extension ability callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onMediaEntitiesChange
@@ -768,8 +768,8 @@ Register report media entities change callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onPlaylistChange
@@ -798,8 +798,8 @@ Register report playlist callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onReportExecuteAction
@@ -828,8 +828,8 @@ Register report execute action callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onSettingsChange
@@ -858,8 +858,8 @@ Register report settings callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onTabContentChange
@@ -888,8 +888,8 @@ Register report tab content callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onUserInfoChange
@@ -918,8 +918,8 @@ Register report user info callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## playForSearch
@@ -955,10 +955,10 @@ Play for search.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## playMediaEntity
 
@@ -992,10 +992,10 @@ Play media entity.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## queryCompilation
 
@@ -1030,10 +1030,10 @@ Query compilation.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## queryCompilationByKeyword
 
@@ -1067,10 +1067,10 @@ Query compilation by keyword.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## queryCurrentSingle
 
@@ -1098,10 +1098,10 @@ Query current single.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## queryCustomContent
 
@@ -1135,10 +1135,10 @@ Query custom content.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## queryHotWords
 
@@ -1166,10 +1166,10 @@ Query hot words.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## queryMainTabs
 
@@ -1197,10 +1197,10 @@ Query main tabs.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## queryMediaEntity
 
@@ -1234,10 +1234,10 @@ Query media entity.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## queryMediaEntityByKeyword
 
@@ -1273,10 +1273,10 @@ Query media entity by keyword.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## queryMediaTabContent
 
@@ -1310,10 +1310,10 @@ Query media tab content.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## queryMemberPurchase
 
@@ -1347,10 +1347,10 @@ Query member purchase.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## queryPlaylist
 
@@ -1385,10 +1385,10 @@ Query playlist.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## queryRecommendMediaEntityList
 
@@ -1416,10 +1416,10 @@ Query recommend media entity list.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## querySearchHistory
 
@@ -1447,10 +1447,10 @@ Query search history.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## reportProblemAndAdvice
 
@@ -1484,10 +1484,10 @@ Report problem and advice.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## requestDialogInfo
 
@@ -1522,10 +1522,10 @@ Request dialog info.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## sendCustomCommand
 
@@ -1560,9 +1560,9 @@ Send custom commands to AVMusicTemplate
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## updateSettings
 
@@ -1596,10 +1596,10 @@ Report settings change.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
 ## isDestroy
 

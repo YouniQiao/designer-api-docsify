@@ -2,6 +2,8 @@
 
 AI Image Model Abstract Interface.
 
+@interface ImageGenerationModel
+
 **Since:** 23
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.

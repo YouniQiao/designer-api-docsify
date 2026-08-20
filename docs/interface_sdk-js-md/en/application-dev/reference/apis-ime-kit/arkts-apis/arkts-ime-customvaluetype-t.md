@@ -1,4 +1,4 @@
-# CustomValueType(The extra config of edit box.)
+# CustomValueType
 
 ```TypeScript
 export type CustomValueType = int | string | boolean

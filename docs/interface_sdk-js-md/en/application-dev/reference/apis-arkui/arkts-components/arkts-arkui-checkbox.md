@@ -1,8 +1,12 @@
 # Checkbox
 
-**Checkbox** is a component that is used to enable or disable an option. > **NOTE** > > Since API version 11, the default style of the **Checkbox** component is changed from rounded square to circle.
+*Checkbox** is a component that is used to enable or disable an option.
 
-## Child Components Not supported
+> **NOTE** > > Since API version 11, the default style of the **Checkbox** component is changed from rounded square to circle.
+
+## Child Components
+
+Not supported
 
 ## Checkbox
 
@@ -34,12 +38,9 @@ Creates a check box.
 
 | Name | Description |
 | --- | --- |
-| [CheckBoxConfiguration](arkts-arkui-checkboxconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from CommonConfiguration. |
-| [CheckboxOptions](arkts-arkui-checkboxoptions-i.md) | Provides information about the check box. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnCheckboxChangeCallback](arkts-arkui-oncheckboxchangecallback-t.md) | Represents the callback invoked when the selected state of the check box changes. |
 

@@ -20,9 +20,11 @@ import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, 
 accessibilityDescription?: ResourceStr
 ```
 
-子标题右侧操作项无障碍说明，用于为用户进一步说明当前组件。 默认值：“单指双击即可执行”。
+子标题右侧操作项无障碍说明，用于为用户进一步说明当前组件。
 
-**类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+默认值：“单指双击即可执行”。
+
+**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 18
 
@@ -40,7 +42,19 @@ accessibilityDescription?: ResourceStr
 accessibilityLevel?: string
 ```
 
-子标题右侧操作项无障碍重要性。 支持的值为： "auto"：当前子标题右侧操作项由无障碍分组服务和ArkUI进行综合判断是否可被无障碍辅助服务所识别。 "yes"：当前子标题右侧操作项可被无障碍辅助服务所识别。 "no"：当前子标题右侧操作项不可被无障碍辅助服务所识别。 "no-hide-descendants"：当前子标题右侧操作项及其所有子组件不可被无障碍辅助服务所识别。 默认值：“yes”。
+子标题右侧操作项无障碍重要性。
+
+支持的值为：
+
+"auto"：当前子标题右侧操作项由无障碍分组服务和ArkUI进行综合判断是否可被无障碍辅助服务所识别。
+
+"yes"：当前子标题右侧操作项可被无障碍辅助服务所识别。
+
+"no"：当前子标题右侧操作项不可被无障碍辅助服务所识别。
+
+"no-hide-descendants"：当前子标题右侧操作项及其所有子组件不可被无障碍辅助服务所识别。
+
+默认值：“yes”。
 
 **类型：** string
 
@@ -62,9 +76,11 @@ accessibilityLevel?: string
 accessibilityText?: ResourceStr
 ```
 
-子标题右侧操作项无障碍描述。 默认值：undefined
+子标题右侧操作项无障碍描述。
 
-**类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+默认值：undefined
+
+**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 18
 
@@ -84,7 +100,7 @@ action?: SubHeaderV2OperationItemAction
 
 选项操作事件回调，点击操作项时触发，用于执行自定义操作。默认值：() =&gt; void。
 
-**类型：** [SubHeaderV2OperationItemAction](arkts-arkui-subheaderv2operationitemaction-t.md)
+**类型：** [SubHeaderV2OperationItemAction](../../apis-default/arkts-apis/arkts-subheaderv2operationitemaction-t.md)
 
 **起始版本：** 18
 
@@ -104,7 +120,7 @@ content: SubHeaderV2OperationItemType
 
 操作项显示的内容。
 
-**类型：** [SubHeaderV2OperationItemType](arkts-arkui-subheaderv2operationitemtype-t.md)
+**类型：** [SubHeaderV2OperationItemType](../../apis-default/arkts-apis/arkts-subheaderv2operationitemtype-t.md)
 
 **起始版本：** 18
 
@@ -122,7 +138,13 @@ content: SubHeaderV2OperationItemType
 defaultFocus?: boolean
 ```
 
-子标题右侧操作项是否为默认焦点。 true：子标题右侧操作项是默认焦点。 false：子标题右侧操作项不是默认焦点。 默认值：false
+子标题右侧操作项是否为默认焦点。
+
+true：子标题右侧操作项是默认焦点。
+
+false：子标题右侧操作项不是默认焦点。
+
+默认值：false
 
 **类型：** boolean
 
@@ -144,7 +166,9 @@ defaultFocus?: boolean
 id?: string
 ```
 
-子标题右侧操作项id。需要为子标题右侧操作项设置id的时候设置此参数，缺省时不设置此参数。 默认值：undefined，表示不设置子标题右侧操作项id。
+子标题右侧操作项id。需要为子标题右侧操作项设置id的时候设置此参数，缺省时不设置此参数。
+
+默认值：undefined，表示不设置子标题右侧操作项id。
 
 **类型：** string
 

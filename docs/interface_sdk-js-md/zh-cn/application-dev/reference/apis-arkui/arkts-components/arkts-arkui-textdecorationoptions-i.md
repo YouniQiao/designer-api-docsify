@@ -2,6 +2,8 @@
 
 Defines the options of decoration.
 
+@interface TextDecorationOptions
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare interface TextDecorationOptions--><!--Device-unnamed-declare interface TextDecorationOptions-End-->

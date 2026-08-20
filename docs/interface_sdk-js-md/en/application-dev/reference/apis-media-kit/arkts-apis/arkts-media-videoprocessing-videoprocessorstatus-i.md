@@ -1,4 +1,4 @@
-# VideoProcessorStatus(Provides the capability of video quality processing.)
+# VideoProcessorStatus
 
 Provides the unified video processor status.
 

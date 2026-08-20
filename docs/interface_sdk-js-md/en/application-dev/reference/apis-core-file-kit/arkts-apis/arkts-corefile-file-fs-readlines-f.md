@@ -39,19 +39,19 @@ Reads the text content of a file line by line. This API uses a promise to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900019 | Is a directory |
-| 13900030 | File name too long |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900033 | Too many symbolic links encountered |
 | 13900002 | No such file or directory |
 | 13900012 | Permission denied |
-| 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
 | 13900015 | File exists |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+| 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
 
 
 ## readLines
@@ -79,18 +79,18 @@ Reads a file text line by line. This API uses an asynchronous callback to return
 
 | Error Code ID | Error Message |
 | --- | --- |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
+| 13900015 | File exists |
+| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
-| 13900033 | Too many symbolic links encountered |
-| 13900002 | No such file or directory |
-| 13900019 | Is a directory |
-| 13900012 | Permission denied |
-| 13900030 | File name too long |
-| 13900015 | File exists |
 | 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-| 13900027 | Read-only file system |
 
 
 ## readLines
@@ -119,16 +119,16 @@ Reads a file text line by line. This API uses an asynchronous callback to return
 
 | Error Code ID | Error Message |
 | --- | --- |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
+| 13900015 | File exists |
+| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
-| 13900033 | Too many symbolic links encountered |
-| 13900002 | No such file or directory |
-| 13900019 | Is a directory |
-| 13900012 | Permission denied |
-| 13900030 | File name too long |
-| 13900015 | File exists |
 | 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-| 13900027 | Read-only file system |
 

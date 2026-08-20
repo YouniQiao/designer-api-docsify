@@ -1,4 +1,4 @@
-# OnDownloadCompleteResponse(Upload and Download)
+# OnDownloadCompleteResponse
 
 **Since:** 3
 

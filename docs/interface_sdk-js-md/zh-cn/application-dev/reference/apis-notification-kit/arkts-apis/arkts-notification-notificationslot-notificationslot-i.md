@@ -14,7 +14,9 @@
 badgeFlag?: boolean
 ```
 
-是否显示角标。默认值为true。 - true：显示角标。 - false：不显示角标。
+是否显示角标。默认值为true。
+
+- true：显示角标。 - false：不显示角标。
 
 **类型：** boolean
 
@@ -30,7 +32,9 @@ badgeFlag?: boolean
 bypassDnd?: boolean
 ```
 
-是否在系统中绕过免打扰模式。默认值为false。 - true：绕过免打扰模式，免打扰模式下仍会提醒。 - false：不绕过免打扰模式，免打扰模式下不提醒。
+是否在系统中绕过免打扰模式。默认值为false。
+
+- true：绕过免打扰模式，免打扰模式下仍会提醒。 - false：不绕过免打扰模式，免打扰模式下不提醒。
 
 **类型：** boolean
 
@@ -62,7 +66,9 @@ desc?: string
 readonly enabled?: boolean
 ```
 
-是否允许发布此通知渠道类型的通知。 - true：允许发布通知。 - false：禁止发布通知。
+是否允许发布此通知渠道类型的通知。
+
+- true：允许发布通知。 - false：禁止发布通知。
 
 **类型：** boolean
 
@@ -114,7 +120,9 @@ lightColor?: int
 lightEnabled?: boolean
 ```
 
-是否闪灯。默认值为false。 - true：闪灯。 - false：不闪灯。
+是否闪灯。默认值为false。
+
+- true：闪灯。 - false：不闪灯。
 
 **类型：** boolean
 
@@ -214,7 +222,9 @@ type?: notification.SlotType
 vibrationEnabled?: boolean
 ```
 
-是否可振动。默认值为false。 - true：可振动。 - false：不可振动。
+是否可振动。默认值为false。
+
+- true：可振动。 - false：不可振动。
 
 **类型：** boolean
 

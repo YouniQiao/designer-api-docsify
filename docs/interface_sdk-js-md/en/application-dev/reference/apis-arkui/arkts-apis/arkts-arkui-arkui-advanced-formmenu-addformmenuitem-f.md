@@ -33,5 +33,5 @@ Build function of AddFormMenuItem.
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | The want of the form to publish. |
 | componentId | string | Yes | The id of the component used to get form snapshot. |
-| options | AddFormOptions | No | Add form options. |
+| options | [AddFormOptions](arkts-arkui-arkui-advanced-formmenu-addformoptions-i.md) | No | Add form options. |
 

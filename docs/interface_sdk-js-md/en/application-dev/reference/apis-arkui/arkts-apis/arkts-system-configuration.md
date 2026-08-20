@@ -18,5 +18,5 @@ import { Configuration, LocaleResponse } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [LocaleResponse](arkts-arkui-system-configuration-localeresponse-i.md) |  |
+| [LocaleResponse](arkts-arkui-system-configuration-localeresponse-i.md) | @interface LocaleResponse |
 

@@ -1,6 +1,10 @@
 # ApplicationContext
 
-ApplicationContext inherits from Context and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting. &gt; **NOTE：**&gt; &gt; The APIs of this module can be used only in the stage model.
+ApplicationContext inherits from Context and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting.
+
+> **NOTE：**
+> 
+> The APIs of this module can be used only in the stage model.
 
 **Inheritance/Implementation:** ApplicationContext extends Context
 
@@ -16,7 +20,13 @@ ApplicationContext inherits from Context and provides application-level manageme
 clearUpApplicationData(): Promise<void>
 ```
 
-Clears up all data in the application file path and revokes the permissions that the application has requested from users. This API uses a promise to return the result. It can be called only on the main thread. &gt; **NOTE：**&gt; &gt; For details about the application file path, see &gt; [Application File Directory and Application File Path](../../../file-management/app-sandbox-directory.md#application-file-directory-and-application-file-path) &gt; . The figure shows only the application file paths in the EL1 and EL2 directories. For the application file paths &gt; in other directories, refer to EL1. &gt; &gt; This API stops the application process. After the application process is stopped, all subsequent callbacks will &gt; not be triggered.
+Clears up all data in the application file path and revokes the permissions that the application has requested from users. This API uses a promise to return the result. It can be called only on the main thread.
+
+> **NOTE：**
+> 
+> For details about the application file path, see &gt; [Application File Directory and Application File Path](../../../file-management/app-sandbox-directory.md#application-file-directory-and-application-file-path) &gt; . The figure shows only the application file paths in the EL1 and EL2 directories. For the application file paths &gt; in other directories, refer to EL1.
+> 
+> This API stops the application process. After the application process is stopped, all subsequent callbacks will &gt; not be triggered.
 
 **Since:** 23
 
@@ -36,8 +46,8 @@ Clears up all data in the application file path and revokes the permissions that
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 **Examples**
 
@@ -58,7 +68,13 @@ export default class MyAbility extends UIAbility {
 clearUpApplicationData(callback: AsyncCallback<void>): void
 ```
 
-Clears up all data in the application file path and revokes the permissions that the application has requested from users. This API uses an asynchronous callback to return the result. It can be called only on the main thread. &gt; **NOTE：**&gt; &gt; For details about the application file path, see &gt; [Application File Directory and Application File Path](../../../file-management/app-sandbox-directory.md#application-file-directory-and-application-file-path) &gt; . The figure shows only the application file paths in the EL1 and EL2 directories. For the application file paths &gt; in other directories, refer to EL1. &gt; &gt; This API stops the application process. After the application process is stopped, all subsequent callbacks will &gt; not be triggered.
+Clears up all data in the application file path and revokes the permissions that the application has requested from users. This API uses an asynchronous callback to return the result. It can be called only on the main thread.
+
+> **NOTE：**
+> 
+> For details about the application file path, see &gt; [Application File Directory and Application File Path](../../../file-management/app-sandbox-directory.md#application-file-directory-and-application-file-path) &gt; . The figure shows only the application file paths in the EL1 and EL2 directories. For the application file paths &gt; in other directories, refer to EL1.
+> 
+> This API stops the application process. After the application process is stopped, all subsequent callbacks will &gt; not be triggered.
 
 **Since:** 23
 
@@ -79,8 +95,8 @@ Clears up all data in the application file path and revokes the permissions that
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 **Examples**
 
@@ -105,7 +121,9 @@ export default class MyAbility extends UIAbility {
 disableDelayedProcessExit(): Promise<void>
 ```
 
-Disables delayed process exit for the current process. &lt;p&gt;&lt;b&gt;NOTE&lt;/b&gt;: <br>This API can be called only by the main thread. <br>Calling this API cancels the effect of [enableDelayedProcessExit](#enabledelayedprocessexit).&lt;/p&gt;
+Disables delayed process exit for the current process.
+
+&lt;p&gt;&lt;b&gt;NOTE&lt;/b&gt;: <br>This API can be called only by the main thread. <br>Calling this API cancels the effect of [enableDelayedProcessExit](#enabledelayedprocessexit).&lt;/p&gt;
 
 **Since:** 26.0.0
 
@@ -126,8 +144,8 @@ Disables delayed process exit for the current process. &lt;p&gt;&lt;b&gt;NOTE&lt
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 16000150 | The current process has no UIAbility, and this API cannot be called. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: Fail to connect system service. |
+| 16000150 | The current process has no UIAbility, and this API cannot be called. |
 
 ## enableDelayedProcessExit
 
@@ -156,8 +174,8 @@ Enable delayed exit for the current process. &lt;p&gt;**NOTE：**: <br>It can be
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 16000150 | The current process has no UIAbility, and this API cannot be called. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: Fail to connect system service. |
+| 16000150 | The current process has no UIAbility, and this API cannot be called. |
 
 ## getAllRunningInstanceKeys
 
@@ -185,9 +203,9 @@ Obtains the unique instance IDs of all multi-instances of this application. This
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000078](../errorcode-ability.md#16000078-multi-instance-mode-is-not-supported) | The multi-instance is not supported. |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 **Examples**
 
@@ -215,7 +233,9 @@ export default class MyAbilityStage extends AbilityStage {
 getAllWindowStages(): Promise<Array<window.WindowStage>>
 ```
 
-Obtains all WindowStage objects in the current application process. This API uses a promise to return the result. It can be called only on the main thread. This API is used to manage multiple windows in an application that contains several UIAbility components, for example, managing the states of different WindowStage objects, or synchronizing state or data between multiple windows within the same application.
+Obtains all WindowStage objects in the current application process. This API uses a promise to return the result. It can be called only on the main thread.
+
+This API is used to manage multiple windows in an application that contains several UIAbility components, for example, managing the states of different WindowStage objects, or synchronizing state or data between multiple windows within the same application.
 
 **Since:** 23
 
@@ -287,8 +307,8 @@ Obtains the index of the current application clone.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) | The MultiAppMode is not App_CLONE. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) | The MultiAppMode is not App_CLONE. |
 
 **Examples**
 
@@ -313,7 +333,9 @@ export default class MyAbility extends UIAbility {
 getCurrentInstanceKey(): string
 ```
 
-Obtains the unique instance ID of this application. This API can be called only on the main thread. This API can be properly called only on 2-in-1 devices. If it is called on other device types, error code 16000078 is returned.
+Obtains the unique instance ID of this application. This API can be called only on the main thread.
+
+This API can be properly called only on 2-in-1 devices. If it is called on other device types, error code 16000078 is returned.
 
 **Since:** 23
 
@@ -333,8 +355,8 @@ Obtains the unique instance ID of this application. This API can be called only 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000078](../errorcode-ability.md#16000078-multi-instance-mode-is-not-supported) | The multi-instance is not supported. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000078](../errorcode-ability.md#16000078-multi-instance-mode-is-not-supported) | The multi-instance is not supported. |
 
 **Examples**
 
@@ -387,8 +409,8 @@ Obtains the information about running processes. This API uses a promise to retu
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 **Examples**
 
@@ -437,8 +459,8 @@ Obtains the information about running processes. This API uses an asynchronous c
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 **Examples**
 
@@ -465,7 +487,9 @@ export default class MyAbility extends UIAbility {
 getUIAbilityByInstanceId(instanceId: string): UIAbility
 ```
 
-Get the UIAbility instance by the instance Id. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
+Get the UIAbility instance by the instance Id.
+
+&lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
 
 **Since:** 26.0.0
 
@@ -491,9 +515,9 @@ Get the UIAbility instance by the instance Id. &lt;p&gt;**NOTE：**: <br>It can 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. System service failed to communicate with dependency module. |
 | [16000003](../errorcode-ability.md#16000003-id-does-not-exist) | The id does not exist. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. System service failed to communicate with dependency module. |
 
 ## killAllProcesses
 
@@ -501,7 +525,11 @@ Get the UIAbility instance by the instance Id. &lt;p&gt;**NOTE：**: <br>It can 
 killAllProcesses(): Promise<void>
 ```
 
-Kills all processes of this application. The application will not execute the normal lifecycle when exiting. This API uses a promise to return the result. It can be called only on the main thread. &gt; **NOTE：**&gt; &gt; This API is used to forcibly exit an application in abnormal scenarios. To exit an application properly, call &gt; [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself).
+Kills all processes of this application. The application will not execute the normal lifecycle when exiting. This API uses a promise to return the result. It can be called only on the main thread.
+
+> **NOTE：**
+> 
+> This API is used to forcibly exit an application in abnormal scenarios. To exit an application properly, call &gt; [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself).
 
 **Since:** 23
 
@@ -545,7 +573,11 @@ export default class MyAbility extends UIAbility {
 killAllProcesses(clearPageStack: boolean): Promise<void>
 ```
 
-Kills all processes of this application. The application will not execute the normal lifecycle when exiting. This API uses a promise to return the result. It can be called only on the main thread. &gt; **NOTE：**&gt; &gt; This API is used to forcibly exit an application in abnormal scenarios. To exit an application properly, call &gt; [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself).
+Kills all processes of this application. The application will not execute the normal lifecycle when exiting. This API uses a promise to return the result. It can be called only on the main thread.
+
+> **NOTE：**
+> 
+> This API is used to forcibly exit an application in abnormal scenarios. To exit an application properly, call &gt; [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself).
 
 **Since:** 23
 
@@ -597,7 +629,11 @@ export default class MyAbility extends UIAbility {
 killAllProcesses(callback: AsyncCallback<void>): void
 ```
 
-Kills all processes of this application. The application will not execute the normal lifecycle when exiting. This API uses an asynchronous callback to return the result. It can be called only on the main thread. &gt; **NOTE：**&gt; &gt; This API is used to forcibly exit an application in abnormal scenarios. To exit an application properly, call &gt; [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself).
+Kills all processes of this application. The application will not execute the normal lifecycle when exiting. This API uses an asynchronous callback to return the result. It can be called only on the main thread.
+
+> **NOTE：**
+> 
+> This API is used to forcibly exit an application in abnormal scenarios. To exit an application properly, call &gt; [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself).
 
 **Since:** 23
 
@@ -668,7 +704,9 @@ Unregisters the listener that monitors the ability lifecycle of the application.
 offAbilityLifecycle(callbackId: int): Promise<void>
 ```
 
-Unregisters the listener that monitors the ability lifecycle of the application. This API uses a promise to return the result. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
+Unregisters the listener that monitors the ability lifecycle of the application. This API uses a promise to return the result.
+
+&lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
 
 **Since:** 23
 
@@ -710,7 +748,7 @@ Unregister applicationStateChange callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | No | The applicationStateChange callback. |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | No | The applicationStateChange callback. |
 
 ## offEnvironment
 
@@ -769,7 +807,9 @@ Unregister environment callback.
 offInteropAbilityLifecycle(callback?: InteropAbilityLifecycleCallback): void
 ```
 
-Unregisters the listener that monitors the ability lifecycle of the application for interoperability. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
+Unregisters the listener that monitors the ability lifecycle of the application for interoperability.
+
+&lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
 
 **Since:** 23
 
@@ -791,7 +831,9 @@ Unregisters the listener that monitors the ability lifecycle of the application 
 offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): void
 ```
 
-unregisters a listener for system configuration updated. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
+unregisters a listener for system configuration updated.
+
+&lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
 
 **Since:** 24
 
@@ -949,7 +991,7 @@ Unregisters the listener for application process state changes. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | Yes | Application process state change. The value is fixed at **'applicationStateChange'**. |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | No | Callback used to return the result. The value can be a callback defined by [ApplicationContext.on('applicationStateChange')](#onabilitylifecycle) or empty.<br>- If a defined callback is passed in, the listener for that callback is unregistered.<br>- If no value is passed in, all the listeners for the corresponding event are unregistered. |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | No | Callback used to return the result. The value can be a callback defined by [ApplicationContext.on('applicationStateChange')](#onabilitylifecycle) or empty.<br>- If a defined callback is passed in, the listener for that callback is unregistered.<br>- If no value is passed in, all the listeners for the corresponding event are unregistered. |
 
 **Error codes:**
 
@@ -1151,7 +1193,7 @@ Register applicationStateChange callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | Yes | The applicationStateChange callback. |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | Yes | The applicationStateChange callback. |
 
 ## onEnvironment
 
@@ -1173,7 +1215,7 @@ Register environment callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | Yes | The environment callback. |
+| callback | [EnvironmentCallback](../../apis-default/arkts-apis/arkts-app-ability-environmentcallback-environmentcallback-i.md) | Yes | The environment callback. |
 
 **Return value:**
 
@@ -1187,7 +1229,9 @@ Register environment callback.
 onInteropAbilityLifecycle(callback: InteropAbilityLifecycleCallback): void
 ```
 
-Registers a listener to monitor the ability lifecycle of the application for interoperability. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
+Registers a listener to monitor the ability lifecycle of the application for interoperability.
+
+&lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
 
 **Since:** 23
 
@@ -1209,7 +1253,9 @@ Registers a listener to monitor the ability lifecycle of the application for int
 onSystemConfigurationUpdated(callback: systemConfiguration.UpdatedCallback): void
 ```
 
-Registers a listener for system configuration updated. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
+Registers a listener for system configuration updated.
+
+&lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
 
 **Since:** 24
 
@@ -1344,7 +1390,7 @@ Registers a listener for application process state changes. This API uses an asy
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | Yes | Application process state change. The value is fixed at **'applicationStateChange'**. |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | Yes | Callback triggered when the application process state is changed. |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | Yes | Callback triggered when the application process state is changed. |
 
 **Error codes:**
 
@@ -1389,7 +1435,13 @@ export default class MyAbility extends UIAbility {
 on(type: 'environment', callback: EnvironmentCallback): number
 ```
 
-Registers a listener for system environment changes. This API uses an asynchronous callback to return the result. It can be called only on the main thread. &gt; **NOTE：**&gt; &gt; - You can also use [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate) to &gt; listen for system environment changes. Unlike &gt; [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate) of **Ability**, this &gt; API offers greater flexibility. It can be used both within application components and pages. However, the &gt; environment variables that can be subscribed to are different from those of &gt; [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate). For example, this &gt; API cannot be used to subscribe to direction, screen density, and display ID changes. For details, see the &gt; description of each environment variable in &gt; [Configuration](arkts-ability-app-ability-configuration-configuration-i.md). &gt; &gt; - There are certain restrictions when this API is triggered. For example, if you set the application language by &gt; calling [setLanguage](#setlanguage), the system does not trigger the &gt; callback for the current API even if the system language changes. For details, see &gt; [When to Use](../../../application-models/subscribe-system-environment-variable-changes.md#when-to-use).
+Registers a listener for system environment changes. This API uses an asynchronous callback to return the result. It can be called only on the main thread.
+
+> **NOTE：**
+> 
+> - You can also use [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate) to &gt; listen for system environment changes. Unlike &gt; [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate) of **Ability**, this &gt; API offers greater flexibility. It can be used both within application components and pages. However, the &gt; environment variables that can be subscribed to are different from those of &gt; [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate). For example, this &gt; API cannot be used to subscribe to direction, screen density, and display ID changes. For details, see the &gt; description of each environment variable in &gt; [Configuration](arkts-ability-app-ability-configuration-configuration-i.md).
+> 
+> - There are certain restrictions when this API is triggered. For example, if you set the application language by &gt; calling [setLanguage](#setlanguage), the system does not trigger the &gt; callback for the current API even if the system language changes. For details, see &gt; [When to Use](../../../application-models/subscribe-system-environment-variable-changes.md#when-to-use).
 
 **Since:** 9
 
@@ -1406,7 +1458,7 @@ Registers a listener for system environment changes. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'environment' | Yes | System environment change, for example, system dark/light color mode change. The value is fixed at **'environment'**. |
-| callback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | Yes | Callback triggered when the system environment changes. |
+| callback | [EnvironmentCallback](../../apis-default/arkts-apis/arkts-app-ability-environmentcallback-environmentcallback-i.md) | Yes | Callback triggered when the system environment changes. |
 
 **Return value:**
 
@@ -1458,7 +1510,15 @@ export default class EntryAbility extends UIAbility {
 restartApp(want: Want): void
 ```
 
-Restarts the application and starts the specified UIAbility. This API can be called only by the main thread, and the application to restart must be active. &gt; **NOTE：**&gt; &gt; When this API is called to restart the application, the **onDestroy** lifecycle callback of the ability in the &gt; application is not triggered. &gt; &gt; If an atomic service calls this API, &gt; [restartSelfAtomicService()](arkts-ability-abilitymanager-restartselfatomicservice-f.md) &gt; , or [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds after a &gt; successful call to this API, the system returns error code 16000064. &gt; &gt; If an application calls this API or &gt; [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds after a &gt; successful call to this API, the system returns error code 16000064.
+Restarts the application and starts the specified UIAbility. This API can be called only by the main thread, and the application to restart must be active.
+
+> **NOTE：**
+> 
+> When this API is called to restart the application, the **onDestroy** lifecycle callback of the ability in the &gt; application is not triggered.
+> 
+> If an atomic service calls this API, &gt; [restartSelfAtomicService()](arkts-ability-abilitymanager-restartselfatomicservice-f.md) &gt; , or [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds after a &gt; successful call to this API, the system returns error code 16000064.
+> 
+> If an application calls this API or &gt; [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds after a &gt; successful call to this API, the system returns error code 16000064.
 
 **Since:** 23
 
@@ -1481,10 +1541,10 @@ Restarts the application and starts the specified UIAbility. This API can be cal
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000064](../errorcode-ability.md#16000064-frequent-application-restart) | Restart too frequently. Try again at least 3s later. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
 | [16000063](../errorcode-ability.md#16000063-invalid-ability-during-application-restart) | The target to restart does not belong to the current application or is not a UIAbility. |
+| [16000064](../errorcode-ability.md#16000064-frequent-application-restart) | Restart too frequently. Try again at least 3s later. |
 
 **Examples**
 
@@ -1536,7 +1596,11 @@ struct Index {
 setColorMode(colorMode: ConfigurationConstant.ColorMode): void
 ```
 
-Sets the dark/light color mode for the application. This API can be called only on the main thread. &gt; **NOTE：**&gt; &gt; Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has &gt; been loaded (using the &gt; [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the &gt; [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) lifecycle).
+Sets the dark/light color mode for the application. This API can be called only on the main thread.
+
+> **NOTE：**
+> 
+> Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has &gt; been loaded (using the &gt; [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the &gt; [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) lifecycle).
 
 **Since:** 23
 
@@ -1589,7 +1653,11 @@ export default class MyAbility extends UIAbility {
 setFont(font: string): void
 ```
 
-Sets the font for this application. This API can be called only on the main thread. &gt; **NOTE：**&gt; &gt; Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has &gt; been loaded (using the &gt; [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the &gt; [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) lifecycle).
+Sets the font for this application. This API can be called only on the main thread.
+
+> **NOTE：**
+> 
+> Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has &gt; been loaded (using the &gt; [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the &gt; [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) lifecycle).
 
 **Since:** 23
 
@@ -1609,8 +1677,8 @@ Sets the font for this application. This API can be called only on the main thre
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 **Examples**
 
@@ -1695,7 +1763,11 @@ export default class MyAbility extends UIAbility {
 setLanguage(language: string): void
 ```
 
-Sets the language for the application. This API can be called only on the main thread. &gt; **NOTE：**&gt; &gt; Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has &gt; been loaded (using the &gt; [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the &gt; [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) lifecycle).
+Sets the language for the application. This API can be called only on the main thread.
+
+> **NOTE：**
+> 
+> Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has &gt; been loaded (using the &gt; [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the &gt; [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) lifecycle).
 
 **Since:** 23
 
@@ -1747,7 +1819,19 @@ export default class MyAbility extends UIAbility {
 setSupportedProcessCache(isSupported : boolean): void
 ```
 
-Sets whether the current application's process supports resource caching, so that the cached process resources can be reused when the application is started again. This API can be called only on the main thread. This setting applies only to the current process instance and does not affect others. If the application process instance is terminated, the previously set state will not be preserved and must be reset. This API can be properly called only on phones and 2-in-1 devices. If it is called on other device types, error code 801 is returned. &gt; **NOTE：**&gt; &gt; - This API only sets the application to be ready for quick startup after caching. It does not mean that quick &gt; startup will be triggered. Other conditions must be considered to determine whether to trigger quick startup. &gt; &gt; - To ensure that this API is effective before the process exits, it should be called as soon as possible. You are &gt; advised to call this API within the **onCreate()** callback of the &gt; [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md). &gt; &gt; - If this API is called multiple times within the same process, the outcome of the final call is used. In cases &gt; where there are multiple AbilityStage instances, to achieve the desired result, this API must be called and &gt; configured with the same value in each AbilityStage.
+Sets whether the current application's process supports resource caching, so that the cached process resources can be reused when the application is started again. This API can be called only on the main thread.
+
+This setting applies only to the current process instance and does not affect others. If the application process instance is terminated, the previously set state will not be preserved and must be reset.
+
+This API can be properly called only on phones and 2-in-1 devices. If it is called on other device types, error code 801 is returned.
+
+> **NOTE：**
+> 
+> - This API only sets the application to be ready for quick startup after caching. It does not mean that quick &gt; startup will be triggered. Other conditions must be considered to determine whether to trigger quick startup.
+> 
+> - To ensure that this API is effective before the process exits, it should be called as soon as possible. You are &gt; advised to call this API within the **onCreate()** callback of the &gt; [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md).
+> 
+> - If this API is called multiple times within the same process, the outcome of the final call is used. In cases &gt; where there are multiple AbilityStage instances, to achieve the desired result, this API must be called and &gt; configured with the same value in each AbilityStage.
 
 **Since:** 23
 
@@ -1769,8 +1853,8 @@ Sets whether the current application's process supports resource caching, so tha
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 **Examples**
 
@@ -1826,14 +1910,14 @@ Starts a UIAbility of the current application during the delayed-exit window.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
-| 16000161 | Delayed process exit is not pending in the current process, and this API cannot be called. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: Fail to connect system service. |
-| [16000130](../errorcode-ability.md#16000130-uiability-does-not-belong-to-the-caller) | The UIAbility does not belong to the caller. |
-| 16000162 | The current process still has another UIAbility, and this API cannot be called. |
-| [16000124](../errorcode-ability.md#16000124-starting-a-distributed-uiability-is-not-supported) | Starting a remote UIAbility is not supported. |
-| [16000125](../errorcode-ability.md#16000125-starting-a-plugin-is-not-supported) | Starting a plugin UIAbility is not supported. |
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: Fail to connect system service. |
 | [16000122](../errorcode-ability.md#16000122-target-component-is-intercepted-by-the-system-control-module) | The target component is blocked by the system module and does not support startup. |
 | [16000123](../errorcode-ability.md#16000123-implicit-startup-is-not-supported) | Implicit startup is not supported. |
+| [16000124](../errorcode-ability.md#16000124-starting-a-distributed-uiability-is-not-supported) | Starting a remote UIAbility is not supported. |
+| [16000125](../errorcode-ability.md#16000125-starting-a-plugin-is-not-supported) | Starting a plugin UIAbility is not supported. |
+| [16000130](../errorcode-ability.md#16000130-uiability-does-not-belong-to-the-caller) | The UIAbility does not belong to the caller. |
+| 16000161 | Delayed process exit is not pending in the current process, and this API cannot be called. |
+| 16000162 | The current process still has another UIAbility, and this API cannot be called. |
 

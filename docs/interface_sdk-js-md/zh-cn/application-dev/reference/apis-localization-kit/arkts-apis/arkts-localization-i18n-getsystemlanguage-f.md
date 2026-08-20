@@ -18,7 +18,7 @@ export function getSystemLanguage(): string
 
 **废弃版本：** 9
 
-**替代接口：** [getSystemLanguage](arkts-localization-i18n-system-c.md#getsystemlanguage)
+**替代接口：** [getSystemLanguage](../../apis-default/arkts-apis/arkts-i18n-system-c.md#getsystemlanguage)
 
 <!--Device-i18n-export function getSystemLanguage(): string--><!--Device-i18n-export function getSystemLanguage(): string-End-->
 

@@ -54,9 +54,9 @@ Acquires an authorization for a process.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid privilege or options. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid privilege or options. |
 
 **Examples**
 
@@ -116,9 +116,9 @@ Checks whether the current process has specified authorization.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid privilege. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid privilege. |
 
 **Examples**
 
@@ -175,9 +175,9 @@ Releases the specified authorization for the current process.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid privilege. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid privilege. |
 
 **Examples**
 

@@ -1,4 +1,4 @@
-# NavPushPathHelper(Defines provides a push method for the target page in the routing table.)
+# NavPushPathHelper
 
 On the initial launch, the atomic service only downloads and installs the main package and its dependencies. Therefore, if the NavDestination resides in a different HSP subpackage that is not a dependency of the main package, you'll need to use **NavPushPathHelper** to download and install the corresponding HSP subpackage first. After that, push the specified **NavDestination** page information onto the stack. This way, you enable Navigation to support dynamic loading of the HSP subpackage before the navigation occurs.
 
@@ -70,11 +70,11 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
-| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
 ## pushDestination
 
@@ -82,7 +82,9 @@ Checks for the target subpackage and, if it is not present, initiates a download
 pushDestination(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pushes the NavDestination page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations. Depending on the LaunchMode specified in the **options** parameter, different behaviors will be triggered.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pushes the NavDestination page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
+
+Depending on the LaunchMode specified in the **options** parameter, different behaviors will be triggered.
 
 **Since:** 12
 
@@ -110,11 +112,11 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
-| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
 ## pushDestinationByName
 
@@ -151,11 +153,11 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
-| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
 ## pushDestinationByName
 
@@ -194,11 +196,11 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
-| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
 ## pushPath
 
@@ -242,7 +244,9 @@ Checks for the target subpackage and, if it is not present, initiates a download
 pushPath(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pushes the NavDestination page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations. Depending on the LaunchMode specified in the **options** parameter, different behaviors will be triggered.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pushes the NavDestination page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
+
+Depending on the LaunchMode specified in the **options** parameter, different behaviors will be triggered.
 
 **Since:** 12
 
@@ -390,7 +394,9 @@ Checks for the target subpackage and, if it is not present, initiates a download
 replacePath(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pops the top page from the current navigation stack. This API uses a promise to handle asynchronous operations. Depending on the LaunchMode specified in the **options** parameter, different behaviors will be triggered.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pops the top page from the current navigation stack. This API uses a promise to handle asynchronous operations.
+
+Depending on the LaunchMode specified in the **options** parameter, different behaviors will be triggered.
 
 **Since:** 12
 

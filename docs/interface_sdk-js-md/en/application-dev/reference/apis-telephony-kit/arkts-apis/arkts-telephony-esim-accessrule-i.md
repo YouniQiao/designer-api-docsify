@@ -2,6 +2,8 @@
 
 Establishes a single UICC access rule pursuant to the GlobalPlatform Secure Element Access Control specification.
 
+@interface AccessRule
+
 **Since:** 23
 
 <!--Device-eSIM-export interface AccessRule--><!--Device-eSIM-export interface AccessRule-End-->

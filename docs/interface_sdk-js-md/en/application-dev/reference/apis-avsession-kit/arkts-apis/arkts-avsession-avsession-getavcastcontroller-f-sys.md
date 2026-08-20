@@ -35,11 +35,11 @@ Register a callback to retrieve an avsession cast controller. This function can 
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | session does not exist |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 **Examples**
 
@@ -108,10 +108,10 @@ Register a callback to retrieve an avsession cast controller. This function can 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | session does not exist |
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | session does not exist |
 
 
 ## getAVCastController
@@ -148,11 +148,11 @@ Get the current session's remote controller client. If the avsession is not unde
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | server exception |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | session does not exist |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 **Examples**
 
@@ -224,8 +224,8 @@ Get the current session's remote controller client. If the avsession is not unde
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | server exception |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | session does not exist |
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | server exception |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | session does not exist |
 

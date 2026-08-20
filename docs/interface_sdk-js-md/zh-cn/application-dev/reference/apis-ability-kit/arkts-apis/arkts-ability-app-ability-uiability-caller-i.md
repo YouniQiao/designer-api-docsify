@@ -48,8 +48,8 @@ Caller UIAbility向Callee UIAbility发送双方约定好的序列化的数据。
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16200002](../errorcode-ability.md#16200002-通用组件服务端callee无效) | The callee does not exist. |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| [16200002](../errorcode-ability.md#16200002-通用组件服务端callee无效) | The callee does not exist. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 **示例**
@@ -207,8 +207,8 @@ Caller UIAbility向Callee UIAbility发送消息，Callee UIAbility处理完成�
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16200002](../errorcode-ability.md#16200002-通用组件服务端callee无效) | The callee does not exist. |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| [16200002](../errorcode-ability.md#16200002-通用组件服务端callee无效) | The callee does not exist. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 **示例**
@@ -776,8 +776,8 @@ Caller主动释放与Callee UIAbility的连接。调用该接口后，Caller不�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16200002](../errorcode-ability.md#16200002-通用组件服务端callee无效) | The callee does not exist. |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| [16200002](../errorcode-ability.md#16200002-通用组件服务端callee无效) | The callee does not exist. |
 
 **示例**
 

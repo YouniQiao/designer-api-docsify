@@ -1,6 +1,8 @@
 # VpnExtensionAbility
 
-**VpnExtensionContext** represents the context of **VpnExtensionAbility** and is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md). This module provides the context required for APIs to access the resources of a **VpnExtensionAbility** object.
+*VpnExtensionContext** represents the context of **VpnExtensionAbility** and is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
+
+This module provides the context required for APIs to access the resources of a **VpnExtensionAbility** object.
 
 **Since:** 11
 
@@ -20,7 +22,11 @@ import { VpnExtensionAbility, VpnExtensionContext } from '@kit.NetworkKit';
 onCreate(want: Want): void
 ```
 
-Represents the callback triggered when the extended VPN is initialized. &gt; **NOTE：**&gt; &gt; You are advised to call [onDestroy](#ondestroy) to listen to the destruction of the &gt; extended VPN and clear resources in a timely manner.
+Represents the callback triggered when the extended VPN is initialized.
+
+> **NOTE：**
+> 
+> You are advised to call [onDestroy](#ondestroy) to listen to the destruction of the &gt; extended VPN and clear resources in a timely manner.
 
 **Since:** 11
 

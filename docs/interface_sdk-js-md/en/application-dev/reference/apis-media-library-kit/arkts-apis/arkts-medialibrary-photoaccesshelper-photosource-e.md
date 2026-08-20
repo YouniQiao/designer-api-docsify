@@ -2,6 +2,8 @@
 
 Enumeration of PhotoSource type
 
+@enum { int } PhotoSource
+
 **Since:** 26.0.0
 
 <!--Device-photoAccessHelper-export enum PhotoSource--><!--Device-photoAccessHelper-export enum PhotoSource-End-->

@@ -2,6 +2,8 @@
 
 Result of the given downloadable Profile.
 
+@interface DownloadProfileResult
+
 **Since:** 23
 
 <!--Device-eSIM-export interface DownloadProfileResult--><!--Device-eSIM-export interface DownloadProfileResult-End-->

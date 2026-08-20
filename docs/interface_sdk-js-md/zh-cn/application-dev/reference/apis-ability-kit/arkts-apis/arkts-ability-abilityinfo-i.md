@@ -30,7 +30,9 @@ readonly appIndex: int
 readonly applicationInfo: ApplicationInfo | null
 ```
 
-应用程序的配置信息<!--Del-->，可以通过调用 [queryAbilityInfo](arkts-ability-bundlemanager-queryabilityinfo-f-sys.md) 接口，abilityFlags参数传入GET_ABILITY_INFO_WITH_APPLICATION获取<!--DelEnd-->。 [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md)或 者 [getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md) 接口获取AbilityInfo信息时不会返回该字段内容，可以通过获取[bundleInfo](arkts-ability-bundleinfo-i.md).appInfo对象来获取相关信息。
+应用程序的配置信息<!--Del-->，可以通过调用 [queryAbilityInfo](arkts-ability-bundlemanager-queryabilityinfo-f-sys.md) 接口，abilityFlags参数传入GET_ABILITY_INFO_WITH_APPLICATION获取<!--DelEnd-->。
+
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md)或 者 [getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md) 接口获取AbilityInfo信息时不会返回该字段内容，可以通过获取[bundleInfo](arkts-ability-bundleinfo-i.md).appInfo对象来获取相关信息。
 
 **类型：** [ApplicationInfo](arkts-ability-applicationinfo-i.md) \| null
 
@@ -136,7 +138,9 @@ Ability是否可用，可用表示可以拉起或者查询，不可用时调用[
 readonly excludeFromDock: boolean
 ```
 
-判断Ability是否可以在dock区域隐藏图标，取值为true表示可以隐藏，取值为false不可以隐藏。 **说明：** 该字段不生效。
+判断Ability是否可以在dock区域隐藏图标，取值为true表示可以隐藏，取值为false不可以隐藏。
+
+**说明：** 该字段不生效。
 
 **类型：** boolean
 
@@ -208,7 +212,9 @@ Ability的图标资源id，是编译构建时根据应用配置abilities下的ic
 readonly label: string
 ```
 
-Ability对用户显示的名称的资源描述符，对应[module.json5](../../../quick-start/module-configuration-file.md)中abilities下配置的label字段。 **说明：** 从API version 20开始，如果是通过 [bundleManager.getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md)获取Ability信息，该字段为 Ability对用户显示的名称。
+Ability对用户显示的名称的资源描述符，对应[module.json5](../../../quick-start/module-configuration-file.md)中abilities下配置的label字段。
+
+**说明：** 从API version 20开始，如果是通过 [bundleManager.getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md)获取Ability信息，该字段为 Ability对用户显示的名称。
 
 **类型：** string
 
@@ -388,7 +394,9 @@ Ability的进程名称。
 readonly readPermission: string
 ```
 
-读取Ability数据所需的权限。 **模型约束：** 此接口仅可在FA模型下使用。
+读取Ability数据所需的权限。
+
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **类型：** string
 
@@ -442,7 +450,9 @@ Ability支持的窗口模式。
 readonly type: bundleManager.AbilityType
 ```
 
-Ability类型。 **模型约束：** 此接口仅可在FA模型下使用。
+Ability类型。
+
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **类型：** bundleManager.AbilityType
 
@@ -460,7 +470,9 @@ Ability类型。 **模型约束：** 此接口仅可在FA模型下使用。
 readonly uri: string
 ```
 
-获取Ability的统一资源标识符（URI）。 **模型约束：** 此接口仅可在FA模型下使用。
+获取Ability的统一资源标识符（URI）。
+
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **类型：** string
 
@@ -496,7 +508,9 @@ Ability窗口尺寸。
 readonly writePermission: string
 ```
 
-向Ability写数据所需的权限。 **模型约束：** 此接口仅可在FA模型下使用。
+向Ability写数据所需的权限。
+
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **类型：** string
 

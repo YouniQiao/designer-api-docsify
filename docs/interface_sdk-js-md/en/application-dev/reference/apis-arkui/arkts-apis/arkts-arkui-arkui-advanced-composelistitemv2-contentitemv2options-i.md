@@ -62,7 +62,7 @@ iconStyle?: IconTypeV2
 
 The type of icon
 
-**Type:** [IconTypeV2](arkts-arkui-arkui-advanced-composelistitemv2-icontypev2-e.md)
+**Type:** [IconTypeV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-icontypev2-e.md)
 
 **Since:** 26.0.0
 

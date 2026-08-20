@@ -36,8 +36,8 @@ Creates a **HashStream** instance, which can be used to generate a message diges
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error |
+| 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
 **Examples**

@@ -2,6 +2,8 @@
 
 用于设置滚动事件回调。
 
+@extends UICommonEvent @interface UIScrollableCommonEvent
+
 **继承/实现关系：** UIScrollableCommonEvent extends [UICommonEvent](arkts-arkui-uicommonevent-i.md)
 
 **起始版本：** 19
@@ -21,7 +23,9 @@
 setOnReachEnd(callback: Callback<void> | undefined): void
 ```
 
-设置[onReachEnd](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onreachend11)事件的回调。 方法入参为undefined时，会重置事件回调。
+设置[onReachEnd](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onreachend11)事件的回调。
+
+方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
 
@@ -45,7 +49,9 @@ setOnReachEnd(callback: Callback<void> | undefined): void
 setOnReachStart(callback: Callback<void> | undefined): void
 ```
 
-设置[onReachStart](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onreachstart11)事件的回调。 方法入参为undefined时，会重置事件回调。
+设置[onReachStart](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onreachstart11)事件的回调。
+
+方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
 
@@ -69,7 +75,9 @@ setOnReachStart(callback: Callback<void> | undefined): void
 setOnScrollFrameBegin(callback: OnScrollFrameBeginCallback | undefined): void
 ```
 
-设置onScrollFrameBegin事件的回调。 方法入参为undefined时，会重置事件回调。
+设置onScrollFrameBegin事件的回调。
+
+方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
 
@@ -93,7 +101,9 @@ setOnScrollFrameBegin(callback: OnScrollFrameBeginCallback | undefined): void
 setOnScrollStart(callback: Callback<void> | undefined): void
 ```
 
-设置[onScrollStart](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onscrollstart11)事件的回调。 方法入参为undefined时，会重置事件回调。
+设置[onScrollStart](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onscrollstart11)事件的回调。
+
+方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
 
@@ -117,7 +127,9 @@ setOnScrollStart(callback: Callback<void> | undefined): void
 setOnScrollStop(callback: Callback<void> | undefined): void
 ```
 
-设置[onScrollStop](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onscrollstop11)事件的回调。 方法入参为undefined时，会重置事件回调。
+设置[onScrollStop](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onscrollstop11)事件的回调。
+
+方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
 

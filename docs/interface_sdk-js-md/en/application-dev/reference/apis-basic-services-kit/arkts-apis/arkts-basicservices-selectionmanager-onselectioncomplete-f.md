@@ -12,7 +12,9 @@ import { selectionManager } from '@kit.BasicServicesKit';
 function onSelectionComplete(callback: Callback<SelectionInfo>): void
 ```
 
-Registers a callback to listen for the word selection completion event. This API uses an asynchronous callback to return the result. **ArkTS mode:** This API applies only to ArkTS-Sta.
+Registers a callback to listen for the word selection completion event. This API uses an asynchronous callback to return the result.
+
+**ArkTS mode:** This API applies only to ArkTS-Sta.
 
 **Since:** 24
 

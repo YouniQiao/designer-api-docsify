@@ -43,9 +43,9 @@ Load train model from buffer
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1000011 | Failed to create native training model from buffer. Possible causes: 1. The model buffer is incorrect; 2. The training configuration is incorrect. |
-| 1000010 | Invalid model buffer in training. Possible causes: 1. The model buffer size is incorrect; 2. The model buffer is null. |
 | 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect. |
+| 1000010 | Invalid model buffer in training. Possible causes: 1. The model buffer size is incorrect; 2. The model buffer is null. |
+| 1000011 | Failed to create native training model from buffer. Possible causes: 1. The model buffer is incorrect; 2. The training configuration is incorrect. |
 
 **Examples**
 

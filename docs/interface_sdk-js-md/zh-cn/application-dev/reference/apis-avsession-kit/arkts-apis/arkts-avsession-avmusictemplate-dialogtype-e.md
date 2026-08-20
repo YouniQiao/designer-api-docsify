@@ -2,6 +2,8 @@
 
 表示对话框类型的枚举。
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-avMusicTemplate-enum DialogType--><!--Device-avMusicTemplate-enum DialogType-End-->

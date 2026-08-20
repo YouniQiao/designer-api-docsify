@@ -1,4 +1,4 @@
-# Want(System API) (System API)
+# Want (System API)
 
 ```TypeScript
 declare type Want = import('../api/@ohos.app.ability.Want').default

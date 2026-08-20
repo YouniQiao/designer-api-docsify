@@ -44,22 +44,22 @@ Authenticates a domain account.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 12300211 | Server unreachable. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The account authentication service works abnormally. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | The account authentication service does not exist. |
-| [12300112](../errorcode-account.md#12300112-authentication-service-does-not-respond) | The authentication service is busy. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The authentication time out. |
-| [12300110](../errorcode-account.md#12300110-authentication-locked) | The authentication is locked. |
-| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
-| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Domain account does not exist. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid domainAccountInfo or credential. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid domainAccountInfo or credential. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Domain account does not exist. |
+| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
 | [12300101](../errorcode-account.md#12300101-incorrect-credential) | Authentication failed. |
+| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
+| [12300110](../errorcode-account.md#12300110-authentication-locked) | The authentication is locked. |
+| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The authentication time out. |
+| [12300112](../errorcode-account.md#12300112-authentication-service-does-not-respond) | The authentication service is busy. |
+| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | The account authentication service does not exist. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The account authentication service works abnormally. |
+| 12300211 | Server unreachable. |
 
 **Examples**
 
@@ -119,21 +119,21 @@ Authenticates a specified domain account. You can specify authentication options
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 12300211 | Server unreachable. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The account authentication service works abnormally. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | The account authentication service does not exist. |
-| [12300112](../errorcode-account.md#12300112-authentication-service-does-not-respond) | The authentication service is busy. |
-| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The authentication time out. |
-| [12300110](../errorcode-account.md#12300110-authentication-locked) | The authentication is locked. |
-| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
-| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Domain account does not exist. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid domainAccountInfo or credential. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid domainAccountInfo or credential. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Domain account does not exist. |
+| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
 | [12300101](../errorcode-account.md#12300101-incorrect-credential) | Authentication failed. |
+| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
+| [12300110](../errorcode-account.md#12300110-authentication-locked) | The authentication is locked. |
+| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The authentication time out. |
+| [12300112](../errorcode-account.md#12300112-authentication-service-does-not-respond) | The authentication service is busy. |
+| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | The account authentication service does not exist. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The account authentication service works abnormally. |
+| 12300211 | Server unreachable. |
 
 **Examples**
 
@@ -194,20 +194,20 @@ Authenticates a domain account in a pop-up window.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 12300211 | Server unreachable.<br>**Applicable version:** 11 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 10 and later |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The account authentication service works abnormally. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | The account authentication service does not exist. |
-| [12300112](../errorcode-account.md#12300112-authentication-service-does-not-respond) | The authentication service is busy. |
-| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The authentication time out. |
-| [12300110](../errorcode-account.md#12300110-authentication-locked) | The authentication is locked. |
-| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
-| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | No domain account is bound. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | No domain account is bound. |
+| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
 | [12300101](../errorcode-account.md#12300101-incorrect-credential) | Authentication failed. |
+| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
+| [12300110](../errorcode-account.md#12300110-authentication-locked) | The authentication is locked. |
+| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The authentication time out. |
+| [12300112](../errorcode-account.md#12300112-authentication-service-does-not-respond) | The authentication service is busy. |
+| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | The account authentication service does not exist. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The account authentication service works abnormally. |
+| 12300211 | Server unreachable.<br>**Applicable version:** 11 and later |
 
 **Examples**
 
@@ -257,21 +257,21 @@ Authenticates a domain account in a pop-up window.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 12300211 | Server unreachable.<br>**Applicable version:** 11 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 10 and later |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The account authentication service works abnormally. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | The account authentication service does not exist. |
-| [12300112](../errorcode-account.md#12300112-authentication-service-does-not-respond) | The authentication service is busy. |
-| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The authentication time out. |
-| [12300110](../errorcode-account.md#12300110-authentication-locked) | The authentication is locked. |
-| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
-| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | No domain account is bound. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | No domain account is bound. |
+| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
 | [12300101](../errorcode-account.md#12300101-incorrect-credential) | Authentication failed. |
+| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
+| [12300110](../errorcode-account.md#12300110-authentication-locked) | The authentication is locked. |
+| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The authentication time out. |
+| [12300112](../errorcode-account.md#12300112-authentication-service-does-not-respond) | The authentication service is busy. |
+| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | The account authentication service does not exist. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The account authentication service works abnormally. |
+| 12300211 | Server unreachable.<br>**Applicable version:** 11 and later |
 
 **Examples**
 
@@ -318,17 +318,17 @@ Obtains the service access token of a domain account. This API uses an asynchron
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
-| [12300014](../errorcode-account.md#12300014-domain-account-not-authenticated) | The domain account is not authenticated. |
-| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Domain account not found. |
-| 12300211 | Server unreachable. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid business parameters. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid business parameters. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Domain account not found. |
+| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
+| [12300014](../errorcode-account.md#12300014-domain-account-not-authenticated) | The domain account is not authenticated. |
+| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally. |
+| 12300211 | Server unreachable. |
 
 **Examples**
 
@@ -381,16 +381,16 @@ Gets the business access token of the current domain account.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
-| [12300014](../errorcode-account.md#12300014-domain-account-not-authenticated) | The domain account is not authenticated. |
-| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Domain account not found. |
-| 12300211 | Server unreachable. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid business parameters. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid business parameters. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Domain account not found. |
+| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
+| [12300014](../errorcode-account.md#12300014-domain-account-not-authenticated) | The domain account is not authenticated. |
+| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally. |
+| 12300211 | Server unreachable. |
 
 ## getAccessToken
 
@@ -424,17 +424,17 @@ Obtains the service access token of a domain account. This API uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
-| [12300014](../errorcode-account.md#12300014-domain-account-not-authenticated) | The domain account is not authenticated. |
-| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Domain account not found. |
-| 12300211 | Server unreachable. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid business parameters. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid business parameters. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Domain account not found. |
+| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
+| [12300014](../errorcode-account.md#12300014-domain-account-not-authenticated) | The domain account is not authenticated. |
+| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally. |
+| 12300211 | Server unreachable. |
 
 **Examples**
 
@@ -490,16 +490,16 @@ Gets the business access token for the current domain account.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
-| [12300014](../errorcode-account.md#12300014-domain-account-not-authenticated) | The domain account is not authenticated. |
-| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Domain account not found. |
-| 12300211 | Server unreachable. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid business parameters. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid business parameters. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Domain account not found. |
+| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
+| [12300014](../errorcode-account.md#12300014-domain-account-not-authenticated) | The domain account is not authenticated. |
+| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally. |
+| 12300211 | Server unreachable. |
 
 ## getAccountInfo
 
@@ -530,17 +530,17 @@ Obtains information about a specified domain account. This API uses an asynchron
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
-| [12300014](../errorcode-account.md#12300014-domain-account-not-authenticated) | Not authenticated. |
-| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| 12300211 | Server unreachable. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
+| [12300014](../errorcode-account.md#12300014-domain-account-not-authenticated) | Not authenticated. |
+| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally. |
+| 12300211 | Server unreachable. |
 
 **Examples**
 
@@ -600,17 +600,17 @@ Obtains information about a specified domain account. This API uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
-| [12300014](../errorcode-account.md#12300014-domain-account-not-authenticated) | Not authenticated. |
-| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| 12300211 | Server unreachable. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
+| [12300014](../errorcode-account.md#12300014-domain-account-not-authenticated) | Not authenticated. |
+| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally. |
+| 12300211 | Server unreachable. |
 
 **Examples**
 
@@ -663,17 +663,17 @@ Checks whether a domain account exists. This API uses an asynchronous callback t
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
-| [12300014](../errorcode-account.md#12300014-domain-account-not-authenticated) | Not authenticated. |
-| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
-| 12300211 | Server unreachable. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid domainAccountInfo. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid domainAccountInfo. |
+| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
+| [12300014](../errorcode-account.md#12300014-domain-account-not-authenticated) | Not authenticated. |
+| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally. |
+| 12300211 | Server unreachable. |
 
 **Examples**
 
@@ -732,17 +732,17 @@ Checks whether a domain account exists. This API uses a promise to return the re
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
-| [12300014](../errorcode-account.md#12300014-domain-account-not-authenticated) | Not authenticated. |
-| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
-| 12300211 | Server unreachable. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid domainAccountInfo. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid domainAccountInfo. |
+| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
+| [12300014](../errorcode-account.md#12300014-domain-account-not-authenticated) | Not authenticated. |
+| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally. |
+| 12300211 | Server unreachable. |
 
 **Examples**
 
@@ -799,12 +799,12 @@ Checks whether the authentication of a domain account has expired. This API uses
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Domain account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Domain account not found. |
 
 **Examples**
 
@@ -853,10 +853,10 @@ Registers a domain plug-in.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
-| 12300201 | The domain plugin has been registered. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
+| 12300201 | The domain plugin has been registered. |
 
 **Examples**
 
@@ -912,9 +912,9 @@ Unregisters this domain plug-in.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 **Examples**
 
@@ -964,12 +964,12 @@ Updates the token of a domain account. An empty token means an invalid token. Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid token. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid token. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 **Examples**
 
@@ -1031,12 +1031,12 @@ Updates the token of a domain account. An empty token means an invalid token. Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid token. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid token. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 **Examples**
 

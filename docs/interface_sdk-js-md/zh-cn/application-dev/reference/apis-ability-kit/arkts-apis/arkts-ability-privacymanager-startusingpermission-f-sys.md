@@ -12,7 +12,9 @@ import { privacyManager } from '@kit.AbilityKit';
 function startUsingPermission(tokenID: int, permissionName: Permissions): Promise<void>
 ```
 
-系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考[on](arkts-ability-privacymanager-onactivestatechange-f-sys.md)）。使用Promise异步回调。 开始使用权限后，需要在权限使用结束时调用[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md)停止使用权限。
+系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考[on](arkts-ability-privacymanager-onactivestatechange-f-sys.md)）。使用Promise异步回调。
+
+开始使用权限后，需要在权限使用结束时调用[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md)停止使用权限。
 
 **起始版本：** 9
 
@@ -41,15 +43,15 @@ function startUsingPermission(tokenID: int, permissionName: Permissions): Promis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12100008](../errorcode-access-token.md#12100008-内存申请失败) | Out of memory. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, or the type of the specified tokenID is not of the application type. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system app. Interface caller is not a system app. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, or the type of the specified tokenID is not of the application type. |
 | [12100002](../errorcode-access-token.md#12100002-tokenid不存在) | (Deprecated in 12) The specified tokenID does not exist or refer to an application process. |
 | [12100003](../errorcode-access-token.md#12100003-权限名不存在) | The specified permission does not exist or is not a user_grant permission. |
 | [12100004](../errorcode-access-token.md#12100004-接口未配套使用) | The API is used repeatedly with the same input. It means the application specified by the tokenID has been using the specified permission. |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
+| [12100008](../errorcode-access-token.md#12100008-内存申请失败) | Out of memory. |
 
 **示例**
 
@@ -78,7 +80,9 @@ function startUsingPermission(
   ): Promise<void>
 ```
 
-系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考 [on](arkts-ability-privacymanager-onactivestatechange-f-sys.md)）。 使用Promise异步回调。 开始使用权限后，需要在权限使用结束时调用 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) 停止使用权限。
+系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考 [on](arkts-ability-privacymanager-onactivestatechange-f-sys.md)）。 使用Promise异步回调。
+
+开始使用权限后，需要在权限使用结束时调用 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) 停止使用权限。
 
 **起始版本：** 23
 
@@ -109,14 +113,14 @@ function startUsingPermission(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12100008](../errorcode-access-token.md#12100008-内存申请失败) | Out of memory. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, the type of the specified tokenID is not of the application type, or usedType is invalid. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system app. Interface caller is not a system app. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, the type of the specified tokenID is not of the application type, or usedType is invalid. |
 | [12100003](../errorcode-access-token.md#12100003-权限名不存在) | The specified permission does not exist or is not a user_grant permission. |
 | [12100004](../errorcode-access-token.md#12100004-接口未配套使用) | The API is used repeatedly with the same input. It means the application specified by the tokenID has been using the specified permission. |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
+| [12100008](../errorcode-access-token.md#12100008-内存申请失败) | Out of memory. |
 
 **示例**
 
@@ -207,7 +211,11 @@ function startUsingPermission(
    ): Promise<void>
 ```
 
-系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考 [on](arkts-ability-privacymanager-onactivestatechange-f-sys.md) ）。使用Promise异步回调。 开始使用权限后，需要在权限使用结束时调用 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) 停止使用权限。 当传入pid时，pid需要与 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) 传入的pid相同，不满足配套关系返回错误码12100004。
+系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考 [on](arkts-ability-privacymanager-onactivestatechange-f-sys.md) ）。使用Promise异步回调。
+
+开始使用权限后，需要在权限使用结束时调用 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) 停止使用权限。
+
+当传入pid时，pid需要与 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) 传入的pid相同，不满足配套关系返回错误码12100004。
 
 **起始版本：** 26.0.0
 
@@ -241,13 +249,13 @@ function startUsingPermission(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12100008](../errorcode-access-token.md#12100008-内存申请失败) | Out of memory. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, the type of the specified tokenID is not of the application type, usedType is invalid, or the enhancedIdentity in PermissionUsingOptions exceeds 48 characters. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system app. Interface caller is not a system app. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, the type of the specified tokenID is not of the application type, usedType is invalid, or the enhancedIdentity in PermissionUsingOptions exceeds 48 characters. |
 | [12100003](../errorcode-access-token.md#12100003-权限名不存在) | The specified permission does not exist or is not a user_grant permission. |
 | [12100004](../errorcode-access-token.md#12100004-接口未配套使用) | The API is used repeatedly with the same input. It means the application specified by the tokenID has been using the specified permission. |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
+| [12100008](../errorcode-access-token.md#12100008-内存申请失败) | Out of memory. |
 
 **示例**
 
@@ -348,7 +356,9 @@ function startUsingPermission(
   ): void
 ```
 
-系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考 [on](arkts-ability-privacymanager-onactivestatechange-f-sys.md) ）。使用callback异步回调。 开始使用权限后，需要在权限使用结束时调用 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) 停止使用权限。
+系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考 [on](arkts-ability-privacymanager-onactivestatechange-f-sys.md) ）。使用callback异步回调。
+
+开始使用权限后，需要在权限使用结束时调用 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) 停止使用权限。
 
 **起始版本：** 23
 
@@ -366,21 +376,21 @@ function startUsingPermission(
 | --- | --- | --- | --- |
 | tokenID | int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。 |
 | permissionName | Permissions | 是 | 需要使用的权限名称。传入无效值时返回错误码12100001。 <br>取值约束：权限名长度不能超过256个字符。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开始使用权限成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当开始使用权限成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12100008](../errorcode-access-token.md#12100008-内存申请失败) | Out of memory. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, or the type of the specified tokenID is not of the application type. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system app. Interface caller is not a system app. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, or the type of the specified tokenID is not of the application type. |
 | [12100002](../errorcode-access-token.md#12100002-tokenid不存在) | (Deprecated in 12) The specified tokenID does not exist or refer to an application process. |
 | [12100003](../errorcode-access-token.md#12100003-权限名不存在) | The specified permission does not exist or is not a user_grant permission. |
 | [12100004](../errorcode-access-token.md#12100004-接口未配套使用) | The API is used repeatedly with the same input. It means the application specified by the tokenID has been using the specified permission. |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
+| [12100008](../errorcode-access-token.md#12100008-内存申请失败) | Out of memory. |
 
 **示例**
 

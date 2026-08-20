@@ -20,7 +20,9 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 appEventInfos: Array<AppEventInfo>
 ```
 
-Event object group. **Atomic service API**: This parameter can be used in atomic services since API version 12.
+Event object group.
+
+**Atomic service API**: This parameter can be used in atomic services since API version 12.
 
 **Type:** Array&lt;[AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md)&gt;
 
@@ -38,7 +40,9 @@ Event object group. **Atomic service API**: This parameter can be used in atomic
 data: string[]
 ```
 
-Event data in the event package. **Atomic service API**: This parameter can be used in atomic services since API version 11.
+Event data in the event package.
+
+**Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Type:** string[]
 
@@ -56,7 +60,9 @@ Event data in the event package. **Atomic service API**: This parameter can be u
 packageId: int
 ```
 
-Event package ID, which is named from **0** in ascending order. **Atomic service API**: This parameter can be used in atomic services since API version 11.
+Event package ID, which is named from **0** in ascending order.
+
+**Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Type:** int
 
@@ -74,7 +80,9 @@ Event package ID, which is named from **0** in ascending order. **Atomic service
 row: int
 ```
 
-Number of events in the event package. **Atomic service API**: This parameter can be used in atomic services since API version 11.
+Number of events in the event package.
+
+**Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Type:** int
 
@@ -92,7 +100,9 @@ Number of events in the event package. **Atomic service API**: This parameter ca
 size: int
 ```
 
-Event size of the event package, in bytes. **Atomic service API**: This parameter can be used in atomic services since API version 11.
+Event size of the event package, in bytes.
+
+**Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Type:** int
 

@@ -1,6 +1,10 @@
-# AtomicServiceTabs(Provides an advanced struct of tabs for atomic services)
+# AtomicServiceTabs
 
-AtomicServiceTabs高级组件，对Tabs组件中不需要暴露给用户进行自定义的属性进行简化，限制最多显示5个页签，固定页签的样式、位置和大小。 &gt; **说明：** &gt; &gt; 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+AtomicServiceTabs高级组件，对Tabs组件中不需要暴露给用户进行自定义的属性进行简化，限制最多显示5个页签，固定页签的样式、位置和大小。
+
+> **说明：**
+> 
+> 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **起始版本：** 12
 

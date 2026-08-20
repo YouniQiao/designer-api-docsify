@@ -2,6 +2,8 @@
 
 定义懒加载垂直瀑布流布局组件。
 
+@interface LazyVWaterFlowLayoutInterface
+
 **起始版本：** 26.0.0
 
 <!--Device-unnamed-export interface LazyVWaterFlowLayoutInterface--><!--Device-unnamed-export interface LazyVWaterFlowLayoutInterface-End-->
@@ -36,5 +38,5 @@ import { LazyVWaterFlowLayout, LazyVWaterFlowLayoutAttribute, LazyWaterFlowLayou
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyVWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-c.md) |  |
+| [LazyVWaterFlowLayoutAttribute](../../apis-default/arkts-apis/arkts-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) |  |
 

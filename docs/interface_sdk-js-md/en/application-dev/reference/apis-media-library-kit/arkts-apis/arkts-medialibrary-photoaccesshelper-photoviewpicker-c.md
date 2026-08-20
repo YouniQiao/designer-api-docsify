@@ -20,7 +20,11 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>
 ```
 
-Starts a **photoPicker** page for the user to select one or more images or videos. This API uses a promise to return the result. You can pass in **PhotoSelectOptions** to specify the type and maximum number of the files to select. A **PhotoSelectResult** object is returned. &gt; **NOTE：**&gt; &gt; **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used &gt; only by calling &gt; [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets) &gt; . For details, see &gt; [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
+Starts a **photoPicker** page for the user to select one or more images or videos. This API uses a promise to return the result. You can pass in **PhotoSelectOptions** to specify the type and maximum number of the files to select. A **PhotoSelectResult** object is returned.
+
+> **NOTE：**
+> 
+> **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used &gt; only by calling &gt; [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets) &gt; . For details, see &gt; [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
 **Since:** 26.0.0
 
@@ -47,8 +51,8 @@ Starts a **photoPicker** page for the user to select one or more images or video
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameters validate failed, possible causes: <br>1. An illegal enumeration value was passed to PhotoSelectOptions.globalMovingPhotoState. Only MOVING_PHOTO_ENABLED and MOVING_PHOTO_DISABLED are supported for configuration; <br>2. An illegal enumeration value was passed to PhotoSelectOptions.assetCompatibleAbility.<br>**Applicable version:** 12 and later |
 | 13900042 | Unknown error |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameters validate failed, possible causes: <br>1. An illegal enumeration value was passed to PhotoSelectOptions.globalMovingPhotoState. Only MOVING_PHOTO_ENABLED and MOVING_PHOTO_DISABLED are supported for configuration; <br>2. An illegal enumeration value was passed to PhotoSelectOptions.assetCompatibleAbility.<br>**Applicable version:** 12 and later |
 
 ## select
 
@@ -56,7 +60,11 @@ Starts a **photoPicker** page for the user to select one or more images or video
 select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): void
 ```
 
-Starts a **photoPicker** page for the user to select one or more images or videos. This API uses an asynchronous callback to return the result. You can pass in **PhotoSelectOptions** to specify the media file type and the maximum number of files to select. &gt; **NOTE：**&gt; &gt; **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used &gt; only by calling &gt; [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets) &gt; . For details, see &gt; [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
+Starts a **photoPicker** page for the user to select one or more images or videos. This API uses an asynchronous callback to return the result. You can pass in **PhotoSelectOptions** to specify the media file type and the maximum number of files to select.
+
+> **NOTE：**
+> 
+> **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used &gt; only by calling &gt; [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets) &gt; . For details, see &gt; [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
 **Since:** 26.0.0
 
@@ -78,8 +86,8 @@ Starts a **photoPicker** page for the user to select one or more images or video
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameters validate failed, possible causes: <br>1. An illegal enumeration value was passed to PhotoSelectOptions.globalMovingPhotoState. Only MOVING_PHOTO_ENABLED and MOVING_PHOTO_DISABLED are supported for configuration;<br>**Applicable version:** 12 and later |
 | 13900042 | Unknown error |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameters validate failed, possible causes: <br>1. An illegal enumeration value was passed to PhotoSelectOptions.globalMovingPhotoState. Only MOVING_PHOTO_ENABLED and MOVING_PHOTO_DISABLED are supported for configuration;<br>**Applicable version:** 12 and later |
 
 ## select
 
@@ -87,7 +95,11 @@ Starts a **photoPicker** page for the user to select one or more images or video
 select(callback: AsyncCallback<PhotoSelectResult>): void
 ```
 
-Starts a **photoPicker** page for the user to select one or more images or videos. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used &gt; only by calling &gt; [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets) &gt; . For details, see &gt; [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
+Starts a **photoPicker** page for the user to select one or more images or videos. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used &gt; only by calling &gt; [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets) &gt; . For details, see &gt; [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
 **Since:** 26.0.0
 

@@ -2,6 +2,8 @@
 
 Round rect.
 
+@interface RRect
+
 **Since:** 23
 
 <!--Device-windowAnimationManager-export interface RRect--><!--Device-windowAnimationManager-export interface RRect-End-->

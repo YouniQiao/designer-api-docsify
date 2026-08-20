@@ -6,7 +6,9 @@
 const ADDRESS_SANITIZER: string
 ```
 
-应用地址越界事件。系统事件名称常量。 **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
+应用地址越界事件。系统事件名称常量。
+
+**原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -22,7 +24,9 @@ const ADDRESS_SANITIZER: string
 const APP_CRASH: string
 ```
 
-应用崩溃事件。系统事件名称常量。 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
+应用崩溃事件。系统事件名称常量。
+
+**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -38,7 +42,9 @@ const APP_CRASH: string
 const APP_FREEZE: string
 ```
 
-应用冻屏事件。系统事件名称常量。 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
+应用冻屏事件。系统事件名称常量。
+
+**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -54,7 +60,9 @@ const APP_FREEZE: string
 const APP_HICOLLIE: string
 ```
 
-应用任务执行超时事件。系统事件名称常量。 **原子化服务API：** 从API version 21开始，该参数支持在原子化服务中使用。
+应用任务执行超时事件。系统事件名称常量。
+
+**原子化服务API：** 从API version 21开始，该参数支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -70,7 +78,9 @@ const APP_HICOLLIE: string
 const APP_KILLED: string
 ```
 
-应用终止事件。系统事件名称常量。 **原子化服务API：** 从API version 20开始，该参数支持在原子化服务中使用。
+应用终止事件。系统事件名称常量。
+
+**原子化服务API：** 从API version 20开始，该参数支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -86,7 +96,9 @@ const APP_KILLED: string
 const APP_LAUNCH: string
 ```
 
-应用启动耗时事件。系统事件名称常量。 **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
+应用启动耗时事件。系统事件名称常量。
+
+**原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -102,7 +114,9 @@ const APP_LAUNCH: string
 const AUDIO_JANK_FRAME: string
 ```
 
-应用音频卡顿事件。系统事件名称常量。 **原子化服务API：** 从API version 21开始，该参数支持在原子化服务中使用。
+应用音频卡顿事件。系统事件名称常量。
+
+**原子化服务API：** 从API version 21开始，该参数支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -118,7 +132,9 @@ const AUDIO_JANK_FRAME: string
 const BATTERY_USAGE: string
 ```
 
-应用24h功耗器件分解统计事件。系统事件名称常量。 **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
+应用24h功耗器件分解统计事件。系统事件名称常量。
+
+**原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -134,7 +150,9 @@ const BATTERY_USAGE: string
 const CPU_USAGE_HIGH: string
 ```
 
-应用CPU高负载事件。系统事件名称常量。 **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
+应用CPU高负载事件。系统事件名称常量。
+
+**原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -150,7 +168,9 @@ const CPU_USAGE_HIGH: string
 const DISTRIBUTED_SERVICE_START: string
 ```
 
-分布式服务启动事件。预留的应用事件名称常量。 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
+分布式服务启动事件。预留的应用事件名称常量。
+
+**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -166,7 +186,9 @@ const DISTRIBUTED_SERVICE_START: string
 const MAIN_THREAD_JANK: string
 ```
 
-应用主线程超时事件。系统事件名称常量。 **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
+应用主线程超时事件。系统事件名称常量。
+
+**原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -182,7 +204,9 @@ const MAIN_THREAD_JANK: string
 const RESOURCE_OVERLIMIT: string
 ```
 
-应用资源泄漏事件。系统事件名称常量。 **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
+应用资源泄漏事件。系统事件名称常量。
+
+**原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -198,7 +222,9 @@ const RESOURCE_OVERLIMIT: string
 const SCROLL_ARKWEB_FLING_JANK: string
 ```
 
-ArkWeb抛滑丢帧事件。系统事件名称常量。 **原子化服务API：** 从API version 23开始，该参数支持在原子化服务中使用。
+ArkWeb抛滑丢帧事件。系统事件名称常量。
+
+**原子化服务API：** 从API version 23开始，该参数支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -214,7 +240,9 @@ ArkWeb抛滑丢帧事件。系统事件名称常量。 **原子化服务API：**
 const SCROLL_JANK: string
 ```
 
-应用滑动丢帧事件。系统事件名称常量。 **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
+应用滑动丢帧事件。系统事件名称常量。
+
+**原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -230,7 +258,9 @@ const SCROLL_JANK: string
 const USER_LOGIN: string
 ```
 
-用户登录事件。预留的应用事件名称常量。 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
+用户登录事件。预留的应用事件名称常量。
+
+**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -246,7 +276,9 @@ const USER_LOGIN: string
 const USER_LOGOUT: string
 ```
 
-用户登出事件。预留的应用事件名称常量。 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
+用户登出事件。预留的应用事件名称常量。
+
+**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
 **起始版本：** 23
 
@@ -262,7 +294,13 @@ const USER_LOGOUT: string
 const appFreezeWarning: string
 ```
 
-应用冻屏告警事件。系统事件名称常量。 26.0.0 **模型约束：** 此接口仅可在Stage模型下使用。 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+应用冻屏告警事件。系统事件名称常量。
+
+26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 26.0.0
 

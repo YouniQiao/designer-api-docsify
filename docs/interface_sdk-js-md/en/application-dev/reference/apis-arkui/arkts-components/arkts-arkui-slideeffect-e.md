@@ -2,6 +2,8 @@
 
 Slide-in and slide-out effects for page transitions.
 
+@enum { number }
+
 **Since:** 7
 
 <!--Device-unnamed-declare enum SlideEffect--><!--Device-unnamed-declare enum SlideEffect-End-->

@@ -2,6 +2,8 @@
 
 Class of the photo editor ExtensionAbility, which provides APIs for you to edit photos.
 
+@extends ExtensionAbility
+
 **Inheritance/Implementation:** PhotoEditorExtensionAbility extends ExtensionAbility
 
 **Since:** 23

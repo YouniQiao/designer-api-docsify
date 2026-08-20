@@ -21,6 +21,6 @@ typedef struct Usb_NonRootHubArray {...} Usb_NonRootHubArray
 | 名称 | 描述 |
 | -- | -- |
 | uint64_t* nonRootHubIds |  |
-| uint32_t num |  |
+| uint32_t num | 实际返回的非根集线器数量，根据数量遍历nonRootHubIds获得非根集线器设备ID。当该值为0时，表示不存在非根集线器设备。<br>**起始版本：** 26.0.0 |
 
 

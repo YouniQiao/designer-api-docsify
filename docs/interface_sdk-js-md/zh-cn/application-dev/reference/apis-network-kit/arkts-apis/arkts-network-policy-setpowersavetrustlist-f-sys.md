@@ -30,18 +30,18 @@ function setPowerSaveTrustlist(uids: Array<int>, isAllowed: boolean, callback: A
 | --- | --- | --- | --- |
 | uids | Array&lt;int&gt; | 是 | app 唯一标识符。 |
 | isAllowed | boolean | 是 | 是否加入白名单。true：加入白名单；false：没有加入白名单。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。成功返回空，失败返回错误码错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。成功返回空，失败返回错误码错误信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
 
 **示例**
 
@@ -89,12 +89,12 @@ function setPowerSaveTrustlist(uids: Array<int>, isAllowed: boolean): Promise<vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
 
 **示例**
 

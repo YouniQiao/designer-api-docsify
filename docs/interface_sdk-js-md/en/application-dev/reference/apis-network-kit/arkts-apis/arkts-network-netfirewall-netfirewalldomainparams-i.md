@@ -1,4 +1,4 @@
-# NetFirewallDomainParams(Network Firewall)
+# NetFirewallDomainParams
 
 Defines domain name parameters of a firewall rule. Currently, Chinese domain names are not supported.
 

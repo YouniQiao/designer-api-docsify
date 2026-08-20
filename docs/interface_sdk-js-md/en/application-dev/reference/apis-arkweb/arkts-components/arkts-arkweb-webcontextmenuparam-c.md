@@ -1,6 +1,12 @@
 # WebContextMenuParam
 
-WebContextMenuParam is a parameter class in the ArkWeb component used to carry context menu information displayed when a user long presses a web element or right-clicks. As the data carrier for the **onContextMenuShow** event callback, it encapsulates key information such as the menu popup position, link address, media type, selected text, and edit state. When customizing the context menu of a Web component, use WebContextMenuParam to obtain detailed information about the web element at the long press/right-click position (such as the link URL, image content, media type, input field type, and edit state), determine the user operation scenario, and decide whether to intercept the default menu and build custom menu items. When customizing the long press or right-click menu of a Web component (such as replacing the default menu, providing differentiated menu items based on element types, or previewing images), use WebContextMenuParam in the **onContextMenuShow** event callback to obtain context information. For sample code, see [onContextMenuShow](arkts-arkweb-web-attribute.md#oncontextmenushow).
+WebContextMenuParam is a parameter class in the ArkWeb component used to carry context menu information displayed when a user long presses a web element or right-clicks. As the data carrier for the **onContextMenuShow** event callback, it encapsulates key information such as the menu popup position, link address, media type, selected text, and edit state.
+
+When customizing the context menu of a Web component, use WebContextMenuParam to obtain detailed information about the web element at the long press/right-click position (such as the link URL, image content, media type, input field type, and edit state), determine the user operation scenario, and decide whether to intercept the default menu and build custom menu items.
+
+When customizing the long press or right-click menu of a Web component (such as replacing the default menu, providing differentiated menu items based on element types, or previewing images), use WebContextMenuParam in the **onContextMenuShow** event callback to obtain context information.
+
+For sample code, see [onContextMenuShow](arkts-arkweb-web-attribute.md#oncontextmenushow).
 
 **Since:** 9
 
@@ -126,7 +132,11 @@ Obtains the input field type of the web element (such as text box, password box,
 getLinkUrl(): string
 ```
 
-Obtains the URL link address that has passed the security check. This can be used to provide operations such as " Open Link", "Share Link", and "Copy Link" when building a custom menu. &gt; **NOTE：**&gt; &gt; Compared with getUnfilteredLinkUrl(), this method performs a security check on the URL. Compared with &gt; getSourceUrl(), this method obtains the link URL at the long press position, whereas getSourceUrl() obtains the &gt; URL of the **src** attribute of the selected element (such as images, media, and other resources).
+Obtains the URL link address that has passed the security check. This can be used to provide operations such as " Open Link", "Share Link", and "Copy Link" when building a custom menu.
+
+> **NOTE：**
+> 
+> Compared with getUnfilteredLinkUrl(), this method performs a security check on the URL. Compared with &gt; getSourceUrl(), this method obtains the link URL at the long press position, whereas getSourceUrl() obtains the &gt; URL of the **src** attribute of the selected element (such as images, media, and other resources).
 
 **Since:** 9
 
@@ -148,7 +158,11 @@ Obtains the URL link address that has passed the security check. This can be use
 getMediaType(): ContextMenuMediaType
 ```
 
-Obtains the media type of the web element. &gt; **NOTE：**&gt; &gt; Since API version 22, [getContextMenuMediaType](#getcontextmenumediatype) provides &gt; richer media type identification capabilities.
+Obtains the media type of the web element.
+
+> **NOTE：**
+> 
+> Since API version 22, [getContextMenuMediaType](#getcontextmenumediatype) provides &gt; richer media type identification capabilities.
 
 **Since:** 9
 

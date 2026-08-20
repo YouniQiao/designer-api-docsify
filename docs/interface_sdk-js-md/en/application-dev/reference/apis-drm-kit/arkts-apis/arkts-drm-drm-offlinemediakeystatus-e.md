@@ -1,4 +1,4 @@
-# OfflineMediaKeyStatus(Defines the DRM capability.)
+# OfflineMediaKeyStatus
 
 Enumerates the statuses of offline media keys.
 

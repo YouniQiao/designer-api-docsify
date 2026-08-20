@@ -12,7 +12,9 @@ import { bundleManager } from '@kit.AbilityKit';
 function queryAbilityInfo(want: Want, abilityFlags: int, callback: AsyncCallback<Array<AbilityInfo>>): void
 ```
 
-根据给定的want和abilityFlags获取一个或多个AbilityInfo。使用callback异步回调。 获取调用方自身的信息时不需要权限。
+根据给定的want和abilityFlags获取一个或多个AbilityInfo。使用callback异步回调。
+
+获取调用方自身的信息时不需要权限。
 
 **起始版本：** 23
 
@@ -30,19 +32,19 @@ function queryAbilityInfo(want: Want, abilityFlags: int, callback: AsyncCallback
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 表示包含要查询的应用Bundle名称的Want。 |
 | abilityFlags | int | 是 | 指定返回的AbilityInfo所包含的信息，具体取值及不同含义参考[AbilityFlag](arkts-ability-bundlemanager-abilityflag-e-sys.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AbilityInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为 undefined，data为获取到的Array&lt;AbilityInfo&gt;；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;AbilityInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)，当获取成功时，err为 undefined，data为获取到的Array&lt;AbilityInfo&gt;；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
-| [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) | The specified ability is disabled. |
-| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability is not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
+| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability is not found. |
+| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
+| [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) | The specified ability is disabled. |
 
 **示例**
 
@@ -79,7 +81,9 @@ try {
 function queryAbilityInfo(want: Want, abilityFlags: int, userId: int, callback: AsyncCallback<Array<AbilityInfo>>): void
 ```
 
-根据给定的want、abilityFlags和userId获取多个AbilityInfo。使用callback异步回调。 获取调用方自身的信息时不需要权限。
+根据给定的want、abilityFlags和userId获取多个AbilityInfo。使用callback异步回调。
+
+获取调用方自身的信息时不需要权限。
 
 **起始版本：** 23
 
@@ -98,20 +102,20 @@ function queryAbilityInfo(want: Want, abilityFlags: int, userId: int, callback: 
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 表示包含要查询的应用Bundle名称的Want。 |
 | abilityFlags | int | 是 | 指定返回的AbilityInfo所包含的信息，具体取值及不同含义参考[AbilityFlag](arkts-ability-bundlemanager-abilityflag-e-sys.md)。 |
 | userId | int | 是 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AbilityInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为 undefined，data为获取到的Array&lt;AbilityInfo&gt;；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;AbilityInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)，当获取成功时，err为 undefined，data为获取到的Array&lt;AbilityInfo&gt;；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
-| [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) | The specified ability is disabled. |
-| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified userId is invalid. |
-| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability is not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
+| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability is not found. |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified userId is invalid. |
+| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
+| [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) | The specified ability is disabled. |
 
 **示例**
 
@@ -149,7 +153,9 @@ try {
 function queryAbilityInfo(want: Want, abilityFlags: int, userId?: int): Promise<Array<AbilityInfo>>
 ```
 
-根据给定的want、abilityFlags和userId获取一个或多个AbilityInfo。使用Promise异步回调。 获取调用方自身的信息时不需要权限。
+根据给定的want、abilityFlags和userId获取一个或多个AbilityInfo。使用Promise异步回调。
+
+获取调用方自身的信息时不需要权限。
 
 **起始版本：** 23
 
@@ -179,14 +185,14 @@ function queryAbilityInfo(want: Want, abilityFlags: int, userId?: int): Promise<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
-| [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) | The specified ability is disabled. |
-| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified userId is invalid. |
-| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability is not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
+| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability is not found. |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified userId is invalid. |
+| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
+| [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) | The specified ability is disabled. |
 
 **示例**
 
@@ -303,7 +309,9 @@ try {
 function queryAbilityInfo(wants: Array<Want>, abilityFlags: int, userId?: int): Promise<Array<AbilityInfo>>
 ```
 
-根据给定的want列表、abilityFlags和userId获取一个或多个AbilityInfo。使用Promise异步回调。 获取调用方自身的信息时不需要权限。
+根据给定的want列表、abilityFlags和userId获取一个或多个AbilityInfo。使用Promise异步回调。
+
+获取调用方自身的信息时不需要权限。
 
 **起始版本：** 23
 
@@ -333,14 +341,14 @@ function queryAbilityInfo(wants: Array<Want>, abilityFlags: int, userId?: int): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
-| [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) | The specified ability is disabled. |
-| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified userId is invalid. |
-| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability is not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
+| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability is not found. |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified userId is invalid. |
+| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
+| [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) | The specified ability is disabled. |
 
 **示例**
 

@@ -51,11 +51,11 @@ Adds extended resources based on the specified bundle name and HSP file path. Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700301](../errorcode-bundle.md#17700301-failed-to-add-extended-resources) | AddExtResource failed due to parse file failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
+| [17700301](../errorcode-bundle.md#17700301-failed-to-add-extended-resources) | AddExtResource failed due to parse file failed. |
 
 **Examples**
 
@@ -117,13 +117,13 @@ Creates an application clone. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The appIndex is not in valid range or already exists. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_CLONE_BUNDLE'. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
-| [17700069](../errorcode-bundle.md#17700069-application-clone-is-not-supported) | The app does not support the creation of an appClone instance. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The appIndex is not in valid range or already exists. |
+| [17700069](../errorcode-bundle.md#17700069-application-clone-is-not-supported) | The app does not support the creation of an appClone instance. |
 
 **Examples**
 
@@ -190,12 +190,12 @@ Destroys an application clone. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.UNINSTALL_CLONE_BUNDLE'. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
 
 **Examples**
 
@@ -260,13 +260,13 @@ Destroys an application clone. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700062](../errorcode-bundle.md#17700062-failed-to-uninstall-an-application-configured-with-an-uninstallation-disposed-rule) | Failed to uninstall the app because the app is locked. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.UNINSTALL_CLONE_BUNDLE'. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
+| [17700062](../errorcode-bundle.md#17700062-failed-to-uninstall-an-application-configured-with-an-uninstallation-disposed-rule) | Failed to uninstall the app because the app is locked. |
 
 **Examples**
 
@@ -339,12 +339,12 @@ Destroy clone instance for an application.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700062](../errorcode-bundle.md#17700062-failed-to-uninstall-an-application-configured-with-an-uninstallation-disposed-rule) | Failed to uninstall the app because the app is locked. |
-| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.UNINSTALL_CLONE_BUNDLE'. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
+| [17700062](../errorcode-bundle.md#17700062-failed-to-uninstall-an-application-configured-with-an-uninstallation-disposed-rule) | Failed to uninstall the app because the app is locked. |
 
 ## install
 
@@ -352,7 +352,11 @@ Destroy clone instance for an application.
 install(hapFilePaths: Array<string>, installParam: InstallParam, callback: AsyncCallback<void>): void
 ```
 
-Installs an application. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; To install applications of different distribution types, the appropriate permissions must be requested. For &gt; details on distribution types, see the **appDistributionType** field in &gt; [ApplicationInfo](arkts-ability-applicationinfo-i.md).
+Installs an application. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> To install applications of different distribution types, the appropriate permissions must be requested. For &gt; details on distribution types, see the **appDistributionType** field in &gt; [ApplicationInfo](arkts-ability-applicationinfo-i.md).
 
 **Since:** 23
 
@@ -380,34 +384,34 @@ Installs an application. This API uses an asynchronous callback to return the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
-| [17700044](../errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
-| [17700042](../errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
-| [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
-| [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.INSTALL_ENTERPRISE_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE' or 'ohos.permission.INSTALL_INTERNALTESTING_BUNDLE' or ('ohos.permission.INSTALL_BUNDLE' and 'ohos.permission.INSTALL_ALLOW_DOWNGRADE'). |
-| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-inter-application-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700036](../errorcode-bundle.md#17700036-failure-in-installing-the-shared-library-because-of-no-allowappsharelibrary-privilege) | Failed to install the HSP because lacks appropriate permissions. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3000. |
-| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because the device has been controlled.<br>**Applicable version:** 12 and later |
-| [17700054](../errorcode-bundle.md#17700054-bundle-installation-failure-due-to-permission-verification-failure) | Failed to install the HAP because the HAP requests wrong permissions.<br>**Applicable version:** 11 and later |
-| [17700052](../errorcode-bundle.md#17700052-installation-of-debugging-applications-allowed-only-in-developer-mode) | Failed to install the HAP because debug bundle cannot be installed under non -developer mode.<br>**Applicable version:** 11 and later |
-| [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device.<br>**Applicable version:** 10 and later |
-| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed.<br>**Applicable version:** 10 and later |
-| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
-| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
-| [17700076](../errorcode-bundle.md#17700076-application-installation-failure-due-to-unsupported-distribution-type-in-the-signing-certificate-profile) | Failed to install the HAP or HSP because the app distribution type is not allowed.<br>**Applicable version:** 18 and later |
-| [17700077](../errorcode-bundle.md#17700077-application-installation-fails-but-preinstallation-is-successful) | Failed to install the HAP and restore to preinstalled bundle.<br>**Applicable version:** 17 and later |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 | [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
 | [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
-| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same <br>bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
-| [17700066](../errorcode-bundle.md#17700066-failed-to-install-the-native-software-package) | Failed to install the HAP because installing the native package failed.<br>**Applicable version:** 12 and later |
-| [17700031](../errorcode-bundle.md#17700031-hap-installation-fails-due-to-overlay-feature-verification-failure) | Failed to install the HAP because the overlay check of the HAP is failed. |
-| [17700018](../errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
+| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
+| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
 | [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
 | [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
+| [17700018](../errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
+| [17700031](../errorcode-bundle.md#17700031-hap-installation-fails-due-to-overlay-feature-verification-failure) | Failed to install the HAP because the overlay check of the HAP is failed. |
+| [17700036](../errorcode-bundle.md#17700036-failure-in-installing-the-shared-library-because-of-no-allowappsharelibrary-privilege) | Failed to install the HSP because lacks appropriate permissions. |
+| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-inter-application-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
+| [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
+| [17700042](../errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
+| [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
+| [17700044](../errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
+| [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
+| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed.<br>**Applicable version:** 10 and later |
+| [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device.<br>**Applicable version:** 10 and later |
+| [17700052](../errorcode-bundle.md#17700052-installation-of-debugging-applications-allowed-only-in-developer-mode) | Failed to install the HAP because debug bundle cannot be installed under non -developer mode.<br>**Applicable version:** 11 and later |
+| [17700054](../errorcode-bundle.md#17700054-bundle-installation-failure-due-to-permission-verification-failure) | Failed to install the HAP because the HAP requests wrong permissions.<br>**Applicable version:** 11 and later |
+| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because the device has been controlled.<br>**Applicable version:** 12 and later |
+| [17700066](../errorcode-bundle.md#17700066-failed-to-install-the-native-software-package) | Failed to install the HAP because installing the native package failed.<br>**Applicable version:** 12 and later |
+| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same <br>bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
+| [17700077](../errorcode-bundle.md#17700077-application-installation-fails-but-preinstallation-is-successful) | Failed to install the HAP and restore to preinstalled bundle.<br>**Applicable version:** 17 and later |
+| [17700076](../errorcode-bundle.md#17700076-application-installation-failure-due-to-unsupported-distribution-type-in-the-signing-certificate-profile) | Failed to install the HAP or HSP because the app distribution type is not allowed.<br>**Applicable version:** 18 and later |
 
 **Examples**
 
@@ -446,7 +450,11 @@ try {
 install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-Installs an application. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; To install applications of different distribution types, the appropriate permissions must be requested. For &gt; details on distribution types, see the **appDistributionType** field in &gt; [ApplicationInfo](arkts-ability-applicationinfo-i.md).
+Installs an application. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> To install applications of different distribution types, the appropriate permissions must be requested. For &gt; details on distribution types, see the **appDistributionType** field in &gt; [ApplicationInfo](arkts-ability-applicationinfo-i.md).
 
 **Since:** 23
 
@@ -473,33 +481,33 @@ Installs an application. This API uses an asynchronous callback to return the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
-| [17700044](../errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
-| [17700042](../errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
-| [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
-| [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.INSTALL_ENTERPRISE_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE' or 'ohos.permission.INSTALL_INTERNALTESTING_BUNDLE' or ('ohos.permission.INSTALL_BUNDLE' and 'ohos.permission.INSTALL_ALLOW_DOWNGRADE'). |
-| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-inter-application-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700036](../errorcode-bundle.md#17700036-failure-in-installing-the-shared-library-because-of-no-allowappsharelibrary-privilege) | Failed to install the HSP because lacks appropriate permissions. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because the device has been controlled.<br>**Applicable version:** 12 and later |
-| [17700054](../errorcode-bundle.md#17700054-bundle-installation-failure-due-to-permission-verification-failure) | Failed to install the HAP because the HAP requests wrong permissions.<br>**Applicable version:** 11 and later |
-| [17700052](../errorcode-bundle.md#17700052-installation-of-debugging-applications-allowed-only-in-developer-mode) | Failed to install the HAP because debug bundle cannot be installed under non -developer mode.<br>**Applicable version:** 11 and later |
-| [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device.<br>**Applicable version:** 10 and later |
-| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed.<br>**Applicable version:** 10 and later |
-| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
-| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
-| [17700076](../errorcode-bundle.md#17700076-application-installation-failure-due-to-unsupported-distribution-type-in-the-signing-certificate-profile) | Failed to install the HAP or HSP because the app distribution type is not allowed.<br>**Applicable version:** 18 and later |
-| [17700077](../errorcode-bundle.md#17700077-application-installation-fails-but-preinstallation-is-successful) | Failed to install the HAP and restore to preinstalled bundle.<br>**Applicable version:** 17 and later |
 | [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
 | [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
-| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same <br>bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
-| [17700066](../errorcode-bundle.md#17700066-failed-to-install-the-native-software-package) | Failed to install the HAP because installing the native package failed.<br>**Applicable version:** 12 and later |
-| [17700031](../errorcode-bundle.md#17700031-hap-installation-fails-due-to-overlay-feature-verification-failure) | Failed to install the HAP because the overlay check of the HAP is failed. |
-| [17700018](../errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
+| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
+| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
 | [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
 | [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
+| [17700018](../errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
+| [17700031](../errorcode-bundle.md#17700031-hap-installation-fails-due-to-overlay-feature-verification-failure) | Failed to install the HAP because the overlay check of the HAP is failed. |
+| [17700036](../errorcode-bundle.md#17700036-failure-in-installing-the-shared-library-because-of-no-allowappsharelibrary-privilege) | Failed to install the HSP because lacks appropriate permissions. |
+| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-inter-application-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
+| [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
+| [17700042](../errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
+| [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
+| [17700044](../errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
+| [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
+| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed.<br>**Applicable version:** 10 and later |
+| [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device.<br>**Applicable version:** 10 and later |
+| [17700052](../errorcode-bundle.md#17700052-installation-of-debugging-applications-allowed-only-in-developer-mode) | Failed to install the HAP because debug bundle cannot be installed under non -developer mode.<br>**Applicable version:** 11 and later |
+| [17700054](../errorcode-bundle.md#17700054-bundle-installation-failure-due-to-permission-verification-failure) | Failed to install the HAP because the HAP requests wrong permissions.<br>**Applicable version:** 11 and later |
+| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because the device has been controlled.<br>**Applicable version:** 12 and later |
+| [17700066](../errorcode-bundle.md#17700066-failed-to-install-the-native-software-package) | Failed to install the HAP because installing the native package failed.<br>**Applicable version:** 12 and later |
+| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same <br>bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
+| [17700077](../errorcode-bundle.md#17700077-application-installation-fails-but-preinstallation-is-successful) | Failed to install the HAP and restore to preinstalled bundle.<br>**Applicable version:** 17 and later |
+| [17700076](../errorcode-bundle.md#17700076-application-installation-failure-due-to-unsupported-distribution-type-in-the-signing-certificate-profile) | Failed to install the HAP or HSP because the app distribution type is not allowed.<br>**Applicable version:** 18 and later |
 
 **Examples**
 
@@ -533,7 +541,11 @@ try {
 install(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 ```
 
-Installs an application. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; To install applications of different distribution types, the appropriate permissions must be requested. For &gt; details on distribution types, see the **appDistributionType** field in &gt; [ApplicationInfo](arkts-ability-applicationinfo-i.md).
+Installs an application. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> To install applications of different distribution types, the appropriate permissions must be requested. For &gt; details on distribution types, see the **appDistributionType** field in &gt; [ApplicationInfo](arkts-ability-applicationinfo-i.md).
 
 **Since:** 23
 
@@ -566,34 +578,34 @@ Installs an application. This API uses a promise to return the result. &gt; **NO
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
-| [17700044](../errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
-| [17700042](../errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
-| [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
-| [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.INSTALL_ENTERPRISE_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE' or 'ohos.permission.INSTALL_INTERNALTESTING_BUNDLE' or ('ohos.permission.INSTALL_BUNDLE' and 'ohos.permission.INSTALL_ALLOW_DOWNGRADE'). |
-| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-inter-application-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700036](../errorcode-bundle.md#17700036-failure-in-installing-the-shared-library-because-of-no-allowappsharelibrary-privilege) | Failed to install the HSP because lacks appropriate permissions. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3000. |
-| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because the device has been controlled.<br>**Applicable version:** 12 and later |
-| [17700054](../errorcode-bundle.md#17700054-bundle-installation-failure-due-to-permission-verification-failure) | Failed to install the HAP because the HAP requests wrong permissions.<br>**Applicable version:** 11 and later |
-| [17700052](../errorcode-bundle.md#17700052-installation-of-debugging-applications-allowed-only-in-developer-mode) | Failed to install the HAP because debug bundle cannot be installed under non -developer mode.<br>**Applicable version:** 11 and later |
-| [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device.<br>**Applicable version:** 10 and later |
-| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed.<br>**Applicable version:** 10 and later |
-| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
-| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
-| [17700076](../errorcode-bundle.md#17700076-application-installation-failure-due-to-unsupported-distribution-type-in-the-signing-certificate-profile) | Failed to install the HAP or HSP because the app distribution type is not allowed.<br>**Applicable version:** 18 and later |
-| [17700077](../errorcode-bundle.md#17700077-application-installation-fails-but-preinstallation-is-successful) | Failed to install the HAP and restore to preinstalled bundle.<br>**Applicable version:** 17 and later |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 | [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
 | [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
-| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same <br>bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
-| [17700066](../errorcode-bundle.md#17700066-failed-to-install-the-native-software-package) | Failed to install the HAP because installing the native package failed.<br>**Applicable version:** 12 and later |
-| [17700031](../errorcode-bundle.md#17700031-hap-installation-fails-due-to-overlay-feature-verification-failure) | Failed to install the HAP because the overlay check of the HAP is failed. |
-| [17700018](../errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
+| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
+| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
 | [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
 | [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
+| [17700018](../errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
+| [17700031](../errorcode-bundle.md#17700031-hap-installation-fails-due-to-overlay-feature-verification-failure) | Failed to install the HAP because the overlay check of the HAP is failed. |
+| [17700036](../errorcode-bundle.md#17700036-failure-in-installing-the-shared-library-because-of-no-allowappsharelibrary-privilege) | Failed to install the HSP because lacks appropriate permissions. |
+| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-inter-application-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
+| [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
+| [17700042](../errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
+| [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
+| [17700044](../errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
+| [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
+| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed.<br>**Applicable version:** 10 and later |
+| [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device.<br>**Applicable version:** 10 and later |
+| [17700052](../errorcode-bundle.md#17700052-installation-of-debugging-applications-allowed-only-in-developer-mode) | Failed to install the HAP because debug bundle cannot be installed under non -developer mode.<br>**Applicable version:** 11 and later |
+| [17700054](../errorcode-bundle.md#17700054-bundle-installation-failure-due-to-permission-verification-failure) | Failed to install the HAP because the HAP requests wrong permissions.<br>**Applicable version:** 11 and later |
+| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because the device has been controlled.<br>**Applicable version:** 12 and later |
+| [17700066](../errorcode-bundle.md#17700066-failed-to-install-the-native-software-package) | Failed to install the HAP because installing the native package failed.<br>**Applicable version:** 12 and later |
+| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same <br>bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
+| [17700077](../errorcode-bundle.md#17700077-application-installation-fails-but-preinstallation-is-successful) | Failed to install the HAP and restore to preinstalled bundle.<br>**Applicable version:** 17 and later |
+| [17700076](../errorcode-bundle.md#17700076-application-installation-failure-due-to-unsupported-distribution-type-in-the-signing-certificate-profile) | Failed to install the HAP or HSP because the app distribution type is not allowed.<br>**Applicable version:** 18 and later |
 
 **Examples**
 
@@ -661,24 +673,24 @@ Installs a plugin for an application. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the plugin because they have different configuration information. |
-| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the plugin because the HSP path is invalid or the HSP is too large. |
-| [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the plugin because the plugin fails to be parsed. |
-| [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the plugin because the plugin signature fails to be verified. |
-| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the plugin because a plugin with the same <br>bundle name but different signature information exists on the device. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_PLUGIN_BUNDLE'. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified hostBundleName cannot be found or the bundle is not installed by the specified user. |
-| [17700090](../errorcode-bundle.md#17700090-plugin-installation-failure-because-of-plugin-id-verification-failure) | Failed to install the plugin because the plugin id fails to be verified. |
-| [17700091](../errorcode-bundle.md#17700091-plugin-installation-failure-because-of-the-same-plugin-name-and-host-bundle-name) | Failed to install the plugin because the plugin name is same as host bundle name. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
+| [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the plugin because the plugin fails to be parsed. |
+| [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the plugin because the plugin signature fails to be verified. |
+| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the plugin because the HSP path is invalid or the HSP is too large. |
+| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the plugin because they have different configuration information. |
+| [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the plugin because of insufficient system disk space. |
+| [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the plugin since the version of the plugin to install is too early. |
+| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the plugin because the code signature verification is failed. |
+| [17700052](../errorcode-bundle.md#17700052-installation-of-debugging-applications-allowed-only-in-developer-mode) | Failed to install the plugin because debug bundle cannot be installed under non-developer mode. |
+| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the plugin because a plugin with the same <br>bundle name but different signature information exists on the device. |
+| [17700087](../errorcode-bundle.md#17700087-unsupported-plugin-installation) | Failed to install the plugin because the current device does not support plugin. |
 | [17700088](../errorcode-bundle.md#17700088-plugin-installation-failure-due-to-no-permission) | Failed to install the plugin because the host application lacks ohos.permission.kernel.SUPPORT_PLUGIN. |
 | [17700089](../errorcode-bundle.md#17700089-plugin-installation-failure-because-of-plugin-id-parsing-failure) | Failed to install the plugin because the plugin id fails to be parsed. |
-| [17700087](../errorcode-bundle.md#17700087-unsupported-plugin-installation) | Failed to install the plugin because the current device does not support plugin. |
-| [17700052](../errorcode-bundle.md#17700052-installation-of-debugging-applications-allowed-only-in-developer-mode) | Failed to install the plugin because debug bundle cannot be installed under non-developer mode. |
-| [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the plugin because of insufficient system disk space. |
-| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the plugin because the code signature verification is failed. |
-| [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the plugin since the version of the plugin to install is too early. |
+| [17700090](../errorcode-bundle.md#17700090-plugin-installation-failure-because-of-plugin-id-verification-failure) | Failed to install the plugin because the plugin id fails to be verified. |
+| [17700091](../errorcode-bundle.md#17700091-plugin-installation-failure-because-of-the-same-plugin-name-and-host-bundle-name) | Failed to install the plugin because the plugin name is same as host bundle name. |
 
 **Examples**
 
@@ -715,7 +727,11 @@ try {
 installPreexistingApp(bundleName: string, userId?: int): Promise<void>
 ```
 
-Installs an application. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API does not support the installation of applications whose &gt; [distribution type of the application signing certificate](arkts-ability-applicationinfo-i.md) &gt; is set to **enterprise**, **enterprise_mdm**, or **enterprise_normal**.
+Installs an application. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API does not support the installation of applications whose &gt; [distribution type of the application signing certificate](arkts-ability-applicationinfo-i.md) &gt; is set to **enterprise**, **enterprise_mdm**, or **enterprise_normal**.
 
 **Since:** 23
 
@@ -744,13 +760,13 @@ Installs an application. This API uses a promise to return the result. &gt; **NO
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited <br>from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE'. |
-| [17700071](../errorcode-bundle.md#17700071-enterprise-applications-cannot-be-installed) | It is not allowed to install the enterprise bundle. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
+| [17700071](../errorcode-bundle.md#17700071-enterprise-applications-cannot-be-installed) | It is not allowed to install the enterprise bundle. |
+| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited <br>from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
 
 **Examples**
 
@@ -808,13 +824,13 @@ Rolls back an application to the initial installation state. This API uses an as
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited <br>from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
-| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same <br>bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.RECOVER_BUNDLE'. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
+| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same <br>bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
+| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited <br>from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
 
 **Examples**
 
@@ -876,12 +892,12 @@ Rolls back an application to the initial installation state. This API uses an as
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited <br>from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
-| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same <br>bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.RECOVER_BUNDLE'. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same <br>bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
+| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited <br>from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
 
 **Examples**
 
@@ -944,13 +960,13 @@ Rolls back an application to the initial installation state. This API uses a pro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited <br>from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
-| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same <br>bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.RECOVER_BUNDLE'. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
+| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same <br>bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
+| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited <br>from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
 
 **Examples**
 
@@ -1017,11 +1033,11 @@ Removes extended resources based on the specified bundle name and module names. 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700302](../errorcode-bundle.md#17700302-failed-to-delete-extended-resources) | RemoveExtResource failed due to module does not exist. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
+| [17700302](../errorcode-bundle.md#17700302-failed-to-delete-extended-resources) | RemoveExtResource failed due to module does not exist. |
 
 **Examples**
 
@@ -1078,17 +1094,17 @@ Uninstalls an application. This API uses an asynchronous callback to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700062](../errorcode-bundle.md#17700062-failed-to-uninstall-an-application-configured-with-an-uninstallation-disposed-rule) | Failed to uninstall the app because the app is locked.<br>**Applicable version:** 15 and later |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
-| [17700045](../errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall the HAP because uninstall is not allowed by the enterprise device management. |
-| [17700040](../errorcode-bundle.md#17700040-failure-in-uninstalling-an-inter-application-shared-library) | The specified bundle is a shared bundle and cannot be uninstalled. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 | [17700020](../errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
+| [17700040](../errorcode-bundle.md#17700040-failure-in-uninstalling-an-inter-application-shared-library) | The specified bundle is a shared bundle and cannot be uninstalled. |
+| [17700045](../errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall the HAP because uninstall is not allowed by the enterprise device management. |
 | [17700067](../errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 12 and later |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
+| [17700062](../errorcode-bundle.md#17700062-failed-to-uninstall-an-application-configured-with-an-uninstallation-disposed-rule) | Failed to uninstall the app because the app is locked.<br>**Applicable version:** 15 and later |
 
 **Examples**
 
@@ -1150,15 +1166,15 @@ Uninstalls an application. This API uses an asynchronous callback to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
-| [17700045](../errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall the HAP because uninstall is not allowed by the enterprise device management. |
-| [17700040](../errorcode-bundle.md#17700040-failure-in-uninstalling-an-inter-application-shared-library) | The specified bundle is a shared bundle and cannot be uninstalled. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700020](../errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
-| [17700067](../errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [17700020](../errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
+| [17700040](../errorcode-bundle.md#17700040-failure-in-uninstalling-an-inter-application-shared-library) | The specified bundle is a shared bundle and cannot be uninstalled. |
+| [17700045](../errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall the HAP because uninstall is not allowed by the enterprise device management. |
+| [17700067](../errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 12 and later |
+| [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
 
 **Examples**
 
@@ -1221,17 +1237,17 @@ Uninstalls an application. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700062](../errorcode-bundle.md#17700062-failed-to-uninstall-an-application-configured-with-an-uninstallation-disposed-rule) | Failed to uninstall the app because the app is locked.<br>**Applicable version:** 15 and later |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
-| [17700045](../errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall the HAP because uninstall is not allowed by the enterprise device management. |
-| [17700040](../errorcode-bundle.md#17700040-failure-in-uninstalling-an-inter-application-shared-library) | The specified bundle is a shared bundle and cannot be uninstalled. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 | [17700020](../errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
+| [17700040](../errorcode-bundle.md#17700040-failure-in-uninstalling-an-inter-application-shared-library) | The specified bundle is a shared bundle and cannot be uninstalled. |
+| [17700045](../errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall the HAP because uninstall is not allowed by the enterprise device management. |
 | [17700067](../errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 12 and later |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
+| [17700062](../errorcode-bundle.md#17700062-failed-to-uninstall-an-application-configured-with-an-uninstallation-disposed-rule) | Failed to uninstall the app because the app is locked.<br>**Applicable version:** 15 and later |
 
 **Examples**
 
@@ -1292,12 +1308,12 @@ Uninstalls a shared package. This API uses an asynchronous callback to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700038](../errorcode-bundle.md#17700038-shared-library-to-uninstall-does-not-exist) | The specified shared bundle does not exist. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
 | [17700020](../errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
 | [17700037](../errorcode-bundle.md#17700037-failure-in-uninstalling-the-shared-library-due-to-dependency) | The version of shared bundle is dependent on other applications. |
+| [17700038](../errorcode-bundle.md#17700038-shared-library-to-uninstall-does-not-exist) | The specified shared bundle does not exist. |
 
 **Examples**
 
@@ -1361,12 +1377,12 @@ Uninstalls a shared package. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700038](../errorcode-bundle.md#17700038-shared-library-to-uninstall-does-not-exist) | The specified shared bundle does not exist. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
 | [17700020](../errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
 | [17700037](../errorcode-bundle.md#17700037-failure-in-uninstalling-the-shared-library-due-to-dependency) | The version of shared bundle is dependent on other applications. |
+| [17700038](../errorcode-bundle.md#17700038-shared-library-to-uninstall-does-not-exist) | The specified shared bundle does not exist. |
 
 **Examples**
 
@@ -1471,11 +1487,11 @@ Uninstalls a plugin for an application. This API uses a promise to return the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700092](../errorcode-bundle.md#17700092-plugin-uninstall-failure-because-of-nonexistent-plugin-bundle-name) | Failed to uninstall the plugin because the specified plugin is not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.UNINSTALL_PLUGIN_BUNDLE'. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The user id is invalid. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The user id is invalid. |
+| [17700092](../errorcode-bundle.md#17700092-plugin-uninstall-failure-because-of-nonexistent-plugin-bundle-name) | Failed to uninstall the plugin because the specified plugin is not found. |
 
 **Examples**
 
@@ -1541,15 +1557,15 @@ Uninstalls and updates a preinstalled application and restores it to the initial
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
-| [17700045](../errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall because enterprise device management disallow uninstall. |
-| [17700057](../errorcode-bundle.md#17700057-specified-application-is-not-a-preset-application) | Failed to uninstall updates because the HAP is not pre-installed. |
-| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same <br>bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700067](../errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 13 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [17700045](../errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall because enterprise device management disallow uninstall. |
+| [17700057](../errorcode-bundle.md#17700057-specified-application-is-not-a-preset-application) | Failed to uninstall updates because the HAP is not pre-installed. |
+| [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
+| [17700067](../errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 13 and later |
+| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same <br>bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
 
 **Examples**
 
@@ -1610,27 +1626,27 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
-| [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
-| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
-| [17700044](../errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
-| [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
-| [17700042](../errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
-| [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
-| [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
-| [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_SELF_BUNDLE'. |
-| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-inter-application-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3 000. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
+| [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
+| [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
+| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
+| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
+| [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
+| [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
 | [17700018](../errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
+| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-inter-application-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
+| [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
+| [17700042](../errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
+| [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
+| [17700044](../errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
+| [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
+| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed. |
+| [17700049](../errorcode-bundle.md#17700049-update-failure-because-of-incorrect-bundle-name) | Failed to install the HAP because the bundleName is different from the bundleName of the caller application. |
 | [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device. |
 | [17700051](../errorcode-bundle.md#17700051-hap-installation-failure-due-to-incorrect-distribution-type-in-the-signing-certificate-profile-of-the-caller) | Failed to install the HAP because the distribution type of caller application is not enterprise_mdm. |
-| [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
-| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed. |
-| [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
-| [17700049](../errorcode-bundle.md#17700049-update-failure-because-of-incorrect-bundle-name) | Failed to install the HAP because the bundleName is different from the bundleName of the caller application. |
 
 **Examples**
 
@@ -1692,26 +1708,26 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
-| [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
-| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
-| [17700044](../errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
-| [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
-| [17700042](../errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
-| [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
-| [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
-| [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_SELF_BUNDLE'. |
-| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-inter-application-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
+| [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
+| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
+| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
+| [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
+| [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
 | [17700018](../errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
+| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-inter-application-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
+| [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
+| [17700042](../errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
+| [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
+| [17700044](../errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
+| [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
+| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed. |
+| [17700049](../errorcode-bundle.md#17700049-update-failure-because-of-incorrect-bundle-name) | Failed to install the HAP because the bundleName is different from the bundleName of the caller application. |
 | [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device. |
 | [17700051](../errorcode-bundle.md#17700051-hap-installation-failure-due-to-incorrect-distribution-type-in-the-signing-certificate-profile-of-the-caller) | Failed to install the HAP because the distribution type of caller application is not enterprise_mdm. |
-| [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
-| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed. |
-| [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
-| [17700049](../errorcode-bundle.md#17700049-update-failure-because-of-incorrect-bundle-name) | Failed to install the HAP because the bundleName is different from the bundleName of the caller application. |
 
 **Examples**
 
@@ -1774,27 +1790,27 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
-| [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
-| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
-| [17700044](../errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
-| [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
-| [17700042](../errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
-| [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
-| [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
-| [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_SELF_BUNDLE'. |
-| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-inter-application-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3 000. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
+| [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
+| [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
+| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
+| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
+| [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
+| [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
 | [17700018](../errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
+| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-inter-application-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
+| [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
+| [17700042](../errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
+| [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
+| [17700044](../errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
+| [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
+| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed. |
+| [17700049](../errorcode-bundle.md#17700049-update-failure-because-of-incorrect-bundle-name) | Failed to install the HAP because the bundleName is different from the bundleName of the caller application. |
 | [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device. |
 | [17700051](../errorcode-bundle.md#17700051-hap-installation-failure-due-to-incorrect-distribution-type-in-the-signing-certificate-profile-of-the-caller) | Failed to install the HAP because the distribution type of caller application is not enterprise_mdm. |
-| [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
-| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed. |
-| [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
-| [17700049](../errorcode-bundle.md#17700049-update-failure-because-of-incorrect-bundle-name) | Failed to install the HAP because the bundleName is different from the bundleName of the caller application. |
 
 **Examples**
 

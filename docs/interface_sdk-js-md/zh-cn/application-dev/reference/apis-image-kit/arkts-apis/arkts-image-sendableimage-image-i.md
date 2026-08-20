@@ -1,6 +1,8 @@
 # Image
 
-提供基本的图像操作，包括获取图像信息、读写图像数据。调用[readNextImage](arkts-image-sendableimage-imagereceiver-i.md#readnextimage)和 [readLatestImage](arkts-image-sendableimage-imagereceiver-i.md#readlatestimage)接口时会返回Image。继承自 [ISendable](../../../arkts-utils/arkts-sendable.md#isendable)。 由于图片占用内存较大，所以当Image实例使用完成后，应主动调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再 使用该实例。
+提供基本的图像操作，包括获取图像信息、读写图像数据。调用[readNextImage](arkts-image-sendableimage-imagereceiver-i.md#readnextimage)和 [readLatestImage](arkts-image-sendableimage-imagereceiver-i.md#readlatestimage)接口时会返回Image。继承自 [ISendable](../../../arkts-utils/arkts-sendable.md#isendable)。
+
+由于图片占用内存较大，所以当Image实例使用完成后，应主动调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再 使用该实例。
 
 **继承/实现关系：** Image extends lang.ISendable
 
@@ -70,7 +72,13 @@ async function GetComponent() {
 release(): Promise<void>
 ```
 
-释放当前图像。使用Promise异步回调。 在接收另一个图像前必须先释放对应资源。 由于图片占用内存较大，所以当Image实例使用完成后，应主动调用该方法及时释放内存。 释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+释放当前图像。使用Promise异步回调。
+
+在接收另一个图像前必须先释放对应资源。
+
+由于图片占用内存较大，所以当Image实例使用完成后，应主动调用该方法及时释放内存。
+
+释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 12
 
@@ -144,7 +152,15 @@ readonly format: number
 readonly size: Size
 ```
 
-图像大小。 如果Image对象所存储的是相机预览流数据（YUV图像数据），那么获取到的size中的宽和高分别对应YUV图像的宽和高。 如果Image对象所存储的是相机拍照流数据（JPEG图像数据），由于已是编码后的文件，size中的宽等于JPEG文件大小，高等于1。 Image对象所存储的数据是预览流还是拍照流，取决于应用将receiver中的surfaceId传给相机的是previewOutput还是captureOutput。 相机预览与拍照最佳实践请参考[双路预览(ArkTS)](../../../media/camera/camera-dual-channel-preview.md)与 [拍照实践(ArkTS)](../../../media/camera/camera-shooting-case.md)。
+图像大小。
+
+如果Image对象所存储的是相机预览流数据（YUV图像数据），那么获取到的size中的宽和高分别对应YUV图像的宽和高。
+
+如果Image对象所存储的是相机拍照流数据（JPEG图像数据），由于已是编码后的文件，size中的宽等于JPEG文件大小，高等于1。
+
+Image对象所存储的数据是预览流还是拍照流，取决于应用将receiver中的surfaceId传给相机的是previewOutput还是captureOutput。
+
+相机预览与拍照最佳实践请参考[双路预览(ArkTS)](../../../media/camera/camera-dual-channel-preview.md)与 [拍照实践(ArkTS)](../../../media/camera/camera-shooting-case.md)。
 
 **类型：** Size
 

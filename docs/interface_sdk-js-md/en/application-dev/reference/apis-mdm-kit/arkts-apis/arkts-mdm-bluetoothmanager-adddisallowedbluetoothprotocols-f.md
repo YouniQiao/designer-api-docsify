@@ -36,9 +36,9 @@ Adds disallowed Bluetooth protocols. Specified users cannot use the disallowed B
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 **Examples**
 
@@ -69,7 +69,15 @@ try{
 function addDisallowedBluetoothProtocols(admin: Want, accountId: number, protocols: Array<Protocol>, policy: TransferPolicy): void
 ```
 
-Adds disallowed Bluetooth protocols. After the setting, specified users cannot use the disallowed Bluetooth protocols based on the specified transfer policy. &gt; **NOTE：**&gt; &gt; 1. This API is used to disable the GATT or SPP protocol, which does not take effect for system services and &gt; system applications. &gt; &gt; 2. When the SPP protocol is passed, the value of the **policy** parameter can only be &gt; **TransferPolicy.RECEIVE_SEND**. Otherwise, error code 9200012 will be returned. &gt; &gt; 3. This API and &gt; [addDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#adddisallowedbluetoothprotocols) are &gt; overloaded APIs. This API adds the **policy** parameter to specify the transfer policy, enabling more fine- &gt; grained control over Bluetooth protocol disabling behavior (for example, blocking only sending, only receiving, &gt; or both sending and receiving). If both APIs are used to configure disabling policies, the policies will be &gt; combined and take effect.
+Adds disallowed Bluetooth protocols. After the setting, specified users cannot use the disallowed Bluetooth protocols based on the specified transfer policy.
+
+> **NOTE：**
+> 
+> 1. This API is used to disable the GATT or SPP protocol, which does not take effect for system services and &gt; system applications.
+> 
+> 2. When the SPP protocol is passed, the value of the **policy** parameter can only be &gt; **TransferPolicy.RECEIVE_SEND**. Otherwise, error code 9200012 will be returned.
+> 
+> 3. This API and &gt; [addDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#adddisallowedbluetoothprotocols) are &gt; overloaded APIs. This API adds the **policy** parameter to specify the transfer policy, enabling more fine- &gt; grained control over Bluetooth protocol disabling behavior (for example, blocking only sending, only receiving, &gt; or both sending and receiving). If both APIs are used to configure disabling policies, the policies will be &gt; combined and take effect.
 
 **Since:** 26.0.0
 
@@ -94,8 +102,8 @@ Adds disallowed Bluetooth protocols. After the setting, specified users cannot u
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 

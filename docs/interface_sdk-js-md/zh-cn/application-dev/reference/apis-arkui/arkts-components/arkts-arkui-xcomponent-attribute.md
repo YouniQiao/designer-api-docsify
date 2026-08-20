@@ -1,6 +1,10 @@
 # XComponent属性/事件
 
-定义XComponentAttribute。 除通用属性外，还支持以下属性。 从API版本12开始，当type设置为**SURFACE**或**TEXTURE**时，支持通用事件。
+定义XComponentAttribute。
+
+除通用属性外，还支持以下属性。
+
+从API版本12开始，当type设置为**SURFACE**或**TEXTURE**时，支持通用事件。
 
 **继承/实现关系：** XComponentAttribute extends CommonMethod<XComponentAttribute>
 
@@ -21,7 +25,11 @@
 enableAnalyzer(enable: boolean)
 ```
 
-设置是否启用AI图像分析器，支持主体识别、文字识别和查找对象。 要使设置生效，此属性必须与XComponentController的[StartImageAnalyzer](arkts-arkui-xcomponentcontroller-c.md#startimageanalyzer)和[StopImageAnalyzer](arkts-arkui-xcomponentcontroller-c.md#stopimageanalyzer)一起使用。 此特性不能与[overlay](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#overlay)属性同时使用。 如果两者都设置，overlay中的CustomBuilder属性将不生效。此特性还依赖于设备能力。
+设置是否启用AI图像分析器，支持主体识别、文字识别和查找对象。
+
+要使设置生效，此属性必须与XComponentController的[StartImageAnalyzer](arkts-arkui-xcomponentcontroller-c.md#startimageanalyzer)和[StopImageAnalyzer](arkts-arkui-xcomponentcontroller-c.md#stopimageanalyzer)一起使用。
+
+此特性不能与[overlay](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#overlay)属性同时使用。 如果两者都设置，overlay中的CustomBuilder属性将不生效。此特性还依赖于设备能力。
 
 **起始版本：** 12
 
@@ -69,7 +77,9 @@ enableSecure(isSecure: boolean)
 hdrBrightness(brightness: number, type?: HdrType)
 ```
 
-用于调整组件显示HDR内容时的亮度。<br/>当参数type设置为非**HdrType**.DEFAULT时，调用该接口前需先检查Display的hdrFormats属性是否包含对应的HDRFormat。 仅当hdrFormats包含对应的HDRFormat时，当前设备才支持对应的HDR类型，参数设置才会生效；否则将使用默认值**HdrType**.DEFAULT。 其映射关系如下：<br/>| type取值 | hdrFormats需包含的HDRFormat | <br/>| -------- | -------- | <br/>| **HdrType**.AIHDR | HDRFormat.VIDEO_AIHDR | **说明：** 仅XComponent构造参数中的type为**XComponentType**.SURFACE时该接口生效，否则该接口不生效。
+用于调整组件显示HDR内容时的亮度。<br/>当参数type设置为非**HdrType**.DEFAULT时，调用该接口前需先检查Display的hdrFormats属性是否包含对应的HDRFormat。 仅当hdrFormats包含对应的HDRFormat时，当前设备才支持对应的HDR类型，参数设置才会生效；否则将使用默认值**HdrType**.DEFAULT。 其映射关系如下：<br/>| type取值 | hdrFormats需包含的HDRFormat | <br/>| -------- | -------- | <br/>| **HdrType**.AIHDR | HDRFormat.VIDEO_AIHDR |
+
+**说明：** 仅XComponent构造参数中的type为**XComponentType**.SURFACE时该接口生效，否则该接口不生效。
 
 **起始版本：** 24
 

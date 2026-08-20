@@ -2,6 +2,8 @@
 
 WLAN IP类型枚举。
 
+@enum { number } IpType
+
 **起始版本：** 7
 
 **废弃版本：** 9

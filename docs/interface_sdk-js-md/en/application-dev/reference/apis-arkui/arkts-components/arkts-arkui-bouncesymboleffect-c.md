@@ -48,7 +48,9 @@ A constructor used to create a **ScaleSymbolEffect** instance, which comes with 
 direction?: EffectDirection
 ```
 
-Effect direction. Default value: **EffectDirection.DOWN**
+Effect direction.
+
+Default value: **EffectDirection.DOWN**
 
 **Type:** [EffectDirection](arkts-arkui-effectdirection-e.md)
 
@@ -70,7 +72,9 @@ Effect direction. Default value: **EffectDirection.DOWN**
 scope?: EffectScope
 ```
 
-Effect scope. Default value: **EffectScope.LAYER**
+Effect scope.
+
+Default value: **EffectScope.LAYER**
 
 **Type:** [EffectScope](arkts-arkui-effectscope-e.md)
 

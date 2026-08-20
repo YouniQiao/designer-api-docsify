@@ -41,8 +41,8 @@ Adds dependent tasks for this task. Before using this API, you must create a **T
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200026](../errorcode-utils.md#10200026-task-with-a-cyclic-dependency) | There is a circular dependency. |
-| [10200056](../errorcode-utils.md#10200056-asynchronous-queue-task-cannot-have-dependencies) | The task has been executed by the AsyncRunner.<br>**Applicable version:** 18 and later |
 | [10200052](../errorcode-utils.md#10200052-periodic-task-cannot-have-dependencies) | The periodic task cannot have a dependency.<br>**Applicable version:** 12 and later |
+| [10200056](../errorcode-utils.md#10200056-asynchronous-queue-task-cannot-have-dependencies) | The task has been executed by the AsyncRunner.<br>**Applicable version:** 18 and later |
 
 **Examples**
 
@@ -569,8 +569,8 @@ Removes dependent tasks for this task. Before using this method, you need to con
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200027](../errorcode-utils.md#10200027-dependency-does-not-exist) | The dependency does not exist. |
-| [10200056](../errorcode-utils.md#10200056-asynchronous-queue-task-cannot-have-dependencies) | The task has been executed by the AsyncRunner.<br>**Applicable version:** 18 and later |
 | [10200052](../errorcode-utils.md#10200052-periodic-task-cannot-have-dependencies) | The periodic task cannot have a dependency.<br>**Applicable version:** 12 and later |
+| [10200056](../errorcode-utils.md#10200056-asynchronous-queue-task-cannot-have-dependencies) | The task has been executed by the AsyncRunner.<br>**Applicable version:** 18 and later |
 
 **Examples**
 
@@ -615,7 +615,17 @@ taskpool.execute(task3).then(() => {
 static sendData(...args: Object[]): void
 ```
 
-Sends data to the host thread and triggers the registered callback. Before calling this method, you need to construct a **Task** object. &gt; **NOTE：**&gt; &gt; - The API should be called in the TaskPool thread. &gt; &gt; - Do not use this API in a callback function. Otherwise, messages may fail to be passed to the host thread. &gt; &gt; - Do not use this API in an asynchronous function. Otherwise, messages may fail to be passed to the host &gt; thread. If this API is used in an asynchronous function, use **await** to ensure that the asynchronous function &gt; is executed synchronously in the task. &gt; &gt; - Before calling this API, ensure that the callback function for processing data has been registered in the &gt; host thread.
+Sends data to the host thread and triggers the registered callback. Before calling this method, you need to construct a **Task** object.
+
+> **NOTE：**
+> 
+> - The API should be called in the TaskPool thread.
+> 
+> - Do not use this API in a callback function. Otherwise, messages may fail to be passed to the host thread.
+> 
+> - Do not use this API in an asynchronous function. Otherwise, messages may fail to be passed to the host &gt; thread. If this API is used in an asynchronous function, use **await** to ensure that the asynchronous function &gt; is executed synchronously in the task.
+> 
+> - Before calling this API, ensure that the callback function for processing data has been registered in the &gt; host thread.
 
 **Since:** 11
 
@@ -635,10 +645,10 @@ Sends data to the host thread and triggers the registered callback. Before calli
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200024](../errorcode-utils.md#10200024-functions-not-registered-in-the-host-thread) | The callback is not registered on the host side. |
-| [10200023](../errorcode-utils.md#10200023-functions-not-called-in-concurrent-functions) | The function is not called in the concurrent function. |
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 | [10200022](../errorcode-utils.md#10200022-functions-not-called-in-taskpool) | The function is not called in the TaskPool thread. |
+| [10200023](../errorcode-utils.md#10200023-functions-not-called-in-concurrent-functions) | The function is not called in the concurrent function. |
+| [10200024](../errorcode-utils.md#10200024-functions-not-registered-in-the-host-thread) | The callback is not registered on the host side. |
 
 **Examples**
 
@@ -703,7 +713,11 @@ taskpoolTest();
 setCloneList(cloneList: Object[] | ArrayBuffer[]): void
 ```
 
-Sets the task clone list. Before using this method, you need to construct a **Task** object. &gt; **NOTE：**&gt; &gt; This API must be used together with the &gt; [@Sendable decorator](../../../arkts-utils/arkts-sendable.md#sendable-decorator). Otherwise, an exception is &gt; thrown. You are advised to use this decorator to avoid exceptions.
+Sets the task clone list. Before using this method, you need to construct a **Task** object.
+
+> **NOTE：**
+> 
+> This API must be used together with the &gt; [@Sendable decorator](../../../arkts-utils/arkts-sendable.md#sendable-decorator). Otherwise, an exception is &gt; thrown. You are advised to use this decorator to avoid exceptions.
 
 **Since:** 11
 
@@ -860,7 +874,11 @@ struct Index {
 setTransferList(transfer?: ArrayBuffer[]): void
 ```
 
-Sets the task transfer list. Before using this API, you must create a **Task** instance. If this API is not called, the ArrayBuffer in the data is transferred by default. &gt; **NOTE：**&gt; &gt; This API is used to set the task transfer list in the form of **ArrayBuffer** in the task pool. The &gt; **ArrayBuffer** instance does not copy the content in the task to the worker thread during transfer. Instead, &gt; it transfers the buffer control right to the worker thread. After the transfer, the **ArrayBuffer** instance &gt; becomes invalid. An empty **ArrayBuffer** will not be transferred.
+Sets the task transfer list. Before using this API, you must create a **Task** instance. If this API is not called, the ArrayBuffer in the data is transferred by default.
+
+> **NOTE：**
+> 
+> This API is used to set the task transfer list in the form of **ArrayBuffer** in the task pool. The &gt; **ArrayBuffer** instance does not copy the content in the task to the worker thread during transfer. Instead, &gt; it transfers the buffer control right to the worker thread. After the transfer, the **ArrayBuffer** instance &gt; becomes invalid. An empty **ArrayBuffer** will not be transferred.
 
 **Since:** 10
 

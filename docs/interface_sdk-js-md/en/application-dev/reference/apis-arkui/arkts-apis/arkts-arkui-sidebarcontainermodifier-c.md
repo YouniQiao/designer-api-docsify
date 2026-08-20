@@ -2,6 +2,8 @@
 
 Defines SideBarContainer Modifier
 
+@extends SideBarContainerAttribute @implements AttributeModifier&lt;SideBarContainerAttribute&gt;
+
 **Inheritance/Implementation:** SideBarContainerModifier extends SideBarContainerAttribute and implements AttributeModifier<SideBarContainerAttribute>
 
 **Since:** 20

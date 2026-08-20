@@ -12,7 +12,16 @@ import { systemManager } from '@kit.MDMKit';
 function setInstallLocalEnterpriseAppEnabledForAccount(admin: Want, isEnable: boolean, accountId: number): void
 ```
 
-设置指定用户下是否支持本地安装企业应用。在具备本地安装能力的PC/2in1企业设备上下发支持本地企业应用策略后，用户可以在桌面或者文件管理器直接双击企业应用安装包，即可直接安装企业应用。 仅支持enterprise_normal或enterprise_mdm签名类型的企业应用。 &gt; **说明：** &gt; &gt; 满足以下任意条件，PC/2in1企业设备在当前用户下即支持本地安装企业应用： &gt; &gt; 1. 已通过[setInstallLocalEnterpriseAppEnabled](arkts-mdm-systemmanager-setinstalllocalenterpriseappenabled-f.md)开启离线安装器； &gt; &gt; 2. 已通过本接口设置当前用户支持本地安装企业应用。
+设置指定用户下是否支持本地安装企业应用。在具备本地安装能力的PC/2in1企业设备上下发支持本地企业应用策略后，用户可以在桌面或者文件管理器直接双击企业应用安装包，即可直接安装企业应用。
+
+仅支持enterprise_normal或enterprise_mdm签名类型的企业应用。
+
+> **说明：**
+> 
+> 满足以下任意条件，PC/2in1企业设备在当前用户下即支持本地安装企业应用：
+> 
+> 1. 已通过[setInstallLocalEnterpriseAppEnabled](arkts-mdm-systemmanager-setinstalllocalenterpriseappenabled-f.md)开启离线安装器； &gt;
+> 2. 已通过本接口设置当前用户支持本地安装企业应用。
 
 **起始版本：** 24
 
@@ -36,11 +45,11 @@ function setInstallLocalEnterpriseAppEnabledForAccount(admin: Want, isEnable: bo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) | Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 
 **示例**
 

@@ -2,6 +2,8 @@
 
 The class of a system configuration.
 
+@namespace systemConfiguration
+
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.

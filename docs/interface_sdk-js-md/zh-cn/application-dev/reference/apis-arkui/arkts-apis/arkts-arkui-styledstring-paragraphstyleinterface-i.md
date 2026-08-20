@@ -16,9 +16,11 @@
 leadingMargin?: LengthMetrics | LeadingMarginPlaceholder
 ```
 
-设置文本段落的缩进。不支持百分比。 默认值：0
+设置文本段落的缩进。不支持百分比。
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [LeadingMarginPlaceholder](arkts-arkui-richeditor-leadingmarginplaceholder-i.md)
+默认值：0
+
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [LeadingMarginPlaceholder](../arkts-components/arkts-arkui-richeditor-leadingmarginplaceholder-i.md)
 
 **起始版本：** 23
 
@@ -36,7 +38,9 @@ leadingMargin?: LengthMetrics | LeadingMarginPlaceholder
 leadingMarginSpan?: LeadingMarginSpan
 ```
 
-设置文本段落的自定义缩进。不支持百分比。 默认值：0
+设置文本段落的自定义缩进。不支持百分比。
+
+默认值：0
 
 **类型：** [LeadingMarginSpan](arkts-arkui-styledstring-leadingmarginspan-c.md)
 
@@ -76,7 +80,11 @@ maxLines?: int
 overflow?: TextOverflow
 ```
 
-设置文本段落超长时的显示方式。 默认值：TextOverflow.None 需配合maxLines使用，单独设置不生效。不支持TextOverflow.MARQUEE。
+设置文本段落超长时的显示方式。
+
+默认值：TextOverflow.None
+
+需配合maxLines使用，单独设置不生效。不支持TextOverflow.MARQUEE。
 
 **类型：** [TextOverflow](arkts-arkui-textoverflow-e.md)
 
@@ -96,7 +104,9 @@ overflow?: TextOverflow
 paragraphSpacing?: LengthMetrics
 ```
 
-设置文本段落的段落间距。 段落间距默认大小为0。不支持百分比。
+设置文本段落的段落间距。
+
+段落间距默认大小为0。不支持百分比。
 
 **类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -116,7 +126,9 @@ paragraphSpacing?: LengthMetrics
 shaderStyle?: ShaderStyle
 ```
 
-设置文本着色器效果。 该接口与[TextStyleInterface](arkts-arkui-styledstring-textstyleinterface-i.md)的strokeWidth同时设置时，该接口不生效。
+设置文本着色器效果。
+
+该接口与[TextStyleInterface](arkts-arkui-styledstring-textstyleinterface-i.md)的strokeWidth同时设置时，该接口不生效。
 
 **类型：** [ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md)
 
@@ -136,7 +148,9 @@ shaderStyle?: ShaderStyle
 tailIndents?: LengthMetrics | Array<LengthMetrics>
 ```
 
-设置文本段落的文本尾部缩进。当提供一个单独的LengthMetrics值时，所有行共享相同的尾部缩进；当提供一个数组时，第i个元素指定第i行的尾部缩进；如果文本行数超过数组长度，则数组中的最后一个元素将用于剩余的行。 默认值：0
+设置文本段落的文本尾部缩进。当提供一个单独的LengthMetrics值时，所有行共享相同的尾部缩进；当提供一个数组时，第i个元素指定第i行的尾部缩进；如果文本行数超过数组长度，则数组中的最后一个元素将用于剩余的行。
+
+默认值：0
 
 **类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| Array&lt;[LengthMetrics](arkts-arkui-lengthmetrics-t.md)&gt;
 
@@ -156,7 +170,9 @@ tailIndents?: LengthMetrics | Array<LengthMetrics>
 textAlign?: TextAlign
 ```
 
-设置文本段落在水平方向的对齐方式。 默认值：TextAlign.Start
+设置文本段落在水平方向的对齐方式。
+
+默认值：TextAlign.Start
 
 **类型：** [TextAlign](arkts-arkui-textalign-e.md)
 
@@ -176,7 +192,9 @@ textAlign?: TextAlign
 textDirection?: TextDirection
 ```
 
-设置文本方向。 默认值：TextDirection.DEFAULT
+设置文本方向。
+
+默认值：TextDirection.DEFAULT
 
 **类型：** [TextDirection](arkts-arkui-textcommon-textdirection-e.md)
 
@@ -196,7 +214,9 @@ textDirection?: TextDirection
 textIndent?: LengthMetrics
 ```
 
-设置文本段落的首行文本缩进。不支持百分比。 默认值：0
+设置文本段落的首行文本缩进。不支持百分比。
+
+默认值：0
 
 **类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -216,7 +236,9 @@ textIndent?: LengthMetrics
 textVerticalAlign?: TextVerticalAlign
 ```
 
-设置文本段落在垂直方向的对齐方式。 默认值：TextVerticalAlign.BASELINE
+设置文本段落在垂直方向的对齐方式。
+
+默认值：TextVerticalAlign.BASELINE
 
 **类型：** [TextVerticalAlign](arkts-arkui-textcommon-textverticalalign-e.md)
 
@@ -236,7 +258,9 @@ textVerticalAlign?: TextVerticalAlign
 wordBreak?: WordBreak
 ```
 
-设置文本段落的断行规则。 默认值：WordBreak.NORMAL
+设置文本段落的断行规则。
+
+默认值：WordBreak.NORMAL
 
 **类型：** [WordBreak](arkts-arkui-wordbreak-e.md)
 

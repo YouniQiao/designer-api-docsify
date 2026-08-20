@@ -13,7 +13,11 @@ function startAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: int, c
       customArgs?: string): void
 ```
 
-标记一个异步跟踪耗时任务的开始，分级控制跟踪输出。 如果有多个相同name的任务需要跟踪或者对同一个任务要跟踪多次，并且任务同时被执行，则开发者每次调用startAsyncTrace传入的taskId需不同。 如果具有相同name的任务是串行执行的，则taskId可以相同。具体示例可参考[finishAsyncTrace()](arkts-performanceanalysis-hitracemeter-finishasynctrace-f.md) 中的示例。
+标记一个异步跟踪耗时任务的开始，分级控制跟踪输出。
+
+如果有多个相同name的任务需要跟踪或者对同一个任务要跟踪多次，并且任务同时被执行，则开发者每次调用startAsyncTrace传入的taskId需不同。
+
+如果具有相同name的任务是串行执行的，则taskId可以相同。具体示例可参考[finishAsyncTrace()](arkts-performanceanalysis-hitracemeter-finishasynctrace-f.md) 中的示例。
 
 **起始版本：** 23
 

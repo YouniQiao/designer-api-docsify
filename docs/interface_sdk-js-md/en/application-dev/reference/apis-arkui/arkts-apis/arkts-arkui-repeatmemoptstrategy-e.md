@@ -1,4 +1,4 @@
-# RepeatMemOptStrategy(Defines Repeat component.)
+# RepeatMemOptStrategy
 
 Defines a type for memory optimization strategy.
 

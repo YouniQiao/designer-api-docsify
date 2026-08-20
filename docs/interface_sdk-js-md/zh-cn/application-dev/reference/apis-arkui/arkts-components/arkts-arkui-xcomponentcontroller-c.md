@@ -182,7 +182,9 @@ lockCanvas(): DrawingCanvas | null
 onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void
 ```
 
-当XComponent所持有的surface大小发生变化时触发（包括XComponent以指定大小创建时）。 该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。 **说明：** 仅当XComponent组件未设置libraryname参数时，会进行该回调。
+当XComponent所持有的surface大小发生变化时触发（包括XComponent以指定大小创建时）。 该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+
+**说明：** 仅当XComponent组件未设置libraryname参数时，会进行该回调。
 
 **起始版本：** 12
 
@@ -207,7 +209,9 @@ onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void
 onSurfaceCreated(surfaceId: string): void
 ```
 
-当XComponent所持有的surface创建完成时触发。 该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。 **说明：** 仅当XComponent组件未设置libraryname参数时，会进行该回调。
+当XComponent所持有的surface创建完成时触发。 该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+
+**说明：** 仅当XComponent组件未设置libraryname参数时，会进行该回调。
 
 **起始版本：** 12
 
@@ -231,7 +235,9 @@ onSurfaceCreated(surfaceId: string): void
 onSurfaceDestroyed(surfaceId: string): void
 ```
 
-当XComponent所持有的surface销毁时触发。 该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。 **说明：** 仅当XComponent组件未设置libraryname参数时，会进行该回调。
+当XComponent所持有的surface销毁时触发。 该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+
+**说明：** 仅当XComponent组件未设置libraryname参数时，会进行该回调。
 
 **起始版本：** 12
 
@@ -255,7 +261,11 @@ onSurfaceDestroyed(surfaceId: string): void
 setXComponentSurfaceConfig(config: SurfaceConfig):void
 ```
 
-设置XComponent创建的surface的配置。 &gt; **说明：** &gt; &gt; 此接口仅在XComponent的type为TEXTURE或SURFACE时生效。
+设置XComponent创建的surface的配置。
+
+> **说明：**
+> 
+> 此接口仅在XComponent的type为TEXTURE或SURFACE时生效。
 
 **起始版本：** 22
 
@@ -330,7 +340,9 @@ setXComponentSurfaceSize(value: {
   }): void
 ```
 
-设置XComponent所持有的surface的宽度和高度。 该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。 单位：px。
+设置XComponent所持有的surface的宽度和高度。 该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+
+单位：px。
 
 **起始版本：** 9
 
@@ -354,7 +366,17 @@ setXComponentSurfaceSize(value: {
 startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 ```
 
-配置AI分析并启动AI分析功能，使用前需先启用图像AI分析能力[enableAnalyzer](arkts-arkui-xcomponent-attribute.md#enableanalyzer)，仅type为SURFACE或TEXTURE时有效。使用Promise异步回调来返回结果。 由于用于分析的图像帧是调用此接口时捕获的帧，因此请注意此接口的调用时机。 如果在执行完成之前重复调用此接口，将触发错误回调。 &gt; **说明：** &gt; 图像分析类型无法动态修改。 &gt; &gt; 此接口依赖于设备能力。在不兼容的设备上调用将返回错误码。
+配置AI分析并启动AI分析功能，使用前需先启用图像AI分析能力[enableAnalyzer](arkts-arkui-xcomponent-attribute.md#enableanalyzer)，仅type为SURFACE或TEXTURE时有效。使用Promise异步回调来返回结果。
+
+由于用于分析的图像帧是调用此接口时捕获的帧，因此请注意此接口的调用时机。
+
+如果在执行完成之前重复调用此接口，将触发错误回调。
+
+> **说明：**
+
+> 图像分析类型无法动态修改。
+> 
+> 此接口依赖于设备能力。在不兼容的设备上调用将返回错误码。
 
 **起始版本：** 12
 
@@ -383,8 +405,8 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai图像分析功能不支持) | 不支持图像分析特性。 |
-| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai图像分析已停止) | 图像分析已停止。 |
 | [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai图像分析正在进行中) | 图像分析正在执行中。 |
+| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai图像分析已停止) | 图像分析已停止。 |
 
 ## stopImageAnalyzer
 
@@ -392,7 +414,13 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 stopImageAnalyzer(): void
 ```
 
-停止AI分析功能，AI分析展示的内容将被销毁。仅type为SURFACE或TEXTURE时有效。 &gt; **说明：** &gt; 如果在startImageAnalyzer接口尚未返回任何结果时调用此接口，将触发错误回调。 &gt; &gt; 此特性依赖于设备能力。
+停止AI分析功能，AI分析展示的内容将被销毁。仅type为SURFACE或TEXTURE时有效。
+
+> **说明：**
+
+> 如果在startImageAnalyzer接口尚未返回任何结果时调用此接口，将触发错误回调。
+> 
+> 此特性依赖于设备能力。
 
 **起始版本：** 12
 

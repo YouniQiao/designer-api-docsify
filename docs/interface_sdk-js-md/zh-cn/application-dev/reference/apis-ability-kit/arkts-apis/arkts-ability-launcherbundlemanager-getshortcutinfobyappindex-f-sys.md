@@ -12,7 +12,9 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 function getShortcutInfoByAppIndex(bundleName: string, appIndex: int): Array<ShortcutInfo>
 ```
 
-查询当前用户下指定分身应用的快捷方式信息ShortcutInfo。 调用方获取自己的信息时不需要权限。
+查询当前用户下指定分身应用的快捷方式信息ShortcutInfo。
+
+调用方获取自己的信息时不需要权限。
 
 **起始版本：** 23
 
@@ -41,11 +43,11 @@ function getShortcutInfoByAppIndex(bundleName: string, appIndex: int): Array<Sho
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not support. |
-| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | The specified app index is invalid. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Verify permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not support. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
+| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | The specified app index is invalid. |
 
 **示例**
 

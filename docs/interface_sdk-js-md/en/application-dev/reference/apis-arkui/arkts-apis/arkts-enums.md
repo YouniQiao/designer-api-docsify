@@ -55,8 +55,8 @@
 | [GestureCollectIntervention](arkts-arkui-gesturecollectintervention-e.md) | Define the gesture and events collection intervention operations. |
 | [GestureShortcut](arkts-arkui-gestureshortcut-e.md) | Define the smart gesture shortcut priority enumeration. |
 | [GradientDirection](arkts-arkui-gradientdirection-e.md) | GradientDirection enumeration description |
-| [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md) | Enumerates the height breakpoint values corresponding to different window aspect ratio thresholds. The values are returned through [getWindowHeightBreakpoint](arkts-arkui-arkui-uicontext-uicontext-c.md#getwindowheightbreakpoint). The following table lists default aspect ratio breakpoint thresholds for typical devices, serving as a reference for responsive layout design based on window aspect ratios. Device manufacturers may customize these thresholds through product-specific configurations when needed. |
-| [HitTestMode](arkts-arkui-hittestmode-e.md) | Sets the response logic and node blocking rules for the hit test. &gt; **NOTE：**&gt; &gt; When multiple nodes in a **Stack** component have overlapping touch areas, if the touch point hits a child &gt; component of the topmost node, only the topmost node will undergo hit testing by default. In this case, touch &gt; testing for lower-layer nodes can only be triggered by setting the &gt; hitTestBehavior of the topmost node to **HitTestMode.Transparent**. |
+| [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md) | Enumerates the height breakpoint values corresponding to different window aspect ratio thresholds. The values are returned through [getWindowHeightBreakpoint](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getwindowheightbreakpoint). |
+| [HitTestMode](arkts-arkui-hittestmode-e.md) | Sets the response logic and node blocking rules for the hit test. |
 | [HorizontalAlign](arkts-arkui-horizontalalign-e.md) | HorizontalAlign enumeration description. |
 | [HoverEffect](arkts-arkui-hovereffect-e.md) | Sets the hover effect of the component. |
 | [ImageFit](arkts-arkui-imagefit-e.md) | Image display mode. |
@@ -81,7 +81,7 @@
 | [ObscuredReasons](arkts-arkui-obscuredreasons-e.md) | Sets how the component content is obscured. |
 | [OperateIntention](arkts-arkui-operateintention-e.md) | Define the smart gesture's operation intention. |
 | [OptionWidthMode](arkts-arkui-optionwidthmode-e.md) | Decide whether the width of select menu fit the trigger or content |
-| [PageFlipMode](arkts-arkui-pageflipmode-e.md) | Page flip mode of Swiper and Tabs on mouse wheel event. |
+| [PageFlipMode](arkts-arkui-pageflipmode-e.md) | Page flip mode of Swiper and Tabs on mouse wheel event. @enum { number } PageFlipMode |
 | [PixelRoundCalcPolicy](arkts-arkui-pixelroundcalcpolicy-e.md) | Pixel Round Direction |
 | [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | Pixel Round Mode |
 | [Placement](arkts-arkui-placement-e.md) | Placement enumeration description |
@@ -93,7 +93,7 @@
 | [RenderStrategy](arkts-arkui-renderstrategy-e.md) | Enumerates rendering strategies for drawing rounded corners. |
 | [ResponseRegionSupportedTool](arkts-arkui-responseregionsupportedtool-e.md) | Sets the type of the input tool applicable to the touch target. |
 | [ResponseType](arkts-arkui-responsetype-e.md) | How menu display is triggered. |
-| [ScrollSource](arkts-arkui-scrollsource-e.md) | The possible source of scroll event |
+| [ScrollSource](arkts-arkui-scrollsource-e.md) | The possible source of scroll event @enum { number } ScrollSource |
 | [SharedTransitionEffectType](arkts-arkui-sharedtransitioneffecttype-e.md) | SharedTransitionEffectType enumeration description |
 | [SmartGestureAction](arkts-arkui-smartgestureaction-e.md) | Define the actions for smart gesture shortcut. |
 | [TextAlign](arkts-arkui-textalign-e.md) | The horizontal alignment of the text paragraph. |
@@ -112,7 +112,7 @@
 | [VerticalAlign](arkts-arkui-verticalalign-e.md) | VerticalAlign enumeration description |
 | [Visibility](arkts-arkui-visibility-e.md) | Defines the visibility and layout placeholder status of the component. |
 | [Week](arkts-arkui-week-e.md) | Week Enum value |
-| [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md) | Enumerates the width breakpoint values corresponding to different window width thresholds. The values are returned through [getWindowWidthBreakpoint](arkts-arkui-arkui-uicontext-uicontext-c.md#getwindowwidthbreakpoint). The following table lists default width breakpoint thresholds for typical devices, serving as a reference for responsive layout design based on window width breakpoints. Device manufacturers may customize these thresholds through product-specific configurations when needed. |
+| [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md) | Enumerates the width breakpoint values corresponding to different window width thresholds. The values are returned through [getWindowWidthBreakpoint](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getwindowwidthbreakpoint). |
 | [WordBreak](arkts-arkui-wordbreak-e.md) | The word break rule. |
 | [XComponentType](arkts-arkui-xcomponenttype-e.md) | The type of XComponent |
 

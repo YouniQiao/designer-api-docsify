@@ -485,9 +485,9 @@ write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): bool
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200039](../errorcode-utils.md#10200039-dotransform接口未实现) | The doTransform method has not been implemented for a class that inherits from Transform. |
-| [10200037](../errorcode-utils.md#10200037-多次调用callback) | The callback is invoked multiple times consecutively. |
 | [10200036](../errorcode-utils.md#10200036-流已经结束仍进行写操作) | The stream has been ended. |
+| [10200037](../errorcode-utils.md#10200037-多次调用callback) | The callback is invoked multiple times consecutively. |
+| [10200039](../errorcode-utils.md#10200039-dotransform接口未实现) | The doTransform method has not been implemented for a class that inherits from Transform. |
 
 **示例**
 

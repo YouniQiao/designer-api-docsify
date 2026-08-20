@@ -2,6 +2,8 @@
 
 Type of text decoration line style.
 
+@enum {number}
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare enum TextDecorationStyle--><!--Device-unnamed-declare enum TextDecorationStyle-End-->

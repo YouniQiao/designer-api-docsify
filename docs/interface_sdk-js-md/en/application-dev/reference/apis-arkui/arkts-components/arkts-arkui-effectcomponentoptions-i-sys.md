@@ -21,7 +21,9 @@ Sets the construction parameters of the current EffectComponent, including the r
 effectLayer?: EffectLayer
 ```
 
-Rendering layer of the EffectComponent. Default value: EffectLayer.NONE
+Rendering layer of the EffectComponent.
+
+Default value: EffectLayer.NONE
 
 **Type:** [EffectLayer](arkts-arkui-effectlayer-e-sys.md)
 

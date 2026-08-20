@@ -49,7 +49,13 @@ let runner: taskpool.AsyncRunner = new taskpool.AsyncRunner(5);
 constructor(name: string, runningCapacity: number, waitingCapacity?: number)
 ```
 
-A constructor used to create an **AsyncRunner** instance. It constructs a global asynchronous queue. If the queue name is the same as an existing name, the same asynchronous queue is returned. &gt; **NOTE：**&gt; &gt; - The bottom layer uses the singleton mode to ensure that the same instance is obtained when an asynchronous &gt; queue with the same name is created. &gt; &gt; - The task execution concurrency and waiting capacity cannot be modified.
+A constructor used to create an **AsyncRunner** instance. It constructs a global asynchronous queue. If the queue name is the same as an existing name, the same asynchronous queue is returned.
+
+> **NOTE：**
+> 
+> - The bottom layer uses the singleton mode to ensure that the same instance is obtained when an asynchronous &gt; queue with the same name is created.
+> 
+> - The task execution concurrency and waiting capacity cannot be modified.
 
 **Since:** 18
 
@@ -79,7 +85,23 @@ let runner:taskpool.AsyncRunner = new taskpool.AsyncRunner("runner1", 5, 5);
 execute(task: Task, priority?: Priority): Promise<Object>
 ```
 
-Adds a task to the asynchronous queue for execution. Before using this API, you must create an **AsyncRunner** instance. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - Tasks in a task group cannot be added to the asynchronous queue. &gt; &gt; - Tasks in a serial queue cannot be added to the asynchronous queue. &gt; &gt; - Tasks in other asynchronous queues cannot be added to the asynchronous queue. &gt; &gt; - Periodic tasks cannot be added to the asynchronous queue. &gt; &gt; - Delayed tasks cannot be added to the asynchronous queue. &gt; &gt; - Tasks that depend others cannot be added to the asynchronous queue. &gt; &gt; - Tasks that have been executed cannot be added to the asynchronous queue.
+Adds a task to the asynchronous queue for execution. Before using this API, you must create an **AsyncRunner** instance. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - Tasks in a task group cannot be added to the asynchronous queue.
+> 
+> - Tasks in a serial queue cannot be added to the asynchronous queue.
+> 
+> - Tasks in other asynchronous queues cannot be added to the asynchronous queue.
+> 
+> - Periodic tasks cannot be added to the asynchronous queue.
+> 
+> - Delayed tasks cannot be added to the asynchronous queue.
+> 
+> - Tasks that depend others cannot be added to the asynchronous queue.
+> 
+> - Tasks that have been executed cannot be added to the asynchronous queue.
 
 **Since:** 18
 
@@ -106,11 +128,11 @@ Adds a task to the asynchronous queue for execution. Before using this API, you 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200025](../errorcode-utils.md#10200025-failed-to-add-a-task-with-dependent-tasks-to-the-queue) | dependent task not allowed. |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs. |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again. |
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200025](../errorcode-utils.md#10200025-failed-to-add-a-task-with-dependent-tasks-to-the-queue) | dependent task not allowed. |
+| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again. |
 | [10200054](../errorcode-utils.md#10200054-asynchronous-queue-task-discarded) | The asyncRunner task is discarded. |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs. |
 
 **Examples**
 

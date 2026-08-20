@@ -24,7 +24,7 @@ data: KVObject
 
 组件数据，以键值对形式存储。用于向组件使用方传递业务数据，如页面路径（key为'js'，value为模板路径字符串）及自定义数据字段。
 
-**类型：** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
+**类型：** [KVObject](../../apis-default/arkts-apis/arkts-plugincomponentmanager-kvobject-t.md)
 
 **起始版本：** 9
 
@@ -42,7 +42,7 @@ extraData: KVObject
 
 附加数据，用于在发送组件时传递额外的自定义数据，与组件数据（data）区分，可根据业务需要设置。
 
-**类型：** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
+**类型：** [KVObject](../../apis-default/arkts-apis/arkts-plugincomponentmanager-kvobject-t.md)
 
 **起始版本：** 9
 

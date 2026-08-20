@@ -1,6 +1,10 @@
 # @ohos.app.form.formInfo
 
-The **formInfo** module provides types and enums related to the widget information and state. &gt; **NOTE：**&gt; - This topic describes only system APIs provided by the module. For details about its public APIs, see &gt; [@ohos.app.form.formInfo (formInfo)](#ohosappformforminfo).
+The **formInfo** module provides types and enums related to the widget information and state.
+
+> **NOTE：**
+
+> - This topic describes only system APIs provided by the module. For details about its public APIs, see &gt; [@ohos.app.form.formInfo (formInfo)](#ohosappformforminfo).
 
 **Since:** 23
 

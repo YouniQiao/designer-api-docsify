@@ -1,6 +1,8 @@
 # EllipsisMode
 
-Enumerates the ellipsis styles. **EllipsisMode.START** and **EllipsisMode.MIDDLE** take effect only when text overflows in a single line.
+Enumerates the ellipsis styles.
+
+**EllipsisMode.START** and **EllipsisMode.MIDDLE** take effect only when text overflows in a single line.
 
 **Since:** 23
 

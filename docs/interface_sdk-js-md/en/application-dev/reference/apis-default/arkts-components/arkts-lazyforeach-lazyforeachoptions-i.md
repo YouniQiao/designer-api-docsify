@@ -1,0 +1,76 @@
+# LazyForEachOptions
+
+Options for LazyForEach.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+<!--Device-unnamed-export interface LazyForEachOptions--><!--Device-unnamed-export interface LazyForEachOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## customComponentFreezeMode
+
+```TypeScript
+customComponentFreezeMode?: LazyForEachCustomComponentFreezeMode
+```
+
+Freeze mode for cached custom nodes that have been removed from the component tree. Default value: LazyForEachCustomComponentFreezeMode.AUTO.
+
+**Type:** [LazyForEachCustomComponentFreezeMode](arkts-lazyforeach-lazyforeachcustomcomponentfreezemode-e.md)
+
+**Default:** LazyForEachCustomComponentFreezeMode.AUTO
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-LazyForEachOptions-customComponentFreezeMode?: LazyForEachCustomComponentFreezeMode--><!--Device-LazyForEachOptions-customComponentFreezeMode?: LazyForEachCustomComponentFreezeMode-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## memoryOptimizationStrategy
+
+```TypeScript
+memoryOptimizationStrategy?: LazyForEachMemOptStrategy
+```
+
+Memory optimization strategy for LazyForEach.
+
+**Type:** [LazyForEachMemOptStrategy](arkts-lazyforeach-lazyforeachmemoptstrategy-e.md)
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-LazyForEachOptions-memoryOptimizationStrategy?: LazyForEachMemOptStrategy--><!--Device-LazyForEachOptions-memoryOptimizationStrategy?: LazyForEachMemOptStrategy-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## releaseStrategy
+
+```TypeScript
+releaseStrategy?: LazyForEachReleaseStrategy
+```
+
+Resource release strategy for LazyForEach discarded nodes. Default value:LazyForEachReleaseStrategy.BATCH.
+
+**Type:** [LazyForEachReleaseStrategy](arkts-lazyforeach-lazyforeachreleasestrategy-e.md)
+
+**Default:** LazyForEachReleaseStrategy.BATCH
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-LazyForEachOptions-releaseStrategy?: LazyForEachReleaseStrategy--><!--Device-LazyForEachOptions-releaseStrategy?: LazyForEachReleaseStrategy-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

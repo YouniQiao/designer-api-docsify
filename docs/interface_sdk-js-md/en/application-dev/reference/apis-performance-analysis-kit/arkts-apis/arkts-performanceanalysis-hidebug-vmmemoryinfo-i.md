@@ -2,6 +2,8 @@
 
 Describes the VM memory information.
 
+@interface VMMemoryInfo
+
 **Since:** 23
 
 <!--Device-hidebug-interface VMMemoryInfo--><!--Device-hidebug-interface VMMemoryInfo-End-->

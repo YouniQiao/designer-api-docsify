@@ -16,7 +16,9 @@ import { GesturePoint } from '@kit.AccessibilityKit';
 function isOpenAccessibilitySync(): boolean
 ```
 
-Checks whether any accessibility application has been enabled in the system. To obtain information about accessibility applications in the system, you are advised to use [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md).
+Checks whether any accessibility application has been enabled in the system.
+
+To obtain information about accessibility applications in the system, you are advised to use [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md).
 
 **Since:** 23
 

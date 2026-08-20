@@ -12,7 +12,9 @@ import { sim } from '@kit.TelephonyKit';
 function getSimIccId(slotId: int, callback: AsyncCallback<string>): void
 ```
 
-Obtains the ICCID of the SIM card in a specified slot. &lt;p&gt;The ICCID is a unique identifier of a SIM card. It consists of 20 digits and is recorded in the EFICCID file of the SIM card.
+Obtains the ICCID of the SIM card in a specified slot.
+
+&lt;p&gt;The ICCID is a unique identifier of a SIM card. It consists of 20 digits and is recorded in the EFICCID file of the SIM card.
 
 **Since:** 23
 
@@ -35,14 +37,14 @@ Obtains the ICCID of the SIM card in a specified slot. &lt;p&gt;The ICCID is a u
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) | No SIM card found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) | No SIM card found. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
 
 **Examples**
 
@@ -62,7 +64,9 @@ sim.getSimIccId(0, (err: BusinessError, data: string) => {
 function getSimIccId(slotId: int): Promise<string>
 ```
 
-Obtains the ICCID of the SIM card in a specified slot. &lt;p&gt;The ICCID is a unique identifier of a SIM card. It consists of 20 digits and is recorded in the EFICCID file of the SIM card.
+Obtains the ICCID of the SIM card in a specified slot.
+
+&lt;p&gt;The ICCID is a unique identifier of a SIM card. It consists of 20 digits and is recorded in the EFICCID file of the SIM card.
 
 **Since:** 23
 
@@ -90,14 +94,14 @@ Obtains the ICCID of the SIM card in a specified slot. &lt;p&gt;The ICCID is a u
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) | No SIM card found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) | No SIM card found. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
 
 **Examples**
 

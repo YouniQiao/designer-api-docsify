@@ -2,6 +2,8 @@
 
 Configuration parameter options for AI-generated image tasks.
 
+@interface GenerateImageTaskParams
+
 **Since:** 23
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.

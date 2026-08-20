@@ -1,6 +1,6 @@
 # WifiStandard
 
-Wi-Fi standard.
+Wi-Fi standard. @enum { int }
 
 **Since:** 23
 

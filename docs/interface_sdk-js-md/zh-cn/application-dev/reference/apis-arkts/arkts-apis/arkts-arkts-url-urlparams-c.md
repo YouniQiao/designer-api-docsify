@@ -1,4 +1,4 @@
-# URLParams(URL字符串解析)
+# URLParams
 
 URLParams是一个用于解析、构造和操作URL参数的实用类。该类提供了统一的接口来处理URL查询参数。
 
@@ -34,7 +34,7 @@ $_iterator(): IterableIterator<[string, string]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[string, string]&gt; | 返回一个迭代器，迭代器的每一项为包含name和value的[string, string]数组。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, string]&gt; | 返回一个迭代器，迭代器的每一项为包含name和value的[string, string]数组。 |
 
 **示例**
 
@@ -65,7 +65,7 @@ for (let pair of paramsObject) {
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[string, string]&gt; | 返回一个迭代器，迭代器的每一项为包含name和value的[string, string]数组。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, string]&gt; | 返回一个迭代器，迭代器的每一项为包含name和value的[string, string]数组。 |
 
 **示例**
 
@@ -122,7 +122,9 @@ paramsObject.append('fod', '3');
 constructor(init?: string[][] | Record<string, string> | string | URLParams)
 ```
 
-ArkTS-Sta: constructor(init?: [string, string][] | Record&lt;string, string&gt; | string | URLParams) URLParams的构造函数，用于创建URL参数对象，适用于需要解析、构造或操作URL查询参数的场景。
+ArkTS-Sta: constructor(init?: [string, string][] | Record&lt;string, string&gt; | string | URLParams)
+
+URLParams的构造函数，用于创建URL参数对象，适用于需要解析、构造或操作URL查询参数的场景。
 
 **起始版本：** 9
 
@@ -136,7 +138,7 @@ ArkTS-Sta: constructor(init?: [string, string][] | Record&lt;string, string&gt; 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| init | string[][] \| Record&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | 否 | 入参对象。 <br/>- string[][]：字符串二维数组。 <br/>- Record&lt;string, string&gt;：对象列表。 <br/>- string：URL查询参数字符串。 <br/>- URLParams：URLParams实例对象。 <br/>- 默认值：null。 |
+| init | string[][] \| [Record](arkts-arkts-map-record-c.md)&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | 否 | 入参对象。 <br/>- string[][]：字符串二维数组。 <br/>- Record&lt;string, string&gt;：对象列表。 <br/>- string：URL查询参数字符串。 <br/>- URLParams：URLParams实例对象。 <br/>- 默认值：null。 |
 
 **示例**
 
@@ -195,7 +197,7 @@ constructor(init?: [string, string][] | Record<string, string> | string | URLPar
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| init | [string, string][] \| Record&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | 否 | init init |
+| init | [string, string][] \| [Record](arkts-arkts-map-record-c.md)&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | 否 | init init |
 
 ## delete
 
@@ -250,7 +252,7 @@ entries(): IterableIterator<[string, string]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[string, string]&gt; | 返回一个ES6的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, string]&gt; | 返回一个ES6的迭代器。 |
 
 **示例**
 
@@ -401,7 +403,11 @@ let absentValue = paramsObject.get('abc'); // undefined
 get(name: string): string | undefined
 ```
 
-根据指定的键获取第一个键值对的值。 &gt; **说明：** &gt; &gt; 若查找一个不存在的键值对名称时返回值为undefined。
+根据指定的键获取第一个键值对的值。
+
+> **说明：**
+> 
+> 若查找一个不存在的键值对名称时返回值为undefined。
 
 **起始版本：** 23
 
@@ -521,7 +527,7 @@ keys(): IterableIterator<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;string&gt; | 返回一个包含所有键值对的name的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; | 返回一个包含所有键值对的name的迭代器。 |
 
 **示例**
 
@@ -544,7 +550,9 @@ for (let key of keys) {
 set(name: string, value: string): void
 ```
 
-将与name关联的URLParams对象中的值设置为value。 如果存在名称为name的键值对，请将第一个键值对的值设置为value并删除所有其他值。如果不存在该键名，则将键值对附加到查询字符串。
+将与name关联的URLParams对象中的值设置为value。
+
+如果存在名称为name的键值对，请将第一个键值对的值设置为value并删除所有其他值。如果不存在该键名，则将键值对附加到查询字符串。
 
 **起始版本：** 23
 
@@ -648,7 +656,7 @@ values(): IterableIterator<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;string&gt; | 返回一个包含所有键值对的value的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; | 返回一个包含所有键值对的value的迭代器。 |
 
 **示例**
 

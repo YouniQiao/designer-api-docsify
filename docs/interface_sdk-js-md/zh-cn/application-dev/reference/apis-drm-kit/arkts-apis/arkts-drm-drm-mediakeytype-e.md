@@ -1,4 +1,4 @@
-# MediaKeyType(Defines the DRM capability.)
+# MediaKeyType
 
 枚举，媒体密钥类型。
 

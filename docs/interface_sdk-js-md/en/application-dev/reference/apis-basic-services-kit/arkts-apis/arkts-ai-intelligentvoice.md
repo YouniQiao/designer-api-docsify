@@ -1,5 +1,7 @@
 # @ohos.ai.intelligentVoice
 
+@namespace intelligentVoice
+
 **Since:** 23
 
 <!--Device-unnamed-declare namespace intelligentVoice--><!--Device-unnamed-declare namespace intelligentVoice-End-->
@@ -54,14 +56,14 @@ import { intelligentVoice } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [CapturerChannel](arkts-basicservices-intelligentvoice-capturerchannel-e-sys.md) | Enumerates capturer channel. |
-| [EnrollResult](arkts-basicservices-intelligentvoice-enrollresult-e-sys.md) | Enumerates enroll result. |
-| [EvaluationResultCode](arkts-basicservices-intelligentvoice-evaluationresultcode-e-sys.md) | Enumerates evaluation result code. |
-| [IntelligentVoiceEngineType](arkts-basicservices-intelligentvoice-intelligentvoiceenginetype-e-sys.md) | Enumerates intelligent voice engine type. |
-| [IntelligentVoiceErrorCode](arkts-basicservices-intelligentvoice-intelligentvoiceerrorcode-e-sys.md) | Enumerates intelligent voice error code. |
-| [SensibilityType](arkts-basicservices-intelligentvoice-sensibilitytype-e-sys.md) | Enumerates sensibility type. |
-| [ServiceChangeType](arkts-basicservices-intelligentvoice-servicechangetype-e-sys.md) | Enumerates service change type. |
-| [UploadFileType](arkts-basicservices-intelligentvoice-uploadfiletype-e-sys.md) | Enumerates upload file type. |
-| [WakeupIntelligentVoiceEventType](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceeventtype-e-sys.md) | Enumerates wakeup intelligent voice event type. |
+| [CapturerChannel](arkts-basicservices-intelligentvoice-capturerchannel-e-sys.md) | Enumerates capturer channel. @enum {number} |
+| [EnrollResult](arkts-basicservices-intelligentvoice-enrollresult-e-sys.md) | Enumerates enroll result. @enum {number} |
+| [EvaluationResultCode](arkts-basicservices-intelligentvoice-evaluationresultcode-e-sys.md) | Enumerates evaluation result code. @enum {number} |
+| [IntelligentVoiceEngineType](arkts-basicservices-intelligentvoice-intelligentvoiceenginetype-e-sys.md) | Enumerates intelligent voice engine type. @enum {number} |
+| [IntelligentVoiceErrorCode](arkts-basicservices-intelligentvoice-intelligentvoiceerrorcode-e-sys.md) | Enumerates intelligent voice error code. @enum {number} |
+| [SensibilityType](arkts-basicservices-intelligentvoice-sensibilitytype-e-sys.md) | Enumerates sensibility type. @enum {number} |
+| [ServiceChangeType](arkts-basicservices-intelligentvoice-servicechangetype-e-sys.md) | Enumerates service change type. @enum {number} |
+| [UploadFileType](arkts-basicservices-intelligentvoice-uploadfiletype-e-sys.md) | Enumerates upload file type. @enum {number} |
+| [WakeupIntelligentVoiceEventType](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceeventtype-e-sys.md) | Enumerates wakeup intelligent voice event type. @enum {number} |
 <!--DelEnd-->
 

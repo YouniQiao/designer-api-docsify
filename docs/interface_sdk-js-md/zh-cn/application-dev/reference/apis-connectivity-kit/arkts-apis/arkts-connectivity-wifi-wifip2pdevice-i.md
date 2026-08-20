@@ -2,6 +2,8 @@
 
 P2P设备信息。
 
+@interface WifiP2pDevice
+
 **起始版本：** 8
 
 **废弃版本：** 9

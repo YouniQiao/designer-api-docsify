@@ -318,7 +318,9 @@ Resource information of the application icon. The resource information obtained 
 readonly installSource: string
 ```
 
-Installation source of an application. The options are as follows: - **pre-installed**: pre-installed application installed during the first boot. - **ota**: pre-installed application added during system upgrade. - **recovery**: pre-installed application manually restored by the user after uninstallation. - **bundleName**: installation by the application corresponding to this bundle name. **bundleName** represents a variable, subject to the actual value. - **unknown**: unknown application installation source.
+Installation source of an application. The options are as follows:
+
+- **pre-installed**: pre-installed application installed during the first boot. - **ota**: pre-installed application added during system upgrade. - **recovery**: pre-installed application manually restored by the user after uninstallation. - **bundleName**: installation by the application corresponding to this bundle name. **bundleName** represents a variable, subject to the actual value. - **unknown**: unknown application installation source.
 
 **Type:** string
 
@@ -390,7 +392,9 @@ Resource information of the application label. The resource information obtained
 readonly metadata: Map<string, Array<Metadata>>
 ```
 
-Metadata of the application. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_APPLICATION** and **GET_BUNDLE_INFO_WITH_METADATA** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md). Note: Supported since API version 9 and deprecated since API version 10. You are advised to use **metadataArray** instead.
+Metadata of the application. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_APPLICATION** and **GET_BUNDLE_INFO_WITH_METADATA** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md).
+
+Note: Supported since API version 9 and deprecated since API version 10. You are advised to use **metadataArray** instead.
 
 **Type:** Map&lt;string, Array&lt;[Metadata](arkts-ability-metadata-i.md)&gt;&gt;
 
@@ -514,7 +518,7 @@ Process name.
 readonly releaseType: string
 ```
 
-Release type of the SDK used for application packing. Currently, the SDK release types include Canary, Beta, and Release. Each of the Canary and Beta releases can be distinguished by a sequential number, such as Canary1, Canary2 , Beta1, and Beta2. You can compare the SDK release type on which application packaging depends and the OS release type (specified by [deviceInfo.distributionOSReleaseType](../../apis-na/arkts-apis/arkts-deviceinfo.md)) to determine the compatibility.
+Release type of the SDK used for application packing. Currently, the SDK release types include Canary, Beta, and Release. Each of the Canary and Beta releases can be distinguished by a sequential number, such as Canary1, Canary2 , Beta1, and Beta2. You can compare the SDK release type on which application packaging depends and the OS release type (specified by [deviceInfo.distributionOSReleaseType](../../apis-basic-services-kit/arkts-apis/arkts-deviceinfo.md)) to determine the compatibility.
 
 **Type:** string
 

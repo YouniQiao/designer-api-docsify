@@ -34,8 +34,8 @@ Open the view of forms belonging to the specified bundle. Client to communicatio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 

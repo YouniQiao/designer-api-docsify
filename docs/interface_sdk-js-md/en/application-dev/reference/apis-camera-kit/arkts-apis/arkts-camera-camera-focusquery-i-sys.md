@@ -1,6 +1,10 @@
 # FocusQuery
 
-FocusQuery provides APIs to check whether a focus mode is supported. &gt; **NOTE：**&gt; &gt; - This interface was first introduced in API version 12. In this version, a compatibility change was made that &gt; preserved the initial version information of inner elements. As a result, you might see outer element's @since &gt; version number being higher than that of the inner elements. However, this discrepancy does not affect the &gt; functionality of the interface.
+FocusQuery provides APIs to check whether a focus mode is supported.
+
+> **NOTE：**
+> 
+> - This interface was first introduced in API version 12. In this version, a compatibility change was made that &gt; preserved the initial version information of inner elements. As a result, you might see outer element's
 
 **Since:** 23
 
@@ -41,8 +45,8 @@ Checks whether the focus assist is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 
 **Examples**
 
@@ -94,9 +98,9 @@ Checks whether a focus drive type is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 **Examples**
 
@@ -148,9 +152,9 @@ Checks whether a focus range type is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 **Examples**
 

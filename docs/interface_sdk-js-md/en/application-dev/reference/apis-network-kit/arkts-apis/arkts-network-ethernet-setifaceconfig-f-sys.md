@@ -36,16 +36,16 @@ Sets the network interface configuration information. This API uses an asynchron
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
-| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
-| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Failed to connect to the service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) | Device information does not exist. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
+| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Failed to connect to the service. |
+| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
 | 2201004 | Invalid Ethernet profile. |
-| [2201007](../errorcode-net-ethernet.md#2201007-failed-to-write-the-user-configuration) | Ethernet failed to write user configuration information. |
+| [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) | Device information does not exist. |
 | [2201006](../errorcode-net-ethernet.md#2201006-device-not-connected) | Ethernet device not connected. |
+| [2201007](../errorcode-net-ethernet.md#2201007-failed-to-write-the-user-configuration) | Ethernet failed to write user configuration information. |
 
 **Examples**
 
@@ -107,16 +107,16 @@ Sets the network interface configuration information. This API uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
-| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
-| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Failed to connect to the service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) | Device information does not exist. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
+| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Failed to connect to the service. |
+| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
 | 2201004 | Invalid Ethernet profile. |
-| [2201007](../errorcode-net-ethernet.md#2201007-failed-to-write-the-user-configuration) | Ethernet failed to write user configuration information. |
+| [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) | Device information does not exist. |
 | [2201006](../errorcode-net-ethernet.md#2201006-device-not-connected) | Ethernet device not connected. |
+| [2201007](../errorcode-net-ethernet.md#2201007-failed-to-write-the-user-configuration) | Ethernet failed to write user configuration information. |
 
 **Examples**
 

@@ -1,0 +1,20 @@
+# TypedArrays(TypedArrays static methods declaration)
+
+## Modules to Import
+
+```TypeScript
+```
+
+## Summary
+
+### Classes
+
+| Name | Description |
+| --- | --- |
+| [BigInt64Array(TypedArrays static methods declaration)](arkts-arkts-typedarrays-bigint64array-c.md) | class BigInt64Array |
+| [Float32Array(TypedArrays static methods declaration)](arkts-arkts-typedarrays-float32array-c.md) | class Float32Array |
+| [Float64Array(TypedArrays static methods declaration)](arkts-arkts-typedarrays-float64array-c.md) | class Float64Array |
+| [Int16Array(TypedArrays static methods declaration)](arkts-arkts-typedarrays-int16array-c.md) | class Int16Array |
+| [Int32Array(TypedArrays static methods declaration)](arkts-arkts-typedarrays-int32array-c.md) | class Int32Array |
+| [Int8Array(TypedArrays static methods declaration)](arkts-arkts-typedarrays-int8array-c.md) | class Int8Array |
+

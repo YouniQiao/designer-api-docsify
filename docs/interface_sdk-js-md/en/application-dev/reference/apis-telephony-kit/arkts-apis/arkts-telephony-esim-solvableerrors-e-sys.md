@@ -2,6 +2,8 @@
 
 The solvable errors.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-eSIM-export enum SolvableErrors--><!--Device-eSIM-export enum SolvableErrors-End-->

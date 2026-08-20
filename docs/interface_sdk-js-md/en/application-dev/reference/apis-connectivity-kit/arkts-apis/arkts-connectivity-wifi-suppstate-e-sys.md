@@ -2,6 +2,8 @@
 
 The state of the supplicant enumeration.
 
+@enum { number } SuppState
+
 **Since:** 6
 
 **Deprecated since:** 9

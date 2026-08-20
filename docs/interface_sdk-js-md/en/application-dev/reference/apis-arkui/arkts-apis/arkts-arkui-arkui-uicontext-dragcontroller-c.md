@@ -1,6 +1,10 @@
 # DragController
 
-Provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or long-press event, an application can initiate a drag action and carry drag information therein. &gt; **NOTE：**&gt; &gt; In the following API examples, you must first use [getDragController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) in &gt; **UIContext** to obtain a **DragController** instance, and then call the APIs using the obtained instance.
+Provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or long-press event, an application can initiate a drag action and carry drag information therein.
+
+> **NOTE：**
+> 
+> In the following API examples, you must first use [getDragController()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getdragcontroller) in &gt; **UIContext** to obtain a **DragController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 11
 
@@ -54,7 +58,11 @@ Cancels the data loading initiated by the startDataLoading API. This API can be 
 createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: dragController.DragInfo): dragController.DragAction
 ```
 
-Creates a drag action object for initiating drag and drop operations. You need to explicitly specify one or more drag previews, the drag data, and the drag handle point. If a drag operation initiated by an existing drag action object is not completed, no new object can be created, and calling the API will throw an exception. After the lifecycle of the drag action object ends, the callback functions registered on this object become invalid. Therefore, it is necessary to hold this object within a longer scope and replace the old value with a new object returned by **createDragAction** before each drag initiation. &gt; **NOTE：**&gt; &gt; For optimal drag and drop performance, limit the number of drag previews.
+Creates a drag action object for initiating drag and drop operations. You need to explicitly specify one or more drag previews, the drag data, and the drag handle point. If a drag operation initiated by an existing drag action object is not completed, no new object can be created, and calling the API will throw an exception. After the lifecycle of the drag action object ends, the callback functions registered on this object become invalid. Therefore, it is necessary to hold this object within a longer scope and replace the old value with a new object returned by **createDragAction** before each drag initiation.
+
+> **NOTE：**
+> 
+> For optimal drag and drop performance, limit the number of drag previews.
 
 **Since:** 11
 
@@ -83,8 +91,8 @@ Creates a drag action object for initiating drag and drop operations. You need t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
 
 ## enableDropDisallowedBadge
 
@@ -141,8 +149,8 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
 
 ## executeDrag
 
@@ -181,8 +189,8 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
 
 ## getDragPreview
 

@@ -1,5 +1,7 @@
 # ImmersiveEffect
 
+@brief 沉浸效果。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-interface ImmersiveEffect--><!--Device-inputMethodEngine-interface ImmersiveEffect-End-->
@@ -17,6 +19,10 @@ import { inputMethodEngine } from '@kit.IMEKit';
 ```TypeScript
 fluidLightMode?: FluidLightMode
 ```
+
+@brief 流光模式，未填充时默认为NONE。
+
+该属性仅系统应用可以使用。
 
 **类型：** [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md)
 

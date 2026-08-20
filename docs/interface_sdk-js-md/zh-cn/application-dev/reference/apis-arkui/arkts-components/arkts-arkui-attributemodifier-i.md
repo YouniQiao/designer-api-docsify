@@ -2,6 +2,8 @@
 
 Defines the attribute modifier.
 
+@interface AttributeModifier&lt;T&gt;
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare interface AttributeModifier--><!--Device-unnamed-declare interface AttributeModifier-End-->

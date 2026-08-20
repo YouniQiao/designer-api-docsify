@@ -12,7 +12,9 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAppProvisionInfo(bundleName: string, callback: AsyncCallback<AppProvisionInfo>): void
 ```
 
-Obtains the provision profile based on the given bundle name. This API uses an asynchronous callback to return the result. No permission is required for obtaining the caller's own information.
+Obtains the provision profile based on the given bundle name. This API uses an asynchronous callback to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 23
 
@@ -35,9 +37,9 @@ Obtains the provision profile based on the given bundle name. This API uses an a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter bundleName is empty. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter bundleName is empty. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
 **Examples**
@@ -70,7 +72,9 @@ try {
 function getAppProvisionInfo(bundleName: string, userId: int, callback: AsyncCallback<AppProvisionInfo>): void
 ```
 
-Obtains the provision profile based on the given bundle name and user ID. This API uses an asynchronous callback to return the result. No permission is required for obtaining the caller's own information.
+Obtains the provision profile based on the given bundle name and user ID. This API uses an asynchronous callback to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 23
 
@@ -94,11 +98,11 @@ Obtains the provision profile based on the given bundle name and user ID. This A
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter bundleName is empty. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter bundleName is empty. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 
 **Examples**
 
@@ -131,7 +135,9 @@ try {
 function getAppProvisionInfo(bundleName: string, userId?: int): Promise<AppProvisionInfo>
 ```
 
-Obtains the provision profile based on the given bundle name and user ID. This API uses a promise to return the result. No permission is required for obtaining the caller's own information.
+Obtains the provision profile based on the given bundle name and user ID. This API uses a promise to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 23
 
@@ -160,11 +166,11 @@ Obtains the provision profile based on the given bundle name and user ID. This A
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter bundleName is empty. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter bundleName is empty. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 
 **Examples**
 

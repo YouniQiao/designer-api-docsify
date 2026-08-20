@@ -1,6 +1,8 @@
 # WindowStage
 
-窗口管理器。管理各个基本窗口单元，即[Window](arkts-arkui-window-n.md)实例。 下列API示例中都需在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)函数中使用WindowStage 的实例调用对应方法。
+窗口管理器。管理各个基本窗口单元，即[Window](arkts-arkui-window-n.md)实例。
+
+下列API示例中都需在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)函数中使用WindowStage 的实例调用对应方法。
 
 **起始版本：** 23
 
@@ -22,7 +24,9 @@ import { window } from '@kit.ArkUI';
 createSubWindow(name: string): Promise<Window>
 ```
 
-创建该WindowStage实例下的子窗口，使用Promise异步回调。 子窗口创建后默认是[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。
+创建该WindowStage实例下的子窗口，使用Promise异步回调。
+
+子窗口创建后默认是[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。
 
 **起始版本：** 23
 
@@ -60,7 +64,9 @@ createSubWindow(name: string): Promise<Window>
 createSubWindow(name: string, callback: AsyncCallback<Window>): void
 ```
 
-创建该WindowStage实例下的子窗口，使用callback异步回调。 子窗口创建后默认是[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。
+创建该WindowStage实例下的子窗口，使用callback异步回调。
+
+子窗口创建后默认是[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。
 
 **起始版本：** 23
 
@@ -77,7 +83,7 @@ createSubWindow(name: string, callback: AsyncCallback<Window>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 子窗口的名字。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 | 回调函数。返回当前WindowStage下的子窗口对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 | 回调函数。返回当前WindowStage下的子窗口对象。 |
 
 **错误码：**
 
@@ -93,7 +99,11 @@ createSubWindow(name: string, callback: AsyncCallback<Window>): void
 createSubWindowWithOptions(name: string, options: SubWindowOptions): Promise<Window>
 ```
 
-创建该WindowStage实例下的子窗口，使用Promise异步回调。 非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，子窗口创建后默认是[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。 自由窗口状态下，子窗口参数[decorEnabled](arkts-apis-window-i.md#subwindowoptions11)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口创建后为非沉浸式布局。
+创建该WindowStage实例下的子窗口，使用Promise异步回调。
+
+非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，子窗口创建后默认是[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。
+
+自由窗口状态下，子窗口参数[decorEnabled](arkts-apis-window-i.md#subwindowoptions11)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口创建后为非沉浸式布局。
 
 **起始版本：** 23
 
@@ -133,7 +143,9 @@ createSubWindowWithOptions(name: string, options: SubWindowOptions): Promise<Win
 getMainWindow(): Promise<Window>
 ```
 
-获取该WindowStage实例下的主窗口，使用Promise异步回调。 调用该接口前，建议先通过[loadContent](../apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法或者setUIContent方法完成页面加载。
+获取该WindowStage实例下的主窗口，使用Promise异步回调。
+
+调用该接口前，建议先通过[loadContent](../apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法或者setUIContent方法完成页面加载。
 
 **起始版本：** 23
 
@@ -164,7 +176,9 @@ getMainWindow(): Promise<Window>
 getMainWindow(callback: AsyncCallback<Window>): void
 ```
 
-获取该WindowStage实例下的主窗口，使用callback异步回调。 调用该接口前，建议先通过[loadContent](../apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法或者setUIContent方法完成页面加载。
+获取该WindowStage实例下的主窗口，使用callback异步回调。
+
+调用该接口前，建议先通过[loadContent](../apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法或者setUIContent方法完成页面加载。
 
 **起始版本：** 23
 
@@ -180,7 +194,7 @@ getMainWindow(callback: AsyncCallback<Window>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 | 回调函数。返回当前WindowStage下的主窗口对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 | 回调函数。返回当前WindowStage下的主窗口对象。 |
 
 **错误码：**
 
@@ -273,7 +287,7 @@ getSubWindow(callback: AsyncCallback<Array<Window>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Window](arkts-arkui-window-window-i.md)&gt;&gt; | 是 | 回调函数。返回当前WindowStage下的所有子窗口对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[Window](arkts-arkui-window-window-i.md)&gt;&gt; | 是 | 回调函数。返回当前WindowStage下的所有子窗口对象。 |
 
 **错误码：**
 
@@ -310,9 +324,9 @@ isWindowRectAutoSave(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 20+ |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 20+ |
 
 ## loadContent
 
@@ -320,7 +334,11 @@ isWindowRectAutoSave(): Promise<boolean>
 loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void
 ```
 
-根据当前工程中指定的页面路径为窗口加载具体页面内容，通过LocalStorage传递状态属性给加载的页面，使用callback异步回调。 建议在UIAbility启动过程中使用该接口，重复调用将先销毁旧的页面内容（即UIContent）再加载新的页面内容，请谨慎使用。 当前UI的执行上下文可能不明确，所以不建议在本接口的回调函数中做UI相关的操作。
+根据当前工程中指定的页面路径为窗口加载具体页面内容，通过LocalStorage传递状态属性给加载的页面，使用callback异步回调。
+
+建议在UIAbility启动过程中使用该接口，重复调用将先销毁旧的页面内容（即UIContent）再加载新的页面内容，请谨慎使用。
+
+当前UI的执行上下文可能不明确，所以不建议在本接口的回调函数中做UI相关的操作。
 
 **起始版本：** 23
 
@@ -338,7 +356,7 @@ loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>):
 | --- | --- | --- | --- |
 | path | string | 是 | 要加载到窗口中的页面内容的路径，该路径需添加到工程的main_pages.json文件中。不支持相对路径写法，需与main_pages.json中的src取值保持一致。 |
 | storage | LocalStorage | 是 | 页面级UI状态存储单元，这里用于为加载到窗口的页面内容传递状态属性。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -354,7 +372,9 @@ loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>):
 loadContent(path: string, storage?: LocalStorage): Promise<void>
 ```
 
-根据当前工程中指定的页面路径为WindowStage的主窗口加载具体页面内容，通过LocalStorage传递状态属性给加载的页面，使用Promise异步回调。 建议在UIAbility启动过程中调用该接口，重复调用将首先销毁旧的页面内容（即UIContent）再加载新页面内容，请谨慎使用。当前UI的执行上下文可能不明确，所以不建议在回调函数中做UI相关的操作。
+根据当前工程中指定的页面路径为WindowStage的主窗口加载具体页面内容，通过LocalStorage传递状态属性给加载的页面，使用Promise异步回调。
+
+建议在UIAbility启动过程中调用该接口，重复调用将首先销毁旧的页面内容（即UIContent）再加载新页面内容，请谨慎使用。当前UI的执行上下文可能不明确，所以不建议在回调函数中做UI相关的操作。
 
 **起始版本：** 23
 
@@ -393,7 +413,11 @@ loadContent(path: string, storage?: LocalStorage): Promise<void>
 loadContent(path: string, callback: AsyncCallback<void>): void
 ```
 
-为当前窗口加载具体页面内容，使用callback异步回调。 建议在UIAbility启动过程中使用该接口，多次调用该接口会先销毁旧的页面内容（即UIContent）再加载新的页面内容，请谨慎使用。 当前UI的执行上下文可能不明确，所以不建议在本接口的回调函数中做UI相关的操作。
+为当前窗口加载具体页面内容，使用callback异步回调。
+
+建议在UIAbility启动过程中使用该接口，多次调用该接口会先销毁旧的页面内容（即UIContent）再加载新的页面内容，请谨慎使用。
+
+当前UI的执行上下文可能不明确，所以不建议在本接口的回调函数中做UI相关的操作。
 
 **起始版本：** 23
 
@@ -410,7 +434,7 @@ loadContent(path: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 要加载到窗口中的页面内容的路径，Stage模型下该路径需添加到工程的main_pages.json文件中，FA模型下该路径需添加到工程的config.json文件中。不支持相对路径写法，需与main_pages.json或config.json中的src取值保持一致。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -444,7 +468,7 @@ Loads content by named router
 | --- | --- | --- | --- |
 | name | string | 是 | name of the page to which the content will be loaded. |
 | storage | LocalStorage | 是 | The data object shared within the content instance loaded by the window. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **错误码：**
 
@@ -459,7 +483,11 @@ Loads content by named router
 loadContentByName(name: string, callback: AsyncCallback<void>): void
 ```
 
-根据指定路由页面名称为当前窗口加载[命名路由](../../../ui/arkts-routing.md#命名路由)页面，使用callback异步回调。 建议在UIAbility启动过程中使用该接口，重复调用该接口将先销毁旧的页面内容（即UIContent）再加载新的页面内容，请谨慎使用。 当前UI的执行上下文可能不明确，所以不建议在本接口的回调函数中做UI相关的操作。
+根据指定路由页面名称为当前窗口加载[命名路由](../../../ui/arkts-routing.md#命名路由)页面，使用callback异步回调。
+
+建议在UIAbility启动过程中使用该接口，重复调用该接口将先销毁旧的页面内容（即UIContent）再加载新的页面内容，请谨慎使用。
+
+当前UI的执行上下文可能不明确，所以不建议在本接口的回调函数中做UI相关的操作。
 
 **起始版本：** 23
 
@@ -476,7 +504,7 @@ loadContentByName(name: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | name of the page to which the content will be loaded. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **错误码：**
 
@@ -650,7 +678,11 @@ off(eventType: 'windowStageClose', callback?: Callback<void>): void
 off(eventType: 'windowStageEvent', callback?: Callback<WindowStageEventType>): void
 ```
 
-关闭WindowStage生命周期变化的监听。 用于关闭[on('windowStageEvent')](#onwindowstageevent)接口对WindowStage生命周期变化的监听。 如果没有调用[on('windowStageEvent')](#onwindowstageevent)接口开启监听就关闭，程序正常执行不会抛出异常。
+关闭WindowStage生命周期变化的监听。
+
+用于关闭[on('windowStageEvent')](#onwindowstageevent)接口对WindowStage生命周期变化的监听。
+
+如果没有调用[on('windowStageEvent')](#onwindowstageevent)接口开启监听就关闭，程序正常执行不会抛出异常。
 
 **起始版本：** 9
 
@@ -714,7 +746,9 @@ off(eventType: 'windowStageLifecycleEvent', callback?: Callback<WindowStageLifec
 onWindowStageClose(callback: Callback<void, boolean>): void
 ```
 
-开启点击主窗三键区的关闭按钮监听事件。点击主窗口的三键区域的关闭键时触发该回调函数，将不执行注册的[UIAbility.onPrepareToTerminate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onpreparetoterminate)生命周期回调函数。 当重复注册窗口关闭事件的监听时，最后一次注册成功的监听事件生效。 触发的回调函数是同步执行，主窗口的异步关闭事件监听参考[on('windowWillClose')](arkts-arkui-window-window-i.md#onwindowwillclose)方法。 如果存在[on('windowWillClose')](arkts-arkui-window-window-i.md#onwindowwillclose)监听事件，只响应[on('windowWillClose')](arkts-arkui-window-window-i.md#onwindowwillclose)接口。
+开启点击主窗三键区的关闭按钮监听事件。点击主窗口的三键区域的关闭键时触发该回调函数，将不执行注册的[UIAbility.onPrepareToTerminate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onpreparetoterminate)生命周期回调函数。
+
+当重复注册窗口关闭事件的监听时，最后一次注册成功的监听事件生效。 触发的回调函数是同步执行，主窗口的异步关闭事件监听参考[on('windowWillClose')](arkts-arkui-window-window-i.md#onwindowwillclose)方法。 如果存在[on('windowWillClose')](arkts-arkui-window-window-i.md#onwindowwillclose)监听事件，只响应[on('windowWillClose')](arkts-arkui-window-window-i.md#onwindowwillclose)接口。
 
 **起始版本：** 23
 
@@ -927,7 +961,13 @@ releaseUIContent(): Promise<void>
 removeStartingWindow(): Promise<void>
 ```
 
-支持应用控制启动页消失时机。 此接口只对应用主窗口生效，且需要在module.json5配置文件abilities标签中的metadata标签下配置"enable.remove.starting.window"为"true"才会生效。 在标签配置为"true"的情况下，系统提供了启动页超时保护机制，若5s内未调用此接口，系统将自动移除启动页。 若标签配置为"false"或未配置标签，则此接口不生效，启动页将会在应用首帧渲染完成后自动移除。
+支持应用控制启动页消失时机。
+
+此接口只对应用主窗口生效，且需要在module.json5配置文件abilities标签中的metadata标签下配置"enable.remove.starting.window"为"true"才会生效。
+
+在标签配置为"true"的情况下，系统提供了启动页超时保护机制，若5s内未调用此接口，系统将自动移除启动页。
+
+若标签配置为"false"或未配置标签，则此接口不生效，启动页将会在应用首帧渲染完成后自动移除。
 
 **起始版本：** 23
 
@@ -949,9 +989,9 @@ removeStartingWindow(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window stage is not created or destroyed; 2. The main window is not created or destroyed; 3. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
 ## setCustomDensity
 
@@ -959,7 +999,11 @@ removeStartingWindow(): Promise<void>
 setCustomDensity(density: number): void
 ```
 
-支持应用主窗口自定义其显示大小缩放系数。 已创建的子窗和系统窗口不会立即跟随主窗的customDensity变化重新布局，而是在子窗或系统窗口下一次位置、大小、系统缩放大小等 窗口布局信息变化时跟随主窗的customDensity变化重新布局。 当存在同时使用该接口和setDefaultDensityEnabled(true)的情况时，以最后调用的设置效果为准。
+支持应用主窗口自定义其显示大小缩放系数。
+
+已创建的子窗和系统窗口不会立即跟随主窗的customDensity变化重新布局，而是在子窗或系统窗口下一次位置、大小、系统缩放大小等 窗口布局信息变化时跟随主窗的customDensity变化重新布局。
+
+当存在同时使用该接口和setDefaultDensityEnabled(true)的情况时，以最后调用的设置效果为准。
 
 **起始版本：** 15
 
@@ -992,7 +1036,11 @@ setCustomDensity(density: number): void
 setCustomDensity(density: double, applyToSubWindow?: boolean): void
 ```
 
-支持应用主窗口自定义其显示大小缩放系数。 已创建的子窗和系统窗口不会立即跟随主窗的customDensity变化重新布局，而是在子窗或系统窗口下一次位置、大小、系统缩放大小等 窗口布局信息变化时跟随主窗的customDensity变化重新布局。 当存在同时使用该接口和setDefaultDensityEnabled(true)的情况时，以最后调用的设置效果为准。
+支持应用主窗口自定义其显示大小缩放系数。
+
+已创建的子窗和系统窗口不会立即跟随主窗的customDensity变化重新布局，而是在子窗或系统窗口下一次位置、大小、系统缩放大小等 窗口布局信息变化时跟随主窗的customDensity变化重新布局。
+
+当存在同时使用该接口和setDefaultDensityEnabled(true)的情况时，以最后调用的设置效果为准。
 
 **起始版本：** 23
 
@@ -1023,7 +1071,11 @@ setCustomDensity(density: double, applyToSubWindow?: boolean): void
 setDefaultDensityEnabled(enabled: boolean): void
 ```
 
-设置应用主窗口是否使用系统默认Density，子窗和系统窗口会跟随主窗生效。调用此接口前，需先调用WindowStage.loadContent()初始化布局，确保接口调用时序正确。 不调用此接口进行设置，则表示不使用系统默认Density。 不使用系统默认Density时，若调用过setCustomDensity()，则窗口会跟随用户自定义的显示大小变化重新布局，否则跟随系统显示大小变化重新布局。
+设置应用主窗口是否使用系统默认Density，子窗和系统窗口会跟随主窗生效。调用此接口前，需先调用WindowStage.loadContent()初始化布局，确保接口调用时序正确。
+
+不调用此接口进行设置，则表示不使用系统默认Density。
+
+不使用系统默认Density时，若调用过setCustomDensity()，则窗口会跟随用户自定义的显示大小变化重新布局，否则跟随系统显示大小变化重新布局。
 
 **起始版本：** 23
 
@@ -1084,9 +1136,9 @@ setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowM
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
 ## setSupportedWindowModes
 
@@ -1121,9 +1173,9 @@ setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowM
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function setSupportedWindowModes can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. Invalid parameter range. 2. Invalid parameter length. 3. Incorrect parameter format. |
 
 ## setWindowModal
@@ -1160,10 +1212,10 @@ Set the application modality of the windowStage.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal. Possible cause: The window is not created or destroyed.<br>**适用版本：** 20+ |
 
 ## setWindowRectAutoSave
@@ -1172,7 +1224,11 @@ Set the application modality of the windowStage.
 setWindowRectAutoSave(enabled: boolean): Promise<void>
 ```
 
-设置是否启用最后关闭的主窗尺寸的记忆功能，使用Promise异步回调。 启用记忆功能后，在同一个UIAbility下，记忆最后关闭的主窗口的尺寸；此主窗口再次启动时，以记忆的尺寸按照规则进行打开。 层叠规则：1、当前实例是自由窗口时，打开下一实例窗口层叠时，大小要跟随。2、当前实例是最大化或全屏窗口时，打开下一个实例窗 口层叠时，保持最大化。 记忆规则： |上一次窗口状态|记忆规则| |-------------|-------| |自由窗口|保留自由窗口的大小/位置，超出工作区回弹| |二分屏窗口|保留二分屏之前自由窗口的大小/位置| |最大化窗口|保留最大化| |沉浸式窗口|保留沉浸式之前自由窗口的大小/位置| |最小化窗口|保留最小化之前自由窗口的大小/位置|
+设置是否启用最后关闭的主窗尺寸的记忆功能，使用Promise异步回调。
+
+启用记忆功能后，在同一个UIAbility下，记忆最后关闭的主窗口的尺寸；此主窗口再次启动时，以记忆的尺寸按照规则进行打开。 层叠规则：1、当前实例是自由窗口时，打开下一实例窗口层叠时，大小要跟随。2、当前实例是最大化或全屏窗口时，打开下一个实例窗 口层叠时，保持最大化。
+
+记忆规则： |上一次窗口状态|记忆规则| |-------------|-------| |自由窗口|保留自由窗口的大小/位置，超出工作区回弹| |二分屏窗口|保留二分屏之前自由窗口的大小/位置| |最大化窗口|保留最大化| |沉浸式窗口|保留沉浸式之前自由窗口的大小/位置| |最小化窗口|保留最小化之前自由窗口的大小/位置|
 
 **起始版本：** 23
 
@@ -1200,10 +1256,10 @@ setWindowRectAutoSave(enabled: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
 ## setWindowRectAutoSave
 
@@ -1211,7 +1267,13 @@ setWindowRectAutoSave(enabled: boolean): Promise<void>
 setWindowRectAutoSave(enabled: boolean, isSaveBySpecifiedFlag: boolean): Promise<void>
 ```
 
-设置是否启用主窗的尺寸记忆功能，使用Promise异步回调。 在同一个UIAbility下，可记忆最后关闭的主窗口尺寸，也可针对每个主窗口尺寸单独进行记忆。只有在UIAbility启动模式为 specified，且isSaveBySpecifiedFlag设置为true时，才能针对每个主窗口尺寸进行单独记忆。 启用记忆功能后，记忆主窗口关闭时的尺寸；对应主窗口再次启动时，以记忆的尺寸按照规则进行打开。 记忆规则： |上一次窗口状态|记忆规则| |-------------|-------| |自由窗口|保留自由窗口的大小/位置，超出工作区回弹。| |二分屏窗口|保留二分屏之前自由窗口的大小/位置。| |最大化窗口|保留最大化。| |沉浸式窗口|保留沉浸式之前自由窗口的大小/位置。| |最小化窗口|保留最小化之前自由窗口的大小/位置。|
+设置是否启用主窗的尺寸记忆功能，使用Promise异步回调。
+
+在同一个UIAbility下，可记忆最后关闭的主窗口尺寸，也可针对每个主窗口尺寸单独进行记忆。只有在UIAbility启动模式为 specified，且isSaveBySpecifiedFlag设置为true时，才能针对每个主窗口尺寸进行单独记忆。
+
+启用记忆功能后，记忆主窗口关闭时的尺寸；对应主窗口再次启动时，以记忆的尺寸按照规则进行打开。
+
+记忆规则： |上一次窗口状态|记忆规则| |-------------|-------| |自由窗口|保留自由窗口的大小/位置，超出工作区回弹。| |二分屏窗口|保留二分屏之前自由窗口的大小/位置。| |最大化窗口|保留最大化。| |沉浸式窗口|保留沉浸式之前自由窗口的大小/位置。| |最小化窗口|保留最小化之前自由窗口的大小/位置。|
 
 **起始版本：** 23
 
@@ -1240,8 +1302,8 @@ setWindowRectAutoSave(enabled: boolean, isSaveBySpecifiedFlag: boolean): Promise
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function setWindowRectAutoSave can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 

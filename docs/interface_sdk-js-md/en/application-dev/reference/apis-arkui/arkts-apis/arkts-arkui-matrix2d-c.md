@@ -1,6 +1,6 @@
 # Matrix2D
 
-**Matrix2D** allows you to perform matrix transformation, such as scaling, rotating, and translating.
+*Matrix2D** allows you to perform matrix transformation, such as scaling, rotating, and translating.
 
 **Since:** 8
 

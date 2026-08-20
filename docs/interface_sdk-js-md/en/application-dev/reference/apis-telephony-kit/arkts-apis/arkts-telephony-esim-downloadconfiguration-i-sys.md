@@ -2,6 +2,8 @@
 
 Specifies the download configuration.
 
+@interface DownloadConfiguration
+
 **Since:** 23
 
 <!--Device-eSIM-export interface DownloadConfiguration--><!--Device-eSIM-export interface DownloadConfiguration-End-->

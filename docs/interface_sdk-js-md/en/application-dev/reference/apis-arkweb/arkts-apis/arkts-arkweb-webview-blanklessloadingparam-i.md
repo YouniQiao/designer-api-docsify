@@ -20,9 +20,11 @@ import { webview } from '@kit.ArkWeb';
 callback?: Callback<BlanklessFrameInterpolationInfo>
 ```
 
-Callback invoked after frame interpolation succeeds, fails, or is removed. This takes effect only when **enable** is **true**. This parameter is optional. If not set, no operation is performed.
+Callback invoked after frame interpolation succeeds, fails, or is removed.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BlanklessFrameInterpolationInfo](../../apis-na/arkts-apis/arkts-na-webview-blanklessframeinterpolationinfo-i.md)&gt;
+This takes effect only when **enable** is **true**. This parameter is optional. If not set, no operation is performed.
+
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BlanklessFrameInterpolationInfo](../../apis-default/arkts-apis/arkts-webview-blanklessframeinterpolationinfo-i.md)&gt;
 
 **Since:** 23
 
@@ -38,7 +40,11 @@ Callback invoked after frame interpolation succeeds, fails, or is removed. This 
 duration?: number
 ```
 
-Duration of frame interpolation. The value range is the union of **[200, 2000]** and **{0}**, where **0** indicates that the duration is not specified and the system automatically sets a proper duration. Unit: ms.
+Duration of frame interpolation.
+
+The value range is the union of **[200, 2000]** and **{0}**, where **0** indicates that the duration is not specified and the system automatically sets a proper duration.
+
+Unit: ms.
 
 **Type:** number
 
@@ -56,7 +62,9 @@ Duration of frame interpolation. The value range is the union of **[200, 2000]**
 enable: boolean
 ```
 
-Whether to enable the white-screen-free loading frame interpolation scheme. The value **true** means enabled, and **false** means disabled.
+Whether to enable the white-screen-free loading frame interpolation scheme.
+
+The value **true** means enabled, and **false** means disabled.
 
 **Type:** boolean
 
@@ -74,7 +82,11 @@ Whether to enable the white-screen-free loading frame interpolation scheme. The 
 expirationTime?: number
 ```
 
-Expiration time of the historical frame, in UTC time. **T** indicates the current UTC time. If the expiration time is 30 days, the value is 2592000000 ms. The value range is the union of **(T, T + 2592000000]** and **{0}**. **0** indicates that the expiration time is not specified and the default expiration time (7 days) is used. Unit: ms.
+Expiration time of the historical frame, in UTC time.
+
+**T** indicates the current UTC time. If the expiration time is 30 days, the value is 2592000000 ms. The value range is the union of **(T, T + 2592000000]** and **{0}**. **0** indicates that the expiration time is not specified and the default expiration time (7 days) is used.
+
+Unit: ms.
 
 **Type:** number
 

@@ -1,4 +1,4 @@
-# RepeatArray(Defines Repeat component.)
+# RepeatArray
 
 ```TypeScript
 declare type RepeatArray<T> = Array<T> | ReadonlyArray<T> | Readonly<Array<T>>

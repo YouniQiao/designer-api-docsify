@@ -2,6 +2,8 @@
 
 定义场景对象的容器。容器提供了一种将场景对象分组到层次结构中的方法。
 
+@interface Container
+
 **起始版本：** 23
 
 <!--Device-unnamed-export interface Container--><!--Device-unnamed-export interface Container-End-->

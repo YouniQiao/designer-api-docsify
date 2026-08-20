@@ -1,4 +1,4 @@
-# DpiFollowStrategy(System API)（系统接口）
+# DpiFollowStrategy（系统接口）
 
 表示不同类型的DpiFollowStrategy的枚举。
 

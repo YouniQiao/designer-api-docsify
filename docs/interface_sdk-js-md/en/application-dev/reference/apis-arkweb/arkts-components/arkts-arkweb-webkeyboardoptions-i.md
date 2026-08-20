@@ -60,7 +60,11 @@ Type of the **Enter** key on the system soft keyboard. For details about the val
 useSystemKeyboard: boolean
 ```
 
-Whether to use the system's default soft keyboard. The value **true** means to use the system's default soft keyboard, and **false** means the opposite. Default value: **true**.
+Whether to use the system's default soft keyboard.
+
+The value **true** means to use the system's default soft keyboard, and **false** means the opposite.
+
+Default value: **true**.
 
 **Type:** boolean
 

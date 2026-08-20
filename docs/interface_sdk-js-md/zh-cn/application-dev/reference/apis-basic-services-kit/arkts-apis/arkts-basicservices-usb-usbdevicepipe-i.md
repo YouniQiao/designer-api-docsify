@@ -1,4 +1,4 @@
-# USBDevicePipe(USB Manager)
+# USBDevicePipe
 
 USB设备消息传输通道，用于确定设备。
 

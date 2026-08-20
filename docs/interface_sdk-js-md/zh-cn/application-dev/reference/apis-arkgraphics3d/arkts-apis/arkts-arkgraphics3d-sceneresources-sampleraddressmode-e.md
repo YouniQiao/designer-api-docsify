@@ -2,6 +2,8 @@
 
 采样器寻址模式枚举，用于控制纹理坐标超出[0, 1]范围时的处理方式。
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-unnamed-export enum SamplerAddressMode--><!--Device-unnamed-export enum SamplerAddressMode-End-->

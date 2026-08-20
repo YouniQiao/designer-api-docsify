@@ -12,7 +12,11 @@ import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
 function off(type: 'BundleStatusChange', callback: AsyncCallback<string>): void
 ```
 
-Unregisters the callback that receives bundle status changes. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API has been supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [off](arkts-ability-bundlemonitor-offbundlechangedevent-f-sys.md#off_bundlechangedevent) &gt; instead.
+Unregisters the callback that receives bundle status changes. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [off](arkts-ability-bundlemonitor-offbundlechangedevent-f-sys.md#off_bundlechangedevent) &gt; instead.
 
 **Since:** 8
 
@@ -42,7 +46,11 @@ Unregisters the callback that receives bundle status changes. This API uses an a
 function off(type: 'BundleStatusChange'): Promise<string>
 ```
 
-Unregisters the callback that receives bundle status changes. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API has been supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [off](arkts-ability-bundlemonitor-offbundlechangedevent-f-sys.md#off_bundlechangedevent) &gt; instead.
+Unregisters the callback that receives bundle status changes. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [off](arkts-ability-bundlemonitor-offbundlechangedevent-f-sys.md#off_bundlechangedevent) &gt; instead.
 
 **Since:** 8
 

@@ -1,4 +1,4 @@
-# DateTimeOptions(国际化-Intl)
+# DateTimeOptions
 
 时间日期格式化时可设置的配置项。从API version 9开始，DateTimeOptions的属性由必填改为可选。
 
@@ -24,7 +24,11 @@ import { intl } from '@kit.LocalizationKit';
 dateStyle?: string
 ```
 
-日期显示格式，取值包括： "long", "short", "medium", "full", "auto"。 不同取值的显示效果请参考附录表1。
+日期显示格式，取值包括：
+
+"long", "short", "medium", "full", "auto"。
+
+不同取值的显示效果请参考附录表1。
 
 **类型：** string
 
@@ -48,7 +52,9 @@ dateStyle?: string
 day?: string
 ```
 
-日期的显示格式，取值包括： "numeric", "2-digit"。
+日期的显示格式，取值包括：
+
+"numeric", "2-digit"。
 
 **类型：** string
 
@@ -72,7 +78,11 @@ day?: string
 dayPeriod?: string
 ```
 
-时段的显示格式，取值包括： "long", "short", "narrow", "auto"。 不同取值的显示效果请参考附录表10。
+时段的显示格式，取值包括：
+
+"long", "short", "narrow", "auto"。
+
+不同取值的显示效果请参考附录表10。
 
 **类型：** string
 
@@ -96,7 +106,11 @@ dayPeriod?: string
 era?: string
 ```
 
-纪元的显示格式，取值包括： "long", "short", "narrow", "auto"。 不同取值的显示效果请参考附录表9。
+纪元的显示格式，取值包括：
+
+"long", "short", "narrow", "auto"。
+
+不同取值的显示效果请参考附录表9。
 
 **类型：** string
 
@@ -120,7 +134,11 @@ era?: string
 formatMatcher?: string
 ```
 
-要使用的格式匹配算法，取值包括： "basic"：精确匹配。 "best fit"：最佳匹配。
+要使用的格式匹配算法，取值包括：
+
+"basic"：精确匹配。
+
+"best fit"：最佳匹配。
 
 **类型：** string
 
@@ -144,7 +162,9 @@ formatMatcher?: string
 hour?: string
 ```
 
-小时的显示格式，取值包括： "numeric", "2-digit"。
+小时的显示格式，取值包括：
+
+"numeric", "2-digit"。
 
 **类型：** string
 
@@ -168,7 +188,11 @@ hour?: string
 hour12?: boolean
 ```
 
-true表示使用12小时制，false表示使用24小时制。 同时设置hour12和hourCycle时，hourCycle不生效。 若hour12和hourCycle未设置且系统24小时开关打开时，hour12属性的默认值为false。
+true表示使用12小时制，false表示使用24小时制。
+
+同时设置hour12和hourCycle时，hourCycle不生效。
+
+若hour12和hourCycle未设置且系统24小时开关打开时，hour12属性的默认值为false。
 
 **类型：** boolean
 
@@ -192,7 +216,13 @@ true表示使用12小时制，false表示使用24小时制。 同时设置hour12
 hourCycle?: string
 ```
 
-时制格式，取值包括： "h11", "h12", "h23", "h24"。 不设置dateStyle或timeStyle参数时的显示效果请参考附录表5。 设置dateStyle或timeStyle参数时的显示效果请参考附录表6。
+时制格式，取值包括：
+
+"h11", "h12", "h23", "h24"。
+
+不设置dateStyle或timeStyle参数时的显示效果请参考附录表5。
+
+设置dateStyle或timeStyle参数时的显示效果请参考附录表6。
 
 **类型：** string
 
@@ -216,7 +246,9 @@ hourCycle?: string
 locale?: string
 ```
 
-合法的区域ID，如：zh-Hans-CN。 默认值：系统当前区域ID。
+合法的区域ID，如：zh-Hans-CN。
+
+默认值：系统当前区域ID。
 
 **类型：** string
 
@@ -238,7 +270,11 @@ locale?: string
 localeMatcher?: string
 ```
 
-要使用的区域匹配算法，取值包括： "lookup"：精确匹配。 "best fit"：最佳匹配。
+要使用的区域匹配算法，取值包括：
+
+"lookup"：精确匹配。
+
+"best fit"：最佳匹配。
 
 **类型：** string
 
@@ -262,7 +298,9 @@ localeMatcher?: string
 minute?: string
 ```
 
-分钟的显示格式，取值包括： "numeric", "2-digit"。
+分钟的显示格式，取值包括：
+
+"numeric", "2-digit"。
 
 **类型：** string
 
@@ -286,7 +324,11 @@ minute?: string
 month?: string
 ```
 
-月份的显示格式，取值包括： "numeric", "2-digit", "long", "short", "narrow", "auto"。 不同取值的显示效果请参考附录表7。
+月份的显示格式，取值包括：
+
+"numeric", "2-digit", "long", "short", "narrow", "auto"。
+
+不同取值的显示效果请参考附录表7。
 
 **类型：** string
 
@@ -310,7 +352,9 @@ month?: string
 numberingSystem?: string
 ```
 
-数字系统，取值包括： "adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks", "brah", "cakm", "cham", "deva", "diak", "fullwide", "gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp", "java", "kali", "khmr", "knda", "lana", "lanatham", "laoo", "latn", "lepc", "limb", "mathbold", "mathdbl", "mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong", "mroo", "mtei", "mymr", "mymrshan", "mymrtlng", "newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment", "shrd", "sind", "sinh", "sora", "sund", "takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii", "wara", "wcho"。
+数字系统，取值包括：
+
+"adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks", "brah", "cakm", "cham", "deva", "diak", "fullwide", "gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp", "java", "kali", "khmr", "knda", "lana", "lanatham", "laoo", "latn", "lepc", "limb", "mathbold", "mathdbl", "mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong", "mroo", "mtei", "mymr", "mymrshan", "mymrtlng", "newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment", "shrd", "sind", "sinh", "sora", "sund", "takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii", "wara", "wcho"。
 
 **类型：** string
 
@@ -334,7 +378,9 @@ numberingSystem?: string
 second?: string
 ```
 
-秒钟的显示格式，取值包括： "numeric", "2-digit"。
+秒钟的显示格式，取值包括：
+
+"numeric", "2-digit"。
 
 **类型：** string
 
@@ -358,7 +404,11 @@ second?: string
 timeStyle?: string
 ```
 
-时间显示格式，取值包括： "long", "short", "medium", "full", "auto"。 不同取值的显示效果请参考附录表2。
+时间显示格式，取值包括：
+
+"long", "short", "medium", "full", "auto"。
+
+不同取值的显示效果请参考附录表2。
 
 **类型：** string
 
@@ -406,7 +456,11 @@ timeZone?: string
 timeZoneName?: string
 ```
 
-时区名称的本地化表示，取值包括： "long", "short", "auto"。 不同取值的显示效果请参考附录表8。
+时区名称的本地化表示，取值包括：
+
+"long", "short", "auto"。
+
+不同取值的显示效果请参考附录表8。
 
 **类型：** string
 
@@ -430,7 +484,11 @@ timeZoneName?: string
 weekday?: string
 ```
 
-星期的显示格式，取值包括： "long", "short", "narrow", "auto"。 不同取值的显示效果请参考附录表4。
+星期的显示格式，取值包括：
+
+"long", "short", "narrow", "auto"。
+
+不同取值的显示效果请参考附录表4。
 
 **类型：** string
 
@@ -454,7 +512,11 @@ weekday?: string
 year?: string
 ```
 
-年份的显示格式，取值包括： "numeric", "2-digit"。 不同取值的显示效果请参考附录表3。
+年份的显示格式，取值包括：
+
+"numeric", "2-digit"。
+
+不同取值的显示效果请参考附录表3。
 
 **类型：** string
 

@@ -43,7 +43,11 @@ A constructor used to create an **ArcSliderLayoutOptions** instance.
   position?: ArcSliderPosition
 ```
 
-Position of the arc slider on the screen. Default value: **ArcSliderPosition.RIGHT**
+Position of the arc slider on the screen.
+
+Default value: **ArcSliderPosition.RIGHT**
+
+@Trace
 
 **Type:** [ArcSliderPosition](arkts-arkui-arkui-advanced-arcslider-arcsliderposition-e.md)
 
@@ -64,7 +68,11 @@ Position of the arc slider on the screen. Default value: **ArcSliderPosition.RIG
   reverse?: boolean
 ```
 
-Whether the value range of the arc slider is reversed. **false**: top-to-bottom sliding. **true** (default): bottom-to-top sliding.
+Whether the value range of the arc slider is reversed. **false**: top-to-bottom sliding.
+
+**true** (default): bottom-to-top sliding.
+
+@Trace
 
 **Type:** boolean
 

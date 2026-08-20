@@ -16,7 +16,13 @@ Context is the context base class of the stage model. It is used to access appli
 createBundleContext(bundleName: string): Context
 ```
 
-Creates the context based on the bundle name. &gt; **NOTE：**&gt; &gt; If there are multiple modules in the stage model, resource ID conflicts may occur. You are advised to use &gt; [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md) &gt; instead. &gt; &gt; This API has been supported since API version 9 and deprecated since API version 12. You are advised to use &gt; [application.createBundleContext](arkts-ability-application-createbundlecontext-f-sys.md) &gt; instead.
+Creates the context based on the bundle name.
+
+> **NOTE：**
+> 
+> If there are multiple modules in the stage model, resource ID conflicts may occur. You are advised to use &gt; [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md) &gt; instead.
+> 
+> This API has been supported since API version 9 and deprecated since API version 12. You are advised to use &gt; [application.createBundleContext](arkts-ability-application-createbundlecontext-f-sys.md) &gt; instead.
 
 **Since:** 9
 
@@ -50,9 +56,9 @@ Creates the context based on the bundle name. &gt; **NOTE：**&gt; &gt; If there
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Examples**
 
@@ -79,7 +85,11 @@ export default class EntryAbility extends UIAbility {
 createModuleContext(bundleName: string, moduleName: string): Context
 ```
 
-Creates the context based on the bundle name and module name. &gt; **NOTE：**&gt; &gt; This API has been supported since API version 9 and deprecated since API version 12. You are advised to use &gt; [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md) &gt; instead.
+Creates the context based on the bundle name and module name.
+
+> **NOTE：**
+> 
+> This API has been supported since API version 9 and deprecated since API version 12. You are advised to use &gt; [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md) &gt; instead.
 
 **Since:** 9
 
@@ -170,9 +180,9 @@ Creates a resource management object for a module.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Examples**
 

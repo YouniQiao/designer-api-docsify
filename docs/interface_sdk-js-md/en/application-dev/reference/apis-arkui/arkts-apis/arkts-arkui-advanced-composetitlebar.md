@@ -19,5 +19,5 @@ import { ComposeTitleBarV2, ComposeTitleBarV2MenuItem, ComposeTitleBarV2MenuItem
 
 | Name | Description |
 | --- | --- |
-| [ComposeTitleBar](arkts-arkui-arkui-advanced-composetitlebar-composetitlebar-s.md) | **ComposeTitleBar** represents a common title bar that contains a title, subtitle (optional), and profile picture ( optional). It can come with a Back button for switching between pages of different levels. &gt; **NOTE：**&gt; &gt; - This component can be used only in the stage model. &gt; &gt; - If the **ComposeTitleBar** component has universal attributes and &gt; universal events configured, the compiler toolchain automatically &gt; generates an additional **__Common__** node and mounts the universal attributes and universal events on this node &gt; rather than the **ComposeTitleBar** component itself. As a result, the configured universal attributes and &gt; universal events may fail to take effect or behave as intended. For this reason, avoid using universal attributes &gt; and events with the **ComposeTitleBar** component. |
+| [ComposeTitleBar](arkts-arkui-arkui-advanced-composetitlebar-composetitlebar-s.md) | *ComposeTitleBar** represents a common title bar that contains a title, subtitle (optional), and profile picture ( optional). It can come with a Back button for switching between pages of different levels. |
 

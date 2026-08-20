@@ -1,6 +1,12 @@
 # @ohos.bundle.overlay
 
-本模块提供overlay特征应用的[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)信息查询以及禁用使能的能力。 overlay特征应用指应用中包含有overlay资源包，overlay资源包详见 [overlay机制](../../../quick-start/resource-categories-and-access.md#overlay机制)。 &gt; **说明：** &gt; &gt; 本模块接口仅适用于stage模型，且仅适用于[静态overlay](../../../quick-start/resource-categories-and-access.md#静态overlay配置方式)。
+本模块提供overlay特征应用的[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)信息查询以及禁用使能的能力。
+
+overlay特征应用指应用中包含有overlay资源包，overlay资源包详见 [overlay机制](../../../quick-start/resource-categories-and-access.md#overlay机制)。
+
+> **说明：**
+> 
+> 本模块接口仅适用于stage模型，且仅适用于[静态overlay](../../../quick-start/resource-categories-and-access.md#静态overlay配置方式)。
 
 **起始版本：** 23
 
@@ -32,14 +38,14 @@ import { overlay } from '@kit.AbilityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md) | 获取指定应用中所有module的OverlayModuleInfo信息。使用callback异步回调。 指定应用是调用方自身时不需要权限。 |
-| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md) | 获取指定应用中指定module的OverlayModuleInfo信息。使用callback异步回调。 指定应用是调用方自身时不需要权限。 |
-| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md) | 获取指定应用中指定module的OverlayModuleInfo信息。使用promise异步回调。 指定应用是调用方自身时不需要权限。 |
-| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md) | 获取指定应用中所有module关联的所有OverlayModuleInfo信息。使用callback异步回调。 指定应用是调用方自身时不需要权限。 |
-| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md) | 获取指定应用中指定module关联的所有OverlayModuleInfo信息。使用callback异步回调。 指定应用是调用方自身时不需要权限。 |
-| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md) | 获取指定应用中指定module关联的所有OverlayModuleInfo信息。使用promise异步回调。 指定应用是调用方自身时不需要权限。 |
-| [setOverlayEnabledByBundleName](arkts-ability-overlay-setoverlayenabledbybundlename-f-sys.md) | 设置指定应用的overlay module的禁用使能状态。使用callback异步回调。 指定应用是调用方自身时不需要权限。 |
-| [setOverlayEnabledByBundleName](arkts-ability-overlay-setoverlayenabledbybundlename-f-sys.md) | 设置指定应用的overlay module的禁用使能状态。使用Promise异步回调。 指定应用是调用方自身时不需要权限。 |
+| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md) | 获取指定应用中所有module的OverlayModuleInfo信息。使用callback异步回调。 |
+| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md) | 获取指定应用中指定module的OverlayModuleInfo信息。使用callback异步回调。 |
+| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md) | 获取指定应用中指定module的OverlayModuleInfo信息。使用promise异步回调。 |
+| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md) | 获取指定应用中所有module关联的所有OverlayModuleInfo信息。使用callback异步回调。 |
+| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md) | 获取指定应用中指定module关联的所有OverlayModuleInfo信息。使用callback异步回调。 |
+| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md) | 获取指定应用中指定module关联的所有OverlayModuleInfo信息。使用promise异步回调。 |
+| [setOverlayEnabledByBundleName](arkts-ability-overlay-setoverlayenabledbybundlename-f-sys.md) | 设置指定应用的overlay module的禁用使能状态。使用callback异步回调。 |
+| [setOverlayEnabledByBundleName](arkts-ability-overlay-setoverlayenabledbybundlename-f-sys.md) | 设置指定应用的overlay module的禁用使能状态。使用Promise异步回调。 |
 <!--DelEnd-->
 
 ### 类型

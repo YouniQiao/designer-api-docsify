@@ -55,11 +55,11 @@ try {
     sendCommand: (cmdData) => {
       console.info(`The cmdData is ${cmdData}`);
     }
-  })
+  });
   console.info('subscribe authentication event successfully.');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`userAuth widgetMgr failed. Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`Failed to operate userAuthWidgetMgr. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 
@@ -77,11 +77,11 @@ try {
     sendCommand: (cmdData: string) => {
       console.info(`The cmdData is ${cmdData}`);
     }
-  })
+  });
   console.info('subscribe authentication event successfully.');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`userAuth widgetMgr failed. Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`Failed to operate userAuthWidgetMgr. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 

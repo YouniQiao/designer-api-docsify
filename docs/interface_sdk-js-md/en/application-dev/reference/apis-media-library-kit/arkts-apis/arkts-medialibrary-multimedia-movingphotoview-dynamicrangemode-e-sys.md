@@ -2,6 +2,8 @@
 
 Dynamic range mode of moving photo.
 
+@enum { int }
+
 **Since:** 14
 
 <!--Device-unnamed-export declare enum DynamicRangeMode--><!--Device-unnamed-export declare enum DynamicRangeMode-End-->

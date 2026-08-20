@@ -2,6 +2,8 @@
 
 Specify the number of columns for different responsive breakpoints.
 
+@enum { number }
+
 **起始版本：** 22
 
 <!--Device-unnamed-declare enum PresetFillType--><!--Device-unnamed-declare enum PresetFillType-End-->

@@ -42,10 +42,10 @@ Get all persistence permissions for the application.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid tokenID |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 13900001 | Operation not permitted. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| 13900001 | Operation not permitted. |
 | 13900011 | Out of memory |
+| 13900020 | Invalid tokenID |
 

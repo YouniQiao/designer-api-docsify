@@ -2,6 +2,8 @@
 
 Declare Color options of the ProgressButton.
 
+@interface ProgressButtonColorOptions
+
 **Since:** 22
 
 <!--Device-unnamed-export declare interface ProgressButtonColorOptions--><!--Device-unnamed-export declare interface ProgressButtonColorOptions-End-->

@@ -1,4 +1,4 @@
-# ProvisionRequest(Defines the DRM capability.)
+# ProvisionRequest
 
 Defines a device certificate provisioning request.
 

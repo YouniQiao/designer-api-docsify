@@ -12,7 +12,9 @@ import { wantAgent, WantAgent } from '@kit.AbilityKit';
 function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): void
 ```
 
-Obtains a WantAgent object. This API uses an asynchronous callback to return the result. If the creation fails, a null WantAgent object is returned. &lt;p&gt;**NOTE：**: <br>Third-party applications can set only their own abilities. &lt;/p&gt;
+Obtains a WantAgent object. This API uses an asynchronous callback to return the result. If the creation fails, a null WantAgent object is returned.
+
+&lt;p&gt;**NOTE：**: <br>Third-party applications can set only their own abilities. &lt;/p&gt;
 
 **Since:** 23
 
@@ -97,7 +99,9 @@ try {
 function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 ```
 
-Obtains a WantAgent object. This API uses a promise to return the result. If the creation fails, a null WantAgent object is returned. &lt;p&gt;**NOTE：**: <br>Third-party applications can set only their own abilities. &lt;/p&gt;
+Obtains a WantAgent object. This API uses a promise to return the result. If the creation fails, a null WantAgent object is returned.
+
+&lt;p&gt;**NOTE：**: <br>Third-party applications can set only their own abilities. &lt;/p&gt;
 
 **Since:** 23
 

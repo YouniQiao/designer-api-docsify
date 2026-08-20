@@ -1,4 +1,4 @@
-# ImmersiveMode(ActionSheet)
+# ImmersiveMode
 
 ```TypeScript
 declare type ImmersiveMode = import('../api/@ohos.promptAction').ImmersiveMode

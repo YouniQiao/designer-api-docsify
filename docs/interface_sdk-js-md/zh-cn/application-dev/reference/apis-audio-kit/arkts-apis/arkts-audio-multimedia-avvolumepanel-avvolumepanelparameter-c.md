@@ -1,4 +1,4 @@
-# AVVolumePanelParameter(音量面板)
+# AVVolumePanelParameter
 
 音量面板参数设置。
 
@@ -20,9 +20,17 @@ import { AVVolumePanel, AVVolumePanelParameter } from '@kit.AudioKit';
 position?: Position
 ```
 
-设置音量面板的位置。 如果不设置该参数，则使用系统默认的音量面板位置。 如果设置该参数且参数对应屏幕内位置，则显示应用设置的位置。 如果设置该参数且参数对应屏幕外位置，例如（-1, -1），则隐藏系统默认音量面板。 **注意：** 若应用需隐藏系统默认音量面板，必须提供自定义音量面板，以确保用户仍可调节音量。
+设置音量面板的位置。
 
-**类型：** [Position](../../apis-na/arkts-apis/arkts-na-units-position-i.md)
+如果不设置该参数，则使用系统默认的音量面板位置。
+
+如果设置该参数且参数对应屏幕内位置，则显示应用设置的位置。
+
+如果设置该参数且参数对应屏幕外位置，例如（-1, -1），则隐藏系统默认音量面板。
+
+**注意：** 若应用需隐藏系统默认音量面板，必须提供自定义音量面板，以确保用户仍可调节音量。
+
+**类型：** [Position](../../apis-default/arkts-apis/arkts-units-position-i.md)
 
 **起始版本：** 12
 

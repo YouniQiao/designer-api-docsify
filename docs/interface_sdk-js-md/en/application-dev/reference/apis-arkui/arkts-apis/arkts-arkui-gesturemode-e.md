@@ -14,7 +14,9 @@ Defines the recognition mode of a gesture group.
 Sequence
 ```
 
-Sequential recognition. Gestures are recognized in the registration sequence until all gestures are recognized successfully. If any gesture in the sequence fails recognition, subsequent gestures will not be recognized. Only the last gesture in a sequentially recognized gesture group can trigger **onActionEnd**.
+Sequential recognition. Gestures are recognized in the registration sequence until all gestures are recognized successfully. If any gesture in the sequence fails recognition, subsequent gestures will not be recognized.
+
+Only the last gesture in a sequentially recognized gesture group can trigger **onActionEnd**.
 
 **Since:** 7
 

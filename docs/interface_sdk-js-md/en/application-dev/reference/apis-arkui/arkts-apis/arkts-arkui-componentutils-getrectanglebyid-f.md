@@ -12,7 +12,11 @@ import { componentUtils } from '@kit.ArkUI';
 function getRectangleById(id: string): ComponentInfo
 ```
 
-Obtains a **ComponentInfo** object based on the component ID and synchronously returns the geometric properties of the component. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getComponentUtils](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentutils) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [ComponentUtils](arkts-arkui-arkui-uicontext-uicontext-c.md) object &gt; associated with the current UI context. This API provides access to component coordinates and size information &gt; after the target component completes layout. It is recommended that you invoke this API within &gt; [layout completion callbacks](../../apis-na/arkts-apis/arkts-arkui-inspector.md). Note that dynamically created components &gt; must be mounted to the component tree before this API can obtain their information, as unmounted components are &gt; not measured or laid out by the UI framework. Always ensure that component mounting precedes information &gt; retrieval attempts.
+Obtains a **ComponentInfo** object based on the component ID and synchronously returns the geometric properties of the component.
+
+> **NOTE：**
+> 
+> - Since API version 10, you can use the &gt; [getComponentUtils](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcomponentutils) API in &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [ComponentUtils](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object &gt; associated with the current UI context. This API provides access to component coordinates and size information &gt; after the target component completes layout. It is recommended that you invoke this API within &gt; [layout completion callbacks](arkts-arkui-inspector.md). Note that dynamically created components &gt; must be mounted to the component tree before this API can obtain their information, as unmounted components are &gt; not measured or laid out by the UI framework. Always ensure that component mounting precedes information &gt; retrieval attempts.
 
 **Since:** 10
 

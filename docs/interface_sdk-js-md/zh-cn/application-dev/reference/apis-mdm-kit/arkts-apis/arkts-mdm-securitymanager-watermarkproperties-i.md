@@ -1,4 +1,4 @@
-# WatermarkProperties(安全管理)
+# WatermarkProperties
 
 水印属性。
 

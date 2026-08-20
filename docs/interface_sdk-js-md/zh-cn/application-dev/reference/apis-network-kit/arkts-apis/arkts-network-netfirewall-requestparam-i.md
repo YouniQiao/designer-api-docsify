@@ -1,4 +1,4 @@
-# RequestParam(网络防火墙)
+# RequestParam
 
 查询输入信息结构。
 

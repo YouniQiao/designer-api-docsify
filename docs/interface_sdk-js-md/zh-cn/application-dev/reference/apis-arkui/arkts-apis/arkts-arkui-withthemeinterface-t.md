@@ -1,4 +1,4 @@
-# WithThemeInterface(Defines WithTheme component.)
+# WithThemeInterface
 
 ```TypeScript
 declare type WithThemeInterface = (options: WithThemeOptions) => WithThemeAttribute

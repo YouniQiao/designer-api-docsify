@@ -2,6 +2,8 @@
 
 The trigger type of the scene animation.
 
+@enum { int }
+
 **Since:** 26.0.0
 
 <!--Device-formInfo-enum SceneAnimationTriggerType--><!--Device-formInfo-enum SceneAnimationTriggerType-End-->

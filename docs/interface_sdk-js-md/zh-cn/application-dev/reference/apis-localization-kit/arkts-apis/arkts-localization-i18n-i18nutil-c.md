@@ -143,7 +143,9 @@ let order: string = i18n.I18NUtil.getDateOrder('zh-CN'); // order = 'y-L-d'
 static getThreeLetterLanguage(locale: string): string
 ```
 
-将语言代码由二字母转换为三字母。二字母和三字母语言代码的规格参考[ISO 639](https://www.iso.org/iso-639-language-code)。 例如，中文的二字母语言代码是zh，对应的三字母语言代码是zho。
+将语言代码由二字母转换为三字母。二字母和三字母语言代码的规格参考[ISO 639](https://www.iso.org/iso-639-language-code)。
+
+例如，中文的二字母语言代码是zh，对应的三字母语言代码是zho。
 
 **起始版本：** 23
 
@@ -192,7 +194,9 @@ try {
 static getThreeLetterRegion(locale: string): string
 ```
 
-将地区代码由二字母转换为三字母。二字母和三字母地区代码的规格参考[ISO 3166](https://www.iso.org/iso-3166-country-codes.html) 例如，中国的二字母地区代码是CN, 三字母是CHN。
+将地区代码由二字母转换为三字母。二字母和三字母地区代码的规格参考[ISO 3166](https://www.iso.org/iso-3166-country-codes.html)
+
+例如，中国的二字母地区代码是CN, 三字母是CHN。
 
 **起始版本：** 23
 
@@ -291,7 +295,9 @@ try {
 static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: Intl.Locale): string
 ```
 
-对文件路径进行本地化处理。 例如，将/data/out/tmp本地化处理后生成tmp/out/data/。
+对文件路径进行本地化处理。
+
+例如，将/data/out/tmp本地化处理后生成tmp/out/data/。
 
 **起始版本：** 23
 
@@ -345,13 +351,15 @@ try {
 static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: intl.Locale): string
 ```
 
-对文件路径进行本地化处理。 例如，将/data/out/tmp本地化处理后生成tmp/out/data/。
+对文件路径进行本地化处理。
+
+例如，将/data/out/tmp本地化处理后生成tmp/out/data/。
 
 **起始版本：** 18
 
 **废弃版本：** 20
 
-**替代接口：** [getUnicodeWrappedFilePath](#getunicodewrappedfilepath)(path: string, delimiter?: string, locale?: Intl.Locale)
+**替代接口：** [getUnicodeWrappedFilePath](../../apis-default/arkts-apis/arkts-i18n-i18nutil-c.md#getunicodewrappedfilepath)(path: string, delimiter?: string, locale?: Intl.Locale)
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -403,7 +411,11 @@ try {
 static setUnicodeWrappedBidiDirection(text: string, direction: 'RTL' | 'LTR'): string
 ```
 
-设置整段文本中部分文本方向，包括RTL、LTR。 &gt; **说明：** &gt; &gt; 在强字符（指具有明确书写方向的字符）中不生效。
+设置整段文本中部分文本方向，包括RTL、LTR。
+
+> **说明：**
+> 
+> 在强字符（指具有明确书写方向的字符）中不生效。
 
 **起始版本：** 26.0.0
 
@@ -464,8 +476,8 @@ static unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fromUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | 是 | 需要转换的单位。 |
-| toUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | 是 | 转换成的目标单位。 |
+| fromUnit | [UnitInfo](../../apis-default/arkts-apis/arkts-i18n-unitinfo-i.md) | 是 | 需要转换的单位。 |
+| toUnit | [UnitInfo](../../apis-default/arkts-apis/arkts-i18n-unitinfo-i.md) | 是 | 转换成的目标单位。 |
 | value | double | 是 | 需要转换的单位的数量值。 |
 | locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成，如：zh-Hans-CN。 |
 | style | string | 否 | 格式化使用的风格，取值包括：'long', 'short', 'narrow'。默认值：short。 <br>不同取值显示效果请参考[数字与度量衡国际化](../../../internationalization/i18n-numbers-weights-measures.md)。 |

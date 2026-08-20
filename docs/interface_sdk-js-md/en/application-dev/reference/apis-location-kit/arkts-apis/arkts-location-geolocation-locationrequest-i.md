@@ -2,6 +2,8 @@
 
 Configuring parameters in location requests
 
+@interface LocationRequest
+
 **Since:** 7
 
 **Deprecated since:** 9

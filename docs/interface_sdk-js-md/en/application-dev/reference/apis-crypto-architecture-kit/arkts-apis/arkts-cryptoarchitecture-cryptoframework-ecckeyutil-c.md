@@ -22,7 +22,13 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 static convertPoint(curveName: string, encodedPoint: Uint8Array): Point
 ```
 
-Converts the specified point data into a **Point** object based on the curve name (NID). Currently, compressed and uncompressed point data is supported. &gt; **NOTE：**&gt; &gt; According to section 2.2 in RFC 5480: &gt; 1. The uncompressed point data is represented as **0x04**|x coordinate|y coordinate. &gt; 2. The compressed point data in the **Fp** field (the **F2m** field is not supported currently) is represented &gt; as follows: **0x03**|x coordinate (when the coordinate y is an odd number); **0x02**|x coordinate (when the &gt; coordinate y is an even number).
+Converts the specified point data into a **Point** object based on the curve name (NID). Currently, compressed and uncompressed point data is supported.
+
+> **NOTE：**
+> 
+> According to section 2.2 in RFC 5480:
+> 1. The uncompressed point data is represented as **0x04**|x coordinate|y coordinate.
+> 2. The compressed point data in the **Fp** field (the **F2m** field is not supported currently) is represented &gt; as follows: **0x03**|x coordinate (when the coordinate y is an odd number); **0x02**|x coordinate (when the &gt; coordinate y is an even number).
 
 **Since:** 23
 
@@ -50,8 +56,8 @@ Converts the specified point data into a **Point** object based on the curve nam
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
 **Examples**
 
@@ -154,8 +160,8 @@ Obtains the point data in the specified format from a **Point** object. Currentl
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
 **Examples**
 

@@ -20,7 +20,11 @@ import { floatView } from '@kit.ArkUI';
 avoidArea: window.AvoidArea
 ```
 
-Avoid area for the content of the float view. Note: On the page loaded by [setUIContext](arkts-arkui-floatview-floatviewcontroller-i.md#setuicontext), components in the avoid area do not respond to gesture events. When adding components that require gesture response events, avoid the area.
+Avoid area for the content of the float view.
+
+Note:
+
+On the page loaded by [setUIContext](arkts-arkui-floatview-floatviewcontroller-i.md#setuicontext), components in the avoid area do not respond to gesture events. When adding components that require gesture response events, avoid the area.
 
 **Type:** window.AvoidArea
 

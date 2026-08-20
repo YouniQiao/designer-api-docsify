@@ -26,5 +26,5 @@ Defines the attribute decorator, which is used to decorate attributes of the cus
 
 | Type | Description |
 | --- | --- |
-| [PropertyDecorator](../../apis-na/arkts-apis/arkts-na-propertydecorator-t.md) | Property decorator. |
+| [PropertyDecorator](../../apis-default/arkts-apis/arkts-propertydecorator-t.md) | Property decorator. |
 

@@ -21,7 +21,7 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 bottom: int
 ```
 
-Y coordinate of the lower right corner of the component border, in pixels. The value is an integer greater than or equal to 0.
+Y coordinate of the lower right corner of the component border, in pixels. The value is an integer greater than or equal to 0. @readonly [since 9-19]
 
 **Type:** int
 
@@ -57,7 +57,7 @@ ID of the display to which the component border belongs. The value is an integer
 left: int
 ```
 
-X coordinate of the upper left corner of the component border, in pixels. The value is an integer greater than or equal to 0.
+X coordinate of the upper left corner of the component border, in pixels. The value is an integer greater than or equal to 0. @readonly [since 9-19]
 
 **Type:** int
 
@@ -75,7 +75,7 @@ X coordinate of the upper left corner of the component border, in pixels. The va
 right: int
 ```
 
-X coordinate of the lower right corner of the component border, in pixels. The value is an integer greater than or equal to 0.
+X coordinate of the lower right corner of the component border, in pixels. The value is an integer greater than or equal to 0. @readonly [since 9-19]
 
 **Type:** int
 
@@ -93,7 +93,7 @@ X coordinate of the lower right corner of the component border, in pixels. The v
 top: int
 ```
 
-Y coordinate of the upper left corner of the component border, in pixels. The value is an integer greater than or equal to 0.
+Y coordinate of the upper left corner of the component border, in pixels. The value is an integer greater than or equal to 0. @readonly [since 9-19]
 
 **Type:** int
 

@@ -37,13 +37,13 @@ Obtains the accessory handle and opens the accessory file descriptor. Then, the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14401003](../errorcode-usb.md#14401003-accessory-opened-repeatedly) | Cannot reopen the accessory. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  <br>1. Mandatory parameters are left unspecified.  <br>2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
-| [14401002](../errorcode-usb.md#14401002-failed-to-open-the-native-accessory-node) | Failed to open the native accessory node. |
-| [14401001](../errorcode-usb.md#14401001-target-usb-accessory-unmatched) | The target USBAccessory not matched. |
 | [14400001](../errorcode-usb.md#14400001-usb-device-connection-denied) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
 | [14400004](../errorcode-usb.md#14400004-service-exception) | Service exception. Possible causes:  <br>1. No accessory is plugged in. |
+| [14401001](../errorcode-usb.md#14401001-target-usb-accessory-unmatched) | The target USBAccessory not matched. |
+| [14401002](../errorcode-usb.md#14401002-failed-to-open-the-native-accessory-node) | Failed to open the native accessory node. |
+| [14401003](../errorcode-usb.md#14401003-accessory-opened-repeatedly) | Cannot reopen the accessory. |
 
 **Examples**
 

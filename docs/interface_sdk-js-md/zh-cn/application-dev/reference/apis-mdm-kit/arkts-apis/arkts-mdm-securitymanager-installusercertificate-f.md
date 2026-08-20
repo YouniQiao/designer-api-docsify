@@ -41,11 +41,11 @@ function installUserCertificate(admin: Want, certificate: CertBlob): Promise<str
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [9201001](../errorcode-enterpriseDeviceManager.md#9201001-管理证书失败) | Failed to manage the certificate. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
+| [9201001](../errorcode-enterpriseDeviceManager.md#9201001-管理证书失败) | Failed to manage the certificate. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -115,10 +115,10 @@ function installUserCertificate(admin: Want, certificate: CertBlob, accountId: n
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9201001](../errorcode-enterpriseDeviceManager.md#9201001-管理证书失败) | Failed to manage the certificate. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
+| [9201001](../errorcode-enterpriseDeviceManager.md#9201001-管理证书失败) | Failed to manage the certificate. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 **示例**
 

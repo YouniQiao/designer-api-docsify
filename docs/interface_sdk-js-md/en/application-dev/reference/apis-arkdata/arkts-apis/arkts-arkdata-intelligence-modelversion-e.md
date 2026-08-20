@@ -2,6 +2,8 @@
 
 Version of the model.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-intelligence-enum ModelVersion--><!--Device-intelligence-enum ModelVersion-End-->

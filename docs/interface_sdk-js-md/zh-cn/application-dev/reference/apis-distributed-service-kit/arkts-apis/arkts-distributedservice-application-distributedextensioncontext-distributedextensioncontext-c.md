@@ -22,7 +22,9 @@ import { DistributedExtensionContext } from '@kit.DistributedServiceKit';
 connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 ```
 
-连接到远程服务扩展能力。 此方法连接到远程设备上的服务扩展能力。 必须实现ConnectOptions接口才能获取目标的代理 连接时的服务扩展。
+连接到远程服务扩展能力。
+
+此方法连接到远程设备上的服务扩展能力。 必须实现ConnectOptions接口才能获取目标的代理 连接时的服务扩展。
 
 **起始版本：** 23
 
@@ -49,19 +51,19 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000053](../../apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000004](../../apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
 | [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
-| [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
+| [16000004](../../apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
+| [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
+| [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
 | [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
+| [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
+| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000053](../../apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
+| [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
 
 ## disconnectServiceExtensionAbility
 
@@ -95,7 +97,7 @@ disconnectServiceExtensionAbility(connection: long): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [16000003](../../apis-ability-kit/errorcode-ability.md#16000003-指定的id不存在) | The connection id does not exist. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The ability has been destroyed. The context is no longer valid, meaning the context does not exist. |
+| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
 

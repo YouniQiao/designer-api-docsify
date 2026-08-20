@@ -2,6 +2,8 @@
 
 Light node, which inherits from Node.
 
+@extends Node @interface Light
+
 **Inheritance/Implementation:** Light extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
 **Since:** 23

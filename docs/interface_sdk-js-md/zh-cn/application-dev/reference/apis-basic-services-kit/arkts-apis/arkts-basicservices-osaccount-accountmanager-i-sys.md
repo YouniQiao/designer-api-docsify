@@ -37,20 +37,20 @@ activateOsAccount(localId: int, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | int | 是 | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当账号激活成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当账号激活成功时，err为null，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated.<br>**适用版本：** 12+ |
-| [12300009](../errorcode-account.md#12300009-账号已激活) | Account has been activated.<br>**适用版本：** 7 - 11 |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+| [12300009](../errorcode-account.md#12300009-账号已激活) | Account has been activated.<br>**适用版本：** 7 - 11 |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated.<br>**适用版本：** 12+ |
 | [12300016](../errorcode-account.md#12300016-账号登录数已达上限) | The number of logged in accounts reaches the upper limit.<br>**适用版本：** 12+ |
 
 **示例**
@@ -133,14 +133,14 @@ activateOsAccount(localId: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated.<br>**适用版本：** 12+ |
-| [12300009](../errorcode-account.md#12300009-账号已激活) | Account has been activated.<br>**适用版本：** 7 - 11 |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+| [12300009](../errorcode-account.md#12300009-账号已激活) | Account has been activated.<br>**适用版本：** 7 - 11 |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated.<br>**适用版本：** 12+ |
 | [12300016](../errorcode-account.md#12300016-账号登录数已达上限) | The number of logged in accounts reaches the upper limit.<br>**适用版本：** 12+ |
 
 **示例**
@@ -221,16 +221,16 @@ activateOsAccount(localId: int, displayId: long): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300019](../errorcode-account.md#12300019-不支持跨逻辑屏激活) | Cross-display activation not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300018](../errorcode-account.md#12300018-逻辑屏未找到) | Display not found. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated. |
 | [12300016](../errorcode-account.md#12300016-账号登录数已达上限) | The number of logged in accounts reaches the upper limit. |
+| [12300018](../errorcode-account.md#12300018-逻辑屏未找到) | Display not found. |
+| [12300019](../errorcode-account.md#12300019-不支持跨逻辑屏激活) | Cross-display activation not supported. |
 
 **示例**
 
@@ -311,16 +311,16 @@ bindDomainAccount(localId: int, domainAccountInfo: DomainAccountInfo): Promise<v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target OS account or domain account is being operated. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted OS account. Possible causes: The OS account cannot be bound. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | The OS account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid domain account information. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300022](../errorcode-account.md#12300022-域账号已被绑定) | The domain account is already bound. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid domain account information. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | The OS account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted OS account. Possible causes: The OS account cannot be bound. |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target OS account or domain account is being operated. |
 | [12300021](../errorcode-account.md#12300021-系统账号已绑定域账号) | The OS account is already bound. |
+| [12300022](../errorcode-account.md#12300022-域账号已被绑定) | The domain account is already bound. |
 
 **示例**
 
@@ -392,22 +392,22 @@ createOsAccount(localName: string, type: OsAccountType, callback: AsyncCallback<
 | --- | --- | --- | --- |
 | localName | string | 是 | 创建的系统账号的名称。 |
 | type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 | 创建的系统账号的类型。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 | 回调函数。如果创建成功，err为null，data为新创建的系统账号的信息；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 | 回调函数。如果创建成功，err为null，data为新创建的系统账号的信息；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localName or type. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localName or type. |
+| [12300004](../errorcode-account.md#12300004-账号已存在) | Local name already exists.<br>**适用版本：** 12+ |
+| [12300005](../errorcode-account.md#12300005-不支持多用户) | Multi-user not supported. |
+| [12300006](../errorcode-account.md#12300006-不支持的账号类型) | Unsupported account type. |
 | [12300007](../errorcode-account.md#12300007-账号数量已达上限) | The number of accounts has reached the upper limit. |
 | [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upper limit.<br>**适用版本：** 24+ |
-| [12300006](../errorcode-account.md#12300006-不支持的账号类型) | Unsupported account type. |
-| [12300005](../errorcode-account.md#12300005-不支持多用户) | Multi-user not supported. |
-| [12300004](../errorcode-account.md#12300004-账号已存在) | Local name already exists.<br>**适用版本：** 12+ |
 
 **示例**
 
@@ -491,17 +491,17 @@ createOsAccount(localName: string, type: OsAccountType, options?: CreateOsAccoun
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300015](../errorcode-account.md#12300015-短名称已存在) | The short name already exists.<br>**适用版本：** 12+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localName, type or options. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
-| [12300007](../errorcode-account.md#12300007-账号数量已达上限) | The number of accounts has reached the upper limit. |
-| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upper limit.<br>**适用版本：** 24+ |
-| [12300006](../errorcode-account.md#12300006-不支持的账号类型) | Unsupported account type. |
-| [12300005](../errorcode-account.md#12300005-不支持多用户) | Multi-user not supported. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localName, type or options. |
 | [12300004](../errorcode-account.md#12300004-账号已存在) | Local name already exists.<br>**适用版本：** 12+ |
+| [12300005](../errorcode-account.md#12300005-不支持多用户) | Multi-user not supported. |
+| [12300006](../errorcode-account.md#12300006-不支持的账号类型) | Unsupported account type. |
+| [12300007](../errorcode-account.md#12300007-账号数量已达上限) | The number of accounts has reached the upper limit. |
+| [12300015](../errorcode-account.md#12300015-短名称已存在) | The short name already exists.<br>**适用版本：** 12+ |
+| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upper limit.<br>**适用版本：** 24+ |
 
 **示例**
 
@@ -584,23 +584,23 @@ createOsAccountForDomain(
 | --- | --- | --- | --- |
 | type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 | 创建的系统账号的类型。 |
 | domainInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 域账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 | 回调函数。如果创建成功，err为null，data为新创建的系统账号的信息；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 | 回调函数。如果创建成功，err为null，data为新创建的系统账号的信息；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 12+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or domainInfo. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 12+ |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or domainInfo. |
+| [12300004](../errorcode-account.md#12300004-账号已存在) | Account already exists. |
+| [12300005](../errorcode-account.md#12300005-不支持多用户) | Multi-user not supported. |
+| [12300006](../errorcode-account.md#12300006-不支持的账号类型) | Unsupported account type. |
 | [12300007](../errorcode-account.md#12300007-账号数量已达上限) | The number of accounts has reached the upper limit. |
 | [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upper limit.<br>**适用版本：** 24+ |
-| [12300006](../errorcode-account.md#12300006-不支持的账号类型) | Unsupported account type. |
-| [12300005](../errorcode-account.md#12300005-不支持多用户) | Multi-user not supported. |
-| [12300004](../errorcode-account.md#12300004-账号已存在) | Account already exists. |
 
 **示例**
 
@@ -688,18 +688,18 @@ createOsAccountForDomain(type: OsAccountType, domainInfo: DomainAccountInfo, opt
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 12+ |
-| [12300015](../errorcode-account.md#12300015-短名称已存在) | The short name already exists.<br>**适用版本：** 12+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type, domainInfo or options. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
-| [12300007](../errorcode-account.md#12300007-账号数量已达上限) | The number of accounts has reached the upper limit. |
-| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upper limit.<br>**适用版本：** 24+ |
-| [12300006](../errorcode-account.md#12300006-不支持的账号类型) | Unsupported account type. |
-| [12300005](../errorcode-account.md#12300005-不支持多用户) | Multi-user not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 12+ |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type, domainInfo or options. |
 | [12300004](../errorcode-account.md#12300004-账号已存在) | Account already exists. |
+| [12300005](../errorcode-account.md#12300005-不支持多用户) | Multi-user not supported. |
+| [12300006](../errorcode-account.md#12300006-不支持的账号类型) | Unsupported account type. |
+| [12300007](../errorcode-account.md#12300007-账号数量已达上限) | The number of accounts has reached the upper limit. |
+| [12300015](../errorcode-account.md#12300015-短名称已存在) | The short name already exists.<br>**适用版本：** 12+ |
+| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upper limit.<br>**适用版本：** 24+ |
 
 **示例**
 
@@ -788,13 +788,13 @@ deactivateOsAccount(localId: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated. |
 
 **示例**
 
@@ -860,16 +860,16 @@ getBundleIdForUid(uid: int, callback: AsyncCallback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uid | int | 是 | 进程uid。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。如果查询成功，err为null，data为与uid对应的bundleId；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 回调函数。如果查询成功，err为null，data为与uid对应的bundleId；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid uid. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid uid. |
 
 **示例**
 
@@ -950,10 +950,10 @@ getBundleIdForUid(uid: int): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid uid. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid uid. |
 
 **示例**
 
@@ -1030,9 +1030,9 @@ getBundleIdForUidSync(uid: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid uid. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 **示例**
 
@@ -1104,11 +1104,11 @@ getEnabledOsAccountConstraints(localId: int): Promise<Array<string>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 
 **示例**
 
@@ -1339,18 +1339,18 @@ getOsAccountConstraintSourceTypes(localId: int, constraint: string, callback: As
 | --- | --- | --- | --- |
 | localId | int | 是 | 要查询的系统账号ID。 |
 | constraint | string | 是 | 要查询的约束名称。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)&gt;&gt; | 是 | 回调函数。如果成功，err为null，data为指定系统账号的指定 约束来源信息；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)&gt;&gt; | 是 | 回调函数。如果成功，err为null，data为指定系统账号的指定 约束来源信息；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or constraint. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or constraint. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 
 **示例**
 
@@ -1433,12 +1433,12 @@ getOsAccountConstraintSourceTypes(localId: int, constraint: string): Promise<Arr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or constraint. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or constraint. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 
 **示例**
 
@@ -1506,18 +1506,18 @@ getOsAccountProfilePhoto(localId: int, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | int | 是 | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。如果获取成功，err为null，data为指定系统账号的头像信息；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。如果获取成功，err为null，data为指定系统账号的头像信息；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 
 **示例**
 
@@ -1599,12 +1599,12 @@ getOsAccountProfilePhoto(localId: int): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 
 **示例**
 
@@ -1683,11 +1683,11 @@ getOsAccountType(localId: int): Promise<OsAccountType>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 
 **示例**
 
@@ -1754,15 +1754,15 @@ isMainOsAccount(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，返回true表示当前账号为主账号，返回false表示当前账号非主账号。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数，返回true表示当前账号为主账号，返回false表示当前账号非主账号。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 **示例**
@@ -1917,11 +1917,11 @@ isOsAccountActivated(localId: int): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 
 **示例**
 
@@ -2001,11 +2001,11 @@ isOsAccountConstraintEnabled(localId: int, constraint: string): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 
 **示例**
 
@@ -2086,11 +2086,11 @@ isOsAccountUnlocked(localId: int): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 
 **示例**
 
@@ -2158,16 +2158,16 @@ offActivate(name: string, callback?: Callback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节，需要与订阅接口传入的值保持一致。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅系统账号激活完成的事件回调。默认为空，表示取消该类型事件的所有回调。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | 否 | 取消订阅系统账号激活完成的事件回调。默认为空，表示取消该类型事件的所有回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name. |
 
 **示例**
 
@@ -2209,16 +2209,16 @@ offActivating(name: string, callback?: Callback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节，需要与订阅接口传入的值保持一致。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅系统账号激活中的事件回调。默认为空，表示取消该类型事件的所有回调。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | 否 | 取消订阅系统账号激活中的事件回调。默认为空，表示取消该类型事件的所有回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name. |
 
 **示例**
 
@@ -2257,7 +2257,7 @@ offConstraintChanged(callback?: Callback<ConstraintChangeInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | 否 | 表示用于接收约束变更事件的回调函数。<br>默认为undefined，表示清除所有订阅记录。<br>非undefined时，表示清 除与该回调函数关联的订阅记录。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | 否 | 表示用于接收约束变更事件的回调函数。<br>默认为undefined，表示清除所有订阅记录。<br>非undefined时，表示清 除与该回调函数关联的订阅记录。 |
 
 **错误码：**
 
@@ -2314,7 +2314,7 @@ offSwitched(callback?: Callback<OsAccountSwitchEventData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台切换结束事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台切换结束事件回调，默认为空，表示取消该类型事件的所有回调。 |
 
 **错误码：**
 
@@ -2360,7 +2360,7 @@ offSwitching(callback?: Callback<OsAccountSwitchEventData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台正在切换事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台正在切换事件回调，默认为空，表示取消该类型事件的所有回调。 |
 
 **错误码：**
 
@@ -2408,17 +2408,17 @@ off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): vo
 | --- | --- | --- | --- |
 | type | 'activate' \| 'activating' | 是 | 取消订阅类型，activate表示取消订阅账号已激活完成的事件，activating取消订阅账号正在激活的事件。 |
 | name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节，需要与订阅接口传入的值保持一致。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅系统账号激活完成与激活中的事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | 否 | 取消订阅系统账号激活完成与激活中的事件回调，默认为空，表示取消该类型事件的所有回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or name. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or name. |
 
 **示例**
 
@@ -2464,17 +2464,17 @@ off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): vo
 | --- | --- | --- | --- |
 | type | 'activate' \| 'activating' | 是 | 取消订阅类型，activate表示取消订阅账号已激活完成的事件，activating取消订阅账号正在激活的事件。 |
 | name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节，需要与订阅接口传入的值保持一致。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅系统账号激活完成与激活中的事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | 否 | 取消订阅系统账号激活完成与激活中的事件回调，默认为空，表示取消该类型事件的所有回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or name. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or name. |
 
 **示例**
 
@@ -2521,16 +2521,16 @@ off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'switched' | 是 | 取消订阅类型，switched表示取消订阅的是系统账号的前后台切换结束事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台切换结束事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台切换结束事件回调，默认为空，表示取消该类型事件的所有回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type. |
 
 **示例**
 
@@ -2571,16 +2571,16 @@ off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'switching' | 是 | 取消订阅类型，switching表示取消订阅的是系统账号的前后台正在切换事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台正在切换事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台正在切换事件回调，默认为空，表示取消该类型事件的所有回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type. |
 
 **示例**
 
@@ -2619,16 +2619,16 @@ onActivate(name: string, callback: Callback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 订阅系统账号激活完成的事件回调。表示激活完成后的系统账号ID。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | 订阅系统账号激活完成的事件回调。表示激活完成后的系统账号ID。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name. |
 
 **示例**
 
@@ -2669,16 +2669,16 @@ onActivating(name: string, callback: Callback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 订阅系统账号激活中的事件回调，表示正在激活中的系统账号ID。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | 订阅系统账号激活中的事件回调，表示正在激活中的系统账号ID。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name. |
 
 **示例**
 
@@ -2717,15 +2717,15 @@ onConstraintChanged(constraints: string[], callback: Callback<ConstraintChangeIn
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | constraints | string[] | 是 | 表示待订阅的约束列 表。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | 是 | 表示用于接收约束变更事件的回调函数。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | 是 | 表示用于接收约束变更事件的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300002](../errorcode-account.md#12300002-无效参数) | One or more constraints are invalid. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | One or more constraints are invalid. |
 
 **示例**
 
@@ -2768,7 +2768,7 @@ onSwitched(callback: Callback<OsAccountSwitchEventData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台切换结束事件回调，包含切换来源和切换目标的系统账号ID。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台切换结束事件回调，包含切换来源和切换目标的系统账号ID。 |
 
 **错误码：**
 
@@ -2817,7 +2817,7 @@ onSwitching(callback: Callback<OsAccountSwitchEventData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台正在切换事件回调，包含切换来源和切换目标的系统账号ID。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台正在切换事件回调，包含切换来源和切换目标的系统账号ID。 |
 
 **错误码：**
 
@@ -2868,17 +2868,17 @@ on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void
 | --- | --- | --- | --- |
 | type | 'activate' \| 'activating' | 是 | 订阅类型，activate表示订阅的是账号已激活完成的事件，activating表示订阅的是账号正在激活的事件。 |
 | name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 订阅系统账号激活完成与激活中的事件回调，表示激活完成后或正在激活中的系统账号ID。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | 订阅系统账号激活完成与激活中的事件回调，表示激活完成后或正在激活中的系统账号ID。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or name. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or name. |
 
 **示例**
 
@@ -2924,17 +2924,17 @@ on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void
 | --- | --- | --- | --- |
 | type | 'activate' \| 'activating' | 是 | 订阅类型，activate表示订阅的是账号已激活完成的事件，activating表示订阅的是账号正在激活的事件。 |
 | name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 订阅系统账号激活完成与激活中的事件回调，表示激活完成后或正在激活中的系统账号ID。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | 订阅系统账号激活完成与激活中的事件回调，表示激活完成后或正在激活中的系统账号ID。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or name. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or name. |
 
 **示例**
 
@@ -2981,16 +2981,16 @@ on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'switched' | 是 | 订阅类型，switched表示订阅的是系统账号的前后台切换结束事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台切换结束事件回调，包含切换来源和切换目标的系统账号ID。<br/>**说明：** 从API version 23开始，事件数据中新增可选字段displayId，表示发生切换事件的逻辑屏ID。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台切换结束事件回调，包含切换来源和切换目标的系统账号ID。<br/>**说明：** 从API version 23开始，事件数据中新增可选字段displayId，表示发生切换事件的逻辑屏ID。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type. |
 
 **示例**
 
@@ -3037,16 +3037,16 @@ on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'switching' | 是 | 订阅类型，switching表示订阅的是系统账号的前后台正在切换事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台正在切换事件回调，包含切换来源和切换目标的系统账号ID。<br/>**说明：** 从API version 23开始，事件数据中新增可选字段displayId，表示发生切换事件的逻辑屏ID。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台正在切换事件回调，包含切换来源和切换目标的系统账号ID。<br/>**说明：** 从API version 23开始，事件数据中新增可选字段displayId，表示发生切换事件的逻辑屏ID。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type. |
 
 **示例**
 
@@ -3090,15 +3090,15 @@ queryAllCreatedOsAccounts(callback: AsyncCallback<Array<OsAccountInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。如果查询成功，err为null，data为已创建的所有系统账号的信息列表；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。如果查询成功，err为null，data为已创建的所有系统账号的信息列表；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 **示例**
@@ -3308,14 +3308,14 @@ queryMaxOsAccountNumber(callback: AsyncCallback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数，如果查询成功，err为null，data为允许创建的系统账号的最大数量；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 回调函数，如果查询成功，err为null，data为允许创建的系统账号的最大数量；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 **示例**
@@ -3528,18 +3528,18 @@ queryOsAccountById(localId: int, callback: AsyncCallback<OsAccountInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | int | 是 | 要查询的系统账号的ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 | 回调函数。如果查询成功，err为null，data为查到的系统账号的信息；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 | 回调函数。如果查询成功，err为null，data为查到的系统账号的信息；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 
 **示例**
 
@@ -3621,12 +3621,12 @@ queryOsAccountById(localId: int): Promise<OsAccountInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 
 **示例**
 
@@ -3694,20 +3694,20 @@ removeOsAccount(localId: int, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | int | 是 | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。如果删除账号成功，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。如果删除账号成功，err为null，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated on. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated on. |
 
 **示例**
 
@@ -3799,14 +3799,14 @@ removeOsAccount(localId: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated. |
 
 **示例**
 
@@ -3896,14 +3896,14 @@ removeOsAccount(localId: int, options: RemoveOsAccountOptions): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated on. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or options. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or options. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated on. |
 
 **示例**
 
@@ -3991,19 +3991,19 @@ setOsAccountConstraints(localId: int, constraints: Array<string>, enable: boolea
 | localId | int | 是 | 系统账号ID。 |
 | constraints | Array&lt;string&gt; | 是 | 待设置/删除的 约束列表。 |
 | enable | boolean | 是 | 设置(true)/删除(false) 。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or constraints. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or constraints. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
 
 **示例**
 
@@ -4089,13 +4089,13 @@ setOsAccountConstraints(localId: int, constraints: Array<string>, enable: boolea
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or constraints. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or constraints. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
 
 **示例**
 
@@ -4164,19 +4164,19 @@ setOsAccountName(localId: int, localName: string, callback: AsyncCallback<void>)
 | --- | --- | --- | --- |
 | localId | int | 是 | 系统账号ID。 |
 | localName | string | 是 | 账号名，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or localName. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or localName. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
 
 **示例**
 
@@ -4261,13 +4261,13 @@ setOsAccountName(localId: int, localName: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or localName. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or localName. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
 
 **示例**
 
@@ -4338,19 +4338,19 @@ setOsAccountProfilePhoto(localId: int, photo: string, callback: AsyncCallback<vo
 | --- | --- | --- | --- |
 | localId | int | 是 | 系统账号ID。 |
 | photo | string | 是 | 头像信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or photo. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or photo. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
 
 **示例**
 
@@ -4441,13 +4441,13 @@ setOsAccountProfilePhoto(localId: int, photo: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or photo. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or photo. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
 
 **示例**
 
@@ -4536,14 +4536,14 @@ setOsAccountType(localId: int, type: OsAccountType, options?: SetOsAccountTypeOp
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted OS account. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or options. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or options. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted OS account. |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated. |
 | [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upper limit. |
 
 **示例**

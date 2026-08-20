@@ -1,6 +1,10 @@
 # HapModuleInfo
 
-The HapModuleInfo module provides information about an HAP module. Unless otherwise specified, the information is obtained through [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md) . &gt; **NOTE：**&gt; &gt; The APIs of this module have been deprecated since API version 9. You are advised to use &gt; [bundleManager-HapModuleInfo](#hapmoduleinfo) instead.
+The HapModuleInfo module provides information about an HAP module. Unless otherwise specified, the information is obtained through [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md) .
+
+> **NOTE：**
+> 
+> The APIs of this module have been deprecated since API version 9. You are advised to use &gt; [bundleManager-HapModuleInfo](#hapmoduleinfo) instead.
 
 **Since:** 7
 

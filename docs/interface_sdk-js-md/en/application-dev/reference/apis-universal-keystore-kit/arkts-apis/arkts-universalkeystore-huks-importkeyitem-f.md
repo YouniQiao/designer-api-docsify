@@ -37,21 +37,21 @@ Imports a key in plaintext. This API uses an asynchronous callback to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | api is not supported |
-| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
-| [12000017](../errorcode-huks.md#12000017-duplicate-key-alias) | The key with the same alias already exists<br>**Applicable version:** 20 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | error occurred in crypto engine |
-| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
-| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
-| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) | algorithm param is invalid |
-| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | algorithm param is missing |
+| [801](../../errorcode-universal.md#801-api-not-supported) | api is not supported |
 | [12000001](../errorcode-huks.md#12000001-feature-not-supported) | algorithm mode is not supported |
-| [12000015](../errorcode-huks.md#12000015-failed-to-invoke-other-system-services) | Failed to obtain the security information via UserIAM |
-| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
-| [12000013](../errorcode-huks.md#12000013-the-credential-does-not-exist) | queried credential does not exist |
-| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
+| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | algorithm param is missing |
+| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) | algorithm param is invalid |
+| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | error occurred in crypto engine |
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist<br>**Applicable version:** 9 - 19 |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
+| [12000013](../errorcode-huks.md#12000013-the-credential-does-not-exist) | queried credential does not exist |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
+| [12000015](../errorcode-huks.md#12000015-failed-to-invoke-other-system-services) | Failed to obtain the security information via UserIAM |
+| [12000017](../errorcode-huks.md#12000017-duplicate-key-alias) | The key with the same alias already exists<br>**Applicable version:** 20 and later |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -139,21 +139,21 @@ Imports a key in plaintext. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | api is not supported |
-| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
-| [12000017](../errorcode-huks.md#12000017-duplicate-key-alias) | The key with the same alias already exists<br>**Applicable version:** 20 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | error occurred in crypto engine |
-| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
-| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
-| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) | algorithm param is invalid |
-| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | algorithm param is missing |
+| [801](../../errorcode-universal.md#801-api-not-supported) | api is not supported |
 | [12000001](../errorcode-huks.md#12000001-feature-not-supported) | algorithm mode is not supported |
-| [12000015](../errorcode-huks.md#12000015-failed-to-invoke-other-system-services) | Failed to obtain the security information via UserIAM |
-| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
-| [12000013](../errorcode-huks.md#12000013-the-credential-does-not-exist) | queried credential does not exist |
-| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
+| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | algorithm param is missing |
+| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) | algorithm param is invalid |
+| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | error occurred in crypto engine |
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist<br>**Applicable version:** 9 - 19 |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
+| [12000013](../errorcode-huks.md#12000013-the-credential-does-not-exist) | queried credential does not exist |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
+| [12000015](../errorcode-huks.md#12000015-failed-to-invoke-other-system-services) | Failed to obtain the security information via UserIAM |
+| [12000017](../errorcode-huks.md#12000017-duplicate-key-alias) | The key with the same alias already exists<br>**Applicable version:** 20 and later |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
 
 **Examples**
 

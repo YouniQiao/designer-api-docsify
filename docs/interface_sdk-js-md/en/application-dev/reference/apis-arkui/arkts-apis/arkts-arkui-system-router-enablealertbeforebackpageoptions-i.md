@@ -1,4 +1,4 @@
-# EnableAlertBeforeBackPageOptions(Page Routing)
+# EnableAlertBeforeBackPageOptions
 
 Defines the **EnableAlertBeforeBackPage** parameter.
 

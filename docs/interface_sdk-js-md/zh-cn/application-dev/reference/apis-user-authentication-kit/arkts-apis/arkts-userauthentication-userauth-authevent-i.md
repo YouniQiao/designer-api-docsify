@@ -62,14 +62,14 @@ try {
   auth.start();
   console.info('auth start successfully.');
 } catch (error) {
-  console.error(`auth failed. Code: ${error?.code}, message: ${error?.message}`);
+  console.error(`Failed to auth. Code: ${error.code}, message: ${error.message}`);
   // do error.
 }
 // 通过callback获取认证过程中的提示信息。
 try {
   let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
   auth.on('tip', {
-    callback : (result : userAuth.TipInfo) => {
+    callback: (result: userAuth.TipInfo) => {
       switch (result.tip) {
         case userAuth.FaceTips.FACE_AUTH_TIP_TOO_BRIGHT:
           // do something;
@@ -85,7 +85,7 @@ try {
   auth.start();
   console.info('auth start successfully.');
 } catch (error) {
-  console.error(`auth failed. Code: ${error?.code}, message: ${error?.message}`);
+  console.error(`Failed to auth. Code: ${error.code}, message: ${error.message}`);
   // do error.
 }
 ```

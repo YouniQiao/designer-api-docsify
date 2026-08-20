@@ -28,7 +28,7 @@ Registers a system callback for the device connection phase. The callback includ
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceState](arkts-avsession-avsession-devicestate-i-sys.md)&gt; | 是 | Callback used to return the device information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceState](arkts-avsession-avsession-devicestate-i-sys.md)&gt; | 是 | Callback used to return the device information. |
 
 **错误码：**
 

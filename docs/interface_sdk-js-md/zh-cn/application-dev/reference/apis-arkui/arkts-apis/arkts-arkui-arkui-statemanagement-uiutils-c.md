@@ -45,8 +45,8 @@ static addMonitor(target: object, path: string | string[], monitorCallback: Moni
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [130001](../errorcode-stateManagement.md#130001-addmonitorclearmonitor非法路径) | The path is invalid. |
 | [130000](../errorcode-stateManagement.md#130000-addmonitorclearmonitor非法目标对象) | The target is not a custom component instance or V2 class instance. |
+| [130001](../errorcode-stateManagement.md#130001-addmonitorclearmonitor非法路径) | The path is invalid. |
 | [130002](../errorcode-stateManagement.md#130002-addmonitorclearmonitor非法回调方法) | monitorCallback is not a function or an anonymous function. |
 
 ## applySync
@@ -302,8 +302,8 @@ static clearMonitor(target: object, path: string | string[], monitorCallback?: M
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [130001](../errorcode-stateManagement.md#130001-addmonitorclearmonitor非法路径) | The path is invalid. |
 | [130000](../errorcode-stateManagement.md#130000-addmonitorclearmonitor非法目标对象) | The target is not a custom component instance or V2 class instance. |
+| [130001](../errorcode-stateManagement.md#130001-addmonitorclearmonitor非法路径) | The path is invalid. |
 | [130002](../errorcode-stateManagement.md#130002-addmonitorclearmonitor非法回调方法) | monitorCallback is not a function or an anonymous function. |
 
 ## enableV2Compatibility
@@ -383,7 +383,7 @@ struct CompV2 {
 static flushUIUpdates(): void
 ```
 
-立即处理在调用该函数之前所有的状态变量修改，同步[标脏](../../../ui/state-management/arkts-state-management-introduce.md#触发更新)对应的UI节点，但不会同步执行
+立即处理在调用该函数之前所有的状态变量修改，同步[标脏](../../../ui/state-management/arkts-state-management-introduce.md#触发更新)对应的UI节点，但不会同步执行 @Computed计算和@Monitor回调，详见 [applySync/flushUpdates/flushUIUpdates接口：同步刷新](../../../ui/state-management/arkts-new-applySync-flushUpdates-flushUIUpdates.md)。
 
 **起始版本：** 22
 
@@ -399,8 +399,8 @@ static flushUIUpdates(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [140002](../errorcode-stateManagement.md#140002-flushupdatesflushuiupdates非法调用) | The function is not allowed to be called in @Monitor |
 | [140001](../errorcode-stateManagement.md#140001-applysyncflushupdatesflushuiupdates非法调用) | The function is not allowed to be called in @Computed |
+| [140002](../errorcode-stateManagement.md#140002-flushupdatesflushuiupdates非法调用) | The function is not allowed to be called in @Monitor |
 
 **示例**
 
@@ -470,8 +470,8 @@ static flushUpdates(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [140002](../errorcode-stateManagement.md#140002-flushupdatesflushuiupdates非法调用) | The function is not allowed to be called in @Monitor |
 | [140001](../errorcode-stateManagement.md#140001-applysyncflushupdatesflushuiupdates非法调用) | The function is not allowed to be called in @Computed |
+| [140002](../errorcode-stateManagement.md#140002-flushupdatesflushuiupdates非法调用) | The function is not allowed to be called in @Monitor |
 
 **示例**
 
@@ -935,7 +935,9 @@ struct Index {
 static makeV1Observed<T extends object>(source: T): T
 ```
 
-将不可观察的对象包装成状态管理V1可观察的对象，其能力等同于@Observed，可初始化@ObjectLink。 该接口可搭配[enableV2Compatibility](#enablev2compatibility)应用于状态管理V1和V2混用场景，详见 [状态管理V1和V2混用指导（API version 19及之后）](../../../ui/state-management/arkts-v1-v2-mixusage.md)。
+将不可观察的对象包装成状态管理V1可观察的对象，其能力等同于@Observed，可初始化@ObjectLink。
+
+该接口可搭配[enableV2Compatibility](#enablev2compatibility)应用于状态管理V1和V2混用场景，详见 [状态管理V1和V2混用指导（API version 19及之后）](../../../ui/state-management/arkts-v1-v2-mixusage.md)。
 
 **起始版本：** 19
 
@@ -951,7 +953,7 @@ static makeV1Observed<T extends object>(source: T): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | T | 是 | 数据源。支持普通class、Array、Map、Set、Date类型。 <br>不支持[@arkts.collections (ArkTS容器集)](../../apis-na/arkts-apis/arkts-collections.md)和 [@Sendable](../../../arkts-utils/arkts-sendable.md)修饰的class。 <br>不支持undefined和null。不支持状态管理V2的数据和[makeObserved](#makeobserved)的返回值。 |
+| source | T | 是 | 数据源。支持普通class、Array、Map、Set、Date类型。 <br>不支持[@arkts.collections (ArkTS容器集)](../../apis-arkts/arkts-apis/arkts-collections.md)和 [@Sendable](../../../arkts-utils/arkts-sendable.md)修饰的class。 <br>不支持undefined和null。不支持状态管理V2的数据和[makeObserved](#makeobserved)的返回值。 |
 
 **返回值：**
 

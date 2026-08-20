@@ -1,4 +1,4 @@
-# RouterOptions(页面路由)
+# RouterOptions
 
 定义路由器的选项。
 
@@ -44,7 +44,13 @@ params?: Object
 uri: string
 ```
 
-目标页面的uri，可以是以下的两种格式： 1. 页面的绝对路径，由config.json文件中的页面列表提供。例如： - pages/index/index - pages/detail/detail 2. 特定路径。如果URI为斜杠（/），则显示主页。
+目标页面的uri，可以是以下的两种格式：
+
+1. 页面的绝对路径，由config.json文件中的页面列表提供。例如：
+
+- pages/index/index - pages/detail/detail
+
+2. 特定路径。如果URI为斜杠（/），则显示主页。
 
 **类型：** string
 

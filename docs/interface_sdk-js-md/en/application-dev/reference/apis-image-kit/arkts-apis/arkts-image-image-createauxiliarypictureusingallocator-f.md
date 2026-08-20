@@ -41,7 +41,7 @@ Create an &lt;b&gt;AuxiliaryPicture&lt;/b&gt; object, the memory type used by th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter, size.height or size.width is less than or equal to 0. |
 | [7600205](../errorcode-image.md#7600205-unsupported-format) | Unsupported allocator type, e.g., use shared memory to create a gainmap as only DMA supported hdr metadata. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter, size.height or size.width is less than or equal to 0. |
 | [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Alloc memory failed. |
 

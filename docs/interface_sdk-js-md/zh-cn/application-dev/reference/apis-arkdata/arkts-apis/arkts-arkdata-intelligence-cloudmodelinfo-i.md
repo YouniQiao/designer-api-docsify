@@ -1,4 +1,4 @@
-# CloudModelInfo(智慧数据平台)
+# CloudModelInfo
 
 云侧模型的配置信息，在使用云侧文本向量模型时配置，可通过[getSupportedCloudModel](arkts-arkdata-intelligence-getsupportedcloudmodel-f.md)接口获取当前设备支持的云侧模型信息。
 

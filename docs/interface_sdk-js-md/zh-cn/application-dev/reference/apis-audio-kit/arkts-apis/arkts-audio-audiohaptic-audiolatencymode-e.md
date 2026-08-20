@@ -2,6 +2,8 @@
 
 枚举，音频时延模式。
 
+@enum {int}
+
 **起始版本：** 23
 
 <!--Device-audioHaptic-enum AudioLatencyMode--><!--Device-audioHaptic-enum AudioLatencyMode-End-->

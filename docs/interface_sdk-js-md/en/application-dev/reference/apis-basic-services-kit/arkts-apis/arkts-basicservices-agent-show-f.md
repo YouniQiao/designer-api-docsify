@@ -33,8 +33,8 @@ Queries the task details based on the task ID. This API uses an asynchronous cal
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. |
-| [21900006](../errorcode-request.md#21900006-task-not-found) | Task removed or not found. |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900006](../errorcode-request.md#21900006-task-not-found) | Task removed or not found. |
 
 
 ## show
@@ -68,6 +68,6 @@ Queries the task details based on the task ID. This API uses a promise to return
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. |
-| [21900006](../errorcode-request.md#21900006-task-not-found) | Task removed or not found. |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900006](../errorcode-request.md#21900006-task-not-found) | Task removed or not found. |
 

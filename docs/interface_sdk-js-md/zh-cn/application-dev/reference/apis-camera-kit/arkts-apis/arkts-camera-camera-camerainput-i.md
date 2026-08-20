@@ -1,6 +1,8 @@
 # CameraInput
 
-相机设备输入对象。 会话中[Session](arkts-camera-camera-session-i.md)使用的相机信息。
+相机设备输入对象。
+
+会话中[Session](arkts-camera-camera-session-i.md)使用的相机信息。
 
 **起始版本：** 23
 
@@ -35,7 +37,7 @@ close(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当关闭相机成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当关闭相机成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -133,7 +135,7 @@ offCameraOcclusionDetection(callback?: AsyncCallback<CameraOcclusionDetectionRes
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## offError
 
@@ -154,7 +156,7 @@ offError(camera: CameraDevice, callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 是 | CameraDevice对象。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不能是匿名函数），否则取消所有callback。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不能是匿名函数），否则取消所有callback。 |
 
 ## off('error')
 
@@ -178,7 +180,7 @@ off(type: 'error', camera: CameraDevice, callback?: ErrorCallback): void
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 监听事件，固定为'error'，CameraInput对象创建成功可监听。相机设备出错情况下可触发该事件并返回结果，比如设备不可用或者冲突等返回对应错误信息。 |
 | camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 是 | CameraDevice对象。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不能是匿名函数），否则取消所有callback。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不能是匿名函数），否则取消所有callback。 |
 
 ## onCameraOcclusionDetection
 
@@ -198,7 +200,7 @@ onCameraOcclusionDetection(callback: AsyncCallback<CameraOcclusionDetectionResul
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | 是 | 回调函数，用于获取结果。返回遮挡状态。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | 是 | 回调函数，用于获取结果。返回遮挡状态。 |
 
 ## onError
 
@@ -219,7 +221,7 @@ onError(camera: CameraDevice, callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 是 | CameraDevice对象。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，用于获取结果。返回错误码，错误码类型CameraErrorCode。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | 回调函数，用于获取结果。返回错误码，错误码类型CameraErrorCode。 |
 
 ## on('error')
 
@@ -227,7 +229,11 @@ onError(camera: CameraDevice, callback: ErrorCallback): void
 on(type: 'error', camera: CameraDevice, callback: ErrorCallback): void
 ```
 
-监听CameraInput的错误事件，通过注册回调函数获取结果。使用callback异步回调。 &gt; **说明：** &gt; &gt; 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+监听CameraInput的错误事件，通过注册回调函数获取结果。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 10
 
@@ -243,7 +249,7 @@ on(type: 'error', camera: CameraDevice, callback: ErrorCallback): void
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 监听事件，固定为'error'，CameraInput对象创建成功可监听。相机设备出错情况下可触发该事件并返回结果，比如设备不可用或者冲突等返回对应错误信息。 |
 | camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 是 | CameraDevice对象。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，用于获取结果。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | 回调函数，用于获取结果。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 ## open
 
@@ -265,15 +271,15 @@ open(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当打开相机成功，err为undefined，否则为错误对象，错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当打开相机成功，err为undefined，否则为错误对象，错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 | [7400107](../errorcode-camera.md#7400107-相机冲突) | Can not use camera cause of conflict. |
 | [7400108](../errorcode-camera.md#7400108-安全策略无法使用相机) | Camera disabled cause of security reason. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## open
 
@@ -302,9 +308,9 @@ open(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 | [7400107](../errorcode-camera.md#7400107-相机冲突) | Can not use camera cause of conflict. |
 | [7400108](../errorcode-camera.md#7400108-安全策略无法使用相机) | Camera disabled cause of security reason. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## open
 
@@ -338,9 +344,9 @@ open(isSecureEnabled: boolean): Promise<bigint>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 | [7400107](../errorcode-camera.md#7400107-相机冲突) | Can not use camera cause of conflict. |
 | [7400108](../errorcode-camera.md#7400108-安全策略无法使用相机) | Camera disabled cause of security reason. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## open
 
@@ -375,9 +381,9 @@ open(type: CameraConcurrentType): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 | [7400107](../errorcode-camera.md#7400107-相机冲突) | Can not use camera cause of conflict. |
 | [7400108](../errorcode-camera.md#7400108-安全策略无法使用相机) | Camera disabled cause of security reason. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## usePhysicalCameraOrientation
 

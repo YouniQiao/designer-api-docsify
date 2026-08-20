@@ -32,6 +32,6 @@ Register continuous task active callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [9800005](../errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
 

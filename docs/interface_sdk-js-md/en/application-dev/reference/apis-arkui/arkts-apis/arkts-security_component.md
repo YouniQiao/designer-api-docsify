@@ -11,14 +11,14 @@
 
 | Name | Description |
 | --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md) | The universal attributes module for security components enables unified configuration of universal attributes such as layout, size, text, icon, color, border, and interaction behaviors. This module is mainly used in the following scenarios: - Set layout, size, text, icon, color, border, and interaction-related attributes for security components such as PasteButton and SaveButton. - Adjust the display effect and interaction experience of security components while ensuring compliance with the security component specifications. For specific constraints, see [Constraints](../../../security/AccessToken/security-component-overview.md#constraints). - Reuse the universal attribute capabilities of security components through chained calls. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md) | The universal attributes module for security components enables unified configuration of universal attributes such as layout, size, text, icon, color, border, and interaction behaviors. |
 
 <!--Del-->
 ### Classes(System API)
 
 | Name | Description |
 | --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c-sys.md) | The universal attributes module for security components enables unified configuration of universal attributes such as layout, size, text, icon, color, border, and interaction behaviors. This module is mainly used in the following scenarios: - Set layout, size, text, icon, color, border, and interaction-related attributes for security components such as PasteButton and SaveButton. - Adjust the display effect and interaction experience of security components while ensuring compliance with the security component specifications. For specific constraints, see [Constraints](../../../security/AccessToken/security-component-overview.md#constraints). - Reuse the universal attribute capabilities of security components through chained calls. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c-sys.md) | The universal attributes module for security components enables unified configuration of universal attributes such as layout, size, text, icon, color, border, and interaction behaviors. |
 <!--DelEnd-->
 
 ### Enums

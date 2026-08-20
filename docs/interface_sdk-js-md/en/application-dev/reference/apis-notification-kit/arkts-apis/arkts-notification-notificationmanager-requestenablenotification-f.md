@@ -35,11 +35,11 @@ Requests notification to be enabled for this application. This API uses an async
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600013](../errorcode-notification.md#1600013-notification-pop-up-window-displayed) | A notification dialog box is already displayed.<br>**Applicable version:** 11 and later |
 | [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [1600004](../errorcode-notification.md#1600004-notification-disabled) | Notification disabled.<br>**Applicable version:** 11 and later |
+| [1600013](../errorcode-notification.md#1600013-notification-pop-up-window-displayed) | A notification dialog box is already displayed.<br>**Applicable version:** 11 and later |
 
 **Examples**
 
@@ -63,7 +63,13 @@ notificationManager.requestEnableNotification(requestEnableNotificationCallback)
 function requestEnableNotification(context: UIAbilityContext, callback: AsyncCallback<void>): void
 ```
 
-Requests notification to be enabled for this application. You can call this API to display a dialog box prompting the user to enable notification for your application before publishing a notification. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; - This API can be called only after the application UI is loaded (that is, &gt; [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent) is &gt; successfully called). &gt; &gt; - When an application uses **requestEnableNotification()** to display a dialog box for notification authorization &gt; and the user rejects the authorization, the application cannot use this API to open the dialog box again. However &gt; , it can call [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md) &gt; to open the notification management dialog box.
+Requests notification to be enabled for this application. You can call this API to display a dialog box prompting the user to enable notification for your application before publishing a notification. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> - This API can be called only after the application UI is loaded (that is, &gt; [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent) is &gt; successfully called).
+> 
+> - When an application uses **requestEnableNotification()** to display a dialog box for notification authorization &gt; and the user rejects the authorization, the application cannot use this API to open the dialog box again. However &gt; , it can call [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md) &gt; to open the notification management dialog box.
 
 **Since:** 23
 
@@ -93,11 +99,11 @@ openNotificationSettings opens the
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600013](../errorcode-notification.md#1600013-notification-pop-up-window-displayed) | A notification dialog box is already displayed.<br>**Applicable version:** 11 and later |
 | [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [1600004](../errorcode-notification.md#1600004-notification-disabled) | Notification disabled.<br>**Applicable version:** 11 and later |
+| [1600013](../errorcode-notification.md#1600013-notification-pop-up-window-displayed) | A notification dialog box is already displayed.<br>**Applicable version:** 11 and later |
 
 **Examples**
 
@@ -158,11 +164,11 @@ Requests notification to be enabled for this application. This API uses a promis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1600013](../errorcode-notification.md#1600013-notification-pop-up-window-displayed) | A notification dialog box is already displayed.<br>**Applicable version:** 11 and later |
 | [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [1600004](../errorcode-notification.md#1600004-notification-disabled) | Notification disabled.<br>**Applicable version:** 11 and later |
+| [1600013](../errorcode-notification.md#1600013-notification-pop-up-window-displayed) | A notification dialog box is already displayed.<br>**Applicable version:** 11 and later |
 
 **Examples**
 
@@ -183,7 +189,13 @@ notificationManager.requestEnableNotification().then(() => {
 function requestEnableNotification(context: UIAbilityContext): Promise<void>
 ```
 
-Requests notification to be enabled for this application. You can call this API to display a dialog box prompting the user to enable notification for your application before publishing a notification. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - This API can be called only after the application UI is loaded (that is, &gt; [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent) is &gt; successfully called). &gt; &gt; - When an application uses **requestEnableNotification()** to display a dialog box for notification authorization &gt; and the user rejects the authorization, the application cannot use this API to open the dialog box again. However &gt; , it can call [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md) &gt; to open the notification management dialog box.
+Requests notification to be enabled for this application. You can call this API to display a dialog box prompting the user to enable notification for your application before publishing a notification. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - This API can be called only after the application UI is loaded (that is, &gt; [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent) is &gt; successfully called).
+> 
+> - When an application uses **requestEnableNotification()** to display a dialog box for notification authorization &gt; and the user rejects the authorization, the application cannot use this API to open the dialog box again. However &gt; , it can call [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md) &gt; to open the notification management dialog box.
 
 **Since:** 23
 
@@ -218,11 +230,11 @@ openNotificationSettings opens the
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600013](../errorcode-notification.md#1600013-notification-pop-up-window-displayed) | A notification dialog box is already displayed.<br>**Applicable version:** 11 and later |
 | [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [1600004](../errorcode-notification.md#1600004-notification-disabled) | Notification disabled.<br>**Applicable version:** 11 and later |
+| [1600013](../errorcode-notification.md#1600013-notification-pop-up-window-displayed) | A notification dialog box is already displayed.<br>**Applicable version:** 11 and later |
 
 **Examples**
 

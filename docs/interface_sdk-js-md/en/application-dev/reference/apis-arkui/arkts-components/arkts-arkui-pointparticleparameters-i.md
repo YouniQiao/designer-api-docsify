@@ -1,6 +1,6 @@
 # PointParticleParameters
 
-Defines the parameters for a point-like particle.
+Defines the parameters for a point-like particle. @interface PointParticleParameters
 
 **Since:** 10
 

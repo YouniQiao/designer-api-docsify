@@ -13,7 +13,11 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 function create(context: BaseContext, config: Config, callback: AsyncCallback<Task>): void
 ```
 
-创建需要上传或下载的任务，并将其排入队列。支持HTTP/HTTPS协议，使用callback异步回调。 &gt; **说明：** &gt; &gt; 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+创建需要上传或下载的任务，并将其排入队列。支持HTTP/HTTPS协议，使用callback异步回调。
+
+> **说明：**
+> 
+> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 23
 
@@ -31,18 +35,18 @@ function create(context: BaseContext, config: Config, callback: AsyncCallback<Ta
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 基于应用程序的上下文。 |
 | config | Config | 是 | 上传/下载任务的配置信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Task&gt; | 是 | 回调函数。当创建上传或下载任务成功，err为undefined，data为获取到的Task对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Task&gt; | 是 | 回调函数。当创建上传或下载任务成功，err为undefined，data为获取到的Task对象；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [21900004](../errorcode-request.md#21900004-应用任务队列已满) | The application task queue is full. |
-| [21900005](../errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [13400001](../errorcode-request.md#13400001-文件操作异常) | Invalid file or file system error. |
 | [13400003](../errorcode-request.md#13400003-服务异常) | Task service ability error. |
+| [21900004](../errorcode-request.md#21900004-应用任务队列已满) | The application task queue is full. |
+| [21900005](../errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode. |
 
 **示例**
 
@@ -98,7 +102,11 @@ request.agent.create(context, config, async (err: BusinessError, task: request.a
 function create(context: BaseContext, config: Config): Promise<Task>
 ```
 
-创建需要上传或下载的任务，并将其排入队列。支持HTTP/HTTPS协议，使用Promise异步回调。 &gt; **说明：** &gt; &gt; 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+创建需要上传或下载的任务，并将其排入队列。支持HTTP/HTTPS协议，使用Promise异步回调。
+
+> **说明：**
+> 
+> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 23
 
@@ -127,12 +135,12 @@ function create(context: BaseContext, config: Config): Promise<Task>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [21900004](../errorcode-request.md#21900004-应用任务队列已满) | The application task queue is full. |
-| [21900005](../errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [13400001](../errorcode-request.md#13400001-文件操作异常) | Invalid file or file system error. |
 | [13400003](../errorcode-request.md#13400003-服务异常) | Task service ability error. |
+| [21900004](../errorcode-request.md#21900004-应用任务队列已满) | The application task queue is full. |
+| [21900005](../errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode. |
 
 **示例**
 

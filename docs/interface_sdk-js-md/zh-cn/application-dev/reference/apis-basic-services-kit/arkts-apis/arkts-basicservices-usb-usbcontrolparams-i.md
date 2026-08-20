@@ -1,4 +1,4 @@
-# USBControlParams(USB Manager)
+# USBControlParams
 
 控制传输参数。
 

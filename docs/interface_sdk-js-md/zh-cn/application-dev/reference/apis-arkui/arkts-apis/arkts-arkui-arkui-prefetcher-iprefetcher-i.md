@@ -1,4 +1,4 @@
-# IPrefetcher(Prefetching)
+# IPrefetcher
 
 实现此接口以提供预取能力，配合LazyForEach在List、Grid等容器组件滑动浏览时预取数据项，提升用户浏览体验。
 

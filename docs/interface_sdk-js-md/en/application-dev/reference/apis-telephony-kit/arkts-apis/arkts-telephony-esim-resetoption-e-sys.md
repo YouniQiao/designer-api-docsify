@@ -2,6 +2,8 @@
 
 Options for resetting eUICC memory.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-eSIM-export enum ResetOption--><!--Device-eSIM-export enum ResetOption-End-->

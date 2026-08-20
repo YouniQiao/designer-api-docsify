@@ -2,6 +2,8 @@
 
 Describes an opaque object of a template, which is created using the createPattern() method.
 
+@interface CanvasPattern
+
 **Since:** 11
 
 <!--Device-unnamed-export interface CanvasPattern--><!--Device-unnamed-export interface CanvasPattern-End-->

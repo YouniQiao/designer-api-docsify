@@ -19,7 +19,17 @@ Describes the style of the sidebar control button.
 height?: number
 ```
 
-Height of the sidebar control button. Default value: API version 9 and earlier versions: **32vp** API version 10 and later versions: **24vp** Unit: vp Value range: [0, +∞).
+Height of the sidebar control button.
+
+Default value:
+
+API version 9 and earlier versions: **32vp**
+
+API version 10 and later versions: **24vp**
+
+Unit: vp
+
+Value range: [0, +∞).
 
 **Type:** number
 
@@ -37,7 +47,9 @@ Height of the sidebar control button. Default value: API version 9 and earlier v
 icons?: ButtonIconOptions
 ```
 
-Icons of the sidebar control button. If the resource fails to be obtained or this attribute is not set, the default icon is used.
+Icons of the sidebar control button.
+
+If the resource fails to be obtained or this attribute is not set, the default icon is used.
 
 **Type:** [ButtonIconOptions](arkts-arkui-buttoniconoptions-i.md)
 
@@ -55,7 +67,13 @@ Icons of the sidebar control button. If the resource fails to be obtained or thi
 left?: number
 ```
 
-Spacing between the sidebar control button and the left of the container. Default value: **16vp** Unit: vp Value range: [0, +∞).
+Spacing between the sidebar control button and the left of the container.
+
+Default value: **16vp**
+
+Unit: vp
+
+Value range: [0, +∞).
 
 **Type:** number
 
@@ -73,7 +91,13 @@ Spacing between the sidebar control button and the left of the container. Defaul
 top?: number
 ```
 
-Spacing between the sidebar control button and the top of the container. Default value: **48vp** Unit: vp Value range: [0, +∞).
+Spacing between the sidebar control button and the top of the container.
+
+Default value: **48vp**
+
+Unit: vp
+
+Value range: [0, +∞).
 
 **Type:** number
 
@@ -91,7 +115,17 @@ Spacing between the sidebar control button and the top of the container. Default
 width?: number
 ```
 
-Width of the sidebar control button. Default value: API version 9 and earlier versions: **32vp** API version 10 and later versions: **24vp** Unit: vp Value range: [0, +∞).
+Width of the sidebar control button.
+
+Default value:
+
+API version 9 and earlier versions: **32vp**
+
+API version 10 and later versions: **24vp**
+
+Unit: vp
+
+Value range: [0, +∞).
 
 **Type:** number
 

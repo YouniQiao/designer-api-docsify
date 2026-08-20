@@ -13,7 +13,11 @@ import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrustLevel: AuthTrustLevel): AuthInstance
 ```
 
-获取AuthInstance对象，用于执行用户身份认证。 &gt; **说明：** &gt; &gt; 每个AuthInstance只能进行一次认证，若需要再次进行认证则需重新获取AuthInstance。
+获取AuthInstance对象，用于执行用户身份认证。
+
+> **说明：**
+> 
+> 每个AuthInstance只能进行一次认证，若需要再次进行认证则需重新获取AuthInstance。
 
 **起始版本：** 9
 
@@ -44,9 +48,9 @@ function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrus
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [12500006](../errorcode-useriam.md#12500006-认证信任等级不支持) | The authentication trust level is not supported. |
-| [12500005](../errorcode-useriam.md#12500005-认证类型不支持) | The authentication type is not supported. |
 | [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| [12500005](../errorcode-useriam.md#12500005-认证类型不支持) | The authentication type is not supported. |
+| [12500006](../errorcode-useriam.md#12500006-认证信任等级不支持) | The authentication trust level is not supported. |
 
 **示例**
 
@@ -61,7 +65,7 @@ try {
   let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
   console.info('get auth instance successfully.');
 } catch (error) {
-  console.error(`get auth instance failed. Code: ${error?.code}, message: ${error?.message}`);
+  console.error(`Failed to get auth instance. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 

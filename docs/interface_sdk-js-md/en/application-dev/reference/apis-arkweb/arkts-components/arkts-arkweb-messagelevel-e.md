@@ -1,6 +1,10 @@
 # MessageLevel
 
-Enumerates the information levels of the console messages. &gt; **NOTE：**&gt; &gt; On the HTML5 side, calling console.log or console.info both correspond to the console message level of &gt; MessageLevel.Info.
+Enumerates the information levels of the console messages.
+
+> **NOTE：**
+> 
+> On the HTML5 side, calling console.log or console.info both correspond to the console message level of &gt; MessageLevel.Info.
 
 **Since:** 8
 

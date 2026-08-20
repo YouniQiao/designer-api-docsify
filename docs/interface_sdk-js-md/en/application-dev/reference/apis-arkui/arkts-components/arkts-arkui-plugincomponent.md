@@ -1,8 +1,10 @@
 # PluginComponent
 
-The **PluginComponent** allows an application to display external UI from another application. To implement update through inter-process communication (IPC), see [@ohos.pluginComponent](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-n.md).
+The **PluginComponent** allows an application to display external UI from another application. To implement update through inter-process communication (IPC), see [@ohos.pluginComponent](../../apis-default/arkts-apis/arkts-plugincomponentmanager-n.md).
 
-## Child Components Not supported
+## Child Components
+
+Not supported
 
 ## PluginComponent
 
@@ -32,13 +34,9 @@ Creates a **PluginComponent** to display the UI provided by an external applicat
 
 | Name | Description |
 | --- | --- |
-| [PluginComponentOptions](arkts-arkui-plugincomponentoptions-i-sys.md) | Defines options for constructing a **PluginComponent**. &gt; **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. &gt; While historical version information is preserved for anonymous objects, there may be cases where the outer element &gt; 's @since version number is higher than inner elements'. This does not affect interface usability. |
-| [PluginComponentTemplate](arkts-arkui-plugincomponenttemplate-i-sys.md) | PluginComponentTemplate |
-| [PluginErrorData](arkts-arkui-pluginerrordata-i-sys.md) | Data provided when the error occurs. &gt; **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. &gt; While historical version information is preserved for anonymous objects, there may be cases where the outer element &gt; 's @since version number is higher than inner elements'. This does not affect interface usability. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [PluginErrorCallback](arkts-arkui-pluginerrorcallback-t-sys.md) | Callback invoked when an error occurs. |
 

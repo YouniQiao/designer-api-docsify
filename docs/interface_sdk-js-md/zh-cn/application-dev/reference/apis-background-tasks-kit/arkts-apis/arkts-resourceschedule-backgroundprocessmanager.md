@@ -23,7 +23,7 @@ import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
 | [getPowerSaveMode(后台子进程管控)](arkts-backgroundtasks-backgroundprocessmanager-getpowersavemode-f.md) | 获取进程能效模式。使用Promise异步回调。 |
 | [isPowerSaveMode(后台子进程管控)](arkts-backgroundtasks-backgroundprocessmanager-ispowersavemode-f.md) | 查询进程是否处于能效模式，使用Promise异步回调。 |
 | [resetProcessPriority(后台子进程管控)](arkts-backgroundtasks-backgroundprocessmanager-resetprocesspriority-f.md) | 为子进程解压制，即子进程策略恢复为主进程调度策略。若主进程调度策略发生变化，如从后台切至前台等， 子进程会跟随主进程一同变化，等效于执行一次resetProcessPriority动作。使用Promise异步回调。 |
-| [setPowerSaveMode(后台子进程管控)](arkts-backgroundtasks-backgroundprocessmanager-setpowersavemode-f.md) | 设置进程的能效模式，使用Promise异步回调。 当应用满足以下条件时，可以设置自身是否进入能效模式： - 应用未获取系统焦点，未执行音频或界面刷新操作。 - 无法通过框架层获取电源锁。 - 应用需要执行压缩、解压缩、编译等耗时较长的计算任务，不希望这些任务受到显著的CPU资源限制（即被迫进入能效模式）。 |
+| [setPowerSaveMode(后台子进程管控)](arkts-backgroundtasks-backgroundprocessmanager-setpowersavemode-f.md) | 设置进程的能效模式，使用Promise异步回调。 |
 | [setProcessPriority(后台子进程管控)](arkts-backgroundtasks-backgroundprocessmanager-setprocesspriority-f.md) | 设置子进程的压制档位，子进程被压制后可获得的CPU资源将会受到限制。如果主进程调度策略发生变化，如从后台切至前台等，子进程会跟随主进程一同变化，子进程如需继续压制，需要重新调用本接口。使用Promise异步回调。 |
 
 ### 枚举

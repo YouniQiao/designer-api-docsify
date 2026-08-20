@@ -2,6 +2,8 @@
 
 Defines the GestureGroup handler.
 
+@extends GestureHandler
+
 **Inheritance/Implementation:** GestureGroupHandler extends [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md)
 
 **Since:** 23

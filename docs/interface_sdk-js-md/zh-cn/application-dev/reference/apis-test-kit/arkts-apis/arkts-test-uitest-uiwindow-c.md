@@ -42,8 +42,8 @@ close(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 
 **示例**
 
@@ -374,7 +374,11 @@ async function demo() {
 isActived(): Promise<boolean>
 ```
 
-判断窗口是否为用户正在交互窗口。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 9开始支持，从API version 11开始废弃，建议使用[isActive&lt;sup&gt;11+&lt;/sup&gt;](#isactive)替代。
+判断窗口是否为用户正在交互窗口。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 9开始支持，从API version 11开始废弃，建议使用[isActive&lt;sup&gt;11+&lt;/sup&gt;](#isactive)替代。
 
 **起始版本：** 9
 
@@ -485,8 +489,8 @@ maximize(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 
 **示例**
 
@@ -530,8 +534,8 @@ minimize(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 
 **示例**
 
@@ -583,8 +587,8 @@ moveTo(x: int, y: int): Promise<void>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 
 **示例**
 
@@ -637,8 +641,8 @@ resize(wide: int, height: int, direction: ResizeDirection): Promise<void>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 
 ## resume
 
@@ -667,8 +671,8 @@ resume(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 
 **示例**
 
@@ -712,8 +716,8 @@ split(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 
 **示例**
 

@@ -12,9 +12,11 @@ import { performanceMonitor } from '@kit.ArkUI';
 function end(scene: string): void
 ```
 
-Marks the end of a user scene. Call this API when the scene ends.
+End monitoring an application scene.
 
-**Since:** 10
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -28,13 +30,5 @@ Marks the end of a user scene. Call this API when the scene ends.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scene | string | Yes | User scene ID, which must be strictly consistent with that in **begin**; otherwise, the monitoring will be invalid. |
-
-**Examples**
-
-End point of the user scene where the user taps an icon to launch an application.
-
-```TypeScript
-performanceMonitor.end("LAUNCHER_APP_LAUNCH_FROM_ICON");
-```
+| scene | string | Yes | Indicates the scene name. It must be the same with the { |
 

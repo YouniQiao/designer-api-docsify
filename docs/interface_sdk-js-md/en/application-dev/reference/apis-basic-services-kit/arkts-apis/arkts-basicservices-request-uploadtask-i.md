@@ -21,7 +21,11 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 delete(callback: AsyncCallback<boolean>): void
 ```
 
-Deletes the upload task. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error &gt; code is removed from API version 12.
+Deletes the upload task. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error &gt; code is removed from API version 12.
 
 **Since:** 23
 
@@ -61,7 +65,11 @@ uploadTask.delete((err: BusinessError, result: boolean) => {
 delete(): Promise<boolean>
 ```
 
-Deletes the upload task. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error &gt; code is removed from API version 12.
+Deletes the upload task. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error &gt; code is removed from API version 12.
 
 **Since:** 23
 
@@ -611,7 +619,11 @@ uploadTask.on('headerReceive', headerCallback);
 on(type: 'progress', callback: (uploadedSize: long, totalSize: long) => void): void
 ```
 
-Subscribes to upload progress events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; To maintain a balance between power consumption and performance, this API cannot be called when the application &gt; is running in the background.
+Subscribes to upload progress events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> To maintain a balance between power consumption and performance, this API cannot be called when the application &gt; is running in the background.
 
 **Since:** 6
 

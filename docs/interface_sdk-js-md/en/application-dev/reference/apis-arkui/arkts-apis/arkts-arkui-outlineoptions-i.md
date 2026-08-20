@@ -2,6 +2,8 @@
 
 Defines the options of outline.
 
+@interface OutlineOptions
+
 **Since:** 12
 
 <!--Device-unnamed-declare interface OutlineOptions--><!--Device-unnamed-declare interface OutlineOptions-End-->

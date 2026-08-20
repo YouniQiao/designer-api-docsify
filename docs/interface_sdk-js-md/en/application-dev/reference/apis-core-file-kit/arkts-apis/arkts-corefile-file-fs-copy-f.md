@@ -14,7 +14,11 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 declare function copy(srcUri: string, destUri: string, options?: CopyOptions): Promise<void>
 ```
 
-Copies a file or directory. This API uses a promise to return the result. File copy across devices is supported. This API forcibly overwrites the file or directory. The input parameter can be the URI of the file or directory. A maximum of 10 cross-device copy tasks are allowed at the same time, and the number of files to be copied at a time cannot exceed 500.
+Copies a file or directory. This API uses a promise to return the result.
+
+File copy across devices is supported. This API forcibly overwrites the file or directory. The input parameter can be the URI of the file or directory.
+
+A maximum of 10 cross-device copy tasks are allowed at the same time, and the number of files to be copied at a time cannot exceed 500.
 
 **Since:** 11
 
@@ -41,31 +45,31 @@ Copies a file or directory. This API uses a promise to return the result. File c
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
-| 13900038 | Value too large for defined data type |
-| 13900034 | Operation would block |
-| 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900021 | File table overflow |
-| 13900022 | Too many open files |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900028 | Too many links |
-| 13900030 | File name too long |
-| 13900031 | Function not implemented |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
-| 13900012 | Permission denied by the file system |
-| 13900015 | File exists |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
 | 13900008 | Bad file descriptor |
 | 13900010 | Try again |
 | 13900011 | Out of memory |
+| 13900012 | Permission denied by the file system |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900021 | File table overflow |
+| 13900022 | Too many open files |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900028 | Too many links |
+| 13900030 | File name too long |
+| 13900031 | Function not implemented |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
 
 
 ## copy
@@ -74,7 +78,9 @@ Copies a file or directory. This API uses a promise to return the result. File c
 declare function copy(srcUri: string, destUri: string, callback: AsyncCallback<void>): void
 ```
 
-Copies a file or directory. This API uses an asynchronous callback to return the result. File copy across devices is supported. This API forcibly overwrites the file or directory. The input parameter can be the URI of the file or directory. A maximum of 10 cross-device copy tasks are allowed at the same time, and the number of files to be copied at a time cannot exceed 500.
+Copies a file or directory. This API uses an asynchronous callback to return the result.
+
+File copy across devices is supported. This API forcibly overwrites the file or directory. The input parameter can be the URI of the file or directory. A maximum of 10 cross-device copy tasks are allowed at the same time, and the number of files to be copied at a time cannot exceed 500.
 
 **Since:** 11
 
@@ -95,30 +101,30 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
-| 13900038 | Value too large for defined data type |
-| 13900034 | Operation would block |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900021 | File table overflow |
-| 13900022 | Too many open files |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900028 | Too many links |
-| 13900030 | File name too long |
-| 13900031 | Function not implemented |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
-| 13900012 | Permission denied by the file system |
-| 13900015 | File exists |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
 | 13900008 | Bad file descriptor |
 | 13900010 | Try again |
 | 13900011 | Out of memory |
+| 13900012 | Permission denied by the file system |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900021 | File table overflow |
+| 13900022 | Too many open files |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900028 | Too many links |
+| 13900030 | File name too long |
+| 13900031 | Function not implemented |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
 
 
 ## copy
@@ -127,7 +133,9 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 declare function copy(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback<void>): void
 ```
 
-Copies a file or directory. This API uses an asynchronous callback to return the result. File copy across devices is supported. This API forcibly overwrites the file or directory. The input parameter can be the URI of the file or directory. A maximum of 10 cross-device copy tasks are allowed at the same time, and the number of files to be copied at a time cannot exceed 500.
+Copies a file or directory. This API uses an asynchronous callback to return the result.
+
+File copy across devices is supported. This API forcibly overwrites the file or directory. The input parameter can be the URI of the file or directory. A maximum of 10 cross-device copy tasks are allowed at the same time, and the number of files to be copied at a time cannot exceed 500.
 
 **Since:** 11
 
@@ -149,28 +157,28 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
-| 13900038 | Value too large for defined data type |
-| 13900034 | Operation would block |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900021 | File table overflow |
-| 13900022 | Too many open files |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900028 | Too many links |
-| 13900030 | File name too long |
-| 13900031 | Function not implemented |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
-| 13900012 | Permission denied by the file system |
-| 13900015 | File exists |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
 | 13900008 | Bad file descriptor |
 | 13900010 | Try again |
 | 13900011 | Out of memory |
+| 13900012 | Permission denied by the file system |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900021 | File table overflow |
+| 13900022 | Too many open files |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900028 | Too many links |
+| 13900030 | File name too long |
+| 13900031 | Function not implemented |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
 

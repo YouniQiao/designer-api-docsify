@@ -42,7 +42,7 @@ readonly leadingMargin?: double | LeadingMarginPlaceholder
 
 Get the leading margin of the StyledString.
 
-**Type:** double \| [LeadingMarginPlaceholder](arkts-arkui-richeditor-leadingmarginplaceholder-i.md)
+**Type:** double \| [LeadingMarginPlaceholder](../arkts-components/arkts-arkui-richeditor-leadingmarginplaceholder-i.md)
 
 **Since:** 23
 

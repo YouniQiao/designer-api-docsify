@@ -39,9 +39,9 @@ Exits kiosk mode. This API uses a promise to return the result. This API takes e
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [16000112](../errorcode-ability.md#16000112-no-application-is-in-kiosk-mode) | The current application is not in Kiosk mode and cannot exit Kiosk mode. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service. |
 | [16000110](../errorcode-ability.md#16000110-application-is-not-in-the-kiosk-mode-list) | The current application is not in Kiosk app list and cannot enter Kiosk mode. |
+| [16000112](../errorcode-ability.md#16000112-no-application-is-in-kiosk-mode) | The current application is not in Kiosk mode and cannot exit Kiosk mode. |
 
 **Examples**
 

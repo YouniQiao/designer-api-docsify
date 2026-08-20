@@ -2,6 +2,8 @@
 
 Title height.
 
+@enum { number }
+
 **Since:** 9
 
 <!--Device-unnamed-declare enum TitleHeight--><!--Device-unnamed-declare enum TitleHeight-End-->

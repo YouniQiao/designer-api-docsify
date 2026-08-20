@@ -2,6 +2,8 @@
 
 The definition of Banner.
 
+@extends MediaEntity @interface Banner
+
 **Inheritance/Implementation:** Banner extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)
 
 **Since:** 23

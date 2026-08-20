@@ -52,7 +52,9 @@ Origin device field. Indicates the data origin sources device ID.
 CURSOR_FIELD = '#_cursor'
 ```
 
-Cursor field. This parameter can be used as the input parameter of the predicate of the query interface and as the query filter condition.
+Cursor field.
+
+This parameter can be used as the input parameter of the predicate of the query interface and as the query filter condition.
 
 **Since:** 26.0.0
 

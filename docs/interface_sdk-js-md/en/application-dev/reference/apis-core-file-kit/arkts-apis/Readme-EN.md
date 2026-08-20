@@ -406,11 +406,15 @@
   - [setExtBundleStats(system api)](arkts-corefile-storagestatistics-setextbundlestats-f-sys.md)<!--DelEnd-->
   - [BundleStats](arkts-corefile-storagestatistics-bundlestats-i.md)
   <!--Del-->
+  - [BundleStatsOptions(system api)](arkts-corefile-storagestatistics-bundlestatsoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [ExtBundleStats(system api)](arkts-corefile-storagestatistics-extbundlestats-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [StorageStats(system api)](arkts-corefile-storagestatistics-storagestats-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UserdataDirInfo(system api)](arkts-corefile-storagestatistics-userdatadirinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [GetBundleStatsFlag(system api)](arkts-corefile-storagestatistics-getbundlestatsflag-e-sys.md)<!--DelEnd-->
 <!--Del-->
 - [@ohos.file.trash](arkts-file-trash.md)<!--DelEnd-->
   <!--Del-->

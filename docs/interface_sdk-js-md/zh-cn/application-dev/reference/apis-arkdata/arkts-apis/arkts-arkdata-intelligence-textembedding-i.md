@@ -1,6 +1,10 @@
-# TextEmbedding(智慧数据平台)
+# TextEmbedding
 
-描述文本嵌入模型的文本嵌入函数。 下列接口都需先使用[intelligence.getTextEmbeddingModel](arkts-arkdata-intelligence-gettextembeddingmodel-f.md)获取到TextEmbedding实例，再通过此实例调用对 应接口。
+描述文本嵌入模型的文本嵌入函数。
+
+下列接口都需先使用[intelligence.getTextEmbeddingModel](arkts-arkdata-intelligence-gettextembeddingmodel-f.md)获取到TextEmbedding实例，再通过此实例调用对 应接口。
+
+@interface TextEmbedding
 
 **起始版本：** 23
 
@@ -20,7 +24,9 @@ import { intelligence } from '@kit.ArkData';
 getEmbedding(text: string): Promise<Array<double>>
 ```
 
-获取给定文本的嵌入向量。使用Promise异步回调。 该接口需先调用[loadModel](#loadmodel)加载嵌入模型，加载成功后调用getEmbedding。
+获取给定文本的嵌入向量。使用Promise异步回调。
+
+该接口需先调用[loadModel](#loadmodel)加载嵌入模型，加载成功后调用getEmbedding。
 
 **起始版本：** 23
 
@@ -95,7 +101,9 @@ textEmbedding?.loadModel()
 getEmbedding(batchTexts: Array<string>): Promise<Array<Array<double>>>
 ```
 
-获取给定批次文本的嵌入向量。批量处理可以提高性能，适用于需要同时处理多个文本的场景。使用Promise异步回调。 该接口需先调用[loadModel](#loadmodel)加载嵌入模型，加载成功后调用getEmbedding。
+获取给定批次文本的嵌入向量。批量处理可以提高性能，适用于需要同时处理多个文本的场景。使用Promise异步回调。
+
+该接口需先调用[loadModel](#loadmodel)加载嵌入模型，加载成功后调用getEmbedding。
 
 **起始版本：** 23
 
@@ -170,7 +178,9 @@ textEmbedding?.loadModel()
 loadModel(): Promise<void>
 ```
 
-加载文本嵌入模型。使用Promise异步回调。 **配对调用：** - 调用loadModel()后，必须在使用完毕后调用[releaseModel()](#releasemodel)释放模型资源。 - 未调用releaseModel()会导致资源泄漏，影响系统性能。 - 建议将releaseModel()放在finally块中确保资源被正确释放。
+加载文本嵌入模型。使用Promise异步回调。
+
+**配对调用：** - 调用loadModel()后，必须在使用完毕后调用[releaseModel()](#releasemodel)释放模型资源。 - 未调用releaseModel()会导致资源泄漏，影响系统性能。 - 建议将releaseModel()放在finally块中确保资源被正确释放。
 
 **起始版本：** 23
 

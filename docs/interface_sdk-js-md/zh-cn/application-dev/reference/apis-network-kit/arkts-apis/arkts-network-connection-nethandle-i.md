@@ -1,6 +1,8 @@
 # NetHandle
 
-网络句柄。 在调用NetHandle的方法之前，需要先获取NetHandle对象。例如可通过[getDefaultNet](arkts-network-connection-getdefaultnet-f.md)获取系统当前默认网络的网络句柄。
+网络句柄。
+
+在调用NetHandle的方法之前，需要先获取NetHandle对象。例如可通过[getDefaultNet](arkts-network-connection-getdefaultnet-f.md)获取系统当前默认网络的网络句柄。
 
 **起始版本：** 23
 
@@ -33,7 +35,7 @@ bindSocket(socketParam: TCPSocket | UDPSocket, callback: AsyncCallback<void>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | socketParam | TCPSocket \| UDPSocket | 是 | 待绑定的TCPSocket或UDPSocket对象。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当TCPSocket或UDPSocket成功绑定到当前网络，error为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当TCPSocket或UDPSocket成功绑定到当前网络，error为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -219,17 +221,17 @@ getAddressByName(host: string, callback: AsyncCallback<NetAddress>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | host | string | 是 | 需要解析的主机名。例如："www.example.com"。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetAddress&gt; | 是 | 回调函数。当使用对应网络解析主机名获取第一个IP地址成功，error为undefined，data为获取的第一个IP地址；否则为错 误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;NetAddress&gt; | 是 | 回调函数。当使用对应网络解析主机名获取第一个IP地址成功，error为undefined，data为获取的第一个IP地址；否则为错 误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 **示例**
 
@@ -309,11 +311,11 @@ getAddressByName(host: string): Promise<NetAddress>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 **示例**
 
@@ -374,17 +376,17 @@ getAddressesByName(host: string, callback: AsyncCallback<Array<NetAddress>>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | host | string | 是 | 需要解析的主机名。例如："www.example.com"。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NetAddress&gt;&gt; | 是 | 回调函数。当使用对应网络解析主机名成功获取所有IP地址，error为undefined，data为获取到的所有IP地 址；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;NetAddress&gt;&gt; | 是 | 回调函数。当使用对应网络解析主机名成功获取所有IP地址，error为undefined，data为获取到的所有IP地 址；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 **示例**
 
@@ -442,11 +444,11 @@ getAddressesByName(host: string): Promise<Array<NetAddress>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 **示例**
 
@@ -519,10 +521,10 @@ getAddressesByNameWithOptions(host: string, option?: QueryOptions): Promise<Arra
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 **示例**
 

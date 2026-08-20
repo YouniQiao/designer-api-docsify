@@ -1,6 +1,6 @@
 # WifiP2PConfig
 
-P2P config.
+P2P config. @interface WifiP2PConfig
 
 **Since:** 8
 

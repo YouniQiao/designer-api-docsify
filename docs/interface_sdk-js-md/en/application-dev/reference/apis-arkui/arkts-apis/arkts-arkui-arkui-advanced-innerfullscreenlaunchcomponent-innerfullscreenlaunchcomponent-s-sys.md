@@ -1,6 +1,10 @@
 # InnerFullScreenLaunchComponent (System API)
 
-**InnerFullScreenLaunchComponent** is a component that allows the invoker to choose the timing for launching an atomic service. If the invoked app (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner, the invoker can operate the atomic service in full-screen embedded mode. If authorization is not provided, the invoker will launch the atomic service in a pop-up manner. &gt; **NOTE：**&gt; &gt; To implement an embeddable atomic service within this component, it must inherit from &gt; [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md). If it does not inherit from &gt; **EmbeddableUIAbility**, the system cannot guarantee that the atomic service will function properly.
+*InnerFullScreenLaunchComponent** is a component that allows the invoker to choose the timing for launching an atomic service. If the invoked app (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner, the invoker can operate the atomic service in full-screen embedded mode. If authorization is not provided, the invoker will launch the atomic service in a pop-up manner.
+
+> **NOTE：**
+> 
+> To implement an embeddable atomic service within this component, it must inherit from &gt; [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md). If it does not inherit from &gt; **EmbeddableUIAbility**, the system cannot guarantee that the atomic service will function properly.
 
 **Since:** 12
 

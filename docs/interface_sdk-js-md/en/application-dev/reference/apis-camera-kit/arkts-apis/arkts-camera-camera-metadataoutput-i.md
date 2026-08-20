@@ -47,7 +47,13 @@ Checks whether the device supports the function of locking a metadata object (su
 lockMetadataObjectTracking(point: Point): void
 ```
 
-Locks a metadata object (such as a cat or dog face) for tracking. &gt; **NOTE：**&gt; &gt; - This function tracks the object pointed to by **point**. If such object does not exist, this function does &gt; not take effect. &gt; &gt; - Locking for tracking is automatically canceled when the tracked object has left the viewfinder range for more &gt; than three seconds or the object is unlocked.
+Locks a metadata object (such as a cat or dog face) for tracking.
+
+> **NOTE：**
+> 
+> - This function tracks the object pointed to by **point**. If such object does not exist, this function does &gt; not take effect.
+> 
+> - Locking for tracking is automatically canceled when the tracked object has left the viewfinder range for more &gt; than three seconds or the object is unlocked.
 
 **Since:** 26.0.0
 
@@ -204,7 +210,11 @@ Subscribes to metadata objects available event callback.
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to metadata error events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to metadata error events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
@@ -227,7 +237,11 @@ Subscribes to metadata error events. This API uses an asynchronous callback to r
 on(type: 'metadataObjectsAvailable', callback: AsyncCallback<Array<MetadataObject>>): void
 ```
 
-Subscribes to events indicating available metadata objects. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to events indicating available metadata objects. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 

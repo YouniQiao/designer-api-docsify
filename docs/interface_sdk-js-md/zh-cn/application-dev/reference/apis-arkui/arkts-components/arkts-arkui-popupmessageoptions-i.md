@@ -2,6 +2,8 @@
 
 气泡文本的样式。
 
+@interface PopupMessageOptions
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare interface PopupMessageOptions--><!--Device-unnamed-declare interface PopupMessageOptions-End-->
@@ -19,7 +21,11 @@
 font?: Font
 ```
 
-设置气泡信息字体属性。 **说明：** 1. 不支持设置family。 2. Font中的weight属性不支持传入number类型。
+设置气泡信息字体属性。
+
+**说明：**
+
+1. 不支持设置family。 2. Font中的weight属性不支持传入number类型。
 
 **类型：** Font
 

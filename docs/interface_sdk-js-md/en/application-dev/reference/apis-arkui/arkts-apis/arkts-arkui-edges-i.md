@@ -2,6 +2,8 @@
 
 Defines the Edges.
 
+@interface Edges
+
 **Since:** 12
 
 <!--Device-unnamed-declare interface Edges--><!--Device-unnamed-declare interface Edges-End-->

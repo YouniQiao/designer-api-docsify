@@ -2,6 +2,8 @@
 
 表示电池健康状态的枚举。
 
+@enum { int }
+
 **起始版本：** 23
 
 **ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。

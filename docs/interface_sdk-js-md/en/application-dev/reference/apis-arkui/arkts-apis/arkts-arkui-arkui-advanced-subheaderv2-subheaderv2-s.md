@@ -1,6 +1,14 @@
 # SubHeaderV2
 
-The component is positioned at the top of list items or content sections, organizing lists or content into distinct groups. The subheader text summarizes the content within each respective section. This component is implemented based on [state management V2](../../../ui/state-management/arkts-state-management-overview.md#state-management-v2). Compared with [state management V1](../../../ui/state-management/arkts-state-management-overview.md#state-management-v1), V2 offers a higher level of observation and management over data objects beyond the component level. You can now more easily manage subheader data and states with greater flexibility, leading to faster UI updates. &gt; **NOTE：**&gt; &gt; - This component can be used only in the stage model. &gt; &gt; - If the **SubHeaderV2** component has universal attributes and &gt; universal events configured, the compiler toolchain automatically &gt; generates an additional **__Common__** node and mounts the universal attributes and universal events on this node &gt; rather than the **SubHeaderV2** component itself. As a result, the configured universal attributes and universal &gt; events may fail to take effect or behave as intended. For this reason, avoid using universal attributes and events &gt; with the **SubHeaderV2** component.
+The component is positioned at the top of list items or content sections, organizing lists or content into distinct groups. The subheader text summarizes the content within each respective section.
+
+This component is implemented based on [state management V2](../../../ui/state-management/arkts-state-management-overview.md#state-management-v2). Compared with [state management V1](../../../ui/state-management/arkts-state-management-overview.md#state-management-v1), V2 offers a higher level of observation and management over data objects beyond the component level. You can now more easily manage subheader data and states with greater flexibility, leading to faster UI updates.
+
+> **NOTE：**
+> 
+> - This component can be used only in the stage model.
+> 
+> - If the **SubHeaderV2** component has universal attributes and &gt; universal events configured, the compiler toolchain automatically &gt; generates an additional **__Common__** node and mounts the universal attributes and universal events on this node &gt; rather than the **SubHeaderV2** component itself. As a result, the configured universal attributes and universal &gt; events may fail to take effect or behave as intended. For this reason, avoid using universal attributes and events &gt; with the **SubHeaderV2** component.
 
 **Since:** 18
 
@@ -21,7 +29,11 @@ import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, 
   readonly icon?: SubHeaderV2IconType
 ```
 
-Icon. Default value: **undefined** **icon** takes effect only when **secondaryTitle** is used for **title**.
+Icon.
+
+Default value: **undefined**
+
+**icon** takes effect only when **secondaryTitle** is used for **title**.
 
 **Type:** [SubHeaderV2IconType](arkts-arkui-subheaderv2icontype-t.md)
 
@@ -42,7 +54,9 @@ Icon. Default value: **undefined** **icon** takes effect only when **secondaryTi
   readonly operationItems?: SubHeaderV2OperationItem[]
 ```
 
-Items in the operation area. Default value: **undefined**
+Items in the operation area.
+
+Default value: **undefined**
 
 **Type:** [SubHeaderV2OperationItem](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationitem-c.md)[]
 
@@ -63,7 +77,9 @@ Items in the operation area. Default value: **undefined**
   readonly operationType?: SubHeaderV2OperationType
 ```
 
-Style of elements in the operation area. Default value: **SubHeaderV2OperationType.BUTTON**
+Style of elements in the operation area.
+
+Default value: **SubHeaderV2OperationType.BUTTON**
 
 **Type:** [SubHeaderV2OperationType](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationtype-e.md)
 
@@ -84,7 +100,9 @@ Style of elements in the operation area. Default value: **SubHeaderV2OperationTy
   readonly select?: SubHeaderV2Select
 ```
 
-Content and events for selection. Default value: **undefined**
+Content and events for selection.
+
+Default value: **undefined**
 
 **Type:** [SubHeaderV2Select](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2select-c.md)
 
@@ -105,7 +123,9 @@ Content and events for selection. Default value: **undefined**
   readonly title?: SubHeaderV2Title
 ```
 
-Title of the subheader. Default value: **undefined**
+Title of the subheader.
+
+Default value: **undefined**
 
 **Type:** [SubHeaderV2Title](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2title-c.md)
 
@@ -126,7 +146,9 @@ Title of the subheader. Default value: **undefined**
   titleBuilder?: SubHeaderV2TitleBuilder
 ```
 
-Custom content for the title area. Default value: **() =&gt; void**
+Custom content for the title area.
+
+Default value: **() =&gt; void**
 
 **Type:** [SubHeaderV2TitleBuilder](arkts-arkui-subheaderv2titlebuilder-t.md)
 

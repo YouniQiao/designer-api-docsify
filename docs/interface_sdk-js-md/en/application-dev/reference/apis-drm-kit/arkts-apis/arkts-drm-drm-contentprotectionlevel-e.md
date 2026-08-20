@@ -1,4 +1,4 @@
-# ContentProtectionLevel(Defines the DRM capability.)
+# ContentProtectionLevel
 
 Enumerates the content protection levels.
 

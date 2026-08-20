@@ -1,8 +1,12 @@
 # StackLayoutAlgorithm
 
-堆叠布局算法类。 &gt; **说明：** &gt; &gt; StackLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为[DynamicLayout](../../apis-na/arkts-apis/arkts-na-arkui-components-arkdynamiclayout-dynamiclayout-f.md)组件的 &gt; 入参指定布局算法。
+堆叠布局算法类。
 
-**继承/实现关系：** StackLayoutAlgorithm implements [LayoutAlgorithm](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-i.md)
+> **说明：**
+> 
+> StackLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为DynamicLayout组件的 &gt; 入参指定布局算法。
+
+**继承/实现关系：** StackLayoutAlgorithm implements [LayoutAlgorithm](../../apis-default/arkts-apis/arkts-layoutalgorithm-i.md)
 
 **起始版本：** 24
 
@@ -34,7 +38,7 @@ constructor(option?: StackLayoutAlgorithmOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | [StackLayoutAlgorithmOptions](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-stacklayoutalgorithmoptions-i.md) | 否 | 堆叠布局算法的构造入参，设置九宫格对齐格式。 |
+| option | [StackLayoutAlgorithmOptions](../../apis-default/arkts-apis/arkts-layoutalgorithm-stacklayoutalgorithmoptions-i.md) | 否 | 堆叠布局算法的构造入参，设置九宫格对齐格式。 |
 
 ## alignContent
 
@@ -42,9 +46,15 @@ constructor(option?: StackLayoutAlgorithmOptions)
 @Trace public alignContent?: LocalizedAlignment
 ```
 
-设置子组件在堆叠布局算法中对齐格式。 默认值：LocalizedAlignment.CENTER 非法值：按默认值处理。 装饰器类型：@Trace
+设置子组件在堆叠布局算法中对齐格式。
 
-**类型：** [LocalizedAlignment](../../apis-na/arkts-apis/arkts-na-enums-localizedalignment-e.md)
+默认值：LocalizedAlignment.CENTER
+
+非法值：按默认值处理。
+
+装饰器类型：@Trace
+
+**类型：** [LocalizedAlignment](../../apis-default/arkts-apis/arkts-enums-localizedalignment-e.md)
 
 **起始版本：** 24
 

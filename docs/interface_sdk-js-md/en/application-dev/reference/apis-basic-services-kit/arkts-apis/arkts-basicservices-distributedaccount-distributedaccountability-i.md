@@ -40,8 +40,8 @@ Obtains the distributed account information. This API uses an asynchronous callb
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 **Examples**
@@ -118,7 +118,11 @@ try {
 queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 ```
 
-Queries the distributed account information. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getOsAccountDistributedInfo](#getosaccountdistributedinfo) &gt; instead.
+Queries the distributed account information. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getOsAccountDistributedInfo](#getosaccountdistributedinfo) &gt; instead.
 
 **Since:** 7
 
@@ -160,7 +164,11 @@ accountAbility.queryOsAccountDistributedInfo(
 queryOsAccountDistributedInfo(): Promise<DistributedInfo>
 ```
 
-Queries the distributed account information. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getOsAccountDistributedInfo](#getosaccountdistributedinfo) &gt; instead.
+Queries the distributed account information. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getOsAccountDistributedInfo](#getosaccountdistributedinfo) &gt; instead.
 
 **Since:** 7
 
@@ -220,11 +228,11 @@ Sets the distributed account information. This API uses an asynchronous callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid accountInfo. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid accountInfo. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | 12300406 | The distributed account information has already been bound to a sub-profile of the same OS account.<br>**Applicable version:** 26.0.0 and later |
 
 **Examples**
@@ -281,11 +289,11 @@ Sets the distributed account information. This API uses a promise to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid accountInfo. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid accountInfo. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | 12300406 | The distributed account information has already been bound to a sub-profile of the same OS account.<br>**Applicable version:** 26.0.0 and later |
 
 **Examples**
@@ -314,7 +322,11 @@ try {
 updateOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void
 ```
 
-Updates the distributed account information. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setOsAccountDistributedInfo](#setosaccountdistributedinfo) &gt; instead.
+Updates the distributed account information. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setOsAccountDistributedInfo](#setosaccountdistributedinfo) &gt; instead.
 
 **Since:** 7
 
@@ -358,7 +370,11 @@ accountAbility.updateOsAccountDistributedInfo(accountInfo, (err: BusinessError) 
 updateOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>
 ```
 
-Updates the distributed account information. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setOsAccountDistributedInfo](#setosaccountdistributedinfo) &gt; instead.
+Updates the distributed account information. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setOsAccountDistributedInfo](#setosaccountdistributedinfo) &gt; instead.
 
 **Since:** 7
 

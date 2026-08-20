@@ -1,6 +1,12 @@
 # AudioCapturer
 
-提供音频采集的相关接口。 在使用AudioCapturer的接口之前，需先通过[createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md)获取AudioCapturer实例。 &gt; **说明：** &gt; &gt; - 本Interface首批接口从API version 8开始支持。
+提供音频采集的相关接口。
+
+在使用AudioCapturer的接口之前，需先通过[createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md)获取AudioCapturer实例。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 8开始支持。
 
 **起始版本：** 23
 
@@ -37,15 +43,15 @@ offReadMicInData(callback?: Callback<AudioCapturerMicInData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerMicInData](arkts-audio-audio-audiocapturermicindata-i-sys.md)&gt; | 否 | 用于读取缓冲的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioCapturerMicInData](arkts-audio-audio-audiocapturermicindata-i-sys.md)&gt; | 否 | 用于读取缓冲的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permitted at running state. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permitted at running state. |
 
 ## onReadMicInData
 
@@ -69,14 +75,14 @@ onReadMicInData(callback: Callback<AudioCapturerMicInData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerMicInData](arkts-audio-audio-audiocapturermicindata-i-sys.md)&gt; | 是 | 读取缓冲的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioCapturerMicInData](arkts-audio-audio-audiocapturermicindata-i-sys.md)&gt; | 是 | 读取缓冲的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permitted at running state. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permitted at running state. |
 
 ## setInputDeviceToAccessory
 
@@ -98,6 +104,6 @@ Sets default input device of this Capturer to DEVICE_TYPE_ACCESSORY. Other captu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permit at current state. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permit at current state. |
 

@@ -32,8 +32,8 @@ Obtains the root directory of the memory. This API uses a promise to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application |
+| 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
 
@@ -63,7 +63,7 @@ Obtains the root directory of the memory. This API uses an asynchronous callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application |
+| 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 

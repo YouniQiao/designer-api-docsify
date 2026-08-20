@@ -2,7 +2,10 @@
 
 使用属性字符串构建的RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md)。
 
-## 导入对象 ```ts controller: RichEditorStyledStringController = new RichEditorStyledStringController(); ```
+## 导入对象
+
+```ts
+controller: RichEditorStyledStringController = new RichEditorStyledStringController(); ```
 
 **继承/实现关系：** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md) implements StyledStringController
 
@@ -95,7 +98,13 @@ onContentChanged(listener: StyledStringChangedListener): void
 setStyledString(styledString: StyledString): void
 ```
 
-设置富文本组件显示的属性字符串。 &gt; **说明：** &gt; &gt; - 调用该接口时，会全量替换富文本组件的StyledString，并重新渲染。 &gt; &gt; - 当内容超过组件本身区域时，组件会自动向上滚动内容直到末尾处可见。
+设置富文本组件显示的属性字符串。
+
+> **说明：**
+> 
+> - 调用该接口时，会全量替换富文本组件的StyledString，并重新渲染。
+> 
+> - 当内容超过组件本身区域时，组件会自动向上滚动内容直到末尾处可见。
 
 **起始版本：** 12
 

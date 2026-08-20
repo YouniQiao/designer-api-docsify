@@ -1,6 +1,9 @@
 # BundleInfo
 
-> **说明：** &gt; &gt; 从API version 7开始支持，从API version 9开始废弃，建议使用[bundleManager-BundleInfo](#bundleinfo)替代。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[bundleManager-BundleInfo](#bundleinfo)替代。
 
 **起始版本：** 7
 
@@ -18,7 +21,9 @@
 readonly abilityInfos: Array<AbilityInfo>
 ```
 
-Ability的配置信息 通过调用 [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md) 接口时，传入GET_BUNDLE_WITH_ABILITIES获取。
+Ability的配置信息
+
+通过调用 [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md) 接口时，传入GET_BUNDLE_WITH_ABILITIES获取。
 
 **类型：** Array&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt;
 
@@ -292,7 +297,9 @@ readonly name: string
 readonly reqPermissionDetails: Array<ReqPermissionDetail>
 ```
 
-应用运行时需向系统申请的权限集合的详细信息 通过调用 [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md) 接口时，传入GET_BUNDLE_WITH_REQUESTED_PERMISSION获取。
+应用运行时需向系统申请的权限集合的详细信息
+
+通过调用 [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md) 接口时，传入GET_BUNDLE_WITH_REQUESTED_PERMISSION获取。
 
 **类型：** Array&lt;[ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-depr-i.md)&gt;
 
@@ -336,7 +343,9 @@ readonly reqPermissionStates: Array<number>
 readonly reqPermissions: Array<string>
 ```
 
-应用运行时需向系统申请的权限集合 通过调用 [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md) 接口时，传入GET_BUNDLE_WITH_REQUESTED_PERMISSION获取。
+应用运行时需向系统申请的权限集合
+
+通过调用 [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md) 接口时，传入GET_BUNDLE_WITH_REQUESTED_PERMISSION获取。
 
 **类型：** Array&lt;string&gt;
 

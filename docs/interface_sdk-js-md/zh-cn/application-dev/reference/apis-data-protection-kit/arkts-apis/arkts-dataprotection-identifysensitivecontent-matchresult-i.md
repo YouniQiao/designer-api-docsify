@@ -1,4 +1,4 @@
-# MatchResult(Identify sensitive file)
+# MatchResult
 
 表示敏感内容的识别结果。
 

@@ -1,6 +1,8 @@
 # MakerNoteHuaweiMetadata
 
-MakerNoteHuaweiMetadata implements Metadata Photo metadata from Huawei cameras.
+MakerNoteHuaweiMetadata implements Metadata
+
+Photo metadata from Huawei cameras.
 
 **Inheritance/Implementation:** MakerNoteHuaweiMetadata implements [Metadata](arkts-image-image-metadata-i.md)
 
@@ -178,7 +180,9 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise. For details about the properties, see [PropertyKey](arkts-image-image-propertykey-e.md).
+Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise.
+
+For details about the properties, see [PropertyKey](arkts-image-image-propertykey-e.md).
 
 **Since:** 23
 

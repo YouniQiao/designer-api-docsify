@@ -1,4 +1,4 @@
-# USBRequestTargetType(USB Manager)
+# USBRequestTargetType
 
 请求目标类型。
 

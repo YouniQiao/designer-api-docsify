@@ -2,6 +2,8 @@
 
 ScrollEvent type.
 
+@enum { number }
+
 **起始版本：** 12
 
 <!--Device-uiObserver-export enum ScrollEventType--><!--Device-uiObserver-export enum ScrollEventType-End-->

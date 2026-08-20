@@ -1,12 +1,12 @@
 # Content
 
-Defines the base class for ComponentContent and [NodeContent](../../apis-na/arkts-apis/arkts-na-nodecontent-c.md).
+Defines the base class for ComponentContent and NodeContent.
 
-**Since:** 12
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-unnamed-export abstract class Content--><!--Device-unnamed-export abstract class Content-End-->
 

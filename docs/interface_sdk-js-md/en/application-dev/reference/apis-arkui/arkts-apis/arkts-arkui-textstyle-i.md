@@ -1,4 +1,4 @@
-# TextStyle(AlertDialog)
+# TextStyle
 
 Describes the word break rule of the message in the dialog box.
 
@@ -19,7 +19,9 @@ Describes the word break rule of the message in the dialog box.
 wordBreak?: WordBreak
 ```
 
-Word break rule. Default value: **WordBreak.BREAK_ALL**
+Word break rule.
+
+Default value: **WordBreak.BREAK_ALL**
 
 **Type:** WordBreak
 

@@ -43,8 +43,8 @@ Unsubscribes from the system recording controller panel enabled state change eve
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio service error occurs like service died. |
 
 ## onSystemRecordControllerEnabledChange
@@ -75,8 +75,8 @@ Subscribes to the system recording controller panel enabled state change event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Memory allocation failed. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Memory allocation failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio service error occurs like service died. |
 

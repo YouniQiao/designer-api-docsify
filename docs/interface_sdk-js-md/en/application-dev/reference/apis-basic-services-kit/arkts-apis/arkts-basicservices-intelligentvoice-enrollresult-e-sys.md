@@ -1,6 +1,6 @@
 # EnrollResult (System API)
 
-Enumerates enroll result.
+Enumerates enroll result. @enum {number}
 
 **Since:** 23
 

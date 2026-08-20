@@ -2,6 +2,8 @@
 
 Provides methods to operate or manage NFC tag.
 
+@namespace tag
+
 ## Modules to Import
 
 ```TypeScript

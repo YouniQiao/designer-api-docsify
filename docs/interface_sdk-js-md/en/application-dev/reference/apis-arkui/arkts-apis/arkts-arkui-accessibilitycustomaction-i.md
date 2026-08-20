@@ -2,6 +2,8 @@
 
 Defines struct of AccessibilityCustomAction that can be processed in custom action processing under accessibility.
 
+@interface AccessibilityCustomAction
+
 **Since:** 26.0.0
 
 <!--Device-unnamed-declare interface AccessibilityCustomAction--><!--Device-unnamed-declare interface AccessibilityCustomAction-End-->

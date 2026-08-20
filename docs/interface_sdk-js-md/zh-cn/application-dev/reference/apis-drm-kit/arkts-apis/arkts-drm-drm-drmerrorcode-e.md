@@ -1,4 +1,4 @@
-# DrmErrorCode(Defines the DRM capability.)
+# DrmErrorCode
 
 枚举，错误码。
 

@@ -2,6 +2,8 @@
 
 WLAN热点配置信息。
 
+@interface HotspotConfig
+
 **起始版本：** 7
 
 **废弃版本：** 9

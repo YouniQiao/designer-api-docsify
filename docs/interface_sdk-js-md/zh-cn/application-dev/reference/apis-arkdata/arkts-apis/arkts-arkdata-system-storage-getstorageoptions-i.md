@@ -1,4 +1,4 @@
-# GetStorageOptions(数据存储)
+# GetStorageOptions
 
 **起始版本：** 3
 

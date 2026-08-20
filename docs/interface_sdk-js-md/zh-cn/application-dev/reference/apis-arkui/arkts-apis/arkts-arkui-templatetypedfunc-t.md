@@ -1,4 +1,4 @@
-# TemplateTypedFunc(Defines Repeat component.)
+# TemplateTypedFunc
 
 ```TypeScript
 declare type TemplateTypedFunc<T> = (item: T, index: number) => string

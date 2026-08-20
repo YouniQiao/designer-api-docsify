@@ -21,7 +21,9 @@ import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUI';
 action?: () => void
 ```
 
-Click callback of the button. By default, no operation is performed.
+Click callback of the button.
+
+By default, no operation is performed.
 
 **Type:** () =&gt; void
 
@@ -41,7 +43,9 @@ Click callback of the button. By default, no operation is performed.
 fontColor?: ResourceColor
 ```
 
-Font color of the button text. Default value: **\$r('sys.color.ohos_id_color_text_primary_activated')**
+Font color of the button text.
+
+Default value: **\$r('sys.color.ohos_id_color_text_primary_activated')**
 
 **Type:** ResourceColor
 
@@ -61,7 +65,13 @@ Font color of the button text. Default value: **\$r('sys.color.ohos_id_color_tex
 fontSize?: number | string | Resource
 ```
 
-Font size of the button text. Default value: **\$r('sys.float.ohos_id_text_size_button2')** The string value must be convertible to a number (for example, **'10'**) or include a length unit (for example, **'10px'**); percentage-based strings are not supported. Invalid values are handled as default values.
+Font size of the button text.
+
+Default value: **\$r('sys.float.ohos_id_text_size_button2')**
+
+The string value must be convertible to a number (for example, **'10'**) or include a length unit (for example, **'10px'**); percentage-based strings are not supported.
+
+Invalid values are handled as default values.
 
 **Type:** number \| string \| Resource
 

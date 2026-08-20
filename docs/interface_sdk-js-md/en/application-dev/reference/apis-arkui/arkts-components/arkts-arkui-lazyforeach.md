@@ -1,6 +1,8 @@
 # LazyForEach
 
-For details about the development, see [LazyForEach: Lazy Data Loading](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md). In scenarios involving a large number of child components, LazyForEach, when combined with techniques such as cached list items, dynamic preloading, and component reuse, can significantly improve scrolling frame rates while reducing memory usage. For best practices, see [Optimizing Frame Loss for Long List Loading](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-best-practices-long-list).
+For details about the development, see [LazyForEach: Lazy Data Loading](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md).
+
+In scenarios involving a large number of child components, LazyForEach, when combined with techniques such as cached list items, dynamic preloading, and component reuse, can significantly improve scrolling frame rates while reducing memory usage. For best practices, see [Optimizing Frame Loss for Long List Loading](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-best-practices-long-list).
 
 ## LazyForEach
 
@@ -12,7 +14,7 @@ LazyForEach(
   )
 ```
 
-**LazyForEach** iterates over provided data sources and creates corresponding components during each iteration. When **LazyForEach** is used in a scrolling container, the framework creates components as required within the visible area of the scrolling container. When a component is out of the visible area, the framework destroys and reclaims the component to reduce memory usage.
+*LazyForEach** iterates over provided data sources and creates corresponding components during each iteration. When **LazyForEach** is used in a scrolling container, the framework creates components as required within the visible area of the scrolling container. When a component is out of the visible area, the framework destroys and reclaims the component to reduce memory usage.
 
 **Since:** 7
 
@@ -68,31 +70,14 @@ Enter the value to obtain the LazyForEach.
 
 | Name | Description |
 | --- | --- |
-| [DataAddOperation](arkts-arkui-dataaddoperation-i.md) | Represents an operation for adding data. |
-| [DataChangeListener](arkts-arkui-datachangelistener-i.md) | Listener for data changes. &gt; **NOTE：**&gt; &gt; In APIs of **DataChangeListener** other than **onDatasetChange**, if the value of **index** is negative, the value &gt; is treated as **0** by default. In **onDatasetChange**, if the specified index in a **DataOperation** is outside &gt; the data source index range, the corresponding **DataOperation** does not take effect. (In **DataAddOperation**, &gt; the value of **index** can equal the data source length.) |
-| [DataChangeOperation](arkts-arkui-datachangeoperation-i.md) | Represents an operation for changing data. |
-| [DataDeleteOperation](arkts-arkui-datadeleteoperation-i.md) | Represents an operation for deleting data. |
-| [DataExchangeOperation](arkts-arkui-dataexchangeoperation-i.md) | Represents an operation for exchanging data. |
-| [DataMoveOperation](arkts-arkui-datamoveoperation-i.md) | Represents an operation for moving data. |
-| [DataReloadOperation](arkts-arkui-datareloadoperation-i.md) | Represents an operation for reloading data. If the **onDatasetChange** event contains a **DataOperationType.RELOAD** operation, all other operations in the event are ineffective. In such cases, the framework will call **keyGenerator** to perform a comparison of keys with their corresponding values. |
-| [ExchangeIndex](arkts-arkui-exchangeindex-i.md) | Defines position of exchange data. |
-| [ExchangeKey](arkts-arkui-exchangekey-i.md) | Defines new key of exchange data. |
-| [IDataSource](arkts-arkui-idatasource-i.md) | Data source of **LazyForEach**. |
-| [LazyForEachOptions](arkts-arkui-lazyforeachoptions-i.md) | Defines the options for LazyForEach. |
-| [MoveIndex](arkts-arkui-moveindex-i.md) | Defines position of moved data. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [DataOperation](arkts-arkui-dataoperation-t.md) | All data operation types. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [DataOperationType](arkts-arkui-dataoperationtype-e.md) | Enumerates the data operation types. |
-| [LazyForEachCustomComponentFreezeMode](arkts-arkui-lazyforeachcustomcomponentfreezemode-e.md) | Enumerates the freeze modes for cached custom nodes that have been removed from the component tree in LazyForEach. |
-| [LazyForEachMemOptStrategy](arkts-arkui-lazyforeachmemoptstrategy-e.md) | Defines a type for memory optimization strategy. |
-| [LazyForEachReleaseStrategy](arkts-arkui-lazyforeachreleasestrategy-e.md) | Enumerates the release strategies for LazyForEach discarded nodes. |
 

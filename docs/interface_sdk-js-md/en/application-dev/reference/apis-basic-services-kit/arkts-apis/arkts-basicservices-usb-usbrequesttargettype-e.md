@@ -1,4 +1,4 @@
-# USBRequestTargetType(USB Manager)
+# USBRequestTargetType
 
 Enumerates request target types.
 

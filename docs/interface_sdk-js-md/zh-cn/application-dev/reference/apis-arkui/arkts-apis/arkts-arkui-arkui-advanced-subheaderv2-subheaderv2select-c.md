@@ -36,7 +36,7 @@ select内容以及事件构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [SubHeaderV2SelectOptions](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2selectoptions-i.md) | 是 | 下拉选项信息。 |
+| options | [SubHeaderV2SelectOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-subheaderv2-subheaderv2selectoptions-i.md) | 是 | 下拉选项信息。 |
 
 ## defaultFocus
 
@@ -45,7 +45,13 @@ select内容以及事件构造函数。
   defaultFocus?: boolean
 ```
 
-下拉按钮是否为默认焦点。 true：下拉按钮是默认焦点。 false：下拉按钮不是默认焦点。 默认值：false
+下拉按钮是否为默认焦点。
+
+true：下拉按钮是默认焦点。
+
+false：下拉按钮不是默认焦点。
+
+默认值：false
 
 **类型：** boolean
 
@@ -68,7 +74,9 @@ select内容以及事件构造函数。
   id?: string
 ```
 
-下拉按钮id。需要为下拉按钮设置id的时候设置此参数，缺省时不设置此参数。 默认值：undefined，表示不设置下拉按钮id。
+下拉按钮id。需要为下拉按钮设置id的时候设置此参数，缺省时不设置此参数。
+
+默认值：undefined，表示不设置下拉按钮id。
 
 **类型：** string
 
@@ -91,7 +99,7 @@ select内容以及事件构造函数。
 
 Sets the onSelect of the SubHeaderV2SelectOptions.
 
-**类型：** [SubHeaderV2SelectOnSelect](arkts-arkui-subheaderv2selectonselect-t.md)
+**类型：** [SubHeaderV2SelectOnSelect](../../apis-default/arkts-apis/arkts-subheaderv2selectonselect-t.md)
 
 **起始版本：** 18
 
@@ -112,7 +120,7 @@ Sets the onSelect of the SubHeaderV2SelectOptions.
 
 Sets the options of the SubHeaderV2SelectOptions.
 
-**类型：** [SelectOption](../../apis-na/arkts-apis/arkts-na-select-selectoption-i.md)[]
+**类型：** [SelectOption](../../apis-default/arkts-components/arkts-select-selectoption-i.md)[]
 
 **起始版本：** 18
 
@@ -130,7 +138,7 @@ Sets the options of the SubHeaderV2SelectOptions.
 @Trace selectedContent?: ResourceStr
 ```
 
-**类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 20
 

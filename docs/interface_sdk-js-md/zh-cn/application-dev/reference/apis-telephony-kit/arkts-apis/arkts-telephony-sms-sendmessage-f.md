@@ -12,7 +12,11 @@ import { sms } from '@kit.TelephonyKit';
 function sendMessage(options: SendMessageOptions): void
 ```
 
-发送短信。 &gt; **说明：** &gt; &gt; 从 API version 6开始支持，从API version 10开始废弃。
+发送短信。
+
+> **说明：**
+> 
+> 从 API version 6开始支持，从API version 10开始废弃。
 
 **起始版本：** 6
 
@@ -36,12 +40,12 @@ function sendMessage(options: SendMessageOptions): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
-| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
 **示例**
 

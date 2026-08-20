@@ -20,7 +20,9 @@ import { contact } from '@kit.ContactsKit';
 completedBatches: Array<int>
 ```
 
-Indicates the array of batch identifiers for contacts that have been synchronized successfully. The range of values is from 1 to totalBatches.
+Indicates the array of batch identifiers for contacts that have been synchronized successfully.
+
+The range of values is from 1 to totalBatches.
 
 **Type:** Array&lt;int&gt;
 

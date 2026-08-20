@@ -1,4 +1,4 @@
-# KeyProcessingMode(Provide some common interface for focus.)
+# KeyProcessingMode
 
 Enumerates the modes for processing key events.
 

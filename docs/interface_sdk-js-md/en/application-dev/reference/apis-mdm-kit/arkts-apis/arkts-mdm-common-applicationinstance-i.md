@@ -1,6 +1,8 @@
 # ApplicationInstance
 
-Defines application instance data. It is used as an input parameter in the [addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md), [removeUserNonStopApps](arkts-mdm-applicationmanager-removeusernonstopapps-f.md), [addFreezeExemptedApps](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md), and [removeFreezeExemptedApps](arkts-mdm-applicationmanager-removefreezeexemptedapps-f.md) APIs.
+Defines application instance data.
+
+It is used as an input parameter in the [addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md), [removeUserNonStopApps](arkts-mdm-applicationmanager-removeusernonstopapps-f.md), [addFreezeExemptedApps](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md), and [removeFreezeExemptedApps](arkts-mdm-applicationmanager-removefreezeexemptedapps-f.md) APIs.
 
 **Since:** 22
 
@@ -56,7 +58,9 @@ appIdentifier: string
 appIndex: number
 ```
 
-Index of the application clone. The value is an integer greater than or equal to 0. You can obtain the index by calling the [getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getappcloneidentity-f.md) API.
+Index of the application clone. The value is an integer greater than or equal to 0.
+
+You can obtain the index by calling the [getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getappcloneidentity-f.md) API.
 
 **Type:** number
 

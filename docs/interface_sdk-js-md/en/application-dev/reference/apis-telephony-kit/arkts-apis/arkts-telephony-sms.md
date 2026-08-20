@@ -27,7 +27,7 @@ import { sms } from '@kit.TelephonyKit';
 | [getDefaultSmsSlotId](arkts-telephony-sms-getdefaultsmsslotid-f.md) | Obtains the default slot ID of the SIM card used to send SMS messages. This API uses an asynchronous callback to return the result. |
 | [getDefaultSmsSlotId](arkts-telephony-sms-getdefaultsmsslotid-f.md) | Obtains the default slot ID of the SIM card used to send SMS messages. This API uses a promise to return the result. |
 | [hasSmsCapability](arkts-telephony-sms-hassmscapability-f.md) | Checks whether the current device can send and receive SMS messages. This API works in synchronous mode. |
-| [sendMessage](arkts-telephony-sms-sendmessage-f.md) | Sends an SMS message. &gt; **NOTE：**&gt; &gt; This API is supported since API version 6 and deprecated since API version 10. You are advised to use &gt; [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md). |
+| [sendMessage](arkts-telephony-sms-sendmessage-f.md) | Sends an SMS message. |
 | [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md) | Sends an SMS message. This API uses an asynchronous callback to return the result. |
 | [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md) | Sends an SMS message. This API uses a promise to return the result. |
 

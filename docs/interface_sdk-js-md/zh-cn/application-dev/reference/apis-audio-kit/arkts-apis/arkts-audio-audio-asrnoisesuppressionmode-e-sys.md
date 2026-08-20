@@ -1,6 +1,6 @@
 # AsrNoiseSuppressionMode（系统接口）
 
-ASR noise suppression mode.
+ASR noise suppression mode. @enum { int }
 
 **起始版本：** 23
 

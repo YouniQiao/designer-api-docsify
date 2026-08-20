@@ -27,18 +27,18 @@ function isImsSmsSupported(slotId: int, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | int | 是 | SIM卡槽ID：<br/>- 0：卡槽1<br/>- 1：卡槽2 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 指示是否支持IMS发送SMS的回调函数，默认false。<br/>-true：是<br/>-false：否 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 指示是否支持IMS发送SMS的回调函数，默认false。<br/>-true：是<br/>-false：否 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
-| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
 **示例**
 
@@ -85,12 +85,12 @@ function isImsSmsSupported(slotId: int): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
-| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
 **示例**
 

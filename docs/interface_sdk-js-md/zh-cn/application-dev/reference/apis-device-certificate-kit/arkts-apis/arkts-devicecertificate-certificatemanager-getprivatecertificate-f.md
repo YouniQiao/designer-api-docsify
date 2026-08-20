@@ -28,16 +28,16 @@ function getPrivateCertificate(keyUri: string, callback: AsyncCallback<CMResult>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyUri | string | 是 | 表示待获取凭据的唯一标识符，长度限制256字节以内。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | 是 | 回调函数。当获取私有凭据的详细信息成功时，err为null，data为 [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)对象中的credential属性；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | 是 | 回调函数。当获取私有凭据的详细信息成功时，err为null，data为 [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)对象中的credential属性；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [17500002](../errorcode-certManager.md#17500002-证书不存在) | The certificate does not exist. Possible causes: 1. The certificate URI is incorrect; 2. The certificate has been uninstalled. Please check the certificate URI. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
+| [17500002](../errorcode-certManager.md#17500002-证书不存在) | The certificate does not exist. Possible causes: 1. The certificate URI is incorrect; 2. The certificate has been uninstalled. Please check the certificate URI. |
 
 **示例**
 
@@ -96,10 +96,10 @@ function getPrivateCertificate(keyUri: string): Promise<CMResult>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [17500002](../errorcode-certManager.md#17500002-证书不存在) | The certificate does not exist. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
+| [17500002](../errorcode-certManager.md#17500002-证书不存在) | The certificate does not exist. |
 
 **示例**
 

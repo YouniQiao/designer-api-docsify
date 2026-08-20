@@ -93,12 +93,12 @@ getAllSyncFolders(): Promise<Array<SyncFolder>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Device not supported. |
-| [34400014](../errorcode-clouddiskmanager-sys.md#34400014-系统内部错误) | Temporary failure. Retry is recommended (e.g., network issues). |
-| [34400015](../errorcode-clouddiskmanager-sys.md#34400015-当前设备不允许使用云盘功能) | Cloud disk is not allowed on this device. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Device not supported. |
 | [34400003](../errorcode-clouddiskmanager-sys.md#34400003-ipc通信失败) | IPC communication failed. |
+| [34400014](../errorcode-clouddiskmanager-sys.md#34400014-系统内部错误) | Temporary failure. Retry is recommended (e.g., network issues). |
+| [34400015](../errorcode-clouddiskmanager-sys.md#34400015-当前设备不允许使用云盘功能) | Cloud disk is not allowed on this device. |
 
 **示例**
 

@@ -42,7 +42,7 @@ mode?: NavDestinationMode
 
 NavDestination类型。 默认值：NavDestinationMode.Standard。
 
-**类型：** [NavDestinationMode](../../apis-na/arkts-apis/arkts-na-navdestination-navdestinationmode-e.md)
+**类型：** [NavDestinationMode](../../apis-default/arkts-components/arkts-navdestination-navdestinationmode-e.md)
 
 **起始版本：** 15
 
@@ -62,7 +62,7 @@ name: ResourceStr
 
 NavDestination组件的名称。
 
-**类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 11
 
@@ -102,7 +102,7 @@ navigationId: ResourceStr
 
 包含NavDestination组件的Navigation组件的id。
 
-**类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 11
 
@@ -162,7 +162,7 @@ state: NavDestinationState
 
 NavDestination组件的状态。
 
-**类型：** [NavDestinationState](../../apis-na/arkts-apis/arkts-na-uiobserver-navdestinationstate-e.md)
+**类型：** [NavDestinationState](arkts-arkui-uiobserver-navdestinationstate-e.md)
 
 **起始版本：** 11
 

@@ -1,6 +1,6 @@
 # WifiChannelWidth
 
-描述WLAN信道带宽。
+描述WLAN信道带宽。 @enum { int }
 
 **起始版本：** 23
 

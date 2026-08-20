@@ -1,6 +1,12 @@
 # PromptAction
 
-Provides APIs to create and display toasts, dialog boxes, action menus, and custom popups. &gt; **NOTE：**&gt; &gt; - The initial APIs of this class are supported since API version 10. &gt; &gt; - In the following API examples, you must first use [getPromptAction()](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction) in &gt; **UIContext** to obtain a **PromptAction** instance, and then call the APIs using the obtained instance.
+Provides APIs to create and display toasts, dialog boxes, action menus, and custom popups.
+
+> **NOTE：**
+> 
+> - The initial APIs of this class are supported since API version 10.
+> 
+> - In the following API examples, you must first use [getPromptAction()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getpromptaction) in &gt; **UIContext** to obtain a **PromptAction** instance, and then call the APIs using the obtained instance.
 
 **Since:** 10
 
@@ -83,8 +89,8 @@ Closes the specified custom dialog box.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 ## closeMenu
 
@@ -190,8 +196,8 @@ Closes the specified toast.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [103401](../errorcode-promptAction.md#103401-toast-not-found) | Cannot find the toast. |
 
 ## getBottomOrder
@@ -216,7 +222,7 @@ This API returns the order of the dialog box currently at the bottom layer. This
 
 | Type | Description |
 | --- | --- |
-| [LevelOrder](../../apis-na/arkts-apis/arkts-na-promptaction-levelorder-c.md) | Order of the topmost dialog box. |
+| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | Order of the topmost dialog box. |
 
 ## getTopOrder
 
@@ -224,7 +230,9 @@ This API returns the order of the dialog box currently at the bottom layer. This
 getTopOrder(): LevelOrder
 ```
 
-Obtains the order of the topmost dialog box. This API returns the order of the dialog box currently at the top layer. This information can be used to specify the desired order for subsequent dialog boxes.
+Obtains the order of the topmost dialog box.
+
+This API returns the order of the dialog box currently at the top layer. This information can be used to specify the desired order for subsequent dialog boxes.
 
 **Since:** 18
 
@@ -240,7 +248,7 @@ Obtains the order of the topmost dialog box. This API returns the order of the d
 
 | Type | Description |
 | --- | --- |
-| [LevelOrder](../../apis-na/arkts-apis/arkts-na-promptaction-levelorder-c.md) | Order of the topmost dialog box. |
+| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | Order of the topmost dialog box. |
 
 ## openCustomDialog
 
@@ -265,7 +273,7 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | dialogContent | ComponentContent&lt;T&gt; | Yes | Content of the custom dialog box. |
-| options | promptAction.BaseDialogOptions | No | Dialog box style.<br> Note: If both [isModal](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md) and [showInSubWindow](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
+| options | promptAction.BaseDialogOptions | No | Dialog box style.<br> Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
 **Return value:**
 
@@ -287,7 +295,9 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 openCustomDialog(options: promptAction.CustomDialogOptions): Promise<number>
 ```
 
-Creates and displays a custom dialog box. This API uses a promise to return the dialog box ID for use with **closeCustomDialog**. + * @param { promptAction.CustomDialogOptions } options - Content of the custom dialog box.<br> + * Note: If both [isModal](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md) + * and [showInSubWindow](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, + * only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. + * @returns { Promise&lt;number&gt; } Promise that returns the dialog box ID for use with **closeCustomDialog**.
+Creates and displays a custom dialog box. This API uses a promise to return the dialog box ID for use with **closeCustomDialog**.
+
++
 
 **Since:** 12
 
@@ -303,7 +313,7 @@ Creates and displays a custom dialog box. This API uses a promise to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.CustomDialogOptions | Yes | Content of the custom dialog box.<br>+ Note: If both [isModal](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md)+ and [showInSubWindow](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**,+ only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow.+ |
+| options | promptAction.CustomDialogOptions | Yes | Content of the custom dialog box.<br>+ Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md)+ and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**,+ only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow.+ |
 
 **Return value:**
 
@@ -315,8 +325,8 @@ Creates and displays a custom dialog box. This API uses a promise to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 ## openCustomDialogWithController
 
@@ -325,7 +335,9 @@ openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent
     options?: promptAction.BaseDialogOptions): Promise<void>
 ```
 
-Opens a custom dialog box corresponding to **dialogContent**. This API uses a promise to return the result. A dialog box controller can be bound to the custom dialog box, allowing for subsequent control of the dialog box through the controller. The dialog box displayed through this API has its content fully following style settings of **dialogContent**. It is displayed in the same way where **customStyle** is set to **true**.
+Opens a custom dialog box corresponding to **dialogContent**. This API uses a promise to return the result. A dialog box controller can be bound to the custom dialog box, allowing for subsequent control of the dialog box through the controller.
+
+The dialog box displayed through this API has its content fully following style settings of **dialogContent**. It is displayed in the same way where **customStyle** is set to **true**.
 
 **Since:** 18
 
@@ -343,7 +355,7 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 | --- | --- | --- | --- |
 | dialogContent | ComponentContent&lt;T&gt; | Yes | Content of the custom dialog box. |
 | controller | promptAction.DialogController | Yes | Controller of the custom dialog box. |
-| options | promptAction.BaseDialogOptions | No | Style of the custom dialog box.<br> Note: If both [isModal](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md) and [showInSubWindow](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
+| options | promptAction.BaseDialogOptions | No | Style of the custom dialog box.<br> Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
 **Return value:**
 
@@ -365,7 +377,17 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: MenuOptions): Promise<void>
 ```
 
-Opens a menu with the specified content. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - If an invalid **target** is provided, the menu will not be displayed. &gt; &gt; - You must maintain the provided **content**, on which [updateMenu](#updatemenu) and &gt; [closeMenu](#closemenu) rely to identify the target menu. &gt; &gt; - If your **wrapBuilder** includes other components (such as Popup or &gt; [Chip](arkts-arkui-arkui-advanced-chip-chip-f.md)), the [ComponentContent](arkts-arkui-componentcontent-c.md) &gt; constructor must include four parameters, and the **options** parameter must be &gt; **{ nestingBuilderSupported: true }**. &gt; &gt; - Nested subwindow dialog boxes are not supported. For example, when [openMenu](#openmenu) has &gt; **showInSubWindow** set to **true**, another dialog box with **showInSubWindow=true** cannot be displayed.
+Opens a menu with the specified content. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - If an invalid **target** is provided, the menu will not be displayed.
+> 
+> - You must maintain the provided **content**, on which [updateMenu](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#updatemenu) and &gt; [closeMenu](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#closemenu) rely to identify the target menu.
+> 
+> - If your **wrapBuilder** includes other components (such as Popup or &gt; Chip), the [ComponentContent](../../apis-default/arkts-apis/arkts-componentcontent-c.md) &gt; constructor must include four parameters, and the **options** parameter must be &gt; **{ nestingBuilderSupported: true }**.
+> 
+> - Nested subwindow dialog boxes are not supported. For example, when [openMenu](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#openmenu) has &gt; **showInSubWindow** set to **true**, another dialog box with **showInSubWindow=true** cannot be displayed.
 
 **Since:** 18
 
@@ -382,7 +404,7 @@ Opens a menu with the specified content. This API uses a promise to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | Yes | Content displayed in the menu. |
-| target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes | Information about the target component to bind. |
+| target | [TargetInfo](../../apis-default/arkts-apis/arkts-arkui-uicontext-targetinfo-i.md) | Yes | Information about the target component to bind. |
 | options | MenuOptions | No | Style of the menu.<br>**NOTE：**<br>The **title** property is not effective.<br> The **preview** parameter supports only the **MenuPreviewMode** type. |
 
 **Return value:**
@@ -398,8 +420,8 @@ Opens a menu with the specified content. This API uses a promise to return the r
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | The ComponentContent already exists. |
-| [103305](../errorcode-promptAction.md#103305-node-not-mounted) | The node of targetId is not in the component tree. |
 | [103304](../errorcode-promptAction.md#103304-target-id-not-found) | The targetId does not exist. |
+| [103305](../errorcode-promptAction.md#103305-node-not-mounted) | The node of targetId is not in the component tree. |
 
 ## openPopup
 
@@ -407,7 +429,15 @@ Opens a menu with the specified content. This API uses a promise to return the r
 openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: PopupCommonOptions): Promise<void>
 ```
 
-Creates and displays a popup with the specified content. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - If an invalid **target** is provided, the popup will not be displayed. &gt; &gt; - You must maintain the provided **content**, on which [updatePopup](#updatepopup) and &gt; [closePopup](#closepopup) rely to identify the target popup. &gt; &gt; - If your **wrapBuilder** includes other components (such as Popup or &gt; [Chip](arkts-arkui-arkui-advanced-chip-chip-f.md)), the [ComponentContent](arkts-arkui-componentcontent-c.md) &gt; constructor must include four parameters, and the **options** parameter must be &gt; **{ nestingBuilderSupported: true }**.
+Creates and displays a popup with the specified content. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - If an invalid **target** is provided, the popup will not be displayed.
+> 
+> - You must maintain the provided **content**, on which [updatePopup](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#updatepopup) and &gt; [closePopup](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#closepopup) rely to identify the target popup.
+> 
+> - If your **wrapBuilder** includes other components (such as Popup or &gt; Chip), the [ComponentContent](../../apis-default/arkts-apis/arkts-componentcontent-c.md) &gt; constructor must include four parameters, and the **options** parameter must be &gt; **{ nestingBuilderSupported: true }**.
 
 **Since:** 18
 
@@ -424,7 +454,7 @@ Creates and displays a popup with the specified content. This API uses a promise
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | Yes | Content displayed in the popup. |
-| target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes | Information about the target component to bind. |
+| target | [TargetInfo](../../apis-default/arkts-apis/arkts-arkui-uicontext-targetinfo-i.md) | Yes | Information about the target component to bind. |
 | options | PopupCommonOptions | No | Style of the popup. |
 
 **Return value:**
@@ -440,8 +470,8 @@ Creates and displays a popup with the specified content. This API uses a promise
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | The ComponentContent already exists. |
-| [103305](../errorcode-promptAction.md#103305-node-not-mounted) | The node of targetId is not in the component tree. |
 | [103304](../errorcode-promptAction.md#103304-target-id-not-found) | The targetId does not exist. |
+| [103305](../errorcode-promptAction.md#103305-node-not-mounted) | The node of targetId is not in the component tree. |
 
 ## openToast
 
@@ -477,8 +507,8 @@ Displays a toast. This API uses a promise to return the toast ID for use with **
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 ## presentCustomDialog
 
@@ -487,7 +517,9 @@ presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: p
     options?: promptAction.DialogOptions): Promise<number>
 ```
 
-Creates and displays a custom dialog box. This API uses a promise to return the dialog box ID for use with **closeCustomDialog**. The dialog box ID can be included in the dialog box content for related operations. A dialog box controller can be bound to the custom dialog box, allowing for subsequent control of the dialog box through the controller.
+Creates and displays a custom dialog box. This API uses a promise to return the dialog box ID for use with **closeCustomDialog**.
+
+The dialog box ID can be included in the dialog box content for related operations. A dialog box controller can be bound to the custom dialog box, allowing for subsequent control of the dialog box through the controller.
 
 **Since:** 18
 
@@ -503,9 +535,9 @@ Creates and displays a custom dialog box. This API uses a promise to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | CustomBuilder \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) | Yes | Content of the custom dialog box. |
+| builder | CustomBuilder \| [CustomBuilderWithId](../../apis-default/arkts-apis/arkts-custombuilderwithid-t.md) | Yes | Content of the custom dialog box. |
 | controller | promptAction.DialogController | No | Controller of the custom dialog box. |
-| options | promptAction.DialogOptions | No | Style of the custom dialog box.<br> Note: If both [isModal](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md) and [showInSubWindow](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
+| options | promptAction.DialogOptions | No | Style of the custom dialog box.<br> Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
 **Return value:**
 
@@ -517,8 +549,8 @@ Creates and displays a custom dialog box. This API uses a promise to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 ## showActionMenu
 
@@ -532,7 +564,7 @@ Shows an action menu in the given settings. This API uses an asynchronous callba
 
 **Deprecated since:** 11
 
-**Substitutes:** [showActionMenu](#showactionmenu)
+**Substitutes:** [showActionMenu](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#showactionmenu)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -551,8 +583,8 @@ Shows an action menu in the given settings. This API uses an asynchronous callba
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 ## showActionMenu
 
@@ -583,8 +615,8 @@ Creates and displays an action menu. This API uses an asynchronous callback to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 ## showActionMenu
 
@@ -620,8 +652,8 @@ Creates and displays an action menu. This API uses a promise to return the resul
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 ## showDialog
 
@@ -652,8 +684,8 @@ Creates and displays a dialog box. This API uses an asynchronous callback to ret
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 ## showDialog
 
@@ -689,8 +721,8 @@ Creates and displays a dialog box. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 ## showToast
 
@@ -720,8 +752,8 @@ Creates and displays a toast.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 ## updateCustomDialog
 
@@ -768,7 +800,13 @@ Updates a custom dialog box corresponding to **dialogContent**. This API uses a 
 updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions, partialUpdate?: boolean): Promise<void>
 ```
 
-Updates the style of the menu corresponding to the provided **content**. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - Updating for the following is not supported: **showInSubWindow**, **preview**, **previewAnimationOptions**, &gt; **transition**, **onAppear**, **aboutToAppear**, **onDisappear**, **aboutToDisappear**, **onWillAppear**, &gt; **onDidAppear**, **onWillDisappear**, and **onDidDisappear**. &gt; &gt; - The mask style can be updated by configuring MenuMaskType. However, this API does not &gt; support mask presence toggling (that is, switching the mask from non-existent to existent or vice versa) by &gt; setting a boolean value.
+Updates the style of the menu corresponding to the provided **content**. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - Updating for the following is not supported: **showInSubWindow**, **preview**, **previewAnimationOptions**, &gt; **transition**, **onAppear**, **aboutToAppear**, **onDisappear**, **aboutToDisappear**, **onWillAppear**, &gt; **onDidAppear**, **onWillDisappear**, and **onDidDisappear**.
+> 
+> - The mask style can be updated by configuring MenuMaskType. However, this API does not &gt; support mask presence toggling (that is, switching the mask from non-existent to existent or vice versa) by &gt; setting a boolean value.
 
 **Since:** 18
 
@@ -808,7 +846,11 @@ Updates the style of the menu corresponding to the provided **content**. This AP
 updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommonOptions, partialUpdate?: boolean): Promise<void>
 ```
 
-Updates the style of the popup corresponding to the provided **content**. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; Updating the following properties is not supported: **showInSubWindow**, **focusable**, **onStateChange**, **onWillDismiss**, and **transition**.
+Updates the style of the popup corresponding to the provided **content**. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> Updating the following properties is not supported: **showInSubWindow**, **focusable**, **onStateChange**, **onWillDismiss**, and **transition**.
 
 **Since:** 18
 

@@ -6,7 +6,7 @@ Manages behavior of cookies in **Web** components. All **Web** components in an 
 
 **Deprecated since:** 23
 
-**Substitutes:** [WebCookieManager](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md)
+**Substitutes:** [WebCookieManager](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md)
 
 <!--Device-unnamed-declare class WebCookie--><!--Device-unnamed-declare class WebCookie-End-->
 
@@ -28,13 +28,17 @@ import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 constructor()
 ```
 
-Constructs a **WebCookie** object. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 23. No API is provided for substitute.
+Constructs a **WebCookie** object.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 23. No API is provided for substitute.
 
 **Since:** 8
 
 **Deprecated since:** 23
 
-**Substitutes:** [WebCookieManager](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md)
+**Substitutes:** [WebCookieManager](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -54,7 +58,7 @@ Saves the cookies in the memory to the drive. This API returns the result synchr
 
 **Deprecated since:** 9
 
-**Substitutes:** [saveCookieAsync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#savecookieasync)
+**Substitutes:** [saveCookieAsync](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#savecookieasync)
 
 <!--Device-WebCookie-saveCookie()--><!--Device-WebCookie-saveCookie()-End-->
 

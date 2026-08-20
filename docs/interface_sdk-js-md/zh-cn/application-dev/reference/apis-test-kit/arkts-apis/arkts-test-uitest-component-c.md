@@ -513,7 +513,11 @@ async function demo() {
 getText(): Promise<string>
 ```
 
-获取控件对象的文本信息。使用Promise异步回调。 &gt; **说明：**&gt; &gt; 如果控件的无障碍属性 &gt; [accessibilityLevel](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel) &gt; 设置为'no'或'no-hide-descendants'，无法使用本接口获取控件的文本信息，可以使用[Component.getOriginalText()](#getoriginaltext) &gt; 获取控件的文本信息。
+获取控件对象的文本信息。使用Promise异步回调。
+
+> **说明：**
+> 
+> 如果控件的无障碍属性 &gt; [accessibilityLevel](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel) &gt; 设置为'no'或'no-hide-descendants'，无法使用本接口获取控件的文本信息，可以使用[Component.getOriginalText()](#getoriginaltext) &gt; 获取控件的文本信息。
 
 **起始版本：** 23
 

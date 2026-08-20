@@ -2,6 +2,8 @@
 
 Obtains the network selection mode.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-radio-export enum NetworkSelectionMode--><!--Device-radio-export enum NetworkSelectionMode-End-->

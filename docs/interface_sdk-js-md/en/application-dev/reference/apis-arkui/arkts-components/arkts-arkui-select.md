@@ -1,8 +1,12 @@
 # Select
 
-The **Select** component provides a drop-down menu that allows users to select among multiple options. > **NOTE**
+The **Select** component provides a drop-down menu that allows users to select among multiple options.
 
-## Child Components Not supported
+> **NOTE**
+
+## Child Components
+
+Not supported
 
 ## Select
 
@@ -22,7 +26,7 @@ Select(options: Array<SelectOption>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | Array&lt;SelectOption&gt; | Yes | Options of the drop-down menu. |
+| options | Array&lt;[SelectOption](arkts-arkui-selectoption-i.md)&gt; | Yes | Options of the drop-down menu. |
 
 ## Summary
 
@@ -30,8 +34,6 @@ Select(options: Array<SelectOption>)
 
 | Name | Description |
 | --- | --- |
-| [MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from CommonConfiguration. |
-| [MenuOutlineOptions](arkts-arkui-menuoutlineoptions-i.md) | Defines the outline of the drop-down menu. |
 
 ### Types
 
@@ -43,7 +45,4 @@ Select(options: Array<SelectOption>)
 
 | Name | Description |
 | --- | --- |
-| [ArrowPosition](arkts-arkui-arrowposition-e.md) | Enumerates arrow positions. |
-| [AvoidanceMode](arkts-arkui-avoidancemode-e.md) | Enumerates the drop-down menu avoidance modes. |
-| [MenuAlignType](arkts-arkui-menualigntype-e.md) | Enumerates drop-down menu alignment modes. |
 

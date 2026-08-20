@@ -2,6 +2,8 @@
 
 Provides configuration parameters for backup and restore.
 
+@interface BackupParams
+
 **Since:** 23
 
 <!--Device-backup-interface BackupParams--><!--Device-backup-interface BackupParams-End-->

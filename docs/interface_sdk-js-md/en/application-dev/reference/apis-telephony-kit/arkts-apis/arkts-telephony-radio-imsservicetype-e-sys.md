@@ -2,6 +2,8 @@
 
 Indicates the type of IMS service.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-radio-export enum ImsServiceType--><!--Device-radio-export enum ImsServiceType-End-->

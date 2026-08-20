@@ -41,10 +41,10 @@ Obtains the JSON string array of the current application's configuration file ba
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700029](../errorcode-bundle.md#17700029-disabled-ability) | The specified ability is disabled. |
-| [17700024](../errorcode-bundle.md#17700024-profile-does-not-exist) | Failed to get the profile because there is no profile in the HAP. |
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified moduleName is not existed. |
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified abilityName is not existed. |
+| [17700024](../errorcode-bundle.md#17700024-profile-does-not-exist) | Failed to get the profile because there is no profile in the HAP. |
+| [17700029](../errorcode-bundle.md#17700029-disabled-ability) | The specified ability is disabled. |
 
 **Examples**
 

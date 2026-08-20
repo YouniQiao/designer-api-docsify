@@ -14,7 +14,9 @@ import { window } from '@kit.ArkUI';
 function setStartWindowBackgroundColor(moduleName: string, abilityName: string, color: ColorMetrics): Promise<void>
 ```
 
-Sets the background color of the splash screen of the UIAbility based on the specified module name and ability name within the same bundle name. This API uses a promise to return the result. This API takes effect for all processes of the same bundle name, for example, in multi-instance or clone scenarios.
+Sets the background color of the splash screen of the UIAbility based on the specified module name and ability name within the same bundle name. This API uses a promise to return the result.
+
+This API takes effect for all processes of the same bundle name, for example, in multi-instance or clone scenarios.
 
 **Since:** 23
 
@@ -42,8 +44,8 @@ Sets the background color of the splash screen of the UIAbility based on the spe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal task error. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.function setStartWindowBackgroundColor can not work correctly due to limited device capabilities. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal task error. |
 | [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: Parameter exceeds the allowed length. |
 
 **Examples**

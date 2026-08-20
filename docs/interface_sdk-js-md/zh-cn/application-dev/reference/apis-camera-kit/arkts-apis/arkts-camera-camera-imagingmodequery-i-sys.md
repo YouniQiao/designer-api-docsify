@@ -51,6 +51,6 @@ Checks whether a camera imaging mode is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
 

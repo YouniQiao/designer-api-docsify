@@ -135,7 +135,11 @@ holder2.setSize(1000);
 takeNext(): AppEventPackage
 ```
 
-Obtains the subscription event. The system obtains the subscription event data based on the data size threshold specified by **setSize** or the number of data records specified by **setRow**. By default, one subscription event data record is obtained. When all subscription event data is obtained, **null** is returned. When **setRow** and **setSize** are called at the same time, only **setRow** takes effect.
+Obtains the subscription event.
+
+The system obtains the subscription event data based on the data size threshold specified by **setSize** or the number of data records specified by **setRow**. By default, one subscription event data record is obtained. When all subscription event data is obtained, **null** is returned.
+
+When **setRow** and **setSize** are called at the same time, only **setRow** takes effect.
 
 **Since:** 9
 

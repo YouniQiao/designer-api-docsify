@@ -40,12 +40,12 @@ function getPageContent(options?: ContentOptions): Promise<PageContent>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [34000006](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000006-请求超时) | The request timed out. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work correctly due to limited <br> device capabilities. |
-| [34000004](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000004-页面未准备就绪) | The page is not ready. |
-| [34000002](../../apis-multimodalawareness-kit/errorcode-carAwareness.md#34000002-指定能力不支持) | The application or page is not supported. |
-| [34000003](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000003-窗口id无效) | The window ID is invalid. Possible causes: 1. window id is not passed <br> when screen is splited. 2. passed window id is not on screen or floating. |
-| [34000001](../../apis-multimodalawareness-kit/errorcode-carAwareness.md#34000001-服务异常) | Service exception. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. An attempt was made to get page content forbidden by <br> permission: ohos.permission.GET_SCREEN_CONTENT. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission check failed. A non-system application uses the system API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work correctly due to limited <br> device capabilities. |
+| [34000001](../errorcode-carAwareness.md#34000001-服务异常) | Service exception. |
+| [34000002](../errorcode-carAwareness.md#34000002-指定能力不支持) | The application or page is not supported. |
+| [34000003](../errorcode-onScreen.md#34000003-窗口id无效) | The window ID is invalid. Possible causes: 1. window id is not passed <br> when screen is splited. 2. passed window id is not on screen or floating. |
+| [34000004](../errorcode-onScreen.md#34000004-页面未准备就绪) | The page is not ready. |
+| [34000006](../errorcode-onScreen.md#34000006-请求超时) | The request timed out. |
 

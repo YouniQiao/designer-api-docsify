@@ -12,7 +12,9 @@ import { bundleManager } from '@kit.AbilityKit';
 function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-Clears the bundle cache based on the given bundle name. This API uses an asynchronous callback to return the result. No permission is required when the caller clears its own cache.
+Clears the bundle cache based on the given bundle name. This API uses an asynchronous callback to return the result.
+
+No permission is required when the caller clears its own cache.
 
 **Since:** 23
 
@@ -35,11 +37,11 @@ Clears the bundle cache based on the given bundle name. This API uses an asynchr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700030](../errorcode-bundle.md#17700030-failure-in-clearing-cache-files) | The specified bundle does not support clearing of cache files. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
+| [17700030](../errorcode-bundle.md#17700030-failure-in-clearing-cache-files) | The specified bundle does not support clearing of cache files. |
 
 **Examples**
 
@@ -71,7 +73,9 @@ try {
 function cleanBundleCacheFiles(bundleName: string): Promise<void>
 ```
 
-Clears the bundle cache based on the given bundle name. This API uses a promise to return the result. No permission is required when the caller clears its own cache.
+Clears the bundle cache based on the given bundle name. This API uses a promise to return the result.
+
+No permission is required when the caller clears its own cache.
 
 **Since:** 23
 
@@ -99,11 +103,11 @@ Clears the bundle cache based on the given bundle name. This API uses a promise 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700030](../errorcode-bundle.md#17700030-failure-in-clearing-cache-files) | The specified bundle does not support clearing of cache files. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
+| [17700030](../errorcode-bundle.md#17700030-failure-in-clearing-cache-files) | The specified bundle does not support clearing of cache files. |
 
 **Examples**
 
@@ -133,7 +137,9 @@ try {
 function cleanBundleCacheFiles(bundleName: string, appIndex: int): Promise<void>
 ```
 
-Clears the bundle cache based on the given bundle name and application index. This API uses a promise to return the result. No permission is required when the caller clears its own cache.
+Clears the bundle cache based on the given bundle name and application index. This API uses a promise to return the result.
+
+No permission is required when the caller clears its own cache.
 
 **Since:** 23
 
@@ -162,12 +168,12 @@ Clears the bundle cache based on the given bundle name and application index. Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700030](../errorcode-bundle.md#17700030-failure-in-clearing-cache-files) | The specified bundle does not support clearing of cache files. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
+| [17700030](../errorcode-bundle.md#17700030-failure-in-clearing-cache-files) | The specified bundle does not support clearing of cache files. |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
 
 **Examples**
 

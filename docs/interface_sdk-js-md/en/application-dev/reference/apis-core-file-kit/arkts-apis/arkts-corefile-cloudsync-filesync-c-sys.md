@@ -41,8 +41,8 @@ A constructor used to create a **FileSync** instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 
 **Examples**
 
@@ -86,10 +86,10 @@ Query the upload state of the cloud file list.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified. 2.The length of the input parameter exceeds the upper limit. <br>3.The input parameter contains an invalid uri. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13900010 | Try again. |
+| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified. 2.The length of the input parameter exceeds the upper limit. <br>3.The input parameter contains an invalid uri. |
 
 ## pauseUpload
 
@@ -121,11 +121,11 @@ Pause the upload of the cloud file.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900002 | No such file or directory. |
-| 14000002 | Invalid uri. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| 13900002 | No such file or directory. |
 | 13900010 | Try again. |
+| 14000002 | Invalid uri. |
 
 ## registerUploadProgress
 
@@ -157,10 +157,10 @@ Registers to cloud file upload progress change. This method uses a callback to g
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameter are left unspecified. <br>2.The number of instances registered at the same time exceeds the upper limit. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13900010 | Try again. |
+| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameter are left unspecified. <br>2.The number of instances registered at the same time exceeds the upper limit. |
 
 ## resumeUpload
 
@@ -192,11 +192,11 @@ Resume the upload of the cloud file.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900002 | No such file or directory. |
-| 14000002 | Invalid uri. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| 13900002 | No such file or directory. |
 | 13900010 | Try again. |
+| 14000002 | Invalid uri. |
 
 ## unregisterUploadProgress
 

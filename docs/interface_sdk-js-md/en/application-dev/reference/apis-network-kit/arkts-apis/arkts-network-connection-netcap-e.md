@@ -78,7 +78,9 @@ The network does not use a virtual private network (VPN).
 NET_CAPABILITY_VALIDATED = 16
 ```
 
-The network management module successfully connects to the Huawei Cloud address through this network. This capability is configured by the network management module. Note: If the network management module fails to connect to the Huawei Cloud address, this flag is not available in the network capability, but this does not mean a complete loss in Internet access. Note that for a newly connected network, this value may not reflect the actual verification result as network connectivity verification is in progress. Your application can use **NET_CAPABILITY_CHECKING_CONNECTIVITY**&lt;sup&gt;12+&lt;/sup&gt; to check whether network connectivity verification is in progress.
+The network management module successfully connects to the Huawei Cloud address through this network. This capability is configured by the network management module.
+
+Note: If the network management module fails to connect to the Huawei Cloud address, this flag is not available in the network capability, but this does not mean a complete loss in Internet access. Note that for a newly connected network, this value may not reflect the actual verification result as network connectivity verification is in progress. Your application can use **NET_CAPABILITY_CHECKING_CONNECTIVITY**&lt;sup&gt;12+&lt;/sup&gt; to check whether network connectivity verification is in progress.
 
 **Since:** 23
 

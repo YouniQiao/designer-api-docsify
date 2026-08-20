@@ -1,6 +1,12 @@
 # AudioVolumeGroupManager
 
-管理音频组音量。 在使用AudioVolumeGroupManager的接口之前，需先通过 [getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager) 获取AudioVolumeGroupManager实例。 &gt; **说明：** &gt; &gt; - 本Interface首批接口从API version 9开始支持。
+管理音频组音量。
+
+在使用AudioVolumeGroupManager的接口之前，需先通过 [getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager) 获取AudioVolumeGroupManager实例。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 9开始支持。
 
 **起始版本：** 23
 
@@ -37,15 +43,15 @@ adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustTy
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio volume type. |
 | adjustType | [VolumeAdjustType](arkts-audio-audio-volumeadjusttype-e-sys.md) | 是 | Volume adjustment type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by callback. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Return by callback. |
 
 **示例**
@@ -95,9 +101,9 @@ adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustTy
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by promise. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Return by promise. |
 
 **示例**
@@ -133,15 +139,15 @@ adjustVolumeByStep(adjustType: VolumeAdjustType, callback: AsyncCallback<void>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | adjustType | [VolumeAdjustType](arkts-audio-audio-volumeadjusttype-e-sys.md) | 是 | Volume adjustment type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by callback. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Return by callback. |
 
 **示例**
@@ -191,9 +197,9 @@ adjustVolumeByStep(adjustType: VolumeAdjustType): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by promise. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Return by promise. |
 
 **示例**
@@ -240,9 +246,9 @@ Obtains the active volume type in the calling moment. This method returns in syn
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 **示例**
 
@@ -309,7 +315,7 @@ mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>):
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio stream type. |
 | mute | boolean | 是 | Mute status to set. The value true means to mute the stream, and false means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **示例**
 
@@ -396,10 +402,10 @@ setMicMute(mute: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 **示例**
 
@@ -442,10 +448,10 @@ setMicMutePersistent(mute: boolean, type: PolicyType): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters missing. 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters missing. 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 **示例**
 
@@ -476,7 +482,7 @@ setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mode | [AudioRingMode](arkts-audio-audio-audioringmode-e.md) | 是 | Ringer mode. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **示例**
 
@@ -554,7 +560,7 @@ Sets the volume for a stream. This method uses an asynchronous callback to retur
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio stream type. |
 | volume | int | 是 | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **示例**
 

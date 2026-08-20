@@ -30,11 +30,11 @@ Convert from ImmersiveMaterial to another ImmersiveMaterial set on EffectCompone
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| material | [uiMaterial.ImmersiveMaterial](../../apis-na/arkts-apis/arkts-na-uimaterial-immersivematerial-c.md) | Yes | The ImmersiveMaterial. |
+| material | [uiMaterial.ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) | Yes | The ImmersiveMaterial. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [uiMaterial.ImmersiveMaterial](../../apis-na/arkts-apis/arkts-na-uimaterial-immersivematerial-c.md) | The ImmersiveMaterial set on EffectComponent. |
+| [uiMaterial.ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) | The ImmersiveMaterial set on EffectComponent. |
 

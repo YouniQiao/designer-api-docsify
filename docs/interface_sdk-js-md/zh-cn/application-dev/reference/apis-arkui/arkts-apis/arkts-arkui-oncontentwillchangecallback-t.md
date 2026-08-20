@@ -1,4 +1,4 @@
-# OnContentWillChangeCallback(Provides an advanced struct of tabs for atomic services)
+# OnContentWillChangeCallback
 
 ```TypeScript
 export type OnContentWillChangeCallback = (currentIndex: number, comingIndex: number) => boolean

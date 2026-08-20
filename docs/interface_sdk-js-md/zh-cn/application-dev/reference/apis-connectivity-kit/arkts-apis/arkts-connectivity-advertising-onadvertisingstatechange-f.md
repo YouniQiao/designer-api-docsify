@@ -12,7 +12,9 @@ import { advertising } from '@kit.ConnectivityKit';
 function onAdvertisingStateChange(callback: Callback<AdvertisingStateChangeInfo>): void
 ```
 
-订阅广播状态变化事件。 只有授予了ohos.permission.NEARLINK_ACCESS权限的系统应用程序才能访问此事件。
+订阅广播状态变化事件。
+
+只有授予了ohos.permission.NEARLINK_ACCESS权限的系统应用程序才能访问此事件。
 
 **起始版本：** 26.0.0
 
@@ -26,7 +28,7 @@ function onAdvertisingStateChange(callback: Callback<AdvertisingStateChangeInfo>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AdvertisingStateChangeInfo](arkts-connectivity-advertising-advertisingstatechangeinfo-i.md)&gt; | 是 | 用于监听广播状态的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AdvertisingStateChangeInfo](arkts-connectivity-advertising-advertisingstatechangeinfo-i.md)&gt; | 是 | 用于监听广播状态的回调。 |
 
 **错误码：**
 

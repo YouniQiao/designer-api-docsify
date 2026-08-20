@@ -28,7 +28,7 @@ import { motion } from '@kit.MultimodalAwarenessKit';
 | [onHoldingHandChanged](arkts-multimodalawareness-motion-onholdinghandchanged-f.md) | Subscribe to detect the holding hand changed event. |
 | [onOperatingHandChanged](arkts-multimodalawareness-motion-onoperatinghandchanged-f.md) | Subscribe to detect the operating hand changed event. |
 | [on_holdingHandChanged](arkts-multimodalawareness-motion-onholdinghandchanged-f.md) | Enables listening for holding hand status changes. |
-| [on_operatingHandChanged](arkts-multimodalawareness-motion-onoperatinghandchanged-f.md) | Subscribes to operating hand change events. If the device does not support this function, error code 801 is returned. |
+| [on_operatingHandChanged](arkts-multimodalawareness-motion-onoperatinghandchanged-f.md) | Subscribes to operating hand change events. |
 
 <!--Del-->
 ### Functions(System API)

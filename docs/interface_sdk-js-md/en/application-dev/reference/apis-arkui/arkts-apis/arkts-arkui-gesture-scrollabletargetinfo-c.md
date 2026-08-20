@@ -2,6 +2,8 @@
 
 Defines the scrollable target information.
 
+@extends EventTargetInfo
+
 **Inheritance/Implementation:** ScrollableTargetInfo extends [EventTargetInfo](arkts-arkui-gesture-eventtargetinfo-c.md)
 
 **Since:** 23

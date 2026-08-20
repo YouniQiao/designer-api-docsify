@@ -12,7 +12,11 @@ import { connection } from '@kit.NetworkKit';
 function createVlanInterface(ifName: string, vlanId: int): Promise<void>
 ```
 
-Creates a virtual local area network (VLAN) with specified **vlanId** on a specified Ethernet NIC. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - Currently, this API supports only the PC. For other device types, the error code 2100002 is returned when this &gt; API is called.
+Creates a virtual local area network (VLAN) with specified **vlanId** on a specified Ethernet NIC. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - Currently, this API supports only the PC. For other device types, the error code 2100002 is returned when this &gt; API is called.
 
 **Since:** 23
 
@@ -43,11 +47,11 @@ Creates a virtual local area network (VLAN) with specified **vlanId** on a speci
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2100400](../errorcode-net-connection.md#2100400-incorrect-nic-name-non-ethernet) | The input network interface name is incorrect. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Nonsystem applications use system APIs. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [2100400](../errorcode-net-connection.md#2100400-incorrect-nic-name-non-ethernet) | The input network interface name is incorrect. |
 
 **Examples**
 

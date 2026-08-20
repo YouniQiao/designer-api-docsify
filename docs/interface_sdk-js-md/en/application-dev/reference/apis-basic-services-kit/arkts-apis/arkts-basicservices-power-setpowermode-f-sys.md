@@ -35,10 +35,10 @@ Sets the power mode of a device. This API uses an asynchronous callback to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Parameter verification failed. |
-| [4900301](../errorcode-power.md#4900301-power-mode-setting-failed) | Setting the power mode failed.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Parameter verification failed. |
+| [4900301](../errorcode-power.md#4900301-power-mode-setting-failed) | Setting the power mode failed.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -87,10 +87,10 @@ Sets the power mode of a device. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Parameter verification failed. |
-| [4900301](../errorcode-power.md#4900301-power-mode-setting-failed) | Setting the power mode failed.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Parameter verification failed. |
+| [4900301](../errorcode-power.md#4900301-power-mode-setting-failed) | Setting the power mode failed.<br>**Applicable version:** 23 and later |
 
 **Examples**
 

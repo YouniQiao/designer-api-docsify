@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [ShowDialogSuccessResponse](arkts-arkui-promptaction-showdialogsuccessresponse-i.md)
+**替代接口：** [ShowDialogSuccessResponse](../../apis-default/arkts-apis/arkts-promptaction-showdialogsuccessresponse-i.md)
 
 <!--Device-prompt-interface ShowDialogSuccessResponse--><!--Device-prompt-interface ShowDialogSuccessResponse-End-->
 
@@ -33,7 +33,7 @@ index: number
 
 **废弃版本：** 9
 
-**替代接口：** [index](arkts-arkui-promptaction-showdialogsuccessresponse-i.md#index)
+**替代接口：** [index](../../apis-default/arkts-apis/arkts-promptaction-showdialogsuccessresponse-i.md#index)
 
 <!--Device-ShowDialogSuccessResponse-index: number--><!--Device-ShowDialogSuccessResponse-index: number-End-->
 

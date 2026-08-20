@@ -2,6 +2,8 @@
 
 The &lt;picker&gt; component supports common, date, time, and multi-column text.
 
+@interface PickerElement
+
 **Since:** 4
 
 <!--Device-unnamed-export interface PickerElement--><!--Device-unnamed-export interface PickerElement-End-->

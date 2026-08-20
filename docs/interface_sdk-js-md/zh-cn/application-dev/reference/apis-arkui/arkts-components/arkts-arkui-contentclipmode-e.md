@@ -2,6 +2,8 @@
 
 表示滚动容器的内容裁剪模式。
 
+@enum { number }
+
 **起始版本：** 14
 
 <!--Device-unnamed-declare enum ContentClipMode--><!--Device-unnamed-declare enum ContentClipMode-End-->

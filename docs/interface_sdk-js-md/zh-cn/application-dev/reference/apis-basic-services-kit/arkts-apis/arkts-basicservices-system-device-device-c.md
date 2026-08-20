@@ -22,7 +22,17 @@ import { Device, DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit'
 static getInfo(options?: GetDeviceOptions): void
 ```
 
-获取当前设备的信息。该接口异步读取系统设备信息，通过回调函数返回设备品牌、型号、屏幕参数等数据。 &gt; **说明：**<br> &gt; &gt; 在首页的onShow生命周期之前不建议调用Device.getInfo接口。 **系统能力：** SystemCapability.Startup.SystemInfo.Lite **返回值：** | 类型 | 说明 | | -------- | -------- | | void | 无返回值，设备信息通过回调函数返回。 |
+获取当前设备的信息。该接口异步读取系统设备信息，通过回调函数返回设备品牌、型号、屏幕参数等数据。
+
+> **说明：**<br>
+> 
+> 在首页的onShow生命周期之前不建议调用Device.getInfo接口。
+
+**系统能力：** SystemCapability.Startup.SystemInfo.Lite
+
+**返回值：**
+
+| 类型 | 说明 | | -------- | -------- | | void | 无返回值，设备信息通过回调函数返回。 |
 
 **起始版本：** 3
 

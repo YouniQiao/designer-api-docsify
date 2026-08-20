@@ -36,20 +36,20 @@ function cancelAsBundle(
 | id | int | 是 | 通知ID。 |
 | representativeBundle | string | 是 | 被代理应用的包名。 |
 | userId | int | 是 | 用户ID。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 取消代理通知的回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 取消代理通知的回调方法。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1600008](../errorcode-notification.md#1600008-用户不存在) | The user does not exist. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 | [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
+| [1600008](../errorcode-notification.md#1600008-用户不存在) | The user does not exist. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
 
 **示例**
@@ -130,14 +130,14 @@ function cancelAsBundle(id: int, representativeBundle: string, userId: int): Pro
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1600008](../errorcode-notification.md#1600008-用户不存在) | The user does not exist. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 | [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
+| [1600008](../errorcode-notification.md#1600008-用户不存在) | The user does not exist. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
 
 **示例**
@@ -211,15 +211,15 @@ function cancelAsBundle(representativeBundle: BundleOption, id: int): Promise<vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1600008](../errorcode-notification.md#1600008-用户不存在) | The user does not exist. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 | [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
+| [1600008](../errorcode-notification.md#1600008-用户不存在) | The user does not exist. |
+| [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
 
 **示例**

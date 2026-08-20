@@ -1,6 +1,15 @@
 # Canvas
 
-A carrier that carries the drawn content and drawing status. &gt; **NOTE：**&gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - This module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions. &gt; &gt; &gt; The canvas comes with a default brush. The brush is black, has anti-aliasing enabled, and has no other style &gt; effects. This default brush is used when no brush or pen is actively set in the canvas.
+A carrier that carries the drawn content and drawing status.
+
+> **NOTE：**
+> 
+> - This module uses the physical pixel unit, px.
+> 
+> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
+> 
+> 
+> The canvas comes with a default brush. The brush is black, has anti-aliasing enabled, and has no other style &gt; effects. This default brush is used when no brush or pen is actively set in the canvas.
 
 **Since:** 23
 
@@ -20,7 +29,11 @@ import { drawing } from '@kit.ArkGraphics2D';
 attachBrush(brush: Brush): void
 ```
 
-Attaches a brush to the canvas. When you draw on the canvas, the brush's style is used to fill the interior of shapes. &gt; **NOTE：**&gt; &gt; If the brush effect changes after this API is called, you must call the API again if you want to use the new &gt; effect in the subsequent drawing.
+Attaches a brush to the canvas. When you draw on the canvas, the brush's style is used to fill the interior of shapes.
+
+> **NOTE：**
+> 
+> If the brush effect changes after this API is called, you must call the API again if you want to use the new &gt; effect in the subsequent drawing.
 
 **Since:** 23
 
@@ -46,7 +59,11 @@ Attaches a brush to the canvas. When you draw on the canvas, the brush's style i
 attachPen(pen: Pen): void
 ```
 
-Attaches a pen to the canvas. When you draw on the canvas, the pen's style is used to outline shapes. &gt; **NOTE：**&gt; &gt; If the pen effect changes after this API is called, you must call the API again if you want to use the new &gt; effect in the subsequent drawing.
+Attaches a pen to the canvas. When you draw on the canvas, the pen's style is used to outline shapes.
+
+> **NOTE：**
+> 
+> If the pen effect changes after this API is called, you must call the API again if you want to use the new &gt; effect in the subsequent drawing.
 
 **Since:** 23
 
@@ -564,7 +581,9 @@ drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.R
       filterMode: FilterMode): void
 ```
 
-Splits an image into multiple sections based on the lattice object's configuration and draws each section into the specified target rectangle on the canvas. When this API is used, the anti-aliasing enablement setting does not take effect. The intersections of even-numbered rows and columns (starting from 0) are fixed points. If the fixed lattice area fits within the target rectangle, it will be drawn without scaling. Otherwise, it will be scaled proportionally to fit the target rectangle. Any remaining space will be filled by stretching or compressing the remaining sections to cover the entire target rectangle.
+Splits an image into multiple sections based on the lattice object's configuration and draws each section into the specified target rectangle on the canvas. When this API is used, the anti-aliasing enablement setting does not take effect.
+
+The intersections of even-numbered rows and columns (starting from 0) are fixed points. If the fixed lattice area fits within the target rectangle, it will be drawn without scaling. Otherwise, it will be scaled proportionally to fit the target rectangle. Any remaining space will be filled by stretching or compressing the remaining sections to cover the entire target rectangle.
 
 **Since:** 23
 
@@ -594,7 +613,9 @@ drawImageNine(pixelmap: image.PixelMap, center: common2D.Rect, dstRect: common2D
       filterMode: FilterMode): void
 ```
 
-Splits an image into nine sections using two horizontal and two vertical lines: four edge sections, four corner sections, and a central section. When this API is used, the anti-aliasing enablement setting does not take effect. If the four corner sections are smaller than the target rectangle, they will be drawn in the target rectangle without scaling. Otherwise, they will be scaled to fit the target rectangle. Any remaining space will be filled by stretching or compressing the other five sections to cover the entire target rectangle.
+Splits an image into nine sections using two horizontal and two vertical lines: four edge sections, four corner sections, and a central section. When this API is used, the anti-aliasing enablement setting does not take effect.
+
+If the four corner sections are smaller than the target rectangle, they will be drawn in the target rectangle without scaling. Otherwise, they will be scaled to fit the target rectangle. Any remaining space will be filled by stretching or compressing the other five sections to cover the entire target rectangle.
 
 **Since:** 23
 

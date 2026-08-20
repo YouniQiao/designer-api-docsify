@@ -2,6 +2,8 @@
 
 supplicant状态枚举。
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-wifiManager-export enum SuppState--><!--Device-wifiManager-export enum SuppState-End-->

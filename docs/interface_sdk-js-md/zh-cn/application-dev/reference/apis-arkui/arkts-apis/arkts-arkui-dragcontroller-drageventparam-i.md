@@ -2,6 +2,8 @@
 
 拖拽结束返回结果的回调。
 
+@interface DragEventParam
+
 **起始版本：** 23
 
 **ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
@@ -42,7 +44,9 @@ event: DragEvent
 extraParams: string
 ```
 
-设置拖拽事件额外信息，具体功能暂未实现。 默认值：空
+设置拖拽事件额外信息，具体功能暂未实现。
+
+默认值：空
 
 **类型：** string
 

@@ -20,7 +20,9 @@ import { webview } from '@kit.ArkWeb';
 id: string
 ```
 
-ID of the surface, which is the surfaceId of the NativeImage used for same-layer rendering. For details, see NativeEmbedDataInfo.
+ID of the surface, which is the surfaceId of the NativeImage used for same-layer rendering.
+
+For details, see NativeEmbedDataInfo.
 
 **Type:** string
 
@@ -40,7 +42,7 @@ rect: RectEvent
 
 Position information of the surface, used to specify the display position and size of the surface during same- layer rendering.
 
-**Type:** [RectEvent](../../apis-na/arkts-apis/arkts-na-webview-rectevent-i.md)
+**Type:** [RectEvent](../../apis-default/arkts-apis/arkts-webview-rectevent-i.md)
 
 **Since:** 12
 

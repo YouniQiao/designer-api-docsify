@@ -39,9 +39,9 @@ Creates a MediaKeySystem instance.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700103](../errorcode-drm.md#24700103-too-many-mediakeysystem-instances) | Meet max MediaKeySystem num limit. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 **Examples**
 
@@ -88,7 +88,7 @@ Creates a MediaKeySystem instance.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700103](../errorcode-drm.md#24700103-too-many-mediakeysystem-instances) | Meet max MediaKeySystem num limit. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 

@@ -20,7 +20,16 @@ import { inputMethodEngine } from '@kit.IMEKit';
 adjustPanelRect(flag: PanelFlag, rect: PanelRect): void
 ```
 
-Adjusts the panel rectangle. After the API is called, the adjust request is submitted to the input method framework, but the execution is not complete. &gt; **NOTE：**&gt; &gt; This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** &gt; state. &gt; &gt; This API returns the result synchronously. The return only indicates that the system receives the setting &gt; request, not that the setting is complete. &gt; &gt; When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the &gt; function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To &gt; ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+Adjusts the panel rectangle. After the API is called, the adjust request is submitted to the input method framework, but the execution is not complete.
+
+> **NOTE：**
+> 
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
+> state.
+> 
+> This API returns the result synchronously. The return only indicates that the system receives the setting &gt; request, not that the setting is complete.
+> 
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the &gt; function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To &gt; ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 23
 
@@ -75,7 +84,16 @@ panel.adjustPanelRect(panelFlag, panelRect);
 adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void
 ```
 
-Adjusts the panel rectangle, and customizes the avoid area and touch area. &gt; **NOTE：**&gt; &gt; This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** &gt; state. This API is compatible with &gt; [adjustPanelRect](#adjustpanelrect). If the &gt; input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, &gt; [adjustPanelRect](#adjustpanelrect) is called by &gt; default. &gt; &gt; This API returns the result synchronously. The return only indicates that the system receives the setting &gt; request, not that the setting is complete. &gt; &gt; When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the &gt; function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To &gt; ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+Adjusts the panel rectangle, and customizes the avoid area and touch area.
+
+> **NOTE：**
+> 
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
+> state. This API is compatible with &gt; [adjustPanelRect](#adjustpanelrect). If the &gt; input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, &gt; [adjustPanelRect](#adjustpanelrect) is called by &gt; default.
+> 
+> This API returns the result synchronously. The return only indicates that the system receives the setting &gt; request, not that the setting is complete.
+> 
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the &gt; function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To &gt; ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 23
 
@@ -95,8 +113,8 @@ Adjusts the panel rectangle, and customizes the avoid area and touch area. &gt; 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
 
 **Examples**
 
@@ -258,9 +276,9 @@ Obtains the offset area of the soft keyboard relative to the system panel under 
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 | [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. Possible causes: 1. Current panel's type is not SOFT_KEYBOARD. 2. Panel's flag is not FLG_FIXED or FLG_FLOATING. |
 | [12800022](../errorcode-inputmethod-framework.md#12800022-invalid-displayid) | invalid displayId. |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 **Examples**
 
@@ -291,7 +309,9 @@ inputMethodAbility.createPanel(this.context, panelConfig).then( (panel: inputMet
 getSystemPanelCurrentInsets(displayId: long): Promise<SystemPanelInsets | null>
 ```
 
-Get the current insets of the system panel of a specified display. &lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED or FLG_FLOATING.&lt;/p&gt; &lt;p&gt;This interface only supports obtaining the current insets values of a display. When the display undergoes orientation changes, or is folded or unfolded, it is necessary to reinvoke this interface to get the latest values.&lt;/p&gt;
+Get the current insets of the system panel of a specified display.
+
+&lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED or FLG_FLOATING.&lt;/p&gt; &lt;p&gt;This interface only supports obtaining the current insets values of a display. When the display undergoes orientation changes, or is folded or unfolded, it is necessary to reinvoke this interface to get the latest values.&lt;/p&gt;
 
 **Since:** 23
 
@@ -315,9 +335,9 @@ Get the current insets of the system panel of a specified display. &lt;p&gt;It's
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 | [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. Possible causes: 1. Current panel's type is not SOFT_KEYBOARD. 2. Panel's flag is not FLG_FIXED or FLG_FLOATING. |
 | [12800022](../errorcode-inputmethod-framework.md#12800022-invalid-displayid) | invalid displayId. |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## hide
 
@@ -518,7 +538,9 @@ Unregisters panel show event.
 offSizeChange(callback?: SizeChangeCallback): void
 ```
 
-Unsubscribe 'sizeChange' event. &lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.&lt;/p&gt;
+Unsubscribe 'sizeChange' event.
+
+&lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.&lt;/p&gt;
 
 **Since:** 23
 
@@ -604,7 +626,16 @@ panel.off('show');
 off(type: 'sizeChange', callback?: SizeChangeCallback): void
 ```
 
-Disables listening for the panel size change. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** &gt; state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based &gt; on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain &gt; the actual panel size to refresh the panel layout. &gt; &gt; - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory &gt; parameters of the window.Size type. &gt; &gt; - Since API version 15, after the &gt; [adjustPanelRect](#adjustpanelrect) API &gt; is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to &gt; the callback function of this API.
+Disables listening for the panel size change. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
+> state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based &gt; on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain &gt; the actual panel size to refresh the panel layout.
+> 
+> - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory &gt; parameters of the window.Size type.
+> 
+> - Since API version 15, after the &gt; [adjustPanelRect](#adjustpanelrect) API &gt; is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to &gt; the callback function of this API.
 
 **Since:** 12
 
@@ -635,7 +666,9 @@ panel.off('sizeChange', (windowSize: window.Size) => {
 onHide(callback: Callback<void>): void
 ```
 
-Registers panel hide event. &lt;p&gt;The "hide" events are triggered when the panel is hidden.&lt;/p&gt;
+Registers panel hide event.
+
+&lt;p&gt;The "hide" events are triggered when the panel is hidden.&lt;/p&gt;
 
 **Since:** 23
 
@@ -655,7 +688,9 @@ Registers panel hide event. &lt;p&gt;The "hide" events are triggered when the pa
 onShow(callback: Callback<void>): void
 ```
 
-Registers panel show event. &lt;p&gt;The "show" events are triggered when the panel is shown.&lt;/p&gt;
+Registers panel show event.
+
+&lt;p&gt;The "show" events are triggered when the panel is shown.&lt;/p&gt;
 
 **Since:** 23
 
@@ -675,7 +710,9 @@ Registers panel show event. &lt;p&gt;The "show" events are triggered when the pa
 onSizeChange(callback: SizeChangeCallback): void
 ```
 
-Subscribe 'sizeChange' event. &lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.&lt;/p&gt;
+Subscribe 'sizeChange' event.
+
+&lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.&lt;/p&gt;
 
 **Since:** 23
 
@@ -753,7 +790,16 @@ panel.on('show', () => {
 on(type: 'sizeChange', callback: SizeChangeCallback): void
 ```
 
-Enables listening for the panel size change. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** &gt; state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based &gt; on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain &gt; the actual panel size to refresh the panel layout. &gt; &gt; - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory &gt; parameters of the window.Size type. &gt; &gt; - Since API version 15, after the &gt; [adjustPanelRect](#adjustpanelrect) API &gt; is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to &gt; the callback function of this API.
+Enables listening for the panel size change. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
+> state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based &gt; on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain &gt; the actual panel size to refresh the panel layout.
+> 
+> - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory &gt; parameters of the window.Size type.
+> 
+> - Since API version 15, after the &gt; [adjustPanelRect](#adjustpanelrect) API &gt; is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to &gt; the callback function of this API.
 
 **Since:** 12
 
@@ -789,7 +835,13 @@ panel.on('sizeChange', (windowSize: window.Size, keyboardArea: inputMethodEngine
 resize(width: long, height: long, callback: AsyncCallback<void>): void
 ```
 
-Resizes this input method panel. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; The panel width cannot exceed the screen width, and the panel height cannot be 0.7 times higher than the screen &gt; height. &gt; &gt; When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the &gt; function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To &gt; ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+Resizes this input method panel. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> The panel width cannot exceed the screen width, and the panel height cannot be 0.7 times higher than the screen &gt; height.
+> 
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the &gt; function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To &gt; ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 23
 
@@ -831,7 +883,13 @@ panel.resize(500, 1000, (err: BusinessError) => {
 resize(width: long, height: long): Promise<void>
 ```
 
-Resizes this input method panel. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; The panel width cannot exceed the screen width, and the panel height cannot be 0.7 times higher than the screen &gt; height. &gt; &gt; When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the &gt; function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To &gt; ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+Resizes this input method panel. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> The panel width cannot exceed the screen width, and the panel height cannot be 0.7 times higher than the screen &gt; height.
+> 
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the &gt; function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To &gt; ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 23
 
@@ -876,7 +934,9 @@ panel.resize(500, 1000).then(() => {
 setImmersiveEffect(effect: ImmersiveEffect): void
 ```
 
-Sets the immersive effect of the input method application. - Gradient mode and fluid light mode can be used only when the [immersive mode](#setimmersivemode) is enabled. - The fluid light mode can be used only when the gradient mode is enabled. - If the gradient mode is disabled, the gradient height must be 0 px. - Only system applications can set the fluid light mode. - The current API can be called only after any of the following APIs is called: - [adjustPanelRect](#adjustpanelrect) (available since API version 12) - [adjustPanelRect](#adjustpanelrect) ( available since API version 15) - [resize](#resize) ( available since API version 10)
+Sets the immersive effect of the input method application.
+
+- Gradient mode and fluid light mode can be used only when the [immersive mode](#setimmersivemode) is enabled. - The fluid light mode can be used only when the gradient mode is enabled. - If the gradient mode is disabled, the gradient height must be 0 px. - Only system applications can set the fluid light mode. - The current API can be called only after any of the following APIs is called: - [adjustPanelRect](#adjustpanelrect) (available since API version 12) - [adjustPanelRect](#adjustpanelrect) ( available since API version 15) - [resize](#resize) ( available since API version 10)
 
 **Since:** 23
 
@@ -896,9 +956,9 @@ Sets the immersive effect of the input method application. - Gradient mode and f
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1. input method panel not created. 2. the input method application does not subscribe to related events. |
-| [12800021](../errorcode-inputmethod-framework.md#12800021-unsupported-operation-by-default-input-method) | this operation is allowed only after adjustPanelRect or resize is called. |
-| [12800020](../errorcode-inputmethod-framework.md#12800020-invalid-immersive-effect) | invalid immersive effect. 1. The gradient mode and the fluid light mode can only be used when the immersive mode is enabled. 2. The fluid light mode can only be used when the gradient mode is enabled. 3. When the gradient mode is not enabled, the gradient height can only be 0. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800020](../errorcode-inputmethod-framework.md#12800020-invalid-immersive-effect) | invalid immersive effect. 1. The gradient mode and the fluid light mode can only be used when the immersive mode is enabled. 2. The fluid light mode can only be used when the gradient mode is enabled. 3. When the gradient mode is not enabled, the gradient height can only be 0. |
+| [12800021](../errorcode-inputmethod-framework.md#12800021-unsupported-operation-by-default-input-method) | this operation is allowed only after adjustPanelRect or resize is called. |
 
 **Examples**
 
@@ -950,7 +1010,13 @@ panel.setImmersiveMode(inputMethodEngine.ImmersiveMode.LIGHT_IMMERSIVE);
 setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 ```
 
-Sets to keep the screen always on. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - When the keyboard is displayed, the screen stays on. When the keyboard is hidden, the screen turns off. &gt; &gt; - You need to use this API properly. Set the attribute to **true** in necessary scenarios (for example, voice &gt; input) and reset this attribute to **false** after exiting necessary scenarios. In other scenarios, do not use &gt; this API.
+Sets to keep the screen always on. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - When the keyboard is displayed, the screen stays on. When the keyboard is hidden, the screen turns off.
+> 
+> - You need to use this API properly. Set the attribute to **true** in necessary scenarios (for example, voice &gt; input) and reset this attribute to **false** after exiting necessary scenarios. In other scenarios, do not use &gt; this API.
 
 **Since:** 23
 
@@ -1014,8 +1080,8 @@ Sets the input method panel to privacy mode. In privacy mode, screenshot and scr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 **Examples**
 
@@ -1331,9 +1397,9 @@ Sends a command to start moving the window. The window can be moved only when th
 | Error Code ID | Error Message |
 | --- | --- |
 | [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported.<br>**Applicable version:** 18 and later |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported.<br>**Applicable version:** 18 and later |
 
 **Examples**
 
@@ -1347,7 +1413,13 @@ panel.startMoving();
 updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>
 ```
 
-Update the panel rectangle. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** &gt; state. &gt; &gt; When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the &gt; function buttons at the bottom of the panel will dynamically update their size according to the panel width. To &gt; ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+Update the panel rectangle. This API uses a promise to return the result.   
+> **NOTE：**
+> 
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
+> state.
+> 
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the &gt; function buttons at the bottom of the panel will dynamically update their size according to the panel width. To &gt; ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 26.0.0
 
@@ -1382,7 +1454,14 @@ Update the panel rectangle. This API uses a promise to return the result. &gt; *
 updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 ```
 
-Update the panel rectangle, and customizes the avoid area and touch area. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** &gt; state. This API is compatible with &gt; [updatePanelRect](#updatepanelrect). &gt; If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, &gt; [updatePanelRect](#updatepanelrect) &gt; is called by default. &gt; &gt; When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the &gt; function buttons at the bottom of the panel will dynamically update their size according to the panel width. To &gt; ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+Update the panel rectangle, and customizes the avoid area and touch area. This API uses a promise to return the result.   
+> **NOTE：**
+> 
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
+> state. This API is compatible with &gt; [updatePanelRect](#updatepanelrect).
+> If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, &gt; [updatePanelRect](#updatepanelrect) &gt; is called by default.
+> 
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the &gt; function buttons at the bottom of the panel will dynamically update their size according to the panel width. To &gt; ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 26.0.0
 
@@ -1409,8 +1488,8 @@ Update the panel rectangle, and customizes the avoid area and touch area. This A
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
 
 ## updatePanelRectSync
 
@@ -1418,7 +1497,13 @@ Update the panel rectangle, and customizes the avoid area and touch area. This A
 updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void
 ```
 
-Update the panel rectangle. &gt; **NOTE：**&gt; &gt; This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** &gt; state. &gt; &gt; When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the &gt; function buttons at the bottom of the panel will dynamically update their size according to the panel width. To &gt; ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+Update the panel rectangle.   
+> **NOTE：**
+> 
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
+> state.
+> 
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the &gt; function buttons at the bottom of the panel will dynamically update their size according to the panel width. To &gt; ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 26.0.0
 
@@ -1447,7 +1532,14 @@ Update the panel rectangle. &gt; **NOTE：**&gt; &gt; This API applies only to t
 updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 ```
 
-Update the panel rectangle, and customizes the avoid area and touch area. &gt; **NOTE：**&gt; &gt; This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** &gt; state. This API is compatible with &gt; [updatePanelRectSync](#updatepanelrectsync). &gt; If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, &gt; [updatePanelRectSync](#updatepanelrectsync) &gt; is called by default. &gt; &gt; When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the &gt; function buttons at the bottom of the panel will dynamically update their size according to the panel width. To &gt; ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+Update the panel rectangle, and customizes the avoid area and touch area.   
+> **NOTE：**
+> 
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
+> state. This API is compatible with &gt; [updatePanelRectSync](#updatepanelrectsync).
+> If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, &gt; [updatePanelRectSync](#updatepanelrectsync) &gt; is called by default.
+> 
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the &gt; function buttons at the bottom of the panel will dynamically update their size according to the panel width. To &gt; ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 26.0.0
 
@@ -1468,8 +1560,8 @@ Update the panel rectangle, and customizes the avoid area and touch area. &gt; *
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
 
 ## updateRegion
 
@@ -1477,7 +1569,14 @@ Update the panel rectangle, and customizes the avoid area and touch area. &gt; *
 updateRegion(inputRegion: Array<window.Rect>): void
 ```
 
-Updates the hot zone on the input method panel in the current state. &gt; **NOTE：**&gt; &gt; This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** &gt; state. &gt; &gt; This API returns the result synchronously. The return only indicates that the system has received the request &gt; for updating the hot zone, not that the hot zone has been updated.
+Updates the hot zone on the input method panel in the current state.
+
+> **NOTE：**
+> 
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
+> state.
+> 
+> This API returns the result synchronously. The return only indicates that the system has received the request &gt; for updating the hot zone, not that the hot zone has been updated.
 
 **Since:** 23
 
@@ -1496,8 +1595,8 @@ Updates the hot zone on the input method panel in the current state. &gt; **NOTE
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
 
 **Examples**
 

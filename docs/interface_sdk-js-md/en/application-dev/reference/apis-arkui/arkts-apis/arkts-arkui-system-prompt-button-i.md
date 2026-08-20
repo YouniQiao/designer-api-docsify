@@ -2,6 +2,8 @@
 
 Defines the prompt info of button.
 
+@interface Button
+
 **Since:** 11
 
 <!--Device-unnamed-export interface Button--><!--Device-unnamed-export interface Button-End-->

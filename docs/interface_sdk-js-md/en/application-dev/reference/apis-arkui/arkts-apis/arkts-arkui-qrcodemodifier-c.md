@@ -2,35 +2,15 @@
 
 Defines QRCode Modifier
 
-**Inheritance/Implementation:** QRCodeModifier extends QRCodeAttribute and implements AttributeModifier<QRCodeAttribute>
+**Inheritance/Implementation:** QRCodeModifier implements QRCodeAttribute, AttributeModifier<QRCodeAttribute>
 
-**Since:** 12
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-export declare class QRCodeModifier--><!--Device-unnamed-export declare class QRCodeModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## applyNormalAttribute
-
-```TypeScript
-applyNormalAttribute?(instance: QRCodeAttribute): void
-```
-
-Defines the normal update attribute function.
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-QRCodeModifier-applyNormalAttribute?(instance: QRCodeAttribute): void--><!--Device-QRCodeModifier-applyNormalAttribute?(instance: QRCodeAttribute): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| instance | QRCodeAttribute | Yes |  |
 

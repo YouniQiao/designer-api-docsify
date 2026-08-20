@@ -1,6 +1,8 @@
 # ContentSlot
 
-The **ContentSlot** component is a component designed to render and manage components created on the native layer using C APIs. With support for hybrid development, the **ContentSlot** component is recommended when the container is an ArkTS component and the child component is created on the native side.
+The **ContentSlot** component is a component designed to render and manage components created on the native layer using C APIs.
+
+With support for hybrid development, the **ContentSlot** component is recommended when the container is an ArkTS component and the child component is created on the native side.
 
 ## ContentSlot
 
@@ -32,5 +34,4 @@ Called when content is added to a placeholder component
 
 | Name | Description |
 | --- | --- |
-| [Content](arkts-arkui-content-t.md) | Defines a base class for **ComponentContent** and **NodeContent**. |
 

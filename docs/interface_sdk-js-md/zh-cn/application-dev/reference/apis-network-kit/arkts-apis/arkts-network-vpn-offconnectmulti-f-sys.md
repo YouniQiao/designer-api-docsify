@@ -30,7 +30,7 @@ function off(type: 'connectMulti', callback?: Callback<MultiVpnConnectState>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectMulti' | 是 | Indicates multi vpn connect state changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MultiVpnConnectState&gt; | 否 | The callback of the multi vpn connect state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;MultiVpnConnectState&gt; | 否 | The callback of the multi vpn connect state. |
 
 **错误码：**
 
@@ -38,6 +38,6 @@ function off(type: 'connectMulti', callback?: Callback<MultiVpnConnectState>): v
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [19900002](../errorcode-net-vpn.md#19900002-系统内部错误) | System internal error. |
 | [19900001](../errorcode-net-vpn.md#19900001-无效参数) | Invalid parameter value. |
+| [19900002](../errorcode-net-vpn.md#19900002-系统内部错误) | System internal error. |
 

@@ -43,9 +43,9 @@ Obtains a PhotoAccessHelper instance for the specified user, letting you access 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| 13900020 | Invalid argument |
 
 **Examples**
 

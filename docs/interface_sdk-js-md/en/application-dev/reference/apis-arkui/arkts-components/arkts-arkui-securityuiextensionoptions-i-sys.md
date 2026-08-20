@@ -1,4 +1,4 @@
-# SecurityUIExtensionOptions(System API) (System API)
+# SecurityUIExtensionOptions (System API)
 
 Defines the options to be passed when constructing **SecurityUIExtensionComponent**.
 

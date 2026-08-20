@@ -1,0 +1,469 @@
+# String
+
+**Since:** -1
+
+<!--Device-unnamed-interface String--><!--Device-unnamed-interface String-End-->
+
+## Modules to Import
+
+```TypeScript
+```
+
+## charAt
+
+```TypeScript
+charAt(pos: number): string
+```
+
+Returns the character at the specified index.
+
+**Since:** -1
+
+<!--Device-String-charAt(pos: number): string--><!--Device-String-charAt(pos: number): string-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pos | number | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+## charCodeAt
+
+```TypeScript
+charCodeAt(index: number): number
+```
+
+Returns the Unicode value of the character at the specified location.
+
+**Since:** -1
+
+<!--Device-String-charCodeAt(index: number): number--><!--Device-String-charCodeAt(index: number): number-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+## concat
+
+```TypeScript
+concat(...strings: string[]): string
+```
+
+Returns a string that contains the concatenation of two or more strings.
+
+**Since:** -1
+
+<!--Device-String-concat(...strings: string[]): string--><!--Device-String-concat(...strings: string[]): string-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strings | string[] | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+## indexOf
+
+```TypeScript
+indexOf(searchString: string, position?: number): number
+```
+
+Returns the position of the first occurrence of a substring.
+
+**Since:** -1
+
+<!--Device-String-indexOf(searchString: string, position?: number): number--><!--Device-String-indexOf(searchString: string, position?: number): number-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| searchString | string | Yes |  |
+| position | number | No |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+## lastIndexOf
+
+```TypeScript
+lastIndexOf(searchString: string, position?: number): number
+```
+
+Returns the last occurrence of a substring in the string.
+
+**Since:** -1
+
+<!--Device-String-lastIndexOf(searchString: string, position?: number): number--><!--Device-String-lastIndexOf(searchString: string, position?: number): number-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| searchString | string | Yes |  |
+| position | number | No |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+## localeCompare
+
+```TypeScript
+localeCompare(that: string, locales?: string | string[], options?: Intl.CollatorOptions): number
+```
+
+Determines whether two strings are equivalent in the current or specified locale.
+
+**Since:** -1
+
+<!--Device-String-localeCompare(that: string, locales?: string | string[], options?: Intl.CollatorOptions): number--><!--Device-String-localeCompare(that: string, locales?: string | string[], options?: Intl.CollatorOptions): number-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| that | string | Yes |  |
+| locales | string \| string[] | No |  |
+| options | [Intl.CollatorOptions](arkts-intl-collatoroptions-i.md) | No |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+## match
+
+```TypeScript
+match(regexp: string | RegExp): RegExpMatchArray | null
+```
+
+Matches a string with a regular expression, and returns an array containing the results of that search.
+
+**Since:** -1
+
+<!--Device-String-match(regexp: string | RegExp): RegExpMatchArray | null--><!--Device-String-match(regexp: string | RegExp): RegExpMatchArray | null-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| regexp | string \| RegExp | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+## replace
+
+```TypeScript
+replace(searchValue: string | RegExp, replaceValue: string): string
+```
+
+Replaces text in a string, using a regular expression or search string.
+
+**Since:** -1
+
+<!--Device-String-replace(searchValue: string | RegExp, replaceValue: string): string--><!--Device-String-replace(searchValue: string | RegExp, replaceValue: string): string-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| searchValue | string \| RegExp | Yes |  |
+| replaceValue | string | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+## replace
+
+```TypeScript
+replace(searchValue: string | RegExp, replacer: (substring: string, ...args: any[]) => string): string
+```
+
+Replaces text in a string, using a regular expression or search string.
+
+**Since:** -1
+
+<!--Device-String-replace(searchValue: string | RegExp, replacer: (substring: string, ...args: any[]) => string): string--><!--Device-String-replace(searchValue: string | RegExp, replacer: (substring: string, ...args: any[]) => string): string-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| searchValue | string \| RegExp | Yes |  |
+| replacer | (substring: string, ...args: any[]) =&gt; string | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+## search
+
+```TypeScript
+search(regexp: string | RegExp): number
+```
+
+Finds the first substring match in a regular expression search.
+
+**Since:** -1
+
+<!--Device-String-search(regexp: string | RegExp): number--><!--Device-String-search(regexp: string | RegExp): number-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| regexp | string \| RegExp | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+## slice
+
+```TypeScript
+slice(start?: number, end?: number): string
+```
+
+Returns a section of a string.
+
+**Since:** -1
+
+<!--Device-String-slice(start?: number, end?: number): string--><!--Device-String-slice(start?: number, end?: number): string-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | number | No |  |
+| end | number | No |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+## split
+
+```TypeScript
+split(separator: string | RegExp, limit?: number): string[]
+```
+
+Split a string into substrings using the specified separator and return them as an array.
+
+**Since:** -1
+
+<!--Device-String-split(separator: string | RegExp, limit?: number): string[]--><!--Device-String-split(separator: string | RegExp, limit?: number): string[]-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| separator | string \| RegExp | Yes |  |
+| limit | number | No |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+## substr
+
+```TypeScript
+substr(from: number, length?: number): string
+```
+
+Gets a substring beginning at the specified location and having the specified length.
+
+**Since:** -1
+
+**Deprecated since:** legacy feature for browser compatibility
+
+<!--Device-String-substr(from: number, length?: number): string--><!--Device-String-substr(from: number, length?: number): string-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| from | number | Yes |  |
+| length | number | No |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+## substring
+
+```TypeScript
+substring(start: number, end?: number): string
+```
+
+Returns the substring at the specified location within a String object.
+
+**Since:** -1
+
+<!--Device-String-substring(start: number, end?: number): string--><!--Device-String-substring(start: number, end?: number): string-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | number | Yes |  |
+| end | number | No |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+## toLocaleLowerCase
+
+```TypeScript
+toLocaleLowerCase(locales?: string | string[]): string
+```
+
+Converts all alphabetic characters to lowercase, taking into account the host environment's current locale.
+
+**Since:** -1
+
+<!--Device-String-toLocaleLowerCase(locales?: string | string[]): string--><!--Device-String-toLocaleLowerCase(locales?: string | string[]): string-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| locales | string \| string[] | No |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+## toLocaleUpperCase
+
+```TypeScript
+toLocaleUpperCase(locales?: string | string[]): string
+```
+
+Returns a string where all alphabetic characters have been converted to uppercase, taking into account the host environment's current locale.
+
+**Since:** -1
+
+<!--Device-String-toLocaleUpperCase(locales?: string | string[]): string--><!--Device-String-toLocaleUpperCase(locales?: string | string[]): string-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| locales | string \| string[] | No |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+## toLowerCase
+
+```TypeScript
+toLowerCase(): string
+```
+
+Converts all the alphabetic characters in a string to lowercase.
+
+**Since:** -1
+
+<!--Device-String-toLowerCase(): string--><!--Device-String-toLowerCase(): string-End-->
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+## toString
+
+```TypeScript
+toString(): string
+```
+
+Returns a string representation of a string.
+
+**Since:** -1
+
+<!--Device-String-toString(): string--><!--Device-String-toString(): string-End-->
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+## toUpperCase
+
+```TypeScript
+toUpperCase(): string
+```
+
+Converts all the alphabetic characters in a string to uppercase.
+
+**Since:** -1
+
+<!--Device-String-toUpperCase(): string--><!--Device-String-toUpperCase(): string-End-->
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+## trim
+
+```TypeScript
+trim(): string
+```
+
+Removes the leading and trailing white space and line terminator characters from a string.
+
+**Since:** -1
+
+<!--Device-String-trim(): string--><!--Device-String-trim(): string-End-->
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+## valueOf
+
+```TypeScript
+valueOf(): string
+```
+
+Returns the primitive value of the specified object.
+
+**Since:** -1
+
+<!--Device-String-valueOf(): string--><!--Device-String-valueOf(): string-End-->
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+## length
+
+```TypeScript
+readonly length: number
+```
+
+Returns the length of a String object.
+
+**Type:** number
+
+**Since:** -1
+
+<!--Device-String-readonly length: number--><!--Device-String-readonly length: number-End-->
+

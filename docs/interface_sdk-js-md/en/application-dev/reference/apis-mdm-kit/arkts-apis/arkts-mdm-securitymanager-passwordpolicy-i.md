@@ -1,4 +1,4 @@
-# PasswordPolicy(Security Management)
+# PasswordPolicy
 
 Represents a device screen lock password policy.
 

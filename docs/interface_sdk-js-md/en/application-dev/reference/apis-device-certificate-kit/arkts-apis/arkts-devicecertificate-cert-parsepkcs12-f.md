@@ -41,9 +41,9 @@ Parses P12.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 | [19030008](../errorcode-cert.md#19030008-incorrect-private-key-password) | Maybe wrong password. |
 
@@ -258,9 +258,9 @@ Parses P12. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: <br>1. The length of the data is zero or too large; <br>2. The length of the password is too large. |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 | [19030008](../errorcode-cert.md#19030008-incorrect-private-key-password) | Maybe wrong password. |
 

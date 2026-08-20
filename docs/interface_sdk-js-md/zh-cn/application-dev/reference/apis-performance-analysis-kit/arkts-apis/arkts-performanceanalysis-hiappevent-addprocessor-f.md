@@ -12,7 +12,9 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 function addProcessor(processor: Processor): long
 ```
 
-添加数据处理者配置信息，用于配置处理者接收的事件名等信息。事件发生后处理者可以接收事件。 该接口为同步接口，包含耗时操作。为了确保性能，建议使用[addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md)异步接口或者交由子线程执行。
+添加数据处理者配置信息，用于配置处理者接收的事件名等信息。事件发生后处理者可以接收事件。
+
+该接口为同步接口，包含耗时操作。为了确保性能，建议使用[addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md)异步接口或者交由子线程执行。
 
 **起始版本：** 23
 

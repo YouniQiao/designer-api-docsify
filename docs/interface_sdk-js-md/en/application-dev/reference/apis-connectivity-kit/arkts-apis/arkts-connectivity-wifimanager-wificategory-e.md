@@ -1,6 +1,6 @@
 # WifiCategory
 
-Wi-Fi Category.
+Wi-Fi Category. @enum { int }
 
 **Since:** 23
 

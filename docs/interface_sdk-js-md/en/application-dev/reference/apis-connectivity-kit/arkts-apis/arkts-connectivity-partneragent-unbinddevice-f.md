@@ -40,8 +40,8 @@ Unbinds a partner device.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [34900001](../errorcode-fusionConnectivity.md#34900001-device-not-registered) | The device is not bound. |
 | [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) | Internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

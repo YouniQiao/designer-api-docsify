@@ -35,11 +35,11 @@ Applies a quick fix patch. This API uses an asynchronous callback to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [18500008](../errorcode-ability.md#18500008-internal-error) | Internal error. |
-| [18500002](../errorcode-ability.md#18500002-invalid-patch-package) | Invalid patch package. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [18500002](../errorcode-ability.md#18500002-invalid-patch-package) | Invalid patch package. |
+| [18500008](../errorcode-ability.md#18500008-internal-error) | Internal error. |
 
 **Examples**
 
@@ -95,11 +95,11 @@ Applies a quick fix patch. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [18500008](../errorcode-ability.md#18500008-internal-error) | Internal error. |
-| [18500002](../errorcode-ability.md#18500002-invalid-patch-package) | Invalid patch package. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [18500002](../errorcode-ability.md#18500002-invalid-patch-package) | Invalid patch package. |
+| [18500008](../errorcode-ability.md#18500008-internal-error) | Internal error. |
 
 **Examples**
 

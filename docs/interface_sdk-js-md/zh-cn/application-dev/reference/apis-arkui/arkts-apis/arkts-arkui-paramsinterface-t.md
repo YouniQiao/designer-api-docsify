@@ -1,4 +1,4 @@
-# ParamsInterface(页面路由)
+# ParamsInterface
 
 ```TypeScript
 type ParamsInterface = {

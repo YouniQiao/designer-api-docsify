@@ -2,6 +2,8 @@
 
 Defines the span options of TextContentController.
 
+@interface TextContentControllerOptions
+
 **起始版本：** 15
 
 <!--Device-unnamed-declare interface TextContentControllerOptions--><!--Device-unnamed-declare interface TextContentControllerOptions-End-->

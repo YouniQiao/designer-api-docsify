@@ -2,6 +2,8 @@
 
 操作结果的定义。
 
+@interface OperResult
+
 **起始版本：** 23
 
 <!--Device-avMusicTemplate-interface OperResult--><!--Device-avMusicTemplate-interface OperResult-End-->

@@ -83,7 +83,7 @@ try {
   console.info('auth start successfully.');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`auth failed. Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 
@@ -118,7 +118,7 @@ try {
   console.info('auth on successfully.');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`auth failed. Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 
@@ -132,7 +132,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 let reuseUnlockResult: userAuth.ReuseUnlockResult = {
   reuseMode: userAuth.ReuseMode.AUTH_TYPE_RELEVANT,
   reuseDuration: userAuth.MAX_ALLOWABLE_REUSE_DURATION,
-}
+};
 try {
   const rand = cryptoFramework.createRandom();
   const len: number = 16;
@@ -170,7 +170,7 @@ try {
   console.info('auth start successfully.');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`auth failed. Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 
@@ -184,7 +184,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 let reuseUnlockResult: userAuth.ReuseUnlockResult = {
   reuseMode: userAuth.ReuseMode.AUTH_TYPE_RELEVANT,
   reuseDuration: userAuth.MAX_ALLOWABLE_REUSE_DURATION,
-}
+};
 try {
   const rand = cryptoFramework.createRandom();
   const len: int = 16;
@@ -211,7 +211,7 @@ try {
   console.info('auth start successfully.');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`auth failed. Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 
@@ -225,7 +225,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 let reuseUnlockResult: userAuth.ReuseUnlockResult = {
   reuseMode: userAuth.ReuseMode.CALLER_IRRELEVANT_AUTH_TYPE_RELEVANT,
   reuseDuration: userAuth.MAX_ALLOWABLE_REUSE_DURATION,
-}
+};
 try {
   const rand = cryptoFramework.createRandom();
   const len: number = 16;
@@ -263,7 +263,7 @@ try {
   console.info('auth start successfully.');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`auth failed. Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 
@@ -277,7 +277,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 let reuseUnlockResult: userAuth.ReuseUnlockResult = {
   reuseMode: userAuth.ReuseMode.CALLER_IRRELEVANT_AUTH_TYPE_RELEVANT,
   reuseDuration: userAuth.MAX_ALLOWABLE_REUSE_DURATION,
-}
+};
 try {
   const rand = cryptoFramework.createRandom();
   const len: int = 16;
@@ -304,7 +304,7 @@ try {
   console.info('auth start successfully.');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`auth failed. Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 

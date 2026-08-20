@@ -2,6 +2,8 @@
 
 The type of XComponent
 
+@enum { number }
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare enum XComponentType--><!--Device-unnamed-declare enum XComponentType-End-->

@@ -41,7 +41,9 @@ checkbox的选中状态改变事件。isChecked为true时，表示checkbox已选
 checkTips?: ResourceStr
 ```
 
-checkbox的提示内容。 默认不设置或设置为undefined，提示内容不显示。
+checkbox的提示内容。
+
+默认不设置或设置为undefined，提示内容不显示。
 
 **类型：** ResourceStr
 
@@ -61,7 +63,9 @@ checkbox的提示内容。 默认不设置或设置为undefined，提示内容�
 content?: ResourceStr
 ```
 
-提示弹出框内容。 默认不设置或设置为undefined，弹出框内容不显示。
+提示弹出框内容。
+
+默认不设置或设置为undefined，弹出框内容不显示。
 
 **类型：** ResourceStr
 
@@ -81,7 +85,9 @@ content?: ResourceStr
 controller: CustomDialogController
 ```
 
-提示弹出框控制器，用于控制弹出框的显示和隐藏。 **说明：** 未使用@Require装饰，构造时不强制校验参数。
+提示弹出框控制器，用于控制弹出框的显示和隐藏。
+
+**说明：** 未使用@Require装饰，构造时不强制校验参数。
 
 **类型：** CustomDialogController
 
@@ -121,7 +127,9 @@ imageRes: ResourceStr | PixelMap
 imageSize?: SizeOptions
 ```
 
-自定义图片尺寸。 默认值：64*64vp
+自定义图片尺寸。
+
+默认值：64*64vp
 
 **类型：** SizeOptions
 
@@ -141,7 +149,9 @@ imageSize?: SizeOptions
 @Prop isChecked?: boolean
 ```
 
-value为true时，表示checkbox已选中，value为false时，表示未选中。 默认值：false
+value为true时，表示checkbox已选中，value为false时，表示未选中。
+
+默认值：false
 
 **类型：** boolean
 
@@ -163,7 +173,7 @@ onCheckedChange?: Callback<boolean>
 
 checkbox的选中状态改变事件回调。回调参数类型为boolean，true表示checkbox已选中，false表示checkbox未选中。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt;
 
 **起始版本：** 12
 
@@ -181,9 +191,11 @@ checkbox的选中状态改变事件回调。回调参数类型为boolean，true�
 primaryButton?: ButtonOptions
 ```
 
-提示弹出框左侧按钮。 默认不设置或设置为undefined，左侧按钮不显示。
+提示弹出框左侧按钮。
 
-**类型：** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
+默认不设置或设置为undefined，左侧按钮不显示。
+
+**类型：** [ButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-dialog-buttonoptions-c.md)
 
 **起始版本：** 10
 
@@ -201,9 +213,11 @@ primaryButton?: ButtonOptions
 secondaryButton?: ButtonOptions
 ```
 
-提示弹出框右侧按钮。 默认不设置或设置为undefined，右侧按钮不显示。
+提示弹出框右侧按钮。
 
-**类型：** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
+默认不设置或设置为undefined，右侧按钮不显示。
+
+**类型：** [ButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-dialog-buttonoptions-c.md)
 
 **起始版本：** 10
 
@@ -223,7 +237,7 @@ theme?: Theme | CustomTheme
 
 主题信息，可以是CustomTheme或从onWillApplyTheme中获取的Theme实例。
 
-**类型：** [Theme](../../apis-na/arkts-apis/arkts-na-arkui-theme-theme-i.md) \| [CustomTheme](../../apis-na/arkts-apis/arkts-na-arkui-theme-customtheme-i.md)
+**类型：** [Theme](../../apis-default/arkts-apis/arkts-arkui-theme-theme-i.md) \| [CustomTheme](../../apis-default/arkts-apis/arkts-arkui-theme-customtheme-i.md)
 
 **起始版本：** 12
 
@@ -241,7 +255,9 @@ theme?: Theme | CustomTheme
 themeColorMode?: ThemeColorMode
 ```
 
-自定义弹出框深浅色模式。 默认值：ThemeColorMode.SYSTEM
+自定义弹出框深浅色模式。
+
+默认值：ThemeColorMode.SYSTEM
 
 **类型：** ThemeColorMode
 
@@ -261,7 +277,11 @@ themeColorMode?: ThemeColorMode
 title?: ResourceStr
 ```
 
-提示弹出框标题。 默认不设置或设置为undefined，弹出框标题不显示。 **说明：** 标题超过两行会显示“...”。
+提示弹出框标题。
+
+默认不设置或设置为undefined，弹出框标题不显示。
+
+**说明：** 标题超过两行会显示“...”。
 
 **类型：** ResourceStr
 

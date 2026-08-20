@@ -12,7 +12,11 @@ import { connection } from '@kit.NetworkKit';
 function setNetExtAttribute(netHandle: NetHandle, netExtAttribute: string): Promise<void>
 ```
 
-Sets extended attributes of the network specified by **netHandle** to indicate its security level. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; Currently, this API is available only for PCs.
+Sets extended attributes of the network specified by **netHandle** to indicate its security level. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> Currently, this API is available only for PCs.
 
 **Since:** 20
 
@@ -39,10 +43,10 @@ Sets extended attributes of the network specified by **netHandle** to indicate i
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 

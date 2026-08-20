@@ -12,7 +12,11 @@ import { connection } from '@kit.NetworkKit';
 function reportNetConnected(netHandle: NetHandle, callback: AsyncCallback<void>): void
 ```
 
-向网络管理上报网络处于可用状态。使用callback方式异步回调。 &gt; **说明：** &gt; &gt; 该接口用于浏览器连接portal网络，网络认证成功后，向网络管理上报网络连接成功，网络管理会触发网络探测，更新网络状态。
+向网络管理上报网络处于可用状态。使用callback方式异步回调。
+
+> **说明：**
+> 
+> 该接口用于浏览器连接portal网络，网络认证成功后，向网络管理上报网络连接成功，网络管理会触发网络探测，更新网络状态。
 
 **起始版本：** 8
 
@@ -27,17 +31,17 @@ function reportNetConnected(netHandle: NetHandle, callback: AsyncCallback<void>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | netHandle | NetHandle | 是 | 网络句柄，参考[NetHandle](arkts-network-connection-nethandle-i.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当向网络管理报告网络处于可用状态成功，error为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当向网络管理报告网络处于可用状态成功，error为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 **示例**
 
@@ -100,11 +104,11 @@ function reportNetConnected(netHandle: NetHandle): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 **示例**
 

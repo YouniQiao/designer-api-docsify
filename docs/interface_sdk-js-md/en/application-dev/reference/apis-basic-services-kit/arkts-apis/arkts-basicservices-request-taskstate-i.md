@@ -53,7 +53,9 @@ File path.
 responseCode: int
 ```
 
-Return value of an upload task. The value **0** means that the task is successful, and other values means that the task fails. For details about the task result, see **message**. You are advised to create an upload task by using [request.agent.create](arkts-basicservices-agent-create-f.md)and handle exceptions based on standard error codes.
+Return value of an upload task. The value **0** means that the task is successful, and other values means that the task fails. For details about the task result, see **message**.
+
+You are advised to create an upload task by using [request.agent.create](arkts-basicservices-agent-create-f.md)and handle exceptions based on standard error codes.
 
 **Type:** int
 

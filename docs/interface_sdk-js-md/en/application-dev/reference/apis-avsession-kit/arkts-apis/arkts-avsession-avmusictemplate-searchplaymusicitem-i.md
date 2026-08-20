@@ -2,6 +2,8 @@
 
 The definition of SearchPlayMusicItem.
 
+@interface SearchPlayMusicItem
+
 **Since:** 23
 
 <!--Device-avMusicTemplate-interface SearchPlayMusicItem--><!--Device-avMusicTemplate-interface SearchPlayMusicItem-End-->

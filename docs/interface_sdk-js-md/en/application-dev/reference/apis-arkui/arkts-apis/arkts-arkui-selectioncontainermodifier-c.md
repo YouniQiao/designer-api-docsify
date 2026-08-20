@@ -2,7 +2,7 @@
 
 Defines SelectionContainer Modifier
 
-**Inheritance/Implementation:** SelectionContainerModifier extends [SelectionContainerAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) and implements AttributeModifier<SelectionContainerAttribute>
+**Inheritance/Implementation:** SelectionContainerModifier extends [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) and implements AttributeModifier<SelectionContainerAttribute>
 
 **Since:** 26.0.0
 
@@ -32,5 +32,5 @@ Defines the normal update attribute function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instance | [SelectionContainerAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | Yes |  |
+| instance | [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | Yes |  |
 

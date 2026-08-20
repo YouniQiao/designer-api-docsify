@@ -2,6 +2,8 @@
 
 systemScreenLock
 
+@namespace screenLock
+
 **Since:** 23
 
 <!--Device-unnamed-declare namespace screenLock--><!--Device-unnamed-declare namespace screenLock-End-->

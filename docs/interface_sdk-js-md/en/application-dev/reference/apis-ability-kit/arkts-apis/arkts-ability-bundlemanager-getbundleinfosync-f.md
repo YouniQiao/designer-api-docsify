@@ -12,7 +12,9 @@ import { bundleManager } from '@kit.AbilityKit';
 function getBundleInfoSync(bundleName: string, bundleFlags: int, userId: int): BundleInfo
 ```
 
-Obtains the bundle information based on the given bundle name, bundle flags, and user ID. This API returns the result synchronously. No permission is required for obtaining the caller's own information.
+Obtains the bundle information based on the given bundle name, bundle flags, and user ID. This API returns the result synchronously.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 23
 
@@ -40,11 +42,11 @@ Obtains the bundle information based on the given bundle name, bundle flags, and
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
+| [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
 
 **Examples**
 
@@ -91,7 +93,9 @@ try {
 function getBundleInfoSync(bundleName: string, bundleFlags: int): BundleInfo
 ```
 
-Obtains the bundle information for the caller's user based on the given bundle name and bundle flags. This API returns the result synchronously. No permission is required for obtaining the caller's own information.
+Obtains the bundle information for the caller's user based on the given bundle name and bundle flags. This API returns the result synchronously.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 23
 
@@ -118,10 +122,10 @@ Obtains the bundle information for the caller's user based on the given bundle n
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
+| [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
 
 **Examples**
 

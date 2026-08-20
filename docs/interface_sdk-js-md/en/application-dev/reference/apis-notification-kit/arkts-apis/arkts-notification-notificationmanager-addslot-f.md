@@ -12,7 +12,9 @@ import { notificationManager } from '@kit.NotificationKit';
 function addSlot(type: SlotType, callback: AsyncCallback<void>): void
 ```
 
-Adds a notification slot of a specified type. This API uses an asynchronous callback to return the result. The notification slot NotificationSlot defines the reminder type (such as alert sound, vibration, and banner) and level of a notification. Before publishing a notification, the application needs to create a corresponding type of notification slot first, or the system will automatically create a corresponding type of notification slot when the notification is published. Only one notification slot of the same type can be created.
+Adds a notification slot of a specified type. This API uses an asynchronous callback to return the result.
+
+The notification slot NotificationSlot defines the reminder type (such as alert sound, vibration, and banner) and level of a notification. Before publishing a notification, the application needs to create a corresponding type of notification slot first, or the system will automatically create a corresponding type of notification slot when the notification is published. Only one notification slot of the same type can be created.
 
 **Since:** 23
 
@@ -40,10 +42,10 @@ removeAllSlots removes all
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
 | [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
 
 **Examples**
 
@@ -68,7 +70,9 @@ notificationManager.addSlot(notificationManager.SlotType.SOCIAL_COMMUNICATION, a
 function addSlot(type: SlotType): Promise<void>
 ```
 
-Adds a notification slot of a specified type. This API uses a promise to return the result. The notification slot NotificationSlot defines the reminder type (such as alert sound, vibration, and banner) and level of a notification. Before publishing a notification, the application needs to create a corresponding type of notification slot first, or the system will automatically create a corresponding type of notification slot when the notification is published. Only one notification slot of the same type can be created.
+Adds a notification slot of a specified type. This API uses a promise to return the result.
+
+The notification slot NotificationSlot defines the reminder type (such as alert sound, vibration, and banner) and level of a notification. Before publishing a notification, the application needs to create a corresponding type of notification slot first, or the system will automatically create a corresponding type of notification slot when the notification is published. Only one notification slot of the same type can be created.
 
 **Since:** 23
 
@@ -101,10 +105,10 @@ removeAllSlots removes all notificationslots
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
 | [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
 
 **Examples**
 

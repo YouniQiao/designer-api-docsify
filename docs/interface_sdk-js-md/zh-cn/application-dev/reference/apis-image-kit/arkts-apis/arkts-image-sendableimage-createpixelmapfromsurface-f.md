@@ -38,8 +38,8 @@ Creates a PixelMap object from surface id.
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [62980115](../errorcode-image.md#62980115-图片无效参数) | If the image parameter invalid. |
-| [62980178](../errorcode-image.md#62980178-pixelmap创建失败) | Failed to create the PixelMap. |
 | [62980105](../errorcode-image.md#62980105-图片获取数据错误) | Failed to get the data. |
+| [62980178](../errorcode-image.md#62980178-pixelmap创建失败) | Failed to create the PixelMap. |
 
 **示例**
 

@@ -2,6 +2,8 @@
 
 投播组件显示模式参数选项。
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-unnamed-export declare enum AVCastPickerColorMode--><!--Device-unnamed-export declare enum AVCastPickerColorMode-End-->

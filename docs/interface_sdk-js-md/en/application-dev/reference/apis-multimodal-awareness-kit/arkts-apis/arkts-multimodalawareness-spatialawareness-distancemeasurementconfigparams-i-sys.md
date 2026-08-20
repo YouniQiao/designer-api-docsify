@@ -1,6 +1,6 @@
 # DistanceMeasurementConfigParams (System API)
 
-Configuration parameters for the distance measurement interface
+Configuration parameters for the distance measurement interface @interface DistanceMeasurementConfigParams
 
 **Since:** 23
 

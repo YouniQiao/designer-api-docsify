@@ -2,35 +2,17 @@
 
 Defines Polygon Modifier
 
-**Inheritance/Implementation:** PolygonModifier extends PolygonAttribute and implements AttributeModifier<PolygonAttribute>
+@implements PolygonAttribute, AttributeModifier&lt;PolygonAttribute&gt;
 
-**Since:** 20
+**Inheritance/Implementation:** PolygonModifier implements PolygonAttribute, AttributeModifier<PolygonAttribute>
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-export declare class PolygonModifier--><!--Device-unnamed-export declare class PolygonModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## applyNormalAttribute
-
-```TypeScript
-applyNormalAttribute?(instance: PolygonAttribute): void
-```
-
-Defines the normal update attribute function.
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PolygonModifier-applyNormalAttribute?(instance: PolygonAttribute): void--><!--Device-PolygonModifier-applyNormalAttribute?(instance: PolygonAttribute): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| instance | PolygonAttribute | Yes |  |
 

@@ -36,11 +36,11 @@ Obtains the storage space of an application, in bytes. This API uses an asynchro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid. |
-| 13600008 | No such object. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid. |
 | 13600001 | IPC error. |
+| 13600008 | No such object. |
 | 13900042 | Unknown error. |
 
 **Examples**
@@ -109,11 +109,11 @@ Obtains the storage space of an application, in bytes. This API uses a promise t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid. |
-| 13600008 | No such object. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid. |
 | 13600001 | IPC error. |
+| 13600008 | No such object. |
 | 13900042 | Unknown error. |
 
 **Examples**
@@ -143,4 +143,47 @@ try {
   hilog.error(0x0000, 'testTag', 'getBundleResourceInfo failed with error: %{public}s', message);
 }
 ```
+
+
+## getBundleStats
+
+```TypeScript
+function getBundleStats(packageName: string, option?: BundleStatsOptions): Promise<BundleStats>
+```
+
+Obtains the storage space of an application, in bytes. This API uses a promise to return the result.
+
+**Since:** 26.1.0
+
+**Required permissions:** ohos.permission.STORAGE_MANAGER
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-storageStatistics-function getBundleStats(packageName: string, option?: BundleStatsOptions): Promise<BundleStats>--><!--Device-storageStatistics-function getBundleStats(packageName: string, option?: BundleStatsOptions): Promise<BundleStats>-End-->
+
+**System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| packageName | string | Yes | Package name of the application. |
+| option | [BundleStatsOptions](arkts-corefile-storagestatistics-bundlestatsoptions-i-sys.md) | No | Options for obtaining the bundle statistics. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[BundleStats](arkts-corefile-storagestatistics-bundlestats-i.md)&gt; | Promise used to return the application storage space (in bytes) obtained. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| 13600001 | IPC error. |
+| 13600008 | No such object. |
 

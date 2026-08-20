@@ -52,7 +52,6 @@ PageTransitionEnter(event: PageTransitionCallback)
 
 | 名称 | 说明 |
 | --- | --- |
-| [PageTransitionOptions](arkts-arkui-pagetransitionoptions-i.md) | 退场/进场动效的参数。 |
 
 ### 类型
 
@@ -64,6 +63,4 @@ PageTransitionEnter(event: PageTransitionCallback)
 
 | 名称 | 说明 |
 | --- | --- |
-| [RouteType](arkts-arkui-routetype-e.md) | 页面转场类型。 |
-| [SlideEffect](arkts-arkui-slideeffect-e.md) | 页面转场时的滑入滑出效果。 |
 

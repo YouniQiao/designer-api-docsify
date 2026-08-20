@@ -79,7 +79,9 @@ Layout mode of the &lt;em&gt;WaterFlow&lt;/em&gt; component.
 scroller?: Scroller
 ```
 
-Controller of the scrollable component, bound to the scrollable component. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>The scroller cannot be bound to other scrollable components, such as ArcList, List, Grid, Scroll, or WaterFlow. &lt;/p&gt;
+Controller of the scrollable component, bound to the scrollable component.
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>The scroller cannot be bound to other scrollable components, such as ArcList, List, Grid, Scroll, or WaterFlow. &lt;/p&gt;
 
 **Type:** Scroller
 
@@ -97,7 +99,9 @@ Controller of the scrollable component, bound to the scrollable component. &lt;p
 sections?: WaterFlowSections
 ```
 
-Water flow item sections, used to implement mixed layouts with different column counts for each section within the same **WaterFlow** component. This is applicable to scenarios where different numbers of columns are required in different areas. If this parameter is not set, the layout with the same number of columns is used. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. When &lt;em&gt;sections&lt;/em&gt; is used, the &lt;em&gt;columnsTemplate&lt;/em&gt; and &lt;em&gt;rowsTemplate&lt;/em&gt; attributes are ignored. <br>2. When &lt;em&gt;sections&lt;/em&gt; is used, the footer cannot be set separately. The last section can function as the footer. &lt;/p&gt;
+Water flow item sections, used to implement mixed layouts with different column counts for each section within the same **WaterFlow** component. This is applicable to scenarios where different numbers of columns are required in different areas. If this parameter is not set, the layout with the same number of columns is used.
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. When &lt;em&gt;sections&lt;/em&gt; is used, the &lt;em&gt;columnsTemplate&lt;/em&gt; and &lt;em&gt;rowsTemplate&lt;/em&gt; attributes are ignored. <br>2. When &lt;em&gt;sections&lt;/em&gt; is used, the footer cannot be set separately. The last section can function as the footer. &lt;/p&gt;
 
 **Type:** [WaterFlowSections](arkts-arkui-waterflowsections-c.md)
 

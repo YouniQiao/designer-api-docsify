@@ -41,8 +41,8 @@ Checks whether the device supports the combination of the DRM solution, MIME typ
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 **Examples**
 
@@ -94,8 +94,8 @@ Checks whether the device supports the combination of the DRM solution and MIME 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 **Examples**
 
@@ -146,8 +146,8 @@ Checks whether the device supports the specified DRM solution.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed, the param name's length is zero or too big(exceeds 4096 Bytes). |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
 **Examples**
 

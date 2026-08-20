@@ -2,6 +2,8 @@
 
 Defines NavDestination Modifier
 
+@extends NavDestinationAttribute @implements AttributeModifier&lt;NavDestinationAttribute&gt;
+
 **Inheritance/Implementation:** NavDestinationModifier extends NavDestinationAttribute and implements AttributeModifier<NavDestinationAttribute>
 
 **Since:** 20

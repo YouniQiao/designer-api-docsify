@@ -1,6 +1,6 @@
 # ListScrollToOptions
 
-List scroll to options
+List scroll to options @interface ListScrollToOptions
 
 **Since:** 4
 

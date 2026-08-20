@@ -2,6 +2,8 @@
 
 枚举，表示系统音效类型。
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-systemSoundManager-enum SystemSoundType--><!--Device-systemSoundManager-enum SystemSoundType-End-->

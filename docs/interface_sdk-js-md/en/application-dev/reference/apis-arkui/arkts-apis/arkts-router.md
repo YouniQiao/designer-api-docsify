@@ -1,12 +1,28 @@
 # @ohos.router
 
-The **Router** module provides APIs to access pages through URLs. You can use the APIs to navigate to a specified page in an application, replace the current page with another one in the same application, and return to the previous page or a specified page. For routing management, it is recommended that you use the [Navigation](../../../ui/arkts-navigation-architecture.md) component instead as your application routing framework. &gt; **NOTE：**&gt; &gt; - Page routing APIs can be invoked only after page rendering is complete. Do not call these APIs in **onInit** and &gt; **onReady** when the page is still in the rendering phase. &gt; &gt; - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used &gt; where [the UI context is ambiguous](../../../ui/arkts-global-interface.md#ambiguous-ui-context). For details, see &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md). &gt; &gt; - When using &gt; [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl) &gt; or &gt; [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushnamedroute) &gt; with a callback to return the result, be aware that the stack information obtained through the callback using APIs &gt; such as [getLength](arkts-arkui-arkui-uicontext-router-c.md#getlength) represents an intermediate state during the &gt; navigation operation. This temporary state might differ from the final stack information available after the stack &gt; operation is complete.
+Copyright (c) 2025 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-**Since:** 8
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace router--><!--Device-unnamed-declare namespace router-End-->
 
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+**System capability:** 
+- API version 23 and later: SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
@@ -16,53 +32,18 @@ import { router } from '@kit.ArkUI';
 
 ## Summary
 
-### Functions
-
-| Name | Description |
-| --- | --- |
-| [back](arkts-arkui-router-back-f.md) | Returns to the previous page or a specified page, which deletes all pages between the current page and the target page. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-| [back](arkts-arkui-router-back-f.md) | Returns to the specified page, which deletes all pages between the current page and the target page. &gt; **NOTE：**&gt; &gt; - Since API version 12, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-| [clear](arkts-arkui-router-clear-f.md) | Clears all historical pages in the stack and retains only the current page at the top of the stack. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-| [disableAlertBeforeBackPage](arkts-arkui-router-disablealertbeforebackpage-f.md) | Disables the display of a confirm dialog box before returning to the previous page. |
-| [enableAlertBeforeBackPage](arkts-arkui-router-enablealertbeforebackpage-f.md) | Enables the display of a confirm dialog box before returning to the previous page. |
-| [getLength](arkts-arkui-router-getlength-f.md) | Obtains the number of pages in the current stack. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-| [getParams](arkts-arkui-router-getparams-f.md) | Obtains the parameters passed from the page that initiates redirection to the current page. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. &gt; &gt; **getParams** obtains only the parameters of the current page and does not clear the parameters associated with &gt; the page. |
-| [getState](arkts-arkui-router-getstate-f.md) | Obtains state information about the page at the top of the navigation stack. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-| [getStateByIndex](arkts-arkui-router-getstatebyindex-f.md) | Obtains the status information about a page by its index. &gt; **NOTE：**&gt; &gt; - Since API version 12, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-| [getStateByUrl](arkts-arkui-router-getstatebyurl-f.md) | Obtains the status information about a page by its URL. &gt; **NOTE：**&gt; &gt; - Since API version 12, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-| [hideAlertBeforeBackPage](arkts-arkui-router-hidealertbeforebackpage-f.md) | Disables the display of a confirm dialog box before returning to the previous page. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-| [push](arkts-arkui-router-push-f.md) | Navigates to a specified page in the application. |
-| [pushNamedRoute](arkts-arkui-router-pushnamedroute-f.md) | Navigates to a page using the named route. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-| [pushNamedRoute](arkts-arkui-router-pushnamedroute-f.md) | Navigates to a page using the named route. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-| [pushNamedRoute](arkts-arkui-router-pushnamedroute-f.md) | Navigates to a page using the named route. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-| [pushNamedRoute](arkts-arkui-router-pushnamedroute-f.md) | Navigates to a page using the named route. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-| [pushUrl](arkts-arkui-router-pushurl-f.md) | Navigates to a specified page in the application. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-| [pushUrl](arkts-arkui-router-pushurl-f.md) | Navigates to a specified page in the application. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-| [pushUrl](arkts-arkui-router-pushurl-f.md) | Navigates to a specified page in the application. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-| [pushUrl](arkts-arkui-router-pushurl-f.md) | Navigates to a specified page in the application. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-| [replace](arkts-arkui-router-replace-f.md) | Replaces the current page with another one in the application and destroys the current page. |
-| [replaceNamedRoute](arkts-arkui-router-replacenamedroute-f.md) | Replaces the current page with another one using the named route and destroys the current page. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-| [replaceNamedRoute](arkts-arkui-router-replacenamedroute-f.md) | Replaces the current page with another one using the named route and destroys the current page. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-| [replaceNamedRoute](arkts-arkui-router-replacenamedroute-f.md) | Replaces the current page with another one using the named route and destroys the current page. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-| [replaceNamedRoute](arkts-arkui-router-replacenamedroute-f.md) | Replaces the current page with another one using the named route and destroys the current page. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-| [replaceUrl](arkts-arkui-router-replaceurl-f.md) | Replaces the current page with another one in the application and destroys the current page. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-| [replaceUrl](arkts-arkui-router-replaceurl-f.md) | Replaces the current page with another one in the application and destroys the current page. This API cannot be used to configure page transition effects. To configure page transition effects, use the [Navigation](../../../ui/arkts-navigation-architecture.md) component. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-| [replaceUrl](arkts-arkui-router-replaceurl-f.md) | Replaces the current page with another one in the application and destroys the current page. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-| [replaceUrl](arkts-arkui-router-replaceurl-f.md) | Replaces the current page with another one in the application and destroys the current page. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-| [showAlertBeforeBackPage](arkts-arkui-router-showalertbeforebackpage-f.md) | Enables the display of a confirm dialog box before returning to the previous page. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context. |
-
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md) | Describes the page routing state. |
-| [NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | Describes the named route options. |
-| [RouterOptions](arkts-arkui-router-routeroptions-i.md) | Describes the page routing options. |
-| [RouterState](arkts-arkui-router-routerstate-i.md) | Describes the page routing state. |
+| [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md) |  |
+| [NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) |  |
+| [RouterOptions](arkts-arkui-router-routeroptions-i.md) |  |
+| [RouterState](arkts-arkui-router-routerstate-i.md) |  |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [RouterMode](arkts-arkui-router-routermode-e.md) | Enumerates the routing modes. |
+| [RouterMode](arkts-arkui-router-routermode-e.md) | Router Mode |
 

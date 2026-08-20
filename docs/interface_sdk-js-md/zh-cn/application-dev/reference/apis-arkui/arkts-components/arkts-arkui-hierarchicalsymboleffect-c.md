@@ -47,7 +47,9 @@ HierarchicalSymbolEffect的构造函数，层级动效。
 fillStyle?: EffectFillStyle
 ```
 
-动效模式。 默认值：EffectFillStyle.CUMULATIVE
+动效模式。
+
+默认值：EffectFillStyle.CUMULATIVE
 
 **类型：** [EffectFillStyle](arkts-arkui-effectfillstyle-e.md)
 

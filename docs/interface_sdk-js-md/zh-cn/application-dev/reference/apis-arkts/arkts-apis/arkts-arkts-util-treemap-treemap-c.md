@@ -36,7 +36,7 @@ $_iterator(): IterableIterator<[K, V]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | TreeMap的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | TreeMap的迭代器。 |
 
 **示例**
 
@@ -81,7 +81,7 @@ for (let item of treeMap) {
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | 返回包含此映射中所有键值对的迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回包含此映射中所有键值对的迭代器对象。 |
 
 **错误码：**
 
@@ -338,7 +338,7 @@ entries(): IterableIterator<[K, V]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | 返回一个迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回一个迭代器。 |
 
 **错误码：**
 
@@ -706,8 +706,8 @@ getHigherKey(key: K): K | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getHigherKey method cannot be bound. |
 | [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getHigherKey method cannot be bound. |
 
 **示例**
 
@@ -849,8 +849,8 @@ getLowerKey(key: K): K | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getLowerKey method cannot be bound. |
 | [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getLowerKey method cannot be bound. |
 
 **示例**
 
@@ -1040,7 +1040,7 @@ keys(): IterableIterator<K>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;K&gt; | 返回包含此映射中所有键的迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; | 返回包含此映射中所有键的迭代器对象。 |
 
 **错误码：**
 
@@ -1359,7 +1359,7 @@ values(): IterableIterator<V>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;V&gt; | 返回包含此映射中所有值的迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;V&gt; | 返回包含此映射中所有值的迭代器对象。 |
 
 **错误码：**
 

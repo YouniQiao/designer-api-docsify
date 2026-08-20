@@ -102,7 +102,7 @@ marginType: MarginTypeV2
 
 Margin Type of the ExceptionPromptV2. Margin from the content area to the edge of the container
 
-**Type:** [MarginTypeV2](arkts-arkui-arkui-advanced-exceptionpromptv2-margintypev2-e.md)
+**Type:** [MarginTypeV2](../../apis-default/arkts-apis/arkts-arkui-advanced-exceptionpromptv2-margintypev2-e.md)
 
 **Since:** 26.0.0
 
@@ -122,7 +122,7 @@ symbolStyle?: SymbolGlyphModifier
 
 Symbol icon style of the ExceptionPromptV2, which has higher priority than icon. If this parameter is not set or is set to undefined, the symbol icon is not displayed.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
 
 **Since:** 26.0.0
 

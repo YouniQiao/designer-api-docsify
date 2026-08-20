@@ -58,7 +58,9 @@ Whether the modal property is enabled for the child window. **true** if enabled,
 maximizeSupported?: boolean
 ```
 
-Whether the child window supports maximization. **true** if supported, **false** otherwise. The default value is **false**. This parameter can be used properly on devices that support the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode and are currently in that mode. On devices that do not support the freeform window mode, the API call will neither take effect nor report an error when this parameter is used as an input. On devices that support the freeform window mode but are not currently in that mode, the API call will neither take effect nor report an error when this parameter is used as an input. The setting will take effect after the devices switch to that mode.
+Whether the child window supports maximization. **true** if supported, **false** otherwise. The default value is **false**.
+
+This parameter can be used properly on devices that support the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode and are currently in that mode. On devices that do not support the freeform window mode, the API call will neither take effect nor report an error when this parameter is used as an input. On devices that support the freeform window mode but are not currently in that mode, the API call will neither take effect nor report an error when this parameter is used as an input. The setting will take effect after the devices switch to that mode.
 
 **Type:** boolean
 
@@ -94,7 +96,9 @@ Modality type of the child window. This parameter takes effect only when the mod
 outlineEnabled?: boolean
 ```
 
-Whether the child window displays an outline. **true** if displayed, **false** otherwise. The default value is **false**. This parameter can be properly used on 2-in-1 devices. If it is used as an input parameter on other device types, the corresponding API has no effect and does not report errors.
+Whether the child window displays an outline. **true** if displayed, **false** otherwise. The default value is **false**.
+
+This parameter can be properly used on 2-in-1 devices. If it is used as an input parameter on other device types, the corresponding API has no effect and does not report errors.
 
 **Type:** boolean
 

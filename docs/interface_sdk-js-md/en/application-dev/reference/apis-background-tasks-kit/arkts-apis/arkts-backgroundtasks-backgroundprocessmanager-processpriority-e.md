@@ -1,4 +1,4 @@
-# ProcessPriority(Background Child Process Management)
+# ProcessPriority
 
 Specifies the child process priority.
 

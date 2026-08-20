@@ -1,6 +1,8 @@
 # MouseController
 
-Provides the capability of simulating mouse operations. The simulated mouse operation sequence must meet the following requirements: 1. A mouse button can be pressed only when it is in the released state. 2. A mouse button can only be released after it has been pressed. 3. A valid axis event sequence must begin with a **beginAxis** call, followed by zero or more **updateAxis** calls, and end with an **endAxis** call. 4. Only one axis event sequence can be in progress at a time.
+Provides the capability of simulating mouse operations. The simulated mouse operation sequence must meet the following requirements:
+
+1. A mouse button can be pressed only when it is in the released state. 2. A mouse button can only be released after it has been pressed. 3. A valid axis event sequence must begin with a **beginAxis** call, followed by zero or more **updateAxis** calls, and end with an **endAxis** call. 4. Only one axis event sequence can be in progress at a time.
 
 **Since:** 26.0.0
 
@@ -49,9 +51,9 @@ Starts an axis event. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [4300001](../errorcode-inputeventclient.md#4300001-status-error) | The axis event is in progress. |
 | [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## endAxis
 
@@ -87,9 +89,9 @@ Ends an axis event. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [4300001](../errorcode-inputeventclient.md#4300001-status-error) | The axis event is not in progress. |
 | [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## moveTo
 
@@ -127,9 +129,9 @@ Moves the mouse cursor to the specified display coordinates. This API uses a pro
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [4300002](../errorcode-inputeventclient.md#4300002-display-does-not-exist) | The display does not exist. |
 | [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## pressButton
 
@@ -165,9 +167,9 @@ Presses a mouse button. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [4300001](../errorcode-inputeventclient.md#4300001-status-error) | The mouse button is already pressed. |
 | [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## releaseButton
 
@@ -203,9 +205,9 @@ Release a mouse button. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [4300001](../errorcode-inputeventclient.md#4300001-status-error) | The mouse button is not pressed. |
 | [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## updateAxis
 
@@ -242,7 +244,7 @@ Updates an axis event. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [4300001](../errorcode-inputeventclient.md#4300001-status-error) | The axis event is not in progress. |
 | [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 

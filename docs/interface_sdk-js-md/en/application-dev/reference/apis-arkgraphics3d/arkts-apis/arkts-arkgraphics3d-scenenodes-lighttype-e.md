@@ -2,6 +2,8 @@
 
 Enumerates the light types.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-unnamed-export enum LightType--><!--Device-unnamed-export enum LightType-End-->

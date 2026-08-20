@@ -38,8 +38,8 @@ Obtains the bundle name and clone index of a cloned application based on the giv
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700021](../errorcode-bundle.md#17700021-invalid-uid) | The uid is not found. |
 
 **Examples**
@@ -52,7 +52,7 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 let uid = 20010005;
 
 try {
-  bundleManager.getAppCloneIdentity(uid).then((res: bundleManager.AppCloneIdentity) => {
+  bundleManager.getAppCloneIdentity(uid).then((res) => {
     hilog.info(0x0000, 'testTag', 'getAppCloneIdentity res = %{public}s', JSON.stringify(res));
   }).catch((err: BusinessError) => {
     hilog.error(0x0000, 'testTag', 'getAppCloneIdentity failed. Cause: %{public}s', err.message);
@@ -71,7 +71,7 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 let uid = 20010005;
 
 try {
-  bundleManager.getAppCloneIdentity(uid).then((res) => {
+  bundleManager.getAppCloneIdentity(uid).then((res: bundleManager.AppCloneIdentity) => {
     hilog.info(0x0000, 'testTag', 'getAppCloneIdentity res = %{public}s', JSON.stringify(res));
   }).catch((err: BusinessError) => {
     hilog.error(0x0000, 'testTag', 'getAppCloneIdentity failed. Cause: %{public}s', err.message);

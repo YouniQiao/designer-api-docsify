@@ -1,4 +1,4 @@
-# USBEndpoint(USB Manager)
+# USBEndpoint
 
 通过USB发送和接收数据的端口。通过[USBInterface](arkts-basicservices-usb-usbinterface-i.md)获取。
 

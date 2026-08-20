@@ -2,6 +2,8 @@
 
 Defines Slider Modifier
 
+@extends SliderAttribute @implements AttributeModifier&lt;SliderAttribute&gt;
+
 **Inheritance/Implementation:** SliderModifier extends SliderAttribute and implements AttributeModifier<SliderAttribute>
 
 **Since:** 20
@@ -32,5 +34,5 @@ Defines the normal update attribute function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instance | [SliderAttribute](../../apis-na/arkts-apis/arkts-na-slider-sliderattribute-i.md) | Yes |  |
+| instance | [SliderAttribute](../../apis-default/arkts-components/arkts-slider-attribute.md) | Yes |  |
 

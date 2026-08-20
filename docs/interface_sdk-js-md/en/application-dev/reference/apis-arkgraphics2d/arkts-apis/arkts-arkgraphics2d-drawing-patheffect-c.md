@@ -1,6 +1,14 @@
 # PathEffect
 
-Implements a path effect. &gt; **NOTE：**&gt; &gt; - The initial APIs of this class are supported since API version 12. &gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - The module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
+Implements a path effect.
+
+> **NOTE：**
+> 
+> - The initial APIs of this class are supported since API version 12.
+> 
+> - This module uses the physical pixel unit, px.
+> 
+> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
 
 **Since:** 23
 

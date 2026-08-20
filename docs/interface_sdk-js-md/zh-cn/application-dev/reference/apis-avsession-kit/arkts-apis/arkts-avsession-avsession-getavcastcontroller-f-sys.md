@@ -12,7 +12,9 @@ import { avSession } from '@kit.AVSessionKit';
 function getAVCastController(sessionId: string, callback: AsyncCallback<AVCastController>): void
 ```
 
-设备建立连接后，获取投播控制器。结果通过callback异步回调方式返回。 此功能在本端和远端都可以使用，通过该接口可以获取一个相同的控制器，进行投播音频的播放控制。
+设备建立连接后，获取投播控制器。结果通过callback异步回调方式返回。
+
+此功能在本端和远端都可以使用，通过该接口可以获取一个相同的控制器，进行投播音频的播放控制。
 
 **起始版本：** 10
 
@@ -29,17 +31,17 @@ function getAVCastController(sessionId: string, callback: AsyncCallback<AVCastCo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sessionId | string | 是 | 用于指定要获取的投播控制器的sessionId。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md)&gt; | 是 | 回调函数，返回投播控制器实例。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md)&gt; | 是 | 回调函数，返回投播控制器实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | session does not exist |
-| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 **示例**
 
@@ -54,11 +56,15 @@ struct Index {
   build() {
     Column() {
       Text(this.message)
-        .onClick(() => {
-          let currentAVSession: avSession.AVSession | undefined = undefined;
-          let tag = "createNewSession";
-          let context = this.getUIContext().getHostContext() as Context;
-          let sessionId: string = ""; // 供后续函数入参使用。
+        .onClick(async () => {
+          // 获取当前系统中所有session的描述符。
+          let descriptors = await AVSessionManager.getAllSessionDescriptors();
+          if (descriptors.length === 0) {
+            console.error(`No session in system, can not create controller.`);
+            return;
+          }
+          // 取目标session的sessionId创建controller。
+          let sessionId = descriptors[0].sessionId;
 
           let avCastController: avSession.AVCastController;
           avSession.getAVCastController(sessionId, (avcontroller: avSession.AVCastController) => {
@@ -97,16 +103,16 @@ Register a callback to retrieve an avsession cast controller. This function can 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sessionId | string | 是 | Specifies the sessionId to get controller. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md) \| undefined&gt; | 是 | async callback for the AVCastController. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md) \| undefined&gt; | 是 | async callback for the AVCastController. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | session does not exist |
 | [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | session does not exist |
 
 
 ## getAVCastController
@@ -115,7 +121,9 @@ Register a callback to retrieve an avsession cast controller. This function can 
 function getAVCastController(sessionId: string): Promise<AVCastController>
 ```
 
-设备建立连接后，获取投播控制器。结果通过Promise方式返回。 此功能在本端和远端都可以使用，通过该接口可以获取一个相同的控制器，进行投播音频的播放控制。
+设备建立连接后，获取投播控制器。结果通过Promise方式返回。
+
+此功能在本端和远端都可以使用，通过该接口可以获取一个相同的控制器，进行投播音频的播放控制。
 
 **起始版本：** 10
 
@@ -143,11 +151,11 @@ function getAVCastController(sessionId: string): Promise<AVCastController>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | server exception |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | session does not exist |
-| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 
 ## getAVCastController
@@ -184,8 +192,8 @@ Get the current session's remote controller client. If the avsession is not unde
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | server exception |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | session does not exist |
 | [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | server exception |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | session does not exist |
 

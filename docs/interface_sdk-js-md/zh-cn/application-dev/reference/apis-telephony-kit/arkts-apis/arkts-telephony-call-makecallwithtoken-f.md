@@ -12,7 +12,11 @@ import { call } from '@kit.TelephonyKit';
 function makeCallWithToken(phoneNumber: string, options?: MakeCallOptions): Promise<string>
 ```
 
-跳转到拨号界面，并显示待拨出的号码。使用Promise异步回调。 &gt; **说明：**: &gt; &gt; 该接口返回校验token，应用可以利用phoneNumber和token实现特定能力，比如蜂窝下行流的录制。
+跳转到拨号界面，并显示待拨出的号码。使用Promise异步回调。
+
+> **说明：**:
+> 
+> 该接口返回校验token，应用可以利用phoneNumber和token实现特定能力，比如蜂窝下行流的录制。
 
 **起始版本：** 26.0.0
 
@@ -39,10 +43,10 @@ function makeCallWithToken(phoneNumber: string, options?: MakeCallOptions): Prom
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
-| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
 **示例**
 

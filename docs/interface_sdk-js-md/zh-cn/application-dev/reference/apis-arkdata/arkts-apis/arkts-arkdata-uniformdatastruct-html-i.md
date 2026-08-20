@@ -20,9 +20,19 @@ import { uniformDataStruct } from '@kit.ArkData';
 details?: Record<string, string>
 ```
 
-字典类型对象，key和value均为string类型，用于描述HTML的详细属性内容。非必填字段，默认值为空字典对象。例如，可生成一个details内容为 { "title":"标题", "content":"内容" } 的数据对象。
+字典类型对象，key和value均为string类型，用于描述HTML的详细属性内容。非必填字段，默认值为空字典对象。例如，可生成一个details内容为
 
-**类型：** Record&lt;string, string&gt;
+{
+
+"title":"标题",
+
+"content":"内容"
+
+}
+
+的数据对象。
+
+**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string&gt;
 
 **起始版本：** 23
 

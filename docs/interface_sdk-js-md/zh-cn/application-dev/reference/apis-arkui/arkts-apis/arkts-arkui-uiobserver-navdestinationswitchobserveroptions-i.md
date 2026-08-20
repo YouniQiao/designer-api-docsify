@@ -22,7 +22,7 @@ navigationId: ResourceStr
 
 指定需要监听的Navigation的ID。
 
-**类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
+**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
 
 **起始版本：** 12
 

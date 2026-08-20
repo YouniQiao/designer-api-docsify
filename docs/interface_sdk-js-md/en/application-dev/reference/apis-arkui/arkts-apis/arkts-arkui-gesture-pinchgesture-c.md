@@ -2,6 +2,8 @@
 
 Defines PinchGesture.
 
+@extends Gesture
+
 **Inheritance/Implementation:** PinchGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
 
 **Since:** 23

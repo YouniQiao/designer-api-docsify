@@ -143,7 +143,15 @@ How the Want object will be handled. By default, numbers are passed in. For deta
 parameters?: { [key: string]: any }
 ```
 
-Want parameters in the form of custom key-value (KV) pairs. By default, the following keys are carried: **ohos.aafwk.param.callerPid**: PID of the caller. **ohos.aafwk.param.callerToken**: token of the caller. **ohos.aafwk.param.callerUid**: UID in bundleInfo, that is, the application UID in the bundle information. - **component.startup.newRules**: whether to enable the new control rule. - **moduleName**: module name of the caller. No matter what this field is set to, the correct module name will be sent to the peer. - **ohos.dlp.params.sandbox**: available only for DLP files.
+Want parameters in the form of custom key-value (KV) pairs. By default, the following keys are carried:
+
+**ohos.aafwk.param.callerPid**: PID of the caller.
+
+**ohos.aafwk.param.callerToken**: token of the caller.
+
+**ohos.aafwk.param.callerUid**: UID in bundleInfo, that is, the application UID in the bundle information.
+
+- **component.startup.newRules**: whether to enable the new control rule. - **moduleName**: module name of the caller. No matter what this field is set to, the correct module name will be sent to the peer. - **ohos.dlp.params.sandbox**: available only for DLP files.
 
 **Type:** { [key: string]: any }
 

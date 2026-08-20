@@ -22,7 +22,9 @@ import { call } from '@kit.TelephonyKit';
 isCloud?: boolean
 ```
 
-Whether the number mark is from the cloud. The default value is **false**. - **true**: yes - **false**: no
+Whether the number mark is from the cloud. The default value is **false**.
+
+- **true**: yes - **false**: no
 
 **Type:** boolean
 

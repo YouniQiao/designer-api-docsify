@@ -22,7 +22,7 @@ componentTemplate: PluginComponentTemplate
 
 Component template.
 
-**Type:** [PluginComponentTemplate](../../apis-na/arkts-apis/arkts-na-plugincomponent-plugincomponenttemplate-i.md)
+**Type:** [PluginComponentTemplate](../../apis-default/arkts-apis/arkts-plugincomponent-plugincomponenttemplate-i.md)
 
 **Since:** 8
 
@@ -40,7 +40,7 @@ data: KVObject
 
 Component data.
 
-**Type:** [KVObject](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-kvobject-t.md)
+**Type:** [KVObject](../../apis-default/arkts-apis/arkts-plugincomponentmanager-kvobject-t.md)
 
 **Since:** 8
 
@@ -58,7 +58,7 @@ extraData: KVObject
 
 Extra data.
 
-**Type:** [KVObject](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-kvobject-t.md)
+**Type:** [KVObject](../../apis-default/arkts-apis/arkts-plugincomponentmanager-kvobject-t.md)
 
 **Since:** 8
 

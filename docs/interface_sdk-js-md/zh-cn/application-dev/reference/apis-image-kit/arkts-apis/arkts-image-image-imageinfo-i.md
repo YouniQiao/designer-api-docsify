@@ -76,7 +76,11 @@ true表示图片为高动态范围（HDR），false表示图片非高动态范�
 mimeType: string
 ```
 
-图片真实格式（MIME type）。 图片解码和图片编码支持格式的范围不同，请避免直接将解码得到的图片真实格式作为图片编码时[PackingOption](arkts-image-image-packingoption-i.md)的format。 可以使用ImageSource[属性](../../../reference/apis-image-kit/arkts-apis-image-ImageSource.md)中的supportedFormats和 ImagePacker[属性](../../../reference/apis-image-kit/arkts-apis-image-ImagePacker.md)中的supportedFormats查看解码和编码支持 的格式范围。
+图片真实格式（MIME type）。
+
+图片解码和图片编码支持格式的范围不同，请避免直接将解码得到的图片真实格式作为图片编码时[PackingOption](arkts-image-image-packingoption-i.md)的format。
+
+可以使用ImageSource[属性](../../../reference/apis-image-kit/arkts-apis-image-ImageSource.md)中的supportedFormats和 ImagePacker[属性](../../../reference/apis-image-kit/arkts-apis-image-ImagePacker.md)中的supportedFormats查看解码和编码支持 的格式范围。
 
 **类型：** string
 
@@ -132,7 +136,7 @@ size: Size
 stride: int
 ```
 
-跨距，内存中每行像素所占的空间。单位：字节（Byte）。stride &gt;= size.width * 4，不满足时数据读取异常。
+跨距，内存中每行像素所占的空间。单位：字节（Byte）。stride &gt;= size.width 4，不满足时数据读取异常。
 
 **类型：** int
 

@@ -2,6 +2,8 @@
 
 FileUri表示文件的URI，继承自uri.URI。
 
+@extends uri.URI
+
 **继承/实现关系：** FileUri extends uri.URI
 
 **起始版本：** 23
@@ -42,10 +44,10 @@ FileUri的构造函数，用于创建FileUri实例。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
 | 13900005 | I/O error |
-| 14300002 | Invalid uri |
+| 13900020 | Invalid argument |
 | 13900042 | Unknown error |
+| 14300002 | Invalid uri |
 
 **示例**
 

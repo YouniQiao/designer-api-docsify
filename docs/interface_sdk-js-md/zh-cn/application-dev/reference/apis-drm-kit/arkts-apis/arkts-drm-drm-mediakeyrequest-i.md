@@ -1,4 +1,4 @@
-# MediaKeyRequest(Defines the DRM capability.)
+# MediaKeyRequest
 
 媒体密钥请求参数。
 

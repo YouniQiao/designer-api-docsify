@@ -1,4 +1,4 @@
-# DateTimeFormat(国际化-Intl)
+# DateTimeFormat
 
 提供日期格式化的能力。
 

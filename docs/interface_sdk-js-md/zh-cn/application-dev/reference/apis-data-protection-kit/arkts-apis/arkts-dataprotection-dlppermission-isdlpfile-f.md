@@ -12,7 +12,9 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function isDLPFile(fd: number): Promise<boolean>
 ```
 
-根据文件的fd，查询该文件是否是DLP文件。使用Promise异步回调。 在文件处理流程中，需要先判断文件是否为DLP文件，再决定后续处理策略（如是否需要通过DLP沙箱打开）。
+根据文件的fd，查询该文件是否是DLP文件。使用Promise异步回调。
+
+在文件处理流程中，需要先判断文件是否为DLP文件，再决定后续处理策略（如是否需要通过DLP沙箱打开）。
 
 **起始版本：** 10
 
@@ -67,7 +69,9 @@ dlpPermission.isDLPFile(file).then((isDLPFile: boolean) => {
 function isDLPFile(fd: number, callback: AsyncCallback<boolean>): void
 ```
 
-根据文件的fd，查询该文件是否是DLP文件。调用成功后返回查询结果，true表示是DLP文件，false表示非DLP文件。使用callback异步回调。 在文件处理流程中，需要先判断文件是否为DLP文件，再决定后续处理策略（如是否需要通过DLP沙箱打开）。
+根据文件的fd，查询该文件是否是DLP文件。调用成功后返回查询结果，true表示是DLP文件，false表示非DLP文件。使用callback异步回调。
+
+在文件处理流程中，需要先判断文件是否为DLP文件，再决定后续处理策略（如是否需要通过DLP沙箱打开）。
 
 **起始版本：** 10
 
@@ -80,7 +84,7 @@ function isDLPFile(fd: number, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | fd | number | 是 | 待查询文件的fd（文件描述符）。取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]。当fd小于0时，抛出错误码19100001；当fd大于2&lt;sup&gt;31&lt;/sup&gt;-1时，fd 的值被截断。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，用于接收查询结果。回调参数包括：err（错误对象，查询成功时为undefined）和res（查询结果，返回true表示是DLP 文件，返回false表示非DLP文件）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数，用于接收查询结果。回调参数包括：err（错误对象，查询成功时为undefined）和res（查询结果，返回true表示是DLP 文件，返回false表示非DLP文件）。 |
 
 **错误码：**
 

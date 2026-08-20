@@ -2,6 +2,8 @@
 
 Defines Menu Modifier
 
+@extends MenuAttribute @implements AttributeModifier&lt;MenuAttribute&gt;
+
 **Inheritance/Implementation:** MenuModifier extends MenuAttribute and implements AttributeModifier<MenuAttribute>
 
 **Since:** 20

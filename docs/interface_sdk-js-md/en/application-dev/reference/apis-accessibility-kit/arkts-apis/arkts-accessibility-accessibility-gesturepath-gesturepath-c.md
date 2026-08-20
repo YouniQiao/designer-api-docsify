@@ -1,6 +1,8 @@
 # GesturePath
 
-GesturePath represents gesture path information. This module is used to create gesture path information for accessibility gesture injection.
+GesturePath represents gesture path information.
+
+This module is used to create gesture path information for accessibility gesture injection.
 
 **Since:** 9
 

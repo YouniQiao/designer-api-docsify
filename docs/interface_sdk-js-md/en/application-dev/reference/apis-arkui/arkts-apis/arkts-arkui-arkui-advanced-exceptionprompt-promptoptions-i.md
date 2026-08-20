@@ -1,6 +1,6 @@
 # PromptOptions
 
-Configuration parameter of ExceptionPrompt.
+Configuration parameter of ExceptionPrompt. @interface PromptOptions
 
 **Since:** 12
 
@@ -103,7 +103,7 @@ marginType: MarginType
 
 Margin Type of ExceptionPrompt.
 
-**Type:** [MarginType](arkts-arkui-arkui-advanced-exceptionprompt-margintype-e.md)
+**Type:** [MarginType](../../apis-default/arkts-apis/arkts-arkui-advanced-exceptionprompt-margintype-e.md)
 
 **Since:** 12
 

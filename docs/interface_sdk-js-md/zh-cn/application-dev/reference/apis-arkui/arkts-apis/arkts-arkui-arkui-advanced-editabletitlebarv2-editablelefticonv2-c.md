@@ -36,7 +36,7 @@ EditableLeftIconV2的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [EditableLeftIconV2Options](../../apis-na/arkts-apis/arkts-na-arkui-advanced-editabletitlebarv2-editablelefticonv2options-i.md) | 否 | 左侧图标配置选项。 |
+| options | [EditableLeftIconV2Options](../../apis-default/arkts-apis/arkts-arkui-advanced-editabletitlebarv2-editablelefticonv2options-i.md) | 否 | 左侧图标配置选项。 |
 
 ## defaultFocus
 
@@ -45,7 +45,13 @@ EditableLeftIconV2的构造函数。
   public defaultFocus: boolean
 ```
 
-是否默认获取焦点。 true：获焦。 false：不获焦。 默认值：false。
+是否默认获取焦点。
+
+true：获焦。
+
+false：不获焦。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -68,9 +74,11 @@ EditableLeftIconV2的构造函数。
   public iconType: EditableLeftIconTypeV2
 ```
 
-图标类型。 默认值：EditableLeftIconTypeV2.Back。
+图标类型。
 
-**类型：** [EditableLeftIconTypeV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-editabletitlebarv2-editablelefticontypev2-e.md)
+默认值：EditableLeftIconTypeV2.Back。
+
+**类型：** [EditableLeftIconTypeV2](../../apis-default/arkts-apis/arkts-arkui-advanced-editabletitlebarv2-editablelefticontypev2-e.md)
 
 **默认值：** EditableLeftIconTypeV2.Back
 
@@ -93,7 +101,7 @@ EditableLeftIconV2的构造函数。
 
 点击左侧图标的回调函数。未设置时，Back类型默认执行路由返回，Cancel类型无操作。
 
-**类型：** [OnActionCallback](../../apis-na/arkts-apis/arkts-na-onactioncallback-t.md)
+**类型：** [OnActionCallback](../../apis-default/arkts-apis/arkts-onactioncallback-t.md)
 
 **起始版本：** 26.0.0
 

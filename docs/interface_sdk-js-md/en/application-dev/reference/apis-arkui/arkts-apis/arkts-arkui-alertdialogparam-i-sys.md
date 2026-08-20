@@ -1,4 +1,4 @@
-# AlertDialogParam(AlertDialog)
+# AlertDialogParam
 
 Enumerates the alert dialog box styles.
 

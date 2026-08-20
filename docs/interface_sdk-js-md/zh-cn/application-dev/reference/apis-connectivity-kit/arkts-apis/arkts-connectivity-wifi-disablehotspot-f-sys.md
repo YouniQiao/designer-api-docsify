@@ -15,7 +15,9 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function disableHotspot(): boolean
 ```
 
-去使能热点。 &lt;p&gt;该方法是异步的。去使能热点后，如果WLAN已使能，WLAN可能会被重新使能。
+去使能热点。
+
+&lt;p&gt;该方法是异步的。去使能热点后，如果WLAN已使能，WLAN可能会被重新使能。
 
 **起始版本：** 7
 

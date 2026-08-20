@@ -2,7 +2,9 @@
 
 The **TextTimer** component displays timing information and is controlled in text format.
 
-## Child Components Not supported
+## Child Components
+
+Not supported
 
 ## TextTimer
 
@@ -34,6 +36,4 @@ Create TextTimer component.
 
 | Name | Description |
 | --- | --- |
-| [TextTimerConfiguration](arkts-arkui-texttimerconfiguration-i.md) | Defines the **TextTimer** configuration used by the **ContentModifier** API. You need a custom class to implement the **ContentModifier** API. |
-| [TextTimerOptions](arkts-arkui-texttimeroptions-i.md) | Sets the options used to build the **TextTimer** component. |
 

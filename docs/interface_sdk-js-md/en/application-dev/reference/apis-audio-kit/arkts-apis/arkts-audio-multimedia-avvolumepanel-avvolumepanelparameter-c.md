@@ -1,8 +1,10 @@
-# AVVolumePanelParameter(Defines a panel to set the system audio output volume.)
+# AVVolumePanelParameter
 
 Declare custom parameters used for volume panel.
 
-**Since:** 12
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare class AVVolumePanelParameter--><!--Device-unnamed-export declare class AVVolumePanelParameter-End-->
 
@@ -22,11 +24,11 @@ position?: Position
 
 Sets the position of volume panel.
 
-**Type:** [Position](../../apis-na/arkts-apis/arkts-na-units-position-i.md)
+**Type:** [Position](../../apis-default/arkts-apis/arkts-units-position-i.md)
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-AVVolumePanelParameter-position?: Position--><!--Device-AVVolumePanelParameter-position?: Position-End-->
 

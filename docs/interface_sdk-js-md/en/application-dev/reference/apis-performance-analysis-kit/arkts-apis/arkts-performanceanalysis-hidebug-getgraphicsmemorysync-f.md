@@ -12,7 +12,11 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 function getGraphicsMemorySync(): int
 ```
 
-Obtains the total GPU memory size (GL + graph) of an application in synchronous mode. &gt; **NOTE：**&gt; &gt; This API involves multiple cross-process communications, which may take seconds. To avoid performance problems, &gt; you are advised to use the asynchronous API **getGraphicsMemory** instead of this API in the main thread.
+Obtains the total GPU memory size (GL + graph) of an application in synchronous mode.
+
+> **NOTE：**
+> 
+> This API involves multiple cross-process communications, which may take seconds. To avoid performance problems, &gt; you are advised to use the asynchronous API **getGraphicsMemory** instead of this API in the main thread.
 
 **Since:** 23
 

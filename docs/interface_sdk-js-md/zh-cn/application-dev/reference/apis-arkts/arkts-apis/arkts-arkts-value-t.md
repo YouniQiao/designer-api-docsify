@@ -1,4 +1,4 @@
-# Value(定义ArkTS的Decimal类型。Decimal支持任意精度的十进制运算。)
+# Value
 
 ```TypeScript
 type Value = string | double | Decimal

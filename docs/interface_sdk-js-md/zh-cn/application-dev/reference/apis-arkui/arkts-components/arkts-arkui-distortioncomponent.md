@@ -32,13 +32,9 @@ Creates a DistortionComponent with content.
 
 | 名称 | 说明 |
 | --- | --- |
-| [DistortionComponentOptions](arkts-arkui-distortioncomponentoptions-i-sys.md) | 空间扭曲形变选项。 |
-| [DistortionParam](arkts-arkui-distortionparam-i-sys.md) | 空间扭曲形变参数。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [Vector2](arkts-arkui-vector2-t-sys.md) | 二维向量类型，包含x和y坐标，表示位置坐标关系。 |
-| [Vector4](arkts-arkui-vector4-t-sys.md) | 四维向量类型，包含x、y、z、w，各数值表示桶形形变程度。 |
 

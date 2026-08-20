@@ -66,7 +66,7 @@ try {
   console.info('Remote auth callback registered successfully');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`failed to register remote auth callback. Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`Failed to register remote auth callback. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 

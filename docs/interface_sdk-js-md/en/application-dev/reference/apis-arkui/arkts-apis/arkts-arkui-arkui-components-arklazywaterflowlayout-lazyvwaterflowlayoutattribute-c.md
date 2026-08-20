@@ -2,6 +2,8 @@
 
 Defines the lazy vertical waterflow layout attribute.
 
+@extends LazyWaterFlowLayoutAttribute&lt;LazyVWaterFlowLayoutAttribute&gt;
+
 **Inheritance/Implementation:** LazyVWaterFlowLayoutAttribute extends LazyWaterFlowLayoutAttribute<LazyVWaterFlowLayoutAttribute>
 
 **Since:** 26.0.0

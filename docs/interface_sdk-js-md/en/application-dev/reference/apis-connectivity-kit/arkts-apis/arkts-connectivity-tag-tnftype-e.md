@@ -2,6 +2,8 @@
 
 TNF types definitions, see NFCForum-TS-NDEF_1.0.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-tag-enum TnfType--><!--Device-tag-enum TnfType-End-->

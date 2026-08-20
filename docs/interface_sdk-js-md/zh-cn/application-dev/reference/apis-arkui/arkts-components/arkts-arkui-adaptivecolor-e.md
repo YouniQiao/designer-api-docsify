@@ -2,6 +2,8 @@
 
 取色模式。
 
+@enum { number }
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare enum AdaptiveColor--><!--Device-unnamed-declare enum AdaptiveColor-End-->

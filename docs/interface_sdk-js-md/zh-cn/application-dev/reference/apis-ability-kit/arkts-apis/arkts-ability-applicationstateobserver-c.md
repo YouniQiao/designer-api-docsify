@@ -1,5 +1,13 @@
 # ApplicationStateObserver
 
+应用状态监听器，可以作为入参传入 on('applicationState') 方法，监听应用的生命周期变化。   
+> **说明：**
+> 
+> 本模块首批接口从API version 14开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+## 导入模块  
+```ts
+import { appManager } from '
+
 **起始版本：** -1
 
 <!--Device-unnamed-export default class ApplicationStateObserver--><!--Device-unnamed-export default class ApplicationStateObserver-End-->
@@ -104,7 +112,7 @@ onProcessCreated(processData: ProcessData): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| processData | [ProcessData](arkts-ability-processdata-t.md) | 是 | 进程数据信息。 |
+| processData | [ProcessData](../../apis-default/arkts-apis/arkts-processdata-t.md) | 是 | 进程数据信息。 |
 
 ## onProcessDied
 
@@ -124,7 +132,7 @@ onProcessDied(processData: ProcessData): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| processData | [ProcessData](arkts-ability-processdata-t.md) | 是 | 进程数据信息。 |
+| processData | [ProcessData](../../apis-default/arkts-apis/arkts-processdata-t.md) | 是 | 进程数据信息。 |
 
 ## onProcessStateChanged
 
@@ -144,5 +152,5 @@ onProcessStateChanged(processData: ProcessData): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| processData | [ProcessData](arkts-ability-processdata-t.md) | 是 | 进程数据信息。 |
+| processData | [ProcessData](../../apis-default/arkts-apis/arkts-processdata-t.md) | 是 | 进程数据信息。 |
 

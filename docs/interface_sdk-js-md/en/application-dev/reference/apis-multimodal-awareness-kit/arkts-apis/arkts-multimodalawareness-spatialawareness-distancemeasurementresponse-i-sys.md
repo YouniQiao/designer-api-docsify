@@ -1,6 +1,6 @@
 # DistanceMeasurementResponse (System API)
 
-Interface for distance measurement result
+Interface for distance measurement result @interface DistanceMeasurementResponse
 
 **Since:** 23
 

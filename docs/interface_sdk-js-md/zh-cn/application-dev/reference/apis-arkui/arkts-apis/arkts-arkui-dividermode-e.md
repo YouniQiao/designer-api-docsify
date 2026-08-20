@@ -2,6 +2,8 @@
 
 Menu divider mode.
 
+@enum { number }
+
 **起始版本：** 19
 
 <!--Device-unnamed-declare enum DividerMode--><!--Device-unnamed-declare enum DividerMode-End-->

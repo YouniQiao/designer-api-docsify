@@ -1,6 +1,8 @@
 # WebController
 
-* WebController是ArkWeb组件的控制器类，用于控制Web组件的各种行为。一个WebController对象只能与一个Web组件绑定，绑定后开发者可通过该控制器对Web组件进行页面导航（前进/后退/加载）、焦点控制、缩放调 整、页面刷新与停止、Cookie管理、JavaScript注入与执行等操作。 WebController适用于需要在应用侧对嵌入式Web组件进行主动控制的场景，例如实现浏览器式的前进后退导航、在应用侧与网页侧之间建立JavaScript交互通道、动态加载网页内容或管理Cookie数据。
+WebController是ArkWeb组件的控制器类，用于控制Web组件的各种行为。一个WebController对象只能与一个Web组件绑定，绑定后开发者可通过该控制器对Web组件进行页面导航（前进/后退/加载）、焦点控制、缩放调 整、页面刷新与停止、Cookie管理、JavaScript注入与执行等操作。
+
+WebController适用于需要在应用侧对嵌入式Web组件进行主动控制的场景，例如实现浏览器式的前进后退导航、在应用侧与网页侧之间建立JavaScript交互通道、动态加载网页内容或管理Cookie数据。
 
 **起始版本：** 8
 
@@ -250,7 +252,11 @@ getHitTest(): HitTestType
 loadData(options: { data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string })
 ```
 
-baseUrl为空时，通过“data”协议加载指定的一段字符串。 当baseUrl为“data”协议时，编码后的data字符串将被Web组件作为“data”协议加载。 当baseUrl为“http/https”协议时，编码后的data字符串将被Web组件以类似loadUrl的方式以非编码字符串处理。
+baseUrl为空时，通过“data”协议加载指定的一段字符串。
+
+当baseUrl为“data”协议时，编码后的data字符串将被Web组件作为“data”协议加载。
+
+当baseUrl为“http/https”协议时，编码后的data字符串将被Web组件以类似loadUrl的方式以非编码字符串处理。
 
 **起始版本：** 8
 
@@ -274,7 +280,11 @@ baseUrl为空时，通过“data”协议加载指定的一段字符串。 当ba
 loadUrl(options: { url: string | Resource, headers?: Array<Header> })
 ```
 
-使用指定的HTTP头加载指定的URL。 通过loadUrl注入的对象只在当前document有效，即通过loadUrl导航到新的页面会无效。 而通过registerJavaScriptProxy注入的对象，在loadUrl导航到新的页面也会有效。
+使用指定的HTTP头加载指定的URL。
+
+通过loadUrl注入的对象只在当前document有效，即通过loadUrl导航到新的页面会无效。
+
+而通过registerJavaScriptProxy注入的对象，在loadUrl导航到新的页面也会有效。
 
 **起始版本：** 8
 

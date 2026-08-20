@@ -44,10 +44,10 @@ Cancel an in-progress pairing request.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
 
 ## connect
 
@@ -79,10 +79,10 @@ Connect all allowed profiles.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
 
 ## disconnect
 
@@ -114,10 +114,10 @@ Disconnect all connected profiles.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
 
 ## getDeviceAlias
 
@@ -149,10 +149,10 @@ Gets the alias of a remote device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
 
 ## getDeviceModel
 
@@ -182,9 +182,9 @@ Obtains the model information of a remote device.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 
 ## getRssiValue
 
@@ -216,10 +216,10 @@ Gets the RSSI value of a remote device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
 
 ## removePairedDevice
 
@@ -251,10 +251,10 @@ Remove a paired remote device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
 
 ## setConnectionInterval
 
@@ -286,10 +286,10 @@ Sets the connection interval with a remote device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
 
 ## setDeviceAlias
 
@@ -321,11 +321,11 @@ Sets the alias of a remote device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
-| 36100046 | String exceeds maximum length. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| 36100003 | NearLink disabled. |
+| 36100046 | String exceeds maximum length. |
+| 36100099 | Operation failed. |
 
 ## setPairingConfirmation
 
@@ -357,10 +357,10 @@ Set the confirmation to a pairing request.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
 
 ## setPairingPasscode
 
@@ -398,11 +398,11 @@ Set the passcode during pairing if the pairing type is passcode
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| 36100003 | NearLink disabled. |
 | 36100045 | Passcode must be a 6-digit number. |
+| 36100099 | Operation failed. |
 
 ## startCrediblePairing
 
@@ -434,8 +434,8 @@ Starts pairing with a credible remote NearLink device. This interface does not t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
 

@@ -51,11 +51,11 @@ Calls a method of an object registered with the host thread. This API is called 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200019](../errorcode-utils.md#10200019-failed-to-call-an-api-of-an-unregistered-object) | The globalCallObject is not registered. |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| [10200021](../errorcode-utils.md#10200021-waiting-for-a-global-call-times-out) | The global call exceeds the timeout. |
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200019](../errorcode-utils.md#10200019-failed-to-call-an-api-of-an-unregistered-object) | The globalCallObject is not registered. |
 | [10200020](../errorcode-utils.md#10200020-failed-to-call-an-api-of-a-registered-object) | The method to be called is not callable or is an async method or a generator. |
+| [10200021](../errorcode-utils.md#10200021-waiting-for-a-global-call-times-out) | The global call exceeds the timeout. |
 
 **Examples**
 
@@ -175,8 +175,8 @@ Sends a message from the Worker thread to the host thread by transferring object
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 
 **Examples**
 
@@ -229,8 +229,8 @@ Sends a message from the Worker thread to the host thread by transferring object
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 
 **Examples**
 
@@ -285,8 +285,8 @@ Sends a message from the Worker thread to the main thread by transferring object
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 
 ## postMessageWithSharedSendable
 
@@ -315,8 +315,8 @@ Sends a message from the Worker thread to the host thread. In the message, a sen
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 
 **Examples**
 

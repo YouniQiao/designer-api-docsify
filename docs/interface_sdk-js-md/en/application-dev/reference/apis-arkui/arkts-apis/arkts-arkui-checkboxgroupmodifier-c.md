@@ -2,6 +2,8 @@
 
 Defines CheckboxGroup Modifier
 
+@extends CheckboxGroupAttribute @implements AttributeModifier&lt;CheckboxGroupAttribute&gt;
+
 **Inheritance/Implementation:** CheckboxGroupModifier extends CheckboxGroupAttribute and implements AttributeModifier<CheckboxGroupAttribute>
 
 **Since:** 20
@@ -32,5 +34,5 @@ Defines the normal update attribute function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instance | [CheckboxGroupAttribute](../../apis-na/arkts-apis/arkts-na-checkboxgroup-checkboxgroupattribute-i.md) | Yes |  |
+| instance | [CheckboxGroupAttribute](../../apis-default/arkts-components/arkts-checkboxgroup-attribute.md) | Yes |  |
 

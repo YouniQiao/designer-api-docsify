@@ -25,7 +25,7 @@ Obtains the list of USB accessories connected to the host.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[Readonly](../../apis-na/arkts-apis/arkts-na-readonly-t.md)&lt;[USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md)&gt;&gt; | List of USB accessories (read-only). Currently, only one USB accessory is contained in the list. |
+| Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;[USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md)&gt;&gt; | List of USB accessories (read-only). Currently, only one USB accessory is contained in the list. |
 
 **Error codes:**
 

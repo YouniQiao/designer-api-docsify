@@ -2,6 +2,8 @@
 
 Euicc OS upgrade status.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-eSIM-export enum OsuStatus--><!--Device-eSIM-export enum OsuStatus-End-->

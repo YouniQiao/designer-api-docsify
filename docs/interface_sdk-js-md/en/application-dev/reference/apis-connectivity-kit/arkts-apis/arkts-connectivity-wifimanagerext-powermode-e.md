@@ -2,6 +2,8 @@
 
 The power Mode enumeration.
 
+@enum { number } PowerMode
+
 **Since:** 9
 
 <!--Device-wifiManagerExt-export enum PowerMode--><!--Device-wifiManagerExt-export enum PowerMode-End-->

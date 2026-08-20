@@ -2,6 +2,8 @@
 
 This module allows developers to export snapshot image from a component or a custom builder.
 
+@namespace componentSnapshot
+
 **Since:** 23
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.

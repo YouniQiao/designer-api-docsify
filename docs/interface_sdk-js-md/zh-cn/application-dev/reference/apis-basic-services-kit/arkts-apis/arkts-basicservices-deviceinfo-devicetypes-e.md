@@ -2,7 +2,9 @@
 
 设备类型枚举值，可用于校验deviceType的返回值。
 
-**起始版本：** 20
+**起始版本：** 24
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 <!--Device-deviceInfo-enum DeviceTypes--><!--Device-deviceInfo-enum DeviceTypes-End-->
 
@@ -16,9 +18,11 @@ TYPE_DEFAULT = 'default'
 
 默认设备。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DeviceTypes-TYPE_DEFAULT = 'default'--><!--Device-DeviceTypes-TYPE_DEFAULT = 'default'-End-->
 
@@ -32,9 +36,11 @@ TYPE_PHONE = 'phone'
 
 手机。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DeviceTypes-TYPE_PHONE = 'phone'--><!--Device-DeviceTypes-TYPE_PHONE = 'phone'-End-->
 
@@ -48,9 +54,11 @@ TYPE_TABLET = 'tablet'
 
 平板。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DeviceTypes-TYPE_TABLET = 'tablet'--><!--Device-DeviceTypes-TYPE_TABLET = 'tablet'-End-->
 
@@ -64,9 +72,11 @@ TYPE_2IN1 = '2in1'
 
 PC/2in1。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DeviceTypes-TYPE_2IN1 = '2in1'--><!--Device-DeviceTypes-TYPE_2IN1 = '2in1'-End-->
 
@@ -80,9 +90,11 @@ TYPE_TV = 'tv'
 
 智慧屏。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DeviceTypes-TYPE_TV = 'tv'--><!--Device-DeviceTypes-TYPE_TV = 'tv'-End-->
 
@@ -96,9 +108,11 @@ TYPE_WEARABLE = 'wearable'
 
 智能手表。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DeviceTypes-TYPE_WEARABLE = 'wearable'--><!--Device-DeviceTypes-TYPE_WEARABLE = 'wearable'-End-->
 
@@ -112,9 +126,11 @@ TYPE_CAR = 'car'
 
 车机。
 
-**起始版本：** 20
+**起始版本：** 24
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DeviceTypes-TYPE_CAR = 'car'--><!--Device-DeviceTypes-TYPE_CAR = 'car'-End-->
 

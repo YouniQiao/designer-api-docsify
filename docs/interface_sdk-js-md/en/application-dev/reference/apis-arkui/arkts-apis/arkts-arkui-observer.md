@@ -1,6 +1,10 @@
 # @ohos.arkui.observer
 
-Provides APIs for listening for UI component behavior changes. &gt; **NOTE：**&gt; &gt; - UIObserver can only listen for relevant information within the current process and does not support obtaining &gt; information in cross-process scenarios<!--Del--> such as UIExtensionComponent<!-- > DelEnd-->.
+Provides APIs for listening for UI component behavior changes.
+
+> **NOTE：**
+> 
+> - UIObserver can only listen for relevant information within the current process and does not support obtaining &gt; information in cross-process scenarios<!--Del--> such as UIExtensionComponent<!-- > DelEnd-->.
 
 **Since:** 11
 
@@ -73,7 +77,7 @@ import { uiObserver } from '@kit.ArkUI';
 | Name | Description |
 | --- | --- |
 | [NavDestinationState](arkts-arkui-uiobserver-navdestinationstate-e.md) | Describes the state of the **NavDestination** component. |
-| [RouterPageState](arkts-arkui-uiobserver-routerpagestate-e.md) | Enumerates the states of a page during routing. **RouterPageState** is used in [RouterPageInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-routerpageinfo-c.md) as the callback parameter for passive observation via [routerPageUpdate](arkts-arkui-uiobserver-onnavdestinationupdate-f.md#onnavdestinationupdate). |
+| [RouterPageState](arkts-arkui-uiobserver-routerpagestate-e.md) | Enumerates the states of a page during routing. **RouterPageState** is used in [RouterPageInfo](arkts-arkui-uiobserver-routerpageinfo-c.md) as the callback parameter for passive observation via [routerPageUpdate](arkts-arkui-uiobserver-onnavdestinationupdate-f.md#onnavdestinationupdate). |
 | [ScrollEventType](arkts-arkui-uiobserver-scrolleventtype-e.md) | ScrollEvent type. |
 | [TabContentState](arkts-arkui-uiobserver-tabcontentstate-e.md) | TabContent state. |
 

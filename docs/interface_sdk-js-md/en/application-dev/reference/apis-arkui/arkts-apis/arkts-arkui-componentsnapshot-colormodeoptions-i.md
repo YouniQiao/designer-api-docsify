@@ -42,7 +42,9 @@ Set one specific color space which want to be used.
 isAuto?: boolean
 ```
 
-Indicate that if the system should decide the color space automatically. If set this to true, the one specified by colorSpace parameter will be ignored. When setting isAuto to true, it is recommended to also set the waitUntilRenderFinished field in SnapshotOptions to true to ensure that the system can properly detect the mode being used.
+Indicate that if the system should decide the color space automatically. If set this to true, the one specified by colorSpace parameter will be ignored.
+
+When setting isAuto to true, it is recommended to also set the waitUntilRenderFinished field in SnapshotOptions to true to ensure that the system can properly detect the mode being used.
 
 **Type:** boolean
 

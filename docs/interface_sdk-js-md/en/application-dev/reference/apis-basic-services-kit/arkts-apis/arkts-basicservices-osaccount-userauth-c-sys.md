@@ -58,28 +58,28 @@ Performs authentication of the current user.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300091 | Cross-device communication failed.<br>**Applicable version:** 20 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid challenge, authType or authTrustLevel. |
+| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception.<br>**Applicable version:** 12 and later |
+| 12300020 | Device hardware abnormal.<br>**Applicable version:** 20 and later |
 | 12300090 | Cross-device capability not supported.<br>**Applicable version:** 20 and later |
+| 12300091 | Cross-device communication failed.<br>**Applicable version:** 20 and later |
+| [12300101](../errorcode-account.md#12300101-incorrect-credential) | The credential is incorrect. |
+| [12300102](../errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
+| [12300105](../errorcode-account.md#12300105-trust-level-not-supported) | The trust level is not supported. |
+| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
+| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
+| [12300110](../errorcode-account.md#12300110-authentication-locked) | The authentication is locked. |
+| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The authentication time out. |
+| [12300112](../errorcode-account.md#12300112-authentication-service-does-not-respond) | The authentication service is busy. |
+| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | The authentication service does not exist.<br>**Applicable version:** 12 and later |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally.<br>**Applicable version:** 12 and later |
+| [12300117](../errorcode-account.md#12300117-pin-expired) | PIN is expired.<br>**Applicable version:** 12 and later |
+| 12300119 | Multi-factor authentication failed.<br>**Applicable version:** 20 and later |
 | [12300120](../errorcode-account.md#12300120-credential-expired) | The credentials are no longer valid.<br>**Applicable version:** 23 and later |
 | 12300211 | Server unreachable.<br>**Applicable version:** 12 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally.<br>**Applicable version:** 12 and later |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | The authentication service does not exist.<br>**Applicable version:** 12 and later |
-| [12300112](../errorcode-account.md#12300112-authentication-service-does-not-respond) | The authentication service is busy. |
-| 12300119 | Multi-factor authentication failed.<br>**Applicable version:** 20 and later |
-| [12300117](../errorcode-account.md#12300117-pin-expired) | PIN is expired.<br>**Applicable version:** 12 and later |
-| 12300020 | Device hardware abnormal.<br>**Applicable version:** 20 and later |
-| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
-| [12300105](../errorcode-account.md#12300105-trust-level-not-supported) | The trust level is not supported. |
-| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The authentication time out. |
-| [12300110](../errorcode-account.md#12300110-authentication-locked) | The authentication is locked. |
-| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception.<br>**Applicable version:** 12 and later |
-| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid challenge, authType or authTrustLevel. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300102](../errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
-| [12300101](../errorcode-account.md#12300101-incorrect-credential) | The credential is incorrect. |
 
 **Examples**
 
@@ -147,29 +147,29 @@ Starts user authentication based on the specified challenge value, authenticatio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300091 | Cross-device communication failed.<br>**Applicable version:** 20 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid challenge, authType, authTrustLevel or options. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
+| 12300020 | Device hardware abnormal.<br>**Applicable version:** 20 and later |
 | 12300090 | Cross-device capability not supported.<br>**Applicable version:** 20 and later |
+| 12300091 | Cross-device communication failed.<br>**Applicable version:** 20 and later |
+| [12300101](../errorcode-account.md#12300101-incorrect-credential) | The credential is incorrect. |
+| [12300102](../errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
+| [12300105](../errorcode-account.md#12300105-trust-level-not-supported) | The trust level is not supported. |
+| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
+| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
+| [12300110](../errorcode-account.md#12300110-authentication-locked) | The authentication is locked. |
+| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The authentication timeout. |
+| [12300112](../errorcode-account.md#12300112-authentication-service-does-not-respond) | The authentication service is busy. |
+| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | The authentication service does not exist. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally. |
+| [12300117](../errorcode-account.md#12300117-pin-expired) | PIN is expired. |
+| 12300119 | Multi-factor authentication failed.<br>**Applicable version:** 20 and later |
 | [12300120](../errorcode-account.md#12300120-credential-expired) | The credentials are no longer valid.<br>**Applicable version:** 23 and later |
 | 12300211 | Server unreachable. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | The authentication service does not exist. |
-| [12300112](../errorcode-account.md#12300112-authentication-service-does-not-respond) | The authentication service is busy. |
-| 12300119 | Multi-factor authentication failed.<br>**Applicable version:** 20 and later |
-| [12300117](../errorcode-account.md#12300117-pin-expired) | PIN is expired. |
-| 12300020 | Device hardware abnormal.<br>**Applicable version:** 20 and later |
-| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
-| [12300105](../errorcode-account.md#12300105-trust-level-not-supported) | The trust level is not supported. |
-| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The authentication timeout. |
-| [12300110](../errorcode-account.md#12300110-authentication-locked) | The authentication is locked. |
-| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
-| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid challenge, authType, authTrustLevel or options. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300102](../errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
-| [12300101](../errorcode-account.md#12300101-incorrect-credential) | The credential is incorrect. |
 
 **Examples**
 
@@ -240,29 +240,29 @@ Performs authentication of the specified user. This API uses an asynchronous cal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300091 | Cross-device communication failed.<br>**Applicable version:** 20 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid challenge, authType or authTrustLevel. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
+| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception.<br>**Applicable version:** 12 and later |
+| 12300020 | Device hardware abnormal.<br>**Applicable version:** 20 and later |
 | 12300090 | Cross-device capability not supported.<br>**Applicable version:** 20 and later |
+| 12300091 | Cross-device communication failed.<br>**Applicable version:** 20 and later |
+| [12300101](../errorcode-account.md#12300101-incorrect-credential) | The credential is incorrect. |
+| [12300102](../errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
+| [12300105](../errorcode-account.md#12300105-trust-level-not-supported) | The trust level is not supported. |
+| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
+| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
+| [12300110](../errorcode-account.md#12300110-authentication-locked) | The authentication is locked. |
+| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The authentication timeout. |
+| [12300112](../errorcode-account.md#12300112-authentication-service-does-not-respond) | The authentication service is busy. |
+| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | The authentication service does not exist.<br>**Applicable version:** 12 and later |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally.<br>**Applicable version:** 12 and later |
+| [12300117](../errorcode-account.md#12300117-pin-expired) | PIN is expired.<br>**Applicable version:** 12 and later |
+| 12300119 | Multi-factor authentication failed.<br>**Applicable version:** 20 and later |
 | [12300120](../errorcode-account.md#12300120-credential-expired) | The credentials are no longer valid.<br>**Applicable version:** 23 and later |
 | 12300211 | Server unreachable.<br>**Applicable version:** 12 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally.<br>**Applicable version:** 12 and later |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | The authentication service does not exist.<br>**Applicable version:** 12 and later |
-| [12300112](../errorcode-account.md#12300112-authentication-service-does-not-respond) | The authentication service is busy. |
-| 12300119 | Multi-factor authentication failed.<br>**Applicable version:** 20 and later |
-| [12300117](../errorcode-account.md#12300117-pin-expired) | PIN is expired.<br>**Applicable version:** 12 and later |
-| 12300020 | Device hardware abnormal.<br>**Applicable version:** 20 and later |
-| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
-| [12300105](../errorcode-account.md#12300105-trust-level-not-supported) | The trust level is not supported. |
-| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The authentication timeout. |
-| [12300110](../errorcode-account.md#12300110-authentication-locked) | The authentication is locked. |
-| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception.<br>**Applicable version:** 12 and later |
-| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid challenge, authType or authTrustLevel. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300102](../errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
-| [12300101](../errorcode-account.md#12300101-incorrect-credential) | The credential is incorrect. |
 
 **Examples**
 
@@ -315,11 +315,11 @@ Cancels an authentication.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid contextId. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid contextId. |
 
 **Examples**
 
@@ -406,11 +406,11 @@ Obtains the available status of the authentication capability corresponding to t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid authType or authTrustLevel. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid authType or authTrustLevel. |
 | [12300117](../errorcode-account.md#12300117-pin-expired) | PIN is expired. |
 
 **Examples**
@@ -459,11 +459,11 @@ Obtains the executor property based on the request. This API uses an asynchronou
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid request. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid request. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
 **Examples**
@@ -529,11 +529,11 @@ Obtains the executor property based on the request. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid request. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid request. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
 **Examples**
@@ -599,11 +599,11 @@ Obtains the specified property information of the associated executor based on t
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid keys. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300102](../errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid keys. |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
+| [12300102](../errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
 
 **Examples**
 
@@ -714,13 +714,13 @@ Prepares for remote authentication. This API uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300091 | Cross-device communication failed.<br>**Applicable version:** 20 and later |
-| 12300090 | Cross-device capability not supported.<br>**Applicable version:** 20 and later |
-| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | Operation timeout.<br>**Applicable version:** 20 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid remoteNetworkId. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid remoteNetworkId. |
+| 12300090 | Cross-device capability not supported.<br>**Applicable version:** 20 and later |
+| 12300091 | Cross-device communication failed.<br>**Applicable version:** 20 and later |
+| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | Operation timeout.<br>**Applicable version:** 20 and later |
 
 **Examples**
 
@@ -776,11 +776,11 @@ Sets the property for the initialization algorithm. This API uses an asynchronou
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid request. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid request. |
 
 **Examples**
 
@@ -841,11 +841,11 @@ Sets the property for the initialization algorithm. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid request. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid request. |
 
 **Examples**
 

@@ -39,10 +39,10 @@ Duplicates the file descriptor and returns the corresponding **File** object.
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900004 | Interrupted system call |
-| 13900020 | Invalid argument |
 | 13900005 | I/O error |
-| 13900022 | Too many open files |
-| 13900014 | Device or resource busy |
 | 13900008 | Bad file descriptor |
+| 13900014 | Device or resource busy |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
 | 13900042 | Unknown error |
 

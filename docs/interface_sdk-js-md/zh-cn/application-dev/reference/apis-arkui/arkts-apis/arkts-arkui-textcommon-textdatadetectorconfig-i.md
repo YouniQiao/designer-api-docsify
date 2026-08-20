@@ -16,7 +16,9 @@
 color?: ResourceColor
 ```
 
-设置文本识别成功后的实体颜色。 默认值：'#ff0a59f7'
+设置文本识别成功后的实体颜色。
+
+默认值：'#ff0a59f7'
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -36,7 +38,19 @@ color?: ResourceColor
 decoration?: DecorationStyleInterface
 ```
 
-设置文本识别成功后的实体装饰线样式。 默认值： { type: TextDecorationType.Underline, color: 与实体颜色一致, style: TextDecorationStyle.SOLID }
+设置文本识别成功后的实体装饰线样式。
+
+默认值：
+
+{
+
+ type: TextDecorationType.Underline,
+
+ color: 与实体颜色一致,
+
+ style: TextDecorationStyle.SOLID
+
+}
 
 **类型：** [DecorationStyleInterface](arkts-arkui-styledstring-decorationstyleinterface-i.md)
 
@@ -56,7 +70,11 @@ decoration?: DecorationStyleInterface
 enablePreviewMenu?: boolean
 ```
 
-设置是否开启文本识别长按显示预览菜单。true表示开启，false表示未开启。 默认值：false 当[copyOptions](../../../reference/apis-arkui/arkui-ts/ts-basic-components-richeditor.md#copyoptions)设置为None时，若 enablePreviewMenu设置为true，长按AI实体也不能显示预览菜单。
+设置是否开启文本识别长按显示预览菜单。true表示开启，false表示未开启。
+
+默认值：false
+
+当[copyOptions](../../../reference/apis-arkui/arkui-ts/ts-basic-components-richeditor.md#copyoptions)设置为None时，若 enablePreviewMenu设置为true，长按AI实体也不能显示预览菜单。
 
 **类型：** boolean
 

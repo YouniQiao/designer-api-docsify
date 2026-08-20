@@ -1,5 +1,16 @@
 # @ohos.sensor
 
+@ohos.sensor 模块是鸿蒙操作系统提供的传感器服务模块，属于 SensorServiceKit。该模块为开发者提供了统一的传感器数据访问能力，涵盖设备上各类物理传感器的数据订阅、查询以及传感器算法计算。 sensor 模块是传感器数据访问的统一接口，定义了设备上各类物理传感器的订阅、查询和算法计算能力。 当应用需要感知设备运动状态（如摇一摇、翻转）、检测环境条件（如自动调节屏幕亮度、测量气压估算海拔）、获取设备方向（如指南针导航）、监测健康数据（如心率计步）时，应使用本模块订阅对应传感器数据。当需要进行传感器数据相关的数学变换和计算时 ，应使用传感器算法接口。
+
+> **说明：**
+
+> 本模块首批接口从API version 8开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。订阅前可使用 &gt; [getSingleSensor](arkts-sensorservice-sensor-getsinglesensor-f.md) &gt; 接口获取该传感器的信息，获取该传感器信息成功时可正常订阅传感器，异常情况详见 &gt; [getSingleSensor](arkts-sensorservice-sensor-getsinglesensor-f.md)错误码说明。
+> 订阅传感器数据时确保on订阅和off取消订阅成对出现。sensor模块提供传感器数据订阅与查询能力，核心使用流程如下：
+
+1. 使用[sensor.getSingleSensor](arkts-sensorservice-sensor-getsinglesensor-f.md) 或[sensor.getSensorListSync](arkts-sensorservice-sensor-getsensorlistsync-f.md)查询传感器信息，确认设备支持目标传感器。 2. 使用sensor.on接口订阅传感器数据，持续接收数据回调。 3. 使用sensor.once接口获取一次传感器数据，适用于无需持续监听的场景。 4. 使用sensor.off接口取消订阅，确保on和off成对调用。 sensor.on与sensor.once的区别：
+
+- sensor.on持续订阅传感器数据，通过callback反复上报，适用于需要实时监测的场景。 - sensor.once仅获取一次传感器数据，callback只触发一次后自动取消订阅，适用于单次采集的场景。 注意事项： - 订阅前建议先使用getSingleSensor确认设备支持该传感器。 - on订阅和off取消订阅必须成对出现，避免资源泄漏。 - 对于需要权限的传感器（加速度、陀螺仪、心率、计步等），须先申请相应权限。
+
 **起始版本：** 23
 
 <!--Device-unnamed-declare namespace sensor--><!--Device-unnamed-declare namespace sensor-End-->

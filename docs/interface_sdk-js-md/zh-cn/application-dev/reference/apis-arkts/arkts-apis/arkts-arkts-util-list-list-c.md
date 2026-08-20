@@ -37,7 +37,7 @@ $_iterator(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
 
 **示例**
 
@@ -89,7 +89,7 @@ while(!temp.done) {
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 返回一个迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个迭代器。 |
 
 **错误码：**
 

@@ -1,4 +1,4 @@
-# UploadResponse(Upload and Download)
+# UploadResponse
 
 **Since:** 3
 

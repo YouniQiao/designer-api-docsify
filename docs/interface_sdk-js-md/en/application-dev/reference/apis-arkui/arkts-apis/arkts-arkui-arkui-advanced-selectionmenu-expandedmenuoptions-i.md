@@ -1,0 +1,40 @@
+# ExpandedMenuOptions
+
+Describes the expanded drop-down menu options.
+
+Inherits from MenuItemOptions.
+
+**Inheritance/Implementation:** ExpandedMenuOptions extends MenuItemOptions
+
+**Since:** 11
+
+<!--Device-unnamed-export interface ExpandedMenuOptions--><!--Device-unnamed-export interface ExpandedMenuOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+import { EditorEventInfo, EditorMenuOptions, ExpandedMenuOptions, SelectionMenu, SelectionMenuOptions } from '@kit.ArkUI';
+```
+
+## action
+
+```TypeScript
+action?: () => void
+```
+
+Action triggered when the menu option is clicked.
+
+**Type:** () =&gt; void
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ExpandedMenuOptions-action?: () => void--><!--Device-ExpandedMenuOptions-action?: () => void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

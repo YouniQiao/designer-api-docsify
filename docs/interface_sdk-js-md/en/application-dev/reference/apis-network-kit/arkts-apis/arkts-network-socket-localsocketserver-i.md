@@ -20,7 +20,11 @@ import { socket } from '@kit.NetworkKit';
 close(): Promise<void>
 ```
 
-Stops listening for events of the **LocalSocketServer** object and releases the port bound by [listen](#listen). This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API does not close existing connections. To close the connection, call the [close] (#close11-1) API of &gt; [LocalSocketConnection] (#localsocketconnection11).
+Stops listening for events of the **LocalSocketServer** object and releases the port bound by [listen](#listen). This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API does not close existing connections. To close the connection, call the [close] (#close11-1) API of &gt; [LocalSocketConnection] (#localsocketconnection11).
 
 **Since:** 20
 
@@ -74,7 +78,11 @@ localserver.listen(addr).then(() => {
 getExtraOptions(): Promise<ExtraOptionsBase>
 ```
 
-Obtains the socket properties of the **LocalSocketServer** object. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **listen** is successfully called.
+Obtains the socket properties of the **LocalSocketServer** object. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **listen** is successfully called.
 
 **Since:** 11
 
@@ -126,7 +134,11 @@ server.getExtraOptions().then((options: socket.ExtraOptionsBase) => {
 getLocalAddress(): Promise<string>
 ```
 
-Obtains the local socket address of a **LocalSocketServer** connection. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **listen** is successfully called.
+Obtains the local socket address of a **LocalSocketServer** connection. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **listen** is successfully called.
 
 **Since:** 12
 
@@ -181,7 +193,15 @@ server.listen(listenAddr).then(() => {
 getSocketFd(): Promise<int>
 ```
 
-Obtains the file descriptor bound to the LocalSocketServer listening port. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - This method can be called only after the [listen](#listen) method is &gt; successfully called. &gt; &gt; - This API returns **-1** in abnormal cases such as listening exceptions or socket closed (for example, after &gt; close is called). &gt; &gt; - The lifecycle of the file descriptor is managed by the system. The application can use the &gt; [close](arkts-network-socket-tcpsocketserver-i.md#close) method to close the socket connection, instead of directly &gt; operating the file descriptor.
+Obtains the file descriptor bound to the LocalSocketServer listening port. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - This method can be called only after the [listen](#listen) method is &gt; successfully called.
+> 
+> - This API returns **-1** in abnormal cases such as listening exceptions or socket closed (for example, after &gt; close is called).
+> 
+> - The lifecycle of the file descriptor is managed by the system. The application can use the &gt; [close](arkts-network-socket-tcpsocketserver-i.md#close) method to close the socket connection, instead of directly &gt; operating the file descriptor.
 
 **Since:** 23
 
@@ -228,7 +248,11 @@ server.listen(listenAddr).then(() => {
 getState(): Promise<SocketStateBase>
 ```
 
-Obtains the status of a local socket server connection. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **listen** is successfully called.
+Obtains the status of a local socket server connection. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **listen** is successfully called.
 
 **Since:** 11
 
@@ -275,7 +299,11 @@ server.getState().then((data: socket.SocketStateBase) => {
 listen(address: LocalAddress): Promise<void>
 ```
 
-Binds the address of the local socket file. The server listens to and accepts local socket connections established over the socket. Multiple threads are used to process client data concurrently. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; The server uses this API to complete the **bind**, **listen**, and **accept** operations. If the address of the &gt; local socket file is passed for binding, a socket file is automatically created when this API is called.
+Binds the address of the local socket file. The server listens to and accepts local socket connections established over the socket. Multiple threads are used to process client data concurrently. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> The server uses this API to complete the **bind**, **listen**, and **accept** operations. If the address of the &gt; local socket file is passed for binding, a socket file is automatically created when this API is called.
 
 **Since:** 11
 
@@ -302,8 +330,8 @@ Binds the address of the local socket file. The server listens to and accepts lo
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2303109](../errorcode-net-socket.md#2303109-error-file-number) | Bad file number. |
 | [2301013](../errorcode-net-socket.md#2301013-insufficient-permissions) | Insufficient permissions. |
-| 2301098 | Address already in use. |
 | 2301022 | Invalid argument. |
+| 2301098 | Address already in use. |
 
 **Examples**
 
@@ -418,7 +446,11 @@ server.off('error');
 on(type: 'connect', callback: Callback<LocalSocketConnection>): void
 ```
 
-Subscribes to **connect** events of the **LocalSocketServer** object. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **listen** is successfully called.
+Subscribes to **connect** events of the **LocalSocketServer** object. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **listen** is successfully called.
 
 **Since:** 11
 
@@ -458,7 +490,11 @@ server.on('connect', (connection: socket.LocalSocketConnection) => {
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to **error** events of the **LocalSocketServer** object. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **listen** is successfully called.
+Subscribes to **error** events of the **LocalSocketServer** object. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **listen** is successfully called.
 
 **Since:** 11
 
@@ -496,7 +532,11 @@ server.on('error', (err: Object) => {
 setExtraOptions(options: ExtraOptionsBase): Promise<void>
 ```
 
-Sets the socket properties of the **LocalSocketServer** object. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **listen** is successfully called.
+Sets the socket properties of the **LocalSocketServer** object. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **listen** is successfully called.
 
 **Since:** 11
 

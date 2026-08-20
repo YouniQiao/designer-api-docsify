@@ -65,8 +65,8 @@ getData(): UnifiedData
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [190002](../errorcode-drag-event.md#190002-获取数据错误) | Data error. |
 | [190001](../errorcode-drag-event.md#190001-数据未找到) | Data not found. |
+| [190002](../errorcode-drag-event.md#190002-获取数据错误) | Data error. |
 
 ## getDisplayId
 
@@ -446,7 +446,9 @@ getWindowY(): number
 getX(): number
 ```
 
-当前拖拽点相对于窗口左上角的x轴坐标，单位为vp。 &gt; **说明：**
+当前拖拽点相对于窗口左上角的x轴坐标，单位为vp。
+
+> **说明：**
 
 **起始版本：** 7
 
@@ -470,7 +472,9 @@ getX(): number
 getY(): number
 ```
 
-当前拖拽点相对于窗口左上角的y轴坐标，单位为vp。 &gt; **说明：**
+当前拖拽点相对于窗口左上角的y轴坐标，单位为vp。
+
+> **说明：**
 
 **起始版本：** 7
 
@@ -606,7 +610,7 @@ startDataLoading(options: DataSyncOptions): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | 是 | 获取拖拽数据时的参数，包含目标路径、文件冲突选项、进度条类型等。数据传输过程中可使用 [cancelDataLoading](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-dragcontroller-c.md#canceldataloading)接口取消数据加载。 |
+| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | 是 | 获取拖拽数据时的参数，包含目标路径、文件冲突选项、进度条类型等。数据传输过程中可使用 [cancelDataLoading](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c.md#canceldataloading)接口取消数据加载。 |
 
 **返回值：**
 
@@ -627,7 +631,15 @@ startDataLoading(options: DataSyncOptions): string
 autoHideComponentUniqueIds?: int | int[]
 ```
 
-设置拖拽过程中需要自动隐藏的组件uniqueId，支持传入单个uniqueId或数组。 仅在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart)回调中设置生效。拖拽成功发起后，系统会在显示拖拽预览窗口前隐藏目标组件。 若拖拽源本身也需要隐藏，需要同时传入拖拽源组件的uniqueId。 组件的uniqueId可通过[UIContext.getFrameNodeById()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getframenodebyid) 配合[FrameNode.getUniqueId()](../arkts-apis/arkts-arkui-framenode-c.md#getuniqueid)获取。 开发者应在[onDragEnd](arkts-arkui-commonmethod-c.md#ondragend)或 onDrop中恢复组件显示状态。
+设置拖拽过程中需要自动隐藏的组件uniqueId，支持传入单个uniqueId或数组。
+
+仅在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart)回调中设置生效。拖拽成功发起后，系统会在显示拖拽预览窗口前隐藏目标组件。
+
+若拖拽源本身也需要隐藏，需要同时传入拖拽源组件的uniqueId。
+
+组件的uniqueId可通过[UIContext.getFrameNodeById()](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getframenodebyid) 配合[FrameNode.getUniqueId()](../../apis-default/arkts-apis/arkts-framenode-c.md#getuniqueid)获取。
+
+开发者应在[onDragEnd](arkts-arkui-commonmethod-c.md#ondragend)或 onDrop中恢复组件显示状态。
 
 **类型：** int \| int[]
 
@@ -647,7 +659,9 @@ autoHideComponentUniqueIds?: int | int[]
 dragBehavior: DragBehavior
 ```
 
-切换复制和剪贴模式的角标显示状态。 默认值：DragBehavior.COPY。
+切换复制和剪贴模式的角标显示状态。
+
+默认值：DragBehavior.COPY。
 
 **类型：** [DragBehavior](arkts-arkui-dragbehavior-e.md)
 
@@ -669,7 +683,15 @@ dragBehavior: DragBehavior
 useCustomDropAnimation: boolean
 ```
 
-当拖拽结束时，是否禁用系统默认落位动效。 应用可将该值设定为true来禁用系统默认落位动效，并实现自己的自定义落位动效。 当不配置或设置为false时，系统默认落位动效生效，当[setResult](#setresult)设置为DRAG_SUCCESSFUL时，落位为缩小消失动效，不为DRAG_SUCCESSFUL时，则 为放大消失动效。 当未禁用系统默认落位动效时，应用不应再实现自定义动效，以避免动效上的冲突。 默认值：false
+当拖拽结束时，是否禁用系统默认落位动效。
+
+应用可将该值设定为true来禁用系统默认落位动效，并实现自己的自定义落位动效。
+
+当不配置或设置为false时，系统默认落位动效生效，当[setResult](#setresult)设置为DRAG_SUCCESSFUL时，落位为缩小消失动效，不为DRAG_SUCCESSFUL时，则 为放大消失动效。
+
+当未禁用系统默认落位动效时，应用不应再实现自定义动效，以避免动效上的冲突。
+
+默认值：false
 
 **类型：** boolean
 

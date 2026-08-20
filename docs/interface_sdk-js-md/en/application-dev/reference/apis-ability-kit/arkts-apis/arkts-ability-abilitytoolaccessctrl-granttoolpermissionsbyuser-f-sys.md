@@ -41,10 +41,10 @@ Grants tool permissions based on user authorization results. This function grant
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denial. The interface caller does not have permission "ohos.permission.MANAGE_TOOL_RUNTIME_PERMISSIONS". |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| 24010004 | Invalid permission. A permission in permissionInfo does not exist. |
-| 24010005 | Grant permission failed. The application specified by the tokenID is not allowed to be granted with the specified permission, the specified permission cannot be granted by user, etc. |
-| 24010002 | Common internal error. Possible cause: dependent service unavailable, resource access failure, etc. |
-| 24010003 | The account is not logged in, network is unavailable, timeout, etc. |
 | 24010000 | Invalid parameter. PermissionName exceeds 256 characters, permissionStatus is invalid, etc. |
 | 24010001 | Service is abnormal. Possible cause: IPC failed. |
+| 24010002 | Common internal error. Possible cause: dependent service unavailable, resource access failure, etc. |
+| 24010003 | The account is not logged in, network is unavailable, timeout, etc. |
+| 24010004 | Invalid permission. A permission in permissionInfo does not exist. |
+| 24010005 | Grant permission failed. The application specified by the tokenID is not allowed to be granted with the specified permission, the specified permission cannot be granted by user, etc. |
 

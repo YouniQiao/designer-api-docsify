@@ -12,7 +12,10 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function getControlledAppLists(): Promise<Array<string>>
 ```
 
-Obtains the list of applications controlled by enterprise DLP for the current user. This API uses a promise to return the result. &gt; **NOTE：**&gt; This API can only be used to query the list of applications controlled by enterprise DLP, which is set using &gt; [setControlledAppLists](arkts-dataprotection-dlppermission-setcontrolledapplists-f.md).
+Obtains the list of applications controlled by enterprise DLP for the current user. This API uses a promise to return the result.
+
+> **NOTE：**
+> This API can only be used to query the list of applications controlled by enterprise DLP, which is set using &gt; [setControlledAppLists](arkts-dataprotection-dlppermission-setcontrolledapplists-f.md).
 
 **Since:** 26.0.0
 
@@ -34,7 +37,7 @@ Obtains the list of applications controlled by enterprise DLP for the current us
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

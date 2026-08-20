@@ -1,6 +1,10 @@
 # LocalizedSnapshotRegion
 
-定义组件截图的矩形区域，start和end的值在布局方向为LTR时指定为left和right，在布局方向为RTL时指定为right和left。 &gt; **说明：** &gt; &gt; 直接使用componentSnapshot可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用getUIContext()获取 &gt; [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)实例，并使用[getComponentSnapshot](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getcomponentsnapshot) &gt; 获取绑定实例的componentSnapshot。
+定义组件截图的矩形区域，start和end的值在布局方向为LTR时指定为left和right，在布局方向为RTL时指定为right和left。
+
+> **说明：**
+> 
+> 直接使用componentSnapshot可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用getUIContext()获取 &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)实例，并使用[getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot) &gt; 获取绑定实例的componentSnapshot。
 
 **起始版本：** 23
 
@@ -22,7 +26,11 @@ import { componentSnapshot } from '@kit.ArkUI';
 bottom: double
 ```
 
-截图区域矩形右下角的y轴坐标。 单位：px 取值范围：[0, 组件高度]
+截图区域矩形右下角的y轴坐标。
+
+单位：px
+
+取值范围：[0, 组件高度]
 
 **类型：** double
 
@@ -42,7 +50,11 @@ bottom: double
 end: double
 ```
 
-布局方向为LTR时表示截图区域矩形右下角的x轴坐标，布局方向为RTL时表示截图区域矩形左下角的x轴坐标。 单位：px 取值范围：[0, 组件宽度]
+布局方向为LTR时表示截图区域矩形右下角的x轴坐标，布局方向为RTL时表示截图区域矩形左下角的x轴坐标。
+
+单位：px
+
+取值范围：[0, 组件宽度]
 
 **类型：** double
 
@@ -62,7 +74,11 @@ end: double
 start: double
 ```
 
-布局方向为LTR时表示截图区域矩形左上角的x轴坐标，布局方向为RTL时表示截图区域矩形右上角的x轴坐标。 单位：px 取值范围：[0, 组件宽度]
+布局方向为LTR时表示截图区域矩形左上角的x轴坐标，布局方向为RTL时表示截图区域矩形右上角的x轴坐标。
+
+单位：px
+
+取值范围：[0, 组件宽度]
 
 **类型：** double
 
@@ -82,7 +98,11 @@ start: double
 top: double
 ```
 
-布局方向为LTR时表示截图区域矩形左上角的y轴坐标，布局方向为RTL时表示截图区域矩形右上角的y轴坐标。 单位：px 取值范围：[0, 组件高度]
+布局方向为LTR时表示截图区域矩形左上角的y轴坐标，布局方向为RTL时表示截图区域矩形右上角的y轴坐标。
+
+单位：px
+
+取值范围：[0, 组件高度]
 
 **类型：** double
 

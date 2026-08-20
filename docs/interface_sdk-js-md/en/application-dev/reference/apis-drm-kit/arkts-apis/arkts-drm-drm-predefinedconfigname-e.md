@@ -1,4 +1,4 @@
-# PreDefinedConfigName(Defines the DRM capability.)
+# PreDefinedConfigName
 
 Enumerates the predefined configuration properties.
 

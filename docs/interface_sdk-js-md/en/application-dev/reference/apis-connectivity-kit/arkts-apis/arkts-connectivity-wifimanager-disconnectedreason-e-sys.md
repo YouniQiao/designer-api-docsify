@@ -1,6 +1,6 @@
 # DisconnectedReason (System API)
 
-Wi-Fi disconnected reason.
+Wi-Fi disconnected reason. @enum { int }
 
 **Since:** 23
 

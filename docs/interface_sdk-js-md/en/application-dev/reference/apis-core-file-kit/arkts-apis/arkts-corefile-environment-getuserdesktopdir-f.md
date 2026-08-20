@@ -33,8 +33,8 @@ Obtains the sandbox path of the pre-authorized **Desktop** directory.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken.<br>**Applicable version:** 11 and later |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 13900042 | Unknown error. |
 
 **Examples**

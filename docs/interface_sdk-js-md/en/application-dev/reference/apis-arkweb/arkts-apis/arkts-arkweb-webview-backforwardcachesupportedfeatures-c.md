@@ -1,6 +1,6 @@
 # BackForwardCacheSupportedFeatures
 
-BackForwardCacheSupportedFeatures is a configuration class in the ArkWeb framework used to selectively allow pages that use specific web features to enter the Back/Forward Cache (BFCache). By default, pages using features such as native embed or media takeover are blocked from entering BFCache, because the browser cannot safely save and restore these complex states bound to system controls. By setting the properties in this class, developers can explicitly allow pages with these features to enter BFCache, but they must manage the lifecycle of the related system controls themselves to avoid resource leaks. For the complete sample code, see [enableBackForwardCache](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#enablebackforwardcache).
+BackForwardCacheSupportedFeatures is a configuration class in the ArkWeb framework used to selectively allow pages that use specific web features to enter the Back/Forward Cache (BFCache). By default, pages using features such as native embed or media takeover are blocked from entering BFCache, because the browser cannot safely save and restore these complex states bound to system controls. By setting the properties in this class, developers can explicitly allow pages with these features to enter BFCache, but they must manage the lifecycle of the related system controls themselves to avoid resource leaks. For the complete sample code, see [enableBackForwardCache](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#enablebackforwardcache).
 
 **Since:** 12
 
@@ -34,7 +34,13 @@ Constructs a **BackForwardCacheSupportedFeatures** object.
 mediaTakeOver: boolean
 ```
 
-Whether to allow pages using media takeover to enter the back-forward cache. If allowed, you need to maintain the lifecycle of system controls created for video elements to avoid resource leaks. true: allowed; false: not allowed. Default value: false.
+Whether to allow pages using media takeover to enter the back-forward cache.
+
+If allowed, you need to maintain the lifecycle of system controls created for video elements to avoid resource leaks.
+
+true: allowed; false: not allowed.
+
+Default value: false.
 
 **Type:** boolean
 
@@ -50,7 +56,13 @@ Whether to allow pages using media takeover to enter the back-forward cache. If 
 nativeEmbed: boolean
 ```
 
-Whether to allow pages using native embed to enter the back-forward cache. If allowed, you need to maintain the lifecycle of system controls created for native embed elements to avoid resource leaks. true: allowed; false: not allowed. Default value: false.
+Whether to allow pages using native embed to enter the back-forward cache.
+
+If allowed, you need to maintain the lifecycle of system controls created for native embed elements to avoid resource leaks.
+
+true: allowed; false: not allowed.
+
+Default value: false.
 
 **Type:** boolean
 

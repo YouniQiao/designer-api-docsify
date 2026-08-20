@@ -2,6 +2,8 @@
 
 The state of the supplicant enumeration.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-wifiManager-export enum SuppState--><!--Device-wifiManager-export enum SuppState-End-->

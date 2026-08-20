@@ -1,5 +1,7 @@
 # KeyEvent
 
+@brief 按键属性值。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-interface KeyEvent--><!--Device-inputMethodEngine-interface KeyEvent-End-->
@@ -18,6 +20,8 @@ import { inputMethodEngine } from '@kit.IMEKit';
 readonly keyAction: int
 ```
 
+@brief 按键事件类型。 <br> <br>- 当值为2时，表示按下事件； <br>- 当值为3时，表示抬起事件。
+
 **类型：** int
 
 **起始版本：** 23
@@ -31,6 +35,8 @@ readonly keyAction: int
 ```TypeScript
 readonly keyCode: int
 ```
+
+@brief 按键的键值。键码值说明参考[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。
 
 **类型：** int
 

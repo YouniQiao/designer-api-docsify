@@ -2,6 +2,8 @@
 
 WLAN IP配置信息。
 
+@interface IpConfig
+
 **起始版本：** 7
 
 **废弃版本：** 9

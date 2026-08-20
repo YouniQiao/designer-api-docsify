@@ -1,4 +1,4 @@
-# AccessStatus(Sensitive Data Access Management Under Lock Screen)
+# AccessStatus
 
 Enumerates the statuses for requesting access permissions for sensitive data under the lock screen.
 

@@ -1,6 +1,14 @@
 # TypefaceArguments
 
-This module defines a struct for setting typeface arguments. &gt; **NOTE：**&gt; &gt; - The initial APIs of this class are supported since API version 20. &gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - The module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
+This module defines a struct for setting typeface arguments.
+
+> **NOTE：**
+> 
+> - The initial APIs of this class are supported since API version 20.
+> 
+> - This module uses the physical pixel unit, px.
+> 
+> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
 
 **Since:** 23
 

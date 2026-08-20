@@ -1,6 +1,11 @@
 # GrantStatus
 
-> **NOTE：**&gt; &gt; This API has been supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [bundleManager.PermissionGrantState](arkts-ability-bundlemanager-permissiongrantstate-e.md) &gt; instead. Enumerates the permission grant states.
+
+> **NOTE：**
+> 
+> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [bundleManager.PermissionGrantState](arkts-ability-bundlemanager-permissiongrantstate-e.md) &gt; instead.
+
+Enumerates the permission grant states.
 
 **Since:** 7
 

@@ -24,7 +24,9 @@ import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 isMainFrame?: boolean
 ```
 
-Whether the event is triggered by the main frame. The value **true** indicates that the event is triggered by the main frame, and **false** indicates the opposite.
+Whether the event is triggered by the main frame.
+
+The value **true** indicates that the event is triggered by the main frame, and **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -40,7 +42,7 @@ Whether the event is triggered by the main frame. The value **true** indicates t
 isRefreshed: boolean
 ```
 
-Whether the page is reloaded. The value **true** means that the page is reloaded by invoking the [refresh&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#refresh) API, and **false** means the opposite.
+Whether the page is reloaded. The value **true** means that the page is reloaded by invoking the [refresh&lt;sup&gt;9+&lt;/sup&gt;](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#refresh) API, and **false** means the opposite.
 
 **Type:** boolean
 

@@ -1,4 +1,4 @@
-# TabBarPosition(Provides an advanced struct of tabs for atomic services)
+# TabBarPosition
 
 Position of the tab bar. The default value is **TabBarPosition.BOTTOM**.
 

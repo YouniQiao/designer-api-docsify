@@ -12,7 +12,15 @@ import { uiAppearance } from '@kit.ArkUI';
 function getDarkMode(): DarkMode
 ```
 
-Obtains the current system dark mode configuration. <!--Del--> &gt; **NOTE：**&gt; This API is a system API in API version 19 and earlier. Using this API requires the &gt; [ohos.permission.UPDATE_CONFIGURATION](../../../security/AccessToken/permissions-for-system-apps.md#ohospermissionupdate_configuration) &gt; permission. <!--DelEnd-->
+Obtains the current system dark mode configuration.
+
+<!--Del-->
+
+> **NOTE：**
+
+> This API is a system API in API version 19 and earlier. Using this API requires the &gt; [ohos.permission.UPDATE_CONFIGURATION](../../../security/AccessToken/permissions-for-system-apps.md#ohospermissionupdate_configuration) &gt; permission.
+
+<!--DelEnd-->
 
 **Since:** 10
 
@@ -29,14 +37,14 @@ Obtains the current system dark mode configuration. <!--Del--> &gt; **NOTE：**&
 
 | Type | Description |
 | --- | --- |
-| [DarkMode](../../apis-na/arkts-apis/arkts-na-uiappearance-darkmode-e.md) | current dark-mode. |
+| [DarkMode](../../apis-default/arkts-apis/arkts-uiappearance-darkmode-e.md) | current dark-mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 10 - 19 |
+| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
 
 **Examples**
 

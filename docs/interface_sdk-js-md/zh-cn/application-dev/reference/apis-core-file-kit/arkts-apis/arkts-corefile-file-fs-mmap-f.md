@@ -14,7 +14,13 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 declare function mmap(file: number | File, mode: MappingMode, offset: number, size: number): Promise<FileMapping>
 ```
 
-基于文件描述符或文件对象创建文件映射对象，实现文件的高效读写访问。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 1. 仅支持对常规文件（regular file）进行内存映射，不支持管道、socket、设备文件等非常规文件类型。可通过statSync获取文件属性后调用Stat.isFile()判断文件是否为常规文件。 &gt; 2. 若映射范围超过原始文件大小且文件具有写权限，将自动扩展映射文件大小。 &gt; 3. 对于外部存储或网络文件等，由于底层文件系统的差异，映射的建立及对映射内存的访问行为不做保证，可能导致应用异常终止。建议此类场景优先使用read、write或Stream等其他文件访问接口。
+基于文件描述符或文件对象创建文件映射对象，实现文件的高效读写访问。使用Promise异步回调。
+
+> **说明：**
+> 
+> 1. 仅支持对常规文件（regular file）进行内存映射，不支持管道、socket、设备文件等非常规文件类型。可通过statSync获取文件属性后调用Stat.isFile()判断文件是否为常规文件。
+> 2. 若映射范围超过原始文件大小且文件具有写权限，将自动扩展映射文件大小。
+> 3. 对于外部存储或网络文件等，由于底层文件系统的差异，映射的建立及对映射内存的访问行为不做保证，可能导致应用异常终止。建议此类场景优先使用read、write或Stream等其他文件访问接口。
 
 **起始版本：** 26.0.0
 
@@ -43,20 +49,20 @@ declare function mmap(file: number | File, mode: MappingMode, offset: number, si
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900021 | File table overflow |
-| 13900023 | Text file busy |
-| 13900017 | No such device |
-| 13900050 | Internal resource error |
-| 13900024 | File too large |
-| 13900056 | Mmap does not support mapping this file |
+| 13900001 | Operation not permitted |
 | 13900004 | Interrupted system call |
 | 13900005 | I/O error |
-| 13900038 | Value too large for defined data type |
-| 13900001 | Operation not permitted |
-| 13900012 | Permission denied |
-| 13900015 | File exists |
 | 13900008 | Bad file descriptor |
 | 13900010 | Try again |
 | 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900015 | File exists |
+| 13900017 | No such device |
+| 13900020 | Invalid argument |
+| 13900021 | File table overflow |
+| 13900023 | Text file busy |
+| 13900024 | File too large |
+| 13900038 | Value too large for defined data type |
+| 13900050 | Internal resource error |
+| 13900056 | Mmap does not support mapping this file |
 

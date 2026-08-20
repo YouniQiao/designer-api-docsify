@@ -2,6 +2,8 @@
 
 Defines FormComponent Modifier
 
+@extends FormComponentAttribute @implements AttributeModifier&lt;FormComponentAttribute&gt;
+
 **Inheritance/Implementation:** FormComponentModifier extends FormComponentAttribute and implements AttributeModifier<FormComponentAttribute>
 
 **Since:** 12
@@ -34,5 +36,5 @@ Defines the normal update attribute function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instance | FormComponentAttribute | Yes |  |
+| instance | [FormComponentAttribute](../../apis-default/arkts-components/arkts-formcomponent-attribute.md) | Yes |  |
 

@@ -1,6 +1,8 @@
-# InputEvent(输入事件)
+# InputEvent
 
 输入事件。
+
+@interface InputEvent [since 9 - 11]
 
 **起始版本：** 23
 

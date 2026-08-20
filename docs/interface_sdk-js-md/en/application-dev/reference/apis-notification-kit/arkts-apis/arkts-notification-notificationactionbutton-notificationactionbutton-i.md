@@ -62,7 +62,7 @@ User input object. This parameter is left empty by default. ID entered by a subs
 wantAgent: WantAgent
 ```
 
-**WantAgent** triggered when the button is tapped, which encapsulates the application's behavioral intent. After the user taps the button, the system will execute the action in the method specified by the **WantAgent** (such as navigating to a specified **UIAbility** or sending a common event).
+*WantAgent** triggered when the button is tapped, which encapsulates the application's behavioral intent. After the user taps the button, the system will execute the action in the method specified by the **WantAgent** (such as navigating to a specified **UIAbility** or sending a common event).
 
 **Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 

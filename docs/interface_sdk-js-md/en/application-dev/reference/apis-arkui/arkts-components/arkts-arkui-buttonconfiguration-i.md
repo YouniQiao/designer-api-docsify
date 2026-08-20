@@ -21,7 +21,9 @@ You need a custom class to implement the **ContentModifier** API. Inherits from 
 label: string
 ```
 
-Text label of the button. Note: If the text is longer than the width of the button, it is truncated.
+Text label of the button.
+
+Note: If the text is longer than the width of the button, it is truncated.
 
 **Type:** string
 
@@ -41,7 +43,15 @@ Text label of the button. Note: If the text is longer than the width of the butt
 pressed: boolean
 ```
 
-Whether the button is pressed. **true**: pressed; **false**: not pressed. Default value: **false** **NOTE：**This setting applies to the original button size, not to any new component constructed using the builder.
+Whether the button is pressed.
+
+**true**: pressed; **false**: not pressed.
+
+Default value: **false**
+
+**NOTE：**
+
+This setting applies to the original button size, not to any new component constructed using the builder.
 
 **Type:** boolean
 

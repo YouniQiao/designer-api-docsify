@@ -2,6 +2,8 @@
 
 Defines the LazyDynamicLayout attribute functions.
 
+@extends CommonMethod&lt;LazyDynamicLayoutAttribute&gt;
+
 **Inheritance/Implementation:** LazyDynamicLayoutAttribute extends CommonMethod<LazyDynamicLayoutAttribute>
 
 **Since:** 26.0.0
@@ -38,11 +40,11 @@ Called when visible indexes change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-na/arkts-apis/arkts-na-callback-t.md)&lt;int[]&gt; \| undefined | Yes | Callback used to return the list of index numbers of visible subcomponents. <br>Passing undefined will unregister the callback. |
+| callback | [Callback](../../apis-default/arkts-apis/arkts-callback-t.md)&lt;int[]&gt; \| undefined | Yes | Callback used to return the list of index numbers of visible subcomponents. <br>Passing undefined will unregister the callback. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyDynamicLayoutAttribute](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-c.md) |  |
+| [LazyDynamicLayoutAttribute](../../apis-default/arkts-apis/arkts-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-i.md) |  |
 

@@ -36,7 +36,7 @@ The constructor of ProgressButtonV2
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ProgressButtonV2ColorOptions](arkts-arkui-arkui-advanced-progressbuttonv2-progressbuttonv2coloroptions-i.md) | Yes |  |
+| options | [ProgressButtonV2ColorOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-progressbuttonv2-progressbuttonv2coloroptions-i.md) | Yes |  |
 
 ## backgroundColor
 
@@ -46,7 +46,7 @@ The constructor of ProgressButtonV2
 
 Set background color of the ProgressButtonV2.
 
-**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -66,7 +66,7 @@ Set background color of the ProgressButtonV2.
 
 Set border color of the ProgressButtonV2.
 
-**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -86,7 +86,7 @@ Set border color of the ProgressButtonV2.
 
 Set progress color of the ProgressButtonV2.
 
-**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -106,7 +106,7 @@ Set progress color of the ProgressButtonV2.
 
 Set text color of the ProgressButtonV2.
 
-**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
 
 **Since:** 18
 

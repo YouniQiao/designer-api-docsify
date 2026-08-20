@@ -1,6 +1,15 @@
 # GetInsightIntentFlag (System API)
 
-Enumerates the flags of intent information ([InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)). It is used in [getAllInsightIntentInfo](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md), [getInsightIntentInfoByBundleName](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md), and [getInsightIntentInfoByIntentName](arkts-ability-insightintentdriver-getinsightintentinfobyintentname-f-sys.md). &gt; **NOTE：**&gt; &gt; - For intents developed using a configuration file, the full and brief information queried through the preceding &gt; APIs are the same. &gt; &gt; - For intents developed using a decorator, the full and brief information queried through the preceding APIs are &gt; different, as described below. &gt; &gt; Table 1 Differences between full intent information and brief intent information &gt; &gt; | Name| Included in Full Intent Information| Included in Brief Intent Information| &gt; | -------- | -------- | -------- | &gt; | bundleName | Yes| Yes| &gt; | moduleName | Yes| Yes| &gt; | intentName | Yes| Yes| &gt; | domain | Yes| No| &gt; | intentVersion | Yes| No| &gt; | displayName | Yes| Yes| &gt; | displayDescription | Yes| No| &gt; | schema | Yes| No| &gt; | icon | Yes| No| &gt; | llmDescription | Yes| No| &gt; | keywords | Yes| No| &gt; | intentType | Yes| Yes| &gt; | subIntentInfo | Yes| Yes| &gt; | parameters | Yes| Yes| &gt; | entities | No| No| &gt; | developType&lt;sup&gt;23+&lt;/sup&gt; | Yes| Yes| &gt; | subIntentInfoForConfiguration&lt;sup&gt;23+&lt;/sup&gt; | No| No|
+Enumerates the flags of intent information ([InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)). It is used in [getAllInsightIntentInfo](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md), [getInsightIntentInfoByBundleName](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md), and [getInsightIntentInfoByIntentName](arkts-ability-insightintentdriver-getinsightintentinfobyintentname-f-sys.md).
+
+> **NOTE：**
+> 
+> - For intents developed using a configuration file, the full and brief information queried through the preceding &gt; APIs are the same.
+> 
+> - For intents developed using a decorator, the full and brief information queried through the preceding APIs are &gt; different, as described below.
+> 
+> Table 1 Differences between full intent information and brief intent information &gt;
+> | Name| Included in Full Intent Information| Included in Brief Intent Information| &gt; | -------- | -------- | -------- | &gt; | bundleName | Yes| Yes| &gt; | moduleName | Yes| Yes| &gt; | intentName | Yes| Yes| &gt; | domain | Yes| No| &gt; | intentVersion | Yes| No| &gt; | displayName | Yes| Yes| &gt; | displayDescription | Yes| No| &gt; | schema | Yes| No| &gt; | icon | Yes| No| &gt; | llmDescription | Yes| No| &gt; | keywords | Yes| No| &gt; | intentType | Yes| Yes| &gt; | subIntentInfo | Yes| Yes| &gt; | parameters | Yes| Yes| &gt; | entities | No| No| &gt; | developType&lt;sup&gt;23+&lt;/sup&gt; | Yes| Yes| &gt; | subIntentInfoForConfiguration&lt;sup&gt;23+&lt;/sup&gt; | No| No|
 
 **Since:** 23
 

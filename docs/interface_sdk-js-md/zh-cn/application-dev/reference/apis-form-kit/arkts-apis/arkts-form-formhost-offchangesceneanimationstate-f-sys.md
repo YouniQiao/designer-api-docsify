@@ -12,7 +12,9 @@ import { formHost } from '@kit.FormKit';
 function offChangeSceneAnimationState(callback?: Callback<formInfo.ChangeSceneAnimationStateRequest>): void
 ```
 
-Cancels listening to the event of change scene animation state. You can use this method to cancel listening to the event of change scene animation state.
+Cancels listening to the event of change scene animation state.
+
+You can use this method to cancel listening to the event of change scene animation state.
 
 **起始版本：** 23
 
@@ -26,7 +28,7 @@ Cancels listening to the event of change scene animation state. You can use this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.ChangeSceneAnimationStateRequest&gt; | 否 | The callback of change scene animation state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;formInfo.ChangeSceneAnimationStateRequest&gt; | 否 | The callback of change scene animation state. |
 
 **错误码：**
 

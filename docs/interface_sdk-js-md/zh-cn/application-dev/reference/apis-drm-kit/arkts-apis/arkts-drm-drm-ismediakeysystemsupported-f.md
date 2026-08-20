@@ -41,8 +41,8 @@ Judge whether a system that specifies name, mimetype and content protection leve
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 **示例**
 
@@ -88,8 +88,8 @@ Judge whether a system that specifies name, mimetype is supported.
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 **示例**
 
@@ -134,8 +134,8 @@ Judge whether a system that specifies name is supported.
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed, the param name's length is zero or too big(exceeds 4096 Bytes). |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 **示例**
 

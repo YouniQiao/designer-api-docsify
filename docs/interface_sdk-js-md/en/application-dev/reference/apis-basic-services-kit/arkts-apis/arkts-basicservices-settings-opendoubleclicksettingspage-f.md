@@ -33,6 +33,6 @@ function openDoubleClickSettingsPage(context: Context): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16900020](../errorcode-settings.md#16900020-failed-to-open-the-settings-page) | 1. The setting page cannot be opened through redirection. 2. Internal error |
 | [16900010](../errorcode-settings.md#16900010-parameter-check-failed) | 1. The parameter is incorrect. 2. The parameter is not transferred or the transferred parameter is invalid. |
+| [16900020](../errorcode-settings.md#16900020-failed-to-open-the-settings-page) | 1. The setting page cannot be opened through redirection. 2. Internal error |
 

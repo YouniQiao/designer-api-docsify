@@ -2,6 +2,8 @@
 
 inspector的性能分析（Profiler）工具。
 
+@namespace Profiler
+
 ## 导入模块
 
 ```TypeScript

@@ -1,8 +1,20 @@
 # EmbeddedComponent
 
-The **EmbeddedComponent** is a component used to embed into the current page the UI provided by another [EmbeddedUIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddeduiextensionability-embeddeduiextensionability-c.md) in the same application. The EmbeddedUIExtensionAbility runs in an independent process for UI layout and rendering. It is usually used in modular development scenarios where process isolation is required. > **NOTE**
+The **EmbeddedComponent** is a component used to embed into the current page the UI provided by another [EmbeddedUIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddeduiextensionability-embeddeduiextensionability-c.md) in the same application. The EmbeddedUIExtensionAbility runs in an independent process for UI layout and rendering.
 
-## Constraints The **EmbeddedComponent** is supported only on devices configured with multi-process permissions. The **EmbeddedComponent** can be used only in the UIAbility, and the EmbeddedUIExtensionAbility to start must belong to the same application as the UIAbility. ###### Child Components Not supported
+It is usually used in modular development scenarios where process isolation is required.
+
+> **NOTE**
+
+## Constraints
+
+The **EmbeddedComponent** is supported only on devices configured with multi-process permissions.
+
+The **EmbeddedComponent** can be used only in the UIAbility, and the EmbeddedUIExtensionAbility to start must belong to the same application as the UIAbility.
+
+## Child Components
+
+Not supported
 
 ## EmbeddedComponent
 
@@ -68,13 +80,9 @@ Construct the EmbeddedComponent.<br/> Called when the EmbeddedComponent is used.
 
 | Name | Description |
 | --- | --- |
-| [EmbeddedOptions](arkts-arkui-embeddedoptions-i.md) | This interface is used to set the options for EmbeddedComponentAttribute during construction |
-| [TerminationInfo](arkts-arkui-terminationinfo-i.md) | Provides the result returned by the started **EmbeddedUIExtensionAbility**. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [EmbeddedDpiFollowStrategy](arkts-arkui-embeddeddpifollowstrategy-e.md) | Enumeration of different types of EmbeddedDpiFollowStrategy. |
-| [EmbeddedWindowModeFollowStrategy](arkts-arkui-embeddedwindowmodefollowstrategy-e.md) | Enumeration of different types of EmbeddedWindowModeFollowStrategy. |
 

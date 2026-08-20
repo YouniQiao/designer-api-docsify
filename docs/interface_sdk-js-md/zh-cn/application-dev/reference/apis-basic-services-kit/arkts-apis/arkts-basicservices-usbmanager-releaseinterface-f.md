@@ -13,7 +13,11 @@ import { serialManager } from '@kit.BasicServicesKit';
 function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): int
 ```
 
-释放claim过的通信接口。 &gt; **说明：** &gt; &gt; 在调用该接口前需要通过[usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) claim通信接口。
+释放claim过的通信接口。
+
+> **说明：**
+> 
+> 在调用该接口前需要通过[usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) claim通信接口。
 
 **起始版本：** 23
 

@@ -53,9 +53,9 @@ Asserts that a component that matches the given attributes exists on the current
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000003](../errorcode-uitest.md#17000003-assertion-failure) | if the assertion failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | if the input parameters are invalid. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000003](../errorcode-uitest.md#17000003-assertion-failure) | if the assertion failed. |
 
 **Examples**
 
@@ -118,7 +118,11 @@ async function demo() {
 static create(): UiDriver
 ```
 
-Creates a **UiDriver** object and returns the object created. This API is a static API. &gt; **NOTE：**&gt; &gt; This method is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [create&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#create) instead.
+Creates a **UiDriver** object and returns the object created. This API is a static API.
+
+> **NOTE：**
+> 
+> This method is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [create&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#create) instead.
 
 **Since:** 8
 

@@ -22,7 +22,9 @@ import { dataSharePredicates } from '@kit.ArkData';
 and(): DataSharePredicates
 ```
 
-该接口用于将和条件添加到谓词中。 目前仅关系型数据库及键值型数据库支持该谓词。
+该接口用于将和条件添加到谓词中。
+
+目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 23
 
@@ -55,7 +57,9 @@ predicates.equalTo("NAME", "lisi")
 equalTo(field: string, value: ValueType): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值等于指定值的字段。 目前仅关系型数据库及键值型数据库支持该谓词。
+该接口用于配置谓词以匹配值等于指定值的字段。
+
+目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 23
 
@@ -93,7 +97,9 @@ predicates.equalTo("NAME", "Rose");
 in(field: string, value: Array<ValueType>): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值在指定范围内的字段。 目前仅关系型数据库及键值型数据库支持该谓词。
+该接口用于配置谓词以匹配值在指定范围内的字段。
+
+目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 10
 
@@ -167,7 +173,9 @@ predicates.inValues("AGE", [18, 20]);
 limit(total: int, offset: int): DataSharePredicates
 ```
 
-该接口用于配置谓词以指定结果数和起始位置。 目前仅关系型数据库及键值型数据库支持该谓词。
+该接口用于配置谓词以指定结果数和起始位置。
+
+目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 23
 
@@ -241,7 +249,9 @@ predicates.notInValues("NAME", ["Lisa", "Rose"]);
 orderByAsc(field: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配其值按升序排序的列。 目前仅关系型数据库及键值型数据库支持该谓词。
+该接口用于配置谓词以匹配其值按升序排序的列。
+
+目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 23
 
@@ -278,7 +288,9 @@ predicates.orderByAsc("AGE");
 orderByDesc(field: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配其值按降序排序的列。 目前仅关系型数据库及键值型数据库支持该谓词。
+该接口用于配置谓词以匹配其值按降序排序的列。
+
+目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 23
 

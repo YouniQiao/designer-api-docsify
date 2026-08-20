@@ -2,6 +2,8 @@
 
 Defines the gesture recognizer.
 
+@extends GestureRecognizer
+
 **Inheritance/Implementation:** PanRecognizer extends [GestureRecognizer](arkts-arkui-gesture-gesturerecognizer-c.md)
 
 **Since:** 23

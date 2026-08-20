@@ -23,7 +23,7 @@ confirm?: ButtonOptions
 
 选择弹出框底部按钮。
 
-**类型：** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
+**类型：** [ButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-dialog-buttonoptions-c.md)
 
 **起始版本：** 10
 
@@ -41,7 +41,9 @@ confirm?: ButtonOptions
 content?: ResourceStr
 ```
 
-选择弹出框内容。 默认不设置或设置为undefined，弹出框内容不显示。
+选择弹出框内容。
+
+默认不设置或设置为undefined，弹出框内容不显示。
 
 **类型：** ResourceStr
 
@@ -61,7 +63,9 @@ content?: ResourceStr
 controller: CustomDialogController
 ```
 
-选择弹出框控制器，用于控制弹出框的显示和隐藏。 **说明：** 未使用@Require装饰，构造时不强制校验参数。
+选择弹出框控制器，用于控制弹出框的显示和隐藏。
+
+**说明：** 未使用@Require装饰，构造时不强制校验参数。
 
 **类型：** CustomDialogController
 
@@ -101,7 +105,11 @@ radioContent: Array<SheetInfo>
 selectedIndex?: number
 ```
 
-选择弹出框的选中项。 取值范围：大于等于-1的整数。 默认值：-1，没有选中项。若设置数值小于-1，按没有选中项处理。
+选择弹出框的选中项。
+
+取值范围：大于等于-1的整数。
+
+默认值：-1，没有选中项。若设置数值小于-1，按没有选中项处理。
 
 **类型：** number
 
@@ -123,7 +131,7 @@ theme?: Theme | CustomTheme
 
 主题信息，可以是CustomTheme或从onWillApplyTheme中获取的Theme实例。
 
-**类型：** [Theme](../../apis-na/arkts-apis/arkts-na-arkui-theme-theme-i.md) \| [CustomTheme](../../apis-na/arkts-apis/arkts-na-arkui-theme-customtheme-i.md)
+**类型：** [Theme](../../apis-default/arkts-apis/arkts-arkui-theme-theme-i.md) \| [CustomTheme](../../apis-default/arkts-apis/arkts-arkui-theme-customtheme-i.md)
 
 **起始版本：** 12
 
@@ -141,7 +149,9 @@ theme?: Theme | CustomTheme
 themeColorMode?: ThemeColorMode
 ```
 
-自定义弹出框深浅色模式。 默认值：ThemeColorMode.SYSTEM
+自定义弹出框深浅色模式。
+
+默认值：ThemeColorMode.SYSTEM
 
 **类型：** ThemeColorMode
 
@@ -161,7 +171,9 @@ themeColorMode?: ThemeColorMode
 title: ResourceStr
 ```
 
-选择弹出框标题。 **说明：** 标题超过两行会显示“...”。
+选择弹出框标题。
+
+**说明：** 标题超过两行会显示“...”。
 
 **类型：** ResourceStr
 

@@ -2,6 +2,8 @@
 
 Enum of line break strategy
 
+@enum { number }
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare enum LineBreakStrategy--><!--Device-unnamed-declare enum LineBreakStrategy-End-->

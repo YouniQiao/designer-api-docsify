@@ -2,6 +2,8 @@
 
 投播组件样式参数选项。
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-unnamed-export declare enum AVCastPickerStyle--><!--Device-unnamed-export declare enum AVCastPickerStyle-End-->

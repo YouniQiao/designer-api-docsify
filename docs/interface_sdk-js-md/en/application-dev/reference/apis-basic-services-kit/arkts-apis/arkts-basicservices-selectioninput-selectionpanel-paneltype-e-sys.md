@@ -1,4 +1,4 @@
-# PanelType(Word Selection Panel) (System API)
+# PanelType (System API)
 
 Enumerates the word selection panel types, which defines the two-level architecture of the panel: menu panel (level 1) and main panel (level 2).
 

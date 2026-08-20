@@ -2,6 +2,8 @@
 
 Defines the Bias.
 
+@interface Bias
+
 **Since:** 12
 
 <!--Device-unnamed-declare interface Bias--><!--Device-unnamed-declare interface Bias-End-->

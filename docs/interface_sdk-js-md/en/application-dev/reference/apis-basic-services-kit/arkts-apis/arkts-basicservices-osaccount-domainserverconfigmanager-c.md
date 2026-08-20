@@ -46,13 +46,13 @@ Adds domain server configuration. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 12300211 | Server unreachable. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid server config parameters. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| 12300215 | The number of server config reaches the upper limit. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid server config parameters. |
+| 12300211 | Server unreachable. |
 | 12300213 | Server config already exists. |
+| 12300215 | The number of server config reaches the upper limit. |
 
 **Examples**
 
@@ -103,13 +103,13 @@ Adds domain server configuration. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 12300211 | Server unreachable. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid server config parameters. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| 12300215 | The number of server config reaches the upper limit. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid server config parameters. |
+| 12300211 | Server unreachable. |
 | 12300213 | Server config already exists. |
+| 12300215 | The number of server config reaches the upper limit. |
 
 ## getAccountServerConfig
 
@@ -143,10 +143,10 @@ Obtains the server configuration of a domain account. This API uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Domain account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Domain account not found. |
 
 **Examples**
 
@@ -191,8 +191,8 @@ Obtains the configurations of all domain servers. This API uses a promise to ret
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 **Examples**
@@ -249,8 +249,8 @@ Obtains the domain server configuration. This API uses a promise to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | 12300212 | Server config not found. |
 
@@ -308,11 +308,11 @@ Removes domain server configuration. This API uses a promise to return the resul
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| 12300214 | Server config has been associated with an account. |
 | 12300212 | Server config not found. |
+| 12300214 | Server config has been associated with an account. |
 
 **Examples**
 
@@ -366,14 +366,14 @@ Updates the domain server configuration. This API uses a promise to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 12300211 | Server unreachable. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid server config parameters. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| 12300214 | Server config has been associated with an account. |
-| 12300213 | Server config already exists. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid server config parameters. |
+| 12300211 | Server unreachable. |
 | 12300212 | Server config not found. |
+| 12300213 | Server config already exists. |
+| 12300214 | Server config has been associated with an account. |
 
 **Examples**
 
@@ -430,12 +430,12 @@ Updates the domain server configuration. This API uses a promise to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 12300211 | Server unreachable. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid server config parameters. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| 12300214 | Server config has been associated with an account. |
-| 12300213 | Server config already exists. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid server config parameters. |
+| 12300211 | Server unreachable. |
 | 12300212 | Server config not found. |
+| 12300213 | Server config already exists. |
+| 12300214 | Server config has been associated with an account. |
 

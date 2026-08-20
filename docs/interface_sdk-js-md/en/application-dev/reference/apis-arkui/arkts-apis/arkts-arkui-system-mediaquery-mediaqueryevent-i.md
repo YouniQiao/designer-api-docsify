@@ -2,6 +2,8 @@
 
 Defines the MediaQuery event.
 
+@interface MediaQueryEvent
+
 **Since:** 23
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.

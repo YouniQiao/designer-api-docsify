@@ -2,6 +2,8 @@
 
 interface of service lifecycle.
 
+@interface LifecycleService
+
 **Since:** 7
 
 <!--Device-unnamed-export declare interface LifecycleService--><!--Device-unnamed-export declare interface LifecycleService-End-->

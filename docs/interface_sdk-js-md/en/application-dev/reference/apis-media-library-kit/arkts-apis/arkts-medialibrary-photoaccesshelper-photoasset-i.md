@@ -46,8 +46,8 @@ Clones a media asset. The file name can be set, but the file type cannot be chan
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## close
@@ -62,7 +62,7 @@ Closes the current file. This API uses an asynchronous callback to return the re
 
 **Deprecated since:** 11
 
-**Substitutes:** [close](../../apis-na/arkts-apis/arkts-na-fileio-close-f.md)
+**Substitutes:** [close](../../apis-default/arkts-apis/arkts-fileio-close-f.md)
 
 <!--Device-PhotoAsset-close(fd: number, callback: AsyncCallback<void>): void--><!--Device-PhotoAsset-close(fd: number, callback: AsyncCallback<void>): void-End-->
 
@@ -79,8 +79,8 @@ Closes the current file. This API uses an asynchronous callback to return the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| 13900020 | Invalid argument. |
 | 14000011 | System inner fail |
 
 ## close
@@ -95,7 +95,7 @@ Closes the current file. This API uses a promise to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [close](../../apis-na/arkts-apis/arkts-na-fileio-close-f.md)
+**Substitutes:** [close](../../apis-default/arkts-apis/arkts-fileio-close-f.md)
 
 <!--Device-PhotoAsset-close(fd: number): Promise<void>--><!--Device-PhotoAsset-close(fd: number): Promise<void>-End-->
 
@@ -117,8 +117,8 @@ Closes the current file. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## commitModify
@@ -149,11 +149,11 @@ Commits the modification on the file metadata to the database. This API uses an 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
-| 14000001 | Invalid display name |
-| 13900012 | Permission denied<br>**Applicable version:** 10 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied<br>**Applicable version:** 11 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 13900012 | Permission denied<br>**Applicable version:** 10 and later |
+| 13900020 | Invalid argument |
+| 14000001 | Invalid display name |
 | 14000011 | System inner fail |
 
 ## commitModify
@@ -184,11 +184,11 @@ Commits the modification on the file metadata to the database. This API uses a p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
-| 14000001 | Invalid display name |
-| 13900012 | Permission denied<br>**Applicable version:** 10 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied<br>**Applicable version:** 11 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 13900012 | Permission denied<br>**Applicable version:** 10 and later |
+| 13900020 | Invalid argument |
+| 14000001 | Invalid display name |
 | 14000011 | System inner fail |
 
 ## get
@@ -232,13 +232,15 @@ Obtains a **PhotoAsset** member parameter.
 getReadOnlyFd(callback: AsyncCallback<number>): void
 ```
 
-Opens this file in read-only mode. This API uses an asynchronous callback to return the result. The returned FD must be closed when it is not required.
+Opens this file in read-only mode. This API uses an asynchronous callback to return the result.
+
+The returned FD must be closed when it is not required.
 
 **Since:** 10
 
 **Deprecated since:** 11
 
-**Substitutes:** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md)
+**Substitutes:** [open](../../apis-default/arkts-apis/arkts-fileio-open-f.md)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -256,9 +258,9 @@ Opens this file in read-only mode. This API uses an asynchronous callback to ret
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## getReadOnlyFd
@@ -267,13 +269,15 @@ Opens this file in read-only mode. This API uses an asynchronous callback to ret
 getReadOnlyFd(): Promise<number>
 ```
 
-Opens this file in read-only mode. This API uses a promise to return the result. The returned FD must be closed when it is not required.
+Opens this file in read-only mode. This API uses a promise to return the result.
+
+The returned FD must be closed when it is not required.
 
 **Since:** 10
 
 **Deprecated since:** 11
 
-**Substitutes:** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md)
+**Substitutes:** [open](../../apis-default/arkts-apis/arkts-fileio-open-f.md)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -291,9 +295,9 @@ Opens this file in read-only mode. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## getThumbnail
@@ -324,9 +328,9 @@ Obtains the thumbnail of a file. This API uses an asynchronous callback to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 13900012 | Permission denied |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## getThumbnail
@@ -358,9 +362,9 @@ Obtains the file thumbnail of the given size. This API uses an asynchronous call
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## getThumbnail
@@ -397,9 +401,9 @@ Obtains the file thumbnail of the given size. This API uses a promise to return 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## set
@@ -427,8 +431,8 @@ Sets a **PhotoAsset** member parameter.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| 13900020 | Invalid argument |
 | 14000014 | The provided member must be a property name of PhotoKey. |
 
 ## displayName

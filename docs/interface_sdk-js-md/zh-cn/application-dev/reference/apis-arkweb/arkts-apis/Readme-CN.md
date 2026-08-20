@@ -7,6 +7,8 @@
   - [WebNativeMessagingExtensionContext](arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md)
 - [@ohos.web.netErrorList](arkts-web-neterrorlist.md)
   - [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md)
+- [@ohos.web.netErrorList](arkts-web-neterrorlist.md)
+  - [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md)
 - [@ohos.web.webNativeMessagingExtensionManager](arkts-web-webnativemessagingextensionmanager.md)
   - [connectNative](arkts-arkweb-webnativemessagingextensionmanager-connectnative-f.md)
   - [disconnectNative](arkts-arkweb-webnativemessagingextensionmanager-disconnectnative-f.md)

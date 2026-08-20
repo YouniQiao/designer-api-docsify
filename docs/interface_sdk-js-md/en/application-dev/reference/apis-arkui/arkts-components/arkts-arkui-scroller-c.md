@@ -1,6 +1,8 @@
 # Scroller
 
-Defines a controller for scrollable container components. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. The binding of a &lt;em&gt;Scroller&lt;/em&gt; instance to a scrollable container component occurs during the component creation phase. <br>2. &lt;em&gt;Scroller&lt;/em&gt; APIs can only be effectively called after the &lt;em&gt;Scroller&lt;/em&gt; instance is bound to a scrollable container component. Otherwise, depending on the API called, it may have no effect or throw an exception. <br>3. For example, with aboutToAppear, this callback is executed after a new instance of a custom component is created and before its &lt;em&gt;build()&lt;/em&gt; method is called. Therefore, if a scrollable component is defined within the &lt;em&gt;build&lt;/em&gt; method of a custom component, the internal scrollable component has not yet been created during the &lt;em&gt;aboutToAppear&lt;/em&gt; callback of that custom component, and therefore the &lt;em&gt;Scroller&lt;/em&gt; APIs cannot be called effectively. &lt;/p&gt;
+Defines a controller for scrollable container components.
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. The binding of a &lt;em&gt;Scroller&lt;/em&gt; instance to a scrollable container component occurs during the component creation phase. <br>2. &lt;em&gt;Scroller&lt;/em&gt; APIs can only be effectively called after the &lt;em&gt;Scroller&lt;/em&gt; instance is bound to a scrollable container component. Otherwise, depending on the API called, it may have no effect or throw an exception. <br>3. For example, with aboutToAppear, this callback is executed after a new instance of a custom component is created and before its &lt;em&gt;build()&lt;/em&gt; method is called. Therefore, if a scrollable component is defined within the &lt;em&gt;build&lt;/em&gt; method of a custom component, the internal scrollable component has not yet been created during the &lt;em&gt;aboutToAppear&lt;/em&gt; callback of that custom component, and therefore the &lt;em&gt;Scroller&lt;/em&gt; APIs cannot be called effectively. &lt;/p&gt;
 
 **Since:** 7
 
@@ -65,7 +67,9 @@ Obtains the content size.
 currentOffset() : OffsetResult
 ```
 
-Obtains the current scrolling offset. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. If &lt;em&gt;Scroller&lt;/em&gt; is not bound to a component, this API returns &lt;em&gt;undefined&lt;/em&gt;, which is not declared in the API. You are advised to use the &lt;em&gt;offset&lt;/em&gt; function. <br>2. The &lt;em&gt;Grid&lt;/em&gt;, &lt;em&gt;List&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt; components use a lazy loading mechanism. Before all content is fully loaded and laid out, the total content offset is estimated, and this estimation may be inaccurate. For the &lt;em&gt;List&lt;/em&gt; component, the &lt;em&gt;childrenMainSize&lt;/em&gt; attribute can be used to mitigate such inaccuracies. Currently, there is no solution to inaccurate estimation of the &lt;em&gt;Grid&lt;/em&gt; and &lt;em&gt;WaterFlow&lt;/em&gt; components. &lt;/p&gt;
+Obtains the current scrolling offset.
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. If &lt;em&gt;Scroller&lt;/em&gt; is not bound to a component, this API returns &lt;em&gt;undefined&lt;/em&gt;, which is not declared in the API. You are advised to use the &lt;em&gt;offset&lt;/em&gt; function. <br>2. The &lt;em&gt;Grid&lt;/em&gt;, &lt;em&gt;List&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt; components use a lazy loading mechanism. Before all content is fully loaded and laid out, the total content offset is estimated, and this estimation may be inaccurate. For the &lt;em&gt;List&lt;/em&gt; component, the &lt;em&gt;childrenMainSize&lt;/em&gt; attribute can be used to mitigate such inaccuracies. Currently, there is no solution to inaccurate estimation of the &lt;em&gt;Grid&lt;/em&gt; and &lt;em&gt;WaterFlow&lt;/em&gt; components. &lt;/p&gt;
 
 **Since:** 7
 
@@ -142,7 +146,9 @@ Obtains the FrameNode corresponding to this scroller.
 getItemIndex(x: number, y: number): number
 ```
 
-Obtains the index of a child component based on coordinates. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>The returned index is &lt;em&gt;-1&lt;/em&gt; for invalid coordinates. &lt;/p&gt;
+Obtains the index of a child component based on coordinates.
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>The returned index is &lt;em&gt;-1&lt;/em&gt; for invalid coordinates. &lt;/p&gt;
 
 **Since:** 14
 
@@ -180,7 +186,9 @@ Obtains the index of a child component based on coordinates. &lt;p&gt;&lt;strong
 getItemRect(index: number): RectResult
 ```
 
-Obtains the size and position of a child component relative to its container. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>- The value of &lt;em&gt;index&lt;/em&gt; must be the index of a child component visible in the display area. Otherwise, the value is considered invalid. <br>- The value of &lt;em&gt;index&lt;/em&gt; must be the index of a child component visible in the display area. Otherwise, the value is considered invalid. &lt;/p&gt;
+Obtains the size and position of a child component relative to its container.
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>- The value of &lt;em&gt;index&lt;/em&gt; must be the index of a child component visible in the display area. Otherwise, the value is considered invalid. <br>- The value of &lt;em&gt;index&lt;/em&gt; must be the index of a child component visible in the display area. Otherwise, the value is considered invalid. &lt;/p&gt;
 
 **Since:** 11
 
@@ -217,7 +225,9 @@ Obtains the size and position of a child component relative to its container. &l
 isAtEnd(): boolean
 ```
 
-Checks whether the component has scrolled to the bottom. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>This API is available for the &lt;em&gt;ArcList&lt;/em&gt;, &lt;em&gt;Scroll&lt;/em&gt;, &lt;em&gt;List&lt;/em&gt;, &lt;em&gt;Grid&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt; components. &lt;/p&gt;
+Checks whether the component has scrolled to the bottom.
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>This API is available for the &lt;em&gt;ArcList&lt;/em&gt;, &lt;em&gt;Scroll&lt;/em&gt;, &lt;em&gt;List&lt;/em&gt;, &lt;em&gt;Grid&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt; components. &lt;/p&gt;
 
 **Since:** 10
 
@@ -265,7 +275,9 @@ Obtains the current scrolling offset.
 scrollBy(dx: Length, dy: Length)
 ```
 
-Scrolls by the specified amount. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>This API is available for the &lt;em&gt;ArcList&lt;/em&gt;, &lt;em&gt;Scroll&lt;/em&gt;, &lt;em&gt;List&lt;/em&gt;, &lt;em&gt;Grid&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt; components. &lt;/p&gt;
+Scrolls by the specified amount.
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>This API is available for the &lt;em&gt;ArcList&lt;/em&gt;, &lt;em&gt;Scroll&lt;/em&gt;, &lt;em&gt;List&lt;/em&gt;, &lt;em&gt;Grid&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt; components. &lt;/p&gt;
 
 **Since:** 9
 
@@ -357,7 +369,9 @@ Scrolls to the next or previous page.
 scrollTo(options: ScrollOptions)
 ```
 
-Scrolls to the specified position. Anonymous Object Rectification. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>If the scrolling speed of the &lt;em&gt;scrollTo&lt;/em&gt; animation exceeds 200 vp/s, the components within the scrollable area will not respond to click events. &lt;/p&gt;
+Scrolls to the specified position. Anonymous Object Rectification.
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>If the scrolling speed of the &lt;em&gt;scrollTo&lt;/em&gt; animation exceeds 200 vp/s, the components within the scrollable area will not respond to click events. &lt;/p&gt;
 
 **Since:** 7
 
@@ -379,7 +393,9 @@ Scrolls to the specified position. Anonymous Object Rectification. &lt;p&gt;&lt;
 scrollToIndex(value: number, smooth?: boolean, align?: ScrollAlign, options?: ScrollToIndexOptions)
 ```
 
-Scrolls to a specified index, with support for setting an extra offset for the scroll. When smooth scrolling is enabled, all items encountered during the scroll are loaded and their layout is calculated. Loading a large number of items may cause performance issues. It is recommended that you first call &lt;em&gt;scrollToIndex&lt;/em&gt; without animation to jump to a position near the target, then call it again with animation to smoothly scroll to the final target position. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>This API only works for the &lt;em&gt;ArcList&lt;/em&gt;, &lt;em&gt;Grid&lt;/em&gt;, &lt;em&gt;List&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt; components. <br>When refreshing the data source using &lt;em&gt;LazyForEach&lt;/em&gt;, &lt;em&gt;ForEach&lt;/em&gt;, or &lt;em&gt;Repeat&lt;/em&gt;, ensure this API is called after the data refresh is complete. <br>Starting from API version 11, the &lt;em&gt;List&lt;/em&gt; component supports &lt;em&gt;contentStartOffset&lt;/em&gt; and &lt;em&gt;contentEndOffset&lt;/em&gt;. Starting from API version 22, the &lt;em&gt;Grid&lt;/em&gt; and &lt;em&gt;WaterFlow&lt;/em&gt; components also support setting &lt;em&gt;contentStartOffset&lt;/em&gt; and &lt;em&gt;contentEndOffset&lt;/em&gt;. <br>- If the scrollable container has &lt;em&gt;contentStartOffset&lt;/em&gt; set and &lt;em&gt;ScrollAlign&lt;/em&gt; is &lt;em&gt;START&lt;/em&gt;, after scrolling, the start of the specified item will align with the &lt;em&gt;contentStartOffset&lt;/em&gt; of the container. <br>- If the scrollable container has &lt;em&gt;contentEndOffset&lt;/em&gt; set and &lt;em&gt;ScrollAlign&lt;/em&gt; is &lt;em&gt;END&lt;/em&gt;, after scrolling, the end of the specified item will align with the &lt;em&gt;contentEndOffset&lt;/em&gt; of the container. <br>- If the scrollable container has &lt;em&gt;contentStartOffset&lt;/em&gt; or &lt;em&gt;contentEndOffset&lt;/em&gt; set and &lt;em&gt;ScrollAlign&lt;/em&gt; is &lt;em&gt;AUTO&lt;/em&gt;: When the specified item is completely within the visible area, no adjustment is made. Otherwise, following the shortest-scroll-distance principle, the start of the item will align with the container's &lt;em&gt;contentStartOffset&lt;/em&gt;, or the end will align with the container's &lt;em&gt;contentEndOffset&lt;/em&gt;, ensuring the item is fully displayed. &lt;/p&gt;
+Scrolls to a specified index, with support for setting an extra offset for the scroll. When smooth scrolling is enabled, all items encountered during the scroll are loaded and their layout is calculated. Loading a large number of items may cause performance issues. It is recommended that you first call &lt;em&gt;scrollToIndex&lt;/em&gt; without animation to jump to a position near the target, then call it again with animation to smoothly scroll to the final target position.
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>This API only works for the &lt;em&gt;ArcList&lt;/em&gt;, &lt;em&gt;Grid&lt;/em&gt;, &lt;em&gt;List&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt; components. <br>When refreshing the data source using &lt;em&gt;LazyForEach&lt;/em&gt;, &lt;em&gt;ForEach&lt;/em&gt;, or &lt;em&gt;Repeat&lt;/em&gt;, ensure this API is called after the data refresh is complete. <br>Starting from API version 11, the &lt;em&gt;List&lt;/em&gt; component supports &lt;em&gt;contentStartOffset&lt;/em&gt; and &lt;em&gt;contentEndOffset&lt;/em&gt;. Starting from API version 22, the &lt;em&gt;Grid&lt;/em&gt; and &lt;em&gt;WaterFlow&lt;/em&gt; components also support setting &lt;em&gt;contentStartOffset&lt;/em&gt; and &lt;em&gt;contentEndOffset&lt;/em&gt;. <br>- If the scrollable container has &lt;em&gt;contentStartOffset&lt;/em&gt; set and &lt;em&gt;ScrollAlign&lt;/em&gt; is &lt;em&gt;START&lt;/em&gt;, after scrolling, the start of the specified item will align with the &lt;em&gt;contentStartOffset&lt;/em&gt; of the container. <br>- If the scrollable container has &lt;em&gt;contentEndOffset&lt;/em&gt; set and &lt;em&gt;ScrollAlign&lt;/em&gt; is &lt;em&gt;END&lt;/em&gt;, after scrolling, the end of the specified item will align with the &lt;em&gt;contentEndOffset&lt;/em&gt; of the container. <br>- If the scrollable container has &lt;em&gt;contentStartOffset&lt;/em&gt; or &lt;em&gt;contentEndOffset&lt;/em&gt; set and &lt;em&gt;ScrollAlign&lt;/em&gt; is &lt;em&gt;AUTO&lt;/em&gt;: When the specified item is completely within the visible area, no adjustment is made. Otherwise, following the shortest-scroll-distance principle, the start of the item will align with the container's &lt;em&gt;contentStartOffset&lt;/em&gt;, or the end will align with the container's &lt;em&gt;contentEndOffset&lt;/em&gt;, ensuring the item is fully displayed. &lt;/p&gt;
 
 **Since:** 7
 

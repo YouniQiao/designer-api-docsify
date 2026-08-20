@@ -1,5 +1,10 @@
 # TextInputClient
 
+@brief 下列API示例中都需使用 on('inputStart') 回调获取到TextInputClient实例，再通过此实例调用对应方法。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 从 API version 8开始支持，从API version 9开始废弃。
+
 **起始版本：** 8
 
 **废弃版本：** 9
@@ -22,6 +27,11 @@ import { inputMethodEngine } from '@kit.IMEKit';
 deleteBackward(length: number, callback: AsyncCallback<boolean>): void
 ```
 
+@brief 删除光标后固定长度的文本。使用callback异步回调。 <br> <br>使用场景：实现删除键功能、删除光标后的字符、快速修正输入、实现自定义删除逻辑等。 <br> <br>使用后效果：成功时返回true，编辑框中光标后指定长度的文本被删除。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 从 API version 8开始支持，从API version 9开始废弃。
+
 **起始版本：** 8
 
 **废弃版本：** 9
@@ -37,7 +47,7 @@ deleteBackward(length: number, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | length | number | 是 | 文本长度。不能小于0。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当光标后固定长度的文本删除成功，err为undefined，data为true；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当光标后固定长度的文本删除成功，err为undefined，data为true；否则为错误对象。 |
 
 **示例**
 
@@ -63,6 +73,11 @@ textInputClient.deleteBackward(length, (err: BusinessError, result: boolean) => 
 ```TypeScript
 deleteBackward(length: number): Promise<boolean>
 ```
+
+@brief 删除光标后固定长度的文本。使用promise异步回调。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 从 API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -109,6 +124,11 @@ textInputClient.deleteBackward(length).then((result: boolean) => {
 deleteForward(length: number, callback: AsyncCallback<boolean>): void
 ```
 
+@brief 删除光标前固定长度的文本。使用callback异步回调。 <br> <br>使用场景：实现退格键功能、逐字删除输入、删除错误的输入、实现自定义删除逻辑等。 <br> <br> 使用后效果：成功时返回true，编辑框中光标前指定长度的文本被删除。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 从 API version 8开始支持，从API version 9开始废弃。
+
 **起始版本：** 8
 
 **废弃版本：** 9
@@ -124,7 +144,7 @@ deleteForward(length: number, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | length | number | 是 | 文本长度。不能小于0。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当光标前固定长度的文本删除成功，err为undefined，data为true；当光标前固定长度的文本删除失败，err为 undefined，data为false；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当光标前固定长度的文本删除成功，err为undefined，data为true；当光标前固定长度的文本删除失败，err为 undefined，data为false；否则为错误对象。 |
 
 **示例**
 
@@ -150,6 +170,11 @@ textInputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
 ```TypeScript
 deleteForward(length: number): Promise<boolean>
 ```
+
+@brief 删除光标前固定长度的文本。使用promise异步回调。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 从 API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -196,6 +221,11 @@ textInputClient.deleteForward(length).then((result: boolean) => {
 getBackward(length: number, callback: AsyncCallback<string>): void
 ```
 
+@brief 获取光标后固定长度的文本。使用callback异步回调。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 从 API version 8开始支持，从API version 9开始废弃。
+
 **起始版本：** 8
 
 **废弃版本：** 9
@@ -211,7 +241,7 @@ getBackward(length: number, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | length | number | 是 | 文本长度。不能小于0。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当光标后固定长度的文本获取成功，err为undefined，data为获取到的文本；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当光标后固定长度的文本获取成功，err为undefined，data为获取到的文本；否则为错误对象。 |
 
 **示例**
 
@@ -233,6 +263,11 @@ textInputClient.getBackward(length, (err: BusinessError, text: string) => {
 ```TypeScript
 getBackward(length: number): Promise<string>
 ```
+
+@brief 获取光标后固定长度的文本。使用promise异步回调。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 从 API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -275,6 +310,11 @@ textInputClient.getBackward(length).then((text: string) => {
 getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void
 ```
 
+@brief 获取编辑框属性值。使用callback异步回调。 <br> <br>使用场景：根据编辑框类型调整输入法界面、根据编辑框配置提供不同的输入建议、实现特定输入逻辑、适配不同类型的输入框等。 <br> <br>使用后效果：返回编辑框属性信息（包括inputPattern输入类型和enterKeyType回车键类型），输入法应用据此调整键盘布局。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 从 API version 8开始支持，从API version 9开始废弃。
+
 **起始版本：** 8
 
 **废弃版本：** 9
@@ -289,7 +329,7 @@ getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | 是 | 回调函数。当编辑框的属性值获取成功，err为undefined，data为编辑框属性值；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | 是 | 回调函数。当编辑框的属性值获取成功，err为undefined，data为编辑框属性值；否则为错误对象。 |
 
 **示例**
 
@@ -313,6 +353,11 @@ textInputClient.getEditorAttribute((err: BusinessError,
 ```TypeScript
 getEditorAttribute(): Promise<EditorAttribute>
 ```
+
+@brief 获取编辑框属性值。使用promise异步回调。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 从 API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -349,6 +394,11 @@ textInputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.Ed
 getForward(length: number, callback: AsyncCallback<string>): void
 ```
 
+@brief 获取光标前固定长度的文本。使用callback异步回调。 <br> <br>使用场景：分析已输入文本内容以提供智能补全建议、检查文本格式、实现文本预测功能、实现文本语义分析等。 <br> <br>使用后效果：成功时返回光标前指定长度的文本字符串，输入法应用可据此更新候选词或输入建议。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 从 API version 8开始支持，从API version 9开始废弃。
+
 **起始版本：** 8
 
 **废弃版本：** 9
@@ -364,7 +414,7 @@ getForward(length: number, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | length | number | 是 | 文本长度。不能小于0。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当光标前固定长度的文本获取成功，err为undefined，data为获取到的文本；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当光标前固定长度的文本获取成功，err为undefined，data为获取到的文本；否则为错误对象。 |
 
 **示例**
 
@@ -386,6 +436,11 @@ textInputClient.getForward(length, (err: BusinessError, text: string) => {
 ```TypeScript
 getForward(length: number): Promise<string>
 ```
+
+@brief 获取光标前固定长度的文本。使用promise异步回调。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 从 API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -428,6 +483,11 @@ textInputClient.getForward(length).then((text: string) => {
 insertText(text: string, callback: AsyncCallback<boolean>): void
 ```
 
+@brief 插入文本。使用callback异步回调。 <br> <br>使用场景：插入候选词、插入特殊符号、实现文本自动补全、快速插入常用短语等。 <br> <br>使用后效果：成功时返回true，文本已插入到编辑框光标位置。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 从 API version 8开始支持，从API version 9开始废弃。
+
 **起始版本：** 8
 
 **废弃版本：** 9
@@ -443,7 +503,7 @@ insertText(text: string, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 文本。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当文本插入成功，err为undefined，data为true；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当文本插入成功，err为undefined，data为true；否则为错误对象。 |
 
 **示例**
 
@@ -468,6 +528,11 @@ textInputClient.insertText('test', (err: BusinessError, result: boolean) => {
 ```TypeScript
 insertText(text: string): Promise<boolean>
 ```
+
+@brief 插入文本。使用promise异步回调。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 从 API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -513,6 +578,11 @@ textInputClient.insertText('test').then((result: boolean) => {
 sendKeyFunction(action: number, callback: AsyncCallback<boolean>): void
 ```
 
+@brief 发送功能键。使用callback异步回调。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 从 API version 8开始支持，从API version 9开始废弃。
+
 **起始版本：** 8
 
 **废弃版本：** 9
@@ -528,7 +598,7 @@ sendKeyFunction(action: number, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | action | number | 是 | 功能键键值。<br/>- 当值为0时，表示无效按键；<br/>- 当值为1时，表示确认键（即回车键）。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当功能键发送成功，err为undefined，data为true；当功能键发送失败，err为undefined，data为 false；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当功能键发送成功，err为undefined，data为true；当功能键发送失败，err为undefined，data为 false；否则为错误对象。 |
 
 **示例**
 
@@ -554,6 +624,11 @@ textInputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) =>
 ```TypeScript
 sendKeyFunction(action: number): Promise<boolean>
 ```
+
+@brief 发送功能键。使用promise异步回调。 <br> <br>   
+> **说明：** <br>
+> <br>
+> 从 API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 

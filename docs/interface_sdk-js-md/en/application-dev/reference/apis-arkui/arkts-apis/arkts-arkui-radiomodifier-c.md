@@ -2,6 +2,8 @@
 
 Defines Radio Modifier
 
+@extends RadioAttribute @implements AttributeModifier&lt;RadioAttribute&gt;
+
 **Inheritance/Implementation:** RadioModifier extends RadioAttribute and implements AttributeModifier<RadioAttribute>
 
 **Since:** 20
@@ -32,5 +34,5 @@ Defines the normal update attribute function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instance | [RadioAttribute](../../apis-na/arkts-apis/arkts-na-radio-radioattribute-i.md) | Yes |  |
+| instance | [RadioAttribute](../../apis-default/arkts-components/arkts-radio-attribute.md) | Yes |  |
 

@@ -12,7 +12,11 @@ import { ranging } from '@kit.ConnectivityKit';
 function startPassiveRanging(capabilityType: RangingTypes): Promise<int>
 ```
 
-Starts passive ranging mode. Upon successful startup, returns a handle identifier for the passive ranging session and begins broadcasting ranging packets. The returned handle can be used to stop the passive ranging broadcast via stopPassiveRanging.
+Starts passive ranging mode.
+
+Upon successful startup, returns a handle identifier for the passive ranging session and begins broadcasting ranging packets.
+
+The returned handle can be used to stop the passive ranging broadcast via stopPassiveRanging.
 
 **Since:** 26.0.0
 
@@ -40,9 +44,9 @@ Starts passive ranging mode. Upon successful startup, returns a handle identifie
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 34900052 | The specified type of ranging service is not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| 34900052 | The specified type of ranging service is not supported. |
 | 34900053 | The ranging service is disabled. |
 | [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) | Internal system error. For example, Internal object is invalid. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

@@ -2,6 +2,8 @@
 
 Describes the nsa state.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-radio-export enum NsaState--><!--Device-radio-export enum NsaState-End-->

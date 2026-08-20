@@ -2,6 +2,8 @@
 
 技能信息标志，指示需要获取的技能信息的内容。
 
+@enum { int }
+
 **起始版本：** 26.0.0
 
 <!--Device-skillManager-export enum SkillInfoFlag--><!--Device-skillManager-export enum SkillInfoFlag-End-->

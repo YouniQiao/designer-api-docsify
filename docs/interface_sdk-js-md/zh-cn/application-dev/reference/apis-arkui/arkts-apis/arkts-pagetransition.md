@@ -7,6 +7,8 @@
 | 名称 | 说明 |
 | --- | --- |
 | [CommonTransition](arkts-arkui-pagetransition-commontransition-c.md) | 页面转场通用动效。 |
+| [PageTransitionEnter](arkts-arkui-pagetransition-pagetransitionenter-c.md) | 设置当前页面的自定义入场动效。继承自[CommonTransition](arkts-arkui-pagetransition-commontransition-c.md)。 |
+| [PageTransitionExit](arkts-arkui-pagetransition-pagetransitionexit-c.md) | 设置当前页面的自定义退场动效。继承自[CommonTransition](arkts-arkui-pagetransition-commontransition-c.md)。 |
 
 ### 接口
 

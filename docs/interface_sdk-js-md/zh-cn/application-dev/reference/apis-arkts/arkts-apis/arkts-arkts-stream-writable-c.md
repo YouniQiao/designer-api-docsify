@@ -20,7 +20,7 @@ import { stream } from '@kit.ArkTS';
 constructor()
 ```
 
-**Writable**的构造函数。
+*Writable**的构造函数。
 
 **起始版本：** 23
 
@@ -373,7 +373,7 @@ off(event: string, callback?: Callback<emitter.EventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | 事件回调类型，支持的事件包括：'close' \| 'drain' \| 'error' \| 'finish'。 - 'close'：完成end()调用，结束写入操作，触发该事件。 - 'drain'：在可写流缓冲区中数据清空时触发该事件。 - 'error'：在可写流发生异常时触发该事件。 - 'finish'：在数据缓冲区全部写入到目标后触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | 否 | 指定事件的要注销的回调函数。不传入时注销指定事件的所有回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;emitter.EventData&gt; | 否 | 指定事件的要注销的回调函数。不传入时注销指定事件的所有回调函数。 |
 
 **示例**
 
@@ -475,7 +475,7 @@ on(event: string, callback: Callback<emitter.EventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | 事件回调类型，支持的事件包括：'close' \| 'drain' \| 'error' \| 'finish'。 - 'close'：完成end()调用，结束写入操作，触发该事件。 - 'drain'：在可写流缓冲区中数据清空时触发该事件。 - 'error'：在可写流发生异常时触发该事件。 - 'finish'：在数据缓冲区全部写入到目标后触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | 是 | 回调函数，返回事件传输的数据。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;emitter.EventData&gt; | 是 | 回调函数，返回事件传输的数据。 |
 
 **示例**
 
@@ -719,8 +719,8 @@ write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): bool
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [10200035](../errorcode-utils.md#10200035-dowrite接口未实现) | The doWrite method has not been implemented. |
-| [10200037](../errorcode-utils.md#10200037-多次调用callback) | The callback is invoked multiple times consecutively. |
 | [10200036](../errorcode-utils.md#10200036-流已经结束仍进行写操作) | The stream has been ended. |
+| [10200037](../errorcode-utils.md#10200037-多次调用callback) | The callback is invoked multiple times consecutively. |
 
 **示例**
 

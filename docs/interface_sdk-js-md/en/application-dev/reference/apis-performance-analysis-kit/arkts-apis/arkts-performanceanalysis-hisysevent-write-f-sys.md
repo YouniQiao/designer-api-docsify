@@ -39,14 +39,14 @@ Writes event information to the event file. This API uses a promise to return th
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 11200001 | Invalid event domain. |
 | 11200002 | Invalid event name. |
 | [11200003](../errorcode-hisysevent-sys.md#11200003-environment-error) | Abnormal environment. |
-| [11200051](../errorcode-hisysevent-sys.md#11200051-invalid-event-parameter) | Invalid event parameter. |
-| 11200001 | Invalid event domain. |
-| [11200054](../errorcode-hisysevent-sys.md#11200054-length-of-event-parameter-values-of-the-array-type-exceeding-the-limit) | The number of event parameters of the array type exceeds the limit. |
 | [11200004](../errorcode-hisysevent-sys.md#11200004-invalid-event-length) | The event length exceeds the limit. |
+| [11200051](../errorcode-hisysevent-sys.md#11200051-invalid-event-parameter) | Invalid event parameter. |
 | [11200052](../errorcode-hisysevent-sys.md#11200052-length-of-event-parameter-values-of-the-string-type-exceeding-the-limit) | The size of the event parameter of the string type exceeds the limit. |
 | [11200053](../errorcode-hisysevent-sys.md#11200053-number-of-event-parameters-exceeding-the-limit) | The number of event parameters exceeds the limit. |
+| [11200054](../errorcode-hisysevent-sys.md#11200054-length-of-event-parameter-values-of-the-array-type-exceeding-the-limit) | The number of event parameters of the array type exceeds the limit. |
 
 **Examples**
 
@@ -111,14 +111,14 @@ Writes event information to the event file. This API uses an asynchronous callba
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 11200001 | Invalid event domain. |
 | 11200002 | Invalid event name. |
 | [11200003](../errorcode-hisysevent-sys.md#11200003-environment-error) | Abnormal environment. |
-| [11200051](../errorcode-hisysevent-sys.md#11200051-invalid-event-parameter) | Invalid event parameter. |
-| 11200001 | Invalid event domain. |
-| [11200054](../errorcode-hisysevent-sys.md#11200054-length-of-event-parameter-values-of-the-array-type-exceeding-the-limit) | The number of event parameters of the array type exceeds the limit. |
 | [11200004](../errorcode-hisysevent-sys.md#11200004-invalid-event-length) | The event length exceeds the limit. |
+| [11200051](../errorcode-hisysevent-sys.md#11200051-invalid-event-parameter) | Invalid event parameter. |
 | [11200052](../errorcode-hisysevent-sys.md#11200052-length-of-event-parameter-values-of-the-string-type-exceeding-the-limit) | The size of the event parameter of the string type exceeds the limit. |
 | [11200053](../errorcode-hisysevent-sys.md#11200053-number-of-event-parameters-exceeding-the-limit) | The number of event parameters exceeds the limit. |
+| [11200054](../errorcode-hisysevent-sys.md#11200054-length-of-event-parameter-values-of-the-array-type-exceeding-the-limit) | The number of event parameters of the array type exceeds the limit. |
 
 **Examples**
 

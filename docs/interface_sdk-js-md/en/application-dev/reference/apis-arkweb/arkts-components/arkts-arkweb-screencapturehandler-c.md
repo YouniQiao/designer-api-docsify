@@ -1,6 +1,12 @@
 # ScreenCaptureHandler
 
-**ScreenCaptureHandler** is a screen capture permission handling class provided by the **Web** component, used to respond to screen capture requests initiated by web pages. This class is applicable to scenarios such as online education, remote meetings, and screen recording where access to the user's screen content is required. It allows developers to control whether to grant screen capture permission to a web page through the **grant** or **deny** method, and to obtain request origin information through the **getOrigin** method. This helps developers flexibly handle screen capture access requests from web pages while protecting user privacy, thereby improving app security and user experience. For details about the sample code, see the [onScreenCaptureRequest](arkts-arkweb-web-attribute.md#onscreencapturerequest) event. &gt; **NOTE：**&gt; &gt; - The [grant](#grant)() and [deny](#deny)() methods are &gt; mutually exclusive. For the same request on the same **ScreenCaptureHandler** instance, only one of them can be &gt; called. &gt; &gt; - After calling one method, do not call the other method for the same request.
+*ScreenCaptureHandler** is a screen capture permission handling class provided by the **Web** component, used to respond to screen capture requests initiated by web pages. This class is applicable to scenarios such as online education, remote meetings, and screen recording where access to the user's screen content is required. It allows developers to control whether to grant screen capture permission to a web page through the **grant** or **deny** method, and to obtain request origin information through the **getOrigin** method. This helps developers flexibly handle screen capture access requests from web pages while protecting user privacy, thereby improving app security and user experience. For details about the sample code, see the [onScreenCaptureRequest](arkts-arkweb-web-attribute.md#onscreencapturerequest) event.
+
+> **NOTE：**
+> 
+> - The [grant](#grant)() and [deny](#deny)() methods are &gt; mutually exclusive. For the same request on the same **ScreenCaptureHandler** instance, only one of them can be &gt; called.
+> 
+> - After calling one method, do not call the other method for the same request.
 
 **Since:** 10
 

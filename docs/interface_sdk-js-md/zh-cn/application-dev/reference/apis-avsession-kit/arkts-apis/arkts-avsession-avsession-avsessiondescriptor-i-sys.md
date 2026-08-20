@@ -40,7 +40,11 @@ elementName: ElementName
 isActive: boolean
 ```
 
-会话是否被激活。 true：已被激活。 false：没有被激活。
+会话是否被激活。
+
+true：已被激活。
+
+false：没有被激活。
 
 **类型：** boolean
 
@@ -58,7 +62,11 @@ isActive: boolean
 isTopSession: boolean
 ```
 
-会话是否为最新的会话。 true：是最新的会话。 false：不是最新的会话。
+会话是否为最新的会话。
+
+true：是最新的会话。
+
+false：不是最新的会话。
 
 **类型：** boolean
 
@@ -76,7 +84,9 @@ isTopSession: boolean
 outputDevice: OutputDeviceInfo
 ```
 
-分布式设备相关信息。 **系统接口：** 该接口为系统接口。
+分布式设备相关信息。
+
+**系统接口：** 该接口为系统接口。
 
 **类型：** [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)
 

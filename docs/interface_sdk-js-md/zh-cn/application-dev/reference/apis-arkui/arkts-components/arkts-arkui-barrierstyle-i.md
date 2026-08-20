@@ -19,7 +19,13 @@ barrier参数，用于定义一条barrier的id、方向和生成时所依赖的�
 direction : BarrierDirection
 ```
 
-指定barrier的方向。 水平屏障线（TOP/BOTTOM）仅能作为组件垂直方向锚点（top或bottom），用于水平方向锚点时位置视为0。垂直屏障线（LEFT/RIGHT）仅能作为组件水平方向锚点（left或right），用于垂直方向锚点时位置视为0。 默认值：BarrierDirection.LEFT 非法值：按默认值处理。
+指定barrier的方向。
+
+水平屏障线（TOP/BOTTOM）仅能作为组件垂直方向锚点（top或bottom），用于水平方向锚点时位置视为0。垂直屏障线（LEFT/RIGHT）仅能作为组件水平方向锚点（left或right），用于垂直方向锚点时位置视为0。
+
+默认值：BarrierDirection.LEFT
+
+非法值：按默认值处理。
 
 **类型：** [BarrierDirection](arkts-arkui-barrierdirection-e.md)
 

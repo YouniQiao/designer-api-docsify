@@ -2,6 +2,8 @@
 
 Defines a vertical domain panel manager.
 
+@namespace verticalPanelManager
+
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.

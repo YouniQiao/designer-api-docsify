@@ -17,6 +17,8 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function onAttachmentDidFail(callback: Callback<AttachFailureReason>): void
 ```
 
+@brief 订阅绑定失败事件。使用callback异步回调。
+
 **起始版本：** 23
 
 <!--Device-inputMethod-function onAttachmentDidFail(callback: Callback<AttachFailureReason>): void--><!--Device-inputMethod-function onAttachmentDidFail(callback: Callback<AttachFailureReason>): void-End-->
@@ -27,7 +29,7 @@ function onAttachmentDidFail(callback: Callback<AttachFailureReason>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AttachFailureReason](arkts-ime-inputmethod-attachfailurereason-e.md)&gt; | 是 | 回调函数，返回绑定失败的原因，仅当注册者进程触发的绑定失败时，调用该回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AttachFailureReason](arkts-ime-inputmethod-attachfailurereason-e.md)&gt; | 是 | 回调函数，返回绑定失败的原因，仅当注册者进程触发的绑定失败时，调用该回调函数。 |
 
 **示例**
 

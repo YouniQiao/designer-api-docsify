@@ -22,7 +22,9 @@ import { inputEventClient } from '@kit.InputKit';
 isIntercepted: boolean
 ```
 
-按键是否可以被拦截。 true表示可以被拦截，false表示不可被拦截。
+按键是否可以被拦截。
+
+true表示可以被拦截，false表示不可被拦截。
 
 **类型：** boolean
 
@@ -40,7 +42,9 @@ isIntercepted: boolean
 isPressed: boolean
 ```
 
-按键是否按下。 true表示按键按下，false表示按键抬起。
+按键是否按下。
+
+true表示按键按下，false表示按键抬起。
 
 **类型：** boolean
 

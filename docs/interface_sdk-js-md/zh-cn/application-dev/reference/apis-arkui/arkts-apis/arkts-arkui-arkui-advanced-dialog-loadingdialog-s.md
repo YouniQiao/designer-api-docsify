@@ -21,7 +21,9 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 Controller: CustomDialogController
 ```
 
-加载弹出框控制器，用于控制弹出框的显示和隐藏。 **说明：** 未使用@Require装饰，构造时不强制校验参数。
+加载弹出框控制器，用于控制弹出框的显示和隐藏。
+
+**说明：** 未使用@Require装饰，构造时不强制校验参数。
 
 **类型：** CustomDialogController
 
@@ -41,7 +43,9 @@ Controller: CustomDialogController
 content?: ResourceStr
 ```
 
-加载弹出框内容。 默认不设置或设置为undefined，加载弹出框内容不显示。
+加载弹出框内容。
+
+默认不设置或设置为undefined，加载弹出框内容不显示。
 
 **类型：** ResourceStr
 
@@ -63,7 +67,7 @@ theme?: Theme | CustomTheme
 
 主题信息，可以是CustomTheme或从onWillApplyTheme中获取的Theme实例。
 
-**类型：** [Theme](../../apis-na/arkts-apis/arkts-na-arkui-theme-theme-i.md) \| [CustomTheme](../../apis-na/arkts-apis/arkts-na-arkui-theme-customtheme-i.md)
+**类型：** [Theme](../../apis-default/arkts-apis/arkts-arkui-theme-theme-i.md) \| [CustomTheme](../../apis-default/arkts-apis/arkts-arkui-theme-customtheme-i.md)
 
 **起始版本：** 12
 
@@ -81,7 +85,9 @@ theme?: Theme | CustomTheme
 themeColorMode?: ThemeColorMode
 ```
 
-自定义弹出框深浅色模式。 默认值：ThemeColorMode.SYSTEM
+自定义弹出框深浅色模式。
+
+默认值：ThemeColorMode.SYSTEM
 
 **类型：** ThemeColorMode
 

@@ -1,8 +1,12 @@
 # Marquee
 
-The **Marquee** component is used to display a scrolling piece of text. Text scrolling is activated only when the content width is greater than or equal to the component's width. > **NOTE** > > To ensure that scrolling frame rates are not affected, it is recommended that the number of **Marquee** components > in a scroll container does not exceed four, or alternatively, use the Text component's > TextOverflow.MARQUEE as a substitute. > > For the scenario where the frame rate of the **Marquee** component is dynamic, you can use the > [MarqueeDynamicSyncScene](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) API. > > If the text width is less than the **Marquee** component width, use the property animation to > implement scrolling.
+The **Marquee** component is used to display a scrolling piece of text. Text scrolling is activated only when the content width is greater than or equal to the component's width.
 
-## Child Components Not supported
+> **NOTE** > > To ensure that scrolling frame rates are not affected, it is recommended that the number of **Marquee** components > in a scroll container does not exceed four, or alternatively, use the Text component's > TextOverflow.MARQUEE as a substitute. > > For the scenario where the frame rate of the **Marquee** component is dynamic, you can use the > [MarqueeDynamicSyncScene](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) API. > > If the text width is less than the **Marquee** component width, use the property animation to > implement scrolling.
+
+## Child Components
+
+Not supported
 
 ## Marquee
 
@@ -34,5 +38,4 @@ Creates a marquee.
 
 | Name | Description |
 | --- | --- |
-| [MarqueeOptions](arkts-arkui-marqueeoptions-i.md) | Describes the initialization options of the **Marquee** component. &gt; **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. &gt; While historical version information is preserved for anonymous objects, there may be cases where the outer element &gt; 's @since version number is higher than inner elements'. This does not affect interface usability. |
 

@@ -13,9 +13,13 @@
     - [image_native.h](capi-image-native-h.md)
     - [image_common.h](capi-image-common-h.md)
     - [image_source_native.h](capi-image-source-native-h.md)
+    - [image_effect_filter.h](capi-image-effect-filter-h.md)
+    - [image_effect.h](capi-image-effect-h.md)
+    - [image_effect_errors.h](capi-image-effect-errors-h.md)
 - 模块
     - [Image](capi-image.md)
     - [Image_NativeModule](capi-image-nativemodule.md)
+    - [ImageEffect](capi-imageeffect.md)
 - 结构体
     - [OhosPixelMapInfo](capi-image-ohospixelmapinfo.md)
     - [ImagePacker_Opts_](capi-image-imagepacker-opts-.md)
@@ -72,3 +76,7 @@
     - [OH_DecodingOptionsForPicture](capi-image-nativemodule-oh-decodingoptionsforpicture.md)
     - [OH_DecodingOptions](capi-image-nativemodule-oh-decodingoptions.md)
     - [OH_ImageRawData](capi-image-nativemodule-oh-imagerawdata.md)
+    - [OH_EffectFilter](capi-imageeffect-oh-effectfilter.md)
+    - [OH_EffectFilterInfo](capi-imageeffect-oh-effectfilterinfo.md)
+    - [OH_EffectBufferInfo](capi-imageeffect-oh-effectbufferinfo.md)
+    - [OH_ImageEffect](capi-imageeffect-oh-imageeffect.md)

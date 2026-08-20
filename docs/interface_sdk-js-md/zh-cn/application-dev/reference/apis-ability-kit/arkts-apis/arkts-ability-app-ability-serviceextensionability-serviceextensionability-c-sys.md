@@ -494,7 +494,7 @@ context: ServiceExtensionContext
 
 ServiceExtension的上下文环境，继承自ExtensionContext。
 
-**类型：** [ServiceExtensionContext](../../apis-na/arkts-apis/arkts-na-serviceextensioncontext-c-sys.md)
+**类型：** [ServiceExtensionContext](../../apis-default/arkts-apis/arkts-serviceextensioncontext-c-sys.md)
 
 **起始版本：** 23
 

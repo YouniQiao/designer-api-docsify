@@ -2,6 +2,8 @@
 
 Declare component SwipeRefresherV2
 
+@struct { SwipeRefresherV2 }
+
 **Since:** 26.0.0
 
 <!--Device-unnamed-export declare struct SwipeRefresherV2--><!--Device-unnamed-export declare struct SwipeRefresherV2-End-->

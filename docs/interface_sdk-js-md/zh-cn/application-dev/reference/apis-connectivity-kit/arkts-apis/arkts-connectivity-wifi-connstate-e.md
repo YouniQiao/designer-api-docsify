@@ -2,6 +2,8 @@
 
 WLAN连接状态枚举。
 
+@enum { number } ConnState
+
 **起始版本：** 6
 
 **废弃版本：** 9

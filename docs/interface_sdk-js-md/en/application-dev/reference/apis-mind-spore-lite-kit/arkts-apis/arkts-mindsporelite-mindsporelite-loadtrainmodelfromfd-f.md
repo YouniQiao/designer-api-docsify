@@ -43,8 +43,8 @@ Load train model from file description
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1000012 | Failed to create native training model from file descriptor (fd). Possible causes: 1. The model file or file descriptor (fd) is incorrect; 2. The training configuration is incorrect. |
 | 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect. |
+| 1000012 | Failed to create native training model from file descriptor (fd). Possible causes: 1. The model file or file descriptor (fd) is incorrect; 2. The training configuration is incorrect. |
 
 **Examples**
 

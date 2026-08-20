@@ -2,6 +2,8 @@
 
 定义一个适合WaterFlow、Grid、List和Swiper组件的响应式item布局。
 
+@interface ItemFillPolicy
+
 **起始版本：** 22
 
 <!--Device-unnamed-declare interface ItemFillPolicy--><!--Device-unnamed-declare interface ItemFillPolicy-End-->

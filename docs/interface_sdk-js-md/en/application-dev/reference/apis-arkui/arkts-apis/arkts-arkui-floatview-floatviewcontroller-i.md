@@ -1,6 +1,8 @@
 # FloatViewController
 
-Defines a float view controller instance, which is used to start and stop the float view and register callbacks. Before calling the following APIs, you must use [floatView.create()](arkts-arkui-floatview-create-f.md) to create a float view controller instance (that is, **floatViewController**).
+Defines a float view controller instance, which is used to start and stop the float view and register callbacks.
+
+Before calling the following APIs, you must use [floatView.create()](arkts-arkui-floatview-create-f.md) to create a float view controller instance (that is, **floatViewController**).
 
 **Since:** 26.0.0
 
@@ -246,10 +248,10 @@ Restores the main window of the float view to display in the foreground. If this
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
-| [1300032](../errorcode-window.md#1300032-failed-to-restore-the-main-window) | Failed to restore the main window. Possible cause: 1. User has never clicked the float view window before restore. 2. The float view window is not in the foreground. 3. The main window is in PAUSED lifecycle state. 4. The main window is in background during recent. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300031](../errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) | This operation is not supported on the float view in the current state. Possible cause: The float view window is not started when restoring. |
+| [1300032](../errorcode-window.md#1300032-failed-to-restore-the-main-window) | Failed to restore the main window. Possible cause: 1. User has never clicked the float view window before restore. 2. The float view window is not in the foreground. 3. The main window is in PAUSED lifecycle state. 4. The main window is in background during recent. |
 
 ## setFloatViewVisibilityInApp
 
@@ -257,7 +259,9 @@ Restores the main window of the float view to display in the foreground. If this
 setFloatViewVisibilityInApp(isVisible: boolean): Promise<void>
 ```
 
-Sets whether the float view is visible when the application is running in the foreground. This API uses a promise to return the result. After the float view is created and before this API is called, the float view is visible by default when the application is running in the foreground.
+Sets whether the float view is visible when the application is running in the foreground. This API uses a promise to return the result.
+
+After the float view is created and before this API is called, the float view is visible by default when the application is running in the foreground.
 
 **Since:** 26.0.0
 
@@ -283,8 +287,8 @@ Sets whether the float view is visible when the application is running in the fo
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 
 ## setUIContext
 
@@ -390,8 +394,8 @@ Sets the size of the float view. You are advised to call the [getFloatViewLimits
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: The value of the size is less than or equal to 0. |
 
 ## start
@@ -422,13 +426,13 @@ Starts the float view. The return value of this API does not indicate that the s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
-| [1300034](../errorcode-window.md#1300034-operation-of-the-float-view-conflicts-with-those-of-other-floating-windows) | This operation conflicts with other floating windows. Possible cause: App has already started floating ball or pip window. |
-| [1300033](../errorcode-window.md#1300033-failed-to-start-the-float-view) | Failed to start float view. Possible causes: 1. Start multiple float views. 2. The main window of context is not foreground. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. Possible cause: The application does not have the permission required to call the API. |
-| [1300031](../errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) | The float view state does not support this operation. Possible cause: The float view is stopping. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300030](../errorcode-window.md#1300030-repeated-operations-on-the-float-view) | Repeated operations on the float view. Possible cause: The float view is starting or has already started. |
+| [1300031](../errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) | The float view state does not support this operation. Possible cause: The float view is stopping. |
+| [1300033](../errorcode-window.md#1300033-failed-to-start-the-float-view) | Failed to start float view. Possible causes: 1. Start multiple float views. 2. The main window of context is not foreground. |
+| [1300034](../errorcode-window.md#1300034-operation-of-the-float-view-conflicts-with-those-of-other-floating-windows) | This operation conflicts with other floating windows. Possible cause: App has already started floating ball or pip window. |
 
 ## stop
 
@@ -456,10 +460,10 @@ Stops the float view. The return value of this API does not indicate that the st
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
-| [1300031](../errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) | This operation is not supported on the float view in the current state. Possible cause: The float view window is not started. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300030](../errorcode-window.md#1300030-repeated-operations-on-the-float-view) | Repeated operations on the float view. Possible cause: The float view is stopping or has already stopped. |
+| [1300031](../errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) | This operation is not supported on the float view in the current state. Possible cause: The float view window is not started. |
 
 ## switchTemplate
 
@@ -493,7 +497,7 @@ Switches the template of the flow view and changes the window size. You are advi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid template type. 2. The value of the size is less than or equal to 0. |
 

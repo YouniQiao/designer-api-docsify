@@ -1,6 +1,12 @@
 # AudioRenderer
 
-提供音频渲染的相关接口。 在使用AudioRenderer的接口之前，需先通过[createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md)获取AudioRenderer实例。 &gt; **说明：** &gt; &gt; - 本Interface首批接口从API version 8开始支持。
+提供音频渲染的相关接口。
+
+在使用AudioRenderer的接口之前，需先通过[createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md)获取AudioRenderer实例。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 8开始支持。
 
 **起始版本：** 23
 
@@ -91,12 +97,12 @@ Sets the render target of this audio renderer. This function can only be called 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permit at running and release state. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permit at running and release state. |
 | [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Current renderer is not supported to set target. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 **示例**
 

@@ -1,6 +1,10 @@
 # AVSession
 
-调用[avSession.createAVSession](arkts-avsession-avsession-createavsession-f.md)后，返回会话的实例，可以获得会话ID，完成设置元数据，播放状态信息等操作。 &gt; **说明：** &gt; &gt; - 本Interface首批接口从API version 10开始支持。
+调用[avSession.createAVSession](arkts-avsession-avsession-createavsession-f.md)后，返回会话的实例，可以获得会话ID，完成设置元数据，播放状态信息等操作。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 10开始支持。
 
 **起始版本：** 23
 
@@ -32,7 +36,7 @@ activate(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当会话激活成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当会话激活成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
@@ -76,7 +80,9 @@ activate(): Promise<void>
 deactivate(callback: AsyncCallback<void>): void
 ```
 
-禁用当前会话。结果通过callback异步回调方式返回。 禁用当前会话的功能，可通过[activate](#activate)恢复。
+禁用当前会话。结果通过callback异步回调方式返回。
+
+禁用当前会话的功能，可通过[activate](#activate)恢复。
 
 **起始版本：** 23
 
@@ -88,7 +94,7 @@ deactivate(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当禁用会话成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当禁用会话成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
@@ -144,7 +150,7 @@ destroy(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当会话销毁成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当会话销毁成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
@@ -202,7 +208,7 @@ dispatchSessionEvent(event: string, args: {[key: string]: Object}, callback: Asy
 | --- | --- | --- | --- |
 | event | string | 是 | 需要设置的会话事件的名称。 |
 | args | {[key: string]: Object} | 是 | 需要传递的会话事件内容。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当会话事件设置成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当会话事件设置成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
@@ -233,8 +239,8 @@ Dispatch the session event of this session.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | Session event name to dispatch |
-| args | Record&lt;string, Object&gt; | 是 | The parameters of session event |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | The asyncCallback triggered when the command is executed successfully |
+| args | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | The parameters of session event |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | The asyncCallback triggered when the command is executed successfully |
 
 **错误码：**
 
@@ -301,7 +307,7 @@ Dispatch the session event of this session.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | Session event name to dispatch |
-| args | Record&lt;string, Object&gt; | 是 | The parameters of session event |
+| args | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | The parameters of session event |
 
 **返回值：**
 
@@ -370,7 +376,7 @@ getAVCastController(callback: AsyncCallback<AVCastController>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md)&gt; | 是 | 回调函数，返回投播控制器实例。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md)&gt; | 是 | 回调函数，返回投播控制器实例。 |
 
 **错误码：**
 
@@ -397,7 +403,7 @@ Get the cast controller when the session is casted to remote device. If the avse
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md) \| undefined&gt; | 是 | async callback for the AVCastController. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md) \| undefined&gt; | 是 | async callback for the AVCastController. |
 
 **错误码：**
 
@@ -511,7 +517,7 @@ getController(callback: AsyncCallback<AVSessionController>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md)&gt; | 是 | 回调函数。返回会话控制器。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md)&gt; | 是 | 回调函数。返回会话控制器。 |
 
 **错误码：**
 
@@ -598,7 +604,7 @@ getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)&gt; | 是 | 回调函数，返回播放设备信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)&gt; | 是 | 回调函数，返回播放设备信息。 |
 
 **错误码：**
 
@@ -741,7 +747,7 @@ Unregister listener for cast display information changed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | 否 | Callback used to return cast display information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | 否 | Callback used to return cast display information. |
 
 **错误码：**
 
@@ -795,7 +801,7 @@ Unsubscribes from custom data changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 否 | Callback used to return the custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;&gt; | 否 | Callback used to return the custom data. |
 
 **错误码：**
 
@@ -824,7 +830,7 @@ offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有桌面歌词状态变更事件监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有桌面歌词状态变更事件监听。 |
 
 **错误码：**
 
@@ -853,7 +859,7 @@ offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有显示桌面歌词状态变更事件监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有显示桌面歌词状态变更事件监听。 |
 
 **错误码：**
 
@@ -868,7 +874,9 @@ offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void
 offFastForward(callback?: TwoParamCallback<long, CommandInfo>): void
 ```
 
-取消会话快进事件监听。使用callback异步回调。 指定callback，取消对应监听；未指定callback，则取消所有事件监听。
+取消会话快进事件监听。使用callback异步回调。
+
+指定callback，取消对应监听；未指定callback，则取消所有事件监听。
 
 **起始版本：** 23
 
@@ -907,7 +915,7 @@ Unregister media key handling callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md)&gt; | 否 | Used to handle key events.The callback provides the KeyEvent |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md)&gt; | 否 | Used to handle key events.The callback provides the KeyEvent |
 
 **错误码：**
 
@@ -1003,7 +1011,9 @@ Unregister pause command callback. When canceling the callback, need to update t
 offPlay(callback?: Callback<CommandInfo>): void
 ```
 
-取消会话播放事件监听。使用callback异步回调。 指定callback，取消对应监听；未指定callback，则取消所有事件监听。
+取消会话播放事件监听。使用callback异步回调。
+
+指定callback，取消对应监听；未指定callback，则取消所有事件监听。
 
 **起始版本：** 23
 
@@ -1015,7 +1025,7 @@ offPlay(callback?: Callback<CommandInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -1030,7 +1040,9 @@ offPlay(callback?: Callback<CommandInfo>): void
 offPlayNext(callback?: Callback<CommandInfo>): void
 ```
 
-取消会话播放下一首事件监听。使用callback异步回调。 指定callback，取消对应监听；未指定callback，则取消所有事件监听。
+取消会话播放下一首事件监听。使用callback异步回调。
+
+指定callback，取消对应监听；未指定callback，则取消所有事件监听。
 
 **起始版本：** 23
 
@@ -1042,7 +1054,7 @@ offPlayNext(callback?: Callback<CommandInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -1057,7 +1069,9 @@ offPlayNext(callback?: Callback<CommandInfo>): void
 offPlayPrevious(callback?: Callback<CommandInfo>): void
 ```
 
-取消会话播放上一首事件监听。使用callback异步回调。 指定callback，取消对应监听；未指定callback，则取消所有事件监听。
+取消会话播放上一首事件监听。使用callback异步回调。
+
+指定callback，取消对应监听；未指定callback，则取消所有事件监听。
 
 **起始版本：** 23
 
@@ -1069,7 +1083,7 @@ offPlayPrevious(callback?: Callback<CommandInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -1098,7 +1112,7 @@ Unsubscribes from playWithAssetId events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | Callback used to handle the 'playWithAssetId' command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | 否 | Callback used to handle the 'playWithAssetId' command. |
 
 **错误码：**
 
@@ -1113,7 +1127,9 @@ Unsubscribes from playWithAssetId events.
 offRewind(callback?: TwoParamCallback<long, CommandInfo>): void
 ```
 
-取消会话快退事件监听。使用callback异步回调。 指定callback，取消对应监听；未指定callback，则取消所有事件监听。
+取消会话快退事件监听。使用callback异步回调。
+
+指定callback，取消对应监听；未指定callback，则取消所有事件监听。
 
 **起始版本：** 23
 
@@ -1152,7 +1168,7 @@ Unregister seek command callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 否 | Used to handle seek command.The callback provides the seek time(ms) |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | 否 | Used to handle seek command.The callback provides the seek time(ms) |
 
 **错误码：**
 
@@ -1179,7 +1195,7 @@ Unregister setLoopMode command callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | 否 | Used to handle setLoopMode command. The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | 否 | Used to handle setLoopMode command. The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
 
 **错误码：**
 
@@ -1206,7 +1222,7 @@ Unregister setSpeed command callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;double&gt; | 否 | Used to handle setSpeed command.The callback provides the speed value |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;double&gt; | 否 | Used to handle setSpeed command.The callback provides the speed value |
 
 **错误码：**
 
@@ -1233,7 +1249,7 @@ Unregister setTargetLoopMode command callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | 否 | Used to handle setTargetLoopMode command. The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | 否 | Used to handle setTargetLoopMode command. The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
 
 **错误码：**
 
@@ -1260,7 +1276,7 @@ Unregister the item to play from the playlist change callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | Used to handle the item to be played. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 否 | Used to handle the item to be played. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) |
 
 **错误码：**
 
@@ -1341,7 +1357,7 @@ Unregister toggle favorite command callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | Used to handle toggleFavorite command.The callback provides the assetId for which the favorite status needs to be switched. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | 否 | Used to handle toggleFavorite command.The callback provides the assetId for which the favorite status needs to be switched. |
 
 **错误码：**
 
@@ -1371,7 +1387,7 @@ off(type: 'answer', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'answer' | 是 | 关闭对应的监听事件，支持的事件是`'answer'`。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -1402,7 +1418,7 @@ off(type: 'castDisplayChange', callback?: Callback<CastDisplayInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'castDisplayChange' | 是 | 关闭对应的监听事件，支持的事件是`'castDisplayChange'`。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会 话的事件监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会 话的事件监听。 |
 
 **错误码：**
 
@@ -1464,7 +1480,7 @@ Unsubscribes from custom data changes.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | 是 | Custom data type. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 否 | Callback used to return the custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;&gt; | 否 | Callback used to return the custom data. |
 
 **错误码：**
 
@@ -1556,7 +1572,7 @@ off(type: 'hangUp', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hangUp' | 是 | 关闭对应的监听事件，支持的事件是`'hangUp'`。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -1665,7 +1681,11 @@ off(type: 'play', callback?: () => void): void
 off(type: 'playFromAssetId', callback?: (assetId: number) => void): void
 ```
 
-取消媒体ID播放事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。 &gt; **说明：** &gt; &gt; 从API version 11开始支持，从API version 20开始废弃。建议使用 &gt; [off('playWithAssetId')](#offplay)取消 &gt; 媒体ID播放事件监听。
+取消媒体ID播放事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+> **说明：**
+> 
+> 从API version 11开始支持，从API version 20开始废弃。建议使用 &gt; [off('playWithAssetId')](#offplay)取消 &gt; 媒体ID播放事件监听。
 
 **起始版本：** 11
 
@@ -1777,7 +1797,7 @@ off(type: 'playWithAssetId', callback?: Callback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'playWithAssetId' | 是 | 关闭对应的监听事件，支持的事件是`'playWithAssetId'`。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。参数assetId是媒体ID。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。参数assetId是媒体ID。 |
 
 **错误码：**
 
@@ -1931,7 +1951,7 @@ off(type: 'setTargetLoopMode', callback?: Callback<LoopMode>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'setTargetLoopMode' | 是 | 关闭对应的监听事件，支持关闭事件`'setTargetLoopMode'`。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | 否 | 回调函数，参数表示目标循环模式。 <br>- 当监听事件取消成功，err为undefined，否则返回错误对象。 <br>- 该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | 否 | 回调函数，参数表示目标循环模式。 <br>- 当监听事件取消成功，err为undefined，否则返回错误对象。 <br>- 该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -2023,7 +2043,7 @@ off(type: 'toggleCallMute', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'toggleCallMute' | 是 | 关闭对应的监听事件，支持的事件是`'toggleCallMute'`。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -2109,7 +2129,7 @@ Register listener for cast display information changed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | 是 | Callback used to return cast display information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | 是 | Callback used to return cast display information. |
 
 **错误码：**
 
@@ -2163,7 +2183,7 @@ Register listener for custom data sent from remote device.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;&gt; | 是 | Callback used to retrieve custom data. |
 
 **错误码：**
 
@@ -2192,7 +2212,7 @@ onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | 是 | 回调函数。返回桌面歌词状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | 是 | 回调函数。返回桌面歌词状态。 |
 
 **错误码：**
 
@@ -2221,7 +2241,7 @@ onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示开启显示桌面歌词状态；返回false表示关闭显示桌面歌词状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示开启显示桌面歌词状态；返回false表示关闭显示桌面歌词状态。 |
 
 **错误码：**
 
@@ -2236,7 +2256,9 @@ onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void
 onFastForward(callback: TwoParamCallback<long, CommandInfo>): void
 ```
 
-设置快进命令监听事件。使用callback异步回调。 应用将通过回调接收控制器发送的快进时间参数，以及对应的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
+设置快进命令监听事件。使用callback异步回调。
+
+应用将通过回调接收控制器发送的快进时间参数，以及对应的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
 
 **起始版本：** 23
 
@@ -2275,7 +2297,7 @@ Register media key handling callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md)&gt; | 是 | Used to handle key events.The callback provides the KeyEvent |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md)&gt; | 是 | Used to handle key events.The callback provides the KeyEvent |
 
 **错误码：**
 
@@ -2371,7 +2393,9 @@ Register pause command callback. As long as it is registered, it means that the 
 onPlay(callback: Callback<CommandInfo>): void
 ```
 
-设置播放命令监听事件。使用callback异步回调。 应用将通过回调接收控制器发送的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
+设置播放命令监听事件。使用callback异步回调。
+
+应用将通过回调接收控制器发送的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
 
 **起始版本：** 23
 
@@ -2383,7 +2407,7 @@ onPlay(callback: Callback<CommandInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | 是 | 回调函数。当监听事件注册成功，err为undefined，否则为错误对象。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | 是 | 回调函数。当监听事件注册成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -2398,7 +2422,9 @@ onPlay(callback: Callback<CommandInfo>): void
 onPlayNext(callback: Callback<CommandInfo>): void
 ```
 
-设置播放下一首命令监听事件。使用callback异步回调。 应用将通过回调接收控制器发送的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
+设置播放下一首命令监听事件。使用callback异步回调。
+
+应用将通过回调接收控制器发送的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
 
 **起始版本：** 23
 
@@ -2410,7 +2436,7 @@ onPlayNext(callback: Callback<CommandInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | 是 | 回调函数。当监听事件注册成功，err为undefined，否则为错误对象。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | 是 | 回调函数。当监听事件注册成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -2425,7 +2451,9 @@ onPlayNext(callback: Callback<CommandInfo>): void
 onPlayPrevious(callback: Callback<CommandInfo>): void
 ```
 
-设置播放上一首命令监听事件。使用callback异步回调。 应用将通过回调接收控制器发送的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
+设置播放上一首命令监听事件。使用callback异步回调。
+
+应用将通过回调接收控制器发送的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
 
 **起始版本：** 23
 
@@ -2439,7 +2467,7 @@ onPlayPrevious(callback: Callback<CommandInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | 是 | 回调函数。当监听事件注册成功，err为undefined，否则为错误对象。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | 是 | 回调函数。当监听事件注册成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -2466,7 +2494,7 @@ Subscribes to playWithAssetId events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | Callback used to handle the 'playWithAssetId' command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | 是 | Callback used to handle the 'playWithAssetId' command. |
 
 **错误码：**
 
@@ -2481,7 +2509,9 @@ Subscribes to playWithAssetId events.
 onRewind(callback: TwoParamCallback<long, CommandInfo>): void
 ```
 
-设置快退命令监听事件。使用callback异步回调。 应用将通过回调接收控制器发送的快退时间参数，以及对应的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
+设置快退命令监听事件。使用callback异步回调。
+
+应用将通过回调接收控制器发送的快退时间参数，以及对应的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
 
 **起始版本：** 23
 
@@ -2522,7 +2552,7 @@ Register seek command callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 是 | Used to handle seek command.The callback provides the seek time(ms) |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | 是 | Used to handle seek command.The callback provides the seek time(ms) |
 
 **错误码：**
 
@@ -2549,7 +2579,7 @@ Register setLoopMode command callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | 是 | Used to handle setLoopMode command.The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | 是 | Used to handle setLoopMode command.The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
 
 **错误码：**
 
@@ -2576,7 +2606,7 @@ Register setSpeed command callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;double&gt; | 是 | Used to handle setSpeed command.The callback provides the speed value |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;double&gt; | 是 | Used to handle setSpeed command.The callback provides the speed value |
 
 **错误码：**
 
@@ -2603,7 +2633,7 @@ Register setTargetLoopMode command callback Application should change playmode t
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | 是 | Used to handle setTargetLoopMode command. The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | 是 | Used to handle setTargetLoopMode command. The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
 
 **错误码：**
 
@@ -2630,7 +2660,7 @@ Register the item to play from the playlist change callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | Used to handle the item to be played. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | Used to handle the item to be played. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) |
 
 **错误码：**
 
@@ -2711,7 +2741,7 @@ Register toggle favorite command callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | Used to handle toggleFavorite command.The callback provides the assetId for which the favorite status needs to be switched. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | 是 | Used to handle toggleFavorite command.The callback provides the assetId for which the favorite status needs to be switched. |
 
 **错误码：**
 
@@ -2726,7 +2756,9 @@ Register toggle favorite command callback
 on(type: 'answer', callback: Callback<void>): void
 ```
 
-设置通话接听的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置通话接听的监听事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 11
 
@@ -2741,7 +2773,7 @@ on(type: 'answer', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'answer' | 是 | 事件回调类型，支持事件`'answer'`：当通话接听时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -2757,7 +2789,9 @@ on(type: 'answer', callback: Callback<void>): void
 on(type: 'castDisplayChange', callback: Callback<CastDisplayInfo>): void
 ```
 
-设置扩展屏投播显示设备变化的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置扩展屏投播显示设备变化的监听事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 12
 
@@ -2772,7 +2806,7 @@ on(type: 'castDisplayChange', callback: Callback<CastDisplayInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'castDisplayChange' | 是 | 事件回调类型，支持事件`'castDisplayChange'`：当扩展屏投播显示设备变化时触发事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | 是 | 回调函数。参数是扩展屏投播显示设备信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | 是 | 回调函数。参数是扩展屏投播显示设备信息。 |
 
 **错误码：**
 
@@ -2788,7 +2822,9 @@ on(type: 'castDisplayChange', callback: Callback<CastDisplayInfo>): void
 on(type: 'commonCommand', callback: (command: string, args: {[key: string]: Object}) => void): void
 ```
 
-设置自定义控制命令变化的监听器。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置自定义控制命令变化的监听器。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -2834,7 +2870,7 @@ on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | 是 | 事件回调类型，支持事件'customDataChange'，当媒体提供方发送自定义数据时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 | 回调函数，用于接收自定义数据。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;&gt; | 是 | 回调函数，用于接收自定义数据。 |
 
 **错误码：**
 
@@ -2849,7 +2885,9 @@ on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 on(type: 'fastForward', callback: (time ?: long) => void): void
 ```
 
-设置快进命令监听事件。注册该监听，说明应用支持快进指令。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置快进命令监听事件。注册该监听，说明应用支持快进指令。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -2880,7 +2918,9 @@ on(type: 'fastForward', callback: (time ?: long) => void): void
 on(type: 'handleKeyEvent', callback: (event: KeyEvent) => void): void
 ```
 
-设置蓝牙/有线等外设接入的按键输入事件的监听，监听多媒体按键事件中播放、暂停、上下一首、快进、快退的指令。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置蓝牙/有线等外设接入的按键输入事件的监听，监听多媒体按键事件中播放、暂停、上下一首、快进、快退的指令。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -2911,7 +2951,9 @@ on(type: 'handleKeyEvent', callback: (event: KeyEvent) => void): void
 on(type: 'hangUp', callback: Callback<void>): void
 ```
 
-设置通话挂断的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置通话挂断的监听事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 11
 
@@ -2926,7 +2968,7 @@ on(type: 'hangUp', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hangUp' | 是 | 事件回调类型，支持事件`'hangUp'`：当通话挂断时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -2942,7 +2984,9 @@ on(type: 'hangUp', callback: Callback<void>): void
 on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void
 ```
 
-设置播放设备变化的监听事件。应用接入[multimedia.avCastPicker (投播组件)](arkts-avsession-multimedia-avcastpicker-avcastpicker-s.md)，当用户通过组件切换设备 时，会收到设备切换的回调。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置播放设备变化的监听事件。应用接入[multimedia.avCastPicker (投播组件)](arkts-avsession-multimedia-avcastpicker-avcastpicker-s.md)，当用户通过组件切换设备 时，会收到设备切换的回调。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -2973,7 +3017,9 @@ on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: Output
 on(type: 'pause', callback: () => void): void
 ```
 
-设置暂停命令监听事件。注册该监听，说明应用支持暂停指令。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置暂停命令监听事件。注册该监听，说明应用支持暂停指令。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -3004,7 +3050,9 @@ on(type: 'pause', callback: () => void): void
 on(type: 'play', callback: () => void): void
 ```
 
-设置播放命令监听事件。注册该监听，说明应用支持播放指令。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置播放命令监听事件。注册该监听，说明应用支持播放指令。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -3035,7 +3083,11 @@ on(type: 'play', callback: () => void): void
 on(type: 'playFromAssetId', callback: (assetId: number) => void): void
 ```
 
-设置媒体ID播放监听事件。 &gt; **说明：** &gt; &gt; 从API version 11开始支持，从API version 20开始废弃。建议使用 &gt; [on('playWithAssetId')](#onplay)设置媒体 &gt; ID播放监听事件。
+设置媒体ID播放监听事件。
+
+> **说明：**
+> 
+> 从API version 11开始支持，从API version 20开始废弃。建议使用 &gt; [on('playWithAssetId')](#onplay)设置媒体 &gt; ID播放监听事件。
 
 **起始版本：** 11
 
@@ -3070,7 +3122,9 @@ on(type: 'playFromAssetId', callback: (assetId: number) => void): void
 on(type: 'playNext', callback: () => void): void
 ```
 
-设置播放下一首命令监听事件。注册该监听，说明应用支持下一首指令。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置播放下一首命令监听事件。注册该监听，说明应用支持下一首指令。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -3101,7 +3155,9 @@ on(type: 'playNext', callback: () => void): void
 on(type: 'playPrevious', callback: () => void): void
 ```
 
-设置播放上一首命令监听事件。注册该监听，说明应用支持上一首指令。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置播放上一首命令监听事件。注册该监听，说明应用支持上一首指令。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -3132,7 +3188,9 @@ on(type: 'playPrevious', callback: () => void): void
 on(type: 'playWithAssetId', callback: Callback<string>): void
 ```
 
-设置指定资源id进行播放的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置指定资源id进行播放的监听事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 20
 
@@ -3147,7 +3205,7 @@ on(type: 'playWithAssetId', callback: Callback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'playWithAssetId' | 是 | 事件回调类型，支持的事件是`'playWithAssetId'`，当指定资源id进行播放时，触发该事件回调。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调函数。参数assetId是媒体ID。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | 是 | 回调函数。参数assetId是媒体ID。 |
 
 **错误码：**
 
@@ -3162,7 +3220,9 @@ on(type: 'playWithAssetId', callback: Callback<string>): void
 on(type: 'rewind', callback: (time ?: long) => void): void
 ```
 
-设置快退命令监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置快退命令监听事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -3193,7 +3253,9 @@ on(type: 'rewind', callback: (time ?: long) => void): void
 on(type: 'seek', callback: (time: long) => void): void
 ```
 
-设置跳转节点监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置跳转节点监听事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -3224,7 +3286,9 @@ on(type: 'seek', callback: (time: long) => void): void
 on(type: 'setLoopMode', callback: (mode: LoopMode) => void): void
 ```
 
-设置循环模式的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置循环模式的监听事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -3255,7 +3319,9 @@ on(type: 'setLoopMode', callback: (mode: LoopMode) => void): void
 on(type: 'setSpeed', callback: (speed: double) => void): void
 ```
 
-设置播放速率的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置播放速率的监听事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -3286,7 +3352,9 @@ on(type: 'setSpeed', callback: (speed: double) => void): void
 on(type: 'setTargetLoopMode', callback: Callback<LoopMode>): void
 ```
 
-设置目标循环模式的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置目标循环模式的监听事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 18
 
@@ -3301,7 +3369,7 @@ on(type: 'setTargetLoopMode', callback: Callback<LoopMode>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'setTargetLoopMode' | 是 | 事件回调类型，支持事件`'setTargetLoopMode'`。 <br>- `'setTargetLoopMode'`：当设置目标循环模式的命令被发送到会话时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | 是 | 回调函数。参数表示目标循环模式。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | 是 | 回调函数。参数表示目标循环模式。 |
 
 **错误码：**
 
@@ -3316,7 +3384,9 @@ on(type: 'setTargetLoopMode', callback: Callback<LoopMode>): void
 on(type: 'skipToQueueItem', callback: (itemId: int) => void): void
 ```
 
-设置播放列表其中某项被选中的监听事件，session端可以选择对这个单项歌曲进行播放。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置播放列表其中某项被选中的监听事件，session端可以选择对这个单项歌曲进行播放。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -3347,7 +3417,9 @@ on(type: 'skipToQueueItem', callback: (itemId: int) => void): void
 on(type: 'stop', callback: () => void): void
 ```
 
-设置停止命令监听事件。注册该监听，说明应用支持停止指令。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置停止命令监听事件。注册该监听，说明应用支持停止指令。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -3378,7 +3450,9 @@ on(type: 'stop', callback: () => void): void
 on(type: 'toggleCallMute', callback: Callback<void>): void
 ```
 
-设置通话静音的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置通话静音的监听事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 11
 
@@ -3393,7 +3467,7 @@ on(type: 'toggleCallMute', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'toggleCallMute' | 是 | 事件回调类型，支持事件`'toggleCallMute'`：当通话静音或解除静音时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -3409,7 +3483,9 @@ on(type: 'toggleCallMute', callback: Callback<void>): void
 on(type: 'toggleFavorite', callback: (assetId: string) => void): void
 ```
 
-设置是否收藏的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置是否收藏的监听事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -3454,7 +3530,7 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | 是 | 应用程序填充的自定义数据。服务端仅解析key为'customData'，且Object为string类型的对象。 |
+| data | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | 应用程序填充的自定义数据。服务端仅解析key为'customData'，且Object为string类型的对象。 |
 
 **返回值：**
 
@@ -3488,7 +3564,7 @@ setAVCallState(state: AVCallState, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | state | [AVCallState](arkts-avsession-avsession-avcallstate-i.md) | 是 | 通话状态。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当通话元数据设置成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当通话元数据设置成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
@@ -3551,7 +3627,7 @@ setAVMetadata(data: AVMetadata, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | data | AVMetadata | 是 | 会话元数据。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当元数据设置成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当元数据设置成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
@@ -3616,7 +3692,7 @@ setAVPlaybackState(state: AVPlaybackState, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | state | [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) | 是 | 会话播放状态，包括状态、倍数、循环模式等信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当播放状态设置成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当播放状态设置成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
@@ -3681,7 +3757,7 @@ setAVQueueItems(items: Array<AVQueueItem>, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | items | Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 是 | 播放列表单项的队列，用以表示播放列表。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当播放状态设置成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当播放状态设置成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
@@ -3746,7 +3822,7 @@ setAVQueueTitle(title: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | title | string | 是 | 播放列表名称字段。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当播放状态设置成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当播放状态设置成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
@@ -3798,7 +3874,9 @@ setAVQueueTitle(title: string): Promise<void>
 setBackgroundPlayMode(mode: BackgroundPlayMode): Promise<void>
 ```
 
-设置后台播放模式。使用promise异步回调。 建议与应用内"是否支持后台播放开关"关联。如未设置，'audio'类型会话默认值为ENABLE_BACKGROUND_PLAY；'video'类型会话默认值为DISABLE_BACKGROUND_PLAY。
+设置后台播放模式。使用promise异步回调。
+
+建议与应用内"是否支持后台播放开关"关联。如未设置，'audio'类型会话默认值为ENABLE_BACKGROUND_PLAY；'video'类型会话默认值为DISABLE_BACKGROUND_PLAY。
 
 **起始版本：** 24
 
@@ -3845,7 +3923,7 @@ setCallMetadata(data: CallMetadata, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | data | [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) | 是 | 通话会话元数据。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当通话元数据设置成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当通话元数据设置成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
@@ -3982,7 +4060,7 @@ setExtras(extras: {[key: string]: Object}, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | extras | {[key: string]: Object} | 是 | 需要传递的自定义媒体数据包键值对。 <br> **说明：** 参数extras支持的数据类型有：字符串、数字、布尔值、对象、数组和文件描述符等，详细介绍请参见 [@ohos.app.ability.Want (Want)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当自定义媒体数据包设置成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当自定义媒体数据包设置成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
@@ -4012,8 +4090,8 @@ Set the custom media packets for this session.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| extras | Record&lt;string, Object&gt; | 是 | The custom media packets <br>设置的应用自定义扩展参数 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | The asyncCallback triggered when the command is executed successfully. <br>回调返回 |
+| extras | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | The custom media packets <br>设置的应用自定义扩展参数 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | The asyncCallback triggered when the command is executed successfully. <br>回调返回 |
 
 **错误码：**
 
@@ -4078,7 +4156,7 @@ Set the custom media packets for this session.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| extras | Record&lt;string, Object&gt; | 是 | The custom media packets |
+| extras | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | The custom media packets |
 
 **返回值：**
 
@@ -4099,7 +4177,9 @@ Set the custom media packets for this session.
 setLaunchAbility(ability: WantAgent, callback: AsyncCallback<void>): void
 ```
 
-设置一个WantAgent用于拉起会话的Ability。结果通过callback异步回调方式返回。 通过点击播控组件可以跳转到对应的播放界面，默认跳转到[avSession.createAVSession](arkts-avsession-avsession-createavsession-f.md)接口传入的context所属的UIAbility界面。
+设置一个WantAgent用于拉起会话的Ability。结果通过callback异步回调方式返回。
+
+通过点击播控组件可以跳转到对应的播放界面，默认跳转到[avSession.createAVSession](arkts-avsession-avsession-createavsession-f.md)接口传入的context所属的UIAbility界面。
 
 **起始版本：** 23
 
@@ -4112,7 +4192,7 @@ setLaunchAbility(ability: WantAgent, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ability | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md) | 是 | 应用的相关属性信息，如bundleName，abilityName，deviceId等。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当Ability设置成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当Ability设置成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
@@ -4128,7 +4208,9 @@ setLaunchAbility(ability: WantAgent, callback: AsyncCallback<void>): void
 setLaunchAbility(ability: WantAgent): Promise<void>
 ```
 
-设置一个WantAgent用于拉起会话的Ability。结果通过Promise异步回调方式返回。 通过点击播控组件可以跳转到对应的播放界面，默认跳转到[avSession.createAVSession](arkts-avsession-avsession-createavsession-f.md)接口传入的context所属的UIAbility界面。
+设置一个WantAgent用于拉起会话的Ability。结果通过Promise异步回调方式返回。
+
+通过点击播控组件可以跳转到对应的播放界面，默认跳转到[avSession.createAVSession](arkts-avsession-avsession-createavsession-f.md)接口传入的context所属的UIAbility界面。
 
 **起始版本：** 23
 
@@ -4164,7 +4246,9 @@ setLaunchAbility(ability: WantAgent): Promise<void>
 setMediaCenterControlType(type: Array<AVMediaCenterControlType>): Promise<void>
 ```
 
-设置应用支持的控制类型列表。使用Promise异步回调。 设置优先显示在播控中心的控制类型列表，若未设置控制类型优先级，播控中心将根据[AVSessionType](arkts-avsession-avsession-avsessiontype-t.md)显示，具体显示规则参考 [创建不同类型的会话](../../../media/avsession/avsession-access-scene.md#创建不同类型的会话)。
+设置应用支持的控制类型列表。使用Promise异步回调。
+
+设置优先显示在播控中心的控制类型列表，若未设置控制类型优先级，播控中心将根据[AVSessionType](arkts-avsession-avsession-avsessiontype-t.md)显示，具体显示规则参考 [创建不同类型的会话](../../../media/avsession/avsession-access-scene.md#创建不同类型的会话)。
 
 **起始版本：** 26.0.0
 
@@ -4285,7 +4369,7 @@ stopCasting(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 

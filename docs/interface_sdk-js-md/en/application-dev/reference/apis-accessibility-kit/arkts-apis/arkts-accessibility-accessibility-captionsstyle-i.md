@@ -24,7 +24,13 @@ import { GesturePoint } from '@kit.AccessibilityKit';
 backgroundColor: int | string
 ```
 
-Describes the caption background color. number: HEX format color, supporting RGB or ARGB. string: supports '#rrggbb', '#rrggbbaa', '#rgb', and '#rgba' formats. Example: opaque red, number: 0xffff0000, string: '#ff0000', '#ff0000ff', '#f00', '#f00f'.
+Describes the caption background color.
+
+number: HEX format color, supporting RGB or ARGB.
+
+string: supports '#rrggbb', '#rrggbbaa', '#rgb', and '#rgba' formats.
+
+Example: opaque red, number: 0xffff0000, string: '#ff0000', '#ff0000ff', '#f00', '#f00f'.
 
 **Type:** int \| string
 
@@ -44,7 +50,13 @@ Describes the caption background color. number: HEX format color, supporting RGB
 fontColor: int | string
 ```
 
-Describes the caption font color. number: HEX format color, supporting RGB or ARGB. string: supports '#rrggbb', '#rrggbbaa', '#rgb', and '#rgba' formats. Example: opaque red, number: 0xffff0000, string: '#ff0000', '#ff0000ff', '#f00', '#f00f'.
+Describes the caption font color.
+
+number: HEX format color, supporting RGB or ARGB.
+
+string: supports '#rrggbb', '#rrggbbaa', '#rgb', and '#rgba' formats.
+
+Example: opaque red, number: 0xffff0000, string: '#ff0000', '#ff0000ff', '#f00', '#f00f'.
 
 **Type:** int \| string
 
@@ -124,7 +136,13 @@ Font scale factor of captions, in percentage. The value ranges from 1 to 200.
 windowColor: int | string
 ```
 
-Describes the caption window color. number: HEX format color, supporting RGB or ARGB. string: supports '#rrggbb', '#rrggbbaa', '#rgb', and '#rgba' formats. Example: opaque red, number: 0xffff0000, string: '#ff0000', '#ff0000ff', '#f00', '#f00f'.
+Describes the caption window color.
+
+number: HEX format color, supporting RGB or ARGB.
+
+string: supports '#rrggbb', '#rrggbbaa', '#rgb', and '#rgba' formats.
+
+Example: opaque red, number: 0xffff0000, string: '#ff0000', '#ff0000ff', '#f00', '#f00f'.
 
 **Type:** int \| string
 

@@ -1,4 +1,4 @@
-# PermissionManagedState(安全管理)
+# PermissionManagedState
 
 应用权限的管理状态。
 

@@ -40,7 +40,7 @@ itemDisplayRatio?: ItemDisplayRatio
 
 Aspect ratio for grid display. Both 1:1 and the original image aspect ratio are supported. The default value is 1: 1.
 
-**Type:** [ItemDisplayRatio](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-itemdisplayratio-e.md)
+**Type:** [ItemDisplayRatio](arkts-medialibrary-file-photopickercomponent-itemdisplayratio-e.md)
 
 **Since:** 20
 

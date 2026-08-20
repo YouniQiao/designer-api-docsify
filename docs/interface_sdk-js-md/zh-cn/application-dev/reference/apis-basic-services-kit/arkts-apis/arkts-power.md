@@ -21,7 +21,7 @@ import { power } from '@kit.BasicServicesKit';
 | 名称 | 说明 |
 | --- | --- |
 | [getPowerMode](arkts-basicservices-power-getpowermode-f.md) | 获取当前设备的电源模式。不同电源模式对应不同的设备行为策略，开发者可根据返回的模式值调整应用行为以适配当前模式。各模式定义及说明请参见DevicePowerMode。 |
-| [isActive](arkts-basicservices-power-isactive-f.md) | 检测当前设备是否处于活动状态。可用于应用根据设备活动状态调整行为，例如在设备非活动状态下暂停后台任务等。 - 有屏的设备亮屏时为活动状态，灭屏时为非活动状态。 - 无屏的设备非休眠时为活动状态，休眠时为非活动状态。 |
+| [isActive](arkts-basicservices-power-isactive-f.md) | 检测当前设备是否处于活动状态。可用于应用根据设备活动状态调整行为，例如在设备非活动状态下暂停后台任务等。 |
 | [isScreenOn](arkts-basicservices-power-isscreenon-f.md) | 检测当前设备的亮灭屏状态。使用callback异步回调。 |
 | [isScreenOn](arkts-basicservices-power-isscreenon-f.md) | 检测当前设备的亮灭屏状态。使用Promise异步回调。 |
 | [isStandby](arkts-basicservices-power-isstandby-f.md) | 检测当前设备是否进入待机低功耗续航模式。待机模式下系统会采取降低功耗的策略，开发者应据此调整应用的后台任务和资源使用策略，避免在待机时执行高耗能操作。 |
@@ -38,7 +38,7 @@ import { power } from '@kit.BasicServicesKit';
 | [refreshActivity](arkts-basicservices-power-refreshactivity-f-sys.md) | 刷新设备活动状态（如：重设屏幕超时灭屏时间等）。<br><br>此接口仅在设备活动状态下生效。 |
 | [registerShutdownCallback](arkts-basicservices-power-registershutdowncallback-f-sys.md) | 订阅电源关机或重启的回调提醒。使用callback异步回调。调用此方法订阅回调后，可在不再需要时调用power.unregisterShutdownCallback取消订阅，释放系统资源。 |
 | [setPowerConfig](arkts-basicservices-power-setpowerconfig-f-sys.md) | 根据场景名称设置电源配置值。例如，在系统电源管理应用中需要动态调整特定场景的电源配置参数时使用。 |
-| [setPowerKeyFilteringStrategy](arkts-basicservices-power-setpowerkeyfilteringstrategy-f-sys.md) | 设置电源键过滤策略，在电源服务订阅电源键事件后，用于配置电源键事件的处理方式。 电源键过滤策略见[power.PowerKeyFilteringStrategy](arkts-basicservices-power-powerkeyfilteringstrategy-e.md)接口。 |
+| [setPowerKeyFilteringStrategy](arkts-basicservices-power-setpowerkeyfilteringstrategy-f-sys.md) | 设置电源键过滤策略，在电源服务订阅电源键事件后，用于配置电源键事件的处理方式。 |
 | [setPowerMode](arkts-basicservices-power-setpowermode-f-sys.md) | 设置当前设备的电源模式，不同的电源模式会影响设备的性能与功耗策略。使用callback异步回调。 |
 | [setPowerMode](arkts-basicservices-power-setpowermode-f-sys.md) | 设置当前设备的电源模式，不同的电源模式会影响设备的性能与功耗策略。使用Promise异步回调。 |
 | [setScreenOffTime](arkts-basicservices-power-setscreenofftime-f-sys.md) | 设置灭屏超时时间。例如，在自助终端或展示设备场景下可设置较长的超时时间以保持屏幕常亮，在低电量场景下可设置较短的超时时间以节省电量。 |

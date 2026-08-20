@@ -2,6 +2,8 @@
 
 Defines the Result of mediaquery.
 
+@interface MediaQueryResult
+
 **Since:** 23
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.

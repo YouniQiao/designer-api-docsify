@@ -41,14 +41,14 @@ Sends data to the peer end. This API uses a promise to return the result. This i
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because bluetooth proxy function has been trimmed.<br>**Applicable version:** 26.0.0 and later |
-| [32390104](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390104-data-sending-failed) | Send failed. |
-| [32390006](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390006-parameter-verification-error) | Parameter error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390103](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390103-data-too-long) | Data too long. |
-| [32390004](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390004-invalid-or-unavailable-channel-id) | ChannelId is invalid or unavailable. |
-| [32390100](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390100-internal-error) | Internal error. |
-| [32390101](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390101-call-restricted) | Call is restricted. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because bluetooth proxy function has been trimmed.<br>**Applicable version:** 26.0.0 and later |
+| [32390004](../errorcode-proxyChannelManager.md#32390004-invalid-or-unavailable-channel-id) | ChannelId is invalid or unavailable. |
+| [32390006](../errorcode-proxyChannelManager.md#32390006-parameter-verification-error) | Parameter error. |
+| [32390100](../errorcode-proxyChannelManager.md#32390100-internal-error) | Internal error. |
+| [32390101](../errorcode-proxyChannelManager.md#32390101-call-restricted) | Call is restricted. |
+| [32390103](../errorcode-proxyChannelManager.md#32390103-data-too-long) | Data too long. |
+| [32390104](../errorcode-proxyChannelManager.md#32390104-data-sending-failed) | Send failed. |
 
 **Examples**
 

@@ -2,6 +2,8 @@
 
 像素取整模式
 
+@enum { number }
+
 **起始版本：** 18
 
 <!--Device-unnamed-declare enum PixelRoundMode--><!--Device-unnamed-declare enum PixelRoundMode-End-->

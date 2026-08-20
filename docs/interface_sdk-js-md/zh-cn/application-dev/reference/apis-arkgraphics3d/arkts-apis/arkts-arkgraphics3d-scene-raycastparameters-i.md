@@ -2,6 +2,8 @@
 
 射线检测参数配置，用于定义射线检测的行为。
 
+@interface RaycastParameters
+
 **起始版本：** 23
 
 <!--Device-unnamed-export interface RaycastParameters--><!--Device-unnamed-export interface RaycastParameters-End-->

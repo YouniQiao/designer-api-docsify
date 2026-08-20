@@ -1,4 +1,4 @@
-# HiTraceCommunicationMode(Distributed Tracing)
+# HiTraceCommunicationMode
 
 Enumerates communication modes.
 

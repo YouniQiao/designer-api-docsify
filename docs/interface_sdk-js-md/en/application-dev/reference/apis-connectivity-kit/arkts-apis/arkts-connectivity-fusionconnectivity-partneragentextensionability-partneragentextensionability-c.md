@@ -2,6 +2,8 @@
 
 Class for the PartnerAgentExtensionAbility. Applications can use this ability to discover devices.
 
+@extends ExtensionAbility
+
 **Inheritance/Implementation:** PartnerAgentExtensionAbility extends ExtensionAbility
 
 **Since:** 26.0.0

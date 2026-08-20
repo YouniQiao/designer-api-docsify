@@ -1,4 +1,4 @@
-# DynamicOptions(System API) (System API)
+# DynamicOptions (System API)
 
 Defines the parameters to be passed during **DynamicComponent** construction.
 

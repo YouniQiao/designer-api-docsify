@@ -2,6 +2,8 @@
 
 The type of exemption resources requested by the application.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-deviceStandby-export enum ResourceType--><!--Device-deviceStandby-export enum ResourceType-End-->

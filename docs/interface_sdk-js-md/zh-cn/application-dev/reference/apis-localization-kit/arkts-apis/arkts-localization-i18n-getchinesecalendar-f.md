@@ -34,7 +34,7 @@ export function getChineseCalendar(locale?: Intl.Locale): ChineseCalendar
 
 | 类型 | 说明 |
 | --- | --- |
-| [ChineseCalendar](arkts-localization-i18n-chinesecalendar-c.md) | 农历对象。 |
+| [ChineseCalendar](../../apis-default/arkts-apis/arkts-i18n-chinesecalendar-c.md) | 农历对象。 |
 
 **示例**
 

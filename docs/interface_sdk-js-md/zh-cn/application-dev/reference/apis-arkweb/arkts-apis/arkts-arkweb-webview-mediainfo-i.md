@@ -22,7 +22,7 @@ attributes: Record<string, string>
 
 `&lt;video&gt;` 或 `&lt;audio&gt;` 标签中的属性。
 
-**类型：** Record&lt;string, string&gt;
+**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string&gt;
 
 **起始版本：** 12
 
@@ -54,7 +54,9 @@ controlList: string[]
 controlsShown: boolean
 ```
 
-`&lt;video&gt;` 或 `&lt;audio&gt;` 中是否有 `controls` 属性。 true 表示有，false 表示没有。
+`&lt;video&gt;` 或 `&lt;audio&gt;` 中是否有 `controls` 属性。
+
+true 表示有，false 表示没有。
 
 **类型：** boolean
 
@@ -90,7 +92,7 @@ headers: Record<string, string>
 
 播放器请求媒体资源时，需要携带的 HTTP 头。
 
-**类型：** Record&lt;string, string&gt;
+**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string&gt;
 
 **起始版本：** 12
 
@@ -140,7 +142,9 @@ mediaType: MediaType
 muted: boolean
 ```
 
-是否要求静音播放。 true 表示静音播放，false 表示未静音播放。
+是否要求静音播放。
+
+true 表示静音播放，false 表示未静音播放。
 
 **类型：** boolean
 

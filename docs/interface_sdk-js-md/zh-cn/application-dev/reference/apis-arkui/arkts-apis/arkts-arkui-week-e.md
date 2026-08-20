@@ -2,6 +2,8 @@
 
 定义星期枚举值。
 
+@enum { number }
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare enum Week--><!--Device-unnamed-declare enum Week-End-->

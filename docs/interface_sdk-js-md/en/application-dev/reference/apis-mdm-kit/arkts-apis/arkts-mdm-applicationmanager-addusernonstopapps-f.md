@@ -12,7 +12,15 @@ import { applicationManager } from '@kit.MDMKit';
 function addUserNonStopApps(admin: Want, applicationInstances: Array<common.ApplicationInstance>): void
 ```
 
-Adds applications to the non-stoppable application list for a specified user. This policy only applies to installed applications. If the parameter list contains uninstalled applications, error code 9200012 will be returned. If an application in the list is uninstalled after the policy is set, the uninstalled application will be removed from the list. Adding an application that already exists in the list will return success, but the application will not be added repeatedly to the policy list. On phones and tablets, non-stoppable applications cannot be closed by swiping up in the task center. After a user taps the application name in **Settings** &gt; **Apps & services** to go to the details page, the forcible stop button is unavailable, and the disable button does not take effect. On PCs/2-in-1 devices, after a user taps the application name in **Settings** &gt; **Apps & services** to go to the details page, the forcible stop button is unavailable, and the disable button does not take effect. Since API version 26.0.0, if you call [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md) to disable [SUPER_HUB](arkts-mdm-restrictions-featureforaccount-e.md) and then call this API to add SuperHub to the non-stoppable application list, a policy conflict occurs and error code 9200010 is reported.
+Adds applications to the non-stoppable application list for a specified user. This policy only applies to installed applications. If the parameter list contains uninstalled applications, error code 9200012 will be returned. If an application in the list is uninstalled after the policy is set, the uninstalled application will be removed from the list. Adding an application that already exists in the list will return success, but the application will not be added repeatedly to the policy list.
+
+On phones and tablets, non-stoppable applications cannot be closed by swiping up in the task center. After a user taps the application name in **Settings**   
+> **Apps & services** to go to the details page, the forcible stop button is unavailable, and the disable button does not take effect.
+
+On PCs/2-in-1 devices, after a user taps the application name in **Settings**   
+> **Apps & services** to go to the details page, the forcible stop button is unavailable, and the disable button does not take effect.
+
+Since API version 26.0.0, if you call [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md) to disable [SUPER_HUB](arkts-mdm-restrictions-featureforaccount-e.md) and then call this API to add SuperHub to the non-stoppable application list, a policy conflict occurs and error code 9200010 is reported.
 
 **Since:** 22
 
@@ -35,11 +43,11 @@ Adds applications to the non-stoppable application list for a specified user. Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
-| [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) | A conflict policy has been configured.<br>**Applicable version:** 26.0.0 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) | A conflict policy has been configured.<br>**Applicable version:** 26.0.0 and later |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 **Examples**
 

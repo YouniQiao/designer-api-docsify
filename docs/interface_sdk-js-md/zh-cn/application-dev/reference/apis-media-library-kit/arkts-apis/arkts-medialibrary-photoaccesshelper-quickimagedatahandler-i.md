@@ -1,6 +1,10 @@
 # QuickImageDataHandler
 
-媒体资源处理器，应用在onDataPrepared方法中可自定义媒体资源处理逻辑。 &gt; **说明：** &gt; &gt; - 本Interface首批接口从API version 13开始支持。
+媒体资源处理器，应用在onDataPrepared方法中可自定义媒体资源处理逻辑。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 13开始支持。
 
 **起始版本：** 23
 
@@ -20,7 +24,11 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 onDataPrepared(data: T, imageSource: image.ImageSource, map: Map<string, string>): void
 ```
 
-当请求的图片资源准备就绪时，系统会回调媒体资源就绪通知方法。如果资源准备出错，回调的data将为undefined。 map支持返回的信息： | map键名 | 值说明 | |----------|-------| | 'quality' | 图片质量。高质量为'high'，低质量为'low'。 |
+当请求的图片资源准备就绪时，系统会回调媒体资源就绪通知方法。如果资源准备出错，回调的data将为undefined。
+
+map支持返回的信息：
+
+| map键名 | 值说明 | |----------|-------| | 'quality' | 图片质量。高质量为'high'，低质量为'low'。 |
 
 **起始版本：** 13
 

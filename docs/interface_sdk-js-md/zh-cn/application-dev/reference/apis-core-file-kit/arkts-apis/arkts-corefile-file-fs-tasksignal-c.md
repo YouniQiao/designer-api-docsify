@@ -34,8 +34,8 @@ cancel(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900012 | Permission denied by the file system |
 | 13900010 | Try again |
+| 13900012 | Permission denied by the file system |
 | 13900043 | No task can be canceled. |
 
 **示例**
@@ -125,7 +125,12 @@ try {
 onCancel(): Promise<string>
 ```
 
-> **说明：** &gt; &gt; 从API version 12开始支持，从API version 24开始废弃。 取消拷贝事件监听。
+
+> **说明：**
+> 
+> 从API version 12开始支持，从API version 24开始废弃。
+
+取消拷贝事件监听。
 
 **起始版本：** 12
 

@@ -1,4 +1,4 @@
-# CertificateStatus(Defines the DRM capability.)
+# CertificateStatus
 
 Enumerates the statuses of device certificates.
 

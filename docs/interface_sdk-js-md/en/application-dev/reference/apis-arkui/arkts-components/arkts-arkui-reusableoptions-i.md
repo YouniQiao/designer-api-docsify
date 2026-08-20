@@ -2,6 +2,8 @@
 
 Defines the options for Reusable ClassDecorator.
 
+@interface ReusableOptions
+
 **Since:** 26.0.0
 
 <!--Device-unnamed-declare interface ReusableOptions--><!--Device-unnamed-declare interface ReusableOptions-End-->

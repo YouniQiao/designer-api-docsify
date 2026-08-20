@@ -1,6 +1,6 @@
 # @ohos.arkui.componentUtils
 
-This module provides functionality for component coordinates and sizes.
+This module provides functionality for component coordinates and sizes. @namespace componentUtils
 
 **Since:** 23
 

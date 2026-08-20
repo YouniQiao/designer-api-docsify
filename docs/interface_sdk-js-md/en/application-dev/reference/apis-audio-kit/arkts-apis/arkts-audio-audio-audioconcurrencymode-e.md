@@ -2,6 +2,8 @@
 
 Enumerates the audio concurrency modes.
 
+@enum { int } [since 12 - 24]
+
 **Since:** 23
 
 <!--Device-audio-enum AudioConcurrencyMode--><!--Device-audio-enum AudioConcurrencyMode-End-->

@@ -36,7 +36,7 @@ Message code.
 data: MessageSequence
 ```
 
-**MessageSequence** object sent to the remote process.
+*MessageSequence** object sent to the remote process.
 
 **Type:** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
 
@@ -68,7 +68,7 @@ Error code.
 reply: MessageSequence
 ```
 
-**MessageSequence** object returned by the remote process.
+*MessageSequence** object returned by the remote process.
 
 **Type:** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
 

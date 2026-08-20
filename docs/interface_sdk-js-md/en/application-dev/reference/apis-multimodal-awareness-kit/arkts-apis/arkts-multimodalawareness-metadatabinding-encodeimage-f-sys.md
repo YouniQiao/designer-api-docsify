@@ -39,9 +39,9 @@ Encodes metadata into an image. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission check failed. A non-system application uses the system API. |
-| [32100002](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100002-encoding-failed) | Encode process fail. Possible causes: <br>1. Image processing error. <br>2. Channel coding error. |
+| [32100001](../errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
+| [32100002](../errorcode-metadataBinding.md#32100002-encoding-failed) | Encode process fail. Possible causes: <br>1. Image processing error. <br>2. Channel coding error. |
 
 **Examples**
 

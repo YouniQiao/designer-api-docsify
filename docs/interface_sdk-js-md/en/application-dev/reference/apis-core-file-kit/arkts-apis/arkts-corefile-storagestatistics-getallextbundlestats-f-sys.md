@@ -42,11 +42,11 @@ Obtains the space usage of all system applications or system services of a speci
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13600013 | Failed to query all business space usage. |
-| 13600010 | The input parameter is invalid. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600001 | IPC error. |
+| 13600010 | The input parameter is invalid. |
+| 13600013 | Failed to query all business space usage. |
 
 **Examples**
 

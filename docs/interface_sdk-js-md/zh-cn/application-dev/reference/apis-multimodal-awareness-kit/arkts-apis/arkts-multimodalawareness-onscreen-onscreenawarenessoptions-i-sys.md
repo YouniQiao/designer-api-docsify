@@ -24,7 +24,7 @@ parameters?: Record<string, Object>
 
 感知参数列表，参数结果是key-value数据对象。
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;
 
 **起始版本：** 23
 

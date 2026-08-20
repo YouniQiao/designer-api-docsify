@@ -30,7 +30,7 @@ Checks whether a file or directory exists. This API uses a promise to return the
 
 **Deprecated since:** 23
 
-**Substitutes:** [access](../../apis-na/arkts-apis/arkts-na-fileio-access-f.md)(path: string, mode?: AccessModeType)
+**Substitutes:** [access](../../apis-default/arkts-apis/arkts-fileio-access-f.md)(path: string, mode?: AccessModeType)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -56,40 +56,40 @@ Checks whether a file or directory exists. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **Examples**
 
@@ -130,7 +130,7 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 
 **Deprecated since:** 23
 
-**Substitutes:** [access](../../apis-na/arkts-apis/arkts-na-fileio-access-f.md)(path: string, callback: AsyncCallback&lt;boolean&gt;)
+**Substitutes:** [access](../../apis-default/arkts-apis/arkts-fileio-access-f.md)(path: string, callback: AsyncCallback&lt;boolean&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -151,40 +151,40 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **Examples**
 
@@ -227,7 +227,7 @@ Copies a file or directory. This API uses a promise to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** [copy](../../apis-na/arkts-apis/arkts-na-fileio-copy-f.md)(srcUri: string, destUri: string, options?: CopyOptions)
+**Substitutes:** [copy](../../apis-default/arkts-apis/arkts-fileio-copy-f.md)(srcUri: string, destUri: string, options?: CopyOptions)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -263,7 +263,7 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 
 **Deprecated since:** 23
 
-**Substitutes:** [copy](../../apis-na/arkts-apis/arkts-na-fileio-copy-f.md)(srcUri: string, destUri: string, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [copy](../../apis-default/arkts-apis/arkts-fileio-copy-f.md)(srcUri: string, destUri: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -328,7 +328,7 @@ Copies a file or directory. If a file with the same name already exists, you can
 
 **Deprecated since:** 23
 
-**Substitutes:** [copy](../../apis-na/arkts-apis/arkts-na-fileio-copy-f.md)(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [copy](../../apis-default/arkts-apis/arkts-fileio-copy-f.md)(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -394,7 +394,7 @@ Copies a file with an alternative file name. This API uses a promise to return t
 
 **Deprecated since:** 23
 
-**Substitutes:** [copyFile](../../apis-na/arkts-apis/arkts-na-fileio-copyfile-f.md)(src: string | number, dest: string | number, mode?: number)
+**Substitutes:** [copyFile](../../apis-default/arkts-apis/arkts-fileio-copyfile-f.md)(src: string | number, dest: string | number, mode?: number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -424,30 +424,30 @@ Copies a file with an alternative file name. This API uses a promise to return t
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API |
-| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
+| 13900030 | File name too long |
+| 13900042 | Unknown error |
+| 14300001 | IPC error |
 | 14300002 | Invalid uri |
 | 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
-| 13900042 | Unknown error |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **Examples**
 
@@ -486,7 +486,7 @@ Copies a file with an alternative file name. This API uses an asynchronous callb
 
 **Deprecated since:** 23
 
-**Substitutes:** [copyFile](../../apis-na/arkts-apis/arkts-na-fileio-copyfile-f.md)(src: string | number, dest: string | number, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [copyFile](../../apis-default/arkts-apis/arkts-fileio-copyfile-f.md)(src: string | number, dest: string | number, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -511,30 +511,30 @@ Copies a file with an alternative file name. This API uses an asynchronous callb
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API |
-| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
+| 13900030 | File name too long |
+| 13900042 | Unknown error |
+| 14300001 | IPC error |
 | 14300002 | Invalid uri |
 | 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
-| 13900042 | Unknown error |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **Examples**
 
@@ -572,7 +572,7 @@ Creates a file in a directory. This API uses a promise to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** [createRandomAccessFile](../../apis-na/arkts-apis/arkts-na-fileio-createrandomaccessfile-f.md)(file: string | File, mode?: number, options?: RandomAccessFileOptions)
+**Substitutes:** [createRandomAccessFile](../../apis-default/arkts-apis/arkts-fileio-createrandomaccessfile-f.md)(file: string | File, mode?: number, options?: RandomAccessFileOptions)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -599,40 +599,40 @@ Creates a file in a directory. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **Examples**
 
@@ -675,7 +675,7 @@ Creates a file in a directory. This API uses an asynchronous callback to return 
 
 **Deprecated since:** 23
 
-**Substitutes:** [createRandomAccessFile](../../apis-na/arkts-apis/arkts-na-fileio-createrandomaccessfile-f.md)(file: string | File, callback: AsyncCallback&lt;RandomAccessFile&gt;)
+**Substitutes:** [createRandomAccessFile](../../apis-default/arkts-apis/arkts-fileio-createrandomaccessfile-f.md)(file: string | File, callback: AsyncCallback&lt;RandomAccessFile&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -697,40 +697,40 @@ Creates a file in a directory. This API uses an asynchronous callback to return 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **Examples**
 
@@ -796,40 +796,40 @@ Deletes a file or directory. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **Examples**
 
@@ -888,40 +888,40 @@ Deletes a file or directory. This API uses an asynchronous callback to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **Examples**
 
@@ -960,7 +960,7 @@ Obtains a **FileInfo** object based on a relative path. This API uses a promise 
 
 **Deprecated since:** 23
 
-**Substitutes:** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md)(file: string | number)
+**Substitutes:** [stat](../../apis-default/arkts-apis/arkts-fileio-stat-f.md)(file: string | number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1015,7 +1015,7 @@ Obtains a **FileInfo** object based on a relative path. This API uses an asynchr
 
 **Deprecated since:** 23
 
-**Substitutes:** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
+**Substitutes:** [stat](../../apis-default/arkts-apis/arkts-fileio-stat-f.md)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1069,7 +1069,7 @@ Obtains a **FileInfo** object based on a URI. This API uses a promise to return 
 
 **Deprecated since:** 23
 
-**Substitutes:** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md)(file: string | number)
+**Substitutes:** [stat](../../apis-default/arkts-apis/arkts-fileio-stat-f.md)(file: string | number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1125,7 +1125,7 @@ Obtains a **FileInfo** object based on a URI. This API uses an asynchronous call
 
 **Deprecated since:** 23
 
-**Substitutes:** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
+**Substitutes:** [stat](../../apis-default/arkts-apis/arkts-fileio-stat-f.md)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1198,40 +1198,40 @@ Obtains information about the device root nodes of the file management services 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **Examples**
 
@@ -1294,40 +1294,40 @@ Obtains information about the device root nodes of the file management services 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **Examples**
 
@@ -1373,7 +1373,7 @@ Creates a directory in a specified directory. This API uses a promise to return 
 
 **Deprecated since:** 23
 
-**Substitutes:** [mkdir](../../apis-na/arkts-apis/arkts-na-fileio-mkdir-f.md)(path: string)
+**Substitutes:** [mkdir](../../apis-default/arkts-apis/arkts-fileio-mkdir-f.md)(path: string)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1400,40 +1400,40 @@ Creates a directory in a specified directory. This API uses a promise to return 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **Examples**
 
@@ -1476,7 +1476,7 @@ Creates a directory in a specified directory. This API uses an asynchronous call
 
 **Deprecated since:** 23
 
-**Substitutes:** [mkdir](../../apis-na/arkts-apis/arkts-na-fileio-mkdir-f.md)(path: string, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [mkdir](../../apis-default/arkts-apis/arkts-fileio-mkdir-f.md)(path: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1498,40 +1498,40 @@ Creates a directory in a specified directory. This API uses an asynchronous call
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **Examples**
 
@@ -1571,7 +1571,7 @@ Moves a file or directory. This API uses a promise to return the result. Current
 
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md)(src: string, dest: string, mode?: number)
+**Substitutes:** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, mode?: number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1598,40 +1598,40 @@ Moves a file or directory. This API uses a promise to return the result. Current
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **Examples**
 
@@ -1669,7 +1669,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md)(src: string, dest: string, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1691,40 +1691,40 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **Examples**
 
@@ -1764,7 +1764,7 @@ Moves a file, and renames it if a file with the same name already exists in the 
 
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md)(src: string, dest: string, mode?: number)
+**Substitutes:** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, mode?: number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1794,30 +1794,30 @@ Moves a file, and renames it if a file with the same name already exists in the 
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
+| 13900030 | File name too long |
+| 13900042 | Unknown error |
+| 14300001 | IPC error |
 | 14300002 | Invalid uri |
 | 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
-| 13900042 | Unknown error |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **Examples**
 
@@ -1856,7 +1856,7 @@ Moves a file, and renames it if a file with the same name already exists in the 
 
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md)(src: string, dest: string, mode: number, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, mode: number, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1881,30 +1881,30 @@ Moves a file, and renames it if a file with the same name already exists in the 
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
+| 13900030 | File name too long |
+| 13900042 | Unknown error |
+| 14300001 | IPC error |
 | 14300002 | Invalid uri |
 | 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
-| 13900042 | Unknown error |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **Examples**
 
@@ -1945,7 +1945,7 @@ Moves a file or directory. This API uses a promise to return the result. You can
 
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md)(src: string, dest: string, mode?: number)
+**Substitutes:** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, mode?: number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1975,30 +1975,30 @@ Moves a file or directory. This API uses a promise to return the result. You can
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
+| 13900030 | File name too long |
+| 13900042 | Unknown error |
+| 14300001 | IPC error |
 | 14300002 | Invalid uri |
 | 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
-| 13900042 | Unknown error |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 ## moveItem
 
@@ -2012,7 +2012,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md)(src: string, dest: string, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2036,30 +2036,30 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
+| 13900030 | File name too long |
+| 13900042 | Unknown error |
+| 14300001 | IPC error |
 | 14300002 | Invalid uri |
 | 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
-| 13900042 | Unknown error |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **Examples**
 
@@ -2108,7 +2108,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md)(src: string, dest: string, mode: number, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, mode: number, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2133,30 +2133,30 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
+| 13900030 | File name too long |
+| 13900042 | Unknown error |
+| 14300001 | IPC error |
 | 14300002 | Invalid uri |
 | 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
-| 13900042 | Unknown error |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **Examples**
 
@@ -2205,7 +2205,7 @@ Opens a file. This API uses a promise to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md)(path: string, mode?: number)
+**Substitutes:** [open](../../apis-default/arkts-apis/arkts-fileio-open-f.md)(path: string, mode?: number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2232,40 +2232,40 @@ Opens a file. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **Examples**
 
@@ -2301,7 +2301,7 @@ Opens a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md)(path: string, callback: AsyncCallback&lt;File&gt;)
+**Substitutes:** [open](../../apis-default/arkts-apis/arkts-fileio-open-f.md)(path: string, callback: AsyncCallback&lt;File&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2323,40 +2323,40 @@ Opens a file. This API uses an asynchronous callback to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **Examples**
 
@@ -2395,7 +2395,7 @@ Queries the attribute information about a file or directory based on a URI. This
 
 **Deprecated since:** 23
 
-**Substitutes:** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md)(file: string | number)
+**Substitutes:** [stat](../../apis-default/arkts-apis/arkts-fileio-stat-f.md)(file: string | number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2452,7 +2452,7 @@ Queries the attribute information about a file or directory based on a URI. This
 
 **Deprecated since:** 23
 
-**Substitutes:** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
+**Substitutes:** [stat](../../apis-default/arkts-apis/arkts-fileio-stat-f.md)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2509,7 +2509,7 @@ Registers a callback to listen for a URI. URIs and callbacks can be in many-to-m
 
 **Deprecated since:** 23
 
-**Substitutes:** [createWatcher](../../apis-na/arkts-apis/arkts-na-fileio-createwatcher-f.md)
+**Substitutes:** [createWatcher](../../apis-default/arkts-apis/arkts-fileio-createwatcher-f.md)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2545,7 +2545,7 @@ Renames a file or directory. This API uses a promise to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** [rename](../../apis-na/arkts-apis/arkts-na-fileio-rename-f.md)(oldPath: string, newPath: string)
+**Substitutes:** [rename](../../apis-default/arkts-apis/arkts-fileio-rename-f.md)(oldPath: string, newPath: string)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2572,40 +2572,40 @@ Renames a file or directory. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **Examples**
 
@@ -2642,7 +2642,7 @@ Renames a file or directory. This API uses an asynchronous callback to return th
 
 **Deprecated since:** 23
 
-**Substitutes:** [rename](../../apis-na/arkts-apis/arkts-na-fileio-rename-f.md)(oldPath: string, newPath: string, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [rename](../../apis-default/arkts-apis/arkts-fileio-rename-f.md)(oldPath: string, newPath: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2664,40 +2664,40 @@ Renames a file or directory. This API uses an asynchronous callback to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14000004 | File has been put into trash bin |
-| 13900038 | Value too large for defined data type |
-| 14000001 | Invalid display name |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 14000003 | Invalid file extension |
-| 14000002 | Invalid uri |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
 | 13900017 | No such device |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 14300002 | Invalid uri |
-| 13900013 | Bad address |
-| 14300003 | Fail to get fileextension info |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
 | 14300001 | IPC error |
-| 13900008 | Bad file descriptor |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
-| 13900011 | Out of memory |
 
 **Examples**
 

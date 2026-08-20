@@ -1,4 +1,4 @@
-# WatermarkProperties(Security Management)
+# WatermarkProperties
 
 Defines watermark properties.
 

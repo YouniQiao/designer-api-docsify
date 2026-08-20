@@ -12,7 +12,9 @@ import { screenshot } from '@kit.ArkUI';
 function saveHdrPicture(options?: HdrScreenshotOptions): Promise<Array<image.PixelMap>>
 ```
 
-Obtains a screenshot. This API uses a promise to return the result. SDR stands for Standard Dynamic Range, and HDR stands for High Dynamic Range. - If the screen contains HDR resources (even if they are partially obscured), this API returns an array with both SDR and HDR PixelMaps, regardless of whether HDR is enabled. - If there are no HDR resources, it returns an array with a single SDR PixelMap. Unlike the [save](arkts-arkui-screenshot-save-f-sys.md) API, which returns a single SDR PixelMap, this API always returns an array. Additionally, this API does not support cropping, stretching, or rotating features available in the [save](arkts-arkui-screenshot-save-f-sys.md) API.
+Obtains a screenshot. This API uses a promise to return the result. SDR stands for Standard Dynamic Range, and HDR stands for High Dynamic Range.
+
+- If the screen contains HDR resources (even if they are partially obscured), this API returns an array with both SDR and HDR PixelMaps, regardless of whether HDR is enabled. - If there are no HDR resources, it returns an array with a single SDR PixelMap. Unlike the [save](arkts-arkui-screenshot-save-f-sys.md) API, which returns a single SDR PixelMap, this API always returns an array. Additionally, this API does not support cropping, stretching, or rotating features available in the [save](arkts-arkui-screenshot-save-f-sys.md) API.
 
 **Since:** 23
 
@@ -42,12 +44,12 @@ Obtains a screenshot. This API uses a promise to return the result. SDR stands f
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1.Invalid parameter range. |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1.Invalid parameter range. |
 
 **Examples**
 

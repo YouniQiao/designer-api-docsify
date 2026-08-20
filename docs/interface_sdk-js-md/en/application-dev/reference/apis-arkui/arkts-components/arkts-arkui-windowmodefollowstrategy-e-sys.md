@@ -1,4 +1,4 @@
-# WindowModeFollowStrategy(System API) (System API)
+# WindowModeFollowStrategy (System API)
 
 Enumerates the following strategies of the window mode.
 

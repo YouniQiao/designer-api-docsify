@@ -12,7 +12,9 @@ import { formHost } from '@kit.FormKit';
 function onGetFormRect(callback: formInfo.GetFormRectInfoCallback): void
 ```
 
-Listens to the event of get form rect. You can use this method to listen to the event of get form rect.
+Listens to the event of get form rect.
+
+You can use this method to listen to the event of get form rect.
 
 **Since:** 23
 

@@ -1,4 +1,4 @@
-# Permissions(Defines all permissions.)
+# Permissions
 
 ```TypeScript
 export type Permissions = string

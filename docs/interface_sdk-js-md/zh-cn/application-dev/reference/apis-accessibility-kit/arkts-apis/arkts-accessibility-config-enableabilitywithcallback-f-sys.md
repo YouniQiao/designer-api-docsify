@@ -12,7 +12,9 @@ import { config } from '@kit.AccessibilityKit';
 function enableAbilityWithCallback(name: string, capability: Array<accessibility.Capability>, connectCallback: ConnectCallback): Promise<void>
 ```
 
-启用辅助扩展，并指定[ConnectCallback](arkts-accessibility-config-connectcallback-i-sys.md)作为辅助扩展连接断开事件的回调函数。使用Promise异步回调。 当辅助扩展进程异常断开连接时，将触发ConnectCallback的onDisconnect回调。需与[config.disableAbility](arkts-accessibility-config-disableability-f-sys.md)配对使用。
+启用辅助扩展，并指定[ConnectCallback](arkts-accessibility-config-connectcallback-i-sys.md)作为辅助扩展连接断开事件的回调函数。使用Promise异步回调。
+
+当辅助扩展进程异常断开连接时，将触发ConnectCallback的onDisconnect回调。需与[config.disableAbility](arkts-accessibility-config-disableability-f-sys.md)配对使用。
 
 **起始版本：** 23
 

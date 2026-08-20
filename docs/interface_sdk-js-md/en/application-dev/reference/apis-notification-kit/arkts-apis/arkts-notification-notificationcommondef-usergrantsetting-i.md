@@ -1,4 +1,4 @@
-# UserGrantSetting(Some common definitions)
+# UserGrantSetting
 
 Describes the user authorization settings.
 

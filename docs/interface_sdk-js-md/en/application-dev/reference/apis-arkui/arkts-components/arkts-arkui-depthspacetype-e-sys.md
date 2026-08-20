@@ -2,6 +2,8 @@
 
 Depth space type enumeration.
 
+@enum { number }
+
 **Since:** 26.0.0
 
 <!--Device-unnamed-declare enum DepthSpaceType--><!--Device-unnamed-declare enum DepthSpaceType-End-->

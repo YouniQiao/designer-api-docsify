@@ -2,6 +2,8 @@
 
 Enumeration of MemberPurchaseType.
 
+@enum { string }
+
 **Since:** 23
 
 <!--Device-avMusicTemplate-enum MemberPurchaseType--><!--Device-avMusicTemplate-enum MemberPurchaseType-End-->

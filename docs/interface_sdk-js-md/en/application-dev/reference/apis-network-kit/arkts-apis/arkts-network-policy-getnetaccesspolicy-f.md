@@ -12,7 +12,10 @@ import { policy } from '@kit.NetworkKit';
 function getNetAccessPolicy(): Promise<NetAccessPolicy>
 ```
 
-Queries the network access policy of an application (whether cellular or Wi-Fi network access is allowed). You can check the policy by choosing **Settings** &gt; **Mobile network** &gt; **Manage data usage** &gt; **Network access**. This API uses a promise to return the result.
+Queries the network access policy of an application (whether cellular or Wi-Fi network access is allowed). You can check the policy by choosing **Settings**   
+> **Mobile network**
+> **Manage data usage**
+> **Network access**. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 

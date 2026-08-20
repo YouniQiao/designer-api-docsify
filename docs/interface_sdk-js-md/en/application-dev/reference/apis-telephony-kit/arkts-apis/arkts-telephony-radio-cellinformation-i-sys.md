@@ -2,6 +2,8 @@
 
 Obtains current cell information.
 
+@interface CellInformation
+
 **Since:** 23
 
 <!--Device-radio-export interface CellInformation--><!--Device-radio-export interface CellInformation-End-->
@@ -39,7 +41,9 @@ Obtains signal strength under different network formats.
 isCamped: boolean
 ```
 
-Obtains the camp-on status of the serving cell. Returns {@code true} if the user equipment (UE) is camped on the cell; returns {@code false} otherwise.
+Obtains the camp-on status of the serving cell.
+
+Returns {@code true} if the user equipment (UE) is camped on the cell; returns {@code false} otherwise.
 
 **Type:** boolean
 
@@ -57,7 +61,9 @@ Obtains the camp-on status of the serving cell. Returns {@code true} if the user
 timeStamp: int
 ```
 
-Obtains the timestamp when the cell information is obtained. Returns a timestamp since boot, in nanoseconds.
+Obtains the timestamp when the cell information is obtained.
+
+Returns a timestamp since boot, in nanoseconds.
 
 **Type:** int
 

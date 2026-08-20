@@ -36,7 +36,11 @@ The **in** / **out** components maintain their original hierarchy levels and are
 ADAPTIVE = 1
 ```
 
-The component with the lower hierarchy level between the **in** and **out** components is promoted to the hierarchy level of the higher one in the component tree. This mode also causes the promoted components to be decoupled from their parent components, not affected by the scale and position of their parent components. For example, if the **in** component is at a higher hierarchy level than the **out** component, in this mode the **out** component will be decoupled from its own parent component during the animation process and promoted to the hierarchical position of the **in** component, while the **in** component's hierarchical position remains unchanged.
+The component with the lower hierarchy level between the **in** and **out** components is promoted to the hierarchy level of the higher one in the component tree.
+
+This mode also causes the promoted components to be decoupled from their parent components, not affected by the scale and position of their parent components.
+
+For example, if the **in** component is at a higher hierarchy level than the **out** component, in this mode the **out** component will be decoupled from its own parent component during the animation process and promoted to the hierarchical position of the **in** component, while the **in** component's hierarchical position remains unchanged.
 
 **Since:** 12
 

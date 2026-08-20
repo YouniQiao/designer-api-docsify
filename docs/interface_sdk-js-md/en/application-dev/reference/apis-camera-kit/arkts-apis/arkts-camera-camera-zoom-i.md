@@ -1,6 +1,8 @@
 # Zoom
 
-**Zoom** inherits from [ZoomQuery](arkts-camera-camera-zoomquery-i.md). It provides APIs related to zoom operations.
+*Zoom** inherits from [ZoomQuery](arkts-camera-camera-zoomquery-i.md).
+
+It provides APIs related to zoom operations.
 
 **Inheritance/Implementation:** Zoom extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md)
 

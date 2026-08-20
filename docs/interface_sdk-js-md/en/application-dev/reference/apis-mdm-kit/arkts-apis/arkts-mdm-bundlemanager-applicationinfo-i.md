@@ -290,7 +290,9 @@ Resource information of the application icon, including the bundle name, module 
 readonly installSource: string
 ```
 
-Installation source of the application. The options are as follows: - **pre-installed**: The application is a preset application installed at initial device startup. - **ota**: The application is a preset application added during system upgrade. - **recovery**: The preset application is uninstalled and then restored. - **bundleName**: The application corresponding to the bundle name is installed. - **unknown**: The installation source is unknown.
+Installation source of the application. The options are as follows:
+
+- **pre-installed**: The application is a preset application installed at initial device startup. - **ota**: The application is a preset application added during system upgrade. - **recovery**: The preset application is uninstalled and then restored. - **bundleName**: The application corresponding to the bundle name is installed. - **unknown**: The installation source is unknown.
 
 **Type:** string
 
@@ -416,7 +418,7 @@ Process name.
 readonly releaseType: string
 ```
 
-Release type of the SDK used for application packing. Currently, the SDK release types include Canary, Beta, and Release. Each of the Canary and Beta releases can be distinguished by a sequential number, such as Canary1, Canary2, Beta1, and Beta2. You can compare the SDK release type on which application packaging depends and the OS release type (specified by [deviceInfo.distributionOSReleaseType](../../apis-na/arkts-apis/arkts-deviceinfo.md)) to determine the compatibility.
+Release type of the SDK used for application packing. Currently, the SDK release types include Canary, Beta, and Release. Each of the Canary and Beta releases can be distinguished by a sequential number, such as Canary1, Canary2, Beta1, and Beta2. You can compare the SDK release type on which application packaging depends and the OS release type (specified by [deviceInfo.distributionOSReleaseType](../../apis-basic-services-kit/arkts-apis/arkts-deviceinfo.md)) to determine the compatibility.
 
 **Type:** string
 

@@ -1,4 +1,4 @@
-# WithThemeOptions(Defines WithTheme component.)
+# WithThemeOptions
 
 Defines the default theme and color mode for components within the **WithTheme** scope.
 
@@ -19,7 +19,9 @@ Defines the default theme and color mode for components within the **WithTheme**
 colorMode?: ThemeColorMode
 ```
 
-Color mode for components in the **WithTheme** scope. Default value: **ThemeColorMode.SYSTEM**
+Color mode for components in the **WithTheme** scope.
+
+Default value: **ThemeColorMode.SYSTEM**
 
 **Type:** ThemeColorMode
 
@@ -39,7 +41,9 @@ Color mode for components in the **WithTheme** scope. Default value: **ThemeColo
 theme?: CustomTheme
 ```
 
-Default theme for components in the **WithTheme** scope. Default value: **undefined**. The default style follows the [default token style](../../../ui/theme_skinning.md#system-default-token-color-values).
+Default theme for components in the **WithTheme** scope.
+
+Default value: **undefined**. The default style follows the [default token style](../../../ui/theme_skinning.md#system-default-token-color-values).
 
 **Type:** [CustomTheme](arkts-arkui-customtheme-t.md)
 

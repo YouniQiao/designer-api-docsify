@@ -2,6 +2,8 @@
 
 Define the rotation state of wallpaper
 
+@enum { int } RotateState
+
 **Since:** 23
 
 <!--Device-wallpaper-enum RotateState--><!--Device-wallpaper-enum RotateState-End-->

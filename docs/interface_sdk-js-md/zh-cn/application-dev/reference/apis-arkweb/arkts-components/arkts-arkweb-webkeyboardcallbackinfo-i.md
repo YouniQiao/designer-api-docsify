@@ -26,7 +26,7 @@ attributes: Record<string, string>
 
 触发本次软键盘弹出的网页元素属性。
 
-**类型：** Record&lt;string, string&gt;
+**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string&gt;
 
 **起始版本：** 12
 

@@ -2,6 +2,8 @@
 
 Define the mode of sheet how to avoid keyboard.
 
+@enum { number }
+
 **Since:** 13
 
 <!--Device-unnamed-declare enum SheetKeyboardAvoidMode--><!--Device-unnamed-declare enum SheetKeyboardAvoidMode-End-->

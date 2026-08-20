@@ -1,6 +1,8 @@
 # ChipV2SuffixSymbolIconConfig
 
-ChipV2SuffixSymbolIconConfig定义后缀Symbol图标的属性配置。 继承自[ChipV2SymbolIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2symboliconconfig-i.md)。
+ChipV2SuffixSymbolIconConfig定义后缀Symbol图标的属性配置。
+
+继承自[ChipV2SymbolIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2symboliconconfig-i.md)。
 
 **继承/实现关系：** ChipV2SuffixSymbolIconConfig extends [ChipV2SymbolIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2symboliconconfig-i.md)
 
@@ -22,7 +24,11 @@ import { ChipV2Size, ChipV2AccessibilitySelectedType, ChipV2ImageIconConfig, Chi
 action?: VoidCallback
 ```
 
-后缀图标点击事件回调函数。点击后缀图标时调用此回调函数。 默认值：不设定后缀图标事件。 值为undefined时，按默认值处理。
+后缀图标点击事件回调函数。点击后缀图标时调用此回调函数。
+
+默认值：不设定后缀图标事件。
+
+值为undefined时，按默认值处理。
 
 **类型：** VoidCallback
 
@@ -42,7 +48,9 @@ action?: VoidCallback
 activatedAccessibility?: ChipV2AccessibilityConfig
 ```
 
-激活态无障碍朗读功能属性。 默认值：undefined，无朗读内容。
+激活态无障碍朗读功能属性。
+
+默认值：undefined，无朗读内容。
 
 **类型：** [ChipV2AccessibilityConfig](arkts-arkui-arkui-advanced-chipv2-chipv2accessibilityconfig-i.md)
 
@@ -62,7 +70,9 @@ activatedAccessibility?: ChipV2AccessibilityConfig
 normalAccessibility?: ChipV2AccessibilityConfig
 ```
 
-非激活态无障碍朗读功能属性。 默认值：undefined，无朗读内容。
+非激活态无障碍朗读功能属性。
+
+默认值：undefined，无朗读内容。
 
 **类型：** [ChipV2AccessibilityConfig](arkts-arkui-arkui-advanced-chipv2-chipv2accessibilityconfig-i.md)
 

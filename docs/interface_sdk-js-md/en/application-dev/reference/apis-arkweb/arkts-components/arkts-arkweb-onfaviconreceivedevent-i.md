@@ -24,7 +24,7 @@ import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 favicon: PixelMap
 ```
 
-**PixelMap** object of the received favicon.
+*PixelMap** object of the received favicon.
 
 **Type:** PixelMap
 

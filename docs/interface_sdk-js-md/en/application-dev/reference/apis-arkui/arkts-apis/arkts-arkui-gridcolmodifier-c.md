@@ -2,6 +2,8 @@
 
 Defines GridCol Modifier
 
+@implements GridColAttribute, AttributeModifier&lt;GridColAttribute&gt;
+
 **Inheritance/Implementation:** GridColModifier implements GridColAttribute, AttributeModifier<GridColAttribute>
 
 **Since:** 23

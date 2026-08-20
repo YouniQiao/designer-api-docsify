@@ -1,6 +1,11 @@
 # @ohos.multimedia.avMusicTemplate
 
-> **说明：** &gt; &gt; - 本模块仅适用于API version 23及以上版本的Car设备。
+
+> **说明：**
+> 
+> - 本模块仅适用于API version 23及以上版本的Car设备。
+
+@namespace avMusicTemplate
 
 **起始版本：** 23
 

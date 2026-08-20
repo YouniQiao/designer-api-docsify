@@ -1,4 +1,4 @@
-# PowerRoleType(USB Manager)（系统接口）
+# PowerRoleType（系统接口）
 
 电源角色类型。
 

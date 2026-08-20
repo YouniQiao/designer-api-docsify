@@ -2,6 +2,8 @@
 
 AnimationResult
 
+@interface AnimationResult
+
 **Since:** 4
 
 <!--Device-unnamed-export interface AnimationResult--><!--Device-unnamed-export interface AnimationResult-End-->

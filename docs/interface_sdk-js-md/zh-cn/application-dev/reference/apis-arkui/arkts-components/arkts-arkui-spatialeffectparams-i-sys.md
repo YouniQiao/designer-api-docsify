@@ -2,6 +2,8 @@
 
 空间效果选项。
 
+@interface SpatialEffectParams
+
 **起始版本：** 26.0.0
 
 <!--Device-unnamed-declare interface SpatialEffectParams--><!--Device-unnamed-declare interface SpatialEffectParams-End-->

@@ -2,6 +2,8 @@
 
 定义拖拽的悬停检测状态的枚举类型。 默认系统配置下，如果没有触发CANCEL，状态报告如下： 保持Hover--&gt;500ms--&gt;BEGIN--&gt;100ms--&gt;UPDATE--&gt;100ms--&gt;UPDATE--&gt;100ms--&gt;UPDATE--&gt;100ms--&gt;END
 
+@enum { number }
+
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。

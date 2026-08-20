@@ -2,6 +2,8 @@
 
 Defines the SIM card authentication response.
 
+@interface SimAuthenticationResponse
+
 **起始版本：** 23
 
 <!--Device-sim-export interface SimAuthenticationResponse--><!--Device-sim-export interface SimAuthenticationResponse-End-->

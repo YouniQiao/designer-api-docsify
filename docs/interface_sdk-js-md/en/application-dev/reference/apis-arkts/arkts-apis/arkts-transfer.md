@@ -2,6 +2,8 @@
 
 The transfer module provides transfer ability for subsystem class or interface.
 
+@namespace transfer
+
 **Since:** 23
 
 <!--Device-unnamed-declare namespace transfer--><!--Device-unnamed-declare namespace transfer-End-->

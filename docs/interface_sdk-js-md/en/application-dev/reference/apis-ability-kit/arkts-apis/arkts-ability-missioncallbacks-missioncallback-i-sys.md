@@ -2,6 +2,8 @@
 
 MissionCallback registered by app.
 
+@interface MissionCallback
+
 **Since:** 23
 
 <!--Device-unnamed-export interface MissionCallback--><!--Device-unnamed-export interface MissionCallback-End-->

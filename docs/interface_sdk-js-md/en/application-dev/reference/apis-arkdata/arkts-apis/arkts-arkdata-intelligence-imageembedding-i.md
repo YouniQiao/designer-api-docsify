@@ -2,6 +2,8 @@
 
 Describes the image embedding functions of the multi-modal embedding model.
 
+@interface ImageEmbedding
+
 **Since:** 23
 
 <!--Device-intelligence-interface ImageEmbedding--><!--Device-intelligence-interface ImageEmbedding-End-->

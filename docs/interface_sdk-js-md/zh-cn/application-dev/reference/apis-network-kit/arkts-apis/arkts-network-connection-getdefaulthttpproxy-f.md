@@ -12,7 +12,13 @@ import { connection } from '@kit.NetworkKit';
 function getDefaultHttpProxy(callback: AsyncCallback<HttpProxy>): void
 ```
 
-获取网络的默认代理配置信息。使用callback异步回调。 &gt; **说明：** &gt; &gt; - 如果设置了全局代理，则返回全局代理配置信息。 &gt; &gt; - 如果进程使用[setAppNet](arkts-network-connection-setappnet-f.md)绑定到指定[NetHandle](arkts-network-connection-nethandle-i.md)对应的网络，则返回 &gt; [NetHandle](arkts-network-connection-nethandle-i.md)对应网络的代理配置信息。在其它情况下，将返回默认网络的代理配置信息。
+获取网络的默认代理配置信息。使用callback异步回调。
+
+> **说明：**
+> 
+> - 如果设置了全局代理，则返回全局代理配置信息。
+> 
+> - 如果进程使用[setAppNet](arkts-network-connection-setappnet-f.md)绑定到指定[NetHandle](arkts-network-connection-nethandle-i.md)对应的网络，则返回 &gt; [NetHandle](arkts-network-connection-nethandle-i.md)对应网络的代理配置信息。在其它情况下，将返回默认网络的代理配置信息。
 
 **起始版本：** 23
 
@@ -24,7 +30,7 @@ function getDefaultHttpProxy(callback: AsyncCallback<HttpProxy>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpProxy&gt; | 是 | 回调函数。当成功获取网络的默认代理配置信息时，error为undefined，data为网络的默认代理配置信息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;HttpProxy&gt; | 是 | 回调函数。当成功获取网络的默认代理配置信息时，error为undefined，data为网络的默认代理配置信息；否则为错误对象。 |
 
 **错误码：**
 
@@ -72,7 +78,13 @@ connection.getDefaultHttpProxy((error: BusinessError|null, data: connection.Http
 function getDefaultHttpProxy(): Promise<HttpProxy>
 ```
 
-获取网络默认的代理配置信息。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 如果设置了全局代理，则返回全局代理配置信息。 &gt; &gt; - 如果进程使用[setAppNet](arkts-network-connection-setappnet-f.md)绑定到指定[NetHandle](arkts-network-connection-nethandle-i.md)对应的网络，则返回 &gt; [NetHandle](arkts-network-connection-nethandle-i.md)对应网络的代理配置信息。在其它情况下，将返回默认网络的代理配置信息。
+获取网络默认的代理配置信息。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 如果设置了全局代理，则返回全局代理配置信息。
+> 
+> - 如果进程使用[setAppNet](arkts-network-connection-setappnet-f.md)绑定到指定[NetHandle](arkts-network-connection-nethandle-i.md)对应的网络，则返回 &gt; [NetHandle](arkts-network-connection-nethandle-i.md)对应网络的代理配置信息。在其它情况下，将返回默认网络的代理配置信息。
 
 **起始版本：** 23
 

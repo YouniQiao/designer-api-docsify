@@ -2,6 +2,8 @@
 
 Information about a profile which is downloadable to an eUICC using.
 
+@interface DownloadableProfile
+
 **Since:** 23
 
 <!--Device-eSIM-export interface DownloadableProfile--><!--Device-eSIM-export interface DownloadableProfile-End-->

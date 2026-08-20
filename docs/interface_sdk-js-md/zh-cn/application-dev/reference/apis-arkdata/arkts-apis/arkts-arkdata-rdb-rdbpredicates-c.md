@@ -600,7 +600,12 @@ predicates.inAllDevices()
 inDevices(devices: Array<string>): RdbPredicates
 ```
 
-同步分布式数据库时连接到组网内指定的远程设备。 &gt; **说明：** &gt; &gt; 其中devices通过调用<!--RP2--> &gt; [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) &gt; 方法得到。<!--RP2End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
+同步分布式数据库时连接到组网内指定的远程设备。
+
+> **说明：**
+> 
+> 其中devices通过调用<!--RP2-->
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) &gt; 方法得到。<!--RP2End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 
 **起始版本：** 8
 

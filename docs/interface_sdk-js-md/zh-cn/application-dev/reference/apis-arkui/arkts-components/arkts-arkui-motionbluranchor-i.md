@@ -2,6 +2,8 @@
 
 Define motion blur anchor coordinates.
 
+@interface MotionBlurAnchor
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare interface MotionBlurAnchor--><!--Device-unnamed-declare interface MotionBlurAnchor-End-->

@@ -2,6 +2,8 @@
 
 枚举授予或激活权限策略失败的URI对应的错误码。
 
+@enum { int } PolicyErrorCode
+
 **起始版本：** 23
 
 <!--Device-fileShare-export enum PolicyErrorCode--><!--Device-fileShare-export enum PolicyErrorCode-End-->

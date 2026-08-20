@@ -170,14 +170,14 @@ offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 订阅函数中用于取消订阅的回调。 如果不使用此参数，则之前在当前进程中订阅的所有回调都将被取消订阅 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 否 | 订阅函数中用于取消订阅的回调。 如果不使用此参数，则之前在当前进程中订阅的所有回调都将被取消订阅 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 **示例**
 
@@ -209,7 +209,7 @@ onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 监听系统音频分离效果的回调 启用状态更改事件 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 | 监听系统音频分离效果的回调 启用状态更改事件 |
 
 **错误码：**
 
@@ -255,9 +255,9 @@ Sets current audio effect properties.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Possible causes: 1. More than one effect property name of the same effect property category are in the input array. 2. The input audioEffectProperties are not supported by the current device. 3. The name or catergory of the input audioEffectProperties is incorrect. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Possible causes: 1. More than one effect property name of the same effect property category are in the input array. 2. The input audioEffectProperties are not supported by the current device. 3. The name or catergory of the input audioEffectProperties is incorrect. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. |
 
 **示例**
@@ -313,11 +313,11 @@ setAudioSeparationEffectEnabled(enabled: boolean, uid: int, streamId?: long): Pr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio service error occurs like service died. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Effect is not supported in this device. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio service error occurs like service died. |
 
 **示例**
 
@@ -369,11 +369,11 @@ setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: double):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio service error occurs like service died. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Effect is not supported in this device. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio service error occurs like service died. |
 
 **示例**
 

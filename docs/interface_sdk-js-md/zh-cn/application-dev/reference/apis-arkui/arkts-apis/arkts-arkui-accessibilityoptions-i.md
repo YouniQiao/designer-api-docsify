@@ -2,6 +2,8 @@
 
 Defines the struct of AccessibilityOptions.
 
+@interface AccessibilityOptions
+
 **起始版本：** 14
 
 <!--Device-unnamed-declare interface AccessibilityOptions--><!--Device-unnamed-declare interface AccessibilityOptions-End-->

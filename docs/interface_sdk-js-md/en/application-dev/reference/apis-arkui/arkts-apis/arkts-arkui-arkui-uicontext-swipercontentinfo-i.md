@@ -45,7 +45,7 @@ swiperItemInfos: Array<SwiperItemInfo>
 
 Information about the currently visible child components within the **Swiper** container.
 
-**Type:** Array&lt;[SwiperItemInfo](arkts-arkui-arkui-uicontext-swiperiteminfo-i.md)&gt;
+**Type:** Array&lt;[SwiperItemInfo](../../apis-default/arkts-apis/arkts-arkui-uicontext-swiperiteminfo-i.md)&gt;
 
 **Since:** 22
 

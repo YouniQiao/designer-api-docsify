@@ -2,6 +2,8 @@
 
 Enumerates battery health states.
 
+@enum { int }
+
 **Since:** 23
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.

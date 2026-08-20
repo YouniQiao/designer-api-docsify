@@ -1,4 +1,4 @@
-# OptionsData(Defines the DRM capability.)
+# OptionsData
 
 设备证书请求的可选数据。
 

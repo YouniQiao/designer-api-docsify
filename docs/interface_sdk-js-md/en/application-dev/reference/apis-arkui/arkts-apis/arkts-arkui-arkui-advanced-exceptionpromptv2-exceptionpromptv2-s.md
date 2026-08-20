@@ -1,6 +1,6 @@
 # ExceptionPromptV2
 
-Declare struct ExceptionPromptV2 higher-order component. The exception prompt component is used to show an error message when an error arises.
+Declare struct ExceptionPromptV2 higher-order component. The exception prompt component is used to show an error message when an error arises. @struct { ExceptionPromptV2 }
 
 **Since:** 26.0.0
 
@@ -23,7 +23,7 @@ import { MarginTypeV2, PromptOptionsV2, PromptOptionsV2Config, ExceptionPromptV2
 
 Callback invoked when the icon on the right is clicked.
 
-**Type:** [OnActionTextClickCallback](arkts-arkui-onactiontextclickcallback-t.md)
+**Type:** [OnActionTextClickCallback](../../apis-default/arkts-apis/arkts-onactiontextclickcallback-t.md)
 
 **Since:** 26.0.0
 
@@ -44,7 +44,7 @@ Callback invoked when the icon on the right is clicked.
 
 Callback invoked when the prompt text on the left is clicked.
 
-**Type:** [OnTipClickCallback](arkts-arkui-ontipclickcallback-t.md)
+**Type:** [OnTipClickCallback](../../apis-default/arkts-apis/arkts-ontipclickcallback-t.md)
 
 **Since:** 26.0.0
 
@@ -65,7 +65,7 @@ Callback invoked when the prompt text on the left is clicked.
 
 ExceptionPromptV2 configuration.
 
-**Type:** [PromptOptionsV2](arkts-arkui-arkui-advanced-exceptionpromptv2-promptoptionsv2-c.md)
+**Type:** [PromptOptionsV2](../../apis-default/arkts-apis/arkts-arkui-advanced-exceptionpromptv2-promptoptionsv2-c.md)
 
 **Since:** 26.0.0
 

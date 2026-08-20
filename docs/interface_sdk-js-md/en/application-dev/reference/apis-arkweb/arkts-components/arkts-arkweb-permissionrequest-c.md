@@ -1,6 +1,18 @@
 # PermissionRequest
 
-PermissionRequest is an object used by the **Web** component to grant or deny permission requests. When a web page attempts to access protected system resources (such as camera, microphone, geolocation, etc.), the ArkWeb kernel sends a permission request to the app through the [onPermissionRequest](arkts-arkweb-web-attribute.md#onpermissionrequest) event callback. The app then uses the PermissionRequest object to decide whether to grant these requests. This object is applicable to scenarios where the app needs to manage web page access to sensitive resources, protect user privacy, and ensure secure and controllable resource access, helping developers flexibly handle web page permission requests. &gt; **NOTE：**&gt; &gt; - The [grant](#grant)() and [deny](#deny)() methods are mutually &gt; exclusive. For the same PermissionRequest object, only one of them can be called. &gt; &gt; - After grant() or deny() is called, the PermissionRequest object has completed its response and cannot be called &gt; again. &gt; &gt; - A PermissionRequest object that has not been responded to by calling any method will cause the permission request &gt; to time out. &gt; &gt; - The resources parameter of the grant() method typically uses the return value of the getAccessibleResource() &gt; method. &gt; &gt; - Typical usage flow: Call getAccessibleResource() to obtain the list of requested resources, select the resources &gt; to be authorized, and then call grant() for authorization.
+PermissionRequest is an object used by the **Web** component to grant or deny permission requests. When a web page attempts to access protected system resources (such as camera, microphone, geolocation, etc.), the ArkWeb kernel sends a permission request to the app through the [onPermissionRequest](arkts-arkweb-web-attribute.md#onpermissionrequest) event callback. The app then uses the PermissionRequest object to decide whether to grant these requests. This object is applicable to scenarios where the app needs to manage web page access to sensitive resources, protect user privacy, and ensure secure and controllable resource access, helping developers flexibly handle web page permission requests.
+
+> **NOTE：**
+> 
+> - The [grant](#grant)() and [deny](#deny)() methods are mutually &gt; exclusive. For the same PermissionRequest object, only one of them can be called.
+> 
+> - After grant() or deny() is called, the PermissionRequest object has completed its response and cannot be called &gt; again.
+> 
+> - A PermissionRequest object that has not been responded to by calling any method will cause the permission request &gt; to time out.
+> 
+> - The resources parameter of the grant() method typically uses the return value of the getAccessibleResource() &gt; method.
+> 
+> - Typical usage flow: Call getAccessibleResource() to obtain the list of requested resources, select the resources &gt; to be authorized, and then call grant() for authorization.
 
 **Since:** 9
 

@@ -30,16 +30,16 @@ Obtains the configuration parameters of a specified serial port.
 
 | Type | Description |
 | --- | --- |
-| [Readonly](../../apis-na/arkts-apis/arkts-na-readonly-t.md)&lt;[SerialAttribute](arkts-basicservices-serialmanager-serialattribute-i.md)&gt; | Configuration parameters of the serial port. |
+| [Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;[SerialAttribute](arkts-basicservices-serialmanager-serialattribute-i.md)&gt; | Configuration parameters of the serial port. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
-| [31400005](../errorcode-usb.md#31400005-device-not-opened) |  |
-| [31400003](../errorcode-usb.md#31400003-port-number-not-exist) |  |
 | [31400001](../errorcode-usb.md#31400001-serial-port-service-error) |  |
+| [31400003](../errorcode-usb.md#31400003-port-number-not-exist) |  |
+| [31400005](../errorcode-usb.md#31400005-device-not-opened) |  |
 
 **Examples**
 

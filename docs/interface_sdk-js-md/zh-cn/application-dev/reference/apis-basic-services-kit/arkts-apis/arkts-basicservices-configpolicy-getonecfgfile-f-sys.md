@@ -27,7 +27,7 @@ function getOneCfgFile(relPath: string, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | relPath | string | 是 | 配置文件名。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取配置文件路径成功，err为undefined， data为获取到的优先级最高的配置文件路径；否则err为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当获取配置文件路径成功，err为undefined， data为获取到的优先级最高的配置文件路径；否则err为错误对象。 |
 
 **错误码：**
 
@@ -58,7 +58,7 @@ function getOneCfgFile(relPath: string, followMode: FollowXMode, callback: Async
 | --- | --- | --- | --- |
 | relPath | string | 是 | 配置文件名。 |
 | followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | 是 | 跟随模式。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取配置文件路径成功，err为undefined， data为获取到的优先级最高的配置文件路径；否则err为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当获取配置文件路径成功，err为undefined， data为获取到的优先级最高的配置文件路径；否则err为错误对象。 |
 
 **错误码：**
 
@@ -90,7 +90,7 @@ function getOneCfgFile(relPath: string, followMode: FollowXMode, extra: string, 
 | relPath | string | 是 | 配置文件名。 |
 | followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | 是 | 跟随模式。 |
 | extra | string | 是 | 用户自定义跟随规则，仅在followMode为 [USER_DEFINED](arkts-basicservices-configpolicy-followxmode-e-sys.md#user_defined)时有效。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取配置文件路径成功，err为undefined， data为获取到的优先级最高的配置文件路径；否则err为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当获取配置文件路径成功，err为undefined， data为获取到的优先级最高的配置文件路径；否则err为错误对象。 |
 
 **错误码：**
 

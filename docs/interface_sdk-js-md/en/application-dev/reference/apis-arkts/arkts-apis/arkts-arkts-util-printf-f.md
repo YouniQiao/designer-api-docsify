@@ -53,7 +53,7 @@ Formats a string by replacing the placeholders in it.
 
 **Deprecated since:** 9
 
-**Substitutes:** [format](../../apis-na/arkts-apis/arkts-na-util-format-f.md)
+**Substitutes:** [format](arkts-arkts-util-format-f.md)
 
 <!--Device-util-function printf(format: string, ...args: Object[]): string--><!--Device-util-function printf(format: string, ...args: Object[]): string-End-->
 

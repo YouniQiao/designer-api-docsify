@@ -1,6 +1,8 @@
 # RoundRectShapeOptions
 
-RectShape 带有半径的构造函数参数。 继承自[ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md)。
+RectShape 带有半径的构造函数参数。
+
+继承自[ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md)。
 
 **继承/实现关系：** RoundRectShapeOptions extends [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md)
 
@@ -24,7 +26,13 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 radiusHeight?: double | string
 ```
 
-矩形形状圆角半径的高度。 类型为number时取值范围是0, +∞)，string时是[Length。 单位：vp 取值为异常值时按照0vp处理。
+矩形形状圆角半径的高度。
+
+类型为number时取值范围是0, +∞)，string时是[Length。
+
+单位：vp
+
+取值为异常值时按照0vp处理。
 
 **类型：** double \| string
 
@@ -44,7 +52,13 @@ radiusHeight?: double | string
 radiusWidth?: double | string
 ```
 
-矩形形状圆角半径的宽度。 类型为number时取值范围是0, +∞)，string时是[Length。 单位：vp 取值为异常值时按照0vp处理。
+矩形形状圆角半径的宽度。
+
+类型为number时取值范围是0, +∞)，string时是[Length。
+
+单位：vp
+
+取值为异常值时按照0vp处理。
 
 **类型：** double \| string
 

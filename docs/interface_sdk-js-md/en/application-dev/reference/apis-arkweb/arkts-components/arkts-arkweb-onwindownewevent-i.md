@@ -24,7 +24,7 @@ import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 handler: ControllerHandler
 ```
 
-**WebviewController** instance for setting the new window.
+*WebviewController** instance for setting the new window.
 
 **Type:** [ControllerHandler](arkts-arkweb-controllerhandler-c.md)
 

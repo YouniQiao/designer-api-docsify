@@ -30,16 +30,9 @@ Defines the constructor of video component.
 
 | Name | Description |
 | --- | --- |
-| [FullscreenInfo](arkts-arkui-fullscreeninfo-i.md) | Describes whether the video is in full-screen playback mode. &gt; **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. &gt; While historical version information is preserved for anonymous objects, there may be cases where the outer &gt; element's @since version number is higher than inner elements'. This does not affect interface usability. |
-| [PlaybackInfo](arkts-arkui-playbackinfo-i.md) | Describes the current progress of video playback. &gt; **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. &gt; While historical version information is preserved for anonymous objects, there may be cases where the outer &gt; element's @since version number is higher than inner elements'. This does not affect interface usability. |
-| [PosterOptions](arkts-arkui-posteroptions-i.md) | Defines display options for the first frame of the video. |
-| [PreparedInfo](arkts-arkui-preparedinfo-i.md) | Describes the duration of the video. &gt; **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. &gt; While historical version information is preserved for anonymous objects, there may be cases where the outer &gt; element's @since version number is higher than inner elements'. This does not affect interface usability. |
-| [VideoOptions](arkts-arkui-videooptions-i.md) | Defines the options of the **Video** component. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [PlaybackSpeed](arkts-arkui-playbackspeed-e.md) | Enumerates video playback speed options. |
-| [SeekMode](arkts-arkui-seekmode-e.md) | Enumerates video seek modes. |
 

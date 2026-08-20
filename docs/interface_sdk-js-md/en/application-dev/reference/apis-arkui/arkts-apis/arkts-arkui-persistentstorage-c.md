@@ -1,6 +1,10 @@
-# PersistentStorage(System API)
+# PersistentStorage
 
-For details about how to use PersistentStorage on the UI, see [PersistentStorage: Persisting Application State](../../../ui/state-management/arkts-persiststorage.md). &gt; **NOTE：**&gt; Since API version 12, PersistentStorage supports **null** and **undefined**.
+For details about how to use PersistentStorage on the UI, see [PersistentStorage: Persisting Application State](../../../ui/state-management/arkts-persiststorage.md).
+
+> **NOTE：**
+
+> Since API version 12, PersistentStorage supports **null** and **undefined**.
 
 **Since:** 7
 
@@ -79,7 +83,17 @@ let keys: Array<string> = PersistentStorage.Keys();
 static PersistProp<T>(key: string, defaultValue: T): void
 ```
 
-Persists the property corresponding to **key** from [AppStorage](../../../ui/state-management/arkts-appstorage.md) to a file. This API is usually called before access to AppStorage. The order for determining the type and value of a property is as follows: 1. If the property with the specified key is found in the [PersistentStorage](../../../ui/state-management/arkts-persiststorage.md) file, the corresponding property is created in AppStorage and initialized with the value found in PersistentStorage. 2. If the property with the specified key is not found in the PersistentStorage file, AppStorage is searched for the property. If the property is found, it is persisted. 3. If no matching property is found in AppStorage, it is created in AppStorage, initialized with the value of **defaultValue**, and persisted. According to the preceding initialization process, if the property exists in AppStorage, its value will be used, overriding the value in the PersistentStorage file. Because AppStorage stores data in the memory, the property value becomes nonpersistent.
+Persists the property corresponding to **key** from [AppStorage](../../../ui/state-management/arkts-appstorage.md) to a file. This API is usually called before access to AppStorage.
+
+The order for determining the type and value of a property is as follows:
+
+1. If the property with the specified key is found in the [PersistentStorage](../../../ui/state-management/arkts-persiststorage.md) file, the corresponding property is created in AppStorage and initialized with the value found in PersistentStorage.
+
+2. If the property with the specified key is not found in the PersistentStorage file, AppStorage is searched for the property. If the property is found, it is persisted.
+
+3. If no matching property is found in AppStorage, it is created in AppStorage, initialized with the value of **defaultValue**, and persisted.
+
+According to the preceding initialization process, if the property exists in AppStorage, its value will be used, overriding the value in the PersistentStorage file. Because AppStorage stores data in the memory, the property value becomes nonpersistent.
 
 **Since:** 7
 
@@ -195,7 +209,17 @@ let keys: Array<string> = PersistentStorage.keys();
 static persistProp<T>(key: string, defaultValue: T): void
 ```
 
-Persists the property corresponding to **key** from [AppStorage](../../../ui/state-management/arkts-appstorage.md) to a file. This API is usually called before access to AppStorage. The order for determining the type and value of a property is as follows: 1. If the property with the specified key is found in the [PersistentStorage](../../../ui/state-management/arkts-persiststorage.md) file, the corresponding property is created in AppStorage and initialized with the value found in PersistentStorage. 2. If the property with the specified key is not found in the PersistentStorage file, AppStorage is searched for the property. If the property is found, it is persisted. 3. If no matching property is found in AppStorage, it is created in AppStorage, initialized with the value of **defaultValue**, and persisted. According to the preceding initialization process, if the property exists in AppStorage, its value will be used, overriding the value in the PersistentStorage file. Because AppStorage stores data in the memory, the property value becomes nonpersistent.
+Persists the property corresponding to **key** from [AppStorage](../../../ui/state-management/arkts-appstorage.md) to a file. This API is usually called before access to AppStorage.
+
+The order for determining the type and value of a property is as follows:
+
+1. If the property with the specified key is found in the [PersistentStorage](../../../ui/state-management/arkts-persiststorage.md) file, the corresponding property is created in AppStorage and initialized with the value found in PersistentStorage.
+
+2. If the property with the specified key is not found in the PersistentStorage file, AppStorage is searched for the property. If the property is found, it is persisted.
+
+3. If no matching property is found in AppStorage, it is created in AppStorage, initialized with the value of **defaultValue**, and persisted.
+
+According to the preceding initialization process, if the property exists in AppStorage, its value will be used, overriding the value in the PersistentStorage file. Because AppStorage stores data in the memory, the property value becomes nonpersistent.
 
 **Since:** 10
 

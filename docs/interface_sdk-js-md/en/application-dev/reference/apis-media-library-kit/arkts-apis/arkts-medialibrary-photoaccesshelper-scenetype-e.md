@@ -2,6 +2,8 @@
 
 Enumeration type of scene.
 
+@enum { int } SceneType
+
 **Since:** 26.0.0
 
 <!--Device-photoAccessHelper-export enum SceneType--><!--Device-photoAccessHelper-export enum SceneType-End-->

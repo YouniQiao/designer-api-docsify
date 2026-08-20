@@ -2,6 +2,8 @@
 
 Pixel Round Mode
 
+@enum { number }
+
 **Since:** 18
 
 <!--Device-unnamed-declare enum PixelRoundMode--><!--Device-unnamed-declare enum PixelRoundMode-End-->

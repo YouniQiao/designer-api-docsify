@@ -2,6 +2,8 @@
 
 定义缓存计数信息。
 
+@interface CacheCountInfo
+
 **起始版本：** 22
 
 <!--Device-unnamed-declare interface CacheCountInfo--><!--Device-unnamed-declare interface CacheCountInfo-End-->

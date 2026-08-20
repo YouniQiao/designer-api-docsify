@@ -47,8 +47,8 @@ Converts asymmetric key data to a key pair object. This API uses an asynchronous
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 ## convertKey
@@ -82,8 +82,8 @@ Converts data into an asymmetric key pair. This API uses an asynchronous callbac
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 **Examples**
@@ -147,8 +147,8 @@ Converts asymmetric key data to a key pair object. This API uses a promise to re
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 ## convertKey
@@ -187,8 +187,8 @@ Converts data into an asymmetric key pair. This API uses a promise to return the
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 **Examples**
@@ -222,7 +222,9 @@ keyGenPromise.then(keyPair => {
 convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair
 ```
 
-Converts data into an asymmetric key pair. This API returns the result synchronously. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, convertKey. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Converts data into an asymmetric key pair. This API returns the result synchronously.
+
+<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, convertKey. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 
@@ -250,8 +252,8 @@ Converts data into an asymmetric key pair. This API returns the result synchrono
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 **Examples**
@@ -288,7 +290,13 @@ try {
 convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>
 ```
 
-Converts data into an asymmetric key pair. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by &gt; the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM &gt; encoding format, and the private key must comply with the ASN.1 syntax, PKCS #8 specifications, and PEM &gt; encoding format. &gt; 2. In **convertPemKey()**, you can pass in either **pubKey** or **priKey**, or both of them. If one of them is &gt; passed in, the returned **KeyPair** instance contains only the key converted from the data you passed in. &gt; 3. When **convertPemKey** is used to convert an external string into an asymmetric key object defined by the &gt; Crypto framework, the system does not verify whether the specifications of the generated key object are the &gt; same as the key specifications specified for the asymmetric key generator.
+Converts data into an asymmetric key pair. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by &gt; the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM &gt; encoding format, and the private key must comply with the ASN.1 syntax, PKCS #8 specifications, and PEM &gt; encoding format.
+> 2. In **convertPemKey()**, you can pass in either **pubKey** or **priKey**, or both of them. If one of them is &gt; passed in, the returned **KeyPair** instance contains only the key converted from the data you passed in.
+> 3. When **convertPemKey** is used to convert an external string into an asymmetric key object defined by the &gt; Crypto framework, the system does not verify whether the specifications of the generated key object are the &gt; same as the key specifications specified for the asymmetric key generator.
 
 **Since:** 23
 
@@ -316,8 +324,8 @@ Converts data into an asymmetric key pair. This API uses a promise to return the
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 **Examples**
@@ -366,7 +374,14 @@ async function TestConvertPemKeyByPromise() {
 convertPemKey(pubKey: string | null, priKey: string | null, password: string): Promise<KeyPair>
 ```
 
-Converts data into an asymmetric key pair. Encrypted private keys are supported. The private key password is synchronously passed to decrypt the private key. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by &gt; the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM &gt; encoding format, and the private key must comply with the ASN.1 syntax, PKCS #8 specifications, and PEM &gt; encoding format. &gt; 2. In **convertPemKey()**, you can pass in either **pubKey** or **priKey**, or both of them. If one of them is &gt; passed in, the returned **KeyPair** instance contains only the key converted from the data you passed in. &gt; 3. When **convertPemKey** is used to convert an external string into an asymmetric key object defined by the &gt; Crypto framework, the system does not verify whether the specifications of the generated key object are the &gt; same as the key specifications specified for the asymmetric key generator. &gt; 4. If **password** is passed in, it can be used to decrypt the encrypted private key.
+Converts data into an asymmetric key pair. Encrypted private keys are supported. The private key password is synchronously passed to decrypt the private key. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by &gt; the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM &gt; encoding format, and the private key must comply with the ASN.1 syntax, PKCS #8 specifications, and PEM &gt; encoding format.
+> 2. In **convertPemKey()**, you can pass in either **pubKey** or **priKey**, or both of them. If one of them is &gt; passed in, the returned **KeyPair** instance contains only the key converted from the data you passed in.
+> 3. When **convertPemKey** is used to convert an external string into an asymmetric key object defined by the &gt; Crypto framework, the system does not verify whether the specifications of the generated key object are the &gt; same as the key specifications specified for the asymmetric key generator.
+> 4. If **password** is passed in, it can be used to decrypt the encrypted private key.
 
 **Since:** 23
 
@@ -395,8 +410,8 @@ Converts data into an asymmetric key pair. Encrypted private keys are supported.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
 **Examples**
 
@@ -440,7 +455,12 @@ async function TestConvertPemKeyByPromise() {
 convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair
 ```
 
-Converts data into an asymmetric key pair. This API returns the result synchronously. &gt; **NOTE：**&gt; The precautions for using **convertPemKeySync** are the same as those for **convertPemKey**. For details, see &gt; the description of &gt; [convertPemKey](#convertpemkey) &gt; . <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertpemkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Converts data into an asymmetric key pair. This API returns the result synchronously.
+
+> **NOTE：**
+> The precautions for using **convertPemKeySync** are the same as those for **convertPemKey**. For details, see &gt; the description of &gt; [convertPemKey](#convertpemkey) &gt; .
+
+<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertpemkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 
@@ -468,8 +488,8 @@ Converts data into an asymmetric key pair. This API returns the result synchrono
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 **Examples**
@@ -521,7 +541,12 @@ function TestConvertPemKeyBySync() {
 convertPemKeySync(pubKey: string | null, priKey: string | null, password: string): KeyPair
 ```
 
-Converts data into an asymmetric key pair. Encrypted private keys are supported. The private key password is synchronously passed to decrypt the private key. &gt; **NOTE：**&gt; The precautions for using **convertPemKeySync** are the same as those for &gt; [convertPemKey](#convertpemkey) &gt; . <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertpemkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Converts data into an asymmetric key pair. Encrypted private keys are supported. The private key password is synchronously passed to decrypt the private key.
+
+> **NOTE：**
+> The precautions for using **convertPemKeySync** are the same as those for &gt; [convertPemKey](#convertpemkey) &gt; .
+
+<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertpemkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 
@@ -550,8 +575,8 @@ Converts data into an asymmetric key pair. Encrypted private keys are supported.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
 **Examples**
 
@@ -621,8 +646,8 @@ Generates a random key pair using this asymmetric key generator. This API uses a
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: Incorrect parameter types; |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
 **Examples**
 
@@ -668,8 +693,8 @@ Generates a random key pair using this asymmetric key generator. This API uses a
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
 **Examples**
 
@@ -692,7 +717,9 @@ keyGenPromise.then(keyPair => {
 generateKeyPairSync(): KeyPair
 ```
 
-Generates a random key pair using this asymmetric key generator. This API returns the result synchronously. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, generateKeyPair. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Generates a random key pair using this asymmetric key generator. This API returns the result synchronously.
+
+<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, generateKeyPair. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 
@@ -713,8 +740,8 @@ Generates a random key pair using this asymmetric key generator. This API return
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
 **Examples**
 

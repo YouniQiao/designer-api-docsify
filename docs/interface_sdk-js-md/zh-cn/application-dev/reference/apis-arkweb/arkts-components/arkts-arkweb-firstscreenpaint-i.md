@@ -24,7 +24,9 @@ import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 firstScreenPaintTime: number
 ```
 
-url所指页面首屏绘制完成的时刻。 单位：毫秒。
+url所指页面首屏绘制完成的时刻。
+
+单位：毫秒。
 
 **类型：** number
 
@@ -40,7 +42,9 @@ url所指页面首屏绘制完成的时刻。 单位：毫秒。
 navigationStartTime: number
 ```
 
-url所指页面开始导航的时刻。 单位：毫秒。
+url所指页面开始导航的时刻。
+
+单位：毫秒。
 
 **类型：** number
 

@@ -1,4 +1,4 @@
-# ReleaseStatus(Sensitive Data Access Management Under Lock Screen)
+# ReleaseStatus
 
 Enumerates the statuses for releasing access permissions for sensitive data under the lock screen.
 

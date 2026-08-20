@@ -4,7 +4,7 @@
 
 The file declares the DRM data types.
 
-**Library**: libnative_drm.z.so
+**Library**: libnative_drm.so
 
 **System capability**: SystemCapability.Multimedia.Drm.Core
 

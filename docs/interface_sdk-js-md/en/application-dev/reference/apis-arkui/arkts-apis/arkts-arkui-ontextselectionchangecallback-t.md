@@ -1,18 +1,16 @@
 # OnTextSelectionChangeCallback
 
 ```TypeScript
-export type OnTextSelectionChangeCallback = (selectionStart: int, selectionEnd: int) => void
+declare type OnTextSelectionChangeCallback = (selectionStart: number, selectionEnd: number) => void
 ```
 
-Defines a TextInput callback when onTextSelectionChange. Anonymous Object Rectification.
+Called when the position of the text selection changes or when the cursor position changes during the editing state.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export type OnTextSelectionChangeCallback = (selectionStart: int, selectionEnd: int) => void--><!--Device-unnamed-export type OnTextSelectionChangeCallback = (selectionStart: int, selectionEnd: int) => void-End-->
+<!--Device-unnamed-declare type OnTextSelectionChangeCallback = (selectionStart: number, selectionEnd: number) => void--><!--Device-unnamed-declare type OnTextSelectionChangeCallback = (selectionStart: number, selectionEnd: number) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,6 +18,6 @@ Defines a TextInput callback when onTextSelectionChange. Anonymous Object Rectif
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectionStart | int | Yes | The starting position of the selected text, the starting position of the text is 0. <br>The value should be an integer. |
-| selectionEnd | int | Yes | The end location of the selected text. <br>The value should be an integer. |
+| selectionStart | number | Yes | Start position of the text to be selected. |
+| selectionEnd | number | Yes | End position of the text to be selected. |
 

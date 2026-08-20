@@ -2,6 +2,8 @@
 
 WLAN设备配置信息。
 
+@interface WifiDeviceConfig
+
 **起始版本：** 6
 
 **废弃版本：** 9

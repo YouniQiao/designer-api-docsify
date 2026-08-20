@@ -12,7 +12,13 @@ import { connection } from '@kit.NetworkKit';
 function getIpNeighTable(): Promise<Array<NetIpMacInfo>>
 ```
 
-获取本地设备IP邻居表条目信息，包括IPv4和IPv6，每个条目信息包括IP地址、MAC地址、网卡名。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 该接口获取IP邻居表的缓存的数据，并非局域网内所有连接的数据。 &gt; &gt; 开发者可使用此接口排查网络异常、解析IP地址与MAC地址映射。
+获取本地设备IP邻居表条目信息，包括IPv4和IPv6，每个条目信息包括IP地址、MAC地址、网卡名。使用Promise异步回调。
+
+> **说明：**
+> 
+> 该接口获取IP邻居表的缓存的数据，并非局域网内所有连接的数据。
+> 
+> 开发者可使用此接口排查网络异常、解析IP地址与MAC地址映射。
 
 **起始版本：** 22
 
@@ -32,9 +38,9 @@ function getIpNeighTable(): Promise<Array<NetIpMacInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 **示例**
 

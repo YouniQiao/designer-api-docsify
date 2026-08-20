@@ -109,8 +109,8 @@ Unmarshals a styled string by defining a callback to [StyledStringMarshallingVal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [170002](../errorcode-styled-string.md#170002-styled-string-decoding-error) | Styled string decode error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [170002](../errorcode-styled-string.md#170002-styled-string-decoding-error) | Styled string decode error. |
 
 ## unmarshalling
 
@@ -146,6 +146,6 @@ Unmarshals a buffer to obtain a styled string.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [170002](../errorcode-styled-string.md#170002-styled-string-decoding-error) | Styled string decode error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [170002](../errorcode-styled-string.md#170002-styled-string-decoding-error) | Styled string decode error. |
 

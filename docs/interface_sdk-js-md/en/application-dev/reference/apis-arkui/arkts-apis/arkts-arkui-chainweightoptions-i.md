@@ -2,6 +2,8 @@
 
 Defines the ChainWeightOptions interface.
 
+@interface ChainWeightOptions
+
 **Since:** 14
 
 <!--Device-unnamed-declare interface ChainWeightOptions--><!--Device-unnamed-declare interface ChainWeightOptions-End-->

@@ -12,7 +12,9 @@ import { screenshot } from '@kit.ArkUI';
 function capture(options?: CaptureOption): Promise<image.PixelMap>
 ```
 
-获取屏幕全屏截图，使用Promise异步回调。 此接口可以通过设置不同的displayId截取不同屏幕的截图，且只能截取全屏；[pick](arkts-arkui-screenshot-pick-f.md)接口可实现区域截屏。
+获取屏幕全屏截图，使用Promise异步回调。
+
+此接口可以通过设置不同的displayId截取不同屏幕的截图，且只能截取全屏；[pick](arkts-arkui-screenshot-pick-f.md)接口可实现区域截屏。
 
 **起始版本：** 23
 
@@ -42,10 +44,10 @@ function capture(options?: CaptureOption): Promise<image.PixelMap>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Incorrect parameter types. 2.Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported on this device. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 **示例**
 

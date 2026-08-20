@@ -134,8 +134,8 @@ Perform an operation with the acquired lock. The method acquires the lock first,
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200031](../errorcode-utils.md#10200031-calling-lockasync-timed-out) | Timeout exceeded. |
 | [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) | The lock does not exist. |
+| [10200031](../errorcode-utils.md#10200031-calling-lockasync-timed-out) | Timeout exceeded. |
 
 ## query
 

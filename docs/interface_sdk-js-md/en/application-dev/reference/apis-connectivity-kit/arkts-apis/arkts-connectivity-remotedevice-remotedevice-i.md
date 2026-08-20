@@ -42,9 +42,9 @@ Gets the ACB connection state.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## getConnectionState
 
@@ -74,9 +74,9 @@ Gets the profile connection state.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## getDeviceClass
 
@@ -106,9 +106,9 @@ Gets the type of the NearLink device.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## getDeviceInformation
 
@@ -138,9 +138,9 @@ Obtains the remote device information.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## getDeviceName
 
@@ -170,9 +170,9 @@ Gets the name of the NearLink device.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## getPairingState
 
@@ -202,9 +202,9 @@ Gets the pairing state.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## startPairing
 
@@ -234,7 +234,7 @@ Initiate pairing to remote NearLink device.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

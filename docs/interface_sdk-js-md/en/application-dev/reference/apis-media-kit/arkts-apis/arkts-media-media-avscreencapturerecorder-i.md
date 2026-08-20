@@ -226,8 +226,8 @@ Subscribes to AVScreenCaptureRecorder errors. You can handle the errors based on
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by ErrorCallback. |
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
+| [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by ErrorCallback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by ErrorCallback. |
 
 ## onStateChange
@@ -275,8 +275,8 @@ Subscribes to AVScreenCaptureRecorder errors. You can handle the errors based on
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by ErrorCallback. |
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
+| [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by ErrorCallback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by ErrorCallback. |
 
 ## on('stateChange')
@@ -336,7 +336,13 @@ Pause screen capture. This API uses a promise to return the result.
 presentPicker(): Promise<void>
 ```
 
-Displays the Picker once more after the screen capture starts, allowing for dynamic updates to the recording source, such as changing the window or screen being recorded. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - The ongoing capture process remains uninterrupted while updating the recording source. &gt; &gt; - Following the dynamic update of the recording source through the Picker, the capture proceeds with the newly &gt; selected source.
+Displays the Picker once more after the screen capture starts, allowing for dynamic updates to the recording source, such as changing the window or screen being recorded. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - The ongoing capture process remains uninterrupted while updating the recording source.
+> 
+> - Following the dynamic update of the recording source through the Picker, the capture proceeds with the newly &gt; selected source.
 
 **Since:** 23
 
@@ -523,7 +529,9 @@ Sets the display mode of the picker. The setting takes effect the next time the 
 skipPrivacyMode(windowIDs: Array<int>): Promise<void>
 ```
 
-During screen capture, the application can exempt its privacy windows from security purposes. This API uses a promise to return the result. For example, if a user enters a password in this application during screen capture, the application will not display a black screen.
+During screen capture, the application can exempt its privacy windows from security purposes. This API uses a promise to return the result.
+
+For example, if a user enters a password in this application during screen capture, the application will not display a black screen.
 
 **Since:** 23
 

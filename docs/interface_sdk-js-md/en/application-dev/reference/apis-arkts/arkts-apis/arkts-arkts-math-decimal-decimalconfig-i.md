@@ -1,4 +1,4 @@
-# DecimalConfig(Defines the Decimal for ArkTS. Decimal support arbitrary precision decimal operation.)
+# DecimalConfig
 
 Provides configuration for decimal.
 

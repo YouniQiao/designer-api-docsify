@@ -2,6 +2,8 @@
 
 Enumerates keys for querying the additional information about the **COMMON_EVENT_BATTERY_CHANGED** event.
 
+@enum { string }
+
 **Since:** 23
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.

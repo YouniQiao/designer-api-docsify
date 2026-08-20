@@ -8,7 +8,7 @@
 | --- | --- |
 | [BackgroundColorStyle](arkts-arkui-styledstring-backgroundcolorstyle-c.md) | 文本背景颜色对象说明。 |
 | [BaselineOffsetStyle](arkts-arkui-styledstring-baselineoffsetstyle-c.md) | 文本基线偏移量对象说明。 |
-| [CustomSpan](arkts-arkui-styledstring-customspan-c.md) | 自定义绘制Span，仅提供基类，具体实现由开发者定义。 自定义绘制Span拖拽显示的缩略图为空白。 |
+| [CustomSpan](arkts-arkui-styledstring-customspan-c.md) | 自定义绘制Span，仅提供基类，具体实现由开发者定义。 |
 | [DecorationStyle](arkts-arkui-styledstring-decorationstyle-c.md) | 文本装饰线样式对象说明。 |
 | [GestureStyle](arkts-arkui-styledstring-gesturestyle-c.md) | 事件手势对象说明。 |
 | [ImageAttachment](arkts-arkui-styledstring-imageattachment-c.md) | 图片对象说明。 |
@@ -16,13 +16,13 @@
 | [LetterSpacingStyle](arkts-arkui-styledstring-letterspacingstyle-c.md) | 文本字符间距对象说明。 |
 | [LineHeightStyle](arkts-arkui-styledstring-lineheightstyle-c.md) | 文本行高对象说明。 |
 | [LineSpacingStyle](arkts-arkui-styledstring-linespacingstyle-c.md) | 文本行间距对象说明。 |
-| [MutableStyledString](arkts-arkui-styledstring-mutablestyledstring-c.md) | 继承于[StyledString](arkts-arkui-styledstring-styledstring-c.md)类。 &gt; **以下接口异常入参处理统一说明：** &gt; &gt; 当start和length越界或者必填传入undefined时，会抛出异常； &gt; &gt; 当styledKey和styledValue传入异常值或者两者对应关系不匹配时，会抛出异常。 |
-| [ParagraphStyle](arkts-arkui-styledstring-paragraphstyle-c.md) | 文本段落样式对象说明。 除首个段落外，后续段落按'\n'划分。 每个段落的段落样式按首个占位设置的段落样式生效，未设置时，段落按被绑定组件的段落样式生效。 在API版本26.0.0之前，如果属性字符串段落内首个占位为[CustomSpan](arkts-arkui-styledstring-customspan-c.md)或[ImageAttachment](arkts-arkui-styledstring-imageattachment-c.md)时，设置在该段落上的段落样式不生 效。从API版本26.0.0开始，设置段落样式生效。 |
+| [MutableStyledString](arkts-arkui-styledstring-mutablestyledstring-c.md) | 继承于[StyledString](arkts-arkui-styledstring-styledstring-c.md)类。 |
+| [ParagraphStyle](arkts-arkui-styledstring-paragraphstyle-c.md) | 文本段落样式对象说明。 |
 | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 属性字符串 |
 | [TextShadowStyle](arkts-arkui-styledstring-textshadowstyle-c.md) | 文本阴影对象说明。 |
 | [TextStyle](arkts-arkui-styledstring-textstyle-c.md) | 文本字体样式对象说明。 |
-| [UrlStyle](arkts-arkui-styledstring-urlstyle-c.md) | 超链接对象说明。 默认颜色、字号、字重分别是'#ff0a59f7'、'16fp'、'FontWeight.Regular'，若属性字符串设置TextStyle，则TextStyle优先级更高。 |
-| [UserDataSpan](arkts-arkui-styledstring-userdataspan-c.md) | 支持存储自定义扩展信息，用于存储和获取用户数据，仅提供基类，具体实现由开发者定义。 扩展信息不影响实际显示效果。 |
+| [UrlStyle](arkts-arkui-styledstring-urlstyle-c.md) | 超链接对象说明。 |
+| [UserDataSpan](arkts-arkui-styledstring-userdataspan-c.md) | 支持存储自定义扩展信息，用于存储和获取用户数据，仅提供基类，具体实现由开发者定义。 |
 
 <!--Del-->
 ### 类（系统接口）

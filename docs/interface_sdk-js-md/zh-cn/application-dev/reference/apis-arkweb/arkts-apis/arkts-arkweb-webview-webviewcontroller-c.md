@@ -20,7 +20,15 @@ import { webview } from '@kit.ArkWeb';
 accessBackward(): boolean
 ```
 
-当前页面是否可后退，即当前页面是否有返回历史记录。 可以结合使用[getBackForwardEntries](#getbackforwardentries)来获取当前WebView的历史信息列表，以及使用 [accessStep](#accessstep)来判断是否可以按照给定的步数前进或后退。 &gt; **说明：** &gt; &gt; 在Web组件首次加载过程中调用[setCustomUserAgent](#setcustomuseragent)，可能会导致在当前存在多个历史节点的情况下，获取 &gt; 的accessBackward实际为false，即没有后退节点。建议先调用setCustomUserAgent方法设置UserAgent，再通过loadUrl加载具体页面。 &gt; &gt; 该现象是由于在Web组件首次加载时，调用[setCustomUserAgent](#setcustomuseragent)会导致组件重新加载并保持初始历史节点的 &gt; 状态。随后新增的节点将替换初始历史节点，不会生成新的历史节点，导致accessBackward为false。
+当前页面是否可后退，即当前页面是否有返回历史记录。
+
+可以结合使用[getBackForwardEntries](#getbackforwardentries)来获取当前WebView的历史信息列表，以及使用 [accessStep](#accessstep)来判断是否可以按照给定的步数前进或后退。
+
+> **说明：**
+> 
+> 在Web组件首次加载过程中调用[setCustomUserAgent](#setcustomuseragent)，可能会导致在当前存在多个历史节点的情况下，获取 &gt; 的accessBackward实际为false，即没有后退节点。建议先调用setCustomUserAgent方法设置UserAgent，再通过loadUrl加载具体页面。
+> 
+> 该现象是由于在Web组件首次加载时，调用[setCustomUserAgent](#setcustomuseragent)会导致组件重新加载并保持初始历史节点的 &gt; 状态。随后新增的节点将替换初始历史节点，不会生成新的历史节点，导致accessBackward为false。
 
 **起始版本：** 9
 
@@ -48,7 +56,9 @@ accessBackward(): boolean
 accessForward(): boolean
 ```
 
-当前页面是否可前进，即当前页面是否有前进历史记录。 可以结合使用[getBackForwardEntries](#getbackforwardentries)来获取当前WebView的历史信息列表，以及使用 [accessStep](#accessstep)来判断是否可以按照给定的步数前进或后退。
+当前页面是否可前进，即当前页面是否有前进历史记录。
+
+可以结合使用[getBackForwardEntries](#getbackforwardentries)来获取当前WebView的历史信息列表，以及使用 [accessStep](#accessstep)来判断是否可以按照给定的步数前进或后退。
 
 **起始版本：** 9
 
@@ -140,7 +150,15 @@ static addIntelligentTrackingPreventionBypassingList(hostList: Array<string>): v
 avoidVisibleViewportBottom(avoidHeight: number): void
 ```
 
-设置Web网页可视视口底部避让高度。 &gt; **说明：** &gt; &gt; - avoidHeight有效值区间为[0, Web组件高度]，超出有效值区间时取边界值。 &gt; &gt; - 该接口高度设置为非0时，Web组件位置和尺寸不变，可视视口向上避让avoidHeight，表现为Web网页内容抬升avoidHeight。该接口一般用于应用自定义网页底部避让区，不建议和点击web网页可编辑区拉起键盘的 &gt; 场景同时使用。同时使用时，键盘弹起避让模式将使用OVERLAYS_CONTENT。 &gt; &gt; - 该接口高度设置为0时，Web网页内容可恢复，键盘弹起避让模式将使用keyboardAvoidMode()声明的模式。
+设置Web网页可视视口底部避让高度。
+
+> **说明：**
+> 
+> - avoidHeight有效值区间为[0, Web组件高度]，超出有效值区间时取边界值。
+> 
+> - 该接口高度设置为非0时，Web组件位置和尺寸不变，可视视口向上避让avoidHeight，表现为Web网页内容抬升avoidHeight。该接口一般用于应用自定义网页底部避让区，不建议和点击web网页可编辑区拉起键盘的 &gt; 场景同时使用。同时使用时，键盘弹起避让模式将使用OVERLAYS_CONTENT。
+> 
+> - 该接口高度设置为0时，Web网页内容可恢复，键盘弹起避让模式将使用keyboardAvoidMode()声明的模式。
 
 **起始版本：** 20
 
@@ -158,8 +176,8 @@ avoidVisibleViewportBottom(avoidHeight: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | This functionality is not supported. |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | This functionality is not supported. |
 
 ## backOrForward
 
@@ -167,7 +185,9 @@ avoidVisibleViewportBottom(avoidHeight: number): void
 backOrForward(step: number): void
 ```
 
-按照历史栈，前进或者后退指定步长的页面，当历史栈中不存在对应步长的页面时，不会进行页面跳转。 前进或者后退页面时，直接使用已加载过的网页，无需重新加载网页。
+按照历史栈，前进或者后退指定步长的页面，当历史栈中不存在对应步长的页面时，不会进行页面跳转。
+
+前进或者后退页面时，直接使用已加载过的网页，无需重新加载网页。
 
 **起始版本：** 9
 
@@ -218,7 +238,13 @@ backward(): void
 static clearBlanklessLoadingCache(keys?: Array<string>) : void
 ```
 
-清除指定key值页面无白屏优化缓存，本接口只清除缓存。 在小程序或Web应用场景中，当页面加载时内容变化显著，可能会出现一次明显的跳变。若对此跳变有所顾虑，可使用该接口清除页面缓存。 &gt; **说明：** &gt; &gt; - 清除之后的页面，需在第三次加载页面时才会产生优化效果。
+清除指定key值页面无白屏优化缓存，本接口只清除缓存。
+
+在小程序或Web应用场景中，当页面加载时内容变化显著，可能会出现一次明显的跳变。若对此跳变有所顾虑，可使用该接口清除页面缓存。
+
+> **说明：**
+> 
+> - 清除之后的页面，需在第三次加载页面时才会产生优化效果。
 
 **起始版本：** 20
 
@@ -486,7 +512,17 @@ closeCamera(): void
 constructor(webTag?: string)
 ```
 
-用于创建 WebviewController 对象的构造函数。 &gt; **说明：** &gt; &gt; 不传参：new webview.WebviewController()表示构造函数为空，不使用C API时不需要传参。 &gt; &gt; 传参且参数是合法字符串：new webview.WebviewController("xxx")，用于开发者区分多实例，并调用对应实例下的方法。 &gt; &gt; 传入参数为空：new webview.WebviewController("")或new webview.WebviewController(undefined)，该场景下参数无意义，无法区分多个实例，直接返回 &gt; undefined，需要开发者判断返回值是否正常。 &gt; &gt; Web组件销毁后会解绑WebViewController，之后调用WebviewController的非静态方法会抛出 &gt; [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联)异常，应注意调 &gt; 用时机和捕获异常，防止进程异常退出。
+用于创建 WebviewController 对象的构造函数。
+
+> **说明：**
+> 
+> 不传参：new webview.WebviewController()表示构造函数为空，不使用C API时不需要传参。
+> 
+> 传参且参数是合法字符串：new webview.WebviewController("xxx")，用于开发者区分多实例，并调用对应实例下的方法。
+> 
+> 传入参数为空：new webview.WebviewController("")或new webview.WebviewController(undefined)，该场景下参数无意义，无法区分多个实例，直接返回 &gt; undefined，需要开发者判断返回值是否正常。
+> 
+> Web组件销毁后会解绑WebViewController，之后调用WebviewController的非静态方法会抛出 &gt; [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联)异常，应注意调 &gt; 用时机和捕获异常，防止进程异常退出。
 
 **起始版本：** 11
 
@@ -523,7 +559,7 @@ createPdf(configuration: PdfConfiguration, callback: AsyncCallback<PdfData>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | configuration | [PdfConfiguration](arkts-arkweb-webview-pdfconfiguration-i.md) | 是 | 生成PDF所需参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PdfData](arkts-arkweb-webview-pdfdata-c.md)&gt; | 是 | 回调返回网页PDF数据流。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PdfData](arkts-arkweb-webview-pdfdata-c.md)&gt; | 是 | 回调返回网页PDF数据流。 |
 
 **错误码：**
 
@@ -599,8 +635,8 @@ createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed.<br>**适用版本：** 10+ |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed.<br>**适用版本：** 10+ |
 
 ## createWebPrintDocumentAdapter
 
@@ -661,8 +697,8 @@ static customizeSchemes(schemes: Array<WebCustomScheme>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100020](../errorcode-webview.md#17100020-注册自定义协议失败) | Failed to register custom schemes.<br>**适用版本：** 12+ |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
+| [17100020](../errorcode-webview.md#17100020-注册自定义协议失败) | Failed to register custom schemes.<br>**适用版本：** 12+ |
 
 ## customizeSchemes
 
@@ -730,7 +766,11 @@ deleteJavaScriptRegister(name: string): void
 enableAdsBlock(enable: boolean): void
 ```
 
-启用广告过滤功能。 &gt; **说明：** &gt; &gt; - 广告过滤功能需要release包，使用debug包不生效。
+启用广告过滤功能。
+
+> **说明：**
+> 
+> - 广告过滤功能需要release包，使用debug包不生效。
 
 **起始版本：** 12
 
@@ -751,8 +791,8 @@ enableAdsBlock(enable: boolean): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Parameter string is too long. 3.Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
 ## enableAdvancedSecurityMode
 
@@ -760,7 +800,14 @@ enableAdsBlock(enable: boolean): void
 static enableAdvancedSecurityMode(securityParams: SecurityParams): void
 ```
 
-通过配置安全特性选项禁用特定的Web引擎能力，以降低攻击面。典型使用场景包括：高安全要求的应用（如金融、政务类应用）应启用高级安全模式以禁用不必要的Web引擎能力。 &gt; **说明：** &gt; &gt; - 该接口为全局静态API，在整个APP生命周期中调用一次即可，不需要重复调用。 &gt; &gt; - 必须在[initializeWebEngine()](#initializewebengine)之前调用，否则设置无效。 &gt; 26.0.0
+通过配置安全特性选项禁用特定的Web引擎能力，以降低攻击面。典型使用场景包括：高安全要求的应用（如金融、政务类应用）应启用高级安全模式以禁用不必要的Web引擎能力。
+
+> **说明：**
+> 
+> - 该接口为全局静态API，在整个APP生命周期中调用一次即可，不需要重复调用。
+> 
+> - 必须在[initializeWebEngine()](#initializewebengine)之前调用，否则设置无效。
+> 26.0.0
 
 **起始版本：** 26.0.0
 
@@ -782,7 +829,9 @@ static enableAdvancedSecurityMode(securityParams: SecurityParams): void
 static enableBackForwardCache(features: BackForwardCacheSupportedFeatures): void
 ```
 
-开启Web组件前进后退缓存功能，通过参数指定是否允许使用特定的页面进入前进后退缓存。 需要在[initializeWebEngine()](#initializewebengine)初始化内核之前调用。
+开启Web组件前进后退缓存功能，通过参数指定是否允许使用特定的页面进入前进后退缓存。
+
+需要在[initializeWebEngine()](#initializewebengine)初始化内核之前调用。
 
 **起始版本：** 12
 
@@ -822,9 +871,9 @@ enableIntelligentTrackingPrevention(enable: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## enablePrivateNetworkAccess
 
@@ -832,7 +881,13 @@ enableIntelligentTrackingPrevention(enable: boolean): void
 static enablePrivateNetworkAccess(enable: boolean): void
 ```
 
-设置私有网络访问检查功能（Private Network Access）的启用状态。 启用后，Web组件将对私有网络请求（如访问本地服务器或内网资源）进行CORS预检。它会先发送OPTIONS预检请求，获取目标服务器的显式授权，然后传输实际数据。禁用此功能将跳过安全检查。 &gt; **说明：** &gt; &gt; 当前私有网络访问检查功能主要针对Web Worker场景生效。
+设置私有网络访问检查功能（Private Network Access）的启用状态。
+
+启用后，Web组件将对私有网络请求（如访问本地服务器或内网资源）进行CORS预检。它会先发送OPTIONS预检请求，获取目标服务器的显式授权，然后传输实际数据。禁用此功能将跳过安全检查。
+
+> **说明：**
+> 
+> 当前私有网络访问检查功能主要针对Web Worker场景生效。
 
 **起始版本：** 20
 
@@ -852,7 +907,13 @@ static enablePrivateNetworkAccess(enable: boolean): void
 enableSafeBrowsing(enable: boolean): void
 ```
 
-启用检查网站安全风险的功能，非法和欺诈网站是强制启用的，不能通过此功能禁用。 本功能默认不生效，OpenHarmony只提供恶意网址拦截页WebUI，网址风险检测以及显示WebUI的功能由Vendor实现。推荐在WebContentsObserver中监听跳转 [DidStartNavigation](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/content/public/browser/web_contents_observer.h) 、 [DidRedirectNavigation](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/content/public/browser/web_contents_observer.h) 进行检测。 &gt; **说明：** &gt; &gt; 该接口不生效，调用不会产生任何实际效果。
+启用检查网站安全风险的功能，非法和欺诈网站是强制启用的，不能通过此功能禁用。
+
+本功能默认不生效，OpenHarmony只提供恶意网址拦截页WebUI，网址风险检测以及显示WebUI的功能由Vendor实现。推荐在WebContentsObserver中监听跳转 [DidStartNavigation](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/content/public/browser/web_contents_observer.h) 、 [DidRedirectNavigation](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/content/public/browser/web_contents_observer.h) 进行检测。
+
+> **说明：**
+> 
+> 该接口不生效，调用不会产生任何实际效果。
 
 **起始版本：** 11
 
@@ -896,7 +957,16 @@ static enableWholeWebPageDrawing(): void
 executeAIPageCommand(command: string): Promise<string>
 ```
 
-异步执行`AIPageCommand`。该接口通过JSON字符串形式的`command`参数指定命令类型和命令参数，使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 不同命令的返回格式不同，详细说明请参见[AIPageCommand](../../../reference/apis-arkweb/arkts-apis-webview-AIPageCommand.md)和 &gt; [AIPageInteraction](../../../reference/apis-arkweb/arkts-apis-webview-AIPageInteraction.md)。 &gt; &gt; - 当命令无法分发或无结果返回时，Promise可能返回空字符串。 &gt; &gt; - 返回值非空时为JSON字符串，应用可通过`JSON.parse`解析后使用。 &gt; 26.0.0
+异步执行`AIPageCommand`。该接口通过JSON字符串形式的`command`参数指定命令类型和命令参数，使用Promise异步回调。
+
+> **说明：**
+> 
+> - 不同命令的返回格式不同，详细说明请参见[AIPageCommand](../../../reference/apis-arkweb/arkts-apis-webview-AIPageCommand.md)和 &gt; [AIPageInteraction](../../../reference/apis-arkweb/arkts-apis-webview-AIPageInteraction.md)。
+> 
+> - 当命令无法分发或无结果返回时，Promise可能返回空字符串。
+> 
+> - 返回值非空时为JSON字符串，应用可通过`JSON.parse`解析后使用。
+> 26.0.0
 
 **起始版本：** 26.0.0
 
@@ -993,7 +1063,11 @@ getAttachState(): ControllerAttachState
 getBackForwardEntries(): BackForwardList
 ```
 
-获取当前WebView的历史信息列表。 &gt; **说明：** &gt; &gt; onLoadIntercept在加载开始的时候触发，该时刻还未生成历史节点，所以在onLoadIntercept中调用 &gt; getBackForwardEntries拿到的历史栈不包括当前正在加载中的跳转。
+获取当前WebView的历史信息列表。
+
+> **说明：**
+> 
+> onLoadIntercept在加载开始的时候触发，该时刻还未生成历史节点，所以在onLoadIntercept中调用 &gt; getBackForwardEntries拿到的历史栈不包括当前正在加载中的跳转。
 
 **起始版本：** 9
 
@@ -1021,7 +1095,21 @@ getBackForwardEntries(): BackForwardList
 getBlanklessInfoWithKey(key: string) : BlanklessInfo
 ```
 
-获取页面首屏加载预测信息（详细说明见[BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md)），并开始本次加载过渡帧生成，应用根据此信息确定是否需要启用无白屏加载。 必须与[setBlanklessLoadingWithKey](#setblanklessloadingwithkey)接口配套使用，并且必须在触发加载页面的接口之前或在`onLoadIntercept`中调用。 需在`WebViewController`与Web组件绑定后才能使用。 &gt; **说明：** &gt; &gt; - 持久缓存容量：默认大小为30MB（约30页），可以通过接口[setBlanklessLoadingCacheCapacity](#setblanklessloadingcachecapacity)设置缓存容量，具体见该接口说明。 &gt; 超过容量时根据LRU（Least Recently Used，淘汰不常用缓存的策略）机制更新缓存。自动清理超过7天的持久缓存数据，缓存清除后第三次加载页面开始有优化效果。 &gt; &gt; - 如果发现快照相似度（即[BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md)极低，请确认key值是否传递正确。 &gt; &gt; - 调用本接口后，将启用页面加载快照检测及生成过渡帧计算，会产生一定的资源开销。 &gt; &gt; - 启用无白屏加载的页面会带来一定的资源开销，开销的大小与Web组件的分辨率相关。假设分辨率的宽度和高度分别为：w, h。页面在打开阶段会增加峰值内存，增加约12 * w * h B，页面打开后内存回收，不影响稳态内存。 &gt; 增加固态应用缓存的大小，每个页面增加的缓存约w * h / 10 B，缓存位于应用缓存的位置。 &gt; &gt; - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO， &gt; 具体权限的添加方法请参考[在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
+获取页面首屏加载预测信息（详细说明见[BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md)），并开始本次加载过渡帧生成，应用根据此信息确定是否需要启用无白屏加载。 必须与[setBlanklessLoadingWithKey](#setblanklessloadingwithkey)接口配套使用，并且必须在触发加载页面的接口之前或在`onLoadIntercept`中调用。 需在`WebViewController`与Web组件绑定后才能使用。
+
+> **说明：**
+> 
+> - 持久缓存容量：默认大小为30MB（约30页），可以通过接口[setBlanklessLoadingCacheCapacity](#setblanklessloadingcachecapacity)设置缓存容量，具体见该接口说明。
+> 超过容量时根据LRU（Least Recently Used，淘汰不常用缓存的策略）机制更新缓存。自动清理超过7天的持久缓存数据，缓存清除后第三次加载页面开始有优化效果。
+> 
+> - 如果发现快照相似度（即[BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md)极低，请确认key值是否传递正确。
+> 
+> - 调用本接口后，将启用页面加载快照检测及生成过渡帧计算，会产生一定的资源开销。
+> 
+> - 启用无白屏加载的页面会带来一定的资源开销，开销的大小与Web组件的分辨率相关。假设分辨率的宽度和高度分别为：w, h。页面在打开阶段会增加峰值内存，增加约12 w h B，页面打开后内存回收，不影响稳态内存。
+> 增加固态应用缓存的大小，每个页面增加的缓存约w h / 10 B，缓存位于应用缓存的位置。
+> 
+> - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO， &gt; 具体权限的添加方法请参考[在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
 
 **起始版本：** 20
 
@@ -1095,7 +1183,7 @@ getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;cert.X509Cert&gt;&gt; | 是 | 通过AsyncCallback异步返回当前网站的X509格式证书。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;cert.X509Cert&gt;&gt; | 是 | 通过AsyncCallback异步返回当前网站的X509格式证书。 |
 
 **错误码：**
 
@@ -1110,7 +1198,9 @@ getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void
 getCustomUserAgent(): string
 ```
 
-获取自定义用户代理。 默认User-Agent定义与使用场景请参考[User-Agent开发指导](../../../web/web-default-userAgent.md)
+获取自定义用户代理。
+
+默认User-Agent定义与使用场景请参考[User-Agent开发指导](../../../web/web-default-userAgent.md)
 
 **起始版本：** 10
 
@@ -1138,7 +1228,11 @@ getCustomUserAgent(): string
 static getDefaultUserAgent(): string
 ```
 
-获取默认用户代理。 此接口只允许在UI线程调用。 默认User-Agent定义与使用场景请参考[User-Agent开发指导](../../../web/web-default-userAgent.md)
+获取默认用户代理。
+
+此接口只允许在UI线程调用。
+
+默认User-Agent定义与使用场景请参考[User-Agent开发指导](../../../web/web-default-userAgent.md)
 
 **起始版本：** 14
 
@@ -1358,7 +1452,9 @@ getMediaPlaybackState(): MediaPlaybackState
 getOriginalUrl(): string
 ```
 
-获取当前页面的原始URL地址。 风险提示：如果想获取URL来做JavascriptProxy通信接口认证，请使用 [getLastJavascriptProxyCallingFrameUrl&lt;sup&gt;12+&lt;/sup&gt;](#getlastjavascriptproxycallingframeurl)
+获取当前页面的原始URL地址。
+
+风险提示：如果想获取URL来做JavascriptProxy通信接口认证，请使用 [getLastJavascriptProxyCallingFrameUrl&lt;sup&gt;12+&lt;/sup&gt;](#getlastjavascriptproxycallingframeurl)
 
 **起始版本：** 9
 
@@ -1614,7 +1710,9 @@ static getSiteIsolationMode(): SiteIsolationMode
 getSubframeErrorPageEnabled(): boolean
 ```
 
-查询是否启用了subframe错误页功能。 26.0.0
+查询是否启用了subframe错误页功能。
+
+26.0.0
 
 **起始版本：** 26.0.0
 
@@ -1642,7 +1740,11 @@ getSubframeErrorPageEnabled(): boolean
 getSurfaceId(): string
 ```
 
-获取ArkWeb对应Surface的ID，此ID可用于网页截图。 &gt; **说明：** &gt; &gt; 仅Web组件渲染模式是ASYNC_RENDER时有效。getSurfaceId需要在Web组件初始化之后才能获取到值。
+获取ArkWeb对应Surface的ID，此ID可用于网页截图。
+
+> **说明：**
+> 
+> 仅Web组件渲染模式是ASYNC_RENDER时有效。getSurfaceId需要在Web组件初始化之后才能获取到值。
 
 **起始版本：** 12
 
@@ -1720,7 +1822,9 @@ getUrl(): string
 getUserAgent(): string
 ```
 
-获取当前默认用户代理。 默认User-Agent定义与使用场景请参考[User-Agent开发指导](../../../web/web-default-userAgent.md)
+获取当前默认用户代理。
+
+默认User-Agent定义与使用场景请参考[User-Agent开发指导](../../../web/web-default-userAgent.md)
 
 **起始版本：** 9
 
@@ -1865,7 +1969,7 @@ hasImage(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 返回查找页面是否存在图像。 <br> true表示页面存在图像；false表示页面不存在图像。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 返回查找页面是否存在图像。 <br> true表示页面存在图像；false表示页面不存在图像。 |
 
 **错误码：**
 
@@ -1880,7 +1984,13 @@ hasImage(callback: AsyncCallback<boolean>): void
 static initializeWebEngine(): void
 ```
 
-在Web组件初始化之前，通过此接口加载Web引擎的动态库文件，以提高启动性能。自动预连接历史访问过的高频网站。 &gt; **说明：** &gt; &gt; - initializeWebEngine不支持在异步线程中调用，否则会造成崩溃。 &gt; &gt; - initializeWebEngine全局生效，在整个APP生命周期中调用一次即可，不需要重复调用。
+在Web组件初始化之前，通过此接口加载Web引擎的动态库文件，以提高启动性能。自动预连接历史访问过的高频网站。
+
+> **说明：**
+> 
+> - initializeWebEngine不支持在异步线程中调用，否则会造成崩溃。
+> 
+> - initializeWebEngine全局生效，在整个APP生命周期中调用一次即可，不需要重复调用。
 
 **起始版本：** 9
 
@@ -1896,7 +2006,17 @@ static initializeWebEngine(): void
 injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void
 ```
 
-将本地离线资源注入到内存缓存中，以提升页面首次启动速度。 内存缓存中的资源由内核自动管理，当注入的资源过多导致内存压力过大，内核自动释放未使用的资源，应避免注入大量资源到内存缓存中。 正常情况下，资源的有效期由提供的Cache-Control或Expires响应头控制其有效期，默认的有效期为86400秒，即1天。 资源的MIMEType通过提供的Content-Type响应头配置，Content-Type需符合标准，否则无法正常使用，MODULE_JS必须提供有效的MIMEType，其他类型可不提供。 以此方式注入的资源，仅支持通过HTML中的标签加载。如果业务网页中的script标签使用了crossorigin属性，则必须在接口的responseHeaders参数中设置Cross-Origin响应头的值为anonymous 或use-credentials。 当调用`webview.WebviewController.SetRenderProcessMode(webview.RenderProcessMode.MULTIPLE)`接口后，应用会启动多渲染进程模式，此接口在此场景下不 会生效。
+将本地离线资源注入到内存缓存中，以提升页面首次启动速度。
+
+内存缓存中的资源由内核自动管理，当注入的资源过多导致内存压力过大，内核自动释放未使用的资源，应避免注入大量资源到内存缓存中。
+
+正常情况下，资源的有效期由提供的Cache-Control或Expires响应头控制其有效期，默认的有效期为86400秒，即1天。
+
+资源的MIMEType通过提供的Content-Type响应头配置，Content-Type需符合标准，否则无法正常使用，MODULE_JS必须提供有效的MIMEType，其他类型可不提供。
+
+以此方式注入的资源，仅支持通过HTML中的标签加载。如果业务网页中的script标签使用了crossorigin属性，则必须在接口的responseHeaders参数中设置Cross-Origin响应头的值为anonymous 或use-credentials。
+
+当调用`webview.WebviewController.SetRenderProcessMode(webview.RenderProcessMode.MULTIPLE)`接口后，应用会启动多渲染进程模式，此接口在此场景下不 会生效。
 
 **起始版本：** 12
 
@@ -1972,7 +2092,9 @@ isAdsBlockEnabled(): boolean
 isAdsBlockEnabledForCurPage(): boolean
 ```
 
-查询当前网页是否开启广告过滤功能。 当Web组件使能广告过滤功能后，默认所有页面都是开启广告过滤的，支持通过 [addAdsBlockDisallowedList](arkts-arkweb-webview-adsblockmanager-c.md#addadsblockdisallowedlist)指定域名禁用广告过滤。
+查询当前网页是否开启广告过滤功能。
+
+当Web组件使能广告过滤功能后，默认所有页面都是开启广告过滤的，支持通过 [addAdsBlockDisallowedList](arkts-arkweb-webview-adsblockmanager-c.md#addadsblockdisallowedlist)指定域名禁用广告过滤。
 
 **起始版本：** 12
 
@@ -2000,7 +2122,9 @@ isAdsBlockEnabledForCurPage(): boolean
 static isAutoPreconnectEnabled(): boolean
 ```
 
-查询Web内核的自动预连接状态。 如果没有使用[setAutoPreconnect](#setautopreconnect)设置Web内核自动预连接的状态，则默认启用自动预连接，返回true。
+查询Web内核的自动预连接状态。
+
+如果没有使用[setAutoPreconnect](#setautopreconnect)设置Web内核自动预连接的状态，则默认启用自动预连接，返回true。
 
 **起始版本：** 21
 
@@ -2068,8 +2192,8 @@ isIntelligentTrackingPreventionEnabled(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
 ## isPrivateNetworkAccessEnabled
 
@@ -2077,7 +2201,11 @@ isIntelligentTrackingPreventionEnabled(): boolean
 static isPrivateNetworkAccessEnabled(): boolean
 ```
 
-获取Web组件是否启用了私有网络访问检查功能。 &gt; **说明：** &gt; &gt; 当前私有网络访问检查功能主要针对Web Worker场景生效。
+获取Web组件是否启用了私有网络访问检查功能。
+
+> **说明：**
+> 
+> 当前私有网络访问检查功能主要针对Web Worker场景生效。
 
 **起始版本：** 20
 
@@ -2119,7 +2247,23 @@ isSafeBrowsingEnabled(): boolean
 loadData(data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string): void
 ```
 
-加载指定的数据。 baseUrl与historyUrl同时为空的情况下： encoding如果为非base64（包括空值），则假定数据对安全URL字符范围内的八位字节使用ASCII编码，对该范围外的八位字节使用URL的标准%xx十六进制编码。 data数据必须使用base64编码或将内容中的任何#字符编码为%23。否则#将被视为内容的结尾而剩余的文本将被用作文档片段标识符。 &gt; **说明：** &gt; &gt; - 若加载本地图片，可以给baseUrl或historyUrl任一参数赋值空格，详情请参考示例代码。 &gt; &gt; - 加载本地图片场景，baseUrl和historyUrl不能同时为空，否则图片无法成功加载。 &gt; &gt; - 若html中的富文本中带有注入#等特殊字符，建议将baseUrl和historyUrl两个参数的值设置为"空格"。 &gt; &gt; - 加载文字场景，需主动设置`&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"&gt;`避免文本字体大小不 &gt; 一致。
+加载指定的数据。
+
+baseUrl与historyUrl同时为空的情况下：
+
+encoding如果为非base64（包括空值），则假定数据对安全URL字符范围内的八位字节使用ASCII编码，对该范围外的八位字节使用URL的标准%xx十六进制编码。
+
+data数据必须使用base64编码或将内容中的任何#字符编码为%23。否则#将被视为内容的结尾而剩余的文本将被用作文档片段标识符。
+
+> **说明：**
+> 
+> - 若加载本地图片，可以给baseUrl或historyUrl任一参数赋值空格，详情请参考示例代码。
+> 
+> - 加载本地图片场景，baseUrl和historyUrl不能同时为空，否则图片无法成功加载。
+> 
+> - 若html中的富文本中带有注入#等特殊字符，建议将baseUrl和historyUrl两个参数的值设置为"空格"。
+> 
+> - 加载文字场景，需主动设置`&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"&gt;`避免文本字体大小不 &gt; 一致。
 
 **起始版本：** 9
 
@@ -2198,7 +2342,7 @@ off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachSta
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'controllerAttachStateChange' | 是 | 表示注册WebViewController绑定状态事件，固定为"controllerAttachStateChange"。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 否 | WebViewController绑定状态发生改变时的回调函数，默认情况下不填写回调函数。如果填写了Callback， 将仅取消注册该特定的回调。如果不填写Callback，将取消注册所有回调。 <br>传入null或undefined时会抛出异常错误码401。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 否 | WebViewController绑定状态发生改变时的回调函数，默认情况下不填写回调函数。如果填写了Callback， 将仅取消注册该特定的回调。如果不填写Callback，将取消注册所有回调。 <br>传入null或undefined时会抛出异常错误码401。 |
 
 ## onActive
 
@@ -2206,7 +2350,11 @@ off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachSta
 onActive(): void
 ```
 
-调用此接口通知Web组件进入前台激活状态。 激活状态是应用与用户互动的状态。应用会保持这种状态，直到发生某些事件（例如收到来电或设备屏幕关闭）时将焦点从应用移开。 若页面此前处于未激活状态，H5页面中通过document.addEventListener('visibilitychange',...)注册的事件监听器将被触发，document.visibilityState 从" hidden"变为"visible"。
+调用此接口通知Web组件进入前台激活状态。
+
+激活状态是应用与用户互动的状态。应用会保持这种状态，直到发生某些事件（例如收到来电或设备屏幕关闭）时将焦点从应用移开。
+
+若页面此前处于未激活状态，H5页面中通过document.addEventListener('visibilitychange',...)注册的事件监听器将被触发，document.visibilityState 从" hidden"变为"visible"。
 
 **起始版本：** 9
 
@@ -2228,7 +2376,9 @@ onActive(): void
 onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void
 ```
 
-注册回调函数，使用enableNativeMediaPlayer开启应用接管网页媒体播放功能后，当网页中有播放媒体时，触发注册的回调函 数。 如果应用接管网页媒体播放功能未开启，则注册的回调函数不会被触发。
+注册回调函数，使用enableNativeMediaPlayer开启应用接管网页媒体播放功能后，当网页中有播放媒体时，触发注册的回调函 数。
+
+如果应用接管网页媒体播放功能未开启，则注册的回调函数不会被触发。
 
 **起始版本：** 12
 
@@ -2250,7 +2400,9 @@ onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void
 onInactive(): void
 ```
 
-调用此接口通知Web组件进入未激活状态。开发者可以在此回调中实现应用失去焦点时应表现的恰当行为。 此状态下会尽可能的暂停任何可以安全暂停的内容，例如动画和地理位置。但不会暂停JavaScript，要全局暂停JavaScript，请使用 [pauseAllTimers](#pausealltimers)。要重新激活Web组件，请调用 [onActive](#onactive)。
+调用此接口通知Web组件进入未激活状态。开发者可以在此回调中实现应用失去焦点时应表现的恰当行为。
+
+此状态下会尽可能的暂停任何可以安全暂停的内容，例如动画和地理位置。但不会暂停JavaScript，要全局暂停JavaScript，请使用 [pauseAllTimers](#pausealltimers)。要重新激活Web组件，请调用 [onActive](#onactive)。
 
 **起始版本：** 9
 
@@ -2285,7 +2437,7 @@ on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'controllerAttachStateChange' | 是 | 表示注册WebViewController绑定状态事件，固定为"controllerAttachStateChange"。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 是 | WebViewController绑定状态改变时的回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 是 | WebViewController绑定状态改变时的回调函数。 |
 
 ## pageDown
 
@@ -2395,7 +2547,13 @@ static pauseAllTimers(): void
 pauseMicrophone(): void
 ```
 
-暂停当前网页麦克风捕获。 &gt; **说明：** &gt; &gt; 与 resumeMicrophone 和 stopMicrophone 的区别： &gt; &gt; pauseMicrophone 仅暂停麦克风捕获，可通过 resumeMicrophone 恢复；stopMicrophone 会停止捕获并释放资源。
+暂停当前网页麦克风捕获。
+
+> **说明：**
+> 
+> 与 resumeMicrophone 和 stopMicrophone 的区别：
+> 
+> pauseMicrophone 仅暂停麦克风捕获，可通过 resumeMicrophone 恢复；stopMicrophone 会停止捕获并释放资源。
 
 **起始版本：** 23
 
@@ -2477,7 +2635,9 @@ postUrl(url: string, postData: ArrayBuffer): void
 precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: CacheOptions): Promise<number>
 ```
 
-预编译JavaScript生成字节码缓存或根据提供的参数更新已有的字节码缓存。 接口通过提供的文件信息、E-Tag响应头和Last-Modified响应头判断是否需要更新已有的字节码缓存。
+预编译JavaScript生成字节码缓存或根据提供的参数更新已有的字节码缓存。
+
+接口通过提供的文件信息、E-Tag响应头和Last-Modified响应头判断是否需要更新已有的字节码缓存。
 
 **起始版本：** 12
 
@@ -2512,7 +2672,21 @@ precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: Cac
 prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void
 ```
 
-在预测到将要加载的页面之前调用，可提前下载页面所需的资源（包括：主资源和子资源），但不会执行网页JavaScript代码或呈现网页，以加快页面加载速度。 &gt; **说明：** &gt; &gt; - 下载的页面资源会缓存五分钟左右，超过这段时间Web组件会自动释放。 &gt; &gt; - prefetchPage对302重定向页面同样正常预取。 &gt; &gt; - 先执行prefetchPage再加载页面时，已预取的资源将直接从缓存中加载。 &gt; &gt; - 连续prefetchPage多个URL只有第一个生效。 &gt; &gt; - prefetchPage有时间限制，500ms内不能多次预取。 &gt; &gt; - prefetchPage会缓存所有资源，但具有Cache-Control: no-store标头的资源除外。如果存在Vary响应标头、Cache-Control: no-store标头，或者下载的页面资源已超过五分钟， &gt; 则在使用之前会重新验证资源。
+在预测到将要加载的页面之前调用，可提前下载页面所需的资源（包括：主资源和子资源），但不会执行网页JavaScript代码或呈现网页，以加快页面加载速度。
+
+> **说明：**
+> 
+> - 下载的页面资源会缓存五分钟左右，超过这段时间Web组件会自动释放。
+> 
+> - prefetchPage对302重定向页面同样正常预取。
+> 
+> - 先执行prefetchPage再加载页面时，已预取的资源将直接从缓存中加载。
+> 
+> - 连续prefetchPage多个URL只有第一个生效。
+> 
+> - prefetchPage有时间限制，500ms内不能多次预取。
+> 
+> - prefetchPage会缓存所有资源，但具有Cache-Control: no-store标头的资源除外。如果存在Vary响应标头、Cache-Control: no-store标头，或者下载的页面资源已超过五分钟， &gt; 则在使用之前会重新验证资源。
 
 **起始版本：** 10
 
@@ -2542,7 +2716,17 @@ prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void
 prefetchPage(url: string, additionalHeaders?: Array<WebHeader>, prefetchOptions?: PrefetchOptions): void
 ```
 
-在预测到将要加载的页面之前调用，可提前下载页面所需的资源（包括：主资源和子资源），但不会执行网页JavaScript代码或呈现网页，以加快页面加载速度。 &gt; **说明：** &gt; &gt; - 下载的页面资源会缓存五分钟左右，超过这段时间Web组件会自动释放。 &gt; &gt; - prefetchPage对302重定向页面同样正常预取。 &gt; &gt; - 先执行prefetchPage再加载页面时，已预取的资源将直接从缓存中加载。 &gt; &gt; - prefetchPage会缓存所有资源，但具有Cache-Control: no-store标头的资源除外。如果存在Vary响应标头、Cache-Control: no-store标头，或者下载的页面资源已超过五分钟， &gt; 则在使用之前会重新验证资源。
+在预测到将要加载的页面之前调用，可提前下载页面所需的资源（包括：主资源和子资源），但不会执行网页JavaScript代码或呈现网页，以加快页面加载速度。
+
+> **说明：**
+> 
+> - 下载的页面资源会缓存五分钟左右，超过这段时间Web组件会自动释放。
+> 
+> - prefetchPage对302重定向页面同样正常预取。
+> 
+> - 先执行prefetchPage再加载页面时，已预取的资源将直接从缓存中加载。
+> 
+> - prefetchPage会缓存所有资源，但具有Cache-Control: no-store标头的资源除外。如果存在Vary响应标头、Cache-Control: no-store标头，或者下载的页面资源已超过五分钟， &gt; 则在使用之前会重新验证资源。
 
 **起始版本：** 21
 
@@ -2572,7 +2756,9 @@ static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeade
                             cacheValidTime?: number): void
 ```
 
-根据指定的请求信息和附加的HTTP请求头去预获取资源请求，存入内存缓存，并指定其缓存key和有效期，以加快加载速度。目前仅支持Content-Type为application/x-www-form-urlencoded的 POST请求。最多可以预获取6个POST请求。如果要预获取第7个，请通过 [clearPrefetchedResource](#clearprefetchedresource)清除不需要的POST请求缓存，否则会自动清除最早预获取的 POST缓存。如果要使用预获取的资源缓存，开发者需要在正式发起的POST请求的请求头中增加键值“ArkWebPostCacheKey”，其内容为对应缓存的cacheKey。 内存缓存中的资源由内核自动管理。当注入的资源过多，导致内存压力过大时，内核会自动释放未使用的资源，但仍应避免向内存缓存中注入大量资源。
+根据指定的请求信息和附加的HTTP请求头去预获取资源请求，存入内存缓存，并指定其缓存key和有效期，以加快加载速度。目前仅支持Content-Type为application/x-www-form-urlencoded的 POST请求。最多可以预获取6个POST请求。如果要预获取第7个，请通过 [clearPrefetchedResource](#clearprefetchedresource)清除不需要的POST请求缓存，否则会自动清除最早预获取的 POST缓存。如果要使用预获取的资源缓存，开发者需要在正式发起的POST请求的请求头中增加键值“ArkWebPostCacheKey”，其内容为对应缓存的cacheKey。
+
+内存缓存中的资源由内核自动管理。当注入的资源过多，导致内存压力过大时，内核会自动释放未使用的资源，但仍应避免向内存缓存中注入大量资源。
 
 **起始版本：** 12
 
@@ -2684,7 +2870,25 @@ registerJavaScriptProxy(jsObject: object, name: string, methodList: Array<string
         asyncMethodList?: Array<string>, permission?: string): void
 ```
 
-registerJavaScriptProxy提供了应用与Web组件加载的网页之间强大的交互能力。注入JavaScript对象到window对象中，并在window对象中调用该对象的方法。 示例请参考[前端页面调用应用侧函数](../../../web/web-in-page-app-function-invoking.md)。 &gt; **说明：** &gt; &gt; - registerJavaScriptProxy需要和deleteJavaScriptRegister接口配合使用，防止内存泄漏。 &gt; &gt; - 请尽可能只在可信的URL及安全通信HTTPS场景下进行registerJavaScriptProxy注册。在非可信的Web组件中注入JavaScript对象，可能会导致应用被恶意攻击。 &gt; &gt; - 在注册registerJavaScriptProxy后，应用会将JavaScript对象暴露给所有的页面frames。 &gt; &gt; - 同一方法在同步与异步列表中重复注册，将默认异步调用。 &gt; &gt; - 同步函数列表和异步函数列表不可同时为空，否则此次调用接口注册失败。 &gt; &gt; - 异步的作用在于：H5线程将异步JavaScript任务提交给ETS主线程后，无需等待任务执行完成并返回结果，H5线程即可继续执行后续任务。这在执行耗时较长的JavaScript任务或ETS线程较为拥堵的情况下，可以有效 &gt; 减少H5线程因JavaScript任务而被阻塞的情况。然而，异步JavaScript任务无法返回值，且任务执行的顺序无法保证，因此需要根据具体情境判断是否使用同步或异步方式。 &gt; &gt; - 注入的对象在页面下一次（重新）加载前不会出现在JavaScript中。
+registerJavaScriptProxy提供了应用与Web组件加载的网页之间强大的交互能力。注入JavaScript对象到window对象中，并在window对象中调用该对象的方法。
+
+示例请参考[前端页面调用应用侧函数](../../../web/web-in-page-app-function-invoking.md)。
+
+> **说明：**
+> 
+> - registerJavaScriptProxy需要和deleteJavaScriptRegister接口配合使用，防止内存泄漏。
+> 
+> - 请尽可能只在可信的URL及安全通信HTTPS场景下进行registerJavaScriptProxy注册。在非可信的Web组件中注入JavaScript对象，可能会导致应用被恶意攻击。
+> 
+> - 在注册registerJavaScriptProxy后，应用会将JavaScript对象暴露给所有的页面frames。
+> 
+> - 同一方法在同步与异步列表中重复注册，将默认异步调用。
+> 
+> - 同步函数列表和异步函数列表不可同时为空，否则此次调用接口注册失败。
+> 
+> - 异步的作用在于：H5线程将异步JavaScript任务提交给ETS主线程后，无需等待任务执行完成并返回结果，H5线程即可继续执行后续任务。这在执行耗时较长的JavaScript任务或ETS线程较为拥堵的情况下，可以有效 &gt; 减少H5线程因JavaScript任务而被阻塞的情况。然而，异步JavaScript任务无法返回值，且任务执行的顺序无法保证，因此需要根据具体情境判断是否使用同步或异步方式。
+> 
+> - 注入的对象在页面下一次（重新）加载前不会出现在JavaScript中。
 
 **起始版本：** 9
 
@@ -2717,7 +2921,11 @@ registerJavaScriptProxy提供了应用与Web组件加载的网页之间强大的
 static removeAllCache(clearRom: boolean): void
 ```
 
-清除应用内所有Webview(含隐私模式)产生的资源缓存。 &gt; **说明：** &gt; &gt; 可以通过在data/app/el2/100/base/\&lt;applicationPackageName\&gt;/cache/web/目录下查看Webview的缓存。
+清除应用内所有Webview(含隐私模式)产生的资源缓存。
+
+> **说明：**
+> 
+> 可以通过在data/app/el2/100/base/\&lt;applicationPackageName\&gt;/cache/web/目录下查看Webview的缓存。
 
 **起始版本：** 18
 
@@ -2743,7 +2951,11 @@ static removeAllCache(clearRom: boolean): void
 removeCache(clearRom: boolean): void
 ```
 
-清除与当前WebView上下文相关的资源缓存。 &gt; **说明：** &gt; &gt; 可以通过在data/storage/el2/base/cache/web/Cache目录下查看Webview的缓存。
+清除与当前WebView上下文相关的资源缓存。
+
+> **说明：**
+> 
+> 可以通过在data/storage/el2/base/cache/web/Cache目录下查看Webview的缓存。
 
 **起始版本：** 9
 
@@ -2823,7 +3035,9 @@ requestFocus(): void
 restoreWebState(state: Uint8Array) : void
 ```
 
-当前WebView从序列化数据中恢复页面状态历史记录。 如果state过大，可能会导致异常。建议state大于512k时，放弃恢复页面状态历史记录。
+当前WebView从序列化数据中恢复页面状态历史记录。
+
+如果state过大，可能会导致异常。建议state大于512k时，放弃恢复页面状态历史记录。
 
 **起始版本：** 9
 
@@ -2916,7 +3130,19 @@ resumeMicrophone(): void
 runJavaScript(script: string): Promise<string>
 ```
 
-在当前显示页面的上下文中异步执行JavaScript脚本，脚本执行的结果将通过Promise方式返回。此方法必须在用户界面（UI）线程上使用 ，并且回调也将在用户界面（UI）线程上调用。 &gt; **说明：** &gt; &gt; - 跨导航操作（如loadUrl）时，JavaScript状态 将不再保留，例如，调用loadUrl前定义的全局变量和函数在加载的页面中将不存在。 &gt; &gt; - 建议应用程序使用registerJavaScriptProxy来确保JavaScript状态能够在页面导航间保持。 &gt; &gt; - 目前不支持传递对象，支持传递结构体。 &gt; &gt; - 执行异步方法无法获取返回值，需要根据具体情境判断是否使用同步或异步方式。 &gt; &gt; - 前端页面传到应用侧的string数据类型会被视为JSON格式的数据，需要调用JSON.parse反序列化。
+在当前显示页面的上下文中异步执行JavaScript脚本，脚本执行的结果将通过Promise方式返回。此方法必须在用户界面（UI）线程上使用 ，并且回调也将在用户界面（UI）线程上调用。
+
+> **说明：**
+> 
+> - 跨导航操作（如loadUrl）时，JavaScript状态 将不再保留，例如，调用loadUrl前定义的全局变量和函数在加载的页面中将不存在。
+> 
+> - 建议应用程序使用registerJavaScriptProxy来确保JavaScript状态能够在页面导航间保持。
+> 
+> - 目前不支持传递对象，支持传递结构体。
+> 
+> - 执行异步方法无法获取返回值，需要根据具体情境判断是否使用同步或异步方式。
+> 
+> - 前端页面传到应用侧的string数据类型会被视为JSON格式的数据，需要调用JSON.parse反序列化。
 
 **起始版本：** 9
 
@@ -2952,7 +3178,19 @@ runJavaScript(script: string): Promise<string>
 runJavaScript(script: string, callback: AsyncCallback<string>): void
 ```
 
-在当前显示页面的上下文中异步执行JavaScript脚本，脚本执行的结果将通过异步回调方式返回。此方法必须在用户界面（UI）线程上使用 ，并且回调也将在用户界面（UI）线程上调用。 &gt; **说明：** &gt; &gt; - 跨导航操作（如loadUrl）时，JavaScript状态将不再保留。例如，调用loadUrl前定义的全局变量和函数在加载的页面中将不存在。 &gt; &gt; - 建议应用程序使用registerJavaScriptProxy来确保JavaScript状态能够在页面导航间保持。 &gt; &gt; - 目前不支持传递对象，支持传递结构体。 &gt; &gt; - 执行异步方法无法获取返回值，需要根据具体情境判断是否使用同步或异步方式。 &gt; &gt; - 前端页面传到应用侧的string数据类型会被视为JSON格式的数据，需要调用JSON.parse反序列化。
+在当前显示页面的上下文中异步执行JavaScript脚本，脚本执行的结果将通过异步回调方式返回。此方法必须在用户界面（UI）线程上使用 ，并且回调也将在用户界面（UI）线程上调用。
+
+> **说明：**
+> 
+> - 跨导航操作（如loadUrl）时，JavaScript状态将不再保留。例如，调用loadUrl前定义的全局变量和函数在加载的页面中将不存在。
+> 
+> - 建议应用程序使用registerJavaScriptProxy来确保JavaScript状态能够在页面导航间保持。
+> 
+> - 目前不支持传递对象，支持传递结构体。
+> 
+> - 执行异步方法无法获取返回值，需要根据具体情境判断是否使用同步或异步方式。
+> 
+> - 前端页面传到应用侧的string数据类型会被视为JSON格式的数据，需要调用JSON.parse反序列化。
 
 **起始版本：** 9
 
@@ -2967,7 +3205,7 @@ runJavaScript(script: string, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | script | string | 是 | JavaScript脚本。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调执行JavaScript脚本结果。JavaScript脚本若执行失败或无返回值时，返回null。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调执行JavaScript脚本结果。JavaScript脚本若执行失败或无返回值时，返回null。 |
 
 **错误码：**
 
@@ -2983,7 +3221,11 @@ runJavaScript(script: string, callback: AsyncCallback<string>): void
 runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>
 ```
 
-异步执行JavaScript脚本，并通过Promise方式返回脚本执行的结果。runJavaScriptExt需要在loadUrl完成后，比如onPageEnd中 调用。 &gt; **说明：** &gt; &gt; - 前端页面传到应用侧的string数据类型会被视为JSON格式的数据，需要调用JSON.parse反序列化。
+异步执行JavaScript脚本，并通过Promise方式返回脚本执行的结果。runJavaScriptExt需要在loadUrl完成后，比如onPageEnd中 调用。
+
+> **说明：**
+> 
+> - 前端页面传到应用侧的string数据类型会被视为JSON格式的数据，需要调用JSON.parse反序列化。
 
 **起始版本：** 10
 
@@ -3018,7 +3260,11 @@ runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>
 runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessageExt>): void
 ```
 
-异步执行JavaScript脚本，并通过回调方式返回脚本执行的结果。runJavaScriptExt需要在loadUrl完成后，比如onPageEnd中调用。 &gt; **说明：** &gt; &gt; - 前端页面传到应用侧的string数据类型会被视为JSON格式的数据，需要调用JSON.parse反序列化。
+异步执行JavaScript脚本，并通过回调方式返回脚本执行的结果。runJavaScriptExt需要在loadUrl完成后，比如onPageEnd中调用。
+
+> **说明：**
+> 
+> - 前端页面传到应用侧的string数据类型会被视为JSON格式的数据，需要调用JSON.parse反序列化。
 
 **起始版本：** 10
 
@@ -3033,7 +3279,7 @@ runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessage
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | script | string \| ArrayBuffer | 是 | JavaScript脚本。<br>**起始版本：** 12 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[JsMessageExt](arkts-arkweb-webview-jsmessageext-c.md)&gt; | 是 | 回调执行JavaScript脚本结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[JsMessageExt](arkts-arkweb-webview-jsmessageext-c.md)&gt; | 是 | 回调执行JavaScript脚本结果。 |
 
 **错误码：**
 
@@ -3230,7 +3476,13 @@ serializeWebState() : Uint8Array
 static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void
 ```
 
-设置ArkWeb内核版本。若系统不支持指定版本，则设置无效，使用系统默认内核（可参考[约束与限制](../../../web/web-component-overview.md#约束与限制)）。该接口为全局静态API，须在调 用initializeWebEngine前执行，若已加载任何Web组件，则该设置无效。典型使用场景：使用特定内核版本的特性或兼容性需求时，可切换到对应内核版本。 &gt; **说明：** &gt; &gt; - setActiveWebEngineVersion不支持在异步线程中调用。 &gt; &gt; - setActiveWebEngineVersion全局生效，在整个APP生命周期中调用一次即可，不需要重复调用。
+设置ArkWeb内核版本。若系统不支持指定版本，则设置无效，使用系统默认内核（可参考[约束与限制](../../../web/web-component-overview.md#约束与限制)）。该接口为全局静态API，须在调 用initializeWebEngine前执行，若已加载任何Web组件，则该设置无效。典型使用场景：使用特定内核版本的特性或兼容性需求时，可切换到对应内核版本。
+
+> **说明：**
+> 
+> - setActiveWebEngineVersion不支持在异步线程中调用。
+> 
+> - setActiveWebEngineVersion全局生效，在整个APP生命周期中调用一次即可，不需要重复调用。
 
 **起始版本：** 20
 
@@ -3250,7 +3502,11 @@ static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void
 static setAppCustomUserAgent(userAgent: string) : void
 ```
 
-设置应用级自定义用户代理，会覆盖系统的用户代理，应用内所有Web组件生效。 当需要设置应用级自定义用户代理时，建议在Web组件创建前调用setAppCustomUserAgent方法设置User-Agent，再创建指定src的Web组件或通过 [loadUrl](#loadurl)加载具体页面。 默认User-Agent定义与使用场景，及相关User-Agent接口定义优先级请参考[User-Agent开发指导](../../../web/web-default-userAgent.md)。
+设置应用级自定义用户代理，会覆盖系统的用户代理，应用内所有Web组件生效。
+
+当需要设置应用级自定义用户代理时，建议在Web组件创建前调用setAppCustomUserAgent方法设置User-Agent，再创建指定src的Web组件或通过 [loadUrl](#loadurl)加载具体页面。
+
+默认User-Agent定义与使用场景，及相关User-Agent接口定义优先级请参考[User-Agent开发指导](../../../web/web-default-userAgent.md)。
 
 **起始版本：** 20
 
@@ -3299,7 +3555,9 @@ setAudioMuted(mute: boolean): void
 static setAutoPreconnect(enabled: boolean): void
 ```
 
-设置Web内核的自动预连接状态。若未设置，默认启用自动预连接。 需要在[initializeWebEngine()](#initializewebengine)初始化内核或者创建Web组件之前调用。若已加载任何Web组件，则该设 置无效。
+设置Web内核的自动预连接状态。若未设置，默认启用自动预连接。
+
+需要在[initializeWebEngine()](#initializewebengine)初始化内核或者创建Web组件之前调用。若已加载任何Web组件，则该设 置无效。
 
 **起始版本：** 21
 
@@ -3377,7 +3635,17 @@ static setBlanklessLoadingCacheCapacity(capacity: number) : number
 setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCode
 ```
 
-设置无白屏加载是否启用，本接口必须与[getBlanklessInfoWithKey](#getblanklessinfowithkey)接口配套使用。 &gt; **说明：** &gt; &gt; - 需在触发页面加载的接口之后调用，其他约束同[getBlanklessInfoWithKey](#getblanklessinfowithkey)。 &gt; &gt; - 页面加载必须在调用本接口的组件中进行。 &gt; &gt; - 当相似度较低时，系统将判定为跳变过大，启用插帧会失败。 &gt; &gt; - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO， &gt; 具体权限的添加方法请参考[在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
+设置无白屏加载是否启用，本接口必须与[getBlanklessInfoWithKey](#getblanklessinfowithkey)接口配套使用。
+
+> **说明：**
+> 
+> - 需在触发页面加载的接口之后调用，其他约束同[getBlanklessInfoWithKey](#getblanklessinfowithkey)。
+> 
+> - 页面加载必须在调用本接口的组件中进行。
+> 
+> - 当相似度较低时，系统将判定为跳变过大，启用插帧会失败。
+> 
+> - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO， &gt; 具体权限的添加方法请参考[在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
 
 **起始版本：** 20
 
@@ -3411,7 +3679,17 @@ setBlanklessLoadingWithParams(key: string,
       param: BlanklessLoadingParam) : WebBlanklessErrorCode
 ```
 
-设置白屏插帧的配置参数，本接口必须与[getBlanklessInfoWithKey](#getblanklessinfowithkey)接口配套使用。相比于 [setBlanklessLoadingWithKey](#setblanklessloadingwithkey)，本接口支持白屏插帧更多的参数设置，包括插帧持续时 间，缓存数据有效时间，插帧完成后的自定义回调。 &gt; **说明：** &gt; &gt; - 需在触发页面加载的接口之后调用，其他约束同[getBlanklessInfoWithKey](#getblanklessinfowithkey)。 &gt; &gt; - 页面加载必须在调用本接口的组件中进行。 &gt; &gt; - 当相似度较低时，系统将判定为跳变过大，启用插帧会失败。 &gt; &gt; - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO，具体权限的添加方法请参考 &gt; [在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
+设置白屏插帧的配置参数，本接口必须与[getBlanklessInfoWithKey](#getblanklessinfowithkey)接口配套使用。相比于 [setBlanklessLoadingWithKey](#setblanklessloadingwithkey)，本接口支持白屏插帧更多的参数设置，包括插帧持续时 间，缓存数据有效时间，插帧完成后的自定义回调。
+
+> **说明：**
+> 
+> - 需在触发页面加载的接口之后调用，其他约束同[getBlanklessInfoWithKey](#getblanklessinfowithkey)。
+> 
+> - 页面加载必须在调用本接口的组件中进行。
+> 
+> - 当相似度较低时，系统将判定为跳变过大，启用插帧会失败。
+> 
+> - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO，具体权限的添加方法请参考 &gt; [在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
 
 **起始版本：** 23
 
@@ -3474,7 +3752,17 @@ static setConnectionTimeout(timeout: number): void
 setCustomUserAgent(userAgent: string): void
 ```
 
-设置自定义用户代理，会覆盖系统的用户代理。 &gt; **说明：** &gt; &gt; - 当Web组件src设置了URL时，建议在onControllerAttached回调中设置User-Agent。不要在 &gt; onLoadIntercept回调中设置，否则可能会设置失败或导致不可预期的后果。 &gt; &gt; - 若未在onControllerAttached回调中设置User-Agent，再调用setCustomUserAgent方法时，可能会出现加载的页面与实际设置User-Agent不符的异常现象。 &gt; &gt; - 当Web组件src未设置URL时，建议先调用setCustomUserAgent方法设置User-Agent，再通过loadUrl加载具体页面。 &gt; &gt; - 默认User-Agent定义与使用场景请参考[User-Agent开发指导](../../../web/web-default-userAgent.md)
+设置自定义用户代理，会覆盖系统的用户代理。
+
+> **说明：**
+> 
+> - 当Web组件src设置了URL时，建议在onControllerAttached回调中设置User-Agent。不要在 &gt; onLoadIntercept回调中设置，否则可能会设置失败或导致不可预期的后果。
+> 
+> - 若未在onControllerAttached回调中设置User-Agent，再调用setCustomUserAgent方法时，可能会出现加载的页面与实际设置User-Agent不符的异常现象。
+> 
+> - 当Web组件src未设置URL时，建议先调用setCustomUserAgent方法设置User-Agent，再通过loadUrl加载具体页面。
+> 
+> - 默认User-Agent定义与使用场景请参考[User-Agent开发指导](../../../web/web-default-userAgent.md)
 
 **起始版本：** 10
 
@@ -3531,7 +3819,9 @@ setDownloadDelegate(delegate: WebDownloadDelegate): void
 setErrorPageEnabled(enable: boolean): void
 ```
 
-设置是否启用默认错误页。 在当前接口设置为true时如果页面加载发生错误将触发onOverrideErrorPage回调，可在该回调接口中设置自定义的错误展示页面。
+设置是否启用默认错误页。
+
+在当前接口设置为true时如果页面加载发生错误将触发onOverrideErrorPage回调，可在该回调接口中设置自定义的错误展示页面。
 
 **起始版本：** 20
 
@@ -3557,7 +3847,18 @@ setErrorPageEnabled(enable: boolean): void
 setErrorPageEnabled(enable: boolean, includeSubframe: boolean): void
 ```
 
-设置是否启用mainframe错误页功能，并可控制是否同时启用subframe错误页功能。 当enable设置为true时，mainframe加载发生错误将展示错误页：若设置了onOverrideErrorPage回调，则展示用户自定 义的错误页；若未设置，则展示ArkWeb提供的默认错误页。当enable和includeSubframe同时设置为true时，subframe加载发生错误也会展示错误页，onOverrideErrorPage回调对 subframe同样生效。 &gt; **说明：** &gt; &gt; - 当enable设置为false时，无论includeSubframe取何值，mainframe和subframe的错误页功能均不启用。 &gt; &gt; - 当includeSubframe设置为false时，本接口行为与 &gt; [setErrorPageEnabled](#seterrorpageenabled)一致，即仅启用mainframe错误页功 &gt; 能，不启用subframe错误页功能。 &gt; &gt; - 可通过errorPageEvent.request.isMainFrame()判断错误来源是mainframe还是subframe，以便在 &gt; onOverrideErrorPage回调中分别设置对应的自定义错误页。 &gt; 26.0.0
+设置是否启用mainframe错误页功能，并可控制是否同时启用subframe错误页功能。
+
+当enable设置为true时，mainframe加载发生错误将展示错误页：若设置了onOverrideErrorPage回调，则展示用户自定 义的错误页；若未设置，则展示ArkWeb提供的默认错误页。当enable和includeSubframe同时设置为true时，subframe加载发生错误也会展示错误页，onOverrideErrorPage回调对 subframe同样生效。
+
+> **说明：**
+> 
+> - 当enable设置为false时，无论includeSubframe取何值，mainframe和subframe的错误页功能均不启用。
+> 
+> - 当includeSubframe设置为false时，本接口行为与 &gt; [setErrorPageEnabled](#seterrorpageenabled)一致，即仅启用mainframe错误页功 &gt; 能，不启用subframe错误页功能。
+> 
+> - 可通过errorPageEvent.request.isMainFrame()判断错误来源是mainframe还是subframe，以便在 &gt; onOverrideErrorPage回调中分别设置对应的自定义错误页。
+> 26.0.0
 
 **起始版本：** 26.0.0
 
@@ -3674,7 +3975,27 @@ setNetworkAvailable(enable: boolean): void
 setPathAllowingUniversalAccess(pathList: Array<string>): void
 ```
 
-设置一个路径列表，当file协议访问该路径列表中的资源时，允许跨域访问本地文件，也允许跨域访问其他在线资源。此外，当设置了路径列表时，file协议仅允许访问路径列表中的资源。典型使用场景：用于需要允许Web组件跨域访问本地资源 文件，同时限制访问范围以保证安全的场景。（fileAccess的行为将会被此接口行为覆盖）。 setPathAllowingUniversalAccess放开目录的跨域访问限制是一个高风险操作。基于最小权限原则，当前el1，el2放开的路径是固定的，路径列表中的路径应符合以下任一路径格式： 1.应用文件目录的子目录（应用文件目录通过Ability Kit中的 [Context.filesDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)获取），例如： * /data/storage/el2/base/files/example * /data/storage/el2/base/haps/entry/files/example 2.应用资源目录及其子目录（应用资源目录通过Ability Kit中的 [Context.resourceDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)获取），例如： * /data/storage/el1/bundle/entry/resources/resfile * /data/storage/el1/bundle/entry/resources/resfile/example 3.从API version 21开始，还包括了应用缓存目录及其子目录（应用缓存目录通过Ability Kit中的 [Context.cacheDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)获取），例如： * /data/storage/el2/base/cache * /data/storage/el2/base/haps/entry/cache/example * 设置的目录路径中，不允许包含cache/web，否则会抛出异常码401。如果设置目录路径是cache，cache/web也不允许访问。 4.从API version 21开始，还包括了应用临时目录及其子目录（应用临时目录通过Ability Kit中的 [Context.tempDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)获取），例如： * /data/storage/el2/base/temp * /data/storage/el2/base/haps/entry/temp/example 当路径列表中有其中一个路径不满足以上条件之一，则会抛出异常码401，并且设置路径列表失败。当设置的路径列表为空，则file协议可访问范围以fileAccess的 行为为准。
+设置一个路径列表，当file协议访问该路径列表中的资源时，允许跨域访问本地文件，也允许跨域访问其他在线资源。此外，当设置了路径列表时，file协议仅允许访问路径列表中的资源。典型使用场景：用于需要允许Web组件跨域访问本地资源 文件，同时限制访问范围以保证安全的场景。（fileAccess的行为将会被此接口行为覆盖）。
+
+setPathAllowingUniversalAccess放开目录的跨域访问限制是一个高风险操作。基于最小权限原则，当前el1，el2放开的路径是固定的，路径列表中的路径应符合以下任一路径格式：
+
+1.应用文件目录的子目录（应用文件目录通过Ability Kit中的 [Context.filesDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)获取），例如：
+
+/data/storage/el2/base/files/example /data/storage/el2/base/haps/entry/files/example
+
+2.应用资源目录及其子目录（应用资源目录通过Ability Kit中的 [Context.resourceDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)获取），例如：
+
+/data/storage/el1/bundle/entry/resources/resfile /data/storage/el1/bundle/entry/resources/resfile/example
+
+3.从API version 21开始，还包括了应用缓存目录及其子目录（应用缓存目录通过Ability Kit中的 [Context.cacheDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)获取），例如：
+
+/data/storage/el2/base/cache /data/storage/el2/base/haps/entry/cache/example 设置的目录路径中，不允许包含cache/web，否则会抛出异常码401。如果设置目录路径是cache，cache/web也不允许访问。
+
+4.从API version 21开始，还包括了应用临时目录及其子目录（应用临时目录通过Ability Kit中的 [Context.tempDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)获取），例如：
+
+/data/storage/el2/base/temp /data/storage/el2/base/haps/entry/temp/example
+
+当路径列表中有其中一个路径不满足以上条件之一，则会抛出异常码401，并且设置路径列表失败。当设置的路径列表为空，则file协议可访问范围以fileAccess的 行为为准。
 
 **起始版本：** 12
 
@@ -3788,7 +4109,15 @@ setScrollable(enable: boolean, type?: ScrollType): void
 static setScrollbarMode(scrollbarMode: ScrollbarMode): void
 ```
 
-在Web页面场景，设置全局滚动条模式。不显式调用时，默认为[ScrollbarMode.OVERLAY_LAYOUT_SCROLLBAR](arkts-arkweb-webview-scrollbarmode-e.md)（非常驻滚动条）。 &gt; **说明：** &gt; &gt; - 根据滚动条模式，改变当前应用所有web滚动条模式为常驻滚动条或非常驻滚动条。 &gt; &gt; - 若forceDisplayScrollBar接口与当前接口同时设置，forceDisplayScrollBar接口设置不生效。 &gt; &gt; - 该接口需要在WebViewController绑定Web组件之前调用。
+在Web页面场景，设置全局滚动条模式。不显式调用时，默认为[ScrollbarMode.OVERLAY_LAYOUT_SCROLLBAR](arkts-arkweb-webview-scrollbarmode-e.md)（非常驻滚动条）。
+
+> **说明：**
+> 
+> - 根据滚动条模式，改变当前应用所有web滚动条模式为常驻滚动条或非常驻滚动条。
+> 
+> - 若forceDisplayScrollBar接口与当前接口同时设置，forceDisplayScrollBar接口设置不生效。
+> 
+> - 该接口需要在WebViewController绑定Web组件之前调用。
 
 **起始版本：** 23
 
@@ -3837,7 +4166,15 @@ static setServiceWorkerWebSchemeHandler(scheme: string, handler: WebSchemeHandle
 static setSiteIsolationMode(mode: SiteIsolationMode): void
 ```
 
-设置站点隔离模式。站点隔离机制将不同源的网站隔离在不同的渲染进程中，减少跨域攻击面。例如：PC等设备上，在未启用站点隔离模式时，原有进程模型是每一个Tab对应一个渲染进程，开启站点隔离后，一个Tab下不同源的Iframe可在独 立的渲染进程中运行。 对于仅加载可信网页的第三方应用，可以关闭此功能，以提升性能并减少内存占用，同时减少跨域访问的拦截。默认值根据不同的设备而定，PC/Table采用严格站点隔离 [SiteIsolationMode.STRICT](arkts-arkweb-webview-siteisolationmode-e.md)，Phone默认部分站点隔离 [SiteIsolationMode.PARTIAL](arkts-arkweb-webview-siteisolationmode-e.md)。[坚盾守护模式](../../../web/web-secure-shield-mode.md)下采用 严格站点隔离。 &gt; **说明：** &gt; &gt; 不能在单子进程模式下设置严格站点隔离。 &gt; &gt; 接口只能在初始化时调用一次，不支持反复修改。
+设置站点隔离模式。站点隔离机制将不同源的网站隔离在不同的渲染进程中，减少跨域攻击面。例如：PC等设备上，在未启用站点隔离模式时，原有进程模型是每一个Tab对应一个渲染进程，开启站点隔离后，一个Tab下不同源的Iframe可在独 立的渲染进程中运行。
+
+对于仅加载可信网页的第三方应用，可以关闭此功能，以提升性能并减少内存占用，同时减少跨域访问的拦截。默认值根据不同的设备而定，PC/Table采用严格站点隔离 [SiteIsolationMode.STRICT](arkts-arkweb-webview-siteisolationmode-e.md)，Phone默认部分站点隔离 [SiteIsolationMode.PARTIAL](arkts-arkweb-webview-siteisolationmode-e.md)。[坚盾守护模式](../../../web/web-secure-shield-mode.md)下采用 严格站点隔离。
+
+> **说明：**
+> 
+> 不能在单子进程模式下设置严格站点隔离。
+> 
+> 接口只能在初始化时调用一次，不支持反复修改。
 
 **起始版本：** 21
 
@@ -3863,7 +4200,9 @@ static setSiteIsolationMode(mode: SiteIsolationMode): void
 static setSocketIdleTimeout(timeout: number): void
 ```
 
-设置ArkWeb中已使用过的空闲socket的超时时间，即已使用过的socket可以处于空闲状态的最大时长。如果设置的值与已存在的空闲socket超时时间不同，则根据新的值对已存在的空闲socket进行清理。 未使用该接口设置空闲socket的超时时间时，ArkWeb的默认值为300s。
+设置ArkWeb中已使用过的空闲socket的超时时间，即已使用过的socket可以处于空闲状态的最大时长。如果设置的值与已存在的空闲socket超时时间不同，则根据新的值对已存在的空闲socket进行清理。
+
+未使用该接口设置空闲socket的超时时间时，ArkWeb的默认值为300s。
 
 **起始版本：** 21
 
@@ -3958,8 +4297,8 @@ setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcar
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |  |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Initialization error. The WebviewController must be associated with a Web component. |
+| [401](../../errorcode-universal.md#401-参数检查失败) |  |
 
 ## setUserAgentClientHintsEnabled
 
@@ -3967,7 +4306,13 @@ setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcar
 static setUserAgentClientHintsEnabled(enabled: boolean): void
 ```
 
-设置是否开启User-Agent Client Hints功能。 &gt; **说明：** &gt; &gt; User-Agent Client Hints（UA-CH）是一种替代传统User-Agent字符串的隐私保护机制，通过按需请求和结构化数据传递客户端信息，减少过度追踪风险。 &gt; &gt; 不使用该方法时，默认不开启User-Agent Client Hints功能。
+设置是否开启User-Agent Client Hints功能。
+
+> **说明：**
+> 
+> User-Agent Client Hints（UA-CH）是一种替代传统User-Agent字符串的隐私保护机制，通过按需请求和结构化数据传递客户端信息，减少过度追踪风险。
+> 
+> 不使用该方法时，默认不开启User-Agent Client Hints功能。
 
 **起始版本：** 24
 
@@ -3987,7 +4332,11 @@ static setUserAgentClientHintsEnabled(enabled: boolean): void
 static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void
 ```
 
-针对特定网站设置自定义用户代理，会覆盖系统的用户代理，应用内所有Web组件生效。 当需要对特定网站设置自定义用户代理时，建议在Web组件创建前调用setUserAgentForHosts方法设置User-Agent，再创建指定src的Web组件或通过 [loadUrl](#loadurl)加载具体页面。 默认User-Agent定义与使用场景，及相关User-Agent接口定义优先级请参考[User-Agent开发指导](../../../web/web-default-userAgent.md)。
+针对特定网站设置自定义用户代理，会覆盖系统的用户代理，应用内所有Web组件生效。
+
+当需要对特定网站设置自定义用户代理时，建议在Web组件创建前调用setUserAgentForHosts方法设置User-Agent，再创建指定src的Web组件或通过 [loadUrl](#loadurl)加载具体页面。
+
+默认User-Agent定义与使用场景，及相关User-Agent接口定义优先级请参考[User-Agent开发指导](../../../web/web-default-userAgent.md)。
 
 **起始版本：** 20
 
@@ -4008,7 +4357,17 @@ static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void
 setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void
 ```
 
-设置与User-Agent相对应的UserAgent Metadata数据。 &gt; **说明：** &gt; &gt; User-Agent Metadata将用于填充用户代理客户端提示，它们可以提供客户端的品牌和版本信息、底层操作系统的品牌和主要版本，以及底层设备的详细信息。 &gt; &gt; 用户代理可以通过setCustomUserAgent、setAppCustomUserAgent或setUserAgentForHosts来设置。 &gt; &gt; 如果根据覆盖后的User-Agent未找到UserAgentMetadata，且覆盖后的User-Agent包含系统默认的User-Agent，则将使用系统默认值。 &gt; &gt; 如果根据覆盖后的User-Agent未找到UserAgentMetadata，但覆盖后的 User-Agent 不包含系统默认用户代理，则只会生成低级用户代理客户端提示。
+设置与User-Agent相对应的UserAgent Metadata数据。
+
+> **说明：**
+> 
+> User-Agent Metadata将用于填充用户代理客户端提示，它们可以提供客户端的品牌和版本信息、底层操作系统的品牌和主要版本，以及底层设备的详细信息。
+> 
+> 用户代理可以通过setCustomUserAgent、setAppCustomUserAgent或setUserAgentForHosts来设置。
+> 
+> 如果根据覆盖后的User-Agent未找到UserAgentMetadata，且覆盖后的User-Agent包含系统默认的User-Agent，则将使用系统默认值。
+> 
+> 如果根据覆盖后的User-Agent未找到UserAgentMetadata，但覆盖后的 User-Agent 不包含系统默认用户代理，则只会生成低级用户代理客户端提示。
 
 **起始版本：** 24
 
@@ -4029,7 +4388,9 @@ setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void
 static setWebDebuggingAccess(webDebuggingAccess: boolean): void
 ```
 
-设置是否启用网页调试功能。详情请参考[DevTools工具](../../../web/web-debugging-with-devtools.md)。 安全提示：启用网页调试功能可以让用户检查修改Web页面内部状态，存在安全隐患，不建议在应用正式发布版本中启用。
+设置是否启用网页调试功能。详情请参考[DevTools工具](../../../web/web-debugging-with-devtools.md)。
+
+安全提示：启用网页调试功能可以让用户检查修改Web页面内部状态，存在安全隐患，不建议在应用正式发布版本中启用。
 
 **起始版本：** 9
 
@@ -4057,7 +4418,13 @@ static setWebDebuggingAccess(webDebuggingAccess: boolean): void
 static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void
 ```
 
-设置是否启用无线网页调试功能，默认不开启。 * 当没有指定端口port时，该接口等同于 [setWebDebuggingAccess](#setwebdebuggingaccess)接口， ArkWeb会启动一个本地domain socket监听。 * 当指定了端口port时，ArkWeb会启动一个tcp socket监听。这时可以无线调试网页。详情请参考[无线调试](../../../web/web-debugging-with-devtools.md#无线调试)。 由于小于1024的端口号作为熟知或系统端口，在操作系统上需要特权才能开启，因此port的取值必须大于1024，否则该接口会抛出异常。 安全提示：启用网页调试功能可以让用户检查修改Web页面内部状态，存在安全隐患，不建议在应用正式发布版本中启用。
+设置是否启用无线网页调试功能，默认不开启。
+
+当没有指定端口port时，该接口等同于 [setWebDebuggingAccess](#setwebdebuggingaccess)接口， ArkWeb会启动一个本地domain socket监听。 当指定了端口port时，ArkWeb会启动一个tcp socket监听。这时可以无线调试网页。详情请参考[无线调试](../../../web/web-debugging-with-devtools.md#无线调试)。
+
+由于小于1024的端口号作为熟知或系统端口，在操作系统上需要特权才能开启，因此port的取值必须大于1024，否则该接口会抛出异常。
+
+安全提示：启用网页调试功能可以让用户检查修改Web页面内部状态，存在安全隐患，不建议在应用正式发布版本中启用。
 
 **起始版本：** 20
 
@@ -4084,7 +4451,11 @@ static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void
 static setWebDestroyMode(mode: WebDestroyMode): void
 ```
 
-设置Web组件的销毁模式。当Web组件销毁时，销毁模式会影响Web内核资源释放的时机，例如JavaScript运行上下文、渲染上下文等。默认值： [WebDestroyMode.NORMAL_MODE](arkts-arkweb-webview-webdestroymode-e.md)（普通模式），由系统决定销毁时机。应用可设置 [WebDestroyMode.FAST_MODE](arkts-arkweb-webview-webdestroymode-e.md)（快速模式），以立即销毁资源，从而提升特定场景的性能。 &gt; **说明：** &gt; &gt; [WebDestroyMode.FAST_MODE](arkts-arkweb-webview-webdestroymode-e.md)（快速模式）会改变Web组件销毁时机，应用需关注依赖Web组件销毁时机的错误实现，例如：Web组件销毁后仍调用 &gt; WebviewController的未定义行为，与[WebDestroyMode.NORMAL_MODE](arkts-arkweb-webview-webdestroymode-e.md)（普通模式）相比，销毁时机提前，有更高的几率触发未关联绑 &gt; 定的异常（17100001），建议应用捕捉异常，或者通过[getAttachState](#getattachstate)方法查询是否绑定状态，来避免稳定性问 &gt; 题。
+设置Web组件的销毁模式。当Web组件销毁时，销毁模式会影响Web内核资源释放的时机，例如JavaScript运行上下文、渲染上下文等。默认值： [WebDestroyMode.NORMAL_MODE](arkts-arkweb-webview-webdestroymode-e.md)（普通模式），由系统决定销毁时机。应用可设置 [WebDestroyMode.FAST_MODE](arkts-arkweb-webview-webdestroymode-e.md)（快速模式），以立即销毁资源，从而提升特定场景的性能。
+
+> **说明：**
+> 
+> [WebDestroyMode.FAST_MODE](arkts-arkweb-webview-webdestroymode-e.md)（快速模式）会改变Web组件销毁时机，应用需关注依赖Web组件销毁时机的错误实现，例如：Web组件销毁后仍调用 &gt; WebviewController的未定义行为，与[WebDestroyMode.NORMAL_MODE](arkts-arkweb-webview-webdestroymode-e.md)（普通模式）相比，销毁时机提前，有更高的几率触发未关联绑 &gt; 定的异常（17100001），建议应用捕捉异常，或者通过[getAttachState](#getattachstate)方法查询是否绑定状态，来避免稳定性问 &gt; 题。
 
 **起始版本：** 20
 
@@ -4354,7 +4725,7 @@ storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<str
 | --- | --- | --- | --- |
 | baseName | string | 是 | 生成的离线网页存储位置，该值不能为空。 |
 | autoName | boolean | 是 | 决定是否自动生成文件名。 <br>false表示按baseName的文件名存储，true表示根据当前URL自动生成文件名，并按baseName的文件目录存储。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 返回文件存储路径，保存网页失败会返回null。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 返回文件存储路径，保存网页失败会返回null。 |
 
 **错误码：**
 
@@ -4370,7 +4741,9 @@ storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<str
 terminateRenderProcess(): boolean
 ```
 
-销毁渲染进程。 调用该接口将会主动销毁相关联的渲染进程。如果渲染进程尚未启动，或者已销毁则没有任何影响。此外销毁渲染进程会同时影响所有与该渲染进程关联的其他实例。
+销毁渲染进程。
+
+调用该接口将会主动销毁相关联的渲染进程。如果渲染进程尚未启动，或者已销毁则没有任何影响。此外销毁渲染进程会同时影响所有与该渲染进程关联的其他实例。
 
 **起始版本：** 12
 
@@ -4478,7 +4851,15 @@ static warmupServiceWorker(url: string): void
 webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): void
 ```
 
-获取网页全量绘制结果。 &gt; **说明：** &gt; &gt; 此接口不支持并发调用。 &gt; &gt; 仅支持对渲染进程上的资源进行截图：静态图片和文本。 &gt; &gt; 如果页面有视频则截图时会显示该视频的占位图片，没有占位图片则显示空白。
+获取网页全量绘制结果。
+
+> **说明：**
+> 
+> 此接口不支持并发调用。
+> 
+> 仅支持对渲染进程上的资源进行截图：静态图片和文本。
+> 
+> 如果页面有视频则截图时会显示该视频的占位图片，没有占位图片则显示空白。
 
 **起始版本：** 12
 
@@ -4493,7 +4874,7 @@ webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | info | [SnapshotInfo](arkts-arkweb-webview-snapshotinfo-i.md) | 是 | 全量绘制结果入参。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SnapshotResult](arkts-arkweb-webview-snapshotresult-i.md)&gt; | 是 | 全量绘制回调结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SnapshotResult](arkts-arkweb-webview-snapshotresult-i.md)&gt; | 是 | 全量绘制回调结果。 |
 
 ## zoom
 
@@ -4521,9 +4902,9 @@ zoom(factor: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100004](../errorcode-webview.md#17100004-功能开关未打开) | Function not enabled. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100004](../errorcode-webview.md#17100004-功能开关未打开) | Function not enabled. |
 
 ## zoomIn
 
@@ -4545,8 +4926,8 @@ zoomIn(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100004](../errorcode-webview.md#17100004-功能开关未打开) | Function not enabled. |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100004](../errorcode-webview.md#17100004-功能开关未打开) | Function not enabled. |
 
 ## zoomOut
 
@@ -4568,6 +4949,6 @@ zoomOut(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100004](../errorcode-webview.md#17100004-功能开关未打开) | Function not enabled. |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100004](../errorcode-webview.md#17100004-功能开关未打开) | Function not enabled. |
 

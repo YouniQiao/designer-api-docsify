@@ -92,7 +92,11 @@ struct Index {
 constructor(context: Context, window: window.Window)
 ```
 
-A constructor used to create a **DocumentViewPicker** object in a window created by an application. In other scenarios, you are advised to use **constructor(context: Context)** to create a **DocumentViewPicker** object. &gt; **NOTE：**&gt; &gt; This method is supported on 2-in-1 devices and tablets since API version 19.
+A constructor used to create a **DocumentViewPicker** object in a window created by an application. In other scenarios, you are advised to use **constructor(context: Context)** to create a **DocumentViewPicker** object.
+
+> **NOTE：**
+> 
+> This method is supported on 2-in-1 devices and tablets since API version 19.
 
 **Since:** 23
 

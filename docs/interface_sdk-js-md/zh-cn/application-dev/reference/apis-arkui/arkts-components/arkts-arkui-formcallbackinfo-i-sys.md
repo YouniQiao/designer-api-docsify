@@ -1,4 +1,4 @@
-# FormCallbackInfo(系统接口)（系统接口）
+# FormCallbackInfo（系统接口）
 
 卡片查询或者卸载时获取formId的参数。
 
@@ -21,7 +21,11 @@
 id: number
 ```
 
-卡片标识。 **说明：** 如果获取到的id为-1，说明id大于等于2^53，需要使用idString获取。
+卡片标识。
+
+**说明：**
+
+如果获取到的id为-1，说明id大于等于2^53，需要使用idString获取。
 
 **类型：** number
 

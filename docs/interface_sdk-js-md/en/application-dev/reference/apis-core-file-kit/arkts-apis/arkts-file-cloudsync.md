@@ -34,7 +34,7 @@ import { cloudSyncManager } from '@kit.CoreFileKit';
 | [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md) | Obtains the file sync state. This API uses an asynchronous callback to return the result. |
 | [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md) | Obtains the file sync state. |
 | [optimizeStorage](arkts-corefile-cloudsync-optimizestorage-f-sys.md) | Optimizes the resources that have been synced to the cloud from the local Gallery and executes the automatic aging policy according to the remaining local space. This API uses a promise to return the result. |
-| [startOptimizeSpace](arkts-corefile-cloudsync-startoptimizespace-f-sys.md) | Optimizes local resources that have been synced to the cloud and optimizes local images and videos that have not been accessed before the aging period expires. This API uses a promise to return the result. The callback returns the optimization progress. startOptimizeSpace is used together with **stopOptimizeSpace**. If **startOptimizeSpace** is called repeatedly, the error code 22400006 will be returned, indicating that other tasks are being executed. |
+| [startOptimizeSpace](arkts-corefile-cloudsync-startoptimizespace-f-sys.md) | Optimizes local resources that have been synced to the cloud and optimizes local images and videos that have not been accessed before the aging period expires. This API uses a promise to return the result. The callback returns the optimization progress. |
 | [stopOptimizeSpace](arkts-corefile-cloudsync-stopoptimizespace-f-sys.md) | Synchronously stops optimizing cloud resource space. This method is used with **startOptimizeSpace**. |
 <!--DelEnd-->
 
@@ -85,18 +85,18 @@ import { cloudSyncManager } from '@kit.CoreFileKit';
 | --- | --- |
 | [DownloadErrorType](arkts-corefile-cloudsync-downloaderrortype-e.md) | Enumerates the device-cloud download error types. |
 | [DownloadFileType](arkts-corefile-cloudsync-downloadfiletype-e.md) | Enumerates the download file types from the Drive Kit. |
-| [ErrorType](arkts-corefile-cloudsync-errortype-e.md) | Enumerates the device-cloud sync errors. - In the current phase, **NETWORK_UNAVAILABLE** is returned only when the mobile data network and Wi-Fi are unavailable. If the mobile data network is available, the synchronization can be performed normally. - During the sync process, if the battery level is lower than 10% in non-charging scenarios, **BATTERY_LEVEL_LOW** will be return when the current upload is complete. - When sync is being triggered, if the battery level is lower than 10% in non-charging scenarios, sync is not allowed. - If the cloud space is insufficient when a file is uploaded, the upload will fail and there is no such a file in the cloud. |
+| [ErrorType](arkts-corefile-cloudsync-errortype-e.md) | Enumerates the device-cloud sync errors. |
 | [FileState](arkts-corefile-cloudsync-filestate-e.md) | Enumerates the device-cloud file sync states. |
 | [NotifyType](arkts-corefile-cloudsync-notifytype-e.md) | Enumerates the data change types. |
 | [State](arkts-corefile-cloudsync-state-e.md) | Enumerates the download states of a cloud file. |
-| [SyncState](arkts-corefile-cloudsync-syncstate-e.md) | Enumerates the device-cloud sync states. &gt; **NOTE：**&gt; &gt; If a sync progress event listener is registered for an application, a callback will be invoked to notify the &gt; application when the device-cloud sync state is changed. |
+| [SyncState](arkts-corefile-cloudsync-syncstate-e.md) | Enumerates the device-cloud sync states. |
 
 <!--Del-->
 ### Enums(System API)
 
 | Name | Description |
 | --- | --- |
-| [ErrorType](arkts-corefile-cloudsync-errortype-e-sys.md) | Enumerates the device-cloud sync errors. - In the current phase, **NETWORK_UNAVAILABLE** is returned only when the mobile data network and Wi-Fi are unavailable. If the mobile data network is available, the synchronization can be performed normally. - During the sync process, if the battery level is lower than 10% in non-charging scenarios, **BATTERY_LEVEL_LOW** will be return when the current upload is complete. - When sync is being triggered, if the battery level is lower than 10% in non-charging scenarios, sync is not allowed. - If the cloud space is insufficient when a file is uploaded, the upload will fail and there is no such a file in the cloud. |
+| [ErrorType](arkts-corefile-cloudsync-errortype-e-sys.md) | Enumerates the device-cloud sync errors. |
 | [FileSyncState](arkts-corefile-cloudsync-filesyncstate-e-sys.md) | Enumerates the device-cloud file sync states. |
 | [OptimizeState](arkts-corefile-cloudsync-optimizestate-e-sys.md) | Enumerates the space optimization states. |
 | [State](arkts-corefile-cloudsync-state-e-sys.md) | Enumerates the download states of a cloud file. |

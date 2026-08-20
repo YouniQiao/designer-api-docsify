@@ -1,6 +1,8 @@
 # ImageError
 
-Describes the object returned by the image loading error callback. This event is not triggered if the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
+Describes the object returned by the image loading error callback.
+
+This event is not triggered if the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 9
 
@@ -20,7 +22,9 @@ import { imageGeneration } from '@kit.ArkUI';
 componentHeight: number
 ```
 
-Height of the component. Unit: px
+Height of the component.
+
+Unit: px
 
 **Type:** number
 
@@ -40,7 +44,9 @@ Height of the component. Unit: px
 componentWidth: number
 ```
 
-Width of the component. Unit: px
+Width of the component.
+
+Unit: px
 
 **Type:** number
 
@@ -60,7 +66,9 @@ Width of the component. Unit: px
 downloadInfo?: RequestDownloadInfo
 ```
 
-Detailed information about online image download, including download resources, network, and performance. This field is carried when the image source is an online image and the download fails. Default value: **null**
+Detailed information about online image download, including download resources, network, and performance. This field is carried when the image source is an online image and the download fails.
+
+Default value: **null**
 
 **Type:** [RequestDownloadInfo](arkts-arkui-requestdownloadinfo-t.md)
 
@@ -82,7 +90,9 @@ Detailed information about online image download, including download resources, 
 error?: BusinessError<void>
 ```
 
-Error information returned when an error occurs during image loading, where **code** represents the error code and **message** indicates the error message. For details, see the error code reference below. Default value: **{ code : -1, message : "" }**
+Error information returned when an error occurs during image loading, where **code** represents the error code and **message** indicates the error message. For details, see the error code reference below.
+
+Default value: **{ code : -1, message : "" }**
 
 **Type:** [BusinessError](arkts-arkui-businesserror-t.md)&lt;void&gt;
 

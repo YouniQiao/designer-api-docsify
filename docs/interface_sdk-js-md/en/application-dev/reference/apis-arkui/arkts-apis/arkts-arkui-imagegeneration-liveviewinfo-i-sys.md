@@ -2,6 +2,8 @@
 
 Information for LiveView in AI image generation.
 
+@interface LiveViewInfo
+
 **Since:** 26.0.0
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.

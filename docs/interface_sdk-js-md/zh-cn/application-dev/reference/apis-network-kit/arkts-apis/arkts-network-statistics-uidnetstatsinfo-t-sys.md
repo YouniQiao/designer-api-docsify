@@ -4,7 +4,7 @@
 export type UidNetStatsInfo = Record<int, NetStatsInfo>
 ```
 
-[NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md) for every UID. Key is UID. [NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md) for every UID. Key is UID. @syscap SystemCapability.Communication.NetManager.Core [NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md) for every UID. Key is UID. @systemapi Hide this for inner system use. [NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md) for every UID. Key is UID. @since 12 dynamic [NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md) for every UID. Key is UID./ export type UidNetStatsInfo = { [uid: int]: NetStatsInfo; }; /** [NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md) for every UID. Key is UID.
+[NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md) for every UID. Key is UID. [NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md) for every UID. Key is UID.
 
 **起始版本：** 23
 

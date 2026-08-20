@@ -482,13 +482,13 @@ Unregister listens for playback error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
-| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
 | [5400104](../../apis-media-kit/errorcode-media.md#5400104-operation-timeout) | Time out. |
 | [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
 ## offKeyRequest
 
@@ -953,13 +953,13 @@ Unregister listens for playback error events.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
-| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
 | [5400104](../../apis-media-kit/errorcode-media.md#5400104-operation-timeout) | Time out. |
 | [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
 ## off('keyRequest')
 
@@ -1279,12 +1279,12 @@ Register listeners for cast control decoding error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6614004](../errorcode-avsession.md#6614004-content-format-is-beyond-the-device-capability) | The format of the content to decode exceeds the capabilities of the device. |
-| [6614005](../errorcode-avsession.md#6614005-decoding-of-the-content-format-is-not-supported) | The format of the content to decode is not supported. |
 | [6614000](../errorcode-avsession.md#6614000-unknown-decoding-error) | Unspecified decoding error. |
 | [6614001](../errorcode-avsession.md#6614001-decoder-initialization-failure) | Decoder initialization failed. |
 | [6614002](../errorcode-avsession.md#6614002-decoder-query-failure) | Decoder query failed. |
 | [6614003](../errorcode-avsession.md#6614003-media-sample-decoding-failure) | Decoding the media samples failed. |
+| [6614004](../errorcode-avsession.md#6614004-content-format-is-beyond-the-device-capability) | The format of the content to decode exceeds the capabilities of the device. |
+| [6614005](../errorcode-avsession.md#6614005-decoding-of-the-content-format-is-not-supported) | The format of the content to decode is not supported. |
 
 ## onCastControlDrmError
 
@@ -1310,16 +1310,16 @@ Register listeners for cast control drm error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6616004](../errorcode-avsession.md#6616004-license-obtaining-failure) | Failed to obtain a license. |
-| [6616100](../errorcode-avsession.md#6616100-error-in-processing-the-key-response) | An error occurs when the DRM processes the key response. |
-| [6616005](../errorcode-avsession.md#6616005-operation-not-allowed-by-the-license-policy) | The operation is disallowed by the license policy. |
-| [6616006](../errorcode-avsession.md#6616006-drm-system-error) | An error occurs in the DRM system. |
-| [6616007](../errorcode-avsession.md#6616007-drm-privileges-revoked) | The device has revoked DRM privileges. |
 | [6616000](../errorcode-avsession.md#6616000-unknown-drm-error) | Unspecified error related to DRM. |
 | [6616001](../errorcode-avsession.md#6616001-device-does-not-support-the-selected-drm-solution) | The chosen DRM protection scheme is not supported by the device. |
 | [6616002](../errorcode-avsession.md#6616002-device-provisioning-failure) | Device provisioning failed. |
 | [6616003](../errorcode-avsession.md#6616003-drm-protected-content-to-play-is-incompatible) | The DRM-protected content to play is incompatible. |
+| [6616004](../errorcode-avsession.md#6616004-license-obtaining-failure) | Failed to obtain a license. |
+| [6616005](../errorcode-avsession.md#6616005-operation-not-allowed-by-the-license-policy) | The operation is disallowed by the license policy. |
+| [6616006](../errorcode-avsession.md#6616006-drm-system-error) | An error occurs in the DRM system. |
+| [6616007](../errorcode-avsession.md#6616007-drm-privileges-revoked) | The device has revoked DRM privileges. |
 | [6616008](../errorcode-avsession.md#6616008-expired-drm-license-loaded) | The DRM license being loaded into the open DRM session has expired. |
+| [6616100](../errorcode-avsession.md#6616100-error-in-processing-the-key-response) | An error occurs when the DRM processes the key response. |
 
 ## onCastControlGenericError
 
@@ -1345,20 +1345,20 @@ Register listeners for cast control generic error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6611108](../errorcode-avsession.md#6611108-operation-not-allowed) | Operation is not allowed. |
-| [6611104](../errorcode-avsession.md#6611104-unsupported-playback-speed) | The specified playback speed is not supported. |
-| [6611105](../errorcode-avsession.md#6611105-device-revocation) | The action failed because either the media source device or the media sink device has been revoked. |
-| [6611106](../errorcode-avsession.md#6611106-invalid-input-parameter) | The parameter is invalid, for example, the url is illegal to play. |
-| [6611107](../errorcode-avsession.md#6611107-memory-allocation-failure) | Allocation of memory failed. |
+| [6611000](../errorcode-avsession.md#6611000-unknown-error-in-the-cast-controller) | The error code for cast control is unspecified. |
+| [6611001](../errorcode-avsession.md#6611001-unknown-error-in-the-remote-device) | An unspecified error occurs in the remote player. |
+| [6611002](../errorcode-avsession.md#6611002-loading-position-exceeds-the-total-video-progress) | The playback position falls behind the live window. |
+| [6611003](../errorcode-avsession.md#6611003-cast-controller-loading-timeout) | The process of cast control times out. |
 | [6611004](../errorcode-avsession.md#6611004-runtime-check-failure) | The runtime check failed. |
 | [6611100](../errorcode-avsession.md#6611100-cross-device-data-transmission-locked) | Cross-device data transmission is locked. |
 | [6611101](../errorcode-avsession.md#6611101-unsupported-seek-mode) | The specified seek mode is not supported. |
 | [6611102](../errorcode-avsession.md#6611102-invalid-seek-target) | The position to seek to is out of the range of the media asset or the specified seek mode is not supported. |
 | [6611103](../errorcode-avsession.md#6611103-unsupported-playback-mode) | The specified playback mode is not supported. |
-| [6611000](../errorcode-avsession.md#6611000-unknown-error-in-the-cast-controller) | The error code for cast control is unspecified. |
-| [6611001](../errorcode-avsession.md#6611001-unknown-error-in-the-remote-device) | An unspecified error occurs in the remote player. |
-| [6611002](../errorcode-avsession.md#6611002-loading-position-exceeds-the-total-video-progress) | The playback position falls behind the live window. |
-| [6611003](../errorcode-avsession.md#6611003-cast-controller-loading-timeout) | The process of cast control times out. |
+| [6611104](../errorcode-avsession.md#6611104-unsupported-playback-speed) | The specified playback speed is not supported. |
+| [6611105](../errorcode-avsession.md#6611105-device-revocation) | The action failed because either the media source device or the media sink device has been revoked. |
+| [6611106](../errorcode-avsession.md#6611106-invalid-input-parameter) | The parameter is invalid, for example, the url is illegal to play. |
+| [6611107](../errorcode-avsession.md#6611107-memory-allocation-failure) | Allocation of memory failed. |
+| [6611108](../errorcode-avsession.md#6611108-operation-not-allowed) | Operation is not allowed. |
 
 ## onCastControlIoError
 
@@ -1384,19 +1384,19 @@ Register listeners for cast control input/output error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6612004](../errorcode-avsession.md#6612004-unexpected-http-response-status-code-from-the-http-server) | The HTTP server returns an unexpected HTTP response status code. |
-| [6612100](../errorcode-avsession.md#6612100-no-playable-content) | The media does not contain any contents that can be played. |
-| [6612005](../errorcode-avsession.md#6612005-file-does-not-exist) | The file does not exist. |
-| [6612101](../errorcode-avsession.md#6612101-failure-in-reading-media-assets) | The media cannot be read, for example, because of dust or scratches. |
-| [6612006](../errorcode-avsession.md#6612006-no-permission-for-io-operations) | No permission is granted to perform the IO operation. |
-| [6612102](../errorcode-avsession.md#6612102-resource-is-being-used) | This resource is already in use. |
-| [6612007](../errorcode-avsession.md#6612007-operation-not-allowed-by-network-security-configuration) | Access to cleartext HTTP traffic is not allowed by the app's network security configuration. |
-| [6612103](../errorcode-avsession.md#6612103-content-expired) | The content using the validity interval has expired. |
 | [6612000](../errorcode-avsession.md#6612000-unknown-io-error) | An unspecified input/output error occurs. |
 | [6612001](../errorcode-avsession.md#6612001-network-connection-failure) | Network connection failure. |
 | [6612002](../errorcode-avsession.md#6612002-network-timeout) | Network timeout. |
 | [6612003](../errorcode-avsession.md#6612003-invalid-content-type-http-header) | Invalid "Content-Type" HTTP header. |
+| [6612004](../errorcode-avsession.md#6612004-unexpected-http-response-status-code-from-the-http-server) | The HTTP server returns an unexpected HTTP response status code. |
+| [6612005](../errorcode-avsession.md#6612005-file-does-not-exist) | The file does not exist. |
+| [6612006](../errorcode-avsession.md#6612006-no-permission-for-io-operations) | No permission is granted to perform the IO operation. |
+| [6612007](../errorcode-avsession.md#6612007-operation-not-allowed-by-network-security-configuration) | Access to cleartext HTTP traffic is not allowed by the app's network security configuration. |
 | [6612008](../errorcode-avsession.md#6612008-data-to-read-out-of-range) | Reading data out of the data bound. |
+| [6612100](../errorcode-avsession.md#6612100-no-playable-content) | The media does not contain any contents that can be played. |
+| [6612101](../errorcode-avsession.md#6612101-failure-in-reading-media-assets) | The media cannot be read, for example, because of dust or scratches. |
+| [6612102](../errorcode-avsession.md#6612102-resource-is-being-used) | This resource is already in use. |
+| [6612103](../errorcode-avsession.md#6612103-content-expired) | The content using the validity interval has expired. |
 | [6612104](../errorcode-avsession.md#6612104-requested-content-cannot-be-used) | Using the requested content to play is not allowed. |
 | [6612105](../errorcode-avsession.md#6612105-unable-to-verify-the-allowed-content) | The use of the allowed content cannot be verified. |
 | [6612106](../errorcode-avsession.md#6612106-frequent-resource-usage) | The number of times this content has been used as requested has reached the maximum allowed number of uses. |
@@ -1426,11 +1426,11 @@ Register listeners for cast control parsing error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6613004](../errorcode-avsession.md#6613004-unsupported-feature-in-the-media-manifest) | Unsupported feature in the media manifest. |
 | [6613000](../errorcode-avsession.md#6613000-unknown-parsing-error) | Unspecified error related to content parsing. |
 | [6613001](../errorcode-avsession.md#6613001-invalid-type) | Parsing error associated with media container format bit streams. |
 | [6613002](../errorcode-avsession.md#6613002-error-in-parsing-media-manifest) | Parsing error associated with the media manifest. |
 | [6613003](../errorcode-avsession.md#6613003-unsupported-media-format) | An error occurs when attempting to extract a file with an unsupported media container format or an unsupported media container feature. |
+| [6613004](../errorcode-avsession.md#6613004-unsupported-feature-in-the-media-manifest) | Unsupported feature in the media manifest. |
 
 ## onCustomDataChange
 
@@ -1508,13 +1508,13 @@ Register listeners for playback error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
-| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
 | [5400104](../../apis-media-kit/errorcode-media.md#5400104-operation-timeout) | Time out. |
 | [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
 ## onKeyRequest
 
@@ -1837,13 +1837,13 @@ Register listeners for cast control decoding error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6614004](../errorcode-avsession.md#6614004-content-format-is-beyond-the-device-capability) | The format of the content to decode exceeds the capabilities of the device. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [6614005](../errorcode-avsession.md#6614005-decoding-of-the-content-format-is-not-supported) | The format of the content to decode is not supported. |
 | [6614000](../errorcode-avsession.md#6614000-unknown-decoding-error) | Unspecified decoding error. |
 | [6614001](../errorcode-avsession.md#6614001-decoder-initialization-failure) | Decoder initialization failed. |
 | [6614002](../errorcode-avsession.md#6614002-decoder-query-failure) | Decoder query failed. |
 | [6614003](../errorcode-avsession.md#6614003-media-sample-decoding-failure) | Decoding the media samples failed. |
+| [6614004](../errorcode-avsession.md#6614004-content-format-is-beyond-the-device-capability) | The format of the content to decode exceeds the capabilities of the device. |
+| [6614005](../errorcode-avsession.md#6614005-decoding-of-the-content-format-is-not-supported) | The format of the content to decode is not supported. |
 
 ## on('castControlDrmError')
 
@@ -1872,17 +1872,17 @@ Register listeners for cast control drm error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6616004](../errorcode-avsession.md#6616004-license-obtaining-failure) | Failed to obtain a license. |
-| [6616100](../errorcode-avsession.md#6616100-error-in-processing-the-key-response) | An error occurs when the DRM processes the key response. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [6616005](../errorcode-avsession.md#6616005-operation-not-allowed-by-the-license-policy) | The operation is disallowed by the license policy. |
-| [6616006](../errorcode-avsession.md#6616006-drm-system-error) | An error occurs in the DRM system. |
-| [6616007](../errorcode-avsession.md#6616007-drm-privileges-revoked) | The device has revoked DRM privileges. |
 | [6616000](../errorcode-avsession.md#6616000-unknown-drm-error) | Unspecified error related to DRM. |
 | [6616001](../errorcode-avsession.md#6616001-device-does-not-support-the-selected-drm-solution) | The chosen DRM protection scheme is not supported by the device. |
 | [6616002](../errorcode-avsession.md#6616002-device-provisioning-failure) | Device provisioning failed. |
 | [6616003](../errorcode-avsession.md#6616003-drm-protected-content-to-play-is-incompatible) | The DRM-protected content to play is incompatible. |
+| [6616004](../errorcode-avsession.md#6616004-license-obtaining-failure) | Failed to obtain a license. |
+| [6616005](../errorcode-avsession.md#6616005-operation-not-allowed-by-the-license-policy) | The operation is disallowed by the license policy. |
+| [6616006](../errorcode-avsession.md#6616006-drm-system-error) | An error occurs in the DRM system. |
+| [6616007](../errorcode-avsession.md#6616007-drm-privileges-revoked) | The device has revoked DRM privileges. |
 | [6616008](../errorcode-avsession.md#6616008-expired-drm-license-loaded) | The DRM license being loaded into the open DRM session has expired. |
+| [6616100](../errorcode-avsession.md#6616100-error-in-processing-the-key-response) | An error occurs when the DRM processes the key response. |
 
 ## on('castControlGenericError')
 
@@ -1911,21 +1911,21 @@ Register listeners for cast control generic error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6611108](../errorcode-avsession.md#6611108-operation-not-allowed) | Operation is not allowed. |
-| [6611104](../errorcode-avsession.md#6611104-unsupported-playback-speed) | The specified playback speed is not supported. |
-| [6611105](../errorcode-avsession.md#6611105-device-revocation) | The action failed because either the media source device or the media sink device has been revoked. |
-| [6611106](../errorcode-avsession.md#6611106-invalid-input-parameter) | The parameter is invalid, for example, the url is illegal to play. |
-| [6611107](../errorcode-avsession.md#6611107-memory-allocation-failure) | Allocation of memory failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [6611000](../errorcode-avsession.md#6611000-unknown-error-in-the-cast-controller) | The error code for cast control is unspecified. |
+| [6611001](../errorcode-avsession.md#6611001-unknown-error-in-the-remote-device) | An unspecified error occurs in the remote player. |
+| [6611002](../errorcode-avsession.md#6611002-loading-position-exceeds-the-total-video-progress) | The playback position falls behind the live window. |
+| [6611003](../errorcode-avsession.md#6611003-cast-controller-loading-timeout) | The process of cast control times out. |
 | [6611004](../errorcode-avsession.md#6611004-runtime-check-failure) | The runtime check failed. |
 | [6611100](../errorcode-avsession.md#6611100-cross-device-data-transmission-locked) | Cross-device data transmission is locked. |
 | [6611101](../errorcode-avsession.md#6611101-unsupported-seek-mode) | The specified seek mode is not supported. |
 | [6611102](../errorcode-avsession.md#6611102-invalid-seek-target) | The position to seek to is out of the range of the media asset or the specified seek mode is not supported. |
 | [6611103](../errorcode-avsession.md#6611103-unsupported-playback-mode) | The specified playback mode is not supported. |
-| [6611000](../errorcode-avsession.md#6611000-unknown-error-in-the-cast-controller) | The error code for cast control is unspecified. |
-| [6611001](../errorcode-avsession.md#6611001-unknown-error-in-the-remote-device) | An unspecified error occurs in the remote player. |
-| [6611002](../errorcode-avsession.md#6611002-loading-position-exceeds-the-total-video-progress) | The playback position falls behind the live window. |
-| [6611003](../errorcode-avsession.md#6611003-cast-controller-loading-timeout) | The process of cast control times out. |
+| [6611104](../errorcode-avsession.md#6611104-unsupported-playback-speed) | The specified playback speed is not supported. |
+| [6611105](../errorcode-avsession.md#6611105-device-revocation) | The action failed because either the media source device or the media sink device has been revoked. |
+| [6611106](../errorcode-avsession.md#6611106-invalid-input-parameter) | The parameter is invalid, for example, the url is illegal to play. |
+| [6611107](../errorcode-avsession.md#6611107-memory-allocation-failure) | Allocation of memory failed. |
+| [6611108](../errorcode-avsession.md#6611108-operation-not-allowed) | Operation is not allowed. |
 
 ## on('castControlIoError')
 
@@ -1954,24 +1954,24 @@ Register listeners for cast control input/output error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6612004](../errorcode-avsession.md#6612004-unexpected-http-response-status-code-from-the-http-server) | The HTTP server returns an unexpected HTTP response status code. |
-| [6612100](../errorcode-avsession.md#6612100-no-playable-content) | The media does not contain any contents that can be played. |
-| [6612005](../errorcode-avsession.md#6612005-file-does-not-exist) | The file does not exist. |
-| [6612101](../errorcode-avsession.md#6612101-failure-in-reading-media-assets) | The media cannot be read, for example, because of dust or scratches. |
-| [6612006](../errorcode-avsession.md#6612006-no-permission-for-io-operations) | No permission is granted to perform the IO operation. |
-| [6612102](../errorcode-avsession.md#6612102-resource-is-being-used) | This resource is already in use. |
-| [6612007](../errorcode-avsession.md#6612007-operation-not-allowed-by-network-security-configuration) | Access to cleartext HTTP traffic is not allowed by the app's network security configuration. |
-| [6612103](../errorcode-avsession.md#6612103-content-expired) | The content using the validity interval has expired. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [6612000](../errorcode-avsession.md#6612000-unknown-io-error) | An unspecified input/output error occurs. |
 | [6612001](../errorcode-avsession.md#6612001-network-connection-failure) | Network connection failure. |
 | [6612002](../errorcode-avsession.md#6612002-network-timeout) | Network timeout. |
 | [6612003](../errorcode-avsession.md#6612003-invalid-content-type-http-header) | Invalid "Content-Type" HTTP header. |
+| [6612004](../errorcode-avsession.md#6612004-unexpected-http-response-status-code-from-the-http-server) | The HTTP server returns an unexpected HTTP response status code. |
+| [6612005](../errorcode-avsession.md#6612005-file-does-not-exist) | The file does not exist. |
+| [6612006](../errorcode-avsession.md#6612006-no-permission-for-io-operations) | No permission is granted to perform the IO operation. |
+| [6612007](../errorcode-avsession.md#6612007-operation-not-allowed-by-network-security-configuration) | Access to cleartext HTTP traffic is not allowed by the app's network security configuration. |
 | [6612008](../errorcode-avsession.md#6612008-data-to-read-out-of-range) | Reading data out of the data bound. |
+| [6612100](../errorcode-avsession.md#6612100-no-playable-content) | The media does not contain any contents that can be played. |
+| [6612101](../errorcode-avsession.md#6612101-failure-in-reading-media-assets) | The media cannot be read, for example, because of dust or scratches. |
+| [6612102](../errorcode-avsession.md#6612102-resource-is-being-used) | This resource is already in use. |
+| [6612103](../errorcode-avsession.md#6612103-content-expired) | The content using the validity interval has expired. |
 | [6612104](../errorcode-avsession.md#6612104-requested-content-cannot-be-used) | Using the requested content to play is not allowed. |
 | [6612105](../errorcode-avsession.md#6612105-unable-to-verify-the-allowed-content) | The use of the allowed content cannot be verified. |
 | [6612106](../errorcode-avsession.md#6612106-frequent-resource-usage) | The number of times this content has been used as requested has reached the maximum allowed number of uses. |
 | [6612107](../errorcode-avsession.md#6612107-failure-in-sending-resource-packages-to-the-remote-device) | An error occurs when sending packet from source device to sink device. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## on('castControlParsingError')
 
@@ -2001,11 +2001,11 @@ Register listeners for cast control parsing error events.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [6613004](../errorcode-avsession.md#6613004-unsupported-feature-in-the-media-manifest) | Unsupported feature in the media manifest. |
 | [6613000](../errorcode-avsession.md#6613000-unknown-parsing-error) | Unspecified error related to content parsing. |
 | [6613001](../errorcode-avsession.md#6613001-invalid-type) | Parsing error associated with media container format bit streams. |
 | [6613002](../errorcode-avsession.md#6613002-error-in-parsing-media-manifest) | Parsing error associated with the media manifest. |
 | [6613003](../errorcode-avsession.md#6613003-unsupported-media-format) | An error occurs when attempting to extract a file with an unsupported media container format or an unsupported media container feature. |
+| [6613004](../errorcode-avsession.md#6613004-unsupported-feature-in-the-media-manifest) | Unsupported feature in the media manifest. |
 
 ## on('customDataChange')
 
@@ -2092,13 +2092,13 @@ Register listeners for playback error events.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
-| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
 | [5400104](../../apis-media-kit/errorcode-media.md#5400104-operation-timeout) | Time out. |
 | [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
 ## on('keyRequest')
 
@@ -2557,8 +2557,8 @@ Send control commands to remote player
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
+| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
 
 ## sendControlCommand
 
@@ -2594,8 +2594,8 @@ Send control commands to remote player
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
+| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
 
 ## sendCustomData
 

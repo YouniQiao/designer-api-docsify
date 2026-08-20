@@ -1,4 +1,4 @@
-# InterceptedRecord(Network Firewall) (System API)
+# InterceptedRecord (System API)
 
 Intercepted record.
 

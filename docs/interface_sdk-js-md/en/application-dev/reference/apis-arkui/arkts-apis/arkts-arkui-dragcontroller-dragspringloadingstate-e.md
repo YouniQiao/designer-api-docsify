@@ -2,6 +2,8 @@
 
 Defines the drag spring loading state. Under default system configuration, if no CANCEL occurs, the state reporting is as follows: Hover still--500ms--&gt;BEGIN--&gt;100ms--&gt;UPDATE--&gt;100ms--&gt;UPDATE--&gt;100ms--&gt;UPDATE--&gt;100ms--&gt;END
 
+@enum { number }
+
 **Since:** 26.0.0
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.

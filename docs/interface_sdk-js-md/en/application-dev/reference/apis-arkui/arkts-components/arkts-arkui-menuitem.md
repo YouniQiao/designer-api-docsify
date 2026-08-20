@@ -1,8 +1,12 @@
 # MenuItem
 
-The **MenuItem** component represents an item in a menu. > **NOTE** > > This component is supported since API version 9. Newly added APIs will be marked with a superscript to indicate > their
+The **MenuItem** component represents an item in a menu.
 
-## Child Components Not supported
+> **NOTE** > > This component is supported since API version 9. Newly added APIs will be marked with a superscript to indicate > their
+
+## Child Components
+
+Not supported
 
 ## MenuItem
 
@@ -22,7 +26,7 @@ MenuItem(value?: MenuItemOptions | CustomBuilder)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | MenuItemOptions \| CustomBuilder | No | Information about the menu item. |
+| value | [MenuItemOptions](arkts-arkui-menuitemoptions-i.md) \| CustomBuilder | No | Information about the menu item. |
 
 ## Summary
 

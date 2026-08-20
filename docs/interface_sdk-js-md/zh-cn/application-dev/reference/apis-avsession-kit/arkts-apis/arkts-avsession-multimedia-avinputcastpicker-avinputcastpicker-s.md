@@ -1,6 +1,10 @@
 # AVInputCastPicker
 
-录音设备选择组件，可用于切换音频输入设备。 该组件为自定义组件，开发者在使用前需要先了解[@Component](../../../ui/state-management/arkts-create-custom-components.md#component)。
+录音设备选择组件，可用于切换音频输入设备。
+
+该组件为自定义组件，开发者在使用前需要先了解[@Component](../../../ui/state-management/arkts-create-custom-components.md#component)。
+
+@struct { AVInputCastPicker }
 
 **起始版本：** 20
 
@@ -23,7 +27,7 @@ import { AVInputCastPicker } from '@kit.AVSessionKit';
 
 自定义样式。建议开发者自定义组件样式，可有效提升组件渲染性能。
 
-**类型：** CustomBuilder
+**类型：** [CustomBuilder](../../apis-default/arkts-apis/arkts-custombuilder-t.md)
 
 **起始版本：** 20
 

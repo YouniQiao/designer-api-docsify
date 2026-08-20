@@ -12,7 +12,9 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createKdf(algName: string): Kdf
 ```
 
-创建密钥派生函数实例。 <br>支持的规格详见[密钥派生函数规格](../../../security/CryptoArchitectureKit/crypto-key-derivation-overview.md)。
+创建密钥派生函数实例。
+
+<br>支持的规格详见[密钥派生函数规格](../../../security/CryptoArchitectureKit/crypto-key-derivation-overview.md)。
 
 **起始版本：** 23
 

@@ -1,6 +1,13 @@
 # NetConnection
 
-网络连接对象类型。 &gt; **说明：** &gt; &gt; （1）设备从无网络状态转变为有网络状态时，将触发netAvailable事件、netCapabilitiesChange事件和netConnectionPropertiesChange事件； &gt; &gt; （2）接收到netAvailable事件后，若设备从有网络状态转变为无网络状态，将触发netLost事件； &gt; &gt; （3）若未接收到netAvailable事件，则将直接接收到netUnavailable事件； &gt; &gt; （4）设备从WiFi网络切换至蜂窝网络时，将先触发netLost事件（WiFi丢失），随后触发netAvailable事件（蜂窝可用）。
+网络连接对象类型。
+
+> **说明：**
+> 
+> （1）设备从无网络状态转变为有网络状态时，将触发netAvailable事件、netCapabilitiesChange事件和netConnectionPropertiesChange事件； &gt;
+> （2）接收到netAvailable事件后，若设备从有网络状态转变为无网络状态，将触发netLost事件； &gt;
+> （3）若未接收到netAvailable事件，则将直接接收到netUnavailable事件； &gt;
+> （4）设备从WiFi网络切换至蜂窝网络时，将先触发netLost事件（WiFi丢失），随后触发netAvailable事件（蜂窝可用）。
 
 **起始版本：** 23
 
@@ -32,7 +39,7 @@ Registers a listener for netBlockStatusChange events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetBlockStatusInfo](arkts-network-connection-netblockstatusinfo-i.md)&gt; | 是 | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NetBlockStatusInfo](arkts-network-connection-netblockstatusinfo-i.md)&gt; | 是 | the callback used to return the result. |
 
 ## onNetLost
 
@@ -54,7 +61,7 @@ Registers a listener for **netLost** events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | 是 | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NetHandle&gt; | 是 | the callback used to return the result. |
 
 **示例**
 
@@ -103,7 +110,7 @@ Registers a listener for netUnavailable events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | the callback used to return the result. |
 
 **示例**
 
@@ -153,7 +160,7 @@ on(type: 'netAvailable', callback: Callback<NetHandle>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'netAvailable' | 是 | 订阅事件，固定为'netAvailable'。 <br>netAvailable：数据网络可用事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | 是 | 回调函数，返回数据网络句柄。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NetHandle&gt; | 是 | 回调函数，返回数据网络句柄。 |
 
 **示例**
 
@@ -199,7 +206,7 @@ on(type: 'netBlockStatusChange', callback: Callback<NetBlockStatusInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'netBlockStatusChange' | 是 | 订阅事件，固定为'netBlockStatusChange'。<br/>netBlockStatusChange：网络阻塞状态事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetBlockStatusInfo](arkts-network-connection-netblockstatusinfo-i.md)&gt; | 是 | 回调函数，获取网络阻塞状态信息。<br>**起始版本：** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NetBlockStatusInfo](arkts-network-connection-netblockstatusinfo-i.md)&gt; | 是 | 回调函数，获取网络阻塞状态信息。<br>**起始版本：** 11 |
 
 **示例**
 
@@ -249,7 +256,7 @@ on(type: 'netCapabilitiesChange', callback: Callback<NetCapabilityInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'netCapabilitiesChange' | 是 | 订阅事件，固定为'netCapabilitiesChange'。<br/>netCapabilitiesChange：网络能力变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetCapabilityInfo](arkts-network-connection-netcapabilityinfo-i.md)&gt; | 是 | 回调函数，返回数据网络句柄(netHandle)和网络的能力信息(netCap)。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NetCapabilityInfo](arkts-network-connection-netcapabilityinfo-i.md)&gt; | 是 | 回调函数，返回数据网络句柄(netHandle)和网络的能力信息(netCap)。 |
 
 **示例**
 
@@ -295,7 +302,7 @@ on(type: 'netConnectionPropertiesChange', callback: Callback<NetConnectionProper
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'netConnectionPropertiesChange' | 是 | 订阅事件，固定为'netConnectionPropertiesChange'。<br/> netConnectionPropertiesChange：网络连接信息变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetConnectionPropertyInfo](arkts-network-connection-netconnectionpropertyinfo-i.md)&gt; | 是 | 回调函数，获取网络连接属性信息。<br>**起始版本：** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NetConnectionPropertyInfo](arkts-network-connection-netconnectionpropertyinfo-i.md)&gt; | 是 | 回调函数，获取网络连接属性信息。<br>**起始版本：** 11 |
 
 **示例**
 
@@ -343,7 +350,7 @@ on(type: 'netLost', callback: Callback<NetHandle>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'netLost' | 是 | 订阅事件，固定为'netLost'。<br/>netLost：网络严重中断或正常断开事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | 是 | 回调函数，数据网络句柄(netHandle)。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NetHandle&gt; | 是 | 回调函数，数据网络句柄(netHandle)。 |
 
 **示例**
 
@@ -391,7 +398,7 @@ on(type: 'netUnavailable', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'netUnavailable' | 是 | 订阅事件，固定为'netUnavailable'。<br/>netUnavailable：网络不可用事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，无返回结果。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数，无返回结果。 |
 
 **示例**
 
@@ -424,7 +431,11 @@ netCon.unregister((error: BusinessError) => {
 register(callback: AsyncCallback<void>): void
 ```
 
-订阅指定网络状态变化的通知。如需监听特定事件，确保调用on监听事件后再调用register进行注册。 &gt; **注意：** &gt; &gt; 使用完register接口后需要及时调用unregister取消注册。
+订阅指定网络状态变化的通知。如需监听特定事件，确保调用on监听事件后再调用register进行注册。
+
+> **注意：**
+> 
+> 使用完register接口后需要及时调用unregister取消注册。
 
 **起始版本：** 23
 
@@ -440,17 +451,17 @@ register(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当订阅指定网络状态变化的通知成功，error为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当订阅指定网络状态变化的通知成功，error为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [2101008](../errorcode-net-connection.md#2101008-已存在相同的callback) | The callback already exists. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [2101008](../errorcode-net-connection.md#2101008-已存在相同的callback) | The callback already exists. |
 | [2101022](../errorcode-net-connection.md#2101022-请求数量超过最大值) | The number of requests exceeded the maximum allowed. |
 
 **示例**
@@ -499,16 +510,16 @@ unregister(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当取消订阅指定网络状态变化的通知成功，error为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当取消订阅指定网络状态变化的通知成功，error为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied.<br>**适用版本：** 8 - 11 |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied.<br>**适用版本：** 8 - 11 |
 | [2101007](../errorcode-net-connection.md#2101007-callback不存在) | The callback does not exist. |
 
 **示例**

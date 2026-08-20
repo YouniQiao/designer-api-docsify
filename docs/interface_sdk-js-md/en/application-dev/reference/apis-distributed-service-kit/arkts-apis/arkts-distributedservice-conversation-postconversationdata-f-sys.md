@@ -50,13 +50,13 @@ Sends session data to the target device. The target device must be a trusted dev
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. The deviceId, bundleName, abilityName or msg is invalid or empty. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. The application does not have the required permission to access distributed data. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [2004004](../../apis-distributedservice-kit/errorcode-conversation.md#2004004-peer-confirmation-timeout) | Timeout while waiting for acknowledgement from the remote side. |
-| [2004002](../../apis-distributedservice-kit/errorcode-conversation.md#2004002-failed-to-start-the-peer-ability) | Failed to start ability on the remote side. |
-| [2004003](../../apis-distributedservice-kit/errorcode-conversation.md#2004003-failure-to-send-data) | Failed to send data. |
-| [2000001](../../apis-distributedservice-kit/errorcode-conversation.md#2000001-internal-error) | Internal error. |
-| [2004001](../../apis-distributedservice-kit/errorcode-conversation.md#2004001-peer-device-system-version-outdated) | Remote system version is too low. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. The deviceId, bundleName, abilityName or msg is invalid or empty. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [2000001](../errorcode-conversation.md#2000001-internal-error) | Internal error. |
+| [2004001](../errorcode-conversation.md#2004001-peer-device-system-version-outdated) | Remote system version is too low. |
+| [2004002](../errorcode-conversation.md#2004002-failed-to-start-the-peer-ability) | Failed to start ability on the remote side. |
+| [2004003](../errorcode-conversation.md#2004003-failure-to-send-data) | Failed to send data. |
+| [2004004](../errorcode-conversation.md#2004004-peer-confirmation-timeout) | Timeout while waiting for acknowledgement from the remote side. |
 

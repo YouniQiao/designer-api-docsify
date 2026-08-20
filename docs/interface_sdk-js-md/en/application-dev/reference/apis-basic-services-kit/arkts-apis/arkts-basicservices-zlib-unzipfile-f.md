@@ -12,7 +12,11 @@ import { zlib } from '@kit.BasicServicesKit';
 function unzipFile(inFile: string, outFile: string, options: Options): Promise<void>
 ```
 
-Unzips a file. The execution result is returned after the decompression is complete. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise, &gt; the error code -1 is returned.
+Unzips a file. The execution result is returned after the decompression is complete. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise, &gt; the error code -1 is returned.
 
 **Since:** 7
 

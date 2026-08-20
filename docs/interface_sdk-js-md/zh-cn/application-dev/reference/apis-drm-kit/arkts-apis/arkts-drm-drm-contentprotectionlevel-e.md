@@ -1,4 +1,4 @@
-# ContentProtectionLevel(Defines the DRM capability.)
+# ContentProtectionLevel
 
 枚举，内容保护级别。
 

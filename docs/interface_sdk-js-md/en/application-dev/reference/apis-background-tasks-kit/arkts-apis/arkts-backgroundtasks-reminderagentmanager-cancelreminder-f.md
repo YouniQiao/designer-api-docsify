@@ -32,8 +32,8 @@ Cancels a reminder published. This API uses an asynchronous callback to return t
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter is not valid parameter. |
-| [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-nonexistent-reminder) | The reminder does not exist. |
-| [1700004](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700004-nonexistent-bundle-name) | The bundle name does not exist. |
+| [1700003](../errorcode-reminderAgentManager.md#1700003-nonexistent-reminder) | The reminder does not exist. |
+| [1700004](../errorcode-reminderAgentManager.md#1700004-nonexistent-bundle-name) | The bundle name does not exist. |
 
 **Examples**
 
@@ -83,8 +83,8 @@ Cancels a reminder published. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter is not valid parameter. |
-| [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-nonexistent-reminder) | The reminder does not exist. |
-| [1700004](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700004-nonexistent-bundle-name) | The bundle name does not exist. |
+| [1700003](../errorcode-reminderAgentManager.md#1700003-nonexistent-reminder) | The reminder does not exist. |
+| [1700004](../errorcode-reminderAgentManager.md#1700004-nonexistent-bundle-name) | The bundle name does not exist. |
 
 **Examples**
 

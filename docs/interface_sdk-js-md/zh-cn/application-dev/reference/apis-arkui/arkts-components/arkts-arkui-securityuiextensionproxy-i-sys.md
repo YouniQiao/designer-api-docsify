@@ -1,4 +1,4 @@
-# SecurityUIExtensionProxy(System API)（系统接口）
+# SecurityUIExtensionProxy（系统接口）
 
 用于在双方建立连接成功后，向被拉起的Ability发送数据，以及订阅和取消订阅事件回调。
 
@@ -137,7 +137,7 @@ send(data: Record<string, Object>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | 是 | 异步发送给被拉起的Ability的数据。 |
+| data | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | 异步发送给被拉起的Ability的数据。 |
 
 ## sendSync
 
@@ -161,13 +161,13 @@ sendSync(data: Record<string, Object>): Record<string, Object>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | 是 | 同步发送给被拉起的Ability的数据。 |
+| data | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | 同步发送给被拉起的Ability的数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Record&lt;string, Object&gt; | 被拉起的Ability对同步发送请求处理后返回的响应数据。 |
+| [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 被拉起的Ability对同步发送请求处理后返回的响应数据。 |
 
 **错误码：**
 

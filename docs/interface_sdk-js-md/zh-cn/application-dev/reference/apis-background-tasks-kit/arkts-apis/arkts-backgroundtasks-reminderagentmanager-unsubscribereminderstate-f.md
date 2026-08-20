@@ -26,7 +26,7 @@ function unsubscribeReminderState(callback?: Callback<Array<ReminderState>>): Pr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[ReminderState](arkts-backgroundtasks-reminderagentmanager-reminderstate-i.md)&gt;&gt; | 否 | 回调函数。如果不传参数callback，则取消所有订阅。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[ReminderState](arkts-backgroundtasks-reminderagentmanager-reminderstate-i.md)&gt;&gt; | 否 | 回调函数。如果不传参数callback，则取消所有订阅。 |
 
 **返回值：**
 
@@ -38,7 +38,7 @@ function unsubscribeReminderState(callback?: Callback<Array<ReminderState>>): Pr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1700007](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-参数错误) | If the input parameter is not valid parameter. |
+| [1700007](../errorcode-reminderAgentManager.md#1700007-参数错误) | If the input parameter is not valid parameter. |
 
 **示例**
 

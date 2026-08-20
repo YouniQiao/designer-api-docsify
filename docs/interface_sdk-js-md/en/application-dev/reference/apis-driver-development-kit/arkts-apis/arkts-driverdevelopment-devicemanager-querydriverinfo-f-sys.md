@@ -34,16 +34,16 @@ Obtains the list of detailed information about peripheral drivers. If the device
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[Readonly](../../apis-na/arkts-apis/arkts-na-readonly-t.md)&lt;[DriverInfo](arkts-driverdevelopment-devicemanager-driverinfo-i-sys.md)&gt;&gt; | List of detailed information about peripheral drivers. |
+| Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;[DriverInfo](arkts-driverdevelopment-devicemanager-driverinfo-i-sys.md)&gt;&gt; | List of detailed information about peripheral drivers. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [26300001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-externaldevicemanager-service-exception) | ExternalDeviceManager service exception. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application cannot call a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types. |
+| [26300001](../errorcode-deviceManager.md#26300001-externaldevicemanager-service-exception) | ExternalDeviceManager service exception. |
 
 **Examples**
 

@@ -2,6 +2,8 @@
 
 Defines the carrier configuration.
 
+@interface OperatorConfig
+
 **起始版本：** 23
 
 <!--Device-sim-export interface OperatorConfig--><!--Device-sim-export interface OperatorConfig-End-->

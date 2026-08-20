@@ -177,7 +177,16 @@ promise.then((value: boolean) => {
 connect(url: string, callback: AsyncCallback<boolean>): void
 ```
 
-Initiates a WebSocket request to establish a WebSocket connection to a given URL. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; The boolean value returned in the callback indicates only whether the connection request is created &gt; successfully. To detect whether the WebSocket connection is successful, you need to subscribe to the **open** &gt; event via [on('open')](#onopen) before &gt; calling this API. &gt; &gt; **NOTE：**&gt; &gt; The URL cannot contain more than 1024 characters. Otherwise, the connection fails. Since API version 15, the &gt; maximum length of URLs is changed from 1024 characters to 2048 characters. Since API version 26, the maximum &gt; length of URLs is changed from 2048 characters to 8196 characters.
+Initiates a WebSocket request to establish a WebSocket connection to a given URL. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> The boolean value returned in the callback indicates only whether the connection request is created &gt; successfully. To detect whether the WebSocket connection is successful, you need to subscribe to the **open**
+> event via [on('open')](#onopen) before &gt; calling this API.
+> 
+> **NOTE：**
+> 
+> The URL cannot contain more than 1024 characters. Otherwise, the connection fails. Since API version 15, the &gt; maximum length of URLs is changed from 1024 characters to 2048 characters. Since API version 26, the maximum &gt; length of URLs is changed from 2048 characters to 8196 characters.
 
 **Since:** 23
 
@@ -200,13 +209,13 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2302003](../errorcode-net-webSocket.md#2302003-websocket-connection-already-exists) | Websocket connection already exists.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) | Websocket certificate file does not exist.<br>**Applicable version:** 12 and later |
-| [2302001](../errorcode-net-webSocket.md#2302001-websocket-url-error) | Websocket url error.<br>**Applicable version:** 12 and later |
-| [2302999](../errorcode-net-webSocket.md#2302999-internal-error) | Websocket other unknown error.<br>**Applicable version:** 10 and later |
-| [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2302999](../errorcode-net-webSocket.md#2302999-internal-error) | Websocket other unknown error.<br>**Applicable version:** 10 and later |
+| [2302001](../errorcode-net-webSocket.md#2302001-websocket-url-error) | Websocket url error.<br>**Applicable version:** 12 and later |
+| [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) | Websocket certificate file does not exist.<br>**Applicable version:** 12 and later |
+| [2302003](../errorcode-net-webSocket.md#2302003-websocket-connection-already-exists) | Websocket connection already exists.<br>**Applicable version:** 12 and later |
+| [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -231,7 +240,16 @@ ws.connect(url, (err: BusinessError, value: boolean) => {
 connect(url: string, options: WebSocketRequestOptions, callback: AsyncCallback<boolean>): void
 ```
 
-Initiates a WebSocket request to establish a WebSocket connection to a given URL. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; The boolean value returned in the callback indicates only whether the connection request is created &gt; successfully. To detect whether the WebSocket connection is successful, you need to subscribe to the **open** &gt; event via [on('open')](#onopen) before &gt; calling this API. &gt; &gt; **NOTE：**&gt; &gt; The URL cannot contain more than 1024 characters. Otherwise, the connection fails. Since API version 15, the &gt; maximum length of URLs is changed from 1024 characters to 2048 characters. Since API version 26, the maximum &gt; length of URLs is changed from 2048 characters to 8196 characters.
+Initiates a WebSocket request to establish a WebSocket connection to a given URL. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> The boolean value returned in the callback indicates only whether the connection request is created &gt; successfully. To detect whether the WebSocket connection is successful, you need to subscribe to the **open**
+> event via [on('open')](#onopen) before &gt; calling this API.
+> 
+> **NOTE：**
+> 
+> The URL cannot contain more than 1024 characters. Otherwise, the connection fails. Since API version 15, the &gt; maximum length of URLs is changed from 1024 characters to 2048 characters. Since API version 26, the maximum &gt; length of URLs is changed from 2048 characters to 8196 characters.
 
 **Since:** 23
 
@@ -255,13 +273,13 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2302003](../errorcode-net-webSocket.md#2302003-websocket-connection-already-exists) | Websocket connection already exists.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) | Websocket certificate file does not exist.<br>**Applicable version:** 12 and later |
-| [2302001](../errorcode-net-webSocket.md#2302001-websocket-url-error) | Websocket url error.<br>**Applicable version:** 12 and later |
-| [2302999](../errorcode-net-webSocket.md#2302999-internal-error) | Websocket other unknown error.<br>**Applicable version:** 10 and later |
-| [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2302999](../errorcode-net-webSocket.md#2302999-internal-error) | Websocket other unknown error.<br>**Applicable version:** 10 and later |
+| [2302001](../errorcode-net-webSocket.md#2302001-websocket-url-error) | Websocket url error.<br>**Applicable version:** 12 and later |
+| [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) | Websocket certificate file does not exist.<br>**Applicable version:** 12 and later |
+| [2302003](../errorcode-net-webSocket.md#2302003-websocket-connection-already-exists) | Websocket connection already exists.<br>**Applicable version:** 12 and later |
+| [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -310,7 +328,16 @@ ws.connect(url, options, (err: BusinessError, value: Object) => {
 connect(url: string, options?: WebSocketRequestOptions): Promise<boolean>
 ```
 
-Establishes a WebSocket connection to a given URL. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; The boolean value returned in the callback indicates only whether the connection request is created &gt; successfully. To detect whether the WebSocket connection is successful, you need to subscribe to the **open** &gt; event via [on('open')](#onopen) before &gt; calling this API. &gt; &gt; **NOTE：**&gt; &gt; The URL cannot contain more than 1024 characters. Otherwise, the connection fails. Since API version 15, the &gt; maximum length of URLs is changed from 1024 characters to 2048 characters. Since API version 26, the maximum &gt; length of URLs is changed from 2048 characters to 8196 characters.
+Establishes a WebSocket connection to a given URL. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> The boolean value returned in the callback indicates only whether the connection request is created &gt; successfully. To detect whether the WebSocket connection is successful, you need to subscribe to the **open**
+> event via [on('open')](#onopen) before &gt; calling this API.
+> 
+> **NOTE：**
+> 
+> The URL cannot contain more than 1024 characters. Otherwise, the connection fails. Since API version 15, the &gt; maximum length of URLs is changed from 1024 characters to 2048 characters. Since API version 26, the maximum &gt; length of URLs is changed from 2048 characters to 8196 characters.
 
 **Since:** 23
 
@@ -339,13 +366,13 @@ Establishes a WebSocket connection to a given URL. This API uses a promise to re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2302003](../errorcode-net-webSocket.md#2302003-websocket-connection-already-exists) | Websocket connection already exists.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) | Websocket certificate file does not exist.<br>**Applicable version:** 12 and later |
-| [2302001](../errorcode-net-webSocket.md#2302001-websocket-url-error) | Websocket url error.<br>**Applicable version:** 12 and later |
-| [2302999](../errorcode-net-webSocket.md#2302999-internal-error) | Websocket other unknown error.<br>**Applicable version:** 10 and later |
-| [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2302999](../errorcode-net-webSocket.md#2302999-internal-error) | Websocket other unknown error.<br>**Applicable version:** 10 and later |
+| [2302001](../errorcode-net-webSocket.md#2302001-websocket-url-error) | Websocket url error.<br>**Applicable version:** 12 and later |
+| [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) | Websocket certificate file does not exist.<br>**Applicable version:** 12 and later |
+| [2302003](../errorcode-net-webSocket.md#2302003-websocket-connection-already-exists) | Websocket connection already exists.<br>**Applicable version:** 12 and later |
+| [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -493,7 +520,12 @@ Cancels listening for the error events of a WebSocket connection.
 off(type: 'close', callback?: AsyncCallback<CloseResult>): void
 ```
 
-Unsubscribes from WebSocket close events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. &gt; If you do not pass the callback, you will cancel listening for all events.
+Unsubscribes from WebSocket close events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
+> If you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 6
 
@@ -525,7 +557,12 @@ ws.off('close');
 off(type: 'dataEnd', callback?: Callback<void>): void
 ```
 
-Unsubscribes from WebSocket data receiving end events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. &gt; If you do not pass the callback, you will cancel listening for all events.
+Unsubscribes from WebSocket data receiving end events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
+> If you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 11
 
@@ -555,7 +592,12 @@ ws.off('dataEnd');
 off(type: 'error', callback?: ErrorCallback): void
 ```
 
-Unsubscribes from WebSocket error events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. &gt; If you do not pass the callback, you will cancel listening for all events.
+Unsubscribes from WebSocket error events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
+> If you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 6
 
@@ -587,7 +629,12 @@ ws.off('error');
 off(type: 'headerReceive', callback?: Callback<ResponseHeaders>): void
 ```
 
-Unsubscribes from HTTP response header events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. &gt; If you do not pass the callback, you will cancel listening for all events.
+Unsubscribes from HTTP response header events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
+> If you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 12
 
@@ -617,7 +664,14 @@ ws.off('headerReceive');
 off(type: 'message', callback?: AsyncCallback<string | ArrayBuffer>): void
 ```
 
-Unsubscribes from WebSocket server message receiving events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; The data in **AsyncCallback** can be in the format of string (API version 6) or ArrayBuffer (API version 8). &gt; &gt; You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. &gt; If you do not pass the callback, you will cancel listening for all events.
+Unsubscribes from WebSocket server message receiving events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> The data in **AsyncCallback** can be in the format of string (API version 6) or ArrayBuffer (API version 8).
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
+> If you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 6
 
@@ -649,7 +703,12 @@ ws.off('message');
 off(type: 'open', callback?: AsyncCallback<Object>): void
 ```
 
-Unsubscribes from WebSocket open events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. &gt; If you do not pass the callback, you will cancel listening for all events.
+Unsubscribes from WebSocket open events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
+> If you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 6
 
@@ -906,7 +965,9 @@ ws.on('dataEnd', () => {
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to WebSocket error events. This API uses an asynchronous callback to return the result. The error code of the [error](#onopen) event callback is described as follows: WebSocket is essentially an HTTP protocol upgrade. If the server agrees to the upgrade, the server returns 101. The status code indicates that the protocol is switched from HTTP to WebSocket ( the **open** callback is triggered). If the server rejects the upgrade or other exceptions occur, the server returns 200, indicating that the server only processes the request as a common HTTP request.
+Subscribes to WebSocket error events. This API uses an asynchronous callback to return the result.
+
+The error code of the [error](#onopen) event callback is described as follows: WebSocket is essentially an HTTP protocol upgrade. If the server agrees to the upgrade, the server returns 101. The status code indicates that the protocol is switched from HTTP to WebSocket ( the **open** callback is triggered). If the server rejects the upgrade or other exceptions occur, the server returns 200, indicating that the server only processes the request as a common HTTP request.
 
 **Since:** 6
 
@@ -973,7 +1034,11 @@ ws.on('headerReceive', (data) => {
 on(type: 'message', callback: AsyncCallback<string | ArrayBuffer>): void
 ```
 
-Subscribes to WebSocket server message receiving events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; The data in **AsyncCallback** can be in the format of string (API version 6) or ArrayBuffer (API version 8).
+Subscribes to WebSocket server message receiving events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> The data in **AsyncCallback** can be in the format of string (API version 6) or ArrayBuffer (API version 8).
 
 **Since:** 6
 

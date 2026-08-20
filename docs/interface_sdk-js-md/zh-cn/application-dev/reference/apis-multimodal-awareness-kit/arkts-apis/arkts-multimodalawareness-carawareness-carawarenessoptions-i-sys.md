@@ -24,7 +24,7 @@ parameters?: Record<string, Object>
 
 自定义键值对格式的感知参数。
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;
 
 **起始版本：** 26.1.0
 

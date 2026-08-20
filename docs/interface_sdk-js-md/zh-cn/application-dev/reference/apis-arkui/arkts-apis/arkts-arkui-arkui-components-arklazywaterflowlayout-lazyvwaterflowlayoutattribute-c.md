@@ -2,6 +2,8 @@
 
 定义懒加载垂直瀑布流布局属性。
 
+@extends LazyWaterFlowLayoutAttribute&lt;LazyVWaterFlowLayoutAttribute&gt;
+
 **继承/实现关系：** LazyVWaterFlowLayoutAttribute extends LazyWaterFlowLayoutAttribute<LazyVWaterFlowLayoutAttribute>
 
 **起始版本：** 26.0.0
@@ -44,5 +46,5 @@ columnsTemplate(value: string | ItemFillPolicy | undefined): LazyVWaterFlowLayou
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyVWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-c.md) |  |
+| [LazyVWaterFlowLayoutAttribute](../../apis-default/arkts-apis/arkts-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) |  |
 

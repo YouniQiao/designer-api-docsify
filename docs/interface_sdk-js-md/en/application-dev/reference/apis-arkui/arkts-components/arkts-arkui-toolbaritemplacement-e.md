@@ -1,4 +1,4 @@
-# ToolBarItemPlacement(Defines toolbar attributes.)
+# ToolBarItemPlacement
 
 Enumerates the placement options for toolbar items in the title bar.
 

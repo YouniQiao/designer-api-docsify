@@ -2,6 +2,8 @@
 
 ContextAttrOptions
 
+@interface ContextAttrOptions
+
 **Since:** 6
 
 <!--Device-unnamed-export interface ContextAttrOptions--><!--Device-unnamed-export interface ContextAttrOptions-End-->

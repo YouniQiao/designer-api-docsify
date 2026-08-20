@@ -1,6 +1,6 @@
 # ImageAnimatorElement
 
-Image animator element
+Image animator element @interface ImageAnimatorElement
 
 **Since:** 4
 

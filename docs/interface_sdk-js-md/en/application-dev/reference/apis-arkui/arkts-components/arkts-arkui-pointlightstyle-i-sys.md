@@ -21,7 +21,9 @@ You apply a point light style by setting the light source that emits illuminatio
 bloom?: number
 ```
 
-Luminous intensity of the component. The recommended value range is 0-1. Default value: **0**
+Luminous intensity of the component. The recommended value range is 0-1.
+
+Default value: **0**
 
 **Type:** number
 
@@ -43,7 +45,9 @@ Luminous intensity of the component. The recommended value range is 0-1. Default
 illuminated?: IlluminatedType
 ```
 
-Whether the current component can be illuminated by the light source and the illuminated type. Default value: **IlluminatedType.NONE**
+Whether the current component can be illuminated by the light source and the illuminated type.
+
+Default value: **IlluminatedType.NONE**
 
 **Type:** IlluminatedType
 
@@ -65,7 +69,9 @@ Whether the current component can be illuminated by the light source and the ill
 lightSource?: LightSource
 ```
 
-Light source. The light source affects the surrounding components that are marked as illuminable and creates light effects on those components. Default value: none
+Light source. The light source affects the surrounding components that are marked as illuminable and creates light effects on those components.
+
+Default value: none
 
 **Type:** [LightSource](arkts-arkui-lightsource-i-sys.md)
 

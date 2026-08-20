@@ -1,4 +1,4 @@
-# USBControlParams(USB Manager)
+# USBControlParams
 
 Represents control transfer parameters.
 

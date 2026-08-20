@@ -1,6 +1,8 @@
 # AutoExposureQuery
 
-AutoExposureQuery provides APIs to query the automatic exposure feature of a camera device. &gt; &gt; - In this version, a compatibility change was made that preserved the initial version information of inner &gt; elements. As a result, you might see outer element's @since version number being higher than that of the inner &gt; elements. However, this discrepancy does not affect the functionality of the interface.
+AutoExposureQuery provides APIs to query the automatic exposure feature of a camera device.   
+> 
+> - In this version, a compatibility change was made that preserved the initial version information of inner &gt; elements. As a result, you might see outer element's
 
 **Since:** 23
 

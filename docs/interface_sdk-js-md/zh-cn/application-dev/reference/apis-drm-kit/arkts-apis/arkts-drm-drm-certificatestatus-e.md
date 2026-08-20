@@ -1,4 +1,4 @@
-# CertificateStatus(Defines the DRM capability.)
+# CertificateStatus
 
 枚举，设备证书状态。
 

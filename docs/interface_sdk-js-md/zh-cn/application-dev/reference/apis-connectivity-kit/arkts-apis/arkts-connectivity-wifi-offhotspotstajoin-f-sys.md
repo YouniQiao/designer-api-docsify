@@ -15,7 +15,9 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function off(type: 'hotspotStaJoin', callback?: Callback<StationInfo>): void
 ```
 
-取消订阅WLAN热点STA加入事件。 &lt;p&gt;如果没有指定callback参数，将取消注册该事件关联的所有回调函数。&lt;/p&gt;
+取消订阅WLAN热点STA加入事件。
+
+&lt;p&gt;如果没有指定callback参数，将取消注册该事件关联的所有回调函数。&lt;/p&gt;
 
 **起始版本：** 7
 
@@ -36,5 +38,5 @@ function off(type: 'hotspotStaJoin', callback?: Callback<StationInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hotspotStaJoin' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | 否 | 状态改变回调函数 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;StationInfo&gt; | 否 | 状态改变回调函数 |
 

@@ -2,6 +2,8 @@
 
 Indicates the VCard types.
 
+@enum { string }
+
 **Since:** 23
 
 <!--Device-vcard-export enum VCardType--><!--Device-vcard-export enum VCardType-End-->

@@ -32,7 +32,7 @@ Define the constructor of ParallelizeUI.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [ParallelOption](arkts-arkui-arkui-parallelize-paralleloption-i.md) \| undefined | Yes | ParallelizeUI Option |
-| content_ | CustomBuilder | Yes | Parallel creation of content |
+| content_ | [CustomBuilder](../../apis-default/arkts-apis/arkts-custombuilder-t.md) | Yes | Parallel creation of content |
 
 
 ## ParallelizeUI
@@ -64,7 +64,7 @@ Define the constructor of ParallelizeUI.
 | --- | --- | --- | --- |
 | options | [ParallelOption](arkts-arkui-arkui-parallelize-paralleloption-i.md) \| undefined | Yes | ParallelizeUI Option |
 | param | () =&gt; T | Yes | ParallelizeUI parameter |
-| content_ | CustomBuilderT&lt;T&gt; | Yes | Parallel creation of content |
+| content_ | [CustomBuilderT](../../apis-default/arkts-apis/arkts-custombuildert-t.md)&lt;T&gt; | Yes | Parallel creation of content |
 
 
 ## ParallelizeUI
@@ -98,5 +98,5 @@ On-demand parallel item creation for List and Grid.
 | options | [ParallelOption](arkts-arkui-arkui-parallelize-paralleloption-i.md) \| undefined | Yes | ParallelizeUI Option |
 | arr | Array&lt;V&gt; | Yes | The array collection to be used in UI |
 | param | (item: V, index: int) =&gt; T | Yes | Define item generator function |
-| content_ | CustomBuilderT&lt;T&gt; | Yes | Parallel creation of content |
+| content_ | [CustomBuilderT](../../apis-default/arkts-apis/arkts-custombuildert-t.md)&lt;T&gt; | Yes | Parallel creation of content |
 

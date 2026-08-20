@@ -21,7 +21,9 @@ import { cameraPicker } from '@kit.CameraKit';
 createCameraInput(camera: CameraDevice): CameraInput
 ```
 
-使用CameraDevice对象创建CameraInput实例，同步返回结果。 该接口使用前首先通过[getSupportedCameras](#getsupportedcameras)接口查询当前设备支持的相机设备信息列表，开发者需要根据具体使用场景选 择符合需求的相机设备，然后使用该接口创建CameraInput实例。
+使用CameraDevice对象创建CameraInput实例，同步返回结果。
+
+该接口使用前首先通过[getSupportedCameras](#getsupportedcameras)接口查询当前设备支持的相机设备信息列表，开发者需要根据具体使用场景选 择符合需求的相机设备，然后使用该接口创建CameraInput实例。
 
 **起始版本：** 23
 
@@ -59,7 +61,9 @@ createCameraInput(camera: CameraDevice): CameraInput
 createCameraInput(position: CameraPosition, type: CameraType): CameraInput
 ```
 
-根据相机位置和类型创建CameraInput实例，同步返回结果。 该接口使用前需要开发者根据应用具体使用场景自行指定相机位置和类型，例如打开前置相机进入自拍功能。
+根据相机位置和类型创建CameraInput实例，同步返回结果。
+
+该接口使用前需要开发者根据应用具体使用场景自行指定相机位置和类型，例如打开前置相机进入自拍功能。
 
 **起始版本：** 23
 
@@ -98,7 +102,11 @@ createCameraInput(position: CameraPosition, type: CameraType): CameraInput
 createCaptureSession(): CaptureSession
 ```
 
-创建CaptureSession实例，同步返回结果。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
+创建CaptureSession实例，同步返回结果。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -163,7 +171,13 @@ createMetadataOutput(metadataObjectTypes: Array<MetadataObjectType>): MetadataOu
 createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput
 ```
 
-创建拍照输出对象，同步返回结果。 &gt; **说明：** &gt; &gt; - 从API version 10开始支持，从API version 11开始废弃。 &gt; &gt; - 该接口只支持创建JPEG格式的拍照输出对象。
+创建拍照输出对象，同步返回结果。
+
+> **说明：**
+> 
+> - 从API version 10开始支持，从API version 11开始废弃。
+> 
+> - 该接口只支持创建JPEG格式的拍照输出对象。
 
 **起始版本：** 10
 
@@ -332,8 +346,8 @@ createSession<T extends Session>(mode: SceneMode): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.<br>**适用版本：** 19+ |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.<br>**适用版本：** 19+ |
 
 ## createVideoOutput
 
@@ -341,7 +355,11 @@ createSession<T extends Session>(mode: SceneMode): T
 createVideoOutput(profile: VideoProfile, surfaceId: string): VideoOutput
 ```
 
-创建录像输出对象，同步返回结果。 在录像模式下，使能SDR或HDR_VIVID拍摄效果时，CameraFormat与ColorSpace必须按照下列表格中的对应关系配置，若不满足表格中CameraFormat与ColorSpace配置，会导致预览异常等问题。 | SDR/HDR拍摄 | CameraFormat | ColorSpace | |--------------------|--------------------------|------------------| | SDR | CAMERA_FORMAT_YUV_420_SP | BT709_LIMIT | | HDR_VIVID | CAMERA_FORMAT_YCRCB_P010<br>CAMERA_FORMAT_YCBCR_P010 | BT2020_HLG_LIMIT<br>BT2020_HLG_FULL |
+创建录像输出对象，同步返回结果。
+
+在录像模式下，使能SDR或HDR_VIVID拍摄效果时，CameraFormat与ColorSpace必须按照下列表格中的对应关系配置，若不满足表格中CameraFormat与ColorSpace配置，会导致预览异常等问题。
+
+| SDR/HDR拍摄 | CameraFormat | ColorSpace | |--------------------|--------------------------|------------------| | SDR | CAMERA_FORMAT_YUV_420_SP | BT709_LIMIT | | HDR_VIVID | CAMERA_FORMAT_YCRCB_P010<br>CAMERA_FORMAT_YCBCR_P010 | BT2020_HLG_LIMIT<br>BT2020_HLG_FULL |
 
 **起始版本：** 23
 
@@ -446,7 +464,9 @@ getCameraConcurrentInfos(cameras: Array<CameraDevice>): Array<CameraConcurrentIn
 getCameraDevice(position: CameraPosition, type: CameraType): CameraDevice
 ```
 
-根据相机位置和相机类型查询对应相机。 获取指定[CameraPosition](arkts-camera-camera-cameraposition-e.md)和[CameraType](arkts-camera-camera-cameratype-e.md)的相机镜头，如果该接口返回结果为undefined， 表示当前设备未查询到该镜头。
+根据相机位置和相机类型查询对应相机。
+
+获取指定[CameraPosition](arkts-camera-camera-cameraposition-e.md)和[CameraType](arkts-camera-camera-cameratype-e.md)的相机镜头，如果该接口返回结果为undefined， 表示当前设备未查询到该镜头。
 
 **起始版本：** 23
 
@@ -517,7 +537,9 @@ getCameraDevices(position: CameraPosition, types: Array<CameraType>, connectType
 getSupportedCameras(): Array<CameraDevice>
 ```
 
-获取支持的基础相机设备对象（如获取CameraType为CAMERA_TYPE_DEFAULT的默认相机），同步返回结果。 如果需要获取额外的相机设备对象（如获取CameraType为CAMERA_TYPE_TELEPHOTO的长焦相机），可通过 [getCameraDevices](#getcameradevices)接口获取。
+获取支持的基础相机设备对象（如获取CameraType为CAMERA_TYPE_DEFAULT的默认相机），同步返回结果。
+
+如果需要获取额外的相机设备对象（如获取CameraType为CAMERA_TYPE_TELEPHOTO的长焦相机），可通过 [getCameraDevices](#getcameradevices)接口获取。
 
 **起始版本：** 23
 
@@ -539,7 +561,11 @@ getSupportedCameras(): Array<CameraDevice>
 getSupportedFullOutputCapability(camera: CameraDevice, mode: SceneMode): CameraOutputCapability
 ```
 
-查询指定相机在指定模式下支持的完整输出能力，包括未压缩图（YUV）、HEIF和HDR等能力。 &gt; **说明：** &gt; &gt; 使用YUV，HEIF或HDR等能力前，需要先显式调用此方法确保获取完整输出能力。
+查询指定相机在指定模式下支持的完整输出能力，包括未压缩图（YUV）、HEIF和HDR等能力。
+
+> **说明：**
+> 
+> 使用YUV，HEIF或HDR等能力前，需要先显式调用此方法确保获取完整输出能力。
 
 **起始版本：** 23
 
@@ -570,7 +596,11 @@ getSupportedFullOutputCapability(camera: CameraDevice, mode: SceneMode): CameraO
 getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability
 ```
 
-查询相机设备支持的输出能力，同步返回结果。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
+查询相机设备支持的输出能力，同步返回结果。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -763,7 +793,7 @@ Unsubscribes from camera status change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | 否 | Callback used to get the camera status change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | 否 | Callback used to get the camera status change. |
 
 ## offFoldStatusChange
 
@@ -783,7 +813,7 @@ Unsubscribes from fold status change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | 否 | Callback used to get the fold status change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | 否 | Callback used to get the fold status change. |
 
 ## offTorchStatusChange
 
@@ -803,7 +833,7 @@ Unsubscribes torch status change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | 否 | Callback used to return the torch status change |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | 否 | Callback used to return the torch status change |
 
 ## off('cameraStatus')
 
@@ -826,7 +856,7 @@ off(type: 'cameraStatus', callback?: AsyncCallback<CameraStatusInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'cameraStatus' | 是 | 监听事件，固定为'cameraStatus'。cameraManager对象获取成功后可监听。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## off('foldStatusChange')
 
@@ -849,7 +879,7 @@ off(type: 'foldStatusChange', callback?: AsyncCallback<FoldStatusInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'foldStatusChange' | 是 | 监听事件，固定为'foldStatusChange'。表示折叠设备折叠状态发生变化。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | 否 | 回调函数，返回折叠设备折叠信息。如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有 callback。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | 否 | 回调函数，返回折叠设备折叠信息。如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有 callback。 |
 
 ## off('torchStatusChange')
 
@@ -872,7 +902,7 @@ off(type: 'torchStatusChange', callback?: AsyncCallback<TorchStatusInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'torchStatusChange' | 是 | 监听事件，固定为'torchStatusChange'。cameraManager对象获取成功后可监听。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## onCameraStatus
 
@@ -892,7 +922,7 @@ Subscribes camera status change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | 是 | Callback used to get the camera status change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | 是 | Callback used to get the camera status change. |
 
 ## onFoldStatusChange
 
@@ -912,7 +942,7 @@ Subscribes fold status change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | 是 | Callback used to get the fold status change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | 是 | Callback used to get the fold status change. |
 
 ## onTorchStatusChange
 
@@ -932,7 +962,7 @@ Subscribes torch status change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | 是 | Callback used to return the torch status change |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | 是 | Callback used to return the torch status change |
 
 ## on('cameraStatus')
 
@@ -940,7 +970,11 @@ Subscribes torch status change event callback.
 on(type: 'cameraStatus', callback: AsyncCallback<CameraStatusInfo>): void
 ```
 
-相机设备状态回调，通过注册回调函数获取相机的状态变化。使用callback异步回调。 &gt; **说明：** &gt; &gt; 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+相机设备状态回调，通过注册回调函数获取相机的状态变化。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 10
 
@@ -955,7 +989,7 @@ on(type: 'cameraStatus', callback: AsyncCallback<CameraStatusInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'cameraStatus' | 是 | 监听事件，固定为'cameraStatus'。cameraManager对象获取成功后可监听。目前只支持对设备打开或者关闭会触发该事件并返回对应信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | 是 | 回调函数，用于获取镜头状态变化信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | 是 | 回调函数，用于获取镜头状态变化信息。 |
 
 ## on('foldStatusChange')
 
@@ -963,7 +997,11 @@ on(type: 'cameraStatus', callback: AsyncCallback<CameraStatusInfo>): void
 on(type: 'foldStatusChange', callback: AsyncCallback<FoldStatusInfo>): void
 ```
 
-注册折叠设备折叠状态变化的监听。使用callback异步回调。 &gt; **说明：** &gt; &gt; 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+注册折叠设备折叠状态变化的监听。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 12
 
@@ -978,7 +1016,7 @@ on(type: 'foldStatusChange', callback: AsyncCallback<FoldStatusInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'foldStatusChange' | 是 | 监听事件，固定为'foldStatusChange'。表示折叠设备折叠状态发生变化。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | 是 | 回调函数。返回折叠设备折叠信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | 是 | 回调函数。返回折叠设备折叠信息。 |
 
 ## on('torchStatusChange')
 
@@ -986,7 +1024,11 @@ on(type: 'foldStatusChange', callback: AsyncCallback<FoldStatusInfo>): void
 on(type: 'torchStatusChange', callback: AsyncCallback<TorchStatusInfo>): void
 ```
 
-手电筒状态变化回调，通过注册回调函数获取手电筒状态变化。使用callback异步回调。 &gt; **说明：** &gt; &gt; 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+手电筒状态变化回调，通过注册回调函数获取手电筒状态变化。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 11
 
@@ -1001,7 +1043,7 @@ on(type: 'torchStatusChange', callback: AsyncCallback<TorchStatusInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'torchStatusChange' | 是 | 监听事件，固定为'torchStatusChange'。cameraManager对象获取成功后可监听。目前只支持手电筒打开，手电筒关闭，手电筒不可 用，手电筒恢复可用会触发该事件并返回对应信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | 是 | 回调函数，用于获取手电筒状态变化信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | 是 | 回调函数，用于获取手电筒状态变化信息。 |
 
 ## setTorchMode
 

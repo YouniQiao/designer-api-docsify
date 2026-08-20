@@ -16,7 +16,9 @@ import { GesturePoint } from '@kit.AccessibilityKit';
 function getSeniorModeStateForSelf(): Promise<boolean>
 ```
 
-判断应用是否开启“长辈模式”。使用Promise异步回调。 与[accessibility.isSeniorModeEnabled](arkts-accessibility-accessibility-isseniormodeenabled-f.md)（判断系统关怀模式是否开启）对应不同作用范围，本接口仅查询应用自身状态。
+判断应用是否开启“长辈模式”。使用Promise异步回调。
+
+与[accessibility.isSeniorModeEnabled](arkts-accessibility-accessibility-isseniormodeenabled-f.md)（判断系统关怀模式是否开启）对应不同作用范围，本接口仅查询应用自身状态。
 
 **起始版本：** 26.0.0
 

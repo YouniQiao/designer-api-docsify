@@ -36,13 +36,13 @@ Initialize the interface of the tree view. This interface is used to generate Li
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| nodeParam | [NodeParamV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-treeviewv2-nodeparamv2-i.md) | No | Configuration information of the newly added node. |
+| nodeParam | [NodeParamV2](arkts-arkui-arkui-advanced-treeviewv2-nodeparamv2-i.md) | No | Configuration information of the newly added node. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TreeControllerV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-treeviewv2-treecontrollerv2-c.md) | ListTreeNode Tree view component proxy class. |
+| [TreeControllerV2](arkts-arkui-arkui-advanced-treeviewv2-treecontrollerv2-c.md) | ListTreeNode Tree view component proxy class. |
 
 ## buildDone
 
@@ -103,8 +103,8 @@ This interface is called when a secondaryTitle needs to be updated
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | parentId | number | Yes | ID of the parent node. <br>Value range:The value must be greater than or equal to -1. |
-| parentSubTitle | [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md) | Yes | secondaryTitle of parent node. |
-| currentSubtitle | [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md) | Yes | secondaryTitle of current node. |
+| parentSubTitle | [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md) | Yes | secondaryTitle of parent node. |
+| currentSubtitle | [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md) | Yes | secondaryTitle of current node. |
 
 ## removeNode
 

@@ -36,11 +36,11 @@ Sets the file types that can be opened by the current application.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700351](../errorcode-bundle.md#17700351-invalid-file-type) | Invalid fileTypes. Possible causes: 1. The array length exceeds 1024; 2. The array contains an empty item; 3. An item exceeds 512 characters; 4. The array contains wildcard or general.object. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified moduleName is not found. |
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified abilityName is not found. |
+| [17700351](../errorcode-bundle.md#17700351-invalid-file-type) | Invalid fileTypes. Possible causes: 1. The array length exceeds 1024; 2. The array contains an empty item; 3. An item exceeds 512 characters; 4. The array contains wildcard or general.object. |
 
 **Examples**
 

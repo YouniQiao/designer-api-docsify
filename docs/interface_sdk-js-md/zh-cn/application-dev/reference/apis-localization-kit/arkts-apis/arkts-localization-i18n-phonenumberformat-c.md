@@ -35,7 +35,7 @@ constructor(country: string, options?: PhoneNumberFormatOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | country | string | 是 | 表示电话号码所属的国家地区代码，要求是 [合法的国家地区码](../../../internationalization/i18n-locale-culture.md#实现原理)。 |
-| options | [PhoneNumberFormatOptions](arkts-localization-i18n-phonenumberformatoptions-i.md) | 否 | 电话号码格式化时设置的配置项。默认值：NATIONAL。 |
+| options | [PhoneNumberFormatOptions](../../apis-default/arkts-apis/arkts-i18n-phonenumberformatoptions-i.md) | 否 | 电话号码格式化时设置的配置项。默认值：NATIONAL。 |
 
 **示例**
 
@@ -52,7 +52,11 @@ let phoneNumberFormat: i18n.PhoneNumberFormat = new i18n.PhoneNumberFormat('CN',
 format(phoneNumber: string): string
 ```
 
-对电话号码进行格式化。 &gt; **说明：**&gt; &gt; 从API version 12开始，支持对拨号中的电话号码进行格式化。
+对电话号码进行格式化。
+
+> **说明：**
+> 
+> 从API version 12开始，支持对拨号中的电话号码进行格式化。
 
 **起始版本：** 23
 
@@ -100,7 +104,11 @@ for (let i = 0; i < phoneNumber.length; i++) {
 getLocationName(phoneNumber: string, locale: string): string
 ```
 
-获取电话号码归属地。 &gt; **说明：**&gt; &gt; 从API version 23开始，支持对拨号中的电话号码实时获取归属地。
+获取电话号码归属地。
+
+> **说明：**
+> 
+> 从API version 23开始，支持对拨号中的电话号码实时获取归属地。
 
 **起始版本：** 23
 

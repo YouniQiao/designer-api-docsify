@@ -32,7 +32,7 @@ Constructs a 2D change matrix object. The default value is the unit matrix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | No | the unit mode |
+| unit | [LengthMetricsUnit](../../apis-default/arkts-apis/arkts-graphics-lengthmetricsunit-e.md) | No | the unit mode |
 
 ## identity
 

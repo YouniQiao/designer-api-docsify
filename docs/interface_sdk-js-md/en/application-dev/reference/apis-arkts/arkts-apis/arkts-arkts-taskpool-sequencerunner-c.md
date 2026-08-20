@@ -48,7 +48,13 @@ let runner: taskpool.SequenceRunner = new taskpool.SequenceRunner();
 constructor(name: string, priority?: Priority)
 ```
 
-A constructor used to create a **SequenceRunner** instance. This instance represents a global serial queue. If the passed-in name is the same as an existing name, the same serial queue is returned. &gt; **NOTE：**&gt; &gt; - The bottom layer uses the singleton mode to ensure that the same instance is obtained when a serial queue &gt; with the same name is created. &gt; &gt; - The priority of a serial queue cannot be modified.
+A constructor used to create a **SequenceRunner** instance. This instance represents a global serial queue. If the passed-in name is the same as an existing name, the same serial queue is returned.
+
+> **NOTE：**
+> 
+> - The bottom layer uses the singleton mode to ensure that the same instance is obtained when a serial queue &gt; with the same name is created.
+> 
+> - The priority of a serial queue cannot be modified.
 
 **Since:** 12
 
@@ -77,7 +83,13 @@ let runner:taskpool.SequenceRunner = new taskpool.SequenceRunner("runner1", task
 execute(task: Task): Promise<Object>
 ```
 
-Adds a task to the serial queue for execution. Before using this API, you must create a **SequenceRunner** instance. Tasks in another task group, serial queue, or asynchronous queue, dependent tasks, and tasks that have been executed cannot be added to the serial queue. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - Tasks that depend others cannot be added to the serial queue. &gt; &gt; - The failure or cancellation of a task does not affect the execution of subsequent tasks in the serial queue.
+Adds a task to the serial queue for execution. Before using this API, you must create a **SequenceRunner** instance. Tasks in another task group, serial queue, or asynchronous queue, dependent tasks, and tasks that have been executed cannot be added to the serial queue. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - Tasks that depend others cannot be added to the serial queue.
+> 
+> - The failure or cancellation of a task does not affect the execution of subsequent tasks in the serial queue.
 
 **Since:** 11
 
@@ -103,11 +115,11 @@ Adds a task to the serial queue for execution. Before using this API, you must c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200025](../errorcode-utils.md#10200025-failed-to-add-a-task-with-dependent-tasks-to-the-queue) | dependent task not allowed. |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
 | [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) | Worker initialization failed.<br>**Applicable version:** 11 - 17 |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.<br>**Applicable version:** 12 and later |
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200025](../errorcode-utils.md#10200025-failed-to-add-a-task-with-dependent-tasks-to-the-queue) | dependent task not allowed. |
+| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.<br>**Applicable version:** 12 and later |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
 
 **Examples**
 

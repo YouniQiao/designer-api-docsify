@@ -2,6 +2,8 @@
 
 Defines the LocalizedEdges.
 
+@interface LocalizedEdges
+
 **Since:** 12
 
 <!--Device-unnamed-declare interface LocalizedEdges--><!--Device-unnamed-declare interface LocalizedEdges-End-->

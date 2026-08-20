@@ -27,17 +27,17 @@ function getWorkStatus(workId: int, callback: AsyncCallback<WorkInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | workId | int | 是 | 延迟任务Id。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WorkInfo](arkts-backgroundtasks-workscheduler-workinfo-i.md)&gt; | 是 | 回调函数。如果workId有效，则返回从WorkSchedulerService获取的任务，否则抛出异常。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[WorkInfo](arkts-backgroundtasks-workscheduler-workinfo-i.md)&gt; | 是 | 回调函数。如果workId有效，则返回从WorkSchedulerService获取的任务，否则抛出异常。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9700004](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700004-workinfo校验失败) | Check on workInfo failed. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: Parameter verification failed. |
-| [9700001](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700001-内存操作失败) | Memory operation failed. |
-| [9700002](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700002-parcel读写操作失败) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
-| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-系统服务失败) | System service operation failed. |
+| [9700001](../errorcode-workScheduler.md#9700001-内存操作失败) | Memory operation failed. |
+| [9700002](../errorcode-workScheduler.md#9700002-parcel读写操作失败) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
+| [9700003](../errorcode-workScheduler.md#9700003-系统服务失败) | System service operation failed. |
+| [9700004](../errorcode-workScheduler.md#9700004-workinfo校验失败) | Check on workInfo failed. |
 
 **示例**
 
@@ -104,11 +104,11 @@ function getWorkStatus(workId: int): Promise<WorkInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9700004](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700004-workinfo校验失败) | Check on workInfo failed. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: Parameter verification failed. |
-| [9700001](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700001-内存操作失败) | Memory operation failed. |
-| [9700002](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700002-parcel读写操作失败) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
-| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-系统服务失败) | System service operation failed. |
+| [9700001](../errorcode-workScheduler.md#9700001-内存操作失败) | Memory operation failed. |
+| [9700002](../errorcode-workScheduler.md#9700002-parcel读写操作失败) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
+| [9700003](../errorcode-workScheduler.md#9700003-系统服务失败) | System service operation failed. |
+| [9700004](../errorcode-workScheduler.md#9700004-workinfo校验失败) | Check on workInfo failed. |
 
 **示例**
 

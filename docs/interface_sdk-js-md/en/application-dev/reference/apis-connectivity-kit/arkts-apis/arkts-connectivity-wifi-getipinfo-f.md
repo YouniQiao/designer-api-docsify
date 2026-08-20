@@ -15,7 +15,9 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function getIpInfo(): IpInfo
 ```
 
-Obtains the IP information of a Wi-Fi connection. &lt;p&gt;The IP information includes the host IP address, gateway address, and DNS information.
+Obtains the IP information of a Wi-Fi connection.
+
+&lt;p&gt;The IP information includes the host IP address, gateway address, and DNS information.
 
 **Since:** 7
 

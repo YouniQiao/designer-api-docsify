@@ -1,4 +1,4 @@
-# FaceAuthManager(Facial Authentication) (System API)
+# FaceAuthManager (System API)
 
 Provides APIs for facial authentication management. It provides management features during face enrollment, including setting the surface ID of the face preview page.
 
@@ -68,9 +68,9 @@ Sets the surface ID of the face preview page during face enrollment. This API mu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12700001](../errorcode-useriam.md#12700001-facial-authentication-service-unavailable) | The service is unavailable. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application. |
+| [12700001](../errorcode-useriam.md#12700001-facial-authentication-service-unavailable) | The service is unavailable. |
 
 **Examples**
 

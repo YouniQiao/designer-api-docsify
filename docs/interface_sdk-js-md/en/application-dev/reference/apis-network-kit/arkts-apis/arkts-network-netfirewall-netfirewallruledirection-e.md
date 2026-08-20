@@ -1,4 +1,4 @@
-# NetFirewallRuleDirection(Network Firewall)
+# NetFirewallRuleDirection
 
 Enumerates the firewall rule directions, including inbound and outbound.
 

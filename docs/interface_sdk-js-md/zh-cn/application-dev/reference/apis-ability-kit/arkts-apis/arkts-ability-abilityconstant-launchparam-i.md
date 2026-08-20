@@ -120,7 +120,11 @@ launchReasonMessage?: string
 launchUTCTime?: long
 ```
 
-表示UIAbility开始启动的UTC时间戳，单位为毫秒。 **约束：** 该功能仅在启动UIAbility时生效。对于其他类型的Ability（例如UIExtensionAbility），所获取的启动时间为默认值0。
+表示UIAbility开始启动的UTC时间戳，单位为毫秒。
+
+**约束：**
+
+该功能仅在启动UIAbility时生效。对于其他类型的Ability（例如UIExtensionAbility），所获取的启动时间为默认值0。
 
 **类型：** long
 
@@ -140,7 +144,11 @@ launchUTCTime?: long
 launchUptime?: long
 ```
 
-表示UIAbility开始启动时系统已运行的时间（自系统开机启动以来的时间），单位为毫秒。 **约束：** 该功能仅在启动UIAbility时生效。对于其他类型的Ability（例如UIExtensionAbility），所获取的启动时间为默认值0。
+表示UIAbility开始启动时系统已运行的时间（自系统开机启动以来的时间），单位为毫秒。
+
+**约束：**
+
+该功能仅在启动UIAbility时生效。对于其他类型的Ability（例如UIExtensionAbility），所获取的启动时间为默认值0。
 
 **类型：** long
 

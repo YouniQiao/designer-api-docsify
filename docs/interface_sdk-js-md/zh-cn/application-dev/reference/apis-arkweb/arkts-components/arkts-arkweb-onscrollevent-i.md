@@ -24,7 +24,9 @@ import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 xOffset: number
 ```
 
-以网页最左端为基准，水平滚动条滚动所在位置。 单位：vp。
+以网页最左端为基准，水平滚动条滚动所在位置。
+
+单位：vp。
 
 **类型：** number
 
@@ -42,7 +44,9 @@ xOffset: number
 yOffset: number
 ```
 
-以网页最上端为基准，竖直滚动条滚动所在位置。 单位：vp。
+以网页最上端为基准，竖直滚动条滚动所在位置。
+
+单位：vp。
 
 **类型：** number
 

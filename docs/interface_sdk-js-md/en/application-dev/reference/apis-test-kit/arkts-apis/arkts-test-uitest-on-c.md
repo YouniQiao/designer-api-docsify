@@ -1,6 +1,12 @@
 # On
 
-Since API version 9, the UiTest framework provides a wide range of UI component feature description APIs in the **On** class to filter and match components. The APIs provided by the **On** class exhibit the following features: 1. Allow one or more attributes as the match conditions. For example, you can specify both the **text** and **id** attributes to find the target component. 2. Provide multiple match patterns for component attributes. 3. Support absolute positioning and relative positioning for components. APIs such as [ON.isBefore](#isbefore) and [ON.isAfter](#isafter) can be used to specify the features of adjacent components to assist positioning. All APIs provided in the **On** class are synchronous. You are advised to use the static constructor **ON** to create an **On** object in chain mode.
+Since API version 9, the UiTest framework provides a wide range of UI component feature description APIs in the **On** class to filter and match components.
+
+The APIs provided by the **On** class exhibit the following features:
+
+1. Allow one or more attributes as the match conditions. For example, you can specify both the **text** and **id** attributes to find the target component. 2. Provide multiple match patterns for component attributes. 3. Support absolute positioning and relative positioning for components. APIs such as [ON.isBefore](#isbefore) and [ON.isAfter](#isafter) can be used to specify the features of adjacent components to assist positioning.
+
+All APIs provided in the **On** class are synchronous. You are advised to use the static constructor **ON** to create an **On** object in chain mode.
 
 **Since:** 23
 
@@ -696,7 +702,11 @@ let on: On = ON.longClickable(true); // Use the static constructor ON to create 
 originalText(text: string, pattern?: MatchPattern): On
 ```
 
-Specifies the text content and text matching pattern of the component. &gt; **NOTE：**&gt; &gt; If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel) &gt; of a component is set to **no** or **no-hide-descendants**, this API can be used to specify the text attribute of &gt; the target component for searching for the component. In this case, the [On.text()](#text) API does not &gt; take effect.
+Specifies the text content and text matching pattern of the component.
+
+> **NOTE：**
+> 
+> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel) &gt; of a component is set to **no** or **no-hide-descendants**, this API can be used to specify the text attribute of &gt; the target component for searching for the component. In this case, the [On.text()](#text) API does not &gt; take effect.
 
 **Since:** 23
 
@@ -826,7 +836,11 @@ let on: On = ON.selected(true); // Use the static constructor ON to create an On
 text(txt: string, pattern?: MatchPattern): On
 ```
 
-Specifies the text attribute of the target component. Multiple match patterns are supported. &gt; **NOTE：**&gt; &gt; If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel) &gt; of a component is set to **no** or **no-hide-descendants**, this API cannot be used to specify the text attribute &gt; of the target component for searching for the component. In this case, you can use the &gt; [On.originalText()](#originaltext) API.
+Specifies the text attribute of the target component. Multiple match patterns are supported.
+
+> **NOTE：**
+> 
+> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel) &gt; of a component is set to **no** or **no-hide-descendants**, this API cannot be used to specify the text attribute &gt; of the target component for searching for the component. In this case, you can use the &gt; [On.originalText()](#originaltext) API.
 
 **Since:** 23
 

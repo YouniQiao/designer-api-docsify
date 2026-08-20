@@ -1,6 +1,6 @@
 # WifiDetailState (System API)
 
-Wi-Fi detail state.
+Wi-Fi detail state. @enum { int } WifiDetailState
 
 **Since:** 23
 

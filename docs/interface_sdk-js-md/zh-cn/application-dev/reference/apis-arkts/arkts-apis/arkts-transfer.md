@@ -2,6 +2,8 @@
 
 transfer模块提供子系统类或接口的转换能力。
 
+@namespace transfer
+
 **起始版本：** 23
 
 <!--Device-unnamed-declare namespace transfer--><!--Device-unnamed-declare namespace transfer-End-->

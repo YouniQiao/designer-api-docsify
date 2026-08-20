@@ -21,9 +21,15 @@ import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, 
 effectStrategy?: SymbolEffectStrategy
 ```
 
-设置SymbolGlyph动效策略。 默认值：SymbolEffectStrategy.NONE **说明：** \$r('sys.symbol.ohos_*')中引用的资源仅ohos_wifi支持层级动效模式。
+设置SymbolGlyph动效策略。
 
-**类型：** [SymbolEffectStrategy](arkts-arkui-symbolglyph-symboleffectstrategy-e.md)
+默认值：SymbolEffectStrategy.NONE
+
+**说明：**
+
+\$r('sys.symbol.ohos_*')中引用的资源仅ohos_wifi支持层级动效模式。
+
+**类型：** [SymbolEffectStrategy](../arkts-components/arkts-arkui-symbolglyph-symboleffectstrategy-e.md)
 
 **起始版本：** 12
 
@@ -41,9 +47,11 @@ effectStrategy?: SymbolEffectStrategy
 fontColor?: Array<ResourceColor>
 ```
 
-设置SymbolGlyph颜色。 默认值：不同渲染策略下默认值不同。
+设置SymbolGlyph颜色。
 
-**类型：** Array&lt;[ResourceColor](../../apis-na/arkts-apis/arkts-na-resourcecolor-t.md)&gt;
+默认值：不同渲染策略下默认值不同。
+
+**类型：** Array&lt;[ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)&gt;
 
 **起始版本：** 12
 
@@ -61,9 +69,15 @@ fontColor?: Array<ResourceColor>
 fontSize?: number | string | Resource
 ```
 
-设置SymbolGlyph大小。 number类型取值范围：大于等于0。 设置string类型时，支持number类型取值的字符串形式，可以附带单位，例如："10"，"10fp"。 默认值：系统默认值。
+设置SymbolGlyph大小。
 
-**类型：** number \| string \| [Resource](../../apis-na/arkts-apis/arkts-na-resource-t.md)
+number类型取值范围：大于等于0。
+
+设置string类型时，支持number类型取值的字符串形式，可以附带单位，例如："10"，"10fp"。
+
+默认值：系统默认值。
+
+**类型：** number \| string \| [Resource](../../apis-default/arkts-apis/arkts-resource-t.md)
 
 **起始版本：** 12
 
@@ -81,9 +95,15 @@ fontSize?: number | string | Resource
 fontWeight?: number | FontWeight | string
 ```
 
-设置SymbolGlyph粗细。 number类型取值[100,900]，取值间隔为100，默认为400，取值越大，字体越粗。 string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“lighter”、“regular” 、“medium”分别对应FontWeight中相应的枚举值。 默认值：FontWeight.Normal
+设置SymbolGlyph粗细。
 
-**类型：** number \| [FontWeight](../../apis-na/arkts-apis/arkts-na-enums-fontweight-e.md) \| string
+number类型取值[100,900]，取值间隔为100，默认为400，取值越大，字体越粗。
+
+string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“lighter”、“regular” 、“medium”分别对应FontWeight中相应的枚举值。
+
+默认值：FontWeight.Normal
+
+**类型：** number \| [FontWeight](../../apis-default/arkts-apis/arkts-enums-fontweight-e.md) \| string
 
 **起始版本：** 12
 
@@ -101,9 +121,15 @@ fontWeight?: number | FontWeight | string
 renderingStrategy?: SymbolRenderingStrategy
 ```
 
-设置SymbolGlyph渲染策略。 默认值：SymbolRenderingStrategy.SINGLE **说明：** \$r('sys.symbol.ohos_*')中引用的资源仅ohos_trash_circle、ohos_folder_badge_plus、ohos_lungs支持分层与多色模式。
+设置SymbolGlyph渲染策略。
 
-**类型：** [SymbolRenderingStrategy](arkts-arkui-symbolglyph-symbolrenderingstrategy-e.md)
+默认值：SymbolRenderingStrategy.SINGLE
+
+**说明：**
+
+\$r('sys.symbol.ohos_*')中引用的资源仅ohos_trash_circle、ohos_folder_badge_plus、ohos_lungs支持分层与多色模式。
+
+**类型：** [SymbolRenderingStrategy](../arkts-components/arkts-arkui-symbolglyph-symbolrenderingstrategy-e.md)
 
 **起始版本：** 12
 

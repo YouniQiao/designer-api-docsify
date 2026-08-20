@@ -13,7 +13,9 @@ import { audioHaptic } from '@kit.AudioKit';
 function createAudioLoopback(mode: AudioLoopbackMode): Promise<AudioLoopback>
 ```
 
-创建音频返听器。使用Promise异步回调。 在使用createAudioLoopback接口之前，需先通过[isAudioLoopbackSupported](arkts-audio-audio-audiostreammanager-i.md#isaudioloopbacksupported)查 询系统返听能力。
+创建音频返听器。使用Promise异步回调。
+
+在使用createAudioLoopback接口之前，需先通过[isAudioLoopbackSupported](arkts-audio-audio-audiostreammanager-i.md#isaudioloopbacksupported)查 询系统返听能力。
 
 **起始版本：** 26.0.0
 

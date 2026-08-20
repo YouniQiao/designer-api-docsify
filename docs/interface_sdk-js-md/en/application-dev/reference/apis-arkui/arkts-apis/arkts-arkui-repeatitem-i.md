@@ -1,4 +1,4 @@
-# RepeatItem(Defines Repeat component.)
+# RepeatItem
 
 Construct a new type for each item.
 

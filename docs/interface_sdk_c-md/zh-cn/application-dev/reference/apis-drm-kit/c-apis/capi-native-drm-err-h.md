@@ -2,9 +2,11 @@
 
 ## 概述
 
-定义DRM错误码。
+定义DRM错误码，用于标识DRM模块在运行过程中可能出现的各种异常情况。开发者可基于错误码进行错误处理和问题定位，提高DRM应用的稳定性和可维护性，适用于需要处理DRM功能异常的场景。
 
-**库：** libnative_drm.z.so
+**引用文件：** <multimedia/drm_framework/native_drm_err.h>
+
+**库：** libnative_drm.so
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 

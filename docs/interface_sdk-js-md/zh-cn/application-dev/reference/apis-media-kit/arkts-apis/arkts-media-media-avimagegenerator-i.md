@@ -1,6 +1,12 @@
 # AVImageGenerator
 
-视频缩略图获取类，用于从视频资源中获取缩略图。在调用AVImageGenerator的方法前，需要先通过 [createAVImageGenerator()](arkts-media-media-createavimagegenerator-f.md) 构建一个AVImageGenerator实例。 获取视频缩略图的demo可参考：[获取视频缩略图开发指导](../../../media/media/avimagegenerator.md)。 &gt; **说明：** &gt; &gt; - 本Interface首批接口从API version 12开始支持。
+视频缩略图获取类，用于从视频资源中获取缩略图。在调用AVImageGenerator的方法前，需要先通过 [createAVImageGenerator()](arkts-media-media-createavimagegenerator-f.md) 构建一个AVImageGenerator实例。
+
+获取视频缩略图的demo可参考：[获取视频缩略图开发指导](../../../media/media/avimagegenerator.md)。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 12开始支持。
 
 **起始版本：** 23
 
@@ -36,7 +42,7 @@ fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapPa
 | timeUs | number | 是 | 需要获取的缩略图在视频中的时间点，单位为微秒（μs）。 |
 | options | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | 是 | 需要获取的缩略图时间点与视频帧的对应关系。 |
 | param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | 是 | 需要获取的缩略图的格式参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | 回调函数。获取缩略图成功时，err为undefined，data为PixelMap实例，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | 是 | 回调函数。获取缩略图成功时，err为undefined，data为PixelMap实例，否则为错误对象。 |
 
 **错误码：**
 
@@ -67,7 +73,7 @@ Obtains a video thumbnail. This API uses an asynchronous callback to return the 
 | timeUs | long | 是 | Time of the video for which a thumbnail is to be obtained, in μs. |
 | options | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | 是 | Relationship between the time passed in and the video frame. |
 | param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | 是 | Format parameters of the thumbnail to be obtained. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap \| undefined&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **PixelMap** instance obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap \| undefined&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **PixelMap** instance obtained; otherwise, **err** is an error object. |
 
 **错误码：**
 
@@ -236,7 +242,7 @@ release(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当释放资源成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当释放资源成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -276,7 +282,15 @@ release(): Promise<void>
 fdSrc ?: AVFileDescriptor
 ```
 
-媒体文件描述，通过该属性设置数据源。 **使用示例**： 假设一个连续存储的媒体文件，地址偏移：0，字节长度：100。其文件描述为AVFileDescriptor { fd = 资源句柄; offset = 0; length = 100; }。 **说明：** 将资源句柄（fd）传递给AVImageGenerator实例之后，不允许通过该资源句柄做其他读写操作，包括但不限于将同一个资源句柄传递给多个AVPlayer/AVMetadataExtractor/ AVImageGenerator/AVTranscoder。同一时间通过同一个资源句柄读写文件时存在竞争关系，将导致视频缩略图数据获取异常。
+媒体文件描述，通过该属性设置数据源。
+
+**使用示例**：
+
+假设一个连续存储的媒体文件，地址偏移：0，字节长度：100。其文件描述为AVFileDescriptor { fd = 资源句柄; offset = 0; length = 100; }。
+
+**说明：**
+
+将资源句柄（fd）传递给AVImageGenerator实例之后，不允许通过该资源句柄做其他读写操作，包括但不限于将同一个资源句柄传递给多个AVPlayer/AVMetadataExtractor/ AVImageGenerator/AVTranscoder。同一时间通过同一个资源句柄读写文件时存在竞争关系，将导致视频缩略图数据获取异常。
 
 **类型：** [AVFileDescriptor](arkts-media-multimedia-media-avfiledescriptor-i.md)
 

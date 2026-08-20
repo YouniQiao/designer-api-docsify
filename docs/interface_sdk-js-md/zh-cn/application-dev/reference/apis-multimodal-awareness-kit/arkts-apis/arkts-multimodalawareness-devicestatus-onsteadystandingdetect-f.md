@@ -24,15 +24,15 @@ function onSteadyStandingDetect(callback: Callback<SteadyStandingStatus>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SteadyStandingStatus](arkts-multimodalawareness-devicestatus-steadystandingstatus-e.md)&gt; | 是 | 回调函数，用于接收设备静止姿态（支架态）状态信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SteadyStandingStatus](arkts-multimodalawareness-devicestatus-steadystandingstatus-e.md)&gt; | 是 | 回调函数，用于接收设备静止姿态（支架态）状态信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work correctly due to limited <br> device capabilities. |
-| [32500002](../../apis-multimodalawareness-kit/errorcode-deviceStatus.md#32500002-订阅失败) | Subscription failed. |
-| [32500001](../../apis-multimodalawareness-kit/errorcode-deviceStatus.md#32500001-服务异常) | Service exception. |
+| [32500001](../errorcode-deviceStatus.md#32500001-服务异常) | Service exception. |
+| [32500002](../errorcode-deviceStatus.md#32500002-订阅失败) | Subscription failed. |
 
 **示例**
 

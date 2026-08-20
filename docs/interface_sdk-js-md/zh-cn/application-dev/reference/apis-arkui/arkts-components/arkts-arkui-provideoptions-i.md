@@ -19,7 +19,9 @@ ProvideOptions是\@Provide的选项。允许在同一组件树上通过allowOver
 allowOverride?: string
 ```
 
-允许@Provide重写的别名。允许在同一组件树下通过allowOverride重写同名的@Provide。 缺省时表示@Provide不允许重写。若在未设置allowOverride的情况下定义同名@Provide，运行时会报错。
+允许@Provide重写的别名。允许在同一组件树下通过allowOverride重写同名的@Provide。
+
+缺省时表示@Provide不允许重写。若在未设置allowOverride的情况下定义同名@Provide，运行时会报错。
 
 **类型：** string
 

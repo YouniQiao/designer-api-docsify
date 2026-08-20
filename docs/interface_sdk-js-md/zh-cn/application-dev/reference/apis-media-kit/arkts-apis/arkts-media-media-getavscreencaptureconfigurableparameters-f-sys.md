@@ -38,8 +38,8 @@ get Configurations which user can changes from AVScreenCapture server
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |  |
 | [5400109](../errorcode-media.md#5400109-会话id不存在) | Sessions not exist. Return by promise. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |  |
 
 **示例**
 

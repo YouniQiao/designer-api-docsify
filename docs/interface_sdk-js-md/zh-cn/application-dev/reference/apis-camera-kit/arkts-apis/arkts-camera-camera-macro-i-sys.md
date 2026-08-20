@@ -1,6 +1,8 @@
 # Macro（系统接口）
 
-Macro继承自[MacroQuery](arkts-camera-camera-macroquery-i-sys.md)。 提供使能微距能力的接口。
+Macro继承自[MacroQuery](arkts-camera-camera-macroquery-i-sys.md)。
+
+提供使能微距能力的接口。
 
 **继承/实现关系：** Macro extends [MacroQuery](arkts-camera-camera-macroquery-i-sys.md)
 
@@ -25,7 +27,11 @@ import { cameraPicker } from '@kit.CameraKit';
 enableMacro(enabled: boolean): void
 ```
 
-使能当前的微距能力。 &gt; **说明：** &gt; &gt; 使用该接口前，需要先通过[isMacroSupported](arkts-camera-camera-macroquery-i-sys.md#ismacrosupported)接口查询当前设备是否支持微距能力。
+使能当前的微距能力。
+
+> **说明：**
+> 
+> 使用该接口前，需要先通过[isMacroSupported](arkts-camera-camera-macroquery-i-sys.md#ismacrosupported)接口查询当前设备是否支持微距能力。
 
 **起始版本：** 23
 
@@ -47,7 +53,7 @@ enableMacro(enabled: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 12+ |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 11 - 18 |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 12+ |
 

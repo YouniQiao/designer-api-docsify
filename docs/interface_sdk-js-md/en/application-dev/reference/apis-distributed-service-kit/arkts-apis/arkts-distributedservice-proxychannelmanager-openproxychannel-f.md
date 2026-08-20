@@ -40,14 +40,14 @@ Opens a proxy channel. This API uses a promise to return the result. Based on th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because bluetooth proxy function has been trimmed.<br>**Applicable version:** 26.0.0 and later |
-| [32390006](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390006-parameter-verification-error) | Parameter error. |
-| [32390102](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390102-operation-failed-or-connection-timed-out) | Operation failed or Connection timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390100](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390100-internal-error) | Internal error. |
-| [32390101](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390101-call-restricted) | Call is restricted. |
-| [32390002](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390002-bluetooth-unpaired) | Device not paired. |
-| [32390001](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390001-bluetooth-disabled) | BR is disabled. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because bluetooth proxy function has been trimmed.<br>**Applicable version:** 26.0.0 and later |
+| [32390001](../errorcode-proxyChannelManager.md#32390001-bluetooth-disabled) | BR is disabled. |
+| [32390002](../errorcode-proxyChannelManager.md#32390002-bluetooth-unpaired) | Device not paired. |
+| [32390006](../errorcode-proxyChannelManager.md#32390006-parameter-verification-error) | Parameter error. |
+| [32390100](../errorcode-proxyChannelManager.md#32390100-internal-error) | Internal error. |
+| [32390101](../errorcode-proxyChannelManager.md#32390101-call-restricted) | Call is restricted. |
+| [32390102](../errorcode-proxyChannelManager.md#32390102-operation-failed-or-connection-timed-out) | Operation failed or Connection timed out. |
 
 **Examples**
 

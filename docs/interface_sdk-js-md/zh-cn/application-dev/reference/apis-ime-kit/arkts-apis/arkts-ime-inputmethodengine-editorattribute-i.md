@@ -1,5 +1,7 @@
 # EditorAttribute
 
+@brief 编辑框属性值。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-interface EditorAttribute--><!--Device-inputMethodEngine-interface EditorAttribute-End-->
@@ -18,6 +20,8 @@ import { inputMethodEngine } from '@kit.IMEKit';
 readonly abilityName?: string
 ```
 
+@brief 编辑框设置的ability名称。
+
 **类型：** string
 
 **起始版本：** 23
@@ -31,6 +35,8 @@ readonly abilityName?: string
 ```TypeScript
 readonly bundleName?: string
 ```
+
+@brief 编辑框所属应用包名；该值可能为""，使用该属性时需要考虑为""的场景。
 
 **类型：** string
 
@@ -46,6 +52,8 @@ readonly bundleName?: string
 readonly capitalizeMode?: CapitalizeMode
 ```
 
+@brief 编辑框设置大小写模式。如果没有设置或设置非法值，默认不进行任何首字母大写处理。
+
 **类型：** CapitalizeMode
 
 **起始版本：** 23
@@ -59,6 +67,8 @@ readonly capitalizeMode?: CapitalizeMode
 ```TypeScript
 readonly consumeKeyEvents?: boolean
 ```
+
+@brief 编辑框是否具有完整处理字母、字符、功能等按键的能力。 <br> <br>- 值为true，表示具备此能力。 <br>- 值为false，表示不具备此能力。
 
 **类型：** boolean
 
@@ -76,6 +86,8 @@ readonly consumeKeyEvents?: boolean
 readonly displayId?: long
 ```
 
+@brief 编辑框设置窗口对应的屏幕ID。如果没有设置windowId，取当前焦点窗口屏幕ID。
+
 **类型：** long
 
 **起始版本：** 23
@@ -89,6 +101,8 @@ readonly displayId?: long
 ```TypeScript
 readonly enterKeyType: int
 ```
+
+@brief 编辑框的功能属性。
 
 **类型：** int
 
@@ -104,6 +118,8 @@ readonly enterKeyType: int
 readonly extraConfig?: InputMethodExtraConfig
 ```
 
+@brief 输入法扩展信息。
+
 **类型：** [InputMethodExtraConfig](arkts-ime-inputmethod-extraconfig-inputmethodextraconfig-i.md)
 
 **起始版本：** 23
@@ -117,6 +133,8 @@ readonly extraConfig?: InputMethodExtraConfig
 ```TypeScript
 readonly gradientMode?: GradientMode
 ```
+
+@brief 渐变模式。如果没有设置或设置非法值，默认不使用渐变模式。
 
 **类型：** [GradientMode](arkts-ime-inputmethodengine-gradientmode-e.md)
 
@@ -132,6 +150,8 @@ readonly gradientMode?: GradientMode
 readonly immersiveMode?: ImmersiveMode
 ```
 
+@brief 输入法沉浸模式。
+
 **类型：** ImmersiveMode
 
 **起始版本：** 23
@@ -145,6 +165,8 @@ readonly immersiveMode?: ImmersiveMode
 ```TypeScript
 readonly inputPattern: int
 ```
+
+@brief 编辑框的文本属性。
 
 **类型：** int
 
@@ -160,6 +182,8 @@ readonly inputPattern: int
 isTextPreviewSupported: boolean
 ```
 
+@brief 编辑框是否支持预上屏。 <br> <br>- 值为true，表示支持。 <br>- 值为false，表示不支持。
+
 **类型：** boolean
 
 **起始版本：** 23
@@ -174,6 +198,8 @@ isTextPreviewSupported: boolean
 readonly placeholder?: string
 ```
 
+@brief 编辑框设置的占位符信息。
+
 **类型：** string
 
 **起始版本：** 23
@@ -187,6 +213,8 @@ readonly placeholder?: string
 ```TypeScript
 readonly windowId?: int
 ```
+
+@brief 编辑框设置所属窗口ID。
 
 **类型：** int
 

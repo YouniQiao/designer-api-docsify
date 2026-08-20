@@ -37,9 +37,9 @@ function addExcludeDate(reminderId: int, date: Date): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | If the input parameter is not valid parameter. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-提醒不存在) | The reminder does not exist. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | If the input parameter is not valid parameter. |
+| [1700003](../errorcode-reminderAgentManager.md#1700003-提醒不存在) | The reminder does not exist. |
 
 **示例**
 

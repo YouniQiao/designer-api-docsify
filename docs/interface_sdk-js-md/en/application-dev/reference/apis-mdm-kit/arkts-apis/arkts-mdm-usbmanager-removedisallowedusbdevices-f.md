@@ -12,7 +12,11 @@ import { usbManager } from '@kit.MDMKit';
 function removeDisallowedUsbDevices(admin: Want, usbDevices: Array<UsbDeviceType>): void
 ```
 
-Removes the disallowed USB device types. Use cases: - Lifts the restriction on certain USB device types in enterprise security management scenarios. - Enable device administrators to dynamically adjust the list of disallowed USB device types. - Remove USB device types from the blocklist when they no longer pose a security risk.
+Removes the disallowed USB device types.
+
+Use cases:
+
+- Lifts the restriction on certain USB device types in enterprise security management scenarios. - Enable device administrators to dynamically adjust the list of disallowed USB device types. - Remove USB device types from the blocklist when they no longer pose a security risk.
 
 **Since:** 14
 
@@ -35,10 +39,10 @@ Removes the disallowed USB device types. Use cases: - Lifts the restriction on c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 

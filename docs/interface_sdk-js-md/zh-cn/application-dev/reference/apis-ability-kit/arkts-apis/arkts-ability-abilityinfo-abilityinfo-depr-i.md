@@ -1,6 +1,10 @@
 # AbilityInfo
 
-Ability信息，未做特殊说明的属性，均通过 [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md)获取。 &gt; **说明：** &gt; &gt; 从API version 9开始，该模块不再维护，建议使用[bundleManager-AbilityInfo](#abilityinfo)替代。
+Ability信息，未做特殊说明的属性，均通过 [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md)获取。
+
+> **说明：**
+> 
+> 从API version 9开始，该模块不再维护，建议使用[bundleManager-AbilityInfo](#abilityinfo)替代。
 
 **起始版本：** 7
 
@@ -18,7 +22,9 @@ Ability信息，未做特殊说明的属性，均通过 [bundle.getAbilityInfo](
 readonly applicationInfo: ApplicationInfo
 ```
 
-应用程序的配置信息。 通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md) 接口时，传入GET_ABILITY_INFO_WITH_APPLICATION获取。
+应用程序的配置信息。
+
+通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md) 接口时，传入GET_ABILITY_INFO_WITH_APPLICATION获取。
 
 **类型：** [ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)
 
@@ -40,7 +46,9 @@ readonly applicationInfo: ApplicationInfo
 readonly backgroundModes: number
 ```
 
-表示后台服务的类型。 **模型约束：** 此接口仅可在FA模型下使用。
+表示后台服务的类型。
+
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **类型：** number
 
@@ -192,7 +200,9 @@ Ability是否可用，取值为true表示Ability可用，取值为false表示Abi
 readonly formEnabled: boolean
 ```
 
-判断Ability是否提供卡片能力，取值为true表示Ability提供卡片能力，取值为false表示Ability不提供卡片能力。 **模型约束：** 此接口仅可在FA模型下使用。
+判断Ability是否提供卡片能力，取值为true表示Ability提供卡片能力，取值为false表示Ability不提供卡片能力。
+
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **类型：** boolean
 
@@ -346,7 +356,9 @@ Ability的启动模式。
 readonly metaData: Array<CustomizeData>
 ```
 
-Ability的元信息。 通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md) 接口时，传入GET_ABILITY_INFO_WITH_METADATA获取。
+Ability的元信息。
+
+通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md) 接口时，传入GET_ABILITY_INFO_WITH_METADATA获取。
 
 **类型：** Array&lt;[CustomizeData](arkts-ability-customizedata-customizedata-depr-i.md)&gt;
 
@@ -434,7 +446,9 @@ Ability的显示模式。
 readonly permissions: Array<string>
 ```
 
-被其他应用Ability调用时需要申请的权限集合。 通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md) 接口时，传入GET_ABILITY_INFO_WITH_PERMISSION获取。
+被其他应用Ability调用时需要申请的权限集合。
+
+通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md) 接口时，传入GET_ABILITY_INFO_WITH_PERMISSION获取。
 
 **类型：** Array&lt;string&gt;
 
@@ -478,7 +492,9 @@ Ability的进程名称。
 readonly readPermission: string
 ```
 
-读取Ability数据所需的权限。 **模型约束：** 此接口仅可在FA模型下使用。
+读取Ability数据所需的权限。
+
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **类型：** string
 
@@ -500,7 +516,9 @@ readonly readPermission: string
 readonly subType: bundle.AbilitySubType
 ```
 
-Ability中枚举使用的模板的子类型。 **模型约束：** 此接口仅可在FA模型下使用。
+Ability中枚举使用的模板的子类型。
+
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **类型：** bundle.AbilitySubType
 
@@ -522,7 +540,9 @@ Ability中枚举使用的模板的子类型。 **模型约束：** 此接口仅�
 readonly targetAbility: string
 ```
 
-当前Ability重用的目标Ability。 **模型约束：** 此接口仅可在FA模型下使用。
+当前Ability重用的目标Ability。
+
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **类型：** string
 
@@ -544,7 +564,9 @@ readonly targetAbility: string
 readonly type: bundle.AbilityType
 ```
 
-Ability类型。 **模型约束：** 此接口仅可在FA模型下使用。
+Ability类型。
+
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **类型：** bundle.AbilityType
 
@@ -566,7 +588,9 @@ Ability类型。 **模型约束：** 此接口仅可在FA模型下使用。
 readonly uri: string
 ```
 
-获取Ability的统一资源标识符（URI）。 **模型约束：** 此接口仅可在FA模型下使用。
+获取Ability的统一资源标识符（URI）。
+
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **类型：** string
 
@@ -588,7 +612,9 @@ readonly uri: string
 readonly writePermission: string
 ```
 
-向Ability写数据所需的权限。 **模型约束：** 此接口仅可在FA模型下使用。
+向Ability写数据所需的权限。
+
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **类型：** string
 

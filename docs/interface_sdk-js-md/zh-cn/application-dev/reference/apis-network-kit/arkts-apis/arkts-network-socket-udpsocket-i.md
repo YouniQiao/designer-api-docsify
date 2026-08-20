@@ -35,7 +35,7 @@ bind(address: NetAddress, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | address | NetAddress | 是 | 本端地址信息，参考 NetAddress。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。成功返回空，失败返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。成功返回空，失败返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -137,7 +137,7 @@ close(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。关闭UDPSocket连接后触发回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。关闭UDPSocket连接后触发回调函数。 |
 
 **错误码：**
 
@@ -209,7 +209,11 @@ udp.close().then(() => {
 getLocalAddress(): Promise<NetAddress>
 ```
 
-获取UDP连接的本地Socket地址。使用Promise异步回调。 &gt; **说明：** &gt; &gt; bind方法调用成功后，才可调用此方法。
+获取UDP连接的本地Socket地址。使用Promise异步回调。
+
+> **说明：**
+> 
+> bind方法调用成功后，才可调用此方法。
 
 **起始版本：** 12
 
@@ -261,7 +265,15 @@ udp.bind(bindAddr).then(() => {
 getSocketFd(): Promise<int>
 ```
 
-获取UDPSocket的文件描述符。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - [bind](#bind)方法调用成功后，才可调用此方法。 &gt; &gt; - bind异常、Socket已关闭（如调用close后）等异常情况下调用本接口会返回-1。 &gt; &gt; - 文件描述符的生命周期由系统管理，应用可以通过[close](#close)方法关闭Socket连接，避免直接操作 &gt; 文件描述符进行关闭。
+获取UDPSocket的文件描述符。使用Promise异步回调。
+
+> **说明：**
+> 
+> - [bind](#bind)方法调用成功后，才可调用此方法。
+> 
+> - bind异常、Socket已关闭（如调用close后）等异常情况下调用本接口会返回-1。
+> 
+> - 文件描述符的生命周期由系统管理，应用可以通过[close](#close)方法关闭Socket连接，避免直接操作 &gt; 文件描述符进行关闭。
 
 **起始版本：** 23
 
@@ -313,7 +325,11 @@ udp.bind(bindAddr)
 getState(callback: AsyncCallback<SocketStateBase>): void
 ```
 
-获取UDPSocket状态。使用callback异步回调。 &gt; **说明：** &gt; &gt; bind方法调用成功后，才可调用此方法。
+获取UDPSocket状态。使用callback异步回调。
+
+> **说明：**
+> 
+> bind方法调用成功后，才可调用此方法。
 
 **起始版本：** 7
 
@@ -327,7 +343,7 @@ getState(callback: AsyncCallback<SocketStateBase>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | 是 | 回调函数。成功返回UDPSocket状态信息，失败返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | 是 | 回调函数。成功返回UDPSocket状态信息，失败返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -368,7 +384,11 @@ udp.bind(bindAddr, (err: BusinessError) => {
 getState(): Promise<SocketStateBase>
 ```
 
-获取UDPSocket状态。使用Promise异步回调。 &gt; **说明：** &gt; &gt; bind方法调用成功后，才可调用此方法。
+获取UDPSocket状态。使用Promise异步回调。
+
+> **说明：**
+> 
+> bind方法调用成功后，才可调用此方法。
 
 **起始版本：** 7
 
@@ -434,7 +454,7 @@ off(type: 'listening' | 'close', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'listening' \| 'close' | 是 | 取消订阅事件类型。&lt;br /&gt;- 'listening'：数据包消息事件。&lt;br /&gt;- 'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **示例**
 
@@ -478,7 +498,7 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 取消订阅的事件类型。'error'：error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **示例**
 
@@ -515,7 +535,7 @@ off(type: 'listening' | 'close', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'listening' \| 'close' | 是 | 取消订阅事件类型。&lt;br /&gt;- 'listening'：数据包消息事件。&lt;br /&gt;- 'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **示例**
 
@@ -559,7 +579,7 @@ off(type: 'message', callback?: Callback<SocketMessageInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'message' | 是 | 取消订阅的事件类型。'message'：接收消息事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。<br>**起始版本：** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。<br>**起始版本：** 11 |
 
 **示例**
 
@@ -604,7 +624,7 @@ on(type: 'listening' | 'close', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'listening' \| 'close' | 是 | 订阅的事件类型。&lt;br /&gt;- 'listening'：数据包消息事件。&lt;br /&gt;- 'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。UDPSocket连接的某类数据包消息事件或关闭事件发生变化后触发回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数。UDPSocket连接的某类数据包消息事件或关闭事件发生变化后触发回调函数。 |
 
 **示例**
 
@@ -640,7 +660,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 订阅的事件类型。'error'：error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数。UDPSocket连接发生error事件后触发回调函数。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | 回调函数。UDPSocket连接发生error事件后触发回调函数。 |
 
 **示例**
 
@@ -673,7 +693,7 @@ on(type: 'listening' | 'close', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'listening' \| 'close' | 是 | 订阅的事件类型。&lt;br /&gt;- 'listening'：数据包消息事件。&lt;br /&gt;- 'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。UDPSocket连接的某类数据包消息事件或关闭事件发生变化后触发回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数。UDPSocket连接的某类数据包消息事件或关闭事件发生变化后触发回调函数。 |
 
 **示例**
 
@@ -709,7 +729,7 @@ on(type: 'message', callback: Callback<SocketMessageInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'message' | 是 | 订阅的事件类型。'message'：接收消息事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 是 | 回调函数。返回订阅某类事件后UDPSocket连接成功的状态信息。<br>**起始版本：** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 是 | 回调函数。返回订阅某类事件后UDPSocket连接成功的状态信息。<br>**起始版本：** 11 |
 
 **示例**
 
@@ -738,7 +758,9 @@ udp.on('message', (value: socket.SocketMessageInfo) => {
 send(options: UDPSendOptions, callback: AsyncCallback<void>): void
 ```
 
-通过UDPSocket连接发送数据。使用callback异步回调。 发送数据前，需要先调用[UDPSocket.bind()](#bind)绑定 IP地址和端口。该接口为耗时操作，请在Worker线程或taskpool线程调用该接口。
+通过UDPSocket连接发送数据。使用callback异步回调。
+
+发送数据前，需要先调用[UDPSocket.bind()](#bind)绑定 IP地址和端口。该接口为耗时操作，请在Worker线程或taskpool线程调用该接口。
 
 **起始版本：** 7
 
@@ -753,22 +775,22 @@ send(options: UDPSendOptions, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [UDPSendOptions](arkts-network-socket-udpsendoptions-i.md) | 是 | UDPSocket发送参数，参考[UDPSendOptions](arkts-network-socket-udpsendoptions-i.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。成功返回空，失败返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。成功返回空，失败返回错误码、错误信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2301207](../errorcode-net-socket.md#2301207-socks5认证用户名或密码无效) | Socks5 username or password is invalid.<br>**适用版本：** 18+ |
-| [2301206](../errorcode-net-socket.md#2301206-socks5连接代理服务器失败) | Socks5 failed to connect to the proxy server.<br>**适用版本：** 18+ |
-| [2301211](../errorcode-net-socket.md#2301211-socks5接收消息失败) | Socks5 failed to receive the message.<br>**适用版本：** 18+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2301210](../errorcode-net-socket.md#2301210-socks5发送消息失败) | Socks5 failed to send the message.<br>**适用版本：** 18+ |
-| [2301209](../errorcode-net-socket.md#2301209-socks5协商认证方式失败) | Socks5 failed to negotiate the authentication method.<br>**适用版本：** 18+ |
+| [2301206](../errorcode-net-socket.md#2301206-socks5连接代理服务器失败) | Socks5 failed to connect to the proxy server.<br>**适用版本：** 18+ |
+| [2301207](../errorcode-net-socket.md#2301207-socks5认证用户名或密码无效) | Socks5 username or password is invalid.<br>**适用版本：** 18+ |
 | [2301208](../errorcode-net-socket.md#2301208-socks5连接远程服务器失败) | Socks5 failed to connect to the remote server.<br>**适用版本：** 18+ |
-| [2301213](../errorcode-net-socket.md#2301213-socks5消息反序列化失败) | Socks5 deserialization error.<br>**适用版本：** 18+ |
+| [2301209](../errorcode-net-socket.md#2301209-socks5协商认证方式失败) | Socks5 failed to negotiate the authentication method.<br>**适用版本：** 18+ |
+| [2301210](../errorcode-net-socket.md#2301210-socks5发送消息失败) | Socks5 failed to send the message.<br>**适用版本：** 18+ |
+| [2301211](../errorcode-net-socket.md#2301211-socks5接收消息失败) | Socks5 failed to receive the message.<br>**适用版本：** 18+ |
 | [2301212](../errorcode-net-socket.md#2301212-socks5消息序列化失败) | Socks5 serialization error.<br>**适用版本：** 18+ |
+| [2301213](../errorcode-net-socket.md#2301213-socks5消息反序列化失败) | Socks5 deserialization error.<br>**适用版本：** 18+ |
 
 **示例**
 
@@ -857,7 +879,9 @@ udp.send(sendOptions, (err: BusinessError) => {
 send(options: UDPSendOptions): Promise<void>
 ```
 
-通过UDPSocket连接发送数据。使用Promise异步回调。 发送数据前，需要先调用[UDPSocket.bind()](#bind)绑定 IP地址和端口。该接口为耗时操作，请在Worker线程或taskpool线程调用该接口。
+通过UDPSocket连接发送数据。使用Promise异步回调。
+
+发送数据前，需要先调用[UDPSocket.bind()](#bind)绑定 IP地址和端口。该接口为耗时操作，请在Worker线程或taskpool线程调用该接口。
 
 **起始版本：** 7
 
@@ -884,15 +908,15 @@ send(options: UDPSendOptions): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2301207](../errorcode-net-socket.md#2301207-socks5认证用户名或密码无效) | Socks5 username or password is invalid.<br>**适用版本：** 18+ |
-| [2301206](../errorcode-net-socket.md#2301206-socks5连接代理服务器失败) | Socks5 failed to connect to the proxy server.<br>**适用版本：** 18+ |
-| [2301211](../errorcode-net-socket.md#2301211-socks5接收消息失败) | Socks5 failed to receive the message.<br>**适用版本：** 18+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2301210](../errorcode-net-socket.md#2301210-socks5发送消息失败) | Socks5 failed to send the message.<br>**适用版本：** 18+ |
-| [2301209](../errorcode-net-socket.md#2301209-socks5协商认证方式失败) | Socks5 failed to negotiate the authentication method.<br>**适用版本：** 18+ |
+| [2301206](../errorcode-net-socket.md#2301206-socks5连接代理服务器失败) | Socks5 failed to connect to the proxy server.<br>**适用版本：** 18+ |
+| [2301207](../errorcode-net-socket.md#2301207-socks5认证用户名或密码无效) | Socks5 username or password is invalid.<br>**适用版本：** 18+ |
 | [2301208](../errorcode-net-socket.md#2301208-socks5连接远程服务器失败) | Socks5 failed to connect to the remote server.<br>**适用版本：** 18+ |
-| [2301213](../errorcode-net-socket.md#2301213-socks5消息反序列化失败) | Socks5 deserialization error.<br>**适用版本：** 18+ |
+| [2301209](../errorcode-net-socket.md#2301209-socks5协商认证方式失败) | Socks5 failed to negotiate the authentication method.<br>**适用版本：** 18+ |
+| [2301210](../errorcode-net-socket.md#2301210-socks5发送消息失败) | Socks5 failed to send the message.<br>**适用版本：** 18+ |
+| [2301211](../errorcode-net-socket.md#2301211-socks5接收消息失败) | Socks5 failed to receive the message.<br>**适用版本：** 18+ |
 | [2301212](../errorcode-net-socket.md#2301212-socks5消息序列化失败) | Socks5 serialization error.<br>**适用版本：** 18+ |
+| [2301213](../errorcode-net-socket.md#2301213-socks5消息反序列化失败) | Socks5 deserialization error.<br>**适用版本：** 18+ |
 
 **示例**
 
@@ -975,7 +999,11 @@ udp.send(sendOptions).then(() => {
 setExtraOptions(options: UDPExtraOptions, callback: AsyncCallback<void>): void
 ```
 
-设置UDPSocket连接的其他属性。使用callback异步回调。 &gt; **说明：** &gt; &gt; bind方法调用成功后，才可调用此方法。
+设置UDPSocket连接的其他属性。使用callback异步回调。
+
+> **说明：**
+> 
+> bind方法调用成功后，才可调用此方法。
 
 **起始版本：** 7
 
@@ -990,7 +1018,7 @@ setExtraOptions(options: UDPExtraOptions, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [UDPExtraOptions](arkts-network-socket-udpextraoptions-i.md) | 是 | UDPSocket连接的其他属性，参考[UDPExtraOptions](arkts-network-socket-udpextraoptions-i.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 |  |
 
 **错误码：**
 
@@ -1040,7 +1068,11 @@ udp.bind(bindAddr, (err: BusinessError) => {
 setExtraOptions(options: UDPExtraOptions): Promise<void>
 ```
 
-设置UDPSocket连接的其他属性。使用Promise异步回调。 &gt; **说明：** &gt; &gt; bind方法调用成功后，才可调用此方法。
+设置UDPSocket连接的其他属性。使用Promise异步回调。
+
+> **说明：**
+> 
+> bind方法调用成功后，才可调用此方法。
 
 **起始版本：** 7
 

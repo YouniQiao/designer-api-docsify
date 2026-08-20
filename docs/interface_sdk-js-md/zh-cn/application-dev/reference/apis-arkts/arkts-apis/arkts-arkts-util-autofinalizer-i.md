@@ -1,6 +1,10 @@
 # AutoFinalizer
 
-提供一个可通过开发者自定义回调释放由开发者管理的资源的接口。 &gt; **说明：** &gt; &gt; AutoFinalizer&lt;T&gt;需要和AutoFinalizerCleaner&lt;T&gt;一起使用，只实现该接口类没有任何功能。
+提供一个可通过开发者自定义回调释放由开发者管理的资源的接口。
+
+> **说明：**
+> 
+> AutoFinalizer&lt;T&gt;需要和AutoFinalizerCleaner&lt;T&gt;一起使用，只实现该接口类没有任何功能。
 
 **起始版本：** 22
 

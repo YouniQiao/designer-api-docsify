@@ -42,7 +42,9 @@ controller: WebController | WebviewController
 emulateTouchFromMouseEvent? : boolean
 ```
 
-设定鼠标事件是否转换为触摸事件。true表示转换成触摸事件，适用于需要统一触摸和鼠标交互行为的场景；false表示不转换成触摸事件。 默认值：false。
+设定鼠标事件是否转换为触摸事件。true表示转换成触摸事件，适用于需要统一触摸和鼠标交互行为的场景；false表示不转换成触摸事件。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -58,7 +60,11 @@ emulateTouchFromMouseEvent? : boolean
 incognitoMode? : boolean
 ```
 
-表示当前创建的Webview是否是隐私模式。true表示创建隐私模式，false表示创建正常模式。 默认值：false。 传入undefined或null时为false。<!--RP1--><!--RP1End-->
+表示当前创建的Webview是否是隐私模式。true表示创建隐私模式，false表示创建正常模式。
+
+默认值：false。
+
+传入undefined或null时为false。<!--RP1--><!--RP1End-->
 
 **类型：** boolean
 
@@ -94,7 +100,9 @@ renderMode? : RenderMode
 sharedRenderProcessToken? : string
 ```
 
-表示当前Web组件指定共享渲染进程的token，多渲染进程模式下，相同token的Web组件会优先尝试复用绑定的渲染进程。绑定发生在渲染进程的初始化阶段。当渲染进程没有关联的Web组件时，其绑定关系将被移除。 默认值： ""。
+表示当前Web组件指定共享渲染进程的token，多渲染进程模式下，相同token的Web组件会优先尝试复用绑定的渲染进程。绑定发生在渲染进程的初始化阶段。当渲染进程没有关联的Web组件时，其绑定关系将被移除。
+
+默认值： ""。
 
 **类型：** string
 
@@ -110,7 +118,9 @@ sharedRenderProcessToken? : string
 src: string | Resource
 ```
 
-网页资源地址。如果访问本地资源文件，请使用resource协议或\$rawfile资源引用。如果加载应用包外沙箱路径的本地资源文件（文件支持html和txt类型），请使用file://沙箱文件路径。 src不能通过状态变量（例如：@State）动态更改地址，如需更改，请通过[loadUrl()](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl)重新加载。
+网页资源地址。如果访问本地资源文件，请使用resource协议或\$rawfile资源引用。如果加载应用包外沙箱路径的本地资源文件（文件支持html和txt类型），请使用file://沙箱文件路径。
+
+src不能通过状态变量（例如：@State）动态更改地址，如需更改，请通过[loadUrl()](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl)重新加载。
 
 **类型：** string \| Resource
 

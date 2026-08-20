@@ -110,7 +110,9 @@ excludedDates?: number[]
 expire?: number
 ```
 
-重复周期截止日。格式为13位时间戳，不填时则日程无截止日期。 当expire与count和interval同时设置时，以先到达的限制条件及效果为准。
+重复周期截止日。格式为13位时间戳，不填时则日程无截止日期。
+
+当expire与count和interval同时设置时，以先到达的限制条件及效果为准。
 
 **类型：** number
 

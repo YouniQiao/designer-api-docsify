@@ -2,6 +2,8 @@
 
 Provides methods to operate or manage NFC.
 
+@namespace nfcController
+
 **Since:** 23
 
 <!--Device-unnamed-declare namespace nfcController--><!--Device-unnamed-declare namespace nfcController-End-->

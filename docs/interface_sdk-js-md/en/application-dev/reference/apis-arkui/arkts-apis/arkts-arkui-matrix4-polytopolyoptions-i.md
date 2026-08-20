@@ -1,8 +1,12 @@
 # PolyToPolyOptions
 
-Describes the configuration options for polygon-to-polygon transformation mapping.
+Set poly to poly point options.
 
-**Since:** 12
+@interface PolyToPolyOptions
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-matrix4-export interface PolyToPolyOptions--><!--Device-matrix4-export interface PolyToPolyOptions-End-->
 
@@ -17,64 +21,64 @@ import { matrix4 } from '@kit.ArkUI';
 ## dst
 
 ```TypeScript
-dst:Array<Point>
+dst: Array<Point>
 ```
 
-Coordinates of the destination point.
+Array of point coordinates for the target polygon.
 
 **Type:** Array&lt;Point&gt;
 
-**Since:** 12
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PolyToPolyOptions-dst:Array<Point>--><!--Device-PolyToPolyOptions-dst:Array<Point>-End-->
+<!--Device-PolyToPolyOptions-dst: Array<Point>--><!--Device-PolyToPolyOptions-dst: Array<Point>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## dstIndex
 
 ```TypeScript
-dstIndex?: number
+dstIndex?: int
 ```
 
-Start index of the destination point coordinates. Default value: **src.length/2**. Value range: [0, +∞).
+Start index of the target polygon, which defaults to 0.
 
-**Type:** number
+**Type:** int
 
 **Default:** src.Length/2
 
-**Since:** 12
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PolyToPolyOptions-dstIndex?: number--><!--Device-PolyToPolyOptions-dstIndex?: number-End-->
+<!--Device-PolyToPolyOptions-dstIndex?: int--><!--Device-PolyToPolyOptions-dstIndex?: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## pointCount
 
 ```TypeScript
-pointCount?:number
+pointCount?: int
 ```
 
-Number of used points. **0**: returns an identity matrix. **1**: returns a translation matrix. 2-4: returns a transformation matrix. Default value: **0**. Value range: [0, +∞).
+The number of points to be used. If it is 0, it returns the identity matrix. If it is 1, it returns a translation matrix that changed before two points. If it is 2-4, it returns a transformation matrix.
 
-**Type:** number
+**Type:** int
 
 **Default:** 0
 
-**Since:** 12
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PolyToPolyOptions-pointCount?:number--><!--Device-PolyToPolyOptions-pointCount?:number-End-->
+<!--Device-PolyToPolyOptions-pointCount?: int--><!--Device-PolyToPolyOptions-pointCount?: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,15 +88,15 @@ Number of used points. **0**: returns an identity matrix. **1**: returns a trans
 src: Array<Point>
 ```
 
-Coordinates of the source point.
+Array of point coordinates for the source polygon.
 
 **Type:** Array&lt;Point&gt;
 
-**Since:** 12
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PolyToPolyOptions-src: Array<Point>--><!--Device-PolyToPolyOptions-src: Array<Point>-End-->
 
@@ -101,22 +105,22 @@ Coordinates of the source point.
 ## srcIndex
 
 ```TypeScript
-srcIndex?: number
+srcIndex?: int
 ```
 
-Start index of the source point coordinates. Default value: **0**. Value range: [0, +∞).
+Start point index of the source polygon, which defaults to 0.
 
-**Type:** number
+**Type:** int
 
 **Default:** 0
 
-**Since:** 12
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PolyToPolyOptions-srcIndex?: number--><!--Device-PolyToPolyOptions-srcIndex?: number-End-->
+<!--Device-PolyToPolyOptions-srcIndex?: int--><!--Device-PolyToPolyOptions-srcIndex?: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

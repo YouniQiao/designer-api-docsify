@@ -1,6 +1,16 @@
 # NetConnection
 
-Represents the network connection object type. &gt; **NOTE：**&gt; &gt; (1) When the network transitions from unavailable to available, the **netAvailable**, **netCapabilitiesChange**, &gt; and **netConnectionPropertiesChange** events are triggered. &gt; &gt; (2) If the network transitions from available to unavailable after a **netAvailable** event is received, a &gt; **netLost** event is triggered. &gt; &gt; (3) If no **netAvailable** event is received, a **netUnavailable** event is directly triggered. &gt; &gt; (4) When the network transitions from Wi-Fi to cellular, a **netLost** event is first triggered to indicate that &gt; the Wi-Fi network is lost and then a **netAvailable** event is triggered to indicate that the cellular network is &gt; available.
+Represents the network connection object type.
+
+> **NOTE：**
+> 
+> (1) When the network transitions from unavailable to available, the **netAvailable**, **netCapabilitiesChange**, &gt; and **netConnectionPropertiesChange** events are triggered.
+> 
+> (2) If the network transitions from available to unavailable after a **netAvailable** event is received, a &gt; **netLost** event is triggered.
+> 
+> (3) If no **netAvailable** event is received, a **netUnavailable** event is directly triggered.
+> 
+> (4) When the network transitions from Wi-Fi to cellular, a **netLost** event is first triggered to indicate that &gt; the Wi-Fi network is lost and then a **netAvailable** event is triggered to indicate that the cellular network is &gt; available.
 
 **Since:** 23
 
@@ -368,7 +378,12 @@ netCon.unregister((error: BusinessError) => {
 register(callback: AsyncCallback<void>): void
 ```
 
-Registers a listener for network status changes. To listen for a specific type of events, call **on** to enable listening and then call **register** to register an event listener. &gt; **NOTE：**&gt; &gt; After using the **register** API, you need to call **unregister** to deregister the listener. &gt; **Required permission**: ohos.permission.GET_NETWORK_INFO
+Registers a listener for network status changes. To listen for a specific type of events, call **on** to enable listening and then call **register** to register an event listener.
+
+> **NOTE：**
+> 
+> After using the **register** API, you need to call **unregister** to deregister the listener.
+> **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
@@ -390,11 +405,11 @@ Registers a listener for network status changes. To listen for a specific type o
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2101008](../errorcode-net-connection.md#2101008-callback-already-exists) | The callback already exists. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2101008](../errorcode-net-connection.md#2101008-callback-already-exists) | The callback already exists. |
 | [2101022](../errorcode-net-connection.md#2101022-number-of-requests-exceeding-the-maximum) | The number of requests exceeded the maximum allowed. |
 
 **Examples**
@@ -435,10 +450,10 @@ Unregisters the listener for network status changes.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 8 - 11 |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 8 - 11 |
 | [2101007](../errorcode-net-connection.md#2101007-callback-not-exist) | The callback does not exist. |
 
 **Examples**

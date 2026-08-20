@@ -1,6 +1,6 @@
 # BaseShape
 
-This API inherits from [CommonShapeMethod](../../apis-na/arkts-apis/arkts-na-arkui-shape-commonshapemethod-c.md).
+This API inherits from [CommonShapeMethod](../../apis-default/arkts-apis/arkts-arkui-shape-commonshapemethod-c.md).
 
 **Inheritance/Implementation:** BaseShape extends CommonShapeMethod<T>
 

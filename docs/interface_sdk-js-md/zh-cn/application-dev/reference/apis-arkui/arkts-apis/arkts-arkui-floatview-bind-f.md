@@ -13,7 +13,15 @@ function bind(floatViewController: FloatViewController, floatingBallController: 
     floatingBallParams: floatingBall.FloatingBallParams): Promise<void>
 ```
 
-绑定标准悬浮窗和闪控球。需要先创建[标准悬浮窗控制器](arkts-arkui-floatview-floatviewcontroller-i.md)和 [闪控球控制器](arkts-arkui-floatingball-floatingballcontroller-i.md)，且均未启动。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 绑定成功后，调用[start()](arkts-arkui-floatview-floatviewcontroller-i.md#start)或 &gt; [startFloatingBall()](arkts-arkui-floatingball-floatingballcontroller-i.md#startfloatingball)均会同时创 &gt; 建标准悬浮窗窗口和闪控球窗口，并触发对应窗口已注册的状态回调。但同一时刻仅展示其中一个窗口，展示顺序取决于先调用哪个控制器的启动接口。 &gt; &gt; - 绑定成功后，用户可通过点击操作在标准悬浮窗窗口与闪控球之间进行切换。 &gt; &gt; - 绑定成功后，调用任一控制器的停止接口（[stop()](arkts-arkui-floatview-floatviewcontroller-i.md#stop)或 &gt; [stopFloatingBall()](arkts-arkui-floatingball-floatingballcontroller-i.md#stopfloatingball)）会同时销毁标 &gt; 准悬浮窗窗口和闪控球窗口，并触发对应窗口已注册的状态回调。
+绑定标准悬浮窗和闪控球。需要先创建[标准悬浮窗控制器](arkts-arkui-floatview-floatviewcontroller-i.md)和 [闪控球控制器](arkts-arkui-floatingball-floatingballcontroller-i.md)，且均未启动。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 绑定成功后，调用[start()](arkts-arkui-floatview-floatviewcontroller-i.md#start)或 &gt; [startFloatingBall()](arkts-arkui-floatingball-floatingballcontroller-i.md#startfloatingball)均会同时创 &gt; 建标准悬浮窗窗口和闪控球窗口，并触发对应窗口已注册的状态回调。但同一时刻仅展示其中一个窗口，展示顺序取决于先调用哪个控制器的启动接口。
+> 
+> - 绑定成功后，用户可通过点击操作在标准悬浮窗窗口与闪控球之间进行切换。
+> 
+> - 绑定成功后，调用任一控制器的停止接口（[stop()](arkts-arkui-floatview-floatviewcontroller-i.md#stop)或 &gt; [stopFloatingBall()](arkts-arkui-floatingball-floatingballcontroller-i.md#stopfloatingball)）会同时销毁标 &gt; 准悬浮窗窗口和闪控球窗口，并触发对应窗口已注册的状态回调。
 
 **起始版本：** 26.0.0
 
@@ -43,9 +51,9 @@ function bind(floatViewController: FloatViewController, floatingBallController: 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300019](../errorcode-window.md#1300019-闪控球参数校验错误) | Wrong parameters for operating the floating ball. Possible cause: Invalid floating ball params. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported on this device. Possible cause: Call api on unsupported device. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. Possible cause: The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported on this device. Possible cause: Call api on unsupported device. |
+| [1300019](../errorcode-window.md#1300019-闪控球参数校验错误) | Wrong parameters for operating the floating ball. Possible cause: Invalid floating ball params. |
 | [1300025](../errorcode-window.md#1300025-闪控球状态不支持该操作) | The floating ball state does not support this operation. Possible cause: 1. The floating ball has started but not stopped yet. 2. The floating ball controller has been bound. |
 | [1300031](../errorcode-window.md#1300031-闪控窗状态不支持该操作) | The floatView state does not support this operation. Possible cause: 1. The float view has started but not stopped yet. 2. The float view controller has been bound. |
 

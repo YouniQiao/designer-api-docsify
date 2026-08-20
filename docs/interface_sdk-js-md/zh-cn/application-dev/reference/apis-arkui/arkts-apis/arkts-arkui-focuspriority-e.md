@@ -1,4 +1,4 @@
-# FocusPriority(Provide some common interface for focus.)
+# FocusPriority
 
 设置组件焦点的优先级。
 

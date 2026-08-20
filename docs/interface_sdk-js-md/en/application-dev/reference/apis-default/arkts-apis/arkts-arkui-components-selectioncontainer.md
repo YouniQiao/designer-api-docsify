@@ -1,0 +1,36 @@
+# @ohos.arkui.components.SelectionContainer
+
+## Modules to Import
+
+```TypeScript
+```
+
+## Summary
+
+### Functions
+
+| Name | Description |
+| --- | --- |
+| [SelectionContainer](arkts-arkui-components-selectioncontainer-selectioncontainer-f.md) | Defines SelectionContainer component. |
+| [SelectionContainer](arkts-arkui-components-selectioncontainer-selectioncontainer-f.md) | Defines SelectionContainer component. It requires calling setSelectionContainerOptions at start of the component attribute set-up, and it requires calling applyAttributesFinish at the end of the component attribute set-up. |
+
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [SelectionContainerAttribute](arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | Defines the attributes of SelectionContainer. |
+| [SelectionContainerEditMenuOptions](arkts-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md) | Defines custom edit menu options for SelectionContainer. |
+| [SelectionContainerMenuOptions](arkts-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md) | Defines selection menu options for SelectionContainer. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [SelectionContainerTextJoinStyle](arkts-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md) | Defines text join style for SelectionContainer. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [OnMenuItemClickWithTextCallback](arkts-onmenuitemclickwithtextcallback-t.md) | Invoke upon clicking an item, capable of intercepting the default system menu execution behavior. |
+

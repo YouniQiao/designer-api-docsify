@@ -2,6 +2,8 @@
 
 定义AccessibilityCustomAction的结构体，可以在可访问性下的自定义操作处理中处理。
 
+@interface AccessibilityCustomAction
+
 **起始版本：** 26.0.0
 
 <!--Device-unnamed-declare interface AccessibilityCustomAction--><!--Device-unnamed-declare interface AccessibilityCustomAction-End-->

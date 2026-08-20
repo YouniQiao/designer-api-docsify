@@ -43,7 +43,11 @@ ArcSliderOptions的构造函数。
   digitalCrownSensitivity?: CrownSensitivity
 ```
 
-设置旋转表冠的灵敏度。 默认值：CrownSensitivity.MEDIUM
+设置旋转表冠的灵敏度。
+
+默认值：CrownSensitivity.MEDIUM
+
+@Trace
 
 **类型：** CrownSensitivity
 
@@ -62,7 +66,11 @@ ArcSliderOptions的构造函数。
   layoutOptions?: ArcSliderLayoutOptions
 ```
 
-配置弧形Slider的样式信息。 默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
+配置弧形Slider的样式信息。
+
+默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
+
+@Trace
 
 **类型：** [ArcSliderLayoutOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md)
 
@@ -81,7 +89,11 @@ ArcSliderOptions的构造函数。
   onChange?: ArcSliderChangeHandler
 ```
 
-弧形Slider的进度值发生变化时触发回调。 默认值：不传入的情况，无回调。
+弧形Slider的进度值发生变化时触发回调。
+
+默认值：不传入的情况，无回调。
+
+@Trace
 
 **类型：** [ArcSliderChangeHandler](arkts-arkui-arcsliderchangehandler-t.md)
 
@@ -100,7 +112,11 @@ ArcSliderOptions的构造函数。
   onEnlarge?: ArcSliderEnlargeHandler
 ```
 
-弧形Slider放大或缩小时触发回调。 默认值：不传入的情况，无回调。
+弧形Slider放大或缩小时触发回调。
+
+默认值：不传入的情况，无回调。
+
+@Trace
 
 **类型：** [ArcSliderEnlargeHandler](arkts-arkui-arcsliderenlargehandler-t.md)
 
@@ -119,7 +135,11 @@ ArcSliderOptions的构造函数。
   onTouch?: ArcSliderTouchHandler
 ```
 
-弧形Slider被触摸时触发回调。 默认值：不传入的情况，无回调。
+弧形Slider被触摸时触发回调。
+
+默认值：不传入的情况，无回调。
+
+@Trace
 
 **类型：** [ArcSliderTouchHandler](arkts-arkui-arcslidertouchhandler-t.md)
 
@@ -138,7 +158,11 @@ ArcSliderOptions的构造函数。
   styleOptions?: ArcSliderStyleOptions
 ```
 
-配置弧形Slider的样式信息。 默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
+配置弧形Slider的样式信息。
+
+默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
+
+@Trace
 
 **类型：** [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
 
@@ -157,7 +181,11 @@ ArcSliderOptions的构造函数。
   valueOptions?: ArcSliderValueOptions
 ```
 
-配置弧形Slider的样式信息。 默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
+配置弧形Slider的样式信息。
+
+默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
+
+@Trace
 
 **类型：** [ArcSliderValueOptions](arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptions-c.md)
 

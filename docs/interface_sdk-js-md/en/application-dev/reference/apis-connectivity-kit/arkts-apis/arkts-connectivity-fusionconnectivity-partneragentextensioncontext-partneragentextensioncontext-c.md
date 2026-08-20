@@ -2,6 +2,8 @@
 
 Class for the context of the PartnerAgentExtensionAbility.
 
+@extends ExtensionContext
+
 **Inheritance/Implementation:** PartnerAgentExtensionContext extends ExtensionContext
 
 **Since:** 23

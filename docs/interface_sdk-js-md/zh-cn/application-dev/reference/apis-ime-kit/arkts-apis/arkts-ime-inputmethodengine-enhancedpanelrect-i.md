@@ -1,5 +1,7 @@
 # EnhancedPanelRect
 
+@brief 增强的输入法面板位置、大小信息，包含自定义避让区域、自定义热区。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-export interface EnhancedPanelRect--><!--Device-inputMethodEngine-export interface EnhancedPanelRect-End-->
@@ -18,6 +20,8 @@ import { inputMethodEngine } from '@kit.IMEKit';
 fullScreenMode?: boolean
 ```
 
+@brief 是否开启全屏模式。默认值为false。 <br> <br>- 值为true，landscapeRect和portraitRect可不填写。 <br>- 值为false，landscapeRect和portraitRect为必选属性。
+
 **类型：** boolean
 
 **默认值：** false
@@ -33,6 +37,8 @@ fullScreenMode?: boolean
 ```TypeScript
 landscapeAvoidY?: int
 ```
+
+@brief 横屏状态时，面板中的避让线距离面板顶部的距离，单位px。默认值为0。 <br> <br>- 应用内其他系统组件会对避让线以下的输入法面板区域进行避让。 <br>- 面板为固定态时，避让线到屏幕底部的高度不能超过屏幕高度的70%。当面板高度大于屏幕高度70%时，取默认值0将无法通过此校验，需要开发者手动设置，使得避让线到屏幕底部的高度不超过屏幕高度的70%。
 
 **类型：** int
 
@@ -50,6 +56,8 @@ landscapeAvoidY?: int
 landscapeInputRegion?: Array<window.Rect>
 ```
 
+@brief 横屏状态时，面板接收输入事件的区域。 <br> <br>- 数组大小限制为[1, 4]。默认值为横屏时的面板大小。 <br>- 传入的热区位置是相对于输入法面板窗口左顶点的位置。
+
 **类型：** Array&lt;window.Rect&gt;
 
 **起始版本：** 23
@@ -64,6 +72,8 @@ landscapeInputRegion?: Array<window.Rect>
 landscapeRect?: window.Rect
 ```
 
+@brief 横屏状态时输入法面板窗口的位置大小。 <br> <br>- 当fullScreenMode不填写或值为false时，此属性为必选。
+
 **类型：** window.Rect
 
 **起始版本：** 23
@@ -77,6 +87,8 @@ landscapeRect?: window.Rect
 ```TypeScript
 portraitAvoidY?: int
 ```
+
+@brief 竖屏状态时，面板中的避让线距离面板顶部的距离，单位px。默认值为0。 <br> <br>- 应用内其他系统组件会对避让线以下的输入法面板区域进行避让。 <br>- 面板为固定态时，避让线到屏幕底部的高度不能超过屏幕高度的70%。当面板高度大于屏幕高度70%时，取默认值0将无法通过此校验，需要开发者手动设置，使得避让线到屏幕底部的高度不超过屏幕高度的70%。
 
 **类型：** int
 
@@ -94,6 +106,8 @@ portraitAvoidY?: int
 portraitInputRegion?: Array<window.Rect>
 ```
 
+@brief 竖屏状态时，面板接收输入事件的区域。 <br> <br>- 数组大小限制为[1, 4]。默认值为竖屏时的面板大小。 <br>- 传入的热区位置是相对于输入法面板窗口左顶点的位置。
+
 **类型：** Array&lt;window.Rect&gt;
 
 **起始版本：** 23
@@ -107,6 +121,8 @@ portraitInputRegion?: Array<window.Rect>
 ```TypeScript
 portraitRect?: window.Rect
 ```
+
+@brief 竖屏状态时，输入法面板窗口的位置大小。 <br> <br>- 当fullScreenMode不填写或值为false时，此属性为必选。
 
 **类型：** window.Rect
 

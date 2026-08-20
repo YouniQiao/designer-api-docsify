@@ -35,12 +35,12 @@ Adds the permission to an application for accessing the serial port device. seri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
 | [201](../../errorcode-universal.md#201-permission-denied) |  |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |  |
-| [31400003](../errorcode-usb.md#31400003-port-number-not-exist) |  |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
 | [14400005](../errorcode-usb.md#14400005-database-operation-exception) |  |
 | [31400001](../errorcode-usb.md#31400001-serial-port-service-error) |  |
+| [31400003](../errorcode-usb.md#31400003-port-number-not-exist) |  |
 
 **Examples**
 

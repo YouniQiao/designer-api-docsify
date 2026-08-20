@@ -114,8 +114,8 @@ static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallba
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [170002](../errorcode-styled-string.md#170002-属性字符串解码错误) | Styled string decode error. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [170002](../errorcode-styled-string.md#170002-属性字符串解码错误) | Styled string decode error. |
 
 ## unmarshalling
 
@@ -153,6 +153,6 @@ static unmarshalling(buffer: ArrayBuffer): Promise<StyledString | undefined>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [170002](../errorcode-styled-string.md#170002-属性字符串解码错误) | Styled string decode error. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [170002](../errorcode-styled-string.md#170002-属性字符串解码错误) | Styled string decode error. |
 

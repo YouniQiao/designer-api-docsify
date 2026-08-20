@@ -87,7 +87,7 @@ getAllObjects(callback: AsyncCallback<Array<T>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;T&gt;&gt; | 是 | 回调函数。当获取结果集中的所有文件资产成功，err为undefined，data为具体检索结果；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;T&gt;&gt; | 是 | 回调函数。当获取结果集中的所有文件资产成功，err为undefined，data为具体检索结果；否则为错误对象。 |
 
 **错误码：**
 
@@ -174,7 +174,7 @@ getFirstObject(callback: AsyncCallback<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | 是 | 回调函数。当获取结果集中的第一个文件资产成功，err为undefined，data为具体检索结果；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | 是 | 回调函数。当获取结果集中的第一个文件资产成功，err为undefined，data为具体检索结果；否则为错误对象。 |
 
 **错误码：**
 
@@ -262,7 +262,7 @@ getLastObject(callback: AsyncCallback<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | 是 | 回调函数。当获取结果集中的最后一个文件资产成功，err为undefined，data为具体检索结果；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | 是 | 回调函数。当获取结果集中的最后一个文件资产成功，err为undefined，data为具体检索结果；否则为错误对象。 |
 
 **错误码：**
 
@@ -306,7 +306,9 @@ getLastObject(): Promise<T>
 getNextObject(callback: AsyncCallback<T>): void
 ```
 
-获取文件检索结果中的下一个文件资产。使用callback异步回调。 在调用此方法之前，必须使用[isAfterLast()](#isafterlast)来检查当前位置是否为最后一行。
+获取文件检索结果中的下一个文件资产。使用callback异步回调。
+
+在调用此方法之前，必须使用[isAfterLast()](#isafterlast)来检查当前位置是否为最后一行。
 
 **起始版本：** 23
 
@@ -320,7 +322,7 @@ getNextObject(callback: AsyncCallback<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | 是 | 回调函数。当获取结果集中的下一个文件资产成功，err为undefined，data为具体检索结果；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | 是 | 回调函数。当获取结果集中的下一个文件资产成功，err为undefined，data为具体检索结果；否则为错误对象。 |
 
 **错误码：**
 
@@ -335,7 +337,9 @@ getNextObject(callback: AsyncCallback<T>): void
 getNextObject(): Promise<T>
 ```
 
-获取文件检索结果中的下一个文件资产。使用Promise异步回调。 在调用此方法之前，必须使用[isAfterLast()](#isafterlast)来检查当前位置是否为最后一行。
+获取文件检索结果中的下一个文件资产。使用Promise异步回调。
+
+在调用此方法之前，必须使用[isAfterLast()](#isafterlast)来检查当前位置是否为最后一行。
 
 **起始版本：** 23
 
@@ -379,7 +383,7 @@ getObjectByPosition(index: int, callback: AsyncCallback<T>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | index | int | 是 | 要获取的文件的索引，从0开始。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | 是 | 回调函数。当获取结果集中指定索引的文件资产成功，err为undefined，data为具体检索结果；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | 是 | 回调函数。当获取结果集中指定索引的文件资产成功，err为undefined，data为具体检索结果；否则为错误对象。 |
 
 **错误码：**
 

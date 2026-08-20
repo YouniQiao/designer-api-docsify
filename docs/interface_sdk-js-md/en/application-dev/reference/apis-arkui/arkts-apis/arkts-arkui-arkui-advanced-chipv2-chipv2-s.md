@@ -42,7 +42,7 @@ Sets the build function of the ChipV2.
 
 Chip options.
 
-**Type:** [ChipV2Options](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chipv2-chipv2options-c.md)
+**Type:** [ChipV2Options](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2options-c.md)
 
 **Since:** 26.0.0
 

@@ -17,6 +17,8 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function getCurrentInputMethodSubtype(): InputMethodSubtype
 ```
 
+@brief 获取当前输入法的子类型。
+
 **起始版本：** 23
 
 <!--Device-inputMethod-function getCurrentInputMethodSubtype(): InputMethodSubtype--><!--Device-inputMethod-function getCurrentInputMethodSubtype(): InputMethodSubtype-End-->

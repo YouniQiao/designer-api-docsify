@@ -67,13 +67,13 @@ Deletes a cache file. This API returns the result synchronously.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
-| 13900002 | No such file or directory. |
-| 14000002 | Invalid URI. |
-| 13900012 | Permission denied by the file system |
 | 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900002 | No such file or directory. |
 | 13900010 | Try again. |
+| 13900012 | Permission denied by the file system |
+| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 14000002 | Invalid URI. |
+| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 **Examples**
 
@@ -478,10 +478,10 @@ Starts downloading a file from the Drive Kit to the local device. This API uses 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
-| 13900002 | No such file or directory. |
-| 14000002 | Invalid uri. |
-| 13900025 | No space left on device. |
 | 13600001 | IPC error. |
+| 13900002 | No such file or directory. |
+| 13900025 | No space left on device. |
+| 14000002 | Invalid uri. |
 
 **Examples**
 
@@ -535,10 +535,10 @@ Starts downloading a file from the Drive Kit to the local device. This API uses 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
-| 13900002 | No such file or directory. |
-| 14000002 | Invalid uri. |
-| 13900025 | No space left on device. |
 | 13600001 | IPC error. |
+| 13900002 | No such file or directory. |
+| 13900025 | No space left on device. |
+| 14000002 | Invalid uri. |
 
 **Examples**
 
@@ -565,7 +565,9 @@ fileCache.start(uri, (err: BusinessError) => {
 startBatch(uris: Array<string>, fileType?: DownloadFileType): Promise<long>
 ```
 
-Starts the batch download of a file from the Drive Kit. This API uses a promise to return the result. Different batch download tasks can be distinguished by the task ID returned.
+Starts the batch download of a file from the Drive Kit. This API uses a promise to return the result.
+
+Different batch download tasks can be distinguished by the task ID returned.
 
 **Since:** 23
 
@@ -590,11 +592,11 @@ Starts the batch download of a file from the Drive Kit. This API uses a promise 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
-| 22400004 | Exceed the maximum limit. |
-| 14000002 | Invalid uri. |
 | 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 14000002 | Invalid uri. |
+| 22400004 | Exceed the maximum limit. |
+| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 **Examples**
 
@@ -625,7 +627,9 @@ fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then((download
 stop(uri: string, needClean?: boolean): Promise<void>
 ```
 
-Stops downloading a file from the Drive Kit to the local device. This API uses a promise to return the result. When **stop()** is called, the current file download process terminates, and downloaded files are retained by default. You can call **start()** to resume the download.
+Stops downloading a file from the Drive Kit to the local device. This API uses a promise to return the result.
+
+When **stop()** is called, the current file download process terminates, and downloaded files are retained by default. You can call **start()** to resume the download.
 
 **Since:** 23
 
@@ -651,9 +655,9 @@ Stops downloading a file from the Drive Kit to the local device. This API uses a
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
+| 13600001 | IPC error. |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
-| 13600001 | IPC error. |
 
 **Examples**
 
@@ -678,7 +682,9 @@ fileCache.stop(uri, true).then(() => {
 stop(uri: string, callback: AsyncCallback<void>): void
 ```
 
-Stops downloading a file from the Drive Kit to the local device. This API uses an asynchronous callback to return the result. When **stop()** is called, the current file download process terminates, and downloaded files are retained. You can call **start()** to resume the download.
+Stops downloading a file from the Drive Kit to the local device. This API uses an asynchronous callback to return the result.
+
+When **stop()** is called, the current file download process terminates, and downloaded files are retained. You can call **start()** to resume the download.
 
 **Since:** 23
 
@@ -698,9 +704,9 @@ Stops downloading a file from the Drive Kit to the local device. This API uses a
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
+| 13600001 | IPC error. |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
-| 13600001 | IPC error. |
 
 **Examples**
 
@@ -727,7 +733,9 @@ fileCache.stop(uri, (err: BusinessError) => {
 stopBatch(downloadId: long, needClean?: boolean): Promise<void>
 ```
 
-Stops the batch download task enabled by [startBatch](#startbatch) of a file from the Drive Kit. This API uses a promise to return the result. When **stopBatch()** is called, the batch download terminates. The **needClean** parameter determines whether to delete incompletely downloaded files.
+Stops the batch download task enabled by [startBatch](#startbatch) of a file from the Drive Kit. This API uses a promise to return the result.
+
+When **stopBatch()** is called, the batch download terminates. The **needClean** parameter determines whether to delete incompletely downloaded files.
 
 **Since:** 23
 
@@ -752,9 +760,9 @@ Stops the batch download task enabled by [startBatch](#startbatch) of a file fro
 
 | Error Code ID | Error Message |
 | --- | --- |
+| 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
 | 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
-| 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
 
 **Examples**
 

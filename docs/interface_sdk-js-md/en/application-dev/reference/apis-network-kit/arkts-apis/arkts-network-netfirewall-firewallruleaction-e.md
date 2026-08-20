@@ -1,4 +1,4 @@
-# FirewallRuleAction(Network Firewall)
+# FirewallRuleAction
 
 Enumerates the firewall rule actions, including allowing or denying network connections.
 

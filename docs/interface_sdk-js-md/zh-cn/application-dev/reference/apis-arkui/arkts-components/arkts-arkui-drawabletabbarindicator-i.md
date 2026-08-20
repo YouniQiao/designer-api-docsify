@@ -19,7 +19,13 @@
 borderRadius?: Length
 ```
 
-下划线的圆角半径（不支持百分比设置）。 默认值：0.0 单位：vp 取值范围：[0, +∞)。异常值时取默认值。
+下划线的圆角半径（不支持百分比设置）。
+
+默认值：0.0
+
+单位：vp
+
+取值范围：[0, +∞)。异常值时取默认值。
 
 **类型：** Length
 
@@ -41,7 +47,7 @@ borderRadius?: Length
 drawable?: DrawableDescriptor
 ```
 
-下划线的图源。 支持[DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)、 [PixelMapDrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-pixelmapdrawabledescriptor-c.md)、 [LayeredDrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-layereddrawabledescriptor-c.md)和 [AnimatedDrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)类型。当传入无效图源时将显示默认的实线型下划 线。
+下划线的图源。 支持[DrawableDescriptor](../../apis-default/arkts-apis/arkts-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)、 [PixelMapDrawableDescriptor](../../apis-default/arkts-apis/arkts-arkui-drawabledescriptor-pixelmapdrawabledescriptor-c.md)、 [LayeredDrawableDescriptor](../../apis-default/arkts-apis/arkts-arkui-drawabledescriptor-layereddrawabledescriptor-c.md)和 [AnimatedDrawableDescriptor](../../apis-default/arkts-apis/arkts-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)类型。当传入无效图源时将显示默认的实线型下划 线。
 
 **类型：** [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md)
 
@@ -61,7 +67,13 @@ drawable?: DrawableDescriptor
 height?: Length
 ```
 
-下划线的高度（不支持百分比设置）。 默认值：2.0 单位：vp 取值范围：[0, +∞)。异常值时取默认值。
+下划线的高度（不支持百分比设置）。
+
+默认值：2.0
+
+单位：vp
+
+取值范围：[0, +∞)。异常值时取默认值。
 
 **类型：** Length
 
@@ -83,7 +95,13 @@ height?: Length
 marginTop?: Length
 ```
 
-下划线与文字的间距（不支持百分比设置）。 默认值：8.0 单位：vp 取值范围：[0, +∞)。异常值时取默认值。
+下划线与文字的间距（不支持百分比设置）。
+
+默认值：8.0
+
+单位：vp
+
+取值范围：[0, +∞)。异常值时取默认值。
 
 **类型：** Length
 
@@ -105,7 +123,15 @@ marginTop?: Length
 width?: Length
 ```
 
-下划线的宽度（不支持百分比设置）。 默认值：0.0 单位：vp 取值范围：[0, +∞)。异常值时取默认值。 宽度设置为0时，按页签文本宽度显示。
+下划线的宽度（不支持百分比设置）。
+
+默认值：0.0
+
+单位：vp
+
+取值范围：[0, +∞)。异常值时取默认值。
+
+宽度设置为0时，按页签文本宽度显示。
 
 **类型：** Length
 

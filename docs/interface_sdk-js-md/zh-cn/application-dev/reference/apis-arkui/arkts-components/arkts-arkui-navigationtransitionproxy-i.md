@@ -99,7 +99,11 @@ from: NavContentInfo
 isInteractive?: boolean
 ```
 
-本次转场动画是否为可交互转场。 true：本次转场动画是可交互转场；false：本次转场动画不是可交互转场。 默认值：false
+本次转场动画是否为可交互转场。
+
+true：本次转场动画是可交互转场；false：本次转场动画不是可交互转场。
+
+默认值：false
 
 **类型：** boolean
 

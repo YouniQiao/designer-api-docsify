@@ -2,6 +2,8 @@
 
 TextMetrics
 
+@interface TextMetrics
+
 **Since:** 4
 
 <!--Device-unnamed-export interface TextMetrics--><!--Device-unnamed-export interface TextMetrics-End-->

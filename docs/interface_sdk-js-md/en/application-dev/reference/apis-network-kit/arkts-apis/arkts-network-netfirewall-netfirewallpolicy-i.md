@@ -1,4 +1,4 @@
-# NetFirewallPolicy(Network Firewall)
+# NetFirewallPolicy
 
 Defines the firewall policy, including the firewall switch status and default inbound or outbound action (allow or deny).
 

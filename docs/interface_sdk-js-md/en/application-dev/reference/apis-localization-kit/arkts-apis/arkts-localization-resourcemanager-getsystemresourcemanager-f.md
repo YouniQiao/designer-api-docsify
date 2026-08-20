@@ -12,7 +12,12 @@ import { resourceManager } from '@kit.LocalizationKit';
 export function getSystemResourceManager(): ResourceManager
 ```
 
-Obtains a system resource management object for accessing preset system resources. &gt; **NOTE：**&gt; &gt; The **Configuration** parameter in the **ResourceManager** object obtained via this API uses the default value. &gt; The default value is &gt; **{"locale": "", "direction": -1, "deviceType": -1, "screenDensity": 0, "colorMode": 1, "mcc": 0, "mnc": 0}**.
+Obtains a system resource management object for accessing preset system resources.
+
+> **NOTE：**
+> 
+> The **Configuration** parameter in the **ResourceManager** object obtained via this API uses the default value.
+> The default value is &gt; **{"locale": "", "direction": -1, "deviceType": -1, "screenDensity": 0, "colorMode": 1, "mcc": 0, "mnc": 0}**.
 
 **Since:** 10
 

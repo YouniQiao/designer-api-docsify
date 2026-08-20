@@ -12,7 +12,11 @@ import { cliManager } from '@kit.AbilityKit';
 function subscribeSession(sessionId: string, callback: ToolEventCallback): Promise<void>
 ```
 
-订阅指定CLI工具会话的事件。会话运行期间，CLI工具产生的标准输出、标准错误、退出或错误事件通过回调返回。 &gt; **说明：** &gt; &gt; 会话仅限创建进程管理：只有调用`execTool`创建该会话的进程可以调用本接口。其他进程即使获取到`sessionId`，调用本接口也会抛出错误码201（Permission denied）。
+订阅指定CLI工具会话的事件。会话运行期间，CLI工具产生的标准输出、标准错误、退出或错误事件通过回调返回。
+
+> **说明：**
+> 
+> 会话仅限创建进程管理：只有调用`execTool`创建该会话的进程可以调用本接口。其他进程即使获取到`sessionId`，调用本接口也会抛出错误码201（Permission denied）。
 
 **起始版本：** 26.0.0
 
@@ -45,6 +49,6 @@ function subscribeSession(sessionId: string, callback: ToolEventCallback): Promi
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied, interface caller does not have permission "ohos.permission.EXEC_CLI_TOOL". |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. Interface caller is not a system app. |
-| [35600050](../errorcode-ability.md#35600050-偶发性报错) | System Error. 1. Connect to system service failed; 2.System service failed to communicate with dependency module. |
 | [35600032](../errorcode-ability.md#35600032-指定的session不存在) | The session does not exist. |
+| [35600050](../errorcode-ability.md#35600050-偶发性报错) | System Error. 1. Connect to system service failed; 2.System service failed to communicate with dependency module. |
 

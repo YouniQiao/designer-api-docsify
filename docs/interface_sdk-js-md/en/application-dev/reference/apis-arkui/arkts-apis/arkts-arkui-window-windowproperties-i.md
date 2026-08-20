@@ -40,7 +40,9 @@ Screen brightness of the window. The brightness can be set by calling [setWindow
 dimBehindValue: number
 ```
 
-Dimness of the window that is not on top. The value is a floating-point number in the range [0.0, 1.0], and the value **1.0** means the dimmest. Note: This property is supported since API version 7 and deprecated since API version 9. Currently, no substitute is available.
+Dimness of the window that is not on top. The value is a floating-point number in the range [0.0, 1.0], and the value **1.0** means the dimmest.
+
+Note: This property is supported since API version 7 and deprecated since API version 9. Currently, no substitute is available.
 
 **Type:** number
 
@@ -182,7 +184,11 @@ Whether the screen is always on. **true** if always on, **false** otherwise.
 isLayoutFullScreen: boolean
 ```
 
-Whether an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) is set for a child window. If an immersive-layout is set for the child window, the return value is **true**. Whether an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) is set for the main window and the main window is in full-screen mode. If an immersive-layout is set for the main window and the main window is in full-screen mode, the return value is **true**. In other cases, the return value is **false**.
+Whether an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) is set for a child window. If an immersive-layout is set for the child window, the return value is **true**.
+
+Whether an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) is set for the main window and the main window is in full-screen mode. If an immersive-layout is set for the main window and the main window is in full-screen mode, the return value is **true**.
+
+In other cases, the return value is **false**.
 
 **Type:** boolean
 
@@ -218,7 +224,9 @@ Whether the window is in privacy mode. **true** if the window is in privacy mode
 isRoundCorner: boolean
 ```
 
-Whether the window has rounded corners. **true** if the window has rounded corners; **false** otherwise. Note: This property is supported since API version 7 and deprecated since API version 9. Currently, no substitute is available.
+Whether the window has rounded corners. **true** if the window has rounded corners; **false** otherwise.
+
+Note: This property is supported since API version 7 and deprecated since API version 9. Currently, no substitute is available.
 
 **Type:** boolean
 

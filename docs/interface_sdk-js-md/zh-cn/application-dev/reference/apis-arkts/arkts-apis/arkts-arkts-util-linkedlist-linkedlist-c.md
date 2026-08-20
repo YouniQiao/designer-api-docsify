@@ -35,7 +35,7 @@ $_iterator(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
 
 **示例**
 
@@ -80,7 +80,7 @@ while(!temp.done) {
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 返回一个迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个迭代器。 |
 
 **错误码：**
 
@@ -1073,8 +1073,8 @@ removeByIndex(index: int): T | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty. |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "index" is out of range. It must be &gt;= 0 && &lt;= \\${length}. Received value is: \\${index} |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty. |
 
 **示例**
 
@@ -1408,8 +1408,8 @@ set(index: int, element: T): T
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The set method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+ |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+ |
 
 **示例**
 

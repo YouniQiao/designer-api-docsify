@@ -2,6 +2,8 @@
 
 Sets the horizontal layout of elements.
 
+@enum { number }
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare enum Direction--><!--Device-unnamed-declare enum Direction-End-->

@@ -14,7 +14,9 @@ import { window } from '@kit.ArkUI';
 function create(id: string, type: WindowType, callback: AsyncCallback<Window>): void
 ```
 
-Creates a child window. This API uses an asynchronous callback to return the result. The child window created uses an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) by default.
+Creates a child window. This API uses an asynchronous callback to return the result.
+
+The child window created uses an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) by default.
 
 **Since:** 7
 
@@ -60,7 +62,9 @@ window.create('test', window.WindowType.TYPE_APP, (err: BusinessError, data) => 
 function create(id: string, type: WindowType): Promise<Window>
 ```
 
-Creates a child window. This API uses a promise to return the result. The child window created uses an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) by default.
+Creates a child window. This API uses a promise to return the result.
+
+The child window created uses an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) by default.
 
 **Since:** 7
 

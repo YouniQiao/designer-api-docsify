@@ -2,6 +2,8 @@
 
 表示设置类型的枚举。
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-avMusicTemplate-enum SettingType--><!--Device-avMusicTemplate-enum SettingType-End-->

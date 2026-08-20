@@ -1,6 +1,8 @@
 # ArcSlider
 
-The **ArcSlider** component is designed for circular screens on wearables to quickly adjust settings, such as the volume and brightness. &gt; **NOTE：**
+The **ArcSlider** component is designed for circular screens on wearables to quickly adjust settings, such as the volume and brightness.
+
+> **NOTE：**
 
 **Since:** 18
 
@@ -20,7 +22,9 @@ import { ArcSlider, ArcSliderPosition, ArcSliderOptions, ArcSliderOptionsConstru
 options: ArcSliderOptions
 ```
 
-Parameters of the arc slider. Default value: default values of all properties of [ArcSliderOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptions-c.md)
+Parameters of the arc slider.
+
+Default value: default values of all properties of [ArcSliderOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptions-c.md)
 
 **Type:** [ArcSliderOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptions-c.md)
 

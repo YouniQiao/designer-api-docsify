@@ -36,13 +36,13 @@ function getAvailableStatus(authType: UserAuthType, authTrustLevel: AuthTrustLev
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. |
-| [12500013](../errorcode-useriam.md#12500013-密码过期) | Operation failed because of PIN expired.<br>**适用版本：** 12+ |
-| [12500010](../errorcode-useriam.md#12500010-该类型的凭据没有录入) | The type of credential has not been enrolled. |
-| [12500006](../errorcode-useriam.md#12500006-认证信任等级不支持) | The authentication trust level is not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12500005](../errorcode-useriam.md#12500005-认证类型不支持) | The authentication type is not supported. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. |
 | [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| [12500005](../errorcode-useriam.md#12500005-认证类型不支持) | The authentication type is not supported. |
+| [12500006](../errorcode-useriam.md#12500006-认证信任等级不支持) | The authentication trust level is not supported. |
+| [12500010](../errorcode-useriam.md#12500010-该类型的凭据没有录入) | The type of credential has not been enrolled. |
+| [12500013](../errorcode-useriam.md#12500013-密码过期) | Operation failed because of PIN expired.<br>**适用版本：** 12+ |
 
 **示例**
 
@@ -53,7 +53,7 @@ try {
   userAuth.getAvailableStatus(userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL3);
   console.info('current auth trust level is supported');
 } catch (error) {
-  console.error(`current auth trust level is not supported. Code: ${error?.code}, message: ${error?.message}`);
+  console.error(`Failed to check auth trust level. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 

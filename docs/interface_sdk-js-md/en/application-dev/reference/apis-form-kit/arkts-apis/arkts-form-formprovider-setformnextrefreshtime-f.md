@@ -34,14 +34,14 @@ Sets the next refresh time for a widget. This API uses an asynchronous callback 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16501002](../errorcode-form.md#16501002-too-many-widgets) | The number of forms exceeds the maximum allowed. |
-| [16501001](../errorcode-form.md#16501001-widget-id-not-exist) | The ID of the form to be operated does not exist. |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
-| [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| [16501001](../errorcode-form.md#16501001-widget-id-not-exist) | The ID of the form to be operated does not exist. |
+| [16501002](../errorcode-form.md#16501002-too-many-widgets) | The number of forms exceeds the maximum allowed. |
+| [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
 
 **Examples**
 
@@ -97,14 +97,14 @@ Sets the next refresh time for a widget. This API uses a promise to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16501002](../errorcode-form.md#16501002-too-many-widgets) | The number of forms exceeds the maximum allowed. |
-| [16501001](../errorcode-form.md#16501001-widget-id-not-exist) | The ID of the form to be operated does not exist. |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
-| [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| [16501001](../errorcode-form.md#16501001-widget-id-not-exist) | The ID of the form to be operated does not exist. |
+| [16501002](../errorcode-form.md#16501002-too-many-widgets) | The number of forms exceeds the maximum allowed. |
+| [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
 
 **Examples**
 

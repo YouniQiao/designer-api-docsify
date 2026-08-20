@@ -37,13 +37,13 @@ Sets an application clone as the default application of the specified type. This
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [17700028](../errorcode-bundle.md#17700028-mismatch-between-ability-and-type) | The specified ability and type do not match. |
-| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
-| [17700025](../errorcode-bundle.md#17700025-invalid-type) | The specified type is invalid. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application is not allowed to call a system API. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user id is not found. |
+| [17700025](../errorcode-bundle.md#17700025-invalid-type) | The specified type is invalid. |
+| [17700028](../errorcode-bundle.md#17700028-mismatch-between-ability-and-type) | The specified ability and type do not match. |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
 
 **Examples**
 

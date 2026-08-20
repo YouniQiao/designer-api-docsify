@@ -2,6 +2,8 @@
 
 Type of text selectable.
 
+@enum {number}
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare enum TextSelectableMode--><!--Device-unnamed-declare enum TextSelectableMode-End-->

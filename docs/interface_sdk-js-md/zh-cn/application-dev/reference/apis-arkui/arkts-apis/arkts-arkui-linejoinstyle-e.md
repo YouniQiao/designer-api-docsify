@@ -2,6 +2,8 @@
 
 Line Join Style
 
+@enum { number }
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare enum LineJoinStyle--><!--Device-unnamed-declare enum LineJoinStyle-End-->

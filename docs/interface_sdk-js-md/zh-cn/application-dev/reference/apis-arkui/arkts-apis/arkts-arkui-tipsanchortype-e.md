@@ -2,6 +2,8 @@
 
 Follow position type.
 
+@enum { number }
+
 **起始版本：** 20
 
 <!--Device-unnamed-declare enum TipsAnchorType--><!--Device-unnamed-declare enum TipsAnchorType-End-->

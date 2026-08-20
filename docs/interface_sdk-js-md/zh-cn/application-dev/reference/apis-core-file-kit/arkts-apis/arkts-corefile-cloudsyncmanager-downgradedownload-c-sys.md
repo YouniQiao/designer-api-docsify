@@ -1,6 +1,8 @@
 # DowngradeDownload（系统接口）
 
-全量下载：为云盘管理应用提供集中下载云端数据的能力。 云盘全量下载对象，用于支撑云盘管理应用完成云盘文件的全量下载流程。
+全量下载：为云盘管理应用提供集中下载云端数据的能力。
+
+云盘全量下载对象，用于支撑云盘管理应用完成云盘文件的全量下载流程。
 
 **起始版本：** 23
 
@@ -44,10 +46,10 @@ constructor(bundleName: string)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 **示例**
 
@@ -107,11 +109,11 @@ getCloudFileInfo(): Promise<CloudFileInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
 | 13900010 | Try again. |
+| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 **示例**
 
@@ -149,7 +151,9 @@ downgradeMgr.getCloudFileInfo().then<void>((fileInfo: cloudSyncManager.CloudFile
 startDownload(callback: Callback<DownloadProgress>): Promise<void>
 ```
 
-启动指定应用的云文件的全量下载，使用Promise异步回调。使用callback异步回调。 同一应用存在正在执行的全量下载任务的情况下，重复触发会返回错误信息（22400006）。
+启动指定应用的云文件的全量下载，使用Promise异步回调。使用callback异步回调。
+
+同一应用存在正在执行的全量下载任务的情况下，重复触发会返回错误信息（22400006）。
 
 **起始版本：** 23
 
@@ -165,7 +169,7 @@ startDownload(callback: Callback<DownloadProgress>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | 是 | 回调函数。全量下载进度，参数为DownloadProgress，返回值为void。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DownloadProgress&gt; | 是 | 回调函数。全量下载进度，参数为DownloadProgress，返回值为void。 |
 
 **返回值：**
 
@@ -177,13 +181,13 @@ startDownload(callback: Callback<DownloadProgress>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
-| 22400006 | The same task is already in progress. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
 | 13900010 | Try again. |
+| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 22400006 | The same task is already in progress. |
 
 **示例**
 
@@ -237,7 +241,9 @@ downgradeMgr.startDownload(callback).then<void>((): void => {
 startTransfer(targetUri: string, callback: Callback<TransferProgress>): void
 ```
 
-将云盘目录下已完成本地下载的文件搬迁至指定目录，过程中通过回调上报搬迁进度。使用callback异步回调。 同一应用存在正在执行的搬迁任务的情况下，重复触发会返回错误信息（22400006）。
+将云盘目录下已完成本地下载的文件搬迁至指定目录，过程中通过回调上报搬迁进度。使用callback异步回调。
+
+同一应用存在正在执行的搬迁任务的情况下，重复触发会返回错误信息（22400006）。
 
 **起始版本：** 26.0.0
 
@@ -256,19 +262,19 @@ startTransfer(targetUri: string, callback: Callback<TransferProgress>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | targetUri | string | 是 | 用于存放搬迁后的文件路径URI，必须以“/file://docs/storage/Users/currentUser/”为前缀。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TransferProgress](arkts-corefile-cloudsyncmanager-transferprogress-i-sys.md)&gt; | 是 | 回调函数，返回搬迁进度。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[TransferProgress](arkts-corefile-cloudsyncmanager-transferprogress-i-sys.md)&gt; | 是 | 回调函数，返回搬迁进度。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified. <br>2.The length of the input uri does not meet the value range requirement. <br>3.The input uri does not belong to a File Manager public directory. |
-| 22400006 | The same task is already in progress. |
-| 13900001 | Operation not permitted. Possible causes: <br>1.The DowngradeDownload task is running. <br>2.The full data synchronization task is running. |
-| 13900002 | No such file or directory. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| 13900001 | Operation not permitted. Possible causes: <br>1.The DowngradeDownload task is running. <br>2.The full data synchronization task is running. |
+| 13900002 | No such file or directory. |
 | 13900010 | Try again. |
+| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified. <br>2.The length of the input uri does not meet the value range requirement. <br>3.The input uri does not belong to a File Manager public directory. |
+| 22400006 | The same task is already in progress. |
 
 **示例**
 
@@ -334,10 +340,10 @@ stopDownload(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
+| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 **示例**
 

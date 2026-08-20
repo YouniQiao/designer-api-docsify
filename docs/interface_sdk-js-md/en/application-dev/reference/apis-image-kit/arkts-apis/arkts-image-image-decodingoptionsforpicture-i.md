@@ -20,7 +20,9 @@ import { image } from '@kit.ImageKit';
 desiredAuxiliaryPictures: Array<AuxiliaryPictureType>
 ```
 
-Auxiliary picture type. If no auxiliary picture type is specified or an empty array is passed, the system decodes all available auxiliary picture types. To exclude all auxiliary picture, you can decode the auxiliary picture to a PixelMap and use the PixelMap to create a Picture that contains only the main picture.
+Auxiliary picture type. If no auxiliary picture type is specified or an empty array is passed, the system decodes all available auxiliary picture types.
+
+To exclude all auxiliary picture, you can decode the auxiliary picture to a PixelMap and use the PixelMap to create a Picture that contains only the main picture.
 
 **Type:** Array&lt;[AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md)&gt;
 

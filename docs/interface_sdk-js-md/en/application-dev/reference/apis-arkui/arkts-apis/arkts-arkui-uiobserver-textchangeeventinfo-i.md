@@ -2,6 +2,8 @@
 
 Text change event info
 
+@interface TextChangeEventInfo
+
 **Since:** 22
 
 <!--Device-uiObserver-export interface TextChangeEventInfo--><!--Device-uiObserver-export interface TextChangeEventInfo-End-->

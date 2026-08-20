@@ -2,6 +2,8 @@
 
 Defines the DirectionalEdgesT interface.
 
+@interface DirectionalEdgesT
+
 **Since:** 12
 
 <!--Device-unnamed-declare interface DirectionalEdgesT--><!--Device-unnamed-declare interface DirectionalEdgesT-End-->

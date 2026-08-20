@@ -1,5 +1,7 @@
 # LocaleResponse
 
+@interface LocaleResponse
+
 **起始版本：** 12
 
 <!--Device-unnamed-export interface LocaleResponse--><!--Device-unnamed-export interface LocaleResponse-End-->
@@ -36,7 +38,11 @@ countryOrRegion: string
 dir: "ltr" | "rtl"
 ```
 
-文字布局方向。取值范围： - ltr：从左到右。 - rtl：从右到左。
+文字布局方向。取值范围：
+
+- ltr：从左到右。
+
+- rtl：从右到左。
 
 **类型：** "ltr" \| "rtl"
 

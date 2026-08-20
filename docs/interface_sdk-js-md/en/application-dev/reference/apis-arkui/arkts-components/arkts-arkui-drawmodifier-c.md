@@ -131,7 +131,11 @@ See [Example 1: Implementing Custom Drawing Through DrawModifier](#example-1-imp
 drawOverlay(drawContext: DrawContext): void
 ```
 
-Draws content in the overlay layer after the associated Node and all its children have been drawn. Custom drawing consists of five layers: Behind, Content, Front, Foreground, and Overlay. - The Foreground and Overlay layers are drawn after child nodes. - The Overlay layer differs from Foreground in that it can draw outside the bounds of the component.
+Draws content in the overlay layer after the associated Node and all its children have been drawn.
+
+Custom drawing consists of five layers: Behind, Content, Front, Foreground, and Overlay.
+
+- The Foreground and Overlay layers are drawn after child nodes. - The Overlay layer differs from Foreground in that it can draw outside the bounds of the component.
 
 **Since:** 23
 

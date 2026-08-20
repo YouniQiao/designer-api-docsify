@@ -1,4 +1,4 @@
-# HuksExternalCryptoParam(External Key Management)
+# HuksExternalCryptoParam
 
 Defines the type of the param array used for calling the API.
 

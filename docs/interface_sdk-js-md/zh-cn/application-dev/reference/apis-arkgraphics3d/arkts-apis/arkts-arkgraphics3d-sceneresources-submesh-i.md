@@ -2,6 +2,8 @@
 
 子网格类型。
 
+@interface SubMesh
+
 **起始版本：** 23
 
 <!--Device-unnamed-export interface SubMesh--><!--Device-unnamed-export interface SubMesh-End-->

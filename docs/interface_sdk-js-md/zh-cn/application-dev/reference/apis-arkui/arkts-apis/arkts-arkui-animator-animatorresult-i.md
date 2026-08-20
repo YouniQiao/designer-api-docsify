@@ -116,8 +116,8 @@ reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The specified page is not found or the object property list is not obtained. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The specified page is not found or the object property list is not obtained. |
 
 ## reverse
 
@@ -159,7 +159,7 @@ setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rateRange | [ExpectedFrameRateRange](../../apis-na/arkts-apis/arkts-na-common-expectedframeraterange-i.md) | 是 | 设置期望的帧率范围。 |
+| rateRange | [ExpectedFrameRateRange](../../apis-default/arkts-apis/arkts-common-expectedframeraterange-i.md) | 是 | 设置期望的帧率范围。 |
 
 ## onCancel
 

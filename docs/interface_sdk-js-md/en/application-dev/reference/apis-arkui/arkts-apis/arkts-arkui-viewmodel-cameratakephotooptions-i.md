@@ -2,6 +2,8 @@
 
 CameraTakePhotoOptions
 
+@interface CameraTakePhotoOptions
+
 **Since:** 6
 
 <!--Device-unnamed-export interface CameraTakePhotoOptions--><!--Device-unnamed-export interface CameraTakePhotoOptions-End-->

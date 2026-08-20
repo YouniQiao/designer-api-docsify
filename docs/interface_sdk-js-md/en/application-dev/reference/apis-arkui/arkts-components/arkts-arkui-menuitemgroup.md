@@ -1,8 +1,16 @@
 # MenuItemGroup
 
-The **MenuItemGroup** component represents a group of menu items. > **NOTE** > > This component is supported since API version 9. Newly added APIs will be marked with a superscript to indicate > their
+The **MenuItemGroup** component represents a group of menu items.
 
-## Child Components This component contains the MenuItem child component. ###### Sample For details, see [Example in Menu](../../../reference/apis-arkui/arkui-ts/ts-basic-components-menu.md#example).
+> **NOTE** > > This component is supported since API version 9. Newly added APIs will be marked with a superscript to indicate > their
+
+## Child Components
+
+This component contains the MenuItem child component.
+
+## Sample
+
+For details, see [Example in Menu](../../../reference/apis-arkui/arkui-ts/ts-basic-components-menu.md#example).
 
 ## MenuItemGroup
 
@@ -30,5 +38,4 @@ MenuItemGroup(value?: MenuItemGroupOptions)
 
 | Name | Description |
 | --- | --- |
-| [MenuItemGroupOptions](arkts-arkui-menuitemgroupoptions-i.md) | Describes the header and footer of the menu item group. |
 

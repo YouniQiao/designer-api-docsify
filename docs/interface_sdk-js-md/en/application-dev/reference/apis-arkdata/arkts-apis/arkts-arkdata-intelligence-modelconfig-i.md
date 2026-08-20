@@ -2,6 +2,8 @@
 
 Manages configurations of the embedding model.
 
+@interface ModelConfig
+
 **Since:** 23
 
 <!--Device-intelligence-interface ModelConfig--><!--Device-intelligence-interface ModelConfig-End-->

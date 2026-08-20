@@ -58,7 +58,9 @@ currentAudioDevice: AudioDevice
 isMicDisabled?: boolean
 ```
 
-是否禁用麦克风。 - true：禁用麦克风 - false：启用麦克风
+是否禁用麦克风。
+
+- true：禁用麦克风 - false：启用麦克风
 
 **类型：** boolean
 

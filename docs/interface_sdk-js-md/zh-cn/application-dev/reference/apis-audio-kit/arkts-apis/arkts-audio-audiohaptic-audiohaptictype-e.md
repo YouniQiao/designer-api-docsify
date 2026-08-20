@@ -2,6 +2,8 @@
 
 枚举，音振类型。
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-audioHaptic-enum AudioHapticType--><!--Device-audioHaptic-enum AudioHapticType-End-->

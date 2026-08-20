@@ -167,7 +167,9 @@ Action type of the axis event.
 displayX: number
 ```
 
-X coordinate of the cursor in the coordinate system of the current application screen. Unit: vp
+X coordinate of the cursor in the coordinate system of the current application screen.
+
+Unit: vp
 
 **Type:** number
 
@@ -187,7 +189,9 @@ X coordinate of the cursor in the coordinate system of the current application s
 displayY: number
 ```
 
-Y coordinate of the cursor in the coordinate system of the current application screen. Unit: vp
+Y coordinate of the cursor in the coordinate system of the current application screen.
+
+Unit: vp
 
 **Type:** number
 
@@ -207,7 +211,15 @@ Y coordinate of the cursor in the coordinate system of the current application s
 eventHandleId?: number
 ```
 
-Unique identifier for event processing. Value range: [0, +∞) **NOTE：**This field is used when dispatching events using the [postInputEventWithStrategy](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#postinputeventwithstrategy) API. Each time an event is dispatched, this field is increased by 100000. Using the same **eventHandleId** for multiple event dispatches will cause abnormal event responses. This field only needs to be assigned when constructing an event; developers do not need to handle it in other cases.
+Unique identifier for event processing.
+
+Value range: [0, +∞)
+
+**NOTE：**
+
+This field is used when dispatching events using the [postInputEventWithStrategy](../../apis-default/arkts-apis/arkts-buildernode-c.md#postinputeventwithstrategy) API. Each time an event is dispatched, this field is increased by 100000.
+
+Using the same **eventHandleId** for multiple event dispatches will cause abnormal event responses. This field only needs to be assigned when constructing an event; developers do not need to handle it in other cases.
 
 **Type:** number
 
@@ -227,7 +239,11 @@ Unique identifier for event processing. Value range: [0, +∞) **NOTE：**This f
 globalDisplayX?: number
 ```
 
-X coordinate of the cursor in the [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system). Unit: vp Value range: (-∞, +∞).
+X coordinate of the cursor in the [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).
+
+Unit: vp
+
+Value range: (-∞, +∞).
 
 **Type:** number
 
@@ -247,7 +263,11 @@ X coordinate of the cursor in the [global coordinate system](../../../windowmana
 globalDisplayY?: number
 ```
 
-Y coordinate of the cursor in the [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system). Unit: vp Value range: (-∞, +∞).
+Y coordinate of the cursor in the [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).
+
+Unit: vp
+
+Value range: (-∞, +∞).
 
 **Type:** number
 
@@ -287,7 +307,9 @@ Enables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event
 scrollStep?: number
 ```
 
-Scroll step length for the mouse wheel. Note: Only the mouse wheel is supported. The value ranges from 0 to 65535.
+Scroll step length for the mouse wheel.
+
+Note: Only the mouse wheel is supported. The value ranges from 0 to 65535.
 
 **Type:** number
 
@@ -307,7 +329,9 @@ Scroll step length for the mouse wheel. Note: Only the mouse wheel is supported.
 windowX: number
 ```
 
-X coordinate of the cursor in the coordinate system of the current application window. Unit: vp
+X coordinate of the cursor in the coordinate system of the current application window.
+
+Unit: vp
 
 **Type:** number
 
@@ -327,7 +351,9 @@ X coordinate of the cursor in the coordinate system of the current application w
 windowY: number
 ```
 
-Y coordinate of the cursor in the coordinate system of the current application window. Unit: vp
+Y coordinate of the cursor in the coordinate system of the current application window.
+
+Unit: vp
 
 **Type:** number
 
@@ -347,7 +373,9 @@ Y coordinate of the cursor in the coordinate system of the current application w
 x: number
 ```
 
-X coordinate of the cursor in the [component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the clicked element. Unit: vp
+X coordinate of the cursor in the [component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the clicked element.
+
+Unit: vp
 
 **Type:** number
 
@@ -367,7 +395,9 @@ X coordinate of the cursor in the [component coordinate system](../../../ui/arku
 y: number
 ```
 
-Y coordinate of the cursor in the [component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the clicked element. Unit: vp
+Y coordinate of the cursor in the [component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the clicked element.
+
+Unit: vp
 
 **Type:** number
 

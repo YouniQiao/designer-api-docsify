@@ -2,6 +2,8 @@
 
 Define a responsive item layout suitable for WaterFlow, Grid, List,and Swiper components.
 
+@interface ItemFillPolicy
+
 **Since:** 22
 
 <!--Device-unnamed-declare interface ItemFillPolicy--><!--Device-unnamed-declare interface ItemFillPolicy-End-->

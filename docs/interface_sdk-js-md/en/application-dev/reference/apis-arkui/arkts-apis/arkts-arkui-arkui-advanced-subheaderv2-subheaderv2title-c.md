@@ -89,7 +89,7 @@ The first line text of content area.
 
 Text modifier for primary title.
 
-**Type:** TextModifier
+**Type:** [TextModifier](arkts-arkui-textmodifier-c.md)
 
 **Since:** 18
 
@@ -131,7 +131,7 @@ The secondary line text of content area.
 
 Text modifier for secondary title.
 
-**Type:** TextModifier
+**Type:** [TextModifier](arkts-arkui-textmodifier-c.md)
 
 **Since:** 18
 
@@ -150,7 +150,13 @@ Text modifier for secondary title.
   titleAccessibilityText?: ResourceStr
 ```
 
-Customized content to be read in the title. Default value: **undefined** If the value is **undefined**, the title content displayed by the component is read by default. Decorator: @Trace
+Customized content to be read in the title.
+
+Default value: **undefined**
+
+If the value is **undefined**, the title content displayed by the component is read by default.
+
+Decorator: @Trace
 
 **Type:** ResourceStr
 

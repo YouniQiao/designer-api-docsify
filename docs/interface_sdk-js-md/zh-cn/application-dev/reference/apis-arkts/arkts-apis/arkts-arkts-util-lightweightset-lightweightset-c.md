@@ -35,7 +35,7 @@ $_iterator(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 返回遍历LightWeightSet中所有元素的迭代器对象，每一项为容器中的元素值。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回遍历LightWeightSet中所有元素的迭代器对象，每一项为容器中的元素值。 |
 
 **示例**
 
@@ -68,7 +68,7 @@ for (let item of lightWeightSet) {
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 返回遍历LightWeightSet中所有元素的迭代器对象，每一项为容器中的元素值。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回遍历LightWeightSet中所有元素的迭代器对象，每一项为容器中的元素值。 |
 
 **错误码：**
 
@@ -286,7 +286,7 @@ entries(): IterableIterator<[T, T]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[T, T]&gt; | 返回包含LightWeightSet中所有键值对的迭代器对象，每一项为[key, value]结构的数组。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[T, T]&gt; | 返回包含LightWeightSet中所有键值对的迭代器对象，每一项为[key, value]结构的数组。 |
 
 **错误码：**
 
@@ -325,7 +325,11 @@ for(let i = 0; i < 10; i++) {
 equal(obj: Object): boolean
 ```
 
-判断此容器与obj的构成元素是否相同。 &gt; **说明：** &gt; &gt; 此接口从API version 8开始支持，从API version 12开始废弃。无替代接口。
+判断此容器与obj的构成元素是否相同。
+
+> **说明：**
+> 
+> 此接口从API version 8开始支持，从API version 12开始废弃。无替代接口。
 
 **起始版本：** 8
 
@@ -958,7 +962,7 @@ values(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 返回包含LightWeightSet中所有value的迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回包含LightWeightSet中所有value的迭代器对象。 |
 
 **错误码：**
 

@@ -40,24 +40,24 @@ Copies the source directory to the destination path. This API uses a promise to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900030 | File name too long |
-| 13900031 | Function not implemented |
+| 13900002 | No such file or directory |
 | 13900004 | Interrupted system call |
 | 13900005 | I/O error |
-| 13900038 | Value too large for defined data type |
-| 13900033 | Too many symbolic links encountered |
-| 13900002 | No such file or directory |
-| 13900034 | Operation would block |
-| 13900012 | Permission denied |
-| 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
-| 13900013 | Bad address |
 | 13900008 | Bad file descriptor |
 | 13900010 | Try again |
-| 13900042 | Unknown error |
 | 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900030 | File name too long |
+| 13900031 | Function not implemented |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900042 | Unknown error |
+| 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
 
 
 ## copyDir
@@ -86,23 +86,23 @@ Copies the source directory to the destination directory. This API uses an async
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900030 | File name too long |
-| 13900031 | Function not implemented |
+| 13900002 | No such file or directory |
 | 13900004 | Interrupted system call |
 | 13900005 | I/O error |
-| 13900038 | Value too large for defined data type |
-| 13900033 | Too many symbolic links encountered |
-| 13900002 | No such file or directory |
-| 13900034 | Operation would block |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
 | 13900008 | Bad file descriptor |
 | 13900010 | Try again |
-| 13900042 | Unknown error |
 | 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900030 | File name too long |
+| 13900031 | Function not implemented |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900042 | Unknown error |
 
 
 ## copyDir
@@ -111,7 +111,9 @@ Copies the source directory to the destination directory. This API uses an async
 declare function copyDir(src: string, dest: string, callback: AsyncCallback<void, Array<ConflictFiles>>): void
 ```
 
-Copies the source directory to the destination path. This API uses an asynchronous callback to return the result. An exception will be thrown if the destination directory contains a directory with the same name as the source directory and there are files with the same name in the conflicting directory. All the non-conflicting files in the source directory will be moved to the destination directory, and the non-conflicting files in the destination directory will be retained. The data attribute in the error returned provides information about the conflicting files in the Array\&lt;[ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt; format.
+Copies the source directory to the destination path. This API uses an asynchronous callback to return the result.
+
+An exception will be thrown if the destination directory contains a directory with the same name as the source directory and there are files with the same name in the conflicting directory. All the non-conflicting files in the source directory will be moved to the destination directory, and the non-conflicting files in the destination directory will be retained. The data attribute in the error returned provides information about the conflicting files in the Array\&lt;[ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt; format.
 
 **Since:** 10
 
@@ -161,23 +163,23 @@ Copies the source directory to the destination directory. You can set the copy m
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900030 | File name too long |
-| 13900031 | Function not implemented |
+| 13900002 | No such file or directory |
 | 13900004 | Interrupted system call |
 | 13900005 | I/O error |
-| 13900038 | Value too large for defined data type |
-| 13900033 | Too many symbolic links encountered |
-| 13900002 | No such file or directory |
-| 13900034 | Operation would block |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
 | 13900008 | Bad file descriptor |
 | 13900010 | Try again |
-| 13900042 | Unknown error |
 | 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900030 | File name too long |
+| 13900031 | Function not implemented |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900042 | Unknown error |
 
 
 ## copyDir

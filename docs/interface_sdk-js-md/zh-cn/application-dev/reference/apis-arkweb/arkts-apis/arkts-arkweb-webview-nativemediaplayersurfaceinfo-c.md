@@ -20,7 +20,9 @@ import { webview } from '@kit.ArkWeb';
 id: string
 ```
 
-surface 的 id，用于同层渲染的 NativeImage 的 surfaceId。 详见NativeEmbedDataInfo。
+surface 的 id，用于同层渲染的 NativeImage 的 surfaceId。
+
+详见NativeEmbedDataInfo。
 
 **类型：** string
 

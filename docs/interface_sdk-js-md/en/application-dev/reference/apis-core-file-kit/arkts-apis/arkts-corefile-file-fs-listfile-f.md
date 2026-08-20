@@ -17,7 +17,9 @@ declare function listFile(
 ): Promise<string[]>
 ```
 
-Lists the names of all files and directories in the current path. Filtering is supported. This API uses a promise to return the result. You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/).
+Lists the names of all files and directories in the current path. Filtering is supported. This API uses a promise to return the result.
+
+You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/).
 
 **Since:** 9
 
@@ -45,10 +47,10 @@ Lists the names of all files and directories in the current path. Filtering is s
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900002 | No such file or directory |
-| 13900018 | Not a directory |
 | 13900008 | Bad file descriptor |
-| 13900042 | Unknown error |
 | 13900011 | Out of memory |
+| 13900018 | Not a directory |
+| 13900042 | Unknown error |
 
 
 ## listFile
@@ -57,7 +59,9 @@ Lists the names of all files and directories in the current path. Filtering is s
 declare function listFile(path: string, callback: AsyncCallback<string[]>): void
 ```
 
-Lists the names of all files and directories in the current path. Filtering is supported. This API uses an asynchronous callback to return the result. You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/).
+Lists the names of all files and directories in the current path. Filtering is supported. This API uses an asynchronous callback to return the result.
+
+You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/).
 
 **Since:** 9
 
@@ -79,10 +83,10 @@ Lists the names of all files and directories in the current path. Filtering is s
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900002 | No such file or directory |
-| 13900018 | Not a directory |
 | 13900008 | Bad file descriptor |
-| 13900042 | Unknown error |
 | 13900011 | Out of memory |
+| 13900018 | Not a directory |
+| 13900042 | Unknown error |
 
 
 ## listFile
@@ -95,7 +99,9 @@ declare function listFile(
 ): void
 ```
 
-Lists the names of all files and directories in the current path. Filtering is supported. This API uses an asynchronous callback to return the result. You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/).
+Lists the names of all files and directories in the current path. Filtering is supported. This API uses an asynchronous callback to return the result.
+
+You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/).
 
 **Since:** 9
 
@@ -118,8 +124,8 @@ Lists the names of all files and directories in the current path. Filtering is s
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900002 | No such file or directory |
-| 13900018 | Not a directory |
 | 13900008 | Bad file descriptor |
-| 13900042 | Unknown error |
 | 13900011 | Out of memory |
+| 13900018 | Not a directory |
+| 13900042 | Unknown error |
 

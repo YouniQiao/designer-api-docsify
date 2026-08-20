@@ -1,6 +1,12 @@
 # CcmParamsSpec
 
-Encapsulates the parameters for encryption or decryption using the CCM AEAD mode, which requires an IV, AAD, and an authentication tag. It is a child class of [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) and used as a parameter in [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption or decryption. <br>Applies to the CCM mode. &gt; **NOTE：**&gt; &gt; Before passing a value to &gt; [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init), specify &gt; **algName** for its parent class [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md).
+Encapsulates the parameters for encryption or decryption using the CCM AEAD mode, which requires an IV, AAD, and an authentication tag. It is a child class of [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) and used as a parameter in [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption or decryption.
+
+<br>Applies to the CCM mode.
+
+> **NOTE：**
+> 
+> Before passing a value to &gt; [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init), specify &gt; **algName** for its parent class [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md).
 
 **Inheritance/Implementation:** CcmParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)
 
@@ -44,7 +50,9 @@ AAD for encryption and decryption. The AAD value contains 1 to 2,048 bytes.
 authTag: DataBlob
 ```
 
-Authentication tag, which is of 12 bytes. <br>When CCM mode is used for encryption, you need to extract the last 12 bytes from the [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) returned by [doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal) or [doFinalSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinalsync) and use them as **authTag** in **CcmParamsSpec** for [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) or [initSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#initsync) during decryption.
+Authentication tag, which is of 12 bytes.
+
+<br>When CCM mode is used for encryption, you need to extract the last 12 bytes from the [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) returned by [doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal) or [doFinalSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinalsync) and use them as **authTag** in **CcmParamsSpec** for [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) or [initSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#initsync) during decryption.
 
 **Type:** DataBlob
 

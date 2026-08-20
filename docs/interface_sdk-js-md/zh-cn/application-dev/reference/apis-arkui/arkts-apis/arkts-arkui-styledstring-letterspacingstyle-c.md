@@ -40,7 +40,9 @@ constructor(value: LengthMetrics)
 readonly letterSpacing: double
 ```
 
-获取属性字符串的文本字符间距。 单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+获取属性字符串的文本字符间距。
+
+单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **类型：** double
 

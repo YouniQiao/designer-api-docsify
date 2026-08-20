@@ -1,6 +1,10 @@
 # UIServiceExtensionConnectCallback
 
-UIServiceExtensionConnectCallback是UIServiceExtension连接回调接口类，提供UIServiceExtension连接回调数据能力。 &gt; **说明：** &gt; &gt; - 本模块接口需要在主线程中使用，不要在Worker、TaskPool等子线程中使用。
+UIServiceExtensionConnectCallback是UIServiceExtension连接回调接口类，提供UIServiceExtension连接回调数据能力。
+
+> **说明：**
+> 
+> - 本模块接口需要在主线程中使用，不要在Worker、TaskPool等子线程中使用。
 
 **起始版本：** 23
 
@@ -14,7 +18,11 @@ UIServiceExtensionConnectCallback是UIServiceExtension连接回调接口类，�
 onData(data: Record<string, Object>): void
 ```
 
-接收UIServiceExtension连接的回调数据。 &gt; **说明：** &gt; &gt; 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
+接收UIServiceExtension连接的回调数据。
+
+> **说明：**
+> 
+> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
 **起始版本：** 14
 
@@ -30,7 +38,7 @@ onData(data: Record<string, Object>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | 是 | 接收UIServiceExtension连接回调数据。 |
+| data | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | 接收UIServiceExtension连接回调数据。 |
 
 **示例**
 
@@ -138,7 +146,7 @@ Called back when data is sent.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | Indicates the received data. |
+| data | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | Indicates the received data. |
 
 **示例**
 
@@ -234,7 +242,11 @@ struct UIServiceExtensionAbility {
 onDisconnect(): void
 ```
 
-成功断开UIServiceExtension连接的回调。 &gt; **说明：** &gt; &gt; 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
+成功断开UIServiceExtension连接的回调。
+
+> **说明：**
+> 
+> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
 **起始版本：** 23
 

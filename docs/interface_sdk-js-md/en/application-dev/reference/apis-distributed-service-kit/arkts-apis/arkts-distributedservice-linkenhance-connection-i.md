@@ -86,9 +86,9 @@ Connects to the server on the client after the **Connection** object is successf
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390204](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390204-number-of-connections-exceeding-the-limit) | The number of connection exceeds the limit. |
-| [32390300](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390300-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390204](../errorcode-link-enhance.md#32390204-number-of-connections-exceeding-the-limit) | The number of connection exceeds the limit. |
+| [32390300](../errorcode-link-enhance.md#32390300-internal-error) | Internal error. |
 
 **Examples**
 
@@ -246,8 +246,8 @@ Unregisters the listener for **connectResult** events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
 ## offDataReceived
 
@@ -277,8 +277,8 @@ Unregisters the listener for **dataReceived** events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
 ## offDisconnected
 
@@ -308,8 +308,8 @@ Unregisters the listener for **disconnected** events. This API uses an asynchron
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
 ## off('connectResult')
 
@@ -340,8 +340,8 @@ Unregisters the listener for **connectResult** events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
 **Examples**
 
@@ -398,8 +398,8 @@ Unregisters the listener for **dataReceived** events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
 **Examples**
 
@@ -457,8 +457,8 @@ Unregisters the listener for **disconnected** events. This API uses an asynchron
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
 **Examples**
 
@@ -514,8 +514,8 @@ Registers a listener for **connectResult** events. This API uses an asynchronous
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
 ## onDataReceived
 
@@ -545,8 +545,8 @@ Registers a listener for the **dataReceived** events. This API uses an asynchron
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
 ## onDisconnected
 
@@ -576,8 +576,8 @@ Registers a listener for **disconnected** events. This API uses an asynchronous 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
 ## on('connectResult')
 
@@ -608,8 +608,8 @@ Registers a listener for **connectResult** events. This API uses an asynchronous
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
 **Examples**
 
@@ -666,8 +666,8 @@ Registers a listener for the **dataReceived** events. This API uses an asynchron
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
 **Examples**
 
@@ -723,8 +723,8 @@ Registers a listener for **disconnected** events. This API uses an asynchronous 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
 **Examples**
 
@@ -777,10 +777,10 @@ Sends data to the server after a connection is established successfully. When th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
-| [32390300](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390300-internal-error) | Internal error. |
-| [32390205](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390205-connection-unavailable) | Connection is not ready. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
+| [32390205](../errorcode-link-enhance.md#32390205-connection-unavailable) | Connection is not ready. |
+| [32390300](../errorcode-link-enhance.md#32390300-internal-error) | Internal error. |
 
 **Examples**
 

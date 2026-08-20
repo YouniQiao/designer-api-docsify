@@ -1,6 +1,10 @@
 # StackLayoutAlgorithm
 
-Stack layout algorithm class. &gt; **NOTE：**&gt; &gt; The object of the **StackLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as &gt; the input parameter of the &gt; [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the &gt; layout algorithm.
+Stack layout algorithm class.
+
+> **NOTE：**
+> 
+> The object of the **StackLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as &gt; the input parameter of the &gt; [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the &gt; layout algorithm.
 
 **Inheritance/Implementation:** StackLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md)
 
@@ -42,9 +46,13 @@ Constructs the stack layout algorithm class.
 @Trace public alignContent?: LocalizedAlignment
 ```
 
-Alignment mode of child components in the stack layout algorithm. Default value: **LocalizedAlignment.CENTER** Invalid values are treated as the default value.
+Alignment mode of child components in the stack layout algorithm.
 
-**Type:** [LocalizedAlignment](../../apis-na/arkts-apis/arkts-na-enums-localizedalignment-e.md)
+Default value: **LocalizedAlignment.CENTER**
+
+Invalid values are treated as the default value.
+
+**Type:** [LocalizedAlignment](../../apis-default/arkts-apis/arkts-enums-localizedalignment-e.md)
 
 **Since:** 24
 

@@ -32,5 +32,4 @@ Image resource to be obtained.
 
 | Name | Description |
 | --- | --- |
-| [ASTCResource](arkts-arkui-astcresource-i-sys.md) | Defines the resource which can use ASTC. |
 

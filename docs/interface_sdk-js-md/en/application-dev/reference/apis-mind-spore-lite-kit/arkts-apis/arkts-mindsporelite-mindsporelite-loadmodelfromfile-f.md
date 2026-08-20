@@ -41,10 +41,10 @@ Create a Model instance from file path
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1000003 | Error in model loading method. Possible causes: 1. The loading method must be path, buffer, or fd. |
-| 1000002 | Failed to create native model. Possible causes: 1. Insufficient permission to access the model path; 2. The model file is corrupted. |
-| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect. |
 | 1000000 | Model path error. Possible causes: 1. The model path is null; 2. The model path does not exist. |
+| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect. |
+| 1000002 | Failed to create native model. Possible causes: 1. Insufficient permission to access the model path; 2. The model file is corrupted. |
+| 1000003 | Error in model loading method. Possible causes: 1. The loading method must be path, buffer, or fd. |
 
 **Examples**
 
@@ -89,10 +89,10 @@ Create a Model instance from file path.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1000003 | Error in model loading method. Possible causes: 1. The loading method must be path, buffer, or fd. |
-| 1000002 | Failed to create native model. Possible causes: 1. Insufficient permission to access the model path; 2. The model file is corrupted. |
-| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect. |
 | 1000000 | Model path error. Possible causes: 1. The model path is null; 2. The model path does not exist. |
+| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect. |
+| 1000002 | Failed to create native model. Possible causes: 1. Insufficient permission to access the model path; 2. The model file is corrupted. |
+| 1000003 | Error in model loading method. Possible causes: 1. The loading method must be path, buffer, or fd. |
 
 **Examples**
 
@@ -139,10 +139,10 @@ Create a Model instance from file path.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1000003 | Error in model loading method. Possible causes: 1. The loading method must be path, buffer, or fd. |
-| 1000002 | Failed to create native model. Possible causes: 1. Insufficient permission to access the model path; 2. The model file is corrupted. |
-| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect. |
 | 1000000 | Model path error. Possible causes: 1. The model path is null; 2. The model path does not exist. |
+| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect. |
+| 1000002 | Failed to create native model. Possible causes: 1. Insufficient permission to access the model path; 2. The model file is corrupted. |
+| 1000003 | Error in model loading method. Possible causes: 1. The loading method must be path, buffer, or fd. |
 
 **Examples**
 

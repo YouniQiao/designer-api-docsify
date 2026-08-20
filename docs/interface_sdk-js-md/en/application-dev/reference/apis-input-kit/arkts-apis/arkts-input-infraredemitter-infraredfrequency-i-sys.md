@@ -1,4 +1,4 @@
-# InfraredFrequency(IR Management) (System API)
+# InfraredFrequency (System API)
 
 Defines the frequency range of IR signals.
 

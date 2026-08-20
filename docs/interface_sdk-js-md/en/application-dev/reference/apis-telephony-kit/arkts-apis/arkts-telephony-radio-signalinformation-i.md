@@ -2,6 +2,8 @@
 
 Returns child class objects specific to the network type.
 
+@interface SignalInformation
+
 **Since:** 23
 
 <!--Device-radio-export interface SignalInformation--><!--Device-radio-export interface SignalInformation-End-->

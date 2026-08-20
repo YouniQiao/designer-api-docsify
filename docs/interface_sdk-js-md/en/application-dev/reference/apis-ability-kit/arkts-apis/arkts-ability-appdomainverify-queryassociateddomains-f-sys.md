@@ -42,10 +42,10 @@ query domains verify associated with bundleName.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [29900001](../errorcode-appDomainVerify-sys.md#29900001-internal-system-service-error) | Internal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API accessed by non-system app. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [29900001](../errorcode-appDomainVerify-sys.md#29900001-internal-system-service-error) | Internal error. |
 
 **Examples**
 

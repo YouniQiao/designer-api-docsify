@@ -1,6 +1,6 @@
 # CapturerChannel (System API)
 
-Enumerates capturer channel.
+Enumerates capturer channel. @enum {number}
 
 **Since:** 23
 

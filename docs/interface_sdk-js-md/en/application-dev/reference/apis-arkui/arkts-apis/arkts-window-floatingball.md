@@ -1,6 +1,10 @@
 # @ohos.window.floatingBall
 
-This module provides essential functionalities for floating balls. It lets you check whether the device supports floating balls and create a controller to start, update, or stop them. It is ideal for tasks like comparing prices, searching for answers, or grabbing orders. The floating ball appears as a floating widget above other application, quickly showing important information. &gt; **NOTE：**&gt; &gt; - For the system capability SystemCapability.Window.SessionManager, use &gt; canIUse() to check whether the device supports this system &gt; capability and the corresponding APIs.
+This module provides essential functionalities for floating balls. It lets you check whether the device supports floating balls and create a controller to start, update, or stop them. It is ideal for tasks like comparing prices, searching for answers, or grabbing orders. The floating ball appears as a floating widget above other application, quickly showing important information.
+
+> **NOTE：**
+> 
+> - For the system capability SystemCapability.Window.SessionManager, use &gt; canIUse() to check whether the device supports this system &gt; capability and the corresponding APIs.
 
 **Since:** 23
 
@@ -28,7 +32,7 @@ import { floatingBall } from '@kit.ArkUI';
 | Name | Description |
 | --- | --- |
 | [FloatingBallConfiguration](arkts-arkui-floatingball-floatingballconfiguration-i.md) | Describes the parameters for creating a floating ball controller. |
-| [FloatingBallController](arkts-arkui-floatingball-floatingballcontroller-i.md) | Implements a floating ball controller instance, which is used to start, update, and stop floating balls, and register callbacks. Before calling any of the following APIs, you must use [floatingBall.create()](arkts-arkui-floatingball-create-f.md) to create a floating ball controller instance. |
+| [FloatingBallController](arkts-arkui-floatingball-floatingballcontroller-i.md) | Implements a floating ball controller instance, which is used to start, update, and stop floating balls, and register callbacks. |
 | [FloatingBallParams](arkts-arkui-floatingball-floatingballparams-i.md) | Describes the parameters for starting and updating the floating ball. |
 | [FloatingBallWindowInfo](arkts-arkui-floatingball-floatingballwindowinfo-i.md) | Describes the floating ball window information. |
 

@@ -2,6 +2,8 @@
 
 Statistics Related to AI Image Generation Tasks.
 
+@interface TaskStatistic
+
 **Since:** 23
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.

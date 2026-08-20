@@ -2,6 +2,8 @@
 
 Defines Image Modifier
 
+@implements { ImageAttribute, AttributeModifier&lt;ImageAttribute&gt; }
+
 **Inheritance/Implementation:** ImageModifier implements ImageAttribute, AttributeModifier<ImageAttribute>
 
 **Since:** 23

@@ -2,6 +2,8 @@
 
 TransformObject
 
+@interface TransformObject
+
 **Since:** 4
 
 <!--Device-unnamed-export interface TransformObject--><!--Device-unnamed-export interface TransformObject-End-->

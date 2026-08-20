@@ -39,7 +39,7 @@ isoPacketDescs: Array<Readonly<UsbIsoPacketDescriptor>>
 
 Packet information transferred in real time.
 
-**Type:** Array&lt;[Readonly](../../apis-na/arkts-apis/arkts-na-readonly-t.md)&lt;[UsbIsoPacketDescriptor](arkts-basicservices-usbmanager-usbisopacketdescriptor-i.md)&gt;&gt;
+**Type:** Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;[UsbIsoPacketDescriptor](arkts-basicservices-usbmanager-usbisopacketdescriptor-i.md)&gt;&gt;
 
 **Since:** 23
 

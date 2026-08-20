@@ -19,7 +19,9 @@
 expectedUpdateInterval?: number
 ```
 
-定义了开发者期望的计算间隔，单位为ms。当该字段小于100或为NaN时，默认取值为100；当该字段大于2^31-1时，默认取值为2^31-1。 默认值：1000
+定义了开发者期望的计算间隔，单位为ms。当该字段小于100或为NaN时，默认取值为100；当该字段大于2^31-1时，默认取值为2^31-1。
+
+默认值：1000
 
 **类型：** number
 
@@ -41,7 +43,13 @@ expectedUpdateInterval?: number
 measureFromViewport?: boolean
 ```
 
-设置可见区域计算模式。 当measureFromViewport设置为true时，系统在计算该组件的可见区域时，会考虑父组件的[clip](arkts-arkui-commonmethod-c.md#clip) 属性设置。如果父组件的 [clip](arkts-arkui-commonmethod-c.md#clip)为false，则认为其内的子组件可以超出其区域进行显示，因此超出父组件的区域也将被视为可见区域纳入计算；如果父组件的 [clip](arkts-arkui-commonmethod-c.md#clip)设置为true，则组件超出父组件的区域会被裁剪，无法显示，因此会被视为不可见区域进行计算。而当measureFromViewport设置 为false时，则不考虑[clip](arkts-arkui-commonmethod-c.md#clip)的影响，直接将组件超出父组件的部分视为不可见区域。 默认值：false measureFromViewport设置为true时，祖先节点设置[scale](arkts-arkui-commonmethod-c.md#scale)属性，组件可见比例会被正确计算。
+设置可见区域计算模式。
+
+当measureFromViewport设置为true时，系统在计算该组件的可见区域时，会考虑父组件的[clip](arkts-arkui-commonmethod-c.md#clip) 属性设置。如果父组件的 [clip](arkts-arkui-commonmethod-c.md#clip)为false，则认为其内的子组件可以超出其区域进行显示，因此超出父组件的区域也将被视为可见区域纳入计算；如果父组件的 [clip](arkts-arkui-commonmethod-c.md#clip)设置为true，则组件超出父组件的区域会被裁剪，无法显示，因此会被视为不可见区域进行计算。而当measureFromViewport设置 为false时，则不考虑[clip](arkts-arkui-commonmethod-c.md#clip)的影响，直接将组件超出父组件的部分视为不可见区域。
+
+默认值：false
+
+measureFromViewport设置为true时，祖先节点设置[scale](arkts-arkui-commonmethod-c.md#scale)属性，组件可见比例会被正确计算。
 
 **类型：** boolean
 

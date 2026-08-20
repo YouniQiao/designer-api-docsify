@@ -22,7 +22,11 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 allowDownloadCrl?: boolean
 ```
 
-是否允许下载CRL，默认值为false。true：尝试使用证书的CDP扩展下载CRL；false：不尝试下载CRL。 &gt; **说明：** &gt; &gt; 如果crls中存在匹配的CRL，则跳过下载。
+是否允许下载CRL，默认值为false。true：尝试使用证书的CDP扩展下载CRL；false：不尝试下载CRL。
+
+> **说明：**
+> 
+> 如果crls中存在匹配的CRL，则跳过下载。
 
 **类型：** boolean
 
@@ -44,7 +48,11 @@ allowDownloadCrl?: boolean
 allowOcspCheckOnline?: boolean
 ```
 
-是否允许在线OCSP检查，默认值为false。 - true：执行在线OCSP检查，即尝试从证书AIA扩展获取OCSP URL并发送请求获取响应； - false：不执行在线OCSP检查。 &gt; **说明：** &gt; &gt; 如果在ocspResponses中找到匹配的OCSP响应，则跳过在线OCSP检查。
+是否允许在线OCSP检查，默认值为false。 - true：执行在线OCSP检查，即尝试从证书AIA扩展获取OCSP URL并发送请求获取响应； - false：不执行在线OCSP检查。
+
+> **说明：**
+> 
+> 如果在ocspResponses中找到匹配的OCSP响应，则跳过在线OCSP检查。
 
 **类型：** boolean
 

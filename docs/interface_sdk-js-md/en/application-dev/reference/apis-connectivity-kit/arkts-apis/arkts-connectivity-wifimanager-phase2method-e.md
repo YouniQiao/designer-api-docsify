@@ -1,6 +1,6 @@
 # Phase2Method
 
-Wi-Fi phase 2 method.
+Wi-Fi phase 2 method. @enum { int }
 
 **Since:** 23
 

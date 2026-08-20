@@ -29,20 +29,20 @@ function releaseForm(formId: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formId | string | 是 | 卡片标识。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当释放指定的卡片成功，error为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当释放指定的卡片成功，error为undefined；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16501001](../errorcode-form.md#16501001-卡片id不存在) | The ID of the form to be operated does not exist. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
-| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permissions denied. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
+| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+| [16501001](../errorcode-form.md#16501001-卡片id不存在) | The ID of the form to be operated does not exist. |
+| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
 
 
 ## releaseForm
@@ -69,20 +69,20 @@ function releaseForm(formId: string, isReleaseCache: boolean, callback: AsyncCal
 | --- | --- | --- | --- |
 | formId | string | 是 | 卡片标识。 |
 | isReleaseCache | boolean | 是 | 表示是否释放缓存。 <br>true: 表示释放缓存。 <br>false: 表示不释放缓存。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当释放指定的卡片成功，error为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当释放指定的卡片成功，error为undefined；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16501001](../errorcode-form.md#16501001-卡片id不存在) | The ID of the form to be operated does not exist. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
-| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permissions denied. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
+| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+| [16501001](../errorcode-form.md#16501001-卡片id不存在) | The ID of the form to be operated does not exist. |
+| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
 
 
 ## releaseForm
@@ -120,12 +120,12 @@ function releaseForm(formId: string, isReleaseCache?: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16501001](../errorcode-form.md#16501001-卡片id不存在) | The ID of the form to be operated does not exist. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
-| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permissions denied. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
+| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+| [16501001](../errorcode-form.md#16501001-卡片id不存在) | The ID of the form to be operated does not exist. |
+| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
 

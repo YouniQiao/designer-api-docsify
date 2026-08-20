@@ -1,4 +1,4 @@
-# Image(智慧数据平台)
+# Image
 
 ```TypeScript
 type Image = string

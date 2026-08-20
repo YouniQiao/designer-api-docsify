@@ -1,4 +1,4 @@
-# TraceEventListener(Performance Tracing)
+# TraceEventListener
 
 ```TypeScript
 type TraceEventListener = (traceStatus: boolean) => void

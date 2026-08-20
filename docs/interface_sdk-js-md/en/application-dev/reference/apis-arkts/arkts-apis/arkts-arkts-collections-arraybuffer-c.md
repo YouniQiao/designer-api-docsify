@@ -1,6 +1,11 @@
 # ArrayBuffer
 
-Underlying data structure of the ArkTS TypedArray ([Int8Array](../../apis-na/arkts-apis/arkts-collections.md), [Uint8Array](../../apis-na/arkts-apis/arkts-collections.md), [Int16Array](../../apis-na/arkts-apis/arkts-collections.md), [Uint16Array](../../apis-na/arkts-apis/arkts-collections.md), [Int32Array](../../apis-na/arkts-apis/arkts-collections.md), [Uint32Array](../../apis-na/arkts-apis/arkts-collections.md), [Uint8ClampedArray](../../apis-na/arkts-apis/arkts-collections.md), and [Float32Array](../../apis-na/arkts-apis/arkts-collections.md)). &gt; **NOTE：**&gt; &gt; - This module can be imported only to ArkTS files (with the file name extension .ets). &gt; **Decorator**: \@Sendable
+Underlying data structure of the ArkTS TypedArray ([Int8Array](arkts-arkts-collections-n.md), [Uint8Array](arkts-arkts-collections-n.md), [Int16Array](arkts-arkts-collections-n.md), [Uint16Array](arkts-arkts-collections-n.md), [Int32Array](arkts-arkts-collections-n.md), [Uint32Array](arkts-arkts-collections-n.md), [Uint8ClampedArray](arkts-arkts-collections-n.md), and [Float32Array](arkts-arkts-collections-n.md)).
+
+> **NOTE：**
+> 
+> - This module can be imported only to ArkTS files (with the file name extension .ets).
+> **Decorator**: \@Sendable
 
 **Since:** 12
 

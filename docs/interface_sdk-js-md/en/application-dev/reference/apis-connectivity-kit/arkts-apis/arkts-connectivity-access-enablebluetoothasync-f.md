@@ -34,11 +34,11 @@ Asynchronous interface for enables Bluetooth on a device.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| 2900001 | Service stopped. |
 | 2900013 | The user does not respond. |
 | 2900014 | User refuse the action. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
 **Examples**

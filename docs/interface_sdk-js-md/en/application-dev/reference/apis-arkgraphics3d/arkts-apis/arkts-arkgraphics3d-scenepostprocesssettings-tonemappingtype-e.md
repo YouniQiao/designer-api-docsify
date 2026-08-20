@@ -2,6 +2,8 @@
 
 Enumerates the tone mapping types.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-unnamed-export enum ToneMappingType--><!--Device-unnamed-export enum ToneMappingType-End-->

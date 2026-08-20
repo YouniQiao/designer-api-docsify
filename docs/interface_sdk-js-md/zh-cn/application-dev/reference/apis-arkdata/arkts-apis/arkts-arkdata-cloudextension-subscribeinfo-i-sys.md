@@ -42,7 +42,7 @@ subscribe: Record<string, Array<SubscribeId>>
 
 订阅信息。
 
-**类型：** Record&lt;string, Array&lt;[SubscribeId](arkts-arkdata-cloudextension-subscribeid-i-sys.md)&gt;&gt;
+**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Array&lt;[SubscribeId](arkts-arkdata-cloudextension-subscribeid-i-sys.md)&gt;&gt;
 
 **起始版本：** 23
 

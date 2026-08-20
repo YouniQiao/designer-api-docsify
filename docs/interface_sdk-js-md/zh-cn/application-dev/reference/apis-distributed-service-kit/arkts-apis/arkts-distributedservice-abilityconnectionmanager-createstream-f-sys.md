@@ -41,11 +41,11 @@ Creating a Stream.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [32300004](../../apis-distributedservice-kit/errorcode-device-manager.md#32300004-色彩空间不支持) | Color space not supported. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [32300001](../../apis-distributedservice-kit/errorcode-device-manager.md#32300001-重复创建传输流) | Only one stream can be created for the current session. |
-| [32300003](../../apis-distributedservice-kit/errorcode-device-manager.md#32300003-比特率不支持) | Bitrate not supported. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [32300001](../errorcode-device-manager.md#32300001-重复创建传输流) | Only one stream can be created for the current session. |
+| [32300003](../errorcode-device-manager.md#32300003-比特率不支持) | Bitrate not supported. |
+| [32300004](../errorcode-device-manager.md#32300004-色彩空间不支持) | Color space not supported. |
 
 **示例**
 

@@ -12,7 +12,13 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 function setMinLogLevel(level: LogLevel): void
 ```
 
-Sets the minimum log level. &gt; **NOTE：**&gt; &gt; If the set log level is lower than the &gt; [global log level](../../../dfx/hilog.md#displaying-and-setting-log-levels), the setting does not take effect. &gt; &gt; This function does not take effect for debug applications.
+Sets the minimum log level.
+
+> **NOTE：**
+> 
+> If the set log level is lower than the &gt; [global log level](../../../dfx/hilog.md#displaying-and-setting-log-levels), the setting does not take effect.
+> 
+> This function does not take effect for debug applications.
 
 **Since:** 23
 

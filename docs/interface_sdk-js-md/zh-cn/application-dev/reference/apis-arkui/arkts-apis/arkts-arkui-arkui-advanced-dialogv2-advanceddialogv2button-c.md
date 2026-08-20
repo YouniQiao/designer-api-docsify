@@ -1,6 +1,12 @@
 # AdvancedDialogV2Button
 
-弹出框操作区按钮。 &gt; **说明：** &gt; &gt; buttonStyle和role优先级高于fontColor和background。如果buttonStyle和role设置的是默认值，那么fontColor和background可生效。 &gt; &gt; 若同时给多个按钮设置defaultFocus，那么默认焦点为设置defaultFocus按钮显示顺序的第一个。
+弹出框操作区按钮。
+
+> **说明：**
+> 
+> buttonStyle和role优先级高于fontColor和background。如果buttonStyle和role设置的是默认值，那么fontColor和background可生效。
+> 
+> 若同时给多个按钮设置defaultFocus，那么默认焦点为设置defaultFocus按钮显示顺序的第一个。
 
 **起始版本：** 18
 
@@ -45,7 +51,9 @@ AdvancedDialogV2Button的构造函数。
   action?: AdvancedDialogV2ButtonAction
 ```
 
-按钮的点击事件。 默认无事件。
+按钮的点击事件。
+
+默认无事件。
 
 **类型：** [AdvancedDialogV2ButtonAction](arkts-arkui-advanceddialogv2buttonaction-t.md)
 
@@ -66,9 +74,11 @@ AdvancedDialogV2Button的构造函数。
   background?: ColorMetrics
 ```
 
-按钮的背景。当buttonStyle和role为默认值时生效。 默认值跟随buttonStyle。
+按钮的背景。当buttonStyle和role为默认值时生效。
 
-**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+默认值跟随buttonStyle。
+
+**类型：** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
 
 **起始版本：** 18
 
@@ -87,7 +97,9 @@ AdvancedDialogV2Button的构造函数。
   buttonStyle?: ButtonStyleMode
 ```
 
-按钮的样式。 默认值：2in1设备为ButtonStyleMode.NORMAL，其他设备为ButtonStyleMode.TEXTUAL。
+按钮的样式。
+
+默认值：2in1设备为ButtonStyleMode.NORMAL，其他设备为ButtonStyleMode.TEXTUAL。
 
 **类型：** ButtonStyleMode
 
@@ -131,7 +143,13 @@ AdvancedDialogV2Button的构造函数。
   defaultFocus?: boolean
 ```
 
-是否为默认焦点。 true：按钮是默认焦点。 false：按钮不是默认焦点。 默认值：false
+是否为默认焦点。
+
+true：按钮是默认焦点。
+
+false：按钮不是默认焦点。
+
+默认值：false
 
 **类型：** boolean
 
@@ -154,7 +172,13 @@ AdvancedDialogV2Button的构造函数。
   enabled?: boolean
 ```
 
-是否可用。 true：按钮可用。 false：按钮不可用。 默认值：true
+是否可用。
+
+true：按钮可用。
+
+false：按钮不可用。
+
+默认值：true
 
 **类型：** boolean
 
@@ -177,9 +201,11 @@ AdvancedDialogV2Button的构造函数。
   fontColor?: ColorMetrics
 ```
 
-按钮的字体颜色。当buttonStyle和role为默认值时生效。 默认值跟随buttonStyle。
+按钮的字体颜色。当buttonStyle和role为默认值时生效。
 
-**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+默认值跟随buttonStyle。
+
+**类型：** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
 
 **起始版本：** 18
 
@@ -198,7 +224,9 @@ AdvancedDialogV2Button的构造函数。
   role?: ButtonRole
 ```
 
-按钮的角色。 默认值：ButtonRole.NORMAL
+按钮的角色。
+
+默认值：ButtonRole.NORMAL
 
 **类型：** ButtonRole
 
@@ -221,7 +249,9 @@ AdvancedDialogV2Button的构造函数。
   textAlign?: TextAlign
 ```
 
-按钮文本的对齐方式。 默认值：TextAlign.Start
+按钮文本的对齐方式。
+
+默认值：TextAlign.Start
 
 **类型：** TextAlign
 

@@ -2,6 +2,8 @@
 
 Enumerates the fold status.
 
+@enum { number }
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare enum FoldStatus--><!--Device-unnamed-declare enum FoldStatus-End-->

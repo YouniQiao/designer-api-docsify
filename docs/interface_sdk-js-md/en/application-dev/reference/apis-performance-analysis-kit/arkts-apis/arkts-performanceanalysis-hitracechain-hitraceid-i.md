@@ -1,4 +1,4 @@
-# HiTraceId(Distributed Tracing)
+# HiTraceId
 
 Defines a **HiTraceId** object.
 

@@ -1,6 +1,12 @@
 # SegmentButton
 
-**SegmentButton** is a versatile component that organizes related options into visually grouped buttons. It supports three variants: tab-style, capsule-style single-select, and capsule-style multi-select. &gt;**NOTE：**&gt; &gt; - The **SegmentButton** component does not support [universal attributes](ts-component-general-attributes.md). The component occupies the maximum available width within its content area and distributes this width evenly among its items. It adapts its height automatically to the content (text and images), the minimum height being 28 vp. &gt; &gt; - Properties decorated with @Prop are optional. They are required during construction only when used together with the @Require decorator.
+*SegmentButton** is a versatile component that organizes related options into visually grouped buttons. It supports three variants: tab-style, capsule-style single-select, and capsule-style multi-select.
+
+> **NOTE：**
+> 
+> - The **SegmentButton** component does not support [universal attributes](ts-component-general-attributes.md). The component occupies the maximum available width within its content area and distributes this width evenly among its items. It adapts its height automatically to the content (text and images), the minimum height being 28 vp.
+> 
+> - Properties decorated with @Prop are optional. They are required during construction only when used together with the @Require decorator.
 
 **Since:** 11
 
@@ -22,7 +28,11 @@ import { SegmentButtonV2ItemOptions, OnSelectedIndexChange, OnSelectedIndexesCha
   enableStateAnimation: boolean
 ```
 
-Whether to enable property animation for the segment button when the **selectedIndex** value is modified via a variable. **true**: Property animation is enabled. **false**: Property animation is disabled and the original animation is used. Default value: **false**
+Whether to enable property animation for the segment button when the **selectedIndex** value is modified via a variable.
+
+**true**: Property animation is enabled. **false**: Property animation is disabled and the original animation is used.
+
+Default value: **false**
 
 **Type:** boolean
 
@@ -45,7 +55,11 @@ Whether to enable property animation for the segment button when the **selectedI
   maxFontScale: number | Resource
 ```
 
-Maximum font scale for the text in the **SegmentButton**. Value range: [1, 2] Values less than 1 are treated as 1, and values greater than 2 are treated as 2.
+Maximum font scale for the text in the **SegmentButton**.
+
+Value range: [1, 2]
+
+Values less than 1 are treated as 1, and values greater than 2 are treated as 2.
 
 **Type:** number \| Resource
 
@@ -88,7 +102,7 @@ Callback function triggered when a segment button option is tapped. The subscrip
 
 Options of the **SegmentButton** component.
 
-**Type:** SegmentButtonOptions
+**Type:** [SegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md)
 
 **Since:** 11
 
@@ -107,7 +121,11 @@ Options of the **SegmentButton** component.
   selectedIndexes: number[]
 ```
 
-Indexes of selected items of the **SegmentButton**. The index is zero-based and increments by 1. **NOTE：****selectedIndexes** is decorated with [@Link](../../../ui/state-management/arkts-link.md) to implement parent- child two-way synchronization. If no items are selected, an empty array **[]** can be passed in.
+Indexes of selected items of the **SegmentButton**. The index is zero-based and increments by 1.
+
+**NOTE：**
+
+**selectedIndexes** is decorated with [@Link](../../../ui/state-management/arkts-link.md) to implement parent- child two-way synchronization. If no items are selected, an empty array **[]** can be passed in.
 
 **Type:** number[]
 

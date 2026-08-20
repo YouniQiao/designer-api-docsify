@@ -1,6 +1,10 @@
 # @ohos.net.connection
 
-网络连接管理提供管理网络一些基础能力，包括获取默认激活的网络、获取所有激活网络列表、获取网络能力信息等功能。 &gt; **说明：** &gt; &gt; 无特殊说明，接口默认不支持并发。
+网络连接管理提供管理网络一些基础能力，包括获取默认激活的网络、获取所有激活网络列表、获取网络能力信息等功能。
+
+> **说明：**
+> 
+> 无特殊说明，接口默认不支持并发。
 
 **起始版本：** 23
 
@@ -76,7 +80,7 @@ import { connection } from '@kit.NetworkKit';
 | [setAppNet](arkts-network-connection-setappnet-f.md) | 将App异步绑定到特定的网络，绑定后App只能通过netHandle对应的网络访问网络。使用Promise异步回调。 |
 | [setNetExtAttribute](arkts-network-connection-setnetextattribute-f.md) | 为netHandle对应的网络设置扩展属性，标识网络的安全级别。使用Promise异步回调。 |
 | [setNetExtAttributeSync](arkts-network-connection-setnetextattributesync-f.md) | 为netHandle对应的网络设置扩展属性，标识网络的安全级别。使用同步方式返回。 |
-| [setPacFileUrl](arkts-network-connection-setpacfileurl-f.md) | 设置PAC脚本（Proxy Auto-Configuration Script，代理自动配置脚本）的URL地址，并启动PAC代理能力，比如：http://127.0.0.1:21998/PacProxyScript.pac 。可通 过调用[findProxyForUrl](arkts-network-connection-findproxyforurl-f.md)解析URL地址来获取代理信息。 &gt; **注意：** &gt; &gt; 1、本接口当前在PC/2in1&lt;sup&gt;20+&lt;/sup&gt;、Phone&lt;sup&gt;23+&lt;/sup&gt;、Tablet&lt;sup&gt;23+&lt;/sup&gt;、TV&lt;sup&gt;23+&lt;/sup&gt;设备上支持解析脚本并启用PAC代理能力， &gt; Wearable设备类型上只保存脚本地址，不会启用PAC代理能力。 &gt; 2、该接口不会校验URL真实性，在启动PAC代理时，若URL有误，则启动代理失败，返回2100002错误码。 |
+| [setPacFileUrl](arkts-network-connection-setpacfileurl-f.md) | 设置PAC脚本（Proxy Auto-Configuration Script，代理自动配置脚本）的URL地址，并启动PAC代理能力，比如：http://127.0.0.1:21998/PacProxyScript.pac 。可通 过调用[findProxyForUrl](arkts-network-connection-findproxyforurl-f.md)解析URL地址来获取代理信息。 |
 | [setPacUrl](arkts-network-connection-setpacurl-f.md) | 设置系统级代理自动配置（Proxy Auto Config，PAC）脚本地址。 |
 
 <!--Del-->
@@ -106,7 +110,7 @@ import { connection } from '@kit.NetworkKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [ConnectionProperties](arkts-network-connection-connectionproperties-i.md) | 网络连接信息。 &gt; **注意：** &gt; &gt; linkAddresses、routes和dnses可能为空，需要做好空值保护，建议使用前先判断对象是否存在。 |
+| [ConnectionProperties](arkts-network-connection-connectionproperties-i.md) | 网络连接信息。 |
 | [HttpProxy](arkts-network-connection-httpproxy-i.md) | 网络代理配置信息 |
 | [LinkAddress](arkts-network-connection-linkaddress-i.md) | 网络链路信息。 |
 | [NetAddress](arkts-network-connection-netaddress-i.md) | 网络地址。 |
@@ -115,7 +119,7 @@ import { connection } from '@kit.NetworkKit';
 | [NetCapabilityInfo](arkts-network-connection-netcapabilityinfo-i.md) | 提供承载数据网络能力的实例。 |
 | [NetConnection](arkts-network-connection-netconnection-i.md) | 网络连接对象类型。 |
 | [NetConnectionPropertyInfo](arkts-network-connection-netconnectionpropertyinfo-i.md) | 网络连接信息。 |
-| [NetHandle](arkts-network-connection-nethandle-i.md) | 网络句柄。 在调用NetHandle的方法之前，需要先获取NetHandle对象。例如可通过[getDefaultNet](arkts-network-connection-getdefaultnet-f.md)获取系统当前默认网络的网络句柄。 |
+| [NetHandle](arkts-network-connection-nethandle-i.md) | 网络句柄。 |
 | [NetIpMacInfo](arkts-network-connection-netipmacinfo-i.md) | IP邻居表条目信息。 |
 | [NetPortStatesInfo](arkts-network-connection-netportstatesinfo-i.md) | 系统当前监听的TCP、UDP端口信息。 |
 | [NetSpecifier](arkts-network-connection-netspecifier-i.md) | 提供承载数据网络能力的实例。 |

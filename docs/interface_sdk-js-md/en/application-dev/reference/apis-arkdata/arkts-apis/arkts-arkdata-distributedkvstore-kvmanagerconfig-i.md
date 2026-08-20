@@ -38,7 +38,13 @@ Bundle name.
 context: BaseContext
 ```
 
-Application context. For details about the application context of the FA model, see Context. For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md). Since API version 10, the parameter type of context is [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md).
+Application context.
+
+For details about the application context of the FA model, see Context.
+
+For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md).
+
+Since API version 10, the parameter type of context is [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md).
 
 **Type:** [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md)
 

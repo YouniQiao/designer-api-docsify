@@ -37,9 +37,9 @@ Checks whether the application has the permission to access the serial port devi
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
-| [31400003](../errorcode-usb.md#31400003-port-number-not-exist) |  |
 | [14400005](../errorcode-usb.md#14400005-database-operation-exception) |  |
 | [31400001](../errorcode-usb.md#31400001-serial-port-service-error) |  |
+| [31400003](../errorcode-usb.md#31400003-port-number-not-exist) |  |
 
 **Examples**
 

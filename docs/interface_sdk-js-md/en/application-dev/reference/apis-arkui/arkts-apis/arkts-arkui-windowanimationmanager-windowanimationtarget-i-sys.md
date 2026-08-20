@@ -2,6 +2,8 @@
 
 Window animation target.
 
+@interface WindowAnimationTarget
+
 **Since:** 23
 
 <!--Device-windowAnimationManager-export interface WindowAnimationTarget--><!--Device-windowAnimationManager-export interface WindowAnimationTarget-End-->

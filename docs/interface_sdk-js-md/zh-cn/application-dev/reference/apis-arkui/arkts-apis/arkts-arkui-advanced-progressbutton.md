@@ -9,6 +9,12 @@ import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions }
 
 ## 汇总
 
+### 结构体
+
+| 名称 | 说明 |
+| --- | --- |
+| [ProgressButton](arkts-arkui-arkui-advanced-progressbutton-progressbutton-s.md) | 文本下载按钮，可显示具体下载进度。 |
+
 ### 接口
 
 | 名称 | 说明 |

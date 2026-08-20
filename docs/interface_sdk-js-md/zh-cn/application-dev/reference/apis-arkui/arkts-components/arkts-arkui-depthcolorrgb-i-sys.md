@@ -2,6 +2,8 @@
 
 深度空间中的RGB颜色。
 
+@interface DepthColorRGB
+
 **起始版本：** 26.0.0
 
 <!--Device-unnamed-declare interface DepthColorRGB--><!--Device-unnamed-declare interface DepthColorRGB-End-->

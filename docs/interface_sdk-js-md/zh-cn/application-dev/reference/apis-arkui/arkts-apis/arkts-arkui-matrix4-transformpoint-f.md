@@ -12,7 +12,9 @@ import { matrix4 } from '@kit.ArkUI';
 function transformPoint(options: [number, number]): [number, number]
 ```
 
-Matrix的坐标点转换函数，可以将当前的变换效果作用到一个坐标点上。 &gt; **说明：**
+Matrix的坐标点转换函数，可以将当前的变换效果作用到一个坐标点上。
+
+> **说明：**
 
 **起始版本：** 7
 

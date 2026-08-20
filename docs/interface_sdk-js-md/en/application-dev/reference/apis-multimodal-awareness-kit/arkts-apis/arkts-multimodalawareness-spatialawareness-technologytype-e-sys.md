@@ -2,6 +2,8 @@
 
 Enum for distance measurement technology types.
 
+@enum { int } TechnologyType
+
 **Since:** 23
 
 <!--Device-spatialAwareness-export enum TechnologyType--><!--Device-spatialAwareness-export enum TechnologyType-End-->

@@ -1,4 +1,4 @@
-# SetStorageOptions(数据存储)
+# SetStorageOptions
 
 **起始版本：** 3
 

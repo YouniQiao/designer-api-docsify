@@ -2,6 +2,8 @@
 
 Defines Tabs Modifier
 
+@extends TabsAttribute @implements AttributeModifier&lt;TabsAttribute&gt;
+
 **Inheritance/Implementation:** TabsModifier extends TabsAttribute and implements AttributeModifier<TabsAttribute>
 
 **Since:** 20
@@ -32,5 +34,5 @@ Defines the normal update attribute function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instance | TabsAttribute | Yes |  |
+| instance | [TabsAttribute](../../apis-default/arkts-components/arkts-tabs-attribute.md) | Yes |  |
 

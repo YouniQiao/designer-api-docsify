@@ -42,9 +42,9 @@ Create AVMusicTemplate controller instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.function createAVMusicTemplateController can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000002](../errorcode-avmusictemplate.md#35000002-audio-template-controller-creation-failure) | Failed to create the AVMusicTemplate controller. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verify failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.function createAVMusicTemplateController can not work correctly due to limited device capabilities. |
+| [35000002](../errorcode-avmusictemplate.md#35000002-audio-template-controller-creation-failure) | Failed to create the AVMusicTemplate controller. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 

@@ -12,7 +12,11 @@ import { statistics } from '@kit.NetworkKit';
 function getUidRxBytes(uid: int, callback: AsyncCallback<long>): void
 ```
 
-Obtains the total downlink traffic (in bytes) of the specified application from the last startup to the time when this API is called. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; If the application has not generated any traffic consumption after the restart, error code 2103005 will be &gt; thrown.
+Obtains the total downlink traffic (in bytes) of the specified application from the last startup to the time when this API is called. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> If the application has not generated any traffic consumption after the restart, error code 2103005 will be &gt; thrown.
 
 **Since:** 23
 
@@ -37,9 +41,9 @@ Obtains the total downlink traffic (in bytes) of the specified application from 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [2103005](../errorcode-net-statistics.md#2103005-failed-to-read-the-system-map) | Failed to read the system map. |
 | [2103011](../errorcode-net-statistics.md#2103011-failed-to-create-a-system-map) | Failed to create a system map. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 26.0.0 and later |
-| [2103005](../errorcode-net-statistics.md#2103005-failed-to-read-the-system-map) | Failed to read the system map. |
 
 **Examples**
 
@@ -60,7 +64,11 @@ statistics.getUidRxBytes(20010038, (error: BusinessError, stats: number) => {
 function getUidRxBytes(uid: int): Promise<long>
 ```
 
-Obtains the total downlink traffic (in bytes) of the specified application from the last startup to the time when this API is called. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; If the application has not generated any traffic consumption after the restart, error code 2103005 will be &gt; thrown.
+Obtains the total downlink traffic (in bytes) of the specified application from the last startup to the time when this API is called. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> If the application has not generated any traffic consumption after the restart, error code 2103005 will be &gt; thrown.
 
 **Since:** 23
 
@@ -90,9 +98,9 @@ Obtains the total downlink traffic (in bytes) of the specified application from 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [2103005](../errorcode-net-statistics.md#2103005-failed-to-read-the-system-map) | Failed to read the system map. |
 | [2103011](../errorcode-net-statistics.md#2103011-failed-to-create-a-system-map) | Failed to create a system map. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 26.0.0 and later |
-| [2103005](../errorcode-net-statistics.md#2103005-failed-to-read-the-system-map) | Failed to read the system map. |
 
 **Examples**
 

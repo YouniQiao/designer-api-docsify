@@ -32,8 +32,8 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [62980246](../errorcode-image.md#62980246-failure-in-reading-the-pixelmap) | Failed to read the pixelMap. |
 | [62980248](../errorcode-image.md#62980248-no-modification-to-the-pixelmap) | Pixelmap not allow modify. |
 
@@ -98,8 +98,8 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [62980246](../errorcode-image.md#62980246-failure-in-reading-the-pixelmap) | Failed to read the pixelMap. |
 | [62980248](../errorcode-image.md#62980248-no-modification-to-the-pixelmap) | Pixelmap not allow modify. |
 

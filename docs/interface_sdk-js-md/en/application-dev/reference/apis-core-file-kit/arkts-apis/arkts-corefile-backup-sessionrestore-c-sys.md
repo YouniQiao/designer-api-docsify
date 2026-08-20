@@ -52,13 +52,13 @@ Append new bundles and restoreInfos to be restore up during the restore.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900005 | I/O error |
-| 13900001 | Operation not permitted |
-| 13900025 | No space left on device |
 | 13600001 | IPC error |
-| 13900042 | Unknown error |
+| 13900001 | Operation not permitted |
+| 13900005 | I/O error |
 | 13900011 | Out of memory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900042 | Unknown error |
 
 **Examples**
 
@@ -183,13 +183,13 @@ Append new bundles to be restore up during the restore.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900005 | I/O error |
-| 13900001 | Operation not permitted |
-| 13900025 | No space left on device |
 | 13600001 | IPC error |
-| 13900042 | Unknown error |
+| 13900001 | Operation not permitted |
+| 13900005 | I/O error |
 | 13900011 | Out of memory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900042 | Unknown error |
 
 **Examples**
 
@@ -298,9 +298,9 @@ cancel the application being restore.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
 **Examples**
 
@@ -575,11 +575,11 @@ Get the file handle of an APK file.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900001 | Operation not permitted |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error |
+| 13900001 | Operation not permitted |
+| 13900020 | Invalid argument |
 
 ## getCompatibilityInfo
 
@@ -718,9 +718,9 @@ Request to get a shared file from the service. This interface is part of the zer
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900001 | Operation not permitted |
 | 13600001 | IPC error |
+| 13900001 | Operation not permitted |
+| 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
 **Examples**
@@ -814,9 +814,9 @@ Request to get a shared file from the service. This interface is part of the zer
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900001 | Operation not permitted |
 | 13600001 | IPC error |
+| 13900001 | Operation not permitted |
+| 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
 **Examples**
@@ -914,11 +914,11 @@ Request to get shared files from the service. This interface is part of the zero
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900001 | Operation not permitted |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error |
+| 13900001 | Operation not permitted |
+| 13900020 | Invalid argument |
 
 ## getLocalCapabilities
 
@@ -948,11 +948,11 @@ Obtain a Json file that describes local capabilities.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900001 | Operation not permitted |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error |
+| 13900001 | Operation not permitted |
+| 13900020 | Invalid argument |
 | 13900042 | Internal error |
 
 **Examples**
@@ -1119,11 +1119,11 @@ Migrate file from source path to destination path.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900001 | Operation not permitted |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error |
+| 13900001 | Operation not permitted |
+| 13900020 | Invalid argument |
 
 ## publishFile
 
@@ -1159,9 +1159,9 @@ Publish the file handle to the backup service to make the service aware that the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900001 | Operation not permitted |
 | 13600001 | IPC error |
+| 13900001 | Operation not permitted |
+| 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
 **Examples**
@@ -1267,9 +1267,9 @@ Publish the file handle to the backup service to make the service aware that the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900001 | Operation not permitted |
 | 13600001 | IPC error |
+| 13900001 | Operation not permitted |
+| 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
 **Examples**
@@ -1376,12 +1376,12 @@ End restore process
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| 13900005 | I/O error |
-| 13900001 | Operation not permitted |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | 13600001 | IPC error |
+| 13900001 | Operation not permitted |
+| 13900005 | I/O error |
 | 13900042 | Unknown error |
 
 **Examples**

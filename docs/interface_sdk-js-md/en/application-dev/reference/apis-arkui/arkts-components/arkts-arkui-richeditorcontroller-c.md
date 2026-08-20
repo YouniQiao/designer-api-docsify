@@ -1,6 +1,10 @@
 # RichEditorController
 
-Implements the **RichEditor** component controller. Inherits from [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md). &gt; **NOTE：**&gt; &gt; When the length of the content exceeds the height of the display area of the component, the insertion interface ( &gt; such as [addTextSpan](#addtextspan), &gt; [addImageSpan](#addimagespan), &gt; [addBuilderSpan](#addbuilderspan) and &gt; [addSymbolSpan](#addsymbolspan)) is called. The component automatically scrolls the &gt; content to make the end of the inserted content visible.
+Implements the **RichEditor** component controller. Inherits from [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md).
+
+> **NOTE：**
+> 
+> When the length of the content exceeds the height of the display area of the component, the insertion interface ( &gt; such as [addTextSpan](#addtextspan), &gt; [addImageSpan](#addimagespan), &gt; [addBuilderSpan](#addbuilderspan) and &gt; [addSymbolSpan](#addsymbolspan)) is called. The component automatically scrolls the &gt; content to make the end of the inserted content visible.
 
 **Inheritance/Implementation:** RichEditorController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md)
 
@@ -21,7 +25,33 @@ Implements the **RichEditor** component controller. Inherits from [RichEditorBas
 addBuilderSpan(value: CustomBuilder, options?: RichEditorBuilderSpanOptions): number
 ```
 
-Adds a custom layout (BuilderSpan) to **RichEditor**. &gt; **NOTE：**&gt; &gt; - This API adds a builder span to take up space in the layout. It calls the system **measure** method to &gt; calculate the actual length, width, and position. &gt; &gt; - You can use [RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md) to set the index of the builder &gt; in the **RichEditor** component (with one character as the unit). &gt; &gt; - This builder span is unfocusable, draggable, and equipped with certain universal attributes. It behaves &gt; similarly to an image span in terms of placeholder and deletion functionality, and it is treated as a single &gt; character in length. &gt; &gt; - Custom menus can be set using bindSelectionMenu. &gt; &gt; - The information about the builder span cannot be obtained through &gt; [getSpans](#getspans), [getSelection](#getselection), &gt; onSelect, or aboutToDelete. &gt; &gt; - The builder span cannot be updated using [updateSpanStyle](#updatespanstyle) or &gt; [updateParagraphStyle](#updateparagraphstyle). &gt; &gt; - Copying or pasting the builder span does not take effect. &gt; &gt; - The layout constraints of the builder span are passed in from the **RichEditor** component. If the size of the &gt; outermost component in the builder span is not set, the size of the **RichEditor** is used as the value of &gt; **maxSize**. &gt; &gt; - The gesture event mechanism of the builder span is the same as the universal gesture event mechanism. If &gt; transparent transmission is not set in the builder, only the child components in the builder respond. &gt; &gt; - If the caret in the component is blinking, the caret position is updated to be after the inserted image span. Only the following universal attributes are supported: [size](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#size), [padding](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#padding), [margin](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#margin), [aspectRatio](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-layout-constraints.md#aspectratio), [borderStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#borderstyle), [borderWidth](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#borderwidth), [borderColor](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#bordercolor), [borderRadius](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#borderradius), [backgroundColor](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backgroundcolor), [backgroundBlurStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backgroundblurstyle9) , opacity, [blur](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#blur), [backdropBlur](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backdropblur), [shadow](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#shadow), [grayscale](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#grayscale), [brightness](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#brightness), [saturate](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#saturate), [contrast](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#contrast), [invert](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#invert), [sepia](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#sepia), [hueRotate](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#huerotate), [colorBlend](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#colorblend), [linearGradientBlur](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#lineargradientblur12) , [clip](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#clip12), [mask](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#mask12), [foregroundBlurStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-foreground-blur-style.md#foregroundblurstyle) , [accessibilityGroup](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitygroup) , [accessibilityText](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitytext) , [accessibilityDescription](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitydescription) , [accessibilityLevel](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel) , [sphericalEffect](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#sphericaleffect12) , [lightUpEffect](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#lightupeffect12), [pixelStretchEffect](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#pixelstretcheffect12) .
+Adds a custom layout (BuilderSpan) to **RichEditor**.
+
+> **NOTE：**
+> 
+> - This API adds a builder span to take up space in the layout. It calls the system **measure** method to &gt; calculate the actual length, width, and position.
+> 
+> - You can use [RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md) to set the index of the builder &gt; in the **RichEditor** component (with one character as the unit).
+> 
+> - This builder span is unfocusable, draggable, and equipped with certain universal attributes. It behaves &gt; similarly to an image span in terms of placeholder and deletion functionality, and it is treated as a single &gt; character in length.
+> 
+> - Custom menus can be set using [bindSelectionMenu](arkts-arkui-richeditor-attribute.md#bindselectionmenu).
+> 
+> - The information about the builder span cannot be obtained through &gt; [getSpans](#getspans), [getSelection](#getselection), &gt; [onSelect](arkts-arkui-richeditor-attribute.md#onselect), or [aboutToDelete](arkts-arkui-richeditor-attribute.md#abouttodelete).
+> 
+> - The builder span cannot be updated using [updateSpanStyle](#updatespanstyle) or &gt; [updateParagraphStyle](#updateparagraphstyle).
+> 
+> - Copying or pasting the builder span does not take effect.
+> 
+> - The layout constraints of the builder span are passed in from the **RichEditor** component. If the size of the &gt; outermost component in the builder span is not set, the size of the **RichEditor** is used as the value of &gt; **maxSize**.
+> 
+> - The gesture event mechanism of the builder span is the same as the universal gesture event mechanism. If &gt; transparent transmission is not set in the builder, only the child components in the builder respond.
+> 
+> - If the caret in the component is blinking, the caret position is updated to be after the inserted image span.
+
+Only the following universal attributes are supported: [size](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#size), [padding](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#padding), [margin](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#margin), [aspectRatio](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-layout-constraints.md#aspectratio), [borderStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#borderstyle), [borderWidth](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#borderwidth), [borderColor](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#bordercolor), [borderRadius](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#borderradius), [backgroundColor](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backgroundcolor), [backgroundBlurStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backgroundblurstyle9) , opacity, [blur](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#blur), [backdropBlur](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backdropblur), [shadow](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#shadow), [grayscale](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#grayscale), [brightness](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#brightness), [saturate](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#saturate), [contrast](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#contrast), [invert](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#invert), [sepia](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#sepia), [hueRotate](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#huerotate), [colorBlend](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#colorblend), [linearGradientBlur](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#lineargradientblur12) , [clip](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#clip12), [mask](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#mask12), [foregroundBlurStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-foreground-blur-style.md#foregroundblurstyle) , [accessibilityGroup](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitygroup) , [accessibilityText](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitytext) , [accessibilityDescription](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitydescription) , [accessibilityLevel](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel) , [sphericalEffect](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#sphericaleffect12) , [lightUpEffect](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#lightupeffect12),
+
+[pixelStretchEffect](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#pixelstretcheffect12) .
 
 **Since:** 11
 
@@ -52,7 +82,9 @@ Adds a custom layout (BuilderSpan) to **RichEditor**. &gt; **NOTE：**&gt; &gt; 
 addImageSpan(value: PixelMap | ResourceStr, options?: RichEditorImageSpanOptions): number
 ```
 
-Adds an image span. If the caret in the component is blinking, the caret position is updated to be after the inserted image span. This API is a synchronous API. In a weak network environment, directly adding network images may block the UI thread and cause screen freezing. To avoid potential loading issues, do not directly add a network image.
+Adds an image span. If the caret in the component is blinking, the caret position is updated to be after the inserted image span.
+
+This API is a synchronous API. In a weak network environment, directly adding network images may block the UI thread and cause screen freezing. To avoid potential loading issues, do not directly add a network image.
 
 **Since:** 10
 
@@ -83,7 +115,9 @@ Adds an image span. If the caret in the component is blinking, the caret positio
 addSymbolSpan(value: Resource, options?: RichEditorSymbolSpanOptions ): number
 ```
 
-Adds a symbol span. If the caret in the component is blinking, the caret position is updated to be after the inserted symbol span. Currently, gestures, copying, and dragging are not supported.
+Adds a symbol span. If the caret in the component is blinking, the caret position is updated to be after the inserted symbol span.
+
+Currently, gestures, copying, and dragging are not supported.
 
 **Since:** 11
 
@@ -349,7 +383,11 @@ Updates the paragraph style.
 updateSpanStyle(value: RichEditorUpdateTextSpanStyleOptions | RichEditorUpdateImageSpanStyleOptions | RichEditorUpdateSymbolSpanStyleOptions): void
 ```
 
-Updates the text, image, or symbol span style. If only part of a span is updated, the span is split into multiple spans based on the updated part and the non- updated part. Calling this API will not close the custom context menu on selection by default.
+Updates the text, image, or symbol span style.
+
+If only part of a span is updated, the span is split into multiple spans based on the updated part and the non- updated part.
+
+Calling this API will not close the custom context menu on selection by default.
 
 **Since:** 10
 

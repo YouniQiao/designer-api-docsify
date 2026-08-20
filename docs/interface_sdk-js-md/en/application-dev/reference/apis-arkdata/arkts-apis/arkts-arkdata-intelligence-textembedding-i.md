@@ -2,6 +2,8 @@
 
 Describes the text embedding functions of the multi-modal embedding model. Chinese and English are supported.
 
+@interface TextEmbedding
+
 **Since:** 23
 
 <!--Device-intelligence-interface TextEmbedding--><!--Device-intelligence-interface TextEmbedding-End-->

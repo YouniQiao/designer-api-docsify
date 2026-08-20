@@ -1,8 +1,10 @@
 # BitVector
 
-A linear data structure that is implemented on arrays. A bit vector stores bit values and provides bit-level storage and processing. &gt; **NOTE：**&gt; &gt; - This module can be imported only to ArkTS files (with the file name extension .ets). &gt; **Decorator**: \@Sendable
+An ordered collections of bit values, which are either 0 or 1. If multiple threads access a BitVector instance concurrently, and at least one of the threads modifies the array structurally, it must be synchronized externally.
 
-**Since:** 12
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-collections-class BitVector--><!--Device-collections-class BitVector-End-->
 
@@ -14,19 +16,19 @@ A linear data structure that is implemented on arrays. A bit vector stores bit v
 import { collections } from '@kit.ArkTS';
 ```
 
-## [Symbol.iterator]
+## $_iterator
 
 ```TypeScript
-[Symbol.iterator](): IterableIterator<number>
+$_iterator(): IterableIterator<int>
 ```
 
 Returns an iterator that iterates over bit vector.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-BitVector-[Symbol.iterator](): IterableIterator<number>--><!--Device-BitVector-[Symbol.iterator](): IterableIterator<number>-End-->
+<!--Device-BitVector-$_iterator(): IterableIterator<int>--><!--Device-BitVector-$_iterator(): IterableIterator<int>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -34,27 +36,21 @@ Returns an iterator that iterates over bit vector.
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;number&gt; | A new iterable iterator object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
+| IterableIterator&lt;int&gt; | A new iterable iterator object. |
 
 ## constructor
 
 ```TypeScript
-constructor(length: number)
+constructor(length: int)
 ```
 
-Constructor used to create a bit vector.
+A constructor used to create a BitVector object.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-BitVector-constructor(length: number)--><!--Device-BitVector-constructor(length: number)-End-->
+<!--Device-BitVector-constructor(length: int)--><!--Device-BitVector-constructor(length: int)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -62,21 +58,21 @@ Constructor used to create a bit vector.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | number | Yes | Length of the bit vector. |
+| length | int | Yes | The length of BitVector object. |
 
 ## flipBitByIndex
 
 ```TypeScript
-flipBitByIndex(index: number): void
+flipBitByIndex(index: int): void
 ```
 
-Flips the bit value (from 0 to 1 or from 1 to 0) at a given index in this bit vector.
+Flips the bit value by index in a bit vector.(Flip 0 to 1, flip 1 to 0)
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-BitVector-flipBitByIndex(index: number): void--><!--Device-BitVector-flipBitByIndex(index: number): void-End-->
+<!--Device-BitVector-flipBitByIndex(index: int): void--><!--Device-BitVector-flipBitByIndex(index: int): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -84,29 +80,29 @@ Flips the bit value (from 0 to 1 or from 1 to 0) at a given index in this bit ve
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index. If **index** is less than **0** or greater than or equal to **length**, an error is reported. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| index | int | Yes | The index in the bit vector. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The flipBitByIndex method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## flipBitsByRange
 
 ```TypeScript
-flipBitsByRange(fromIndex: number, toIndex: number): void
+flipBitsByRange(fromIndex: int, toIndex: int): void
 ```
 
-Flips the bit values (from 0 to 1 or from 1 to 0) in a given range in this bit vector.
+Flips a range of bit values in a bit vector.(Flip 0 to 1, flip 1 to 0).
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-BitVector-flipBitsByRange(fromIndex: number, toIndex: number): void--><!--Device-BitVector-flipBitsByRange(fromIndex: number, toIndex: number): void-End-->
+<!--Device-BitVector-flipBitsByRange(fromIndex: int, toIndex: int): void--><!--Device-BitVector-flipBitsByRange(fromIndex: int, toIndex: int): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -114,30 +110,30 @@ Flips the bit values (from 0 to 1 or from 1 to 0) in a given range in this bit v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromIndex | number | Yes | Start index of the range (inclusive). If **fromIndex** is less than **0** or greater than or equal to **toIndex**, an error is thrown. |
-| toIndex | number | Yes | End index of the range (exclusive). If **toIndex** is less than **0** or greater than or equal to **length**, an error is thrown. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| fromIndex | int | Yes | The starting position of the index, containing the value at that index position. |
+| toIndex | int | Yes | The end of the index, excluding the value at that index. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The flipBitsByRange method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
 
 ## getBitCountByRange
 
 ```TypeScript
-getBitCountByRange(element: number, fromIndex: number, toIndex: number): number
+getBitCountByRange(element: int, fromIndex: int, toIndex: int): int
 ```
 
-Counts the number of bit values in a given range of this bit vector.
+Counts the number of times a certain bit element occurs within a range of bits in a bit vector.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-BitVector-getBitCountByRange(element: number, fromIndex: number, toIndex: number): number--><!--Device-BitVector-getBitCountByRange(element: number, fromIndex: number, toIndex: number): number-End-->
+<!--Device-BitVector-getBitCountByRange(element: int, fromIndex: int, toIndex: int): int--><!--Device-BitVector-getBitCountByRange(element: int, fromIndex: int, toIndex: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -145,37 +141,37 @@ Counts the number of bit values in a given range of this bit vector.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | number | Yes | Bit value. The value **0** indicates bit value 0, and other values indicate bit value 1. |
-| fromIndex | number | Yes | Start index of the range (inclusive). If **fromIndex** is less than **0** or greater than or equal to **toIndex**, an error is thrown. |
-| toIndex | number | Yes | End index of the range (exclusive). If **toIndex** is less than **0** or greater than or equal to **length**, an error is thrown. |
+| element | int | Yes | Element to be counted (0 means 0, else means 1). |
+| fromIndex | int | Yes | The starting position of the index, containing the value at that index position. |
+| toIndex | int | Yes | The end of the index, excluding the value at that index. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Number of bit values. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| int | The number type, return the number of times a certain bit element |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getBitCountByRange method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
 
 ## getBitsByRange
 
 ```TypeScript
-getBitsByRange(fromIndex: number, toIndex: number): BitVector
+getBitsByRange(fromIndex: int, toIndex: int): BitVector
 ```
 
-Obtains bit values within a given range of this bit vector.
+Returns the bit values in a range of indices in a bit vector.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-BitVector-getBitsByRange(fromIndex: number, toIndex: number): BitVector--><!--Device-BitVector-getBitsByRange(fromIndex: number, toIndex: number): BitVector-End-->
+<!--Device-BitVector-getBitsByRange(fromIndex: int, toIndex: int): BitVector--><!--Device-BitVector-getBitsByRange(fromIndex: int, toIndex: int): BitVector-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -183,36 +179,36 @@ Obtains bit values within a given range of this bit vector.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromIndex | number | Yes | Start index of the range (inclusive). If **fromIndex** is less than **0** or greater than or equal to **toIndex**, an error is thrown. |
-| toIndex | number | Yes | End index of the range (exclusive). If **toIndex** is less than **0** or greater than or equal to **length**, an error is thrown. |
+| fromIndex | int | Yes | The starting position of the index, containing the value at that index position. |
+| toIndex | int | Yes | The end of the index, excluding the value at that index. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BitVector](../../apis-na/arkts-apis/arkts-na-collections-bitvector-c.md) | Bit vector containing the bit values obtained. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [BitVector](arkts-arkts-collections-bitvector-c.md) | The BitVector type, returns the bit values in a range of indices in a bit vector. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getBitsByRange method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
 
 ## getIndexOf
 
 ```TypeScript
-getIndexOf(element: number, fromIndex: number, toIndex: number): number
+getIndexOf(element: int, fromIndex: int, toIndex: int): int
 ```
 
-Returns the index of the first occurrence of a bit value in this bit vector. If the bit value is not found, **-1** is returned.
+Locates the first occurrence of a certain bit value within a range of bits in a bit vector.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-BitVector-getIndexOf(element: number, fromIndex: number, toIndex: number): number--><!--Device-BitVector-getIndexOf(element: number, fromIndex: number, toIndex: number): number-End-->
+<!--Device-BitVector-getIndexOf(element: int, fromIndex: int, toIndex: int): int--><!--Device-BitVector-getIndexOf(element: int, fromIndex: int, toIndex: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -220,37 +216,37 @@ Returns the index of the first occurrence of a bit value in this bit vector. If 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | number | Yes | Bit value. The value **0** indicates bit value 0, and other values indicate bit value 1. |
-| fromIndex | number | Yes | Start index of the range (inclusive). If **fromIndex** is less than **0** or greater than or equal to **toIndex**, an error is thrown. |
-| toIndex | number | Yes | End index of the range (exclusive). If **toIndex** is less than **0** or greater than or equal to **length**, an error is thrown. |
+| element | int | Yes | Element to be Located (0 means 0, else means 1). |
+| fromIndex | int | Yes | The starting position of the index, containing the value at that index position. |
+| toIndex | int | Yes | The end of the index, excluding the value at that index. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Index of the first occurrence of the bit value. If the bit value is not found, **-1** is returned. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| int | The number type, return the first index of specified bit within a range, or -1 if this range of the bitVector does not contain the element. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOf method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
 
 ## getLastIndexOf
 
 ```TypeScript
-getLastIndexOf(element: number, fromIndex: number, toIndex: number): number
+getLastIndexOf(element: int, fromIndex: int, toIndex: int): int
 ```
 
-Returns the index of the last occurrence of a bit value in this bit vector. If the bit value is not found, **-1** is returned.
+Locates the last occurrence of a certain bit value within a range of bits in a bit vector.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-BitVector-getLastIndexOf(element: number, fromIndex: number, toIndex: number): number--><!--Device-BitVector-getLastIndexOf(element: number, fromIndex: number, toIndex: number): number-End-->
+<!--Device-BitVector-getLastIndexOf(element: int, fromIndex: int, toIndex: int): int--><!--Device-BitVector-getLastIndexOf(element: int, fromIndex: int, toIndex: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -258,37 +254,37 @@ Returns the index of the last occurrence of a bit value in this bit vector. If t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | number | Yes | Bit value. The value **0** indicates bit value 0, and other values indicate bit value 1. |
-| fromIndex | number | Yes | Start index of the range (inclusive). If **fromIndex** is less than **0** or greater than or equal to **toIndex**, an error is thrown. |
-| toIndex | number | Yes | End index of the range (exclusive). If **toIndex** is less than **0** or greater than or equal to **length**, an error is thrown. |
+| element | int | Yes | Element to be Located (0 means 0, else means 1). |
+| fromIndex | int | Yes | The starting position of the index, containing the value at that index position. |
+| toIndex | int | Yes | The end of the index, excluding the value at that index. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Index of the last occurrence of the bit value. If the bit value is not found, **-1** is returned. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| int | The number type, return the last index of specified bit within a range, or -1 if this range of the bitVector does not contain the element. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLastIndexOf method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
 
 ## has
 
 ```TypeScript
-has(element: number, fromIndex: number, toIndex: number): boolean
+has(element: int, fromIndex: int, toIndex: int): boolean
 ```
 
-Checks whether a bit value is included in a given range of this bit vector.
+Check if bit vector contains a particular bit element.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-BitVector-has(element: number, fromIndex: number, toIndex: number): boolean--><!--Device-BitVector-has(element: number, fromIndex: number, toIndex: number): boolean-End-->
+<!--Device-BitVector-has(element: int, fromIndex: int, toIndex: int): boolean--><!--Device-BitVector-has(element: int, fromIndex: int, toIndex: int): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -296,37 +292,37 @@ Checks whether a bit value is included in a given range of this bit vector.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | number | Yes | Bit value. The value **0** indicates bit value 0, and other values indicate bit value 1. |
-| fromIndex | number | Yes | Start index of the range (inclusive). If **fromIndex** is less than **0** or greater than or equal to **toIndex**, an error is thrown. |
-| toIndex | number | Yes | End index of the range (inclusive). If **toIndex** is less than **0** or greater than or equal to **length**, an error is thrown. |
+| element | int | Yes | Element to be contained (0 means 0, else means 1). |
+| fromIndex | int | Yes | The starting position of the index, containing the value at that index position. |
+| toIndex | int | Yes | The end of the index, containing the value at that index. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the bit value exists; otherwise, **false** is returned. |
+| boolean | The boolean type, if bit vector contains the specified element, return true, |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
 
 ## pop
 
 ```TypeScript
-pop(): number
+pop(): int | undefined
 ```
 
-Removes the last element from this bit vector.
+Retrieves and removes the bit element to the end of this bit vector.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-BitVector-pop(): number--><!--Device-BitVector-pop(): number-End-->
+<!--Device-BitVector-pop(): int | undefined--><!--Device-BitVector-pop(): int | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -334,28 +330,21 @@ Removes the last element from this bit vector.
 
 | Type | Description |
 | --- | --- |
-| number | Element (bit value) removed. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The pop method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| int \| undefined | The boolean type, if the bit push successfully, return true, else return false. |
 
 ## push
 
 ```TypeScript
-push(element: number): boolean
+push(element: int): boolean
 ```
 
-Adds an element at the end of this bit vector.
+Appends the bit element to the end of this bit vector.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-BitVector-push(element: number): boolean--><!--Device-BitVector-push(element: number): boolean-End-->
+<!--Device-BitVector-push(element: int): boolean--><!--Device-BitVector-push(element: int): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -363,13 +352,13 @@ Adds an element at the end of this bit vector.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | number | Yes | Element to add. The value **0** indicates bit value 0, and other values indicate bit value 1. |
+| element | int | Yes | Element to be appended to this bit vector (0 means 0, else means 1). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false** is returned. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| boolean | The boolean type, returns true if the addition is successful, and returns false if it fails. |
 
 **Error codes:**
 
@@ -381,16 +370,16 @@ Adds an element at the end of this bit vector.
 ## resize
 
 ```TypeScript
-resize(size: number): void
+resize(size: int): void
 ```
 
-Resizes this bit vector. If **size** is greater than the length of the existing bit vector, the bit vector is extended, and elements of the extra part are set to 0. If **size** is less than or equal to the length of the existing bit vector, the bit vector is shrunk according to the size.
+Resize the bitVector's length.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-BitVector-resize(size: number): void--><!--Device-BitVector-resize(size: number): void-End-->
+<!--Device-BitVector-resize(size: int): void--><!--Device-BitVector-resize(size: int): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -398,7 +387,7 @@ Resizes this bit vector. If **size** is greater than the length of the existing 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | Yes | New length. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| size | int | Yes | The new size for bitVector. If count is greater than the current size of bitVector, the additional bit elements are set to 0. |
 
 **Error codes:**
 
@@ -410,16 +399,16 @@ Resizes this bit vector. If **size** is greater than the length of the existing 
 ## setAllBits
 
 ```TypeScript
-setAllBits(element: number): void
+setAllBits(element: int): void
 ```
 
-Sets all elements in this bit vector to a bit value.
+Sets all of bits in a bit vector to a particular element.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-BitVector-setAllBits(element: number): void--><!--Device-BitVector-setAllBits(element: number): void-End-->
+<!--Device-BitVector-setAllBits(element: int): void--><!--Device-BitVector-setAllBits(element: int): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -427,7 +416,7 @@ Sets all elements in this bit vector to a bit value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | number | Yes | Bit value to set. The value **0** indicates bit value 0, and other values indicate bit value 1. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| element | int | Yes | Element to be set (0 means 0, else means 1). |
 
 **Error codes:**
 
@@ -439,16 +428,16 @@ Sets all elements in this bit vector to a bit value.
 ## setBitsByRange
 
 ```TypeScript
-setBitsByRange(element: number, fromIndex: number, toIndex: number): void
+setBitsByRange(element: int, fromIndex: int, toIndex: int): void
 ```
 
-Sets elements in a given range in this bit vector to a bit value.
+Sets a range of bits in a bit vector to a particular element.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-BitVector-setBitsByRange(element: number, fromIndex: number, toIndex: number): void--><!--Device-BitVector-setBitsByRange(element: number, fromIndex: number, toIndex: number): void-End-->
+<!--Device-BitVector-setBitsByRange(element: int, fromIndex: int, toIndex: int): void--><!--Device-BitVector-setBitsByRange(element: int, fromIndex: int, toIndex: int): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -456,31 +445,31 @@ Sets elements in a given range in this bit vector to a bit value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | number | Yes | Bit value to set. The value **0** indicates bit value 0, and other values indicate bit value 1. |
-| fromIndex | number | Yes | Start index of the range (inclusive). If **fromIndex** is less than **0** or greater than or equal to **toIndex**, an error is thrown. |
-| toIndex | number | Yes | End index of the range (exclusive). If **toIndex** is less than **0** or greater than or equal to **length**, an error is thrown. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| element | int | Yes | Element to be set (0 means 0, else means 1). |
+| fromIndex | int | Yes | The starting position of the index, containing the value at that index position. |
+| toIndex | int | Yes | The end of the index, excluding the value at that index. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The setBitsByRange method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
 
 ## values
 
 ```TypeScript
-values(): IterableIterator<number>
+values(): IterableIterator<int>
 ```
 
-Returns an iterator object that contains the value of each element in this bit vector.
+Returns an iterable of values in the bit vector
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-BitVector-values(): IterableIterator<number>--><!--Device-BitVector-values(): IterableIterator<number>-End-->
+<!--Device-BitVector-values(): IterableIterator<int>--><!--Device-BitVector-values(): IterableIterator<int>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -488,7 +477,7 @@ Returns an iterator object that contains the value of each element in this bit v
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;number&gt; | Bit vector iterator object. |
+| IterableIterator&lt;int&gt; | A new iterable iterator object. |
 
 **Error codes:**
 
@@ -496,22 +485,4 @@ Returns an iterator object that contains the value of each element in this bit v
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
-
-## length
-
-```TypeScript
-readonly length: number
-```
-
-Number of elements in a bit vector.
-
-**Type:** number
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-BitVector-readonly length: number--><!--Device-BitVector-readonly length: number-End-->
-
-**System capability:** SystemCapability.Utils.Lang
 

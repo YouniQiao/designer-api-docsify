@@ -36,7 +36,7 @@ ContentItemV2的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ContentItemV2Options](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-contentitemv2options-i.md) | 否 | 列表左侧属性配置。<br/>默认不设置或设置为undefined时，按各属性的默认效果创建对象。 |
+| options | [ContentItemV2Options](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-contentitemv2options-i.md) | 否 | 列表左侧属性配置。<br/>默认不设置或设置为undefined时，按各属性的默认效果创建对象。 |
 
 ## description
 
@@ -45,7 +45,11 @@ ContentItemV2的构造函数。
   public description?: ResourceStr
 ```
 
-中间元素的描述内容。 默认不设置或设置为undefined时，不显示描述内容。 文本超长后无限换行显示。
+中间元素的描述内容。
+
+默认不设置或设置为undefined时，不显示描述内容。
+
+文本超长后无限换行显示。
 
 **类型：** ResourceStr
 
@@ -66,7 +70,11 @@ ContentItemV2的构造函数。
   public icon?: ResourceStr
 ```
 
-左侧元素的图标资源。 默认不设置或设置为undefined，表示不显示icon图标资源。 同时设置symbolStyle时，只显示Symbol图标。
+左侧元素的图标资源。
+
+默认不设置或设置为undefined，表示不显示icon图标资源。
+
+同时设置symbolStyle时，只显示Symbol图标。
 
 **类型：** ResourceStr
 
@@ -87,9 +95,11 @@ ContentItemV2的构造函数。
   public iconStyle?: IconTypeV2
 ```
 
-左侧元素的图标类型。 默认不设置或设置为undefined，表示不显示icon图标资源。
+左侧元素的图标类型。
 
-**类型：** [IconTypeV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-icontypev2-e.md)
+默认不设置或设置为undefined，表示不显示icon图标资源。
+
+**类型：** [IconTypeV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-icontypev2-e.md)
 
 **起始版本：** 26.0.0
 
@@ -108,7 +118,11 @@ ContentItemV2的构造函数。
   public primaryText?: ResourceStr
 ```
 
-中间元素的标题内容。 默认不设置或设置为undefined时，不显示标题内容。 文本超长后无限换行显示。
+中间元素的标题内容。
+
+默认不设置或设置为undefined时，不显示标题内容。
+
+文本超长后无限换行显示。
 
 **类型：** ResourceStr
 
@@ -129,7 +143,11 @@ ContentItemV2的构造函数。
   public secondaryText?: ResourceStr
 ```
 
-中间元素的副标题内容。 默认不设置或设置为undefined时，不显示副标题内容。 文本超长后无限换行显示。
+中间元素的副标题内容。
+
+默认不设置或设置为undefined时，不显示副标题内容。
+
+文本超长后无限换行显示。
 
 **类型：** ResourceStr
 
@@ -150,7 +168,9 @@ ContentItemV2的构造函数。
   public symbolStyle?: SymbolGlyphModifier
 ```
 
-左侧元素的Symbol图标资源，优先级大于icon，同时设置了icon和Symbol图标，只显示Symbol图标。 默认不设置或设置为undefined，Symbol图标不显示。
+左侧元素的Symbol图标资源，优先级大于icon，同时设置了icon和Symbol图标，只显示Symbol图标。
+
+默认不设置或设置为undefined，Symbol图标不显示。
 
 **类型：** SymbolGlyphModifier
 

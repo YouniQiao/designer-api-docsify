@@ -41,10 +41,10 @@ function queryReusableAuthResult(authParam: AuthParam): Uint8Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12500008](../errorcode-useriam.md#12500008-参数校验失败) | The parameter is out of range. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Called by non-system application. |
 | [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| [12500008](../errorcode-useriam.md#12500008-参数校验失败) | The parameter is out of range. |
 | [12500017](../errorcode-useriam.md#12500017-复用身份认证结果失败) | Failed to reuse authentication result. |
 
 **示例**
@@ -61,7 +61,7 @@ try {
   const reuseUnlockResult: userAuth.ReuseUnlockResult = {
     reuseMode: userAuth.ReuseMode.AUTH_TYPE_RELEVANT,
     reuseDuration: userAuth.MAX_ALLOWABLE_REUSE_DURATION,
-  }
+  };
   const authParam: userAuth.AuthParam = {
     challenge: randData,
     authType: [userAuth.UserAuthType.PIN],
@@ -72,7 +72,7 @@ try {
   console.info('query reuse auth result successfully.');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`query reuse auth result failed. Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`Failed to query reuse auth result. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 

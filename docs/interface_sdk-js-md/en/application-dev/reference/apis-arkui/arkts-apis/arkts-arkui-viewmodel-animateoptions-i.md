@@ -2,6 +2,8 @@
 
 AnimateOptions
 
+@interface AnimateOptions
+
 **Since:** 4
 
 <!--Device-unnamed-export interface AnimateOptions--><!--Device-unnamed-export interface AnimateOptions-End-->

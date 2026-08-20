@@ -1,4 +1,4 @@
-# DialogAlignment(AlertDialog)
+# DialogAlignment
 
 Enumerates the alignment modes of the alert dialog boxes.
 

@@ -35,12 +35,12 @@ Checks whether the interface is activated. This API uses an asynchronous callbac
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2200001](../errorcode-net-ethernet.md#2200001-invalid-parameter-value) | Invalid parameter value. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
-| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Failed to connect to the service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2200001](../errorcode-net-ethernet.md#2200001-invalid-parameter-value) | Invalid parameter value. |
+| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Failed to connect to the service. |
+| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
 | [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) | Device information does not exist. |
 
 **Examples**
@@ -93,12 +93,12 @@ Checks whether the interface is activated. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2200001](../errorcode-net-ethernet.md#2200001-invalid-parameter-value) | Invalid parameter value. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
-| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Failed to connect to the service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2200001](../errorcode-net-ethernet.md#2200001-invalid-parameter-value) | Invalid parameter value. |
+| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Failed to connect to the service. |
+| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
 | [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) | Device information does not exist. |
 
 **Examples**

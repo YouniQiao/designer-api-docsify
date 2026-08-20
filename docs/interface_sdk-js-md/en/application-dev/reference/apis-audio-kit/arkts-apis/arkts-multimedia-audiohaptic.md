@@ -1,6 +1,8 @@
 # @ohos.multimedia.audioHaptic
 
-Audio-haptic enables users to get rhythmic auditory and haptic feedback while having incoming calls or messages. **Device behavior difference**: For a device without a vibration component, no vibration effect is generated.
+Audio-haptic enables users to get rhythmic auditory and haptic feedback while having incoming calls or messages.
+
+**Device behavior difference**: For a device without a vibration component, no vibration effect is generated.
 
 **Since:** 23
 
@@ -26,7 +28,7 @@ import { audioHaptic } from '@kit.AudioKit';
 
 | Name | Description |
 | --- | --- |
-| [AudioHapticFileDescriptor](arkts-audio-audiohaptic-audiohapticfiledescriptor-i.md) | Describes the audio-haptic file descriptor. &gt; **NOTE：**&gt; &gt; Ensure that **fd** is an available file descriptor and the values of **offset** and **length** are correct. |
+| [AudioHapticFileDescriptor](arkts-audio-audiohaptic-audiohapticfiledescriptor-i.md) | Describes the audio-haptic file descriptor. |
 | [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md) | Manages the audio-haptic feature. Before calling any API in AudioHapticManager, you must use [getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md) to create an AudioHapticManager instance. |
 | [AudioHapticPlayer](arkts-audio-audiohaptic-audiohapticplayer-i.md) | Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, you must use [createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createplayer) to create an AudioHapticPlayer instance. |
 | [AudioHapticPlayerOptions](arkts-audio-audiohaptic-audiohapticplayeroptions-i.md) | Describes the options for the audio-haptic player. |

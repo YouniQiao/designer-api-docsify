@@ -1,6 +1,10 @@
 # FocusController
 
-提供控制焦点的能力，如清除、移动和激活焦点等功能。 &gt; **说明：** &gt; &gt; 以下API需先使用UIContext中的[getFocusController()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getfocuscontroller)方法获取FocusController实例，再通过该实例调用对应方法。
+提供控制焦点的能力，如清除、移动和激活焦点等功能。
+
+> **说明：**
+> 
+> 以下API需先使用UIContext中的[getFocusController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getfocuscontroller)方法获取FocusController实例，再通过该实例调用对应方法。
 
 **起始版本：** 12
 
@@ -66,7 +70,9 @@ clearFocus(): void
 isActive(): boolean
 ```
 
-返回UI实例的焦点激活态。 焦点激活态可参考[基础概念：焦点激活态](../../../ui/arkts-common-events-focus-event.md#基础概念)。
+返回UI实例的焦点激活态。
+
+焦点激活态可参考[基础概念：焦点激活态](../../../ui/arkts-common-events-focus-event.md#基础概念)。
 
 **起始版本：** 20
 
@@ -112,9 +118,9 @@ requestFocus(key: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [150001](../errorcode-focus.md#150001-节点无法获得焦点) | the component cannot be focused. |
 | [150002](../errorcode-focus.md#150002-祖先节点无法获得焦点) | This component has an unfocusable ancestor. |
 | [150003](../errorcode-focus.md#150003-节点不存在) | the component is not on tree or does not exist. |
-| [150001](../errorcode-focus.md#150001-节点无法获得焦点) | the component cannot be focused. |
 
 ## setAutoFocusTransfer
 

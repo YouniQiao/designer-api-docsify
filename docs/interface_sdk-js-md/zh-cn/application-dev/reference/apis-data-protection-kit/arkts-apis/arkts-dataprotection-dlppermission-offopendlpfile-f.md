@@ -12,7 +12,9 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function off(type: 'openDLPFile', listener?: Callback<AccessedDLPFileInfo>): void
 ```
 
-取消监听打开DLP文件。仅支持在非DLP沙箱应用中调用。调用成功后，将不再接收DLP文件打开事件的通知。 该接口通常在页面销毁或不再需要监听时调用以释放资源。
+取消监听打开DLP文件。仅支持在非DLP沙箱应用中调用。调用成功后，将不再接收DLP文件打开事件的通知。
+
+该接口通常在页面销毁或不再需要监听时调用以释放资源。
 
 **起始版本：** 10
 
@@ -25,7 +27,7 @@ function off(type: 'openDLPFile', listener?: Callback<AccessedDLPFileInfo>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'openDLPFile' | 是 | 监听事件类型。固定值为'openDLPFile'：打开DLP文件事件。 |
-| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AccessedDLPFileInfo](arkts-dataprotection-dlppermission-accesseddlpfileinfo-i.md)&gt; | 否 | DLP文件被打开的事件的回调。当需要取消特定回调时传入此参数（传入之前注册的回调函数）， 当需要取消所有回调时可不传此参数。不传入时默认为空，取消该类型事件的所有回调。 |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AccessedDLPFileInfo](arkts-dataprotection-dlppermission-accesseddlpfileinfo-i.md)&gt; | 否 | DLP文件被打开的事件的回调。当需要取消特定回调时传入此参数（传入之前注册的回调函数）， 当需要取消所有回调时可不传此参数。不传入时默认为空，取消该类型事件的所有回调。 |
 
 **错误码：**
 

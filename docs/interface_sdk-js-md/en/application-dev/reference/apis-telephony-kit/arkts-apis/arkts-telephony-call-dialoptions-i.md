@@ -20,7 +20,9 @@ import { call } from '@kit.TelephonyKit';
 extras?: boolean
 ```
 
-Whether the call is a video call. - **true**: video call - **false** (default): voice call
+Whether the call is a video call.
+
+- **true**: video call - **false** (default): voice call
 
 **Type:** boolean
 

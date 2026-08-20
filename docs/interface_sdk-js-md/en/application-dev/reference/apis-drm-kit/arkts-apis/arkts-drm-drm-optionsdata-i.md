@@ -1,4 +1,4 @@
-# OptionsData(Defines the DRM capability.)
+# OptionsData
 
 Defines optional parameters for a device certificate request.
 

@@ -1,4 +1,4 @@
-# Worker(System API)（系统接口）
+# Worker（系统接口）
 
 ```TypeScript
 declare type Worker = import('../api/@ohos.worker').default.Worker

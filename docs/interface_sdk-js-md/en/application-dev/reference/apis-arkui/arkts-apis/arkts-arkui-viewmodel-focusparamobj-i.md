@@ -2,6 +2,8 @@
 
 Defines the focus param.
 
+@interface FocusParamObj
+
 **Since:** 3
 
 <!--Device-unnamed-export interface FocusParamObj--><!--Device-unnamed-export interface FocusParamObj-End-->

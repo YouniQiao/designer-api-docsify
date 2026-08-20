@@ -1,6 +1,10 @@
 # TLSSocketConnection
 
-TLSSocketConnection连接，即TLSSocket客户端与服务端的连接。在调用TLSSocketConnection的方法前，需要先获取TLSSocketConnection对象。 &gt; **说明：** &gt; &gt; 客户端与服务端成功建立连接后，才能通过返回的TLSSocketConnection对象调用相应的接口。
+TLSSocketConnection连接，即TLSSocket客户端与服务端的连接。在调用TLSSocketConnection的方法前，需要先获取TLSSocketConnection对象。
+
+> **说明：**
+> 
+> 客户端与服务端成功建立连接后，才能通过返回的TLSSocketConnection对象调用相应的接口。
 
 **起始版本：** 10
 
@@ -32,17 +36,17 @@ close(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，成功返回空，失败返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，成功返回空，失败返回错误码、错误信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
+| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) | An error occurred in the TLS system call. |
 | [2303506](../errorcode-net-socket.md#2303506-关闭tls连接失败) | Failed to close the TLS connection. |
 | [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
-| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) | An error occurred in the TLS system call. |
-| [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
 
 **示例**
 
@@ -111,10 +115,10 @@ close(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
+| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) | An error occurred in the TLS system call. |
 | [2303506](../errorcode-net-socket.md#2303506-关闭tls连接失败) | Failed to close the TLS connection. |
 | [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
-| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) | An error occurred in the TLS system call. |
-| [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
 
 **示例**
 
@@ -174,17 +178,17 @@ getCipherSuite(callback: AsyncCallback<Array<string>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回通信双方支持的加密套件。失败返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回通信双方支持的加密套件。失败返回错误码、错误信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
-| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) | An error occurred in the TLS system call. |
-| [2303502](../errorcode-net-socket.md#2303502-tls读取错误) | An error occurred when reading data on the TLS socket. |
 | [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
+| [2303502](../errorcode-net-socket.md#2303502-tls读取错误) | An error occurred when reading data on the TLS socket. |
+| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) | An error occurred in the TLS system call. |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 
 **示例**
 
@@ -252,10 +256,10 @@ getCipherSuite(): Promise<Array<string>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
-| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) | An error occurred in the TLS system call. |
-| [2303502](../errorcode-net-socket.md#2303502-tls读取错误) | An error occurred when reading data on the TLS socket. |
 | [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
+| [2303502](../errorcode-net-socket.md#2303502-tls读取错误) | An error occurred when reading data on the TLS socket. |
+| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) | An error occurred in the TLS system call. |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 
 **示例**
 
@@ -303,7 +307,11 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 getLocalAddress(): Promise<NetAddress>
 ```
 
-获取TLSSocketConnection连接的本地Socket地址。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 在TLSSocketServer通信连接成功之后，才可调用此方法。
+获取TLSSocketConnection连接的本地Socket地址。使用Promise异步回调。
+
+> **说明：**
+> 
+> 在TLSSocketServer通信连接成功之后，才可调用此方法。
 
 **起始版本：** 12
 
@@ -384,7 +392,7 @@ getRemoteAddress(callback: AsyncCallback<NetAddress>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetAddress&gt; | 是 | 回调函数。成功返回对端的socket地址，失败返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;NetAddress&gt; | 是 | 回调函数。成功返回对端的socket地址，失败返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -521,15 +529,15 @@ getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | 是 | 回调函数，返回对端的证书。失败返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | 是 | 回调函数，返回对端的证书。失败返回错误码、错误信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 | [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 
 ## getRemoteCertificate
 
@@ -555,8 +563,8 @@ getRemoteCertificate(): Promise<X509CertRawData>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 | [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 
 ## getSignatureAlgorithms
 
@@ -576,15 +584,15 @@ getSignatureAlgorithms(callback: AsyncCallback<Array<string>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回双方支持的签名算法。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回双方支持的签名算法。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 | [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 
 **示例**
 
@@ -652,8 +660,8 @@ getSignatureAlgorithms(): Promise<Array<string>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 | [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 
 **示例**
 
@@ -701,7 +709,15 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 getSocketFd(): Promise<int>
 ```
 
-获取TLSSocketConnection连接的文件描述符。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 在TLSSocketServer通信连接成功之后，才可调用此方法。 &gt; &gt; - 连接断开、Socket已关闭（如调用close后）等异常情况下调用本接口会返回-1。 &gt; &gt; - 文件描述符的生命周期由系统管理，应用可以通过[close](arkts-network-socket-tcpsocketconnection-i.md#close)方法关闭 &gt; Socket连接，避免直接操作文件描述符进行关闭。
+获取TLSSocketConnection连接的文件描述符。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 在TLSSocketServer通信连接成功之后，才可调用此方法。
+> 
+> - 连接断开、Socket已关闭（如调用close后）等异常情况下调用本接口会返回-1。
+> 
+> - 文件描述符的生命周期由系统管理，应用可以通过[close](arkts-network-socket-tcpsocketconnection-i.md#close)方法关闭 &gt; Socket连接，避免直接操作文件描述符进行关闭。
 
 **起始版本：** 23
 
@@ -782,7 +798,7 @@ off(type: 'close', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'close' | 是 | 订阅的事件类型。'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。成功时返回空，失败时返回错误码、错误信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 回调函数。成功时返回空，失败时返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -852,7 +868,7 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 订阅的事件类型。'error'：error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。成功时返回空，失败时返回错误码、错误信息。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | 回调函数。成功时返回空，失败时返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -922,7 +938,7 @@ off(type: 'message', callback?: Callback<SocketMessageInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'message' | 是 | 订阅的事件类型。'message'：接收消息事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 否 | 回调函数。成功时返回TLSSocketConnection连接信息，失败时返回错误码、错误信息。<br>**起始版本：** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 否 | 回调函数。成功时返回TLSSocketConnection连接信息，失败时返回错误码、错误信息。<br>**起始版本：** 11 |
 
 **错误码：**
 
@@ -1000,7 +1016,7 @@ on(type: 'close', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'close' | 是 | 订阅的事件类型。'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。成功时返回空，失败时返回错误码、错误信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数。成功时返回空，失败时返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -1065,7 +1081,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 订阅的事件类型。'error'：error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数。成功时返回空，失败时返回错误码、错误信息。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | 回调函数。成功时返回空，失败时返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -1131,7 +1147,7 @@ on(type: 'message', callback: Callback<SocketMessageInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'message' | 是 | 订阅的事件类型。'message'：接收消息事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 是 | 回调函数。成功时返回TLSSocketConnection连接信息，失败时返回错误码、错误信息。<br>**起始版本：** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 是 | 回调函数。成功时返回TLSSocketConnection连接信息，失败时返回错误码、错误信息。<br>**起始版本：** 11 |
 
 **错误码：**
 
@@ -1205,18 +1221,18 @@ send(data: string | ArrayBuffer, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | data | string \| ArrayBuffer | 是 | TLSSocketServer发送数据所需要的参数。<br>**起始版本：** 10 - 11 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，成功返回空，失败返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，成功返回空，失败返回错误码、错误信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
+| [2303503](../errorcode-net-socket.md#2303503-tls写入错误) | An error occurred when writing data on the TLS socket. |
+| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) | An error occurred in the TLS system call. |
 | [2303506](../errorcode-net-socket.md#2303506-关闭tls连接失败) | Failed to close the TLS connection. |
 | [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
-| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) | An error occurred in the TLS system call. |
-| [2303503](../errorcode-net-socket.md#2303503-tls写入错误) | An error occurred when writing data on the TLS socket. |
-| [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
 
 **示例**
 
@@ -1292,11 +1308,11 @@ send(data: string | ArrayBuffer): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
+| [2303503](../errorcode-net-socket.md#2303503-tls写入错误) | An error occurred when writing data on the TLS socket. |
+| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) | An error occurred in the TLS system call. |
 | [2303506](../errorcode-net-socket.md#2303506-关闭tls连接失败) | Failed to close the TLS connection. |
 | [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
-| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) | An error occurred in the TLS system call. |
-| [2303503](../errorcode-net-socket.md#2303503-tls写入错误) | An error occurred when writing data on the TLS socket. |
-| [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
 
 **示例**
 

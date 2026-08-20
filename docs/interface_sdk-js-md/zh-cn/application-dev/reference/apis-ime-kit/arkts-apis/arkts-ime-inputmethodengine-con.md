@@ -6,6 +6,8 @@
 const CURSOR_DOWN: int
 ```
 
+@brief 光标下移。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-const CURSOR_DOWN: int--><!--Device-inputMethodEngine-const CURSOR_DOWN: int-End-->
@@ -17,6 +19,8 @@ const CURSOR_DOWN: int
 ```TypeScript
 const CURSOR_LEFT: int
 ```
+
+@brief 光标左移。
 
 **起始版本：** 23
 
@@ -30,6 +34,8 @@ const CURSOR_LEFT: int
 const CURSOR_RIGHT: int
 ```
 
+@brief 光标右移。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-const CURSOR_RIGHT: int--><!--Device-inputMethodEngine-const CURSOR_RIGHT: int-End-->
@@ -41,6 +47,8 @@ const CURSOR_RIGHT: int
 ```TypeScript
 const CURSOR_UP: int
 ```
+
+@brief 光标上移。
 
 **起始版本：** 23
 
@@ -54,6 +62,8 @@ const CURSOR_UP: int
 const DISPLAY_MODE_FULL: int
 ```
 
+@brief 编辑框显示为全屏。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-const DISPLAY_MODE_FULL: int--><!--Device-inputMethodEngine-const DISPLAY_MODE_FULL: int-End-->
@@ -65,6 +75,8 @@ const DISPLAY_MODE_FULL: int
 ```TypeScript
 const DISPLAY_MODE_PART: int
 ```
+
+@brief 编辑框显示为半屏。
 
 **起始版本：** 23
 
@@ -78,6 +90,8 @@ const DISPLAY_MODE_PART: int
 const ENTER_KEY_TYPE_DONE: int
 ```
 
+@brief “回车”功能键。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-const ENTER_KEY_TYPE_DONE: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_DONE: int-End-->
@@ -89,6 +103,8 @@ const ENTER_KEY_TYPE_DONE: int
 ```TypeScript
 const ENTER_KEY_TYPE_GO: int
 ```
+
+@brief “前往”功能键。
 
 **起始版本：** 23
 
@@ -102,6 +118,8 @@ const ENTER_KEY_TYPE_GO: int
 const ENTER_KEY_TYPE_NEWLINE: int
 ```
 
+@brief “换行”功能键。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-const ENTER_KEY_TYPE_NEWLINE: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_NEWLINE: int-End-->
@@ -113,6 +131,8 @@ const ENTER_KEY_TYPE_NEWLINE: int
 ```TypeScript
 const ENTER_KEY_TYPE_NEXT: int
 ```
+
+@brief “下一个”功能键。
 
 **起始版本：** 23
 
@@ -126,6 +146,8 @@ const ENTER_KEY_TYPE_NEXT: int
 const ENTER_KEY_TYPE_PREVIOUS: int
 ```
 
+@brief “前一个”功能键。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-const ENTER_KEY_TYPE_PREVIOUS: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_PREVIOUS: int-End-->
@@ -137,6 +159,8 @@ const ENTER_KEY_TYPE_PREVIOUS: int
 ```TypeScript
 const ENTER_KEY_TYPE_SEARCH: int
 ```
+
+@brief “搜索”功能键。
 
 **起始版本：** 23
 
@@ -150,6 +174,8 @@ const ENTER_KEY_TYPE_SEARCH: int
 const ENTER_KEY_TYPE_SEND: int
 ```
 
+@brief “发送”功能键。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-const ENTER_KEY_TYPE_SEND: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_SEND: int-End-->
@@ -161,6 +187,8 @@ const ENTER_KEY_TYPE_SEND: int
 ```TypeScript
 const ENTER_KEY_TYPE_UNSPECIFIED: int
 ```
+
+@brief 无功能键。
 
 **起始版本：** 23
 
@@ -174,6 +202,8 @@ const ENTER_KEY_TYPE_UNSPECIFIED: int
 const FLAG_SELECTING: int
 ```
 
+@brief 编辑框处于选择状态。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-const FLAG_SELECTING: int--><!--Device-inputMethodEngine-const FLAG_SELECTING: int-End-->
@@ -185,6 +215,8 @@ const FLAG_SELECTING: int
 ```TypeScript
 const FLAG_SINGLE_LINE: int
 ```
+
+@brief 编辑框为单行。
 
 **起始版本：** 23
 
@@ -198,6 +230,8 @@ const FLAG_SINGLE_LINE: int
 const OPTION_ASCII: int
 ```
 
+@brief 允许输入ASCII值。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-const OPTION_ASCII: int--><!--Device-inputMethodEngine-const OPTION_ASCII: int-End-->
@@ -209,6 +243,8 @@ const OPTION_ASCII: int
 ```TypeScript
 const OPTION_AUTO_CAP_CHARACTERS: int
 ```
+
+@brief 允许输入字符。
 
 **起始版本：** 23
 
@@ -222,6 +258,8 @@ const OPTION_AUTO_CAP_CHARACTERS: int
 const OPTION_AUTO_CAP_SENTENCES: int
 ```
 
+@brief 允许输入句子。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-const OPTION_AUTO_CAP_SENTENCES: int--><!--Device-inputMethodEngine-const OPTION_AUTO_CAP_SENTENCES: int-End-->
@@ -233,6 +271,8 @@ const OPTION_AUTO_CAP_SENTENCES: int
 ```TypeScript
 const OPTION_AUTO_WORDS: int
 ```
+
+@brief 允许输入单词。
 
 **起始版本：** 23
 
@@ -246,6 +286,8 @@ const OPTION_AUTO_WORDS: int
 const OPTION_MULTI_LINE: int
 ```
 
+@brief 允许输入多行。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-const OPTION_MULTI_LINE: int--><!--Device-inputMethodEngine-const OPTION_MULTI_LINE: int-End-->
@@ -257,6 +299,8 @@ const OPTION_MULTI_LINE: int
 ```TypeScript
 const OPTION_NONE: int
 ```
+
+@brief 不指定编辑框输入属性。
 
 **起始版本：** 23
 
@@ -270,6 +314,8 @@ const OPTION_NONE: int
 const OPTION_NO_FULLSCREEN: int
 ```
 
+@brief 半屏样式。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-const OPTION_NO_FULLSCREEN: int--><!--Device-inputMethodEngine-const OPTION_NO_FULLSCREEN: int-End-->
@@ -281,6 +327,8 @@ const OPTION_NO_FULLSCREEN: int
 ```TypeScript
 const PATTERN_DATETIME: int
 ```
+
+@brief 日期编辑框。
 
 **起始版本：** 23
 
@@ -294,6 +342,8 @@ const PATTERN_DATETIME: int
 const PATTERN_EMAIL: int
 ```
 
+@brief 邮件编辑框。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-const PATTERN_EMAIL: int--><!--Device-inputMethodEngine-const PATTERN_EMAIL: int-End-->
@@ -305,6 +355,8 @@ const PATTERN_EMAIL: int
 ```TypeScript
 const PATTERN_NEW_PASSWORD: int
 ```
+
+@brief 新密码编辑框。
 
 **起始版本：** 23
 
@@ -320,6 +372,8 @@ const PATTERN_NEW_PASSWORD: int
 const PATTERN_NULL: int
 ```
 
+@brief 无特殊性编辑框。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-const PATTERN_NULL: int--><!--Device-inputMethodEngine-const PATTERN_NULL: int-End-->
@@ -332,6 +386,8 @@ const PATTERN_NULL: int
 const PATTERN_NUMBER: int
 ```
 
+@brief 数字编辑框。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-const PATTERN_NUMBER: int--><!--Device-inputMethodEngine-const PATTERN_NUMBER: int-End-->
@@ -343,6 +399,8 @@ const PATTERN_NUMBER: int
 ```TypeScript
 const PATTERN_NUMBER_DECIMAL: int
 ```
+
+@brief 带小数点的数字编辑框。
 
 **起始版本：** 23
 
@@ -358,6 +416,8 @@ const PATTERN_NUMBER_DECIMAL: int
 const PATTERN_ONE_TIME_CODE: int
 ```
 
+@brief 验证码编辑框。
+
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -372,6 +432,8 @@ const PATTERN_ONE_TIME_CODE: int
 const PATTERN_PASSWORD: int
 ```
 
+@brief 密码编辑框。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-const PATTERN_PASSWORD: int--><!--Device-inputMethodEngine-const PATTERN_PASSWORD: int-End-->
@@ -383,6 +445,8 @@ const PATTERN_PASSWORD: int
 ```TypeScript
 const PATTERN_PASSWORD_NUMBER: int
 ```
+
+@brief 数字密码编辑框。
 
 **起始版本：** 23
 
@@ -396,6 +460,8 @@ const PATTERN_PASSWORD_NUMBER: int
 const PATTERN_PASSWORD_SCREEN_LOCK: int
 ```
 
+@brief 锁屏密码编辑框。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-const PATTERN_PASSWORD_SCREEN_LOCK: int--><!--Device-inputMethodEngine-const PATTERN_PASSWORD_SCREEN_LOCK: int-End-->
@@ -407,6 +473,8 @@ const PATTERN_PASSWORD_SCREEN_LOCK: int
 ```TypeScript
 const PATTERN_PHONE: int
 ```
+
+@brief 电话号码编辑框。
 
 **起始版本：** 23
 
@@ -420,6 +488,8 @@ const PATTERN_PHONE: int
 const PATTERN_TEXT: int
 ```
 
+@brief 文本编辑框。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-const PATTERN_TEXT: int--><!--Device-inputMethodEngine-const PATTERN_TEXT: int-End-->
@@ -432,6 +502,8 @@ const PATTERN_TEXT: int
 const PATTERN_URI: int
 ```
 
+@brief 超链接编辑框。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-const PATTERN_URI: int--><!--Device-inputMethodEngine-const PATTERN_URI: int-End-->
@@ -443,6 +515,8 @@ const PATTERN_URI: int
 ```TypeScript
 const PATTERN_USER_NAME: int
 ```
+
+@brief 用户名编辑框。
 
 **起始版本：** 23
 
@@ -457,6 +531,8 @@ const PATTERN_USER_NAME: int
 ```TypeScript
 const WINDOW_TYPE_INPUT_METHOD_FLOAT: int
 ```
+
+@brief 输入法应用窗口风格标识。
 
 **起始版本：** 23
 

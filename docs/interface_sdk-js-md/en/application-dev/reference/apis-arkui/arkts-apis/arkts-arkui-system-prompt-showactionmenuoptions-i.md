@@ -2,6 +2,8 @@
 
 Defines the option of ShowActionMenu.
 
+@interface ShowActionMenuOptions
+
 **Since:** 11
 
 <!--Device-unnamed-export interface ShowActionMenuOptions--><!--Device-unnamed-export interface ShowActionMenuOptions-End-->

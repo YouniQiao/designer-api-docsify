@@ -1,6 +1,18 @@
 # PermissionRequest
 
-PermissionRequest 是 Web 组件用于授权或拒绝权限请求的对象。当网页尝试访问受保护的系统资源（如摄像头、麦克风、地理位置等）时，ArkWeb 内核会通过 [onPermissionRequest](arkts-arkweb-web-attribute.md#onpermissionrequest)事件回调向应用发送权限请求，应用通过 PermissionRequest 对象来决定是否授权这些请求。该对象适用 于需要在应用中管理网页对敏感资源的访问权限、保护用户隐私、确保资源访问安全可控等场景，帮助开发者灵活处理网页权限请求。 &gt; **说明：** &gt; &gt; - [grant](#grant)()与 [deny](#deny)() 方法互斥，对于同一个 PermissionRequest 对象， &gt; 只能调用其中一个方法。 &gt; &gt; - 调用 grant() 或 deny() 后，该 PermissionRequest 对象已完成响应，不允许重复调用。 &gt; &gt; - 未调用任何方法响应的 PermissionRequest 对象会导致权限请求超时。 &gt; &gt; - grant() 方法的 resources 参数通常使用 getAccessibleResource() 方法的返回值。 &gt; &gt; - 典型使用流程：调用 getAccessibleResource() 获取请求的资源列表，选择需要授权的资源后调用 grant() 进行授权。
+PermissionRequest 是 Web 组件用于授权或拒绝权限请求的对象。当网页尝试访问受保护的系统资源（如摄像头、麦克风、地理位置等）时，ArkWeb 内核会通过 [onPermissionRequest](arkts-arkweb-web-attribute.md#onpermissionrequest)事件回调向应用发送权限请求，应用通过 PermissionRequest 对象来决定是否授权这些请求。该对象适用 于需要在应用中管理网页对敏感资源的访问权限、保护用户隐私、确保资源访问安全可控等场景，帮助开发者灵活处理网页权限请求。
+
+> **说明：**
+> 
+> - [grant](#grant)()与 [deny](#deny)() 方法互斥，对于同一个 PermissionRequest 对象， &gt; 只能调用其中一个方法。
+> 
+> - 调用 grant() 或 deny() 后，该 PermissionRequest 对象已完成响应，不允许重复调用。
+> 
+> - 未调用任何方法响应的 PermissionRequest 对象会导致权限请求超时。
+> 
+> - grant() 方法的 resources 参数通常使用 getAccessibleResource() 方法的返回值。
+> 
+> - 典型使用流程：调用 getAccessibleResource() 获取请求的资源列表，选择需要授权的资源后调用 grant() 进行授权。
 
 **起始版本：** 9
 

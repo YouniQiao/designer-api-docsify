@@ -1,4 +1,4 @@
-# AlertDialogParam(AlertDialog)
+# AlertDialogParam
 
 警告弹窗的样式。
 

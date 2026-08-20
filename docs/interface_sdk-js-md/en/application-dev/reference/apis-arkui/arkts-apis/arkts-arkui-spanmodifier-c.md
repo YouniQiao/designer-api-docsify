@@ -2,6 +2,8 @@
 
 Defines Span Modifier
 
+@implements { SpanAttribute, AttributeModifier&lt;SpanAttribute&gt; }
+
 **Inheritance/Implementation:** SpanModifier implements SpanAttribute, AttributeModifier<SpanAttribute>
 
 **Since:** 23

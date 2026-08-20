@@ -44,5 +44,5 @@ Defines the dynamic layout container.
 
 | Type | Description |
 | --- | --- |
-| [DynamicLayoutAttribute](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutattribute-c.md) |  |
+| [DynamicLayoutAttribute](../../apis-default/arkts-apis/arkts-arkui-components-arkdynamiclayout-dynamiclayoutattribute-i.md) |  |
 

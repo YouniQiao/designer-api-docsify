@@ -25,7 +25,7 @@ function getOrientation(rotationMatrix: Array<double>, callback: AsyncCallback<A
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rotationMatrix | Array&lt;double&gt; | 是 | 旋转矩阵。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;double&gt;&gt; | 是 | 回调函数，异步返回围绕z、x、y轴方向的旋转角度，单位：°（度）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;double&gt;&gt; | 是 | 回调函数，异步返回围绕z、x、y轴方向的旋转角度，单位：°（度）。 |
 
 **错误码：**
 

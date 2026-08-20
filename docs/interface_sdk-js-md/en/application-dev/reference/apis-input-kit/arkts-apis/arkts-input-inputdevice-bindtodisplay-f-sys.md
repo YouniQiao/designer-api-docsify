@@ -44,10 +44,10 @@ Bind input devices to a display. Only external USB and Bluetooth mice, touchpads
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. The application does not have the required permission. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application. |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
 | [3900001](../errorcode-inputdevice.md#3900001-device-not-exist) | The specified input device does not exist. |
-| 3900005 | Unsupported input device. |
 | 3900004 | The specified display does not exist. |
+| 3900005 | Unsupported input device. |
 

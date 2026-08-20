@@ -27,19 +27,20 @@ function stopCasting(session: SessionToken, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | session | [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) | 是 | 会话令牌。SessionToken表示单个token。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功结束投播，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当成功结束投播，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 **示例**
 
 ```TypeScript
+let sessionId = 'xxx'; // sessionId需要通过avSession.createAVSession创建会话后获取。
 let myToken: avSession.SessionToken = {
   sessionId: sessionId,
 }
@@ -81,13 +82,14 @@ function stopCasting(session: SessionToken): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 **示例**
 
 ```TypeScript
+let sessionId = 'xxx'; // sessionId需要通过avSession.createAVSession创建会话后获取。
 let myToken: avSession.SessionToken = {
   sessionId: sessionId,
 }

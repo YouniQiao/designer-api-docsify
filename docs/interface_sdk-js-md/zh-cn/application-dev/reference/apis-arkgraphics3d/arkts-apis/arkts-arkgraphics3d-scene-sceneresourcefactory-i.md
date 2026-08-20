@@ -2,6 +2,8 @@
 
 用于创建3D场景中资源的接口，例如相机、光源等，继承自RenderResourceFactory。
 
+@extends RenderResourceFactory @interface SceneResourceFactory
+
 **继承/实现关系：** SceneResourceFactory extends [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i.md)
 
 **起始版本：** 23

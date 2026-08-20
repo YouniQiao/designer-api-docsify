@@ -1,4 +1,4 @@
-# UserGrantSetting(Some common definitions)
+# UserGrantSetting
 
 描述用户授权的设置信息。
 

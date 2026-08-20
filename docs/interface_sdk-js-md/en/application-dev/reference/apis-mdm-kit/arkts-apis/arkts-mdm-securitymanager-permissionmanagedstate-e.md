@@ -1,4 +1,4 @@
-# PermissionManagedState(Security Management)
+# PermissionManagedState
 
 Represents the management status of application permissions.
 

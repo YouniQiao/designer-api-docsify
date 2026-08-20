@@ -1,6 +1,8 @@
 # Zoom
 
-**Zoom** inherits from [ZoomQuery](arkts-camera-camera-zoomquery-i.md). It provides APIs related to zoom operations.
+*Zoom** inherits from [ZoomQuery](arkts-camera-camera-zoomquery-i.md).
+
+It provides APIs related to zoom operations.
 
 **Inheritance/Implementation:** Zoom extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md)
 
@@ -43,8 +45,8 @@ Gets zoom center point.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## prepareZoom
 
@@ -66,8 +68,8 @@ Instructs the bottom layer to prepare for zooming, for example, powering on the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 **Examples**
 
@@ -111,8 +113,8 @@ Sets zoom center point.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## unprepareZoom
 
@@ -134,8 +136,8 @@ Instructs the bottom layer to unprepare for zooming.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 **Examples**
 

@@ -1,6 +1,8 @@
 # AccessibilityExtensionContext
 
-AccessibilityExtensionContext是AccessibilityExtensionAbility上下文环境，继承自ExtensionContext。 辅助功能扩展上下文模块提供辅助功能扩展的相关能力，包括配置关注信息类型、查询节点信息、手势注入等。
+AccessibilityExtensionContext是AccessibilityExtensionAbility上下文环境，继承自ExtensionContext。
+
+辅助功能扩展上下文模块提供辅助功能扩展的相关能力，包括配置关注信息类型、查询节点信息、手势注入等。
 
 **继承/实现关系：** AccessibilityExtensionContext extends ExtensionContext
 
@@ -109,7 +111,9 @@ export default class AccessibilityManager {
 getAccessibilityFocusedElement(): Promise<AccessibilityElement>
 ```
 
-获取当前获得无障碍焦点的元素。使用Promise异步回调。 无障碍焦点是指无障碍服务当前聚焦的节点，与输入焦点不同。
+获取当前获得无障碍焦点的元素。使用Promise异步回调。
+
+无障碍焦点是指无障碍服务当前聚焦的节点，与输入焦点不同。
 
 **起始版本：** 23
 
@@ -133,8 +137,8 @@ getAccessibilityFocusedElement(): Promise<AccessibilityElement>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
 | [9300003](../errorcode-accessibility.md#9300003-不具备执行该操作的无障碍权限) | No accessibility permission to perform the operation. |
+| [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
 
 **示例**
 
@@ -272,7 +276,9 @@ export default class AccessibilityManager {
 getDefaultFocusedElementIds(windowId: int): Promise<Array<long>>
 ```
 
-查询应用自定义设置的默认焦点元素ID列表。使用Promise异步回调。 默认焦点是指窗口打开时无障碍服务优先聚焦的元素。
+查询应用自定义设置的默认焦点元素ID列表。使用Promise异步回调。
+
+默认焦点是指窗口打开时无障碍服务优先聚焦的元素。
 
 **起始版本：** 23
 
@@ -298,8 +304,8 @@ getDefaultFocusedElementIds(windowId: int): Promise<Array<long>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-不具备执行该操作的无障碍权限) | No accessibility permission to perform the operation. |
 
 **示例**
@@ -427,8 +433,8 @@ getElements(windowId: int, elementId?: long): Promise<Array<AccessibilityElement
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-不具备执行该操作的无障碍权限) | No accessibility permission to perform the operation. |
 
 **示例**
@@ -533,7 +539,9 @@ export default class AccessibilityManager {
 getRootInActiveWindow(windowId?: int): Promise<AccessibilityElement>
 ```
 
-获取当前活动窗口的无障碍节点树根元素。使用Promise异步回调。 活动窗口是指当前获得焦点的前台应用窗口。
+获取当前活动窗口的无障碍节点树根元素。使用Promise异步回调。
+
+活动窗口是指当前获得焦点的前台应用窗口。
 
 **起始版本：** 23
 
@@ -563,8 +571,8 @@ getRootInActiveWindow(windowId?: int): Promise<AccessibilityElement>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
 | [9300003](../errorcode-accessibility.md#9300003-不具备执行该操作的无障碍权限) | No accessibility permission to perform the operation. |
+| [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
 
 **示例**
 
@@ -733,7 +741,9 @@ export default class AccessibilityManager {
 notifyDisconnect(): void
 ```
 
-通知无障碍服务可以关闭该辅助功能扩展服务。 此函数需要与注册预关闭接口 [on('preDisconnect')](#onpredisconnect)配合使用， 如果没有调用过注册预关闭函数，直接调用此函数不生效。
+通知无障碍服务可以关闭该辅助功能扩展服务。
+
+此函数需要与注册预关闭接口 [on('preDisconnect')](#onpredisconnect)配合使用， 如果没有调用过注册预关闭函数，直接调用此函数不生效。
 
 **起始版本：** 23
 
@@ -816,7 +826,7 @@ Unregister accessibilityExtensionAbility disconnect callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | Indicates the callback function. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | Indicates the callback function. |
 
 **错误码：**
 
@@ -893,7 +903,7 @@ off(type: 'preDisconnect', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'preDisconnect' | 是 | 监听事件名，固定为‘preDisconnect’，即辅助功能扩展服务即将关闭的事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，取消指定辅助功能扩展服务即将关闭时的回调。需与 [on('preDisconnect')](#onpredisconnect)的 callback一致。缺省时，表示注销所有已注册事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 回调函数，取消指定辅助功能扩展服务即将关闭时的回调。需与 [on('preDisconnect')](#onpredisconnect)的 callback一致。缺省时，表示注销所有已注册事件。 |
 
 **错误码：**
 
@@ -966,7 +976,7 @@ Register accessibilityExtensionAbility disconnect callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | Indicates the callback function. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | Indicates the callback function. |
 
 **错误码：**
 
@@ -1026,7 +1036,9 @@ export default class AccessibilityManager {
 on(type: 'preDisconnect', callback: Callback<void>): void
 ```
 
-向无障碍服务注册回调函数，在无障碍服务关闭该辅助功能扩展服务前会执行该回调函数。使用callback异步回调。 此注册函数需要与[notifyDisconnect](#notifydisconnect)配合使用，如果不调用 [notifyDisconnect](#notifydisconnect)，则默认等待30秒后，辅助功能扩展服务会自动关闭。
+向无障碍服务注册回调函数，在无障碍服务关闭该辅助功能扩展服务前会执行该回调函数。使用callback异步回调。
+
+此注册函数需要与[notifyDisconnect](#notifydisconnect)配合使用，如果不调用 [notifyDisconnect](#notifydisconnect)，则默认等待30秒后，辅助功能扩展服务会自动关闭。
 
 **起始版本：** 20
 
@@ -1043,7 +1055,7 @@ on(type: 'preDisconnect', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'preDisconnect' | 是 | 监听事件名，固定为‘preDisconnect’，即辅助功能扩展服务即将关闭的事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，在辅助功能扩展服务即将关闭时回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数，在辅助功能扩展服务即将关闭时回调。 |
 
 **错误码：**
 
@@ -1215,8 +1227,8 @@ startAbility(want: Want): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 

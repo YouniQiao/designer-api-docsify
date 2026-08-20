@@ -1,8 +1,11 @@
-# @ohos.arkui.performanceMonitor(性能监测)
+# @ohos.arkui.performanceMonitor
 
-提供用户操作场景性能相关指标监测能力，在场景开始和结束时分别调用begin和end接口，即可获得该场景相关性能指标，目前仅包含响应时延、完成时延、丢帧。 &gt; **说明：** &gt; &gt; - 从API Version 10开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。 &gt; - 本模块接口为系统接口。
+性能监测
 
-**起始版本：** 10
+
+**起始版本：** 23
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -25,9 +28,9 @@ import { performanceMonitor } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [begin(性能监测)](arkts-arkui-performancemonitor-begin-f-sys.md) | 用于标记用户场景开始，用户场景开始时调用此接口。 |
-| [end(性能监测)](arkts-arkui-performancemonitor-end-f-sys.md) | 用于标记用户场景结束，用户场景结束时调用此接口。 |
-| [recordInputEventTime(性能监测)](arkts-arkui-performancemonitor-recordinputeventtime-f-sys.md) | 记录动效场景开始前，用户输入触发事件类型与时间。 |
+| [begin](arkts-arkui-performancemonitor-begin-f-sys.md) | 用于标记用户场景开始，用户场景开始时调用此接口。 |
+| [end](arkts-arkui-performancemonitor-end-f-sys.md) | 用于标记用户场景结束，用户场景结束时调用此接口。 |
+| [recordInputEventTime](arkts-arkui-performancemonitor-recordinputeventtime-f-sys.md) | 记录动效场景开始前，用户输入触发事件类型与时间。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -35,7 +38,7 @@ import { performanceMonitor } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [ActionType(性能监测)](arkts-arkui-performancemonitor-actiontype-e-sys.md) | 用户场景（通常为具有动效的场景）触发模式枚举。 |
-| [SourceType(性能监测)](arkts-arkui-performancemonitor-sourcetype-e-sys.md) | 用户场景触发源类型枚举。 |
+| [ActionType](arkts-arkui-performancemonitor-actiontype-e-sys.md) | 用户场景（通常为具有动效的场景）触发模式枚举。 |
+| [SourceType](arkts-arkui-performancemonitor-sourcetype-e-sys.md) | 用户场景触发源类型枚举。 |
 <!--DelEnd-->
 

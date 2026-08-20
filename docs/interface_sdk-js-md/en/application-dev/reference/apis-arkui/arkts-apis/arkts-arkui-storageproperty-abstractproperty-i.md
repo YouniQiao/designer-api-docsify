@@ -1,6 +1,8 @@
 # AbstractProperty
 
-Define AbstractProperty&lt;T&gt; interface. AbstractProperty can be understood as a handler or an alias to a property inside LocalStorage / AppStorage singleton allows to read the value with @see get and to change the value with @see set.
+Define AbstractProperty&lt;T&gt; interface.
+
+AbstractProperty can be understood as a handler or an alias to a property inside LocalStorage / AppStorage singleton allows to read the value with
 
 **Since:** 23
 

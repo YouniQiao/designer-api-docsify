@@ -182,7 +182,9 @@ Text attribute of the edit box. For details, see [edit box definitions in consta
 isTextPreviewSupported: boolean
 ```
 
-Whether text preview is supported. - **true**: Supported. - **false**: Unsupported.
+Whether text preview is supported.
+
+- **true**: Supported. - **false**: Unsupported.
 
 **Type:** boolean
 

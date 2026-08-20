@@ -30,7 +30,7 @@ Check box on the photo browser page.
 BACK_BUTTON = 1
 ```
 
-**Back** button on the photo browser page.
+*Back** button on the photo browser page.
 
 **Since:** 13
 

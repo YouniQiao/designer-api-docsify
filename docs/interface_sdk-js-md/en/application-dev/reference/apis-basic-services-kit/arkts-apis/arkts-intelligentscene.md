@@ -2,6 +2,8 @@
 
 This module provides system focus modes and Do Not Disturb data access abilities.
 
+@namespace intelligentScene
+
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.

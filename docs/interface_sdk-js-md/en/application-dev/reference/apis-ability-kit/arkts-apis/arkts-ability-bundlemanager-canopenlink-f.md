@@ -39,8 +39,8 @@ Checks whether the target application can be accessed based on the provided link
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700056](../errorcode-bundle.md#17700056-scheme-of-the-link-not-configured-in-queryschemes) | The scheme of the specified link is not in the querySchemes. |
 | [17700055](../errorcode-bundle.md#17700055-invalid-link) | The specified link is invalid. |
+| [17700056](../errorcode-bundle.md#17700056-scheme-of-the-link-not-configured-in-queryschemes) | The scheme of the specified link is not in the querySchemes. |
 
 **Examples**
 

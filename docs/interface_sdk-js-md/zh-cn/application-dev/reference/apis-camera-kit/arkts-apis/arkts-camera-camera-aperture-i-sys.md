@@ -1,6 +1,8 @@
 # Aperture（系统接口）
 
-物理光圈对象。 Aperture继承自ApertureQuery。
+物理光圈对象。
+
+Aperture继承自ApertureQuery。
 
 **继承/实现关系：** Aperture extends [ApertureQuery](arkts-camera-camera-aperturequery-i-sys.md)
 
@@ -47,9 +49,9 @@ getPhysicalAperture(): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal.<br>**适用版本：** 24+ |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 11 - 23 |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal.<br>**适用版本：** 24+ |
 
 ## getVirtualAperture
 
@@ -77,8 +79,8 @@ getVirtualAperture(): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 **示例**
 
@@ -117,9 +119,9 @@ setPhysicalAperture(aperture: double): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal.<br>**适用版本：** 24+ |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 11 - 23 |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal.<br>**适用版本：** 24+ |
 
 ## setVirtualAperture
 
@@ -147,8 +149,8 @@ setVirtualAperture(aperture: double): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 **示例**
 

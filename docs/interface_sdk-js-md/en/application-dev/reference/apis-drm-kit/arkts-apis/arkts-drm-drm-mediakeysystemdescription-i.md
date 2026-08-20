@@ -1,4 +1,4 @@
-# MediaKeySystemDescription(Defines the DRM capability.)
+# MediaKeySystemDescription
 
 Defines the DRM plugin information.
 

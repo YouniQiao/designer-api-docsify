@@ -44,9 +44,9 @@ Attach a meta surface to VideoOutput.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## enableAutoDeferredVideoEnhancement
 
@@ -74,9 +74,9 @@ Enable auto deferred video enhancement if needed.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## enableAutoVideoFrameRate
 
@@ -104,8 +104,8 @@ Enable auto frame rate for video capture.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## enableMirror
 
@@ -113,7 +113,9 @@ Enable auto frame rate for video capture.
 enableMirror(enabled: boolean): void
 ```
 
-Enables or disables mirror recording. - Before calling this API, check whether mirror recording is supported by using [isMirrorSupported](#ismirrorsupported). - After enabling or disabling mirror recording, call [getVideoRotation](arkts-camera-camera-videooutput-i.md#getvideorotation) to obtain the rotation angle and [updateRotation](../../apis-media-kit/arkts-apis/arkts-media-media-avrecorder-i.md#updaterotation) to update the rotation angle.
+Enables or disables mirror recording.
+
+- Before calling this API, check whether mirror recording is supported by using [isMirrorSupported](#ismirrorsupported). - After enabling or disabling mirror recording, call [getVideoRotation](arkts-camera-camera-videooutput-i.md#getvideorotation) to obtain the rotation angle and [updateRotation](../../apis-media-kit/arkts-apis/arkts-media-media-avrecorder-i.md#updaterotation) to update the rotation angle.
 
 **Since:** 23
 
@@ -135,9 +137,9 @@ Enables or disables mirror recording. - Before calling this API, check whether m
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 14 |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 14 |
 
 ## getSupportedRotations
 
@@ -193,8 +195,8 @@ Get supported video meta types.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## isAutoDeferredVideoEnhancementEnabled
 
@@ -222,8 +224,8 @@ Confirm if auto deferred video enhancement is enabled.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## isAutoDeferredVideoEnhancementSupported
 
@@ -251,8 +253,8 @@ Confirm if auto deferred video enhancement is supported in the specific device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## isAutoVideoFrameRateSupported
 
@@ -480,6 +482,6 @@ Set a video rotation.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 

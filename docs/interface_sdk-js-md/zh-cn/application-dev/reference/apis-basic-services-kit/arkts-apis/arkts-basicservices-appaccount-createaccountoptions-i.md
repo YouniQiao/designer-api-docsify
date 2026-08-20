@@ -22,7 +22,7 @@ customData?: Record<string, string>
 
 自定义数据，默认为空。
 
-**类型：** Record&lt;string, string&gt;
+**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string&gt;
 
 **起始版本：** 23
 

@@ -12,7 +12,9 @@ import { config } from '@kit.AccessibilityKit';
 function enableAbility(name: string, capability: Array<accessibility.Capability>): Promise<void>
 ```
 
-启用辅助扩展，需与[config.disableAbility](arkts-accessibility-config-disableability-f-sys.md)配对使用。使用Promise异步回调。 与[config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md)相比，本接口仅启用辅助扩展，不监听辅助扩展的连接状态变化；若需要监听辅助扩展断开 连接事件，请使用[config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md)。
+启用辅助扩展，需与[config.disableAbility](arkts-accessibility-config-disableability-f-sys.md)配对使用。使用Promise异步回调。
+
+与[config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md)相比，本接口仅启用辅助扩展，不监听辅助扩展的连接状态变化；若需要监听辅助扩展断开 连接事件，请使用[config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md)。
 
 **起始版本：** 23
 
@@ -41,9 +43,9 @@ function enableAbility(name: string, capability: Array<accessibility.Capability>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300001](../errorcode-accessibility.md#9300001-输入无效的包名称或者ability名称) | Invalid bundle name or ability name. |
 | [9300002](../errorcode-accessibility.md#9300002-目标ability已启用) | Target ability already enabled. |
 
@@ -74,7 +76,9 @@ function enableAbility(
   ): void
 ```
 
-启用辅助扩展，需与[config.disableAbility](arkts-accessibility-config-disableability-f-sys.md)配对使用。使用callback异步回调。 与[config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md)相比，本接口仅启用辅助扩展，不监听辅助扩展的连接状态变化；若需要监听辅助扩展断开 连接事件，请使用[config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md)。
+启用辅助扩展，需与[config.disableAbility](arkts-accessibility-config-disableability-f-sys.md)配对使用。使用callback异步回调。
+
+与[config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md)相比，本接口仅启用辅助扩展，不监听辅助扩展的连接状态变化；若需要监听辅助扩展断开 连接事件，请使用[config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md)。
 
 **起始版本：** 23
 
@@ -92,15 +96,15 @@ function enableAbility(
 | --- | --- | --- | --- |
 | name | string | 是 | 辅助扩展应用的名称，格式为：'bundleName/abilityName'。 |
 | capability | Array&lt;accessibility.Capability&gt; | 是 | 辅助扩展应用的能力属性。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启用辅助扩展成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当启用辅助扩展成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300001](../errorcode-accessibility.md#9300001-输入无效的包名称或者ability名称) | Invalid bundle name or ability name. |
 | [9300002](../errorcode-accessibility.md#9300002-目标ability已启用) | Target ability already enabled. |
 

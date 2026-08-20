@@ -40,11 +40,11 @@ Stops the distributed hardware service on the controlled device. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Input parameter error. |
 | 24200101 | The specified distributed hardware is not started. |
 | 24200102 | The specified source device is not connected. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 **Examples**
 

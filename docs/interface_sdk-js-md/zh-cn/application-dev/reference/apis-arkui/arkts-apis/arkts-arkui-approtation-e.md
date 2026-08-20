@@ -2,6 +2,8 @@
 
 Enumerates the app rotation.
 
+@enum { number }
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare enum AppRotation--><!--Device-unnamed-declare enum AppRotation-End-->

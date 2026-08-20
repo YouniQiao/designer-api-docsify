@@ -44,7 +44,7 @@ Check preferences conflicts.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [13100005](../errorcode-print.md#13100005-invalid-printer) | Can not find the printer or printer's ppd file in system. |
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [13100005](../errorcode-print.md#13100005-invalid-printer) | Can not find the printer or printer's ppd file in system. |
 

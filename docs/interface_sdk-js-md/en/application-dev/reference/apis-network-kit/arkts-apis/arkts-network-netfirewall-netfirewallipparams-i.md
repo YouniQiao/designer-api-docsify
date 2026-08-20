@@ -1,4 +1,4 @@
-# NetFirewallIpParams(Network Firewall)
+# NetFirewallIpParams
 
 Defines the IP parameters of the firewall rule. The IP address type can be IPv4 or IPv6. A single IP address or IP address segment is supported.
 
@@ -52,7 +52,11 @@ End IP address. This parameter is mandatory and valid only when type is set to *
 family?: int
 ```
 
-**1**: IPv4. **2**: IPv6. The default value is **IPv4**. Other values are not supported currently.
+*1**: IPv4.
+
+**2**: IPv6.
+
+The default value is **IPv4**. Other values are not supported currently.
 
 **Type:** int
 
@@ -68,7 +72,11 @@ family?: int
 mask?: int
 ```
 
-IPv4: subnet mask. IPv6: address prefix. This parameter is mandatory and valid only when type is set to **1**.
+IPv4: subnet mask.
+
+IPv6: address prefix.
+
+This parameter is mandatory and valid only when type is set to **1**.
 
 **Type:** int
 
@@ -100,7 +108,9 @@ Start IP address. This parameter is mandatory and valid only when type is set to
 type: int
 ```
 
-**1**: IP address or subnet. In this case, the **address** and **mask** fields must be specified. When a single IP address is used, the **mask** field must be set to **32**. **2**: IP address segment. In this case, the **startIp** and **endIp** fields must be specified.
+*1**: IP address or subnet. In this case, the **address** and **mask** fields must be specified. When a single IP address is used, the **mask** field must be set to **32**.
+
+**2**: IP address segment. In this case, the **startIp** and **endIp** fields must be specified.
 
 **Type:** int
 

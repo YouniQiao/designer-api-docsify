@@ -12,7 +12,11 @@ import { appManager } from '@kit.AbilityKit';
 function isAppRunning(bundleName: string, appCloneIndex?: int): Promise<boolean>
 ```
 
-判断所有用户下指定包名和分身应用索引的应用是否正在运行。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 如果当前用户未安装该应用，则返回错误码16000073；如果当前用户已安装该应用，则判断所有用户下该指定应用是否正在运行。
+判断所有用户下指定包名和分身应用索引的应用是否正在运行。使用Promise异步回调。
+
+> **说明：**
+> 
+> 如果当前用户未安装该应用，则返回错误码16000073；如果当前用户已安装该应用，则判断所有用户下该指定应用是否正在运行。
 
 **起始版本：** 23
 
@@ -39,9 +43,9 @@ function isAppRunning(bundleName: string, appCloneIndex?: int): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid. |
 
 **示例**

@@ -16,7 +16,14 @@ function createSoundPool(
   ): void
 ```
 
-Creates a SoundPool instance. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; - In versions earlier than API version 18, the bottom layer of the created SoundPool object is in singleton mode. &gt; Therefore, an application process can create only one SoundPool instance. &gt; &gt; - In API version 18 and later, the bottom layer of the created SoundPool object is in multiton mode. Therefore, &gt; an application process can create a maximum of 128 SoundPool instances.
+Creates a SoundPool instance. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> - In versions earlier than API version 18, the bottom layer of the created SoundPool object is in singleton mode.
+> Therefore, an application process can create only one SoundPool instance.
+> 
+> - In API version 18 and later, the bottom layer of the created SoundPool object is in multiton mode. Therefore, &gt; an application process can create a maximum of 128 SoundPool instances.
 
 **Since:** 10
 
@@ -71,7 +78,11 @@ function createSoundPool(
   ): void
 ```
 
-Creates a **SoundPool** instance. This API uses an asynchronous callback to return the result. **NOTE：**- In versions earlier than API version 18, the bottom layer of the created **SoundPool** object is in singleton mode. Therefore, an application process can create only one **SoundPool** instance. - In API version 18 and later versions, the bottom layer of the created **SoundPool** object is in multiton mode. Therefore, an application process can create a maximum of 128 **SoundPool** instances.
+Creates a **SoundPool** instance. This API uses an asynchronous callback to return the result.
+
+**NOTE：**
+
+- In versions earlier than API version 18, the bottom layer of the created **SoundPool** object is in singleton mode. Therefore, an application process can create only one **SoundPool** instance. - In API version 18 and later versions, the bottom layer of the created **SoundPool** object is in multiton mode. Therefore, an application process can create a maximum of 128 **SoundPool** instances.
 
 **Since:** 23
 
@@ -100,7 +111,14 @@ Creates a **SoundPool** instance. This API uses an asynchronous callback to retu
 function createSoundPool(maxStreams: number, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool>
 ```
 
-Creates a SoundPool instance. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - In versions earlier than API version 18, the bottom layer of the created SoundPool object is in singleton mode. &gt; Therefore, an application process can create only one SoundPool instance. &gt; &gt; - In API version 18 and later, the bottom layer of the created SoundPool object is in multiton mode. Therefore, &gt; an application process can create a maximum of 128 SoundPool instances.
+Creates a SoundPool instance. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - In versions earlier than API version 18, the bottom layer of the created SoundPool object is in singleton mode.
+> Therefore, an application process can create only one SoundPool instance.
+> 
+> - In API version 18 and later, the bottom layer of the created SoundPool object is in multiton mode. Therefore, &gt; an application process can create a maximum of 128 SoundPool instances.
 
 **Since:** 10
 
@@ -158,7 +176,11 @@ media.createSoundPool(5, audioRendererInfo).then((soundpool_: media.SoundPool) =
 function createSoundPool(maxStreams: int, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool | undefined>
 ```
 
-Creates a **SoundPool** instance. This API uses a promise to return the result. **NOTE：**- In versions earlier than API version 18, the bottom layer of the created **SoundPool** object is in singleton mode. Therefore, an application process can create only one **SoundPool** instance. - In API version 18 and later versions, the bottom layer of the created **SoundPool** object is in multiton mode. Therefore, an application process can create a maximum of 128 **SoundPool** instances.
+Creates a **SoundPool** instance. This API uses a promise to return the result.
+
+**NOTE：**
+
+- In versions earlier than API version 18, the bottom layer of the created **SoundPool** object is in singleton mode. Therefore, an application process can create only one **SoundPool** instance. - In API version 18 and later versions, the bottom layer of the created **SoundPool** object is in multiton mode. Therefore, an application process can create a maximum of 128 **SoundPool** instances.
 
 **Since:** 23
 

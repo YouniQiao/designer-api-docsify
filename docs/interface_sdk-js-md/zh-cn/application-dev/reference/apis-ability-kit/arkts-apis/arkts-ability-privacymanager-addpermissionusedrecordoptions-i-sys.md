@@ -42,7 +42,9 @@ enhancedIdentity?: string
 usedType?: PermissionUsedType
 ```
 
-敏感权限使用类型。 默认值：NORMAL_TYPE。
+敏感权限使用类型。
+
+默认值：NORMAL_TYPE。
 
 **类型：** [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md)
 

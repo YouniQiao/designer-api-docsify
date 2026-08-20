@@ -2,6 +2,8 @@
 
 Secure Element service state definition.
 
+@enum { number }
+
 **Since:** 10
 
 <!--Device-omapi-enum ServiceState--><!--Device-omapi-enum ServiceState-End-->

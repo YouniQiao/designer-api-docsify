@@ -1,4 +1,4 @@
-# MediaKeySystemInfo(Defines the DRM capability.)
+# MediaKeySystemInfo
 
 加密媒体内容的DRM信息。
 

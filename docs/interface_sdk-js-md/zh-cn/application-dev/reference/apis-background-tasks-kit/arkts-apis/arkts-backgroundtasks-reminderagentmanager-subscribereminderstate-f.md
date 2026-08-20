@@ -28,7 +28,7 @@ function subscribeReminderState(callback: Callback<Array<ReminderState>>): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[ReminderState](arkts-backgroundtasks-reminderagentmanager-reminderstate-i.md)&gt;&gt; | 是 | 回调函数，返回代理提醒状态信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[ReminderState](arkts-backgroundtasks-reminderagentmanager-reminderstate-i.md)&gt;&gt; | 是 | 回调函数，返回代理提醒状态信息。 |
 
 **返回值：**
 
@@ -41,7 +41,7 @@ function subscribeReminderState(callback: Callback<Array<ReminderState>>): Promi
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [1700007](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-参数错误) | If the input parameter is not valid parameter. |
+| [1700007](../errorcode-reminderAgentManager.md#1700007-参数错误) | If the input parameter is not valid parameter. |
 
 **示例**
 

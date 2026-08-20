@@ -20,8 +20,8 @@ import { zlib } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [compressFile](arkts-basicservices-zlib-compressfile-f.md) | Compresses a file. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive &gt; periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned. |
-| [compressFile](arkts-basicservices-zlib-compressfile-f.md) | Compresses a file. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive &gt; periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned. |
+| [compressFile](arkts-basicservices-zlib-compressfile-f.md) | Compresses a file. This API uses an asynchronous callback to return the result. |
+| [compressFile](arkts-basicservices-zlib-compressfile-f.md) | Compresses a file. This API uses a promise to return the result. |
 | [compressFiles](arkts-basicservices-zlib-compressfiles-f.md) | Compresses multiple specified files. This API uses a promise to return the result. |
 | [createChecksum](arkts-basicservices-zlib-createchecksum-f.md) | Creates this checksum object. This API uses a promise to return the result. |
 | [createChecksumSync](arkts-basicservices-zlib-createchecksumsync-f.md) | Creates this checksum object. A checksum instance is returned upon a success. |
@@ -29,11 +29,11 @@ import { zlib } from '@kit.BasicServicesKit';
 | [createGZipSync](arkts-basicservices-zlib-creategzipsync-f.md) | Creates this **GZip** object. A **GZip** instance is returned upon a success. |
 | [createZip](arkts-basicservices-zlib-createzip-f.md) | Creates this **Zip** instance. This API uses a promise to return the result. |
 | [createZipSync](arkts-basicservices-zlib-createzipsync-f.md) | Creates this **Zip** instance. A **Zip** instance is returned upon a success. |
-| [decompressFile](arkts-basicservices-zlib-decompressfile-f.md) | Decompresses a file. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive &gt; periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned. &gt; &gt; The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise, &gt; the error code 900003 is returned. |
-| [decompressFile](arkts-basicservices-zlib-decompressfile-f.md) | Decompresses a file. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive &gt; periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned. &gt; &gt; The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise, &gt; the error code 900003 is returned. |
-| [decompressFile](arkts-basicservices-zlib-decompressfile-f.md) | Decompresses a file. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive &gt; periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned. &gt; &gt; The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise, &gt; the error code 900003 is returned. |
+| [decompressFile](arkts-basicservices-zlib-decompressfile-f.md) | Decompresses a file. This API uses an asynchronous callback to return the result. |
+| [decompressFile](arkts-basicservices-zlib-decompressfile-f.md) | Decompresses a file. This API uses an asynchronous callback to return the result. |
+| [decompressFile](arkts-basicservices-zlib-decompressfile-f.md) | Decompresses a file. This API uses a promise to return the result. |
 | [getOriginalSize](arkts-basicservices-zlib-getoriginalsize-f.md) | Obtains the original size of a compressed file. This API uses a promise to return the result. |
-| [unzipFile](arkts-basicservices-zlib-unzipfile-f.md) | Unzips a file. The execution result is returned after the decompression is complete. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise, &gt; the error code -1 is returned. |
+| [unzipFile](arkts-basicservices-zlib-unzipfile-f.md) | Unzips a file. The execution result is returned after the decompression is complete. This API uses a promise to return the result. |
 | [zipFile](arkts-basicservices-zlib-zipfile-f.md) | Zips a file. The execution result is returned after the compression is complete. This API uses a promise to return the result. |
 
 ### Interfaces

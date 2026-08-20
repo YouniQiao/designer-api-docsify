@@ -1,6 +1,10 @@
-# SubscribedAbstractProperty(System API)（系统接口）
+# SubscribedAbstractProperty（系统接口）
 
-SubscribedAbstractProperty是[AppStorage](../../../ui/state-management/arkts-appstorage.md)/ [LocalStorage](../../../ui/state-management/arkts-localstorage.md)中属性的单/双向同步绑定对象，用于与AppStorage/LocalStorage中的属性建立数据同 步关系。SubscribedAbstractProperty实例需要通过[aboutToBeDeleted](#abouttobedeleted)接口手动释放，以取消同步 关系并无效化实例。 &gt; **说明：** &gt; &gt; 从API version 12开始，AppStorage/LocalStorage支持Map、Set、Date类型，支持null、undefined以及联合类型。
+SubscribedAbstractProperty是[AppStorage](../../../ui/state-management/arkts-appstorage.md)/ [LocalStorage](../../../ui/state-management/arkts-localstorage.md)中属性的单/双向同步绑定对象，用于与AppStorage/LocalStorage中的属性建立数据同 步关系。SubscribedAbstractProperty实例需要通过[aboutToBeDeleted](#abouttobedeleted)接口手动释放，以取消同步 关系并无效化实例。
+
+> **说明：**
+> 
+> 从API version 12开始，AppStorage/LocalStorage支持Map、Set、Date类型，支持null、undefined以及联合类型。
 
 **起始版本：** 7
 
@@ -21,7 +25,7 @@ SubscribedAbstractProperty是[AppStorage](../../../ui/state-management/arkts-app
 abstract aboutToBeDeleted(): void
 ```
 
-取消SubscribedAbstractProperty实例对 [AppStorage](../../../ui/state-management/arkts-appstorage.md)/ [LocalStorage](../../../ui/state-management/arkts-localstorage.md)的单向或双向同步关系，并无效化SubscribedAbstractProperty实例。即调用 aboutToBeDeleted方法之后，不能再使用SubscribedAbstractProperty实例调用[set](arkts-arkui-localstorage-c.md#set)或[get](arkts-arkui-localstorage-c.md#get) 方法。
+取消[SubscribedAbstractProperty](#subscribedabstractproperty系统接口)实例对 [AppStorage](../../../ui/state-management/arkts-appstorage.md)/ [LocalStorage](../../../ui/state-management/arkts-localstorage.md)的单向或双向同步关系，并无效化SubscribedAbstractProperty实例。即调用 aboutToBeDeleted方法之后，不能再使用SubscribedAbstractProperty实例调用[set](arkts-arkui-localstorage-c.md#set)或[get](arkts-arkui-localstorage-c.md#get) 方法。
 
 **起始版本：** 10
 

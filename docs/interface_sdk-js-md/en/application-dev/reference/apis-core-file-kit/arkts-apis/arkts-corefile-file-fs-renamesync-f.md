@@ -14,7 +14,11 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 declare function renameSync(oldPath: string, newPath: string): void
 ```
 
-Renames a file or directory. This API returns the result synchronously. &gt; **NOTE：**&gt; &gt; This API is not supported in a distributed directory.
+Renames a file or directory. This API returns the result synchronously.
+
+> **NOTE：**
+> 
+> This API is not supported in a distributed directory.
 
 **Since:** 9
 
@@ -35,23 +39,23 @@ Renames a file or directory. This API returns the result synchronously. &gt; **N
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900016 | Cross-device link |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900028 | Too many links |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900032 | Directory not empty |
 | 13900001 | Operation not permitted |
-| 13900033 | Too many symbolic links encountered |
 | 13900002 | No such file or directory |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900014 | Device or resource busy |
 | 13900015 | File exists |
-| 13900008 | Bad file descriptor |
+| 13900016 | Cross-device link |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900028 | Too many links |
+| 13900032 | Directory not empty |
+| 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-| 13900011 | Out of memory |
 

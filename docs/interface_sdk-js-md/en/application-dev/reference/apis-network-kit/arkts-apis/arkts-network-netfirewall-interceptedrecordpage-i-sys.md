@@ -1,4 +1,4 @@
-# InterceptedRecordPage(Network Firewall) (System API)
+# InterceptedRecordPage (System API)
 
 Intercepted record page information.
 

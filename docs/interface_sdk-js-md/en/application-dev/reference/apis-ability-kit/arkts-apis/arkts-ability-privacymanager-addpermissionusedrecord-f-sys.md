@@ -18,7 +18,12 @@ function addPermissionUsedRecord(
   ): Promise<void>
 ```
 
-When an application protected by a permission is called by another service or application, this API can be used to add a permission usage record. It is recommended to call this API after accessing a sensitive permission, so that the system records the corresponding sensitive permission access event. This API uses a promise to return the result. The permission usage record includes the application identity of the caller, the name of the application permission, and the number of successful and failed accesses to this application by the caller. &gt; **NOTE：**&gt; The permission usage record is controlled by the toggle status set by [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md). When the toggle is off, calling this API will not generate a permission usage record.
+When an application protected by a permission is called by another service or application, this API can be used to add a permission usage record. It is recommended to call this API after accessing a sensitive permission, so that the system records the corresponding sensitive permission access event. This API uses a promise to return the result.
+
+The permission usage record includes the application identity of the caller, the name of the application permission, and the number of successful and failed accesses to this application by the caller.
+
+> **NOTE：**
+> The permission usage record is controlled by the toggle status set by [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md). When the toggle is off, calling this API will not generate a permission usage record.
 
 **Since:** 23
 
@@ -50,15 +55,15 @@ When an application protected by a permission is called by another service or ap
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [12100009](../errorcode-access-token.md#12100009-internal-service-error) | Common inner error. A database error occurs. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, the count value is invalid, usedType in AddPermissionUsedRecordOptions is invalid, or the enhancedIdentity in AddPermissionUsedRecordOptions exceeds 48 characters. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, the count value is invalid, usedType in AddPermissionUsedRecordOptions is invalid, or the enhancedIdentity in AddPermissionUsedRecordOptions exceeds 48 characters. |
 | [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) | The specified tokenID does not exist or refer to an application process. |
 | [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist or is not a user_grant permission. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
+| [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
+| [12100009](../errorcode-access-token.md#12100009-internal-service-error) | Common inner error. A database error occurs. |
 
 **Examples**
 
@@ -96,7 +101,11 @@ function addPermissionUsedRecord(
   ): void
 ```
 
-When an application protected by a permission is called by another service or application, this API can be used to add a permission usage record. It is recommended to call this API after accessing a sensitive permission, so that the system records the corresponding sensitive permission access event. This API uses an asynchronous callback to return the result. The permission usage record includes the application identity of the caller, the name of the application permission used, and the number of successful and failed accesses to this application by the caller. The permission usage record is controlled by the toggle status set by [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md). When the toggle is off, calling this API will not generate a permission usage record.
+When an application protected by a permission is called by another service or application, this API can be used to add a permission usage record. It is recommended to call this API after accessing a sensitive permission, so that the system records the corresponding sensitive permission access event. This API uses an asynchronous callback to return the result.
+
+The permission usage record includes the application identity of the caller, the name of the application permission used, and the number of successful and failed accesses to this application by the caller.
+
+The permission usage record is controlled by the toggle status set by [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md). When the toggle is off, calling this API will not generate a permission usage record.
 
 **Since:** 23
 
@@ -122,15 +131,15 @@ When an application protected by a permission is called by another service or ap
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [12100009](../errorcode-access-token.md#12100009-internal-service-error) | Common inner error. A database error occurs. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, or the count value is invalid. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, or the count value is invalid. |
 | [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) | The specified tokenID does not exist or refer to an application process. |
 | [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist or is not a user_grant permission. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
+| [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
+| [12100009](../errorcode-access-token.md#12100009-internal-service-error) | Common inner error. A database error occurs. |
 
 **Examples**
 

@@ -12,7 +12,7 @@ import { pointer } from '@kit.InputKit';
 function setPointerStyle(windowId: int, pointerStyle: PointerStyle, callback: AsyncCallback<void>): void
 ```
 
-Sets the mouse pointer style type for a specified window. This API can set only the mouse pointer style type of windows within the current application process. For details about how to set the mouse pointer style type of the host window through the **UIExtensionAbility** process, see [setCursor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-cursorcontroller-c.md#setcursor). This API uses an asynchronous callback to return the result.
+Sets the mouse pointer style type for a specified window. This API can set only the mouse pointer style type of windows within the current application process. For details about how to set the mouse pointer style type of the host window through the **UIExtensionAbility** process, see [setCursor](../../apis-default/arkts-apis/arkts-arkui-uicontext-cursorcontroller-c.md#setcursor). This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -80,7 +80,7 @@ struct Index {
 function setPointerStyle(windowId: int, pointerStyle: PointerStyle): Promise<void>
 ```
 
-Sets the mouse pointer style type for a specified window. This API can set only the mouse pointer style type of windows within the current application process. For details about how to set the mouse pointer style type of the host window through the **UIExtensionAbility** process, see [setCursor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-cursorcontroller-c.md#setcursor). This uses a promise to return the result.
+Sets the mouse pointer style type for a specified window. This API can set only the mouse pointer style type of windows within the current application process. For details about how to set the mouse pointer style type of the host window through the **UIExtensionAbility** process, see [setCursor](../../apis-default/arkts-apis/arkts-arkui-uicontext-cursorcontroller-c.md#setcursor). This uses a promise to return the result.
 
 **Since:** 23
 

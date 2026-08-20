@@ -2,6 +2,8 @@
 
 LocalizedAlignment enumeration description.
 
+@enum { string }
+
 **起始版本：** 20
 
 <!--Device-unnamed-declare enum LocalizedAlignment--><!--Device-unnamed-declare enum LocalizedAlignment-End-->

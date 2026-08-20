@@ -36,7 +36,11 @@ albumChangeDatas: AlbumChangeData[] | null
 isForRecheck: boolean
 ```
 
-应用是否应该重新查询所有媒体资产（图片/视频）信息。true表示需要重新查询所有资产，false表示无需查询所有资产。 **注意：** 在大量资产操作或者异常通知的场景下，应用收到的isForRecheck为true，表示重新查询所有资产信息。
+应用是否应该重新查询所有媒体资产（图片/视频）信息。true表示需要重新查询所有资产，false表示无需查询所有资产。
+
+**注意：**
+
+在大量资产操作或者异常通知的场景下，应用收到的isForRecheck为true，表示重新查询所有资产信息。
 
 **类型：** boolean
 

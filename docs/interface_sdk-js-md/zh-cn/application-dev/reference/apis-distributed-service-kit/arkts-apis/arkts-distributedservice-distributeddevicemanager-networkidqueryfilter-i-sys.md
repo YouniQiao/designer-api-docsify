@@ -22,7 +22,9 @@ import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 onlineStatus : int
 ```
 
-设备在线状态，包括 - 0：表示设备处于离线状态。 - 1：表示设备处于在线状态。
+设备在线状态，包括
+
+- 0：表示设备处于离线状态。 - 1：表示设备处于在线状态。
 
 **类型：** int
 

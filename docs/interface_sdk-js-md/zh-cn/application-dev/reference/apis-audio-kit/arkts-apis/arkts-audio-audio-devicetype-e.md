@@ -248,7 +248,9 @@ Distributed virtual audio device.
 HEARING_AID = 30
 ```
 
-助听器设备。 Note: This original device type can be obtained after it is declared via [declareDeviceTypesCompatibility](arkts-audio-audio-audioroutingmanager-i.md#declaredevicetypescompatibility).
+助听器设备。
+
+Note: This original device type can be obtained after it is declared via [declareDeviceTypesCompatibility](arkts-audio-audio-audioroutingmanager-i.md#declaredevicetypescompatibility).
 
 **起始版本：** 26.0.0
 
@@ -262,7 +264,9 @@ HEARING_AID = 30
 NEARLINK = 31
 ```
 
-星闪设备。 Note: This original device type can be obtained after it is declared via [declareDeviceTypesCompatibility](arkts-audio-audio-audioroutingmanager-i.md#declaredevicetypescompatibility).
+星闪设备。
+
+Note: This original device type can be obtained after it is declared via [declareDeviceTypesCompatibility](arkts-audio-audio-audioroutingmanager-i.md#declaredevicetypescompatibility).
 
 **起始版本：** 26.0.0
 

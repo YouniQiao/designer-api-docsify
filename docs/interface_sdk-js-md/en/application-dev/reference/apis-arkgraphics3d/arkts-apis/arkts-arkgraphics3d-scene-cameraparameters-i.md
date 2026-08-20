@@ -2,6 +2,8 @@
 
 Describes the camera parameters, which are used to define additional configuration options for camera initialization.
 
+@interface CameraParameters
+
 **Since:** 23
 
 <!--Device-unnamed-export interface CameraParameters--><!--Device-unnamed-export interface CameraParameters-End-->

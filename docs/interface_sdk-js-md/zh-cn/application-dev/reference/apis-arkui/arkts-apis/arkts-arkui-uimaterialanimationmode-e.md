@@ -2,6 +2,8 @@
 
 Enumerates the component animation modes under the UI material effect.
 
+@enum { int }
+
 **起始版本：** 26.0.0
 
 <!--Device-unnamed-declare enum UIMaterialAnimationMode--><!--Device-unnamed-declare enum UIMaterialAnimationMode-End-->

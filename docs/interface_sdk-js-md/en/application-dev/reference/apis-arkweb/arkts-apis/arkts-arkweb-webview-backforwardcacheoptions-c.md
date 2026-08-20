@@ -34,7 +34,13 @@ Constructs a **BackForwardCacheOptions** object.
 size: number
 ```
 
-The maximum number of pages that can be cached in a Web component. The default value is 1, and the maximum value is 50. If this parameter is set to 0 or a negative value, the back-forward cache is disabled. The Web component reclaims the cache for memory pressure.
+The maximum number of pages that can be cached in a Web component.
+
+The default value is 1, and the maximum value is 50.
+
+If this parameter is set to 0 or a negative value, the back-forward cache is disabled.
+
+The Web component reclaims the cache for memory pressure.
 
 **Type:** number
 
@@ -50,7 +56,13 @@ The maximum number of pages that can be cached in a Web component. The default v
 timeToLive: number
 ```
 
-The time that a Web component allows a page to stay in the back-forward cache. If this parameter is set to 0 or a negative value, the back-forward cache is disabled. Default value: 600 Unit: second
+The time that a Web component allows a page to stay in the back-forward cache.
+
+If this parameter is set to 0 or a negative value, the back-forward cache is disabled.
+
+Default value: 600
+
+Unit: second
 
 **Type:** number
 

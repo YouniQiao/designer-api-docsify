@@ -1,4 +1,4 @@
-# ISinglePropertyChangeSubscriber(System API) (System API)
+# ISinglePropertyChangeSubscriber (System API)
 
 Inherits from [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md). Represents a subscriber that subscribes to changes in a property value.
 

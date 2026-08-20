@@ -12,7 +12,9 @@ import { formHost } from '@kit.FormKit';
 function onFormOverflow(callback: Callback<formInfo.OverflowRequest>): void
 ```
 
-Listens to the event of formOverflow. You can use this method to listen to the event of formOverflow.
+Listens to the event of formOverflow.
+
+You can use this method to listen to the event of formOverflow.
 
 **起始版本：** 23
 
@@ -26,7 +28,7 @@ Listens to the event of formOverflow. You can use this method to listen to the e
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.OverflowRequest&gt; | 是 | The callback of formOverflow. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;formInfo.OverflowRequest&gt; | 是 | The callback of formOverflow. |
 
 **错误码：**
 

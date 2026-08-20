@@ -2,6 +2,8 @@
 
 定义MediaQuery列表信息。
 
+@interface MediaQueryList
+
 **起始版本：** 23
 
 **ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。

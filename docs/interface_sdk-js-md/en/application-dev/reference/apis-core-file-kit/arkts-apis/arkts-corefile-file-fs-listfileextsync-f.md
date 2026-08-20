@@ -44,8 +44,8 @@ Lists all file names in a directory. This API returns the result synchronously. 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | 13900002 | No such file or directory |
-| 13900018 | Not a directory |
 | 13900011 | Out of memory |
+| 13900018 | Not a directory |
+| 13900020 | Invalid argument |
 

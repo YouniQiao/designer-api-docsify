@@ -22,7 +22,11 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 deleteAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void
 ```
 
-从回收站中彻底删除图片或者视频，需要先在回收站中预置文件资源。使用callback异步回调。 &gt; **说明：** &gt; &gt; 此操作不可逆，执行此操作后文件资源将彻底删除，请谨慎操作。
+从回收站中彻底删除图片或者视频，需要先在回收站中预置文件资源。使用callback异步回调。
+
+> **说明：**
+> 
+> 此操作不可逆，执行此操作后文件资源将彻底删除，请谨慎操作。
 
 **起始版本：** 10
 
@@ -43,16 +47,16 @@ deleteAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | assets | Array&lt;PhotoAsset&gt; | 是 | 回收站中待彻底删除图片或者视频数组。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | callback返回void。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | callback返回void。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 **示例**
@@ -93,7 +97,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 deleteAssets(assets: Array<PhotoAsset>): Promise<void>
 ```
 
-从回收站中彻底删除图片或者视频，需要先在回收站中预置文件资源，建议删除数量不超过1000张。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 此操作不可逆，执行此操作后文件资源将彻底删除，请谨慎操作。
+从回收站中彻底删除图片或者视频，需要先在回收站中预置文件资源，建议删除数量不超过1000张。使用Promise异步回调。
+
+> **说明：**
+> 
+> 此操作不可逆，执行此操作后文件资源将彻底删除，请谨慎操作。
 
 **起始版本：** 10
 
@@ -125,10 +133,10 @@ deleteAssets(assets: Array<PhotoAsset>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 **示例**
@@ -192,16 +200,16 @@ getAttribute(attrs: AlbumAttribute[]): Promise<Record<AlbumAttribute, AlbumAttri
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Record&lt;[AlbumAttribute](arkts-medialibrary-photoaccesshelper-albumattribute-e-sys.md), [AlbumAttributeInfo](arkts-medialibrary-photoaccesshelper-albumattributeinfo-i-sys.md)&gt;&gt; | Returns a record of attributes and their values. |
+| Promise&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;[AlbumAttribute](arkts-medialibrary-photoaccesshelper-albumattribute-e-sys.md), [AlbumAttributeInfo](arkts-medialibrary-photoaccesshelper-albumattributeinfo-i-sys.md)&gt;&gt; | Returns a record of attributes and their values. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error.It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes: <br>1. Unsupported attribute; <br>2. The attrs size exceed 20; <br>3. Empty or duplicate attribute; |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error.It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -344,9 +352,9 @@ getFusionAssetsInfo(): Promise<FusionAssetsInfo[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. <br>Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. <br>Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 
 ## getSelectedAssets
 
@@ -383,10 +391,10 @@ getSelectedAssets(optionCheck: FetchOptions, filter?: string): Promise<FetchResu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. <br>Possible causes: 1. The input parameter is not within the valid range. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -473,16 +481,16 @@ recoverAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | assets | Array&lt;PhotoAsset&gt; | 是 | 回收站中待恢复图片或者视频数组。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | callback返回void。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | callback返回void。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 **示例**
@@ -555,10 +563,10 @@ recoverAssets(assets: Array<PhotoAsset>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 **示例**
@@ -619,16 +627,16 @@ setCoverUri(uri: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 待设置为相册封面文件的uri。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | callback返回void。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | callback返回void。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 **示例**
@@ -701,10 +709,10 @@ setCoverUri(uri: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 ## dateAdded

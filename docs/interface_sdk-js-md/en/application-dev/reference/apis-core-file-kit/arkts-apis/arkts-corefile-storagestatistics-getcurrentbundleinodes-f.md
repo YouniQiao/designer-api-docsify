@@ -32,8 +32,8 @@ Get the current bundle inodes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13600002 | File system not supported. |
 | 13600001 | IPC error. |
+| 13600002 | File system not supported. |
 | 13600017 | Failed to query the inode information of the application. |
 
 **Examples**

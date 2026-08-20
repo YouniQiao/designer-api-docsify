@@ -12,7 +12,9 @@ import { data } from '@kit.TelephonyKit';
 function getCellularDataFlowType(callback: AsyncCallback<DataFlowType>): void
 ```
 
-Obtains the data flow type of the cellular network (corresponding to the uplink and downlink arrows next to the signal bar). This API uses an asynchronous callback to return the result. **Required permission**: ohos.permission.GET_NETWORK_INFO
+Obtains the data flow type of the cellular network (corresponding to the uplink and downlink arrows next to the signal bar). This API uses an asynchronous callback to return the result.
+
+**Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
@@ -57,7 +59,9 @@ data.getCellularDataFlowType((err: BusinessError, contextData: data.DataFlowType
 function getCellularDataFlowType(): Promise<DataFlowType>
 ```
 
-Obtains the data flow type of the cellular network (corresponding to the uplink and downlink arrows next to the signal bar). This API uses a promise to return the result. **Required permission**: ohos.permission.GET_NETWORK_INFO
+Obtains the data flow type of the cellular network (corresponding to the uplink and downlink arrows next to the signal bar). This API uses a promise to return the result.
+
+**Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 

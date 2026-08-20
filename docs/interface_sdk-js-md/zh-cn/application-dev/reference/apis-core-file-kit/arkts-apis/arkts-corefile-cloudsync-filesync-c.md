@@ -117,7 +117,7 @@ getLastSyncTime(callback: AsyncCallback<long>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数。异步获取上次同步时间。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | 是 | 回调函数。异步获取上次同步时间。 |
 
 **错误码：**
 
@@ -183,7 +183,7 @@ Unsubscribes from sync progress event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | 否 | callback function with a `SyncProgress` argument. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | 否 | callback function with a `SyncProgress` argument. |
 
 **错误码：**
 
@@ -222,7 +222,7 @@ off(event: 'progress', callback?: Callback<SyncProgress>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'progress' | 是 | 取消订阅的事件类型，取值为'progress'（同步过程事件）。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | 否 | 回调函数。同步过程事件， 默认值为null。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | 否 | 回调函数。同步过程事件， 默认值为null。 |
 
 **错误码：**
 
@@ -263,7 +263,7 @@ Subscribes to sync progress change event. This method uses a callback to get syn
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | 是 | callback function with a `SyncProgress` argument. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | 是 | callback function with a `SyncProgress` argument. |
 
 **错误码：**
 
@@ -301,7 +301,7 @@ on(event: 'progress', callback: Callback<SyncProgress>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'progress' | 是 | 订阅的事件类型，取值为'progress'（同步过程事件）。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | 是 | 回调函数。同步过程事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | 是 | 回调函数。同步过程事件。 |
 
 **错误码：**
 
@@ -346,10 +346,10 @@ start(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
-| 22400001 | Cloud status not ready. |
-| 22400003 | Low battery level. |
-| 22400002 | Network unavailable. |
 | 13600001 | IPC error. |
+| 22400001 | Cloud status not ready. |
+| 22400002 | Network unavailable. |
+| 22400003 | Low battery level. |
 
 **示例**
 
@@ -408,17 +408,17 @@ start(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。异步启动端云同步。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。异步启动端云同步。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
-| 22400001 | Cloud status not ready. |
-| 22400003 | Low battery level. |
-| 22400002 | Network unavailable. |
 | 13600001 | IPC error. |
+| 22400001 | Cloud status not ready. |
+| 22400002 | Network unavailable. |
+| 22400003 | Low battery level. |
 
 **示例**
 
@@ -459,7 +459,9 @@ fileSync.start((err: BusinessError<void> | null): void => {
 stop(): Promise<void>
 ```
 
-异步方法停止云盘端云同步。使用Promise异步回调。 调用stop接口，同步流程会停止。再次调用[start](#start)接口会继续同步。
+异步方法停止云盘端云同步。使用Promise异步回调。
+
+调用stop接口，同步流程会停止。再次调用[start](#start)接口会继续同步。
 
 **起始版本：** 23
 
@@ -515,7 +517,9 @@ fileSync.stop().then<void>((): void => {
 stop(callback: AsyncCallback<void>): void
 ```
 
-异步方法停止云盘端云同步。使用callback异步回调。 调用stop接口，同步流程会停止。再次调用[start](#start)接口会继续同步。
+异步方法停止云盘端云同步。使用callback异步回调。
+
+调用stop接口，同步流程会停止。再次调用[start](#start)接口会继续同步。
 
 **起始版本：** 23
 
@@ -527,7 +531,7 @@ stop(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。异步停止端云同步。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。异步停止端云同步。 |
 
 **错误码：**
 

@@ -1,4 +1,4 @@
-# ReleaseStatus(锁屏敏感数据管理)
+# ReleaseStatus
 
 表示锁屏下敏感数据访问权限释放状态的枚举。
 

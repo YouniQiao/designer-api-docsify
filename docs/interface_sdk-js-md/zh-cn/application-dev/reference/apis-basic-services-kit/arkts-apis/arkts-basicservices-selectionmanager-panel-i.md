@@ -108,7 +108,7 @@ offDestroy(callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 需要取消的回调函数（即之前通过onDestroy方法订阅时的回调实例）。参数不填写时，取消订阅对应的所有回调事件。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 需要取消的回调函数（即之前通过onDestroy方法订阅时的回调实例）。参数不填写时，取消订阅对应的所有回调事件。 |
 
 **示例**
 
@@ -143,7 +143,7 @@ offHide(callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 需要取消的回调函数（即之前通过onHide方法订阅时的回调实例）。参数不填写时，取消订阅对应的所有回调事件。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 需要取消的回调函数（即之前通过onHide方法订阅时的回调实例）。参数不填写时，取消订阅对应的所有回调事件。 |
 
 **示例**
 
@@ -178,7 +178,7 @@ onDestroy(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f-sys.md)销毁面板时触发。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数，调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f-sys.md)销毁面板时触发。 |
 
 **示例**
 
@@ -215,7 +215,7 @@ onHide(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，面板隐藏时触发。面板可通过调用[hide](arkts-basicservices-selectionmanager-panel-i-sys.md#hide)主动隐藏，或在失焦时自动隐藏。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数，面板隐藏时触发。面板可通过调用[hide](arkts-basicservices-selectionmanager-panel-i-sys.md#hide)主动隐藏，或在失焦时自动隐藏。 |
 
 **示例**
 

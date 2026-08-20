@@ -12,7 +12,11 @@ import { connection } from '@kit.NetworkKit';
 function setPacUrl(pacUrl: string): void
 ```
 
-Sets the URL of the system-level Proxy Auto Config (PAC) script. &gt; **NOTE：**&gt; &gt; Only the script address can be set. The proxy function cannot be parsed or enabled. To set the script and enable &gt; the proxy, call the [setPacFileUrl](arkts-network-connection-setpacfileurl-f.md) API.
+Sets the URL of the system-level Proxy Auto Config (PAC) script.
+
+> **NOTE：**
+> 
+> Only the script address can be set. The proxy function cannot be parsed or enabled. To set the script and enable &gt; the proxy, call the [setPacFileUrl](arkts-network-connection-setpacfileurl-f.md) API.
 
 **Since:** 15
 
@@ -32,10 +36,10 @@ Sets the URL of the system-level Proxy Auto Config (PAC) script. &gt; **NOTE：*
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 

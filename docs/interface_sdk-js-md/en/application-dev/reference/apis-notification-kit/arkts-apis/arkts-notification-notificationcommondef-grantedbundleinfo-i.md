@@ -1,4 +1,4 @@
-# GrantedBundleInfo(Some common definitions)
+# GrantedBundleInfo
 
 Describes the authorized bundle information.
 

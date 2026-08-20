@@ -1,4 +1,4 @@
-# Callback(Public Callback Information)
+# Callback
 
 Defines a common callback used to return the processing result when an asynchronous operation is successful. You need to define the callback type.
 

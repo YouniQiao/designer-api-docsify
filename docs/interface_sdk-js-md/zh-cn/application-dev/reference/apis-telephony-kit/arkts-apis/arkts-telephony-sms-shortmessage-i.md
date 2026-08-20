@@ -20,7 +20,13 @@ import { sms } from '@kit.TelephonyKit';
 hasReplyPath: boolean
 ```
 
-收到的短信是否包含“TP-Reply-Path”，默认为false。 -true：是 -false：否 “TP-Reply-Path”：设备根据发送SMS消息的短消息中心进行回复。
+收到的短信是否包含“TP-Reply-Path”，默认为false。
+
+-true：是
+
+-false：否
+
+“TP-Reply-Path”：设备根据发送SMS消息的短消息中心进行回复。
 
 **类型：** boolean
 
@@ -36,7 +42,13 @@ hasReplyPath: boolean
 isReplaceMessage: boolean
 ```
 
-收到的短信是否为“替换短信”，默认为false。 -true：是 -false：否 “替换短信”有关详细信息，参见 [“3GPP TS 23.040 9.2.3.9”](https://www.3gpp.org/ftp/specs/archive/23_series/23.040)。
+收到的短信是否为“替换短信”，默认为false。
+
+-true：是
+
+-false：否
+
+“替换短信”有关详细信息，参见 [“3GPP TS 23.040 9.2.3.9”](https://www.3gpp.org/ftp/specs/archive/23_series/23.040)。
 
 **类型：** boolean
 
@@ -52,7 +64,13 @@ isReplaceMessage: boolean
 isSmsStatusReportMessage: boolean
 ```
 
-当前消息是否为“短信状态报告”，默认为false。 -true：是 -false：否 “短信状态报告”是一种特定格式的短信，被用来从Service Center到Mobile Station传输状态报告。
+当前消息是否为“短信状态报告”，默认为false。
+
+-true：是
+
+-false：否
+
+“短信状态报告”是一种特定格式的短信，被用来从Service Center到Mobile Station传输状态报告。
 
 **类型：** boolean
 

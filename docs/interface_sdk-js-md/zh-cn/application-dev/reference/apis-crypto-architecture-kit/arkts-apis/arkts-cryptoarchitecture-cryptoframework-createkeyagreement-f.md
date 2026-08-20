@@ -12,7 +12,9 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createKeyAgreement(algName: string): KeyAgreement
 ```
 
-创建密钥协商实例。 <br>支持的规格详见[密钥协商规格](../../../security/CryptoArchitectureKit/crypto-key-agreement-overview.md)。
+创建密钥协商实例。
+
+<br>支持的规格详见[密钥协商规格](../../../security/CryptoArchitectureKit/crypto-key-agreement-overview.md)。
 
 **起始版本：** 23
 

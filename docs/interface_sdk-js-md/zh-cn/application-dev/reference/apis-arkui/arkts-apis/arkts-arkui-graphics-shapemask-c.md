@@ -48,7 +48,7 @@ setCircleShape(circle: Circle): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| circle | [Circle](arkts-arkui-graphics-circle-i.md) | 是 | 圆形的形状。 |
+| circle | [Circle](../../apis-default/arkts-apis/arkts-graphics-circle-i.md) | 是 | 圆形的形状。 |
 
 **示例**
 
@@ -119,7 +119,7 @@ setCommandPath(path: CommandPath): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [CommandPath](arkts-arkui-graphics-commandpath-i.md) | 是 | 路径绘制指令。 |
+| path | [CommandPath](../../apis-default/arkts-apis/arkts-graphics-commandpath-i.md) | 是 | 路径绘制指令。 |
 
 **示例**
 
@@ -191,7 +191,7 @@ setOvalShape(oval: Rect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| oval | [Rect](arkts-arkui-rect-t.md) | 是 | 椭圆形的形状。 |
+| oval | [Rect](../../apis-default/arkts-apis/arkts-rect-t.md) | 是 | 椭圆形的形状。 |
 
 **示例**
 
@@ -257,7 +257,7 @@ setRectShape(rect: Rect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | [Rect](arkts-arkui-rect-t.md) | 是 | 矩形的形状。 |
+| rect | [Rect](../../apis-default/arkts-apis/arkts-rect-t.md) | 是 | 矩形的形状。 |
 
 **示例**
 
@@ -333,7 +333,7 @@ setRoundRectShape(roundRect: RoundRect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| roundRect | [RoundRect](arkts-arkui-graphics-roundrect-i.md) | 是 | 圆角矩形的形状。 |
+| roundRect | [RoundRect](../../apis-default/arkts-apis/arkts-graphics-roundrect-i.md) | 是 | 圆角矩形的形状。 |
 
 **示例**
 
@@ -392,7 +392,13 @@ struct Index {
 fillColor: number
 ```
 
-遮罩的填充颜色，使用ARGB格式。默认值为`0XFF000000`。 取值范围：[0, 0xffffffff] 超出范围时按默认值处理。 通过fillColor的透明度和亮度生成一个仅含透明度的颜色。亮度越高，颜色越透明。然后，使用[BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md)方式 与RenderNode本身的颜色混合，生成最终颜色。
+遮罩的填充颜色，使用ARGB格式。默认值为`0XFF000000`。
+
+取值范围：[0, 0xffffffff]
+
+超出范围时按默认值处理。
+
+通过fillColor的透明度和亮度生成一个仅含透明度的颜色。亮度越高，颜色越透明。然后，使用[BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md)方式 与RenderNode本身的颜色混合，生成最终颜色。
 
 **类型：** number
 
@@ -414,7 +420,13 @@ fillColor: number
 strokeColor: number
 ```
 
-遮罩的边框颜色，使用ARGB格式。默认值为`0XFF000000`。 取值范围：[0, 0xffffffff] 超出范围时按默认值处理。 通过strokeColor的透明度和亮度生成一个仅含透明度的颜色。亮度越高，颜色越透明。然后，使用[BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md) 方式与RenderNode本身的颜色混合，生成最终颜色。
+遮罩的边框颜色，使用ARGB格式。默认值为`0XFF000000`。
+
+取值范围：[0, 0xffffffff]
+
+超出范围时按默认值处理。
+
+通过strokeColor的透明度和亮度生成一个仅含透明度的颜色。亮度越高，颜色越透明。然后，使用[BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md) 方式与RenderNode本身的颜色混合，生成最终颜色。
 
 **类型：** number
 
@@ -436,7 +448,11 @@ strokeColor: number
 strokeWidth: number
 ```
 
-遮罩的边框宽度，单位为px。默认值为0。 取值范围：[0, +∞) 负数按默认值处理。
+遮罩的边框宽度，单位为px。默认值为0。
+
+取值范围：[0, +∞)
+
+负数按默认值处理。
 
 **类型：** number
 

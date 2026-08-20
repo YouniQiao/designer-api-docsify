@@ -1,6 +1,6 @@
 # @ohos.multimodalAwareness.spatialAwareness
 
-本模块提供对测距的感知能力，支持超声信号测试。
+本模块提供对测距的感知能力，支持超声信号测试。 @namespace spatialAwareness
 
 **起始版本：** 23
 
@@ -36,9 +36,9 @@ import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [DistanceMeasurementConfigParams](arkts-multimodalawareness-spatialawareness-distancemeasurementconfigparams-i-sys.md) | 测距接口的输入参数配置。根据不同的参数配置，执行对应的算法。 |
-| [DistanceMeasurementResponse](arkts-multimodalawareness-spatialawareness-distancemeasurementresponse-i-sys.md) | 测距接口执行完成后的回调结果。 |
-| [DoorPositionResponse](arkts-multimodalawareness-spatialawareness-doorpositionresponse-i-sys.md) | 门内外识别接口执行完成后的回调结果。 |
+| [DistanceMeasurementConfigParams](arkts-multimodalawareness-spatialawareness-distancemeasurementconfigparams-i-sys.md) | 测距接口的输入参数配置。根据不同的参数配置，执行对应的算法。 @interface DistanceMeasurementConfigParams |
+| [DistanceMeasurementResponse](arkts-multimodalawareness-spatialawareness-distancemeasurementresponse-i-sys.md) | 测距接口执行完成后的回调结果。 @interface DistanceMeasurementResponse |
+| [DoorPositionResponse](arkts-multimodalawareness-spatialawareness-doorpositionresponse-i-sys.md) | 门内外识别接口执行完成后的回调结果。 @interface DoorPositionResponse |
 <!--DelEnd-->
 
 <!--Del-->

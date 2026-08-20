@@ -26,14 +26,14 @@ Transforms pixelmap from unpremultiplied alpha format to premultiplied alpha for
 | --- | --- | --- | --- |
 | src | PixelMap | 是 | The source pixelmap. |
 | dst | PixelMap | 是 | The destination pixelmap. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the operation result. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the operation result. If the operation fails, an error message is returned. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [62980246](../errorcode-image.md#62980246-读取pixelmap失败) | Failed to read the pixelMap. |
 | [62980248](../errorcode-image.md#62980248-pixelmap不允许修改) | Pixelmap not allow modify. |
 
@@ -97,8 +97,8 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [62980246](../errorcode-image.md#62980246-读取pixelmap失败) | Failed to read the pixelMap. |
 | [62980248](../errorcode-image.md#62980248-pixelmap不允许修改) | Pixelmap not allow modify. |
 

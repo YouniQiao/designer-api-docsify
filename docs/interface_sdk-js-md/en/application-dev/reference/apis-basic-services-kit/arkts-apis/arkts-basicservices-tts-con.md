@@ -6,7 +6,9 @@
 const DEFAULT_TTS_PITCH: string
 ```
 
-Indicates the default pitch of the text-to-speech (TTS) engine. &lt;p&gt;100 = 1x. If the value is set to {@code 200}, the frequency is twice the normal sound frequency.
+Indicates the default pitch of the text-to-speech (TTS) engine.
+
+&lt;p&gt;100 = 1x. If the value is set to {@code 200}, the frequency is twice the normal sound frequency.
 
 **Since:** 23
 

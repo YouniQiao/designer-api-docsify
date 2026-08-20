@@ -32,8 +32,8 @@ function getNtpTime(): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [13000002](../errorcode-time.md#13000002-未更新ntp时间) | updateNtpTime() is not called successfully. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [13000002](../errorcode-time.md#13000002-未更新ntp时间) | updateNtpTime() is not called successfully. |
 
 **示例**
 

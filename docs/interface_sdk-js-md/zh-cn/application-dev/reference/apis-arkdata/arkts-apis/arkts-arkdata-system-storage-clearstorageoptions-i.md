@@ -1,4 +1,4 @@
-# ClearStorageOptions(数据存储)
+# ClearStorageOptions
 
 **起始版本：** 3
 

@@ -1,0 +1,103 @@
+# EditableTitleBarOptions
+
+**起始版本：** 12
+
+<!--Device-unnamed-export declare interface EditableTitleBarOptions--><!--Device-unnamed-export declare interface EditableTitleBarOptions-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { EditableLeftIconType, EditableTitleBar, EditableTitleBarMenuItem, EditableTitleBarItem, EditableTitleBarOptions } from '@kit.ArkUI';
+import { EditableLeftIconTypeV2, EditableTitleBarV2, EditableLeftIconV2, EditableLeftIconV2Options, EditableTitleV2, EditableTitleV2Options, EditableTitleBarItemV2, EditableTitleBarItemV2Options, EditableTitleBarMenuItemV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2, EditableSaveButtonV2Options, EditableTitleBarStyleV2, EditableTitleBarStyleV2Options } from '@kit.ArkUI';
+```
+
+## backgroundBlurStyle
+
+```TypeScript
+backgroundBlurStyle?: BlurStyle
+```
+
+标题栏背景模糊样式。
+
+默认值：BlurStyle.NONE
+
+**类型：** [BlurStyle](../../apis-default/arkts-apis/arkts-common-blurstyle-e.md)
+
+**起始版本：** 12
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EditableTitleBarOptions-backgroundBlurStyle?: BlurStyle--><!--Device-EditableTitleBarOptions-backgroundBlurStyle?: BlurStyle-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## backgroundColor
+
+```TypeScript
+backgroundColor?: ResourceColor
+```
+
+标题栏背景色。
+
+默认值：'#00000000'
+
+**类型：** [ResourceColor](../../apis-default/arkts-apis/arkts-resourcecolor-t.md)
+
+**起始版本：** 12
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EditableTitleBarOptions-backgroundColor?: ResourceColor--><!--Device-EditableTitleBarOptions-backgroundColor?: ResourceColor-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## safeAreaEdges
+
+```TypeScript
+safeAreaEdges?: Array<SafeAreaEdge>
+```
+
+配置扩展安全区域的方向。
+
+默认值：[SafeAreaEdge.TOP]
+
+**类型：** Array&lt;[SafeAreaEdge](../../apis-default/arkts-apis/arkts-common-safeareaedge-e.md)&gt;
+
+**起始版本：** 12
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EditableTitleBarOptions-safeAreaEdges?: Array<SafeAreaEdge>--><!--Device-EditableTitleBarOptions-safeAreaEdges?: Array<SafeAreaEdge>-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## safeAreaTypes
+
+```TypeScript
+safeAreaTypes?: Array<SafeAreaType>
+```
+
+配置扩展安全区域的类型。
+
+默认值：[SafeAreaType.SYSTEM]
+
+**类型：** Array&lt;[SafeAreaType](../../apis-default/arkts-apis/arkts-common-safeareatype-e.md)&gt;
+
+**起始版本：** 12
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EditableTitleBarOptions-safeAreaTypes?: Array<SafeAreaType>--><!--Device-EditableTitleBarOptions-safeAreaTypes?: Array<SafeAreaType>-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+

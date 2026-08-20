@@ -1,6 +1,8 @@
 # BackgroundPlayMode
 
-表示session支持的后台播放模式的枚举。 | 名称 | 值 | 说明 | | ------------------------- | - | ----------------------- | | ENABLE_BACKGROUND_PLAY | 0 | 支持后台播放。 | | DISABLE_BACKGROUND_PLAY | 1 | 不支持后台播放。 |
+表示session支持的后台播放模式的枚举。
+
+| 名称 | 值 | 说明 | | ------------------------- | - | ----------------------- | | ENABLE_BACKGROUND_PLAY | 0 | 支持后台播放。 | | DISABLE_BACKGROUND_PLAY | 1 | 不支持后台播放。 |
 
 **起始版本：** 24
 

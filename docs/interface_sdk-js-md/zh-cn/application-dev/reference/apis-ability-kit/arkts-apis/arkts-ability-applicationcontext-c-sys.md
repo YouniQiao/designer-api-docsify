@@ -1,6 +1,10 @@
 # ApplicationContext
 
-ApplicationContext作为应用上下文，继承自Context，提供了应用生命周期监听、进程管理、应用环境设置等应用级别的管控能力。 &gt; **说明：** &gt; &gt; 本模块接口仅可在Stage模型下使用。
+ApplicationContext作为应用上下文，继承自Context，提供了应用生命周期监听、进程管理、应用环境设置等应用级别的管控能力。
+
+> **说明：**
+> 
+> 本模块接口仅可在Stage模型下使用。
 
 **继承/实现关系：** ApplicationContext extends Context
 
@@ -42,8 +46,8 @@ getProcessRunningInformation(): Promise<Array<ProcessInformation>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 ## getProcessRunningInformation
 
@@ -77,8 +81,8 @@ getProcessRunningInformation(callback: AsyncCallback<Array<ProcessInformation>>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 ## preloadUIExtensionAbility
 
@@ -86,7 +90,11 @@ getProcessRunningInformation(callback: AsyncCallback<Array<ProcessInformation>>)
 preloadUIExtensionAbility(want: Want): Promise<void>
 ```
 
-预加载指定UIExtensionAbility实例。使用Promise异步回调。 被预加载的UIExtensionAbility实例会执行到UIExtensionAbility的onCreate生命周期，然后等待被当前应用正式加载。 被预加载的UIExtensionAbility实例会执行到UIExtensionAbility的onCreate生命周期，然后等待被当前应用正式加载。
+预加载指定UIExtensionAbility实例。使用Promise异步回调。
+
+被预加载的UIExtensionAbility实例会执行到UIExtensionAbility的onCreate生命周期，然后等待被当前应用正式加载。
+
+被预加载的UIExtensionAbility实例会执行到UIExtensionAbility的onCreate生命周期，然后等待被当前应用正式加载。
 
 **起始版本：** 23
 
@@ -116,14 +124,14 @@ preloadUIExtensionAbility(want: Want): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 **示例**
 
@@ -215,7 +223,9 @@ export default class EntryAbility extends UIAbility {
 registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallback): number
 ```
 
-注册监听应用内UIAbility的生命周期。使用callback异步回调。 &lt;p&gt;**说明：**: <br>仅支持主线程调用。 &lt;/p&gt;
+注册监听应用内UIAbility的生命周期。使用callback异步回调。
+
+&lt;p&gt;**说明：**: <br>仅支持主线程调用。 &lt;/p&gt;
 
 **起始版本：** 9
 
@@ -249,7 +259,9 @@ registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallb
 registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number
 ```
 
-注册对系统环境变化的监听。使用callback异步回调。 &lt;p&gt;**说明：**: <br>仅支持主线程调用。 &lt;/p&gt;
+注册对系统环境变化的监听。使用callback异步回调。
+
+&lt;p&gt;**说明：**: <br>仅支持主线程调用。 &lt;/p&gt;
 
 **起始版本：** 9
 
@@ -269,7 +281,7 @@ registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| environmentCallback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | 是 | 系统环境变化时触发的回调方法。 |
+| environmentCallback | [EnvironmentCallback](../../apis-default/arkts-apis/arkts-app-ability-environmentcallback-environmentcallback-i.md) | 是 | 系统环境变化时触发的回调方法。 |
 
 **返回值：**
 
@@ -283,7 +295,9 @@ registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number
 unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<void>): void
 ```
 
-取消监听应用内UIAbility的生命周期。使用callback异步回调。 &lt;p&gt;**说明：**: <br>仅支持主线程调用。 &lt;/p&gt;
+取消监听应用内UIAbility的生命周期。使用callback异步回调。
+
+&lt;p&gt;**说明：**: <br>仅支持主线程调用。 &lt;/p&gt;
 
 **起始版本：** 9
 
@@ -312,7 +326,9 @@ unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<v
 unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>
 ```
 
-取消监听应用内UIAbility的生命周期。使用Promise异步回调。 &lt;p&gt;**说明：**: <br>仅支持主线程调用。 &lt;/p&gt;
+取消监听应用内UIAbility的生命周期。使用Promise异步回调。
+
+&lt;p&gt;**说明：**: <br>仅支持主线程调用。 &lt;/p&gt;
 
 **起始版本：** 9
 
@@ -352,7 +368,9 @@ unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>
 unregisterEnvironmentCallback(callbackId: number, envcallback: AsyncCallback<void>): void
 ```
 
-取消对系统环境变化的监听。使用callback异步回调。 &lt;p&gt;**说明：**: <br>仅支持主线程调用。 &lt;/p&gt;
+取消对系统环境变化的监听。使用callback异步回调。
+
+&lt;p&gt;**说明：**: <br>仅支持主线程调用。 &lt;/p&gt;
 
 **起始版本：** 9
 

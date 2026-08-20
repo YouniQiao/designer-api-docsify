@@ -2,6 +2,8 @@
 
 Defines the area information of the particle field.
 
+@interface FieldRegion
+
 **Since:** 22
 
 <!--Device-unnamed-declare interface FieldRegion--><!--Device-unnamed-declare interface FieldRegion-End-->

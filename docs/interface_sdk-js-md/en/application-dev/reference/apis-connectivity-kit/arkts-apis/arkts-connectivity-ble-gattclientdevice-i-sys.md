@@ -52,17 +52,17 @@ Writes the characteristic of a BLE peripheral device with context.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2901004 | The connection is congested. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| 2900011 | The operation is busy. The last operation is not complete. |
+| 2900099 | Operation failed. |
+| 2901001 | Write forbidden. |
+| 2901003 | The connection is not established. |
+| 2901004 | The connection is congested. |
 | 2901005 | The connection is not encrypted. |
 | 2901006 | The connection is not authenticated. |
 | 2901007 | The connection is not authorized. |
-| 2901001 | Write forbidden. |
-| 2900011 | The operation is busy. The last operation is not complete. |
-| 2901003 | The connection is not established. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| 2900099 | Operation failed. |
 
 **Examples**
 

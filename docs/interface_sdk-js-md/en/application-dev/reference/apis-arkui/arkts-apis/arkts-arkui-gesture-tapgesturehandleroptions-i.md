@@ -2,6 +2,8 @@
 
 Defines the TapGestureHandler options.
 
+@extends BaseHandlerOptions @interface TapGestureHandlerOptions
+
 **Inheritance/Implementation:** TapGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-gesture-basehandleroptions-i.md)
 
 **Since:** 23

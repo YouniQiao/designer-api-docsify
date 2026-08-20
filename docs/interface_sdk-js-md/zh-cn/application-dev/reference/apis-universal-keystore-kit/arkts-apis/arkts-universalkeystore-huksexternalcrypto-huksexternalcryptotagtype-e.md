@@ -1,4 +1,4 @@
-# HuksExternalCryptoTagType(External Key Management)
+# HuksExternalCryptoTagType
 
 表示外部加密数据类型的枚举。
 

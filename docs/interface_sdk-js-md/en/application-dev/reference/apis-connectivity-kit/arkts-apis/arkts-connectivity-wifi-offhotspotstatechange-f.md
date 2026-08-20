@@ -15,7 +15,9 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function off(type: 'hotspotStateChange', callback?: Callback<number>): void
 ```
 
-Unsubscribe Wi-Fi hotspot state change events. &lt;p&gt;All callback functions will be deregistered If there is no specific callback parameter.&lt;/p&gt;
+Unsubscribe Wi-Fi hotspot state change events.
+
+&lt;p&gt;All callback functions will be deregistered If there is no specific callback parameter.&lt;/p&gt;
 
 **Since:** 7
 

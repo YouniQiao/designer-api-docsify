@@ -76,7 +76,7 @@ Obtains the **WebHttpBodyStream** instance in this resource request.
 
 | Type | Description |
 | --- | --- |
-| [WebHttpBodyStream](../../apis-na/arkts-apis/arkts-na-webview-webhttpbodystream-c.md) \| null | WebHttpBodyStream** instance in the resource request. If there is no **WebHttpBodyStream** instance, **null** is returned. |
+| [WebHttpBodyStream](../../apis-default/arkts-apis/arkts-webview-webhttpbodystream-c.md) \| null | WebHttpBodyStream** instance in the resource request. If there is no **WebHttpBodyStream** instance, **null** is returned. |
 
 ## getReferrer
 
@@ -140,7 +140,7 @@ Obtains the resource type of this resource request.
 
 | Type | Description |
 | --- | --- |
-| [WebResourceType](../../apis-na/arkts-apis/arkts-na-webview-webresourcetype-e.md) | Resource type of the resource request. |
+| [WebResourceType](../../apis-default/arkts-apis/arkts-webview-webresourcetype-e.md) | Resource type of the resource request. |
 
 ## getRequestUrl
 

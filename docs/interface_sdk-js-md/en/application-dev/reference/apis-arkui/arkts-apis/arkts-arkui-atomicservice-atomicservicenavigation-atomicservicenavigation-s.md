@@ -1,6 +1,6 @@
 # AtomicServiceNavigation
 
-**AtomicServiceNavigation** is a component that serves as the root container of a page. By default, it includes a title bar, content area, and toolbar. The content area switches between the home page content (child components of NavDestination) and non-home page content through routing.
+*AtomicServiceNavigation** is a component that serves as the root container of a page. By default, it includes a title bar, content area, and toolbar. The content area switches between the home page content (child components of NavDestination) and non-home page content through routing.
 
 **Since:** 12
 

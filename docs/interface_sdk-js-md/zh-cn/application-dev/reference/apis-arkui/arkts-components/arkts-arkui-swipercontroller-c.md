@@ -46,7 +46,11 @@ changeIndex(index: number, useAnimation?: boolean)
 changeIndex(index: number, animationMode?: SwiperAnimationMode | boolean)
 ```
 
-翻页至指定页面。翻页带动效切换过程，时长通过Swiper的[duration](#duration)属性设置。 &gt; **说明：** &gt; 该接口本身提供了不带动画跳转页面的能力（animationMode设置为false或者SwiperAnimationMode.NO_ANIMATION），不建议使用changeIndex接口启动动画后，直接使用 &gt; finishAnimation接口打断来实现页面不带动画跳转。
+翻页至指定页面。翻页带动效切换过程，时长通过Swiper的[duration](#duration)属性设置。
+
+> **说明：**
+
+> 该接口本身提供了不带动画跳转页面的能力（animationMode设置为false或者SwiperAnimationMode.NO_ANIMATION），不建议使用changeIndex接口启动动画后，直接使用 &gt; finishAnimation接口打断来实现页面不带动画跳转。
 
 **起始版本：** 15
 
@@ -91,7 +95,16 @@ SwiperController的构造函数。
 fakeDragBy(offset: number): boolean
 ```
 
-设置模拟拖拽的拖拽距离。 &gt; **说明：** &gt; - 模拟拖拽的距离需要依赖布局体现，建议接口在布局前调用，拖拽效果可以在当前帧布局后体现。如果在未布局前调用了多次该接口，当前帧布局时只生效最后一次调用传入的拖拽距离。 &gt; &gt; - 在loop设置为true的循环场景下，如果设置的模拟拖拽的距离大于布局总长度，此时模拟拖拽距离会被调整为拖拽到刚好显示第一个子节点（向布局起点拖拽）或者最后一个子 &gt; 节点（向布局终点方向拖拽）的距离。 &gt; &gt; - onGestureSwipe事件、 &gt; onContentWillScroll事件在拖拽过程中不触发。 &gt; customContentTransition会在布局前触发，由于真实的拖拽距离可能在布局时被调整，在传入拖拽距离过大时，触发事 &gt; 件时的返回的节点显示信息可能与布局结果不一致。
+设置模拟拖拽的拖拽距离。
+
+> **说明：**
+
+> - 模拟拖拽的距离需要依赖布局体现，建议接口在布局前调用，拖拽效果可以在当前帧布局后体现。如果在未布局前调用了多次该接口，当前帧布局时只生效最后一次调用传入的拖拽距离。
+> 
+> - 在[loop](arkts-arkui-swiper-attribute.md#loop)设置为true的循环场景下，如果设置的模拟拖拽的距离大于布局总长度，此时模拟拖拽距离会被调整为拖拽到刚好显示第一个子节点（向布局起点拖拽）或者最后一个子 &gt; 节点（向布局终点方向拖拽）的距离。
+> 
+> - [onGestureSwipe](arkts-arkui-swiper-attribute.md#ongestureswipe)事件、 &gt; [onContentWillScroll](arkts-arkui-swiper-attribute.md#oncontentwillscroll)事件在拖拽过程中不触发。
+> [customContentTransition](arkts-arkui-swiper-attribute.md#customcontenttransition)会在布局前触发，由于真实的拖拽距离可能在布局时被调整，在传入拖拽距离过大时，触发事 &gt; 件时的返回的节点显示信息可能与布局结果不一致。
 
 **起始版本：** 23
 
@@ -173,7 +186,15 @@ isFakeDragging(): boolean
 preloadItems(indices: Optional<Array<number>>): Promise<void>
 ```
 
-控制Swiper预加载指定子节点。调用该接口后会一次性加载所有指定的子节点，因此为了性能考虑，建议分批加载子节点。使用Promise异步回调。 如果SwiperController对象未绑定任何Swiper组件，直接调用该接口，会抛出JS异常，并返回错误码100004。因此使用该接口时，建议通过try-catch捕获异常。 与[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和自定义组件结合使用时，由于 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)只会保留缓存范围内的自定义组件，在缓存范围外的会被删除，因此需 要开发者保证通过该接口预加载的节点index在缓存范围内。 &gt; **说明：** &gt; Swiper的preloadItems需要在Swiper创建之后去调用，首次预加载推荐在Swiper的onAppear生命周期中去控制。
+控制Swiper预加载指定子节点。调用该接口后会一次性加载所有指定的子节点，因此为了性能考虑，建议分批加载子节点。使用Promise异步回调。
+
+如果SwiperController对象未绑定任何Swiper组件，直接调用该接口，会抛出JS异常，并返回错误码100004。因此使用该接口时，建议通过try-catch捕获异常。
+
+与[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和自定义组件结合使用时，由于 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)只会保留缓存范围内的自定义组件，在缓存范围外的会被删除，因此需 要开发者保证通过该接口预加载的节点index在缓存范围内。
+
+> **说明：**
+
+> Swiper的preloadItems需要在Swiper创建之后去调用，首次预加载推荐在Swiper的onAppear生命周期中去控制。
 
 **起始版本：** 18
 
@@ -212,7 +233,7 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 showNext()
 ```
 
-翻至下一页。翻页带动效切换过程，时长通过Swiper的duration属性设置。
+翻至下一页。翻页带动效切换过程，时长通过Swiper的[duration](arkts-arkui-swiper-attribute.md#duration)属性设置。
 
 **起始版本：** 7
 
@@ -230,7 +251,7 @@ showNext()
 showPrevious()
 ```
 
-翻至上一页。翻页带动效切换过程，时长通过Swiper的duration属性设置。
+翻至上一页。翻页带动效切换过程，时长通过Swiper的[duration](arkts-arkui-swiper-attribute.md#duration)属性设置。
 
 **起始版本：** 7
 
@@ -248,7 +269,13 @@ showPrevious()
 startFakeDrag(): boolean
 ```
 
-开启模拟拖拽功能。 &gt; **说明：** &gt; - Swiper已经处在真实手势拖拽中，或者已经开启了模拟拖拽，调用接口会返回false表示操作失败。 &gt; &gt; - 模拟拖拽无法触发嵌套滚动。
+开启模拟拖拽功能。
+
+> **说明：**
+
+> - Swiper已经处在真实手势拖拽中，或者已经开启了模拟拖拽，调用接口会返回false表示操作失败。
+> 
+> - 模拟拖拽无法触发嵌套滚动。
 
 **起始版本：** 23
 
@@ -274,7 +301,11 @@ startFakeDrag(): boolean
 stopFakeDrag(): boolean
 ```
 
-关闭模拟拖拽功能。 &gt; **说明：** &gt; 在开启模拟拖拽后，如果接收到真实拖拽手势，模拟拖拽会结束。
+关闭模拟拖拽功能。
+
+> **说明：**
+
+> 在开启模拟拖拽后，如果接收到真实拖拽手势，模拟拖拽会结束。
 
 **起始版本：** 23
 

@@ -1,8 +1,10 @@
-# Environment(System API)
+# Environment
 
 For details about how to use environment parameters, see [Environment: Device Environment Query](../../../ui/state-management/arkts-environment.md).
 
-## Built-in Environment Variables | key                  | Type           | Description                                                        | | -------------------- | --------------- | ------------------------------------------------------------ | | accessibilityEnabled | string          | Whether to enable accessibility. If there is no value of **accessibilityEnabled** in the environment variables, the default value passed through APIs such as **envProp** and **envProps** is added to AppStorage.| | colorMode            | ColorMode       | Color mode. The options are as follows:<br>- **ColorMode.LIGHT**: light mode.<br>- **ColorMode.DARK**: dark mode.| | fontScale            | number          | Font scale.                                              | | fontWeightScale      | number          | Font weight ratio.                                                  | | layoutDirection      | LayoutDirection | Layout direction. The options are as follows:<br>- **LayoutDirection.LTR**: from left to right.<br>- **LayoutDirection.RTL**: from right to left.<br>- **Auto**: follows the system settings.| | languageCode         | string          | Current system language, which is in lowercase letters, for example, **zh**.
+## Built-in Environment Variables
+
+| key | Type | Description | | -------------------- | --------------- | ------------------------------------------------------------ | | accessibilityEnabled | string | Whether to enable accessibility. If there is no value of **accessibilityEnabled** in the environment variables, the default value passed through APIs such as **envProp** and **envProps** is added to AppStorage.| | colorMode | ColorMode | Color mode. The options are as follows:<br>- **ColorMode.LIGHT**: light mode.<br>- **ColorMode.DARK**: dark mode.| | fontScale | number | Font scale. | | fontWeightScale | number | Font weight ratio. | | layoutDirection | LayoutDirection | Layout direction. The options are as follows:<br>- **LayoutDirection.LTR**: from left to right.<br>- **LayoutDirection.RTL**: from right to left.<br>- **Auto**: follows the system settings.| | languageCode | string | Current system language, which is in lowercase letters, for example, **zh**.
 
 **Since:** 7
 
@@ -21,7 +23,11 @@ For details about how to use environment parameters, see [Environment: Device En
 static EnvProp<S>(key: string, value: S): boolean
 ```
 
-Stores the built-in environment variable key from [Environment](../../../ui/state-management/arkts-environment.md) into [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the value of the environment variable key is not found in AppStorage, the default value is used and stored in AppStorage. If the value is successfully stored, **true** is returned. If the value of the environment variable key already exists in AppStorage, **false** is returned. You are advised to call this API when the application is started. It is incorrect to use AppStorage to read environment variables without calling **EnvProp** first.
+Stores the built-in environment variable key from [Environment](../../../ui/state-management/arkts-environment.md) into [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the value of the environment variable key is not found in AppStorage, the default value is used and stored in AppStorage. If the value is successfully stored, **true** is returned. If the value of the environment variable key already exists in AppStorage, **false** is returned.
+
+You are advised to call this API when the application is started.
+
+It is incorrect to use AppStorage to read environment variables without calling **EnvProp** first.
 
 **Since:** 7
 
@@ -37,7 +43,7 @@ Stores the built-in environment variable key from [Environment](../../../ui/stat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Environment variable name. For details about the value range, see Built-in Environment Variables. |
+| key | string | Yes | Environment variable name. For details about the value range, see [Built-in Environment Variables](#built-in-environment-variables). |
 | value | S | Yes | Default value used if the value of the environment variable key is not found in AppStorage. |
 
 **Return value:**
@@ -122,7 +128,11 @@ let keys: Array<string> = Environment.Keys(); // keys contains accessibilityEnab
 static envProp<S>(key: string, value: S): boolean
 ```
 
-Stores the built-in environment variable key from [Environment](../../../ui/state-management/arkts-environment.md) into [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the value of the environment variable key is not found in AppStorage, the default value is used and stored in AppStorage. If the value is successfully stored, **true** is returned. If the value of the environment variable key already exists in AppStorage, **false** is returned. You are advised to call this API when the application is started. It is incorrect to use AppStorage to read environment variables without calling **envProp** first.
+Stores the built-in environment variable key from [Environment](../../../ui/state-management/arkts-environment.md) into [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the value of the environment variable key is not found in AppStorage, the default value is used and stored in AppStorage. If the value is successfully stored, **true** is returned. If the value of the environment variable key already exists in AppStorage, **false** is returned.
+
+You are advised to call this API when the application is started.
+
+It is incorrect to use AppStorage to read environment variables without calling **envProp** first.
 
 **Since:** 10
 
@@ -136,7 +146,7 @@ Stores the built-in environment variable key from [Environment](../../../ui/stat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Environment variable name. For details about the value range, see Built-in Environment Variables. |
+| key | string | Yes | Environment variable name. For details about the value range, see [Built-in Environment Variables](#built-in-environment-variables). |
 | value | S | Yes | Default value used if the value of the environment variable key is not found in AppStorage. |
 
 **Return value:**

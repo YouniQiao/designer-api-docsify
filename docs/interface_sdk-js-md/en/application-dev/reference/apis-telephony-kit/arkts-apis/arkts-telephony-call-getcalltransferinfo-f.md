@@ -39,11 +39,11 @@ Obtains call transfer information with the phone number. This API uses a promise
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [8401002](../errorcode-telephony.md#8401002-incorrect-number) | Invalid input call number. |
-| [8401003](../errorcode-telephony.md#8401003-frequent-operations) | Operation too frequent. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [8401002](../errorcode-telephony.md#8401002-incorrect-number) | Invalid input call number. |
+| [8401003](../errorcode-telephony.md#8401003-frequent-operations) | Operation too frequent. |
 

@@ -1,4 +1,4 @@
-# FormError(formError)
+# FormError
 
 枚举，卡片错误码。
 

@@ -1,6 +1,8 @@
 # WebController
 
-WebController is the controller class of the ArkWeb component, used to control various behaviors of the Web component. A WebController object can be bound to only one Web component. After binding, developers can use the controller to perform operations on the Web component, such as page navigation (forward/backward/loading), focus control, zoom adjustment, page refresh and stop, cookie management, and JavaScript injection and execution. WebController is suitable for scenarios where active control of the embedded Web component is required on the app side, such as implementing browser-like forward and backward navigation, establishing a JavaScript interaction channel between the app side and the web page side, dynamically loading web page content, or managing cookie data.
+WebController is the controller class of the ArkWeb component, used to control various behaviors of the Web component. A WebController object can be bound to only one Web component. After binding, developers can use the controller to perform operations on the Web component, such as page navigation (forward/backward/loading), focus control, zoom adjustment, page refresh and stop, cookie management, and JavaScript injection and execution.
+
+WebController is suitable for scenarios where active control of the embedded Web component is required on the app side, such as implementing browser-like forward and backward navigation, establishing a JavaScript interaction channel between the app side and the web page side, dynamically loading web page content, or managing cookie data.
 
 **Since:** 8
 
@@ -106,7 +108,7 @@ Checks whether the current page can move forward or backward by the given step.
 backward()
 ```
 
-Goes backward by one page in the history stack. You are advised to call [accessBackward&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#accessbackward) to check whether the current page can go backward before calling **backward**.
+Goes backward by one page in the history stack. You are advised to call [accessBackward&lt;sup&gt;9+&lt;/sup&gt;](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#accessbackward) to check whether the current page can go backward before calling **backward**.
 
 **Since:** 8
 
@@ -184,7 +186,7 @@ Deletes a specific application JavaScript object that is registered with the win
 forward()
 ```
 
-Goes forward by one page in the history stack. You are advised to call [accessForward&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#accessforward) to check whether the current page can go forward before calling **forward**.
+Goes forward by one page in the history stack. You are advised to call [accessForward&lt;sup&gt;9+&lt;/sup&gt;](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#accessforward) to check whether the current page can go forward before calling **forward**.
 
 **Since:** 8
 
@@ -208,7 +210,7 @@ Obtains the cookie management object of the **Web** component.
 
 **Deprecated since:** 9
 
-**Substitutes:** [WebCookieManager](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md)
+**Substitutes:** [WebCookieManager](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md)
 
 <!--Device-WebController-getCookieManager(): WebCookie--><!--Device-WebController-getCookieManager(): WebCookie-End-->
 
@@ -250,7 +252,11 @@ Obtains the element type of the area being clicked.
 loadData(options: { data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string })
 ```
 
-If **baseUrl** is empty, the specified character string will be loaded using the data protocol. If **baseUrl** is set to a data URL, the encoded data string will be loaded by the Web component using the data protocol. If **baseUrl** is set to an HTTP or HTTPS URL, the encoded data string will be processed by the Web component as a non-encoded string in a manner similar to **loadUrl**.
+If **baseUrl** is empty, the specified character string will be loaded using the data protocol.
+
+If **baseUrl** is set to a data URL, the encoded data string will be loaded by the Web component using the data protocol.
+
+If **baseUrl** is set to an HTTP or HTTPS URL, the encoded data string will be processed by the Web component as a non-encoded string in a manner similar to **loadUrl**.
 
 **Since:** 8
 
@@ -274,7 +280,11 @@ If **baseUrl** is empty, the specified character string will be loaded using the
 loadUrl(options: { url: string | Resource, headers?: Array<Header> })
 ```
 
-Loads the specified URL with the given HTTP headers. The object injected through **loadUrl** is valid only in the current document. It will be invalid on a new page navigated to through **loadUrl**. The object injected through **registerJavaScriptProxy** is still valid on a new page redirected through **loadUrl**.
+Loads the specified URL with the given HTTP headers.
+
+The object injected through **loadUrl** is valid only in the current document. It will be invalid on a new page navigated to through **loadUrl**.
+
+The object injected through **registerJavaScriptProxy** is still valid on a new page redirected through **loadUrl**.
 
 **Since:** 8
 
@@ -442,7 +452,7 @@ Sets a zoom factor for the current web page.
 
 **Deprecated since:** 9
 
-**Substitutes:** [zoom](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#zoom)
+**Substitutes:** [zoom](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#zoom)
 
 <!--Device-WebController-zoom(factor: number): void--><!--Device-WebController-zoom(factor: number): void-End-->
 

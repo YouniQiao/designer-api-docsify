@@ -1,6 +1,10 @@
 # @ohos.enterprise.dateTimeManager
 
-The **dateTimeManager** module provides APIs for system time management. &gt; **NOTE：**&gt; &gt; The APIs of this module are available only to &gt; [MDM applications](../../../mdm/mdm-kit-term.md#mdm-application-device-administrator-application), and can be &gt; called only after the device administrator application is activated via &gt; [enableAdmin](arkts-mdm-adminmanager-enableadmin-f-sys.md).
+The **dateTimeManager** module provides APIs for system time management.
+
+> **NOTE：**
+> 
+> The APIs of this module are available only to &gt; [MDM applications](../../../mdm/mdm-kit-term.md#mdm-application-device-administrator-application), and can be &gt; called only after the device administrator application is activated via &gt; [enableAdmin](arkts-mdm-adminmanager-enableadmin-f-sys.md).
 
 **Since:** 9
 

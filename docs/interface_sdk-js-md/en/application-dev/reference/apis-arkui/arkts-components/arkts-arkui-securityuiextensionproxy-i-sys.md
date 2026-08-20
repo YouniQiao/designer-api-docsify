@@ -1,4 +1,4 @@
-# SecurityUIExtensionProxy(System API) (System API)
+# SecurityUIExtensionProxy (System API)
 
 Implements a **SecurityUIExtensionProxy** instance for the component host to send data to, subscribe to, or unsubscribe from the started ability through the connection established between the two parties.
 

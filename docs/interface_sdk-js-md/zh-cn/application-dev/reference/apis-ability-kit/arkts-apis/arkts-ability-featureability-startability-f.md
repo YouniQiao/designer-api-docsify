@@ -12,7 +12,11 @@ import { featureAbility } from '@kit.AbilityKit';
 function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<number>): void
 ```
 
-启动新的Ability。使用callback异步回调。 &gt; **说明：** &gt; &gt; 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
+启动新的Ability。使用callback异步回调。
+
+> **说明：**
+> 
+> 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
 
 **起始版本：** 6
 
@@ -27,7 +31,7 @@ function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md) | 是 | 表示被启动的Ability。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当启动Ability成功，err为undefined，data为0表示启动成功，data为其他表示启动失败；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数。当启动Ability成功，err为undefined，data为0表示启动成功，data为其他表示启动失败；否则为错误对象。 |
 
 **示例**
 
@@ -67,7 +71,11 @@ featureAbility.startAbility(
 function startAbility(parameter: StartAbilityParameter): Promise<number>
 ```
 
-启动新的Ability。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
+启动新的Ability。使用Promise异步回调。
+
+> **说明：**
+> 
+> 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
 
 **起始版本：** 6
 

@@ -47,11 +47,11 @@ createPlayer(id: number, options?: AudioHapticPlayerOptions): Promise<AudioHapti
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [5400106](../../apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupport format. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 **示例**
 
@@ -104,10 +104,10 @@ Create an audio haptic player. This method uses a promise to return the result. 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [5400106](../../apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupport format. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## registerSource
 
@@ -115,7 +115,11 @@ Create an audio haptic player. This method uses a promise to return the result. 
 registerSource(audioUri: string, hapticUri: string): Promise<int>
 ```
 
-通过Uri注册音频和振动资源。使用Promise异步回调。 &gt; **注意：** &gt; &gt; 单个应用最多支持同时注册128个资源，超过之后将会注册失败（返回注册的资源ID为负数）。推荐应用合理控制注册资源数量，对于不再需要使用的资源，建议及时取消注册。
+通过Uri注册音频和振动资源。使用Promise异步回调。
+
+> **注意：**
+> 
+> 单个应用最多支持同时注册128个资源，超过之后将会注册失败（返回注册的资源ID为负数）。推荐应用合理控制注册资源数量，对于不再需要使用的资源，建议及时取消注册。
 
 **起始版本：** 23
 
@@ -167,7 +171,11 @@ audioHapticManagerInstance.registerSource(audioUri, hapticUri).then((value) => {
 registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<int>
 ```
 
-通过文件描述符注册音频和振动资源。使用Promise异步回调。 &gt; **注意：** &gt; &gt; 单个应用最多支持同时注册128个资源，超过之后将会注册失败（返回注册的资源ID为负数）。推荐应用合理控制注册资源数量，对于不再需要使用的资源，建议及时取消注册。
+通过文件描述符注册音频和振动资源。使用Promise异步回调。
+
+> **注意：**
+> 
+> 单个应用最多支持同时注册128个资源，超过之后将会注册失败（返回注册的资源ID为负数）。推荐应用合理控制注册资源数量，对于不再需要使用的资源，建议及时取消注册。
 
 **起始版本：** 23
 
@@ -307,7 +315,11 @@ audioHapticManagerInstance.setStreamUsage(id, usage);
 unregisterSource(id: int): Promise<void>
 ```
 
-取消注册音频和振动资源。使用Promise异步回调。 &gt; **注意：** &gt; &gt; 对于不再需要使用的资源，建议应用及时取消注册，避免出现资源泄漏或资源数量超上限等问题。
+取消注册音频和振动资源。使用Promise异步回调。
+
+> **注意：**
+> 
+> 对于不再需要使用的资源，建议应用及时取消注册，避免出现资源泄漏或资源数量超上限等问题。
 
 **起始版本：** 23
 

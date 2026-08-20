@@ -13,7 +13,11 @@ import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 function getUserAuthWidgetMgr(version: int): UserAuthWidgetMgr
 ```
 
-Obtains the authentication widget manager object. It is used to obtain the **UserAuthWidgetMgr** instance, which can be used to register custom authentication widgets with the system for unified management. &gt; **NOTE：**&gt; Each **UserAuthWidgetMgr** instance can manage one authentication widget. To manage multiple widgets, you need to &gt; obtain multiple instances.
+Obtains the authentication widget manager object. It is used to obtain the **UserAuthWidgetMgr** instance, which can be used to register custom authentication widgets with the system for unified management.
+
+> **NOTE：**
+
+> Each **UserAuthWidgetMgr** instance can manage one authentication widget. To manage multiple widgets, you need to &gt; obtain multiple instances.
 
 **Since:** 23
 
@@ -41,9 +45,9 @@ Obtains the authentication widget manager object. It is used to obtain the **Use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 **Examples**

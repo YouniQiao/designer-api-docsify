@@ -78,8 +78,8 @@ getHapticsFeature(): systemSoundManager.ToneHapticsFeature
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
 
 **示例**
 
@@ -121,8 +121,8 @@ getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeatu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
 
 **示例**
 
@@ -160,8 +160,8 @@ getTitle(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 
 **示例**
 
@@ -195,14 +195,14 @@ offError(callback?: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Error callback while receiving the error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | Error callback while receiving the error event. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
 
 **示例**
 
@@ -242,14 +242,14 @@ offPlayFinished(callback?: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | Callback used to obtain the finished event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 否 | Callback used to obtain the finished event. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
 
 **示例**
 
@@ -288,14 +288,14 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 事件回调类型，支持的事件为'error'，当取消监听铃音播放过程中的错误事件时，触发该事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数，返回错误码和错误信息。不填入此参数时，会取消该事件的所有监听。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | 回调函数，返回错误码和错误信息。不填入此参数时，会取消该事件的所有监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
 
 **示例**
 
@@ -336,14 +336,14 @@ off(type: 'playFinished', callback?: Callback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'playFinished' | 是 | 事件回调类型，支持的事件为'playFinished'，当取消监听铃音播放完成事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 回调函数，返回结束事件的音频流的streamId。不填入此参数时，会取消该事件的所有监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 否 | 回调函数，返回结束事件的音频流的streamId。不填入此参数时，会取消该事件的所有监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
 
 **示例**
 
@@ -381,14 +381,14 @@ onError(callback: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Error callback while receiving the error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | Error callback while receiving the error event. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
 
 **示例**
 
@@ -406,7 +406,9 @@ systemTonePlayer.onError((err: BusinessError) => {
 onPlayFinished(streamId: int, callback: Callback<int>): void
 ```
 
-监听铃音播放完成事件（当铃音播放完成时触发）。使用callback异步回调。 监听对象为传入的streamId对应音频流。当streamId传入0时，监听本播放器对应的所有音频流。
+监听铃音播放完成事件（当铃音播放完成时触发）。使用callback异步回调。
+
+监听对象为传入的streamId对应音频流。当streamId传入0时，监听本播放器对应的所有音频流。
 
 **起始版本：** 23
 
@@ -421,14 +423,14 @@ onPlayFinished(streamId: int, callback: Callback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | streamId | int | 是 | Stream id, received from start(). |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | Callback used to obtain the finished event. The callback info is the stream id that is finished. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | Callback used to obtain the finished event. The callback info is the stream id that is finished. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
 
 **示例**
 
@@ -471,14 +473,14 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 事件回调类型，支持的事件为'error'，当铃音播放过程中发生错误时，触发该事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，返回错误码和错误信息。错误码请参考AVPlayer的 on('error')。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | 回调函数，返回错误码和错误信息。错误码请参考AVPlayer的 on('error')。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
 
 **示例**
 
@@ -496,7 +498,9 @@ systemTonePlayer.on('error', (err: BusinessError) => {
 on(type: 'playFinished', streamId: int, callback: Callback<int>): void
 ```
 
-监听铃音播放完成事件（当铃音播放完成时触发）。使用callback异步回调。 监听对象为传入的streamId对应音频流。当streamId传入0时，监听本播放器对应的所有音频流。
+监听铃音播放完成事件（当铃音播放完成时触发）。使用callback异步回调。
+
+监听对象为传入的streamId对应音频流。当streamId传入0时，监听本播放器对应的所有音频流。
 
 **起始版本：** 18
 
@@ -512,14 +516,14 @@ on(type: 'playFinished', streamId: int, callback: Callback<int>): void
 | --- | --- | --- | --- |
 | type | 'playFinished' | 是 | 事件回调类型，支持的事件为'playFinished'，当铃音播放完成时，触发该事件。 |
 | streamId | int | 是 | 监听对象为指定streamId对应的音频流，streamId通过[start](#start)获取。 当streamId传入0时，可监听当前播放器对应的所有音频流。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 'playFinished'的回调方法。返回播放完成的音频流的streamId。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | 'playFinished'的回调方法。返回播放完成的音频流的streamId。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
 
 **示例**
 
@@ -567,9 +571,9 @@ prepare(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 **示例**
 
@@ -649,10 +653,10 @@ setAudioVolumeScale(scale: double): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. For example, value is outside [0,1]. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 **示例**
 
@@ -675,7 +679,9 @@ try {
 setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void
 ```
 
-设置播放铃音时的振动风格。 调用本接口前，应该先调用[getSupportedHapticsFeatures](#getsupportedhapticsfeatures)查询 支持的振动风格，如果设置不支持的振动风格，则设置失败。
+设置播放铃音时的振动风格。
+
+调用本接口前，应该先调用[getSupportedHapticsFeatures](#getsupportedhapticsfeatures)查询 支持的振动风格，如果设置不支持的振动风格，则设置失败。
 
 **起始版本：** 23
 
@@ -695,10 +701,10 @@ setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 **示例**
 
@@ -707,7 +713,7 @@ systemTonePlayer.getSupportedHapticsFeatures().then((features: Array<systemSound
   console.info('Succeeded in doing getSupportedHapticsFeatures.');
   if (features.length > 0) {
     let feature: systemSoundManager.ToneHapticsFeature = features[0];
-    systemTonePlayer.setHapticsFeature(feature);
+    systemTonePlayer?.setHapticsFeature(feature);
     console.info('Succeeded in doing setHapticsFeature.');
   }
 }).catch((err: BusinessError) => {
@@ -749,10 +755,10 @@ start(toneOptions?: SystemToneOptions): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 
 **示例**
 
@@ -804,9 +810,9 @@ stop(id: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 **示例**
 

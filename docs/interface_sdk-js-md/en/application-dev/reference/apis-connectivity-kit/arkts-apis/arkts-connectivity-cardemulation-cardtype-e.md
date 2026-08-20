@@ -2,6 +2,8 @@
 
 Define the card emulation type, payment or other.
 
+@enum { string }
+
 **Since:** 23
 
 <!--Device-cardEmulation-enum CardType--><!--Device-cardEmulation-enum CardType-End-->

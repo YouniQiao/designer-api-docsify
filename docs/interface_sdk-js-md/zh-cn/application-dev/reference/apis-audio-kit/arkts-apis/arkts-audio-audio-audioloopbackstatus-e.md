@@ -2,6 +2,8 @@
 
 表示返听状态的枚举。
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-audio-enum AudioLoopbackStatus--><!--Device-audio-enum AudioLoopbackStatus-End-->

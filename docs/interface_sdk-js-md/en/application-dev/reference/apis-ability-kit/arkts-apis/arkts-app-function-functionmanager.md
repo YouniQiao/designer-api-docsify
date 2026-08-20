@@ -2,6 +2,8 @@
 
 The module provides the capability to manage and invoke functions in the system.
 
+@namespace functionManager
+
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.

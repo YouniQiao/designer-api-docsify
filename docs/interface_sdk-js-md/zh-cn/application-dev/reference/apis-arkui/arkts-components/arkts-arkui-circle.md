@@ -1,8 +1,12 @@
 # Circle
 
-用于绘制圆形的组件。 > **说明：** > > 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+用于绘制圆形的组件。
 
-## 子组件 无
+> **说明：** > > 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+
+## 子组件
+
+无
 
 ## Circle
 
@@ -58,5 +62,4 @@ Circle(value?: CircleOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [CircleOptions](arkts-arkui-circleoptions-i.md) | 用于描述Circle组件绘制属性。 |
 

@@ -2,11 +2,13 @@
 
 Defines the prompt info of button.
 
+@interface Button
+
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [Button](../../apis-na/arkts-apis/arkts-na-promptaction-button-i.md)
+**Substitutes:** [Button](arkts-arkui-promptaction-button-i.md)
 
 <!--Device-prompt-interface Button--><!--Device-prompt-interface Button-End-->
 
@@ -33,7 +35,7 @@ Defines the color of button.
 
 **Deprecated since:** 9
 
-**Substitutes:** [color](../../apis-na/arkts-apis/arkts-na-promptaction-button-i.md#color)
+**Substitutes:** [color](arkts-arkui-promptaction-button-i.md#color)
 
 <!--Device-Button-color: string--><!--Device-Button-color: string-End-->
 
@@ -53,7 +55,7 @@ Defines the button info.
 
 **Deprecated since:** 9
 
-**Substitutes:** [text](../../apis-na/arkts-apis/arkts-na-promptaction-button-i.md#text)
+**Substitutes:** [text](arkts-arkui-promptaction-button-i.md#text)
 
 <!--Device-Button-text: string--><!--Device-Button-text: string-End-->
 

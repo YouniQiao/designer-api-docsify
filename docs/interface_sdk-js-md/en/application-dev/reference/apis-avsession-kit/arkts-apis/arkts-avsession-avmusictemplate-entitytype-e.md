@@ -2,6 +2,8 @@
 
 Enumeration of media resource type.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-avMusicTemplate-enum EntityType--><!--Device-avMusicTemplate-enum EntityType-End-->

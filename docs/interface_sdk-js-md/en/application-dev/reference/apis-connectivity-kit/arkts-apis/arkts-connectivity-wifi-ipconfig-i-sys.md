@@ -2,6 +2,8 @@
 
 Wi-Fi IP configuration information.
 
+@interface IpConfig
+
 **Since:** 7
 
 **Deprecated since:** 9

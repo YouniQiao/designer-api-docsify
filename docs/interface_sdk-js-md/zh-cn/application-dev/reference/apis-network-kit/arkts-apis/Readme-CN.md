@@ -549,3 +549,6 @@
 - [@system.network](arkts-system-network.md)
   - [Network](arkts-network-system-network-network-depr-c.md)
   - [NetworkResponse](arkts-network-system-network-networkresponse-depr-i.md)
+- application<!--arkts-networkkit-application-->
+  - [VpnExtensionContext](arkts-vpnextensioncontext.md)
+    - [VpnExtensionContext](arkts-network-vpnextensioncontext-c.md)

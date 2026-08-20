@@ -188,7 +188,7 @@ immersiveMode?: ImmersiveMode
 
 Overlay effect for the page-level dialog box. <br>**NOTE：**<br>- Default value: **ImmersiveMode.DEFAULT** <br>- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
-**Type:** [ImmersiveMode](../../apis-na/arkts-apis/arkts-na-promptaction-immersivemode-e.md)
+**Type:** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
 
 **Default:** ImmersiveMode.DEFAULT
 
@@ -232,7 +232,7 @@ levelMode?: LevelMode
 
 Display level of the dialog box. <br>**NOTE：**<br>- Default value: **LevelMode.OVERLAY** <br>- This parameter takes effect only when **showInSubWindow** is set to **false**.
 
-**Type:** [LevelMode](../../apis-na/arkts-apis/arkts-na-promptaction-levelmode-e.md)
+**Type:** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
 
 **Default:** LevelMode.OVERLAY
 
@@ -254,7 +254,7 @@ levelOrder?: LevelOrder
 
 Display order of the dialog box. <br>**NOTE：**<br>- Default value: **LevelOrder.clamp(0)** <br>- Dynamic updating is not supported.
 
-**Type:** [LevelOrder](../../apis-na/arkts-apis/arkts-na-promptaction-levelorder-c.md)
+**Type:** [LevelOrder](arkts-arkui-promptaction-levelorder-c.md)
 
 **Default:** The value returned by LevelOrder.clamp(0)
 

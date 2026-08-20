@@ -9,18 +9,18 @@ import { curves } from '@kit.ArkUI';
 ## customCurve
 
 ```TypeScript
-function customCurve(interpolate: (fraction: number) => number): ICurve
+export function customCurve(interpolate: (fraction: double) => double): ICurve
 ```
 
 Creates a custom curve.
 
-**Since:** 10
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-curves-function customCurve(interpolate: (fraction: number) => number): ICurve--><!--Device-curves-function customCurve(interpolate: (fraction: number) => number): ICurve-End-->
+<!--Device-curves-export function customCurve(interpolate: (fraction: double) => double): ICurve--><!--Device-curves-export function customCurve(interpolate: (fraction: double) => double): ICurve-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,21 +28,11 @@ Creates a custom curve.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| interpolate | (fraction: number) =&gt; number | Yes | Custom interpolation callback.<br>**fraction**: input x value for interpolation when the animation starts. Value range: [0, 1].<br>The return value is the y value of the curve. Value range: [0, 1].<br>**NOTE：**<br>If **fraction** is **0**, the return value **0** corresponds to the animation start point; any other return value means that the animation jumps at the start point.<br>If **fraction** is **1**, the return value **1** corresponds to the animation end point; any other return value means that the end value of the animation is not the value of the state variable, which will result in an effect of transition from that end value to the value of the state variable. |
+| interpolate | (fraction: double) =&gt; double | Yes | Custom interpolation callback.fraction: input x value for interpolation. when the animation starts. Value range: [0, 1]The return value is the y value of the curve. Value range: [0, 1]. &lt;p&gt;**NOTE：**: <br>If fraction is 0, the return value 0 corresponds to the animation start point; <br>any other return value means that the animation jumps at the start point.If fraction is 1, the return <br>value 1 corresponds to the animation end point; any other return value means that the end value <br>of the animation is not the value of the state variable, which will result in an effect of transitions <br>from that end value to the value of the state variable. &lt;/p&gt; |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
 | ICurve | Interpolation curve. |
-
-**Examples**
-
-```TypeScript
-import { curves } from '@kit.ArkUI'
-let interpolate = (fraction:number):number => {
-  return Math.sqrt(fraction)
-}
-let curve = curves.customCurve(interpolate) // Create a custom interpolation curve.
-```
 

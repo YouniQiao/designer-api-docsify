@@ -41,15 +41,15 @@ Migrates files from the source path to the destination path. This API uses a pro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700086](../errorcode-bundle.md#17700086-system-error) | System error occurred during copy execution. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700084](../errorcode-bundle.md#17700084-no-read-permissions-for-source-paths) | There are inaccessible path in the source paths. |
-| [17700085](../errorcode-bundle.md#17700085-no-write-permissions-for-the-destination-path) | The destination path cannot be accessed. |
-| [17700082](../errorcode-bundle.md#17700082-user-authentication-failed) | User authentication failed. |
-| [17700083](../errorcode-bundle.md#17700083-user-authentication-times-out) | Waiting for user authentication timeout. |
 | [17700080](../errorcode-bundle.md#17700080-invalid-source-paths) | The source paths are invalid. |
 | [17700081](../errorcode-bundle.md#17700081-invalid-destination-path) | The destination path is invalid. |
+| [17700082](../errorcode-bundle.md#17700082-user-authentication-failed) | User authentication failed. |
+| [17700083](../errorcode-bundle.md#17700083-user-authentication-times-out) | Waiting for user authentication timeout. |
+| [17700084](../errorcode-bundle.md#17700084-no-read-permissions-for-source-paths) | There are inaccessible path in the source paths. |
+| [17700085](../errorcode-bundle.md#17700085-no-write-permissions-for-the-destination-path) | The destination path cannot be accessed. |
+| [17700086](../errorcode-bundle.md#17700086-system-error) | System error occurred during copy execution. |
 
 **Examples**
 

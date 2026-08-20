@@ -43,10 +43,10 @@ function getExtensionAbilityResourceInfo(bundleName: string, extensionAbilityTyp
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | AppIndex not in valid range or not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
+| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | AppIndex not in valid range or not found. |
 
 **示例**
 

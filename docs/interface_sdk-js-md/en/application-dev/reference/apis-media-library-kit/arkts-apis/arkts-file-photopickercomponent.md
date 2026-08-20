@@ -17,7 +17,7 @@ import { PhotoPickerComponent, PickerController, PickerOptions, DataType, BaseIt
 | [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md) | Represents basic image and video information. |
 | [ClickResult](arkts-medialibrary-file-photopickercomponent-clickresult-c.md) | Sets whether the asset with the specified URI is selected. |
 | [CompletedResult](arkts-medialibrary-file-photopickercomponent-completedresult-c.md) | Defines the information about the Picker's state from the last exit. |
-| [ItemInfo](arkts-medialibrary-file-photopickercomponent-iteminfo-c.md) | It inherits from [BaseItemInfo](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-baseiteminfo-c.md), adding the parameter **itemType**. Represents basic image and video information. |
+| [ItemInfo](arkts-medialibrary-file-photopickercomponent-iteminfo-c.md) | It inherits from [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md), adding the parameter **itemType**. |
 | [MaxSelected](arkts-medialibrary-file-photopickercomponent-maxselected-c.md) | Represents the maximum number of media assets that can be selected at a time. |
 | [PhotoBrowserInfo](arkts-medialibrary-file-photopickercomponent-photobrowserinfo-c.md) | Represents information about the photo browser page. |
 | [PickerController](arkts-medialibrary-file-photopickercomponent-pickercontroller-c.md) | Defines an instance used to send data to the **PhotoPickerComponent**. |
@@ -27,13 +27,13 @@ import { PhotoPickerComponent, PickerController, PickerOptions, DataType, BaseIt
 | [RecoveryResult](arkts-medialibrary-file-photopickercomponent-recoveryresult-c.md) | RecoveryResult |
 | [SingleLineConfig](arkts-medialibrary-file-photopickercomponent-singlelineconfig-c.md) | Represents the single-line display mode. In single-line mode, the component does not provide functions for viewing a larger image. The component does not support callbacks related to large images, and the PickerController does not support APIs related to large images, making API calls ineffective. |
 | [UnselectableItemInfo](arkts-medialibrary-file-photopickercomponent-unselectableiteminfo-c.md) | UnselectableItemInfo |
-| [UpdatablePickerConfigs](arkts-medialibrary-file-photopickercomponent-updatablepickerconfigs-c.md) | Describes the updatable attributes of the **PhotoPickerComponent**. These attributes are a subset of [PickerOptions](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-pickeroptions-c.md). |
+| [UpdatablePickerConfigs](arkts-medialibrary-file-photopickercomponent-updatablepickerconfigs-c.md) | Describes the updatable attributes of the **PhotoPickerComponent**. These attributes are a subset of [PickerOptions](arkts-medialibrary-file-photopickercomponent-pickeroptions-c.md). |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [PhotoPickerComponent](arkts-medialibrary-file-photopickercomponent-photopickercomponent-s.md) | PhotoPickerComponent({ pickerOptions?: PickerOptions, onSelect?: (uri: string) =&gt; void, onDeselect?: (uri: string) =&gt; void, onItemClicked?: (itemInfo: ItemInfo, clickType: ClickType) =&gt; boolean, onItemClickedNotify?: ItemClickedNotifyCallback, onEnterPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) =&gt; boolean, onExitPhotoBrowser? : (photoBrowserInfo: PhotoBrowserInfo) =&gt; boolean, onPickerControllerReady?: () =&gt; void, onPhotoBrowserChanged?: ( browserItemInfo: BaseItemInfo) =&gt; boolean, onSelectedItemsDeleted?: ItemsDeletedCallback, onExceedMaxSelected?: ExceedMaxSelectedCallback, onCurrentAlbumDeleted?: CurrentAlbumDeletedCallback, onVideoPlayStateChanged?: videoPlayStateChangedCallback, pickerController: PickerController }) Allows the application to access images or videos in the user directory without any permission. &gt; **NOTE：**&gt; &gt; If the **PhotoPickerComponent** is used with the **Tabs** component, the swipe gestures of the **Tabs** component &gt; conflict with those of the photo browser page. &gt; &gt; To prevent this problem, you can disable the swipe operation for the **Tabs** component in &gt; **onEnterPhotoBrowser()** and enable it in **onExitPhotoBrowser()**. This conflict will be resolved in later &gt; versions. |
+| [PhotoPickerComponent](arkts-medialibrary-file-photopickercomponent-photopickercomponent-s.md) | PhotoPickerComponent({ pickerOptions?: PickerOptions, onSelect?: (uri: string) =&gt; void, onDeselect?: (uri: string) =&gt; void, onItemClicked?: (itemInfo: ItemInfo, clickType: ClickType) =&gt; boolean, onItemClickedNotify?: ItemClickedNotifyCallback, onEnterPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) =&gt; boolean, onExitPhotoBrowser? : (photoBrowserInfo: PhotoBrowserInfo) =&gt; boolean, onPickerControllerReady?: () =&gt; void, onPhotoBrowserChanged?: ( browserItemInfo: BaseItemInfo) =&gt; boolean, onSelectedItemsDeleted?: ItemsDeletedCallback, onExceedMaxSelected?: ExceedMaxSelectedCallback, onCurrentAlbumDeleted?: CurrentAlbumDeletedCallback, onVideoPlayStateChanged?: videoPlayStateChangedCallback, pickerController: PickerController }) |
 
 ### Enums
 
@@ -48,7 +48,7 @@ import { PhotoPickerComponent, PickerController, PickerOptions, DataType, BaseIt
 | [PhotoBrowserRange](arkts-medialibrary-file-photopickercomponent-photobrowserrange-e.md) | Enumerates the view range on the photo browser page. |
 | [PhotoBrowserUIElement](arkts-medialibrary-file-photopickercomponent-photobrowseruielement-e.md) | Represents other UI elements except the image preview component on the photo browser page. |
 | [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md) | Enumerates the Picker color modes. |
-| [PickerOrientation](arkts-medialibrary-file-photopickercomponent-pickerorientation-e.md) | Enumerates the sliding preview directions of the Picker grid page. This capability can be configured since API version 20. If this capability is set since API version 12 to 19, the setting does not take effect and the default direction (vertical) is used. |
+| [PickerOrientation](arkts-medialibrary-file-photopickercomponent-pickerorientation-e.md) | Enumerates the sliding preview directions of the Picker grid page. |
 | [ReminderMode](arkts-medialibrary-file-photopickercomponent-remindermode-e.md) | Enumerates the types of the reminder when the number of selected items reaches the maximum. |
 | [SaveMode](arkts-medialibrary-file-photopickercomponent-savemode-e.md) | Enumerates the modes for saving images or videos. |
 | [SelectMode](arkts-medialibrary-file-photopickercomponent-selectmode-e.md) | Enumerates the selection modes. |

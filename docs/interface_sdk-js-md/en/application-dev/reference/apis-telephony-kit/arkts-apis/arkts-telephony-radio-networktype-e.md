@@ -2,6 +2,8 @@
 
 Describes the network type.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-radio-export enum NetworkType--><!--Device-radio-export enum NetworkType-End-->

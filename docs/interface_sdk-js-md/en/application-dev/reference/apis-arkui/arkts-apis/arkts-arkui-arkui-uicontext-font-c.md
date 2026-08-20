@@ -1,6 +1,12 @@
 # Font
 
-Provides APIs for registering custom fonts. &gt; **NOTE：**&gt; &gt; - In the following API examples, you must first use [getFont()](arkts-arkui-arkui-uicontext-uicontext-c.md#getfont) in **UIContext** to obtain &gt; a **Font** instance, and then call the APIs using the obtained instance. &gt; &gt; - You are advised to use the [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync) API of the &gt; font engine to register custom fonts.
+Provides APIs for registering custom fonts.
+
+> **NOTE：**
+> 
+> - In the following API examples, you must first use [getFont()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getfont) in **UIContext** to obtain &gt; a **Font** instance, and then call the APIs using the obtained instance.
+> 
+> - You are advised to use the [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync) API of the &gt; font engine to register custom fonts.
 
 **Since:** 10
 
@@ -53,7 +59,11 @@ Obtains information about a system font based on the font name.
 getSystemFontList(): Array<string>
 ```
 
-Obtains the list of supported fonts. This API only takes effect on PCs/2-in-1 devices and returns an empty array on other devices. You are advised to use the [getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md) API to obtain the latest system-supported font list data.
+Obtains the list of supported fonts.
+
+This API only takes effect on PCs/2-in-1 devices and returns an empty array on other devices.
+
+You are advised to use the [getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md) API to obtain the latest system-supported font list data.
 
 **Since:** 10
 
@@ -77,7 +87,9 @@ Obtains the list of supported fonts. This API only takes effect on PCs/2-in-1 de
 registerFont(options: font.FontOptions): void
 ```
 
-Registers a custom font with the font manager. This API is asynchronous and does not support concurrent calls.
+Registers a custom font with the font manager.
+
+This API is asynchronous and does not support concurrent calls.
 
 **Since:** 10
 

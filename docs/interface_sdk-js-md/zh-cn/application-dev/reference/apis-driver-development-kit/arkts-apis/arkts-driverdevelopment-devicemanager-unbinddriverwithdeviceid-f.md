@@ -38,9 +38,9 @@ function unbindDriverWithDeviceId(deviceId: long): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [26300001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-扩展外设驱动服务异常) | ExternalDeviceManager service exception. |
-| [26300003](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300003-驱动客户端未绑定任何驱动服务端) | There is no binding relationship. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permission check failed. |
+| [26300001](../errorcode-deviceManager.md#26300001-扩展外设驱动服务异常) | ExternalDeviceManager service exception. |
+| [26300003](../errorcode-deviceManager.md#26300003-驱动客户端未绑定任何驱动服务端) | There is no binding relationship. |
 
 **示例**
 

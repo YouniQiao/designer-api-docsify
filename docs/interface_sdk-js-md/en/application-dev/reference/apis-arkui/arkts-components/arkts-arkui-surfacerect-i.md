@@ -1,6 +1,14 @@
 # SurfaceRect
 
-Describes the rectangle of the surface held by the **XComponent**. &gt; **NOTE：**&gt; The **surfaceWidth** and **surfaceHeight** attributes default to the size of the **XComponent** if the &gt; [setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect) API is not called and neither &gt; [border](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#border) nor &gt; padding is set. &gt; &gt; Make sure the values of **surfaceWidth** and **surfaceHeight** do not exceed 8192 px. Exceeding this limit may &gt; lead to rendering issues. &gt; &gt; In immersive scenarios, the default layout of **SurfaceRect** does not include the safe area. To achieve an &gt; immersive effect, you must set the surface display area using the &gt; [setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect) API.
+Describes the rectangle of the surface held by the **XComponent**.
+
+> **NOTE：**
+
+> The **surfaceWidth** and **surfaceHeight** attributes default to the size of the **XComponent** if the &gt; [setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect) API is not called and neither &gt; [border](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#border) nor &gt; padding is set.
+> 
+> Make sure the values of **surfaceWidth** and **surfaceHeight** do not exceed 8192 px. Exceeding this limit may &gt; lead to rendering issues.
+> 
+> In immersive scenarios, the default layout of **SurfaceRect** does not include the safe area. To achieve an &gt; immersive effect, you must set the surface display area using the &gt; [setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect) API.
 
 **Since:** 12
 
@@ -19,7 +27,9 @@ Describes the rectangle of the surface held by the **XComponent**. &gt; **NOTE�
 offsetX?: number
 ```
 
-X-coordinate of the surface rectangle relative to the upper-left corner of the **XComponent**. Unit: px
+X-coordinate of the surface rectangle relative to the upper-left corner of the **XComponent**.
+
+Unit: px
 
 **Type:** number
 
@@ -39,7 +49,9 @@ X-coordinate of the surface rectangle relative to the upper-left corner of the *
 offsetY?: number
 ```
 
-Y-coordinate of the surface rectangle relative to the upper left corner of the **XComponent**. Unit: px
+Y-coordinate of the surface rectangle relative to the upper left corner of the **XComponent**.
+
+Unit: px
 
 **Type:** number
 
@@ -59,7 +71,9 @@ Y-coordinate of the surface rectangle relative to the upper left corner of the *
 surfaceHeight: number
 ```
 
-Height of the surface rectangle. Unit: px.
+Height of the surface rectangle.
+
+Unit: px.
 
 **Type:** number
 
@@ -79,7 +93,9 @@ Height of the surface rectangle. Unit: px.
 surfaceWidth: number
 ```
 
-Width of the surface rectangle. Unit: px.
+Width of the surface rectangle.
+
+Unit: px.
 
 **Type:** number
 

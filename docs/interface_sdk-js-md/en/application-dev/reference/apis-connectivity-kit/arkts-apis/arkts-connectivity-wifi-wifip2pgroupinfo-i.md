@@ -1,6 +1,6 @@
 # WifiP2pGroupInfo
 
-P2P group information.
+P2P group information. @interface WifiP2pGroupInfo
 
 **Since:** 8
 

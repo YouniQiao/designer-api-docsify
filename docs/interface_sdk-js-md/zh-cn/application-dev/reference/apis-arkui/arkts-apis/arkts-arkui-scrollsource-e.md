@@ -1,6 +1,6 @@
 # ScrollSource
 
-The possible source of scroll event
+The possible source of scroll event @enum { number } ScrollSource
 
 **起始版本：** 12
 

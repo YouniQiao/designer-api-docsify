@@ -1,6 +1,8 @@
 # PasteButton属性/事件
 
-不支持通用属性，仅继承安全控件通用属性。 不支持通用事件，仅支持以下事件。
+不支持通用属性，仅继承安全控件通用属性。
+
+不支持通用事件，仅支持以下事件。
 
 **继承/实现关系：** PasteButtonAttribute extends SecurityComponentMethod<PasteButtonAttribute>
 
@@ -21,7 +23,10 @@
 onClick(event: PasteButtonCallback)
 ```
 
-点击粘贴控件触发该回调，回调返回授权结果。授权成功后应用可临时获取读取剪贴板权限。 &gt; **说明：**&gt; - 为避免因控件样式不合法而导致授权失败，请开发者先了解安全控件样式的[约束与限制](../../../security/AccessToken/security-component-overview.md#约束与限制)。
+点击粘贴控件触发该回调，回调返回授权结果。授权成功后应用可临时获取读取剪贴板权限。
+
+> **说明：**
+> - 为避免因控件样式不合法而导致授权失败，请开发者先了解安全控件样式的[约束与限制](../../../security/AccessToken/security-component-overview.md#约束与限制)。
 
 **起始版本：** 10
 

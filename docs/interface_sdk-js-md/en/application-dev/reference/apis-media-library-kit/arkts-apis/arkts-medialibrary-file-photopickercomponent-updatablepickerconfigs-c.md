@@ -1,6 +1,6 @@
 # UpdatablePickerConfigs
 
-Describes the updatable attributes of the **PhotoPickerComponent**. These attributes are a subset of [PickerOptions](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-pickeroptions-c.md).
+Describes the updatable attributes of the **PhotoPickerComponent**. These attributes are a subset of [PickerOptions](arkts-medialibrary-file-photopickercomponent-pickeroptions-c.md).
 
 **Since:** 22
 
@@ -60,7 +60,9 @@ Playback mode of the moving photo. The maximum array length is 2. If this limit 
 backgroundColor?: string
 ```
 
-Background color of the Picker grid page. The value is an 8-digit hexadecimal color code.
+Background color of the Picker grid page.
+
+The value is an 8-digit hexadecimal color code.
 
 **Type:** string
 
@@ -98,7 +100,9 @@ Background opacity of the picker. The value range is [0, 1]. **0** indicates com
 checkBoxColor?: string
 ```
 
-Background color of the check box. The value is an 8-digit hexadecimal color code.
+Background color of the check box.
+
+The value is an 8-digit hexadecimal color code.
 
 **Type:** string
 
@@ -116,7 +120,9 @@ Background color of the check box. The value is an 8-digit hexadecimal color cod
 checkboxTextColor?: string
 ```
 
-Text color in the check box. The value is an 8-digit hexadecimal color code.
+Text color in the check box.
+
+The value is an 8-digit hexadecimal color code.
 
 **Type:** string
 
@@ -134,7 +140,9 @@ Text color in the check box. The value is an 8-digit hexadecimal color code.
 edgeEffect?: EdgeEffect
 ```
 
-Scrolling effect when the Picker grid page reaches the edge. The default value is EdgeEffect.Spring.
+Scrolling effect when the Picker grid page reaches the edge.
+
+The default value is EdgeEffect.Spring.
 
 **Type:** EdgeEffect
 
@@ -174,7 +182,9 @@ Margin of the component grid.
 isRepeatSelectSupported?: boolean
 ```
 
-Whether a single image can be repeatedly selected. **true** if supported, **false** otherwise. The default value is **false**.
+Whether a single image can be repeatedly selected.
+
+**true** if supported, **false** otherwise. The default value is **false**.
 
 **Type:** boolean
 
@@ -192,7 +202,9 @@ Whether a single image can be repeatedly selected. **true** if supported, **fals
 isSlidingSupported?: boolean
 ```
 
-Whether scrolling in the **PhotoPickerComponent** is enabled. The value **true** means that scrolling is not blocked and the component responds to user scroll gestures. The value **false** means that scrolling is blocked and the component does not respond to user scroll gestures. The default value is **true**.
+Whether scrolling in the **PhotoPickerComponent** is enabled. The value **true** means that scrolling is not blocked and the component responds to user scroll gestures. The value **false** means that scrolling is blocked and the component does not respond to user scroll gestures.
+
+The default value is **true**.
 
 **Type:** boolean
 
@@ -212,7 +224,9 @@ Whether scrolling in the **PhotoPickerComponent** is enabled. The value **true**
 maxPhotoSelectNumber?: number
 ```
 
-Maximum number of images that can be selected (unit: number). The maximum value is **500**, which is limited by **MaxSelected**. The default value is **500**.
+Maximum number of images that can be selected (unit: number).
+
+The maximum value is **500**, which is limited by **MaxSelected**. The default value is **500**.
 
 **Type:** number
 
@@ -230,7 +244,9 @@ Maximum number of images that can be selected (unit: number). The maximum value 
 maxSelectNumber?: number
 ```
 
-Maximum number of media files that can be selected. The maximum value is 500, and the default value is 50.
+Maximum number of media files that can be selected.
+
+The maximum value is 500, and the default value is 50.
 
 **Type:** number
 
@@ -248,7 +264,9 @@ Maximum number of media files that can be selected. The maximum value is 500, an
 maxVideoSelectNumber?: number
 ```
 
-Maximum number of videos that can be selected (unit: number). The maximum value is **500**, and it is restricted by the maximum number of media files that can be selected in the system. The default value is **500**.
+Maximum number of videos that can be selected (unit: number).
+
+The maximum value is **500**, and it is restricted by the maximum number of media files that can be selected in the system. The default value is **500**.
 
 **Type:** number
 
@@ -266,7 +284,9 @@ Maximum number of videos that can be selected (unit: number). The maximum value 
 mimeType?: photoAccessHelper.PhotoViewMIMETypes
 ```
 
-MIME types. If this parameter is not specified, **IMAGE_VIDEO_TYPE** is used by default.
+MIME types.
+
+If this parameter is not specified, **IMAGE_VIDEO_TYPE** is used by default.
 
 **Type:** photoAccessHelper.PhotoViewMIMETypes
 
@@ -284,7 +304,9 @@ MIME types. If this parameter is not specified, **IMAGE_VIDEO_TYPE** is used by 
 mimeTypeFilter?: photoAccessHelper.MimeTypeFilter
 ```
 
-Configuration for file type filtering. Multiple types can be specified. - When this parameter is set, the **mimeType** configuration automatically becomes invalid. - When this parameter is set, only media files of the configured filter type are displayed. You are advised to notify users that only images or videos of the specified type can be selected.
+Configuration for file type filtering. Multiple types can be specified.
+
+- When this parameter is set, the **mimeType** configuration automatically becomes invalid. - When this parameter is set, only media files of the configured filter type are displayed. You are advised to notify users that only images or videos of the specified type can be selected.
 
 **Type:** photoAccessHelper.MimeTypeFilter
 
@@ -302,9 +324,11 @@ Configuration for file type filtering. Multiple types can be specified. - When t
 photoBrowserBackgroundColorMode?: PickerColorMode
 ```
 
-Background color of the photo browser page. The options are **AUTO**, **LIGHT**, and **DARK**. The default value is **AUTO**.
+Background color of the photo browser page.
 
-**Type:** [PickerColorMode](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-pickercolormode-e.md)
+The options are **AUTO**, **LIGHT**, and **DARK**. The default value is **AUTO**.
+
+**Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 22
 
@@ -358,9 +382,11 @@ URIs of the selected images.
 selectMode?: SelectMode
 ```
 
-Picker selection mode. **SINGLE_SELECT** or **MULTI_SELECT**. The default value is **MULTI_SELECT**.
+Picker selection mode.
 
-**Type:** [SelectMode](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-selectmode-e.md)
+**SINGLE_SELECT** or **MULTI_SELECT**. The default value is **MULTI_SELECT**.
+
+**Type:** [SelectMode](arkts-medialibrary-file-photopickercomponent-selectmode-e.md)
 
 **Since:** 22
 
@@ -394,9 +420,13 @@ Single selection mode. The default value is **SingleSelectionMode.BROWSER_MODE**
 uiComponentColorMode?: PickerColorMode
 ```
 
-Color mode of the Picker UI component. Dark/Light color mode (excluding the background color) of other components on the Picker grid page, including the search box, camera entry, safety tips for using Gallery, and recommendation bubble. This attribute is usually used together with **backgroundColor**. The default value is **PickerColorMode.AUTO**, which follows the system's dark/ light color mode. When setting this attribute, avoid using **PickerColorMode.LIGHT** with a dark background color, as it may make components or text hard to see. Avoid using **PickerColorMode.DARK** with a light background color for the same reason.
+Color mode of the Picker UI component.
 
-**Type:** [PickerColorMode](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-pickercolormode-e.md)
+Dark/Light color mode (excluding the background color) of other components on the Picker grid page, including the search box, camera entry, safety tips for using Gallery, and recommendation bubble. This attribute is usually used together with **backgroundColor**. The default value is **PickerColorMode.AUTO**, which follows the system's dark/ light color mode.
+
+When setting this attribute, avoid using **PickerColorMode.LIGHT** with a dark background color, as it may make components or text hard to see. Avoid using **PickerColorMode.DARK** with a light background color for the same reason.
+
+**Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 22
 

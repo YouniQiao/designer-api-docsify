@@ -43,7 +43,13 @@ ArcSliderStyleOptions的构造函数。
   activeTrackThickness?: number
 ```
 
-放大状态下弧形Slider的描边粗细，单位：vp。 默认值：24 取值范围：[24, 36]，异常值按默认值处理。
+放大状态下弧形Slider的描边粗细，单位：vp。
+
+默认值：24
+
+取值范围：[24, 36]，异常值按默认值处理。
+
+@Trace
 
 **类型：** number
 
@@ -64,7 +70,11 @@ ArcSliderStyleOptions的构造函数。
   selectedColor?: string
 ```
 
-设置描边高亮色。 默认值：#FF5EA1FF
+设置描边高亮色。
+
+默认值：#FF5EA1FF
+
+@Trace
 
 **类型：** string
 
@@ -85,7 +95,13 @@ ArcSliderStyleOptions的构造函数。
   trackBlur?: number
 ```
 
-设置描边背景模糊值，单位：vp。 默认值：20 设置小于0的值时，按照默认值处理。
+设置描边背景模糊值，单位：vp。
+
+默认值：20
+
+设置小于0的值时，按照默认值处理。
+
+@Trace
 
 **类型：** number
 
@@ -106,7 +122,11 @@ ArcSliderStyleOptions的构造函数。
   trackColor?: string
 ```
 
-设置描边背景色。 默认值：#33FFFFFF
+设置描边背景色。
+
+默认值：#33FFFFFF
+
+@Trace
 
 **类型：** string
 
@@ -127,7 +147,13 @@ ArcSliderStyleOptions的构造函数。
   trackThickness?: number
 ```
 
-正常状态下弧形Slider的描边粗细，单位：vp。 默认值：5 取值范围：[5, 16]，异常值按默认值处理。
+正常状态下弧形Slider的描边粗细，单位：vp。
+
+默认值：5
+
+取值范围：[5, 16]，异常值按默认值处理。
+
+@Trace
 
 **类型：** number
 

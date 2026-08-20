@@ -12,7 +12,11 @@ import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
 function setPowerSaveMode(pid: int, powerSaveMode: PowerSaveMode): Promise<void>
 ```
 
-Sets the power saving mode for a process. This API uses a promise to return the result. You can set to enter the power saving mode when: - The application is not focused, and there are no audio operations or UI updates. - The application cannot obtain the power lock through the system framework. - The application needs to perform time-consuming computing tasks, such as compression, decompression, and compilation, which are significantly restricted by CPU resources. (In this case, the power saving mode will be enabled forcibly.)
+Sets the power saving mode for a process. This API uses a promise to return the result.
+
+You can set to enter the power saving mode when:
+
+- The application is not focused, and there are no audio operations or UI updates. - The application cannot obtain the power lock through the system framework. - The application needs to perform time-consuming computing tasks, such as compression, decompression, and compilation, which are significantly restricted by CPU resources. (In this case, the power saving mode will be enabled forcibly.)
 
 **Since:** 23
 
@@ -39,11 +43,11 @@ Sets the power saving mode for a process. This API uses a promise to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [31800004](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800004-setting-failure-due-to-system-scheduling) | The setting failed due to system scheduling reasons. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [31800003](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800003-setting-overriden-by-task-manager) | Setup error, This setting is overridden by settings in Task Manager |
-| [31800002](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800002-invalid-parameter) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. PowerSaveMode status is out of range. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [31800002](../errorcode-backgroundProcessManager.md#31800002-invalid-parameter) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. PowerSaveMode status is out of range. |
+| [31800003](../errorcode-backgroundProcessManager.md#31800003-setting-overriden-by-task-manager) | Setup error, This setting is overridden by settings in Task Manager |
+| [31800004](../errorcode-backgroundProcessManager.md#31800004-setting-failure-due-to-system-scheduling) | The setting failed due to system scheduling reasons. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 **Examples**
 

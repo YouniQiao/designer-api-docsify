@@ -1,4 +1,4 @@
-# DlpFeatureStatus(DLP) (System API)
+# DlpFeatureStatus (System API)
 
 Enumerates DLP statuses.
 

@@ -16,7 +16,13 @@ LiveFormExtensionContext是[LiveFormExtensionAbility](arkts-form-app-form-livefo
 startAbilityByLiveForm(want: Want): Promise<void>
 ```
 
-拉起互动卡片提供方（应用）的页面，使用Promise异步回调。 该接口仅支持拉起互动卡片提供方（应用）的页面，不支持拉起其他应用的页面，否则会抛出错误码16501011。 该接口仅限在点击事件回调中调用，且需要直接调用，不支持延时后调用，否则会抛出错误码16501011。 - 互动卡片激活态中点击跳转到应用主页或详情页。
+拉起互动卡片提供方（应用）的页面，使用Promise异步回调。
+
+该接口仅支持拉起互动卡片提供方（应用）的页面，不支持拉起其他应用的页面，否则会抛出错误码16501011。
+
+该接口仅限在点击事件回调中调用，且需要直接调用，不支持延时后调用，否则会抛出错误码16501011。
+
+- 互动卡片激活态中点击跳转到应用主页或详情页。
 
 **起始版本：** 23
 
@@ -45,10 +51,10 @@ startAbilityByLiveForm(want: Want): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported due to limited device capabilities. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
-| [16501011](../errorcode-form.md#16501011-卡片不支持调用当前接口) | The form can not support this operation |
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) | An IPC connection error happened. |
 | [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+| [16501011](../errorcode-form.md#16501011-卡片不支持调用当前接口) | The form can not support this operation |
 
 **示例**
 

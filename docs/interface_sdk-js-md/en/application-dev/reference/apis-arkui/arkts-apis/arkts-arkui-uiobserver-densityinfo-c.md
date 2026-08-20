@@ -22,7 +22,7 @@ context: UIContext
 
 Context corresponding to the page when the screen pixel density changes.
 
-**Type:** [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
+**Type:** [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)
 
 **Since:** 12
 
@@ -40,7 +40,9 @@ Context corresponding to the page when the screen pixel density changes.
 density: number
 ```
 
-Screen pixel density after the change. Value range: [0, +∞)
+Screen pixel density after the change.
+
+Value range: [0, +∞)
 
 **Type:** number
 

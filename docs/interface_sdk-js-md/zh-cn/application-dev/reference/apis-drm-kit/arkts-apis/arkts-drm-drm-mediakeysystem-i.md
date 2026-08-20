@@ -1,4 +1,4 @@
-# MediaKeySystem(Defines the DRM capability.)
+# MediaKeySystem
 
 支持MediaKeySystem实例管理、设备证书申请与处理、会话创建、离线媒体密钥管理、获取DRM度量记录、设备属性等。在调用MediaKeySystem方法之前，必须使用 [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md)创建一个MediaKeySystem实例。
 
@@ -41,8 +41,8 @@ clearOfflineMediaKeys(mediaKeyId: Uint8Array): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed.Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 ## createMediaKeySession
 
@@ -76,10 +76,10 @@ createMediaKeySession(level: ContentProtectionLevel): MediaKeySession
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700104](../errorcode-drm.md#24700104-mediakeysession数量达到极限) | Meet max MediaKeySession num limit. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.The param level exceeds reasonable range, please use value in ContentProtectionLevel. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700104](../errorcode-drm.md#24700104-mediakeysession数量达到极限) | Meet max MediaKeySession num limit. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 ## createMediaKeySession
 
@@ -111,10 +111,10 @@ Create a MediaKeySession instance with level.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700104](../errorcode-drm.md#24700104-mediakeysession数量达到极限) | Meet max MediaKeySession num limit. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.The param level exceeds reasonable range, please use value in ContentProtectionLevel. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700104](../errorcode-drm.md#24700104-mediakeysession数量达到极限) | Meet max MediaKeySession num limit. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 ## createMediaKeySession
 
@@ -142,9 +142,9 @@ createMediaKeySession(): MediaKeySession
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 | [24700104](../errorcode-drm.md#24700104-mediakeysession数量达到极限) | Meet max MediaKeySession num limit. |
 | [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## createMediaKeySession
 
@@ -170,9 +170,9 @@ Create a MediaKeySession instance.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 | [24700104](../errorcode-drm.md#24700104-mediakeysession数量达到极限) | Meet max MediaKeySession num limit. |
 | [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## destroy
 
@@ -194,8 +194,8 @@ destroy(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 ## generateKeySystemRequest
 
@@ -203,7 +203,9 @@ destroy(): void
 generateKeySystemRequest(): Promise<ProvisionRequest>
 ```
 
-生成获取mediaKeySystem设备证书的请求。使用Promise异步回调。 如果设备上已存在设备证书，调用此接口会返回失败。
+生成获取mediaKeySystem设备证书的请求。使用Promise异步回调。
+
+如果设备上已存在设备证书，调用此接口会返回失败。
 
 **起始版本：** 23
 
@@ -223,8 +225,8 @@ generateKeySystemRequest(): Promise<ProvisionRequest>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 ## getCertificateStatus
 
@@ -252,8 +254,8 @@ getCertificateStatus(): CertificateStatus
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 ## getConfigurationByteArray
 
@@ -288,8 +290,8 @@ getConfigurationByteArray(configName: string): Uint8Array
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 ## getConfigurationString
 
@@ -324,8 +326,8 @@ getConfigurationString(configName: string): string
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed, the param's length is zero or too big(exceeds 4096 Bytes). |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 ## getMaxContentProtectionLevel
 
@@ -353,8 +355,8 @@ getMaxContentProtectionLevel(): ContentProtectionLevel
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 ## getOfflineMediaKeyIds
 
@@ -382,8 +384,8 @@ getOfflineMediaKeyIds(): Uint8Array[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 ## getOfflineMediaKeyStatus
 
@@ -418,8 +420,8 @@ getOfflineMediaKeyStatus(mediaKeyId: Uint8Array): OfflineMediaKeyStatus
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 ## getStatistics
 
@@ -447,8 +449,8 @@ getStatistics(): StatisticKeyValue[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 ## offKeySystemRequired
 
@@ -568,7 +570,9 @@ on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void
 processKeySystemResponse(response: Uint8Array): Promise<void>
 ```
 
-处理获得的设备证书请求的响应。使用Promise异步回调。 如果设备上已存在设备证书，调用此接口会返回失败。
+处理获得的设备证书请求的响应。使用Promise异步回调。
+
+如果设备上已存在设备证书，调用此接口会返回失败。
 
 **起始版本：** 23
 
@@ -595,8 +599,8 @@ processKeySystemResponse(response: Uint8Array): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 ## setConfigurationByteArray
 
@@ -626,8 +630,8 @@ setConfigurationByteArray(configName: string, value: Uint8Array): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
 ## setConfigurationString
 
@@ -657,6 +661,6 @@ setConfigurationString(configName: string, value: string): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 

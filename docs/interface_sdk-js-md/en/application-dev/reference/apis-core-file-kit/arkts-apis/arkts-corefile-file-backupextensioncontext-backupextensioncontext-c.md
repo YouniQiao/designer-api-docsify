@@ -2,6 +2,8 @@
 
 The context of an ability or an application. It allows access to application-specific resources. Can only be obtained through the ability.
 
+@extends ExtensionContext
+
 **Inheritance/Implementation:** BackupExtensionContext extends ExtensionContext
 
 **Since:** 23

@@ -15,7 +15,9 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function addDeviceConfig(config: WifiDeviceConfig): Promise<number>
 ```
 
-Adds Wi-Fi connection configuration to the device. &lt;p&gt;The configuration will be updated when the configuration is added.&lt;/p&gt;
+Adds Wi-Fi connection configuration to the device.
+
+&lt;p&gt;The configuration will be updated when the configuration is added.&lt;/p&gt;
 
 **Since:** 6
 
@@ -83,7 +85,9 @@ try {
 function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<number>): void
 ```
 
-Adds Wi-Fi connection configuration to the device. &lt;p&gt;The configuration will be updated when the configuration is added.&lt;/p&gt;
+Adds Wi-Fi connection configuration to the device.
+
+&lt;p&gt;The configuration will be updated when the configuration is added.&lt;/p&gt;
 
 **Since:** 6
 

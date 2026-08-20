@@ -37,11 +37,11 @@ import { appAccount } from '@kit.BasicServicesKit';
 | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Implements authenticator callbacks. |
 | [AuthResult](arkts-basicservices-appaccount-authresult-i.md) | Defines the authentication result. |
 | [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md) | Defines authorization token information. |
-| [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Provides OAuth authenticator callbacks. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) instead. |
+| [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Provides OAuth authenticator callbacks. |
 | [AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md) | Defines OAuth authenticator information. |
 | [CreateAccountImplicitlyOptions](arkts-basicservices-appaccount-createaccountimplicitlyoptions-i.md) | Defines the options for implicitly creating an application account. |
 | [CreateAccountOptions](arkts-basicservices-appaccount-createaccountoptions-i.md) | Defines the options for creating an application account. |
-| [OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md) | Defines authorization token information. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md) instead. |
+| [OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md) | Defines authorization token information. |
 | [SelectAccountsOptions](arkts-basicservices-appaccount-selectaccountsoptions-i.md) | Defines the options for selecting accounts. |
 | [SetPropertiesOptions](arkts-basicservices-appaccount-setpropertiesoptions-i.md) | Represents the options for setting authenticator properties. |
 | [VerifyCredentialOptions](arkts-basicservices-appaccount-verifycredentialoptions-i.md) | Represents the options for verifying the user credential. |
@@ -51,5 +51,5 @@ import { appAccount } from '@kit.BasicServicesKit';
 | Name | Description |
 | --- | --- |
 | [Constants](arkts-basicservices-appaccount-constants-e.md) | Enumerates the constants. |
-| [ResultCode](arkts-basicservices-appaccount-resultcode-e.md) | Enumerates the result codes. &gt; **NOTE：**<br> &gt; &gt; This API is supported since API version 8 and deprecated since API version 9. For details, see &gt; [Account Management Error Codes](../errorcode-account.md). |
+| [ResultCode](arkts-basicservices-appaccount-resultcode-e.md) | Enumerates the result codes. |
 

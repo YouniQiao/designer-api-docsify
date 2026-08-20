@@ -34,14 +34,14 @@ getOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DistributedInfo&gt; | 是 | 回调参数。当获取分布式账号信息成功，err为undefined，data为获取到的分布式账号信息对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;DistributedInfo&gt; | 是 | 回调参数。当获取分布式账号信息成功，err为undefined，data为获取到的分布式账号信息对象；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 **示例**
@@ -170,7 +170,11 @@ try {
 queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 ```
 
-获取分布式账号信息。使用callback异步回调。 &gt; **说明：** &gt; &gt; 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [getOsAccountDistributedInfo](#getosaccountdistributedinfo) &gt; 替代。
+获取分布式账号信息。使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [getOsAccountDistributedInfo](#getosaccountdistributedinfo) &gt; 替代。
 
 **起始版本：** 7
 
@@ -188,7 +192,7 @@ queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DistributedInfo&gt; | 是 | 回调函数。当获取分布式账号信息成功，err为undefined，data为获取到的分布式账号信息对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;DistributedInfo&gt; | 是 | 回调函数。当获取分布式账号信息成功，err为undefined，data为获取到的分布式账号信息对象；否则为错误对象。 |
 
 **示例**
 
@@ -213,7 +217,11 @@ accountAbility.queryOsAccountDistributedInfo(
 queryOsAccountDistributedInfo(): Promise<DistributedInfo>
 ```
 
-获取分布式账号信息。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [getOsAccountDistributedInfo](#getosaccountdistributedinfo) &gt; 替代。
+获取分布式账号信息。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [getOsAccountDistributedInfo](#getosaccountdistributedinfo) &gt; 替代。
 
 **起始版本：** 7
 
@@ -268,17 +276,17 @@ setOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallbac
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | accountInfo | DistributedInfo | 是 | 分布式账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当更新分布式账号信息成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当更新分布式账号信息成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid accountInfo. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid accountInfo. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [12300406](../errorcode-account.md#12300406-该分布式账号信息已经与目标系统账号的其他子身份资料绑定) | The distributed account information has already been bound to a sub-profile of the same OS account.<br>**适用版本：** 26.0.0+ |
 
 **示例**
@@ -365,11 +373,11 @@ setOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid accountInfo. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid accountInfo. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [12300406](../errorcode-account.md#12300406-该分布式账号信息已经与目标系统账号的其他子身份资料绑定) | The distributed account information has already been bound to a sub-profile of the same OS account.<br>**适用版本：** 26.0.0+ |
 
 **示例**
@@ -423,7 +431,11 @@ try {
 updateOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void
 ```
 
-更新分布式账号信息。使用callback异步回调。 &gt; **说明：** &gt; &gt; 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [setOsAccountDistributedInfo](#setosaccountdistributedinfo) &gt; 替代。
+更新分布式账号信息。使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [setOsAccountDistributedInfo](#setosaccountdistributedinfo) &gt; 替代。
 
 **起始版本：** 7
 
@@ -442,7 +454,7 @@ updateOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCall
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | accountInfo | DistributedInfo | 是 | 分布式账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当更新分布式账号信息成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当更新分布式账号信息成功时，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -469,7 +481,11 @@ accountAbility.updateOsAccountDistributedInfo(accountInfo, (err: BusinessError) 
 updateOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>
 ```
 
-更新分布式账号信息。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [setOsAccountDistributedInfo](#setosaccountdistributedinfo) &gt; 替代。
+更新分布式账号信息。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [setOsAccountDistributedInfo](#setosaccountdistributedinfo) &gt; 替代。
 
 **起始版本：** 7
 

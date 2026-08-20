@@ -18,7 +18,11 @@ Navigation type.
 Push
 ```
 
-Navigates to the specified page in the application. **NOTE：**This API is supported since API version 7 and deprecated since API version 13. You are advised to use pushPath instead.
+Navigates to the specified page in the application.
+
+**NOTE：**
+
+This API is supported since API version 7 and deprecated since API version 13. You are advised to use pushPath instead.
 
 **Since:** 7
 
@@ -38,7 +42,11 @@ Navigates to the specified page in the application. **NOTE：**This API is suppo
 Back
 ```
 
-Returns to the specified page. If the specified page does not exist in the stack, no response is returned. If no page is specified, the previous page is returned to. **NOTE：**This API is supported since API version 7 and deprecated since API version 13. You are advised to use pop instead.
+Returns to the specified page. If the specified page does not exist in the stack, no response is returned. If no page is specified, the previous page is returned to.
+
+**NOTE：**
+
+This API is supported since API version 7 and deprecated since API version 13. You are advised to use pop instead.
 
 **Since:** 7
 
@@ -58,7 +66,11 @@ Returns to the specified page. If the specified page does not exist in the stack
 Replace
 ```
 
-Replaces the current page with another one in the application and destroys the current page. **NOTE：**This API is supported since API version 7 and deprecated since API version 13. You are advised to use replacePath instead.
+Replaces the current page with another one in the application and destroys the current page.
+
+**NOTE：**
+
+This API is supported since API version 7 and deprecated since API version 13. You are advised to use replacePath instead.
 
 **Since:** 7
 

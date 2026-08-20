@@ -16,7 +16,9 @@ import { GesturePoint } from '@kit.AccessibilityKit';
 function getSeniorModeStateForSelf(): Promise<boolean>
 ```
 
-Checks whether the app has "senior mode" enabled. This API uses a promise to return the result. Unlike [accessibility.isSeniorModeEnabled](arkts-accessibility-accessibility-isseniormodeenabled-f.md), which checks whether the system-level senior mode is enabled, this API only queries the state of the app itself.
+Checks whether the app has "senior mode" enabled. This API uses a promise to return the result.
+
+Unlike [accessibility.isSeniorModeEnabled](arkts-accessibility-accessibility-isseniormodeenabled-f.md), which checks whether the system-level senior mode is enabled, this API only queries the state of the app itself.
 
 **Since:** 26.0.0
 

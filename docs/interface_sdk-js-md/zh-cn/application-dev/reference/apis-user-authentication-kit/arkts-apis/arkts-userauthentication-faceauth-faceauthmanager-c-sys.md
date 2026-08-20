@@ -1,4 +1,4 @@
-# FaceAuthManager(人脸认证)（系统接口）
+# FaceAuthManager（系统接口）
 
 人脸认证管理器对象。用于提供人脸录入过程中的管理功能，目前支持设置人脸预览界面的Surface ID。
 
@@ -68,9 +68,9 @@ setSurfaceId(surfaceId: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12700001](../errorcode-useriam.md#12700001-人脸服务不可用) | The service is unavailable. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Called by non-system application. |
+| [12700001](../errorcode-useriam.md#12700001-人脸服务不可用) | The service is unavailable. |
 
 **示例**
 
@@ -86,7 +86,7 @@ try {
   console.info('set surface id successfully.');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`set surface id failed, Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`Failed to set surface id. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 

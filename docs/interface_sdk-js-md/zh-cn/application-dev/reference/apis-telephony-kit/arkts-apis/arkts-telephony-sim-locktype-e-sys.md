@@ -2,6 +2,8 @@
 
 Indicates the lock types.
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-sim-export enum LockType--><!--Device-sim-export enum LockType-End-->

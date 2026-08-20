@@ -2,6 +2,8 @@
 
 Defines the options of translate.
 
+@interface TranslateOptions
+
 **起始版本：** 7
 
 <!--Device-unnamed-declare interface TranslateOptions--><!--Device-unnamed-declare interface TranslateOptions-End-->

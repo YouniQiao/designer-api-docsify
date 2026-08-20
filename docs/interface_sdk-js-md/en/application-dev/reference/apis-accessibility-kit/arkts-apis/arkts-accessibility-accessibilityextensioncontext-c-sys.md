@@ -1,6 +1,8 @@
 # AccessibilityExtensionContext
 
-The **AccessibilityExtensionContext** module, inherited from **ExtensionContext**, provides context for **AccessibilityExtensionAbility**. The Accessibility Extension Context module provides capabilities related to the accessibility extension, including configuring concerned information types, querying node information, and gesture injection.
+The **AccessibilityExtensionContext** module, inherited from **ExtensionContext**, provides context for **AccessibilityExtensionAbility**.
+
+The Accessibility Extension Context module provides capabilities related to the accessibility extension, including configuring concerned information types, querying node information, and gesture injection.
 
 **Inheritance/Implementation:** AccessibilityExtensionContext extends ExtensionContext
 
@@ -58,7 +60,9 @@ Adds a virtual accessibility node tree. This API uses a promise to return the re
 getAccessibilityFocusedElement(): Promise<AccessibilityElement>
 ```
 
-Obtains the element that currently has the accessibility focus. This API uses a promise to return the result. The accessibility focus refers to the node currently focused by the accessibility service, which is different from the input focus.
+Obtains the element that currently has the accessibility focus. This API uses a promise to return the result.
+
+The accessibility focus refers to the node currently focused by the accessibility service, which is different from the input focus.
 
 **Since:** 23
 
@@ -82,8 +86,8 @@ Obtains the element that currently has the accessibility focus. This API uses a 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
+| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
 
 **Examples**
 
@@ -173,7 +177,9 @@ Obtains the list of all accessibility-accessible windows on the current display 
 getDefaultFocusedElementIds(windowId: int): Promise<Array<long>>
 ```
 
-Queries the list of default focus element IDs customized by the app. This API uses a promise to return the result. Default focus refers to the element that the accessibility service prioritizes for focusing when a window is opened.
+Queries the list of default focus element IDs customized by the app. This API uses a promise to return the result.
+
+Default focus refers to the element that the accessibility service prioritizes for focusing when a window is opened.
 
 **Since:** 23
 
@@ -199,8 +205,8 @@ Queries the list of default focus element IDs customized by the app. This API us
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 **Examples**
@@ -281,8 +287,8 @@ Queries all descendant accessibility nodes in a specified window or under a spec
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 **Examples**
@@ -338,7 +344,9 @@ export default class AccessibilityManager {
 getRootInActiveWindow(windowId?: int): Promise<AccessibilityElement>
 ```
 
-Obtains the root element of the accessibility node tree of the active window. This API uses a promise to return the result. The active window refers to the foreground app window that currently gains focus.
+Obtains the root element of the accessibility node tree of the active window. This API uses a promise to return the result.
+
+The active window refers to the foreground app window that currently gains focus.
 
 **Since:** 23
 
@@ -368,8 +376,8 @@ Obtains the root element of the accessibility node tree of the active window. Th
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
+| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
 
 ## holdRunningLockSync
 
@@ -444,7 +452,9 @@ export default class AccessibilityManager {
 notifyDisconnect(): void
 ```
 
-Notifies the accessibility service that the accessibility extension service can be closed. This function must be used together with the pre-disconnection registration API [on('preDisconnect')](#onpredisconnect). If the pre-disconnection registration function has not been called, calling this function directly has no effect.
+Notifies the accessibility service that the accessibility extension service can be closed.
+
+This function must be used together with the pre-disconnection registration API [on('preDisconnect')](#onpredisconnect). If the pre-disconnection registration function has not been called, calling this function directly has no effect.
 
 **Since:** 23
 
@@ -649,7 +659,9 @@ Register accessibilityExtensionAbility disconnect callback.
 on(type: 'preDisconnect', callback: Callback<void>): void
 ```
 
-Registers a callback with the accessibility service, which is invoked before the accessibility service closes this Accessibility Extension Service. This API uses an asynchronous callback to return the result. This registration function must be used together with [notifyDisconnect](#notifydisconnect). If [notifyDisconnect](#notifydisconnect) is not called, the Accessibility Extension Service is automatically closed after a default wait of 30 seconds.
+Registers a callback with the accessibility service, which is invoked before the accessibility service closes this Accessibility Extension Service. This API uses an asynchronous callback to return the result.
+
+This registration function must be used together with [notifyDisconnect](#notifydisconnect). If [notifyDisconnect](#notifydisconnect) is not called, the Accessibility Extension Service is automatically closed after a default wait of 30 seconds.
 
 **Since:** 20
 
@@ -792,8 +804,8 @@ Starts a foreground page. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 

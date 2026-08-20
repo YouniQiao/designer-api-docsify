@@ -48,5 +48,5 @@ import { uniformTypeDescriptor } from '@kit.ArkData';
 
 | 名称 | 说明 |
 | --- | --- |
-| [UniformDataType(标准化数据定义与描述)](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md) | 标准化数据类型之间存在归属关系，例如JPEG图片类型归属于IMAGE类型。更多预置数据类型参考[UTD预置列表](../../../database/uniform-data-type-list.md)。 下表以枚举形式，列举了常用的标准化数据类型定义。 |
+| [UniformDataType(标准化数据定义与描述)](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md) | 标准化数据类型之间存在归属关系，例如JPEG图片类型归属于IMAGE类型。更多预置数据类型参考[UTD预置列表](../../../database/uniform-data-type-list.md)。 |
 

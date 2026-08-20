@@ -1,5 +1,7 @@
 # LinearGradientBlurOptions
 
+@interface LinearGradientBlurOptions
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare interface LinearGradientBlurOptions--><!--Device-unnamed-declare interface LinearGradientBlurOptions-End-->
@@ -17,7 +19,11 @@
 direction: GradientDirection
 ```
 
-渐变模糊方向。 默认值： GradientDirection.Bottom
+渐变模糊方向。
+
+默认值：
+
+GradientDirection.Bottom
 
 **类型：** GradientDirection
 

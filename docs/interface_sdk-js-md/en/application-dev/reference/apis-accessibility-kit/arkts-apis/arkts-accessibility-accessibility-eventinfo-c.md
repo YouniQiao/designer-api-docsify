@@ -152,7 +152,11 @@ Bundle name of the target app. This parameter is mandatory.
 componentType?: string
 ```
 
-It should correspond to the event source component type, and the default value is empty. Example: - Button type - &gt; 'Button' - Image type - &gt; 'Image'
+It should correspond to the event source component type, and the default value is empty.
+
+Example:
+
+- Button type - &gt; 'Button' - Image type - &gt; 'Image'
 
 **Type:** string
 

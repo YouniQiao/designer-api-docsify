@@ -1,4 +1,4 @@
-# PreDefinedConfigName(Defines the DRM capability.)
+# PreDefinedConfigName
 
 枚举，预定义的配置属性。
 

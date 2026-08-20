@@ -1,6 +1,8 @@
 # Flash
 
-Flash继承自[FlashQuery](arkts-camera-camera-flashquery-i.md)。 闪光灯类，对设备闪光灯操作。
+Flash继承自[FlashQuery](arkts-camera-camera-flashquery-i.md)。
+
+闪光灯类，对设备闪光灯操作。
 
 **继承/实现关系：** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md)
 
@@ -23,7 +25,9 @@ import { cameraPicker } from '@kit.CameraKit';
 enableLcdFlash(enabled: boolean): void
 ```
 
-Enables or disables the LCD flash. Before the setting, call [isLcdFlashSupported](arkts-camera-camera-flashquery-i-sys.md#islcdflashsupported) to check whether the device supports the LCD flash.
+Enables or disables the LCD flash.
+
+Before the setting, call [isLcdFlashSupported](arkts-camera-camera-flashquery-i-sys.md#islcdflashsupported) to check whether the device supports the LCD flash.
 
 **起始版本：** 23
 
@@ -43,8 +47,8 @@ Enables or disables the LCD flash. Before the setting, call [isLcdFlashSupported
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 **示例**
 

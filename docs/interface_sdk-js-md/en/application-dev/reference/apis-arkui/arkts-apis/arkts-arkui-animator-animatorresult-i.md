@@ -20,7 +20,7 @@ import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from
 cancel(): void
 ```
 
-Cancels the animation, triggering the [onCancel](../arkts-components/arkts-arkui-imageframeinfo-i.md) callback. This API is functionally identical to [finish](#finish) except for the callback it triggers. It is recommended that you use the **finish** API to end animations.
+Cancels the animation, triggering the onCancel callback. This API is functionally identical to [finish](../../apis-default/arkts-apis/arkts-animator-animatorresult-i.md#finish) except for the callback it triggers. It is recommended that you use the **finish** API to end animations.
 
 **Since:** 6
 
@@ -44,7 +44,7 @@ animator.cancel();
 finish(): void
 ```
 
-Ends the animation, triggering the [onFinish](../arkts-components/arkts-arkui-imageframeinfo-i.md) callback.
+Ends the animation, triggering the onFinish callback.
 
 **Since:** 6
 
@@ -130,14 +130,14 @@ Resets the animation parameters of this animator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | Yes | Animator options. |
+| options | [AnimatorOptions](../../apis-default/arkts-apis/arkts-animator-animatoroptions-i.md) | Yes | Animator options. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | The specified page is not found or the object property list is not obtained. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | The specified page is not found or the object property list is not obtained. |
 
 **Examples**
 
@@ -184,7 +184,7 @@ struct AnimatorTest {
 reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 ```
 
-Resets the animation parameters of this animator. Compared with [reset](#reset), this API accepts parameters of the [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) type.
+Resets the animation parameters of this animator. Compared with [reset](../../apis-default/arkts-apis/arkts-animator-animatorresult-i.md#reset), this API accepts parameters of the [SimpleAnimatorOptions](../../apis-default/arkts-apis/arkts-animator-simpleanimatoroptions-c.md) type.
 
 **Since:** 18
 
@@ -200,14 +200,14 @@ Resets the animation parameters of this animator. Compared with [reset](#reset),
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Yes | Animator options. |
+| options | [AnimatorOptions](../../apis-default/arkts-apis/arkts-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](../../apis-default/arkts-apis/arkts-animator-simpleanimatoroptions-c.md) | Yes | Animator options. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | The specified page is not found or the object property list is not obtained. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | The specified page is not found or the object property list is not obtained. |
 
 **Examples**
 
@@ -340,7 +340,7 @@ Updates this animator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | Yes | Animator options. |
+| options | [AnimatorOptions](../../apis-default/arkts-apis/arkts-animator-animatoroptions-i.md) | Yes | Animator options. |
 
 **Examples**
 
@@ -396,7 +396,9 @@ Called when this animation is finished.
 onFrame: (progress: number) => void
 ```
 
-Called when a frame is received. **progress**: current value of the animation. Value range: [begin, end] defined in [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md). Default value range: [0, 1]
+Called when a frame is received.
+
+**progress**: current value of the animation. Value range: [begin, end] defined in [AnimatorOptions](../../apis-default/arkts-apis/arkts-animator-animatoroptions-i.md). Default value range: [0, 1]
 
 **Type:** (progress: number) =&gt; void
 
@@ -436,7 +438,9 @@ Called when this animation repeats.
 oncancel: () => void
 ```
 
-Called when this animation is canceled. Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onCancel** instead.
+Called when this animation is canceled.
+
+Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onCancel** instead.
 
 **Type:** () =&gt; void
 
@@ -458,7 +462,9 @@ Called when this animation is canceled. Note: This API is supported since API ve
 onfinish: () => void
 ```
 
-Called when this animation is finished. Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onFinish** instead.
+Called when this animation is finished.
+
+Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onFinish** instead.
 
 **Type:** () =&gt; void
 
@@ -480,7 +486,9 @@ Called when this animation is finished. Note: This API is supported since API ve
 onframe: (progress: number) => void
 ```
 
-Called when a frame is received. Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onFrame** instead.
+Called when a frame is received.
+
+Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onFrame** instead.
 
 **Type:** (progress: number) =&gt; void
 
@@ -502,7 +510,9 @@ Called when a frame is received. Note: This API is supported since API version 6
 onrepeat: () => void
 ```
 
-Called when this animation repeats. Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onRepeat** instead.
+Called when this animation repeats.
+
+Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onRepeat** instead.
 
 **Type:** () =&gt; void
 

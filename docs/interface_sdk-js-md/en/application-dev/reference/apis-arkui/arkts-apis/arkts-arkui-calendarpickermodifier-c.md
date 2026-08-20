@@ -2,6 +2,8 @@
 
 Defines CalendarPicker Modifier
 
+@implements { CalendarPickerAttribute, AttributeModifier&lt;CalendarPickerAttribute&gt; }
+
 **Inheritance/Implementation:** CalendarPickerModifier implements CalendarPickerAttribute, AttributeModifier<CalendarPickerAttribute>
 
 **Since:** 23

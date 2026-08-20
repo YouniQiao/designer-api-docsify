@@ -6,7 +6,10 @@
 export declare const DynamicLayout: DynamicLayoutInterface
 ```
 
-Defines the dynamic layout container component, which supports dynamically switching between different layout algorithms at runtime without changing the status of child components. &gt; **Child Components** &gt; &gt; Child components are supported.
+Defines the dynamic layout container component, which supports dynamically switching between different layout algorithms at runtime without changing the status of child components.   
+> **Child Components**
+> 
+> Child components are supported.
 
 **Since:** 24
 

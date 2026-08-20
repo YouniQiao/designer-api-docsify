@@ -12,7 +12,9 @@ import { bundleManager } from '@kit.AbilityKit';
 function getBundleInfoSync(bundleName: string, bundleFlags: int, userId: int): BundleInfo
 ```
 
-以同步方法根据给定的bundleName、bundleFlags和userId获取BundleInfo。 获取调用方自身的信息时不需要权限。
+以同步方法根据给定的bundleName、bundleFlags和userId获取BundleInfo。
+
+获取调用方自身的信息时不需要权限。
 
 **起始版本：** 23
 
@@ -40,11 +42,11 @@ function getBundleInfoSync(bundleName: string, bundleFlags: int, userId: int): B
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
+| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
 
 **示例**
 
@@ -73,7 +75,9 @@ try {
 function getBundleInfoSync(bundleName: string, bundleFlags: int): BundleInfo
 ```
 
-以同步方法根据给定的bundleName、bundleFlags获取调用方所在用户下的BundleInfo。 获取调用方自身的信息时不需要权限。
+以同步方法根据给定的bundleName、bundleFlags获取调用方所在用户下的BundleInfo。
+
+获取调用方自身的信息时不需要权限。
 
 **起始版本：** 23
 
@@ -100,10 +104,10 @@ function getBundleInfoSync(bundleName: string, bundleFlags: int): BundleInfo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
+| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
 
 **示例**
 

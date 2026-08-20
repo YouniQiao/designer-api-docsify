@@ -22,7 +22,7 @@ import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions }
 
 Set Color options of the ProgressButtonV2.
 
-**Type:** [ProgressButtonV2Color](arkts-arkui-arkui-advanced-progressbuttonv2-progressbuttonv2color-c.md)
+**Type:** [ProgressButtonV2Color](../../apis-default/arkts-apis/arkts-arkui-advanced-progressbuttonv2-progressbuttonv2color-c.md)
 
 **Since:** 18
 
@@ -83,7 +83,7 @@ Sets the ProgressButtonV2 isEnabled state.
 
 Sets the ProgressButtonV2 onClicked.
 
-**Type:** [ClickCallback](arkts-arkui-clickcallback-t.md)
+**Type:** [ClickCallback](../../apis-default/arkts-apis/arkts-clickcallback-t.md)
 
 **Since:** 18
 
@@ -124,7 +124,7 @@ Sets the ProgressButtonV2 progress.
 
 Set border rounded corner radius of progress.
 
-**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
 
 **Since:** 18
 
@@ -144,7 +144,7 @@ Set border rounded corner radius of progress.
 
 Sets the ProgressButtonV2 progressButtonWidth.
 
-**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
 
 **Since:** 18
 

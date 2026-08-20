@@ -15,7 +15,9 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function disableNetwork(netId: number): boolean
 ```
 
-Disables a specified network. &lt;p&gt;The disabled network will not be associated with again.
+Disables a specified network.
+
+&lt;p&gt;The disabled network will not be associated with again.
 
 **Since:** 7
 

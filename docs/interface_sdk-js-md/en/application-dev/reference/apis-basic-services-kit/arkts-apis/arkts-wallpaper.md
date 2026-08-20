@@ -2,6 +2,8 @@
 
 System wallpaper
 
+@namespace wallpaper
+
 **Since:** 23
 
 <!--Device-unnamed-declare namespace wallpaper--><!--Device-unnamed-declare namespace wallpaper-End-->

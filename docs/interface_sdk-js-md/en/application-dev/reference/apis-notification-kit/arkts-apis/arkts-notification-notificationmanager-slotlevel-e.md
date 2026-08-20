@@ -1,6 +1,8 @@
 # SlotLevel
 
-Enumerates the notification level. This API is used to define the notification reminder behavior level of NotificationSlot, affecting how the notification is displayed in the status bar, whether to show banners and alert sounds, etc.
+Enumerates the notification level.
+
+This API is used to define the notification reminder behavior level of NotificationSlot, affecting how the notification is displayed in the status bar, whether to show banners and alert sounds, etc.
 
 **Since:** 23
 

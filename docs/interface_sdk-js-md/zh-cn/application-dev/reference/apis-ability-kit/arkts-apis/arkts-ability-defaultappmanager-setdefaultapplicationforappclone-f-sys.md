@@ -37,13 +37,13 @@ function setDefaultApplicationForAppClone(type: string, elementName: ElementName
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [17700028](../errorcode-bundle.md#17700028-输入的ability与type不匹配) | The specified ability and type do not match. |
-| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | The specified app index is invalid. |
-| [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. A non-system application is not allowed to call a system API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user id is not found. |
+| [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
+| [17700028](../errorcode-bundle.md#17700028-输入的ability与type不匹配) | The specified ability and type do not match. |
+| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | The specified app index is invalid. |
 
 **示例**
 

@@ -2,6 +2,8 @@
 
 定义拖拽事件
 
+@interface ItemDragEventHandler
+
 **起始版本：** 20
 
 <!--Device-unnamed-declare interface ItemDragEventHandler--><!--Device-unnamed-declare interface ItemDragEventHandler-End-->

@@ -1,6 +1,8 @@
 # ContactSyncProgress
 
-Information about the contact synchronization progress. Contains the sync ID, current batch, and total batch.
+Information about the contact synchronization progress.
+
+Contains the sync ID, current batch, and total batch.
 
 **Since:** 26.0.0
 
@@ -20,7 +22,9 @@ import { contact } from '@kit.ContactsKit';
 currentBatch: int
 ```
 
-Indicates the identifier of the current batch of contacts to be synchronized. The range of values is from 1 to totalBatches.
+Indicates the identifier of the current batch of contacts to be synchronized.
+
+The range of values is from 1 to totalBatches.
 
 **Type:** int
 
@@ -40,7 +44,9 @@ Indicates the identifier of the current batch of contacts to be synchronized. Th
 syncId: int
 ```
 
-Indicates the sync identifier used for synchronizing all contacts. The value should start from 0.
+Indicates the sync identifier used for synchronizing all contacts.
+
+The value should start from 0.
 
 **Type:** int
 

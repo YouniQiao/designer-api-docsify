@@ -29,12 +29,12 @@ function onAudioZoneSessionChange(userId: int, callback: Callback<AVSessionDescr
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | int | 是 | 当前userId最终归属的音区 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i-sys.md)&gt; | 是 | 返回的会话列表 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i-sys.md)&gt; | 是 | 返回的会话列表 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 

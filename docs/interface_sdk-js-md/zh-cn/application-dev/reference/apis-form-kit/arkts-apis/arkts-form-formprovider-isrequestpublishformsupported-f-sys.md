@@ -26,16 +26,16 @@ function isRequestPublishFormSupported(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 返回查询结果的回调函数。 <br>true: 表示可以发布卡片到卡片使用方。 <br>false: 表示不可以发布卡片到卡片使用方。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 返回查询结果的回调函数。 <br>true: 表示可以发布卡片到卡片使用方。 <br>false: 表示不可以发布卡片到卡片使用方。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 
 
 ## isRequestPublishFormSupported
@@ -64,7 +64,7 @@ function isRequestPublishFormSupported(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 

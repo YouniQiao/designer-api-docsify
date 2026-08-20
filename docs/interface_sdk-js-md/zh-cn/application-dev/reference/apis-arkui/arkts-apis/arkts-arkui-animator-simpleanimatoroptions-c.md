@@ -93,7 +93,7 @@ direction(direction: PlayMode): SimpleAnimatorOptions
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | [PlayMode](../../apis-na/arkts-apis/arkts-na-enums-playmode-e.md) | 是 | 设置animator动画播放方向，默认值：PlayMode.Normal。 |
+| direction | [PlayMode](../../apis-default/arkts-apis/arkts-enums-playmode-e.md) | 是 | 设置animator动画播放方向，默认值：PlayMode.Normal。 |
 
 **返回值：**
 
@@ -183,7 +183,7 @@ fill(fillMode: FillMode): SimpleAnimatorOptions
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fillMode | [FillMode](../../apis-na/arkts-apis/arkts-na-enums-fillmode-e.md) | 是 | 设置animator动画填充方式，影响动画delay期间和结束时的表现，默认值：FillMode.Forwards。 |
+| fillMode | [FillMode](../../apis-default/arkts-apis/arkts-enums-fillmode-e.md) | 是 | 设置animator动画填充方式，影响动画delay期间和结束时的表现，默认值：FillMode.Forwards。 |
 
 **返回值：**
 

@@ -1,6 +1,6 @@
 # ProxyMethod (System API)
 
-Wi-Fi Proxy method.
+Wi-Fi Proxy method. @enum { int }
 
 **Since:** 23
 

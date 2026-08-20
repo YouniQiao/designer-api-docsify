@@ -1,6 +1,6 @@
 # DisconnectedReason（系统接口）
 
-WLAN断开原因。
+WLAN断开原因。 @enum { int }
 
 **起始版本：** 23
 

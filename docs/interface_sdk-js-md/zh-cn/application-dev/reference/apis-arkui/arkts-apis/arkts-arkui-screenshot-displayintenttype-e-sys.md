@@ -2,6 +2,8 @@
 
 枚举截图显示意图类型。
 
+@enum { int }
+
 **起始版本：** 24
 
 <!--Device-screenshot-enum DisplayIntentType--><!--Device-screenshot-enum DisplayIntentType-End-->

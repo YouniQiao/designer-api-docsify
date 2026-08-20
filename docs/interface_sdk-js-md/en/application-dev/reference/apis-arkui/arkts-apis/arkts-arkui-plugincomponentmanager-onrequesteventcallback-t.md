@@ -20,11 +20,11 @@ Registers the listener for the request event.
 | --- | --- | --- | --- |
 | source | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Information about the request sender. |
 | name | string | Yes | Template name. |
-| data | [KVObject](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-kvobject-t.md) | Yes | Data. |
+| data | [KVObject](../../apis-default/arkts-apis/arkts-plugincomponentmanager-kvobject-t.md) | Yes | Data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RequestEventResult](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-requesteventresult-i.md) | Provides the result returned after the request listener is registered and the requested event is received. |
+| [RequestEventResult](../../apis-default/arkts-apis/arkts-plugincomponentmanager-requesteventresult-i.md) | Provides the result returned after the request listener is registered and the requested event is received. |
 

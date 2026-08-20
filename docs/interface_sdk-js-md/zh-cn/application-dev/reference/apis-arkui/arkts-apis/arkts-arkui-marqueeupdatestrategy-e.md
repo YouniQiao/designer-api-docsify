@@ -2,6 +2,8 @@
 
 Marquee scrolling strategy after text update
 
+@enum { number }
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare enum MarqueeUpdateStrategy--><!--Device-unnamed-declare enum MarqueeUpdateStrategy-End-->

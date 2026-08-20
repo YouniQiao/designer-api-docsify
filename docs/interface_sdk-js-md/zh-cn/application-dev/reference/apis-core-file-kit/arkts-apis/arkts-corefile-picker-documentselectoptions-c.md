@@ -38,7 +38,9 @@ allowsMulFolderSelection?: boolean
 authMode?: boolean
 ```
 
-拉起授权Picker，默认为false（非授权模式）。当authMode为true时为授权模式，defaultFilePathUri必填，表明待授权URI。 该参数在2in1设备中可正常使用，在其他设备中无效果。
+拉起授权Picker，默认为false（非授权模式）。当authMode为true时为授权模式，defaultFilePathUri必填，表明待授权URI。
+
+该参数在2in1设备中可正常使用，在其他设备中无效果。
 
 **类型：** boolean
 
@@ -74,7 +76,11 @@ defaultFilePathUri?: string
 fileSuffixFilters?: Array<string>
 ```
 
-选择文件的后缀类型。传入字符串数组，每一项代表一个后缀选项，每一项内部用"|"分为两部分，第一部分为描述， 第二部分为过滤后缀。没有"|"则没有描述，该项整体是一个过滤后缀。每项过滤后缀可以存在多个后缀名，则每一个后缀名之间用英 文逗号进行分隔，传入数组长度不能超过100，例如：['图片(.png, .jpg)|.png,.jpg', '文档|.txt', '视频|.mp4', '.pdf']。 默认不过滤，即显示所有文件。此外2in1设备支持通配符方式['所有文件(*.*)|.*'] （说明：从API version 17开始，手机支持该配置），表示为显示所有文件。 仅对具有该系统能力的设备开放。
+选择文件的后缀类型。传入字符串数组，每一项代表一个后缀选项，每一项内部用"|"分为两部分，第一部分为描述， 第二部分为过滤后缀。没有"|"则没有描述，该项整体是一个过滤后缀。每项过滤后缀可以存在多个后缀名，则每一个后缀名之间用英 文逗号进行分隔，传入数组长度不能超过100，例如：['图片(.png, .jpg)|.png,.jpg', '文档|.txt', '视频|.mp4', '.pdf']。
+
+默认不过滤，即显示所有文件。此外2in1设备支持通配符方式['所有文件(*.*)|.*'] （说明：从API version 17开始，手机支持该配置），表示为显示所有文件。
+
+仅对具有该系统能力的设备开放。
 
 **类型：** Array&lt;string&gt;
 
@@ -128,7 +134,9 @@ maxSelectNumber?: int
 mergeMode?: MergeTypeMode
 ```
 
-开启聚合视图模式，支持拉起文件管理应用的聚合视图。默认为DEFAULT，表示该参数不生效，非聚合视图。 当该参数置为非DEFAULT时，其他参数不生效。 该参数在Phone设备中可正常使用，在其他设备中无效果。
+开启聚合视图模式，支持拉起文件管理应用的聚合视图。默认为DEFAULT，表示该参数不生效，非聚合视图。 当该参数置为非DEFAULT时，其他参数不生效。
+
+该参数在Phone设备中可正常使用，在其他设备中无效果。
 
 **类型：** [MergeTypeMode](arkts-corefile-picker-mergetypemode-e.md)
 
@@ -146,7 +154,9 @@ mergeMode?: MergeTypeMode
 multiAuthMode?: boolean
 ```
 
-支持批量授权模式，默认为false（非批量授权模式）。当multiAuthMode为true时为批量授权模式。当multiAuthMode为true时， 只有multiUriArray参数生效，其他参数不生效。 该参数在Phone设备中可正常使用，在其他设备中无效果。
+支持批量授权模式，默认为false（非批量授权模式）。当multiAuthMode为true时为批量授权模式。当multiAuthMode为true时， 只有multiUriArray参数生效，其他参数不生效。
+
+该参数在Phone设备中可正常使用，在其他设备中无效果。
 
 **类型：** boolean
 
@@ -164,7 +174,9 @@ multiAuthMode?: boolean
 multiUriArray?: Array<string>
 ```
 
-传入需要批量授权的URI数组（仅支持文件，文件夹不生效）。配合multiAuthMode使用。当multiAuthMode为false时， 配置该参数不生效。默认为空（效果为拉起批量授权页面后展示的文件为空）。 该参数在Phone设备中可正常使用，在其他设备中无效果。
+传入需要批量授权的URI数组（仅支持文件，文件夹不生效）。配合multiAuthMode使用。当multiAuthMode为false时， 配置该参数不生效。默认为空（效果为拉起批量授权页面后展示的文件为空）。
+
+该参数在Phone设备中可正常使用，在其他设备中无效果。
 
 **类型：** Array&lt;string&gt;
 

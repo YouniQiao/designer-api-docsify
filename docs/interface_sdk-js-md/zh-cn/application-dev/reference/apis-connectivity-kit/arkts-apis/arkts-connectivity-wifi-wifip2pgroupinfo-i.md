@@ -1,6 +1,6 @@
 # WifiP2pGroupInfo
 
-P2P群组信息。
+P2P群组信息。 @interface WifiP2pGroupInfo
 
 **起始版本：** 8
 

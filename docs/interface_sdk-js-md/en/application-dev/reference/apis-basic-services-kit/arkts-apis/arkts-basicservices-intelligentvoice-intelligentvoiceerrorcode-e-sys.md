@@ -1,6 +1,6 @@
 # IntelligentVoiceErrorCode (System API)
 
-Enumerates intelligent voice error code.
+Enumerates intelligent voice error code. @enum {number}
 
 **Since:** 23
 

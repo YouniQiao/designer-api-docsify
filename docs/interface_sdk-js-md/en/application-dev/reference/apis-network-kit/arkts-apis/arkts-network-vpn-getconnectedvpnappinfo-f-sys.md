@@ -37,6 +37,6 @@ Get the connected VPN App Info.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [19900002](../errorcode-net-vpn.md#19900002-system-internal-error) | System internal error. |
 | [19900001](../errorcode-net-vpn.md#19900001-invalid-parameter) | Invalid parameter value. |
+| [19900002](../errorcode-net-vpn.md#19900002-system-internal-error) | System internal error. |
 

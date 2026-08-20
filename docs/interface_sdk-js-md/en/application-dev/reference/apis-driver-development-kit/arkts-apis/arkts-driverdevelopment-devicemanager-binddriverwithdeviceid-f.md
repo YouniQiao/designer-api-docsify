@@ -39,9 +39,9 @@ Binds a peripheral device based on the device information returned by **queryDev
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [26300001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-externaldevicemanager-service-exception) | ExternalDeviceManager service exception. |
-| [26300002](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300002-binding-driver-client-to-driver-server-failed) | The driver service does not allow any client to bind. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
+| [26300001](../errorcode-deviceManager.md#26300001-externaldevicemanager-service-exception) | ExternalDeviceManager service exception. |
+| [26300002](../errorcode-deviceManager.md#26300002-binding-driver-client-to-driver-server-failed) | The driver service does not allow any client to bind. |
 
 **Examples**
 

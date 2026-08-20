@@ -27,7 +27,7 @@ import { batteryInfo } from '@kit.BasicServicesKit';
 | [batteryTemperature](arkts-basicservices-batteryinfo-batterytemperature-f.md) | Battery temperature of the device, in unit of 0.1°C. |
 | [chargingStatus](arkts-basicservices-batteryinfo-chargingstatus-f.md) | Battery charging state of the current device. |
 | [healthStatus](arkts-basicservices-batteryinfo-healthstatus-f.md) | Battery health status of the device. |
-| [isBatteryPresent](arkts-basicservices-batteryinfo-isbatterypresent-f.md) | Whether the battery is supported or present. The value **true** means that the battery is supported or present; **false** means the opposite. Default value: **false**. |
+| [isBatteryPresent](arkts-basicservices-batteryinfo-isbatterypresent-f.md) | Whether the battery is supported or present. The value **true** means that the battery is supported or present; **false** means the opposite. |
 | [nowCurrent](arkts-basicservices-batteryinfo-nowcurrent-f.md) | Battery current of the device, in unit of mA. |
 | [pluggedType](arkts-basicservices-batteryinfo-pluggedtype-f.md) | Charger type of the device. |
 | [technology](arkts-basicservices-batteryinfo-technology-f.md) | Battery technology of the device. |

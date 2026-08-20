@@ -1,4 +1,4 @@
-# ErrorCallback(System API)（系统接口）
+# ErrorCallback（系统接口）
 
 ```TypeScript
 declare type ErrorCallback = import('../api/@ohos.base').ErrorCallback

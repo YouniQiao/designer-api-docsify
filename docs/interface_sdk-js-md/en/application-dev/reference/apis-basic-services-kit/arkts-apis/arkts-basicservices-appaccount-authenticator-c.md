@@ -25,7 +25,11 @@ addAccountImplicitly(
     ): void
 ```
 
-Adds an application account implicitly based on the specified authentication type and options. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; createAccountImplicitly &gt; instead.
+Adds an application account implicitly based on the specified authentication type and options. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; createAccountImplicitly &gt; instead.
 
 **Since:** 8
 
@@ -104,7 +108,11 @@ authenticate(
     ): void
 ```
 
-Authenticates an application account to obtain the OAuth token. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; auth instead.
+Authenticates an application account to obtain the OAuth token. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; auth instead.
 
 **Since:** 8
 

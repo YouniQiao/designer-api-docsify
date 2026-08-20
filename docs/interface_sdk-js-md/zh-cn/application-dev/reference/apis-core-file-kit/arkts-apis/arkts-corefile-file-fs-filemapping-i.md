@@ -43,8 +43,8 @@ capacity(): number
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900052 | Mmap buffer released |
 | 13900050 | Internal resource error |
+| 13900052 | Mmap buffer released |
 
 **示例**
 
@@ -79,8 +79,8 @@ flip(): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900052 | Mmap buffer released |
 | 13900050 | Internal resource error |
+| 13900052 | Mmap buffer released |
 
 **示例**
 
@@ -128,8 +128,8 @@ getLimit(): number
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900052 | Mmap buffer released |
 | 13900050 | Internal resource error |
+| 13900052 | Mmap buffer released |
 
 **示例**
 
@@ -170,8 +170,8 @@ getPosition(): number
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900052 | Mmap buffer released |
 | 13900050 | Internal resource error |
+| 13900052 | Mmap buffer released |
 
 **示例**
 
@@ -211,12 +211,12 @@ msync(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| 13900011 | Out of memory |
+| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
+| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
 | 13900055 | Mmap operation not supported |
-| 13900050 | Internal resource error |
-| 13900014 | Device or resource busy |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -298,12 +298,12 @@ msync(position: number, length: number): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| 13900011 | Out of memory |
+| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
+| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
 | 13900055 | Mmap operation not supported |
-| 13900050 | Internal resource error |
-| 13900014 | Device or resource busy |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -372,12 +372,12 @@ msyncSync(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| 13900011 | Out of memory |
+| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
+| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
 | 13900055 | Mmap operation not supported |
-| 13900050 | Internal resource error |
-| 13900014 | Device or resource busy |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -425,12 +425,12 @@ msyncSync(position: number, length: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| 13900011 | Out of memory |
+| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
+| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
 | 13900055 | Mmap operation not supported |
-| 13900050 | Internal resource error |
-| 13900014 | Device or resource busy |
-| 13900011 | Out of memory |
 
 **示例**
 
@@ -485,10 +485,10 @@ read(buffer: ArrayBuffer, length?: number): number
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900052 | Mmap buffer released |
-| 13900054 | Mmap buffer is inaccessible |
 | 13900050 | Internal resource error |
 | 13900051 | Buffer read/write out of bounds |
+| 13900052 | Mmap buffer released |
+| 13900054 | Mmap buffer is inaccessible |
 
 **示例**
 
@@ -540,10 +540,10 @@ read(position: number, buffer: ArrayBuffer, length?: number): number
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900052 | Mmap buffer released |
-| 13900054 | Mmap buffer is inaccessible |
 | 13900050 | Internal resource error |
 | 13900051 | Buffer read/write out of bounds |
+| 13900052 | Mmap buffer released |
+| 13900054 | Mmap buffer is inaccessible |
 
 **示例**
 
@@ -587,8 +587,8 @@ remaining(): number
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900052 | Mmap buffer released |
 | 13900050 | Internal resource error |
+| 13900052 | Mmap buffer released |
 
 **示例**
 
@@ -632,8 +632,8 @@ setLimit(limit: number): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900052 | Mmap buffer released |
 | 13900050 | Internal resource error |
+| 13900052 | Mmap buffer released |
 
 **示例**
 
@@ -674,8 +674,8 @@ setPosition(position: number): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900052 | Mmap buffer released |
 | 13900050 | Internal resource error |
+| 13900052 | Mmap buffer released |
 
 **示例**
 
@@ -832,11 +832,11 @@ write(data: ArrayBuffer, length?: number): number
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
+| 13900050 | Internal resource error |
+| 13900051 | Buffer read/write out of bounds |
 | 13900052 | Mmap buffer released |
 | 13900053 | Read-only mmap buffer |
 | 13900054 | Mmap buffer is inaccessible |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
 
 **示例**
 
@@ -889,11 +889,11 @@ write(position: number, data: ArrayBuffer, length?: number): number
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
+| 13900050 | Internal resource error |
+| 13900051 | Buffer read/write out of bounds |
 | 13900052 | Mmap buffer released |
 | 13900053 | Read-only mmap buffer |
 | 13900054 | Mmap buffer is inaccessible |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
 
 **示例**
 

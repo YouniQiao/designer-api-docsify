@@ -14,7 +14,11 @@ Sets or returns the layout size and position of the component.
 height: number
 ```
 
-Component height. Unit: vp. Value range: [0, +∞).
+Component height.
+
+Unit: vp.
+
+Value range: [0, +∞).
 
 **Type:** number
 
@@ -34,7 +38,11 @@ Component height. Unit: vp. Value range: [0, +∞).
 width: number
 ```
 
-Component width. Unit: vp. Value range: [0, +∞).
+Component width.
+
+Unit: vp.
+
+Value range: [0, +∞).
 
 **Type:** number
 
@@ -54,7 +62,11 @@ Component width. Unit: vp. Value range: [0, +∞).
 x: number
 ```
 
-Horizontal position. Unit: vp. Value range: (-∞, +∞).
+Horizontal position.
+
+Unit: vp.
+
+Value range: (-∞, +∞).
 
 **Type:** number
 
@@ -74,7 +86,11 @@ Horizontal position. Unit: vp. Value range: (-∞, +∞).
 y: number
 ```
 
-Vertical position. Unit: vp. Value range: (-∞, +∞).
+Vertical position.
+
+Unit: vp.
+
+Value range: (-∞, +∞).
 
 **Type:** number
 

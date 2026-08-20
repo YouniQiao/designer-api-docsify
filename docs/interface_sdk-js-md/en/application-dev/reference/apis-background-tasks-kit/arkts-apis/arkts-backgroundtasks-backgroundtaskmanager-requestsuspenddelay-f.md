@@ -12,7 +12,11 @@ import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySuspendInfo
 ```
 
-Requests a transient task. &gt; **NOTE：**&gt; &gt; For details about the constraints on requesting and using a transient task, see &gt; [Transient Task (ArkTS)](../../../task-management/transient-task.md#constraints).
+Requests a transient task.
+
+> **NOTE：**
+> 
+> For details about the constraints on requesting and using a transient task, see &gt; [Transient Task (ArkTS)](../../../task-management/transient-task.md#constraints).
 
 **Since:** 23
 
@@ -38,12 +42,12 @@ Requests a transient task. &gt; **NOTE：**&gt; &gt; For details about the const
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameters types. |
-| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
-| [9800001](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800001-memory-operation-failure) | Memory operation failed. |
-| [9900002](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9900002-transient-task-verification-failure) | Transient task verification failed. |
-| [9800003](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800003-ipc-failure) | Internal transaction failed. |
-| [9900001](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9900001-caller-information-verification-failure-for-a-transient-task) | Caller information verification failed for a transient task. |
-| [9800002](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800002-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; <br> 2. Failed to apply for memory. |
+| [9800001](../errorcode-backgroundTaskMgr.md#9800001-memory-operation-failure) | Memory operation failed. |
+| [9800002](../errorcode-backgroundTaskMgr.md#9800002-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; <br> 2. Failed to apply for memory. |
+| [9800003](../errorcode-backgroundTaskMgr.md#9800003-ipc-failure) | Internal transaction failed. |
+| [9800004](../errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
+| [9900001](../errorcode-backgroundTaskMgr.md#9900001-caller-information-verification-failure-for-a-transient-task) | Caller information verification failed for a transient task. |
+| [9900002](../errorcode-backgroundTaskMgr.md#9900002-transient-task-verification-failure) | Transient task verification failed. |
 
 **Examples**
 

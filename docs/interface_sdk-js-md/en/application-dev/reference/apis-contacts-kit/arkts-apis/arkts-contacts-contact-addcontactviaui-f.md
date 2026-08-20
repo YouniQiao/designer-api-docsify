@@ -41,9 +41,9 @@ Calls the API for adding a contact to open the UI. This API uses a promise to re
 | --- | --- |
 | [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | The specified SystemCapability name was not found. |
+| [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
 | [16700102](../errorcode-contacts.md#16700102-database-data-addition-deletion-or-modification-failed) | Failed to set value to contacts data. |
 | [16700103](../errorcode-contacts.md#16700103-operation-canceled) | User cancel. |
-| [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
 
 **Examples**
 

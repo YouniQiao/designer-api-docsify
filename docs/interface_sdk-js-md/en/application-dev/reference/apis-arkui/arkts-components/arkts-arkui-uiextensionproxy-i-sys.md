@@ -1,4 +1,4 @@
-# UIExtensionProxy(System API) (System API)
+# UIExtensionProxy (System API)
 
 Implements a **UIExtensionProxy** instance for the component host to send data to, subscribe to, or unsubscribe from the started UIExtensionAbility through the connection established between the two parties.
 

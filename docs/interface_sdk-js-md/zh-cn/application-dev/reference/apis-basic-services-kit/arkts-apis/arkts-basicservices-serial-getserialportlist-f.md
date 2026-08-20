@@ -32,6 +32,6 @@ function getSerialPortList(): Promise<SerialPort[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
 | [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) | This function is prohibited by enterprise management policies. |
+| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
 

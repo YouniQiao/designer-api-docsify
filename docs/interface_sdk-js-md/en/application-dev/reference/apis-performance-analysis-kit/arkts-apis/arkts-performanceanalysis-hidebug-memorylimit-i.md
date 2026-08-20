@@ -2,6 +2,8 @@
 
 Defines the memory limit of the application process.
 
+@interface MemoryLimit
+
 **Since:** 23
 
 <!--Device-hidebug-interface MemoryLimit--><!--Device-hidebug-interface MemoryLimit-End-->

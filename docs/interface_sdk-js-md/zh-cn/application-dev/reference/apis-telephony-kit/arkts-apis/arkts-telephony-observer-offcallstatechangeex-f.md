@@ -24,16 +24,16 @@ Cancel callback when the telCall state is updated.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TelCallState&gt; | 否 | Indicates the callback to unsubscribe from the callStateChangeEx event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TelCallState&gt; | 否 | Indicates the callback to unsubscribe from the callStateChangeEx event. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [8800999](../errorcode-telephony.md#8800999-内部错误) | Unknown error. |
+| [8800001](../errorcode-telephony.md#8800001-输入参数不在处理范围内) | Invalid parameter value. |
 | [8800002](../errorcode-telephony.md#8800002-服务连接失败) | Service connection failed. |
 | [8800003](../errorcode-telephony.md#8800003-系统内部错误) | System internal error. |
-| [8800001](../errorcode-telephony.md#8800001-输入参数不在处理范围内) | Invalid parameter value. |
+| [8800999](../errorcode-telephony.md#8800999-内部错误) | Unknown error. |
 
 **示例**
 

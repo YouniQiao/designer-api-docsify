@@ -12,7 +12,9 @@ import { notificationManager } from '@kit.NotificationKit';
 function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a notification slot type is enabled for the specified application. This API uses an asynchronous callback to return the result. This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
+Checks whether a notification slot type is enabled for the specified application. This API uses an asynchronous callback to return the result.
+
+This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
 
 **Since:** 23
 
@@ -36,11 +38,11 @@ Checks whether a notification slot type is enabled for the specified application
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
@@ -72,7 +74,9 @@ notificationManager.isNotificationSlotEnabled(
 function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType): Promise<boolean>
 ```
 
-Checks whether a notification slot type is enabled for the specified application. This API uses a promise to return the result. This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
+Checks whether a notification slot type is enabled for the specified application. This API uses a promise to return the result.
+
+This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
 
 **Since:** 23
 
@@ -101,11 +105,11 @@ Checks whether a notification slot type is enabled for the specified application
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |

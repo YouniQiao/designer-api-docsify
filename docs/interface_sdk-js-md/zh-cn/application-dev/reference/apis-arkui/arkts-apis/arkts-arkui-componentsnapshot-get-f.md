@@ -12,7 +12,13 @@ import { componentSnapshot } from '@kit.ArkUI';
 function get(id: string, callback: AsyncCallback<image.PixelMap>, options?: SnapshotOptions): void
 ```
 
-获取已加载的组件的截图，传入组件的组件标识，找到对应组件进行截图。通过回调返回结果。 &gt; **说明：** &gt; &gt; - 从API version 12开始，可以通过使用[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)中的 &gt; [getComponentSnapshot](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)方法 &gt; 获取当前UI上下文关联的[ComponentSnapshot](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-componentsnapshot-c.md)对象。 &gt; &gt; - 截图会获取最近一帧的绘制内容。如果在组件触发更新的同时调用截图，更新的渲染内容不会被截取到，截图会返回上一帧的绘制内容。
+获取已加载的组件的截图，传入组件的组件标识，找到对应组件进行截图。通过回调返回结果。
+
+> **说明：**
+> 
+> - 从API version 12开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的 &gt; [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)方法 &gt; 获取当前UI上下文关联的[ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)对象。
+> 
+> - 截图会获取最近一帧的绘制内容。如果在组件触发更新的同时调用截图，更新的渲染内容不会被截取到，截图会返回上一帧的绘制内容。
 
 **起始版本：** 10
 
@@ -33,15 +39,15 @@ function get(id: string, callback: AsyncCallback<image.PixelMap>, options?: Snap
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | string | 是 | 目标组件的组件标识。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | 截图返回结果的回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | 是 | 截图返回结果的回调。 |
 | options | [SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | 否 | 截图相关的自定义参数。<br>**起始版本：** 12 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Invalid ID. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Invalid ID. |
 
 **示例**
 
@@ -93,7 +99,13 @@ struct SnapshotExample {
 function get(id: string, options?: SnapshotOptions): Promise<image.PixelMap>
 ```
 
-获取已加载的组件的截图，传入组件的组件标识，找到对应组件进行截图。通过Promise返回结果。 &gt; **说明：** &gt; &gt; - 从API version 12开始，可以通过使用[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)中的 &gt; [getComponentSnapshot](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)方法 &gt; 获取当前UI上下文关联的[ComponentSnapshot](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-componentsnapshot-c.md)对象。 &gt; &gt; - 截图会获取最近一帧的绘制内容。如果在组件触发更新的同时调用截图，更新的渲染内容不会被截取到，截图会返回上一帧的绘制内容。
+获取已加载的组件的截图，传入组件的组件标识，找到对应组件进行截图。通过Promise返回结果。
+
+> **说明：**
+> 
+> - 从API version 12开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的 &gt; [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)方法 &gt; 获取当前UI上下文关联的[ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)对象。
+> 
+> - 截图会获取最近一帧的绘制内容。如果在组件触发更新的同时调用截图，更新的渲染内容不会被截取到，截图会返回上一帧的绘制内容。
 
 **起始版本：** 10
 
@@ -126,8 +138,8 @@ function get(id: string, options?: SnapshotOptions): Promise<image.PixelMap>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Invalid ID. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Invalid ID. |
 
 **示例**
 

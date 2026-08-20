@@ -1,4 +1,4 @@
-# PasswordAlgs(Security Management)
+# PasswordAlgs
 
 Enumerates the encryption algorithms used to process password data.
 

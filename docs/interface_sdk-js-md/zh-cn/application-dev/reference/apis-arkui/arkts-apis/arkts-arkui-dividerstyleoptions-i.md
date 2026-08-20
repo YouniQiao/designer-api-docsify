@@ -2,6 +2,8 @@
 
 Defines the struct of DividerStyleOptions.
 
+@interface DividerStyleOptions
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare interface DividerStyleOptions--><!--Device-unnamed-declare interface DividerStyleOptions-End-->

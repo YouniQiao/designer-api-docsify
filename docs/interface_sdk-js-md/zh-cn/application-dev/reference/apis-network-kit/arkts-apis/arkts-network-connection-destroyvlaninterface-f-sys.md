@@ -12,7 +12,11 @@ import { connection } from '@kit.NetworkKit';
 function destroyVlanInterface(ifName: string, vlanId: int): Promise<void>
 ```
 
-删除指定以太网网卡上由vlanId指定的虚拟局域网。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 本接口当前仅支持PC设备，其他设备类型上调用本接口返回错误码2100002。
+删除指定以太网网卡上由vlanId指定的虚拟局域网。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 本接口当前仅支持PC设备，其他设备类型上调用本接口返回错误码2100002。
 
 **起始版本：** 23
 
@@ -43,11 +47,11 @@ function destroyVlanInterface(ifName: string, vlanId: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [2100400](../errorcode-net-connection.md#2100400-传入网卡名不正确非以太网) | The input network interface name is incorrect. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Nonsystem applications use system APIs. |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+| [2100400](../errorcode-net-connection.md#2100400-传入网卡名不正确非以太网) | The input network interface name is incorrect. |
 
 **示例**
 

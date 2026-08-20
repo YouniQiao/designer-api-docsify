@@ -2,6 +2,8 @@
 
 Provides fileUri APIS
 
+@namespace fileUri
+
 **Since:** 23
 
 <!--Device-unnamed-declare namespace fileUri--><!--Device-unnamed-declare namespace fileUri-End-->

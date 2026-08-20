@@ -12,7 +12,11 @@ import { statistics } from '@kit.NetworkKit';
 function getCellularRxBytes(callback: AsyncCallback<long>): void
 ```
 
-Obtains the total downlink traffic (in bytes) of the NIC corresponding to the currently connected cellular network from the last startup to the time when this API is called. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; It is recommended to call this API when the cellular network is in the connected state. Otherwise, error code 210 &gt; 3012 will be thrown.
+Obtains the total downlink traffic (in bytes) of the NIC corresponding to the currently connected cellular network from the last startup to the time when this API is called. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> It is recommended to call this API when the cellular network is in the connected state. Otherwise, error code 210 &gt; 3012 will be thrown.
 
 **Since:** 23
 
@@ -32,9 +36,9 @@ Obtains the total downlink traffic (in bytes) of the NIC corresponding to the cu
 | --- | --- |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [2103005](../errorcode-net-statistics.md#2103005-failed-to-read-the-system-map) | Failed to read the system map. |
 | [2103011](../errorcode-net-statistics.md#2103011-failed-to-create-a-system-map) | Failed to create a system map. |
 | [2103012](../errorcode-net-statistics.md#2103012-failed-to-obtain-the-nic-name) | Failed to obtain the NIC name. |
-| [2103005](../errorcode-net-statistics.md#2103005-failed-to-read-the-system-map) | Failed to read the system map. |
 
 **Examples**
 
@@ -55,7 +59,11 @@ statistics.getCellularRxBytes((error: BusinessError, stats: number) => {
 function getCellularRxBytes(): Promise<long>
 ```
 
-Obtains the total downlink traffic (in bytes) of the NIC corresponding to the currently connected cellular network from the last startup to the time when this API is called. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; It is recommended to call this API when the cellular network is in the connected state. Otherwise, error code 210 &gt; 3012 will be thrown.
+Obtains the total downlink traffic (in bytes) of the NIC corresponding to the currently connected cellular network from the last startup to the time when this API is called. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> It is recommended to call this API when the cellular network is in the connected state. Otherwise, error code 210 &gt; 3012 will be thrown.
 
 **Since:** 23
 
@@ -75,9 +83,9 @@ Obtains the total downlink traffic (in bytes) of the NIC corresponding to the cu
 | --- | --- |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [2103005](../errorcode-net-statistics.md#2103005-failed-to-read-the-system-map) | Failed to read the system map. |
 | [2103011](../errorcode-net-statistics.md#2103011-failed-to-create-a-system-map) | Failed to create a system map. |
 | [2103012](../errorcode-net-statistics.md#2103012-failed-to-obtain-the-nic-name) | Failed to obtain the NIC name. |
-| [2103005](../errorcode-net-statistics.md#2103005-failed-to-read-the-system-map) | Failed to read the system map. |
 
 **Examples**
 

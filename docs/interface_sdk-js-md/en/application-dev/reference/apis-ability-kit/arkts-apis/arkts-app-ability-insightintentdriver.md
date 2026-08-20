@@ -1,6 +1,10 @@
 # @ohos.app.ability.insightIntentDriver
 
-The module provides APIs for executing intent calls. The system executes intent calls based on user interaction and more. &gt; **NOTE：**&gt; &gt; Starting from API version 20, this module supports application navigation using intents defined by the &gt; @InsightIntentLink &gt; decorator.
+The module provides APIs for executing intent calls. The system executes intent calls based on user interaction and more.
+
+> **NOTE：**
+> 
+> Starting from API version 20, this module supports application navigation using intents defined by the &gt; @InsightIntentLink &gt; decorator.
 
 **Since:** 23
 
@@ -68,7 +72,7 @@ import { insightIntentDriver } from '@kit.AbilityKit';
 | --- | --- |
 | [DevelopType](arkts-ability-insightintentdriver-developtype-e-sys.md) | Enumerates the modes that define how an intent is developed. |
 | [ExecuteModeForConfiguration](arkts-ability-insightintentdriver-executemodeforconfiguration-e-sys.md) | Enumerates the execution modes supported by an [intent developed using a configuration file](../../../application-models/insight-intent-config-development.md). For example, if **executeMode** in the [insight_intent.json configuration file] (../../../application-models/insight-intent-config-development.md#description-of-the-insight_intentjson-file) is set to **foreground**, the intent bound to the UIAbility can run in the foreground. |
-| [GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md) | Enumerates the flags of intent information ([InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)). It is used in [getAllInsightIntentInfo](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md), [getInsightIntentInfoByBundleName](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md), and [getInsightIntentInfoByIntentName](arkts-ability-insightintentdriver-getinsightintentinfobyintentname-f-sys.md). &gt; **NOTE：**&gt; &gt; - For intents developed using a configuration file, the full and brief information queried through the preceding &gt; APIs are the same. &gt; &gt; - For intents developed using a decorator, the full and brief information queried through the preceding APIs are &gt; different, as described below. &gt; &gt; Table 1 Differences between full intent information and brief intent information &gt; &gt; \| Name\| Included in Full Intent Information\| Included in Brief Intent Information\| &gt; \| -------- \| -------- \| -------- \| &gt; \| bundleName \| Yes\| Yes\| &gt; \| moduleName \| Yes\| Yes\| &gt; \| intentName \| Yes\| Yes\| &gt; \| domain \| Yes\| No\| &gt; \| intentVersion \| Yes\| No\| &gt; \| displayName \| Yes\| Yes\| &gt; \| displayDescription \| Yes\| No\| &gt; \| schema \| Yes\| No\| &gt; \| icon \| Yes\| No\| &gt; \| llmDescription \| Yes\| No\| &gt; \| keywords \| Yes\| No\| &gt; \| intentType \| Yes\| Yes\| &gt; \| subIntentInfo \| Yes\| Yes\| &gt; \| parameters \| Yes\| Yes\| &gt; \| entities \| No\| No\| &gt; \| developType&lt;sup&gt;23+&lt;/sup&gt; \| Yes\| Yes\| &gt; \| subIntentInfoForConfiguration&lt;sup&gt;23+&lt;/sup&gt; \| No\| No\| |
+| [GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md) | Enumerates the flags of intent information ([InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)). It is used in [getAllInsightIntentInfo](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md), [getInsightIntentInfoByBundleName](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md), and [getInsightIntentInfoByIntentName](arkts-ability-insightintentdriver-getinsightintentinfobyintentname-f-sys.md). |
 | [InsightIntentType](arkts-ability-insightintentdriver-insightintenttype-e-sys.md) | Enumerates the intent types defined by the intent decorator. You can obtain the intent type from [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md) returned by calling APIs such as [getAllInsightIntentInfo](arkts-ability-insightintentdriver-getallinsightintentinfo-f-sys.md). |
 <!--DelEnd-->
 

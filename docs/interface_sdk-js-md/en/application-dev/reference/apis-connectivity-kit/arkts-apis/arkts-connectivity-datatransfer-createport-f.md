@@ -34,12 +34,12 @@ Creates a NearLink listening port that can receive data by UUID.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the chip does not support it. |
+| 36100003 | NearLink disabled. |
 | 36100020 | The UUID is already registered. |
 | 36100021 | Port exceeds the upper limit. |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 36100044 | NearLink standard UUID not allowed. |
 | 36100043 | Invalid UUID. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100099 | Operation failed. |
 

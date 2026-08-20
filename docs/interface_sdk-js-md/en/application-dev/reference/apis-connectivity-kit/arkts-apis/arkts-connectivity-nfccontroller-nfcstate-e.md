@@ -2,6 +2,8 @@
 
 NFC changed states.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-nfcController-enum NfcState--><!--Device-nfcController-enum NfcState-End-->

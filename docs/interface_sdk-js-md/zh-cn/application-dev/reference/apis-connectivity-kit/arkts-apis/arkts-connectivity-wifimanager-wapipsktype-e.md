@@ -1,6 +1,6 @@
 # WapiPskType
 
-描述WAPI预共享密钥类型。
+描述WAPI预共享密钥类型。 @enum { int }
 
 **起始版本：** 23
 

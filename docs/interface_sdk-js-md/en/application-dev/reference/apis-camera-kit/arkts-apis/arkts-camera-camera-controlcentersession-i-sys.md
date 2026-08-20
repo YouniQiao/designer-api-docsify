@@ -2,6 +2,8 @@
 
 Control center session object.
 
+@extends Beauty, Aperture [since 20 - 24] @extends Beauty, Aperture, ColorEffect [since 26.0.0]
+
 **Inheritance/Implementation:** ControlCenterSession extends [Beauty](arkts-camera-camera-beauty-i-sys.md), [Aperture](arkts-camera-camera-aperture-i-sys.md), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md)
 
 **Since:** 23
@@ -45,9 +47,9 @@ Enable auto-framing effect.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## getAutoFramingStatus
 
@@ -135,8 +137,8 @@ Gets the current camera device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
 
 ## isAutoFramingSupported
 
@@ -222,7 +224,7 @@ Sets the camera to be used as a camera at the specified position.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 

@@ -52,13 +52,13 @@ appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], infos?: stri
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900005 | I/O error |
-| 13900001 | Operation not permitted |
-| 13900025 | No space left on device |
 | 13600001 | IPC error |
-| 13900042 | Unknown error |
+| 13900001 | Operation not permitted |
+| 13900005 | I/O error |
 | 13900011 | Out of memory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900042 | Unknown error |
 
 **示例**
 
@@ -177,19 +177,19 @@ appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], callback: As
 | --- | --- | --- | --- |
 | remoteCapabilitiesFd | int | 是 | 保存远端设备能力信息的已打开JSON文件描述符。 可通过getLocalCapabilities方法获取该值。 |
 | bundlesToBackup | string[] | 是 | 需要恢复的应用名称数组。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 添加恢复应用完成后的异步回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 添加恢复应用完成后的异步回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900005 | I/O error |
-| 13900001 | Operation not permitted |
-| 13900025 | No space left on device |
 | 13600001 | IPC error |
-| 13900042 | Unknown error |
+| 13900001 | Operation not permitted |
+| 13900005 | I/O error |
 | 13900011 | Out of memory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900042 | Unknown error |
 
 **示例**
 
@@ -298,9 +298,9 @@ cancel(bundleName: string): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
 **示例**
 
@@ -582,11 +582,11 @@ getApkFileHandle(path: string, fileName: string): Promise<FileData>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900001 | Operation not permitted |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error |
+| 13900001 | Operation not permitted |
+| 13900020 | Invalid argument |
 
 **示例**
 
@@ -794,9 +794,9 @@ getFileHandle(fileMeta: FileMeta): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900001 | Operation not permitted |
 | 13600001 | IPC error |
+| 13900001 | Operation not permitted |
+| 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
 **示例**
@@ -884,15 +884,15 @@ getFileHandle(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | 是 | 待发送文件的元数据。所有文件都应来自 备份流程或getLocalCapabilities方法。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 获取文件句柄完成后的异步回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 获取文件句柄完成后的异步回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900001 | Operation not permitted |
 | 13600001 | IPC error |
+| 13900001 | Operation not permitted |
+| 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
 **示例**
@@ -990,11 +990,11 @@ getFileHandles(fileMeta: FileMeta): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900001 | Operation not permitted |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error |
+| 13900001 | Operation not permitted |
+| 13900020 | Invalid argument |
 
 **示例**
 
@@ -1099,11 +1099,11 @@ getLocalCapabilities(): Promise<FileData>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900001 | Operation not permitted |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error |
+| 13900001 | Operation not permitted |
+| 13900020 | Invalid argument |
 | 13900042 | Internal error |
 
 **示例**
@@ -1271,11 +1271,11 @@ migrateFile(pathInfo: PathInfo, fileMeta: FileMeta): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900001 | Operation not permitted |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error |
+| 13900001 | Operation not permitted |
+| 13900020 | Invalid argument |
 
 **示例**
 
@@ -1387,9 +1387,9 @@ publishFile(fileMeta: FileMeta): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900001 | Operation not permitted |
 | 13600001 | IPC error |
+| 13900001 | Operation not permitted |
+| 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
 **示例**
@@ -1489,15 +1489,15 @@ publishFile(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | 是 | 待发送文件的元数据。应确保备份框架已持有 通过getFileHandle获取的文件。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 发布文件句柄完成后的异步回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 发布文件句柄完成后的异步回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900001 | Operation not permitted |
 | 13600001 | IPC error |
+| 13900001 | Operation not permitted |
+| 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
 **示例**
@@ -1604,12 +1604,12 @@ release(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| 13900005 | I/O error |
-| 13900001 | Operation not permitted |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | 13600001 | IPC error |
+| 13900001 | Operation not permitted |
+| 13900005 | I/O error |
 | 13900042 | Unknown error |
 
 **示例**

@@ -52,13 +52,13 @@ createOsAccountSubProfile(osAccountLocalId: int): Promise<OsAccountSubProfile>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target OS account is being operated. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted OS account. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | The OS account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300402](../errorcode-account.md#12300402-系统账号下的子身份资料数量已达到上限) | The number of sub-profiles under the OS account has reached limit. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | The OS account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted OS account. |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target OS account is being operated. |
+| [12300402](../errorcode-account.md#12300402-系统账号下的子身份资料数量已达到上限) | The number of sub-profiles under the OS account has reached limit. |
 
 **示例**
 
@@ -139,12 +139,12 @@ deleteOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The OS account or sub-profile is being operated. |
-| [12300403](../errorcode-account.md#12300403-受限的系统账号子身份资料) | Restricted sub-profile cannot be deleted. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The OS account or sub-profile is being operated. |
 | [12300401](../errorcode-account.md#12300401-系统账号子身份资料不存在) | Sub-profile not found. |
+| [12300403](../errorcode-account.md#12300403-受限的系统账号子身份资料) | Restricted sub-profile cannot be deleted. |
 | [12300404](../errorcode-account.md#12300404-系统账号的前台子身份资料不允许被删除) | The foreground sub-profile cannot be deleted. |
 
 **示例**
@@ -297,9 +297,9 @@ getOsAccountForegroundSubProfileId(osAccountLocalId: int): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | OS account not found. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | OS account not found. |
 | [12300401](../errorcode-account.md#12300401-系统账号子身份资料不存在) | The foreground sub-profile not found. |
 
 **示例**
@@ -703,10 +703,10 @@ getOsAccountSubProfileIds(osAccountLocalId: int): Promise<int[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | OS account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | OS account not found. |
 
 **示例**
 
@@ -772,7 +772,7 @@ offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSubProfileEventData](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md)&gt; | 否 | 需要取消订阅的回调。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSubProfileEventData](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md)&gt; | 否 | 需要取消订阅的回调。 |
 
 **错误码：**
 
@@ -838,15 +838,15 @@ onOsAccountSubProfileEvent(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | events | [OsAccountSubProfileEvent](arkts-basicservices-osaccount-osaccountsubprofileevent-e-sys.md)[] | 是 | 要订阅的事件数组 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSubProfileEventData](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md)&gt; | 是 | 事件发生时调用的回调。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSubProfileEventData](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md)&gt; | 是 | 事件发生时调用的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid event. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid event. |
 
 **示例**
 
@@ -923,12 +923,12 @@ switchOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The OS account or sub-profile is being operated. |
-| [12300403](../errorcode-account.md#12300403-受限的系统账号子身份资料) | Restricted sub-profile cannot be switched to foreground. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The OS account or sub-profile is being operated. |
 | [12300401](../errorcode-account.md#12300401-系统账号子身份资料不存在) | Sub-profile not found. |
+| [12300403](../errorcode-account.md#12300403-受限的系统账号子身份资料) | Restricted sub-profile cannot be switched to foreground. |
 | [12300405](../errorcode-account.md#12300405-已登录分布式账号的前台子身份不可直接切换到后台) | The foreground sub-profile bound with a logged-in distributed account cannot be directly switched to background. |
 
 **示例**

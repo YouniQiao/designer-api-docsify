@@ -2,6 +2,8 @@
 
 Indicates the SIM card types.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-sim-export enum CardType--><!--Device-sim-export enum CardType-End-->

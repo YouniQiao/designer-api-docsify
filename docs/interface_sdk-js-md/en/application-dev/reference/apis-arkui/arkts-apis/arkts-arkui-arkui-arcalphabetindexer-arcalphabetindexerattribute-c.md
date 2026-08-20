@@ -1,6 +1,8 @@
 # ArcAlphabetIndexerAttribute
 
-In addition to the universal attributes, the following attributes are supported. In addition to the universal events, the following events are supported.
+In addition to the universal attributes, the following attributes are supported.
+
+In addition to the universal events, the following events are supported.
 
 **Inheritance/Implementation:** ArcAlphabetIndexerAttribute extends CommonMethod<ArcAlphabetIndexerAttribute>
 
@@ -190,7 +192,11 @@ Sets the background color of the pop-up window.
 popupBackgroundBlurStyle(style: Optional<BlurStyle>): ArcAlphabetIndexerAttribute
 ```
 
-Sets the background blur style of the pop-up window. If this API is not used, the blur is disabled by default. The corresponding value is **NONE** in **BlurStyle**. &gt; **NOTE：**&gt; After configuring the pop-up window background blur style with **popupBackgroundBlurStyle**, avoid applying &gt; background colors via [popupBackground](#popupbackground).
+Sets the background blur style of the pop-up window. If this API is not used, the blur is disabled by default. The corresponding value is **NONE** in **BlurStyle**.
+
+> **NOTE：**
+
+> After configuring the pop-up window background blur style with **popupBackgroundBlurStyle**, avoid applying &gt; background colors via [popupBackground](#popupbackground).
 
 **Since:** 18
 

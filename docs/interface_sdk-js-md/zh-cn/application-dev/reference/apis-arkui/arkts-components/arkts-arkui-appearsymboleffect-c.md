@@ -47,7 +47,9 @@ AppearSymbolEffect的构造函数，出现动效。
 scope?: EffectScope
 ```
 
-动效范围。具体枚举值及说明请参考EffectScope枚举说明。 默认值：EffectScope.LAYER
+动效范围。具体枚举值及说明请参考EffectScope枚举说明。
+
+默认值：EffectScope.LAYER
 
 **类型：** [EffectScope](arkts-arkui-effectscope-e.md)
 

@@ -32,7 +32,7 @@ Bundle name of the common event publisher. The default value is an empty string.
 code?: int
 ```
 
-Common event data received by the subscriber. The value of this field is the same as that of the **code** field in [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) when the publisher uses [commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md) to publish a common event. The value ranges from –2147483648 to 2147483647. The default value is **0**.
+Common event data received by the subscriber. The value of this field is the same as that of the **code** field in CommonEventPublishData when the publisher uses [commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md) to publish a common event. The value ranges from –2147483648 to 2147483647. The default value is **0**.
 
 **Type:** int
 
@@ -52,7 +52,7 @@ Common event data received by the subscriber. The value of this field is the sam
 data?: string
 ```
 
-Common event data received by the subscriber. The data size cannot exceed 64 KB. The value of this field is the same as that of the **data** field in [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) when the publisher uses [commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md) to publish a common event.
+Common event data received by the subscriber. The data size cannot exceed 64 KB. The value of this field is the same as that of the **data** field in CommonEventPublishData when the publisher uses [commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md) to publish a common event.
 
 **Type:** string
 

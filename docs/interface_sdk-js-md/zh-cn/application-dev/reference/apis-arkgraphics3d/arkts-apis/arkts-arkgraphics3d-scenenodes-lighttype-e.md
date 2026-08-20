@@ -2,6 +2,8 @@
 
 光源类型枚举。
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-unnamed-export enum LightType--><!--Device-unnamed-export enum LightType-End-->

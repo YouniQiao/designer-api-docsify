@@ -1,6 +1,6 @@
 # UploadFileType (System API)
 
-Enumerates upload file type.
+Enumerates upload file type. @enum {number}
 
 **Since:** 23
 

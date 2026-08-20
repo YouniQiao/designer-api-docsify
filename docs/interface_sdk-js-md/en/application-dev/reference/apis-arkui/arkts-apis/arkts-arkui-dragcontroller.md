@@ -1,6 +1,6 @@
 # @ohos.arkui.dragController
 
-This module allows developers to trigger a drag event.
+This module allows developers to trigger a drag event. @namespace dragController
 
 **Since:** 23
 

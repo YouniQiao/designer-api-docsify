@@ -40,8 +40,8 @@ Enable haptics when the ringer mode is silent mode. 这个方法只能在播放�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit in current state. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit in current state. |
 
 ## isHapticsIntensityAdjustmentSupported
 
@@ -131,9 +131,9 @@ Set haptics intensity for this player. This method uses a promise to return the 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Function is not supported in current device. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit in current state. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [5400108](../../apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) | Parameter out of range. |
 
 ## setHapticsRamp
@@ -170,8 +170,8 @@ Set haptics intensity ramp effect for this player. This method uses a promise to
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Function is not supported in current device. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit in current state. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [5400108](../../apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) | Parameter out of range. |
 

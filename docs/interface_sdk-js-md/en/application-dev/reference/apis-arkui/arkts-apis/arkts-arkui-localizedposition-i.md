@@ -2,6 +2,8 @@
 
 Defines the LocalizedPosition.
 
+@interface LocalizedPosition
+
 **Since:** 12
 
 <!--Device-unnamed-declare interface LocalizedPosition--><!--Device-unnamed-declare interface LocalizedPosition-End-->

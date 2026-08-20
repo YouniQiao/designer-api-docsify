@@ -2,6 +2,8 @@
 
 Border image option
 
+@interface BorderImageOption
+
 **Since:** 11
 
 <!--Device-unnamed-declare interface BorderImageOption--><!--Device-unnamed-declare interface BorderImageOption-End-->
@@ -107,7 +109,9 @@ Slice width of the upper left corner, upper right corner, lower left corner, and
 source?: string | Resource | LinearGradient
 ```
 
-Source or gradient color of the border image. When the type is string, this parameter sets the border image source. For details about how to reference image resources, see Loading Image Resources. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The border image source applies only to container components, such as Row, Column, and Flex. &lt;/p&gt;
+Source or gradient color of the border image. When the type is string, this parameter sets the border image source. For details about how to reference image resources, see Loading Image Resources.
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The border image source applies only to container components, such as Row, Column, and Flex. &lt;/p&gt;
 
 **Type:** string \| Resource \| [LinearGradient](arkts-arkui-lineargradient-i.md)
 

@@ -79,7 +79,9 @@ dataAbilityPredicates.equalTo("NAME", "lisi")
 beginsWith(field: string, value: string): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that begin with the given value. This API is similar to the percent sign (%) in SQL statements.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that begin with the given value.
+
+This API is similar to the percent sign (%) in SQL statements.
 
 **Since:** 7
 
@@ -236,7 +238,9 @@ dataAbilityPredicates.equalTo("NAME", "lisi")
 endsWith(field: string, value: string): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that end with the given value. This API is similar to the percent sign (%) in SQL statements.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that end with the given value.
+
+This API is similar to the percent sign (%) in SQL statements.
 
 **Since:** 7
 
@@ -269,7 +273,9 @@ dataAbilityPredicates.endsWith("NAME", "se")
 equalTo(field: string, value: ValueType): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that are equal to the given value. This API is similar to the SQL equal to (=) operator.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are equal to the given value.
+
+This API is similar to the SQL equal to (=) operator.
 
 **Since:** 7
 
@@ -673,7 +679,9 @@ dataAbilityPredicates.lessThanOrEqualTo("AGE", 20)
 like(field: string, value: string): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that are similar to the given value. This API is similar to the SQL **like** statement.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are similar to the given value.
+
+This API is similar to the SQL **like** statement.
 
 **Since:** 7
 
@@ -772,7 +780,9 @@ dataAbilityPredicates.notBetween("AGE", 10, 50)
 notEqualTo(field: string, value: ValueType): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that are not equal to the given value. This API is similar to the SQL not equal (!=) operator.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are not equal to the given value.
+
+This API is similar to the SQL not equal (!=) operator.
 
 **Since:** 7
 
@@ -871,7 +881,9 @@ dataAbilityPredicates.equalTo("NAME", "Rose").offsetAs(3).limitAs(3)
 or(): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to add the OR condition. This API is similar to the SQL **or** operator.
+Creates a **DataAbilityPredicates** object to add the OR condition.
+
+This API is similar to the SQL **or** operator.
 
 **Since:** 7
 

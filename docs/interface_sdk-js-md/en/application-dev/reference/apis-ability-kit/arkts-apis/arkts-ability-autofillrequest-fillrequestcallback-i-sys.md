@@ -38,9 +38,9 @@ Called when an auto-fill request is canceled.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1.The input parameter is not valid parameter; <br>2. Mandatory parameters are left unspecified.<br>**Applicable version:** 12 and later |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1.The input parameter is not valid parameter; <br>2. Mandatory parameters are left unspecified.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -133,8 +133,8 @@ Called when an auto-fill request fails to be processed.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 **Examples**
 
@@ -233,9 +233,9 @@ Called when an auto-fill request is successfully processed.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Mandatory parameters are left unspecified. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 **Examples**
 
@@ -340,9 +340,9 @@ Sets the size and position of an auto-fill pop-up.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Mandatory parameters are left unspecified. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 **Examples**
 

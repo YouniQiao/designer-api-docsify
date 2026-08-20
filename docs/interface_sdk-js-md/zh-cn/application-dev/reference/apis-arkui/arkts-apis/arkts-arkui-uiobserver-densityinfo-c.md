@@ -22,7 +22,7 @@ context: UIContext
 
 屏幕像素密度变化时页面对应的上下文信息。
 
-**类型：** [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)
+**类型：** [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
 
 **起始版本：** 12
 
@@ -40,7 +40,9 @@ context: UIContext
 density: number
 ```
 
-变化后的屏幕像素密度。 取值范围：[0, +∞)
+变化后的屏幕像素密度。
+
+取值范围：[0, +∞)
 
 **类型：** number
 

@@ -1,4 +1,4 @@
-# PortModeType(USB Manager) (System API)
+# PortModeType (System API)
 
 Enumerates USB port mode types.
 

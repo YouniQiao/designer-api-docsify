@@ -1,4 +1,4 @@
-# RelativeTimeFormat(国际化-Intl)
+# RelativeTimeFormat
 
 提供相对时间格式化的能力。
 

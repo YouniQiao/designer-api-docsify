@@ -22,7 +22,9 @@ import { sendableImage } from '@kit.ImageKit';
 applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<void>
 ```
 
-Apply color space of pixelmap, the pixels will be changed by input color space. This method uses a promise to return the result. This method is used to change color space of PixelMap. Pixel data will be changed by calling this method. If you want to set the colorspace property of PixelMap only, use method {@Link #setColorSpace(colorSpaceManager.ColorSpaceManager)}.
+Apply color space of pixelmap, the pixels will be changed by input color space. This method uses a promise to return the result.
+
+This method is used to change color space of PixelMap. Pixel data will be changed by calling this method. If you want to set the colorspace property of PixelMap only, use method {@Link #setColorSpace(colorSpaceManager.ColorSpaceManager)}.
 
 **Since:** 12
 
@@ -47,9 +49,9 @@ Apply color space of pixelmap, the pixels will be changed by input color space. 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 | [62980104](../errorcode-image.md#62980104-image-initialization-error) | Failed to initialize the internal object. |
 | [62980108](../errorcode-image.md#62980108-image-color-conversion-error) | Failed to convert the color space. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 
 **Examples**
 
@@ -388,9 +390,9 @@ Get color space of pixelmap.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | If the image parameter invalid. |
 | [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | If the image data abnormal. |
 | [62980103](../errorcode-image.md#62980103-unsupported-image-type) | If the image data unsupport. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | If the image parameter invalid. |
 
 **Examples**
 
@@ -575,8 +577,8 @@ Marshalling PixelMap and write into MessageSequence.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. |
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. |
 
 **Examples**
 
@@ -1140,7 +1142,9 @@ async function Demo(pixelMap : sendableImage.PixelMap) {
 setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void
 ```
 
-Set color space of pixelmap. This method is only used to set the colorspace property of PixelMap, while all pixel data remains the same after calling this method. If you want to change colorspace for all pixels, use method {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)}.
+Set color space of pixelmap.
+
+This method is only used to set the colorspace property of PixelMap, while all pixel data remains the same after calling this method. If you want to change colorspace for all pixels, use method {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)}.
 
 **Since:** 12
 
@@ -1158,8 +1162,8 @@ Set color space of pixelmap. This method is only used to set the colorspace prop
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | If the image parameter invalid. |
 | [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | If the operation invalid. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | If the image parameter invalid. |
 
 **Examples**
 
@@ -1298,9 +1302,9 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 | [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. |
 | [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 
 **Examples**
 

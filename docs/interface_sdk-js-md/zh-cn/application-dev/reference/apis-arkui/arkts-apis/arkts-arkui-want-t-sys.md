@@ -1,4 +1,4 @@
-# Want(System API)（系统接口）
+# Want（系统接口）
 
 ```TypeScript
 declare type Want = import('../api/@ohos.app.ability.Want').default

@@ -1,6 +1,10 @@
-# Prompt(弹窗)
+# Prompt
 
-创建并显示文本提示框、对话框和操作菜单。 &gt; **说明：** &gt; &gt; - 从API version 8 开始，该接口不再维护，推荐使用新接口[@ohos.promptAction (弹窗)](arkts-arkui-promptaction-n.md)。
+创建并显示文本提示框、对话框和操作菜单。
+
+> **说明：**
+> 
+> - 从API version 8 开始，该接口不再维护，推荐使用新接口[@ohos.promptAction (弹窗)](../../apis-default/arkts-apis/arkts-promptaction-n.md)。
 
 **起始版本：** 3
 

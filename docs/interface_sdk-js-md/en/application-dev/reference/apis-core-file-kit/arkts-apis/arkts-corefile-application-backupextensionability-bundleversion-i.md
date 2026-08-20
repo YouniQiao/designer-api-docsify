@@ -2,6 +2,8 @@
 
 Describe bundle version
 
+@interface BundleVersion
+
 **Since:** 23
 
 <!--Device-unnamed-export interface BundleVersion--><!--Device-unnamed-export interface BundleVersion-End-->

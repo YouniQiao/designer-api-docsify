@@ -2,6 +2,8 @@
 
 定义LazyDynamicLayout组件。
 
+@extends CommonMethod&lt;LazyDynamicLayoutAttribute&gt;
+
 **继承/实现关系：** LazyDynamicLayoutAttribute extends CommonMethod<LazyDynamicLayoutAttribute>
 
 **起始版本：** 26.0.0
@@ -38,11 +40,11 @@ onVisibleIndexesChange(callback: Callback<int[]> | undefined): LazyDynamicLayout
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-na/arkts-apis/arkts-na-callback-t.md)&lt;int[]&gt; \| undefined | 是 | 可见索引变化时回调的回调函数。 <br>传递undefined将取消注册回调。 |
+| callback | [Callback](../../apis-default/arkts-apis/arkts-callback-t.md)&lt;int[]&gt; \| undefined | 是 | 可见索引变化时回调的回调函数。 <br>传递undefined将取消注册回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyDynamicLayoutAttribute](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-c.md) |  |
+| [LazyDynamicLayoutAttribute](../../apis-default/arkts-apis/arkts-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-i.md) |  |
 

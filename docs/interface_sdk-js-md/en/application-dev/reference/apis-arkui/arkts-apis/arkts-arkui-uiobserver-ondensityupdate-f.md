@@ -29,8 +29,8 @@ Listens for screen pixel density changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'densityUpdate' | Yes | Event type. Set to **'densityUpdate'** for screen pixel density change events. |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | Context information, which is used to specify the target page scope. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DensityInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-densityinfo-c.md)&gt; | Yes | Callback used to return the result. It provides information about the changed screen pixel density. |
+| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | Context information, which is used to specify the target page scope. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DensityInfo](arkts-arkui-uiobserver-densityinfo-c.md)&gt; | Yes | Callback used to return the result. It provides information about the changed screen pixel density. |
 
 **Examples**
 

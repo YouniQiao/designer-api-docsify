@@ -2,6 +2,8 @@
 
 Component sheet dismiss
 
+@interface DismissSheetAction
+
 **Since:** 12
 
 <!--Device-unnamed-declare interface DismissSheetAction--><!--Device-unnamed-declare interface DismissSheetAction-End-->

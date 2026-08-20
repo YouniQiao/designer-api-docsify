@@ -30,7 +30,7 @@ import { application } from '@kit.AbilityKit';
 | [getAppPreloadType](arkts-ability-application-getapppreloadtype-f.md) | 获取应用当前进程的预加载类型。 |
 | [getApplicationContext](arkts-ability-application-getapplicationcontext-f.md) | 获取应用上下文。开发者使用该接口时，无需依赖Context基类。 重复调用该接口，将生成新的ApplicationContext对象。 |
 | [getApplicationContextInstance](arkts-ability-application-getapplicationcontextinstance-f.md) | 获取应用上下文实例。开发者使用该接口时，无需依赖Context基类。 重复调用该接口，将获取同一个ApplicationContext实例。 |
-| [promoteCurrentToCandidateMasterProcess](arkts-ability-application-promotecurrenttocandidatemasterprocess-f.md) | 开发者可以调用该接口将当前进程放入[备选主控进程](../../../application-models/ability-terminology.md#candidatemasterprocess备选主控进程)链表。使用 Promise异步回调。 当[主控进程](../../../application-models/ability-terminology.md#masterprocess主控进程)销毁后，再次启动配置了isolationProcess为true的 UIAbility/UIExtensionAbility组件时，系统会根据是否存在备选主控进程执行相应操作。 - 如果存在备选主控进程，系统会将备选主控进程链表首节点的进程设置为主控进程，触发 [onNewProcessRequest](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onnewprocessrequest)回调。 - 如果不存在备选主控进程，系统会根据组件类型执行相应的操作。 - 对于UIAbility组件，系统将创建新的空进程作为主控进程。 - 对于UIExtensionAbility组件，系统会优先复用已有的UIExtensionAbility进程作为新的主控进程，无可用进程时则创建新的空进程作为主控进程。 该接口在PC/2in1、Tablet中可正常调用，在其他设备类型中返回801错误码。 |
+| [promoteCurrentToCandidateMasterProcess](arkts-ability-application-promotecurrenttocandidatemasterprocess-f.md) | 开发者可以调用该接口将当前进程放入[备选主控进程](../../../application-models/ability-terminology.md#candidatemasterprocess备选主控进程)链表。使用 Promise异步回调。 当[主控进程](../../../application-models/ability-terminology.md#masterprocess主控进程)销毁后，再次启动配置了isolationProcess为true的 UIAbility/UIExtensionAbility组件时，系统会根据是否存在备选主控进程执行相应操作。 |
 
 <!--Del-->
 ### 函数（系统接口）

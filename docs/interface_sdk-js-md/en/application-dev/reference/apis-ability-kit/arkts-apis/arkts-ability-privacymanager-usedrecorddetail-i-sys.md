@@ -40,7 +40,9 @@ Access duration. Unit: milliseconds.
 count?: int
 ```
 
-Number of accesses. In accessRecords, it indicates the number of successful accesses; in rejectRecords, it indicates the number of failures or rejections. Default value: 0.
+Number of accesses. In accessRecords, it indicates the number of successful accesses; in rejectRecords, it indicates the number of failures or rejections.
+
+Default value: 0.
 
 **Type:** int
 
@@ -58,7 +60,11 @@ Number of accesses. In accessRecords, it indicates the number of successful acce
 lockScreenStatus?: int
 ```
 
-Lock screen status at the time of access. - 1: Indicates permission usage in a non-lock-screen scenario. - 2: Indicates permission usage in a lock-screen scenario. Default value: 1.
+Lock screen status at the time of access.
+
+- 1: Indicates permission usage in a non-lock-screen scenario. - 2: Indicates permission usage in a lock-screen scenario.
+
+Default value: 1.
 
 **Type:** int
 
@@ -112,7 +118,9 @@ Access timestamp. Unit: milliseconds.
 usedType?: PermissionUsedType
 ```
 
-Sensitive permission access method. Default value: NORMAL_TYPE.
+Sensitive permission access method.
+
+Default value: NORMAL_TYPE.
 
 **Type:** [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md)
 

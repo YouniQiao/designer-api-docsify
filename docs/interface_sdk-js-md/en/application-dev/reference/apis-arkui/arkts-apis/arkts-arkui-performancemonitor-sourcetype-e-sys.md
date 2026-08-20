@@ -1,8 +1,12 @@
 # SourceType (System API)
 
-Enumerates the trigger source types of user scenes.
+Enumerates the input source type.
 
-**Since:** 12
+@enum { number }
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-performanceMonitor-export enum SourceType--><!--Device-performanceMonitor-export enum SourceType-End-->
 
@@ -16,9 +20,11 @@ Enumerates the trigger source types of user scenes.
 PERF_TOUCH_EVENT = 0
 ```
 
-Touchscreen event.
+The user touches the screen to trigger the scene.
 
-**Since:** 12
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,9 +40,11 @@ Touchscreen event.
 PERF_MOUSE_EVENT = 1
 ```
 
-Mouse event.
+TThe user uses the mouse to trigger the scene.
 
-**Since:** 12
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,9 +60,11 @@ Mouse event.
 PERF_TOUCHPAD_EVENT = 2
 ```
 
-Touchpad event.
+The user uses the touchpad to trigger the scene.
 
-**Since:** 12
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,9 +80,11 @@ Touchpad event.
 PERF_JOYSTICK_EVENT = 3
 ```
 
-Joystick event.
+The user uses the joystick to trigger the scene.
 
-**Since:** 12
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,9 +100,11 @@ Joystick event.
 PERF_KEY_EVENT = 4
 ```
 
-Keyboard event.
+The user uses the keyboard to trigger the scene.
 
-**Since:** 12
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -22,7 +22,7 @@ context: UIAbilityContext | UIContext
 
 The context of the navigation operation.
 
-**类型：** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)
+**类型：** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
 
 **起始版本：** 12
 
@@ -42,7 +42,7 @@ from: NavDestinationInfo | NavBar
 
 From navigation content info.
 
-**类型：** NavDestinationInfo \| [NavBar](../../apis-na/arkts-apis/arkts-na-navbar-t.md)
+**类型：** NavDestinationInfo \| [NavBar](../../apis-default/arkts-components/arkts-navbar-t.md)
 
 **起始版本：** 12
 
@@ -62,7 +62,7 @@ operation: NavigationOperation
 
 The operation type.
 
-**类型：** [NavigationOperation](../../apis-na/arkts-apis/arkts-na-navigation-navigationoperation-e.md)
+**类型：** [NavigationOperation](../../apis-default/arkts-components/arkts-navigation-navigationoperation-e.md)
 
 **起始版本：** 12
 
@@ -82,7 +82,7 @@ to: NavDestinationInfo | NavBar
 
 To navigation content info.
 
-**类型：** NavDestinationInfo \| [NavBar](../../apis-na/arkts-apis/arkts-na-navbar-t.md)
+**类型：** NavDestinationInfo \| [NavBar](../../apis-default/arkts-components/arkts-navbar-t.md)
 
 **起始版本：** 12
 

@@ -1,6 +1,6 @@
 # @ohos.multimedia.videoProcessingEngine
 
-This module provides the capability of content processing for images, including image scaling.
+This module provides the capability of content processing for images, including image scaling. @namespace videoProcessingEngine
 
 **Since:** 23
 
@@ -34,5 +34,5 @@ import { videoProcessingEngine } from '@kit.ImageKit';
 
 | Name | Description |
 | --- | --- |
-| [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | Levels of processing quality for detail enhancement. |
+| [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | Levels of processing quality for detail enhancement. @enum {int} |
 

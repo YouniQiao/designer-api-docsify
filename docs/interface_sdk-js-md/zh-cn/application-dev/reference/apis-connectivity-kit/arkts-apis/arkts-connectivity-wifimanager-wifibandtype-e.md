@@ -1,6 +1,6 @@
 # WifiBandType
 
-WLAN频段类型。
+WLAN频段类型。 @enum { int }
 
 **起始版本：** 23
 

@@ -2,7 +2,9 @@
 
 As a child of the Text and ContainerSpan components, the **ImageSpan** component is used to display inline images.
 
-## Child Components Not supported
+## Child Components
+
+Not supported
 
 ## ImageSpan
 
@@ -34,11 +36,9 @@ Defines the constructor of ImageSpan.
 
 | Name | Description |
 | --- | --- |
-| [ImageLoadResult](arkts-arkui-imageloadresult-i.md) | Describes the object returned after the callback is triggered when an image is successfully loaded or decoded. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [ImageCompleteCallback](arkts-arkui-imagecompletecallback-t.md) | Defines the callback triggered when the image is successfully loaded or decoded. |
 

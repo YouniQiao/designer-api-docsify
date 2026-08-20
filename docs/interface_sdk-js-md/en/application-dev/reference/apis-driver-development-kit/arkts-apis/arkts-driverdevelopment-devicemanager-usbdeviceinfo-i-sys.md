@@ -26,7 +26,7 @@ interfaceDescList: Array<Readonly<USBInterfaceDesc>>
 
 List of interface descriptors of the USB device.
 
-**Type:** Array&lt;[Readonly](../../apis-na/arkts-apis/arkts-na-readonly-t.md)&lt;[USBInterfaceDesc](arkts-driverdevelopment-devicemanager-usbinterfacedesc-i-sys.md)&gt;&gt;
+**Type:** Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;[USBInterfaceDesc](arkts-driverdevelopment-devicemanager-usbinterfacedesc-i-sys.md)&gt;&gt;
 
 **Since:** 23
 

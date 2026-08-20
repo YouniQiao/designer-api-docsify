@@ -1,4 +1,4 @@
-# BusinessError(Public Callback Information)
+# BusinessError
 
 Defines an error parameter. This API inherits from the **Error** class and is used to pass standard error information, including the error code and optional additional information.
 

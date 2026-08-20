@@ -12,7 +12,11 @@ import { restrictions } from '@kit.MDMKit';
 function setDisallowedPolicy(admin: Want, feature: string, disallow: boolean): void
 ```
 
-Disallows a feature. &gt; **NOTE：**&gt; &gt; This API applies a device-level restriction policy that affects all users of the device. To set a restriction &gt; policy for a specific user, use the &gt; [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md) API.
+Disallows a feature.
+
+> **NOTE：**
+> 
+> This API applies a device-level restriction policy that affects all users of the device. To set a restriction &gt; policy for a specific user, use the &gt; [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md) API.
 
 **Since:** 12
 
@@ -43,10 +47,10 @@ Disallows a feature. &gt; **NOTE：**&gt; &gt; This API applies a device-level r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200013](../errorcode-enterpriseDeviceManager.md#9200013-control-not-immediately-effective) | The enterprise management policy has been successfully set, but the function has not taken effect in real time.<br>**Applicable version:** 21 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200013](../errorcode-enterpriseDeviceManager.md#9200013-control-not-immediately-effective) | The enterprise management policy has been successfully set, but the function has not taken effect in real time.<br>**Applicable version:** 21 and later |
 
 **Examples**
 
@@ -100,10 +104,10 @@ Enables or disables a specified device feature. Once disabled, the feature canno
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200013](../errorcode-enterpriseDeviceManager.md#9200013-control-not-immediately-effective) | The enterprise management policy has been successfully set, but the function has not taken effect in real time. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) | A conflict policy has been configured. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) | A conflict policy has been configured. |
+| [9200013](../errorcode-enterpriseDeviceManager.md#9200013-control-not-immediately-effective) | The enterprise management policy has been successfully set, but the function has not taken effect in real time. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 

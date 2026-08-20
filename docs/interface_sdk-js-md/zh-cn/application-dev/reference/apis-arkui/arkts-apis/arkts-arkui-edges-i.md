@@ -2,6 +2,8 @@
 
 Defines the Edges.
 
+@interface Edges
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare interface Edges--><!--Device-unnamed-declare interface Edges-End-->

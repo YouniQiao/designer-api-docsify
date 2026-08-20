@@ -32,20 +32,20 @@ function setSyncNotificationEnabledWithoutApp(userId: int, enable: boolean, call
 | --- | --- | --- | --- |
 | userId | int | 是 | 用户ID。 |
 | enable | boolean | 是 | 是否启用（true：使能，false：禁止）。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置是否将通知同步到未安装应用的设备的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 设置是否将通知同步到未安装应用的设备的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1600008](../errorcode-notification.md#1600008-用户不存在) | The user does not exist. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [1600008](../errorcode-notification.md#1600008-用户不存在) | The user does not exist. |
 
 **示例**
 
@@ -123,14 +123,14 @@ function setSyncNotificationEnabledWithoutApp(userId: int, enable: boolean): Pro
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1600008](../errorcode-notification.md#1600008-用户不存在) | The user does not exist. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [1600008](../errorcode-notification.md#1600008-用户不存在) | The user does not exist. |
 
 **示例**
 

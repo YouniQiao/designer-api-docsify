@@ -142,7 +142,9 @@ Establishes a tunnel to the server identified by the target resource.
 PATCH = "PATCH"
 ```
 
-Modifies a resource partially. **Since**: 26.0.0
+Modifies a resource partially.
+
+**Since**: 26.0.0
 
 **Since:** 26.0.0
 

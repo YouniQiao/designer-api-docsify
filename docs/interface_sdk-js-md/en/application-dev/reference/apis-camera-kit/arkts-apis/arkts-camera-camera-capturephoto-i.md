@@ -1,6 +1,6 @@
 # CapturePhoto
 
-**CapturePhoto** provides APIs for obtaining the objects of the full-quality image and the uncompressed image.
+*CapturePhoto** provides APIs for obtaining the objects of the full-quality image and the uncompressed image.
 
 **Since:** 23
 

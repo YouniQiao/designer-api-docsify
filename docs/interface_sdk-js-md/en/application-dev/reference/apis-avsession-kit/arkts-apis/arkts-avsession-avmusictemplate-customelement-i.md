@@ -2,6 +2,8 @@
 
 Custom elements of mine page.
 
+@extends OperResult @interface CustomElement
+
 **Inheritance/Implementation:** CustomElement extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md)
 
 **Since:** 23

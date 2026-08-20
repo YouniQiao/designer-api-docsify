@@ -1,6 +1,8 @@
 # FloatViewController
 
-标准悬浮窗控制器实例。用于启动、停止标准悬浮窗以及注册回调等操作。 下列API示例中都需先使用[floatView.create()](arkts-arkui-floatview-create-f.md)方法获取到标准悬浮窗控制器实例（即floatViewController），再通过此实例调用对应方法。
+标准悬浮窗控制器实例。用于启动、停止标准悬浮窗以及注册回调等操作。
+
+下列API示例中都需先使用[floatView.create()](arkts-arkui-floatview-create-f.md)方法获取到标准悬浮窗控制器实例（即floatViewController），再通过此实例调用对应方法。
 
 **起始版本：** 26.0.0
 
@@ -74,7 +76,7 @@ offLimitsChange(callback?: Callback<FloatViewLimits>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md)&gt; | 否 | 回调函数。返回当前的标准悬浮窗限制变化信息。若传入参数，则停止该监听。若未传入参数，则停止所有标准悬浮窗限制变化的监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md)&gt; | 否 | 回调函数。返回当前的标准悬浮窗限制变化信息。若传入参数，则停止该监听。若未传入参数，则停止所有标准悬浮窗限制变化的监听。 |
 
 **错误码：**
 
@@ -115,7 +117,7 @@ offRectChange(callback?: Callback<FloatViewRectChangeInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewRectChangeInfo](arkts-arkui-floatview-floatviewrectchangeinfo-i.md)&gt; | 否 | 回调函数。返回当前的标准悬浮窗矩形区域变化信息。若传入参数，则停止该监听。若未传入参数，则停止所有标准悬浮窗矩 形区域变化的监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatViewRectChangeInfo](arkts-arkui-floatview-floatviewrectchangeinfo-i.md)&gt; | 否 | 回调函数。返回当前的标准悬浮窗矩形区域变化信息。若传入参数，则停止该监听。若未传入参数，则停止所有标准悬浮窗矩 形区域变化的监听。 |
 
 **错误码：**
 
@@ -156,7 +158,7 @@ offStateChange(callback?: Callback<FloatViewStateChangeInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewStateChangeInfo](arkts-arkui-floatview-floatviewstatechangeinfo-i.md)&gt; | 否 | 回调函数。返回当前的标准悬浮窗状态变化信息。若传入参数，则停止该监听。若未传入参数，则停止所有标准悬浮窗状态 变化的监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatViewStateChangeInfo](arkts-arkui-floatview-floatviewstatechangeinfo-i.md)&gt; | 否 | 回调函数。返回当前的标准悬浮窗状态变化信息。若传入参数，则停止该监听。若未传入参数，则停止所有标准悬浮窗状态 变化的监听。 |
 
 **错误码：**
 
@@ -197,7 +199,7 @@ onLimitsChange(callback: Callback<FloatViewLimits>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md)&gt; | 是 | 回调函数。返回当前的标准悬浮窗限制变化信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md)&gt; | 是 | 回调函数。返回当前的标准悬浮窗限制变化信息。 |
 
 **错误码：**
 
@@ -239,7 +241,7 @@ onRectChange(callback: Callback<FloatViewRectChangeInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewRectChangeInfo](arkts-arkui-floatview-floatviewrectchangeinfo-i.md)&gt; | 是 | 回调函数。返回当前的标准悬浮窗矩形区域变化信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatViewRectChangeInfo](arkts-arkui-floatview-floatviewrectchangeinfo-i.md)&gt; | 是 | 回调函数。返回当前的标准悬浮窗矩形区域变化信息。 |
 
 **错误码：**
 
@@ -281,7 +283,7 @@ onStateChange(callback: Callback<FloatViewStateChangeInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewStateChangeInfo](arkts-arkui-floatview-floatviewstatechangeinfo-i.md)&gt; | 是 | 回调函数。返回当前的标准悬浮窗状态变化信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatViewStateChangeInfo](arkts-arkui-floatview-floatviewstatechangeinfo-i.md)&gt; | 是 | 回调函数。返回当前的标准悬浮窗状态变化信息。 |
 
 **错误码：**
 
@@ -323,7 +325,7 @@ restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wantParameters | Record&lt;string, Object&gt; | 否 | 恢复标准悬浮窗的主窗口时会给主窗口传递的自定义参数，主窗口会在触发 onNewWant 回调时收到。默认值为空，代表不向主窗传入任何自定义参数。 |
+| wantParameters | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 否 | 恢复标准悬浮窗的主窗口时会给主窗口传递的自定义参数，主窗口会在触发 onNewWant 回调时收到。默认值为空，代表不向主窗传入任何自定义参数。 |
 
 **返回值：**
 
@@ -335,10 +337,10 @@ restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The float view controller object is null. |
-| [1300032](../errorcode-window.md#1300032-恢复主窗口失败) | Failed to restore the main window. Possible cause: 1. User has never clicked the float view window before restore. 2. The float view window is not in the foreground. 3. The main window is in PAUSED lifecycle state. 4. The main window is in background during recent. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300031](../errorcode-window.md#1300031-闪控窗状态不支持该操作) | This operation is not supported on the float view in the current state. Possible cause: The float view window is not started when restoring. |
+| [1300032](../errorcode-window.md#1300032-恢复主窗口失败) | Failed to restore the main window. Possible cause: 1. User has never clicked the float view window before restore. 2. The float view window is not in the foreground. 3. The main window is in PAUSED lifecycle state. 4. The main window is in background during recent. |
 
 **示例**
 
@@ -366,7 +368,9 @@ try {
 setFloatViewVisibilityInApp(isVisible: boolean): Promise<void>
 ```
 
-设置应用在前台时标准悬浮窗窗口是否可见。使用Promise异步回调。 创建标准悬浮窗后未调用此接口前，默认其在应用处于前台时为可见状态。
+设置应用在前台时标准悬浮窗窗口是否可见。使用Promise异步回调。
+
+创建标准悬浮窗后未调用此接口前，默认其在应用处于前台时为可见状态。
 
 **起始版本：** 26.0.0
 
@@ -392,8 +396,8 @@ setFloatViewVisibilityInApp(isVisible: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 
 **示例**
 
@@ -577,8 +581,8 @@ setWindowSize(size: window.Size): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: The value of the size is less than or equal to 0. |
 
 **示例**
@@ -630,13 +634,13 @@ start(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal IPC error. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The float view controller object is null. |
-| [1300034](../errorcode-window.md#1300034-闪控窗与其他悬浮窗口操作冲突) | This operation conflicts with other floating windows. Possible cause: App has already started floating ball or pip window. |
-| [1300033](../errorcode-window.md#1300033-启动闪控窗失败) | Failed to start float view. Possible causes: 1. Start multiple float views. 2. The main window of context is not foreground. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. Possible cause: The application does not have the permission required to call the API. |
-| [1300031](../errorcode-window.md#1300031-闪控窗状态不支持该操作) | The float view state does not support this operation. Possible cause: The float view is stopping. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300030](../errorcode-window.md#1300030-重复操作闪控窗) | Repeated operations on the float view. Possible cause: The float view is starting or has already started. |
+| [1300031](../errorcode-window.md#1300031-闪控窗状态不支持该操作) | The float view state does not support this operation. Possible cause: The float view is stopping. |
+| [1300033](../errorcode-window.md#1300033-启动闪控窗失败) | Failed to start float view. Possible causes: 1. Start multiple float views. 2. The main window of context is not foreground. |
+| [1300034](../errorcode-window.md#1300034-闪控窗与其他悬浮窗口操作冲突) | This operation conflicts with other floating windows. Possible cause: App has already started floating ball or pip window. |
 
 **示例**
 
@@ -680,10 +684,10 @@ stop(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The float view controller object is null. |
-| [1300031](../errorcode-window.md#1300031-闪控窗状态不支持该操作) | This operation is not supported on the float view in the current state. Possible cause: The float view window is not started. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300030](../errorcode-window.md#1300030-重复操作闪控窗) | Repeated operations on the float view. Possible cause: The float view is stopping or has already stopped. |
+| [1300031](../errorcode-window.md#1300031-闪控窗状态不支持该操作) | This operation is not supported on the float view in the current state. Possible cause: The float view window is not started. |
 
 **示例**
 
@@ -733,8 +737,8 @@ switchTemplate(templateProperty: TemplateProperty): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. Invalid template type. 2. The value of the size is less than or equal to 0. |
 
 **示例**

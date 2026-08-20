@@ -40,9 +40,9 @@ function execute(func: Function, ...args: Object[]): Promise<Object>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
 | [10200003](../errorcode-utils.md#10200003-worker初始化失败) | Worker initialization failed.<br>**适用版本：** 9 - 11 |
 | [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
 
 **示例**
 
@@ -92,8 +92,8 @@ function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
 | [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
 
 **示例**
 
@@ -134,7 +134,12 @@ taskpool.execute<[[number, string]], string>(testWithArray, [100, "test"]).then(
 function execute(task: Task, priority?: Priority): Promise<Object>
 ```
 
-将创建好的任务添加到taskpool的内部任务队列中，任务不会立即执行，而是等待分发到工作线程执行。当前模式支持设置任务优先级和通过cancel取消任务。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 任务不能是任务组任务、串行队列任务或异步队列任务。 &gt; - 长时任务只能调用一次，非长时任务可以多次调用执行。
+将创建好的任务添加到taskpool的内部任务队列中，任务不会立即执行，而是等待分发到工作线程执行。当前模式支持设置任务优先级和通过cancel取消任务。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 任务不能是任务组任务、串行队列任务或异步队列任务。
+> - 长时任务只能调用一次，非长时任务可以多次调用执行。
 
 **起始版本：** 9
 
@@ -162,11 +167,11 @@ function execute(task: Task, priority?: Priority): Promise<Object>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.<br>**适用版本：** 18+ |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
 | [10200003](../errorcode-utils.md#10200003-worker初始化失败) | Worker initialization failed.<br>**适用版本：** 9 - 17 |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again.<br>**适用版本：** 12+ |
 | [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
+| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again.<br>**适用版本：** 12+ |
+| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.<br>**适用版本：** 18+ |
 
 **示例**
 
@@ -225,10 +230,10 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.<br>**适用版本：** 18+ |
+| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
 | [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
 | [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again. |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.<br>**适用版本：** 18+ |
 
 **示例**
 
@@ -287,8 +292,8 @@ function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200059](../errorcode-utils.md#10200059-任务组不能重复执行) | TaskGroup cannot be re-executed.<br>**适用版本：** 24+ |
 | [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200059](../errorcode-utils.md#10200059-任务组不能重复执行) | TaskGroup cannot be re-executed.<br>**适用版本：** 24+ |
 
 **示例**
 
@@ -326,7 +331,31 @@ taskpool.execute(taskGroup2).then((res: Array<Object>) => {
 function execute(task: Task, configs: Configs): Promise<Object>
 ```
 
-将创建好的任务添加到taskpool的内部任务队列中，任务不会立即执行，而是等待分发到工作线程执行。当前模式支持设置任务优先级、设置超时时间和通过cancel取消任务。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 不支持执行任务组任务。 &gt; &gt; - 不支持执行串行队列任务。 &gt; &gt; - 不支持执行异步队列任务。 &gt; &gt; - 不支持执行周期性任务。 &gt; &gt; - 不支持执行延迟任务。 &gt; &gt; - 不支持执行存在依赖的任务。 &gt; &gt; - 不支持任务重复执行。 &gt; &gt; - 设置过超时的任务无法被其他任务依赖，也无法依赖其他任务。 &gt; &gt; - 如果任务设置了失败监听，任务执行超时了，失败监听不会被触发。 &gt; &gt; - 如果任务使用sendData来往宿主线程发消息，任务超时之后，宿主线程不再接收到消息。 &gt; &gt; - 在抛出超时异常信息之后，执行中的任务还是会在线程中继续执行，但是最终不会返回执行结果。
+将创建好的任务添加到taskpool的内部任务队列中，任务不会立即执行，而是等待分发到工作线程执行。当前模式支持设置任务优先级、设置超时时间和通过cancel取消任务。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 不支持执行任务组任务。
+> 
+> - 不支持执行串行队列任务。
+> 
+> - 不支持执行异步队列任务。
+> 
+> - 不支持执行周期性任务。
+> 
+> - 不支持执行延迟任务。
+> 
+> - 不支持执行存在依赖的任务。
+> 
+> - 不支持任务重复执行。
+> 
+> - 设置过超时的任务无法被其他任务依赖，也无法依赖其他任务。
+> 
+> - 如果任务设置了失败监听，任务执行超时了，失败监听不会被触发。
+> 
+> - 如果任务使用sendData来往宿主线程发消息，任务超时之后，宿主线程不再接收到消息。
+> 
+> - 在抛出超时异常信息之后，执行中的任务还是会在线程中继续执行，但是最终不会返回执行结果。
 
 **起始版本：** 24
 
@@ -353,11 +382,11 @@ function execute(task: Task, configs: Configs): Promise<Object>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200058](../errorcode-utils.md#10200058-任务执行超时) | Task timed out. |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs. |
+| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
 | [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
 | [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again. |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs. |
+| [10200058](../errorcode-utils.md#10200058-任务执行超时) | Task timed out. |
 
 **示例**
 
@@ -392,7 +421,31 @@ try {
 function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: Configs): Promise<R>
 ```
 
-将创建好的泛型任务放入taskpool的内部任务队列，使用Promise异步回调。 execute任务的类型校验与GenericsTask的构造类型相关联，参数类型和返回值类型需与new GenericsTask时指定的类型保持一致。 &gt; **说明：** &gt; &gt; - 不支持执行任务组任务。 &gt; &gt; - 不支持执行串行队列任务。 &gt; &gt; - 不支持执行异步队列任务。 &gt; &gt; - 不支持执行周期性任务。 &gt; &gt; - 不支持执行延迟任务。 &gt; &gt; - 不支持执行存在依赖的任务。 &gt; &gt; - 不支持任务重复执行。 &gt; &gt; - 设置过超时的任务无法被其他任务依赖，也无法依赖其他任务。 &gt; &gt; - 如果任务设置了失败监听，任务执行超时了，失败监听不会被触发。 &gt; &gt; - 如果任务使用sendData来往宿主线程发消息，任务超时之后，宿主线程不再接收到消息。 &gt; &gt; - 在抛出超时异常信息之后，执行中的任务还是会在线程中继续执行，但是最终不会返回执行结果。
+将创建好的泛型任务放入taskpool的内部任务队列，使用Promise异步回调。 execute任务的类型校验与GenericsTask的构造类型相关联，参数类型和返回值类型需与new GenericsTask时指定的类型保持一致。
+
+> **说明：**
+> 
+> - 不支持执行任务组任务。
+> 
+> - 不支持执行串行队列任务。
+> 
+> - 不支持执行异步队列任务。
+> 
+> - 不支持执行周期性任务。
+> 
+> - 不支持执行延迟任务。
+> 
+> - 不支持执行存在依赖的任务。
+> 
+> - 不支持任务重复执行。
+> 
+> - 设置过超时的任务无法被其他任务依赖，也无法依赖其他任务。
+> 
+> - 如果任务设置了失败监听，任务执行超时了，失败监听不会被触发。
+> 
+> - 如果任务使用sendData来往宿主线程发消息，任务超时之后，宿主线程不再接收到消息。
+> 
+> - 在抛出超时异常信息之后，执行中的任务还是会在线程中继续执行，但是最终不会返回执行结果。
 
 **起始版本：** 24
 
@@ -419,11 +472,11 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200058](../errorcode-utils.md#10200058-任务执行超时) | Task timed out. |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs. |
+| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
 | [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
 | [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again. |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs. |
+| [10200058](../errorcode-utils.md#10200058-任务执行超时) | Task timed out. |
 
 **示例**
 
@@ -458,7 +511,13 @@ try {
 function execute(group: TaskGroup, configs: Configs): Promise<Object[]>
 ```
 
-将创建好的任务组放入taskpool内部任务队列，任务组中的任务不会立即执行，而是等待分发到工作线程执行。任务组中任务全部执行完成后，结果数组统一返回。此模式适用于执行关联任务。使用Promise异步回调。 configs配置里可以指定任务组执行的超时时间和优先级。指定的超时时间到了，但是任务组还未完成，则会抛出任务组超时的异常信息。 &gt; **说明：** &gt; &gt; - 不支持任务组重复执行。 &gt; &gt; - 在抛出超时异常信息之后，执行中的任务还是会在线程中继续执行，但是最终不会返回执行结果。
+将创建好的任务组放入taskpool内部任务队列，任务组中的任务不会立即执行，而是等待分发到工作线程执行。任务组中任务全部执行完成后，结果数组统一返回。此模式适用于执行关联任务。使用Promise异步回调。 configs配置里可以指定任务组执行的超时时间和优先级。指定的超时时间到了，但是任务组还未完成，则会抛出任务组超时的异常信息。
+
+> **说明：**
+> 
+> - 不支持任务组重复执行。
+> 
+> - 在抛出超时异常信息之后，执行中的任务还是会在线程中继续执行，但是最终不会返回执行结果。
 
 **起始版本：** 24
 
@@ -485,8 +544,8 @@ function execute(group: TaskGroup, configs: Configs): Promise<Object[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200059](../errorcode-utils.md#10200059-任务组不能重复执行) | TaskGroup cannot be re-executed. |
 | [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200059](../errorcode-utils.md#10200059-任务组不能重复执行) | TaskGroup cannot be re-executed. |
 | [10200070](../errorcode-utils.md#10200070-任务组执行超时) | TaskGroup timed out. |
 
 **示例**

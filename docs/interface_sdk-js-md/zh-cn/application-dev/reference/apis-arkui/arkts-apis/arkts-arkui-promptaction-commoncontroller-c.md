@@ -72,5 +72,5 @@ getState(): CommonState
 
 | 类型 | 说明 |
 | --- | --- |
-| [CommonState](arkts-arkui-promptaction-commonstate-e.md) | 返回对应的弹窗状态。 |
+| [CommonState](../../apis-default/arkts-apis/arkts-promptaction-commonstate-e.md) | 返回对应的弹窗状态。 |
 

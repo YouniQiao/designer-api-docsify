@@ -1,6 +1,6 @@
 # ServiceChangeType (System API)
 
-Enumerates service change type.
+Enumerates service change type. @enum {number}
 
 **Since:** 23
 

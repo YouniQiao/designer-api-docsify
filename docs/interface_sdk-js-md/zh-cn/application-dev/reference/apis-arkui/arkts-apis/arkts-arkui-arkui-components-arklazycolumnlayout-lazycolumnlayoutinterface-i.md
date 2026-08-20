@@ -2,6 +2,8 @@
 
 定义懒加载列布局组件。
 
+@interface LazyColumnLayoutInterface
+
 **起始版本：** 26.0.0
 
 <!--Device-unnamed-export interface LazyColumnLayoutInterface--><!--Device-unnamed-export interface LazyColumnLayoutInterface-End-->
@@ -36,5 +38,5 @@ import { LazyColumnLayout, LazyColumnLayoutAttribute } from '@kit.ArkUI';
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyColumnLayoutAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
 

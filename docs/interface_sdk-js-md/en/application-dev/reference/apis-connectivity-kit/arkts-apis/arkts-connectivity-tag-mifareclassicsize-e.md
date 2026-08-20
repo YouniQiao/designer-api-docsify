@@ -2,6 +2,8 @@
 
 MifareClassic Tag size.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-tag-enum MifareClassicSize--><!--Device-tag-enum MifareClassicSize-End-->

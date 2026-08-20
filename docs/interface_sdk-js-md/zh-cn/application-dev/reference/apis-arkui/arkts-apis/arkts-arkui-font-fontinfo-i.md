@@ -60,7 +60,11 @@ fullName: string
 italic: boolean
 ```
 
-系统字体是否倾斜。 默认值：false 值为true，表示斜体字体，值为false，表示非斜体字体。
+系统字体是否倾斜。
+
+默认值：false
+
+值为true，表示斜体字体，值为false，表示非斜体字体。
 
 **类型：** boolean
 
@@ -80,7 +84,11 @@ italic: boolean
 monoSpace: boolean
 ```
 
-系统字体是否等宽。 默认值：false 值为true，表示等宽字体，值为false，表示非等宽字体。
+系统字体是否等宽。
+
+默认值：false
+
+值为true，表示等宽字体，值为false，表示非等宽字体。
 
 **类型：** boolean
 
@@ -160,7 +168,11 @@ subfamily: string
 symbolic: boolean
 ```
 
-系统字体是否支持符号字体。 默认值：false 值为true，表示支持符号字体，值为false，表示不支持符号字体。
+系统字体是否支持符号字体。
+
+默认值：false
+
+值为true，表示支持符号字体，值为false，表示不支持符号字体。
 
 **类型：** boolean
 
@@ -180,7 +192,11 @@ symbolic: boolean
 weight: int
 ```
 
-系统字体的字重。 取值范围：[100,900]，取值间隔为100，分别对应 FontWeight枚举中的值。 默认值：100
+系统字体的字重。
+
+取值范围：[100,900]，取值间隔为100，分别对应 FontWeight枚举中的值。
+
+默认值：100
 
 **类型：** int
 
@@ -200,7 +216,9 @@ weight: int
 width: int
 ```
 
-系统字体的宽度。 取值范围：[1,9]，取值间隔为1，分别对应FontWidth枚 举中的值。
+系统字体的宽度。
+
+取值范围：[1,9]，取值间隔为1，分别对应FontWidth枚 举中的值。
 
 **类型：** int
 

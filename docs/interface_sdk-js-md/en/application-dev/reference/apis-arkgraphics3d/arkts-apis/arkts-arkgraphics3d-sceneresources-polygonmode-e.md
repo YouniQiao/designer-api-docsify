@@ -2,6 +2,8 @@
 
 Enumerates the polygon drawing mode.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-unnamed-export enum PolygonMode--><!--Device-unnamed-export enum PolygonMode-End-->

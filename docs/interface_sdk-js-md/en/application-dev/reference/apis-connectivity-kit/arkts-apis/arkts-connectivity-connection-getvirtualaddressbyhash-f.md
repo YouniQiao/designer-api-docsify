@@ -41,10 +41,10 @@ Obtain the virtual address of the corresponding device based on the hash value o
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API when the short-range chip is not inserted on 2in1 device. |
-| [2900015](../errorcode-bluetoothManager.md#2900015-parameter-format-inconsistent-with-specifications) | Parameter format mismatch with specification. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2900016](../errorcode-bluetoothManager.md#2900016-device-not-paired) | Device unpaired. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API when the short-range chip is not inserted on 2in1 device. |
 | 2900003 | Bluetooth disabled. |
+| [2900015](../errorcode-bluetoothManager.md#2900015-parameter-format-inconsistent-with-specifications) | Parameter format mismatch with specification. |
+| [2900016](../errorcode-bluetoothManager.md#2900016-device-not-paired) | Device unpaired. |
 | 2900099 | Internal system error. For example, IPC error. Detailed error messages can be used to assist in locating the problem. |
 

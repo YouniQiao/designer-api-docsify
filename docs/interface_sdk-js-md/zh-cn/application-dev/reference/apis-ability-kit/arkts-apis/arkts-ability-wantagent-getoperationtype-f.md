@@ -27,7 +27,7 @@ function getOperationType(agent: WantAgent, callback: AsyncCallback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | agent | [WantAgent](arkts-ability-wantagent-t.md) | 是 | WantAgent对象。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 获取一个WantAgent的OperationType信息的回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 获取一个WantAgent的OperationType信息的回调方法。 |
 
 **错误码：**
 
@@ -35,8 +35,8 @@ function getOperationType(agent: WantAgent, callback: AsyncCallback<int>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [16000007](../errorcode-ability.md#16000007-服务未响应) | Service busy. There are concurrent tasks. Try again later. |
-| [16000151](../errorcode-ability.md#16000151-无效wantagent对象) | Invalid wantAgent object. |
 | [16000015](../errorcode-ability.md#16000015-服务超时) | Service timeout. |
+| [16000151](../errorcode-ability.md#16000151-无效wantagent对象) | Invalid wantAgent object. |
 
 **示例**
 
@@ -210,8 +210,8 @@ function getOperationType(agent: WantAgent): Promise<int>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [16000007](../errorcode-ability.md#16000007-服务未响应) | Service busy. There are concurrent tasks. Try again later. |
-| [16000151](../errorcode-ability.md#16000151-无效wantagent对象) | Invalid wantAgent object. |
 | [16000015](../errorcode-ability.md#16000015-服务超时) | Service timeout. |
+| [16000151](../errorcode-ability.md#16000151-无效wantagent对象) | Invalid wantAgent object. |
 
 **示例**
 

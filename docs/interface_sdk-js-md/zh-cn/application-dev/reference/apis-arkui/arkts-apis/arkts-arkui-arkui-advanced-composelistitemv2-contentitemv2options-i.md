@@ -20,7 +20,11 @@ import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, Ope
 description?: ResourceStr
 ```
 
-中间元素的描述内容。 默认不设置或设置为undefined时，不显示描述内容。 文本超长后无限换行显示。
+中间元素的描述内容。
+
+默认不设置或设置为undefined时，不显示描述内容。
+
+文本超长后无限换行显示。
 
 **类型：** ResourceStr
 
@@ -40,7 +44,11 @@ description?: ResourceStr
 icon?: ResourceStr
 ```
 
-左侧元素的图标资源。 默认不设置或设置为undefined时，不显示icon图标资源。 同时设置symbolStyle时，只显示Symbol图标。
+左侧元素的图标资源。
+
+默认不设置或设置为undefined时，不显示icon图标资源。
+
+同时设置symbolStyle时，只显示Symbol图标。
 
 **类型：** ResourceStr
 
@@ -60,9 +68,11 @@ icon?: ResourceStr
 iconStyle?: IconTypeV2
 ```
 
-左侧元素的图标类型。 默认不设置或设置为undefined时，不显示左侧图标资源。
+左侧元素的图标类型。
 
-**类型：** [IconTypeV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-icontypev2-e.md)
+默认不设置或设置为undefined时，不显示左侧图标资源。
+
+**类型：** [IconTypeV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-icontypev2-e.md)
 
 **起始版本：** 26.0.0
 
@@ -80,7 +90,11 @@ iconStyle?: IconTypeV2
 primaryText?: ResourceStr
 ```
 
-中间元素的标题内容。 默认不设置或设置为undefined时，不显示标题内容。 文本超长后无限换行显示。
+中间元素的标题内容。
+
+默认不设置或设置为undefined时，不显示标题内容。
+
+文本超长后无限换行显示。
 
 **类型：** ResourceStr
 
@@ -100,7 +114,11 @@ primaryText?: ResourceStr
 secondaryText?: ResourceStr
 ```
 
-中间元素的副标题内容。 默认不设置或设置为undefined时，不显示副标题内容。 文本超长后无限换行显示。
+中间元素的副标题内容。
+
+默认不设置或设置为undefined时，不显示副标题内容。
+
+文本超长后无限换行显示。
 
 **类型：** ResourceStr
 
@@ -120,7 +138,9 @@ secondaryText?: ResourceStr
 symbolStyle?: SymbolGlyphModifier
 ```
 
-左侧元素的Symbol图标资源，优先级大于icon，同时设置时只显示Symbol图标。 默认不设置或设置为undefined时，不显示Symbol图标。
+左侧元素的Symbol图标资源，优先级大于icon，同时设置时只显示Symbol图标。
+
+默认不设置或设置为undefined时，不显示Symbol图标。
 
 **类型：** SymbolGlyphModifier
 

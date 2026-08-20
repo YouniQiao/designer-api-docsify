@@ -1,0 +1,54 @@
+# CacheCountInfo
+
+Define cache count information.
+
+@interface CacheCountInfo
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+<!--Device-unnamed-export declare interface CacheCountInfo--><!--Device-unnamed-export declare interface CacheCountInfo-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## maxCount
+
+```TypeScript
+maxCount: int
+```
+
+max cache count.
+
+**Type:** int
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CacheCountInfo-maxCount: int--><!--Device-CacheCountInfo-maxCount: int-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## minCount
+
+```TypeScript
+minCount: int
+```
+
+min cache count.
+
+**Type:** int
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CacheCountInfo-minCount: int--><!--Device-CacheCountInfo-minCount: int-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

@@ -2,6 +2,8 @@
 
 Defines the Border Image Repeat Mode.
 
+@enum { number }
+
 **Since:** 11
 
 <!--Device-unnamed-declare enum RepeatMode--><!--Device-unnamed-declare enum RepeatMode-End-->

@@ -47,11 +47,11 @@ Create an audio haptic player. This method uses a promise to return the result. 
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 | [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 
@@ -104,10 +104,10 @@ Create an audio haptic player. This method uses a promise to return the result. 
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 | [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## registerSource
 
@@ -115,7 +115,11 @@ Create an audio haptic player. This method uses a promise to return the result. 
 registerSource(audioUri: string, hapticUri: string): Promise<int>
 ```
 
-Registers audio and haptic resources via URIs. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; A maximum of 128 resources can be registered at the same time for an application. Any attempt to register &gt; beyond this limit will fail (returning a negative resource ID). You are advised to reasonably manage the number &gt; of registered resources. For resources that are no longer used, you are advised to unregister them in a timely &gt; manner.
+Registers audio and haptic resources via URIs. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> A maximum of 128 resources can be registered at the same time for an application. Any attempt to register &gt; beyond this limit will fail (returning a negative resource ID). You are advised to reasonably manage the number &gt; of registered resources. For resources that are no longer used, you are advised to unregister them in a timely &gt; manner.
 
 **Since:** 23
 
@@ -165,7 +169,11 @@ audioHapticManagerInstance.registerSource(audioUri, hapticUri).then((value: numb
 registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<int>
 ```
 
-Registers audio and haptic resources via file descriptors. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; A maximum of 128 resources can be registered at the same time for an application. Any attempt to register &gt; beyond this limit will fail (returning a negative resource ID). You are advised to reasonably manage the number &gt; of registered resources. For resources that are no longer used, you are advised to unregister them in a timely &gt; manner.
+Registers audio and haptic resources via file descriptors. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> A maximum of 128 resources can be registered at the same time for an application. Any attempt to register &gt; beyond this limit will fail (returning a negative resource ID). You are advised to reasonably manage the number &gt; of registered resources. For resources that are no longer used, you are advised to unregister them in a timely &gt; manner.
 
 **Since:** 23
 
@@ -305,7 +313,11 @@ audioHapticManagerInstance.setStreamUsage(id, usage);
 unregisterSource(id: int): Promise<void>
 ```
 
-Unregisters an audio-haptic source. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; For resources that are no longer used, you are advised to unregister them in a timely manner to avoid issues &gt; such as resource leaks or the number of resources exceeding the upper limit.
+Unregisters an audio-haptic source. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> For resources that are no longer used, you are advised to unregister them in a timely manner to avoid issues &gt; such as resource leaks or the number of resources exceeding the upper limit.
 
 **Since:** 23
 

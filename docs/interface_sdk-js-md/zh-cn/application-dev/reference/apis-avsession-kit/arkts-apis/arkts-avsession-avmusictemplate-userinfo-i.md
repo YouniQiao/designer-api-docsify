@@ -2,6 +2,8 @@
 
 用户信息的定义。
 
+@interface MediaElement
+
 **起始版本：** 23
 
 <!--Device-avMusicTemplate-interface UserInfo--><!--Device-avMusicTemplate-interface UserInfo-End-->

@@ -32,5 +32,4 @@ Called when the RootScene is used.
 
 | Name | Description |
 | --- | --- |
-| [RootSceneSession](arkts-arkui-rootscenesession-i.md) | Defines the session of RootScene. |
 

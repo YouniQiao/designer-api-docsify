@@ -39,7 +39,11 @@ Indent of the paragraph. It has no effect if the paragraph starts with an image 
 lineBreakStrategy?: LineBreakStrategy
 ```
 
-Line break rule. Default value: **LineBreakStrategy.GREEDY** This parameter takes effect when **wordBreak** is not set to **breakAll**. Hyphens are not supported.
+Line break rule.
+
+Default value: **LineBreakStrategy.GREEDY**
+
+This parameter takes effect when **wordBreak** is not set to **breakAll**. Hyphens are not supported.
 
 **Type:** LineBreakStrategy
 
@@ -59,7 +63,11 @@ Line break rule. Default value: **LineBreakStrategy.GREEDY** This parameter take
 paragraphSpacing?: number
 ```
 
-Spacing between paragraphs. Unit: fp Default value: **0**
+Spacing between paragraphs.
+
+Unit: fp
+
+Default value: **0**
 
 **Type:** number
 
@@ -99,7 +107,9 @@ Set shader style.
 textAlign?: TextAlign
 ```
 
-Horizontal alignment mode of the text. Default value: **TextAlign.START**
+Horizontal alignment mode of the text.
+
+Default value: **TextAlign.START**
 
 **Type:** TextAlign
 
@@ -119,7 +129,9 @@ Horizontal alignment mode of the text. Default value: **TextAlign.START**
 textDirection?: TextDirection
 ```
 
-Sets the text direction. Default value: TextDirection.DEFAULT
+Sets the text direction.
+
+Default value: TextDirection.DEFAULT
 
 **Type:** TextDirection
 
@@ -139,7 +151,9 @@ Sets the text direction. Default value: TextDirection.DEFAULT
 textVerticalAlign?: TextVerticalAlign
 ```
 
-Vertical alignment of text paragraphs. Default value: **TextVerticalAlign.BASELINE**.
+Vertical alignment of text paragraphs.
+
+Default value: **TextVerticalAlign.BASELINE**.
 
 **Type:** TextVerticalAlign
 
@@ -159,7 +173,9 @@ Vertical alignment of text paragraphs. Default value: **TextVerticalAlign.BASELI
 wordBreak?: WordBreak
 ```
 
-Word break rule. Default value: **WordBreak.BREAK_WORD**
+Word break rule.
+
+Default value: **WordBreak.BREAK_WORD**
 
 **Type:** WordBreak
 

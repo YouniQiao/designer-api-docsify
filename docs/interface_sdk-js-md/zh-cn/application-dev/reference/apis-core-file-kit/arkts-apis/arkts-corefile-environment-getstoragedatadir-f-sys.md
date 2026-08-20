@@ -32,8 +32,8 @@ function getStorageDataDir(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
+| 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
 
@@ -57,13 +57,13 @@ function getStorageDataDir(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 异步获取内存存储根目录之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 异步获取内存存储根目录之后的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
+| 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 

@@ -12,7 +12,11 @@ import { connection } from '@kit.NetworkKit';
 function queryTraceRoute(destination: string, option?: TraceRouteOptions): Promise<TraceRouteInfo[]>
 ```
 
-Queries the network route tracing information. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; To call this API, the application needs to apply for the precise location permission. <!--RP1-->According to &gt; [Applying for Location Permissions (ArkTS)](../../../device/location/location-permission-guidelines.md)<!--RP1 > End-->, the caller needs to apply for both **ohos.permission.APPROXIMATELY_LOCATION** and &gt; **ohos.permission.LOCATION**.
+Queries the network route tracing information. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> To call this API, the application needs to apply for the precise location permission. <!--RP1-->According to &gt; [Applying for Location Permissions (ArkTS)](../../../device/location/location-permission-guidelines.md)<!--RP1 > End-->, the caller needs to apply for both **ohos.permission.APPROXIMATELY_LOCATION** and &gt; **ohos.permission.LOCATION**.
 
 **Since:** 26.0.0
 
@@ -41,7 +45,7 @@ Queries the network route tracing information. This API uses a promise to return
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | Internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

@@ -39,16 +39,16 @@ getOsAccountDistributedInfoByLocalId(localId: int, callback: AsyncCallback<Distr
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | int | 是 | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DistributedInfo&gt; | 是 | 回调参数。当获取分布式账号信息成功，err为undefined，data为获取到的分布式账号信息对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;DistributedInfo&gt; | 是 | 回调参数。当获取分布式账号信息成功，err为undefined，data为获取到的分布式账号信息对象；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 
 **示例**
 
@@ -133,10 +133,10 @@ getOsAccountDistributedInfoByLocalId(localId: int): Promise<DistributedInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 
 **示例**
 
@@ -206,19 +206,19 @@ setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedI
 | --- | --- | --- | --- |
 | localId | int | 是 | 系统账号ID。 |
 | distributedInfo | DistributedInfo | 是 | 分布式账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置指定系统账号的分布式信息成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置指定系统账号的分布式信息成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted OS account. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account identified by localId or by distributedInfo not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid distributedInfo. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid distributedInfo. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account identified by localId or by distributedInfo not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted OS account. |
 | [12300406](../errorcode-account.md#12300406-该分布式账号信息已经与目标系统账号的其他子身份资料绑定) | The distributed account information has already been bound to a sub-profile of the target OS account.<br>**适用版本：** 26.0.0+ |
 
 **示例**
@@ -305,13 +305,13 @@ setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedI
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted OS account. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account identified by localId or by distributedInfo not found. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid distributedInfo. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid distributedInfo. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account identified by localId or by distributedInfo not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted OS account. |
 | [12300406](../errorcode-account.md#12300406-该分布式账号信息已经与目标系统账号的其他子身份资料绑定) | The distributed account information has already been bound to a sub-profile of the target OS account.<br>**适用版本：** 26.0.0+ |
 
 **示例**

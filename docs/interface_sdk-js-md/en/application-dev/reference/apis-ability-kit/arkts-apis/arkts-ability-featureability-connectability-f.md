@@ -12,7 +12,13 @@ import { featureAbility } from '@kit.AbilityKit';
 function connectAbility(request: Want, options: ConnectOptions): number
 ```
 
-Connects this ability to a ServiceAbility. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the FA model, see &gt; [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md). &gt; &gt; To connect to a ServiceAbility of another application, the target application must be configured with &gt; associated startup (**AssociateWakeUp** set to **true**).
+Connects this ability to a ServiceAbility.
+
+> **NOTE：**
+> 
+> For details about the startup rules for the components in the FA model, see &gt; [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
+> 
+> To connect to a ServiceAbility of another application, the target application must be configured with &gt; associated startup (**AssociateWakeUp** set to **true**).
 
 **Since:** 7
 

@@ -1,0 +1,20 @@
+# string
+
+```TypeScript
+export type string = String
+```
+
+`string`是类型`String`的别名。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-unnamed-export type string = String--><!--Device-unnamed-export type string = String-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**属性类型：** String
+

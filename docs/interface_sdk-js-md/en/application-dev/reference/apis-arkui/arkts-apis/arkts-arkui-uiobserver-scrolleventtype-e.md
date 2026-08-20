@@ -2,6 +2,8 @@
 
 ScrollEvent type.
 
+@enum { number }
+
 **Since:** 12
 
 <!--Device-uiObserver-export enum ScrollEventType--><!--Device-uiObserver-export enum ScrollEventType-End-->

@@ -72,8 +72,8 @@ import { display } from '@kit.ArkUI';
 | [on_captureStatusChange](arkts-arkui-display-oncapturestatuschange-f.md) | Subscribes to events indicating the status of the device's screen content is being captured. |
 | on_change | Subscribes to display changes. |
 | [on_foldAngleChange](arkts-arkui-display-onfoldanglechange-f.md) | Subscribes to folding angle change events of the foldable device. Note that there are two folding angles for dual- fold axis devices. When oriented with the charging port at the bottom, the hinges are identified from right to left as the first and second fold axes, respectively. |
-| [on_foldDisplayModeChange](arkts-arkui-display-onfolddisplaymodechange-f.md) | Subscribes to display mode change events of the foldable device. To subscribe to fold status change events of foldable devices, use display.on('foldStatusChange'). The two are different. In terms of timing, the fold status changes first, and the bottom layer matches the display mode status based on the fold status. |
-| [on_foldStatusChange](arkts-arkui-display-onfoldstatuschange-f.md) | Subscribes to fold status change events of the foldable device. To subscribe to display mode change events of foldable devices, use display.on('foldDisplayModeChange') . The two are different. In terms of timing, the fold status changes first, and the bottom layer matches the display mode status based on the fold status. To check whether the content is displayed on the inner or outer screen of the foldable device, use display.on('foldDisplayModeChange') . |
+| [on_foldDisplayModeChange](arkts-arkui-display-onfolddisplaymodechange-f.md) | Subscribes to display mode change events of the foldable device. |
+| [on_foldStatusChange](arkts-arkui-display-onfoldstatuschange-f.md) | Subscribes to fold status change events of the foldable device. |
 | on_remove | Subscribes to display changes. |
 | [setVirtualScreenSurface](arkts-arkui-display-setvirtualscreensurface-f.md) | Sets a surface for a virtual screen. This API uses a promise to return the result. |
 
@@ -102,7 +102,7 @@ import { display } from '@kit.ArkUI';
 | --- | --- |
 | [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md) | Describes the screen brightness information. The information comes from the underlying screen data. |
 | [CutoutInfo](arkts-arkui-display-cutoutinfo-i.md) | Describes the unusable area of a display, including punch hole, notch, and curved area of a waterfall display. |
-| [Display](arkts-arkui-display-display-i.md) | Implements a Display instance, with attributes and APIs defined. Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md) to obtain a Display instance. |
+| [Display](arkts-arkui-display-display-i.md) | Implements a Display instance, with attributes and APIs defined. |
 | [DisplayPhysicalResolution](arkts-arkui-display-displayphysicalresolution-i.md) | Describes the display mode of a device and the corresponding physical screen resolution information. |
 | [FoldCreaseRegion](arkts-arkui-display-foldcreaseregion-i.md) | Describes the crease region of a foldable device. |
 | [Position](arkts-arkui-display-position-i.md) | Describes a coordinate position. In the global coordinate system, the origin is the top-left corner of the primary screen. In the relative coordinate system, the origin is the top-left corner of the specified screen. |
@@ -117,7 +117,7 @@ import { display } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [Display](arkts-arkui-display-display-i-sys.md) | Implements a Display instance, with attributes and APIs defined. Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md) to obtain a Display instance. |
+| [Display](arkts-arkui-display-display-i-sys.md) | Implements a Display instance, with attributes and APIs defined. |
 <!--DelEnd-->
 
 ### Enums
@@ -127,8 +127,8 @@ import { display } from '@kit.ArkUI';
 | [CornerType](arkts-arkui-display-cornertype-e.md) | Enumerates the types of corners on the screen. |
 | [DisplaySourceMode](arkts-arkui-display-displaysourcemode-e.md) | Enumerates the display modes for screen content. |
 | [DisplayState](arkts-arkui-display-displaystate-e.md) | Enumerates the states of a display. |
-| [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | Enumerates the display modes of a foldable device. &gt; **NOTE：**&gt; For foldable devices where both the inner and outer screens can serve as the primary screen �� like large or wide- &gt; folding models �� the inner screen's display mode is **FOLD_DISPLAY_MODE_FULL**, and the outer screen's display &gt; mode is **FOLD_DISPLAY_MODE_MAIN**. &gt; For foldable devices where the outer screen serves only as an auxiliary display �� like small-folding models �� the &gt; inner screen's display mode is **FOLD_DISPLAY_MODE_MAIN**, and the outer screen's display mode is &gt; **FOLD_DISPLAY_MODE_SUB**. |
-| [FoldStatus](arkts-arkui-display-foldstatus-e.md) | Enumerates the fold statuses of a foldable device. For dual-fold axis devices, when oriented with the charging port at the bottom, the hinges are identified from right to left as the first and second fold axes, respectively. &gt; **NOTE：**&gt; Devices with only one fold axis can be in the **FOLD_STATUS_EXPANDED**, **FOLD_STATUS_FOLDED**, or &gt; **FOLD_STATUS_HALF_FOLDED** state. &gt; Devices with two fold axes can be in any of the states provided in the table above, except for &gt; **FOLD_STATUS_UNKNOWN**, which indicates an unusable fold status. |
+| [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | Enumerates the display modes of a foldable device. |
+| [FoldStatus](arkts-arkui-display-foldstatus-e.md) | Enumerates the fold statuses of a foldable device. For dual-fold axis devices, when oriented with the charging port at the bottom, the hinges are identified from right to left as the first and second fold axes, respectively. |
 | [Orientation](arkts-arkui-display-orientation-e.md) | Enumerates the orientations of a display. |
 | [ScreenShape](arkts-arkui-display-screenshape-e.md) | Enumerates the screen shapes of a display. |
 

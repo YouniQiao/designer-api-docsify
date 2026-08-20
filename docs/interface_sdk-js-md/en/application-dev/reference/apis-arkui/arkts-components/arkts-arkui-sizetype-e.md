@@ -2,6 +2,8 @@
 
 Defines the size type.
 
+@enum { number }
+
 **Since:** 7
 
 **Deprecated since:** 9

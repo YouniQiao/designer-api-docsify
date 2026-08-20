@@ -41,9 +41,9 @@ function getApplicationLabel(bundleName: string, appIndex: int): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | The specified app index is invalid. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle is not found. |
+| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | The specified app index is invalid. |
 
 **示例**
 

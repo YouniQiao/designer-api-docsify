@@ -12,7 +12,9 @@ import { errorManager } from '@kit.AbilityKit';
 function off(type: 'error', observerId: number, callback: AsyncCallback<void>): void
 ```
 
-注销错误观测器。使用callback异步返回。 仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+注销错误观测器。使用callback异步返回。
+
+仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
 
 **起始版本：** 9
 
@@ -28,7 +30,7 @@ function off(type: 'error', observerId: number, callback: AsyncCallback<void>): 
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 填写'error'，表示错误观测器。 |
 | observerId | number | 是 | 由on方法返回的观测器的index值。没有具体的单位。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示指定的回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 表示指定的回调方法。 |
 
 **错误码：**
 
@@ -67,7 +69,9 @@ try {
 function off(type: 'error', observerId: number): Promise<void>
 ```
 
-注销错误观测器。使用Promise异步返回。 仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+注销错误观测器。使用Promise异步返回。
+
+仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
 
 **起始版本：** 9
 

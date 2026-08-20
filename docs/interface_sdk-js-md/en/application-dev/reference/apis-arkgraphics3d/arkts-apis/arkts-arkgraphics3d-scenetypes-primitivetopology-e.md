@@ -2,6 +2,8 @@
 
 Enumerates the vertex processing methods.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-unnamed-export enum PrimitiveTopology--><!--Device-unnamed-export enum PrimitiveTopology-End-->

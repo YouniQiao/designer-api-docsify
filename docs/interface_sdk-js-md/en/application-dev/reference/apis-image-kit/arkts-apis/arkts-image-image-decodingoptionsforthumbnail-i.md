@@ -20,7 +20,9 @@ import { image } from '@kit.ImageKit';
 generateThumbnailIfAbsent?: boolean
 ```
 
-Flag to specify whether the thumbnail should be generated, if the image does not have a thumbnail. <br>Default value: true.
+Flag to specify whether the thumbnail should be generated, if the image does not have a thumbnail.
+
+<br>Default value: true.
 
 **Type:** boolean
 

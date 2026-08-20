@@ -1,8 +1,8 @@
 # ScrollActionProposal
 
-Smart gesture scroll action handling. The default direction is forward scrolling, including right and down. When dynamically customizing smart gesture behavior through the [registerMonitor](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md#registermonitor) API, setting the return value [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)'s **selectedProposal** to an object of this type triggers a scroll operation on the target component.
+Smart gesture scroll action handling. The default direction is forward scrolling, including right and down. When dynamically customizing smart gesture behavior through the [registerMonitor](../../apis-default/arkts-apis/arkts-arkui-uicontext-smartgesturecontroller-c.md#registermonitor) API, setting the return value [GestureHandlingResolution](../../apis-default/arkts-apis/arkts-arkui-uicontext-gesturehandlingresolution-c.md)'s **selectedProposal** to an object of this type triggers a scroll operation on the target component.
 
-**Inheritance/Implementation:** ScrollActionProposal extends [TargetedGestureProposal](arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md)
+**Inheritance/Implementation:** ScrollActionProposal extends [TargetedGestureProposal](../../apis-default/arkts-apis/arkts-arkui-uicontext-targetedgestureproposal-c.md)
 
 **Since:** 26.0.0
 
@@ -50,7 +50,11 @@ Constructor for the smart gesture scroll action handling.
 distance?: double
 ```
 
-Scroll distance of the smart gesture. Value range: [0, +∞). Values less than 0 are treated as 0. Unit: vp.
+Scroll distance of the smart gesture.
+
+Value range: [0, +∞). Values less than 0 are treated as 0.
+
+Unit: vp.
 
 **Type:** double
 

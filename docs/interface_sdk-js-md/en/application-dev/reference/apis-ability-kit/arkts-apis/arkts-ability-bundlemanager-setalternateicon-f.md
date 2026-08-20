@@ -38,7 +38,7 @@ Sets the alternate icon of the caller based on the given alternate icon name. Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17700310 | Failed to set the alternate icon. |
 | 17700308 | The alternateIconName must match the name field under alternateIcons in the app.json5 file. |
 | 17700309 | No alternate icon is enabled. |
+| 17700310 | Failed to set the alternate icon. |
 

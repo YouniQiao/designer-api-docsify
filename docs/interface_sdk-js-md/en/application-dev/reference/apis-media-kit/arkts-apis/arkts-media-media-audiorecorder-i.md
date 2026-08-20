@@ -292,7 +292,9 @@ Releases the audio recording resources.
 reset(): void
 ```
 
-Resets audio recording. Before resetting audio recording, you must call **stop()** to stop recording. After audio recording is reset, you must call **prepare()** to set the recording configurations for another recording.
+Resets audio recording.
+
+Before resetting audio recording, you must call **stop()** to stop recording. After audio recording is reset, you must call **prepare()** to set the recording configurations for another recording.
 
 **Since:** 6
 

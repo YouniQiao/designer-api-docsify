@@ -2,6 +2,8 @@
 
 Provide interfaces related to debugger access and obtaining CPU, memory and other virtual machine information during runtime for JS programs
 
+@namespace hidebug
+
 ## Modules to Import
 
 ```TypeScript

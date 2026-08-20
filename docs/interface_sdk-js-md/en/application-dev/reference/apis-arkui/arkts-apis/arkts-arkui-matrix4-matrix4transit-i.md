@@ -1,10 +1,14 @@
 # Matrix4Transit
 
-Implements a **Matrix4Transit** object.
+Matrix4Transit.
 
-**Since:** 7
+@interface Matrix4Transit
 
-<!--Device-matrix4-interface Matrix4Transit--><!--Device-matrix4-interface Matrix4Transit-End-->
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+<!--Device-matrix4-export interface Matrix4Transit--><!--Device-matrix4-export interface Matrix4Transit-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,11 +24,13 @@ import { matrix4 } from '@kit.ArkUI';
 combine(options: Matrix4Transit): Matrix4Transit
 ```
 
-Combines the effects of two matrices to generate a new matrix object. The matrix that calls this API will be changed.
+Matrix superposition function Which can superpose the effects of two matrices to generate a new matrix object.
 
-**Since:** 7
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Matrix4Transit-combine(options: Matrix4Transit): Matrix4Transit--><!--Device-Matrix4Transit-combine(options: Matrix4Transit): Matrix4Transit-End-->
 
@@ -34,45 +40,13 @@ Combines the effects of two matrices to generate a new matrix object. The matrix
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | Matrix4Transit | Yes | Matrix object to be combined. |
+| options | Matrix4Transit | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Object after matrix combination. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { matrix4 } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Test {
-  private matrix1 = matrix4.identity().translate({ x: 200 });
-  private matrix2 = matrix4.identity().scale({ x: 2 });
-
-  build() {
-    Column() {
-      // Before matrix transformation
-      // Replace $r("app.media.icon") with the image resource file you use.
-      Image($r("app.media.icon"))
-        .width("40%")
-        .height(100)
-        .margin({ top: 50 })
-      // Translate the x-axis by 200px, and then scale it twice to obtain the resultant matrix.
-      // Replace $r("app.media.icon") with the image resource file you use.
-      Image($r("app.media.icon"))
-        .transform(this.matrix1.copy().combine(this.matrix2))
-        .width("40%")
-        .height(100)
-        .margin({ top: 50 })
-    }
-  }
-}
-```
+| Matrix4Transit | Return to Matrix4Transit |
 
 ## copy
 
@@ -80,11 +54,13 @@ struct Test {
 copy(): Matrix4Transit
 ```
 
-Copies this matrix object.
+Copy function of Matrix, which can copy a copy of the current matrix object.
 
-**Since:** 7
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Matrix4Transit-copy(): Matrix4Transit--><!--Device-Matrix4Transit-copy(): Matrix4Transit-End-->
 
@@ -94,43 +70,7 @@ Copies this matrix object.
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Copy object of the current matrix. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { matrix4 } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Test {
-  private matrix1 = matrix4.identity().scale({ x: 1.5 });
-  private matrix2 = this.matrix1.copy().translate({ x: 200 });
-  imageSize: Length = '300px';
-
-  build() {
-    Column({ space: "50px" }) {
-      // Replace $r("app.media.testImage") with the image resource file you use.
-      Image($r("app.media.testImage"))
-        .width(this.imageSize)
-        .height(this.imageSize)
-      // Replace $r("app.media.testImage") with the image resource file you use.
-      Image($r("app.media.testImage"))
-        .width(this.imageSize)
-        .height(this.imageSize)
-        .transform(this.matrix1)
-      // Replace $r("app.media.testImage") with the image resource file you use.
-      Image($r("app.media.testImage"))
-        .width(this.imageSize)
-        .height(this.imageSize)
-        .transform(this.matrix2)
-    }.alignItems(HorizontalAlign.Center)
-    .height('100%').width("100%")
-    .justifyContent(FlexAlign.Center)
-  }
-}
-```
+| Matrix4Transit | Return to Matrix4Transit |
 
 ## invert
 
@@ -138,11 +78,13 @@ struct Test {
 invert(): Matrix4Transit
 ```
 
-Inverts this matrix object. The matrix that calls this API will be changed.
+The inverse function of Matrix returns an inverse matrix of the current matrix object That is, the effect is exactly the opposite.
 
-**Since:** 7
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Matrix4Transit-invert(): Matrix4Transit--><!--Device-Matrix4Transit-invert(): Matrix4Transit-End-->
 
@@ -152,38 +94,7 @@ Inverts this matrix object. The matrix that calls this API will be changed.
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Inverse matrix object of the current matrix. |
-
-**Examples**
-
-```TypeScript
-import { matrix4 } from '@kit.ArkUI';
-
-// The effect of matrix 1 (width scaled up by 2x) is opposite to that of matrix 2 (width scaled down by 2x).
-let matrix1 = matrix4.identity().scale({ x: 2 });
-let matrix2 = matrix1.copy().invert();
-
-@Entry
-@Component
-struct Tests {
-  build() {
-    Column() {
-      // Replace $r("app.media.zh") with the image resource file you use.
-      Image($r("app.media.zh"))
-        .width(200)
-        .height(100)
-        .transform(matrix1)
-        .margin({ top: 100 })
-      // Replace $r("app.media.zh") with the image resource file you use.
-      Image($r("app.media.zh"))
-        .width(200)
-        .height(100)
-        .margin({ top: 150 })
-        .transform(matrix2)
-    }
-  }
-}
-```
+| Matrix4Transit | Return to Matrix4Transit |
 
 ## rotate
 
@@ -191,11 +102,13 @@ struct Tests {
 rotate(options: RotateOption): Matrix4Transit
 ```
 
-Rotates this matrix object along the x, y, and z axes. The matrix that calls this API will be changed.
+Rotation function of the Matrix. You can add the x-axis, Y-axis, or Z-axis rotation effect to the current matrix.
 
-**Since:** 7
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Matrix4Transit-rotate(options: RotateOption): Matrix4Transit--><!--Device-Matrix4Transit-rotate(options: RotateOption): Matrix4Transit-End-->
 
@@ -205,41 +118,13 @@ Rotates this matrix object along the x, y, and z axes. The matrix that calls thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RotateOption](../../apis-na/arkts-apis/arkts-na-matrix4-rotateoption-i.md) | Yes | Rotation configuration. |
+| options | [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Matrix object after the rotation. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { matrix4 } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Test {
-  private matrix1 = matrix4.identity()
-    .rotate({
-      x: 1,
-      y: 1,
-      z: 2,
-      angle: 30
-    });
-
-  build() {
-    Column() {
-      // Replace $r("app.media.bg1") with the image resource file you use.
-      Image($r("app.media.bg1")).transform(this.matrix1)
-        .width("40%")
-        .height(100)
-    }.width("100%").margin({ top: 50 })
-  }
-}
-```
+| Matrix4Transit | Return to Matrix4Transit |
 
 ## scale
 
@@ -247,11 +132,13 @@ struct Test {
 scale(options: ScaleOption): Matrix4Transit
 ```
 
-Scales this matrix object along the x, y, and z axes. The matrix that calls this API will be changed.
+Scaling function of the Matrix Which can add the x-axis, Y-axis, or Z-axis scaling effect to the current matrix.
 
-**Since:** 7
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Matrix4Transit-scale(options: ScaleOption): Matrix4Transit--><!--Device-Matrix4Transit-scale(options: ScaleOption): Matrix4Transit-End-->
 
@@ -261,42 +148,13 @@ Scales this matrix object along the x, y, and z axes. The matrix that calls this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ScaleOption](../../apis-na/arkts-apis/arkts-na-matrix4-scaleoption-i.md) | Yes | Scaling configuration. |
+| options | [ScaleOption](arkts-arkui-matrix4-scaleoption-i.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Matrix object after the scaling. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { matrix4 } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Test {
-  private matrix1 = matrix4.identity()
-    .scale({
-      x: 2,
-      y: 3,
-      z: 4,
-      centerX: 50,
-      centerY: 50
-    });
-
-  build() {
-    Column() {
-      // Replace $r("app.media.testImage") with the image resource file you use.
-      Image($r("app.media.testImage")).transform(this.matrix1)
-        .width("300px")
-        .height("300px")
-    }.width("100%").height("100%").justifyContent(FlexAlign.Center)
-  }
-}
-```
+| Matrix4Transit | Return to Matrix4Transit |
 
 ## setPolyToPoly
 
@@ -304,13 +162,13 @@ struct Test {
 setPolyToPoly(options: PolyToPolyOptions): Matrix4Transit
 ```
 
-Maps the vertex coordinates of a polygon to those of another polygon.
+Sets matrix to map src to dst.
 
-**Since:** 12
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Matrix4Transit-setPolyToPoly(options: PolyToPolyOptions): Matrix4Transit--><!--Device-Matrix4Transit-setPolyToPoly(options: PolyToPolyOptions): Matrix4Transit-End-->
 
@@ -320,58 +178,29 @@ Maps the vertex coordinates of a polygon to those of another polygon.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PolyToPolyOptions](../../apis-na/arkts-apis/arkts-na-matrix4-polytopolyoptions-i.md) | Yes | Parameters for mapping. |
+| options | [PolyToPolyOptions](arkts-arkui-matrix4-polytopolyoptions-i.md) | Yes | polyToPoly options |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Matrix object after the mapping. |
-
-**Examples**
-
-```TypeScript
-import { matrix4 } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  private matrix1 = matrix4.identity().setPolyToPoly({
-    src: [{ x: 0, y: 0 }, { x: 500, y: 0 }, { x: 0, y: 500 }, { x: 500, y: 500 }],
-    dst: [{ x: 0, y: 0 }, { x: 500, y: 0 }, { x: 0, y: 500 }, { x: 750, y: 1000 }], pointCount: 4
-  });
-
-  build() {
-    Stack() {
-      Column().backgroundColor(Color.Blue)
-        .width('500px')
-        .height('500px')
-      // Replace $r("app.media.transition_image1") with the image resource file you use.
-      Image($r('app.media.transition_image1'))
-        .scale({ centerX: 0, centerY: 0, x: 1 })
-        .transform(this.matrix1)
-        .width('500px')
-        .height('500px')
-    }.width("100%").height("100%").opacity(0.5)
-  }
-}
-```
+| Matrix4Transit | Return to Matrix4Transit |
 
 ## skew
 
 ```TypeScript
-skew(x: number, y: number): Matrix4Transit
+skew(x: double, y: double): Matrix4Transit
 ```
 
-Skews this matrix object along the x and y axes. The matrix that calls this API will be changed.
+Skew function of the Matrix, which can add the x-axis, y-axis skew effect to the current matrix. Skew function takes a generic point with coordinates (x0, y0, z0) to the point (x0 + x*y0, y0 + y*x0, z0), where x, y are fixed parameters, called the shear factors.
 
-**Since:** 12
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Matrix4Transit-skew(x: number, y: number): Matrix4Transit--><!--Device-Matrix4Transit-skew(x: number, y: number): Matrix4Transit-End-->
+<!--Device-Matrix4Transit-skew(x: double, y: double): Matrix4Transit--><!--Device-Matrix4Transit-skew(x: double, y: double): Matrix4Transit-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -379,54 +208,36 @@ Skews this matrix object along the x and y axes. The matrix that calls this API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | Amount of skewing on the x-axis. |
-| y | number | Yes | Amount of skewing on the y-axis. |
+| x | double | Yes | the shear factor of x-axis. |
+| y | double | Yes | the shear factor of y-axis. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Matrix object after the skewing. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { matrix4 } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Test {
-  private matrix1 = matrix4.identity().skew(2, 3);
-
-  build() {
-    Column() {
-      // Replace $r("app.media.bg1") with the image resource file you use.
-      Image($r("app.media.bg1")).transform(this.matrix1)
-        .height(100)
-        .margin({
-          top: 300
-        })
-    }
-    .width("100%")
-    .height("100%")
-  }
-}
-```
+| Matrix4Transit | Return to Matrix4Transit |
 
 ## transformPoint
 
 ```TypeScript
-transformPoint(options: [number, number]): [number, number]
+transformPoint(options: [
+            double,
+            double
+        ]): [
+            double,
+            double
+        ]
 ```
 
-Applies the current transformation effect to a coordinate point.
+Matrix coordinate point conversion function Which can apply the current transformation effect to a coordinate point.
 
-**Since:** 7
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-Matrix4Transit-transformPoint(options: [number, number]): [number, number]--><!--Device-Matrix4Transit-transformPoint(options: [number, number]): [number, number]-End-->
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Matrix4Transit-transformPoint(options: [            double,            double        ]): [            double,            double        ]--><!--Device-Matrix4Transit-transformPoint(options: [            double,            double        ]): [            double,            double        ]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -434,50 +245,13 @@ Applies the current transformation effect to a coordinate point.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [number, number] | Yes | Point to be transformed. |
+| options | [             double,             double         ] | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [number, number] | Point object after matrix transformation |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { matrix4 } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Test {
-  private originPoint: number[] = [50, 50];
-  private matrix_1 = matrix4.identity().translate({ x: 150, y: -50 });
-  private transformPoint = this.matrix_1.transformPoint([this.originPoint[0], this.originPoint[1]]);
-  private matrix_2 = matrix4.identity().translate({ x: this.transformPoint[0], y: this.transformPoint[1] });
-
-  build() {
-    Column() {
-      Text(`Coordinates before matrix transformation: [${this.originPoint}]`)
-        .fontSize(16)
-      // Replace $r("app.media.image") with the image resource file you use.
-      Image($r("app.media.image"))
-        .width('600px')
-        .height('300px')
-        .margin({ top: 50 })
-      Text(`Coordinates after matrix transformation: [${this.transformPoint}]`)
-        .fontSize(16)
-        .margin({ top: 100 })
-      // Replace $r("app.media.image") with the image resource file you use.
-      Image($r("app.media.image"))
-        .width('600px')
-        .height('300px')
-        .margin({ top: 50 })
-        .transform(this.matrix_2)
-    }.width("100%").padding(50)
-  }
-}
-```
+| [double, double] | Return to Matrix4Transit |
 
 ## translate
 
@@ -485,11 +259,13 @@ struct Test {
 translate(options: TranslateOption): Matrix4Transit
 ```
 
-Translates this matrix object along the x, y, and z axes. The matrix that calls this API will be changed.
+Matrix translation function Which can add the x-axis, Y-axis, or Z-axis translation effect to the current matrix.
 
-**Since:** 7
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Matrix4Transit-translate(options: TranslateOption): Matrix4Transit--><!--Device-Matrix4Transit-translate(options: TranslateOption): Matrix4Transit-End-->
 
@@ -499,33 +275,11 @@ Translates this matrix object along the x, y, and z axes. The matrix that calls 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TranslateOption](../../apis-na/arkts-apis/arkts-na-matrix4-translateoption-i.md) | Yes | Translation configuration. |
+| options | [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Matrix object after the translation. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { matrix4 } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Test {
-  private matrix1 = matrix4.identity().translate({ x: 100, y: 200, z: 30 });
-
-  build() {
-    Column() {
-      // Replace $r("app.media.bg1") with the image resource file you use.
-      Image($r("app.media.bg1")).transform(this.matrix1)
-        .width("40%")
-        .height(100)
-    }
-  }
-}
-```
+| Matrix4Transit | Return to Matrix4Transit |
 

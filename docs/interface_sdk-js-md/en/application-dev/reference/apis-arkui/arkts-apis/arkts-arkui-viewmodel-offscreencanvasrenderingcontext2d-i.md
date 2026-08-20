@@ -2,6 +2,8 @@
 
 Provides a 2D rendering context for the drawing surface of the &lt; Canvas &gt; element. It is used to draw shapes, text, images and other objects.
 
+@interface OffscreenCanvasRenderingContext2D
+
 **Since:** 7
 
 <!--Device-unnamed-export interface OffscreenCanvasRenderingContext2D--><!--Device-unnamed-export interface OffscreenCanvasRenderingContext2D-End-->

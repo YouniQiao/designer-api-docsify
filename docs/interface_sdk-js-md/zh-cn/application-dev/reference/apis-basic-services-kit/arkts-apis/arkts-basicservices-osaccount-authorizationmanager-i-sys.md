@@ -54,9 +54,9 @@ acquireAuthorization(privilege: string, options?: AcquireAuthorizationOptions): 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid privilege or options. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid privilege or options. |
 
 **示例**
 
@@ -116,9 +116,9 @@ hasAuthorization(privilege: string): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid privilege. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid privilege. |
 
 **示例**
 
@@ -175,9 +175,9 @@ releaseAuthorization(privilege: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid privilege. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid privilege. |
 
 **示例**
 

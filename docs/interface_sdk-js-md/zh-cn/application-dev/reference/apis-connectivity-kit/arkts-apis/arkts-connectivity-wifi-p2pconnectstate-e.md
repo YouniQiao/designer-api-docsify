@@ -2,6 +2,8 @@
 
 P2P连接状态。
 
+@enum { number } P2pConnectState
+
 **起始版本：** 8
 
 **废弃版本：** 9

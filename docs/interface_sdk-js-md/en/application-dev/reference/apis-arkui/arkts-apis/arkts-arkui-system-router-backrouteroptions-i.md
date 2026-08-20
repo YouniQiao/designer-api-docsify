@@ -1,4 +1,4 @@
-# BackRouterOptions(Page Routing)
+# BackRouterOptions
 
 Defines the parameters for routing back.
 

@@ -2,6 +2,8 @@
 
 深度空间中的4D向量。
 
+@interface DepthVector4
+
 **起始版本：** 26.0.0
 
 <!--Device-unnamed-declare interface DepthVector4--><!--Device-unnamed-declare interface DepthVector4-End-->

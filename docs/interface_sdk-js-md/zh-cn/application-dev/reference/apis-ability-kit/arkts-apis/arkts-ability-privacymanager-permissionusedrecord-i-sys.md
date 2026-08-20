@@ -40,7 +40,9 @@ accessCount: int
 accessRecords: Array<UsedRecordDetail>
 ```
 
-访问记录集合，仅当flag为FLAG_PERMISSION_USAGE_DETAIL时生效。 默认值：查询最近10条成功访问记录。
+访问记录集合，仅当flag为FLAG_PERMISSION_USAGE_DETAIL时生效。
+
+默认值：查询最近10条成功访问记录。
 
 **类型：** Array&lt;[UsedRecordDetail](arkts-ability-privacymanager-usedrecorddetail-i-sys.md)&gt;
 
@@ -168,7 +170,9 @@ rejectCount: int
 rejectRecords: Array<UsedRecordDetail>
 ```
 
-拒绝记录集合，仅当flag为FLAG_PERMISSION_USAGE_DETAIL时生效。 默认值：查询最近10条失败或拒绝记录。
+拒绝记录集合，仅当flag为FLAG_PERMISSION_USAGE_DETAIL时生效。
+
+默认值：查询最近10条失败或拒绝记录。
 
 **类型：** Array&lt;[UsedRecordDetail](arkts-ability-privacymanager-usedrecorddetail-i-sys.md)&gt;
 

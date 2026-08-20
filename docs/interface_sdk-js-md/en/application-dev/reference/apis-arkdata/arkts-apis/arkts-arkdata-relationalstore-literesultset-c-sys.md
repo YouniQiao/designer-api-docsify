@@ -1,6 +1,14 @@
 # LiteResultSet
 
-Defines APIs to access the result set obtained by querying the RDB store. This result set is the collection of results returned with the **query()** method called. The **LiteResultSet** instance is not refreshed in real time. After using the result set, if the data in the database is changed (by being added, deleted, or modified), you need to query the result set again to obtain the latest data. In the following API examples, you need to obtain an **LiteResultSet** instance by using a query method, such as [queryWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querywithoutrowcount) or [querySqlWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount), and then call the corresponding method through this instance. &gt; **NOTE：**&gt; &gt; - The initial APIs of this class are supported since API version 23.
+Defines APIs to access the result set obtained by querying the RDB store. This result set is the collection of results returned with the **query()** method called.
+
+The **LiteResultSet** instance is not refreshed in real time. After using the result set, if the data in the database is changed (by being added, deleted, or modified), you need to query the result set again to obtain the latest data.
+
+In the following API examples, you need to obtain an **LiteResultSet** instance by using a query method, such as [queryWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querywithoutrowcount) or [querySqlWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount), and then call the corresponding method through this instance.
+
+> **NOTE：**
+> 
+> - The initial APIs of this class are supported since API version 23.
 
 **Since:** 23
 
@@ -48,8 +56,8 @@ Obtains the value of the specified column in the current row as a float array. T
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800041](../errorcode-data-rdb.md#14800041-type-conversion-failure) | Type conversion failed. |
-| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) | Column index is out of bounds. |
 | [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) | ResultSet is empty or pointer index is out of bounds. |
+| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) | Column index is out of bounds. |
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [14800041](../errorcode-data-rdb.md#14800041-type-conversion-failure) | Type conversion failed. |
 

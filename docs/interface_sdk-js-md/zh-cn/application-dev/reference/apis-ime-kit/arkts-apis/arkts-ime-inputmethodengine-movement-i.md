@@ -1,5 +1,7 @@
 # Movement
 
+@brief 选中文本时，光标移动的方向
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-export interface Movement--><!--Device-inputMethodEngine-export interface Movement-End-->
@@ -17,6 +19,8 @@ import { inputMethodEngine } from '@kit.IMEKit';
 ```TypeScript
 direction: Direction
 ```
+
+@brief 选中文本时，光标的移动方向。
 
 **类型：** Direction
 

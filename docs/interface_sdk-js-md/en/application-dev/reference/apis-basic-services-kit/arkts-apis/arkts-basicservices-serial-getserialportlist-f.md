@@ -32,6 +32,6 @@ Obtains the serial port list. This API returns the result asynchronously through
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
 | [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
+| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
 

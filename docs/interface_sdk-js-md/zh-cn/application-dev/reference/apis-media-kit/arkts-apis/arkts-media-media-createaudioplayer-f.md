@@ -12,7 +12,11 @@ import { media } from '@kit.MediaKit';
 function createAudioPlayer(): AudioPlayer
 ```
 
-同步方式创建音频播放实例。 &gt; **说明：** &gt; &gt; 从API version 6开始支持，从API version 9开始废弃，建议使用 &gt; [createAVPlayer](arkts-media-media-createavplayer-f.md)替代。
+同步方式创建音频播放实例。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用 &gt; [createAVPlayer](arkts-media-media-createavplayer-f.md)替代。
 
 **起始版本：** 6
 

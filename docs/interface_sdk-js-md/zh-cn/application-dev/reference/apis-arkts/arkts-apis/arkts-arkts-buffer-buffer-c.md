@@ -208,8 +208,8 @@ entries(): IterableIterator<[int, long]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[number, number]&gt; | 包含key和value的迭代器，同时两者皆为number类型。<br>**适用版本：** 9 - 10 |
-| IterableIterator&lt;[int, long]&gt; | <br>**适用版本：** 11+ |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, number]&gt; | 包含key和value的迭代器，同时两者皆为number类型。<br>**适用版本：** 9 - 10 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[int, long]&gt; | <br>**适用版本：** 11+ |
 
 **示例**
 
@@ -398,7 +398,7 @@ keys(): IterableIterator<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;int&gt; | 返回一个包含key值的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; | 返回一个包含key值的迭代器。 |
 
 **示例**
 
@@ -1891,7 +1891,7 @@ values(): IterableIterator<long>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;long&gt; | 迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;long&gt; | 迭代器。 |
 
 **示例**
 

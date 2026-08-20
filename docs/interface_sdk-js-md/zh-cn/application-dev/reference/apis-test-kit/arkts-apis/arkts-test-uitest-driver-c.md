@@ -47,9 +47,9 @@ assertComponentExist(on: On): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000003](../errorcode-uitest.md#17000003-断言失败) | Assertion failed. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000003](../errorcode-uitest.md#17000003-断言失败) | Assertion failed. |
 
 **示例**
 
@@ -1378,7 +1378,11 @@ async function demo() {
 injectKnucklePointerAction(pointers: PointerMatrix, speed?: int): Promise<void>
 ```
 
-模拟指关节多点注入滑动操作。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 若设备关闭了指关节手势<!--RP4--><!--RP4End-->，则调用本接口返回17000005错误码。
+模拟指关节多点注入滑动操作。使用Promise异步回调。
+
+> **说明：**
+> 
+> 若设备关闭了指关节手势<!--RP4--><!--RP4End-->，则调用本接口返回17000005错误码。
 
 **起始版本：** 23
 
@@ -1406,8 +1410,8 @@ injectKnucklePointerAction(pointers: PointerMatrix, speed?: int): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 | [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 **示例**
 
@@ -1820,7 +1824,11 @@ async function demo() {
 knuckleKnock(pointers: Array<Point>, times: int): Promise<void>
 ```
 
-模拟指关节敲击屏幕操作。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 若设备关闭了指关节手势<!--RP4--><!--RP4End-->，则调用本接口返回17000005错误码。
+模拟指关节敲击屏幕操作。使用Promise异步回调。
+
+> **说明：**
+> 
+> 若设备关闭了指关节手势<!--RP4--><!--RP4End-->，则调用本接口返回17000005错误码。
 
 **起始版本：** 23
 
@@ -1848,8 +1856,8 @@ knuckleKnock(pointers: Array<Point>, times: int): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 | [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 **示例**
 
@@ -3408,8 +3416,8 @@ touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: int, speed?: i
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 | [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 **示例**
 
@@ -3626,7 +3634,11 @@ async function demo() {
 triggerPenKey(key: PenKey, mode: PenMode, operation: PenKeyOperation, options?: PenKeyOperationOptions): Promise<void>
 ```
 
-Trigger pen key operation. Supported combinations: - HANDWRITING mode: HANDWRITING key with CLICK or DOUBLE_CLICK operation. - AIR_MOUSE mode: AIR_MOUSE key with CLICK or DOUBLE_CLICK operation (requires point in options), HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK operation. Other combinations will result in a BusinessError 17000007.
+Trigger pen key operation.
+
+Supported combinations:
+
+- HANDWRITING mode: HANDWRITING key with CLICK or DOUBLE_CLICK operation. - AIR_MOUSE mode: AIR_MOUSE key with CLICK or DOUBLE_CLICK operation (requires point in options), HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK operation. Other combinations will result in a BusinessError 17000007.
 
 **起始版本：** 26.0.0
 
@@ -3656,8 +3668,8 @@ Trigger pen key operation. Supported combinations: - HANDWRITING mode: HANDWRITI
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. Unsupported key, mode, and operation combination. |
 | [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. Unsupported key, mode, and operation combination. |
 
 **示例**
 

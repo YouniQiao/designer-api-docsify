@@ -18,7 +18,9 @@ Enumerates the notification types.
 NOTIFY_ADD = 0
 ```
 
-File added. See examples 2 and 3 of **registerObserver**.
+File added.
+
+See examples 2 and 3 of **registerObserver**.
 
 **Since:** 10
 
@@ -38,7 +40,9 @@ File added. See examples 2 and 3 of **registerObserver**.
 NOTIFY_DELETE = 1
 ```
 
-File deleted. See examples 1 and 2 of **unregisterObserver(uri: string, callback: Callback&lt;NotifyMessage&gt;)**.
+File deleted.
+
+See examples 1 and 2 of **unregisterObserver(uri: string, callback: Callback&lt;NotifyMessage&gt;)**.
 
 **Since:** 10
 
@@ -58,7 +62,9 @@ File deleted. See examples 1 and 2 of **unregisterObserver(uri: string, callback
 NOTIFY_MOVED_TO = 2
 ```
 
-File or directory moved in (for example, **rename()** is performed on a file or directory in this directory or a file or directory is moved to this directory). See example 1 of **registerObserver** and example 1 of **unregisterObserver(uri: string)**.
+File or directory moved in (for example, **rename()** is performed on a file or directory in this directory or a file or directory is moved to this directory).
+
+See example 1 of **registerObserver** and example 1 of **unregisterObserver(uri: string)**.
 
 **Since:** 10
 
@@ -78,7 +84,9 @@ File or directory moved in (for example, **rename()** is performed on a file or 
 NOTIFY_MOVED_FROM = 3
 ```
 
-File or directory moved out (for example, **rename()** is performed on a file or directory in this directory or a file or directory is moved out from this directory). See example 1 of **registerObserver** and example 1 of **unregisterObserver(uri: string)**.
+File or directory moved out (for example, **rename()** is performed on a file or directory in this directory or a file or directory is moved out from this directory).
+
+See example 1 of **registerObserver** and example 1 of **unregisterObserver(uri: string)**.
 
 **Since:** 10
 
@@ -98,7 +106,9 @@ File or directory moved out (for example, **rename()** is performed on a file or
 NOTIFY_MOVE_SELF = 4
 ```
 
-File moved (for example, the target file or directory is renamed or moved). See example 1 of **registerObserver**.
+File moved (for example, the target file or directory is renamed or moved).
+
+See example 1 of **registerObserver**.
 
 **Since:** 10
 

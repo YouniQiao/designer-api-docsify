@@ -1,4 +1,4 @@
-# NotificationFlagStatus(Some states and flags for notifications) (System API)
+# NotificationFlagStatus (System API)
 
 Enumerates the notification flag states.
 

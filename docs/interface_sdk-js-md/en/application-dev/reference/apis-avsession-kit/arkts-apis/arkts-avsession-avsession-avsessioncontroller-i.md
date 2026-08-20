@@ -2,6 +2,8 @@
 
 Session controller,used to control media playback and get media information
 
+@interface AVSessionController [since 10 - 11]
+
 **Since:** 23
 
 <!--Device-avSession-interface AVSessionController--><!--Device-avSession-interface AVSessionController-End-->
@@ -3234,12 +3236,12 @@ Send media key event to this session
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 600105 | Invalid session command. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 600106 | The session is not activated. |
 | 600101 | Session service exception. |
-| 600103 | The session controller does not exist. |
 | 600102 | The session does not exist. |
+| 600103 | The session controller does not exist. |
+| 600105 | Invalid session command. |
+| 600106 | The session is not activated. |
 
 ## sendAVKeyEvent
 
@@ -3273,12 +3275,12 @@ Send media key event to this session
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 600105 | Invalid session command. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 600106 | The session is not activated. |
 | 600101 | Session service exception. |
-| 600103 | The session controller does not exist. |
 | 600102 | The session does not exist. |
+| 600103 | The session controller does not exist. |
+| 600105 | Invalid session command. |
+| 600106 | The session is not activated. |
 
 ## sendCommonCommand
 

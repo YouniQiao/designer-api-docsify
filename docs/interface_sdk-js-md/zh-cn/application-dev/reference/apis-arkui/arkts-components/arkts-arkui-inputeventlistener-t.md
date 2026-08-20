@@ -6,7 +6,20 @@ declare type InputEventListener = (
 ) => InputEventInterceptResult
 ```
 
-输入事件监听器回调函数类型。 &gt; **说明：** &gt; &gt; - RawInputEventWrapper是抽象类，开发者无法使用`new`运算符创建实例。 &gt; &gt; - 系统会在事件触发时自动创建实例并通过此参数传递给回调函数。 &gt; &gt; - 当前回调参数event仅会封装以下原始输入事件类型： &gt; [MouseEvent](arkts-arkui-mouseevent-i.md)、[TouchEvent](arkts-arkui-touchevent-i.md)、[KeyEvent](arkts-arkui-keyevent-i.md)。开发者可通过 &gt; [asMouseEvent](arkts-arkui-rawinputeventwrapper-c.md#asmouseevent)、[asTouchEvent](arkts-arkui-rawinputeventwrapper-c.md#astouchevent)、 &gt; [asKeyEvent](arkts-arkui-rawinputeventwrapper-c.md#askeyevent)获取对应事件对象。 &gt; &gt; - 请勿在回调中执行耗时操作（如复杂计算或网络请求），否则可能导致应用卡顿。 &gt; &gt; - 监听器在UI线程中同步执行会直接阻塞事件处理流程。建议只进行简单的判断和计算。
+输入事件监听器回调函数类型。
+
+> **说明：**
+> 
+> - RawInputEventWrapper是抽象类，开发者无法使用`new`运算符创建实例。
+> 
+> - 系统会在事件触发时自动创建实例并通过此参数传递给回调函数。
+> 
+> - 当前回调参数event仅会封装以下原始输入事件类型：
+> [MouseEvent](arkts-arkui-mouseevent-i.md)、[TouchEvent](arkts-arkui-touchevent-i.md)、[KeyEvent](arkts-arkui-keyevent-i.md)。开发者可通过 &gt; [asMouseEvent](arkts-arkui-rawinputeventwrapper-c.md#asmouseevent)、[asTouchEvent](arkts-arkui-rawinputeventwrapper-c.md#astouchevent)、 &gt; [asKeyEvent](arkts-arkui-rawinputeventwrapper-c.md#askeyevent)获取对应事件对象。
+> 
+> - 请勿在回调中执行耗时操作（如复杂计算或网络请求），否则可能导致应用卡顿。
+> 
+> - 监听器在UI线程中同步执行会直接阻塞事件处理流程。建议只进行简单的判断和计算。
 
 **起始版本：** 26.0.0
 

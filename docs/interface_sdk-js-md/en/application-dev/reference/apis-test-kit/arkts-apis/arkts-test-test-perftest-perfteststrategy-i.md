@@ -1,6 +1,10 @@
 # PerfTestStrategy
 
-Represents the performance test strategy. &gt; **NOTE：**&gt; &gt; The input parameter type of the **actionCode** and **resetCode** attributes is **Callback\&lt;boolean&gt;**. You need to call &gt; this callback in the code segment to notify the framework that the code segment execution is complete. Otherwise, the &gt; code segment execution times out. The callback parameter is of the **Boolean** type. The value **true** indicates that &gt; the code segment execution meets the expectation, and **false** indicates the opposite.
+Represents the performance test strategy.
+
+> **NOTE：**
+> 
+> The input parameter type of the **actionCode** and **resetCode** attributes is **Callback\&lt;boolean&gt;**. You need to call &gt; this callback in the code segment to notify the framework that the code segment execution is complete. Otherwise, the &gt; code segment execution times out. The callback parameter is of the **Boolean** type. The value **true** indicates that &gt; the code segment execution meets the expectation, and **false** indicates the opposite.
 
 **Since:** 23
 

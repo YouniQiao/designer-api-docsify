@@ -1,8 +1,12 @@
 # ColumnLayoutAlgorithm
 
-垂直方向线性布局算法类。 &gt; **说明：** &gt; &gt; ColumnLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为[DynamicLayout](../../apis-na/arkts-apis/arkts-na-arkui-components-arkdynamiclayout-dynamiclayout-f.md)组件 &gt; 的入参指定布局算法。
+垂直方向线性布局算法类。
 
-**继承/实现关系：** ColumnLayoutAlgorithm implements [LayoutAlgorithm](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-i.md)
+> **说明：**
+> 
+> ColumnLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为DynamicLayout组件 &gt; 的入参指定布局算法。
+
+**继承/实现关系：** ColumnLayoutAlgorithm implements [LayoutAlgorithm](../../apis-default/arkts-apis/arkts-layoutalgorithm-i.md)
 
 **起始版本：** 24
 
@@ -34,7 +38,7 @@ constructor(option?: ColumnLayoutAlgorithmOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | [ColumnLayoutAlgorithmOptions](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-columnlayoutalgorithmoptions-i.md) | 否 | 垂直方向线性布局算法的构造入参，设置布局算法的间距、主轴对齐方式、交叉轴对齐方式及主轴排列方向。 |
+| option | [ColumnLayoutAlgorithmOptions](../../apis-default/arkts-apis/arkts-layoutalgorithm-columnlayoutalgorithmoptions-i.md) | 否 | 垂直方向线性布局算法的构造入参，设置布局算法的间距、主轴对齐方式、交叉轴对齐方式及主轴排列方向。 |
 
 ## alignItems
 
@@ -42,9 +46,15 @@ constructor(option?: ColumnLayoutAlgorithmOptions)
 @Trace public alignItems?: HorizontalAlign
 ```
 
-所有子组件在水平方向上的对齐格式。 默认值：HorizontalAlign.Center 非法值：按默认值处理。 装饰器类型：@Trace
+所有子组件在水平方向上的对齐格式。
 
-**类型：** [HorizontalAlign](../../apis-na/arkts-apis/arkts-na-enums-horizontalalign-e.md)
+默认值：HorizontalAlign.Center
+
+非法值：按默认值处理。
+
+装饰器类型：@Trace
+
+**类型：** [HorizontalAlign](../../apis-default/arkts-apis/arkts-enums-horizontalalign-e.md)
 
 **起始版本：** 24
 
@@ -64,7 +74,13 @@ constructor(option?: ColumnLayoutAlgorithmOptions)
 @Trace public isReverse?: boolean
 ```
 
-子组件在水平方向上的排列是否反转。取值为true表示子组件在水平方向上反转排列，由于水平方向受通用属性direction影响，如果 direction属性生效，再做一次反转。取值为false表示子组件在水平方向上正序排列。 默认值：false 非法值：按默认值处理。 装饰器类型：@Trace
+子组件在水平方向上的排列是否反转。取值为true表示子组件在水平方向上反转排列，由于水平方向受通用属性direction影响，如果 direction属性生效，再做一次反转。取值为false表示子组件在水平方向上正序排列。
+
+默认值：false
+
+非法值：按默认值处理。
+
+装饰器类型：@Trace
 
 **类型：** boolean
 
@@ -86,9 +102,15 @@ constructor(option?: ColumnLayoutAlgorithmOptions)
 @Trace public justifyContent?: FlexAlign
 ```
 
-所有子组件在垂直方向上的对齐格式。 默认值：FlexAlign.Start 非法值：按默认值处理。 装饰器类型：@Trace
+所有子组件在垂直方向上的对齐格式。
 
-**类型：** [FlexAlign](../../apis-na/arkts-apis/arkts-na-enums-flexalign-e.md)
+默认值：FlexAlign.Start
+
+非法值：按默认值处理。
+
+装饰器类型：@Trace
+
+**类型：** [FlexAlign](../../apis-default/arkts-apis/arkts-enums-flexalign-e.md)
 
 **起始版本：** 24
 
@@ -108,9 +130,15 @@ constructor(option?: ColumnLayoutAlgorithmOptions)
 @Trace public space?: LengthMetrics
 ```
 
-纵向布局元素垂直方向间距。 默认值：LengthMetrics.vp(0) 非法值：按默认值处理。 装饰器类型：@Trace
+纵向布局元素垂直方向间距。
 
-**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+默认值：LengthMetrics.vp(0)
+
+非法值：按默认值处理。
+
+装饰器类型：@Trace
+
+**类型：** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
 
 **起始版本：** 24
 

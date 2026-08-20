@@ -39,10 +39,10 @@ Enters kiosk mode. This API uses a promise to return the result. This API can be
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [16000113](../errorcode-ability.md#16000113-ability-is-not-in-the-foreground) | Current ability is not in foreground.<br>**Applicable version:** 20 - 26.0.0 |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service. |
 | [16000110](../errorcode-ability.md#16000110-application-is-not-in-the-kiosk-mode-list) | The current application is not in Kiosk app list and cannot enter Kiosk mode. |
 | [16000111](../errorcode-ability.md#16000111-application-is-already-in-kiosk-mode) | The system is already in Kiosk mode and cannot enter Kiosk mode again. |
+| [16000113](../errorcode-ability.md#16000113-ability-is-not-in-the-foreground) | Current ability is not in foreground.<br>**Applicable version:** 20 - 26.0.0 |
 
 **Examples**
 

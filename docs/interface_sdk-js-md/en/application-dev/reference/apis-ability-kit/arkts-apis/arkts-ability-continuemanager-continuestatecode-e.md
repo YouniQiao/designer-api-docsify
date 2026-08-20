@@ -14,7 +14,9 @@ Enumerates the status codes of the quick start result.
 SUCCESS = 0
 ```
 
-Operation succeeded. This API can be used only in the stage model.
+Operation succeeded.
+
+This API can be used only in the stage model.
 
 **Since:** 23
 
@@ -30,7 +32,9 @@ Operation succeeded. This API can be used only in the stage model.
 SYSTEM_ERROR = 1
 ```
 
-Operation failed. This API can be used only in the stage model.
+Operation failed.
+
+This API can be used only in the stage model.
 
 **Since:** 23
 

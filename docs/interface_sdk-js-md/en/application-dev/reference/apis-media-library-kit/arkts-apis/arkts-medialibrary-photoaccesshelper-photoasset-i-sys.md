@@ -42,9 +42,9 @@ Cancels a task for obtaining media thumbnails.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
 **Examples**
@@ -91,7 +91,13 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 commitEditedAsset(editData: string, uri: string, callback: AsyncCallback<void>): void
 ```
 
-Commits the edited image or video asset. This API uses an asynchronous callback to return the result. The edited file is transferred to the media library based on the URI, which is **FileUri** of the edited file in the application sandbox directory. For details, see [File URI](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md). &gt; **NOTE：**&gt; &gt; The commit operation overwrites the previous edited data.
+Commits the edited image or video asset. This API uses an asynchronous callback to return the result.
+
+The edited file is transferred to the media library based on the URI, which is **FileUri** of the edited file in the application sandbox directory. For details, see [File URI](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+
+> **NOTE：**
+> 
+> The commit operation overwrites the previous edited data.
 
 **Since:** 23
 
@@ -115,9 +121,9 @@ Commits the edited image or video asset. This API uses an asynchronous callback 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## commitEditedAsset
@@ -126,7 +132,13 @@ Commits the edited image or video asset. This API uses an asynchronous callback 
 commitEditedAsset(editData: string, uri: string): Promise<void>
 ```
 
-Commits the edited image or video asset. This API uses a promise to return the result. The edited file is transferred to the media library based on the URI, which is **FileUri** of the edited file in the application sandbox directory. For details, see [File URI](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md). &gt; **NOTE：**&gt; &gt; The commit operation overwrites the previous edited data.
+Commits the edited image or video asset. This API uses a promise to return the result.
+
+The edited file is transferred to the media library based on the URI, which is **FileUri** of the edited file in the application sandbox directory. For details, see [File URI](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+
+> **NOTE：**
+> 
+> The commit operation overwrites the previous edited data.
 
 **Since:** 23
 
@@ -155,9 +167,9 @@ Commits the edited image or video asset. This API uses a promise to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **Examples**
@@ -222,10 +234,10 @@ Duplicates an image within the same album (either user-created or application-sp
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error.It is recommended to retry and check the logs.Possible causes: <br>1. Database corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameters validate failed, possible causes: <br>1. The original file does not exist locally in PhotoAsset; <br>2. The original file format is not within the supported range; <br>3. The original file is a temporary file or is being edited; <br>4. The title is the same with an image in the same album; <br>5. PhotoAsset is a photo in the trash or a hidden photo; <br>6. The title does not meet the parameter specifications. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error.It is recommended to retry and check the logs.Possible causes: <br>1. Database corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 
 **Examples**
 
@@ -279,10 +291,10 @@ Creates a JPEG-compatible copy for a third-party application that does not suppo
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error.It is recommended to retry and check the logs.Possible causes: <br>1. Database corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameters validate failed, possible causes: <br>1. The original file does not exist locally in PhotoAsset; <br>2. The original file format is not within the supported range; <br>3. The original file is a temporary file or is being edited; |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error.It is recommended to retry and check the logs.Possible causes: <br>1. Database corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 
 **Examples**
 
@@ -341,9 +353,9 @@ Obtains analysis data. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
 **Examples**
@@ -381,7 +393,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getEditData(): Promise<MediaAssetEditData>
 ```
 
-Obtains the edited data of this asset. This API uses a promise to return the result. If the asset has never been edited, an empty string is returned.
+Obtains the edited data of this asset. This API uses a promise to return the result.
+
+If the asset has never been edited, an empty string is returned.
 
 **Since:** 23
 
@@ -403,9 +417,9 @@ Obtains the edited data of this asset. This API uses a promise to return the res
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 14000011 | System inner fail. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **Examples**
@@ -440,7 +454,13 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getExif(callback: AsyncCallback<string>): void
 ```
 
-Obtains the Exif data from a JPG image and returns a JSON string. This API uses an asynchronous callback to return the result. The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) module. For details about the Exif data, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md). &gt; **NOTE：**&gt; &gt; This API returns a JSON string consisting of Exif tags. The complete Exif data consists of **all_exif** and &gt; [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md). These two fields must be passed in via &gt; [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md).fetchColumns.
+Obtains the Exif data from a JPG image and returns a JSON string. This API uses an asynchronous callback to return the result.
+
+The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) module. For details about the Exif data, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).
+
+> **NOTE：**
+> 
+> This API returns a JSON string consisting of Exif tags. The complete Exif data consists of **all_exif** and &gt; [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md). These two fields must be passed in via &gt; [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md).fetchColumns.
 
 **Since:** 23
 
@@ -462,10 +482,10 @@ Obtains the Exif data from a JPG image and returns a JSON string. This API uses 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 13900012 | Permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 **Examples**
@@ -509,7 +529,13 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getExif(): Promise<string>
 ```
 
-Obtains the Exif data from a JPG image and returns a JSON string. This API uses a promise to return the result. The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) module. For details about the Exif data, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md). &gt; **NOTE：**&gt; &gt; This API returns a JSON string consisting of Exif tags. The complete Exif data consists of **all_exif** and &gt; [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md). These two fields must be passed in via &gt; [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md).fetchColumns.
+Obtains the Exif data from a JPG image and returns a JSON string. This API uses a promise to return the result.
+
+The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) module. For details about the Exif data, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).
+
+> **NOTE：**
+> 
+> This API returns a JSON string consisting of Exif tags. The complete Exif data consists of **all_exif** and &gt; [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md). These two fields must be passed in via &gt; [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md).fetchColumns.
 
 **Since:** 23
 
@@ -531,10 +557,10 @@ Obtains the Exif data from a JPG image and returns a JSON string. This API uses 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 13900012 | Permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 **Examples**
@@ -600,9 +626,9 @@ Obtains the thumbnail of the specified type for the key frame. This API uses a p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 **Examples**
@@ -662,10 +688,10 @@ Open the file and cache it in the gallery sandbox when streaming video from the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800302 | Failed to open the file. Possible causes: 1. Unable to access cloud images due to network connectivity issues; 2. File system malfunction. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameters validate failed, possible causes: The image and video files corresponding to the photoasset do not exist. |
+| 23800302 | Failed to open the file. Possible causes: 1. Unable to access cloud images due to network connectivity issues; 2. File system malfunction. |
 
 ## getThumbnailData
 
@@ -701,9 +727,9 @@ Obtains the ArrayBuffer of a file thumbnail by specifying its type. This API use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **Examples**
@@ -758,9 +784,9 @@ Checks whether this image or video asset is edited. This API uses an asynchronou
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 14000011 | System inner fail |
 
 **Examples**
@@ -825,9 +851,9 @@ Checks whether this image or video asset is edited. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 14000011 | System inner fail |
 
 **Examples**
@@ -865,13 +891,19 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 open(mode: string, callback: AsyncCallback<number>): void
 ```
 
-Opens this file asset. This API uses an asynchronous callback to return the result. The returned FD must be closed when it is not required. &gt; **NOTE：**&gt; &gt; This API is supported since API version 10 and deprecated since API version 11. For security purposes, the API &gt; for obtaining the media file handle is no longer provided.
+Opens this file asset. This API uses an asynchronous callback to return the result.
+
+The returned FD must be closed when it is not required.
+
+> **NOTE：**
+> 
+> This API is supported since API version 10 and deprecated since API version 11. For security purposes, the API &gt; for obtaining the media file handle is no longer provided.
 
 **Since:** 10
 
 **Deprecated since:** 11
 
-**Substitutes:** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md)
+**Substitutes:** [open](../../apis-default/arkts-apis/arkts-fileio-open-f.md)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO or ohos.permission.WRITE_IMAGEVIDEO
 
@@ -892,10 +924,10 @@ Opens this file asset. This API uses an asynchronous callback to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **Examples**
@@ -924,13 +956,19 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 open(mode: string): Promise<number>
 ```
 
-Opens this file asset. This API uses a promise to return the result. The returned FD must be closed when it is not required. &gt; **NOTE：**&gt; &gt; This API is supported since API version 10 and deprecated since API version 11. For security purposes, the API &gt; for obtaining the media file handle is no longer provided.
+Opens this file asset. This API uses a promise to return the result.
+
+The returned FD must be closed when it is not required.
+
+> **NOTE：**
+> 
+> This API is supported since API version 10 and deprecated since API version 11. For security purposes, the API &gt; for obtaining the media file handle is no longer provided.
 
 **Since:** 10
 
 **Deprecated since:** 11
 
-**Substitutes:** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md)
+**Substitutes:** [open](../../apis-default/arkts-apis/arkts-fileio-open-f.md)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO or ohos.permission.WRITE_IMAGEVIDEO
 
@@ -956,10 +994,10 @@ Opens this file asset. This API uses a promise to return the result. The returne
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **Examples**
@@ -991,7 +1029,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 requestEditData(callback: AsyncCallback<string>): void
 ```
 
-Obtains the edit data of this image or video asset. This API uses an asynchronous callback to return the result. If the asset has never been edited, an empty string is returned.
+Obtains the edit data of this image or video asset. This API uses an asynchronous callback to return the result.
+
+If the asset has never been edited, an empty string is returned.
 
 **Since:** 23
 
@@ -1013,9 +1053,9 @@ Obtains the edit data of this image or video asset. This API uses an asynchronou
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 14000011 | System inner fail. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **Examples**
@@ -1054,7 +1094,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 requestEditData(): Promise<string>
 ```
 
-Obtains the edit data of this image or video asset. This API uses a promise to return the result. If the asset has never been edited, an empty string is returned.
+Obtains the edit data of this image or video asset. This API uses a promise to return the result.
+
+If the asset has never been edited, an empty string is returned.
 
 **Since:** 23
 
@@ -1076,9 +1118,9 @@ Obtains the edit data of this image or video asset. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 14000011 | System inner fail. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **Examples**
@@ -1112,7 +1154,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 requestPhoto(callback: AsyncCallback<image.PixelMap>): string
 ```
 
-Obtains the quick thumbnail and quality thumbnail of this asset. This API uses an asynchronous callback to return the result. The size of a quick thumbnail is 128 x 128, and the size of a quality thumbnail is 256 x 256. After this API is called, the callback will be invoked twice to return a quick thumbnail and a quality thumbnail in sequence.
+Obtains the quick thumbnail and quality thumbnail of this asset. This API uses an asynchronous callback to return the result.
+
+The size of a quick thumbnail is 128 x 128, and the size of a quality thumbnail is 256 x 256. After this API is called, the callback will be invoked twice to return a quick thumbnail and a quality thumbnail in sequence.
 
 **Since:** 11
 
@@ -1140,9 +1184,9 @@ Obtains the quick thumbnail and quality thumbnail of this asset. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 14000011 | System inner fail |
 
 **Examples**
@@ -1210,10 +1254,10 @@ Obtains the quick thumbnail and quality thumbnail of this asset. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## requestPhoto
 
@@ -1250,9 +1294,9 @@ Obtains the thumbnails of an asset based on the specified options. This API uses
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
 **Examples**
@@ -1327,10 +1371,10 @@ Obtains the thumbnails of an asset based on the specified options. This API uses
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## requestSource
 
@@ -1360,9 +1404,9 @@ Opens the source file and returns the FD. This API uses an asynchronous callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 14000011 | System inner fail. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **Examples**
@@ -1423,9 +1467,9 @@ Opens the source file and returns the FD. This API uses a promise to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 14000011 | System inner fail. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **Examples**
@@ -1459,7 +1503,12 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 revertToOriginal(callback: AsyncCallback<void>): void
 ```
 
-Reverts to the state of the file before being edited. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API deletes the edited data and edited image or video asset, and the deleted data cannot be restored. &gt; Exercise caution when using this API.
+Reverts to the state of the file before being edited. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API deletes the edited data and edited image or video asset, and the deleted data cannot be restored.
+> Exercise caution when using this API.
 
 **Since:** 23
 
@@ -1481,9 +1530,9 @@ Reverts to the state of the file before being edited. This API uses an asynchron
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 14000011 | System inner fail |
 
 ## revertToOriginal
@@ -1492,7 +1541,12 @@ Reverts to the state of the file before being edited. This API uses an asynchron
 revertToOriginal(): Promise<void>
 ```
 
-Reverts to the state of the file before being edited. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API deletes the edited data and edited image or video asset, and the deleted data cannot be restored. &gt; Exercise caution when using this API.
+Reverts to the state of the file before being edited. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API deletes the edited data and edited image or video asset, and the deleted data cannot be restored.
+> Exercise caution when using this API.
 
 **Since:** 23
 
@@ -1514,9 +1568,9 @@ Reverts to the state of the file before being edited. This API uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 14000011 | System inner fail |
 
 **Examples**
@@ -1581,10 +1635,10 @@ Favorites or unfavorites this file asset. This API uses an asynchronous callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 **Examples**
@@ -1651,10 +1705,10 @@ Favorites or unfavorites this file asset. This API uses a promise to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 **Examples**
@@ -1692,7 +1746,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setHidden(hiddenState: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets this file asset to the hidden state. This API uses an asynchronous callback to return the result. Private files are stored in the private album. After obtaining private files from the private album, users can set **hiddenState** to **false** to remove them from the private album.
+Sets this file asset to the hidden state. This API uses an asynchronous callback to return the result.
+
+Private files are stored in the private album. After obtaining private files from the private album, users can set **hiddenState** to **false** to remove them from the private album.
 
 **Since:** 10
 
@@ -1719,10 +1775,10 @@ Sets this file asset to the hidden state. This API uses an asynchronous callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 **Examples**
@@ -1757,7 +1813,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setHidden(hiddenState: boolean): Promise<void>
 ```
 
-Sets this file asset to the hidden state. This API uses a promise to return the result. Private files are stored in the private album. After obtaining private files from the private album, users can set **hiddenState** to **false** to remove them from the private album.
+Sets this file asset to the hidden state. This API uses a promise to return the result.
+
+Private files are stored in the private album. After obtaining private files from the private album, users can set **hiddenState** to **false** to remove them from the private album.
 
 **Since:** 10
 
@@ -1789,10 +1847,10 @@ Sets this file asset to the hidden state. This API uses a promise to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 **Examples**
@@ -1829,7 +1887,14 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setPending(pendingState: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets the pending state for this image or video asset. This API uses an asynchronous callback to return the result. The pending state can be removed only through **setPending(false)**. You can use **photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)** to check whether the asset state is pending. If the asset is in pending state, **true** is returned. Otherwise, **false** is returned. &gt; **NOTE：**&gt; &gt; **setPending** can be used only during the file creation process. Once the FD is closed, **setPending(true)** &gt; cannot be used to set the pending state for the file.
+Sets the pending state for this image or video asset. This API uses an asynchronous callback to return the result.
+
+The pending state can be removed only through **setPending(false)**. You can use **photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)** to check whether the asset state is pending. If the asset is in pending state, **true** is returned. Otherwise, **false** is returned.
+
+> **NOTE：**
+> 
+> **setPending** can be used only during the file creation process. Once the FD is closed, **setPending(true)**
+> cannot be used to set the pending state for the file.
 
 **Since:** 23
 
@@ -1852,9 +1917,9 @@ Sets the pending state for this image or video asset. This API uses an asynchron
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
 **Examples**
@@ -1892,7 +1957,14 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setPending(pendingState: boolean): Promise<void>
 ```
 
-Sets the pending state for this image or video asset. This API uses a promise to return the result. The pending state can be removed only through **setPending(false)**. You can use **photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)** to check whether the asset state is pending. If the asset is in pending state, **true** is returned. Otherwise, **false** is returned. &gt; **NOTE：**&gt; &gt; **setPending** can be used only during the file creation process. Once the FD is closed, **setPending(true)** &gt; cannot be used to set the pending state for the file.
+Sets the pending state for this image or video asset. This API uses a promise to return the result.
+
+The pending state can be removed only through **setPending(false)**. You can use **photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)** to check whether the asset state is pending. If the asset is in pending state, **true** is returned. Otherwise, **false** is returned.
+
+> **NOTE：**
+> 
+> **setPending** can be used only during the file creation process. Once the FD is closed, **setPending(true)**
+> cannot be used to set the pending state for the file.
 
 **Since:** 23
 
@@ -1920,9 +1992,9 @@ Sets the pending state for this image or video asset. This API uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
 **Examples**
@@ -1977,10 +2049,10 @@ Sets user comment information of an image or video. This API uses an asynchronou
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 **Examples**
@@ -2052,10 +2124,10 @@ Sets user comment information of an image or video. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
 **Examples**

@@ -12,7 +12,9 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAppProvisionInfoSync(bundleName: string, userId?: int): AppProvisionInfo
 ```
 
-以同步方法根据bundleName和userId获取应用的provision配置文件信息并返回结果。 获取调用方自身的信息时不需要权限。
+以同步方法根据bundleName和userId获取应用的provision配置文件信息并返回结果。
+
+获取调用方自身的信息时不需要权限。
 
 **起始版本：** 23
 
@@ -41,11 +43,11 @@ function getAppProvisionInfoSync(bundleName: string, userId?: int): AppProvision
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter bundleName is empty. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter bundleName is empty. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 
 **示例**
 

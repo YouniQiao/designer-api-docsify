@@ -1,6 +1,14 @@
 # Lattice
 
-Lattice object. which is used to divide an image by lattice. &gt; **NOTE：**&gt; &gt; - The initial APIs of this class are supported since API version 12. &gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - This module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
+Lattice object. which is used to divide an image by lattice.
+
+> **NOTE：**
+> 
+> - The initial APIs of this class are supported since API version 12.
+> 
+> - This module uses the physical pixel unit, px.
+> 
+> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
 
 **Since:** 23
 

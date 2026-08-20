@@ -2,6 +2,8 @@
 
 Defines the DirectionalEdgesT interface.
 
+@interface DirectionalEdgesT
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare interface DirectionalEdgesT--><!--Device-unnamed-declare interface DirectionalEdgesT-End-->

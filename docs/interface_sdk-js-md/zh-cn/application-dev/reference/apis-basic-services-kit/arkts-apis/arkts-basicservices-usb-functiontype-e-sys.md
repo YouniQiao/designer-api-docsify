@@ -1,4 +1,4 @@
-# FunctionType(USB Manager)（系统接口）
+# FunctionType（系统接口）
 
 USB设备侧功能。
 

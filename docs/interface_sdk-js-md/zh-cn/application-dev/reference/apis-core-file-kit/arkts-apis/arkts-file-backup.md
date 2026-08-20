@@ -2,6 +2,8 @@
 
 提供备份和恢复能力的模块。
 
+@namespace backup
+
 **起始版本：** 23
 
 <!--Device-unnamed-declare namespace backup--><!--Device-unnamed-declare namespace backup-End-->

@@ -21,7 +21,9 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
   $visible?: PopoverDialogV2OnVisibleChange
 ```
 
-修改跟手弹出框的显示状态时触发的回调函数，建议在visible后使用!!语法（如`visible: this.isShow!!`）设置双向同步，当弹出框内部改变显示状态时会同步更新外部变量。 默认无事件。
+修改跟手弹出框的显示状态时触发的回调函数，建议在visible后使用!!语法（如`visible: this.isShow!!`）设置双向同步，当弹出框内部改变显示状态时会同步更新外部变量。
+
+默认无事件。
 
 **类型：** [PopoverDialogV2OnVisibleChange](arkts-arkui-popoverdialogv2onvisiblechange-t.md)
 
@@ -86,7 +88,9 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
   visible: boolean
 ```
 
-跟手弹出框的显示状态。 值为true时跟手弹出框显示，为false时隐藏。
+跟手弹出框的显示状态。
+
+值为true时跟手弹出框显示，为false时隐藏。
 
 **类型：** boolean
 

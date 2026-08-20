@@ -2,6 +2,8 @@
 
 ScrollOptions
 
+@interface ScrollOptions
+
 **Since:** 6
 
 <!--Device-unnamed-export interface ScrollOptions--><!--Device-unnamed-export interface ScrollOptions-End-->

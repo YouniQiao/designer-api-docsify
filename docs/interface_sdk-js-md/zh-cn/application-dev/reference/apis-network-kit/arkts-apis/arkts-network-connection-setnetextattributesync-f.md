@@ -12,7 +12,11 @@ import { connection } from '@kit.NetworkKit';
 function setNetExtAttributeSync(netHandle: NetHandle, netExtAttribute: string): void
 ```
 
-为netHandle对应的网络设置扩展属性，标识网络的安全级别。使用同步方式返回。 &gt; **说明：** &gt; &gt; 该接口所需的权限目前仅支持PC设备。
+为netHandle对应的网络设置扩展属性，标识网络的安全级别。使用同步方式返回。
+
+> **说明：**
+> 
+> 该接口所需的权限目前仅支持PC设备。
 
 **起始版本：** 20
 
@@ -33,10 +37,10 @@ function setNetExtAttributeSync(netHandle: NetHandle, netExtAttribute: string): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 **示例**
 

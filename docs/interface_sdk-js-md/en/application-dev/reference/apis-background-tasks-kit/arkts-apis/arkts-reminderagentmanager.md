@@ -33,8 +33,8 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 | [getExcludeDates](arkts-backgroundtasks-reminderagentmanager-getexcludedates-f.md) | Obtains all non-reminder dates for a recurring calendar reminder with a specific ID. This API uses a promise to return the result. |
 | [getValidReminders](arkts-backgroundtasks-reminderagentmanager-getvalidreminders-f.md) | Obtains all [valid (not yet expired) reminders](../../../task-management/agent-powered-reminder.md#constraints) set by the current application. This API uses an asynchronous callback to return the result. |
 | [getValidReminders](arkts-backgroundtasks-reminderagentmanager-getvalidreminders-f.md) | Obtains all [valid (not yet expired) reminders](../../../task-management/agent-powered-reminder.md#constraints) set by the current application. This API uses a promise to return the result. |
-| [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md) | Publishes a reminder. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after the &gt; [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md) &gt; permission is obtained. &gt; |
-| [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md) | Publishes a reminder. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after the &gt; [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md) &gt; permission is obtained. &gt; |
+| [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md) | Publishes a reminder. This API uses an asynchronous callback to return the result. |
+| [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md) | Publishes a reminder. This API uses a promise to return the result. |
 | [removeNotificationSlot](arkts-backgroundtasks-reminderagentmanager-removenotificationslot-f.md) | Removes a specified notification slot. This API uses an asynchronous callback to return the result. |
 | [removeNotificationSlot](arkts-backgroundtasks-reminderagentmanager-removenotificationslot-f.md) | Removes a specified notification slot. This API uses a promise to return the result. |
 | [subscribeReminderState](arkts-backgroundtasks-reminderagentmanager-subscribereminderstate-f.md) | Subscribes to agent-powered reminder state changes. This API uses a promise to return the result. |
@@ -51,10 +51,10 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 | [NotificationRequestProxy](arkts-backgroundtasks-reminderagentmanager-notificationrequestproxy-i.md) | Notification request proxy. |
 | [ReminderInfo](arkts-backgroundtasks-reminderagentmanager-reminderinfo-i.md) | Defines the reminder information. |
 | [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md) | Defines the request for publishing a reminder. |
-| [ReminderRequestAlarm](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md) | ReminderRequestAlarm extends ReminderRequest Defines a reminder for an alarm. |
-| [ReminderRequestCalendar](arkts-backgroundtasks-reminderagentmanager-reminderrequestcalendar-i.md) | ReminderRequestCalendar extends ReminderRequest Defines a reminder for a calendar event. |
-| [ReminderRequestTimer](arkts-backgroundtasks-reminderagentmanager-reminderrequesttimer-i.md) | ReminderRequestTimer extends ReminderRequest Defines a reminder for a scheduled timer. |
-| [ReminderState](arkts-backgroundtasks-reminderagentmanager-reminderstate-i.md) | Defines the agent-powered reminder state information, for which notifications are triggered in the following scenarios: 1. When a user taps a button on an agent-powered reminder notification, a notification specifying the tapped button type is sent to the application if it is running. If the application is not running, the notification will not be received. 2. Since the above scenario cannot guarantee that the application receives the notification, all callbacks associated with user-tapped button types under the application are returned to the application when it registers a new callback function. State information is retained for a maximum of 30 days. Cached state information is cleared when the application registers a new callback function or has not registered any callback function for more than 30 days. |
+| [ReminderRequestAlarm](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md) | ReminderRequestAlarm extends ReminderRequest |
+| [ReminderRequestCalendar](arkts-backgroundtasks-reminderagentmanager-reminderrequestcalendar-i.md) | ReminderRequestCalendar extends ReminderRequest |
+| [ReminderRequestTimer](arkts-backgroundtasks-reminderagentmanager-reminderrequesttimer-i.md) | ReminderRequestTimer extends ReminderRequest |
+| [ReminderState](arkts-backgroundtasks-reminderagentmanager-reminderstate-i.md) | Defines the agent-powered reminder state information, for which notifications are triggered in the following scenarios: |
 | [WantAgent](arkts-backgroundtasks-reminderagentmanager-wantagent-i.md) | Defines the information about the redirected-to ability. |
 
 <!--Del-->
@@ -63,9 +63,9 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 | Name | Description |
 | --- | --- |
 | [ActionButton](arkts-backgroundtasks-reminderagentmanager-actionbutton-i-sys.md) | Describes the button displayed for a reminder. |
-| [DataShareUpdate](arkts-backgroundtasks-reminderagentmanager-datashareupdate-i-sys.md) | Defines the parameter information used to update the database. The data provider needs to set the ID, read/write permissions, and basic information of the table to be shared under **proxyData** in the **module.json5** file. For details about the configuration method, see [Data Provider Application Development](../../../database/share-data-by-silent-access-sys.md#data-provider-application-development) |
+| [DataShareUpdate](arkts-backgroundtasks-reminderagentmanager-datashareupdate-i-sys.md) | Defines the parameter information used to update the database. |
 | [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i-sys.md) | Defines the request for publishing a reminder. |
-| [ReminderRequestCalendar](arkts-backgroundtasks-reminderagentmanager-reminderrequestcalendar-i-sys.md) | ReminderRequestCalendar extends ReminderRequest Defines a reminder for a calendar event. |
+| [ReminderRequestCalendar](arkts-backgroundtasks-reminderagentmanager-reminderrequestcalendar-i-sys.md) | ReminderRequestCalendar extends ReminderRequest |
 <!--DelEnd-->
 
 ### Enums

@@ -2,6 +2,8 @@
 
 KVStore constants
 
+@enum { int }
+
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.

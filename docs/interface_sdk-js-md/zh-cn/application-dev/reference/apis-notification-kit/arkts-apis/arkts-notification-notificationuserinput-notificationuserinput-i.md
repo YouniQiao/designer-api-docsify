@@ -1,4 +1,4 @@
-# NotificationUserInput(Describes a NotificationUserInput instance)
+# NotificationUserInput
 
 保存用户输入的通知消息。
 

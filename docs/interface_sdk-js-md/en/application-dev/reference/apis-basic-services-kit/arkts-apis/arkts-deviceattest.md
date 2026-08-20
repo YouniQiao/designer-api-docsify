@@ -2,6 +2,8 @@
 
 xts_device_attest authResult information
 
+@namespace deviceAttest
+
 **Since:** 9
 
 <!--Device-unnamed-declare namespace deviceAttest--><!--Device-unnamed-declare namespace deviceAttest-End-->

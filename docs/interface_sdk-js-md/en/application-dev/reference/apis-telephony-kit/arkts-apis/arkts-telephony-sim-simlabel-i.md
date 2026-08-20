@@ -1,6 +1,6 @@
 # SimLabel
 
-Defines the SIM card label.
+Defines the SIM card label. @interface SimLabel
 
 **Since:** 23
 

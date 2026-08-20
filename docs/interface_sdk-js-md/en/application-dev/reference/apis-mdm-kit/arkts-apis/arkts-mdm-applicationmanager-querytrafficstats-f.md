@@ -18,7 +18,17 @@ function queryTrafficStats(
   ): Promise<statistics.NetStatsInfo>
 ```
 
-Queries the data usage of a specified application within a specified period for the current user. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; The input network type (**networkInfo.type**) can only be **connection.NetBearType.BEARER_CELLULAR** or &gt; **connection.NetBearType.BEARER_WIFI**. If any other value is passed, the API returns error code 9200012. &gt; &gt; The input start time (**networkInfo.startTime**) and end time (**networkInfo.endTime**) are second-level &gt; timestamps. If the input start time and end time are negative numbers or the start time is later than the end &gt; time, the API returns error code 9200012. &gt; &gt; If the input user ID (**accountId**) is not the ID of the current user, the API returns error code 9200012. &gt; &gt; It is advised that the query interval (end time – start time) be 1 to 30 days. If the interval is too short, the &gt; query result may be inaccurate. If the interval is too long, the query will take a long time.
+Queries the data usage of a specified application within a specified period for the current user. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> The input network type (**networkInfo.type**) can only be **connection.NetBearType.BEARER_CELLULAR** or &gt; **connection.NetBearType.BEARER_WIFI**. If any other value is passed, the API returns error code 9200012.
+> 
+> The input start time (**networkInfo.startTime**) and end time (**networkInfo.endTime**) are second-level &gt; timestamps. If the input start time and end time are negative numbers or the start time is later than the end &gt; time, the API returns error code 9200012.
+> 
+> If the input user ID (**accountId**) is not the ID of the current user, the API returns error code 9200012.
+> 
+> It is advised that the query interval (end time – start time) be 1 to 30 days. If the interval is too short, the &gt; query result may be inaccurate. If the interval is too long, the query will take a long time.
 
 **Since:** 26.0.0
 
@@ -50,8 +60,8 @@ Queries the data usage of a specified application within a specified period for 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 

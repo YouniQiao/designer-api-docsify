@@ -1,8 +1,10 @@
 # CounterV2DateStyleOptions
 
-CounterV2DateStyleOptions定义日期内联型CounterV2的属性和事件。 继承于[CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md)，包含该接口所有属性。本节仅展示新增属性，继承属性请参见父接口。
+CounterV2DateStyleOptions定义日期内联型CounterV2的属性和事件。
 
-**继承/实现关系：** CounterV2DateStyleOptions extends [CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md)
+继承于[CounterV2CommonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-counterv2-counterv2commonoptions-c.md)，包含该接口所有属性。本节仅展示新增属性，继承属性请参见父接口。
+
+**继承/实现关系：** CounterV2DateStyleOptions extends [CounterV2CommonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-counterv2-counterv2commonoptions-c.md)
 
 **起始版本：** 26.0.0
 
@@ -22,7 +24,17 @@ import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type 
 day?: int
 ```
 
-设置日期内联型初始日。 默认值：1 取值范围：[1, 31] 必须为合法日期，如month为2月时，day传入30将视为异常值，按默认值处理。 超出取值范围按默认值处理。 值为undefined时，按默认值处理。
+设置日期内联型初始日。
+
+默认值：1
+
+取值范围：[1, 31]
+
+必须为合法日期，如month为2月时，day传入30将视为异常值，按默认值处理。
+
+超出取值范围按默认值处理。
+
+值为undefined时，按默认值处理。
 
 **类型：** int
 
@@ -44,7 +56,15 @@ day?: int
 month?: int
 ```
 
-设置日期内联型初始月份。 默认值：1 取值范围：[1, 12] 超出取值范围按默认值处理。 值为undefined时，按默认值处理。
+设置日期内联型初始月份。
+
+默认值：1
+
+取值范围：[1, 12]
+
+超出取值范围按默认值处理。
+
+值为undefined时，按默认值处理。
 
 **类型：** int
 
@@ -66,9 +86,15 @@ month?: int
 onDateChange?: OnDateCounterV2ChangeCallback
 ```
 
-当日期改变时，触发该回调。回调参数date表示当前显示的日期值。 使用场景：当需要在日期变化时执行自定义操作（如更新关联数据、触发业务逻辑、记录日志等）时传入此回调。 默认值：undefined，表示不触发该回调。 值为undefined时，按默认值处理。
+当日期改变时，触发该回调。回调参数date表示当前显示的日期值。
 
-**类型：** [OnDateCounterV2ChangeCallback](arkts-arkui-ondatecounterv2changecallback-t.md)
+使用场景：当需要在日期变化时执行自定义操作（如更新关联数据、触发业务逻辑、记录日志等）时传入此回调。
+
+默认值：undefined，表示不触发该回调。
+
+值为undefined时，按默认值处理。
+
+**类型：** [OnDateCounterV2ChangeCallback](../../apis-default/arkts-apis/arkts-ondatecounterv2changecallback-t.md)
 
 **起始版本：** 26.0.0
 
@@ -86,7 +112,15 @@ onDateChange?: OnDateCounterV2ChangeCallback
 year?: int
 ```
 
-设置日期内联型初始年份。 默认值：1 取值范围：[1, 5000] 超出取值范围按默认值处理。 值为undefined时，按默认值处理。
+设置日期内联型初始年份。
+
+默认值：1
+
+取值范围：[1, 5000]
+
+超出取值范围按默认值处理。
+
+值为undefined时，按默认值处理。
 
 **类型：** int
 

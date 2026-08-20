@@ -51,13 +51,13 @@ Append new bundles and backupInfos to backup.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900005 | I/O error |
-| 13900001 | Operation not permitted |
-| 13900025 | No space left on device |
 | 13600001 | IPC error |
-| 13900042 | Unknown error |
+| 13900001 | Operation not permitted |
+| 13900005 | I/O error |
 | 13900011 | Out of memory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900042 | Unknown error |
 
 **Examples**
 
@@ -193,13 +193,13 @@ Append new bundles to backup.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900005 | I/O error |
-| 13900001 | Operation not permitted |
-| 13900025 | No space left on device |
 | 13600001 | IPC error |
-| 13900042 | Unknown error |
+| 13900001 | Operation not permitted |
+| 13900005 | I/O error |
 | 13900011 | Out of memory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900042 | Unknown error |
 
 **Examples**
 
@@ -299,9 +299,9 @@ cancel the application being backup.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
 **Examples**
 
@@ -568,12 +568,12 @@ Obtain application data size to be backed up.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| 13900001 | Operation not permitted |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | 13600001 | IPC error |
+| 13900001 | Operation not permitted |
+| 13900020 | Invalid argument |
 | 13900042 | Internal error |
 
 **Examples**
@@ -812,11 +812,11 @@ Obtain a Json file that describes local capabilities.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900001 | Operation not permitted |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error |
+| 13900001 | Operation not permitted |
+| 13900020 | Invalid argument |
 | 13900042 | Internal error |
 
 **Examples**
@@ -974,12 +974,12 @@ End Backup process
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| 13900005 | I/O error |
-| 13900001 | Operation not permitted |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | 13600001 | IPC error |
+| 13900001 | Operation not permitted |
+| 13900005 | I/O error |
 | 13900042 | Unknown error |
 
 **Examples**

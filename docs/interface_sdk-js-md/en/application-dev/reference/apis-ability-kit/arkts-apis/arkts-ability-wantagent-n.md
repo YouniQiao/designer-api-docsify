@@ -1,6 +1,8 @@
 # wantAgent
 
-The WantAgent module encapsulates a [Want](arkts-ability-app-ability-want-want-c.md) object, enabling an application to trigger a WantAgent object to perform specified operations (such as starting an ability or publishing a common event) at a future time. The module provides the APIs for creating a WantAgent object, obtaining the bundle name and UID of the application to which a WantAgent object belongs, proactively triggering a WantAgent object, and checking whether two WantAgent objects are the same. A typical use scenario of WantAgent is notification processing. For example, when a user touches a notification, the [trigger](arkts-ability-wantagent-trigger-f.md) API of WantAgent is triggered and the target application is started. For details, see [Notification](../../../notification/notification-with-wantagent.md).
+The WantAgent module encapsulates a [Want](arkts-ability-app-ability-want-want-c.md) object, enabling an application to trigger a WantAgent object to perform specified operations (such as starting an ability or publishing a common event) at a future time.
+
+The module provides the APIs for creating a WantAgent object, obtaining the bundle name and UID of the application to which a WantAgent object belongs, proactively triggering a WantAgent object, and checking whether two WantAgent objects are the same. A typical use scenario of WantAgent is notification processing. For example, when a user touches a notification, the [trigger](arkts-ability-wantagent-trigger-f.md) API of WantAgent is triggered and the target application is started. For details, see [Notification](../../../notification/notification-with-wantagent.md).
 
 **Since:** 23
 
@@ -29,8 +31,8 @@ import { wantAgent, WantAgent } from '@kit.AbilityKit';
 | [trigger](arkts-ability-wantagent-trigger-f.md) | Proactively triggers a WantAgent object. This API uses an asynchronous callback to return the result. |
 | [equal](arkts-ability-wantagent-equal-f.md) | Checks whether two WantAgent objects are equal, so as to determine whether the same operation is from the same application. This API uses an asynchronous callback to return the result. |
 | [equal](arkts-ability-wantagent-equal-f.md) | Checks whether two WantAgent objects are equal, so as to determine whether the same operation is from the same application. This API uses a promise to return the result. |
-| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md) | Obtains a WantAgent object. This API uses an asynchronous callback to return the result. If the creation fails, a null WantAgent object is returned. &lt;p&gt;**NOTE：**: <br>Third-party applications can set only their own abilities. &lt;/p&gt; |
-| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md) | Obtains a WantAgent object. This API uses a promise to return the result. If the creation fails, a null WantAgent object is returned. &lt;p&gt;**NOTE：**: <br>Third-party applications can set only their own abilities. &lt;/p&gt; |
+| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md) | Obtains a WantAgent object. This API uses an asynchronous callback to return the result. If the creation fails, a null WantAgent object is returned. |
+| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md) | Obtains a WantAgent object. This API uses a promise to return the result. If the creation fails, a null WantAgent object is returned. |
 | [getOperationType](arkts-ability-wantagent-getoperationtype-f.md) | Obtains the operation type of a WantAgent object. This API uses an asynchronous callback to return the result. |
 | [getOperationType](arkts-ability-wantagent-getoperationtype-f.md) | Obtains the operation type of a WantAgent object. This API uses a promise to return the result. |
 

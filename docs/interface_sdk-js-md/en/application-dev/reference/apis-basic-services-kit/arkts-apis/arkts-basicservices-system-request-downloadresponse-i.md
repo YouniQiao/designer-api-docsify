@@ -1,4 +1,4 @@
-# DownloadResponse(Upload and Download)
+# DownloadResponse
 
 **Since:** 3
 

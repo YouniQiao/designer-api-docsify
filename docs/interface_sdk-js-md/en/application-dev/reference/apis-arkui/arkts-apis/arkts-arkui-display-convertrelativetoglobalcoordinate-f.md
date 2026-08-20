@@ -38,8 +38,8 @@ Converts relative coordinates (based on the top-left corner of the screen) into 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
 
 **Examples**
 

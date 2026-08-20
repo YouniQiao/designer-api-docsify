@@ -36,9 +36,9 @@ Removes disallowed Bluetooth protocols. After removing some protocols, the user 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 **Examples**
 
@@ -69,7 +69,13 @@ try{
 function removeDisallowedBluetoothProtocols(admin: Want, accountId: number, protocols: Array<Protocol>, policy: TransferPolicy): void
 ```
 
-Removes Bluetooth protocols from the blocklist. After the setting, specified users are no longer restricted by the transfer policy and can properly use these Bluetooth protocols. &gt; **NOTE：**&gt; &gt; 1. When the SPP protocol is passed, the value of the **policy** parameter can only be &gt; **TransferPolicy.RECEIVE_SEND**. Otherwise, error code 9200012 will be returned. &gt; &gt; 2. This API and &gt; [removeDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#removedisallowedbluetoothprotocols) are &gt; overloaded APIs. This API adds the **policy** parameter to remove the disallowing configuration based on the &gt; transfer policy. If the same protocol has been blocked under different policies via the two APIs, calling this &gt; API removes only the blocking configuration for the corresponding policy, while blocking configurations of other &gt; policies remain effective.
+Removes Bluetooth protocols from the blocklist. After the setting, specified users are no longer restricted by the transfer policy and can properly use these Bluetooth protocols.
+
+> **NOTE：**
+> 
+> 1. When the SPP protocol is passed, the value of the **policy** parameter can only be &gt; **TransferPolicy.RECEIVE_SEND**. Otherwise, error code 9200012 will be returned.
+> 
+> 2. This API and &gt; [removeDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#removedisallowedbluetoothprotocols) are &gt; overloaded APIs. This API adds the **policy** parameter to remove the disallowing configuration based on the &gt; transfer policy. If the same protocol has been blocked under different policies via the two APIs, calling this &gt; API removes only the blocking configuration for the corresponding policy, while blocking configurations of other &gt; policies remain effective.
 
 **Since:** 26.0.0
 
@@ -94,8 +100,8 @@ Removes Bluetooth protocols from the blocklist. After the setting, specified use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 

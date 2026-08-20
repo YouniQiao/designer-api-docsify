@@ -1,6 +1,10 @@
 # TCPSocketConnection
 
-Defines a **TCPSocketConnection** object, that is, the connection between the TCPSocket client and the server. Before calling TCPSocketConnection APIs, you need to obtain a **TCPSocketConnection** object. &gt; **NOTE：**&gt; &gt; The TCPSocket client can call related APIs through the **TCPSocketConnection** object only after a connection is &gt; successfully established between the TCPSocket client and the server.
+Defines a **TCPSocketConnection** object, that is, the connection between the TCPSocket client and the server. Before calling TCPSocketConnection APIs, you need to obtain a **TCPSocketConnection** object.
+
+> **NOTE：**
+> 
+> The TCPSocket client can call related APIs through the **TCPSocketConnection** object only after a connection is &gt; successfully established between the TCPSocket client and the server.
 
 **Since:** 10
 
@@ -40,9 +44,9 @@ Closes a TCP socket connection. This API uses an asynchronous callback to return
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 
@@ -89,8 +93,8 @@ Closes a TCP socket connection. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
 
@@ -181,7 +185,11 @@ tcpServer.listen(listenAddr, (err: BusinessError) => {
 getRemoteAddress(callback: AsyncCallback<NetAddress>): void
 ```
 
-Obtains the remote address of a socket connection. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after a connection with the client is set up.
+Obtains the remote address of a socket connection. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after a connection with the client is set up.
 
 **Since:** 10
 
@@ -201,10 +209,10 @@ Obtains the remote address of a socket connection. This API uses an asynchronous
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 
@@ -230,7 +238,11 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 getRemoteAddress(): Promise<NetAddress>
 ```
 
-Obtains the remote address of a socket connection. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after a connection with the client is set up.
+Obtains the remote address of a socket connection. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after a connection with the client is set up.
 
 **Since:** 10
 
@@ -250,9 +262,9 @@ Obtains the remote address of a socket connection. This API uses a promise to re
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 
@@ -276,7 +288,15 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 getSocketFd(): Promise<int>
 ```
 
-Obtains the file descriptor of a TCPSocketConnection connection. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - This API can be called only after a connection with the client is set up. &gt; &gt; - This API returns **-1** in abnormal cases such as disconnection and socket closed (for example, after the &gt; close API is called). &gt; &gt; - The lifecycle of the file descriptor is managed by the system. The application can use the &gt; [close](#close) method to close the socket &gt; connection, instead of directly operating the file descriptor.
+Obtains the file descriptor of a TCPSocketConnection connection. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - This API can be called only after a connection with the client is set up.
+> 
+> - This API returns **-1** in abnormal cases such as disconnection and socket closed (for example, after the &gt; close API is called).
+> 
+> - The lifecycle of the file descriptor is managed by the system. The application can use the &gt; [close](#close) method to close the socket &gt; connection, instead of directly operating the file descriptor.
 
 **Since:** 23
 
@@ -603,7 +623,11 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 send(options: TCPSendOptions, callback: AsyncCallback<void>): void
 ```
 
-Sends data over a **TCPSocketConnection** object. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after a connection with the client is set up.
+Sends data over a **TCPSocketConnection** object. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after a connection with the client is set up.
 
 **Since:** 10
 
@@ -624,9 +648,9 @@ Sends data over a **TCPSocketConnection** object. This API uses an asynchronous 
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 
@@ -651,7 +675,11 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 send(options: TCPSendOptions): Promise<void>
 ```
 
-Sends data over a **TCPSocketConnection** object. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after a connection with the client is set up.
+Sends data over a **TCPSocketConnection** object. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after a connection with the client is set up.
 
 **Since:** 10
 
@@ -677,9 +705,9 @@ Sends data over a **TCPSocketConnection** object. This API uses a promise to ret
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
 

@@ -37,7 +37,7 @@ function getExcludeDates(reminderId: int): Promise<Array<Date>>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-提醒不存在) | The reminder does not exist. |
+| [1700003](../errorcode-reminderAgentManager.md#1700003-提醒不存在) | The reminder does not exist. |
 
 **示例**
 

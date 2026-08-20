@@ -339,7 +339,11 @@ console.info("result = " + result);
 isBooleanObject(value: Object): boolean
 ```
 
-Checks whether the value is of the Boolean type. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
+Checks whether the value is of the Boolean type.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 
 **Since:** 8
 
@@ -378,7 +382,11 @@ console.info("result = " + result);
 isBoxedPrimitive(value: Object): boolean
 ```
 
-Checks whether the value is of the Boolean, Number, String, or Symbol type. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
+Checks whether the value is of the Boolean, Number, String, or Symbol type.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 
 **Since:** 8
 
@@ -999,7 +1007,11 @@ console.info("result = " + result);
 isNumberObject(value: Object): boolean
 ```
 
-Checks whether the value is of the Number type. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
+Checks whether the value is of the Number type.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 
 **Since:** 8
 
@@ -1266,7 +1278,11 @@ console.info("result = " + result);
 isStringObject(value: Object): boolean
 ```
 
-Checks whether the value is a string object. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
+Checks whether the value is a string object.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 
 **Since:** 8
 
@@ -1305,7 +1321,11 @@ console.info("result = " + result);
 isSymbolObject(value: Object): boolean
 ```
 
-Checks whether the value is a symbol object. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
+Checks whether the value is a symbol object.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 
 **Since:** 8
 

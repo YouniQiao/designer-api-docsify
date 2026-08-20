@@ -2,6 +2,8 @@
 
 Defines the observer interface.
 
+@interface observer
+
 **Since:** 6
 
 <!--Device-unnamed-export interface observer--><!--Device-unnamed-export interface observer-End-->

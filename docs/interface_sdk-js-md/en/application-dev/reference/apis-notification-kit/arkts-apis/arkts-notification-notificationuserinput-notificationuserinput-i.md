@@ -1,4 +1,4 @@
-# NotificationUserInput(Describes a NotificationUserInput instance)
+# NotificationUserInput
 
 The **NotificationUserInput** module provides APIs for defining the notification user input.
 

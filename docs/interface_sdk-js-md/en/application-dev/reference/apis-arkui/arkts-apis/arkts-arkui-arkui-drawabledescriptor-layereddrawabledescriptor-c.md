@@ -1,6 +1,8 @@
 # LayeredDrawableDescriptor
 
-Creates a **LayeredDrawableDescriptor** object when the passed resource ID or name belongs to a JSON file that contains foreground and background resources. Inherits from [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md). The **drawable.json** file is located under **entry/src/main/resources/base/media** in the project directory. Below shows the file content:
+Creates a **LayeredDrawableDescriptor** object when the passed resource ID or name belongs to a JSON file that contains foreground and background resources. Inherits from [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md).
+
+The **drawable.json** file is located under **entry/src/main/resources/base/media** in the project directory. Below shows the file content:
 
 **Inheritance/Implementation:** LayeredDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
 

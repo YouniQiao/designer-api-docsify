@@ -15,7 +15,9 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function off(type: 'wifiRssiChange', callback?: Callback<number>): void
 ```
 
-Unsubscribe Wi-Fi rssi change events. &lt;p&gt;All callback functions will be deregistered If there is no specific callback parameter.&lt;/p&gt;
+Unsubscribe Wi-Fi rssi change events.
+
+&lt;p&gt;All callback functions will be deregistered If there is no specific callback parameter.&lt;/p&gt;
 
 **Since:** 7
 

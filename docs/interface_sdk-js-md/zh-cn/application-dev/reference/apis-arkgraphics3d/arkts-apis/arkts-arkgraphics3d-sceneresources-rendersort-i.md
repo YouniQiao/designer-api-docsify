@@ -2,6 +2,8 @@
 
 定义材质物体的渲染顺序，控制不同物体在渲染管线中的绘制先后。
 
+@interface RenderSort
+
 **起始版本：** 23
 
 <!--Device-unnamed-export interface RenderSort--><!--Device-unnamed-export interface RenderSort-End-->

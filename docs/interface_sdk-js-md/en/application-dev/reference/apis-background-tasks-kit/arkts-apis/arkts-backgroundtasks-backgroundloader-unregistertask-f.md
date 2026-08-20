@@ -34,7 +34,7 @@ Unregister background load task.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9700004](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700004-workinfo-verification-failure) | Check on taskInfo failed. |
-| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | No permission. |
+| [9700003](../errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
+| [9700004](../errorcode-workScheduler.md#9700004-workinfo-verification-failure) | Check on taskInfo failed. |
 

@@ -1,4 +1,4 @@
-# TerminationInfo(System API) (System API)
+# TerminationInfo (System API)
 
 Indicates the information when the provider of the embedded UI is terminated.
 

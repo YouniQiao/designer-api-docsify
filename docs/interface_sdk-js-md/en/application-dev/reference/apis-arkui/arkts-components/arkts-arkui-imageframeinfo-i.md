@@ -19,7 +19,11 @@ Image frame information set.
 duration?: number
 ```
 
-Playback duration of each image frame, in milliseconds. Default value: **0** Negative numbers are not supported. Setting negative values will cause the image to stay in the current frame for a long time, affecting normal playback.
+Playback duration of each image frame, in milliseconds.
+
+Default value: **0**
+
+Negative numbers are not supported. Setting negative values will cause the image to stay in the current frame for a long time, affecting normal playback.
 
 **Type:** number
 
@@ -37,7 +41,11 @@ Playback duration of each image frame, in milliseconds. Default value: **0** Neg
 height?: number | string
 ```
 
-Image height. When the value is a string, it can represent a numeric value with or without units, for example, **"2"** or **"2px"**. Default value: **0** Unit: vp
+Image height. When the value is a string, it can represent a numeric value with or without units, for example, **"2"** or **"2px"**.
+
+Default value: **0**
+
+Unit: vp
 
 **Type:** number \| string
 
@@ -57,7 +65,11 @@ Image height. When the value is a string, it can represent a numeric value with 
 left?: number | string
 ```
 
-Horizontal coordinate of the image relative to the upper left corner of the component. When the value is a string, it can represent a numeric value with or without units, for example, **"2"** or **"2px"**. Default value: **0** Unit: vp
+Horizontal coordinate of the image relative to the upper left corner of the component. When the value is a string, it can represent a numeric value with or without units, for example, **"2"** or **"2px"**.
+
+Default value: **0**
+
+Unit: vp
 
 **Type:** number \| string
 
@@ -97,7 +109,11 @@ Image path. The image format can be .jpg, .jpeg, .svg, .png, .bmp, .webp, .ico, 
 top?: number | string
 ```
 
-Vertical coordinate of the image relative to the upper left corner of the component. When the value is a string, it can represent a numeric value with or without units, for example, **"2"** or **"2px"**. Default value: **0** Unit: vp
+Vertical coordinate of the image relative to the upper left corner of the component. When the value is a string, it can represent a numeric value with or without units, for example, **"2"** or **"2px"**.
+
+Default value: **0**
+
+Unit: vp
 
 **Type:** number \| string
 
@@ -117,7 +133,11 @@ Vertical coordinate of the image relative to the upper left corner of the compon
 width?: number | string
 ```
 
-Image width. When the value is a string, it can represent a numeric value with or without units, for example, **"2"** or **"2px"**. Default value: **0** Unit: vp
+Image width. When the value is a string, it can represent a numeric value with or without units, for example, **"2"** or **"2px"**.
+
+Default value: **0**
+
+Unit: vp
 
 **Type:** number \| string
 

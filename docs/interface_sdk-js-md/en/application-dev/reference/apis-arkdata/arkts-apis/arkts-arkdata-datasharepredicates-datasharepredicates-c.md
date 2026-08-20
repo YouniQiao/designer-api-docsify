@@ -22,7 +22,9 @@ import { dataSharePredicates } from '@kit.ArkData';
 and(): DataSharePredicates
 ```
 
-Creates a **DataSharePredicates** object to add the AND condition. Currently, both the RDB store and KV store support this predicate.
+Creates a **DataSharePredicates** object to add the AND condition.
+
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 23
 
@@ -55,7 +57,9 @@ predicates.equalTo("NAME", "lisi")
 equalTo(field: string, value: ValueType): DataSharePredicates
 ```
 
-Creates a **DataSharePredicates** object to search for the records in the specified column that are equal to the given value. Currently, both the RDB store and KV store support this predicate.
+Creates a **DataSharePredicates** object to search for the records in the specified column that are equal to the given value.
+
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 23
 
@@ -93,7 +97,9 @@ predicates.equalTo("NAME", "Rose");
 in(field: string, value: Array<ValueType>): DataSharePredicates
 ```
 
-Creates a **DataSharePredicates** object to match the data that is within the specified range. Currently, both the RDB store and KV store support this predicate.
+Creates a **DataSharePredicates** object to match the data that is within the specified range.
+
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 10
 
@@ -160,7 +166,9 @@ Configure {@code DataSharePredicates} to match the specified field whose data ty
 limit(total: int, offset: int): DataSharePredicates
 ```
 
-Creates a **DataSharePredicates** object to specify the number of records in the result and the start position. Currently, both the RDB store and KV store support this predicate.
+Creates a **DataSharePredicates** object to specify the number of records in the result and the start position.
+
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 23
 
@@ -227,7 +235,9 @@ Configure {@code DataSharePredicates} to match the specified field whose data ty
 orderByAsc(field: string): DataSharePredicates
 ```
 
-Creates a **DataSharePredicates** object that sorts records in ascending order. Currently, both the RDB store and KV store support this predicate.
+Creates a **DataSharePredicates** object that sorts records in ascending order.
+
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 23
 
@@ -264,7 +274,9 @@ predicates.orderByAsc("AGE");
 orderByDesc(field: string): DataSharePredicates
 ```
 
-Creates a **DataSharePredicates** object that sorts data in descending order. Currently, both the RDB store and KV store support this predicate.
+Creates a **DataSharePredicates** object that sorts data in descending order.
+
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 23
 

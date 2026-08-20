@@ -2,6 +2,8 @@
 
 Profiler tools for inspectors.
 
+@namespace Profiler
+
 ## Modules to Import
 
 ```TypeScript

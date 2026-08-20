@@ -44,7 +44,7 @@ import { http } from '@kit.NetworkKit';
 | [HttpRequestContext](arkts-network-http-httprequestcontext-i.md) | HTTP请求上下文数据。该对象实例在拦截器的[interceptorHandle](arkts-network-http-httpinterceptor-i.md#interceptorhandle)方法中作为参数传入，开发者可以通过该对象获取和修改 HTTP请求的相关信息。 |
 | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | 发起HTTP请求时，可选配置信息。 |
 | [HttpResponse](arkts-network-http-httpresponse-i.md) | request方法回调函数的返回值类型。 |
-| [HttpResponseCache](arkts-network-http-httpresponsecache-i.md) | 存储HTTP访问请求响应的对象。在调用HttpResponseCache的方法前，需要先通过[createHttpResponseCache()](arkts-network-http-createhttpresponsecache-f.md)创建一个任 务。 **响应头中的相应关键字使用** - **`Cache-Control`**：用于指定缓存策略，如`no-cache`, `no-store`, `max-age`, `public`, `private`等。 - **`Expires`**：指定资源的过期时间，格式为GMT时间。 - **`ETag`**：用于资源版本标识，客户端可以使用`If-None-Match`请求头来验证资源是否已更改。 - **`Last-Modified`**：指定资源最后修改时间，客户端可以使用`If-Modified-Since`请求头来验证资源是否已更改。 - **`Vary`**：指定哪些请求头的值会影响缓存的响应，用于区分不同的缓存版本。 使用这些关键字时，服务器端需要正确配置响应头，客户端则需要根据这些响应头来决定是否使用缓存的资源，以及如何验证资源是否是最新的。正确的缓存策略可以显著提高应用的性能和用户体验。 **如何设置Cache-Control头** `Cache-Control`为通用报头，但通常是在服务器端进行的，允许定义一个响应资源应该何时、如何被缓存以及缓存多长时间。以下是一些常用的`Cache-Control`指令及其含义： - **`no-cache`**：表示在使用缓存前，必须先去源服务器校验资源的有效性。如果资源未变更，则响应状态码为304(Not Modified)，不发送资源内容，使用缓存中的资源。如果资源已经过期，则响应状态码为200(OK )，并发送资源内容。 - **`no-store`**：表示不允许缓存资源，每次请求都必须从服务器获取资源。 - **`max-age`**：指定缓存的最大时间(以秒为单位)。例如，`Cache-Control: max-age=3600`表示缓存的有效期为1小时。 - **`public`**：表明响应可以被任何对象(包括：发送请求的客户端，代理服务器等)缓存。 - **`private`**：表明响应只能被单个用户缓存，不能作为共享缓存(即代理服务器不能缓存)。 - **`must-revalidate`**：表示必须在使用缓存前验证旧资源的状态，并且在缓存过期后，需要重新验证资源。 - **`no-transform`**：表示不允许代理服务器修改响应内容。 - **`proxy-revalidate`**：与`must-revalidate`类似，但仅适用于共享缓存。 - **`s-maxage`**：类似于`max-age`，但仅适用于共享缓存。 |
+| [HttpResponseCache](arkts-network-http-httpresponsecache-i.md) | 存储HTTP访问请求响应的对象。在调用HttpResponseCache的方法前，需要先通过[createHttpResponseCache()](arkts-network-http-createhttpresponsecache-f.md)创建一个任 务。 |
 | [MultiFormData](arkts-network-http-multiformdata-i.md) | 多部分表单数据的类型。 |
 | [PerformanceTiming](arkts-network-http-performancetiming-i.md) | 性能打点(单位：ms)。 |
 | [ServerAuthentication](arkts-network-http-serverauthentication-i.md) | HTTP服务器身份验证。 |
@@ -57,9 +57,9 @@ import { http } from '@kit.NetworkKit';
 | --- | --- |
 | [AddressFamily](arkts-network-http-addressfamily-e.md) | 枚举，解析目标域名时限定的地址类型。 |
 | [CertType](arkts-network-http-certtype-e.md) | 枚举，证书类型。 |
-| [HttpDataType](arkts-network-http-httpdatatype-e.md) | HTTP的数据类型。 \| 名称 \| 值 \| 说明 \| \| ------------------ \| -- \| ----------- \| \| STRING \| 0 \| 字符串类型。 \| \| OBJECT \| 1 \| 对象类型。 \| \| ARRAY_BUFFER \| 2 \| 二进制数组类型。\| |
+| [HttpDataType](arkts-network-http-httpdatatype-e.md) | HTTP的数据类型。 |
 | [HttpProtocol](arkts-network-http-httpprotocol-e.md) | HTTP协议版本。 |
-| [InterceptorType](arkts-network-http-interceptortype-e.md) | HTTP拦截器的类型枚举。 \| 名称 \| 值 \|说明 \| \| ------ \| --\|-------------------------------------- \| \| INITIAL_REQUEST \|'INITIAL_REQUEST' \|在初始HTTP请求组装完成后拦截。\| \| REDIRECTION \| 'REDIRECTION' \|当收到重定向响应时拦截。\| \| CACHE_CHECKED \| 'READ_CACHE' \|在检查并且命中HTTP缓存时拦截。\| \| NETWORK_CONNECT \| 'CONNECT_NETWORK' \|在网络请求将要发出前拦截。\| \| FINAL_RESPONSE \| 'FINAL_RESPONSE' \|在获取最终HTTP响应时拦截。\| |
+| [InterceptorType](arkts-network-http-interceptortype-e.md) | HTTP拦截器的类型枚举。 |
 | [RequestMethod](arkts-network-http-requestmethod-e.md) | HTTP 请求方法。 |
 | [ResponseCode](arkts-network-http-responsecode-e.md) | 发起请求返回的响应码。 |
 | [TlsVersion](arkts-network-http-tlsversion-e.md) | 枚举，TLS版本号。 |

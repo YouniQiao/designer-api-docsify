@@ -2,6 +2,8 @@
 
 Indicates the contact types.
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-sim-export enum ContactType--><!--Device-sim-export enum ContactType-End-->

@@ -2,6 +2,8 @@
 
 Defines DatePicker Modifier
 
+@implements { DatePickerAttribute, AttributeModifier&lt;DatePickerAttribute&gt; }
+
 **Inheritance/Implementation:** DatePickerModifier implements DatePickerAttribute, AttributeModifier<DatePickerAttribute>
 
 **Since:** 23

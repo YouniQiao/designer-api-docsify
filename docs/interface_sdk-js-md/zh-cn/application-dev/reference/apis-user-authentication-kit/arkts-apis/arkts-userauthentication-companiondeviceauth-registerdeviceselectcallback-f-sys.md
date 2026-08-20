@@ -36,9 +36,9 @@ function registerDeviceSelectCallback(callback: DeviceSelectCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
 
 **示例**
 

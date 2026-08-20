@@ -34,5 +34,5 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [WatchEvent](../../apis-na/arkts-apis/arkts-na-file-fs-watchevent-i.md) | 是 | 回调的事件类。 |
+| event | [WatchEvent](arkts-corefile-file-fs-watchevent-i.md) | 是 | 回调的事件类。 |
 

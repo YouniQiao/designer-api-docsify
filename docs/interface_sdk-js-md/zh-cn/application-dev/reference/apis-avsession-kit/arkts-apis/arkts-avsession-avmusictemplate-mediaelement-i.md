@@ -2,6 +2,8 @@
 
 媒体元素Singer/Radio/Banner结构体定义
 
+@extends MediaEntity @interface MediaElement
+
 **继承/实现关系：** MediaElement extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)
 
 **起始版本：** 23

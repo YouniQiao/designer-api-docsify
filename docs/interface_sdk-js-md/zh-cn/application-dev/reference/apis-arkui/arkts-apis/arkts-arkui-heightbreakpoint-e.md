@@ -2,6 +2,8 @@
 
 Type of window height breakpoint.
 
+@enum { number }
+
 **起始版本：** 22
 
 <!--Device-unnamed-declare enum HeightBreakpoint--><!--Device-unnamed-declare enum HeightBreakpoint-End-->

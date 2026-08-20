@@ -35,7 +35,7 @@ $_iterator(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
 
 **示例**
 
@@ -94,7 +94,7 @@ value:2
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 返回一个迭代器，用于遍历Deque实例中的所有元素。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个迭代器，用于遍历Deque实例中的所有元素。 |
 
 **错误码：**
 

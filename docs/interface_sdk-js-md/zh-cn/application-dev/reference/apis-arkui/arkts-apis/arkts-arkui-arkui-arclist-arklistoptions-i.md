@@ -24,7 +24,7 @@ header?: ComponentContentBase
 
 支持标题设置。
 
-**类型：** [ComponentContentBase](../../apis-na/arkts-apis/arkts-na-componentcontent-componentcontentbase-c.md)
+**类型：** [ComponentContentBase](../../apis-default/arkts-apis/arkts-componentcontent-componentcontentbase-c.md)
 
 **起始版本：** 23
 

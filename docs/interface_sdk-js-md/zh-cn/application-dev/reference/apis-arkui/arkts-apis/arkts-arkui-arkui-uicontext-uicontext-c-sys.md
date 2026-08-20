@@ -1,6 +1,12 @@
 # UIContext
 
-UIContext实例对象。 &gt; **说明：** &gt; - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。 &gt; &gt; - 以下API需要通过对应的UIContext实例调用。获取UIContext分为三种方式，第一种是使用ohos.window中的 &gt; [getUIContext()](../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10)方法获取UIContext实例，第二种是通过自定 &gt; 义组件内置方法[getUIContext()](../../../reference/apis-arkui/arkui-ts/ts-custom-component-api.md#getuicontext)获取UIContext &gt; 实例，第三种是通过UIContext类的静态方法如[getCallingScopeUIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getcallingscopeuicontext)获取UIContext实例。本文中 &gt; UIContext对象以uiContext表示。
+UIContext实例对象。
+
+> **说明：**
+
+> - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。
+> 
+> - 以下API需要通过对应的UIContext实例调用。获取UIContext分为三种方式，第一种是使用ohos.window中的 &gt; [getUIContext()](../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10)方法获取UIContext实例，第二种是通过自定 &gt; 义组件内置方法[getUIContext()](../../../reference/apis-arkui/arkui-ts/ts-custom-component-api.md#getuicontext)获取UIContext &gt; 实例，第三种是通过UIContext类的静态方法如[getCallingScopeUIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#getcallingscopeuicontext)获取UIContext实例。本文中 &gt; UIContext对象以uiContext表示。
 
 **起始版本：** 10
 
@@ -41,8 +47,8 @@ animateToImmediately(param: AnimateParam, processor: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | [AnimateParam](../../apis-na/arkts-apis/arkts-na-common-animateparam-i.md) | 是 | 设置动画效果相关参数。 |
-| processor | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。指定显示动效的闭包函数，在闭包函数中导致的状态变化系统会自动插入过渡动画。 |
+| param | [AnimateParam](../../apis-default/arkts-apis/arkts-common-animateparam-i.md) | 是 | 设置动画效果相关参数。 |
+| processor | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数。指定显示动效的闭包函数，在闭包函数中导致的状态变化系统会自动插入过渡动画。 |
 
 ## clearResourceCache
 
@@ -156,7 +162,7 @@ freezeUINode(uniqueId: number, isFrozen: boolean): void
 getLuminanceSampler(target: TargetInfo): LuminanceSampler | undefined
 ```
 
-获取[LuminanceSampler](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)取色对象，通过该对象设置背景亮度取色参数、注册亮度变化监听回调、取消注册监听回调。
+获取[LuminanceSampler](arkts-arkui-arkui-uicontext-uicontext-c.md)取色对象，通过该对象设置背景亮度取色参数、注册亮度变化监听回调、取消注册监听回调。
 
 **起始版本：** 23
 
@@ -172,7 +178,7 @@ getLuminanceSampler(target: TargetInfo): LuminanceSampler | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | [TargetInfo](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-targetinfo-i.md) | 是 | 目标组件的标识。 |
+| target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | 是 | 目标组件的标识。 |
 
 **返回值：**
 
@@ -238,7 +244,11 @@ struct ImageRecycleSample {
 setDynamicDimming(id: string, value: number): void
 ```
 
-通过该方法设置组件的压暗程度。 &gt; **说明：** &gt; &gt; 设置该属性后设置其他效果类属性会导致效果冲突。
+通过该方法设置组件的压暗程度。
+
+> **说明：**
+> 
+> 设置该属性后设置其他效果类属性会导致效果冲突。
 
 **起始版本：** 12
 

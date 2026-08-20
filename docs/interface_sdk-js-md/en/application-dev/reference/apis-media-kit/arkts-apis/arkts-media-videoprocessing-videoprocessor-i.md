@@ -1,4 +1,4 @@
-# VideoProcessor(Provides the capability of video quality processing.)
+# VideoProcessor
 
 Provides the VideoProcessor type, including AIHDR related functions.
 
@@ -69,8 +69,8 @@ Unregisters a listener for video processor status changes.
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [29200009](../../apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. |
 | [29200006](../../apis-image-kit/errorcode-videoprocessingengine.md#29200006-operation-not-allowed) | The operation is not permitted. This may be caused by incorrect status. |
+| [29200009](../../apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. |
 
 ## onStatusChange
 
@@ -99,6 +99,6 @@ Registers a listener for video processor status changes.
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [29200009](../../apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. |
 | [29200007](../../apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
+| [29200009](../../apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. |
 

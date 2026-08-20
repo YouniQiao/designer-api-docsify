@@ -1,5 +1,7 @@
 # AttachOptions
 
+@brief 绑定输入法的附加选项。
+
 **起始版本：** 23
 
 <!--Device-inputMethod-export interface AttachOptions--><!--Device-inputMethod-export interface AttachOptions-End-->
@@ -23,6 +25,8 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 requestKeyboardReason?: RequestKeyboardReason
 ```
 
+@brief 请求键盘输入的原因。
+
 **类型：** RequestKeyboardReason
 
 **默认值：** RequestKeyboardReason.NONE
@@ -40,6 +44,8 @@ requestKeyboardReason?: RequestKeyboardReason
 ```TypeScript
 showKeyboard?: boolean
 ```
+
+@brief 绑定输入法成功后，是否拉起输入法键盘。 <br> <br>- true表示拉起。 <br>- false表示不拉起。
 
 **类型：** boolean
 

@@ -42,6 +42,6 @@ Obtains SkillInfo of the calling application based on moduleName and skillName.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17700093 | The specified skillName is not found. |
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module is not found. |
+| 17700093 | The specified skillName is not found. |
 

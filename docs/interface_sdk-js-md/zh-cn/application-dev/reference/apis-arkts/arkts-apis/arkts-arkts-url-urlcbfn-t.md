@@ -1,4 +1,4 @@
-# UrlCbFn(URL字符串解析)
+# UrlCbFn
 
 ```TypeScript
 type UrlCbFn = (value: string, key: string, searchParams: URLParams) => void

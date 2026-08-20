@@ -12,7 +12,15 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createCipher(transformation: string): Cipher
 ```
 
-Creates a **Cipher** instance. <br>For details about the supported specifications, seeEncryption and Decryption Algorithm Specifications. &gt; **NOTE：**&gt; &gt; 1. In symmetric encryption and decryption, PKCS #5 and PKCS #7 share the same implementation, with padding &gt; length and block size remaining consistent. In 3DES, padding is applied in 8-byte blocks; in AES, padding &gt; is applied in 16-byte blocks. **NoPadding** means no padding is applied. &gt; You need to understand the differences between different block cipher modes and use the correct parameter &gt; specifications. For example, padding is required for ECB and CBC. Otherwise, ensure that the plaintext &gt; length is an integer multiple of the block size. No padding is recommended for other modes. In this case, &gt; the ciphertext length is the same as the plaintext length. &gt; 2. When RSA or SM2 is used for asymmetric encryption and decryption, two **Cipher** objects must be created &gt; to perform encryption and decryption separately. This is not required for symmetric encryption and &gt; decryption. If the algorithm specifications are the same, the same **Cipher** object can be used for &gt; encryption and decryption.
+Creates a **Cipher** instance.
+
+<br>For details about the supported specifications, seeEncryption and Decryption Algorithm Specifications.
+
+> **NOTE：**
+> 
+> 1. In symmetric encryption and decryption, PKCS #5 and PKCS #7 share the same implementation, with padding &gt; length and block size remaining consistent. In 3DES, padding is applied in 8-byte blocks; in AES, padding &gt; is applied in 16-byte blocks. **NoPadding** means no padding is applied.
+> You need to understand the differences between different block cipher modes and use the correct parameter &gt; specifications. For example, padding is required for ECB and CBC. Otherwise, ensure that the plaintext &gt; length is an integer multiple of the block size. No padding is recommended for other modes. In this case, &gt; the ciphertext length is the same as the plaintext length.
+> 2. When RSA or SM2 is used for asymmetric encryption and decryption, two **Cipher** objects must be created &gt; to perform encryption and decryption separately. This is not required for symmetric encryption and &gt; decryption. If the algorithm specifications are the same, the same **Cipher** object can be used for &gt; encryption and decryption.
 
 **Since:** 23
 

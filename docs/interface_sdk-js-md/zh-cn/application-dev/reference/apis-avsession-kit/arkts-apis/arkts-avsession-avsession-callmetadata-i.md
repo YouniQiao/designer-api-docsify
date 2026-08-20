@@ -2,6 +2,8 @@
 
 通话会话元数据相关属性。
 
+@interface CallMetadata [since 11 - 11]
+
 **起始版本：** 23
 
 <!--Device-avSession-interface CallMetadata--><!--Device-avSession-interface CallMetadata-End-->

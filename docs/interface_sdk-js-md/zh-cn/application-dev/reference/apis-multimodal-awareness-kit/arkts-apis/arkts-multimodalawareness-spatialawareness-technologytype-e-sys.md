@@ -2,6 +2,8 @@
 
 提供输入信号的类型。接口根据输入信号类型，执行对应算法。
 
+@enum { int } 测距技术类型
+
 **起始版本：** 23
 
 <!--Device-spatialAwareness-export enum TechnologyType--><!--Device-spatialAwareness-export enum TechnologyType-End-->

@@ -2,6 +2,8 @@
 
 WLAN IP类型枚举。
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-wifiManager-enum IpType--><!--Device-wifiManager-enum IpType-End-->

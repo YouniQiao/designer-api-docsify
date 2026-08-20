@@ -20,7 +20,13 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 height?: number | string
 ```
 
-Height of the shape. When the parameter type is number, the valid value range is 0, +∞). When the parameter type is string, the value must conform to the [Length type specification. Unit: vp. If the value is invalid, 0 vp is used.
+Height of the shape.
+
+When the parameter type is number, the valid value range is 0, +∞). When the parameter type is string, the value must conform to the [Length type specification.
+
+Unit: vp.
+
+If the value is invalid, 0 vp is used.
 
 **Type:** number \| string
 
@@ -42,7 +48,13 @@ Height of the shape. When the parameter type is number, the valid value range is
 width?: number | string
 ```
 
-Width of the shape. When the parameter type is number, the valid value range is 0, +∞). When the parameter type is string, the value must conform to the [Length type specification. Unit: vp. If the value is invalid, 0 vp is used.
+Width of the shape.
+
+When the parameter type is number, the valid value range is 0, +∞). When the parameter type is string, the value must conform to the [Length type specification.
+
+Unit: vp.
+
+If the value is invalid, 0 vp is used.
 
 **Type:** number \| string
 

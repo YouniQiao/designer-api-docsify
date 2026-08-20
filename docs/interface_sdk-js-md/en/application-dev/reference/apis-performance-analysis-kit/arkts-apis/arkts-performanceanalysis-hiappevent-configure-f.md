@@ -32,8 +32,8 @@ Configures the application event logging function, such as setting the logging s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11103001](../errorcode-hiappevent.md#11103001-invalid-maximum-storage-quota) | Invalid max storage quota value. Possibly caused by incorrectly formatted. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| [11103001](../errorcode-hiappevent.md#11103001-invalid-maximum-storage-quota) | Invalid max storage quota value. Possibly caused by incorrectly formatted. |
 
 **Examples**
 

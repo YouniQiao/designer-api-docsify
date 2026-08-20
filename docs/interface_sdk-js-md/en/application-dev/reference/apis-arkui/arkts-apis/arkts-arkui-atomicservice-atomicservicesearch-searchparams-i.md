@@ -20,7 +20,9 @@ import { AtomicServiceSearch, InputFilterParams, SearchButtonParams, MenuAlignPa
 cancelIcon?: IconOptions
 ```
 
-Style of the cancel button on the right. Default value: **{style: CancelButtonStyle.INPUT, icon: {size: '16vp', color: '#99ffffff', src:' '}}**. When style is set to **CancelButtonStyle.CONSTANT**, the cancel button is displayed in a default style.
+Style of the cancel button on the right. Default value: **{style: CancelButtonStyle.INPUT, icon: {size: '16vp', color: '#99ffffff', src:' '}}**.
+
+When style is set to **CancelButtonStyle.CONSTANT**, the cancel button is displayed in a default style.
 
 **Type:** IconOptions
 
@@ -164,7 +166,9 @@ Whether to automatically open the soft keyboard when the **Search** component ga
 enablePreviewText?: boolean
 ```
 
-Whether to enable preview text. The value **true** means to enable preview text. Default value: **true**. Preview text of the input method should be enabled. Preview text is in a temporary state and does not support text interception. As such, it does not trigger **onWillInsert** and **onDidInsert** callbacks.
+Whether to enable preview text. The value **true** means to enable preview text. Default value: **true**.
+
+Preview text of the input method should be enabled. Preview text is in a temporary state and does not support text interception. As such, it does not trigger **onWillInsert** and **onDidInsert** callbacks.
 
 **Type:** boolean
 
@@ -218,7 +222,15 @@ Font color of the input text. Default value: **\$r('sys.color.ohos_id_color_text
 fontFeature?: ResourceStr
 ```
 
-Font feature, for example, monospaced digits. Format: normal | &lt;feature-tag-value&gt; Syntax for **&lt;feature-tag-value&gt;**: &lt;string&gt; [ &lt;integer&gt; | on | off ] There can be multiple **&lt;feature-tag-value&gt;** values, which are separated by commas (,). For example, the input format for monospaced digits is "ss01" on. Default value: **undefined**.
+Font feature, for example, monospaced digits.
+
+Format: normal | &lt;feature-tag-value&gt;
+
+Syntax for **&lt;feature-tag-value&gt;**: &lt;string&gt; [ &lt;integer&gt; | on | off ]
+
+There can be multiple **&lt;feature-tag-value&gt;** values, which are separated by commas (,).
+
+For example, the input format for monospaced digits is "ss01" on. Default value: **undefined**.
 
 **Type:** ResourceStr
 
@@ -236,7 +248,9 @@ Font feature, for example, monospaced digits. Format: normal | &lt;feature-tag-v
 hideSelectionMenu?: boolean
 ```
 
-Whether to hide the system text selection menu. **true**: The system text selection menu does not appear under the following circumstances: clicking the text box cursor, long-pressing the text box, double-tapping the text box, triple-tapping the text box, or right-clicking the text box. **false**: The system text selection menu appears under the following circumstances: clicking the text box cursor, long-pressing the text box, double-tapping the text box, triple-tapping the text box, or right-clicking the text box. Default value: **false**.
+Whether to hide the system text selection menu.
+
+**true**: The system text selection menu does not appear under the following circumstances: clicking the text box cursor, long-pressing the text box, double-tapping the text box, triple-tapping the text box, or right-clicking the text box. **false**: The system text selection menu appears under the following circumstances: clicking the text box cursor, long-pressing the text box, double-tapping the text box, triple-tapping the text box, or right-clicking the text box. Default value: **false**.
 
 **Type:** boolean
 
@@ -254,7 +268,9 @@ Whether to hide the system text selection menu. **true**: The system text select
 inputFilter?: InputFilterParams
 ```
 
-Regular expression for input filtering. Only inputs that comply with the regular expression can be displayed. Other inputs are filtered out. The specified regular expression can match single characters, but not strings. Default value: **undefined**. - **value**: regular expression. - **error**: Filtered-out content to return when regular expression matching fails.
+Regular expression for input filtering. Only inputs that comply with the regular expression can be displayed. Other inputs are filtered out. The specified regular expression can match single characters, but not strings. Default value: **undefined**.
+
+- **value**: regular expression. - **error**: Filtered-out content to return when regular expression matching fails.
 
 **Type:** [InputFilterParams](arkts-arkui-atomicservice-atomicservicesearch-inputfilterparams-i.md)
 
@@ -614,7 +630,9 @@ Background color of the pressed component. Default value: **\$r('sys.color.ohos_
 searchButton?: SearchButtonParams
 ```
 
-Search button located next to the search text box. Clicking the search button triggers both **onSubmit** and **onClick** callbacks. - **value**: Text on the search button located next to the search text box. - **option**: Font of the search text box. Default value: **{fontSize: '16fp', fontColor: '#ff3f97e9'}**
+Search button located next to the search text box. Clicking the search button triggers both **onSubmit** and **onClick** callbacks.
+
+- **value**: Text on the search button located next to the search text box. - **option**: Font of the search text box. Default value: **{fontSize: '16fp', fontColor: '#ff3f97e9'}**
 
 **Type:** [SearchButtonParams](arkts-arkui-atomicservice-atomicservicesearch-searchbuttonparams-i.md)
 
@@ -632,7 +650,11 @@ Search button located next to the search text box. Clicking the search button tr
 searchIcon?: IconOptions | SymbolGlyphModifier
 ```
 
-Style of the search icon on the left. Default value in light mode: **{size: '16vp', color: '#99182431', src:' '}**. Default value in dark mode: **{size: '16vp', color: '#99ffffff', src:' '}**.
+Style of the search icon on the left.
+
+Default value in light mode: **{size: '16vp', color: '#99182431', src:' '}**.
+
+Default value in dark mode: **{size: '16vp', color: '#99ffffff', src:' '}**.
 
 **Type:** IconOptions \| SymbolGlyphModifier
 

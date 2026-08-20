@@ -2,6 +2,8 @@
 
 Declare CustomDialog SelectDialogV2
 
+@struct { SelectDialogV2 }
+
 **Since:** 18
 
 <!--Device-unnamed-export declare struct SelectDialogV2--><!--Device-unnamed-export declare struct SelectDialogV2-End-->

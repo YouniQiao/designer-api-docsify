@@ -28,20 +28,20 @@ function setFormNextRefreshTime(formId: string, minute: int, callback: AsyncCall
 | --- | --- | --- | --- |
 | formId | string | 是 | 卡片标识。 |
 | minute | int | 是 | 指定卡片多久之后刷新，取值范围：大于等于5，单位：min。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。设置结果的回调，成功时error为undefined。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。设置结果的回调，成功时error为undefined。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16501002](../errorcode-form.md#16501002-卡片数量达到上限) | The number of forms exceeds the maximum allowed. |
-| [16501001](../errorcode-form.md#16501001-卡片id不存在) | The ID of the form to be operated does not exist. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
-| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
+| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 | [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+| [16501001](../errorcode-form.md#16501001-卡片id不存在) | The ID of the form to be operated does not exist. |
+| [16501002](../errorcode-form.md#16501002-卡片数量达到上限) | The number of forms exceeds the maximum allowed. |
+| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
 
 **示例**
 
@@ -122,14 +122,14 @@ function setFormNextRefreshTime(formId: string, minute: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16501002](../errorcode-form.md#16501002-卡片数量达到上限) | The number of forms exceeds the maximum allowed. |
-| [16501001](../errorcode-form.md#16501001-卡片id不存在) | The ID of the form to be operated does not exist. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
-| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
+| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 | [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+| [16501001](../errorcode-form.md#16501001-卡片id不存在) | The ID of the form to be operated does not exist. |
+| [16501002](../errorcode-form.md#16501002-卡片数量达到上限) | The number of forms exceeds the maximum allowed. |
+| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
 
 **示例**
 

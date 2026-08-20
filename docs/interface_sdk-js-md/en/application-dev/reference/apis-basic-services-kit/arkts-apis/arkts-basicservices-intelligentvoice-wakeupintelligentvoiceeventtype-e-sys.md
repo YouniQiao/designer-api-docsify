@@ -1,6 +1,6 @@
 # WakeupIntelligentVoiceEventType (System API)
 
-Enumerates wakeup intelligent voice event type.
+Enumerates wakeup intelligent voice event type. @enum {number}
 
 **Since:** 23
 

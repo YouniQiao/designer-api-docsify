@@ -1,4 +1,4 @@
-# WindowModeFollowStrategy(System API)（系统接口）
+# WindowModeFollowStrategy（系统接口）
 
 表示不同类型的WindowModeFollowStrategy的枚举。
 

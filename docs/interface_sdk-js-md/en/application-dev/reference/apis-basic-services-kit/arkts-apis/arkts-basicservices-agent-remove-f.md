@@ -35,8 +35,8 @@ Removes a specified task of the invoker. If the task is being executed, the task
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. |
-| [21900006](../errorcode-request.md#21900006-task-not-found) | Task removed or not found. |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900006](../errorcode-request.md#21900006-task-not-found) | Task removed or not found. |
 
 
 ## remove
@@ -72,6 +72,6 @@ Removes a specified task of the invoker. If the task is being executed, the task
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. |
-| [21900006](../errorcode-request.md#21900006-task-not-found) | Task removed or not found. |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900006](../errorcode-request.md#21900006-task-not-found) | Task removed or not found. |
 

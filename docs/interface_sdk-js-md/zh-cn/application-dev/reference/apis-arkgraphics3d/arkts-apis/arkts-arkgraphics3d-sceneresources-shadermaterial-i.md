@@ -2,6 +2,8 @@
 
 着色器材质，继承自Material。
 
+@extends Material @interface ShaderMaterial
+
 **继承/实现关系：** ShaderMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
 
 **起始版本：** 23

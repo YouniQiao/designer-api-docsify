@@ -2,6 +2,8 @@
 
 The FastBuffer class is a container type for dealing with binary data directly. It can be constructed in a variety of ways.
 
+@namespace fastbuffer
+
 **Since:** 20
 
 <!--Device-unnamed-declare namespace fastbuffer--><!--Device-unnamed-declare namespace fastbuffer-End-->

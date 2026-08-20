@@ -28,7 +28,9 @@ function queryAbilityByWant(want: Want,
     bundleFlags: number, userId: number, callback: AsyncCallback<Array<AbilityInfo>>): void
 ```
 
-Obtains the ability information of the specified user based on given Want. This API uses an asynchronous callback to return the result. No permission is required for obtaining the caller's own information.
+Obtains the ability information of the specified user based on given Want. This API uses an asynchronous callback to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 7
 
@@ -56,7 +58,9 @@ Obtains the ability information of the specified user based on given Want. This 
 function queryAbilityByWant(want: Want, bundleFlags: number, callback: AsyncCallback<Array<AbilityInfo>>): void
 ```
 
-Obtains the ability information based on given Want. This API uses an asynchronous callback to return the result. No permission is required for obtaining the caller's own information.
+Obtains the ability information based on given Want. This API uses an asynchronous callback to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 7
 
@@ -83,7 +87,9 @@ Obtains the ability information based on given Want. This API uses an asynchrono
 function queryAbilityByWant(want: Want, bundleFlags: number, userId?: number): Promise<Array<AbilityInfo>>
 ```
 
-Obtains the ability information based on given Want. This API uses a promise to return the result. No permission is required for obtaining the caller's own information.
+Obtains the ability information based on given Want. This API uses a promise to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 7
 

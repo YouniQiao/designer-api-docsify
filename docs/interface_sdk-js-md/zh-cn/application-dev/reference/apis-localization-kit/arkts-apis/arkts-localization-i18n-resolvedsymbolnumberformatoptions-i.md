@@ -2,7 +2,7 @@
 
 自定义符号数字格式化对象配置项的解析结果。继承自Intl.ResolvedNumberFormatOptions， 支持Intl.ResolvedNumberFormatOptions的所有配置项，并且功能与其一致。
 
-**继承/实现关系：** ResolvedSymbolNumberFormatOptions extends Intl.ResolvedNumberFormatOptions
+**继承/实现关系：** ResolvedSymbolNumberFormatOptions extends [Intl.ResolvedNumberFormatOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-resolvednumberformatoptions-i.md)
 
 **起始版本：** 26.0.0
 

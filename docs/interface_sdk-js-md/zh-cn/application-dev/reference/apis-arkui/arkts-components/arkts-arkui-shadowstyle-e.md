@@ -2,6 +2,8 @@
 
 组件阴影效果。
 
+@enum { number }
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare enum ShadowStyle--><!--Device-unnamed-declare enum ShadowStyle-End-->

@@ -2,6 +2,8 @@
 
 Alignment enumeration description.
 
+@enum { number }
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare enum Alignment--><!--Device-unnamed-declare enum Alignment-End-->

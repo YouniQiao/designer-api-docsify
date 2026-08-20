@@ -2,7 +2,9 @@
 
 远程控制窗口组件，可以通过此组件控制应用窗口，提供启动退出过程中控件动画和应用窗口联动动画的能力。
 
-## 子组件 不可以包含子组件
+## 子组件
+
+不可以包含子组件
 
 ## RemoteWindow
 
@@ -32,6 +34,4 @@ RemoteWindow(target: WindowAnimationTarget)
 
 | 名称 | 说明 |
 | --- | --- |
-| [RRect](arkts-arkui-rrect-i-sys.md) | 圆角矩形。 |
-| [WindowAnimationTarget](arkts-arkui-windowanimationtarget-i-sys.md) | 目标窗口，用来远程控制实现动画。 |
 

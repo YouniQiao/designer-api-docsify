@@ -20,7 +20,9 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 appEventInfos: Array<AppEventInfo>
 ```
 
-事件对象集合。 **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
+事件对象集合。
+
+**原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
 **类型：** Array&lt;[AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md)&gt;
 
@@ -38,7 +40,9 @@ appEventInfos: Array<AppEventInfo>
 data: string[]
 ```
 
-事件包的事件信息。 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
+事件包的事件信息。
+
+**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
 **类型：** string[]
 
@@ -56,7 +60,9 @@ data: string[]
 packageId: int
 ```
 
-事件包ID，从0开始自动递增。 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
+事件包ID，从0开始自动递增。
+
+**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
 **类型：** int
 
@@ -74,7 +80,9 @@ packageId: int
 row: int
 ```
 
-事件包的事件数量。 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
+事件包的事件数量。
+
+**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
 **类型：** int
 
@@ -92,7 +100,9 @@ row: int
 size: int
 ```
 
-事件包的事件大小，单位为byte。 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
+事件包的事件大小，单位为byte。
+
+**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
 **类型：** int
 

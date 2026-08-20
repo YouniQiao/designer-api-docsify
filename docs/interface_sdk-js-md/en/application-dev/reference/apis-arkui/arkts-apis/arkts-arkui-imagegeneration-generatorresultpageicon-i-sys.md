@@ -2,6 +2,8 @@
 
 Custom icon object in the generation result page of ImageGeneratorDialog.
 
+@interface GeneratorResultPageIcon
+
 **Since:** 23
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.

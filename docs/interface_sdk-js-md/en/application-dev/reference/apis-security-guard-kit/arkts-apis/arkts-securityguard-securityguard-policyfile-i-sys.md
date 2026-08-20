@@ -2,6 +2,8 @@
 
 Provides policy file information.
 
+@interface PolicyFile
+
 **Since:** 12
 
 <!--Device-securityGuard-interface PolicyFile--><!--Device-securityGuard-interface PolicyFile-End-->

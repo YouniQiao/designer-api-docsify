@@ -1,4 +1,4 @@
-# PowerSaveMode(后台子进程管控)
+# PowerSaveMode
 
 能效模式。
 

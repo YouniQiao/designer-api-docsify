@@ -1,6 +1,8 @@
 # CustomResult
 
-Enumerates the EAP authentication results. ​
+Enumerates the EAP authentication results.
+
+​
 
 **Since:** 20
 

@@ -1,6 +1,11 @@
 # MutableStyledString
 
-继承于[StyledString](arkts-arkui-styledstring-styledstring-c.md)类。 &gt; **以下接口异常入参处理统一说明：** &gt; &gt; 当start和length越界或者必填传入undefined时，会抛出异常； &gt; &gt; 当styledKey和styledValue传入异常值或者两者对应关系不匹配时，会抛出异常。
+继承于[StyledString](arkts-arkui-styledstring-styledstring-c.md)类。
+
+> **以下接口异常入参处理统一说明：**
+> 
+> 当start和length越界或者必填传入undefined时，会抛出异常； &gt;
+> 当styledKey和styledValue传入异常值或者两者对应关系不匹配时，会抛出异常。
 
 **继承/实现关系：** MutableStyledString extends [StyledString](arkts-arkui-styledstring-styledstring-c.md)
 
@@ -42,7 +47,9 @@ appendStyledString(other: StyledString): void
 clearStyles(): void
 ```
 
-清除属性字符串对象的所有样式。 被清空样式类型对象属性使用的是对应[Text](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md)组件属性的设置值，若Text组件未设置值， 则使用对应Text组件属性的默认值。
+清除属性字符串对象的所有样式。
+
+被清空样式类型对象属性使用的是对应[Text](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md)组件属性的设置值，若Text组件未设置值， 则使用对应Text组件属性的默认值。
 
 **起始版本：** 23
 
@@ -147,7 +154,9 @@ insertStyledString(start: int, other: StyledString): void
 removeString(start: int, length: int): void
 ```
 
-移除指定范围的字符串。 当属性字符串中包含图片或[CustomSpan](arkts-arkui-styledstring-customspan-c.md)时，同样生效。
+移除指定范围的字符串。
+
+当属性字符串中包含图片或[CustomSpan](arkts-arkui-styledstring-customspan-c.md)时，同样生效。
 
 **起始版本：** 23
 
@@ -178,7 +187,11 @@ removeString(start: int, length: int): void
 removeStyle(start: int, length: int, styledKey: StyledStringKey): void
 ```
 
-清除指定范围内容的指定类型样式。 被清空样式类型对象属性使用的是对应[Text](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md)组件属性的设置值，若Text组件未设置值， 则使用对应Text组件属性的默认值。 当属性字符串中包含图片时，同样生效。
+清除指定范围内容的指定类型样式。
+
+被清空样式类型对象属性使用的是对应[Text](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md)组件属性的设置值，若Text组件未设置值， 则使用对应Text组件属性的默认值。
+
+当属性字符串中包含图片时，同样生效。
 
 **起始版本：** 23
 
@@ -210,7 +223,11 @@ removeStyle(start: int, length: int, styledKey: StyledStringKey): void
 removeStyles(start: int, length: int): void
 ```
 
-清除指定范围内容的所有样式。 被清空样式类型对象属性使用的是对应[Text](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md)组件属性的设置值，若Text组件未设置值， 则使用对应Text组件属性的默认值。 当属性字符串中包含图片时，同样生效。
+清除指定范围内容的所有样式。
+
+被清空样式类型对象属性使用的是对应[Text](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md)组件属性的设置值，若Text组件未设置值， 则使用对应Text组件属性的默认值。
+
+当属性字符串中包含图片时，同样生效。
 
 **起始版本：** 23
 

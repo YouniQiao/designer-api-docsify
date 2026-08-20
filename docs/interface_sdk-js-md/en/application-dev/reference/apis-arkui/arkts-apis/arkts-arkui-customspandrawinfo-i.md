@@ -19,7 +19,9 @@ Defines the CustomSpanDrawInfo interface.
 baseline: number
 ```
 
-Baseline offset of the line where the custom span is located. Unit: px
+Baseline offset of the line where the custom span is located.
+
+Unit: px
 
 **Type:** number
 
@@ -39,7 +41,9 @@ Baseline offset of the line where the custom span is located. Unit: px
 lineBottom: number
 ```
 
-Bottom margin of the custom span relative to the **Text** component. Unit: px
+Bottom margin of the custom span relative to the **Text** component.
+
+Unit: px
 
 **Type:** number
 
@@ -59,7 +63,9 @@ Bottom margin of the custom span relative to the **Text** component. Unit: px
 lineTop: number
 ```
 
-Top margin of the custom span relative to the **Text** component. Unit: px
+Top margin of the custom span relative to the **Text** component.
+
+Unit: px
 
 **Type:** number
 
@@ -79,7 +85,9 @@ Top margin of the custom span relative to the **Text** component. Unit: px
 x: number
 ```
 
-Offset of the custom span relative to the mounted component. Unit: px
+Offset of the custom span relative to the mounted component.
+
+Unit: px
 
 **Type:** number
 

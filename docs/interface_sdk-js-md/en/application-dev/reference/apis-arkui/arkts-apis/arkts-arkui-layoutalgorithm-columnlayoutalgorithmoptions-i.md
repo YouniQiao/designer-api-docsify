@@ -14,9 +14,13 @@ Sets the spacing, main axis alignment method, cross axis alignment method, and m
 alignItems?: HorizontalAlign
 ```
 
-Horizontal alignment mode of all child components. Default value: **HorizontalAlign.Center** Invalid values are treated as the default value.
+Horizontal alignment mode of all child components.
 
-**Type:** [HorizontalAlign](../../apis-na/arkts-apis/arkts-na-enums-horizontalalign-e.md)
+Default value: **HorizontalAlign.Center**
+
+Invalid values are treated as the default value.
+
+**Type:** [HorizontalAlign](../../apis-default/arkts-apis/arkts-enums-horizontalalign-e.md)
 
 **Default:** HorizontalAlign.Center
 
@@ -38,7 +42,11 @@ Horizontal alignment mode of all child components. Default value: **HorizontalAl
 isReverse?: boolean
 ```
 
-Whether to reverse the vertical arrangement of child components. **true** indicates to reverse the vertical arrangement of child components. **false** indicates to arrange child components in the vertical direction in normal order. Default value: **false** Invalid values are treated as the default value.
+Whether to reverse the vertical arrangement of child components. **true** indicates to reverse the vertical arrangement of child components. **false** indicates to arrange child components in the vertical direction in normal order.
+
+Default value: **false**
+
+Invalid values are treated as the default value.
 
 **Type:** boolean
 
@@ -62,9 +70,13 @@ Whether to reverse the vertical arrangement of child components. **true** indica
 justifyContent?: FlexAlign
 ```
 
-Vertical alignment mode of all child components. Default value: **FlexAlign.Start** Invalid values are treated as the default value.
+Vertical alignment mode of all child components.
 
-**Type:** [FlexAlign](../../apis-na/arkts-apis/arkts-na-enums-flexalign-e.md)
+Default value: **FlexAlign.Start**
+
+Invalid values are treated as the default value.
+
+**Type:** [FlexAlign](../../apis-default/arkts-apis/arkts-enums-flexalign-e.md)
 
 **Default:** FlexAlign.Start
 
@@ -86,9 +98,13 @@ Vertical alignment mode of all child components. Default value: **FlexAlign.Star
 space?: LengthMetrics
 ```
 
-Vertical spacing between elements in a vertical layout. Default value: **LengthMetrics.vp(0)** Invalid values are treated as the default value.
+Vertical spacing between elements in a vertical layout.
 
-**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+Default value: **LengthMetrics.vp(0)**
+
+Invalid values are treated as the default value.
+
+**Type:** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 

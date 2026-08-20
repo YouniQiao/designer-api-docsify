@@ -2,6 +2,8 @@
 
 Indicates the resource type of the wallpaper.
 
+@enum { int } WallpaperResourceType
+
 **Since:** 23
 
 <!--Device-wallpaper-enum WallpaperResourceType--><!--Device-wallpaper-enum WallpaperResourceType-End-->

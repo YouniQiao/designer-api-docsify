@@ -43,18 +43,18 @@ Decapsulates a post-quantum cryptography key. This operation can be managed by H
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | API is not supported. |
-| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | Invalid input parameter. |
-| [12000017](../errorcode-huks.md#12000017-duplicate-key-alias) | A key with the same alias already exists. |
-| 12000016 | The lock screen password is not set. |
-| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | The algorithm engine reports an error. Check the input parameters. |
-| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
-| [12000004](../errorcode-huks.md#12000004-file-error) | The file operation failed. |
-| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) | The algorithm parameter is invalid. Check the algorithm parameter. |
-| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | The algorithm parameter is missing. Check the algorithm parameter. |
 | [12000001](../errorcode-huks.md#12000001-feature-not-supported) | Algorithm mode is not supported |
-| [12000015](../errorcode-huks.md#12000015-failed-to-invoke-other-system-services) | Failed to obtain the security information using UserIAM. |
-| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | Insufficient memory. |
-| [12000013](../errorcode-huks.md#12000013-the-credential-does-not-exist) | Queried credential does not exist |
-| [12000012](../errorcode-huks.md#12000012-external-error) | The device environment or input parameter is abnormal. |
+| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | The algorithm parameter is missing. Check the algorithm parameter. |
+| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) | The algorithm parameter is invalid. Check the algorithm parameter. |
+| [12000004](../errorcode-huks.md#12000004-file-error) | The file operation failed. |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | The algorithm engine reports an error. Check the input parameters. |
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | The queried key does not exist. Check the key-related parameters. |
+| [12000012](../errorcode-huks.md#12000012-external-error) | The device environment or input parameter is abnormal. |
+| [12000013](../errorcode-huks.md#12000013-the-credential-does-not-exist) | Queried credential does not exist |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | Insufficient memory. |
+| [12000015](../errorcode-huks.md#12000015-failed-to-invoke-other-system-services) | Failed to obtain the security information using UserIAM. |
+| 12000016 | The lock screen password is not set. |
+| [12000017](../errorcode-huks.md#12000017-duplicate-key-alias) | A key with the same alias already exists. |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | Invalid input parameter. |
 

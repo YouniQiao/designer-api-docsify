@@ -42,8 +42,8 @@ Adds contacts in batches. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) | Invalid parameter value. |
 | [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
+| [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) | Invalid parameter value. |
 
 **Examples**
 

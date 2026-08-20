@@ -1,6 +1,8 @@
 # AVTranscoder
 
-AVTranscoder is a transcoding management class. It provides APIs to transcode videos. Before calling any API in AVTranscoder, you must use [createAVTranscoder()](arkts-media-media-createavtranscoder-f.md) to create an AVTranscoder instance. For details about the AVTranscoder demo, see [Using AVTranscoder for Transcoding](../../../media/media/using-avtranscoder-for-transcodering.md).
+AVTranscoder is a transcoding management class. It provides APIs to transcode videos. Before calling any API in AVTranscoder, you must use [createAVTranscoder()](arkts-media-media-createavtranscoder-f.md) to create an AVTranscoder instance.
+
+For details about the AVTranscoder demo, see [Using AVTranscoder for Transcoding](../../../media/media/using-avtranscoder-for-transcodering.md).
 
 **Since:** 23
 
@@ -58,7 +60,9 @@ add a watermark for the AVTranscoder. This API uses a promise to return the resu
 cancel(): Promise<void>
 ```
 
-Cancels video transcoding. This API uses a promise to return the result. This API can be called only after the [prepare()](#prepare), [start()](#start), [pause()](#pause), or [resume()](#resume) API is called.
+Cancels video transcoding. This API uses a promise to return the result.
+
+This API can be called only after the [prepare()](#prepare), [start()](#start), [pause()](#pause), or [resume()](#resume) API is called.
 
 **Since:** 23
 
@@ -217,7 +221,9 @@ Unsubscribes from transcoding progress updates.
 onComplete(callback: Callback<void>):void
 ```
 
-Subscribes to the event indicating that transcoding is complete. An application can subscribe to only one transcoding completion event. When the application initiates multiple subscriptions to this event, the last subscription is applied. When this event is reported, the current transcoding operation is complete. You need to call [release()](#release) to exit the transcoding.
+Subscribes to the event indicating that transcoding is complete. An application can subscribe to only one transcoding completion event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
+
+When this event is reported, the current transcoding operation is complete. You need to call [release()](#release) to exit the transcoding.
 
 **Since:** 23
 
@@ -237,7 +243,9 @@ Subscribes to the event indicating that transcoding is complete. An application 
 onError(callback: ErrorCallback):void
 ```
 
-Subscribes to AVTranscoder errors. If this event is reported, call [release()](#release) to exit the transcoding. An application can subscribe to only one AVTranscoder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
+Subscribes to AVTranscoder errors. If this event is reported, call [release()](#release) to exit the transcoding.
+
+An application can subscribe to only one AVTranscoder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
 **Since:** 23
 
@@ -257,12 +265,12 @@ Subscribes to AVTranscoder errors. If this event is reported, call [release()](#
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. |
 | [5400104](../errorcode-media.md#5400104-operation-timeout) | Time out. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. |
 
 ## onProgressUpdate
 
@@ -290,7 +298,9 @@ Subscribes to transcoding progress updates. An application can subscribe to only
 on(type:'complete', callback: Callback<void>):void
 ```
 
-Subscribes to the event indicating that transcoding is complete. An application can subscribe to only one transcoding progress update event. When the application initiates multiple subscriptions to this event, the last subscription is applied. This API uses an asynchronous callback to return the result. When this event is reported, the current transcoding operation is complete. You need to call [release()](#release) to exit the transcoding.
+Subscribes to the event indicating that transcoding is complete. An application can subscribe to only one transcoding progress update event. When the application initiates multiple subscriptions to this event, the last subscription is applied. This API uses an asynchronous callback to return the result.
+
+When this event is reported, the current transcoding operation is complete. You need to call [release()](#release) to exit the transcoding.
 
 **Since:** 12
 
@@ -313,7 +323,9 @@ Subscribes to the event indicating that transcoding is complete. An application 
 on(type:'error', callback: ErrorCallback):void
 ```
 
-Subscribes to AVTranscoder errors. If this event is reported, call [release()](#release) to exit the transcoding. This API uses an asynchronous callback to return the result. An application can subscribe to only one AVTranscoder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
+Subscribes to AVTranscoder errors. If this event is reported, call [release()](#release) to exit the transcoding. This API uses an asynchronous callback to return the result.
+
+An application can subscribe to only one AVTranscoder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
 **Since:** 12
 
@@ -336,12 +348,12 @@ Subscribes to AVTranscoder errors. If this event is reported, call [release()](#
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. |
 | [5400104](../errorcode-media.md#5400104-operation-timeout) | Time out. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. |
 
 ## on('progressUpdate')
 
@@ -372,7 +384,9 @@ Subscribes to transcoding progress updates. An application can subscribe to only
 pause(): Promise<void>
 ```
 
-Pauses video transcoding. This API uses a promise to return the result. This API can be called only after the [start()](#start) API is called. You can call [resume()](#resume) to resume transcoding.
+Pauses video transcoding. This API uses a promise to return the result.
+
+This API can be called only after the [start()](#start) API is called. You can call [resume()](#resume) to resume transcoding.
 
 **Since:** 23
 
@@ -428,11 +442,11 @@ Sets video transcoding parameters. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Return by promise.<br>**Applicable version:** 22 and later |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Return by promise.<br>**Applicable version:** 22 and later |
 
 ## release
 
@@ -440,7 +454,9 @@ Sets video transcoding parameters. This API uses a promise to return the result.
 release(): Promise<void>
 ```
 
-Releases video transcoding resources. This API uses a promise to return the result. After the resources are released, you can no longer perform any operation on the AVTranscoder instance.
+Releases video transcoding resources. This API uses a promise to return the result.
+
+After the resources are released, you can no longer perform any operation on the AVTranscoder instance.
 
 **Since:** 23
 
@@ -469,7 +485,9 @@ Releases video transcoding resources. This API uses a promise to return the resu
 resume(): Promise<void>
 ```
 
-Resumes video transcoding. This API uses a promise to return the result. This API can be called only after the [pause()](#pause) API is called.
+Resumes video transcoding. This API uses a promise to return the result.
+
+This API can be called only after the [pause()](#pause) API is called.
 
 **Since:** 23
 
@@ -499,7 +517,9 @@ Resumes video transcoding. This API uses a promise to return the result. This AP
 start(): Promise<void>
 ```
 
-Starts video transcoding. This API uses a promise to return the result. This API can be called only after the [prepare()](#prepare) API is called.
+Starts video transcoding. This API uses a promise to return the result.
+
+This API can be called only after the [prepare()](#prepare) API is called.
 
 **Since:** 23
 
@@ -529,7 +549,11 @@ Starts video transcoding. This API uses a promise to return the result. This API
 fdDst: int
 ```
 
-Destination media file descriptor, which specifies the data source. After creating an AVTranscoder instance, you must set both **fdSrc** and **fdDst**. **NOTE：**- After the resource handle (FD) is transferred to an AVTranscoder instance, do not use the resource handle to perform other read and write operations, including but not limited to transferring this handle to other AVPlayer, AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance. - Competition occurs when multiple AVTranscoders use the same resource handle to read and write files at the same time, resulting in errors in obtaining data.
+Destination media file descriptor, which specifies the data source. After creating an AVTranscoder instance, you must set both **fdSrc** and **fdDst**.
+
+**NOTE：**
+
+- After the resource handle (FD) is transferred to an AVTranscoder instance, do not use the resource handle to perform other read and write operations, including but not limited to transferring this handle to other AVPlayer, AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance. - Competition occurs when multiple AVTranscoders use the same resource handle to read and write files at the same time, resulting in errors in obtaining data.
 
 **Type:** int
 
@@ -547,7 +571,13 @@ Destination media file descriptor, which specifies the data source. After creati
 fdSrc: AVFileDescriptor
 ```
 
-Source media file descriptor, which specifies the data source. There is a media file that stores continuous assets, the address offset is 0, and the byte length is 100. Its file descriptor is **AVFileDescriptor { fd = resourceHandle; offset = 0; length = 100; }**. **NOTE：**- After the resource handle (FD) is transferred to an AVTranscoder instance, do not use the resource handle to perform other read and write operations, including but not limited to transferring this handle to other AVPlayer, AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance. - Competition occurs when multiple AVTranscoders use the same resource handle to read and write files at the same time, resulting in errors in obtaining data.
+Source media file descriptor, which specifies the data source.
+
+There is a media file that stores continuous assets, the address offset is 0, and the byte length is 100. Its file descriptor is **AVFileDescriptor { fd = resourceHandle; offset = 0; length = 100; }**.
+
+**NOTE：**
+
+- After the resource handle (FD) is transferred to an AVTranscoder instance, do not use the resource handle to perform other read and write operations, including but not limited to transferring this handle to other AVPlayer, AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance. - Competition occurs when multiple AVTranscoders use the same resource handle to read and write files at the same time, resulting in errors in obtaining data.
 
 **Type:** [AVFileDescriptor](arkts-media-media-avfiledescriptor-i.md)
 

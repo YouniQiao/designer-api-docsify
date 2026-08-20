@@ -1,6 +1,14 @@
 # PromptAction
 
-创建并显示即时反馈、对话框、操作菜单以及自定义弹窗。 &gt; **说明：** &gt; &gt; - 本模块首批接口从API version 10开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 &gt; &gt; - 本Class首批接口从API version 10开始支持。 &gt; &gt; - 以下API需先使用UIContext中的[getPromptAction()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取到 PromptAction对象，再通过该对象调用对应方法。
+创建并显示即时反馈、对话框、操作菜单以及自定义弹窗。
+
+> **说明：**
+> 
+> - 本模块首批接口从API version 10开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+> 
+> - 本Class首批接口从API version 10开始支持。
+> 
+> - 以下API需先使用UIContext中的[getPromptAction()](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取到 PromptAction对象，再通过该对象调用对应方法。
 
 **起始版本：** 10
 
@@ -83,8 +91,8 @@ closeCustomDialog(dialogId: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 ## closeMenu
 
@@ -190,8 +198,8 @@ closeToast(toastId: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [103401](../errorcode-promptAction.md#103401-无法找到对应的文本提示框) | Cannot find the toast. |
 
 ## getBottomOrder
@@ -216,7 +224,7 @@ getBottomOrder(): LevelOrder
 
 | 类型 | 说明 |
 | --- | --- |
-| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | 返回弹窗层级信息。 |
+| [LevelOrder](../../apis-default/arkts-apis/arkts-promptaction-levelorder-c.md) | 返回弹窗层级信息。 |
 
 ## getTopOrder
 
@@ -224,7 +232,9 @@ getBottomOrder(): LevelOrder
 getTopOrder(): LevelOrder
 ```
 
-返回最顶层显示的弹窗的顺序。 获取最顶层显示的弹窗的顺序，可以在下一个弹窗时指定期望的顺序。
+返回最顶层显示的弹窗的顺序。
+
+获取最顶层显示的弹窗的顺序，可以在下一个弹窗时指定期望的顺序。
 
 **起始版本：** 18
 
@@ -240,7 +250,7 @@ getTopOrder(): LevelOrder
 
 | 类型 | 说明 |
 | --- | --- |
-| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | 返回弹窗层级信息。 |
+| [LevelOrder](../../apis-default/arkts-apis/arkts-promptaction-levelorder-c.md) | 返回弹窗层级信息。 |
 
 ## openCustomDialog
 
@@ -265,7 +275,7 @@ openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?:
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | dialogContent | ComponentContent&lt;T&gt; | 是 | 自定义弹窗中显示的组件内容。 |
-| options | promptAction.BaseDialogOptions | 否 | 弹窗样式。<br> **说明：** 如果BaseDialogOptions中的[isModal](arkts-arkui-promptaction-basedialogoptions-i.md) 与[showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md)同时设置为true，则只生效showInSubWindow = true， 此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。 |
+| options | promptAction.BaseDialogOptions | 否 | 弹窗样式。<br> **说明：** 如果BaseDialogOptions中的[isModal](../../apis-default/arkts-apis/arkts-promptaction-basedialogoptions-i.md) 与[showInSubWindow](../../apis-default/arkts-apis/arkts-promptaction-basedialogoptions-i.md)同时设置为true，则只生效showInSubWindow = true， 此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。 |
 
 **返回值：**
 
@@ -303,7 +313,7 @@ openCustomDialog(options: promptAction.CustomDialogOptions): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | promptAction.CustomDialogOptions | 是 | 自定义弹窗的内容。<br> **说明：** 如果BaseDialogOptions中的[isModal](arkts-arkui-promptaction-basedialogoptions-i.md)与 [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md)同时设置为true，则只生效showInSubWindow = true， 此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。 |
+| options | promptAction.CustomDialogOptions | 是 | 自定义弹窗的内容。<br> **说明：** 如果BaseDialogOptions中的[isModal](../../apis-default/arkts-apis/arkts-promptaction-basedialogoptions-i.md)与 [showInSubWindow](../../apis-default/arkts-apis/arkts-promptaction-basedialogoptions-i.md)同时设置为true，则只生效showInSubWindow = true， 此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。 |
 
 **返回值：**
 
@@ -315,8 +325,8 @@ openCustomDialog(options: promptAction.CustomDialogOptions): Promise<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 ## openCustomDialogWithController
 
@@ -325,7 +335,9 @@ openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent
     options?: promptAction.BaseDialogOptions): Promise<void>
 ```
 
-创建并弹出dialogContent对应的自定义弹窗，使用Promise异步回调。支持传入弹窗控制器与自定义弹窗绑定，后续可以通过控制器控制自定义弹窗。 通过该接口弹出的弹窗内容样式完全按照dialogContent中设置的样式显示，即相当于customDialog设置customStyle为true时的显示效果。
+创建并弹出dialogContent对应的自定义弹窗，使用Promise异步回调。支持传入弹窗控制器与自定义弹窗绑定，后续可以通过控制器控制自定义弹窗。
+
+通过该接口弹出的弹窗内容样式完全按照dialogContent中设置的样式显示，即相当于customDialog设置customStyle为true时的显示效果。
 
 **起始版本：** 18
 
@@ -343,7 +355,7 @@ openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent
 | --- | --- | --- | --- |
 | dialogContent | ComponentContent&lt;T&gt; | 是 | 自定义弹窗中显示的组件内容。 |
 | controller | promptAction.DialogController | 是 | 自定义弹窗的控制器。 |
-| options | promptAction.BaseDialogOptions | 否 | 自定义弹窗的样式。 <br> **说明：** 如果BaseDialogOptions中的[isModal](arkts-arkui-promptaction-basedialogoptions-i.md)与 [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md)同时设置为true，则只生效showInSubWindow = true， 此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。 |
+| options | promptAction.BaseDialogOptions | 否 | 自定义弹窗的样式。 <br> **说明：** 如果BaseDialogOptions中的[isModal](../../apis-default/arkts-apis/arkts-promptaction-basedialogoptions-i.md)与 [showInSubWindow](../../apis-default/arkts-apis/arkts-promptaction-basedialogoptions-i.md)同时设置为true，则只生效showInSubWindow = true， 此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。 |
 
 **返回值：**
 
@@ -365,7 +377,17 @@ openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent
 openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: MenuOptions): Promise<void>
 ```
 
-创建并弹出以content作为内容的Menu弹窗。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 使用该接口时，若未传入有效的target，则无法弹出menu弹窗。 &gt; &gt; - 由于[updateMenu](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md#updatemenu)和[closeMenu](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md#closemenu)依赖content去更新或者关闭指定的menu弹窗，开发者需自行维护传入的content。 &gt; &gt; - 如果在wrapBuilder中包含其他组件（例如：Popup、 [Chip](arkts-arkui-arkui-advanced-chip-chip-f.md)组件），则 [ComponentContent](../../apis-na/arkts-apis/arkts-na-componentcontent-c.md)应采用带有四个参数的构造函数constructor， 其中options参数应传递{ nestingBuilderSupported: true }。 &gt; &gt; - 子窗弹窗里不能再弹出子窗弹窗，例如[openMenu](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md#openmenu)设置了showInSubWindow为true时，则不能再弹出另一个设置了 showInSubWindow为true的弹窗。
+创建并弹出以content作为内容的Menu弹窗。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 使用该接口时，若未传入有效的target，则无法弹出menu弹窗。
+> 
+> - 由于[updateMenu](#updatemenu)和[closeMenu](#closemenu)依赖content去更新或者关闭指定的menu弹窗，开发者需自行维护传入的content。
+> 
+> - 如果在wrapBuilder中包含其他组件（例如：Popup、 Chip组件），则 [ComponentContent](arkts-arkui-componentcontent-c.md)应采用带有四个参数的构造函数constructor， 其中options参数应传递{ nestingBuilderSupported: true }。
+> 
+> - 子窗弹窗里不能再弹出子窗弹窗，例如[openMenu](#openmenu)设置了showInSubWindow为true时，则不能再弹出另一个设置了 showInSubWindow为true的弹窗。
 
 **起始版本：** 18
 
@@ -382,8 +404,8 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | 是 | menu弹窗中显示的组件内容。 |
-| target | [TargetInfo](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-targetinfo-i.md) | 是 | 需要绑定组件的信息。 |
-| options | [MenuOptions](../../apis-na/arkts-apis/arkts-na-common-menuoptions-i.md) | 否 | menu弹窗样式。<br/> **说明：**<br/> title属性不生效。<br/> preview参数仅支持设置MenuPreviewMode类型。 |
+| target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | 是 | 需要绑定组件的信息。 |
+| options | [MenuOptions](../../apis-default/arkts-apis/arkts-common-menuoptions-i.md) | 否 | menu弹窗样式。<br/> **说明：**<br/> title属性不生效。<br/> preview参数仅支持设置MenuPreviewMode类型。 |
 
 **返回值：**
 
@@ -398,8 +420,8 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) | The ComponentContent already exists. |
-| [103305](../errorcode-promptAction.md#103305-指定的targetid对应的节点未挂载在组件树上) | The node of targetId is not in the component tree. |
 | [103304](../errorcode-promptAction.md#103304-指定的targetid不存在) | The targetId does not exist. |
+| [103305](../errorcode-promptAction.md#103305-指定的targetid对应的节点未挂载在组件树上) | The node of targetId is not in the component tree. |
 
 ## openPopup
 
@@ -407,7 +429,15 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: PopupCommonOptions): Promise<void>
 ```
 
-创建并弹出以content作为内容的Popup弹窗，使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 使用该接口时，若未传入有效的target，则无法弹出popup弹窗。 &gt; &gt; - 由于[updatePopup](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md#updatepopup)和[closePopup](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md#closepopup)依赖content去更新或者关闭指定的popup弹窗，开发者需自行维护传入的content。 &gt; &gt; - 如果在wrapBuilder中包含其他组件（例如：Popup、[Chip](arkts-arkui-arkui-advanced-chip-chip-f.md)组件），则[ComponentContent](../../apis-na/arkts-apis/arkts-na-componentcontent-c.md)应采用带有四个参数的构造函数constructor，其中options参数应传递{ nestingBuilderSupported: true }。
+创建并弹出以content作为内容的Popup弹窗，使用Promise异步回调。
+
+> **说明：**
+> 
+> - 使用该接口时，若未传入有效的target，则无法弹出popup弹窗。
+> 
+> - 由于[updatePopup](#updatepopup)和[closePopup](#closepopup)依赖content去更新或者关闭指定的popup弹窗，开发者需自行维护传入的content。
+> 
+> - 如果在wrapBuilder中包含其他组件（例如：Popup、Chip组件），则[ComponentContent](arkts-arkui-componentcontent-c.md)应采用带有四个参数的构造函数constructor，其中options参数应传递{ nestingBuilderSupported: true }。
 
 **起始版本：** 18
 
@@ -424,8 +454,8 @@ openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, op
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | 是 | popup弹窗中显示的组件内容。 |
-| target | [TargetInfo](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-targetinfo-i.md) | 是 | 需要绑定组件的信息。 |
-| options | [PopupCommonOptions](../../apis-na/arkts-apis/arkts-na-common-popupcommonoptions-i.md) | 否 | popup弹窗样式。 |
+| target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | 是 | 需要绑定组件的信息。 |
+| options | [PopupCommonOptions](../../apis-default/arkts-apis/arkts-common-popupcommonoptions-i.md) | 否 | popup弹窗样式。 |
 
 **返回值：**
 
@@ -440,8 +470,8 @@ openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, op
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) | The ComponentContent already exists. |
-| [103305](../errorcode-promptAction.md#103305-指定的targetid对应的节点未挂载在组件树上) | The node of targetId is not in the component tree. |
 | [103304](../errorcode-promptAction.md#103304-指定的targetid不存在) | The targetId does not exist. |
+| [103305](../errorcode-promptAction.md#103305-指定的targetid对应的节点未挂载在组件树上) | The node of targetId is not in the component tree. |
 
 ## openToast
 
@@ -477,8 +507,8 @@ openToast(options: promptAction.ShowToastOptions): Promise<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 ## presentCustomDialog
 
@@ -487,7 +517,9 @@ presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: p
     options?: promptAction.DialogOptions): Promise<number>
 ```
 
-创建并弹出自定义弹窗。使用Promise异步回调返回对话框的id，可供closeCustomDialog使用。 支持在自定义弹窗内容中持有弹窗ID进行对应操作。支持传入弹窗控制器与自定义弹窗绑定，后续可以通过控制器控制自定义弹窗。
+创建并弹出自定义弹窗。使用Promise异步回调返回对话框的id，可供closeCustomDialog使用。
+
+支持在自定义弹窗内容中持有弹窗ID进行对应操作。支持传入弹窗控制器与自定义弹窗绑定，后续可以通过控制器控制自定义弹窗。
 
 **起始版本：** 18
 
@@ -503,9 +535,9 @@ presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: p
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | CustomBuilder \| [CustomBuilderWithId](../../apis-na/arkts-apis/arkts-na-custombuilderwithid-t.md) | 是 | 自定义弹窗的内容。 |
+| builder | [CustomBuilder](../../apis-default/arkts-apis/arkts-custombuilder-t.md) \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) | 是 | 自定义弹窗的内容。 |
 | controller | promptAction.DialogController | 否 | 自定义弹窗的控制器。<br>**起始版本：** 26.0.0 |
-| options | promptAction.DialogOptions | 否 | 自定义弹窗的样式。<br> **说明：** 如果BaseDialogOptions中的[isModal](arkts-arkui-promptaction-basedialogoptions-i.md)与 [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md)同时设置为true，则只生效showInSubWindow = true， 此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。<br>**起始版本：** 26.0.0 |
+| options | promptAction.DialogOptions | 否 | 自定义弹窗的样式。<br> **说明：** 如果BaseDialogOptions中的[isModal](../../apis-default/arkts-apis/arkts-promptaction-basedialogoptions-i.md)与 [showInSubWindow](../../apis-default/arkts-apis/arkts-promptaction-basedialogoptions-i.md)同时设置为true，则只生效showInSubWindow = true， 此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。<br>**起始版本：** 26.0.0 |
 
 **返回值：**
 
@@ -517,8 +549,8 @@ presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: p
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 ## showActionMenu
 
@@ -532,7 +564,7 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: promptAction.A
 
 **废弃版本：** 11
 
-**替代接口：** [showActionMenu](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md#showactionmenu)
+**替代接口：** [showActionMenu](#showactionmenu)
 
 <!--Device-PromptAction-showActionMenu(options: promptAction.ActionMenuOptions, callback: promptAction.ActionMenuSuccessResponse): void--><!--Device-PromptAction-showActionMenu(options: promptAction.ActionMenuOptions, callback: promptAction.ActionMenuSuccessResponse): void-End-->
 
@@ -549,8 +581,8 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: promptAction.A
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 ## showActionMenu
 
@@ -575,14 +607,14 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | promptAction.ActionMenuOptions | 是 | 操作菜单选项。用于配置操作菜单的显示内容和样式，包括title、buttons等属性。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ActionMenuSuccessResponse&gt; | 是 | 菜单响应结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;promptAction.ActionMenuSuccessResponse&gt; | 是 | 菜单响应结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 ## showActionMenu
 
@@ -618,8 +650,8 @@ showActionMenu(options: promptAction.ActionMenuOptions): Promise<promptAction.Ac
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 ## showDialog
 
@@ -644,14 +676,14 @@ showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback<prom
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | promptAction.ShowDialogOptions | 是 | 页面显示对话框信息描述。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ShowDialogSuccessResponse&gt; | 是 | 回调函数。弹出对话框成功，err为undefined， data为获取到的对话框响应结果，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;promptAction.ShowDialogSuccessResponse&gt; | 是 | 回调函数。弹出对话框成功，err为undefined， data为获取到的对话框响应结果，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 ## showDialog
 
@@ -687,8 +719,8 @@ showDialog(options: promptAction.ShowDialogOptions): Promise<promptAction.ShowDi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 ## showToast
 
@@ -718,8 +750,8 @@ showToast(options: promptAction.ShowToastOptions): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 ## updateCustomDialog
 
@@ -766,7 +798,13 @@ updateCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options
 updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions, partialUpdate?: boolean): Promise<void>
 ```
 
-更新content对应的Menu弹窗的样式。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 不支持更新showInSubWindow、preview、previewAnimationOptions、transition、onAppear、aboutToAppear、onDisappear、 &gt; aboutToDisappear、onWillAppear、onDidAppear、onWillDisappear和onDidDisappear。 &gt; &gt; - 支持mask通过设置MenuMaskType实现更新蒙层样式，不支持mask通过设置boolean实现蒙层从无到有或者从有到无的更新。
+更新content对应的Menu弹窗的样式。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 不支持更新showInSubWindow、preview、previewAnimationOptions、transition、onAppear、aboutToAppear、onDisappear、 &gt; aboutToDisappear、onWillAppear、onDidAppear、onWillDisappear和onDidDisappear。
+> 
+> - 支持mask通过设置MenuMaskType实现更新蒙层样式，不支持mask通过设置boolean实现蒙层从无到有或者从有到无的更新。
 
 **起始版本：** 18
 
@@ -783,7 +821,7 @@ updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | 是 | menu弹窗中显示的组件内容。 |
-| options | [MenuOptions](../../apis-na/arkts-apis/arkts-na-common-menuoptions-i.md) | 是 | menu弹窗样式。<br/> **说明：** <br/> 1. 不支持更新showInSubWindow、preview、previewAnimationOptions、transition、onAppear、aboutToAppear、onDisappear、 aboutToDisappear、onWillAppear、onDidAppear、onWillDisappear和onDidDisappear。<br/> 2. 支持mask通过设置MenuMaskType实现更新蒙层样式， 不支持mask通过设置boolean实现蒙层从无到有或者从有到无的更新。 |
+| options | [MenuOptions](../../apis-default/arkts-apis/arkts-common-menuoptions-i.md) | 是 | menu弹窗样式。<br/> **说明：** <br/> 1. 不支持更新showInSubWindow、preview、previewAnimationOptions、transition、onAppear、aboutToAppear、onDisappear、 aboutToDisappear、onWillAppear、onDidAppear、onWillDisappear和onDidDisappear。<br/> 2. 支持mask通过设置MenuMaskType实现更新蒙层样式， 不支持mask通过设置boolean实现蒙层从无到有或者从有到无的更新。 |
 | partialUpdate | boolean | 否 | menu弹窗更新方式，默认值为false。<br/> **说明：** <br/> 1. true为增量更新，保留当前值，更新options中的指定属性。 <br/> 2. false为全量更新，除options中的指定属性，其他属性恢复默认值。 |
 
 **返回值：**
@@ -806,7 +844,11 @@ updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,
 updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommonOptions, partialUpdate?: boolean): Promise<void>
 ```
 
-更新content对应的Popup弹窗的样式，使用Promise异步回调。 &gt; **说明：** &gt; &gt; 不支持更新showInSubWindow、focusable、onStateChange、onWillDismiss、transition。
+更新content对应的Popup弹窗的样式，使用Promise异步回调。
+
+> **说明：**
+> 
+> 不支持更新showInSubWindow、focusable、onStateChange、onWillDismiss、transition。
 
 **起始版本：** 18
 
@@ -823,7 +865,7 @@ updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommon
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | 是 | popup弹窗中显示的组件内容。 |
-| options | [PopupCommonOptions](../../apis-na/arkts-apis/arkts-na-common-popupcommonoptions-i.md) | 是 | popup弹窗样式。<br/> **说明：** <br/> 不支持更新showInSubWindow、focusable、onStateChange、onWillDismiss、transition。 |
+| options | [PopupCommonOptions](../../apis-default/arkts-apis/arkts-common-popupcommonoptions-i.md) | 是 | popup弹窗样式。<br/> **说明：** <br/> 不支持更新showInSubWindow、focusable、onStateChange、onWillDismiss、transition。 |
 | partialUpdate | boolean | 否 | popup弹窗更新方式，默认值为false。<br/> **说明：** <br/> true：增量更新，此时更新options中的指定属性，其它属性保留当前值。options中传入的属性为异常值或undefined时，不会对该属性进行更新。 false：全量更新，此时更新options中的指定属性，并且其他属性恢复默认值。 |
 
 **返回值：**

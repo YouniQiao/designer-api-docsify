@@ -2,6 +2,8 @@
 
 定义应用是否可以发起拖拽的枚举类型。仅在onDragStart调用时有效。
 
+@enum { number }
+
 **起始版本：** 23
 
 **ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。

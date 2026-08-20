@@ -1,0 +1,174 @@
+# SubHeaderV2
+
+The component is positioned at the top of list items or content sections, organizing lists or content into distinct groups. The subheader text summarizes the content within each respective section.
+
+This component is implemented based on [state management V2](../../../ui/state-management/arkts-state-management-overview.md#state-management-v2). Compared with [state management V1](../../../ui/state-management/arkts-state-management-overview.md#state-management-v1), V2 offers a higher level of observation and management over data objects beyond the component level. You can now more easily manage subheader data and states with greater flexibility, leading to faster UI updates.
+
+> **NOTE：**
+> 
+> - This component can be used only in the stage model.
+> 
+> - If the **SubHeaderV2** component has universal attributes and &gt; universal events configured, the compiler toolchain automatically &gt; generates an additional **__Common__** node and mounts the universal attributes and universal events on this node &gt; rather than the **SubHeaderV2** component itself. As a result, the configured universal attributes and universal &gt; events may fail to take effect or behave as intended. For this reason, avoid using universal attributes and events &gt; with the **SubHeaderV2** component.
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+<!--Device-unnamed-export declare struct SubHeaderV2--><!--Device-unnamed-export declare struct SubHeaderV2-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+```
+
+## build
+
+```TypeScript
+@Builder
+  build(): void
+```
+
+The method to build component.
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+<!--Device-SubHeaderV2-@Builder  build(): void--><!--Device-SubHeaderV2-@Builder  build(): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## icon
+
+```TypeScript
+@Param
+  readonly icon?: SubHeaderV2IconType
+```
+
+Icon.
+
+Default value: **undefined**
+
+**icon** takes effect only when **secondaryTitle** is used for **title**.
+
+**Type:** [SubHeaderV2IconType](../../apis-arkui/arkts-apis/arkts-arkui-subheaderv2icontype-t.md)
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SubHeaderV2-@Param  readonly icon?: SubHeaderV2IconType--><!--Device-SubHeaderV2-@Param  readonly icon?: SubHeaderV2IconType-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## operationItems
+
+```TypeScript
+@Param
+  readonly operationItems?: SubHeaderV2OperationItem[]
+```
+
+Items in the operation area.
+
+Default value: **undefined**
+
+**Type:** [SubHeaderV2OperationItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationitem-c.md)[]
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+<!--Device-SubHeaderV2-@Param  readonly operationItems?: SubHeaderV2OperationItem[]--><!--Device-SubHeaderV2-@Param  readonly operationItems?: SubHeaderV2OperationItem[]-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## operationType
+
+```TypeScript
+@Param
+  readonly operationType?: SubHeaderV2OperationType
+```
+
+Style of elements in the operation area.
+
+Default value: **SubHeaderV2OperationType.BUTTON**
+
+**Type:** [SubHeaderV2OperationType](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationtype-e.md)
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+<!--Device-SubHeaderV2-@Param  readonly operationType?: SubHeaderV2OperationType--><!--Device-SubHeaderV2-@Param  readonly operationType?: SubHeaderV2OperationType-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## select
+
+```TypeScript
+@Param
+  readonly select?: SubHeaderV2Select
+```
+
+Content and events for selection.
+
+Default value: **undefined**
+
+**Type:** [SubHeaderV2Select](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheaderv2-subheaderv2select-c.md)
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+<!--Device-SubHeaderV2-@Param  readonly select?: SubHeaderV2Select--><!--Device-SubHeaderV2-@Param  readonly select?: SubHeaderV2Select-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## title
+
+```TypeScript
+@Param
+  readonly title?: SubHeaderV2Title
+```
+
+Title of the subheader.
+
+Default value: **undefined**
+
+**Type:** [SubHeaderV2Title](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheaderv2-subheaderv2title-c.md)
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SubHeaderV2-@Param  readonly title?: SubHeaderV2Title--><!--Device-SubHeaderV2-@Param  readonly title?: SubHeaderV2Title-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## titleBuilder
+
+```TypeScript
+@BuilderParam
+  titleBuilder?: SubHeaderV2TitleBuilder
+```
+
+Custom content for the title area.
+
+Default value: **() =&gt; void**
+
+**Type:** [SubHeaderV2TitleBuilder](../../apis-arkui/arkts-apis/arkts-arkui-subheaderv2titlebuilder-t.md)
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+<!--Device-SubHeaderV2-@BuilderParam  titleBuilder?: SubHeaderV2TitleBuilder--><!--Device-SubHeaderV2-@BuilderParam  titleBuilder?: SubHeaderV2TitleBuilder-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

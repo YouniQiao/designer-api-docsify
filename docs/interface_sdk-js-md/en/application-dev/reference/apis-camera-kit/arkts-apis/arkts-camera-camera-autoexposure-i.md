@@ -1,6 +1,8 @@
 # AutoExposure
 
-**AutoExposure** inherits from [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md). It provides APIs related to auto exposure.
+*AutoExposure** inherits from [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md).
+
+It provides APIs related to auto exposure.
 
 **Inheritance/Implementation:** AutoExposure extends [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md)
 
@@ -23,7 +25,11 @@ import { cameraPicker } from '@kit.CameraKit';
 getExposureMode(): ExposureMode
 ```
 
-Obtains the exposure mode in use. &gt; **NOTE：**&gt; &gt; This API directly returns an invalid value if you have not set the exposure mode using &gt; [setExposureMode](#setexposuremode).
+Obtains the exposure mode in use.
+
+> **NOTE：**
+> 
+> This API directly returns an invalid value if you have not set the exposure mode using &gt; [setExposureMode](#setexposuremode).
 
 **Since:** 23
 
@@ -155,7 +161,9 @@ Listens to exposure state change events. This API uses an asynchronous callback 
 setExposureBias(exposureBias: double): void
 ```
 
-Sets an exposure compensation value (EV). Before the setting, you are advised to use [getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange) to obtain the supported values.
+Sets an exposure compensation value (EV).
+
+Before the setting, you are advised to use [getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange) to obtain the supported values.
 
 **Since:** 23
 
@@ -175,8 +183,8 @@ Sets an exposure compensation value (EV). Before the setting, you are advised to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
 
 ## setExposureMode
 
@@ -204,8 +212,8 @@ Sets an exposure mode. Before the setting, call [isExposureModeSupported](arkts-
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 19 and later |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 19 and later |
 
 ## setMeteringPoint
 
@@ -213,7 +221,9 @@ Sets an exposure mode. Before the setting, call [isExposureModeSupported](arkts-
 setMeteringPoint(point: Point): void
 ```
 
-Sets the metering point, which is the center point of the metering rectangle. The metering point must be in the coordinate system (0-1), where the top-left corner is {0, 0} and the bottom-right corner is {1, 1}. The coordinate system is based on the horizontal device direction with the device's charging port on the right. If the layout of the preview screen of an application is based on the vertical direction with the charging port on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate point after conversion is {y/h, 1-x/w}.
+Sets the metering point, which is the center point of the metering rectangle. The metering point must be in the coordinate system (0-1), where the top-left corner is {0, 0} and the bottom-right corner is {1, 1}.
+
+The coordinate system is based on the horizontal device direction with the device's charging port on the right. If the layout of the preview screen of an application is based on the vertical direction with the charging port on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate point after conversion is {y/h, 1-x/w}.
 
 **Since:** 23
 

@@ -1,6 +1,8 @@
 # WindowStage
 
-Implements a window manager, which manages each basic window unit, that is, [Window](arkts-arkui-window-n.md) instance. Before calling any of the following APIs, you must use [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) to create a WindowStage instance.
+Implements a window manager, which manages each basic window unit, that is, [Window](arkts-arkui-window-n.md) instance.
+
+Before calling any of the following APIs, you must use [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) to create a WindowStage instance.
 
 **Since:** 23
 
@@ -310,9 +312,9 @@ Whether the window supports the window rect auto-save.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 20 and later |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 20 and later |
 
 ## loadContent
 
@@ -949,9 +951,9 @@ Remove the starting window, it must be used with configuration "enable.remove.st
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window stage is not created or destroyed; 2. The main window is not created or destroyed; 3. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
 ## setCustomDensity
 
@@ -959,7 +961,11 @@ Remove the starting window, it must be used with configuration "enable.remove.st
 setCustomDensity(density: number): void
 ```
 
-Allows the main window of the application to customize its display size scale factor. Existing child windows and system windows do not immediately re-layout to match the main window's new scale factor. They will re-layout to reflect this change only when their layout information (such as position, size, and system scale size) changes. If both this API and [setDefaultDensityEnabled(true)](#setdefaultdensityenabled) are called, the setting from the last called API will be applied.
+Allows the main window of the application to customize its display size scale factor.
+
+Existing child windows and system windows do not immediately re-layout to match the main window's new scale factor. They will re-layout to reflect this change only when their layout information (such as position, size, and system scale size) changes.
+
+If both this API and [setDefaultDensityEnabled(true)](#setdefaultdensityenabled) are called, the setting from the last called API will be applied.
 
 **Since:** 15
 
@@ -992,7 +998,9 @@ Allows the main window of the application to customize its display size scale fa
 setCustomDensity(density: double, applyToSubWindow?: boolean): void
 ```
 
-Allows the main window of the application to customize its display size scale factor and control when child windows and system windows re-layout to match the main window. If both this API and [setDefaultDensityEnabled(true)](#setdefaultdensityenabled) are called, the setting from the last called API will be applied.
+Allows the main window of the application to customize its display size scale factor and control when child windows and system windows re-layout to match the main window.
+
+If both this API and [setDefaultDensityEnabled(true)](#setdefaultdensityenabled) are called, the setting from the last called API will be applied.
 
 **Since:** 23
 
@@ -1023,7 +1031,11 @@ Allows the main window of the application to customize its display size scale fa
 setDefaultDensityEnabled(enabled: boolean): void
 ```
 
-Sets whether the main window of the application uses the system's default density. Child windows and system windows will follow the main window's setting. Before calling this API, call [WindowStage.loadContent()](#loadcontent) to initialize the layout to ensure the correct call sequence. If this API is not called, the default density is not used. When the default density is not used, if [setCustomDensity()](#setcustomdensity) has been called, the window will be re-laid out according to the custom display size changes. Otherwise, it will be re-laid out according to the system display size changes.
+Sets whether the main window of the application uses the system's default density. Child windows and system windows will follow the main window's setting. Before calling this API, call [WindowStage.loadContent()](#loadcontent) to initialize the layout to ensure the correct call sequence.
+
+If this API is not called, the default density is not used.
+
+When the default density is not used, if [setCustomDensity()](#setcustomdensity) has been called, the window will be re-laid out according to the custom display size changes. Otherwise, it will be re-laid out according to the system display size changes.
 
 **Since:** 23
 
@@ -1084,9 +1096,9 @@ Sets the supported window modes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
 ## setSupportedWindowModes
 
@@ -1121,9 +1133,9 @@ Sets the supported window modes of the main window.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function setSupportedWindowModes can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. 2. Invalid parameter length. 3. Incorrect parameter format. |
 
 ## setWindowModal
@@ -1160,10 +1172,10 @@ Set the application modality of the windowStage.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. Possible cause: The window is not created or destroyed.<br>**Applicable version:** 20 and later |
 
 ## setWindowRectAutoSave
@@ -1200,10 +1212,10 @@ Set to automatically save the window rect.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
 ## setWindowRectAutoSave
 
@@ -1240,8 +1252,8 @@ Set to automatically save the window rect and whether to enable specifiedFlag. T
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function setWindowRectAutoSave can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 

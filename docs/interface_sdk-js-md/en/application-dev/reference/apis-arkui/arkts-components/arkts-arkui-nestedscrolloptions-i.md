@@ -2,6 +2,8 @@
 
 Define nested scroll options
 
+@interface NestedScrollOptions
+
 **Since:** 23
 
 <!--Device-unnamed-declare interface NestedScrollOptions--><!--Device-unnamed-declare interface NestedScrollOptions-End-->

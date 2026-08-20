@@ -526,7 +526,16 @@ filter.flyInFlyOutEffect(0.5, uiEffect.FlyMode.TOP)
 hdrBrightnessRatio(ratio: double): Filter
 ```
 
-Adds an HDR (High Dynamic Range) brightening effect to the component content. Nesting is not recommended, as forced nesting may cause overexposure. The brightening effect requires the HDR rendering pipeline to be enabled to take effect. In some scenarios, HDR cannot be enabled even if an attempt is made to trigger the HDR rendering pipeline, for example, when the device hardware specifications do not support HDR. The maximum supported brightness boost multiple is calculated as the device's current maximum brightness divided by its SDR reference white luminance. &gt; **NOTE：**&gt; &gt; Using the HDR brightening effect incurs certain performance and power consumption overhead. &gt; It is recommended to use it in scenarios where HDR images or videos already exist.
+Adds an HDR (High Dynamic Range) brightening effect to the component content. Nesting is not recommended, as forced nesting may cause overexposure.
+
+The brightening effect requires the HDR rendering pipeline to be enabled to take effect. In some scenarios, HDR cannot be enabled even if an attempt is made to trigger the HDR rendering pipeline, for example, when the device hardware specifications do not support HDR.
+
+The maximum supported brightness boost multiple is calculated as the device's current maximum brightness divided by its SDR reference white luminance.
+
+> **NOTE：**
+> 
+> Using the HDR brightening effect incurs certain performance and power consumption overhead.
+> It is recommended to use it in scenarios where HDR images or videos already exist.
 
 **Since:** 23
 
@@ -555,8 +564,8 @@ Adds an HDR (High Dynamic Range) brightening effect to the component content. Ne
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 24 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 20 - 23 |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 24 and later |
 
 **Examples**
 
@@ -639,7 +648,9 @@ Adds a dispersion effect controlled by a displacement map to the component conte
 maskTransition(alphaMask: Mask, factor?: double, inverse?: boolean): Filter
 ```
 
-Provides a Mask-based transition effect for the component content, which can be used for page transition animations, scene transition effects, etc. It is not recommended to use this effect during screen size changes, such as screen rotation, foldable screen opening/closing, etc.
+Provides a Mask-based transition effect for the component content, which can be used for page transition animations, scene transition effects, etc.
+
+It is not recommended to use this effect during screen size changes, such as screen rotation, foldable screen opening/closing, etc.
 
 **Since:** 23
 

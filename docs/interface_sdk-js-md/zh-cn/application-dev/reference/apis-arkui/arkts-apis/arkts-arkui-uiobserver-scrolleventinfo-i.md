@@ -2,6 +2,8 @@
 
 ScrollEvent info.
 
+@interface ScrollEventInfo
+
 **起始版本：** 12
 
 <!--Device-uiObserver-export interface ScrollEventInfo--><!--Device-uiObserver-export interface ScrollEventInfo-End-->
@@ -82,7 +84,7 @@ scrollEvent: ScrollEventType
 
 Changed ScrollEvent type.
 
-**类型：** [ScrollEventType](../../apis-na/arkts-apis/arkts-na-uiobserver-scrolleventtype-e.md)
+**类型：** [ScrollEventType](arkts-arkui-uiobserver-scrolleventtype-e.md)
 
 **起始版本：** 12
 

@@ -2,6 +2,8 @@
 
 FileUri represents the uri of the file.
 
+@extends uri.URI
+
 **Inheritance/Implementation:** FileUri extends uri.URI
 
 **Since:** 23
@@ -42,10 +44,10 @@ Constructor for obtaining the instance of the FileUri class.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
 | 13900005 | I/O error |
-| 14300002 | Invalid uri |
+| 13900020 | Invalid argument |
 | 13900042 | Unknown error |
+| 14300002 | Invalid uri |
 
 **Examples**
 

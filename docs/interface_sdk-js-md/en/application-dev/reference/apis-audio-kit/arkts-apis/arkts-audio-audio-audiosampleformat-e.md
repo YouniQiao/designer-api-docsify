@@ -56,7 +56,9 @@ Signed 16-bit integer, little endian.
 SAMPLE_FORMAT_S24LE = 2
 ```
 
-Signed 24-bit integer, little endian. Due to system restrictions, only some devices support this sampling format.
+Signed 24-bit integer, little endian.
+
+Due to system restrictions, only some devices support this sampling format.
 
 **Since:** 23
 
@@ -70,7 +72,9 @@ Signed 24-bit integer, little endian. Due to system restrictions, only some devi
 SAMPLE_FORMAT_S32LE = 3
 ```
 
-Signed 32-bit integer, little endian. Due to system restrictions, only some devices support this sampling format.
+Signed 32-bit integer, little endian.
+
+Due to system restrictions, only some devices support this sampling format.
 
 **Since:** 23
 
@@ -84,7 +88,9 @@ Signed 32-bit integer, little endian. Due to system restrictions, only some devi
 SAMPLE_FORMAT_F32LE = 4
 ```
 
-Signed 32-bit floating-point number, little endian. Due to system restrictions, only some devices support this sampling format.
+Signed 32-bit floating-point number, little endian.
+
+Due to system restrictions, only some devices support this sampling format.
 
 **Since:** 23
 

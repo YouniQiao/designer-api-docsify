@@ -39,7 +39,7 @@ Get size and position of the bar.
 
 | Type | Description |
 | --- | --- |
-| [Frame](arkts-arkui-graphics-frame-i.md) | The size and position of bar in vp relative to window. |
+| [Frame](../../apis-default/arkts-apis/arkts-graphics-frame-i.md) | The size and position of bar in vp relative to window. |
 
 ## onBarRectChange
 
@@ -63,7 +63,7 @@ When size and position of the bar changed, callback will be called.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Frame](arkts-arkui-graphics-frame-i.md)&gt; | Yes | Callback that param contains the Frame. The parameters of the callback function cannot be undefined or null. |
+| callback | [Callback](../../apis-default/arkts-apis/arkts-callback-t.md)&lt;[Frame](../../apis-default/arkts-apis/arkts-graphics-frame-i.md)&gt; | Yes | Callback that param contains the Frame. The parameters of the callback function cannot be undefined or null. |
 
 ## setBackgroundColor
 

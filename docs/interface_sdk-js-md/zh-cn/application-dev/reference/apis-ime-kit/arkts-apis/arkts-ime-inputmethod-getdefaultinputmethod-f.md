@@ -17,6 +17,8 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function getDefaultInputMethod(): InputMethodProperty
 ```
 
+@brief 获取默认输入法。
+
 **起始版本：** 23
 
 <!--Device-inputMethod-function getDefaultInputMethod(): InputMethodProperty--><!--Device-inputMethod-function getDefaultInputMethod(): InputMethodProperty-End-->

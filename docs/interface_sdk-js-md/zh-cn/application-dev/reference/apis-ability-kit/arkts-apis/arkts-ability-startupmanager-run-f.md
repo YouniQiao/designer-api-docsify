@@ -12,7 +12,11 @@ import { startupManager } from '@kit.AbilityKit';
 function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>
 ```
 
-执行启动框架启动任务或加载so文件。 &gt; **说明：** &gt; &gt; 本接口不支持执行feature类型HAP中的启动任务，如需要使用相关能力请调用 &gt; [startupManager.run](#run) &gt; 接口。
+执行启动框架启动任务或加载so文件。
+
+> **说明：**
+> 
+> 本接口不支持执行feature类型HAP中的启动任务，如需要使用相关能力请调用 &gt; [startupManager.run](#run) &gt; 接口。
 
 **起始版本：** 23
 
@@ -40,11 +44,11 @@ function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [28800004](../errorcode-ability.md#28800004-执行启动任务超时) | Running startup tasks timeout. |
-| [28800003](../errorcode-ability.md#28800003-运行启动任务时发生错误) | An error occurred while running the startup tasks. |
-| [28800002](../errorcode-ability.md#28800002-启动任务之间存在循环依赖关系) | The startup tasks have circular dependencies. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [28800001](../errorcode-ability.md#28800001-启动任务或其依赖项不存在) | Startup task or its dependency not found. |
+| [28800002](../errorcode-ability.md#28800002-启动任务之间存在循环依赖关系) | The startup tasks have circular dependencies. |
+| [28800003](../errorcode-ability.md#28800003-运行启动任务时发生错误) | An error occurred while running the startup tasks. |
+| [28800004](../errorcode-ability.md#28800004-执行启动任务超时) | Running startup tasks timeout. |
 
 **示例**
 
@@ -111,11 +115,11 @@ function run(startupTasks: Array<string>, context: common.AbilityStageContext, c
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [28800004](../errorcode-ability.md#28800004-执行启动任务超时) | Running startup tasks timeout. |
-| [28800003](../errorcode-ability.md#28800003-运行启动任务时发生错误) | An error occurred while running the startup tasks. |
-| [28800002](../errorcode-ability.md#28800002-启动任务之间存在循环依赖关系) | The startup tasks have circular dependencies. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [28800001](../errorcode-ability.md#28800001-启动任务或其依赖项不存在) | Startup task or its dependency not found. |
+| [28800002](../errorcode-ability.md#28800002-启动任务之间存在循环依赖关系) | The startup tasks have circular dependencies. |
+| [28800003](../errorcode-ability.md#28800003-运行启动任务时发生错误) | An error occurred while running the startup tasks. |
+| [28800004](../errorcode-ability.md#28800004-执行启动任务超时) | Running startup tasks timeout. |
 
 **示例**
 

@@ -12,7 +12,11 @@ import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
 function off(type: 'BundleStatusChange', callback: AsyncCallback<string>): void
 ```
 
-取消注册Callback。 &gt; **说明：** &gt; &gt; 从API version 8开始支持，从API version 9开始废弃，建议使用 &gt; [off](arkts-ability-bundlemonitor-offbundlechangedevent-f-sys.md#off_bundlechangedevent) &gt; 替代。
+取消注册Callback。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用 &gt; [off](arkts-ability-bundlemonitor-offbundlechangedevent-f-sys.md#off_bundlechangedevent) &gt; 替代。
 
 **起始版本：** 8
 
@@ -33,7 +37,7 @@ function off(type: 'BundleStatusChange', callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'BundleStatusChange' | 是 | 指示应执行命令，只支持BundleStatusChange。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 程序启动作为入参的回调函数，返回正确结果或错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 程序启动作为入参的回调函数，返回正确结果或错误信息。 |
 
 
 ## off('BundleStatusChange')
@@ -42,7 +46,11 @@ function off(type: 'BundleStatusChange', callback: AsyncCallback<string>): void
 function off(type: 'BundleStatusChange'): Promise<string>
 ```
 
-取消注册Callback。 &gt; **说明：** &gt; &gt; 从API version 8开始支持，从API version 9开始废弃，建议使用 &gt; [off](arkts-ability-bundlemonitor-offbundlechangedevent-f-sys.md#off_bundlechangedevent) &gt; 替代。
+取消注册Callback。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用 &gt; [off](arkts-ability-bundlemonitor-offbundlechangedevent-f-sys.md#off_bundlechangedevent) &gt; 替代。
 
 **起始版本：** 8
 

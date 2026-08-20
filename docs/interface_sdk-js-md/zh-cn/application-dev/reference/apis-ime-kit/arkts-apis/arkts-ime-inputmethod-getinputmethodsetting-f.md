@@ -17,6 +17,8 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function getInputMethodSetting(): InputMethodSetting
 ```
 
+@brief 获取客户端设置实例[InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md)。
+
 **起始版本：** 8
 
 **废弃版本：** 9

@@ -14,7 +14,11 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 declare function rmdirSync(path: string): void
 ```
 
-Removes a directory and all its subdirectories and files synchronously. &gt; **NOTE：**&gt; &gt; This API can be used to remove a single file. However, you are advised to use **unlinkSync** instead.
+Removes a directory and all its subdirectories and files synchronously.
+
+> **NOTE：**
+> 
+> This API can be used to remove a single file. However, you are advised to use **unlinkSync** instead.
 
 **Since:** 9
 
@@ -34,16 +38,16 @@ Removes a directory and all its subdirectories and files synchronously. &gt; **N
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900032 | Directory not empty |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
-| 13900018 | Not a directory |
+| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900014 | Device or resource busy |
-| 13900030 | File name too long |
-| 13900042 | Unknown error |
-| 13900011 | Out of memory |
+| 13900018 | Not a directory |
+| 13900020 | Invalid argument |
 | 13900027 | Read-only file system |
+| 13900030 | File name too long |
+| 13900032 | Directory not empty |
+| 13900042 | Unknown error |
 

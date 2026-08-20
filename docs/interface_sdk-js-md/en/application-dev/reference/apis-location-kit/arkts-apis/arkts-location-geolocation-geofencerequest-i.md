@@ -2,6 +2,8 @@
 
 Configuring parameters in geo fence requests
 
+@interface GeofenceRequest
+
 **Since:** 8
 
 **Deprecated since:** 9

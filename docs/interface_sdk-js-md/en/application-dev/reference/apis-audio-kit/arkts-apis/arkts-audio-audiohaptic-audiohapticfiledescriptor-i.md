@@ -1,6 +1,10 @@
 # AudioHapticFileDescriptor
 
-Describes the audio-haptic file descriptor. &gt; **NOTE：**&gt; &gt; Ensure that **fd** is an available file descriptor and the values of **offset** and **length** are correct.
+Describes the audio-haptic file descriptor.
+
+> **NOTE：**
+> 
+> Ensure that **fd** is an available file descriptor and the values of **offset** and **length** are correct.
 
 **Since:** 23
 

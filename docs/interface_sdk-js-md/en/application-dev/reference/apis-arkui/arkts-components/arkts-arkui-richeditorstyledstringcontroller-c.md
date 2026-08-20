@@ -93,7 +93,13 @@ Registers the callback for the text content change. This callback is triggered o
 setStyledString(styledString: StyledString): void
 ```
 
-Sets the styled string displayed in the **RichEditor** component. &gt; **NOTE：**&gt; &gt; - When this interface is called, the StyledString of the rich text component is fully replaced and rendered &gt; again. &gt; &gt; - When the content exceeds the component area, the component automatically scrolls up until the content is &gt; visible at the end.
+Sets the styled string displayed in the **RichEditor** component.
+
+> **NOTE：**
+> 
+> - When this interface is called, the StyledString of the rich text component is fully replaced and rendered &gt; again.
+> 
+> - When the content exceeds the component area, the component automatically scrolls up until the content is &gt; visible at the end.
 
 **Since:** 12
 

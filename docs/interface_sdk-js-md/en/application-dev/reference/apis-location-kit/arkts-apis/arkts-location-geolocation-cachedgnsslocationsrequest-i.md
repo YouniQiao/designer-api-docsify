@@ -2,6 +2,8 @@
 
 Parameters for requesting to report cache location information
 
+@interface CachedGnssLocationsRequest
+
 **Since:** 8
 
 **Deprecated since:** 9

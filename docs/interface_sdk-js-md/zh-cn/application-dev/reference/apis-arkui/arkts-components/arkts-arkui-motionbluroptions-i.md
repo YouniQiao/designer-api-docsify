@@ -2,6 +2,8 @@
 
 运动模糊选项。
 
+@interface MotionBlurOptions
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare interface MotionBlurOptions--><!--Device-unnamed-declare interface MotionBlurOptions-End-->

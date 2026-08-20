@@ -21,7 +21,9 @@ import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExten
 onAccessibilityConnect(): void
 ```
 
-Callback invoked when the accessibility service is successfully connected. When the user enables AccessibilityExtensionAbility, the system service calls this API after the connection is established to notify the ability that it has been successfully connected. You can implement service logic initialization in this method. This API can be overridden as required.
+Callback invoked when the accessibility service is successfully connected.
+
+When the user enables AccessibilityExtensionAbility, the system service calls this API after the connection is established to notify the ability that it has been successfully connected. You can implement service logic initialization in this method. This API can be overridden as required.
 
 **Since:** 23
 
@@ -58,7 +60,9 @@ class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
 onAccessibilityDisconnect(): void
 ```
 
-Callback invoked when the accessibility service is successfully disconnected. When the user disables AccessibilityExtensionAbility, the system service calls this API after the disconnection is completed. You can implement resource reclamation and service exit operations in this method. This API can be overridden as required.
+Callback invoked when the accessibility service is successfully disconnected.
+
+When the user disables AccessibilityExtensionAbility, the system service calls this API after the disconnection is completed. You can implement resource reclamation and service exit operations in this method. This API can be overridden as required.
 
 **Since:** 23
 

@@ -1,6 +1,10 @@
 # LongPressGesture
 
-用于触发长按手势事件，触发长按手势的最少手指数为1，默认最短长按时间为500毫秒。可配置duration参数控制最短长按时长。 &gt; **说明：** &gt; &gt; 部分设备会优先响应系统的双指长按手势，导致应用的双指长按手势不生效。
+用于触发长按手势事件，触发长按手势的最少手指数为1，默认最短长按时间为500毫秒。可配置duration参数控制最短长按时长。
+
+> **说明：**
+> 
+> 部分设备会优先响应系统的双指长按手势，导致应用的双指长按手势不生效。
 
 **继承/实现关系：** LongPressGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
 
@@ -18,7 +22,13 @@
 static $_instantiate(factory: () => LongPressGesture, value?: LongPressGestureHandlerOptions): LongPressGesture
 ```
 
-创建长按手势对象。 当组件默认支持可拖拽时，如Text、TextInput、TextArea、HyperLink、Image和RichEditor等组件。长按手势与拖拽会出现冲突，事件优先级如下： 当长按触发时间小于500毫秒时，系统优先响应长按事件而非拖拽事件。 当长按触发时间达到或超过500毫秒时，系统优先响应拖拽事件而非长按事件。
+创建长按手势对象。
+
+当组件默认支持可拖拽时，如Text、TextInput、TextArea、HyperLink、Image和RichEditor等组件。长按手势与拖拽会出现冲突，事件优先级如下：
+
+当长按触发时间小于500毫秒时，系统优先响应长按事件而非拖拽事件。
+
+当长按触发时间达到或超过500毫秒时，系统优先响应拖拽事件而非长按事件。
 
 **起始版本：** 23
 

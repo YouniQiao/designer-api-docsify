@@ -1,4 +1,4 @@
-# DeviceNodeInfo(跨设备唤醒与消息传输)（系统接口）
+# DeviceNodeInfo（系统接口）
 
 设备节点信息，包括networkId、设备名称、设备类型标识符、近场状态和UDID。
 

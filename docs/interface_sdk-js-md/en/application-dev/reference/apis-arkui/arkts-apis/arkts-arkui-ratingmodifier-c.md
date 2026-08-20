@@ -2,6 +2,8 @@
 
 Defines Rating Modifier
 
+@extends RatingAttribute @implements AttributeModifier&lt;RatingAttribute&gt;
+
 **Inheritance/Implementation:** RatingModifier extends RatingAttribute and implements AttributeModifier<RatingAttribute>
 
 **Since:** 20
@@ -32,5 +34,5 @@ Defines the normal update attribute function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instance | [RatingAttribute](../../apis-na/arkts-apis/arkts-na-rating-ratingattribute-i.md) | Yes |  |
+| instance | [RatingAttribute](../../apis-default/arkts-components/arkts-rating-attribute.md) | Yes |  |
 

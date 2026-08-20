@@ -1,6 +1,14 @@
 # ExceptionPromptV2
 
-异常提示V2组件，适用于有异常需要提示异常内容的情况。 该组件基于[状态管理（V2）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)实现，相较于 [状态管理（V1）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v1)，状态管理（V2）增强了对数据对象的深度观察与管理能力，不再局限于组 件层级。借助状态管理（V2），开发者可以通过该组件更灵活地控制异常提示的数据和状态，实现更高效的用户界面刷新。 &gt; **说明：** &gt; &gt; - 该组件仅可在Stage模型下使用。 &gt; &gt; - 如果ExceptionPromptV2设置通用属性和 &gt; 通用事件，编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到 &gt; ExceptionPromptV2本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议ExceptionPromptV2设置通用属性和通用事件。
+异常提示V2组件，适用于有异常需要提示异常内容的情况。
+
+该组件基于[状态管理（V2）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)实现，相较于 [状态管理（V1）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v1)，状态管理（V2）增强了对数据对象的深度观察与管理能力，不再局限于组 件层级。借助状态管理（V2），开发者可以通过该组件更灵活地控制异常提示的数据和状态，实现更高效的用户界面刷新。
+
+> **说明：**
+> 
+> - 该组件仅可在Stage模型下使用。
+> 
+> - 如果ExceptionPromptV2设置通用属性和 &gt; 通用事件，编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到 &gt; ExceptionPromptV2本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议ExceptionPromptV2设置通用属性和通用事件。
 
 **起始版本：** 26.0.0
 
@@ -23,7 +31,7 @@ import { MarginTypeV2, PromptOptionsV2, PromptOptionsV2Config, ExceptionPromptV2
 
 点击右侧图标按钮的回调函数。缺省时不执行任何操作。
 
-**类型：** [OnActionTextClickCallback](../../apis-na/arkts-apis/arkts-na-onactiontextclickcallback-t.md)
+**类型：** [OnActionTextClickCallback](../../apis-default/arkts-apis/arkts-onactiontextclickcallback-t.md)
 
 **起始版本：** 26.0.0
 
@@ -44,7 +52,7 @@ import { MarginTypeV2, PromptOptionsV2, PromptOptionsV2Config, ExceptionPromptV2
 
 点击左侧提示文本的回调函数，缺省时不执行任何操作。
 
-**类型：** [OnTipClickCallback](../../apis-na/arkts-apis/arkts-na-ontipclickcallback-t.md)
+**类型：** [OnTipClickCallback](../../apis-default/arkts-apis/arkts-ontipclickcallback-t.md)
 
 **起始版本：** 26.0.0
 
@@ -65,7 +73,7 @@ import { MarginTypeV2, PromptOptionsV2, PromptOptionsV2Config, ExceptionPromptV2
 
 指定当前异常提示的配置信息。
 
-**类型：** [PromptOptionsV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-exceptionpromptv2-promptoptionsv2-c.md)
+**类型：** [PromptOptionsV2](../../apis-default/arkts-apis/arkts-arkui-advanced-exceptionpromptv2-promptoptionsv2-c.md)
 
 **起始版本：** 26.0.0
 

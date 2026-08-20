@@ -1,6 +1,18 @@
 # NavPathStack
 
-A navigation controller that manages all child pages in the **Navigation** component with a stack data structure and provides stack operation methods for controlling page transitions. Starting from API version 12, **NavPathStack** is inheritable. Objects of a derived class can replace those of the base class. For details, see [Example 10](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-10-defining-a-derived-class-of-navpathstack). &gt; **NOTE：**&gt; &gt; 1. When multiple navigation controller operations are triggered in succession, the intermediate states are &gt; bypassed, and only the final result of the operations is rendered. &gt; For example, if a Page1 is popped and then immediately pushed back, the system considers that the states before and &gt; after these operations are identical, leading to no actual change in the stack. To ensure that a new instance of &gt; Page1 is pushed onto the stack despite the consecutive operations, use the **NEW_INSTANCE** mode. &gt; &gt; 2. Avoid relying on lifecycle event listeners as a means to manage the navigation controller. &gt; &gt; 3. When the application is in the background, calling stack operation APIs of **NavPathStack** will trigger a &gt; refresh upon the application's return to the foreground.
+A navigation controller that manages all child pages in the **Navigation** component with a stack data structure and provides stack operation methods for controlling page transitions.
+
+Starting from API version 12, **NavPathStack** is inheritable. Objects of a derived class can replace those of the base class. For details, see [Example 10](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-10-defining-a-derived-class-of-navpathstack).
+
+> **NOTE：**
+> 
+> 1. When multiple navigation controller operations are triggered in succession, the intermediate states are &gt; bypassed, and only the final result of the operations is rendered.
+
+> For example, if a Page1 is popped and then immediately pushed back, the system considers that the states before and &gt; after these operations are identical, leading to no actual change in the stack. To ensure that a new instance of &gt; Page1 is pushed onto the stack despite the consecutive operations, use the **NEW_INSTANCE** mode.
+> 
+> 2. Avoid relying on lifecycle event listeners as a means to manage the navigation controller.
+> 
+> 3. When the application is in the background, calling stack operation APIs of **NavPathStack** will trigger a &gt; refresh upon the application's return to the foreground.
 
 **Since:** 10
 
@@ -199,7 +211,9 @@ Obtains the parameter information of all **NavDestination** pages with the speci
 getParent(): NavPathStack | null
 ```
 
-Obtains the parent navigation path stack. When a **Navigation** component is nested (directly or indirectly) inside another **Navigation** component, the **NavPathStack** of the inner component can obtain the **NavPathStack** of the outer component.
+Obtains the parent navigation path stack.
+
+When a **Navigation** component is nested (directly or indirectly) inside another **Navigation** component, the **NavPathStack** of the inner component can obtain the **NavPathStack** of the outer component.
 
 **Since:** 11
 
@@ -303,7 +317,27 @@ Moves the first navigation destination page that matches **name** from the botto
 pop(animated?: boolean): NavPathInfo | undefined
 ```
 
-Pops the top element out of the routing stack. &gt; **NOTE：**&gt; &gt; When multiple navigation controller methods are called consecutively, any pages popped during the sequence are &gt; cached. If a page with the same name is later pushed, the system reuses the cached instance instead of &gt; instantiating a new page. &gt; Example: &gt; pathStack: NavPathStack = new NavPathStack() &gt; //The initial page stack is [A]. &gt; pathStack.pop() &gt; pathStack.pushPath(A) &gt; pathStack.pushPath(B) &gt; // The page stack after the operation is [A B]. &gt; In this case, page A is reused, and the new creation process is not performed.
+Pops the top element out of the routing stack.
+
+> **NOTE：**
+> 
+> When multiple navigation controller methods are called consecutively, any pages popped during the sequence are &gt; cached. If a page with the same name is later pushed, the system reuses the cached instance instead of &gt; instantiating a new page.
+
+> Example:
+
+> pathStack: NavPathStack = new NavPathStack()
+
+> //The initial page stack is [A].
+
+> pathStack.pop()
+
+> pathStack.pushPath(A)
+
+> pathStack.pushPath(B)
+
+> // The page stack after the operation is [A B].
+
+> In this case, page A is reused, and the new creation process is not performed.
 
 **Since:** 10
 
@@ -333,7 +367,27 @@ Pops the top element out of the routing stack. &gt; **NOTE：**&gt; &gt; When mu
 pop(result: Object, animated?: boolean): NavPathInfo | undefined
 ```
 
-Pops the top element out of the routing stack and invokes the **onPop** callback to pass the page processing result. &gt; **NOTE：**&gt; &gt; When multiple navigation controller methods are called consecutively, any pages popped during the sequence are &gt; cached. If a page with the same name is later pushed, the system reuses the cached instance instead of &gt; instantiating a new page. &gt; Example: &gt; pathStack: NavPathStack = new NavPathStack() &gt; //The initial page stack is [A]. &gt; pathStack.pop() &gt; pathStack.pushPath(A) &gt; pathStack.pushPath(B) &gt; // The page stack after the operation is [A B]. &gt; In this case, page A is reused, and the new creation process is not performed.
+Pops the top element out of the routing stack and invokes the **onPop** callback to pass the page processing result.
+
+> **NOTE：**
+> 
+> When multiple navigation controller methods are called consecutively, any pages popped during the sequence are &gt; cached. If a page with the same name is later pushed, the system reuses the cached instance instead of &gt; instantiating a new page.
+
+> Example:
+
+> pathStack: NavPathStack = new NavPathStack()
+
+> //The initial page stack is [A].
+
+> pathStack.pop()
+
+> pathStack.pushPath(A)
+
+> pathStack.pushPath(B)
+
+> // The page stack after the operation is [A B].
+
+> In this case, page A is reused, and the new creation process is not performed.
 
 **Since:** 11
 
@@ -517,7 +571,11 @@ Preloads navigation destination page specified by **info**. The preload page wil
 pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>
 ```
 
-Pushes the navigation destination page specified by **info** onto the routing stack. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; You are not advised to use stack operations in aboutToAppear, as the &gt; page has not yet finished building at this stage, which may lead to issues such as white screens or navigation &gt; failures.
+Pushes the navigation destination page specified by **info** onto the routing stack. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> You are not advised to use stack operations in aboutToAppear, as the &gt; page has not yet finished building at this stage, which may lead to issues such as white screens or navigation &gt; failures.
 
 **Since:** 11
 
@@ -546,8 +604,8 @@ Pushes the navigation destination page specified by **info** onto the routing st
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
@@ -557,7 +615,11 @@ Pushes the navigation destination page specified by **info** onto the routing st
 pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-Pushes the navigation destination page specified by **info** onto the routing stack. This API uses a promise to return the result. Depending on the [LaunchMode](arkts-arkui-launchmode-e.md) specified in the **options** parameter, different behaviors will be implemented. &gt; **NOTE：**&gt; &gt; You are not advised to use stack operations in aboutToAppear, as the &gt; page has not yet finished building at this stage, which may lead to issues such as white screens or navigation &gt; failures.
+Pushes the navigation destination page specified by **info** onto the routing stack. This API uses a promise to return the result. Depending on the [LaunchMode](arkts-arkui-launchmode-e.md) specified in the **options** parameter, different behaviors will be implemented.
+
+> **NOTE：**
+> 
+> You are not advised to use stack operations in aboutToAppear, as the &gt; page has not yet finished building at this stage, which may lead to issues such as white screens or navigation &gt; failures.
 
 **Since:** 12
 
@@ -586,8 +648,8 @@ Pushes the navigation destination page specified by **info** onto the routing st
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
@@ -597,7 +659,11 @@ Pushes the navigation destination page specified by **info** onto the routing st
 pushDestinationByName(name: string, param: Object, animated?: boolean): Promise<void>
 ```
 
-Pushes the navigation destination page specified by **name**, with the data specified by **param**, to the routing stack. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; You are not advised to use stack operations in aboutToAppear, as the &gt; page has not yet finished building at this stage, which may lead to issues such as white screens or navigation &gt; failures.
+Pushes the navigation destination page specified by **name**, with the data specified by **param**, to the routing stack. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> You are not advised to use stack operations in aboutToAppear, as the &gt; page has not yet finished building at this stage, which may lead to issues such as white screens or navigation &gt; failures.
 
 **Since:** 11
 
@@ -627,8 +693,8 @@ Pushes the navigation destination page specified by **name**, with the data spec
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
@@ -638,7 +704,11 @@ Pushes the navigation destination page specified by **name**, with the data spec
 pushDestinationByName(name: string, param: Object, onPop: import('../api/@ohos.base').Callback<PopInfo>, animated?: boolean): Promise<void>
 ```
 
-Pushes the navigation destination page specified by **name**, with the data specified by **param**, to the routing stack. This API uses the **onPop** callback to handle the result returned when the page is popped out of the stack. It uses a promise to return the result. &gt; **NOTE：**&gt; &gt; You are not advised to use stack operations in aboutToAppear, as the &gt; page has not yet finished building at this stage, which may lead to issues such as white screens or navigation &gt; failures.
+Pushes the navigation destination page specified by **name**, with the data specified by **param**, to the routing stack. This API uses the **onPop** callback to handle the result returned when the page is popped out of the stack. It uses a promise to return the result.
+
+> **NOTE：**
+> 
+> You are not advised to use stack operations in aboutToAppear, as the &gt; page has not yet finished building at this stage, which may lead to issues such as white screens or navigation &gt; failures.
 
 **Since:** 11
 
@@ -669,8 +739,8 @@ Pushes the navigation destination page specified by **name**, with the data spec
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
@@ -843,7 +913,7 @@ Removes the navigation destination page specified by **name** from the routing s
 removeByNavDestinationId(navDestinationId: string): boolean
 ```
 
-Removes the navigation destination page specified by **navDestinationId** from the routing stack. **navDestinationId** can be obtained from the onReady callback of **NavDestination** or from [NavDestinationInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-navdestinationinfo-i.md).
+Removes the navigation destination page specified by **navDestinationId** from the routing stack. **navDestinationId** can be obtained from the onReady callback of **NavDestination** or from [NavDestinationInfo](../arkts-apis/arkts-arkui-uiobserver-navdestinationinfo-i.md).
 
 **Since:** 12
 
@@ -902,8 +972,8 @@ Performs a replacement operation on the routing stack. This API uses a promise t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
@@ -1013,7 +1083,17 @@ Sets the interception callback for navigation page redirection.
 setPathStack(pathStack: Array<NavPathInfo>, animated?: boolean): void
 ```
 
-Updates the array of route page information in this routing stack to the specified content and performs route transitions. &gt; **NOTE：**&gt; &gt; 1. You can add or remove pages in batches based on the existing stack. Among the pages added in batches, only the &gt; visible pages will trigger creation; other pages, although added to the stack, will not be created immediately. &gt; They will only be created when they become visible. &gt; &gt; 2. For routing stacks updated through the batch push functionality, the lifecycle events of each page are &gt; triggered from the top to the bottom of the stack. This differs from the triggering order of other push APIs, &gt; which are triggered from the bottom to the top of the stack. &gt; &gt; 3. You can operate existing pages using **navDestinationId** (unique ID) in [NavPathInfo](arkts-arkui-navpathinfo-c.md). &gt; This ID is system-generated and globally unique (it can be obtained using the &gt; [getPathStack](#getpathstack) API and should not be manually reassigned). If the specified ID &gt; does not exist in the current routing stack, it indicates a new page. If it exists and the corresponding name is &gt; the same, it indicates reuse of an existing page.
+Updates the array of route page information in this routing stack to the specified content and performs route transitions.
+
+> **NOTE：**
+> 
+> 1. You can add or remove pages in batches based on the existing stack. Among the pages added in batches, only the &gt; visible pages will trigger creation; other pages, although added to the stack, will not be created immediately.
+> They will only be created when they become visible.
+> 
+> 2. For routing stacks updated through the batch push functionality, the lifecycle events of each page are &gt; triggered from the top to the bottom of the stack. This differs from the triggering order of other push APIs, &gt; which are triggered from the bottom to the top of the stack.
+> 
+> 3. You can operate existing pages using **navDestinationId** (unique ID) in [NavPathInfo](arkts-arkui-navpathinfo-c.md).
+> This ID is system-generated and globally unique (it can be obtained using the &gt; [getPathStack](#getpathstack) API and should not be manually reassigned). If the specified ID &gt; does not exist in the current routing stack, it indicates a new page. If it exists and the corresponding name is &gt; the same, it indicates reuse of an existing page.
 
 **Since:** 19
 

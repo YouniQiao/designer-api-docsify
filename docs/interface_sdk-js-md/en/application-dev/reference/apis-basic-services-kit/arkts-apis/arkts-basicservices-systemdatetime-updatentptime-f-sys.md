@@ -32,8 +32,8 @@ Updates the NTP time from the NTP server This API returns the result asynchronou
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [13000001](../errorcode-time.md#13000001-network-or-os-error) | Network connection error or OS error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [13000001](../errorcode-time.md#13000001-network-or-os-error) | Network connection error or OS error. |
 
 **Examples**
 

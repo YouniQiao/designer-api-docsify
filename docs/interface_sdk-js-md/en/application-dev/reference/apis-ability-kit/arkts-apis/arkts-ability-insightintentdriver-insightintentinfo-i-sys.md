@@ -182,7 +182,11 @@ Intent name.
 readonly intentType: InsightIntentType
 ```
 
-Type of intent defined by the intent decorator. **NOTE：**For intents developed using a configuration file, the return value of this field is @InsightIntentEntry by default.
+Type of intent defined by the intent decorator.
+
+**NOTE：**
+
+For intents developed using a configuration file, the return value of this field is @InsightIntentEntry by default.
 
 **Type:** [InsightIntentType](arkts-ability-insightintentdriver-insightintenttype-e-sys.md)
 
@@ -342,7 +346,11 @@ Standard intent name. If an intent in the standard intent list matches both the 
 readonly subIntentInfo: LinkIntentInfo | PageIntentInfo | FunctionIntentInfo | FormIntentInfo | EntryIntentInfo
 ```
 
-Intent information for specific intent decorators. **NOTE：**For intents developed using a configuration file, the return value of this field is [EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md) by default.
+Intent information for specific intent decorators.
+
+**NOTE：**
+
+For intents developed using a configuration file, the return value of this field is [EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md) by default.
 
 **Type:** [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md) \| [PageIntentInfo](arkts-ability-insightintentdriver-pageintentinfo-i-sys.md) \| [FunctionIntentInfo](arkts-ability-insightintentdriver-functionintentinfo-i.md) \| [FormIntentInfo](arkts-ability-insightintentdriver-formintentinfo-i-sys.md) \| [EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md)
 

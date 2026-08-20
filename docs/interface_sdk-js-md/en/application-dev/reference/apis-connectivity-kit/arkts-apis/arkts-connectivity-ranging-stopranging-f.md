@@ -35,10 +35,10 @@ Stops ongoing ranging operations. If no target device is specified, stops rangin
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 34900052 | The specified type of ranging service is not supported. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 34900054 | The parameter value does not meet specifications. |
-| 34900050 | The device has not initiated ranging. |
-| [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) | Internal system error. For example, Internal object is invalid. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| 34900050 | The device has not initiated ranging. |
+| 34900052 | The specified type of ranging service is not supported. |
+| 34900054 | The parameter value does not meet specifications. |
+| [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) | Internal system error. For example, Internal object is invalid. |
 

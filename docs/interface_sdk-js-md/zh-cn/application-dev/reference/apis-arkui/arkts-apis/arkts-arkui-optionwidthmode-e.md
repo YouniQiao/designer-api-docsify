@@ -2,6 +2,8 @@
 
 Decide whether the width of select menu fit the trigger or content
 
+@enum { string }
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare enum OptionWidthMode--><!--Device-unnamed-declare enum OptionWidthMode-End-->

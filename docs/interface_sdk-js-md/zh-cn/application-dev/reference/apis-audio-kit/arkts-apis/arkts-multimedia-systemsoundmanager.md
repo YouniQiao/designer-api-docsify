@@ -60,8 +60,8 @@ import { systemSoundManager } from '@kit.AudioKit';
 | [SystemSoundError](arkts-audio-systemsoundmanager-systemsounderror-e-sys.md) | 枚举，系统声音错误类型。 |
 | [SystemToneType](arkts-audio-systemsoundmanager-systemtonetype-e-sys.md) | 枚举，系统铃声类型。 |
 | [ToneCustomizedType](arkts-audio-systemsoundmanager-tonecustomizedtype-e-sys.md) | 枚举，铃声自定义类型。 |
-| [ToneHapticsFeature](arkts-audio-systemsoundmanager-tonehapticsfeature-e-sys.md) | 枚举，系统振动风格定义。 \| 名称 \| 值 \| 说明 \| \| ----------------------------- \| -- \| -------------------- \| \| STANDARD\| 0 \| 标准振动风格。 \| \| GENTLE \| 1 \| 轻柔振动风格。 \| |
-| [ToneHapticsMode](arkts-audio-systemsoundmanager-tonehapticsmode-e-sys.md) | 枚举，系统铃音场景的振动模式。 \| 名称 \| 值 \| 说明 \| \| ----------------------------- \| -- \| -------------------- \| \| NONE \| 0 \| 无振动模式。 \| \| SYNC \| 1 \| 与铃音同步模式。 \| \| NON_SYNC \| 2 \| 非同步模式。 \| |
+| [ToneHapticsFeature](arkts-audio-systemsoundmanager-tonehapticsfeature-e-sys.md) | 枚举，系统振动风格定义。 |
+| [ToneHapticsMode](arkts-audio-systemsoundmanager-tonehapticsmode-e-sys.md) | 枚举，系统铃音场景的振动模式。 |
 | [ToneHapticsType](arkts-audio-systemsoundmanager-tonehapticstype-e-sys.md) | 枚举，系统铃音的振动类型。 |
 <!--DelEnd-->
 

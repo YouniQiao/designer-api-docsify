@@ -1,6 +1,10 @@
 # ZoomQuery
 
-ZoomQuery provides APIs to query the zoom feature of a device camera, including the API to obtain the supported zoom ratio range. &gt; **NOTE：**&gt; &gt; - This interface was first introduced in API version 12. In this version, a compatibility change was made that &gt; preserved the initial version information of inner elements. As a result, you might see outer element's @since &gt; version number being higher than that of the inner elements. However, this discrepancy does not affect the &gt; functionality of the interface.
+ZoomQuery provides APIs to query the zoom feature of a device camera, including the API to obtain the supported zoom ratio range.
+
+> **NOTE：**
+> 
+> - This interface was first introduced in API version 12. In this version, a compatibility change was made that &gt; preserved the initial version information of inner elements. As a result, you might see outer element's
 
 **Since:** 23
 

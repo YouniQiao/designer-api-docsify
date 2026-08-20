@@ -1,6 +1,6 @@
 # DistanceMeasurementResponse（系统接口）
 
-测距接口执行完成后的回调结果。
+测距接口执行完成后的回调结果。 @interface DistanceMeasurementResponse
 
 **起始版本：** 23
 

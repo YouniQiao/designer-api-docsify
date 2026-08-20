@@ -19,7 +19,9 @@ Describes the object returned after the callback is triggered when an image is s
 componentHeight: number
 ```
 
-Height of the component. Unit: px
+Height of the component.
+
+Unit: px
 
 **Type:** number
 
@@ -39,7 +41,9 @@ Height of the component. Unit: px
 componentWidth: number
 ```
 
-Width of the component. Unit: px
+Width of the component.
+
+Unit: px
 
 **Type:** number
 
@@ -59,7 +63,13 @@ Width of the component. Unit: px
 contentHeight: number
 ```
 
-Actual rendered height of the image. Unit: px **NOTE：**This parameter is valid only when the return value of **loadingStatus** is **1**.
+Actual rendered height of the image.
+
+Unit: px
+
+**NOTE：**
+
+This parameter is valid only when the return value of **loadingStatus** is **1**.
 
 **Type:** number
 
@@ -79,7 +89,13 @@ Actual rendered height of the image. Unit: px **NOTE：**This parameter is valid
 contentOffsetX: number
 ```
 
-Offset of the rendered content relative to the component on the x-axis. Unit: px **NOTE：**This parameter is valid only when the return value of **loadingStatus** is **1**.
+Offset of the rendered content relative to the component on the x-axis.
+
+Unit: px
+
+**NOTE：**
+
+This parameter is valid only when the return value of **loadingStatus** is **1**.
 
 **Type:** number
 
@@ -99,7 +115,13 @@ Offset of the rendered content relative to the component on the x-axis. Unit: px
 contentOffsetY: number
 ```
 
-Offset of the rendered content relative to the component on the y-axis Unit: px **NOTE：**This parameter is valid only when the return value of **loadingStatus** is **1**.
+Offset of the rendered content relative to the component on the y-axis
+
+Unit: px
+
+**NOTE：**
+
+This parameter is valid only when the return value of **loadingStatus** is **1**.
 
 **Type:** number
 
@@ -119,7 +141,13 @@ Offset of the rendered content relative to the component on the y-axis Unit: px 
 contentWidth: number
 ```
 
-Actual rendered width of the image. Unit: px **NOTE：**This parameter is valid only when the return value of **loadingStatus** is **1**.
+Actual rendered width of the image.
+
+Unit: px
+
+**NOTE：**
+
+This parameter is valid only when the return value of **loadingStatus** is **1**.
 
 **Type:** number
 
@@ -139,7 +167,9 @@ Actual rendered width of the image. Unit: px **NOTE：**This parameter is valid 
 height: number
 ```
 
-Height of the image. Unit: px
+Height of the image.
+
+Unit: px
 
 **Type:** number
 
@@ -159,7 +189,11 @@ Height of the image. Unit: px
 loadingStatus: number
 ```
 
-Loading status of the image. **NOTE：**If the return value is **0**, the image is successfully loaded. If the return value is **1**, the image is successfully decoded.
+Loading status of the image.
+
+**NOTE：**
+
+If the return value is **0**, the image is successfully loaded. If the return value is **1**, the image is successfully decoded.
 
 **Type:** number
 
@@ -179,7 +213,9 @@ Loading status of the image. **NOTE：**If the return value is **0**, the image 
 width: number
 ```
 
-Width of the image. Unit: px
+Width of the image.
+
+Unit: px
 
 **Type:** number
 

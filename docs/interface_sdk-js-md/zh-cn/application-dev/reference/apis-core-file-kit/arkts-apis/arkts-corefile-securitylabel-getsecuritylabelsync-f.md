@@ -36,12 +36,12 @@ function getSecurityLabelSync(path: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900037 | No data available |
-| 13900007 | Arg list too long |
 | 13900001 | Operation not permitted |
+| 13900007 | Arg list too long |
 | 13900015 | File exists |
+| 13900020 | Invalid argument |
 | 13900025 | No space left on device |
+| 13900037 | No data available |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 

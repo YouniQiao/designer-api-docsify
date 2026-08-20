@@ -192,8 +192,8 @@ Write an attribute to xml element.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200063](../errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) | Illegal position for xml. |
 | [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200063](../errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) | Illegal position for xml. |
 | [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 **Examples**
@@ -315,8 +315,8 @@ Writes xml declaration with encoding. For example: &lt;?xml version="1.0" encodi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200063](../errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) | Illegal position for xml. |
 | [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200063](../errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) | Illegal position for xml. |
 
 **Examples**
 

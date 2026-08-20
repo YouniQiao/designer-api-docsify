@@ -2,6 +2,8 @@
 
 Type of accessibility hover event.
 
+@enum {number}
+
 **Since:** 12
 
 <!--Device-unnamed-declare enum AccessibilityHoverType--><!--Device-unnamed-declare enum AccessibilityHoverType-End-->

@@ -72,7 +72,9 @@ enableClassification?: boolean
 filterLimit?: long
 ```
 
-通知过滤范围。默认值为0。取值范围包括： - 0：不进行任何过滤，订阅全部通知。 - 1：将渠道类型为[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md)且 [userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md)为空的通知过滤掉。 - 2：将渠道类型为[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md)且 [userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md)不为空的通知过滤掉。
+通知过滤范围。默认值为0。取值范围包括：
+
+- 0：不进行任何过滤，订阅全部通知。 - 1：将渠道类型为[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md)且 [userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md)为空的通知过滤掉。 - 2：将渠道类型为[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md)且 [userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md)不为空的通知过滤掉。
 
 **类型：** long
 

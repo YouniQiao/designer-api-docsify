@@ -2,6 +2,8 @@
 
 Error of form.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-formError-enum FormError--><!--Device-formError-enum FormError-End-->

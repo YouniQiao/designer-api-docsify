@@ -50,7 +50,7 @@ Draw the custom span.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | Yes |  |
+| context | [DrawContext](../../apis-default/arkts-apis/arkts-graphics-drawcontext-c.md) | Yes |  |
 | drawInfo | [CustomSpanDrawInfo](arkts-arkui-styledstring-customspandrawinfo-i.md) | Yes |  |
 
 ## onMeasure

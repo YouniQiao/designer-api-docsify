@@ -1,4 +1,4 @@
-# URLSearchParams(URL字符串解析)
+# URLSearchParams
 
 URLSearchParams接口定义了一些处理URL查询字符串的实用方法，从API version 9开始废弃，建议使用[URLParams](arkts-arkts-url-urlparams-c.md)。
 
@@ -40,7 +40,7 @@ import { url } from '@kit.ArkTS';
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[string, string]&gt; | 返回一个迭代器，迭代器的每一项为包含name和value的[string, string]数组。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, string]&gt; | 返回一个迭代器，迭代器的每一项为包含name和value的[string, string]数组。 |
 
 **示例**
 
@@ -109,7 +109,7 @@ URLSearchParams的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| init | string[][] \| Record&lt;string, string&gt; \| string \| [URLSearchParams](arkts-arkts-url-urlsearchparams-c.md) | 否 | 入参对象。 <br/>- string[][]：字符串二维数组，每个内部数组包含两个元素，分别为键名和键值。 <br/>- Record&lt;string, string&gt;：对象列表。 <br/>- string：字符串，需遵循URL查询参数格式，如'key=value&key2=value2'。 <br/>- URLSearchParams：对象。 <br/>- 默认值：undefined。 |
+| init | string[][] \| [Record](arkts-arkts-map-record-c.md)&lt;string, string&gt; \| string \| [URLSearchParams](arkts-arkts-url-urlsearchparams-c.md) | 否 | 入参对象。 <br/>- string[][]：字符串二维数组，每个内部数组包含两个元素，分别为键名和键值。 <br/>- Record&lt;string, string&gt;：对象列表。 <br/>- string：字符串，需遵循URL查询参数格式，如'key=value&key2=value2'。 <br/>- URLSearchParams：对象。 <br/>- 默认值：undefined。 |
 
 **示例**
 
@@ -175,7 +175,7 @@ entries(): IterableIterator<[string, string]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[string, string]&gt; | 返回一个ES6的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, string]&gt; | 返回一个ES6的迭代器。 |
 
 **示例**
 
@@ -361,7 +361,7 @@ keys(): IterableIterator<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;string&gt; | 返回一个所有键值对的name的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; | 返回一个所有键值对的name的迭代器。 |
 
 **示例**
 
@@ -489,7 +489,7 @@ values(): IterableIterator<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;string&gt; | 返回一个所有键值对的value的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; | 返回一个所有键值对的value的迭代器。 |
 
 **示例**
 

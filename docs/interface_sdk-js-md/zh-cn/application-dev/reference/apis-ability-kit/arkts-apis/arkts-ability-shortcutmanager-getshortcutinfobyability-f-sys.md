@@ -46,15 +46,15 @@ function getShortcutInfoByAbility(bundleName: string, moduleName: string, abilit
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | The specified app index is invalid. |
-| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user id is not found. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle is not found. |
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified module is not found. |
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability is not found. |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle is not found. |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user id is not found. |
+| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
+| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | The specified app index is invalid. |
 
 **示例**
 

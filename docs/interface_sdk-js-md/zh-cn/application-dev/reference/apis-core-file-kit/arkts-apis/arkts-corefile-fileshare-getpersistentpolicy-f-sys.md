@@ -42,12 +42,12 @@ function getPersistentPolicy(tokenID: int): Promise<Array<PolicyInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid tokenID |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| 13900001 | Operation not permitted. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 13900001 | Operation not permitted. |
 | 13900011 | Out of memory |
+| 13900020 | Invalid tokenID |
 
 **示例**
 

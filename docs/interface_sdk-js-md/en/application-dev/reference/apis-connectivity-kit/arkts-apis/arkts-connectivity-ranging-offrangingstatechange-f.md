@@ -34,7 +34,7 @@ Unsubscribe from ranging state change events.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) | Internal system error. For example, Internal object is invalid. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

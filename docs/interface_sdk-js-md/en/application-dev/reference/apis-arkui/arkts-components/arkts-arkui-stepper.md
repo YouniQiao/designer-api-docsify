@@ -1,8 +1,12 @@
 # Stepper
 
-The **Stepper** component provides a step navigator, suitable for guiding users through a step-by-step task completion process. > **NOTE**
+The **Stepper** component provides a step navigator, suitable for guiding users through a step-by-step task completion process.
 
-## Child Components Only the child component StepperItem is supported.
+> **NOTE**
+
+## Child Components
+
+Only the child component StepperItem is supported.
 
 ## Stepper
 
@@ -10,7 +14,9 @@ The **Stepper** component provides a step navigator, suitable for guiding users 
 Stepper(value?: { index?: number })
 ```
 
-Creates a **Stepper** component. &gt; **NOTE：**
+Creates a **Stepper** component.
+
+> **NOTE：**
 
 **Since:** 8
 

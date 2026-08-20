@@ -2,6 +2,8 @@
 
 WLAN连接状态枚举。
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-wifiManager-export enum ConnState--><!--Device-wifiManager-export enum ConnState-End-->

@@ -40,7 +40,7 @@ parameters?: Record<string, string>
 
 配置连接所需的额外信息。
 
-**类型：** Record&lt;string, string&gt;
+**类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string&gt;
 
 **起始版本：** 23
 

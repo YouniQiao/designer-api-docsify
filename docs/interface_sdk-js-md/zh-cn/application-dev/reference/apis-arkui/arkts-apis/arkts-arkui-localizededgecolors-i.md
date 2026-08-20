@@ -2,6 +2,8 @@
 
 Defines the localized border color property.
 
+@interface LocalizedEdgeColors
+
 **起始版本：** 12
 
 <!--Device-unnamed-declare interface LocalizedEdgeColors--><!--Device-unnamed-declare interface LocalizedEdgeColors-End-->

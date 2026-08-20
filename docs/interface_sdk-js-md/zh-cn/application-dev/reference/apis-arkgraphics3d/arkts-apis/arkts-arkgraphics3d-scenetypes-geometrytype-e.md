@@ -2,6 +2,8 @@
 
 几何类型枚举，用于指定不同的几何类型。
 
+@enum { int }
+
 **起始版本：** 23
 
 <!--Device-unnamed-export enum GeometryType--><!--Device-unnamed-export enum GeometryType-End-->

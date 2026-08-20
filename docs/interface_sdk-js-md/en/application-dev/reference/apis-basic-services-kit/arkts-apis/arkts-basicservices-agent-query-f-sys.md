@@ -36,11 +36,11 @@ Queries specified task details. Creates a group based on GroupConfig
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. |
-| [21900006](../errorcode-request.md#21900006-task-not-found) | Task removed or not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900006](../errorcode-request.md#21900006-task-not-found) | Task removed or not found. |
 
 
 ## query
@@ -77,9 +77,9 @@ Queries specified task details.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. |
-| [21900006](../errorcode-request.md#21900006-task-not-found) | Task removed or not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900006](../errorcode-request.md#21900006-task-not-found) | Task removed or not found. |
 

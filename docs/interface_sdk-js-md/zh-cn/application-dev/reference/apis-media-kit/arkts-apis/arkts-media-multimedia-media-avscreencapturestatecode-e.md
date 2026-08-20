@@ -168,7 +168,11 @@ SCREENCAPTURE_STATE_STOPPED_BY_USER_SWITCHES = 10
 SCREENCAPTURE_STATE_PAUSED_BY_USER = 11
 ```
 
-录屏已被用户暂停。 26.0.0 **模型约束：** 此接口仅可在Stage模型下使用。
+录屏已被用户暂停。
+
+26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **起始版本：** 26.0.0
 
@@ -184,7 +188,11 @@ SCREENCAPTURE_STATE_PAUSED_BY_USER = 11
 SCREENCAPTURE_STATE_RESUMED_BY_USER = 12
 ```
 
-录屏已被用户恢复。 26.0.0 **模型约束：** 此接口仅可在Stage模型下使用。
+录屏已被用户恢复。
+
+26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **起始版本：** 26.0.0
 
@@ -200,7 +208,11 @@ SCREENCAPTURE_STATE_RESUMED_BY_USER = 12
 SCREENCAPTURE_STATE_PAUSED_BY_APP = 13
 ```
 
-录屏已被应用程序暂停。 26.0.0 **模型约束：** 此接口仅可在Stage模型下使用。
+录屏已被应用程序暂停。
+
+26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **起始版本：** 26.0.0
 
@@ -216,7 +228,11 @@ SCREENCAPTURE_STATE_PAUSED_BY_APP = 13
 SCREENCAPTURE_STATE_RESUMED_BY_APP = 14
 ```
 
-录屏已被应用程序恢复。 26.0.0 **模型约束：** 此接口仅可在Stage模型下使用。
+录屏已被应用程序恢复。
+
+26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **起始版本：** 26.0.0
 

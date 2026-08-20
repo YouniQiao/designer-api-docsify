@@ -4,6 +4,8 @@
 type CommandDataType = int | string | boolean
 ```
 
+@brief 表示私有数据类型，接口参数具体类型根据其功能而定。
+
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-type CommandDataType = int | string | boolean--><!--Device-inputMethodEngine-type CommandDataType = int | string | boolean-End-->

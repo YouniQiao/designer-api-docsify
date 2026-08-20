@@ -2,6 +2,8 @@
 
 平面几何类型，继承自GeometryDefinition。
 
+@extends GeometryDefinition
+
 **继承/实现关系：** PlaneGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md)
 
 **起始版本：** 23

@@ -1,4 +1,4 @@
-# IDataSourcePrefetching(Prefetching)
+# IDataSourcePrefetching
 
 继承自IDataSource。实现该接口，提供具备预取能力的数据源。
 

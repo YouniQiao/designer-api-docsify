@@ -1,4 +1,4 @@
-# AbstractProperty(System API)
+# AbstractProperty
 
 Provides a reference to properties stored in [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md).
 
@@ -79,7 +79,11 @@ ref1?.info(); //  ref1.info()='PropA'
 set(newValue: T): void
 ```
 
-Updates the data of the referenced property in [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md). The value of **newValue** must be of the **T** type and can be **null** or **undefined**. &gt; **NOTE：**&gt; Since API version 12, AppStorage and LocalStorage support the Map, Set, Date types, as well as **null**, &gt; **undefined**, and union types.
+Updates the data of the referenced property in [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md). The value of **newValue** must be of the **T** type and can be **null** or **undefined**.
+
+> **NOTE：**
+
+> Since API version 12, AppStorage and LocalStorage support the Map, Set, Date types, as well as **null**, &gt; **undefined**, and union types.
 
 **Since:** 12
 

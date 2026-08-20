@@ -1,4 +1,4 @@
-# Decimal(Defines the Decimal for ArkTS. Decimal support arbitrary precision decimal operation.)
+# Decimal
 
 An arbitrary-precision Decimal type
 
@@ -2175,8 +2175,8 @@ Configures the 'global' settings for this particular Decimal constructor.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `DecimalConfig.properties` is out of range. |
+| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable |
 
 ## sign
 
@@ -2456,7 +2456,9 @@ Return a new Decimal whose value is `x` minus `y`, rounded to `precision` signif
 static sum(...n: Value[]): Decimal
 ```
 
-Return a new Decimal whose value is the sum of the arguments, rounded to `precision` significant digits using rounding mode `rounding`. Only the result is rounded, not the intermediate calculations.
+Return a new Decimal whose value is the sum of the arguments, rounded to `precision` significant digits using rounding mode `rounding`.
+
+Only the result is rounded, not the intermediate calculations.
 
 **Since:** 23
 

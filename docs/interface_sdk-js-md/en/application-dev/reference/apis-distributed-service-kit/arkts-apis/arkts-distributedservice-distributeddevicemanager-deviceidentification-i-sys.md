@@ -2,6 +2,8 @@
 
 Struct for distributed device identification.
 
+@interface DeviceIdentification
+
 **Since:** 24
 
 <!--Device-distributedDeviceManager-interface DeviceIdentification--><!--Device-distributedDeviceManager-interface DeviceIdentification-End-->

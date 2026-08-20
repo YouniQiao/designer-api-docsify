@@ -2,6 +2,8 @@
 
 Describes the CPU usage of a thread.
 
+@interface ThreadCpuUsage
+
 **Since:** 23
 
 <!--Device-hidebug-interface ThreadCpuUsage--><!--Device-hidebug-interface ThreadCpuUsage-End-->

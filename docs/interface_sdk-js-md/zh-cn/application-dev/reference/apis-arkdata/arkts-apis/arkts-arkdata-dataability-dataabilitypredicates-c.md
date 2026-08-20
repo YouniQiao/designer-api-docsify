@@ -39,7 +39,7 @@ and(): DataAbilityPredicates
 ```TypeScript
 dataAbilityPredicates.equalTo("NAME", "Lisa")
     .and()
-    .equalTo("SALARY", 200.5)
+    .equalTo("SALARY", 200.5);
 ```
 
 ## beginWrap
@@ -70,7 +70,7 @@ dataAbilityPredicates.equalTo("NAME", "lisi")
     .equalTo("AGE", 18)
     .or()
     .equalTo("SALARY", 200.5)
-    .endWrap()
+    .endWrap();
 ```
 
 ## beginsWith
@@ -79,7 +79,9 @@ dataAbilityPredicates.equalTo("NAME", "lisi")
 beginsWith(field: string, value: string): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据类型为string且值以指定字符串开头的字段。 此方法类似于SQL语句的“value%”。
+配置谓词以匹配数据类型为string且值以指定字符串开头的字段。
+
+此方法类似于SQL语句的“value%”。
 
 **起始版本：** 7
 
@@ -103,7 +105,7 @@ beginsWith(field: string, value: string): DataAbilityPredicates
 **示例**
 
 ```TypeScript
-dataAbilityPredicates.beginsWith("NAME", "os")
+dataAbilityPredicates.beginsWith("NAME", "os");
 ```
 
 ## between
@@ -137,7 +139,7 @@ between(field: string, low: ValueType, high: ValueType): DataAbilityPredicates
 **示例**
 
 ```TypeScript
-dataAbilityPredicates.between("AGE", 10, 50)
+dataAbilityPredicates.between("AGE", 10, 50);
 ```
 
 ## contains
@@ -170,7 +172,7 @@ contains(field: string, value: string): DataAbilityPredicates
 **示例**
 
 ```TypeScript
-dataAbilityPredicates.contains("NAME", "os")
+dataAbilityPredicates.contains("NAME", "os");
 ```
 
 ## distinct
@@ -196,7 +198,7 @@ distinct(): DataAbilityPredicates
 **示例**
 
 ```TypeScript
-dataAbilityPredicates.equalTo("NAME", "Rose").distinct()
+dataAbilityPredicates.equalTo("NAME", "Rose").distinct();
 ```
 
 ## endWrap
@@ -227,7 +229,7 @@ dataAbilityPredicates.equalTo("NAME", "lisi")
     .equalTo("AGE", 18)
     .or()
     .equalTo("SALARY", 200.5)
-    .endWrap()
+    .endWrap();
 ```
 
 ## endsWith
@@ -236,7 +238,9 @@ dataAbilityPredicates.equalTo("NAME", "lisi")
 endsWith(field: string, value: string): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据类型为string且值以指定字符串结尾的字段。 此方法类似于SQL语句的“%value”。
+配置谓词以匹配数据类型为string且值以指定字符串结尾的字段。
+
+此方法类似于SQL语句的“%value”。
 
 **起始版本：** 7
 
@@ -260,7 +264,7 @@ endsWith(field: string, value: string): DataAbilityPredicates
 **示例**
 
 ```TypeScript
-dataAbilityPredicates.endsWith("NAME", "se")
+dataAbilityPredicates.endsWith("NAME", "se");
 ```
 
 ## equalTo
@@ -269,7 +273,9 @@ dataAbilityPredicates.endsWith("NAME", "se")
 equalTo(field: string, value: ValueType): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据，数据的指定字段数据类型为ValueType且值等于指定值。 此方法类似于SQL语句的“=”。
+配置谓词以匹配数据，数据的指定字段数据类型为ValueType且值等于指定值。
+
+此方法类似于SQL语句的“=”。
 
 **起始版本：** 7
 
@@ -293,7 +299,7 @@ equalTo(field: string, value: ValueType): DataAbilityPredicates
 **示例**
 
 ```TypeScript
-dataAbilityPredicates.equalTo("NAME", "lisi")
+dataAbilityPredicates.equalTo("NAME", "lisi");
 ```
 
 ## glob
@@ -326,13 +332,13 @@ glob(field: string, value: string): DataAbilityPredicates
 **示例**
 
 ```TypeScript
-dataAbilityPredicates.glob("NAME", "?h*g")
+dataAbilityPredicates.glob("NAME", "?h*g");
 
 // 仅可匹配到"NAME"字段值为"Lisa"
-dataAbilityPredicates.glob("NAME", "Lisa")
+dataAbilityPredicates.glob("NAME", "Lisa");
 
 // 仅可以匹配到"NAME"字段值为"lisa"
-dataAbilityPredicates.glob("NAME", "lisa")
+dataAbilityPredicates.glob("NAME", "lisa");
 ```
 
 ## greaterThan
@@ -365,7 +371,7 @@ greaterThan(field: string, value: ValueType): DataAbilityPredicates
 **示例**
 
 ```TypeScript
-dataAbilityPredicates.greaterThan("AGE", 18)
+dataAbilityPredicates.greaterThan("AGE", 18);
 ```
 
 ## greaterThanOrEqualTo
@@ -398,7 +404,7 @@ greaterThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 **示例**
 
 ```TypeScript
-dataAbilityPredicates.greaterThanOrEqualTo("AGE", 18)
+dataAbilityPredicates.greaterThanOrEqualTo("AGE", 18);
 ```
 
 ## groupBy
@@ -430,7 +436,7 @@ groupBy(fields: Array<string>): DataAbilityPredicates
 **示例**
 
 ```TypeScript
-dataAbilityPredicates.groupBy(["AGE", "NAME"])
+dataAbilityPredicates.groupBy(["AGE", "NAME"]);
 ```
 
 ## in
@@ -463,7 +469,7 @@ in(field: string, value: Array<ValueType>): DataAbilityPredicates
 **示例**
 
 ```TypeScript
-dataAbilityPredicates.in("AGE", [18, 20])
+dataAbilityPredicates.in("AGE", [18, 20]);
 ```
 
 ## indexedBy
@@ -525,12 +531,12 @@ export default class EntryAbility extends UIAbility {
     }
 
     // 创建索引
-    const SQL_CREATE_INDEX = 'CREATE INDEX SALARY_INDEX ON EMPLOYEE(SALARY)'
+    const SQL_CREATE_INDEX = 'CREATE INDEX SALARY_INDEX ON EMPLOYEE(SALARY)';
     await store.executeSql(SQL_CREATE_INDEX);
     // ...
 
-    let dataAbilityPredicates = new dataAbility.DataAbilityPredicates()
-    dataAbilityPredicates.indexedBy("SALARY_INDEX")
+    let dataAbilityPredicates = new dataAbility.DataAbilityPredicates();
+    dataAbilityPredicates.indexedBy("SALARY_INDEX");
 
     // ...
   }
@@ -566,7 +572,7 @@ isNotNull(field: string): DataAbilityPredicates
 **示例**
 
 ```TypeScript
-dataAbilityPredicates.isNotNull("NAME")
+dataAbilityPredicates.isNotNull("NAME");
 ```
 
 ## isNull
@@ -598,7 +604,7 @@ isNull(field: string): DataAbilityPredicates
 **示例**
 
 ```TypeScript
-dataAbilityPredicates.isNull("NAME")
+dataAbilityPredicates.isNull("NAME");
 ```
 
 ## lessThan
@@ -631,7 +637,7 @@ lessThan(field: string, value: ValueType): DataAbilityPredicates
 **示例**
 
 ```TypeScript
-dataAbilityPredicates.lessThan("AGE", 20)
+dataAbilityPredicates.lessThan("AGE", 20);
 ```
 
 ## lessThanOrEqualTo
@@ -664,7 +670,7 @@ lessThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 **示例**
 
 ```TypeScript
-dataAbilityPredicates.lessThanOrEqualTo("AGE", 20)
+dataAbilityPredicates.lessThanOrEqualTo("AGE", 20);
 ```
 
 ## like
@@ -673,7 +679,9 @@ dataAbilityPredicates.lessThanOrEqualTo("AGE", 20)
 like(field: string, value: string): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据类型为string且值类似于指定字符串的字段。 此方法类似于SQL语句“like”。
+配置谓词以匹配数据类型为string且值类似于指定字符串的字段。
+
+此方法类似于SQL语句“like”。
 
 **起始版本：** 7
 
@@ -697,7 +705,7 @@ like(field: string, value: string): DataAbilityPredicates
 **示例**
 
 ```TypeScript
-dataAbilityPredicates.like("NAME", "%os%")
+dataAbilityPredicates.like("NAME", "%os%");
 ```
 
 ## limitAs
@@ -729,7 +737,7 @@ limitAs(value: number): DataAbilityPredicates
 **示例**
 
 ```TypeScript
-dataAbilityPredicates.equalTo("NAME", "Rose").limitAs(3)
+dataAbilityPredicates.equalTo("NAME", "Rose").limitAs(3);
 ```
 
 ## notBetween
@@ -763,7 +771,7 @@ notBetween(field: string, low: ValueType, high: ValueType): DataAbilityPredicate
 **示例**
 
 ```TypeScript
-dataAbilityPredicates.notBetween("AGE", 10, 50)
+dataAbilityPredicates.notBetween("AGE", 10, 50);
 ```
 
 ## notEqualTo
@@ -772,7 +780,9 @@ dataAbilityPredicates.notBetween("AGE", 10, 50)
 notEqualTo(field: string, value: ValueType): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据，数据的指定字段数据类型为ValueType且不等于指定值。 此方法类似于SQL语句的“!=”。
+配置谓词以匹配数据，数据的指定字段数据类型为ValueType且不等于指定值。
+
+此方法类似于SQL语句的“!=”。
 
 **起始版本：** 7
 
@@ -796,7 +806,7 @@ notEqualTo(field: string, value: ValueType): DataAbilityPredicates
 **示例**
 
 ```TypeScript
-dataAbilityPredicates.notEqualTo("NAME", "lisi")
+dataAbilityPredicates.notEqualTo("NAME", "lisi");
 ```
 
 ## notIn
@@ -829,7 +839,7 @@ notIn(field: string, value: Array<ValueType>): DataAbilityPredicates
 **示例**
 
 ```TypeScript
-dataAbilityPredicates.notIn("NAME", ["Lisa", "Rose"])
+dataAbilityPredicates.notIn("NAME", ["Lisa", "Rose"]);
 ```
 
 ## offsetAs
@@ -862,7 +872,7 @@ offsetAs(rowOffset: number): DataAbilityPredicates
 
 ```TypeScript
 // 跳过前三条数据，显示后续三条数据
-dataAbilityPredicates.equalTo("NAME", "Rose").offsetAs(3).limitAs(3)
+dataAbilityPredicates.equalTo("NAME", "Rose").offsetAs(3).limitAs(3);
 ```
 
 ## or
@@ -871,7 +881,9 @@ dataAbilityPredicates.equalTo("NAME", "Rose").offsetAs(3).limitAs(3)
 or(): DataAbilityPredicates
 ```
 
-将或条件添加到谓词中。 此方法类似于SQL语句“or”。
+将或条件添加到谓词中。
+
+此方法类似于SQL语句“or”。
 
 **起始版本：** 7
 
@@ -890,7 +902,7 @@ or(): DataAbilityPredicates
 ```TypeScript
 dataAbilityPredicates.equalTo("NAME", "Lisa")
     .or()
-    .equalTo("NAME", "Rose")
+    .equalTo("NAME", "Rose");
 ```
 
 ## orderByAsc
@@ -923,7 +935,7 @@ orderByAsc(field: string): DataAbilityPredicates
 
 ```TypeScript
 // 先按"NAME"字段排序，相同时按"AGE"字段排序，其次按"SALARY"排序
-dataAbilityPredicates.orderByAsc("NAME").orderByAsc("AGE").orderByAsc("SALARY")
+dataAbilityPredicates.orderByAsc("NAME").orderByAsc("AGE").orderByAsc("SALARY");
 ```
 
 ## orderByDesc
@@ -956,6 +968,6 @@ orderByDesc(field: string): DataAbilityPredicates
 
 ```TypeScript
 // 优先按"AGE"排序，相同时按"SALARY"排序
-dataAbilityPredicates.orderByDesc("AGE").orderByDesc("SALARY")
+dataAbilityPredicates.orderByDesc("AGE").orderByDesc("SALARY");
 ```
 

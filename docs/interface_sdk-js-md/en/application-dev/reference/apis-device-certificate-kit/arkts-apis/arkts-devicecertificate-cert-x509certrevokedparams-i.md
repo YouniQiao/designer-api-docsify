@@ -22,7 +22,11 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 allowDownloadCrl?: boolean
 ```
 
-Indicates whether to allow CRL download. The default value is false. true: The CDP extension of the certificate is used to download the CRL. false: Do not attempt to download the CRL. &gt; **NOTE：**&gt; &gt; Skip download if matching CRL exists in crls.
+Indicates whether to allow CRL download. The default value is false. true: The CDP extension of the certificate is used to download the CRL. false: Do not attempt to download the CRL.
+
+> **NOTE：**
+> 
+> Skip download if matching CRL exists in crls.
 
 **Type:** boolean
 
@@ -44,7 +48,11 @@ Indicates whether to allow CRL download. The default value is false. true: The C
 allowOcspCheckOnline?: boolean
 ```
 
-Indicates whether to allow online OCSP check. The default value is false. - **true**: performs online OCSP check, that is, attempts to obtain the OCSP URL from the AIA extension of the certificate and send a request to obtain a response; - **false**: does not perform online OCSP check. &gt; **NOTE：**&gt; &gt; Skip online OCSP check if a matching OCSP response is found in ocspResponses.
+Indicates whether to allow online OCSP check. The default value is false. - **true**: performs online OCSP check, that is, attempts to obtain the OCSP URL from the AIA extension of the certificate and send a request to obtain a response; - **false**: does not perform online OCSP check.
+
+> **NOTE：**
+> 
+> Skip online OCSP check if a matching OCSP response is found in ocspResponses.
 
 **Type:** boolean
 

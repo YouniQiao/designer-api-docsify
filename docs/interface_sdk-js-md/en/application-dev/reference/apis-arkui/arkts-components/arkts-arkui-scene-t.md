@@ -1,4 +1,4 @@
-# Scene(Defines 3D component)
+# Scene
 
 ```TypeScript
 declare type Scene = import('../api/@ohos.graphics.scene').Scene

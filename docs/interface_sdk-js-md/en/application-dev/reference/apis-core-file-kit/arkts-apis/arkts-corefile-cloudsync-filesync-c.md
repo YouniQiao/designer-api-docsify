@@ -287,10 +287,10 @@ Starts device-cloud sync of a file. This API uses a promise to return the result
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
-| 22400001 | Cloud status not ready. |
-| 22400003 | Low battery level. |
-| 22400002 | Network unavailable. |
 | 13600001 | IPC error. |
+| 22400001 | Cloud status not ready. |
+| 22400002 | Network unavailable. |
+| 22400003 | Low battery level. |
 
 **Examples**
 
@@ -337,10 +337,10 @@ Starts device-cloud sync of a file. This API uses an asynchronous callback to re
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
-| 22400001 | Cloud status not ready. |
-| 22400003 | Low battery level. |
-| 22400002 | Network unavailable. |
 | 13600001 | IPC error. |
+| 22400001 | Cloud status not ready. |
+| 22400002 | Network unavailable. |
+| 22400003 | Low battery level. |
 
 **Examples**
 
@@ -364,7 +364,9 @@ fileSync.start((err: BusinessError) => {
 stop(): Promise<void>
 ```
 
-Stops device-cloud sync of a file. This API uses a promise to return the result. Calling **stop** will stop the sync process. To resume the sync, call [start](#start).
+Stops device-cloud sync of a file. This API uses a promise to return the result.
+
+Calling **stop** will stop the sync process. To resume the sync, call [start](#start).
 
 **Since:** 23
 
@@ -405,7 +407,9 @@ fileSync.stop().then(() => {
 stop(callback: AsyncCallback<void>): void
 ```
 
-Stops device-cloud sync of a file. This API uses an asynchronous callback to return the result. Calling **stop** will stop the sync process. To resume the sync, call [start](#start).
+Stops device-cloud sync of a file. This API uses an asynchronous callback to return the result.
+
+Calling **stop** will stop the sync process. To resume the sync, call [start](#start).
 
 **Since:** 23
 

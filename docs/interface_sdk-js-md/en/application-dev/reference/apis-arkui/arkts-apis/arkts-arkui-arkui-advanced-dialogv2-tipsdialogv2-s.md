@@ -2,6 +2,8 @@
 
 Declare CustomDialog TipsDialogV2
 
+@struct { TipsDialogV2 }
+
 **Since:** 18
 
 <!--Device-unnamed-export declare struct TipsDialogV2--><!--Device-unnamed-export declare struct TipsDialogV2-End-->
@@ -86,7 +88,7 @@ Sets the TipsDialogV2 content.
 
 Sets the borderColor of TipsDialogV2 image.
 
-**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -107,7 +109,7 @@ Sets the borderColor of TipsDialogV2 image.
 
 Sets the borderWidth of TipsDialogV2 image.
 
-**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
 
 **Since:** 18
 

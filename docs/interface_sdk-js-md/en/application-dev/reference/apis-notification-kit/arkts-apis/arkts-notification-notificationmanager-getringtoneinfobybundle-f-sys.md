@@ -40,12 +40,12 @@ Obtains the custom ringtone information of an application. This API uses a promi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1600024](../errorcode-notification.md#1600024-custom-ringtones-not-configured) | The specified bundle has no custom ringtone information. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [1600022](../errorcode-notification.md#1600022-invalid-bundle-information) | The specified bundle is invalid. |
+| [1600024](../errorcode-notification.md#1600024-custom-ringtones-not-configured) | The specified bundle has no custom ringtone information. |
 
 **Examples**
 

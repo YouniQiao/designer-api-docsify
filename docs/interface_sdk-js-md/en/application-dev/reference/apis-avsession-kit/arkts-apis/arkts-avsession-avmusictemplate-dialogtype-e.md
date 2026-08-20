@@ -2,6 +2,8 @@
 
 Enumeration of dialog type.
 
+@enum { int }
+
 **Since:** 23
 
 <!--Device-avMusicTemplate-enum DialogType--><!--Device-avMusicTemplate-enum DialogType-End-->

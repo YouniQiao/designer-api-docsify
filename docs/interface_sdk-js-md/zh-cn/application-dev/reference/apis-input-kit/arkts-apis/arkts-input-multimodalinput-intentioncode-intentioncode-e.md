@@ -1,4 +1,4 @@
-# IntentionCode(意图事件)
+# IntentionCode
 
 意图事件枚举值。
 

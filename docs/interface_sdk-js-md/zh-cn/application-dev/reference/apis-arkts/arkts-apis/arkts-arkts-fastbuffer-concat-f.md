@@ -12,7 +12,11 @@ import { fastbuffer } from '@kit.ArkTS';
 function concat(list: FastBuffer[] | Uint8Array[], totalLength?: number): FastBuffer
 ```
 
-将数组中指定字节长度的内容复制并拼接后，返回新的FastBuffer对象。 当数组中所有对象的长度总和大于totalLength时，返回结果的长度将被截断为totalLength。 当数组中所有对象的长度总和小于totalLength时，返回结果的多余部分将会被填充为0。
+将数组中指定字节长度的内容复制并拼接后，返回新的FastBuffer对象。
+
+当数组中所有对象的长度总和大于totalLength时，返回结果的长度将被截断为totalLength。
+
+当数组中所有对象的长度总和小于totalLength时，返回结果的多余部分将会被填充为0。
 
 **起始版本：** 20
 

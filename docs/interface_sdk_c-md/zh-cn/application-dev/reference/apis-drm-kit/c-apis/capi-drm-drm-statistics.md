@@ -20,8 +20,8 @@ MediaKeySystem的度量信息。
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t statisticsCount | Statistics count. |
-| char statisticsName[MAX_STATISTICS_COUNT][MAX_STATISTICS_NAME_LEN] | Statistics name. |
-| char statisticsDescription[MAX_STATISTICS_COUNT][MAX_STATISTICS_BUFFER_LEN] | Statistics description. |
+| uint32_t statisticsCount | 度量信息的数量，表示statisticsName和statisticsDescription数组中有效元素的个数。取值范围为[0, MAX_STATISTICS_COUNT]。 |
+| char statisticsName[MAX_STATISTICS_COUNT][MAX_STATISTICS_NAME_LEN] | 度量信息名称数组，每行存储一个度量项的名称，具体名称由DRM解决方案定义。数组维度由MAX_STATISTICS_COUNT和MAX_STATISTICS_NAME_LEN宏定义。 |
+| char statisticsDescription[MAX_STATISTICS_COUNT][MAX_STATISTICS_BUFFER_LEN] | 度量信息描述数组，每行存储对应statisticsName的度量值。数组维度由MAX_STATISTICS_COUNT和MAX_STATISTICS_BUFFER_LEN宏定义。 |
 
 

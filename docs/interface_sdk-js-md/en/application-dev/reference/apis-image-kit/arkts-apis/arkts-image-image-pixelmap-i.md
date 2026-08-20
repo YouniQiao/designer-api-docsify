@@ -40,9 +40,9 @@ Performs color space conversion (CSC) on the image pixel color based on a given 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 | [62980104](../errorcode-image.md#62980104-image-initialization-error) | Failed to initialize the internal object. |
 | [62980108](../errorcode-image.md#62980108-image-color-conversion-error) | Failed to convert the color space. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 
 ## applyColorSpace
 
@@ -75,9 +75,9 @@ Performs Color Space Converters (CSC) on the image pixel color based on a given 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 | [62980104](../errorcode-image.md#62980104-image-initialization-error) | Failed to initialize the internal object. |
 | [62980108](../errorcode-image.md#62980108-image-color-conversion-error) | Failed to convert the color space. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 
 ## applyCrop
 
@@ -115,12 +115,12 @@ Crops the PixelMap.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
 | [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. Failed to process pixel data. 2. The system is out of memory. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
 | [7600204](../errorcode-image.md#7600204-invalid-region) | The specified region is invalid or out of range. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. Failed to process pixel data. 2. The system is out of memory. |
 
 ## applyCropSync
 
@@ -152,12 +152,12 @@ Crops the PixelMap.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
 | [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. Failed to process pixel data. 2. The system is out of memory. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
 | [7600204](../errorcode-image.md#7600204-invalid-region) | The specified region is invalid or out of range. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. Failed to process pixel data. 2. The system is out of memory. |
 
 ## applyFlip
 
@@ -196,10 +196,10 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
 | [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
 | [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible cause: The system is out of memory. |
 
@@ -234,10 +234,10 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
 | [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
 | [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible cause: The system is out of memory. |
 
@@ -247,7 +247,9 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 applyRotate(angle: double): Promise<void>
 ```
 
-Rotates the PixelMap. Note: YUV format PixelMaps only support rotation angles that are multiples of 90 degrees.
+Rotates the PixelMap.
+
+Note: YUV format PixelMaps only support rotation angles that are multiples of 90 degrees.
 
 **Since:** 26.0.0
 
@@ -277,10 +279,10 @@ Rotates the PixelMap. Note: YUV format PixelMaps only support rotation angles th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
 | [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
 | [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
@@ -290,7 +292,9 @@ Rotates the PixelMap. Note: YUV format PixelMaps only support rotation angles th
 applyRotateSync(angle: double): void
 ```
 
-Rotates the PixelMap. Note: YUV format PixelMaps only support rotation angles that are multiples of 90 degrees.
+Rotates the PixelMap.
+
+Note: YUV format PixelMaps only support rotation angles that are multiples of 90 degrees.
 
 **Since:** 26.0.0
 
@@ -314,10 +318,10 @@ Rotates the PixelMap. Note: YUV format PixelMaps only support rotation angles th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
 | [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
 | [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
@@ -359,10 +363,10 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
 | [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
 | [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
@@ -398,10 +402,10 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
 | [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
 | [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
@@ -442,10 +446,10 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
 | [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
 | [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
@@ -480,10 +484,10 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
 | [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
 | [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
@@ -512,8 +516,8 @@ Copies this PixelMap object. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource unavailable. |
-| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | Image YUV And ASTC types are not supported. |
 | [62980102](../errorcode-image.md#62980102-memory-allocation-error-for-images) | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
+| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | Image YUV And ASTC types are not supported. |
 | [62980104](../errorcode-image.md#62980104-image-initialization-error) | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
 | [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 
@@ -542,8 +546,8 @@ Copies this PixelMap object. This API returns the result synchronously.
 | Error Code ID | Error Message |
 | --- | --- |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource unavailable. |
-| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | Image YUV And ASTC types are not supported. |
 | [62980102](../errorcode-image.md#62980102-memory-allocation-error-for-images) | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
+| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | Image YUV And ASTC types are not supported. |
 | [62980104](../errorcode-image.md#62980104-image-initialization-error) | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
 | [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 
@@ -578,10 +582,10 @@ The method is used for the transformation of the image formats. Pixel data will 
 | Error Code ID | Error Message |
 | --- | --- |
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
-| [62980274](../errorcode-image.md#62980274-failed-to-convert-images) | The conversion failed. |
-| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the pixelmap. |
-| [62980276](../errorcode-image.md#62980276-unsupported-image-conversion-target-type) | The type to be converted is an unsupported target pixel format. |
 | [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
+| [62980274](../errorcode-image.md#62980274-failed-to-convert-images) | The conversion failed. |
+| [62980276](../errorcode-image.md#62980276-unsupported-image-conversion-target-type) | The type to be converted is an unsupported target pixel format. |
+| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the pixelmap. |
 
 ## createAlphaPixelmap
 
@@ -589,7 +593,9 @@ The method is used for the transformation of the image formats. Pixel data will 
 createAlphaPixelmap(): Promise<PixelMap>
 ```
 
-Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. It is invalid for YUV images. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extractalphapixelmap) instead for better exception handling capabilities.
+Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. It is invalid for YUV images. This API uses a promise to return the result.
+
+Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extractalphapixelmap) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -613,7 +619,9 @@ Creates a PixelMap object that contains only the alpha channel information. This
 createAlphaPixelmap(callback: AsyncCallback<PixelMap>): void
 ```
 
-Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. It is invalid for YUV images. This API returns the result through a callback. Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extractalphapixelmap) instead for better exception handling capabilities.
+Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. It is invalid for YUV images. This API returns the result through a callback.
+
+Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extractalphapixelmap) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -637,7 +645,9 @@ Creates a PixelMap object that contains only the alpha channel information. This
 createAlphaPixelmapSync(): PixelMap
 ```
 
-Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. This API returns the result synchronously. It is invalid for YUV images. Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMapSync](#extractalphapixelmapsync) instead for better exception handling capabilities.
+Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. This API returns the result synchronously. It is invalid for YUV images.
+
+Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMapSync](#extractalphapixelmapsync) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -694,9 +704,9 @@ Creates an image that has been cropped and resized based on the specified croppi
 | Error Code ID | Error Message |
 | --- | --- |
 | [7600201](../errorcode-image.md#7600201-unsupported-operation) | The PixelMap has been released. |
+| [7600204](../errorcode-image.md#7600204-invalid-region) | Invalid region. |
 | [7600205](../errorcode-image.md#7600205-unsupported-format) | Unsupported memory format or pixel format. |
 | [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
-| [7600204](../errorcode-image.md#7600204-invalid-region) | Invalid region. |
 
 ## createCroppedAndScaledPixelMapSync
 
@@ -732,9 +742,9 @@ Creates an image that has been cropped and resized based on the specified croppi
 | Error Code ID | Error Message |
 | --- | --- |
 | [7600201](../errorcode-image.md#7600201-unsupported-operation) | The PixelMap has been released. |
+| [7600204](../errorcode-image.md#7600204-invalid-region) | Invalid region. |
 | [7600205](../errorcode-image.md#7600205-unsupported-format) | Unsupported memory format or pixel format. |
 | [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
-| [7600204](../errorcode-image.md#7600204-invalid-region) | Invalid region. |
 
 ## createScaledPixelMap
 
@@ -812,7 +822,9 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 crop(region: Region, callback: AsyncCallback<void>): void
 ```
 
-Crops this image based on a given size. This API uses an asynchronous callback to return the result. Starting from API 26.0.0, it is recommended to use [applyCrop](#applycrop) instead for better exception handling capabilities.
+Crops this image based on a given size. This API uses an asynchronous callback to return the result.
+
+Starting from API 26.0.0, it is recommended to use [applyCrop](#applycrop) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -837,7 +849,9 @@ Crops this image based on a given size. This API uses an asynchronous callback t
 crop(region: Region): Promise<void>
 ```
 
-Crops a PixelMap based on a given size. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [applyCrop](#applycrop) instead for better exception handling capabilities.
+Crops a PixelMap based on a given size. This API uses a promise to return the result.
+
+Starting from API 26.0.0, it is recommended to use [applyCrop](#applycrop) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -867,7 +881,9 @@ Crops a PixelMap based on a given size. This API uses a promise to return the re
 cropSync(region: Region): void
 ```
 
-Crops this image based on a given size. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [applyCropSync](#applycropsync) instead for better exception handling capabilities.
+Crops this image based on a given size. This API returns the result synchronously.
+
+Starting from API 26.0.0, it is recommended to use [applyCropSync](#applycropsync) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -920,11 +936,11 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600306](../errorcode-image.md#7600306-data-conversion-failed) | Failed to convert the data. Possible causes: 1. Failed to perform pixel format conversion. 2. The system is out of memory. |
-| [7600305](../errorcode-image.md#7600305-failed-to-create-the-pixelmap) | Failed to create the PixelMap. Possible cause: Current PixelMap data is corrupted. |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The current PixelMap has been passed across threads. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The current PixelMap has been released. |
 | [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The current PixelMap has been released. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The current PixelMap has been passed across threads. |
+| [7600305](../errorcode-image.md#7600305-failed-to-create-the-pixelmap) | Failed to create the PixelMap. Possible cause: Current PixelMap data is corrupted. |
+| [7600306](../errorcode-image.md#7600306-data-conversion-failed) | Failed to convert the data. Possible causes: 1. Failed to perform pixel format conversion. 2. The system is out of memory. |
 
 ## extractAlphaPixelMapSync
 
@@ -956,11 +972,11 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600306](../errorcode-image.md#7600306-data-conversion-failed) | Failed to convert the data. Possible causes: 1. Failed to perform pixel format conversion. 2. The system is out of memory. |
-| [7600305](../errorcode-image.md#7600305-failed-to-create-the-pixelmap) | Failed to create the PixelMap. Possible cause: Current PixelMap data is corrupted. |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The current PixelMap has been passed across threads. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The current PixelMap has been released. |
 | [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The current PixelMap has been released. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The current PixelMap has been passed across threads. |
+| [7600305](../errorcode-image.md#7600305-failed-to-create-the-pixelmap) | Failed to create the PixelMap. Possible cause: Current PixelMap data is corrupted. |
+| [7600306](../errorcode-image.md#7600306-data-conversion-failed) | Failed to convert the data. Possible causes: 1. Failed to perform pixel format conversion. 2. The system is out of memory. |
 
 ## flip
 
@@ -968,7 +984,9 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 flip(horizontal: boolean, vertical: boolean, callback: AsyncCallback<void>): void
 ```
 
-Flips this image horizontally or vertically, or both. This API uses an asynchronous callback to return the result. Starting from API 26.0.0, it is recommended to use [applyFlip](#applyflip) instead for better exception handling capabilities.
+Flips this image horizontally or vertically, or both. This API uses an asynchronous callback to return the result.
+
+Starting from API 26.0.0, it is recommended to use [applyFlip](#applyflip) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -994,7 +1012,9 @@ Flips this image horizontally or vertically, or both. This API uses an asynchron
 flip(horizontal: boolean, vertical: boolean): Promise<void>
 ```
 
-Flips a PixelMap based on a given angle. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [applyFlip](#applyflip) instead for better exception handling capabilities.
+Flips a PixelMap based on a given angle. This API uses a promise to return the result.
+
+Starting from API 26.0.0, it is recommended to use [applyFlip](#applyflip) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -1025,7 +1045,9 @@ Flips a PixelMap based on a given angle. This API uses a promise to return the r
 flipSync(horizontal: boolean, vertical: boolean): void
 ```
 
-Flips this image horizontally or vertically, or both. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [applyFlipSync](#applyflipsync) instead for better exception handling capabilities.
+Flips this image horizontally or vertically, or both. This API returns the result synchronously.
+
+Starting from API 26.0.0, it is recommended to use [applyFlipSync](#applyflipsync) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -1097,9 +1119,9 @@ Obtains the color space of this image.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 | [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
 | [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 
 ## getDensity
 
@@ -1294,7 +1316,11 @@ Obtains the unique ID of this PixelMap.
 isReleased(): boolean
 ```
 
-Checks whether this PixelMap object is released. If released, any attempt to access the internal data of this object will fail. &gt; **NOTE：**&gt; &gt; Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied &gt; by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
+Checks whether this PixelMap object is released. If released, any attempt to access the internal data of this object will fail.
+
+> **NOTE：**
+> 
+> Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied &gt; by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
 
 **Since:** 23
 
@@ -1332,8 +1358,8 @@ Marshals this PixelMap object and writes it to a MessageSequence object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
 
 ## opacity
 
@@ -1341,7 +1367,9 @@ Marshals this PixelMap object and writes it to a MessageSequence object.
 opacity(rate: double, callback: AsyncCallback<void>): void
 ```
 
-Sets an opacity rate for this image. This API uses an asynchronous callback to return the result. It is invalid for YUV images. Starting from API 26.0.0, it is recommended to use [setOpacity](#setopacity) instead for better exception handling capabilities.
+Sets an opacity rate for this image. This API uses an asynchronous callback to return the result. It is invalid for YUV images.
+
+Starting from API 26.0.0, it is recommended to use [setOpacity](#setopacity) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -1366,7 +1394,9 @@ Sets an opacity rate for this image. This API uses an asynchronous callback to r
 opacity(rate: double): Promise<void>
 ```
 
-Sets an opacity rate for this image. It is invalid for YUV images. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [setOpacity](#setopacity) instead for better exception handling capabilities.
+Sets an opacity rate for this image. It is invalid for YUV images. This API uses a promise to return the result.
+
+Starting from API 26.0.0, it is recommended to use [setOpacity](#setopacity) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -1396,7 +1426,9 @@ Sets an opacity rate for this image. It is invalid for YUV images. This API uses
 opacitySync(rate: double): void
 ```
 
-Sets an opacity rate for this image. This API returns the result synchronously. It is invalid for YUV images. Starting from API 26.0.0, it is recommended to use [setOpacitySync](#setopacitysync) instead for better exception handling capabilities.
+Sets an opacity rate for this image. This API returns the result synchronously. It is invalid for YUV images.
+
+Starting from API 26.0.0, it is recommended to use [setOpacitySync](#setopacitysync) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -1455,9 +1487,9 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer. The 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
 | [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: Size of the buffer is too small. |
 | [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
 
@@ -1491,9 +1523,9 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer. The 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
 | [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: Size of the buffer is too small. |
 | [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
 
@@ -1503,7 +1535,9 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer. The 
 readPixels(area: PositionArea): Promise<void>
 ```
 
-Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md).region of this PixelMap object in the BGRA_8888 format and writes the data to the [PositionArea](arkts-image-image-positionarea-i.md).pixels buffer. This API uses a promise to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component) RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component) Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readpixelstoarea) instead for better exception handling capabilities.
+Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md).region of this PixelMap object in the BGRA_8888 format and writes the data to the [PositionArea](arkts-image-image-positionarea-i.md).pixels buffer. This API uses a promise to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width height}) 1.5 (1 Y component + 0.25 U component + 0.25 V component) RGBA region calculation formula: region to read (region.size{width height}) 4 (1 R component + 1 G component + 1 B component + 1 A component)
+
+Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readpixelstoarea) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -1533,7 +1567,9 @@ Reads the pixels in the area specified by [PositionArea](arkts-image-image-posit
 readPixels(area: PositionArea, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md).region of this PixelMap object in the BGRA_8888 format and writes the data to the [PositionArea](arkts-image-image-positionarea-i.md).pixels buffer. This API uses an asynchronous callback to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component) RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component) Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readpixelstoarea) instead for better exception handling capabilities.
+Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md).region of this PixelMap object in the BGRA_8888 format and writes the data to the [PositionArea](arkts-image-image-positionarea-i.md).pixels buffer. This API uses an asynchronous callback to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width height}) 1.5 (1 Y component + 0.25 U component + 0.25 V component) RGBA region calculation formula: region to read (region.size{width height}) 4 (1 R component + 1 G component + 1 B component + 1 A component)
+
+Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readpixelstoarea) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -1558,7 +1594,9 @@ Reads the pixels in the area specified by [PositionArea](arkts-image-image-posit
 readPixelsSync(area: PositionArea): void
 ```
 
-Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md).region of this PixelMap object in the BGRA_8888 format and writes the data to the [PositionArea](arkts-image-image-positionarea-i.md).pixels buffer. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [readPixelsToAreaSync](#readpixelstoareasync) instead for better exception handling capabilities.
+Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md).region of this PixelMap object in the BGRA_8888 format and writes the data to the [PositionArea](arkts-image-image-positionarea-i.md).pixels buffer. This API returns the result synchronously.
+
+Starting from API 26.0.0, it is recommended to use [readPixelsToAreaSync](#readpixelstoareasync) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -1617,9 +1655,9 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
 | [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
 | [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
 
@@ -1653,9 +1691,9 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
 | [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
 | [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
 
@@ -1665,7 +1703,9 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 readPixelsToBuffer(dst: ArrayBuffer): Promise<void>
 ```
 
-Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#readallpixelstobuffer) instead for better exception handling capabilities.
+Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer. This API uses a promise to return the result.
+
+Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#readallpixelstobuffer) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -1695,7 +1735,9 @@ Reads the pixels of this PixelMap object based on the PixelMap's pixel format an
 readPixelsToBuffer(dst: ArrayBuffer, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer. This API uses an asynchronous callback to return the result. Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#readallpixelstobuffer) instead for better exception handling capabilities.
+Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer. This API uses an asynchronous callback to return the result.
+
+Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#readallpixelstobuffer) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -1720,7 +1762,9 @@ Reads the pixels of this PixelMap object based on the PixelMap's pixel format an
 readPixelsToBufferSync(dst: ArrayBuffer): void
 ```
 
-Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [readAllPixelsToBufferSync](#readallpixelstobuffersync) instead for better exception handling capabilities.
+Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer. This API returns the result synchronously.
+
+Starting from API 26.0.0, it is recommended to use [readAllPixelsToBufferSync](#readallpixelstobuffersync) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -1751,7 +1795,11 @@ Reads the pixels of this PixelMap object based on the PixelMap's pixel format an
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases this PixelMap instance. After the release, any attempt to access the internal data of this object will fail. This API uses an asynchronous callback to return the result. Images occupy a large amount of memory. When you finish using a PixelMap instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. &gt; **NOTE：**&gt; &gt; Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied &gt; by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
+Releases this PixelMap instance. After the release, any attempt to access the internal data of this object will fail. This API uses an asynchronous callback to return the result. Images occupy a large amount of memory. When you finish using a PixelMap instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+
+> **NOTE：**
+> 
+> Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied &gt; by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
 
 **Since:** 23
 
@@ -1775,7 +1823,11 @@ Releases this PixelMap instance. After the release, any attempt to access the in
 release(): Promise<void>
 ```
 
-Releases this PixelMap instance. After the release, any attempt to access the internal data of this object will fail. This API uses a promise to return the result. Images occupy a large amount of memory. When you finish using a PixelMap instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. &gt; **NOTE：**&gt; &gt; Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied &gt; by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
+Releases this PixelMap instance. After the release, any attempt to access the internal data of this object will fail. This API uses a promise to return the result. Images occupy a large amount of memory. When you finish using a PixelMap instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+
+> **NOTE：**
+> 
+> Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied &gt; by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
 
 **Since:** 23
 
@@ -1799,7 +1851,9 @@ Releases this PixelMap instance. After the release, any attempt to access the in
 rotate(angle: double, callback: AsyncCallback<void>): void
 ```
 
-Rotates this image based on a given angle. This API uses an asynchronous callback to return the result. Starting from API 26.0.0, it is recommended to use [applyRotate](#applyrotate) instead for better exception handling capabilities.
+Rotates this image based on a given angle. This API uses an asynchronous callback to return the result.
+
+Starting from API 26.0.0, it is recommended to use [applyRotate](#applyrotate) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -1824,7 +1878,9 @@ Rotates this image based on a given angle. This API uses an asynchronous callbac
 rotate(angle: double): Promise<void>
 ```
 
-Rotates a PixelMap based on a given angle. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [applyRotate](#applyrotate) instead for better exception handling capabilities.
+Rotates a PixelMap based on a given angle. This API uses a promise to return the result.
+
+Starting from API 26.0.0, it is recommended to use [applyRotate](#applyrotate) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -1854,7 +1910,9 @@ Rotates a PixelMap based on a given angle. This API uses a promise to return the
 rotateSync(angle: double): void
 ```
 
-Rotates this image based on a given angle. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [applyRotateSync](#applyrotatesync) instead for better exception handling capabilities.
+Rotates this image based on a given angle. This API returns the result synchronously.
+
+Starting from API 26.0.0, it is recommended to use [applyRotateSync](#applyrotatesync) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -1883,7 +1941,9 @@ Rotates this image based on a given angle. This API returns the result synchrono
 scale(x: double, y: double, callback: AsyncCallback<void>): void
 ```
 
-Scales this image based on the scale factors of the width and height. This API uses an asynchronous callback to return the result. Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) instead for better exception handling capabilities.
+Scales this image based on the scale factors of the width and height. This API uses an asynchronous callback to return the result.
+
+Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -1909,7 +1969,9 @@ Scales this image based on the scale factors of the width and height. This API u
 scale(x: double, y: double): Promise<void>
 ```
 
-Scales this image based on the scale factors of the width and height. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) instead for better exception handling capabilities.
+Scales this image based on the scale factors of the width and height. This API uses a promise to return the result.
+
+Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -1940,7 +2002,9 @@ Scales this image based on the scale factors of the width and height. This API u
 scale(x: double, y: double, level: AntiAliasingLevel): Promise<void>
 ```
 
-Scales this image based on the specified anti-aliasing level and the scale factors for the width and height. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) instead for better exception handling capabilities.
+Scales this image based on the specified anti-aliasing level and the scale factors for the width and height. This API uses a promise to return the result.
+
+Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -1979,7 +2043,9 @@ Scales this image based on the specified anti-aliasing level and the scale facto
 scaleSync(x: double, y: double): void
 ```
 
-Scales this image based on the scale factors of the width and height. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyscalesync) instead for better exception handling capabilities.
+Scales this image based on the scale factors of the width and height. This API returns the result synchronously.
+
+Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyscalesync) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -2009,7 +2075,9 @@ Scales this image based on the scale factors of the width and height. This API r
 scaleSync(x: double, y: double, level: AntiAliasingLevel): void
 ```
 
-Scales this image based on the specified anti-aliasing level and the scale factors for the width and height. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyscalesync) instead for better exception handling capabilities.
+Scales this image based on the specified anti-aliasing level and the scale factors for the width and height. This API returns the result synchronously.
+
+Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyscalesync) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -2040,7 +2108,9 @@ Scales this image based on the specified anti-aliasing level and the scale facto
 setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void
 ```
 
-Set color space of pixel map. This method is only used to set the colorspace property of pixelmap, while all pixel data remains the same after calling this method. If you want to change colorspace for all pixels, use method {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)} or {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager, AsyncCallback&lt;void&gt;)}.
+Set color space of pixel map.
+
+This method is only used to set the colorspace property of pixelmap, while all pixel data remains the same after calling this method. If you want to change colorspace for all pixels, use method {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)} or {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager, AsyncCallback&lt;void&gt;)}.
 
 **Since:** 23
 
@@ -2058,8 +2128,8 @@ Set color space of pixel map. This method is only used to set the colorspace pro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | If the image parameter invalid. |
 | [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | If the image parameter invalid. |
 
 ## setMemoryNameSync
 
@@ -2161,12 +2231,12 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
 | [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600207](../errorcode-image.md#7600207-unsupported-data-format) | Unsupported data format. Possible cause: Alpha type is not supported. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: The specified value is out of range. |
+| [7600207](../errorcode-image.md#7600207-unsupported-data-format) | Unsupported data format. Possible cause: Alpha type is not supported. |
 
 ## setOpacitySync
 
@@ -2198,12 +2268,12 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
 | [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600207](../errorcode-image.md#7600207-unsupported-data-format) | Unsupported data format. Possible cause: Alpha type is not supported. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: The specified value is out of range. |
+| [7600207](../errorcode-image.md#7600207-unsupported-data-format) | Unsupported data format. Possible cause: Alpha type is not supported. |
 
 ## setTransferDetached
 
@@ -2263,7 +2333,9 @@ Convert pixelmap to standard dynamic range.
 translate(x: double, y: double, callback: AsyncCallback<void>): void
 ```
 
-Translates this image based on given coordinates. This API uses an asynchronous callback to return the result. The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen. Starting from API 26.0.0, it is recommended to use [applyTranslate](#applytranslate) instead for better exception handling capabilities.
+Translates this image based on given coordinates. This API uses an asynchronous callback to return the result. The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.
+
+Starting from API 26.0.0, it is recommended to use [applyTranslate](#applytranslate) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -2289,7 +2361,9 @@ Translates this image based on given coordinates. This API uses an asynchronous 
 translate(x: double, y: double): Promise<void>
 ```
 
-Translates a PixelMap based on given coordinates. This API uses a promise to return the result. The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen. Starting from API 26.0.0, it is recommended to use [applyTranslate](#applytranslate) instead for better exception handling capabilities.
+Translates a PixelMap based on given coordinates. This API uses a promise to return the result. The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.
+
+Starting from API 26.0.0, it is recommended to use [applyTranslate](#applytranslate) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -2320,7 +2394,9 @@ Translates a PixelMap based on given coordinates. This API uses a promise to ret
 translateSync(x: double, y: double): void
 ```
 
-Translates this image based on given coordinates. This API returns the result synchronously. The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen. Starting from API 26.0.0, it is recommended to use [applyTranslateSync](#applytranslatesync) instead for better exception handling capabilities.
+Translates this image based on given coordinates. This API returns the result synchronously. The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.
+
+Starting from API 26.0.0, it is recommended to use [applyTranslateSync](#applytranslatesync) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -2374,9 +2450,9 @@ Unmarshals a MessageSequence object to obtain a PixelMap object. To create a Pix
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 | [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
 | [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 
 ## writeAllPixelsFromBuffer
 
@@ -2414,10 +2490,10 @@ Reads the pixel data from a buffer and writes the data to the PixelMap. The sour
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is not editable or is locked. |
 | [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is not editable or is locked. |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: Size of the buffer is too small. |
 | [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
 
@@ -2451,10 +2527,10 @@ Reads the pixel data from a buffer and writes the data to the PixelMap. The sour
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is not editable or is locked. |
 | [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is not editable or is locked. |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: Size of the buffer is too small. |
 | [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
 
@@ -2464,7 +2540,9 @@ Reads the pixel data from a buffer and writes the data to the PixelMap. The sour
 writeBufferToPixels(src: ArrayBuffer): Promise<void>
 ```
 
-Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#writeallpixelsfrombuffer) instead for better exception handling capabilities.
+Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object. This API uses a promise to return the result.
+
+Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#writeallpixelsfrombuffer) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -2494,7 +2572,9 @@ Reads the pixels in the buffer based on the PixelMap's pixel format and writes t
 writeBufferToPixels(src: ArrayBuffer, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object. This API uses an asynchronous callback to return the result. Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#writeallpixelsfrombuffer) instead for better exception handling capabilities.
+Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object. This API uses an asynchronous callback to return the result.
+
+Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#writeallpixelsfrombuffer) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -2519,7 +2599,9 @@ Reads the pixels in the buffer based on the PixelMap's pixel format and writes t
 writeBufferToPixelsSync(src: ArrayBuffer): void
 ```
 
-Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBufferSync](#writeallpixelsfrombuffersync) instead for better exception handling capabilities.
+Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object. This API returns the result synchronously.
+
+Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBufferSync](#writeallpixelsfrombuffersync) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -2548,7 +2630,9 @@ Reads the pixels in the buffer based on the PixelMap's pixel format and writes t
 writePixels(area: PositionArea): Promise<void>
 ```
 
-Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).region buffer in the BGRA_8888 format and writes the data to the area specified by [PositionArea](arkts-image-image-positionarea-i.md).pixels in this PixelMap object. This API uses a promise to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component) RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component) Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writepixelsfromarea) instead for better exception handling capabilities.
+Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).region buffer in the BGRA_8888 format and writes the data to the area specified by [PositionArea](arkts-image-image-positionarea-i.md).pixels in this PixelMap object. This API uses a promise to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width height}) 1.5 (1 Y component + 0.25 U component + 0.25 V component) RGBA region calculation formula: region to read (region.size{width height}) 4 (1 R component + 1 G component + 1 B component + 1 A component)
+
+Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writepixelsfromarea) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -2578,7 +2662,9 @@ Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).regi
 writePixels(area: PositionArea, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).region buffer in the BGRA_8888 format and writes the data to the area specified by [PositionArea](arkts-image-image-positionarea-i.md).pixels in this PixelMap object. This API uses an asynchronous callback to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component) RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component) Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writepixelsfromarea) instead for better exception handling capabilities.
+Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).region buffer in the BGRA_8888 format and writes the data to the area specified by [PositionArea](arkts-image-image-positionarea-i.md).pixels in this PixelMap object. This API uses an asynchronous callback to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width height}) 1.5 (1 Y component + 0.25 U component + 0.25 V component) RGBA region calculation formula: region to read (region.size{width height}) 4 (1 R component + 1 G component + 1 B component + 1 A component)
+
+Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writepixelsfromarea) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -2633,10 +2719,10 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is not editable or is locked. |
 | [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is not editable or is locked. |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
 | [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
 
@@ -2670,10 +2756,10 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is not editable or is locked. |
 | [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is not editable or is locked. |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
 | [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
 
@@ -2683,7 +2769,9 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 writePixelsSync(area: PositionArea): void
 ```
 
-Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).region buffer in the BGRA_8888 format and writes the data to the area specified by [PositionArea](arkts-image-image-positionarea-i.md).pixels in this PixelMap object. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [writePixelsFromAreaSync](#writepixelsfromareasync) instead for better exception handling capabilities.
+Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).region buffer in the BGRA_8888 format and writes the data to the area specified by [PositionArea](arkts-image-image-positionarea-i.md).pixels in this PixelMap object. This API returns the result synchronously.
+
+Starting from API 26.0.0, it is recommended to use [writePixelsFromAreaSync](#writepixelsfromareasync) instead for better exception handling capabilities.
 
 **Since:** 23
 

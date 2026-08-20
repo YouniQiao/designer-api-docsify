@@ -39,17 +39,17 @@ Authenticates a UKey PIN. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | api is not supported. |
-| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | the UKey driver operation failed. |
-| [12000022](../errorcode-huks.md#12000022-incorrect-ukey-pin) | the UKey PIN is incorrect. |
-| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
-| [12000021](../errorcode-huks.md#12000021-ukey-pin-locked) | the UKey PIN is locked. |
-| [12000020](../errorcode-huks.md#12000020-dependent-module-error) | the provider operation failed. |
-| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the input parameter is invalid. |
-| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application and is not allowed to use system applications. |
-| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal. This error may occur if the process function is not found, or due to other issues. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | api is not supported. |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | the UKey driver operation failed. |
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist. |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal. This error may occur if the process function is not found, or due to other issues. |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient. |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the input parameter is invalid. |
+| [12000020](../errorcode-huks.md#12000020-dependent-module-error) | the provider operation failed. |
+| [12000021](../errorcode-huks.md#12000021-ukey-pin-locked) | the UKey PIN is locked. |
+| [12000022](../errorcode-huks.md#12000022-incorrect-ukey-pin) | the UKey PIN is incorrect. |
 | [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) | the provider or UKey is busy. |
 
 **Examples**

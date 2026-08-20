@@ -1,4 +1,4 @@
-# DpiFollowStrategy(System API) (System API)
+# DpiFollowStrategy (System API)
 
 Enumeration of different types of DpiFollowStrategy.
 

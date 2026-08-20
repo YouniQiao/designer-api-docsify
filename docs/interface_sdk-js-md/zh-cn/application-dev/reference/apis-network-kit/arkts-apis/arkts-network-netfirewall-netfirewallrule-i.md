@@ -1,4 +1,4 @@
-# NetFirewallRule(网络防火墙)
+# NetFirewallRule
 
 防火墙规则信息结构。
 

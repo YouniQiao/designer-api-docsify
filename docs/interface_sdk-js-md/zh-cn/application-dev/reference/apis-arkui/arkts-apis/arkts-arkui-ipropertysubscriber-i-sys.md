@@ -1,4 +1,4 @@
-# IPropertySubscriber(System API)（系统接口）
+# IPropertySubscriber（系统接口）
 
 属性订阅者接口，定义订阅者需要实现的方法，用于接收属性变化通知和生命周期回调。
 

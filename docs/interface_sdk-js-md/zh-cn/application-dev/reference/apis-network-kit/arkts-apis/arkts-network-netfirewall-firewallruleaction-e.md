@@ -1,4 +1,4 @@
-# FirewallRuleAction(网络防火墙)
+# FirewallRuleAction
 
 枚举类型，防火墙规则行为，包含允许网络连接、阻止网络连接。
 

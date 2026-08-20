@@ -35,8 +35,8 @@ function getAllSubscriptionBundles(): Promise<BundleOption[]>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 
 **示例**

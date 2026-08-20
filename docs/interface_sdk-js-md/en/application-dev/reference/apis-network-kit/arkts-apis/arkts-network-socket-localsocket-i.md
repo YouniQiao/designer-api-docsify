@@ -20,7 +20,13 @@ import { socket } from '@kit.NetworkKit';
 bind(address: LocalAddress): Promise<void>
 ```
 
-Binds the address of a local socket file. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API explicitly binds the client to a local socket file based on the specified address. &gt; &gt; It is not mandatory in local socket communication.
+Binds the address of a local socket file. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API explicitly binds the client to a local socket file based on the specified address.
+> 
+> It is not mandatory in local socket communication.
 
 **Since:** 11
 
@@ -46,8 +52,8 @@ Binds the address of a local socket file. This API uses a promise to return the 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2301013](../errorcode-net-socket.md#2301013-insufficient-permissions) | Insufficient permissions. |
-| 2301098 | Address already in use. |
 | 2301022 | Invalid argument. |
+| 2301098 | Address already in use. |
 
 **Examples**
 
@@ -116,7 +122,11 @@ client.close().then(() => {
 connect(options: LocalConnectOptions): Promise<void>
 ```
 
-Connects to the specified socket file. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API allows you to connect to the TCP server without first executing **localsocket.bind**.
+Connects to the specified socket file. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API allows you to connect to the TCP server without first executing **localsocket.bind**.
 
 **Since:** 11
 
@@ -141,10 +151,10 @@ Connects to the specified socket file. This API uses a promise to return the res
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| 2301111 | Connection refused. |
 | [2301013](../errorcode-net-socket.md#2301013-insufficient-permissions) | Insufficient permissions. |
-| 2301099 | Cannot assign requested address. |
 | 2301022 | Invalid argument. |
+| 2301111 | Connection refused. |
+| 2301099 | Cannot assign requested address. |
 
 **Examples**
 
@@ -177,7 +187,11 @@ client.connect(connectOpt).then(() => {
 getExtraOptions(): Promise<ExtraOptionsBase>
 ```
 
-Obtains the socket properties of the **LocalSocket** object. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **bind** or **connect** is successfully called.
+Obtains the socket properties of the **LocalSocket** object. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **bind** or **connect** is successfully called.
 
 **Since:** 11
 
@@ -233,7 +247,11 @@ client.connect(connectOpt).then(() => {
 getLocalAddress(): Promise<string>
 ```
 
-Obtains the local socket address of a **LocalSocket** connection. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **bind** is successfully called.
+Obtains the local socket address of a **LocalSocket** connection. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **bind** is successfully called.
 
 **Since:** 12
 
@@ -288,7 +306,15 @@ client.bind(address).then(() => {
 getSocketFd(): Promise<int>
 ```
 
-Obtains the file descriptor of the **LocalSocket** object. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - This API can be called only after **bind** or **connect** is successfully called. &gt; &gt; - The file descriptor is allocated by the system kernel to uniquely identify the local socket in use. &gt; &gt; - The lifecycle of the file descriptor is managed by the system. The application can use the &gt; [close](#close) method to close the socket connection, instead of directly operating &gt; the file descriptor.
+Obtains the file descriptor of the **LocalSocket** object. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - This API can be called only after **bind** or **connect** is successfully called.
+> 
+> - The file descriptor is allocated by the system kernel to uniquely identify the local socket in use.
+> 
+> - The lifecycle of the file descriptor is managed by the system. The application can use the &gt; [close](#close) method to close the socket connection, instead of directly operating &gt; the file descriptor.
 
 **Since:** 11
 
@@ -338,7 +364,11 @@ client.getSocketFd().then((data: number) => {
 getState(): Promise<SocketStateBase>
 ```
 
-Obtains the local socket connection status. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **bind** or **connect** is successfully called.
+Obtains the local socket connection status. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **bind** or **connect** is successfully called.
 
 **Since:** 11
 
@@ -720,7 +750,11 @@ client.on('message', (value: socket.LocalSocketMessageInfo) => {
 send(options: LocalSendOptions): Promise<void>
 ```
 
-Sends data over a local socket connection. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **connect** is successfully called.
+Sends data over a local socket connection. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **connect** is successfully called.
 
 **Since:** 11
 
@@ -744,8 +778,8 @@ Sends data over a local socket connection. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2301011 | Operation would block. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| 2301011 | Operation would block. |
 
 **Examples**
 
@@ -786,7 +820,11 @@ client.send(sendOpt).then(() => {
 setExtraOptions(options: ExtraOptionsBase): Promise<void>
 ```
 
-Sets the properties of the **LocalSocket** object. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **bind** or **connect** is successfully called.
+Sets the properties of the **LocalSocket** object. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API can be called only after **bind** or **connect** is successfully called.
 
 **Since:** 11
 

@@ -2,6 +2,8 @@
 
 Enum of word break
 
+@enum { number }
+
 **起始版本：** 11
 
 <!--Device-unnamed-declare enum WordBreak--><!--Device-unnamed-declare enum WordBreak-End-->

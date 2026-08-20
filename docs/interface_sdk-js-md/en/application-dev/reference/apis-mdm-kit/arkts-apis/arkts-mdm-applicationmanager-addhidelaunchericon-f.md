@@ -12,7 +12,15 @@ import { applicationManager } from '@kit.MDMKit';
 function addHideLauncherIcon(admin: Want, bundleNames: Array<string>): void
 ```
 
-Adds applications to the home screen icon hide list. &gt; **NOTE：**&gt; &gt; 1. This API can only hide home screen icons for applications of the current user. Hiding application widgets are &gt; not supported. &gt; &gt; 2. If a hidden application has clones, the clones are hidden synchronously. &gt; &gt; 3. Not all applications on the home screen can be added to the hidden list. Otherwise, all applications will &gt; still be displayed on the home screen.
+Adds applications to the home screen icon hide list.
+
+> **NOTE：**
+> 
+> 1. This API can only hide home screen icons for applications of the current user. Hiding application widgets are &gt; not supported.
+> 
+> 2. If a hidden application has clones, the clones are hidden synchronously.
+> 
+> 3. Not all applications on the home screen can be added to the hidden list. Otherwise, all applications will &gt; still be displayed on the home screen.
 
 **Since:** 26.0.0
 
@@ -35,9 +43,9 @@ Adds applications to the home screen icon hide list. &gt; **NOTE：**&gt; &gt; 1
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 

@@ -32,7 +32,7 @@ export function getTimeZone(zoneID?: string): TimeZone
 
 | 类型 | 说明 |
 | --- | --- |
-| [TimeZone](arkts-localization-i18n-timezone-c.md) | 时区ID对应的时区对象。 |
+| [TimeZone](../../apis-default/arkts-apis/arkts-i18n-timezone-c.md) | 时区ID对应的时区对象。 |
 
 **示例**
 

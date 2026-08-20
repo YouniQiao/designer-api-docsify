@@ -11,7 +11,9 @@
 function getProcessRunningInformation(): Promise<Array<ProcessRunningInfo>>
 ```
 
-Obtains information about the running processes. This API uses a promise to return the result. &gt; This API is deprecated since API version 9. You are advised to use &gt; [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md) &gt; instead.
+Obtains information about the running processes. This API uses a promise to return the result.
+
+> This API is deprecated since API version 9. You are advised to use &gt; [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md) &gt; instead.
 
 **Since:** 8
 
@@ -47,7 +49,9 @@ Obtains information about the running processes. This API uses a promise to retu
 function getProcessRunningInformation(callback: AsyncCallback<Array<ProcessRunningInfo>>): void
 ```
 
-Obtains information about the running processes. This API uses an asynchronous callback to return the result. &gt; This API is deprecated since API version 9. You are advised to use &gt; [appManager.getRunningProcessInformation]{ &gt; @link @ohos.app.ability.appManager:appManager.getRunningProcessInformation()} instead.
+Obtains information about the running processes. This API uses an asynchronous callback to return the result.
+
+> This API is deprecated since API version 9. You are advised to use &gt; [appManager.getRunningProcessInformation]{ &gt; @link @ohos.app.ability.appManager:appManager.getRunningProcessInformation()} instead.
 
 **Since:** 8
 

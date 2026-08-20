@@ -530,8 +530,8 @@ Writes data to the buffer of the stream. This API uses an asynchronous callback 
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200035](../errorcode-utils.md#10200035-dowrite-is-not-implemented) | The doWrite method has not been implemented. |
-| [10200037](../errorcode-utils.md#10200037-callback-is-invoked-multiple-times) | The callback is invoked multiple times consecutively. |
 | [10200036](../errorcode-utils.md#10200036-write-operation-is-still-performed-after-the-stream-ends) | The stream has been ended. |
+| [10200037](../errorcode-utils.md#10200037-callback-is-invoked-multiple-times) | The callback is invoked multiple times consecutively. |
 
 **Examples**
 

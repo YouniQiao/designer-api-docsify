@@ -7,6 +7,8 @@ type ValueType = long | double | string | boolean | Array<long> | Array<double> 
 
 Indicates possible value types
 
+@FaAndStageModel
+
 **Since:** 23
 
 <!--Device-preferences-type ValueType = long | double | string | boolean | Array<long> | Array<double> | Array<string> | Array<boolean>    | Uint8Array | RecordData | bigint--><!--Device-preferences-type ValueType = long | double | string | boolean | Array<long> | Array<double> | Array<string> | Array<boolean>    | Uint8Array | RecordData | bigint-End-->

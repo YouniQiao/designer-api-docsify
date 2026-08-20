@@ -1,6 +1,8 @@
 # RenderMode
 
-Enumerates the rendering modes of the **Web** component. By default, the asynchronous rendering mode is used. The asynchronous rendering mode is recommended because it has better performance and lower power consumption.
+Enumerates the rendering modes of the **Web** component. By default, the asynchronous rendering mode is used.
+
+The asynchronous rendering mode is recommended because it has better performance and lower power consumption.
 
 **Since:** 12
 

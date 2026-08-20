@@ -1,4 +1,4 @@
-# ProcessPriority(后台子进程管控)
+# ProcessPriority
 
 子进程压制档位。
 

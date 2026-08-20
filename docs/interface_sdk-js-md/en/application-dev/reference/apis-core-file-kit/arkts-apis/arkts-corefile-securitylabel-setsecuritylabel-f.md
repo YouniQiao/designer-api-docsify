@@ -37,12 +37,12 @@ Sets the data security level for a file or directory. The level can only be adju
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900037 | No data available |
-| 13900007 | Arg list too long |
 | 13900001 | Operation not permitted |
+| 13900007 | Arg list too long |
 | 13900015 | File exists |
+| 13900020 | Invalid argument |
 | 13900025 | No space left on device |
+| 13900037 | No data available |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
@@ -85,12 +85,12 @@ Sets the data security level for a file or directory. The level can only be adju
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 13900037 | No data available |
-| 13900007 | Arg list too long |
 | 13900001 | Operation not permitted |
+| 13900007 | Arg list too long |
 | 13900015 | File exists |
+| 13900020 | Invalid argument |
 | 13900025 | No space left on device |
+| 13900037 | No data available |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 

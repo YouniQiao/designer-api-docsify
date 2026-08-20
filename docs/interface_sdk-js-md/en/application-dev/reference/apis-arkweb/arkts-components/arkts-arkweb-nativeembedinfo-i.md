@@ -2,6 +2,8 @@
 
 Provides detailed information about the same-layer tag, including the ID, type, size, and location. It is suitable for scenarios where obtaining same-layer element attributes is required, improving same-layer rendering customization and user experience.
 
+@interface NativeEmbedInfo [since 11 - 11]
+
 **Since:** 11
 
 <!--Device-unnamed-declare interface NativeEmbedInfo--><!--Device-unnamed-declare interface NativeEmbedInfo-End-->
@@ -96,7 +98,7 @@ Position of the same-layer tag relative to the upper left corner of the **Web** 
 src?: string
 ```
 
-**src** information of the same-layer tag.
+*src** information of the same-layer tag.
 
 **Type:** string
 

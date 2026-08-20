@@ -1,6 +1,9 @@
 # InstallErrorCode
 
-> **NOTE：**&gt; &gt; This API has been supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [errorcode-bundle](../errorcode-bundle.md) instead.
+
+> **NOTE：**
+> 
+> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [errorcode-bundle](../errorcode-bundle.md) instead.
 
 **Since:** 7
 

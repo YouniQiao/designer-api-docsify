@@ -12,7 +12,9 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 function getShortcutInfoByAppIndex(bundleName: string, appIndex: int): Array<ShortcutInfo>
 ```
 
-Obtains the shortcut information of the current user based on the index of an application clone. No permission is required for obtaining the caller's own information.
+Obtains the shortcut information of the current user based on the index of an application clone.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 23
 
@@ -41,11 +43,11 @@ Obtains the shortcut information of the current user based on the index of an ap
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not support. |
-| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Verify permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not support. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
 
 **Examples**
 

@@ -18,7 +18,7 @@ Creates a step curve.
 
 **Deprecated since:** 9
 
-**Substitutes:** [stepsCurve](../../apis-na/arkts-apis/arkts-na-curves-stepscurve-f.md)
+**Substitutes:** [stepsCurve](arkts-arkui-curves-stepscurve-f.md)
 
 <!--Device-curves-function steps(count: number, end: boolean): string--><!--Device-curves-function steps(count: number, end: boolean): string-End-->
 

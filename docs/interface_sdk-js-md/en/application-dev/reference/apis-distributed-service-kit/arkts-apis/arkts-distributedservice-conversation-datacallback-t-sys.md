@@ -1,4 +1,4 @@
-# DataCallback(Cross-Device Wakeup and Message Transfer) (System API)
+# DataCallback (System API)
 
 ```TypeScript
 type DataCallback = (deviceId: string, msg: ArrayBuffer) => void

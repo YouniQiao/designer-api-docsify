@@ -2,6 +2,8 @@
 
 This module provides settings data access abilities.
 
+@namespace settings
+
 **Since:** 23
 
 <!--Device-unnamed-declare namespace settings--><!--Device-unnamed-declare namespace settings-End-->

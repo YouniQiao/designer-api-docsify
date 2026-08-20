@@ -2,6 +2,8 @@
 
 AgentExtensionAbility的代理对象，用于向AgentExtensionAbility等发送消息。
 
+@interface AgentProxy
+
 **起始版本：** 24
 
 <!--Device-unnamed-export interface AgentProxy--><!--Device-unnamed-export interface AgentProxy-End-->

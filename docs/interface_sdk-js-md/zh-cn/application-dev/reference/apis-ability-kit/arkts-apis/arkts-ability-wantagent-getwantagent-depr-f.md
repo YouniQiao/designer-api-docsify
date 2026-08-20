@@ -30,7 +30,7 @@ function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | info | [WantAgentInfo](arkts-ability-wantagentinfo-wantagentinfo-i.md) | 是 | WantAgent信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](arkts-ability-wantagent-depr-t.md)&gt; | 是 | 创建WantAgent的回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[WantAgent](arkts-ability-wantagent-depr-t.md)&gt; | 是 | 创建WantAgent的回调方法。 |
 
 **示例**
 
@@ -41,7 +41,7 @@ import { BusinessError } from '@ohos.base';
 // getWantAgent回调
 function getWantAgentCallback(err: BusinessError, data: _WantAgent) {
     if (err.code) {
-        console.info('getWantAgent Callback err:' + JSON.stringify(err));
+        console.error('getWantAgent Callback err:' + JSON.stringify(err));
     } else { 
         console.info('getWantAgent Callback success');
     }

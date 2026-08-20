@@ -2,6 +2,8 @@
 
 门内外识别接口返回结果中表示门内或门外位置的枚举。
 
+@enum { int } 门内外识别结果的枚举
+
 **起始版本：** 23
 
 <!--Device-spatialAwareness-export enum PositionRelativeToDoor--><!--Device-spatialAwareness-export enum PositionRelativeToDoor-End-->

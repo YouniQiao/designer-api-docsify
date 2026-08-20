@@ -1,6 +1,11 @@
 # Uint16Array
 
-一种线性数据结构，底层基于[ArkTS ArrayBuffer](../../apis-na/arkts-apis/arkts-collections.md)实现。 &gt; **说明：**&gt; &gt; - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 &gt; **装饰器类型**：\@Sendable
+一种线性数据结构，底层基于[ArkTS ArrayBuffer](arkts-collections.md)实现。
+
+> **说明：**
+> 
+> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
+> **装饰器类型**：\@Sendable
 
 **起始版本：** 12
 
@@ -34,7 +39,7 @@ import { collections } from '@kit.ArkTS';
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;number&gt; | 迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 迭代器对象。 |
 
 **错误码：**
 
@@ -175,7 +180,7 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;number&gt; \| ArrayBuffer | 是 | 用于构造ArkTS Uint16Array的对象。 当参数类型是ArrayBuffer时buffer所占的字节数需是2的整数倍。 |
+| array | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; \| ArrayBuffer | 是 | 用于构造ArkTS Uint16Array的对象。 当参数类型是ArrayBuffer时buffer所占的字节数需是2的整数倍。 |
 
 **错误码：**
 
@@ -270,7 +275,7 @@ entries(): IterableIterator<[number, number]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[number, number]&gt; | 新的迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, number]&gt; | 新的迭代器对象。 |
 
 **错误码：**
 
@@ -505,7 +510,7 @@ static from(arrayLike: ArrayLike<number>): Uint16Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;number&gt; | 是 | 用于构造ArkTS Uint16Array的ArrayLike对象。 |
+| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; | 是 | 用于构造ArkTS Uint16Array的ArrayLike对象。 |
 
 **返回值：**
 
@@ -533,7 +538,7 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;T&gt; | 是 | 用于构造ArrayLike对象。 |
+| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; | 是 | 用于构造ArrayLike对象。 |
 | mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;T, number&gt; | 是 | 映射函数。 |
 
 **返回值：**
@@ -698,7 +703,7 @@ keys(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;number&gt; | 新的迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 新的迭代器对象。 |
 
 **错误码：**
 
@@ -1033,7 +1038,7 @@ set(array: ArrayLike<number>, offset?: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;number&gt; | 是 | 用于设置的ArrayLike对象。 |
+| array | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; | 是 | 用于设置的ArrayLike对象。 |
 | offset | number | 否 | 写入的起始位置。默认为0。 |
 
 **错误码：**
@@ -1263,7 +1268,7 @@ values(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;number&gt; | 新的迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 新的迭代器对象。 |
 
 **错误码：**
 

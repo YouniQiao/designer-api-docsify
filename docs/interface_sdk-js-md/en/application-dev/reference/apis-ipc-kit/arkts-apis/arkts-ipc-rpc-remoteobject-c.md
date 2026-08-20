@@ -423,7 +423,13 @@ onRemoteMessageRequest(
     ): boolean | Promise<boolean>
 ```
 
-Called to return a response to **sendMessageRequest()**. The server processes the request synchronously or asynchronously and returns the result in this API. &gt; **NOTE：**&gt; &gt; - You are advised to overload **onRemoteMessageRequest** preferentially, which implements synchronous and &gt; asynchronous message processing. &gt; &gt; - If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only &gt; **onRemoteMessageRequest()** takes effect.
+Called to return a response to **sendMessageRequest()**. The server processes the request synchronously or asynchronously and returns the result in this API.
+
+> **NOTE：**
+> 
+> - You are advised to overload **onRemoteMessageRequest** preferentially, which implements synchronous and &gt; asynchronous message processing.
+> 
+> - If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only &gt; **onRemoteMessageRequest()** takes effect.
 
 **Since:** 23
 
@@ -460,7 +466,12 @@ onRemoteMessageRequest(
     ): boolean | Promise<boolean>
 ```
 
-Provides a response to **sendMessageRequest()**. The server processes the request and returns a response in this API. The IPC context can be obtained from the input parameter **callingInfo**. &gt; **NOTE：**&gt; &gt; You are advised to overload the **onRemoteMessageRequest** method with the **CallingInfo** parameter to &gt; implement synchronous and asynchronous message processing. &gt; If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only &gt; **onRemoteMessageRequest()** takes effect.
+Provides a response to **sendMessageRequest()**. The server processes the request and returns a response in this API. The IPC context can be obtained from the input parameter **callingInfo**.
+
+> **NOTE：**
+> 
+> You are advised to overload the **onRemoteMessageRequest** method with the **CallingInfo** parameter to &gt; implement synchronous and asynchronous message processing.
+> If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only &gt; **onRemoteMessageRequest()** takes effect.
 
 **Since:** 23
 

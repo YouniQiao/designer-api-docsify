@@ -1,6 +1,14 @@
 # PhotoPickerComponent
 
-PhotoPickerComponent({ pickerOptions?: PickerOptions, onSelect?: (uri: string) =&gt; void, onDeselect?: (uri: string) =&gt; void, onItemClicked?: (itemInfo: ItemInfo, clickType: ClickType) =&gt; boolean, onItemClickedNotify?: ItemClickedNotifyCallback, onEnterPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) =&gt; boolean, onExitPhotoBrowser? : (photoBrowserInfo: PhotoBrowserInfo) =&gt; boolean, onPickerControllerReady?: () =&gt; void, onPhotoBrowserChanged?: ( browserItemInfo: BaseItemInfo) =&gt; boolean, onSelectedItemsDeleted?: ItemsDeletedCallback, onExceedMaxSelected?: ExceedMaxSelectedCallback, onCurrentAlbumDeleted?: CurrentAlbumDeletedCallback, onVideoPlayStateChanged?: videoPlayStateChangedCallback, pickerController: PickerController }) Allows the application to access images or videos in the user directory without any permission. &gt; **NOTE：**&gt; &gt; If the **PhotoPickerComponent** is used with the **Tabs** component, the swipe gestures of the **Tabs** component &gt; conflict with those of the photo browser page. &gt; &gt; To prevent this problem, you can disable the swipe operation for the **Tabs** component in &gt; **onEnterPhotoBrowser()** and enable it in **onExitPhotoBrowser()**. This conflict will be resolved in later &gt; versions.
+PhotoPickerComponent({ pickerOptions?: PickerOptions, onSelect?: (uri: string) =&gt; void, onDeselect?: (uri: string) =&gt; void, onItemClicked?: (itemInfo: ItemInfo, clickType: ClickType) =&gt; boolean, onItemClickedNotify?: ItemClickedNotifyCallback, onEnterPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) =&gt; boolean, onExitPhotoBrowser? : (photoBrowserInfo: PhotoBrowserInfo) =&gt; boolean, onPickerControllerReady?: () =&gt; void, onPhotoBrowserChanged?: ( browserItemInfo: BaseItemInfo) =&gt; boolean, onSelectedItemsDeleted?: ItemsDeletedCallback, onExceedMaxSelected?: ExceedMaxSelectedCallback, onCurrentAlbumDeleted?: CurrentAlbumDeletedCallback, onVideoPlayStateChanged?: videoPlayStateChangedCallback, pickerController: PickerController })
+
+Allows the application to access images or videos in the user directory without any permission.
+
+> **NOTE：**
+> 
+> If the **PhotoPickerComponent** is used with the **Tabs** component, the swipe gestures of the **Tabs** component &gt; conflict with those of the photo browser page.
+> 
+> To prevent this problem, you can disable the swipe operation for the **Tabs** component in &gt; **onEnterPhotoBrowser()** and enable it in **onExitPhotoBrowser()**. This conflict will be resolved in later &gt; versions.
 
 **Since:** 12
 
@@ -39,7 +47,7 @@ onCurrentAlbumDeleted?: CurrentAlbumDeletedCallback
 
 Callback when the current album is deleted
 
-**Type:** [CurrentAlbumDeletedCallback](../../apis-na/arkts-apis/arkts-na-currentalbumdeletedcallback-t.md)
+**Type:** [CurrentAlbumDeletedCallback](arkts-medialibrary-currentalbumdeletedcallback-t.md)
 
 **Since:** 13
 
@@ -93,7 +101,7 @@ onError?: ErrorCallback
 
 Callback when an error occurs in the PhotoPickerComponent.
 
-**Type:** [ErrorCallback](../../apis-na/arkts-apis/arkts-na-errorcallback-t.md)
+**Type:** [ErrorCallback](arkts-medialibrary-errorcallback-t.md)
 
 **Since:** 23
 
@@ -113,7 +121,7 @@ onExceedMaxSelected?: ExceedMaxSelectedCallback
 
 Callback when exceed max selected
 
-**Type:** [ExceedMaxSelectedCallback](../../apis-na/arkts-apis/arkts-na-exceedmaxselectedcallback-t.md)
+**Type:** [ExceedMaxSelectedCallback](arkts-medialibrary-exceedmaxselectedcallback-t.md)
 
 **Since:** 13
 
@@ -167,7 +175,7 @@ onItemClickedNotify?: ItemClickedNotifyCallback
 
 Callback when click item. Includes camera items and thumbnail items. Returns itemInfo in the callback. Must be used in conjunction with the addData method.
 
-**Type:** [ItemClickedNotifyCallback](../../apis-na/arkts-apis/arkts-na-itemclickednotifycallback-t.md)
+**Type:** [ItemClickedNotifyCallback](arkts-medialibrary-itemclickednotifycallback-t.md)
 
 **Since:** 23
 
@@ -187,7 +195,7 @@ onMovingPhotoBadgeStateChanged?: MovingPhotoBadgeStateChangedCallback
 
 Callback when moving photo badge state changed
 
-**Type:** [MovingPhotoBadgeStateChangedCallback](../../apis-na/arkts-apis/arkts-na-movingphotobadgestatechangedcallback-t.md)
+**Type:** [MovingPhotoBadgeStateChangedCallback](arkts-medialibrary-movingphotobadgestatechangedcallback-t.md)
 
 **Since:** 22
 
@@ -205,7 +213,7 @@ onPhotoBrowserChangeStart?: PhotoBrowserChangeStartCallback
 
 Callback when photo browser change start (upon user swipe release), will return targetPhotoInfo
 
-**Type:** [PhotoBrowserChangeStartCallback](../../apis-na/arkts-apis/arkts-na-photobrowserchangestartcallback-t.md)
+**Type:** [PhotoBrowserChangeStartCallback](arkts-medialibrary-photobrowserchangestartcallback-t.md)
 
 **Since:** 23
 
@@ -243,7 +251,7 @@ onPhotoBrowserZoom?: PhotoBrowserZoomCallback
 
 Callback when the zoom scale changes during large image browsing.
 
-**Type:** [PhotoBrowserZoomCallback](../../apis-na/arkts-apis/arkts-na-photobrowserzoomcallback-t.md)
+**Type:** [PhotoBrowserZoomCallback](arkts-medialibrary-photobrowserzoomcallback-t.md)
 
 **Since:** 26.0.0
 
@@ -301,7 +309,7 @@ onPinchGridSwitched?: PinchGridSwitchedCallback
 
 Callback when the grid's level is switched via pinch gesture.
 
-**Type:** [PinchGridSwitchedCallback](../../apis-na/arkts-apis/arkts-na-pinchgridswitchedcallback-t.md)
+**Type:** [PinchGridSwitchedCallback](arkts-medialibrary-pinchgridswitchedcallback-t.md)
 
 **Since:** 23
 
@@ -321,7 +329,7 @@ onScrollStopAtEnd?: ScrollStopAtEndCallback
 
 Callback when the grid stops scrolling at the ending position.
 
-**Type:** [ScrollStopAtEndCallback](../../apis-na/arkts-apis/arkts-na-scrollstopatendcallback-t.md)
+**Type:** [ScrollStopAtEndCallback](arkts-medialibrary-scrollstopatendcallback-t.md)
 
 **Since:** 23
 
@@ -341,7 +349,7 @@ onScrollStopAtStart?: ScrollStopAtStartCallback
 
 Callback when the grid stops scrolling at the starting position.
 
-**Type:** [ScrollStopAtStartCallback](../../apis-na/arkts-apis/arkts-na-scrollstopatstartcallback-t.md)
+**Type:** [ScrollStopAtStartCallback](arkts-medialibrary-scrollstopatstartcallback-t.md)
 
 **Since:** 23
 
@@ -379,7 +387,7 @@ onSelectedItemsDeleted?: ItemsDeletedCallback
 
 Callback when selected items are deleted
 
-**Type:** [ItemsDeletedCallback](../../apis-na/arkts-apis/arkts-na-itemsdeletedcallback-t.md)
+**Type:** [ItemsDeletedCallback](arkts-medialibrary-itemsdeletedcallback-t.md)
 
 **Since:** 13
 
@@ -436,7 +444,7 @@ Callback when the video play state changed
 
 PickerController
 
-**Type:** [PickerController](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-pickercontroller-c.md)
+**Type:** [PickerController](arkts-medialibrary-file-photopickercomponent-pickercontroller-c.md)
 
 **Since:** 12
 
@@ -454,7 +462,7 @@ pickerOptions?: PickerOptions
 
 PickerOptions
 
-**Type:** [PickerOptions](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-pickeroptions-c.md)
+**Type:** [PickerOptions](arkts-medialibrary-file-photopickercomponent-pickeroptions-c.md)
 
 **Since:** 12
 

@@ -2,6 +2,8 @@
 
 材质属性接口，用于定义材质所使用的纹理、属性因子及纹理采样器信息。
 
+@interface MaterialProperty
+
 **起始版本：** 23
 
 <!--Device-unnamed-export interface MaterialProperty--><!--Device-unnamed-export interface MaterialProperty-End-->

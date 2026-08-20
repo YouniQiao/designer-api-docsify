@@ -2,6 +2,8 @@
 
 使用ParallelizeUI并行化创建UI时的可选参数。
 
+@interface ParallelOption
+
 **起始版本：** 23
 
 **ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
@@ -21,7 +23,13 @@
 enable?: boolean
 ```
 
-是否开启UI创建并行化。 true：开启并行化创建；false：不开启并行化创建。 默认值：true 取值为undefined时，按默认值true处理。
+是否开启UI创建并行化。
+
+true：开启并行化创建；false：不开启并行化创建。
+
+默认值：true
+
+取值为undefined时，按默认值true处理。
 
 **类型：** boolean
 

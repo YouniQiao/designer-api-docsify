@@ -1,6 +1,6 @@
 # @ohos.app.ability.insightIntentProvider
 
-Insight intent Provider.
+Insight intent Provider. @namespace insightIntentProvider
 
 **Since:** 23
 

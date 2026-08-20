@@ -1,6 +1,8 @@
-# GesturePoint(Gesture Point)
+# GesturePoint
 
-GesturePoint represents a gesture touch point and is the basic unit that constitutes a gesture path (GesturePath). This module is used to create touch point information for gesture paths, for use by accessibility applications to inject gestures.
+GesturePoint represents a gesture touch point and is the basic unit that constitutes a gesture path (GesturePath).
+
+This module is used to create touch point information for gesture paths, for use by accessibility applications to inject gestures.
 
 **Since:** 9
 

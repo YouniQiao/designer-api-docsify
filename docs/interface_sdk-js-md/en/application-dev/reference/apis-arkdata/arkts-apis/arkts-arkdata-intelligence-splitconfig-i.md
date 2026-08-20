@@ -2,6 +2,8 @@
 
 Manages text chunk process configurations.
 
+@interface SplitConfig
+
 **Since:** 23
 
 <!--Device-intelligence-interface SplitConfig--><!--Device-intelligence-interface SplitConfig-End-->
