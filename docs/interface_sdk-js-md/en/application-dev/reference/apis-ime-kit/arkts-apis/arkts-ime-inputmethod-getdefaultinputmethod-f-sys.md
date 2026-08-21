@@ -17,7 +17,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function getDefaultInputMethod(userId?: int): InputMethodProperty
 ```
 
-Get the default input method of a specified user.
+@brief Get the default input method of a specified user.
 
 **Since:** 26.0.0
 

@@ -34,7 +34,7 @@ ArcSliderOptions的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ArcSliderOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptionsconstructoroptions-i.md) | 否 | ArcSliderOptions的构造信息。不传入时，ArcSliderOptions的各项子属性均取其默认值。 |
+| options | [ArcSliderOptionsConstructorOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcslideroptionsconstructoroptions-i.md) | 否 | ArcSliderOptions的构造信息。不传入时，ArcSliderOptions的各项子属性均取其默认值。 |
 
 ## digitalCrownSensitivity
 
@@ -68,11 +68,11 @@ ArcSliderOptions的构造函数。
 
 配置弧形Slider的样式信息。
 
-默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
+默认值：[ArcSliderStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
 
 @Trace
 
-**类型：** [ArcSliderLayoutOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md)
+**类型：** [ArcSliderLayoutOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md)
 
 **起始版本：** 18
 
@@ -95,7 +95,7 @@ ArcSliderOptions的构造函数。
 
 @Trace
 
-**类型：** [ArcSliderChangeHandler](arkts-arkui-arcsliderchangehandler-t.md)
+**类型：** [ArcSliderChangeHandler](../../apis-default/arkts-apis/arkts-arcsliderchangehandler-t.md)
 
 **起始版本：** 18
 
@@ -118,7 +118,7 @@ ArcSliderOptions的构造函数。
 
 @Trace
 
-**类型：** [ArcSliderEnlargeHandler](arkts-arkui-arcsliderenlargehandler-t.md)
+**类型：** [ArcSliderEnlargeHandler](../../apis-default/arkts-apis/arkts-arcsliderenlargehandler-t.md)
 
 **起始版本：** 18
 
@@ -141,7 +141,7 @@ ArcSliderOptions的构造函数。
 
 @Trace
 
-**类型：** [ArcSliderTouchHandler](arkts-arkui-arcslidertouchhandler-t.md)
+**类型：** [ArcSliderTouchHandler](../../apis-default/arkts-apis/arkts-arcslidertouchhandler-t.md)
 
 **起始版本：** 18
 
@@ -160,11 +160,11 @@ ArcSliderOptions的构造函数。
 
 配置弧形Slider的样式信息。
 
-默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
+默认值：[ArcSliderStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
 
 @Trace
 
-**类型：** [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
+**类型：** [ArcSliderStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
 
 **起始版本：** 18
 
@@ -183,11 +183,11 @@ ArcSliderOptions的构造函数。
 
 配置弧形Slider的样式信息。
 
-默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
+默认值：[ArcSliderStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
 
 @Trace
 
-**类型：** [ArcSliderValueOptions](arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptions-c.md)
+**类型：** [ArcSliderValueOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcslidervalueoptions-c.md)
 
 **起始版本：** 18
 

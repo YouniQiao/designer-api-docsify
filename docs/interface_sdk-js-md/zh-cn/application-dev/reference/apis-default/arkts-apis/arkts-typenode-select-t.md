@@ -16,5 +16,5 @@ Define the FrameNode type for Select.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** SelectFrameNode
+**属性类型：** [SelectFrameNode](arkts-typenode-selectframenode-c.md)
 

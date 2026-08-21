@@ -16,5 +16,5 @@ Map that contains Class and its default creator. The key is the Class type. The 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** Map<Class, StorageDefaultCreator<object>>
+**Property type:** Map&lt;[Class](../../apis-arkts/arkts-apis/arkts-arkts-class-c.md), [StorageDefaultCreator](arkts-storagedefaultcreator-t.md)&lt;object&gt;&gt;
 

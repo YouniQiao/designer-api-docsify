@@ -718,7 +718,7 @@ levelOrder?: LevelOrder
 levelUniqueId?: int
 ```
 
-设置页面级弹窗需要显示的层级下的[getUniqueId](arkts-framenode-c.md#getuniqueid)。
+设置页面级弹窗需要显示的层级下的[getUniqueId](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getuniqueid)。
 
 取值范围：大于等于0的数字。
 

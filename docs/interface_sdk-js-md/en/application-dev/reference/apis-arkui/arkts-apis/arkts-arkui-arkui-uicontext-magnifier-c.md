@@ -4,7 +4,7 @@ Provides the capability of displaying and hiding of the magnifier. The magnifier
 
 > **NOTE：**
 > 
-> - In the following API examples, you must first use [getMagnifier()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getmagnifier) in **UIContext**
+> - In the following API examples, you must first use [getMagnifier()](arkts-arkui-arkui-uicontext-uicontext-c.md#getmagnifier) in **UIContext**
 > to obtain a **Magnifier** instance, and then call the APIs using the obtained instance.
 > 
 > - The magnifier capability of this class does not affect that of text components. For text components, you are &gt; advised to use the built-in magnifier capability.

@@ -220,7 +220,7 @@ uiContext: UIContext
 
 The UIContext required by the dialog.
 
-**Type:** [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)
+**Type:** [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
 
 **Since:** 12
 

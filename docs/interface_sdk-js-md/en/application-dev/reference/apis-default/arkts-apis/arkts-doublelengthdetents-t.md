@@ -21,6 +21,6 @@ Defines the detent array of a two-length.
 
 **Property type:** [
     (SheetSize | Length),
-    SheetSize | Length | undefined
+    SheetSize | [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) | undefined
 ]
 

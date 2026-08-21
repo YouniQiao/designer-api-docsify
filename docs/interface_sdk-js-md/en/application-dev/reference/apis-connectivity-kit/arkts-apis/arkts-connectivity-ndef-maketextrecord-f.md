@@ -12,11 +12,11 @@ import { tag } from '@kit.ConnectivityKit';
 function makeTextRecord(text: string, locale: string): NdefRecord
 ```
 
-Creates an NDEF record with text data.
+Creates an NDEF record based on the specified text data and language type.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ndef-function makeTextRecord(text: string, locale: string): NdefRecord--><!--Device-ndef-function makeTextRecord(text: string, locale: string): NdefRecord-End-->
 
@@ -26,14 +26,14 @@ Creates an NDEF record with text data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Text data for new an NDEF record. |
-| locale | string | Yes | Language code for the NDEF record. if locale is null, use default locale. |
+| text | string | Yes | Text to write to the NDEF record. The length must be less than the capacity of the NFC tag to be written. |
+| locale | string | Yes | Locale of the text in the record. The length must be less than the capacity of the NFC tag to be written. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NdefRecord](arkts-connectivity-tag-ndefrecord-i.md) | The instance of NdefRecord. |
+| [NdefRecord](arkts-connectivity-tag-ndefrecord-i.md) | NDEF record created. For details, see *NFCForum-TS-NDEF_1.0*. |
 
 **Error codes:**
 

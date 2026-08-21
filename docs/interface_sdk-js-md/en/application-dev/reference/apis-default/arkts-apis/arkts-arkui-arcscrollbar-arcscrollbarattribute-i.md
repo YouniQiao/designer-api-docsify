@@ -33,7 +33,7 @@ attributeModifier(modifier: AttributeModifier<ArcScrollBarAttribute> | Attribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | AttributeModifier&lt;[ArcScrollBarAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-c.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
+| modifier | AttributeModifier&lt;[ArcScrollBarAttribute](arkts-arkui-arcscrollbar-arcscrollbarattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -55,7 +55,7 @@ setArcScrollBarOptions(options: ArcScrollBarOptions): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ArcScrollBarOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcscrollbar-arcscrollbaroptions-i.md) | Yes |  |
+| options | [ArcScrollBarOptions](arkts-arkui-arcscrollbar-arcscrollbaroptions-i.md) | Yes |  |
 
 **Return value:**
 

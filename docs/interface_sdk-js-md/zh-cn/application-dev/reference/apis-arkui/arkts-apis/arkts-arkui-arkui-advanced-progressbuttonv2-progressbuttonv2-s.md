@@ -30,7 +30,7 @@ import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions }
 
 下载按钮颜色选项。
 
-**类型：** [ProgressButtonV2Color](arkts-arkui-arkui-advanced-progressbuttonv2-progressbuttonv2color-c.md)
+**类型：** [ProgressButtonV2Color](../../apis-default/arkts-apis/arkts-arkui-advanced-progressbuttonv2-progressbuttonv2color-c.md)
 
 **起始版本：** 18
 
@@ -91,7 +91,7 @@ import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions }
 
 下载按钮的点击回调。
 
-**类型：** [ClickCallback](arkts-arkui-clickcallback-t.md)
+**类型：** [ClickCallback](../../apis-default/arkts-apis/arkts-clickcallback-t.md)
 
 **起始版本：** 18
 

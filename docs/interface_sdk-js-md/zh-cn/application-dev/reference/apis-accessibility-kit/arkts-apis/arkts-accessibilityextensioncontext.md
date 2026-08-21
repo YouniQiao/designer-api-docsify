@@ -6,14 +6,14 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c.md) | AccessibilityExtensionContext是AccessibilityExtensionAbility上下文环境，继承自ExtensionContext。 |
+| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c.md) | AccessibilityExtensionContext是AccessibilityExtensionAbility上下文环境，继承自ExtensionContext。辅助功能扩展上下文模块提供辅助功能扩展的相关能力，包括配置关注信息类型、查询节点信息、手势注入等。 |
 
 <!--Del-->
 ### 类（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c-sys.md) | AccessibilityExtensionContext是AccessibilityExtensionAbility上下文环境，继承自ExtensionContext。 |
+| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c-sys.md) | AccessibilityExtensionContext是AccessibilityExtensionAbility上下文环境，继承自ExtensionContext。辅助功能扩展上下文模块提供辅助功能扩展的相关能力，包括配置关注信息类型、查询节点信息、手势注入等。 |
 | [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md) | 无障碍节点元素执行特定操作时，为操作提供具体设置的参数值。不同操作类型需设置不同的参数字段，各操作类型与参数字段的对应关系，详见 [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md)（无障碍节点元素可执行的操作）。 |
 <!--DelEnd-->
 

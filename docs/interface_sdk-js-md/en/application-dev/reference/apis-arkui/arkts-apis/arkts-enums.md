@@ -55,7 +55,7 @@
 | [GestureCollectIntervention](arkts-arkui-gesturecollectintervention-e.md) | Define the gesture and events collection intervention operations. |
 | [GestureShortcut](arkts-arkui-gestureshortcut-e.md) | Define the smart gesture shortcut priority enumeration. |
 | [GradientDirection](arkts-arkui-gradientdirection-e.md) | GradientDirection enumeration description |
-| [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md) | Enumerates the height breakpoint values corresponding to different window aspect ratio thresholds. The values are returned through [getWindowHeightBreakpoint](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getwindowheightbreakpoint). |
+| [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md) | Enumerates the height breakpoint values corresponding to different window aspect ratio thresholds. The values are returned through [getWindowHeightBreakpoint](arkts-arkui-arkui-uicontext-uicontext-c.md#getwindowheightbreakpoint). |
 | [HitTestMode](arkts-arkui-hittestmode-e.md) | Sets the response logic and node blocking rules for the hit test. |
 | [HorizontalAlign](arkts-arkui-horizontalalign-e.md) | HorizontalAlign enumeration description. |
 | [HoverEffect](arkts-arkui-hovereffect-e.md) | Sets the hover effect of the component. |
@@ -112,7 +112,7 @@
 | [VerticalAlign](arkts-arkui-verticalalign-e.md) | VerticalAlign enumeration description |
 | [Visibility](arkts-arkui-visibility-e.md) | Defines the visibility and layout placeholder status of the component. |
 | [Week](arkts-arkui-week-e.md) | Week Enum value |
-| [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md) | Enumerates the width breakpoint values corresponding to different window width thresholds. The values are returned through [getWindowWidthBreakpoint](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getwindowwidthbreakpoint). |
+| [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md) | Enumerates the width breakpoint values corresponding to different window width thresholds. The values are returned through [getWindowWidthBreakpoint](arkts-arkui-arkui-uicontext-uicontext-c.md#getwindowwidthbreakpoint). |
 | [WordBreak](arkts-arkui-wordbreak-e.md) | The word break rule. |
 | [XComponentType](arkts-arkui-xcomponenttype-e.md) | The type of XComponent |
 

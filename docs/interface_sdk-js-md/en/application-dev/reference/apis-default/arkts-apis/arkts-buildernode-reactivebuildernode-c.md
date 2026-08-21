@@ -57,7 +57,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the ReactiveBuilderNode |
+| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the ReactiveBuilderNode |
 | options | [RenderOptions](arkts-buildernode-renderoptions-i.md) | No | Render options of the ReactiveBuilderNode |
 
 ## dispose

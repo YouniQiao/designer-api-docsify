@@ -63,5 +63,5 @@ The constructor of SegmentedButtonItems
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | [SegmentButtonV2ItemOptions](arkts-arkui-advanced-segmentbuttonv2-segmentbuttonv2itemoptions-i.md)[] | Yes | the options array of the segmented button items |
+| items | [SegmentButtonV2ItemOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2itemoptions-i.md)[] | Yes | the options array of the segmented button items |
 

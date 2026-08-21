@@ -85,7 +85,7 @@ borderRadiusMode?: BorderRadiusMode
 
 The border radius mode of SegmentButton.
 
-**Type:** [BorderRadiusMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-borderradiusmode-e.md)
+**Type:** [BorderRadiusMode](arkts-arkui-advanced-segmentbutton-borderradiusmode-e.md)
 
 **Default:** BorderRadiusMode.Default
 
@@ -169,7 +169,7 @@ fontSize?: DimensionNoPercentage
 
 The font size of buttons.
 
-**Type:** [DimensionNoPercentage](../../apis-arkui/arkts-apis/arkts-arkui-dimensionnopercentage-t.md)
+**Type:** [DimensionNoPercentage](arkts-dimensionnopercentage-t.md)
 
 **Default:** $r('sys.float.ohos_id_text_size_body2')
 
@@ -337,7 +337,7 @@ selectedFontSize?: DimensionNoPercentage
 
 The font size of selected button.
 
-**Type:** [DimensionNoPercentage](../../apis-arkui/arkts-apis/arkts-arkui-dimensionnopercentage-t.md)
+**Type:** [DimensionNoPercentage](arkts-dimensionnopercentage-t.md)
 
 **Default:** $r('sys.float.ohos_id_text_size_body2')
 

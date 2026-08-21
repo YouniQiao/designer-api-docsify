@@ -12,7 +12,7 @@ import { config } from '@kit.AccessibilityKit';
 function offInstalledAccessibilityListChange(callback?: Callback<void>): void
 ```
 
-Unregister listener that watches for changes in the installed status of accessibility extensions.
+取消已安装的辅助扩展的列表变化监听。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -28,7 +28,7 @@ Unregister listener that watches for changes in the installed status of accessib
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | Indicates the listener. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 取消指定callback对象的事件响应。需与onInstalledAccessibilityListChange的callback一致。缺省时，表示注销所有 已注册事件。 |
 
 **错误码：**
 

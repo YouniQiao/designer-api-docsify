@@ -1,6 +1,6 @@
 # ConnectionChangeState
 
-Describes SSAP connection state.
+Defines the connection status reporting parameters.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { ssap } from '@kit.ConnectivityKit';
 address: string
 ```
 
-Indicates the device address. The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+Remote device address. The address format is **11:22:33:AA:BB:FF**.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ Indicates the device address. The length must be 17, The value consists of hexad
 state: ConnectionState
 ```
 
-Connection state.
+Connection status with a remote device.
 
 **Type:** ConnectionState
 

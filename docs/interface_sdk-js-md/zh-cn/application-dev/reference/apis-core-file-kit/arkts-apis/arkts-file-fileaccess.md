@@ -6,13 +6,13 @@ fileAccess模块是基于[extension](../../../application-models/extensionabilit
 > - 本模块首批接口从API version 9开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 > - 本模块为系统接口。
 > - 当前只支持FilePicker、文件管理器调用。
-> - 本模块接口从API version 23开始废弃。不建议使用以下接口， &gt; - 推荐使用[@ohos.file.fs](arkts-corefile-fileio-n.md)接口进行文件访问。
+> - 本模块接口从API version 23开始废弃。不建议使用以下接口， &gt; - 推荐使用[@ohos.file.fs](../../apis-default/arkts-apis/arkts-fileio-n.md)接口进行文件访问。
 
 **起始版本：** 9
 
 **废弃版本：** 23
 
-**替代接口：** [fileIo](arkts-corefile-fileio-n.md)
+**替代接口：** [fileIo](../../apis-default/arkts-apis/arkts-fileio-n.md)
 
 <!--Device-unnamed-declare namespace fileAccess--><!--Device-unnamed-declare namespace fileAccess-End-->
 

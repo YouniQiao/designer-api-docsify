@@ -16,5 +16,5 @@ Define the FrameNode type for Image.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** ImageFrameNode
+**属性类型：** [ImageFrameNode](arkts-typenode-imageframenode-c.md)
 

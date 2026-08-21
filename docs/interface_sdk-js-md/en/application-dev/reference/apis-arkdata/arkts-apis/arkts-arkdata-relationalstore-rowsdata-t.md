@@ -14,5 +14,5 @@ Indicates multiple rows of data with an array.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**Property type:** Array<RowData>
+**Property type:** Array&lt;[RowData](arkts-arkdata-relationalstore-rowdata-t.md)&gt;
 

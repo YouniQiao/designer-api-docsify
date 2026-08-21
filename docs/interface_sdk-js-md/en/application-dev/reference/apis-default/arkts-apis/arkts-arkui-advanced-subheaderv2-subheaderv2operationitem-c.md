@@ -37,7 +37,7 @@ Constructor of **SubHeaderV2OperationItem**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SubHeaderV2OperationItemOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationitemoptions-i.md) | Yes | Operation item configuration information. Defines the options for initializing a **SubHeaderV2OperationItem** object. |
+| options | [SubHeaderV2OperationItemOptions](arkts-arkui-advanced-subheaderv2-subheaderv2operationitemoptions-i.md) | Yes | Operation item configuration information. Defines the options for initializing a **SubHeaderV2OperationItem** object. |
 
 ## accessibilityDescription
 
@@ -137,7 +137,7 @@ Event triggered when the item is operated. Default value: **() =&gt; void**.
 
 Decorator: @Trace
 
-**Type:** [SubHeaderV2OperationItemAction](../../apis-arkui/arkts-apis/arkts-arkui-subheaderv2operationitemaction-t.md)
+**Type:** [SubHeaderV2OperationItemAction](arkts-subheaderv2operationitemaction-t.md)
 
 **Since:** 23
 
@@ -160,7 +160,7 @@ Content of the item in the operation area.
 
 Decorator: @Trace
 
-**Type:** [SubHeaderV2OperationItemType](../../apis-arkui/arkts-apis/arkts-arkui-subheaderv2operationitemtype-t.md)
+**Type:** [SubHeaderV2OperationItemType](arkts-subheaderv2operationitemtype-t.md)
 
 **Since:** 23
 

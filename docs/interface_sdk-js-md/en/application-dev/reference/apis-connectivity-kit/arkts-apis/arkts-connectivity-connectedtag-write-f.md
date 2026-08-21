@@ -12,7 +12,7 @@ import { connectedTag } from '@kit.ConnectivityKit';
 function write(data: number[]): Promise<void>
 ```
 
-Writes the NDEF data to the connected NFC tag.
+Writes data to this active tag. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -26,20 +26,20 @@ Writes the NDEF data to the connected NFC tag.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | number[] | Yes | Indicates the NDEF data to send, which is a byte array. |
+| data | number[] | Yes | Data to be written to the active tag. The value is a hexadecimal number ranging from 0x00 to 0xFF. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The void. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [3200101](../errorcode-nfc.md#3200101-abnormal-active-nfc-tag-status) | Connected NFC tag running state is abnormal in service. |
 
@@ -64,7 +64,7 @@ connectedTag.write(rawData).then(() => {
 function write(data: number[], callback: AsyncCallback<void>): void
 ```
 
-Writes the NDEF data to the connected NFC tag.
+Writes data to this active tag. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -78,15 +78,15 @@ Writes the NDEF data to the connected NFC tag.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | number[] | Yes | Indicates the NDEF data to send, which is a byte array. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes |  |
+| data | number[] | Yes | Data to be written to the active tag. The value is a hexadecimal number ranging from 0x00 to 0xFF. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the active tag content obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [3200101](../errorcode-nfc.md#3200101-abnormal-active-nfc-tag-status) | Connected NFC tag running state is abnormal in service. |
 

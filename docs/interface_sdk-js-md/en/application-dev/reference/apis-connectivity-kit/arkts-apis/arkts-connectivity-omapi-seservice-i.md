@@ -1,6 +1,6 @@
 # SEService
 
-SEService realizes the communication to available SEs on the device.
+*SEService** indicates the connection service used to connect to all available SEs in the system. You can use [createService](arkts-connectivity-omapi-createservice-f.md) to create an **SEService** instance.
 
 **Since:** 10
 
@@ -20,7 +20,7 @@ import { omapi } from '@kit.ConnectivityKit';
 getReaders(): Reader[]
 ```
 
-Returns the list of available SE readers. There must be no duplicated objects in the returned list. All available readers SHALL be listed even if no card is inserted.
+Obtains available SE readers, which include all the SEs on the device.
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ Returns the list of available SE readers. There must be no duplicated objects in
 
 | Type | Description |
 | --- | --- |
-| [Reader](arkts-connectivity-omapi-reader-i.md)[] | The list of available SE readers. |
+| [Reader](arkts-connectivity-omapi-reader-i.md)[] | Available readers obtained. |
 
 **Error codes:**
 
@@ -72,7 +72,7 @@ function secureElementDemo() {
 getVersion(): string
 ```
 
-Returns the version of the Open Mobile API Specification this implementation is based on.
+Obtains the version of the Open Mobile API (OMAPI) specification used.
 
 **Since:** 10
 
@@ -84,7 +84,7 @@ Returns the version of the Open Mobile API Specification this implementation is 
 
 | Type | Description |
 | --- | --- |
-| string | The Open Mobile API version (e.g. “3.3” for Open Mobile API Specification version 3.3). |
+| string | OMAPI version obtained. For example, **3.3** indicates Open Mobile API Specification v3.3. |
 
 **Error codes:**
 
@@ -117,7 +117,7 @@ try {
 isConnected(): boolean
 ```
 
-Checks whether or not the service is connected.
+Checks whether this SE service is connected.
 
 **Since:** 10
 
@@ -129,7 +129,7 @@ Checks whether or not the service is connected.
 
 | Type | Description |
 | --- | --- |
-| boolean | True if the service is connected. |
+| boolean | true** if the SE service is connected; **false** otherwise. |
 
 **Error codes:**
 
@@ -166,7 +166,7 @@ function secureElementDemo() {
 shutdown(): void
 ```
 
-Releases all SE resources allocated by this SEService. As a result isConnected() will return false.
+Releases all SE resources allocated to this SE service. After that, [isConnected](#isconnected) returns **false**.
 
 **Since:** 10
 

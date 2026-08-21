@@ -57,7 +57,7 @@ onHoverDecrease?: OnCounterV2HoverCallback
 
 默认值：undefined，表示不触发该回调。
 
-**类型：** [OnCounterV2HoverCallback](arkts-oncounterv2hovercallback-t.md)
+**类型：** [OnCounterV2HoverCallback](../../apis-arkui/arkts-apis/arkts-arkui-oncounterv2hovercallback-t.md)
 
 **起始版本：** 26.0.0
 
@@ -79,7 +79,7 @@ onHoverIncrease?: OnCounterV2HoverCallback
 
 默认值：undefined，表示不触发该回调。
 
-**类型：** [OnCounterV2HoverCallback](arkts-oncounterv2hovercallback-t.md)
+**类型：** [OnCounterV2HoverCallback](../../apis-arkui/arkts-apis/arkts-arkui-oncounterv2hovercallback-t.md)
 
 **起始版本：** 26.0.0
 

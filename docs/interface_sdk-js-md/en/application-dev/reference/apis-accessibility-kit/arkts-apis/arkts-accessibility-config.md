@@ -2,10 +2,6 @@
 
 The **accessibility.config** module provides APIs for configuring system accessibility features, including accessibility extension, high-contrast text, mouse buttons, and captions.
 
-> **NOTE：**
-> 
-> - The APIs of this module are system APIs.
-
 **Since:** 23
 
 <!--Device-unnamed-declare namespace config--><!--Device-unnamed-declare namespace config-End-->
@@ -75,9 +71,9 @@ import { config } from '@kit.AccessibilityKit';
 | Name | Description |
 | --- | --- |
 | [ClickResponseTime](arkts-accessibility-config-clickresponsetime-t-sys.md) | Click duration of different lengths. |
-| [DaltonizationColorFilter](arkts-accessibility-config-daltonizationcolorfilter-t-sys.md) | The configuration takes effect when the daltonization feature is enabled ( [daltonizationState](arkts-accessibility-config-con-sys.md#daltonizationstate) is set to **true**). When the daltonization feature is disabled ([daltonizationState](arkts-accessibility-config-con-sys.md#daltonizationstate) is set to **false**), the standard type is displayed. |
+| [DaltonizationColorFilter](arkts-accessibility-config-daltonizationcolorfilter-t-sys.md) | Color correction filters for different types of color vision deficiency. |
 | [OnDisconnectCallback](arkts-accessibility-config-ondisconnectcallback-t-sys.md) | Describes the callback to be invoked when the connection to **AccessibilityExtensionAbility** is disconnected. |
-| [RepeatClickInterval](arkts-accessibility-config-repeatclickinterval-t-sys.md) | The configuration takes effect when the ignore repeated click feature is enabled ( [ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignorerepeatclick) is set to **true**). When the ignore repeated click feature is disabled ([ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignorerepeatclick) is set to **false**), the configuration does not take effect. |
+| [RepeatClickInterval](arkts-accessibility-config-repeatclickinterval-t-sys.md) | Ignore repeated clicks at different time intervals. |
 <!--DelEnd-->
 
 <!--Del-->

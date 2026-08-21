@@ -14,5 +14,5 @@ A type used to denote ScopeComparable or number.
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Property type:** ScopeComparable<T>
+**Property type:** [ScopeComparable](arkts-util-scopecomparable-i.md)&lt;T&gt;
 

@@ -14,5 +14,5 @@ Declares the cipher suite for TLS 1.0.
 
 **System capability:** SystemCapability.Communication.NetStack
 
-**Property type:** TlsV10SpecificCipherSuite
+**Property type:** [TlsV10SpecificCipherSuite](arkts-network-http-tlsv10specificciphersuite-t.md)
 

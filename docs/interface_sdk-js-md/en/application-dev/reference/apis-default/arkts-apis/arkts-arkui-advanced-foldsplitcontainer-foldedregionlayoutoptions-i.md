@@ -25,7 +25,7 @@ verticalSplitRatio?: PresetSplitRatio
 
 The ratio of the heights of two areas in the vertical direction.
 
-**Type:** [PresetSplitRatio](arkts-arkui-advanced-foldsplitcontainer-presetsplitratio-e.md)
+**Type:** [PresetSplitRatio](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-foldsplitcontainer-presetsplitratio-e.md)
 
 **Since:** 23
 

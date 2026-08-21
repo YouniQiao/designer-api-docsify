@@ -24,7 +24,7 @@ arrow?: OperateIconV2
 
 默认不设置或设置为undefined时，不显示箭头。
 
-**类型：** [OperateIconV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operateiconv2-c.md)
+**类型：** [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -46,7 +46,7 @@ button?: OperateButtonV2
 
 默认不设置或设置为undefined时，不显示按钮。
 
-**类型：** [OperateButtonV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operatebuttonv2-c.md)
+**类型：** [OperateButtonV2](arkts-arkui-arkui-advanced-composelistitemv2-operatebuttonv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -68,7 +68,7 @@ checkbox?: OperateCheckV2
 
 默认不设置或设置为undefined时，不显示多选框。
 
-**类型：** [OperateCheckV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
+**类型：** [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -92,7 +92,7 @@ icon?: OperateIconV2
 
 同时设置symbolStyle时，只显示Symbol图标。
 
-**类型：** [OperateIconV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operateiconv2-c.md)
+**类型：** [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -138,7 +138,7 @@ radio?: OperateCheckV2
 
 默认不设置或设置为undefined时，不显示单选框。
 
-**类型：** [OperateCheckV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
+**类型：** [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -160,7 +160,7 @@ subIcon?: OperateIconV2
 
 默认不设置或设置为undefined时，不显示第二个图标。
 
-**类型：** [OperateIconV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operateiconv2-c.md)
+**类型：** [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -226,7 +226,7 @@ toggle?: OperateCheckV2
 
 默认不设置或设置为undefined时，不显示开关。
 
-**类型：** [OperateCheckV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
+**类型：** [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **起始版本：** 26.0.0
 

@@ -16,5 +16,5 @@ Define the FrameNode type for RelativeContainer.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** RelativeContainerFrameNode
+**属性类型：** [RelativeContainerFrameNode](arkts-typenode-relativecontainerframenode-c.md)
 

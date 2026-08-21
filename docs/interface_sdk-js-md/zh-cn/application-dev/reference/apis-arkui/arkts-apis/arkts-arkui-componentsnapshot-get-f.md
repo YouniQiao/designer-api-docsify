@@ -16,7 +16,7 @@ function get(id: string, callback: AsyncCallback<image.PixelMap>, options?: Snap
 
 > **说明：**
 > 
-> - 从API version 12开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的 &gt; [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)方法 &gt; 获取当前UI上下文关联的[ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)对象。
+> - 从API version 12开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [getComponentSnapshot](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)方法 &gt; 获取当前UI上下文关联的[ComponentSnapshot](../../apis-default/arkts-apis/arkts-arkui-uicontext-componentsnapshot-c.md)对象。
 > 
 > - 截图会获取最近一帧的绘制内容。如果在组件触发更新的同时调用截图，更新的渲染内容不会被截取到，截图会返回上一帧的绘制内容。
 
@@ -39,7 +39,7 @@ function get(id: string, callback: AsyncCallback<image.PixelMap>, options?: Snap
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | string | 是 | 目标组件的组件标识。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | 是 | 截图返回结果的回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | 截图返回结果的回调。 |
 | options | [SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | 否 | 截图相关的自定义参数。<br>**起始版本：** 12 |
 
 **错误码：**
@@ -103,7 +103,7 @@ function get(id: string, options?: SnapshotOptions): Promise<image.PixelMap>
 
 > **说明：**
 > 
-> - 从API version 12开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的 &gt; [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)方法 &gt; 获取当前UI上下文关联的[ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)对象。
+> - 从API version 12开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [getComponentSnapshot](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)方法 &gt; 获取当前UI上下文关联的[ComponentSnapshot](../../apis-default/arkts-apis/arkts-arkui-uicontext-componentsnapshot-c.md)对象。
 > 
 > - 截图会获取最近一帧的绘制内容。如果在组件触发更新的同时调用截图，更新的渲染内容不会被截取到，截图会返回上一帧的绘制内容。
 

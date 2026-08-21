@@ -2,7 +2,7 @@
 
 Defines the prefix image icon class.
 
-**Inheritance/Implementation:** ChipV2PrefixImageIcon extends [ChipV2ImageIcon](arkts-arkui-advanced-chipv2-chipv2imageicon-c.md)
+**Inheritance/Implementation:** ChipV2PrefixImageIcon extends [ChipV2ImageIcon](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipv2-chipv2imageicon-c.md)
 
 **Since:** 26.0.0
 
@@ -39,5 +39,5 @@ The constructor of ChipV2PrefixImageIcon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ChipV2PrefixImageIconConfig](arkts-arkui-advanced-chipv2-chipv2prefiximageiconconfig-i.md) | Yes | config of prefix image icon |
+| config | [ChipV2PrefixImageIconConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipv2-chipv2prefiximageiconconfig-i.md) | Yes | config of prefix image icon |
 

@@ -4,7 +4,7 @@
 export type AccessibilityVirtualNode = _AccessibilityVirtualNode
 ```
 
-Indicates the accessibility virtual node.
+无障碍虚拟节点，请参考[AccessibilityVirtualNode](arkts-accessibility-accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md)。
 
 **起始版本：** 26.0.0
 

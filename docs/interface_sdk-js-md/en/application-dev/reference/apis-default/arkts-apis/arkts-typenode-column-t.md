@@ -16,5 +16,5 @@ Define the FrameNode type for Column.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** ColumnFrameNode
+**Property type:** [ColumnFrameNode](arkts-typenode-columnframenode-c.md)
 

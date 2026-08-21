@@ -42,13 +42,13 @@ Creates a **SegmentButtonOptions** object specifically for capsule-style segment
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CapsuleSegmentButtonConstructionOptions](arkts-arkui-arkui-advanced-segmentbutton-capsulesegmentbuttonconstructionoptions-i.md) | Yes | Configuration options for capsule-style segmented buttons. |
+| options | [CapsuleSegmentButtonConstructionOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-capsulesegmentbuttonconstructionoptions-i.md) | Yes | Configuration options for capsule-style segmented buttons. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md) | Options of the **SegmentButton** component. |
+| [SegmentButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md) | Options of the **SegmentButton** component. |
 
 ## constructor
 
@@ -72,7 +72,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TabSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-tabsegmentbuttonoptions-i.md) \| [CapsuleSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-capsulesegmentbuttonoptions-i.md) | Yes | Configuration options for tab-style or capsule-style segmented buttons. |
+| options | [TabSegmentButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-tabsegmentbuttonoptions-i.md) \| [CapsuleSegmentButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-capsulesegmentbuttonoptions-i.md) | Yes | Configuration options for tab-style or capsule-style segmented buttons. |
 
 ## tab
 
@@ -96,13 +96,13 @@ Creates a SegmentButtonOptions class to define tabs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TabSegmentButtonConstructionOptions](arkts-arkui-arkui-advanced-segmentbutton-tabsegmentbuttonconstructionoptions-i.md) | Yes | Configuration options for tab-style segmented buttons. |
+| options | [TabSegmentButtonConstructionOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-tabsegmentbuttonconstructionoptions-i.md) | Yes | Configuration options for tab-style segmented buttons. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md) | Options of the **SegmentButton** component. |
+| [SegmentButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md) | Options of the **SegmentButton** component. |
 
 ## backgroundBlurStyle
 
@@ -192,7 +192,7 @@ Default value: **BorderRadiusMode.DEFAULT**
 
 If the value is **undefined**, the default value is used.
 
-**Type:** [BorderRadiusMode](arkts-arkui-arkui-advanced-segmentbutton-borderradiusmode-e.md)
+**Type:** [BorderRadiusMode](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-borderradiusmode-e.md)
 
 **Default:** BorderRadiusMode.Default
 
@@ -242,7 +242,7 @@ buttons: SegmentButtonItemOptionsArray
 
 Button information of the component, including the icon and text.
 
-**Type:** [SegmentButtonItemOptionsArray](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptionsarray-c.md)
+**Type:** [SegmentButtonItemOptionsArray](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-segmentbuttonitemoptionsarray-c.md)
 
 **Since:** 11
 
@@ -310,7 +310,7 @@ Font size of the unselected button. The value cannot be set in percentage.
 
 If the value is **undefined**, the font size is \$r('sys.float.ohos_id_text_size_body2').
 
-**Type:** [DimensionNoPercentage](arkts-arkui-dimensionnopercentage-t.md)
+**Type:** [DimensionNoPercentage](../../apis-default/arkts-apis/arkts-dimensionnopercentage-t.md)
 
 **Since:** 11
 
@@ -540,7 +540,7 @@ Font size of the selected button. The value cannot be set in percentage.
 
 If the value is **undefined**, the font size is \$r('sys.float.ohos_id_text_size_body2').
 
-**Type:** [DimensionNoPercentage](arkts-arkui-dimensionnopercentage-t.md)
+**Type:** [DimensionNoPercentage](../../apis-default/arkts-apis/arkts-dimensionnopercentage-t.md)
 
 **Since:** 11
 

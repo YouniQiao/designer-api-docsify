@@ -16,5 +16,5 @@ Defines the localized margin property.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** LocalizedPadding
+**Property type:** [LocalizedPadding](arkts-units-localizedpadding-i.md)
 

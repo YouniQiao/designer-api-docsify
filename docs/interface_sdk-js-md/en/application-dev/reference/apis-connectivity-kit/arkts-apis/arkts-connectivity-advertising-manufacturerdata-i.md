@@ -1,6 +1,6 @@
 # ManufacturerData
 
-Describes the manufacturer data.
+Represents the manufacturer data.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { advertising } from '@kit.ConnectivityKit';
 manufacturerData: ArrayBuffer
 ```
 
-Indicates the manufacturer data.
+Manufacturer data.
 
 **Type:** ArrayBuffer
 
@@ -38,7 +38,7 @@ Indicates the manufacturer data.
 manufacturerId: int
 ```
 
-Indicates the manufacturer ID.
+Manufacturer ID. The value range is [1, 65535].
 
 **Type:** int
 

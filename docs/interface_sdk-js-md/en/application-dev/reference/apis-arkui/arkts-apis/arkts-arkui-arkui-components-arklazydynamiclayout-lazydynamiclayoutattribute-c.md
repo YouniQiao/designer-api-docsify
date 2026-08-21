@@ -46,5 +46,5 @@ Called when visible indexes change.
 
 | Type | Description |
 | --- | --- |
-| [LazyDynamicLayoutAttribute](../../apis-default/arkts-apis/arkts-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-i.md) |  |
+| [LazyDynamicLayoutAttribute](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-c.md) |  |
 

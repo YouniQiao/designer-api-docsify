@@ -1,6 +1,8 @@
 # InputMethodSubtype
 
-The **InputMethodSubtype** module provides APIs for managing the attributes of input method subtypes. The input method subtype allows the input method to switch to a specific mode or language, for example, the Chinese or English keyboard.
+@brief The **InputMethodSubtype** module provides APIs for managing the attributes of input method subtypes. The input method subtype allows the input method to switch to a specific mode or language, for example, the Chinese or English keyboard. <br> <br>   
+> **NOTE：**<br>
+> <br> &gt;The initial APIs of this module are supported since API version 9. Newly added APIs will be marked with a superscript to indicate their earliest API version.
 
 **Since:** 23
 
@@ -20,11 +22,7 @@ import { InputMethodSubtype } from '@kit.IMEKit';
 extra?: object
 ```
 
-Mandatory. Extra information of the input method subtype.
-
-**NOTE：**
-
-- This parameter is optional since API version 10. - This parameter is reserved and currently has no specific meaning.
+@brief Extra information of the input method subtype. <br> <br> **NOTE：**<br> <br> - This parameter is optional since API version 10. <br> - This parameter is reserved and currently has no specific meaning.
 
 **Type:** object
 
@@ -40,7 +38,7 @@ Mandatory. Extra information of the input method subtype.
 readonly icon?: string
 ```
 
-Optional. Icon of the input method subtype. It can be obtained by using **iconId**. This parameter is reserved.
+@brief Optional. Icon of the input method subtype. It can be obtained by using **iconId**. This parameter is reserved.
 
 **Type:** string
 
@@ -56,7 +54,7 @@ Optional. Icon of the input method subtype. It can be obtained by using **iconId
 readonly iconId?: double
 ```
 
-Optional. Icon ID of the input method subtype.
+@brief Optional. Icon ID of the input method subtype.
 
 **Type:** double
 
@@ -72,7 +70,7 @@ Optional. Icon ID of the input method subtype.
 readonly id: string
 ```
 
-Mandatory. ID of the input method subtype.
+@brief Mandatory. ID of the input method subtype.
 
 **Type:** string
 
@@ -88,7 +86,7 @@ Mandatory. ID of the input method subtype.
 readonly label?: string
 ```
 
-Optional. Label of the input method subtype.
+@brief Optional. Label of the input method subtype.
 
 **Type:** string
 
@@ -104,7 +102,7 @@ Optional. Label of the input method subtype.
 readonly labelId?: double
 ```
 
-Optional. Label ID of the input method subtype.
+@brief Optional. Label ID of the input method subtype.
 
 **Type:** double
 
@@ -120,7 +118,7 @@ Optional. Label ID of the input method subtype.
 readonly language: string
 ```
 
-Mandatory. Language of the input method subtype.
+@brief Mandatory. Language of the input method subtype.
 
 **Type:** string
 
@@ -136,7 +134,7 @@ Mandatory. Language of the input method subtype.
 readonly locale: string
 ```
 
-Mandatory. Locale of the input method subtype.
+@brief Mandatory. Locale of the input method subtype.
 
 **Type:** string
 
@@ -152,7 +150,7 @@ Mandatory. Locale of the input method subtype.
 readonly mode?: 'upper' | 'lower'
 ```
 
-Optional. Mode of the input method subtype, including **upper** (uppercase) and **lower** (lowercase).
+@brief Optional. Mode of the input method subtype, including **upper** (uppercase) and **lower** (lowercase).
 
 **Type:** 'upper' \| 'lower'
 
@@ -168,7 +166,7 @@ Optional. Mode of the input method subtype, including **upper** (uppercase) and 
 readonly name: string
 ```
 
-Mandatory. Bundle name of the application to which the input method subtype belongs.
+@brief Mandatory. Bundle name of the application to which the input method subtype belongs.
 
 **Type:** string
 

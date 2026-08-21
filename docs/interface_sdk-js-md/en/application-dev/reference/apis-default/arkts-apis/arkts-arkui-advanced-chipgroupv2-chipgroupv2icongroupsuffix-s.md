@@ -65,7 +65,7 @@ IconGroupSuffix background system material.
 
 Suffix item.
 
-**Type:** Array&lt;[ChipGroupV2IconItemConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2iconitemconfig-i.md) \| SymbolGlyphModifier \| [ChipGroupV2SymbolItemConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2symbolitemconfig-i.md)&gt;
+**Type:** Array&lt;[ChipGroupV2IconItemConfig](arkts-arkui-advanced-chipgroupv2-chipgroupv2iconitemconfig-i.md) \| SymbolGlyphModifier \| [ChipGroupV2SymbolItemConfig](arkts-arkui-advanced-chipgroupv2-chipgroupv2symbolitemconfig-i.md)&gt;
 
 **Since:** 26.0.0
 

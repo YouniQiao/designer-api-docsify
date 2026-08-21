@@ -6,7 +6,7 @@ typedef struct Ethernet_NetAddr {...} Ethernet_NetAddr
 
 ## Overview
 
-Defines the network address.
+Defines a network address.
 
 **Since**: 26.0.0
 

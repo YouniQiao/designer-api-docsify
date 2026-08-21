@@ -12,7 +12,7 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 function createRemoteDevice(address: string): RemoteDevice
 ```
 
-Creates a remote device instance.
+Creates a **RemoteDevice** instance.
 
 **Since:** 26.0.0
 
@@ -26,13 +26,13 @@ Creates a remote device instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | string | Yes | Indicates the device address. <br>The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF. |
+| address | string | Yes | Address of a remote device. The address format is **11:22:33:AA:BB:FF**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RemoteDevice](arkts-connectivity-remotedevice-remotedevice-i.md) | Returns a near link remote device instance. |
+| [RemoteDevice](arkts-connectivity-remotedevice-remotedevice-i.md) | RemoteDevice** instance. |
 
 **Error codes:**
 

@@ -4,11 +4,11 @@
 export type NdefMessage = _NdefMessage
 ```
 
-Exports type NdefMessage.
+Obtains an **NdefMessage** object.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-tag-export type NdefMessage = _NdefMessage--><!--Device-tag-export type NdefMessage = _NdefMessage-End-->
 

@@ -1,6 +1,6 @@
 # ServerResponse
 
-Describes the parameters of a response send by the server to a specified read or write request.
+Defines a response to a client request.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { ssap } from '@kit.ConnectivityKit';
 address: string
 ```
 
-Indicates the device address. The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+Client device address. The address format is **11:22:33:AA:BB:FF**.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ Indicates the device address. The length must be 17, The value consists of hexad
 requestId: int
 ```
 
-The request ID. The value range is all integers.
+Request ID. The value range is [0, 65535]. The ID must be the same as the value of **requestId** in the received [PropertyReadRequest](arkts-connectivity-ssap-propertyreadrequest-i.md) or [PropertyWriteRequest](arkts-connectivity-ssap-propertywriterequest-i.md), which is used to associate the request with the response.
 
 **Type:** int
 
@@ -56,7 +56,7 @@ The request ID. The value range is all integers.
 value: ArrayBuffer
 ```
 
-Indicates the response data.
+Data value of the response.
 
 **Type:** ArrayBuffer
 

@@ -2,9 +2,9 @@
 
 用于构建胶囊类的SegmentButtonOptions对象。
 
-继承[CommonSegmentButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i.md)。
+继承[CommonSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i.md)。
 
-**继承/实现关系：** CapsuleSegmentButtonConstructionOptions extends [CommonSegmentButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i.md)
+**继承/实现关系：** CapsuleSegmentButtonConstructionOptions extends [CommonSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i.md)
 
 **起始版本：** 11
 
@@ -27,7 +27,7 @@ buttons: SegmentButtonItemTuple
 
 按钮信息。
 
-**类型：** [SegmentButtonItemTuple](../../apis-default/arkts-apis/arkts-segmentbuttonitemtuple-t.md)
+**类型：** [SegmentButtonItemTuple](arkts-arkui-segmentbuttonitemtuple-t.md)
 
 **起始版本：** 11
 

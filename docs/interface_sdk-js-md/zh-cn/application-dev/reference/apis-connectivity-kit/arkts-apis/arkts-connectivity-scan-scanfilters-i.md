@@ -1,6 +1,6 @@
 # ScanFilters
 
-扫描过滤器。
+表示扫描过滤条件。
 
 **起始版本：** 26.0.0
 
@@ -20,7 +20,7 @@ import { scan } from '@kit.ConnectivityKit';
 address?: string
 ```
 
-设备地址。 长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
+表示设备地址，若未配置则默认不过滤该字段。地址格式参考：11:22:33:AA:BB:FF。
 
 **类型：** string
 
@@ -38,7 +38,7 @@ address?: string
 deviceName?: string
 ```
 
-设备名称。
+表示设备名称，字符串长度范围[0, 30]。若未配置则默认不过滤该字段。
 
 **类型：** string
 
@@ -56,7 +56,7 @@ deviceName?: string
 manufacturerData?: ArrayBuffer
 ```
 
-制造商数据。
+表示厂商数据，若未配置则默认不过滤该字段。配置该字段需同时配置manufacturerId。
 
 **类型：** ArrayBuffer
 
@@ -74,7 +74,7 @@ manufacturerData?: ArrayBuffer
 manufacturerDataMask?: ArrayBuffer
 ```
 
-制造商数据掩码。
+表示厂商数据掩码，若未配置则默认不过滤该字段。配置该字段需同时配置manufacturerData，且二者长度必须一致。掩码与厂商数据按位与运算，用于精确匹配厂商数据中指定比特位。
 
 **类型：** ArrayBuffer
 
@@ -92,7 +92,7 @@ manufacturerDataMask?: ArrayBuffer
 manufacturerId?: int
 ```
 
-厂商ID。 取值范围为全体整数。
+表示厂商ID，取值范围[1, 65535]，若未配置则默认不过滤该字段。
 
 **类型：** int
 
@@ -110,7 +110,7 @@ manufacturerId?: int
 rssi?: int
 ```
 
-接收信号强度指示。 单位为： 分贝毫瓦，取值应为[-128,127]内的整数。
+过滤信号强度大于或等于该信号强度门限值的广播报文，取值范围[-128, 127]，单位：dBm。建议设置[-90, 20]范围内的门限值。若未配置则默认不对信号强度进行过滤。 取值限定为整数。
 
 **类型：** int
 

@@ -4,7 +4,7 @@
 type AcbState = nearlinkConstant.AcbState
 ```
 
-ACB（异步面向连接的双向）连接状态。
+表示和远端设备的逻辑链路连接状态，为枚举值。
 
 **起始版本：** 26.0.0
 

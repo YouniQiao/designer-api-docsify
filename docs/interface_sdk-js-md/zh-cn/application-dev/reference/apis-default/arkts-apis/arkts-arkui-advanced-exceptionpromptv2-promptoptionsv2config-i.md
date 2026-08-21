@@ -103,7 +103,7 @@ marginType: MarginTypeV2
 
 Margin Type of ExceptionPromptV2. Margin from the content area to the edge of the container
 
-**类型：** [MarginTypeV2](arkts-arkui-advanced-exceptionpromptv2-margintypev2-e.md)
+**类型：** [MarginTypeV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-exceptionpromptv2-margintypev2-e.md)
 
 **起始版本：** 26.0.0
 

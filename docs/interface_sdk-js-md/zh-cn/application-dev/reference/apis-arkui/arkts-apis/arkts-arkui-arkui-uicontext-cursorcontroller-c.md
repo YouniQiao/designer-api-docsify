@@ -6,7 +6,7 @@
 > 
 > - 本Class首批接口从API version 12开始支持。
 > 
-> - 以下API需先使用UIContext中的[getCursorController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcursorcontroller)方法获取CursorController实例，再通过此实例调用对应方法。
+> - 以下API需先使用UIContext中的[getCursorController()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcursorcontroller)方法获取CursorController实例，再通过此实例调用对应方法。
 
 **起始版本：** 12
 
@@ -67,7 +67,7 @@ setCursor(value: PointerStyle): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PointerStyle](arkts-arkui-pointerstyle-t.md) | 是 | 光标样式。 |
+| value | [PointerStyle](../../apis-default/arkts-apis/arkts-pointerstyle-t.md) | 是 | 光标样式。 |
 
 ## setCustomCursor
 

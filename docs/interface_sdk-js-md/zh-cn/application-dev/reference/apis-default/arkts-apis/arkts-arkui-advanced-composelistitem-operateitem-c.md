@@ -23,7 +23,7 @@ public arrow?: OperateIcon
 
 Sets the arrow.
 
-**类型：** [OperateIcon](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitem-operateicon-c.md)
+**类型：** [OperateIcon](arkts-arkui-advanced-composelistitem-operateicon-c.md)
 
 **起始版本：** 23
 
@@ -43,7 +43,7 @@ public button?: OperateButton
 
 Sets the button.
 
-**类型：** [OperateButton](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitem-operatebutton-c.md)
+**类型：** [OperateButton](arkts-arkui-advanced-composelistitem-operatebutton-c.md)
 
 **起始版本：** 23
 
@@ -63,7 +63,7 @@ public checkbox?: OperateCheck
 
 Sets the checkBox.
 
-**类型：** [OperateCheck](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitem-operatecheck-c.md)
+**类型：** [OperateCheck](arkts-arkui-advanced-composelistitem-operatecheck-c.md)
 
 **起始版本：** 23
 
@@ -83,7 +83,7 @@ public icon?: OperateIcon
 
 Sets the icon.
 
-**类型：** [OperateIcon](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitem-operateicon-c.md)
+**类型：** [OperateIcon](arkts-arkui-advanced-composelistitem-operateicon-c.md)
 
 **起始版本：** 23
 
@@ -123,7 +123,7 @@ public radio?: OperateCheck
 
 Sets the radio.
 
-**类型：** [OperateCheck](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitem-operatecheck-c.md)
+**类型：** [OperateCheck](arkts-arkui-advanced-composelistitem-operatecheck-c.md)
 
 **起始版本：** 23
 
@@ -143,7 +143,7 @@ public subIcon?: OperateIcon
 
 Sets the subIcon.
 
-**类型：** [OperateIcon](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitem-operateicon-c.md)
+**类型：** [OperateIcon](arkts-arkui-advanced-composelistitem-operateicon-c.md)
 
 **起始版本：** 23
 
@@ -203,7 +203,7 @@ public toggle?: OperateCheck
 
 Sets the toggle.
 
-**类型：** [OperateCheck](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitem-operatecheck-c.md)
+**类型：** [OperateCheck](arkts-arkui-advanced-composelistitem-operatecheck-c.md)
 
 **起始版本：** 23
 

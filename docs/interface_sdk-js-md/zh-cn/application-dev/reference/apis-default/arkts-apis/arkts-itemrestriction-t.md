@@ -24,5 +24,5 @@ declare type ItemRestriction<T> = Array<T>
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** Array<T>
+**属性类型：** Array&lt;T&gt;
 

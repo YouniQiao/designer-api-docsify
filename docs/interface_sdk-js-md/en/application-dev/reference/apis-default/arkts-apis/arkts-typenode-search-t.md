@@ -16,5 +16,5 @@ Define the FrameNode type for Search.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** SearchFrameNode
+**Property type:** [SearchFrameNode](arkts-typenode-searchframenode-c.md)
 

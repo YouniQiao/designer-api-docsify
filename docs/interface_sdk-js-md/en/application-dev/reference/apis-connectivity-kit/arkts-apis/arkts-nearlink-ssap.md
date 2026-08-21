@@ -1,6 +1,6 @@
 # @ohos.nearlink.ssap
 
-Provides methods to operate or manage service of NearLink.
+This module provides the SparkLink Service Access Protocol (SSAP) connection capability, including creating and connecting to a client, calling server methods, reading and writing descriptors, and subscribing to event notifications.
 
 **Since:** 26.0.0
 
@@ -22,45 +22,45 @@ import { ssap } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [createClient](arkts-connectivity-ssap-createclient-f.md) | Creates a SSAP client instance. |
-| [createServer](arkts-connectivity-ssap-createserver-f.md) | Creates a SSAP server instance. |
+| [createClient](arkts-connectivity-ssap-createclient-f.md) | Creates an SSAP client instance. |
+| [createServer](arkts-connectivity-ssap-createserver-f.md) | Creates an SSAP server instance. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [Client](arkts-connectivity-ssap-client-i.md) | Manages SSAP client. Before calling a SSAP client method, you must use [createClient](arkts-connectivity-ssap-createclient-f.md) to create a ssap client instance. |
-| [ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md) | Describes SSAP connection state. |
-| [Property](arkts-connectivity-ssap-property-i.md) | Describes the SSAP property. |
-| [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md) | Describes the SSAP descriptor for property. |
-| [PropertyReadRequest](arkts-connectivity-ssap-propertyreadrequest-i.md) | Describes the parameters of the SSAP client's property read request. |
-| [PropertyWriteRequest](arkts-connectivity-ssap-propertywriterequest-i.md) | Describes the parameters of the SSAP client's property write request. |
-| [Server](arkts-connectivity-ssap-server-i.md) | Manages SSAP server. Before calling a SSAP server method, you must use [createServer](arkts-connectivity-ssap-createserver-f.md) to create a SSAP server instance. |
-| [ServerResponse](arkts-connectivity-ssap-serverresponse-i.md) | Describes the parameters of a response send by the server to a specified read or write request. |
-| [Service](arkts-connectivity-ssap-service-i.md) | Describes the SSAP service. |
+| [Client](arkts-connectivity-ssap-client-i.md) | Represents a SSAP client class. It provides APIs for connecting to and transmitting data with the server. |
+| [ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md) | Defines the connection status reporting parameters. |
+| [Property](arkts-connectivity-ssap-property-i.md) | Represents a service Property. |
+| [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md) | Defines the descriptor of a property. |
+| [PropertyReadRequest](arkts-connectivity-ssap-propertyreadrequest-i.md) | Represents the Property read request parameter of the client. |
+| [PropertyWriteRequest](arkts-connectivity-ssap-propertywriterequest-i.md) | Define a client property write request. |
+| [Server](arkts-connectivity-ssap-server-i.md) | Represents a SSAP server class, which provides APIs for connecting to and exchanging data with the client. |
+| [ServerResponse](arkts-connectivity-ssap-serverresponse-i.md) | Defines a response to a client request. |
+| [Service](arkts-connectivity-ssap-service-i.md) | Represents the NearLink service. |
 
 <!--Del-->
 ### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
-| [Client](arkts-connectivity-ssap-client-i-sys.md) | Manages SSAP client. Before calling a SSAP client method, you must use [createClient](arkts-connectivity-ssap-createclient-f.md) to create a ssap client instance. |
-| [Event](arkts-connectivity-ssap-event-i-sys.md) | Describes the SSAP event. |
-| [Method](arkts-connectivity-ssap-method-i-sys.md) | Describes the SSAP method. |
-| [Service](arkts-connectivity-ssap-service-i-sys.md) | Describes the SSAP service. |
+| [Client](arkts-connectivity-ssap-client-i-sys.md) | Represents a SSAP client class. It provides APIs for connecting to and transmitting data with the server. |
+| [Event](arkts-connectivity-ssap-event-i-sys.md) | Represents a service event. |
+| [Method](arkts-connectivity-ssap-method-i-sys.md) | Represents a method of the service. |
+| [Service](arkts-connectivity-ssap-service-i-sys.md) | Represents the NearLink service. |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [Operation](arkts-connectivity-ssap-operation-e.md) | Enum of property operation indication. |
-| [PropertyDescriptorType](arkts-connectivity-ssap-propertydescriptortype-e.md) | The enum of property descriptor type. |
-| [PropertyWriteType](arkts-connectivity-ssap-propertywritetype-e.md) | The enum of property write type. |
+| [Operation](arkts-connectivity-ssap-operation-e.md) | Enumerates the operation types supported by a property. |
+| [PropertyDescriptorType](arkts-connectivity-ssap-propertydescriptortype-e.md) | Enumerates the property descriptor types. |
+| [PropertyWriteType](arkts-connectivity-ssap-propertywritetype-e.md) | Enumerates the write types supported by a property. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md) | Indicates the connection state. |
+| [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md) | Enumerates the connection states with a remote device. |
 

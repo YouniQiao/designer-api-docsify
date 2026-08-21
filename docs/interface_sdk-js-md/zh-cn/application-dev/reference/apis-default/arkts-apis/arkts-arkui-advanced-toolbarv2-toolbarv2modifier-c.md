@@ -41,7 +41,7 @@ public backgroundColor(backgroundColor: ColorMetrics): ToolBarV2Modifier
 
 | 类型 | 说明 |
 | --- | --- |
-| [ToolBarV2Modifier](arkts-arkui-advanced-toolbarv2-toolbarv2modifier-c.md) | 设置背景色后的ToolBarV2Modifier对象，可用于链式调用其他方法进一步自定义工具栏样式。 |
+| [ToolBarV2Modifier](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-toolbarv2-toolbarv2modifier-c.md) | 设置背景色后的ToolBarV2Modifier对象，可用于链式调用其他方法进一步自定义工具栏样式。 |
 
 ## height
 
@@ -71,7 +71,7 @@ public height(height: LengthMetrics): ToolBarV2Modifier
 
 | 类型 | 说明 |
 | --- | --- |
-| [ToolBarV2Modifier](arkts-arkui-advanced-toolbarv2-toolbarv2modifier-c.md) | 设置高度后的ToolBarV2Modifier对象，可用于链式调用其他方法进一步自定义工具栏样式。 |
+| [ToolBarV2Modifier](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-toolbarv2-toolbarv2modifier-c.md) | 设置高度后的ToolBarV2Modifier对象，可用于链式调用其他方法进一步自定义工具栏样式。 |
 
 ## padding
 
@@ -101,7 +101,7 @@ public padding(padding: LengthMetrics): ToolBarV2Modifier
 
 | 类型 | 说明 |
 | --- | --- |
-| [ToolBarV2Modifier](arkts-arkui-advanced-toolbarv2-toolbarv2modifier-c.md) | 设置内边距后的ToolBarV2Modifier对象，可用于链式调用其他方法进一步自定义工具栏样式。 |
+| [ToolBarV2Modifier](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-toolbarv2-toolbarv2modifier-c.md) | 设置内边距后的ToolBarV2Modifier对象，可用于链式调用其他方法进一步自定义工具栏样式。 |
 
 ## stateEffect
 
@@ -131,5 +131,5 @@ public stateEffect(stateEffect: boolean): ToolBarV2Modifier
 
 | 类型 | 说明 |
 | --- | --- |
-| [ToolBarV2Modifier](arkts-arkui-advanced-toolbarv2-toolbarv2modifier-c.md) | 设置按压态效果后的ToolBarV2Modifier对象，可用于链式调用其他方法进一步自定义工具栏样式。 |
+| [ToolBarV2Modifier](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-toolbarv2-toolbarv2modifier-c.md) | 设置按压态效果后的ToolBarV2Modifier对象，可用于链式调用其他方法进一步自定义工具栏样式。 |
 

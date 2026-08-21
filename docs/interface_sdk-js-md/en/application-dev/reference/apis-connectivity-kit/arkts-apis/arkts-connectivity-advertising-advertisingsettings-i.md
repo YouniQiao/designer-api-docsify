@@ -1,6 +1,6 @@
 # AdvertisingSettings
 
-Describes the settings for advertising.
+Represents the advertising settings.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { advertising } from '@kit.ConnectivityKit';
 interval?: int
 ```
 
-Indicates the advertising interval. The minimum number of slots is 160, and the corresponding time is 20 ms (160 0.125 ms = 20 ms). The maximum number of slots is 16777215, and the corresponding time is 2097151.875 ms. Unit: Slots, The value must be an integer within [160,16777215], each slot is 125 microseconds. Default value: 5000.
+Advertising interval, in slots. The value ranges from 160 to 16777215, and the default value is **5000**. One slot equals to 0.125 ms. For example, 5000 slots equal to 625 ms.
 
 **Type:** int
 
@@ -38,7 +38,7 @@ Indicates the advertising interval. The minimum number of slots is 160, and the 
 isConnectable?: boolean
 ```
 
-Indicates whether the advertising is connectable. Default value: true.
+Whether advertising is connectable. **true**: Advertising is connectable. **false**: Advertising is not connectable. The default value is **true**.
 
 **Type:** boolean
 
@@ -56,7 +56,7 @@ Indicates whether the advertising is connectable. Default value: true.
 power?: TxPowerMode
 ```
 
-Indicates the advertising power mode. Default value: ADV_TX_POWER_LOW.
+Advertising transmission power. If this parameter is not specified, the default value **ADV_TX_POWER_LOW** is used.
 
 **Type:** [TxPowerMode](arkts-connectivity-advertising-txpowermode-e.md)
 

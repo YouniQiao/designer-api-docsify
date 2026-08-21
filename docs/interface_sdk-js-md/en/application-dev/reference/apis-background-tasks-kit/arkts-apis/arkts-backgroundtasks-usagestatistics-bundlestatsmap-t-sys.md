@@ -12,5 +12,5 @@ type BundleStatsMap = Record<string, BundleStatsInfo>
 
 **System API:** This is a system API.
 
-**Property type:** Record<string, BundleStatsInfo>
+**Property type:** Record&lt;string, BundleStatsInfo&gt;
 

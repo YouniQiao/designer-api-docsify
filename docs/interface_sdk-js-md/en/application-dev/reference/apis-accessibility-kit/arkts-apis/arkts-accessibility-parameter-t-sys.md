@@ -4,7 +4,7 @@
 export type Parameter = _Parameter
 ```
 
-Indicates executeAction parameter.
+Provides parameter values for specific settings when an accessibility node element performs a specific action. For details, see [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).
 
 **Since:** 23
 

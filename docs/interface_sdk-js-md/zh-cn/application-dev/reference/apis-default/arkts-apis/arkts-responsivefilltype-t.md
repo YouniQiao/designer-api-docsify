@@ -16,5 +16,5 @@ export type ResponsiveFillType = PresetFillType
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** PresetFillType
+**属性类型：** [PresetFillType](../../apis-arkui/arkts-apis/arkts-arkui-presetfilltype-e.md)
 

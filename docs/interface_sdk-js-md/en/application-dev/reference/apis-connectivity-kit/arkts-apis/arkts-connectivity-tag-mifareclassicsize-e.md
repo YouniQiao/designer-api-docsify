@@ -1,8 +1,6 @@
 # MifareClassicSize
 
-MifareClassic Tag size.
-
-@enum { int }
+Enumerates the sizes of a MIFARE Classic tag.
 
 **Since:** 23
 
@@ -16,11 +14,11 @@ MifareClassic Tag size.
 MC_SIZE_MINI = 320
 ```
 
-5 sectors per tag, 4 blocks per sector
+Each tag has 5 sectors, and each sector has 4 blocks.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MifareClassicSize-MC_SIZE_MINI = 320--><!--Device-MifareClassicSize-MC_SIZE_MINI = 320-End-->
 
@@ -32,11 +30,11 @@ MC_SIZE_MINI = 320
 MC_SIZE_1K = 1024
 ```
 
-16 sectors per tag, 4 blocks per sector
+Each tag has 16 sectors, and each sector has 4 blocks.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MifareClassicSize-MC_SIZE_1K = 1024--><!--Device-MifareClassicSize-MC_SIZE_1K = 1024-End-->
 
@@ -48,11 +46,11 @@ MC_SIZE_1K = 1024
 MC_SIZE_2K = 2048
 ```
 
-32 sectors per tag, 4 blocks per sector
+Each tag has 32 sectors, and each sector has 4 blocks.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MifareClassicSize-MC_SIZE_2K = 2048--><!--Device-MifareClassicSize-MC_SIZE_2K = 2048-End-->
 
@@ -64,11 +62,11 @@ MC_SIZE_2K = 2048
 MC_SIZE_4K = 4096
 ```
 
-40 sectors per tag, 4 blocks per sector
+Each tag has 40 sectors, and each sector has 4 blocks.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MifareClassicSize-MC_SIZE_4K = 4096--><!--Device-MifareClassicSize-MC_SIZE_4K = 4096-End-->
 

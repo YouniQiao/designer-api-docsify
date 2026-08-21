@@ -17,7 +17,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function getController(): InputMethodController
 ```
 
-Input method controller
+@brief Obtains an [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) instance.
 
 **Since:** 23
 
@@ -29,7 +29,7 @@ Input method controller
 
 | Type | Description |
 | --- | --- |
-| [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) | the object of InputMethodController. |
+| [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) | InputMethodController** instance. |
 
 **Error codes:**
 

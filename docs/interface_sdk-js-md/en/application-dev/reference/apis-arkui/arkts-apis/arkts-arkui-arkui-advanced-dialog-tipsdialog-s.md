@@ -223,7 +223,7 @@ theme?: Theme | CustomTheme
 
 Custom Theme.
 
-**Type:** [Theme](arkts-arkui-arkui-theme-theme-i.md) \| [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md)
+**Type:** [Theme](../../apis-default/arkts-apis/arkts-arkui-theme-theme-i.md) \| [CustomTheme](../../apis-default/arkts-apis/arkts-arkui-theme-customtheme-i.md)
 
 **Since:** 12
 

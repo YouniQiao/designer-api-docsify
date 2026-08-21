@@ -1623,22 +1623,7 @@ Unsubscribes from the OS account activation states, including the states of the 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-
-function offCallback(){
-  console.info('off enter')
-}
-
-try {
-  accountManager.off('activating', 'osAccountOnOffNameA', offCallback);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See off_activate
 
 ## off('switched')
 
@@ -2015,22 +2000,7 @@ Subscribes to the OS account activation states, including the states of the acco
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-
-function onCallback(receiveLocalId: number){
-  console.info('receive localId:' + receiveLocalId);
-}
-
-try {
-  accountManager.on('activating', 'osAccountOnOffNameA', onCallback);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`receive localId exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See on_activate
 
 ## on('switched')
 

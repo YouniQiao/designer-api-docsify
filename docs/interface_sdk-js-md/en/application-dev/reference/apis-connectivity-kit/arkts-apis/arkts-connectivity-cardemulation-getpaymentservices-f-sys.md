@@ -12,7 +12,7 @@ import { cardEmulation } from '@kit.ConnectivityKit';
 function getPaymentServices(): AbilityInfo[]
 ```
 
-Gets all payment services.
+Obtains all payment services. If an application declares the support for the HCE feature and **payment-aid**, the application is contained in the payment service list. For details, see HCE and AID Declaration.
 
 **Since:** 23
 
@@ -30,7 +30,7 @@ Gets all payment services.
 
 | Type | Description |
 | --- | --- |
-| [AbilityInfo](../../apis-ability-kit/arkts-apis/arkts-ability-abilityinfo-i.md)[] | Returns all payment services. |
+| [AbilityInfo](../../apis-ability-kit/arkts-apis/arkts-ability-abilityinfo-i.md)[] | List of payment services obtained. |
 
 **Error codes:**
 

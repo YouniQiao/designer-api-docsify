@@ -12,7 +12,7 @@ import { manager } from '@kit.ConnectivityKit';
 function disable(): void
 ```
 
-Turns off NearLink.
+Disables NearLink.
 
 **Since:** 26.0.0
 

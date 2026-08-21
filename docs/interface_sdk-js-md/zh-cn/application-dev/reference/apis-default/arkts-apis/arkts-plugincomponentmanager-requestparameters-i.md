@@ -23,7 +23,7 @@ data: KVObject
 
 组件数据，以键值对形式存储，用于传递给组件提供方的业务数据，键和值类型由业务定义。
 
-**类型：** [KVObject](arkts-plugincomponentmanager-kvobject-t.md)
+**类型：** [KVObject](../../apis-arkui/arkts-apis/arkts-arkui-plugincomponentmanager-kvobject-t.md)
 
 **起始版本：** 23
 

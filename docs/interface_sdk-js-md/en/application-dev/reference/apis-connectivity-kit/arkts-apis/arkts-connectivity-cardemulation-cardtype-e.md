@@ -1,8 +1,6 @@
 # CardType
 
-Define the card emulation type, payment or other.
-
-@enum { string }
+Enumerates the types of services used by the card emulation application.
 
 **Since:** 23
 
@@ -13,32 +11,32 @@ Define the card emulation type, payment or other.
 ## PAYMENT
 
 ```TypeScript
-PAYMENT = 'payment'
+PAYMENT = "payment"
 ```
 
-Payment type of card emulation
+Payment service.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-CardType-PAYMENT = 'payment'--><!--Device-CardType-PAYMENT = 'payment'-End-->
+<!--Device-CardType-PAYMENT = "payment"--><!--Device-CardType-PAYMENT = "payment"-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
 ## OTHER
 
 ```TypeScript
-OTHER = 'other'
+OTHER = "other"
 ```
 
-Other type of card emulation
+Other services.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-CardType-OTHER = 'other'--><!--Device-CardType-OTHER = 'other'-End-->
+<!--Device-CardType-OTHER = "other"--><!--Device-CardType-OTHER = "other"-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 

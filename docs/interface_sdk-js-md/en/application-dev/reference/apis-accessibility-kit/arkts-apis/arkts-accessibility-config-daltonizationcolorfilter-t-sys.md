@@ -4,6 +4,8 @@
 type DaltonizationColorFilter = 'Normal' | 'Protanomaly' | 'Deuteranomaly' | 'Tritanomaly'
 ```
 
+Color correction filters for different types of color vision deficiency.
+
 The configuration takes effect when the daltonization feature is enabled ( [daltonizationState](arkts-accessibility-config-con-sys.md#daltonizationstate) is set to **true**). When the daltonization feature is disabled ([daltonizationState](arkts-accessibility-config-con-sys.md#daltonizationstate) is set to **false**), the standard type is displayed.
 
 **Since:** 23

@@ -16,5 +16,5 @@ Define the FrameNode type for Row.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** RowFrameNode
+**属性类型：** [RowFrameNode](arkts-typenode-rowframenode-c.md)
 

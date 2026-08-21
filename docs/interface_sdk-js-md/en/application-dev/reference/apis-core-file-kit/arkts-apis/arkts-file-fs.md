@@ -169,7 +169,7 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 | [RandomAccessFileOptions](arkts-corefile-file-fs-randomaccessfileoptions-i.md) | Defines the options used in **createRandomAccessFile()**. |
 | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | Defines the options used in **read()**. |
 | [ReadStreamOptions](arkts-corefile-file-fs-readstreamoptions-i.md) | Defines the options used in **createReadStream()**. |
-| [ReadTextOptions](arkts-corefile-file-fs-readtextoptions-i.md) | Defines the options used in **readText()**. It inherits from [ReadOptions](arkts-corefile-file-fs-readoptions-i.md). |
+| [ReadTextOptions](arkts-corefile-file-fs-readtextoptions-i.md) | Defines the options used in **readText()**. It inherits from [ReadOptions](../../apis-default/arkts-apis/arkts-file-fs-readoptions-i.md). |
 | [ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md) | Provides a **ReaderIterator** object. Before calling APIs of **ReaderIterator**, you need to use **readLines()** to create a **ReaderIterator** instance. |
 | [ReaderIteratorResult](arkts-corefile-file-fs-readeriteratorresult-i.md) | Represents the information obtained by the **ReaderIterator** object. |
 | [Stat](arkts-corefile-file-fs-stat-i.md) | Represents detailed file information. Before calling any API of the **Stat()** class, use stat() to create a **Stat** instance. |
@@ -177,7 +177,7 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 | [WatchEvent](arkts-corefile-file-fs-watchevent-i.md) | Defines the event to observe. |
 | [WatchEventListener](arkts-corefile-file-fs-watcheventlistener-i.md) | (event: WatchEvent): void |
 | [Watcher](arkts-corefile-file-fs-watcher-i.md) | Provides APIs for observing the changes of files or directories. Before using the APIs of **Watcher**, call **createWatcher()** to create a **Watcher** object. |
-| [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | Defines the options used in **write()**. It inherits from [Options](arkts-corefile-file-fs-options-i.md). |
+| [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | Defines the options used in **write()**. It inherits from [Options](../../apis-default/arkts-apis/arkts-file-fs-options-i.md). |
 | [WriteStreamOptions](arkts-corefile-file-fs-writestreamoptions-i.md) | Defines the options used in **createWriteStream()**. |
 
 ### Enums

@@ -12,7 +12,7 @@ import { manager } from '@kit.ConnectivityKit';
 function factoryReset(): Promise<void>
 ```
 
-恢复星闪设置。
+恢复出厂设置。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -30,7 +30,7 @@ function factoryReset(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

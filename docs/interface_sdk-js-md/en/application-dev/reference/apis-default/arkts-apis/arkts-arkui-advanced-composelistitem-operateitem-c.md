@@ -23,7 +23,7 @@ public arrow?: OperateIcon
 
 Sets the arrow.
 
-**Type:** [OperateIcon](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitem-operateicon-c.md)
+**Type:** [OperateIcon](arkts-arkui-advanced-composelistitem-operateicon-c.md)
 
 **Since:** 23
 
@@ -43,7 +43,7 @@ public button?: OperateButton
 
 Sets the button.
 
-**Type:** [OperateButton](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitem-operatebutton-c.md)
+**Type:** [OperateButton](arkts-arkui-advanced-composelistitem-operatebutton-c.md)
 
 **Since:** 23
 
@@ -63,7 +63,7 @@ public checkbox?: OperateCheck
 
 Sets the checkBox.
 
-**Type:** [OperateCheck](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitem-operatecheck-c.md)
+**Type:** [OperateCheck](arkts-arkui-advanced-composelistitem-operatecheck-c.md)
 
 **Since:** 23
 
@@ -83,7 +83,7 @@ public icon?: OperateIcon
 
 Sets the icon.
 
-**Type:** [OperateIcon](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitem-operateicon-c.md)
+**Type:** [OperateIcon](arkts-arkui-advanced-composelistitem-operateicon-c.md)
 
 **Since:** 23
 
@@ -123,7 +123,7 @@ public radio?: OperateCheck
 
 Sets the radio.
 
-**Type:** [OperateCheck](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitem-operatecheck-c.md)
+**Type:** [OperateCheck](arkts-arkui-advanced-composelistitem-operatecheck-c.md)
 
 **Since:** 23
 
@@ -143,7 +143,7 @@ public subIcon?: OperateIcon
 
 Sets the subIcon.
 
-**Type:** [OperateIcon](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitem-operateicon-c.md)
+**Type:** [OperateIcon](arkts-arkui-advanced-composelistitem-operateicon-c.md)
 
 **Since:** 23
 
@@ -203,7 +203,7 @@ public toggle?: OperateCheck
 
 Sets the toggle.
 
-**Type:** [OperateCheck](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitem-operatecheck-c.md)
+**Type:** [OperateCheck](arkts-arkui-advanced-composelistitem-operatecheck-c.md)
 
 **Since:** 23
 

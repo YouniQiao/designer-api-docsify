@@ -79,7 +79,7 @@ Default value: **undefined**
 
 Note: Accessibility properties are not supported.
 
-**Type:** [EditableTitleBarItem](../../apis-arkui/arkts-apis/arkts-arkui-editabletitlebaritem-t.md)
+**Type:** [EditableTitleBarItem](arkts-editabletitlebaritem-t.md)
 
 **Since:** 23
 
@@ -153,7 +153,7 @@ Type of the icon on the left.
 
 Default value: **EditableLeftIconType.Back**
 
-**Type:** [EditableLeftIconType](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-editabletitlebar-editablelefticontype-e.md)
+**Type:** [EditableLeftIconType](arkts-arkui-advanced-editabletitlebar-editablelefticontype-e.md)
 
 **Since:** 23
 
@@ -175,7 +175,7 @@ List of menu items on the right. This parameter is required to display custom bu
 
 Default value: **undefined**
 
-**Type:** Array&lt;[EditableTitleBarMenuItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-editabletitlebar-editabletitlebarmenuitem-c.md)&gt;
+**Type:** Array&lt;[EditableTitleBarMenuItem](arkts-arkui-advanced-editabletitlebar-editabletitlebarmenuitem-c.md)&gt;
 
 **Since:** 23
 
@@ -257,7 +257,7 @@ backgroundColor: '#00000000'
 
 If not decorated by @Require, this parameter is not subject to mandatory validation during construction.
 
-**Type:** [EditableTitleBarOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-editabletitlebar-editabletitlebaroptions-i.md)
+**Type:** [EditableTitleBarOptions](arkts-arkui-advanced-editabletitlebar-editabletitlebaroptions-i.md)
 
 **Default:** {expandSafeAreaTypes: SafeAreaType.SYSTEM, expandSafeAreaEdges: SafeAreaEdge.TOP}
 

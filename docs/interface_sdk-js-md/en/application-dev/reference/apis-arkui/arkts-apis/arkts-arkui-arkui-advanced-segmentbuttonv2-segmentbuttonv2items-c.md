@@ -2,7 +2,7 @@
 
 Represents items of the **SegmentButtonV2** component.
 
-This parameter is inherited from Array\&lt;[SegmentButtonV2Item](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md)&gt;.
+This parameter is inherited from Array\&lt;[SegmentButtonV2Item](#segmentbuttonv2items)&gt;.
 
 **Inheritance/Implementation:** SegmentButtonV2Items extends Array<SegmentButtonV2Item>
 
@@ -40,5 +40,5 @@ Constructs a **SegmentButtonV2ItemOptions** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | [SegmentButtonV2ItemOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbuttonv2-segmentbuttonv2itemoptions-i.md)[] | Yes | Options of the item of the **SegmentButtonV2** component. |
+| items | [SegmentButtonV2ItemOptions](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2itemoptions-i.md)[] | Yes | Options of the item of the **SegmentButtonV2** component. |
 

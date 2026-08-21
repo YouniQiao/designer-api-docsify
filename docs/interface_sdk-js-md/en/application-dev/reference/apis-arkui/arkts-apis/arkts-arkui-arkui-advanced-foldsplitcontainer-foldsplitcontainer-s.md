@@ -50,7 +50,7 @@ Animation settings. The value **null** indicates that the animation is disabled.
 
 Layout information for the expanded state.
 
-**Type:** [ExpandedRegionLayoutOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-foldsplitcontainer-expandedregionlayoutoptions-i.md)
+**Type:** [ExpandedRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-expandedregionlayoutoptions-i.md)
 
 **Since:** 12
 
@@ -92,7 +92,7 @@ Callback function for the extra region. If this parameter is not provided, there
 
 Layout information for the folded state.
 
-**Type:** [FoldedRegionLayoutOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-foldsplitcontainer-foldedregionlayoutoptions-i.md)
+**Type:** [FoldedRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-foldedregionlayoutoptions-i.md)
 
 **Since:** 12
 
@@ -113,7 +113,7 @@ Layout information for the folded state.
 
 Layout information for the semi-folded state.
 
-**Type:** [HoverModeRegionLayoutOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-foldsplitcontainer-hovermoderegionlayoutoptions-i.md)
+**Type:** [HoverModeRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-hovermoderegionlayoutoptions-i.md)
 
 **Since:** 12
 
@@ -133,7 +133,7 @@ onHoverStatusChange?: OnHoverStatusChangeHandler
 
 Callback function triggered when the foldable device enters or exits the semi-folded state.
 
-**Type:** [OnHoverStatusChangeHandler](../../apis-default/arkts-apis/arkts-onhoverstatuschangehandler-t.md)
+**Type:** [OnHoverStatusChangeHandler](arkts-arkui-onhoverstatuschangehandler-t.md)
 
 **Since:** 12
 

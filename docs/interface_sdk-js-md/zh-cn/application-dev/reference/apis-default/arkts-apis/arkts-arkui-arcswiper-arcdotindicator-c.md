@@ -35,13 +35,13 @@ arcDirection(direction: ArcDirection | undefined): ArcDotIndicator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | [ArcDirection](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcswiper-arcdirection-e.md) \| undefined | 是 | 设置弧形指示器的方向。<br/>取值为undefined时，弧形指示器的方向为6点钟方向。 |
+| direction | [ArcDirection](arkts-arkui-arcswiper-arcdirection-e.md) \| undefined | 是 | 设置弧形指示器的方向。<br/>取值为undefined时，弧形指示器的方向为6点钟方向。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcDotIndicator](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
+| [ArcDotIndicator](arkts-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
 
 ## backgroundColor
 
@@ -69,7 +69,7 @@ backgroundColor(color: ResourceColor | undefined): ArcDotIndicator
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcDotIndicator](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
+| [ArcDotIndicator](arkts-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
 
 ## constructor
 
@@ -115,7 +115,7 @@ itemColor(color: ResourceColor | undefined): ArcDotIndicator
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcDotIndicator](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
+| [ArcDotIndicator](arkts-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
 
 ## maskColor
 
@@ -143,7 +143,7 @@ maskColor(color: LinearGradient | undefined): ArcDotIndicator
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcDotIndicator](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
+| [ArcDotIndicator](arkts-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
 
 ## selectedItemColor
 
@@ -171,5 +171,5 @@ selectedItemColor(color: ResourceColor | undefined): ArcDotIndicator
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcDotIndicator](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
+| [ArcDotIndicator](arkts-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
 

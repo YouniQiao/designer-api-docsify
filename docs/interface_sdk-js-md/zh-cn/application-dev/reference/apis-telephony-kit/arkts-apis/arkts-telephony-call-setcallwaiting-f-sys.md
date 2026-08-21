@@ -30,7 +30,7 @@ function setCallWaiting(slotId: int, activate: boolean, callback: AsyncCallback<
 | --- | --- | --- | --- |
 | slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
 | activate | boolean | 是 | 呼叫等待是否处于启用状态。<br/>- false：禁用呼叫等待。<br/>- true：启用呼叫等待。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 以回调函数的方式返回设置呼叫等待的结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以回调函数的方式返回设置呼叫等待的结果。 |
 
 **错误码：**
 

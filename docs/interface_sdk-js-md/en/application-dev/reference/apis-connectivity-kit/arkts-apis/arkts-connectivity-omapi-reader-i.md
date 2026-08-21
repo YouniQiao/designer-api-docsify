@@ -1,6 +1,6 @@
 # Reader
 
-Reader represents the SE readers supported by this device.
+Obtains the SE supported by the device. If eSE, SIM, and SIM2 are supported, three instances will be returned. SIM2 is supported since API version 22. You can use [SEService.getReaders](arkts-connectivity-omapi-seservice-i.md#getreaders) to obtain a **Reader** instance.
 
 **Since:** 10
 
@@ -20,7 +20,7 @@ import { omapi } from '@kit.ConnectivityKit';
 closeSessions(): void
 ```
 
-Close all the sessions opened on this reader. All the channels opened by all these sessions will be closed.
+Closes all sessions opened on this reader. All channels opened by these sessions will be closed.
 
 **Since:** 10
 
@@ -73,7 +73,7 @@ function secureElementDemo() {
 getName(): string
 ```
 
-Returns the name of this reader. If this reader is a SIM reader, then its name must be "SIM[slot]". If the reader is an embedded SE reader, then its name must be "eSE[slot]".
+Obtains the name of this reader. The name is **SIM** for a SIM reader, **SIM2** for a SIM2 reader, and **eSE** for an eSE.
 
 **Since:** 10
 
@@ -85,7 +85,7 @@ Returns the name of this reader. If this reader is a SIM reader, then its name m
 
 | Type | Description |
 | --- | --- |
-| string | The reader name, as a String. |
+| string | [Reader]{ |
 
 **Error codes:**
 
@@ -118,7 +118,7 @@ try {
 isSecureElementPresent(): boolean
 ```
 
-Checks if a SE is present in this reader.
+Checks whether the SE corresponding to this reader is available.
 
 **Since:** 10
 
@@ -130,7 +130,7 @@ Checks if a SE is present in this reader.
 
 | Type | Description |
 | --- | --- |
-| boolean | True if the SE is present, false otherwise. |
+| boolean | true** if the SE is available; **false** otherwise. |
 
 **Error codes:**
 
@@ -164,7 +164,7 @@ try {
 openSession(): Session
 ```
 
-Connects to a SE in this reader. This method prepares (initializes) the SE for communication before the session object is returned. There might be multiple sessions opened at the same time on the same reader.
+Opens a session to connect to an SE in this reader. Multiple sessions can be opened on a reader at the same time.
 
 **Since:** 10
 
@@ -176,7 +176,7 @@ Connects to a SE in this reader. This method prepares (initializes) the SE for c
 
 | Type | Description |
 | --- | --- |
-| Session | A Session object to be used to create channels. |
+| Session | Session instance opened. |
 
 **Error codes:**
 

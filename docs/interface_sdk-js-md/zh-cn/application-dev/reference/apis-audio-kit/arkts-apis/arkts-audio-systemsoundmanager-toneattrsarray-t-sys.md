@@ -14,5 +14,5 @@ type ToneAttrsArray = Array<ToneAttrs>
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** Array<ToneAttrs>
+**属性类型：** Array&lt;[ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i-sys.md)&gt;
 

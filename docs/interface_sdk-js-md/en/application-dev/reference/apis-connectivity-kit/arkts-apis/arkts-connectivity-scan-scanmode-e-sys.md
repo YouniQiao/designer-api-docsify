@@ -1,6 +1,6 @@
 # ScanMode
 
-The enum of scan mode.
+Enumerates the scan modes.
 
 **Since:** 26.0.0
 
@@ -14,7 +14,7 @@ The enum of scan mode.
 SCAN_MODE_LOW_LATENCY = 2
 ```
 
-High-power mode with a higher scan frequency.
+High-power scan mode. The scan frequency is high, and the power consumption is high.
 
 **Since:** 26.0.0
 

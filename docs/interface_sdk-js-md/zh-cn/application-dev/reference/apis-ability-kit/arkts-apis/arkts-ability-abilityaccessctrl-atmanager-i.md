@@ -265,7 +265,7 @@ offSelfPermissionStateChange(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | permissionList | Array&lt;Permissions&gt; | 是 | 取消订阅的权限名列表，为空时表示取消订阅所有的权限状态变化，必须与onSelfPermissionStateChange 订阅时的权限列表匹配（不区分顺序）。 <br>最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 否 | 回调函数。取消订阅指定权限名状态变更事件的回调。 不传入此参数时，将批量删除与permissionList相关联的所有回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 否 | 回调函数。取消订阅指定权限名状态变更事件的回调。 不传入此参数时，将批量删除与permissionList相关联的所有回调函数。 |
 
 **错误码：**
 
@@ -322,7 +322,7 @@ off(
 | --- | --- | --- | --- |
 | type | 'selfPermissionStateChange' | 是 | 取消订阅事件类型，固定为'selfPermissionStateChange'，权限状态变更事件。 |
 | permissionList | Array&lt;Permissions&gt; | 是 | 取消订阅的权限名列表，为空时表示取消订阅所有的权限状态变化，必须与on订阅时的权限列表匹配（不区分顺序）。 <br>最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 否 | 回调函数。取消订阅指定权限名状态变更事件的回调。 不传入此参数时，将批量删除与permissionList相关联的所有回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 否 | 回调函数。取消订阅指定权限名状态变更事件的回调。 不传入此参数时，将批量删除与permissionList相关联的所有回调函数。 |
 
 **错误码：**
 
@@ -383,7 +383,7 @@ onSelfPermissionStateChange(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | permissionList | Array&lt;Permissions&gt; | 是 | 订阅的权限名列表，为空时表示订阅所有的权限状态变化。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 是 | 回调函数。订阅指定权限名状态变更事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 是 | 回调函数。订阅指定权限名状态变更事件的回调。 |
 
 **错误码：**
 
@@ -447,7 +447,7 @@ on(
 | --- | --- | --- | --- |
 | type | 'selfPermissionStateChange' | 是 | 订阅事件类型，固定为'selfPermissionStateChange'，自身权限状态变更事件。 |
 | permissionList | Array&lt;Permissions&gt; | 是 | 订阅的权限名列表，为空时表示订阅所有的权限状态变化。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 是 | 回调函数。订阅指定权限名状态变更事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 是 | 回调函数。订阅指定权限名状态变更事件的回调。 |
 
 **错误码：**
 
@@ -716,7 +716,7 @@ requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>,
 | --- | --- | --- | --- |
 | context | [Context](arkts-ability-context-t.md) | 是 | 请求权限的<!--RP1-->UIAbility<!--RP1End-->的Context。 <br>若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉起弹窗。 |
 | permissionList | Array&lt;Permissions&gt; | 是 | 权限名列表。建议仅传入当前业务场景必要的敏感权限，避免一次申请过多权限。 <br>最小长度为1。取值约束：权限名长度不能超过256个字符。 |
-| requestCallback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PermissionRequestResult](arkts-ability-permissionrequestresult-t.md)&gt; | 是 | 回调函数。调用完成后通过err返回错误信息，通过data返回权限请求结果对象。开发者可根据权限请求结果判断用户是否授权、是否展示过弹窗以及失败原因。 |
+| requestCallback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionRequestResult](arkts-ability-permissionrequestresult-t.md)&gt; | 是 | 回调函数。调用完成后通过err返回错误信息，通过data返回权限请求结果对象。开发者可根据权限请求结果判断用户是否授权、是否展示过弹窗以及失败原因。 |
 
 **错误码：**
 

@@ -458,7 +458,7 @@ static getSystemLocaleInstance(): Intl.Locale
 
 | 类型 | 说明 |
 | --- | --- |
-| Intl.Locale | the locale object currently used by the system. |
+| Intl.Locale | 系统区域对象。 |
 
 **示例**
 

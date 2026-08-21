@@ -31,7 +31,7 @@ function addContact(contact: Contact, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | contact | [Contact](arkts-contacts-contact-contact-c.md) | 是 | 联系人信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数。成功返回添加的联系人id；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。成功返回添加的联系人id；失败返回具体的错误码信息。 |
 
 **示例**
 
@@ -83,7 +83,7 @@ function addContact(context: Context, contact: Contact, callback: AsyncCallback<
 | --- | --- | --- | --- |
 | context | Context | 是 | 应用上下文Context。 |
 | contact | [Contact](arkts-contacts-contact-contact-c.md) | 是 | 联系人信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数。成功返回添加的联系人id；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。成功返回添加的联系人id；失败返回具体的错误码信息。 |
 
 **错误码：**
 

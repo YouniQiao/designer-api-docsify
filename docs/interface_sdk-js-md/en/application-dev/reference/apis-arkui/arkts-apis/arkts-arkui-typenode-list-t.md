@@ -16,5 +16,5 @@ Represents a FrameNode of the **List** type. This type of node only allows child
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** TypedFrameNode<ListInterface, ListAttribute>
+**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;ListInterface, ListAttribute&gt;
 

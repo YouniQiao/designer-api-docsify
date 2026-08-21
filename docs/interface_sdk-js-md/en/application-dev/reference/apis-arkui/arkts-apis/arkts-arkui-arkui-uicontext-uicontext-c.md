@@ -6,7 +6,7 @@ Implements a **UIContext** instance.
 > 
 > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.
 > 
-> - The following APIs must be called through a corresponding UIContext instance. There are three ways to obtain a &gt; **UIContext** instance: (1) using the &gt; [getUIContext()](../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10) method from &gt; ohos.window; (2) using the built-in method &gt; [getUIContext()](../../../reference/apis-arkui/arkui-ts/ts-custom-component-api.md#getuicontext) of a custom &gt; component; (3) using static methods of the UIContext class such as &gt; [getCallingScopeUIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcallingscopeuicontext). In this document, the **UIContext** instance &gt; is represented by **uiContext**.
+> - The following APIs must be called through a corresponding UIContext instance. There are three ways to obtain a &gt; **UIContext** instance: (1) using the &gt; [getUIContext()](../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10) method from &gt; ohos.window; (2) using the built-in method &gt; [getUIContext()](../../../reference/apis-arkui/arkui-ts/ts-custom-component-api.md#getuicontext) of a custom &gt; component; (3) using static methods of the UIContext class such as &gt; [getCallingScopeUIContext](#getcallingscopeuicontext). In this document, the **UIContext** instance &gt; is represented by **uiContext**.
 
 **Since:** 10
 
@@ -285,7 +285,7 @@ Creates an **Animator** object.
 createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-Creates an **AnimatorResult** object for animations. Compared to the previous [createAnimator](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#createanimator) API, this API adds support for the [SimpleAnimatorOptions](../../apis-default/arkts-apis/arkts-animator-simpleanimatoroptions-c.md) type.
+Creates an **AnimatorResult** object for animations. Compared to the previous [createAnimator](#createanimator) API, this API adds support for the [SimpleAnimatorOptions](../../apis-default/arkts-apis/arkts-animator-simpleanimatoroptions-c.md) type.
 
 **Since:** 18
 
@@ -347,7 +347,7 @@ Creates a UI instance that does not depend on a window and returns its UI contex
 
 | Type | Description |
 | --- | --- |
-| [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) \| undefined | Context of the created UI instance, or **undefined** if creation fails. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) \| undefined | Context of the created UI instance, or **undefined** if creation fails. |
 
 **Error codes:**
 
@@ -362,7 +362,7 @@ Creates a UI instance that does not depend on a window and returns its UI contex
 static destroyUIContextWithoutWindow(): void
 ```
 
-Destroys the UI instance created using [createUIContextWithoutWindow](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#createuicontextwithoutwindow).
+Destroys the UI instance created using [createUIContextWithoutWindow](#createuicontextwithoutwindow).
 
 **Since:** 17
 
@@ -504,7 +504,7 @@ Obtains all currently valid UIContext instances.
 
 | Type | Description |
 | --- | --- |
-| [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)[] | Array of all currently valid UIContext instances. Returns an empty array if no valid UIContext instance exists. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)[] | Array of all currently valid UIContext instances. Returns an empty array if no valid UIContext instance exists. |
 
 ## getAtomicServiceBar
 
@@ -528,7 +528,7 @@ Get AtomicServiceBar.
 
 | Type | Description |
 | --- | --- |
-| Nullable&lt;[AtomicServiceBar](../../apis-default/arkts-apis/arkts-arkui-uicontext-atomicservicebar-i.md)&gt; | The atomic service bar. |
+| Nullable&lt;[AtomicServiceBar](arkts-arkui-arkui-uicontext-atomicservicebar-i.md)&gt; | The atomic service bar. |
 
 ## getAttachedFrameNodeById
 
@@ -570,7 +570,7 @@ Obtains the UIContext of this [calling scope](../../../ui/arkts-global-interface
 
 > **NOTE：**
 > 
-> The returned UIContext object may point to a destroyed UI instance, which usually occurs when an asynchronous &gt; task is dispatched from an instance that has already been destroyed. As such, you are advised to verify its &gt; validity via the [isAvailable](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#isavailable) API.
+> The returned UIContext object may point to a destroyed UI instance, which usually occurs when an asynchronous &gt; task is dispatched from an instance that has already been destroyed. As such, you are advised to verify its &gt; validity via the [isAvailable](#isavailable) API.
 
 **Since:** 22
 
@@ -586,7 +586,7 @@ Obtains the UIContext of this [calling scope](../../../ui/arkts-global-interface
 
 | Type | Description |
 | --- | --- |
-| [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) \| undefined | UIContext of the current [calling scope](../../../ui/arkts-global-interface.md#basic-concepts). Returns **undefined** if the calling scope is ambiguous. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) \| undefined | UIContext of the current [calling scope](../../../ui/arkts-global-interface.md#basic-concepts). Returns **undefined** if the calling scope is ambiguous. |
 
 ## getComponentSnapshot
 
@@ -610,7 +610,7 @@ Get ComponentSnapshot.
 
 | Type | Description |
 | --- | --- |
-| [ComponentSnapshot](../../apis-default/arkts-apis/arkts-arkui-uicontext-componentsnapshot-c.md) | the ComponentSnapshot |
+| [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md) | the ComponentSnapshot |
 
 ## getComponentUtils
 
@@ -634,7 +634,7 @@ get object ComponentUtils.
 
 | Type | Description |
 | --- | --- |
-| [ComponentUtils](../../apis-default/arkts-apis/arkts-arkui-uicontext-componentutils-c.md) | object ComponentUtils. |
+| [ComponentUtils](arkts-arkui-arkui-uicontext-componentutils-c.md) | object ComponentUtils. |
 
 ## getContextMenuController
 
@@ -658,7 +658,7 @@ Get object context menu controller.
 
 | Type | Description |
 | --- | --- |
-| [ContextMenuController](../../apis-default/arkts-apis/arkts-arkui-uicontext-contextmenucontroller-c.md) | object context menu controller. |
+| [ContextMenuController](arkts-arkui-arkui-uicontext-contextmenucontroller-c.md) | object context menu controller. |
 
 ## getCursorController
 
@@ -682,7 +682,7 @@ Get object cursor controller.
 
 | Type | Description |
 | --- | --- |
-| [CursorController](../../apis-default/arkts-apis/arkts-arkui-uicontext-cursorcontroller-c.md) | object cursor controller. |
+| [CursorController](arkts-arkui-arkui-uicontext-cursorcontroller-c.md) | object cursor controller. |
 
 ## getDialogPresenter
 
@@ -730,7 +730,7 @@ Get DragController.
 
 | Type | Description |
 | --- | --- |
-| [DragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-dragcontroller-c.md) | the DragController |
+| [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) | the DragController |
 
 ## getFilteredInspectorTree
 
@@ -828,7 +828,7 @@ Get FocusController.
 
 | Type | Description |
 | --- | --- |
-| [FocusController](../../apis-default/arkts-apis/arkts-arkui-uicontext-focuscontroller-c.md) | the FocusController |
+| [FocusController](arkts-arkui-arkui-uicontext-focuscontroller-c.md) | the FocusController |
 
 ## getFont
 
@@ -852,7 +852,7 @@ Obtains a **Font** object.
 
 | Type | Description |
 | --- | --- |
-| [Font](../../apis-default/arkts-apis/arkts-arkui-uicontext-font-c.md) | Font** object. |
+| [Font](arkts-arkui-arkui-uicontext-font-c.md) | Font** object. |
 
 ## getFrameNodeById
 
@@ -938,7 +938,7 @@ Obtains the context of this ability.
 
 | Type | Description |
 | --- | --- |
-| [Context](../../apis-default/arkts-apis/arkts-context-t.md) \| undefined | Context of the ability. The context type depends on the ability type. For example, if this API is called in a page within a UIAbility window, the returned context type is [UIAbilityContext]{ |
+| [Context](arkts-arkui-context-t.md) \| undefined | Context of the ability. The context type depends on the ability type. For example, if this API is called in a page within a UIAbility window, the returned context type is [UIAbilityContext]{ |
 
 ## getId
 
@@ -986,7 +986,7 @@ Obtains the avoidance mode of the virtual keyboard.
 
 | Type | Description |
 | --- | --- |
-| [KeyboardAvoidMode](../../apis-default/arkts-apis/arkts-arkui-uicontext-keyboardavoidmode-e.md) | Avoidance mode of the virtual keyboard. |
+| [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | Avoidance mode of the virtual keyboard. |
 
 ## getLastFocusedUIContext
 
@@ -1010,7 +1010,7 @@ Obtains the UIContext of the UI instance that most recently switched to the focu
 
 | Type | Description |
 | --- | --- |
-| [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) \| undefined | UIContext of the UI instance that most recently switched to the focused state. Returns **undefined** if the most recently focused instance has been destroyed or if no instance has ever been focused. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) \| undefined | UIContext of the UI instance that most recently switched to the focused state. Returns **undefined** if the most recently focused instance has been destroyed or if no instance has ever been focused. |
 
 ## getLastForegroundUIContext
 
@@ -1034,7 +1034,7 @@ Obtains the UIContext of the UI instance that most recently switched to the fore
 
 | Type | Description |
 | --- | --- |
-| [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) \| undefined | UIContext of the UI instance that most recently switched to the foreground state. Returns **undefined** if the most recently foreground UI instance has been destroyed or if no UI instance has ever been in the foreground. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) \| undefined | UIContext of the UI instance that most recently switched to the foreground state. Returns **undefined** if the most recently foreground UI instance has been destroyed or if no UI instance has ever been in the foreground. |
 
 ## getMagnifier
 
@@ -1042,7 +1042,7 @@ Obtains the UIContext of the UI instance that most recently switched to the fore
 getMagnifier(): Magnifier
 ```
 
-Obtains a [Magnifier](../../apis-default/arkts-apis/arkts-arkui-uicontext-magnifier-c.md) object, which can be used to control the display and hiding of a magnifier.
+Obtains a [Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md) object, which can be used to control the display and hiding of a magnifier.
 
 **Since:** 22
 
@@ -1058,7 +1058,7 @@ Obtains a [Magnifier](../../apis-default/arkts-apis/arkts-arkui-uicontext-magnif
 
 | Type | Description |
 | --- | --- |
-| [Magnifier](../../apis-default/arkts-apis/arkts-arkui-uicontext-magnifier-c.md) | Magnifier** object, which can be used to control the display and hiding of a magnifier. |
+| [Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md) | Magnifier** object, which can be used to control the display and hiding of a magnifier. |
 
 ## getMaxFontScale
 
@@ -1106,7 +1106,7 @@ Obtains a **MeasureUtils** object for text calculation.
 
 | Type | Description |
 | --- | --- |
-| [MeasureUtils](../../apis-default/arkts-apis/arkts-arkui-uicontext-measureutils-c.md) | Text metrics, such as text height and width. |
+| [MeasureUtils](arkts-arkui-arkui-uicontext-measureutils-c.md) | Text metrics, such as text height and width. |
 
 ## getMediaQuery
 
@@ -1130,7 +1130,7 @@ get object mediaQuery.
 
 | Type | Description |
 | --- | --- |
-| [MediaQuery](../../apis-default/arkts-apis/arkts-arkui-uicontext-mediaquery-c.md) | object MediaQuery. |
+| [MediaQuery](arkts-arkui-arkui-uicontext-mediaquery-c.md) | object MediaQuery. |
 
 ## getNavigationInfoByUniqueId
 
@@ -1184,7 +1184,7 @@ Obtains the OverlayManager object.
 
 | Type | Description |
 | --- | --- |
-| [OverlayManager](../../apis-default/arkts-apis/arkts-arkui-uicontext-overlaymanager-c.md) | OverlayManager instance obtained. |
+| [OverlayManager](arkts-arkui-arkui-uicontext-overlaymanager-c.md) | OverlayManager instance obtained. |
 
 ## getOverlayManagerOptions
 
@@ -1208,7 +1208,7 @@ Get object OverlayManagerOptions.
 
 | Type | Description |
 | --- | --- |
-| [OverlayManagerOptions](../../apis-default/arkts-apis/arkts-arkui-uicontext-overlaymanageroptions-i.md) | object OverlayManagerOptions. |
+| [OverlayManagerOptions](arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) | object OverlayManagerOptions. |
 
 ## getPageInfoByUniqueId
 
@@ -1238,7 +1238,7 @@ Get page information of the frameNode with uniqueId.
 
 | Type | Description |
 | --- | --- |
-| [PageInfo](../../apis-default/arkts-apis/arkts-arkui-uicontext-pageinfo-i.md) | The page information of the frameNode with the target uniqueId, includes navDestination and router page information. If the frame node does not have navDestination and router page information, it will return an empty object. |
+| [PageInfo](arkts-arkui-arkui-uicontext-pageinfo-i.md) | The page information of the frameNode with the target uniqueId, includes navDestination and router page information. If the frame node does not have navDestination and router page information, it will return an empty object. |
 
 ## getPageRootNode
 
@@ -1314,7 +1314,7 @@ Obtains a PromptAction object.
 
 | Type | Description |
 | --- | --- |
-| [PromptAction](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md) | PromptAction object. |
+| [PromptAction](arkts-arkui-arkui-uicontext-promptaction-c.md) | PromptAction object. |
 
 ## getRouter
 
@@ -1338,7 +1338,7 @@ Obtains a Router object.
 
 | Type | Description |
 | --- | --- |
-| [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md) | Router object. |
+| [Router](arkts-arkui-arkui-uicontext-router-c.md) | Router object. |
 
 ## getSharedLocalStorage
 
@@ -1386,7 +1386,7 @@ Get object smart gesture controller.
 
 | Type | Description |
 | --- | --- |
-| [SmartGestureController](../../apis-default/arkts-apis/arkts-arkui-uicontext-smartgesturecontroller-c.md) | object smart gesture controller. |
+| [SmartGestureController](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md) | object smart gesture controller. |
 
 ## getTextMenuController
 
@@ -1394,7 +1394,7 @@ Get object smart gesture controller.
 getTextMenuController(): TextMenuController
 ```
 
-Obtains a [TextMenuController](../../apis-default/arkts-apis/arkts-arkui-uicontext-textmenucontroller-c.md) object, which can be used to control the context menu on selection.
+Obtains a [TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md) object, which can be used to control the context menu on selection.
 
 **Since:** 16
 
@@ -1410,7 +1410,7 @@ Obtains a [TextMenuController](../../apis-default/arkts-apis/arkts-arkui-uiconte
 
 | Type | Description |
 | --- | --- |
-| [TextMenuController](../../apis-default/arkts-apis/arkts-arkui-uicontext-textmenucontroller-c.md) | Obtained **TextMenuController** object. |
+| [TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md) | Obtained **TextMenuController** object. |
 
 ## getUIInspector
 
@@ -1434,7 +1434,7 @@ Obtains the **UIInspector** object.
 
 | Type | Description |
 | --- | --- |
-| [UIInspector](../../apis-default/arkts-apis/arkts-arkui-uicontext-uiinspector-c.md) | UIInspector** object. |
+| [UIInspector](arkts-arkui-arkui-uicontext-uiinspector-c.md) | UIInspector** object. |
 
 ## getUIObserver
 
@@ -1458,7 +1458,7 @@ Obtains the **UIObserver** object.
 
 | Type | Description |
 | --- | --- |
-| [UIObserver](../../apis-default/arkts-apis/arkts-arkui-uicontext-uiobserver-c.md) | UIObserver** object. |
+| [UIObserver](arkts-arkui-arkui-uicontext-uiobserver-c.md) | UIObserver** object. |
 
 ## getWindowHeightBreakpoint
 
@@ -1699,7 +1699,7 @@ Creates a sheet whose content is as defined in **bindSheetContent** and displays
 > 
 > 1. When calling this API, if no valid value is provided for **targetId**, you won't be able to set &gt; **SheetOptions.preferType** to **POPUP** or **SheetOptions.mode** to **EMBEDDED**.
 > 
-> 2. Since [updateBindSheet](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#updatebindsheet) and [closeBindSheet](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#closebindsheet) &gt; depend on **bindSheetContent**, you need to maintain the passed **bindSheetContent** yourself.
+> 2. Since [updateBindSheet](#updatebindsheet) and [closeBindSheet](#closebindsheet) &gt; depend on **bindSheetContent**, you need to maintain the passed **bindSheetContent** yourself.
 > 
 > 3. Setting **SheetOptions.UIContext** is not supported.
 
@@ -1760,7 +1760,7 @@ Post a frame callback to run on the next frame after the specified delay.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| frameCallback | [FrameCallback](../../apis-default/arkts-apis/arkts-arkui-uicontext-framecallback-c.md) | Yes | The frame callback to run on the next frame. |
+| frameCallback | [FrameCallback](arkts-arkui-arkui-uicontext-framecallback-c.md) | Yes | The frame callback to run on the next frame. |
 | delayTime | number | Yes | The delay time in milliseconds, |
 
 ## postFrameCallback
@@ -1785,7 +1785,7 @@ Post a frame callback to run on the next frame.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| frameCallback | [FrameCallback](../../apis-default/arkts-apis/arkts-arkui-uicontext-framecallback-c.md) | Yes | The frame callback to run on the next frame. |
+| frameCallback | [FrameCallback](arkts-arkui-arkui-uicontext-framecallback-c.md) | Yes | The frame callback to run on the next frame. |
 
 ## px2fp
 
@@ -1933,7 +1933,7 @@ Require DynamicSyncScene by id.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[DynamicSyncScene](../../apis-default/arkts-apis/arkts-arkui-uicontext-dynamicsyncscene-c.md)&gt; | The instance of SwiperDynamicSyncScene. |
+| Array&lt;[DynamicSyncScene](arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md)&gt; | The instance of SwiperDynamicSyncScene. |
 
 ## resolveUIContext
 
@@ -1974,7 +1974,7 @@ Obtains a UIContext instance along with its resolution strategy using a predefin
 
 | Type | Description |
 | --- | --- |
-| [ResolvedUIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-resolveduicontext-c.md) | UIContext instance along with its resolution strategy. |
+| [ResolvedUIContext](arkts-arkui-arkui-uicontext-resolveduicontext-c.md) | UIContext instance along with its resolution strategy. |
 
 ## runScopedTask
 
@@ -2022,7 +2022,7 @@ Set custom keyboard continue feature.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| feature | [CustomKeyboardContinueFeature](../../apis-default/arkts-apis/arkts-arkui-uicontext-customkeyboardcontinuefeature-e.md) | Yes | The custom keyboard continue feature. |
+| feature | [CustomKeyboardContinueFeature](arkts-arkui-arkui-uicontext-customkeyboardcontinuefeature-e.md) | Yes | The custom keyboard continue feature. |
 
 ## setImageCacheCount
 
@@ -2104,7 +2104,7 @@ Sets the avoidance mode for the virtual keyboard.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [KeyboardAvoidMode](../../apis-default/arkts-apis/arkts-arkui-uicontext-keyboardavoidmode-e.md) | Yes | Avoidance mode of the virtual keyboard.<br>Default value: **KeyboardAvoidMode.OFFSET**, which means that the page moves up when the keyboard is displayed.<br>When **setKeyboardAvoidMode** is set to an invalid value, this attribute does not take effect. |
+| value | [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | Yes | Avoidance mode of the virtual keyboard.<br>Default value: **KeyboardAvoidMode.OFFSET**, which means that the page moves up when the keyboard is displayed.<br>When **setKeyboardAvoidMode** is set to an invalid value, this attribute does not take effect. |
 
 ## setOverlayManagerOptions
 
@@ -2128,7 +2128,7 @@ Init OverlayManager.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [OverlayManagerOptions](../../apis-default/arkts-apis/arkts-arkui-uicontext-overlaymanageroptions-i.md) | Yes | Options. |
+| options | [OverlayManagerOptions](arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) | Yes | Options. |
 
 **Return value:**
 
@@ -2216,7 +2216,7 @@ Sets the text selection clear policy for text component. Default policy: **TextS
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policy | [TextSelectionClearPolicy](../../apis-default/arkts-apis/arkts-arkui-uicontext-textselectionclearpolicy-e.md) | Yes | The text selection clear policy. |
+| policy | [TextSelectionClearPolicy](arkts-arkui-arkui-uicontext-textselectionclearpolicy-e.md) | Yes | The text selection clear policy. |
 
 ## showActionSheet
 

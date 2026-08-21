@@ -4,7 +4,7 @@
 export type Parameter = _Parameter
 ```
 
-Indicates executeAction parameter.
+无障碍节点元素执行特定操作时，为操作提供具体设置的参数值，请参考[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md)。
 
 **起始版本：** 23
 

@@ -1,6 +1,6 @@
 # RemoteDevice
 
-Remote device operation methods.
+Provides the method for operating on a remote device. Before using this method, you need to call [remoteDevice.createRemoteDevice](arkts-connectivity-remotedevice-createremotedevice-f.md) to create a [RemoteDevice](#remotedevice) instance. You need to create only one instance for a device.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 getAcbState(): AcbState
 ```
 
-Gets the ACB connection state.
+Obtains the logical link connection status with a remote device. This method is applicable when you need to check whether a logical link is ready, for example, checking the logical link status before data transfer or message communication. Unlike [getConnectionState](#getconnectionstate) which obtains the connection status at the device level, this API obtains the connection status at the logical link (ACB) level.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ Gets the ACB connection state.
 
 | Type | Description |
 | --- | --- |
-| AcbState | Returns the ACB connection state. |
+| AcbState | Logical link connection state with a remote device. |
 
 **Error codes:**
 
@@ -52,7 +52,7 @@ Gets the ACB connection state.
 getConnectionState(): ConnectionState
 ```
 
-Gets the profile connection state.
+Obtains the connection status between the local and remote devices. Unlike [getAcbState](#getacbstate) which obtains the connection status at the logical link (ACB) level, this API obtains the connection status at the device level.
 
 **Since:** 26.0.0
 
@@ -68,7 +68,7 @@ Gets the profile connection state.
 
 | Type | Description |
 | --- | --- |
-| ConnectionState | Returns the connection state. |
+| ConnectionState | Connection status between the local and remote devices. |
 
 **Error codes:**
 
@@ -84,7 +84,7 @@ Gets the profile connection state.
 getDeviceClass(): DeviceClass
 ```
 
-Gets the type of the NearLink device.
+Obtains the type of a remote device.
 
 **Since:** 26.0.0
 
@@ -100,7 +100,7 @@ Gets the type of the NearLink device.
 
 | Type | Description |
 | --- | --- |
-| DeviceClass | Indicates the type of the NearLink device. |
+| DeviceClass | Remote device type. |
 
 **Error codes:**
 
@@ -116,7 +116,7 @@ Gets the type of the NearLink device.
 getDeviceInformation(): DeviceInformation
 ```
 
-Obtains the remote device information.
+Obtains the information of a remote device.
 
 **Since:** 26.0.0
 
@@ -132,7 +132,7 @@ Obtains the remote device information.
 
 | Type | Description |
 | --- | --- |
-| [DeviceInformation](arkts-connectivity-remotedevice-deviceinformation-i.md) | Returns the remote device information. |
+| [DeviceInformation](arkts-connectivity-remotedevice-deviceinformation-i.md) | Information of a remote device. |
 
 **Error codes:**
 
@@ -148,7 +148,7 @@ Obtains the remote device information.
 getDeviceName(): string
 ```
 
-Gets the name of the NearLink device.
+Obtains the name of a remote device.
 
 **Since:** 26.0.0
 
@@ -164,7 +164,7 @@ Gets the name of the NearLink device.
 
 | Type | Description |
 | --- | --- |
-| string | Returns the device name. |
+| string | Remote device name. The value contains a maximum of 30 characters. |
 
 **Error codes:**
 
@@ -180,7 +180,7 @@ Gets the name of the NearLink device.
 getPairingState(): PairingState
 ```
 
-Gets the pairing state.
+Obtains the pairing status with a remote device.
 
 **Since:** 26.0.0
 
@@ -196,7 +196,7 @@ Gets the pairing state.
 
 | Type | Description |
 | --- | --- |
-| PairingState | Returns the pairing state. |
+| PairingState | Pairing status with a remote device. |
 
 **Error codes:**
 
@@ -212,7 +212,7 @@ Gets the pairing state.
 startPairing(): Promise<void>
 ```
 
-Initiate pairing to remote NearLink device.
+Initiates pairing with a remote device. This API uses a promise to return the result. After the pairing is initiated, different types of dialog boxes will be displayed based on the input and output capability IDs of the local and remote devices, for example, whether the devices have the display and keyboard input capabilities. The user will need to confirm the pairing.
 
 **Since:** 26.0.0
 
@@ -228,7 +228,7 @@ Initiate pairing to remote NearLink device.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

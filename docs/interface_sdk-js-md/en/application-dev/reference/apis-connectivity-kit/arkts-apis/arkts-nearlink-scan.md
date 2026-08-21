@@ -1,6 +1,6 @@
 # @ohos.nearlink.scan
 
-Provides methods for scanning and discovering nearby devices.
+This module provides the definition of the NearLink scanning mode.
 
 **Since:** 26.0.0
 
@@ -22,30 +22,30 @@ import { scan } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [offDeviceFound](arkts-connectivity-scan-offdevicefound-f.md) | Unsubscribes from NearLink scan results. |
-| [onDeviceFound](arkts-connectivity-scan-ondevicefound-f.md) | Subscribes to NearLink scan results. |
-| [startScan](arkts-connectivity-scan-startscan-f.md) | Starts scanning for specified NearLink devices with filters. It is allowed to set filter parameter to {@code null} if you do not want to use filter. |
-| [stopScan](arkts-connectivity-scan-stopscan-f.md) | Stops scanning. |
+| [offDeviceFound](arkts-connectivity-scan-offdevicefound-f.md) | Unsubscribes from NearLink scanning results. This API uses an asynchronous callback to return the result. |
+| [onDeviceFound](arkts-connectivity-scan-ondevicefound-f.md) | Subscribes to NearLink scanning results. This API uses an asynchronous callback to return the result. |
+| [startScan](arkts-connectivity-scan-startscan-f.md) | Starts NearLink scanning. This API uses a promise to return the result. You need to call scan.onDeviceFound to subscribe to the scanning results. After this API initiates scanning, the scanned device information is reported through the scan.onDeviceFound callback. After the scanning is complete, you can call [scan.stopScan](arkts-connectivity-scan-stopscan-f.md) to stop scanning. |
+| [stopScan](arkts-connectivity-scan-stopscan-f.md) | Stops NearLink scanning. This API uses a promise to return the result. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ScanFilters](arkts-connectivity-scan-scanfilters-i.md) | Describes the scan filters. |
-| [ScanOptions](arkts-connectivity-scan-scanoptions-i.md) | Describes the parameters for scan. |
-| [ScanResults](arkts-connectivity-scan-scanresults-i.md) | Describes the contents of the scan results. |
+| [ScanFilters](arkts-connectivity-scan-scanfilters-i.md) | Defines the scan filters |
+| [ScanOptions](arkts-connectivity-scan-scanoptions-i.md) | Represents the scan options. |
+| [ScanResults](arkts-connectivity-scan-scanresults-i.md) | Represents the scanning results. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ScanMode](arkts-connectivity-scan-scanmode-e.md) | The enum of scan mode. |
+| [ScanMode](arkts-connectivity-scan-scanmode-e.md) | Enumerates the scan modes. |
 
 <!--Del-->
 ### Enums(System API)
 
 | Name | Description |
 | --- | --- |
-| [ScanMode](arkts-connectivity-scan-scanmode-e-sys.md) | The enum of scan mode. |
+| [ScanMode](arkts-connectivity-scan-scanmode-e-sys.md) | Enumerates the scan modes. |
 <!--DelEnd-->
 

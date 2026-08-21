@@ -16,5 +16,5 @@ Define the FrameNode type for Marquee.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** MarqueeFrameNode
+**属性类型：** [MarqueeFrameNode](arkts-typenode-marqueeframenode-c.md)
 

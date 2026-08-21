@@ -30,7 +30,7 @@ function updateImsCallMode(callId: int, mode: ImsCallMode, callback: AsyncCallba
 | --- | --- | --- | --- |
 | callId | int | 是 | 呼叫Id。 |
 | mode | [ImsCallMode](arkts-telephony-call-imscallmode-e-sys.md) | 是 | Ims呼叫模式。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 以回调函数的方式返回更新Ims呼叫模式的结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以回调函数的方式返回更新Ims呼叫模式的结果。 |
 
 **错误码：**
 

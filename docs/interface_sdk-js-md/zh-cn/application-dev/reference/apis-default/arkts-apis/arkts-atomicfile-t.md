@@ -14,5 +14,5 @@ AtomicFile类。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
-**属性类型：** fileIo.AtomicFile
+**属性类型：** [fileIo.AtomicFile](arkts-fileio-atomicfile-c.md)
 

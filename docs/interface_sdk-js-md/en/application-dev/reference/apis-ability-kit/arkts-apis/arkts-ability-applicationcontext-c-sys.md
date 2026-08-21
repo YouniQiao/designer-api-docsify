@@ -235,7 +235,7 @@ Register environment callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| environmentCallback | [EnvironmentCallback](../../apis-default/arkts-apis/arkts-app-ability-environmentcallback-environmentcallback-i.md) | Yes | Callback used to return the ID of the registered listener. |
+| environmentCallback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | Yes | Callback used to return the ID of the registered listener. |
 
 **Return value:**
 

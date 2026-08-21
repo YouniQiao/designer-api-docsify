@@ -1,8 +1,6 @@
 # MifareUltralightType
 
-MifareUltralight Type definition
-
-@enum { int }
+Enumerates the MIFARE Ultralight tag types.
 
 **Since:** 23
 
@@ -16,11 +14,11 @@ MifareUltralight Type definition
 TYPE_UNKNOWN = 0
 ```
 
-Mifare Type unknown
+Unknown type.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MifareUltralightType-TYPE_UNKNOWN = 0--><!--Device-MifareUltralightType-TYPE_UNKNOWN = 0-End-->
 
@@ -32,11 +30,11 @@ Mifare Type unknown
 TYPE_ULTRALIGHT = 1
 ```
 
-Mifare Ultralight
+MIFARE Ultralight.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MifareUltralightType-TYPE_ULTRALIGHT = 1--><!--Device-MifareUltralightType-TYPE_ULTRALIGHT = 1-End-->
 
@@ -48,11 +46,11 @@ Mifare Ultralight
 TYPE_ULTRALIGHT_C = 2
 ```
 
-Mifare UltralightC
+MIFARE Ultralight C.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MifareUltralightType-TYPE_ULTRALIGHT_C = 2--><!--Device-MifareUltralightType-TYPE_ULTRALIGHT_C = 2-End-->
 

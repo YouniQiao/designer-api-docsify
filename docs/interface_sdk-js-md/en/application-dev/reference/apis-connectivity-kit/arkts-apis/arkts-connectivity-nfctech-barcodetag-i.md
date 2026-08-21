@@ -1,8 +1,12 @@
 # BarcodeTag
 
-Provides methods for accessing Barcode tag.
+Provides the capability of reading barcode label attributes and accessing I/O operations. It is inherited from **TagSession**.
 
-@extends TagSession
+**TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).
+
+For details about how to obtain a **BarcodeTag** object, see [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).
+
+The following describes the unique APIs of **BarcodeTag**.
 
 **Inheritance/Implementation:** BarcodeTag extends TagSession
 
@@ -18,7 +22,7 @@ Provides methods for accessing Barcode tag.
 getBarcode(): Promise<ArrayBuffer>
 ```
 
-Returns the barcode of a Barcode tag.
+Obtains a complete barcode tag. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -34,7 +38,7 @@ Returns the barcode of a Barcode tag.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | The barcode of tag. |
+| Promise&lt;ArrayBuffer&gt; | Promise used to return the barcode tag read. |
 
 **Error codes:**
 

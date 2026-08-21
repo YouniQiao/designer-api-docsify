@@ -16,5 +16,5 @@ Represents a FrameNode of the **XComponent** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** TypedFrameNode<XComponentInterface, XComponentAttribute>
+**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;XComponentInterface, XComponentAttribute&gt;
 

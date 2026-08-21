@@ -23,7 +23,7 @@ position?: ArcSliderPosition
 
 Set the component's position on the screen.
 
-**Type:** [ArcSliderPosition](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcsliderposition-e.md)
+**Type:** [ArcSliderPosition](arkts-arkui-advanced-arcslider-arcsliderposition-e.md)
 
 **Default:** ArcSliderPosition.RIGHT
 

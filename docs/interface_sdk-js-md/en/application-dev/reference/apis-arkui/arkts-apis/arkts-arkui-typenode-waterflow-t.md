@@ -16,5 +16,5 @@ Represents a FrameNode of the **WaterFlow** type. Only FlowItem child components
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** TypedFrameNode<WaterFlowInterface, WaterFlowAttribute>
+**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;WaterFlowInterface, WaterFlowAttribute&gt;
 

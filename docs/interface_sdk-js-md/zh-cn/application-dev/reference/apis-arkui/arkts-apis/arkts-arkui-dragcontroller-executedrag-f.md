@@ -35,7 +35,7 @@ Execute a drag event.
 | --- | --- | --- | --- |
 | custom | CustomBuilder \| DragItemInfo | 是 | Object used for prompts displayed when the object is dragged. |
 | dragInfo | [DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | 是 | Information about the drag event. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; | 是 | Callback that contains the drag event information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; | 是 | Callback that contains the drag event information. |
 
 **错误码：**
 
@@ -46,7 +46,7 @@ Execute a drag event.
 
 **示例**
 
-推荐通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的[getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI上下文关联的DragController对象。
+推荐通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的[getDragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI上下文关联的DragController对象。
 
 ```TypeScript
 import { dragController } from '@kit.ArkUI';
@@ -136,7 +136,7 @@ function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo): 
 
 > **说明：**
 > 
-> 从API version 11开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的 &gt; [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI &gt; 上下文关联的[DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md)对象。
+> 从API version 11开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [getDragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI &gt; 上下文关联的[DragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-dragcontroller-c.md)对象。
 
 **起始版本：** 10
 
@@ -175,7 +175,7 @@ function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo): 
 
 **示例**
 
-推荐通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的[getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI上下文关联的DragController对象。
+推荐通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的[getDragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI上下文关联的DragController对象。
 
 ```TypeScript
 import { dragController } from '@kit.ArkUI';

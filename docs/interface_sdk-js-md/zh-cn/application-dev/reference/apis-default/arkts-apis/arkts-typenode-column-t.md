@@ -16,5 +16,5 @@ Define the FrameNode type for Column.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** ColumnFrameNode
+**属性类型：** [ColumnFrameNode](arkts-typenode-columnframenode-c.md)
 

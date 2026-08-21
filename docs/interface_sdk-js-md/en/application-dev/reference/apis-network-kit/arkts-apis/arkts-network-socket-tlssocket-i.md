@@ -1366,25 +1366,7 @@ Unsubscribes from **connect** or **close** events of the **TLSSocket** object. T
 
 **Examples**
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
-let callback1 = () => {
-  console.info("on connect success");
-}
-tls.on('connect', callback1);
-// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-tls.off('connect', callback1);
-tls.off('connect');
-let callback2 = () => {
-  console.info("on close success");
-}
-tls.on('close', callback2);
-// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-tls.off('close', callback2);
-```
+See off_close
 
 ## off('error')
 
@@ -1568,29 +1550,7 @@ Subscribes to **connect** or **close** events of the **TLSSocket** object. This 
 
 **Examples**
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
-let bindAddr: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-tls.bind(bindAddr, (err: BusinessError) => {
-  if (err) {
-    console.error('bind fail');
-    return;
-  }
-  console.info('bind success');
-  tls.on('connect', () => {
-    console.info("on connect success")
-  });
-  tls.on('close', () => {
-    console.info("on close success")
-  });
-});
-```
+See on_close
 
 ## on('error')
 

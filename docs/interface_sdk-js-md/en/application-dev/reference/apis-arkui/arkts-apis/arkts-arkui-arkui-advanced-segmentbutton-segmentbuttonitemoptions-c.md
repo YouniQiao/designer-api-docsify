@@ -37,7 +37,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SegmentButtonItemOptionsConstructorOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptionsconstructoroptions-i.md) | Yes | Configuration options for a single segmented button, including the icon, text, and accessibility attributes. |
+| options | [SegmentButtonItemOptionsConstructorOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-segmentbuttonitemoptionsconstructoroptions-i.md) | Yes | Configuration options for a single segmented button, including the icon, text, and accessibility attributes. |
 
 ## accessibilityDescription
 

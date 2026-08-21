@@ -16,5 +16,5 @@ Define the FrameNode type for Slider.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** SliderFrameNode
+**属性类型：** [SliderFrameNode](arkts-typenode-sliderframenode-c.md)
 

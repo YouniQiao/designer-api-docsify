@@ -35,7 +35,7 @@ removeAllSlots 删除所有通知渠道。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotType | SlotType | 是 | 通知渠道类型，例如社交通讯、服务提醒、内容咨询等类型。 需传入已创建的渠道类型，否则删除操作无效。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当删除指定类型的通知渠道成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当删除指定类型的通知渠道成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

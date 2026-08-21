@@ -16,5 +16,5 @@ Defines the ItemRestriction type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** Array<T>
+**Property type:** Array&lt;T&gt;
 

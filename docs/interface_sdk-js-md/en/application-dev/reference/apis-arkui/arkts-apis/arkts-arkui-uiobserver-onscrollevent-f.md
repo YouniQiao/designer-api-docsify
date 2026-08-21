@@ -30,7 +30,7 @@ Registers a callback function to be called when the scroll event start or stop.
 | --- | --- | --- | --- |
 | type | 'scrollEvent' | Yes | The type of event to listen for. Must be 'scrollEvent'. |
 | options | ObserverOptions | Yes | The options object. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | Yes | The callback function to be called when the scroll event start or stop. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScrollEventInfo](../../apis-default/arkts-apis/arkts-uiobserver-scrolleventinfo-i.md)&gt; | Yes | The callback function to be called when the scroll event start or stop. |
 
 
 ## on('scrollEvent')
@@ -56,5 +56,5 @@ Registers a callback function to be called when the scroll event start or stop.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'scrollEvent' | Yes | The type of event to listen for. Must be 'scrollEvent'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | Yes | The callback function to be called when the scroll event start or stop. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScrollEventInfo](../../apis-default/arkts-apis/arkts-uiobserver-scrolleventinfo-i.md)&gt; | Yes | The callback function to be called when the scroll event start or stop. |
 

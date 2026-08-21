@@ -1,6 +1,6 @@
 # Event (System API)
 
-Describes the SSAP event.
+Represents a service event.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { ssap } from '@kit.ConnectivityKit';
 eventUuid: string
 ```
 
-The UUID of a event instance. The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. <br>NearLink standard UUIDs are not allowed.
+Event UUID. The data format is the same as that of **serviceUuid**.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ The UUID of a event instance. The length must be 36, The value consists of 36 he
 parameter?: ArrayBuffer
 ```
 
-The parameter of a event instance.
+Event parameters. The data format is defined by the specific service. By default, this field is not used if not set.
 
 **Type:** ArrayBuffer
 
@@ -62,7 +62,7 @@ The parameter of a event instance.
 serviceUuid: string
 ```
 
-The UUID of the [Service](arkts-connectivity-ssap-service-i.md) instance to which the event belongs The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. <br>NearLink standard UUIDs are not allowed.
+NearLink service UUID, which is a string of 36 characters. The value consists of 32 hexadecimal digits and four hyphens (-), for example, **FFFFFFFF-1234-5678-ABCD-000000001234**, which indicates a 128-bit ID. The value cannot be set to a standard NearLink UUID.
 
 **Type:** string
 

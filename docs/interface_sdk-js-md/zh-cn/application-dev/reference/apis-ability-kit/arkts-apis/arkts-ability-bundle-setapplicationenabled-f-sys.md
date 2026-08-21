@@ -49,7 +49,7 @@ function setApplicationEnabled(bundleName: string, isEnable: boolean, callback: 
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 指示需要启用或禁用的应用Bundle名称。 |
 | isEnable | boolean | 是 | 指定是否启用应用程序。true表示启用，false表示禁用。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 
 ## setApplicationEnabled

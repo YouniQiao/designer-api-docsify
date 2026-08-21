@@ -12,7 +12,7 @@ import { manager } from '@kit.ConnectivityKit';
 function factoryReset(): Promise<void>
 ```
 
-Restores NearLink settings.
+Restores a device to its factory settings. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -30,7 +30,7 @@ Restores NearLink settings.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

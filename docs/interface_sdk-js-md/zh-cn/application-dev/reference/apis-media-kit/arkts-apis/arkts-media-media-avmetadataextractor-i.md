@@ -54,7 +54,7 @@ fetchAlbumCover(callback: AsyncCallback<image.PixelMap>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | 是 | 回调函数。异步返回专辑封面。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | 回调函数。异步返回专辑封面。 |
 
 **错误码：**
 
@@ -81,7 +81,7 @@ Obtains the cover of the audio album. This API uses an asynchronous callback to 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap \| undefined&gt; | 是 | Callback used to return the album cover. to return when fetchAlbumCover completed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap \| undefined&gt; | 是 | Callback used to return the album cover. to return when fetchAlbumCover completed. |
 
 **错误码：**
 
@@ -367,7 +367,7 @@ fetchMetadata(callback: AsyncCallback<AVMetadata>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;AVMetadata&gt; | 是 | 回调函数。异步返回音视频元数据对象（AVMetadata）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadata&gt; | 是 | 回调函数。异步返回音视频元数据对象（AVMetadata）。 |
 
 **错误码：**
 
@@ -395,7 +395,7 @@ Obtains media metadata. This API uses an asynchronous callback to return the res
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;AVMetadata \| undefined&gt; | 是 | Callback used to return the result, which is an **AVMetadata** instance. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadata \| undefined&gt; | 是 | Callback used to return the result, which is an **AVMetadata** instance. |
 
 **错误码：**
 
@@ -517,7 +517,7 @@ release(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当释放资源成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当释放资源成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

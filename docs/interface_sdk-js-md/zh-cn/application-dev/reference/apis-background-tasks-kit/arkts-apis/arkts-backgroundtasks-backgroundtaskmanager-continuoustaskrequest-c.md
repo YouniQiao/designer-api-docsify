@@ -296,7 +296,7 @@ requestAuthFromUser(context: Context, callback: Callback<UserAuthResult>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | Context | 是 | 应用运行的上下文。 <br> <br>FA模型的应用Context定义见[Context]{@link./app/context}。<br>Stage模型的应用Context定义 见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 <br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility 申请。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;UserAuthResult&gt; | 是 | 用户操作后，返回授权结果。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserAuthResult&gt; | 是 | 用户操作后，返回授权结果。 |
 
 **错误码：**
 
@@ -389,7 +389,7 @@ requestAuthFromUserByDialog(context: Context, callback: Callback<UserAuthResult>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | Context | 是 | App running context. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;UserAuthResult&gt; | 是 | The callback of the function. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserAuthResult&gt; | 是 | The callback of the function. |
 
 **错误码：**
 

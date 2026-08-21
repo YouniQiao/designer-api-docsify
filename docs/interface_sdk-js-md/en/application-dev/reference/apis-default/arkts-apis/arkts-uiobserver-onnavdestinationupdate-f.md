@@ -30,7 +30,7 @@ Registers a callback function to be called when the navigation destination is up
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [NavDestinationSwitchObserverOptions](../../apis-arkui/arkts-apis/arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) | Yes | The options object. |
+| options | [NavDestinationSwitchObserverOptions](arkts-uiobserver-navdestinationswitchobserveroptions-i.md) | Yes | The options object. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NavDestinationInfo&gt; | Yes | The callback function to be called when the navigation destination is updated. |
 
 

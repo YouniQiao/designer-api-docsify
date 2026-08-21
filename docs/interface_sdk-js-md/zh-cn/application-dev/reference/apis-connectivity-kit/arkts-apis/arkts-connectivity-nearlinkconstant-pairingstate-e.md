@@ -1,6 +1,6 @@
 # PairingState
 
-The enum of pairing state.
+表示和远端设备的配对状态，为枚举值。
 
 **起始版本：** 26.0.0
 
@@ -14,7 +14,7 @@ The enum of pairing state.
 PAIRING_STATE_NONE = 1
 ```
 
-Indicates that the pairing state is none.
+表示未配对。
 
 **起始版本：** 26.0.0
 
@@ -30,7 +30,7 @@ Indicates that the pairing state is none.
 PAIRING_STATE_PAIRING = 2
 ```
 
-Indicates that the pairing state is pairing.
+表示配对中。
 
 **起始版本：** 26.0.0
 
@@ -46,7 +46,7 @@ Indicates that the pairing state is pairing.
 PAIRING_STATE_PAIRED = 3
 ```
 
-Indicates that the pairing state is paired.
+表示已配对。
 
 **起始版本：** 26.0.0
 

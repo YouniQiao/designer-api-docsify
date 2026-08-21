@@ -87,7 +87,7 @@ onError?: ErrorCallback
 
 在启动的ExtensionAbility运行过程中发生错误时触发回调。仅在原子服务以嵌入式模式运行时支持，参数类型为BusinessError。
 
-**类型：** [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md)
+**类型：** [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md)
 
 **起始版本：** 23
 
@@ -105,7 +105,7 @@ onReceive?: Callback<Record<string, RecordData>>
 
 表示onReceive的回调。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;
 
 **起始版本：** 23
 
@@ -123,7 +123,7 @@ onTerminated?: Callback<TerminationInfo>
 
 当EmbeddableUIAbility被终止时触发回调，用于接收终止信息。仅在原子化服务以嵌入式模式运行时支持该回调，参数类型为TerminationInfo。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TerminationInfo&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TerminationInfo&gt;
 
 **起始版本：** 23
 

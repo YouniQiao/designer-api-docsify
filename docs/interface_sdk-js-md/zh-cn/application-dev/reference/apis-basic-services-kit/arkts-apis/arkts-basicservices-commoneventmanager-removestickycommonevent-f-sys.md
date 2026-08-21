@@ -29,7 +29,7 @@ function removeStickyCommonEvent(event: string, callback: AsyncCallback<void>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | 表示被移除的粘性公共事件。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当移除粘性公共事件成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当移除粘性公共事件成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

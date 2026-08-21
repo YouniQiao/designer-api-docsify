@@ -4,7 +4,7 @@
 type PairingState = nearlinkConstant.PairingState
 ```
 
-Indicates the pairing state.
+Enumerates the pairing statuses with a remote device.
 
 **Since:** 26.0.0
 

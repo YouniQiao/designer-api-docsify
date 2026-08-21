@@ -36,7 +36,7 @@ ToolBarV2ItemImage的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ToolBarV2ItemImageOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-toolbarv2-toolbarv2itemimageoptions-i.md) | 是 | 图标信息。 |
+| options | [ToolBarV2ItemImageOptions](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemimageoptions-i.md) | 是 | 图标信息。 |
 
 ## activatedColor
 

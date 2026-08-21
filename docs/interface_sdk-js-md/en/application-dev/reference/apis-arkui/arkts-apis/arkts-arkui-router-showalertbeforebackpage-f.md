@@ -16,13 +16,13 @@ Enables the display of a confirm dialog box before returning to the previous pag
 
 > **NOTE：**
 > 
-> - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
+> - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
 
 **Since:** 9
 
 **Deprecated since:** 18
 
-**Substitutes:** [showAlertBeforeBackPage](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#showalertbeforebackpage)
+**Substitutes:** [showAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#showalertbeforebackpage)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

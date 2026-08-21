@@ -1054,12 +1054,5 @@ Deletes all properties.
 
 **Examples**
 
-```TypeScript
-let simple = AppStorage.staticClear();
-```
-
-```TypeScript
-AppStorage.SetOrCreate('PropA', 47);
-let res: boolean = AppStorage.Clear(); // true: There are no subscribers.
-```
+See [Clear](#clear)
 

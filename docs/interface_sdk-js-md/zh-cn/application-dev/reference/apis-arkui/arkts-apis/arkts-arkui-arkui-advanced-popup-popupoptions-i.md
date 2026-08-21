@@ -73,7 +73,7 @@ icon?: PopupIconOptions
 
 默认不显示图标。
 
-**类型：** [PopupIconOptions](arkts-arkui-arkui-advanced-popup-popupiconoptions-i.md)
+**类型：** [PopupIconOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-popup-popupiconoptions-i.md)
 
 **起始版本：** 11
 
@@ -125,7 +125,7 @@ message不支持设置fontWeight。
 
 默认不显示内容文本。
 
-**类型：** [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md)
+**类型：** [PopupTextOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-popup-popuptextoptions-i.md)
 
 **起始版本：** 11
 
@@ -195,7 +195,7 @@ title?: PopupTextOptions
 
 默认不显示标题文本。
 
-**类型：** [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md)
+**类型：** [PopupTextOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-popup-popuptextoptions-i.md)
 
 **起始版本：** 11
 

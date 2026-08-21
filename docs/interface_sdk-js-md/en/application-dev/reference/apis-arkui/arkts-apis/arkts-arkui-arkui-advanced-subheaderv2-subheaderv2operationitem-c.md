@@ -36,7 +36,7 @@ Constructor of **SubHeaderV2OperationItem**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SubHeaderV2OperationItemOptions](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationitemoptions-i.md) | Yes | Operation item configuration information. Defines the options for initializing a **SubHeaderV2OperationItem** object. |
+| options | [SubHeaderV2OperationItemOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-subheaderv2-subheaderv2operationitemoptions-i.md) | Yes | Operation item configuration information. Defines the options for initializing a **SubHeaderV2OperationItem** object. |
 
 ## accessibilityDescription
 
@@ -112,7 +112,7 @@ The accessibilityText of this text or icon.
 
 callback function when operate the text or icon.
 
-**Type:** [SubHeaderV2OperationItemAction](arkts-arkui-subheaderv2operationitemaction-t.md)
+**Type:** [SubHeaderV2OperationItemAction](../../apis-default/arkts-apis/arkts-subheaderv2operationitemaction-t.md)
 
 **Since:** 18
 
@@ -133,7 +133,7 @@ callback function when operate the text or icon.
 
 The content of text or the address of icon.
 
-**Type:** [SubHeaderV2OperationItemType](arkts-arkui-subheaderv2operationitemtype-t.md)
+**Type:** [SubHeaderV2OperationItemType](../../apis-default/arkts-apis/arkts-subheaderv2operationitemtype-t.md)
 
 **Since:** 18
 

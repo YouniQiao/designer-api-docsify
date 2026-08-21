@@ -84,7 +84,7 @@ action?: ToolBarV2ItemAction
 
 Define the action event.
 
-**类型：** [ToolBarV2ItemAction](../../apis-default/arkts-apis/arkts-toolbarv2itemaction-t.md)
+**类型：** [ToolBarV2ItemAction](arkts-arkui-toolbarv2itemaction-t.md)
 
 **起始版本：** 18
 
@@ -104,7 +104,7 @@ content: ToolBarV2ItemText
 
 Define text content.
 
-**类型：** [ToolBarV2ItemText](../../apis-default/arkts-apis/arkts-arkui-advanced-toolbarv2-toolbarv2itemtext-c.md)
+**类型：** [ToolBarV2ItemText](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemtext-c.md)
 
 **起始版本：** 18
 
@@ -124,7 +124,7 @@ icon?: ToolBarV2ItemIconType
 
 Define icon resource.
 
-**类型：** [ToolBarV2ItemIconType](../../apis-default/arkts-apis/arkts-toolbarv2itemicontype-t.md)
+**类型：** [ToolBarV2ItemIconType](arkts-arkui-toolbarv2itemicontype-t.md)
 
 **起始版本：** 18
 
@@ -144,7 +144,7 @@ state?: ToolBarV2ItemState
 
 Define item type.
 
-**类型：** [ToolBarV2ItemState](../../apis-default/arkts-apis/arkts-arkui-advanced-toolbarv2-toolbarv2itemstate-e.md)
+**类型：** [ToolBarV2ItemState](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemstate-e.md)
 
 **起始版本：** 18
 

@@ -26,5 +26,5 @@ export declare function Popup(options: PopupOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [PopupOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-popup-popupoptions-i.md) | 是 | 定义Popup组件的类型。 |
+| options | [PopupOptions](arkts-arkui-advanced-popup-popupoptions-i.md) | 是 | 定义Popup组件的类型。 |
 

@@ -94,7 +94,7 @@ checkbox的选中状态改变事件。
 
 默认无事件。
 
-**类型：** [AdvancedDialogV2OnCheckedChange](arkts-arkui-advanceddialogv2oncheckedchange-t.md)
+**类型：** [AdvancedDialogV2OnCheckedChange](../../apis-default/arkts-apis/arkts-advanceddialogv2oncheckedchange-t.md)
 
 **起始版本：** 18
 
@@ -117,7 +117,7 @@ checkbox的选中状态改变事件。
 
 默认不显示。
 
-**类型：** [AdvancedDialogV2Button](arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
+**类型：** [AdvancedDialogV2Button](../../apis-default/arkts-apis/arkts-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
 **起始版本：** 18
 
@@ -140,7 +140,7 @@ checkbox的选中状态改变事件。
 
 默认不显示。
 
-**类型：** [AdvancedDialogV2Button](arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
+**类型：** [AdvancedDialogV2Button](../../apis-default/arkts-apis/arkts-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
 **起始版本：** 18
 

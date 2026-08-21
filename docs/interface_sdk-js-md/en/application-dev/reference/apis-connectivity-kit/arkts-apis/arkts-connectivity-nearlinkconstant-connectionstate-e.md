@@ -1,6 +1,6 @@
 # ConnectionState
 
-The enum of connection state.
+Enumerates the connection states with a remote device.
 
 **Since:** 26.0.0
 
@@ -14,7 +14,7 @@ The enum of connection state.
 STATE_CONNECTING = 0
 ```
 
-The current profile is being connected.
+Connecting.
 
 **Since:** 26.0.0
 
@@ -30,7 +30,7 @@ The current profile is being connected.
 STATE_CONNECTED = 1
 ```
 
-The current device is connected.
+Connected.
 
 **Since:** 26.0.0
 
@@ -46,7 +46,7 @@ The current device is connected.
 STATE_DISCONNECTING = 2
 ```
 
-The current device is being disconnected.
+Disconnecting.
 
 **Since:** 26.0.0
 
@@ -62,7 +62,7 @@ The current device is being disconnected.
 STATE_DISCONNECTED = 3
 ```
 
-The current device is disconnected.
+Disconnected.
 
 **Since:** 26.0.0
 

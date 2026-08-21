@@ -63,7 +63,7 @@ offEditorAttributeChanged(callback?: Callback<EditorAttribute>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | 否 | 所要取消订阅的回调处理函数。参数不填写时，默认取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | 否 | 所要取消订阅的回调处理函数。参数不填写时，默认取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -230,7 +230,7 @@ offTextChange(callback?: Callback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -387,16 +387,7 @@ off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void
 
 **示例**
 
-```TypeScript
-inputMethodEngine.getKeyboardDelegate().off('keyUp', (keyEvent: inputMethodEngine.KeyEvent) => {
-  console.info('delete keyUp notification.');
-  return true;
-});
-inputMethodEngine.getKeyboardDelegate().off('keyDown', (keyEvent: inputMethodEngine.KeyEvent) => {
-  console.info('delete keyDown notification.');
-  return true;
-});
-```
+参见 off_keyDown
 
 ## off('selectionChange')
 
@@ -509,7 +500,7 @@ onEditorAttributeChanged(callback: Callback<EditorAttribute>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | 是 | 回调函数，返回变化的编辑框属性。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | 是 | 回调函数，返回变化的编辑框属性。 |
 
 **示例**
 
@@ -691,7 +682,7 @@ onTextChange(callback: Callback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | 是 | 回调函数，返回订阅的文本内容。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调函数，返回订阅的文本内容。 |
 
 **示例**
 
@@ -859,18 +850,7 @@ on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void
 
 **示例**
 
-```TypeScript
-inputMethodEngine.getKeyboardDelegate().on('keyUp', (keyEvent: inputMethodEngine.KeyEvent) => {
-  console.info(`inputMethodEngine keyCode.(keyUp): ${keyEvent.keyCode}`);
-  console.info(`inputMethodEngine keyAction.(keyUp): ${keyEvent.keyAction}`);
-  return true;
-});
-inputMethodEngine.getKeyboardDelegate().on('keyDown', (keyEvent: inputMethodEngine.KeyEvent) => {
-  console.info(`inputMethodEngine keyCode.(keyDown): ${keyEvent.keyCode}`);
-  console.info(`inputMethodEngine keyAction.(keyDown): ${keyEvent.keyAction}`);
-  return true;
-});
-```
+参见 on_keyDown
 
 ## on('selectionChange')
 

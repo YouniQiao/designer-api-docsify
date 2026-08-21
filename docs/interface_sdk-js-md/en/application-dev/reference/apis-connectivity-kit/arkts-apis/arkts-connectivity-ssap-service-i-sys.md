@@ -1,6 +1,6 @@
 # Service
 
-Describes the SSAP service.
+Represents the NearLink service.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { ssap } from '@kit.ConnectivityKit';
 events?: Event[]
 ```
 
-The events belong to this service. <br>This field is not supported in [addService](arkts-connectivity-ssap-server-i.md#addservice) method.
+Events of a service. If this field is not specified, the service does not provide any event.
 
 **Type:** Event[]
 
@@ -40,7 +40,7 @@ The events belong to this service. <br>This field is not supported in [addServic
 methods?: Method[]
 ```
 
-The methods belong to this service. <br>This field is not supported in [addService](arkts-connectivity-ssap-server-i.md#addservice) method.
+Methods of a service. If this field is not specified, the service does not provide any method.
 
 **Type:** [Method](arkts-connectivity-ssap-method-i-sys.md)[]
 

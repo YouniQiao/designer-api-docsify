@@ -12,7 +12,7 @@ import { manager } from '@kit.ConnectivityKit';
 function getPairedDevices(): string[]
 ```
 
-Gets the list of devices that have been paired with the current device. If the user has the ohos.permission.GET_NEARLINK_PEER_MAC permission, the real device address is returned. Otherwise, a random device address is returned.
+Obtains the devices paired with the current device.
 
 **Since:** 26.0.0
 
@@ -28,7 +28,7 @@ Gets the list of devices that have been paired with the current device. If the u
 
 | Type | Description |
 | --- | --- |
-| string[] | Returns a list of paired devices' address in MAC format (e.g., "11:22:33:AA:BB:FF"). |
+| string[] | List of paired device addresses. |
 
 **Error codes:**
 

@@ -16,5 +16,5 @@ Represents a FrameNode of the **LoadingProgress** type. This type of node does n
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** TypedFrameNode<LoadingProgressInterface, LoadingProgressAttribute>
+**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;LoadingProgressInterface, LoadingProgressAttribute&gt;
 

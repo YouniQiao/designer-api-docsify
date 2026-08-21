@@ -1,8 +1,6 @@
 # TnfType
 
-TNF types definitions, see NFCForum-TS-NDEF_1.0.
-
-@enum { int }
+Enumerates the TNF types. For details, see *NFCForum-TS-NDEF_1.0*.
 
 **Since:** 23
 
@@ -16,11 +14,11 @@ TNF types definitions, see NFCForum-TS-NDEF_1.0.
 TNF_EMPTY = 0x0
 ```
 
-Empty
+Empty.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TnfType-TNF_EMPTY = 0x0--><!--Device-TnfType-TNF_EMPTY = 0x0-End-->
 
@@ -32,11 +30,11 @@ Empty
 TNF_WELL_KNOWN = 0x1
 ```
 
-NFC Forum well-known type [NFC RTD]
+NFC Forum Well Known Type [NFC RTD].
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TnfType-TNF_WELL_KNOWN = 0x1--><!--Device-TnfType-TNF_WELL_KNOWN = 0x1-End-->
 
@@ -48,11 +46,11 @@ NFC Forum well-known type [NFC RTD]
 TNF_MEDIA = 0x2
 ```
 
-Media-type as defined in RFC 2046 [RFC 2046]
+Media-type as defined in RFC 2046 [RFC 2046].
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TnfType-TNF_MEDIA = 0x2--><!--Device-TnfType-TNF_MEDIA = 0x2-End-->
 
@@ -64,11 +62,11 @@ Media-type as defined in RFC 2046 [RFC 2046]
 TNF_ABSOLUTE_URI = 0x3
 ```
 
-Absolute URI as defined in RFC 3986 [RFC 3986]
+Absolute URI as defined in RFC 3986 [RFC 3986].
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TnfType-TNF_ABSOLUTE_URI = 0x3--><!--Device-TnfType-TNF_ABSOLUTE_URI = 0x3-End-->
 
@@ -80,11 +78,11 @@ Absolute URI as defined in RFC 3986 [RFC 3986]
 TNF_EXT_APP = 0x4
 ```
 
-NFC Forum external type [NFC RTD]
+NFC Forum external type [NFC RTD].
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TnfType-TNF_EXT_APP = 0x4--><!--Device-TnfType-TNF_EXT_APP = 0x4-End-->
 
@@ -96,11 +94,11 @@ NFC Forum external type [NFC RTD]
 TNF_UNKNOWN = 0x5
 ```
 
-Unknown
+Unknown.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TnfType-TNF_UNKNOWN = 0x5--><!--Device-TnfType-TNF_UNKNOWN = 0x5-End-->
 
@@ -112,11 +110,11 @@ Unknown
 TNF_UNCHANGED = 0x6
 ```
 
-Unchanged (see section 2.3.3)
+Unchanged (see section 2.3.3 in *NFCForum-TS-NDEF_1.0*).
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TnfType-TNF_UNCHANGED = 0x6--><!--Device-TnfType-TNF_UNCHANGED = 0x6-End-->
 

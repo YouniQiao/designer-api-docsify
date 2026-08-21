@@ -117,7 +117,7 @@ isModal = true and showInSubWindow = true cannot be used at the same time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | CustomBuilder \| [CustomBuilderWithId](../../apis-default/arkts-apis/arkts-custombuilderwithid-t.md) \| ComponentContent&lt;Object&gt; | Yes | Custom dialog content. |
+| content | CustomBuilder \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) \| ComponentContent&lt;Object&gt; | Yes | Custom dialog content. |
 | options | dialog.DialogCustomOptions | No | Custom dialog options. |
 
 **Return value:**

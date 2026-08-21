@@ -45,7 +45,7 @@ The method to build component.
 
 The options of a ArcSlider component.
 
-**Type:** [ArcSliderOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcslideroptions-c.md)
+**Type:** [ArcSliderOptions](arkts-arkui-advanced-arcslider-arcslideroptions-c.md)
 
 **Since:** 23
 

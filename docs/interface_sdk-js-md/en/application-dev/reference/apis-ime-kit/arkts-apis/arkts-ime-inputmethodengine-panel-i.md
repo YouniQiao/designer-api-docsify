@@ -1,6 +1,6 @@
 # Panel
 
-In the following API examples, you must first use [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) to obtain a **Panel** instance, and then call the APIs using the obtained instance.
+@brief You need to use [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) to obtain the panel instance and then call the following APIs through the instance.
 
 **Since:** 23
 
@@ -20,16 +20,14 @@ import { inputMethodEngine } from '@kit.IMEKit';
 adjustPanelRect(flag: PanelFlag, rect: PanelRect): void
 ```
 
-Adjusts the panel rectangle. After the API is called, the adjust request is submitted to the input method framework, but the execution is not complete.
-
-> **NOTE：**
-> 
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state.
-> 
-> This API returns the result synchronously. The return only indicates that the system receives the setting &gt; request, not that the setting is complete.
-> 
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the &gt; function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To &gt; ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+@brief Adjusts the panel rectangle. After the API is called, the adjust request is submitted to the input method framework, but the execution is not complete. <br> <br>   
+> **NOTE：**<br>
+> <br>
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. <br>
+> <br>
+> This API returns the result synchronously. The return only indicates that the system receives the setting request, not that the setting is complete. <br>
+> <br>
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 23
 
@@ -84,16 +82,14 @@ panel.adjustPanelRect(panelFlag, panelRect);
 adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void
 ```
 
-Adjusts the panel rectangle, and customizes the avoid area and touch area.
-
-> **NOTE：**
-> 
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state. This API is compatible with &gt; [adjustPanelRect](#adjustpanelrect). If the &gt; input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, &gt; [adjustPanelRect](#adjustpanelrect) is called by &gt; default.
-> 
-> This API returns the result synchronously. The return only indicates that the system receives the setting &gt; request, not that the setting is complete.
-> 
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the &gt; function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To &gt; ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+@brief Adjusts the panel rectangle, and customizes the avoid area and touch area. <br> <br>   
+> **NOTE：**<br>
+> <br>
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. This API is compatible with [adjustPanelRect](#adjustpanelrect). If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, [adjustPanelRect](#adjustpanelrect) is called by default. <br>
+> <br>
+> This API returns the result synchronously. The return only indicates that the system receives the setting request, not that the setting is complete. <br>
+> <br>
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 23
 
@@ -154,7 +150,7 @@ panel.adjustPanelRect(panelFlag, panelRect);
 changeFlag(flag: PanelFlag): void
 ```
 
-Changes the state type ([PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md)) of this input method panel. This API only works for [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panels.
+@brief Changes the state type ([PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md)) of this input method panel. This API only works for [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panels.
 
 **Since:** 23
 
@@ -187,7 +183,7 @@ panel.changeFlag(panelFlag);
 getDisplayId(): Promise<long>
 ```
 
-Obtains the window ID. This API uses a promise to return the result.
+@brief Obtains the window ID. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -226,7 +222,7 @@ panel.getDisplayId().then((result: number) => {
 getImmersiveMode(): ImmersiveMode
 ```
 
-Obtains the immersive mode of the input method application.
+@brief Obtains the immersive mode of the input method application.
 
 **Since:** 23
 
@@ -252,7 +248,7 @@ let mode: inputMethodEngine.ImmersiveMode = panel.getImmersiveMode();
 getSystemPanelCurrentInsets(displayId: number): Promise<SystemPanelInsets>
 ```
 
-Obtains the offset area of the soft keyboard relative to the system panel under the current state of the specified screen (for example, folded or unfolded) and the current state of the input method keyboard (for example, floating or fixed). This API uses a promise to return the result.
+@brief Obtains the offset area of the soft keyboard relative to the system panel under the current state of the specified screen (for example, folded or unfolded) and the current state of the input method keyboard (for example, floating or fixed). This API uses a promise to return the result.
 
 **Since:** 21
 
@@ -309,9 +305,7 @@ inputMethodAbility.createPanel(this.context, panelConfig).then( (panel: inputMet
 getSystemPanelCurrentInsets(displayId: long): Promise<SystemPanelInsets | null>
 ```
 
-Get the current insets of the system panel of a specified display.
-
-&lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED or FLG_FLOATING.&lt;/p&gt; &lt;p&gt;This interface only supports obtaining the current insets values of a display. When the display undergoes orientation changes, or is folded or unfolded, it is necessary to reinvoke this interface to get the latest values.&lt;/p&gt;
+@brief Get the current insets of the system panel of a specified display. <br> <br>&lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED or FLG_FLOATING.&lt;/p&gt; <br>&lt;p&gt;This interface only supports obtaining the current insets values of a display. When the display undergoes orientation changes, or is folded or unfolded, it is necessary to reinvoke this interface to get the latest values.&lt;/p&gt;
 
 **Since:** 23
 
@@ -345,7 +339,7 @@ Get the current insets of the system panel of a specified display.
 hide(callback: AsyncCallback<void>): void
 ```
 
-Hides this panel. This API uses an asynchronous callback to return the result.
+@brief Hides this panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -379,7 +373,7 @@ panel.hide((err: BusinessError) => {
 hide(): Promise<void>
 ```
 
-Hides this panel. This API uses a promise to return the result.
+@brief Hides this panel. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -411,7 +405,7 @@ panel.hide().then(() => {
 moveTo(x: int, y: int, callback: AsyncCallback<void>): void
 ```
 
-Moves this input method panel to the specified position. This API uses an asynchronous callback to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md) state.
+@brief Moves this input method panel to the specified position. This API uses an asynchronous callback to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md) state.
 
 **Since:** 23
 
@@ -453,7 +447,7 @@ panel.moveTo(300, 300, (err: BusinessError) => {
 moveTo(x: int, y: int): Promise<void>
 ```
 
-Moves this input method panel to the specified position. This API uses a promise to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md) state.
+@brief Moves this input method panel to the specified position. This API uses a promise to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md) state.
 
 **Since:** 23
 
@@ -498,7 +492,7 @@ panel.moveTo(300, 300).then(() => {
 offHide(callback?: Callback<void>): void
 ```
 
-Unregisters panel hide event.
+@brief Unregisters panel hide event.
 
 **Since:** 23
 
@@ -538,9 +532,7 @@ Unregisters panel show event.
 offSizeChange(callback?: SizeChangeCallback): void
 ```
 
-Unsubscribe 'sizeChange' event.
-
-&lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.&lt;/p&gt;
+@brief Unsubscribe 'sizeChange' event. <br> <br>&lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.&lt;/p&gt;
 
 **Since:** 23
 
@@ -560,7 +552,7 @@ Unsubscribe 'sizeChange' event.
 off(type: 'hide', callback?: () => void): void
 ```
 
-Disables listening for the hide event of this panel. This API uses an asynchronous callback to return the result.
+@brief Disables listening for the hide event of this panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -593,7 +585,7 @@ panel.off('hide');
 off(type: 'show', callback?: () => void): void
 ```
 
-Disables listening for the show event of this panel. This API uses an asynchronous callback to return the result.
+@brief Disables listening for the show event of this panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -626,16 +618,14 @@ panel.off('show');
 off(type: 'sizeChange', callback?: SizeChangeCallback): void
 ```
 
-Disables listening for the panel size change. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based &gt; on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain &gt; the actual panel size to refresh the panel layout.
-> 
-> - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory &gt; parameters of the window.Size type.
-> 
-> - Since API version 15, after the &gt; [adjustPanelRect](#adjustpanelrect) API &gt; is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to &gt; the callback function of this API.
+@brief Disables listening for the panel size change. This API uses an asynchronous callback to return the result. <br> <br>   
+> **NOTE：**<br>
+> <br>
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain the actual panel size to refresh the panel layout. <br>
+> <br>
+> - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory parameters of the [window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md) type. <br>
+> <br>
+> - Since API version 15, after the [adjustPanelRect](#adjustpanelrect) API is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to the callback function of this API.
 
 **Since:** 12
 
@@ -666,9 +656,7 @@ panel.off('sizeChange', (windowSize: window.Size) => {
 onHide(callback: Callback<void>): void
 ```
 
-Registers panel hide event.
-
-&lt;p&gt;The "hide" events are triggered when the panel is hidden.&lt;/p&gt;
+Registers panel hide event. <br> <br>&lt;p&gt;The "hide" events are triggered when the panel is hidden.&lt;/p&gt;
 
 **Since:** 23
 
@@ -688,9 +676,7 @@ Registers panel hide event.
 onShow(callback: Callback<void>): void
 ```
 
-Registers panel show event.
-
-&lt;p&gt;The "show" events are triggered when the panel is shown.&lt;/p&gt;
+@brief Registers panel show event. <br> <br>&lt;p&gt;The "show" events are triggered when the panel is shown.&lt;/p&gt;
 
 **Since:** 23
 
@@ -710,9 +696,7 @@ Registers panel show event.
 onSizeChange(callback: SizeChangeCallback): void
 ```
 
-Subscribe 'sizeChange' event.
-
-&lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.&lt;/p&gt;
+@brief Subscribe 'sizeChange' event. <br> <br>&lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.&lt;/p&gt;
 
 **Since:** 23
 
@@ -732,7 +716,7 @@ Subscribe 'sizeChange' event.
 on(type: 'hide', callback: () => void): void
 ```
 
-Enables listening for the hide event of this panel. This API uses an asynchronous callback to return the result.
+@brief Enables listening for the hide event of this panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -761,7 +745,7 @@ panel.on('hide', () => {
 on(type: 'show', callback: () => void): void
 ```
 
-Enables listening for the show event of this panel. This API uses an asynchronous callback to return the result.
+@brief Enables listening for the show event of this panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -790,16 +774,15 @@ panel.on('show', () => {
 on(type: 'sizeChange', callback: SizeChangeCallback): void
 ```
 
-Enables listening for the panel size change. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based &gt; on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain &gt; the actual panel size to refresh the panel layout.
-> 
-> - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory &gt; parameters of the window.Size type.
-> 
-> - Since API version 15, after the &gt; [adjustPanelRect](#adjustpanelrect) API &gt; is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to &gt; the callback function of this API.
+@brief Enables listening for the panel size change. This API uses an asynchronous callback to return the result. <br> <br>   
+> **NOTE：**<br>
+> <br>
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain the actual panel size to refresh the panel layout. <br>
+> <br>
+> - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory <br>
+> parameters of the [window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md) type. <br>
+> <br>
+> - Since API version 15, after the [adjustPanelRect](#adjustpanelrect) API is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to the callback function of this API.
 
 **Since:** 12
 
@@ -835,13 +818,12 @@ panel.on('sizeChange', (windowSize: window.Size, keyboardArea: inputMethodEngine
 resize(width: long, height: long, callback: AsyncCallback<void>): void
 ```
 
-Resizes this input method panel. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> The panel width cannot exceed the screen width, and the panel height cannot be 0.7 times higher than the screen &gt; height.
-> 
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the &gt; function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To &gt; ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+@brief Resizes this input method panel. This API uses an asynchronous callback to return the result. <br> <br>   
+> **NOTE：**<br>
+> <br>
+> The panel width cannot exceed the screen width, and the panel height cannot be 0.7 times higher than the screen height. <br>
+> <br>
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 23
 
@@ -883,13 +865,12 @@ panel.resize(500, 1000, (err: BusinessError) => {
 resize(width: long, height: long): Promise<void>
 ```
 
-Resizes this input method panel. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> The panel width cannot exceed the screen width, and the panel height cannot be 0.7 times higher than the screen &gt; height.
-> 
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the &gt; function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To &gt; ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+@brief Resizes this input method panel. This API uses a promise to return the result. <br> <br>   
+> **NOTE：**<br>
+> <br>
+> The panel width cannot exceed the screen width, and the panel height cannot be 0.7 times higher than the screen height. <br>
+> <br>
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 23
 
@@ -934,9 +915,7 @@ panel.resize(500, 1000).then(() => {
 setImmersiveEffect(effect: ImmersiveEffect): void
 ```
 
-Sets the immersive effect of the input method application.
-
-- Gradient mode and fluid light mode can be used only when the [immersive mode](#setimmersivemode) is enabled. - The fluid light mode can be used only when the gradient mode is enabled. - If the gradient mode is disabled, the gradient height must be 0 px. - Only system applications can set the fluid light mode. - The current API can be called only after any of the following APIs is called: - [adjustPanelRect](#adjustpanelrect) (available since API version 12) - [adjustPanelRect](#adjustpanelrect) ( available since API version 15) - [resize](#resize) ( available since API version 10)
+@brief Sets the immersive effect of the input method application. <br> <br>- Gradient mode and fluid light mode can be used only when the [immersive mode](#setimmersivemode) is enabled. <br>- The fluid light mode can be used only when the gradient mode is enabled. <br>- If the gradient mode is disabled, the gradient height must be 0 px. <br>- Only system applications can set the fluid light mode. <br>- The current API can be called only after any of the following APIs is called: <br> - [adjustPanelRect](#adjustpanelrect) (available since API version 12) <br> - [adjustPanelRect](#adjustpanelrect) ( available since API version 15) <br> - [resize](#resize) ( available since API version 10)
 
 **Since:** 23
 
@@ -976,7 +955,7 @@ panel.setImmersiveEffect(effect);
 setImmersiveMode(mode: ImmersiveMode): void
 ```
 
-Sets the immersive mode of the input method application. You can only set the immersion mode to **NONE_IMMERSIVE**, **LIGHT_IMMERSIVE**, or **DARK_IMMERSIVE**. **IMMERSIVE** cannot be set.
+@brief Sets the immersive mode of the input method application. You can only set the immersion mode to **NONE_IMMERSIVE**, **LIGHT_IMMERSIVE**, or **DARK_IMMERSIVE**. **IMMERSIVE** cannot be set.
 
 **Since:** 23
 
@@ -1010,13 +989,12 @@ panel.setImmersiveMode(inputMethodEngine.ImmersiveMode.LIGHT_IMMERSIVE);
 setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 ```
 
-Sets to keep the screen always on. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> - When the keyboard is displayed, the screen stays on. When the keyboard is hidden, the screen turns off.
-> 
-> - You need to use this API properly. Set the attribute to **true** in necessary scenarios (for example, voice &gt; input) and reset this attribute to **false** after exiting necessary scenarios. In other scenarios, do not use &gt; this API.
+@brief Sets to keep the screen always on. This API uses a promise to return the result. <br> <br>   
+> **NOTE：**<br>
+> <br>
+> - When the keyboard is displayed, the screen stays on. When the keyboard is hidden, the screen turns off. <br>
+> <br>
+> - You need to use this API properly. Set the attribute to **true** in necessary scenarios (for example, voice input) and reset this attribute to **false** after exiting necessary scenarios. In other scenarios, do not use this API.
 
 **Since:** 23
 
@@ -1060,7 +1038,7 @@ panel.setKeepScreenOn(true).then(() => {
 setPrivacyMode(isPrivacyMode: boolean): void
 ```
 
-Sets the input method panel to privacy mode. In privacy mode, screenshot and screen recording are blocked.
+@brief Sets the input method panel to privacy mode. In privacy mode, screenshot and screen recording are blocked.
 
 **Since:** 23
 
@@ -1096,7 +1074,7 @@ panel.setPrivacyMode(isPrivacyMode);
 setSystemPanelButtonColor(fillColor: string | undefined, backgroundColor: string | undefined): Promise<void>
 ```
 
-Sets the color of the function buttons and their background color on the current panel. This API uses a promise to return the result.
+@brief Sets the color of the function buttons and their background color on the current panel. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -1142,7 +1120,7 @@ try {
 setUiContent(path: string, callback: AsyncCallback<void>): void
 ```
 
-Loads content from a page to this input method panel. This API uses an asynchronous callback to return the result.
+@brief Loads content from a page to this input method panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -1183,7 +1161,7 @@ panel.setUiContent('pages/page2/page2', (err: BusinessError) => {
 setUiContent(path: string): Promise<void>
 ```
 
-Loads content from a page to this input method panel. This API uses a promise to return the result.
+@brief Loads content from a page to this input method panel. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -1227,7 +1205,7 @@ panel.setUiContent('pages/page2/page2').then(() => {
 setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void
 ```
 
-Loads content from a page linked to LocalStorage to this input method panel. This API uses an asynchronous callback to return the result.
+@brief Loads content from a page linked to LocalStorage to this input method panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -1271,7 +1249,7 @@ panel.setUiContent('pages/page2/page2', storage, (err: BusinessError) => {
 setUiContent(path: string, storage: LocalStorage): Promise<void>
 ```
 
-Loads content from a page linked to LocalStorage to this panel. This API uses a promise to return the result.
+@brief Loads content from a page linked to LocalStorage to this panel. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -1318,7 +1296,7 @@ panel.setUiContent('pages/page2/page2', storage).then(() => {
 show(callback: AsyncCallback<void>): void
 ```
 
-Shows this input method panel. This API uses an asynchronous callback to return the result. It can be called when the input method is bound to the edit box.
+@brief Shows this input method panel. This API uses an asynchronous callback to return the result. It can be called when the input method is bound to the edit box.
 
 **Since:** 23
 
@@ -1352,7 +1330,7 @@ panel.show((err: BusinessError) => {
 show(): Promise<void>
 ```
 
-Shows this input method panel. This API uses a promise to return the result. It can be called when the input method is bound to the edit box.
+@brief Shows this input method panel. This API uses a promise to return the result. It can be called when the input method is bound to the edit box.
 
 **Since:** 23
 
@@ -1384,7 +1362,7 @@ panel.show().then(() => {
 startMoving(): void
 ```
 
-Sends a command to start moving the window. The window can be moved only when the mouse is clicked.
+@brief Sends a command to start moving the window. The window can be moved only when the mouse is clicked.
 
 **Since:** 23
 
@@ -1413,13 +1391,12 @@ panel.startMoving();
 updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>
 ```
 
-Update the panel rectangle. This API uses a promise to return the result.   
-> **NOTE：**
-> 
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state.
-> 
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the &gt; function buttons at the bottom of the panel will dynamically update their size according to the panel width. To &gt; ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+@brief Update the panel rectangle. This API uses a promise to return the result. <br>   
+> **NOTE：**<br>
+> <br>
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. <br>
+> <br>
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the function buttons at the bottom of the panel will dynamically update their size according to the panel width. To ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 26.0.0
 
@@ -1454,14 +1431,12 @@ Update the panel rectangle. This API uses a promise to return the result.
 updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 ```
 
-Update the panel rectangle, and customizes the avoid area and touch area. This API uses a promise to return the result.   
-> **NOTE：**
-> 
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state. This API is compatible with &gt; [updatePanelRect](#updatepanelrect).
-> If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, &gt; [updatePanelRect](#updatepanelrect) &gt; is called by default.
-> 
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the &gt; function buttons at the bottom of the panel will dynamically update their size according to the panel width. To &gt; ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+@brief Update the panel rectangle, and customizes the avoid area and touch area. This API uses a promise to return the result. <br>   
+> **NOTE：**<br>
+> <br>
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. This API is compatible with [updatePanelRect](#updatepanelrect). If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, [updatePanelRect](#updatepanelrect) is called by default. <br>
+> <br>
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the function buttons at the bottom of the panel will dynamically update their size according to the panel width. To ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 26.0.0
 
@@ -1497,13 +1472,12 @@ Update the panel rectangle, and customizes the avoid area and touch area. This A
 updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void
 ```
 
-Update the panel rectangle.   
-> **NOTE：**
-> 
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state.
-> 
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the &gt; function buttons at the bottom of the panel will dynamically update their size according to the panel width. To &gt; ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+@brief Update the panel rectangle. <br>   
+> **NOTE：**<br>
+> <br>
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. <br>
+> <br>
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the function buttons at the bottom of the panel will dynamically update their size according to the panel width. To ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 26.0.0
 
@@ -1532,14 +1506,12 @@ Update the panel rectangle.
 updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 ```
 
-Update the panel rectangle, and customizes the avoid area and touch area.   
-> **NOTE：**
-> 
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state. This API is compatible with &gt; [updatePanelRectSync](#updatepanelrectsync).
-> If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, &gt; [updatePanelRectSync](#updatepanelrectsync) &gt; is called by default.
-> 
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the &gt; function buttons at the bottom of the panel will dynamically update their size according to the panel width. To &gt; ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+@brief Update the panel rectangle, and customizes the avoid area and touch area. <br>   
+> **NOTE：**<br>
+> <br>
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. This API is compatible with [updatePanelRectSync](#updatepanelrectsync). If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, [updatePanelRectSync](#updatepanelrectsync) is called by default. <br>
+> <br>
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the function buttons at the bottom of the panel will dynamically update their size according to the panel width. To ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 26.0.0
 
@@ -1569,14 +1541,12 @@ Update the panel rectangle, and customizes the avoid area and touch area.
 updateRegion(inputRegion: Array<window.Rect>): void
 ```
 
-Updates the hot zone on the input method panel in the current state.
-
-> **NOTE：**
-> 
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state.
-> 
-> This API returns the result synchronously. The return only indicates that the system has received the request &gt; for updating the hot zone, not that the hot zone has been updated.
+@brief Updates the hot zone on the input method panel in the current state. <br> <br>   
+> **NOTE：**<br>
+> <br>
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. <br>
+> <br>
+> This API returns the result synchronously. The return only indicates that the system has received the request for updating the hot zone, not that the hot zone has been updated.
 
 **Since:** 23
 

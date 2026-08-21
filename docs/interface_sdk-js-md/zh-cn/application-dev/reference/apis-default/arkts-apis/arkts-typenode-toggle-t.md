@@ -16,5 +16,5 @@ Define the FrameNode type for Toggle.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** ToggleFrameNode
+**属性类型：** [ToggleFrameNode](arkts-typenode-toggleframenode-c.md)
 

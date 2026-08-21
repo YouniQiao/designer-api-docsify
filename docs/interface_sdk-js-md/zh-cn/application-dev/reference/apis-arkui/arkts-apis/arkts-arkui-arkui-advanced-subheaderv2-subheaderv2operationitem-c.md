@@ -36,7 +36,7 @@ constructor(options: SubHeaderV2OperationItemOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [SubHeaderV2OperationItemOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-subheaderv2-subheaderv2operationitemoptions-i.md) | 是 | 操作项配置信息。用于构建SubHeaderV2OperationItem对象。 |
+| options | [SubHeaderV2OperationItemOptions](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationitemoptions-i.md) | 是 | 操作项配置信息。用于构建SubHeaderV2OperationItem对象。 |
 
 ## accessibilityDescription
 
@@ -112,7 +112,7 @@ The accessibilityText of this text or icon.
 
 callback function when operate the text or icon.
 
-**类型：** [SubHeaderV2OperationItemAction](../../apis-default/arkts-apis/arkts-subheaderv2operationitemaction-t.md)
+**类型：** [SubHeaderV2OperationItemAction](arkts-arkui-subheaderv2operationitemaction-t.md)
 
 **起始版本：** 18
 
@@ -133,7 +133,7 @@ callback function when operate the text or icon.
 
 The content of text or the address of icon.
 
-**类型：** [SubHeaderV2OperationItemType](../../apis-default/arkts-apis/arkts-subheaderv2operationitemtype-t.md)
+**类型：** [SubHeaderV2OperationItemType](arkts-arkui-subheaderv2operationitemtype-t.md)
 
 **起始版本：** 18
 

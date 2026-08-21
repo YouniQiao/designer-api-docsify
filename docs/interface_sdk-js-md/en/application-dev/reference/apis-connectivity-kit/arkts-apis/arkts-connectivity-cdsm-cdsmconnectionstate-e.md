@@ -1,6 +1,6 @@
 # CdsmConnectionState
 
-The enum of member's connection state.
+Enumerates the connection states of member devices in a coordinated device set.
 
 **Since:** 26.0.0
 
@@ -14,7 +14,7 @@ The enum of member's connection state.
 DISCONNECTED = 0
 ```
 
-The member is disconnected.
+Disconnected.
 
 **Since:** 26.0.0
 
@@ -30,7 +30,7 @@ The member is disconnected.
 CONNECTED = 1
 ```
 
-The member is connected.
+Connected.
 
 **Since:** 26.0.0
 

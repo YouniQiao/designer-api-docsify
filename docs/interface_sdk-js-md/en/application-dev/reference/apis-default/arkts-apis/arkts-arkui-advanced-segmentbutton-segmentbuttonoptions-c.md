@@ -37,13 +37,13 @@ The function used to create a SegmentButtonOptions of capsule type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CapsuleSegmentButtonConstructionOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-capsulesegmentbuttonconstructionoptions-i.md) | Yes | The options of SegmentButton. |
+| options | [CapsuleSegmentButtonConstructionOptions](arkts-arkui-advanced-segmentbutton-capsulesegmentbuttonconstructionoptions-i.md) | Yes | The options of SegmentButton. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SegmentButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md) | Returns the a new SegmentButtonOptions object of capsule type. |
+| [SegmentButtonOptions](arkts-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md) | Returns the a new SegmentButtonOptions object of capsule type. |
 
 ## constructor
 
@@ -67,7 +67,7 @@ The constructor used to create a SegmentButtonOptions object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TabSegmentButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-tabsegmentbuttonoptions-i.md) \| [CapsuleSegmentButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-capsulesegmentbuttonoptions-i.md) | Yes | The options of SegmentButton. |
+| options | [TabSegmentButtonOptions](arkts-arkui-advanced-segmentbutton-tabsegmentbuttonoptions-i.md) \| [CapsuleSegmentButtonOptions](arkts-arkui-advanced-segmentbutton-capsulesegmentbuttonoptions-i.md) | Yes | The options of SegmentButton. |
 
 ## tab
 
@@ -91,13 +91,13 @@ The function used to create a SegmentButtonOptions of tab type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TabSegmentButtonConstructionOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-tabsegmentbuttonconstructionoptions-i.md) | Yes | The options of SegmentButton. |
+| options | [TabSegmentButtonConstructionOptions](arkts-arkui-advanced-segmentbutton-tabsegmentbuttonconstructionoptions-i.md) | Yes | The options of SegmentButton. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SegmentButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md) | Returns the a new SegmentButtonOptions object of tab type. |
+| [SegmentButtonOptions](arkts-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md) | Returns the a new SegmentButtonOptions object of tab type. |
 
 ## backgroundBlurStyle
 
@@ -167,7 +167,7 @@ borderRadiusMode?: BorderRadiusMode
 
 The border radius mode of SegmentButton.
 
-**Type:** [BorderRadiusMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-borderradiusmode-e.md)
+**Type:** [BorderRadiusMode](arkts-arkui-advanced-segmentbutton-borderradiusmode-e.md)
 
 **Default:** BorderRadiusMode.Default
 
@@ -209,7 +209,7 @@ buttons: SegmentButtonItemOptionsArray
 
 The buttons information of SegmentButton.
 
-**Type:** [SegmentButtonItemOptionsArray](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptionsarray-c.md)
+**Type:** [SegmentButtonItemOptionsArray](arkts-arkui-advanced-segmentbutton-segmentbuttonitemoptionsarray-c.md)
 
 **Since:** 23
 
@@ -269,7 +269,7 @@ fontSize: DimensionNoPercentage
 
 The font size of buttons.
 
-**Type:** [DimensionNoPercentage](../../apis-arkui/arkts-apis/arkts-arkui-dimensionnopercentage-t.md)
+**Type:** [DimensionNoPercentage](arkts-dimensionnopercentage-t.md)
 
 **Since:** 23
 
@@ -449,7 +449,7 @@ selectedFontSize: DimensionNoPercentage
 
 The font size of selected button.
 
-**Type:** [DimensionNoPercentage](../../apis-arkui/arkts-apis/arkts-arkui-dimensionnopercentage-t.md)
+**Type:** [DimensionNoPercentage](arkts-dimensionnopercentage-t.md)
 
 **Since:** 23
 

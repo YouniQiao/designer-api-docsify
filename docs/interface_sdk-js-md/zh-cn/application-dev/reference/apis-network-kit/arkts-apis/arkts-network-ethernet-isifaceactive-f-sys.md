@@ -29,7 +29,7 @@ function isIfaceActive(iface: string, callback: AsyncCallback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | iface | string | 是 | 接口名。为空时代表查询是否存在激活接口。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 回调函数。已激活：1，未激活：0，其他为获取失败错误码。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。已激活：1，未激活：0，其他为获取失败错误码。 |
 
 **错误码：**
 

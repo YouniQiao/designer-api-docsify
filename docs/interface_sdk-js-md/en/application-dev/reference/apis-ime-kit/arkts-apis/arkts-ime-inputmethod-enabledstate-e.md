@@ -1,6 +1,6 @@
 # EnabledState
 
-Enumerates the enabled state.
+@brief Indicates whether the input method is enabled.
 
 **Since:** 23
 
@@ -14,7 +14,7 @@ Enumerates the enabled state.
 DISABLED = 0
 ```
 
-Disabled state.
+@brief Disabled.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ Disabled state.
 BASIC_MODE
 ```
 
-Enabled state with basic mode.
+@brief Basic mode.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ Enabled state with basic mode.
 FULL_EXPERIENCE_MODE
 ```
 
-Enabled state with full experience mode.
+@brief Full experience mode.
 
 **Since:** 23
 

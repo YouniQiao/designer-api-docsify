@@ -14,5 +14,5 @@ declare type WindowAnimationCurveParam = Array<double>
 
 **系统能力：** SystemCapability.Window.SessionManager
 
-**属性类型：** Array<double>
+**属性类型：** Array&lt;double&gt;
 

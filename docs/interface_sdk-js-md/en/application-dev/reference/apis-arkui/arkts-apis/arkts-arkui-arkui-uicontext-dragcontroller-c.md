@@ -4,7 +4,7 @@ Provides APIs for initiating drag actions. When receiving a gesture event, such 
 
 > **NOTE：**
 > 
-> In the following API examples, you must first use [getDragController()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getdragcontroller) in &gt; **UIContext** to obtain a **DragController** instance, and then call the APIs using the obtained instance.
+> In the following API examples, you must first use [getDragController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) in &gt; **UIContext** to obtain a **DragController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 11
 

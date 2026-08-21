@@ -16,5 +16,5 @@ Defines the SizeT type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/arkui/Graphics').SizeT<T>
+**Property type:** import('../api/arkui/Graphics').SizeT&lt;T&gt;
 

@@ -1,8 +1,10 @@
 # FeatureType
 
-Defines the capability type.
+Enumerates the NFC card emulation types.
 
-@enum { number }
+> **NOTE：**
+> 
+> This API is supported since API version 6 and deprecated since API version 9. Use &gt; [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md) instead.
 
 **Since:** 6
 
@@ -20,7 +22,7 @@ Defines the capability type.
 HCE = 0
 ```
 
-This constant is used to check whether HCE card emulation is supported.
+HCE.
 
 **Since:** 6
 
@@ -40,7 +42,7 @@ This constant is used to check whether HCE card emulation is supported.
 UICC = 1
 ```
 
-This constant is used to check whether SIM card emulation is supported.
+Subscriber identity module (SIM) card emulation.
 
 **Since:** 6
 
@@ -60,7 +62,7 @@ This constant is used to check whether SIM card emulation is supported.
 ESE = 2
 ```
 
-This constant is used to check whether eSE card emulation is supported.
+Embedded Secure Element (eSE) emulation.
 
 **Since:** 6
 

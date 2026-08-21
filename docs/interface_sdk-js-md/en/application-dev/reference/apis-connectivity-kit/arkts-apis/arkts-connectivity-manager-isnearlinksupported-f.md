@@ -12,7 +12,7 @@ import { manager } from '@kit.ConnectivityKit';
 function isNearLinkSupported(): boolean
 ```
 
-Check whether the current device supports NearLink.
+Checks whether the current device supports NearLink.
 
 **Since:** 26.0.0
 
@@ -26,5 +26,5 @@ Check whether the current device supports NearLink.
 
 | Type | Description |
 | --- | --- |
-| boolean | Return whether the NearLink is supported. |
+| boolean | Whether the current device supports NearLink. The value **true** indicates that the device supports NearLink, and **false** indicates the opposite. |
 

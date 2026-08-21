@@ -2,7 +2,7 @@
 
 Defines chip prefix symbol icon.
 
-**Inheritance/Implementation:** ChipV2PrefixSymbolIcon extends [ChipV2SymbolIcon](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2symbolicon-c.md)
+**Inheritance/Implementation:** ChipV2PrefixSymbolIcon extends [ChipV2SymbolIcon](arkts-arkui-arkui-advanced-chipv2-chipv2symbolicon-c.md)
 
 **Since:** 26.0.0
 
@@ -38,5 +38,5 @@ The constructor of ChipV2PrefixSymbolIcon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ChipV2PrefixSymbolIconConfig](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2prefixsymboliconconfig-i.md) | Yes | config of chip prefix symbol icon |
+| config | [ChipV2PrefixSymbolIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2prefixsymboliconconfig-i.md) | Yes | config of chip prefix symbol icon |
 

@@ -12,11 +12,11 @@ import { tag } from '@kit.ConnectivityKit';
 function makeExternalRecord(domainName: string, type: string, externalData: int[]): NdefRecord
 ```
 
-Creates an NDEF record with external data.
+Creates an NDEF record based on application-specific data.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ndef-function makeExternalRecord(domainName: string, type: string, externalData: int[]): NdefRecord--><!--Device-ndef-function makeExternalRecord(domainName: string, type: string, externalData: int[]): NdefRecord-End-->
 
@@ -26,15 +26,15 @@ Creates an NDEF record with external data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainName | string | Yes | Domain name of issuing organization for the external data. |
-| type | string | Yes | Domain specific type of data for the external data. |
-| externalData | int[] | Yes | Data payload of an NDEF record. |
+| domainName | string | Yes | Bundle name of the application or domain name of the organization that releases the applications. |
+| type | string | Yes | Type of the application data. |
+| externalData | int[] | Yes | Application data, which consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NdefRecord](arkts-connectivity-tag-ndefrecord-i.md) | The instance of NdefRecord. |
+| [NdefRecord](arkts-connectivity-tag-ndefrecord-i.md) | NDEF record created. For details, see *NFCForum-TS-NDEF_1.0*. |
 
 **Error codes:**
 

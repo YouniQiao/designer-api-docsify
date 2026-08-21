@@ -16,5 +16,5 @@ Define the FrameNode type for Button.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** ButtonFrameNode
+**属性类型：** [ButtonFrameNode](arkts-typenode-buttonframenode-c.md)
 

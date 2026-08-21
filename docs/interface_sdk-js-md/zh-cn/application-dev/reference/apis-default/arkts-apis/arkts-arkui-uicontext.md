@@ -38,7 +38,7 @@
 | [ScrollActionProposal](arkts-arkui-uicontext-scrollactionproposal-c.md) | 类ScrollActionProposal。默认滚动方向为向前。 |
 | [SelectActionProposal](arkts-arkui-uicontext-selectactionproposal-c.md) | 类SelectActionProposal。 |
 | [SmartGestureController](arkts-arkui-uicontext-smartgesturecontroller-c.md) | 类SmartGestureController。 |
-| [SwiperDynamicSyncScene](arkts-arkui-uicontext-swiperdynamicsyncscene-c.md) | 提供Swiper组件动态帧率场景的相关配置，适用于为动画过渡和手势跟手等不同交互场景设置差异化帧率范围，以兼顾流畅度和功耗，继承自[DynamicSyncScene](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md)。 |
+| [SwiperDynamicSyncScene](arkts-arkui-uicontext-swiperdynamicsyncscene-c.md) | 提供Swiper组件动态帧率场景的相关配置，适用于为动画过渡和手势跟手等不同交互场景设置差异化帧率范围，以兼顾流畅度和功耗，继承自[DynamicSyncScene](arkts-arkui-uicontext-dynamicsyncscene-c.md)。 |
 | [TargetedGestureProposal](arkts-arkui-uicontext-targetedgestureproposal-c.md) | 类TargetedGestureProposal。 |
 | [TextMenuController](arkts-arkui-uicontext-textmenucontroller-c.md) | class TextMenuController |
 | [UIContext](arkts-arkui-uicontext-uicontext-c.md) | UIContext类 |
@@ -63,7 +63,7 @@
 | [GestureObserverConfigs](arkts-arkui-uicontext-gestureobserverconfigs-i.md) | 该参数用于指定需要监听的手势回调阶段（传入空数组将无效），仅当手势触发指定阶段时才会发送通知。 |
 | [GestureTriggerInfo](arkts-arkui-uicontext-gesturetriggerinfo-i.md) | 特定手势回调函数触发时的信息。 |
 | [OrderOverlayOptions](arkts-arkui-uicontext-orderoverlayoptions-i.md) | 使用顺序打开浮层的选项。 |
-| [OverlayManagerOptions](arkts-arkui-uicontext-overlaymanageroptions-i.md) | 初始化[OverlayManager](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)时所用参数。 |
+| [OverlayManagerOptions](arkts-arkui-uicontext-overlaymanageroptions-i.md) | 初始化[OverlayManager](arkts-arkui-uicontext-uicontext-c.md)时所用参数。 |
 | [PageInfo](arkts-arkui-uicontext-pageinfo-i.md) | Router和NavDestination等页面信息，若无对应的Router或NavDestination页面信息，则对应属性为undefined。 |
 | [SwiperContentInfo](arkts-arkui-uicontext-swipercontentinfo-i.md) | Swiper组件的内容区信息。 |
 | [SwiperItemInfo](arkts-arkui-uicontext-swiperiteminfo-i.md) | Swiper子组件的信息。 |

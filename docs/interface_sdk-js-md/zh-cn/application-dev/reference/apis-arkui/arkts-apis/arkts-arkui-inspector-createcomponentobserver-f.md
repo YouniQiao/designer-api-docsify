@@ -38,7 +38,7 @@ function createComponentObserver(id: string): ComponentObserver
 
 | 类型 | 说明 |
 | --- | --- |
-| [ComponentObserver](../../apis-default/arkts-apis/arkts-inspector-componentobserver-i.md) | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
+| [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
 
 **示例**
 

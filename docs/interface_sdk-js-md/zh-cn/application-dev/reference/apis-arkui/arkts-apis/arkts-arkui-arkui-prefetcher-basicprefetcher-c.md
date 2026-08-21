@@ -4,7 +4,7 @@ BasicPrefetcher是IPrefetcher的基础实现。它提供了一种智能数据预
 
 BasicPrefetcher对象不支持使用JSON序列化。
 
-**继承/实现关系：** BasicPrefetcher implements [IPrefetcher](arkts-arkui-arkui-prefetcher-iprefetcher-i.md)
+**继承/实现关系：** BasicPrefetcher implements [IPrefetcher](../../apis-default/arkts-apis/arkts-arkui-prefetcher-iprefetcher-i.md)
 
 **起始版本：** 12
 
@@ -40,7 +40,7 @@ constructor(dataSource?: IDataSourcePrefetching)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dataSource | [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md) | 否 | 支持预取能力的数据源。不传入时默认为空，后续可通过setDataSource方法设置数据源。 |
+| dataSource | [IDataSourcePrefetching](../../apis-default/arkts-apis/arkts-arkui-prefetcher-idatasourceprefetching-i.md) | 否 | 支持预取能力的数据源。不传入时默认为空，后续可通过setDataSource方法设置数据源。 |
 
 ## setDataSource
 
@@ -64,7 +64,7 @@ setDataSource(dataSource: IDataSourcePrefetching): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dataSource | [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md) | 是 | 支持预取能力的数据源。 |
+| dataSource | [IDataSourcePrefetching](../../apis-default/arkts-apis/arkts-arkui-prefetcher-idatasourceprefetching-i.md) | 是 | 支持预取能力的数据源。 |
 
 ## visibleAreaChanged
 

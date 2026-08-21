@@ -24,7 +24,7 @@ Callback when the cellular data link connection state corresponding to the defau
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | 是 | Indicates the callback for getting the cellular data link connection state, and networkType Indicates the radio access technology for cellular data services. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | 是 | Indicates the callback for getting the cellular data link connection state, and networkType Indicates the radio access technology for cellular data services. |
 
 **错误码：**
 
@@ -67,7 +67,7 @@ Callback when the cellular data link connection state corresponding to the monit
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | ObserverOptions | 是 | Indicates the options for observer. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | 是 | Indicates the callback for getting the cellular data link connection state, and networkType Indicates the radio access technology for cellular data services. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | 是 | Indicates the callback for getting the cellular data link connection state, and networkType Indicates the radio access technology for cellular data services. |
 
 **错误码：**
 

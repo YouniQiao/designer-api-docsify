@@ -4,11 +4,11 @@
 export type MifareClassicTag = _MifareClassicTag
 ```
 
-Exports type MifareClassicTag.
+Obtains a **MifareClassicTag** object.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-tag-export type MifareClassicTag = _MifareClassicTag--><!--Device-tag-export type MifareClassicTag = _MifareClassicTag-End-->
 

@@ -28,7 +28,7 @@ function queryPrintJobList(callback: AsyncCallback<Array<PrintJob>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[PrintJob](arkts-basicservices-print-printjob-i-sys.md)&gt;&gt; | 是 | 异步查询所有打印任务之后的回调。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[PrintJob](arkts-basicservices-print-printjob-i-sys.md)&gt;&gt; | 是 | 异步查询所有打印任务之后的回调。 |
 
 **错误码：**
 

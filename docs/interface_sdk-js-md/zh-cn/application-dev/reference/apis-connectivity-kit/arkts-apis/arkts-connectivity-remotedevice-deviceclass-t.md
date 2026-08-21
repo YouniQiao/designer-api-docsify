@@ -4,7 +4,7 @@
 type DeviceClass = nearlinkConstant.DeviceClass
 ```
 
-设备类型。
+表示设备类型，为枚举值。
 
 **起始版本：** 26.0.0
 

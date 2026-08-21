@@ -16,5 +16,5 @@ Represents a FrameNode of the **Row** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** TypedFrameNode<RowInterface, RowAttribute>
+**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;RowInterface, RowAttribute&gt;
 

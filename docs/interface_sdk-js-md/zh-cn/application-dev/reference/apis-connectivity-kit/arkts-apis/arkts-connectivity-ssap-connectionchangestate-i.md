@@ -1,6 +1,6 @@
 # ConnectionChangeState
 
-描述SSAP连接状态。
+表示连接状态上报参数。
 
 **起始版本：** 26.0.0
 
@@ -20,7 +20,7 @@ import { ssap } from '@kit.ConnectivityKit';
 address: string
 ```
 
-设备地址。 长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
+表示远端设备地址。地址格式参考：11:22:33:AA:BB:FF。
 
 **类型：** string
 
@@ -38,7 +38,7 @@ address: string
 state: ConnectionState
 ```
 
-连接状态。
+表示和远端设备的连接状态。
 
 **类型：** ConnectionState
 

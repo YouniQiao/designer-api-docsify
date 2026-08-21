@@ -1,6 +1,10 @@
 # Client
 
-Manages SSAP client. Before calling a SSAP client method, you must use [createClient](arkts-connectivity-ssap-createclient-f.md) to create a ssap client instance.
+Represents a SSAP client class. It provides APIs for connecting to and transmitting data with the server.
+
+Before using the methods of this class, use the [ssap.createClient](arkts-connectivity-ssap-createclient-f.md) method to construct an instance of this class.
+
+An app only needs to create one [Client](#client) instance for a remote device. Repeated creation will increase unnecessary resource overhead.
 
 **Since:** 26.0.0
 
@@ -20,7 +24,7 @@ import { ssap } from '@kit.ConnectivityKit';
 close(): void
 ```
 
-Closes the client.
+Closes the client and disconnects from the remote server. To terminate the current connection while retaining the instance, use the [disconnect](#disconnect) method.
 
 **Since:** 26.0.0
 
@@ -46,7 +50,7 @@ Closes the client.
 connect(): Promise<void>
 ```
 
-Connects to the server.
+Initiates a connection to the server. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -62,7 +66,7 @@ Connects to the server.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -78,7 +82,7 @@ Connects to the server.
 disconnect(): Promise<void>
 ```
 
-Disconnects from or stops an ongoing connection to a server.
+Initiates a disconnection to the server, disconnecting an existing connection or terminating a connection being established. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -94,7 +98,7 @@ Disconnects from or stops an ongoing connection to a server.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -110,7 +114,7 @@ Disconnects from or stops an ongoing connection to a server.
 getServices(): Promise<Service[]>
 ```
 
-Starts discovering all services on server.
+Obtains the list of services supported by the server. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -126,7 +130,7 @@ Starts discovering all services on server.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Service](arkts-connectivity-ssap-service-i.md)[]&gt; | Returns the service list of the server. |
+| Promise&lt;[Service](arkts-connectivity-ssap-service-i.md)[]&gt; | Promise used to return the result. The list of services supported by the server. |
 
 **Error codes:**
 
@@ -142,7 +146,7 @@ Starts discovering all services on server.
 offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void
 ```
 
-Unsubscribes from client connection state changed events.
+Unsubscribes from the connection status change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
 
@@ -156,7 +160,7 @@ Unsubscribes from client connection state changed events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | No | Callback used to listen for the SSAP connection state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | No | Callback used to return the connection status reporting parameters. <br>If this parameter is specified, the current callback is unregistered. If this parameter is not specified, all callbacks corresponding to the event are unregistered. |
 
 ## offMtuChange
 
@@ -164,7 +168,7 @@ Unsubscribes from client connection state changed events.
 offMtuChange(callback?: Callback<int>): void
 ```
 
-Unsubscribes from MTU changed events.
+Unsubscribes from the MTU change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
 
@@ -178,7 +182,7 @@ Unsubscribes from MTU changed events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to listen for the MTU changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to return the MTU after negotiation. <br>If this parameter is specified, the current callback is unregistered. If this parameter is not specified, all callbacks corresponding to the event are unregistered. |
 
 ## offPropertyChange
 
@@ -186,7 +190,7 @@ Unsubscribes from MTU changed events.
 offPropertyChange(callback?: Callback<Property>): void
 ```
 
-Unsubscribe property value changed event.
+Unsubscribes from the property change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
 
@@ -200,7 +204,7 @@ Unsubscribe property value changed event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | No | Callback used to listen for the property value changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | No | Callback used to return the property from the server. <br>If this parameter is specified, the current callback is unregistered. If this parameter is not specified, all callbacks corresponding to the event are unregistered. |
 
 ## onConnectionStateChange
 
@@ -208,9 +212,9 @@ Unsubscribe property value changed event.
 onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 ```
 
-Subscribes to client connection state changed events.
+Subscribes to the connection status change event. This API uses an asynchronous callback to return the result.
 
-This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned.
+The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 
@@ -224,7 +228,7 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | Yes | Callback used to listen for the SSAP connection state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | Yes | Callback used to return the connection status reporting parameters. |
 
 ## onMtuChange
 
@@ -232,9 +236,9 @@ This event is accessible only to applications that granted the ohos.permission.N
 onMtuChange(callback: Callback<int>): void
 ```
 
-Subscribes to MTU changed events.
+Subscribes to the MTU change event. This API uses an asynchronous callback to return the result.
 
-This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
+The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 
@@ -248,7 +252,7 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to listen for the MTU changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the MTU after negotiation. |
 
 ## onPropertyChange
 
@@ -256,9 +260,9 @@ This event is accessible only to applications that granted the ohos.permission.N
 onPropertyChange(callback: Callback<Property>): void
 ```
 
-Subscribe property value changed event.
+Subscribes to the property change event. This API uses an asynchronous callback to return the result.
 
-This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
+The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 
@@ -272,7 +276,7 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | Yes | Callback used to listen for the property value changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | Yes | Callback used to return the Property of the service. |
 
 ## readProperty
 
@@ -280,7 +284,7 @@ This event is accessible only to applications that granted the ohos.permission.N
 readProperty(property: Property): Promise<Property>
 ```
 
-Reads the property of a server.
+Reads a server attribute. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -296,13 +300,13 @@ Reads the property of a server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| property | [Property](arkts-connectivity-ssap-property-i.md) | Yes | Indicates the property to read. |
+| property | [Property](arkts-connectivity-ssap-property-i.md) | Yes | Server attribute. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | Promise used to return the property value. |
+| Promise&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | Promise used to return the server attribute. |
 
 **Error codes:**
 
@@ -320,7 +324,7 @@ Reads the property of a server.
 requestMtuSize(mtu: int): Promise<void>
 ```
 
-Negotiate the MTU size with server. The negotiation result needs to be obtained by subscribing to MTU event.
+Initiates an MTU negotiation request. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -336,13 +340,13 @@ Negotiate the MTU size with server. The negotiation result needs to be obtained 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mtu | int | Yes | The maximum transmission unit. <br>Unit: byte. Recommended value range: [22, 1024]. |
+| mtu | int | Yes | MTU parameter. The default value is **251**. <br>Unit: byte. Value range: [22, 1024],. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -358,7 +362,7 @@ Negotiate the MTU size with server. The negotiation result needs to be obtained 
 setPropertyNotification(property: Property, enable: boolean): Promise<void>
 ```
 
-Enables or disables notification of a property when value changed.
+Sets a [Property](arkts-connectivity-ssap-property-i.md) change notification. This method can only be used after a connection is successfully established by calling [connect](#connect).
 
 **Since:** 26.0.0
 
@@ -374,14 +378,14 @@ Enables or disables notification of a property when value changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| property | [Property](arkts-connectivity-ssap-property-i.md) | Yes | Indicates the property to set notification strategy. |
-| enable | boolean | Yes | Specifies whether to enable notification of the property. |
+| property | [Property](arkts-connectivity-ssap-property-i.md) | Yes | Property from the server. This property must support the **NOTIFY** operation. That is, **operation** contains **NOTIFY**. For details, see [Operation](arkts-connectivity-ssap-operation-e.md). |
+| enable | boolean | Yes | Whether to enable notification. **true**: enables notification. **false**: disables notification. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Promise used to return the result. No return value. |
 
 **Error codes:**
 
@@ -399,7 +403,7 @@ Enables or disables notification of a property when value changed.
 writeProperty(property: Property, writeType: PropertyWriteType): Promise<void>
 ```
 
-Writes the property of a server.
+Writes a property to the server. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -415,14 +419,14 @@ Writes the property of a server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| property | [Property](arkts-connectivity-ssap-property-i.md) | Yes | Indicates the property to write. |
-| writeType | [PropertyWriteType](arkts-connectivity-ssap-propertywritetype-e.md) | Yes | Indicates the write type. |
+| property | [Property](arkts-connectivity-ssap-property-i.md) | Yes | Server attribute. |
+| writeType | [PropertyWriteType](arkts-connectivity-ssap-propertywritetype-e.md) | Yes | Write type, which supports two modes: with and without server response. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

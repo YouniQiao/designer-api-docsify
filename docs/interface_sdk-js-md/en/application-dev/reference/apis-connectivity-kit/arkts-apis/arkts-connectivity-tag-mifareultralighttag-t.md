@@ -4,11 +4,11 @@
 export type MifareUltralightTag = _MifareUltralightTag
 ```
 
-Exports type MifareUltralightTag.
+Obtains a **MifareUltralightTag** object.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-tag-export type MifareUltralightTag = _MifareUltralightTag--><!--Device-tag-export type MifareUltralightTag = _MifareUltralightTag-End-->
 

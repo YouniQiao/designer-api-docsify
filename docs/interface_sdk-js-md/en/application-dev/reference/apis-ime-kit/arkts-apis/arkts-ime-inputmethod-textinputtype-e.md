@@ -1,6 +1,6 @@
 # TextInputType
 
-Enumerates the text input type.
+@brief Enumerates the text input types.
 
 **Since:** 23
 
@@ -14,7 +14,7 @@ Enumerates the text input type.
 NONE = -1
 ```
 
-The text input type is NONE.
+@brief None.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ The text input type is NONE.
 TEXT = 0
 ```
 
-The text input type is TEXT.
+@brief Text.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ The text input type is TEXT.
 MULTILINE
 ```
 
-The text input type is MULTILINE.
+@brief Multi-line.
 
 **Since:** 23
 
@@ -56,7 +56,7 @@ The text input type is MULTILINE.
 NUMBER
 ```
 
-The text input type is NUMBER.
+@brief Number.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ The text input type is NUMBER.
 PHONE
 ```
 
-The text input type is PHONE.
+@brief Phone number.
 
 **Since:** 23
 
@@ -84,7 +84,7 @@ The text input type is PHONE.
 DATETIME
 ```
 
-The text input type is DATETIME.
+@brief Date.
 
 **Since:** 23
 
@@ -98,7 +98,7 @@ The text input type is DATETIME.
 EMAIL_ADDRESS
 ```
 
-The text input type is EMAIL_ADDRESS.
+@brief Email address.
 
 **Since:** 23
 
@@ -112,7 +112,7 @@ The text input type is EMAIL_ADDRESS.
 URL
 ```
 
-The text input type is URL.
+@brief URL.
 
 **Since:** 23
 
@@ -126,7 +126,7 @@ The text input type is URL.
 VISIBLE_PASSWORD
 ```
 
-The text input type is VISIBLE_PASSWORD.
+@brief Password.
 
 **Since:** 23
 
@@ -140,7 +140,7 @@ The text input type is VISIBLE_PASSWORD.
 NUMBER_PASSWORD
 ```
 
-The text input type is NUMBER_PASSWORD.
+@brief Numeric password.
 
 **Since:** 23
 
@@ -154,7 +154,7 @@ The text input type is NUMBER_PASSWORD.
 SCREEN_LOCK_PASSWORD
 ```
 
-The text input type is SCREEN_LOCK_PASSWORD.
+@brief Lock screen password.
 
 **Since:** 23
 
@@ -168,7 +168,7 @@ The text input type is SCREEN_LOCK_PASSWORD.
 USER_NAME
 ```
 
-The text input type is USER_NAME.
+@brief Username.
 
 **Since:** 23
 
@@ -182,7 +182,7 @@ The text input type is USER_NAME.
 NEW_PASSWORD
 ```
 
-The text input type is NEW_PASSWORD.
+@brief New password.
 
 **Since:** 23
 
@@ -196,7 +196,7 @@ The text input type is NEW_PASSWORD.
 NUMBER_DECIMAL
 ```
 
-The text input type is NUMBER_DECIMAL.
+@brief Number with a decimal point.
 
 **Since:** 23
 
@@ -210,7 +210,7 @@ The text input type is NUMBER_DECIMAL.
 ONE_TIME_CODE
 ```
 
-The text input type is ONE_TIME_CODE.
+@brief Verification code.
 
 **Since:** 23
 

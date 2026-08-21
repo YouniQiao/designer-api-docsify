@@ -32,7 +32,7 @@ function publishAsUser(event: string, userId: number, callback: AsyncCallback<vo
 | --- | --- | --- | --- |
 | event | string | 是 | 表示要发布的公共事件。 |
 | userId | number | 是 | 表示指定向该用户ID发布此公共事件。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 公共事件发布结果的回调方法。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 公共事件发布结果的回调方法。 |
 
 **示例**
 
@@ -88,7 +88,7 @@ function publishAsUser(
 | event | string | 是 | 表示要发布的公共事件。 |
 | userId | number | 是 | 表示指定向该用户ID发布此公共事件。 |
 | options | [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) | 是 | 表示发布公共事件的属性。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 公共事件发布结果的回调方法。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 公共事件发布结果的回调方法。 |
 
 **示例**
 

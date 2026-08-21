@@ -12,5 +12,5 @@ Provides the container definition for media description key-value pairs.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
-**Property type:** Record<string, Object>
+**Property type:** Record&lt;string, Object&gt;
 

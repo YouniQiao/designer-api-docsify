@@ -45,7 +45,7 @@ currentPhase: GestureActionPhase
 
 手势动作回调阶段。
 
-**类型：** [GestureActionPhase](arkts-arkui-arkui-uicontext-gestureactionphase-e.md)
+**类型：** [GestureActionPhase](../../apis-default/arkts-apis/arkts-arkui-uicontext-gestureactionphase-e.md)
 
 **起始版本：** 20
 

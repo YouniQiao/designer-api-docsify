@@ -18,7 +18,7 @@ This API is asynchronous and does not support concurrent calls.
 
 > **NOTE：**
 > 
-> - Since API version 10, you can use the &gt; [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Font](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated with &gt; the current UI context.
+> - Since API version 10, you can use the &gt; [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Font](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated with &gt; the current UI context.
 
 **Since:** 9
 

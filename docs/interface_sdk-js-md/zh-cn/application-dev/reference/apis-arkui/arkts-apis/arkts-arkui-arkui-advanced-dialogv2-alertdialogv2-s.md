@@ -47,7 +47,7 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 
 默认不显示。
 
-**类型：** [AdvancedDialogV2Button](arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
+**类型：** [AdvancedDialogV2Button](../../apis-default/arkts-apis/arkts-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
 **起始版本：** 18
 
@@ -95,7 +95,7 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 
 默认不显示。
 
-**类型：** [AdvancedDialogV2Button](arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
+**类型：** [AdvancedDialogV2Button](../../apis-default/arkts-apis/arkts-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
 **起始版本：** 18
 

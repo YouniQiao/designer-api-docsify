@@ -48,7 +48,7 @@ menuItems?: Array<TabTitleBarMenuItem>
 
 右侧菜单项目列表。若不传，则不显示右侧菜单项。
 
-**类型：** Array&lt;[TabTitleBarMenuItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-tabtitlebar-tabtitlebarmenuitem-c.md)&gt;
+**类型：** Array&lt;[TabTitleBarMenuItem](arkts-arkui-advanced-tabtitlebar-tabtitlebarmenuitem-c.md)&gt;
 
 **起始版本：** 23
 
@@ -89,7 +89,7 @@ tabItems: Array<TabTitleBarTabItem>
 
 左侧页签项目列表。
 
-**类型：** Array&lt;[TabTitleBarTabItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-tabtitlebar-tabtitlebartabitem-c.md)&gt;
+**类型：** Array&lt;[TabTitleBarTabItem](arkts-arkui-advanced-tabtitlebar-tabtitlebartabitem-c.md)&gt;
 
 **起始版本：** 23
 

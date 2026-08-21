@@ -17,7 +17,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function getSystemInputMethodConfigAbility(): ElementName
 ```
 
-Get system input method config ability
+@brief Obtains the information about the input method configuration page ability.
 
 **Since:** 23
 
@@ -29,7 +29,7 @@ Get system input method config ability
 
 | Type | Description |
 | --- | --- |
-| [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | the information of system input method config ability. |
+| [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | Element name of the input method configuration page ability. |
 
 **Error codes:**
 

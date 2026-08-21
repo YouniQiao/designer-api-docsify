@@ -1,6 +1,6 @@
 # ScanFilters
 
-Describes the scan filters.
+Defines the scan filters
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { scan } from '@kit.ConnectivityKit';
 address?: string
 ```
 
-Indicates the device address. The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+Device address. By default, this field is not used if it is not set. The address format is **11:22:33:AA:BB:FF**.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ Indicates the device address. The length must be 17, The value consists of hexad
 deviceName?: string
 ```
 
-Indicates the device name.
+Device name. The value contains 0 to 30 characters. By default, this field is not used if it is not set.
 
 **Type:** string
 
@@ -56,7 +56,7 @@ Indicates the device name.
 manufacturerData?: ArrayBuffer
 ```
 
-Indicates the manufacturer data.
+Manufacturer data. By default, this field is not used if it is not set. **manufacturerId** must be set along with the field.
 
 **Type:** ArrayBuffer
 
@@ -74,7 +74,7 @@ Indicates the manufacturer data.
 manufacturerDataMask?: ArrayBuffer
 ```
 
-Indicates the manufacturer data mask. If a manufacturer data mask is set in the scan filter, its length must match the manufacturer data length.
+Manufacturer data mask. By default, this field is not used if it is not set. This field must be set along with **manufacturerData**, and the lengths of the two fields must be the same. A bitwise AND operation is performed on the mask and manufacturer data to accurately match the specified bits in the manufacturer data.
 
 **Type:** ArrayBuffer
 
@@ -92,7 +92,7 @@ Indicates the manufacturer data mask. If a manufacturer data mask is set in the 
 manufacturerId?: int
 ```
 
-Indicates the manufacturer ID.
+Manufacturer ID. The value range is [1, 65535]. By default, this field is not used if it is not set.
 
 **Type:** int
 
@@ -110,7 +110,7 @@ Indicates the manufacturer ID.
 rssi?: int
 ```
 
-Indicates the RSSI. Unit: dBm, The value must be an integer within [-128,127].
+RSSI threshold, in dBm. The value range is this threshold will be filtered out. You are advised to set the threshold within the range of default, the signal strength is not filtered if this parameter is not set. The value should be an integer.
 
 **Type:** int
 

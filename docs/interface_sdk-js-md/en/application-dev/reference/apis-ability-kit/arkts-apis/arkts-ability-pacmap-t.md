@@ -14,5 +14,5 @@ Defines the PacMap type used for data storage.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
-**Property type:** Record<string, int | double | string | boolean | Array<string | int | double | boolean> | null>
+**Property type:** Record&lt;string, int | double | string | boolean | Array&lt;string | int | double | boolean&gt; | null&gt;
 

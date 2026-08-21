@@ -29,7 +29,7 @@ function getIfaceConfig(iface: string, callback: AsyncCallback<InterfaceConfigur
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | iface | string | 是 | 指定网络接口。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md)&gt; | 是 | 回调函数。返回指定网络接口信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md)&gt; | 是 | 回调函数。返回指定网络接口信息。 |
 
 **错误码：**
 

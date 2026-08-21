@@ -69,7 +69,7 @@ Compares two values and returns a Boolean value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [ScopeComparable](arkts-arkts-util-scopecomparable-i.md) | Yes | The other value to be compared with the current value. |
+| other | [ScopeComparable](../../apis-default/arkts-apis/arkts-util-scopecomparable-i.md) | Yes | The other value to be compared with the current value. |
 
 **Return value:**
 

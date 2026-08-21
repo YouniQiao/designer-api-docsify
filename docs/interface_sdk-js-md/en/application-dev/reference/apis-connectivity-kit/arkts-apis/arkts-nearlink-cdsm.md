@@ -1,6 +1,6 @@
 # @ohos.nearlink.cdsm
 
-Provides methods related to nearlink CDSM(Coordinated Devices Set Management).
+This module provides the coordinated devices set management (CDSM) capability for NearLink, including querying and subscribing to the coordinated devices set information of NearLink.
 
 **Since:** 26.0.0
 
@@ -28,13 +28,13 @@ import { cdsm } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [CdsmClient](arkts-connectivity-cdsm-cdsmclient-i.md) | Manages a CDSM client instance. Before invoking any CDSM client method, you must use [createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md) to create a CDSM client instance. |
-| [CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md) | Describes the coordinated devices set information. |
-| [CdsmMemberInfo](arkts-connectivity-cdsm-cdsmmemberinfo-i.md) | Describes the member information of coordinated devices set. |
+| [CdsmClient](arkts-connectivity-cdsm-cdsmclient-i.md) | Defines a CDSM client class, which provides APIs for obtaining the CDSM information of a remote device. |
+| [CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md) | Represents the CDSM information. |
+| [CdsmMemberInfo](arkts-connectivity-cdsm-cdsmmemberinfo-i.md) | Represents the information about member devices in the coordinated devices set. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [CdsmConnectionState](arkts-connectivity-cdsm-cdsmconnectionstate-e.md) | The enum of member's connection state. |
+| [CdsmConnectionState](arkts-connectivity-cdsm-cdsmconnectionstate-e.md) | Enumerates the connection states of member devices in a coordinated device set. |
 

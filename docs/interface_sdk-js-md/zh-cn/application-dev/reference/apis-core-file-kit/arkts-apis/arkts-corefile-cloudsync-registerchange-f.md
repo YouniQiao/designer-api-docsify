@@ -27,7 +27,7 @@ function registerChange(uri: string, recursion: boolean, callback: Callback<Chan
 | --- | --- | --- | --- |
 | uri | string | 是 | 待下载文件uri。 |
 | recursion | boolean | 是 | true为监听该URI以及子文件和子目录，false为仅监听该URI文件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeData&gt; | 是 | 回调函数，返回更改的数据。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeData&gt; | 是 | 回调函数，返回更改的数据。 |
 
 **错误码：**
 

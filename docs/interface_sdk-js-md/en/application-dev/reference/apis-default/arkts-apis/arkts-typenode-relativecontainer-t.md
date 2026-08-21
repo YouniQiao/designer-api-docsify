@@ -16,5 +16,5 @@ Define the FrameNode type for RelativeContainer.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** RelativeContainerFrameNode
+**Property type:** [RelativeContainerFrameNode](arkts-typenode-relativecontainerframenode-c.md)
 

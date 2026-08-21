@@ -16,5 +16,5 @@ Define the FrameNode type for XComponent.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** XComponentFrameNode
+**Property type:** [XComponentFrameNode](arkts-typenode-xcomponentframenode-c.md)
 

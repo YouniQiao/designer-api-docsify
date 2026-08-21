@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> 以下API需先使用UIContext中的[getSmartGestureController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getsmartgesturecontroller)方法获取SmartGestureController实例， &gt; 再通过该实例调用对应方法。
+> 以下API需先使用UIContext中的[getSmartGestureController()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getsmartgesturecontroller)方法获取SmartGestureController实例， &gt; 再通过该实例调用对应方法。
 
 **起始版本：** 26.0.0
 
@@ -101,12 +101,12 @@ registerMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, GestureHa
 > 
 > - 用户可通过该回调自定义决策本次智慧手势的行为。
 > 
-> - 用户可注册多个监听回调，按照后注册先执行的顺序触发，当某个监听回调消费智慧手势事件后，即返回值[GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md).
+> - 用户可注册多个监听回调，按照后注册先执行的顺序触发，当某个监听回调消费智慧手势事件后，即返回值[GestureHandlingResolution](../../apis-default/arkts-apis/arkts-arkui-uicontext-gesturehandlingresolution-c.md).
 > isConsumed为true时，后续监听回调不再执行。
 > 
 > - 当用户重复注册相同回调时，只会保存首次注册的回调，重复注册不生效。
 > 
-> - 回调返回值必须是合法的[GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)实例，否则本次改写不生效。
+> - 回调返回值必须是合法的[GestureHandlingResolution](../../apis-default/arkts-apis/arkts-arkui-uicontext-gesturehandlingresolution-c.md)实例，否则本次改写不生效。
 
 **起始版本：** 26.0.0
 
@@ -122,7 +122,7 @@ registerMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, GestureHa
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| monitorCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md), [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)&gt; | 是 | 智慧手势监听回调。回调参数为系统给出的默认 动作处理，返回值用于声明是否消费当前智慧手势以及是否替换默认动作处理。 |
+| monitorCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BaseGestureHandlingProposal](../../apis-default/arkts-apis/arkts-arkui-uicontext-basegesturehandlingproposal-c.md), [GestureHandlingResolution](../../apis-default/arkts-apis/arkts-arkui-uicontext-gesturehandlingresolution-c.md)&gt; | 是 | 智慧手势监听回调。回调参数为系统给出的默认 动作处理，返回值用于声明是否消费当前智慧手势以及是否替换默认动作处理。 |
 
 ## requestSelected
 
@@ -176,5 +176,5 @@ unregisterMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, Gesture
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| monitorCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md), [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)&gt; | 是 | 需要注销的智慧手势监听回调。 |
+| monitorCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BaseGestureHandlingProposal](../../apis-default/arkts-apis/arkts-arkui-uicontext-basegesturehandlingproposal-c.md), [GestureHandlingResolution](../../apis-default/arkts-apis/arkts-arkui-uicontext-gesturehandlingresolution-c.md)&gt; | 是 | 需要注销的智慧手势监听回调。 |
 

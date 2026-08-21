@@ -12,7 +12,7 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 function destroyPort(uuid: string): void
 ```
 
-根据UUID销毁监听端口并释放相关资源。
+销毁端口通道。
 
 **起始版本：** 26.0.0
 
@@ -28,7 +28,7 @@ function destroyPort(uuid: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uuid | string | 是 | 应用服务UUID <br>长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。 <br>不允许使用NearLink标准UUID。 |
+| uuid | string | 是 | 星闪服务UUID，长度必须为36个字符，由32个十六进制数字和4个连字符（-）组成，例如： FFFFFFFF-1234-5678-ABCD-000000001234，表示一个128 位标识符。 不允许使用星闪标准UUID。 |
 
 **错误码：**
 

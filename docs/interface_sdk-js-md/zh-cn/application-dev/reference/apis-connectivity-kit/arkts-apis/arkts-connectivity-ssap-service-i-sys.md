@@ -1,6 +1,6 @@
 # Service
 
-SSAP服务。
+表示星闪服务。
 
 **起始版本：** 26.0.0
 
@@ -20,7 +20,7 @@ import { ssap } from '@kit.ConnectivityKit';
 events?: Event[]
 ```
 
-属于此服务的事件。 <br>[addService](arkts-connectivity-ssap-server-i.md#addservice)方法中不支持该字段。
+表示服务的事件列表。若未配置该字段，则服务不提供任何事件。
 
 **类型：** Event[]
 
@@ -40,7 +40,7 @@ events?: Event[]
 methods?: Method[]
 ```
 
-属于此服务的方法。 <br>[addService](arkts-connectivity-ssap-server-i.md#addservice)方法中不支持此字段。
+表示服务的方法列表。若未配置该字段，则服务不提供任何方法。
 
 **类型：** [Method](arkts-connectivity-ssap-method-i-sys.md)[]
 

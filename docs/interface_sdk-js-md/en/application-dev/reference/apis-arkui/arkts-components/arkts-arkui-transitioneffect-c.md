@@ -137,7 +137,7 @@ Constructs a **TransitionEffect** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Yes | Transition type. |
+| type | [Type](../../apis-default/arkts-apis/arkts-util-type-e.md) | Yes | Transition type. |
 | effect | [Effect](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-effect-i.md) | Yes | Transition parameter. |
 
 ## move

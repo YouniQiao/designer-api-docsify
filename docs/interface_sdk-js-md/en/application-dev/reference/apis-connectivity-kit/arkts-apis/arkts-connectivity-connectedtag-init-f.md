@@ -12,7 +12,11 @@ import { connectedTag } from '@kit.ConnectivityKit';
 function init(): boolean
 ```
 
-Initializes Connected Tag.
+Initializes the active tag chip.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. Use &gt; [initialize](arkts-connectivity-connectedtag-initialize-f.md) instead.
 
 **Since:** 8
 
@@ -30,5 +34,5 @@ Initializes Connected Tag.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if init success, otherwise returns false. |
+| boolean | true**: The initialization is successful. <br>**false**: The initialization fails. |
 

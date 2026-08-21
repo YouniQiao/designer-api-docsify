@@ -16,5 +16,5 @@ Define the FrameNode type for Progress.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** ProgressFrameNode
+**属性类型：** [ProgressFrameNode](arkts-typenode-progressframenode-c.md)
 

@@ -1,6 +1,6 @@
 # InputMethodSetting
 
-In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
+@brief In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
 
 **Since:** 23
 
@@ -22,78 +22,11 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ## enableInputMethod
 
 ```TypeScript
-enableInputMethod(bundleName: string, extensionName: string, enabledState: EnabledState): Promise<void>
-```
-
-Enables or disables an input method. This API uses a promise to return the result.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.CONNECT_IME_ABILITY
-
-<!--Device-InputMethodSetting-enableInputMethod(bundleName: string, extensionName: string, enabledState: EnabledState): Promise<void>--><!--Device-InputMethodSetting-enableInputMethod(bundleName: string, extensionName: string, enabledState: EnabledState): Promise<void>-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the input method. |
-| extensionName | string | Yes | Extension name of the input method. |
-| enabledState | [EnabledState](arkts-ime-inputmethod-enabledstate-e.md) | Yes | Whether the input method is enabled. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
-| [12800018](../errorcode-inputmethod-framework.md#12800018-input-method-not-found) | input method is not found. |
-| [12800019](../errorcode-inputmethod-framework.md#12800019-unsupported-operation-by-default-input-method) | current operation cannot be applied to the preconfigured default input method. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function enableInputMethodSafely() {
-  const currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
-  if (!currentIme) {
-    console.error("Failed to get current input method");
-    return;
-  }
-
-  inputMethod.getSetting()
-    .enableInputMethod(currentIme.name, currentIme.id, inputMethod.EnabledState.BASIC_MODE)
-    .then(() => {
-      console.info('Succeeded in enable inputmethod.');
-    })
-    .catch((err: BusinessError) => {
-      console.error(`Failed to enableInputMethod. Code: ${err.code}, message: ${err.message}`);
-    });
-}
-
-enableInputMethodSafely();
-```
-
-## enableInputMethod
-
-```TypeScript
 enableInputMethod(
       bundleName: string, extensionName: string, enabledState: EnabledState, userId?: int): Promise<void>
 ```
 
-Change the enabled state of an input method of a specified user.
+@brief Change the enabled state of an input method of a specified user.
 
 **Since:** 26.0.0
 
@@ -141,7 +74,7 @@ Change the enabled state of an input method of a specified user.
 getAllInputMethodsSync(userId?: int): Array<InputMethodProperty>
 ```
 
-Get all input methods sync of a specified user.
+@brief Get all input methods sync of a specified user.
 
 **Since:** 26.0.0
 
@@ -176,54 +109,13 @@ Get all input methods sync of a specified user.
 | 12800024 | the specified user is not in the foreground. |
 | 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
-## getCursorInfo
-
-```TypeScript
-getCursorInfo(userId?: int): CursorInfo
-```
-
-Get the cursor information of a specified user.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-InputMethodSetting-getCursorInfo(userId?: int): CursorInfo--><!--Device-InputMethodSetting-getCursorInfo(userId?: int): CursorInfo-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| userId | int | No | the user ID. If not provided: If the caller is not a user 0 application, the value defaults to the caller's user ID. If the caller is a user 0 application, the value defaults to the foreground user ID of the main screen. The value should be an integer. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md) | the information of the cursor of the specified display. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1. No edit box is bound to the current input method application under the specified user. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible causes: a system error, such as null pointer, IPC exception. |
-| 12800023 | the specified user does not exist. |
-| 12800024 | the specified user is not in the foreground. |
-| 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
-
 ## getDefaultInputMethodAbility
 
 ```TypeScript
 getDefaultInputMethodAbility(): InputMethodProperty
 ```
 
-&lt;p&gt;Get the default input method ability.&lt;/p&gt; &lt;p&gt;To optimize performance, only the 'name' and 'id' properties which can uniquely identify an input method ability are included in the returned InputMethodProperty object.&lt;/p&gt;
+@brief Obtains the default input method capabilities. To optimize performance, the returned **InputMethodProperty** object ensures that only the `name` and `id` attributes that uniquely identify the input method capability are correct. Other attributes may be empty. <br> <br>**Example** <br> <br>```ts <br>try { <br> const defaultAbility: inputMethod.InputMethodProperty = inputMethod.getSetting().getDefaultInputMethodAbility(); <br> console.info('Succeeded in getting default input method ability, name: ' + defaultAbility.name + ', id: ' + defaultAbility.id); <br>} catch (err) { <br> console.error(`Failed to getDefaultInputMethodAbility. Code: \${err.code}, message: \${err.message}`); <br>} <br>```
 
 **Since:** 26.0.0
 
@@ -239,7 +131,7 @@ getDefaultInputMethodAbility(): InputMethodProperty
 
 | Type | Description |
 | --- | --- |
-| [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | property of the default input method.Only contains 'name' and 'id' properties. |
+| [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Default input method attributes. Only the `name` and `id` attributes are guaranteed to be correct. Other attributes may be empty. |
 
 **Error codes:**
 
@@ -254,7 +146,7 @@ getDefaultInputMethodAbility(): InputMethodProperty
 getInputMethodSubtypes(bundleName: string, userId?: int): Array<InputMethodSubtype>
 ```
 
-Get subtypes of a specified input method of a specified user.
+@brief Get subtypes of a specified input method of a specified user.
 
 **Since:** 26.0.0
 
@@ -296,7 +188,7 @@ Get subtypes of a specified input method of a specified user.
 getInputMethodsSync(enable: boolean, userId?: int): Array<InputMethodProperty>
 ```
 
-List enabled or disabled input methods sync of a specified user.
+@brief List enabled or disabled input methods sync of a specified user.
 
 **Since:** 26.0.0
 
@@ -338,7 +230,7 @@ List enabled or disabled input methods sync of a specified user.
 isPanelShown(panelInfo: PanelInfo): boolean
 ```
 
-Checks whether the input method panel of a specified type is shown.
+@brief Checks whether the input method panel of a specified type is shown.
 
 **Since:** 23
 
@@ -388,7 +280,7 @@ console.info('Succeeded in querying isPanelShown, result: ' + result);
 isPanelShown(panelInfo: PanelInfo, displayId: long): boolean
 ```
 
-Checks whether the input method panel of a specified type is shown on a specified screen.
+@brief Checks whether the input method panel of a specified type is shown on a specified screen.
 
 **Since:** 23
 
@@ -441,7 +333,7 @@ console.info('Succeeded in querying isPanelShown, result: ' + result);
 offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void
 ```
 
-Unsubscribe from the input method change event.
+@brief Unsubscribe from the input method change event.
 
 **Since:** 26.0.0
 
@@ -471,7 +363,7 @@ Unsubscribe from the input method change event.
 offImeHide(callback?: Callback<Array<InputWindowInfo>>): void
 ```
 
-Unsubscribe input window hide event.
+@brief Unsubscribe input window hide event.
 
 **Since:** 23
 
@@ -493,7 +385,7 @@ Unsubscribe input window hide event.
 offImeShow(callback?: Callback<Array<InputWindowInfo>>):void
 ```
 
-Unsubscribe input window show event.
+@brief Unsubscribe input window show event.
 
 **Since:** 23
 
@@ -517,7 +409,7 @@ Unsubscribe input window show event.
 off(type: 'imeHide', callback?: (info: Array<InputWindowInfo>) => void): void
 ```
 
-Unsubscribes from the soft keyboard hide event of the [input method panel](arkts-ime-inputmethodengine-panel-i.md) in the fixed state.
+@brief Unsubscribes from the soft keyboard hide event of the [input method panel](arkts-ime-inputmethodengine-panel-i.md) in the fixed state.
 
 **Since:** 10
 
@@ -532,7 +424,7 @@ Unsubscribes from the soft keyboard hide event of the [input method panel](arkts
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'imeHide' | Yes | Event type, which is **'imeHide'**. |
-| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | No | Callback to unregister.<br>If this parameter is not specified, this API unregisters all callbacks for the specified event type. |
+| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | No | Callback to unregister. <br>If this parameter is not specified, this API unregisters all callbacks for the specified event type. |
 
 **Examples**
 
@@ -546,7 +438,7 @@ inputMethod.getSetting().off('imeHide');
 off(type: 'imeShow', callback?: (info: Array<InputWindowInfo>) => void): void
 ```
 
-Unsubscribes from the soft keyboard show event of the [input method panel](arkts-ime-inputmethodengine-panel-i.md) in the fixed state.
+@brief Unsubscribes from the soft keyboard show event of the [input method panel](arkts-ime-inputmethodengine-panel-i.md) in the fixed state.
 
 **Since:** 10
 
@@ -561,7 +453,7 @@ Unsubscribes from the soft keyboard show event of the [input method panel](arkts
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'imeShow' | Yes | Event type, which is **'imeShow'**. |
-| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | No | Callback to unregister.<br>If this parameter is not specified, this API unregisters all callbacks for the specified event type. |
+| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | No | Callback to unregister. <br>If this parameter is not specified, this API unregisters all callbacks for the specified event type. |
 
 **Examples**
 
@@ -575,7 +467,7 @@ inputMethod.getSetting().off('imeShow');
 onImeChangeWithUserId(callback: ImeChangeWithUserIdCallback): void
 ```
 
-Subscribe to the input method change event.
+@brief Subscribe to the input method change event.
 
 **Since:** 26.0.0
 
@@ -605,7 +497,7 @@ Subscribe to the input method change event.
 onImeHide(callback: Callback<Array<InputWindowInfo>>): void
 ```
 
-Subscribes to input window hidden events.
+@brief Subscribes to input window hidden events.
 
 **Since:** 23
 
@@ -633,7 +525,7 @@ Subscribes to input window hidden events.
 onImeShow(callback: Callback<Array<InputWindowInfo>>):void
 ```
 
-Subscribes to input window show events.
+@brief Subscribes to input window show events.
 
 **Since:** 23
 
@@ -663,7 +555,7 @@ Subscribes to input window show events.
 on(type: 'imeHide', callback: (info: Array<InputWindowInfo>) => void): void
 ```
 
-Subscribes to the soft keyboard hide event of the [input method panel](arkts-ime-inputmethodengine-panel-i.md) in the fixed state. This API uses an asynchronous callback to return the result.
+@brief Subscribes to the soft keyboard hide event of the [input method panel](arkts-ime-inputmethodengine-panel-i.md) in the fixed state. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -700,7 +592,7 @@ inputMethod.getSetting().on('imeHide', (info: Array<inputMethod.InputWindowInfo>
 on(type: 'imeShow', callback: (info: Array<InputWindowInfo>) => void): void
 ```
 
-Subscribes to the soft keyboard show event of the [input method panel](arkts-ime-inputmethodengine-panel-i.md) in the fixed state. This API uses an asynchronous callback to return the result.
+@brief Subscribes to the soft keyboard show event of the [input method panel](arkts-ime-inputmethodengine-panel-i.md) in the fixed state. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 

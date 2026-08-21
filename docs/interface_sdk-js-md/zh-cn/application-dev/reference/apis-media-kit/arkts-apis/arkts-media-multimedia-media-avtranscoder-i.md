@@ -26,7 +26,7 @@ import { media } from '@kit.MediaKit';
 addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise<int>
 ```
 
-add a watermark for the AVTranscoder. This API uses a promise to return the result. App can add up to 5 watermarks. This API can be called only before the prepared state.
+为视频转码添加水印。使用Promise异步回调。 应用最多可以添加5个水印。 此接口只能在prepared状态之前调用。
 
 **起始版本：** 26.0.0
 
@@ -40,14 +40,14 @@ add a watermark for the AVTranscoder. This API uses a promise to return the resu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| watermark | image.PixelMap | 是 | : Watermark image. |
-| config | [WatermarkConfiguration](arkts-media-multimedia-media-watermarkconfiguration-i.md) | 是 | : Configuration of the watermark. |
+| watermark | image.PixelMap | 是 | : 水印图像。 |
+| config | [WatermarkConfiguration](arkts-media-multimedia-media-watermarkconfiguration-i.md) | 是 | : 水印配置参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;int&gt; | Promise that returns the watermark id. |
+| Promise&lt;int&gt; | Promise对象，返回添加的水印ID。 |
 
 **错误码：**
 
@@ -108,7 +108,7 @@ Unsubscribes from the event indicating that transcoding is complete. This event 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | Callback that has been registered to listen for transcoding completion events. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | Callback that has been registered to listen for transcoding completion events. |
 
 ## offError
 
@@ -128,7 +128,7 @@ Unsubscribes from AVTranscoder errors. After the unsubscription, your applicatio
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | Callback that has been registered to listen for AVTranscoder errors. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback that has been registered to listen for AVTranscoder errors. |
 
 ## offProgressUpdate
 
@@ -148,7 +148,7 @@ Unsubscribes from transcoding progress updates. This event can be triggered by b
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 否 | Called that has been registered to listen for progress updates. You are advised to use the default value because only the last registered callback is retained in the current allback mechanism. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | Called that has been registered to listen for progress updates. You are advised to use the default value because only the last registered callback is retained in the current allback mechanism. |
 
 ## off('complete')
 
@@ -171,7 +171,7 @@ off(type:'complete', callback?: Callback<void>):void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'complete' | 是 | 转码完成事件回调类型，支持的事件：'complete'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 完成事件回调方法。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 完成事件回调方法。 |
 
 ## off('error')
 
@@ -194,7 +194,7 @@ off(type:'error', callback?: ErrorCallback):void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 转码错误事件回调类型'error'。 <br>- 'error'：转码过程中发生错误，触发该事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | 错误事件回调方法。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 错误事件回调方法。 |
 
 ## off('progressUpdate')
 
@@ -217,7 +217,7 @@ off(type:'progressUpdate', callback?: Callback<int>):void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'progressUpdate' | 是 | 进度更新事件回调类型，支持的事件：'progressUpdate'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 否 | 已注册的进度更新事件回调。由于当前回调注册时，仅会保留最后一次注册的回调，建议此参数缺省。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 已注册的进度更新事件回调。由于当前回调注册时，仅会保留最后一次注册的回调，建议此参数缺省。 |
 
 ## onComplete
 
@@ -239,7 +239,7 @@ When this event is reported, the current transcoding operation is complete. You 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | Callback that has been registered to listen for transcoding completion events. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | Callback that has been registered to listen for transcoding completion events. |
 
 ## onError
 
@@ -261,7 +261,7 @@ An application can subscribe to only one AVTranscoder error event. When the appl
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | Callback invoked when the event is triggered. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback invoked when the event is triggered. |
 
 **错误码：**
 
@@ -294,7 +294,7 @@ Subscribes to transcoding progress updates. An application can subscribe to only
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | Callback invoked when the event is triggered. **progress** is a number that indicates the current transcoding progress, in percentage. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | Callback invoked when the event is triggered. **progress** is a number that indicates the current transcoding progress, in percentage. |
 
 ## on('complete')
 
@@ -319,7 +319,7 @@ on(type:'complete', callback: Callback<void>):void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'complete' | 是 | 完成事件回调类型，支持的事件：'complete'，在转码过程中系统会自动触发此事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数，返回完成事件回调方法。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，返回完成事件回调方法。 |
 
 ## on('error')
 
@@ -344,7 +344,7 @@ on(type:'error', callback: ErrorCallback):void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 转码错误事件回调类型'error'。 <br>- 'error'：录制过程中发生错误，触发该事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | 转码错误事件回调方法。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 转码错误事件回调方法。 |
 
 **错误码：**
 
@@ -380,7 +380,7 @@ on(type:'progressUpdate', callback: Callback<int>):void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'progressUpdate' | 是 | 进度更新事件回调类型，支持的事件：'progressUpdate'，在转码过程中系统会自动触发此事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | 回调函数，返回进度更新事件，函数中的参数number，表示当前转码进度。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，返回进度更新事件，函数中的参数number，表示当前转码进度。 |
 
 ## pause
 

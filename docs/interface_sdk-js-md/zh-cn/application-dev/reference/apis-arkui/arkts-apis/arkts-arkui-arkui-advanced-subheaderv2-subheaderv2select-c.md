@@ -36,7 +36,7 @@ select内容以及事件构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [SubHeaderV2SelectOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-subheaderv2-subheaderv2selectoptions-i.md) | 是 | 下拉选项信息。 |
+| options | [SubHeaderV2SelectOptions](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2selectoptions-i.md) | 是 | 下拉选项信息。 |
 
 ## defaultFocus
 
@@ -99,7 +99,7 @@ false：下拉按钮不是默认焦点。
 
 Sets the onSelect of the SubHeaderV2SelectOptions.
 
-**类型：** [SubHeaderV2SelectOnSelect](../../apis-default/arkts-apis/arkts-subheaderv2selectonselect-t.md)
+**类型：** [SubHeaderV2SelectOnSelect](arkts-arkui-subheaderv2selectonselect-t.md)
 
 **起始版本：** 18
 

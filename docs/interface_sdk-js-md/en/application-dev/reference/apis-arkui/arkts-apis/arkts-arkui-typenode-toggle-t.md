@@ -16,5 +16,5 @@ FrameNode of the Toggle type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** TypedFrameNode<ToggleInterface, ToggleAttribute>
+**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;ToggleInterface, ToggleAttribute&gt;
 

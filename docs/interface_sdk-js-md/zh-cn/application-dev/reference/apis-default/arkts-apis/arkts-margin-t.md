@@ -18,5 +18,5 @@ export type Margin = Padding
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** Padding
+**属性类型：** [Padding](arkts-units-padding-i.md)
 

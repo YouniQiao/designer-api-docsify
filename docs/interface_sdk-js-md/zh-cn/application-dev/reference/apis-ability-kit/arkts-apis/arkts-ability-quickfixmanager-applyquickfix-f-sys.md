@@ -29,7 +29,7 @@ function applyQuickFix(hapModuleQuickFixFiles: Array<string>, callback: AsyncCal
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hapModuleQuickFixFiles | Array&lt;string&gt; | 是 | 快速修复补丁文件（补丁文件需包含有效的文件路径）。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当快速修复的补丁安装成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当快速修复的补丁安装成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

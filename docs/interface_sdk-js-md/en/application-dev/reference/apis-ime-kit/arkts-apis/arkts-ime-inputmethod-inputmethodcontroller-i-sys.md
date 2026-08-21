@@ -1,6 +1,6 @@
 # InputMethodController
 
-A control class that encapsulates APIs for input method management, which can only be invoked after an **InputMethodController** instance is obtained via [getController](arkts-ime-inputmethod-getcontroller-f.md).
+@brief In the following API examples, you must first use [getController](arkts-ime-inputmethod-getcontroller-f.md) to obtain an **InputMethodController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 23
 
@@ -25,11 +25,10 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 hideSoftKeyboard(displayId: long): Promise<void>
 ```
 
-Hides the soft keyboard on a specified screen. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API can be called only when the edit box is attached to the input method. That is, it can be called to &gt; hide the soft keyboard only when the edit box is focused.
+@brief Hides the soft keyboard on a specified screen. This API uses a promise to return the result. <br> <br>   
+> **NOTE：**<br>
+> <br>
+> This API can be called only when the edit box is attached to the input method. That is, it can be called to hide the soft keyboard only when the edit box is focused.
 
 **Since:** 23
 
@@ -83,11 +82,10 @@ inputMethod.getController().hideSoftKeyboard(displayId).then(() => {
 showSoftKeyboard(displayId: long): Promise<void>
 ```
 
-Shows the soft keyboard on a specified screen. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API can be called only when the edit box is attached to the input method. That is, it can be called to &gt; show the soft keyboard only when the edit box is focused.
+@brief Shows the soft keyboard on a specified screen. This API uses a promise to return the result. <br> <br>   
+> **NOTE：**<br>
+> <br>
+> This API can be called only when the edit box is attached to the input method. That is, it can be called to show the soft keyboard only when the edit box is focused.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # ImmersiveMode
 
-Enumerates the immersive modes of the input method.
+@brief Enumerates the immersive modes of the input method.<br> <br> | Name | Value| Description | | ------------ | -- | ------------------ | | NONE_IMMERSIVE | 0 | The immersive mode is not used.| | IMMERSIVE | 1 | The immersive mode is used. Its style is determined by the input method application.| | LIGHT_IMMERSIVE | 2 | Immersive style in light mode.| | DARK_IMMERSIVE | 3 | Immersive style in dark mode.|
 
 **Since:** 23
 
@@ -14,7 +14,7 @@ Enumerates the immersive modes of the input method.
 NONE_IMMERSIVE = 0
 ```
 
-Default immersive mode, the panel is not in immersive mode.
+@brief Default immersive mode, the panel is not in immersive mode.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ Default immersive mode, the panel is not in immersive mode.
 IMMERSIVE
 ```
 
-Immersive mode of the input method.
+@brief Immersive mode of the input method.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ Immersive mode of the input method.
 LIGHT_IMMERSIVE
 ```
 
-Light immersive mode.
+@brief Light immersive mode.
 
 **Since:** 23
 
@@ -56,7 +56,7 @@ Light immersive mode.
 DARK_IMMERSIVE
 ```
 
-Dark immersive mode.
+@brief Dark immersive mode.
 
 **Since:** 23
 

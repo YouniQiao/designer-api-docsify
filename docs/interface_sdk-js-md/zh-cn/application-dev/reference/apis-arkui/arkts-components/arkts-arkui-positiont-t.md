@@ -16,5 +16,5 @@ Defines the PositionT type.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/arkui/Graphics').PositionT<T>
+**属性类型：** import('../api/arkui/Graphics').PositionT&lt;T&gt;
 

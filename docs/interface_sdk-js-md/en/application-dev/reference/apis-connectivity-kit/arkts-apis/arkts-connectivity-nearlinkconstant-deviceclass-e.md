@@ -1,6 +1,6 @@
 # DeviceClass
 
-The enum of device class.
+Enumerates the device types.
 
 **Since:** 26.0.0
 
@@ -14,7 +14,7 @@ The enum of device class.
 DEVICE_INVALID_CLASS = -1
 ```
 
-Invalid device class. Missing device class information.
+Invalid device type. The device type information is missing.
 
 **Since:** 26.0.0
 
@@ -30,7 +30,7 @@ Invalid device class. Missing device class information.
 DEVICE_UNCATEGORIZED = 0x000100
 ```
 
-Unclassified device.
+Uncategorized device.
 
 **Since:** 26.0.0
 
@@ -46,7 +46,7 @@ Unclassified device.
 DEVICE_PHONE = 0x000200
 ```
 
-General phone.
+Phone.
 
 **Since:** 26.0.0
 
@@ -78,7 +78,7 @@ Smartphone.
 DEVICE_COMPUTER = 0x000300
 ```
 
-General computer.
+Computer.
 
 **Since:** 26.0.0
 
@@ -158,7 +158,7 @@ Mini PC.
 DEVICE_WATCH = 0x000400
 ```
 
-General watch.
+Watch.
 
 **Since:** 26.0.0
 
@@ -190,7 +190,7 @@ Smart watch.
 DEVICE_HUMAN_INTERFACE = 0x000500
 ```
 
-General human interface device.
+Human-machine interface.
 
 **Since:** 26.0.0
 
@@ -254,7 +254,7 @@ Handle.
 DEVICE_STYLUS = 0x000504
 ```
 
-Stylus pen.
+Stylus.
 
 **Since:** 26.0.0
 
@@ -286,7 +286,7 @@ Touchpad.
 DEVICE_AUDIO_PLAYBACK = 0x000600
 ```
 
-General audio playback device.
+Audio player.
 
 **Since:** 26.0.0
 
@@ -318,7 +318,7 @@ Smart speaker.
 DEVICE_ECHO_WALL = 0x000602
 ```
 
-Echo Wall.
+Echo device.
 
 **Since:** 26.0.0
 
@@ -334,7 +334,7 @@ Echo Wall.
 DEVICE_AUDIO_CAPTURE = 0x000700
 ```
 
-General audio capture device.
+Audio recorder.
 
 **Since:** 26.0.0
 
@@ -366,7 +366,7 @@ Karaoke microphone.
 DEVICE_LAPEL_MICROPHONE = 0x000702
 ```
 
-Lapel Microphone.
+Wearable microphone.
 
 **Since:** 26.0.0
 
@@ -382,7 +382,7 @@ Lapel Microphone.
 DEVICE_WEARABLE_AUDIO = 0x000800
 ```
 
-General wearable audio device.
+Wearable audio device.
 
 **Since:** 26.0.0
 
@@ -398,7 +398,7 @@ General wearable audio device.
 DEVICE_IN_EAR_EARPHONE = 0x000801
 ```
 
-In-ear earphone.
+In-ear headphones.
 
 **Since:** 26.0.0
 
@@ -430,7 +430,7 @@ Headset.
 DEVICE_OVER_EAR_HEADPHONE = 0x000803
 ```
 
-Over-ear headphone.
+Over-ear headphones.
 
 **Since:** 26.0.0
 
@@ -446,7 +446,7 @@ Over-ear headphone.
 DEVICE_NECKBAND_EARPHONE = 0x000804
 ```
 
-Neck-worn earphone.
+Neckband earphones.
 
 **Since:** 26.0.0
 
@@ -462,7 +462,7 @@ Neck-worn earphone.
 DEVICE_PERSONAL_CARE = 0x000900
 ```
 
-General personal care.
+Personal care.
 
 **Since:** 26.0.0
 
@@ -478,7 +478,7 @@ General personal care.
 DEVICE_INTELLIGENT_TOOTHBRUSH = 0x000901
 ```
 
-Intelligent toothbrush.
+Smart toothbrush.
 
 **Since:** 26.0.0
 
@@ -510,7 +510,7 @@ Smart cup.
 DEVICE_INTELLIGENT_SHAVER = 0x000903
 ```
 
-Intelligent shaver.
+Smart shaver.
 
 **Since:** 26.0.0
 
@@ -526,7 +526,7 @@ Intelligent shaver.
 DEVICE_HVAC = 0x000A00
 ```
 
-General HVAC.
+HVAC.
 
 **Since:** 26.0.0
 
@@ -590,7 +590,7 @@ Air circulation fan.
 DEVICE_ELECTRIC_RIDE = 0x000B00
 ```
 
-General electric riding.
+Electric cycling tool.
 
 **Since:** 26.0.0
 
@@ -638,7 +638,7 @@ Electric bicycle.
 DEVICE_LIGHT_FITTING = 0x000C00
 ```
 
-General light fitting.
+Light fittings.
 
 **Since:** 26.0.0
 
@@ -670,7 +670,7 @@ Smart table lamp.
 DEVICE_REMOTE_CONTROL = 0x000D00
 ```
 
-General remote control.
+Remote control device.
 
 **Since:** 26.0.0
 
@@ -702,7 +702,7 @@ TV remote control.
 DEVICE_IMAGING = 0x000E00
 ```
 
-General imaging device.
+Imaging device.
 
 **Since:** 26.0.0
 
@@ -750,7 +750,7 @@ IP camera.
 DEVICE_SCREEN_CASTER = 0x000E03
 ```
 
-Screen caster.
+Projector.
 
 **Since:** 26.0.0
 
@@ -766,7 +766,7 @@ Screen caster.
 DEVICE_NETWORKING = 0x000F00
 ```
 
-General network device.
+Network device.
 
 **Since:** 26.0.0
 
@@ -798,7 +798,7 @@ IoT gateway.
 DEVICE_ACCESS_CONTROL = 0x001000
 ```
 
-General access control.
+Access control device.
 
 **Since:** 26.0.0
 
@@ -814,7 +814,7 @@ General access control.
 DEVICE_INTELLIGENT_LOCK = 0x001001
 ```
 
-Intelligent Lock.
+Smart lock.
 
 **Since:** 26.0.0
 

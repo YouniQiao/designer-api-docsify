@@ -1,6 +1,6 @@
 # PropertyDescriptorType
 
-The enum of property descriptor type.
+Enumerates the property descriptor types.
 
 **Since:** 26.0.0
 
@@ -14,7 +14,7 @@ The enum of property descriptor type.
 PROPERTY = 1
 ```
 
-Property description descriptor.
+Property.
 
 **Since:** 26.0.0
 
@@ -30,7 +30,7 @@ Property description descriptor.
 CLIENT_PROPERTY_CONFIG = 2
 ```
 
-Client property configuration descriptor.
+Property configuration on the client.
 
 **Since:** 26.0.0
 
@@ -46,7 +46,7 @@ Client property configuration descriptor.
 SERVER_PROPERTY_CONFIG = 3
 ```
 
-Server property configuration descriptor.
+Property configuration on the server.
 
 **Since:** 26.0.0
 
@@ -62,7 +62,7 @@ Server property configuration descriptor.
 PROPERTY_FORMAT = 4
 ```
 
-Property format descriptor.
+Property format.
 
 **Since:** 26.0.0
 
@@ -78,7 +78,7 @@ Property format descriptor.
 TYPE_VENDOR = 255
 ```
 
-Vendor-defined.
+Vendor-defined field.
 
 **Since:** 26.0.0
 

@@ -23,7 +23,7 @@ confirm?: ButtonOptions
 
 选择弹出框底部按钮。
 
-**类型：** [ButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-dialog-buttonoptions-c.md)
+**类型：** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
 
 **起始版本：** 10
 
@@ -131,7 +131,7 @@ theme?: Theme | CustomTheme
 
 主题信息，可以是CustomTheme或从onWillApplyTheme中获取的Theme实例。
 
-**类型：** [Theme](../../apis-default/arkts-apis/arkts-arkui-theme-theme-i.md) \| [CustomTheme](../../apis-default/arkts-apis/arkts-arkui-theme-customtheme-i.md)
+**类型：** [Theme](arkts-arkui-arkui-theme-theme-i.md) \| [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md)
 
 **起始版本：** 12
 

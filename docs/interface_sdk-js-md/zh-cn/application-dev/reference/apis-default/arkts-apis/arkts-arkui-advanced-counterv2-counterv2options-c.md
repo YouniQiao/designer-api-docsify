@@ -27,7 +27,7 @@ dateOptions?: CounterV2DateStyleOptions
 
 值为undefined时，按默认值处理。
 
-**类型：** [CounterV2DateStyleOptions](arkts-arkui-advanced-counterv2-counterv2datestyleoptions-c.md)
+**类型：** [CounterV2DateStyleOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-counterv2-counterv2datestyleoptions-c.md)
 
 **起始版本：** 26.0.0
 
@@ -75,7 +75,7 @@ inlineOptions?: CounterV2InlineStyleOptions
 
 值为undefined时，按默认值处理。
 
-**类型：** [CounterV2InlineStyleOptions](arkts-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md)
+**类型：** [CounterV2InlineStyleOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md)
 
 **起始版本：** 26.0.0
 
@@ -99,7 +99,7 @@ numberOptions?: CounterV2NumberStyleOptions
 
 值为undefined时，按默认值处理。
 
-**类型：** [CounterV2NumberStyleOptions](arkts-arkui-advanced-counterv2-counterv2numberstyleoptions-c.md)
+**类型：** [CounterV2NumberStyleOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-counterv2-counterv2numberstyleoptions-c.md)
 
 **起始版本：** 26.0.0
 
@@ -119,7 +119,7 @@ type: CounterV2Type
 
 指定当前CounterV2的类型。
 
-**类型：** [CounterV2Type](arkts-arkui-advanced-counterv2-counterv2type-e.md)
+**类型：** [CounterV2Type](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-counterv2-counterv2type-e.md)
 
 **起始版本：** 26.0.0
 

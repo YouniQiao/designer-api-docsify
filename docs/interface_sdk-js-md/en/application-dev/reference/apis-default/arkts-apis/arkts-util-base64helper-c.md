@@ -52,7 +52,7 @@ Use the Base64 encoding scheme to asynchronously decode a Base64-encoded string 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | Uint8Array \| string | Yes | A Uint8Array value or a string value |
-| options | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | No | one of the Type enumeration |
+| options | [Type](arkts-util-type-e.md) | No | one of the Type enumeration |
 
 **Return value:**
 
@@ -81,7 +81,7 @@ Decodes a Base64 encoded String or input u8 array into a newly-allocated u8 arra
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | Uint8Array \| string | Yes | A Uint8Array value or a string value |
-| options | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | No | one of the Type enumeration |
+| options | [Type](arkts-util-type-e.md) | No | one of the Type enumeration |
 
 **Return value:**
 
@@ -110,7 +110,7 @@ Asynchronously encodes all bytes in the specified u8 array into the newly alloca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | Uint8Array | Yes | A Uint8Array value |
-| options | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | No | Enumerating input parameters includes two encoding formats: BASIC and BASIC_URL_SAFE |
+| options | [Type](arkts-util-type-e.md) | No | Enumerating input parameters includes two encoding formats: BASIC and BASIC_URL_SAFE |
 
 **Return value:**
 
@@ -139,7 +139,7 @@ Encodes all bytes from the specified u8 array into a newly-allocated u8 array us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | Uint8Array | Yes | A Uint8Array value |
-| options | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | No | Enumerating input parameters includes two encoding formats: BASIC and BASIC_URL_SAFE |
+| options | [Type](arkts-util-type-e.md) | No | Enumerating input parameters includes two encoding formats: BASIC and BASIC_URL_SAFE |
 
 **Return value:**
 
@@ -168,7 +168,7 @@ Asynchronously encodes the specified byte array into a String using the Base64 e
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | Uint8Array | Yes | A Uint8Array value |
-| options | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | No | one of the Type enumeration |
+| options | [Type](arkts-util-type-e.md) | No | one of the Type enumeration |
 
 **Return value:**
 
@@ -197,7 +197,7 @@ Encodes the specified byte array into a String using the Base64 encoding scheme.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | Uint8Array | Yes | A Uint8Array value |
-| options | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | No | one of the Type enumeration |
+| options | [Type](arkts-util-type-e.md) | No | one of the Type enumeration |
 
 **Return value:**
 

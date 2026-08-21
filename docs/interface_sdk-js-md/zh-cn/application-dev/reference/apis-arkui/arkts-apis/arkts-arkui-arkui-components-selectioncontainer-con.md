@@ -14,7 +14,7 @@ SelectionContainer组件用于为多个文本节点提供跨节点文本选中�
 > 
 > - 本组件默认布局走Stack，如有其他容器布局需求请在SelectionContainer内放置一个容器组件。
 > 
-> - SelectionContainer内跨节点选中文本时不显示放大镜，也不支持[getMagnifier](arkts-arkui-arkui-uicontext-uicontext-c.md#getmagnifier)主动设置放大镜。
+> - SelectionContainer内跨节点选中文本时不显示放大镜，也不支持[getMagnifier](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getmagnifier)主动设置放大镜。
 > 
 > - 仅Text组件中的文本内容参与跨节点选中与文本拼接。
 

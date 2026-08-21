@@ -12,7 +12,7 @@ import { scan } from '@kit.ConnectivityKit';
 function offDeviceFound(callback?: Callback<ScanResults[]>): void
 ```
 
-Unsubscribes from NearLink scan results.
+Unsubscribes from NearLink scanning results. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
 
@@ -26,7 +26,7 @@ Unsubscribes from NearLink scan results.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScanResults](arkts-connectivity-scan-scanresults-i.md)[]&gt; | No | Callback used to listen for the scan result event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScanResults](arkts-connectivity-scan-scanresults-i.md)[]&gt; | No | Callback used to return a **ScanResults** object. If this parameter is specified, the current callback is unregistered. If this parameter is not specified, all callbacks corresponding to the event are unregistered. |
 
 **Error codes:**
 

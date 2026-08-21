@@ -12,11 +12,11 @@ import { tag } from '@kit.ConnectivityKit';
 function getMifareClassic(tagInfo: TagInfo): MifareClassicTag
 ```
 
-Obtains an [MifareClassicTag](arkts-connectivity-tag-mifareclassictag-t.md) object based on the tag information. During tag reading, if the tag supports the MIFARE Classic technology, an [MifareClassicTag](arkts-connectivity-tag-mifareclassictag-t.md) object will be created based on the tag information.
+Obtains a **MifareClassicTag** object, which allows access to the tags that use MIFARE Classic.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-tag-function getMifareClassic(tagInfo: TagInfo): MifareClassicTag--><!--Device-tag-function getMifareClassic(tagInfo: TagInfo): MifareClassicTag-End-->
 
@@ -26,13 +26,13 @@ Obtains an [MifareClassicTag](arkts-connectivity-tag-mifareclassictag-t.md) obje
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tagInfo | [TagInfo](arkts-connectivity-tag-taginfo-i.md) | Yes | Indicates the dispatched tag information. |
+| tagInfo | [TagInfo](arkts-connectivity-tag-taginfo-i.md) | Yes | Tag information, including the tag technology type and related parameters, obtained from [tag.getTagInfo(want: Want)](arkts-connectivity-tag-gettaginfo-f.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MifareClassicTag | The { |
+| MifareClassicTag | MifareClassicTag** object obtained. |
 
 **Error codes:**
 

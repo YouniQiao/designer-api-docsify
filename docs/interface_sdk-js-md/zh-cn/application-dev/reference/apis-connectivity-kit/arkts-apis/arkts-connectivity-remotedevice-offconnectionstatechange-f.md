@@ -12,7 +12,7 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 function offConnectionStateChange(callback?: Callback<ConnectionStateParam>): void
 ```
 
-取消订阅星闪连接状态更改事件。
+取消订阅连接状态变化事件。使用callback异步回调。
 
 **起始版本：** 26.0.0
 
@@ -26,7 +26,7 @@ function offConnectionStateChange(callback?: Callback<ConnectionStateParam>): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ConnectionStateParam](arkts-connectivity-remotedevice-connectionstateparam-i.md)&gt; | 否 | 用于监听事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionStateParam](arkts-connectivity-remotedevice-connectionstateparam-i.md)&gt; | 否 | 回调函数，返回订阅的连接状态变化事件上报结果。 <br>填写该参数则取消当前callback订阅。不填写该参数则取消该事件对应的所有回调。 |
 
 **错误码：**
 

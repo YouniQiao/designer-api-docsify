@@ -12,7 +12,7 @@ import { nfcController } from '@kit.ConnectivityKit';
 function isNfcSupported(): boolean
 ```
 
-Checks whether a device supports NFC.
+Checks whether the device supports NFC.
 
 **Since:** 26.0.0
 
@@ -26,5 +26,5 @@ Checks whether a device supports NFC.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns **true** if the device supports NFC; returns **false** otherwise. |
 

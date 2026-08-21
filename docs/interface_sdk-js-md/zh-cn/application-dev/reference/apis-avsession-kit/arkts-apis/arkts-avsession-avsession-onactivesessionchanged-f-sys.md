@@ -28,7 +28,7 @@ function onActiveSessionChanged(callback: Callback<Array<AVSessionDescriptor>>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i-sys.md)&gt;&gt; | 是 | 回调函数。参数为允许在系统控制入口显示的会话信息列表。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i-sys.md)&gt;&gt; | 是 | 回调函数。参数为允许在系统控制入口显示的会话信息列表。 |
 
 **错误码：**
 

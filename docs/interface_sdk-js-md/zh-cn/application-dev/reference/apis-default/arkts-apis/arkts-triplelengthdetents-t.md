@@ -22,7 +22,7 @@ export type TripleLengthDetents = [
 
 **属性类型：** [
     (SheetSize | Length),
-    SheetSize | Length | undefined,
-    SheetSize | Length | undefined
+    SheetSize | [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) | undefined,
+    SheetSize | [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) | undefined
 ]
 

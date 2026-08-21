@@ -33,7 +33,7 @@ attributeModifier(modifier: AttributeModifier<ArcScrollBarAttribute> | Attribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | AttributeModifier&lt;[ArcScrollBarAttribute](arkts-arkui-arcscrollbar-arcscrollbarattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
+| modifier | AttributeModifier&lt;[ArcScrollBarAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-c.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
 
 **返回值：**
 
@@ -55,7 +55,7 @@ setArcScrollBarOptions(options: ArcScrollBarOptions): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ArcScrollBarOptions](arkts-arkui-arcscrollbar-arcscrollbaroptions-i.md) | 是 |  |
+| options | [ArcScrollBarOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcscrollbar-arcscrollbaroptions-i.md) | 是 |  |
 
 **返回值：**
 

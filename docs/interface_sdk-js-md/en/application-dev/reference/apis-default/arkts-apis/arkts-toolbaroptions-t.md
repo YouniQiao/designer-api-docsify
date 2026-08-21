@@ -16,5 +16,5 @@ Declare ToolBarOptions use in ToolBar.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** Array<ToolBarOption>
+**Property type:** Array&lt;[ToolBarOption](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-toolbar-toolbaroption-c.md)&gt;
 

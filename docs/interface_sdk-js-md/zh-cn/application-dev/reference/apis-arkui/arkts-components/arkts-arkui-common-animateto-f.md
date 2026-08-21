@@ -14,7 +14,7 @@ declare function animateTo(value: AnimateParam, event: () => void): void
 显式动画接口。在需要动画时，显式调用该接口改变状态以产生动画。
 
 > 
-> - 从API version 10开始，可以通过使用[UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)中的 &gt; [animateTo](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto)来明确UI的执行上下文。
+> - 从API version 10开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [animateTo](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto)来明确UI的执行上下文。
 > 
 > - 不推荐在aboutToAppear、aboutToDisappear中调用动画。
 > 

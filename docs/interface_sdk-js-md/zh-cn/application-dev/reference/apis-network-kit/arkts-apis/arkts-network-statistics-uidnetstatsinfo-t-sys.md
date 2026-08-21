@@ -16,5 +16,5 @@ export type UidNetStatsInfo = Record<int, NetStatsInfo>
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** Record<int, NetStatsInfo>
+**属性类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;int, [NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md)&gt;
 

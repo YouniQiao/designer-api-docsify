@@ -234,7 +234,7 @@ ID of the parent component of the element. The default value is **-1**.
 sourceType?: AccessibilitySourceType
 ```
 
-Indicates the source of this element.
+Source type of the component, used to distinguish default components from newly added or modified virtual components.
 
 **Type:** [AccessibilitySourceType](arkts-accessibility-accessibility-accessibilitysourcetype-e-sys.md)
 

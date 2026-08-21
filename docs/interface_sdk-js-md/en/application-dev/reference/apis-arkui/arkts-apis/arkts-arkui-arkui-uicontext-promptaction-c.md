@@ -6,7 +6,7 @@ Provides APIs to create and display toasts, dialog boxes, action menus, and cust
 > 
 > - The initial APIs of this class are supported since API version 10.
 > 
-> - In the following API examples, you must first use [getPromptAction()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getpromptaction) in &gt; **UIContext** to obtain a **PromptAction** instance, and then call the APIs using the obtained instance.
+> - In the following API examples, you must first use [getPromptAction()](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction) in &gt; **UIContext** to obtain a **PromptAction** instance, and then call the APIs using the obtained instance.
 
 **Since:** 10
 
@@ -383,11 +383,11 @@ Opens a menu with the specified content. This API uses a promise to return the r
 > 
 > - If an invalid **target** is provided, the menu will not be displayed.
 > 
-> - You must maintain the provided **content**, on which [updateMenu](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#updatemenu) and &gt; [closeMenu](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#closemenu) rely to identify the target menu.
+> - You must maintain the provided **content**, on which [updateMenu](#updatemenu) and &gt; [closeMenu](#closemenu) rely to identify the target menu.
 > 
-> - If your **wrapBuilder** includes other components (such as Popup or &gt; Chip), the [ComponentContent](../../apis-default/arkts-apis/arkts-componentcontent-c.md) &gt; constructor must include four parameters, and the **options** parameter must be &gt; **{ nestingBuilderSupported: true }**.
+> - If your **wrapBuilder** includes other components (such as Popup or &gt; Chip), the [ComponentContent](arkts-arkui-componentcontent-c.md) &gt; constructor must include four parameters, and the **options** parameter must be &gt; **{ nestingBuilderSupported: true }**.
 > 
-> - Nested subwindow dialog boxes are not supported. For example, when [openMenu](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#openmenu) has &gt; **showInSubWindow** set to **true**, another dialog box with **showInSubWindow=true** cannot be displayed.
+> - Nested subwindow dialog boxes are not supported. For example, when [openMenu](#openmenu) has &gt; **showInSubWindow** set to **true**, another dialog box with **showInSubWindow=true** cannot be displayed.
 
 **Since:** 18
 
@@ -404,7 +404,7 @@ Opens a menu with the specified content. This API uses a promise to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | Yes | Content displayed in the menu. |
-| target | [TargetInfo](../../apis-default/arkts-apis/arkts-arkui-uicontext-targetinfo-i.md) | Yes | Information about the target component to bind. |
+| target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes | Information about the target component to bind. |
 | options | MenuOptions | No | Style of the menu.<br>**NOTE：**<br>The **title** property is not effective.<br> The **preview** parameter supports only the **MenuPreviewMode** type. |
 
 **Return value:**
@@ -435,9 +435,9 @@ Creates and displays a popup with the specified content. This API uses a promise
 > 
 > - If an invalid **target** is provided, the popup will not be displayed.
 > 
-> - You must maintain the provided **content**, on which [updatePopup](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#updatepopup) and &gt; [closePopup](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#closepopup) rely to identify the target popup.
+> - You must maintain the provided **content**, on which [updatePopup](#updatepopup) and &gt; [closePopup](#closepopup) rely to identify the target popup.
 > 
-> - If your **wrapBuilder** includes other components (such as Popup or &gt; Chip), the [ComponentContent](../../apis-default/arkts-apis/arkts-componentcontent-c.md) &gt; constructor must include four parameters, and the **options** parameter must be &gt; **{ nestingBuilderSupported: true }**.
+> - If your **wrapBuilder** includes other components (such as Popup or &gt; Chip), the [ComponentContent](arkts-arkui-componentcontent-c.md) &gt; constructor must include four parameters, and the **options** parameter must be &gt; **{ nestingBuilderSupported: true }**.
 
 **Since:** 18
 
@@ -454,7 +454,7 @@ Creates and displays a popup with the specified content. This API uses a promise
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | Yes | Content displayed in the popup. |
-| target | [TargetInfo](../../apis-default/arkts-apis/arkts-arkui-uicontext-targetinfo-i.md) | Yes | Information about the target component to bind. |
+| target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes | Information about the target component to bind. |
 | options | PopupCommonOptions | No | Style of the popup. |
 
 **Return value:**
@@ -535,7 +535,7 @@ The dialog box ID can be included in the dialog box content for related operatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | CustomBuilder \| [CustomBuilderWithId](../../apis-default/arkts-apis/arkts-custombuilderwithid-t.md) | Yes | Content of the custom dialog box. |
+| builder | CustomBuilder \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) | Yes | Content of the custom dialog box. |
 | controller | promptAction.DialogController | No | Controller of the custom dialog box. |
 | options | promptAction.DialogOptions | No | Style of the custom dialog box.<br> Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
@@ -564,7 +564,7 @@ Shows an action menu in the given settings. This API uses an asynchronous callba
 
 **Deprecated since:** 11
 
-**Substitutes:** [showActionMenu](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#showactionmenu)
+**Substitutes:** [showActionMenu](#showactionmenu)
 
 **Model restriction:** This API can be used only in the stage model.
 

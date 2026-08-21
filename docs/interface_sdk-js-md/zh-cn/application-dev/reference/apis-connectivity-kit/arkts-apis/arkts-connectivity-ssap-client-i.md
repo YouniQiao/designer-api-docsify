@@ -1,6 +1,10 @@
 # Client
 
-管理SSAP客户端。在调用ssap客户端方法之前，必须使用[createClient](arkts-connectivity-ssap-createclient-f.md)创建ssap客户端实例。
+SSAP客户端类，提供了和服务端进行连接和数据传输等操作方法。
+
+使用该类的方法前，需通过[ssap.createClient](arkts-connectivity-ssap-createclient-f.md)方法构造该类的实例。
+
+同一应用针对同一远端设备创建一个[Client](#client)实例即可，重复创建会增加不必要的资源开销。
 
 **起始版本：** 26.0.0
 
@@ -20,7 +24,7 @@ import { ssap } from '@kit.ConnectivityKit';
 close(): void
 ```
 
-关闭客户端。
+关闭客户端，断开与远端服务端的连接。如仅需断开当前连接而保留实例，请使用[disconnect](#disconnect)方法。
 
 **起始版本：** 26.0.0
 
@@ -46,7 +50,7 @@ close(): void
 connect(): Promise<void>
 ```
 
-连接服务端。
+向服务端发起连接。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -62,7 +66,7 @@ connect(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -78,7 +82,7 @@ connect(): Promise<void>
 disconnect(): Promise<void>
 ```
 
-断开或停止与服务端的连接。
+向服务端发起断连，断开已有连接或者终止正在建立的连接。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -94,7 +98,7 @@ disconnect(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -110,7 +114,7 @@ disconnect(): Promise<void>
 getServices(): Promise<Service[]>
 ```
 
-开始发现服务端的所有服务。
+获取服务端支持的服务列表。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -126,7 +130,7 @@ getServices(): Promise<Service[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[Service](arkts-connectivity-ssap-service-i.md)[]&gt; | Returns the service list of the server. |
+| Promise&lt;[Service](arkts-connectivity-ssap-service-i.md)[]&gt; | Promise对象，返回服务端支持的服务列表。 |
 
 **错误码：**
 
@@ -142,7 +146,7 @@ getServices(): Promise<Service[]>
 offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void
 ```
 
-取消订阅客户端连接状态更改事件。
+取消订阅连接状态变化事件。使用callback异步回调。
 
 **起始版本：** 26.0.0
 
@@ -156,7 +160,7 @@ offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | 否 | 用于监听连接状态改变事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | 否 | 回调函数，返回连接状态上报参数。 <br>填写该参数则取消当前callback订阅。不填写该参数则取消该事件对应的所有回调。 |
 
 ## offMtuChange
 
@@ -164,7 +168,7 @@ offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void
 offMtuChange(callback?: Callback<int>): void
 ```
 
-取消订阅MTU更改事件。
+取消订阅MTU变化事件。使用callback异步回调。
 
 **起始版本：** 26.0.0
 
@@ -178,7 +182,7 @@ offMtuChange(callback?: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 否 | 用于监听mtu变化事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 回调函数，返回协商后的MTU大小。 <br>填写该参数则取消当前callback订阅。不填写该参数则取消该事件对应的所有回调。 |
 
 ## offPropertyChange
 
@@ -186,7 +190,7 @@ offMtuChange(callback?: Callback<int>): void
 offPropertyChange(callback?: Callback<Property>): void
 ```
 
-取消订阅属性值更改事件。
+取消订阅属性变化事件。使用callback异步回调。
 
 **起始版本：** 26.0.0
 
@@ -200,7 +204,7 @@ offPropertyChange(callback?: Callback<Property>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | 否 | 用于监听属性值变更事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | 否 | 回调函数，返回服务的Property。 <br>填写该参数则取消当前callback订阅。不填写该参数则取消该事件对应的所有回调。 |
 
 ## onConnectionStateChange
 
@@ -208,9 +212,9 @@ offPropertyChange(callback?: Callback<Property>): void
 onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 ```
 
-订阅客户端连接状态更改事件。
+订阅连接状态变化事件。使用callback异步回调。
 
-只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。 如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。 回调返回真实设备地址，否则返回随机设备地址。
+应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
 
 **起始版本：** 26.0.0
 
@@ -224,7 +228,7 @@ onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | 是 | 用于监听连接状态改变事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | 是 | 回调函数，返回连接状态上报参数。 |
 
 ## onMtuChange
 
@@ -232,9 +236,9 @@ onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 onMtuChange(callback: Callback<int>): void
 ```
 
-订阅MTU变化事件。
+订阅MTU变化事件。使用callback异步回调。
 
-只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。
+应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
 
 **起始版本：** 26.0.0
 
@@ -248,7 +252,7 @@ onMtuChange(callback: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | 用于监听mtu变化事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，返回协商后的MTU大小。 |
 
 ## onPropertyChange
 
@@ -256,9 +260,9 @@ onMtuChange(callback: Callback<int>): void
 onPropertyChange(callback: Callback<Property>): void
 ```
 
-订阅属性值变更事件。
+订阅属性变化事件。使用callback异步回调。
 
-只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。
+应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
 
 **起始版本：** 26.0.0
 
@@ -272,7 +276,7 @@ onPropertyChange(callback: Callback<Property>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | 是 | 用于监听属性值更改事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | 是 | 回调函数，返回服务的Property。 |
 
 ## readProperty
 
@@ -280,7 +284,7 @@ onPropertyChange(callback: Callback<Property>): void
 readProperty(property: Property): Promise<Property>
 ```
 
-读取服务端的属性。
+读取服务端属性。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -296,13 +300,13 @@ readProperty(property: Property): Promise<Property>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| property | [Property](arkts-connectivity-ssap-property-i.md) | 是 | 指示要读取的属性 |
+| property | [Property](arkts-connectivity-ssap-property-i.md) | 是 | 服务端属性。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | 返回属性值Promise。 |
+| Promise&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | Promise对象，返回服务端属性。 |
 
 **错误码：**
 
@@ -320,7 +324,7 @@ readProperty(property: Property): Promise<Property>
 requestMtuSize(mtu: int): Promise<void>
 ```
 
-与服务端协商MTU大小。 协商结果需要通过订阅MTU事件获取。
+发起MTU协商请求。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -336,13 +340,13 @@ requestMtuSize(mtu: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mtu | int | 是 | 最大传输单元。 <br>单位为：字节。取值限定为整数。取值约束：建议范围[22,1024]。 |
+| mtu | int | 是 | MTU参数，取值范围[22, 1024]，单位：字节。默认值251。 <br>单位为：字节。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -358,7 +362,7 @@ requestMtuSize(mtu: int): Promise<void>
 setPropertyNotification(property: Property, enable: boolean): Promise<void>
 ```
 
-启用或禁用属性值变更通知。
+设置[Property](arkts-connectivity-ssap-property-i.md)变化通知。需在调用[connect](#connect)成功建立连接后使用。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -374,14 +378,14 @@ setPropertyNotification(property: Property, enable: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| property | [Property](arkts-connectivity-ssap-property-i.md) | 是 | 要通知的属性 |
-| enable | boolean | 是 | 指定是否启用属性的通知 |
+| property | [Property](arkts-connectivity-ssap-property-i.md) | 是 | 服务端属性。该属性需支持NOTIFY操作（即operation包含NOTIFY，详见[Operation](arkts-connectivity-ssap-operation-e.md)）。 |
+| enable | boolean | 是 | 是否打开通知功能。true: 打开通知功能。false: 关闭通知功能。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -399,7 +403,7 @@ setPropertyNotification(property: Property, enable: boolean): Promise<void>
 writeProperty(property: Property, writeType: PropertyWriteType): Promise<void>
 ```
 
-写入服务端的属性。
+写入服务端属性值。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -415,14 +419,14 @@ writeProperty(property: Property, writeType: PropertyWriteType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| property | [Property](arkts-connectivity-ssap-property-i.md) | 是 | 指示要写入的属性 |
-| writeType | [PropertyWriteType](arkts-connectivity-ssap-propertywritetype-e.md) | 是 | 写类型 |
+| property | [Property](arkts-connectivity-ssap-property-i.md) | 是 | 服务端属性。 |
+| writeType | [PropertyWriteType](arkts-connectivity-ssap-propertywritetype-e.md) | 是 | 写类型，支持服务端回复响应和不回复响应两种方式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise用于返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

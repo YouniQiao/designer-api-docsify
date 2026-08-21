@@ -502,7 +502,7 @@
 </div>
 <div class="tree-section">
   <details>
-    <summary class="tree-section-label">C API <span class="tree-count">(52)</span></summary>
+    <summary class="tree-section-label">C API <span class="tree-count">(83)</span></summary>
     <ul class="tree-l1">
 <li class="has-children"><details>
 <summary>头文件</summary>
@@ -515,6 +515,10 @@
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-http-interceptor-h.md">http_interceptor.h</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-net-ssl-c-type-h.md">net_ssl_c_type.h</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-net-ssl-c-h.md">net_ssl_c.h</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-net-ethernet-type-h.md">net_ethernet_type.h</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-net-ethernet-h.md">net_ethernet.h</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-net-trafficfilter-h.md">net_trafficfilter.h</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-net-trafficfilter-type-h.md">net_trafficfilter_type.h</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-net-connection-type-h.md">net_connection_type.h</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-net-connection-h.md">net_connection.h</a></li>
 </ul>
@@ -523,6 +527,8 @@
 <summary>模块</summary>
 <ul class="tree-l2">
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-netstack.md">netstack</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-netmanager-ext.md">netmanager_ext</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-trafficfilter.md">TrafficFilter</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-netconnection.md">NetConnection</a></li>
 </ul>
 </details></li>
@@ -554,6 +560,31 @@
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-netstack-netstack-certblob.md">NetStack_CertBlob</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-netstack-netstack-certificatepinning.md">NetStack_CertificatePinning</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-netstack-netstack-certificates.md">NetStack_Certificates</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-netmanager-ext-ethernet-macaddressinfo.md">Ethernet_MacAddressInfo</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-netmanager-ext-ethernet-macaddrinfolist.md">Ethernet_MacAddrInfoList</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-netmanager-ext-ethernet-netaddr.md">Ethernet_NetAddr</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-netmanager-ext-ethernet-netaddrinfo.md">Ethernet_NetAddrInfo</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-netmanager-ext-ethernet-netaddrlist.md">Ethernet_NetAddrList</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-trafficfilter-oh-trafficfilter-ipaddress.md">OH_TrafficFilter_IPAddress</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-trafficfilter-oh-trafficfilter-ipcidr.md">OH_TrafficFilter_IPCidr</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-trafficfilter-oh-trafficfilter-iprange.md">OH_TrafficFilter_IPRange</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-trafficfilter-oh-trafficfilter-ipmulti.md">OH_TrafficFilter_IPMulti</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-trafficfilter-oh-trafficfilter-ipmatch.md">OH_TrafficFilter_IPMatch</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-trafficfilter-oh-trafficfilter-interfacematch.md">OH_TrafficFilter_InterfaceMatch</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-trafficfilter-oh-trafficfilter-portrange.md">OH_TrafficFilter_PortRange</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-trafficfilter-oh-trafficfilter-portmulti.md">OH_TrafficFilter_PortMulti</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-trafficfilter-oh-trafficfilter-portmatch.md">OH_TrafficFilter_PortMatch</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-trafficfilter-oh-trafficfilter-connectioninfo.md">OH_TrafficFilter_ConnectionInfo</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-trafficfilter-oh-trafficfilter-processinfo.md">OH_TrafficFilter_ProcessInfo</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-trafficfilter-oh-trafficfilter-redirectrule.md">OH_TrafficFilter_RedirectRule</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-trafficfilter-oh-trafficfilter-packetdesc.md">OH_TrafficFilter_PacketDesc</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-trafficfilter-oh-trafficfilter-config.md">OH_TrafficFilter_Config</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-trafficfilter-oh-trafficfilter-macmatch.md">OH_TrafficFilter_MACMatch</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-trafficfilter-oh-trafficfilter-tcpflagsmatch.md">OH_TrafficFilter_TCPFlagsMatch</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-trafficfilter-oh-trafficfilter-conntrackmatch.md">OH_TrafficFilter_ConntrackMatch</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-trafficfilter-oh-trafficfilter-filterrule.md">OH_TrafficFilter_FilterRule</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-trafficfilter-oh-trafficfilter-redirector.md">OH_TrafficFilter_Redirector</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-trafficfilter-oh-trafficfilter-packetcontroller.md">OH_TrafficFilter_PacketController</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-netconnection-netconn-nethandle.md">NetConn_NetHandle</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-netconnection-netconn-netcapabilities.md">NetConn_NetCapabilities</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-netconnection-netconn-netaddr.md">NetConn_NetAddr</a></li>

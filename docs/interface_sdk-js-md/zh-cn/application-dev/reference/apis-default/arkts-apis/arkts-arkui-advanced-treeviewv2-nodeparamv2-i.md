@@ -25,7 +25,7 @@ container?: OnContainerCallback
 
 默认值：() =&gt; void
 
-**类型：** [OnContainerCallback](arkts-oncontainercallback-t.md)
+**类型：** [OnContainerCallback](../../apis-arkui/arkts-apis/arkts-arkui-oncontainercallback-t.md)
 
 **起始版本：** 26.0.0
 

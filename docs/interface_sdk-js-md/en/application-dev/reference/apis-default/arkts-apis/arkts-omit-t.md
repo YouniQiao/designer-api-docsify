@@ -10,5 +10,5 @@ Construct a type with the properties of T except for those in type K.
 
 <!--Device-unnamed-type Omit<T, K extends keyof any> = Pick<T, Exclude<keyof T, K>>--><!--Device-unnamed-type Omit<T, K extends keyof any> = Pick<T, Exclude<keyof T, K>>-End-->
 
-**Property type:** Pick<T, Exclude<keyof T, K>>
+**Property type:** [Pick](arkts-pick-t.md)&lt;T, [Exclude](arkts-exclude-t.md)&lt;keyof T, K&gt;&gt;
 

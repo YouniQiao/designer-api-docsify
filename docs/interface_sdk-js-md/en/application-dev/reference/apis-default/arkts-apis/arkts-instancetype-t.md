@@ -10,5 +10,5 @@ Obtain the return type of a constructor function type
 
 <!--Device-unnamed-type InstanceType<T extends abstract new (...args: any) => any> = T extends abstract new (...args: any) => infer R ? R : any--><!--Device-unnamed-type InstanceType<T extends abstract new (...args: any) => any> = T extends abstract new (...args: any) => infer R ? R : any-End-->
 
-**Property type:** T extends abstract new (...args: any) => infer R ? R : any
+**Property type:** T extends abstract new (...args: any) =&gt; infer R ? R : any
 

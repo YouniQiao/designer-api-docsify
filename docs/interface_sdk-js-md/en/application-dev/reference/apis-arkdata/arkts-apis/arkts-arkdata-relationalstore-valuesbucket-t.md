@@ -12,5 +12,5 @@ Values in buckets are stored in key-value pairs, change {[key: string]: ValueTyp
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**Property type:** Record<string, ValueType>
+**Property type:** Record&lt;string, ValueType&gt;
 

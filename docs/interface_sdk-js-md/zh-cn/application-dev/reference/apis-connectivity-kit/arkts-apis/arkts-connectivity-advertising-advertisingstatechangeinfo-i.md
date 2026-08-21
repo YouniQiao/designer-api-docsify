@@ -1,6 +1,6 @@
 # AdvertisingStateChangeInfo
 
-广播状态变化信息。
+表示广播启停状态变化信息。
 
 **起始版本：** 26.0.0
 
@@ -20,7 +20,7 @@ import { advertising } from '@kit.ConnectivityKit';
 advertisingId: int
 ```
 
-广播ID。 取值范围为全体整数。
+表示广播ID。取值范围[0, 255]。
 
 **类型：** int
 
@@ -38,7 +38,7 @@ advertisingId: int
 state: AdvertisingState
 ```
 
-广播状态。
+表示当前广播状态。
 
 **类型：** [AdvertisingState](arkts-connectivity-advertising-advertisingstate-e.md)
 

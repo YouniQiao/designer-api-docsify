@@ -43,7 +43,7 @@ offChange(callback?: Callback<MediaQueryResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaQueryResult](arkts-mediaquery-mediaqueryresult-i.md)&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-mediaquery-mediaqueryresult-i.md)&gt; | 否 |  |
 
 ## onChange
 
@@ -67,5 +67,5 @@ onChange(callback: Callback<MediaQueryResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaQueryResult](arkts-mediaquery-mediaqueryresult-i.md)&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-mediaquery-mediaqueryresult-i.md)&gt; | 是 |  |
 

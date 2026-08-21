@@ -30,7 +30,7 @@ function on(type: 'securityEventOccur', securityEventInfo: SecurityEventInfo, ca
 | --- | --- | --- | --- |
 | type | 'securityEventOccur' | 是 | 订阅类型。 |
 | securityEventInfo | [SecurityEventInfo](arkts-securityguard-securityguard-securityeventinfo-i-sys.md) | 是 | 订阅的安全事件信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SecurityEvent](arkts-securityguard-securityguard-securityevent-i-sys.md)&gt; | 是 | 安全事件发生时的监听回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityEvent](arkts-securityguard-securityguard-securityevent-i-sys.md)&gt; | 是 | 安全事件发生时的监听回调函数。 |
 
 **错误码：**
 

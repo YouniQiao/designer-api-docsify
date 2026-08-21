@@ -29,7 +29,7 @@ function getSharableRegexes(type: SharingIfaceType, callback: AsyncCallback<Arra
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | [SharingIfaceType](arkts-network-sharing-sharingifacetype-e-sys.md) | 是 | 共享类型，0：Wi-Fi 1：USB 2：BLUETOOTH。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回指定类型网卡名称正则表达式列表。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回指定类型网卡名称正则表达式列表。 |
 
 **错误码：**
 

@@ -12,5 +12,5 @@ Represent an array of [Assets](arkts-arkdata-sendablerelationalstore-asset-i.md)
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**Property type:** collections.Array<Asset>
+**Property type:** collections.Array&lt;Asset&gt;
 

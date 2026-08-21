@@ -16,5 +16,5 @@ Define the FrameNode type for WaterFlow.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** WaterFlowFrameNode
+**Property type:** [WaterFlowFrameNode](arkts-typenode-waterflowframenode-c.md)
 

@@ -4,7 +4,7 @@
 export type FocusMoveResult = _FocusMoveResult
 ```
 
-Indicates focus move result.
+查询无障碍节点返回值类型，请参考[FocusMoveResult](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md)。
 
 **起始版本：** 23
 

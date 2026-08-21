@@ -102,7 +102,7 @@ Callback function triggered when a segment button option is tapped. The subscrip
 
 Options of the **SegmentButton** component.
 
-**Type:** [SegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md)
+**Type:** [SegmentButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md)
 
 **Since:** 11
 

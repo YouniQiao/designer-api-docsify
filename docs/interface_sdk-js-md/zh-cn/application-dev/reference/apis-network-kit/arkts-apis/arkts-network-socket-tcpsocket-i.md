@@ -43,7 +43,7 @@ bind(address: NetAddress, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | address | NetAddress | 是 | 本端地址信息，参考 NetAddress。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。失败返回错误、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败返回错误、错误信息。 |
 
 **错误码：**
 
@@ -153,7 +153,7 @@ close(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。失败返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -246,7 +246,7 @@ connect(options: TCPConnectOptions, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [TCPConnectOptions](arkts-network-socket-tcpconnectoptions-i.md) | 是 | TCPSocket连接的参数，参考[TCPConnectOptions](arkts-network-socket-tcpconnectoptions-i.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。失败返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -503,7 +503,7 @@ getRemoteAddress(callback: AsyncCallback<NetAddress>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;NetAddress&gt; | 是 | 回调函数。成功时返回对端Socket地址，失败时返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetAddress&gt; | 是 | 回调函数。成功时返回对端Socket地址，失败时返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -621,7 +621,7 @@ getSocketFd(callback: AsyncCallback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 回调函数，当成功时，返回socket的文件描述符，失败时，返回undefined。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数，当成功时，返回socket的文件描述符，失败时，返回undefined。 |
 
 **示例**
 
@@ -726,7 +726,7 @@ getState(callback: AsyncCallback<SocketStateBase>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | 是 | 回调函数。成功时获取TCPSocket状态，失败时返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | 是 | 回调函数。成功时获取TCPSocket状态，失败时返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -839,7 +839,7 @@ off(type: 'connect' | 'close', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connect' \| 'close' | 是 | 取消订阅的事件类型。&lt;br /&gt;- 'connect'：连接事件。&lt;br /&gt;- 'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **示例**
 
@@ -883,30 +883,11 @@ off(type: 'connect' | 'close', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connect' \| 'close' | 是 | 取消订阅的事件类型。&lt;br /&gt;- 'connect'：连接事件。&lt;br /&gt;- 'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **示例**
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-let callback1 = () => {
-  console.info("on connect success");
-}
-tcp.on('connect', callback1);
-// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
-tcp.off('connect', callback1);
-tcp.off('connect');
-let callback2 = () => {
-  console.info("on close success");
-}
-tcp.on('close', callback2);
-// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
-tcp.off('close', callback2);
-tcp.off('close');
-```
+参见 off_close
 
 ## off('error')
 
@@ -927,7 +908,7 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 取消订阅的事件类型。'error'：error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **示例**
 
@@ -964,7 +945,7 @@ off(type: 'message', callback?: Callback<SocketMessageInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'message' | 是 | 取消订阅的事件类型。'message'：接收消息事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。<br>**起始版本：** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。<br>**起始版本：** 11 |
 
 **示例**
 
@@ -1009,7 +990,7 @@ on(type: 'connect' | 'close', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connect' \| 'close' | 是 | 订阅的事件类型。&lt;br /&gt;- 'connect'：连接事件。&lt;br /&gt;- 'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数。TCPSocket的连接事件或关闭事件触发时调用回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。TCPSocket的连接事件或关闭事件触发时调用回调函数。 |
 
 **示例**
 
@@ -1045,22 +1026,11 @@ on(type: 'connect' | 'close', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connect' \| 'close' | 是 | 订阅的事件类型。&lt;br /&gt;- 'connect'：连接事件。&lt;br /&gt;- 'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数。TCPSocket的连接事件或关闭事件触发时调用回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。TCPSocket的连接事件或关闭事件触发时调用回调函数。 |
 
 **示例**
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-tcp.on('connect', () => {
-  console.info("on connect success")
-});
-tcp.on('close', () => {
-  console.info("on close success")
-});
-```
+参见 on_close
 
 ## on('error')
 
@@ -1081,7 +1051,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 订阅的事件类型。'error'：error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | 回调函数。TCPSocket连接订阅的某类error事件触发时调用回调函数。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数。TCPSocket连接订阅的某类error事件触发时调用回调函数。 |
 
 **示例**
 
@@ -1114,7 +1084,7 @@ on(type: 'message', callback: Callback<SocketMessageInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'message' | 是 | 订阅的事件类型。'message'：接收消息事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 是 | 回调函数。返回TCPSocket连接信息。<br>**起始版本：** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 是 | 回调函数。返回TCPSocket连接信息。<br>**起始版本：** 11 |
 
 **示例**
 
@@ -1161,7 +1131,7 @@ send(options: TCPSendOptions, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [TCPSendOptions](arkts-network-socket-tcpsendoptions-i.md) | 是 | TCPSocket发送请求的参数，参考[TCPSendOptions](arkts-network-socket-tcpsendoptions-i.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。失败返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -1292,7 +1262,7 @@ setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | 是 | TCPSocket连接的其他属性，参考[TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。失败时返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败时返回错误码、错误信息。 |
 
 **错误码：**
 

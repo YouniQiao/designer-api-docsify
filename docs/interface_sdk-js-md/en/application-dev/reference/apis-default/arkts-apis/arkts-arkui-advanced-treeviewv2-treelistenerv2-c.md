@@ -37,7 +37,7 @@ Destroy node add callback event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-arkui/arkts-apis/arkts-arkui-onchangedcallback-t.md) | No |  |
+| callback | [OnChangedCallback](arkts-onchangedcallback-t.md) | No |  |
 
 ## offNodeClick
 
@@ -61,7 +61,7 @@ Destroy node click callback event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-arkui/arkts-apis/arkts-arkui-onchangedcallback-t.md) | No |  |
+| callback | [OnChangedCallback](arkts-onchangedcallback-t.md) | No |  |
 
 ## offNodeDelete
 
@@ -85,7 +85,7 @@ Destroy node delete callback event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-arkui/arkts-apis/arkts-arkui-onchangedcallback-t.md) | No |  |
+| callback | [OnChangedCallback](arkts-onchangedcallback-t.md) | No |  |
 
 ## offNodeModify
 
@@ -109,7 +109,7 @@ Destroy node modify callback event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-arkui/arkts-apis/arkts-arkui-onchangedcallback-t.md) | No |  |
+| callback | [OnChangedCallback](arkts-onchangedcallback-t.md) | No |  |
 
 ## offNodeMove
 
@@ -133,7 +133,7 @@ Destroy node move callback event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-arkui/arkts-apis/arkts-arkui-onchangedcallback-t.md) | No |  |
+| callback | [OnChangedCallback](arkts-onchangedcallback-t.md) | No |  |
 
 ## onNodeAdd
 
@@ -157,7 +157,7 @@ Node add event registration and processing. The event will not be destroyed afte
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-arkui/arkts-apis/arkts-arkui-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](arkts-onchangedcallback-t.md) | Yes |  |
 
 ## onNodeClick
 
@@ -181,7 +181,7 @@ Node click event registration and processing. The event will not be destroyed af
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-arkui/arkts-apis/arkts-arkui-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](arkts-onchangedcallback-t.md) | Yes |  |
 
 ## onNodeDelete
 
@@ -205,7 +205,7 @@ Node delete event registration and processing. The event will not be destroyed a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-arkui/arkts-apis/arkts-arkui-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](arkts-onchangedcallback-t.md) | Yes |  |
 
 ## onNodeModify
 
@@ -229,7 +229,7 @@ Node modify event registration and processing. The event will not be destroyed a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-arkui/arkts-apis/arkts-arkui-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](arkts-onchangedcallback-t.md) | Yes |  |
 
 ## onNodeMove
 
@@ -253,7 +253,7 @@ Node move event registration and processing. The event will not be destroyed aft
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-arkui/arkts-apis/arkts-arkui-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](arkts-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeAdd
 
@@ -277,7 +277,7 @@ Node add event registration and processing. After the event is processed once, i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-arkui/arkts-apis/arkts-arkui-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](arkts-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeClick
 
@@ -301,7 +301,7 @@ Node click event registration and processing. After the event is processed once,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-arkui/arkts-apis/arkts-arkui-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](arkts-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeDelete
 
@@ -325,7 +325,7 @@ Node delete event registration and processing. After the event is processed once
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-arkui/arkts-apis/arkts-arkui-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](arkts-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeModify
 
@@ -349,7 +349,7 @@ Node modify event registration and processing. After the event is processed once
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-arkui/arkts-apis/arkts-arkui-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](arkts-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeMove
 
@@ -373,5 +373,5 @@ Node move event registration and processing. After the event is processed once, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-arkui/arkts-apis/arkts-arkui-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](arkts-onchangedcallback-t.md) | Yes |  |
 

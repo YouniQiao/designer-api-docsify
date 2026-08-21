@@ -26,5 +26,5 @@ Defines the key-value object type used to construct URL query parameters.
 
 **System capability:** SystemCapability.Communication.NetStack
 
-**Property type:** Record<string, QueryParamValue | QueryParamValue[]>
+**Property type:** Record&lt;string, [QueryParamValue](arkts-network-http-queryparamvalue-t.md) | [QueryParamValue](arkts-network-http-queryparamvalue-t.md)[]&gt;
 

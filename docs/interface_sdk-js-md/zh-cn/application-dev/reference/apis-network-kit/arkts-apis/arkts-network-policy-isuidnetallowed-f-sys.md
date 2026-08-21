@@ -30,7 +30,7 @@ function isUidNetAllowed(uid: int, isMetered: boolean, callback: AsyncCallback<b
 | --- | --- | --- | --- |
 | uid | int | 是 | app 唯一标识符，取值范围为int32_t范围内的正整数。 |
 | isMetered | boolean | 是 | 是否为计量网络。true：是计量网络；false：不是计量网络。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回 true 表示这个 uid 可以访问对应的计量网络。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回 true 表示这个 uid 可以访问对应的计量网络。 |
 
 **错误码：**
 
@@ -137,7 +137,7 @@ function isUidNetAllowed(uid: int, iface: string, callback: AsyncCallback<boolea
 | --- | --- | --- | --- |
 | uid | int | 是 | app 唯一标识符，取值范围为int32_t范围内的正整数。 |
 | iface | string | 是 | 网络对应的名称 。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回 true 表示这个 uid 可以访问对应 iface 的网络。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回 true 表示这个 uid 可以访问对应 iface 的网络。 |
 
 **错误码：**
 

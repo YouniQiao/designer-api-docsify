@@ -20,5 +20,5 @@ declare type BusinessError<T = void> = import('../api/@ohos.base').BusinessError
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.base').BusinessError<T>
+**属性类型：** import('../api/@ohos.base').BusinessError&lt;T&gt;
 

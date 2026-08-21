@@ -27,7 +27,7 @@ clear(animated?: boolean): void
 
 > **说明：**
 > 
-> 当调用[keepBottomPage](#keepbottompage)接口并设置为true时，会保留栈底页面。
+> 当调用[keepBottomPage](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-multinavigation-multinavpathstack-c.md#keepbottompage)接口并设置为true时，会保留栈底页面。
 
 **起始版本：** 23
 
@@ -317,7 +317,7 @@ pop(result?: Object, animated?: boolean): NavPathInfo | undefined
 
 > **说明：**
 > 
-> 当调用[keepBottomPage](#keepbottompage)接口并设置为true时，会保留栈底页面。
+> 当调用[keepBottomPage](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-multinavigation-multinavpathstack-c.md#keepbottompage)接口并设置为true时，会保留栈底页面。
 
 **起始版本：** 23
 
@@ -480,7 +480,7 @@ pushPath(info: NavPathInfo, animated?: boolean, policy?: SplitPolicy): void
 | --- | --- | --- | --- |
 | info | NavPathInfo | 是 | Indicates the NavDestination to be pushed. |
 | animated | boolean | 否 | Indicates whether the transition is animated. |
-| policy | [SplitPolicy](arkts-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | SplitPolicy of the NavDestination which is currently pushed in stack. Default splitPolicy is DETAIL_PAGE. |
+| policy | [SplitPolicy](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | SplitPolicy of the NavDestination which is currently pushed in stack. Default splitPolicy is DETAIL_PAGE. |
 
 ## pushPath
 
@@ -506,7 +506,7 @@ pushPath(info: NavPathInfo, options?: NavigationOptions, policy?: SplitPolicy): 
 | --- | --- | --- | --- |
 | info | NavPathInfo | 是 | Indicates the NavDestination to be pushed. |
 | options | NavigationOptions | 否 | Indicates options of stack operation. |
-| policy | [SplitPolicy](arkts-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | SplitPolicy of the NavDestination which is currently pushed in stack. Default splitPolicy is DETAIL_PAGE. |
+| policy | [SplitPolicy](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | SplitPolicy of the NavDestination which is currently pushed in stack. Default splitPolicy is DETAIL_PAGE. |
 
 ## pushPathByName
 
@@ -533,7 +533,7 @@ pushPathByName(name: string, param: Object, animated?: boolean, policy?: SplitPo
 | name | string | 是 | NavDestination页面名称。 |
 | param | Object | 是 | NavDestination页面详细参数。 |
 | animated | boolean | 否 | 是否支持转场动画。<br/>默认值：true<br/>true：支持转场动画。<br/>false：不支持转场动画。 |
-| policy | [SplitPolicy](arkts-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | 当前入栈页面的策略。默认值：DETAIL_PAGE |
+| policy | [SplitPolicy](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | 当前入栈页面的策略。默认值：DETAIL_PAGE |
 
 ## pushPathByName
 
@@ -562,7 +562,7 @@ pushPathByName(
 | param | Object | 是 | NavDestination页面详细参数。 |
 | onPop | Callback&lt;PopInfo&gt; | 否 | Callback回调，用于页面出栈时触发该回调处理返回结果。 |
 | animated | boolean | 否 | 是否支持转场动画。<br/>默认值：true<br/>true：支持转场动画。<br/>false：不支持转场动画。 |
-| policy | [SplitPolicy](arkts-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | 当前入栈页面的策略。默认值：DETAIL_PAGE |
+| policy | [SplitPolicy](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | 当前入栈页面的策略。默认值：DETAIL_PAGE |
 
 ## removeByIndexes
 

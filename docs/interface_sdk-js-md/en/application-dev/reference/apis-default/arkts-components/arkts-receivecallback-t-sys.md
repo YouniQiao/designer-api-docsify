@@ -18,5 +18,5 @@ Get Callback from @ohos.base.
 
 **System API:** This is a system API.
 
-**Property type:** Callback<Record<string, RecordData>>
+**Property type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;
 

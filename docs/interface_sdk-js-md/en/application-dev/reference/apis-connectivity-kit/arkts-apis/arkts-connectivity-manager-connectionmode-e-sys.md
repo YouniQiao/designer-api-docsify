@@ -1,6 +1,6 @@
 # ConnectionMode (System API)
 
-The enum of connection mode.
+Enumerates the connection modes.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ The enum of connection mode.
 SLE_MODE_UNCONNECTABLE = 0
 ```
 
-Indicates that the device is not connectable.
+The device cannot be connected.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Indicates that the device is not connectable.
 SLE_MODE_CONNECTABLE = 1
 ```
 
-Indicates that the device is connectable.
+The device can be connected.
 
 **Since:** 26.0.0
 

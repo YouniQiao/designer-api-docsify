@@ -1,6 +1,6 @@
 # PanelFlag
 
-Enumerates the state types of the input method panel.
+@brief Enumerates the state types of the input method panel.<br> <br> | Name | Value| Description | | ------------ | -- | ------------------ | | FLG_FIXED | 0 | Fixed state type.| | FLG_FLOATING | 1 | Floating state type.| | FLAG_CANDIDATE&lt;sup&gt;15+&lt;/sup&gt; | 2 | Candidate state type.|
 
 **Since:** 23
 
@@ -14,9 +14,7 @@ Enumerates the state types of the input method panel.
 FLG_FIXED = 0
 ```
 
-Fixed style.
-
-&lt;p&gt;It's provided for the panel with type of SOFT_KEYBOARD. When the flag is set, the soft keyboard is fixed at the bottom of the screen.&lt;/p&gt;
+@brief Fixed style. <br> <br>&lt;p&gt;It's provided for the panel with type of SOFT_KEYBOARD. When the flag is set, the soft keyboard is fixed at the bottom of the screen.&lt;/p&gt;
 
 **Since:** 23
 
@@ -30,9 +28,7 @@ Fixed style.
 FLG_FLOATING
 ```
 
-Floating style.
-
-&lt;p&gt;It's provided for the panel with type of SOFT_KEYBOARD. When the flag is set, the soft keyboard is floating.&lt;/p&gt;
+@brief Floating style. <br> <br>&lt;p&gt;It's provided for the panel with type of SOFT_KEYBOARD. When the flag is set, the soft keyboard is floating.&lt;/p&gt;
 
 **Since:** 23
 
@@ -46,9 +42,7 @@ Floating style.
 FLAG_CANDIDATE
 ```
 
-Candidate style.
-
-&lt;p&gt;It's provided for the panel with type of SOFT_KEYBOARD. When the flag is set, the soft keyboard is a candidate window which will show the possible characters when user types a input code. Panel with candidate style will not be automatically shown or hidden by input method service. Input method application developers are supposed to control the panel status on their own.&lt;/p&gt;
+@brief Candidate style. <br> <br>&lt;p&gt;It's provided for the panel with type of SOFT_KEYBOARD. When the flag is set, the soft keyboard is a candidate window which will show the possible characters when user types a input code. Panel with candidate style will not be automatically shown or hidden by input method service. Input method application developers are supposed to control the panel status on their own.&lt;/p&gt;
 
 **Since:** 23
 

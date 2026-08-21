@@ -16,5 +16,5 @@ Represents a FrameNode of the **Image** type. This type of node does not allow c
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** TypedFrameNode<ImageInterface, ImageAttribute>
+**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;ImageInterface, ImageAttribute&gt;
 

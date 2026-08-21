@@ -16,5 +16,5 @@ export type EditableTitleBarItemV2 = EditableTitleBarMenuItemV2
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** EditableTitleBarMenuItemV2
+**属性类型：** [EditableTitleBarMenuItemV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlebarmenuitemv2-c.md)
 

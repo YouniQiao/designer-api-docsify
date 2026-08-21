@@ -1,6 +1,6 @@
 # InputAttribute
 
-Attribute of Input.
+@brief Describes the attributes of the edit box, including the text input type and Enter key function type.
 
 **Since:** 23
 
@@ -25,7 +25,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 abilityName?: string
 ```
 
-The name of the ability where the edit box is located.
+@brief Ability name set for the edit box. <br> <br>- If the ability name is set for the edit box, the length cannot exceed 127 characters. (A name longer than 127 characters will be automatically truncated to 127 characters.) <br>- If the ability name is not set for the edit box, the value is an empty string by default. <br>- This field is provided for the input method application when [attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach) is called.
 
 **Type:** string
 
@@ -41,7 +41,7 @@ The name of the ability where the edit box is located.
 consumeKeyEvents?: boolean
 ```
 
-Whether the editor supports consuming key events.
+@brief Whether the editor supports consuming key events.
 
 **Type:** boolean
 
@@ -61,7 +61,7 @@ Whether the editor supports consuming key events.
 enterKeyType: EnterKeyType
 ```
 
-Indicates the enter key type of the input method.
+@brief Function type represented by the Enter key.
 
 **Type:** EnterKeyType
 
@@ -77,7 +77,7 @@ Indicates the enter key type of the input method.
 placeholder?: string
 ```
 
-Placeholder text in the edit box.
+@brief Placeholder information set for the edit box. <br> <br>- When placeholder information is set for the edit box, the length cannot exceed 255 characters (a placeholder longer than 255 characters will be automatically truncated to 255 characters). It is used to prompt or guide users to enter temporary text or symbols. (For example, the placeholder prompts whether the input item is mandatory.) <br>- If no placeholder is set for the edit box, the value is an empty string by default. <br>- This field is provided for the input method application when [attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach) is called.
 
 **Type:** string
 
@@ -93,7 +93,7 @@ Placeholder text in the edit box.
 textInputType: TextInputType
 ```
 
-Indicates the text input type of the input method.
+@brief Enumerates the text input types.
 
 **Type:** [TextInputType](arkts-ime-inputmethod-textinputtype-e.md)
 

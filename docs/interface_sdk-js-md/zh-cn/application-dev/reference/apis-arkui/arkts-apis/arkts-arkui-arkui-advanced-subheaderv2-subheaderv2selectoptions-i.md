@@ -74,7 +74,7 @@ onSelect?: SubHeaderV2SelectOnSelect
 
 默认值：undefined
 
-**类型：** [SubHeaderV2SelectOnSelect](../../apis-default/arkts-apis/arkts-subheaderv2selectonselect-t.md)
+**类型：** [SubHeaderV2SelectOnSelect](arkts-arkui-subheaderv2selectonselect-t.md)
 
 **起始版本：** 18
 

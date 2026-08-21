@@ -25,7 +25,7 @@ Arrow with a size of 12 x 24 vp.
 
 If this parameter is not set or is set to **undefined**, the arrow is not displayed.
 
-**Type:** [OperateIcon](arkts-arkui-arkui-advanced-composelistitem-operateicon-c.md)
+**Type:** [OperateIcon](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitem-operateicon-c.md)
 
 **Since:** 10
 
@@ -47,7 +47,7 @@ Button.
 
 If this parameter is not set or is set to **undefined**, the button is not displayed.
 
-**Type:** [OperateButton](arkts-arkui-arkui-advanced-composelistitem-operatebutton-c.md)
+**Type:** [OperateButton](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitem-operatebutton-c.md)
 
 **Since:** 10
 
@@ -69,7 +69,7 @@ Check box with a size of 24 x 24 vp.
 
 If this parameter is not set or is set to **undefined**, the check box is not displayed.
 
-**Type:** [OperateCheck](arkts-arkui-arkui-advanced-composelistitem-operatecheck-c.md)
+**Type:** [OperateCheck](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitem-operatecheck-c.md)
 
 **Since:** 10
 
@@ -91,7 +91,7 @@ First icon with a size of 24 x 24 vp.
 
 If this parameter is not set or is set to **undefined**, the icon is not displayed.
 
-**Type:** [OperateIcon](arkts-arkui-arkui-advanced-composelistitem-operateicon-c.md)
+**Type:** [OperateIcon](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitem-operateicon-c.md)
 
 **Since:** 10
 
@@ -135,7 +135,7 @@ Radio button with a size of 24 x 24 vp.
 
 If this parameter is not set or is set to **undefined**, the radio button is not displayed.
 
-**Type:** [OperateCheck](arkts-arkui-arkui-advanced-composelistitem-operatecheck-c.md)
+**Type:** [OperateCheck](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitem-operatecheck-c.md)
 
 **Since:** 10
 
@@ -157,7 +157,7 @@ Second icon with a size of 24 x 24 vp.
 
 If this parameter is not set or is set to **undefined**, the icon is not displayed.
 
-**Type:** [OperateIcon](arkts-arkui-arkui-advanced-composelistitem-operateicon-c.md)
+**Type:** [OperateIcon](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitem-operateicon-c.md)
 
 **Since:** 10
 
@@ -179,7 +179,7 @@ Switch.
 
 If this parameter is not set or is set to **undefined**, the switch is not displayed.
 
-**Type:** [OperateCheck](arkts-arkui-arkui-advanced-composelistitem-operatecheck-c.md)
+**Type:** [OperateCheck](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitem-operatecheck-c.md)
 
 **Since:** 10
 

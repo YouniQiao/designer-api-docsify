@@ -1,6 +1,6 @@
 # KeyEvent
 
-In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
+@brief Represents the attributes of a key.
 
 **Since:** 23
 
@@ -20,9 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 readonly keyAction: int
 ```
 
-Key event type.
-
-- **2**: keydown event. - **3**: keyup event.
+@brief Key event type. <br> <br>- **2**: keydown event. <br>- **3**: keyup event.
 
 **Type:** int
 
@@ -38,7 +36,7 @@ Key event type.
 readonly keyCode: int
 ```
 
-Key value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md).
+@brief Key value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md).
 
 **Type:** int
 

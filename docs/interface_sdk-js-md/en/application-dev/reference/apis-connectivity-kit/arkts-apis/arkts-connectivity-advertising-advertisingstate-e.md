@@ -1,6 +1,6 @@
 # AdvertisingState
 
-The enum of advertising state.
+Enumerates the advertising states.
 
 **Since:** 26.0.0
 
@@ -14,7 +14,7 @@ The enum of advertising state.
 STARTED = 1
 ```
 
-Indicates that advertising has started.
+Advertising started.
 
 **Since:** 26.0.0
 
@@ -30,7 +30,7 @@ Indicates that advertising has started.
 STOPPED = 2
 ```
 
-Indicates that advertising has stopped.
+Advertising stopped.
 
 **Since:** 26.0.0
 

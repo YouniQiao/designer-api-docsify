@@ -16,7 +16,7 @@ import { GesturePoint } from '@kit.AccessibilityKit';
 function onTouchModeChange(callback: Callback<string>): void
 ```
 
-Register the observe of the touch mode changed.
+监听触摸浏览功能下的单击/双击操作模式变化事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -32,7 +32,7 @@ Register the observe of the touch mode changed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | 是 | callback Asynchronous callback interface. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调函数，在触摸浏览功能下的单击/双击操作模式变化时将状态通过此函数进行通知。 |
 
 **示例**
 

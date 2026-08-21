@@ -12,7 +12,7 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 function getConnectionState(params: ConnectionStateParams): ConnectionState
 ```
 
-获取数据传输的连接状态。
+获取与远端设备之间的端口通道连接状态。
 
 **起始版本：** 26.0.0
 
@@ -28,13 +28,13 @@ function getConnectionState(params: ConnectionStateParams): ConnectionState
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | [ConnectionStateParams](arkts-connectivity-datatransfer-connectionstateparams-i.md) | 是 | 获取连接状态参数 |
+| params | [ConnectionStateParams](arkts-connectivity-datatransfer-connectionstateparams-i.md) | 是 | 指明端口的连接参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ConnectionState | 返回数据传输的连接状态。 |
+| ConnectionState | 和远端设备的星闪端口通道连接状态。 |
 
 **错误码：**
 

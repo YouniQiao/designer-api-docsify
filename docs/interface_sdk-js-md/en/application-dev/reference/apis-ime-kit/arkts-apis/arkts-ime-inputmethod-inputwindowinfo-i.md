@@ -1,6 +1,6 @@
 # InputWindowInfo
 
-Information of input window.
+@brief Describes the window information of the input method keyboard.
 
 **Since:** 23
 
@@ -25,7 +25,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 displayId?: long
 ```
 
-Indicates the id of the display where the input window is shown.
+@brief ID of the display where the soft keyboard window is located. <br> <br>**Model restriction**: This parameter can be used only in the stage model.
 
 **Type:** long
 
@@ -43,7 +43,7 @@ Indicates the id of the display where the input window is shown.
 height: long
 ```
 
-Indicates the height of the input window, unit is px.
+@brief Height of the input method keyboard window, in px. The value must be an integer. The minimum value is 0 and the maximum value is the height of the current screen.
 
 **Type:** long
 
@@ -59,7 +59,7 @@ Indicates the height of the input window, unit is px.
 left: int
 ```
 
-Indicates the abscissa of the upper-left vertex of input window, unit is px.
+@brief Horizontal coordinate of the upper left corner of the input method keyboard window, in px. The value must be an integer. The minimum value is 0 and the maximum value is the width of the current screen.
 
 **Type:** int
 
@@ -75,7 +75,7 @@ Indicates the abscissa of the upper-left vertex of input window, unit is px.
 name: string
 ```
 
-Indicates name of the input window.
+@brief Name of the input method keyboard window.
 
 **Type:** string
 
@@ -91,7 +91,7 @@ Indicates name of the input window.
 top: int
 ```
 
-Indicates the ordinate of the upper-left vertex of input window, unit is px.
+@brief Vertical coordinate of the upper left corner of the input method keyboard window, in px. The value must be an integer. The minimum value is 0 and the maximum value is the height of the current screen.
 
 **Type:** int
 
@@ -107,7 +107,7 @@ Indicates the ordinate of the upper-left vertex of input window, unit is px.
 width: long
 ```
 
-Indicates the width of the input window, unit is px.
+@brief Width of the input method keyboard window, in px. The value must be an integer. The minimum value is 0 and the maximum value is the width of the current screen.
 
 **Type:** long
 

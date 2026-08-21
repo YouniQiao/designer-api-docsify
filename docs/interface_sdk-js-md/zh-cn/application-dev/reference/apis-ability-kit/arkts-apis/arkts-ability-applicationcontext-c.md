@@ -825,7 +825,7 @@ offApplicationStateChange(callback?: ApplicationStateChangeCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | 否 | 回调函数。取值可以为使用 [ApplicationContext.onApplicationStateChange](#onapplicationstatechange)方法定义的callback回 调，也可以为空。 - 如果传入已定义的回调，则取消该监听。 - 如果未传入参数，则取消当前应用对所有前后台切换事件的监听。 |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | 否 | 回调函数。取值可以为使用 [ApplicationContext.onApplicationStateChange](#onapplicationstatechange)方法定义的callback回 调，也可以为空。 - 如果传入已定义的回调，则取消该监听。 - 如果未传入参数，则取消当前应用对所有前后台切换事件的监听。 |
 
 **示例**
 
@@ -1240,7 +1240,7 @@ off(type: 'applicationStateChange', callback?: ApplicationStateChangeCallback): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | 是 | 此类型表示当前应用进程状态变化，固定为'applicationStateChange'。 |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | 否 | 回调函数。取值可以为使用 [ApplicationContext.on('applicationStateChange')](#onabilitylifecycle) 方法定义的callback回调，也可以为空。<br/>-?如果传入已定义的回调，则取消该监听。 <br/>-?如果未传入参数，则取消所有已注册的该类型事件的监听。 |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | 否 | 回调函数。取值可以为使用 [ApplicationContext.on('applicationStateChange')](#onabilitylifecycle) 方法定义的callback回调，也可以为空。<br/>-?如果传入已定义的回调，则取消该监听。 <br/>-?如果未传入参数，则取消所有已注册的该类型事件的监听。 |
 
 **错误码：**
 
@@ -1519,7 +1519,7 @@ onApplicationStateChange(callback: ApplicationStateChangeCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | 是 | 应用前后台切换时触发的回调方法。 |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | 是 | 应用前后台切换时触发的回调方法。 |
 
 **示例**
 
@@ -1875,7 +1875,7 @@ on(type: 'applicationStateChange', callback: ApplicationStateChangeCallback): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | 是 | 此类型表示当前应用进程状态变化，固定为'applicationStateChange'。 |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | 是 | 当前应用进程状态切换时触发的回调方法。 |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | 是 | 当前应用进程状态切换时触发的回调方法。 |
 
 **错误码：**
 

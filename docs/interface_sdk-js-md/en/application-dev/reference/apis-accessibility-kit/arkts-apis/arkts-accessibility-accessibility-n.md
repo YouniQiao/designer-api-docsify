@@ -1,6 +1,6 @@
 # accessibility
 
-Accessibility
+This module provides accessibility features, including obtaining the accessibility application list, obtaining the accessibility application enabling state, obtaining the captions configuration, sending accessibility events, and listening for accessibility application state changes.
 
 **Since:** 23
 

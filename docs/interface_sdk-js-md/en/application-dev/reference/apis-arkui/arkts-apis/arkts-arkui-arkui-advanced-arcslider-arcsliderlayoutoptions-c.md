@@ -34,7 +34,7 @@ A constructor used to create an **ArcSliderLayoutOptions** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ArcSliderLayoutOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptionsconstructoroptions-i.md) | No | Construction information for **ArcSliderLayoutOptions**. |
+| options | [ArcSliderLayoutOptionsConstructorOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderlayoutoptionsconstructoroptions-i.md) | No | Construction information for **ArcSliderLayoutOptions**. |
 
 ## position
 
@@ -49,7 +49,7 @@ Default value: **ArcSliderPosition.RIGHT**
 
 @Trace
 
-**Type:** [ArcSliderPosition](arkts-arkui-arkui-advanced-arcslider-arcsliderposition-e.md)
+**Type:** [ArcSliderPosition](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderposition-e.md)
 
 **Default:** ArcSliderPosition.RIGHT
 

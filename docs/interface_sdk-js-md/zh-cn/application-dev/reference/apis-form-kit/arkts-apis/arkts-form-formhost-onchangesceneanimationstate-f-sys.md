@@ -28,7 +28,7 @@ You can use this method to listen to the event of change scene animation state.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;formInfo.ChangeSceneAnimationStateRequest&gt; | 是 | The callback of change scene animation state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.ChangeSceneAnimationStateRequest&gt; | 是 | The callback of change scene animation state. |
 
 **错误码：**
 

@@ -12,7 +12,11 @@ import { nfcController } from '@kit.ConnectivityKit';
 function closeNfc(): boolean
 ```
 
-Disables NFC.
+Closes NFC.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. Use &gt; [disableNfc](arkts-connectivity-nfccontroller-disablenfc-f.md) instead.
 
 **Since:** 7
 
@@ -30,5 +34,5 @@ Disables NFC.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 

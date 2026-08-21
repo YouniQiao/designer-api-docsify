@@ -1,6 +1,12 @@
 # IsoDepTag
 
-Provides methods for accessing IsoDep tag.
+Provides APIs to access ISO-DEP (ISO 14443-4) properties and I/O operations on a tag. This class inherits from **TagSession**.
+
+**TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).
+
+For details about how to obtain an **IsoDepTag** object, see [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).
+
+The following describes the unique APIs of **IsoDepTag**.
 
 **Inheritance/Implementation:** IsoDepTag extends TagSession
 
@@ -16,11 +22,11 @@ Provides methods for accessing IsoDep tag.
 getHiLayerResponse(): int[]
 ```
 
-Gets IsoDep HiLayer Response bytes of the tag, which is based on NfcB RF technology. It could be null if not based on NfcB.
+Obtains the higher-layer response bytes for the given tag. This API applies only to the IsoDep tags that use the NFC-B technology.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IsoDepTag-getHiLayerResponse(): int[]--><!--Device-IsoDepTag-getHiLayerResponse(): int[]-End-->
 
@@ -30,7 +36,7 @@ Gets IsoDep HiLayer Response bytes of the tag, which is based on NfcB RF technol
 
 | Type | Description |
 | --- | --- |
-| int[] | Returns HiLayer Response bytes, the length could be 0. |
+| int[] | Higher-layer response bytes obtained, which consist of hexadecimal numbers ranging from **0x00** to **0xFF**. If the IsoDep tag uses the NFC-A technology, **null** will be returned. |
 
 **Examples**
 
@@ -48,11 +54,11 @@ console.info("isoDep hiLayerResponse: " + hiLayerResponse);
 getHistoricalBytes(): int[]
 ```
 
-Gets IsoDep Historical bytes of the tag, which is based on NfcA RF technology. It could be null if not based on NfcA.
+Obtains the historical bytes for the given tag. This API applies only to the IsoDep tags that use the NFC-A technology.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IsoDepTag-getHistoricalBytes(): int[]--><!--Device-IsoDepTag-getHistoricalBytes(): int[]-End-->
 
@@ -62,7 +68,7 @@ Gets IsoDep Historical bytes of the tag, which is based on NfcA RF technology. I
 
 | Type | Description |
 | --- | --- |
-| int[] | Returns the Historical bytes, the length could be 0. |
+| int[] | Historical bytes obtained, which consist of hexadecimal numbers ranging from **0x00** to **0xFF**. If the IsoDep tag uses the NFC-B technology, **null** will be returned. |
 
 **Examples**
 
@@ -80,13 +86,13 @@ console.info("isoDep historicalBytes: " + historicalBytes);
 isExtendedApduSupported(): Promise<boolean>
 ```
 
-Checks if extended apdu length supported or not.
+Checks whether extended APDUs are supported. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IsoDepTag-isExtendedApduSupported(): Promise<boolean>--><!--Device-IsoDepTag-isExtendedApduSupported(): Promise<boolean>-End-->
 
@@ -96,7 +102,7 @@ Checks if extended apdu length supported or not.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns true if extended apdu length supported, otherwise false. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that extended APDUs are supported, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -105,7 +111,7 @@ Checks if extended apdu length supported or not.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -141,13 +147,13 @@ function nfcTechDemo() {
 isExtendedApduSupported(callback: AsyncCallback<boolean>): void
 ```
 
-Checks if extended apdu length supported or not.
+Checks whether extended APDUs are supported. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IsoDepTag-isExtendedApduSupported(callback: AsyncCallback<boolean>): void--><!--Device-IsoDepTag-isExtendedApduSupported(callback: AsyncCallback<boolean>): void-End-->
 
@@ -157,7 +163,7 @@ Checks if extended apdu length supported or not.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the operation result. The value **true** indicates that extended APDUs are supported, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -166,7 +172,7 @@ Checks if extended apdu length supported or not.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 

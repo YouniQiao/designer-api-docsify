@@ -14,5 +14,5 @@ Array of [NetStatsInfoSequenceItem](arkts-network-statistics-netstatsinfosequenc
 
 **System API:** This is a system API.
 
-**Property type:** Array<NetStatsInfoSequenceItem>
+**Property type:** Array&lt;[NetStatsInfoSequenceItem](arkts-network-statistics-netstatsinfosequenceitem-i-sys.md)&gt;
 

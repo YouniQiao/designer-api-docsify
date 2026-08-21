@@ -36,7 +36,7 @@ function on(type: 'deviceSelected', token: number, callback: Callback<Array<Cont
 | --- | --- | --- | --- |
 | type | 'deviceSelected' | 是 | 监听的事件类型，固定值"deviceSelected"。 |
 | token | number | 是 | 注册后的token。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;ContinuationResult&gt;&gt; | 是 | 当用户从设备选择模块中选择设备时调用，返回设备ID、设备类型和设备名称供开发者使用。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;ContinuationResult&gt;&gt; | 是 | 当用户从设备选择模块中选择设备时调用，返回设备ID、设备类型和设备名称供开发者使用。 |
 
 **错误码：**
 

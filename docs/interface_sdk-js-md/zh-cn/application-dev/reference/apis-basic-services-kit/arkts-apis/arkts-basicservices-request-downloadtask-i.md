@@ -39,7 +39,7 @@ delete(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示移除下载任务成功；返回false表示移除下载任务失败。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示移除下载任务成功；返回false表示移除下载任务失败。 |
 
 **错误码：**
 
@@ -209,7 +209,7 @@ getTaskInfo(callback: AsyncCallback<DownloadInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;DownloadInfo&gt; | 是 | 回调函数。当查询下载任务操作成功，err为undefined，data为获取到的DownloadInfo对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DownloadInfo&gt; | 是 | 回调函数。当查询下载任务操作成功，err为undefined，data为获取到的DownloadInfo对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -381,7 +381,7 @@ getTaskMimeType(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当查询下载任务MimeType成功，err为undefined，data为获取到的下载任务的MimeType的对象；否则为错误对 象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当查询下载任务MimeType成功，err为undefined，data为获取到的下载任务的MimeType的对象；否则为错误对 象。 |
 
 **错误码：**
 
@@ -1040,61 +1040,7 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    let completeCallback1 = () => {
-      console.info('Download delete complete notification.');
-    };
-    let completeCallback2 = () => {
-      console.info('Download delete complete notification.');
-    };
-    downloadTask.on('complete', completeCallback1);
-    downloadTask.on('complete', completeCallback2);
-    // 表示取消completeCallback1的订阅
-    downloadTask.off('complete', completeCallback1);
-    // 表示取消订阅下载任务完成的所有回调
-    downloadTask.off('complete');
-
-    let pauseCallback1 = () => {
-      console.info('Download delete pause notification.');
-    };
-    let pauseCallback2 = () => {
-      console.info('Download delete pause notification.');
-    };
-    downloadTask.on('pause', pauseCallback1);
-    downloadTask.on('pause', pauseCallback2);
-    // 表示取消pauseCallback1的订阅
-    downloadTask.off('pause', pauseCallback1);
-    // 表示取消订阅下载任务暂停的所有回调
-    downloadTask.off('pause');
-
-    let removeCallback1 = () => {
-      console.info('Download delete remove notification.');
-    };
-    let removeCallback2 = () => {
-      console.info('Download delete remove notification.');
-    };
-    downloadTask.on('remove', removeCallback1);
-    downloadTask.on('remove', removeCallback2);
-    // 表示取消removeCallback1的订阅
-    downloadTask.off('remove', removeCallback1);
-    // 表示取消订阅下载任务移除的所有回调
-    downloadTask.off('remove');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 off_complete
 
 ## off('progress')
 
@@ -1184,61 +1130,7 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    let completeCallback1 = () => {
-      console.info('Download delete complete notification.');
-    };
-    let completeCallback2 = () => {
-      console.info('Download delete complete notification.');
-    };
-    downloadTask.on('complete', completeCallback1);
-    downloadTask.on('complete', completeCallback2);
-    // 表示取消completeCallback1的订阅
-    downloadTask.off('complete', completeCallback1);
-    // 表示取消订阅下载任务完成的所有回调
-    downloadTask.off('complete');
-
-    let pauseCallback1 = () => {
-      console.info('Download delete pause notification.');
-    };
-    let pauseCallback2 = () => {
-      console.info('Download delete pause notification.');
-    };
-    downloadTask.on('pause', pauseCallback1);
-    downloadTask.on('pause', pauseCallback2);
-    // 表示取消pauseCallback1的订阅
-    downloadTask.off('pause', pauseCallback1);
-    // 表示取消订阅下载任务暂停的所有回调
-    downloadTask.off('pause');
-
-    let removeCallback1 = () => {
-      console.info('Download delete remove notification.');
-    };
-    let removeCallback2 = () => {
-      console.info('Download delete remove notification.');
-    };
-    downloadTask.on('remove', removeCallback1);
-    downloadTask.on('remove', removeCallback2);
-    // 表示取消removeCallback1的订阅
-    downloadTask.off('remove', removeCallback1);
-    // 表示取消订阅下载任务移除的所有回调
-    downloadTask.off('remove');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 off_complete
 
 ## onComplete
 
@@ -1631,37 +1523,7 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    let completeCallback = () => {
-      console.info('Download task completed.');
-    };
-    downloadTask.on('complete', completeCallback);
-
-    let pauseCallback = () => {
-      console.info('Download task pause.');
-    };
-    downloadTask.on('pause', pauseCallback);
-
-    let removeCallback = () => {
-      console.info('Download task remove.');
-    };
-    downloadTask.on('remove', removeCallback);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 on_complete
 
 ## on('progress')
 
@@ -1747,37 +1609,7 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    let completeCallback = () => {
-      console.info('Download task completed.');
-    };
-    downloadTask.on('complete', completeCallback);
-
-    let pauseCallback = () => {
-      console.info('Download task pause.');
-    };
-    downloadTask.on('pause', pauseCallback);
-
-    let removeCallback = () => {
-      console.info('Download task remove.');
-    };
-    downloadTask.on('remove', removeCallback);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 on_complete
 
 ## pause
 
@@ -1807,7 +1639,7 @@ pause(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当暂停下载任务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当暂停下载任务成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1901,7 +1733,7 @@ query(callback: AsyncCallback<DownloadInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;DownloadInfo&gt; | 是 | 回调函数。当查询下载任务成功，err为undefined，data为获取到的DownloadInfo对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DownloadInfo&gt; | 是 | 回调函数。当查询下载任务成功，err为undefined，data为获取到的DownloadInfo对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -1995,7 +1827,7 @@ queryMimeType(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当查询下载任务的MimeType成功，err为undefined，data为获取到的任务的MimeType对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当查询下载任务的MimeType成功，err为undefined，data为获取到的任务的MimeType对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -2089,7 +1921,7 @@ remove(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示移除下载任务成功；返回false表示移除下载任务失败。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示移除下载任务成功；返回false表示移除下载任务失败。 |
 
 **错误码：**
 
@@ -2179,7 +2011,7 @@ restore(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示重新启动已暂停的下载任务成功；返回false表示重新启动下载任务失败。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示重新启动已暂停的下载任务成功；返回false表示重新启动下载任务失败。 |
 
 **错误码：**
 
@@ -2355,7 +2187,7 @@ resume(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当重新启动已暂停的下载任务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当重新启动已暂停的下载任务成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -2445,7 +2277,7 @@ suspend(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示暂停下载任务成功；返回false表示暂停下载任务失败。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示暂停下载任务成功；返回false表示暂停下载任务失败。 |
 
 **错误码：**
 

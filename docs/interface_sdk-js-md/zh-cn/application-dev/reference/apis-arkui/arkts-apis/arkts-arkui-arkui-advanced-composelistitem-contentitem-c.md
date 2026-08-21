@@ -71,7 +71,7 @@ iconStyle?: IconType
 
 默认不设置或设置为undefined，icon图标资源不显示。
 
-**类型：** [IconType](arkts-arkui-arkui-advanced-composelistitem-icontype-e.md)
+**类型：** [IconType](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitem-icontype-e.md)
 
 **起始版本：** 10
 

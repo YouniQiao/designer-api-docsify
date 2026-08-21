@@ -1,6 +1,6 @@
 # Operation
 
-Enum of property operation indication.
+Enumerates the operation types supported by a property.
 
 **Since:** 26.0.0
 
@@ -14,7 +14,7 @@ Enum of property operation indication.
 READABLE = 0x01
 ```
 
-When this bit is set, the property value can be read.
+Data is readable.
 
 **Since:** 26.0.0
 
@@ -30,7 +30,7 @@ When this bit is set, the property value can be read.
 WRITE_NO_RESPONSE = 0x02
 ```
 
-When this bit is set, the property value can be written without response after writing.
+Write requests without responses are supported.
 
 **Since:** 26.0.0
 
@@ -46,7 +46,7 @@ When this bit is set, the property value can be written without response after w
 WRITE_WITH_RESPONSE = 0x04
 ```
 
-When this bit is set, the property value can be written, and a response is generated for the client.
+Write requests with responses are supported.
 
 **Since:** 26.0.0
 
@@ -62,7 +62,7 @@ When this bit is set, the property value can be written, and a response is gener
 NOTIFY = 0x08
 ```
 
-When this bit is set, the property value is delivered to the client via notification.
+Notifications are supported.
 
 **Since:** 26.0.0
 

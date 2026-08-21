@@ -4,7 +4,7 @@
 export type SelectionChangeCallback = (oldBegin: int, oldEnd: int, newBegin: int, newEnd: int) => void
 ```
 
-The callback of 'selectionChange' event.
+@brief The callback of 'selectionChange' event.
 
 **Since:** 23
 

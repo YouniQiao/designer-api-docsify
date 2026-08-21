@@ -16,5 +16,5 @@ Define the FrameNode type for ListItemGroup.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** ListItemGroupFrameNode
+**属性类型：** [ListItemGroupFrameNode](arkts-typenode-listitemgroupframenode-c.md)
 

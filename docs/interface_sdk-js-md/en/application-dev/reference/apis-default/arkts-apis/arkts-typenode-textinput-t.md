@@ -16,5 +16,5 @@ Define the FrameNode type for TextInput.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** TextInputFrameNode
+**Property type:** [TextInputFrameNode](arkts-typenode-textinputframenode-c.md)
 

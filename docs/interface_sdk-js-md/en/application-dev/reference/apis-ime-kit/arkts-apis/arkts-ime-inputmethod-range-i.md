@@ -1,6 +1,6 @@
 # Range
 
-Range of selected text.
+@brief Describes the range of the selected text.
 
 **Since:** 23
 
@@ -25,7 +25,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 end: int
 ```
 
-Indicates the index of the last character of the selected text.
+@brief Index of the last selected character in the text box. The value is an integer greater than or equal to 0, and cannot exceed the actual text length. The **end** value must be greater than the **start** value.
 
 **Type:** int
 
@@ -41,7 +41,7 @@ Indicates the index of the last character of the selected text.
 start: int
 ```
 
-Indicates the index of the first character of the selected text.
+@brief Index of the first selected character in the text box. The value is an integer greater than or equal to 0, and cannot exceed the actual text length.
 
 **Type:** int
 

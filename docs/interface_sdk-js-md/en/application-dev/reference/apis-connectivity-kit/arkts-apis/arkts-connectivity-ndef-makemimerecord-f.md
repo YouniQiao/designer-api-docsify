@@ -12,11 +12,11 @@ import { tag } from '@kit.ConnectivityKit';
 function makeMimeRecord(mimeType: string, mimeData: int[]): NdefRecord
 ```
 
-Creates an NDEF record with mime data.
+Creates an NDEF record based on the specified MIME data and type.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ndef-function makeMimeRecord(mimeType: string, mimeData: int[]): NdefRecord--><!--Device-ndef-function makeMimeRecord(mimeType: string, mimeData: int[]): NdefRecord-End-->
 
@@ -26,14 +26,14 @@ Creates an NDEF record with mime data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mimeType | string | Yes | type of mime data for new an NDEF record. |
-| mimeData | int[] | Yes | mime data for new an NDEF record. |
+| mimeType | string | Yes | MIME type that complies with RFC rules, for example, **text/plain** or **image/jpeg**. |
+| mimeData | int[] | Yes | MIME data, which consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NdefRecord](arkts-connectivity-tag-ndefrecord-i.md) | The instance of NdefRecord. |
+| [NdefRecord](arkts-connectivity-tag-ndefrecord-i.md) | NDEF record created. For details, see *NFCForum-TS-NDEF_1.0*. |
 
 **Error codes:**
 

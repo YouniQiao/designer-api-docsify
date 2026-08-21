@@ -30,7 +30,7 @@ function getCallRestrictionStatus(slotId: int, type: CallRestrictionType, callba
 | --- | --- | --- | --- |
 | slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
 | type | [CallRestrictionType](arkts-telephony-call-callrestrictiontype-e-sys.md) | 是 | 呼叫限制类型。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RestrictionStatus](arkts-telephony-call-restrictionstatus-e-sys.md)&gt; | 是 | 回调函数。返回限制状态。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RestrictionStatus](arkts-telephony-call-restrictionstatus-e-sys.md)&gt; | 是 | 回调函数。返回限制状态。 |
 
 **错误码：**
 

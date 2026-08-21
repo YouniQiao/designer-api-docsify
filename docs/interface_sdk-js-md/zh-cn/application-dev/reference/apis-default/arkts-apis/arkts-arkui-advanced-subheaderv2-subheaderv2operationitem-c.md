@@ -37,7 +37,7 @@ constructor(options: SubHeaderV2OperationItemOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [SubHeaderV2OperationItemOptions](arkts-arkui-advanced-subheaderv2-subheaderv2operationitemoptions-i.md) | 是 | 操作项配置信息。用于构建SubHeaderV2OperationItem对象。 |
+| options | [SubHeaderV2OperationItemOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationitemoptions-i.md) | 是 | 操作项配置信息。用于构建SubHeaderV2OperationItem对象。 |
 
 ## accessibilityDescription
 
@@ -129,7 +129,7 @@ constructor(options: SubHeaderV2OperationItemOptions)
 
 操作区事件回调。默认值：() =&gt; void。
 
-**类型：** [SubHeaderV2OperationItemAction](arkts-subheaderv2operationitemaction-t.md)
+**类型：** [SubHeaderV2OperationItemAction](../../apis-arkui/arkts-apis/arkts-arkui-subheaderv2operationitemaction-t.md)
 
 **起始版本：** 23
 
@@ -150,7 +150,7 @@ constructor(options: SubHeaderV2OperationItemOptions)
 
 操作区元素内容。
 
-**类型：** [SubHeaderV2OperationItemType](arkts-subheaderv2operationitemtype-t.md)
+**类型：** [SubHeaderV2OperationItemType](../../apis-arkui/arkts-apis/arkts-arkui-subheaderv2operationitemtype-t.md)
 
 **起始版本：** 23
 

@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> - 以下API需先使用UIContext中的[getMagnifier()](arkts-arkui-arkui-uicontext-uicontext-c.md#getmagnifier)方法获取Magnifier实例，再通过此实例调用对应方法。
+> - 以下API需先使用UIContext中的[getMagnifier()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getmagnifier)方法获取Magnifier实例，再通过此实例调用对应方法。
 > 
 > - 与文本类组件自带的放大镜能力互不影响，文本类组件推荐使用自带的放大镜能力。
 
@@ -53,7 +53,7 @@ bind(id: string): void
 
 **示例**
 
-请参考[getMagnifier](arkts-arkui-arkui-uicontext-uicontext-c.md#getmagnifier)的示例。
+请参考[getMagnifier](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getmagnifier)的示例。
 
 ## show
 
@@ -90,7 +90,7 @@ show(x: number, y: number): void
 
 **示例**
 
-请参考[getMagnifier](arkts-arkui-arkui-uicontext-uicontext-c.md#getmagnifier)的示例。
+请参考[getMagnifier](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getmagnifier)的示例。
 
 ## unbind
 
@@ -112,5 +112,5 @@ unbind(): void
 
 **示例**
 
-请参考[getMagnifier](arkts-arkui-arkui-uicontext-uicontext-c.md#getmagnifier)的示例。
+请参考[getMagnifier](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getmagnifier)的示例。
 

@@ -46,7 +46,7 @@ alignItems(value: HorizontalAlign | undefined): LazyColumnLayoutAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+| [LazyColumnLayoutAttribute](../../apis-default/arkts-apis/arkts-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
 
 ## footer
 
@@ -76,7 +76,7 @@ footer(builder: CustomBuilder | undefined): LazyColumnLayoutAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+| [LazyColumnLayoutAttribute](../../apis-default/arkts-apis/arkts-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
 
 ## header
 
@@ -106,7 +106,7 @@ header(builder: CustomBuilder | undefined): LazyColumnLayoutAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+| [LazyColumnLayoutAttribute](../../apis-default/arkts-apis/arkts-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
 
 ## onVisibleIndexesChange
 
@@ -136,7 +136,7 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): La
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+| [LazyColumnLayoutAttribute](../../apis-default/arkts-apis/arkts-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
 
 ## space
 
@@ -166,7 +166,7 @@ space(space: LengthMetrics | undefined): LazyColumnLayoutAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+| [LazyColumnLayoutAttribute](../../apis-default/arkts-apis/arkts-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
 
 ## sticky
 
@@ -196,5 +196,5 @@ sticky(sticky: StickyStyle | undefined): LazyColumnLayoutAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+| [LazyColumnLayoutAttribute](../../apis-default/arkts-apis/arkts-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
 

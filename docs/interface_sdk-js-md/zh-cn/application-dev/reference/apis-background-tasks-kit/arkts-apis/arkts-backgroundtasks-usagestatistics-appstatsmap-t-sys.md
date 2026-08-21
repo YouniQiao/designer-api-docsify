@@ -12,5 +12,5 @@ type AppStatsMap = Record<string, Array<BundleStatsInfo>>
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** Record<string, Array<BundleStatsInfo>>
+**属性类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Array&lt;BundleStatsInfo&gt;&gt;
 

@@ -26,7 +26,7 @@ Default value: **ArcSliderPosition.RIGHT**
 
 @Trace
 
-**Type:** [ArcSliderPosition](arkts-arkui-arkui-advanced-arcslider-arcsliderposition-e.md)
+**Type:** [ArcSliderPosition](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderposition-e.md)
 
 **Default:** ArcSliderPosition.RIGHT
 

@@ -12,7 +12,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function offSystemPanelStatusChange(callback?: Callback<SystemPanelStatus>): void
 ```
 
-Unsubscribe from the system panel status change event.
+@brief Unsubscribes from system panel state change events.
 
 **Since:** 26.0.0
 
@@ -28,7 +28,7 @@ Unsubscribe from the system panel status change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SystemPanelStatus](arkts-ime-inputmethodsystempanelmanager-systempanelstatus-i-sys.md)&gt; | No | callback triggered when the system panel status changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SystemPanelStatus](arkts-ime-inputmethodsystempanelmanager-systempanelstatus-i-sys.md)&gt; | No | Callback function. If this parameter is left empty, all callbacks will be unsubscribed from. |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # CdsmInfo
 
-Describes the coordinated devices set information.
+Represents the CDSM information.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { cdsm } from '@kit.ConnectivityKit';
 members: CdsmMemberInfo[]
 ```
 
-Indicates the members of coordinated devices set.
+Array of member device information in the coordinated devices set. Each element in the array contains the device address and connection status.
 
 **Type:** [CdsmMemberInfo](arkts-connectivity-cdsm-cdsmmemberinfo-i.md)[]
 

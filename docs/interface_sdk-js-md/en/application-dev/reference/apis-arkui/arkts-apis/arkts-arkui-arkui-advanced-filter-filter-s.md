@@ -22,7 +22,7 @@ import { Filter, FilterParams, FilterResult, FilterType } from '@kit.ArkUI';
 
 FilterParams, Additional filter item parameter. The filter item name is displayed and can be deselected.
 
-**Type:** [FilterParams](arkts-arkui-arkui-advanced-filter-filterparams-c.md)
+**Type:** [FilterParams](../../apis-default/arkts-apis/arkts-arkui-advanced-filter-filterparams-i.md)
 
 **Since:** 22
 
@@ -62,7 +62,7 @@ Container in the user-defined filtering result display area.
 
 FilterType, Filter display style type.
 
-**Type:** [FilterType](arkts-arkui-arkui-advanced-filter-filtertype-e.md)
+**Type:** [FilterType](../../apis-default/arkts-apis/arkts-arkui-advanced-filter-filtertype-e.md)
 
 **Since:** 22
 
@@ -82,7 +82,7 @@ FilterType, Filter display style type.
 
 Multi-dimensional filtering parameters.
 
-**Type:** Array&lt;[FilterParams](arkts-arkui-arkui-advanced-filter-filterparams-c.md)&gt;
+**Type:** Array&lt;[FilterParams](../../apis-default/arkts-apis/arkts-arkui-advanced-filter-filterparams-i.md)&gt;
 
 **Since:** 22
 
@@ -102,7 +102,7 @@ onFilterChanged: (filterResults: Array<FilterResult>) => void
 
 FilterParams, Callback method after a user clicks a filter item.
 
-**Type:** (filterResults: Array&lt;[FilterResult](arkts-arkui-arkui-advanced-filter-filterresult-c.md)&gt;) =&gt; void
+**Type:** (filterResults: Array&lt;[FilterResult](../../apis-default/arkts-apis/arkts-arkui-advanced-filter-filterresult-i.md)&gt;) =&gt; void
 
 **Since:** 22
 

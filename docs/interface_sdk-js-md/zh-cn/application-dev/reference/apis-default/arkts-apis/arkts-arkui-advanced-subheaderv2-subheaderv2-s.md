@@ -53,7 +53,7 @@ The method to build component.
 
 当title使用secondaryTitle属性时，设置icon属性才会生效。
 
-**类型：** [SubHeaderV2IconType](arkts-subheaderv2icontype-t.md)
+**类型：** [SubHeaderV2IconType](../../apis-arkui/arkts-apis/arkts-arkui-subheaderv2icontype-t.md)
 
 **起始版本：** 23
 
@@ -78,7 +78,7 @@ The method to build component.
 
 当operationType为ICON_GROUP时，数组最多包含三个元素。
 
-**类型：** [SubHeaderV2OperationItem](arkts-arkui-advanced-subheaderv2-subheaderv2operationitem-c.md)[]
+**类型：** [SubHeaderV2OperationItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationitem-c.md)[]
 
 **起始版本：** 23
 
@@ -99,7 +99,7 @@ The method to build component.
 
 默认值：SubHeaderV2OperationType.BUTTON
 
-**类型：** [SubHeaderV2OperationType](arkts-arkui-advanced-subheaderv2-subheaderv2operationtype-e.md)
+**类型：** [SubHeaderV2OperationType](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationtype-e.md)
 
 **起始版本：** 23
 
@@ -120,7 +120,7 @@ The method to build component.
 
 默认值：undefined
 
-**类型：** [SubHeaderV2Select](arkts-arkui-advanced-subheaderv2-subheaderv2select-c.md)
+**类型：** [SubHeaderV2Select](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheaderv2-subheaderv2select-c.md)
 
 **起始版本：** 23
 
@@ -141,7 +141,7 @@ The method to build component.
 
 默认值：undefined
 
-**类型：** [SubHeaderV2Title](arkts-arkui-advanced-subheaderv2-subheaderv2title-c.md)
+**类型：** [SubHeaderV2Title](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheaderv2-subheaderv2title-c.md)
 
 **起始版本：** 23
 
@@ -164,7 +164,7 @@ The method to build component.
 
 默认值：() =&gt; void
 
-**类型：** [SubHeaderV2TitleBuilder](arkts-subheaderv2titlebuilder-t.md)
+**类型：** [SubHeaderV2TitleBuilder](../../apis-arkui/arkts-apis/arkts-arkui-subheaderv2titlebuilder-t.md)
 
 **起始版本：** 23
 

@@ -48,7 +48,7 @@ item?: ComposeTitleBarMenuItem
 
 A single menu item for the profile picture on the left.
 
-**Type:** [ComposeTitleBarMenuItem](arkts-arkui-advanced-composetitlebar-composetitlebarmenuitem-c.md)
+**Type:** [ComposeTitleBarMenuItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composetitlebar-composetitlebarmenuitem-c.md)
 
 **Since:** 23
 
@@ -68,7 +68,7 @@ menuItems?: Array<ComposeTitleBarMenuItem>
 
 List of menu items on the right.
 
-**Type:** Array&lt;[ComposeTitleBarMenuItem](arkts-arkui-advanced-composetitlebar-composetitlebarmenuitem-c.md)&gt;
+**Type:** Array&lt;[ComposeTitleBarMenuItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composetitlebar-composetitlebarmenuitem-c.md)&gt;
 
 **Since:** 23
 

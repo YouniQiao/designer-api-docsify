@@ -44,7 +44,7 @@ primaryTitle?: ResourceStr
 
 标题内容。
 
-当[SubHeaderV2](../../apis-default/arkts-apis/arkts-arkui-advanced-subheaderv2-subheaderv2-s.md)中同时使用primaryTitle、secondaryTitle、icon属性时，primaryTitle将不会显示。
+当[SubHeaderV2](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2-s.md)中同时使用primaryTitle、secondaryTitle、icon属性时，primaryTitle将不会显示。
 
 默认值：undefined
 

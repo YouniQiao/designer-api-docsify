@@ -2,7 +2,7 @@
 
 Defines the type of SegmentButton options of capsule type.
 
-**Inheritance/Implementation:** CapsuleSegmentButtonOptions extends [CapsuleSegmentButtonConstructionOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-capsulesegmentbuttonconstructionoptions-i.md)
+**Inheritance/Implementation:** CapsuleSegmentButtonOptions extends [CapsuleSegmentButtonConstructionOptions](arkts-arkui-advanced-segmentbutton-capsulesegmentbuttonconstructionoptions-i.md)
 
 **Since:** 23
 

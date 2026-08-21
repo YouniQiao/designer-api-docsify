@@ -13,14 +13,14 @@ import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExten
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityExtensionAbility](arkts-accessibility-application-accessibilityextensionability-accessibilityextensionability-c.md) | AccessibilityExtensionAbility provides the accessibility extension service capability based on the ExtensionAbility framework. |
+| [AccessibilityExtensionAbility](arkts-accessibility-application-accessibilityextensionability-accessibilityextensionability-c.md) | AccessibilityExtensionAbility provides accessibility extension capabilities based on the ExtensionAbility framework, including connecting to and disconnecting from accessibility services, processing accessibility events, and processing accessibility key events. |
 
 <!--Del-->
 ### Classes(System API)
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityExtensionAbility](arkts-accessibility-application-accessibilityextensionability-accessibilityextensionability-c-sys.md) | AccessibilityExtensionAbility provides the accessibility extension service capability based on the ExtensionAbility framework. |
+| [AccessibilityExtensionAbility](arkts-accessibility-application-accessibilityextensionability-accessibilityextensionability-c-sys.md) | AccessibilityExtensionAbility provides accessibility extension capabilities based on the ExtensionAbility framework, including connecting to and disconnecting from accessibility services, processing accessibility events, and processing accessibility key events. |
 <!--DelEnd-->
 
 ### Interfaces
@@ -58,11 +58,11 @@ import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExten
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityVirtualNode](arkts-accessibility-accessibilityvirtualnode-t-sys.md) | Indicates the accessibility virtual node. |
-| [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | Indicates the condition of the search focus. |
-| [FocusMoveResult](arkts-accessibility-focusmoveresult-t-sys.md) | Indicates focus move result. |
-| [FocusRule](arkts-accessibility-focusrule-t-sys.md) | Indicates the rule of the search focus. |
-| [Parameter](arkts-accessibility-parameter-t-sys.md) | Indicates executeAction parameter. |
-| [TouchPosition](arkts-accessibility-touchposition-t-sys.md) | The touch position of an accessibility virtual node. |
+| [AccessibilityVirtualNode](arkts-accessibility-accessibilityvirtualnode-t-sys.md) | Defines an accessibility virtual node. For details, see [AccessibilityVirtualNode](arkts-accessibility-accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md). |
+| [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | Describes the method for querying focusable nodes. For details, see [FocusCondition](arkts-accessibility-focuscondition-t-sys.md). |
+| [FocusMoveResult](arkts-accessibility-focusmoveresult-t-sys.md) | Return value type of the accessibility node query. For details, see [FocusMoveResult](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md). |
+| [FocusRule](arkts-accessibility-focusrule-t-sys.md) | Describes how to determine the focus capability of the starting node and its child nodes when searching for focusable nodes. For details, see [FocusRule](arkts-accessibility-focusrule-t-sys.md). |
+| [Parameter](arkts-accessibility-parameter-t-sys.md) | Provides parameter values for specific settings when an accessibility node element performs a specific action. For details, see [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md). |
+| [TouchPosition](arkts-accessibility-touchposition-t-sys.md) | Touch tap position. For details, see [TouchPosition](arkts-accessibility-accessibilityextensioncontext-touchposition-i-sys.md). |
 <!--DelEnd-->
 

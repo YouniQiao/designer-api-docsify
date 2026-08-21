@@ -23,11 +23,11 @@ paramCategory?: LinkParamCategory
 
 表示意图参数类别。
 
-若意图参数类别取值为[LINK](arkts-ability-app-ability-insightintentdecorator-linkparamcategory-e.md)，系统获取paramName字段对应的意图参数映射名称，并将该意图参数映射名称拼接到uri链接的末尾(以键值对的形式key=value，key为意图参数映射名 称，value为意图参数值)。
+若意图参数类别取值为[LINK](../../apis-default/arkts-apis/arkts-app-ability-insightintentdecorator-linkparamcategory-e.md)，系统获取paramName字段对应的意图参数映射名称，并将该意图参数映射名称拼接到uri链接的末尾(以键值对的形式key=value，key为意图参数映射名 称，value为意图参数值)。
 
-若意图参数类别为[WANT](arkts-ability-app-ability-insightintentdecorator-linkparamcategory-e.md)，系统获取paramName字段对应的意图参数映射名称，并将该意图参数映射名称及取值通过[Want](arkts-ability-app-ability-want-want-c.md) 的parameters字段进行传递。
+若意图参数类别为[WANT](../../apis-default/arkts-apis/arkts-app-ability-insightintentdecorator-linkparamcategory-e.md)，系统获取paramName字段对应的意图参数映射名称，并将该意图参数映射名称及取值通过[Want](arkts-ability-app-ability-want-want-c.md) 的parameters字段进行传递。
 
-**类型：** [LinkParamCategory](arkts-ability-app-ability-insightintentdecorator-linkparamcategory-e.md)
+**类型：** [LinkParamCategory](../../apis-default/arkts-apis/arkts-app-ability-insightintentdecorator-linkparamcategory-e.md)
 
 **起始版本：** 20
 

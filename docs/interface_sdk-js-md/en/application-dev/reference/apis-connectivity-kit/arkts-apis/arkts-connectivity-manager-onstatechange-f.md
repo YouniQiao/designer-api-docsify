@@ -12,7 +12,7 @@ import { manager } from '@kit.ConnectivityKit';
 function onStateChange(callback: Callback<NearlinkState>): void
 ```
 
-Subscribes to state change events.
+Subscribes to the NearLink status change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
 
@@ -26,7 +26,7 @@ Subscribes to state change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NearlinkState](arkts-connectivity-manager-nearlinkstate-e.md)&gt; | Yes | Callback used to listen for the state change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NearlinkState](arkts-connectivity-manager-nearlinkstate-e.md)&gt; | Yes | Callback used to return the NearLink status. |
 
 **Error codes:**
 

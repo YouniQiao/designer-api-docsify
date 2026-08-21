@@ -24,7 +24,7 @@ import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type 
 
 The options of a counter component.
 
-**Type:** [CounterOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-counter-counteroptions-c.md)
+**Type:** [CounterOptions](arkts-arkui-arkui-advanced-counter-counteroptions-c.md)
 
 **Since:** 11
 

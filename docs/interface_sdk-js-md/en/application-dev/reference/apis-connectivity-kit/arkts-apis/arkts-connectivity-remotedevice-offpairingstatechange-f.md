@@ -12,7 +12,7 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 function offPairingStateChange(callback?: Callback<PairingStateParam>): void
 ```
 
-Unsubscribes from NearLink pairing state change events.
+Unsubscribes from pairing status change events. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
 
@@ -26,7 +26,7 @@ Unsubscribes from NearLink pairing state change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PairingStateParam](arkts-connectivity-remotedevice-pairingstateparam-i.md)&gt; | No | Callback function used to listen for the pairing state event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PairingStateParam](arkts-connectivity-remotedevice-pairingstateparam-i.md)&gt; | No | Callback used to return the result of the pairing status change event. <br>If this parameter is specified, the current callback is unregistered. If this parameter is not specified, all callbacks corresponding to the event are unregistered. |
 
 **Error codes:**
 

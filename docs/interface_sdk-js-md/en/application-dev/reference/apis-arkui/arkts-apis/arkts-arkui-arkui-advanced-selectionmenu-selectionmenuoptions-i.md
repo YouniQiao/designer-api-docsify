@@ -72,7 +72,7 @@ When both **action** and **builder** in **EditorMenuOptions** are configured, cl
 
 By default, the context menu is not closed when the edit menu icon is clicked. You can configure **closeSelectionMenu** of **RichEditorController** in **action** to enable the menu to be closed.
 
-**Type:** Array&lt;[EditorMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-editormenuoptions-i.md)&gt;
+**Type:** Array&lt;[EditorMenuOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-selectionmenu-editormenuoptions-i.md)&gt;
 
 **Since:** 11
 
@@ -96,7 +96,7 @@ If this parameter is left empty, the expanded drop-down menu is not displayed.
 
 The options configured for **ExpandedMenuOptions** are displayed in the **More** menu option, and clicking **More** shows the expanded drop-down menu.
 
-**Type:** Array&lt;[ExpandedMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-expandedmenuoptions-i.md)&gt;
+**Type:** Array&lt;[ExpandedMenuOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-selectionmenu-expandedmenuoptions-i.md)&gt;
 
 **Since:** 11
 

@@ -4,7 +4,7 @@
 export type CustomValueType = int | string | boolean
 ```
 
-Represents the extension information type. The specific type of the parameter depends on its functionality.
+@brief Represents the extension information type. The specific type of the parameter depends on its functionality.
 
 **Since:** 23
 

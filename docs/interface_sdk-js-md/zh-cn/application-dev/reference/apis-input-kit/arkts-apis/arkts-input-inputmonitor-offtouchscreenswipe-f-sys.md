@@ -29,7 +29,7 @@ function offTouchscreenSwipe(fingers: int, receiver?: Callback<TouchGestureEvent
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | fingers | int | 是 | 滑动手势的手指数，取值范围：[3,5]。 |
-| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[TouchGestureEvent](arkts-input-multimodalinput-gestureevent-touchgestureevent-i-sys.md)&gt; | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
+| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TouchGestureEvent](arkts-input-multimodalinput-gestureevent-touchgestureevent-i-sys.md)&gt; | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
 
 **错误码：**
 

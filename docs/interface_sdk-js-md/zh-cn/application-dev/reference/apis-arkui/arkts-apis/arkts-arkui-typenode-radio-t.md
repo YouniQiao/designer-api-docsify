@@ -16,5 +16,5 @@ Radio类型的FrameNode节点类型。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** TypedFrameNode<RadioInterface, RadioAttribute>
+**属性类型：** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;RadioInterface, RadioAttribute&gt;
 

@@ -2,7 +2,7 @@
 
 Defines the date style options.
 
-**Inheritance/Implementation:** DateStyleOptions extends [CommonOptions](arkts-arkui-advanced-counter-commonoptions-c.md)
+**Inheritance/Implementation:** DateStyleOptions extends [CommonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-counter-commonoptions-c.md)
 
 **Since:** 23
 

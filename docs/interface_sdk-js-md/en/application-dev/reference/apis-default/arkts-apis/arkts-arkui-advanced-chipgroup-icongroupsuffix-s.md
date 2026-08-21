@@ -65,7 +65,7 @@ Set system-styled materials for the component. Different materials have differen
 
 Suffix item.
 
-**Type:** Array&lt;[IconItemOptions](arkts-arkui-advanced-chipgroup-iconitemoptions-i.md) \| SymbolGlyphModifier \| [SymbolItemOptions](arkts-arkui-advanced-chipgroup-symbolitemoptions-i.md)&gt;
+**Type:** Array&lt;[IconItemOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroup-iconitemoptions-i.md) \| SymbolGlyphModifier \| [SymbolItemOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroup-symbolitemoptions-i.md)&gt;
 
 **Since:** 23
 

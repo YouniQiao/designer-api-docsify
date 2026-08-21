@@ -34,7 +34,7 @@ attributeModifier(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](arkts-common-attributemodifier-i.md)&lt;[LazyDynamicLayoutAttribute](arkts-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-i.md)&gt; \| [AttributeModifier](arkts-common-attributemodifier-i.md)&lt;[CommonMethod](arkts-common-commonmethod-i.md)&gt; \| undefined | Yes |  |
+| modifier | [AttributeModifier](arkts-common-attributemodifier-i.md)&lt;[LazyDynamicLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-c.md)&gt; \| [AttributeModifier](arkts-common-attributemodifier-i.md)&lt;[CommonMethod](arkts-common-commonmethod-i.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -78,7 +78,7 @@ setLazyDynamicLayoutOptions(algorithm: LazyLayoutAlgorithm): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algorithm | [LazyLayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-lazylayoutalgorithm-i.md) | Yes |  |
+| algorithm | [LazyLayoutAlgorithm](arkts-lazylayoutalgorithm-i.md) | Yes |  |
 
 **Return value:**
 

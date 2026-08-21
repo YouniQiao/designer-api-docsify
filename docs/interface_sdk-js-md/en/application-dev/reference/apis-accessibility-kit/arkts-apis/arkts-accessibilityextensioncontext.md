@@ -6,14 +6,14 @@
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c.md) | The **AccessibilityExtensionContext** module, inherited from **ExtensionContext**, provides context for **AccessibilityExtensionAbility**. |
+| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c.md) | The **AccessibilityExtensionContext** module, inherited from **ExtensionContext**, provides context for **AccessibilityExtensionAbility**.The Accessibility Extension Context module provides capabilities related to the accessibility extension, including configuring concerned information types, querying node information, and gesture injection. |
 
 <!--Del-->
 ### Classes(System API)
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c-sys.md) | The **AccessibilityExtensionContext** module, inherited from **ExtensionContext**, provides context for **AccessibilityExtensionAbility**. |
+| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c-sys.md) | The **AccessibilityExtensionContext** module, inherited from **ExtensionContext**, provides context for **AccessibilityExtensionAbility**.The Accessibility Extension Context module provides capabilities related to the accessibility extension, including configuring concerned information types, querying node information, and gesture injection. |
 | [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md) | Provides parameter values for specific settings when an accessibility node element performs a specific action. Different action types require different parameter fields. For details about the mapping between action types and parameter fields, see [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md) (actions that can be performed by an accessibility node element). |
 <!--DelEnd-->
 

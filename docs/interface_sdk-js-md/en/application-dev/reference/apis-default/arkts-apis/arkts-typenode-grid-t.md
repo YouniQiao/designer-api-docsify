@@ -16,5 +16,5 @@ Define the FrameNode type for Grid.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** GridFrameNode
+**Property type:** [GridFrameNode](arkts-typenode-gridframenode-c.md)
 

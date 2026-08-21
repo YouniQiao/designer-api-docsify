@@ -41,13 +41,13 @@ static capsule(options: CapsuleSegmentButtonConstructionOptions): SegmentButtonO
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [CapsuleSegmentButtonConstructionOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-capsulesegmentbuttonconstructionoptions-i.md) | 是 | 胶囊类分段按钮信息。 |
+| options | [CapsuleSegmentButtonConstructionOptions](arkts-arkui-arkui-advanced-segmentbutton-capsulesegmentbuttonconstructionoptions-i.md) | 是 | 胶囊类分段按钮信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SegmentButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md) | 分段按钮选项，用于定义胶囊类分段按钮。 |
+| [SegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md) | 分段按钮选项，用于定义胶囊类分段按钮。 |
 
 ## constructor
 
@@ -71,7 +71,7 @@ constructor(options: TabSegmentButtonOptions | CapsuleSegmentButtonOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [TabSegmentButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-tabsegmentbuttonoptions-i.md) \| [CapsuleSegmentButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-capsulesegmentbuttonoptions-i.md) | 是 | 页签类或者胶囊类分段按钮信息。 |
+| options | [TabSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-tabsegmentbuttonoptions-i.md) \| [CapsuleSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-capsulesegmentbuttonoptions-i.md) | 是 | 页签类或者胶囊类分段按钮信息。 |
 
 ## tab
 
@@ -95,13 +95,13 @@ static tab(options: TabSegmentButtonConstructionOptions): SegmentButtonOptions
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [TabSegmentButtonConstructionOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-tabsegmentbuttonconstructionoptions-i.md) | 是 | 页签类分段按钮信息。 |
+| options | [TabSegmentButtonConstructionOptions](arkts-arkui-arkui-advanced-segmentbutton-tabsegmentbuttonconstructionoptions-i.md) | 是 | 页签类分段按钮信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SegmentButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md) | 分段按钮选项，用于定义页签类分段按钮。 |
+| [SegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md) | 分段按钮选项，用于定义页签类分段按钮。 |
 
 ## backgroundBlurStyle
 
@@ -193,7 +193,7 @@ borderRadiusMode?: BorderRadiusMode
 
 值为undefined时，按默认值处理。
 
-**类型：** [BorderRadiusMode](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-borderradiusmode-e.md)
+**类型：** [BorderRadiusMode](arkts-arkui-arkui-advanced-segmentbutton-borderradiusmode-e.md)
 
 **默认值：** BorderRadiusMode.Default
 
@@ -241,7 +241,7 @@ buttons: SegmentButtonItemOptionsArray
 
 分段按钮组件的按钮信息，包括图标和文本信息。
 
-**类型：** [SegmentButtonItemOptionsArray](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-segmentbuttonitemoptionsarray-c.md)
+**类型：** [SegmentButtonItemOptionsArray](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptionsarray-c.md)
 
 **起始版本：** 11
 
@@ -313,7 +313,7 @@ fontSize: DimensionNoPercentage
 
 值为undefined时，字体大小为\$r('sys.float.ohos_id_text_size_body2')。
 
-**类型：** [DimensionNoPercentage](../../apis-default/arkts-apis/arkts-dimensionnopercentage-t.md)
+**类型：** [DimensionNoPercentage](arkts-arkui-dimensionnopercentage-t.md)
 
 **起始版本：** 11
 
@@ -557,7 +557,7 @@ selectedFontSize: DimensionNoPercentage
 
 值为undefined时，字体大小为\$r('sys.float.ohos_id_text_size_body2')。
 
-**类型：** [DimensionNoPercentage](../../apis-default/arkts-apis/arkts-dimensionnopercentage-t.md)
+**类型：** [DimensionNoPercentage](arkts-arkui-dimensionnopercentage-t.md)
 
 **起始版本：** 11
 

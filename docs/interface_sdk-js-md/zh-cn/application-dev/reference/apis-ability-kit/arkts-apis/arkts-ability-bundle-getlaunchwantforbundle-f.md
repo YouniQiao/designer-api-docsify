@@ -44,7 +44,7 @@ function getLaunchWantForBundle(bundleName: string, callback: AsyncCallback<Want
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 要查询的应用Bundle名称。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | 是 | 程序启动作为入参的回调函数，返回拉起指定应用的want对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | 是 | 程序启动作为入参的回调函数，返回拉起指定应用的want对象。 |
 
 **示例**
 

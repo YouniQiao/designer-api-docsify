@@ -29,7 +29,7 @@ function getSharingIfaces(state: SharingIfaceState, callback: AsyncCallback<Arra
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | state | [SharingIfaceState](arkts-network-sharing-sharingifacestate-e-sys.md) | 是 | 网络共享状态。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回指定状态的网卡名称列表。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回指定状态的网卡名称列表。 |
 
 **错误码：**
 

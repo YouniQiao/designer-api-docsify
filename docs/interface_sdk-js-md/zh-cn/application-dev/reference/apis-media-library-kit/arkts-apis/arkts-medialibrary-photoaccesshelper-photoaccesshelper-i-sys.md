@@ -675,7 +675,7 @@ createAlbum(name: string, callback: AsyncCallback<Album>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 待创建相册的相册名。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Album&gt; | 是 | callback返回创建的相册实例。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Album&gt; | 是 | callback返回创建的相册实例。 |
 
 **错误码：**
 
@@ -808,7 +808,7 @@ API10-17，非法字符包括：. .. \ / : ? " ' ` &lt; &gt; | { } [ ]
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | displayName | string | 是 | 创建的图片或者视频文件名。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PhotoAsset&gt; | 是 | callback返回创建的图片和视频结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoAsset&gt; | 是 | callback返回创建的图片和视频结果。 |
 
 **错误码：**
 
@@ -1010,7 +1010,7 @@ API10-17，非法字符包括：. .. \ / : ? " ' ` &lt; &gt; | { } [ ]
 | --- | --- | --- | --- |
 | displayName | string | 是 | 创建的图片或者视频文件名。 |
 | options | [PhotoCreateOptions](arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md) | 是 | 图片或视频的创建选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PhotoAsset&gt; | 是 | callback返回创建的图片和视频结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoAsset&gt; | 是 | callback返回创建的图片和视频结果。 |
 
 **错误码：**
 
@@ -1377,7 +1377,7 @@ deleteAlbums(albums: Array<Album>, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | albums | Array&lt;Album&gt; | 是 | 待删除相册的数组。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | callback返回void。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | callback返回void。 |
 
 **错误码：**
 
@@ -1517,7 +1517,7 @@ deleteAssets(uriList: Array<string>, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uriList | Array&lt;string&gt; | 是 | 待删除的媒体文件uri数组。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | callback返回void。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | callback返回void。 |
 
 **错误码：**
 
@@ -2140,7 +2140,7 @@ getHiddenAlbums(mode: HiddenPhotosDisplayMode, options: FetchOptions, callback: 
 | --- | --- | --- | --- |
 | mode | [HiddenPhotosDisplayMode](arkts-medialibrary-photoaccesshelper-hiddenphotosdisplaymode-e-sys.md) | 是 | 隐藏文件显示模式。 |
 | options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 是 | 检索选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FetchResult&lt;Album&gt;&gt; | 是 | callback返回获取相册的结果集。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | 是 | callback返回获取相册的结果集。 |
 
 **错误码：**
 
@@ -2212,7 +2212,7 @@ getHiddenAlbums(mode: HiddenPhotosDisplayMode, callback: AsyncCallback<FetchResu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mode | [HiddenPhotosDisplayMode](arkts-medialibrary-photoaccesshelper-hiddenphotosdisplaymode-e-sys.md) | 是 | Display mode of hidden albums. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FetchResult&lt;Album&gt;&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | 是 | Callback used to return the result. |
 
 **错误码：**
 
@@ -2669,7 +2669,7 @@ getPhotoIndex(photoUri: string, albumUri: string, options: FetchOptions, callbac
 | photoUri | string | 是 | 所查询的图库资源的uri。 |
 | albumUri | string | 是 | 相册uri，可以为空字符串，为空字符串时默认查询全部图库资源。 |
 | options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 是 | 检索选项，predicates中必须设置一种检索排序方式，不设置或多设置均会导致接口调用异常。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | callback返回相册中资源的索引。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | callback返回相册中资源的索引。 |
 
 **错误码：**
 
@@ -3097,7 +3097,7 @@ invokeAnalysisTool(config: ToolInvokeConfig, callback: Callback<AnalysisToolResu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | config | [ToolInvokeConfig](arkts-medialibrary-photoaccesshelper-toolinvokeconfig-i-sys.md) | 是 | 工具调用配置。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AnalysisToolResult](arkts-medialibrary-photoaccesshelper-analysistoolresult-i-sys.md)&gt; | 是 | 工具执行完成时调用的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AnalysisToolResult](arkts-medialibrary-photoaccesshelper-analysistoolresult-i-sys.md)&gt; | 是 | 工具执行完成时调用的回调。 |
 
 **返回值：**
 
@@ -3552,7 +3552,7 @@ offAnalysisAlbumChange(callback?: Callback<AlbumChangeInfos>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 回调函数，返回变更的智慧分析相册信息，填入时取消 [onAnalysisAlbumChange](#onanalysisalbumchange) 注册时指定的callback监听；不填时，则取消 [onAnalysisAlbumChange](#onanalysisalbumchange) 注册的所有监听。 <br>**注意：** <br>取消注册的callback后，有智慧相册发生变化时，不会进入此回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 回调函数，返回变更的智慧分析相册信息，填入时取消 [onAnalysisAlbumChange](#onanalysisalbumchange) 注册时指定的callback监听；不填时，则取消 [onAnalysisAlbumChange](#onanalysisalbumchange) 注册的所有监听。 <br>**注意：** <br>取消注册的callback后，有智慧相册发生变化时，不会进入此回调。 |
 
 **错误码：**
 
@@ -3620,7 +3620,7 @@ offAnalysisPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 回调函数，返回含对应智慧分析相册变更的媒体资产信息，填入时取消 [onAnalysisPhotoChange](#onanalysisphotochange) 注册时指定的callback监听；不填时，则取消对 [onAnalysisPhotoChange](#onanalysisphotochange) 的所有监听。 <br>**注意：** <br>取消注册的callback后，智慧分析相册的资产变更时，不再进入此回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 回调函数，返回含对应智慧分析相册变更的媒体资产信息，填入时取消 [onAnalysisPhotoChange](#onanalysisphotochange) 注册时指定的callback监听；不填时，则取消对 [onAnalysisPhotoChange](#onanalysisphotochange) 的所有监听。 <br>**注意：** <br>取消注册的callback后，智慧分析相册的资产变更时，不再进入此回调。 |
 
 **错误码：**
 
@@ -3686,7 +3686,7 @@ offHiddenPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | Callback used for unsubscription. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | Callback used for unsubscription. |
 
 **错误码：**
 
@@ -3719,7 +3719,7 @@ offShareAlbumChange(callback?: Callback<AlbumChangeInfos>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 共享相册的监听回调 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 共享相册的监听回调 |
 
 **错误码：**
 
@@ -3752,7 +3752,7 @@ offSharePhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 监听图片和视频的回调 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 监听图片和视频的回调 |
 
 **错误码：**
 
@@ -3785,7 +3785,7 @@ Unsubscribes from changes in the trashed album.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | Callback used for unsubscription. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | Callback used for unsubscription. |
 
 **错误码：**
 
@@ -3818,7 +3818,7 @@ offTrashedPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 监听图片和视频的回调 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 监听图片和视频的回调 |
 
 **错误码：**
 
@@ -3852,7 +3852,7 @@ off(type: 'hiddenAlbumChange', callback?: Callback<AlbumChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hiddenAlbumChange' | 是 | 取消监听隐藏相册，取值为'hiddenAlbumChange'。取消监听后，有隐藏相册发生变化时，不再通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 取消 [on('hiddenAlbumChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onphotochange) 注册时指定的callback监听；不填时，则取消对'hiddenAlbumChange'的所有监听。 <br>**注意：** <br>取消注册的callback后，有隐藏相册发生变化时，不会进入此回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 取消 [on('hiddenAlbumChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onphotochange) 注册时指定的callback监听；不填时，则取消对'hiddenAlbumChange'的所有监听。 <br>**注意：** <br>取消注册的callback后，有隐藏相册发生变化时，不会进入此回调。 |
 
 **错误码：**
 
@@ -3919,7 +3919,7 @@ off(type: 'hiddenPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hiddenPhotoChange' | 是 | 取消监听隐藏资产，取值为'hiddenPhotoChange'。取消监听后，有隐藏资产发生变化时，不再通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 取消 [on('hiddenPhotoChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onphotochange) 注册时指定的callback监听；不填时，则取消对'hiddenPhotoChange'的所有监听。 <br>**注意：** <br>取消注册的callback后，有隐藏资产发生变化时，不会进入此回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 取消 [on('hiddenPhotoChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onphotochange) 注册时指定的callback监听；不填时，则取消对'hiddenPhotoChange'的所有监听。 <br>**注意：** <br>取消注册的callback后，有隐藏资产发生变化时，不会进入此回调。 |
 
 **错误码：**
 
@@ -3986,7 +3986,7 @@ off(type: 'trashedAlbumChange', callback?: Callback<AlbumChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'trashedAlbumChange' | 是 | 取消监听回收站相册，取值为'trashedAlbumChange'。取消监听后，有回收站相册发生变化时，不再通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 取消 [on('trashedAlbumChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onphotochange) 注册时指定的callback监听；不填时，则取消对'trashedAlbumChange'的所有监听。 <br>**注意：** <br>取消注册的callback后，有回收站相册发生变化时，不会进入此回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 取消 [on('trashedAlbumChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onphotochange) 注册时指定的callback监听；不填时，则取消对'trashedAlbumChange'的所有监听。 <br>**注意：** <br>取消注册的callback后，有回收站相册发生变化时，不会进入此回调。 |
 
 **错误码：**
 
@@ -4053,7 +4053,7 @@ off(type: 'trashedPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'trashedPhotoChange' | 是 | 取消监听回收站资产，取值为'trashedPhotoChange'。取消监听后，有回收站资产发生变化时，不再通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 取消 [on('trashedPhotoChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onphotochange) 注册时指定的callback监听；不填时，则取消对'trashedPhotoChange'的所有监听。 <br>**注意：** <br>取消注册的callback后，有回收站资产发生变化时，不会进入此回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 取消 [on('trashedPhotoChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onphotochange) 注册时指定的callback监听；不填时，则取消对'trashedPhotoChange'的所有监听。 <br>**注意：** <br>取消注册的callback后，有回收站资产发生变化时，不会进入此回调。 |
 
 **错误码：**
 
@@ -4119,7 +4119,7 @@ offhiddenAlbumChange(callback?: Callback<AlbumChangeInfos>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | Callback used for unsubscription. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | Callback used for unsubscription. |
 
 **错误码：**
 
@@ -4154,7 +4154,7 @@ onAnalysisAlbumChange(callback: Callback<AlbumChangeInfos>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 回调函数，返回变更的智慧分析相册信息 [AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)。 <br>**注意：** <br>该接口可以注册多个不同的callback监听， [offAnalysisAlbumChange](#offanalysisalbumchange) 既可以关闭所有监听，也可以关闭指定callback监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 回调函数，返回变更的智慧分析相册信息 [AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)。 <br>**注意：** <br>该接口可以注册多个不同的callback监听， [offAnalysisAlbumChange](#offanalysisalbumchange) 既可以关闭所有监听，也可以关闭指定callback监听。 |
 
 **错误码：**
 
@@ -4219,7 +4219,7 @@ onAnalysisPhotoChange(callback: Callback<PhotoAssetChangeInfos>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 回调函数，返回含对应智慧分析相册变更的媒体资产信息 [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)。 <br>**注意：** <br>该接口可以注册多个不同的callback监听， [offAnalysisPhotoChange](#offanalysisphotochange) 既可以关闭所有监听，也可以关闭指定callback监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 回调函数，返回含对应智慧分析相册变更的媒体资产信息 [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)。 <br>**注意：** <br>该接口可以注册多个不同的callback监听， [offAnalysisPhotoChange](#offanalysisphotochange) 既可以关闭所有监听，也可以关闭指定callback监听。 |
 
 **错误码：**
 
@@ -4282,7 +4282,7 @@ onHiddenAlbumChange(callback: Callback<AlbumChangeInfos>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | Callback used to notify the application of the changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | Callback used to notify the application of the changes. |
 
 **错误码：**
 
@@ -4315,7 +4315,7 @@ onHiddenPhotoChange(callback: Callback<PhotoAssetChangeInfos>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | Callback used to notify the application of the changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | Callback used to notify the application of the changes. |
 
 **错误码：**
 
@@ -4348,7 +4348,7 @@ onShareAlbumChange(callback: Callback<AlbumChangeInfos>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | Callback used to notify the application of the changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | Callback used to notify the application of the changes. |
 
 **错误码：**
 
@@ -4381,7 +4381,7 @@ onSharePhotoChange(callback: Callback<PhotoAssetChangeInfos>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | Callback used to notify the application of the changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | Callback used to notify the application of the changes. |
 
 **错误码：**
 
@@ -4414,7 +4414,7 @@ Subscribes to changes of the trashed album.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | Callback used to notify the application of the changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | Callback used to notify the application of the changes. |
 
 **错误码：**
 
@@ -4447,7 +4447,7 @@ onTrashedPhotoChange(callback: Callback<PhotoAssetChangeInfos>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | Callback used to notify the application of the changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | Callback used to notify the application of the changes. |
 
 **错误码：**
 
@@ -4481,7 +4481,7 @@ on(type: 'hiddenAlbumChange', callback: Callback<AlbumChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hiddenAlbumChange' | 是 | 注册监听隐藏相册，取值为'hiddenAlbumChange'。注册完成后，有隐藏相册发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 返回变更的隐藏相册信息 [AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)。 <br>**注意：** <br>该接口可以注册多个不同的callback监听， [off('hiddenAlbumChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offphotochange) 既可以关闭所有监听，也可以关闭指定callback监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 返回变更的隐藏相册信息 [AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)。 <br>**注意：** <br>该接口可以注册多个不同的callback监听， [off('hiddenAlbumChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offphotochange) 既可以关闭所有监听，也可以关闭指定callback监听。 |
 
 **错误码：**
 
@@ -4545,7 +4545,7 @@ on(type: 'hiddenPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hiddenPhotoChange' | 是 | 注册监听隐藏资产，取值为'hiddenPhotoChange'。注册完成后，有隐藏资产发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的隐藏媒体资产信息 [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md). <br>**注意：** <br>该接口可以注册多个不同的callback监听， [off('hiddenPhotoChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offphotochange) 既可以关闭所有监听，也可以关闭指定callback监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的隐藏媒体资产信息 [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md). <br>**注意：** <br>该接口可以注册多个不同的callback监听， [off('hiddenPhotoChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offphotochange) 既可以关闭所有监听，也可以关闭指定callback监听。 |
 
 **错误码：**
 
@@ -4609,7 +4609,7 @@ on(type: 'trashedAlbumChange', callback: Callback<AlbumChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'trashedAlbumChange' | 是 | 注册监听回收站相册，取值为'trashedAlbumChange'。注册完成后，有回收站相册发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 返回变更的相册信息 [AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)。 <br>**注意：** <br>该接口可以注册多个不同的callback监听， [off('trashedAlbumChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offphotochange) 既可以关闭所有监听，也可以关闭指定callback监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 返回变更的相册信息 [AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)。 <br>**注意：** <br>该接口可以注册多个不同的callback监听， [off('trashedAlbumChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offphotochange) 既可以关闭所有监听，也可以关闭指定callback监听。 |
 
 **错误码：**
 
@@ -4673,7 +4673,7 @@ on(type: 'trashedPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'trashedPhotoChange' | 是 | 注册监听回收站资产，取值为'trashedPhotoChange'。注册完成后，有回收站资产发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的回收站媒体资产信息 [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md). <br>**注意：** <br>该接口可以注册多个不同的callback监听， [off('trashedPhotoChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offphotochange) 既可以关闭所有监听，也可以关闭指定callback监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的回收站媒体资产信息 [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md). <br>**注意：** <br>该接口可以注册多个不同的callback监听， [off('trashedPhotoChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offphotochange) 既可以关闭所有监听，也可以关闭指定callback监听。 |
 
 **错误码：**
 
@@ -4837,7 +4837,7 @@ removeFormInfo(info: FormInfo, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | info | FormInfo | 是 | 图库卡片信息，包括图库卡片的id和卡片绑定的图片的uri。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | callback返回void。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | callback返回void。 |
 
 **错误码：**
 
@@ -5017,7 +5017,7 @@ saveFormInfo(info: FormInfo, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | info | FormInfo | 是 | 图库卡片信息，包括图库卡片的id和卡片绑定的图片的uri。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | callback返回void。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | callback返回void。 |
 
 **错误码：**
 
@@ -5490,7 +5490,7 @@ startAssetAnalysisAsync(config: AnalysisConfig, callback: Callback<AnalysisResul
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | config | [AnalysisConfig](arkts-medialibrary-photoaccesshelper-analysisconfig-i-sys.md) | 是 | 资产分析配置，config中的uris从 [PhotoAsset](arkts-file-photoaccesshelper.md)对象中获取。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AnalysisResult](arkts-medialibrary-photoaccesshelper-analysisresult-i-sys.md)&gt; | 是 | 回调函数，用于返回资产分析结果信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AnalysisResult](arkts-medialibrary-photoaccesshelper-analysisresult-i-sys.md)&gt; | 是 | 回调函数，用于返回资产分析结果信息。 |
 
 **返回值：**
 
@@ -5559,7 +5559,7 @@ startDeepOptimizeSpace(callback?: Callback<DeepOptimizeSpaceProgress>): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeepOptimizeSpaceProgress](arkts-medialibrary-photoaccesshelper-deepoptimizespaceprogress-i-sys.md)&gt; | 否 | 深度优化存储空间进度回调函数 默认值： null。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeepOptimizeSpaceProgress](arkts-medialibrary-photoaccesshelper-deepoptimizespaceprogress-i-sys.md)&gt; | 否 | 深度优化存储空间进度回调函数 默认值： null。 |
 
 **返回值：**
 
@@ -5616,7 +5616,7 @@ startThumbnailCreationTask(predicate: dataSharePredicates.DataSharePredicates, c
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | predicate | dataSharePredicates.DataSharePredicates | 是 | 生成缩略图选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当成功时标识通知任务结束，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功时标识通知任务结束，err为undefined，否则为错误对象。 |
 
 **返回值：**
 
@@ -5681,8 +5681,8 @@ startThumbnailCreationTask(predicate: dataSharePredicates.DataSharePredicates, c
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | predicate | dataSharePredicates.DataSharePredicates | 是 | 用于生成缩略图的查询条件。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当操作成功完成时通知任务结束。 |
-| response | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 回调函数。返回是否有未生成的缩略图，返回1表示所有缩略图已生成完成，返回0表示未生成完成。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当操作成功完成时通知任务结束。 |
+| response | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。返回是否有未生成的缩略图，返回1表示所有缩略图已生成完成，返回0表示未生成完成。 |
 
 **返回值：**
 

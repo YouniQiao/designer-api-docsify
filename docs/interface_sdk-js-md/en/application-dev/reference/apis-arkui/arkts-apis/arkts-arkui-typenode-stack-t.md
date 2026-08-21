@@ -16,5 +16,5 @@ Represents a FrameNode of the **Stack** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** TypedFrameNode<StackInterface, StackAttribute>
+**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;StackInterface, StackAttribute&gt;
 

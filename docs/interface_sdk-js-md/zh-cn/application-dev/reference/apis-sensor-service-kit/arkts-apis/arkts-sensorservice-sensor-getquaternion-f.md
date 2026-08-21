@@ -25,7 +25,7 @@ function getQuaternion(rotationVector: Array<double>, callback: AsyncCallback<Ar
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rotationVector | Array&lt;double&gt; | 是 | 旋转矢量。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;double&gt;&gt; | 是 | 回调函数，异步返回归一化四元数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;double&gt;&gt; | 是 | 回调函数，异步返回归一化四元数。 |
 
 **错误码：**
 

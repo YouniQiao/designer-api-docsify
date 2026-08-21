@@ -26,7 +26,7 @@ clear(animated?: boolean): void
 
 > **说明：**
 
-> 当调用[keepBottomPage](../../apis-default/arkts-apis/arkts-arkui-advanced-multinavigation-multinavpathstack-c.md#keepbottompage)接口并设置为true时，会保留栈底页面。
+> 当调用[keepBottomPage](#keepbottompage)接口并设置为true时，会保留栈底页面。
 
 **起始版本：** 14
 
@@ -329,7 +329,7 @@ pop(animated?: boolean): NavPathInfo | undefined
 
 > **说明：**
 
-> 当调用[keepBottomPage](../../apis-default/arkts-apis/arkts-arkui-advanced-multinavigation-multinavpathstack-c.md#keepbottompage)接口并设置为true时，会保留栈底页面。
+> 当调用[keepBottomPage](#keepbottompage)接口并设置为true时，会保留栈底页面。
 
 **起始版本：** 14
 
@@ -363,7 +363,7 @@ pop(result?: Object, animated?: boolean): NavPathInfo | undefined
 
 > **说明：**
 
-> 当调用[keepBottomPage](../../apis-default/arkts-apis/arkts-arkui-advanced-multinavigation-multinavpathstack-c.md#keepbottompage)接口并设置为true时，会保留栈底页面。
+> 当调用[keepBottomPage](#keepbottompage)接口并设置为true时，会保留栈底页面。
 
 **起始版本：** 14
 
@@ -526,7 +526,7 @@ pushPath(info: NavPathInfo, animated?: boolean, policy?: SplitPolicy): void
 | --- | --- | --- | --- |
 | info | NavPathInfo | 是 | NavDestination页面的信息。 |
 | animated | boolean | 否 | 是否支持转场动画。<br/>默认值：true<br/>true：支持转场动画。<br/>false：不支持转场动画。 |
-| policy | [SplitPolicy](../../apis-default/arkts-apis/arkts-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | 当前入栈页面的策略。<br/>默认值：DETAIL_PAGE |
+| policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | 当前入栈页面的策略。<br/>默认值：DETAIL_PAGE |
 
 ## pushPath
 
@@ -552,7 +552,7 @@ pushPath(info: NavPathInfo, options?: NavigationOptions, policy?: SplitPolicy): 
 | --- | --- | --- | --- |
 | info | NavPathInfo | 是 | NavDestination页面的信息。 |
 | options | NavigationOptions | 否 | 页面栈操作选项。仅支持其中的animated字段，使用其他字段将被忽略。省略时使用默认动画配置。 |
-| policy | [SplitPolicy](../../apis-default/arkts-apis/arkts-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | 当前入栈页面的策略。<br/>默认值：DETAIL_PAGE |
+| policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | 当前入栈页面的策略。<br/>默认值：DETAIL_PAGE |
 
 ## pushPathByName
 
@@ -579,7 +579,7 @@ pushPathByName(name: string, param: Object, animated?: boolean, policy?: SplitPo
 | name | string | 是 | NavDestination页面名称。需要与NavDestinationBuildFunction中注册的页面名称一致。 |
 | param | Object | 是 | NavDestination页面详细参数，用于向目标页面传递自定义数据。具体字段规格请参考NavDestination相关文档。 |
 | animated | boolean | 否 | 是否支持转场动画。<br/>默认值：true<br/>true：支持转场动画。<br/>false：不支持转场动画。 |
-| policy | [SplitPolicy](../../apis-default/arkts-apis/arkts-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | 当前入栈页面的策略。<br/>默认值：DETAIL_PAGE |
+| policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | 当前入栈页面的策略。<br/>默认值：DETAIL_PAGE |
 
 ## pushPathByName
 
@@ -608,7 +608,7 @@ pushPathByName(
 | param | Object | 是 | NavDestination页面详细参数，用于向目标页面传递自定义数据。具体字段规格请参考NavDestination相关文档。 |
 | onPop | base.Callback&lt;PopInfo&gt; | 否 | Callback回调，用于页面出栈时触发该回调处理返回结果。省略时不触发回调处理。 可通过pop方法、popToName方法、popToIndex方法的result参数传递数据给此回调。 |
 | animated | boolean | 否 | 是否支持转场动画。<br/>默认值：true<br/>true：支持转场动画。<br/>false：不支持转场动画。 |
-| policy | [SplitPolicy](../../apis-default/arkts-apis/arkts-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | 当前入栈页面的策略。<br/>默认值：DETAIL_PAGE |
+| policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | 当前入栈页面的策略。<br/>默认值：DETAIL_PAGE |
 
 ## removeByIndexes
 

@@ -29,7 +29,7 @@ function setTime(time: long, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | time | long | 是 | 目标时间戳(ms)，且必须&gt;0。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。设置系统时间的结果回调，设置成功时err为undefined，设置失败时err为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。设置系统时间的结果回调，设置成功时err为undefined，设置失败时err为错误对象。 |
 
 **错误码：**
 

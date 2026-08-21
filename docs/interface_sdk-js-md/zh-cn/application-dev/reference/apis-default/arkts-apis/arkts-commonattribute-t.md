@@ -16,5 +16,5 @@ CommonAttribute for ide.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** CommonMethod
+**属性类型：** [CommonMethod](arkts-common-commonmethod-i.md)
 

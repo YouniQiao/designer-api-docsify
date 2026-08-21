@@ -37,7 +37,7 @@ ChipGroupV2Padding的构造函数
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [ChipGroupV2PaddingConfig](arkts-arkui-advanced-chipgroupv2-chipgroupv2paddingconfig-i.md) | 是 | ChipGroupV2的内边距 |
+| config | [ChipGroupV2PaddingConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2paddingconfig-i.md) | 是 | ChipGroupV2的内边距 |
 
 ## bottom
 

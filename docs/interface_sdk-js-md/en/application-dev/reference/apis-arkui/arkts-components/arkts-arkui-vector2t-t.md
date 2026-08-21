@@ -16,5 +16,5 @@ Defines the Vector2T type. The Vector2T type contains two attribute values: x an
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/arkui/Graphics').Vector2T<T>
+**Property type:** import('../api/arkui/Graphics').Vector2T&lt;T&gt;
 

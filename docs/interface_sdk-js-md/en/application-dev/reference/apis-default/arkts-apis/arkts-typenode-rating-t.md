@@ -16,5 +16,5 @@ Define the FrameNode type for Rating.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** RatingFrameNode
+**Property type:** [RatingFrameNode](arkts-typenode-ratingframenode-c.md)
 

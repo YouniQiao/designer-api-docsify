@@ -2,7 +2,7 @@
 
 Defines the suffix icon class.
 
-**Inheritance/Implementation:** ChipV2SuffixImageIcon extends [ChipV2ImageIcon](arkts-arkui-advanced-chipv2-chipv2imageicon-c.md)
+**Inheritance/Implementation:** ChipV2SuffixImageIcon extends [ChipV2ImageIcon](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipv2-chipv2imageicon-c.md)
 
 **Since:** 26.0.0
 
@@ -39,7 +39,7 @@ The constructor of ChipV2SuffixImageIcon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ChipV2SuffixImageIconConfig](arkts-arkui-advanced-chipv2-chipv2suffiximageiconconfig-i.md) | Yes | config of suffix image icon |
+| config | [ChipV2SuffixImageIconConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipv2-chipv2suffiximageiconconfig-i.md) | Yes | config of suffix image icon |
 
 ## accessibilityDescription
 

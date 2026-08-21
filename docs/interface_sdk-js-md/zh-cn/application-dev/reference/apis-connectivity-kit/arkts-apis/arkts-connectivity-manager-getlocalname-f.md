@@ -12,7 +12,7 @@ import { manager } from '@kit.ConnectivityKit';
 function getLocalName(): string
 ```
 
-获取本地设备的名称。
+查询本机星闪名称。
 
 **起始版本：** 26.0.0
 
@@ -28,7 +28,7 @@ function getLocalName(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 返回设备的名称。 |
+| string | 表示星闪设备本地名称。最大长度为30个字符。 |
 
 **错误码：**
 

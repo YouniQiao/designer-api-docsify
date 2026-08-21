@@ -1,6 +1,6 @@
 # SystemPanelStatus (System API)
 
-System panel status.
+@brief System panel status.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 inputType: InputMethodInputType
 ```
 
-The input type of the input method.
+@brief The input type of the input method.
 
 **Type:** [InputMethodInputType](arkts-ime-inputmethodsystempanelmanager-inputmethodinputtype-e-sys.md)
 
@@ -42,7 +42,7 @@ The input type of the input method.
 isPanelRaised: boolean
 ```
 
-Whether the system panel needs to be raised.
+@brief Whether the system panel needs to be raised.
 
 **Type:** boolean
 
@@ -62,7 +62,7 @@ Whether the system panel needs to be raised.
 needFuncButton: boolean
 ```
 
-Whether the system panel's function button is needed.
+@brief Whether the system panel's function button is needed.
 
 **Type:** boolean
 
@@ -82,7 +82,7 @@ Whether the system panel's function button is needed.
 panelFlag: PanelFlag
 ```
 
-The panel flag of the input method's soft keyboard panel.
+@brief The panel flag of the input method's soft keyboard panel.
 
 **Type:** [PanelFlag](arkts-ime-inputmethod-panel-panelflag-e.md)
 

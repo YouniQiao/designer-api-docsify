@@ -16,15 +16,15 @@ function replaceNamedRoute(options: NamedRouterOptions, callback: AsyncCallback<
 
 > **说明：**
 > 
-> - 从API version 10开始支持，从API version 18开始废弃，建议使用 &gt; [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute) &gt; 替代。replaceNamedRoute需先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的 &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取 &gt; [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)实例，然后通过该实例进行调用。
+> - 从API version 10开始支持，从API version 18开始废弃，建议使用 &gt; [replaceNamedRoute](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#replacenamedroute) &gt; 替代。replaceNamedRoute需先通过[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取 &gt; [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)实例，然后通过该实例进行调用。
 > 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的 &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的 &gt; [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
+> - 从API version 10开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的 &gt; [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 10
 
 **废弃版本：** 18
 
-**替代接口：** [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute)(options: router.NamedRouterOptions, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [replaceNamedRoute](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#replacenamedroute)(options: router.NamedRouterOptions, callback: AsyncCallback&lt;void&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,7 +39,7 @@ function replaceNamedRoute(options: NamedRouterOptions, callback: AsyncCallback<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | 是 | 替换页面描述信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异常响应回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异常响应回调。 |
 
 **错误码：**
 
@@ -85,16 +85,16 @@ function replaceNamedRoute(options: NamedRouterOptions): Promise<void>
 
 > **说明：**
 > 
-> - 从API version 10开始支持，从API version 18开始废弃，建议使用 &gt; [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute)替代。
-> replaceNamedRoute需先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的 &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取 &gt; [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)实例，然后通过该实例进行调用。
+> - 从API version 10开始支持，从API version 18开始废弃，建议使用 &gt; [replaceNamedRoute](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#replacenamedroute)替代。
+> replaceNamedRoute需先通过[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取 &gt; [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)实例，然后通过该实例进行调用。
 > 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的 &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的 &gt; [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
+> - 从API version 10开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的 &gt; [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 10
 
 **废弃版本：** 18
 
-**替代接口：** [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute)(options: router.NamedRouterOptions)
+**替代接口：** [replaceNamedRoute](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#replacenamedroute)(options: router.NamedRouterOptions)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -162,15 +162,15 @@ function replaceNamedRoute(options: NamedRouterOptions, mode: RouterMode, callba
 
 > **说明：**
 > 
-> - 从API version 10开始支持，从API version 18开始废弃，建议使用 &gt; [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute) &gt; 替代。replaceNamedRoute需先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的 &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取 &gt; [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)实例，然后通过该实例进行调用。
+> - 从API version 10开始支持，从API version 18开始废弃，建议使用 &gt; [replaceNamedRoute](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#replacenamedroute) &gt; 替代。replaceNamedRoute需先通过[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取 &gt; [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)实例，然后通过该实例进行调用。
 > 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的 &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的 &gt; [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
+> - 从API version 10开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的 &gt; [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 10
 
 **废弃版本：** 18
 
-**替代接口：** [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute)(options: router.NamedRouterOptions, mode: router.RouterMode, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [replaceNamedRoute](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#replacenamedroute)(options: router.NamedRouterOptions, mode: router.RouterMode, callback: AsyncCallback&lt;void&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -186,7 +186,7 @@ function replaceNamedRoute(options: NamedRouterOptions, mode: RouterMode, callba
 | --- | --- | --- | --- |
 | options | [NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | 是 | 替换页面描述信息。 |
 | mode | [RouterMode](arkts-arkui-router-routermode-e.md) | 是 | 替换页面使用的模式。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异常响应回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异常响应回调。 |
 
 **错误码：**
 
@@ -232,15 +232,15 @@ function replaceNamedRoute(options: NamedRouterOptions, mode: RouterMode): Promi
 
 > **说明：**
 > 
-> - 从API version 10开始支持，从API version 18开始废弃，建议使用 &gt; [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute) &gt; 替代。replaceNamedRoute需先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的 &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取 &gt; [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)实例，然后通过该实例进行调用。
+> - 从API version 10开始支持，从API version 18开始废弃，建议使用 &gt; [replaceNamedRoute](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#replacenamedroute) &gt; 替代。replaceNamedRoute需先通过[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取 &gt; [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)实例，然后通过该实例进行调用。
 > 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的 &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的 &gt; [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
+> - 从API version 10开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的 &gt; [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 10
 
 **废弃版本：** 18
 
-**替代接口：** [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute)(options: router.NamedRouterOptions, mode: router.RouterMode)
+**替代接口：** [replaceNamedRoute](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#replacenamedroute)(options: router.NamedRouterOptions, mode: router.RouterMode)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -32,11 +32,11 @@ import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiper
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| controller | [ArcSwiperController](arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md) | 否 | Controller bound to the component to control the page turning. |
+| controller | [ArcSwiperController](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcswipercontroller-c.md) | 否 | Controller bound to the component to control the page turning. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+| [ArcSwiperAttribute](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcswiperattribute-i.md) |  |
 

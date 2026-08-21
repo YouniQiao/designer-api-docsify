@@ -120,7 +120,7 @@ off(type: "dataEnd", callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | "dataEnd" | 是 | 取消订阅的事件类型：'dataEnd'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **示例**
 
@@ -155,7 +155,7 @@ off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | "dataReceive" | 是 | 取消订阅的事件类型：'dataReceive'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **示例**
 
@@ -190,7 +190,7 @@ off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'dataReceiveProgress' | 是 | 取消订阅的事件类型：'dataReceiveProgress'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | 否 | 回调函数。 可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订 阅。<br>**起始版本：** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | 否 | 回调函数。 可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订 阅。<br>**起始版本：** 11 |
 
 **示例**
 
@@ -225,7 +225,7 @@ off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'dataSendProgress' | 是 | 取消订阅的事件类型：'dataSendProgress'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **示例**
 
@@ -272,7 +272,7 @@ off(type: "headerReceive", callback?: AsyncCallback<Object>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | "headerReceive" | 是 | 取消订阅的事件类型，'headerReceive'。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Object&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **示例**
 
@@ -304,7 +304,7 @@ off(type: "headersReceive", callback?: Callback<Object>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | "headersReceive" | 是 | 取消订阅的事件类型：'headersReceive'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Object&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。<br>**起始版本：** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。<br>**起始版本：** 11 |
 
 **示例**
 
@@ -339,7 +339,7 @@ on(type: "dataEnd", callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | "dataEnd" | 是 | 订阅的事件类型，'dataEnd'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数。当订阅成功时，err为undefined，否则为错误对象。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。当订阅成功时，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -374,7 +374,7 @@ on(type: "dataReceive", callback: Callback<ArrayBuffer>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | "dataReceive" | 是 | 订阅的事件类型，'dataReceive'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | 是 | 回调函数。当订阅成功时，err为undefined，data为获取到的HTTP流式数据接收数据，类型为ArrayBuffer；否则为错误对 象。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 是 | 回调函数。当订阅成功时，err为undefined，data为获取到的HTTP流式数据接收数据，类型为ArrayBuffer；否则为错误对 象。 |
 
 **示例**
 
@@ -409,7 +409,7 @@ on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'dataReceiveProgress' | 是 | 订阅的事件类型，'dataReceiveProgress'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | 是 | 回调函数。当订阅成功时，回调内容是 [DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)，订阅失败时为undefined。<br>**起始版本：** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | 是 | 回调函数。当订阅成功时，回调内容是 [DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)，订阅失败时为undefined。<br>**起始版本：** 11 |
 
 **示例**
 
@@ -444,7 +444,7 @@ on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'dataSendProgress' | 是 | 订阅的事件类型，'dataSendProgress'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | 是 | 回调函数。当订阅成功时，回调内容是 [DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)，订阅失败时为undefined。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | 是 | 回调函数。当订阅成功时，回调内容是 [DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)，订阅失败时为undefined。 |
 
 **示例**
 
@@ -481,7 +481,7 @@ on(type: "headerReceive", callback: AsyncCallback<Object>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | "headerReceive" | 是 | 订阅的事件类型，'headerReceive'。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Object&gt; | 是 | 回调函数。当订阅成功，error为undefined，data为获取到HTTP响应头；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | 是 | 回调函数。当订阅成功，error为undefined，data为获取到HTTP响应头；否则为错误对象。 |
 
 **示例**
 
@@ -516,7 +516,7 @@ on(type: "headersReceive", callback: Callback<Object>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | "headersReceive" | 是 | 订阅的事件类型：'headersReceive'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Object&gt; | 是 | 回调函数，返回HTTP响应头对象。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | 是 | 回调函数，返回HTTP响应头对象。 |
 
 **示例**
 
@@ -551,7 +551,7 @@ once(type: "headersReceive", callback: Callback<Object>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | "headersReceive" | 是 | 订阅事件，固定为'headersReceive'。headersReceive：响应头接收事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Object&gt; | 是 | 回调函数。返回HTTP响应头对象。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | 是 | 回调函数。返回HTTP响应头对象。 |
 
 **示例**
 
@@ -595,7 +595,7 @@ request(url: string, callback: AsyncCallback<HttpResponse>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | 发起网络请求的URL地址。示例：https://www.test.com |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;HttpResponse&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpResponse&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -708,7 +708,7 @@ request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpRe
 | --- | --- | --- | --- |
 | url | string | 是 | 发起网络请求的URL地址。 |
 | options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | 是 | 参考[HttpRequestOptions](arkts-network-http-httprequestoptions-i.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;HttpResponse&gt; | 是 | 回调函数。当请求成功时，回调内容是[HttpResponse](arkts-network-http-httpresponse-i.md) ，请求失败时 为undefined。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpResponse&gt; | 是 | 回调函数。当请求成功时，回调内容是[HttpResponse](arkts-network-http-httpresponse-i.md) ，请求失败时 为undefined。 |
 
 **错误码：**
 
@@ -971,7 +971,7 @@ requestInStream(url: string, callback: AsyncCallback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | 发起网络请求的URL地址。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 回调函数。当请求成功，err为undefined，返回HTTP请求响应错误码，具体含义见 [ResponseCode](arkts-network-http-responsecode-e.md)；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。当请求成功，err为undefined，返回HTTP请求响应错误码，具体含义见 [ResponseCode](arkts-network-http-responsecode-e.md)；否则为错误对象。 |
 
 **错误码：**
 
@@ -1071,7 +1071,7 @@ requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallbac
 | --- | --- | --- | --- |
 | url | string | 是 | 发起网络请求的URL地址。 |
 | options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | 是 | 参考[HttpRequestOptions](arkts-network-http-httprequestoptions-i.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 回调函数。当请求成功，err为undefined，返回HTTP请求响应错误码，具体含义见 [ResponseCode](arkts-network-http-responsecode-e.md)；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。当请求成功，err为undefined，返回HTTP请求响应错误码，具体含义见 [ResponseCode](arkts-network-http-responsecode-e.md)；否则为错误对象。 |
 
 **错误码：**
 

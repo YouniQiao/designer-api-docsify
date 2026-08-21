@@ -14,5 +14,5 @@ type ToneHapticsAttrsArray = Array<ToneHapticsAttrs>
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** Array<ToneHapticsAttrs>
+**属性类型：** Array&lt;[ToneHapticsAttrs](arkts-audio-systemsoundmanager-tonehapticsattrs-i-sys.md)&gt;
 

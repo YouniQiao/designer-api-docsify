@@ -1,6 +1,6 @@
 # FrameNode
 
-*FrameNode** represents an entity node in the component tree. It can be used by a [NodeController](arkts-arkui-nodecontroller-c.md) to mount a BuilderNode (that holds the FrameNode) to a NodeContainer or mount a [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) to another FrameNode.<!--RP2--><!--RP2End-->
+*FrameNode** represents an entity node in the component tree. It can be used by a [NodeController](../../apis-default/arkts-apis/arkts-nodecontroller-c.md) to mount a BuilderNode (that holds the FrameNode) to a NodeContainer or mount a [RenderNode](arkts-arkui-rendernode-c.md) to another FrameNode.<!--RP2--><!--RP2End-->
 
 > **NOTE：**
 > 
@@ -10,7 +10,7 @@
 > 
 > - FrameNode objects do not support JSON serialization.
 > 
-> - When the API of the [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) object is invoked in the scenario of &gt; [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context), you are advised to use the &gt; [runScopedTask](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#runscopedtask) API of &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to specify the UI context. For details, see &gt; [Executing the Closure Bound to a UI Instance](../../../ui/arkts-global-interface.md#executing-the-closure-bound-to-a-ui-instance).
+> - When the API of the [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) object is invoked in the scenario of &gt; [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context), you are advised to use the &gt; [runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runscopedtask) API of &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to specify the UI context. For details, see &gt; [Executing the Closure Bound to a UI Instance](../../../ui/arkts-global-interface.md#executing-the-closure-bound-to-a-ui-instance).
 > 
 > - In the FrameNode APIs, only the mandatory parameters of the Optional type can be set to null or &gt; undefined.
 
@@ -42,7 +42,7 @@ Adds component content. The current node must be modifiable, which means the ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../../apis-default/arkts-apis/arkts-componentcontent-c.md)&lt;T&gt; \| [ReactiveComponentContent](../../apis-default/arkts-apis/arkts-componentcontent-reactivecomponentcontent-c.md)&lt;T&gt; | Yes | Component content to display on the FrameNode.<br>**Since:** 22 |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; \| [ReactiveComponentContent](arkts-arkui-componentcontent-reactivecomponentcontent-c.md)&lt;T&gt; | Yes | Component content to display on the FrameNode.<br>**Since:** 22 |
 
 **Error codes:**
 
@@ -233,7 +233,7 @@ A constructor used to create a FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 
 ## convertPosition
 
@@ -485,7 +485,7 @@ Creates a specified number of FrameNodes in batches and returns a FrameNode arra
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | count | number | Yes | Number of nodes to be created. The value is an integer greater than 0. If the value is less than or equal to 0 or is not an integer, an empty array is returned. |
 
 **Return value:**
@@ -2026,7 +2026,7 @@ See Example of Node Operations.
 getRenderNode(): RenderNode | null
 ```
 
-Obtains the [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) held by the FrameNode.
+Obtains the [RenderNode](arkts-arkui-rendernode-c.md) held by the FrameNode.
 
 **Since:** 11
 
@@ -2042,7 +2042,7 @@ Obtains the [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) he
 
 | Type | Description |
 | --- | --- |
-| [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) \| null | RenderNode** instance. If the current FrameNode does not hold any RenderNode, **null** is returned. If the current FrameNode is a node created by a declarative component, **null** is returned. |
+| [RenderNode](arkts-arkui-rendernode-c.md) \| null | RenderNode** instance. If the current FrameNode does not hold any RenderNode, **null** is returned. If the current FrameNode is a node created by a declarative component, **null** is returned. |
 
 **Examples**
 

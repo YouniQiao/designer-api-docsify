@@ -23,7 +23,7 @@ dateOptions?: DateStyleOptions
 
 日期型内联型Counter的样式。 默认值：显示0001/01/01的日期型内联型Counter。
 
-**类型：** [DateStyleOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-counter-datestyleoptions-c.md)
+**类型：** [DateStyleOptions](arkts-arkui-advanced-counter-datestyleoptions-c.md)
 
 **起始版本：** 23
 
@@ -63,7 +63,7 @@ inlineOptions?: InlineStyleOptions
 
 普通数字内联调节型Counter的样式。 默认值：显示计数器为0的普通数字内联调节型Counter。
 
-**类型：** [InlineStyleOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-counter-inlinestyleoptions-c.md)
+**类型：** [InlineStyleOptions](arkts-arkui-advanced-counter-inlinestyleoptions-c.md)
 
 **起始版本：** 23
 
@@ -83,7 +83,7 @@ numberOptions?: NumberStyleOptions
 
 列表型和紧凑型Counter的样式。 默认值：显示计数器为0的列表型或紧凑型Counter。
 
-**类型：** [NumberStyleOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-counter-numberstyleoptions-c.md)
+**类型：** [NumberStyleOptions](arkts-arkui-advanced-counter-numberstyleoptions-c.md)
 
 **起始版本：** 23
 
@@ -107,7 +107,7 @@ type: CounterType
 
 不支持设置undefined。
 
-**类型：** [CounterType](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-counter-countertype-e.md)
+**类型：** [CounterType](arkts-arkui-advanced-counter-countertype-e.md)
 
 **起始版本：** 23
 

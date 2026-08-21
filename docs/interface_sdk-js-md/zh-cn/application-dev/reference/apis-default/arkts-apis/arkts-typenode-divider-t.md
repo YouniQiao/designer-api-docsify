@@ -16,5 +16,5 @@ Define the FrameNode type for Divider.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** DividerFrameNode
+**属性类型：** [DividerFrameNode](arkts-typenode-dividerframenode-c.md)
 

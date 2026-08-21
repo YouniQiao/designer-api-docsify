@@ -1,6 +1,10 @@
 # Client
 
-管理SSAP客户端。在调用ssap客户端方法之前，必须使用[createClient](arkts-connectivity-ssap-createclient-f.md)创建ssap客户端实例。
+SSAP客户端类，提供了和服务端进行连接和数据传输等操作方法。
+
+使用该类的方法前，需通过[ssap.createClient](arkts-connectivity-ssap-createclient-f.md)方法构造该类的实例。
+
+同一应用针对同一远端设备创建一个[Client](arkts-connectivity-ssap-client-i.md)实例即可，重复创建会增加不必要的资源开销。
 
 **起始版本：** 26.0.0
 
@@ -20,7 +24,7 @@ import { ssap } from '@kit.ConnectivityKit';
 callMethod(method: Method): Promise<Method>
 ```
 
-调用服务端的方法。
+调用服务端方法。例如，在设备控制场景中，客户端可调用服务端提供的配置方法来远程设置设备参数或触发特定操作。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -38,13 +42,13 @@ callMethod(method: Method): Promise<Method>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| method | [Method](arkts-connectivity-ssap-method-i-sys.md) | 是 | 指示要调用的方法 |
+| method | [Method](arkts-connectivity-ssap-method-i-sys.md) | 是 | 服务端方法。需与服务发现时获取的对端Service中的method对应。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[Method](arkts-connectivity-ssap-method-i-sys.md)&gt; | Promise用于返回方法结果。 |
+| Promise&lt;[Method](arkts-connectivity-ssap-method-i-sys.md)&gt; | Promise对象，返回调用结果对应的Method对象，其中result字段为服务端方法执行后的返回值。 |
 
 **错误码：**
 
@@ -63,7 +67,7 @@ callMethod(method: Method): Promise<Method>
 offEventNotify(callback?: Callback<Event>): void
 ```
 
-取消订阅事件通知。
+取消订阅事件通知事件。使用callback异步回调。
 
 **起始版本：** 26.0.0
 
@@ -79,7 +83,7 @@ offEventNotify(callback?: Callback<Event>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Event&gt; | 否 | 用于监听事件通知事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Event&gt; | 否 | 回调函数，返回服务的事件对象。 <br>填写该参数则取消当前callback订阅。不填写该参数则取消该事件对应的所有回调。 |
 
 ## onEventNotify
 
@@ -87,9 +91,9 @@ offEventNotify(callback?: Callback<Event>): void
 onEventNotify(callback: Callback<Event>): void
 ```
 
-订阅事件通知。
+订阅事件通知事件。例如，在设备状态监控场景中，客户端通过订阅事件来实时接收服务端推送的状态变化通知（如设备告警、数据更新等）。使用callback异步回调。
 
-只有授予了ohos.permission.NEARLINK_ACCESS权限的系统应用程序才能访问此事件。
+应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
 
 **起始版本：** 26.0.0
 
@@ -105,7 +109,7 @@ onEventNotify(callback: Callback<Event>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Event&gt; | 是 | 用于监听事件通知事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Event&gt; | 是 | 回调函数，返回服务的事件对象。 |
 
 ## readDescriptor
 
@@ -113,7 +117,7 @@ onEventNotify(callback: Callback<Event>): void
 readDescriptor(descriptor: PropertyDescriptor): Promise<PropertyDescriptor>
 ```
 
-读取服务器的描述符。
+读取服务端描述符。需在调用[connect](arkts-connectivity-ssap-client-i.md#connect)建立连接成功后使用，使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -131,13 +135,13 @@ readDescriptor(descriptor: PropertyDescriptor): Promise<PropertyDescriptor>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| descriptor | [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md) | 是 | 指示要读取的描述符 |
+| descriptor | [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md) | 是 | 服务端属性描述符。需与服务发现时获取的对端Service中的descriptor对应。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md)&gt; | Promise用于返回描述符值。 |
+| Promise&lt;[PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md)&gt; | Promise对象，返回从服务端读取到的属性描述符对象。 |
 
 **错误码：**
 
@@ -156,7 +160,7 @@ readDescriptor(descriptor: PropertyDescriptor): Promise<PropertyDescriptor>
 setPropertyIndication(property: Property, enable: boolean): Promise<void>
 ```
 
-启用或禁用属性值变更指示。
+启用或禁用服务端属性值更改时的指示（当属性值发生变化时，服务端主动向客户端发送通知）。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -174,14 +178,14 @@ setPropertyIndication(property: Property, enable: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| property | [Property](arkts-connectivity-ssap-property-i.md) | 是 | 要指示的属性。 |
-| enable | boolean | 是 | 指定是否启用属性的指示 |
+| property | [Property](arkts-connectivity-ssap-property-i.md) | 是 | 服务端属性。 |
+| enable | boolean | 是 | 是否启用属性值更改指示。true：启用指示。false：禁用指示。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -201,9 +205,11 @@ setPropertyIndication(property: Property, enable: boolean): Promise<void>
 writeDescriptor(descriptor: PropertyDescriptor): Promise<void>
 ```
 
-写入服务端的描述符。
+改写服务端的描述符。使用Promise异步回调。
 
-此方法不支持写入客户端属性配置描述符。要写入客户端属性配置描述符，请改为调用[setPropertyNotification](arkts-connectivity-ssap-client-i.md#setpropertynotification)或[setPropertyIndication](#setpropertyindication)。
+> **说明：**
+> 
+> 此接口不支持写入客户端属性配置描述符（CLIENT_PROPERTY_CONFIG），如需配置客户端属性通知或指示，请使用 &gt; [setPropertyNotification](arkts-connectivity-ssap-client-i.md#setpropertynotification)或 &gt; [setPropertyIndication](#setpropertyindication)。
 
 **起始版本：** 26.0.0
 
@@ -221,13 +227,13 @@ writeDescriptor(descriptor: PropertyDescriptor): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| descriptor | [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md) | 是 | 指示要写入的描述符。 <br>描述符类型不应为CLIENT_PROPERTY_CONFIG。 |
+| descriptor | [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md) | 是 | 服务端属性描述符。需与服务发现时获取的对端Service中的descriptor对应。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise用于返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

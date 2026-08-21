@@ -1,6 +1,6 @@
 # InputClient
 
-You must first use on('inputStart') to obtain a **InputClient** instance, and then use this instance to call the following APIs.
+@brief You must first use on('inputStart') to obtain a **InputClient** instance, and then use this instance to call the following APIs.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 deleteBackward(length: int, callback: AsyncCallback<boolean>): void
 ```
 
-Deletes the fixed-length text after the cursor. This API uses an asynchronous callback to return the result.
+@brief Deletes the fixed-length text after the cursor. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -68,7 +68,7 @@ inputClient.deleteBackward(length, (err: BusinessError, result: boolean) => {
 deleteBackward(length: int): Promise<boolean>
 ```
 
-Deletes the fixed-length text after the cursor. This API uses a promise to return the result.
+@brief Deletes the fixed-length text after the cursor. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -119,7 +119,7 @@ inputClient.deleteBackward(length).then((result: boolean) => {
 deleteBackwardSync(length: int): void
 ```
 
-Deletes the fixed-length text after the cursor.
+@brief Deletes the fixed-length text after the cursor.
 
 **Since:** 23
 
@@ -154,7 +154,7 @@ inputClient.deleteBackwardSync(length);
 deleteForward(length: int, callback: AsyncCallback<boolean>): void
 ```
 
-Deletes the fixed-length text before the cursor. This API uses an asynchronous callback to return the result.
+@brief Deletes the fixed-length text before the cursor. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -202,7 +202,7 @@ inputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
 deleteForward(length: int): Promise<boolean>
 ```
 
-Deletes the fixed-length text before the cursor. This API uses a promise to return the result.
+@brief Deletes the fixed-length text before the cursor. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -253,7 +253,7 @@ inputClient.deleteForward(length).then((result: boolean) => {
 deleteForwardSync(length: int): void
 ```
 
-Deletes the fixed-length text before the cursor.
+@brief Deletes the fixed-length text before the cursor.
 
 **Since:** 23
 
@@ -288,10 +288,9 @@ inputClient.deleteForwardSync(length);
 finishTextPreview(): Promise<void>
 ```
 
-Finishes the text preview. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
+@brief Finishes the text preview. This API uses a promise to return the result. <br> <br>   
+> **NOTE：**<br>
+> <br>
 > If there is preview text in the current text box, calling this API will display the preview text on the screen.
 
 **Since:** 23
@@ -331,10 +330,9 @@ inputClient.finishTextPreview().then(() => {
 finishTextPreviewSync(): void
 ```
 
-Finishes the text preview.
-
-> **NOTE：**
-> 
+@brief Finishes the text preview. <br> <br>   
+> **NOTE：**<br>
+> <br>
 > If there is preview text in the current text box, calling this API will display the preview text on the screen.
 
 **Since:** 23
@@ -362,7 +360,7 @@ inputClient.finishTextPreviewSync();
 getAttachOptions(): AttachOptions
 ```
 
-Obtains the additional options for binding an input method.
+@brief Obtains the additional options for binding an input method.
 
 **Since:** 19
 
@@ -395,7 +393,7 @@ console.info(`Succeeded in getting AttachOptions, AttachOptions is ${attachOptio
 getAttachOptions(): AttachOptions | null
 ```
 
-Get input attachOptions.
+@brief Get input attachOptions.
 
 **Since:** 23
 
@@ -415,7 +413,7 @@ Get input attachOptions.
 getBackward(length: int, callback: AsyncCallback<string>): void
 ```
 
-Obtains the specific-length text after the cursor. This API uses an asynchronous callback to return the result.
+@brief Obtains the specific-length text after the cursor. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -459,7 +457,7 @@ inputClient.getBackward(length, (err: BusinessError, text: string) => {
 getBackward(length: int): Promise<string>
 ```
 
-Obtains the specific-length text after the cursor. This API uses a promise to return the result.
+@brief Obtains the specific-length text after the cursor. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -506,7 +504,7 @@ inputClient.getBackward(length).then((text: string) => {
 getBackwardSync(length: int): string
 ```
 
-Obtains the specific-length text after the cursor.
+@brief Obtains the specific-length text after the cursor.
 
 **Since:** 23
 
@@ -548,11 +546,10 @@ console.info(`Succeeded in getting backward, text: ${text}`);
 getCallingWindowInfo(): Promise<WindowInfo>
 ```
 
-Obtains information about the application window, in which the input box that starts an input method is located. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API applies only to the input method applications that use [Panel](arkts-ime-inputmethodengine-panel-i.md) as the &gt; soft keyboard window.
+@brief Obtains information about the application window, in which the input box that starts an input method is located. This API uses a promise to return the result. <br> <br>   
+> **NOTE：**<br>
+> <br>
+> This API applies only to the input method applications that use [Panel](arkts-ime-inputmethodengine-panel-i.md) as the soft keyboard window.
 
 **Since:** 12
 
@@ -593,7 +590,7 @@ inputClient.getCallingWindowInfo().then((windowInfo: inputMethodEngine.WindowInf
 getCallingWindowInfo(): Promise<WindowInfo | null>
 ```
 
-Get info of the calling window.
+@brief Get info of the calling window.
 
 **Since:** 23
 
@@ -621,7 +618,7 @@ Get info of the calling window.
 getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void
 ```
 
-Obtains the attribute of the edit box. This API uses an asynchronous callback to return the result.
+@brief Obtains the attribute of the edit box. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -662,7 +659,7 @@ inputClient.getEditorAttribute((err: BusinessError, editorAttribute: inputMethod
 getEditorAttribute(callback: AsyncCallback<EditorAttribute | null>): void
 ```
 
-Get attribute about editor.
+@brief Get attribute about editor.
 
 **Since:** 23
 
@@ -688,7 +685,7 @@ Get attribute about editor.
 getEditorAttribute(): Promise<EditorAttribute>
 ```
 
-Obtains the attribute of the edit box. This API uses a promise to return the result.
+@brief Obtains the attribute of the edit box. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -727,7 +724,7 @@ inputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.Editor
 getEditorAttribute(): Promise<EditorAttribute | null>
 ```
 
-Get attribute about editor.
+@brief Get attribute about editor.
 
 **Since:** 23
 
@@ -753,7 +750,7 @@ Get attribute about editor.
 getEditorAttributeSync(): EditorAttribute
 ```
 
-Obtains the attribute of the edit box.
+@brief Obtains the attribute of the edit box.
 
 **Since:** 10
 
@@ -787,7 +784,7 @@ console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
 getEditorAttributeSync(): EditorAttribute | null
 ```
 
-Get attribute about editor.
+@brief Get attribute about editor.
 
 **Since:** 23
 
@@ -813,7 +810,7 @@ Get attribute about editor.
 getForward(length: int, callback: AsyncCallback<string>): void
 ```
 
-Obtains the specific-length text before the cursor. This API uses an asynchronous callback to return the result.
+@brief Obtains the specific-length text before the cursor. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -857,7 +854,7 @@ inputClient.getForward(length, (err: BusinessError, text: string) => {
 getForward(length: int): Promise<string>
 ```
 
-Obtains the specific-length text before the cursor. This API uses a promise to return the result.
+@brief Obtains the specific-length text before the cursor. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -904,7 +901,7 @@ inputClient.getForward(length).then((text: string) => {
 getForwardSync(length: int): string
 ```
 
-Obtains the specific-length text before the cursor.
+@brief Obtains the specific-length text before the cursor.
 
 **Since:** 23
 
@@ -946,7 +943,7 @@ console.info(`Succeeded in getting forward, text: ${text}`);
 getTextIndexAtCursor(callback: AsyncCallback<int>): void
 ```
 
-Obtains the index of the text where the cursor is located. This API uses an asynchronous callback to return the result.
+@brief Obtains the index of the text where the cursor is located. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -987,7 +984,7 @@ inputClient.getTextIndexAtCursor((err: BusinessError, index: number) => {
 getTextIndexAtCursor(): Promise<int>
 ```
 
-Obtains the index of the text where the cursor is located. This API uses a promise to return the result.
+@brief Obtains the index of the text where the cursor is located. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -1026,7 +1023,7 @@ inputClient.getTextIndexAtCursor().then((index: number) => {
 getTextIndexAtCursorSync(): int
 ```
 
-Obtains the index of the text where the cursor is located.
+@brief Obtains the index of the text where the cursor is located.
 
 **Since:** 23
 
@@ -1060,7 +1057,7 @@ console.info(`Succeeded in getTextIndexAtCursorSync, index: ${index}`);
 insertText(text: string, callback: AsyncCallback<boolean>): void
 ```
 
-Inserts text. This API uses an asynchronous callback to return the result.
+@brief Inserts text. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -1108,7 +1105,7 @@ inputClient.insertText('test', (err: BusinessError, result: boolean) => {
 insertText(text: string): Promise<boolean>
 ```
 
-Inserts text. This API uses a promise to return the result.
+@brief Inserts text. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -1158,7 +1155,7 @@ inputClient.insertText('test').then((result: boolean) => {
 insertTextSync(text: string): void
 ```
 
-Inserts text.
+@brief Inserts text.
 
 **Since:** 23
 
@@ -1192,7 +1189,7 @@ inputClient.insertTextSync('test');
 moveCursor(direction: int, callback: AsyncCallback<void>): void
 ```
 
-Moves the cursor. This API uses an asynchronous callback to return the result.
+@brief Moves the cursor. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -1234,7 +1231,7 @@ inputClient.moveCursor(inputMethodEngine.Direction.CURSOR_UP, (err: BusinessErro
 moveCursor(direction: int): Promise<void>
 ```
 
-Moves the cursor. This API uses a promise to return the result.
+@brief Moves the cursor. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -1279,7 +1276,7 @@ inputClient.moveCursor(inputMethodEngine.Direction.CURSOR_UP).then(() => {
 moveCursorSync(direction: int): void
 ```
 
-Moves the cursor.
+@brief Moves the cursor.
 
 **Since:** 23
 
@@ -1312,7 +1309,7 @@ inputClient.moveCursorSync(inputMethodEngine.Direction.CURSOR_UP);
 offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void
 ```
 
-Unsubscribe 'attachOptionsDidChange' event.
+@brief Unsubscribe 'attachOptionsDidChange' event.
 
 **Since:** 23
 
@@ -1332,7 +1329,7 @@ Unsubscribe 'attachOptionsDidChange' event.
 off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void
 ```
 
-Unsubscribes from the event indicating that additional options for binding an input method are changed. This API uses an asynchronous callback to return the result.
+@brief Unsubscribes from the event indicating that additional options for binding an input method are changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 19
 
@@ -1367,7 +1364,7 @@ console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
 onAttachOptionsDidChange(callback: Callback<AttachOptions>): void
 ```
 
-Subscribe 'attachOptionsDidChange' event.
+@brief Subscribe 'attachOptionsDidChange' event.
 
 **Since:** 23
 
@@ -1387,7 +1384,7 @@ Subscribe 'attachOptionsDidChange' event.
 on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void
 ```
 
-Subscribes to the event indicating that the additional options for binding an input method are changed. This API uses an asynchronous callback to return the result.
+@brief Subscribes to the event indicating that the additional options for binding an input method are changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 19
 
@@ -1428,13 +1425,12 @@ console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
 recvMessage(msgHandler?: MessageHandler): void
 ```
 
-Registers or unregisters MessageHandler.
-
-> **NOTE：**
-> 
-> The [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) object is globally unique. After multiple &gt; registrations, only the last registered object is valid and retained, and the &gt; [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback of the penultimate registered &gt; object is triggered.
-> 
-> If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md). Its &gt; [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback will be triggered.
+@brief Registers or unregisters MessageHandler. <br> <br>   
+> **NOTE：**<br>
+> <br>
+> The [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) object is globally unique. After multiple registrations, only the last registered object is valid and retained, and the [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback of the penultimate registered object is triggered. <br>
+> <br>
+> If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback will be triggered.
 
 **Since:** 23
 
@@ -1480,7 +1476,7 @@ inputMethodEngine.getInputMethodAbility()
 selectByMovement(movement: Movement, callback: AsyncCallback<void>): void
 ```
 
-Selects text based on the cursor movement direction. This API uses an asynchronous callback to return the result.
+@brief Selects text based on the cursor movement direction. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -1523,7 +1519,7 @@ inputClient.selectByMovement(movement, (err: BusinessError) => {
 selectByMovement(movement: Movement): Promise<void>
 ```
 
-Selects text based on the cursor movement direction. This API uses a promise to return the result.
+@brief Selects text based on the cursor movement direction. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -1569,7 +1565,7 @@ inputClient.selectByMovement(movement).then(() => {
 selectByMovementSync(movement: Movement): void
 ```
 
-Selects text based on the cursor movement direction.
+@brief Selects text based on the cursor movement direction.
 
 **Since:** 23
 
@@ -1603,7 +1599,7 @@ inputClient.selectByMovementSync(movement);
 selectByRange(range: Range, callback: AsyncCallback<void>): void
 ```
 
-Selects text based on the specified range. This API uses an asynchronous callback to return the result.
+@brief Selects text based on the specified range. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -1646,7 +1642,7 @@ inputClient.selectByRange(range, (err: BusinessError) => {
 selectByRange(range: Range): Promise<void>
 ```
 
-Selects text based on the specified range. This API uses a promise to return the result.
+@brief Selects text based on the specified range. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -1692,7 +1688,7 @@ inputClient.selectByRange(range).then(() => {
 selectByRangeSync(range: Range): void
 ```
 
-Selects text based on the specified range.
+@brief Selects text based on the specified range.
 
 **Since:** 23
 
@@ -1726,13 +1722,12 @@ inputClient.selectByRangeSync(range);
 sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void
 ```
 
-Sends an extended edit action. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> The input method applications call this API to send extended edit actions to the edit box. The edit box listens &gt; for the corresponding event using &gt; on('handleExtendAction') for further processing.
-> 
-> When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md), &gt; the edit box application needs to apply for the &gt; [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) &gt; permission.
+@brief Sends an extended edit action. This API uses an asynchronous callback to return the result. <br> <br>   
+> **NOTE：**<br>
+> <br>
+> The input method applications call this API to send extended edit actions to the edit box. The edit box listens for the corresponding event using on('handleExtendAction') for further processing. <br>
+> <br>
+> When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md), the edit box application needs to apply for the [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) permission.
 
 **Since:** 23
 
@@ -1775,13 +1770,12 @@ inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY, (err: Business
 sendExtendAction(action: ExtendAction): Promise<void>
 ```
 
-Sends an extended edit action. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> The input method applications call this API to send extended edit actions to the edit box. The edit box listens &gt; for the corresponding event using &gt; on('handleExtendAction') for &gt; further processing.
-> 
-> When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md), &gt; the edit box application needs to apply for the &gt; [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) &gt; permission.
+@brief Sends an extended edit action. This API uses a promise to return the result. <br> <br>   
+> **NOTE：**<br>
+> <br>
+> The input method applications call this API to send extended edit actions to the edit box. The edit box listens for the corresponding event using [on('handleExtendAction')] on for further processing. <br>
+> <br>
+> When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md), the edit box application needs to apply for the [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) permission.
 
 **Since:** 23
 
@@ -1827,7 +1821,7 @@ inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY).then(() => {
 sendKeyFunction(action: int, callback: AsyncCallback<boolean>): void
 ```
 
-Sends the function key. This API uses an asynchronous callback to return the result.
+@brief Sends the function key. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -1875,7 +1869,7 @@ inputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) => {
 sendKeyFunction(action: int): Promise<boolean>
 ```
 
-Sends the function key. This API uses a promise to return the result.
+@brief Sends the function key. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -1925,12 +1919,11 @@ inputClient.sendKeyFunction(action).then((result: boolean) => {
 sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 ```
 
-Sends the custom communication to the edit box application attached to the input method application. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API can be called only when the edit box is attached to the input method and enter the edit mode, and the &gt; input method application is in full experience mode.
-> 
+@brief Sends the custom communication to the edit box application attached to the input method application. This API uses a promise to return the result. <br> <br>   
+> **NOTE：**<br>
+> <br>
+> This API can be called only when the edit box is attached to the input method and enter the edit mode, and the input method application is in full experience mode. <br>
+> <br>
 > The maximum length of **msgId** is 256 B, and the maximum length of **msgParam** is 128 KB.
 
 **Since:** 23
@@ -1983,13 +1976,14 @@ inputClient.sendMessage(msgId, msgParam).then(() => {
 sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>
 ```
 
-Sends private data to the system component that needs to communicate with the input method application. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> - The private data channel allows communication between the system preset input method application and specific &gt; system components (such as a text box or a home screen application). It is usually used to implement custom &gt; input on a specific device.
-> 
-> - The total size of the private data is 32 KB, and the maximum number of private data records is 5.
+@brief Sends private data to the system component that needs to communicate with the input method application. This API uses a promise to return the result. <br> <br>   
+> **NOTE：**<br>
+> <br>
+> - The private data channel allows communication between the system preset input method application and specific system components (such as a text box or a home screen application). It is usually used to implement custom input on a specific device. <br>
+> <br>
+> - The total size of the private data is 32 KB, and the maximum number of private data records is 5. <br>
+> <br>
+> - Private data is sent to the text box by default. To send it to a desktop application, add a data entry `{'sys_cmd':1}` to the private data.
 
 **Since:** 23
 
@@ -2043,7 +2037,7 @@ inputMethodEngine.getInputMethodAbility().on('inputStart', (kbController, textIn
 setPreviewText(text: string, range: Range): Promise<void>
 ```
 
-Sets the preview text. This API uses a promise to return the result.
+@brief Sets the preview text. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -2091,7 +2085,7 @@ inputClient.setPreviewText('test', range).then(() => {
 setPreviewTextSync(text: string, range: Range): void
 ```
 
-Sets the preview text.
+@brief Sets the preview text.
 
 **Since:** 23
 

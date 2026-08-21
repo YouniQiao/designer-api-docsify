@@ -16,5 +16,5 @@ export type Translation = Vector2
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** Vector2
+**属性类型：** [Vector2](arkts-graphics-vector2-i.md)
 

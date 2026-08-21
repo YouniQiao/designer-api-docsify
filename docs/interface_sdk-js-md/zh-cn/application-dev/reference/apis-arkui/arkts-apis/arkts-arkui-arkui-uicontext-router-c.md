@@ -96,7 +96,7 @@ Obtains the number of pages in the current stack.
 
 **废弃版本：** 23
 
-**替代接口：** [getStackSize](#getstacksize)
+**替代接口：** [getStackSize](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#getstacksize)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -285,7 +285,7 @@ Navigates to a page using the named route. This API uses a promise to return the
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | router.NamedRouterOptions | 是 | Page routing parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **错误码：**
 
@@ -359,7 +359,7 @@ Navigates to a page using the named route. This API uses a promise to return the
 | --- | --- | --- | --- |
 | options | router.NamedRouterOptions | 是 | Page routing parameters. |
 | mode | router.RouterMode | 是 | Routing mode. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **错误码：**
 
@@ -433,7 +433,7 @@ Navigates to a specified page in the application.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | router.RouterOptions | 是 | Page routing parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **错误码：**
 
@@ -507,7 +507,7 @@ Navigates to a specified page in the application.
 | --- | --- | --- | --- |
 | options | router.RouterOptions | 是 | Page routing parameters. |
 | mode | router.RouterMode | 是 | Routing mode. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **错误码：**
 
@@ -581,7 +581,7 @@ Replaces the current page with another one in the application. The current page 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | router.NamedRouterOptions | 是 | Description of the new page. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **错误码：**
 
@@ -653,7 +653,7 @@ Replaces the current page with another one in the application. The current page 
 | --- | --- | --- | --- |
 | options | router.NamedRouterOptions | 是 | Description of the new page. |
 | mode | router.RouterMode | 是 | Routing mode. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **错误码：**
 
@@ -669,7 +669,7 @@ Replaces the current page with another one in the application. The current page 
 replaceNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode): Promise<void>
 ```
 
-用指定的命名路由页面替换当前页面，并销毁被替换的页面，使用Promise异步回调。与[replaceNamedRoute](#replacenamedroute)相比，新增了mode参数，即支持设置跳转页面使用的模式。
+用指定的命名路由页面替换当前页面，并销毁被替换的页面，使用Promise异步回调。与[replaceNamedRoute](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#replacenamedroute)相比，新增了mode参数，即支持设置跳转页面使用的模式。
 
 **起始版本：** 10
 
@@ -725,7 +725,7 @@ Replaces the current page with another one in the application. The current page 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | router.RouterOptions | 是 | Description of the new page. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **错误码：**
 
@@ -797,7 +797,7 @@ Replaces the current page with another one in the application. The current page 
 | --- | --- | --- | --- |
 | options | router.RouterOptions | 是 | Description of the new page. |
 | mode | router.RouterMode | 是 | Routing mode. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **错误码：**
 

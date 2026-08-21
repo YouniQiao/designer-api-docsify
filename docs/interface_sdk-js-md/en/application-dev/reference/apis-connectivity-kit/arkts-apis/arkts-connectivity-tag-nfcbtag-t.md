@@ -4,11 +4,11 @@
 export type NfcBTag = _NfcBTag
 ```
 
-Exports type NfcBTag.
+Obtains an **NfcBTag** object.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-tag-export type NfcBTag = _NfcBTag--><!--Device-tag-export type NfcBTag = _NfcBTag-End-->
 

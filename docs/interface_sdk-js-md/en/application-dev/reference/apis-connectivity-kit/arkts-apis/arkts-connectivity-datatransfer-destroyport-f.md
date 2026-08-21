@@ -12,7 +12,7 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 function destroyPort(uuid: string): void
 ```
 
-Destroys a listen port and releases related resources by UUID.
+Destroys the port channel.
 
 **Since:** 26.0.0
 
@@ -28,7 +28,7 @@ Destroys a listen port and releases related resources by UUID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uuid | string | Yes | Indicates application service UUID. <br>The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. <br>NearLink standard UUIDs not allowed. |
+| uuid | string | Yes | NearLink service UUID, which is a string of 36 characters. The value consists of 32 hexadecimal digits and four hyphens (-), for example, **FFFFFFFF-1234-5678-ABCD-000000001234**, which indicates a 128-bit ID. The value cannot be set to a standard NearLink UUID. |
 
 **Error codes:**
 

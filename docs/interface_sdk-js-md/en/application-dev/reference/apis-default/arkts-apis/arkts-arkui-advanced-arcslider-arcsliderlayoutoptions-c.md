@@ -35,7 +35,7 @@ The constructor used to create a ArcSliderLayoutOptions object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ArcSliderLayoutOptionsConstructorOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptionsconstructoroptions-i.md) | No |  |
+| options | [ArcSliderLayoutOptionsConstructorOptions](arkts-arkui-advanced-arcslider-arcsliderlayoutoptionsconstructoroptions-i.md) | No |  |
 
 ## position
 
@@ -46,7 +46,7 @@ The constructor used to create a ArcSliderLayoutOptions object.
 
 Set the component's position on the screen.
 
-**Type:** [ArcSliderPosition](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcsliderposition-e.md)
+**Type:** [ArcSliderPosition](arkts-arkui-advanced-arcslider-arcsliderposition-e.md)
 
 **Default:** ArcSliderPosition.RIGHT
 

@@ -103,7 +103,7 @@ action?: ToolBarV2ItemAction
 
 默认无点击事件。
 
-**类型：** [ToolBarV2ItemAction](arkts-toolbarv2itemaction-t.md)
+**类型：** [ToolBarV2ItemAction](../../apis-arkui/arkts-apis/arkts-arkui-toolbarv2itemaction-t.md)
 
 **起始版本：** 23
 
@@ -123,7 +123,7 @@ content: ToolBarV2ItemText
 
 工具栏子项的文本。
 
-**类型：** [ToolBarV2ItemText](arkts-arkui-advanced-toolbarv2-toolbarv2itemtext-c.md)
+**类型：** [ToolBarV2ItemText](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemtext-c.md)
 
 **起始版本：** 23
 
@@ -145,7 +145,7 @@ icon?: ToolBarV2ItemIconType
 
 默认不显示图标。
 
-**类型：** [ToolBarV2ItemIconType](arkts-toolbarv2itemicontype-t.md)
+**类型：** [ToolBarV2ItemIconType](../../apis-arkui/arkts-apis/arkts-arkui-toolbarv2itemicontype-t.md)
 
 **起始版本：** 23
 
@@ -167,7 +167,7 @@ state?: ToolBarV2ItemState
 
 默认为ToolBarV2ItemState.ENABLE。
 
-**类型：** [ToolBarV2ItemState](arkts-arkui-advanced-toolbarv2-toolbarv2itemstate-e.md)
+**类型：** [ToolBarV2ItemState](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemstate-e.md)
 
 **起始版本：** 23
 

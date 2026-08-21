@@ -1,6 +1,6 @@
 # PairingState
 
-The enum of pairing state.
+Enumerates the pairing states with a remote device.
 
 **Since:** 26.0.0
 
@@ -14,7 +14,7 @@ The enum of pairing state.
 PAIRING_STATE_NONE = 1
 ```
 
-Indicates that the pairing state is none.
+Not paired.
 
 **Since:** 26.0.0
 
@@ -30,7 +30,7 @@ Indicates that the pairing state is none.
 PAIRING_STATE_PAIRING = 2
 ```
 
-Indicates that the pairing state is pairing.
+Pairing.
 
 **Since:** 26.0.0
 
@@ -46,7 +46,7 @@ Indicates that the pairing state is pairing.
 PAIRING_STATE_PAIRED = 3
 ```
 
-Indicates that the pairing state is paired.
+Paired.
 
 **Since:** 26.0.0
 

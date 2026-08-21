@@ -1,6 +1,6 @@
 # ManufacturerData
 
-描述制造商数据。
+表示厂商数据。
 
 **起始版本：** 26.0.0
 
@@ -20,7 +20,7 @@ import { advertising } from '@kit.ConnectivityKit';
 manufacturerData: ArrayBuffer
 ```
 
-制造商数据。
+厂商数据。
 
 **类型：** ArrayBuffer
 
@@ -38,7 +38,7 @@ manufacturerData: ArrayBuffer
 manufacturerId: int
 ```
 
-厂商ID。 取值范围为全体整数。
+厂商ID。取值范围[1, 65535]。
 
 **类型：** int
 

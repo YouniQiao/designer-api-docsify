@@ -14,5 +14,5 @@ Array of tone attributes.
 
 **System API:** This is a system API.
 
-**Property type:** Array<ToneAttrs>
+**Property type:** Array&lt;[ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i-sys.md)&gt;
 

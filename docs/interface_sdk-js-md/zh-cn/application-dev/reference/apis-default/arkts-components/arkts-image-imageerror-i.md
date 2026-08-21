@@ -86,7 +86,7 @@ error?: BusinessError<void>
 
 默认值：{ code : -1, message : "" }
 
-**类型：** [BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md)&lt;void&gt;
+**类型：** [BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt;
 
 **起始版本：** 23
 

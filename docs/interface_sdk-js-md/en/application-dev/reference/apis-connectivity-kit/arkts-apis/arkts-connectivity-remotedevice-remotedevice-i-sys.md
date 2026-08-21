@@ -1,6 +1,6 @@
 # RemoteDevice
 
-Remote device operation methods.
+Provides the method for operating on a remote device. Before using this method, you need to call [remoteDevice.createRemoteDevice](arkts-connectivity-remotedevice-createremotedevice-f.md) to create a [RemoteDevice](arkts-connectivity-remotedevice-remotedevice-i.md) instance. You need to create only one instance for a device.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 cancelDevicePairing(): Promise<void>
 ```
 
-Cancel an in-progress pairing request.
+Cancels the ongoing pairing request. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ Cancel an in-progress pairing request.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -55,7 +55,7 @@ Cancel an in-progress pairing request.
 connect(): Promise<void>
 ```
 
-Connect all allowed profiles.
+Initiates a connection request to a remote device. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -73,7 +73,7 @@ Connect all allowed profiles.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the result of connecting to profiles as a Promise. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -90,7 +90,7 @@ Connect all allowed profiles.
 disconnect(): Promise<void>
 ```
 
-Disconnect all connected profiles.
+Disconnects from the remote device. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -108,7 +108,7 @@ Disconnect all connected profiles.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the result of connecting to profiles as a Promise. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -125,7 +125,7 @@ Disconnect all connected profiles.
 getDeviceAlias(): string
 ```
 
-Gets the alias of a remote device.
+Obtains the alias of a remote device.
 
 **Since:** 26.0.0
 
@@ -143,7 +143,7 @@ Gets the alias of a remote device.
 
 | Type | Description |
 | --- | --- |
-| string | Returns the alias of a remote device. |
+| string | Alias of the remote device. |
 
 **Error codes:**
 
@@ -160,7 +160,7 @@ Gets the alias of a remote device.
 getDeviceModel(): DeviceModel
 ```
 
-Obtains the model information of a remote device.
+Obtains the model of a remote device.
 
 **Since:** 26.0.0
 
@@ -176,7 +176,7 @@ Obtains the model information of a remote device.
 
 | Type | Description |
 | --- | --- |
-| [DeviceModel](arkts-connectivity-remotedevice-devicemodel-i-sys.md) | Returns the remote device's model information. |
+| [DeviceModel](arkts-connectivity-remotedevice-devicemodel-i-sys.md) | Model of the remote device. |
 
 **Error codes:**
 
@@ -192,7 +192,7 @@ Obtains the model information of a remote device.
 getRssiValue(): Promise<int>
 ```
 
-Gets the RSSI value of a remote device.
+Obtains the received signal strength indicator (RSSI) of a remote device. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -210,7 +210,7 @@ Gets the RSSI value of a remote device.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int&gt; | Returns promise object of RSSI value. |
+| Promise&lt;int&gt; | Promise used to return the RSSI value. |
 
 **Error codes:**
 
@@ -227,7 +227,7 @@ Gets the RSSI value of a remote device.
 removePairedDevice(): Promise<void>
 ```
 
-Remove a paired remote device.
+Removes a paired device. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -245,7 +245,7 @@ Remove a paired remote device.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -262,7 +262,7 @@ Remove a paired remote device.
 setConnectionInterval(interval: ConnectionInterval): void
 ```
 
-Sets the connection interval with a remote device.
+Sets the interval for connecting to a remote device.
 
 **Since:** 26.0.0
 
@@ -280,7 +280,7 @@ Sets the connection interval with a remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| interval | ConnectionInterval | Yes | The connection interval to set. |
+| interval | ConnectionInterval | Yes | Connection interval to be set. |
 
 **Error codes:**
 
@@ -315,7 +315,7 @@ Sets the alias of a remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alias | string | Yes | The alias of a remote device <br>The maximum length is 64 and cannot be empty. |
+| alias | string | Yes | Alias of the remote device. The value can contain a maximum of 64 characters and cannot be empty. |
 
 **Error codes:**
 
@@ -333,7 +333,7 @@ Sets the alias of a remote device.
 setPairingConfirmation(accept: boolean): void
 ```
 
-Set the confirmation to a pairing request.
+Sets the pairing confirmation. You can obtain the pairing request of the peer device using remoteDevice.onPairingRequest.
 
 **Since:** 26.0.0
 
@@ -351,7 +351,7 @@ Set the confirmation to a pairing request.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accept | boolean | Yes | Set this parameter to true if the pairing request is accepted. Otherwise, set it to false. |
+| accept | boolean | Yes | Pairing confirmation. **true**: Accept the pairing. **false**: Reject the pairing. |
 
 **Error codes:**
 
@@ -368,7 +368,7 @@ Set the confirmation to a pairing request.
 setPairingPasscode(passcode: string): Promise<void>
 ```
 
-Set the passcode during pairing if the pairing type is passcode
+Sets the pairing passcode. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -386,13 +386,13 @@ Set the passcode during pairing if the pairing type is passcode
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| passcode | string | Yes | The passcode entered by the user. It must be a 6-digit number <br>The length must be 6, Six digits within 10. |
+| passcode | string | Yes | Pairing passcode entered by the user, which must be a six-digit number. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise object is returned. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -410,7 +410,7 @@ Set the passcode during pairing if the pairing type is passcode
 startCrediblePairing(): Promise<void>
 ```
 
-Starts pairing with a credible remote NearLink device. This interface does not trigger a dialog box and does not require user authorization.
+Initiates pairing with a trusted remote device without a dialog box. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -428,7 +428,7 @@ Starts pairing with a credible remote NearLink device. This interface does not t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

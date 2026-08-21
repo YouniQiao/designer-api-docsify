@@ -26,8 +26,8 @@ function request(param: RequestParameters, callback: AsyncCallback<RequestCallba
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | [RequestParameters](../../apis-default/arkts-apis/arkts-plugincomponentmanager-requestparameters-i.md) | 是 | 组件模板的详细请求信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RequestCallbackParameters](../../apis-default/arkts-apis/arkts-plugincomponentmanager-requestcallbackparameters-i.md)&gt; | 是 | 此次请求的异步回调，通过回调接口的参数返回请求所获取的数据。 |
+| param | [RequestParameters](arkts-arkui-plugincomponentmanager-requestparameters-i.md) | 是 | 组件模板的详细请求信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RequestCallbackParameters](arkts-arkui-plugincomponentmanager-requestcallbackparameters-i.md)&gt; | 是 | 此次请求的异步回调，通过回调接口的参数返回请求所获取的数据。 |
 
 **示例**
 

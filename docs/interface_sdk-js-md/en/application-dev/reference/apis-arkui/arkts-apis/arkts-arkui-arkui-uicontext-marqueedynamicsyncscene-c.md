@@ -2,7 +2,7 @@
 
 Represents a dynamic synchronization scene of Marquee.
 
-**Inheritance/Implementation:** MarqueeDynamicSyncScene extends [DynamicSyncScene](../../apis-default/arkts-apis/arkts-arkui-uicontext-dynamicsyncscene-c.md)
+**Inheritance/Implementation:** MarqueeDynamicSyncScene extends [DynamicSyncScene](arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md)
 
 **Since:** 14
 
@@ -27,7 +27,7 @@ readonly type: MarqueeDynamicSyncSceneType
 
 Type of the MarqueeDynamicSyncSceneType.
 
-**Type:** [MarqueeDynamicSyncSceneType](../../apis-default/arkts-apis/arkts-arkui-uicontext-marqueedynamicsyncscenetype-e.md)
+**Type:** [MarqueeDynamicSyncSceneType](arkts-arkui-arkui-uicontext-marqueedynamicsyncscenetype-e.md)
 
 **Since:** 14
 

@@ -29,14 +29,14 @@ export declare function ArcScrollBar(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ArcScrollBarOptions](arkts-arkui-arcscrollbar-arcscrollbaroptions-i.md) | 是 |  |
+| options | [ArcScrollBarOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcscrollbar-arcscrollbaroptions-i.md) | 是 |  |
 | content_ | CustomBuilder | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcScrollBarAttribute](arkts-arkui-arcscrollbar-arcscrollbarattribute-i.md) |  |
+| [ArcScrollBarAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-c.md) |  |
 
 
 ## ArcScrollBar
@@ -65,12 +65,12 @@ export declare function ArcScrollBar(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | CustomBuilderT&lt;[ArcScrollBarAttribute](arkts-arkui-arcscrollbar-arcscrollbarattribute-i.md)&gt; | 是 | 用于创建ArcScrollBar的样式 |
+| style_ | CustomBuilderT&lt;[ArcScrollBarAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-c.md)&gt; | 是 | 用于创建ArcScrollBar的样式 |
 | content_ | CustomBuilder | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcScrollBarAttribute](arkts-arkui-arcscrollbar-arcscrollbarattribute-i.md) | ArcScrollBar的属性。 |
+| [ArcScrollBarAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-c.md) | ArcScrollBar的属性。 |
 

@@ -1,6 +1,6 @@
 # NearlinkState
 
-The enum of NearLink state.
+Enumerated the NearLink statuses.
 
 **Since:** 26.0.0
 
@@ -14,7 +14,7 @@ The enum of NearLink state.
 STATE_TURNING_ON = 0
 ```
 
-Indicates that NearLink is turning on.
+NearLink is being turned on.
 
 **Since:** 26.0.0
 
@@ -30,7 +30,7 @@ Indicates that NearLink is turning on.
 STATE_ON = 1
 ```
 
-Indicates that NearLink is on and ready for use.
+NearLink is turned on.
 
 **Since:** 26.0.0
 
@@ -46,7 +46,7 @@ Indicates that NearLink is on and ready for use.
 STATE_TURNING_OFF = 2
 ```
 
-Indicates that NearLink is turning off.
+NearLink is being turned off.
 
 **Since:** 26.0.0
 
@@ -62,7 +62,7 @@ Indicates that NearLink is turning off.
 STATE_OFF = 3
 ```
 
-Indicates that NearLink has turned off.
+NearLink is turned off.
 
 **Since:** 26.0.0
 

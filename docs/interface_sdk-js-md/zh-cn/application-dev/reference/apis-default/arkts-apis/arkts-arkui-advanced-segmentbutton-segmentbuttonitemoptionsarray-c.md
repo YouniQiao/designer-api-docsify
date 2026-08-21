@@ -43,7 +43,7 @@ constructor(elements: SegmentButtonItemTuple)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| elements | [SegmentButtonItemTuple](arkts-segmentbuttonitemtuple-t.md) | 是 | 按钮信息。 |
+| elements | [SegmentButtonItemTuple](../../apis-arkui/arkts-apis/arkts-arkui-segmentbuttonitemtuple-t.md) | 是 | 按钮信息。 |
 
 ## create
 
@@ -67,13 +67,13 @@ static create(elements: SegmentButtonItemTuple): SegmentButtonItemOptionsArray
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| elements | [SegmentButtonItemTuple](arkts-segmentbuttonitemtuple-t.md) | 是 | 按钮信息。 |
+| elements | [SegmentButtonItemTuple](../../apis-arkui/arkts-apis/arkts-arkui-segmentbuttonitemtuple-t.md) | 是 | 按钮信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SegmentButtonItemOptionsArray](arkts-arkui-advanced-segmentbutton-segmentbuttonitemoptionsarray-c.md) | 返回创建的SegmentButtonItemOptionsArray对象。 |
+| [SegmentButtonItemOptionsArray](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptionsarray-c.md) | 返回创建的SegmentButtonItemOptionsArray对象。 |
 
 ## pop
 
@@ -101,7 +101,7 @@ pop(): SegmentButtonItemOptions | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [SegmentButtonItemOptions](arkts-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) \| undefined | Returns the removed element. |
+| [SegmentButtonItemOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) \| undefined | Returns the removed element. |
 
 ## push
 
@@ -129,7 +129,7 @@ push(item: SegmentButtonTextItem | SegmentButtonIconItem | SegmentButtonIconText
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| item | [SegmentButtonTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](arkts-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | 是 | 被添加的按钮信息。 |
+| item | [SegmentButtonTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | 是 | 被添加的按钮信息。 |
 
 **返回值：**
 
@@ -166,8 +166,8 @@ push(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| item1 | [SegmentButtonTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](arkts-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | 是 | 被添加的第二个按钮信息。 |
-| item2 | [SegmentButtonTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](arkts-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | 是 | 被添加的第二个按钮信息。 |
+| item1 | [SegmentButtonTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | 是 | 被添加的第二个按钮信息。 |
+| item2 | [SegmentButtonTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | 是 | 被添加的第二个按钮信息。 |
 
 **返回值：**
 
@@ -205,9 +205,9 @@ push(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| item1 | [SegmentButtonTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](arkts-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | 是 | 被添加的第二个按钮信息。 |
-| item2 | [SegmentButtonTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](arkts-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | 是 | 被添加的第二个按钮信息。 |
-| item3 | [SegmentButtonTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](arkts-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | 是 | 被添加的第二个按钮信息。 |
+| item1 | [SegmentButtonTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | 是 | 被添加的第二个按钮信息。 |
+| item2 | [SegmentButtonTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | 是 | 被添加的第二个按钮信息。 |
+| item3 | [SegmentButtonTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | 是 | 被添加的第二个按钮信息。 |
 
 **返回值：**
 
@@ -241,7 +241,7 @@ shift(): SegmentButtonItemOptions | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [SegmentButtonItemOptions](arkts-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) \| undefined | Returns the removed element. |
+| [SegmentButtonItemOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) \| undefined | Returns the removed element. |
 
 ## splice
 
@@ -271,13 +271,13 @@ splice(start: int, deleteCount: int, ...items: SegmentButtonItemOptions[]): Segm
 | --- | --- | --- | --- |
 | start | int | 是 | 删除元素的起始位置。 |
 | deleteCount | int | 是 | 删除元素的数量。 |
-| items | [SegmentButtonItemOptions](arkts-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)[] | 是 | 从start开始要加入到数组中的元素。<br>默认值：不指定任何元素，将从数组中删除元素。 |
+| items | [SegmentButtonItemOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)[] | 是 | 从start开始要加入到数组中的元素。<br>默认值：不指定任何元素，将从数组中删除元素。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SegmentButtonItemOptions](arkts-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)[] | Returns a SegmentButtonItemOptions array containing the deleted elements. |
+| [SegmentButtonItemOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)[] | Returns a SegmentButtonItemOptions array containing the deleted elements. |
 
 ## unshift
 
@@ -305,7 +305,7 @@ unshift(item: SegmentButtonTextItem | SegmentButtonIconItem | SegmentButtonIconT
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| item | [SegmentButtonTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](arkts-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | 是 | 添加的按钮信息。 |
+| item | [SegmentButtonTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | 是 | 添加的按钮信息。 |
 
 **返回值：**
 
@@ -343,8 +343,8 @@ unshift(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| item1 | [SegmentButtonTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](arkts-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | 是 | 添加的第二个按钮信息。 |
-| item2 | [SegmentButtonTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](arkts-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | 是 | 添加的第二个按钮信息。 |
+| item1 | [SegmentButtonTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | 是 | 添加的第二个按钮信息。 |
+| item2 | [SegmentButtonTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | 是 | 添加的第二个按钮信息。 |
 
 **返回值：**
 
@@ -382,9 +382,9 @@ unshift(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| item1 | [SegmentButtonTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](arkts-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | 是 | 添加的第二个按钮信息。 |
-| item2 | [SegmentButtonTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](arkts-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | 是 | 添加的第二个按钮信息。 |
-| item3 | [SegmentButtonTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](arkts-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | 是 | 添加的第二个按钮信息。 |
+| item1 | [SegmentButtonTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | 是 | 添加的第二个按钮信息。 |
+| item2 | [SegmentButtonTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | 是 | 添加的第二个按钮信息。 |
+| item3 | [SegmentButtonTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | 是 | 添加的第二个按钮信息。 |
 
 **返回值：**
 

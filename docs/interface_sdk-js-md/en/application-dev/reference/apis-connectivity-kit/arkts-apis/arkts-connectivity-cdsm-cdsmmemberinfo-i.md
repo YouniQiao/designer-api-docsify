@@ -1,6 +1,6 @@
 # CdsmMemberInfo
 
-Describes the member information of coordinated devices set.
+Represents the information about member devices in the coordinated devices set.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { cdsm } from '@kit.ConnectivityKit';
 address: string
 ```
 
-Indicates the device address. The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+Member device address.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ Indicates the device address. The length must be 17, The value consists of hexad
 state: CdsmConnectionState
 ```
 
-Member's connection state.
+Member device connection state.
 
 **Type:** [CdsmConnectionState](arkts-connectivity-cdsm-cdsmconnectionstate-e.md)
 

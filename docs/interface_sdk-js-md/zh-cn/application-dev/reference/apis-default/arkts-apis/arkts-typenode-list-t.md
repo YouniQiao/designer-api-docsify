@@ -16,5 +16,5 @@ Define the FrameNode type for List.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** ListFrameNode
+**属性类型：** [ListFrameNode](arkts-typenode-listframenode-c.md)
 

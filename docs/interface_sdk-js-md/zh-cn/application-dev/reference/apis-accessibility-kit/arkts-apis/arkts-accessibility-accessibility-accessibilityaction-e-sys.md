@@ -194,7 +194,7 @@ SET_TEXT = 10
 SCROLL_FORWARD = 11
 ```
 
-表示向前滚动组件（向内容末尾方向滚动）。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).scrollType，参数值为' fullScreen'或'halfScreen'。
+表示向前滚动组件（向内容末尾方向滚动）。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).scrollType，参数值为 'fullScreen'或'halfScreen'。
 
 **起始版本：** 23
 
@@ -210,7 +210,7 @@ SCROLL_FORWARD = 11
 SCROLL_BACKWARD = 12
 ```
 
-表示向后滚动组件（向内容起始方向滚动）。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).scrollType，参数值为' fullScreen'或'halfScreen'。
+表示向后滚动组件（向内容起始方向滚动）。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).scrollType，参数值为 'fullScreen'或'halfScreen'。
 
 **起始版本：** 23
 

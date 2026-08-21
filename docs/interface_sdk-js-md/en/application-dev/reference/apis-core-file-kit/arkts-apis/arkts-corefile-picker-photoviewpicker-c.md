@@ -50,7 +50,7 @@ let photoPicker = new picker.PhotoViewPicker(); // Construction without paramete
 constructor(context: Context)
 ```
 
-A constructor used to create a PhotoViewPicker instance. This constructor is recommended. For details about how to obtain the context, see [getHostContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#gethostcontext).
+A constructor used to create a PhotoViewPicker instance. This constructor is recommended. For details about how to obtain the context, see [getHostContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#gethostcontext).
 
 **Since:** 12
 

@@ -71,7 +71,7 @@ Icon style of the element on the left.
 
 If this parameter is not set or is set to **undefined**, the icon is not displayed.
 
-**Type:** [IconType](arkts-arkui-arkui-advanced-composelistitem-icontype-e.md)
+**Type:** [IconType](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitem-icontype-e.md)
 
 **Since:** 10
 

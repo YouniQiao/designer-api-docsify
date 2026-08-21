@@ -1,6 +1,6 @@
 # AcbState
 
-ACB connection status enumeration.
+Enumerates the logical link connection states with a remote device.
 
 **Since:** 26.0.0
 
@@ -14,7 +14,7 @@ ACB connection status enumeration.
 DISCONNECTED = 0
 ```
 
-ACB disconnected.
+Disconnected.
 
 **Since:** 26.0.0
 
@@ -30,7 +30,7 @@ ACB disconnected.
 CONNECTED = 1
 ```
 
-ACB connected.
+Connected.
 
 **Since:** 26.0.0
 
@@ -46,7 +46,7 @@ ACB connected.
 ENCRYPTED = 2
 ```
 
-ACB encrypted.
+Connected, with link encrypted.
 
 **Since:** 26.0.0
 

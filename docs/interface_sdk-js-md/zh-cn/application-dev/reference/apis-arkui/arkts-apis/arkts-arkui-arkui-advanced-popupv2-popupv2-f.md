@@ -29,5 +29,5 @@ PopupV2用于显示特定样式的气泡，适用于提示信息、操作确认�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [PopupV2InitInfo](../../apis-default/arkts-apis/arkts-arkui-advanced-popupv2-popupv2initinfo-i.md) | 是 | 定义PopupV2组件的配置参数。 |
+| options | [PopupV2InitInfo](arkts-arkui-arkui-advanced-popupv2-popupv2initinfo-i.md) | 是 | 定义PopupV2组件的配置参数。 |
 

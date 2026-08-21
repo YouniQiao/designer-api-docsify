@@ -36,7 +36,7 @@ The constructor of ChipV2Options
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [IChipV2OptionsConfig](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-ichipv2optionsconfig-i.md) | Yes | config of the ChipV2Options |
+| config | [IChipV2OptionsConfig](arkts-arkui-arkui-advanced-chipv2-ichipv2optionsconfig-i.md) | Yes | config of the ChipV2Options |
 
 ## accessibilityDescription
 
@@ -89,7 +89,7 @@ Set accessibility level for Chip.
 
 Sets the accessibility selection type for the chip.
 
-**Type:** [ChipV2AccessibilitySelectedType](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2accessibilityselectedtype-e.md)
+**Type:** [ChipV2AccessibilitySelectedType](arkts-arkui-arkui-advanced-chipv2-chipv2accessibilityselectedtype-e.md)
 
 **Since:** 26.0.0
 
@@ -257,7 +257,7 @@ Chip radius.
 
 Set config for default close icon when 'allowClose' is true.
 
-**Type:** [ChipV2CloseIcon](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2closeicon-c.md)
+**Type:** [ChipV2CloseIcon](arkts-arkui-arkui-advanced-chipv2-chipv2closeicon-c.md)
 
 **Since:** 26.0.0
 
@@ -341,7 +341,7 @@ Set font size for the label text and the close icon.
 
 Chip prefix icon.
 
-**Type:** [ChipV2Label](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2label-c.md)
+**Type:** [ChipV2Label](arkts-arkui-arkui-advanced-chipv2-chipv2label-c.md)
 
 **Since:** 26.0.0
 
@@ -465,7 +465,7 @@ Chip padding.
 
 Chip prefix icon.
 
-**Type:** [ChipV2Icon](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2icon-c.md)
+**Type:** [ChipV2Icon](arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md)
 
 **Since:** 26.0.0
 
@@ -486,7 +486,7 @@ Chip prefix icon.
 
 Chip size.
 
-**Type:** [ChipV2Size](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2size-e.md) \| SizeT&lt;LengthMetrics&gt;
+**Type:** [ChipV2Size](arkts-arkui-arkui-advanced-chipv2-chipv2size-e.md) \| SizeT&lt;LengthMetrics&gt;
 
 **Since:** 26.0.0
 
@@ -507,7 +507,7 @@ Chip size.
 
 Chip suffix icon.
 
-**Type:** [ChipV2Icon](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2icon-c.md)
+**Type:** [ChipV2Icon](arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md)
 
 **Since:** 26.0.0
 

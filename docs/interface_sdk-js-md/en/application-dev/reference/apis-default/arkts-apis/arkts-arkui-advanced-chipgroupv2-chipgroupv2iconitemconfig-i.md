@@ -105,7 +105,7 @@ icon: ChipV2ImageIconConfig
 
 IconConfig.
 
-**Type:** [ChipV2ImageIconConfig](arkts-arkui-advanced-chipv2-chipv2imageiconconfig-i.md)
+**Type:** [ChipV2ImageIconConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipv2-chipv2imageiconconfig-i.md)
 
 **Since:** 26.0.0
 

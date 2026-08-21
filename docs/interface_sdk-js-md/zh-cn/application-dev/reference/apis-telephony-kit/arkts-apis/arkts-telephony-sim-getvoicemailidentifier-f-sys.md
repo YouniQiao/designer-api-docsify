@@ -29,7 +29,7 @@ Obtains the alpha identifier of the voice mailbox of the SIM card in a specified
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | int | 是 | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | Indicates the callback for getting the voice mailbox alpha identifier; returns an empty string if no voice mailbox alpha identifier is written into the SIM card. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | Indicates the callback for getting the voice mailbox alpha identifier; returns an empty string if no voice mailbox alpha identifier is written into the SIM card. |
 
 **错误码：**
 

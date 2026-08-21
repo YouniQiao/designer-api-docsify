@@ -41,7 +41,7 @@ EmbeddedUIExtensionAbility绘制首帧时的回调。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数，在EmbeddedUIExtensionAbility绘制第一帧时触发。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，在EmbeddedUIExtensionAbility绘制第一帧时触发。 |
 
 ## onError
 
@@ -69,7 +69,7 @@ onError(callback: import('../api/@ohos.base').ErrorCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | import('../api/@ohos.base').ErrorCallback | 是 | 用于返回 [BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md)类型错误信息的回调。基于**code**、**name**和**message**参数可以获取并处理错误信息。 |
+| callback | import('../api/@ohos.base').ErrorCallback | 是 | 用于返回 [BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)类型错误信息的回调。基于**code**、**name**和**message**参数可以获取并处理错误信息。 |
 
 ## onTerminated
 

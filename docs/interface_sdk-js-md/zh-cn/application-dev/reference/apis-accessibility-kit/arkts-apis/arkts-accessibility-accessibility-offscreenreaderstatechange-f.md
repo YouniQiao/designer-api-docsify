@@ -16,7 +16,7 @@ import { GesturePoint } from '@kit.AccessibilityKit';
 function offScreenReaderStateChange(callback?: Callback<boolean>): void
 ```
 
-Unregister the observe of the screen reader state changed.
+取消监听屏幕朗读启用状态变化事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -32,7 +32,7 @@ Unregister the observe of the screen reader state changed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 否 | callback Asynchronous callback interface. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数，取消指定callback对象的事件响应。需与accessibility.onScreenReaderStateChange的 callback一致。缺省时，表示注销所有已注册事件。 |
 
 **示例**
 

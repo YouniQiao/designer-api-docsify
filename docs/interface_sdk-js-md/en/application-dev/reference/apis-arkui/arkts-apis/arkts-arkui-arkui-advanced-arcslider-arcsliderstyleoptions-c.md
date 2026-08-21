@@ -34,7 +34,7 @@ A constructor used to create an **ArcSliderStyleOptions** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ArcSliderStyleOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptionsconstructoroptions-i.md) | No | Constructor information for **ArcSliderStyleOptions**. |
+| options | [ArcSliderStyleOptionsConstructorOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderstyleoptionsconstructoroptions-i.md) | No | Constructor information for **ArcSliderStyleOptions**. |
 
 ## activeTrackThickness
 

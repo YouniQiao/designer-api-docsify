@@ -12,5 +12,5 @@ Provides the container definition for media description key-value pairs.
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
-**属性类型：** Record<string, Object>
+**属性类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;
 

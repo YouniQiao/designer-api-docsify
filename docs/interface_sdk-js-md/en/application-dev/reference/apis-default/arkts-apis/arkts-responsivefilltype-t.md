@@ -16,5 +16,5 @@ Define a responsive item filling pattern that can be used in WaterFlow, Grid, Li
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** PresetFillType
+**Property type:** [PresetFillType](../../apis-arkui/arkts-apis/arkts-arkui-presetfilltype-e.md)
 

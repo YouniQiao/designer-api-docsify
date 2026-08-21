@@ -1,6 +1,6 @@
 # AttachOptions
 
-Attach options.
+@brief Defines additional options for binding an input method.
 
 **Since:** 23
 
@@ -25,7 +25,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 requestKeyboardReason?: RequestKeyboardReason
 ```
 
-The reason for request keyboard.
+@brief Reason for requesting the keyboard.
 
 **Type:** RequestKeyboardReason
 
@@ -45,7 +45,7 @@ The reason for request keyboard.
 showKeyboard?: boolean
 ```
 
-Whether to show the keyboard when attaching.
+@brief Whether to start the input method keyboard after the self-drawing component is attached to the input method. <br> <br>- **true** means to start the input method keyboard. <br>- **false** means not to start the input method keyboard.
 
 **Type:** boolean
 

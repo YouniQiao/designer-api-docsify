@@ -35,7 +35,7 @@ constructor(options: CommonArcButtonOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [CommonArcButtonOptions](arkts-arkui-advanced-arcbutton-commonarcbuttonoptions-i.md) | 是 | 定义ArcButton组件的文本、背景色、阴影等参数。 |
+| options | [CommonArcButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-commonarcbuttonoptions-i.md) | 是 | 定义ArcButton组件的文本、背景色、阴影等参数。 |
 
 ## backgroundBlurStyle
 
@@ -198,7 +198,7 @@ constructor(options: CommonArcButtonOptions)
 
 弧形按钮点击动作触发该回调。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ClickEvent&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ClickEvent&gt;
 
 **起始版本：** 23
 
@@ -217,7 +217,7 @@ constructor(options: CommonArcButtonOptions)
 
 弧形按钮手指触摸动作触发该回调。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TouchEvent&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TouchEvent&gt;
 
 **起始版本：** 23
 
@@ -236,7 +236,7 @@ constructor(options: CommonArcButtonOptions)
 
 上下弧形按钮类型属性。<br/>默认值：ArcButtonPosition.BOTTOM_EDGE。
 
-**类型：** [ArcButtonPosition](arkts-arkui-advanced-arcbutton-arcbuttonposition-e.md)
+**类型：** [ArcButtonPosition](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonposition-e.md)
 
 **起始版本：** 23
 
@@ -272,11 +272,11 @@ constructor(options: CommonArcButtonOptions)
   public progressConfig?: ArcButtonProgressConfig
 ```
 
-ArcButton进度条参数。不设置该属性时ArcButton组件表现为按钮样式（ 示例1），设置后表现为进度条样式（ 示例2），进度条样式不受 [ArcButtonStyleMode](arkts-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)属性设置影响。
+ArcButton进度条参数。不设置该属性时ArcButton组件表现为按钮样式（ 示例1），设置后表现为进度条样式（ 示例2），进度条样式不受 [ArcButtonStyleMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)属性设置影响。
 
-默认值：[ArcButtonProgressConfig](arkts-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md) 的各项子属性均取其默认值。
+默认值：[ArcButtonProgressConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md) 的各项子属性均取其默认值。
 
-**类型：** [ArcButtonProgressConfig](arkts-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)
+**类型：** [ArcButtonProgressConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)
 
 **起始版本：** 23
 
@@ -335,7 +335,7 @@ ArcButton进度条参数。不设置该属性时ArcButton组件表现为按钮�
 
 弧形按钮状态。<br/>默认值：ArcButtonStatus.NORMAL
 
-**类型：** [ArcButtonStatus](arkts-arkui-advanced-arcbutton-arcbuttonstatus-e.md)
+**类型：** [ArcButtonStatus](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonstatus-e.md)
 
 **起始版本：** 23
 
@@ -352,9 +352,9 @@ ArcButton进度条参数。不设置该属性时ArcButton组件表现为按钮�
   public styleMode: ArcButtonStyleMode
 ```
 
-弧形按钮样式模式。该样式不支持与[ArcButtonProgressConfig](arkts-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)样式同时使用。<br>默认值：ArcButtonStyleMode.EMPHASIZED_LIGHT
+弧形按钮样式模式。该样式不支持与[ArcButtonProgressConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)样式同时使用。<br>默认值：ArcButtonStyleMode.EMPHASIZED_LIGHT
 
-**类型：** [ArcButtonStyleMode](arkts-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)
+**类型：** [ArcButtonStyleMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)
 
 **起始版本：** 23
 

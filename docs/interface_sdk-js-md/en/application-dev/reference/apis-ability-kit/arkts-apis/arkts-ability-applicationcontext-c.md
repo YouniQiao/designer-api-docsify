@@ -748,7 +748,7 @@ Unregister applicationStateChange callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | No | The applicationStateChange callback. |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | No | The applicationStateChange callback. |
 
 ## offEnvironment
 
@@ -991,7 +991,7 @@ Unregisters the listener for application process state changes. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | Yes | Application process state change. The value is fixed at **'applicationStateChange'**. |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | No | Callback used to return the result. The value can be a callback defined by [ApplicationContext.on('applicationStateChange')](#onabilitylifecycle) or empty.<br>- If a defined callback is passed in, the listener for that callback is unregistered.<br>- If no value is passed in, all the listeners for the corresponding event are unregistered. |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | No | Callback used to return the result. The value can be a callback defined by [ApplicationContext.on('applicationStateChange')](#onabilitylifecycle) or empty.<br>- If a defined callback is passed in, the listener for that callback is unregistered.<br>- If no value is passed in, all the listeners for the corresponding event are unregistered. |
 
 **Error codes:**
 
@@ -1193,7 +1193,7 @@ Register applicationStateChange callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | Yes | The applicationStateChange callback. |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | Yes | The applicationStateChange callback. |
 
 ## onEnvironment
 
@@ -1215,7 +1215,7 @@ Register environment callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [EnvironmentCallback](../../apis-default/arkts-apis/arkts-app-ability-environmentcallback-environmentcallback-i.md) | Yes | The environment callback. |
+| callback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | Yes | The environment callback. |
 
 **Return value:**
 
@@ -1390,7 +1390,7 @@ Registers a listener for application process state changes. This API uses an asy
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | Yes | Application process state change. The value is fixed at **'applicationStateChange'**. |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | Yes | Callback triggered when the application process state is changed. |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | Yes | Callback triggered when the application process state is changed. |
 
 **Error codes:**
 
@@ -1458,7 +1458,7 @@ Registers a listener for system environment changes. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'environment' | Yes | System environment change, for example, system dark/light color mode change. The value is fixed at **'environment'**. |
-| callback | [EnvironmentCallback](../../apis-default/arkts-apis/arkts-app-ability-environmentcallback-environmentcallback-i.md) | Yes | Callback triggered when the system environment changes. |
+| callback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | Yes | Callback triggered when the system environment changes. |
 
 **Return value:**
 

@@ -22,7 +22,7 @@ auxiliaryItem?: OperationOption
 
 附属于搜索区（右侧）的功能位。默认值为`undefined`。
 
-**类型：** [OperationOption](arkts-arkui-arkui-advanced-subheader-operationoption-c.md)
+**类型：** [OperationOption](../../apis-default/arkts-apis/arkts-arkui-advanced-subheader-operationoption-c.md)
 
 **起始版本：** 18
 
@@ -40,7 +40,7 @@ independentItem?: OperationOption
 
 独立于搜索区（右侧）的功能位。默认值为`undefined`。
 
-**类型：** [OperationOption](arkts-arkui-arkui-advanced-subheader-operationoption-c.md)
+**类型：** [OperationOption](../../apis-default/arkts-apis/arkts-arkui-advanced-subheader-operationoption-c.md)
 
 **起始版本：** 18
 

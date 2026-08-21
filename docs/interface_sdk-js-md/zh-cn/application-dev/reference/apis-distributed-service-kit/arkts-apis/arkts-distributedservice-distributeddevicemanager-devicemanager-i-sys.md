@@ -520,7 +520,7 @@ offReplyResult(callback?: Callback<ReplyResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | 否 | 指示要取消注册的设备管理器 UI 状态，返回UI状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | 否 | 指示要取消注册的设备管理器 UI 状态，返回UI状态。 |
 
 **错误码：**
 
@@ -566,7 +566,7 @@ off(type: 'replyResult', callback?: Callback<{ param: string; }>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'replyResult' | 是 | 取消注册的设备管理器 UI 状态回调，固定为replyResult。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ param: string; }&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | 否 |  |
 
 **错误码：**
 
@@ -612,7 +612,7 @@ onReplyResult(callback: Callback<ReplyResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | 是 | 指示要注册的设备管理器 UI 状态回调，返回UI状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | 是 | 指示要注册的设备管理器 UI 状态回调，返回UI状态。 |
 
 **错误码：**
 
@@ -660,7 +660,7 @@ on(type: 'replyResult', callback: Callback<{ param: string; }>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'replyResult' | 是 | 注册的设备管理器 UI 状态回调，以便在状态改变时通知应用，固定为replyResult。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ param: string; }&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | 是 |  |
 
 **错误码：**
 

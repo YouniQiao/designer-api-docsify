@@ -26,7 +26,7 @@ Subscribe to pedometer sensor data, {@code SensorId.PEDOMETER}.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PedometerResponse](arkts-sensorservice-sensor-pedometerresponse-i.md)&gt; | 是 | callback pedometer data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PedometerResponse](arkts-sensorservice-sensor-pedometerresponse-i.md)&gt; | 是 | callback pedometer data. |
 | options | Options | 否 | Optional parameters specifying the interval at which sensor data is reported, <br> {@code Options}. |
 
 **错误码：**

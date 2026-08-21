@@ -12,7 +12,7 @@ import { manager } from '@kit.ConnectivityKit';
 function getState(): NearlinkState
 ```
 
-获取星闪状态。
+查询星闪开关状态。
 
 **起始版本：** 26.0.0
 
@@ -26,7 +26,7 @@ function getState(): NearlinkState
 
 | 类型 | 说明 |
 | --- | --- |
-| [NearlinkState](arkts-connectivity-manager-nearlinkstate-e.md) | 返回NearLink状态。 |
+| [NearlinkState](arkts-connectivity-manager-nearlinkstate-e.md) | 表示星闪开关状态。 |
 
 **错误码：**
 

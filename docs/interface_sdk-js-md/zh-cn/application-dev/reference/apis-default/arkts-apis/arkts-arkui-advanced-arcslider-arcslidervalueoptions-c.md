@@ -35,7 +35,7 @@ ArcSliderValueOptions的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ArcSliderValueOptionsConstructorOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptionsconstructoroptions-i.md) | 否 | ArcSliderValueOptions的构造信息。 |
+| options | [ArcSliderValueOptionsConstructorOptions](arkts-arkui-advanced-arcslider-arcslidervalueoptionsconstructoroptions-i.md) | 否 | ArcSliderValueOptions的构造信息。 |
 
 ## max
 

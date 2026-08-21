@@ -37,7 +37,7 @@ A constructor used to create a **SubHeaderV2Title** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SubHeaderV2TitleOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheaderv2-subheaderv2titleoptions-i.md) | Yes | Options for initializing the title. |
+| options | [SubHeaderV2TitleOptions](arkts-arkui-advanced-subheaderv2-subheaderv2titleoptions-i.md) | Yes | Options for initializing the title. |
 
 ## id
 
@@ -69,7 +69,7 @@ Set the id for the title.
 
 Primary title.
 
-When **primaryTitle**, **secondaryTitle**, and **icon** are used simultaneously in [SubHeaderV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheaderv2-subheaderv2-s.md), **primaryTitle** does not take effect.
+When **primaryTitle**, **secondaryTitle**, and **icon** are used simultaneously in [SubHeaderV2](arkts-arkui-advanced-subheaderv2-subheaderv2-s.md), **primaryTitle** does not take effect.
 
 Default value: **undefined**
 

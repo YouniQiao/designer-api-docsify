@@ -37,7 +37,7 @@ public constructor(options: SubHeaderV2TitleOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [SubHeaderV2TitleOptions](arkts-arkui-advanced-subheaderv2-subheaderv2titleoptions-i.md) | 是 | 标题内容信息。 |
+| options | [SubHeaderV2TitleOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheaderv2-subheaderv2titleoptions-i.md) | 是 | 标题内容信息。 |
 
 ## id
 
@@ -71,7 +71,7 @@ public constructor(options: SubHeaderV2TitleOptions)
 
 标题内容。
 
-当[SubHeaderV2](arkts-arkui-advanced-subheaderv2-subheaderv2-s.md)中同时使用primaryTitle、secondaryTitle、icon属性时，设置primaryTitle属性不生效。
+当[SubHeaderV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheaderv2-subheaderv2-s.md)中同时使用primaryTitle、secondaryTitle、icon属性时，设置primaryTitle属性不生效。
 
 默认值：undefined
 

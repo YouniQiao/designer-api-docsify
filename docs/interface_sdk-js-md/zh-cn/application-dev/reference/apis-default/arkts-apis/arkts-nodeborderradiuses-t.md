@@ -16,5 +16,5 @@ export type NodeBorderRadiuses = Corners<double>
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** Corners<double>
+**属性类型：** [Corners](arkts-graphics-corners-i.md)&lt;double&gt;
 

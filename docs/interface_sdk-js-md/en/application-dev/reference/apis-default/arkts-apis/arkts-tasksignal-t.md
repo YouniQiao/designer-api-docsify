@@ -14,5 +14,5 @@ Provides APIs for interrupting a copy task.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
-**Property type:** fileIo.TaskSignal
+**Property type:** [fileIo.TaskSignal](arkts-fileio-tasksignal-c.md)
 

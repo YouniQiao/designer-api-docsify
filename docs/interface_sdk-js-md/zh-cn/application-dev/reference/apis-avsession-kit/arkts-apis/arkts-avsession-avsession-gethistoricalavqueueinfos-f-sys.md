@@ -30,7 +30,7 @@ function getHistoricalAVQueueInfos(maxSize: int, maxAppSize: int, callback: Asyn
 | --- | --- | --- | --- |
 | maxSize | int | 是 | 指定获取歌曲列表数量的最大值，暂与获取歌单数量无关。 |
 | maxAppSize | int | 是 | 指定获取歌曲列表所属应用数量的最大值，暂与获取歌单数量无关。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;Readonly&lt;[AVQueueInfo](arkts-avsession-avsession-avqueueinfo-i-sys.md)&gt;&gt;&gt; | 是 | 回调函数。返回所有历史播放歌单的只读对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Readonly&lt;[AVQueueInfo](arkts-avsession-avsession-avqueueinfo-i-sys.md)&gt;&gt;&gt; | 是 | 回调函数。返回所有历史播放歌单的只读对象。 |
 
 **错误码：**
 

@@ -37,7 +37,7 @@ ToolBarV2ItemText的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ToolBarV2ItemTextOptions](arkts-arkui-advanced-toolbarv2-toolbarv2itemtextoptions-i.md) | 是 | text info. |
+| options | [ToolBarV2ItemTextOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemtextoptions-i.md) | 是 | text info. |
 
 ## activatedColor
 

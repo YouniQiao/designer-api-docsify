@@ -39,5 +39,5 @@ static setDefaultTheme(theme: CustomTheme | undefined): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| theme | [CustomTheme](arkts-arkui-theme-customtheme-i.md) \| undefined | 是 |  |
+| theme | [CustomTheme](../../apis-arkui/arkts-apis/arkts-arkui-arkui-theme-customtheme-i.md) \| undefined | 是 |  |
 

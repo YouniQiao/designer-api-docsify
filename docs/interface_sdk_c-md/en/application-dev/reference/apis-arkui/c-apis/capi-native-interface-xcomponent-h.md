@@ -1147,7 +1147,7 @@ Attaches the UI component created through the native API of ArkUI to this <b>OH_
 | Parameter | Description |
 | -- | -- |
 | [OH_NativeXComponent](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent.md)* component | Indicates the pointer to the <b>OH_NativeXComponent</b> instance. |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) root | Indicates the pointer to the component instance created by the native API. |
+| ArkUI_NodeHandle root | Indicates the pointer to the component instance created by the native API. |
 
 **Returns**:
 
@@ -1176,7 +1176,7 @@ Detaches the native component of ArkUI from this <b>OH_NativeXComponent</b> inst
 | Parameter | Description |
 | -- | -- |
 | [OH_NativeXComponent](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent.md)* component | Indicates the pointer to the <b>OH_NativeXComponent</b> instance. |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) root | Indicates the pointer to the component instance created by the native API. |
+| ArkUI_NodeHandle root | Indicates the pointer to the component instance created by the native API. |
 
 **Returns**:
 
@@ -1252,7 +1252,7 @@ Registers a UI input event callback for an <b>OH_NativeXComponent</b> instance a
 | -- | -- |
 | H_NativeXComponent\* component | Indicates the pointer to the <b>OH_NativeXComponent</b> instance. |
 | void (\*callback)(OH_NativeXComponent\* component | Indicates the pointer to the UI input event callback. |
-| ArkUI_UIInputEvent_Type type) | Indicates the type of the current UI input event. |
+| [ArkUI_UIInputEvent_Type](capi-ui-input-event-h.md#arkui_uiinputevent_type) type) | Indicates the type of the current UI input event. |
 
 **Returns**:
 
@@ -1352,7 +1352,7 @@ Obtains the pointer to an <b>OH_NativeXComponent</b> instance based on the speci
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the pointer to the component instance created by the native API. |
+| ArkUI_NodeHandle node | Indicates the pointer to the component instance created by the native API. |
 
 **Returns**:
 
@@ -1452,7 +1452,7 @@ Stop image analyzer for the specified XComponentinstance created by the native A
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the pointer to the XComponent instance created by the native API. |
+| ArkUI_NodeHandle node | Indicates the pointer to the XComponent instance created by the native API. |
 
 **Returns**:
 
@@ -1476,7 +1476,7 @@ Create a <b>OH_ArkUI_SurfaceHolder</b> object from an XComponent node.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the pointer to the XComponent node. |
+| ArkUI_NodeHandle node | Indicates the pointer to the XComponent node. |
 
 **Returns**:
 
@@ -1734,7 +1734,7 @@ Set whether the XComponent node needs to initialize automatically.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the pointer to the XComponent node. |
+| ArkUI_NodeHandle node | Indicates the pointer to the XComponent node. |
 | bool autoInitialize | Indicates whether the XComponent node needs to initialize automatically or not.If the value is true, OnSurfaceCreated will be called when the node is mounted andOnSurfaceDestroyed will be called when the node is unmounted.Default value is true. |
 
 **Returns**:
@@ -1759,7 +1759,7 @@ Initialize the XComponent node.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the pointer to the XComponent node. |
+| ArkUI_NodeHandle node | Indicates the pointer to the XComponent node. |
 
 **Returns**:
 
@@ -1783,7 +1783,7 @@ Finalize the XComponent node.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the pointer to the XComponent node. |
+| ArkUI_NodeHandle node | Indicates the pointer to the XComponent node. |
 
 **Returns**:
 
@@ -1807,7 +1807,7 @@ Obtains whether the XComponent node has initialized or not.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the pointer to the XComponent node. |
+| ArkUI_NodeHandle node | Indicates the pointer to the XComponent node. |
 | bool* isInitialized | Indicates whether the XComponent node has initialized. |
 
 **Returns**:
@@ -1832,7 +1832,7 @@ Set the Expected FrameRateRange for the XComponent node.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the pointer to the XComponent node. |
+| ArkUI_NodeHandle node | Indicates the pointer to the XComponent node. |
 | [OH_NativeXComponent_ExpectedRateRange](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent-expectedraterange.md) range | Indicates the expected rate range. |
 
 **Returns**:
@@ -1882,7 +1882,7 @@ UnRegister the onFrame callback for the XComponent node.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the pointer to the XComponent node. |
+| ArkUI_NodeHandle node | Indicates the pointer to the XComponent node. |
 
 **Returns**:
 
@@ -1906,7 +1906,7 @@ Set whether the XComponent node needs soft keyboard when focused.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the pointer to the XComponent node. |
+| ArkUI_NodeHandle node | Indicates the pointer to the XComponent node. |
 | bool needSoftKeyboard | Indicates whether the XComponent node needs soft keyboard or not.Default value is false. |
 
 **Returns**:
@@ -1931,7 +1931,7 @@ Create a <b>ArkUI_AccessibilityProvider</b> object from an XComponent node.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the pointer to the XComponent node. |
+| ArkUI_NodeHandle node | Indicates the pointer to the XComponent node. |
 
 **Returns**:
 

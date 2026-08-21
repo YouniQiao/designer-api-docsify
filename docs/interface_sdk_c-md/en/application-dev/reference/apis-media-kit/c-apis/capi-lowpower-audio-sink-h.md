@@ -87,7 +87,7 @@ Configures an OH_LowPowerAudioSink instance. This function must be called before
 | Parameter | Description |
 | -- | -- |
 | OH_LowPowerAudioSink* sink | Pointer to an OH_LowPowerAudioSink instance |
-| const OH_AVFormat* format | A pointer to an OH_AVFormat to give the description of the audio track to be decoded |
+| [const OH_AVFormat](../AVCodecKit/capi-core-oh-avformat.md)* format | A pointer to an OH_AVFormat to give the description of the audio track to be decoded |
 
 **Returns**:
 
@@ -112,7 +112,7 @@ Sets parameters for an OH_LowPowerAudioSink instance. The parameters can be dyna
 | Parameter | Description |
 | -- | -- |
 | OH_LowPowerAudioSink* sink | Pointer to an OH_LowPowerAudioSink instance |
-| const OH_AVFormat* format | pointer to an OH_AVFormat instance |
+| [const OH_AVFormat](../AVCodecKit/capi-core-oh-avformat.md)* format | pointer to an OH_AVFormat instance |
 
 **Returns**:
 
@@ -137,7 +137,7 @@ Obtains the parameters of an OH_LowPowerAudioSink instance.
 | Parameter | Description |
 | -- | -- |
 | OH_LowPowerAudioSink* sink | Pointer to an OH_LowPowerAudioSink instance |
-| OH_AVFormat* format | pointer to an OH_AVFormat instance |
+| [OH_AVFormat](../AVCodecKit/capi-core-oh-avformat.md)* format | pointer to an OH_AVFormat instance |
 
 **Returns**:
 

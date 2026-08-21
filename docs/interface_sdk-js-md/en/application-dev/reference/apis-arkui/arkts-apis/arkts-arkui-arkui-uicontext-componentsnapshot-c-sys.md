@@ -6,7 +6,7 @@ Provides APIs for obtaining component snapshots, including snapshots of componen
 > 
 > - The initial APIs of this class are supported since API version 12.
 > 
-> - In the following API examples, you must first use [getComponentSnapshot()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcomponentsnapshot) &gt; in **UIContext** to obtain a **ComponentSnapshot** instance, and then call the APIs using the obtained instance.
+> - In the following API examples, you must first use [getComponentSnapshot()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot) &gt; in **UIContext** to obtain a **ComponentSnapshot** instance, and then call the APIs using the obtained instance.
 > 
 > - Transformation properties such as scaling, translation, and rotation only apply to the child components of the &gt; target component. Applying these transformation properties directly to the target component itself has no effect; &gt; the snapshot will still display the component as it appears before any transformations are applied.
 
@@ -53,8 +53,8 @@ Captures a snapshot of the area between two specified components. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | [NodeIdentity](../../apis-default/arkts-apis/arkts-nodeidentity-t.md) | Yes | ID of the component marking the start of the capture range. |
-| end | [NodeIdentity](../../apis-default/arkts-apis/arkts-nodeidentity-t.md) | Yes | ID of the component marking the end of the capture range. |
+| start | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | Yes | ID of the component marking the start of the capture range. |
+| end | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | Yes | ID of the component marking the end of the capture range. |
 | isStartRect | boolean | Yes | Whether to use the bounding rectangle of the **start** component to determine the capture range.<br>**true**: Use the bounding rectangle of the **start** component. **false**: Use the bounding rectangle of the **end** component.<br>Default value: **true**. |
 | options | componentSnapshot.SnapshotOptions | No | Custom snapshot configuration options. The **region** parameter is not supported. |
 

@@ -26,7 +26,7 @@ position?: ArcSliderPosition
 
 @Trace
 
-**类型：** [ArcSliderPosition](arkts-arkui-arkui-advanced-arcslider-arcsliderposition-e.md)
+**类型：** [ArcSliderPosition](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderposition-e.md)
 
 **默认值：** ArcSliderPosition.RIGHT
 

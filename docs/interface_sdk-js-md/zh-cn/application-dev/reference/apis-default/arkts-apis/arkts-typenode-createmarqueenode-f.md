@@ -22,7 +22,7 @@ Create a FrameNode of Marquee type.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | uiContext used to create the FrameNode. |
+| context | [UIContext](arkts-arkui-uicontext-uicontext-c.md) | 是 | uiContext used to create the FrameNode. |
 
 **返回值：**
 

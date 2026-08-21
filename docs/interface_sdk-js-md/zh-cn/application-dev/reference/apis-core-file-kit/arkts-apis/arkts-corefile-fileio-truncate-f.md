@@ -60,7 +60,7 @@ declare function truncate(path: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 待截断文件的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，本调用无返回值。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，本调用无返回值。 |
 
 
 ## truncate
@@ -87,5 +87,5 @@ declare function truncate(path: string, len: number, callback: AsyncCallback<voi
 | --- | --- | --- | --- |
 | path | string | 是 | 待截断文件的应用沙箱路径。 |
 | len | number | 是 | 文件截断后的长度，单位为Byte。默认为0。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，本调用无返回值。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，本调用无返回值。 |
 

@@ -259,7 +259,7 @@ offConnect(callback?: Callback<WebSocketConnection>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 否 | the callback used to return the result.<br>**起始版本：** 23 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 否 | the callback used to return the result.<br>**起始版本：** 23 |
 
 **示例**
 
@@ -293,7 +293,7 @@ offMessageReceive(callback?: Callback<WebSocketMessage>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 否 | the callback used to return the result.<br>**起始版本：** 23 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 否 | the callback used to return the result.<br>**起始版本：** 23 |
 
 **示例**
 
@@ -360,7 +360,7 @@ offWebSocketServerError(callback?: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | the callback used to return the result.<br>**起始版本：** 23 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | the callback used to return the result.<br>**起始版本：** 23 |
 
 **示例**
 
@@ -433,7 +433,7 @@ off(type: 'connect', callback?: Callback<WebSocketConnection>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connect' | 是 | 事件回调类型，支持的事件为'connect'，当offconnect()调用完成，取消监听连接事件成功。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 否 | 回调函数。连接的客户端信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 否 | 回调函数。连接的客户端信息。 |
 
 **示例**
 
@@ -467,7 +467,7 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 事件回调类型，支持的事件为'error'，当offerror()调用完成，取消订阅error事件成功。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | 回调函数。默认值：200。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。默认值：200。 |
 
 **示例**
 
@@ -501,7 +501,7 @@ off(type: 'messageReceive', callback?: Callback<WebSocketMessage>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'messageReceive' | 是 | 事件回调类型，支持的事件为'messageReceive'，当offmessageReceive()调用完成，取消订阅接收客户端消息成功。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 否 | 从指定客户端接收到的消息，包括客户端的信息和数据。 <br>- clientconnection：客户端信息。 <br>- data：客户端发送的消息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 否 | 从指定客户端接收到的消息，包括客户端的信息和数据。 <br>- clientconnection：客户端信息。 <br>- data：客户端发送的消息。 |
 
 **示例**
 
@@ -531,7 +531,7 @@ onConnect(callback: Callback<WebSocketConnection>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 是 | the callback used to return the result.<br>**起始版本：** 23 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 是 | the callback used to return the result.<br>**起始版本：** 23 |
 
 **示例**
 
@@ -564,7 +564,7 @@ onMessageReceive(callback: Callback<WebSocketMessage>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 是 | the callback used to return the result.<br>**起始版本：** 23 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 是 | the callback used to return the result.<br>**起始版本：** 23 |
 
 **示例**
 
@@ -627,7 +627,7 @@ onWebSocketServerError(callback: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | the callback used to return the result.<br>**起始版本：** 23 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | the callback used to return the result.<br>**起始版本：** 23 |
 
 **示例**
 
@@ -692,7 +692,7 @@ on(type: 'connect', callback: Callback<WebSocketConnection>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connect' | 是 | 事件回调类型，支持的事件为'connect'，当onconnect()调用完成，客户端与服务端建链成功。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 是 | 回调函数。连接的客户端信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 是 | 回调函数。连接的客户端信息。 |
 
 **示例**
 
@@ -725,7 +725,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 事件回调类型，支持的事件为'error'，当onerror()调用完成，error事件发生。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | 回调函数。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数。 |
 
 **示例**
 
@@ -758,7 +758,7 @@ on(type: 'messageReceive', callback: Callback<WebSocketMessage>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'messageReceive' | 是 | 事件回调类型，支持的事件为'messageReceive'，当onmessageReceive()调用完成，接收到客户端消息成功。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 是 | 回调函数。 <br>clientconnection:客户端信息，data:客户端发送的数据消息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 是 | 回调函数。 <br>clientconnection:客户端信息，data:客户端发送的数据消息。 |
 
 **示例**
 

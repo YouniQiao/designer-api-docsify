@@ -31,7 +31,7 @@ This API supports recursively listing the relative paths of all files by setting
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| options | [ListFileOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-listfileoptions-i.md) | No | Options for filtering files. The files are not filtered by default. |
+| options | [ListFileOptions](arkts-file-fs-listfileoptions-i.md) | No | Options for filtering files. The files are not filtered by default. |
 
 **Return value:**
 

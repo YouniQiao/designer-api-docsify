@@ -17,7 +17,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function onAttachmentDidFail(callback: Callback<AttachFailureReason>): void
 ```
 
-Subscribe the attachment failure event.
+@brief Subscribes to attachment failure events. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -29,7 +29,7 @@ Subscribe the attachment failure event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AttachFailureReason](arkts-ime-inputmethod-attachfailurereason-e.md)&gt; | Yes | the callback is invoked only when the attachment triggered by the registrant's process fails. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AttachFailureReason](arkts-ime-inputmethod-attachfailurereason-e.md)&gt; | Yes | Callback used to return the reason for attachment failure. This callback is only invoked when the attachment failure is triggered by the registrant's process. |
 
 **Examples**
 

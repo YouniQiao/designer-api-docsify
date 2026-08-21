@@ -16,5 +16,5 @@ Sets the semi-axis lengths for the x-axis and y-axis of the rounded corners.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** Corners<Vector2>
+**Property type:** [Corners](../../apis-default/arkts-apis/arkts-graphics-corners-i.md)&lt;[Vector2](../../apis-default/arkts-apis/arkts-graphics-vector2-i.md)&gt;
 

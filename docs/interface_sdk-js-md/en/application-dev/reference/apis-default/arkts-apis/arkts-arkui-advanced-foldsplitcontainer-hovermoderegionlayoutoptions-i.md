@@ -23,7 +23,7 @@ extraRegionPosition?: ExtraRegionPosition
 
 Specify the position of the extra area when the foldable screen is in the half-folded state.
 
-**Type:** [ExtraRegionPosition](arkts-arkui-advanced-foldsplitcontainer-extraregionposition-e.md)
+**Type:** [ExtraRegionPosition](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-foldsplitcontainer-extraregionposition-e.md)
 
 **Since:** 23
 
@@ -43,7 +43,7 @@ horizontalSplitRatio?: PresetSplitRatio
 
 The ratio of the widths of two areas in the horizontal direction.
 
-**Type:** [PresetSplitRatio](arkts-arkui-advanced-foldsplitcontainer-presetsplitratio-e.md)
+**Type:** [PresetSplitRatio](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-foldsplitcontainer-presetsplitratio-e.md)
 
 **Since:** 23
 

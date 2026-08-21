@@ -63,7 +63,7 @@ public iconStyle?: IconType
 
 The type of icon.
 
-**类型：** [IconType](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitem-icontype-e.md)
+**类型：** [IconType](arkts-arkui-advanced-composelistitem-icontype-e.md)
 
 **起始版本：** 23
 

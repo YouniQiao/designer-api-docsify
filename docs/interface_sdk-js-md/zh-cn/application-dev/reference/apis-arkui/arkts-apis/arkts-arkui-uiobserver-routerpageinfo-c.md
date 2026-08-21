@@ -22,7 +22,7 @@ context: UIAbilityContext | UIContext
 
 触发生命周期的routerPage页面对应的上下文信息。
 
-**类型：** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
+**类型：** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)
 
 **起始版本：** 11
 

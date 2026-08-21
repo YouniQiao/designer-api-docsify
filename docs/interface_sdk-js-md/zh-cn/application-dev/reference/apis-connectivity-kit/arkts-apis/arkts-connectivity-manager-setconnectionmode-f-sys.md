@@ -12,7 +12,7 @@ import { manager } from '@kit.ConnectivityKit';
 function setConnectionMode(mode: ConnectionMode, duration: int): Promise<void>
 ```
 
-设置设备的NearLink连接模式。
+设置连接模式。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -30,14 +30,14 @@ function setConnectionMode(mode: ConnectionMode, duration: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [ConnectionMode](arkts-connectivity-manager-connectionmode-e-sys.md) | 是 | 需要设置的NearLink连接模式 |
-| duration | int | 是 | 表示设置连接模式的持续时间（以秒为单位）。值为0表示无限制 <br>单位为： 秒，取值应为≥0的整数。 |
+| mode | [ConnectionMode](arkts-connectivity-manager-connectionmode-e-sys.md) | 是 | 表示要设置的连接模式。 |
+| duration | int | 是 | 表示设置模式的持续时间，单位为s，取值范围为大于等于0的整数，若为0则表示无限制。 <br>取值限定为整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

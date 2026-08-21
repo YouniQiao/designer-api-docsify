@@ -12,7 +12,7 @@ import { advertising } from '@kit.ConnectivityKit';
 function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>
 ```
 
-Starts advertising.
+Starts NearLink advertising. This API uses a promise to return the result. This API is applicable to scenarios where the local device capabilities or data needs to be advertised, such as device discovery and device information advertising. You can use advertising.onAdvertisingStateChange to monitor the advertising status.
 
 **Since:** 26.0.0
 
@@ -28,13 +28,13 @@ Starts advertising.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| advertisingParams | AdvertisingParams | Yes | Indicates the param for advertising. |
+| advertisingParams | AdvertisingParams | Yes | Advertising parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int&gt; | Returns the promise object advertise handle. |
+| Promise&lt;int&gt; | Promise used to return the advertising ID. The advertising ID is a unique ID randomly allocated. The value range is [0, 255]. Similar to [advertising.stopAdvertising]{ |
 
 **Error codes:**
 

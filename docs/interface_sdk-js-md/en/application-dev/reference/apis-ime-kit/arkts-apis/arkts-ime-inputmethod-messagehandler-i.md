@@ -1,6 +1,13 @@
 # MessageHandler
 
-&lt;p&gt;Custom message handler.&lt;/p&gt; &lt;p&gt;Implement this interface to respond to custom messages.&lt;/p&gt;
+@brief Represents a custom communication object. <br> <br>   
+> **NOTE：**<br>
+> <br>
+> You can register this object to receive custom communication data sent by the input method application. When the custom communication data is received, the [onMessage](#onmessage) callback in this object is triggered. <br>
+> <br>
+> This object is globally unique. After multiple registrations, only the last registered object is valid and retained, and the [onTerminated](#onterminated) callback of the penultimate registered object is triggered. <br>
+> <br>
+> If this object is unregistered, its [onTerminated](#onterminated) callback will be triggered.
 
 **Since:** 23
 
@@ -25,7 +32,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 onMessage(msgId: string, msgParam?: ArrayBuffer): void
 ```
 
-This method is called when a custom message is received.
+@brief This method is called when a custom message is received.
 
 **Since:** 15
 
@@ -62,7 +69,7 @@ inputMethodController.recvMessage(messageHandler);
 onTerminated(): void
 ```
 
-This method is called when a new message handler is set.
+@brief This method is called when a new message handler is set.
 
 **Since:** 15
 
@@ -92,7 +99,12 @@ inputMethodController.recvMessage(messageHandler);
 onMessage: OnMessageCallback
 ```
 
-This method is called when a custom message is received.
+@brief Receives custom data sent by the input method application. <br> <br>   
+> **NOTE：**<br>
+> <br>
+> This callback is triggered when the registered MeesageHandler receives custom communication data sent by the input method application. <br>
+> <br>
+> The **msgId** parameter is mandatory, and the **msgParam** parameter is optional. If only the custom **msgId** data is received, confirm it with the data sender.
 
 **Type:** OnMessageCallback
 
@@ -108,7 +120,12 @@ This method is called when a custom message is received.
 onTerminated: Callback<void>
 ```
 
-This method is called when a new message handler is set.
+@brief Listens for MessageHandler termination. <br> <br>   
+> **NOTE：**<br>
+> <br>
+> When an application registers a new MessageHandler object, the **OnTerminated** callback of the previous registered MessageHandler object is triggered. <br>
+> <br>
+> When an application unregisters a MessageHandler object, the **OnTerminated** callback of the current registered MessageHandler object is triggered.
 
 **Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 

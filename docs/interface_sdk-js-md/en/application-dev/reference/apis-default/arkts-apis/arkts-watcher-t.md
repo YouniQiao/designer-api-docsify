@@ -14,5 +14,5 @@ Provides APIs for observing the changes of files or directories. Before using th
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
-**Property type:** fileIo.Watcher
+**Property type:** [fileIo.Watcher](arkts-fileio-watcher-i.md)
 

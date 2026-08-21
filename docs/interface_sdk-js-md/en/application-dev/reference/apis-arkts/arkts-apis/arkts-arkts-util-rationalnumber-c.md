@@ -69,7 +69,7 @@ Compares the current RationalNumber object to the given object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| another | [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | Yes | An object of other rational numbers |
+| another | [RationalNumber](../../apis-default/arkts-apis/arkts-util-rationalnumber-c.md) | Yes | An object of other rational numbers |
 
 **Return value:**
 
@@ -99,7 +99,7 @@ Compares the current RationalNumber object to the given object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| another | [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | Yes | An object of other rational numbers |
+| another | [RationalNumber](../../apis-default/arkts-apis/arkts-util-rationalnumber-c.md) | Yes | An object of other rational numbers |
 
 **Return value:**
 
@@ -119,7 +119,7 @@ A constructor used to create a **RationalNumber** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [parseRationalNumber](#parserationalnumber)
+**Substitutes:** [parseRationalNumber](../../apis-default/arkts-apis/arkts-util-rationalnumber-c.md#parserationalnumber)
 
 <!--Device-RationalNumber-constructor(numerator: number, denominator: number)--><!--Device-RationalNumber-constructor(numerator: number, denominator: number)-End-->
 
@@ -190,7 +190,7 @@ Creates a **RationalNumber** object based on the given string.
 
 | Type | Description |
 | --- | --- |
-| [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | Returns a RationalNumber object generated based on the given string. |
+| [RationalNumber](../../apis-default/arkts-apis/arkts-util-rationalnumber-c.md) | Returns a RationalNumber object generated based on the given string. |
 
 **Examples**
 
@@ -258,7 +258,7 @@ Obtains the greatest common divisor of two specified integers.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCommonFactor](#getcommonfactor)
+**Substitutes:** [getCommonFactor](../../apis-default/arkts-apis/arkts-util-rationalnumber-c.md#getcommonfactor)
 
 <!--Device-RationalNumber-static getCommonDivisor(number1: number, number2: number): number--><!--Device-RationalNumber-static getCommonDivisor(number1: number, number2: number): number-End-->
 
@@ -549,7 +549,7 @@ Creates a **RationalNumber** instance with a given numerator and denominator.
 
 | Type | Description |
 | --- | --- |
-| [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | RationalNumber** object obtained. |
+| [RationalNumber](../../apis-default/arkts-apis/arkts-util-rationalnumber-c.md) | RationalNumber** object obtained. |
 
 **Examples**
 

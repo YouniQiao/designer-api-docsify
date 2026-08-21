@@ -33,7 +33,7 @@ function getProfileByAbility(moduleName: string, abilityName: string, metadataNa
 | moduleName | string | 是 | 表示Module名称。 |
 | abilityName | string | 是 | 表示UIAbility组件的名称。 |
 | metadataName | string | 是 | 表示UIAbility组件的 [元信息名称](../../../quick-start/module-configuration-file.md#metadata标签)，即module.json5配置文件中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)，当获取成功时，err为 undefined，data为获取到的Array&lt;string&gt;；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为 undefined，data为获取到的Array&lt;string&gt;；否则为错误对象。 |
 
 **错误码：**
 

@@ -43,7 +43,7 @@ ChipGroupV2的build函数
 
 ChipV2项目的双向绑定回调方法。
 
-**类型：** Callback&lt;[ChipGroupV2Items](arkts-arkui-advanced-chipgroupv2-chipgroupv2items-c.md)&gt;
+**类型：** Callback&lt;[ChipGroupV2Items](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2items-c.md)&gt;
 
 **起始版本：** 26.0.0
 
@@ -85,7 +85,7 @@ ChipV2项目的双向绑定回调方法。
 
 设置ChipGroupV2的上下内边距
 
-**类型：** [ChipGroupV2Padding](arkts-arkui-advanced-chipgroupv2-chipgroupv2padding-c.md)
+**类型：** [ChipGroupV2Padding](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2padding-c.md)
 
 **起始版本：** 26.0.0
 
@@ -106,7 +106,7 @@ ChipV2项目的双向绑定回调方法。
 
 左右内边距及ChipV2之间间距
 
-**类型：** [ChipGroupV2Space](arkts-arkui-advanced-chipgroupv2-chipgroupv2space-c.md)
+**类型：** [ChipGroupV2Space](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2space-c.md)
 
 **起始版本：** 26.0.0
 
@@ -127,7 +127,7 @@ ChipV2项目的双向绑定回调方法。
 
 ChipV2项样式。
 
-**类型：** [ChipGroupV2ItemStyle](arkts-arkui-advanced-chipgroupv2-chipgroupv2itemstyle-c.md)
+**类型：** [ChipGroupV2ItemStyle](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyle-c.md)
 
 **起始版本：** 26.0.0
 
@@ -149,7 +149,7 @@ ChipV2项样式。
 
 每个ChipV2的特定属性
 
-**类型：** [ChipGroupV2Items](arkts-arkui-advanced-chipgroupv2-chipgroupv2items-c.md)
+**类型：** [ChipGroupV2Items](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2items-c.md)
 
 **起始版本：** 26.0.0
 

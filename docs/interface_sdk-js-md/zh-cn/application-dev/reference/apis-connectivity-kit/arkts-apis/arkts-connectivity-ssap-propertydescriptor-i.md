@@ -1,6 +1,6 @@
 # PropertyDescriptor
 
-属性的SSAP描述符。
+表示Property的描述符。
 
 **起始版本：** 26.0.0
 
@@ -20,7 +20,7 @@ import { ssap } from '@kit.ConnectivityKit';
 descriptorType: PropertyDescriptorType
 ```
 
-属性描述符实例的类型。
+表示Property的描述符类型。
 
 **类型：** [PropertyDescriptorType](arkts-connectivity-ssap-propertydescriptortype-e.md)
 
@@ -38,7 +38,7 @@ descriptorType: PropertyDescriptorType
 isWriteable?: boolean
 ```
 
-描述符是否可写。 默认值： 默认值：false。
+表示描述符是否是可写的。true：可写，false：不可写。默认值为true。
 
 **类型：** boolean
 
@@ -56,7 +56,7 @@ isWriteable?: boolean
 propertyUuid: string
 ```
 
-描述符所属的属性实例的UUID。 长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。 <br>禁止使用星闪标准服务UUID。
+表示Property的UUID，数据格式同serviceUuid。
 
 **类型：** string
 
@@ -74,7 +74,7 @@ propertyUuid: string
 serviceUuid: string
 ```
 
-描述符所属属性所属的服务实例的UUID。 长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。 <br>不允许使用NearLink标准UUID。
+星闪服务UUID，个字符，由32个十六进制数字和4个连字符（-）组成，例如： FFFFFFFF-1234-5678-ABCD-000000001234，表示一个128位标识符。 不允许使用星闪标准UUID。
 
 **类型：** string
 
@@ -92,7 +92,7 @@ serviceUuid: string
 value: ArrayBuffer
 ```
 
-属性描述符实例的值。
+表示描述符的数据值。
 
 **类型：** ArrayBuffer
 

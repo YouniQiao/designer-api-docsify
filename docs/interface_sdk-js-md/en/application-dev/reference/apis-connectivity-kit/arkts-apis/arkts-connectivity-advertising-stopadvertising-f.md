@@ -12,7 +12,7 @@ import { advertising } from '@kit.ConnectivityKit';
 function stopAdvertising(advertisingId: int): Promise<void>
 ```
 
-Stops advertising with advertising ID.
+Stops NearLink advertising. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -28,13 +28,13 @@ Stops advertising with advertising ID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| advertisingId | int | Yes | Indicates the ID for this advertising <br>The value must be an integer greater than or equal to 0, The value is the current advertising ID. |
+| advertisingId | int | Yes | Advertising ID, which is obtained when advertising is started. The value range is [0, 255]. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

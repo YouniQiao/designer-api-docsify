@@ -42,7 +42,7 @@ autoScale(enable: Optional<boolean>): ArcListItemAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |  |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md) |  |
 
 ## swipeAction
 
@@ -70,5 +70,5 @@ swipeAction(options: Optional<SwipeActionOptions>): ArcListItemAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |  |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md) |  |
 

@@ -2,7 +2,7 @@
 
 Defines suffix icon options.
 
-**Inheritance/Implementation:** SuffixImageIconOptions extends [IconOptions](arkts-arkui-advanced-chipgroup-iconoptions-i.md)
+**Inheritance/Implementation:** SuffixImageIconOptions extends [IconOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroup-iconoptions-i.md)
 
 **Since:** 23
 

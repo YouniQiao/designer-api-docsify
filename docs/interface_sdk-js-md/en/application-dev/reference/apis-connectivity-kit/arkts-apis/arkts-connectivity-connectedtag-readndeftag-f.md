@@ -12,7 +12,11 @@ import { connectedTag } from '@kit.ConnectivityKit';
 function readNdefTag(): Promise<string>
 ```
 
-Reads the NDEF Data.
+Reads the content of this active tag. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. Use &gt; [uninitialize](arkts-connectivity-connectedtag-uninitialize-f.md) instead.
 
 **Since:** 8
 
@@ -30,7 +34,7 @@ Reads the NDEF Data.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the NDEF Data. |
+| Promise&lt;string&gt; | Promise used to return the content of the active tag. |
 
 **Examples**
 
@@ -52,7 +56,11 @@ connectedTag.readNdefTag().then((data) => {
 function readNdefTag(callback: AsyncCallback<string>): void
 ```
 
-Reads the NDEF Data.
+Reads the content of this active tag. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. Use &gt; [uninitialize](arkts-connectivity-connectedtag-uninitialize-f.md) instead.
 
 **Since:** 8
 
@@ -70,7 +78,7 @@ Reads the NDEF Data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the active tag content obtained. |
 
 **Examples**
 

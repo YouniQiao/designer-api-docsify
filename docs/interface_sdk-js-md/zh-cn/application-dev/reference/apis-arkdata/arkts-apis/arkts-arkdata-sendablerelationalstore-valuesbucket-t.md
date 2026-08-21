@@ -12,5 +12,5 @@ type ValuesBucket = collections.Map<string, ValueType>
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**属性类型：** collections.Map<string, ValueType>
+**属性类型：** collections.Map&lt;string, ValueType&gt;
 

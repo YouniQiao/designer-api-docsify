@@ -1,6 +1,6 @@
 # AcbStateParam
 
-ACB连接状态参数。
+订阅的逻辑链路连接状态变化事件上报结果。
 
 **起始版本：** 26.0.0
 
@@ -20,7 +20,7 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 address: string
 ```
 
-设备地址。 长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
+设备地址，表示和该设备的逻辑链路连接状态发生变化。地址格式参考：11:22:33:AA:BB:FF。
 
 **类型：** string
 
@@ -38,7 +38,7 @@ address: string
 state: AcbState
 ```
 
-ACB连接状态
+当前逻辑链路连接状态。
 
 **类型：** AcbState
 

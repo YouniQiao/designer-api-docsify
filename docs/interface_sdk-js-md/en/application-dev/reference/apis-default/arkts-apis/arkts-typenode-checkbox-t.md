@@ -16,5 +16,5 @@ Define the FrameNode type for Checkbox.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** CheckboxFrameNode
+**Property type:** [CheckboxFrameNode](arkts-typenode-checkboxframenode-c.md)
 

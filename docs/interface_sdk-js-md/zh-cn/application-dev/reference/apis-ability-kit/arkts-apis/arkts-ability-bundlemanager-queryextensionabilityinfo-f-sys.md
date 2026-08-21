@@ -34,7 +34,7 @@ function queryExtensionAbilityInfo(want: Want, extensionAbilityType: ExtensionAb
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 表示包含要查询的应用Bundle名称的Want。 |
 | extensionAbilityType | [ExtensionAbilityType](arkts-ability-bundlemanager-extensionabilitytype-e.md) | 是 | 标识extensionAbility的类型。 |
 | extensionAbilityFlags | int | 是 | 表示用于指定将返回的ExtensionInfo对象中包含的信息的标志，具体取值及不同含义参考 [ExtensionAbilityFlag](arkts-ability-bundlemanager-extensionabilityflag-e-sys.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;ExtensionAbilityInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)，当获 取成功时，err为undefined，data为获取到Array&lt;ExtensionAbilityInfo&gt;；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ExtensionAbilityInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获 取成功时，err为undefined，data为获取到Array&lt;ExtensionAbilityInfo&gt;；否则为错误对象。 |
 
 **错误码：**
 
@@ -105,7 +105,7 @@ function queryExtensionAbilityInfo(want: Want, extensionAbilityType: ExtensionAb
 | extensionAbilityType | [ExtensionAbilityType](arkts-ability-bundlemanager-extensionabilitytype-e.md) | 是 | 标识extensionAbility的类型。 |
 | extensionAbilityFlags | int | 是 | 表示用于指定将返回的ExtensionInfo对象中包含的信息的标志，具体取值及不同含义参考 [ExtensionAbilityFlag](arkts-ability-bundlemanager-extensionabilityflag-e-sys.md)。 |
 | userId | int | 是 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;ExtensionAbilityInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)，当获 取成功时，err为undefined，data为获取到Array&lt;ExtensionAbilityInfo&gt;；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ExtensionAbilityInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获 取成功时，err为undefined，data为获取到Array&lt;ExtensionAbilityInfo&gt;；否则为错误对象。 |
 
 **错误码：**
 

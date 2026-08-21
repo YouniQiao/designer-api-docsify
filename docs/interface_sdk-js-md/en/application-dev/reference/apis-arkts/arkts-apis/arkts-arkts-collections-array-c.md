@@ -200,43 +200,6 @@ A constructor used to create an ArkTS array with the given elements.
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Array's constructor cannot be directly invoked. |
 
-## containsAll
-
-```TypeScript
-containsAll(elements: ArrayOrBuiltinArray<T>): boolean
-```
-
-Checks whether all elements in a specified ArkTS Array or built-in Array are contained in this ArkTS Array.
-
-**Since:** 26.1.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
-<!--Device-Array-containsAll(elements: ArrayOrBuiltinArray<T>): boolean--><!--Device-Array-containsAll(elements: ArrayOrBuiltinArray<T>): boolean-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| elements | [ArrayOrBuiltinArray](arkts-arkts-collections-arrayorbuiltinarray-t.md)&lt;T&gt; | Yes | ArkTS Array or built-in Array whose elements are to be checked. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | Check result. The value **true** is returned if all elements are contained in this ArkTS array; otherwise, **false** is returned. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The containsAll method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification exception |
-
 ## copyWithin
 
 ```TypeScript
@@ -1171,43 +1134,6 @@ Goes through each element in this ArkTS array from right to left, uses a callbac
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduceRight method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
-
-## retainAll
-
-```TypeScript
-retainAll(value: ArrayOrBuiltinArray<T> | ArrayElementPredicateFn<T>): boolean
-```
-
-Retains only the elements in this ArkTS Array that are contained in the specified ArkTS Array or built-in Array, or satisfy the specified predicate.
-
-**Since:** 26.1.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
-<!--Device-Array-retainAll(value: ArrayOrBuiltinArray<T> | ArrayElementPredicateFn<T>): boolean--><!--Device-Array-retainAll(value: ArrayOrBuiltinArray<T> | ArrayElementPredicateFn<T>): boolean-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [ArrayOrBuiltinArray](arkts-arkts-collections-arrayorbuiltinarray-t.md)&lt;T&gt; \| [ArrayElementPredicateFn](arkts-arkts-collections-arrayelementpredicatefn-t.md)&lt;T&gt; | Yes | ArkTS Array or built-in Array whose elements are to be retained, or predicate function used to test each element. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | Operation result. The value **true** is returned if any elements are removed from this ArkTS array; otherwise, **false** is returned. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The retainAll method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification exception |
 
 ## reverse
 

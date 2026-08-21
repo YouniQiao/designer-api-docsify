@@ -12,11 +12,11 @@ import { tag } from '@kit.ConnectivityKit';
 function getIsoDep(tagInfo: TagInfo): IsoDepTag
 ```
 
-Obtains an [IsoDepTag](arkts-connectivity-tag-isodeptag-t.md) object based on the tag information. During tag reading, if the tag supports the IsoDep technology, an [IsoDepTag](arkts-connectivity-tag-isodeptag-t.md) object will be created based on the tag information.
+Obtains an **IsoDepTag** object, which allows access to the tags that use the IsoDep technology.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-tag-function getIsoDep(tagInfo: TagInfo): IsoDepTag--><!--Device-tag-function getIsoDep(tagInfo: TagInfo): IsoDepTag-End-->
 
@@ -26,13 +26,13 @@ Obtains an [IsoDepTag](arkts-connectivity-tag-isodeptag-t.md) object based on th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tagInfo | [TagInfo](arkts-connectivity-tag-taginfo-i.md) | Yes | Indicates the dispatched tag information. |
+| tagInfo | [TagInfo](arkts-connectivity-tag-taginfo-i.md) | Yes | Tag information, including the tag technology type and related parameters, obtained from [tag.getTagInfo(want: Want)](arkts-connectivity-tag-gettaginfo-f.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IsoDepTag | The { |
+| IsoDepTag | IsoDepTag** object obtained. |
 
 **Error codes:**
 

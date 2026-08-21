@@ -120,7 +120,7 @@ DLP应用需要通过标准文件接口访问加密文件内容时使用此接�
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | linkFileName | string | 是 | 用于FUSE文件系统的link文件名。不超过255字节。超出范围时抛出错误码401。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收添加link文件的结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收添加link文件的结果。 |
 
 **错误码：**
 
@@ -271,7 +271,7 @@ closeDLPFile(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收关闭DLPFile的结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收关闭DLPFile的结果。 |
 
 **错误码：**
 
@@ -423,7 +423,7 @@ DLP文件访问结束后清理link文件映射时使用此接口。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | linkFileName | string | 是 | 用于FUSE文件系统的link文件名。不超过255字节。超出范围时抛出错误码401。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收删除link文件的结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收删除link文件的结果。 |
 
 **错误码：**
 
@@ -582,7 +582,7 @@ recoverDLPFile(plaintextFd: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | plaintextFd | number | 是 | 目标明文文件的fd。取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2&lt;sup&gt;31&lt;/sup &gt;-1时，fd的值被截断。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收恢复明文文件的结果。回调参数包括：err（错误对象，成功时为undefined）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收恢复明文文件的结果。回调参数包括：err（错误对象，成功时为undefined）。 |
 
 **错误码：**
 
@@ -742,7 +742,7 @@ replaceDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | linkFileName | string | 是 | 用于FUSE文件系统的link文件名。不超过255字节。超出范围时抛出错误码401。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收替换link文件的结果。回调参数包括：err（错误对象，成功时为undefined）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收替换link文件的结果。回调参数包括：err（错误对象，成功时为undefined）。 |
 
 **错误码：**
 
@@ -891,7 +891,7 @@ link文件替换完成后需要恢复读写关联。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收恢复FUSE关联的结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收恢复FUSE关联的结果。 |
 
 **错误码：**
 
@@ -1037,7 +1037,7 @@ stopFuseLink(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收停止FUSE关联的结果。回调参数包括：err（错误对象，成功时为undefined）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收停止FUSE关联的结果。回调参数包括：err（错误对象，成功时为undefined）。 |
 
 **错误码：**
 

@@ -12,7 +12,7 @@ import { config } from '@kit.AccessibilityKit';
 function onInstalledAccessibilityListChange(callback: Callback<void>): void
 ```
 
-Register the listener that watches for changes in the installed status of accessibility extensions.
+添加已安装的辅助扩展的列表变化监听。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -28,7 +28,7 @@ Register the listener that watches for changes in the installed status of access
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | Indicates the listener. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，在已安装的辅助扩展的列表变化时通过此函数进行通知。 |
 
 **错误码：**
 

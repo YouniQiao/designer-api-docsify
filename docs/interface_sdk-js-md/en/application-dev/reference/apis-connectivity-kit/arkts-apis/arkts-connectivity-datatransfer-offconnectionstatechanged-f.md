@@ -12,7 +12,7 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 function offConnectionStateChanged(callback?: Callback<ConnectionResult>): void
 ```
 
-Unsubscribes from the connection state change event.
+Unsubscribes from the connection state change event of the port channel. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
 
@@ -26,7 +26,7 @@ Unsubscribes from the connection state change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ConnectionResult](arkts-connectivity-datatransfer-connectionresult-i.md)&gt; | No | Callback used to listen for the state change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ConnectionResult](arkts-connectivity-datatransfer-connectionresult-i.md)&gt; | No | Callback used to return the result of port connection parameter negotiation with a remote device. <br>If this parameter is set, the current callback is unregistered. If this parameter is not specified, all callbacks corresponding to the event are unregistered. |
 
 **Error codes:**
 

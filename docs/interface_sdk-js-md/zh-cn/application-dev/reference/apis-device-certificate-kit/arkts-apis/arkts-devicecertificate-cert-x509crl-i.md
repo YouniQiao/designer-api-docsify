@@ -36,7 +36,7 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md)&gt; | 是 | 回调函数。当获取X.509证书吊销列表序列化数据成功时，err为undefined， data为获取到的X.509证书吊销列表序列化数据；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md)&gt; | 是 | 回调函数。当获取X.509证书吊销列表序列化数据成功时，err为undefined， data为获取到的X.509证书吊销列表序列化数据；否则为错误对象。 |
 
 **错误码：**
 
@@ -1566,7 +1566,7 @@ getRevokedCerts(callback: AsyncCallback<Array<X509CRLEntry>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[X509CRLEntry](arkts-devicecertificate-cert-x509crlentry-i.md)&gt;&gt; | 是 | 回调函数。当获取证书吊销条目列表成功时，err为undefined， data为获取到的证书吊销条目列表；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[X509CRLEntry](arkts-devicecertificate-cert-x509crlentry-i.md)&gt;&gt; | 是 | 回调函数。当获取证书吊销条目列表成功时，err为undefined， data为获取到的证书吊销条目列表；否则为错误对象。 |
 
 **错误码：**
 
@@ -3468,7 +3468,7 @@ verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | cryptoFramework.PubKey | 是 | 表示用于验签的公钥对象。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当验签成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当验签成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

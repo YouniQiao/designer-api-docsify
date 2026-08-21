@@ -16,5 +16,5 @@ Define the FrameNode type for List.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** ListFrameNode
+**Property type:** [ListFrameNode](arkts-typenode-listframenode-c.md)
 

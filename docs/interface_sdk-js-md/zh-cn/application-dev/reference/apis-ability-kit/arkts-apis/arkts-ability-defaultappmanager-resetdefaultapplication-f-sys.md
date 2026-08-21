@@ -30,7 +30,7 @@ function resetDefaultApplication(type: string, userId: int, callback: AsyncCallb
 | --- | --- | --- | --- |
 | type | string | 是 | 要重置的应用类型，取 [ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md)中的值，或者符合媒体类型格式的文件类型，或者 [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)类型。 |
 | userId | int | 是 | 表示用户ID，可以通过 [getOsAccountLocalId接口](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)，当重置默认应用成功时，err返回undefined。否则回调函数返回 具体错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当重置默认应用成功时，err返回undefined。否则回调函数返回 具体错误对象。 |
 
 **错误码：**
 
@@ -140,7 +140,7 @@ function resetDefaultApplication(type: string, callback: AsyncCallback<void>) : 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 要重置的应用类型，取 [ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md)中的值，或者符合媒体类型格式的文件类型，或者 [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)类型。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)，当重置默认应用成功时，err返回undefined。否则回调函数返回 具体错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当重置默认应用成功时，err返回undefined。否则回调函数返回 具体错误对象。 |
 
 **错误码：**
 

@@ -16,5 +16,5 @@ Define the FrameNode type for Progress.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** ProgressFrameNode
+**Property type:** [ProgressFrameNode](arkts-typenode-progressframenode-c.md)
 

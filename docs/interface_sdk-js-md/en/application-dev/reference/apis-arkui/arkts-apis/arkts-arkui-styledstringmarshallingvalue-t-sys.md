@@ -16,5 +16,5 @@ Defines a custom marshalling object for styled strings, which you need to define
 
 **System API:** This is a system API.
 
-**Property type:** UserDataSpan
+**Property type:** [UserDataSpan](arkts-arkui-userdataspan-c.md)
 

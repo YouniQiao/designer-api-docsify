@@ -16,5 +16,5 @@ Define the FrameNode type for SymbolGlyph.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** SymbolGlyphFrameNode
+**属性类型：** [SymbolGlyphFrameNode](arkts-typenode-symbolglyphframenode-c.md)
 

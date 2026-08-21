@@ -1,6 +1,6 @@
-# @ohos.nearlink.constant
+# @ohos.nearlink.constant(NearLink Common Constants)
 
-The definition of nearlinkConstant.
+This module provides definitions of common constants for NearLink communication, including the device pairing status, device connection status, and device type.
 
 **Since:** 26.0.0
 
@@ -22,16 +22,16 @@ import { nearlinkConstant } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [AcbState](arkts-connectivity-nearlinkconstant-acbstate-e.md) | ACB connection status enumeration. |
-| [ConnectionState](arkts-connectivity-nearlinkconstant-connectionstate-e.md) | The enum of connection state. |
-| [DeviceClass](arkts-connectivity-nearlinkconstant-deviceclass-e.md) | The enum of device class. |
-| [PairingState](arkts-connectivity-nearlinkconstant-pairingstate-e.md) | The enum of pairing state. |
+| [AcbState(NearLink Common Constants)](arkts-connectivity-nearlinkconstant-acbstate-e.md) | Enumerates the logical link connection states with a remote device. |
+| [ConnectionState(NearLink Common Constants)](arkts-connectivity-nearlinkconstant-connectionstate-e.md) | Enumerates the connection states with a remote device. |
+| [DeviceClass(NearLink Common Constants)](arkts-connectivity-nearlinkconstant-deviceclass-e.md) | Enumerates the device types. |
+| [PairingState(NearLink Common Constants)](arkts-connectivity-nearlinkconstant-pairingstate-e.md) | Enumerates the pairing states with a remote device. |
 
 <!--Del-->
 ### Enums(System API)
 
 | Name | Description |
 | --- | --- |
-| [ConnectionInterval](arkts-connectivity-nearlinkconstant-connectioninterval-e-sys.md) | The enum of connection interval values. |
+| [ConnectionInterval(NearLink Common Constants)](arkts-connectivity-nearlinkconstant-connectioninterval-e-sys.md) | Enumerates the connection intervals. A smaller interval indicates a lower latency, higher throughput, but higher power consumption. A larger interval indicates lower power consumption but higher latency. The high-speed mode is suitable for scenarios that require high throughput and low latency, while the low-speed mode is suitable for scenarios that are sensitive to power consumption. |
 <!--DelEnd-->
 

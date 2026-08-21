@@ -14,5 +14,5 @@ export type UidNetStatsInfo = Record<int, NetStatsInfo>
 
 **System API:** This is a system API.
 
-**Property type:** Record<int, NetStatsInfo>
+**Property type:** Record&lt;int, [NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md)&gt;
 

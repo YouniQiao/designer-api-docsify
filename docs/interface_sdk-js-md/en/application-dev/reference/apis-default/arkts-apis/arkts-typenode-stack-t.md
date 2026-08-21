@@ -16,5 +16,5 @@ Define the FrameNode type for Stack.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** StackFrameNode
+**Property type:** [StackFrameNode](arkts-typenode-stackframenode-c.md)
 

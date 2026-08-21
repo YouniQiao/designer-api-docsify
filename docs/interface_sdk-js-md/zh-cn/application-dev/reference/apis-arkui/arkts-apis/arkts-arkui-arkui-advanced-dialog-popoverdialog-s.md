@@ -30,7 +30,7 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 
 配置跟手弹出框的参数，包含弹出框内容、位置等属性，具体参见PopoverOptions类型说明。
 
-**类型：** [PopoverOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-dialog-popoveroptions-i.md)
+**类型：** [PopoverOptions](arkts-arkui-arkui-advanced-dialog-popoveroptions-i.md)
 
 **起始版本：** 14
 
@@ -51,7 +51,7 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 
 跟手弹出框基于的目标组件构建器函数，用于定义弹出框显示的参考位置组件。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **起始版本：** 14
 

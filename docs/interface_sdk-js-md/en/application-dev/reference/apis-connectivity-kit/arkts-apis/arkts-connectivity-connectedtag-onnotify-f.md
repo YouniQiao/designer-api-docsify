@@ -6,19 +6,19 @@
 import { connectedTag } from '@kit.ConnectivityKit';
 ```
 
-## on('notify')
+## on("notify")
 
 ```TypeScript
-function on(type: 'notify', callback: Callback<number>): void
+function on(type: "notify", callback: Callback<number>): void
 ```
 
-Subscribes NFC RF status change events.
+Registers the NFC field strength state events.
 
 **Since:** 8
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-<!--Device-connectedTag-function on(type: 'notify', callback: Callback<number>): void--><!--Device-connectedTag-function on(type: 'notify', callback: Callback<number>): void-End-->
+<!--Device-connectedTag-function on(type: "notify", callback: Callback<number>): void--><!--Device-connectedTag-function on(type: "notify", callback: Callback<number>): void-End-->
 
 **System capability:** SystemCapability.Communication.ConnectedTag
 
@@ -26,6 +26,6 @@ Subscribes NFC RF status change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'notify' | Yes | The callback type. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | Yes | The callback function to be registered. |
+| type | "notify" | Yes | Event type. This parameter has a fixed value of **notify**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | Yes | Callback used to return the [NfcRfType](arkts-connectivity-connectedtag-nfcrftype-e.md). |
 

@@ -1,6 +1,6 @@
 # PanelInfo
 
-Describes the attributes of the input method panel.
+@brief Describes the attributes of the input method panel.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 flag?: PanelFlag
 ```
 
-State type of the panel.
+@brief State type of the panel.
 
 **Type:** PanelFlag
 
@@ -38,7 +38,7 @@ State type of the panel.
 type: PanelType
 ```
 
-Type of the panel.
+@brief Type of the panel.
 
 **Type:** PanelType
 

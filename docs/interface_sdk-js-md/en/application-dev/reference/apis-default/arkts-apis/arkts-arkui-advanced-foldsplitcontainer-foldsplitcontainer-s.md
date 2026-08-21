@@ -66,7 +66,7 @@ The animation options of layout
 
 The layout options for the container when the foldable screen is expanded.
 
-**Type:** [ExpandedRegionLayoutOptions](arkts-arkui-advanced-foldsplitcontainer-expandedregionlayoutoptions-i.md)
+**Type:** [ExpandedRegionLayoutOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-foldsplitcontainer-expandedregionlayoutoptions-i.md)
 
 **Since:** 23
 
@@ -108,7 +108,7 @@ The builder function which will be rendered in the extra region of container.
 
 The layout options for the container when the foldable screen is folded.
 
-**Type:** [FoldedRegionLayoutOptions](arkts-arkui-advanced-foldsplitcontainer-foldedregionlayoutoptions-i.md)
+**Type:** [FoldedRegionLayoutOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-foldsplitcontainer-foldedregionlayoutoptions-i.md)
 
 **Since:** 23
 
@@ -129,7 +129,7 @@ The layout options for the container when the foldable screen is folded.
 
 The layout options for the container when the foldable screen is in hover mode.
 
-**Type:** [HoverModeRegionLayoutOptions](arkts-arkui-advanced-foldsplitcontainer-hovermoderegionlayoutoptions-i.md)
+**Type:** [HoverModeRegionLayoutOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-foldsplitcontainer-hovermoderegionlayoutoptions-i.md)
 
 **Since:** 23
 
@@ -149,7 +149,7 @@ onHoverStatusChange?: OnHoverStatusChangeHandler
 
 The callback function that is triggered when the foldable screen enters or exits hover mode. In hover mode, the upper half of the screen is used for display, and the lower half is used for operation.
 
-**Type:** [OnHoverStatusChangeHandler](arkts-onhoverstatuschangehandler-t.md)
+**Type:** [OnHoverStatusChangeHandler](../../apis-arkui/arkts-apis/arkts-arkui-onhoverstatuschangehandler-t.md)
 
 **Since:** 23
 

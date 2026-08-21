@@ -36,7 +36,7 @@ Called when a web native message connection is established. In this callback, yo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [ConnectionInfo](../../apis-default/arkts-apis/arkts-web-webnativemessagingextensionability-connectioninfo-i.md) | Yes | Connection information. |
+| info | [ConnectionInfo](arkts-arkweb-web-webnativemessagingextensionability-connectioninfo-i.md) | Yes | Connection information. |
 
 **Examples**
 
@@ -102,7 +102,7 @@ Called when a web native message connection is disconnected. In this callback, y
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [ConnectionInfo](../../apis-default/arkts-apis/arkts-web-webnativemessagingextensionability-connectioninfo-i.md) | Yes | Connection information. |
+| info | [ConnectionInfo](arkts-arkweb-web-webnativemessagingextensionability-connectioninfo-i.md) | Yes | Connection information. |
 
 **Examples**
 
@@ -126,7 +126,7 @@ context: WebNativeMessagingExtensionContext
 
 Context of the current web native message ExtensionAbility.
 
-**Type:** [WebNativeMessagingExtensionContext](arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md)
+**Type:** [WebNativeMessagingExtensionContext](../../apis-default/arkts-apis/arkts-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md)
 
 **Since:** 21
 

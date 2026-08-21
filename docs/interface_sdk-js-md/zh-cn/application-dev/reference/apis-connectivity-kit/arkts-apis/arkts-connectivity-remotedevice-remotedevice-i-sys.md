@@ -1,6 +1,6 @@
 # RemoteDevice
 
-远程设备操作方法。
+提供远端设备的操作方法，使用前需要使用[remoteDevice.createRemoteDevice](arkts-connectivity-remotedevice-createremotedevice-f.md)方法创建一个远端设备 [RemoteDevice](arkts-connectivity-remotedevice-remotedevice-i.md)实例。一个设备只需要创建一次，无需多次创建。
 
 **起始版本：** 26.0.0
 
@@ -20,7 +20,7 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 cancelDevicePairing(): Promise<void>
 ```
 
-取消正在进行的配对请求。
+取消正在进行的配对请求。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -38,7 +38,7 @@ cancelDevicePairing(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -55,7 +55,7 @@ cancelDevicePairing(): Promise<void>
 connect(): Promise<void>
 ```
 
-连接所有允许的profile。
+向远端设备发起连接。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -73,7 +73,7 @@ connect(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 将profile连接结果作为Promise返回。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -90,7 +90,7 @@ connect(): Promise<void>
 disconnect(): Promise<void>
 ```
 
-断开所有已连接的profile。
+断开远端设备的连接。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -108,7 +108,7 @@ disconnect(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 将profile连接结果作为Promise返回。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -125,7 +125,7 @@ disconnect(): Promise<void>
 getDeviceAlias(): string
 ```
 
-获取远程设备的别名。
+获取远端设备别名。
 
 **起始版本：** 26.0.0
 
@@ -143,7 +143,7 @@ getDeviceAlias(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 返回远程设备的别名。 |
+| string | 远端设备别名。 |
 
 **错误码：**
 
@@ -160,7 +160,7 @@ getDeviceAlias(): string
 getDeviceModel(): DeviceModel
 ```
 
-获取远端设备的型号信息。
+获取远端设备型号。
 
 **起始版本：** 26.0.0
 
@@ -176,7 +176,7 @@ getDeviceModel(): DeviceModel
 
 | 类型 | 说明 |
 | --- | --- |
-| [DeviceModel](arkts-connectivity-remotedevice-devicemodel-i-sys.md) | 返回远程设备的型号信息。 |
+| [DeviceModel](arkts-connectivity-remotedevice-devicemodel-i-sys.md) | 远端设备的型号。 |
 
 **错误码：**
 
@@ -192,7 +192,7 @@ getDeviceModel(): DeviceModel
 getRssiValue(): Promise<int>
 ```
 
-获取远程设备的RSSI值。
+获取远端设备的信号强度（RSSI）。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -210,7 +210,7 @@ getRssiValue(): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;int&gt; | 返回RSSI值的promise对象。 |
+| Promise&lt;int&gt; | Promise对象，返回RSSI值。 |
 
 **错误码：**
 
@@ -227,7 +227,7 @@ getRssiValue(): Promise<int>
 removePairedDevice(): Promise<void>
 ```
 
-删除已配对的远端设备。
+删除已配对设备。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -245,7 +245,7 @@ removePairedDevice(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -262,7 +262,7 @@ removePairedDevice(): Promise<void>
 setConnectionInterval(interval: ConnectionInterval): void
 ```
 
-设置与远端设备的连接时间间隔。
+设置和远端设备的连接间隔。
 
 **起始版本：** 26.0.0
 
@@ -280,7 +280,7 @@ setConnectionInterval(interval: ConnectionInterval): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| interval | ConnectionInterval | 是 | 要设置的连接间隔 |
+| interval | ConnectionInterval | 是 | 要设置的连接间隔。 |
 
 **错误码：**
 
@@ -297,7 +297,7 @@ setConnectionInterval(interval: ConnectionInterval): void
 setDeviceAlias(alias: string): void
 ```
 
-设置远端设备的别名。
+设置远端设备别名。
 
 **起始版本：** 26.0.0
 
@@ -315,7 +315,7 @@ setDeviceAlias(alias: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| alias | string | 是 | 远端设备的别名 <br>最大长度为64且不能为空。 |
+| alias | string | 是 | 远端设备别名。个字符，不能为空。 <br>最大长度为64。 |
 
 **错误码：**
 
@@ -333,7 +333,7 @@ setDeviceAlias(alias: string): void
 setPairingConfirmation(accept: boolean): void
 ```
 
-设置配对请求的确认信息。
+设置配对请求的确认结果。对端设备的配对请求通过 remoteDevice.onPairingRequest 获取。
 
 **起始版本：** 26.0.0
 
@@ -351,7 +351,7 @@ setPairingConfirmation(accept: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| accept | boolean | 是 | 如果配对请求被接受，则设置为true。否则，设置为false |
+| accept | boolean | 是 | 配对确认。true：接受配对。false：拒绝配对。 |
 
 **错误码：**
 
@@ -368,7 +368,7 @@ setPairingConfirmation(accept: boolean): void
 setPairingPasscode(passcode: string): Promise<void>
 ```
 
-如果配对类型为通行码，配对时设置通行码
+设置配对通行码。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -386,13 +386,13 @@ setPairingPasscode(passcode: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| passcode | string | 是 | 用户输入的通行码。必须是6位数字 <br>长度必须为6，6个10以内数字。 |
+| passcode | string | 是 | 用户输入的配对通行码，必须为六位数字。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -410,7 +410,7 @@ setPairingPasscode(passcode: string): Promise<void>
 startCrediblePairing(): Promise<void>
 ```
 
-发起与可信的远端星闪设备的配对。 该接口不触发对话框，不需要用户授权。
+向可信远端设备发起免弹窗配对。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -428,7 +428,7 @@ startCrediblePairing(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

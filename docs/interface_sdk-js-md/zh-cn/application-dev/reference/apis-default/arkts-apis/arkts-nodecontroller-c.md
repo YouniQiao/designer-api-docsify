@@ -96,7 +96,7 @@ abstract makeNode(uiContext: UIContext): FrameNode | null
 
 > **说明：**
 > 
-> NodeContainer不支持跨实例复用。如果出现跨实例复用NodeContainer，传入 &gt; NodeContainer的[NodeController](#nodecontroller)触发 &gt; [makeNode](#makenode)回调方法时，入参中的[UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)对象可能为undefined，此时需要开发者 &gt; 判断入参中的[UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)对象是否为undefined，防止后续使用此入参时出现 &gt; [UIContext无效的JS异常](../../../ui/arkts-wrong-uicontext-debug.md#定位uicontext错误问题)。
+> NodeContainer不支持跨实例复用。如果出现跨实例复用NodeContainer，传入 &gt; NodeContainer的[NodeController](../../apis-arkui/arkts-apis/arkts-arkui-nodecontroller-c.md)触发 &gt; [makeNode](../../apis-arkui/arkts-apis/arkts-arkui-nodecontroller-c.md#makenode)回调方法时，入参中的[UIContext](arkts-arkui-uicontext-uicontext-c.md)对象可能为undefined，此时需要开发者 &gt; 判断入参中的[UIContext](arkts-arkui-uicontext-uicontext-c.md)对象是否为undefined，防止后续使用此入参时出现 &gt; [UIContext无效的JS异常](../../../ui/arkts-wrong-uicontext-debug.md#定位uicontext错误问题)。
 
 **起始版本：** 23
 
@@ -114,13 +114,13 @@ abstract makeNode(uiContext: UIContext): FrameNode | null
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 回调该方法的时候，绑定NodeContainer的UI上下文。 |
+| uiContext | [UIContext](arkts-arkui-uicontext-uicontext-c.md) | 是 | 回调该方法的时候，绑定NodeContainer的UI上下文。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](arkts-framenode-c.md) \| null | Returns a FrameNode or null. |
+| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) \| null | Returns a FrameNode or null. |
 
 ## onAttach
 
@@ -296,13 +296,13 @@ onWillUnbind(containerId: long): void
 rebuild(): void
 ```
 
-调用此接口通知NodeContainer组件重新回调[makeNode](#makenode)方法，更改子节点。
+调用此接口通知NodeContainer组件重新回调[makeNode](../../apis-arkui/arkts-apis/arkts-arkui-nodecontroller-c.md#makenode)方法，更改子节点。
 
 > **说明：**
 > 
 > 由于rebuild方法为应用主动调用的方法，且该操作与UI相关。需要开发者自行保证调用该接口时UI上下文有效，即与绑定的NodeContainer保持UI上下文一致。
 > 
-> 监听回调等[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)时，可以通过[UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)的 &gt; [runScopedTask](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#runscopedtask)方法明确调用时的UI上下文。
+> 监听回调等[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)时，可以通过[UIContext](arkts-arkui-uicontext-uicontext-c.md)的 &gt; [runScopedTask](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#runscopedtask)方法明确调用时的UI上下文。
 
 **起始版本：** 23
 

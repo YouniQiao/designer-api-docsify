@@ -102,7 +102,7 @@ const repeatClickInterval: Config<RepeatClickInterval>
 const screenMagnification: Config<boolean>
 ```
 
-Indicates the configuration of screen magnification.
+表示屏幕放大功能启用状态。
 
 **起始版本：** 23
 

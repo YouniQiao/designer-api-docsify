@@ -2,7 +2,7 @@
 
 The LazyVWaterFlowLayoutAttribute
 
-**Inheritance/Implementation:** LazyVWaterFlowLayoutAttribute extends [LazyWaterFlowLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-arklazywaterflowlayout-lazywaterflowlayoutattribute-c.md)
+**Inheritance/Implementation:** LazyVWaterFlowLayoutAttribute extends [LazyWaterFlowLayoutAttribute](arkts-arkui-components-arklazywaterflowlayout-lazywaterflowlayoutattribute-i.md)
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ attributeModifier(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | AttributeModifier&lt;[LazyVWaterFlowLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-c.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
+| modifier | AttributeModifier&lt;[LazyVWaterFlowLayoutAttribute](arkts-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
 
 **Return value:**
 

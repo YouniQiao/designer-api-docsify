@@ -22,7 +22,7 @@ Creates a FrameNode of the **Text** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'Text' | Yes | Node type. Set to **'Text'**. |
 
 **Return value:**
@@ -90,7 +90,7 @@ Creates a FrameNode of the **Column** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'Column' | Yes | Node type. Set to **'Column'**. |
 
 **Return value:**
@@ -157,7 +157,7 @@ Creates a FrameNode of the Row type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'Row' | Yes | Node type. Set to **'Row'**. |
 
 **Return value:**
@@ -224,7 +224,7 @@ Creates a FrameNode of the **Stack** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'Stack' | Yes | Node type. Set to **'Stack'**. |
 
 **Return value:**
@@ -295,7 +295,7 @@ Creates a FrameNode of the **GridRow** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'GridRow' | Yes | Node type. Set to **'GridRow'**. |
 
 **Return value:**
@@ -369,7 +369,7 @@ Creates a FrameNode of the **GridCol** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'GridCol' | Yes | Node type. Set to **'GridCol'**. |
 
 **Return value:**
@@ -443,7 +443,7 @@ Creates a FrameNode of the Flex type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'Flex' | Yes | Node type. Set to **'Flex'**. |
 
 **Return value:**
@@ -510,7 +510,7 @@ Creates a FrameNode of the **Swiper** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'Swiper' | Yes | Node type. Set to **'Swiper'**. |
 
 **Return value:**
@@ -596,7 +596,7 @@ Creates a FrameNode of the **Progress** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'Progress' | Yes | Node type. Set to **'Progress'**. |
 
 **Return value:**
@@ -666,7 +666,7 @@ Creates a FrameNode of the **Scroll** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'Scroll' | Yes | Node type. Set to **'Scroll'**. |
 
 **Return value:**
@@ -750,7 +750,7 @@ Creates a FrameNode of the **RelativeContainer** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'RelativeContainer' | Yes | Node type. Set to **'RelativeContainer'**. |
 
 **Return value:**
@@ -817,7 +817,7 @@ Creates a FrameNode of the **Divider** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'Divider' | Yes | Node type. Set to **'Divider'**. |
 
 **Return value:**
@@ -890,7 +890,7 @@ Creates a FrameNode of the **LoadingProgress** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'LoadingProgress' | Yes | Node type. Set to **'LoadingProgress'**. |
 
 **Return value:**
@@ -958,7 +958,7 @@ Creates a FrameNode of the **Search** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'Search' | Yes | Node type. Set to **'Search'**. |
 
 **Return value:**
@@ -1027,7 +1027,7 @@ Creates a FrameNode of the **Blank** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'Blank' | Yes | Node type. Set to **'Blank'**. |
 
 **Return value:**
@@ -1101,7 +1101,7 @@ Creates a FrameNode of the **Image** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'Image' | Yes | Node type, which is **Image** in this API. |
 
 **Return value:**
@@ -1179,7 +1179,7 @@ Creates a FrameNode of the **List** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'List' | Yes | Node type, which is **List** in this API. |
 
 **Return value:**
@@ -1270,7 +1270,7 @@ Creates a FrameNode of the **ListItem** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'ListItem' | Yes | Node type. Set to **'ListItem'**. |
 
 **Return value:**
@@ -1306,7 +1306,7 @@ Creates a FrameNode of the **TextInput** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'TextInput' | Yes | Node type. Set to **'TextInput'**. |
 
 **Return value:**
@@ -1373,7 +1373,7 @@ Creates a FrameNode of the **Button** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'Button' | Yes | Node type. Set to **'Button'**. |
 
 **Return value:**
@@ -1447,7 +1447,7 @@ Creates a FrameNode of the **ListItemGroup** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'ListItemGroup' | Yes | Node type. Set to **'ListItemGroup'**. |
 
 **Return value:**
@@ -1483,7 +1483,7 @@ Creates a FrameNode of the **WaterFlow** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'WaterFlow' | Yes | Node type. Set to **'WaterFlow'**. |
 
 **Return value:**
@@ -1578,7 +1578,7 @@ Creates a FrameNode of the **FlowItem** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'FlowItem' | Yes | Node type. Set to **'FlowItem'**. |
 
 **Return value:**
@@ -1614,7 +1614,7 @@ Creates a FrameNode of the **XComponent** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'XComponent' | Yes | Node type. Set to **'XComponent'**. |
 
 **Return value:**
@@ -1682,7 +1682,7 @@ Creates a FrameNode of the **XComponent** type based on the settings specified i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'XComponent' | Yes | Node type. Set to **'XComponent'**. |
 | options | XComponentOptions | Yes | Options of the **XComponent**. |
 
@@ -1757,7 +1757,7 @@ Creates a FrameNode of the **XComponent** type based on the settings specified i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'XComponent' | Yes | Node type. Set to **'XComponent'**. |
 | parameters | NativeXComponentParameters | Yes | Options of the **XComponent**. |
 
@@ -1830,7 +1830,7 @@ Creates a FrameNode of the **Checkbox** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'Checkbox' | Yes | Node type. Set to **'Checkbox'**. |
 
 **Return value:**
@@ -1906,7 +1906,7 @@ Creates a FrameNode of the **CheckboxGroup** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'CheckboxGroup' | Yes | Node type. Set to **'CheckboxGroup'**. |
 
 **Return value:**
@@ -1984,7 +1984,7 @@ Creates a FrameNode of the **Radio** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'Radio' | Yes | Node type. Set to **'Radio'**. |
 
 **Return value:**
@@ -2059,7 +2059,7 @@ Creates a FrameNode of the **Rating** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'Rating' | Yes | Node type, which is **Rating** in this API. |
 
 **Return value:**
@@ -2130,7 +2130,7 @@ Creates a FrameNode of the **Select** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'Select' | Yes | Node type. Set to **'Select'**. |
 
 **Return value:**
@@ -2199,7 +2199,7 @@ Creates a FrameNode of the **Slider** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'Slider' | Yes | Node type. Set to **'Slider'**. |
 
 **Return value:**
@@ -2269,7 +2269,7 @@ Creates a FrameNode of the **Toggle** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'Toggle' | Yes | Node type. Set to **'Toggle'**. |
 | options | ToggleOptions | No | Options for configuring the node of the Toggle type, including setting the style through the **type** property. |
 
@@ -2341,7 +2341,7 @@ Creates a FrameNode of the **Marquee** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'Marquee' | Yes | Node type. Set to **'Marquee'**. |
 
 **Return value:**
@@ -2409,7 +2409,7 @@ Creates a FrameNode of the **TextArea** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'TextArea' | Yes | Node type. Set to **'TextArea'**. |
 
 **Return value:**
@@ -2476,7 +2476,7 @@ Creates a FrameNode of the **SymbolGlyph** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'SymbolGlyph' | Yes | Node type. Set to **'SymbolGlyph'**. |
 
 **Return value:**
@@ -2543,7 +2543,7 @@ Creates a FrameNode of the **QRCode** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'QRCode' | Yes | Node type, which is **QRCode** in this API. |
 
 **Return value:**
@@ -2581,7 +2581,7 @@ Creates a FrameNode of the **Badge** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'Badge' | Yes | Node type. Set to **'Badge'**. |
 
 **Return value:**
@@ -2619,7 +2619,7 @@ Creates a FrameNode of the **TextClock** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'TextClock' | Yes | Node type. Set to **'TextClock'**. |
 
 **Return value:**
@@ -2657,7 +2657,7 @@ Creates a FrameNode of the **TextTimer** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'TextTimer' | Yes | Node type. Set to **'TextTimer'**. |
 
 **Return value:**
@@ -2695,7 +2695,7 @@ Creates a FrameNode of the **Grid** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'Grid' | Yes | Node type. Set to **'Grid'**. |
 
 **Return value:**
@@ -2785,7 +2785,7 @@ Creates a FrameNode of the **GridItem** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'GridItem' | Yes | Node type. Set to **'GridItem'**. |
 
 **Return value:**

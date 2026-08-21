@@ -29,7 +29,7 @@ function getAllBundleResourceInfo(resourceFlags: int, callback: AsyncCallback<Ar
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resourceFlags | int | 是 | 指定返回的BundleResourceInfo所包含的信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;BundleResourceInfo&gt;&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)，当获取成功时，err为 undefined，data为获取到的BundleResourceInfo数组；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;BundleResourceInfo&gt;&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为 undefined，data为获取到的BundleResourceInfo数组；否则为错误对象。 |
 
 **错误码：**
 

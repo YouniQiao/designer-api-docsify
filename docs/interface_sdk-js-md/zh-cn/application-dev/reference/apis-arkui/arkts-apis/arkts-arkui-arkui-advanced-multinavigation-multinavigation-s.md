@@ -31,7 +31,7 @@ import { SplitPolicy, MultiNavigation, MultiNavPathStack } from '@kit.ArkUI';
 
 设置路由栈。
 
-**类型：** [MultiNavPathStack](../../apis-default/arkts-apis/arkts-arkui-advanced-multinavigation-multinavpathstack-c.md)
+**类型：** [MultiNavPathStack](arkts-arkui-arkui-advanced-multinavigation-multinavpathstack-c.md)
 
 **起始版本：** 14
 
@@ -72,7 +72,7 @@ onHomeShowOnTop?: OnHomeShowOnTopCallback
 
 设置主页处于栈顶时的回调。不传入时不监听主页栈顶状态变化。
 
-**类型：** [OnHomeShowOnTopCallback](../../apis-default/arkts-apis/arkts-onhomeshowontopcallback-t.md)
+**类型：** [OnHomeShowOnTopCallback](arkts-arkui-onhomeshowontopcallback-t.md)
 
 **起始版本：** 14
 
@@ -92,7 +92,7 @@ onNavigationModeChange?: OnNavigationModeChangeCallback
 
 设置MultiNavigation模式变更时的回调。当需要在导航模式变化时执行特定业务逻辑（如调整页面布局、更新UI状态等）时传入此回调。不传入时不监听导航模式变更事件，导航模式变更时无回调触发。
 
-**类型：** [OnNavigationModeChangeCallback](../../apis-default/arkts-apis/arkts-onnavigationmodechangecallback-t.md)
+**类型：** [OnNavigationModeChangeCallback](arkts-arkui-onnavigationmodechangecallback-t.md)
 
 **起始版本：** 14
 

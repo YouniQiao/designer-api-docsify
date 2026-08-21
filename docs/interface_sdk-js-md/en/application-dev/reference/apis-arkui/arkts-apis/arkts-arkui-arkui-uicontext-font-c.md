@@ -4,7 +4,7 @@ Provides APIs for registering custom fonts.
 
 > **NOTE：**
 > 
-> - In the following API examples, you must first use [getFont()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getfont) in **UIContext** to obtain &gt; a **Font** instance, and then call the APIs using the obtained instance.
+> - In the following API examples, you must first use [getFont()](arkts-arkui-arkui-uicontext-uicontext-c.md#getfont) in **UIContext** to obtain &gt; a **Font** instance, and then call the APIs using the obtained instance.
 > 
 > - You are advised to use the [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync) API of the &gt; font engine to register custom fonts.
 

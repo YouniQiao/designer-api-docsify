@@ -60,7 +60,7 @@ let eventInfo: accessibility.EventInfo = ({
 constructor()
 ```
 
-A constructor used to create a EventInfo object.
+构造函数。
 
 **起始版本：** 23
 

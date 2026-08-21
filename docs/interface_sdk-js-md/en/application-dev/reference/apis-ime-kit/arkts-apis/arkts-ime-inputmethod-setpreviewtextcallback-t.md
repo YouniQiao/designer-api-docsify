@@ -4,7 +4,7 @@
 export type SetPreviewTextCallback = (text: string, range: Range) => void
 ```
 
-The callback of 'setPreviewText' event.
+@brief Callback triggered when the input method framework needs to display the text preview.
 
 **Since:** 23
 
@@ -16,6 +16,6 @@ The callback of 'setPreviewText' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | text to be previewed. |
-| range | Range | Yes | the range of the text to be replaced by the preview text. |
+| text | string | Yes | Text preview. |
+| range | Range | Yes | Describes the range of the selected text. |
 

@@ -37,7 +37,7 @@ ToolBarV2Item的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ToolBarV2ItemOptions](arkts-arkui-advanced-toolbarv2-toolbarv2itemoptions-i.md) | 是 | text info. |
+| options | [ToolBarV2ItemOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemoptions-i.md) | 是 | text info. |
 
 ## accessibilityDescription
 
@@ -113,7 +113,7 @@ The accessibilityText of item.
 
 Define the action event.
 
-**类型：** [ToolBarV2ItemAction](arkts-toolbarv2itemaction-t.md)
+**类型：** [ToolBarV2ItemAction](../../apis-arkui/arkts-apis/arkts-arkui-toolbarv2itemaction-t.md)
 
 **起始版本：** 23
 
@@ -134,7 +134,7 @@ Define the action event.
 
 Define text content.
 
-**类型：** [ToolBarV2ItemText](arkts-arkui-advanced-toolbarv2-toolbarv2itemtext-c.md)
+**类型：** [ToolBarV2ItemText](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemtext-c.md)
 
 **起始版本：** 23
 
@@ -155,7 +155,7 @@ Define text content.
 
 Define icon resource.
 
-**类型：** [ToolBarV2ItemIconType](arkts-toolbarv2itemicontype-t.md)
+**类型：** [ToolBarV2ItemIconType](../../apis-arkui/arkts-apis/arkts-arkui-toolbarv2itemicontype-t.md)
 
 **起始版本：** 23
 
@@ -176,7 +176,7 @@ Define icon resource.
 
 Define item type.
 
-**类型：** [ToolBarV2ItemState](arkts-arkui-advanced-toolbarv2-toolbarv2itemstate-e.md)
+**类型：** [ToolBarV2ItemState](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemstate-e.md)
 
 **起始版本：** 23
 

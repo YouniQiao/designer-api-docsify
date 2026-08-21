@@ -1,6 +1,6 @@
 # TransferMode
 
-Indicates the data transfer mode.
+Enumerates the data transfer modes with a remote device.
 
 **Since:** 26.0.0
 
@@ -14,7 +14,7 @@ Indicates the data transfer mode.
 BASIC = 0
 ```
 
-Basic data transfer mode.
+Basic mode, without a data retransfer mechanism. This mode is applicable to services sensitive to latency and throughput.
 
 **Since:** 26.0.0
 
@@ -30,7 +30,7 @@ Basic data transfer mode.
 RELIABLE = 1
 ```
 
-Reliable data transfer mode.
+Reliable mode, with a data retransfer mechanism. This mode is applicable to services that require high data integrity.
 
 **Since:** 26.0.0
 

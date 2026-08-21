@@ -30,7 +30,7 @@ function queryMyCard(callback: AsyncCallback<Contact>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 | 回调函数。成功返回“我的名片”信息；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 | 回调函数。成功返回“我的名片”信息；失败返回具体的错误码信息。 |
 
 **示例**
 
@@ -70,7 +70,7 @@ function queryMyCard(context: Context, callback: AsyncCallback<Contact>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | Context | 是 | 应用上下文Context。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 | 回调函数。成功返回“我的名片”信息；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 | 回调函数。成功返回“我的名片”信息；失败返回具体的错误码信息。 |
 
 **错误码：**
 
@@ -125,7 +125,7 @@ function queryMyCard(attrs: ContactAttributes, callback: AsyncCallback<Contact>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 | 回调函数。成功返回“我的名片”信息；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 | 回调函数。成功返回“我的名片”信息；失败返回具体的错误码信息。 |
 
 **示例**
 
@@ -168,7 +168,7 @@ function queryMyCard(context: Context, attrs: ContactAttributes, callback: Async
 | --- | --- | --- | --- |
 | context | Context | 是 | 应用上下文Context。 |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 | 回调函数。成功返回“我的名片”信息；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 | 回调函数。成功返回“我的名片”信息；失败返回具体的错误码信息。 |
 
 **错误码：**
 

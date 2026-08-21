@@ -87,7 +87,7 @@ onTipClick?: () => void
 
 指定当前异常提示的配置信息。
 
-**类型：** [PromptOptions](arkts-arkui-arkui-advanced-exceptionprompt-promptoptions-i.md)
+**类型：** [PromptOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-exceptionprompt-promptoptions-i.md)
 
 **起始版本：** 11
 

@@ -4,7 +4,7 @@
 > **说明：**
 > 
 > - 本Class首批接口从API version 12开始支持。
-> - 以下API需先使用UIContext中的[getOverlayManager()](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getoverlaymanager)方法获取到 &gt; OverlayManager对象，再通过该对象调用对应方法。
+> - 以下API需先使用UIContext中的[getOverlayManager()](arkts-arkui-uicontext-uicontext-c.md#getoverlaymanager)方法获取到 &gt; OverlayManager对象，再通过该对象调用对应方法。
 > 
 > - OverlayManager上节点的层级在Page页面层级之上，在Dialog、Popup、Menu、BindSheet、BindContentCover和Toast等之下。
 > 
@@ -140,7 +140,7 @@ openOrderOverlay(content: ComponentContent<Object>, options?: OrderOverlayOption
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;Object&gt; | 是 | 该内容将被添加到OverlayManager中。 |
-| options | [OrderOverlayOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | 否 | Options for the overlay. |
+| options | [OrderOverlayOptions](arkts-arkui-uicontext-orderoverlayoptions-i.md) | 否 | Options for the overlay. |
 
 **返回值：**
 

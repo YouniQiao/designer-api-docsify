@@ -1,6 +1,6 @@
 # ServerResponse
 
-服务端对指定读或写请求的响应的参数。
+表示回复客户端请求的响应。
 
 **起始版本：** 26.0.0
 
@@ -20,7 +20,7 @@ import { ssap } from '@kit.ConnectivityKit';
 address: string
 ```
 
-设备地址。 长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
+表示客户端设备地址。地址格式参考：11:22:33:AA:BB:FF。
 
 **类型：** string
 
@@ -38,7 +38,7 @@ address: string
 requestId: int
 ```
 
-请求ID。 取值范围为全体整数。
+表示请求ID。取值范围[0, 65535]。该ID必须与收到的[PropertyReadRequest](arkts-connectivity-ssap-propertyreadrequest-i.md)或 [PropertyWriteRequest](arkts-connectivity-ssap-propertywriterequest-i.md)中的requestId一致，用于关联请求与响应。
 
 **类型：** int
 
@@ -56,7 +56,7 @@ requestId: int
 value: ArrayBuffer
 ```
 
-响应数据。
+表示回复的数据值。
 
 **类型：** ArrayBuffer
 

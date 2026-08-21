@@ -12,5 +12,5 @@ Represents an array of Assets.
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
-**Property type:** Array<Asset>
+**Property type:** Array&lt;Asset&gt;
 

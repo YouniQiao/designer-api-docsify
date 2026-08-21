@@ -7,7 +7,7 @@
 > 
 > 2. To use the suffix functionality, the **IconGroupSuffix** API must be imported. If this API is not provided, the &gt; suffix area will remain empty.
 > 
-> 3. The icon fill colors (**fillColor** and **activedFillColor**) must match the font color (**fontColor**). If &gt; different colors need to be set, use **prefixSymbol** when passing in &gt; [ChipGroupSpaceOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroup-chipgroupspaceoptions-i.md).
+> 3. The icon fill colors (**fillColor** and **activedFillColor**) must match the font color (**fontColor**). If &gt; different colors need to be set, use **prefixSymbol** when passing in &gt; [ChipGroupSpaceOptions](arkts-arkui-arkui-advanced-chipgroup-chipgroupspaceoptions-i.md).
 
 **Since:** 12
 
@@ -50,7 +50,7 @@ Set system-styled materials for the component. Different materials have differen
   chipGroupPadding?: ChipGroupPaddingOptions
 ```
 
-Top and bottom padding, used to control the overall height. The type is [ChipGroupPaddingOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroup-chipgrouppaddingoptions-i.md).
+Top and bottom padding, used to control the overall height. The type is [ChipGroupPaddingOptions](arkts-arkui-arkui-advanced-chipgroup-chipgrouppaddingoptions-i.md).
 
 Default value: { top: 14, bottom: 14 }
 
@@ -58,7 +58,7 @@ Unit: vp
 
 If the value is **undefined**, the default value is used.
 
-**Type:** [ChipGroupPaddingOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroup-chipgrouppaddingoptions-i.md)
+**Type:** [ChipGroupPaddingOptions](arkts-arkui-arkui-advanced-chipgroup-chipgrouppaddingoptions-i.md)
 
 **Since:** 12
 
@@ -77,7 +77,7 @@ If the value is **undefined**, the default value is used.
   chipGroupSpace?: ChipGroupSpaceOptions
 ```
 
-Left and right padding and spacing between chips. For details, see [ChipGroupSpaceOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroup-chipgroupspaceoptions-i.md).
+Left and right padding and spacing between chips. For details, see [ChipGroupSpaceOptions](arkts-arkui-arkui-advanced-chipgroup-chipgroupspaceoptions-i.md).
 
 Default value: { itemSpace: 8, startSpace: 16, endSpace: 16 }
 
@@ -85,7 +85,7 @@ Unit: vp
 
 If the value is **undefined**, the default value is used.
 
-**Type:** [ChipGroupSpaceOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroup-chipgroupspaceoptions-i.md)
+**Type:** [ChipGroupSpaceOptions](arkts-arkui-arkui-advanced-chipgroup-chipgroupspaceoptions-i.md)
 
 **Since:** 12
 
@@ -104,7 +104,7 @@ If the value is **undefined**, the default value is used.
   itemStyle?: ChipItemStyle
 ```
 
-Style attributes of the chip, such as the color and size. For details, see [ChipItemStyle](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroup-chipitemstyle-i.md).
+Style attributes of the chip, such as the color and size. For details, see [ChipItemStyle](arkts-arkui-arkui-advanced-chipgroup-chipitemstyle-i.md).
 
 Default value:
 
@@ -112,7 +112,7 @@ Default value:
 
 If the value is **undefined**, the default value is used.
 
-**Type:** [ChipItemStyle](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroup-chipitemstyle-i.md)
+**Type:** [ChipItemStyle](arkts-arkui-arkui-advanced-chipgroup-chipitemstyle-i.md)
 
 **Since:** 12
 
@@ -132,11 +132,11 @@ If the value is **undefined**, the default value is used.
   items: ChipGroupItemOptions[]
 ```
 
-Specific attributes of each chip. For details, see [ChipGroupItemOptions[]][ChipGroupItemOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroup-chipgroupitemoptions-i.md).
+Specific attributes of each chip. For details, see [ChipGroupItemOptions[]][ChipGroupItemOptions](arkts-arkui-arkui-advanced-chipgroup-chipgroupitemoptions-i.md).
 
 If the value is **undefined**, the **ChipGroup** component is empty by default.
 
-**Type:** [ChipGroupItemOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroup-chipgroupitemoptions-i.md)[]
+**Type:** [ChipGroupItemOptions](arkts-arkui-arkui-advanced-chipgroup-chipgroupitemoptions-i.md)[]
 
 **Since:** 12
 
@@ -250,7 +250,7 @@ If the value is **undefined**, the default value is used.
   suffix?: Callback<void>
 ```
 
-Callback used to customize a builder. To display custom content on the rightmost side of the component, configure the **suffix** property. Use of the **suffix** property requires referencing the [IconGroupSuffix](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroup-icongroupsuffix-s.md) API.
+Callback used to customize a builder. To display custom content on the rightmost side of the component, configure the **suffix** property. Use of the **suffix** property requires referencing the [IconGroupSuffix](arkts-arkui-arkui-advanced-chipgroup-icongroupsuffix-s.md) API.
 
 By default, if this parameter is not passed, there is no suffix.
 

@@ -34,6 +34,6 @@ function on(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallRespons
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | SensorType.SENSOR_TYPE_ID_HALL | 是 | 要订阅的霍尔传感器类型为SENSOR_TYPE_ID_HALL。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[HallResponse](arkts-sensorservice-sensor-hallresponse-i.md)&gt; | 是 | 注册霍尔传感器的回调函数，上报的数据类型为 HallResponse。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HallResponse](arkts-sensorservice-sensor-hallresponse-i.md)&gt; | 是 | 注册霍尔传感器的回调函数，上报的数据类型为 HallResponse。 |
 | options | Options | 否 | 可选参数列表，当霍尔事件被触发的很频繁时，用于设置传感器上报频率，默认值为200000000ns（即200ms）。 |
 

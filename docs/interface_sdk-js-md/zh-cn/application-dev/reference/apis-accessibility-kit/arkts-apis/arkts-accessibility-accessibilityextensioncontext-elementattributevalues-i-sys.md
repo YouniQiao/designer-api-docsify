@@ -234,7 +234,7 @@ parentId?: long
 sourceType?: AccessibilitySourceType
 ```
 
-Indicates the source of this element.
+组件来源类型，用于区分默认组件和新增、修改的虚拟组件。
 
 **类型：** [AccessibilitySourceType](arkts-accessibility-accessibility-accessibilitysourcetype-e-sys.md)
 

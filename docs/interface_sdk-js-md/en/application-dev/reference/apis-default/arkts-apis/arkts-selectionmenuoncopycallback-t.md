@@ -20,5 +20,5 @@ Defines a SelectionMenu callback when onCopy.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [EditorEventInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-selectionmenu-editoreventinfo-i.md) | No | the event info. |
+| event | [EditorEventInfo](arkts-arkui-advanced-selectionmenu-editoreventinfo-i.md) | No | the event info. |
 

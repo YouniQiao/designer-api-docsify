@@ -12,7 +12,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function connectSystemChannel(): Promise<void>
 ```
 
-Connect system channel for the panel and input method.
+@brief Connects to the system channel for communication between the input method system panel and the system-default input method application. This API can be called only by the input method system panel.
 
 **Since:** 26.0.0
 
@@ -30,7 +30,7 @@ Connect system channel for the panel and input method.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

@@ -63,7 +63,7 @@ accessibilitySelectedType?: ChipV2AccessibilitySelectedType
 
 Set accessibility selected type for Chip.
 
-**Type:** [ChipV2AccessibilitySelectedType](arkts-arkui-advanced-chipv2-chipv2accessibilityselectedtype-e.md)
+**Type:** [ChipV2AccessibilitySelectedType](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipv2-chipv2accessibilityselectedtype-e.md)
 
 **Since:** 26.0.0
 
@@ -223,7 +223,7 @@ closeIcon?: ChipV2CloseIcon
 
 Set config for default close icon when 'allowClose' is true.
 
-**Type:** [ChipV2CloseIcon](arkts-arkui-advanced-chipv2-chipv2closeicon-c.md)
+**Type:** [ChipV2CloseIcon](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipv2-chipv2closeicon-c.md)
 
 **Since:** 26.0.0
 
@@ -303,7 +303,7 @@ label: ChipV2Label
 
 Chip label.
 
-**Type:** [ChipV2Label](arkts-arkui-advanced-chipv2-chipv2label-c.md)
+**Type:** [ChipV2Label](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipv2-chipv2label-c.md)
 
 **Since:** 26.0.0
 
@@ -423,7 +423,7 @@ prefixIcon?: ChipV2Icon
 
 Chip prefix icon.
 
-**Type:** [ChipV2Icon](arkts-arkui-advanced-chipv2-chipv2icon-c.md)
+**Type:** [ChipV2Icon](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md)
 
 **Since:** 26.0.0
 
@@ -443,7 +443,7 @@ size?: ChipV2Size | SizeT<LengthMetrics>
 
 Chip size.
 
-**Type:** [ChipV2Size](arkts-arkui-advanced-chipv2-chipv2size-e.md) \| SizeT&lt;LengthMetrics&gt;
+**Type:** [ChipV2Size](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipv2-chipv2size-e.md) \| SizeT&lt;LengthMetrics&gt;
 
 **Since:** 26.0.0
 
@@ -463,7 +463,7 @@ suffixIcon?: ChipV2Icon
 
 Chip suffix icon.
 
-**Type:** [ChipV2Icon](arkts-arkui-advanced-chipv2-chipv2icon-c.md)
+**Type:** [ChipV2Icon](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md)
 
 **Since:** 26.0.0
 

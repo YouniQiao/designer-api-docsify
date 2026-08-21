@@ -46,7 +46,7 @@ menuItems?: Array<TabTitleBarMenuItem>
 
 List of menu items on the right of the title bar.
 
-**Type:** Array&lt;[TabTitleBarMenuItem](arkts-arkui-advanced-tabtitlebar-tabtitlebarmenuitem-c.md)&gt;
+**Type:** Array&lt;[TabTitleBarMenuItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-tabtitlebar-tabtitlebarmenuitem-c.md)&gt;
 
 **Since:** 23
 
@@ -87,7 +87,7 @@ tabItems: Array<TabTitleBarTabItem>
 
 List of tab items on the left of the title bar.
 
-**Type:** Array&lt;[TabTitleBarTabItem](arkts-arkui-advanced-tabtitlebar-tabtitlebartabitem-c.md)&gt;
+**Type:** Array&lt;[TabTitleBarTabItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-tabtitlebar-tabtitlebartabitem-c.md)&gt;
 
 **Since:** 23
 

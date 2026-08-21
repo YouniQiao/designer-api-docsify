@@ -12,7 +12,7 @@ import { manager } from '@kit.ConnectivityKit';
 function getLocalAddress(): string
 ```
 
-Gets the MAC address of the local device.
+Queries the MAC address of the local device.
 
 **Since:** 26.0.0
 
@@ -30,7 +30,7 @@ Gets the MAC address of the local device.
 
 | Type | Description |
 | --- | --- |
-| string | The local MAC address. For example, "11:22:33:AA:BB:FF". |
+| string | Local MAC address, for example, **'11:22:33:AA:BB:FF'**. |
 
 **Error codes:**
 

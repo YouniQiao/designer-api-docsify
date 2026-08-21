@@ -1,8 +1,6 @@
 # NfcForumType
 
-NfcForum Type definition. The NDEF tag may use one of them.
-
-@enum { int }
+Enumerates the NFC Forum tag types.
 
 **Since:** 23
 
@@ -16,11 +14,11 @@ NfcForum Type definition. The NDEF tag may use one of them.
 NFC_FORUM_TYPE_1 = 1
 ```
 
-NFC FORUM TYPE 1
+NFC Forum tag type 1.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NfcForumType-NFC_FORUM_TYPE_1 = 1--><!--Device-NfcForumType-NFC_FORUM_TYPE_1 = 1-End-->
 
@@ -32,11 +30,11 @@ NFC FORUM TYPE 1
 NFC_FORUM_TYPE_2 = 2
 ```
 
-NFC FORUM TYPE 2
+NFC Forum tag type 2.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NfcForumType-NFC_FORUM_TYPE_2 = 2--><!--Device-NfcForumType-NFC_FORUM_TYPE_2 = 2-End-->
 
@@ -48,11 +46,11 @@ NFC FORUM TYPE 2
 NFC_FORUM_TYPE_3 = 3
 ```
 
-NFC FORUM TYPE 3
+NFC Forum tag type 3.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NfcForumType-NFC_FORUM_TYPE_3 = 3--><!--Device-NfcForumType-NFC_FORUM_TYPE_3 = 3-End-->
 
@@ -64,11 +62,11 @@ NFC FORUM TYPE 3
 NFC_FORUM_TYPE_4 = 4
 ```
 
-NFC FORUM TYPE 4
+NFC Forum tag type 4.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NfcForumType-NFC_FORUM_TYPE_4 = 4--><!--Device-NfcForumType-NFC_FORUM_TYPE_4 = 4-End-->
 
@@ -80,11 +78,11 @@ NFC FORUM TYPE 4
 MIFARE_CLASSIC = 101
 ```
 
-Mifare Classic
+MIFARE Classic.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NfcForumType-MIFARE_CLASSIC = 101--><!--Device-NfcForumType-MIFARE_CLASSIC = 101-End-->
 

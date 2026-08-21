@@ -43,7 +43,7 @@ The method to build component.
 
 The options of a counter component.
 
-**Type:** [CounterOptions](arkts-arkui-advanced-counter-counteroptions-c.md)
+**Type:** [CounterOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-counter-counteroptions-c.md)
 
 **Since:** 23
 

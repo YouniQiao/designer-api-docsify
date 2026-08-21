@@ -1,6 +1,6 @@
 # ChipGroupV2Items
 
-ChipGroupV2Items定义了ChipGroupV2项的数组类，继承自Array&lt;[ChipGroupV2Item](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2item-c.md)&gt;。
+ChipGroupV2Items定义了ChipGroupV2项的数组类，继承自Array&lt;[ChipGroupV2Item](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2item-c.md)&gt;。
 
 **继承/实现关系：** ChipGroupV2Items extends Array<ChipGroupV2Item>
 
@@ -38,5 +38,5 @@ ChipGroupV2Items的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| items | [ChipGroupV2ItemConfig](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md)[] | 是 | ChipGroupV2项配置数组。 |
+| items | [ChipGroupV2ItemConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md)[] | 是 | ChipGroupV2项配置数组。 |
 

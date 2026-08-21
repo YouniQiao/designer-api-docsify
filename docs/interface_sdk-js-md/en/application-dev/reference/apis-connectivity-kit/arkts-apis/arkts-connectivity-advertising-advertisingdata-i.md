@@ -1,6 +1,6 @@
 # AdvertisingData
 
-Describes the advertising data.
+Represents an advertising data packet.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { advertising } from '@kit.ConnectivityKit';
 includeDeviceName?: boolean
 ```
 
-Indicates whether the device name will be included. Default value: false.
+Whether the advertising data contains the local device name. **true**: **yes**. **false**: **no**. The default value is **false**.
 
 **Type:** boolean
 
@@ -38,7 +38,7 @@ Indicates whether the device name will be included. Default value: false.
 manufacturerData?: ManufacturerData[]
 ```
 
-The specified manufacturer data.
+Manufacturer data. By default, this field is not carried if it is not set.
 
 **Type:** [ManufacturerData](arkts-connectivity-advertising-manufacturerdata-i.md)[]
 
@@ -56,7 +56,7 @@ The specified manufacturer data.
 serviceData?: ServiceData[]
 ```
 
-The specified service data.
+Service data. By default, this field is not carried if it is not set.
 
 **Type:** ServiceData[]
 
@@ -74,7 +74,7 @@ The specified service data.
 serviceUuids?: string[]
 ```
 
-The specified service UUIDs. The length of each UUID must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.
+Service UUIDs. A UUID must contain 36 characters, including 32 hexadecimal digits and four hyphens (-). By default, this field is not used if not set.
 
 **Type:** string[]
 

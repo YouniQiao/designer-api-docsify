@@ -4,11 +4,11 @@
 export type NdefTag = _NdefTag
 ```
 
-Exports type NdefTag.
+Obtains an **NdefTag** object.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-tag-export type NdefTag = _NdefTag--><!--Device-tag-export type NdefTag = _NdefTag-End-->
 

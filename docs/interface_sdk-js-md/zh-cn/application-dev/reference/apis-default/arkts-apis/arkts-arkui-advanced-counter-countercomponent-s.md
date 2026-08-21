@@ -47,7 +47,7 @@ build函数用于构造Counter高级组件。
 
 定义Counter组件的类型。
 
-**类型：** [CounterOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-counter-counteroptions-c.md)
+**类型：** [CounterOptions](arkts-arkui-advanced-counter-counteroptions-c.md)
 
 **起始版本：** 23
 

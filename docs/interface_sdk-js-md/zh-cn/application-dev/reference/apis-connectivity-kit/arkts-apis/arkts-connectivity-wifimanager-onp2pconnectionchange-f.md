@@ -27,7 +27,7 @@ function onP2pConnectionChange(callback: Callback<WifiP2pLinkedInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WifiP2pLinkedInfo&gt; | 是 | 状态改变回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pLinkedInfo&gt; | 是 | 状态改变回调函数。 |
 
 **错误码：**
 

@@ -16,5 +16,5 @@ Define the FrameNode type for FlowItem.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** FlowItemFrameNode
+**Property type:** [FlowItemFrameNode](arkts-typenode-flowitemframenode-c.md)
 

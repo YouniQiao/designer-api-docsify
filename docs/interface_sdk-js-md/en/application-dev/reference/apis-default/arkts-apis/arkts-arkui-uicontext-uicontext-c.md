@@ -298,7 +298,7 @@ Create a UI instance singleton without window and get its UIContext object.
 
 | Type | Description |
 | --- | --- |
-| [UIContext](arkts-arkui-uicontext-uicontext-c.md) \| undefined | object UIContext, or undefined when failed. |
+| [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) \| undefined | object UIContext, or undefined when failed. |
 
 **Error codes:**
 
@@ -459,7 +459,7 @@ Gets all currently active UIContext instances.
 
 | Type | Description |
 | --- | --- |
-| [UIContext](arkts-arkui-uicontext-uicontext-c.md)[] | An array containing all valid UIContext instances, returns an empty array if no contexts are available. |
+| [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)[] | An array containing all valid UIContext instances, returns an empty array if no contexts are available. |
 
 ## getAtomicServiceBar
 
@@ -483,7 +483,7 @@ Get AtomicServiceBar.
 
 | Type | Description |
 | --- | --- |
-| Nullable&lt;[AtomicServiceBar](arkts-arkui-uicontext-atomicservicebar-i.md)&gt; | The atomic service bar. |
+| Nullable&lt;[AtomicServiceBar](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-atomicservicebar-i.md)&gt; | The atomic service bar. |
 
 ## getAttachedFrameNodeById
 
@@ -537,7 +537,7 @@ Gets the UIContext associated with the current calling scope.
 
 | Type | Description |
 | --- | --- |
-| [UIContext](arkts-arkui-uicontext-uicontext-c.md) \| undefined | The UIContext for the current calling scope, or undefined if no context can be determined from the call stack. |
+| [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) \| undefined | The UIContext for the current calling scope, or undefined if no context can be determined from the call stack. |
 
 ## getComponentSnapshot
 
@@ -561,7 +561,7 @@ Get ComponentSnapshot.
 
 | Type | Description |
 | --- | --- |
-| [ComponentSnapshot](arkts-arkui-uicontext-componentsnapshot-c.md) | the ComponentSnapshot |
+| [ComponentSnapshot](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-componentsnapshot-c.md) | the ComponentSnapshot |
 
 ## getComponentUtils
 
@@ -585,7 +585,7 @@ get object ComponentUtils.
 
 | Type | Description |
 | --- | --- |
-| [ComponentUtils](arkts-arkui-uicontext-componentutils-c.md) | object ComponentUtils. |
+| [ComponentUtils](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-componentutils-c.md) | object ComponentUtils. |
 
 ## getContextMenuController
 
@@ -609,7 +609,7 @@ Get object context menu controller.
 
 | Type | Description |
 | --- | --- |
-| [ContextMenuController](arkts-arkui-uicontext-contextmenucontroller-c.md) | object context menu controller. |
+| [ContextMenuController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-contextmenucontroller-c.md) | object context menu controller. |
 
 ## getCursorController
 
@@ -633,7 +633,7 @@ Get object cursor controller.
 
 | Type | Description |
 | --- | --- |
-| [CursorController](arkts-arkui-uicontext-cursorcontroller-c.md) | object cursor controller. |
+| [CursorController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-cursorcontroller-c.md) | object cursor controller. |
 
 ## getDragController
 
@@ -657,7 +657,7 @@ Get DragController.
 
 | Type | Description |
 | --- | --- |
-| [DragController](arkts-arkui-uicontext-dragcontroller-c.md) | the DragController |
+| [DragController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c.md) | the DragController |
 
 ## getFilteredInspectorTree
 
@@ -756,7 +756,7 @@ Get FocusController.
 
 | Type | Description |
 | --- | --- |
-| [FocusController](arkts-arkui-uicontext-focuscontroller-c.md) | the FocusController |
+| [FocusController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-focuscontroller-c.md) | the FocusController |
 
 ## getFont
 
@@ -780,7 +780,7 @@ get object font.
 
 | Type | Description |
 | --- | --- |
-| [Font](arkts-arkui-uicontext-font-c.md) | object Font. |
+| [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | object Font. |
 
 ## getFrameNodeById
 
@@ -864,7 +864,7 @@ Obtains context of the ability.
 
 | Type | Description |
 | --- | --- |
-| [Context](arkts-context-t.md) \| undefined |  |
+| [Context](../../apis-arkui/arkts-apis/arkts-arkui-context-t.md) \| undefined |  |
 
 ## getId
 
@@ -912,7 +912,7 @@ Get KeyboardAvoidMode.
 
 | Type | Description |
 | --- | --- |
-| [KeyboardAvoidMode](arkts-arkui-uicontext-keyboardavoidmode-e.md) | The mode of keyboard avoid. |
+| [KeyboardAvoidMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | The mode of keyboard avoid. |
 
 ## getLastFocusedUIContext
 
@@ -936,7 +936,7 @@ Gets the UIContext of the last focused UI instance if one exists.
 
 | Type | Description |
 | --- | --- |
-| [UIContext](arkts-arkui-uicontext-uicontext-c.md) \| undefined | The UIContext of the last focused UI instance or undefined if no one exists. |
+| [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) \| undefined | The UIContext of the last focused UI instance or undefined if no one exists. |
 
 ## getLastForegroundUIContext
 
@@ -960,7 +960,7 @@ Gets the UIContext of the last foregrounded UI instance if one exists.
 
 | Type | Description |
 | --- | --- |
-| [UIContext](arkts-arkui-uicontext-uicontext-c.md) \| undefined | The UIContext of the last foregrounded UI instance or undefined if no one exists |
+| [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) \| undefined | The UIContext of the last foregrounded UI instance or undefined if no one exists |
 
 ## getMagnifier
 
@@ -984,7 +984,7 @@ Obtains the Magnifier object.
 
 | Type | Description |
 | --- | --- |
-| [Magnifier](arkts-arkui-uicontext-magnifier-c.md) | Magnifier instance obtained. |
+| [Magnifier](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-magnifier-c.md) | Magnifier instance obtained. |
 
 ## getMaxFontScale
 
@@ -1032,7 +1032,7 @@ Get MeasureUtils.
 
 | Type | Description |
 | --- | --- |
-| [MeasureUtils](arkts-arkui-uicontext-measureutils-c.md) | the MeasureUtils |
+| [MeasureUtils](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-measureutils-c.md) | the MeasureUtils |
 
 ## getMediaQuery
 
@@ -1056,7 +1056,7 @@ get object mediaQuery.
 
 | Type | Description |
 | --- | --- |
-| [MediaQuery](arkts-arkui-uicontext-mediaquery-c.md) | object MediaQuery. |
+| [MediaQuery](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-mediaquery-c.md) | object MediaQuery. |
 
 ## getNavigationInfoByUniqueId
 
@@ -1110,7 +1110,7 @@ Get object OverlayManager.
 
 | Type | Description |
 | --- | --- |
-| [OverlayManager](arkts-arkui-uicontext-overlaymanager-c.md) | object OverlayManager. |
+| [OverlayManager](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-overlaymanager-c.md) | object OverlayManager. |
 
 ## getOverlayManagerOptions
 
@@ -1134,7 +1134,7 @@ Get object OverlayManagerOptions.
 
 | Type | Description |
 | --- | --- |
-| [OverlayManagerOptions](arkts-arkui-uicontext-overlaymanageroptions-i.md) | object OverlayManagerOptions. |
+| [OverlayManagerOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) | object OverlayManagerOptions. |
 
 ## getPageInfoByUniqueId
 
@@ -1164,7 +1164,7 @@ Get page information of the frameNode with uniqueId.
 
 | Type | Description |
 | --- | --- |
-| [PageInfo](arkts-arkui-uicontext-pageinfo-i.md) | The page information of the frameNode with the target uniqueId, includes navDestination and router page information. If the frame node does not have navDestination and router page information, it will return an empty object. |
+| [PageInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-pageinfo-i.md) | The page information of the frameNode with the target uniqueId, includes navDestination and router page information. If the frame node does not have navDestination and router page information, it will return an empty object. |
 
 ## getPageRootNode
 
@@ -1242,7 +1242,7 @@ get object PromptAction.
 
 | Type | Description |
 | --- | --- |
-| [PromptAction](arkts-arkui-uicontext-promptaction-c.md) | object PromptAction. |
+| [PromptAction](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-promptaction-c.md) | object PromptAction. |
 
 ## getRouter
 
@@ -1266,7 +1266,7 @@ get object router.
 
 | Type | Description |
 | --- | --- |
-| [Router](arkts-arkui-uicontext-router-c.md) | object Router. |
+| [Router](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-router-c.md) | object Router. |
 
 ## getSharedLocalStorage
 
@@ -1314,7 +1314,7 @@ Get object smart gesture controller.
 
 | Type | Description |
 | --- | --- |
-| [SmartGestureController](arkts-arkui-uicontext-smartgesturecontroller-c.md) | object smart gesture controller. |
+| [SmartGestureController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md) | object smart gesture controller. |
 
 ## getTextMenuController
 
@@ -1338,7 +1338,7 @@ Get object text menu controller.
 
 | Type | Description |
 | --- | --- |
-| [TextMenuController](arkts-arkui-uicontext-textmenucontroller-c.md) | object text menu controller. |
+| [TextMenuController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md) | object text menu controller. |
 
 ## getUIInspector
 
@@ -1362,7 +1362,7 @@ Obtains the **UIInspector** object.
 
 | Type | Description |
 | --- | --- |
-| [UIInspector](arkts-arkui-uicontext-uiinspector-c.md) | UIInspector** object. |
+| [UIInspector](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uiinspector-c.md) | UIInspector** object. |
 
 ## getUIObserver
 
@@ -1386,7 +1386,7 @@ Get the UI observer.
 
 | Type | Description |
 | --- | --- |
-| [UIObserver](arkts-arkui-uicontext-uiobserver-c.md) | The UI observer. |
+| [UIObserver](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uiobserver-c.md) | The UI observer. |
 
 ## getWindowHeightBreakpoint
 
@@ -1677,7 +1677,7 @@ Post a frame callback to run on the next frame after the specified delay.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| frameCallback | [FrameCallback](arkts-arkui-uicontext-framecallback-c.md) | Yes | The frame callback to run on the next frame. |
+| frameCallback | [FrameCallback](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-framecallback-c.md) | Yes | The frame callback to run on the next frame. |
 | delayTime | long | Yes | The delay time in milliseconds, |
 
 ## postFrameCallback
@@ -1702,7 +1702,7 @@ Post a frame callback to run on the next frame.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| frameCallback | [FrameCallback](arkts-arkui-uicontext-framecallback-c.md) | Yes | The frame callback to run on the next frame. |
+| frameCallback | [FrameCallback](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-framecallback-c.md) | Yes | The frame callback to run on the next frame. |
 
 ## px2fp
 
@@ -1848,7 +1848,7 @@ Require DynamicSyncScene by id.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[DynamicSyncScene](arkts-arkui-uicontext-dynamicsyncscene-c.md)&gt; | The instance of SwiperDynamicSyncScene. |
+| Array&lt;[DynamicSyncScene](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md)&gt; | The instance of SwiperDynamicSyncScene. |
 
 ## resolveUIContext
 
@@ -1874,7 +1874,7 @@ Resolves and returns a UIContext instance following a predefined priority sequen
 
 | Type | Description |
 | --- | --- |
-| [ResolvedUIContext](arkts-arkui-uicontext-resolveduicontext-c.md) | ResolvedUIContext instance |
+| [ResolvedUIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-resolveduicontext-c.md) | ResolvedUIContext instance |
 
 ## runScopedTask
 
@@ -1922,7 +1922,7 @@ Set custom keyboard continue feature.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| feature | [CustomKeyboardContinueFeature](arkts-arkui-uicontext-customkeyboardcontinuefeature-e.md) | Yes | The custom keyboard continue feature. |
+| feature | [CustomKeyboardContinueFeature](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-customkeyboardcontinuefeature-e.md) | Yes | The custom keyboard continue feature. |
 
 ## setImageCacheCount
 
@@ -1994,7 +1994,7 @@ Set KeyboardAvoidMode. The default mode is KeyboardAvoidMode.OFFSET
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [KeyboardAvoidMode](arkts-arkui-uicontext-keyboardavoidmode-e.md) | Yes | The mode of keyboard avoid. |
+| value | [KeyboardAvoidMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | Yes | The mode of keyboard avoid. |
 
 ## setOverlayManagerOptions
 
@@ -2018,7 +2018,7 @@ Init OverlayManager.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [OverlayManagerOptions](arkts-arkui-uicontext-overlaymanageroptions-i.md) | Yes | Options. |
+| options | [OverlayManagerOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) | Yes | Options. |
 
 **Return value:**
 
@@ -2106,7 +2106,7 @@ Sets the text selection clear policy for text component. Default policy: **TextS
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policy | [TextSelectionClearPolicy](arkts-arkui-uicontext-textselectionclearpolicy-e.md) | Yes | The text selection clear policy. |
+| policy | [TextSelectionClearPolicy](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-textselectionclearpolicy-e.md) | Yes | The text selection clear policy. |
 
 ## setUIStates
 

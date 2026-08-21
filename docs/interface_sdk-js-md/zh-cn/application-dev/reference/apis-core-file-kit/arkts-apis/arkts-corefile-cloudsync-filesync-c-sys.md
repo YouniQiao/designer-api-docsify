@@ -230,7 +230,7 @@ registerUploadProgress(callback: Callback<UploadProgress>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UploadProgress](arkts-corefile-cloudsync-uploadprogress-i-sys.md)&gt; | 是 | 回调函数，监听文件上传进度变化。当文件上传进度发生变化时触发回调，返回上传进度信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UploadProgress](arkts-corefile-cloudsync-uploadprogress-i-sys.md)&gt; | 是 | 回调函数，监听文件上传进度变化。当文件上传进度发生变化时触发回调，返回上传进度信息。 |
 
 **错误码：**
 

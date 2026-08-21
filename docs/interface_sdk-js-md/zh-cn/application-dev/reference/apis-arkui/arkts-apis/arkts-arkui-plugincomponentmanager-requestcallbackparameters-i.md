@@ -22,7 +22,7 @@ componentTemplate: PluginComponentTemplate
 
 组件模板。
 
-**类型：** [PluginComponentTemplate](../../apis-default/arkts-apis/arkts-plugincomponent-plugincomponenttemplate-i.md)
+**类型：** [PluginComponentTemplate](arkts-arkui-plugincomponent-plugincomponenttemplate-i.md)
 
 **起始版本：** 8
 
@@ -40,7 +40,7 @@ data: KVObject
 
 组件数据，以键值对形式存储，键和值类型由业务定义。
 
-**类型：** [KVObject](../../apis-default/arkts-apis/arkts-plugincomponentmanager-kvobject-t.md)
+**类型：** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
 
 **起始版本：** 8
 
@@ -58,7 +58,7 @@ extraData: KVObject
 
 附加数据。该字段为可选字段，不提供时默认不包含在返回结果中。
 
-**类型：** [KVObject](../../apis-default/arkts-apis/arkts-plugincomponentmanager-kvobject-t.md)
+**类型：** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
 
 **起始版本：** 8
 

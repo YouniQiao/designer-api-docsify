@@ -42,5 +42,5 @@ import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@k
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |  |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md) |  |
 

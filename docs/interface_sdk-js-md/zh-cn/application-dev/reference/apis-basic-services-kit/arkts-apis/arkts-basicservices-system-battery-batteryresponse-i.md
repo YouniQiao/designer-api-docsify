@@ -32,7 +32,7 @@ charging: boolean
 
 **废弃版本：** 6
 
-**替代接口：** [chargingStatus](arkts-basicservices-batteryinfo-con.md#chargingstatus)
+**替代接口：** [chargingStatus](arkts-basicservices-batteryinfo-chargingstatus-f.md)
 
 <!--Device-BatteryResponse-charging: boolean--><!--Device-BatteryResponse-charging: boolean-End-->
 
@@ -54,7 +54,7 @@ level: number
 
 **废弃版本：** 6
 
-**替代接口：** [batterySOC](arkts-basicservices-batteryinfo-con.md#batterysoc)
+**替代接口：** [batterySOC](arkts-basicservices-batteryinfo-batterysoc-f.md)
 
 <!--Device-BatteryResponse-level: number--><!--Device-BatteryResponse-level: number-End-->
 

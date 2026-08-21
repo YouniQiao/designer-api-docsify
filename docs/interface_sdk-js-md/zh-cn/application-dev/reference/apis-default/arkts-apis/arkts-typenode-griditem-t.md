@@ -16,5 +16,5 @@ Define the FrameNode type for GridItem.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** GridItemFrameNode
+**属性类型：** [GridItemFrameNode](arkts-typenode-griditemframenode-c.md)
 

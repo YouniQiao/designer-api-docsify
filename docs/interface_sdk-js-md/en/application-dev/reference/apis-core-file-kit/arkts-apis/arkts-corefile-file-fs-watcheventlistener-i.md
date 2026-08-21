@@ -36,5 +36,5 @@ Specifies the callback function to be invoked.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [WatchEvent](arkts-corefile-file-fs-watchevent-i.md) | Yes | Event for the callback to invoke. |
+| event | [WatchEvent](../../apis-default/arkts-apis/arkts-file-fs-watchevent-i.md) | Yes | Event for the callback to invoke. |
 

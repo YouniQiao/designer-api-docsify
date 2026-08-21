@@ -1,8 +1,8 @@
 # TabSegmentButtonOptions
 
-页签类分段按钮选项。继承自[TabSegmentButtonConstructionOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-tabsegmentbuttonconstructionoptions-i.md)。
+页签类分段按钮选项。继承自[TabSegmentButtonConstructionOptions](arkts-arkui-arkui-advanced-segmentbutton-tabsegmentbuttonconstructionoptions-i.md)。
 
-**继承/实现关系：** TabSegmentButtonOptions extends [TabSegmentButtonConstructionOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-tabsegmentbuttonconstructionoptions-i.md)
+**继承/实现关系：** TabSegmentButtonOptions extends [TabSegmentButtonConstructionOptions](arkts-arkui-arkui-advanced-segmentbutton-tabsegmentbuttonconstructionoptions-i.md)
 
 **起始版本：** 11
 

@@ -2,9 +2,9 @@
 
 Creates a SegmentButtonOptions object of the tab type.
 
-Inherits from [CommonSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i.md).
+Inherits from [CommonSegmentButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i.md).
 
-**Inheritance/Implementation:** TabSegmentButtonConstructionOptions extends [CommonSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i.md)
+**Inheritance/Implementation:** TabSegmentButtonConstructionOptions extends [CommonSegmentButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i.md)
 
 **Since:** 11
 
@@ -27,7 +27,7 @@ buttons: ItemRestriction<SegmentButtonTextItem>
 
 Button information.
 
-**Type:** [ItemRestriction](arkts-arkui-itemrestriction-t.md)&lt;[SegmentButtonTextItem](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md)&gt;
+**Type:** [ItemRestriction](../../apis-default/arkts-apis/arkts-itemrestriction-t.md)&lt;[SegmentButtonTextItem](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md)&gt;
 
 **Since:** 11
 

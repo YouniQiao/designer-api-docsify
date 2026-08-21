@@ -1,8 +1,8 @@
 # ReadTextOptions
 
-可选项类型，支持readText接口使用，ReadTextOptions继承自[ReadOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-readoptions-i.md)。
+可选项类型，支持readText接口使用，ReadTextOptions继承自[ReadOptions](arkts-file-fs-readoptions-i.md)。
 
-**继承/实现关系：** ReadTextOptions extends [ReadOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-readoptions-i.md)
+**继承/实现关系：** ReadTextOptions extends [ReadOptions](arkts-file-fs-readoptions-i.md)
 
 **起始版本：** 23
 

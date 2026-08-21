@@ -17,7 +17,7 @@ Renders a custom component in the application background and outputs its snapsho
 
 > **NOTE：**
 > 
-> - Since API version 12, you can use the [getComponentSnapshot](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcomponentsnapshot) &gt; API in [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [ComponentSnapshot](../../apis-default/arkts-apis/arkts-arkui-uicontext-componentsnapshot-c.md) &gt; object associated with the current UI context.
+> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot) &gt; API in [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md) &gt; object associated with the current UI context.
 > 
 > - To account for the time spent in awaiting component building and rendering, the callback of offscreen snapshots &gt; has a delay of less than 500 ms.
 > 
@@ -131,7 +131,7 @@ Renders a custom component in the application background and outputs its snapsho
 
 > **NOTE：**
 > 
-> - Since API version 12, you can use the [getComponentSnapshot](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcomponentsnapshot) &gt; API in [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [ComponentSnapshot](../../apis-default/arkts-apis/arkts-arkui-uicontext-componentsnapshot-c.md) &gt; object associated with the current UI context.
+> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot) &gt; API in [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md) &gt; object associated with the current UI context.
 > 
 > - To account for the time spent in awaiting component building and rendering, the callback of offscreen snapshots &gt; has a delay of less than 500 ms.
 > 

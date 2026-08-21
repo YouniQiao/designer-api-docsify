@@ -53,7 +53,7 @@ The method to build component.
 
 下载按钮颜色选项。
 
-**类型：** [ProgressButtonV2Color](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-progressbuttonv2-progressbuttonv2color-c.md)
+**类型：** [ProgressButtonV2Color](arkts-arkui-advanced-progressbuttonv2-progressbuttonv2color-c.md)
 
 **起始版本：** 23
 
@@ -117,7 +117,7 @@ The method to build component.
 
 下载按钮的点击回调。
 
-**类型：** [ClickCallback](../../apis-arkui/arkts-apis/arkts-arkui-clickcallback-t.md)
+**类型：** [ClickCallback](arkts-clickcallback-t.md)
 
 **起始版本：** 23
 

@@ -12,7 +12,11 @@ import { connectedTag } from '@kit.ConnectivityKit';
 function uninit(): boolean
 ```
 
-UnInitializes Connected Tag.
+Uninitializes the active tag resources.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. Use &gt; [uninitialize](arkts-connectivity-connectedtag-uninitialize-f.md) instead.
 
 **Since:** 8
 
@@ -30,5 +34,5 @@ UnInitializes Connected Tag.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if uninit success, otherwise returns false. |
+| boolean | true**: The uninstallation is successful. <br>**false**: The uninstallation fails. |
 

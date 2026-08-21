@@ -66,7 +66,7 @@
 
 展开态布局信息。
 
-**类型：** [ExpandedRegionLayoutOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-foldsplitcontainer-expandedregionlayoutoptions-i.md)
+**类型：** [ExpandedRegionLayoutOptions](arkts-arkui-advanced-foldsplitcontainer-expandedregionlayoutoptions-i.md)
 
 **起始版本：** 23
 
@@ -108,7 +108,7 @@
 
 折叠态布局信息。
 
-**类型：** [FoldedRegionLayoutOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-foldsplitcontainer-foldedregionlayoutoptions-i.md)
+**类型：** [FoldedRegionLayoutOptions](arkts-arkui-advanced-foldsplitcontainer-foldedregionlayoutoptions-i.md)
 
 **起始版本：** 23
 
@@ -129,7 +129,7 @@
 
 悬停态布局信息。
 
-**类型：** [HoverModeRegionLayoutOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-foldsplitcontainer-hovermoderegionlayoutoptions-i.md)
+**类型：** [HoverModeRegionLayoutOptions](arkts-arkui-advanced-foldsplitcontainer-hovermoderegionlayoutoptions-i.md)
 
 **起始版本：** 23
 
@@ -149,7 +149,7 @@ onHoverStatusChange?: OnHoverStatusChangeHandler
 
 折叠屏进入或退出悬停模式时触发的回调函数。
 
-**类型：** [OnHoverStatusChangeHandler](../../apis-arkui/arkts-apis/arkts-arkui-onhoverstatuschangehandler-t.md)
+**类型：** [OnHoverStatusChangeHandler](arkts-onhoverstatuschangehandler-t.md)
 
 **起始版本：** 23
 

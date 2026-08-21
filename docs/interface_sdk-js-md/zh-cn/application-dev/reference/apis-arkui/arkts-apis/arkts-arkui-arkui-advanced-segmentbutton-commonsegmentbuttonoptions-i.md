@@ -109,7 +109,7 @@ borderRadiusMode?: BorderRadiusMode
 
 值为undefined时，按默认值处理。
 
-**类型：** [BorderRadiusMode](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-borderradiusmode-e.md)
+**类型：** [BorderRadiusMode](arkts-arkui-arkui-advanced-segmentbutton-borderradiusmode-e.md)
 
 **默认值：** BorderRadiusMode.Default
 
@@ -217,7 +217,7 @@ fontSize?: DimensionNoPercentage
 
 值为undefined时，按默认值处理。
 
-**类型：** [DimensionNoPercentage](../../apis-default/arkts-apis/arkts-dimensionnopercentage-t.md)
+**类型：** [DimensionNoPercentage](arkts-arkui-dimensionnopercentage-t.md)
 
 **默认值：** $r('sys.float.ohos_id_text_size_body2')
 
@@ -447,7 +447,7 @@ selectedFontSize?: DimensionNoPercentage
 
 值为undefined时，按默认值处理。
 
-**类型：** [DimensionNoPercentage](../../apis-default/arkts-apis/arkts-dimensionnopercentage-t.md)
+**类型：** [DimensionNoPercentage](arkts-arkui-dimensionnopercentage-t.md)
 
 **默认值：** $r('sys.float.ohos_id_text_size_body2')
 

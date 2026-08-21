@@ -21,7 +21,7 @@
 mode?: int
 ```
 
-创建文件可写流的[OpenMode](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileio-openmode-n.md)，必须指定如下选项中的一个，默认只写方式创建：
+创建文件可写流的[OpenMode](arkts-fileio-openmode-n.md)，必须指定如下选项中的一个，默认只写方式创建：
 
 - OpenMode.READ_ONLY(0o0)：只读。
 

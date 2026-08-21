@@ -43,7 +43,7 @@ The method to build component.
 
 FilterParams, Additional filter item parameter. The filter item name is displayed and can be deselected.
 
-**Type:** [FilterParams](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-filter-filterparams-c.md)
+**Type:** [FilterParams](arkts-arkui-advanced-filter-filterparams-i.md)
 
 **Since:** 23
 
@@ -85,7 +85,7 @@ Container in the user-defined filtering result display area.
 
 FilterType, Filter display style type.
 
-**Type:** [FilterType](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-filter-filtertype-e.md)
+**Type:** [FilterType](arkts-arkui-advanced-filter-filtertype-e.md)
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ FilterType, Filter display style type.
 
 Multi-dimensional filtering parameters.
 
-**Type:** Array&lt;[FilterParams](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-filter-filterparams-c.md)&gt;
+**Type:** Array&lt;[FilterParams](arkts-arkui-advanced-filter-filterparams-i.md)&gt;
 
 **Since:** 23
 

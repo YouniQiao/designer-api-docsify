@@ -243,7 +243,7 @@ Called when the requested image is ready.
 | [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md) requestId | Request ID, which is specified by [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md). |
 | [MediaLibrary_MediaQuality](capi-media-asset-base-capi-h.md#medialibrary_mediaquality) mediaQuality | Quality of the requested source, which is specified by [MediaLibrary_MediaQuality](capi-media-asset-base-capi-h.md#medialibrary_mediaquality). |
 | [MediaLibrary_MediaContentType](capi-media-asset-base-capi-h.md#medialibrary_mediacontenttype) type | Media content type of the requested source, which is specified by [MediaLibrary_MediaContentType](capi-media-asset-base-capi-h.md#medialibrary_mediacontenttype). |
-| OH_ImageSourceNative\* imageSourceNative | Pointer to the [OH_ImageSourceNative](../ImageKit/capi-image-nativemodule-oh-imagesourcenative.md) instance obtained when the requested image isready. |
+| [OH_ImageSourceNative](../ImageKit/capi-image-nativemodule-oh-imagesourcenative.md)\* imageSourceNative | Pointer to the [OH_ImageSourceNative](../ImageKit/capi-image-nativemodule-oh-imagesourcenative.md) instance obtained when the requested image isready. |
 
 ### OH_MediaLibrary_OnMovingPhotoDataPrepared()
 
@@ -287,7 +287,7 @@ This callback is called when the requested image source is ready. If an image bu
 | [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md) requestId | **MediaLibrary_RequestId** of the requested resource. |
 | [MediaLibrary_MediaQuality](capi-media-asset-base-capi-h.md#medialibrary_mediaquality) mediaQuality | **MediaLibrary_MediaQuality** of the requested resource. |
 | [MediaLibrary_MediaContentType](capi-media-asset-base-capi-h.md#medialibrary_mediacontenttype) type | **MediaLibrary_MediaContentType** of the requested resource. |
-| OH_ImageSourceNative\* imageSourceNative | Used to obtain the **OH_ImageSourceNative** information when preparing the image file.Otherwise, **imageSourceNative** is null. |
-| [OH_PictureNative](../ImageKit/capi-image-nativemodule-oh-picturenative.md)\* pictureNative | Used to obtain the **OH_PictureNative** information when preparing the image source. Otherwise,**pictureNative** is null. |
+| [OH_ImageSourceNative](../ImageKit/capi-image-nativemodule-oh-imagesourcenative.md)\* imageSourceNative | Used to obtain the **OH_ImageSourceNative** information when preparing the image file.Otherwise, **imageSourceNative** is null. |
+| [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md)\* pictureNative | Used to obtain the **OH_PictureNative** information when preparing the image source. Otherwise,**pictureNative** is null. |
 
 

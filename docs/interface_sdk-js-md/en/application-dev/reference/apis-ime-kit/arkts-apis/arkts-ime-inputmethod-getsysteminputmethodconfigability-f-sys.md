@@ -17,7 +17,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function getSystemInputMethodConfigAbility(userId?: int): ElementName
 ```
 
-Get the system input method config ability of a specified user.
+@brief Get the system input method config ability of a specified user.
 
 **Since:** 26.0.0
 

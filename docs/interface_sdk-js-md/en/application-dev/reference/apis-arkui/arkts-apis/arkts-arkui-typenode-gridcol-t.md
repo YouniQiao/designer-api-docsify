@@ -16,5 +16,5 @@ Represents a FrameNode of the **GridCol** type. This type of node does not allow
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** TypedFrameNode<GridColInterface, GridColAttribute>
+**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;GridColInterface, GridColAttribute&gt;
 

@@ -1,6 +1,12 @@
 # MifareUltralightTag
 
-Provides methods for accessing MifareUltralight tag.
+Provides APIs to access MIFARE Ultralight properties and perform I/O operations on a tag. This class inherits from **TagSession**.
+
+**TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).
+
+For details about how to obtain a **MifareUltralightTag** object, see [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).
+
+The following describes the unique APIs of **MifareUltralightTag**.
 
 **Inheritance/Implementation:** MifareUltralightTag extends TagSession
 
@@ -16,11 +22,11 @@ Provides methods for accessing MifareUltralight tag.
 getType(): tag.MifareUltralightType
 ```
 
-Gets the type of the MifareUltralight tag.
+Obtains the type of this MIFARE Ultralight tag.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MifareUltralightTag-getType(): tag.MifareUltralightType--><!--Device-MifareUltralightTag-getType(): tag.MifareUltralightType-End-->
 
@@ -30,7 +36,7 @@ Gets the type of the MifareUltralight tag.
 
 | Type | Description |
 | --- | --- |
-| tag.MifareUltralightType | Returns the type of MifareUltralight tag. |
+| tag.MifareUltralightType | Type of the MIFARE Ultralight tag obtained. |
 
 ## readMultiplePages
 
@@ -38,13 +44,13 @@ Gets the type of the MifareUltralight tag.
 readMultiplePages(pageIndex: int): Promise<int[]>
 ```
 
-Reads 4 pages, total is 16 bytes. Page size is 4 bytes.
+Reads four pages of data (16 bytes in total) from the tag. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MifareUltralightTag-readMultiplePages(pageIndex: int): Promise<int[]>--><!--Device-MifareUltralightTag-readMultiplePages(pageIndex: int): Promise<int[]>-End-->
 
@@ -54,13 +60,13 @@ Reads 4 pages, total is 16 bytes. Page size is 4 bytes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pageIndex | int | Yes | The index of page to read. |
+| pageIndex | int | Yes | Index of the first page to read. The page indexes start from **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int[]&gt; | Returns 4 pages data. |
+| Promise&lt;int[]&gt; | Promise used to return the data read. |
 
 **Error codes:**
 
@@ -69,7 +75,7 @@ Reads 4 pages, total is 16 bytes. Page size is 4 bytes.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -107,13 +113,13 @@ function nfcTechDemo() {
 readMultiplePages(pageIndex: int, callback: AsyncCallback<int[]>): void
 ```
 
-Reads 4 pages, total is 16 bytes. Page size is 4 bytes.
+Reads four pages of data (16 bytes in total) from the tag. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MifareUltralightTag-readMultiplePages(pageIndex: int, callback: AsyncCallback<int[]>): void--><!--Device-MifareUltralightTag-readMultiplePages(pageIndex: int, callback: AsyncCallback<int[]>): void-End-->
 
@@ -123,8 +129,8 @@ Reads 4 pages, total is 16 bytes. Page size is 4 bytes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pageIndex | int | Yes | The index of page to read. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | Yes | The callback. |
+| pageIndex | int | Yes | Index of the first page to read. The page indexes start from **0**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | Yes | Callback used to return the data (16 bytes in size) read. |
 
 **Error codes:**
 
@@ -133,7 +139,7 @@ Reads 4 pages, total is 16 bytes. Page size is 4 bytes.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -173,13 +179,13 @@ function nfcTechDemo() {
 writeSinglePage(pageIndex: int, data: int[]): Promise<void>
 ```
 
-Writes a page, total 4 bytes.
+Writes one page (4 bytes) of data to this tag. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MifareUltralightTag-writeSinglePage(pageIndex: int, data: int[]): Promise<void>--><!--Device-MifareUltralightTag-writeSinglePage(pageIndex: int, data: int[]): Promise<void>-End-->
 
@@ -189,14 +195,14 @@ Writes a page, total 4 bytes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pageIndex | int | Yes | The index of page to write. |
-| data | int[] | Yes | The page data to write. |
+| pageIndex | int | Yes | Index of the page to write. The page indexes start from **0**. |
+| data | int[] | Yes | 4-byte data to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The void |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -205,7 +211,7 @@ Writes a page, total 4 bytes.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -244,13 +250,13 @@ function nfcTechDemo() {
 writeSinglePage(pageIndex: int, data: int[], callback: AsyncCallback<void>): void
 ```
 
-Writes a page, total 4 bytes.
+Writes one page (4 bytes) of data to this tag. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MifareUltralightTag-writeSinglePage(pageIndex: int, data: int[], callback: AsyncCallback<void>): void--><!--Device-MifareUltralightTag-writeSinglePage(pageIndex: int, data: int[], callback: AsyncCallback<void>): void-End-->
 
@@ -260,9 +266,9 @@ Writes a page, total 4 bytes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pageIndex | int | Yes | The index of page to write. |
-| data | int[] | Yes | The page data to write. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback. |
+| pageIndex | int | Yes | Index of the page to write. The page indexes start from **0**. |
+| data | int[] | Yes | 4-byte data to write. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -271,7 +277,7 @@ Writes a page, total 4 bytes.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 

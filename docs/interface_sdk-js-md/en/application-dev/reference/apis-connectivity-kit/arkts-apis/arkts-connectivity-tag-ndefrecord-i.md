@@ -1,6 +1,6 @@
 # NdefRecord
 
-NDEF records definition, see NFCForum-TS-NDEF_1.0.
+Defines an NDEF record. For details, see *NFCForum-TS-NDEF_1.0*.
 
 **Since:** 23
 
@@ -20,13 +20,13 @@ import { tag } from '@kit.ConnectivityKit';
 id: int[]
 ```
 
-id of NdefRecord
+NDEF record ID, which consists of hexadecimal numbers ranging from **0x00** to **0xFF**.
 
 **Type:** int[]
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NdefRecord-id: int[]--><!--Device-NdefRecord-id: int[]-End-->
 
@@ -38,13 +38,13 @@ id of NdefRecord
 payload: int[]
 ```
 
-payload of NdefRecord
+NDEF payload, which consists of hexadecimal numbers ranging from **0x00** to **0xFF**.
 
 **Type:** int[]
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NdefRecord-payload: int[]--><!--Device-NdefRecord-payload: int[]-End-->
 
@@ -56,13 +56,13 @@ payload of NdefRecord
 rtdType: int[]
 ```
 
-RTD type of NdefRecord
+Record type definition (RTD) of the NDEF record. It consists of hexadecimal numbers ranging from **0x00** to **0xFF**.
 
 **Type:** int[]
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NdefRecord-rtdType: int[]--><!--Device-NdefRecord-rtdType: int[]-End-->
 
@@ -74,13 +74,13 @@ RTD type of NdefRecord
 tnf: int
 ```
 
-tnf of NdefRecord
+Type name field (TNF) of the NDEF record.
 
 **Type:** int
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NdefRecord-tnf: int--><!--Device-NdefRecord-tnf: int-End-->
 

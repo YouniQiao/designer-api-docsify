@@ -16,5 +16,5 @@ Define the FrameNode type for GridCol.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** GridColFrameNode
+**属性类型：** [GridColFrameNode](arkts-typenode-gridcolframenode-c.md)
 

@@ -107,7 +107,7 @@ The click event callback will be triggered when a option button of SegmentButton
 
 The options of SegmentButton.
 
-**Type:** [SegmentButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md)
+**Type:** [SegmentButtonOptions](arkts-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md)
 
 **Since:** 23
 

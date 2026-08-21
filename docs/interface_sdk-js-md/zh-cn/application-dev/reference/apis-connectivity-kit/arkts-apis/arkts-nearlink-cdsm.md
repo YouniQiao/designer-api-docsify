@@ -1,6 +1,6 @@
 # @ohos.nearlink.cdsm
 
-提供与星闪CDSM（合作设备集合管理）相关的方法。
+本模块提供了星闪合作设备集合管理（Coordinated Devices Set Management，CDSM）的能力，包括查询和订阅星闪合作设备集合信息的功能。
 
 **起始版本：** 26.0.0
 
@@ -28,13 +28,13 @@ import { cdsm } from '@kit.ConnectivityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [CdsmClient](arkts-connectivity-cdsm-cdsmclient-i.md) | 管理CDSM客户端实例。在调用任何CDSM客户端方法之前， 您必须使用[createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md)来创建CDSM客户端实例。 |
-| [CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md) | 描述合作设备集信息。 |
-| [CdsmMemberInfo](arkts-connectivity-cdsm-cdsmmemberinfo-i.md) | 描述合作设备集的成员信息。 |
+| [CdsmClient](arkts-connectivity-cdsm-cdsmclient-i.md) | CDSM客户端类，提供了获取远端设备的合作设备集合信息等操作方法。 |
+| [CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md) | 表示合作设备集合信息。 |
+| [CdsmMemberInfo](arkts-connectivity-cdsm-cdsmmemberinfo-i.md) | 表示合作设备集合的成员信息。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [CdsmConnectionState](arkts-connectivity-cdsm-cdsmconnectionstate-e.md) | 成员连接状态的枚举。 |
+| [CdsmConnectionState](arkts-connectivity-cdsm-cdsmconnectionstate-e.md) | 表示合作设备集合中成员设备的连接状态，为枚举值。 |
 

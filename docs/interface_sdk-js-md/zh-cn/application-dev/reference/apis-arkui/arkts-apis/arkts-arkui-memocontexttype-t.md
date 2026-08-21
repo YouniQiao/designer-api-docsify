@@ -16,5 +16,5 @@ Define StateContext alias.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** StateContext
+**属性类型：** [StateContext](arkts-arkui-state-statecontext-i.md)
 

@@ -14,5 +14,5 @@ type RowsData = Array<RowData>
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**属性类型：** Array<RowData>
+**属性类型：** Array&lt;[RowData](arkts-arkdata-relationalstore-rowdata-t.md)&gt;
 

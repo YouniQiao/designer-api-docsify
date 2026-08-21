@@ -1,6 +1,6 @@
 # ConnectionInterval（系统接口）
 
-The enum of connection interval values.
+连接间隔的枚举值。间隔越小，时延越低、吞吐越高但功耗越大；间隔越大功耗越低但时延越高。高速档适用于高吞吐低时延场景，低速档适用于对功耗敏感场景。
 
 **起始版本：** 26.0.0
 
@@ -16,7 +16,7 @@ The enum of connection interval values.
 HIGH_SPEED_INTERVAL_4_5 = 0
 ```
 
-Connection interval 4.5ms.
+表示连接间隔为4.5毫秒。
 
 **起始版本：** 26.0.0
 
@@ -34,7 +34,7 @@ Connection interval 4.5ms.
 HIGH_SPEED_INTERVAL_4_875 = 1
 ```
 
-Connection interval 4.875ms.
+表示连接间隔为4.875毫秒。
 
 **起始版本：** 26.0.0
 
@@ -52,7 +52,7 @@ Connection interval 4.875ms.
 MID_SPEED_INTERVAL_11_25 = 2
 ```
 
-Connection interval 11.25ms.
+表示连接间隔为11.25毫秒。
 
 **起始版本：** 26.0.0
 
@@ -70,7 +70,7 @@ Connection interval 11.25ms.
 MID_SPEED_INTERVAL_15 = 3
 ```
 
-Connection interval 15ms.
+表示连接间隔为15毫秒。
 
 **起始版本：** 26.0.0
 
@@ -88,7 +88,7 @@ Connection interval 15ms.
 MID_SPEED_INTERVAL_50 = 4
 ```
 
-Connection interval 50ms.
+表示连接间隔为50毫秒。
 
 **起始版本：** 26.0.0
 
@@ -106,7 +106,7 @@ Connection interval 50ms.
 LOW_SPEED_INTERVAL_100 = 5
 ```
 
-Connection interval 100ms.
+表示连接间隔为100毫秒。
 
 **起始版本：** 26.0.0
 
@@ -124,7 +124,7 @@ Connection interval 100ms.
 LOW_SPEED_INTERVAL_150 = 6
 ```
 
-Connection interval 150ms.
+表示连接间隔为150毫秒。
 
 **起始版本：** 26.0.0
 
@@ -142,7 +142,7 @@ Connection interval 150ms.
 LOW_SPEED_INTERVAL_200 = 7
 ```
 
-Connection interval 200ms.
+表示连接间隔为200毫秒。
 
 **起始版本：** 26.0.0
 
@@ -160,7 +160,7 @@ Connection interval 200ms.
 LOW_SPEED_INTERVAL_300 = 8
 ```
 
-Connection interval 300ms.
+表示连接间隔为300毫秒。
 
 **起始版本：** 26.0.0
 
@@ -178,7 +178,7 @@ Connection interval 300ms.
 LOW_SPEED_INTERVAL_500 = 9
 ```
 
-Connection interval 500ms.
+表示连接间隔为500毫秒。
 
 **起始版本：** 26.0.0
 

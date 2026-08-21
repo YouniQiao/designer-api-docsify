@@ -12,7 +12,7 @@ import { advertising } from '@kit.ConnectivityKit';
 function stopAdvertising(advertisingId: int): Promise<void>
 ```
 
-停止广播ID对应的广播。
+停止发送星闪广播。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -28,13 +28,13 @@ function stopAdvertising(advertisingId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| advertisingId | int | 是 | 表示广播ID <br>取值应为≥0的整数，取值为当前广播的广播ID。 |
+| advertisingId | int | 是 | 广播ID，开启广播时获取。取值范围[0, 255]。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

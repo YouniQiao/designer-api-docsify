@@ -30,7 +30,7 @@ function setIfaceConfig(iface: string, ic: InterfaceConfiguration, callback: Asy
 | --- | --- | --- | --- |
 | iface | string | 是 | 网络接口名。 |
 | ic | [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md) | 是 | 要设置的网络接口配置信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。成功无返回，失败返回对应错误码。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。成功无返回，失败返回对应错误码。 |
 
 **错误码：**
 

@@ -25,7 +25,7 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 
 默认无事件。
 
-**类型：** [PopoverDialogV2OnVisibleChange](arkts-arkui-popoverdialogv2onvisiblechange-t.md)
+**类型：** [PopoverDialogV2OnVisibleChange](../../apis-default/arkts-apis/arkts-popoverdialogv2onvisiblechange-t.md)
 
 **起始版本：** 18
 
@@ -47,7 +47,7 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 
 配置跟手弹出框的参数。
 
-**类型：** [PopoverDialogV2Options](arkts-arkui-arkui-advanced-dialogv2-popoverdialogv2options-i.md)
+**类型：** [PopoverDialogV2Options](../../apis-default/arkts-apis/arkts-arkui-advanced-dialogv2-popoverdialogv2options-i.md)
 
 **起始版本：** 18
 

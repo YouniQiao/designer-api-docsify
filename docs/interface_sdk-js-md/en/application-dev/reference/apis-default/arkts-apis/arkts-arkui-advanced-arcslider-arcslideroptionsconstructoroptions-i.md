@@ -41,7 +41,7 @@ layoutOptions?: ArcSliderLayoutOptions
 
 Configure parameters for component.
 
-**Type:** [ArcSliderLayoutOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md)
+**Type:** [ArcSliderLayoutOptions](arkts-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md)
 
 **Since:** 23
 
@@ -59,7 +59,7 @@ onChange?: ArcSliderChangeHandler
 
 Value changing triggers the callback.
 
-**Type:** [ArcSliderChangeHandler](../../apis-arkui/arkts-apis/arkts-arkui-arcsliderchangehandler-t.md)
+**Type:** [ArcSliderChangeHandler](arkts-arcsliderchangehandler-t.md)
 
 **Since:** 23
 
@@ -77,7 +77,7 @@ onEnlarge?: ArcSliderEnlargeHandler
 
 Enlarged type changing triggers the callback.
 
-**Type:** [ArcSliderEnlargeHandler](../../apis-arkui/arkts-apis/arkts-arkui-arcsliderenlargehandler-t.md)
+**Type:** [ArcSliderEnlargeHandler](arkts-arcsliderenlargehandler-t.md)
 
 **Since:** 23
 
@@ -95,7 +95,7 @@ onTouch?: ArcSliderTouchHandler
 
 Touching triggers the callback.
 
-**Type:** [ArcSliderTouchHandler](../../apis-arkui/arkts-apis/arkts-arkui-arcslidertouchhandler-t.md)
+**Type:** [ArcSliderTouchHandler](arkts-arcslidertouchhandler-t.md)
 
 **Since:** 23
 
@@ -113,7 +113,7 @@ styleOptions?: ArcSliderStyleOptions
 
 Configure parameters for component.
 
-**Type:** [ArcSliderStyleOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
+**Type:** [ArcSliderStyleOptions](arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
 
 **Since:** 23
 
@@ -131,7 +131,7 @@ valueOptions?: ArcSliderValueOptions
 
 Configure parameters for component.
 
-**Type:** [ArcSliderValueOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptions-c.md)
+**Type:** [ArcSliderValueOptions](arkts-arkui-advanced-arcslider-arcslidervalueoptions-c.md)
 
 **Since:** 23
 

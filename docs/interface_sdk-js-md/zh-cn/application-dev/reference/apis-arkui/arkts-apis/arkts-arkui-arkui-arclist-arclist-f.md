@@ -37,7 +37,7 @@ export declare function ArcList(
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
 
 
 ## ArcList
@@ -66,12 +66,12 @@ export declare function ArcList(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | CustomBuilderT&lt;[ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md)&gt; | 是 | The style to create an ArcList. |
+| style_ | CustomBuilderT&lt;[ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md)&gt; | 是 | The style to create an ArcList. |
 | content_ | CustomBuilder | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | ArcList的属性。 |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) | ArcList的属性。 |
 

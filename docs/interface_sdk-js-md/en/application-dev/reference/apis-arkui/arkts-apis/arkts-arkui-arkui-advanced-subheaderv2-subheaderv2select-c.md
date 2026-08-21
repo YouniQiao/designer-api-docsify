@@ -36,7 +36,7 @@ A constructor used to create a **SubHeaderV2SelectOptions** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SubHeaderV2SelectOptions](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2selectoptions-i.md) | Yes | Options of the drop-down list box. |
+| options | [SubHeaderV2SelectOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-subheaderv2-subheaderv2selectoptions-i.md) | Yes | Options of the drop-down list box. |
 
 ## defaultFocus
 
@@ -99,7 +99,7 @@ Set the id for the SubHeaderV2Select.
 
 Sets the onSelect of the SubHeaderV2SelectOptions.
 
-**Type:** [SubHeaderV2SelectOnSelect](arkts-arkui-subheaderv2selectonselect-t.md)
+**Type:** [SubHeaderV2SelectOnSelect](../../apis-default/arkts-apis/arkts-subheaderv2selectonselect-t.md)
 
 **Since:** 18
 

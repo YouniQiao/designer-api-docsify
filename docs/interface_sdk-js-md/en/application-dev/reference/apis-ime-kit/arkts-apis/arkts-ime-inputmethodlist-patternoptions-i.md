@@ -1,7 +1,5 @@
 # PatternOptions
 
-Define pattern options of keyboard.
-
 **Since:** 23
 
 <!--Device-unnamed-export interface PatternOptions--><!--Device-unnamed-export interface PatternOptions-End-->
@@ -20,7 +18,7 @@ import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
 action: (index: int) => void
 ```
 
-Mandatory. Callback invoked when the pattern option changes.
+@brief Mandatory. Callback invoked when the pattern option changes.
 
 **Type:** (index: int) =&gt; void
 
@@ -36,7 +34,7 @@ Mandatory. Callback invoked when the pattern option changes.
 defaultSelected?: int
 ```
 
-Optional. Default selected pattern.
+@brief Optional. Default selected pattern.
 
 **Type:** int
 
@@ -52,7 +50,7 @@ Optional. Default selected pattern.
 patterns: Array<Pattern>
 ```
 
-Mandatory. Resource of the pattern option.
+@brief Mandatory. Resource of the pattern option.
 
 **Type:** Array&lt;[Pattern](arkts-ime-inputmethodlist-pattern-i.md)&gt;
 

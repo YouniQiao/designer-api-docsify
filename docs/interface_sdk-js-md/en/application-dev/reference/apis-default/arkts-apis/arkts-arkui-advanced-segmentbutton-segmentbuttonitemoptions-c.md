@@ -37,7 +37,7 @@ The constructor used to create a SegmentButtonOptionsArray object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SegmentButtonItemOptionsConstructorOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptionsconstructoroptions-i.md) | Yes | item info. |
+| options | [SegmentButtonItemOptionsConstructorOptions](arkts-arkui-advanced-segmentbutton-segmentbuttonitemoptionsconstructoroptions-i.md) | Yes | item info. |
 
 ## accessibilityDescription
 

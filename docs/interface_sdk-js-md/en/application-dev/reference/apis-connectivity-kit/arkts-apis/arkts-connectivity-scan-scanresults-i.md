@@ -1,6 +1,6 @@
 # ScanResults
 
-Describes the contents of the scan results.
+Represents the scanning results.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { scan } from '@kit.ConnectivityKit';
 address: string
 ```
 
-Address of the remote device. The length is 17, and the value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+Address of the device discovered. The address format is **11:22:33:AA:BB:FF**.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ Address of the remote device. The length is 17, and the value consists of hexade
 data: ArrayBuffer
 ```
 
-The raw data.
+Advertising packet data.
 
 **Type:** ArrayBuffer
 
@@ -56,7 +56,7 @@ The raw data.
 deviceClass?: nearlinkConstant.DeviceClass
 ```
 
-Indicates the device class.
+Type of the device discovered. This field is not returned if the device advertising information does not carry the device type.
 
 **Type:** nearlinkConstant.DeviceClass
 
@@ -74,7 +74,7 @@ Indicates the device class.
 deviceName: string
 ```
 
-Device name of the remote device.
+Name of the device discovered. The value contains 0 to 30 characters.
 
 **Type:** string
 
@@ -92,7 +92,7 @@ Device name of the remote device.
 isConnectable: boolean
 ```
 
-Indicates whether the remote device is connectable.
+Whether the discovered device is connectable. The value **true** indicates that the discovered device is connectable, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -110,7 +110,7 @@ Indicates whether the remote device is connectable.
 rssi: int
 ```
 
-RSSI of the remote device. Unit: dBm. The value is an integer within [-128,127], and the value 127 indicates an invalid RSSI.
+RSSI of the device discovered. The value range is [–128, +127], in dBm. The value **127** is invalid. The value should be an integer.
 
 **Type:** int
 

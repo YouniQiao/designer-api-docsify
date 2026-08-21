@@ -16,15 +16,15 @@ function showAlertBeforeBackPage(options: EnableAlertOptions): void
 
 > **说明：**
 > 
-> - 从API version 9开始支持，从API version 18开始废弃，建议使用 &gt; [showAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#showalertbeforebackpage)替代。showAlertBeforeBackPage需先 &gt; 通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的 &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取 &gt; [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)实例，然后通过该实例进行调用。
+> - 从API version 9开始支持，从API version 18开始废弃，建议使用 &gt; [showAlertBeforeBackPage](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#showalertbeforebackpage)替代。showAlertBeforeBackPage需先 &gt; 通过[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取 &gt; [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)实例，然后通过该实例进行调用。
 > 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的 &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的 &gt; [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
+> - 从API version 10开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的 &gt; [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 9
 
 **废弃版本：** 18
 
-**替代接口：** [showAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#showalertbeforebackpage)
+**替代接口：** [showAlertBeforeBackPage](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#showalertbeforebackpage)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

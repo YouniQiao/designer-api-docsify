@@ -17,7 +17,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function getSetting(): InputMethodSetting
 ```
 
-Input method setting
+@brief Obtains an [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) instance.
 
 **Since:** 23
 
@@ -29,7 +29,7 @@ Input method setting
 
 | Type | Description |
 | --- | --- |
-| [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) | the object of InputMethodSetting. |
+| [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) | InputMethodSetting** instance. |
 
 **Error codes:**
 

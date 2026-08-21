@@ -18,5 +18,5 @@ Defines a watch event listener. When the monitored file or directory changes, a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [WatchEvent](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-watchevent-i.md) | Yes | Event for the callback to invoke. |
+| event | [WatchEvent](arkts-file-fs-watchevent-i.md) | Yes | Event for the callback to invoke. |
 

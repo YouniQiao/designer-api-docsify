@@ -15,7 +15,7 @@ Defines an explicit animation. When an animation is required, call this API expl
 
 > **NOTE：**
 > 
-> - Since API version 10, you can use &gt; [animateTo](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto) in &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to specify the UI execution context.
+> - Since API version 10, you can use &gt; [animateTo](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto) in &gt; [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) to specify the UI execution context.
 > 
 > - Avoid using **animateTo** in **aboutToAppear** or **aboutToDisappear**.
 > 

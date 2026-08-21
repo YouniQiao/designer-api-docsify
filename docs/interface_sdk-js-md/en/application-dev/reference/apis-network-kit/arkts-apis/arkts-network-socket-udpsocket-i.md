@@ -539,26 +539,7 @@ Unsubscribes from **listening** events or **close** events of the **UDPSocket** 
 
 **Examples**
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
-let callback1 = () => {
-  console.info("on listening, success");
-}
-udp.on('listening', callback1);
-// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-udp.off('listening', callback1);
-udp.off('listening');
-let callback2 = () => {
-  console.info("on close, success");
-}
-udp.on('close', callback2);
-// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-udp.off('close', callback2);
-udp.off('close');
-```
+See off_close
 
 ## off('message')
 
@@ -697,18 +678,7 @@ Subscribes to **listening** events or **close** events of the **UDPSocket** obje
 
 **Examples**
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
-udp.on('listening', () => {
-  console.info("on listening success");
-});
-udp.on('close', () => {
-  console.info("on close success");
-});
-```
+See on_close
 
 ## on('message')
 

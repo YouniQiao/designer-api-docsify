@@ -1,6 +1,6 @@
 # ServiceData
 
-服务数据。
+表示服务相关数据。
 
 **起始版本：** 26.0.0
 
@@ -20,7 +20,7 @@ import { advertising } from '@kit.ConnectivityKit';
 serviceData: ArrayBuffer
 ```
 
-服务数据。
+表示服务数据。
 
 **类型：** ArrayBuffer
 
@@ -38,7 +38,7 @@ serviceData: ArrayBuffer
 serviceUuid: string
 ```
 
-服务UUID。
+表示服务的UUID。UUID长度必须为36个字符，由32个十六进制数字和4个连字符（-）组成。
 
 **类型：** string
 

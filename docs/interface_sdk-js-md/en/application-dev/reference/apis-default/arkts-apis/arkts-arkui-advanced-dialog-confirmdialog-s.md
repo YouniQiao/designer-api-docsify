@@ -181,7 +181,7 @@ theme?: Theme | CustomTheme
 
 Custom Theme.
 
-**Type:** [Theme](../../apis-arkui/arkts-apis/arkts-arkui-arkui-theme-theme-i.md) \| [CustomTheme](../../apis-arkui/arkts-apis/arkts-arkui-arkui-theme-customtheme-i.md)
+**Type:** [Theme](arkts-arkui-theme-theme-i.md) \| [CustomTheme](arkts-arkui-theme-customtheme-i.md)
 
 **Since:** 23
 

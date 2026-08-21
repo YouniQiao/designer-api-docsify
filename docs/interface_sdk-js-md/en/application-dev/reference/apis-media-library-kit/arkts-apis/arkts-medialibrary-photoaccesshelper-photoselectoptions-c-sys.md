@@ -24,7 +24,7 @@ themeColor?: CustomColors
 
 Theme color
 
-**Type:** [CustomColors](../../apis-arkui/arkts-apis/arkts-arkui-customcolors-t.md)
+**Type:** [CustomColors](../../apis-default/arkts-apis/arkts-customcolors-t.md)
 
 **Since:** 26.0.0
 

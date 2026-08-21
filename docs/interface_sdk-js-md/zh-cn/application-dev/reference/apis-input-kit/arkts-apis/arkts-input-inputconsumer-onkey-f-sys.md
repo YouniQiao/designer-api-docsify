@@ -27,7 +27,7 @@ function onKey(keyOptions: KeyOptions, callback: Callback<KeyOptions>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyOptions | KeyOptions | 是 | 组合键选项，支持triggerType参数。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyOptions&gt; | 是 | 回调函数，返回组合按键数据 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyOptions&gt; | 是 | 回调函数，返回组合按键数据 |
 
 **错误码：**
 

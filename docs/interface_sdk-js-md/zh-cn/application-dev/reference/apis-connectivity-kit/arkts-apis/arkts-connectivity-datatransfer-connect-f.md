@@ -12,7 +12,7 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 function connect(params: ConnectionParams): Promise<void>
 ```
 
-连接服务端。如果连接成功，则可以向服务端发送数据。
+连接远端设备。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -28,13 +28,13 @@ function connect(params: ConnectionParams): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | [ConnectionParams](arkts-connectivity-datatransfer-connectionparams-i.md) | 是 | 连接参数 |
+| params | [ConnectionParams](arkts-connectivity-datatransfer-connectionparams-i.md) | 是 | 指明端口的连接参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

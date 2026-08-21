@@ -2,7 +2,7 @@
 
 类ScrollActionProposal。默认滚动方向为向前。
 
-**继承/实现关系：** ScrollActionProposal extends [TargetedGestureProposal](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md)
+**继承/实现关系：** ScrollActionProposal extends [TargetedGestureProposal](arkts-arkui-uicontext-targetedgestureproposal-c.md)
 
 **起始版本：** 26.0.0
 

@@ -36,6 +36,6 @@ function on(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<Gyrosc
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | SensorType.SENSOR_TYPE_ID_GYROSCOPE | 是 | 要订阅的陀螺仪传感器类型为SENSOR_TYPE_ID_GYROSCOPE。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;GyroscopeResponse&gt; | 是 | 注册陀螺仪传感器的回调函数，上报的数据类型为GyroscopeResponse。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GyroscopeResponse&gt; | 是 | 注册陀螺仪传感器的回调函数，上报的数据类型为GyroscopeResponse。 |
 | options | Options | 否 | 用于设置传感器上报频率，默认值为200000000ns（即200ms）。 |
 

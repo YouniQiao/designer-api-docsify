@@ -63,7 +63,7 @@ Create a TextEncoder object.
 
 | Type | Description |
 | --- | --- |
-| [TextEncoder](../../apis-arkts/arkts-apis/arkts-arkts-util-textencoder-c.md) |  |
+| [TextEncoder](arkts-util-textencoder-c.md) |  |
 
 ## encodeInto
 
@@ -120,5 +120,5 @@ Encode string, write the result to dest array.
 
 | Type | Description |
 | --- | --- |
-| [EncodeIntoUint8ArrayInfo](../../apis-arkts/arkts-apis/arkts-arkts-util-encodeintouint8arrayinfo-i.md) | Return the object, where read represents the number of characters that have been encoded, and written represents the number of bytes occupied by the encoded characters. |
+| [EncodeIntoUint8ArrayInfo](arkts-util-encodeintouint8arrayinfo-i.md) | Return the object, where read represents the number of characters that have been encoded, and written represents the number of bytes occupied by the encoded characters. |
 

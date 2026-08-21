@@ -77,7 +77,7 @@ Disables the 'faultOccur' callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | 否 | callback function with a `Faults` argument. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | 否 | callback function with a `Faults` argument. |
 
 ## offPause
 
@@ -157,7 +157,7 @@ Disables the response callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;HttpResponse&gt; | 否 | callback function with an `HttpResponse` argument. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | 否 | callback function with an `HttpResponse` argument. |
 
 ## offResume
 
@@ -197,7 +197,7 @@ Disables the wait callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | 否 | callback function with an `WaitingReason` argument. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | 否 | callback function with an `WaitingReason` argument. |
 
 ## off_completed
 
@@ -290,7 +290,7 @@ off(event: 'faultOccur', callback?: Callback<Faults>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'faultOccur' | 是 | 订阅的事件类型。<br>- 取值为'faultOccur'，表示任务失败。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | 否 | 需要取消订阅的回调函数。若无此参数，则默认取消订阅当前类型的所有回调函数。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | 否 | 需要取消订阅的回调函数。若无此参数，则默认取消订阅当前类型的所有回调函数。 |
 
 **错误码：**
 
@@ -419,7 +419,7 @@ off(event: 'response', callback?: Callback<HttpResponse>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'response' | 是 | 取消订阅的事件类型。<br>- 取值为'response'，表示任务响应。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;HttpResponse&gt; | 否 | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | 否 | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
 
 **错误码：**
 
@@ -481,7 +481,7 @@ off(event: 'wait', callback?: Callback<WaitingReason>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'wait' | 是 | 订阅的事件类型。<br>- 取值为'wait'，表示任务等待。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | 否 | 需要取消订阅的回调函数。若无此参数，则默认取消订阅当前类型的所有回调函数。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | 否 | 需要取消订阅的回调函数。若无此参数，则默认取消订阅当前类型的所有回调函数。 |
 
 **错误码：**
 
@@ -547,7 +547,7 @@ Enables the 'faultOccur' callback. This callback is triggered when the task fail
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | 是 | callback function with a `Faults` argument. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | 是 | callback function with a `Faults` argument. |
 
 ## onPause
 
@@ -627,7 +627,7 @@ Enables the response callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;HttpResponse&gt; | 是 | callback function with an `HttpResponse` argument. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | 是 | callback function with an `HttpResponse` argument. |
 
 ## onResume
 
@@ -667,7 +667,7 @@ Enables the wait callback. This callback is triggered when the task changes from
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | 是 | callback function with an `WaitingReason` argument. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | 是 | callback function with an `WaitingReason` argument. |
 
 ## on_completed
 
@@ -760,7 +760,7 @@ on(event: 'faultOccur', callback: Callback<Faults>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'faultOccur' | 是 | 订阅的事件类型。<br>- 取值为'faultOccur'，表示任务失败。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | 是 | 发生相关的事件时触发该回调方法，返回任务失败的原因。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | 是 | 发生相关的事件时触发该回调方法，返回任务失败的原因。 |
 
 **错误码：**
 
@@ -889,7 +889,7 @@ on(event: 'response', callback: Callback<HttpResponse>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'response' | 是 | 订阅的事件类型。<br>- 取值为'response'，表示任务响应，请求接收到响应时触发该事件。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;HttpResponse&gt; | 是 | 回调函数，发生相关的事件时触发该回调方法，返回任务响应头的数据结构。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | 是 | 回调函数，发生相关的事件时触发该回调方法，返回任务响应头的数据结构。 |
 
 **错误码：**
 
@@ -951,7 +951,7 @@ on(event: 'wait', callback: Callback<WaitingReason>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'wait' | 是 | 订阅的事件类型。<br>- 取值为'wait'，表示任务等待。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | 是 | 发生相关的事件时触发该回调方法，返回任务等待的原因。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | 是 | 发生相关的事件时触发该回调方法，返回任务等待的原因。 |
 
 **错误码：**
 
@@ -977,7 +977,7 @@ pause(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当暂停任务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当暂停任务成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1035,7 +1035,7 @@ resume(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当重新启动任务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当重新启动任务成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1140,7 +1140,7 @@ start(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当开启任务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开启任务成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1210,7 +1210,7 @@ stop(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当停止任务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止任务成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

@@ -36,7 +36,7 @@ constructor(options: SubHeaderV2TitleOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [SubHeaderV2TitleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-subheaderv2-subheaderv2titleoptions-i.md) | 是 | 标题内容信息。 |
+| options | [SubHeaderV2TitleOptions](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2titleoptions-i.md) | 是 | 标题内容信息。 |
 
 ## id
 

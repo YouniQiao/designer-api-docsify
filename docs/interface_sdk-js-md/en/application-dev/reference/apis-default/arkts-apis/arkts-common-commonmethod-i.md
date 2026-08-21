@@ -4063,7 +4063,7 @@ overlay(value: string | CustomBuilder | ComponentContent<Object> | undefined, op
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| [CustomBuilder](arkts-custombuilder-t.md) \| [ComponentContent](arkts-componentcontent-c.md)&lt;Object&gt; \| undefined | Yes |  |
+| value | string \| [CustomBuilder](arkts-custombuilder-t.md) \| [ComponentContent](../../apis-arkui/arkts-apis/arkts-arkui-componentcontent-c.md)&lt;Object&gt; \| undefined | Yes |  |
 | options | [OverlayOptions](arkts-common-overlayoptions-i.md) | No |  |
 
 **Return value:**

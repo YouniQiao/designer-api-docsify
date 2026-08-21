@@ -23,7 +23,7 @@ container?: OnContainerCallback
 
 set subcomponent binded on tree item.
 
-**Type:** [OnContainerCallback](../../apis-arkui/arkts-apis/arkts-arkui-oncontainercallback-t.md)
+**Type:** [OnContainerCallback](arkts-oncontainercallback-t.md)
 
 **Since:** 26.0.0
 

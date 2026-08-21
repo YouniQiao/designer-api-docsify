@@ -37,7 +37,7 @@ The constructor of ProgressButtonV2
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ProgressButtonV2ColorOptions](arkts-arkui-advanced-progressbuttonv2-progressbuttonv2coloroptions-i.md) | Yes | the options of the ProgressButtonV2 |
+| options | [ProgressButtonV2ColorOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-progressbuttonv2-progressbuttonv2coloroptions-i.md) | Yes | the options of the ProgressButtonV2 |
 
 ## backgroundColor
 

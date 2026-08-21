@@ -1,6 +1,6 @@
 # PropertyDescriptor
 
-Describes the SSAP descriptor for property.
+Defines the descriptor of a property.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { ssap } from '@kit.ConnectivityKit';
 descriptorType: PropertyDescriptorType
 ```
 
-The type of the propertyDescriptor instance.
+Descriptor type of a property.
 
 **Type:** [PropertyDescriptorType](arkts-connectivity-ssap-propertydescriptortype-e.md)
 
@@ -38,7 +38,7 @@ The type of the propertyDescriptor instance.
 isWriteable?: boolean
 ```
 
-Indicates whether the descriptor is writable. Default value: true.
+Whether a descriptor is writable. The value **true** indicates the descriptor is writable, and the value **false** indicates the opposite. The default value is **true**.
 
 **Type:** boolean
 
@@ -56,7 +56,7 @@ Indicates whether the descriptor is writable. Default value: true.
 propertyUuid: string
 ```
 
-The UUID of the [Property](arkts-connectivity-ssap-property-i.md) instance which the propertyDescriptor belongs to. The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. <br>NearLink standard UUIDs are not allowed.
+Property UUID, in the same format as **serviceUuid**.
 
 **Type:** string
 
@@ -74,7 +74,7 @@ The UUID of the [Property](arkts-connectivity-ssap-property-i.md) instance which
 serviceUuid: string
 ```
 
-The UUID of the [Service](arkts-connectivity-ssap-service-i.md) instance which the master property of descriptor belongs to. The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. <br>NearLink standard UUIDs are not allowed.
+NearLink service UUID, which is a string of 36 characters. The value consists of 32 hexadecimal digits and four hyphens (-), for example, **FFFFFFFF-1234-5678-ABCD-000000001234**, which indicates a 128-bit ID. The value cannot be set to a standard NearLink UUID.
 
 **Type:** string
 
@@ -92,7 +92,7 @@ The UUID of the [Service](arkts-connectivity-ssap-service-i.md) instance which t
 value: ArrayBuffer
 ```
 
-The value of the propertyDescriptor instance.
+Data value of a descriptor.
 
 **Type:** ArrayBuffer
 

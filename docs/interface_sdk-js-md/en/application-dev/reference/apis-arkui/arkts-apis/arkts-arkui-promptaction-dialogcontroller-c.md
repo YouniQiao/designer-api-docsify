@@ -2,7 +2,7 @@
 
 Implements a custom dialog controller that inherits from [CommonController](arkts-arkui-promptaction-commoncontroller-c.md).
 
-It can be used as a member variable of **UIContext** to display custom dialog boxes. For specific usage, see the examples for [openCustomDialogWithController](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#opencustomdialogwithcontroller) and [presentCustomDialog](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#presentcustomdialog).
+It can be used as a member variable of **UIContext** to display custom dialog boxes. For specific usage, see the examples for [openCustomDialogWithController](arkts-arkui-arkui-uicontext-promptaction-c.md#opencustomdialogwithcontroller) and [presentCustomDialog](arkts-arkui-arkui-uicontext-promptaction-c.md#presentcustomdialog).
 
 **Inheritance/Implementation:** DialogController extends [CommonController](arkts-arkui-promptaction-commoncontroller-c.md)
 

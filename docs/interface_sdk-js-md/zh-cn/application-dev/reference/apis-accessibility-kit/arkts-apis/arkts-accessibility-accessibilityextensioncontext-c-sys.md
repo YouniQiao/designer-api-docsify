@@ -1,12 +1,16 @@
 # AccessibilityExtensionContext
 
-AccessibilityExtensionContext是AccessibilityExtensionAbility上下文环境，继承自ExtensionContext。
+AccessibilityExtensionContext是AccessibilityExtensionAbility上下文环境，继承自ExtensionContext。辅助功能扩展上下文模块提供辅助功能扩展的相关能力，包括配置关注信息类型、查询节点信息、手势注入等。
 
-辅助功能扩展上下文模块提供辅助功能扩展的相关能力，包括配置关注信息类型、查询节点信息、手势注入等。
+## 使用说明
+
+使用AccessibilityExtensionContext功能前，通过AccessibilityExtensionAbility子类实例获取AccessibilityExtensionContext实例。  
+```ts
+import { AccessibilityExtensionAbility } from '
 
 **继承/实现关系：** AccessibilityExtensionContext extends ExtensionContext
 
-**起始版本：** 23
+**起始版本：** -1
 
 <!--Device-unnamed-declare class AccessibilityExtensionContext--><!--Device-unnamed-declare class AccessibilityExtensionContext-End-->
 
@@ -810,7 +814,7 @@ export default class AccessibilityManager {
 offPreDisconnect(callback?: Callback<void>): void
 ```
 
-Unregister accessibilityExtensionAbility disconnect callback.
+取消已经向无障碍服务注册的预关闭回调函数，无障碍服务关闭该扩展服务前不再执行该回调。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -826,7 +830,7 @@ Unregister accessibilityExtensionAbility disconnect callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | Indicates the callback function. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，取消指定无障碍扩展服务即将关闭时的回调。需与 [onPreDisconnect](#onpredisconnect)的callback一致。缺省时，表示注销所有已注册事件。 |
 
 **错误码：**
 
@@ -903,7 +907,7 @@ off(type: 'preDisconnect', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'preDisconnect' | 是 | 监听事件名，固定为‘preDisconnect’，即辅助功能扩展服务即将关闭的事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 回调函数，取消指定辅助功能扩展服务即将关闭时的回调。需与 [on('preDisconnect')](#onpredisconnect)的 callback一致。缺省时，表示注销所有已注册事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，取消指定辅助功能扩展服务即将关闭时的回调。需与 [on('preDisconnect')](#onpredisconnect)的 callback一致。缺省时，表示注销所有已注册事件。 |
 
 **错误码：**
 
@@ -960,7 +964,7 @@ export default class AccessibilityManager {
 onPreDisconnect(callback: Callback<void>): void
 ```
 
-Register accessibilityExtensionAbility disconnect callback.
+向无障碍服务注册回调函数，在无障碍服务关闭该无障碍扩展服务前会执行该回调函数。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -976,7 +980,7 @@ Register accessibilityExtensionAbility disconnect callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | Indicates the callback function. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，在无障碍扩展服务即将关闭时回调。 |
 
 **错误码：**
 
@@ -1055,7 +1059,7 @@ on(type: 'preDisconnect', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'preDisconnect' | 是 | 监听事件名，固定为‘preDisconnect’，即辅助功能扩展服务即将关闭的事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数，在辅助功能扩展服务即将关闭时回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，在辅助功能扩展服务即将关闭时回调。 |
 
 **错误码：**
 

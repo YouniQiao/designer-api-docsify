@@ -107,7 +107,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the BuilderNode |
+| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the BuilderNode |
 | options | [RenderOptions](arkts-buildernode-renderoptions-i.md) | No | Render options of the Builder Node |
 
 ## dispose

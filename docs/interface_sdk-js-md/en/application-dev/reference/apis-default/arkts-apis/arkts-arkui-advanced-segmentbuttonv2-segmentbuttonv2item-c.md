@@ -37,7 +37,7 @@ The constructor of SegmentedButtonItem
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SegmentButtonV2ItemOptions](arkts-arkui-advanced-segmentbuttonv2-segmentbuttonv2itemoptions-i.md) | Yes | the options of the segmented button item |
+| options | [SegmentButtonV2ItemOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2itemoptions-i.md) | Yes | the options of the segmented button item |
 
 ## accessibilityDescription
 

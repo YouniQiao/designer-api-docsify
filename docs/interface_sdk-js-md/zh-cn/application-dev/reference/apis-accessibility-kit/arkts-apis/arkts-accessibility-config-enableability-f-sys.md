@@ -96,7 +96,7 @@ function enableAbility(
 | --- | --- | --- | --- |
 | name | string | 是 | 辅助扩展应用的名称，格式为：'bundleName/abilityName'。 |
 | capability | Array&lt;accessibility.Capability&gt; | 是 | 辅助扩展应用的能力属性。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当启用辅助扩展成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启用辅助扩展成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

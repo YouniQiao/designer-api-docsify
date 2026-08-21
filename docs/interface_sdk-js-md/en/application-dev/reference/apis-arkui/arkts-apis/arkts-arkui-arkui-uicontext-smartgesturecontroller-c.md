@@ -4,7 +4,7 @@ Provides the capability to enable smart gestures, monitor them, control the sele
 
 > **NOTE：**
 > 
-> The following APIs must be called using a **SmartGestureController** instance obtained via &gt; [getSmartGestureController()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getsmartgesturecontroller) in **UIContext**.
+> The following APIs must be called using a **SmartGestureController** instance obtained via &gt; [getSmartGestureController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getsmartgesturecontroller) in **UIContext**.
 
 **Since:** 26.0.0
 
@@ -101,11 +101,11 @@ Registers a smart gesture monitoring callback. Before the system processes the c
 > 
 > - Users can customize the behavior of the current smart gesture through this callback.
 > 
-> - Multiple monitoring callbacks can be registered. They are triggered in the reverse order of registration (the &gt; last registered one is executed first). When a monitoring callback consumes the smart gesture event, that is, &gt; when the return value [GestureHandlingResolution](../../apis-default/arkts-apis/arkts-arkui-uicontext-gesturehandlingresolution-c.md).isConsumed is **true**, &gt; subsequent monitoring callbacks will not be executed.
+> - Multiple monitoring callbacks can be registered. They are triggered in the reverse order of registration (the &gt; last registered one is executed first). When a monitoring callback consumes the smart gesture event, that is, &gt; when the return value [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md).isConsumed is **true**, &gt; subsequent monitoring callbacks will not be executed.
 > 
 > - If the same callback is registered repeatedly, only the first registration takes effect; duplicate &gt; registrations are ignored.
 > 
-> - The return value of the callback must be a valid [GestureHandlingResolution](../../apis-default/arkts-apis/arkts-arkui-uicontext-gesturehandlingresolution-c.md) &gt; instance; otherwise, the modification will not take effect.
+> - The return value of the callback must be a valid [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md) &gt; instance; otherwise, the modification will not take effect.
 
 **Since:** 26.0.0
 
@@ -121,7 +121,7 @@ Registers a smart gesture monitoring callback. Before the system processes the c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitorCallback | [Callback](../../apis-default/arkts-apis/arkts-callback-t.md)&lt;[BaseGestureHandlingProposal](../../apis-default/arkts-apis/arkts-arkui-uicontext-basegesturehandlingproposal-c.md), [GestureHandlingResolution](../../apis-default/arkts-apis/arkts-arkui-uicontext-gesturehandlingresolution-c.md)&gt; | Yes | Smart gesture monitoring callback. The callback parameter is the default action handling provided by the system, and the return value is used to declare whether to consume the current smart gesture and whether to replace the default action handling. |
+| monitorCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md), [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)&gt; | Yes | Smart gesture monitoring callback. The callback parameter is the default action handling provided by the system, and the return value is used to declare whether to consume the current smart gesture and whether to replace the default action handling. |
 
 ## requestSelected
 
@@ -175,5 +175,5 @@ Unregisters a smart gesture monitoring callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitorCallback | [Callback](../../apis-default/arkts-apis/arkts-callback-t.md)&lt;[BaseGestureHandlingProposal](../../apis-default/arkts-apis/arkts-arkui-uicontext-basegesturehandlingproposal-c.md), [GestureHandlingResolution](../../apis-default/arkts-apis/arkts-arkui-uicontext-gesturehandlingresolution-c.md)&gt; | Yes | The smart gesture monitoring callback to unregister. |
+| monitorCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md), [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)&gt; | Yes | The smart gesture monitoring callback to unregister. |
 

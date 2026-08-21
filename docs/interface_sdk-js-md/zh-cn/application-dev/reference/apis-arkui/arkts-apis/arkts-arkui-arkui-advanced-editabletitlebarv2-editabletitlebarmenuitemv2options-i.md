@@ -100,7 +100,7 @@ action?: OnActionCallback
 
 点击菜单项的回调函数。
 
-**类型：** [OnActionCallback](../../apis-default/arkts-apis/arkts-onactioncallback-t.md)
+**类型：** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
 
 **起始版本：** 26.0.0
 

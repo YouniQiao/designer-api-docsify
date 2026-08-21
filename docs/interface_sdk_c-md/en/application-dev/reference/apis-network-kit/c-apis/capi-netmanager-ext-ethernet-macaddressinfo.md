@@ -6,7 +6,7 @@ typedef struct Ethernet_MacAddressInfo {...} Ethernet_MacAddressInfo
 
 ## Overview
 
-Defines the ethernet iface mac address info.
+Defines the MAC address of the Ethernet NIC.
 
 **Since**: 26.0.0
 

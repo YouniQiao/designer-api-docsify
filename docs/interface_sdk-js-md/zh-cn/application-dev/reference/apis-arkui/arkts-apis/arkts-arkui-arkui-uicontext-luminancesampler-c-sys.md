@@ -45,7 +45,7 @@ offBackgroundLuminanceChange(samplingCallback?: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| samplingCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | 否 | 监听回调。 |
+| samplingCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 监听回调。 |
 
 ## onBackgroundLuminanceChange
 
@@ -71,7 +71,7 @@ onBackgroundLuminanceChange(samplingCallback: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| samplingCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | 是 | 监听回调。触发同时返回当前背景亮度。<br/>**说明：**监听回调里不能调用 offBackgroundLuminanceChange。 |
+| samplingCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 监听回调。触发同时返回当前背景亮度。<br/>**说明：**监听回调里不能调用 offBackgroundLuminanceChange。 |
 
 ## setBackgroundLuminanceSamplingConfigs
 

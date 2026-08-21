@@ -33,7 +33,7 @@ function unsubscribe(capability: OnscreenAwarenessCap, callback?: Callback<Onscr
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | capability | [OnscreenAwarenessCap](arkts-multimodalawareness-onscreen-onscreenawarenesscap-i-sys.md) | 是 | 屏上感知能力列表。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OnscreenAwarenessInfo](arkts-multimodalawareness-onscreen-onscreenawarenessinfo-i-sys.md)[]&gt; | 否 | 需取消的回调函数。省略则移除该感知能力的所有回调。返回的感知信息列表 OnscreenAwarenessInfo [] 最多同时返回2个感知信息项。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OnscreenAwarenessInfo](arkts-multimodalawareness-onscreen-onscreenawarenessinfo-i-sys.md)[]&gt; | 否 | 需取消的回调函数。省略则移除该感知能力的所有回调。返回的感知信息列表 OnscreenAwarenessInfo [] 最多同时返回2个感知信息项。 |
 
 **错误码：**
 

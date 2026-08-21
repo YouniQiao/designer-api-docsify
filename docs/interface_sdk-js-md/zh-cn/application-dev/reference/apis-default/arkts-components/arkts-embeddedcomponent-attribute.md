@@ -94,7 +94,7 @@ onError(callback: ErrorCallback<BusinessError> | undefined ): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md)&lt;[BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md)&gt; \| undefined | 是 | 回调函数，入参用于接收异常信息，类型为BusinessError，可通过参数中的code、 name和message获取错误信息并做处理。<br/>ArkTS-Sta模式下，可传入undefined，表示取消回调函数。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md)&lt;[BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&gt; \| undefined | 是 | 回调函数，入参用于接收异常信息，类型为BusinessError，可通过参数中的code、 name和message获取错误信息并做处理。<br/>ArkTS-Sta模式下，可传入undefined，表示取消回调函数。 |
 
 **返回值：**
 
@@ -124,7 +124,7 @@ onTerminated(callback: Callback<TerminationInfo> | undefined ): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TerminationInfo&gt; \| undefined | 是 | 回调函数，入参用于接收EmbeddedUIExtensionAbility的返回结果， 类型为TerminationInfo。取值为undefined时，不使用回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TerminationInfo&gt; \| undefined | 是 | 回调函数，入参用于接收EmbeddedUIExtensionAbility的返回结果， 类型为TerminationInfo。取值为undefined时，不使用回调函数。 |
 
 **返回值：**
 

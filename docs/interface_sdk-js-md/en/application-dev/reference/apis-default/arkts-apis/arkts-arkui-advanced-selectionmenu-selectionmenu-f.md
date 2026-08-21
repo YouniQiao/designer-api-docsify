@@ -28,5 +28,5 @@ Declare Builder SelectionMenu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SelectionMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-selectionmenu-selectionmenuoptions-i.md) | Yes | Selection menu options. |
+| options | [SelectionMenuOptions](arkts-arkui-advanced-selectionmenu-selectionmenuoptions-i.md) | Yes | Selection menu options. |
 

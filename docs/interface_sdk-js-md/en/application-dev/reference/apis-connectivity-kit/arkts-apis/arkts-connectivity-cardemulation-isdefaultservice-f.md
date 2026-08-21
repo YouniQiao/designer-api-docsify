@@ -12,13 +12,13 @@ import { cardEmulation } from '@kit.ConnectivityKit';
 function isDefaultService(elementName: ElementName, type: CardType): boolean
 ```
 
-Checks whether a service is default for given type.
+Checks whether an application is the default application of the specified service type.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-cardEmulation-function isDefaultService(elementName: ElementName, type: CardType): boolean--><!--Device-cardEmulation-function isDefaultService(elementName: ElementName, type: CardType): boolean-End-->
 
@@ -28,14 +28,14 @@ Checks whether a service is default for given type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | Yes | The element name of the service ability |
-| type | CardType | Yes | The type to query, payment or other. |
+| elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | Yes | Information about the page, on which the application declares the NFC card emulation capability. It must contain at least **bundleName** and **abilityName** and cannot be empty. |
+| type | CardType | Yes | Card emulation service type. Currently, only the default payment application can be queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the service is default, otherwise false. |
+| boolean | Returns **true** if the application is the default payment application; returns **false** otherwise. |
 
 **Error codes:**
 

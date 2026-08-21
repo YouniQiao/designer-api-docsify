@@ -14,11 +14,11 @@ Provides methods for Message of NDEF.
 getNdefRecords(): tag.NdefRecord[]
 ```
 
-Obtains all records of an NDEF message.
+Obtains all NDEF records.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NdefMessage-getNdefRecords(): tag.NdefRecord[]--><!--Device-NdefMessage-getNdefRecords(): tag.NdefRecord[]-End-->
 
@@ -28,5 +28,5 @@ Obtains all records of an NDEF message.
 
 | Type | Description |
 | --- | --- |
-| tag.NdefRecord[] | Records the list of NDEF records. |
+| tag.NdefRecord[] | List of NDEF records obtained. For details, see *NFCForum-TS-NDEF_1.0*. |
 

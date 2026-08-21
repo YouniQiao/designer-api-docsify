@@ -4,7 +4,7 @@
 export type SizeChangeCallback = (size: window.Size, keyboardArea?: KeyboardArea) => void
 ```
 
-Callback triggered when the size of the input method panel changes.
+@brief Callback triggered when the size of the input method panel changes.
 
 **Since:** 23
 

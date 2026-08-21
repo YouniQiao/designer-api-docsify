@@ -12,7 +12,7 @@ import { tag } from '@kit.ConnectivityKit';
 function makeApplicationRecord(bundleName: string): NdefRecord
 ```
 
-Creates an NDEF Record with OpenHarmony application bundle name.
+Creates an NDEF record based on the specified application bundle name.
 
 **Since:** 23
 
@@ -26,13 +26,13 @@ Creates an NDEF Record with OpenHarmony application bundle name.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | The bundle name of application to make. |
+| bundleName | string | Yes | Application bundle name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NdefRecord](arkts-connectivity-tag-ndefrecord-i.md) | The instance of NdefRecord. |
+| [NdefRecord](arkts-connectivity-tag-ndefrecord-i.md) | NDEF record created. For details, see *NFCForum-TS-NDEF_1.0*. |
 
 **Error codes:**
 

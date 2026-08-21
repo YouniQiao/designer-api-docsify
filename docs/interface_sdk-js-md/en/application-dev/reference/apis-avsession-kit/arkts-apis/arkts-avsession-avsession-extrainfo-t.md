@@ -12,5 +12,5 @@ The extra info object.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
-**Property type:** Record<string, Object>
+**Property type:** Record&lt;string, Object&gt;
 

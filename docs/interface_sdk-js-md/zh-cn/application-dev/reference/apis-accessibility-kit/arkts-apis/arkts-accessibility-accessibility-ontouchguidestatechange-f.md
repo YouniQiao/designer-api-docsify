@@ -16,7 +16,7 @@ import { GesturePoint } from '@kit.AccessibilityKit';
 function onTouchGuideStateChange(callback: Callback<boolean>): void
 ```
 
-Register the observe of the touchGuide state changed.
+监听触摸浏览功能启用状态变化事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -32,7 +32,7 @@ Register the observe of the touchGuide state changed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 | Asynchronous callback interface. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数，在触摸浏览启用状态变化时将状态通过此函数进行通知。 |
 
 **示例**
 

@@ -4,11 +4,11 @@
 export type NdefFormatableTag = _NdefFormatableTag
 ```
 
-Exports type NdefFormatableTag.
+Obtains a **NdefFormatableTag** object.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-tag-export type NdefFormatableTag = _NdefFormatableTag--><!--Device-tag-export type NdefFormatableTag = _NdefFormatableTag-End-->
 

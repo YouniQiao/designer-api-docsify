@@ -2,7 +2,7 @@
 
 ChipV2 icon common option
 
-**Inheritance/Implementation:** ChipV2ImageIcon extends [ChipV2Icon](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2icon-c.md)
+**Inheritance/Implementation:** ChipV2ImageIcon extends [ChipV2Icon](arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md)
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ The constructor of ChipV2ImageIcon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ChipV2ImageIconConfig](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2imageiconconfig-i.md) | Yes | config of icon common Mandatory parameter. |
+| config | [ChipV2ImageIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2imageiconconfig-i.md) | Yes | config of icon common Mandatory parameter. |
 
 ## activatedFillColor
 

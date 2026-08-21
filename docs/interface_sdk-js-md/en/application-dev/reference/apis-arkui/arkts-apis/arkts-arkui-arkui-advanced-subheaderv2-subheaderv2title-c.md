@@ -36,7 +36,7 @@ A constructor used to create a **SubHeaderV2Title** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SubHeaderV2TitleOptions](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2titleoptions-i.md) | Yes | Options for initializing the title. |
+| options | [SubHeaderV2TitleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-subheaderv2-subheaderv2titleoptions-i.md) | Yes | Options for initializing the title. |
 
 ## id
 

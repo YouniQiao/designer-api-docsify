@@ -12,7 +12,7 @@ import { manager } from '@kit.ConnectivityKit';
 function setConnectionMode(mode: ConnectionMode, duration: int): Promise<void>
 ```
 
-Sets the NearLink connection mode for a device.
+Sets the connection mode. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -30,14 +30,14 @@ Sets the NearLink connection mode for a device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [ConnectionMode](arkts-connectivity-manager-connectionmode-e-sys.md) | Yes | Indicates the NearLink connection mode to be set. |
-| duration | int | Yes | Indicates the duration in seconds for the setting mode. A value of 0 means unlimited. <br>Unit: Seconds, The value must be an integer greater than or equal to 0. |
+| mode | [ConnectionMode](arkts-connectivity-manager-connectionmode-e-sys.md) | Yes | Connection mode to be set. |
+| duration | int | Yes | Duration of the mode to set, in seconds. The value **0** indicates no time limit. <br>The value should be an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

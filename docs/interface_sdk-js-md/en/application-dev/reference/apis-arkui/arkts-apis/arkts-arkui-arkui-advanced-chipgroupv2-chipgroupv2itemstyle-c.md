@@ -36,7 +36,7 @@ The constructor of ChipGroupV2ItemStyle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ChipGroupV2ItemStyleConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyleconfig-i.md) | Yes | config of ChipGroupV2ItemStyle |
+| config | [ChipGroupV2ItemStyleConfig](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2itemstyleconfig-i.md) | Yes | config of ChipGroupV2ItemStyle |
 
 ## backgroundColor
 
@@ -173,7 +173,7 @@ Selected Text font color.
 
 ChipV2 size.
 
-**Type:** [ChipV2Size](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2size-e.md) \| SizeT&lt;LengthMetrics&gt;
+**Type:** [ChipV2Size](arkts-arkui-arkui-advanced-chipv2-chipv2size-e.md) \| SizeT&lt;LengthMetrics&gt;
 
 **Since:** 26.0.0
 

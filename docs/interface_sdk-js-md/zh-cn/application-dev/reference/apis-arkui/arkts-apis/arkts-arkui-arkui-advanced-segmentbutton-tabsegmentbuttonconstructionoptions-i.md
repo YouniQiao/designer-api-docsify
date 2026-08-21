@@ -2,9 +2,9 @@
 
 构建页签类的SegmentButtonOptions对象。
 
-继承[CommonSegmentButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i.md)。
+继承[CommonSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i.md)。
 
-**继承/实现关系：** TabSegmentButtonConstructionOptions extends [CommonSegmentButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i.md)
+**继承/实现关系：** TabSegmentButtonConstructionOptions extends [CommonSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i.md)
 
 **起始版本：** 11
 
@@ -27,7 +27,7 @@ buttons: ItemRestriction<SegmentButtonTextItem>
 
 按钮信息。
 
-**类型：** [ItemRestriction](../../apis-default/arkts-apis/arkts-itemrestriction-t.md)&lt;[SegmentButtonTextItem](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md)&gt;
+**类型：** [ItemRestriction](arkts-arkui-itemrestriction-t.md)&lt;[SegmentButtonTextItem](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md)&gt;
 
 **起始版本：** 11
 

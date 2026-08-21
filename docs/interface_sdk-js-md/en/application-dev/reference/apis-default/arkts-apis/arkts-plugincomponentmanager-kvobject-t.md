@@ -16,5 +16,5 @@ Defines KVObject.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** Record<string, int | long | double | string | boolean | Array<KVObject> | KVObject>
+**Property type:** Record&lt;string, int | long | double | string | boolean | Array&lt;[KVObject](arkts-plugincomponentmanager-kvobject-t.md)&gt; | [KVObject](arkts-plugincomponentmanager-kvobject-t.md)&gt;
 

@@ -29,7 +29,7 @@ function setImage(source: string | image.PixelMap, wallpaperType: WallpaperType,
 | --- | --- | --- | --- |
 | source | string \| image.PixelMap | 是 | JPEG或PNG文件的Uri路径，或者PNG格式文件的位图。 |
 | wallpaperType | [WallpaperType](arkts-wallpaper-wallpapertype-e.md) | 是 | 壁纸类型。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，设置壁纸成功，error为undefined，否则返回error信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，设置壁纸成功，error为undefined，否则返回error信息。 |
 
 **错误码：**
 

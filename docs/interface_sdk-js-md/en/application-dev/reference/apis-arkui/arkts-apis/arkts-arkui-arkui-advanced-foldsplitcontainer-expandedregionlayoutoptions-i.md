@@ -24,7 +24,7 @@ Position information of the extra region. This setting takes effect only when **
 
 Default value: **ExtraRegionPosition.top**.
 
-**Type:** [ExtraRegionPosition](../../apis-default/arkts-apis/arkts-arkui-advanced-foldsplitcontainer-extraregionposition-e.md)
+**Type:** [ExtraRegionPosition](arkts-arkui-arkui-advanced-foldsplitcontainer-extraregionposition-e.md)
 
 **Since:** 12
 

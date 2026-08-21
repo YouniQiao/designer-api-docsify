@@ -28,13 +28,13 @@ function createCdsmClient(address: string): CdsmClient
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| address | string | 是 | CDSM服务端地址。 <br>长度必须为17。取值约束：由十六进制数字和冒号组成，例如：11:22:33:AA:BB:FF。 |
+| address | string | 是 | 已配对连接的合作设备集合的成员设备地址。地址格式参考：11:22:33:AA:BB:FF，需为6段、每段2位十六进制字符，各段以冒号分隔。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [CdsmClient](arkts-connectivity-cdsm-cdsmclient-i.md) | 返回CDSM客户端实例。 |
+| [CdsmClient](arkts-connectivity-cdsm-cdsmclient-i.md) | 用于查询和订阅远端设备合作设备集合信息的CDSM客户端实例。 |
 
 **错误码：**
 

@@ -33,7 +33,7 @@ function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCall
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rotationVector | Array&lt;number&gt; | 是 | 表示旋转矢量。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;number&gt;&gt; | 是 | 异步返回旋转矩阵。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | 是 | 异步返回旋转矩阵。 |
 
 **示例**
 
@@ -134,7 +134,7 @@ function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>
 | --- | --- | --- | --- |
 | gravity | Array&lt;number&gt; | 是 | 表示重力向量。 |
 | geomagnetic | Array&lt;number&gt; | 是 | 表示地磁矢量。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RotationMatrixResponse](arkts-sensorservice-sensor-rotationmatrixresponse-i.md)&gt; | 是 | 异步返回旋转矩阵。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RotationMatrixResponse](arkts-sensorservice-sensor-rotationmatrixresponse-i.md)&gt; | 是 | 异步返回旋转矩阵。 |
 
 **示例**
 

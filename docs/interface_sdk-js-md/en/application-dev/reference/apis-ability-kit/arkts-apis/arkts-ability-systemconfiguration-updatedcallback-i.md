@@ -6,7 +6,7 @@ System configuration updated callback.
 
 <!--Device-systemConfiguration-interface UpdatedCallback--><!--Device-systemConfiguration-interface UpdatedCallback-End-->
 
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 

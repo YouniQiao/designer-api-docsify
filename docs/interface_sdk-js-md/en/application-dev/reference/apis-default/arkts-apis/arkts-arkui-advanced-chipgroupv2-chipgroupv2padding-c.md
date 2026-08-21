@@ -37,7 +37,7 @@ The constructor of ChipGroupV2Padding
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ChipGroupV2PaddingConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2paddingconfig-i.md) | Yes | config of chip group padding |
+| config | [ChipGroupV2PaddingConfig](arkts-arkui-advanced-chipgroupv2-chipgroupv2paddingconfig-i.md) | Yes | config of chip group padding |
 
 ## bottom
 

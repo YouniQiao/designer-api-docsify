@@ -72,7 +72,7 @@ iconStyle?: IconTypeV2
 
 默认不设置或设置为undefined时，不显示左侧图标资源。
 
-**类型：** [IconTypeV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-icontypev2-e.md)
+**类型：** [IconTypeV2](arkts-arkui-arkui-advanced-composelistitemv2-icontypev2-e.md)
 
 **起始版本：** 26.0.0
 

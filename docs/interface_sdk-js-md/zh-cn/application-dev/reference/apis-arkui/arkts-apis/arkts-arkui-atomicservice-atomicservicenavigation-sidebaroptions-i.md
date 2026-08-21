@@ -22,7 +22,7 @@ onChange?: Callback<boolean>
 
 侧边栏显示隐藏回调。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;
 
 **起始版本：** 18
 

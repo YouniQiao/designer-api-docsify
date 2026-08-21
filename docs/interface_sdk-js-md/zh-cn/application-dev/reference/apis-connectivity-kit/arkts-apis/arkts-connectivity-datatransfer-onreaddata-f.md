@@ -12,9 +12,9 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 function onReadData(callback: Callback<DataParams>): void
 ```
 
-订阅从端口读取数据事件。
+订阅端口通道数据接收事件。使用callback异步回调。
 
-只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。
+应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
 
 **起始版本：** 26.0.0
 
@@ -28,7 +28,7 @@ function onReadData(callback: Callback<DataParams>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataParams](arkts-connectivity-datatransfer-dataparams-i.md)&gt; | 是 | 监听端口读事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataParams](arkts-connectivity-datatransfer-dataparams-i.md)&gt; | 是 | 回调函数，返回端口通道接收到的数据参数。 |
 
 **错误码：**
 

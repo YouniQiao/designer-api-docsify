@@ -12,7 +12,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function onSystemPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void
 ```
 
-Subscribe to the event when the input method application sends private data commands.
+@brief Subscribe to the event when the input method application sends private data commands.
 
 **Since:** 26.0.0
 
@@ -28,7 +28,7 @@ Subscribe to the event when the input method application sends private data comm
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | callback triggered when an input method application sends a private data command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | Callback function, which is triggered when the input method application or system service sends a private data command. |
 
 **Error codes:**
 

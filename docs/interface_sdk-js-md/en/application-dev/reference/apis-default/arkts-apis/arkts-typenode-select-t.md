@@ -16,5 +16,5 @@ Define the FrameNode type for Select.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** SelectFrameNode
+**Property type:** [SelectFrameNode](arkts-typenode-selectframenode-c.md)
 

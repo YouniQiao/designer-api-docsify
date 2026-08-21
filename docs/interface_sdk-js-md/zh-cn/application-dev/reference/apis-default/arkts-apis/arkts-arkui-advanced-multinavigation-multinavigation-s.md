@@ -47,7 +47,7 @@ The method to build multiNavigation.
 
 设置路由栈。
 
-**类型：** [MultiNavPathStack](arkts-arkui-advanced-multinavigation-multinavpathstack-c.md)
+**类型：** [MultiNavPathStack](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-multinavigation-multinavpathstack-c.md)
 
 **起始版本：** 23
 
@@ -90,7 +90,7 @@ onHomeShowOnTop?: OnHomeShowOnTopCallback
 
 设置主页处于栈顶时的回调。
 
-**类型：** [OnHomeShowOnTopCallback](arkts-onhomeshowontopcallback-t.md)
+**类型：** [OnHomeShowOnTopCallback](../../apis-arkui/arkts-apis/arkts-arkui-onhomeshowontopcallback-t.md)
 
 **起始版本：** 23
 
@@ -110,7 +110,7 @@ onNavigationModeChange?: OnNavigationModeChangeCallback
 
 设置MultiNavigation模式变更时的回调。
 
-**类型：** [OnNavigationModeChangeCallback](arkts-onnavigationmodechangecallback-t.md)
+**类型：** [OnNavigationModeChangeCallback](../../apis-arkui/arkts-apis/arkts-arkui-onnavigationmodechangecallback-t.md)
 
 **起始版本：** 23
 

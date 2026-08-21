@@ -12,9 +12,9 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 function onPairingStateChange(callback: Callback<PairingStateParam>): void
 ```
 
-Subscribes to NearLink pairing state change events.
+Subscribes to pairing status change events. This API uses an asynchronous callback to return the result.
 
-This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned.
+The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 
@@ -28,7 +28,7 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PairingStateParam](arkts-connectivity-remotedevice-pairingstateparam-i.md)&gt; | Yes | Callback function used to listen for the pairing state event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PairingStateParam](arkts-connectivity-remotedevice-pairingstateparam-i.md)&gt; | Yes | Callback used to return the result of the pairing status change event. |
 
 **Error codes:**
 

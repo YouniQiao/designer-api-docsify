@@ -29,7 +29,7 @@ function setCBConfig(options: CBConfigOptions, callback: AsyncCallback<void>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [CBConfigOptions](arkts-telephony-sms-cbconfigoptions-i-sys.md) | 是 | 小区广播配置选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 设置小区广播配置的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置小区广播配置的回调函数。 |
 
 **错误码：**
 

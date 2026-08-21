@@ -1,6 +1,6 @@
 # CursorInfo
 
-Information of Cursor.
+@brief Represents the cursor information.
 
 **Since:** 23
 
@@ -25,7 +25,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 displayId?: long
 ```
 
-Indicates the ID of the display where the cursor locates.
+@brief ID of the monitor where the cursor is located.
 
 **Type:** long
 
@@ -43,7 +43,7 @@ Indicates the ID of the display where the cursor locates.
 height: double
 ```
 
-Indicates the height point of the cursor info, unit is px.
+@brief Height of the cursor, in px. The value must be an integer. The minimum value is 0 and the maximum value is the height of the current screen.
 
 **Type:** double
 
@@ -59,7 +59,7 @@ Indicates the height point of the cursor info, unit is px.
 left: double
 ```
 
-Indicates the left point of the cursor info and must be absolute coordinate of the physical screen, unit is px.
+@brief Horizontal coordinate of the cursor, in px. The value must be an integer. The minimum value is 0 and the maximum value is the width of the current screen.
 
 **Type:** double
 
@@ -75,7 +75,7 @@ Indicates the left point of the cursor info and must be absolute coordinate of t
 top: double
 ```
 
-Indicates the top point of the cursor info and must be absolute coordinate of the physical screen, unit is px.
+@brief Vertical coordinate of the cursor, in px. The value must be an integer. The minimum value is 0 and the maximum value is the height of the current screen.
 
 **Type:** double
 
@@ -91,7 +91,7 @@ Indicates the top point of the cursor info and must be absolute coordinate of th
 width: double
 ```
 
-Indicates the width point of the cursor info, unit is px.
+@brief Width of the cursor, in px. The value must be an integer. The minimum value is 0 and the maximum value is the width of the current screen.
 
 **Type:** double
 

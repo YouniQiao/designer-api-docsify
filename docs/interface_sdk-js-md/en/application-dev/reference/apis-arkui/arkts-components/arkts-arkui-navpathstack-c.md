@@ -913,7 +913,7 @@ Removes the navigation destination page specified by **name** from the routing s
 removeByNavDestinationId(navDestinationId: string): boolean
 ```
 
-Removes the navigation destination page specified by **navDestinationId** from the routing stack. **navDestinationId** can be obtained from the onReady callback of **NavDestination** or from [NavDestinationInfo](../arkts-apis/arkts-arkui-uiobserver-navdestinationinfo-i.md).
+Removes the navigation destination page specified by **navDestinationId** from the routing stack. **navDestinationId** can be obtained from the onReady callback of **NavDestination** or from [NavDestinationInfo](../../apis-default/arkts-apis/arkts-uiobserver-navdestinationinfo-i.md).
 
 **Since:** 12
 

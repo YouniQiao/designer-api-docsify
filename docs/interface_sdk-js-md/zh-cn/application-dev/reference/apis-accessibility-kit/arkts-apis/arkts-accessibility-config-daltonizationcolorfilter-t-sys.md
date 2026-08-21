@@ -4,6 +4,8 @@
 type DaltonizationColorFilter = 'Normal' | 'Protanomaly' | 'Deuteranomaly' | 'Tritanomaly'
 ```
 
+用于不同色弱类型的校正颜色滤镜。
+
 色彩校正功能启用时（[daltonizationState](arkts-accessibility-config-con-sys.md#daltonizationstate)设置为true）配置生效；色彩校正功能未启用时（ [daltonizationState](arkts-accessibility-config-con-sys.md#daltonizationstate)设置为false）显示为正常类型。
 
 **起始版本：** 23

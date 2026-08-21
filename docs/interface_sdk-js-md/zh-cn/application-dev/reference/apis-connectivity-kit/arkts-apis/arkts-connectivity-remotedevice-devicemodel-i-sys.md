@@ -1,6 +1,6 @@
 # DeviceModel（系统接口）
 
-远程设备的型号信息。
+描述远端设备的型号信息。
 
 **起始版本：** 26.0.0
 
@@ -22,7 +22,7 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 iconId: string
 ```
 
-远程设备的图标ID。
+远端设备的图标ID。
 
 **类型：** string
 
@@ -42,7 +42,7 @@ iconId: string
 modelId: string
 ```
 
-远程设备的型号ID。
+远端设备的型号ID。
 
 **类型：** string
 

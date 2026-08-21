@@ -67,7 +67,7 @@ The method to build component.
 
 默认不显示。
 
-**类型：** [AdvancedDialogV2Button](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
+**类型：** [AdvancedDialogV2Button](arkts-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
 **起始版本：** 23
 
@@ -115,7 +115,7 @@ The method to build component.
 
 默认不显示。
 
-**类型：** [AdvancedDialogV2Button](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
+**类型：** [AdvancedDialogV2Button](arkts-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
 **起始版本：** 23
 

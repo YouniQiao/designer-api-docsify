@@ -36,7 +36,7 @@ The constructor used to create a ToolBarV2ItemText object.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ToolBarV2ItemTextOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-toolbarv2-toolbarv2itemtextoptions-i.md) | 是 | text info. |
+| options | [ToolBarV2ItemTextOptions](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemtextoptions-i.md) | 是 | text info. |
 
 ## activatedColor
 

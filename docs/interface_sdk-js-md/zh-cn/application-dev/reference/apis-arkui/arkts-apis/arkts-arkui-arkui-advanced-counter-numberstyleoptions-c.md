@@ -2,9 +2,9 @@
 
 NumberStyleOptions定义了列表型和紧凑型Counter的属性和事件。
 
-继承于[InlineStyleOptions](arkts-arkui-arkui-advanced-counter-inlinestyleoptions-c.md)，包含该接口所有属性。本节仅展示新增属性，继承属性请参见父接口。
+继承于[InlineStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-counter-inlinestyleoptions-c.md)，包含该接口所有属性。本节仅展示新增属性，继承属性请参见父接口。
 
-**继承/实现关系：** NumberStyleOptions extends [InlineStyleOptions](arkts-arkui-arkui-advanced-counter-inlinestyleoptions-c.md)
+**继承/实现关系：** NumberStyleOptions extends [InlineStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-counter-inlinestyleoptions-c.md)
 
 **起始版本：** 11
 

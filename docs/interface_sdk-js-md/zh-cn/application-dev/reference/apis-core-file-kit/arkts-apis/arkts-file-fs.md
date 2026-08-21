@@ -173,7 +173,7 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 | [RandomAccessFileOptions](arkts-corefile-file-fs-randomaccessfileoptions-i.md) | 可选项类型，支持 createRandomAccessFile 接口使用。 |
 | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | 可选项类型，支持read接口使用。 |
 | [ReadStreamOptions](arkts-corefile-file-fs-readstreamoptions-i.md) | 可选项类型，支持 createReadStream 接口使用。 |
-| [ReadTextOptions](arkts-corefile-file-fs-readtextoptions-i.md) | 可选项类型，支持readText接口使用，ReadTextOptions继承自[ReadOptions](arkts-corefile-file-fs-readoptions-i.md)。 |
+| [ReadTextOptions](arkts-corefile-file-fs-readtextoptions-i.md) | 可选项类型，支持readText接口使用，ReadTextOptions继承自[ReadOptions](../../apis-default/arkts-apis/arkts-file-fs-readoptions-i.md)。 |
 | [ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md) | 文件读取迭代器。在调用ReaderIterator的方法前，需要先通过readLines方法（同步或异步）来构建一个ReaderIterator实例。 |
 | [ReaderIteratorResult](arkts-corefile-file-fs-readeriteratorresult-i.md) | 文件读取迭代器返回结果，支持ReaderIterator接口使用。 |
 | [Stat](arkts-corefile-file-fs-stat-i.md) | 文件具体信息，包含文件大小、权限模式、访问时间、修改时间等属性。在调用Stat的方法前，需要先通过stat()方法（同步或异步）构建一个 Stat实例。 |
@@ -181,7 +181,7 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 | [WatchEvent](arkts-corefile-file-fs-watchevent-i.md) | 事件类 |
 | [WatchEventListener](arkts-corefile-file-fs-watcheventlistener-i.md) | 事件监听类，当监听的文件或目录发生变动事件时触发回调。 |
 | [Watcher](arkts-corefile-file-fs-watcher-i.md) | 文件目录变化监听对象。由createWatcher接口获得。 |
-| [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | 可选项类型，支持write接口使用，WriteOptions继承自[Options](arkts-corefile-file-fs-options-i.md)。 |
+| [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | 可选项类型，支持write接口使用，WriteOptions继承自[Options](../../apis-default/arkts-apis/arkts-file-fs-options-i.md)。 |
 | [WriteStreamOptions](arkts-corefile-file-fs-writestreamoptions-i.md) | 可选项类型，支持 createWriteStream 接口使用。 |
 
 ### 枚举

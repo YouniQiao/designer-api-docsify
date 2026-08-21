@@ -27,7 +27,7 @@ import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode,
 
 定义日期时间选择器组件的选项。
 
-**类型：** [DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)
+**类型：** [DatePickerComponentOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)
 
 **起始版本：** 26.0.0
 

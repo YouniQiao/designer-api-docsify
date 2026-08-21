@@ -1,6 +1,6 @@
 # WindowInfo
 
-Represents window information.
+@brief Represents window information.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 rect: window.Rect
 ```
 
-Rectangular area of the window.
+@brief Rectangular area of the window.
 
 **Type:** window.Rect
 
@@ -36,7 +36,7 @@ Rectangular area of the window.
 status: window.WindowStatusType
 ```
 
-Window status type.
+@brief Window status type.
 
 **Type:** window.WindowStatusType
 

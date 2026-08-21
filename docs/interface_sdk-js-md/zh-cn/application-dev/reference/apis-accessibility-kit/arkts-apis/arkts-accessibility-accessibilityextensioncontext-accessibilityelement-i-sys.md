@@ -2,7 +2,7 @@
 
 无障碍节点元素，提供查询父/子元素、按内容或焦点方向查找元素、执行无障碍操作等能力，适用于无障碍辅助应用需要与界面节点交互和操作的场景。
 
-调用AccessibilityElement的方法前，先通过 [AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getfocuselement) 或 [AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getwindowrootelement) 获取AccessibilityElement实例。
+调用AccessibilityElement的方法前，先通过 [AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getaccessibilityfocusedelement) 或[AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getrootinactivewindow) 获取AccessibilityElement实例。
 
 **起始版本：** 23
 
@@ -359,7 +359,7 @@ axContext.getRootInActiveWindow(windowId).then((root: AccessibilityElement) => {
 findElementByElementId(condition: long): Promise<AccessibilityElement>
 ```
 
-Find elements that match the condition.
+根据elementId查询当前活动窗口下的节点元素。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -373,13 +373,13 @@ Find elements that match the condition.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| condition | long | 是 | Indicates the specific content to be queried. |
+| condition | long | 是 | 表示要查询的节点元素的elementId。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; |  |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise对象，返回满足指定查询条件的节点元素。 |
 
 **错误码：**
 
@@ -648,7 +648,7 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
 findElementByTextType(condition: string): Promise<Array<AccessibilityElement>>
 ```
 
-Find elements that match the condition.
+根据节点配置的accessibilityTextHint无障碍文本类型查询所有节点元素。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -662,13 +662,13 @@ Find elements that match the condition.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| condition | string | 是 | Indicates the specific content to be queried. |
+| condition | string | 是 | 表示查找的条件。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; |  |
+| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Promise对象，返回满足指定查询关键字的所有节点元素。 |
 
 **错误码：**
 
@@ -987,7 +987,7 @@ getCursorPosition(callback: AsyncCallback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 回调函数。当获取光标位置成功，err为undefined，data为光标在文本中的位置索引；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。当获取光标位置成功，err为undefined，data为光标在文本中的位置索引；否则为错误对象。 |
 
 **示例**
 

@@ -12,11 +12,11 @@ import { tag } from '@kit.ConnectivityKit';
 function messageToBytes(ndefMessage: NdefMessage): int[]
 ```
 
-Parses an NDEF message into raw bytes.
+Converts an NDEF message to bytes.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ndef-function messageToBytes(ndefMessage: NdefMessage): int[]--><!--Device-ndef-function messageToBytes(ndefMessage: NdefMessage): int[]-End-->
 
@@ -26,13 +26,13 @@ Parses an NDEF message into raw bytes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ndefMessage | NdefMessage | Yes | An NDEF message to parse. |
+| ndefMessage | NdefMessage | Yes | NDEF message to convert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int[] | Returns the raw bytes of an NDEF message. |
+| int[] | NDEF message in bytes, which consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
 
 **Error codes:**
 

@@ -12,7 +12,7 @@ import { manager } from '@kit.ConnectivityKit';
 function enable(): void
 ```
 
-Turns on NearLink.
+Enables NearLink.
 
 **Since:** 26.0.0
 

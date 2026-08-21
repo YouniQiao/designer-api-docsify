@@ -16,5 +16,5 @@ export type Scale = Vector2
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** Vector2
+**属性类型：** [Vector2](../../apis-default/arkts-apis/arkts-graphics-vector2-i.md)
 

@@ -205,7 +205,7 @@ checked为true时，表示选择框已选中。checked为false时，表示选择
 
 默认无事件。
 
-**类型：** [AdvancedDialogV2OnCheckedChange](../../apis-arkui/arkts-apis/arkts-arkui-advanceddialogv2oncheckedchange-t.md)
+**类型：** [AdvancedDialogV2OnCheckedChange](arkts-advanceddialogv2oncheckedchange-t.md)
 
 **起始版本：** 23
 
@@ -228,7 +228,7 @@ checked为true时，表示选择框已选中。checked为false时，表示选择
 
 默认不显示。
 
-**类型：** [AdvancedDialogV2Button](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
+**类型：** [AdvancedDialogV2Button](arkts-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
 **起始版本：** 23
 
@@ -251,7 +251,7 @@ checked为true时，表示选择框已选中。checked为false时，表示选择
 
 默认不显示。
 
-**类型：** [AdvancedDialogV2Button](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
+**类型：** [AdvancedDialogV2Button](arkts-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
 **起始版本：** 23
 

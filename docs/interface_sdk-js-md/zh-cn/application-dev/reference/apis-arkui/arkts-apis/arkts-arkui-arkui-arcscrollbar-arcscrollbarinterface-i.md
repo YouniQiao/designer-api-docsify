@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> - 未设置宽高时，ArcScrollBar采用父组件[LayoutConstraint](../../apis-default/arkts-apis/arkts-framenode-layoutconstraint-i.md)中的maxSize作为尺寸。若父组件存在可滚动组件，如 &gt; ArcList、List、 &gt; Grid、Scroll、 &gt; WaterFlow，建议设置ArcScrollBar宽高，否则尺寸可能为无穷大。
+> - 未设置宽高时，ArcScrollBar采用父组件[LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md)中的maxSize作为尺寸。若父组件存在可滚动组件，如 &gt; ArcList、List、 &gt; Grid、Scroll、 &gt; WaterFlow，建议设置ArcScrollBar宽高，否则尺寸可能为无穷大。
 > 
 > - 该组件支持在Phone、PC/2in1、Tablet、TV、Wearable设备上使用。API version 22及以前版本，在Phone、PC/2in1、Tablet、TV上使用会编译告警，但可以正常运行。
 
@@ -40,11 +40,11 @@ ArcScrollBar的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ArcScrollBarOptions](../../apis-default/arkts-apis/arkts-arkui-arcscrollbar-arcscrollbaroptions-i.md) | 是 | ArcScrollBar的配置参数，用于指定绑定的可滚动组件控制器和滚动条状态。 |
+| options | [ArcScrollBarOptions](arkts-arkui-arkui-arcscrollbar-arcscrollbaroptions-i.md) | 是 | ArcScrollBar的配置参数，用于指定绑定的可滚动组件控制器和滚动条状态。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcScrollBarAttribute](../../apis-default/arkts-apis/arkts-arkui-arcscrollbar-arcscrollbarattribute-i.md) |  |
+| [ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-c.md) |  |
 

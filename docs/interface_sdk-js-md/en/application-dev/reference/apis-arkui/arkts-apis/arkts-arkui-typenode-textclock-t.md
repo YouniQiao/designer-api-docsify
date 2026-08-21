@@ -16,5 +16,5 @@ Represents a FrameNode of the **TextClock** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** TypedFrameNode<TextClockInterface, TextClockAttribute>
+**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;TextClockInterface, TextClockAttribute&gt;
 

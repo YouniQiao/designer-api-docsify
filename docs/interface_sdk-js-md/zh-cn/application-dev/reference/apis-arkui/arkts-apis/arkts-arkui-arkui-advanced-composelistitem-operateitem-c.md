@@ -27,7 +27,7 @@ arrow?: OperateIcon
 
 默认不设置或设置为undefined，右侧箭头不显示。
 
-**类型：** [OperateIcon](arkts-arkui-arkui-advanced-composelistitem-operateicon-c.md)
+**类型：** [OperateIcon](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitem-operateicon-c.md)
 
 **起始版本：** 10
 
@@ -49,7 +49,7 @@ button?: OperateButton
 
 默认不设置或设置为undefined，右侧按钮不显示。
 
-**类型：** [OperateButton](arkts-arkui-arkui-advanced-composelistitem-operatebutton-c.md)
+**类型：** [OperateButton](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitem-operatebutton-c.md)
 
 **起始版本：** 10
 
@@ -71,7 +71,7 @@ checkbox?: OperateCheck
 
 默认不设置或设置为undefined，右侧多选框不显示。
 
-**类型：** [OperateCheck](arkts-arkui-arkui-advanced-composelistitem-operatecheck-c.md)
+**类型：** [OperateCheck](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitem-operatecheck-c.md)
 
 **起始版本：** 10
 
@@ -93,7 +93,7 @@ icon?: OperateIcon
 
 默认不设置或设置为undefined，右侧图标不显示。
 
-**类型：** [OperateIcon](arkts-arkui-arkui-advanced-composelistitem-operateicon-c.md)
+**类型：** [OperateIcon](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitem-operateicon-c.md)
 
 **起始版本：** 10
 
@@ -137,7 +137,7 @@ radio?: OperateCheck
 
 默认不设置或设置为undefined，右侧单选框不显示。
 
-**类型：** [OperateCheck](arkts-arkui-arkui-advanced-composelistitem-operatecheck-c.md)
+**类型：** [OperateCheck](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitem-operatecheck-c.md)
 
 **起始版本：** 10
 
@@ -159,7 +159,7 @@ subIcon?: OperateIcon
 
 默认不设置或设置为undefined，右侧第二个图标不显示。
 
-**类型：** [OperateIcon](arkts-arkui-arkui-advanced-composelistitem-operateicon-c.md)
+**类型：** [OperateIcon](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitem-operateicon-c.md)
 
 **起始版本：** 10
 
@@ -181,7 +181,7 @@ switch?: OperateCheck
 
 默认不设置或设置为undefined，右侧开关不显示。
 
-**类型：** [OperateCheck](arkts-arkui-arkui-advanced-composelistitem-operatecheck-c.md)
+**类型：** [OperateCheck](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitem-operatecheck-c.md)
 
 **起始版本：** 10
 

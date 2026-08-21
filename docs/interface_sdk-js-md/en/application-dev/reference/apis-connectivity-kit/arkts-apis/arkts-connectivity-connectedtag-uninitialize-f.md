@@ -12,7 +12,7 @@ import { connectedTag } from '@kit.ConnectivityKit';
 function uninitialize(): void
 ```
 
-Uninitializes the connected NFC tag.
+Uninitializes the active tag resources.
 
 **Since:** 9
 

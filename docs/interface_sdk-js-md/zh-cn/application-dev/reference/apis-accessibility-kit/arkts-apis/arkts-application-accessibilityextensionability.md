@@ -13,14 +13,14 @@ import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExten
 
 | 名称 | 说明 |
 | --- | --- |
-| [AccessibilityExtensionAbility](arkts-accessibility-application-accessibilityextensionability-accessibilityextensionability-c.md) | AccessibilityExtensionAbility基于ExtensionAbility框架，提供辅助功能扩展业务的能力。 |
+| [AccessibilityExtensionAbility](arkts-accessibility-application-accessibilityextensionability-accessibilityextensionability-c.md) | AccessibilityExtensionAbility基于ExtensionAbility框架，提供无障碍扩展业务的能力，包括连接无障碍服务、断开无障碍服务、处理无障碍事件和处理无障碍按键事件等。 |
 
 <!--Del-->
 ### 类（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [AccessibilityExtensionAbility](arkts-accessibility-application-accessibilityextensionability-accessibilityextensionability-c-sys.md) | AccessibilityExtensionAbility基于ExtensionAbility框架，提供辅助功能扩展业务的能力。 |
+| [AccessibilityExtensionAbility](arkts-accessibility-application-accessibilityextensionability-accessibilityextensionability-c-sys.md) | AccessibilityExtensionAbility基于ExtensionAbility框架，提供无障碍扩展业务的能力，包括连接无障碍服务、断开无障碍服务、处理无障碍事件和处理无障碍按键事件等。 |
 <!--DelEnd-->
 
 ### 接口
@@ -58,11 +58,11 @@ import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExten
 
 | 名称 | 说明 |
 | --- | --- |
-| [AccessibilityVirtualNode](arkts-accessibility-accessibilityvirtualnode-t-sys.md) | Indicates the accessibility virtual node. |
-| [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | Indicates the condition of the search focus. |
-| [FocusMoveResult](arkts-accessibility-focusmoveresult-t-sys.md) | Indicates focus move result. |
-| [FocusRule](arkts-accessibility-focusrule-t-sys.md) | Indicates the rule of the search focus. |
-| [Parameter](arkts-accessibility-parameter-t-sys.md) | Indicates executeAction parameter. |
-| [TouchPosition](arkts-accessibility-touchposition-t-sys.md) | The touch position of an accessibility virtual node. |
+| [AccessibilityVirtualNode](arkts-accessibility-accessibilityvirtualnode-t-sys.md) | 无障碍虚拟节点，请参考[AccessibilityVirtualNode](arkts-accessibility-accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md)。 |
+| [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | 表示查询可聚焦节点方式，请参考[FocusCondition](arkts-accessibility-focuscondition-t-sys.md)。 |
+| [FocusMoveResult](arkts-accessibility-focusmoveresult-t-sys.md) | 查询无障碍节点返回值类型，请参考[FocusMoveResult](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md)。 |
+| [FocusRule](arkts-accessibility-focusrule-t-sys.md) | 表示查找可聚焦节点时，如何判断起始节点及其子节点的聚焦能力，请参考[FocusRule](arkts-accessibility-focusrule-t-sys.md)。 |
+| [Parameter](arkts-accessibility-parameter-t-sys.md) | 无障碍节点元素执行特定操作时，为操作提供具体设置的参数值，请参考[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md)。 |
+| [TouchPosition](arkts-accessibility-touchposition-t-sys.md) | 触摸点击位置，请参考[TouchPosition](arkts-accessibility-accessibilityextensioncontext-touchposition-i-sys.md)。 |
 <!--DelEnd-->
 

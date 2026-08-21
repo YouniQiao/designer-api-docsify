@@ -81,7 +81,7 @@ function copyFile(src: string | int, dest: string | int, callback: AsyncCallback
 | --- | --- | --- | --- |
 | src | string \| int | 是 | 待复制文件的路径或待复制文件的文件描述符。 |
 | dest | string \| int | 是 | 目标文件路径或目标文件的文件描述符。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当复制文件成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当复制文件成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -134,7 +134,7 @@ function copyFile(
 | src | string \| int | 是 | 待复制文件的路径或待复制文件的文件描述符。 |
 | dest | string \| int | 是 | 目标文件路径或目标文件的文件描述符。 |
 | mode | int | 是 | mode提供覆盖文件的选项，当前仅支持0，且默认为0。<br/>0：完全覆盖目标文件，未覆盖部分将被裁剪掉。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当复制文件成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当复制文件成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

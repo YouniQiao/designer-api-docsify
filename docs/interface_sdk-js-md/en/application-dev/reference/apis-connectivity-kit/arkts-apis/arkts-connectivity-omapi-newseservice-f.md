@@ -12,7 +12,13 @@ import { omapi } from '@kit.ConnectivityKit';
 function newSEService(type: 'serviceState', callback: Callback<ServiceState>): SEService
 ```
 
-Establish a new connection that can be used to connect to all the SEs available in the system. The connection process can be quite long, so it happens in an asynchronous way. It is usable only if the specified callback is called or if isConnected() returns true.
+Creates an **SEService** instance for connecting to all available SEs in the system. The connection is time- consuming. Therefore, this API supports only the asynchronous mode. This API uses an asynchronous callback to return the result.
+
+The returned **SEService** instance is available only when **true** is returned by the specified callback or [isConnected](arkts-connectivity-omapi-seservice-i.md#isconnected).
+
+> **NOTE：**
+> 
+> This API is supported since API version 10 and deprecated since API version 12. Use &gt; [createService](arkts-connectivity-omapi-createservice-f.md) instead.
 
 **Since:** 10
 
@@ -28,14 +34,14 @@ Establish a new connection that can be used to connect to all the SEs available 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'serviceState' | Yes | nfc serviceState |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ServiceState](arkts-connectivity-omapi-servicestate-e.md)&gt; | Yes | The callback to return the service. |
+| type | 'serviceState' | Yes | Type of the SE service to create. It has a fixed value of **'serviceState'**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ServiceState](arkts-connectivity-omapi-servicestate-e.md)&gt; | Yes | Callback used to return the SE service state. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SEService](arkts-connectivity-omapi-seservice-i.md) | The new SEService instance. |
+| [SEService](arkts-connectivity-omapi-seservice-i.md) | SEService** instance created. |
 
 **Error codes:**
 

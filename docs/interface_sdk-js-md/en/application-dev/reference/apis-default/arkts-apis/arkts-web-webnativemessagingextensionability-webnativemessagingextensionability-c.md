@@ -39,7 +39,7 @@ Called when a web native messaging connection is established.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [ConnectionInfo](arkts-web-webnativemessagingextensionability-connectioninfo-i.md) | Yes | Indicates connection information about new native connection. |
+| info | [ConnectionInfo](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webnativemessagingextensionability-connectioninfo-i.md) | Yes | Indicates connection information about new native connection. |
 
 ## onDestroy
 
@@ -81,7 +81,7 @@ Called when a web native messaging connection is disconnected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [ConnectionInfo](arkts-web-webnativemessagingextensionability-connectioninfo-i.md) | Yes | Indicates connection information about new native connection. |
+| info | [ConnectionInfo](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webnativemessagingextensionability-connectioninfo-i.md) | Yes | Indicates connection information about new native connection. |
 
 ## context
 
@@ -91,7 +91,7 @@ context: WebNativeMessagingExtensionContext
 
 Context of web native messaging.
 
-**Type:** [WebNativeMessagingExtensionContext](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md)
+**Type:** [WebNativeMessagingExtensionContext](arkts-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md)
 
 **Since:** 23
 

@@ -2,7 +2,7 @@
 
 Defines the type of SegmentButton options of tab type.
 
-**Inheritance/Implementation:** TabSegmentButtonOptions extends [TabSegmentButtonConstructionOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-tabsegmentbuttonconstructionoptions-i.md)
+**Inheritance/Implementation:** TabSegmentButtonOptions extends [TabSegmentButtonConstructionOptions](arkts-arkui-advanced-segmentbutton-tabsegmentbuttonconstructionoptions-i.md)
 
 **Since:** 23
 

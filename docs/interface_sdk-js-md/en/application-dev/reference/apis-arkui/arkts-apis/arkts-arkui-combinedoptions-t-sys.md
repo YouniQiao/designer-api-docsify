@@ -18,7 +18,5 @@ Used for ide.
 
 **System API:** This is a system API.
 
-**Property type:** object &
-  Options<T, Data> &
-  ThisType<T & ViewModel & Data>
+**Property type:** object & [Options](arkts-arkui-viewmodel-options-i.md)&lt;T, Data&gt; & [ThisType](../../apis-default/arkts-apis/arkts-lib-es5-thistype-i.md)&lt;T & [ViewModel](arkts-arkui-viewmodel-viewmodel-i.md) & Data&gt;
 

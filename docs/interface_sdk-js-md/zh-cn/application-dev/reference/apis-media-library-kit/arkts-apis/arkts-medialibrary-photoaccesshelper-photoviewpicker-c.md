@@ -83,7 +83,7 @@ select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | option | PhotoSelectOptions | 是 | photoPicker选择选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PhotoSelectResult&gt; | 是 | callback 返回photoPicker选择后的结果集。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoSelectResult&gt; | 是 | callback 返回photoPicker选择后的结果集。 |
 
 **错误码：**
 
@@ -117,7 +117,7 @@ select(callback: AsyncCallback<PhotoSelectResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PhotoSelectResult&gt; | 是 | callback 返回photoPicker选择后的结果集。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoSelectResult&gt; | 是 | callback 返回photoPicker选择后的结果集。 |
 
 **错误码：**
 

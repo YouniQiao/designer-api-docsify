@@ -41,7 +41,7 @@ Sets the build function of the segmented button.
 
 Callback invoked when the selected item changes.
 
-**Type:** [OnSelectedIndexChange](../../apis-default/arkts-apis/arkts-onselectedindexchange-t.md)
+**Type:** [OnSelectedIndexChange](arkts-arkui-onselectedindexchange-t.md)
 
 **Since:** 18
 
@@ -891,7 +891,7 @@ If the value is **undefined**, the option information is not displayed.
 
 This property is read-only.
 
-**Type:** [SegmentButtonV2Items](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md)
+**Type:** [SegmentButtonV2Items](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md)
 
 **Since:** 18
 

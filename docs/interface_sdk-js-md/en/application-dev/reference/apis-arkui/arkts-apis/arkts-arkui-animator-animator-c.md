@@ -24,7 +24,7 @@ Creates an **AnimatorResult** object for animations.
 
 > **NOTE：**
 > 
-> - Since API version 10, you can use the &gt; [createAnimator](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#createanimator) API in &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md), which ensures that the object is created in the intended UI instance.
+> - Since API version 10, you can use the &gt; [createAnimator](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#createanimator) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md), which ensures that the object is created in the intended UI instance.
 
 **Since:** 9
 

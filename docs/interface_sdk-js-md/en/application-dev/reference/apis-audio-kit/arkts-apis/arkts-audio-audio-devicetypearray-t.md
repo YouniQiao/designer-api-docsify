@@ -14,5 +14,5 @@ Defines the device type array.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
-**Property type:** Array<DeviceType>
+**Property type:** Array&lt;DeviceType&gt;
 

@@ -36,7 +36,7 @@ The constructor of ChipLabel
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ChipV2LabelConfig](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2labelconfig-i.md) | Yes | config of the chip label |
+| config | [ChipV2LabelConfig](arkts-arkui-arkui-advanced-chipv2-chipv2labelconfig-i.md) | Yes | config of the chip label |
 
 ## activatedFontColor
 
@@ -131,7 +131,7 @@ Text font size.
 
 Label margin.
 
-**Type:** [ChipV2LabelMarginConfig](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2labelmarginconfig-i.md)
+**Type:** [ChipV2LabelMarginConfig](arkts-arkui-arkui-advanced-chipv2-chipv2labelmarginconfig-i.md)
 
 **Since:** 26.0.0
 
@@ -152,7 +152,7 @@ Label margin.
 
 Localized label margin.
 
-**Type:** [ChipV2LocalizedLabelMarginConfig](../../apis-default/arkts-apis/arkts-arkui-advanced-chipv2-chipv2localizedlabelmarginconfig-i.md)
+**Type:** [ChipV2LocalizedLabelMarginConfig](arkts-arkui-arkui-advanced-chipv2-chipv2localizedlabelmarginconfig-i.md)
 
 **Since:** 26.0.0
 

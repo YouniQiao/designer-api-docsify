@@ -105,7 +105,7 @@ icon: IconOptions
 
 IconOptions.
 
-**Type:** [IconOptions](arkts-arkui-advanced-chipgroup-iconoptions-i.md)
+**Type:** [IconOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroup-iconoptions-i.md)
 
 **Since:** 23
 

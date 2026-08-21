@@ -773,7 +773,7 @@ Obtains a UIContext instance.
 
 | Type | Description |
 | --- | --- |
-| [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | UIContext instance obtained. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | UIContext instance obtained. |
 
 **Error codes:**
 

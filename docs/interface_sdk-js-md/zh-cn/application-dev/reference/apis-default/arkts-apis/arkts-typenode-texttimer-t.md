@@ -16,5 +16,5 @@ Define the FrameNode type for TextTimer.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** TextTimerFrameNode
+**属性类型：** [TextTimerFrameNode](arkts-typenode-texttimerframenode-c.md)
 

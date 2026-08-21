@@ -77,7 +77,7 @@ import { uiObserver } from '@kit.ArkUI';
 | Name | Description |
 | --- | --- |
 | [NavDestinationState](arkts-arkui-uiobserver-navdestinationstate-e.md) | Describes the state of the **NavDestination** component. |
-| [RouterPageState](arkts-arkui-uiobserver-routerpagestate-e.md) | Enumerates the states of a page during routing. **RouterPageState** is used in [RouterPageInfo](arkts-arkui-uiobserver-routerpageinfo-c.md) as the callback parameter for passive observation via [routerPageUpdate](arkts-arkui-uiobserver-onnavdestinationupdate-f.md#onnavdestinationupdate). |
+| [RouterPageState](arkts-arkui-uiobserver-routerpagestate-e.md) | Enumerates the states of a page during routing. **RouterPageState** is used in [RouterPageInfo](../../apis-default/arkts-apis/arkts-uiobserver-routerpageinfo-c.md) as the callback parameter for passive observation via [routerPageUpdate](arkts-arkui-uiobserver-onnavdestinationupdate-f.md#onnavdestinationupdate). |
 | [ScrollEventType](arkts-arkui-uiobserver-scrolleventtype-e.md) | ScrollEvent type. |
 | [TabContentState](arkts-arkui-uiobserver-tabcontentstate-e.md) | TabContent state. |
 

@@ -1,8 +1,8 @@
 # CapsuleSegmentButtonOptions
 
-胶囊类分段按钮选项。继承自[CapsuleSegmentButtonConstructionOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-capsulesegmentbuttonconstructionoptions-i.md)。
+胶囊类分段按钮选项。继承自[CapsuleSegmentButtonConstructionOptions](arkts-arkui-arkui-advanced-segmentbutton-capsulesegmentbuttonconstructionoptions-i.md)。
 
-**继承/实现关系：** CapsuleSegmentButtonOptions extends [CapsuleSegmentButtonConstructionOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-capsulesegmentbuttonconstructionoptions-i.md)
+**继承/实现关系：** CapsuleSegmentButtonOptions extends [CapsuleSegmentButtonConstructionOptions](arkts-arkui-arkui-advanced-segmentbutton-capsulesegmentbuttonconstructionoptions-i.md)
 
 **起始版本：** 11
 

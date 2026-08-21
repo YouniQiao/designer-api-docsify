@@ -17,7 +17,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function getCurrentInputMethod(userId?: int): InputMethodProperty
 ```
 
-Get the current input method of a specified user.
+@brief Get the current input method of a specified user.
 
 **Since:** 26.0.0
 

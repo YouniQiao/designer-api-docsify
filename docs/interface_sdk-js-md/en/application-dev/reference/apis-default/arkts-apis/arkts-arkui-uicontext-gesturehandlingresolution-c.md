@@ -67,7 +67,7 @@ selectedProposal?: BaseGestureHandlingProposal
 
 The final gesture handling proposal selected by the developer.
 
-**Type:** [BaseGestureHandlingProposal](arkts-arkui-uicontext-basegesturehandlingproposal-c.md)
+**Type:** [BaseGestureHandlingProposal](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md)
 
 **Since:** 26.0.0
 

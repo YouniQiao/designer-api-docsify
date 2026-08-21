@@ -42,11 +42,11 @@ A constructor used to create an **ArcScrollBar** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ArcScrollBarOptions](arkts-arkui-arkui-arcscrollbar-arcscrollbaroptions-i.md) | Yes | Parameters of the **ArcScrollBar** component. |
+| options | [ArcScrollBarOptions](../../apis-default/arkts-apis/arkts-arkui-arcscrollbar-arcscrollbaroptions-i.md) | Yes | Parameters of the **ArcScrollBar** component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-c.md) |  |
+| [ArcScrollBarAttribute](../../apis-default/arkts-apis/arkts-arkui-arcscrollbar-arcscrollbarattribute-i.md) |  |
 

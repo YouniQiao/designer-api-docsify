@@ -1,8 +1,6 @@
 # NfcRfType
 
-Describes the NFC RF type.
-
-@enum { number }
+Enumerates the NFC field strength states.
 
 **Since:** 8
 
@@ -16,7 +14,7 @@ Describes the NFC RF type.
 NFC_RF_LEAVE = 0
 ```
 
-NFC RF LEAVE
+NFC exit.
 
 **Since:** 8
 
@@ -30,7 +28,7 @@ NFC RF LEAVE
 NFC_RF_ENTER = 1
 ```
 
-NFC RF ENTER
+NFC entry.
 
 **Since:** 8
 

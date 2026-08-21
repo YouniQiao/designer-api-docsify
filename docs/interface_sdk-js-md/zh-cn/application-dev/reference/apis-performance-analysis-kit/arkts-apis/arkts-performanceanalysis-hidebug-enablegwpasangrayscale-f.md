@@ -89,27 +89,5 @@ function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: number): vo
 
 **示例**
 
-```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
-import { taskpool } from '@kit.ArkTS';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Concurrent
-function enableGwpAsanTask(): void {
-  let options: hidebug.GwpAsanOptions = {
-    alwaysEnabled: true,
-    sampleRate: 2500,
-    maxSimutaneousAllocations: 5000,
-  };
-  let duration: number = 4;
-  hidebug.enableGwpAsanGrayscale(options, duration);
-}
-
-taskpool.execute(enableGwpAsanTask).then(() => {
-  console.info(`Succeeded in enabling GWP-ASan.`);
-}).catch((error: BusinessError) => {
-  const err: BusinessError = error as BusinessError;
-  console.error(`Failed to enable GWP-ASan. Code: ${err.code}, message: ${err.message}`);
-})
-```
+参见 [enableGwpAsanGrayscale](#enablegwpasangrayscale)
 

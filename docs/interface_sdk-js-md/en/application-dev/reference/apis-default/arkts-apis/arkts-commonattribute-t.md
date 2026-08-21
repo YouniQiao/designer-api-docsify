@@ -16,5 +16,5 @@ CommonAttribute for ide.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** CommonMethod
+**Property type:** [CommonMethod](arkts-common-commonmethod-i.md)
 

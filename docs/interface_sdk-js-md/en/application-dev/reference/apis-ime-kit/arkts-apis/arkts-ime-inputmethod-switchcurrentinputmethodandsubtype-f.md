@@ -21,7 +21,12 @@ function switchCurrentInputMethodAndSubtype(
   ): void
 ```
 
-Switch input method and subtype. The caller must be the current inputmethod.
+@brief Switches to a specified subtype of a specified input method. This API uses an asynchronous callback to return the result. <br> <br>   
+> **NOTE：**<br>
+> <br>
+> - In API versions 9 and 10, this API can only be called by system applications granted the **ohos.permission.CONNECT_IME_ABILITY** permission. <br>
+> <br>
+> - Since API version 11, this API can only be called by the current input method application.
 
 **Since:** 23
 
@@ -36,9 +41,9 @@ Switch input method and subtype. The caller must be the current inputmethod.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Yes | indicates the target input method. |
-| inputMethodSubtype | [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | Yes | indicates the target input method subtype. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | the callback of switchCurrentInputMethodAndSubtype. |
+| inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Yes | Target input method. |
+| inputMethodSubtype | [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | Yes | Target input method subtype. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -80,7 +85,12 @@ function switchCurrentInputMethodAndSubtype(
   ): Promise<boolean>
 ```
 
-Switch input method and subtype. The caller must be the current inputmethod.
+@brief Switches to a specified subtype of a specified input method. This API uses a promise to return the result. <br> <br>   
+> **NOTE：**<br>
+> <br>
+> - In API versions 9 and 10, this API can only be called by system applications granted the **ohos.permission.CONNECT_IME_ABILITY** permission. <br>
+> <br>
+> - Since API version 11, this API can only be called by the current input method application.
 
 **Since:** 23
 
@@ -95,14 +105,14 @@ Switch input method and subtype. The caller must be the current inputmethod.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Yes | indicates the target input method. |
-| inputMethodSubtype | [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | Yes | indicates the target input method subtype. |
+| inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Yes | Target input method. |
+| inputMethodSubtype | [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | Yes | Target input method subtype. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | the promise returned by the function. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the switching is successful, and **false** means the opposite. |
 
 **Error codes:**
 

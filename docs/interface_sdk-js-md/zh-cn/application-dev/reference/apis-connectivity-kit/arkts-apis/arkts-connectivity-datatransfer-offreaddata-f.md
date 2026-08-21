@@ -12,7 +12,7 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 function offReadData(callback?: Callback<DataParams>): void
 ```
 
-取消订阅从端口读取数据的事件。
+取消订阅端口通道数据接收事件。使用callback异步回调。
 
 **起始版本：** 26.0.0
 
@@ -26,7 +26,7 @@ function offReadData(callback?: Callback<DataParams>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataParams](arkts-connectivity-datatransfer-dataparams-i.md)&gt; | 否 | 监听端口读事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataParams](arkts-connectivity-datatransfer-dataparams-i.md)&gt; | 否 | 回调函数，返回端口通道接收到的数据参数。 <br>填写该参数则取消当前callback订阅。不填写该参数则取消该事件对应的所有回调。 |
 
 **错误码：**
 

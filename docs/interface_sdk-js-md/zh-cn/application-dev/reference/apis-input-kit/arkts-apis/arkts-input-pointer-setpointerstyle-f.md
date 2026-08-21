@@ -26,7 +26,7 @@ function setPointerStyle(windowId: int, pointerStyle: PointerStyle, callback: As
 | --- | --- | --- | --- |
 | windowId | int | 是 | 窗口ID。取值范围为大于等于0的整数。<br>窗口ID合法并且对应窗口存在时，可以设置窗口的鼠标光标样式。<br>窗口ID合法但窗口不存在时，也可以设置鼠标光标样式。<br>设置 结果可通过[getPointerStyle](arkts-input-pointer-getpointerstyle-f.md)获取。 |
 | pointerStyle | PointerStyle | 是 | 鼠标样式。 不能传入DEVELOPER_DEFINED_ICON作为参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置鼠标样式类型成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置鼠标样式类型成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

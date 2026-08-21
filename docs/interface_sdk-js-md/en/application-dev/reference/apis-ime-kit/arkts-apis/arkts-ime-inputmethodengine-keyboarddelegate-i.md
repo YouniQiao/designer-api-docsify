@@ -1,6 +1,6 @@
 # KeyboardDelegate
 
-In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
+@brief In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 offCursorContextChange(callback?: CursorContextChangeCallback): void
 ```
 
-Unsubscribe cursor context change.
+@brief Unsubscribe cursor context change.
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ Unsubscribe cursor context change.
 offEditorAttributeChanged(callback?: Callback<EditorAttribute>): void
 ```
 
-Unsubscribe input text attribute change.
+@brief Unsubscribe input text attribute change.
 
 **Since:** 23
 
@@ -60,7 +60,7 @@ Unsubscribe input text attribute change.
 offKeyDown(callback?: KeyEventCallback): void
 ```
 
-Unsubscribe key down event
+@brief Unsubscribe key down event
 
 **Since:** 23
 
@@ -80,7 +80,7 @@ Unsubscribe key down event
 offKeyEvent(callback?: InputKeyEventCallback): void
 ```
 
-Unsubscribe key event.
+@brief Unsubscribe key event.
 
 **Since:** 23
 
@@ -100,7 +100,7 @@ Unsubscribe key event.
 offKeyUp(callback?: KeyEventCallback): void
 ```
 
-Unsubscribe key up event
+@brief Unsubscribe key up event
 
 **Since:** 23
 
@@ -120,7 +120,7 @@ Unsubscribe key up event
 offSelectionChange(callback?: SelectionChangeCallback): void
 ```
 
-Unsubscribe selection change.
+@brief Unsubscribe selection change.
 
 **Since:** 23
 
@@ -140,7 +140,7 @@ Unsubscribe selection change.
 offTextChange(callback?: Callback<string>): void
 ```
 
-Unsubscribe text change.
+@brief Unsubscribe text change.
 
 **Since:** 23
 
@@ -160,7 +160,7 @@ Unsubscribe text change.
 off(type: 'cursorContextChange', callback?: (x: number, y: number, height: number) => void): void
 ```
 
-Disables listening for cursor context changes. This API uses an asynchronous callback to return the result.
+@brief Disables listening for cursor context changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -189,7 +189,7 @@ inputMethodEngine.getKeyboardDelegate().off('cursorContextChange', (x: number, y
 off(type: 'editorAttributeChanged', callback?: (attr: EditorAttribute) => void): void
 ```
 
-Disables listening for the edit box attribute change event. This API uses an asynchronous callback to return the result.
+@brief Disables listening for the edit box attribute change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -216,7 +216,7 @@ inputMethodEngine.getKeyboardDelegate().off('editorAttributeChanged');
 off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void
 ```
 
-Disables listening for a physical keyboard event. This API uses an asynchronous callback to return the result.
+@brief Disables listening for a physical keyboard event. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -250,7 +250,7 @@ inputMethodEngine.getKeyboardDelegate().off('keyDown', (keyEvent: inputMethodEng
 off(type: 'keyEvent', callback?: (event: InputKeyEvent) => boolean): void
 ```
 
-Disables listening for a keyboard event. This API uses an asynchronous callback to return the result.
+@brief Disables listening for a keyboard event. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -283,7 +283,7 @@ inputMethodEngine.getKeyboardDelegate().off('keyEvent');
 off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void
 ```
 
-Disables listening for a physical keyboard event. This API uses an asynchronous callback to return the result.
+@brief Disables listening for a physical keyboard event. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -300,16 +300,7 @@ Disables listening for a physical keyboard event. This API uses an asynchronous 
 
 **Examples**
 
-```TypeScript
-inputMethodEngine.getKeyboardDelegate().off('keyUp', (keyEvent: inputMethodEngine.KeyEvent) => {
-  console.info('delete keyUp notification.');
-  return true;
-});
-inputMethodEngine.getKeyboardDelegate().off('keyDown', (keyEvent: inputMethodEngine.KeyEvent) => {
-  console.info('delete keyDown notification.');
-  return true;
-});
-```
+See off_keyDown
 
 ## off('selectionChange')
 
@@ -320,7 +311,7 @@ off(
     ): void
 ```
 
-Disables listening for the text selection change event. This API uses an asynchronous callback to return the result.
+@brief Disables listening for the text selection change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -350,7 +341,7 @@ inputMethodEngine.getKeyboardDelegate()
 off(type: 'textChange', callback?: (text: string) => void): void
 ```
 
-Disables listening for the text change event. This API uses an asynchronous callback to return the result.
+@brief Disables listening for the text change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -379,7 +370,7 @@ inputMethodEngine.getKeyboardDelegate().off('textChange', (text: string) => {
 onCursorContextChange(callback: CursorContextChangeCallback): void
 ```
 
-Subscribe cursor context change.
+@brief Subscribe cursor context change.
 
 **Since:** 23
 
@@ -399,7 +390,7 @@ Subscribe cursor context change.
 onEditorAttributeChanged(callback: Callback<EditorAttribute>): void
 ```
 
-Subscribe input text attribute change.
+@brief Subscribe input text attribute change.
 
 **Since:** 23
 
@@ -419,7 +410,7 @@ Subscribe input text attribute change.
 onKeyDown(callback: KeyEventCallback): void
 ```
 
-Subscribe key down event
+@brief Subscribe key down event
 
 **Since:** 23
 
@@ -439,7 +430,7 @@ Subscribe key down event
 onKeyEvent(callback: InputKeyEventCallback): void
 ```
 
-Subscribe key event.
+@brief Subscribe key event.
 
 **Since:** 23
 
@@ -459,7 +450,7 @@ Subscribe key event.
 onKeyUp(callback: KeyEventCallback): void
 ```
 
-Subscribe key up event
+@brief Subscribe key up event
 
 **Since:** 23
 
@@ -479,7 +470,7 @@ Subscribe key up event
 onSelectionChange(callback: SelectionChangeCallback): void
 ```
 
-Subscribe selection change.
+@brief Subscribe selection change.
 
 **Since:** 23
 
@@ -499,7 +490,7 @@ Subscribe selection change.
 onTextChange(callback: Callback<string>): void
 ```
 
-Subscribe text change.
+@brief Subscribe text change.
 
 **Since:** 23
 
@@ -519,7 +510,7 @@ Subscribe text change.
 on(type: 'cursorContextChange', callback: (x: number, y: number, height: number) => void): void
 ```
 
-Enables listening for the cursor change event. This API uses an asynchronous callback to return the result.
+@brief Enables listening for the cursor change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -550,7 +541,7 @@ inputMethodEngine.getKeyboardDelegate().on('cursorContextChange', (x: number, y:
 on(type: 'editorAttributeChanged', callback: (attr: EditorAttribute) => void): void
 ```
 
-Enables listening for the edit box attribute change event. This API uses an asynchronous callback to return the result.
+@brief Enables listening for the edit box attribute change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -580,7 +571,7 @@ inputMethodEngine.getKeyboardDelegate()
 on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void
 ```
 
-Enables listening for a physical keyboard event. This API uses an asynchronous callback to return the result.
+@brief Enables listening for a physical keyboard event. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -616,7 +607,7 @@ inputMethodEngine.getKeyboardDelegate().on('keyDown', (keyEvent: inputMethodEngi
 on(type: 'keyEvent', callback: (event: InputKeyEvent) => boolean): void
 ```
 
-Enables listening for a keyboard event. This API uses an asynchronous callback to return the result.
+@brief Enables listening for a keyboard event. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -651,7 +642,7 @@ inputMethodEngine.getKeyboardDelegate().on('keyEvent', (keyEvent: KeyEvent) => {
 on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void
 ```
 
-Enables listening for a physical keyboard event. This API uses an asynchronous callback to return the result.
+@brief Enables listening for a physical keyboard event. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -668,18 +659,7 @@ Enables listening for a physical keyboard event. This API uses an asynchronous c
 
 **Examples**
 
-```TypeScript
-inputMethodEngine.getKeyboardDelegate().on('keyUp', (keyEvent: inputMethodEngine.KeyEvent) => {
-  console.info(`inputMethodEngine keyCode.(keyDown): ${keyEvent.keyCode}`);
-  console.info(`inputMethodEngine keyAction.(keyDown): ${keyEvent.keyAction}`);
-  return true;
-});
-inputMethodEngine.getKeyboardDelegate().on('keyDown', (keyEvent: inputMethodEngine.KeyEvent) => {
-  console.info(`inputMethodEngine keyCode.(keyDown): ${keyEvent.keyCode}`);
-  console.info(`inputMethodEngine keyAction.(keyDown): ${keyEvent.keyAction}`);
-  return true;
-});
-```
+See on_keyDown
 
 ## on('selectionChange')
 
@@ -690,7 +670,7 @@ on(
     ): void
 ```
 
-Enables listening for the text selection change event. This API uses an asynchronous callback to return the result.
+@brief Enables listening for the text selection change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -723,7 +703,7 @@ inputMethodEngine.getKeyboardDelegate()
 on(type: 'textChange', callback: (text: string) => void): void
 ```
 
-Enables listening for the text change event. This API uses an asynchronous callback to return the result.
+@brief Enables listening for the text change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 

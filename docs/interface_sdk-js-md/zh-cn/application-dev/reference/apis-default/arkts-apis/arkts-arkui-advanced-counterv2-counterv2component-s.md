@@ -51,7 +51,7 @@ build函数用于构造CounterV2高级组件。
 
 定义CounterV2组件的类型。
 
-**类型：** [CounterV2Options](arkts-arkui-advanced-counterv2-counterv2options-c.md)
+**类型：** [CounterV2Options](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)
 
 **起始版本：** 26.0.0
 

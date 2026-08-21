@@ -1,6 +1,6 @@
 # Channel
 
-Channel represents an [ISO 7816-4] channel opened to a SE. It can be either a logical channel or the basic channel.
+A **Channel** instance indicates a channel set up by a **Session** instance. The channel can be a basic channel or a logical channel. You can use [Session.openBasicChannel](arkts-connectivity-omapi-session-i.md#openbasicchannel) or [Session.openLogicalChannel](arkts-connectivity-omapi-session-i.md#openlogicalchannel) to obtain a channel instance.
 
 **Since:** 10
 
@@ -20,7 +20,7 @@ import { omapi } from '@kit.ConnectivityKit';
 close(): void
 ```
 
-Closes this channel to the SE. If the method is called when the channel is already closed, this method SHALL be ignored.
+Closes this channel.
 
 **Since:** 10
 
@@ -56,7 +56,7 @@ try {
 getSelectResponse(): number[]
 ```
 
-Returns the data as received from the application select command, including the status word received at applet selection.
+Obtains the response data including the status word of **SELECT Applet**.
 
 **Since:** 10
 
@@ -68,7 +68,7 @@ Returns the data as received from the application select command, including the 
 
 | Type | Description |
 | --- | --- |
-| number[] | The data as returned by the application select command inclusive of the status word. |
+| number[] | Response data including the status word obtained. |
 
 **Error codes:**
 
@@ -99,7 +99,7 @@ try {
 getSession(): Session
 ```
 
-Get the session that has opened this channel.
+Obtains the session used to open this channel.
 
 **Since:** 10
 
@@ -111,7 +111,7 @@ Get the session that has opened this channel.
 
 | Type | Description |
 | --- | --- |
-| Session | The Session object this channel is bound to. |
+| Session | Session instance obtained. |
 
 **Error codes:**
 
@@ -143,7 +143,7 @@ try {
 isBasicChannel(): boolean
 ```
 
-Checks whether this channel is the basic channel.
+Checks whether this channel is a basic channel.
 
 **Since:** 10
 
@@ -155,7 +155,7 @@ Checks whether this channel is the basic channel.
 
 | Type | Description |
 | --- | --- |
-| boolean | True if this channel is a basic channel, false otherwise. |
+| boolean | true** if the channel is a basic channel; **false** otherwise. |
 
 **Error codes:**
 
@@ -186,7 +186,7 @@ try {
 isClosed(): boolean
 ```
 
-Checks if this channel is closed.
+Checks whether this channel is closed.
 
 **Since:** 10
 
@@ -198,7 +198,7 @@ Checks if this channel is closed.
 
 | Type | Description |
 | --- | --- |
-| boolean | True if the channel is closed, false otherwise. |
+| boolean | true** if the channel is closed; **false** otherwise. |
 
 **Error codes:**
 
@@ -229,7 +229,7 @@ try {
 transmit(command: number[]): Promise<number[]>
 ```
 
-Transmit an APDU command (as per ISO/IEC 7816) to the SE.
+Transmits APDU data (as per ISO/IEC 7816) to the SE. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -241,13 +241,13 @@ Transmit an APDU command (as per ISO/IEC 7816) to the SE.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | number[] | Yes | The APDU command to be transmitted, as a byte array. |
+| command | number[] | Yes | APDU data to send. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number[]&gt; | The response received, as a byte array. |
+| Promise&lt;number[]&gt; | Promise used to return the response received, in a number array. If the chip captures an exception, an all zero value is returned. |
 
 **Error codes:**
 
@@ -286,7 +286,7 @@ try {
 transmit(command: number[], callback: AsyncCallback<number[]>): void
 ```
 
-Transmit an APDU command (as per ISO/IEC 7816) to the SE.
+Transmits APDU data (as per ISO/IEC 7816) to the SE. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -298,8 +298,8 @@ Transmit an APDU command (as per ISO/IEC 7816) to the SE.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | number[] | Yes | The APDU command to be transmitted, as a byte array. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number[]&gt; | Yes | The callback to return the response received, as a byte array. |
+| command | number[] | Yes | APDU data to send. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number[]&gt; | Yes | Callback used to return the response received, in a number array. If the chip captures an exception, an all zero value is returned. |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # AdvertisingSettings
 
-广播设置。
+表示广播配置参数。
 
 **起始版本：** 26.0.0
 
@@ -20,7 +20,7 @@ import { advertising } from '@kit.ConnectivityKit';
 interval?: int
 ```
 
-广播时间间隔，单位为slot。 最小的slot数是160，对应的时间是160*0.125=20ms。 最大slot数为16777215，对应的时间为2097151.875 ms。 如果不设置“interval”，则默认值为5000，对应的时间为625 ms。 单位为： 时隙，取值应为[160,16777215]内的整数，每个时隙为125微秒，。 默认值： 5000。
+广播间隔配置参数。单位slot，范围160-16777215，默认值为5000。1个slot对应的时间长度是0.125ms，例如：5000*0.125=625ms。
 
 **类型：** int
 
@@ -38,7 +38,7 @@ interval?: int
 isConnectable?: boolean
 ```
 
-广播是否可连接。 如果不设置“isConnectable”，则默认值为true。 默认值： 默认值：true。
+表示广播能否连接。true：表示可连接的广播。false：表示不可连接的广播。默认值为true。
 
 **类型：** boolean
 
@@ -56,7 +56,7 @@ isConnectable?: boolean
 power?: TxPowerMode
 ```
 
-广播功率模式。 如果不设置“power”，则默认值为“ADV_TX_POWER_LOW”。 默认值： ADV_TX_POWER_LOW。
+广播发射功率配置参数。如果不配置，则默认值为ADV_TX_POWER_LOW。
 
 **类型：** [TxPowerMode](arkts-connectivity-advertising-txpowermode-e.md)
 

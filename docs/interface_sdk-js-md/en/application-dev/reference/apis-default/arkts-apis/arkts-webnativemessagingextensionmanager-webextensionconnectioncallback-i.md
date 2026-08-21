@@ -37,7 +37,7 @@ Called when a connection is set up.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | [ConnectionNativeInfo](../../apis-arkweb/arkts-apis/arkts-arkweb-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | The remote connection info |
+| connection | [ConnectionNativeInfo](arkts-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | The remote connection info |
 
 ## onDisconnect
 
@@ -61,7 +61,7 @@ Called when a connection is interrupted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | [ConnectionNativeInfo](../../apis-arkweb/arkts-apis/arkts-arkweb-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | The remote connection info |
+| connection | [ConnectionNativeInfo](arkts-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | The remote connection info |
 
 ## onFailed
 
@@ -85,6 +85,6 @@ Called when the connection fails.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | [NmErrorCode](../../apis-arkweb/arkts-apis/arkts-arkweb-webnativemessagingextensionmanager-nmerrorcode-e.md) | Yes | The error code of the failure. |
+| code | [NmErrorCode](arkts-webnativemessagingextensionmanager-nmerrorcode-e.md) | Yes | The error code of the failure. |
 | errMsg | string | Yes | The error message of the failure. |
 

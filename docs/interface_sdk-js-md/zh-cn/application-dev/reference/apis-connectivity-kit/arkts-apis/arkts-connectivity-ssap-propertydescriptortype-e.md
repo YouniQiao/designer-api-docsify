@@ -1,6 +1,6 @@
 # PropertyDescriptorType
 
-属性描述符类型的枚举。
+表示Property的描述符类型，为枚举值。
 
 **起始版本：** 26.0.0
 
@@ -14,7 +14,7 @@
 PROPERTY = 1
 ```
 
-属性说明描述符。
+表示Property。
 
 **起始版本：** 26.0.0
 
@@ -30,7 +30,7 @@ PROPERTY = 1
 CLIENT_PROPERTY_CONFIG = 2
 ```
 
-客户端属性配置描述符。
+表示客户端Property配置。
 
 **起始版本：** 26.0.0
 
@@ -46,7 +46,7 @@ CLIENT_PROPERTY_CONFIG = 2
 SERVER_PROPERTY_CONFIG = 3
 ```
 
-服务端属性配置描述符。
+表示服务端Property配置。
 
 **起始版本：** 26.0.0
 
@@ -62,7 +62,7 @@ SERVER_PROPERTY_CONFIG = 3
 PROPERTY_FORMAT = 4
 ```
 
-属性格式描述符。
+表示Property格式。
 
 **起始版本：** 26.0.0
 
@@ -78,7 +78,7 @@ PROPERTY_FORMAT = 4
 TYPE_VENDOR = 255
 ```
 
-厂商自定义。
+表示厂商自定义字段。
 
 **起始版本：** 26.0.0
 

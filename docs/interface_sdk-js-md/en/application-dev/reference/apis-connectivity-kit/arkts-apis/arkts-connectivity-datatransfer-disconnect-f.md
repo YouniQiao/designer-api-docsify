@@ -12,7 +12,7 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 function disconnect(params: ConnectionParams): Promise<void>
 ```
 
-Disconnects or stops an ongoing connection to a server.
+Disconnects from the remote device. This method is called to disconnect from the remote device after it is successfully connected using [dataTransfer.connect](arkts-connectivity-datatransfer-connect-f.md). This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -28,13 +28,13 @@ Disconnects or stops an ongoing connection to a server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [ConnectionParams](arkts-connectivity-datatransfer-connectionparams-i.md) | Yes | Indicates the connection params. |
+| params | [ConnectionParams](arkts-connectivity-datatransfer-connectionparams-i.md) | Yes | Connection parameters of the port. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

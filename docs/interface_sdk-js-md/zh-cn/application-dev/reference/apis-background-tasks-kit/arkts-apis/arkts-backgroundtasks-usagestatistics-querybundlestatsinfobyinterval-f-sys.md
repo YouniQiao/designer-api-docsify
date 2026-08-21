@@ -36,7 +36,7 @@ function queryBundleStatsInfoByInterval(
 | byInterval | IntervalType | 是 | 查询类型。 |
 | begin | long | 是 | 起始时间，单位：ms。 |
 | end | long | 是 | 结束时间，单位：ms。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;BundleStatsInfo&gt;&gt; | 是 | 回调函数。 当查询成功，err为undefined，data为指定时间段间隔内，应用使用时长的统计信息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;BundleStatsInfo&gt;&gt; | 是 | 回调函数。 当查询成功，err为undefined，data为指定时间段间隔内，应用使用时长的统计信息；否则为错误对象。 |
 
 **错误码：**
 

@@ -12,7 +12,7 @@ import { connectedTag } from '@kit.ConnectivityKit';
 function initialize(): void
 ```
 
-Initializes the connected NFC tag.
+Initializes the active tag chip.
 
 **Since:** 9
 

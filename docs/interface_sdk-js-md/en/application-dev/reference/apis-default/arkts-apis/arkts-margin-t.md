@@ -16,5 +16,5 @@ Defines the margin property.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** Padding
+**Property type:** [Padding](arkts-units-padding-i.md)
 

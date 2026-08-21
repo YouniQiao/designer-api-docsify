@@ -12,7 +12,7 @@ import { manager } from '@kit.ConnectivityKit';
 function getPairedDevices(): string[]
 ```
 
-获取已与当前设备配对的设备列表。 如果用户有ohos.permission.GET_NEARLINK_PEER_MAC权限，则返回真实设备地址。否则，返回随机的设备地址
+获取与当前设备配对的设备列表。
 
 **起始版本：** 26.0.0
 
@@ -28,7 +28,7 @@ function getPairedDevices(): string[]
 
 | 类型 | 说明 |
 | --- | --- |
-| string[] | Returns a list of paired devices' address in MAC format (e.g., "11:22:33:AA:BB:FF"). |
+| string[] | 配对设备地址的列表。 |
 
 **错误码：**
 

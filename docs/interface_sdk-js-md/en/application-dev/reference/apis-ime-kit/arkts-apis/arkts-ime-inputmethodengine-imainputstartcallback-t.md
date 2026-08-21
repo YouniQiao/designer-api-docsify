@@ -4,7 +4,7 @@
 export type IMAInputStartCallback = (kbController: KeyboardController, inputClient: InputClient) => void
 ```
 
-The callback of 'inputStart' event.
+@brief The callback of 'inputStart' event.
 
 **Since:** 23
 

@@ -28,7 +28,7 @@ function queryAllPrinterExtensionInfos(callback: AsyncCallback<Array<PrinterExte
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[PrinterExtensionInfo](arkts-basicservices-print-printerextensioninfo-i-sys.md)&gt;&gt; | 是 | 异步查询所有已安装的打印机扩展服务之后的回调。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[PrinterExtensionInfo](arkts-basicservices-print-printerextensioninfo-i-sys.md)&gt;&gt; | 是 | 异步查询所有已安装的打印机扩展服务之后的回调。 |
 
 **错误码：**
 

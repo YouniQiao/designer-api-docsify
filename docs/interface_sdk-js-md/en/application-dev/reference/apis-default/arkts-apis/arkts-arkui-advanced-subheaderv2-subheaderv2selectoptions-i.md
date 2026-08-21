@@ -73,7 +73,7 @@ Callback invoked when an item in the drop-down list box is selected.
 
 Default value: **undefined**
 
-**Type:** [SubHeaderV2SelectOnSelect](../../apis-arkui/arkts-apis/arkts-arkui-subheaderv2selectonselect-t.md)
+**Type:** [SubHeaderV2SelectOnSelect](arkts-subheaderv2selectonselect-t.md)
 
 **Since:** 23
 

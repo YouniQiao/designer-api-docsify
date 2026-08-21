@@ -12,5 +12,5 @@ Represents the KV pair of the [ValueType](arkts-arkdata-sendablerelationalstore-
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**Property type:** collections.Map<string, ValueType>
+**Property type:** collections.Map&lt;string, ValueType&gt;
 

@@ -13,5 +13,5 @@ HTTP response headers.
 **System capability:** 
 - API version 23 and later: SystemCapability.Communication.NetStack
 
-**Property type:** Record<string, string | string[] | undefined>
+**Property type:** Record&lt;string, string | string[] | undefined&gt;
 

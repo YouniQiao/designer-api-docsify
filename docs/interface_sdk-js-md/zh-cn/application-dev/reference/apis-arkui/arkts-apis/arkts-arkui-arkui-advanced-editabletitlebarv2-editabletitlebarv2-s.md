@@ -35,7 +35,7 @@ import { EditableLeftIconTypeV2, EditableTitleBarV2, EditableLeftIconV2, Editabl
 
 **说明：** 左侧头像不支持配置无障碍属性。
 
-**类型：** [EditableTitleBarItemV2](../../apis-default/arkts-apis/arkts-editabletitlebaritemv2-t.md)
+**类型：** [EditableTitleBarItemV2](arkts-arkui-editabletitlebaritemv2-t.md)
 
 **起始版本：** 26.0.0
 
@@ -58,7 +58,7 @@ import { EditableLeftIconTypeV2, EditableTitleBarV2, EditableLeftIconV2, Editabl
 
 默认值：undefined。
 
-**类型：** [EditableLeftIconV2](../../apis-default/arkts-apis/arkts-arkui-advanced-editabletitlebarv2-editablelefticonv2-c.md)
+**类型：** [EditableLeftIconV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editablelefticonv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -83,7 +83,7 @@ import { EditableLeftIconTypeV2, EditableTitleBarV2, EditableLeftIconV2, Editabl
 
 默认值：undefined。
 
-**类型：** Array&lt;[EditableTitleBarMenuItemV2](../../apis-default/arkts-apis/arkts-arkui-advanced-editabletitlebarv2-editabletitlebarmenuitemv2-c.md)&gt;
+**类型：** Array&lt;[EditableTitleBarMenuItemV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlebarmenuitemv2-c.md)&gt;
 
 **起始版本：** 26.0.0
 
@@ -106,7 +106,7 @@ import { EditableLeftIconTypeV2, EditableTitleBarV2, EditableLeftIconV2, Editabl
 
 默认值：new EditableTitleBarStyleV2()。
 
-**类型：** [EditableTitleBarStyleV2](../../apis-default/arkts-apis/arkts-arkui-advanced-editabletitlebarv2-editabletitlebarstylev2-c.md)
+**类型：** [EditableTitleBarStyleV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlebarstylev2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -129,7 +129,7 @@ import { EditableLeftIconTypeV2, EditableTitleBarV2, EditableLeftIconV2, Editabl
 
 默认值：undefined，显示保存按钮。
 
-**类型：** [EditableSaveButtonV2](../../apis-default/arkts-apis/arkts-arkui-advanced-editabletitlebarv2-editablesavebuttonv2-c.md)
+**类型：** [EditableSaveButtonV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editablesavebuttonv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -152,7 +152,7 @@ import { EditableLeftIconTypeV2, EditableTitleBarV2, EditableLeftIconV2, Editabl
 
 默认值：new EditableTitleV2()，表示标题内容为空。
 
-**类型：** ResourceStr \| [EditableTitleV2](../../apis-default/arkts-apis/arkts-arkui-advanced-editabletitlebarv2-editabletitlev2-c.md)
+**类型：** ResourceStr \| [EditableTitleV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlev2-c.md)
 
 **起始版本：** 26.0.0
 

@@ -64,16 +64,5 @@ function getGwpAsanGrayscaleState(): int
 
 **示例**
 
-```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
-import { taskpool } from '@kit.ArkTS';
-
-@Concurrent
-function getGwpAsanStateTask(): number {
-  return hidebug.getGwpAsanGrayscaleState();
-}
-taskpool.execute(getGwpAsanStateTask).then((remainDays: Object) => {
-  console.info(`GWP-ASan remain days: ${remainDays as number}.`);
-})
-```
+参见 [getGwpAsanGrayscaleState](#getgwpasangrayscalestate)
 

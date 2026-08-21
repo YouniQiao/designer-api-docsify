@@ -4,7 +4,7 @@
 export type GetTextIndexAtCursorCallback = () => int
 ```
 
-The callback of 'getTextIndexAtCursor' event.
+@brief The callback of 'getTextIndexAtCursor' event.
 
 **Since:** 23
 

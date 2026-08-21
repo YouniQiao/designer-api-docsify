@@ -1,6 +1,6 @@
 # ConnectionInterval (System API)
 
-The enum of connection interval values.
+Enumerates the connection intervals. A smaller interval indicates a lower latency, higher throughput, but higher power consumption. A larger interval indicates lower power consumption but higher latency. The high-speed mode is suitable for scenarios that require high throughput and low latency, while the low-speed mode is suitable for scenarios that are sensitive to power consumption.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ The enum of connection interval values.
 HIGH_SPEED_INTERVAL_4_5 = 0
 ```
 
-Connection interval 4.5ms.
+Connection interval of 4.5 ms.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Connection interval 4.5ms.
 HIGH_SPEED_INTERVAL_4_875 = 1
 ```
 
-Connection interval 4.875ms.
+Connection interval of 4.875 ms.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ Connection interval 4.875ms.
 MID_SPEED_INTERVAL_11_25 = 2
 ```
 
-Connection interval 11.25ms.
+Connection interval of 11.25 ms.
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ Connection interval 11.25ms.
 MID_SPEED_INTERVAL_15 = 3
 ```
 
-Connection interval 15ms.
+Connection interval of 15 ms.
 
 **Since:** 26.0.0
 
@@ -88,7 +88,7 @@ Connection interval 15ms.
 MID_SPEED_INTERVAL_50 = 4
 ```
 
-Connection interval 50ms.
+Connection interval of 50 ms.
 
 **Since:** 26.0.0
 
@@ -106,7 +106,7 @@ Connection interval 50ms.
 LOW_SPEED_INTERVAL_100 = 5
 ```
 
-Connection interval 100ms.
+Connection interval of 100 ms.
 
 **Since:** 26.0.0
 
@@ -124,7 +124,7 @@ Connection interval 100ms.
 LOW_SPEED_INTERVAL_150 = 6
 ```
 
-Connection interval 150ms.
+Connection interval of 150 ms.
 
 **Since:** 26.0.0
 
@@ -142,7 +142,7 @@ Connection interval 150ms.
 LOW_SPEED_INTERVAL_200 = 7
 ```
 
-Connection interval 200ms.
+Connection interval of 200 ms.
 
 **Since:** 26.0.0
 
@@ -160,7 +160,7 @@ Connection interval 200ms.
 LOW_SPEED_INTERVAL_300 = 8
 ```
 
-Connection interval 300ms.
+Connection interval of 300 ms.
 
 **Since:** 26.0.0
 
@@ -178,7 +178,7 @@ Connection interval 300ms.
 LOW_SPEED_INTERVAL_500 = 9
 ```
 
-Connection interval 500ms.
+Connection interval of 500 ms.
 
 **Since:** 26.0.0
 

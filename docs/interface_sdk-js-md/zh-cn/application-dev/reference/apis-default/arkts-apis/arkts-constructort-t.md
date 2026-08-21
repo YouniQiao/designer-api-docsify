@@ -16,5 +16,5 @@ export type ConstructorT<T> = (() => T)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** (() => T)
+**属性类型：** (() =&gt; T)
 

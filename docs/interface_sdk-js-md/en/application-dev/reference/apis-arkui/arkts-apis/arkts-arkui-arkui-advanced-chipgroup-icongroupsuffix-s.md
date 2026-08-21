@@ -50,7 +50,7 @@ Set system-styled materials for the component. Different materials have differen
 
 Custom builder items.
 
-**Type:** Array&lt;[IconItemOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroup-iconitemoptions-i.md) \| SymbolGlyphModifier \| [SymbolItemOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroup-symbolitemoptions-i.md)&gt;
+**Type:** Array&lt;[IconItemOptions](arkts-arkui-arkui-advanced-chipgroup-iconitemoptions-i.md) \| SymbolGlyphModifier \| [SymbolItemOptions](arkts-arkui-arkui-advanced-chipgroup-symbolitemoptions-i.md)&gt;
 
 **Since:** 12
 

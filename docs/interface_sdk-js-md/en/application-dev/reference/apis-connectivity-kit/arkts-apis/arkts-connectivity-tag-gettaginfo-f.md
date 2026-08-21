@@ -12,11 +12,11 @@ import { tag } from '@kit.ConnectivityKit';
 function getTagInfo(want: Want): TagInfo
 ```
 
-Parse a [TagInfo](arkts-connectivity-tag-taginfo-i.md) object from Want.
+Obtains **TagInfo** from **Want**, which is initialized by the NFC service and contains the attributes required by **TagInfo**.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-tag-function getTagInfo(want: Want): TagInfo--><!--Device-tag-function getTagInfo(want: Want): TagInfo-End-->
 
@@ -26,13 +26,13 @@ Parse a [TagInfo](arkts-connectivity-tag-taginfo-i.md) object from Want.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | The want object that contains the values of TagInfo. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Data obtained from the parameters of the **onCreate** entry function when an ability is dispatched. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TagInfo](arkts-connectivity-tag-taginfo-i.md) | The { |
+| [TagInfo](arkts-connectivity-tag-taginfo-i.md) | TagInfo** object obtained. |
 
 **Error codes:**
 

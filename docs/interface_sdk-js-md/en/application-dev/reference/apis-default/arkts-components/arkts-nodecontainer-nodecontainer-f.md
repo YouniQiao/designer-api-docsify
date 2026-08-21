@@ -25,7 +25,7 @@ Defines NodeContainer Component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | [NodeController](../../apis-arkui/arkts-apis/arkts-arkui-nodecontroller-c.md) | Yes | instance of NodeController. |
+| controller | [NodeController](../arkts-apis/arkts-nodecontroller-c.md) | Yes | instance of NodeController. |
 
 **Return value:**
 

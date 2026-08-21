@@ -12,7 +12,9 @@ import { omapi } from '@kit.ConnectivityKit';
 function on(type: 'stateChanged', callback: Callback<ServiceState>): void
 ```
 
-Register the service state changed event.
+Enables listening for service status change events.
+
+Call this API to register a callback after you use [omapi.newSEService](arkts-connectivity-omapi-newseservice-f.md#newseserviceservicestate) or [omapi.createService](arkts-connectivity-omapi-createservice-f.md) to create a service.
 
 **Since:** 18
 
@@ -24,8 +26,8 @@ Register the service state changed event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'stateChanged' | Yes | The type to register. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ServiceState](arkts-connectivity-omapi-servicestate-e.md)&gt; | Yes | The callback used to listen for the state change event. |
+| type | 'stateChanged' | Yes | Event type. It has a fixed value of **stateChanged**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ServiceState](arkts-connectivity-omapi-servicestate-e.md)&gt; | Yes | Callback used to return the SE service state. |
 
 **Error codes:**
 

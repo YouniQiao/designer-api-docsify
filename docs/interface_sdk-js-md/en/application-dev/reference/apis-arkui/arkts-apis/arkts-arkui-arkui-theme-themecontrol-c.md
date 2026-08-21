@@ -38,5 +38,5 @@ Sets the default Theme:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| theme | [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md) | Yes |  |
+| theme | [CustomTheme](../../apis-default/arkts-apis/arkts-arkui-theme-customtheme-i.md) | Yes |  |
 

@@ -14,5 +14,5 @@ Indicates a row of data with an array.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**Property type:** Array<ValueType>
+**Property type:** Array&lt;ValueType&gt;
 

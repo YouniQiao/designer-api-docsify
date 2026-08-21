@@ -17,7 +17,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function getCurrentInputMethodSubtype(userId?: int): InputMethodSubtype
 ```
 
-Get the current input method subtype of a specified user.
+@brief Get the current input method subtype of a specified user.
 
 **Since:** 26.0.0
 

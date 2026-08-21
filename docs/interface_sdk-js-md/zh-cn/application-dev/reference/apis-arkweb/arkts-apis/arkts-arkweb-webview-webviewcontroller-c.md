@@ -559,7 +559,7 @@ createPdf(configuration: PdfConfiguration, callback: AsyncCallback<PdfData>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | configuration | [PdfConfiguration](arkts-arkweb-webview-pdfconfiguration-i.md) | 是 | 生成PDF所需参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PdfData](arkts-arkweb-webview-pdfdata-c.md)&gt; | 是 | 回调返回网页PDF数据流。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PdfData](arkts-arkweb-webview-pdfdata-c.md)&gt; | 是 | 回调返回网页PDF数据流。 |
 
 **错误码：**
 
@@ -1183,7 +1183,7 @@ getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;cert.X509Cert&gt;&gt; | 是 | 通过AsyncCallback异步返回当前网站的X509格式证书。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;cert.X509Cert&gt;&gt; | 是 | 通过AsyncCallback异步返回当前网站的X509格式证书。 |
 
 **错误码：**
 
@@ -1969,7 +1969,7 @@ hasImage(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 返回查找页面是否存在图像。 <br> true表示页面存在图像；false表示页面不存在图像。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 返回查找页面是否存在图像。 <br> true表示页面存在图像；false表示页面不存在图像。 |
 
 **错误码：**
 
@@ -2342,7 +2342,7 @@ off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachSta
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'controllerAttachStateChange' | 是 | 表示注册WebViewController绑定状态事件，固定为"controllerAttachStateChange"。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 否 | WebViewController绑定状态发生改变时的回调函数，默认情况下不填写回调函数。如果填写了Callback， 将仅取消注册该特定的回调。如果不填写Callback，将取消注册所有回调。 <br>传入null或undefined时会抛出异常错误码401。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 否 | WebViewController绑定状态发生改变时的回调函数，默认情况下不填写回调函数。如果填写了Callback， 将仅取消注册该特定的回调。如果不填写Callback，将取消注册所有回调。 <br>传入null或undefined时会抛出异常错误码401。 |
 
 ## onActive
 
@@ -2437,7 +2437,7 @@ on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'controllerAttachStateChange' | 是 | 表示注册WebViewController绑定状态事件，固定为"controllerAttachStateChange"。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 是 | WebViewController绑定状态改变时的回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 是 | WebViewController绑定状态改变时的回调函数。 |
 
 ## pageDown
 
@@ -3205,7 +3205,7 @@ runJavaScript(script: string, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | script | string | 是 | JavaScript脚本。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调执行JavaScript脚本结果。JavaScript脚本若执行失败或无返回值时，返回null。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调执行JavaScript脚本结果。JavaScript脚本若执行失败或无返回值时，返回null。 |
 
 **错误码：**
 
@@ -3279,7 +3279,7 @@ runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessage
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | script | string \| ArrayBuffer | 是 | JavaScript脚本。<br>**起始版本：** 12 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[JsMessageExt](arkts-arkweb-webview-jsmessageext-c.md)&gt; | 是 | 回调执行JavaScript脚本结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[JsMessageExt](arkts-arkweb-webview-jsmessageext-c.md)&gt; | 是 | 回调执行JavaScript脚本结果。 |
 
 **错误码：**
 
@@ -4725,7 +4725,7 @@ storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<str
 | --- | --- | --- | --- |
 | baseName | string | 是 | 生成的离线网页存储位置，该值不能为空。 |
 | autoName | boolean | 是 | 决定是否自动生成文件名。 <br>false表示按baseName的文件名存储，true表示根据当前URL自动生成文件名，并按baseName的文件目录存储。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 返回文件存储路径，保存网页失败会返回null。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 返回文件存储路径，保存网页失败会返回null。 |
 
 **错误码：**
 
@@ -4874,7 +4874,7 @@ webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | info | [SnapshotInfo](arkts-arkweb-webview-snapshotinfo-i.md) | 是 | 全量绘制结果入参。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SnapshotResult](arkts-arkweb-webview-snapshotresult-i.md)&gt; | 是 | 全量绘制回调结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SnapshotResult](arkts-arkweb-webview-snapshotresult-i.md)&gt; | 是 | 全量绘制回调结果。 |
 
 ## zoom
 

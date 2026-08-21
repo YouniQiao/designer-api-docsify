@@ -26,5 +26,5 @@ export declare function PopupV2(options: PopupV2InitInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [PopupV2InitInfo](arkts-arkui-advanced-popupv2-popupv2initinfo-i.md) | 是 | 定义PopupV2组件的配置参数。 |
+| options | [PopupV2InitInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-popupv2-popupv2initinfo-i.md) | 是 | 定义PopupV2组件的配置参数。 |
 

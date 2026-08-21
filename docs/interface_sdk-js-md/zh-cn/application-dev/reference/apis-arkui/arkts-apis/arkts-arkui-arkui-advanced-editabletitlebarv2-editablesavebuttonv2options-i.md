@@ -78,7 +78,7 @@ onAction?: OnActionCallback
 
 点击保存按钮的回调函数。未设置时点击按钮无响应。
 
-**类型：** [OnActionCallback](../../apis-default/arkts-apis/arkts-onactioncallback-t.md)
+**类型：** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
 
 **起始版本：** 26.0.0
 

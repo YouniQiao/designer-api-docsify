@@ -16,5 +16,5 @@ Define the FrameNode type for Swiper.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** SwiperFrameNode
+**属性类型：** [SwiperFrameNode](arkts-typenode-swiperframenode-c.md)
 

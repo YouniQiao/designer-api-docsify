@@ -43,7 +43,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elements | [SegmentButtonItemTuple](arkts-arkui-segmentbuttonitemtuple-t.md) | Yes | Button information. |
+| elements | [SegmentButtonItemTuple](../../apis-default/arkts-apis/arkts-segmentbuttonitemtuple-t.md) | Yes | Button information. |
 
 ## create
 
@@ -67,13 +67,13 @@ Creates a **SegmentButtonItemOptionsArray** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elements | [SegmentButtonItemTuple](arkts-arkui-segmentbuttonitemtuple-t.md) | Yes | Button information. |
+| elements | [SegmentButtonItemTuple](../../apis-default/arkts-apis/arkts-segmentbuttonitemtuple-t.md) | Yes | Button information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SegmentButtonItemOptionsArray](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptionsarray-c.md) | Created SegmentButtonItemOptionsArray object. |
+| [SegmentButtonItemOptionsArray](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-segmentbuttonitemoptionsarray-c.md) | Created SegmentButtonItemOptionsArray object. |
 
 ## pop
 
@@ -97,7 +97,7 @@ Removes the last element from this array and returns that element.
 
 | Type | Description |
 | --- | --- |
-| [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) \| undefined | Element removed from the array. |
+| [SegmentButtonItemOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) \| undefined | Element removed from the array. |
 
 ## push
 
@@ -151,7 +151,7 @@ Removes the first element from this array and returns that element.
 
 | Type | Description |
 | --- | --- |
-| [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) \| undefined | Element removed from the array. |
+| [SegmentButtonItemOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) \| undefined | Element removed from the array. |
 
 ## splice
 
@@ -177,13 +177,13 @@ Changes the contents of this array by removing the specified number of elements 
 | --- | --- | --- | --- |
 | start | number | Yes | Index of the position starting from which elements are to be removed. |
 | deleteCount | number | Yes | Number of elements to remove. |
-| items | [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)[] | Yes | Element to be added to the array from start. <br>Default value: If no element is specified, the element is deleted from the array. |
+| items | [SegmentButtonItemOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)[] | Yes | Element to be added to the array from start. <br>Default value: If no element is specified, the element is deleted from the array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)[] | An array containing the removed elements. |
+| [SegmentButtonItemOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)[] | An array containing the removed elements. |
 
 ## unshift
 

@@ -1038,12 +1038,5 @@ static staticClear(): boolean
 
 **示例**
 
-```TypeScript
-let clearResult = AppStorage.staticClear();
-```
-
-```TypeScript
-AppStorage.SetOrCreate('PropA', 47);
-let res: boolean = AppStorage.Clear(); // true，已经没有订阅者
-```
+参见 [Clear](#clear)
 

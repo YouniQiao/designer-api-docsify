@@ -25,7 +25,7 @@ actionPhases: Array<GestureActionPhase>
 
 手势事件对象。
 
-**类型：** Array&lt;[GestureActionPhase](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-gestureactionphase-e.md)&gt;
+**类型：** Array&lt;[GestureActionPhase](arkts-arkui-uicontext-gestureactionphase-e.md)&gt;
 
 **起始版本：** 26.0.0
 

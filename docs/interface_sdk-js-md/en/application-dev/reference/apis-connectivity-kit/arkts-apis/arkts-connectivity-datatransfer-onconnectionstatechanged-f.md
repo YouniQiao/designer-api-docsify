@@ -12,9 +12,9 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 function onConnectionStateChanged(callback: Callback<ConnectionResult>): void
 ```
 
-Subscribes to the connection state change event.
+Subscribes to the connection state change event of the port channel. This API uses an asynchronous callback to return the result.
 
-This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
+The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 
@@ -28,7 +28,7 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ConnectionResult](arkts-connectivity-datatransfer-connectionresult-i.md)&gt; | Yes | Callback used to listen for the state change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ConnectionResult](arkts-connectivity-datatransfer-connectionresult-i.md)&gt; | Yes | Callback used to return the negotiation result of port connection parameters with a remote device. |
 
 **Error codes:**
 

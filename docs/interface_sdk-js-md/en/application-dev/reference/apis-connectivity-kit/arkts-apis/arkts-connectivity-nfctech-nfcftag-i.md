@@ -1,6 +1,12 @@
 # NfcFTag
 
-Provides methods for creating an NFC-F tag, obtaining tag information, and controlling tag read and write. &lt;p&gt;This class inherits from the TagSession abstract class and provides interfaces to create an {@code NfcFTag} and obtain the tag information.
+Provides APIs to access NFC-F (JIS 6319-4) properties and perform I/O operations on a tag. This class inherits from **TagSession**.
+
+**TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).
+
+For details about how to obtain an **NfcFTag** object, see [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).
+
+The following describes the unique APIs of **NfcFTag**.
 
 **Inheritance/Implementation:** NfcFTag extends TagSession
 
@@ -16,11 +22,11 @@ Provides methods for creating an NFC-F tag, obtaining tag information, and contr
 getPmm(): int[]
 ```
 
-Obtains the PMm (consisting of the IC code and manufacturer parameters) from this {@code NfcFTag} instance.
+Obtains the PMm (consisting of the IC code and manufacturer parameters) information from this NFC-F tag.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NfcFTag-getPmm(): int[]--><!--Device-NfcFTag-getPmm(): int[]-End-->
 
@@ -30,7 +36,7 @@ Obtains the PMm (consisting of the IC code and manufacturer parameters) from thi
 
 | Type | Description |
 | --- | --- |
-| int[] | Returns the PMm. |
+| int[] | PMm information obtained, which consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
 
 **Examples**
 
@@ -48,11 +54,11 @@ console.info("nfcF pmm: " + pmm);
 getSystemCode(): int[]
 ```
 
-Obtains the system code from this {@code NfcFTag} instance.
+Obtains the system code from this NFC-F tag.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NfcFTag-getSystemCode(): int[]--><!--Device-NfcFTag-getSystemCode(): int[]-End-->
 
@@ -62,7 +68,7 @@ Obtains the system code from this {@code NfcFTag} instance.
 
 | Type | Description |
 | --- | --- |
-| int[] | Returns the system code. |
+| int[] | System code obtained, which consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
 
 **Examples**
 

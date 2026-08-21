@@ -22,7 +22,7 @@ dateOptions?: DateOptions
 
 日期选项。
 
-**类型：** [DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md)
+**类型：** [DateOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-datepickercomponent-dateoptions-c.md)
 
 **起始版本：** 26.0.0
 
@@ -50,7 +50,7 @@ displayMode?: DisplayMode
 > - TIME：仅显示时间，使用timeOptions，适用于只需要用户选择时间的场景，如闹钟设置、提醒时间设置等。
 > - DATE_TIME：同时显示日期和时间，dateOptions与timeOptions同时生效，适用于需要用户同时选择日期和时间的场景，如日程安排、会议时间设 &gt; 置等。
 
-**类型：** [DisplayMode](arkts-arkui-arkui-advanced-datepickercomponent-displaymode-e.md)
+**类型：** [DisplayMode](../../apis-default/arkts-apis/arkts-arkui-advanced-datepickercomponent-displaymode-e.md)
 
 **默认值：** DisplayMode.DATE
 
@@ -72,7 +72,7 @@ timeOptions?: TimeOptions
 
 时间选项。
 
-**类型：** [TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md)
+**类型：** [TimeOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-datepickercomponent-timeoptions-c.md)
 
 **起始版本：** 26.0.0
 

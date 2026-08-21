@@ -12,5 +12,5 @@ Position of an object in 3D space. The type is a three-dimensional vector. The u
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-**Property type:** Vec3
+**Property type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
 

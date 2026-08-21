@@ -1,6 +1,6 @@
 # InputMethodProperty
 
-input method property
+@brief Describes the input method application attributes.
 
 **Since:** 23
 
@@ -25,7 +25,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 readonly enabledState?: EnabledState
 ```
 
-The enabledState of input method
+@brief Optional. <br> <br>- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension. <br>- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates whether the input method is enabled.
 
 **Type:** [EnabledState](arkts-ime-inputmethod-enabledstate-e.md)
 
@@ -41,7 +41,7 @@ The enabledState of input method
 extra?: object
 ```
 
-The extra info of input method
+@brief Extra information about the input method. This parameter is reserved and currently has no specific meaning. <br> <br>- API version 10 and later: optional <br>- API version 9: mandatory
 
 **Type:** object
 
@@ -57,7 +57,7 @@ The extra info of input method
 readonly icon?: string
 ```
 
-The icon of input method
+@brief Optional. <br> <br>- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension. <br>- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates the input method icon data, which can be obtained through icon ID.
 
 **Type:** string
 
@@ -73,7 +73,7 @@ The icon of input method
 readonly iconId?: long
 ```
 
-The icon id of input method
+@brief Optional. <br> <br>- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension. <br>- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates the resource ID of the **icon** field.
 
 **Type:** long
 
@@ -89,7 +89,7 @@ The icon id of input method
 readonly id: string
 ```
 
-The id of input method
+@brief Mandatory. Unique identifier of an input method extension in an app. **id** and **name** form a globally unique identifier of the input method extension.
 
 **Type:** string
 
@@ -105,7 +105,7 @@ The id of input method
 readonly label?: string
 ```
 
-The label of input method
+@brief Optional. <br> <br>- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension. <br>- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates the name of the input method extension displayed externally. Use the label configured for the InputMethodExtensionAbility. If no label is configured, the label of the application entry ability is automatically used. If no label is configured for the application entry ability, the label configured in **AppScope** is automatically used.
 
 **Type:** string
 
@@ -121,7 +121,7 @@ The label of input method
 readonly labelId?: long
 ```
 
-The label id of input method
+@brief Optional. <br> <br>- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension. <br>- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates the resource ID of the **label** field.
 
 **Type:** long
 
@@ -137,7 +137,7 @@ The label id of input method
 readonly methodId: string
 ```
 
-The id of input method
+@brief Unique ID of the input method. Mandatory.
 
 **Type:** string
 
@@ -157,7 +157,7 @@ The id of input method
 readonly name: string
 ```
 
-The name of input method
+@brief Mandatory. Name of the input method package.
 
 **Type:** string
 
@@ -173,7 +173,7 @@ The name of input method
 readonly packageName: string
 ```
 
-The name of input method
+@brief Name of the input method package. Mandatory.
 
 **Type:** string
 

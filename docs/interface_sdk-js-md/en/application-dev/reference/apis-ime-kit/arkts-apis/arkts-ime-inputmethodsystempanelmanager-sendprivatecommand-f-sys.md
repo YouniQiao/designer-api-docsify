@@ -12,7 +12,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>
 ```
 
-Send private command.
+@brief Sends a private command to the system-default input method application.
 
 **Since:** 26.0.0
 
@@ -28,13 +28,13 @@ Send private command.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| commandData | Record&lt;string, CommandDataType&gt; | Yes | command data which will be sent. Max size 32KB. |
+| commandData | Record&lt;string, CommandDataType&gt; | Yes | Command data to be sent. The maximum size is 32 KB, and a maximum of five commands are allowed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

@@ -4,7 +4,7 @@
 export type TouchPosition = _TouchPosition
 ```
 
-The touch position of an accessibility virtual node.
+Touch tap position. For details, see [TouchPosition](arkts-accessibility-accessibilityextensioncontext-touchposition-i-sys.md).
 
 **Since:** 26.0.0
 

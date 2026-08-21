@@ -610,7 +610,7 @@ startDataLoading(options: DataSyncOptions): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | 是 | 获取拖拽数据时的参数，包含目标路径、文件冲突选项、进度条类型等。数据传输过程中可使用 [cancelDataLoading](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c.md#canceldataloading)接口取消数据加载。 |
+| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | 是 | 获取拖拽数据时的参数，包含目标路径、文件冲突选项、进度条类型等。数据传输过程中可使用 [cancelDataLoading](../../apis-default/arkts-apis/arkts-arkui-uicontext-dragcontroller-c.md#canceldataloading)接口取消数据加载。 |
 
 **返回值：**
 
@@ -637,7 +637,7 @@ autoHideComponentUniqueIds?: int | int[]
 
 若拖拽源本身也需要隐藏，需要同时传入拖拽源组件的uniqueId。
 
-组件的uniqueId可通过[UIContext.getFrameNodeById()](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getframenodebyid) 配合[FrameNode.getUniqueId()](../../apis-default/arkts-apis/arkts-framenode-c.md#getuniqueid)获取。
+组件的uniqueId可通过[UIContext.getFrameNodeById()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getframenodebyid) 配合[FrameNode.getUniqueId()](../arkts-apis/arkts-arkui-framenode-c.md#getuniqueid)获取。
 
 开发者应在[onDragEnd](arkts-arkui-commonmethod-c.md#ondragend)或 onDrop中恢复组件显示状态。
 

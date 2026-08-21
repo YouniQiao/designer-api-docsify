@@ -35,7 +35,7 @@ The constructor used to create a ArcSliderOptions object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ArcSliderOptionsConstructorOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcslideroptionsconstructoroptions-i.md) | No |  |
+| options | [ArcSliderOptionsConstructorOptions](arkts-arkui-advanced-arcslider-arcslideroptionsconstructoroptions-i.md) | No |  |
 
 ## digitalCrownSensitivity
 
@@ -65,7 +65,7 @@ Set the sensitivity of rotating crown.
 
 Configure parameters for component.
 
-**Type:** [ArcSliderLayoutOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md)
+**Type:** [ArcSliderLayoutOptions](arkts-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md)
 
 **Since:** 23
 
@@ -84,7 +84,7 @@ Configure parameters for component.
 
 Value changing triggers the callback.
 
-**Type:** [ArcSliderChangeHandler](../../apis-arkui/arkts-apis/arkts-arkui-arcsliderchangehandler-t.md)
+**Type:** [ArcSliderChangeHandler](arkts-arcsliderchangehandler-t.md)
 
 **Since:** 23
 
@@ -103,7 +103,7 @@ Value changing triggers the callback.
 
 Enlarged type changing triggers the callback.
 
-**Type:** [ArcSliderEnlargeHandler](../../apis-arkui/arkts-apis/arkts-arkui-arcsliderenlargehandler-t.md)
+**Type:** [ArcSliderEnlargeHandler](arkts-arcsliderenlargehandler-t.md)
 
 **Since:** 23
 
@@ -122,7 +122,7 @@ Enlarged type changing triggers the callback.
 
 Touching triggers the callback.
 
-**Type:** [ArcSliderTouchHandler](../../apis-arkui/arkts-apis/arkts-arkui-arcslidertouchhandler-t.md)
+**Type:** [ArcSliderTouchHandler](arkts-arcslidertouchhandler-t.md)
 
 **Since:** 23
 
@@ -141,7 +141,7 @@ Touching triggers the callback.
 
 Configure parameters for component.
 
-**Type:** [ArcSliderStyleOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
+**Type:** [ArcSliderStyleOptions](arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
 
 **Since:** 23
 
@@ -160,7 +160,7 @@ Configure parameters for component.
 
 Configure parameters for component.
 
-**Type:** [ArcSliderValueOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptions-c.md)
+**Type:** [ArcSliderValueOptions](arkts-arkui-advanced-arcslider-arcslidervalueoptions-c.md)
 
 **Since:** 23
 

@@ -14,5 +14,5 @@ type TaskSignal = fileIo.TaskSignal
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
-**属性类型：** fileIo.TaskSignal
+**属性类型：** [fileIo.TaskSignal](arkts-fileio-tasksignal-c.md)
 

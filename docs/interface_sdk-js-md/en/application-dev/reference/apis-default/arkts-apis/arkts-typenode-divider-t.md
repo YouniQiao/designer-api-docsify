@@ -16,5 +16,5 @@ Define the FrameNode type for Divider.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** DividerFrameNode
+**Property type:** [DividerFrameNode](arkts-typenode-dividerframenode-c.md)
 

@@ -27,7 +27,7 @@ function onP2pStateChange(callback: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | 状态改变回调函数。返回1：空闲，2：打开中，3：已打开，4：关闭中，5：已关闭。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 状态改变回调函数。返回1：空闲，2：打开中，3：已打开，4：关闭中，5：已关闭。 |
 
 **错误码：**
 

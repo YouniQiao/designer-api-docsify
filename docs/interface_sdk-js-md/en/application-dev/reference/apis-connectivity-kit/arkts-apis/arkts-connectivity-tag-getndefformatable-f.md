@@ -12,11 +12,11 @@ import { tag } from '@kit.ConnectivityKit';
 function getNdefFormatable(tagInfo: TagInfo): NdefFormatableTag
 ```
 
-Obtains an [NdefFormatableTag](arkts-connectivity-tag-ndefformatabletag-t.md) object based on the tag information. During tag reading, if the tag supports the NDEF Formatable technology, an [NdefFormatableTag](arkts-connectivity-tag-ndefformatabletag-t.md) object will be created based on the tag information.
+Obtains an **NdefFormatableTag** object, which allows access to the tags that are NDEF formattable.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-tag-function getNdefFormatable(tagInfo: TagInfo): NdefFormatableTag--><!--Device-tag-function getNdefFormatable(tagInfo: TagInfo): NdefFormatableTag-End-->
 
@@ -32,7 +32,7 @@ Obtains an [NdefFormatableTag](arkts-connectivity-tag-ndefformatabletag-t.md) ob
 
 | Type | Description |
 | --- | --- |
-| NdefFormatableTag | The { |
+| NdefFormatableTag | NdefFormatableTag** object obtained. |
 
 **Error codes:**
 

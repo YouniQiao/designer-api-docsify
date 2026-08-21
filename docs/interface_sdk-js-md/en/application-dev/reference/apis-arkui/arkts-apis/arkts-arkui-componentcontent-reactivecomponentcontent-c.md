@@ -32,7 +32,7 @@ Constructor of ReactiveComponentContent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
 | builder | WrappedBuilder&lt;T&gt; | Yes | Encapsulates the WrappedBuilder object of the @Builder function with parameters. |
 | config | [BuildOptions](../../apis-default/arkts-apis/arkts-buildernode-buildoptions-i.md) | Yes | Configures the build behavior of the builder. All attributes in BuildOptions are optional. The default value is the corresponding default value in BuildOptions. |
 | args | T | Yes | Parameters of the builder function encapsulated in the **WrappedBuilder** object. Transfers external data to the WrappedBuilder&lt;T&gt and build functions specified in the constructor. Multiple input parameters are supported. The default value is **undefined**. |
@@ -747,7 +747,7 @@ recycle(): void
 
 Recycles the custom component in ReactiveComponentContent. Component recycling is part of the component reuse mechanism. For details, see [@Reusable Decorator: Reusing V1 Components](../../../ui/state-management/arkts-reusable.md). Since API version 26 .0.0, custom components in **ReactiveComponentContent** support V2 component reuse. For details, see [@ReusableV2 Decorator: Reusing Components](../../../ui/state-management/arkts-new-reusableV2.md).
 
-**ReactiveComponentContent** completes the reuse event transfer between internal and external custom components through [reuse](../../apis-default/arkts-apis/arkts-componentcontent-c.md#reuse) and **recycle**. For specific usage scenarios, see [Implementing Node Reuse with the BuilderNode reuse and recycle APIs](../../../ui/arkts-user-defined-arktsNode-builderNode.md#implementing-node-reuse-with-the-buildernode-reuse-and-recycle-apis).
+**ReactiveComponentContent** completes the reuse event transfer between internal and external custom components through [reuse](arkts-arkui-componentcontent-c.md#reuse) and **recycle**. For specific usage scenarios, see [Implementing Node Reuse with the BuilderNode reuse and recycle APIs](../../../ui/arkts-user-defined-arktsNode-builderNode.md#implementing-node-reuse-with-the-buildernode-reuse-and-recycle-apis).
 
 **Since:** 22
 
@@ -939,7 +939,7 @@ reuse(param?: Object): void
 
 Triggers component reuse for custom components under this **ReactiveComponentContent**. For details about component reuse, see [@Reusable Decorator: Reusing V1 Components](../../../ui/state-management/arkts-reusable.md). For details about the scenarios involving **ReactiveComponentContent** unbinding, see [Canceling the Reference to the Entity Node](../../../ui/arkts-user-defined-arktsNode-builderNode.md#canceling-the-reference-to-the-entity-node). Since API version 26.0.0, custom components in **ReactiveComponentContent** support V2 component reuse. For details, see [@ReusableV2 Decorator: Reusing Components](../../../ui/state-management/arkts-new-reusableV2.md).
 
-**ReactiveComponentContent** completes the reuse event transfer between internal and external custom components through **reuse** and [recycle](../../apis-default/arkts-apis/arkts-componentcontent-c.md#recycle). For specific usage scenarios, see [Implementing Node Reuse with the BuilderNode reuse and recycle APIs](../../../ui/arkts-user-defined-arktsNode-builderNode.md#implementing-node-reuse-with-the-buildernode-reuse-and-recycle-apis).
+**ReactiveComponentContent** completes the reuse event transfer between internal and external custom components through **reuse** and [recycle](arkts-arkui-componentcontent-c.md#recycle). For specific usage scenarios, see [Implementing Node Reuse with the BuilderNode reuse and recycle APIs](../../../ui/arkts-user-defined-arktsNode-builderNode.md#implementing-node-reuse-with-the-buildernode-reuse-and-recycle-apis).
 
 **Since:** 22
 
@@ -955,7 +955,7 @@ Triggers component reuse for custom components under this **ReactiveComponentCon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | Object | No | Parameter used to reuse [ReactiveComponentContent](../../apis-default/arkts-apis/arkts-componentcontent-reactivecomponentcontent-c.md). This parameter is directly used for reusing all top-level custom components in **ReactiveComponentContent**. It should contain the content required by the constructor parameters of each custom component. Otherwise, undefined behavior may occur. Calling this method synchronously triggers the [aboutToReuse](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoreuse10) lifecycle callback of internal custom components, with this parameter as the callback input. The default value is undefined. In this case, the custom component in ReactiveComponentContent directly uses the data source during construction. |
+| param | Object | No | Parameter used to reuse [ReactiveComponentContent](#reactivecomponentcontent). This parameter is directly used for reusing all top-level custom components in **ReactiveComponentContent**. It should contain the content required by the constructor parameters of each custom component. Otherwise, undefined behavior may occur. Calling this method synchronously triggers the [aboutToReuse](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoreuse10) lifecycle callback of internal custom components, with this parameter as the callback input. The default value is undefined. In this case, the custom component in ReactiveComponentContent directly uses the data source during construction. |
 
 **Examples**
 

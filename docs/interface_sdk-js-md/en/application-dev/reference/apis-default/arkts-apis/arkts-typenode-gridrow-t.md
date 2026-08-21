@@ -16,5 +16,5 @@ Define the FrameNode type for GridRow.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** GridRowFrameNode
+**Property type:** [GridRowFrameNode](arkts-typenode-gridrowframenode-c.md)
 

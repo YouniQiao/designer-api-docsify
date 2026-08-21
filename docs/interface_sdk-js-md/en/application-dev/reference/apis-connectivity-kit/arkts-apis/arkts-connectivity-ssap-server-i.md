@@ -1,6 +1,10 @@
 # Server
 
-Manages SSAP server. Before calling a SSAP server method, you must use [createServer](arkts-connectivity-ssap-createserver-f.md) to create a SSAP server instance.
+Represents a SSAP server class, which provides APIs for connecting to and exchanging data with the client.
+
+Before using the methods of this class, you need to call [ssap.createServer](arkts-connectivity-ssap-createserver-f.md) to create an instance of this class.
+
+An app only needs to create one [Server](#server) instance. Repeated creation will increase unnecessary resource overhead.
 
 **Since:** 26.0.0
 
@@ -20,7 +24,7 @@ import { ssap } from '@kit.ConnectivityKit';
 addService(service: Service): void
 ```
 
-Adds a SSAP service.
+Adds a service on the server.
 
 **Since:** 26.0.0
 
@@ -36,7 +40,7 @@ Adds a SSAP service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| service | [Service](arkts-connectivity-ssap-service-i.md) | Yes | ssap service need to be added and registered. |
+| service | [Service](arkts-connectivity-ssap-service-i.md) | Yes | Service provided by the server. Multiple services can be added, identified by their UUIDs. |
 
 **Error codes:**
 
@@ -54,7 +58,7 @@ Adds a SSAP service.
 close(): void
 ```
 
-Closes this {@code Server} object and unregisters its callbacks.
+Closes the server and unregisters the callback.
 
 **Since:** 26.0.0
 
@@ -80,7 +84,7 @@ Closes this {@code Server} object and unregisters its callbacks.
 notifyPropertyChanged(address: string, property: Property): Promise<void>
 ```
 
-Notifies the client that the value of a property on the server has changed.
+Notifies the client of property value updates. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -96,14 +100,14 @@ Notifies the client that the value of a property on the server has changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | string | Yes | Indicates the device address. <br>The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF. |
-| property | [Property](arkts-connectivity-ssap-property-i.md) | Yes | Indicates the property to notify. |
+| address | string | Yes | Client device address. The address format is **11:22:33:AA:BB:FF**. |
+| property | [Property](arkts-connectivity-ssap-property-i.md) | Yes | Property whose value changes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -122,7 +126,7 @@ Notifies the client that the value of a property on the server has changed.
 offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void
 ```
 
-Unsubscribes from server connection state changed events.
+Unsubscribes from the connection status change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
 
@@ -136,7 +140,7 @@ Unsubscribes from server connection state changed events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | No | Callback used to listen for the SSAP connection state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | No | Callback used to return the connection status reporting parameters. <br>If this parameter is specified, the current callback is unregistered. If this parameter is not specified, all callbacks corresponding to the event are unregistered. |
 
 ## offMtuChange
 
@@ -144,7 +148,7 @@ Unsubscribes from server connection state changed events.
 offMtuChange(callback?: Callback<int>): void
 ```
 
-Unsubscribes from MTU changed events.
+Unsubscribes from the MTU change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
 
@@ -158,7 +162,7 @@ Unsubscribes from MTU changed events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to listen for the MTU changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to return the MTU after negotiation. <br>If this parameter is specified, the current callback is unregistered. If this parameter is not specified, all callbacks corresponding to the event are unregistered. |
 
 ## offPropertyRead
 
@@ -166,7 +170,7 @@ Unsubscribes from MTU changed events.
 offPropertyRead(callback?: Callback<PropertyReadRequest>): void
 ```
 
-Unsubscribes from property read events from the client.
+Unsubscribes from the client property read request event. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
 
@@ -180,7 +184,7 @@ Unsubscribes from property read events from the client.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PropertyReadRequest](arkts-connectivity-ssap-propertyreadrequest-i.md)&gt; | No | Callback used to listen for the property operation event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PropertyReadRequest](arkts-connectivity-ssap-propertyreadrequest-i.md)&gt; | No | Callback used to return the property read request parameters of the client. <br>If this parameter is specified, the current callback is unregistered. If this parameter is not specified, all callbacks corresponding to the event are unregistered. |
 
 ## offPropertyWrite
 
@@ -188,7 +192,7 @@ Unsubscribes from property read events from the client.
 offPropertyWrite(callback?: Callback<PropertyWriteRequest>): void
 ```
 
-Unsubscribes from property write events from the client.
+Unsubscribes from the client property write request event. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
 
@@ -202,7 +206,7 @@ Unsubscribes from property write events from the client.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PropertyWriteRequest](arkts-connectivity-ssap-propertywriterequest-i.md)&gt; | No | Callback used to listen for the property operation event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PropertyWriteRequest](arkts-connectivity-ssap-propertywriterequest-i.md)&gt; | No | Callback used to return the property write request parameters of the client. If this parameter is specified, the current callback is unsubscribed. If this parameter is not specified, all callbacks corresponding to the event are unsubscribed. |
 
 ## onConnectionStateChange
 
@@ -210,9 +214,9 @@ Unsubscribes from property write events from the client.
 onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 ```
 
-Subscribes to server connection state changed events.
+Subscribes to the connection status change event. This API uses an asynchronous callback to return the result.
 
-This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned.
+The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 
@@ -226,7 +230,7 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | Yes | Callback used to listen for the SSAP connection state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | Yes | Callback used to return the connection status reporting parameters. |
 
 ## onMtuChange
 
@@ -234,9 +238,9 @@ This event is accessible only to applications that granted the ohos.permission.N
 onMtuChange(callback: Callback<int>): void
 ```
 
-Subscribes to MTU changed events.
+Subscribes to the MTU change event. This API uses an asynchronous callback to return the result.
 
-This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
+The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 
@@ -250,7 +254,7 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to listen for the MTU changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the MTU after negotiation. |
 
 ## onPropertyRead
 
@@ -258,9 +262,9 @@ This event is accessible only to applications that granted the ohos.permission.N
 onPropertyRead(callback: Callback<PropertyReadRequest>): void
 ```
 
-Subscribes to property read events from the client.
+Subscribes to the client property read request event. This API uses an asynchronous callback to return the result.
 
-This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned.
+The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 
@@ -274,7 +278,7 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PropertyReadRequest](arkts-connectivity-ssap-propertyreadrequest-i.md)&gt; | Yes | Callback used to listen for the property operation event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PropertyReadRequest](arkts-connectivity-ssap-propertyreadrequest-i.md)&gt; | Yes | Callback used to return the property read request parameters of the client. |
 
 ## onPropertyWrite
 
@@ -282,9 +286,9 @@ This event is accessible only to applications that granted the ohos.permission.N
 onPropertyWrite(callback: Callback<PropertyWriteRequest>): void
 ```
 
-Subscribes to property write events from the client.
+Subscribes to the client property write request event. This API uses an asynchronous callback to return the result.
 
-This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned.
+The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 
@@ -298,7 +302,7 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PropertyWriteRequest](arkts-connectivity-ssap-propertywriterequest-i.md)&gt; | Yes | Callback used to listen for the property operation event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PropertyWriteRequest](arkts-connectivity-ssap-propertywriterequest-i.md)&gt; | Yes | Callback used to return the property write request parameters of the client. |
 
 ## removeService
 
@@ -306,7 +310,7 @@ This event is accessible only to applications that granted the ohos.permission.N
 removeService(serviceUuid: string): void
 ```
 
-Removes a specific SSAP service.
+Removes a service from the server.
 
 **Since:** 26.0.0
 
@@ -322,7 +326,7 @@ Removes a specific SSAP service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serviceUuid | string | Yes | Specific SSAP service to be removed <br>The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. <br>NearLink standard UUIDs are not allowed. |
+| serviceUuid | string | Yes | NearLink service UUID, which is a string of 36 characters. The value consists of 32 hexadecimal digits and four hyphens (-), for example, **FFFFFFFF-1234-5678-ABCD-000000001234**, which indicates a 128-bit ID. The value cannot be set to a standard NearLink UUID. |
 
 **Error codes:**
 
@@ -340,7 +344,7 @@ Removes a specific SSAP service.
 sendResponse(response: ServerResponse): void
 ```
 
-Responds to read or write requests from the client.
+Responds to read or write requests from the client. After receiving a request reported by [ssap.onPropertyRead](#onpropertyread) or [ssap.onPropertyWrite](#onpropertywrite), call this API to send data to the corresponding client.
 
 **Since:** 26.0.0
 
@@ -356,7 +360,7 @@ Responds to read or write requests from the client.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| response | ServerResponse | Yes | Indicates the response. |
+| response | ServerResponse | Yes | Response data for the client. |
 
 **Error codes:**
 

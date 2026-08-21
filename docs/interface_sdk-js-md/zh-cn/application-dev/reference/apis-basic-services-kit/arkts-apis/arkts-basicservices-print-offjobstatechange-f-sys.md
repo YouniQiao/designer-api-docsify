@@ -28,7 +28,7 @@ Unregister event callback for the state change of print job.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;boolean&gt; | 否 | The callback function for state change of printer. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | The callback function for state change of printer. |
 
 **错误码：**
 

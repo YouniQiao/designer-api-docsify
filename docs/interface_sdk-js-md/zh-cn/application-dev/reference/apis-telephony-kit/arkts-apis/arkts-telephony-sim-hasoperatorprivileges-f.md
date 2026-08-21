@@ -25,7 +25,7 @@ Checks whether your application (the caller) has been granted the operator permi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | int | 是 | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | Indicates the callback of hasOperatorPrivileges. Returns {@code true} if your application has been granted the operator permissions; returns {@code false} otherwise. If no SIM card is inserted or the SIM card is deactivated will be return {@code false}. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | Indicates the callback of hasOperatorPrivileges. Returns {@code true} if your application has been granted the operator permissions; returns {@code false} otherwise. If no SIM card is inserted or the SIM card is deactivated will be return {@code false}. |
 
 **错误码：**
 

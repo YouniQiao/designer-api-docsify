@@ -1,6 +1,6 @@
 # Service
 
-Describes the SSAP service.
+Represents the NearLink service.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { ssap } from '@kit.ConnectivityKit';
 properties: Property[]
 ```
 
-The properties belong to this service.
+Properties of a service.
 
 **Type:** [Property](arkts-connectivity-ssap-property-i.md)[]
 
@@ -38,7 +38,7 @@ The properties belong to this service.
 serviceUuid: string
 ```
 
-The UUID of the service. The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. <br>NearLink standard UUIDs are not allowed.
+NearLink service UUID, which is a string of 36 characters. The value consists of 32 hexadecimal digits and four hyphens (-), for example, **FFFFFFFF-1234-5678-ABCD-000000001234**, which indicates a 128-bit ID. The value cannot be set to a standard NearLink UUID.
 
 **Type:** string
 

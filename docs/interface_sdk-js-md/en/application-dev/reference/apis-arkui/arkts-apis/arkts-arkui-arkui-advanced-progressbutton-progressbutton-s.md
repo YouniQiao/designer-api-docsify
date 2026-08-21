@@ -43,7 +43,7 @@ Sets the ProgressButton clickCallback.
 
 Set Color options of the ProgressButton.
 
-**Type:** [ProgressButtonColorOptions](arkts-arkui-arkui-advanced-progressbutton-progressbuttoncoloroptions-i.md)
+**Type:** [ProgressButtonColorOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-progressbutton-progressbuttoncoloroptions-i.md)
 
 **Since:** 22
 

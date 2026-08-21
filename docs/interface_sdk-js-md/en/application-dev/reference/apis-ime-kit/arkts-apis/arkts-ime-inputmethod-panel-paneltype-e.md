@@ -1,6 +1,6 @@
 # PanelType
 
-Enumerates the types of the input method panel.
+@brief Enumerates the types of the input method panel.
 
 **Since:** 23
 
@@ -14,7 +14,7 @@ Enumerates the types of the input method panel.
 SOFT_KEYBOARD = 0
 ```
 
-Soft keyboard.
+@brief Soft keyboard.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ Soft keyboard.
 STATUS_BAR
 ```
 
-Status bar.
+@brief Status bar.
 
 **Since:** 23
 

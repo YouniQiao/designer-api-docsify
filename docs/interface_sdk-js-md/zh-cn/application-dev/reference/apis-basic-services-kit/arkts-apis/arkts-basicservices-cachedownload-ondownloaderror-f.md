@@ -25,7 +25,7 @@ function onDownloadError(url: string, callback: Callback<DownloadError>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | 待注册回调的url，URL字符串的最大长度为8192字节。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[DownloadError](arkts-basicservices-cachedownload-downloaderror-i.md)&gt; | 是 | 回调函数，返回预下载的错误信息。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[DownloadError](arkts-basicservices-cachedownload-downloaderror-i.md)&gt; | 是 | 回调函数，返回预下载的错误信息。 |
 
 **示例**
 

@@ -17,7 +17,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function getCurrentInputMethodSubtype(): InputMethodSubtype
 ```
 
-Get the current input method subtype
+@brief Obtains the current input method subtype.
 
 **Since:** 23
 
@@ -29,7 +29,7 @@ Get the current input method subtype
 
 | Type | Description |
 | --- | --- |
-| [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | the subtype of the current input method. |
+| [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | Current input method subtype. |
 
 **Examples**
 

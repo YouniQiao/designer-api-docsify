@@ -138,7 +138,7 @@ onTerminated: Callback<void>
 > <br>
 > 当应用取消注册时，会触发当前已注册MessageHandler对象的OnTerminated回调函数。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **起始版本：** 23
 

@@ -1,6 +1,6 @@
 # TagInfo
 
-Provides tag information. &lt;p&gt;This class provides the technology a tag supports, for example, NFC-A. Applications can create different tags based on the supported technology.
+Before a card with tags is read or written, **[TagInfo](arkts-connectivity-tag-taginfo-i.md)** must be obtained to determine the tag technologies supported by the card. In this way, the application can invoke the correct API to communicate with the card.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { tag } from '@kit.ConnectivityKit';
 extrasData: PacMap[]
 ```
 
-The extra data for each technology of this tag.
+Extended attribute value of the tag technology.
 
 **Type:** [PacMap](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-pacmap-i.md)[]
 
@@ -40,7 +40,7 @@ The extra data for each technology of this tag.
 remoteTagService: rpc.RemoteObject
 ```
 
-The extra data for the technology of this tag.
+Remote object of the NFC service process used for interface communication between the client and the service.
 
 **Type:** rpc.RemoteObject
 
@@ -60,7 +60,7 @@ The extra data for the technology of this tag.
 tagRfDiscId: int
 ```
 
-The the RF discovery id of this tag.
+ID allocated when the tag is discovered.
 
 **Type:** int
 

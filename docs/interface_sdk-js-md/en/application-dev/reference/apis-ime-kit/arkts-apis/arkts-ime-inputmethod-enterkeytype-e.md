@@ -1,6 +1,6 @@
 # EnterKeyType
 
-Enumerates the enter key type.
+@brief Enumerates the function types represented by the Enter key of the input method.
 
 **Since:** 23
 
@@ -14,7 +14,7 @@ Enumerates the enter key type.
 UNSPECIFIED = 0
 ```
 
-The enter key type is UNSPECIFIED.
+@brief Not specified.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ The enter key type is UNSPECIFIED.
 NONE
 ```
 
-The enter key type is NONE.
+@brief None.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ The enter key type is NONE.
 GO
 ```
 
-The enter key type is GO.
+@brief Go.
 
 **Since:** 23
 
@@ -56,7 +56,7 @@ The enter key type is GO.
 SEARCH
 ```
 
-The enter key type is SEARCH.
+@brief Search.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ The enter key type is SEARCH.
 SEND
 ```
 
-The enter key type is SEND.
+@brief Send.
 
 **Since:** 23
 
@@ -84,7 +84,7 @@ The enter key type is SEND.
 NEXT
 ```
 
-The enter key type is NEXT.
+@brief Next.
 
 **Since:** 23
 
@@ -98,7 +98,7 @@ The enter key type is NEXT.
 DONE
 ```
 
-The enter key type is DONE.
+@brief Done.
 
 **Since:** 23
 
@@ -112,7 +112,7 @@ The enter key type is DONE.
 PREVIOUS
 ```
 
-The enter key type is PREVIOUS.
+@brief Previous.
 
 **Since:** 23
 
@@ -126,7 +126,7 @@ The enter key type is PREVIOUS.
 NEWLINE
 ```
 
-The enter key type is NEWLINE.
+@brief Line break.
 
 **Since:** 23
 

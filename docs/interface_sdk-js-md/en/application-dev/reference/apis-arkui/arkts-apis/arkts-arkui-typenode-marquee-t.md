@@ -16,5 +16,5 @@ Represents a FrameNode of the **Marquee** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** TypedFrameNode<MarqueeInterface, MarqueeAttribute>
+**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;MarqueeInterface, MarqueeAttribute&gt;
 

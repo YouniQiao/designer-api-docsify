@@ -27,5 +27,5 @@ Obtains the global material level, which is related to the device computing powe
 
 | Type | Description |
 | --- | --- |
-| [MaterialLevel](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-materiallevel-e.md) | Material level of the device. |
+| [MaterialLevel](arkts-uimaterial-materiallevel-e.md) | Material level of the device. |
 

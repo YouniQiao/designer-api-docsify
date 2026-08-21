@@ -32,7 +32,7 @@ Queries state data of the current bundle within a specified period.
 | --- | --- | --- | --- |
 | begin | number | 是 | Indicates the start time of the query period, in milliseconds. <br> Unit:ms |
 | end | number | 是 | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[BundleActiveState](arkts-backgroundtasks-bundlestate-bundleactivestate-i.md)&gt;&gt; | 是 | the state data of the current bundle. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleActiveState](arkts-backgroundtasks-bundlestate-bundleactivestate-i.md)&gt;&gt; | 是 | the state data of the current bundle. |
 
 **示例**
 

@@ -25,7 +25,7 @@ function offChange(listener?: Callback<DeviceListener>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceListener](arkts-input-inputdevice-devicelistener-i.md)&gt; | 否 | 取消监听的回调函数，缺省时取消所有输入设备热插拔事件的监听。 |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceListener](arkts-input-inputdevice-devicelistener-i.md)&gt; | 否 | 取消监听的回调函数，缺省时取消所有输入设备热插拔事件的监听。 |
 
 **错误码：**
 

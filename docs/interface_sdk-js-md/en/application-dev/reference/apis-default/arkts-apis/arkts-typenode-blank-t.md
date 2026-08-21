@@ -16,5 +16,5 @@ Define the FrameNode type for Blank.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** BlankFrameNode
+**Property type:** [BlankFrameNode](arkts-typenode-blankframenode-c.md)
 

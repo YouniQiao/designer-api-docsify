@@ -12,9 +12,9 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 function onAcbStateChange(callback: Callback<AcbStateParam>): void
 ```
 
-Subscribes to the NearLink ACB connection status change event.
+Subscribes to the logical link connection status change event. This API uses an asynchronous callback to return the result. This API is applicable when corresponding processing needs to be triggered when a logical link is established or disconnected, for example, checking whether the link is ready before data transfer or clearing resources after disconnection. Unlike [remoteDevice.onConnectionStateChange](arkts-connectivity-remotedevice-onconnectionstatechange-f.md) which listens for the connection status change at the device level, this API listens for the connection status change at the logical link level.
 
-This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned.
+The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 
@@ -28,7 +28,7 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AcbStateParam](arkts-connectivity-remotedevice-acbstateparam-i.md)&gt; | Yes | Callback of the event to be listened to. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AcbStateParam](arkts-connectivity-remotedevice-acbstateparam-i.md)&gt; | Yes | Callback used to return the result of the logical link connection status change event. |
 
 **Error codes:**
 

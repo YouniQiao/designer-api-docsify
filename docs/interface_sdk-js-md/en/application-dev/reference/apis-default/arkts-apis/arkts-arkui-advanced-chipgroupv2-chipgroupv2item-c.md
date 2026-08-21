@@ -37,7 +37,7 @@ The constructor of ChipGroupV2Item
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ChipGroupV2ItemConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md) | Yes | config of the chip group item |
+| config | [ChipGroupV2ItemConfig](arkts-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md) | Yes | config of the chip group item |
 
 ## accessibilityDescription
 
@@ -113,7 +113,7 @@ Allow close.
 
 Set config for default close icon when 'allowClose' is true.
 
-**Type:** [ChipV2CloseConfig](arkts-arkui-advanced-chipv2-chipv2closeconfig-i.md)
+**Type:** [ChipV2CloseConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipv2-chipv2closeconfig-i.md)
 
 **Since:** 26.0.0
 
@@ -134,7 +134,7 @@ Set config for default close icon when 'allowClose' is true.
 
 Chip label.
 
-**Type:** [ChipV2Label](arkts-arkui-advanced-chipv2-chipv2label-c.md)
+**Type:** [ChipV2Label](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipv2-chipv2label-c.md)
 
 **Since:** 26.0.0
 
@@ -155,7 +155,7 @@ Chip label.
 
 Prefix icon.
 
-**Type:** [ChipV2PrefixImageIcon](arkts-arkui-advanced-chipv2-chipv2prefiximageicon-c.md)
+**Type:** [ChipV2PrefixImageIcon](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipv2-chipv2prefiximageicon-c.md)
 
 **Since:** 26.0.0
 
@@ -176,7 +176,7 @@ Prefix icon.
 
 Prefix symbol icon.
 
-**Type:** [ChipV2PrefixSymbolIcon](arkts-arkui-advanced-chipv2-chipv2prefixsymbolicon-c.md)
+**Type:** [ChipV2PrefixSymbolIcon](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipv2-chipv2prefixsymbolicon-c.md)
 
 **Since:** 26.0.0
 
@@ -197,7 +197,7 @@ Prefix symbol icon.
 
 Suffix icon.
 
-**Type:** [ChipV2SuffixImageIcon](arkts-arkui-advanced-chipv2-chipv2suffiximageicon-c.md)
+**Type:** [ChipV2SuffixImageIcon](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipv2-chipv2suffiximageicon-c.md)
 
 **Since:** 26.0.0
 
@@ -218,7 +218,7 @@ Suffix icon.
 
 Suffix symbol icon.
 
-**Type:** [ChipV2SuffixSymbolIcon](arkts-arkui-advanced-chipv2-chipv2suffixsymbolicon-c.md)
+**Type:** [ChipV2SuffixSymbolIcon](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipv2-chipv2suffixsymbolicon-c.md)
 
 **Since:** 26.0.0
 

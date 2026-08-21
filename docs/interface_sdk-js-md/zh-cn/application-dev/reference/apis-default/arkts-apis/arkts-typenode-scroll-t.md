@@ -16,5 +16,5 @@ Define the FrameNode type for Scroll.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** ScrollFrameNode
+**属性类型：** [ScrollFrameNode](arkts-typenode-scrollframenode-c.md)
 

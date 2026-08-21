@@ -2,7 +2,7 @@
 
 Provides APIs for creating a specific type of FrameNode, which can be mounted through the basic API of the FrameNode and be displayed using a placeholder container.
 
-When **typeNode** is used to create Text, Image, Select, or Toggle nodes, if the UI instance corresponding to the input [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) is destroyed, this API returns an invalid FrameNode that cannot be properly mounted or displayed.
+When **typeNode** is used to create Text, Image, Select, or Toggle nodes, if the UI instance corresponding to the input [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) is destroyed, this API returns an invalid FrameNode that cannot be properly mounted or displayed.
 
 ## Summary
 
@@ -16,7 +16,7 @@ When **typeNode** is used to create Text, Image, Select, or Toggle nodes, if the
 
 | Name | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) | *FrameNode** represents an entity node in the component tree. It can be used by a [NodeController](arkts-arkui-nodecontroller-c.md) to mount a BuilderNode (that holds the FrameNode) to a NodeContainer or mount a [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) to another FrameNode.<!--RP2--><!--RP2End--> |
+| [FrameNode](arkts-arkui-framenode-c.md) | *FrameNode** represents an entity node in the component tree. It can be used by a [NodeController](../../apis-default/arkts-apis/arkts-nodecontroller-c.md) to mount a BuilderNode (that holds the FrameNode) to a NodeContainer or mount a [RenderNode](arkts-arkui-rendernode-c.md) to another FrameNode.<!--RP2--><!--RP2End--> |
 | [NodeAdapter](arkts-arkui-framenode-nodeadapter-c.md) | Provides lazy loading capabilities for FrameNode data, implementing LazyForEach API functionality. |
 
 ### Interfaces

@@ -43,7 +43,7 @@ Build function for ChipGroupV2
 
 Two-way binding callback method for ChipV2 item.
 
-**Type:** Callback&lt;[ChipGroupV2Items](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2items-c.md)&gt;
+**Type:** Callback&lt;[ChipGroupV2Items](arkts-arkui-advanced-chipgroupv2-chipgroupv2items-c.md)&gt;
 
 **Since:** 26.0.0
 
@@ -85,7 +85,7 @@ Two-way binding callback method for selected ChipV2 item indexes.
 
 ChipGroupV2 padding (only support top and bottom).
 
-**Type:** [ChipGroupV2Padding](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2padding-c.md)
+**Type:** [ChipGroupV2Padding](arkts-arkui-advanced-chipgroupv2-chipgroupv2padding-c.md)
 
 **Since:** 26.0.0
 
@@ -106,7 +106,7 @@ ChipGroupV2 padding (only support top and bottom).
 
 Left and right inner margins and spacing between ChipV2
 
-**Type:** [ChipGroupV2Space](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2space-c.md)
+**Type:** [ChipGroupV2Space](arkts-arkui-advanced-chipgroupv2-chipgroupv2space-c.md)
 
 **Since:** 26.0.0
 
@@ -127,7 +127,7 @@ Left and right inner margins and spacing between ChipV2
 
 ChipV2 item style.
 
-**Type:** [ChipGroupV2ItemStyle](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyle-c.md)
+**Type:** [ChipGroupV2ItemStyle](arkts-arkui-advanced-chipgroupv2-chipgroupv2itemstyle-c.md)
 
 **Since:** 26.0.0
 
@@ -149,7 +149,7 @@ ChipV2 item style.
 
 ChipV2 item.
 
-**Type:** [ChipGroupV2Items](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2items-c.md)
+**Type:** [ChipGroupV2Items](arkts-arkui-advanced-chipgroupv2-chipgroupv2items-c.md)
 
 **Since:** 26.0.0
 

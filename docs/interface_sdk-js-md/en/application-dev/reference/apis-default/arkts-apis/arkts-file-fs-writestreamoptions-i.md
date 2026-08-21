@@ -21,7 +21,7 @@ Defines the options used in **createWriteStream()**.
 mode?: int
 ```
 
-[OpenMode](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileio-openmode-n.md) for creating the writeable stream. You must specify one of the following options.
+[OpenMode](arkts-fileio-openmode-n.md) for creating the writeable stream. You must specify one of the following options.
 
 - **OpenMode.READ_ONLY(0o0)**: read-only, which is the default value. - **OpenMode.WRITE_ONLY(0o1)**: write-only. - **OpenMode.READ_WRITE(0o2)**: read/write.
 

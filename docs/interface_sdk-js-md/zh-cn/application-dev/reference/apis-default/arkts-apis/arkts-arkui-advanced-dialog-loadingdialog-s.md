@@ -85,7 +85,7 @@ theme?: Theme | CustomTheme
 
 主题信息，可以是CustomTheme或从onWillApplyTheme中获取的Theme实例。
 
-**类型：** [Theme](arkts-arkui-theme-theme-i.md) \| [CustomTheme](arkts-arkui-theme-customtheme-i.md)
+**类型：** [Theme](../../apis-arkui/arkts-apis/arkts-arkui-arkui-theme-theme-i.md) \| [CustomTheme](../../apis-arkui/arkts-apis/arkts-arkui-arkui-theme-customtheme-i.md)
 
 **起始版本：** 23
 

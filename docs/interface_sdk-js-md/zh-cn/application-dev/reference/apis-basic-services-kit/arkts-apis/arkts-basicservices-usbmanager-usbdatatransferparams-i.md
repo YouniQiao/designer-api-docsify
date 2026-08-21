@@ -39,7 +39,7 @@ callback: AsyncCallback<SubmitTransferCallback>
 
 传输完成时的回调函数，签名：(err: Error, data: SubmitTransferCallback) =&gt; void。err为错误对象（成功时为null），data包含传输状态、实际长度等信息。
 
-**类型：** [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[SubmitTransferCallback](arkts-basicservices-usbmanager-submittransfercallback-i.md)&gt;
+**类型：** [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[SubmitTransferCallback](arkts-basicservices-usbmanager-submittransfercallback-i.md)&gt;
 
 **起始版本：** 23
 

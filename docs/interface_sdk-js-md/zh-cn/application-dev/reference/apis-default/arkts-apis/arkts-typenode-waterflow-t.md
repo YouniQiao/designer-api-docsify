@@ -16,5 +16,5 @@ Define the FrameNode type for WaterFlow.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** WaterFlowFrameNode
+**属性类型：** [WaterFlowFrameNode](arkts-typenode-waterflowframenode-c.md)
 

@@ -29,7 +29,7 @@ function off(type: 'netQuotaPolicyChange', callback?: Callback<Array<NetQuotaPol
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'netQuotaPolicyChange' | 是 | 注销的事件类型。'netQuotaPolicyChange'：注销计量网络策略发生改变事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md)&gt;&gt; | 否 | 回调函数。注册计量网络策略发生改变时调用。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md)&gt;&gt; | 否 | 回调函数。注册计量网络策略发生改变时调用。 |
 
 **错误码：**
 

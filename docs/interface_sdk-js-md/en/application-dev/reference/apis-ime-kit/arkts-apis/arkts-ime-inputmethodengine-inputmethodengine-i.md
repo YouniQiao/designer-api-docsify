@@ -1,6 +1,6 @@
 # InputMethodEngine
 
-In the following API examples, you must first use [getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md) to obtain an **InputMethodEngine** instance, and then call the APIs using the obtained instance.
+@brief In the following API examples, you must first use [getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md) to obtain an **InputMethodEngine** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
 
@@ -27,7 +27,7 @@ off(
     ): void
 ```
 
-Disables listening for the input method binding event.
+@brief Disables listening for the input method binding event.
 
 **Since:** 8
 
@@ -62,7 +62,7 @@ inputMethodEngine.getInputMethodEngine()
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 ```
 
-Disables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
+@brief Disables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -94,7 +94,7 @@ inputMethodEngine.getInputMethodEngine().off('keyboardHide');
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 ```
 
-Disables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
+@brief Disables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -115,10 +115,7 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 **Examples**
 
-```TypeScript
-inputMethodEngine.getInputMethodEngine().off('keyboardShow');
-inputMethodEngine.getInputMethodEngine().off('keyboardHide');
-```
+See off_keyboardHide
 
 ## on('inputStart')
 
@@ -129,7 +126,7 @@ on(
     ): void
 ```
 
-Enables listening for the input method binding event. This API uses an asynchronous callback to return the result.
+@brief Enables listening for the input method binding event. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -165,7 +162,7 @@ inputMethodEngine.getInputMethodEngine()
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 ```
 
-Enables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
+@brief Enables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -201,7 +198,7 @@ inputMethodEngine.getInputMethodEngine().on('keyboardHide', () => {
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 ```
 
-Enables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
+@brief Enables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -222,12 +219,5 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 **Examples**
 
-```TypeScript
-inputMethodEngine.getInputMethodEngine().on('keyboardShow', () => {
-  console.info('inputMethodEngine keyboardShow.');
-});
-inputMethodEngine.getInputMethodEngine().on('keyboardHide', () => {
-  console.info('inputMethodEngine keyboardHide.');
-});
-```
+See on_keyboardHide
 

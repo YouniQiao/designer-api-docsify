@@ -36,7 +36,7 @@ PromptOptionsV2的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [PromptOptionsV2Config](../../apis-default/arkts-apis/arkts-arkui-advanced-exceptionpromptv2-promptoptionsv2config-i.md) | 否 | PromptOptionsV2的配置信息。如果不传入config，则使用默认值：marginType为MarginTypeV2 .DEFAULT_MARGIN，marginTop为0。 |
+| config | [PromptOptionsV2Config](arkts-arkui-arkui-advanced-exceptionpromptv2-promptoptionsv2config-i.md) | 否 | PromptOptionsV2的配置信息。如果不传入config，则使用默认值：marginType为MarginTypeV2 .DEFAULT_MARGIN，marginTop为0。 |
 
 ## actionText
 
@@ -141,7 +141,7 @@ false：隐藏状态。
 
 指定当前异常提示的边距样式。
 
-**类型：** [MarginTypeV2](../../apis-default/arkts-apis/arkts-arkui-advanced-exceptionpromptv2-margintypev2-e.md)
+**类型：** [MarginTypeV2](arkts-arkui-arkui-advanced-exceptionpromptv2-margintypev2-e.md)
 
 **起始版本：** 26.0.0
 

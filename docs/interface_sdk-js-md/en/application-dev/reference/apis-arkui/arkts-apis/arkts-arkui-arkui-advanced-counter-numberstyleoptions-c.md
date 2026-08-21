@@ -2,7 +2,7 @@
 
 Defines the number style options.
 
-**Inheritance/Implementation:** NumberStyleOptions extends [InlineStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-counter-inlinestyleoptions-c.md)
+**Inheritance/Implementation:** NumberStyleOptions extends [InlineStyleOptions](arkts-arkui-arkui-advanced-counter-inlinestyleoptions-c.md)
 
 **Since:** 11
 

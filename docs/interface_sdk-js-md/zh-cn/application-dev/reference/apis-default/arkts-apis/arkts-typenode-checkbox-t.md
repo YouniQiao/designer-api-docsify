@@ -16,5 +16,5 @@ Define the FrameNode type for Checkbox.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** CheckboxFrameNode
+**属性类型：** [CheckboxFrameNode](arkts-typenode-checkboxframenode-c.md)
 

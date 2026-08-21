@@ -1,6 +1,12 @@
 # NdefTag
 
-Provides methods for accessing NDEF tag.
+Provides APIs to access the tags in the NFC Data Exchange Format (NDEF). This class inherits from **TagSession**.
+
+**TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).
+
+For details about how to obtain an **NdefTag** object, see [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).
+
+The following describes the unique APIs of **NdefTag**.
 
 **Inheritance/Implementation:** NdefTag extends TagSession
 
@@ -16,13 +22,13 @@ Provides methods for accessing NDEF tag.
 canSetReadOnly(): boolean
 ```
 
-Checks NDEF tag can be set read-only.
+Checks whether this NDEF tag can be set to read-only.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NdefTag-canSetReadOnly(): boolean--><!--Device-NdefTag-canSetReadOnly(): boolean-End-->
 
@@ -32,7 +38,7 @@ Checks NDEF tag can be set read-only.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the tag can be set readonly, otherwise returns false. |
+| boolean | Returns **true** if the tag can be set to read-only; returns **false** otherwise. |
 
 **Error codes:**
 
@@ -57,11 +63,11 @@ console.info("ndef canSetReadOnly: " + canSetReadOnly);
 getNdefMessage(): NdefMessage
 ```
 
-Gets the NDEF message that was read from NDEF tag when tag discovery.
+Obtains the NDEF message from this NDEF tag.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NdefTag-getNdefMessage(): NdefMessage--><!--Device-NdefTag-getNdefMessage(): NdefMessage-End-->
 
@@ -71,7 +77,7 @@ Gets the NDEF message that was read from NDEF tag when tag discovery.
 
 | Type | Description |
 | --- | --- |
-| [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | The instance of NdefMessage. |
+| [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | NDEF message created. For details, see *NFCForum-TS-NDEF_1.0*. |
 
 ## getNdefTagType
 
@@ -79,11 +85,11 @@ Gets the NDEF message that was read from NDEF tag when tag discovery.
 getNdefTagType(): tag.NfcForumType
 ```
 
-Gets the type of NDEF tag.
+Obtains the NDEF tag type.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NdefTag-getNdefTagType(): tag.NfcForumType--><!--Device-NdefTag-getNdefTagType(): tag.NfcForumType-End-->
 
@@ -93,7 +99,7 @@ Gets the type of NDEF tag.
 
 | Type | Description |
 | --- | --- |
-| tag.NfcForumType | The type of NDEF tag. |
+| tag.NfcForumType | NDEF tag type obtained. It can be NFC FORUM TYPE 1, 2, 3, or 4. |
 
 ## getNdefTagTypeString
 
@@ -101,11 +107,11 @@ Gets the type of NDEF tag.
 getNdefTagTypeString(type: tag.NfcForumType): string
 ```
 
-Converts the NFC forum type into string defined in NFC forum.
+Converts an NFC Forum Type tag to a string defined in the NFC Forum.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NdefTag-getNdefTagTypeString(type: tag.NfcForumType): string--><!--Device-NdefTag-getNdefTagTypeString(type: tag.NfcForumType): string-End-->
 
@@ -115,13 +121,13 @@ Converts the NFC forum type into string defined in NFC forum.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | tag.NfcForumType | Yes | NFC forum type of NDEF tag. |
+| type | tag.NfcForumType | Yes | NDEF tag type. It can be NFC FORUM type 1, 2, 3, or 4. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | The NFC forum string type. |
+| string | Byte array obtained. |
 
 **Error codes:**
 
@@ -135,11 +141,11 @@ Converts the NFC forum type into string defined in NFC forum.
 isNdefWritable(): boolean
 ```
 
-Checks if NDEF tag is writable.
+Check whether this NDEF tag is writable. Before calling the data write API, check whether the write operation is supported.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NdefTag-isNdefWritable(): boolean--><!--Device-NdefTag-isNdefWritable(): boolean-End-->
 
@@ -149,7 +155,7 @@ Checks if NDEF tag is writable.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the tag is writable, otherwise returns false. |
+| boolean | Promise used to return the result. If the tag is writable, **true** is returned; otherwise, **false** is returned. |
 
 **Examples**
 
@@ -167,13 +173,13 @@ console.info("ndef isNdefWritable: " + isWritable);
 readNdef(): Promise<NdefMessage>
 ```
 
-Reads NDEF message on this tag.
+Reads the NDEF message from the NDEF tag. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NdefTag-readNdef(): Promise<NdefMessage>--><!--Device-NdefTag-readNdef(): Promise<NdefMessage>-End-->
 
@@ -183,7 +189,7 @@ Reads NDEF message on this tag.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md)&gt; | The NDEF message in tag. |
+| Promise&lt;[NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md)&gt; | Promise used to return the **Message** object read from the NDEF tag. |
 
 **Error codes:**
 
@@ -192,7 +198,7 @@ Reads NDEF message on this tag.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed.<br>**Applicable version:** 12 and later |
 
 ## readNdef
 
@@ -200,13 +206,13 @@ Reads NDEF message on this tag.
 readNdef(callback: AsyncCallback<NdefMessage>): void
 ```
 
-Reads NDEF message on this tag.
+Reads the NDEF message from the NDEF tag. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NdefTag-readNdef(callback: AsyncCallback<NdefMessage>): void--><!--Device-NdefTag-readNdef(callback: AsyncCallback<NdefMessage>): void-End-->
 
@@ -216,7 +222,7 @@ Reads NDEF message on this tag.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md)&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md)&gt; | Yes | Callback used to return the NDEF message read. |
 
 **Error codes:**
 
@@ -225,7 +231,7 @@ Reads NDEF message on this tag.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
 
 ## setReadOnly
 
@@ -233,13 +239,13 @@ Reads NDEF message on this tag.
 setReadOnly(): Promise<void>
 ```
 
-Sets the NDEF tag read-only.
+Sets the NDEF tag to read-only. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NdefTag-setReadOnly(): Promise<void>--><!--Device-NdefTag-setReadOnly(): Promise<void>-End-->
 
@@ -249,7 +255,7 @@ Sets the NDEF tag read-only.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The void |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -258,7 +264,7 @@ Sets the NDEF tag read-only.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -295,13 +301,13 @@ function nfcTechDemo() {
 setReadOnly(callback: AsyncCallback<void>): void
 ```
 
-Sets the NDEF tag read-only.
+Sets the NDEF tag to read-only. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NdefTag-setReadOnly(callback: AsyncCallback<void>): void--><!--Device-NdefTag-setReadOnly(callback: AsyncCallback<void>): void-End-->
 
@@ -311,7 +317,7 @@ Sets the NDEF tag read-only.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -320,7 +326,7 @@ Sets the NDEF tag read-only.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -359,13 +365,13 @@ function nfcTechDemo() {
 writeNdef(msg: NdefMessage): Promise<void>
 ```
 
-Writes NDEF message into this tag.
+Writes a **Message** object to the NDEF tag. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NdefTag-writeNdef(msg: NdefMessage): Promise<void>--><!--Device-NdefTag-writeNdef(msg: NdefMessage): Promise<void>-End-->
 
@@ -375,13 +381,13 @@ Writes NDEF message into this tag.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msg | [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | Yes | The NDEF message to be written. |
+| msg | [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | Yes | NDEF message to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The void |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -390,7 +396,7 @@ Writes NDEF message into this tag.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed.<br>**Applicable version:** 12 and later |
 
 ## writeNdef
 
@@ -398,13 +404,13 @@ Writes NDEF message into this tag.
 writeNdef(msg: NdefMessage, callback: AsyncCallback<void>): void
 ```
 
-Writes NDEF message into this tag.
+Writes a **Message** object to the NDEF tag. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NdefTag-writeNdef(msg: NdefMessage, callback: AsyncCallback<void>): void--><!--Device-NdefTag-writeNdef(msg: NdefMessage, callback: AsyncCallback<void>): void-End-->
 
@@ -414,8 +420,8 @@ Writes NDEF message into this tag.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msg | [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | Yes | The NDEF message to be written. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback. |
+| msg | [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | Yes | NDEF message to write. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -424,5 +430,5 @@ Writes NDEF message into this tag.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
 

@@ -4,7 +4,7 @@ Provides the capability to control text menus.
 
 > **NOTE：**
 > 
-> - In the following non-static API examples, you must first use &gt; [getTextMenuController()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#gettextmenucontroller) in **UIContext** to obtain a &gt; **TextMenuController** instance, and then call the APIs using the obtained instance.
+> - In the following non-static API examples, you must first use &gt; [getTextMenuController()](arkts-arkui-arkui-uicontext-uicontext-c.md#gettextmenucontroller) in **UIContext** to obtain a &gt; **TextMenuController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 16
 

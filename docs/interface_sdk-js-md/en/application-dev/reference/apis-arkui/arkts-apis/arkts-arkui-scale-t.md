@@ -16,5 +16,5 @@ Sets the scale factor of the component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** Vector2
+**Property type:** [Vector2](../../apis-default/arkts-apis/arkts-graphics-vector2-i.md)
 

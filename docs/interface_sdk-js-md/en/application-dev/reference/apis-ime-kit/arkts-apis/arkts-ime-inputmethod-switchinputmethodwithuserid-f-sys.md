@@ -17,7 +17,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function switchInputMethodWithUserId(bundleName: string, subtypeId?: string, userId?: int): Promise<void>
 ```
 
-Switch input method and subtype of a specified user.
+@brief Switch input method and subtype of a specified user.
 
 **Since:** 26.0.0
 

@@ -82,7 +82,7 @@ state: TabContentState
 
 Enumerates the **TabContent** component states.
 
-**Type:** [TabContentState](arkts-arkui-uiobserver-tabcontentstate-e.md)
+**Type:** [TabContentState](../../apis-default/arkts-apis/arkts-uiobserver-tabcontentstate-e.md)
 
 **Since:** 12
 

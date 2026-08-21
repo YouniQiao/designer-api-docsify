@@ -34,7 +34,7 @@ ArcSliderLayoutOptions的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ArcSliderLayoutOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptionsconstructoroptions-i.md) | 否 | ArcSliderLayoutOptions的构造信息。不传入时，ArcSliderLayoutOptions的各项子属性均取其默认值。 |
+| options | [ArcSliderLayoutOptionsConstructorOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderlayoutoptionsconstructoroptions-i.md) | 否 | ArcSliderLayoutOptions的构造信息。不传入时，ArcSliderLayoutOptions的各项子属性均取其默认值。 |
 
 ## position
 
@@ -49,7 +49,7 @@ ArcSliderLayoutOptions的构造函数。
 
 @Trace
 
-**类型：** [ArcSliderPosition](arkts-arkui-arkui-advanced-arcslider-arcsliderposition-e.md)
+**类型：** [ArcSliderPosition](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderposition-e.md)
 
 **默认值：** ArcSliderPosition.RIGHT
 

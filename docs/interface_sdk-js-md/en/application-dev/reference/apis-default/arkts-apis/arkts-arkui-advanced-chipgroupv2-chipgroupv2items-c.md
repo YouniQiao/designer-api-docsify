@@ -39,5 +39,5 @@ The constructor of ChipGroupV2Items
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | [ChipGroupV2ItemConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md)[] | Yes | config array of chip group items |
+| items | [ChipGroupV2ItemConfig](arkts-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md)[] | Yes | config array of chip group items |
 

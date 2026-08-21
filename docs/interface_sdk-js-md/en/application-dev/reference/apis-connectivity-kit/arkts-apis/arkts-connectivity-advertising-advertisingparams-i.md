@@ -1,6 +1,6 @@
 # AdvertisingParams
 
-Describes the advertising parameters.
+Enumerates the advertising parameters.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { advertising } from '@kit.ConnectivityKit';
 advertisingData: AdvertisingData
 ```
 
-Indicates the advertising data.
+Advertising data packet.
 
 **Type:** [AdvertisingData](arkts-connectivity-advertising-advertisingdata-i.md)
 
@@ -38,7 +38,7 @@ Indicates the advertising data.
 advertisingSettings: AdvertisingSettings
 ```
 
-Indicates the advertising settings.
+Advertising settings.
 
 **Type:** [AdvertisingSettings](arkts-connectivity-advertising-advertisingsettings-i.md)
 

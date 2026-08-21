@@ -1,6 +1,6 @@
 # ImmersiveEffect
 
-Describes the immersive effect.
+@brief Describes the immersive effect.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 gradientHeight: int
 ```
 
-Gradient height, which cannot exceed 15% of the screen height.
+@brief Gradient height, which cannot exceed 15% of the screen height.
 
 **Type:** int
 
@@ -36,7 +36,7 @@ Gradient height, which cannot exceed 15% of the screen height.
 gradientMode: GradientMode
 ```
 
-Gradient mode. If this attribute is not specified or is set to an invalid value, the gradient mode is not used by default.
+@brief Gradient mode.
 
 **Type:** [GradientMode](arkts-ime-inputmethodengine-gradientmode-e.md)
 

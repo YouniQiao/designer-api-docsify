@@ -16,5 +16,5 @@ export declare type StorageDefaultSubCreators = Map<Class, StorageDefaultCreator
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** Map<Class, StorageDefaultCreator<object>>
+**属性类型：** Map&lt;[Class](../../apis-arkts/arkts-apis/arkts-arkts-class-c.md), [StorageDefaultCreator](arkts-storagedefaultcreator-t.md)&lt;object&gt;&gt;
 

@@ -14,5 +14,5 @@ export type NetStatsInfoSequence = Array<NetStatsInfoSequenceItem>
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** Array<NetStatsInfoSequenceItem>
+**属性类型：** Array&lt;[NetStatsInfoSequenceItem](arkts-network-statistics-netstatsinfosequenceitem-i-sys.md)&gt;
 

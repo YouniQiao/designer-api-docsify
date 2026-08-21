@@ -1,6 +1,6 @@
 # SystemPanelInsets
 
-Defines the offset area between the input method soft keyboard and the system panel.
+@brief Defines the offset area between the input method soft keyboard and the system panel.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 readonly bottom: int
 ```
 
-Distance between the bottom border of the keyboard area and the bottom border of the system panel area, in px. The value is an integer.
+@brief Distance between the bottom border of the keyboard area and the bottom border of the system panel area, in px. The value is an integer.
 
 **Type:** int
 
@@ -36,7 +36,7 @@ Distance between the bottom border of the keyboard area and the bottom border of
 readonly left: int
 ```
 
-Distance between the left border of the keyboard area and the left border of the system panel area, in px. The value is an integer.
+@brief Distance between the left border of the keyboard area and the left border of the system panel area, in px. The value is an integer.
 
 **Type:** int
 
@@ -52,7 +52,7 @@ Distance between the left border of the keyboard area and the left border of the
 readonly right: int
 ```
 
-Distance between the right border of the keyboard area and the right border of the system panel area, in px. The value is an integer.
+@brief Distance between the right border of the keyboard area and the right border of the system panel area, in px. The value is an integer.
 
 **Type:** int
 

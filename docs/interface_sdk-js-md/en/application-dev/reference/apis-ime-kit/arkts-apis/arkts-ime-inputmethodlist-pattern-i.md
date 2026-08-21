@@ -1,7 +1,5 @@
 # Pattern
 
-Define pattern of keyboard. The caller must be the current inputmethod.
-
 **Since:** 23
 
 <!--Device-unnamed-export interface Pattern--><!--Device-unnamed-export interface Pattern-End-->
@@ -20,7 +18,7 @@ import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
 icon: Resource
 ```
 
-Mandatory. Default icon.
+@brief Mandatory. Default icon.
 
 **Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
@@ -36,7 +34,7 @@ Mandatory. Default icon.
 selectedIcon: Resource
 ```
 
-Mandatory. Icon for the selected option.
+@brief Mandatory. Icon for the selected option.
 
 **Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 

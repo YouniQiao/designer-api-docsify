@@ -65,7 +65,7 @@ IconGroup后缀后台系统素材。
 
 后缀项
 
-**类型：** Array&lt;[ChipGroupV2IconItemConfig](arkts-arkui-advanced-chipgroupv2-chipgroupv2iconitemconfig-i.md) \| SymbolGlyphModifier \| [ChipGroupV2SymbolItemConfig](arkts-arkui-advanced-chipgroupv2-chipgroupv2symbolitemconfig-i.md)&gt;
+**类型：** Array&lt;[ChipGroupV2IconItemConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2iconitemconfig-i.md) \| SymbolGlyphModifier \| [ChipGroupV2SymbolItemConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2symbolitemconfig-i.md)&gt;
 
 **起始版本：** 26.0.0
 

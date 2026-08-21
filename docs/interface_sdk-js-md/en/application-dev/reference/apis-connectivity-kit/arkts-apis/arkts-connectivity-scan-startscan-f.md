@@ -12,7 +12,7 @@ import { scan } from '@kit.ConnectivityKit';
 function startScan(filters: ScanFilters[] | null, options?: ScanOptions): Promise<void>
 ```
 
-Starts scanning for specified NearLink devices with filters. It is allowed to set filter parameter to {@code null} if you do not want to use filter.
+Starts NearLink scanning. This API uses a promise to return the result. You need to call scan.onDeviceFound to subscribe to the scanning results. After this API initiates scanning, the scanned device information is reported through the scan.onDeviceFound callback. After the scanning is complete, you can call [scan.stopScan](arkts-connectivity-scan-stopscan-f.md) to stop scanning.
 
 **Since:** 26.0.0
 
@@ -28,14 +28,14 @@ Starts scanning for specified NearLink devices with filters. It is allowed to se
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filters | [ScanFilters](arkts-connectivity-scan-scanfilters-i.md)[] \| null | Yes | The list of filters and this parameter is mandatory. If you do not want to use filter, set this parameter to {@code null}. If you want to use filter, at least one filter should be set. |
-| options | ScanOptions | No | The parameters for scanning, and the low power mode is used by default. |
+| filters | [ScanFilters](arkts-connectivity-scan-scanfilters-i.md)[] \| null | Yes | Filter criteria for NearLink advertising. Devices that meet the filter criteria will be reported. If the filter is not enabled, **null** is passed. <br>If this parameter is set to **null**, all discoverable NearLink devices nearby will be scanned. However, this method is not recommended as it may pick up unexpected devices and increase power consumption. |
+| options | ScanOptions | No | Scan options. The low power consumption mode is used by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise object is returned. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

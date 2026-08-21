@@ -1,6 +1,6 @@
 # ReactiveBuilderNode
 
-ReactiveBuilderNode支持通过无状态的UI方法[@Builder](../../../ui/state-management/arkts-builder.md)生成组件树，并持有该组件树的根节点，不支持定义为状态变 量。ReactiveBuilderNode中持有的FrameNode仅用于将此ReactiveBuilderNode作为子节点挂载到其他FrameNode上。对 ReactiveBuilderNode持有的FrameNode进行属性设置与子节点操作可能会导致未定义行为，因此不建议通过ReactiveBuilderNode的 [getFrameNode](arkts-arkui-buildernode-c.md#getframenode)方法和FrameNode节点的 [getRenderNode](../../apis-default/arkts-apis/arkts-framenode-c.md#getrendernode)方法获取RenderNode，并通过 [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md)的接口对其进行属性设置与子节点操作。
+ReactiveBuilderNode支持通过无状态的UI方法[@Builder](../../../ui/state-management/arkts-builder.md)生成组件树，并持有该组件树的根节点，不支持定义为状态变 量。ReactiveBuilderNode中持有的FrameNode仅用于将此ReactiveBuilderNode作为子节点挂载到其他FrameNode上。对 ReactiveBuilderNode持有的FrameNode进行属性设置与子节点操作可能会导致未定义行为，因此不建议通过ReactiveBuilderNode的 [getFrameNode](arkts-arkui-buildernode-c.md#getframenode)方法和FrameNode节点的 [getRenderNode](arkts-arkui-framenode-c.md#getrendernode)方法获取RenderNode，并通过 [RenderNode](arkts-arkui-rendernode-c.md)的接口对其进行属性设置与子节点操作。
 
 **起始版本：** 22
 
@@ -24,7 +24,7 @@ build(builder: WrappedBuilder<Args>, config: BuildOptions, ...args: Args): void
 > 
 > - @Builder嵌套使用的时候需要保证内外的@Builder方法的入参对象一致。
 > 
-> - 需要操作ReactiveBuilderNode中的对象时，需要保证其引用不被回收。当ReactiveBuilderNode对象被虚拟机回收之后，它的FrameNode、 &gt; [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md)对象也会与后端节点解引用。即从ReactiveBuilderNode中获取的FrameNode对象不对应任何一个节点。
+> - 需要操作ReactiveBuilderNode中的对象时，需要保证其引用不被回收。当ReactiveBuilderNode对象被虚拟机回收之后，它的FrameNode、 &gt; [RenderNode](arkts-arkui-rendernode-c.md)对象也会与后端节点解引用。即从ReactiveBuilderNode中获取的FrameNode对象不对应任何一个节点。
 > 
 > - ReactiveBuilderNode对象会持有实体节点的引用。如果不需要使用ReactiveBuilderNode前端对象管理后端节点，可以调用 &gt; [dispose](#dispose)接口，实现前后端对象的解绑。
 
@@ -111,7 +111,7 @@ struct Index {
 constructor(uiContext: UIContext, options?: RenderOptions)
 ```
 
-用于构造ReactiveBuilderNode类。当将ReactiveBuilderNode生成的内容嵌入到其它[RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md)中显示时，需要显式指定 [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md)中的[selfIdealSize](arkts-arkui-buildernode-renderoptions-i.md)，否则ReactiveBuilderNode内的节点默认父组件布局约束为 [0, 0]。调用此接口，若不设置selfIdealSize则认为ReactiveBuilderNode中子树的根节点大小为[0, 0]。
+用于构造ReactiveBuilderNode类。当将ReactiveBuilderNode生成的内容嵌入到其它[RenderNode](arkts-arkui-rendernode-c.md)中显示时，需要显式指定 [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md)中的[selfIdealSize](arkts-arkui-buildernode-renderoptions-i.md)，否则ReactiveBuilderNode内的节点默认父组件布局约束为 [0, 0]。调用此接口，若不设置selfIdealSize则认为ReactiveBuilderNode中子树的根节点大小为[0, 0]。
 
 **起始版本：** 22
 
@@ -127,7 +127,7 @@ constructor(uiContext: UIContext, options?: RenderOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | UI上下文，获取方式可参考 UIContext获取方法。uiContext需要为一个有效的值，即UI上下文正 确，如果传入非法值或者未设置，会导致创建失败。 |
+| uiContext | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | 是 | UI上下文，获取方式可参考 UIContext获取方法。uiContext需要为一个有效的值，即UI上下文正 确，如果传入非法值或者未设置，会导致创建失败。 |
 | options | [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | 否 | ReactiveBuilderNode的构造可选参数，参数用于构造节点的理想大小和节点的渲染类型。 <br>默认值：undefined |
 
 ## dispose
@@ -387,7 +387,7 @@ getFrameNode(): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) \| null | ReactiveBuilderNode持有的FrameNode对象，用于将该ReactiveBuilderNode作为子节点挂载到其他FrameNode上。若该 ReactiveBuilderNode不包含FrameNode，则返回空对象null。 |
+| [FrameNode](arkts-arkui-framenode-c.md) \| null | ReactiveBuilderNode持有的FrameNode对象，用于将该ReactiveBuilderNode作为子节点挂载到其他FrameNode上。若该 ReactiveBuilderNode不包含FrameNode，则返回空对象null。 |
 
 **示例**
 
@@ -1001,7 +1001,7 @@ postTouchEvent(event: TouchEvent): boolean
 
 postTouchEvent是从组件树的中间节点往下分发，需要变换到父组件坐标系才能分发成功，参考下图。
 
-offsetA为builderNode相对于父组件的偏移量，可以通过FrameNode中的[getPositionToParent](../../apis-default/arkts-apis/arkts-framenode-c.md#getpositiontoparent) 获取。offsetB为触点相对于builderNode的偏移量，可以通过 [TouchEvent](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)获取。offsetC为offsetA 与offsetB的和，是传给postTouchEvent的最终结果。
+offsetA为builderNode相对于父组件的偏移量，可以通过FrameNode中的[getPositionToParent](arkts-arkui-framenode-c.md#getpositiontoparent) 获取。offsetB为触点相对于builderNode的偏移量，可以通过 [TouchEvent](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)获取。offsetC为offsetA 与offsetB的和，是传给postTouchEvent的最终结果。
 
 
 

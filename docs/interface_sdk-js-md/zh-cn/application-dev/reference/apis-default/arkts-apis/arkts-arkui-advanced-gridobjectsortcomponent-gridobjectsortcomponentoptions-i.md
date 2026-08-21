@@ -137,7 +137,7 @@ type?: GridObjectSortComponentType
 
 默认值：GridObjectSortComponentType.TEXT
 
-**类型：** [GridObjectSortComponentType](arkts-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponenttype-e.md)
+**类型：** [GridObjectSortComponentType](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponenttype-e.md)
 
 **默认值：** GridObjectSortComponentType.TEXT
 

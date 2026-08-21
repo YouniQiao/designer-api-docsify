@@ -12,13 +12,13 @@ import { cardEmulation } from '@kit.ConnectivityKit';
 function hasHceCapability(): boolean
 ```
 
-Checks whether Host Card Emulation(HCE) capability is supported.
+Checks whether the device supports HCE.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-cardEmulation-function hasHceCapability(): boolean--><!--Device-cardEmulation-function hasHceCapability(): boolean-End-->
 
@@ -28,7 +28,7 @@ Checks whether Host Card Emulation(HCE) capability is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if HCE is supported, otherwise false. |
+| boolean | Returns **true** if HCE is supported; returns **false** otherwise. |
 
 **Error codes:**
 

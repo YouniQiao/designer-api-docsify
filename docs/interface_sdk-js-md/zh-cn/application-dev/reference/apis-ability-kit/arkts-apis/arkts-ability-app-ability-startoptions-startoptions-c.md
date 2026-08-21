@@ -340,7 +340,7 @@ windowHeight?: int
 
 窗口的高度，单位为px。
 
-取值范围为[minWindowHeight, maxWindowHeight]，取值范围单位为vp，可参考[vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px)换算为对应的px值 。
+取值范围为[minWindowHeight, maxWindowHeight]，取值范围单位为vp，可参考[vp2px](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#vp2px)换算为对应的px值 。
 
 **约束：**
 
@@ -426,7 +426,7 @@ windowWidth?: int
 
 窗口的宽度，单位为px。
 
-取值范围为[minWindowWidth, maxWindowWidth]，取值范围单位为vp，可参考[vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px)换算为对应的px值。
+取值范围为[minWindowWidth, maxWindowWidth]，取值范围单位为vp，可参考[vp2px](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#vp2px)换算为对应的px值。
 
 **约束：**
 

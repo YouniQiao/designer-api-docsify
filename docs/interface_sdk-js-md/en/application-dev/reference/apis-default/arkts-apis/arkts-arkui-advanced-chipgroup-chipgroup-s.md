@@ -64,7 +64,7 @@ Set system-styled materials for the component. Different materials have differen
 
 Chip group padding (only support top and bottom).
 
-**Type:** [ChipGroupPaddingOptions](arkts-arkui-advanced-chipgroup-chipgrouppaddingoptions-i.md)
+**Type:** [ChipGroupPaddingOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroup-chipgrouppaddingoptions-i.md)
 
 **Since:** 23
 
@@ -85,7 +85,7 @@ Chip group padding (only support top and bottom).
 
 Chip group space.
 
-**Type:** [ChipGroupSpaceOptions](arkts-arkui-advanced-chipgroup-chipgroupspaceoptions-i.md)
+**Type:** [ChipGroupSpaceOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroup-chipgroupspaceoptions-i.md)
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ Chip group space.
 
 Chip item style.
 
-**Type:** [ChipItemStyle](arkts-arkui-advanced-chipgroup-chipitemstyle-i.md)
+**Type:** [ChipItemStyle](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroup-chipitemstyle-i.md)
 
 **Since:** 23
 
@@ -128,7 +128,7 @@ Chip item style.
 
 Chip item.
 
-**Type:** [ChipGroupItemOptions](arkts-arkui-advanced-chipgroup-chipgroupitemoptions-i.md)[]
+**Type:** [ChipGroupItemOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroup-chipgroupitemoptions-i.md)[]
 
 **Since:** 23
 

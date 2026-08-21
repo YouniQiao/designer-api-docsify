@@ -30,7 +30,7 @@ function startVibration(effect: VibrateEffect, attribute: VibrateAttribute, call
 | --- | --- | --- | --- |
 | effect | [VibrateEffect](arkts-sensorservice-vibrator-vibrateeffect-t.md) | 是 | 马达振动效果，支持四种：<br>1、[VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md)：按照预置振动效果触发马达振动，适用于交互反馈 类的短振场景（如点击长按，滑动，拖拽等），为确保与系统整体振感反馈体验风格一致，推荐使用此接口；<br>2、[VibrateFromFile](arkts-sensorservice-vibrator-vibratefromfile-i.md)：按照文件形式定制自定义振 动效果触发马达振动，适用于匹配复杂场景效果的交互反馈（如表情包触发的拟真效果、游戏场景/操作反馈）；<br>3、[VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md)：按照指定时长触发马达振动，仅对振动时 长进行启动或停止控制，满足基础功能，无法对振动强度、频率等维度进行个性化设置，此种振动调节不够细腻，无法满足精致体验；<br/>4、 [VibrateFromPattern&lt;sup&gt;18+&lt;/sup&gt;](arkts-sensorservice-vibrator-vibratefrompattern-i.md)：按照自定义振动效果触发马达振动。使用场景和VibrateFromFile一致。 VibrateFromFile是面向文件中提前定制好的效果，将具体的振动事件以文件描述符形式传递到接口中；VibrateFromPattern提供更加灵活的振动事件排列组合，将振动事件以振动事件数组的形式传递到接口中。<br/> |
 | attribute | [VibrateAttribute](arkts-sensorservice-vibrator-vibrateattribute-i.md) | 是 | 马达振动属性，用于指定马达ID、设备ID和振动使用场景。attribute中的usage参数决定振动的场景类型，不同场景类型受系统振动开关管控规则不同，开发者需 根据实际业务场景选择合适的usage值。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当马达振动成功，err为undefined；否则为错误对象，包含错误码和错误信息。回调结果可用于确认振动是否成功启动，若启动失败可根据错误码进行相 应处理。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当马达振动成功，err为undefined；否则为错误对象，包含错误码和错误信息。回调结果可用于确认振动是否成功启动，若启动失败可根据错误码进行相 应处理。 |
 
 **错误码：**
 

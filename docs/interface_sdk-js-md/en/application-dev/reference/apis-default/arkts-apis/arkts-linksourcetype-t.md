@@ -16,5 +16,5 @@ Define Link source type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** IDecoratedV1Variable<T>
+**Property type:** [IDecoratedV1Variable](arkts-decorator-idecoratedv1variable-i.md)&lt;T&gt;
 

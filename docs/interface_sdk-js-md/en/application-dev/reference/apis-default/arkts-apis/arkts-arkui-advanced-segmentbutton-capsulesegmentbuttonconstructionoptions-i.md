@@ -2,7 +2,7 @@
 
 Defines SegmentButton capsule options.
 
-**Inheritance/Implementation:** CapsuleSegmentButtonConstructionOptions extends [CommonSegmentButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i.md)
+**Inheritance/Implementation:** CapsuleSegmentButtonConstructionOptions extends [CommonSegmentButtonOptions](arkts-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i.md)
 
 **Since:** 23
 
@@ -25,7 +25,7 @@ buttons: SegmentButtonItemTuple
 
 The items of capsule type of SegmentButton.
 
-**Type:** [SegmentButtonItemTuple](../../apis-arkui/arkts-apis/arkts-arkui-segmentbuttonitemtuple-t.md)
+**Type:** [SegmentButtonItemTuple](arkts-segmentbuttonitemtuple-t.md)
 
 **Since:** 23
 

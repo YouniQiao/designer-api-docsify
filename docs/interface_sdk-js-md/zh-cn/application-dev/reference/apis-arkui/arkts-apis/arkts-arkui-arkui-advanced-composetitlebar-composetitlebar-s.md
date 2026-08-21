@@ -29,7 +29,7 @@ item?: ComposeTitleBarMenuItem
 
 用于左侧头像的单个菜单项目。不设置时标题栏左侧不显示头像。
 
-**类型：** [ComposeTitleBarMenuItem](arkts-arkui-arkui-advanced-composetitlebar-composetitlebarmenuitem-c.md)
+**类型：** [ComposeTitleBarMenuItem](../../apis-default/arkts-apis/arkts-arkui-advanced-composetitlebar-composetitlebarmenuitem-c.md)
 
 **起始版本：** 10
 
@@ -49,7 +49,7 @@ menuItems?: Array<ComposeTitleBarMenuItem>
 
 右侧菜单项目列表。不设置时标题栏右侧不显示菜单项目。
 
-**类型：** Array&lt;[ComposeTitleBarMenuItem](arkts-arkui-arkui-advanced-composetitlebar-composetitlebarmenuitem-c.md)&gt;
+**类型：** Array&lt;[ComposeTitleBarMenuItem](../../apis-default/arkts-apis/arkts-arkui-advanced-composetitlebar-composetitlebarmenuitem-c.md)&gt;
 
 **起始版本：** 10
 

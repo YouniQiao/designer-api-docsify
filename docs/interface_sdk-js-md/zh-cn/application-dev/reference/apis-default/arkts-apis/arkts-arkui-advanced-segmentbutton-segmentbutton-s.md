@@ -94,7 +94,7 @@ onItemClicked?: Callback<int>
 
 当分段按钮选项被点击时，触发的回调函数接收被点击的选项下标作为参数。若不传入此参数，则点击时不触发回调。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt;
 
 **起始版本：** 23
 
@@ -115,7 +115,7 @@ onItemClicked?: Callback<int>
 
 分段按钮选项。
 
-**类型：** [SegmentButtonOptions](arkts-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md)
+**类型：** [SegmentButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md)
 
 **起始版本：** 23
 

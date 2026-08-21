@@ -16,5 +16,5 @@ Represents a FrameNode of the **ListItem** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** TypedFrameNode<ListItemInterface, ListItemAttribute>
+**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;ListItemInterface, ListItemAttribute&gt;
 

@@ -32,7 +32,7 @@ Mount ComponentContent to FrameNode. On API 26.0.0 and above, It can also mount 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](arkts-componentcontent-c.md)&lt;T&gt; \| [ReactiveComponentContent](arkts-componentcontent-reactivecomponentcontent-c.md) | Yes | Newly added ComponentContent.<br>**Since:** 23 - 24 |
+| content | [ComponentContent](../../apis-arkui/arkts-apis/arkts-arkui-componentcontent-c.md)&lt;T&gt; \| [ReactiveComponentContent](../../apis-arkui/arkts-apis/arkts-arkui-componentcontent-reactivecomponentcontent-c.md) | Yes | Newly added ComponentContent.<br>**Since:** 23 - 24 |
 
 **Error codes:**
 
@@ -205,7 +205,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode |
+| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode |
 | options | [FrameNodeOptions](arkts-framenode-framenodeoptions-i.md) | No | Options for configuring FrameNode creation<br>**Since:** 26.0.0 |
 
 ## convertPosition
@@ -375,7 +375,7 @@ Create a specified number of FrameNode objects and return them.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode |
+| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode |
 | count | int | Yes | the number of FrameNode objects to create. Returns an empty array if count &lt;= 0 or is not an integer. |
 
 **Return value:**
@@ -1159,7 +1159,7 @@ Get the RenderNode in FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [RenderNode](arkts-rendernode-c.md) \| null | Returns a RenderNode inside the FrameNode, or null if not contained. |
+| [RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) \| null | Returns a RenderNode inside the FrameNode, or null if not contained. |
 
 ## getUniqueId
 

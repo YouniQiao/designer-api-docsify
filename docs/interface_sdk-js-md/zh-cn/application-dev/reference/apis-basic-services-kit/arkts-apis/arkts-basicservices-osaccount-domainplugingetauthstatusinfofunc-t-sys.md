@@ -20,5 +20,5 @@ type DomainPluginGetAuthStatusInfoFunc = (domainAccountInfo: DomainAccountInfo,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 表示域账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;AuthStatusInfo&gt; | 是 | 表示查询结果回调。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;AuthStatusInfo&gt; | 是 | 表示查询结果回调。 |
 

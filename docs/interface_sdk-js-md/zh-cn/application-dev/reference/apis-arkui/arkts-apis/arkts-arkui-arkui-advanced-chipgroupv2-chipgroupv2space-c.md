@@ -36,7 +36,7 @@ ChipGroupV2Space的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [ChipGroupV2SpaceConfig](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2spaceconfig-i.md) | 是 | ChipGroupV2间距配置。 |
+| config | [ChipGroupV2SpaceConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2spaceconfig-i.md) | 是 | ChipGroupV2间距配置。 |
 
 ## endSpace
 

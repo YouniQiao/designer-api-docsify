@@ -1,6 +1,6 @@
 # @ohos.nearlink.remoteDevice
 
-Provides interaction methods such as pairing and connection with remote devices.
+This module provides the capabilities of connecting to and managing NearLink remote devices, including connecting to and disconnecting from remote devices, pairing with a trusted device and confirmation, adjusting the connection interval, and subscribing to pairing requests.
 
 **Since:** 26.0.0
 
@@ -22,13 +22,13 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [createRemoteDevice](arkts-connectivity-remotedevice-createremotedevice-f.md) | Creates a remote device instance. |
-| [offAcbStateChange](arkts-connectivity-remotedevice-offacbstatechange-f.md) | Unsubscribes from the NearLink ACB connection status change event. |
-| [offConnectionStateChange](arkts-connectivity-remotedevice-offconnectionstatechange-f.md) | Unsubscribes from NearLink connection state change events. |
-| [offPairingStateChange](arkts-connectivity-remotedevice-offpairingstatechange-f.md) | Unsubscribes from NearLink pairing state change events. |
-| [onAcbStateChange](arkts-connectivity-remotedevice-onacbstatechange-f.md) | Subscribes to the NearLink ACB connection status change event. |
-| [onConnectionStateChange](arkts-connectivity-remotedevice-onconnectionstatechange-f.md) | Subscribes to NearLink connection state change events. |
-| [onPairingStateChange](arkts-connectivity-remotedevice-onpairingstatechange-f.md) | Subscribes to NearLink pairing state change events. |
+| [createRemoteDevice](arkts-connectivity-remotedevice-createremotedevice-f.md) | Creates a **RemoteDevice** instance. |
+| [offAcbStateChange](arkts-connectivity-remotedevice-offacbstatechange-f.md) | Unsubscribes from the logical link connection status change event. This API uses an asynchronous callback to return the result. |
+| [offConnectionStateChange](arkts-connectivity-remotedevice-offconnectionstatechange-f.md) | Unsubscribes from the connection status change event. This API uses an asynchronous callback to return the result. |
+| [offPairingStateChange](arkts-connectivity-remotedevice-offpairingstatechange-f.md) | Unsubscribes from pairing status change events. This API uses an asynchronous callback to return the result. |
+| [onAcbStateChange](arkts-connectivity-remotedevice-onacbstatechange-f.md) | Subscribes to the logical link connection status change event. This API uses an asynchronous callback to return the result. This API is applicable when corresponding processing needs to be triggered when a logical link is established or disconnected, for example, checking whether the link is ready before data transfer or clearing resources after disconnection. Unlike [remoteDevice.onConnectionStateChange](arkts-connectivity-remotedevice-onconnectionstatechange-f.md) which listens for the connection status change at the device level, this API listens for the connection status change at the logical link level. |
+| [onConnectionStateChange](arkts-connectivity-remotedevice-onconnectionstatechange-f.md) | Subscribes to the connection status change event. This API uses an asynchronous callback to return the result. Unlike [remoteDevice.onAcbStateChange](arkts-connectivity-remotedevice-onacbstatechange-f.md) which listens for the connection status change at the logical link level, this API listens for the connection status change at the device level. |
+| [onPairingStateChange](arkts-connectivity-remotedevice-onpairingstatechange-f.md) | Subscribes to pairing status change events. This API uses an asynchronous callback to return the result. |
 
 <!--Del-->
 ### Functions(System API)
@@ -43,20 +43,20 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [AcbStateParam](arkts-connectivity-remotedevice-acbstateparam-i.md) | ACB connection status parameter. |
+| [AcbStateParam](arkts-connectivity-remotedevice-acbstateparam-i.md) | Represents the result of the logical link connection status change event. |
 | [ConnectionStateParam](arkts-connectivity-remotedevice-connectionstateparam-i.md) | Describes the connection state parameters. |
 | [DeviceInformation](arkts-connectivity-remotedevice-deviceinformation-i.md) | Describes the remote device information. |
 | [PairingRequestParam](arkts-connectivity-remotedevice-pairingrequestparam-i.md) | Describes pairing request parameters. |
 | [PairingStateParam](arkts-connectivity-remotedevice-pairingstateparam-i.md) | Describes the pairing state parameters. |
-| [RemoteDevice](arkts-connectivity-remotedevice-remotedevice-i.md) | Remote device operation methods. |
+| [RemoteDevice](arkts-connectivity-remotedevice-remotedevice-i.md) | Provides the method for operating on a remote device. Before using this method, you need to call [remoteDevice.createRemoteDevice](arkts-connectivity-remotedevice-createremotedevice-f.md) to create a [RemoteDevice](arkts-connectivity-remotedevice-remotedevice-i.md) instance. You need to create only one instance for a device. |
 
 <!--Del-->
 ### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
-| [DeviceModel](arkts-connectivity-remotedevice-devicemodel-i-sys.md) | Describes the remote device's model information. |
-| [RemoteDevice](arkts-connectivity-remotedevice-remotedevice-i-sys.md) | Remote device operation methods. |
+| [DeviceModel](arkts-connectivity-remotedevice-devicemodel-i-sys.md) | Describes the model of a remote device. |
+| [RemoteDevice](arkts-connectivity-remotedevice-remotedevice-i-sys.md) | Provides the method for operating on a remote device. Before using this method, you need to call [remoteDevice.createRemoteDevice](arkts-connectivity-remotedevice-createremotedevice-f.md) to create a [RemoteDevice](arkts-connectivity-remotedevice-remotedevice-i.md) instance. You need to create only one instance for a device. |
 <!--DelEnd-->
 
 ### Enums
@@ -65,22 +65,22 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 | --- | --- |
 | [ConnectionReason](arkts-connectivity-remotedevice-connectionreason-e.md) | Enum for the connection reason. |
 | [PairingReason](arkts-connectivity-remotedevice-pairingreason-e.md) | Enum for the pairing reason. |
-| [PairingType](arkts-connectivity-remotedevice-pairingtype-e.md) | Enum for the pairing type. |
+| [PairingType](arkts-connectivity-remotedevice-pairingtype-e.md) | Enumerates the NearLink pairing types. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [AcbState](arkts-connectivity-remotedevice-acbstate-t.md) | Indicates the ACB(Asynchronous Connection-Oriented Bidirectional) connection status. |
-| [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md) | Indicates the connection state. |
-| [DeviceClass](arkts-connectivity-remotedevice-deviceclass-t.md) | Indicates the device class. |
-| [PairingState](arkts-connectivity-remotedevice-pairingstate-t.md) | Indicates the pairing state. |
+| [AcbState](arkts-connectivity-remotedevice-acbstate-t.md) | Enumerates the logical link connection states with a remote device. |
+| [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md) | Enumerates the connection states with a remote device. |
+| [DeviceClass](arkts-connectivity-remotedevice-deviceclass-t.md) | Enumerates the device types. |
+| [PairingState](arkts-connectivity-remotedevice-pairingstate-t.md) | Enumerates the pairing statuses with a remote device. |
 
 <!--Del-->
 ### Types(System API)
 
 | Name | Description |
 | --- | --- |
-| [ConnectionInterval](arkts-connectivity-remotedevice-connectioninterval-t-sys.md) | Indicates the connection interval. |
+| [ConnectionInterval](arkts-connectivity-remotedevice-connectioninterval-t-sys.md) | Enumerates the connection intervals. |
 <!--DelEnd-->
 

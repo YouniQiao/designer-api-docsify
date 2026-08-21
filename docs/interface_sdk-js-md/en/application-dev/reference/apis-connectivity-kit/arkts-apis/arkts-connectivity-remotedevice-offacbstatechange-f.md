@@ -12,7 +12,7 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 function offAcbStateChange(callback?: Callback<AcbStateParam>): void
 ```
 
-Unsubscribes from the NearLink ACB connection status change event.
+Unsubscribes from the logical link connection status change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
 
@@ -26,7 +26,7 @@ Unsubscribes from the NearLink ACB connection status change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AcbStateParam](arkts-connectivity-remotedevice-acbstateparam-i.md)&gt; | No | Callback of the event to be listened to. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AcbStateParam](arkts-connectivity-remotedevice-acbstateparam-i.md)&gt; | No | Callback used to return the result of the logical link connection status change event. <br>If this parameter is specified, the current callback is unregistered. If this parameter is not specified, all callbacks corresponding to the event are unregistered. |
 
 **Error codes:**
 

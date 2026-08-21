@@ -12,5 +12,5 @@ type AudioEffectInfoArray = Array<Readonly<AudioEffectMode>>
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
-**属性类型：** Array<Readonly<AudioEffectMode>>
+**属性类型：** Array&lt;Readonly&lt;[AudioEffectMode](arkts-audio-audio-audioeffectmode-e.md)&gt;&gt;
 

@@ -37,7 +37,7 @@ Constructor of PromptOptionsV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [PromptOptionsV2Config](arkts-arkui-advanced-exceptionpromptv2-promptoptionsv2config-i.md) | No | Configuration information of ExceptionPromptV2 |
+| config | [PromptOptionsV2Config](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-exceptionpromptv2-promptoptionsv2config-i.md) | No | Configuration information of ExceptionPromptV2 |
 
 ## actionText
 
@@ -132,7 +132,7 @@ Top margin of the ExceptionPromptV2. Distance from the top to the content area o
 
 Margin Type of ExceptionPromptV2. Margin from the content area to the edge of the container.
 
-**Type:** [MarginTypeV2](arkts-arkui-advanced-exceptionpromptv2-margintypev2-e.md)
+**Type:** [MarginTypeV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-exceptionpromptv2-margintypev2-e.md)
 
 **Since:** 26.0.0
 

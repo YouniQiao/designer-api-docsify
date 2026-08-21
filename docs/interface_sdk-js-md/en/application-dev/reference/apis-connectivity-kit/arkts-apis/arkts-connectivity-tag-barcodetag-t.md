@@ -4,7 +4,7 @@
 export type BarcodeTag = _BarcodeTag
 ```
 
-Exports type BarcodeTag.
+Obtains a **BarcodeTag** object.
 
 **Since:** 23
 

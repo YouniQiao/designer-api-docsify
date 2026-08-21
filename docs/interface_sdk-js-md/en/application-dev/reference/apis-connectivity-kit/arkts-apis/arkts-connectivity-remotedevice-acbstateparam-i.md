@@ -1,6 +1,6 @@
 # AcbStateParam
 
-ACB connection status parameter.
+Represents the result of the logical link connection status change event.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 address: string
 ```
 
-Indicates the device address. The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+Device address, indicating that the logical link connection status with the device changes. The address format is **11:22:33:AA:BB:FF**.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ Indicates the device address. The length must be 17, The value consists of hexad
 state: AcbState
 ```
 
-ACB connection status.
+Current logical link connection status.
 
 **Type:** AcbState
 

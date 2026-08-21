@@ -31,7 +31,7 @@ function unbindDevice(deviceId: number, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | number | 是 | 设备ID，通过[queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md)获得。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数。当解绑设备成功时，err为undefined，data为设备ID；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当解绑设备成功时，err为undefined，data为设备ID；否则为错误对象。 |
 
 **错误码：**
 

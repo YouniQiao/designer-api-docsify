@@ -1,8 +1,6 @@
 # NfcState
 
-NFC changed states.
-
-@enum { int }
+Enumerates the NFC states.
 
 **Since:** 23
 
@@ -16,11 +14,11 @@ NFC changed states.
 STATE_OFF = 1
 ```
 
-Indicates that NFC is disabled.
+NFC is closed (OFF).
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NfcState-STATE_OFF = 1--><!--Device-NfcState-STATE_OFF = 1-End-->
 
@@ -32,11 +30,11 @@ Indicates that NFC is disabled.
 STATE_TURNING_ON = 2
 ```
 
-Indicates that NFC is being enabled.
+NFC is turning on.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NfcState-STATE_TURNING_ON = 2--><!--Device-NfcState-STATE_TURNING_ON = 2-End-->
 
@@ -48,11 +46,11 @@ Indicates that NFC is being enabled.
 STATE_ON = 3
 ```
 
-Indicates that NFC is enabled.
+NFC is open (ON).
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NfcState-STATE_ON = 3--><!--Device-NfcState-STATE_ON = 3-End-->
 
@@ -64,11 +62,11 @@ Indicates that NFC is enabled.
 STATE_TURNING_OFF = 4
 ```
 
-Indicates that NFC is being disabled.
+NFC is turning off.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NfcState-STATE_TURNING_OFF = 4--><!--Device-NfcState-STATE_TURNING_OFF = 4-End-->
 

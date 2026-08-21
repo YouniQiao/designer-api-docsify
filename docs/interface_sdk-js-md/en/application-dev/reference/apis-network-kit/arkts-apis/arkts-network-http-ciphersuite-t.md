@@ -14,5 +14,5 @@ Declares the cipher suite.
 
 **System capability:** SystemCapability.Communication.NetStack
 
-**Property type:** TlsV13CipherSuite
+**Property type:** [TlsV13CipherSuite](arkts-network-http-tlsv13ciphersuite-t.md)
 

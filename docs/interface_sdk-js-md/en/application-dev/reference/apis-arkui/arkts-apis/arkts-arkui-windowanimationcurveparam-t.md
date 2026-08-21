@@ -14,5 +14,5 @@ Defines the window animation curve param.
 
 **System capability:** SystemCapability.Window.SessionManager
 
-**Property type:** Array<double>
+**Property type:** Array&lt;double&gt;
 

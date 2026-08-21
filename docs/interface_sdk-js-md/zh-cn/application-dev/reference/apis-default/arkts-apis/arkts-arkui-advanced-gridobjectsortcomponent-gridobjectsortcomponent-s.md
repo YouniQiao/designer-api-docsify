@@ -50,7 +50,7 @@ dataList: Array<GridObjectSortComponentItem>
 
 传入的数据，数据长度超过50，只会取前50的数据。 最大长度为50，。
 
-**类型：** Array&lt;[GridObjectSortComponentItem](arkts-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponentitem-i.md)&gt;
+**类型：** Array&lt;[GridObjectSortComponentItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponentitem-i.md)&gt;
 
 **起始版本：** 23
 
@@ -90,7 +90,7 @@ onSave: (select: Array<GridObjectSortComponentItem>, unselect: Array<GridObjectS
 
 保存编辑排序的回调函数，返回编辑后的数据。
 
-**类型：** (select: Array&lt;[GridObjectSortComponentItem](arkts-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponentitem-i.md)&gt;, unselect: Array&lt;GridObjectSortComponentItem&gt;) =&gt; void
+**类型：** (select: Array&lt;[GridObjectSortComponentItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponentitem-i.md)&gt;, unselect: Array&lt;GridObjectSortComponentItem&gt;) =&gt; void
 
 **起始版本：** 23
 
@@ -111,7 +111,7 @@ onSave: (select: Array<GridObjectSortComponentItem>, unselect: Array<GridObjectS
 
 组件配置信息。
 
-**类型：** [GridObjectSortComponentOptions](arkts-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponentoptions-i.md)
+**类型：** [GridObjectSortComponentOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponentoptions-i.md)
 
 **起始版本：** 23
 

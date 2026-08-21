@@ -29,13 +29,13 @@ import { config } from '@kit.AccessibilityKit';
 | [enableAbility](arkts-accessibility-config-enableability-f-sys.md) | 启用辅助扩展，需与[config.disableAbility](arkts-accessibility-config-disableability-f-sys.md)配对使用。使用callback异步回调。 |
 | [enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md) | 启用辅助扩展，并指定[ConnectCallback](arkts-accessibility-config-connectcallback-i-sys.md)作为辅助扩展连接断开事件的回调函数。使用Promise异步回调。 |
 | [getSeniorModeStateForApp](arkts-accessibility-config-getseniormodestateforapp-f-sys.md) | 查询应用“长辈模式”的状态。使用Promise异步回调。 |
-| [offEnabledAccessibilityExtensionListChange](arkts-accessibility-config-offenabledaccessibilityextensionlistchange-f-sys.md) | Unregister listener that watches for changes in the enabled status of accessibility extensions. |
-| [offInstalledAccessibilityListChange](arkts-accessibility-config-offinstalledaccessibilitylistchange-f-sys.md) | Unregister listener that watches for changes in the installed status of accessibility extensions. |
+| [offEnabledAccessibilityExtensionListChange](arkts-accessibility-config-offenabledaccessibilityextensionlistchange-f-sys.md) | 取消启用的辅助扩展的列表变化监听。使用callback异步回调。 |
+| [offInstalledAccessibilityListChange](arkts-accessibility-config-offinstalledaccessibilitylistchange-f-sys.md) | 取消已安装的辅助扩展的列表变化监听。使用callback异步回调。 |
 | [offSeniorModeStateChangeForApp](arkts-accessibility-config-offseniormodestatechangeforapp-f-sys.md) | 取消监听所有应用“长辈模式”的状态变化事件。使用callback异步回调。 |
 | [off_enabledAccessibilityExtensionListChange](arkts-accessibility-config-offenabledaccessibilityextensionlistchange-f-sys.md) | 取消启用的辅助扩展的列表变化监听。使用callback异步回调。 |
 | [off_installedAccessibilityListChange](arkts-accessibility-config-offinstalledaccessibilitylistchange-f-sys.md) | 取消已安装的辅助扩展的列表变化监听。使用callback异步回调。 |
-| [onEnabledAccessibilityExtensionListChange](arkts-accessibility-config-onenabledaccessibilityextensionlistchange-f-sys.md) | Register the listener that watches for changes in the enabled status of accessibility extensions. |
-| [onInstalledAccessibilityListChange](arkts-accessibility-config-oninstalledaccessibilitylistchange-f-sys.md) | Register the listener that watches for changes in the installed status of accessibility extensions. |
+| [onEnabledAccessibilityExtensionListChange](arkts-accessibility-config-onenabledaccessibilityextensionlistchange-f-sys.md) | 添加启用的辅助扩展的列表变化监听。使用callback异步回调。 |
+| [onInstalledAccessibilityListChange](arkts-accessibility-config-oninstalledaccessibilitylistchange-f-sys.md) | 添加已安装的辅助扩展的列表变化监听。使用callback异步回调。 |
 | [onSeniorModeStateChangeForApp](arkts-accessibility-config-onseniormodestatechangeforapp-f-sys.md) | 监听所有应用“长辈模式”的状态变化事件。使用callback异步回调。 |
 | [on_enabledAccessibilityExtensionListChange](arkts-accessibility-config-onenabledaccessibilityextensionlistchange-f-sys.md) | 添加启用的辅助扩展的列表变化监听。使用callback异步回调。 |
 | [on_installedAccessibilityListChange](arkts-accessibility-config-oninstalledaccessibilitylistchange-f-sys.md) | 添加已安装的辅助扩展的列表变化监听。使用callback异步回调。 |
@@ -71,9 +71,9 @@ import { config } from '@kit.AccessibilityKit';
 | 名称 | 说明 |
 | --- | --- |
 | [ClickResponseTime](arkts-accessibility-config-clickresponsetime-t-sys.md) | 用于不同时间长短的点击持续时间。 |
-| [DaltonizationColorFilter](arkts-accessibility-config-daltonizationcolorfilter-t-sys.md) | 色彩校正功能启用时（[daltonizationState](arkts-accessibility-config-con-sys.md#daltonizationstate)设置为true）配置生效；色彩校正功能未启用时（ [daltonizationState](arkts-accessibility-config-con-sys.md#daltonizationstate)设置为false）显示为正常类型。 |
+| [DaltonizationColorFilter](arkts-accessibility-config-daltonizationcolorfilter-t-sys.md) | 用于不同色弱类型的校正颜色滤镜。 |
 | [OnDisconnectCallback](arkts-accessibility-config-ondisconnectcallback-t-sys.md) | 描述AccessibilityExtensionAbility断开连接的回调接口。 |
-| [RepeatClickInterval](arkts-accessibility-config-repeatclickinterval-t-sys.md) | 忽略重复点击功能启用时（[ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignorerepeatclick)设置为true）配置生效；忽略重复点击功能未启用时（ [ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignorerepeatclick)设置为false）不生效。 |
+| [RepeatClickInterval](arkts-accessibility-config-repeatclickinterval-t-sys.md) | 用于不同时间间隔的忽略重复点击。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -87,7 +87,7 @@ import { config } from '@kit.AccessibilityKit';
 | [daltonizationState](arkts-accessibility-config-con-sys.md#daltonizationstate) | 表示色彩校正功能启用状态。配合daltonizationColorFilter使用。true表示已启用色彩校正功能，false表示未启用色彩校正功能，默认值为false。 |
 | [ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignorerepeatclick) | 表示忽略重复点击功能启用状态。配合repeatClickInterval使用。true表示已启用忽略重复点击功能，false表示未启用忽略重复点击功能，默认值为false。 |
 | [repeatClickInterval](arkts-accessibility-config-con-sys.md#repeatclickinterval) | 表示忽略重复点击的时间间隔配置。配合ignoreRepeatClick使用，仅当ignoreRepeatClick设置为true时，此配置生效。默认值为Shortest，表示最短间隔。 |
-| [screenMagnification](arkts-accessibility-config-con-sys.md#screenmagnification) | Indicates the configuration of screen magnification. |
+| [screenMagnification](arkts-accessibility-config-con-sys.md#screenmagnification) | 表示屏幕放大功能启用状态。 |
 | [shortkeyMultiTargets](arkts-accessibility-config-con-sys.md#shortkeymultitargets) | 表示辅助扩展快捷键的多目标列表配置。取值为辅助扩展应用的名称，格式为：['bundleName/abilityName']。格式不正确或名称无效时，设置不生效。 |
 <!--DelEnd-->
 

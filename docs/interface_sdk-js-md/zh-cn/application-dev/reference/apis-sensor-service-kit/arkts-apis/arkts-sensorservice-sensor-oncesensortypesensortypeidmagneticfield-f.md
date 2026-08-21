@@ -33,5 +33,5 @@ function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD | 是 | 磁场传感器类型为SENSOR_TYPE_ID_MAGNETIC_FIELD。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MagneticFieldResponse](arkts-sensorservice-sensor-magneticfieldresponse-i.md)&gt; | 是 | 注册一次磁场传感器的回调函数，上报的数据类型为MagneticFieldResponse。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MagneticFieldResponse](arkts-sensorservice-sensor-magneticfieldresponse-i.md)&gt; | 是 | 注册一次磁场传感器的回调函数，上报的数据类型为MagneticFieldResponse。 |
 

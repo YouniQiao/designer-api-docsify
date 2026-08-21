@@ -12,11 +12,11 @@ import { tag } from '@kit.ConnectivityKit';
 function getNdef(tagInfo: TagInfo): NdefTag
 ```
 
-Obtains an [NdefTag](arkts-connectivity-tag-ndeftag-t.md) object based on the tag information. During tag reading, if the tag supports the NDEF technology, an [NdefTag](arkts-connectivity-tag-ndeftag-t.md) object will be created based on the tag information.
+Obtains an **NdefTag** object, which allows access to NFC Data Exchange Format (NDEF) tags.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-tag-function getNdef(tagInfo: TagInfo): NdefTag--><!--Device-tag-function getNdef(tagInfo: TagInfo): NdefTag-End-->
 
@@ -26,13 +26,13 @@ Obtains an [NdefTag](arkts-connectivity-tag-ndeftag-t.md) object based on the ta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tagInfo | [TagInfo](arkts-connectivity-tag-taginfo-i.md) | Yes | Indicates the dispatched tag information. |
+| tagInfo | [TagInfo](arkts-connectivity-tag-taginfo-i.md) | Yes | Tag information, including the tag technology type and related parameters, obtained from [tag.getTagInfo(want: Want)](arkts-connectivity-tag-gettaginfo-f.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| NdefTag | The { |
+| NdefTag | NdefTag** object obtained. |
 
 **Error codes:**
 

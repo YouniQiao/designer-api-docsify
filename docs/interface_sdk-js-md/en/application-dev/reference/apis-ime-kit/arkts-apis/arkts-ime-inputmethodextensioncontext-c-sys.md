@@ -1,10 +1,9 @@
 # InputMethodExtensionContext
 
-The **InputMethodExtensionContext** module, inherited from **ExtensionContext**, provides context for **InputMethodExtension** abilities. You can use the APIs of this module to start, terminate, connect, and disconnect abilities.
-
-> **NOTE：**
-> 
-> - The APIs of this module can be used only in the stage model.
+@brief The **InputMethodExtensionContext** module, inherited from **ExtensionContext**, provides context for **InputMethodExtension** abilities. You can use the APIs of this module to start, terminate, connect, and disconnect abilities. <br> <br>   
+> **NOTE：**<br>
+> <br>
+> The initial APIs of this module are supported since API version 9. Newly added APIs will be marked with a superscript to indicate their earliest API version. The APIs of this module can be used only in the stage model.
 
 **Inheritance/Implementation:** InputMethodExtensionContext extends ExtensionContext
 
@@ -26,7 +25,7 @@ import { InputMethodExtensionContext } from '@kit.IMEKit';
 connectAbility(want: Want, options: ConnectOptions): number
 ```
 
-Connects this ability to a ServiceExtensionAbility.
+@brief Connects this ability to a ServiceExtensionAbility.
 
 **Since:** 9
 
@@ -75,7 +74,7 @@ Connects this ability to a ServiceExtensionAbility.
 connectAbilityWithAccount(want: Want, accountId: number): number
 ```
 
-Connects to a ServiceExtensionAbility with a specified account.
+@brief Connects to a ServiceExtensionAbility with a specified account.
 
 **Since:** 9
 
@@ -128,7 +127,7 @@ Connects to a ServiceExtensionAbility with a specified account.
 connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 ```
 
-Connects this ability to a ServiceExtensionAbility.
+@brief Connects this ability to a ServiceExtensionAbility.
 
 **Since:** 9
 
@@ -177,7 +176,7 @@ Connects this ability to a ServiceExtensionAbility.
 disconnectAbility(connection: number, callback: AsyncCallback<void>): void
 ```
 
-Disconnects this ability from a ServiceExtensionAbility and after the successful disconnection, sets the remote object returned upon the connection to void. This API uses an asynchronous callback to return the result.
+@brief Disconnects this ability from a ServiceExtensionAbility and after the successful disconnection, sets the remote object returned upon the connection to void. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -212,7 +211,7 @@ Disconnects this ability from a ServiceExtensionAbility and after the successful
 disconnectAbility(connection: number): Promise<void>
 ```
 
-Disconnects this ability from a ServiceExtensionAbility and after the successful disconnection, sets the remote object returned upon the connection to void. This API uses a promise to return the result.
+@brief Disconnects this ability from a ServiceExtensionAbility and after the successful disconnection, sets the remote object returned upon the connection to void. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -252,7 +251,7 @@ Disconnects this ability from a ServiceExtensionAbility and after the successful
 disconnectServiceExtensionAbility(connection: number, callback: AsyncCallback<void>): void
 ```
 
-Disconnects this ability from a ServiceExtensionAbility and after the successful disconnection, sets the remote object returned upon the connection to void. This API can be called only on the main thread. This API uses an asynchronous callback to return the result.
+@brief Disconnects this ability from a ServiceExtensionAbility and after the successful disconnection, sets the remote object returned upon the connection to void. This API can be called only on the main thread. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -287,7 +286,7 @@ Disconnects this ability from a ServiceExtensionAbility and after the successful
 disconnectServiceExtensionAbility(connection: number): Promise<void>
 ```
 
-Disconnects this ability from a ServiceExtensionAbility and after the successful disconnection, sets the remote object returned upon the connection to void. This API can be called only on the main thread. This API uses a promise to return the result.
+@brief Disconnects this ability from a ServiceExtensionAbility and after the successful disconnection, sets the remote object returned upon the connection to void. This API can be called only on the main thread. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -327,7 +326,7 @@ Disconnects this ability from a ServiceExtensionAbility and after the successful
 startAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback<void>): void
 ```
 
-Starts an ability with a specified account. This API uses an asynchronous callback to return the result.
+@brief Starts an ability with a specified account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -380,7 +379,7 @@ Starts an ability with a specified account. This API uses an asynchronous callba
 startAbilityWithAccount(want: Want, accountId: number): Promise<void>
 ```
 
-Starts an ability with a specified account. This API uses a promise to return the result.
+@brief Starts an ability with a specified account. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -438,7 +437,7 @@ Starts an ability with a specified account. This API uses a promise to return th
 terminateSelf(callback: AsyncCallback<void>): void
 ```
 
-Destroys this input method extension. This API uses an asynchronous callback to return the result.
+@brief Destroys this input method extension. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -466,7 +465,7 @@ Destroys this input method extension. This API uses an asynchronous callback to 
 terminateSelf(): Promise<void>
 ```
 
-Destroys this input method extension. This API uses a promise to return the result.
+@brief Destroys this input method extension. This API uses a promise to return the result.
 
 **Since:** 9
 

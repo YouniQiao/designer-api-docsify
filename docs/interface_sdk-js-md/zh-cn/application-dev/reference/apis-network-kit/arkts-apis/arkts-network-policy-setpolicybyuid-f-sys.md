@@ -30,7 +30,7 @@ function setPolicyByUid(uid: int, policy: NetUidPolicy, callback: AsyncCallback<
 | --- | --- | --- | --- |
 | uid | int | 是 | app 唯一标识符，取值范围为int32_t范围内的正整数。 |
 | policy | [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md) | 是 | 应用对应的策略。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，成功返回空，失败返回错误码错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，成功返回空，失败返回错误码错误信息。 |
 
 **错误码：**
 

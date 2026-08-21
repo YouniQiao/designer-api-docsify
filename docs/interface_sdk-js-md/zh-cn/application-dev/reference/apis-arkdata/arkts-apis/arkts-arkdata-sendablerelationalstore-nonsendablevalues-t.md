@@ -12,5 +12,5 @@ type NonSendableValues = Array<relationalStore.ValueType>
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**属性类型：** Array<relationalStore.ValueType>
+**属性类型：** Array&lt;relationalStore.ValueType&gt;
 

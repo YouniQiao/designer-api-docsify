@@ -361,7 +361,7 @@ compCommonContrary: ResourceColor
 compDivider: ResourceColor
 ```
 
-通用分割线颜色。&lt;/br&gt;影响组件：[SelectDialog](arkts-arkui-advanced-dialog-selectdialog-s.md)、 PatternLock、Divider。从 API版本26.0.0开始，新增UIPickerComponent、 TextPicker、MenuItem、 MenuItemGroup、Select 。
+通用分割线颜色。&lt;/br&gt;影响组件：[SelectDialog](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialog-selectdialog-s.md)、 PatternLock、Divider。从 API版本26.0.0开始，新增UIPickerComponent、 TextPicker、MenuItem、 MenuItemGroup、Select 。
 
 **类型：** [ResourceColor](arkts-resourcecolor-t.md)
 
@@ -541,7 +541,7 @@ container?: ResourceColor
 fontEmphasize: ResourceColor
 ```
 
-高亮字体颜色。&lt;/br&gt;影响组件：[TipsDialog](arkts-arkui-advanced-dialog-tipsdialog-s.md)、 [ConfirmDialog](arkts-arkui-advanced-dialog-confirmdialog-s.md)、 [AlertDialog](arkts-arkui-advanced-dialog-alertdialog-s.md)、&lt;/br&gt; [SelectDialog](arkts-arkui-advanced-dialog-selectdialog-s.md)、 [CustomContentDialog](arkts-arkui-advanced-dialog-customcontentdialog-s.md)、 [SubHeader](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheader-subheader-s.md)、&lt;/br&gt; AlphabetIndexer、Popup、 Button、&lt;/br&gt;Select、 [ToolBar](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-toolbar-toolbar-s.md)、Search、&lt;/br&gt; TimePicker、 DatePicker、 TextPicker。从API版本26.0.0开始，新增 RichEditor。
+高亮字体颜色。&lt;/br&gt;影响组件：[TipsDialog](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialog-tipsdialog-s.md)、 [ConfirmDialog](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialog-confirmdialog-s.md)、 [AlertDialog](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialog-alertdialog-s.md)、&lt;/br&gt; [SelectDialog](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialog-selectdialog-s.md)、 [CustomContentDialog](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialog-customcontentdialog-s.md)、 [SubHeader](arkts-arkui-advanced-subheader-subheader-s.md)、&lt;/br&gt; AlphabetIndexer、Popup、 Button、&lt;/br&gt;Select、 [ToolBar](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-toolbar-toolbar-s.md)、Search、&lt;/br&gt; TimePicker、 DatePicker、 TextPicker。从API版本26.0.0开始，新增 RichEditor。
 
 **类型：** [ResourceColor](arkts-resourcecolor-t.md)
 
@@ -661,7 +661,7 @@ fontOnTertiary: ResourceColor
 fontPrimary: ResourceColor
 ```
 
-一级文本字体颜色。&lt;/br&gt;影响组件：[EditableTitleBar](arkts-arkui-advanced-editabletitlebar-editabletitlebar-s.md)、 [LoadingDialog](arkts-arkui-advanced-dialog-loadingdialog-s.md)、 [TipsDialog](arkts-arkui-advanced-dialog-tipsdialog-s.md)、&lt;/br&gt; [ConfirmDialog](arkts-arkui-advanced-dialog-confirmdialog-s.md)、 [AlertDialog](arkts-arkui-advanced-dialog-alertdialog-s.md)、 [SelectDialog](arkts-arkui-advanced-dialog-selectdialog-s.md)、&lt;/br&gt; [CustomContentDialog](arkts-arkui-advanced-dialog-customcontentdialog-s.md)、 Swiper、Text、&lt;/br&gt; [SubHeader](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheader-subheader-s.md)、[ProgressButton](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-progressbutton-progressbutton-s.md)、 AlphabetIndexer、&lt;/br&gt; Popup、Select、 Chip、&lt;/br&gt;[ToolBar](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-toolbar-toolbar-s.md)、 Menu、TextInput、&lt;/br&gt; Search、TimePicker、 DatePicker、&lt;/br&gt; TextPicker、 [ComposeListItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitem-composelistitem-s.md)、[TreeView](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-treeview-treeview-s.md)。从 API版本26.0.0开始，新增CalendarPicker、 UIPickerComponent、 RichEditor、MenuItem、 MenuItemGroup、 Counter。
+一级文本字体颜色。&lt;/br&gt;影响组件：[EditableTitleBar](arkts-arkui-advanced-editabletitlebar-editabletitlebar-s.md)、 [LoadingDialog](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialog-loadingdialog-s.md)、 [TipsDialog](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialog-tipsdialog-s.md)、&lt;/br&gt; [ConfirmDialog](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialog-confirmdialog-s.md)、 [AlertDialog](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialog-alertdialog-s.md)、 [SelectDialog](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialog-selectdialog-s.md)、&lt;/br&gt; [CustomContentDialog](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialog-customcontentdialog-s.md)、 Swiper、Text、&lt;/br&gt; [SubHeader](arkts-arkui-advanced-subheader-subheader-s.md)、[ProgressButton](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-progressbutton-progressbutton-s.md)、 AlphabetIndexer、&lt;/br&gt; Popup、Select、 Chip、&lt;/br&gt;[ToolBar](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-toolbar-toolbar-s.md)、 Menu、TextInput、&lt;/br&gt; Search、TimePicker、 DatePicker、&lt;/br&gt; TextPicker、 [ComposeListItem](arkts-arkui-advanced-composelistitem-composelistitem-s.md)、[TreeView](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-treeview-treeview-s.md)。从 API版本26.0.0开始，新增CalendarPicker、 UIPickerComponent、 RichEditor、MenuItem、 MenuItemGroup、 Counter。
 
 **类型：** [ResourceColor](arkts-resourcecolor-t.md)
 
@@ -681,7 +681,7 @@ fontPrimary: ResourceColor
 fontSecondary: ResourceColor
 ```
 
-二级文本字体颜色。&lt;/br&gt;影响组件：[EditableTitleBar](arkts-arkui-advanced-editabletitlebar-editabletitlebar-s.md)、 [AlertDialog](arkts-arkui-advanced-dialog-alertdialog-s.md)、 [CustomContentDialog](arkts-arkui-advanced-dialog-customcontentdialog-s.md)、&lt;/br&gt; [SubHeader](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheader-subheader-s.md)、 AlphabetIndexer、Popup、&lt;/ br&gt;TextInput、Search、 [ComposeListItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitem-composelistitem-s.md)、&lt;/br&gt; [TreeView](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-treeview-treeview-s.md)、TextClock。从API版本26. 0.0开始，新增MenuItem、 MenuItemGroup。
+二级文本字体颜色。&lt;/br&gt;影响组件：[EditableTitleBar](arkts-arkui-advanced-editabletitlebar-editabletitlebar-s.md)、 [AlertDialog](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialog-alertdialog-s.md)、 [CustomContentDialog](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialog-customcontentdialog-s.md)、&lt;/br&gt; [SubHeader](arkts-arkui-advanced-subheader-subheader-s.md)、 AlphabetIndexer、Popup、&lt;/ br&gt;TextInput、Search、 [ComposeListItem](arkts-arkui-advanced-composelistitem-composelistitem-s.md)、&lt;/br&gt; [TreeView](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-treeview-treeview-s.md)、TextClock。从API版本26. 0.0开始，新增MenuItem、 MenuItemGroup。
 
 **类型：** [ResourceColor](arkts-resourcecolor-t.md)
 
@@ -701,7 +701,7 @@ fontSecondary: ResourceColor
 fontTertiary: ResourceColor
 ```
 
-三级文本字体颜色。&lt;/br&gt;影响组件：[ComposeListItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitem-composelistitem-s.md)
+三级文本字体颜色。&lt;/br&gt;影响组件：[ComposeListItem](arkts-arkui-advanced-composelistitem-composelistitem-s.md)
 
 **类型：** [ResourceColor](arkts-resourcecolor-t.md)
 
@@ -861,7 +861,7 @@ iconPrimary: ResourceColor
 iconSecondary: ResourceColor
 ```
 
-二级图标颜色。&lt;/br&gt;影响组件：[LoadingDialog](arkts-arkui-advanced-dialog-loadingdialog-s.md)、 [SubHeader](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheader-subheader-s.md)、&lt;/br&gt;Popup、 Chip、Search、&lt;/br&gt; [TreeView](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-treeview-treeview-s.md)。从API版本26.0.0开始，新增 LoadingProgress。
+二级图标颜色。&lt;/br&gt;影响组件：[LoadingDialog](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialog-loadingdialog-s.md)、 [SubHeader](arkts-arkui-advanced-subheader-subheader-s.md)、&lt;/br&gt;Popup、 Chip、Search、&lt;/br&gt; [TreeView](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-treeview-treeview-s.md)。从API版本26.0.0开始，新增 LoadingProgress。
 
 **类型：** [ResourceColor](arkts-resourcecolor-t.md)
 
@@ -901,7 +901,7 @@ iconSubEmphasize: ResourceColor
 iconTertiary: ResourceColor
 ```
 
-三级图标颜色。&lt;/br&gt;影响组件：[SubHeader](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheader-subheader-s.md)
+三级图标颜色。&lt;/br&gt;影响组件：[SubHeader](arkts-arkui-advanced-subheader-subheader-s.md)
 
 **类型：** [ResourceColor](arkts-resourcecolor-t.md)
 
@@ -1081,7 +1081,7 @@ primary?: ResourceColor
 warning: ResourceColor
 ```
 
-一级警示色。&lt;/br&gt;影响组件：[TipsDialog](arkts-arkui-advanced-dialog-tipsdialog-s.md)、 [AlertDialog](arkts-arkui-advanced-dialog-alertdialog-s.md)、 [CustomContentDialog](arkts-arkui-advanced-dialog-customcontentdialog-s.md)、&lt;/br&gt; Badge、Button
+一级警示色。&lt;/br&gt;影响组件：[TipsDialog](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialog-tipsdialog-s.md)、 [AlertDialog](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialog-alertdialog-s.md)、 [CustomContentDialog](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialog-customcontentdialog-s.md)、&lt;/br&gt; Badge、Button
 
 **类型：** [ResourceColor](arkts-resourcecolor-t.md)
 

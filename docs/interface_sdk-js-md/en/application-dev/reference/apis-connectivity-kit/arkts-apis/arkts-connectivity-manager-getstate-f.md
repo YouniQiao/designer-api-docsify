@@ -12,7 +12,7 @@ import { manager } from '@kit.ConnectivityKit';
 function getState(): NearlinkState
 ```
 
-Gets the NearLink state.
+Queries the NearLink status.
 
 **Since:** 26.0.0
 
@@ -26,7 +26,7 @@ Gets the NearLink state.
 
 | Type | Description |
 | --- | --- |
-| [NearlinkState](arkts-connectivity-manager-nearlinkstate-e.md) | Returns the NearLink state. |
+| [NearlinkState](arkts-connectivity-manager-nearlinkstate-e.md) | NearLink status. |
 
 **Error codes:**
 

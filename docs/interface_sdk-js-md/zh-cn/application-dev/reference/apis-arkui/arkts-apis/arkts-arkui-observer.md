@@ -4,7 +4,7 @@ UIObserver提供了UI组件行为变化的无感监听能力，支持监听Navig
 
 > **说明：**
 
-> - 以下API需先使用UIContext中的[getUIObserver](arkts-arkui-arkui-uicontext-uicontext-c.md#getuiobserver)方法获取到UIObserver对象，再通过该对象调用对应方法。
+> - 以下API需先使用UIContext中的[getUIObserver](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getuiobserver)方法获取到UIObserver对象，再通过该对象调用对应方法。
 
 > - UIObserver仅能监听到本进程内的UI组件状态变化信息， &gt; - 不支持获取<!--Del-->UIExtensionComponent等<!--DelEnd-->跨进程场景的信息。
 

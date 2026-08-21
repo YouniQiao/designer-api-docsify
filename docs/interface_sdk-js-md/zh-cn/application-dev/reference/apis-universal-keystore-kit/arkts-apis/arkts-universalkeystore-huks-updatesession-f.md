@@ -31,7 +31,7 @@ huks.initSession、huks.updateSession、huks.finishSession为三段式接口，�
 | --- | --- | --- | --- |
 | handle | long | 是 | updateSession操作的uint64类型的handle值。 |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | updateSession的参数集合。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | 是 | 回调函数。当密钥操作update成功时，err为undefined，data为获取到的HuksReturnResult；否 则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | 是 | 回调函数。当密钥操作update成功时，err为undefined，data为获取到的HuksReturnResult；否 则为错误对象。 |
 
 **错误码：**
 
@@ -87,7 +87,7 @@ Updates the key operation by segment. This API uses an asynchronous callback to 
 | handle | long | 是 | Handle of the **updateSession** operation, which is of the uint64 type. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | Parameter set used for the **updateSession** operation. |
 | token | Uint8Array | 是 | Authentication token for [refined key access control](../../../security/UniversalKeystoreKit/huks-identity-authentication-overview.md#refined-key-access-control) . |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. |
 
 **错误码：**
 

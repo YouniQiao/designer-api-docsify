@@ -31,7 +31,7 @@ import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type 
 
 定义CounterV2组件的类型及样式。
 
-**类型：** [CounterV2Options](../../apis-default/arkts-apis/arkts-arkui-advanced-counterv2-counterv2options-c.md)
+**类型：** [CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)
 
 **起始版本：** 26.0.0
 

@@ -1,6 +1,6 @@
 # ConnectionStateParams
 
-Describes the parameters required for obtaining the connection status.
+Defines the parameters for obtaining the port channel connection state.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 address: string
 ```
 
-Indicates the connected device address. The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+NearLink address of a remote device. The address format is **11:22:33:AA:BB:FF**.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ Indicates the connected device address. The length must be 17, The value consist
 uuid: string
 ```
 
-Indicates the service uuid. The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. <br>NearLink standard UUIDs are not allowed.
+NearLink service UUID, which is a string of 36 characters. The value consists of 32 hexadecimal digits and four hyphens (-), for example, **FFFFFFFF-1234-5678-ABCD-000000001234**, which indicates a 128-bit ID. The value cannot be set to a standard NearLink UUID.
 
 **Type:** string
 

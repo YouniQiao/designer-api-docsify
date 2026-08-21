@@ -1,6 +1,6 @@
 # @ohos.arkui.uiMaterial
 
-This module provides APIs for system materials. Different system materials correspond to different UI effects, including the background color, border color, border width, shadow, and material layer filter. The performance of a material object varies on devices with different computing power. The high, medium, and low levels of device computing power are determined by device vendors. For details about the level-based effect, see the description of [ImmersiveMaterial](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md).
+This module provides APIs for system materials. Different system materials correspond to different UI effects, including the background color, border color, border width, shadow, and material layer filter. The performance of a material object varies on devices with different computing power. The high, medium, and low levels of device computing power are determined by device vendors. For details about the level-based effect, see the description of [ImmersiveMaterial](arkts-uimaterial-immersivematerial-c.md).
 
 **Since:** 23
 
@@ -27,7 +27,7 @@ This module provides APIs for system materials. Different system materials corre
 | --- | --- |
 | [getGlobalMaterialLevel](arkts-uimaterial-getglobalmateriallevel-f.md) | Obtains the global material level, which is related to the device computing power. This configuration item is defined by the device and cannot be modified. |
 | [getMaterialInfo](arkts-uimaterial-getmaterialinfo-f.md) | Obtains the material configuration information of this application. The returned configuration information comes from the metadata configured in the [module.json5](../../../quick-start/module-configuration-file.md) file of the application. |
-| [isImmersiveMaterialSupported](arkts-uimaterial-isimmersivematerialsupported-f.md) | Check whether [ImmersiveMaterial](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md) is supported on the current device. If it is true, the ImmersiveMaterial object can be used in the systemMaterial attribute. If it is false, setting the ImmersiveMaterial object in the systemMaterial attribute will not take effect. It is defined by the device and cannot be modified. |
+| [isImmersiveMaterialSupported](arkts-uimaterial-isimmersivematerialsupported-f.md) | Check whether [ImmersiveMaterial](arkts-uimaterial-immersivematerial-c.md) is supported on the current device. If it is true, the ImmersiveMaterial object can be used in the systemMaterial attribute. If it is false, setting the ImmersiveMaterial object in the systemMaterial attribute will not take effect. It is defined by the device and cannot be modified. |
 
 <!--Del-->
 ### Functions(System API)
@@ -42,7 +42,7 @@ This module provides APIs for system materials. Different system materials corre
 
 | Name | Description |
 | --- | --- |
-| [ImmersiveMaterial](arkts-uimaterial-immersivematerial-c.md) | Immersive material class, which inherits from [Material](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-materialtype-e.md). |
+| [ImmersiveMaterial](arkts-uimaterial-immersivematerial-c.md) | Immersive material class, which inherits from [Material](arkts-uimaterial-materialtype-e.md). |
 
 <!--Del-->
 ### Classes(System API)
@@ -73,7 +73,7 @@ This module provides APIs for system materials. Different system materials corre
 | Name | Description |
 | --- | --- |
 | [ImmersiveStyle](arkts-uimaterial-immersivestyle-e.md) | Enumerates immersive material styles. Different material styles correspond to different material parameters, including the blur degree and brightness. |
-| [MaterialLevel](arkts-uimaterial-materiallevel-e.md) | Enumerates the material levels, which indicate the computing power level of the device. Use [getGlobalMaterialLevel](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-getglobalmateriallevel-f.md) to obtain the material level of the current device. |
+| [MaterialLevel](arkts-uimaterial-materiallevel-e.md) | Enumerates the material levels, which indicate the computing power level of the device. Use [getGlobalMaterialLevel](arkts-uimaterial-getglobalmateriallevel-f.md) to obtain the material level of the current device. |
 | [MaterialState](arkts-uimaterial-materialstate-e.md) | Enumerates the material enabling states, indicating the states of the application-level immersive system material configuration. |
 | [MaterialType](arkts-uimaterial-materialtype-e.md) | Enumerates system material types. |
 

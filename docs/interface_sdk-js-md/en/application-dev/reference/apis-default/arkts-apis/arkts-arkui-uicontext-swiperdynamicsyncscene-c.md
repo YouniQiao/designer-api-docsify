@@ -4,7 +4,7 @@ Represents a dynamic synchronization scene of Swiper.
 
 @extends DynamicSyncScene
 
-**Inheritance/Implementation:** SwiperDynamicSyncScene extends [DynamicSyncScene](arkts-arkui-uicontext-dynamicsyncscene-c.md)
+**Inheritance/Implementation:** SwiperDynamicSyncScene extends [DynamicSyncScene](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md)
 
 **Since:** 23
 
@@ -27,7 +27,7 @@ readonly type: SwiperDynamicSyncSceneType
 
 Type of the SwiperDynamicSyncSceneType.
 
-**Type:** [SwiperDynamicSyncSceneType](arkts-arkui-uicontext-swiperdynamicsyncscenetype-e.md)
+**Type:** [SwiperDynamicSyncSceneType](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-swiperdynamicsyncscenetype-e.md)
 
 **Since:** 23
 

@@ -125,7 +125,7 @@ prefixIcon?: IconOptions
 
 Prefix icon.
 
-**Type:** [IconOptions](arkts-arkui-advanced-chipgroup-iconoptions-i.md)
+**Type:** [IconOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroup-iconoptions-i.md)
 
 **Since:** 23
 
@@ -165,7 +165,7 @@ suffixImageIcon?: SuffixImageIconOptions
 
 Suffix icon.
 
-**Type:** [SuffixImageIconOptions](arkts-arkui-advanced-chipgroup-suffiximageiconoptions-i.md)
+**Type:** [SuffixImageIconOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroup-suffiximageiconoptions-i.md)
 
 **Since:** 23
 

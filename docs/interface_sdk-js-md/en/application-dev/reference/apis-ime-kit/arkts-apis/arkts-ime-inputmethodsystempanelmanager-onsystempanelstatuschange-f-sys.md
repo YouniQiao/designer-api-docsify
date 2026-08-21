@@ -12,7 +12,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function onSystemPanelStatusChange(callback: Callback<SystemPanelStatus>): void
 ```
 
-Subscribe to the system panel status change event.
+@brief Subscribes to system panel state change events.
 
 **Since:** 26.0.0
 
@@ -28,7 +28,7 @@ Subscribe to the system panel status change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SystemPanelStatus](arkts-ime-inputmethodsystempanelmanager-systempanelstatus-i-sys.md)&gt; | Yes | callback triggered when the system panel status changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SystemPanelStatus](arkts-ime-inputmethodsystempanelmanager-systempanelstatus-i-sys.md)&gt; | Yes | Callback function, which is triggered when the system panel state changes. |
 
 **Error codes:**
 

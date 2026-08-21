@@ -12,5 +12,5 @@ Represents the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) array t
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**Property type:** Array<relationalStore.ValueType>
+**Property type:** Array&lt;relationalStore.ValueType&gt;
 

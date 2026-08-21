@@ -42,7 +42,7 @@ Sets the backgroundColor of the toolBarV2.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ToolBarV2Modifier](../../apis-default/arkts-apis/arkts-arkui-advanced-toolbarv2-toolbarv2modifier-c.md) | returns the instance of the ToolBarV2Modifier. |
+| [ToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2modifier-c.md) | returns the instance of the ToolBarV2Modifier. |
 
 ## height
 
@@ -72,7 +72,7 @@ Sets the height of the toolBarV2.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ToolBarV2Modifier](../../apis-default/arkts-apis/arkts-arkui-advanced-toolbarv2-toolbarv2modifier-c.md) | returns the instance of the ToolBarV2Modifier. |
+| [ToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2modifier-c.md) | returns the instance of the ToolBarV2Modifier. |
 
 ## padding
 
@@ -102,7 +102,7 @@ Sets the left and right padding of the toolbarV2.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ToolBarV2Modifier](../../apis-default/arkts-apis/arkts-arkui-advanced-toolbarv2-toolbarv2modifier-c.md) | returns the instance of the ToolBarV2Modifier. |
+| [ToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2modifier-c.md) | returns the instance of the ToolBarV2Modifier. |
 
 ## stateEffect
 
@@ -132,5 +132,5 @@ Sets whether or not to display the press status effect.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ToolBarV2Modifier](../../apis-default/arkts-apis/arkts-arkui-advanced-toolbarv2-toolbarv2modifier-c.md) | returns the instance of the ToolBarV2Modifier. |
+| [ToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2modifier-c.md) | returns the instance of the ToolBarV2Modifier. |
 

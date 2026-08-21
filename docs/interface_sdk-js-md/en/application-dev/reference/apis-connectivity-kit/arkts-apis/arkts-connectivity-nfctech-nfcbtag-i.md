@@ -1,6 +1,12 @@
 # NfcBTag
 
-Provides interfaces to create an {@code NfcBTag} and perform I/O operations on the tag. &lt;p&gt;This class inherits from the TagSession abstract class and provides interfaces to create an {@code NfcBTag} and obtain the tag information.
+Provides APIs to access NFC-B (ISO 14443-3B) properties and perform I/O operations on a tag. This class inherits from **TagSession**.
+
+**TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).
+
+For details about how to obtain an **NfcBTag** object, see [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).
+
+The following describes the unique APIs of **NfcBTag**.
 
 **Inheritance/Implementation:** NfcBTag extends TagSession
 
@@ -16,11 +22,11 @@ Provides interfaces to create an {@code NfcBTag} and perform I/O operations on t
 getRespAppData(): int[]
 ```
 
-Obtains the application data of a tag.
+Obtains the application data of this NFC-B tag.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NfcBTag-getRespAppData(): int[]--><!--Device-NfcBTag-getRespAppData(): int[]-End-->
 
@@ -30,7 +36,7 @@ Obtains the application data of a tag.
 
 | Type | Description |
 | --- | --- |
-| int[] | Returns the application data of the tag. |
+| int[] | Application data obtained, which consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
 
 **Examples**
 
@@ -48,11 +54,11 @@ console.info("nfcB respAppData: " + respAppData);
 getRespProtocol(): int[]
 ```
 
-Obtains the protocol information of a tag.
+Obtains the protocol information of this NFC-B tag.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NfcBTag-getRespProtocol(): int[]--><!--Device-NfcBTag-getRespProtocol(): int[]-End-->
 
@@ -62,7 +68,7 @@ Obtains the protocol information of a tag.
 
 | Type | Description |
 | --- | --- |
-| int[] | Returns the protocol information of the tag. |
+| int[] | Protocol information obtained, which consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
 
 **Examples**
 

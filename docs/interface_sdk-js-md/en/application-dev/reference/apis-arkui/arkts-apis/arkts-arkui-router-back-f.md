@@ -16,13 +16,13 @@ Returns to the previous page or a specified page, which deletes all pages betwee
 
 > **NOTE：**
 > 
-> - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
+> - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
 
 **Since:** 8
 
 **Deprecated since:** 18
 
-**Substitutes:** [back](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#back)(options?: router.RouterOptions)
+**Substitutes:** [back](arkts-arkui-arkui-uicontext-router-c.md#back)(options?: router.RouterOptions)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -53,13 +53,13 @@ Returns to the specified page, which deletes all pages between the current page 
 
 > **NOTE：**
 > 
-> - Since API version 12, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
+> - Since API version 12, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
 
 **Since:** 12
 
 **Deprecated since:** 18
 
-**Substitutes:** [back](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#back)(index: number, params?: Object)
+**Substitutes:** [back](arkts-arkui-arkui-uicontext-router-c.md#back)(index: number, params?: Object)
 
 **Model restriction:** This API can be used only in the stage model.
 

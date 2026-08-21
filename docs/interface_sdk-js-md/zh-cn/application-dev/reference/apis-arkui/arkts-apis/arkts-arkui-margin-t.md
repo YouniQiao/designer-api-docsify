@@ -16,5 +16,5 @@ Defines the margin property.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** Padding
+**属性类型：** [Padding](arkts-arkui-padding-t.md)
 

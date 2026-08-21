@@ -112,7 +112,7 @@ marginType: MarginTypeV2
 
 指定当前异常提示的边距样式。
 
-**类型：** [MarginTypeV2](../../apis-default/arkts-apis/arkts-arkui-advanced-exceptionpromptv2-margintypev2-e.md)
+**类型：** [MarginTypeV2](arkts-arkui-arkui-advanced-exceptionpromptv2-margintypev2-e.md)
 
 **起始版本：** 26.0.0
 

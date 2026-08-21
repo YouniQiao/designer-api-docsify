@@ -4,7 +4,7 @@
 export type FocusMoveResult = _FocusMoveResult
 ```
 
-Indicates focus move result.
+Return value type of the accessibility node query. For details, see [FocusMoveResult](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md).
 
 **Since:** 23
 

@@ -34,7 +34,7 @@ This method queries usage information at the BY_OPTIMIZED interval by default.
 | --- | --- | --- | --- |
 | begin | number | 是 | Indicates the start time of the query period, in milliseconds. <br> Unit:ms |
 | end | number | 是 | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md)&gt; | 是 | the callback of queryBundleStateInfos. the [BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md) objects containing the usage information about each bundle. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md)&gt; | 是 | the callback of queryBundleStateInfos. the [BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md) objects containing the usage information about each bundle. |
 
 **示例**
 

@@ -12,7 +12,7 @@ import { tag } from '@kit.ConnectivityKit';
 function getBarcodeTag(tagInfo: TagInfo): BarcodeTag
 ```
 
-Obtains an [BarcodeTag](arkts-connectivity-tag-barcodetag-t.md) object based on the tag information. During tag reading, if the tag supports the NfcBarcode technology, an [BarcodeTag](arkts-connectivity-tag-barcodetag-t.md) object will be created.
+Obtains a **BarcodeTag** object, which allows access to the tags in the BarcodeTag format.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ Obtains an [BarcodeTag](arkts-connectivity-tag-barcodetag-t.md) object based on 
 
 | Type | Description |
 | --- | --- |
-| BarcodeTag | The { |
+| BarcodeTag | BarcodeTag** object obtained. |
 
 **Error codes:**
 

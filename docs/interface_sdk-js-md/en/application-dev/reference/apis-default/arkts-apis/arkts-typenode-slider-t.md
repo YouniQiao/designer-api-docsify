@@ -16,5 +16,5 @@ Define the FrameNode type for Slider.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** SliderFrameNode
+**Property type:** [SliderFrameNode](arkts-typenode-sliderframenode-c.md)
 

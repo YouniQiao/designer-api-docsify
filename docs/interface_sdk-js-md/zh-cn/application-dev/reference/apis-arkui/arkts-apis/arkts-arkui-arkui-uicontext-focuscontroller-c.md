@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> 以下API需先使用UIContext中的[getFocusController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getfocuscontroller)方法获取FocusController实例，再通过该实例调用对应方法。
+> 以下API需先使用UIContext中的[getFocusController()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getfocuscontroller)方法获取FocusController实例，再通过该实例调用对应方法。
 
 **起始版本：** 12
 

@@ -1,6 +1,6 @@
 # ExtendAction
 
-Describes the type of the extended edit action on the text box.
+@brief Describes the type of the extended edit action on the text box.
 
 **Since:** 23
 
@@ -14,7 +14,7 @@ Describes the type of the extended edit action on the text box.
 SELECT_ALL = 0
 ```
 
-Select all.
+@brief Select all.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ Select all.
 CUT = 3
 ```
 
-Cut.
+@brief Cut.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ Cut.
 COPY = 4
 ```
 
-Copy.
+@brief Copy.
 
 **Since:** 23
 
@@ -56,7 +56,7 @@ Copy.
 PASTE = 5
 ```
 
-Paste.
+@brief Paste.
 
 **Since:** 23
 

@@ -6,7 +6,7 @@
 const MAX_TYPE_NUM: int
 ```
 
-Keyboard max number. Max value is 128.
+@brief Keyboard max number. Max value is 128.
 
 **Since:** 23
 

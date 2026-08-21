@@ -39,5 +39,5 @@ ChipGroupV2Items的构造函数
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| items | [ChipGroupV2ItemConfig](arkts-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md)[] | 是 | ChipGroupV2的配置数组 |
+| items | [ChipGroupV2ItemConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md)[] | 是 | ChipGroupV2的配置数组 |
 

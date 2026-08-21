@@ -29,7 +29,7 @@ function setPowerMode(mode: DevicePowerMode, callback: AsyncCallback<void>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mode | [DevicePowerMode](arkts-basicservices-power-devicepowermode-e.md) | 是 | 电源模式。各模式含义请参见DevicePowerMode枚举说明。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置电源模式成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置电源模式成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

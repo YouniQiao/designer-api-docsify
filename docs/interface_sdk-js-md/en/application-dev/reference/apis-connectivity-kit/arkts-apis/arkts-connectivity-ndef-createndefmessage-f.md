@@ -12,9 +12,9 @@ import { tag } from '@kit.ConnectivityKit';
 function createNdefMessage(data: int[]): NdefMessage
 ```
 
-Creates an NDEF message with raw bytes.
+Creates an NDEF message from raw byte data. The data must comply with the NDEF record format. Otherwise, the NDEF record list contained in the **NdefMessage** object will be empty.
 
-**Since:** 12
+**Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -26,13 +26,13 @@ Creates an NDEF message with raw bytes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | int[] | Yes | The raw bytes to parse NDEF message. |
+| data | int[] | Yes | Raw byte data, which consists of hexadecimal numbers ranging from **0x00** to **0xFF**. The data must comply with the NDEF record format. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| NdefMessage | The instance of NdefMessage. |
+| NdefMessage | NDEF message created. For details, see *NFCForum-TS-NDEF_1.0*. |
 
 **Error codes:**
 
@@ -47,9 +47,9 @@ Creates an NDEF message with raw bytes.
 function createNdefMessage(ndefRecords: NdefRecord[]): NdefMessage
 ```
 
-Creates an NDEF message with record list.
+Creates an NDEF message from the NDEF records list.
 
-**Since:** 12
+**Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -61,13 +61,13 @@ Creates an NDEF message with record list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ndefRecords | [NdefRecord](arkts-connectivity-tag-ndefrecord-i.md)[] | Yes | The NDEF records to parse NDEF message. |
+| ndefRecords | [NdefRecord](arkts-connectivity-tag-ndefrecord-i.md)[] | Yes | NDEF record list used to create the NDEF message. For details, see *NFCForum-TS-NDEF_1.0*. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| NdefMessage | The instance of NdefMessage. |
+| NdefMessage | NDEF message created. For details, see *NFCForum-TS-NDEF_1.0*. |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # TagInfo
 
-Provides tag information. &lt;p&gt;This class provides the technology a tag supports, for example, NFC-A. Applications can create different tags based on the supported technology.
+Before a card with tags is read or written, **[TagInfo](#taginfo)** must be obtained to determine the tag technologies supported by the card. In this way, the application can invoke the correct API to communicate with the card.
 
 **Since:** 23
 
@@ -20,7 +20,9 @@ import { tag } from '@kit.ConnectivityKit';
 supportedProfiles: number[]
 ```
 
-The supported technology list of this tag.
+Supported profiles.
+
+Note: This parameter is supported since API version 7 and deprecated since API version 9. Use **[tag.TagInfo#technology](#taginfo)** instead.
 
 **Type:** number[]
 
@@ -42,7 +44,7 @@ The supported technology list of this tag.
 technology: int[]
 ```
 
-The supported technology list of this tag.
+Supported tag technologies. Each number is a constant indicating the supported technology.
 
 **Type:** int[]
 
@@ -50,7 +52,7 @@ The supported technology list of this tag.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TagInfo-technology: int[]--><!--Device-TagInfo-technology: int[]-End-->
 
@@ -62,7 +64,7 @@ The supported technology list of this tag.
 uid: int[]
 ```
 
-The uid of this tag, it.
+Tag unique identifier (UID), which consists of hexadecimal numbers ranging from **0x00** to **0xFF**.
 
 **Type:** int[]
 
@@ -70,7 +72,7 @@ The uid of this tag, it.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TagInfo-uid: int[]--><!--Device-TagInfo-uid: int[]-End-->
 

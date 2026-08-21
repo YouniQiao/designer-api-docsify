@@ -1,6 +1,12 @@
 # NfcVTag
 
-Provides methods for creating an NFC-V tag, obtaining tag information, and controlling tag read and write. &lt;p&gt;This class inherits from the TagSession abstract class and provides interfaces to create an {@code NfcVTag} and obtain the tag information.
+Provides APIs to access NFC-V (ISO 15693) properties and perform I/O operations on a tag. This class inherits from **TagSession**.
+
+**TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).
+
+For details about how to obtain an **NfcVTag** object, see [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).
+
+The following describes the unique APIs of **NfcVTag**.
 
 **Inheritance/Implementation:** NfcVTag extends TagSession
 
@@ -16,11 +22,11 @@ Provides methods for creating an NFC-V tag, obtaining tag information, and contr
 getDsfId(): int
 ```
 
-Obtains the response flags from this {@code NfcVTag} instance.
+Obtains the data storage format identifier (DSFID) from this NFC-V tag.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NfcVTag-getDsfId(): int--><!--Device-NfcVTag-getDsfId(): int-End-->
 
@@ -30,7 +36,7 @@ Obtains the response flags from this {@code NfcVTag} instance.
 
 | Type | Description |
 | --- | --- |
-| int | Returns the response flags. |
+| int | DSFID obtained, which consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
 
 **Examples**
 
@@ -48,11 +54,11 @@ console.info("nfcV dsfId: " + dsfId);
 getResponseFlags(): int
 ```
 
-Obtains the response flags from this {@code NfcVTag} instance.
+Obtains the response flags from this NFC-V tag.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NfcVTag-getResponseFlags(): int--><!--Device-NfcVTag-getResponseFlags(): int-End-->
 
@@ -62,7 +68,7 @@ Obtains the response flags from this {@code NfcVTag} instance.
 
 | Type | Description |
 | --- | --- |
-| int | Returns the response flags. |
+| int | Response flags obtained, which consist of hexadecimal numbers ranging from **0x00** to **0xFF**. |
 
 **Examples**
 

@@ -23,7 +23,7 @@ import { ComposeTitleBarV2, ComposeTitleBarV2MenuItem, ComposeTitleBarV2MenuItem
 
 A single menu item for the profile picture on the left.
 
-**Type:** [ComposeTitleBarV2MenuItem](arkts-arkui-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)
+**Type:** [ComposeTitleBarV2MenuItem](../../apis-default/arkts-apis/arkts-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)
 
 **Since:** 26.0.0
 
@@ -44,7 +44,7 @@ A single menu item for the profile picture on the left.
 
 Menu items on the right side.
 
-**Type:** Array&lt;[ComposeTitleBarV2MenuItem](arkts-arkui-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)&gt;
+**Type:** Array&lt;[ComposeTitleBarV2MenuItem](../../apis-default/arkts-apis/arkts-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)&gt;
 
 **Since:** 26.0.0
 

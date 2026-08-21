@@ -42,7 +42,7 @@ The method to build component.
 
 配置跟手弹出框的参数。
 
-**类型：** [PopoverOptions](arkts-arkui-advanced-dialog-popoveroptions-i.md)
+**类型：** [PopoverOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialog-popoveroptions-i.md)
 
 **起始版本：** 23
 

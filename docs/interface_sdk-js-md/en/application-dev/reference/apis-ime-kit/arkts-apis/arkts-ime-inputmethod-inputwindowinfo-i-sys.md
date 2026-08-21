@@ -1,6 +1,6 @@
 # InputWindowInfo
 
-Information of input window.
+@brief Describes the window information of the input method keyboard.
 
 **Since:** 23
 
@@ -25,7 +25,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 userId?: int
 ```
 
-Indicates the ID of the user whose input window is shown.
+@brief Indicates the ID of the user whose input window is shown.
 
 **Type:** int
 

@@ -23,7 +23,7 @@ extraRegionPosition?: ExtraRegionPosition
 
 扩展区域的位置信息，当且仅当showExtraRegion设置为true时此字段才生效。
 
-**类型：** [ExtraRegionPosition](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-foldsplitcontainer-extraregionposition-e.md)
+**类型：** [ExtraRegionPosition](arkts-arkui-advanced-foldsplitcontainer-extraregionposition-e.md)
 
 **起始版本：** 23
 
@@ -43,7 +43,7 @@ horizontalSplitRatio?: PresetSplitRatio
 
 主要区域与扩展区域之间的宽度比例，当且仅当extra有效时此字段才生效。
 
-**类型：** [PresetSplitRatio](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-foldsplitcontainer-presetsplitratio-e.md)
+**类型：** [PresetSplitRatio](arkts-arkui-advanced-foldsplitcontainer-presetsplitratio-e.md)
 
 **起始版本：** 23
 

@@ -43,7 +43,7 @@ The method to build component.
 
 The ContentItem.
 
-**Type:** [ContentItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitem-contentitem-c.md)
+**Type:** [ContentItem](arkts-arkui-advanced-composelistitem-contentitem-c.md)
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ The ContentItem.
 
 The OperateItem.
 
-**Type:** [OperateItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitem-operateitem-c.md)
+**Type:** [OperateItem](arkts-arkui-advanced-composelistitem-operateitem-c.md)
 
 **Since:** 23
 

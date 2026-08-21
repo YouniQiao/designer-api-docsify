@@ -23,7 +23,7 @@ dateOptions?: DateOptions
 
 日期选项。
 
-**类型：** [DateOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md)
+**类型：** [DateOptions](arkts-arkui-advanced-datepickercomponent-dateoptions-c.md)
 
 **起始版本：** 26.0.0
 
@@ -45,7 +45,7 @@ displayMode?: DisplayMode
 
 默认值：DisplayMode.DATE
 
-**类型：** [DisplayMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-displaymode-e.md)
+**类型：** [DisplayMode](arkts-arkui-advanced-datepickercomponent-displaymode-e.md)
 
 **默认值：** DisplayMode.DATE
 
@@ -67,7 +67,7 @@ timeOptions?: TimeOptions
 
 时间选项。
 
-**类型：** [TimeOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md)
+**类型：** [TimeOptions](arkts-arkui-advanced-datepickercomponent-timeoptions-c.md)
 
 **起始版本：** 26.0.0
 

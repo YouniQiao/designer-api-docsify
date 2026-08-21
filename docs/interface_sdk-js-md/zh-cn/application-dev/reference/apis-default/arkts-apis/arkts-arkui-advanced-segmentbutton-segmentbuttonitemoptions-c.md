@@ -37,7 +37,7 @@ constructor(options: SegmentButtonItemOptionsConstructorOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [SegmentButtonItemOptionsConstructorOptions](arkts-arkui-advanced-segmentbutton-segmentbuttonitemoptionsconstructoroptions-i.md) | 是 | 单个分段按钮的配置选项，包含图标、文本、无障碍属性等配置信息。 |
+| options | [SegmentButtonItemOptionsConstructorOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptionsconstructoroptions-i.md) | 是 | 单个分段按钮的配置选项，包含图标、文本、无障碍属性等配置信息。 |
 
 ## accessibilityDescription
 

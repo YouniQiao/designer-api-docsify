@@ -30,7 +30,7 @@ import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, Ope
 
 Elements on the left and in the center.
 
-**Type:** [ContentItem](arkts-arkui-arkui-advanced-composelistitem-contentitem-c.md)
+**Type:** [ContentItem](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitem-contentitem-c.md)
 
 **Since:** 10
 
@@ -51,7 +51,7 @@ Elements on the left and in the center.
 
 Element on the right.
 
-**Type:** [OperateItem](arkts-arkui-arkui-advanced-composelistitem-operateitem-c.md)
+**Type:** [OperateItem](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitem-operateitem-c.md)
 
 **Since:** 10
 

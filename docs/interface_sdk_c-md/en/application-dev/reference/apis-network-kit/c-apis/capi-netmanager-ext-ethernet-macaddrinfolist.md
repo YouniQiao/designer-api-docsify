@@ -6,7 +6,7 @@ typedef struct Ethernet_MacAddrInfoList {...} Ethernet_MacAddrInfoList
 
 ## Overview
 
-Defines the ethernet iface mac address info list.
+Defines the MAC address list of Ethernet NICs.
 
 **Since**: 26.0.0
 

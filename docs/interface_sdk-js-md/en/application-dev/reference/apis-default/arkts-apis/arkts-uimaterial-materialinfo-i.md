@@ -23,7 +23,7 @@ state: MaterialState
 
 Material enabling state.
 
-**Type:** [MaterialState](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-materialstate-e.md)
+**Type:** [MaterialState](arkts-uimaterial-materialstate-e.md)
 
 **Since:** 26.0.0
 

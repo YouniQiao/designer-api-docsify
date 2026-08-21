@@ -1,6 +1,6 @@
 # AttachFailureReason
 
-Enumerates the specific reasons for attachment failure
+@brief Enumerates the reasons for attachment failure.
 
 **Since:** 23
 
@@ -14,7 +14,7 @@ Enumerates the specific reasons for attachment failure
 CALLER_NOT_FOCUSED = 0
 ```
 
-The attachment failure reason is CALLER_NOT_FOCUSED.
+@brief The caller does not belong to the application of the focused window.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ The attachment failure reason is CALLER_NOT_FOCUSED.
 IME_ABNORMAL
 ```
 
-The attachment failure reason is IME_ABNORMAL.
+@brief The input method application is abnormal.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ The attachment failure reason is IME_ABNORMAL.
 SERVICE_ABNORMAL
 ```
 
-The attachment failure reason is SERVICE_ABNORMAL.
+@brief The input method framework service is abnormal.
 
 **Since:** 23
 

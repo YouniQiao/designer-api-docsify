@@ -16,5 +16,5 @@ Represents a FrameNode of the **Rating** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** TypedFrameNode<RatingInterface, RatingAttribute>
+**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;RatingInterface, RatingAttribute&gt;
 

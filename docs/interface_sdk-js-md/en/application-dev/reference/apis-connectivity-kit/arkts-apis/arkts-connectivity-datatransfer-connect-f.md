@@ -12,7 +12,7 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 function connect(params: ConnectionParams): Promise<void>
 ```
 
-Connects to a server. If the connection is successful, data can be sent to the server.
+Connects to a remote device. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -28,13 +28,13 @@ Connects to a server. If the connection is successful, data can be sent to the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [ConnectionParams](arkts-connectivity-datatransfer-connectionparams-i.md) | Yes | Indicates the connection params. |
+| params | [ConnectionParams](arkts-connectivity-datatransfer-connectionparams-i.md) | Yes | Connection parameters of the port. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

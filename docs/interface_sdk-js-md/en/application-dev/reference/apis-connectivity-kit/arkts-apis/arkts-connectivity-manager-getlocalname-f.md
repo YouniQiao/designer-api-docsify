@@ -12,7 +12,7 @@ import { manager } from '@kit.ConnectivityKit';
 function getLocalName(): string
 ```
 
-Gets the local device's name.
+Queries the NearLink name on the local device.
 
 **Since:** 26.0.0
 
@@ -28,7 +28,7 @@ Gets the local device's name.
 
 | Type | Description |
 | --- | --- |
-| string | Returns the device's name. |
+| string | NearLink name on the local device. The value contains a maximum of 30 characters. |
 
 **Error codes:**
 

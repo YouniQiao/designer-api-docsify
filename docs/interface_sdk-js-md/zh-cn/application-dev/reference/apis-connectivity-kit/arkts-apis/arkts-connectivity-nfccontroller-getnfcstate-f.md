@@ -1,0 +1,30 @@
+# getNfcState
+
+## 导入模块
+
+```TypeScript
+import { nfcController } from '@kit.ConnectivityKit';
+```
+
+## getNfcState
+
+```TypeScript
+function getNfcState(): NfcState
+```
+
+查询NFC状态。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-nfcController-function getNfcState(): NfcState--><!--Device-nfcController-function getNfcState(): NfcState-End-->
+
+**系统能力：** SystemCapability.Communication.NFC.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [NfcState](arkts-connectivity-nfccontroller-nfcstate-e.md) | NFC状态值，详细请见[NfcState]{ |
+

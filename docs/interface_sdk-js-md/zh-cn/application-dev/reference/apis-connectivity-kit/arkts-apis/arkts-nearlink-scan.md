@@ -1,6 +1,6 @@
 # @ohos.nearlink.scan
 
-提供扫描和发现附近设备的方法。
+本模块提供了星闪扫描模式的定义。
 
 **起始版本：** 26.0.0
 
@@ -22,30 +22,30 @@ import { scan } from '@kit.ConnectivityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [offDeviceFound](arkts-connectivity-scan-offdevicefound-f.md) | 取消订阅星闪扫描结果。 |
-| [onDeviceFound](arkts-connectivity-scan-ondevicefound-f.md) | 订阅NearLink扫描结果。 |
-| [startScan](arkts-connectivity-scan-startscan-f.md) | 开始使用过滤器扫描指定的NearLink设备。 如果不想使用过滤器，可以将过滤器参数设置为{@code null}。 |
-| [stopScan](arkts-connectivity-scan-stopscan-f.md) | 停止扫描。 |
+| [offDeviceFound](arkts-connectivity-scan-offdevicefound-f.md) | 取消订阅星闪扫描结果。使用callback异步回调。 |
+| [onDeviceFound](arkts-connectivity-scan-ondevicefound-f.md) | 订阅星闪扫描结果。使用callback异步回调。 |
+| [startScan](arkts-connectivity-scan-startscan-f.md) | 发起星闪扫描。使用Promise异步回调。需先调用scan.onDeviceFound订阅扫描结果回调，本接口发起扫描后，扫描到的设备信息通过 scan.onDeviceFound回调上报。扫描完成后可调用[scan.stopScan](arkts-connectivity-scan-stopscan-f.md)停止扫描。 |
+| [stopScan](arkts-connectivity-scan-stopscan-f.md) | 停止星闪扫描。使用Promise异步回调。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [ScanFilters](arkts-connectivity-scan-scanfilters-i.md) | 扫描过滤器。 |
-| [ScanOptions](arkts-connectivity-scan-scanoptions-i.md) | 扫描参数。 |
-| [ScanResults](arkts-connectivity-scan-scanresults-i.md) | 扫描结果的内容。 |
+| [ScanFilters](arkts-connectivity-scan-scanfilters-i.md) | 表示扫描过滤条件。 |
+| [ScanOptions](arkts-connectivity-scan-scanoptions-i.md) | 表示扫描选项。 |
+| [ScanResults](arkts-connectivity-scan-scanresults-i.md) | 表示扫描结果。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [ScanMode](arkts-connectivity-scan-scanmode-e.md) | 扫描模式的枚举。 |
+| [ScanMode](arkts-connectivity-scan-scanmode-e.md) | 表示扫描模式，为枚举值。 |
 
 <!--Del-->
 ### 枚举（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [ScanMode](arkts-connectivity-scan-scanmode-e-sys.md) | 扫描模式的枚举。 |
+| [ScanMode](arkts-connectivity-scan-scanmode-e-sys.md) | 表示扫描模式，为枚举值。 |
 <!--DelEnd-->
 

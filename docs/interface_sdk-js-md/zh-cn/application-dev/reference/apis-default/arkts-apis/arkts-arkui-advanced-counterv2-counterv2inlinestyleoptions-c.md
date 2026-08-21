@@ -2,9 +2,9 @@
 
 CounterV2InlineStyleOptions定义了数值内联型CounterV2的属性和事件。
 
-继承于[CounterV2CommonOptions](arkts-arkui-advanced-counterv2-counterv2commonoptions-c.md)。
+继承于[CounterV2CommonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md)。
 
-**继承/实现关系：** CounterV2InlineStyleOptions extends [CounterV2CommonOptions](arkts-arkui-advanced-counterv2-counterv2commonoptions-c.md)
+**继承/实现关系：** CounterV2InlineStyleOptions extends [CounterV2CommonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md)
 
 **起始版本：** 26.0.0
 
@@ -73,7 +73,7 @@ CounterV2的数值发生改变时触发该回调。
 
 默认值：undefined，表示不触发该回调。
 
-**类型：** [OnInlineCounterV2Change](arkts-oninlinecounterv2change-t.md)
+**类型：** [OnInlineCounterV2Change](../../apis-arkui/arkts-apis/arkts-arkui-oninlinecounterv2change-t.md)
 
 **起始版本：** 26.0.0
 

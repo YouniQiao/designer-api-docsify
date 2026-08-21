@@ -16,5 +16,5 @@ Define the FrameNode type for XComponent.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** XComponentFrameNode
+**属性类型：** [XComponentFrameNode](arkts-typenode-xcomponentframenode-c.md)
 

@@ -17,7 +17,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function offAttachmentDidFail(callback?: Callback<AttachFailureReason>): void
 ```
 
-Unsubscribe the attachment failure event.
+Unsubscribes from attachment failure events. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -29,7 +29,7 @@ Unsubscribe the attachment failure event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AttachFailureReason](arkts-ime-inputmethod-attachfailurereason-e.md)&gt; | No | the callback is invoked only when the attachment triggered by the registrant's process fails. When subscriber unsubscribes all callback, this parameter can be left blank. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AttachFailureReason](arkts-ime-inputmethod-attachfailurereason-e.md)&gt; | No | Callback used for unsubscription, which must be the same as that passed by the subscription API. If no parameter is specified, all callback functions for this event will be unsubscribed from. |
 
 **Examples**
 

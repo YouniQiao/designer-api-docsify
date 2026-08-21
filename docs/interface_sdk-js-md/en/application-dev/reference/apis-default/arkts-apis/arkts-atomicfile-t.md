@@ -14,5 +14,5 @@ AtomicFile
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
-**Property type:** fileIo.AtomicFile
+**Property type:** [fileIo.AtomicFile](arkts-fileio-atomicfile-c.md)
 

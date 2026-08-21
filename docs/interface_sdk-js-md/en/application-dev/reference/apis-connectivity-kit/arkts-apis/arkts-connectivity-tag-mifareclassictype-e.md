@@ -1,8 +1,6 @@
 # MifareClassicType
 
-MifareClassic Type definition
-
-@enum { int }
+Enumerates the MIFARE Classic tag types.
 
 **Since:** 23
 
@@ -16,11 +14,11 @@ MifareClassic Type definition
 TYPE_UNKNOWN = 0
 ```
 
-Mifare Type unknown
+Unknown type.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MifareClassicType-TYPE_UNKNOWN = 0--><!--Device-MifareClassicType-TYPE_UNKNOWN = 0-End-->
 
@@ -32,11 +30,11 @@ Mifare Type unknown
 TYPE_CLASSIC = 1
 ```
 
-Mifare Classic
+MIFARE Classic.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MifareClassicType-TYPE_CLASSIC = 1--><!--Device-MifareClassicType-TYPE_CLASSIC = 1-End-->
 
@@ -48,11 +46,11 @@ Mifare Classic
 TYPE_PLUS = 2
 ```
 
-Mifare Plus
+MIFARE Plus.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MifareClassicType-TYPE_PLUS = 2--><!--Device-MifareClassicType-TYPE_PLUS = 2-End-->
 
@@ -64,11 +62,11 @@ Mifare Plus
 TYPE_PRO = 3
 ```
 
-Mifare Pro
+MIFARE Pro.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MifareClassicType-TYPE_PRO = 3--><!--Device-MifareClassicType-TYPE_PRO = 3-End-->
 

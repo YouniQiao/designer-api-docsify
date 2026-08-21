@@ -58,7 +58,7 @@ Get current UIContext.
 
 | Type | Description |
 | --- | --- |
-| [UIContext](arkts-arkui-uicontext-uicontext-c.md) | The UIContext that the custom component belongs to. |
+| [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | The UIContext that the custom component belongs to. |
 
 ## getUniqueId
 
@@ -106,7 +106,7 @@ The onWillApplyTheme function is a custom hook to get active theme object from t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| theme | [Theme](../../apis-arkui/arkts-apis/arkts-arkui-arkui-theme-theme-i.md) | Yes | Custom theme init params. |
+| theme | [Theme](arkts-arkui-theme-theme-i.md) | Yes | Custom theme init params. |
 
 ## queryNavDestinationInfo
 

@@ -37,7 +37,7 @@ A constructor used to create a **SubHeaderV2SelectOptions** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SubHeaderV2SelectOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheaderv2-subheaderv2selectoptions-i.md) | Yes | Options of the drop-down list box. |
+| options | [SubHeaderV2SelectOptions](arkts-arkui-advanced-subheaderv2-subheaderv2selectoptions-i.md) | Yes | Options of the drop-down list box. |
 
 ## defaultFocus
 
@@ -104,7 +104,7 @@ Default value: **undefined**
 
 Decorator: @Trace
 
-**Type:** [SubHeaderV2SelectOnSelect](../../apis-arkui/arkts-apis/arkts-arkui-subheaderv2selectonselect-t.md)
+**Type:** [SubHeaderV2SelectOnSelect](arkts-subheaderv2selectonselect-t.md)
 
 **Since:** 23
 

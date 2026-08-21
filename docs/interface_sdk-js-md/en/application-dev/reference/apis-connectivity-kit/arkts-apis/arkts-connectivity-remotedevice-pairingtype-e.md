@@ -1,6 +1,6 @@
 # PairingType
 
-Enum for the pairing type.
+Enumerates the NearLink pairing types.
 
 **Since:** 26.0.0
 
@@ -14,7 +14,7 @@ Enum for the pairing type.
 NO_PASSKEY_CONFIRMATION = 0
 ```
 
-Without passkey, the user needs to accept or reject the pairing request.
+Pairing type that does not require a passkey. Users do not need to check the pairing code.
 
 **Since:** 26.0.0
 
@@ -30,7 +30,7 @@ Without passkey, the user needs to accept or reject the pairing request.
 PAIRING_TYPE_PASSCODE = 1
 ```
 
-The user needs to enter the passcode displayed on the peer device.
+Pairing type with passcode authentication. Users need to enter the pairing code displayed on one device into the other device.
 
 **Since:** 26.0.0
 
@@ -46,7 +46,7 @@ The user needs to enter the passcode displayed on the peer device.
 PAIRING_TYPE_NUMBER_COMPARE = 2
 ```
 
-The user needs to compare the number displayed on both devices.
+Pairing type with authentication based on digit comparison. Users must ensure that the pairing codes on both devices are the same.
 
 **Since:** 26.0.0
 

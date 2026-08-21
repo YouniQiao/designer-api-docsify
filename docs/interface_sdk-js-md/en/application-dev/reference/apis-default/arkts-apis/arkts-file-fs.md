@@ -28,10 +28,10 @@ FileIO
 | [RandomAccessFileOptions](arkts-file-fs-randomaccessfileoptions-i.md) | Defines the options used in **createRandomAccessFile()**. |
 | [ReadOptions](arkts-file-fs-readoptions-i.md) | Defines the options used in **read()**. |
 | [ReadStreamOptions](arkts-file-fs-readstreamoptions-i.md) | Defines the options used in **createReadStream()**. |
-| [ReadTextOptions](arkts-file-fs-readtextoptions-i.md) | Defines the options used in **readText()**. It inherits from [ReadOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-readoptions-i.md). |
+| [ReadTextOptions](arkts-file-fs-readtextoptions-i.md) | Defines the options used in **readText()**. It inherits from [ReadOptions](arkts-file-fs-readoptions-i.md). |
 | [ReaderIteratorResult](arkts-file-fs-readeriteratorresult-i.md) | Represents the information obtained by the **ReaderIterator** object. |
 | [WatchEvent](arkts-file-fs-watchevent-i.md) | Defines the event to observe. |
-| [WriteOptions](arkts-file-fs-writeoptions-i.md) | Defines the options used in **write()**. It inherits from [Options](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-options-i.md). |
+| [WriteOptions](arkts-file-fs-writeoptions-i.md) | Defines the options used in **write()**. It inherits from [Options](arkts-file-fs-options-i.md). |
 | [WriteStreamOptions](arkts-file-fs-writestreamoptions-i.md) | Defines the options used in **createWriteStream()**. |
 
 ### Types

@@ -101,7 +101,7 @@ action?: SubHeaderV2OperationItemAction
 
 Event triggered when the item is operated. Default value: **() =&gt; void**.
 
-**Type:** [SubHeaderV2OperationItemAction](../../apis-arkui/arkts-apis/arkts-arkui-subheaderv2operationitemaction-t.md)
+**Type:** [SubHeaderV2OperationItemAction](arkts-subheaderv2operationitemaction-t.md)
 
 **Since:** 23
 
@@ -121,7 +121,7 @@ content: SubHeaderV2OperationItemType
 
 Content of the item in the operation area.
 
-**Type:** [SubHeaderV2OperationItemType](../../apis-arkui/arkts-apis/arkts-arkui-subheaderv2operationitemtype-t.md)
+**Type:** [SubHeaderV2OperationItemType](arkts-subheaderv2operationitemtype-t.md)
 
 **Since:** 23
 

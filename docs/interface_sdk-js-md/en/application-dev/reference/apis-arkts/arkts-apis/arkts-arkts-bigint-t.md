@@ -16,5 +16,5 @@ export type bigint = BigInt
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Property type:** BigInt
+**Property type:** [BigInt](arkts-arkts-bigint-c.md)
 

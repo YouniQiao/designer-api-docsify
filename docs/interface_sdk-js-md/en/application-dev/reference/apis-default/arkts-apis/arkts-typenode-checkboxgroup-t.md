@@ -16,5 +16,5 @@ Define the FrameNode type for CheckboxGroup.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** CheckboxGroupFrameNode
+**Property type:** [CheckboxGroupFrameNode](arkts-typenode-checkboxgroupframenode-c.md)
 

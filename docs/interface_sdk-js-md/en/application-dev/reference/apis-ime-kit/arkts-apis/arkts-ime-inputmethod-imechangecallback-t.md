@@ -4,7 +4,7 @@
 export type ImeChangeCallback = (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void
 ```
 
-The callback of 'imeChange' event.
+@brief The callback of 'imeChange' event.
 
 **Since:** 23
 

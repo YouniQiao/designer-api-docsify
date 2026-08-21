@@ -43,7 +43,7 @@ Sets the build function of the segmented button.
 
 Sets the callback function will be invoked when the selectedInexes field of the segmented button is changed.
 
-**Type:** [OnSelectedIndexesChange](arkts-onselectedindexeschange-t.md)
+**Type:** [OnSelectedIndexesChange](../../apis-arkui/arkts-apis/arkts-arkui-onselectedindexeschange-t.md)
 
 **Since:** 23
 
@@ -548,7 +548,7 @@ Sets the font size for the symbol icon of all segmented button.
 
 Sets the items of the segmented button.
 
-**Type:** [SegmentButtonV2Items](arkts-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md)
+**Type:** [SegmentButtonV2Items](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md)
 
 **Since:** 23
 

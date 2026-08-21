@@ -2,9 +2,9 @@
 
 CounterV2DateStyleOptions定义日期内联型CounterV2的属性和事件。
 
-继承于[CounterV2CommonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-counterv2-counterv2commonoptions-c.md)，包含该接口所有属性。本节仅展示新增属性，继承属性请参见父接口。
+继承于[CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md)，包含该接口所有属性。本节仅展示新增属性，继承属性请参见父接口。
 
-**继承/实现关系：** CounterV2DateStyleOptions extends [CounterV2CommonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-counterv2-counterv2commonoptions-c.md)
+**继承/实现关系：** CounterV2DateStyleOptions extends [CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md)
 
 **起始版本：** 26.0.0
 
@@ -94,7 +94,7 @@ onDateChange?: OnDateCounterV2ChangeCallback
 
 值为undefined时，按默认值处理。
 
-**类型：** [OnDateCounterV2ChangeCallback](../../apis-default/arkts-apis/arkts-ondatecounterv2changecallback-t.md)
+**类型：** [OnDateCounterV2ChangeCallback](arkts-arkui-ondatecounterv2changecallback-t.md)
 
 **起始版本：** 26.0.0
 

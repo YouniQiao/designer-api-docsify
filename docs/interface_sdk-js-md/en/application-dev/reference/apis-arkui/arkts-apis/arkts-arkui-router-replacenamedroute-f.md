@@ -16,13 +16,13 @@ Replaces the current page with another one using the named route and destroys th
 
 > **NOTE：**
 > 
-> - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
+> - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
 
 **Since:** 10
 
 **Deprecated since:** 18
 
-**Substitutes:** [replaceNamedRoute](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#replacenamedroute)(options: router.NamedRouterOptions, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute)(options: router.NamedRouterOptions, callback: AsyncCallback&lt;void&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,13 +81,13 @@ Replaces the current page with another one using the named route and destroys th
 
 > **NOTE：**
 > 
-> - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
+> - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
 
 **Since:** 10
 
 **Deprecated since:** 18
 
-**Substitutes:** [replaceNamedRoute](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#replacenamedroute)(options: router.NamedRouterOptions)
+**Substitutes:** [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute)(options: router.NamedRouterOptions)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -153,13 +153,13 @@ Replaces the current page with another one using the named route and destroys th
 
 > **NOTE：**
 > 
-> - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
+> - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
 
 **Since:** 10
 
 **Deprecated since:** 18
 
-**Substitutes:** [replaceNamedRoute](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#replacenamedroute)(options: router.NamedRouterOptions, mode: router.RouterMode, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute)(options: router.NamedRouterOptions, mode: router.RouterMode, callback: AsyncCallback&lt;void&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -219,13 +219,13 @@ Replaces the current page with another one using the named route and destroys th
 
 > **NOTE：**
 > 
-> - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
+> - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
 
 **Since:** 10
 
 **Deprecated since:** 18
 
-**Substitutes:** [replaceNamedRoute](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#replacenamedroute)(options: router.NamedRouterOptions, mode: router.RouterMode)
+**Substitutes:** [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute)(options: router.NamedRouterOptions, mode: router.RouterMode)
 
 **Model restriction:** This API can be used only in the stage model.
 

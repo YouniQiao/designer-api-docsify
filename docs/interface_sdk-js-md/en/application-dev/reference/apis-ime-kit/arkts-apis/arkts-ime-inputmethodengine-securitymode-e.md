@@ -1,6 +1,6 @@
 # SecurityMode
 
-Describes the security mode.
+@brief Describes the security mode.
 
 **Since:** 23
 
@@ -14,7 +14,7 @@ Describes the security mode.
 BASIC = 0
 ```
 
-Basic access mode, where network access is restricted.
+@brief Basic access mode, where network access is restricted.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ Basic access mode, where network access is restricted.
 FULL
 ```
 
-Full access mode, where network access is not restricted.
+@brief Full access mode, where network access is not restricted.
 
 **Since:** 23
 

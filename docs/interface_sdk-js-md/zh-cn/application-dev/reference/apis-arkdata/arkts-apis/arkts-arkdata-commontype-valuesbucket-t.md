@@ -12,5 +12,5 @@ type ValuesBucket = Record<string, ValueType>
 
 **系统能力：** SystemCapability.DistributedDataManager.CommonType
 
-**属性类型：** Record<string, ValueType>
+**属性类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, ValueType&gt;
 

@@ -16,5 +16,5 @@ Define the FrameNode type for Image.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** ImageFrameNode
+**Property type:** [ImageFrameNode](arkts-typenode-imageframenode-c.md)
 

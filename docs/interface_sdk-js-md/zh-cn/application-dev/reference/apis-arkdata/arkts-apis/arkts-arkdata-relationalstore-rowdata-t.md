@@ -14,5 +14,5 @@ type RowData = Array<ValueType>
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**属性类型：** Array<ValueType>
+**属性类型：** Array&lt;ValueType&gt;
 

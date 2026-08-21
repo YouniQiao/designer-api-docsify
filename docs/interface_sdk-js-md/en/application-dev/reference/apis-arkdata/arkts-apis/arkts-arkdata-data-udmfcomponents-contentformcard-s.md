@@ -60,7 +60,7 @@ Height of the content form card. The unit of measurement is vp.
 
 Type of the form card.
 
-**Type:** [FormType](arkts-arkdata-data-udmfcomponents-formtype-e.md)
+**Type:** [FormType](../../apis-default/arkts-apis/arkts-data-udmfcomponents-formtype-e.md)
 
 **Since:** 20
 

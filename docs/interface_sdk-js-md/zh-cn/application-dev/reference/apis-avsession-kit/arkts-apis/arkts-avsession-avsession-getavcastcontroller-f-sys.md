@@ -31,7 +31,7 @@ function getAVCastController(sessionId: string, callback: AsyncCallback<AVCastCo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sessionId | string | 是 | 用于指定要获取的投播控制器的sessionId。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md)&gt; | 是 | 回调函数，返回投播控制器实例。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md)&gt; | 是 | 回调函数，返回投播控制器实例。 |
 
 **错误码：**
 
@@ -103,7 +103,7 @@ Register a callback to retrieve an avsession cast controller. This function can 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sessionId | string | 是 | Specifies the sessionId to get controller. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md) \| undefined&gt; | 是 | async callback for the AVCastController. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md) \| undefined&gt; | 是 | async callback for the AVCastController. |
 
 **错误码：**
 

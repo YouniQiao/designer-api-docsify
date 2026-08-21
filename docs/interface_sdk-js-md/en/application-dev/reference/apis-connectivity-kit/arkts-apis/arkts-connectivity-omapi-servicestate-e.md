@@ -1,8 +1,6 @@
 # ServiceState
 
-Secure Element service state definition.
-
-@enum { number }
+Enumerates the SE service states.
 
 **Since:** 10
 
@@ -16,7 +14,7 @@ Secure Element service state definition.
 DISCONNECTED = 0
 ```
 
-Service is disconnected.
+The SE service is disconnected.
 
 **Since:** 10
 
@@ -30,7 +28,7 @@ Service is disconnected.
 CONNECTED = 1
 ```
 
-Service is connected.
+The SE service is connected.
 
 **Since:** 10
 

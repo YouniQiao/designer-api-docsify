@@ -16,5 +16,5 @@ Define the FrameNode type for Radio.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** RadioFrameNode
+**属性类型：** [RadioFrameNode](arkts-typenode-radioframenode-c.md)
 

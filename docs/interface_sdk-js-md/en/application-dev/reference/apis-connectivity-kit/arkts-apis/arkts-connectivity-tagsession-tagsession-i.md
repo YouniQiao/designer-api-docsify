@@ -1,6 +1,10 @@
 # TagSession
 
-Controls tag read and write. &lt;p&gt;Classes for different types of tags inherit from this abstract class to control connections to tags, read data from tags, and write data to tags.
+The **tagSession** module provides common APIs for establishing connections and transferring data.
+
+> **NOTE：**
+> 
+> If an error is reported while importing the tag module editor, the capabilities of a specific device model may &gt; exceed the capability set defined for the default device. To use these capabilities, configure a custom SysCap by &gt; following instructions in &gt; [SystemCapability](https://developer.huawei.com/consumer/en/doc/harmonyos-references/syscap).
 
 **Since:** 23
 
@@ -14,13 +18,13 @@ Controls tag read and write. &lt;p&gt;Classes for different types of tags inheri
 connect(): void
 ```
 
-Connects to a tag. Must be called before data is read from or written to the tag.
+Connects to this tag. Call this API to set up a connection before reading data from or writing data to a tag.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TagSession-connect(): void--><!--Device-TagSession-connect(): void-End-->
 
@@ -56,7 +60,11 @@ try {
 connectTag(): boolean
 ```
 
-Connects to a tag. &lt;p&gt;This method must be called before data is read from or written to the tag.
+Connects to this tag. Call this API to set up a connection before reading data from or writing data to a tag.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. Use &gt; [tagSession.connect](#connect) instead.
 
 **Since:** 7
 
@@ -74,7 +82,7 @@ Connects to a tag. &lt;p&gt;This method must be called before data is read from 
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 **Examples**
 
@@ -94,7 +102,11 @@ console.info("connectStatus: " + connectStatus);
 getMaxSendLength(): number
 ```
 
-Queries the maximum length of data that can be sent to a tag.
+Obtains the maximum length of the data that can be sent to this tag.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. Use &gt; [tagSession.getMaxTransmitSize](#getmaxtransmitsize) instead.
 
 **Since:** 7
 
@@ -112,7 +124,7 @@ Queries the maximum length of data that can be sent to a tag.
 
 | Type | Description |
 | --- | --- |
-| number | Returns the maximum length of the data to be sent to the tag. |
+| number | Maximum data length obtained. The value cannot be a negative number. |
 
 **Examples**
 
@@ -132,13 +144,13 @@ console.info("tag maxSendLen: " + maxSendLen);
 getMaxTransmitSize(): int
 ```
 
-Obtains the maximum length of data that can be sent to a tag.
+Obtains the maximum length of the data that can be sent to this tag.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TagSession-getMaxTransmitSize(): int--><!--Device-TagSession-getMaxTransmitSize(): int-End-->
 
@@ -148,7 +160,7 @@ Obtains the maximum length of data that can be sent to a tag.
 
 | Type | Description |
 | --- | --- |
-| int | Returns the maximum length of the data to be sent to the tag. |
+| int | Maximum data length obtained. The value cannot be a negative number. |
 
 **Error codes:**
 
@@ -180,7 +192,11 @@ try {
 getSendDataTimeout(): number
 ```
 
-Queries the timeout duration (ms) for sending data to a tag.
+Obtains the timeout period for sending data to this tag, in milliseconds.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. Use &gt; [tagSession.getTimeout](#gettimeout) instead.
 
 **Since:** 7
 
@@ -198,7 +214,7 @@ Queries the timeout duration (ms) for sending data to a tag.
 
 | Type | Description |
 | --- | --- |
-| number | Returns the timeout duration. |
+| number | Timeout period obtained, in milliseconds. The value cannot be a negative number. |
 
 **Examples**
 
@@ -218,7 +234,11 @@ console.info("tag sendDataTimeout: " + sendDataTimeout);
 getTagInfo(): tag.TagInfo
 ```
 
-Obtains the tag information.
+Obtains the **tagInfo** object provided by the NFC service when the tag is dispatched.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. Use &gt; [tag.getTagInfo](arkts-connectivity-tag-gettaginfo-f.md) instead.
 
 **Since:** 7
 
@@ -236,7 +256,7 @@ Obtains the tag information.
 
 | Type | Description |
 | --- | --- |
-| tag.TagInfo | Returns the tag information, which is a { |
+| tag.TagInfo | Taginfo** object obtained. |
 
 **Examples**
 
@@ -256,13 +276,13 @@ console.info("tag tagInfo: " + tagInfo);
 getTimeout(): int
 ```
 
-Obtains the timeout duration (ms) for sending data to a tag.
+Obtains the timeout period for sending data to this tag, in milliseconds.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TagSession-getTimeout(): int--><!--Device-TagSession-getTimeout(): int-End-->
 
@@ -272,7 +292,7 @@ Obtains the timeout duration (ms) for sending data to a tag.
 
 | Type | Description |
 | --- | --- |
-| int | Returns the timeout duration. |
+| int | Timeout period obtained, in milliseconds. The value cannot be a negative number. |
 
 **Error codes:**
 
@@ -304,11 +324,11 @@ try {
 isConnected(): boolean
 ```
 
-Checks whether a connection has been set up with a tag.
+Checks whether the tag is connected. If you receive a message indicating that the tag has not been connected, call [tagSession.connect](#connect) to connect the tag.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TagSession-isConnected(): boolean--><!--Device-TagSession-isConnected(): boolean-End-->
 
@@ -318,7 +338,7 @@ Checks whether a connection has been set up with a tag.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if tag connected, otherwise false. |
+| boolean | Returns **true** if the tag is connected; returns **false** otherwise. |
 
 **Error codes:**
 
@@ -348,7 +368,11 @@ try {
 isTagConnected(): boolean
 ```
 
-Checks whether a connection has been set up with a tag.
+Checks whether the tag is connected.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. Use &gt; [tagSession.isConnected](#isconnected) instead.
 
 **Since:** 7
 
@@ -364,7 +388,7 @@ Checks whether a connection has been set up with a tag.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns **true** if the tag is connected; returns **false** otherwise. |
 
 **Examples**
 
@@ -384,7 +408,11 @@ console.info("isTagConnected: " + isTagConnected);
 reset(): void
 ```
 
-Resets a connection with a tag and restores the default timeout duration for writing data to the tag.
+Resets the connection to this tag.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. Use &gt; [tagSession.resetConnection](#resetconnection) instead.
 
 **Since:** 7
 
@@ -415,13 +443,13 @@ tag.getIsoDep(tagInfo).reset();
 resetConnection(): void
 ```
 
-Resets a connection with a tag and restores the default timeout duration for writing data to the tag.
+Resets the connection to this tag.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TagSession-resetConnection(): void--><!--Device-TagSession-resetConnection(): void-End-->
 
@@ -457,7 +485,11 @@ try {
 sendData(data: number[]): Promise<number[]>
 ```
 
-Writes data to a tag.
+Sends data to the tag. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. Use &gt; [tagSession.transmit](#transmit) instead.
 
 **Since:** 7
 
@@ -475,13 +507,13 @@ Writes data to a tag.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | number[] | Yes | Indicates the data to be written to the tag. |
+| data | number[] | Yes | Data to send. The data consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number[]&gt; | Returns bytes received in response. Or bytes with a length of 0 if the data fails to be written to the tag. |
+| Promise&lt;number[]&gt; | Promise used to return the response from the tag. The response consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
 
 **Examples**
 
@@ -516,7 +548,11 @@ function tagSessionDemo() {
 sendData(data: number[], callback: AsyncCallback<number[]>): void
 ```
 
-Writes data to a tag.
+Sends data to the tag. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This parameter is supported since API version 7 and deprecated since API version 9. Use &gt; [tagSession.transmit](#transmit) instead.
 
 **Since:** 7
 
@@ -534,8 +570,8 @@ Writes data to a tag.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | number[] | Yes | Indicates the data to be written to the tag. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number[]&gt; | Yes | The callback. data fails to be written to the tag. |
+| data | number[] | Yes | Data to send. The data consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number[]&gt; | Yes | Callback used to return the response from the tag. The response consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
 
 **Examples**
 
@@ -571,7 +607,11 @@ function tagSessionDemo() {
 setSendDataTimeout(timeout: number): boolean
 ```
 
-Sets the timeout duration (ms) for sending data to a tag. &lt;p&gt;If data is not sent to the tag within the duration, data sending fails.
+Sets the maximum time allowed for sending data to this tag, in ms.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. Use &gt; [tagSession.setTimeout](#settimeout) instead.
 
 **Since:** 7
 
@@ -589,13 +629,13 @@ Sets the timeout duration (ms) for sending data to a tag. &lt;p&gt;If data is no
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeout | number | Yes | Indicates the timeout duration to be set. |
+| timeout | number | Yes | Timeout period to set, in milliseconds. The value cannot be a negative number. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns **true** if the timeout period is set successfully; returns **false** otherwise. |
 
 **Examples**
 
@@ -616,13 +656,13 @@ console.info("tag setSendDataTimeout setStatus: " + setStatus);
 setTimeout(timeout: int): void
 ```
 
-Sets the timeout duration (ms) for sending data to a tag.
+Sets the maximum time allowed for sending data to this tag, in ms.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TagSession-setTimeout(timeout: int): void--><!--Device-TagSession-setTimeout(timeout: int): void-End-->
 
@@ -632,7 +672,7 @@ Sets the timeout duration (ms) for sending data to a tag.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeout | int | Yes | Indicates the timeout duration to be set. |
+| timeout | int | Yes | Timeout period to set, in milliseconds. The value cannot be a negative number. |
 
 **Error codes:**
 
@@ -666,13 +706,13 @@ try {
 transmit(data: int[]): Promise<int[]>
 ```
 
-Writes data to a tag.
+Sends data to the tag. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TagSession-transmit(data: int[]): Promise<int[]>--><!--Device-TagSession-transmit(data: int[]): Promise<int[]>-End-->
 
@@ -682,13 +722,13 @@ Writes data to a tag.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | int[] | Yes | Indicates the data to be written to the tag. |
+| data | int[] | Yes | Data to send. The data consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int[]&gt; | Returns bytes received in response. Or bytes with a length of 0 if the data fails to be written to the tag. |
+| Promise&lt;int[]&gt; | Promise used to return the response from the tag. The response consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
 
 **Error codes:**
 
@@ -698,7 +738,7 @@ Writes data to a tag.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -740,13 +780,13 @@ function tagSessionDemo() {
 transmit(data: int[], callback: AsyncCallback<int[]>): void
 ```
 
-Writes data to a tag.
+Sends data to the tag. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TagSession-transmit(data: int[], callback: AsyncCallback<int[]>): void--><!--Device-TagSession-transmit(data: int[], callback: AsyncCallback<int[]>): void-End-->
 
@@ -756,8 +796,8 @@ Writes data to a tag.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | int[] | Yes | Indicates the data to be written to the tag. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | Yes | The callback. |
+| data | int[] | Yes | Data to send. The data consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | Yes | Callback used to return the response from the tag. The response consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
 
 **Error codes:**
 
@@ -767,7 +807,7 @@ Writes data to a tag.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 

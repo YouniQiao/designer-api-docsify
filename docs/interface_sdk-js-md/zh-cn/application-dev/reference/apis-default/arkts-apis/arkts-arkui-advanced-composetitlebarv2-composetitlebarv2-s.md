@@ -51,7 +51,7 @@ ComposeTitleBarV2组件是一种标题栏，支持设置标题、头像（可选
 
 用于左侧头像的单个菜单项。
 
-**类型：** [ComposeTitleBarV2MenuItem](arkts-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)
+**类型：** [ComposeTitleBarV2MenuItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)
 
 **起始版本：** 26.0.0
 
@@ -72,7 +72,7 @@ ComposeTitleBarV2组件是一种标题栏，支持设置标题、头像（可选
 
 右侧菜单项列表。
 
-**类型：** Array&lt;[ComposeTitleBarV2MenuItem](arkts-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)&gt;
+**类型：** Array&lt;[ComposeTitleBarV2MenuItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)&gt;
 
 **起始版本：** 26.0.0
 

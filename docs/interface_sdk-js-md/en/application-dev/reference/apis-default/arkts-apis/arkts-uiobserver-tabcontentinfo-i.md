@@ -83,7 +83,7 @@ state: TabContentState
 
 The state of TabContent.
 
-**Type:** [TabContentState](../../apis-arkui/arkts-apis/arkts-arkui-uiobserver-tabcontentstate-e.md)
+**Type:** [TabContentState](arkts-uiobserver-tabcontentstate-e.md)
 
 **Since:** 23
 

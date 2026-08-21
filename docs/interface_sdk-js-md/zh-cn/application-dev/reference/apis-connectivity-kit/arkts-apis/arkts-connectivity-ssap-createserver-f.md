@@ -28,7 +28,7 @@ function createServer(): Server
 
 | 类型 | 说明 |
 | --- | --- |
-| Server | 返回一个SSAP服务端实例{ |
+| Server | SSAP服务端实例。 |
 
 **错误码：**
 

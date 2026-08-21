@@ -16,5 +16,5 @@ Defines the object constructor type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** (() => T)
+**Property type:** (() =&gt; T)
 

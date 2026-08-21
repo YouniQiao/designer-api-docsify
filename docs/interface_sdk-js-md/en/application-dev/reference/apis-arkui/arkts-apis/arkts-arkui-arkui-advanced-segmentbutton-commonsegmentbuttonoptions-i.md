@@ -107,7 +107,7 @@ Default value: **BorderRadiusMode.DEFAULT**
 
 If the value is **undefined**, the default value is used.
 
-**Type:** [BorderRadiusMode](arkts-arkui-arkui-advanced-segmentbutton-borderradiusmode-e.md)
+**Type:** [BorderRadiusMode](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-borderradiusmode-e.md)
 
 **Default:** BorderRadiusMode.Default
 
@@ -211,7 +211,7 @@ Default value: **\$r('sys.float.ohos_id_text_size_body2')**
 
 If the value is **undefined**, the default value is used.
 
-**Type:** [DimensionNoPercentage](arkts-arkui-dimensionnopercentage-t.md)
+**Type:** [DimensionNoPercentage](../../apis-default/arkts-apis/arkts-dimensionnopercentage-t.md)
 
 **Default:** $r('sys.float.ohos_id_text_size_body2')
 
@@ -429,7 +429,7 @@ Default value: **\$r('sys.float.ohos_id_text_size_body2')**
 
 If the value is **undefined**, the default value is used.
 
-**Type:** [DimensionNoPercentage](arkts-arkui-dimensionnopercentage-t.md)
+**Type:** [DimensionNoPercentage](../../apis-default/arkts-apis/arkts-dimensionnopercentage-t.md)
 
 **Default:** $r('sys.float.ohos_id_text_size_body2')
 

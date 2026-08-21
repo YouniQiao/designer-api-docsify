@@ -42,7 +42,7 @@ AdvancedDialogV2Button的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [AdvancedDialogV2ButtonOptions](arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2buttonoptions-i.md) | 是 | 按钮配置信息。 |
+| options | [AdvancedDialogV2ButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-dialogv2-advanceddialogv2buttonoptions-i.md) | 是 | 按钮配置信息。 |
 
 ## action
 
@@ -55,7 +55,7 @@ AdvancedDialogV2Button的构造函数。
 
 默认无事件。
 
-**类型：** [AdvancedDialogV2ButtonAction](arkts-arkui-advanceddialogv2buttonaction-t.md)
+**类型：** [AdvancedDialogV2ButtonAction](../../apis-default/arkts-apis/arkts-advanceddialogv2buttonaction-t.md)
 
 **起始版本：** 18
 

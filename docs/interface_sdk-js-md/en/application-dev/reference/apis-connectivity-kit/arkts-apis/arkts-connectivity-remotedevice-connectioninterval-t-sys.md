@@ -4,7 +4,7 @@
 type ConnectionInterval = nearlinkConstant.ConnectionInterval
 ```
 
-Indicates the connection interval.
+Enumerates the connection intervals.
 
 **Since:** 26.0.0
 

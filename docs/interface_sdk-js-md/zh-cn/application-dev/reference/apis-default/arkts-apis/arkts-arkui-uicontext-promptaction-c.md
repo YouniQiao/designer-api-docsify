@@ -5,7 +5,7 @@
 > 
 > - 本Class首批接口从API version 10开始支持。
 > 
-> - 以下API需先使用UIContext中的[getPromptAction()](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取到PromptAction对 &gt; 象，再通过该对象调用对应方法。
+> - 以下API需先使用UIContext中的[getPromptAction()](arkts-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取到PromptAction对 &gt; 象，再通过该对象调用对应方法。
 
 **起始版本：** 23
 
@@ -394,7 +394,7 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | 是 | menu弹窗中显示的组件内容。 |
-| target | [TargetInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-targetinfo-i.md) | 是 | 需要绑定组件的信息。 |
+| target | [TargetInfo](arkts-arkui-uicontext-targetinfo-i.md) | 是 | 需要绑定组件的信息。 |
 | options | [MenuOptions](arkts-common-menuoptions-i.md) | 否 | menu弹窗样式。<br/>**说明：**<br/>title属性不生效。<br/>preview参数仅支持设置MenuPreviewMode类型。 |
 
 **返回值：**
@@ -436,7 +436,7 @@ openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, op
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | 是 | popup弹窗中显示的组件内容。 |
-| target | [TargetInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-targetinfo-i.md) | 是 | 需要绑定组件的信息。 |
+| target | [TargetInfo](arkts-arkui-uicontext-targetinfo-i.md) | 是 | 需要绑定组件的信息。 |
 | options | [PopupCommonOptions](arkts-common-popupcommonoptions-i.md) | 否 | popup弹窗样式。 |
 
 **返回值：**
@@ -554,7 +554,7 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | promptAction.ActionMenuOptions | 是 | 操作菜单选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;promptAction.ActionMenuSuccessResponse&gt; | 是 | 回调函数。 弹出操作菜单成功，err为undefined，data为获取到的操作菜单响应结果，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ActionMenuSuccessResponse&gt; | 是 | 回调函数。 弹出操作菜单成功，err为undefined，data为获取到的操作菜单响应结果，否则为错误对象。 |
 
 **错误码：**
 
@@ -623,7 +623,7 @@ showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback<prom
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | promptAction.ShowDialogOptions | 是 | 页面显示对话框信息描述。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;promptAction.ShowDialogSuccessResponse&gt; | 是 | 回调函数。 弹出对话框成功，err为undefined，data为获取到的对话框响应结果，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ShowDialogSuccessResponse&gt; | 是 | 回调函数。 弹出对话框成功，err为undefined，data为获取到的对话框响应结果，否则为错误对象。 |
 
 **错误码：**
 

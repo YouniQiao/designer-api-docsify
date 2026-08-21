@@ -1,10 +1,9 @@
 # InputMethodExtensionContext
 
-The **InputMethodExtensionContext** module, inherited from **ExtensionContext**, provides context for **InputMethodExtension** abilities. You can use the APIs of this module to start, terminate, connect, and disconnect abilities.
-
-> **NOTE：**
-> 
-> - The APIs of this module can be used only in the stage model.
+@brief The **InputMethodExtensionContext** module, inherited from **ExtensionContext**, provides context for **InputMethodExtension** abilities. You can use the APIs of this module to start, terminate, connect, and disconnect abilities. <br> <br>   
+> **NOTE：**<br>
+> <br>
+> The initial APIs of this module are supported since API version 9. Newly added APIs will be marked with a superscript to indicate their earliest API version. The APIs of this module can be used only in the stage model.
 
 **Inheritance/Implementation:** InputMethodExtensionContext extends ExtensionContext
 
@@ -26,7 +25,7 @@ import { InputMethodExtensionContext } from '@kit.IMEKit';
 destroy(callback: AsyncCallback<void>): void
 ```
 
-Destroys this input method. This API uses an asynchronous callback to return the result.
+@brief Destroys this input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -72,7 +71,7 @@ class InputMethodExtAbility extends InputMethodExtensionAbility {
 destroy(): Promise<void>
 ```
 
-Destroys this input method. This API uses a promise to return the result.
+@brief Destroys this input method. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -116,7 +115,7 @@ class InputMethodExtAbility extends InputMethodExtensionAbility {
 startAbility(want: Want): Promise<void>
 ```
 
-Starts an ability. This API uses a promise to return the result.
+@brief Starts an ability. This API uses a promise to return the result.
 
 **Since:** 23
 

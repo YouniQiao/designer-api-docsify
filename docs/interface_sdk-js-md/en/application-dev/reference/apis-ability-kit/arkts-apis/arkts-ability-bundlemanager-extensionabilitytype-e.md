@@ -442,7 +442,7 @@ SelectionExtensionAbility: provides extended capabilities for text selection pop
 WEB_NATIVE_MESSAGING = 32
 ```
 
-[WebNativeMessagingExtensionAbility](../../apis-default/arkts-apis/arkts-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md): provides extended capabilities for web native message communication.
+[WebNativeMessagingExtensionAbility](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md): provides extended capabilities for web native message communication.
 
 **Since:** 23
 

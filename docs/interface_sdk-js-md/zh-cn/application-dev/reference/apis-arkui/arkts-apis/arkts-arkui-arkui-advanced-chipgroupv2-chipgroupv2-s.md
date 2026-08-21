@@ -45,7 +45,7 @@ ChipV2项的双向绑定回调方法，当需要监听或修改ChipV2项列表�
 
 默认值：undefined，不触发回调。
 
-**类型：** Callback&lt;[ChipGroupV2Items](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2items-c.md)&gt;
+**类型：** Callback&lt;[ChipGroupV2Items](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2items-c.md)&gt;
 
 **起始版本：** 26.0.0
 
@@ -87,7 +87,7 @@ ChipV2项的双向绑定回调方法，当需要监听或修改ChipV2项列表�
   chipGroupPadding?: ChipGroupV2Padding
 ```
 
-设置ChipGroupV2的上下内边距，以控制整体高度。类型为[ChipGroupV2Padding](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2padding-c.md)。
+设置ChipGroupV2的上下内边距，以控制整体高度。类型为[ChipGroupV2Padding](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2padding-c.md)。
 
 默认值：{ top: 14, bottom: 14 }
 
@@ -95,7 +95,7 @@ ChipV2项的双向绑定回调方法，当需要监听或修改ChipV2项列表�
 
 值为undefined时，按默认值处理。
 
-**类型：** [ChipGroupV2Padding](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2padding-c.md)
+**类型：** [ChipGroupV2Padding](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2padding-c.md)
 
 **起始版本：** 26.0.0
 
@@ -114,7 +114,7 @@ ChipV2项的双向绑定回调方法，当需要监听或修改ChipV2项列表�
   chipGroupSpace?: ChipGroupV2Space
 ```
 
-左右内边距及ChipV2之间间距。设置后可调整ChipGroupV2的左右内边距和ChipV2之间的间距，增大间距使布局更宽松，减小间距使布局更紧凑。参考 [ChipGroupV2Space](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2space-c.md)类型。
+左右内边距及ChipV2之间间距。设置后可调整ChipGroupV2的左右内边距和ChipV2之间的间距，增大间距使布局更宽松，减小间距使布局更紧凑。参考 [ChipGroupV2Space](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2space-c.md)类型。
 
 默认值：{ itemSpace: 8, startSpace: 16, endSpace: 16 }
 
@@ -122,7 +122,7 @@ ChipV2项的双向绑定回调方法，当需要监听或修改ChipV2项列表�
 
 值为undefined时，按默认值处理。
 
-**类型：** [ChipGroupV2Space](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2space-c.md)
+**类型：** [ChipGroupV2Space](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2space-c.md)
 
 **起始版本：** 26.0.0
 
@@ -141,7 +141,7 @@ ChipV2项的双向绑定回调方法，当需要监听或修改ChipV2项列表�
   itemStyle?: ChipGroupV2ItemStyle
 ```
 
-ChipV2的style属性，如颜色、大小等，参考[ChipGroupV2ItemStyle](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2itemstyle-c.md)类型。
+ChipV2的style属性，如颜色、大小等，参考[ChipGroupV2ItemStyle](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyle-c.md)类型。
 
 默认值：
 
@@ -149,9 +149,9 @@ ChipV2的style属性，如颜色、大小等，参考[ChipGroupV2ItemStyle](../.
 
 值为undefined时，按默认值处理。
 
-图标填充色（[fillColor](arkts-arkui-arkui-advanced-chipv2-chipv2imageiconconfig-i.md)和 [activatedFillColor](arkts-arkui-arkui-advanced-chipv2-chipv2imageiconconfig-i.md)）的设置与对应的字体颜色保持一致：未选中状态下fillColor与 [fontColor](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2itemstyleconfig-i.md)保持一致，选中状态下activatedFillColor与 [selectedFontColor](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2itemstyleconfig-i.md)保持一致。如果需要设置不同的颜色，可以在传入items时使用 [prefixSymbolIcon](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md)和[suffixSymbolIcon](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md)。
+图标填充色（[fillColor](arkts-arkui-arkui-advanced-chipv2-chipv2imageiconconfig-i.md)和 [activatedFillColor](arkts-arkui-arkui-advanced-chipv2-chipv2imageiconconfig-i.md)）的设置与对应的字体颜色保持一致：未选中状态下fillColor与 [fontColor](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyleconfig-i.md)保持一致，选中状态下activatedFillColor与 [selectedFontColor](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyleconfig-i.md)保持一致。如果需要设置不同的颜色，可以在传入items时使用 [prefixSymbolIcon](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md)和[suffixSymbolIcon](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md)。
 
-**类型：** [ChipGroupV2ItemStyle](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2itemstyle-c.md)
+**类型：** [ChipGroupV2ItemStyle](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyle-c.md)
 
 **起始版本：** 26.0.0
 
@@ -171,11 +171,11 @@ ChipV2的style属性，如颜色、大小等，参考[ChipGroupV2ItemStyle](../.
   items: ChipGroupV2Items
 ```
 
-每个ChipV2的特定属性，参考[ChipGroupV2ItemConfig](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md)类型。
+每个ChipV2的特定属性，参考[ChipGroupV2ItemConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md)类型。
 
 值为undefined或空数组时，ChipGroupV2不渲染内部的[ChipV2](arkts-arkui-arkui-advanced-chipv2-chipv2-s.md)。
 
-**类型：** [ChipGroupV2Items](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2items-c.md)
+**类型：** [ChipGroupV2Items](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2items-c.md)
 
 **起始版本：** 26.0.0
 
@@ -277,7 +277,7 @@ ChipV2状态改变时的回调方法，用于响应ChipV2选中状态变化。�
   suffix?: Callback<void>
 ```
 
-支持开发者自定义builder，如需在组件最右侧显示自定义内容可配置suffix属性，使用属性suffix需引用 [ChipGroupV2IconGroupSuffix](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2icongroupsuffix-s.md)接口。
+支持开发者自定义builder，如需在组件最右侧显示自定义内容可配置suffix属性，使用属性suffix需引用 [ChipGroupV2IconGroupSuffix](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2icongroupsuffix-s.md)接口。
 
 默认值：undefined，不在最右侧显示自定义内容。
 

@@ -186,11 +186,11 @@ Indicates an NFC-V tag. The value should be an integer.
 const RTD_TEXT: int[]
 ```
 
-RTD type TEXT, see NFC Record Type Definition (RTD) Specification.
+NDEF record of the text type. For details, see **NFCForum-TS-NDEF_1.0**.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-tag-const RTD_TEXT: int[]--><!--Device-tag-const RTD_TEXT: int[]-End-->
 
@@ -202,11 +202,11 @@ RTD type TEXT, see NFC Record Type Definition (RTD) Specification.
 const RTD_URI: int[]
 ```
 
-RTD type URI, see NFC Record Type Definition (RTD) Specification.
+NDEF record of the URI type. For details, see **NFCForum-TS-NDEF_1.0**.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-tag-const RTD_URI: int[]--><!--Device-tag-const RTD_URI: int[]-End-->
 

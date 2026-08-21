@@ -34,13 +34,13 @@ arcDirection(direction: Optional<ArcDirection>): ArcDotIndicator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | Optional&lt;[ArcDirection](arkts-arkui-arkui-arcswiper-arcdirection-e.md)&gt; | 是 | 设置弧形指示器的方向。<br/>默认值：ArcDirection.SIX_CLOCK_DIRECTION，6点钟方向。 |
+| direction | Optional&lt;[ArcDirection](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcdirection-e.md)&gt; | 是 | 设置弧形指示器的方向。<br/>默认值：ArcDirection.SIX_CLOCK_DIRECTION，6点钟方向。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
+| [ArcDotIndicator](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
 
 ## backgroundColor
 
@@ -68,7 +68,7 @@ backgroundColor(color: Optional<ResourceColor>): ArcDotIndicator
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
+| [ArcDotIndicator](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
 
 ## constructor
 
@@ -112,7 +112,7 @@ itemColor(color: Optional<ResourceColor>): ArcDotIndicator
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
+| [ArcDotIndicator](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
 
 ## maskColor
 
@@ -140,7 +140,7 @@ maskColor(color: Optional<LinearGradient>): ArcDotIndicator
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
+| [ArcDotIndicator](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
 
 ## selectedItemColor
 
@@ -168,5 +168,5 @@ selectedItemColor(color: Optional<ResourceColor>): ArcDotIndicator
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
+| [ArcDotIndicator](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
 

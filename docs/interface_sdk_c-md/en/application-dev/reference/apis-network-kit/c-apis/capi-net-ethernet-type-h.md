@@ -2,7 +2,7 @@
 
 ## Overview
 
-Defines the data structure for the C APIs of the ethernet module.
+Defines the data structures for the C APIs of the Ethernet NIC module.
 
 **Library**: libnet_ethernet.so
 
@@ -18,11 +18,11 @@ Defines the data structure for the C APIs of the ethernet module.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [Ethernet_MacAddressInfo](capi-netmanager-ext-ethernet-macaddressinfo.md) | Ethernet_MacAddressInfo | Defines the ethernet iface mac address info. |
-| [Ethernet_MacAddrInfoList](capi-netmanager-ext-ethernet-macaddrinfolist.md) | Ethernet_MacAddrInfoList | Defines the ethernet iface mac address info list. |
-| [Ethernet_NetAddr](capi-netmanager-ext-ethernet-netaddr.md) | Ethernet_NetAddr | Defines the network address. |
-| [Ethernet_NetAddrInfo](capi-netmanager-ext-ethernet-netaddrinfo.md) | Ethernet_NetAddrInfo | Defines the ethernet iface net address info. |
-| [Ethernet_NetAddrList](capi-netmanager-ext-ethernet-netaddrlist.md) | Ethernet_NetAddrList | Defines the ethernet network address list. |
+| [Ethernet_MacAddressInfo](capi-netmanager-ext-ethernet-macaddressinfo.md) | Ethernet_MacAddressInfo | Defines the MAC address of the Ethernet NIC. |
+| [Ethernet_MacAddrInfoList](capi-netmanager-ext-ethernet-macaddrinfolist.md) | Ethernet_MacAddrInfoList | Defines the MAC address list of Ethernet NICs. |
+| [Ethernet_NetAddr](capi-netmanager-ext-ethernet-netaddr.md) | Ethernet_NetAddr | Defines a network address. |
+| [Ethernet_NetAddrInfo](capi-netmanager-ext-ethernet-netaddrinfo.md) | Ethernet_NetAddrInfo | Defines the network address of the Ethernet NIC, including the Ethernet NIC name and the network addressinformation. |
+| [Ethernet_NetAddrList](capi-netmanager-ext-ethernet-netaddrlist.md) | Ethernet_NetAddrList | Defines the network address list of Ethernet NICs. |
 
 ### Macro
 

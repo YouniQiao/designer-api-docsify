@@ -12,7 +12,7 @@ import { ssap } from '@kit.ConnectivityKit';
 function createServer(): Server
 ```
 
-Creates a SSAP server instance.
+Creates an SSAP server instance.
 
 **Since:** 26.0.0
 
@@ -28,7 +28,7 @@ Creates a SSAP server instance.
 
 | Type | Description |
 | --- | --- |
-| Server | Returns a SSAP server instance { |
+| Server | SSAP server instance. |
 
 **Error codes:**
 

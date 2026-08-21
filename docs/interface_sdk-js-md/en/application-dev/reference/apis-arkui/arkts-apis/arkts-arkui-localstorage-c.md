@@ -214,13 +214,13 @@ Obtains the [LocalStorage](../../../ui/state-management/arkts-localstorage.md) i
 
 > **NOTE：**
 
-> Since API version 12, you can use the &gt; [getSharedLocalStorage](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getsharedlocalstorage) &gt; API in [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to specify the UI execution context.
+> Since API version 12, you can use the &gt; [getSharedLocalStorage](arkts-arkui-arkui-uicontext-uicontext-c.md#getsharedlocalstorage) &gt; API in [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to specify the UI execution context.
 
 **Since:** 10
 
 **Deprecated since:** 18
 
-**Substitutes:** [getSharedLocalStorage](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getsharedlocalstorage)
+**Substitutes:** [getSharedLocalStorage](arkts-arkui-arkui-uicontext-uicontext-c.md#getsharedlocalstorage)
 
 **Model restriction:** This API can be used only in the stage model.
 

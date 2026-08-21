@@ -29,7 +29,7 @@ actionCode: Callback<Callback<boolean>>
 
 测试代码段。入参为回调函数，需在代码段中主动调用以通知框架执行完成，否则会导致执行超时。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt;&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;&gt;
 
 **起始版本：** 23
 
@@ -101,7 +101,7 @@ resetCode?: Callback<Callback<boolean>>
 
 测试结束环境重置代码段。 当测试代码段修改了全局状态（如全局变量、配置等）需要在每轮测试后重置时传入此参数。 默认为空，框架在执行测试时不执行此代码段。 入参为回调函数，需在代码段中主动调用以通知框架执行完成，否则会导致执行超时。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt;&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;&gt;
 
 **起始版本：** 23
 

@@ -12,11 +12,11 @@ import { tag } from '@kit.ConnectivityKit';
 function getNfcA(tagInfo: TagInfo): NfcATag
 ```
 
-Obtains an [NfcATag](arkts-connectivity-tag-nfcatag-t.md) object based on the tag information. During tag reading, if the tag supports the NFC-A technology, an [NfcATag](arkts-connectivity-tag-nfcatag-t.md) object will be created based on the tag information.
+Obtains an **NfcATag** object, which allows access to the tags that use the NFC-A technology.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-tag-function getNfcA(tagInfo: TagInfo): NfcATag--><!--Device-tag-function getNfcA(tagInfo: TagInfo): NfcATag-End-->
 
@@ -26,13 +26,13 @@ Obtains an [NfcATag](arkts-connectivity-tag-nfcatag-t.md) object based on the ta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tagInfo | [TagInfo](arkts-connectivity-tag-taginfo-i.md) | Yes | Indicates the dispatched tag information. |
+| tagInfo | [TagInfo](arkts-connectivity-tag-taginfo-i.md) | Yes | Tag information, including the tag technology type and related parameters, obtained from [tag.getTagInfo(want: Want)](arkts-connectivity-tag-gettaginfo-f.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| NfcATag | { |
+| NfcATag | NfcATag** object obtained. |
 
 **Error codes:**
 

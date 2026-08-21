@@ -87,7 +87,7 @@ Unit: px
 
 **NOTE：**
 
-To use a value in the unit of vp, you can use [vp2px](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.
+To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.
 
 If **offsetX** is of the Resource type, its value must be of the number type.
 
@@ -117,7 +117,7 @@ Unit: px
 
 **NOTE：**
 
-To use a value in the unit of vp, you can use [vp2px](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.
+To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.
 
 If **offsetY** is of the Resource type, its value must be of the number type.
 
@@ -149,7 +149,7 @@ Unit: px
 
 A value less than 0 evaluates to the value **0**.
 
-To use a value in the unit of vp, you can use [vp2px](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.
+To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.
 
 If **radius** is of the Resource type, its value must be of the number type.
 

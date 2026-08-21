@@ -12,7 +12,7 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 function offReadData(callback?: Callback<DataParams>): void
 ```
 
-Unsubscribes from the event reported when data is read from the port.
+Unsubscribes from the port channel data receiving event. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
 
@@ -26,7 +26,7 @@ Unsubscribes from the event reported when data is read from the port.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataParams](arkts-connectivity-datatransfer-dataparams-i.md)&gt; | No | Callback used to listen for the port read event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataParams](arkts-connectivity-datatransfer-dataparams-i.md)&gt; | No | Callback used to return the parameters for data received by the port channel. <br>If this parameter is set, the current callback is unregistered. If this parameter is not specified, all callbacks corresponding to the event are unregistered. |
 
 **Error codes:**
 

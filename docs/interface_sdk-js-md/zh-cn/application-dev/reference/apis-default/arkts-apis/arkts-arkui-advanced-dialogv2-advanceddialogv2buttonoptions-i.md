@@ -25,7 +25,7 @@ action?: AdvancedDialogV2ButtonAction
 
 默认无事件。
 
-**类型：** [AdvancedDialogV2ButtonAction](../../apis-arkui/arkts-apis/arkts-arkui-advanceddialogv2buttonaction-t.md)
+**类型：** [AdvancedDialogV2ButtonAction](arkts-advanceddialogv2buttonaction-t.md)
 
 **起始版本：** 23
 

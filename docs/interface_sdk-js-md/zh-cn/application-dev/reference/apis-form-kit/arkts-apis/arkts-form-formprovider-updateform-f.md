@@ -36,7 +36,7 @@ function updateForm(
 | --- | --- | --- | --- |
 | formId | string | 是 | 请求更新的卡片标识。 |
 | formBindingData | formBindingData.FormBindingData | 是 | 用于更新的数据。具体限制请参考上方说明。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。更新结果的回调，成功时error为undefined。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。更新结果的回调，成功时error为undefined。 |
 
 **错误码：**
 

@@ -37,7 +37,7 @@ function notifyFormsEnableUpdate(
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | 是 | 卡片标识列表。 |
 | isEnableUpdate | boolean | 是 | 是否使能更新。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当通知卡片是否启用更新状态成功，error为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当通知卡片是否启用更新状态成功，error为undefined，否则为错误对象。 |
 
 
 ## notifyFormsEnableUpdate

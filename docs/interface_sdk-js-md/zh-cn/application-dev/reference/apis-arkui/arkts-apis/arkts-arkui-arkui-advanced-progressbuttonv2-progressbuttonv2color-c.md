@@ -40,7 +40,7 @@ constructor(options: ProgressButtonV2ColorOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ProgressButtonV2ColorOptions](arkts-arkui-arkui-advanced-progressbuttonv2-progressbuttonv2coloroptions-i.md) | 是 |  |
+| options | [ProgressButtonV2ColorOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-progressbuttonv2-progressbuttonv2coloroptions-i.md) | 是 |  |
 
 ## backgroundColor
 

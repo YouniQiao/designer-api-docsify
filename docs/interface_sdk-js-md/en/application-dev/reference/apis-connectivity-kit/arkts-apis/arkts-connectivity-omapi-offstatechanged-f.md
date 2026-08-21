@@ -12,7 +12,7 @@ import { omapi } from '@kit.ConnectivityKit';
 function off(type: 'stateChanged', callback?: Callback<ServiceState>): void
 ```
 
-Unsubscribe the service state changed event.
+Disables listening for service status change events.
 
 **Since:** 18
 
@@ -24,8 +24,8 @@ Unsubscribe the service state changed event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'stateChanged' | Yes | The type to unregister. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ServiceState](arkts-connectivity-omapi-servicestate-e.md)&gt; | No | The callback used to listen for the state change event. |
+| type | 'stateChanged' | Yes | Event type. It has a fixed value of **stateChanged**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ServiceState](arkts-connectivity-omapi-servicestate-e.md)&gt; | No | Callback invoked to return the SE service status. If this parameter is left empty, all callbacks corresponding to the type will be unsubscribed. |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # AcbState
 
-ACB connection status enumeration.
+表示和远端设备的逻辑链路连接状态，为枚举值。
 
 **起始版本：** 26.0.0
 
@@ -14,7 +14,7 @@ ACB connection status enumeration.
 DISCONNECTED = 0
 ```
 
-ACB disconnected.
+表示已断连。
 
 **起始版本：** 26.0.0
 
@@ -30,7 +30,7 @@ ACB disconnected.
 CONNECTED = 1
 ```
 
-ACB connected.
+表示已连接。
 
 **起始版本：** 26.0.0
 
@@ -46,7 +46,7 @@ ACB connected.
 ENCRYPTED = 2
 ```
 
-ACB encrypted.
+表示已连接且链路已加密。
 
 **起始版本：** 26.0.0
 

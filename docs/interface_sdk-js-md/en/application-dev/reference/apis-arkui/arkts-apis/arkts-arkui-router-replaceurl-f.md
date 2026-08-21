@@ -16,13 +16,13 @@ Replaces the current page with another one in the application and destroys the c
 
 > **NOTE：**
 > 
-> - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
+> - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
 
 **Since:** 9
 
 **Deprecated since:** 18
 
-**Substitutes:** [replaceUrl](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#replaceurl)(options: router.RouterOptions, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceurl)(options: router.RouterOptions, callback: AsyncCallback&lt;void&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -79,13 +79,13 @@ Replaces the current page with another one in the application and destroys the c
 
 > **NOTE：**
 > 
-> - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
+> - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
 
 **Since:** 9
 
 **Deprecated since:** 18
 
-**Substitutes:** [replaceUrl](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#replaceurl)(options: router.RouterOptions)
+**Substitutes:** [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceurl)(options: router.RouterOptions)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -149,13 +149,13 @@ Replaces the current page with another one in the application and destroys the c
 
 > **NOTE：**
 > 
-> - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
+> - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
 
 **Since:** 9
 
 **Deprecated since:** 18
 
-**Substitutes:** [replaceUrl](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#replaceurl)(options: router.RouterOptions, mode: router.RouterMode, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceurl)(options: router.RouterOptions, mode: router.RouterMode, callback: AsyncCallback&lt;void&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -213,13 +213,13 @@ Replaces the current page with another one in the application and destroys the c
 
 > **NOTE：**
 > 
-> - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
+> - Since API version 10, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
 
 **Since:** 9
 
 **Deprecated since:** 18
 
-**Substitutes:** [replaceUrl](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#replaceurl)(options: router.RouterOptions, mode: router.RouterMode)
+**Substitutes:** [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceurl)(options: router.RouterOptions, mode: router.RouterMode)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

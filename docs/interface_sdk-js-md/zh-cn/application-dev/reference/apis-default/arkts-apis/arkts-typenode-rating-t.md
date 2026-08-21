@@ -16,5 +16,5 @@ Define the FrameNode type for Rating.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** RatingFrameNode
+**属性类型：** [RatingFrameNode](arkts-typenode-ratingframenode-c.md)
 

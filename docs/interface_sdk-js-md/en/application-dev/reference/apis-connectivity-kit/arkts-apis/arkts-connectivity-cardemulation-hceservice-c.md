@@ -1,6 +1,6 @@
 # HceService
 
-A class for NFC host application. &lt;p&gt;The NFC host application use this class, then Nfc service can access the application installation information and connect to services of the application.
+Provides APIs for implementing HCE, including receiving Application Protocol Data Units (APDUs) from the peer card reader and sending a response. Before using HCE-related APIs, check whether the device supports HCE.
 
 **Since:** 23
 
@@ -51,7 +51,7 @@ Unsubscribe the event to receive the APDU data.
 off(type: 'hceCmd', callback?: AsyncCallback<int[]>): void
 ```
 
-Unsubscribe the event to receive the APDU data.
+Unsubscribes from events indicating receiving of APDUs from the peer card reader. This API uses an asynchronous callback to return the result.
 
 **Since:** 18
 
@@ -67,8 +67,8 @@ Unsubscribe the event to receive the APDU data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'hceCmd' | Yes | The type to unregister event. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | No | The callback used to listen for the event. |
+| type | 'hceCmd' | Yes | Event type. It has a fixed value of **hceCmd**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | No | Event callback. Each number is represented in hexadecimal notation, with values ranging from 0x00 to 0xFF. If this parameter is not set, this API unregisters the callback for the specified **type**. |
 
 **Error codes:**
 
@@ -151,9 +151,9 @@ register HCE event to receive the APDU data.
 on(type: 'hceCmd', callback: AsyncCallback<int[]>): void
 ```
 
-register HCE event to receive the APDU data.
+Subscribes to events indicating receiving of APDUs from the peer card reader. The application needs to call this API in **onCreate()** of the HCE page. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 8
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
@@ -167,16 +167,16 @@ register HCE event to receive the APDU data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'hceCmd' | Yes | The type to register. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | Yes | Callback used to listen to HCE data that local device received. |
+| type | 'hceCmd' | Yes | Event type. It has a fixed value of **hceCmd**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | Yes | Event callback used to return the data array that complies with the APDU. Each number is represented in hexadecimal notation, with values ranging from 0x00 to 0xFF. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter.<br>**Applicable version:** 12 and later |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -259,7 +259,11 @@ export default {
 sendResponse(responseApdu: number[]): void
 ```
 
-Sends a response APDU to the remote device. &lt;p&gt;This method is used by a host application when swiping card.
+Sends a response to the peer card reader.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. Use &gt; [transmit](#transmit) instead.
 
 **Since:** 8
 
@@ -279,7 +283,7 @@ Sends a response APDU to the remote device. &lt;p&gt;This method is used by a ho
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| responseApdu | number[] | Yes | Indicates the response, which is a byte array. |
+| responseApdu | number[] | Yes | Response APDU sent to the peer card reader. The value consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
 
 ## start
 
@@ -287,13 +291,13 @@ Sends a response APDU to the remote device. &lt;p&gt;This method is used by a ho
 start(elementName: ElementName, aidList: string[]): void
 ```
 
-Starts the HCE, register more aids and allows this application to be preferred while in foreground.
+Starts HCE, including enabling this application to run in the foreground preferentially and dynamically registering the AID list.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HceService-start(elementName: ElementName, aidList: string[]): void--><!--Device-HceService-start(elementName: ElementName, aidList: string[]): void-End-->
 
@@ -303,8 +307,8 @@ Starts the HCE, register more aids and allows this application to be preferred w
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | Yes | The element name of the service ability |
-| aidList | string[] | Yes | The aid list to be registered by this service, allowed to be empty. |
+| elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | Yes | Information about the page, on which the application declares the NFC card emulation capability. It must contain at least **bundleName** and **abilityName** and cannot be empty. |
+| aidList | string[] | Yes | List of AIDs to register. This parameter can be left empty. |
 
 **Error codes:**
 
@@ -321,7 +325,11 @@ Starts the HCE, register more aids and allows this application to be preferred w
 startHCE(aidList: string[]): boolean
 ```
 
-start HCE
+Starts HCE, including enabling this application to run in the foreground preferentially and dynamically registering the AID list.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. Use &gt; [start](#start) instead.
 
 **Since:** 8
 
@@ -341,13 +349,13 @@ start HCE
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aidList | string[] | Yes | The aid list to be registered by this service |
+| aidList | string[] | Yes | List of AIDs to register. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if HCE is enabled or has been enabled; returns false otherwise. |
+| boolean | Returns **true** if HCE is started or has been started; returns **false** otherwise. |
 
 ## stop
 
@@ -355,13 +363,13 @@ start HCE
 stop(elementName: ElementName): void
 ```
 
-Stops the HCE, and unset the preferred service while in foreground.
+Stops HCE, including canceling the subscription of APDU data, exiting this application from the foreground, and releasing the dynamically registered AID list. The application needs to call this API in **onDestroy** of the HCE page.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HceService-stop(elementName: ElementName): void--><!--Device-HceService-stop(elementName: ElementName): void-End-->
 
@@ -371,7 +379,7 @@ Stops the HCE, and unset the preferred service while in foreground.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | Yes | The element name of the service ability |
+| elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | Yes | Information about the page, on which the application declares the NFC card emulation capability. It must contain at least **bundleName** and **abilityName** and cannot be empty. |
 
 **Error codes:**
 
@@ -388,7 +396,11 @@ Stops the HCE, and unset the preferred service while in foreground.
 stopHCE(): boolean
 ```
 
-stop HCE
+Stops HCE, including exiting the current application from the foreground, releasing the dynamically registered AID list, and canceling the subscription of **hceCmd**.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. Use &gt; [stop](#stop) instead.
 
 **Since:** 8
 
@@ -408,7 +420,7 @@ stop HCE
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if HCE is disabled or has been disabled; returns false otherwise. |
+| boolean | true** if HCE is stopped or disabled; **false** otherwise. |
 
 **Examples**
 
@@ -420,13 +432,13 @@ For details, see the example of on.
 transmit(response: int[]): Promise<void>
 ```
 
-Sends a response APDU to the remote device.
+Transmits an APDU to the peer card reader. This API uses a promise to return the result. The application calls this API only after receiving an APDU sent by the card reader via [on](#onhcecmd).
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HceService-transmit(response: int[]): Promise<void>--><!--Device-HceService-transmit(response: int[]): Promise<void>-End-->
 
@@ -436,13 +448,13 @@ Sends a response APDU to the remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| response | int[] | Yes | Indicates the response to send, which is a byte array. |
+| response | int[] | Yes | Response APDU sent to the peer card reader. The value consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The void |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -493,13 +505,13 @@ console.info("transmit Promise end.");
 transmit(response: int[], callback: AsyncCallback<void>): void
 ```
 
-Sends a response APDU to the remote device.
+Sends APDU data to the peer card reader. The application can call this API only after receiving an APDU sent by the card reader via [on](#onhcecmd). This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HceService-transmit(response: int[], callback: AsyncCallback<void>): void--><!--Device-HceService-transmit(response: int[], callback: AsyncCallback<void>): void-End-->
 
@@ -509,8 +521,8 @@ Sends a response APDU to the remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| response | int[] | Yes | Indicates the response to send, which is a byte array. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback |
+| response | int[] | Yes | Response APDU sent to the peer card reader. The value consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

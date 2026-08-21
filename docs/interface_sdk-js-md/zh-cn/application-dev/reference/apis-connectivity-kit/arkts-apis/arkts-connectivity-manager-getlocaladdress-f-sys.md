@@ -12,7 +12,7 @@ import { manager } from '@kit.ConnectivityKit';
 function getLocalAddress(): string
 ```
 
-获取本端设备的MAC地址。
+查询本机MAC地址。
 
 **起始版本：** 26.0.0
 
@@ -30,7 +30,7 @@ function getLocalAddress(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 本地MAC地址。例如，“11:22:33:AA:BB:FF”。 |
+| string | 表示本地MAC地址。例如'11:22:33:AA:BB:FF'。 |
 
 **错误码：**
 

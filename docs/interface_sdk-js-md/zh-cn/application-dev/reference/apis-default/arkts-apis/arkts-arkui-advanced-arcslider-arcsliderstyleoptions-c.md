@@ -35,7 +35,7 @@ ArcSliderStyleOptions的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ArcSliderStyleOptionsConstructorOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptionsconstructoroptions-i.md) | 否 | ArcSliderStyleOptions的构造信息。 |
+| options | [ArcSliderStyleOptionsConstructorOptions](arkts-arkui-advanced-arcslider-arcsliderstyleoptionsconstructoroptions-i.md) | 否 | ArcSliderStyleOptions的构造信息。 |
 
 ## activeTrackThickness
 

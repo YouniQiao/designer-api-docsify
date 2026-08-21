@@ -12,7 +12,7 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 function getConnectionState(params: ConnectionStateParams): ConnectionState
 ```
 
-Obtains the connection status for data transfer.
+Obtains the port channel connection state with a remote device.
 
 **Since:** 26.0.0
 
@@ -28,13 +28,13 @@ Obtains the connection status for data transfer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [ConnectionStateParams](arkts-connectivity-datatransfer-connectionstateparams-i.md) | Yes | Parameters used to obtain the connection status. |
+| params | [ConnectionStateParams](arkts-connectivity-datatransfer-connectionstateparams-i.md) | Yes | Connection parameters of the port. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ConnectionState | Returns the connection status for data transfer. |
+| ConnectionState | NearLink port channel connection state with a remote device. |
 
 **Error codes:**
 

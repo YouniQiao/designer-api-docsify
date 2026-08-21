@@ -43,7 +43,7 @@ The method to build component.
 
 Set Color options of the ProgressButtonV2.
 
-**Type:** [ProgressButtonV2Color](arkts-arkui-advanced-progressbuttonv2-progressbuttonv2color-c.md)
+**Type:** [ProgressButtonV2Color](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-progressbuttonv2-progressbuttonv2color-c.md)
 
 **Since:** 23
 
@@ -107,7 +107,7 @@ Sets the ProgressButtonV2 isEnabled state.
 
 Sets the ProgressButtonV2 onClicked.
 
-**Type:** [ClickCallback](arkts-clickcallback-t.md)
+**Type:** [ClickCallback](../../apis-arkui/arkts-apis/arkts-arkui-clickcallback-t.md)
 
 **Since:** 23
 

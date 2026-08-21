@@ -1,8 +1,8 @@
 # CapsuleSegmentButtonOptions
 
-Provides configuration options for capsule-style segmented buttons. Inherits from [CapsuleSegmentButtonConstructionOptions](arkts-arkui-arkui-advanced-segmentbutton-capsulesegmentbuttonconstructionoptions-i.md).
+Provides configuration options for capsule-style segmented buttons. Inherits from [CapsuleSegmentButtonConstructionOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-capsulesegmentbuttonconstructionoptions-i.md).
 
-**Inheritance/Implementation:** CapsuleSegmentButtonOptions extends [CapsuleSegmentButtonConstructionOptions](arkts-arkui-arkui-advanced-segmentbutton-capsulesegmentbuttonconstructionoptions-i.md)
+**Inheritance/Implementation:** CapsuleSegmentButtonOptions extends [CapsuleSegmentButtonConstructionOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-capsulesegmentbuttonconstructionoptions-i.md)
 
 **Since:** 11
 

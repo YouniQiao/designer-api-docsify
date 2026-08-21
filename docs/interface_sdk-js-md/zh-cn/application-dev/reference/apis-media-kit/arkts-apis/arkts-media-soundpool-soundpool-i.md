@@ -53,7 +53,7 @@ load(uri: string, callback: AsyncCallback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 音频文件的加载路径描述，一般以"fd://"开头的文件描述。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 异步音频资源加载返回的资源id，有效值大于0。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 异步音频资源加载返回的资源id，有效值大于0。 |
 
 **错误码：**
 
@@ -136,7 +136,7 @@ load(fd: int, offset: long, length: long, callback: AsyncCallback<int>): void
 | fd | int | 是 | 资源句柄，通过 resourceManager.getRawFd 获取。 |
 | offset | long | 是 | 资源偏移量，需要基于预置资源的信息输入，非法值会造成音视频资源解析错误。 |
 | length | long | 是 | 资源长度，需要基于预置资源的信息输入，非法值会造成音视频资源解析错误。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 获取回调的soundID，有效值大于0。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 获取回调的soundID，有效值大于0。 |
 
 **错误码：**
 
@@ -222,7 +222,7 @@ Unsubscribes from errorOccurred events of this **SoundPool** instance.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 否 | Callback used to listen for soundpool errorOccurred events. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 否 | Callback used to listen for soundpool errorOccurred events. |
 
 ## offLoadComplete
 
@@ -305,7 +305,7 @@ off(type: 'errorOccurred', callback?:Callback<ErrorInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'errorOccurred' | 是 | 事件回调类型，取消注册的事件为'errorOccurred'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 否 | 错误事件回调方法。在使用播放器的过程中发生错误时，提供错误信息[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)，不设置callback 时不提供相关信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 否 | 错误事件回调方法。在使用播放器的过程中发生错误时，提供错误信息[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)，不设置callback 时不提供相关信息。 |
 
 ## off('loadComplete')
 
@@ -385,7 +385,7 @@ Subscribes to error events of this **SoundPool** instance. This event is used on
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | Callback used to return the error code ID and error message. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to return the error code ID and error message. |
 
 ## onErrorOccurred
 
@@ -405,7 +405,7 @@ Subscribes to errorOccurred events of this **SoundPool** instance.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 是 | Callback used to listen for soundpool errorOccurred events. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 是 | Callback used to listen for soundpool errorOccurred events. |
 
 ## onLoadComplete
 
@@ -425,7 +425,7 @@ Subscribes to events indicating that a sound finishes loading. This event is tri
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | ID of the sound that has been loaded. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | ID of the sound that has been loaded. |
 
 ## onPlayFinished
 
@@ -445,7 +445,7 @@ Subscribes to events indicating that a sound finishes playing. This event is tri
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 ## onPlayFinishedWithStreamId
 
@@ -469,7 +469,7 @@ When both onPlayFinished and onPlayFinishedWithStreamId are subscribed to, the '
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | Callback used to return the result. Stream ID of the audio that finishes playing. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | Callback used to return the result. Stream ID of the audio that finishes playing. |
 
 ## on('error')
 
@@ -490,7 +490,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 错误事件回调类型，支持的事件：'error'，用户操作和系统都会触发此事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | 错误事件回调方法：使用播放器的过程中发生错误，会提供错误码ID和错误信息。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 错误事件回调方法：使用播放器的过程中发生错误，会提供错误码ID和错误信息。 |
 
 ## on('errorOccurred')
 
@@ -511,7 +511,7 @@ on(type:'errorOccurred', callback:Callback<ErrorInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'errorOccurred' | 是 | 事件回调类型，支持的事件为'errorOccurred'，当用户或系统操作导致错误，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 是 | 回调函数，返回错误事件回调方法。在使用播放器的过程中发生错误时，提供错误信息[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 是 | 回调函数，返回错误事件回调方法。在使用播放器的过程中发生错误时，提供错误信息[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)。 |
 
 ## on('loadComplete')
 
@@ -532,7 +532,7 @@ on(type: 'loadComplete', callback: Callback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'loadComplete' | 是 | 支持的事件：'loadComplete'，对应的ID加载完成会触发此回调。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | 回调函数，返回对应资源加载完成的资源ID。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，返回对应资源加载完成的资源ID。 |
 
 ## on('playFinished')
 
@@ -553,7 +553,7 @@ on(type: 'playFinished', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'playFinished' | 是 | 支持的事件：'playFinished'，音频流播放完成会触发此回调。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 异步'playFinished'的回调方法。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 异步'playFinished'的回调方法。 |
 
 ## on('playFinishedWithStreamId')
 
@@ -578,7 +578,7 @@ on(type: 'playFinishedWithStreamId', callback: Callback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'playFinishedWithStreamId' | 是 | 支持的事件：'playFinishedWithStreamId'，音频流播放完成会触发此回调，并返回播放完成的音频的streamId。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | 回调函数，返回播放完成的音频的streamId。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，返回播放完成的音频的streamId。 |
 
 ## play
 
@@ -600,7 +600,7 @@ play(soundID: int, params: PlayParameters, callback: AsyncCallback<int>): void
 | --- | --- | --- | --- |
 | soundID | int | 是 | 资源ID，通过load方法获取。 |
 | params | [PlayParameters](arkts-media-soundpool-playparameters-i.md) | 是 | play播放相关参数的设置。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 获取回调的音频流ID，有效值大于0。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 获取回调的音频流ID，有效值大于0。 |
 
 **错误码：**
 
@@ -629,7 +629,7 @@ play(soundID: int, callback: AsyncCallback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | soundID | int | 是 | 资源ID，通过load方法获取。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 获取回调的音频流ID，有效值大于0。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 获取回调的音频流ID，有效值大于0。 |
 
 **错误码：**
 
@@ -692,7 +692,7 @@ release(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当音频池release方法回调成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当音频池release方法回调成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -768,7 +768,7 @@ setLoop(streamID: int, loop: int, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | streamID | int | 是 | 音频流ID，通过play方法获取。 |
 | loop | int | 是 | 设置循环次数。<br>当loop≥0时，实际播放次数为loop+1。<br> 当loop＜0时，表示一直循环。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当setLoop的回调成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当setLoop的回调成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -833,7 +833,7 @@ setPriority(streamID: int, priority: int, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | streamID | int | 是 | 音频流ID，通过play方法获取。 |
 | priority | int | 是 | 优先级，0表示最低优先级。设置范围为大于等于0的整数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当音频池setPriority方法回调成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当音频池setPriority方法回调成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -898,7 +898,7 @@ setRate(streamID: int, rate: audio.AudioRendererRate, callback: AsyncCallback<vo
 | --- | --- | --- | --- |
 | streamID | int | 是 | 音频流ID，通过play方法获取。 |
 | rate | audio.AudioRendererRate | 是 | 音频rate相关参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当音频池setRate方法回调成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当音频池setRate方法回调成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -964,7 +964,7 @@ setVolume(streamID: int, leftVolume: double, rightVolume: double, callback: Asyn
 | streamID | int | 是 | 音频流ID，通过play方法获取。 |
 | leftVolume | double | 是 | 左声道音量，设置范围为[0.0, 1.0]。 |
 | rightVolume | double | 是 | 右声道音量，设置范围为[0.0, 1.0]，当前右声道设置无效，以左声道为准。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当音频池setVolume方法回调成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当音频池setVolume方法回调成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1029,7 +1029,7 @@ stop(streamID: int, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | streamID | int | 是 | 音频流ID，通过play方法获取。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当音频池stop回调成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当音频池stop回调成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1092,7 +1092,7 @@ unload(soundID: int, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | soundID | int | 是 | 资源ID，通过load方法获取。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当音频池unload方法回调成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当音频池unload方法回调成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

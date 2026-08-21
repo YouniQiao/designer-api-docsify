@@ -35,7 +35,7 @@ The constructor used to create a ArcSliderValueOptions object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ArcSliderValueOptionsConstructorOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptionsconstructoroptions-i.md) | No |  |
+| options | [ArcSliderValueOptionsConstructorOptions](arkts-arkui-advanced-arcslider-arcslidervalueoptionsconstructoroptions-i.md) | No |  |
 
 ## max
 

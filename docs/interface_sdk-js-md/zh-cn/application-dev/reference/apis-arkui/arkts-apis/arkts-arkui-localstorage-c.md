@@ -218,13 +218,13 @@ static getShared(): LocalStorage
 
 > **说明：**
 > 
-> 从API version 12开始，可使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的 &gt; [getSharedLocalStorage](arkts-arkui-arkui-uicontext-uicontext-c.md#getsharedlocalstorage)明确UI执行上下文中的LocalStorage实例。
+> 从API version 12开始，可使用[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [getSharedLocalStorage](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getsharedlocalstorage)明确UI执行上下文中的LocalStorage实例。
 
 **起始版本：** 10
 
 **废弃版本：** 18
 
-**替代接口：** [getSharedLocalStorage](arkts-arkui-arkui-uicontext-uicontext-c.md#getsharedlocalstorage)
+**替代接口：** [getSharedLocalStorage](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getsharedlocalstorage)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

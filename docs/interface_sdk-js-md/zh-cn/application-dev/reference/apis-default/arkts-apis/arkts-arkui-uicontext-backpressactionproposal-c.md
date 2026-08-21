@@ -2,7 +2,7 @@
 
 类BackPressActionProposal。
 
-**继承/实现关系：** BackPressActionProposal extends [BaseGestureHandlingProposal](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md)
+**继承/实现关系：** BackPressActionProposal extends [BaseGestureHandlingProposal](arkts-arkui-uicontext-basegesturehandlingproposal-c.md)
 
 **起始版本：** 26.0.0
 

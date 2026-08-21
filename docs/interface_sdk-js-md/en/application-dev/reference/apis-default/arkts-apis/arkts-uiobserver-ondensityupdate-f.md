@@ -27,6 +27,6 @@ Registers a callback function to be called when the screen density is updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-uicontext-uicontext-c.md) | Yes | The context scope of the observer. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DensityInfo](../../apis-arkui/arkts-apis/arkts-arkui-uiobserver-densityinfo-c.md)&gt; | Yes | The callback function to be called when the screen density is updated. |
+| context | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | The context scope of the observer. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DensityInfo](arkts-uiobserver-densityinfo-c.md)&gt; | Yes | The callback function to be called when the screen density is updated. |
 

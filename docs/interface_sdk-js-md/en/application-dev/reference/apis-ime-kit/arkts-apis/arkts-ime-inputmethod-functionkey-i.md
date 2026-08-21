@@ -1,6 +1,6 @@
 # FunctionKey
 
-FunctionKey of Input.
+@brief Describes the type of the input method function key.
 
 **Since:** 23
 
@@ -25,7 +25,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 enterKeyType: EnterKeyType
 ```
 
-Indicates the enter key type of the input method.
+@brief Function type represented by the Enter key of the input method.
 
 **Type:** EnterKeyType
 

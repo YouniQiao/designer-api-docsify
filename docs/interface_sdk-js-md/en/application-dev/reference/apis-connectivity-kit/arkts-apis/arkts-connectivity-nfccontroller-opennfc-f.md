@@ -12,7 +12,11 @@ import { nfcController } from '@kit.ConnectivityKit';
 function openNfc(): boolean
 ```
 
-Enables NFC.
+Opens NFC.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. Use &gt; [enableNfc](arkts-connectivity-nfccontroller-enablenfc-f.md) instead.
 
 **Since:** 7
 
@@ -30,5 +34,5 @@ Enables NFC.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 

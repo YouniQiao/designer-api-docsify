@@ -1,6 +1,6 @@
 # DeviceModel (System API)
 
-Describes the remote device's model information.
+Describes the model of a remote device.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 iconId: string
 ```
 
-The icon ID of the remote device.
+Icon ID of the remote device.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ The icon ID of the remote device.
 modelId: string
 ```
 
-The model ID of the remote device.
+Model ID of the remote device.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ The model ID of the remote device.
 subModelId: string
 ```
 
-The sub-model ID of the remote device.
+Sub-model ID of the remote device.
 
 **Type:** string
 

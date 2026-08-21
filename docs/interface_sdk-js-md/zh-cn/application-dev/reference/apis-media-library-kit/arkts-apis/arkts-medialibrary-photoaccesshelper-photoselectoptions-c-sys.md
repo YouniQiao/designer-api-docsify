@@ -24,7 +24,7 @@ themeColor?: CustomColors
 
 Theme color
 
-**类型：** [CustomColors](../../apis-default/arkts-apis/arkts-customcolors-t.md)
+**类型：** [CustomColors](../../apis-arkui/arkts-apis/arkts-arkui-customcolors-t.md)
 
 **起始版本：** 26.0.0
 

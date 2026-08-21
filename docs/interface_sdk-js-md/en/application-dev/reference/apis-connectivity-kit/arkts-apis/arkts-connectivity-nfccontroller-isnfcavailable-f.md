@@ -12,7 +12,11 @@ import { nfcController } from '@kit.ConnectivityKit';
 function isNfcAvailable(): boolean
 ```
 
-Checks whether a device supports NFC.
+Checks whether the device supports NFC.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. Use &gt; [canIUse("SystemCapability.Communication.NFC.Core")](../../../reference/common/init.md#caniuse) instead.
 
 **Since:** 7
 
@@ -28,5 +32,5 @@ Checks whether a device supports NFC.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns **true** if the device supports NFC; returns **false** otherwise. |
 

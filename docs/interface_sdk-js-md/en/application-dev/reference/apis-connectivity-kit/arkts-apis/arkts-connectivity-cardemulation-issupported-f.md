@@ -12,7 +12,11 @@ import { cardEmulation } from '@kit.ConnectivityKit';
 function isSupported(feature: number): boolean
 ```
 
-Checks whether a specified type of card emulation is supported. &lt;p&gt;This method is used to check Whether the host or secure element supports card emulation.
+Checks whether a certain type of card emulation is supported.
+
+> **NOTE：**
+> 
+> This API is supported since API version 6 and deprecated since API version 9. Use &gt; [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md) instead.
 
 **Since:** 6
 
@@ -30,13 +34,13 @@ Checks whether a specified type of card emulation is supported. &lt;p&gt;This me
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| feature | number | Yes | Indicates the card emulation type, { |
+| feature | number | Yes | Card emulation type to check. For details, see [FeatureType](arkts-connectivity-cardemulation-featuretype-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the specified type of card emulation is supported; returns false otherwise. |
+| boolean | Returns **true** if the card emulation type is supported; returns **false** otherwise. |
 
 **Examples**
 

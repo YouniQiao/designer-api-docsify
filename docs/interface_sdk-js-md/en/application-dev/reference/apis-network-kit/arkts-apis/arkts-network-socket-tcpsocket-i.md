@@ -887,26 +887,7 @@ Unsubscribes from **connect** or **close** events of the **TCPSocket** object. T
 
 **Examples**
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-let callback1 = () => {
-  console.info("on connect success");
-}
-tcp.on('connect', callback1);
-// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-tcp.off('connect', callback1);
-tcp.off('connect');
-let callback2 = () => {
-  console.info("on close success");
-}
-tcp.on('close', callback2);
-// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-tcp.off('close', callback2);
-tcp.off('close');
-```
+See off_close
 
 ## off('error')
 
@@ -1049,18 +1030,7 @@ Subscribes to **connect** or **close** events of the **TCPSocket** object. This 
 
 **Examples**
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-tcp.on('connect', () => {
-  console.info("on connect success")
-});
-tcp.on('close', () => {
-  console.info("on close success")
-});
-```
+See on_close
 
 ## on('error')
 

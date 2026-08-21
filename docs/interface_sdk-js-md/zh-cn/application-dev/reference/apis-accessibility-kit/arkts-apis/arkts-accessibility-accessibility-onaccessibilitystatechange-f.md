@@ -16,7 +16,7 @@ import { GesturePoint } from '@kit.AccessibilityKit';
 function onAccessibilityStateChange(callback: Callback<boolean>): void
 ```
 
-Register the observe of the accessibility state changed.
+监听辅助应用启用状态变化事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -32,7 +32,7 @@ Register the observe of the accessibility state changed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 | Asynchronous callback interface. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数，在辅助应用启用状态变化时将状态通过此函数进行通知。此状态为全局辅助应用启用状态。 |
 
 **示例**
 

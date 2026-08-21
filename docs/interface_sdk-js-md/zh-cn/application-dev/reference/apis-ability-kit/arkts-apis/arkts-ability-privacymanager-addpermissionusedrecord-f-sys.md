@@ -152,7 +152,7 @@ function addPermissionUsedRecord(
 | permissionName | Permissions | 是 | 需要记录的权限名称。传入无效值时返回错误码12100001。 <br>取值约束：权限名长度不能超过256个字符。 |
 | successCount | int | 是 | 访问成功的次数。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：取值必须为非负整数。 |
 | failCount | int | 是 | 访问失败的次数。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：取值必须为非负整数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当添加使用记录成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当添加使用记录成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 

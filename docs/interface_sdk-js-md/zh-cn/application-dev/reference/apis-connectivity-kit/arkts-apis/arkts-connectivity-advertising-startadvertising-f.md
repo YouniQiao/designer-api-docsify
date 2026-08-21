@@ -12,7 +12,7 @@ import { advertising } from '@kit.ConnectivityKit';
 function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>
 ```
 
-开始广播。
+发送星闪广播。使用Promise异步回调。适用于设备发现、设备信息广播等需要将本端设备能力或数据对外发布的业务场景，配合 advertising.onAdvertisingStateChange可监听广播启停状态。
 
 **起始版本：** 26.0.0
 
@@ -28,13 +28,13 @@ function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| advertisingParams | [AdvertisingParams](arkts-connectivity-advertising-advertisingparams-i.md) | 是 | 表示广播参数。 |
+| advertisingParams | [AdvertisingParams](arkts-connectivity-advertising-advertisingparams-i.md) | 是 | 广播相关参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;int&gt; | 返回广播句柄promise对象。 |
+| Promise&lt;int&gt; | Promise对象，返回本次开启的广播ID。广播ID是随机分配的唯一标识值，范围[0, 255]，与 [advertising.stopAdvertising]{ |
 
 **错误码：**
 

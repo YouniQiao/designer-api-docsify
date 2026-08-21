@@ -26,7 +26,7 @@ Subscribe to heart rate sensor data, {@code SensorId.HEART_RATE}.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;HeartRateResponse&gt; | 是 | callback heart rate data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HeartRateResponse&gt; | 是 | callback heart rate data. |
 | options | Options | 否 | Optional parameters specifying the interval at which sensor data is reported, <br> {@code Options}. |
 
 **错误码：**

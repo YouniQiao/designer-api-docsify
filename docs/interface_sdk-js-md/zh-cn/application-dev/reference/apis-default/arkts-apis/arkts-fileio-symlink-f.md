@@ -84,7 +84,7 @@ function symlink(target: string, srcPath: string, callback: AsyncCallback<void>)
 | --- | --- | --- | --- |
 | target | string | 是 | 要链接的目标文件的应用沙箱路径。 |
 | srcPath | string | 是 | 符号链接文件的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当创建符号链接成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当创建符号链接成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

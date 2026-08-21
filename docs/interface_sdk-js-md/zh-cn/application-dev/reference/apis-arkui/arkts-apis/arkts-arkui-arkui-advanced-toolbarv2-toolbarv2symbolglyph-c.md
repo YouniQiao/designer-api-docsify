@@ -36,7 +36,7 @@ The constructor used to create a ToolBarV2SymbolGlyph object.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ToolBarV2SymbolGlyphOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-toolbarv2-toolbarv2symbolglyphoptions-i.md) | 是 | symbol info. |
+| options | [ToolBarV2SymbolGlyphOptions](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2symbolglyphoptions-i.md) | 是 | symbol info. |
 
 ## activated
 

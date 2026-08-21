@@ -1,10 +1,9 @@
 # InputMethodExtensionAbility
 
-The **InputMethodExtensionAbility** module provides APIs for developing input methods and managing the lifecycle of input method extensions.
-
-> **NOTE：**
-> 
-> - The APIs of this module can be used only in the stage model.
+@brief The **InputMethodExtensionAbility** module provides APIs for developing input methods and managing the lifecycle of input method extensions. <br> <br>   
+> **NOTE：**<br>
+> <br>
+> The initial APIs of this module are supported since API version 9. Newly added APIs will be marked with a superscript to indicate their earliest API version. The APIs of this module can be used only in the stage model.
 
 **Since:** 23
 
@@ -24,7 +23,7 @@ import { InputMethodExtensionAbility } from '@kit.IMEKit';
 onCreate(want: Want): void
 ```
 
-Called when the **InputMethodExtensionAbility** is started to implement initialization.
+@brief Called when the **InputMethodExtensionAbility** is started to implement initialization.
 
 **Since:** 23
 
@@ -59,7 +58,7 @@ class InputMethodExt extends InputMethodExtensionAbility {
 onDestroy(): void
 ```
 
-Called when this **InputMethodExtensionAbility** is destroyed to clear resources.
+@brief Called when this **InputMethodExtensionAbility** is destroyed to clear resources.
 
 **Since:** 23
 
@@ -87,7 +86,7 @@ class InputMethodExt extends InputMethodExtensionAbility {
 context: InputMethodExtensionContext
 ```
 
-Context of the **InputMethodExtension**, which is inherited from **ExtensionContext**.
+@brief Context of the **InputMethodExtension**, which is inherited from **ExtensionContext**.
 
 **Type:** [InputMethodExtensionContext](arkts-ime-inputmethodextensioncontext-c.md)
 

@@ -159,7 +159,7 @@ Default value: no prefix image icon.
 
 If the value is **undefined**, the default value is used.
 
-**Type:** [IconOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroup-iconoptions-i.md)
+**Type:** [IconOptions](arkts-arkui-arkui-advanced-chipgroup-iconoptions-i.md)
 
 **Since:** 12
 
@@ -209,13 +209,13 @@ If the value is **undefined**, the default value is used.
 
 Note: This API is supported since API version 12 and deprecated since API version 14. You are advised to use **suffixImageIcon** instead.
 
-**Type:** [IconOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroup-iconoptions-i.md)
+**Type:** [IconOptions](arkts-arkui-arkui-advanced-chipgroup-iconoptions-i.md)
 
 **Since:** 12
 
 **Deprecated since:** 14
 
-**Substitutes:** [suffixImageIcon](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroup-chipgroupitemoptions-i.md#suffiximageicon)
+**Substitutes:** [suffixImageIcon](#suffiximageicon)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -237,7 +237,7 @@ Default value: no suffix image icon.
 
 If the value is **undefined**, the default value is used.
 
-**Type:** [SuffixImageIconOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroup-suffiximageiconoptions-i.md)
+**Type:** [SuffixImageIconOptions](arkts-arkui-arkui-advanced-chipgroup-suffiximageiconoptions-i.md)
 
 **Since:** 14
 

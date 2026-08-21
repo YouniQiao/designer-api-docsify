@@ -28,13 +28,13 @@ Creates a CDSM client instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | string | Yes | Indicates the address of CDSM server. <br>The length must be 17. Value constraint: The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF. |
+| address | string | Yes | Address of a member device in the paired and connected coordinated devices set. The address format is **11:22:33:AA:BB:FF**. The address must contain six segments, each segment is a string of two hexadecimal characters, and the segments are separated by colons (:). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [CdsmClient](arkts-connectivity-cdsm-cdsmclient-i.md) | Returns a CDSM client instance. |
+| [CdsmClient](arkts-connectivity-cdsm-cdsmclient-i.md) | CdsmClient** instance used to query and subscribe to the CDSM information of a remote device. |
 
 **Error codes:**
 

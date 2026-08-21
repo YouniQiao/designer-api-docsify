@@ -84,7 +84,7 @@ action?: OnActionCallback
 
 Callback function when click on this menu item.
 
-**Type:** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
+**Type:** [OnActionCallback](../../apis-default/arkts-apis/arkts-onactioncallback-t.md)
 
 **Since:** 26.0.0
 

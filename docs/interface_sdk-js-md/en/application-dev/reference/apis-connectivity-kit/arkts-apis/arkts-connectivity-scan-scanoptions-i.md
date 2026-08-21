@@ -1,6 +1,6 @@
 # ScanOptions
 
-Describes the parameters for scan.
+Represents the scan options.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { scan } from '@kit.ConnectivityKit';
 duration?: int
 ```
 
-Indicates the scan duration. If the "duration" is not set, the scanning is performed all the time. Unit: Seconds, The value must be an integer within [10,60].
+Scan duration, in seconds. The value range is The value should be an integer.
 
 **Type:** int
 
@@ -38,7 +38,7 @@ Indicates the scan duration. If the "duration" is not set, the scanning is perfo
 scanMode?: ScanMode
 ```
 
-Indicates the scan mode. If the "scanMode" is not set, the default value is "SCAN_MODE_LOW_POWER". Default value: SCAN_MODE_LOW_POWER.
+Scan mode. The default value is **'SCAN_MODE_LOW_POWER'**.
 
 **Type:** ScanMode
 

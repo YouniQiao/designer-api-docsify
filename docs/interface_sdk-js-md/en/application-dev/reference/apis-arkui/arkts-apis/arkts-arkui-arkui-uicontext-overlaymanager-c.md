@@ -6,7 +6,7 @@ Provides the capability to draw overlays.
 > 
 > - The initial APIs of this class are supported since API version 12.
 > 
-> - In the following API examples, you must first use [getOverlayManager()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getoverlaymanager) in &gt; **UIContext** to obtain an **OverlayManager** instance, and then call the APIs using the obtained instance.
+> - In the following API examples, you must first use [getOverlayManager()](arkts-arkui-arkui-uicontext-uicontext-c.md#getoverlaymanager) in &gt; **UIContext** to obtain an **OverlayManager** instance, and then call the APIs using the obtained instance.
 > 
 > - The nodes on **OverlayManager** are above the page level, but below such components as created through &gt; **Dialog**, **Popup**, **Menu**, **BindSheet**, **BindContentCover**, and **Toast**.
 > 
@@ -146,7 +146,7 @@ Opens an overlay with the specified ComponentContent and options.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | ComponentContent | Yes | Content to add to the new node on the OverlayManager. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>By default, the new node is centered on the page and stacked according to its stacking level. &lt;/p&gt; |
-| options | [OrderOverlayOptions](../../apis-default/arkts-apis/arkts-arkui-uicontext-orderoverlayoptions-i.md) | No |  |
+| options | [OrderOverlayOptions](arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | No |  |
 
 **Return value:**
 

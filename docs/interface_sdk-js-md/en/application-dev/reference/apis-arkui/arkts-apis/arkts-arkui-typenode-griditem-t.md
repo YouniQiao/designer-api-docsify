@@ -16,5 +16,5 @@ Represents a FrameNode of the **GridItem** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** TypedFrameNode<GridItemInterface, GridItemAttribute>
+**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;GridItemInterface, GridItemAttribute&gt;
 

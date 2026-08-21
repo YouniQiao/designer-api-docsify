@@ -12,11 +12,11 @@ import { tag } from '@kit.ConnectivityKit';
 function getMifareUltralight(tagInfo: TagInfo): MifareUltralightTag
 ```
 
-Obtains an [MifareUltralightTag](arkts-connectivity-tag-mifareultralighttag-t.md) object based on the tag information. During tag reading, if the tag supports the MIFARE Ultralight technology, an [MifareUltralightTag](arkts-connectivity-tag-mifareultralighttag-t.md) object will be created based on the tag information.
+Obtains a **MifareUltralightTag** object, which allows access to the tags that use MIFARE Ultralight.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-tag-function getMifareUltralight(tagInfo: TagInfo): MifareUltralightTag--><!--Device-tag-function getMifareUltralight(tagInfo: TagInfo): MifareUltralightTag-End-->
 
@@ -32,7 +32,7 @@ Obtains an [MifareUltralightTag](arkts-connectivity-tag-mifareultralighttag-t.md
 
 | Type | Description |
 | --- | --- |
-| MifareUltralightTag | The { |
+| MifareUltralightTag | MifareUltralightTag** object obtained. |
 
 **Error codes:**
 

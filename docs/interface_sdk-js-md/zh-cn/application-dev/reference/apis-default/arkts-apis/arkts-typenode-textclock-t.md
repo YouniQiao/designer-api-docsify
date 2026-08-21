@@ -16,5 +16,5 @@ Define the FrameNode type for TextClock.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** TextClockFrameNode
+**属性类型：** [TextClockFrameNode](arkts-typenode-textclockframenode-c.md)
 

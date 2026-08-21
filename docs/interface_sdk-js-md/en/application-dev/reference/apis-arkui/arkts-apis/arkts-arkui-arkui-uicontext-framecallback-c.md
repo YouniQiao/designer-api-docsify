@@ -4,8 +4,8 @@ Implements the API for setting the task that needs to be executed during the nex
 
 > **NOTE：**
 > 
-> - The following APIs must be used in conjunction with [postFrameCallback](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#postframecallback) and &gt; [postDelayedFrameCallback](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#postdelayedframecallback) from [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md).
-> Extend this class and override either the [onFrame](../../apis-default/arkts-apis/arkts-arkui-uicontext-framecallback-c.md#onframe) or &gt; [onIdle](../../apis-default/arkts-apis/arkts-arkui-uicontext-framecallback-c.md#onidle) method to implement specific service logic.
+> - The following APIs must be used in conjunction with [postFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback) and &gt; [postDelayedFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postdelayedframecallback) from [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md).
+> Extend this class and override either the [onFrame](#onframe) or &gt; [onIdle](#onidle) method to implement specific service logic.
 
 **Since:** 12
 

@@ -16,5 +16,5 @@ Define the FrameNode type for Button.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** ButtonFrameNode
+**Property type:** [ButtonFrameNode](arkts-typenode-buttonframenode-c.md)
 

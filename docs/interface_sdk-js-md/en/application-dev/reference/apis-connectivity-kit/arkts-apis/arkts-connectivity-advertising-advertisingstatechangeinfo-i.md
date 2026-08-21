@@ -1,6 +1,6 @@
 # AdvertisingStateChangeInfo
 
-Advertising state change information.
+Represents the advertising state change information.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { advertising } from '@kit.ConnectivityKit';
 advertisingId: int
 ```
 
-Indicates the advertising ID.
+Advertising ID. The value range is [0, 255].
 
 **Type:** int
 
@@ -38,7 +38,7 @@ Indicates the advertising ID.
 state: AdvertisingState
 ```
 
-Indicates the advertising state.
+Advertising state.
 
 **Type:** AdvertisingState
 

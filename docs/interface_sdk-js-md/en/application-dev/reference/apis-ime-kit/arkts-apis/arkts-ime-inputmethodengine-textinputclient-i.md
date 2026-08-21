@@ -1,6 +1,6 @@
 # TextInputClient
 
-In the following API examples, you must first use on('inputStart') to obtain a **TextInputClient** instance, and then call the APIs using the obtained instance.
+@brief In the following API examples, you must first use on('inputStart') to obtain a **TextInputClient** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
 
@@ -24,7 +24,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 deleteBackward(length: number, callback: AsyncCallback<boolean>): void
 ```
 
-Deletes the fixed-length text after the cursor. This API uses an asynchronous callback to return the result.
+@brief Deletes the fixed-length text after the cursor. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -68,7 +68,7 @@ textInputClient.deleteBackward(length, (err: BusinessError, result: boolean) => 
 deleteBackward(length: number): Promise<boolean>
 ```
 
-Deletes the fixed-length text after the cursor. This API uses a promise to return the result.
+@brief Deletes the fixed-length text after the cursor. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -115,7 +115,7 @@ textInputClient.deleteBackward(length).then((result: boolean) => {
 deleteForward(length: number, callback: AsyncCallback<boolean>): void
 ```
 
-Deletes the fixed-length text before the cursor. This API uses an asynchronous callback to return the result.
+@brief Deletes the fixed-length text before the cursor. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -159,7 +159,7 @@ textInputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
 deleteForward(length: number): Promise<boolean>
 ```
 
-Deletes the fixed-length text before the cursor. This API uses a promise to return the result.
+@brief Deletes the fixed-length text before the cursor. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -206,7 +206,7 @@ textInputClient.deleteForward(length).then((result: boolean) => {
 getBackward(length: number, callback: AsyncCallback<string>): void
 ```
 
-Obtains the specific-length text after the cursor. This API uses an asynchronous callback to return the result.
+@brief Obtains the specific-length text after the cursor. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -246,13 +246,13 @@ textInputClient.getBackward(length, (err: BusinessError, text: string) => {
 getBackward(length: number): Promise<string>
 ```
 
-Obtains the specific-length text after the cursor. This API uses a promise to return the result.
+@brief Obtains the specific-length text after the cursor. This API uses a promise to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getBackward](arkts-ime-inputmethodengine-inputclient-i.md#getbackward)(length: int, callback: AsyncCallback&lt;string&gt;)
+**Substitutes:** getBackward(length: int): Promise&lt;string&gt;
 
 <!--Device-TextInputClient-getBackward(length: number): Promise<string>--><!--Device-TextInputClient-getBackward(length: number): Promise<string>-End-->
 
@@ -289,7 +289,7 @@ textInputClient.getBackward(length).then((text: string) => {
 getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void
 ```
 
-Obtains the attribute of the edit box. This API uses an asynchronous callback to return the result.
+@brief Obtains the attribute of the edit box. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -330,7 +330,7 @@ textInputClient.getEditorAttribute((err: BusinessError,
 getEditorAttribute(): Promise<EditorAttribute>
 ```
 
-Obtains the attribute of the edit box. This API uses a promise to return the result.
+@brief Obtains the attribute of the edit box. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -367,7 +367,7 @@ textInputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.Ed
 getForward(length: number, callback: AsyncCallback<string>): void
 ```
 
-Obtains the specific-length text before the cursor. This API uses an asynchronous callback to return the result.
+@brief Obtains the specific-length text before the cursor. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -407,7 +407,7 @@ textInputClient.getForward(length, (err: BusinessError, text: string) => {
 getForward(length: number): Promise<string>
 ```
 
-Obtains the specific-length text before the cursor. This API uses a promise to return the result.
+@brief Obtains the specific-length text before the cursor. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -450,7 +450,7 @@ textInputClient.getForward(length).then((text: string) => {
 insertText(text: string, callback: AsyncCallback<boolean>): void
 ```
 
-Inserts text. This API uses an asynchronous callback to return the result.
+@brief Inserts text. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -493,7 +493,7 @@ textInputClient.insertText('test', (err: BusinessError, result: boolean) => {
 insertText(text: string): Promise<boolean>
 ```
 
-Inserts text. This API uses a promise to return the result.
+@brief Inserts text. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -539,7 +539,7 @@ textInputClient.insertText('test').then((result: boolean) => {
 sendKeyFunction(action: number, callback: AsyncCallback<boolean>): void
 ```
 
-Sends the function key. This API uses an asynchronous callback to return the result.
+@brief Sends the function key. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -583,7 +583,7 @@ textInputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) =>
 sendKeyFunction(action: number): Promise<boolean>
 ```
 
-Sends the function key. This API uses a promise to return the result.
+@brief Sends the function key. This API uses a promise to return the result.
 
 **Since:** 8
 

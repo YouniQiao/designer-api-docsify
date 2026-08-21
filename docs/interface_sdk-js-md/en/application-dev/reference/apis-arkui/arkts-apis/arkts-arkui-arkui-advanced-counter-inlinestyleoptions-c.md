@@ -2,7 +2,7 @@
 
 Defines the inline style options.
 
-**Inheritance/Implementation:** InlineStyleOptions extends [CommonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-counter-commonoptions-c.md)
+**Inheritance/Implementation:** InlineStyleOptions extends [CommonOptions](arkts-arkui-arkui-advanced-counter-commonoptions-c.md)
 
 **Since:** 11
 

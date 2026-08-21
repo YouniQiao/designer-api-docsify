@@ -1,6 +1,6 @@
 # PropertyWriteType
 
-The enum of property write type.
+Enumerates the write types supported by a property.
 
 **Since:** 26.0.0
 
@@ -14,7 +14,7 @@ The enum of property write type.
 WRITE = 1
 ```
 
-Writes property and waits for response.
+Property write request that requires a response from the server.
 
 **Since:** 26.0.0
 
@@ -30,7 +30,7 @@ Writes property and waits for response.
 WRITE_NO_RESPONSE = 2
 ```
 
-Writes property without response.
+Property write request that does not require a response from the server.
 
 **Since:** 26.0.0
 

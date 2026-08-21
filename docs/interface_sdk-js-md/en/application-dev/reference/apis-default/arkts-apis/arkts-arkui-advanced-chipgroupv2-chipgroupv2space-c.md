@@ -37,7 +37,7 @@ The constructor of ChipGroupV2Space
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ChipGroupV2SpaceConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2spaceconfig-i.md) | Yes | config of chip group space |
+| config | [ChipGroupV2SpaceConfig](arkts-arkui-advanced-chipgroupv2-chipgroupv2spaceconfig-i.md) | Yes | config of chip group space |
 
 ## endSpace
 

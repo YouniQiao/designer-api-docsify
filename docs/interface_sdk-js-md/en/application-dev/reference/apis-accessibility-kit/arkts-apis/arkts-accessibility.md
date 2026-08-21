@@ -1,6 +1,6 @@
 # @ohos.accessibility
 
-Accessibility
+This module provides accessibility features, including obtaining the accessibility application list, obtaining the accessibility application enabling state, obtaining the captions configuration, sending accessibility events, and listening for accessibility application state changes.
 
 ## Modules to Import
 
@@ -18,7 +18,7 @@ import { GesturePoint } from '@kit.AccessibilityKit';
 
 | Name | Description |
 | --- | --- |
-| [accessibility](arkts-accessibility-accessibility-n.md) | Accessibility |
+| [accessibility](arkts-accessibility-accessibility-n.md) | This module provides accessibility features, including obtaining the accessibility application list, obtaining the accessibility application enabling state, obtaining the captions configuration, sending accessibility events, and listening for accessibility application state changes. |
 
 <!--Del-->
 ### Enums(System API)

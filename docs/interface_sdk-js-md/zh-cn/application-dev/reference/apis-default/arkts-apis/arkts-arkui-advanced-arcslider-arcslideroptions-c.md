@@ -35,7 +35,7 @@ ArcSliderOptions的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ArcSliderOptionsConstructorOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcslideroptionsconstructoroptions-i.md) | 否 | ArcSliderOptions的构造信息。 |
+| options | [ArcSliderOptionsConstructorOptions](arkts-arkui-advanced-arcslider-arcslideroptionsconstructoroptions-i.md) | 否 | ArcSliderOptions的构造信息。 |
 
 ## digitalCrownSensitivity
 
@@ -67,9 +67,9 @@ ArcSliderOptions的构造函数。
 
 配置弧形Slider的样式信息。
 
-默认值：[ArcSliderStyleOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
+默认值：[ArcSliderStyleOptions](arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
 
-**类型：** [ArcSliderLayoutOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md)
+**类型：** [ArcSliderLayoutOptions](arkts-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md)
 
 **起始版本：** 23
 
@@ -90,7 +90,7 @@ ArcSliderOptions的构造函数。
 
 默认值：不传入的情况，无回调。
 
-**类型：** [ArcSliderChangeHandler](../../apis-arkui/arkts-apis/arkts-arkui-arcsliderchangehandler-t.md)
+**类型：** [ArcSliderChangeHandler](arkts-arcsliderchangehandler-t.md)
 
 **起始版本：** 23
 
@@ -111,7 +111,7 @@ ArcSliderOptions的构造函数。
 
 默认值：不传入的情况，无回调。
 
-**类型：** [ArcSliderEnlargeHandler](../../apis-arkui/arkts-apis/arkts-arkui-arcsliderenlargehandler-t.md)
+**类型：** [ArcSliderEnlargeHandler](arkts-arcsliderenlargehandler-t.md)
 
 **起始版本：** 23
 
@@ -132,7 +132,7 @@ ArcSliderOptions的构造函数。
 
 默认值：不传入的情况，无回调。
 
-**类型：** [ArcSliderTouchHandler](../../apis-arkui/arkts-apis/arkts-arkui-arcslidertouchhandler-t.md)
+**类型：** [ArcSliderTouchHandler](arkts-arcslidertouchhandler-t.md)
 
 **起始版本：** 23
 
@@ -151,9 +151,9 @@ ArcSliderOptions的构造函数。
 
 配置弧形Slider的样式信息。
 
-默认值：[ArcSliderStyleOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
+默认值：[ArcSliderStyleOptions](arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
 
-**类型：** [ArcSliderStyleOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
+**类型：** [ArcSliderStyleOptions](arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
 
 **起始版本：** 23
 
@@ -172,9 +172,9 @@ ArcSliderOptions的构造函数。
 
 配置弧形Slider的样式信息。
 
-默认值：[ArcSliderStyleOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
+默认值：[ArcSliderStyleOptions](arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
 
-**类型：** [ArcSliderValueOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptions-c.md)
+**类型：** [ArcSliderValueOptions](arkts-arkui-advanced-arcslider-arcslidervalueoptions-c.md)
 
 **起始版本：** 23
 

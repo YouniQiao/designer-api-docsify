@@ -45,7 +45,7 @@ The method to build component.
 
 默认无事件。
 
-**类型：** [PopoverDialogV2OnVisibleChange](../../apis-arkui/arkts-apis/arkts-arkui-popoverdialogv2onvisiblechange-t.md)
+**类型：** [PopoverDialogV2OnVisibleChange](arkts-popoverdialogv2onvisiblechange-t.md)
 
 **起始版本：** 23
 
@@ -67,7 +67,7 @@ The method to build component.
 
 配置跟手弹出框的参数。
 
-**类型：** [PopoverDialogV2Options](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialogv2-popoverdialogv2options-i.md)
+**类型：** [PopoverDialogV2Options](arkts-arkui-advanced-dialogv2-popoverdialogv2options-i.md)
 
 **起始版本：** 23
 

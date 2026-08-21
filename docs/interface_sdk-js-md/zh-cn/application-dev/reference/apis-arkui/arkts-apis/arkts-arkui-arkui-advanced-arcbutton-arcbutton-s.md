@@ -27,7 +27,7 @@ import { ArcButton, ArcButtonOptions, ArcButtonProgressConfig, ArcButtonPosition
 
 定义ArcButton组件的文本、背景色、阴影等参数。
 
-**类型：** [ArcButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
+**类型：** [ArcButtonOptions](arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
 
 **起始版本：** 18
 

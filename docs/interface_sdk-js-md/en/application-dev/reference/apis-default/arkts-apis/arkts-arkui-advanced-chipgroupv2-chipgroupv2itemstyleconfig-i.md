@@ -143,7 +143,7 @@ size?: ChipV2Size | SizeT<LengthMetrics>
 
 ChipV2 size.
 
-**Type:** [ChipV2Size](arkts-arkui-advanced-chipv2-chipv2size-e.md) \| SizeT&lt;LengthMetrics&gt;
+**Type:** [ChipV2Size](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipv2-chipv2size-e.md) \| SizeT&lt;LengthMetrics&gt;
 
 **Since:** 26.0.0
 

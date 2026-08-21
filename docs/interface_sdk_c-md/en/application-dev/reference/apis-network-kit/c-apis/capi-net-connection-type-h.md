@@ -40,12 +40,25 @@ Defines the data structures for the C APIs of the network connection module.
 | [NetConn_ErrorCode](#netconn_errorcode) | NetConn_ErrorCode | Enumerates network connection error codes. |
 | [NetConn_PacketsType](#netconn_packetstype) | NetConn_PacketsType | Enumerates trace route packet types. |
 
+### Macro
+
+| Name | Description |
+| -- | -- |
+| NETCONN_MAX_NET_SIZE 32 | Length of the netHandles array in the member variable of NetConn_NetHandleList.<br>**Since**: 11 |
+| NETCONN_MAX_BEARER_TYPE_SIZE 32 | Length of the bearerTypes array in the NetConn_NetCapabilities member variable.<br>**Since**: 11 |
+| NETCONN_MAX_CAP_SIZE 32 | Length of the netCaps array in the NetConn_NetCapabilities member variable.<br>**Since**: 11 |
+| NETCONN_MAX_ADDR_SIZE 32 | Length of the netAddrlist and dnsList arrays in the NetConn_ConnectionProperties member variable.<br>**Since**: 11 |
+| NETCONN_MAX_ROUTE_SIZE 64 | Length of the routeList array in the NetConn_ConnectionProperties member variable.<br>**Since**: 11 |
+| NETCONN_MAX_EXCLUSION_SIZE 256 | Length of the exclusionList array in the NetConn_HttpProxy member variable.<br>**Since**: 11 |
+| NETCONN_MAX_STR_LEN 256 | Length of the host array of the NetConn_HttpProxy member variable.<br>**Since**: 11 |
+| NETCONN_MAX_RTT_NUM 4 | Length of the rtts array in the NetConn_ProbeResultlnfo member variable.<br>**Since**: 20 |
+
 ### Function
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [typedef int (\*OH_NetConn_CustomDnsResolver)(const char *host, const char *serv, const struct addrinfo *hint, struct addrinfo **res)](#oh_netconn_customdnsresolver) | OH_NetConn_CustomDnsResolver | Defines the pointer to the custom DNS resolver. |
-| [typedef void (\*OH_NetConn_AppHttpProxyChange)(NetConn_HttpProxy *proxy)](#oh_netconn_apphttpproxychange) | OH_NetConn_AppHttpProxyChange | Callback for application http proxy information changed. |
+| [typedef void (\*OH_NetConn_AppHttpProxyChange)(NetConn_HttpProxy *proxy)](#oh_netconn_apphttpproxychange) | OH_NetConn_AppHttpProxyChange | Defines the callback invoked when the HTTP proxy information of the application changes. |
 | [typedef void (\*OH_NetConn_GlobalHttpProxyRefreshCallback)(int32_t result, const NetConn_HttpProxy *proxy, void *userContext)](#oh_netconn_globalhttpproxyrefreshcallback) | OH_NetConn_GlobalHttpProxyRefreshCallback | Defines the one-shot callback used to receive the global HTTP proxy re-authentication result.This callback is invoked at most once for each successful call toOH_NetConn_RefreshGlobalHttpProxyWithCallback. |
 | [typedef void (\*OH_NetConn_NetworkAvailable)(NetConn_NetHandle *netHandle)](#oh_netconn_networkavailable) | OH_NetConn_NetworkAvailable | Defines the callback invoked when the network is available. |
 | [typedef void (\*OH_NetConn_NetCapabilitiesChange)(NetConn_NetHandle *netHandle, NetConn_NetCapabilities *netCapabilities)](#oh_netconn_netcapabilitieschange) | OH_NetConn_NetCapabilitiesChange | Defines the callback invoked when the network capabilities change. |
@@ -167,7 +180,7 @@ typedef void (*OH_NetConn_AppHttpProxyChange)(NetConn_HttpProxy *proxy)
 
 **Description**
 
-Callback for application http proxy information changed.
+Defines the callback invoked when the HTTP proxy information of the application changes.
 
 **Since**: 12
 
@@ -175,7 +188,7 @@ Callback for application http proxy information changed.
 
 | Parameter | Description |
 | -- | -- |
-| [NetConn_HttpProxy](capi-netconnection-netconn-httpproxy.md) \*proxy | Changed proxy information, which can be a null pointer. |
+| [NetConn_HttpProxy](capi-netconnection-netconn-httpproxy.md) \*proxy | Proxy configuration information (probably a null pointer). |
 
 ### OH_NetConn_GlobalHttpProxyRefreshCallback()
 

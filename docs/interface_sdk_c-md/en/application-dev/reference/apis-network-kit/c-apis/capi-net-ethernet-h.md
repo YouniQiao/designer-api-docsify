@@ -2,7 +2,7 @@
 
 ## Overview
 
-Defines the APIs for ethernet.
+Provides C APIs for the Ethernet NIC module.
 
 **Library**: libnet_ethernet.so
 
@@ -18,8 +18,8 @@ Defines the APIs for ethernet.
 
 | Name | Description |
 | -- | -- |
-| [int32_t OH_Ethernet_GetMacAddress(Ethernet_MacAddrInfoList *macAddrList)](#oh_ethernet_getmacaddress) | Get the ethernet mac address list. |
-| [int32_t OH_Ethernet_GetNetAddress(Ethernet_NetAddrList *netAddrList)](#oh_ethernet_getnetaddress) | Get the ethernet ip address list. |
+| [int32_t OH_Ethernet_GetMacAddress(Ethernet_MacAddrInfoList *macAddrList)](#oh_ethernet_getmacaddress) | Obtains the MAC address list of Ethernet NICs. |
+| [int32_t OH_Ethernet_GetNetAddress(Ethernet_NetAddrList *netAddrList)](#oh_ethernet_getnetaddress) | Obtains the IP address list of Ethernet NICs. |
 
 ## Function description
 
@@ -31,7 +31,7 @@ int32_t OH_Ethernet_GetMacAddress(Ethernet_MacAddrInfoList *macAddrList)
 
 **Description**
 
-Get the ethernet mac address list.
+Obtains the MAC address list of Ethernet NICs.
 
 **System capability**: SystemCapability.Communication.NetManager.Ethernet
 
@@ -43,13 +43,13 @@ Get the ethernet mac address list.
 
 | Parameter | Description |
 | -- | -- |
-| [Ethernet_MacAddrInfoList](capi-netmanager-ext-ethernet-macaddrinfolist.md) *macAddrList | - The ethernet iface mac address list. |
+| [Ethernet_MacAddrInfoList](capi-netmanager-ext-ethernet-macaddrinfolist.md) *macAddrList | Pointer to the MAC address list of NICs. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0 - success.  201 - Permission denied.  2200001 - Invalid parameter value.  2200002 - Operation failed. Cannot connect to service.  2201005 - Device information does not exist. |
+| int32_t | 0: Success.      <br>201: Missing permissions.      <br>2200001: Parameter error. 2200002: Service connection failure.      <br>2201005: Device information does not exist. |
 
 ### OH_Ethernet_GetNetAddress()
 
@@ -59,7 +59,7 @@ int32_t OH_Ethernet_GetNetAddress(Ethernet_NetAddrList *netAddrList)
 
 **Description**
 
-Get the ethernet ip address list.
+Obtains the IP address list of Ethernet NICs.
 
 **System capability**: SystemCapability.Communication.NetManager.Ethernet
 
@@ -71,12 +71,12 @@ Get the ethernet ip address list.
 
 | Parameter | Description |
 | -- | -- |
-| [Ethernet_NetAddrList](capi-netmanager-ext-ethernet-netaddrlist.md) *netAddrList | - The ethernet iface ip address list. |
+| [Ethernet_NetAddrList](capi-netmanager-ext-ethernet-netaddrlist.md) *netAddrList | Pointer to the IP address list of NICs. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0 - success.  201 - Permission denied.  2200001 - Invalid parameter value.  2200002 - Operation failed. Cannot connect to service.  2201005 - Device information does not exist. |
+| int32_t | 0: Success.      <br>201: Missing permissions.      <br>2200001: Parameter error. 2200002: Service connection failure.      <br>2201005: Device information does not exist. |
 
 

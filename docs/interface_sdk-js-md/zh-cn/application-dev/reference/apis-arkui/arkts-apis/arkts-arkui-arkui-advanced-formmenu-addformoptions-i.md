@@ -20,7 +20,7 @@ callback?: AsyncCallback<string>
 
 The callback is used to return the form id.
 
-**类型：** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt;
+**类型：** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt;
 
 **起始版本：** 23
 

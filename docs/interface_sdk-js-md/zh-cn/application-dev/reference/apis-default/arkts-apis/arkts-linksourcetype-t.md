@@ -16,5 +16,5 @@ Define Link source type.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** IDecoratedV1Variable<T>
+**属性类型：** [IDecoratedV1Variable](arkts-decorator-idecoratedv1variable-i.md)&lt;T&gt;
 

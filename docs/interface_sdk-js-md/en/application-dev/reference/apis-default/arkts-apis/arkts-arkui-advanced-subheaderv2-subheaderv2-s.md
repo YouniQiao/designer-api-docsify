@@ -53,7 +53,7 @@ Default value: **undefined**
 
 **icon** takes effect only when **secondaryTitle** is used for **title**.
 
-**Type:** [SubHeaderV2IconType](../../apis-arkui/arkts-apis/arkts-arkui-subheaderv2icontype-t.md)
+**Type:** [SubHeaderV2IconType](arkts-subheaderv2icontype-t.md)
 
 **Since:** 23
 
@@ -76,7 +76,7 @@ Items in the operation area.
 
 Default value: **undefined**
 
-**Type:** [SubHeaderV2OperationItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationitem-c.md)[]
+**Type:** [SubHeaderV2OperationItem](arkts-arkui-advanced-subheaderv2-subheaderv2operationitem-c.md)[]
 
 **Since:** 23
 
@@ -97,7 +97,7 @@ Style of elements in the operation area.
 
 Default value: **SubHeaderV2OperationType.BUTTON**
 
-**Type:** [SubHeaderV2OperationType](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationtype-e.md)
+**Type:** [SubHeaderV2OperationType](arkts-arkui-advanced-subheaderv2-subheaderv2operationtype-e.md)
 
 **Since:** 23
 
@@ -118,7 +118,7 @@ Content and events for selection.
 
 Default value: **undefined**
 
-**Type:** [SubHeaderV2Select](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheaderv2-subheaderv2select-c.md)
+**Type:** [SubHeaderV2Select](arkts-arkui-advanced-subheaderv2-subheaderv2select-c.md)
 
 **Since:** 23
 
@@ -139,7 +139,7 @@ Title of the subheader.
 
 Default value: **undefined**
 
-**Type:** [SubHeaderV2Title](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-subheaderv2-subheaderv2title-c.md)
+**Type:** [SubHeaderV2Title](arkts-arkui-advanced-subheaderv2-subheaderv2title-c.md)
 
 **Since:** 23
 
@@ -162,7 +162,7 @@ Custom content for the title area.
 
 Default value: **() =&gt; void**
 
-**Type:** [SubHeaderV2TitleBuilder](../../apis-arkui/arkts-apis/arkts-arkui-subheaderv2titlebuilder-t.md)
+**Type:** [SubHeaderV2TitleBuilder](arkts-subheaderv2titlebuilder-t.md)
 
 **Since:** 23
 

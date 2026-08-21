@@ -1,6 +1,6 @@
 # Property
 
-Describes the SSAP property.
+Represents a service Property.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { ssap } from '@kit.ConnectivityKit';
 descriptors?: PropertyDescriptor[]
 ```
 
-The list of propertyDescriptor contained in the property.
+Descriptors of the current property. By default, this field is not used if not set.
 
 **Type:** PropertyDescriptor[]
 
@@ -38,7 +38,7 @@ The list of propertyDescriptor contained in the property.
 operation?: int
 ```
 
-Indications specify how data values and descriptor values are accessed [Operation](arkts-connectivity-ssap-operation-e.md). The value is the OR operation of enumerated values. The value should be an integer. Default value: 3(READABLE | WRITE_NO_RESPONSE).
+Operation modes supported by the property. The default value is **READABLE|WRITE_NO_RESPONSE**, indicating that the property is readable and writable and no response is required. To enable a property to support an operation, you need to assign a value to this field, for example, **READABLE | WRITE_NO_RESPONSE | NOTIFY**. The value range is [0, 15]. For details about the operation corresponding to each bit, see [Operation](arkts-connectivity-ssap-operation-e.md). The value should be an integer.
 
 **Type:** int
 
@@ -56,7 +56,7 @@ Indications specify how data values and descriptor values are accessed [Operatio
 propertyUuid: string
 ```
 
-The UUID of a Property instance. The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. <br>NearLink standard UUIDs are not allowed.
+Property UUID, in the same format as **serviceUuid**.
 
 **Type:** string
 
@@ -74,7 +74,7 @@ The UUID of a Property instance. The length must be 36, The value consists of 36
 serviceUuid: string
 ```
 
-The UUID of the [Service](arkts-connectivity-ssap-service-i.md) instance which the property belongs to. The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. <br>NearLink standard UUIDs are not allowed.
+NearLink service UUID, which is a string of 36 characters. The value consists of 32 hexadecimal digits and four hyphens (-), for example, **FFFFFFFF-1234-5678-ABCD-000000001234**, which indicates a 128-bit identifier. Standard NearLink UUIDs are not allowed.
 
 **Type:** string
 
@@ -92,7 +92,7 @@ The UUID of the [Service](arkts-connectivity-ssap-service-i.md) instance which t
 value: ArrayBuffer
 ```
 
-The value of a Property instance.
+Data value of a property.
 
 **Type:** ArrayBuffer
 

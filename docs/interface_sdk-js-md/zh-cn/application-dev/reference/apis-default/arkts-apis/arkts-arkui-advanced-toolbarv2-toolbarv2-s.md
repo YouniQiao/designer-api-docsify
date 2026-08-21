@@ -96,7 +96,7 @@ Define divider Modifier.
 
 Define toolbarV2 item list.
 
-**类型：** [ToolBarV2Item](arkts-arkui-advanced-toolbarv2-toolbarv2item-c.md)[]
+**类型：** [ToolBarV2Item](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-toolbarv2-toolbarv2item-c.md)[]
 
 **起始版本：** 23
 
@@ -117,7 +117,7 @@ Define toolbarV2 item list.
 
 Define toolbarV2 modifier.
 
-**类型：** [ToolBarV2Modifier](arkts-arkui-advanced-toolbarv2-toolbarv2modifier-c.md)
+**类型：** [ToolBarV2Modifier](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-toolbarv2-toolbarv2modifier-c.md)
 
 **起始版本：** 23
 

@@ -12,7 +12,7 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 function disconnect(params: ConnectionParams): Promise<void>
 ```
 
-断开或停止与服务端的连接。
+断连远端设备。需在通过[dataTransfer.connect](arkts-connectivity-datatransfer-connect-f.md)成功建立连接后调用，用于断开已建立的远端设备连接。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -28,13 +28,13 @@ function disconnect(params: ConnectionParams): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | [ConnectionParams](arkts-connectivity-datatransfer-connectionparams-i.md) | 是 | 连接参数 |
+| params | [ConnectionParams](arkts-connectivity-datatransfer-connectionparams-i.md) | 是 | 指明端口的连接参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

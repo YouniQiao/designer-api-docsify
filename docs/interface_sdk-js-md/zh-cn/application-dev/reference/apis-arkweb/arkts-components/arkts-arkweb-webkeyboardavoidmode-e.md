@@ -62,7 +62,7 @@ OVERLAYS_CONTENT = 2
 RETURN_TO_UICONTEXT = 3
 ```
 
-Web组件的软键盘避让行为将跟随UIcontext设置的[KeyboardAvoidMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md)模式，Web组件不再处理组件的避让。
+Web组件的软键盘避让行为将跟随UIcontext设置的[KeyboardAvoidMode](../../apis-default/arkts-apis/arkts-arkui-uicontext-keyboardavoidmode-e.md)模式，Web组件不再处理组件的避让。
 
 **起始版本：** 22
 

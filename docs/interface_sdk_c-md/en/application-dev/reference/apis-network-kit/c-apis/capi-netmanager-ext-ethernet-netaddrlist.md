@@ -6,7 +6,7 @@ typedef struct Ethernet_NetAddrList {...} Ethernet_NetAddrList
 
 ## Overview
 
-Defines the ethernet network address list.
+Defines the network address list of Ethernet NICs.
 
 **Since**: 26.0.0
 

@@ -12,5 +12,5 @@ type Assets = collections.Array<Asset>
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**属性类型：** collections.Array<Asset>
+**属性类型：** collections.Array&lt;Asset&gt;
 

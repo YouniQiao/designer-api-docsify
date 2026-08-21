@@ -12,7 +12,7 @@ import { manager } from '@kit.ConnectivityKit';
 function enable(): void
 ```
 
-开启星闪。
+打开星闪。
 
 **起始版本：** 26.0.0
 

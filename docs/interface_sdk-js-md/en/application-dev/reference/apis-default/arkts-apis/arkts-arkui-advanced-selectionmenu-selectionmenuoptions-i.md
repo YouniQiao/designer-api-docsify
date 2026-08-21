@@ -65,7 +65,7 @@ editorMenuOptions?: Array<EditorMenuOptions>
 
 The options of EditorMenu.
 
-**Type:** Array&lt;[EditorMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-selectionmenu-editormenuoptions-i.md)&gt;
+**Type:** Array&lt;[EditorMenuOptions](arkts-arkui-advanced-selectionmenu-editormenuoptions-i.md)&gt;
 
 **Since:** 23
 
@@ -85,7 +85,7 @@ expandedMenuOptions?: Array<ExpandedMenuOptions>
 
 Expansion of SelectionMenu.
 
-**Type:** Array&lt;[ExpandedMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-selectionmenu-expandedmenuoptions-i.md)&gt;
+**Type:** Array&lt;[ExpandedMenuOptions](arkts-arkui-advanced-selectionmenu-expandedmenuoptions-i.md)&gt;
 
 **Since:** 23
 

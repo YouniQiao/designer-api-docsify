@@ -36,7 +36,7 @@ OperateItemV2的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [OperateItemV2Options](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operateitemv2options-i.md) | 否 | 列表项右侧属性配置。<br/>默认不设置或设置为undefined时，按各属性的默认效果创建对象。 |
+| options | [OperateItemV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operateitemv2options-i.md) | 否 | 列表项右侧属性配置。<br/>默认不设置或设置为undefined时，按各属性的默认效果创建对象。 |
 
 ## arrow
 
@@ -49,7 +49,7 @@ OperateItemV2的构造函数。
 
 默认不设置或设置为undefined，列表项右侧箭头不显示。
 
-**类型：** [OperateIconV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operateiconv2-c.md)
+**类型：** [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -72,7 +72,7 @@ OperateItemV2的构造函数。
 
 默认不设置或设置为undefined，列表项右侧按钮不显示。
 
-**类型：** [OperateButtonV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operatebuttonv2-c.md)
+**类型：** [OperateButtonV2](arkts-arkui-arkui-advanced-composelistitemv2-operatebuttonv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -95,7 +95,7 @@ OperateItemV2的构造函数。
 
 默认不设置或设置为undefined，列表项右侧多选框不显示。
 
-**类型：** [OperateCheckV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
+**类型：** [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -120,7 +120,7 @@ OperateItemV2的构造函数。
 
 同时设置symbolStyle时，只显示Symbol图标。
 
-**类型：** [OperateIconV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operateiconv2-c.md)
+**类型：** [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -168,7 +168,7 @@ OperateItemV2的构造函数。
 
 默认不设置或设置为undefined，列表项右侧单选框不显示。
 
-**类型：** [OperateCheckV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
+**类型：** [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -191,7 +191,7 @@ OperateItemV2的构造函数。
 
 默认不设置或设置为undefined，列表项右侧第二个图标不显示。
 
-**类型：** [OperateIconV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operateiconv2-c.md)
+**类型：** [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -260,7 +260,7 @@ OperateItemV2的构造函数。
 
 默认不设置或设置为undefined，列表项右侧开关不显示。
 
-**类型：** [OperateCheckV2](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
+**类型：** [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **起始版本：** 26.0.0
 

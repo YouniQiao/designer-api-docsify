@@ -34,7 +34,7 @@ getOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;DistributedInfo&gt; | 是 | 回调参数。当获取分布式账号信息成功，err为undefined，data为获取到的分布式账号信息对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DistributedInfo&gt; | 是 | 回调参数。当获取分布式账号信息成功，err为undefined，data为获取到的分布式账号信息对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -192,7 +192,7 @@ queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;DistributedInfo&gt; | 是 | 回调函数。当获取分布式账号信息成功，err为undefined，data为获取到的分布式账号信息对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DistributedInfo&gt; | 是 | 回调函数。当获取分布式账号信息成功，err为undefined，data为获取到的分布式账号信息对象；否则为错误对象。 |
 
 **示例**
 
@@ -276,7 +276,7 @@ setOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallbac
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | accountInfo | DistributedInfo | 是 | 分布式账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当更新分布式账号信息成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当更新分布式账号信息成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -454,7 +454,7 @@ updateOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCall
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | accountInfo | DistributedInfo | 是 | 分布式账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当更新分布式账号信息成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当更新分布式账号信息成功时，err为undefined，否则为错误对象。 |
 
 **示例**
 

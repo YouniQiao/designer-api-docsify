@@ -16,5 +16,5 @@ Offset info.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** Vector2
+**Property type:** [Vector2](arkts-graphics-vector2-i.md)
 

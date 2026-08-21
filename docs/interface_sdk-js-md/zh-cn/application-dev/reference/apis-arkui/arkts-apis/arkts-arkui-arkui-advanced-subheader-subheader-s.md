@@ -118,7 +118,7 @@ icon为SymbolGlyph时的设置项。
 
 默认值：undefined，表示不显示图标。
 
-**类型：** [SymbolOptions](arkts-arkui-arkui-advanced-subheader-symboloptions-c.md)
+**类型：** [SymbolOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-subheader-symboloptions-c.md)
 
 **起始版本：** 12
 
@@ -140,7 +140,7 @@ operationItem?: Array<OperationOption>
 
 默认值：undefined，表示不显示操作区。
 
-**类型：** Array&lt;[OperationOption](arkts-arkui-arkui-advanced-subheader-operationoption-c.md)&gt;
+**类型：** Array&lt;[OperationOption](../../apis-default/arkts-apis/arkts-arkui-advanced-subheader-operationoption-c.md)&gt;
 
 **起始版本：** 10
 
@@ -164,7 +164,7 @@ operationItem设置多个图标，图标为SymbolGlyph时的设置项。
 
 默认值：undefined，表示不设置Symbol图标。
 
-**类型：** Array&lt;[SymbolOptions](arkts-arkui-arkui-advanced-subheader-symboloptions-c.md)&gt;
+**类型：** Array&lt;[SymbolOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-subheader-symboloptions-c.md)&gt;
 
 **起始版本：** 12
 
@@ -187,7 +187,7 @@ operationItem设置多个图标，图标为SymbolGlyph时的设置项。
 
 默认值：OperationType.BUTTON
 
-**类型：** [OperationType](arkts-arkui-arkui-advanced-subheader-operationtype-e.md)
+**类型：** [OperationType](../../apis-default/arkts-apis/arkts-arkui-advanced-subheader-operationtype-e.md)
 
 **起始版本：** 10
 
@@ -303,7 +303,7 @@ select?: SelectOptions
 
 默认值：undefined，表示不显示下拉框。
 
-**类型：** [SelectOptions](arkts-arkui-arkui-advanced-subheader-selectoptions-c.md)
+**类型：** [SelectOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-subheader-selectoptions-c.md)
 
 **起始版本：** 10
 

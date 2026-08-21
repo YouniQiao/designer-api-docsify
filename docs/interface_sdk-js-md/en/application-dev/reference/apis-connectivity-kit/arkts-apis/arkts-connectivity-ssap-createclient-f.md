@@ -12,7 +12,7 @@ import { ssap } from '@kit.ConnectivityKit';
 function createClient(address: string): Client
 ```
 
-Creates a SSAP client instance.
+Creates an SSAP client instance.
 
 **Since:** 26.0.0
 
@@ -28,13 +28,13 @@ Creates a SSAP client instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | string | Yes | Indicates the device address of a server <br>The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF. |
+| address | string | Yes | Address of the remote server device. The address format is **11:22:33:AA:BB:FF**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Client](arkts-connectivity-ssap-client-i.md) | Returns a SSAP client instance { |
+| [Client](arkts-connectivity-ssap-client-i.md) | SSAP client instance. |
 
 **Error codes:**
 

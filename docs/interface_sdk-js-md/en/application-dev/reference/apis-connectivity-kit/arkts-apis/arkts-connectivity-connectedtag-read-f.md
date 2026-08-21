@@ -12,7 +12,7 @@ import { connectedTag } from '@kit.ConnectivityKit';
 function read(): Promise<number[]>
 ```
 
-Reads the NDEF data from the connected NFC tag.
+Reads the content of this active tag. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -26,7 +26,7 @@ Reads the NDEF data from the connected NFC tag.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number[]&gt; | The reponse NDEF data. |
+| Promise&lt;number[]&gt; | Promise used to return the content of the active tag. |
 
 **Error codes:**
 
@@ -56,7 +56,7 @@ connectedTag.read().then((data) => {
 function read(callback: AsyncCallback<number[]>): void
 ```
 
-Reads the NDEF data from the connected NFC tag.
+Reads the content of this active tag. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ Reads the NDEF data from the connected NFC tag.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number[]&gt; | Yes | The callback to receive the data. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number[]&gt; | Yes | Callback used to return the active tag content obtained. |
 
 **Error codes:**
 

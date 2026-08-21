@@ -128,10 +128,7 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 
 **示例**
 
-```TypeScript
-inputMethodEngine.getInputMethodEngine().off('keyboardShow');
-inputMethodEngine.getInputMethodEngine().off('keyboardHide');
-```
+参见 off_keyboardHide
 
 ## on('inputStart')
 
@@ -243,12 +240,5 @@ on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 
 **示例**
 
-```TypeScript
-inputMethodEngine.getInputMethodEngine().on('keyboardShow', () => {
-  console.info('inputMethodEngine keyboardShow.');
-});
-inputMethodEngine.getInputMethodEngine().on('keyboardHide', () => {
-  console.info('inputMethodEngine keyboardHide.');
-});
-```
+参见 on_keyboardHide
 

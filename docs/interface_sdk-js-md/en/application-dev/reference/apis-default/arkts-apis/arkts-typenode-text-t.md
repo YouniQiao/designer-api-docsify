@@ -16,5 +16,5 @@ Define the FrameNode type for Text.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** TextFrameNode
+**Property type:** [TextFrameNode](arkts-typenode-textframenode-c.md)
 

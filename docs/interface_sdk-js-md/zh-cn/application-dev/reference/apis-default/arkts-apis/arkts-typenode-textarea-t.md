@@ -16,5 +16,5 @@ Define the FrameNode type for TextArea.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** TextAreaFrameNode
+**属性类型：** [TextAreaFrameNode](arkts-typenode-textareaframenode-c.md)
 

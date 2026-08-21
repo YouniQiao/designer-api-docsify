@@ -36,7 +36,7 @@ Constructs a **SegmentButtonV2ItemOptions** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SegmentButtonV2ItemOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbuttonv2-segmentbuttonv2itemoptions-i.md) | Yes | Options of the item of the **SegmentButtonV2** component. |
+| options | [SegmentButtonV2ItemOptions](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2itemoptions-i.md) | Yes | Options of the item of the **SegmentButtonV2** component. |
 
 ## accessibilityDescription
 

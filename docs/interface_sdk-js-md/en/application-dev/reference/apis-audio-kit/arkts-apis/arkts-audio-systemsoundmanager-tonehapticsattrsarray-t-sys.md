@@ -14,5 +14,5 @@ Type definition of tone haptics array.
 
 **System API:** This is a system API.
 
-**Property type:** Array<ToneHapticsAttrs>
+**Property type:** Array&lt;[ToneHapticsAttrs](arkts-audio-systemsoundmanager-tonehapticsattrs-i-sys.md)&gt;
 

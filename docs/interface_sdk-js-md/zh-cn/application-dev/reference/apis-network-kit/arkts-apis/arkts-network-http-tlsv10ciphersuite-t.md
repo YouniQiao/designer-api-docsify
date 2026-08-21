@@ -14,5 +14,5 @@ TLS1.0的加密套件声明函数。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
-**属性类型：** TlsV10SpecificCipherSuite
+**属性类型：** [TlsV10SpecificCipherSuite](arkts-network-http-tlsv10specificciphersuite-t.md)
 

@@ -16,5 +16,5 @@ Represents a FrameNode of the **Scroll** type. This type of node allows only one
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** TypedFrameNode<ScrollInterface, ScrollAttribute>
+**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;ScrollInterface, ScrollAttribute&gt;
 

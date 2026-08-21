@@ -36,7 +36,7 @@ ChipGroupV2ItemStyle的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [ChipGroupV2ItemStyleConfig](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2itemstyleconfig-i.md) | 是 | ChipGroupV2项样式配置。 |
+| config | [ChipGroupV2ItemStyleConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyleconfig-i.md) | 是 | ChipGroupV2项样式配置。 |
 
 ## backgroundColor
 

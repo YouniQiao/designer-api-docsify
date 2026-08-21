@@ -32,7 +32,7 @@ import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, Ope
 
 默认不设置或设置为undefined时，左侧和中间元素不显示。
 
-**类型：** [ContentItem](arkts-arkui-arkui-advanced-composelistitem-contentitem-c.md)
+**类型：** [ContentItem](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitem-contentitem-c.md)
 
 **起始版本：** 10
 
@@ -55,7 +55,7 @@ import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, Ope
 
 默认不设置或设置为undefined时，右侧元素不显示。
 
-**类型：** [OperateItem](arkts-arkui-arkui-advanced-composelistitem-operateitem-c.md)
+**类型：** [OperateItem](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitem-operateitem-c.md)
 
 **起始版本：** 10
 

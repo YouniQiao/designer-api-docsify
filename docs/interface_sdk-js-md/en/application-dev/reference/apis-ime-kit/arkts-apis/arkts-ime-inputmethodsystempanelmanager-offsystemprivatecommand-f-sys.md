@@ -12,7 +12,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function offSystemPrivateCommand(callback?: Callback<Record<string, CommandDataType>>): void
 ```
 
-Unsubscribe from the event when the input method application sends private data commands.
+@brief Unsubscribes from events that the system-default input method application sends a private data command.
 
 **Since:** 26.0.0
 
@@ -28,7 +28,7 @@ Unsubscribe from the event when the input method application sends private data 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No | callback triggered when an input method application sends a private data command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No | Callback function. If this parameter is left empty, all callbacks will be unsubscribed from. |
 
 **Error codes:**
 

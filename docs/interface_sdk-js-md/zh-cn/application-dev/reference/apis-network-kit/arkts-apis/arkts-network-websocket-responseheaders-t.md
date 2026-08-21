@@ -13,5 +13,5 @@ HTTP response headers.
 **系统能力：** 
 - API版本23+：SystemCapability.Communication.NetStack
 
-**属性类型：** Record<string, string | string[] | undefined>
+**属性类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, string | string[] | undefined&gt;
 

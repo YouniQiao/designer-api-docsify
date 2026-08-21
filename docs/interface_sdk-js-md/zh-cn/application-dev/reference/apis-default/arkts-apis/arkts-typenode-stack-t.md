@@ -16,5 +16,5 @@ Define the FrameNode type for Stack.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** StackFrameNode
+**属性类型：** [StackFrameNode](arkts-typenode-stackframenode-c.md)
 

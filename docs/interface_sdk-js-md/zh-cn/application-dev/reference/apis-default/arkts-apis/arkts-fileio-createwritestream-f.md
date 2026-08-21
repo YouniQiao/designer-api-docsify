@@ -26,7 +26,7 @@ function createWriteStream(path: string, options?: WriteStreamOptions): WriteStr
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 文件路径。 |
-| options | [WriteStreamOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-writestreamoptions-i.md) | 否 | 支持如下选项：<br/>- start，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。<br/> - mode，number 类型，创建文件可写流的[OpenMode](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileio-openmode-n.md)，可选，默认以只写方式创建。 |
+| options | [WriteStreamOptions](arkts-file-fs-writestreamoptions-i.md) | 否 | 支持如下选项：<br/>- start，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。<br/> - mode，number 类型，创建文件可写流的[OpenMode](arkts-fileio-openmode-n.md)，可选，默认以只写方式创建。 |
 
 **返回值：**
 

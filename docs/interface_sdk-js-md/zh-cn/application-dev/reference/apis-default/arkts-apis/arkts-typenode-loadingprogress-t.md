@@ -16,5 +16,5 @@ Define the FrameNode type for LoadingProgress.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** LoadingProgressFrameNode
+**属性类型：** [LoadingProgressFrameNode](arkts-typenode-loadingprogressframenode-c.md)
 

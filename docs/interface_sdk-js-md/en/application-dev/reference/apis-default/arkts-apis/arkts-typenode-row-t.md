@@ -16,5 +16,5 @@ Define the FrameNode type for Row.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** RowFrameNode
+**Property type:** [RowFrameNode](arkts-typenode-rowframenode-c.md)
 

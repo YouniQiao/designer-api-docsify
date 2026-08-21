@@ -1,6 +1,6 @@
 # InputMethodListDialog
 
-InputMethodListDialog({controller: CustomDialogController, patternOptions?: PatternOptions}) Implements a dialog box showing the input method list.
+@brief InputMethodListDialog({controller: CustomDialogController, patternOptions?: PatternOptions}) <br> <br>Implements a dialog box showing the input method list.
 
 **Since:** 23
 
@@ -21,7 +21,7 @@ import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
   build(): void
 ```
 
-The method to build component.
+@brief The method to build component.
 
 **Since:** 23
 
@@ -35,7 +35,7 @@ The method to build component.
 controller: CustomDialogController
 ```
 
-Sets the controller.
+@brief Sets the controller.
 
 **Type:** CustomDialogController
 
@@ -51,7 +51,7 @@ Sets the controller.
 patternOptions?: PatternOptions
 ```
 
-Sets the pattern options. This parameter can be left blank when it is not default input method.
+@brief Sets the pattern options. This parameter can be left blank when it is not default input method.
 
 **Type:** [PatternOptions](arkts-ime-inputmethodlist-patternoptions-i.md)
 

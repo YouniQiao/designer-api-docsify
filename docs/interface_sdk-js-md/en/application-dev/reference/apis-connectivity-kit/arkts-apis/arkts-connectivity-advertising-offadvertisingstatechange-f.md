@@ -12,7 +12,7 @@ import { advertising } from '@kit.ConnectivityKit';
 function offAdvertisingStateChange(callback?: Callback<AdvertisingStateChangeInfo>): void
 ```
 
-Unsubscribes from the advertising state change event.
+Unsubscribes from the NearLink advertising state change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
 
@@ -26,7 +26,7 @@ Unsubscribes from the advertising state change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AdvertisingStateChangeInfo&gt; | No | Callback used to listen for the advertising state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AdvertisingStateChangeInfo&gt; | No | Callback used to return the advertising state change information. <br>If this parameter is specified, the current callback is unregistered. If this parameter is not specified, all callbacks corresponding to the event are unregistered. |
 
 **Error codes:**
 

@@ -34,7 +34,7 @@ attributeModifier(modifier: AttributeModifier<ArcListItemAttribute> | AttributeM
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | AttributeModifier&lt;[ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
+| modifier | AttributeModifier&lt;[ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
 
 **返回值：**
 

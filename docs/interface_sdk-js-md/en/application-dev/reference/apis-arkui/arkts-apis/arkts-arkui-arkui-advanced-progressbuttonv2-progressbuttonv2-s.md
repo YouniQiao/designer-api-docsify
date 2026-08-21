@@ -22,7 +22,7 @@ import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions }
 
 Set Color options of the ProgressButtonV2.
 
-**Type:** [ProgressButtonV2Color](../../apis-default/arkts-apis/arkts-arkui-advanced-progressbuttonv2-progressbuttonv2color-c.md)
+**Type:** [ProgressButtonV2Color](arkts-arkui-arkui-advanced-progressbuttonv2-progressbuttonv2color-c.md)
 
 **Since:** 18
 
@@ -83,7 +83,7 @@ Sets the ProgressButtonV2 isEnabled state.
 
 Sets the ProgressButtonV2 onClicked.
 
-**Type:** [ClickCallback](../../apis-default/arkts-apis/arkts-clickcallback-t.md)
+**Type:** [ClickCallback](arkts-arkui-clickcallback-t.md)
 
 **Since:** 18
 

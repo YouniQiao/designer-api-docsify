@@ -16,5 +16,5 @@ Define the FrameNode type for Badge.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** BadgeFrameNode
+**Property type:** [BadgeFrameNode](arkts-typenode-badgeframenode-c.md)
 

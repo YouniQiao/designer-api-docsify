@@ -17,7 +17,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function getDefaultInputMethod(): InputMethodProperty
 ```
 
-Get default input method
+@brief Obtains the default input method.
 
 **Since:** 23
 
@@ -29,7 +29,7 @@ Get default input method
 
 | Type | Description |
 | --- | --- |
-| [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | property of the default input method. |
+| [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Default input method. |
 
 **Error codes:**
 

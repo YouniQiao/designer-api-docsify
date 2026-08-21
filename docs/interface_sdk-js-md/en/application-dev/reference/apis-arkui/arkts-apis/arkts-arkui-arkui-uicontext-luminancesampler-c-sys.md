@@ -45,7 +45,7 @@ Unregisters the callback for listening to color picking. If no callback is speci
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| samplingCallback | [Callback](../../apis-default/arkts-apis/arkts-callback-t.md)&lt;number&gt; | No | Callback to unregister. |
+| samplingCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | No | Callback to unregister. |
 
 ## onBackgroundLuminanceChange
 
@@ -71,7 +71,7 @@ The background luminance is divided into three ranges based on the luminance thr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| samplingCallback | [Callback](../../apis-default/arkts-apis/arkts-callback-t.md)&lt;number&gt; | Yes | Callback used to return the current background luminance.<br>Note: offBackgroundLuminanceChange cannot be called in the listening callback. |
+| samplingCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | Yes | Callback used to return the current background luminance.<br>Note: offBackgroundLuminanceChange cannot be called in the listening callback. |
 
 ## setBackgroundLuminanceSamplingConfigs
 

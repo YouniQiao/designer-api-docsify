@@ -18,7 +18,7 @@ Shows a toast. This API uses a promise to return the toast ID.
 > 
 > - Subwindows with **showMode** set to **TOP_MOST** or **SYSTEM_TOP_MOST** do not support **openToast** in input &gt; method type windows. For details, see the constraints in the input method framework &gt; [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) &gt; .
 > 
-> - Directly using **openToast** can lead to the issue of &gt; [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the &gt; **PromptAction** object using the **getPromptAction** API in **UIContext** and then call the &gt; [openToast](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#opentoast) API through this object.
+> - Directly using **openToast** can lead to the issue of &gt; [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the &gt; **PromptAction** object using the **getPromptAction** API in **UIContext** and then call the &gt; [openToast](arkts-arkui-arkui-uicontext-promptaction-c.md#opentoast) API through this object.
 
 **Since:** 18
 

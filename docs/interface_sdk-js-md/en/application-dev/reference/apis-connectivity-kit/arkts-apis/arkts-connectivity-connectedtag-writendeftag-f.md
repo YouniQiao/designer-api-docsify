@@ -12,7 +12,11 @@ import { connectedTag } from '@kit.ConnectivityKit';
 function writeNdefTag(data: string): Promise<void>
 ```
 
-Writes the NDEF Data.
+Writes data to this active tag. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. Use &gt; [connectedTag.write](arkts-connectivity-connectedtag-write-f.md) instead.
 
 **Since:** 8
 
@@ -30,13 +34,13 @@ Writes the NDEF Data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string | Yes | The Data to write. |
+| data | string | Yes | Data to be written to the active tag. The maximum length is 1024 bytes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The void. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -59,7 +63,11 @@ connectedTag.writeNdefTag(rawData).then(() => {
 function writeNdefTag(data: string, callback: AsyncCallback<void>): void
 ```
 
-Writes the NDEF Data.
+Writes data to this active tag. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. Use &gt; [connectedTag.write](arkts-connectivity-connectedtag-write-f.md) instead.
 
 **Since:** 8
 
@@ -77,8 +85,8 @@ Writes the NDEF Data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string | Yes | The Data to write. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes |  |
+| data | string | Yes | Data to be written to the active tag. The maximum length is 1024 bytes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the active tag content obtained. |
 
 **Examples**
 

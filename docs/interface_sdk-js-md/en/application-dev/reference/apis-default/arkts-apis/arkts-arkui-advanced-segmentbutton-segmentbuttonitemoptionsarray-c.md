@@ -39,7 +39,7 @@ The constructor used to create a SegmentButtonItemOptionsArray object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elements | [SegmentButtonItemTuple](../../apis-arkui/arkts-apis/arkts-arkui-segmentbuttonitemtuple-t.md) | Yes | The SegmentButton items. |
+| elements | [SegmentButtonItemTuple](arkts-segmentbuttonitemtuple-t.md) | Yes | The SegmentButton items. |
 
 ## create
 
@@ -63,13 +63,13 @@ The function used to create a SegmentButtonItemOptionsArray object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elements | [SegmentButtonItemTuple](../../apis-arkui/arkts-apis/arkts-arkui-segmentbuttonitemtuple-t.md) | Yes | The SegmentButton items. |
+| elements | [SegmentButtonItemTuple](arkts-segmentbuttonitemtuple-t.md) | Yes | The SegmentButton items. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SegmentButtonItemOptionsArray](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptionsarray-c.md) | Returns the a new SegmentButtonItemOptionsArray object. |
+| [SegmentButtonItemOptionsArray](arkts-arkui-advanced-segmentbutton-segmentbuttonitemoptionsarray-c.md) | Returns the a new SegmentButtonItemOptionsArray object. |
 
 ## pop
 
@@ -93,7 +93,7 @@ Removes the last element from SegmentButtonItemOptionsArray.
 
 | Type | Description |
 | --- | --- |
-| [SegmentButtonItemOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) \| undefined | Returns the removed element. |
+| [SegmentButtonItemOptions](arkts-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) \| undefined | Returns the removed element. |
 
 ## push
 
@@ -117,7 +117,7 @@ Appends new elements to the end of SegmentButtonItemOptionsArray.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item | [SegmentButtonTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | Yes | New element to add to SegmentButtonItemOptionsArray. |
+| item | [SegmentButtonTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](arkts-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | Yes | New element to add to SegmentButtonItemOptionsArray. |
 
 **Return value:**
 
@@ -150,8 +150,8 @@ Appends new elements to the end of SegmentButtonItemOptionsArray.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item1 | [SegmentButtonTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | Yes | New element to add to SegmentButtonItemOptionsArray. |
-| item2 | [SegmentButtonTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | Yes | New element to add to SegmentButtonItemOptionsArray. |
+| item1 | [SegmentButtonTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](arkts-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | Yes | New element to add to SegmentButtonItemOptionsArray. |
+| item2 | [SegmentButtonTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](arkts-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | Yes | New element to add to SegmentButtonItemOptionsArray. |
 
 **Return value:**
 
@@ -185,9 +185,9 @@ Appends new elements to the end of SegmentButtonItemOptionsArray.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item1 | [SegmentButtonTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | Yes | New element to add to SegmentButtonItemOptionsArray. |
-| item2 | [SegmentButtonTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | Yes | New element to add to SegmentButtonItemOptionsArray. |
-| item3 | [SegmentButtonTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | Yes | New element to add to SegmentButtonItemOptionsArray. |
+| item1 | [SegmentButtonTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](arkts-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | Yes | New element to add to SegmentButtonItemOptionsArray. |
+| item2 | [SegmentButtonTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](arkts-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | Yes | New element to add to SegmentButtonItemOptionsArray. |
+| item3 | [SegmentButtonTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](arkts-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | Yes | New element to add to SegmentButtonItemOptionsArray. |
 
 **Return value:**
 
@@ -217,7 +217,7 @@ Removes the first element from SegmentButtonItemOptionsArray.
 
 | Type | Description |
 | --- | --- |
-| [SegmentButtonItemOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) \| undefined | Returns the removed element. |
+| [SegmentButtonItemOptions](arkts-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) \| undefined | Returns the removed element. |
 
 ## splice
 
@@ -243,13 +243,13 @@ Changes the elements of SegmentButtonItemOptionsArray by removing or replacing e
 | --- | --- | --- | --- |
 | start | int | Yes | The zero-based location in the array from which to start removing elements. <br>The value should be an integer. |
 | deleteCount | int | Yes | The number of elements to remove. <br>The value should be an integer. |
-| items | [SegmentButtonItemOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)[] | Yes | Elements to insert into the array in place of the deleted elements. |
+| items | [SegmentButtonItemOptions](arkts-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)[] | Yes | Elements to insert into the array in place of the deleted elements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SegmentButtonItemOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)[] | Returns a SegmentButtonItemOptions array containing the deleted elements. |
+| [SegmentButtonItemOptions](arkts-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)[] | Returns a SegmentButtonItemOptions array containing the deleted elements. |
 
 ## unshift
 
@@ -273,7 +273,7 @@ Appends new elements to the start of SegmentButtonItemOptionsArray.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item | [SegmentButtonTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | Yes | New element to add to SegmentButtonItemOptionsArray. |
+| item | [SegmentButtonTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](arkts-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | Yes | New element to add to SegmentButtonItemOptionsArray. |
 
 **Return value:**
 
@@ -307,8 +307,8 @@ Appends new elements to the start of SegmentButtonItemOptionsArray.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item1 | [SegmentButtonTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | Yes | New element to add to SegmentButtonItemOptionsArray. |
-| item2 | [SegmentButtonTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | Yes | New element to add to SegmentButtonItemOptionsArray. |
+| item1 | [SegmentButtonTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](arkts-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | Yes | New element to add to SegmentButtonItemOptionsArray. |
+| item2 | [SegmentButtonTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](arkts-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | Yes | New element to add to SegmentButtonItemOptionsArray. |
 
 **Return value:**
 
@@ -342,9 +342,9 @@ Appends new elements to the start of SegmentButtonItemOptionsArray.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item1 | [SegmentButtonTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | Yes | New element to add to SegmentButtonItemOptionsArray. |
-| item2 | [SegmentButtonTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | Yes | New element to add to SegmentButtonItemOptionsArray. |
-| item3 | [SegmentButtonTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | Yes | New element to add to SegmentButtonItemOptionsArray. |
+| item1 | [SegmentButtonTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](arkts-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | Yes | New element to add to SegmentButtonItemOptionsArray. |
+| item2 | [SegmentButtonTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](arkts-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | Yes | New element to add to SegmentButtonItemOptionsArray. |
+| item3 | [SegmentButtonTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) \| [SegmentButtonIconItem](arkts-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md) \| [SegmentButtonIconTextItem](arkts-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md) | Yes | New element to add to SegmentButtonItemOptionsArray. |
 
 **Return value:**
 

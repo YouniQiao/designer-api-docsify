@@ -29,7 +29,7 @@ dateOptions?: DateStyleOptions
 
 值为undefined时，按默认值处理。
 
-**类型：** [DateStyleOptions](arkts-arkui-arkui-advanced-counter-datestyleoptions-c.md)
+**类型：** [DateStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-counter-datestyleoptions-c.md)
 
 **起始版本：** 11
 
@@ -77,7 +77,7 @@ inlineOptions?: InlineStyleOptions
 
 值为undefined时，按默认值处理。
 
-**类型：** [InlineStyleOptions](arkts-arkui-arkui-advanced-counter-inlinestyleoptions-c.md)
+**类型：** [InlineStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-counter-inlinestyleoptions-c.md)
 
 **起始版本：** 11
 
@@ -101,7 +101,7 @@ numberOptions?: NumberStyleOptions
 
 值为undefined时，按默认值处理。
 
-**类型：** [NumberStyleOptions](arkts-arkui-arkui-advanced-counter-numberstyleoptions-c.md)
+**类型：** [NumberStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-counter-numberstyleoptions-c.md)
 
 **起始版本：** 11
 
@@ -121,7 +121,7 @@ type: CounterType
 
 指定当前Counter的类型。需配合对应的样式参数使用，具体对应关系参见Counter类型与样式对照表。
 
-**类型：** [CounterType](arkts-arkui-arkui-advanced-counter-countertype-e.md)
+**类型：** [CounterType](../../apis-default/arkts-apis/arkts-arkui-advanced-counter-countertype-e.md)
 
 **起始版本：** 11
 

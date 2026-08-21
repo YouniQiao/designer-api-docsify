@@ -37,7 +37,7 @@ ToolBarV2SymbolGlyph的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ToolBarV2SymbolGlyphOptions](arkts-arkui-advanced-toolbarv2-toolbarv2symbolglyphoptions-i.md) | 是 | symbol info. |
+| options | [ToolBarV2SymbolGlyphOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-toolbarv2-toolbarv2symbolglyphoptions-i.md) | 是 | symbol info. |
 
 ## activated
 

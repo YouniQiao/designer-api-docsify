@@ -25,7 +25,7 @@ function once(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback<AmbientTemp
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | SensorId.AMBIENT_TEMPERATURE | 是 | 传感器类型，该值固定为SensorId.AMBIENT_TEMPERATURE。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AmbientTemperatureResponse](arkts-sensorservice-sensor-ambienttemperatureresponse-i.md)&gt; | 是 | 回调函数，异步上报的传感器数据固定为AmbientTemperatureResponse。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AmbientTemperatureResponse](arkts-sensorservice-sensor-ambienttemperatureresponse-i.md)&gt; | 是 | 回调函数，异步上报的传感器数据固定为AmbientTemperatureResponse。 |
 
 **错误码：**
 

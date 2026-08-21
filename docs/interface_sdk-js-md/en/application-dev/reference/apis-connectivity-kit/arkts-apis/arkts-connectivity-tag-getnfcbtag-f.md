@@ -12,7 +12,11 @@ import { tag } from '@kit.ConnectivityKit';
 function getNfcBTag(tagInfo: TagInfo): NfcBTag
 ```
 
-Obtains an [NfcBTag](arkts-connectivity-tag-nfcbtag-t.md) object based on the tag information. &lt;p&gt;During tag reading, if the tag supports the NFC-B technology, an [NfcBTag](arkts-connectivity-tag-nfcbtag-t.md) object will be created based on the tag information.
+Obtains an **NfcBTag** object, which allows access to the tags that use the NFC-B technology.
+
+> **NOTE：**
+> 
+> This API is supported since API version 7 and deprecated since API version 9. Use &gt; [tag.getNfcB](arkts-connectivity-tag-getnfcb-f.md) instead.
 
 **Since:** 7
 
@@ -28,11 +32,11 @@ Obtains an [NfcBTag](arkts-connectivity-tag-nfcbtag-t.md) object based on the ta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tagInfo | [TagInfo](arkts-connectivity-tag-taginfo-i.md) | Yes | Indicates the tag information. |
+| tagInfo | [TagInfo](arkts-connectivity-tag-taginfo-i.md) | Yes | Tag information, including the tag technology type and related parameters, obtained from [tag.getTagInfo(want: Want)](arkts-connectivity-tag-gettaginfo-f.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| NfcBTag | The { |
+| NfcBTag | NfcBTag** object obtained. |
 

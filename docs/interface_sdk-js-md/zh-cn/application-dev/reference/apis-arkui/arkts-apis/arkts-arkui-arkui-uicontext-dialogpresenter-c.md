@@ -118,7 +118,7 @@ content参数通过联合类型接受CustomBuilder或ComponentContent： -Custom
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [CustomBuilder](../../apis-default/arkts-apis/arkts-custombuilder-t.md) \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) \| ComponentContent&lt;Object&gt; | 是 | 自定义对话框内容。 |
+| content | [CustomBuilder](../../apis-default/arkts-apis/arkts-custombuilder-t.md) \| [CustomBuilderWithId](../../apis-default/arkts-apis/arkts-custombuilderwithid-t.md) \| ComponentContent&lt;Object&gt; | 是 | 自定义对话框内容。 |
 | options | dialog.DialogCustomOptions | 否 | 自定义对话框选项。 |
 
 **返回值：**

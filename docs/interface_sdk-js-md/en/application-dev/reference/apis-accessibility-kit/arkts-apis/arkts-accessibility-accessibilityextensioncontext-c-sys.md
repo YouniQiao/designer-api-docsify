@@ -1,12 +1,16 @@
 # AccessibilityExtensionContext
 
-The **AccessibilityExtensionContext** module, inherited from **ExtensionContext**, provides context for **AccessibilityExtensionAbility**.
+The **AccessibilityExtensionContext** module, inherited from **ExtensionContext**, provides context for **AccessibilityExtensionAbility**.The Accessibility Extension Context module provides capabilities related to the accessibility extension, including configuring concerned information types, querying node information, and gesture injection.
 
-The Accessibility Extension Context module provides capabilities related to the accessibility extension, including configuring concerned information types, querying node information, and gesture injection.
+## Usage
+
+Before using AccessibilityExtensionContext, obtain an AccessibilityExtensionContext instance through an AccessibilityExtensionAbility subclass instance.  
+```ts
+import { AccessibilityExtensionAbility } from '
 
 **Inheritance/Implementation:** AccessibilityExtensionContext extends ExtensionContext
 
-**Since:** 23
+**Since:** -1
 
 <!--Device-unnamed-declare class AccessibilityExtensionContext--><!--Device-unnamed-declare class AccessibilityExtensionContext-End-->
 

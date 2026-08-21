@@ -16,5 +16,5 @@ Represents a FrameNode of the **QRCode** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** TypedFrameNode<QRCodeInterface, QRCodeAttribute>
+**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;QRCodeInterface, QRCodeAttribute&gt;
 

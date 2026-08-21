@@ -30,8 +30,6 @@ Defines the common types for the native module.
 | [ArkUI_NativeDialog*](capi-arkui-nativemodule-arkui-nativedialog8h.md) | ArkUI_NativeDialogHandle | Defines the pointer to the custom dialog box controller of ArkUI on the native side. |
 | [ArkUI_GestureCollectInterceptInfo](capi-arkui-nativemodule-arkui-gesturecollectinterceptinfo.md) | ArkUI_GestureCollectInterceptInfo | Defines information about gesture collection interception. |
 | [ArkUI_PickerIndicatorStyle](capi-arkui-nativemodule-arkui-pickerindicatorstyle.md) | ArkUI_PickerIndicatorStyle | Definition of indicator style. |
-| [ArkUI_ListItemSwipeActionItem](capi-arkui-nativemodule-arkui-listitemswipeactionitem.md) | ArkUI_ListItemSwipeActionItem | Define the configuration information of the Item within the ListitemSwipeActionOption method. |
-| [ArkUI_ListItemSwipeActionOption](capi-arkui-nativemodule-arkui-listitemswipeactionoption.md) | ArkUI_ListItemSwipeActionOption | Define the configuration information for the ListitemSwipeActionOption method. |
 | [ArkUI_SwiperIndicator](capi-arkui-nativemodule-arkui-swiperindicator.md) | ArkUI_SwiperIndicator | Defines the navigation indicator style for the swiper. |
 | [ArkUI_SwiperDigitIndicator](capi-arkui-nativemodule-arkui-swiperdigitindicator.md) | ArkUI_SwiperDigitIndicator | Defines the digital indicator style for the swiper. |
 | [ArkUI_SwiperArrowStyle](capi-arkui-nativemodule-arkui-swiperarrowstyle.md) | ArkUI_SwiperArrowStyle | Defines the arrow style for the swiper. |
@@ -113,8 +111,6 @@ Defines the common types for the native module.
 | [ArkUI_LengthMetricUnit](#arkui_lengthmetricunit) | ArkUI_LengthMetricUnit | Enumerates the component units. |
 | [ArkUI_RenderFit](#arkui_renderfit) | ArkUI_RenderFit | Enumerates the render fit. |
 | [ArkUI_SwiperIndicatorType](#arkui_swiperindicatortype) | ArkUI_SwiperIndicatorType | Define the navigation indicator type of the swiper. |
-| [ArkUI_ListItemSwipeActionState](#arkui_listitemswipeactionstate) | ArkUI_ListItemSwipeActionState | Define the pattern of element arrangement in the main axis direction of the Swiper component. |
-| [ArkUI_ListItemSwipeEdgeEffect](#arkui_listitemswipeedgeeffect) | ArkUI_ListItemSwipeEdgeEffect | Define the explicit and implicit mode of the SwipeAction method for the Listitem component. |
 | [ArkUI_ErrorCode](#arkui_errorcode) | ArkUI_ErrorCode | 定义错误码枚举值。 |
 | [ArkUI_AnimationStatus](#arkui_animationstatus) | ArkUI_AnimationStatus | Defines the playback status for the image animator. |
 | [ArkUI_AnimationFillMode](#arkui_animationfillmode) | ArkUI_AnimationFillMode | Defines the status before and after execution of the animation in the current playback direction. |
@@ -132,7 +128,6 @@ Defines the common types for the native module.
 | [ArkUI_CornerDirection](#arkui_cornerdirection) | ArkUI_CornerDirection | 定义角度方向。 |
 | [ArkUI_PixelRoundCalcPolicy](#arkui_pixelroundcalcpolicy) | ArkUI_PixelRoundCalcPolicy | Enumerates the PixelRoundPolicy. |
 | [ArkUI_MenuPolicy](#arkui_menupolicy) | ArkUI_MenuPolicy | Menu pop-up strategy. |
-| [ArkUI_ListItemSwipeActionDirection](#arkui_listitemswipeactiondirection) | ArkUI_ListItemSwipeActionDirection | Define the direction to expand the swipe action. |
 | [ArkUI_LayoutSafeAreaType](#arkui_layoutsafeareatype) | ArkUI_LayoutSafeAreaType | Define the types for expanding the safe area in layout. |
 | [ArkUI_LayoutSafeAreaEdge](#arkui_layoutsafeareaedge) | ArkUI_LayoutSafeAreaEdge | Define the edges for expanding the safe area in layout. |
 | [ArkUI_LocalizedAlignment](#arkui_localizedalignment) | ArkUI_LocalizedAlignment | Enumerates the localizedAlignment modes. |
@@ -274,27 +269,6 @@ Defines the common types for the native module.
 | [ArkUI_VerticalAlignment OH_ArkUI_AlignmentRuleOption_GetCenterAlignmentVertical(ArkUI_AlignmentRuleOption* option)](#oh_arkui_alignmentruleoption_getcenteralignmentvertical) | Gets the parameters of vertical center alignment. |
 | [float OH_ArkUI_AlignmentRuleOption_GetBiasHorizontal(ArkUI_AlignmentRuleOption* option)](#oh_arkui_alignmentruleoption_getbiashorizontal) | Get the bias value in the horizontal direction. |
 | [float OH_ArkUI_AlignmentRuleOption_GetBiasVertical(ArkUI_AlignmentRuleOption* option)](#oh_arkui_alignmentruleoption_getbiasvertical) | Get the bias value in the vertical direction. |
-| [ArkUI_ListItemSwipeActionItem* OH_ArkUI_ListItemSwipeActionItem_Create()](#oh_arkui_listitemswipeactionitem_create) | Create a configuration item for the ListitemSwipeActionItem interface settings. |
-| [void OH_ArkUI_ListItemSwipeActionItem_Dispose(ArkUI_ListItemSwipeActionItem* item)](#oh_arkui_listitemswipeactionitem_dispose) | Destroy the ListitemSwipeActionItem instance. |
-| [void OH_ArkUI_ListItemSwipeActionItem_SetContent(ArkUI_ListItemSwipeActionItem* item, ArkUI_NodeHandle node)](#oh_arkui_listitemswipeactionitem_setcontent) | Set the layout content of ListItem SwipeActionItem. |
-| [void OH_ArkUI_ListItemSwipeActionItem_SetActionAreaDistance(ArkUI_ListItemSwipeActionItem* item, float distance)](#oh_arkui_listitemswipeactionitem_setactionareadistance) | Set the threshold for long-distance sliding deletion distance of components. |
-| [float OH_ArkUI_ListItemSwipeActionItem_GetActionAreaDistance(ArkUI_ListItemSwipeActionItem* item)](#oh_arkui_listitemswipeactionitem_getactionareadistance) | Obtain the threshold for long-distance sliding deletion distance of components. |
-| [void OH_ArkUI_ListItemSwipeActionItem_SetOnEnterActionArea(ArkUI_ListItemSwipeActionItem* item, void (\*callback)())](#oh_arkui_listitemswipeactionitem_setonenteractionarea) | Set the event to be called when a sliding entry enters the deletion area. |
-| [void OH_ArkUI_ListItemSwipeActionItem_SetOnEnterActionAreaWithUserData(ArkUI_ListItemSwipeActionItem* item, void* userData, void (\*callback)(void* userData))](#oh_arkui_listitemswipeactionitem_setonenteractionareawithuserdata) | Set the event triggered when a sliding entry enters the deletion area. |
-| [void OH_ArkUI_ListItemSwipeActionItem_SetOnAction(ArkUI_ListItemSwipeActionItem* item, void (\*callback)())](#oh_arkui_listitemswipeactionitem_setonaction) | Set the event to be called when a component enters the long-range deletion area and deletes a ListItem. |
-| [void OH_ArkUI_ListItemSwipeActionItem_SetOnActionWithUserData(ArkUI_ListItemSwipeActionItem* item, void* userData, void (\*callback)(void* userData))](#oh_arkui_listitemswipeactionitem_setonactionwithuserdata) | Set the event triggered when a component enters the long-range deletion area and deletes a ListItem. |
-| [void OH_ArkUI_ListItemSwipeActionItem_SetOnExitActionArea(ArkUI_ListItemSwipeActionItem* item, void (\*callback)())](#oh_arkui_listitemswipeactionitem_setonexitactionarea) | Set the event to be called when a sliding entry exits the deletion area. |
-| [void OH_ArkUI_ListItemSwipeActionItem_SetOnExitActionAreaWithUserData(ArkUI_ListItemSwipeActionItem* item, void* userData, void (\*callback)(void* userData))](#oh_arkui_listitemswipeactionitem_setonexitactionareawithuserdata) | Set the event triggered when a sliding entry exits the deletion area. |
-| [void OH_ArkUI_ListItemSwipeActionItem_SetOnStateChange(ArkUI_ListItemSwipeActionItem* item, void (\*callback)(ArkUI_ListItemSwipeActionState swipeActionState))](#oh_arkui_listitemswipeactionitem_setonstatechange) | Set the event triggered when the sliding state of a list item changes. |
-| [void OH_ArkUI_ListItemSwipeActionItem_SetOnStateChangeWithUserData(ArkUI_ListItemSwipeActionItem* item, void* userData, void (\*callback)(ArkUI_ListItemSwipeActionState swipeActionState, void* userData))](#oh_arkui_listitemswipeactionitem_setonstatechangewithuserdata) | Set the event triggered when the sliding state of a list item changes. |
-| [ArkUI_ListItemSwipeActionOption* OH_ArkUI_ListItemSwipeActionOption_Create()](#oh_arkui_listitemswipeactionoption_create) | Create a configuration item for the ListitemSwipeActionOption interface settings. |
-| [void OH_ArkUI_ListItemSwipeActionOption_Dispose(ArkUI_ListItemSwipeActionOption* option)](#oh_arkui_listitemswipeactionoption_dispose) | Destroy the ListitemSwipeActionOption instance. |
-| [void OH_ArkUI_ListItemSwipeActionOption_SetStart(ArkUI_ListItemSwipeActionOption* option, ArkUI_ListItemSwipeActionItem* item)](#oh_arkui_listitemswipeactionoption_setstart) | Set the layout content on the left (vertical layout) or top (horizontal layout)of the ListItem SwipeActionItem. |
-| [void OH_ArkUI_ListItemSwipeActionOption_SetEnd(ArkUI_ListItemSwipeActionOption* option, ArkUI_ListItemSwipeActionItem* item)](#oh_arkui_listitemswipeactionoption_setend) | Set the layout content on the right (vertical layout) or bottom (horizontal layout)of the ListItem SwipeActionItem. |
-| [void OH_ArkUI_ListItemSwipeActionOption_SetEdgeEffect(ArkUI_ListItemSwipeActionOption* option, ArkUI_ListItemSwipeEdgeEffect edgeEffect)](#oh_arkui_listitemswipeactionoption_setedgeeffect) | Set the sliding effect. |
-| [int32_t OH_ArkUI_ListItemSwipeActionOption_GetEdgeEffect(ArkUI_ListItemSwipeActionOption* option)](#oh_arkui_listitemswipeactionoption_getedgeeffect) | Get the sliding effect. |
-| [void OH_ArkUI_ListItemSwipeActionOption_SetOnOffsetChange(ArkUI_ListItemSwipeActionOption* option, void (\*callback)(float offset))](#oh_arkui_listitemswipeactionoption_setonoffsetchange) | The event called when the sliding operation offset changes. |
-| [void OH_ArkUI_ListItemSwipeActionOption_SetOnOffsetChangeWithUserData(ArkUI_ListItemSwipeActionOption* option, void* userData, void (\*callback)(float offset, void* userData))](#oh_arkui_listitemswipeactionoption_setonoffsetchangewithuserdata) | Set the event triggered when the sliding operation offset changes. |
 | [ArkUI_ImageAnimatorFrameInfo* OH_ArkUI_ImageAnimatorFrameInfo_CreateFromString(char* src)](#oh_arkui_imageanimatorframeinfo_createfromstring) | Create a image frame from the image path. |
 | [ArkUI_ImageAnimatorFrameInfo* OH_ArkUI_ImageAnimatorFrameInfo_CreateFromDrawableDescriptor(ArkUI_DrawableDescriptor* drawable)](#oh_arkui_imageanimatorframeinfo_createfromdrawabledescriptor) | Create a image frame from the drawable descriptor. |
 | [void OH_ArkUI_ImageAnimatorFrameInfo_Dispose(ArkUI_ImageAnimatorFrameInfo* imageInfo)](#oh_arkui_imageanimatorframeinfo_dispose) | Destroy the pointer to the image frame. |
@@ -355,8 +329,6 @@ Defines the common types for the native module.
 | [void OH_ArkUI_EmbeddedComponentOption_Dispose(ArkUI_EmbeddedComponentOption* option)](#oh_arkui_embeddedcomponentoption_dispose) | Destroy the object by EmbeddedComponent option. |
 | [void OH_ArkUI_EmbeddedComponentOption_SetOnError(ArkUI_EmbeddedComponentOption* option, void (\*callback)(int32_t code, const char* name, const char* message))](#oh_arkui_embeddedcomponentoption_setonerror) | Set the onError of EmbeddedComponent. |
 | [void OH_ArkUI_EmbeddedComponentOption_SetOnTerminated(ArkUI_EmbeddedComponentOption* option, void (\*callback)(int32_t code, AbilityBase_Want* want))](#oh_arkui_embeddedcomponentoption_setonterminated) | Set the onTerminated of EmbeddedComponent. |
-| [int32_t OH_ArkUI_ListItemSwipeAction_Expand(ArkUI_NodeHandle node, ArkUI_ListItemSwipeActionDirection direction)](#oh_arkui_listitemswipeaction_expand) | Expand the swipe action. |
-| [int32_t OH_ArkUI_ListItemSwipeAction_Collapse(ArkUI_NodeHandle node)](#oh_arkui_listitemswipeaction_collapse) | Collapse the swipe action. |
 | [ArkUI_PositionEdges* OH_ArkUI_PositionEdges_Create()](#oh_arkui_positionedges_create) | Create an edge object for position attribute. |
 | [ArkUI_PositionEdges* OH_ArkUI_PositionEdges_Copy(const ArkUI_PositionEdges* edges)](#oh_arkui_positionedges_copy) | Creates a deep copy of an edge object for position attribute. |
 | [void OH_ArkUI_PositionEdges_Dispose(ArkUI_PositionEdges* edges)](#oh_arkui_positionedges_dispose) | Dispose an edge object for position attribute. |
@@ -1636,41 +1608,6 @@ Define the navigation indicator type of the swiper.
 | ARKUI_SWIPER_INDICATOR_TYPE_DOT | dot type. |
 | ARKUI_SWIPER_INDICATOR_TYPE_DIGIT | digit type. |
 
-### ArkUI_ListItemSwipeActionState
-
-```c
-enum ArkUI_ListItemSwipeActionState
-```
-
-**描述**
-
-Define the pattern of element arrangement in the main axis direction of the Swiper component.
-
-**起始版本：** 12
-
-| 枚举项 | 描述 |
-| -- | -- |
-| ARKUI_LIST_ITEM_SWIPE_ACTION_STATE_COLLAPSED = 0 | In the folded state, when the ListItem slides in the opposite direction to the main axis, |
-| ARKUI_LIST_ITEM_SWIPE_ACTION_STATE_EXPANDED | In the folded state, when the ListItem slides in the opposite direction to the spindle, |
-| ARKUI_LIST_ITEM_SWIPE_ACTION_STATE_ACTIONING | Long distance state, the state of deleting a ListItem after it enters the long distance deletion area. |
-
-### ArkUI_ListItemSwipeEdgeEffect
-
-```c
-enum ArkUI_ListItemSwipeEdgeEffect
-```
-
-**描述**
-
-Define the explicit and implicit mode of the SwipeAction method for the Listitem component.
-
-**起始版本：** 12
-
-| 枚举项 | 描述 |
-| -- | -- |
-| ARKUI_LIST_ITEM_SWIPE_EDGE_EFFECT_SPRING = 0 | The ListItem can continue to be scratched after the distance exceeds the size of the scratched component. |
-| ARKUI_LIST_ITEM_SWIPE_EDGE_EFFECT_NONE | The sliding distance of the ListItem cannot exceed the size of the scratched component. |
-
 ### ArkUI_ErrorCode
 
 ```c
@@ -2039,23 +1976,6 @@ Menu pop-up strategy.
 | ARKUI_MENU_POLICY_DEFAULT = 0 | Determine whether to pop up the menu according to the underlying default logic. |
 | ARKUI_MENU_POLICY_HIDE = 1 | Never pop up the menu. |
 | ARKUI_MENU_POLICY_SHOW = 2 | Always pop up the menu. |
-
-### ArkUI_ListItemSwipeActionDirection
-
-```c
-enum ArkUI_ListItemSwipeActionDirection
-```
-
-**描述**
-
-Define the direction to expand the swipe action.
-
-**起始版本：** 21
-
-| 枚举项 | 描述 |
-| -- | -- |
-| ARKUI_LIST_ITEM_SWIPE_ACTION_DIRECTION_START = 0 | When the List direction is vertical, it indicates the left in LTR mode and right in RTL mode.When the List direction is horizontal, it indicates the top. |
-| ARKUI_LIST_ITEM_SWIPE_ACTION_DIRECTION_END = 1 | When the List direction is vertical, it indicates the right in LTR mode and left in RTL mode.When the List direction is horizontal, it indicates the bottom. |
 
 ### ArkUI_LayoutSafeAreaType
 
@@ -4984,416 +4904,6 @@ Get the bias value in the vertical direction.
 | -- | -- |
 | float | bias value in vertical direction. |
 
-### OH_ArkUI_ListItemSwipeActionItem_Create()
-
-```c
-ArkUI_ListItemSwipeActionItem* OH_ArkUI_ListItemSwipeActionItem_Create()
-```
-
-**描述**
-
-Create a configuration item for the ListitemSwipeActionItem interface settings.
-
-**起始版本：** 12
-
-**返回：**
-
-| 类型 | 说明 |
-| -- | -- |
-| [ArkUI_ListItemSwipeActionItem*](capi-arkui-nativemodule-arkui-listitemswipeactionitem.md) | List Item SwipeActionItem configuration item instance. If the object returns a null pointer,          it indicates creation failure, and the reason for the failure may be that the address space is full. |
-
-### OH_ArkUI_ListItemSwipeActionItem_Dispose()
-
-```c
-void OH_ArkUI_ListItemSwipeActionItem_Dispose(ArkUI_ListItemSwipeActionItem* item)
-```
-
-**描述**
-
-Destroy the ListitemSwipeActionItem instance.
-
-**起始版本：** 12
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [ArkUI_ListItemSwipeActionItem](capi-arkui-nativemodule-arkui-listitemswipeactionitem.md)* item | List Item SwipeActionItem instance to be destroyed. |
-
-### OH_ArkUI_ListItemSwipeActionItem_SetContent()
-
-```c
-void OH_ArkUI_ListItemSwipeActionItem_SetContent(ArkUI_ListItemSwipeActionItem* item, ArkUI_NodeHandle node)
-```
-
-**描述**
-
-Set the layout content of ListItem SwipeActionItem.
-
-**起始版本：** 12
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [ArkUI_ListItemSwipeActionItem](capi-arkui-nativemodule-arkui-listitemswipeactionitem.md)* item | List Item SwipeActionItem instance. |
-| ArkUI_NodeHandle node | Layout information. |
-
-### OH_ArkUI_ListItemSwipeActionItem_SetActionAreaDistance()
-
-```c
-void OH_ArkUI_ListItemSwipeActionItem_SetActionAreaDistance(ArkUI_ListItemSwipeActionItem* item, float distance)
-```
-
-**描述**
-
-Set the threshold for long-distance sliding deletion distance of components.
-
-**起始版本：** 12
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [ArkUI_ListItemSwipeActionItem](capi-arkui-nativemodule-arkui-listitemswipeactionitem.md)* item | List Item SwipeActionItem instance. |
-| float distance | Component long-distance sliding deletion distance threshold. |
-
-### OH_ArkUI_ListItemSwipeActionItem_GetActionAreaDistance()
-
-```c
-float OH_ArkUI_ListItemSwipeActionItem_GetActionAreaDistance(ArkUI_ListItemSwipeActionItem* item)
-```
-
-**描述**
-
-Obtain the threshold for long-distance sliding deletion distance of components.
-
-**起始版本：** 12
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [ArkUI_ListItemSwipeActionItem](capi-arkui-nativemodule-arkui-listitemswipeactionitem.md)* item | List Item SwipeActionItem instance. |
-
-**返回：**
-
-| 类型 | 说明 |
-| -- | -- |
-| float | Component long-distance sliding deletion distance threshold. If -1.0f is returned, the return fails.         The possible cause of the failure is that the item parameter is abnormal, such as a null pointer. |
-
-### OH_ArkUI_ListItemSwipeActionItem_SetOnEnterActionArea()
-
-```c
-void OH_ArkUI_ListItemSwipeActionItem_SetOnEnterActionArea(ArkUI_ListItemSwipeActionItem* item, void (*callback)())
-```
-
-**描述**
-
-Set the event to be called when a sliding entry enters the deletion area.
-
-**起始版本：** 12
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| rkUI_ListItemSwipeActionItem\* item | List Item SwipeActionItem instance. |
-| void (\*callback)() | Callback Events. |
-
-### OH_ArkUI_ListItemSwipeActionItem_SetOnEnterActionAreaWithUserData()
-
-```c
-void OH_ArkUI_ListItemSwipeActionItem_SetOnEnterActionAreaWithUserData(ArkUI_ListItemSwipeActionItem* item, void* userData, void (*callback)(void* userData))
-```
-
-**描述**
-
-Set the event triggered when a sliding entry enters the deletion area.
-
-**起始版本：** 12
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| rkUI_ListItemSwipeActionItem\* item | List Item SwipeActionItem instance. |
-| void\* userData | User defined data. |
-| void (\*callback)(void\* userData) | Callback Events. |
-
-### OH_ArkUI_ListItemSwipeActionItem_SetOnAction()
-
-```c
-void OH_ArkUI_ListItemSwipeActionItem_SetOnAction(ArkUI_ListItemSwipeActionItem* item, void (*callback)())
-```
-
-**描述**
-
-Set the event to be called when a component enters the long-range deletion area and deletes a ListItem.
-
-**起始版本：** 12
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| rkUI_ListItemSwipeActionItem\* item | List Item SwipeActionItem instance. |
-| void (\*callback)() | Callback Events. |
-
-### OH_ArkUI_ListItemSwipeActionItem_SetOnActionWithUserData()
-
-```c
-void OH_ArkUI_ListItemSwipeActionItem_SetOnActionWithUserData(ArkUI_ListItemSwipeActionItem* item, void* userData, void (*callback)(void* userData))
-```
-
-**描述**
-
-Set the event triggered when a component enters the long-range deletion area and deletes a ListItem.
-
-**起始版本：** 12
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| rkUI_ListItemSwipeActionItem\* item | List Item SwipeActionItem instance. |
-| void\* userData | User defined data. |
-| void (\*callback)(void\* userData) | Callback Events. |
-
-### OH_ArkUI_ListItemSwipeActionItem_SetOnExitActionArea()
-
-```c
-void OH_ArkUI_ListItemSwipeActionItem_SetOnExitActionArea(ArkUI_ListItemSwipeActionItem* item, void (*callback)())
-```
-
-**描述**
-
-Set the event to be called when a sliding entry exits the deletion area.
-
-**起始版本：** 12
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| rkUI_ListItemSwipeActionItem\* item | List Item SwipeActionItem instance. |
-| void (\*callback)() | Callback Events. |
-
-### OH_ArkUI_ListItemSwipeActionItem_SetOnExitActionAreaWithUserData()
-
-```c
-void OH_ArkUI_ListItemSwipeActionItem_SetOnExitActionAreaWithUserData(ArkUI_ListItemSwipeActionItem* item, void* userData, void (*callback)(void* userData))
-```
-
-**描述**
-
-Set the event triggered when a sliding entry exits the deletion area.
-
-**起始版本：** 12
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| rkUI_ListItemSwipeActionItem\* item | List Item SwipeActionItem instance. |
-| void\* userData | User defined data. |
-| void (\*callback)(void\* userData) | Callback Events. |
-
-### OH_ArkUI_ListItemSwipeActionItem_SetOnStateChange()
-
-```c
-void OH_ArkUI_ListItemSwipeActionItem_SetOnStateChange(ArkUI_ListItemSwipeActionItem* item, void (*callback)(ArkUI_ListItemSwipeActionState swipeActionState))
-```
-
-**描述**
-
-Set the event triggered when the sliding state of a list item changes.
-
-**起始版本：** 12
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| rkUI_ListItemSwipeActionItem\* item | List Item SwipeActionItem instance. |
-| void (\*callback)(ArkUI_ListItemSwipeActionState swipeActionState) | Callback Events.swipeActionState The changed state. |
-
-### OH_ArkUI_ListItemSwipeActionItem_SetOnStateChangeWithUserData()
-
-```c
-void OH_ArkUI_ListItemSwipeActionItem_SetOnStateChangeWithUserData(ArkUI_ListItemSwipeActionItem* item, void* userData, void (*callback)(ArkUI_ListItemSwipeActionState swipeActionState, void* userData))
-```
-
-**描述**
-
-Set the event triggered when the sliding state of a list item changes.
-
-**起始版本：** 12
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| rkUI_ListItemSwipeActionItem\* item | List Item SwipeActionItem instance. |
-| void\* userData | User defined data. |
-| void (\*callback)(ArkUI_ListItemSwipeActionState swipeActionState | Callback Events.swipeActionState The changed state. |
-
-### OH_ArkUI_ListItemSwipeActionOption_Create()
-
-```c
-ArkUI_ListItemSwipeActionOption* OH_ArkUI_ListItemSwipeActionOption_Create()
-```
-
-**描述**
-
-Create a configuration item for the ListitemSwipeActionOption interface settings.
-
-**起始版本：** 12
-
-**返回：**
-
-| 类型 | 说明 |
-| -- | -- |
-| [ArkUI_ListItemSwipeActionOption*](capi-arkui-nativemodule-arkui-listitemswipeactionoption.md) | List Item SwipeActionOption configuration item instance.If the object returns a null pointer,          it indicates a creation failure, and the reason for the failure may be that the address space is full. |
-
-### OH_ArkUI_ListItemSwipeActionOption_Dispose()
-
-```c
-void OH_ArkUI_ListItemSwipeActionOption_Dispose(ArkUI_ListItemSwipeActionOption* option)
-```
-
-**描述**
-
-Destroy the ListitemSwipeActionOption instance.
-
-**起始版本：** 12
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [ArkUI_ListItemSwipeActionOption](capi-arkui-nativemodule-arkui-listitemswipeactionoption.md)* option | List Item SwipeActionOption instance to be destroyed. |
-
-### OH_ArkUI_ListItemSwipeActionOption_SetStart()
-
-```c
-void OH_ArkUI_ListItemSwipeActionOption_SetStart(ArkUI_ListItemSwipeActionOption* option, ArkUI_ListItemSwipeActionItem* item)
-```
-
-**描述**
-
-Set the layout content on the left (vertical layout) or top (horizontal layout)of the ListItem SwipeActionItem.
-
-**起始版本：** 12
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [ArkUI_ListItemSwipeActionOption](capi-arkui-nativemodule-arkui-listitemswipeactionoption.md)* option | List Item SwipeActionItem instance. |
-| [ArkUI_ListItemSwipeActionItem](capi-arkui-nativemodule-arkui-listitemswipeactionitem.md)* item | Layout information. |
-
-### OH_ArkUI_ListItemSwipeActionOption_SetEnd()
-
-```c
-void OH_ArkUI_ListItemSwipeActionOption_SetEnd(ArkUI_ListItemSwipeActionOption* option, ArkUI_ListItemSwipeActionItem* item)
-```
-
-**描述**
-
-Set the layout content on the right (vertical layout) or bottom (horizontal layout)of the ListItem SwipeActionItem.
-
-**起始版本：** 12
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [ArkUI_ListItemSwipeActionOption](capi-arkui-nativemodule-arkui-listitemswipeactionoption.md)* option | List Item SwipeActionItem instance. |
-| [ArkUI_ListItemSwipeActionItem](capi-arkui-nativemodule-arkui-listitemswipeactionitem.md)* item | Layout information. |
-
-### OH_ArkUI_ListItemSwipeActionOption_SetEdgeEffect()
-
-```c
-void OH_ArkUI_ListItemSwipeActionOption_SetEdgeEffect(ArkUI_ListItemSwipeActionOption* option, ArkUI_ListItemSwipeEdgeEffect edgeEffect)
-```
-
-**描述**
-
-Set the sliding effect.
-
-**起始版本：** 12
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [ArkUI_ListItemSwipeActionOption](capi-arkui-nativemodule-arkui-listitemswipeactionoption.md)* option | List Item SwipeActionItem instance. |
-| [ArkUI_ListItemSwipeEdgeEffect](capi-native-type-h.md#arkui_listitemswipeedgeeffect) edgeEffect | Sliding effect. |
-
-### OH_ArkUI_ListItemSwipeActionOption_GetEdgeEffect()
-
-```c
-int32_t OH_ArkUI_ListItemSwipeActionOption_GetEdgeEffect(ArkUI_ListItemSwipeActionOption* option)
-```
-
-**描述**
-
-Get the sliding effect.
-
-**起始版本：** 12
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [ArkUI_ListItemSwipeActionOption](capi-arkui-nativemodule-arkui-listitemswipeactionoption.md)* option | List Item SwipeActionItem instance. |
-
-**返回：**
-
-| 类型 | 说明 |
-| -- | -- |
-| int32_t | Sliding effect. The default return value is 0. If -1 is returned, the return fails.         The possible cause of the failure is that the option parameter is abnormal, such as a null pointer. |
-
-### OH_ArkUI_ListItemSwipeActionOption_SetOnOffsetChange()
-
-```c
-void OH_ArkUI_ListItemSwipeActionOption_SetOnOffsetChange(ArkUI_ListItemSwipeActionOption* option, void (*callback)(float offset))
-```
-
-**描述**
-
-The event called when the sliding operation offset changes.
-
-**起始版本：** 12
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| rkUI_ListItemSwipeActionOption\* option | List Item SwipeActionItem instance. |
-| void (\*callback)(float offset) | Callback Events.offset Slide offset. |
-
-### OH_ArkUI_ListItemSwipeActionOption_SetOnOffsetChangeWithUserData()
-
-```c
-void OH_ArkUI_ListItemSwipeActionOption_SetOnOffsetChangeWithUserData(ArkUI_ListItemSwipeActionOption* option, void* userData, void (*callback)(float offset, void* userData))
-```
-
-**描述**
-
-Set the event triggered when the sliding operation offset changes.
-
-**起始版本：** 12
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| rkUI_ListItemSwipeActionOption\* option | List Item SwipeActionItem instance. |
-| void\* userData | User defined data. |
-| void (\*callback)(float offset | Callback Events.offset Slide offset. |
-
 ### OH_ArkUI_ImageAnimatorFrameInfo_CreateFromString()
 
 ```c
@@ -6664,55 +6174,6 @@ Set the onTerminated of EmbeddedComponent.
 | rkUI_EmbeddedComponentOption\* option | Pointer to the object option by the EmbeddedComponent. |
 | void (\*callback)(int32_t code | Result code returned when the EmbeddedUIExtensionAbility exits. |
 | [AbilityBase_Want](capi-arkui-nativemodule-abilitybase-want.md)\* want) | Data returned when the EmbeddedUIExtensionAbility exits. |
-
-### OH_ArkUI_ListItemSwipeAction_Expand()
-
-```c
-int32_t OH_ArkUI_ListItemSwipeAction_Expand(ArkUI_NodeHandle node, ArkUI_ListItemSwipeActionDirection direction)
-```
-
-**描述**
-
-Expand the swipe action.
-
-**起始版本：** 21
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| ArkUI_NodeHandle node | List Item node. |
-| [ArkUI_ListItemSwipeActionDirection](capi-native-type-h.md#arkui_listitemswipeactiondirection) direction | expand direction of swipeAction. |
-
-**返回：**
-
-| 类型 | 说明 |
-| -- | -- |
-| int32_t | Error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) success.          [ARKUI_ERROR_CODE_PARAM_ERROR](capi-native-type-h.md#arkui_errorcode) The component type of the node is incorrect.          [ARKUI_ERROR_CODE_NODE_NOT_ON_MAIN_TREE](capi-native-type-h.md#arkui_errorcode) The node not mounted to component tree. |
-
-### OH_ArkUI_ListItemSwipeAction_Collapse()
-
-```c
-int32_t OH_ArkUI_ListItemSwipeAction_Collapse(ArkUI_NodeHandle node)
-```
-
-**描述**
-
-Collapse the swipe action.
-
-**起始版本：** 21
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| ArkUI_NodeHandle node | List Item node. |
-
-**返回：**
-
-| 类型 | 说明 |
-| -- | -- |
-| int32_t | Error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) success.          [ARKUI_ERROR_CODE_PARAM_ERROR](capi-native-type-h.md#arkui_errorcode) The component type of the node is incorrect.          [ARKUI_ERROR_CODE_NODE_NOT_ON_MAIN_TREE](capi-native-type-h.md#arkui_errorcode) The node not mounted to component tree. |
 
 ### OH_ArkUI_PositionEdges_Create()
 

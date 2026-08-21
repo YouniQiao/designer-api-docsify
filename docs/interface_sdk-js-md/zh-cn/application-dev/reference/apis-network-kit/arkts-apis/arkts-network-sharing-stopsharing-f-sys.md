@@ -29,7 +29,7 @@ function stopSharing(type: SharingIfaceType, callback: AsyncCallback<void>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | [SharingIfaceType](arkts-network-sharing-sharingifacetype-e-sys.md) | 是 | 共享类型，0：Wi-Fi 1：USB 2：BLUETOOTH。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数,返回停止网络共享结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数,返回停止网络共享结果。 |
 
 **错误码：**
 

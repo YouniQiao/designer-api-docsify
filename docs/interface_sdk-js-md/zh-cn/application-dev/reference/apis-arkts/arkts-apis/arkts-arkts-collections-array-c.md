@@ -202,43 +202,6 @@ ArkTS Array的构造函数，通过开发者提供的元素进行初始化。
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Array's constructor cannot be directly invoked. |
 
-## containsAll
-
-```TypeScript
-containsAll(elements: ArrayOrBuiltinArray<T>): boolean
-```
-
-检查指定ArkTS Array或内建Array中的所有元素是否均包含在此ArkTS Array中。
-
-**起始版本：** 26.1.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Array-containsAll(elements: ArrayOrBuiltinArray<T>): boolean--><!--Device-Array-containsAll(elements: ArrayOrBuiltinArray<T>): boolean-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| elements | [ArrayOrBuiltinArray](arkts-arkts-collections-arrayorbuiltinarray-t.md)&lt;T&gt; | 是 | 要检查的ArkTS Array或内建Array。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 检查结果。如果指定的所有元素均包含在此Array中，则返回**true**； 否则返回**false**。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The containsAll method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification exception |
-
 ## copyWithin
 
 ```TypeScript
@@ -1173,43 +1136,6 @@ reduceRight(callbackFn: ArrayReduceCallback<T, T, Array<T>>): T
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduceRight method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
-
-## retainAll
-
-```TypeScript
-retainAll(value: ArrayOrBuiltinArray<T> | ArrayElementPredicateFn<T>): boolean
-```
-
-仅保留此ArkTS Array中包含在指定ArkTS Array或内建Array中的元素，或满足指定判定函数的元素。
-
-**起始版本：** 26.1.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Array-retainAll(value: ArrayOrBuiltinArray<T> | ArrayElementPredicateFn<T>): boolean--><!--Device-Array-retainAll(value: ArrayOrBuiltinArray<T> | ArrayElementPredicateFn<T>): boolean-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [ArrayOrBuiltinArray](arkts-arkts-collections-arrayorbuiltinarray-t.md)&lt;T&gt; \| [ArrayElementPredicateFn](arkts-arkts-collections-arrayelementpredicatefn-t.md)&lt;T&gt; | 是 | 允许 保留元素的ArkTS Array或内建Array，或用于测试每个元素的判定函数。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 操作结果。如果从此Array中移除了任意元素，则返回**true**； 否则返回**false**。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The retainAll method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification exception |
 
 ## reverse
 

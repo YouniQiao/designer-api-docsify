@@ -29,7 +29,7 @@ function off(type: 'netBackgroundPolicyChange', callback?: Callback<boolean>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'netBackgroundPolicyChange' | 是 | 注销的事件类型。'netBackgroundPolicyChange'：注销后台网络策略发生改变事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 否 | 回调函数。注册后台网络策略发生改变时调用。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数。注册后台网络策略发生改变时调用。 |
 
 **错误码：**
 

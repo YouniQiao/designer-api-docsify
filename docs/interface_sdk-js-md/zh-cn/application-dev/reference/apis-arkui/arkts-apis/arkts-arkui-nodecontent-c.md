@@ -36,7 +36,7 @@ addFrameNode(node: FrameNode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | 是 | 需要添加的FrameNode，该节点需为可被添加的有效FrameNode。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 需要添加的FrameNode，该节点需为可被添加的有效FrameNode。 |
 
 **错误码：**
 
@@ -108,7 +108,7 @@ removeFrameNode(node: FrameNode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | 是 | 需要删除的FrameNode，该节点需已添加到当前NodeContent中，若未添加则删除无效。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 需要删除的FrameNode，该节点需已添加到当前NodeContent中，若未添加则删除无效。 |
 
 **示例**
 

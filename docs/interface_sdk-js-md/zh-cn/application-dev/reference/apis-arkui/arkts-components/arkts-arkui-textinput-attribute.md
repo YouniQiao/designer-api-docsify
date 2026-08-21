@@ -277,7 +277,7 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: Ke
 
 当设置自定义键盘时，可以通过绑定onKeyPreIme事件规避物理键盘的输入。
 
-从API version 23开始，自定义键盘可以通过 [setCustomKeyboardContinueFeature](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#setcustomkeyboardcontinuefeature)开启接续，在切换至 其他自定义键盘时，会直接切换，不会触发键盘关闭和拉起动画。
+从API version 23开始，自定义键盘可以通过 [setCustomKeyboardContinueFeature](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#setcustomkeyboardcontinuefeature)开启接续，在切换至 其他自定义键盘时，会直接切换，不会触发键盘关闭和拉起动画。
 
 > **说明：**
 > 
@@ -342,7 +342,7 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 设置自定义菜单扩展项，允许用户设置扩展项的文本内容、图标、回调方法。
 
-调用[disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或 [disableSystemServiceMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本 选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。
+调用[disableMenuItems](../../apis-default/arkts-apis/arkts-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或 [disableSystemServiceMenuItems](../../apis-default/arkts-apis/arkts-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本 选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。
 
 **起始版本：** 12
 

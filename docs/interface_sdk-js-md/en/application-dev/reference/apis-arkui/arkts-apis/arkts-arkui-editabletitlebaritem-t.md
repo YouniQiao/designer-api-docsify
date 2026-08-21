@@ -16,5 +16,5 @@ Declaration of the image item.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** EditableTitleBarMenuItem
+**Property type:** [EditableTitleBarMenuItem](../../apis-default/arkts-apis/arkts-arkui-advanced-editabletitlebar-editabletitlebarmenuitem-c.md)
 

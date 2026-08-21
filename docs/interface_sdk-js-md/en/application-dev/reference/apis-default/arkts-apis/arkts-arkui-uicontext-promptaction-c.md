@@ -382,7 +382,7 @@ Open menu with frameNode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | Yes | The content of menu. |
-| target | [TargetInfo](arkts-arkui-uicontext-targetinfo-i.md) | Yes | The target of menu. |
+| target | [TargetInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes | The target of menu. |
 | options | MenuOptions | No | Options. |
 
 **Return value:**
@@ -425,7 +425,7 @@ Open popup with frameNode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | Yes | The content of popup. |
-| target | [TargetInfo](arkts-arkui-uicontext-targetinfo-i.md) | Yes | The target of popup. |
+| target | [TargetInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes | The target of popup. |
 | options | PopupCommonOptions | No | Options. |
 
 **Return value:**

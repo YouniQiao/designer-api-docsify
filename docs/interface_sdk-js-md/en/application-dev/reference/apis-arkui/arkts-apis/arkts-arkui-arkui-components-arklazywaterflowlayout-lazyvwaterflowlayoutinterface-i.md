@@ -38,5 +38,5 @@ Construct the lazy vertical waterflow attribute.
 
 | Type | Description |
 | --- | --- |
-| [LazyVWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-c.md) |  |
+| [LazyVWaterFlowLayoutAttribute](../../apis-default/arkts-apis/arkts-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) |  |
 

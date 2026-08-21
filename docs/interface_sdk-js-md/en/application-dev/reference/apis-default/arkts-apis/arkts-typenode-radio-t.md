@@ -16,5 +16,5 @@ Define the FrameNode type for Radio.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** RadioFrameNode
+**Property type:** [RadioFrameNode](arkts-typenode-radioframenode-c.md)
 

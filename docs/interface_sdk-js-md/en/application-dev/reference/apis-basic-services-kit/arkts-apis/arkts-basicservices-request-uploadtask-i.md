@@ -279,45 +279,7 @@ Unsubscribes from upload completion or failure events.
 
 **Examples**
 
-```TypeScript
-let upCompleteCallback1 = (taskStates: Array<request.TaskState>) => {
-  console.info('Upload delete complete notification.');
-  for (let i = 0; i < taskStates.length; i++) {
-    console.info('taskState:' + JSON.stringify(taskStates[i]));
-  }
-};
-let upCompleteCallback2 = (taskStates: Array<request.TaskState>) => {
-  console.info('Upload delete complete notification.');
-  for (let i = 0; i < taskStates.length; i++) {
-    console.info('taskState:' + JSON.stringify(taskStates[i]));
-  }
-};
-uploadTask.on('complete', upCompleteCallback1);
-uploadTask.on('complete', upCompleteCallback2);
-// Unsubscribe from headerCallback1.
-uploadTask.off('complete', upCompleteCallback1);
-// Unsubscribe from all callbacks of the upload completion events.
-uploadTask.off('complete');
-
-let upFailCallback1 = (taskStates: Array<request.TaskState>) => {
-  console.info('Upload delete fail notification.');
-  for (let i = 0; i < taskStates.length; i++) {
-    console.info('taskState:' + JSON.stringify(taskStates[i]));
-  }
-};
-let upFailCallback2 = (taskStates: Array<request.TaskState>) => {
-  console.info('Upload delete fail notification.');
-  for (let i = 0; i < taskStates.length; i++) {
-    console.info('taskState:' + JSON.stringify(taskStates[i]));
-  }
-};
-uploadTask.on('fail', upFailCallback1);
-uploadTask.on('fail', upFailCallback2);
-// Unsubscribe from headerCallback1.
-uploadTask.off('fail', upFailCallback1);
-// Unsubscribe from all callbacks of the upload failure events.
-uploadTask.off('fail');
-```
+See off_complete
 
 ## off('headerReceive')
 
@@ -561,21 +523,7 @@ Subscribes to upload completion or failure events. This API uses an asynchronous
 
 **Examples**
 
-```TypeScript
-let upCompleteCallback = (taskStates: Array<request.TaskState>) => {
-  for (let i = 0; i < taskStates.length; i++) {
-    console.info("upOnComplete taskState:" + JSON.stringify(taskStates[i]));
-  }
-};
-uploadTask.on('complete', upCompleteCallback);
-
-let upFailCallback = (taskStates: Array<request.TaskState>) => {
-  for (let i = 0; i < taskStates.length; i++) {
-    console.info("upOnFail taskState:" + JSON.stringify(taskStates[i]));
-  }
-};
-uploadTask.on('fail', upFailCallback);
-```
+See on_complete
 
 ## on('headerReceive')
 

@@ -1,6 +1,6 @@
 # Uint8ClampedArray
 
-A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-n.md).
+A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-collections.md).
 
 > **NOTE：**
 > 

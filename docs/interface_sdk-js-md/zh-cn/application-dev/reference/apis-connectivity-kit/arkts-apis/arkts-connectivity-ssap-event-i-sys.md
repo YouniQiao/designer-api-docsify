@@ -1,6 +1,6 @@
 # Event（系统接口）
 
-SSAP事件。
+表示服务的事件。
 
 **起始版本：** 26.0.0
 
@@ -22,7 +22,7 @@ import { ssap } from '@kit.ConnectivityKit';
 eventUuid: string
 ```
 
-事件实例的UUID。 长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。 <br>不允许使用NearLink标准UUID。
+表示事件UUID。数据格式同serviceUuid。
 
 **类型：** string
 
@@ -42,7 +42,7 @@ eventUuid: string
 parameter?: ArrayBuffer
 ```
 
-事件实例的参数。
+表示事件的参数，数据格式由具体服务定义。若未配置则默认不携带该字段。
 
 **类型：** ArrayBuffer
 
@@ -62,7 +62,7 @@ parameter?: ArrayBuffer
 serviceUuid: string
 ```
 
-事件所属服务实例的UUID 长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。 <br>禁止使用星闪标准服务UUID。
+星闪服务UUID，个字符，由32个十六进制数字和4个连字符（-）组成，例如： FFFFFFFF-1234-5678-ABCD-000000001234，表示一个128位标识符。 不允许使用星闪标准UUID。 长度必须为36。
 
 **类型：** string
 

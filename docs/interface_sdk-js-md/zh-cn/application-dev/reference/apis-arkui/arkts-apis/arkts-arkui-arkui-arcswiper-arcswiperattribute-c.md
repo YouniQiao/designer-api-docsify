@@ -44,7 +44,7 @@ customContentTransition(transition: Optional<SwiperContentAnimatedTransition>): 
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+| [ArcSwiperAttribute](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcswiperattribute-i.md) |  |
 
 ## digitalCrownSensitivity
 
@@ -72,7 +72,7 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): ArcSwiperAttri
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+| [ArcSwiperAttribute](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcswiperattribute-i.md) |  |
 
 ## disableSwipe
 
@@ -100,7 +100,7 @@ disableSwipe(disabled: Optional<boolean>): ArcSwiperAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+| [ArcSwiperAttribute](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcswiperattribute-i.md) |  |
 
 ## disableTransitionAnimation
 
@@ -128,7 +128,7 @@ disableTransitionAnimation(disabled: Optional<boolean>): ArcSwiperAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+| [ArcSwiperAttribute](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcswiperattribute-i.md) |  |
 
 ## duration
 
@@ -156,7 +156,7 @@ duration(duration: Optional<number>): ArcSwiperAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+| [ArcSwiperAttribute](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcswiperattribute-i.md) |  |
 
 ## effectMode
 
@@ -164,7 +164,7 @@ duration(duration: Optional<number>): ArcSwiperAttribute
 effectMode(edgeEffect: Optional<EdgeEffect>): ArcSwiperAttribute
 ```
 
-设置边缘滑动效果。目前支持的滑动效果参见EdgeEffect的枚举说明。 通过[ArcSwiperController](arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md)的showNext、showPrevious、finishAnimation接口控制翻页时，回弹效果不生效。
+设置边缘滑动效果。目前支持的滑动效果参见EdgeEffect的枚举说明。 通过[ArcSwiperController](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcswipercontroller-c.md)的showNext、showPrevious、finishAnimation接口控制翻页时，回弹效果不生效。
 
 **起始版本：** 18
 
@@ -184,7 +184,7 @@ effectMode(edgeEffect: Optional<EdgeEffect>): ArcSwiperAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+| [ArcSwiperAttribute](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcswiperattribute-i.md) |  |
 
 ## index
 
@@ -212,7 +212,7 @@ index(index: Optional<number>): ArcSwiperAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+| [ArcSwiperAttribute](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcswiperattribute-i.md) |  |
 
 ## indicator
 
@@ -234,13 +234,13 @@ indicator(style: Optional<ArcDotIndicator | boolean>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | Optional&lt;[ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) \| boolean&gt; | 是 | 弧形圆点指示器样式。<br/> - ArcDotIndicator：弧形圆点指示器属性及功能。<br/> - boolean：是否启用弧形圆点指示器。设置为true启用，false不启用。<br/> 默认值：true<br/> 默认类型：ArcDotIndicator |
+| style | Optional&lt;[ArcDotIndicator](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcdotindicator-c.md) \| boolean&gt; | 是 | 弧形圆点指示器样式。<br/> - ArcDotIndicator：弧形圆点指示器属性及功能。<br/> - boolean：是否启用弧形圆点指示器。设置为true启用，false不启用。<br/> 默认值：true<br/> 默认类型：ArcDotIndicator |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+| [ArcSwiperAttribute](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcswiperattribute-i.md) |  |
 
 ## onAnimationEnd
 
@@ -264,13 +264,13 @@ onAnimationEnd(handler: Optional<AnimationEndHandler>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | Optional&lt;[AnimationEndHandler](arkts-arkui-animationendhandler-t.md)&gt; | 是 | 切换动画结束时触发该回调。 |
+| handler | Optional&lt;[AnimationEndHandler](../../apis-default/arkts-apis/arkts-animationendhandler-t.md)&gt; | 是 | 切换动画结束时触发该回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+| [ArcSwiperAttribute](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcswiperattribute-i.md) |  |
 
 ## onAnimationStart
 
@@ -292,13 +292,13 @@ onAnimationStart(handler: Optional<AnimationStartHandler>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | Optional&lt;[AnimationStartHandler](arkts-arkui-animationstarthandler-t.md)&gt; | 是 | 切换动画开始时的回调。 |
+| handler | Optional&lt;[AnimationStartHandler](../../apis-default/arkts-apis/arkts-animationstarthandler-t.md)&gt; | 是 | 切换动画开始时的回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+| [ArcSwiperAttribute](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcswiperattribute-i.md) |  |
 
 ## onChange
 
@@ -322,13 +322,13 @@ ArcSwiper组件结合[LazyForEach](../../../ui/rendering-control/arkts-rendering
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | Optional&lt;[IndexChangedHandler](arkts-arkui-indexchangedhandler-t.md)&gt; | 是 | 当前显示元素的索引回调。 |
+| handler | Optional&lt;[IndexChangedHandler](../../apis-default/arkts-apis/arkts-indexchangedhandler-t.md)&gt; | 是 | 当前显示元素的索引回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+| [ArcSwiperAttribute](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcswiperattribute-i.md) |  |
 
 ## onGestureSwipe
 
@@ -350,13 +350,13 @@ onGestureSwipe(handler: Optional<GestureSwipeHandler>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | Optional&lt;[GestureSwipeHandler](arkts-arkui-gestureswipehandler-t.md)&gt; | 是 | 在页面跟手滑动过程中，逐帧触发该回调。 |
+| handler | Optional&lt;[GestureSwipeHandler](../../apis-default/arkts-apis/arkts-gestureswipehandler-t.md)&gt; | 是 | 在页面跟手滑动过程中，逐帧触发该回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+| [ArcSwiperAttribute](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcswiperattribute-i.md) |  |
 
 ## vertical
 
@@ -384,5 +384,5 @@ vertical(isVertical: Optional<boolean>): ArcSwiperAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+| [ArcSwiperAttribute](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcswiperattribute-i.md) |  |
 

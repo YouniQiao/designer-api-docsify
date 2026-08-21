@@ -34,7 +34,7 @@ Reads file data. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | fd | number | Yes | FD of the file. |
 | buffer | ArrayBuffer | Yes | Buffer used to store the file data read. |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | The options are as follows:<br>- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length.<br>**Since:** 11 |
+| options | [ReadOptions](../../apis-default/arkts-apis/arkts-file-fs-readoptions-i.md) | No | The options are as follows:<br>- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length.<br>**Since:** 11 |
 
 **Return value:**
 
@@ -124,7 +124,7 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 | --- | --- | --- | --- |
 | fd | number | Yes | FD of the file. |
 | buffer | ArrayBuffer | Yes | Buffer used to store the file data read. |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | Yes | The options are as follows:<br>- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length.<br>**Since:** 11 |
+| options | [ReadOptions](../../apis-default/arkts-apis/arkts-file-fs-readoptions-i.md) | Yes | The options are as follows:<br>- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length.<br>**Since:** 11 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the length of the data read, in bytes. |
 
 **Error codes:**

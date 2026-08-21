@@ -16,5 +16,5 @@ Represents a FrameNode of the **Column** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** TypedFrameNode<ColumnInterface, ColumnAttribute>
+**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;ColumnInterface, ColumnAttribute&gt;
 

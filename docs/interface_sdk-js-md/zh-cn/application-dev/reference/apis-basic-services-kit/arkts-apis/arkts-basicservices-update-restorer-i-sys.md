@@ -129,7 +129,7 @@ factoryReset(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收恢复出厂结果。回调参数包括err（错误对象，成功时为null，失败时为错误对象）。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收恢复出厂结果。回调参数包括err（错误对象，成功时为null，失败时为错误对象）。 |
 
 **错误码：**
 

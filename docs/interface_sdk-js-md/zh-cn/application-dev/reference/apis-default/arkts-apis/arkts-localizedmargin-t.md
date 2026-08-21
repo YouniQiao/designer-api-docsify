@@ -18,5 +18,5 @@ export type LocalizedMargin = LocalizedPadding
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** LocalizedPadding
+**属性类型：** [LocalizedPadding](arkts-units-localizedpadding-i.md)
 

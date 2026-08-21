@@ -1,6 +1,6 @@
 # Session
 
-Session represent a connection session to one of the SEs available on the device. These objects can be used to get a communication channel with an applet in the SE. This channel can be the basic channel or a logical channel.
+A **Session** instance indicates a session created on an SE **Reader** instance. You can use [Reader.openSession](arkts-connectivity-omapi-reader-i.md#opensession) to obtain a **Session** instance.
 
 **Since:** 10
 
@@ -20,7 +20,7 @@ import { omapi } from '@kit.ConnectivityKit';
 close(): void
 ```
 
-Close the connection with the SE. This will close any channels opened by this application with this SE.
+Closes the session with the SE. All channels opened by this session will be closed.
 
 **Since:** 10
 
@@ -58,7 +58,7 @@ try {
 closeChannels(): void
 ```
 
-Close any channels opened on this session.
+Closes all channels opened on this session.
 
 **Since:** 10
 
@@ -96,7 +96,7 @@ try {
 getATR(): number[]
 ```
 
-Get the ATR of this SE. A empty array SHALL be returned if the ATR for this SE is not available.
+Obtains the Answer to Reset (ATR) of this SE. If the ATR of this SE is not available, an empty array will be returned.
 
 **Since:** 10
 
@@ -108,7 +108,7 @@ Get the ATR of this SE. A empty array SHALL be returned if the ATR for this SE i
 
 | Type | Description |
 | --- | --- |
-| number[] | The ATR as a number array or empty array. |
+| number[] | ATR if the SE has an available ATR; an empty array otherwise. |
 
 **Error codes:**
 
@@ -141,7 +141,7 @@ try {
 getReader(): Reader
 ```
 
-Get the reader that provides this session.
+Obtains the reader that provides this session.
 
 **Since:** 10
 
@@ -153,7 +153,7 @@ Get the reader that provides this session.
 
 | Type | Description |
 | --- | --- |
-| [Reader](arkts-connectivity-omapi-reader-i.md) | The Reader object. |
+| [Reader](arkts-connectivity-omapi-reader-i.md) | Reader instance obtained. |
 
 **Error codes:**
 
@@ -241,7 +241,7 @@ try {
 openBasicChannel(aid: number[]): Promise<Channel>
 ```
 
-This method is provided to ease the development of mobile applications and for backward compatibility with existing applications. This method is equivalent to openBasicChannel(aid, P2=0x00).
+Opens a basic channel, as defined in ISO/IEC 7816-4. If the SE cannot provide the basic channel or the application does not have the permission to access the SE, null is returned. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -253,13 +253,13 @@ This method is provided to ease the development of mobile applications and for b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aid | number[] | Yes | The AID of the applet to be selected on this channel, as a byte array, or Null if no applet is to be selected. |
+| aid | number[] | Yes | AID of the Applet to be selected on this channel as a byte array, or an empty array if no Applet is to be selected. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | An instance of channel if available. Null if the SE is unable to provide. |
+| Promise&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Promise used to return the basic channel instance obtained. |
 
 **Error codes:**
 
@@ -307,7 +307,7 @@ function secureElementDemo() {
 openBasicChannel(aid: number[], callback: AsyncCallback<Channel>): void
 ```
 
-This method is provided to ease the development of mobile applications and for backward compatibility with existing applications. This method is equivalent to openBasicChannel(aid, P2=0x00).
+Opens a basic channel, as defined in ISO/IEC 7816-4. If the SE cannot provide the basic channel or the application does not have the permission to access the SE, null is returned. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -319,8 +319,8 @@ This method is provided to ease the development of mobile applications and for b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aid | number[] | Yes | The AID of the applet to be selected on this channel, as a byte array, or Null if no applet is to be selected. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | The callback to return the Channel object. Null if the SE is unable to provide. |
+| aid | number[] | Yes | AID of the Applet to be selected on this channel as a byte array, or an empty array if no Applet is to be selected. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | Callback used to return the basic channel instance obtained. |
 
 **Error codes:**
 
@@ -370,7 +370,7 @@ function secureElementDemo() {
 openBasicChannel(aid: number[], p2: number): Promise<Channel>
 ```
 
-Get access to the basic channel, as defined in [ISO 7816-4] (the one that has number 0). The obtained object is an instance of the channel class. Once this channel has been opened by a device application, it is considered as ‘locked’ by this device application, and other calls to this method SHALL return Null, until the channel is closed. Some SE plug-ins, such as those handling UICC, may prevent the use of the Basic Channel. In these cases, a Null value SHALL be returned. P2 is normally 0x00. The device SHOULD allow any value for P2 and SHALL allow the following values: 0x00, 0x04, 0x08, 0x0C (as defined in [ISO 7816-4]).
+Opens a basic channel, as defined in ISO/IEC 7816-4. If the SE cannot provide the basic channel or the application does not have the permission to access the SE, null is returned. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -382,14 +382,14 @@ Get access to the basic channel, as defined in [ISO 7816-4] (the one that has nu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aid | number[] | Yes | The AID of the applet to be selected on this channel, as a byte array, or Null if no applet is to be selected. |
-| p2 | number | Yes | The P2 parameter of the SELECT APDU executed on this channel. |
+| aid | number[] | Yes | AID of the Applet to be selected on this channel as a byte array, or an empty array if no Applet is to be selected. |
+| p2 | number | Yes | P2 parameter of the **SELECT APDU** command executed on this channel. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | An instance of channel if available. Null if the SE is unable to provide. |
+| Promise&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Promise used to return the basic channel instance obtained. |
 
 **Error codes:**
 
@@ -438,7 +438,7 @@ function secureElementDemo() {
 openBasicChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void
 ```
 
-Get access to the basic channel, as defined in [ISO 7816-4] (the one that has number 0). The obtained object is an instance of the channel class. Once this channel has been opened by a device application, it is considered as ‘locked’ by this device application, and other calls to this method SHALL return Null, until the channel is closed. Some SE plug-ins, such as those handling UICC, may prevent the use of the Basic Channel. In these cases, a Null value SHALL be returned. P2 is normally 0x00. The device SHOULD allow any value for P2 and SHALL allow the following values: 0x00, 0x04, 0x08, 0x0C (as defined in [ISO 7816-4]).
+Opens a basic channel, as defined in ISO/IEC 7816-4. If the SE cannot provide the basic channel or the application does not have the permission to access the SE, null is returned. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -450,9 +450,9 @@ Get access to the basic channel, as defined in [ISO 7816-4] (the one that has nu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aid | number[] | Yes | The AID of the applet to be selected on this channel, as a byte array, or Null if no applet is to be selected. |
-| p2 | number | Yes | The P2 parameter of the SELECT APDU executed on this channel. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | The callback to return the Channel object. Null if the SE is unable to provide. |
+| aid | number[] | Yes | AID of the Applet to be selected on this channel as a byte array, or an empty array if no Applet is to be selected. |
+| p2 | number | Yes | P2 parameter of the **SELECT APDU** command executed on this channel. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | Callback used to return the basic channel instance obtained. |
 
 **Error codes:**
 
@@ -503,7 +503,7 @@ function secureElementDemo() {
 openLogicalChannel(aid: number[]): Promise<Channel>
 ```
 
-This method is provided to ease the development of mobile applications and for backward compatibility with existing applications. This method is equivalent to openLogicalChannel(aid, P2=0x00).
+Opens a logical channel, as defined in ISO/IEC 7816-4. If the SE cannot provide the logical channel or the application does not have the permission to access the SE, null is returned. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -515,13 +515,13 @@ This method is provided to ease the development of mobile applications and for b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aid | number[] | Yes | The AID of the applet to be selected on this channel, as a byte array. |
+| aid | number[] | Yes | AID of the Applet to be selected on this channel as a byte array, or an empty array if no Applet is to be selected. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | An instance of channel if available. Null if the SE is unable to provide. A new logical channel or is unable to retrieve Access Control rules due to the lack of an available logical channel. |
+| Promise&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Promise used to return the logical channel instance obtained. |
 
 **Error codes:**
 
@@ -569,7 +569,7 @@ function secureElementDemo() {
 openLogicalChannel(aid: number[], callback: AsyncCallback<Channel>): void
 ```
 
-This method is provided to ease the development of mobile applications and for backward compatibility with existing applications. This method is equivalent to openLogicalChannel(aid, P2=0x00).
+Opens a logical channel, as defined in ISO/IEC 7816-4. If the SE cannot provide the logical channel or the application does not have the permission to access the SE, null is returned. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -581,8 +581,8 @@ This method is provided to ease the development of mobile applications and for b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aid | number[] | Yes | The AID of the applet to be selected on this channel, as a byte array. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | The callback to return the Channel object. Null if the SE is unable to provide. A new logical channel or is unable to retrieve Access Control rules due to the lack of an available logical channel. |
+| aid | number[] | Yes | AID of the Applet to be selected on this channel as a byte array, or an empty array if no Applet is to be selected. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | Callback used to return the logical channel instance obtained. |
 
 **Error codes:**
 
@@ -632,7 +632,7 @@ function secureElementDemo() {
 openLogicalChannel(aid: number[], p2: number): Promise<Channel>
 ```
 
-Open a logical channel with the SE, selecting the applet represented by the given AID (when the AID is not Null and the length of the AID is not 0). If the length of the AID is 0, the method will select the Issuer Security Domain of the SE by sending a SELECT command with 0 length AID as defined in [GPCS]. If the AID is Null, the method SHALL only send a MANAGE CHANNEL Open and SHALL NOT send a SELECT command. In this case, the default applet associated to the logical channel will be selected by default. P2 is normally 0x00. The device SHOULD allow any value for P2 and SHALL allow the following values: 0x00, 0x04, 0x08, 0x0C (as defined in [ISO 7816-4]).
+Opens a logical channel, as defined in ISO/IEC 7816-4. If the SE cannot provide the logical channel or the application does not have the permission to access the SE, null is returned. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -644,14 +644,14 @@ Open a logical channel with the SE, selecting the applet represented by the give
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aid | number[] | Yes | The AID of the applet to be selected on this channel, as a byte array. |
-| p2 | number | Yes | The P2 parameter of the SELECT APDU executed on this channel. |
+| aid | number[] | Yes | AID of the Applet to be selected on this channel as a byte array, or an empty array if no Applet is to be selected. |
+| p2 | number | Yes | P2 parameter of the **SELECT APDU** command executed on this channel. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | An instance of channel if available. Null if the SE is unable to provide. A new logical channel or is unable to retrieve Access Control rules due to the lack of an available logical channel. |
+| Promise&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Promise used to return the logical channel instance obtained. |
 
 **Error codes:**
 
@@ -700,7 +700,7 @@ function secureElementDemo() {
 openLogicalChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void
 ```
 
-Open a logical channel with the SE, selecting the applet represented by the given AID (when the AID is not Null and the length of the AID is not 0). If the length of the AID is 0, the method will select the Issuer Security Domain of the SE by sending a SELECT command with 0 length AID as defined in [GPCS]. If the AID is Null, the method SHALL only send a MANAGE CHANNEL Open and SHALL NOT send a SELECT command. In this case, the default applet associated to the logical channel will be selected by default. P2 is normally 0x00. The device SHOULD allow any value for P2 and SHALL allow the following values: 0x00, 0x04, 0x08, 0x0C (as defined in [ISO 7816-4]).
+Opens a logical channel, as defined in ISO/IEC 7816-4. If the SE cannot provide the logical channel or the application does not have the permission to access the SE, null is returned. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -712,9 +712,9 @@ Open a logical channel with the SE, selecting the applet represented by the give
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aid | number[] | Yes | The AID of the applet to be selected on this channel, as a byte array. |
-| p2 | number | Yes | The P2 parameter of the SELECT APDU executed on this channel. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | The callback to return the instance of channel. Null if the SE is unable to provide. |
+| aid | number[] | Yes | AID of the Applet to be selected on this channel as a byte array, or an empty array if no Applet is to be selected. |
+| p2 | number | Yes | P2 parameter of the **SELECT APDU** command executed on this channel. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | Callback used to return the logical channel instance obtained. |
 
 **Error codes:**
 

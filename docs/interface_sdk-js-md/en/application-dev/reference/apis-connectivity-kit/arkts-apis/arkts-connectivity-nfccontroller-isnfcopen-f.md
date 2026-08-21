@@ -12,11 +12,11 @@ import { nfcController } from '@kit.ConnectivityKit';
 function isNfcOpen(): boolean
 ```
 
-Checks whether NFC is enabled.
+Checks whether NFC is open.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-nfcController-function isNfcOpen(): boolean--><!--Device-nfcController-function isNfcOpen(): boolean-End-->
 
@@ -26,5 +26,5 @@ Checks whether NFC is enabled.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns **true** if NFC is open; returns **false** otherwise. |
 

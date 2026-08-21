@@ -16,7 +16,7 @@ function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, drag
 
 > **说明：**
 > 
-> - 从API version 11开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的 &gt; [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI &gt; 上下文关联的[DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md)对象。
+> - 从API version 11开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [getDragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI &gt; 上下文关联的[DragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-dragcontroller-c.md)对象。
 > 
 > - 建议控制传递的拖拽背板数量，传递过多容易导致拖起的效率问题。
 
@@ -56,7 +56,7 @@ function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, drag
 
 **示例**
 
-推荐通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的[getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI上下文关联的DragController对象。
+推荐通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的[getDragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI上下文关联的DragController对象。
 
 ```TypeScript
 import { dragController } from '@kit.ArkUI';

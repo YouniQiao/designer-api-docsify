@@ -101,7 +101,7 @@ function getLocalCapabilities(callback: AsyncCallback<FileData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | 是 | 回调函数，返回包含本地能力文件描述符的FileData。 返回的文件为临时文件，关闭后将自动删除。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | 是 | 回调函数，返回包含本地能力文件描述符的FileData。 返回的文件为临时文件，关闭后将自动删除。 |
 
 **错误码：**
 

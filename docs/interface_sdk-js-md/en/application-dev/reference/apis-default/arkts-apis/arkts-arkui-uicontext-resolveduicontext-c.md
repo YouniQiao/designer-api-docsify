@@ -2,7 +2,7 @@
 
 Defines the result of UIContext.resolveUIContext. This class is a subclass of UIContext and additionally provides the strategy used to obtain this UIContext. @extends UIContext
 
-**Inheritance/Implementation:** ResolvedUIContext extends [UIContext](arkts-arkui-uicontext-uicontext-c.md)
+**Inheritance/Implementation:** ResolvedUIContext extends [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)
 
 **Since:** 23
 
@@ -25,7 +25,7 @@ strategy: ResolveStrategy
 
 Resolving strategy of the UIContext.
 
-**Type:** [ResolveStrategy](arkts-arkui-uicontext-resolvestrategy-e.md)
+**Type:** [ResolveStrategy](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-resolvestrategy-e.md)
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # PropertyWriteRequest
 
-Describes the parameters of the SSAP client's property write request.
+Define a client property write request.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { ssap } from '@kit.ConnectivityKit';
 address: string
 ```
 
-Indicates the device address. The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+Client device address. The address format is **11:22:33:AA:BB:FF**.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ Indicates the device address. The length must be 17, The value consists of hexad
 propertyUuid: string
 ```
 
-The UUID of the Property instance which client request to write. The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. <br>NearLink standard UUIDs are not allowed.
+Property UUID, in the same format as **serviceUuid**.
 
 **Type:** string
 
@@ -56,7 +56,7 @@ The UUID of the Property instance which client request to write. The length must
 requestId: int
 ```
 
-The request ID.
+Write request ID of the client. This ID must be carried in the response returned by the server. The value range is [0, 65535].
 
 **Type:** int
 
@@ -74,7 +74,7 @@ The request ID.
 serviceUuid: string
 ```
 
-The UUID of the [Service](arkts-connectivity-ssap-service-i.md) instance which the property belongs to. The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. <br>NearLink standard UUIDs are not allowed.
+NearLink service UUID, which is a string of 36 characters. The value consists of 32 hexadecimal digits and four hyphens (-), for example, **FFFFFFFF-1234-5678-ABCD-000000001234**, which indicates a 128-bit ID. The value cannot be set to a standard NearLink UUID.
 
 **Type:** string
 
@@ -92,7 +92,7 @@ The UUID of the [Service](arkts-connectivity-ssap-service-i.md) instance which t
 value: ArrayBuffer
 ```
 
-Indicates the data to be written.
+Value written by the client.
 
 **Type:** ArrayBuffer
 
@@ -110,7 +110,7 @@ Indicates the data to be written.
 writeType: PropertyWriteType
 ```
 
-The write type for this request.
+Property write type of the client.
 
 **Type:** [PropertyWriteType](arkts-connectivity-ssap-propertywritetype-e.md)
 

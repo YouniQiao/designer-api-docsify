@@ -1182,7 +1182,7 @@ keyboardAvoidMode(mode: WebKeyboardAvoidMode)
 
 Sets the custom soft keyboard avoidance mode.
 
-If the keyboard avoidance mode set in **UIContext** is [KeyboardAvoidMode.RESIZE](../../apis-default/arkts-apis/arkts-arkui-uicontext-keyboardavoidmode-e.md), this API does not take effect.
+If the keyboard avoidance mode set in **UIContext** is [KeyboardAvoidMode.RESIZE](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md), this API does not take effect.
 
 **Since:** 12
 

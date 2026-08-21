@@ -16,5 +16,5 @@ ActiveStreamVolumeInfo数组。
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** Array<Readonly<ActiveStreamVolumeInfo>>
+**属性类型：** Array&lt;Readonly&lt;[ActiveStreamVolumeInfo](arkts-audio-audio-activestreamvolumeinfo-i-sys.md)&gt;&gt;
 

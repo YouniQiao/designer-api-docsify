@@ -1,6 +1,6 @@
 # RequestKeyboardReason
 
-Enumerates the reasons for requesting keyboard input.
+@brief Enumerates the reasons for requesting keyboard input.<br> <br> | Name | Value| Description | | ------------ | -- | ------------------ | | NONE | 0 | The keyboard request is triggered for no reason.| | MOUSE | 1 | The keyboard request is triggered by a mouse operation.| | TOUCH | 2 | The keyboard request is triggered by a touch operation.| | OTHER | 20 | The keyboard request is triggered by other reasons.|
 
 **Since:** 23
 
@@ -14,7 +14,7 @@ Enumerates the reasons for requesting keyboard input.
 NONE = 0
 ```
 
-The request keyboard reason is NONE.
+@brief The request keyboard reason is NONE.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ The request keyboard reason is NONE.
 MOUSE = 1
 ```
 
-The request keyboard reason is MOUSE.
+@brief The request keyboard reason is MOUSE.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ The request keyboard reason is MOUSE.
 TOUCH = 2
 ```
 
-The request keyboard reason is TOUCH.
+@brief The request keyboard reason is TOUCH.
 
 **Since:** 23
 
@@ -56,7 +56,7 @@ The request keyboard reason is TOUCH.
 OTHER = 20
 ```
 
-The request keyboard reason is OTHER.
+@brief The request keyboard reason is OTHER.
 
 **Since:** 23
 

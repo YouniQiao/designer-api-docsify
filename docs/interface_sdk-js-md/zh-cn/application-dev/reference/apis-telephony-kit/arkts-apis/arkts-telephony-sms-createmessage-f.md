@@ -26,7 +26,7 @@ function createMessage(pdu: Array<int>, specification: string, callback: AsyncCa
 | --- | --- | --- | --- |
 | pdu | Array&lt;int&gt; | 是 | 协议数据单元，从收到的信息中获取。 |
 | specification | string | 是 | 短信协议类型。<br/>- 3gpp：表示GSM/UMTS/LTE SMS。<br/>- 3gpp2：表示CDMA SMS。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ShortMessage](arkts-telephony-sms-shortmessage-i.md)&gt; | 是 | 获取短信实例的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ShortMessage](arkts-telephony-sms-shortmessage-i.md)&gt; | 是 | 获取短信实例的回调函数。 |
 
 **错误码：**
 

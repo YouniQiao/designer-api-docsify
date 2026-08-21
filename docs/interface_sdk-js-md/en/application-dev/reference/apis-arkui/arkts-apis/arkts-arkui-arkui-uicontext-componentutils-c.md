@@ -6,7 +6,7 @@ Provides API for obtaining the coordinates and size of the drawing area of a com
 > 
 > - The initial APIs of this class are supported since API version 10.
 > 
-> - In the following API examples, you must first use [getComponentUtils()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcomponentutils) in &gt; **UIContext** to obtain a **ComponentUtils** instance, and then call the APIs using the obtained instance.
+> - In the following API examples, you must first use [getComponentUtils()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentutils) in &gt; **UIContext** to obtain a **ComponentUtils** instance, and then call the APIs using the obtained instance.
 
 **Since:** 10
 

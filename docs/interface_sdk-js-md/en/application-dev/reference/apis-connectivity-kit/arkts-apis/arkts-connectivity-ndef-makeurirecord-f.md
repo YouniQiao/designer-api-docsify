@@ -12,11 +12,11 @@ import { tag } from '@kit.ConnectivityKit';
 function makeUriRecord(uri: string): NdefRecord
 ```
 
-Creates an NDEF record with uri data.
+Creates an NDEF record based on the specified URI.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ndef-function makeUriRecord(uri: string): NdefRecord--><!--Device-ndef-function makeUriRecord(uri: string): NdefRecord-End-->
 
@@ -26,13 +26,13 @@ Creates an NDEF record with uri data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Uri data for new NDEF record. |
+| uri | string | Yes | Data to write to the NDEF record. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NdefRecord](arkts-connectivity-tag-ndefrecord-i.md) | The instance of NdefRecord. |
+| [NdefRecord](arkts-connectivity-tag-ndefrecord-i.md) | NDEF record created. For details, see *NFCForum-TS-NDEF_1.0*. |
 
 **Error codes:**
 

@@ -25,7 +25,7 @@ verticalSplitRatio?: PresetSplitRatio
 
 主要区域与次要区域之间的高度比例。
 
-**类型：** [PresetSplitRatio](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-foldsplitcontainer-presetsplitratio-e.md)
+**类型：** [PresetSplitRatio](arkts-arkui-advanced-foldsplitcontainer-presetsplitratio-e.md)
 
 **起始版本：** 23
 

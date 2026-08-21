@@ -23,7 +23,7 @@ dateOptions?: DateStyleOptions
 
 Set the counter attribute of the INLINE_DATE counter component.
 
-**Type:** [DateStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-counter-datestyleoptions-c.md)
+**Type:** [DateStyleOptions](arkts-arkui-arkui-advanced-counter-datestyleoptions-c.md)
 
 **Since:** 11
 
@@ -63,7 +63,7 @@ inlineOptions?: InlineStyleOptions
 
 Set the counter attribute of the INLINE counter component.
 
-**Type:** [InlineStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-counter-inlinestyleoptions-c.md)
+**Type:** [InlineStyleOptions](arkts-arkui-arkui-advanced-counter-inlinestyleoptions-c.md)
 
 **Since:** 11
 
@@ -83,7 +83,7 @@ numberOptions?: NumberStyleOptions
 
 Set the counter attribute of the LIST or COMPACT counter component.
 
-**Type:** [NumberStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-counter-numberstyleoptions-c.md)
+**Type:** [NumberStyleOptions](arkts-arkui-arkui-advanced-counter-numberstyleoptions-c.md)
 
 **Since:** 11
 
@@ -103,7 +103,7 @@ type: CounterType
 
 Set the type of the counter component.
 
-**Type:** [CounterType](../../apis-default/arkts-apis/arkts-arkui-advanced-counter-countertype-e.md)
+**Type:** [CounterType](arkts-arkui-arkui-advanced-counter-countertype-e.md)
 
 **Since:** 11
 

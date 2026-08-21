@@ -34,7 +34,7 @@ getRdbStore支持多线程并发操作。
 | --- | --- | --- | --- |
 | context | Context | 是 | 应用的上下文。 <br>FA模型的应用Context定义见Context。 <br>Stage模型的应用Context定义见Context。 |
 | config | StoreConfig | 是 | 与此RDB存储相关的数据库配置。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;RdbStore&gt; | 是 | 回调函数。当获取RdbStore成功，err为undefined，data为RdbStore对象；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RdbStore&gt; | 是 | 回调函数。当获取RdbStore成功，err为undefined，data为RdbStore对象；否则为错误对象。 |
 
 **错误码：**
 

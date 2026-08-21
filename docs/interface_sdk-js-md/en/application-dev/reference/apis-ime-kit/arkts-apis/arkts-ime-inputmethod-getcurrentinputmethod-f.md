@@ -17,7 +17,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function getCurrentInputMethod(): InputMethodProperty
 ```
 
-Get current input method
+@brief Obtains the current input method. This API returns the result synchronously.
 
 **Since:** 23
 
@@ -29,7 +29,7 @@ Get current input method
 
 | Type | Description |
 | --- | --- |
-| [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | the property of current inputmethod. |
+| [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | InputmethodProperty** instance of the current input method. |
 
 **Examples**
 

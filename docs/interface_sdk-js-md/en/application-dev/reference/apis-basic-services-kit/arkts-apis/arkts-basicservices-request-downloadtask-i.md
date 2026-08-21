@@ -635,61 +635,7 @@ Unsubscribes from download events.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // Replace the URL with the HTTP address of the real server.
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    let completeCallback1 = () => {
-      console.info('Download delete complete notification.');
-    };
-    let completeCallback2 = () => {
-      console.info('Download delete complete notification.');
-    };
-    downloadTask.on('complete', completeCallback1);
-    downloadTask.on('complete', completeCallback2);
-    // Unsubscribe from completeCallback1.
-    downloadTask.off('complete', completeCallback1);
-    // Unsubscribe from all callbacks of the download completion events.
-    downloadTask.off('complete');
-
-    let pauseCallback1 = () => {
-      console.info('Download delete pause notification.');
-    };
-    let pauseCallback2 = () => {
-      console.info('Download delete pause notification.');
-    };
-    downloadTask.on('pause', pauseCallback1);
-    downloadTask.on('pause', pauseCallback2);
-    // Unsubscribe from pauseCallback1.
-    downloadTask.off('pause', pauseCallback1);
-    // Unsubscribe from all callbacks of the download pause events.
-    downloadTask.off('pause');
-
-    let removeCallback1 = () => {
-      console.info('Download delete remove notification.');
-    };
-    let removeCallback2 = () => {
-      console.info('Download delete remove notification.');
-    };
-    downloadTask.on('remove', removeCallback1);
-    downloadTask.on('remove', removeCallback2);
-    // Unsubscribe from removeCallback1.
-    downloadTask.off('remove', removeCallback1);
-    // Unsubscribe from all callbacks of the download removal events.
-    downloadTask.off('remove');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
+See off_complete
 
 ## off('progress')
 
@@ -779,61 +725,7 @@ Unsubscribes from download events.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // Replace the URL with the HTTP address of the real server.
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    let completeCallback1 = () => {
-      console.info('Download delete complete notification.');
-    };
-    let completeCallback2 = () => {
-      console.info('Download delete complete notification.');
-    };
-    downloadTask.on('complete', completeCallback1);
-    downloadTask.on('complete', completeCallback2);
-    // Unsubscribe from completeCallback1.
-    downloadTask.off('complete', completeCallback1);
-    // Unsubscribe from all callbacks of the download completion events.
-    downloadTask.off('complete');
-
-    let pauseCallback1 = () => {
-      console.info('Download delete pause notification.');
-    };
-    let pauseCallback2 = () => {
-      console.info('Download delete pause notification.');
-    };
-    downloadTask.on('pause', pauseCallback1);
-    downloadTask.on('pause', pauseCallback2);
-    // Unsubscribe from pauseCallback1.
-    downloadTask.off('pause', pauseCallback1);
-    // Unsubscribe from all callbacks of the download pause events.
-    downloadTask.off('pause');
-
-    let removeCallback1 = () => {
-      console.info('Download delete remove notification.');
-    };
-    let removeCallback2 = () => {
-      console.info('Download delete remove notification.');
-    };
-    downloadTask.on('remove', removeCallback1);
-    downloadTask.on('remove', removeCallback2);
-    // Unsubscribe from removeCallback1.
-    downloadTask.off('remove', removeCallback1);
-    // Unsubscribe from all callbacks of the download removal events.
-    downloadTask.off('remove');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
+See off_complete
 
 ## onComplete
 
@@ -1076,37 +968,7 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // Replace the URL with the HTTP address of the real server.
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    let completeCallback = () => {
-      console.info('Download task completed.');
-    };
-    downloadTask.on('complete', completeCallback);
-
-    let pauseCallback = () => {
-      console.info('Download task pause.');
-    };
-    downloadTask.on('pause', pauseCallback);
-
-    let removeCallback = () => {
-      console.info('Download task remove.');
-    };
-    downloadTask.on('remove', removeCallback);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
+See on_complete
 
 ## on('progress')
 
@@ -1192,37 +1054,7 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // Replace the URL with the HTTP address of the real server.
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    let completeCallback = () => {
-      console.info('Download task completed.');
-    };
-    downloadTask.on('complete', completeCallback);
-
-    let pauseCallback = () => {
-      console.info('Download task pause.');
-    };
-    downloadTask.on('pause', pauseCallback);
-
-    let removeCallback = () => {
-      console.info('Download task remove.');
-    };
-    downloadTask.on('remove', removeCallback);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
+See on_complete
 
 ## pause
 

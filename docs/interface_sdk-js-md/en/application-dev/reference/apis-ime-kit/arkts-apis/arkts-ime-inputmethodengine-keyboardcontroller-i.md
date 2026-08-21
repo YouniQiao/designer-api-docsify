@@ -1,6 +1,6 @@
 # KeyboardController
 
-In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
+@brief You must first use on('inputStart') to obtain a **KeyboardController** instance, and then use this instance to call the following APIs.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 exitCurrentInputType(callback: AsyncCallback<void>): void
 ```
 
-Exits this input type. This API can be called only by the preconfigured default input method. This API uses an asynchronous callback to return the result.
+@brief Exits this input type. This API can be called only by the preconfigured default input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -61,7 +61,7 @@ keyboardController.exitCurrentInputType((err: BusinessError) => {
 exitCurrentInputType(): Promise<void>
 ```
 
-Exits this input type. This API can be called only by the preconfigured default input method. This API uses a promise to return the result.
+@brief Exits this input type. This API can be called only by the preconfigured default input method. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -100,7 +100,7 @@ keyboardController.exitCurrentInputType().then(() => {
 hide(callback: AsyncCallback<void>): void
 ```
 
-Hides the keyboard. This API uses an asynchronous callback to return the result.
+@brief Hides the keyboard. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -140,7 +140,7 @@ keyboardController.hide((err: BusinessError) => {
 hide(): Promise<void>
 ```
 
-Hides the keyboard. This API uses a promise to return the result.
+@brief Hides the keyboard. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -178,7 +178,7 @@ keyboardController.hide().then(() => {
 hideKeyboard(callback: AsyncCallback<void>): void
 ```
 
-Hides the keyboard. This API uses an asynchronous callback to return the result.
+@brief Hides the keyboard. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -216,7 +216,7 @@ keyboardController.hideKeyboard((err: BusinessError) => {
 hideKeyboard(): Promise<void>
 ```
 
-Hides the keyboard. This API uses a promise to return the result.
+@brief Hides the keyboard. This API uses a promise to return the result.
 
 **Since:** 8
 

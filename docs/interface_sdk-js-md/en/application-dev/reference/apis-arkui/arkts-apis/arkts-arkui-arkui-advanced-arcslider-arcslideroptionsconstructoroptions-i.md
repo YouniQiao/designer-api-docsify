@@ -44,11 +44,11 @@ layoutOptions?: ArcSliderLayoutOptions
 
 Style of the arc slider.
 
-Default value: default values of all properties of [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
+Default value: default values of all properties of [ArcSliderStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
 
 @Trace
 
-**Type:** [ArcSliderLayoutOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md)
+**Type:** [ArcSliderLayoutOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md)
 
 **Since:** 18
 
@@ -70,7 +70,7 @@ Default value: If this parameter is not provided, no callback will be invoked.
 
 @Trace
 
-**Type:** [ArcSliderChangeHandler](arkts-arkui-arcsliderchangehandler-t.md)
+**Type:** [ArcSliderChangeHandler](../../apis-default/arkts-apis/arkts-arcsliderchangehandler-t.md)
 
 **Since:** 18
 
@@ -92,7 +92,7 @@ Default value: If this parameter is not provided, no callback will be invoked.
 
 @Trace
 
-**Type:** [ArcSliderEnlargeHandler](arkts-arkui-arcsliderenlargehandler-t.md)
+**Type:** [ArcSliderEnlargeHandler](../../apis-default/arkts-apis/arkts-arcsliderenlargehandler-t.md)
 
 **Since:** 18
 
@@ -114,7 +114,7 @@ Default value: If this parameter is not provided, no callback will be invoked.
 
 @Trace
 
-**Type:** [ArcSliderTouchHandler](arkts-arkui-arcslidertouchhandler-t.md)
+**Type:** [ArcSliderTouchHandler](../../apis-default/arkts-apis/arkts-arcslidertouchhandler-t.md)
 
 **Since:** 18
 
@@ -132,11 +132,11 @@ styleOptions?: ArcSliderStyleOptions
 
 Style of the arc slider.
 
-Default value: default values of all properties of [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
+Default value: default values of all properties of [ArcSliderStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
 
 @Trace
 
-**Type:** [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
+**Type:** [ArcSliderStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
 
 **Since:** 18
 
@@ -154,11 +154,11 @@ valueOptions?: ArcSliderValueOptions
 
 Style of the arc slider.
 
-Default value: default values of all properties of [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
+Default value: default values of all properties of [ArcSliderStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
 
 @Trace
 
-**Type:** [ArcSliderValueOptions](arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptions-c.md)
+**Type:** [ArcSliderValueOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcslidervalueoptions-c.md)
 
 **Since:** 18
 

@@ -28,7 +28,7 @@ function offPickupChange(callback?: Callback<PickupEvent>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PickupEvent](arkts-multimodalawareness-motion-pickupevent-e-sys.md)&gt; | 否 | 要注销的回调函数。若不填，则取消该拾起事件的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PickupEvent](arkts-multimodalawareness-motion-pickupevent-e-sys.md)&gt; | 否 | 要注销的回调函数。若不填，则取消该拾起事件的所有回调。 |
 
 **错误码：**
 

@@ -16,5 +16,5 @@ Represents a FrameNode of the **Slider** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** TypedFrameNode<SliderInterface, SliderAttribute>
+**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;SliderInterface, SliderAttribute&gt;
 

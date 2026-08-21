@@ -16,5 +16,5 @@ Define the FrameNode type for QRCode.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** QRCodeFrameNode
+**属性类型：** [QRCodeFrameNode](arkts-typenode-qrcodeframenode-c.md)
 

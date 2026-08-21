@@ -12,7 +12,7 @@ import { scan } from '@kit.ConnectivityKit';
 function stopScan(): Promise<void>
 ```
 
-Stops scanning.
+Stops NearLink scanning. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -28,7 +28,7 @@ Stops scanning.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

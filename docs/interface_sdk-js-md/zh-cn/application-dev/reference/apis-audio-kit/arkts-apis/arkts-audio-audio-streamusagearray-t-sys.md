@@ -14,5 +14,5 @@ Array of StreamUsages.
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** Array<StreamUsage>
+**属性类型：** Array&lt;[StreamUsage](arkts-audio-audio-streamusage-e.md)&gt;
 

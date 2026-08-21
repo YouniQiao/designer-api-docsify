@@ -14,5 +14,5 @@ The media description consists of key-value pairs where keys reference @MediaDes
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
-**Property type:** Record<string, Object>
+**Property type:** Record&lt;string, Object&gt;
 

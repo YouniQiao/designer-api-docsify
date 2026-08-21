@@ -12,9 +12,9 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 function onReadData(callback: Callback<DataParams>): void
 ```
 
-Subscribes to the event reported when data is read from the port.
+Subscribes to the port channel data receiving event. This API uses an asynchronous callback to return the result.
 
-This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
+The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 
@@ -28,7 +28,7 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataParams](arkts-connectivity-datatransfer-dataparams-i.md)&gt; | Yes | Callback used to listen for the port read event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataParams](arkts-connectivity-datatransfer-dataparams-i.md)&gt; | Yes | Callback used to return the parameters for data received by the port channel. |
 
 **Error codes:**
 

@@ -25,7 +25,7 @@ export declare function NodeContainer(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| controller | [NodeController](../arkts-apis/arkts-nodecontroller-c.md) | 是 | 一个NodeController对象，其用于控制NodeContainer中的节点的上树和下树，反映NodeContainer容器的生命周期。 |
+| controller | [NodeController](../../apis-arkui/arkts-apis/arkts-arkui-nodecontroller-c.md) | 是 | 一个NodeController对象，其用于控制NodeContainer中的节点的上树和下树，反映NodeContainer容器的生命周期。 |
 
 **返回值：**
 

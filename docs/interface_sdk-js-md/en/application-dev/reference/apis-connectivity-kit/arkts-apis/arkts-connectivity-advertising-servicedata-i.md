@@ -1,6 +1,6 @@
 # ServiceData
 
-Describes the service data.
+Represents the service data.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { advertising } from '@kit.ConnectivityKit';
 serviceData: ArrayBuffer
 ```
 
-Indicates the service data.
+Service data.
 
 **Type:** ArrayBuffer
 
@@ -38,7 +38,7 @@ Indicates the service data.
 serviceUuid: string
 ```
 
-Indicates the service UUID. The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.
+Service UUID. A UUID must contain 36 characters, including 32 hexadecimal digits and four hyphens (-).
 
 **Type:** string
 

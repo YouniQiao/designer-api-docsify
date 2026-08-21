@@ -31,7 +31,7 @@ import { ComposeTitleBarV2, ComposeTitleBarV2MenuItem, ComposeTitleBarV2MenuItem
 
 用于左侧头像的单个菜单项。
 
-**类型：** [ComposeTitleBarV2MenuItem](../../apis-default/arkts-apis/arkts-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)
+**类型：** [ComposeTitleBarV2MenuItem](arkts-arkui-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)
 
 **起始版本：** 26.0.0
 
@@ -52,7 +52,7 @@ import { ComposeTitleBarV2, ComposeTitleBarV2MenuItem, ComposeTitleBarV2MenuItem
 
 右侧菜单项列表。
 
-**类型：** Array&lt;[ComposeTitleBarV2MenuItem](../../apis-default/arkts-apis/arkts-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)&gt;
+**类型：** Array&lt;[ComposeTitleBarV2MenuItem](arkts-arkui-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)&gt;
 
 **起始版本：** 26.0.0
 

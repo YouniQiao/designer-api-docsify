@@ -36,7 +36,7 @@ appendChild(node: RenderNode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) | 是 | 需要添加的RenderNode。 |
+| node | [RenderNode](arkts-arkui-rendernode-c.md) | 是 | 需要添加的RenderNode。 |
 
 **错误码：**
 
@@ -233,7 +233,7 @@ struct Index {
 dispose(): void
 ```
 
-立即释放当前RenderNode。调用此方法后，RenderNode将解除与后端实体节点的引用关系，再次调用该节点的接口可能会出现crash或返回默认值。可通过 [isDisposed](../../apis-default/arkts-apis/arkts-rendernode-c.md#isdisposed)接口查询节点是否已释放。
+立即释放当前RenderNode。调用此方法后，RenderNode将解除与后端实体节点的引用关系，再次调用该节点的接口可能会出现crash或返回默认值。可通过 [isDisposed](#isdisposed)接口查询节点是否已释放。
 
 **起始版本：** 12
 
@@ -503,7 +503,7 @@ getChild(index: number): RenderNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) \| null | 子节点。若该RenderNode不包含所查询的子节点，则返回空对象null。 |
+| [RenderNode](arkts-arkui-rendernode-c.md) \| null | 子节点。若该RenderNode不包含所查询的子节点，则返回空对象null。 |
 
 **示例**
 
@@ -658,7 +658,7 @@ getFirstChild(): RenderNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) \| null | 首个子节点。若该RenderNode不包含子节点，则返回空对象null。 |
+| [RenderNode](arkts-arkui-rendernode-c.md) \| null | 首个子节点。若该RenderNode不包含子节点，则返回空对象null。 |
 
 **示例**
 
@@ -748,7 +748,7 @@ getNextSibling(): RenderNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) \| null | 当前RenderNode的下一个同级节点。若该RenderNode不包含下一个同级节点，则返回空对象null。 |
+| [RenderNode](arkts-arkui-rendernode-c.md) \| null | 当前RenderNode的下一个同级节点。若该RenderNode不包含下一个同级节点，则返回空对象null。 |
 
 **示例**
 
@@ -843,7 +843,7 @@ getPreviousSibling(): RenderNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) \| null | 当前RenderNode的上一个同级节点。若该RenderNode不包含上一个同级节点，则返回空对象null。 |
+| [RenderNode](arkts-arkui-rendernode-c.md) \| null | 当前RenderNode的上一个同级节点。若该RenderNode不包含上一个同级节点，则返回空对象null。 |
 
 **示例**
 
@@ -938,8 +938,8 @@ insertChildAfter(child: RenderNode, sibling: RenderNode | null): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| child | [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) | 是 | 需要添加的子节点。 |
-| sibling | [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) \| null | 是 | 新节点将插入到该节点之后。若该参数设置为空，则新节点将插入到首个子节点之前。 |
+| child | [RenderNode](arkts-arkui-rendernode-c.md) | 是 | 需要添加的子节点。 |
+| sibling | [RenderNode](arkts-arkui-rendernode-c.md) \| null | 是 | 新节点将插入到该节点之后。若该参数设置为空，则新节点将插入到首个子节点之前。 |
 
 **错误码：**
 
@@ -1019,7 +1019,7 @@ struct Index {
 invalidate(): void
 ```
 
-该方法会触发RenderNode的重新渲染，重新渲染时会调用[draw](../../apis-default/arkts-apis/arkts-rendernode-c.md#draw)方法。若开发者继承了RenderNode并实现了draw方法，调用invalidate()后将重新执行draw方 法中的绘制逻辑。
+该方法会触发RenderNode的重新渲染，重新渲染时会调用[draw](#draw)方法。若开发者继承了RenderNode并实现了draw方法，调用invalidate()后将重新执行draw方 法中的绘制逻辑。
 
 **起始版本：** 11
 
@@ -1218,7 +1218,7 @@ removeChild(node: RenderNode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) | 是 | 需要删除的子节点。 |
+| node | [RenderNode](arkts-arkui-rendernode-c.md) | 是 | 需要删除的子节点。 |
 
 **示例**
 

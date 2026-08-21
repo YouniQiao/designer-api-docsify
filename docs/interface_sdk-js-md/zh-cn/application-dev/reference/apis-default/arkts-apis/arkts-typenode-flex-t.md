@@ -16,5 +16,5 @@ Define the FrameNode type for Flex.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** FlexFrameNode
+**属性类型：** [FlexFrameNode](arkts-typenode-flexframenode-c.md)
 

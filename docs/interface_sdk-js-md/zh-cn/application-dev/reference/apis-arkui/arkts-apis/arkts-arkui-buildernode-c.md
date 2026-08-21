@@ -50,7 +50,7 @@ build(builder: WrappedBuilder<Args>, arg?: Object): void
 > 
 > - build的参数是值传递，需要使用[update](#update)接口进行更新。
 > 
-> - 需要操作BuilderNode中的对象时，需要保证其引用不被回收。当BuilderNode对象被虚拟机回收之后，它的FrameNode、 &gt; [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md)对象也会与后端节点解引用。即从BuilderNode中获取的FrameNode对象不对应任何一个节点。
+> - 需要操作BuilderNode中的对象时，需要保证其引用不被回收。当BuilderNode对象被虚拟机回收之后，它的FrameNode、 &gt; [RenderNode](arkts-arkui-rendernode-c.md)对象也会与后端节点解引用。即从BuilderNode中获取的FrameNode对象不对应任何一个节点。
 > 
 > - BuilderNode对象会持有实体节点的引用。如果不需要使用BuilderNode前端对象管理后端节点，可以调用[dispose](#dispose)接口，实现前后端对象的解绑。
 
@@ -91,7 +91,7 @@ build(builder: WrappedBuilder<Args>, arg: Object, options: BuildOptions): void
 > 
 > - build的参数是值传递，需要使用[update](#update)接口进行更新。
 > 
-> - 需要操作BuilderNode中的对象时，需要保证其引用不被回收。当BuilderNode对象被虚拟机回收之后，它的FrameNode、 &gt; [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md)对象也会与后端节点解引用。即从BuilderNode中获取的FrameNode对象不对应任何一个节点。
+> - 需要操作BuilderNode中的对象时，需要保证其引用不被回收。当BuilderNode对象被虚拟机回收之后，它的FrameNode、 &gt; [RenderNode](arkts-arkui-rendernode-c.md)对象也会与后端节点解引用。即从BuilderNode中获取的FrameNode对象不对应任何一个节点。
 > 
 > - BuilderNode对象会持有实体节点的引用。如果不需要使用BuilderNode前端对象管理后端节点，可以调用[dispose](#dispose)接口，实现前后端对象的解绑。
 
@@ -198,7 +198,7 @@ constructor(uiContext: UIContext, options?: RenderOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | UI上下文，获取方式可参考 UIContext获取方法。uiContext需要为一个有效的值，即UI上下文正 确，如果传入非法值或者未设置，会导致创建失败。 |
+| uiContext | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | 是 | UI上下文，获取方式可参考 UIContext获取方法。uiContext需要为一个有效的值，即UI上下文正 确，如果传入非法值或者未设置，会导致创建失败。 |
 | options | [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | 否 | BuilderNode的构造可选参数，参数用于构造节点的理想大小和节点的渲染类型。 <br>默认值：undefined |
 
 ## dispose
@@ -245,7 +245,7 @@ getFrameNode(): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) \| null | BuilderNode持有的FrameNode对象，用于将该BuilderNode作为子节点挂载到其他FrameNode上。若该BuilderNode不包含 FrameNode，则返回空对象null。 |
+| [FrameNode](arkts-arkui-framenode-c.md) \| null | BuilderNode持有的FrameNode对象，用于将该BuilderNode作为子节点挂载到其他FrameNode上。若该BuilderNode不包含 FrameNode，则返回空对象null。 |
 
 ## inheritFreezeOptions
 
@@ -739,7 +739,7 @@ postTouchEvent(event: TouchEvent): boolean
 
 postTouchEvent是从组件树的中间节点往下分发，需要变换到父组件坐标系才能分发成功，参考下图。
 
-offsetA为builderNode相对于父组件的偏移量，可以通过FrameNode中的[getPositionToParent](../../apis-default/arkts-apis/arkts-framenode-c.md#getpositiontoparent) 获取。offsetB为触点相对于builderNode的偏移量，可以通过 [TouchEvent](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)获取。offsetC为offsetA 与offsetB的和，是传给postTouchEvent的最终结果。
+offsetA为builderNode相对于父组件的偏移量，可以通过FrameNode中的[getPositionToParent](arkts-arkui-framenode-c.md#getpositiontoparent) 获取。offsetB为触点相对于builderNode的偏移量，可以通过 [TouchEvent](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)获取。offsetC为offsetA 与offsetB的和，是传给postTouchEvent的最终结果。
 
 
 
