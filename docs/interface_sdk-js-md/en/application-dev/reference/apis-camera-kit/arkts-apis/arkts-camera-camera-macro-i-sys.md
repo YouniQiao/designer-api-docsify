@@ -31,7 +31,8 @@ Enables or disables macro photography.
 
 > **NOTE：**
 > 
-> Before calling this API, call [isMacroSupported](arkts-camera-camera-macroquery-i-sys.md#ismacrosupported) to check whether the &gt; current device supports macro photography.
+> Before calling this API, call [isMacroSupported](arkts-camera-camera-macroquery-i-sys.md#ismacrosupported) to check whether the
+> current device supports macro photography.
 
 **Since:** 23
 

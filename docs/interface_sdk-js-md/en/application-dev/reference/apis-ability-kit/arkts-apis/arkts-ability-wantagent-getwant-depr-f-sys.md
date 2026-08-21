@@ -30,7 +30,7 @@ Obtains the Want of an [WantAgent](arkts-ability-wantagent-depr-t.md#wantagent).
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | Indicates the [WantAgent](arkts-ability-wantagent-depr-t.md#wantagent) whose UID is to be obtained. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Obtain the callback method for Want in WantAgent. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Want](arkts-ability-appabilitywant-want-c.md)&gt; | Yes | Obtain the callback method for Want in WantAgent. |
 
 
 ## getWant
@@ -63,5 +63,5 @@ Obtains the Want of an [WantAgent](arkts-ability-wantagent-depr-t.md#wantagent).
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Returns the { |
+| Promise&lt;[Want](arkts-ability-appabilitywant-want-c.md)&gt; | Returns the { |
 

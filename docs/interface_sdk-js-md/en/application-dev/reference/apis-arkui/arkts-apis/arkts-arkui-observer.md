@@ -4,7 +4,10 @@ Provides APIs for listening for UI component behavior changes.
 
 > **NOTE：**
 > 
-> - UIObserver can only listen for relevant information within the current process and does not support obtaining &gt; information in cross-process scenarios<!--Del--> such as UIExtensionComponent<!-- > DelEnd-->.
+> - UIObserver can only listen for relevant information within the current process and does not support obtaining
+> information in cross-process scenarios<!--Del--
+> such as UIExtensionComponent<!--
+> DelEnd-->.
 
 **Since:** 11
 
@@ -47,8 +50,8 @@ import { uiObserver } from '@kit.ArkUI';
 | [on_routerPageUpdate](arkts-arkui-uiobserver-onrouterpageupdate-f.md#onrouterpageupdate) | Subscribes to state changes of the page during routing. |
 | [on_scrollEvent](arkts-arkui-uiobserver-onscrollevent-f.md#onscrollevent) | Registers a callback function to be called when the scroll event start or stop. |
 | [on_scrollEvent](arkts-arkui-uiobserver-onscrollevent-f.md#onscrollevent) | Registers a callback function to be called when the scroll event start or stop. |
-| [on_tabContentUpdate](arkts-arkui-uiobserver-ontabcontentupdate-f.md#ontabcontentupdate) | Subscribes to **TabContent** page switching events for the specified **Tabs** component identified by its ID. Unlike [on('tabChange')](arkts-arkui-arkui-uicontext-uiobserver-c.md#onnavdestinationupdate), this API does not support listening for the initial tab display event when the **Tabs** component is initialized. |
-| [on_tabContentUpdate](arkts-arkui-uiobserver-ontabcontentupdate-f.md#ontabcontentupdate) | Subscribes to **TabContent** switch events. Unlike [on('tabChange')](arkts-arkui-arkui-uicontext-uiobserver-c.md#onnavdestinationupdate), this API does not support listening for the initial tab display event when the **Tabs** component is initialized. |
+| [on_tabContentUpdate](arkts-arkui-uiobserver-ontabcontentupdate-f.md#ontabcontentupdate) | Subscribes to **TabContent** page switching events for the specified **Tabs** component identified by its ID. Unlike [on('tabChange')](arkts-arkui-arkuiuicontext-uiobserver-c.md#onnavdestinationupdate), this API does not support listening for the initial tab display event when the **Tabs** component is initialized. |
+| [on_tabContentUpdate](arkts-arkui-uiobserver-ontabcontentupdate-f.md#ontabcontentupdate) | Subscribes to **TabContent** switch events. Unlike [on('tabChange')](arkts-arkui-arkuiuicontext-uiobserver-c.md#onnavdestinationupdate), this API does not support listening for the initial tab display event when the **Tabs** component is initialized. |
 | [on_willDraw](arkts-arkui-uiobserver-onwilldraw-f.md#onwilldraw) | Listens for drawing instruction dispatch in each frame. |
 
 ### Classes

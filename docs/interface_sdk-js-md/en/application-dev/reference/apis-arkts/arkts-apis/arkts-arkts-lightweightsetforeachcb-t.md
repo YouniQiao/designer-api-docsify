@@ -20,5 +20,5 @@ The type of LightWeightSet callback function.
 | --- | --- | --- | --- |
 | value | T | Yes | The value of current element |
 | key | T | Yes | The key of current element(same as value) |
-| set | [LightWeightSet](arkts-arkts-util-lightweightset-lightweightset-c.md)&lt;T&gt; | Yes | The LightWeightSet instance being traversed |
+| set | [LightWeightSet](arkts-arkts-utillightweightset-lightweightset-c.md)&lt;T&gt; | Yes | The LightWeightSet instance being traversed |
 

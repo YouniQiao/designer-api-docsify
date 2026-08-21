@@ -21,7 +21,10 @@ Usage scenarios:
 > **NOTE：**
 > 
 > Certificate deletion is typically performed in scenarios such as certificate expiration or certificate leakage.
-> You are advised to implement this feature with a strong prompt to administrators, advising them to delete &gt; certificates with caution. Before deleting a certificate, ensure that a new re-signing certificate has been &gt; loaded and that all applications have been updated and switched to the new re-signing certificate. Otherwise, &gt; historically installed applications will fail to run after a device restart.
+> You are advised to implement this feature with a strong prompt to administrators, advising them to delete
+> certificates with caution. Before deleting a certificate, ensure that a new re-signing certificate has been
+> loaded and that all applications have been updated and switched to the new re-signing certificate. Otherwise,
+> historically installed applications will fail to run after a device restart.
 
 **Since:** 24
 
@@ -37,7 +40,7 @@ Usage scenarios:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | certificateAlias | string | Yes | Certificate alias, which must end with **.cer**. |
 | accountId | int | Yes | User ID, which must be greater than or equal to 0. You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of **@ohos.account.osAccount** to obtain the user ID. |
 

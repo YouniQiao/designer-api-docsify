@@ -1,6 +1,6 @@
 # EmbeddedComponent
 
-*EmbeddedComponent**组件用于支持在当前页面嵌入本应用内或满足跨应用权限条件的其他[EmbeddedUIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddeduiextensionability-embeddeduiextensionability-c.md)提供的UI。EmbeddedUIExtensionAbility运行在独立进程中，完成页面布局和渲染。
+*EmbeddedComponent**组件用于支持在当前页面嵌入本应用内或满足跨应用权限条件的其他[EmbeddedUIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityembeddeduiextensionability-embeddeduiextensionability-c.md)提供的UI。EmbeddedUIExtensionAbility运行在独立进程中，完成页面布局和渲染。
 
 通常用于需要进程隔离的模块化开发场景。
 

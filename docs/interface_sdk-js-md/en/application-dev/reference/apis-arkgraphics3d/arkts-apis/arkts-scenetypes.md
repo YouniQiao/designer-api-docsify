@@ -33,7 +33,7 @@
 | [GeometryType](arkts-arkgraphics3d-scenetypes-geometrytype-e.md) | Enumerates the geometry types. |
 | [PrimitiveTopology](arkts-arkgraphics3d-scenetypes-primitivetopology-e.md) | Enumerates the vertex processing methods. |
 | [RenderingPipelineType](arkts-arkgraphics3d-scenetypes-renderingpipelinetype-e.md) | Enumerates the rendering pipeline types. |
-| [ShadowAlgorithmType](arkts-arkgraphics3d-scenetypes-shadowalgorithmtype-e.md) | the type of shadow algorithm |
+| [ShadowAlgorithmType](arkts-arkgraphics3d-scenetypes-shadowalgorithmtype-e.md) | Enumerates the types of shadow algorithms. |
 
 ### Types
 

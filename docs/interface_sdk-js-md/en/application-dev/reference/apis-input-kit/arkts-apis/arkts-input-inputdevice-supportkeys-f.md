@@ -26,7 +26,7 @@ Queries whether a specified input device supports specified keys. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | int | Yes | Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change. |
-| keys | Array&lt;[KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md)&gt; | Yes | Keys to be queried. A maximum of five keys can be specified. |
+| keys | Array&lt;[KeyCode](arkts-input-multimodalinputkeycode-keycode-e.md)&gt; | Yes | Keys to be queried. A maximum of five keys can be specified. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;boolean&gt;&gt; | Yes | Callback function. If the query is successful, **err** is **undefined**, and **data** is the key support query result (elements in the array correspond one-to-one to those in **keys**; **true** indicates supported, and **false** indicates not supported). Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -82,7 +82,7 @@ Checks whether the input device supports the specified keys. This API uses a pro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | int | Yes | Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change. |
-| keys | Array&lt;[KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md)&gt; | Yes | Keys to be queried. A maximum of five keys can be specified. |
+| keys | Array&lt;[KeyCode](arkts-input-multimodalinputkeycode-keycode-e.md)&gt; | Yes | Keys to be queried. A maximum of five keys can be specified. |
 
 **Return value:**
 

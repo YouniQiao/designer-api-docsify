@@ -31,7 +31,9 @@ This attribute cannot be used together with the overlay attribute. If they are s
 
 > **NOTE：**
 > 
-> This API can be called within &gt; attributeModifier &gt; since API version 20.
+> This API can be called within
+> attributeModifier
+> since API version 20.
 
 **Since:** 12
 

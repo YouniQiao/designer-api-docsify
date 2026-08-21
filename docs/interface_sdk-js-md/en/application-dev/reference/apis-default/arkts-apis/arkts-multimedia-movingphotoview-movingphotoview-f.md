@@ -31,12 +31,12 @@ Defines the MovingPhotoView component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [MovingPhotoViewOptions](arkts-multimedia-movingphotoview-movingphotoviewoptions-i.md) | Yes | MovingPhotoView option. |
+| options | [MovingPhotoViewOptions](arkts-multimediamovingphotoview-movingphotoviewoptions-i.md) | Yes | MovingPhotoView option. |
 | content_ | CustomBuilder | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [MovingPhotoViewAttribute](arkts-multimedia-movingphotoview-movingphotoviewattribute-i.md) | The attribute of the movingPhotoView. |
+| [MovingPhotoViewAttribute](arkts-multimediamovingphotoview-movingphotoviewattribute-i.md) | The attribute of the movingPhotoView. |
 

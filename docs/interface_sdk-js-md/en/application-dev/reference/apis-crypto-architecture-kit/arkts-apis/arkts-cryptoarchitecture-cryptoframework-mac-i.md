@@ -358,7 +358,9 @@ Updates the MAC status. This API uses an asynchronous callback to return the res
 
 > **NOTE：**
 > 
-> For details about the sample code for calling **update** multiple times in an HMAC operation, see &gt; [Generating an HMAC by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment) &gt; .
+> For details about the sample code for calling **update** multiple times in an HMAC operation, see
+> [Generating an HMAC by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment)
+> .
 
 **Since:** 23
 
@@ -395,7 +397,9 @@ Updates the MAC status. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> For details about the sample code for calling **update** multiple times in an HMAC operation, see &gt; [Generating an HMAC by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment) &gt; .
+> For details about the sample code for calling **update** multiple times in an HMAC operation, see
+> [Generating an HMAC by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment)
+> .
 
 **Since:** 23
 
@@ -437,7 +441,9 @@ Updates the MAC status. This API returns the result synchronously.
 
 > **NOTE：**
 > 
-> For details about the sample code for calling **updateSync** multiple times in an HMAC operation, see &gt; [Generating an HMAC by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment) &gt; .
+> For details about the sample code for calling **updateSync** multiple times in an HMAC operation, see
+> [Generating an HMAC by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment)
+> .
 
 <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 

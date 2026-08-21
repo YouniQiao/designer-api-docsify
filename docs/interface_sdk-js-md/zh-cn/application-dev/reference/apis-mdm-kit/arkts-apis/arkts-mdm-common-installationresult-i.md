@@ -2,7 +2,7 @@
 
 应用安装结果。
 
-该对象目前在 [EnterpriseAdminExtensionAbility.onMarketAppInstallResult](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onmarketappinstallresult) 作为回调入参使用。
+该对象目前在 [EnterpriseAdminExtensionAbility.onMarketAppInstallResult](../../apis-default/arkts-apis/arkts-enterpriseenterpriseadminextensionability-enterpriseadminextensionability-c.md#onmarketappinstallresult) 作为回调入参使用。
 
 **起始版本：** 22
 

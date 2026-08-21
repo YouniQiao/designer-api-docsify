@@ -21,7 +21,7 @@ import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 appWindow?: window.Window
 ```
 
-Application window object. It is used to display the identity authentication dialog box as an application modal dialog. It is suitable for scenarios where the authentication dialog box needs to be controlled through a window object. If this parameter is provided, **uiContext** will be ignored.
+Application window object. This API is used to display the authentication dialog box as an application modal dialog. It is applicable to scenarios where the dialog box needs to be displayed by using the window object. If this parameter is provided, **uiContext** will be ignored. If this parameter is not passed, the display of the authentication dialog box is controlled by **uiContext**.
 
 **Type:** window.Window
 
@@ -43,7 +43,7 @@ Application window object. It is used to display the identity authentication dia
 windowMode?: WindowModeType
 ```
 
-Window type of the user authentication screen. **DIALOG_BOX** is suitable for most authentication scenarios (with better user experience), and **FULLSCREEN** is suitable for scenarios that require an immersive authentication experience or involve more authentication information. If not specified, the default value is **WindowModeType.DIALOG_BOX**.
+Window type of the authentication widget. **DIALOG_BOX** is applicable to most authentication scenarios (with good user experience), and **FULLSCREEN** is applicable to scenarios that require immersive authentication experience or scenarios where a large amount of authentication information needs to be displayed. If no value is passed, **WindowModeType.DIALOG_BOX** is used by default.
 
 **Type:** [WindowModeType](arkts-userauthentication-userauth-windowmodetype-e-sys.md)
 

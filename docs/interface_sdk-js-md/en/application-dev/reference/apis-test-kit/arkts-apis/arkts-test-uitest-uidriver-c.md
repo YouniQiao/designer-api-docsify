@@ -122,7 +122,8 @@ Creates a **UiDriver** object and returns the object created. This API is a stat
 
 > **NOTE：**
 > 
-> This method is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [create&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#create) instead.
+> This method is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [create&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#create) instead.
 
 **Since:** 8
 
@@ -508,7 +509,7 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | number | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). |
+| keyCode | number | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md). |
 
 **Return value:**
 

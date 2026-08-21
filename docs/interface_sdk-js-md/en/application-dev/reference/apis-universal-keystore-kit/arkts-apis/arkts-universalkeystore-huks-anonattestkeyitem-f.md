@@ -19,7 +19,8 @@ This operation requires Internet access and takes time. If error code 12000012 i
 
 > **NOTE：**
 > 
-> Attesting SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) &gt; requires the ohos.permission.ACCESS_SE_KEY permission.
+> Attesting SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)
+> requires the ohos.permission.ACCESS_SE_KEY permission.
 
 <!--RP1--><!--RP1End-->
 
@@ -162,7 +163,8 @@ This operation requires Internet access and takes time. If error code 12000012 i
 
 > **NOTE：**
 > 
-> Attesting SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) &gt; requires the ohos.permission.ACCESS_SE_KEY permission.
+> Attesting SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)
+> requires the ohos.permission.ACCESS_SE_KEY permission.
 
 <!--RP1--><!--RP1End-->
 

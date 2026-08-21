@@ -1,8 +1,8 @@
-# SecurityUIExtensionComponent
+# SecurityUIExtensionComponent(System API)
 
 *SecurityUIExtensionComponent** is used to embed the UI provided by another application on the current page. The displayed content runs in another process, and the current application does not participate in its layout and rendering.
 
-It is typically used in modular development scenarios that require process isolation. Currently, **SecurityUIExtensionComponent** can only start **UIExtensionAbility** of the [PhotoPicker](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-photopickercomponent-s.md) type.
+It is typically used in modular development scenarios that require process isolation. Currently, **SecurityUIExtensionComponent** can only start **UIExtensionAbility** of the [PhotoPicker](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-filephotopickercomponent-photopickercomponent-s.md) type.
 
 ## Child Components
 
@@ -17,7 +17,7 @@ SecurityUIExtensionComponent(
   )
 ```
 
-Creates a **SecurityUIExtensionComponent** component to embed and display the UI provided by a remote [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md).
+Creates a **SecurityUIExtensionComponent** component to embed and display the UI provided by a remote [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiextensionability-uiextensionability-c.md).
 
 **Since:** 26.0.0
 

@@ -17,7 +17,7 @@ function addUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>
 
 Adds a specified untrusted hotspot configuration.
 
-&lt;p&gt;This method adds one configuration at a time. After this configuration is added, your device will determine whether to connect to the hotspot.
+<p>This method adds one configuration at a time. After this configuration is added, your device will determine whether to connect to the hotspot.
 
 **Since:** 7
 
@@ -85,7 +85,7 @@ function addUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<bo
 
 Adds a specified untrusted hotspot configuration.
 
-&lt;p&gt;This method adds one configuration at a time. After this configuration is added, your device will determine whether to connect to the hotspot.
+<p>This method adds one configuration at a time. After this configuration is added, your device will determine whether to connect to the hotspot.
 
 **Since:** 7
 

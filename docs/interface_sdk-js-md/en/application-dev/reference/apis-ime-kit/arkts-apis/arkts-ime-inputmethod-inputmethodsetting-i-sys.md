@@ -244,7 +244,7 @@ isPanelShown(panelInfo: PanelInfo): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| panelInfo | [PanelInfo](arkts-ime-inputmethod-panel-panelinfo-i.md) | Yes | Information about the input method panel. |
+| panelInfo | [PanelInfo](arkts-ime-inputmethodpanel-panelinfo-i.md) | Yes | Information about the input method panel. |
 
 **Return value:**
 
@@ -296,7 +296,7 @@ isPanelShown(panelInfo: PanelInfo, displayId: long): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| panelInfo | [PanelInfo](arkts-ime-inputmethod-panel-panelinfo-i.md) | Yes | Information about the input method panel. |
+| panelInfo | [PanelInfo](arkts-ime-inputmethodpanel-panelinfo-i.md) | Yes | Information about the input method panel. |
 | displayId | long | Yes | Display ID. |
 
 **Return value:**

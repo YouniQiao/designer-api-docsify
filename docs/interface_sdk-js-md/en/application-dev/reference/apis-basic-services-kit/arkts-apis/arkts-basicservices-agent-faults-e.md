@@ -4,7 +4,9 @@ Defines the cause of a task failure.
 
 > **NOTE：**
 > 
-> In API version 12 or earlier, only serial connection to the IP addresses associated with the specified domain &gt; name is supported, and the connection time for a single IP address is not controllable. If the first IP address &gt; returned by the DNS is blocked, a handshake timeout may occur, leading to a **TIMEOUT** error.
+> In API version 12 or earlier, only serial connection to the IP addresses associated with the specified domain
+> name is supported, and the connection time for a single IP address is not controllable. If the first IP address
+> returned by the DNS is blocked, a handshake timeout may occur, leading to a **TIMEOUT** error.
 
 **Since:** 23
 

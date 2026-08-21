@@ -31,7 +31,7 @@ A maximum of 10 cross-device copy tasks are allowed at the same time, and the nu
 | --- | --- | --- | --- |
 | srcUri | string | Yes | URI of the file or directory to copy. |
 | destUri | string | Yes | URI of the destination file or directory. |
-| options | [CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-copyoptions-i.md) | No | Callback invoked to provide the copy progress. If this parameter is not set, the callback will not be invoked. |
+| options | [CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-copyoptions-i.md) | No | Callback invoked to provide the copy progress. If this parameter is not set, the callback will not be invoked. |
 
 **Return value:**
 
@@ -156,7 +156,7 @@ A maximum of 10 cross-device copy tasks are allowed at the same time, and the nu
 | --- | --- | --- | --- |
 | srcUri | string | Yes | URI of the file or directory to copy. |
 | destUri | string | Yes | URI of the destination file or directory. |
-| options | [CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-copyoptions-i.md) | Yes | Callback used to return the copy progress. |
+| options | [CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-copyoptions-i.md) | Yes | Callback used to return the copy progress. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the copy is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**

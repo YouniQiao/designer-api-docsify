@@ -8,7 +8,8 @@ This component can contain the Span, ImageSpan, SymbolSpan, and ContainerSpan ch
 
 > **NOTE：**
 > 
-> Use [child components](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#child-components) to &gt; implement [text and image layout](../../../ui/arkts-text-image-layout.md) scenarios.
+> Use [child components](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#child-components) to
+> implement [text and image layout](../../../ui/arkts-text-image-layout.md) scenarios.
 
 ## Text
 

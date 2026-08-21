@@ -73,7 +73,7 @@ constructor(uiContext: UIContext, options: RenderOptions,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | 是 | 用于创建FrameNode的UIContext |
+| uiContext | [UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md) | 是 | 用于创建FrameNode的UIContext |
 | options | [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | 是 | Builder Node的渲染选项 |
 | id | string | 是 | 应用定义的XComponent id |
 | type | XComponentType | 是 | XComponent类型 |

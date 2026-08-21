@@ -198,7 +198,7 @@
     <!--Del-->
     - [WaterRippleMode(system api)](arkts-arkgraphics2d-uieffect-waterripplemode-e-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [BrightnessBlenderParam(system api)](arkts-arkgraphics2d-graphics-uieffect-brightnessblenderparam-i-sys.md)<!--DelEnd-->
+  - [BrightnessBlenderParam(system api)](arkts-arkgraphics2d-graphicsuieffect-brightnessblenderparam-i-sys.md)<!--DelEnd-->
 - common<!--arkts-arkgraphics2d-common-->
   - [webgl](arkts-webgl.md)
     - [WebGLActiveInfo](arkts-arkgraphics2d-webgl-webglactiveinfo-i.md)

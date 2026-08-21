@@ -6,7 +6,7 @@ typedef struct InputMethod_InputMethodProxy InputMethod_InputMethodProxy
 
 ## Overview
 
-Define the InputMethod_InputMethodProxy structure type.Provides methods for controlling input method.
+A struct that serves as the proxy between an application and the input method.The application can call APIs of the input method through this proxy and receive event callbacks from theinput method.
 
 **Since**: 12
 

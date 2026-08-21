@@ -17,7 +17,8 @@ Obtains the IDs of all input devices. This API uses an asynchronous callback to 
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. Use &gt; [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md) instead.
+> This API is supported since API version 8 and deprecated since API version 9. Use
+> [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md) instead.
 
 **Since:** 8
 
@@ -72,7 +73,8 @@ Obtains the IDs of all input devices. This API uses a promise to return the resu
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. Use &gt; [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md) instead.
+> This API is supported since API version 8 and deprecated since API version 9. Use
+> [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md) instead.
 
 **Since:** 8
 

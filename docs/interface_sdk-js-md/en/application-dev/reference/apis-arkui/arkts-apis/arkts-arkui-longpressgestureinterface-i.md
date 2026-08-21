@@ -4,7 +4,8 @@
 
 > **NOTE：**
 > 
-> Since API version 18, on some devices, the system's two-finger long press gesture may take precedence, causing &gt; the application's two-finger long press gesture to be ineffective.
+> Since API version 18, on some devices, the system's two-finger long press gesture may take precedence, causing
+> the application's two-finger long press gesture to be ineffective.
 
 **Inheritance/Implementation:** LongPressGestureInterface extends GestureInterface<LongPressGestureInterface>
 

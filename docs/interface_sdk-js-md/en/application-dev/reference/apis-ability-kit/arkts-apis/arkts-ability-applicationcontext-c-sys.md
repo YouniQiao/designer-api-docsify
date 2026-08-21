@@ -96,7 +96,7 @@ The preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle 
 
 A UIExtensionAbility instance can be preloaded for multiple times. Each time a preloaded UIExtensionAbility instance is loaded, the next preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility.
 
-| Name| Type| Mandatory| Description| | -------- | -------- | -------- | -------- | | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes| Want information of the UIExtensionAbility.|
+| Name| Type| Mandatory| Description| | -------- | -------- | -------- | -------- | | want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes| Want information of the UIExtensionAbility.|
 
 **Since:** 23
 
@@ -114,7 +114,7 @@ A UIExtensionAbility instance can be preloaded for multiple times. Each time a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information of the UIExtensionAbility. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information of the UIExtensionAbility. |
 
 **Return value:**
 
@@ -181,7 +181,7 @@ registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallb
 
 Registers a listener to monitor the ability lifecycle of the application. This API uses an asynchronous callback to return the result.
 
-&lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
+<p>**NOTE：**: <br>It can be called only by the main thread. </p>
 
 **Since:** 9
 
@@ -201,7 +201,7 @@ Registers a listener to monitor the ability lifecycle of the application. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| abilityLifecycleCallback | [AbilityLifecycleCallback](arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md) | Yes | Callback used to return the ID of the registered listener. |
+| abilityLifecycleCallback | [AbilityLifecycleCallback](arkts-ability-appabilityabilitylifecyclecallback-abilitylifecyclecallback-c.md) | Yes | Callback used to return the ID of the registered listener. |
 
 **Return value:**
 
@@ -235,7 +235,7 @@ Register environment callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| environmentCallback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | Yes | Callback used to return the ID of the registered listener. |
+| environmentCallback | [EnvironmentCallback](arkts-ability-appabilityenvironmentcallback-environmentcallback-c.md) | Yes | Callback used to return the ID of the registered listener. |
 
 **Return value:**
 
@@ -251,7 +251,7 @@ unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<v
 
 Unregisters the listener that monitors the ability lifecycle of the application. This API uses an asynchronous callback to return the result.
 
-&lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
+<p>**NOTE：**: <br>It can be called only by the main thread. </p>
 
 **Since:** 9
 
@@ -282,7 +282,7 @@ unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>
 
 Unregisters a listener for the lifecycle of a UIAbility within the application. This API uses a promise to return the result. It can be called only on the main thread.
 
-&lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
+<p>**NOTE：**: <br>It can be called only by the main thread. </p>
 
 **Since:** 9
 

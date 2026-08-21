@@ -179,17 +179,17 @@
 - @ohos.annotation
   - [SuppressWarningsType](arkts-basicservices-annotation-suppresswarningstype-e.md)
 - [@ohos.app.ability.PrintExtensionAbility](arkts-app-ability-printextensionability.md)
-  - [PrintExtensionAbility](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md)
+  - [PrintExtensionAbility](arkts-basicservices-appabilityprintextensionability-printextensionability-c.md)
   <!--Del-->
-  - [PrintExtensionAbility(系统接口)](arkts-basicservices-app-ability-printextensionability-printextensionability-c-sys.md)<!--DelEnd-->
+  - [PrintExtensionAbility(系统接口)](arkts-basicservices-appabilityprintextensionability-printextensionability-c-sys.md)<!--DelEnd-->
 <!--Del-->
 - [@ohos.application.StaticSubscriberExtensionAbility](arkts-application-staticsubscriberextensionability.md)<!--DelEnd-->
   <!--Del-->
-  - [StaticSubscriberExtensionAbility(系统接口)](arkts-basicservices-application-staticsubscriberextensionability-staticsubscriberextensionability-c-sys.md)<!--DelEnd-->
+  - [StaticSubscriberExtensionAbility(系统接口)](arkts-basicservices-applicationstaticsubscriberextensionability-staticsubscriberextensionability-c-sys.md)<!--DelEnd-->
 <!--Del-->
 - [@ohos.application.StaticSubscriberExtensionContext](arkts-application-staticsubscriberextensioncontext.md)<!--DelEnd-->
   <!--Del-->
-  - [StaticSubscriberExtensionContext(系统接口)](arkts-basicservices-application-staticsubscriberextensioncontext-staticsubscriberextensioncontext-c-sys.md)<!--DelEnd-->
+  - [StaticSubscriberExtensionContext(系统接口)](arkts-basicservices-applicationstaticsubscriberextensioncontext-staticsubscriberextensioncontext-c-sys.md)<!--DelEnd-->
 - [@ohos.base](arkts-base.md)
   - [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)
   - [BusinessError](arkts-basicservices-base-businesserror-i.md)
@@ -767,17 +767,17 @@
 <!--Del-->
 - [@ohos.selectionInput.SelectionExtensionAbility](arkts-selectioninput-selectionextensionability.md)<!--DelEnd-->
   <!--Del-->
-  - [SelectionExtensionAbility(系统接口)](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c-sys.md)<!--DelEnd-->
+  - [SelectionExtensionAbility(系统接口)](arkts-basicservices-selectioninputselectionextensionability-selectionextensionability-c-sys.md)<!--DelEnd-->
 <!--Del-->
 - [@ohos.selectionInput.SelectionExtensionContext](arkts-selectioninput-selectionextensioncontext.md)<!--DelEnd-->
   <!--Del-->
-  - [SelectionExtensionContext(系统接口)](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c-sys.md)<!--DelEnd-->
+  - [SelectionExtensionContext(系统接口)](arkts-basicservices-selectioninputselectionextensioncontext-selectionextensioncontext-c-sys.md)<!--DelEnd-->
 <!--Del-->
 - [@ohos.selectionInput.SelectionPanel](arkts-selectioninput-selectionpanel.md)<!--DelEnd-->
   <!--Del-->
-  - [PanelInfo(系统接口)](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i-sys.md)<!--DelEnd-->
+  - [PanelInfo(系统接口)](arkts-basicservices-selectioninputselectionpanel-panelinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [PanelType(系统接口)](arkts-basicservices-selectioninput-selectionpanel-paneltype-e-sys.md)<!--DelEnd-->
+  - [PanelType(系统接口)](arkts-basicservices-selectioninputselectionpanel-paneltype-e-sys.md)<!--DelEnd-->
 - [@ohos.selectionInput.selectionManager](arkts-selectioninput-selectionmanager.md)
   <!--Del-->
   - [createPanel(系统接口)](arkts-basicservices-selectionmanager-createpanel-f-sys.md)<!--DelEnd-->
@@ -1160,32 +1160,32 @@
   - [PathSeparatorStrategy](arkts-basicservices-zlib-pathseparatorstrategy-e.md)
   - [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
 - [@system.battery](arkts-system-battery.md)
-  - [Battery](arkts-basicservices-system-battery-battery-c.md)
-  - [BatteryResponse](arkts-basicservices-system-battery-batteryresponse-i.md)
-  - [GetStatusOptions](arkts-basicservices-system-battery-getstatusoptions-i.md)
+  - [Battery](arkts-basicservices-systembattery-battery-c.md)
+  - [BatteryResponse](arkts-basicservices-systembattery-batteryresponse-i.md)
+  - [GetStatusOptions](arkts-basicservices-systembattery-getstatusoptions-i.md)
 - [@system.brightness](arkts-system-brightness.md)
-  - [Brightness](arkts-basicservices-system-brightness-brightness-c.md)
-  - [BrightnessModeResponse](arkts-basicservices-system-brightness-brightnessmoderesponse-i.md)
-  - [BrightnessResponse](arkts-basicservices-system-brightness-brightnessresponse-i.md)
-  - [GetBrightnessModeOptions](arkts-basicservices-system-brightness-getbrightnessmodeoptions-i.md)
-  - [GetBrightnessOptions](arkts-basicservices-system-brightness-getbrightnessoptions-i.md)
-  - [SetBrightnessModeOptions](arkts-basicservices-system-brightness-setbrightnessmodeoptions-i.md)
-  - [SetBrightnessOptions](arkts-basicservices-system-brightness-setbrightnessoptions-i.md)
-  - [SetKeepScreenOnOptions](arkts-basicservices-system-brightness-setkeepscreenonoptions-i.md)
+  - [Brightness](arkts-basicservices-systembrightness-brightness-c.md)
+  - [BrightnessModeResponse](arkts-basicservices-systembrightness-brightnessmoderesponse-i.md)
+  - [BrightnessResponse](arkts-basicservices-systembrightness-brightnessresponse-i.md)
+  - [GetBrightnessModeOptions](arkts-basicservices-systembrightness-getbrightnessmodeoptions-i.md)
+  - [GetBrightnessOptions](arkts-basicservices-systembrightness-getbrightnessoptions-i.md)
+  - [SetBrightnessModeOptions](arkts-basicservices-systembrightness-setbrightnessmodeoptions-i.md)
+  - [SetBrightnessOptions](arkts-basicservices-systembrightness-setbrightnessoptions-i.md)
+  - [SetKeepScreenOnOptions](arkts-basicservices-systembrightness-setkeepscreenonoptions-i.md)
 - [@system.device](arkts-system-device.md)
-  - [Device](arkts-basicservices-system-device-device-c.md)
-  - [DeviceResponse](arkts-basicservices-system-device-deviceresponse-i.md)
-  - [GetDeviceOptions](arkts-basicservices-system-device-getdeviceoptions-i.md)
+  - [Device](arkts-basicservices-systemdevice-device-c.md)
+  - [DeviceResponse](arkts-basicservices-systemdevice-deviceresponse-i.md)
+  - [GetDeviceOptions](arkts-basicservices-systemdevice-getdeviceoptions-i.md)
 - [@system.request](arkts-system-request.md)
-  - [Request](arkts-basicservices-system-request-request-c.md)
-  - [DownloadRequestOptions](arkts-basicservices-system-request-downloadrequestoptions-i.md)
-  - [DownloadResponse](arkts-basicservices-system-request-downloadresponse-i.md)
-  - [OnDownloadCompleteOptions](arkts-basicservices-system-request-ondownloadcompleteoptions-i.md)
-  - [OnDownloadCompleteResponse](arkts-basicservices-system-request-ondownloadcompleteresponse-i.md)
-  - [RequestData](arkts-basicservices-system-request-requestdata-i.md)
-  - [RequestFile](arkts-basicservices-system-request-requestfile-i.md)
-  - [UploadRequestOptions](arkts-basicservices-system-request-uploadrequestoptions-i.md)
-  - [UploadResponse](arkts-basicservices-system-request-uploadresponse-i.md)
+  - [Request](arkts-basicservices-systemrequest-request-c.md)
+  - [DownloadRequestOptions](arkts-basicservices-systemrequest-downloadrequestoptions-i.md)
+  - [DownloadResponse](arkts-basicservices-systemrequest-downloadresponse-i.md)
+  - [OnDownloadCompleteOptions](arkts-basicservices-systemrequest-ondownloadcompleteoptions-i.md)
+  - [OnDownloadCompleteResponse](arkts-basicservices-systemrequest-ondownloadcompleteresponse-i.md)
+  - [RequestData](arkts-basicservices-systemrequest-requestdata-i.md)
+  - [RequestFile](arkts-basicservices-systemrequest-requestfile-i.md)
+  - [UploadRequestOptions](arkts-basicservices-systemrequest-uploadrequestoptions-i.md)
+  - [UploadResponse](arkts-basicservices-systemrequest-uploadresponse-i.md)
 - application<!--arkts-basicserviceskit-application-->
   - [PrintExtensionContext](arkts-printextensioncontext.md)
     - [PrintExtensionContext](arkts-basicservices-printextensioncontext-c.md)

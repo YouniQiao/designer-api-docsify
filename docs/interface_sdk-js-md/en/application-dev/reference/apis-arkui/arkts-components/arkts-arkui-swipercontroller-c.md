@@ -50,7 +50,9 @@ Moves to a specific page.
 
 > **NOTE：**
 > 
-> This API itself supports jumping without animation (set **animationMode** to **false** or &gt; **SwiperAnimationMode.NO_ANIMATION**). Avoid starting an animation with **changeIndex** and then interrupt it &gt; with **finishAnimation** to achieve animation-free jumping.
+> This API itself supports jumping without animation (set **animationMode** to **false** or
+> **SwiperAnimationMode.NO_ANIMATION**). Avoid starting an animation with **changeIndex** and then interrupt it
+> with **finishAnimation** to achieve animation-free jumping.
 
 **Since:** 15
 
@@ -99,12 +101,20 @@ Sets the drag distance of drag simulation.
 
 > **NOTE：**
 > 
-> - The drag distance of drag simulation depends on the layout. You are advised to call this API before the layout, &gt; so that the drag effect can be displayed after the current frame layout. If this API is called multiple times &gt; before the layout, only the drag distance passed in the last call takes effect during the current frame layout.
+> - The drag distance of drag simulation depends on the layout. You are advised to call this API before the layout,
+> so that the drag effect can be displayed after the current frame layout. If this API is called multiple times
+> before the layout, only the drag distance passed in the last call takes effect during the current frame layout.
 > 
-> - In the loop scenario where [loop](arkts-arkui-swiper-attribute.md#loop) is set to **true**, if the drag distance of drag &gt; simulation is greater than the total layout length, the drag distance will be adjusted to the distance required &gt; to drag just far enough to display the first child node (when dragging toward the start of the layout) or the &gt; last child node (when dragging toward the end of the layout).
+> - In the loop scenario where [loop](arkts-arkui-swiper-attribute.md#loop) is set to **true**, if the drag distance of drag
+> simulation is greater than the total layout length, the drag distance will be adjusted to the distance required
+> to drag just far enough to display the first child node (when dragging toward the start of the layout) or the
+> last child node (when dragging toward the end of the layout).
 > 
-> - The [onGestureSwipe](arkts-arkui-swiper-attribute.md#ongestureswipe) and &gt; [onContentWillScroll](arkts-arkui-swiper-attribute.md#oncontentwillscroll) events are not triggered during the drag. The &gt; [customContentTransition](arkts-arkui-swiper-attribute.md#customcontenttransition) event is triggered before the layout.
-> Since the actual drag distance may be adjusted during the layout, if the passed drag distance is too large, the &gt; returned node display information may be inconsistent with the layout result when the event is triggered.
+> - The [onGestureSwipe](arkts-arkui-swiper-attribute.md#ongestureswipe) and
+> [onContentWillScroll](arkts-arkui-swiper-attribute.md#oncontentwillscroll) events are not triggered during the drag. The
+> [customContentTransition](arkts-arkui-swiper-attribute.md#customcontenttransition) event is triggered before the layout.
+> Since the actual drag distance may be adjusted during the layout, if the passed drag distance is too large, the
+> returned node display information may be inconsistent with the layout result when the event is triggered.
 
 **Since:** 23
 
@@ -194,7 +204,8 @@ When combining with [LazyForEach](../../../ui/rendering-control/arkts-rendering-
 
 > **NOTE：**
 > 
-> **preloadItems** of **Swiper** needs to be called after **Swiper** is created. You are advised to control the &gt; first preloading in the onAppear lifecycle of **Swiper**.
+> **preloadItems** of **Swiper** needs to be called after **Swiper** is created. You are advised to control the
+> first preloading in the onAppear lifecycle of **Swiper**.
 
 **Since:** 18
 
@@ -273,7 +284,8 @@ Enables drag simulation.
 
 > **NOTE：**
 > 
-> - If the **Swiper** component is dragged using real gestures or the drag simulation is enabled, the API returns &gt; **false**, indicating that the operation fails.
+> - If the **Swiper** component is dragged using real gestures or the drag simulation is enabled, the API returns
+> **false**, indicating that the operation fails.
 > 
 > - Simulated drag cannot trigger nested scrolling.
 

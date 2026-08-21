@@ -17,7 +17,9 @@ Creates an upload or download task and adds it to the queue. This API uses an as
 
 > **NOTE：**
 > 
-> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 23
 
@@ -59,7 +61,9 @@ Creates an upload or download task and adds it to the queue. This API uses a pro
 
 > **NOTE：**
 > 
-> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 23
 

@@ -38,5 +38,5 @@ Defines DynamicLayout Component.
 
 | Type | Description |
 | --- | --- |
-| [DynamicLayoutAttribute](arkts-arkui-components-arkdynamiclayout-dynamiclayoutattribute-i.md) |  |
+| [DynamicLayoutAttribute](arkts-arkuicomponentsarkdynamiclayout-dynamiclayoutattribute-i.md) |  |
 

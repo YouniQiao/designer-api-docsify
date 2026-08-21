@@ -25,7 +25,7 @@ Closes a file or directory synchronously. After the file or directory is closed,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | int \| [File](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-file-i.md) | Yes | File** object or FD of the file to close. After the function is disabled, the **File** object or FD cannot be used for read and write operations. If the file object or file descriptor is still used, an error may occur or the operation may fail. |
+| file | int \| [File](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-file-i.md) | Yes | File** object or FD of the file to close. After the function is disabled, the **File** object or FD cannot be used for read and write operations. If the file object or file descriptor is still used, an error may occur or the operation may fail. |
 
 **Error codes:**
 

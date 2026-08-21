@@ -255,11 +255,18 @@ Sets whether to hide non-secure windows. This API uses a promise to return the r
 
 > **NOTE：**
 > 
-> - A non-secure window refers to any window that may obstruct the &gt; EmbeddedComponent or &gt; UIExtensionComponent, such as global floating windows &gt; , host subwindows, and dialog box windows created by the host application (excluding windows of these types &gt; created by system applications).
+> - A non-secure window refers to any window that may obstruct the
+> EmbeddedComponent or
+> UIExtensionComponent, such as global floating windows
+> , host subwindows, and dialog box windows created by the host application (excluding windows of these types
+> created by system applications).
 > 
-> - When using the **EmbeddedComponent** or **UIExtensionComponent** to display sensitive information, call this &gt; API to hide non-secure windows and prevent information obstruction. Hidden non-secure windows will reappear &gt; when the **EmbeddedComponent** or **UIExtensionComponent** is hidden or destroyed.
+> - When using the **EmbeddedComponent** or **UIExtensionComponent** to display sensitive information, call this
+> API to hide non-secure windows and prevent information obstruction. Hidden non-secure windows will reappear
+> when the **EmbeddedComponent** or **UIExtensionComponent** is hidden or destroyed.
 > 
-> - On PCs/2-in-1 devices, global floating windows within non-secure windows remain visible when &gt; **hideNonSecureWindows(true)** is called.
+> - On PCs/2-in-1 devices, global floating windows within non-secure windows remain visible when
+> **hideNonSecureWindows(true)** is called.
 
 **Since:** 23
 
@@ -335,7 +342,10 @@ Sets whether to enable privacy protection for the UIExtension component during n
 
 > **NOTE：**
 > 
-> When privacy protection is enabled, neither &gt; window.snapshot nor &gt; [UIContext.getComponentSnapshot](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getcomponentsnapshot) &gt; will capture the content of the current component (excluding subwindows created under this component).
+> When privacy protection is enabled, neither
+> window.snapshot nor
+> [UIContext.getComponentSnapshot](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getcomponentsnapshot)
+> will capture the content of the current component (excluding subwindows created under this component).
 
 **Since:** 23
 
@@ -709,7 +719,8 @@ Adds or deletes the watermark flag for this window. This API uses a promise to r
 
 > **NOTE：**
 > 
-> With the watermark flag added, the watermark is applied on the full screen when the window is in the foreground &gt; , regardless of whether the window is displayed in full screen, floating, and split screen mode.
+> With the watermark flag added, the watermark is applied on the full screen when the window is in the foreground
+> , regardless of whether the window is displayed in full screen, floating, and split screen mode.
 
 **Since:** 23
 
@@ -778,7 +789,7 @@ properties: UIExtensionHostWindowProxyProperties
 
 Information about the host application window and the **UIExtensionComponent**.
 
-Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate). Instead, when possible, obtain the value after receiving the [on('windowSizeChange')](#onavoidareachange) callback.
+Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiextensionability-uiextensionability-c.md#onsessioncreate). Instead, when possible, obtain the value after receiving the [on('windowSizeChange')](#onavoidareachange) callback.
 
 **Type:** [UIExtensionHostWindowProxyProperties](arkts-arkui-uiextensionhost-uiextensionhostwindowproxyproperties-i-sys.md)
 

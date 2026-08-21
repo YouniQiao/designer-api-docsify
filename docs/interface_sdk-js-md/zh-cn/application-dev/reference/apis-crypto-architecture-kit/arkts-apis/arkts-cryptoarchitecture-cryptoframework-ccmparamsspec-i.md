@@ -6,7 +6,8 @@
 
 > **说明：**
 > 
-> 传入[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法前需 &gt; 要指定其algName属性（来源于父类[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)）。
+> 传入[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法前需
+> 要指定其algName属性（来源于父类[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)）。
 
 **继承/实现关系：** CcmParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)
 

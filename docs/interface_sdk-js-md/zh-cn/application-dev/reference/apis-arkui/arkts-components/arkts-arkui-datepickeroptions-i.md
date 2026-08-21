@@ -8,7 +8,8 @@
 > 
 > - 在DatePicker组件滑动过程中修改DatePickerOptions中的属性，会导致这些属性无法生效。
 > 
-> - 如果需要设置的起止日期范围在\[Date('1900-01-31'), Date('2100-12-31')]之外，推荐使用 &gt; [DatePickerComponent](../../apis-default/arkts-apis/arkts-arkui-advanced-datepickercomponent-datepickercomponent-s.md)。
+> - 如果需要设置的起止日期范围在\[Date('1900-01-31'), Date('2100-12-31')]之外，推荐使用
+> [DatePickerComponent](../../apis-default/arkts-apis/arkts-arkuiadvanceddatepickercomponent-datepickercomponent-s.md)。
 
 > **起始日期、结束日期和选中日期的异常情形说明：**
 > 
@@ -107,7 +108,8 @@ selected?: Date
 
 > 默认值：当前系统日期（受start和end参数影响，详见下方异常情形说明）。
 
-> Date对象可配置的日期范围：[Date('1900-01-31'), Date('2100-12-31')]，selected参数的有效取值范围：必须在start和end参数设置的日 &gt; 期范围内。
+> Date对象可配置的日期范围：[Date('1900-01-31'), Date('2100-12-31')]，selected参数的有效取值范围：必须在start和end参数设置的日
+> 期范围内。
 
 > 从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 

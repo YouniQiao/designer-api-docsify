@@ -13,6 +13,6 @@ import { SelectionExtensionContext } from '@kit.BasicServicesKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [SelectionExtensionContext](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c-sys.md) | SelectionExtensionContext是 [SelectionExtensionAbility](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c-sys.md)的上下文，继承自 [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。 |
+| [SelectionExtensionContext](arkts-basicservices-selectioninputselectionextensioncontext-selectionextensioncontext-c-sys.md) | SelectionExtensionContext是 [SelectionExtensionAbility](arkts-basicservices-selectioninputselectionextensionability-selectionextensionability-c-sys.md)的上下文，继承自 [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。 |
 <!--DelEnd-->
 

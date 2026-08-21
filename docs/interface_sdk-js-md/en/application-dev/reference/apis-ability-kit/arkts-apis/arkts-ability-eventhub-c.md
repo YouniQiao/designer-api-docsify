@@ -171,7 +171,8 @@ Subscribes to an event.
 
 > **NOTE：**
 > 
-> When the callback is triggered by **emit**, the invoker is the EventHub object. To change the direction of &gt; **this** in **callback**, use an arrow function.
+> When the callback is triggered by **emit**, the invoker is the EventHub object. To change the direction of
+> **this** in **callback**, use an arrow function.
 
 **Since:** 23
 

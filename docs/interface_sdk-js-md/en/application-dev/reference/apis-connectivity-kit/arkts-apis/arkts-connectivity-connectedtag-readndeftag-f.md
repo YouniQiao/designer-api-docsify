@@ -16,7 +16,8 @@ Reads the content of this active tag. This API uses a promise to return the resu
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. Use &gt; [uninitialize](arkts-connectivity-connectedtag-uninitialize-f.md) instead.
+> This API is supported since API version 8 and deprecated since API version 9. Use
+> [uninitialize](arkts-connectivity-connectedtag-uninitialize-f.md) instead.
 
 **Since:** 8
 
@@ -60,7 +61,8 @@ Reads the content of this active tag. This API uses an asynchronous callback to 
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. Use &gt; [uninitialize](arkts-connectivity-connectedtag-uninitialize-f.md) instead.
+> This API is supported since API version 8 and deprecated since API version 9. Use
+> [uninitialize](arkts-connectivity-connectedtag-uninitialize-f.md) instead.
 
 **Since:** 8
 

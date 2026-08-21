@@ -18,15 +18,15 @@
 
 | Name | Description |
 | --- | --- |
-| [SelectionContainerAttribute](arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | Defines the attributes of SelectionContainer. |
-| [SelectionContainerEditMenuOptions](arkts-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md) | Defines custom edit menu options for SelectionContainer. |
-| [SelectionContainerMenuOptions](arkts-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md) | Defines selection menu options for SelectionContainer. |
+| [SelectionContainerAttribute](arkts-arkuicomponentsselectioncontainer-selectioncontainerattribute-i.md) | Defines the attributes of SelectionContainer. |
+| [SelectionContainerEditMenuOptions](arkts-arkuicomponentsselectioncontainer-selectioncontainereditmenuoptions-i.md) | Defines custom edit menu options for SelectionContainer. |
+| [SelectionContainerMenuOptions](arkts-arkuicomponentsselectioncontainer-selectioncontainermenuoptions-i.md) | Defines selection menu options for SelectionContainer. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [SelectionContainerTextJoinStyle](arkts-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md) | Defines text join style for SelectionContainer. |
+| [SelectionContainerTextJoinStyle](arkts-arkuicomponentsselectioncontainer-selectioncontainertextjoinstyle-e.md) | Defines text join style for SelectionContainer. |
 
 ### Types
 

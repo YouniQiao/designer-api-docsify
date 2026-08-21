@@ -120,7 +120,7 @@ readonly extraConfig?: InputMethodExtraConfig
 
 @brief Extra information about the input method.
 
-**Type:** [InputMethodExtraConfig](arkts-ime-inputmethod-extraconfig-inputmethodextraconfig-i.md)
+**Type:** [InputMethodExtraConfig](arkts-ime-inputmethodextraconfig-inputmethodextraconfig-i.md)
 
 **Since:** 23
 

@@ -156,7 +156,10 @@ insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 
 > **说明：**
 > 
-> - 与[insertBypassRule](#insertbypassrule)和 &gt; [bypassHostnamesWithoutPeriod](#bypasshostnameswithoutperiod)均可实现URL直连，区别在于匹配维度：本方法通过 &gt; schemeFilter按协议类型匹配；insertBypassRule通过bypassRule字符串按URL模式匹配；bypassHostnamesWithoutPeriod无需传参，自动对不含点号的域名直连。可根据需要 &gt; 直连的URL范围选择合适的方法。
+> - 与[insertBypassRule](#insertbypassrule)和
+> [bypassHostnamesWithoutPeriod](#bypasshostnameswithoutperiod)均可实现URL直连，区别在于匹配维度：本方法通过
+> schemeFilter按协议类型匹配；insertBypassRule通过bypassRule字符串按URL模式匹配；bypassHostnamesWithoutPeriod无需传参，自动对不含点号的域名直连。可根据需要
+> 直连的URL范围选择合适的方法。
 
 **起始版本：** 15
 

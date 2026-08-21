@@ -21,7 +21,7 @@ import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 credentialIdList?: Uint8Array[]
 ```
 
-List of IDs for credentials to be authenticated. This parameter is passed when only specific credentials, rather than all credentials of the user, need to be authenticated. If not passed or an empty array is passed, all credentials of the user are authenticated by default.
+Credential ID list, which is used to specify the credentials to be authenticated. This parameter is passed when only specific credentials instead of all credentials of the user need to be authenticated. If this parameter is not passed or an empty array is passed, all credentials of the user are authenticated by default.
 
 **Type:** Uint8Array[]
 
@@ -41,7 +41,7 @@ List of IDs for credentials to be authenticated. This parameter is passed when o
 userId?: int
 ```
 
-ID of the target user to be authenticated. This parameter is passed when a specific user, rather than the currently logged-in user, needs to be authenticated. If not passed, the ID of the currently logged-in user is used by default. The value is a non-negative integer.
+ID of the target user to be authenticated, which specifies the user to be authenticated. This parameter is passed when a specific user instead of the current login user needs to be authenticated. If this parameter is not passed, the ID of the current login user is used by default. The value is a non-negative integer.
 
 **Type:** int
 

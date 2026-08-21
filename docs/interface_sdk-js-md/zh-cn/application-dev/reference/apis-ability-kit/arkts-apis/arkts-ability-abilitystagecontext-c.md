@@ -18,7 +18,7 @@ config: Configuration
 
 环境变量。
 
-**类型：** [Configuration](arkts-ability-app-ability-configuration-configuration-i.md)
+**类型：** [Configuration](arkts-ability-appabilityconfiguration-configuration-i.md)
 
 **起始版本：** 23
 

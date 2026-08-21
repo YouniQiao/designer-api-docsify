@@ -17,7 +17,7 @@ function removeUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>
 
 Removes a specified untrusted hotspot configuration.
 
-&lt;p&gt;This method removes one configuration at a time.
+<p>This method removes one configuration at a time.
 
 **Since:** 7
 
@@ -85,7 +85,7 @@ function removeUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback
 
 Removes a specified untrusted hotspot configuration.
 
-&lt;p&gt;This method removes one configuration at a time.
+<p>This method removes one configuration at a time.
 
 **Since:** 7
 

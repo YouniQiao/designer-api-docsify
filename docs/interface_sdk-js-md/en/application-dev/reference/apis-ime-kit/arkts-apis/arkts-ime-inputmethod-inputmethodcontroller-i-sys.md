@@ -26,8 +26,10 @@ hideSoftKeyboard(displayId: long): Promise<void>
 ```
 
 @brief Hides the soft keyboard on a specified screen. This API uses a promise to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to hide the soft keyboard only when the edit box is focused.
 
 **Since:** 23
@@ -83,8 +85,10 @@ showSoftKeyboard(displayId: long): Promise<void>
 ```
 
 @brief Shows the soft keyboard on a specified screen. This API uses a promise to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to show the soft keyboard only when the edit box is focused.
 
 **Since:** 23

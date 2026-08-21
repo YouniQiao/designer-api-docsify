@@ -21,7 +21,7 @@ interface of form lifecycle.
 onAcquireFormState?(want: Want): formInfo.FormState
 ```
 
-Called to return a FormState object. &lt;p&gt;You must override this callback if you want this ability to return the actual form state. Otherwise, this method returns DEFAULT by default.&lt;/p&gt;
+Called to return a FormState object. <p>You must override this callback if you want this ability to return the actual form state. Otherwise, this method returns DEFAULT by default.</p>
 
 **Since:** 8
 
@@ -35,7 +35,7 @@ Called to return a FormState object. &lt;p&gt;You must override this callback if
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the description of the form for which the FormState is obtained. The description covers the bundle name, ability name, module name, form name, form dimensions. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Indicates the description of the form for which the FormState is obtained. The description covers the bundle name, ability name, module name, form name, form dimensions. |
 
 **Return value:**
 
@@ -85,7 +85,7 @@ Called to return a FormBindingData object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the detailed information for creating a FormBindingData. The {@code Want} object must include the form ID, form name, and grid style of the form, which can be obtained from IDENTITY_KEY, NAME_KEY, and DIMENSION_KEY, respectively. Such form information must be managed as persistent data for further form acquisition, update, and deletion. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Indicates the detailed information for creating a FormBindingData. The {@code Want} object must include the form ID, form name, and grid style of the form, which can be obtained from IDENTITY_KEY, NAME_KEY, and DIMENSION_KEY, respectively. Such form information must be managed as persistent data for further form acquisition, update, and deletion. |
 
 **Return value:**
 

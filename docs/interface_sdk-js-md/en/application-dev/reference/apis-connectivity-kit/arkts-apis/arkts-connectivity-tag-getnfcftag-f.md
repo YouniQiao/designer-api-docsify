@@ -16,7 +16,8 @@ Obtains an **NfcFTag** object, which allows access to the tags that use the NFC-
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. Use &gt; [tag.getNfcF](arkts-connectivity-tag-getnfcf-f.md) instead.
+> This API is supported since API version 7 and deprecated since API version 9. Use
+> [tag.getNfcF](arkts-connectivity-tag-getnfcf-f.md) instead.
 
 **Since:** 7
 

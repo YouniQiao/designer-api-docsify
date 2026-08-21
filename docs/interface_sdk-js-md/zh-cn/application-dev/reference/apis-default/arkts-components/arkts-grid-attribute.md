@@ -4,7 +4,8 @@
 
 > **说明：**
 > 
-> Grid组件使用通用属性clip&lt;sup&gt;12+&lt;/sup&gt;和通用属性 &gt; clip&lt;sup&gt;18+&lt;/sup&gt;时默认值都为true。
+> Grid组件使用通用属性clip&lt;sup&gt;12+&lt;/sup&gt;和通用属性
+> clip&lt;sup&gt;18+&lt;/sup&gt;时默认值都为true。
 > 
 > 设置Grid的padding后，如果子组件部分位于Grid内容区且部分位于padding区域内，则会显示；如果子组件完全位于padding区域内，则不会显示。如下图所示，GridItem1显示，而GridItem2不显示。
 > 

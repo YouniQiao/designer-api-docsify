@@ -4,7 +4,8 @@ Implements a layout manager object.
 
 > **NOTE：**
 > 
-> After the text content is changed, you must wait for the layout to be completed before you can obtain the most up- &gt; to-date layout information.
+> After the text content is changed, you must wait for the layout to be completed before you can obtain the most up-
+> to-date layout information.
 
 **Since:** 12
 

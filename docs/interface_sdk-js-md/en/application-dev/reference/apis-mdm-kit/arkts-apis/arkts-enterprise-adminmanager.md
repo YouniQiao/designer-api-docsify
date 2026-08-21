@@ -4,7 +4,8 @@ The **adminManager** module provides administrator permission management capabil
 
 > **NOTE：**
 > 
-> The APIs of this module can be called only by a device administrator application. For details, see &gt; [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
+> The APIs of this module can be called only by a device administrator application. For details, see
+> [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
 
 **Since:** 23
 

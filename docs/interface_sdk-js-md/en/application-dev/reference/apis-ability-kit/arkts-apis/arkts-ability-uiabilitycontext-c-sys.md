@@ -1,6 +1,6 @@
 # UIAbilityContext
 
-UIAbilityContext provides the context environment for a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) that needs to store its status. It inherits from Context and provides UIAbility-related configuration and APIs for operating UIAbility and ServiceExtensionAbility components. For example, you can use the APIs to start a UIAbility, terminate a UIAbility to which the UIAbilityContext belongs, and start, terminate, connect to, or disconnect from a ServiceExtensionAbility.
+UIAbilityContext provides the context environment for a [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) that needs to store its status. It inherits from Context and provides UIAbility-related configuration and APIs for operating UIAbility and ServiceExtensionAbility components. For example, you can use the APIs to start a UIAbility, terminate a UIAbility to which the UIAbilityContext belongs, and start, terminate, connect to, or disconnect from a ServiceExtensionAbility.
 
 **Inheritance/Implementation:** UIAbilityContext extends Context
 
@@ -20,7 +20,8 @@ Connects this UIAbility to a ServiceExtensionAbility, with the account ID specif
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 > 
 > Permission verification is not required when **accountId** specifies the current user.
 
@@ -44,7 +45,7 @@ Connects this UIAbility to a ServiceExtensionAbility, with the account ID specif
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target UIAbility. |
 | accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 | options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | Yes | Instance of the callback function after the connection to the ServiceExtensionAbility is set up. |
 
@@ -82,7 +83,8 @@ Connects this UIAbility to a ServiceExtensionAbility, with the account ID specif
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 > 
 > Permission verification is not required when **accountId** specifies the current user.
 
@@ -102,7 +104,7 @@ Connects this UIAbility to a ServiceExtensionAbility, with the account ID specif
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target UIAbility. |
 | accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 | options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | Yes | Instance of the callback function after the connection to the ServiceExtensionAbility is set up. |
 
@@ -263,7 +265,8 @@ Requests the specified foreground application to start the UIExtensionAbility of
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -279,7 +282,7 @@ Requests the specified foreground application to start the UIExtensionAbility of
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pickerWant | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information used to start the UIExtensionAbility. |
+| pickerWant | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information used to start the UIExtensionAbility. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
@@ -344,7 +347,8 @@ Requests the specified foreground application to start the UIExtensionAbility of
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -360,7 +364,7 @@ Requests the specified foreground application to start the UIExtensionAbility of
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pickerWant | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information used to start the UIExtensionAbility. |
+| pickerWant | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information used to start the UIExtensionAbility. |
 
 **Return value:**
 
@@ -432,7 +436,8 @@ Before starting the UIExtensionAbility, ensure that the foreground application h
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 26.0.0
 
@@ -450,7 +455,7 @@ Before starting the UIExtensionAbility, ensure that the foreground application h
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pickerWant | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information used to start the UIExtensionAbility. |
+| pickerWant | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information used to start the UIExtensionAbility. |
 | accountId | int | Yes | The account to request. |
 
 **Return value:**
@@ -622,7 +627,8 @@ Starts a UIAbility with the caller information specified. The caller information
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -638,7 +644,7 @@ Starts a UIAbility with the caller information specified. The caller information
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target UIAbility. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
@@ -707,7 +713,8 @@ Starts a UIAbility with the caller information and start options specified. The 
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -723,8 +730,8 @@ Starts a UIAbility with the caller information and start options specified. The 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Parameters used for starting the UIAbility. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target UIAbility. |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | Yes | Parameters used for starting the UIAbility. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
@@ -794,7 +801,8 @@ Starts a UIAbility with the caller information specified. The caller information
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -810,8 +818,8 @@ Starts a UIAbility with the caller information specified. The caller information
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Parameters used for starting the UIAbility. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target UIAbility. |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | No | Parameters used for starting the UIAbility. |
 
 **Return value:**
 
@@ -905,14 +913,14 @@ Starts a UIAbility with the account ID specified and obtains the caller object f
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Information about the UIAbility to start, including **abilityName**, **moduleName**, **bundleName**, **deviceId** (optional), and **parameters** (optional). If **deviceId** is left blank or null, the local UIAbility is started. If **parameters** is left blank or null, the UIAbility is started in the background. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Information about the UIAbility to start, including **abilityName**, **moduleName**, **bundleName**, **deviceId** (optional), and **parameters** (optional). If **deviceId** is left blank or null, the local UIAbility is started. If **parameters** is left blank or null, the UIAbility is started in the background. |
 | accountId | int | Yes | ID of a system account. The value **-1** indicates the current user. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Caller](arkts-ability-app-ability-uiability-caller-i.md)&gt; | Promise used to return the caller object to communicate with. |
+| Promise&lt;[Caller](arkts-ability-appabilityuiability-caller-i.md)&gt; | Promise used to return the caller object to communicate with. |
 
 **Error codes:**
 
@@ -992,7 +1000,8 @@ Starts a UIAbility with the account ID specified and returns the result when the
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 > 
 > Permission verification is not required when **accountId** specifies the current user.
 
@@ -1012,7 +1021,7 @@ Starts a UIAbility with the account ID specified and returns the result when the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target UIAbility. |
 | accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0** and **data** is the result code and data when the UIAbility is terminated. Otherwise, **err** contains the corresponding error code and error information. |
 
@@ -1099,7 +1108,8 @@ Starts a UIAbility with the account ID and start options specified and returns t
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 > 
 > Permission verification is not required when **accountId** specifies the current user.
 
@@ -1119,9 +1129,9 @@ Starts a UIAbility with the account ID and start options specified and returns t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target UIAbility. |
 | accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Parameters used for starting the UIAbility. |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | Yes | Parameters used for starting the UIAbility. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
@@ -1204,7 +1214,8 @@ Starts a UIAbility with the account ID specified and returns the result when the
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 > 
 > Permission verification is not required when **accountId** specifies the current user.
 
@@ -1224,9 +1235,9 @@ Starts a UIAbility with the account ID specified and returns the result when the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target UIAbility. |
 | accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Parameters used for starting the UIAbility. |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | No | Parameters used for starting the UIAbility. |
 
 **Return value:**
 
@@ -1314,7 +1325,8 @@ Starts a UIAbility with want and the account ID specified. This API uses an asyn
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 > 
 > Permission verification is not required when **accountId** specifies the current user.
 
@@ -1334,7 +1346,7 @@ Starts a UIAbility with want and the account ID specified. This API uses an asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target UIAbility. |
 | accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
@@ -1415,7 +1427,8 @@ Starts a UIAbility with want, the account ID, and start options specified. This 
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 > 
 > Permission verification is not required when **accountId** specifies the current user.
 
@@ -1435,9 +1448,9 @@ Starts a UIAbility with want, the account ID, and start options specified. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target UIAbility. |
 | accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Parameters used for starting the UIAbility. |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | Yes | Parameters used for starting the UIAbility. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
@@ -1520,7 +1533,8 @@ Starts a UIAbility with want, the account ID, and start options specified. This 
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 > 
 > Permission verification is not required when **accountId** specifies the current user.
 
@@ -1540,9 +1554,9 @@ Starts a UIAbility with want, the account ID, and start options specified. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target UIAbility. |
 | accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Parameters used for starting the UIAbility. |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | No | Parameters used for starting the UIAbility. |
 
 **Return value:**
 
@@ -1630,14 +1644,20 @@ Starts a UIAbility. If the UIAbility has multiple instances, the latest instance
 
 > **NOTE：**
 > 
-> - For a successful launch in cross-device scenarios, the caller and target must be the same application and the &gt; application must have the ohos.permission.DISTRIBUTED_DATASYNC permission.
+> - For a successful launch in cross-device scenarios, the caller and target must be the same application and the
+> application must have the ohos.permission.DISTRIBUTED_DATASYNC permission.
 > 
-> - If **visible** of the target UIAbility is **false** in cross-application scenarios, the caller must have the &gt; ohos.permission.START_INVISIBLE_ABILITY permission.
+> - If **visible** of the target UIAbility is **false** in cross-application scenarios, the caller must have the
+> ohos.permission.START_INVISIBLE_ABILITY permission.
 > 
-> - If the specified UIAbility has multiple instances, the caller must have the &gt; ohos.permission.START_RECENT_ABILITY permission (available only for system applications) to start the latest &gt; instance.
+> - If the specified UIAbility has multiple instances, the caller must have the
+> ohos.permission.START_RECENT_ABILITY permission (available only for system applications) to start the latest
+> instance.
 > 
-> - If the caller is running in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is &gt; required (available only for system applications).
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> - If the caller is running in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is
+> required (available only for system applications).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -1653,7 +1673,7 @@ Starts a UIAbility. If the UIAbility has multiple instances, the latest instance
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target UIAbility. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
@@ -1730,14 +1750,20 @@ Starts a UIAbility with the start options specified. If the UIAbility has multip
 
 > **NOTE：**
 > 
-> - For a successful launch in cross-device scenarios, the caller and target must be the same application and the &gt; application must have the ohos.permission.DISTRIBUTED_DATASYNC permission.
+> - For a successful launch in cross-device scenarios, the caller and target must be the same application and the
+> application must have the ohos.permission.DISTRIBUTED_DATASYNC permission.
 > 
-> - If **visible** of the target UIAbility is **false** in cross-application scenarios, the caller must have the &gt; ohos.permission.START_INVISIBLE_ABILITY permission.
+> - If **visible** of the target UIAbility is **false** in cross-application scenarios, the caller must have the
+> ohos.permission.START_INVISIBLE_ABILITY permission.
 > 
-> - If the specified UIAbility has multiple instances, the caller must have the &gt; ohos.permission.START_RECENT_ABILITY permission (available only for system applications) to start the latest &gt; instance.
+> - If the specified UIAbility has multiple instances, the caller must have the
+> ohos.permission.START_RECENT_ABILITY permission (available only for system applications) to start the latest
+> instance.
 > 
-> - If the caller is running in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is &gt; required (available only for system applications).
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> - If the caller is running in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is
+> required (available only for system applications).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -1753,8 +1779,8 @@ Starts a UIAbility with the start options specified. If the UIAbility has multip
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Parameters used for starting the UIAbility. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target UIAbility. |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | Yes | Parameters used for starting the UIAbility. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
@@ -1835,14 +1861,20 @@ Starts a UIAbility. If the UIAbility has multiple instances, the latest instance
 
 > **NOTE：**
 > 
-> - For a successful launch in cross-device scenarios, the caller and target must be the same application and the &gt; application must have the ohos.permission.DISTRIBUTED_DATASYNC permission.
+> - For a successful launch in cross-device scenarios, the caller and target must be the same application and the
+> application must have the ohos.permission.DISTRIBUTED_DATASYNC permission.
 > 
-> - If **visible** of the target UIAbility is **false** in cross-application scenarios, the caller must have the &gt; ohos.permission.START_INVISIBLE_ABILITY permission.
+> - If **visible** of the target UIAbility is **false** in cross-application scenarios, the caller must have the
+> ohos.permission.START_INVISIBLE_ABILITY permission.
 > 
-> - If the specified UIAbility has multiple instances, the caller must have the &gt; ohos.permission.START_RECENT_ABILITY permission (available only for system applications) to start the latest &gt; instance.
+> - If the specified UIAbility has multiple instances, the caller must have the
+> ohos.permission.START_RECENT_ABILITY permission (available only for system applications) to start the latest
+> instance.
 > 
-> - If the caller is running in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is &gt; required (available only for system applications).
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> - If the caller is running in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is
+> required (available only for system applications).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -1858,8 +1890,8 @@ Starts a UIAbility. If the UIAbility has multiple instances, the latest instance
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Parameters used for starting the UIAbility. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target UIAbility. |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | No | Parameters used for starting the UIAbility. |
 
 **Return value:**
 
@@ -1956,7 +1988,7 @@ Starts a ServiceExtensionAbility. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for starting the ServiceExtensionAbility. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information for starting the ServiceExtensionAbility. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
@@ -2035,7 +2067,7 @@ Starts a ServiceExtensionAbility. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for starting the ServiceExtensionAbility. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information for starting the ServiceExtensionAbility. |
 
 **Return value:**
 
@@ -2107,7 +2139,8 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses an
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 > 
 > Permission verification is not required when **accountId** specifies the current user.
 
@@ -2127,7 +2160,7 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for starting the ServiceExtensionAbility. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information for starting the ServiceExtensionAbility. |
 | accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
@@ -2196,7 +2229,8 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses a 
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 > 
 > Permission verification is not required when **accountId** specifies the current user.
 
@@ -2216,7 +2250,7 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for starting the ServiceExtensionAbility. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information for starting the ServiceExtensionAbility. |
 | accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 
 **Return value:**
@@ -2302,7 +2336,7 @@ Stops a ServiceExtensionAbility. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for stopping the ServiceExtensionAbility. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information for stopping the ServiceExtensionAbility. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
@@ -2379,7 +2413,7 @@ Stops a ServiceExtensionAbility in the same application. This API uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for stopping the ServiceExtensionAbility. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information for stopping the ServiceExtensionAbility. |
 
 **Return value:**
 
@@ -2465,7 +2499,7 @@ Stops a ServiceExtensionAbility with the account ID specified in the same applic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for stopping the ServiceExtensionAbility. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information for stopping the ServiceExtensionAbility. |
 | accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
@@ -2548,7 +2582,7 @@ Stops a ServiceExtensionAbility with the account ID specified in the same applic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for stopping the ServiceExtensionAbility. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information for stopping the ServiceExtensionAbility. |
 | accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 
 **Return value:**

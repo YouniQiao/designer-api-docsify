@@ -4,6 +4,8 @@
 
 Provides the input method types.
 
+**Include**: <inputmethod/inputmethod_types_capi.h>
+
 **Library**: libohinputmethod.so
 
 **System capability**: SystemCapability.MiscServices.InputMethodFramework
@@ -18,14 +20,14 @@ Provides the input method types.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [InputMethod_KeyboardStatus](#inputmethod_keyboardstatus) | InputMethod_KeyboardStatus | Keyboard status. |
-| [InputMethod_EnterKeyType](#inputmethod_enterkeytype) | InputMethod_EnterKeyType | Enter key type. |
-| [InputMethod_Direction](#inputmethod_direction) | InputMethod_Direction | Direction. |
-| [InputMethod_ExtendAction](#inputmethod_extendaction) | InputMethod_ExtendAction | The extend action. |
-| [InputMethod_TextInputType](#inputmethod_textinputtype) | InputMethod_TextInputType | The text input type. |
-| [InputMethod_CommandValueType](#inputmethod_commandvaluetype) | InputMethod_CommandValueType | The value type of command data. |
-| [InputMethod_ErrorCode](#inputmethod_errorcode) | InputMethod_ErrorCode | The value type of command data. |
-| [InputMethod_RequestKeyboardReason](#inputmethod_requestkeyboardreason) | InputMethod_RequestKeyboardReason | The value type of request keyboard. |
+| [InputMethod_KeyboardStatus](#inputmethod_keyboardstatus) | InputMethod_KeyboardStatus | Enumerates the keyboard status. |
+| [InputMethod_EnterKeyType](#inputmethod_enterkeytype) | InputMethod_EnterKeyType | Enumerates the Enter key types. |
+| [InputMethod_Direction](#inputmethod_direction) | InputMethod_Direction | Enumerates the moving directions. |
+| [InputMethod_ExtendAction](#inputmethod_extendaction) | InputMethod_ExtendAction | Enumerates the types of the extended edit action on the text box. |
+| [InputMethod_TextInputType](#inputmethod_textinputtype) | InputMethod_TextInputType | Enumerates the text input types. |
+| [InputMethod_CommandValueType](#inputmethod_commandvaluetype) | InputMethod_CommandValueType | Enumerates the private data types. |
+| [InputMethod_ErrorCode](#inputmethod_errorcode) | InputMethod_ErrorCode | Enumerates the input method error codes. |
+| [InputMethod_RequestKeyboardReason](#inputmethod_requestkeyboardreason) | InputMethod_RequestKeyboardReason | Enumerates the reasons for requesting the keyboard. |
 
 ## Enum type description
 
@@ -37,7 +39,7 @@ enum InputMethod_KeyboardStatus
 
 **Description**
 
-Keyboard status.
+Enumerates the keyboard status.
 
 **Since**: 12
 
@@ -55,7 +57,7 @@ enum InputMethod_EnterKeyType
 
 **Description**
 
-Enter key type.
+Enumerates the Enter key types.
 
 **Since**: 12
 
@@ -79,7 +81,7 @@ enum InputMethod_Direction
 
 **Description**
 
-Direction.
+Enumerates the moving directions.
 
 **Since**: 12
 
@@ -99,7 +101,7 @@ enum InputMethod_ExtendAction
 
 **Description**
 
-The extend action.
+Enumerates the types of the extended edit action on the text box.
 
 **Since**: 12
 
@@ -118,7 +120,7 @@ enum InputMethod_TextInputType
 
 **Description**
 
-The text input type.
+Enumerates the text input types.
 
 **Since**: 12
 
@@ -138,7 +140,7 @@ The text input type.
 | IME_TEXT_INPUT_TYPE_USER_NAME = 10 | The text input type is USER NAME. |
 | IME_TEXT_INPUT_TYPE_NEW_PASSWORD = 11 | The text input type is NEW PASSWORD. |
 | IME_TEXT_INPUT_TYPE_NUMBER_DECIMAL = 12 | The text input type is NUMBER DECIMAL. |
-| IME_TEXT_INPUT_TYPE_ONE_TIME_CODE = 13 |  |
+| IME_TEXT_INPUT_TYPE_ONE_TIME_CODE = 13 | The text input type is ONE TIME CODE.<br>**Since**: 20 |
 
 ### InputMethod_CommandValueType
 
@@ -148,7 +150,7 @@ enum InputMethod_CommandValueType
 
 **Description**
 
-The value type of command data.
+Enumerates the private data types.
 
 **Since**: 12
 
@@ -167,7 +169,7 @@ enum InputMethod_ErrorCode
 
 **Description**
 
-The value type of command data.
+Enumerates the input method error codes.
 
 **Since**: 12
 
@@ -179,7 +181,7 @@ The value type of command data.
 | IME_ERR_PACKAGEMANAGER = 12800001 | The error code when the bundle manager error. |
 | IME_ERR_IMENGINE = 12800002 | The error code when input method engine error. |
 | IME_ERR_IMCLIENT = 12800003 | The error code when input method client error. |
-| IME_ERR_CONFIG_PERSIST = 12800005 | The error code when configuration persistence error. |
+| IME_ERR_CONFIG_PERSIST = 12800005 | The error code when configuration persistence error.This error code is reported when the configuration fails to be saved. |
 | IME_ERR_CONTROLLER = 12800006 | The error code when input method controller error. |
 | IME_ERR_SETTINGS = 12800007 | The error code when input method setting error. |
 | IME_ERR_IMMS = 12800008 | The error code when input method manager service error. |
@@ -195,7 +197,7 @@ enum InputMethod_RequestKeyboardReason
 
 **Description**
 
-The value type of request keyboard.
+Enumerates the reasons for requesting the keyboard.
 
 **Since**: 15
 

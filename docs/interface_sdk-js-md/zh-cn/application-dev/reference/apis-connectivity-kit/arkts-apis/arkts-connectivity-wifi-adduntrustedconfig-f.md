@@ -17,7 +17,7 @@ function addUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>
 
 添加不可信网络配置，使用Promise异步回调。
 
-&lt;p&gt;该方法一次添加一个配置。添加该配置后，设备将决定是否连接到热点。
+<p>该方法一次添加一个配置。添加该配置后，设备将决定是否连接到热点。
 
 **起始版本：** 7
 
@@ -85,7 +85,7 @@ function addUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<bo
 
 添加不可信网络配置，使用callback异步回调。
 
-&lt;p&gt;该方法一次添加一个配置。添加该配置后，设备将决定是否连接到热点。
+<p>该方法一次添加一个配置。添加该配置后，设备将决定是否连接到热点。
 
 **起始版本：** 7
 

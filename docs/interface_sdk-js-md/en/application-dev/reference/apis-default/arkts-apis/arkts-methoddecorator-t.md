@@ -14,11 +14,11 @@ declare type MethodDecorator = <T>(target: Object, propertyKey: string | symbol,
 | --- | --- | --- | --- |
 | target | Object | Yes |  |
 | propertyKey | string \| symbol | Yes |  |
-| descriptor | [TypedPropertyDescriptor](arkts-lib-es5-typedpropertydescriptor-i.md)&lt;T&gt; | Yes |  |
+| descriptor | [TypedPropertyDescriptor](arkts-libes5-typedpropertydescriptor-i.md)&lt;T&gt; | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TypedPropertyDescriptor](arkts-lib-es5-typedpropertydescriptor-i.md)&lt;T&gt; \| void | - |
+| [TypedPropertyDescriptor](arkts-libes5-typedpropertydescriptor-i.md)&lt;T&gt; \| void | - |
 

@@ -17,5 +17,5 @@
 
 | Name | Description |
 | --- | --- |
-| [DynamicLayoutAttribute](arkts-arkui-components-arkdynamiclayout-dynamiclayoutattribute-i.md) | The DynamicLayoutAttribute |
+| [DynamicLayoutAttribute](arkts-arkuicomponentsarkdynamiclayout-dynamiclayoutattribute-i.md) | The DynamicLayoutAttribute |
 

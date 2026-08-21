@@ -1,6 +1,6 @@
 # Scenarios
 
-Enumerates the scenarios where the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant) lifecycle callback is not triggered. It is used in the [setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setonnewwantskipscenarios) API.
+Enumerates the scenarios where the [onNewWant](arkts-ability-appabilityuiability-uiability-c.md#onnewwant) lifecycle callback is not triggered. It is used in the [setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setonnewwantskipscenarios) API.
 
 **Since:** 23
 

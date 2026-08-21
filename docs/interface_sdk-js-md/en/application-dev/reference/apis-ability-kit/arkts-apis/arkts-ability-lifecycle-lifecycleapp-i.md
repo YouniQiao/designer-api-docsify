@@ -37,7 +37,7 @@ Called back when an ability enters the &lt;b&gt;ACTIVE&lt;/b&gt; state.
 onCompleteContinuation?(result: number): void
 ```
 
-Called back when a local ability migration is complete. &lt;p&gt;You can define the processing logic after the migration is complete. For example, you can display a prompt to notify the user of the successful migration and then exit the local ability.&lt;/p&gt;
+Called back when a local ability migration is complete. <p>You can define the processing logic after the migration is complete. For example, you can display a prompt to notify the user of the successful migration and then exit the local ability.</p>
 
 **Since:** 7
 
@@ -159,7 +159,7 @@ Called when the launch mode of an ability is set to singleton.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the new {@code want} containing information about the ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Indicates the new {@code want} containing information about the ability. |
 
 ## onRemoteTerminated
 

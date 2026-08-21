@@ -563,11 +563,16 @@ Updates data to be signed. This API uses an asynchronous callback to return the 
 
 > **NOTE：**
 > 
-> You can call **update** multiple times or do not use **update** (call [sign](#sign) after &gt; [init](#init)), depending on the data volume.
+> You can call **update** multiple times or do not use **update** (call [sign](#sign) after
+> [init](#init)), depending on the data volume.
 > 
-> The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a &gt; large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This &gt; prevents too much memory from being requested at a time.
+> The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a
+> large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This
+> prevents too much memory from being requested at a time.
 > 
-> For details about the sample code for calling **update()** multiple times in signing, see &gt; Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) &gt; . The operations of other algorithms are similar.
+> For details about the sample code for calling **update()** multiple times in signing, see
+> Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)
+> . The operations of other algorithms are similar.
 > 
 > **OnlySign** cannot be used with **update()**. If **OnlySign** is specified, use **sign()** to pass in data.
 > 
@@ -613,10 +618,17 @@ Updates data to be signed. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> You can call **update** multiple times or do not use **update** (call &gt; [sign](#sign) after &gt; [init](#init)), depending on the &gt; data volume.
+> You can call **update** multiple times or do not use **update** (call
+> [sign](#sign) after
+> [init](#init)), depending on the
+> data volume.
 > 
-> The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a &gt; large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This &gt; prevents too much memory from being requested at a time.
-> For details about the sample code for calling **update()** multiple times in signing, see &gt; Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) &gt; . The operations of other algorithms are similar.
+> The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a
+> large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This
+> prevents too much memory from being requested at a time.
+> For details about the sample code for calling **update()** multiple times in signing, see
+> Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)
+> . The operations of other algorithms are similar.
 > 
 > **OnlySign** cannot be used with **update()**. If **OnlySign** is specified, use **sign()** to pass in data.
 > 
@@ -667,16 +679,23 @@ Updates data to be signed. This API returns the result synchronously.
 
 > **NOTE：**
 > 
-> You can call **updateSync** multiple times or do not use **updateSync** (call &gt; [signSync](#signsync) after [initSync](#initsync)), &gt; depending on the data volume.
+> You can call **updateSync** multiple times or do not use **updateSync** (call
+> [signSync](#signsync) after [initSync](#initsync)),
+> depending on the data volume.
 > 
-> The amount of the data to be passed in by **updateSync** (one-time or accumulative) is not limited. If there is &gt; a large amount of data, you are advised to call **updateSync** multiple times to pass in the data by segment.
+> The amount of the data to be passed in by **updateSync** (one-time or accumulative) is not limited. If there is
+> a large amount of data, you are advised to call **updateSync** multiple times to pass in the data by segment.
 > This prevents too much memory from being requested at a time.
 > 
-> For details about the sample code for calling **updateSync** multiple times in signing, see &gt; Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) &gt; . The operations of other algorithms are similar.
+> For details about the sample code for calling **updateSync** multiple times in signing, see
+> Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)
+> . The operations of other algorithms are similar.
 > 
-> **OnlySign** cannot be used with **updateSync**. If **OnlySign** is specified, use **signSync** to pass in &gt; data.
+> **OnlySign** cannot be used with **updateSync**. If **OnlySign** is specified, use **signSync** to pass in
+> data.
 > 
-> If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, **updateSync** is not &gt; supported. If **updateSync** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
+> If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, **updateSync** is not
+> supported. If **updateSync** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
 <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 

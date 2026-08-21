@@ -6,9 +6,16 @@
 
 > **说明：**
 > 
-> 传入[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法前需要 &gt; 指定其algName属性（来源于父类[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)）。
+> 传入[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法前需要
+> 指定其algName属性（来源于父类[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)）。
 > 
-> 在ChaCha20-Poly1305加密时，需从 &gt; [doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal)或 &gt; [doFinalSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinalsync)输出的 &gt; [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)末尾提取16字节，作为解密时 &gt; [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)或 &gt; [initSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#initsync)方法的参数 &gt; [Poly1305ParamsSpec](#poly1305paramsspec)中的authTag。
+> 在ChaCha20-Poly1305加密时，需从
+> [doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal)或
+> [doFinalSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinalsync)输出的
+> [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)末尾提取16字节，作为解密时
+> [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)或
+> [initSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#initsync)方法的参数
+> [Poly1305ParamsSpec](#poly1305paramsspec)中的authTag。
 
 **继承/实现关系：** Poly1305ParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)
 

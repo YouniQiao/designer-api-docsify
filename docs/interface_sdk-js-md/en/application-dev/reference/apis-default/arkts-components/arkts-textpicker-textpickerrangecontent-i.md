@@ -40,7 +40,7 @@ text?: string | Resource
 
 Text information.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If the text length exceeds the column width, the text will be truncated. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If the text length exceeds the column width, the text will be truncated. </p>
 
 **Type:** string \| [Resource](../../apis-arkui/arkts-apis/arkts-arkui-resource-t.md)
 

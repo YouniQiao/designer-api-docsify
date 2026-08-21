@@ -119,7 +119,10 @@ Registers audio and haptic resources via URIs. This API uses a promise to return
 
 > **NOTE：**
 > 
-> A maximum of 128 resources can be registered at the same time for an application. Any attempt to register &gt; beyond this limit will fail (returning a negative resource ID). You are advised to reasonably manage the number &gt; of registered resources. For resources that are no longer used, you are advised to unregister them in a timely &gt; manner.
+> A maximum of 128 resources can be registered at the same time for an application. Any attempt to register
+> beyond this limit will fail (returning a negative resource ID). You are advised to reasonably manage the number
+> of registered resources. For resources that are no longer used, you are advised to unregister them in a timely
+> manner.
 
 **Since:** 23
 
@@ -173,7 +176,10 @@ Registers audio and haptic resources via file descriptors. This API uses a promi
 
 > **NOTE：**
 > 
-> A maximum of 128 resources can be registered at the same time for an application. Any attempt to register &gt; beyond this limit will fail (returning a negative resource ID). You are advised to reasonably manage the number &gt; of registered resources. For resources that are no longer used, you are advised to unregister them in a timely &gt; manner.
+> A maximum of 128 resources can be registered at the same time for an application. Any attempt to register
+> beyond this limit will fail (returning a negative resource ID). You are advised to reasonably manage the number
+> of registered resources. For resources that are no longer used, you are advised to unregister them in a timely
+> manner.
 
 **Since:** 23
 
@@ -317,7 +323,8 @@ Unregisters an audio-haptic source. This API uses a promise to return the result
 
 > **NOTE：**
 > 
-> For resources that are no longer used, you are advised to unregister them in a timely manner to avoid issues &gt; such as resource leaks or the number of resources exceeding the upper limit.
+> For resources that are no longer used, you are advised to unregister them in a timely manner to avoid issues
+> such as resource leaks or the number of resources exceeding the upper limit.
 
 **Since:** 23
 

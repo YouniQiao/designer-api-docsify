@@ -1,6 +1,6 @@
 # Scenarios
 
-表示不触发[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)生命周期回调场景的枚举，用于 [setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setonnewwantskipscenarios)接口。
+表示不触发[onNewWant](arkts-ability-appabilityuiability-uiability-c.md#onnewwant)生命周期回调场景的枚举，用于 [setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setonnewwantskipscenarios)接口。
 
 **起始版本：** 23
 

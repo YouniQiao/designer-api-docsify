@@ -12,13 +12,13 @@ import { CompletionHandlerForAtomicService, FailureCode } from '@kit.AbilityKit'
 
 | Name | Description |
 | --- | --- |
-| [CompletionHandlerForAtomicService](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md) | CompletionHandlerForAtomicService provides two callback functions, [onAtomicServiceRequestSuccess](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onatomicservicerequestsuccess) and [onAtomicServiceRequestFailure] [onAtomicServiceRequestFailure](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onatomicservicerequestfailure), to handle the results of successful and failed atomic service launch requests, respectively. |
+| [CompletionHandlerForAtomicService](arkts-ability-appabilitycompletionhandlerforatomicservice-completionhandlerforatomicservice-c.md) | CompletionHandlerForAtomicService provides two callback functions, [onAtomicServiceRequestSuccess](arkts-ability-appabilitycompletionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onatomicservicerequestsuccess) and [onAtomicServiceRequestFailure] [onAtomicServiceRequestFailure](arkts-ability-appabilitycompletionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onatomicservicerequestfailure), to handle the results of successful and failed atomic service launch requests, respectively. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [FailureCode](arkts-ability-app-ability-completionhandlerforatomicservice-failurecode-e.md) | Enumerates the errors codes available for failures in launching an atomic service. |
+| [FailureCode](arkts-ability-appabilitycompletionhandlerforatomicservice-failurecode-e.md) | Enumerates the errors codes available for failures in launching an atomic service. |
 
 ### Types
 

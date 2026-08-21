@@ -2,7 +2,7 @@
 
 Implements a window manager, which manages each basic window unit, that is, [Window](arkts-arkui-window-n.md) instance.
 
-Before calling any of the following APIs, you must use [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) to create a WindowStage instance.
+Before calling any of the following APIs, you must use [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiability-uiability-c.md#onwindowstagecreate) to create a WindowStage instance.
 
 **Since:** 23
 

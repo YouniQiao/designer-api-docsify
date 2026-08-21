@@ -18,17 +18,17 @@ import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, Ena
 
 | 名称 | 说明 |
 | --- | --- |
-| [Router(页面路由)](arkts-arkui-system-router-router-c.md) | 通过不同的uri访问不同的页面。 |
+| [Router(页面路由)](arkts-arkui-systemrouter-router-c.md) | 通过不同的uri访问不同的页面。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [BackRouterOptions(页面路由)](arkts-arkui-system-router-backrouteroptions-i.md) | 定义路由器返回的选项。 |
-| [DisableAlertBeforeBackPageOptions(页面路由)](arkts-arkui-system-router-disablealertbeforebackpageoptions-i.md) | 定义DisableAlertBeforeBackPage参数选项。 |
-| [EnableAlertBeforeBackPageOptions(页面路由)](arkts-arkui-system-router-enablealertbeforebackpageoptions-i.md) | 定义EnableAlertBeforeBackPage选项。 |
-| [RouterOptions(页面路由)](arkts-arkui-system-router-routeroptions-i.md) | 定义路由器的选项。 |
-| [RouterState(页面路由)](arkts-arkui-system-router-routerstate-i.md) | 定义路由器的状态。 |
+| [BackRouterOptions(页面路由)](arkts-arkui-systemrouter-backrouteroptions-i.md) | 定义路由器返回的选项。 |
+| [DisableAlertBeforeBackPageOptions(页面路由)](arkts-arkui-systemrouter-disablealertbeforebackpageoptions-i.md) | 定义DisableAlertBeforeBackPage参数选项。 |
+| [EnableAlertBeforeBackPageOptions(页面路由)](arkts-arkui-systemrouter-enablealertbeforebackpageoptions-i.md) | 定义EnableAlertBeforeBackPage选项。 |
+| [RouterOptions(页面路由)](arkts-arkui-systemrouter-routeroptions-i.md) | 定义路由器的选项。 |
+| [RouterState(页面路由)](arkts-arkui-systemrouter-routerstate-i.md) | 定义路由器的状态。 |
 
 ### 类型
 

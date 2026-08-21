@@ -77,7 +77,7 @@ onError(callback: import('../api/@ohos.base').ErrorCallback)
 onTerminated(callback: import('../api/@ohos.base').Callback<TerminationInfo>)
 ```
 
-当启动的EmbeddedUIExtensionAbility通过调用 [terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#terminateselfwithresult) 或 [terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#terminateself) 正常退出时回调。
+当启动的EmbeddedUIExtensionAbility通过调用 [terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiextensioncontentsession-uiextensioncontentsession-c.md#terminateselfwithresult) 或 [terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiextensioncontentsession-uiextensioncontentsession-c.md#terminateself) 正常退出时回调。
 
 > **说明：**
 > 

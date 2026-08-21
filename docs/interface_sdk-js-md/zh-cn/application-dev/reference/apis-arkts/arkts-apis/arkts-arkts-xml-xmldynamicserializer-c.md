@@ -455,7 +455,8 @@ setText(text: string): void
 
 > **说明：**
 > 
-> 该接口必须在[startElement](#startelement)之后、 &gt; [endElement](#endelement)之前调用，用于设置当前元素的文本内容。
+> 该接口必须在[startElement](#startelement)之后、
+> [endElement](#endelement)之前调用，用于设置当前元素的文本内容。
 
 **起始版本：** 23
 

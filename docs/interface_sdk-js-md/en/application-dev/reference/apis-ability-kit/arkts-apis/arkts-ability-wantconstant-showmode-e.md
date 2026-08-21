@@ -1,6 +1,6 @@
 # ShowMode
 
-Enumerates the display modes of an [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md) when it is launched.
+Enumerates the display modes of an [EmbeddableUIAbility](arkts-ability-appabilityembeddableuiability-embeddableuiability-c.md) when it is launched.
 
 **Since:** 23
 

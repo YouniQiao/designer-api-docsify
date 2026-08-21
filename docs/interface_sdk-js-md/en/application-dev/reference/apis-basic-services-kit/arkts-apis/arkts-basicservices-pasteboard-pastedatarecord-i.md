@@ -381,7 +381,7 @@ want: Want
 
 Want content. Modifications to this attribute are ineffective. To refresh the attribute value, please use [addEntry](#addentry).
 
-**Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
+**Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)
 
 **Since:** 23
 

@@ -113,7 +113,7 @@ owner: Want
 
 Defines owner.
 
-**Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
+**Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)
 
 **Since:** 23
 
@@ -135,7 +135,7 @@ target: Want
 
 Defines target.
 
-**Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
+**Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)
 
 **Since:** 23
 

@@ -31,7 +31,7 @@ Reads data from a file and returns the number of bytes read. This API uses a pro
 | --- | --- | --- | --- |
 | fd | int | Yes | FD of the file. |
 | buffer | ArrayBuffer | Yes | Buffer used to store the file data read. |
-| options | [ReadOptions](arkts-file-fs-readoptions-i.md) | No | The options are as follows: <br>- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position. <br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length. |
+| options | [ReadOptions](arkts-filefs-readoptions-i.md) | No | The options are as follows: <br>- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position. <br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length. |
 
 **Return value:**
 
@@ -121,7 +121,7 @@ Reads data from a file. Read options (such as the offset position and length of 
 | --- | --- | --- | --- |
 | fd | int | Yes | FD of the file. |
 | buffer | ArrayBuffer | Yes | Buffer used to store the file data read. |
-| options | [ReadOptions](arkts-file-fs-readoptions-i.md) | Yes | The options are as follows: <br>- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position. <br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length. |
+| options | [ReadOptions](arkts-filefs-readoptions-i.md) | Yes | The options are as follows: <br>- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position. <br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the length of the data read, in bytes. |
 
 **Error codes:**

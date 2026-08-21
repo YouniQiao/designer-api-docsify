@@ -6,7 +6,7 @@ typedef struct InputMethod_AttachOptions InputMethod_AttachOptions
 
 ## Overview
 
-Define the InputMethod_AttachOptions structure type.The options when attaching input method.
+Options for binding the input method.The options when attaching input method.
 
 **Since**: 12
 

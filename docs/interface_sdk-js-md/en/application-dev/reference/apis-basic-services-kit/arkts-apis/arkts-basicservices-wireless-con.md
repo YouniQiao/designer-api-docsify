@@ -44,7 +44,7 @@ const BLUETOOTH_DISCOVER_TIMEOUT: string
 
 Indicates the duration (in seconds) that the device can be discovered through Bluetooth.
 
-&lt;p&gt;After the duration expires, the device cannot be discovered through Bluetooth.
+<p>After the duration expires, the device cannot be discovered through Bluetooth.
 
 **Since:** 23
 
@@ -78,7 +78,7 @@ const BLUETOOTH_STATUS: string
 
 Specifies whether Bluetooth is enabled.
 
-&lt;p&gt;If the value is {@code true}, Bluetooth is enabled. If the value is {@code false}, Bluetooth is disabled.
+<p>If the value is {@code true}, Bluetooth is enabled. If the value is {@code false}, Bluetooth is disabled.
 
 **Since:** 23
 
@@ -128,7 +128,7 @@ const OWNER_LOCKDOWN_WIFI_CFG: string
 
 Specifies whether the Wi-Fi configuration created by the application of the device owner should be locked down.
 
-&lt;p&gt;If the value is {@code true}, the Wi-Fi configuration should be locked down. If the value is {@code false}, the Wi-Fi configuration should not be locked down.
+<p>If the value is {@code true}, the Wi-Fi configuration should be locked down. If the value is {@code false}, the Wi-Fi configuration should not be locked down.
 
 **Since:** 23
 
@@ -178,7 +178,7 @@ const WIFI_STATUS: string
 
 Specifies whether Wi-Fi is enabled.
 
-&lt;p&gt;If the value is {@code true}, Wi-Fi is enabled. If the value is {@code false}, Wi-Fi is disabled.
+<p>If the value is {@code true}, Wi-Fi is enabled. If the value is {@code false}, Wi-Fi is disabled.
 
 **Since:** 23
 
@@ -212,7 +212,7 @@ const WIFI_WATCHDOG_STATUS: string
 
 Specifies whether Wi-Fi watchdog is enabled.
 
-&lt;p&gt;If the value is {@code true}, Wi-Fi watchdog is enabled. If the value is {@code false}, Wi-Fi watchdog is disabled.
+<p>If the value is {@code true}, Wi-Fi watchdog is enabled. If the value is {@code false}, Wi-Fi watchdog is disabled.
 
 **Since:** 23
 

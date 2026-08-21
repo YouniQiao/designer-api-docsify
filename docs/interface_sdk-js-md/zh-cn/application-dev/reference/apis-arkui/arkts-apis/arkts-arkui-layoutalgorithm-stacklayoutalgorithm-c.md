@@ -4,7 +4,8 @@
 
 > **说明：**
 > 
-> StackLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为DynamicLayout组件的 &gt; 入参指定布局算法。
+> StackLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为DynamicLayout组件的
+> 入参指定布局算法。
 
 **继承/实现关系：** StackLayoutAlgorithm implements [LayoutAlgorithm](../../apis-default/arkts-apis/arkts-layoutalgorithm-i.md)
 

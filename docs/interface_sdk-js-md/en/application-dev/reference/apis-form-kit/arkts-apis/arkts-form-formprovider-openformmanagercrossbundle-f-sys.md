@@ -28,7 +28,7 @@ Open the view of forms belonging to the specified bundle. Client to communicatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | The want of the form to open. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | The want of the form to open. |
 
 **Error codes:**
 

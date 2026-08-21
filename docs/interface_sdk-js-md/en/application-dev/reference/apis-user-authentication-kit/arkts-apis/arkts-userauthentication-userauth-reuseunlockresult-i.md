@@ -4,9 +4,13 @@ Represents information about the authentication result reuse. This API is used t
 
 > **NOTE：**
 
-> If the credential changes within the reuse duration after a successful identity authentication (including device &gt; unlock authentication), the authentication result can still be reused and the actual **EnrolledState** is &gt; returned in the authentication result. When the authentication credential used in the previous authentication has &gt; been deleted when the authentication result is reused:
+> If the credential changes within the reuse duration after a successful identity authentication (including device
+> unlock authentication), the authentication result can still be reused and the actual **EnrolledState** is
+> returned in the authentication result. When the authentication credential used in the previous authentication has
+> been deleted when the authentication result is reused:
 > 
-> - If the face or fingerprint credential is deleted, the authentication result can still be reused, but the values &gt; of **credentialCount** and **credentialDigest** in the returned **EnrolledState** are both **0**.
+> - If the face or fingerprint credential is deleted, the authentication result can still be reused, but the values
+> of **credentialCount** and **credentialDigest** in the returned **EnrolledState** are both **0**.
 > 
 > - If the screen lock password is deleted, the reuse will fail.
 

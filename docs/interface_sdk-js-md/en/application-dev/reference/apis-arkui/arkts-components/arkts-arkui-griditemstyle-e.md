@@ -4,7 +4,8 @@ Enumerates styles of grid items.
 
 > **NOTE：**
 > 
-> To set the focused style for the grid item, the grid container must have paddings of greater than 4 vp for &gt; accommodating the focus frame of the grid item.
+> To set the focused style for the grid item, the grid container must have paddings of greater than 4 vp for
+> accommodating the focus frame of the grid item.
 
 **Since:** 11
 

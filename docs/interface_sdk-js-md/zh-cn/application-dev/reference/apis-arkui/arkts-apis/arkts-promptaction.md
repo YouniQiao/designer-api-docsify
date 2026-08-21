@@ -4,9 +4,12 @@
 
 > **说明：**
 
-> - 本模块不支持在[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)的文件声明处使用，即不能在UIAbility的生命周期中调用，需要在 创建组件实例后使用。
+> - 本模块不支持在[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiability-uiability-c.md)的文件声明处使用，即不能在UIAbility的生命周期中调用，需要在 创建组件实例后使用。
 > 
-> - 本模块功能依赖UI的执行上下文，不可在[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的地方使用，参见 &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)说明。建议<!--Del-->在除 &gt; [ServiceExtensionAbility](../../../application-models/serviceextensionability-sys.md)等无UI界面的场景外，均<!--DelEnd-->使用 &gt; UIContext中的弹窗方法。
+> - 本模块功能依赖UI的执行上下文，不可在[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的地方使用，参见
+> [UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)说明。建议<!--Del-->在除
+> [ServiceExtensionAbility](../../../application-models/serviceextensionability-sys.md)等无UI界面的场景外，均<!--DelEnd-->使用
+> UIContext中的弹窗方法。
 
 ## 导入模块
 

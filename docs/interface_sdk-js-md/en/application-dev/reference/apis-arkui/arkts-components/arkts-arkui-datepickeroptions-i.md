@@ -6,7 +6,8 @@ Describes the parameters of the date picker.
 > 
 > - For details about how to use **Date**, see TimePickerOptions.
 > 
-> - Property modifications made to **DatePickerOptions** during the **DatePicker** scrolling process may not take &gt; effect.
+> - Property modifications made to **DatePickerOptions** during the **DatePicker** scrolling process may not take
+> effect.
 
 > **NOTE：**
 > 

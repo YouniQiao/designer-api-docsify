@@ -20,5 +20,5 @@ TreeMap的回调函数类型。
 | --- | --- | --- | --- |
 | value | V | 是 | 当前元素的值。 |
 | key | K | 是 | 当前元素的键。 |
-| map | [TreeMap](arkts-arkts-util-treemap-treemap-c.md)&lt;K, V&gt; | 是 | 当前正在遍历的TreeMap实例。 |
+| map | [TreeMap](arkts-arkts-utiltreemap-treemap-c.md)&lt;K, V&gt; | 是 | 当前正在遍历的TreeMap实例。 |
 

@@ -8,7 +8,8 @@
 
 > **说明：**
 > 
-> - 子组件类型：系统组件和自定义组件，支持渲染控制类型（[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、 &gt; ForEach和LazyForEach）。
+> - 子组件类型：系统组件和自定义组件，支持渲染控制类型（[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、
+> ForEach和LazyForEach）。
 > 
 > - 自定义组件宽高默认为0，需要给其设置宽高，否则标记组件将不显示。
 > 

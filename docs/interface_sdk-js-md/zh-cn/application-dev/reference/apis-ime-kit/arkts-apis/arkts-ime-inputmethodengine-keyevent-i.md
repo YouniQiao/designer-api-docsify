@@ -36,7 +36,7 @@ readonly keyAction: int
 readonly keyCode: int
 ```
 
-@brief 按键的键值。键码值说明参考[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。
+@brief 按键的键值。键码值说明参考[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md)。
 
 **类型：** int
 

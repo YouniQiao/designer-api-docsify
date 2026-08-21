@@ -4,7 +4,8 @@ Lightweight storage provides applications with data processing capability and al
 
 > **NOTE：**
 
-> - The APIs of this module are no longer maintained since API version 9. You are advised to use &gt; [@ohos.data.preferences](arkts-data-preferences.md).
+> - The APIs of this module are no longer maintained since API version 9. You are advised to use
+> [@ohos.data.preferences](arkts-data-preferences.md).
 
 **Since:** 6
 

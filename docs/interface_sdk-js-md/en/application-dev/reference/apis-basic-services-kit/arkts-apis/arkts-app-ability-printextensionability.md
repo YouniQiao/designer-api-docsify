@@ -12,13 +12,13 @@ import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [PrintExtensionAbility](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md) | class of print extension ability. |
+| [PrintExtensionAbility](arkts-basicservices-appabilityprintextensionability-printextensionability-c.md) | class of print extension ability. |
 
 <!--Del-->
 ### Classes(System API)
 
 | Name | Description |
 | --- | --- |
-| [PrintExtensionAbility](arkts-basicservices-app-ability-printextensionability-printextensionability-c-sys.md) | class of print extension ability. |
+| [PrintExtensionAbility](arkts-basicservices-appabilityprintextensionability-printextensionability-c-sys.md) | class of print extension ability. |
 <!--DelEnd-->
 

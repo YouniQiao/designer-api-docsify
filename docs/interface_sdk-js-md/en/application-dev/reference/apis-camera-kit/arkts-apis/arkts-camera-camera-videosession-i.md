@@ -773,9 +773,12 @@ Sets the priority level for video recording quality.
 
 > **NOTE：**
 > 
-> - The default value is **HIGH_QUALITY**. Switching to **POWER_BALANCE** will compromise video recording quality &gt; to achieve lower power usage. The extent of power conservation achieved varies depending on the platform.
+> - The default value is **HIGH_QUALITY**. Switching to **POWER_BALANCE** will compromise video recording quality
+> to achieve lower power usage. The extent of power conservation achieved varies depending on the platform.
 > 
-> - It is recommended that this API be called between &gt; [commitConfig](arkts-camera-camera-session-i.md#commitconfig) and &gt; [start](arkts-camera-camera-session-i.md#start).
+> - It is recommended that this API be called between
+> [commitConfig](arkts-camera-camera-session-i.md#commitconfig) and
+> [start](arkts-camera-camera-session-i.md#start).
 
 **Since:** 23
 

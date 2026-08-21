@@ -1,4 +1,4 @@
-# ToolBarItem
+# ToolBarItem(定义toolbar属性。)
 
 可以使用**ToolBarItem**组件，通过[toolbar](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-toolbar.md#toolbar)通用属性向标题栏中添加toolbar item。
 

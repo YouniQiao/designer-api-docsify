@@ -18,7 +18,7 @@ config: Configuration
 
 Environment variables.
 
-**Type:** [Configuration](arkts-ability-app-ability-configuration-configuration-i.md)
+**Type:** [Configuration](arkts-ability-appabilityconfiguration-configuration-i.md)
 
 **Since:** 23
 

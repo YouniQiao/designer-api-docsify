@@ -34,7 +34,8 @@ getCharacterPositionAtCoordinate(x: number, y: number): PositionWithAffinity | u
 
 > **说明：**
 > 
-> - 字形（Glyph）是文本渲染的基本单元，与字符（Character）可能存在一对多关系。如需获取字形级别的位置信息，可使用 &gt; [getGlyphPositionAtCoordinate](#getglyphpositionatcoordinate)方法。
+> - 字形（Glyph）是文本渲染的基本单元，与字符（Character）可能存在一对多关系。如需获取字形级别的位置信息，可使用
+> [getGlyphPositionAtCoordinate](#getglyphpositionatcoordinate)方法。
 > 
 > - 文本内容变更后，需等待布局完成才可获取到最新的位置信息。
 
@@ -174,7 +175,8 @@ getGlyphPositionAtCoordinate(x: number, y: number): PositionWithAffinity
 
 > **说明：**
 > 
-> - 字形（Glyph）是文本渲染的基本单元，与字符（Character）可能存在一对多关系。如需获取字符级别的位置信息，可使用 &gt; [getCharacterPositionAtCoordinate](#getcharacterpositionatcoordinate)方法。
+> - 字形（Glyph）是文本渲染的基本单元，与字符（Character）可能存在一对多关系。如需获取字符级别的位置信息，可使用
+> [getCharacterPositionAtCoordinate](#getcharacterpositionatcoordinate)方法。
 > 
 > - 文本内容变更后，需等待布局完成才可获取到最新的位置信息。
 

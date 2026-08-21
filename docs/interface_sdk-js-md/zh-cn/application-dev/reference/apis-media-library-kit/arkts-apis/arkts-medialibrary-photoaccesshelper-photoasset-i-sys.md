@@ -460,7 +460,9 @@ getExif(callback: AsyncCallback<string>): void
 
 > **注意：**
 > 
-> 此接口返回的是Exif标签组成的json格式的字符串，完整Exif信息由all_exif与 &gt; [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md)组成， &gt; [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md).fetchColumns需要传入这两个字段。
+> 此接口返回的是Exif标签组成的json格式的字符串，完整Exif信息由all_exif与
+> [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md)组成，
+> [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md).fetchColumns需要传入这两个字段。
 
 **起始版本：** 23
 
@@ -535,7 +537,9 @@ getExif(): Promise<string>
 
 > **注意：**
 > 
-> 此接口返回的是Exif标签组成的json格式的字符串，完整Exif信息由all_exif与 &gt; [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md)组成， &gt; [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md).fetchColumns需要传入这两个字段。
+> 此接口返回的是Exif标签组成的json格式的字符串，完整Exif信息由all_exif与
+> [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md)组成，
+> [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md).fetchColumns需要传入这两个字段。
 
 **起始版本：** 23
 

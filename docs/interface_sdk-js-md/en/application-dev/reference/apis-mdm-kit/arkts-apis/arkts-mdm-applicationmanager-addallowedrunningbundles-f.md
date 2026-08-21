@@ -16,11 +16,20 @@ Adds applications to the application running trustlist. Only applications in the
 
 > **NOTE：**
 > 
-> 1. Most APIs provided by MDM Kit are available only to MDM applications. When using this API, add the MDM &gt; application to the application running trustlist. Otherwise, the MDM application will be prohibited from running, &gt; blocking the API call. For details about whether the API is open only to MDM applications, see the module &gt; description.
+> 1. Most APIs provided by MDM Kit are available only to MDM applications. When using this API, add the MDM
+> application to the application running trustlist. Otherwise, the MDM application will be prohibited from running,
+> blocking the API call. For details about whether the API is open only to MDM applications, see the module
+> description.
 > 
-> 2. If the application running blocklist is not empty, this API cannot be used to add applications to the running &gt; trustlist. Otherwise, the error code 9200010 is reported. APIs related to the application running blocklist &gt; include [addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md), &gt; [addDisallowedRunningBundles](arkts-mdm-applicationmanager-adddisallowedrunningbundles-f-sys.md), &gt; [addDisallowedRunningBundles](arkts-mdm-applicationmanager-adddisallowedrunningbundles-f-sys.md), and &gt; [addDisallowedRunningBundles](arkts-mdm-applicationmanager-adddisallowedrunningbundles-f-sys.md).
+> 2. If the application running blocklist is not empty, this API cannot be used to add applications to the running
+> trustlist. Otherwise, the error code 9200010 is reported. APIs related to the application running blocklist
+> include [addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md),
+> [addDisallowedRunningBundles](arkts-mdm-applicationmanager-adddisallowedrunningbundles-f-sys.md),
+> [addDisallowedRunningBundles](arkts-mdm-applicationmanager-adddisallowedrunningbundles-f-sys.md), and
+> [addDisallowedRunningBundles](arkts-mdm-applicationmanager-adddisallowedrunningbundles-f-sys.md).
 > 
-> 3. This API only takes effect for third-party applications. System applications are not subject to this list and &gt; are allowed to run by default.
+> 3. This API only takes effect for third-party applications. System applications are not subject to this list and
+> are allowed to run by default.
 
 **Since:** 21
 
@@ -36,7 +45,7 @@ Adds applications to the application running trustlist. Only applications in the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | appIdentifiers | Array&lt;string&gt; | Yes | Array of application [unique identifiers](../../../quick-start/common-problem-of-application.md#what-is-appidentifier). You can obtain **bundleInfo.signatureInfo.appIdentifier** through the [bundleManager.getInstalledBundleList](arkts-mdm-bundlemanager-getinstalledbundlelist-f.md) API. <br>Value range: <br> - The total number of entries in this list for a single user must not exceed 200. For example, if 50 entries have been set for user 100 and none for user 101, user 100 can add 150 more entries, while user 101 can add up to 200 entries. |
 | accountId | number | Yes | Account ID, which must be greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
 

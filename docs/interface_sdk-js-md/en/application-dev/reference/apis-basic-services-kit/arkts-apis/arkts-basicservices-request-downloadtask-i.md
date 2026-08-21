@@ -25,7 +25,8 @@ Deletes the download task. This API uses an asynchronous callback to return the 
 
 > **NOTE：**
 > 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error &gt; code is removed from API version 12.
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
 
 **Since:** 23
 
@@ -84,7 +85,8 @@ Deletes the download task. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error &gt; code is removed from API version 12.
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
 
 **Since:** 23
 
@@ -140,7 +142,8 @@ Obtains the information about this download task. This API uses an asynchronous 
 
 > **NOTE：**
 > 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error &gt; code is removed from API version 12.
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
 
 **Since:** 23
 
@@ -199,7 +202,8 @@ Obtains the information about this download task. This API uses a promise to ret
 
 > **NOTE：**
 > 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error &gt; code is removed from API version 12.
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
 
 **Since:** 23
 
@@ -256,7 +260,8 @@ Obtains the MIME type (that is, media type of resources in HTTP) of a download t
 
 > **NOTE：**
 > 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error &gt; code is removed from API version 12.
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
 
 **Since:** 23
 
@@ -315,7 +320,8 @@ Obtains the MIME type (that is, media type of resources in HTTP) of a download t
 
 > **NOTE：**
 > 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error &gt; code is removed from API version 12.
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
 
 **Since:** 23
 
@@ -980,7 +986,8 @@ Subscribes to download progress events. This API uses an asynchronous callback t
 
 > **NOTE：**
 > 
-> To maintain a balance between power consumption and performance, this API cannot be called when the application &gt; is running in the background.
+> To maintain a balance between power consumption and performance, this API cannot be called when the application
+> is running in the background.
 
 **Since:** 6
 
@@ -1410,7 +1417,8 @@ Restores the download task. This API uses an asynchronous callback to return the
 
 > **NOTE：**
 > 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error &gt; code is removed from API version 12.
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
 
 **Since:** 23
 
@@ -1469,7 +1477,8 @@ Restores the download task. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error &gt; code is removed from API version 12.
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
 
 **Since:** 23
 
@@ -1612,7 +1621,8 @@ Suspends this download task. You can use [restore](#restore) to restore the down
 
 > **NOTE：**
 > 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error &gt; code is removed from API version 12.
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
 
 **Since:** 23
 
@@ -1671,7 +1681,8 @@ Suspends this download task. You can use [restore](#restore) to restore the down
 
 > **NOTE：**
 > 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error &gt; code is removed from API version 12.
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
 
 **Since:** 23
 

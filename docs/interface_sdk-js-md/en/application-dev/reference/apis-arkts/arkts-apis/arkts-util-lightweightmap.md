@@ -13,7 +13,7 @@ import { LightWeightMapCbFn } from '@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [LightWeightMap](arkts-arkts-util-lightweightmap-lightweightmap-c.md) | LightWeightMap stores key-value (KV) pairs. Each key must be unique and have only one value. |
+| [LightWeightMap](arkts-arkts-utillightweightmap-lightweightmap-c.md) | LightWeightMap stores key-value (KV) pairs. Each key must be unique and have only one value. |
 
 ### Types
 

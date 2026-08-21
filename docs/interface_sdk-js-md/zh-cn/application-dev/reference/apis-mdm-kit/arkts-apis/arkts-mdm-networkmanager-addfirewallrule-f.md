@@ -24,7 +24,8 @@ API version 21及之前版本，仅支持IPv4。从API version 22开始，支持
 > 
 > - 设备重启，将会清空防火墙过滤规则。
 > 
-> - 规则匹配顺序：先匹配域名过滤规则（由[addDomainFilterRule](arkts-mdm-networkmanager-adddomainfilterrule-f.md)添加），再匹配本接口添加的IP防火墙规则；在域名规则或IP规 &gt; 则中，均按[Action](arkts-mdm-networkmanager-action-e.md)为ALLOW、DENY、REJECT的顺序进行匹配。
+> - 规则匹配顺序：先匹配域名过滤规则（由[addDomainFilterRule](arkts-mdm-networkmanager-adddomainfilterrule-f.md)添加），再匹配本接口添加的IP防火墙规则；在域名规则或IP规
+> 则中，均按[Action](arkts-mdm-networkmanager-action-e.md)为ALLOW、DENY、REJECT的顺序进行匹配。
 
 **起始版本：** 12
 
@@ -40,7 +41,7 @@ API version 21及之前版本，仅支持IPv4。从API version 22开始，支持
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | firewallRule | [FirewallRule](arkts-mdm-networkmanager-firewallrule-i.md) | 是 | 添加防火墙过滤规则。 |
 
 **错误码：**

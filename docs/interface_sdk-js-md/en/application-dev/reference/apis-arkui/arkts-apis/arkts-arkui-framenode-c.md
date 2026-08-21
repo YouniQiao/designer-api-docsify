@@ -10,9 +10,14 @@
 > 
 > - FrameNode objects do not support JSON serialization.
 > 
-> - When the API of the [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) object is invoked in the scenario of &gt; [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context), you are advised to use the &gt; [runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runscopedtask) API of &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to specify the UI context. For details, see &gt; [Executing the Closure Bound to a UI Instance](../../../ui/arkts-global-interface.md#executing-the-closure-bound-to-a-ui-instance).
+> - When the API of the [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) object is invoked in the scenario of
+> [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context), you are advised to use the
+> [runScopedTask](arkts-arkui-arkuiuicontext-uicontext-c.md#runscopedtask) API of
+> [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) to specify the UI context. For details, see
+> [Executing the Closure Bound to a UI Instance](../../../ui/arkts-global-interface.md#executing-the-closure-bound-to-a-ui-instance).
 > 
-> - In the FrameNode APIs, only the mandatory parameters of the Optional type can be set to null or &gt; undefined.
+> - In the FrameNode APIs, only the mandatory parameters of the Optional type can be set to null or
+> undefined.
 
 **Since:** 11
 
@@ -233,7 +238,7 @@ A constructor used to create a FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| uiContext | [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | UI context for node creation. |
 
 ## convertPosition
 
@@ -485,7 +490,7 @@ Creates a specified number of FrameNodes in batches and returns a FrameNode arra
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| uiContext | [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | count | number | Yes | Number of nodes to be created. The value is an integer greater than 0. If the value is less than or equal to 0 or is not an integer, an empty array is returned. |
 
 **Return value:**
@@ -504,9 +509,13 @@ Immediately releases the reference to the underlying FrameNode entity.
 
 > **NOTE：**
 > 
-> - After the **dispose** API is called, the FrameNode object no longer corresponds to any entity FrameNode. In &gt; this case, attempts to call certain query APIs, such as [getMeasuredSize](../../apis-default/arkts-apis/arkts-framenode-c.md#getmeasuredsize) and &gt; [getLayoutPosition](../../apis-default/arkts-apis/arkts-framenode-c.md#getlayoutposition), will result in a JS crash in the application.
+> - After the **dispose** API is called, the FrameNode object no longer corresponds to any entity FrameNode. In
+> this case, attempts to call certain query APIs, such as [getMeasuredSize](../../apis-default/arkts-apis/arkts-framenode-c.md#getmeasuredsize) and
+> [getLayoutPosition](../../apis-default/arkts-apis/arkts-framenode-c.md#getlayoutposition), will result in a JS crash in the application.
 > 
-> - To check whether the current FrameNode object corresponds to an entity FrameNode, you can use &gt; [getUniqueId](../../apis-default/arkts-apis/arkts-framenode-c.md#getuniqueid) API. A **UniqueId** value greater than 0 indicates that the object is &gt; associated with an entity FrameNode.
+> - To check whether the current FrameNode object corresponds to an entity FrameNode, you can use
+> [getUniqueId](../../apis-default/arkts-apis/arkts-framenode-c.md#getuniqueid) API. A **UniqueId** value greater than 0 indicates that the object is
+> associated with an entity FrameNode.
 
 **Since:** 12
 
@@ -1174,7 +1183,8 @@ Obtains the structure information of the node, which is consistent with what is 
 
 > **NOTE：**
 > 
-> The **getInspectorInfo** API is designed for debugging purposes to obtain information about all nodes. Frequent &gt; calls to this API may cause performance degradation.
+> The **getInspectorInfo** API is designed for debugging purposes to obtain information about all nodes. Frequent
+> calls to this API may cause performance degradation.
 
 **Since:** 12
 
@@ -3276,10 +3286,14 @@ Moves this FrameNode to a specified position within the target FrameNode. If thi
 
 > **NOTE：**
 > 
-> Currently, only the following types of [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md) are supported for the movement &gt; operations: [Stack](../../apis-default/arkts-apis/arkts-typenode-stack-t.md), [XComponent](../../apis-default/arkts-apis/arkts-typenode-xcomponent-t.md). This API does not work for &gt; other node types.
+> Currently, only the following types of [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md) are supported for the movement
+> operations: [Stack](../../apis-default/arkts-apis/arkts-typenode-stack-t.md), [XComponent](../../apis-default/arkts-apis/arkts-typenode-xcomponent-t.md). This API does not work for
+> other node types.
 > 
 > This API only supports [BuilderNode](../../apis-default/arkts-apis/arkts-buildernode-c.md) with root components of these types:
-> Stack, XComponent, &gt; EmbeddedComponent. This API does not work for other &gt; component types.
+> Stack, XComponent,
+> EmbeddedComponent. This API does not work for other
+> component types.
 
 **Since:** 18
 
@@ -3546,7 +3560,16 @@ Sets the cross-language access options for this FrameNode. For example, for node
 > **NOTE：**
 > 
 > Currently, the cross-ArkTS language access option can only be configured for the following components:
-> [Scroll](../../apis-default/arkts-apis/arkts-typenode-scroll-t.md), [Swiper](../../apis-default/arkts-apis/arkts-typenode-swiper-t.md), [List](../../apis-default/arkts-apis/arkts-typenode-list-t.md), &gt; [ListItem](../../apis-default/arkts-apis/arkts-typenode-listitem-t.md), [ListItemGroup](../../apis-default/arkts-apis/arkts-typenode-listitemgroup-t.md), &gt; [WaterFlow](../../apis-default/arkts-apis/arkts-typenode-waterflow-t.md), [FlowItem](../../apis-default/arkts-apis/arkts-typenode-flowitem-t.md), [Grid](../../apis-default/arkts-apis/arkts-typenode-grid-t.md), &gt; [GridItem](../../apis-default/arkts-apis/arkts-typenode-griditem-t.md), [TextInput](../../apis-default/arkts-apis/arkts-typenode-textinput-t.md), [TextArea](../../apis-default/arkts-apis/arkts-typenode-textarea-t.md), &gt; [Column](../../apis-default/arkts-apis/arkts-typenode-column-t.md), [Row](../../apis-default/arkts-apis/arkts-typenode-row-t.md), [Stack](../../apis-default/arkts-apis/arkts-typenode-stack-t.md), &gt; [Flex](../../apis-default/arkts-apis/arkts-typenode-flex-t.md), [RelativeContainer](../../apis-default/arkts-apis/arkts-typenode-relativecontainer-t.md), &gt; [Progress](../../apis-default/arkts-apis/arkts-typenode-progress-t.md), [LoadingProgress](../../apis-default/arkts-apis/arkts-typenode-loadingprogress-t.md), &gt; [Image](../../apis-default/arkts-apis/arkts-typenode-image-t.md), [Button](../../apis-default/arkts-apis/arkts-typenode-button-t.md), [CheckBox](../../apis-default/arkts-apis/arkts-typenode-checkbox-t.md), &gt; [Radio](../../apis-default/arkts-apis/arkts-typenode-radio-t.md), [Slider](../../apis-default/arkts-apis/arkts-typenode-slider-t.md), [Toggle](../../apis-default/arkts-apis/arkts-typenode-toggle-t.md), and &gt; [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md) of the [XComponent](../../apis-default/arkts-apis/arkts-typenode-xcomponent-t.md) type.
+> [Scroll](../../apis-default/arkts-apis/arkts-typenode-scroll-t.md), [Swiper](../../apis-default/arkts-apis/arkts-typenode-swiper-t.md), [List](../../apis-default/arkts-apis/arkts-typenode-list-t.md),
+> [ListItem](../../apis-default/arkts-apis/arkts-typenode-listitem-t.md), [ListItemGroup](../../apis-default/arkts-apis/arkts-typenode-listitemgroup-t.md),
+> [WaterFlow](../../apis-default/arkts-apis/arkts-typenode-waterflow-t.md), [FlowItem](../../apis-default/arkts-apis/arkts-typenode-flowitem-t.md), [Grid](../../apis-default/arkts-apis/arkts-typenode-grid-t.md),
+> [GridItem](../../apis-default/arkts-apis/arkts-typenode-griditem-t.md), [TextInput](../../apis-default/arkts-apis/arkts-typenode-textinput-t.md), [TextArea](../../apis-default/arkts-apis/arkts-typenode-textarea-t.md),
+> [Column](../../apis-default/arkts-apis/arkts-typenode-column-t.md), [Row](../../apis-default/arkts-apis/arkts-typenode-row-t.md), [Stack](../../apis-default/arkts-apis/arkts-typenode-stack-t.md),
+> [Flex](../../apis-default/arkts-apis/arkts-typenode-flex-t.md), [RelativeContainer](../../apis-default/arkts-apis/arkts-typenode-relativecontainer-t.md),
+> [Progress](../../apis-default/arkts-apis/arkts-typenode-progress-t.md), [LoadingProgress](../../apis-default/arkts-apis/arkts-typenode-loadingprogress-t.md),
+> [Image](../../apis-default/arkts-apis/arkts-typenode-image-t.md), [Button](../../apis-default/arkts-apis/arkts-typenode-button-t.md), [CheckBox](../../apis-default/arkts-apis/arkts-typenode-checkbox-t.md),
+> [Radio](../../apis-default/arkts-apis/arkts-typenode-radio-t.md), [Slider](../../apis-default/arkts-apis/arkts-typenode-slider-t.md), [Toggle](../../apis-default/arkts-apis/arkts-typenode-toggle-t.md), and
+> [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md) of the [XComponent](../../apis-default/arkts-apis/arkts-typenode-xcomponent-t.md) type.
 
 **Since:** 15
 

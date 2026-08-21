@@ -125,11 +125,16 @@ Creates the context based on the module name.
 
 > **NOTE：**
 > 
-> - Only the context of other modules in the current application and the context of the intra-application HSP can &gt; be obtained. The context of other applications cannot be obtained.
+> - Only the context of other modules in the current application and the context of the intra-application HSP can
+> be obtained. The context of other applications cannot be obtained.
 > 
-> - This API has been supported since API version 9 and deprecated since API version 12. You are advised to use &gt; [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md) &gt; instead. Otherwise, resource acquisition may fail.
+> - This API has been supported since API version 9 and deprecated since API version 12. You are advised to use
+> [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md)
+> instead. Otherwise, resource acquisition may fail.
 > 
-> - Creating a module context involves resource querying and initialization, which can be time-consuming. In &gt; scenarios where application fluidity is critical, avoid frequently or repeatedly calling the &gt; **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
+> - Creating a module context involves resource querying and initialization, which can be time-consuming. In
+> scenarios where application fluidity is critical, avoid frequently or repeatedly calling the
+> **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
 
 **Since:** 9
 

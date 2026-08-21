@@ -16,7 +16,9 @@ Obtains an array of the shortcut information based on a given bundle name. This 
 
 > **NOTE：**
 > 
-> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md) &gt; instead.
+> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md)
+> instead.
 
 **Since:** 8
 
@@ -50,7 +52,9 @@ Obtains an array of the shortcut information based on a given bundle name. This 
 
 > **NOTE：**
 > 
-> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md) &gt; instead.
+> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md)
+> instead.
 
 **Since:** 8
 

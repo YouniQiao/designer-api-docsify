@@ -2,7 +2,9 @@
 
 ## Overview
 
-Provides functions to manage text editor to avoid the keyboard.
+Provides methods for creating, destroying, reading, and writing the text box avoidance information objects.
+
+**Include**: <inputmethod/inputmethod_text_avoid_info_capi.h>
 
 **Library**: libohinputmethod.so
 
@@ -18,7 +20,7 @@ Provides functions to manage text editor to avoid the keyboard.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [InputMethod_TextAvoidInfo](capi-inputmethod-inputmethod-textavoidinfo.md) | InputMethod_TextAvoidInfo | Define the InputMethod_TextAvoidInfo structure type.Information for text editor to avoid the keyboard. |
+| [InputMethod_TextAvoidInfo](capi-inputmethod-inputmethod-textavoidinfo.md) | InputMethod_TextAvoidInfo | Represents the information used by the input box to avoid the keyboard. |
 
 ### Function
 
@@ -29,7 +31,7 @@ Provides functions to manage text editor to avoid the keyboard.
 | [InputMethod_ErrorCode OH_TextAvoidInfo_SetPositionY(InputMethod_TextAvoidInfo *info, double positionY)](#oh_textavoidinfo_setpositiony) | Set positionY value into [InputMethod_TextAvoidInfo](capi-inputmethod-inputmethod-textavoidinfo.md). |
 | [InputMethod_ErrorCode OH_TextAvoidInfo_SetHeight(InputMethod_TextAvoidInfo *info, double height)](#oh_textavoidinfo_setheight) | Set height value into [InputMethod_TextAvoidInfo](capi-inputmethod-inputmethod-textavoidinfo.md). |
 | [InputMethod_ErrorCode OH_TextAvoidInfo_GetPositionY(InputMethod_TextAvoidInfo *info, double *positionY)](#oh_textavoidinfo_getpositiony) | Get positionY value from [InputMethod_TextAvoidInfo](capi-inputmethod-inputmethod-textavoidinfo.md). |
-| [InputMethod_ErrorCode OH_TextAvoidInfo_GetHeight(InputMethod_TextAvoidInfo *info, double *height)](#oh_textavoidinfo_getheight) | Get height value into [InputMethod_TextAvoidInfo](capi-inputmethod-inputmethod-textavoidinfo.md). |
+| [InputMethod_ErrorCode OH_TextAvoidInfo_GetHeight(InputMethod_TextAvoidInfo *info, double *height)](#oh_textavoidinfo_getheight) | Get height value from [InputMethod_TextAvoidInfo](capi-inputmethod-inputmethod-textavoidinfo.md). |
 
 ## Function description
 
@@ -49,8 +51,8 @@ Create a new [InputMethod_TextAvoidInfo](capi-inputmethod-inputmethod-textavoidi
 
 | Parameter | Description |
 | -- | -- |
-| double positionY | The y-coordinate of the avoid area. |
-| double height | The height of the avoid area. |
+| double positionY | Y coordinate of the text box, in px. |
+| double height | Height of the text box, in px. |
 
 **Returns**:
 
@@ -93,13 +95,13 @@ Set positionY value into [InputMethod_TextAvoidInfo](capi-inputmethod-inputmetho
 | Parameter | Description |
 | -- | -- |
 | [InputMethod_TextAvoidInfo](capi-inputmethod-inputmethod-textavoidinfo.md) *info | Represents a pointer to an [InputMethod_TextAvoidInfo](capi-inputmethod-inputmethod-textavoidinfo.md) instance which will be set value. |
-| double positionY | Represents positionY value. |
+| double positionY | Y coordinate, that is,the absolute value of the distance between the text box's top vertex and the top edge of the physical screen, in px. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      <br>[IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      <br>[IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.      <br>Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextAvoidInfo_SetHeight()
 
@@ -118,13 +120,13 @@ Set height value into [InputMethod_TextAvoidInfo](capi-inputmethod-inputmethod-t
 | Parameter | Description |
 | -- | -- |
 | [InputMethod_TextAvoidInfo](capi-inputmethod-inputmethod-textavoidinfo.md) *info | Represents a pointer to an [InputMethod_TextAvoidInfo](capi-inputmethod-inputmethod-textavoidinfo.md) instance which will be set value. |
-| double height | Represents height value. |
+| double height | Height, in px. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      <br>[IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      <br>[IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.      <br>Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextAvoidInfo_GetPositionY()
 
@@ -143,13 +145,13 @@ Get positionY value from [InputMethod_TextAvoidInfo](capi-inputmethod-inputmetho
 | Parameter | Description |
 | -- | -- |
 | [InputMethod_TextAvoidInfo](capi-inputmethod-inputmethod-textavoidinfo.md) *info | Represents a pointer to an [InputMethod_TextAvoidInfo](capi-inputmethod-inputmethod-textavoidinfo.md) instance which will be get value from. |
-| double *positionY | Represents positionY value. |
+| double *positionY | Y coordinate, that is,the absolute value of the distance between the text box's top vertex and the top edge of the physical screen, in px. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      <br>[IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      <br>[IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.      <br>Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextAvoidInfo_GetHeight()
 
@@ -159,7 +161,7 @@ InputMethod_ErrorCode OH_TextAvoidInfo_GetHeight(InputMethod_TextAvoidInfo *info
 
 **Description**
 
-Get height value into [InputMethod_TextAvoidInfo](capi-inputmethod-inputmethod-textavoidinfo.md).
+Get height value from [InputMethod_TextAvoidInfo](capi-inputmethod-inputmethod-textavoidinfo.md).
 
 **Since**: 12
 
@@ -168,12 +170,12 @@ Get height value into [InputMethod_TextAvoidInfo](capi-inputmethod-inputmethod-t
 | Parameter | Description |
 | -- | -- |
 | [InputMethod_TextAvoidInfo](capi-inputmethod-inputmethod-textavoidinfo.md) *info | Represents a pointer to an [InputMethod_TextAvoidInfo](capi-inputmethod-inputmethod-textavoidinfo.md) instance which will be get value from. |
-| double *height | Represents height value. |
+| double *height | Height of the text box, in px. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      <br>[IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      <br>[IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.      <br>Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 

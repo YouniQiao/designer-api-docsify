@@ -5,7 +5,8 @@ Defines tap gesture parameters. Inherits from [BaseHandlerOptions](arkts-arkui-b
 > **NOTE：**
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 12.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer element &gt; 's
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element
+> 's
 
 **Inheritance/Implementation:** TapGestureParameters extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
 

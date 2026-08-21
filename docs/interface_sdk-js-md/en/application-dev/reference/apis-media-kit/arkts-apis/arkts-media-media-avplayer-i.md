@@ -569,7 +569,8 @@ Obtains the list of seekable time ranges. This API uses a promise to return the 
 
 > **NOTE：**
 > 
-> - For local media resources and media resources that support segment-based requests, the time range is from 0 &gt; to the entire media duration.
+> - For local media resources and media resources that support segment-based requests, the time range is from 0
+> to the entire media duration.
 > 
 > - For media resources that support only chunk-based transmission, there is no seekable time range.
 
@@ -2817,7 +2818,8 @@ Subscribes to playback position changes. It is used to refresh the current posit
 > 
 > - The **'timeUpdate'** event is not supported in live streaming scenarios.
 > 
-> - When a seek operation is performed, the progress bar can be updated based on the **'timeUpdate'** event only &gt; after the seek operation is complete (**'seekdone'** received).
+> - When a seek operation is performed, the progress bar can be updated based on the **'timeUpdate'** event only
+> after the seek operation is complete (**'seekdone'** received).
 > 
 > - In the **pause** state, the player reports the timeUpdate event when the buffering ends.
 
@@ -3401,7 +3403,11 @@ Sets the loudness gain of the AVPlayer. After this API is called, the loudness g
 > 
 > - This API can be called when the AVPlayer is in the prepared, playing, paused, completed, or stopped state.
 > 
-> - Before calling this API, ensure that the audio rendering information has been set in &gt; **AVPlayer.audioRendererInfo** and the **usage** parameter in **audioRendererInfo** has been set to &gt; [STREAM_USAGE_MUSIC](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md), &gt; [STREAM_USAGE_MOVIE](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md), or &gt; [STREAM_USAGE_AUDIOBOOK](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md).
+> - Before calling this API, ensure that the audio rendering information has been set in
+> **AVPlayer.audioRendererInfo** and the **usage** parameter in **audioRendererInfo** has been set to
+> [STREAM_USAGE_MUSIC](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md),
+> [STREAM_USAGE_MOVIE](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md), or
+> [STREAM_USAGE_AUDIOBOOK](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md).
 
 **Since:** 23
 

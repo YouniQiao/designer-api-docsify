@@ -32,5 +32,5 @@ export declare function Chip(options: ChipOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ChipOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chip-chipoptions-i.md) | 是 | 定义Chip组件的参数，包括尺寸、启用状态、激活态、前缀/后缀图标、文本内容、背景颜色、圆角、无障碍属性等，用于自定义Chip组件的样式和行为。 |
+| options | [ChipOptions](../../apis-default/arkts-apis/arkts-arkuiadvancedchip-chipoptions-i.md) | 是 | 定义Chip组件的参数，包括尺寸、启用状态、激活态、前缀/后缀图标、文本内容、背景颜色、圆角、无障碍属性等，用于自定义Chip组件的样式和行为。 |
 

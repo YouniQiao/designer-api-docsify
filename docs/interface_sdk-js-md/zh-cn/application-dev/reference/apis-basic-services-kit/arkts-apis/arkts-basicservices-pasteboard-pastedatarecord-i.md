@@ -406,7 +406,7 @@ want: Want
 
 Want内容。对此属性的修改无效，如需刷新属性值，请使用[addEntry](#addentry)。
 
-**类型：** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
+**类型：** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)
 
 **起始版本：** 23
 

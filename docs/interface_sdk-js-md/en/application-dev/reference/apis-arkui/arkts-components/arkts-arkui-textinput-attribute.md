@@ -195,7 +195,8 @@ Sets whether to enable leading punctuation compression.
 > 
 > - Leading punctuation is not compressed by default.
 > 
-> - For the range of punctuation marks that support leading compression, see &gt; [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md).
+> - For the range of punctuation marks that support leading compression, see
+> [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 23
 
@@ -790,7 +791,8 @@ When the component is in the non-inline style, the three values of **TextHeightA
 
 > **NOTE：**
 > 
-> If the text box is in the inline style, the font size in the editing state is different from that in the non- &gt; editing state.
+> If the text box is in the inline style, the font size in the editing state is different from that in the non-
+> editing state.
 
 **Since:** 12
 
@@ -947,9 +949,12 @@ If the value is less than or equal to **0**, the line height is unrestricted and
 
 > **NOTE：**
 > 
-> - If certain characters have significantly taller glyphs than others in the same line, layout anomalies such as &gt; clipping, overlapping, or misalignment may occur. In this case, adjust component attributes such as height and &gt; line height to ensure proper layout rendering.
+> - If certain characters have significantly taller glyphs than others in the same line, layout anomalies such as
+> clipping, overlapping, or misalignment may occur. In this case, adjust component attributes such as height and
+> line height to ensure proper layout rendering.
 > 
-> - When the [password mode](../../../ui/arkts-common-components-text-input.md#password-mode) is set, &gt; [lineHeight](#lineheight) set by this API does not take effect.
+> - When the [password mode](../../../ui/arkts-common-components-text-input.md#password-mode) is set,
+> [lineHeight](#lineheight) set by this API does not take effect.
 
 **Since:** 12
 
@@ -1415,7 +1420,7 @@ Called when the input box is about to be bound to an input method.
 
 <!--Del-->
 
-Before the input box is bound to an input method, you can use the [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c-sys.md#setkeyboardappearanceconfig) API of **UIContext** to set the keyboard style.<!--DelEnd-->
+Before the input box is bound to an input method, you can use the [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-arkuiuicontext-uicontext-c-sys.md#setkeyboardappearanceconfig) API of **UIContext** to set the keyboard style.<!--DelEnd-->
 
 From API version 22, the setExtraConfig method of IMEClient can be called to set input method extension information. After the input method is bound, it receives this extension information which can be used to implement custom functionality.
 

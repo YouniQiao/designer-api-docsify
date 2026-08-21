@@ -4,7 +4,10 @@ This module provides APIs for providing subscriber information. It allows you to
 
 > **NOTE：**
 > 
-> After users subscribing to custom common events, any application can send potential &gt; malicious common events to subscribers. The **publisherPermission** and &gt; **publisherBundleName** parameters of this module can be used to restrict the publisher &gt; scope of common events.
+> After users subscribing to custom common events, any application can send potential
+> malicious common events to subscribers. The **publisherPermission** and
+> **publisherBundleName** parameters of this module can be used to restrict the publisher
+> scope of common events.
 
 **Since:** 23
 

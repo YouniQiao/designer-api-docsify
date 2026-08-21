@@ -16,11 +16,13 @@ Adds applications to the home screen icon hide list.
 
 > **NOTE：**
 > 
-> 1. This API can only hide home screen icons for applications of the current user. Hiding application widgets are &gt; not supported.
+> 1. This API can only hide home screen icons for applications of the current user. Hiding application widgets are
+> not supported.
 > 
 > 2. If a hidden application has clones, the clones are hidden synchronously.
 > 
-> 3. Not all applications on the home screen can be added to the hidden list. Otherwise, all applications will &gt; still be displayed on the home screen.
+> 3. Not all applications on the home screen can be added to the hidden list. Otherwise, all applications will
+> still be displayed on the home screen.
 
 **Since:** 26.0.0
 
@@ -36,7 +38,7 @@ Adds applications to the home screen icon hide list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | bundleNames | Array&lt;string&gt; | Yes | Application bundle name array, which specifies the applications to be hidden. A maximum of 500 applications are supported. |
 
 **Error codes:**

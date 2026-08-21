@@ -34,7 +34,10 @@ List的预加载是指除了加载显示区域内可见的子组件外，还支�
 > 
 > - ForEach/LazyForEach/Repeat语句中，会计算展开所有子组件索引值。
 > 
-> - [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、 &gt; [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)、 &gt; [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和 &gt; [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)发生变化以后，会更新子组件索引值。
+> - [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、
+> [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)、
+> [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和
+> [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)发生变化以后，会更新子组件索引值。
 > 
 > - ListItemGroup作为一个整体计算一个索引值，ListItemGroup内部的ListItem不计算索引值。
 > 

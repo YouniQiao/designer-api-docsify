@@ -4,7 +4,8 @@ Enumerates the operations for combining two regions.
 
 > **NOTE：**
 > 
-> The schematic diagram shows the result obtained by combining a red region with a blue region at different &gt; operation mode. The green region is the region obtained.
+> The schematic diagram shows the result obtained by combining a red region with a blue region at different
+> operation mode. The green region is the region obtained.
 
 **Since:** 23
 

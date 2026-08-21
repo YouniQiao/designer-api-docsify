@@ -28,7 +28,7 @@ Sets an ability that will be recovered. The ability must be a UIAbility in the c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want of the target ability. You can set the **bundleName** and **abilityName** fields in **Want** to specify the ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want of the target ability. You can set the **bundleName** and **abilityName** fields in **Want** to specify the ability. |
 
 **Examples**
 

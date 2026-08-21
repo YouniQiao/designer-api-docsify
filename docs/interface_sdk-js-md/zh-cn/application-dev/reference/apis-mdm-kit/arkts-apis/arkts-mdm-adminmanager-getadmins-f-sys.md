@@ -28,7 +28,7 @@ function getAdmins(): Promise<Array<Want>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt;&gt; | 包含所有已激活的设备管理应用的Promise对象。 |
+| Promise&lt;Array&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)&gt;&gt; | 包含所有已激活的设备管理应用的Promise对象。 |
 
 **错误码：**
 

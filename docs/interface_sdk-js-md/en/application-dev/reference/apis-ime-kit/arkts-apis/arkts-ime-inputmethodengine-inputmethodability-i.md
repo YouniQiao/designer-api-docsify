@@ -21,9 +21,13 @@ createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): 
 ```
 
 @brief Creates an input method panel. This API can be called only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. This API uses an asynchronous callback to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
-> Only one [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panel and one [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md) panel can be created for a single input method. <br> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> Only one [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panel and one [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md) panel can be created for a single input method. &lt;br
+&gt; &lt;br
+&gt; 
 > The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such as [window.createWindow](../../../windowmanager/application-window-fa.md#setting-the-child-window-of-an-application), bindContextMenu, and CustomDialog. You are advised to adopt alternative solutions to sub-windows, such as using a dialog box or bindMenu, or set **showInSubwindow** to **false**.
 
 **Since:** 23
@@ -76,10 +80,14 @@ createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 ```
 
 @brief Creates an input method panel. This API can be called only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. This API uses a promise to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
-> Only one [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panel and one [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md) panel can be created for a single input method. <br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> Only one [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panel and one [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md) panel can be created for a single input method. &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such as [window.createWindow](../../../windowmanager/application-window-fa.md#setting-the-child-window-of-an-application), bindContextMenu, and CustomDialog. You are advised to adopt alternative solutions to sub-windows, such as using a dialog box or bindMenu, or set **showInSubwindow** to **false**.
 
 **Since:** 23

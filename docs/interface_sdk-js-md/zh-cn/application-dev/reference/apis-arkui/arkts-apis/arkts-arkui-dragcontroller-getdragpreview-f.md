@@ -16,7 +16,9 @@ function getDragPreview(): DragPreview
 
 > **说明：**
 > 
-> 从API version 11开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [getDragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI &gt; 上下文关联的[DragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-dragcontroller-c.md)对象。
+> 从API version 11开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)中的
+> [getDragController](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#getdragcontroller)方法获取当前UI
+> 上下文关联的[DragController](../../apis-default/arkts-apis/arkts-arkuiuicontext-dragcontroller-c.md)对象。
 
 **起始版本：** 11
 

@@ -146,7 +146,9 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> If error code 401 is returned, the parameters are abnormal. The possible cause is that the PixelMap object is &gt; released in advance. You need to check the code and ensure that the PixelMap object is released after this API &gt; is called.
+> If error code 401 is returned, the parameters are abnormal. The possible cause is that the PixelMap object is
+> released in advance. You need to check the code and ensure that the PixelMap object is released after this API
+> is called.
 
 **Since:** 23
 
@@ -306,7 +308,9 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 
 > **NOTE：**
 > 
-> If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap &gt; object is released in advance. You need to check the code and ensure that the PixelMap object is released after &gt; this API is called.
+> If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap
+> object is released in advance. You need to check the code and ensure that the PixelMap object is released after
+> this API is called.
 
 **Since:** 23
 
@@ -347,7 +351,9 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 
 > **NOTE：**
 > 
-> If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap &gt; object is released in advance. You need to check the code and ensure that the PixelMap object is released after &gt; this API is called.
+> If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap
+> object is released in advance. You need to check the code and ensure that the PixelMap object is released after
+> this API is called.
 
 **Since:** 23
 
@@ -524,7 +530,9 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 
 > **NOTE：**
 > 
-> If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the &gt; PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is &gt; released after this API is called.
+> If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the
+> PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is
+> released after this API is called.
 
 **Since:** 8
 
@@ -556,7 +564,9 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the &gt; PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is &gt; released after this API is called.
+> If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the
+> PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is
+> released after this API is called.
 
 **Since:** 8
 

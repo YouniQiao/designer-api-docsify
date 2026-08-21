@@ -4,7 +4,9 @@ Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kd
 
 > **NOTE：**
 > 
-> **passphrase** specifies the original password. If **passphrase** is of the string type, pass in the data used for &gt; key derivation rather than a string of the HexString or Base64 type. In addition, the string must be in UTF-8 &gt; format. Otherwise, the key derived may be different from the one expected.
+> **passphrase** specifies the original password. If **passphrase** is of the string type, pass in the data used for
+> key derivation rather than a string of the HexString or Base64 type. In addition, the string must be in UTF-8
+> format. Otherwise, the key derived may be different from the one expected.
 
 **Inheritance/Implementation:** ScryptSpec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)
 

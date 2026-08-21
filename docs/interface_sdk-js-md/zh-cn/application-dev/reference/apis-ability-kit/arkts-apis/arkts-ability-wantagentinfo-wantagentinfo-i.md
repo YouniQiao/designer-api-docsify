@@ -150,7 +150,7 @@ wants: Array<Want>
 
 将被执行的动作列表。wants数组为预留能力，当前只支持一个want。传入多个时只取wants数组的第一个成员。
 
-**类型：** Array&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt;
+**类型：** Array&lt;[Want](arkts-ability-appabilitywant-want-c.md)&gt;
 
 **起始版本：** 23
 

@@ -122,9 +122,13 @@ deviceId(deviceId: string): Query
 
 > **说明：**
 > 
-> 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的 &gt; networkId，通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。
+> 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的
+> networkId，通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
 > 
-> deviceId具体获取方式请参考 &gt; [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
 
@@ -222,7 +226,8 @@ equalTo(field: string, value: long | double | string | boolean): Query
 > 
 > 使用equalTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -301,7 +306,8 @@ greaterThan(field: string, value: long | double | string | boolean): Query
 > 
 > 使用greaterThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -342,7 +348,8 @@ greaterThanOrEqualTo(field: string, value: long | double | string): Query
 > 
 > 使用greaterThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -383,7 +390,8 @@ inNumber(field: string, valueList: long[] | double[]): Query
 > 
 > 使用inNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -424,7 +432,8 @@ inString(field: string, valueList: string[]): Query
 > 
 > 使用inString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -483,7 +492,8 @@ isNotNull(field: string): Query
 > 
 > 使用isNotNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -541,7 +551,8 @@ isNull(field: string): Query
 > 
 > 使用isNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -599,7 +610,8 @@ lessThan(field: string, value: long | double | string): Query
 > 
 > 使用lessThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -640,7 +652,8 @@ lessThanOrEqualTo(field: string, value: long | double | string): Query
 > 
 > 使用lessThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -681,7 +694,8 @@ like(field: string, value: string): Query
 > 
 > 使用like时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -796,7 +810,8 @@ notEqualTo(field: string, value: long | double | string | boolean): Query
 > 
 > 使用notEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -837,7 +852,8 @@ notInNumber(field: string, valueList: long[] | double[]): Query
 > 
 > 使用notInNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -878,7 +894,8 @@ notInString(field: string, valueList: string[]): Query
 > 
 > 使用notInString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -978,7 +995,8 @@ orderByAsc(field: string): Query
 > 
 > 使用orderByAsc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -1037,7 +1055,8 @@ orderByDesc(field: string): Query
 > 
 > 使用orderByDesc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -1243,7 +1262,8 @@ unlike(field: string, value: string): Query
 > 
 > 使用unlike时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **起始版本：** 23
 

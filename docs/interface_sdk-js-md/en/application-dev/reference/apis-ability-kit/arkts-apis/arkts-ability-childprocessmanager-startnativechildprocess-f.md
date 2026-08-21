@@ -16,7 +16,11 @@ Starts a [native child process](../../../application-models/ability-terminology.
 
 > **NOTE：**
 > 
-> The child process started by calling this API does not inherit the resources of the parent process. After the &gt; child process is created, its PID is returned, the dynamic link library file specified in the parameters is &gt; loaded, and the entry function of the child process is executed. Once the entry function is done, the child &gt; process is automatically destroyed. After the process that calls this API is destroyed, the created child process &gt; is also destroyed.
+> The child process started by calling this API does not inherit the resources of the parent process. After the
+> child process is created, its PID is returned, the dynamic link library file specified in the parameters is
+> loaded, and the entry function of the child process is executed. Once the entry function is done, the child
+> process is automatically destroyed. After the process that calls this API is destroyed, the created child process
+> is also destroyed.
 
 **Since:** 23
 
@@ -31,8 +35,8 @@ Starts a [native child process](../../../application-models/ability-terminology.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | entryPoint | string | Yes | The symbol and entry function of the dynamic link library called in the child process are separated by a colon (:), for example, **libentry.so:Main**. |
-| args | [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md) | Yes | Parameters transferred to the child process. |
-| options | [ChildProcessOptions](arkts-ability-app-ability-childprocessoptions-childprocessoptions-i.md) | No | Startup configuration of the child process. |
+| args | [ChildProcessArgs](arkts-ability-appabilitychildprocessargs-childprocessargs-i.md) | Yes | Parameters transferred to the child process. |
+| options | [ChildProcessOptions](arkts-ability-appabilitychildprocessoptions-childprocessoptions-i.md) | No | Startup configuration of the child process. |
 
 **Return value:**
 

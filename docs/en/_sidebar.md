@@ -46,7 +46,7 @@
 - [Network Kit (503)](interface_sdk-js-md/en/application-dev/reference/apis-network-kit/arkts-apis/arkts-app-ability-vpnextensionability.md)
 - [Neural Network Runtime Kit (17)](interface_sdk_c-md/en/application-dev/reference/apis-neural-network-runtime-kit/c-apis/capi-neural-network-runtime-type-h.md)
 - [Notification Kit (352)](interface_sdk-js-md/en/application-dev/reference/apis-notification-kit/arkts-apis/arkts-application-notificationsubscriberextensionability.md)
-- [Performance Analysis Kit (257)](interface_sdk-js-md/en/application-dev/reference/apis-performance-analysis-kit/arkts-apis/arkts-bytrace.md)
+- [Performance Analysis Kit (258)](interface_sdk-js-md/en/application-dev/reference/apis-performance-analysis-kit/arkts-apis/arkts-bytrace.md)
 - [Security Guard Kit (17)](interface_sdk-js-md/en/application-dev/reference/apis-security-guard-kit/arkts-apis/arkts-security-securityguard.md)
 - [Sensor Service Kit (346)](interface_sdk-js-md/en/application-dev/reference/apis-sensor-service-kit/arkts-apis/arkts-sensor.md)
 - [Tee Kit (54)](interface_sdk_c-md/en/application-dev/reference/apis-tee-kit/c-apis/capi-tee-sharemem-ops-h.md)

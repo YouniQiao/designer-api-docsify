@@ -107,7 +107,7 @@ OH_EffectFilter *OH_ImageEffect_AddFilter(OH_ImageEffect *imageEffect, const cha
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_EffectFilter * | 返回一个指向OH_EffectFilter实例的指针，滤镜名无效时返回空指针。 |
+| [OH_EffectFilter *](capi-imageeffect-oh-effectfilter.md) | 返回一个指向OH_EffectFilter实例的指针，滤镜名无效时返回空指针。 |
 
 ### OH_ImageEffect_AddFilterByFilter()
 
@@ -128,7 +128,7 @@ ImageEffect_ErrorCode OH_ImageEffect_AddFilterByFilter(OH_ImageEffect *imageEffe
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ImageEffect](capi-imageeffect-oh-imageeffect.md) *imageEffect | 效果器指针。 |
-| OH_EffectFilter *filter | 滤镜指针。 |
+| [OH_EffectFilter](capi-imageeffect-oh-effectfilter.md) *filter | 滤镜指针。 |
 
 **返回：**
 
@@ -162,7 +162,7 @@ OH_EffectFilter *OH_ImageEffect_InsertFilter(OH_ImageEffect *imageEffect, uint32
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_EffectFilter * | 返回一个指向OH_EffectFilter实例的指针，参数无效时返回空指针。 |
+| [OH_EffectFilter *](capi-imageeffect-oh-effectfilter.md) | 返回一个指向OH_EffectFilter实例的指针，参数无效时返回空指针。 |
 
 ### OH_ImageEffect_InsertFilterByFilter()
 
@@ -184,7 +184,7 @@ ImageEffect_ErrorCode OH_ImageEffect_InsertFilterByFilter(OH_ImageEffect *imageE
 | -- | -- |
 | [OH_ImageEffect](capi-imageeffect-oh-imageeffect.md) *imageEffect | 效果器指针。 |
 | uint32_t index | 插入滤镜位置索引。 |
-| OH_EffectFilter *filter | 滤镜指针。 |
+| [OH_EffectFilter](capi-imageeffect-oh-effectfilter.md) *filter | 滤镜指针。 |
 
 **返回：**
 
@@ -272,7 +272,7 @@ OH_EffectFilter *OH_ImageEffect_ReplaceFilter(OH_ImageEffect *imageEffect, uint3
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_EffectFilter * | 返回一个指向OH_EffectFilter实例的指针，替换失败时返回空指针。 |
+| [OH_EffectFilter *](capi-imageeffect-oh-effectfilter.md) | 返回一个指向OH_EffectFilter实例的指针，替换失败时返回空指针。 |
 
 ### OH_ImageEffect_ReplaceFilterByFilter()
 
@@ -294,7 +294,7 @@ ImageEffect_ErrorCode OH_ImageEffect_ReplaceFilterByFilter(OH_ImageEffect *image
 | -- | -- |
 | [OH_ImageEffect](capi-imageeffect-oh-imageeffect.md) *imageEffect | 效果器指针。 |
 | uint32_t index | 替换滤镜位置索引。 |
-| OH_EffectFilter *filter | 滤镜指针。 |
+| [OH_EffectFilter](capi-imageeffect-oh-effectfilter.md) *filter | 滤镜指针。 |
 
 **返回：**
 
@@ -353,7 +353,7 @@ OH_EffectFilter *OH_ImageEffect_GetFilter(OH_ImageEffect *imageEffect, uint32_t 
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_EffectFilter * | 返回一个指向OH_EffectFilter实例的指针，参数无效时返回空指针。 |
+| [OH_EffectFilter *](capi-imageeffect-oh-effectfilter.md) | 返回一个指向OH_EffectFilter实例的指针，参数无效时返回空指针。 |
 
 ### OH_ImageEffect_Configure()
 
@@ -618,7 +618,7 @@ ImageEffect_ErrorCode OH_ImageEffect_SetInputPicture(OH_ImageEffect *imageEffect
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ImageEffect](capi-imageeffect-oh-imageeffect.md) *imageEffect | 效果器指针。 |
-| [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) *picture | 指向OH_PictureNative实例的指针。 |
+| OH_PictureNative *picture | 指向OH_PictureNative实例的指针。 |
 
 **返回：**
 
@@ -645,7 +645,7 @@ ImageEffect_ErrorCode OH_ImageEffect_SetOutputPicture(OH_ImageEffect *imageEffec
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ImageEffect](capi-imageeffect-oh-imageeffect.md) *imageEffect | 效果器指针。 |
-| [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) *picture | 指向OH_PictureNative实例的指针，允许为空，当输入为空时渲染结果返回到输入的OH_PictureNative对象上。 |
+| OH_PictureNative *picture | 指向OH_PictureNative实例的指针，允许为空，当输入为空时渲染结果返回到输入的OH_PictureNative对象上。 |
 
 **返回：**
 

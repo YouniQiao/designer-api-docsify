@@ -18,7 +18,8 @@ function getTopWindow(callback: AsyncCallback<Window>): void
 
 > **说明：**
 > 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用 &gt; [getLastWindow()](arkts-arkui-window-getlastwindow-f.md)替代。
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [getLastWindow()](arkts-arkui-window-getlastwindow-f.md)替代。
 
 **起始版本：** 6
 
@@ -169,7 +170,8 @@ function getTopWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，参数ctx传入null或undefined时，可能会导致callback无法得到执行，建议使用 &gt; [getLastWindow()](arkts-arkui-window-getlastwindow-f.md)替代。
+> 从API version 8开始支持，从API version 9开始废弃，参数ctx传入null或undefined时，可能会导致callback无法得到执行，建议使用
+> [getLastWindow()](arkts-arkui-window-getlastwindow-f.md)替代。
 
 **起始版本：** 8
 

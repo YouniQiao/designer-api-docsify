@@ -4,7 +4,9 @@ Enumerates the KV store security levels. Use the enum name rather than the enum 
 
 > **NOTE：**
 > 
-> To perform data sync operations, the RDB store security level must be lower than or equal to that of the peer &gt; device. For details, see [Access Control Mechanism in Cross-Device Sync] &gt; (../../../database/sync-app-data-across-devices-overview.md#access-control-mechanism-in-cross-device-sync).
+> To perform data sync operations, the RDB store security level must be lower than or equal to that of the peer
+> device. For details, see [Access Control Mechanism in Cross-Device Sync]
+> (../../../database/sync-app-data-across-devices-overview.md#access-control-mechanism-in-cross-device-sync).
 
 **Since:** 23
 

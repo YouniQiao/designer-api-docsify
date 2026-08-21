@@ -16,7 +16,7 @@ ImageStream resource.
 readonly surfaceId: string
 ```
 
-The surfaceId of the imageStream.
+The surfaceId of the ImageStream.
 
 **Type:** string
 

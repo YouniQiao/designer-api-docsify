@@ -214,13 +214,15 @@ Obtains the [LocalStorage](../../../ui/state-management/arkts-localstorage.md) i
 
 > **NOTE：**
 
-> Since API version 12, you can use the &gt; [getSharedLocalStorage](arkts-arkui-arkui-uicontext-uicontext-c.md#getsharedlocalstorage) &gt; API in [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to specify the UI execution context.
+> Since API version 12, you can use the
+> [getSharedLocalStorage](arkts-arkui-arkuiuicontext-uicontext-c.md#getsharedlocalstorage)
+> API in [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) to specify the UI execution context.
 
 **Since:** 10
 
 **Deprecated since:** 18
 
-**Substitutes:** [getSharedLocalStorage](arkts-arkui-arkui-uicontext-uicontext-c.md#getsharedlocalstorage)
+**Substitutes:** [getSharedLocalStorage](arkts-arkui-arkuiuicontext-uicontext-c.md#getsharedlocalstorage)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -432,7 +434,12 @@ Sets the value of the property corresponding to **propName** in [LocalStorage](.
 
 > **NOTE：**
 
-> Since API version 12, LocalStorage supports &gt; [Map](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-map-type), &gt; [Set](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-set-type), &gt; [Date](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-date-type), **null**, &gt; **undefined**, and [union](../../../ui/state-management/arkts-localstorage.md#using-union-types-in-localstorage) &gt; types.
+> Since API version 12, LocalStorage supports
+> [Map](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-map-type),
+> [Set](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-set-type),
+> [Date](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-date-type), **null**,
+> **undefined**, and [union](../../../ui/state-management/arkts-localstorage.md#using-union-types-in-localstorage)
+> types.
 
 **Since:** 9
 
@@ -476,7 +483,12 @@ Similar to the [link](#link) API, establishes a two-way data binding with the pr
 
 > **NOTE：**
 
-> Since API version 12, LocalStorage supports &gt; [Map](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-map-type), &gt; [Set](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-set-type), &gt; [Date](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-date-type), **null**, &gt; **undefined**, and [union](../../../ui/state-management/arkts-localstorage.md#using-union-types-in-localstorage) &gt; types.
+> Since API version 12, LocalStorage supports
+> [Map](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-map-type),
+> [Set](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-set-type),
+> [Date](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-date-type), **null**,
+> **undefined**, and [union](../../../ui/state-management/arkts-localstorage.md#using-union-types-in-localstorage)
+> types.
 
 **Since:** 9
 
@@ -520,7 +532,12 @@ Similar to the [prop](#prop) API, establishes a one-way data binding with the pr
 
 > **NOTE：**
 
-> Since API version 12, LocalStorage supports &gt; [Map](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-map-type), &gt; [Set](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-set-type), &gt; [Date](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-date-type), **null**, &gt; **undefined**, and [union](../../../ui/state-management/arkts-localstorage.md#using-union-types-in-localstorage) &gt; types.
+> Since API version 12, LocalStorage supports
+> [Map](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-map-type),
+> [Set](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-set-type),
+> [Date](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-date-type), **null**,
+> **undefined**, and [union](../../../ui/state-management/arkts-localstorage.md#using-union-types-in-localstorage)
+> types.
 
 **Since:** 9
 
@@ -565,7 +582,12 @@ This API is similar to [setAndLink](#setandlink) but does not require manually r
 
 > **NOTE：**
 
-> Since API version 12, LocalStorage supports &gt; [Map](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-map-type), &gt; [Set](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-set-type), &gt; [Date](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-date-type), **null**, &gt; **undefined**, and [union](../../../ui/state-management/arkts-localstorage.md#using-union-types-in-localstorage) &gt; types.
+> Since API version 12, LocalStorage supports
+> [Map](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-map-type),
+> [Set](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-set-type),
+> [Date](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-date-type), **null**,
+> **undefined**, and [union](../../../ui/state-management/arkts-localstorage.md#using-union-types-in-localstorage)
+> types.
 
 **Since:** 12
 
@@ -600,7 +622,12 @@ If the property does not exist, this API creates it with the value of **newValue
 
 > **NOTE：**
 
-> Since API version 12, LocalStorage supports &gt; [Map](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-map-type), &gt; [Set](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-set-type), &gt; [Date](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-date-type), **null**, &gt; **undefined**, and [union](../../../ui/state-management/arkts-localstorage.md#using-union-types-in-localstorage) &gt; types.
+> Since API version 12, LocalStorage supports
+> [Map](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-map-type),
+> [Set](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-set-type),
+> [Date](../../../ui/state-management/arkts-localstorage.md#decorating-variables-of-the-date-type), **null**,
+> **undefined**, and [union](../../../ui/state-management/arkts-localstorage.md#using-union-types-in-localstorage)
+> types.
 
 **Since:** 9
 

@@ -12,13 +12,13 @@ import { Cipher, CipherAesOptions, CipherResponse, CipherRsaOptions } from '@kit
 
 | Name | Description |
 | --- | --- |
-| [Cipher](arkts-cryptoarchitecture-system-cipher-cipher-c.md) | Defines the cipher functions. |
+| [Cipher](arkts-cryptoarchitecture-systemcipher-cipher-c.md) | Defines the cipher functions. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [CipherAesOptions](arkts-cryptoarchitecture-system-cipher-cipheraesoptions-i.md) | Defines the input parameters of **cipher.aes()**. |
-| [CipherResponse](arkts-cryptoarchitecture-system-cipher-cipherresponse-i.md) | Defines the response to the cipher interface called. |
-| [CipherRsaOptions](arkts-cryptoarchitecture-system-cipher-cipherrsaoptions-i.md) | Defines the input parameters of **cipher.rsa()**. |
+| [CipherAesOptions](arkts-cryptoarchitecture-systemcipher-cipheraesoptions-i.md) | Defines the input parameters of **cipher.aes()**. |
+| [CipherResponse](arkts-cryptoarchitecture-systemcipher-cipherresponse-i.md) | Defines the response to the cipher interface called. |
+| [CipherRsaOptions](arkts-cryptoarchitecture-systemcipher-cipherrsaoptions-i.md) | Defines the input parameters of **cipher.rsa()**. |
 

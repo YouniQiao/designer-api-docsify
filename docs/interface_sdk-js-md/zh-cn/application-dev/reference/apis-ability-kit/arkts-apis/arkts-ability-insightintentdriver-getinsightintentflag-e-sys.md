@@ -8,8 +8,29 @@
 > 
 > - 对于使用装饰器开发的意图，通过上述接口查询的全量信息和简要信息存在差别，详见下表。
 > 
-> 表1 全量意图信息与简要意图信息差别 &gt;
-> | 属性 | 全量意图信息是否包含 | 简要意图信息是否包含 | &gt; | -------- | -------- | -------- | &gt; | bundleName | 是 | 是 | &gt; | moduleName | 是 | 是 | &gt; | intentName | 是 | 是 | &gt; | domain | 是 | 否 | &gt; | intentVersion | 是 | 否 | &gt; | displayName | 是 | 是 | &gt; | displayDescription | 是 | 否 | &gt; | schema | 是 | 否 | &gt; | icon | 是 | 否 | &gt; | llmDescription | 是 | 否 | &gt; | keywords | 是 | 否 | &gt; | intentType | 是 | 是 | &gt; | subIntentInfo | 是 | 是 | &gt; | parameters | 是 | 是 | &gt; | entities | 否 | 否 | &gt; | developType&lt;sup&gt;23+&lt;/sup&gt; | 是 | 是 | &gt; | subIntentInfoForConfiguration&lt;sup&gt;23+&lt;/sup&gt; | 否 | 否 |
+> 表1 全量意图信息与简要意图信息差别
+> 
+> | 属性 | 全量意图信息是否包含 | 简要意图信息是否包含 |
+> | -------- | -------- | -------- |
+> | bundleName | 是 | 是 |
+> | moduleName | 是 | 是 |
+> | intentName | 是 | 是 |
+> | domain | 是 | 否 |
+> | intentVersion | 是 | 否 |
+> | displayName | 是 | 是 |
+> | displayDescription | 是 | 否 |
+> | schema | 是 | 否 |
+> | icon | 是 | 否 |
+> | llmDescription | 是 | 否 |
+> | keywords | 是 | 否 |
+> | intentType | 是 | 是 |
+> | subIntentInfo | 是 | 是 |
+> | parameters | 是 | 是 |
+> | entities | 否 | 否 |
+> | developType&lt;sup&gt;23+&lt;/sup
+&gt; | 是 | 是 |
+> | subIntentInfoForConfiguration&lt;sup&gt;23+&lt;/sup
+&gt; | 否 | 否 |
 
 **起始版本：** 23
 

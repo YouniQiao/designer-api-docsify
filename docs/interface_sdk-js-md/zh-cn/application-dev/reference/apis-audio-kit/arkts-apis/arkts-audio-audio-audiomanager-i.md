@@ -827,13 +827,14 @@ mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>):
 > 
 > - 从API version 7开始支持，从API version 9开始废弃。
 > 
-> - 应用无法直接静音流音量，建议通过系统音量面板组件进行静音。具体样例和介绍请参考API文档 &gt; @ohos.multimedia.avVolumePanel (音量面板)。
+> - 应用无法直接静音流音量，建议通过系统音量面板组件进行静音。具体样例和介绍请参考API文档
+> @ohos.multimedia.avVolumePanel (音量面板)。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [AVVolumePanel](../../apis-default/arkts-apis/arkts-multimedia-avvolumepanel-avvolumepanel-s.md)
+**替代接口：** [AVVolumePanel](../../apis-default/arkts-apis/arkts-multimediaavvolumepanel-avvolumepanel-s.md)
 
 <!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>): void--><!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -861,13 +862,14 @@ mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>
 > 
 > - 从API version 7开始支持，从API version 9开始废弃。
 > 
-> - 应用无法直接静音流音量，建议通过系统音量面板组件进行静音。具体样例和介绍请参考API文档 &gt; @ohos.multimedia.avVolumePanel (音量面板)。
+> - 应用无法直接静音流音量，建议通过系统音量面板组件进行静音。具体样例和介绍请参考API文档
+> @ohos.multimedia.avVolumePanel (音量面板)。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [AVVolumePanel](../../apis-default/arkts-apis/arkts-multimedia-avvolumepanel-avvolumepanel-s.md)
+**替代接口：** [AVVolumePanel](../../apis-default/arkts-apis/arkts-multimediaavvolumepanel-avvolumepanel-s.md)
 
 <!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>--><!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>-End-->
 
@@ -1336,13 +1338,14 @@ setVolume(volumeType: AudioVolumeType, volume: number, callback: AsyncCallback<v
 > 
 > - 从API version 7开始支持，从API version 9开始废弃。
 > 
-> - 应用无法直接调节系统音量，建议通过系统音量面板组件调节音量。具体样例和介绍请参考API文档 &gt; @ohos.multimedia.avVolumePanel (音量面板)。
+> - 应用无法直接调节系统音量，建议通过系统音量面板组件调节音量。具体样例和介绍请参考API文档
+> @ohos.multimedia.avVolumePanel (音量面板)。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [AVVolumePanel](../../apis-default/arkts-apis/arkts-multimedia-avvolumepanel-avvolumepanel-s.md)
+**替代接口：** [AVVolumePanel](../../apis-default/arkts-apis/arkts-multimediaavvolumepanel-avvolumepanel-s.md)
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -1370,13 +1373,14 @@ setVolume(volumeType: AudioVolumeType, volume: number): Promise<void>
 > 
 > - 从API version 7开始支持，从API version 9开始废弃。
 > 
-> - 应用无法直接调节系统音量，建议通过系统音量面板组件调节音量。具体样例和介绍请参考API文档 &gt; @ohos.multimedia.avVolumePanel (音量面板)。
+> - 应用无法直接调节系统音量，建议通过系统音量面板组件调节音量。具体样例和介绍请参考API文档
+> @ohos.multimedia.avVolumePanel (音量面板)。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [AVVolumePanel](../../apis-default/arkts-apis/arkts-multimedia-avvolumepanel-avvolumepanel-s.md)
+**替代接口：** [AVVolumePanel](../../apis-default/arkts-apis/arkts-multimediaavvolumepanel-avvolumepanel-s.md)
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 

@@ -36,7 +36,7 @@ Notifies the ArkWeb kernel that the intercepted request will fail and ends the n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | Yes | Network error code, used to identify the cause of the request failure. |
+| code | [WebNetErrorList](arkts-arkweb-webneterrorlist-webneterrorlist-e.md) | Yes | Network error code, used to identify the cause of the request failure. |
 
 **Error codes:**
 
@@ -51,7 +51,7 @@ Notifies the ArkWeb kernel that the intercepted request will fail and ends the n
 didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void
 ```
 
-Notifies the ArkWeb kernel that the intercepted request will fail. If **completeIfNoResponse** is set to **false**, call [didReceiveResponse](../../apis-default/arkts-apis/arkts-webview-webresourcehandler-c.md#didreceiveresponse) first to pass in the response header. If **completeIfNoResponse** is set to **true** and [didReceiveResponse](../../apis-default/arkts-apis/arkts-webview-webresourcehandler-c.md#didreceiveresponse) is not called beforehand, a response header is automatically generated with the network error code -104. For details, see [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md).
+Notifies the ArkWeb kernel that the intercepted request will fail. If **completeIfNoResponse** is set to **false**, call [didReceiveResponse](../../apis-default/arkts-apis/arkts-webview-webresourcehandler-c.md#didreceiveresponse) first to pass in the response header. If **completeIfNoResponse** is set to **true** and [didReceiveResponse](../../apis-default/arkts-apis/arkts-webview-webresourcehandler-c.md#didreceiveresponse) is not called beforehand, a response header is automatically generated with the network error code -104. For details, see [WebNetErrorList](arkts-arkweb-webneterrorlist-webneterrorlist-e.md).
 
 **Since:** 20
 
@@ -63,7 +63,7 @@ Notifies the ArkWeb kernel that the intercepted request will fail. If **complete
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | Yes | Network error code that identifies the cause of the request failure. |
+| code | [WebNetErrorList](arkts-arkweb-webneterrorlist-webneterrorlist-e.md) | Yes | Network error code that identifies the cause of the request failure. |
 | completeIfNoResponse | boolean | Yes | Whether to automatically complete this network request when [didReceiveResponse](../../apis-default/arkts-apis/arkts-webview-webresourcehandler-c.md#didreceiveresponse) is not called. The value **true** means to automatically generate a response header (with network error code -104) and complete the request, and **false** means to wait for the app to call [didReceiveResponse](../../apis-default/arkts-apis/arkts-webview-webresourcehandler-c.md#didreceiveresponse). |
 
 **Error codes:**
@@ -91,7 +91,7 @@ Notify that this request should be failed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | Yes | Set response error code to intercept. |
+| code | [WebNetErrorList](arkts-arkweb-webneterrorlist-webneterrorlist-e.md) | Yes | Set response error code to intercept. |
 | completeIfNoResponse | boolean | Yes | If completeIfNoResponse is true, when DidFailWithError is called, if DidReceiveResponse has not been called, a response is automatically constructed and the current request is terminated. |
 | customErrorCode | number | Yes | The custom error code for this response, Web engine will pass the custom error code directly to the application through onErrorReceive. |
 

@@ -11,5 +11,5 @@
 
 | Name | Description |
 | --- | --- |
-| [EnvironmentCallback](arkts-app-ability-environmentcallback-environmentcallback-i.md) | The EnvironmentCallback module provides capabilities to listen for system environment changes. |
+| [EnvironmentCallback](arkts-appabilityenvironmentcallback-environmentcallback-i.md) | The EnvironmentCallback module provides capabilities to listen for system environment changes. |
 

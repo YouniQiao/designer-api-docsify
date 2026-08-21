@@ -561,7 +561,8 @@ checkOsAccountVerified(callback: AsyncCallback<boolean>): void
 
 > **说明：**
 > 
-> 从API version 9开始支持，从API version 11开始废弃。建议使用 &gt; [isOsAccountUnlocked](#isosaccountunlocked)替代。
+> 从API version 9开始支持，从API version 11开始废弃。建议使用
+> [isOsAccountUnlocked](#isosaccountunlocked)替代。
 
 **起始版本：** 9
 
@@ -615,7 +616,8 @@ checkOsAccountVerified(): Promise<boolean>
 
 > **说明：**
 > 
-> 从API version 9开始支持，从API version 11开始废弃。建议使用 &gt; [isOsAccountUnlocked](#isosaccountunlocked)替代。
+> 从API version 9开始支持，从API version 11开始废弃。建议使用
+> [isOsAccountUnlocked](#isosaccountunlocked)替代。
 
 **起始版本：** 9
 
@@ -936,7 +938,8 @@ getCreatedOsAccountsCount(callback: AsyncCallback<number>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [getOsAccountCount](#getosaccountcount)替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getOsAccountCount](#getosaccountcount)替代。
 
 **起始版本：** 7
 
@@ -981,7 +984,8 @@ getCreatedOsAccountsCount(): Promise<number>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [getOsAccountCount](#getosaccountcount)替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getOsAccountCount](#getosaccountcount)替代。
 
 **起始版本：** 7
 
@@ -1136,7 +1140,9 @@ getDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [queryDistributedVirtualDeviceId](#querydistributedvirtualdeviceid) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [queryDistributedVirtualDeviceId](#querydistributedvirtualdeviceid)
+> 替代。
 
 **起始版本：** 7
 
@@ -1181,7 +1187,8 @@ getDistributedVirtualDeviceId(): Promise<string>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [queryDistributedVirtualDeviceId](#querydistributedvirtualdeviceid)替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [queryDistributedVirtualDeviceId](#querydistributedvirtualdeviceid)替代。
 
 **起始版本：** 7
 
@@ -1919,7 +1926,9 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber)
+> 替代。
 
 **起始版本：** 8
 
@@ -1966,7 +1975,9 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber)
+> 替代。
 
 **起始版本：** 8
 
@@ -2549,7 +2560,9 @@ getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCall
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain)
+> 替代。
 
 **起始版本：** 8
 
@@ -2596,7 +2609,9 @@ getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo): Promise<number>
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain)
+> 替代。
 
 **起始版本：** 8
 
@@ -2646,7 +2661,8 @@ getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [getOsAccountLocalId](#getosaccountlocalid)替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getOsAccountLocalId](#getosaccountlocalid)替代。
 
 **起始版本：** 7
 
@@ -2689,7 +2705,8 @@ getOsAccountLocalIdFromProcess(): Promise<number>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [getOsAccountLocalId](#getosaccountlocalid)替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getOsAccountLocalId](#getosaccountlocalid)替代。
 
 **起始版本：** 7
 
@@ -2730,7 +2747,9 @@ getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [getOsAccountLocalIdForUid](#getosaccountlocalidforuid) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getOsAccountLocalIdForUid](#getosaccountlocalidforuid)
+> 替代。
 
 **起始版本：** 7
 
@@ -2777,7 +2796,8 @@ getOsAccountLocalIdFromUid(uid: number): Promise<number>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [getOsAccountLocalIdForUid](#getosaccountlocalidforuid)替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getOsAccountLocalIdForUid](#getosaccountlocalidforuid)替代。
 
 **起始版本：** 7
 
@@ -3159,7 +3179,8 @@ getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [getOsAccountType](#getosaccounttype)替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getOsAccountType](#getosaccounttype)替代。
 
 **起始版本：** 7
 
@@ -3202,7 +3223,8 @@ getOsAccountTypeFromProcess(): Promise<OsAccountType>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用[getOsAccountType](#getosaccounttype) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用[getOsAccountType](#getosaccounttype)
+> 替代。
 
 **起始版本：** 7
 
@@ -3243,7 +3265,9 @@ getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<numbe
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid)
+> 替代。
 
 **起始版本：** 8
 
@@ -3291,7 +3315,9 @@ getSerialNumberByOsAccountLocalId(localId: number): Promise<number>
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid)
+> 替代。
 
 **起始版本：** 8
 
@@ -3498,7 +3524,9 @@ isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [checkMultiOsAccountEnabled](#checkmultiosaccountenabled) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [checkMultiOsAccountEnabled](#checkmultiosaccountenabled)
+> 替代。
 
 **起始版本：** 7
 
@@ -3541,7 +3569,8 @@ isMultiOsAccountEnable(): Promise<boolean>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [checkMultiOsAccountEnabled](#checkmultiosaccountenabled)替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [checkMultiOsAccountEnabled](#checkmultiosaccountenabled)替代。
 
 **起始版本：** 7
 
@@ -3935,7 +3964,9 @@ isOsAccountVerified(callback: AsyncCallback<boolean>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [checkOsAccountVerified](#checkosaccountverified) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [checkOsAccountVerified](#checkosaccountverified)
+> 替代。
 
 **起始版本：** 7
 
@@ -4077,7 +4108,9 @@ isTestOsAccount(callback: AsyncCallback<boolean>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [checkOsAccountTestable](#checkosaccounttestable) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [checkOsAccountTestable](#checkosaccounttestable)
+> 替代。
 
 **起始版本：** 7
 
@@ -4120,7 +4153,8 @@ isTestOsAccount(): Promise<boolean>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [checkOsAccountTestable](#checkosaccounttestable)替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [checkOsAccountTestable](#checkosaccounttestable)替代。
 
 **起始版本：** 7
 
@@ -4161,7 +4195,9 @@ queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [getActivatedOsAccountLocalIds](#getactivatedosaccountlocalids) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [getActivatedOsAccountLocalIds](#getactivatedosaccountlocalids)
+> 替代。
 
 **起始版本：** 8
 
@@ -4207,7 +4243,8 @@ queryActivatedOsAccountIds(): Promise<Array<number>>
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [getActivatedOsAccountLocalIds](#getactivatedosaccountlocalids)替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [getActivatedOsAccountLocalIds](#getactivatedosaccountlocalids)替代。
 
 **起始版本：** 8
 

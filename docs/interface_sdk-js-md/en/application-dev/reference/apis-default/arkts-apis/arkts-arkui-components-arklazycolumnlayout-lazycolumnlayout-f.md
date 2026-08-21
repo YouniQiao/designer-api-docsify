@@ -36,7 +36,7 @@ Defines LazyColumnLayout Component.
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) | The attribute of the LazyColumnLayout. |
+| [LazyColumnLayoutAttribute](arkts-arkuicomponentsarklazycolumnlayout-lazycolumnlayoutattribute-i.md) | The attribute of the LazyColumnLayout. |
 
 
 ## LazyColumnLayout
@@ -65,12 +65,12 @@ Defines LazyColumnLayout Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](arkts-custombuildert-t.md)&lt;[LazyColumnLayoutAttribute](arkts-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md)&gt; | Yes | The style to create a LazyColumnLayout. |
+| style_ | [CustomBuilderT](arkts-custombuildert-t.md)&lt;[LazyColumnLayoutAttribute](arkts-arkuicomponentsarklazycolumnlayout-lazycolumnlayoutattribute-i.md)&gt; | Yes | The style to create a LazyColumnLayout. |
 | content_ | [CustomBuilder](arkts-custombuilder-t.md) | No | content |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) | The attribute of the LazyColumnLayout. |
+| [LazyColumnLayoutAttribute](arkts-arkuicomponentsarklazycolumnlayout-lazycolumnlayoutattribute-i.md) | The attribute of the LazyColumnLayout. |
 

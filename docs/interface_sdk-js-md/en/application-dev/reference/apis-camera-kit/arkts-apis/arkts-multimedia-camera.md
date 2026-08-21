@@ -4,7 +4,8 @@ The module provides a set of camera service APIs for you to easily develop a cam
 
 > **NOTE：**
 > 
-> - This topic describes only system APIs provided by the module. For details about its public APIs, see &gt; [@ohos.multimedia.camera (Camera Management)](#ohosmultimediacamera).
+> - This topic describes only system APIs provided by the module. For details about its public APIs, see
+> [@ohos.multimedia.camera (Camera Management)](#ohosmultimediacamera).
 
 **Since:** 23
 
@@ -43,7 +44,7 @@ import { cameraPicker } from '@kit.CameraKit';
 | [AutoDeviceSwitchQuery](arkts-camera-camera-autodeviceswitchquery-i.md) | *AutoDeviceSwitchQuery** is used to check whether a device supports automatic camera switch. |
 | [AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md) | Describes the information about the automatic camera switch status. |
 | [AutoExposure](arkts-camera-camera-autoexposure-i.md) | *AutoExposure** inherits from [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md). |
-| [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md) | AutoExposureQuery provides APIs to query the automatic exposure feature of a camera device.  >  > - In this version, a compatibility change was made that preserved the initial version information of inner &gt; elements. As a result, you might see outer element's |
+| [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md) | AutoExposureQuery provides APIs to query the automatic exposure feature of a camera device.  >  > - In this version, a compatibility change was made that preserved the initial version information of inner > elements. As a result, you might see outer element's |
 | [CameraConcurrentInfo](arkts-camera-camera-cameraconcurrentinfo-i.md) | Describes the camera's concurrency information. |
 | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Describes the camera device information. |
 | [CameraInput](arkts-camera-camera-camerainput-i.md) | *CameraInput** defines the camera input object. |
@@ -123,7 +124,7 @@ import { cameraPicker } from '@kit.CameraKit';
 | [ApertureQuery](arkts-camera-camera-aperturequery-i-sys.md) | Provides the aperture query capability. |
 | [ApertureVideoSession](arkts-camera-camera-aperturevideosession-i-sys.md) | Aperture video session object. |
 | [AutoExposure](arkts-camera-camera-autoexposure-i-sys.md) | *AutoExposure** inherits from [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md). |
-| [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i-sys.md) | AutoExposureQuery provides APIs to query the automatic exposure feature of a camera device.  >  > - In this version, a compatibility change was made that preserved the initial version information of inner &gt; elements. As a result, you might see outer element's |
+| [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i-sys.md) | AutoExposureQuery provides APIs to query the automatic exposure feature of a camera device.  >  > - In this version, a compatibility change was made that preserved the initial version information of inner > elements. As a result, you might see outer element's |
 | [Beauty](arkts-camera-camera-beauty-i-sys.md) | Beauty extends [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md) Provides APIs to obtain and set the beauty effect. |
 | [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md) | Provides APIs to obtain and set the beauty effect. |
 | [CameraDevice](arkts-camera-camera-cameradevice-i-sys.md) | Describes the camera device information. |

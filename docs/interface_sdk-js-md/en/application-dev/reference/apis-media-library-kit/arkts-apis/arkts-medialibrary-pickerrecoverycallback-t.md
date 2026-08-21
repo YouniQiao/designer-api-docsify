@@ -20,5 +20,5 @@ The callback of onPickerRecovery event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recoveryResult | [RecoveryResult](arkts-medialibrary-file-photopickercomponent-recoveryresult-c.md) | Yes |  |
+| recoveryResult | [RecoveryResult](arkts-medialibrary-filephotopickercomponent-recoveryresult-c.md) | Yes |  |
 

@@ -18,18 +18,18 @@ import { Request, DownloadRequestOptions, DownloadResponse, OnDownloadCompleteOp
 
 | 名称 | 说明 |
 | --- | --- |
-| [Request(上传下载)](arkts-basicservices-system-request-request-c.md) |  |
+| [Request(上传下载)](arkts-basicservices-systemrequest-request-c.md) |  |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [DownloadRequestOptions(上传下载)](arkts-basicservices-system-request-downloadrequestoptions-i.md) |  |
-| [DownloadResponse(上传下载)](arkts-basicservices-system-request-downloadresponse-i.md) |  |
-| [OnDownloadCompleteOptions(上传下载)](arkts-basicservices-system-request-ondownloadcompleteoptions-i.md) |  |
-| [OnDownloadCompleteResponse(上传下载)](arkts-basicservices-system-request-ondownloadcompleteresponse-i.md) |  |
-| [RequestData(上传下载)](arkts-basicservices-system-request-requestdata-i.md) |  |
-| [RequestFile(上传下载)](arkts-basicservices-system-request-requestfile-i.md) |  |
-| [UploadRequestOptions(上传下载)](arkts-basicservices-system-request-uploadrequestoptions-i.md) |  |
-| [UploadResponse(上传下载)](arkts-basicservices-system-request-uploadresponse-i.md) |  |
+| [DownloadRequestOptions(上传下载)](arkts-basicservices-systemrequest-downloadrequestoptions-i.md) |  |
+| [DownloadResponse(上传下载)](arkts-basicservices-systemrequest-downloadresponse-i.md) |  |
+| [OnDownloadCompleteOptions(上传下载)](arkts-basicservices-systemrequest-ondownloadcompleteoptions-i.md) |  |
+| [OnDownloadCompleteResponse(上传下载)](arkts-basicservices-systemrequest-ondownloadcompleteresponse-i.md) |  |
+| [RequestData(上传下载)](arkts-basicservices-systemrequest-requestdata-i.md) |  |
+| [RequestFile(上传下载)](arkts-basicservices-systemrequest-requestfile-i.md) |  |
+| [UploadRequestOptions(上传下载)](arkts-basicservices-systemrequest-uploadrequestoptions-i.md) |  |
+| [UploadResponse(上传下载)](arkts-basicservices-systemrequest-uploadresponse-i.md) |  |
 

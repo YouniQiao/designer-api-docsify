@@ -6,7 +6,7 @@ typedef struct InputMethod_TextAvoidInfo InputMethod_TextAvoidInfo
 
 ## Overview
 
-Define the InputMethod_TextAvoidInfo structure type.Information for text editor to avoid the keyboard.
+Represents the information used by the input box to avoid the keyboard.
 
 **Since**: 12
 

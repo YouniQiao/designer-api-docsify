@@ -16,7 +16,8 @@ function createAudioRecorder(): AudioRecorder
 
 > **说明：**
 > 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用 &gt; [createAVRecorder](arkts-media-media-createavrecorder-f.md)替代。
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [createAVRecorder](arkts-media-media-createavrecorder-f.md)替代。
 
 **起始版本：** 6
 
@@ -32,7 +33,7 @@ function createAudioRecorder(): AudioRecorder
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioRecorder](arkts-media-multimedia-media-audiorecorder-i.md) | 返回AudioRecorder类实例，失败时返回null。可用于录制音频媒体。 |
+| [AudioRecorder](arkts-media-multimediamedia-audiorecorder-i.md) | 返回AudioRecorder类实例，失败时返回null。可用于录制音频媒体。 |
 
 **示例**
 

@@ -16,7 +16,8 @@ Sends an SMS message.
 
 > **NOTE：**
 > 
-> This API is supported since API version 6 and deprecated since API version 10. You are advised to use &gt; [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md).
+> This API is supported since API version 6 and deprecated since API version 10. You are advised to use
+> [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md).
 
 **Since:** 6
 

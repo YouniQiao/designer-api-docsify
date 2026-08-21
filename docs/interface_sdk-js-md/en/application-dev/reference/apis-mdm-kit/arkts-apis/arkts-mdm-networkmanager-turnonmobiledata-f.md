@@ -28,7 +28,7 @@ Turns on mobile data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | isForce | boolean | Yes | Whether to forcibly enable mobile data. <br>The value **true** means to forcibly enable mobile data. Once enabled, it cannot be turned off manually; it can only be disabled via the [turnOffMobileData](arkts-mdm-networkmanager-turnoffmobiledata-f.md) API. The value **false** means not to forcibly enable mobile data. It can be turned off manually. This API is suitable for enterprise network security management and control scenarios, such as preventing data leaks via mobile data networks, controlling network connection methods, reducing communication costs, and ensuring that devices use only enterprise networks. It helps enterprises control how devices access networks, mitigating security risks and preventing data exfiltration through mobile data networks. |
 
 **Error codes:**

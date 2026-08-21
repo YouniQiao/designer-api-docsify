@@ -5,7 +5,11 @@
 > **说明：**
 > 
 > 返回字段类型具体参考[TiffMetadata](../../../reference/apis-image-kit/arkts-apis-image-TiffMetadata.md)。
-> | 名称 | 值 | 说明 | &gt; | ---- | -- | ---- | &gt; | DOCUMENT_NAME | 'TiffDocumentName' | 文档或图像的名称。 | &gt; | PHOTOMETRIC_INTERPRETATION | 'TiffPhotometricInterpretation' | 定义像素颜色的解释方式（如RGB、灰度）。 | &gt; | ORIENTATION | 'TiffOrientation' | 图像方向。
+> | 名称 | 值 | 说明 |
+> | ---- | -- | ---- |
+> | DOCUMENT_NAME | 'TiffDocumentName' | 文档或图像的名称。 |
+> | PHOTOMETRIC_INTERPRETATION | 'TiffPhotometricInterpretation' | 定义像素颜色的解释方式（如RGB、灰度）。 |
+> | ORIENTATION | 'TiffOrientation' | 图像方向。
 
 - 1表示"Top-left"，图像未旋转。 - 2表示"Top-right"，镜像水平翻转。 - 3表示"Bottom-right"，图像旋转180°。 - 4表示"Bottom-left"，镜像垂直翻转。 - 5表示"Left-top"，镜像水平翻转后再顺时针旋转270°。 - 6表示"Right-top"，顺时针旋转90°。 - 7表示"Right-bottom"，镜像水平翻转后再顺时针旋转90°。 - 8表示"Left-bottom"，顺时针旋转270°。
 

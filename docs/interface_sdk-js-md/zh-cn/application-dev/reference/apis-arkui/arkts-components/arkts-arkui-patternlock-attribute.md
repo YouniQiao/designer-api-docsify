@@ -171,7 +171,8 @@ onPatternComplete(callback: (input: Array<number>) => void)
 
 > **说明：**
 > 
-> 该回调在密码输入结束时触发，返回完整密码数组。与[onDotConnect](#ondotconnect)的关系：onDotConnect在选中每个圆点时实时触发， &gt; onPatternComplete在输入结束时触发，两者可以配合使用以实现实时反馈和最终验证。
+> 该回调在密码输入结束时触发，返回完整密码数组。与[onDotConnect](#ondotconnect)的关系：onDotConnect在选中每个圆点时实时触发，
+> onPatternComplete在输入结束时触发，两者可以配合使用以实现实时反馈和最终验证。
 
 **起始版本：** 9
 

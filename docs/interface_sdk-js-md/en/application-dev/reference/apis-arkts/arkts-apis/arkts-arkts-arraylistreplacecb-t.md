@@ -22,7 +22,7 @@ The type of ArrayList callback function.
 | --- | --- | --- | --- |
 | value | T | Yes | The current element being processed |
 | index | int | Yes | The index of the current element |
-| arrlist | [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md)&lt;T&gt; | Yes | The ArrayList instance being traversed |
+| arrlist | [ArrayList](arkts-arkts-utilarraylist-arraylist-c.md)&lt;T&gt; | Yes | The ArrayList instance being traversed |
 
 **Return value:**
 

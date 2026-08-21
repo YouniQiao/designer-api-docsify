@@ -16,11 +16,14 @@ Disables the specified permission of the specified user. After the permission is
 
 > **NOTE：**
 > 
-> 1. Only permissions with an &gt; [APL level](../../../security/AccessToken/app-permission-mgmt-overview.md#basic-concepts-in-the-permission-mechanism) &gt; of normal or system_basic can be disabled. Otherwise, error code 9201045 is returned.
+> 1. Only permissions with an
+> [APL level](../../../security/AccessToken/app-permission-mgmt-overview.md#basic-concepts-in-the-permission-mechanism)
+> of normal or system_basic can be disabled. Otherwise, error code 9201045 is returned.
 > 
 > 2. A maximum of 200 permissions can be disabled per user.
 > 
-> 3. After a permission is disabled, only applications (system and common applications) are affected. System SAs &gt; can still use the permission.
+> 3. After a permission is disabled, only applications (system and common applications) are affected. System SAs
+> can still use the permission.
 
 **Since:** 26.0.0
 
@@ -36,7 +39,7 @@ Disables the specified permission of the specified user. After the permission is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | permission | string | Yes | Name of the permission. |
 | disallow | boolean | Yes | Whether to disable the permission. The value **true** indicates yes, and the value **false** indicates no. |
 | accountId | number | Yes | User ID, which must be greater than or equal to 0. You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of **@ohos.account.osAccount** to obtain the user ID. |

@@ -20,5 +20,5 @@ LightWeightSet的回调函数类型。
 | --- | --- | --- | --- |
 | value | T | 是 | 当前元素的值。 |
 | key | T | 是 | 当前元素的键（与value相同）。 |
-| set | [LightWeightSet](arkts-arkts-util-lightweightset-lightweightset-c.md)&lt;T&gt; | 是 | 当前正在遍历的LightWeightSet实例。 |
+| set | [LightWeightSet](arkts-arkts-utillightweightset-lightweightset-c.md)&lt;T&gt; | 是 | 当前正在遍历的LightWeightSet实例。 |
 

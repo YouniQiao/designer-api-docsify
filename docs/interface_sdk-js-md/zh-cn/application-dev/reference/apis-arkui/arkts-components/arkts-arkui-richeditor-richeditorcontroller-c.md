@@ -4,7 +4,9 @@ RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-r
 
 > **说明：**
 > 
-> 当内容的长度超过组件显示区域的高度时，调用插入接口（例如[addTextSpan](#addtextspan)、 &gt; [addImageSpan](#addimagespan)、[addBuilderSpan](#addbuilderspan) &gt; 、[addSymbolSpan](#addsymbolspan)），组件会自动滚动内容使得插入内容末尾可见。
+> 当内容的长度超过组件显示区域的高度时，调用插入接口（例如[addTextSpan](#addtextspan)、
+> [addImageSpan](#addimagespan)、[addBuilderSpan](#addbuilderspan)
+> 、[addSymbolSpan](#addsymbolspan)），组件会自动滚动内容使得插入内容末尾可见。
 
 **继承/实现关系：** RichEditorController extends [RichEditorBaseController](arkts-arkui-richeditor-richeditorbasecontroller-c.md)
 
@@ -35,9 +37,12 @@ addBuilderSpan(value: CustomBuilder, options?: RichEditorBuilderSpanOptions): in
 > 
 > - 支持通过[bindSelectionMenu](arkts-arkui-richeditor-attribute.md#bindselectionmenu)设置自定义菜单。
 > 
-> - 不支持通过[getSpans](#getspans)，[getSelection](#getselection)， &gt; [onSelect](arkts-arkui-richeditor-attribute.md#onselect)，[aboutToDelete](arkts-arkui-richeditor-attribute.md#abouttodelete)获取 &gt; builderSpan信息。
+> - 不支持通过[getSpans](#getspans)，[getSelection](#getselection)，
+> [onSelect](arkts-arkui-richeditor-attribute.md#onselect)，[aboutToDelete](arkts-arkui-richeditor-attribute.md#abouttodelete)获取
+> builderSpan信息。
 > 
-> - 不支持通过[updateSpanStyle](#updatespanstyle)， &gt; [updateParagraphStyle](#updateparagraphstyle)等方式更新builder。
+> - 不支持通过[updateSpanStyle](#updatespanstyle)，
+> [updateParagraphStyle](#updateparagraphstyle)等方式更新builder。
 > 
 > - 对此builder节点进行复制或粘贴不生效。
 > 

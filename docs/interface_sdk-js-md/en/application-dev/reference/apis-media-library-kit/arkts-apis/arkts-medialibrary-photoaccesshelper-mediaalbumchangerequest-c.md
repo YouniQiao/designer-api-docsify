@@ -81,7 +81,9 @@ Obtains the album in the current album change request.
 
 > **NOTE：**
 > 
-> For the change request for creating an album, this API returns **null** before &gt; [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) is called &gt; to apply the changes.
+> For the change request for creating an album, this API returns **null** before
+> [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) is called
+> to apply the changes.
 
 **Since:** 11
 

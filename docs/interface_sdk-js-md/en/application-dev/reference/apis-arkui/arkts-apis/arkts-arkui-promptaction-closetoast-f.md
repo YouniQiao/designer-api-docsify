@@ -16,7 +16,10 @@ Closes the specified toast.
 
 > **NOTE：**
 > 
-> Directly using **closeToast** can lead to the issue of &gt; [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the &gt; **PromptAction** object using the **getPromptAction** API in **UIContext** and then call the &gt; [closeToast](arkts-arkui-arkui-uicontext-promptaction-c.md#closetoast) API through this object.
+> Directly using **closeToast** can lead to the issue of
+> [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the
+> **PromptAction** object using the **getPromptAction** API in **UIContext** and then call the
+> [closeToast](arkts-arkui-arkuiuicontext-promptaction-c.md#closetoast) API through this object.
 
 **Since:** 18
 

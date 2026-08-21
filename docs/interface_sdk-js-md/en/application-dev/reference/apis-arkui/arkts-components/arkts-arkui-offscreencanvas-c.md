@@ -6,7 +6,10 @@ When the Canvas component or **CanvasRenderingContext2D** object is used, render
 
 > **NOTE：**
 > 
-> **OffscreenCanvas** cannot be used in ServiceExtensionAbility. It is recommended &gt; that you use the &gt; [drawing module](../../../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing.md) &gt; for offscreen drawing in ServiceExtensionAbility.
+> **OffscreenCanvas** cannot be used in ServiceExtensionAbility. It is recommended
+> that you use the
+> [drawing module](../../../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing.md)
+> for offscreen drawing in ServiceExtensionAbility.
 
 @extends CanvasRenderer [since 8 - 10]
 

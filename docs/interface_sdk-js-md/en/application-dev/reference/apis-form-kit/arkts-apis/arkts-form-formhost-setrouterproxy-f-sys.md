@@ -16,7 +16,10 @@ Sets a router proxy for widgets and obtains the Want information required for re
 
 > **NOTE：**
 > 
-> Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework &gt; checks whether the destination is proper and whether the widget has the redirection permission, and then &gt; triggers redirection accordingly. For a widget that is added to a widget host and has a router proxy configured, &gt; in the case of router-based redirection, the widget framework does not trigger redirection for the widget.
+> Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework
+> checks whether the destination is proper and whether the widget has the redirection permission, and then
+> triggers redirection accordingly. For a widget that is added to a widget host and has a router proxy configured,
+> in the case of router-based redirection, the widget framework does not trigger redirection for the widget.
 > - Only one router proxy can be set for a widget. If multiple proxies are set, only the last proxy takes effect.
 
 **Since:** 23
@@ -34,7 +37,7 @@ Sets a router proxy for widgets and obtains the Want information required for re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | Yes | Array of widget IDs. |
-| proxy | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Callback used to return the Want information required for redirection. |
+| proxy | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)&gt; | Yes | Callback used to return the Want information required for redirection. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the router proxy is set, **error** is **undefined**; otherwise, an exception is thrown. |
 
 **Error codes:**
@@ -60,7 +63,10 @@ Sets a router proxy for widgets and obtains the Want information required for re
 
 > **NOTE：**
 > 
-> - Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework &gt; checks whether the destination is proper and whether the widget has the redirection permission, and then &gt; triggers redirection accordingly. For a widget that is added to a widget host and has a router proxy configured, &gt; in the case of router-based redirection, the widget framework does not trigger redirection for the widget.
+> - Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework
+> checks whether the destination is proper and whether the widget has the redirection permission, and then
+> triggers redirection accordingly. For a widget that is added to a widget host and has a router proxy configured,
+> in the case of router-based redirection, the widget framework does not trigger redirection for the widget.
 > 
 > - Only one router proxy can be set for a widget. If multiple proxies are set, only the last proxy takes effect.
 
@@ -79,7 +85,7 @@ Sets a router proxy for widgets and obtains the Want information required for re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | Yes | Array of widget IDs. |
-| proxy | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Callback used to return the Want information required for redirection. |
+| proxy | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)&gt; | Yes | Callback used to return the Want information required for redirection. |
 
 **Return value:**
 

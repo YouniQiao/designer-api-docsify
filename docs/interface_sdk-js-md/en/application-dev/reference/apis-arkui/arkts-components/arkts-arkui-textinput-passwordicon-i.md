@@ -16,7 +16,7 @@ PasswordIcon object.
 offIconSrc?: string | Resource
 ```
 
-Define the off icon source of PasswordIcon. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Icon that can be used to show the password in password input mode. <br>The string type can be used to load network images and local images. &lt;/p&gt;
+Define the off icon source of PasswordIcon. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Icon that can be used to show the password in password input mode. <br>The string type can be used to load network images and local images. </p>
 
 **Type:** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
@@ -36,7 +36,7 @@ Define the off icon source of PasswordIcon. &lt;p&gt;&lt;strong&gt;NOTE&lt;/stro
 onIconSrc?: string | Resource
 ```
 
-Define the on icon source of PasswordIcon. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Icon that can be used to hide the password in password input mode. <br>The string type can be used to load network images and local images. &lt;/p&gt;
+Define the on icon source of PasswordIcon. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Icon that can be used to hide the password in password input mode. <br>The string type can be used to load network images and local images. </p>
 
 **Type:** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 

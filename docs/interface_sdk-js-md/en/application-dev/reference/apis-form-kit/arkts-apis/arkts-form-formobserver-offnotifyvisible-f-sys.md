@@ -15,7 +15,7 @@ function offNotifyVisible(
   ): void
 ```
 
-Cancels listening to the event of notifyVisible type change. &lt;p&gt;You can use this method to cancel listening to the event of notifyVisible type change.&lt;/p&gt;
+Cancels listening to the event of notifyVisible type change. <p>You can use this method to cancel listening to the event of notifyVisible type change.</p>
 
 **Since:** 23
 

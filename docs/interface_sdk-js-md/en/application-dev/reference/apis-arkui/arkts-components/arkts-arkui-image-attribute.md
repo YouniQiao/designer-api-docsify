@@ -6,17 +6,28 @@ The **Image** component is usually used to display images in applications. It su
 
 > - This component supports the TIFF image format since API version 23.
 > 
-> - When keyboard shortcuts are used to copy an **Image** component, the **Image** component must be in a focused &gt; state. For instructions on how to set focus, see &gt; [Setting Whether a Component Is Focusable](../../../ui/arkts-common-events-focus-event.md#setting-whether-a- component-is-focusable).
-> By default, the **Image** component is not focusable. To enable it to gain focus, set both the &gt; focusable and focusOnTouch attributes to &gt; **true**.
+> - When keyboard shortcuts are used to copy an **Image** component, the **Image** component must be in a focused
+> state. For instructions on how to set focus, see
+> [Setting Whether a Component Is Focusable](../../../ui/arkts-common-events-focus-event.md#setting-whether-a- component-is-focusable).
+> By default, the **Image** component is not focusable. To enable it to gain focus, set both the
+> focusable and focusOnTouch attributes to
+> **true**.
 > 
 > - The **Image** component supports SVG image sources. For details about SVG tags, see SVG Tags.
 > 
 > - For animated images, animation playback is disabled by default and depends on the visibility of the **Image**
-> component. When the component is visible, the animation is started through the callback. When the component is &gt; invisible, the animation is stopped. The visibility status of the **Image** component can be identified through the &gt;
-> [onVisibleAreaChange] &gt; onVisibleAreaChange &gt; event. If the value of **ratios** is greater than 0, the component is visible.
+> component. When the component is visible, the animation is started through the callback. When the component is
+> invisible, the animation is stopped. The visibility status of the **Image** component can be identified through the
 > 
-> - For details about how to resolve white block issues during image loading, see &gt; [Solution to White Image Blocks] &gt; (https://developer.huawei.com/consumer/en/doc/best-practices/bpta-image-white-lump-solution).
-> For details about how to address slow image loading, see &gt; [Optimizing Preset Image Loading](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-texture- &gt; compression-improve-performance#section91526132216). &gt;
+> [onVisibleAreaChange]
+> onVisibleAreaChange
+> event. If the value of **ratios** is greater than 0, the component is visible.
+> 
+> - For details about how to resolve white block issues during image loading, see
+> [Solution to White Image Blocks]
+> (https://developer.huawei.com/consumer/en/doc/best-practices/bpta-image-white-lump-solution).
+> For details about how to address slow image loading, see
+> [Optimizing Preset Image Loading](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-texture-&gt; compression-improve-performance#section91526132216). &gt;
 
 **Inheritance/Implementation:** ImageAttribute extends CommonMethod<ImageAttribute>
 
@@ -42,7 +53,7 @@ Sets the placeholder image displayed during image loading.
 
 The placeholder image supports configuration of [objectFit](#objectfit) for setting the fill effect, which is consistent with the fill effect of the image.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkuidrawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 7
 
@@ -70,11 +81,13 @@ Sets the placeholder image displayed during image loading and when image loading
 
 > **NOTE：**
 > 
-> When a placeholder image is configured via [ImageAlt](arkts-arkui-imagealt-i.md), **Image** takes effect based on the &gt; placeholder image sources configured for the loading and load-failure states. If no placeholder image is &gt; configured, it is not displayed by default.
+> When a placeholder image is configured via [ImageAlt](arkts-arkui-imagealt-i.md), **Image** takes effect based on the
+> placeholder image sources configured for the loading and load-failure states. If no placeholder image is
+> configured, it is not displayed by default.
 
 The placeholder image supports configuration of [objectFit](#objectfit) for setting the fill effect, which is consistent with the fill effect of the image.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkuidrawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 22
 
@@ -104,7 +117,9 @@ Sets whether to enable anti-aliasing for the edges of a pixel map image. If the 
 
 > **NOTE：**
 > 
-> If the backgroundColor attribute is set for an image, &gt; setting the **antialiased** attribute of the image to **true** does not affect the aliasing effect of the &gt; background color.
+> If the backgroundColor attribute is set for an image,
+> setting the **antialiased** attribute of the image to **true** does not affect the aliasing effect of the
+> background color.
 > 
 > This attribute does not take effect when used together with [resizable](#resizable).
 
@@ -138,7 +153,7 @@ When the image is scaled down: .autoResize(false) + .interpolation(.Medium)
 
 When the image is scaled up: .interpolation(.High)
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md) or the image format is SVG.
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkuidrawabledescriptor-animateddrawabledescriptor-c.md) or the image format is SVG.
 
 **Since:** 7
 
@@ -190,7 +205,7 @@ colorFilter(value: ColorFilter | DrawingColorFilter | ResourceColor)
 
 Sets the color filter for the image.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When this attribute is set, renderMode is not effective. <br>When value is ResourceColor type, it will be converted to ColorFilter with blend mode. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When this attribute is set, renderMode is not effective. <br>When value is ResourceColor type, it will be converted to ColorFilter with blend mode. </p>
 
 **Since:** 26.0.0
 
@@ -242,7 +257,7 @@ copyOption(value: CopyOptions)
 
 Specifies whether the image can be copied. When **copyOption** is set to a value other than **CopyOptions.None**, the image can be copied through multiple interactions, such as long press, right-click, or Ctrl+C. SVG images cannot be copied.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkuidrawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 9
 
@@ -324,7 +339,7 @@ The [alt](#alt) placeholder image does not support analysis. The [objectRepeat](
 
 Analysis is performed based on the complete original image. Even if the settings of the clip, margin, borderRadius, position, and [objectFit](#objectfit) attributes cause incomplete image display, or if a mask layer is set via [renderMode](#rendermode), analysis will still be conducted on the complete original image. The [copyOption](#copyoption) attribute does not affect the AI image analyzer functionality.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkuidrawabledescriptor-animateddrawabledescriptor-c.md).
 
 > **NOTE：**
 > 
@@ -356,7 +371,7 @@ fillColor(value: ResourceColor)
 
 Fill color to be superimposed on the image. This attribute applies only to SVG images. Once set, the fill color will replace the fill colors of all drawable elements within the SVG image. To set the fill color for a PNG image, use [colorFilter](#colorfilter).
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkuidrawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 7
 
@@ -382,7 +397,7 @@ fillColor(color: ResourceColor | ColorContent)
 
 Fill color to be superimposed on the image. This attribute applies only to SVG images. Once set, the fill color will replace the fill colors of all drawable elements within the SVG image. To set the fill color for a PNG image, use [colorFilter](#colorfilter). To reset the fill color, pass a value of the [ColorContent](arkts-arkui-colorcontent-c.md) type.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkuidrawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 15
 
@@ -408,7 +423,7 @@ fillColor(color: ResourceColor | ColorContent | ColorMetrics)
 
 Fill color to be superimposed on the image. This attribute applies only to SVG images. Once set, the fill color will replace the fill colors of all drawable elements within the SVG image. To set the fill color for a PNG image, use [colorFilter](#colorfilter). To reset the fill color, pass a value of the [ColorContent](arkts-arkui-colorcontent-c.md) type. You can set P3 color gamut values by passing in the [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md) type, which can achieve richer color performance on devices that support high color gamut.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkuidrawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 20
 
@@ -436,7 +451,7 @@ Specifies whether the image display size follows the size of the image source.
 
 This attribute does not take effect when the component has the **width** and **height** attributes set.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkuidrawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 7
 
@@ -518,7 +533,7 @@ interpolation(value: ImageInterpolation)
 
 Defines the image interpolation effect. This attribute mitigates aliasing during image scaling. This attribute is not applicable to SVG images.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkuidrawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 7
 
@@ -544,7 +559,7 @@ matchTextDirection(value: boolean)
 
 Specifies whether the image follows the system language direction, displaying a mirrored effect in a right-to-left (RTL) language environments.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkuidrawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 7
 
@@ -594,7 +609,7 @@ objectRepeat(value: ImageRepeat)
 
 Sets how the image is repeated. When set to repeat, the image is repeated from the center to edges. The last image will be clipped if it does not fit in the component. This attribute is not applicable to SVG images.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkuidrawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 7
 
@@ -894,7 +909,7 @@ onComplete(
 
 Triggered when an image is successfully loaded or decoded. The size of the image source that is successfully loaded is returned, in pixels.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>This event is not triggered if the parameter type of the component is AnimatedDrawableDescriptor. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>This event is not triggered if the parameter type of the component is AnimatedDrawableDescriptor. </p>
 
 **Since:** 11
 
@@ -920,7 +935,7 @@ onError(callback: ImageErrorCallback)
 
 Triggered when an error occurs during image loading.
 
-This event is not triggered if the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
+This event is not triggered if the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkuidrawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 9
 
@@ -946,7 +961,7 @@ onFinish(event: () => void)
 
 Triggered when the animation playback in the loaded SVG image is complete. If the animation is an infinite loop, this callback is not triggered.
 
-Only images in SVG format are supported. This event is not triggered if the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
+Only images in SVG format are supported. This event is not triggered if the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkuidrawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 7
 
@@ -1028,7 +1043,7 @@ Sets the rendering mode of the image. This attribute is not applicable to SVG im
 
 This attribute does not take effect when [ColorFilter](#colorfilter) is set.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkuidrawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 7
 
@@ -1058,7 +1073,7 @@ When a valid [ResizableOptions](arkts-arkui-resizableoptions-i.md) is set, the *
 
 When the sum of the values of **top** and **bottom** is greater than the source image height, or the sum of the values of **left** and **right** is greater than the source image width, the [ResizableOptions](arkts-arkui-resizableoptions-i.md) attribute does not take effect.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md) or the image format is SVG.
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkuidrawabledescriptor-animateddrawabledescriptor-c.md) or the image format is SVG.
 
 > **NOTE：**
 > 
@@ -1088,7 +1103,7 @@ sourceSize(value: ImageSourceSize)
 
 Sets the decoding size of the image. This attribute works only when the target size is smaller than the source size. This attribute is not applicable to SVG images or **PixelMap** objects.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkuidrawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 7
 
@@ -1142,7 +1157,7 @@ syncLoad(value: boolean)
 
 Specifies whether to load the image synchronously. When loading a small local image, you are advised to set **syncLoad** to **true** so that the image loading can be quickly completed on the main thread.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkuidrawabledescriptor-animateddrawabledescriptor-c.md).
 
 If image flickering occurs during loading, set **syncLoad** to **true**. For details, see [Optimizing Concurrent Tasks] (https://developer.huawei.com/consumer/en/doc/best-practices/bpta-click-to-click-response- optimization#section715115119192).
 

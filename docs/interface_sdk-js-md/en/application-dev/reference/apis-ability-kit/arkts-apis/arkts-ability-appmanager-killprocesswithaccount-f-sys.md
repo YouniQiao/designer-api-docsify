@@ -16,7 +16,8 @@ Kills a process by bundle name and account ID. This API uses a promise to return
 
 > **NOTE：**
 > 
-> The ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission is not required when **accountId** specifies the &gt; current user.
+> The ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission is not required when **accountId** specifies the
+> current user.
 
 **Since:** 23
 
@@ -86,7 +87,8 @@ Kills a process by bundle name and account ID. This API uses a promise to return
 
 > **NOTE：**
 > 
-> The ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission is not required when **accountId** specifies the &gt; current user.
+> The ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission is not required when **accountId** specifies the
+> current user.
 
 **Since:** 23
 
@@ -157,7 +159,8 @@ Kills a process by bundle name and account ID. This API uses an asynchronous cal
 
 > **NOTE：**
 > 
-> The ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission is not required when **accountId** specifies the &gt; current user.
+> The ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission is not required when **accountId** specifies the
+> current user.
 
 **Since:** 23
 

@@ -29,7 +29,7 @@ Starts an ability based on the specified shortcut information. This API uses a p
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | shortcutInfo | ShortcutInfo | Yes | Shortcut information of the application. |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Startup parameters, which are used to specify the window mode and device ID for switching the mission to the foreground. |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | No | Startup parameters, which are used to specify the window mode and device ID for switching the mission to the foreground. |
 
 **Return value:**
 

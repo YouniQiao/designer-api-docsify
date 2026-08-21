@@ -1,0 +1,118 @@
+# MultiNavigation
+
+Declaration struct MultiNavigation.
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+<!--Device-unnamed-export declare struct MultiNavigation--><!--Device-unnamed-export declare struct MultiNavigation-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+```
+
+## build
+
+```TypeScript
+@Builder
+  build(): void
+```
+
+The method to build multiNavigation.
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MultiNavigation-@Builder  build(): void--><!--Device-MultiNavigation-@Builder  build(): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## multiStack
+
+```TypeScript
+@State
+  multiStack: MultiNavPathStack
+```
+
+MultiNavigation path stack of the MultiNavigation.
+
+**Type:** [MultiNavPathStack](../../apis-arkui/arkts-apis/arkts-arkui-arkuiadvancedmultinavigation-multinavpathstack-c.md)
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MultiNavigation-@State  multiStack: MultiNavPathStack--><!--Device-MultiNavigation-@State  multiStack: MultiNavPathStack-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## navDestination
+
+```TypeScript
+@BuilderParam
+  navDestination: PageMapBuilder | undefined
+```
+
+build function of NavDestination.
+
+**Type:** [PageMapBuilder](arkts-pagemapbuilder-t.md) \| undefined
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MultiNavigation-@BuilderParam  navDestination: PageMapBuilder | undefined--><!--Device-MultiNavigation-@BuilderParam  navDestination: PageMapBuilder | undefined-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onHomeShowOnTop
+
+```TypeScript
+onHomeShowOnTop?: OnHomeShowOnTopCallback
+```
+
+This callback is triggered when the HomePage at the top of the stack.
+
+**Type:** [OnHomeShowOnTopCallback](../../apis-arkui/arkts-apis/arkts-arkui-onhomeshowontopcallback-t.md)
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MultiNavigation-onHomeShowOnTop?: OnHomeShowOnTopCallback--><!--Device-MultiNavigation-onHomeShowOnTop?: OnHomeShowOnTopCallback-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onNavigationModeChange
+
+```TypeScript
+onNavigationModeChange?: OnNavigationModeChangeCallback
+```
+
+callback when the MultiNavigationMode change.
+
+**Type:** [OnNavigationModeChangeCallback](../../apis-arkui/arkts-apis/arkts-arkui-onnavigationmodechangecallback-t.md)
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MultiNavigation-onNavigationModeChange?: OnNavigationModeChangeCallback--><!--Device-MultiNavigation-onNavigationModeChange?: OnNavigationModeChangeCallback-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

@@ -28,7 +28,7 @@ Sets the state of a switch. This API can enable or disable NearLink, Bluetooth, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | key | [SwitchKey](arkts-mdm-devicesettings-switchkey-e.md) | Yes | Switch name. An application that has obtained the ohos.permission.PERSONAL_MANAGE_RESTRICTIONS permission and has been activated as the built-in device administrator application via [startAdminProvision](arkts-mdm-adminmanager-startadminprovision-f.md) can use this API to set the following switches: NearLink, Bluetooth, and Wi-Fi. Attempting to set the NFC switch will result in error code 9200002. |
 | status | [SwitchStatus](arkts-mdm-devicesettings-switchstatus-e.md) | Yes | Switch state. An application that has obtained the ohos.permission.PERSONAL_MANAGE_RESTRICTIONS permission and has been activated as the built-in device administrator application via [startAdminProvision](arkts-mdm-adminmanager-startadminprovision-f.md) can use this API to set the following states: ON and OFF. Attempting to set the FORCE_ON state will result in error code 9200002. |
 

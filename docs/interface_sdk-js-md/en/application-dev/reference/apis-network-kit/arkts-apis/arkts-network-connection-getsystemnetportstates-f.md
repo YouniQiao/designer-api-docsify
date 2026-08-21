@@ -16,9 +16,12 @@ Obtains information about all TCP and UDP ports currently listened by the system
 
 > **NOTE：**
 > 
-> This API is used to obtain information about the TCP and UDP ports currently listened by the system. The detailed &gt; fields are as follows:
+> This API is used to obtain information about the TCP and UDP ports currently listened by the system. The detailed
+> fields are as follows:
 > 
-> TCP port fields: local address, local port, remote address, remote port, TCP connection status, process PID, and &gt; process UID &gt;
+> TCP port fields: local address, local port, remote address, remote port, TCP connection status, process PID, and
+> process UID
+> 
 > UDP port fields: local address, local port, process PID, and process UID
 
 **Since:** 24

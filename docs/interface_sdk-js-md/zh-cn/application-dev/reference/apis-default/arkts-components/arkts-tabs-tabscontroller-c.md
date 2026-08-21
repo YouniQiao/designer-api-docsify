@@ -62,11 +62,13 @@ preloadItems(indices: Array<int> | undefined): Promise<void>
 
 > **说明：**
 > 
-> - Tabs的preloadItems需要在Tabs创建之后去调用，首次预加载推荐在Tabs的 &gt; [onAppear](../../../reference/apis-arkui/arkui-ts/ts-universal-events-show-hide.md#onappear)生命周期中去控制。
+> - Tabs的preloadItems需要在Tabs创建之后去调用，首次预加载推荐在Tabs的
+> [onAppear](../../../reference/apis-arkui/arkui-ts/ts-universal-events-show-hide.md#onappear)生命周期中去控制。
 > 
 > - 如果TabsController对象未绑定任何Tabs组件，直接调用该接口，会抛出JS异常。因此使用该接口时，建议通过try-catch捕获异常。
 > 
-> - 使用preloadItems预加载标签页时，若需自定义TabBar上的显示内容，推荐使用ComponentContent实现，使用示例请参考 &gt; [示例9](../../../reference/apis-arkui/arkui-ts/ts-container-tabcontent.md#示例9通过componentcontent设置tabbar)。
+> - 使用preloadItems预加载标签页时，若需自定义TabBar上的显示内容，推荐使用ComponentContent实现，使用示例请参考
+> [示例9](../../../reference/apis-arkui/arkui-ts/ts-container-tabcontent.md#示例9通过componentcontent设置tabbar)。
 
 **起始版本：** 23
 
@@ -106,7 +108,12 @@ setTabBarOpacity(opacity: double): void
 
 > **说明：**
 > 
-> 当使用 &gt; [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable) &gt; 或 &gt; [bindTabsToNestedScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable) &gt; 等接口绑定了Tabs组件和可滚动容器组件后，在滑动可滚动容器组件时，会触发所有与其绑定的Tabs组件的TabBar的显示和隐藏动效，调用setTabBarOpacity接口设置的TabBar不透明度会失效。因此不建议同时使 &gt; 用bindTabsToScrollable、bindTabsToNestedScrollable和setTabBarOpacity接口。
+> 当使用
+> [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable)
+> 或
+> [bindTabsToNestedScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable)
+> 等接口绑定了Tabs组件和可滚动容器组件后，在滑动可滚动容器组件时，会触发所有与其绑定的Tabs组件的TabBar的显示和隐藏动效，调用setTabBarOpacity接口设置的TabBar不透明度会失效。因此不建议同时使
+> 用bindTabsToScrollable、bindTabsToNestedScrollable和setTabBarOpacity接口。
 
 **起始版本：** 23
 
@@ -134,7 +141,12 @@ setTabBarTranslate(translate: TranslateOptions): void
 
 > **说明：**
 > 
-> 当使用 &gt; [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable) &gt; 或 &gt; [bindTabsToNestedScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable) &gt; 等接口绑定了Tabs组件和可滚动容器组件后，在滑动可滚动容器组件时，会触发所有与其绑定的Tabs组件的TabBar的显示和隐藏动效，调用setTabBarTranslate接口设置的TabBar平移距离会失效。因此不建议同 &gt; 时使用bindTabsToScrollable、bindTabsToNestedScrollable和setTabBarTranslate接口。
+> 当使用
+> [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable)
+> 或
+> [bindTabsToNestedScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable)
+> 等接口绑定了Tabs组件和可滚动容器组件后，在滑动可滚动容器组件时，会触发所有与其绑定的Tabs组件的TabBar的显示和隐藏动效，调用setTabBarTranslate接口设置的TabBar平移距离会失效。因此不建议同
+> 时使用bindTabsToScrollable、bindTabsToNestedScrollable和setTabBarTranslate接口。
 
 **起始版本：** 23
 

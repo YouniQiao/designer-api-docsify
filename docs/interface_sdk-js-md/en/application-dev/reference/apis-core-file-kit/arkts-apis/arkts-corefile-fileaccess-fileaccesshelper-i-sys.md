@@ -770,7 +770,7 @@ Deletes a file or directory. This API uses a promise to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** [delete](arkts-corefile-file-fs-atomicfile-c.md#delete)
+**Substitutes:** [delete](arkts-corefile-filefs-atomicfile-c.md#delete)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -867,7 +867,7 @@ Deletes a file or directory. This API uses an asynchronous callback to return th
 
 **Deprecated since:** 23
 
-**Substitutes:** [delete](arkts-corefile-file-fs-atomicfile-c.md#delete)
+**Substitutes:** [delete](arkts-corefile-filefs-atomicfile-c.md#delete)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 

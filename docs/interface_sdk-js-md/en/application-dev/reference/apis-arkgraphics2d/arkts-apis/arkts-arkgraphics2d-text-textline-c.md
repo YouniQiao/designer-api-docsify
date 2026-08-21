@@ -242,7 +242,8 @@ Obtains the image boundaries of this text line. The image boundaries, equivalent
 > 
 > The figure shows the image boundaries for the string " a b ".
 > 
->  &gt;
+> 
+> 
 > The figure shows the image boundaries for the string "j" or "E".
 > 
 > 
@@ -404,7 +405,8 @@ Obtains the typographic boundaries of the text line. These boundaries depend on 
 > 
 > The figure shows the typesetting boundaries for the string " a b ".
 > 
->  &gt;
+> 
+> 
 > The figure shows the typesetting boundaries for the string "j" or "E".
 > 
 > !

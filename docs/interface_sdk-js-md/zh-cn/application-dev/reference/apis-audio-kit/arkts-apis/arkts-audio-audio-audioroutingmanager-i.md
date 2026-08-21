@@ -31,7 +31,9 @@ declareDeviceTypesCompatibility(deviceTypes: DeviceTypeArray): void
 
 > **说明：**
 > 
-> 对于API version 20及以上版本新增的设备类型，应用调用获取设备的相关接口时（例如 &gt; [getAvailableDevices](arkts-audio-audio-audiosessionmanager-i.md#getavailabledevices)），默认返回的设备类型为匿名类型。如需获取具体设备类型，需先调用该方法进行 &gt; 设备类型兼容声明。
+> 对于API version 20及以上版本新增的设备类型，应用调用获取设备的相关接口时（例如
+> [getAvailableDevices](arkts-audio-audio-audiosessionmanager-i.md#getavailabledevices)），默认返回的设备类型为匿名类型。如需获取具体设备类型，需先调用该方法进行
+> 设备类型兼容声明。
 
 **起始版本：** 26.0.0
 

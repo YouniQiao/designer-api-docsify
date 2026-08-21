@@ -17,7 +17,9 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 > **NOTE：**
 > 
-> Since API version 11, you can use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) object &gt; associated with the current UI context.
+> Since API version 11, you can use the [getDragController](arkts-arkui-arkuiuicontext-uicontext-c.md#getdragcontroller) API in
+> [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) to obtain the [DragController](arkts-arkui-arkuiuicontext-dragcontroller-c.md) object
+> associated with the current UI context.
 
 **Since:** 10
 
@@ -50,7 +52,7 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 **Examples**
 
-You are advised to use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) to obtain the DragController object associated with the current UI context.
+You are advised to use the [getDragController](arkts-arkui-arkuiuicontext-uicontext-c.md#getdragcontroller) to obtain the DragController object associated with the current UI context.
 
 ```TypeScript
 import { dragController } from '@kit.ArkUI';
@@ -140,7 +142,9 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 > **NOTE：**
 > 
-> Since API version 11, you can use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) object &gt; associated with the current UI context.
+> Since API version 11, you can use the [getDragController](arkts-arkui-arkuiuicontext-uicontext-c.md#getdragcontroller) API in
+> [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) to obtain the [DragController](arkts-arkui-arkuiuicontext-dragcontroller-c.md) object
+> associated with the current UI context.
 
 **Since:** 10
 
@@ -179,7 +183,7 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 **Examples**
 
-You are advised to use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) to obtain the DragController object associated with the current UI context.
+You are advised to use the [getDragController](arkts-arkui-arkuiuicontext-uicontext-c.md#getdragcontroller) to obtain the DragController object associated with the current UI context.
 
 ```TypeScript
 import { dragController } from '@kit.ArkUI';

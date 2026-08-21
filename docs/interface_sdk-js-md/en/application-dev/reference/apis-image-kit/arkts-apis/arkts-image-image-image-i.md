@@ -28,7 +28,8 @@ Obtains ImageBufferData from an image.
 
 > **NOTE：**
 > 
-> **byteBuffer** in **ImageBufferData** is a shallow copy of the internal buffer. When the lifecycle of an image &gt; ends, do not perform any operations on **byteBuffer**, as this may lead to undefined behavior.
+> **byteBuffer** in **ImageBufferData** is a shallow copy of the internal buffer. When the lifecycle of an image
+> ends, do not perform any operations on **byteBuffer**, as this may lead to undefined behavior.
 
 **Since:** 23
 

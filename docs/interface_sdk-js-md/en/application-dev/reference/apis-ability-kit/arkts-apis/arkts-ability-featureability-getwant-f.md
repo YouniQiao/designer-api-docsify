@@ -26,7 +26,7 @@ Obtains the Want corresponding to the ability to start. This API uses an asynchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Callback used to return the Want. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Want](arkts-ability-appabilitywant-want-c.md)&gt; | Yes | Callback used to return the Want. |
 
 **Examples**
 
@@ -63,7 +63,7 @@ Obtains the Want corresponding to the ability to start. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Promise used to return the Want. |
+| Promise&lt;[Want](arkts-ability-appabilitywant-want-c.md)&gt; | Promise used to return the Want. |
 
 **Examples**
 

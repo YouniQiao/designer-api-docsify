@@ -52,7 +52,9 @@ Triggered when the breakpoint changes.
 > **NOTE：**
 > 
 > 
-> When [breakpointsreference](#breakpointsreference) is set to **BreakpointsReference.ComponentSize**, you are not &gt; advised to dynamically change the padding or margin &gt; attribute value of the **GridRow** component in the **onBreakpointChange** callback.
+> When [breakpointsreference](#breakpointsreference) is set to **BreakpointsReference.ComponentSize**, you are not
+> advised to dynamically change the padding or margin
+> attribute value of the **GridRow** component in the **onBreakpointChange** callback.
 
 **Since:** 9
 

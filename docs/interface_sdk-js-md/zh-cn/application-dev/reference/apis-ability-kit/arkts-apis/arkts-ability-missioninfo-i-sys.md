@@ -180,7 +180,7 @@ want: Want
 
 表示任务的Want信息。
 
-**类型：** [Want](arkts-ability-app-ability-want-want-c.md)
+**类型：** [Want](arkts-ability-appabilitywant-want-c.md)
 
 **起始版本：** 23
 

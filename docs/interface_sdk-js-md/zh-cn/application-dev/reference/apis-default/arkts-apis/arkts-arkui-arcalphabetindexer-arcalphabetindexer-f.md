@@ -32,13 +32,13 @@ export declare function ArcAlphabetIndexer(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [ArcAlphabetIndexerInitInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerinitinfo-i.md) | 是 | 定义弧形字母索引条的初始化参数。 |
+| info | [ArcAlphabetIndexerInitInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkuiarcalphabetindexer-arcalphabetindexerinitinfo-i.md) | 是 | 定义弧形字母索引条的初始化参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | ArcAlphabetIndexer实例对象。 |
+| [ArcAlphabetIndexerAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkuiarcalphabetindexer-arcalphabetindexerattribute-c.md) | ArcAlphabetIndexer实例对象。 |
 
 
 ## ArcAlphabetIndexer
@@ -66,11 +66,11 @@ export declare function ArcAlphabetIndexer(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | CustomBuilderT&lt;[ArcAlphabetIndexerAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md)&gt; | 是 | arcAlphabetIndexer属性实例。 |
+| style_ | CustomBuilderT&lt;[ArcAlphabetIndexerAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkuiarcalphabetindexer-arcalphabetindexerattribute-c.md)&gt; | 是 | arcAlphabetIndexer属性实例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkuiarcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 

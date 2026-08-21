@@ -126,7 +126,7 @@ Creates a **Helper** object to bind with the specified Wants. This API returns t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Indicates the application context. |
-| wants | Array&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Represents the connected data provider. |
+| wants | Array&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)&gt; | Yes | Represents the connected data provider. |
 
 **Return value:**
 

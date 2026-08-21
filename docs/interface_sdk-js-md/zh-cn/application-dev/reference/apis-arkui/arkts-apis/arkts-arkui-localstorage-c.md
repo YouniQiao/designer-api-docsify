@@ -4,7 +4,10 @@ LocalStorage是页面级的UI状态存储，通过[@Entry](../../../reference/ap
 
 > **说明：**
 > 
-> 从API version 12开始，LocalStorage支持[Map](../../../ui/state-management/arkts-localstorage.md#装饰map类型变量)、 &gt; [Set](../../../ui/state-management/arkts-localstorage.md#装饰set类型变量)、 &gt; [Date类型](../../../ui/state-management/arkts-localstorage.md#装饰date类型变量)，支持null、undefined以及 &gt; [联合类型](../../../ui/state-management/arkts-localstorage.md#localstorage支持联合类型)。
+> 从API version 12开始，LocalStorage支持[Map](../../../ui/state-management/arkts-localstorage.md#装饰map类型变量)、
+> [Set](../../../ui/state-management/arkts-localstorage.md#装饰set类型变量)、
+> [Date类型](../../../ui/state-management/arkts-localstorage.md#装饰date类型变量)，支持null、undefined以及
+> [联合类型](../../../ui/state-management/arkts-localstorage.md#localstorage支持联合类型)。
 
 **起始版本：** 9
 
@@ -218,13 +221,14 @@ static getShared(): LocalStorage
 
 > **说明：**
 > 
-> 从API version 12开始，可使用[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [getSharedLocalStorage](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getsharedlocalstorage)明确UI执行上下文中的LocalStorage实例。
+> 从API version 12开始，可使用[UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)中的
+> [getSharedLocalStorage](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#getsharedlocalstorage)明确UI执行上下文中的LocalStorage实例。
 
 **起始版本：** 10
 
 **废弃版本：** 18
 
-**替代接口：** [getSharedLocalStorage](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getsharedlocalstorage)
+**替代接口：** [getSharedLocalStorage](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#getsharedlocalstorage)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

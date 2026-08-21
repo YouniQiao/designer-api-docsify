@@ -16,9 +16,11 @@ Decompresses a file. This API uses an asynchronous callback to return the result
 
 > **NOTE：**
 > 
-> To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive &gt; periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
+> To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive
+> periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
 > 
-> The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise, &gt; the error code 900003 is returned.
+> The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise,
+> the error code 900003 is returned.
 
 **Since:** 23
 
@@ -85,9 +87,11 @@ Decompresses a file. This API uses an asynchronous callback to return the result
 
 > **NOTE：**
 > 
-> To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive &gt; periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
+> To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive
+> periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
 > 
-> The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise, &gt; the error code 900003 is returned.
+> The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise,
+> the error code 900003 is returned.
 
 **Since:** 23
 
@@ -149,9 +153,11 @@ Decompresses a file. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive &gt; periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
+> To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive
+> periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
 > 
-> The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise, &gt; the error code 900003 is returned.
+> The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise,
+> the error code 900003 is returned.
 
 **Since:** 23
 

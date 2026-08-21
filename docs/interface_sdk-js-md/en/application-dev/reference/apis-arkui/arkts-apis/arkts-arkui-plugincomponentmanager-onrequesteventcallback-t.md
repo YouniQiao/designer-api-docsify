@@ -18,7 +18,7 @@ Registers the listener for the request event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Information about the request sender. |
+| source | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Information about the request sender. |
 | name | string | Yes | Template name. |
 | data | [KVObject](../../apis-default/arkts-apis/arkts-plugincomponentmanager-kvobject-t.md) | Yes | Data. |
 

@@ -17,7 +17,7 @@ Obtains the Context object associated with a component on the page.
 
 **废弃版本：** 18
 
-**替代接口：** [getHostContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#gethostcontext)
+**替代接口：** [getHostContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#gethostcontext)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

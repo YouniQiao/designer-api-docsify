@@ -111,7 +111,8 @@ Sets the data of the synchronized property in [AppStorage](../../../ui/state-man
 
 > **NOTE：**
 
-> Since API version 12, AppStorage and LocalStorage support the Map, Set, Date types, as well as **null**, &gt; **undefined**, and union types.
+> Since API version 12, AppStorage and LocalStorage support the Map, Set, Date types, as well as **null**,
+> **undefined**, and union types.
 
 **Since:** 9
 

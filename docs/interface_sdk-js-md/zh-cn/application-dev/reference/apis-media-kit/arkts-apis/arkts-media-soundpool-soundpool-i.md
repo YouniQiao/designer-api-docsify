@@ -6,17 +6,22 @@
 > 
 > - 在使用SoundPool实例的方法时，建议开发者注册相关回调，主动获取当前状态变化。
 > 
-> - [on('loadComplete')](#onloadcomplete)：监听资源加载完成。建议开发者监听此回调以确 &gt; 保音频在加载完成后进行播放。
+> - [on('loadComplete')](#onloadcomplete)：监听资源加载完成。建议开发者监听此回调以确
+> 保音频在加载完成后进行播放。
 > 
-> - &gt; [on('playFinishedWithStreamId')](#onloadcomplete)：监听播 &gt; 放完成，同时返回播放结束的音频的streamId。
+> -
+> [on('playFinishedWithStreamId')](#onloadcomplete)：监听播
+> 放完成，同时返回播放结束的音频的streamId。
 > 
 > - [on('playFinished')](#onloadcomplete)：监听播放完成。
 > 
 > - [on('error')](#onloadcomplete)：监听错误事件。
 > 
-> - [on('errorOccurred')](#onloadcomplete)：监听错误事件，同时返回 &gt; [errorInfo](arkts-media-soundpool-errorinfo-i.md)。
+> - [on('errorOccurred')](#onloadcomplete)：监听错误事件，同时返回
+> [errorInfo](arkts-media-soundpool-errorinfo-i.md)。
 > 
-> - SoundPool目前不支持后台播放、设置音频打断等音频焦点策略和跳过音频头尾的静音帧。SoundPool低时延播放可参考 &gt; [使用SoundPool播放短音频(ArkTS)](../../../media/media/using-soundpool-for-playback.md)。
+> - SoundPool目前不支持后台播放、设置音频打断等音频焦点策略和跳过音频头尾的静音帧。SoundPool低时延播放可参考
+> [使用SoundPool播放短音频(ArkTS)](../../../media/media/using-soundpool-for-playback.md)。
 
 **起始版本：** 23
 

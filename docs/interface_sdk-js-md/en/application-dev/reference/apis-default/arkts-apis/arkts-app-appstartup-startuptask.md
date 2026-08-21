@@ -11,5 +11,5 @@
 
 | Name | Description |
 | --- | --- |
-| [StartupTask](arkts-app-appstartup-startuptask-startuptask-c.md) | The module provides capabilities related to startup tasks in [AppStartup](../../../application-models/app-startup.md). |
+| [StartupTask](arkts-appappstartupstartuptask-startuptask-c.md) | The module provides capabilities related to startup tasks in [AppStartup](../../../application-models/app-startup.md). |
 

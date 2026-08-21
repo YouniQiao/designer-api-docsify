@@ -745,7 +745,7 @@ delete(uri: string) : Promise<number>
 
 **废弃版本：** 23
 
-**替代接口：** [delete](arkts-corefile-file-fs-atomicfile-c.md#delete)
+**替代接口：** [delete](arkts-corefile-filefs-atomicfile-c.md#delete)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -842,7 +842,7 @@ delete(uri: string, callback: AsyncCallback<number>): void
 
 **废弃版本：** 23
 
-**替代接口：** [delete](arkts-corefile-file-fs-atomicfile-c.md#delete)
+**替代接口：** [delete](arkts-corefile-filefs-atomicfile-c.md#delete)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 

@@ -30,14 +30,14 @@ Defines ArcList Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ArkListOptions](arkts-arkui-arkui-arclist-arklistoptions-i.md) | No |  |
+| options | [ArkListOptions](arkts-arkui-arkuiarclist-arklistoptions-i.md) | No |  |
 | content_ | CustomBuilder | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+| [ArcListAttribute](arkts-arkui-arkuiarclist-arclistattribute-c.md) |  |
 
 
 ## ArcList
@@ -66,12 +66,12 @@ Defines ArcList Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | CustomBuilderT&lt;[ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md)&gt; | Yes | The style to create an ArcList. |
+| style_ | CustomBuilderT&lt;[ArcListAttribute](arkts-arkui-arkuiarclist-arclistattribute-c.md)&gt; | Yes | The style to create an ArcList. |
 | content_ | CustomBuilder | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | The attribute of the ArcList. |
+| [ArcListAttribute](arkts-arkui-arkuiarclist-arclistattribute-c.md) | The attribute of the ArcList. |
 

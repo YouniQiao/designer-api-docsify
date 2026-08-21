@@ -17,7 +17,7 @@ function enableHotspot(): boolean
 
 Enables a Wi-Fi hotspot.
 
-&lt;p&gt;This method is asynchronous. After the Wi-Fi hotspot is enabled, Wi-Fi may be disabled.
+<p>This method is asynchronous. After the Wi-Fi hotspot is enabled, Wi-Fi may be disabled.
 
 **Since:** 7
 

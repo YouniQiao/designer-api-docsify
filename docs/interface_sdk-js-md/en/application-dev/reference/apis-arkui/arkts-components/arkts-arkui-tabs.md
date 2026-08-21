@@ -10,12 +10,17 @@ Only the child component TabContent and rendering control types [if/else](../../
 
 > **NOTE：**
 > 
-> If the child component has the **visibility** attribute set to **None** or **Hidden**, it is hidden but still takes &gt; up space in the layout.
+> If the child component has the **visibility** attribute set to **None** or **Hidden**, it is hidden but still takes
+> up space in the layout.
 > 
-> When a displayed **Tabs** child component **TabContent** is hidden, it is not destroyed. For details about how to &gt; implement lazy loading and release on the page, see &gt; [Example 13](../../../reference/apis-arkui/arkui-ts/ts-container-tabs.md#example-13-implementing-lazy-loading-and-resource-release-of-pages).
+> When a displayed **Tabs** child component **TabContent** is hidden, it is not destroyed. For details about how to
+> implement lazy loading and release on the page, see
+> [Example 13](../../../reference/apis-arkui/arkui-ts/ts-container-tabs.md#example-13-implementing-lazy-loading-and-resource-release-of-pages).
 > 
 > 
-> If height is set to **auto** for **Tabs**, the tab height can be &gt; automatically adjusted based on that of the child component. When width &gt; is set to **auto**, the tab width can be automatically adjusted based on that of the child component.
+> If height is set to **auto** for **Tabs**, the tab height can be
+> automatically adjusted based on that of the child component. When width
+> is set to **auto**, the tab width can be automatically adjusted based on that of the child component.
 
 ## Tabs
 

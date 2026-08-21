@@ -16,7 +16,8 @@ Adds a specified IP address and subnet mask for the VLAN specified by **vlanId**
 
 > **NOTE：**
 > 
-> - Currently, this API supports only the PC. For other device types, the error code 2100002 is returned when this &gt; API is called.
+> - Currently, this API supports only the PC. For other device types, the error code 2100002 is returned when this
+> API is called.
 
 **Since:** 23
 

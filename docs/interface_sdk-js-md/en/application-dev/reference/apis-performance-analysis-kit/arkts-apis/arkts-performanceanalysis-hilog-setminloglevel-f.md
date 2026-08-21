@@ -16,7 +16,8 @@ Sets the minimum log level.
 
 > **NOTE：**
 > 
-> If the set log level is lower than the &gt; [global log level](../../../dfx/hilog.md#displaying-and-setting-log-levels), the setting does not take effect.
+> If the set log level is lower than the
+> [global log level](../../../dfx/hilog.md#displaying-and-setting-log-levels), the setting does not take effect.
 > 
 > This function does not take effect for debug applications.
 

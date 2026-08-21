@@ -36,7 +36,7 @@ START = 1
 
 视图中的第一项将在列表的开头对齐。
 
-&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt; <br>当列表位移至末端，需要将末端的item完整显示，可能出现开头不对齐的情况。 &lt;/p&gt;
+<p>&lt;strong&gt;说明&lt;/strong&gt; <br>当列表位移至末端，需要将末端的item完整显示，可能出现开头不对齐的情况。 </p>
 
 **起始版本：** 23
 
@@ -56,7 +56,7 @@ CENTER = 2
 
 视图中的中间项将在列表中心对齐。
 
-&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt; <br>顶端和末尾的item都可以在列表中心对齐，列表显示可能露出空白。 &lt;/p&gt;
+<p>&lt;strong&gt;说明&lt;/strong&gt; <br>顶端和末尾的item都可以在列表中心对齐，列表显示可能露出空白。 </p>
 
 **起始版本：** 23
 
@@ -76,7 +76,7 @@ END = 3
 
 视图中的最后一项将在列表末尾对齐。
 
-&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt; <br>当列表位移至顶端，需要将顶端的item完整显示，可能出现末尾不对齐的情况。 &lt;/p&gt;
+<p>&lt;strong&gt;说明&lt;/strong&gt; <br>当列表位移至顶端，需要将顶端的item完整显示，可能出现末尾不对齐的情况。 </p>
 
 **起始版本：** 23
 

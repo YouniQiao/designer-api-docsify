@@ -20,5 +20,5 @@ declare type OnFilterChangedCallback = (filterResults: Array<FilterResult>) => v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filterResults | Array&lt;[FilterResult](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-filter-filterresult-c.md)&gt; | 是 | 选中的筛选项结果列表。 |
+| filterResults | Array&lt;[FilterResult](../../apis-arkui/arkts-apis/arkts-arkui-arkuiadvancedfilter-filterresult-c.md)&gt; | 是 | 选中的筛选项结果列表。 |
 

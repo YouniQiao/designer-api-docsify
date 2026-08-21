@@ -24,7 +24,8 @@ convert(xml: string, options?: ConvertOptions): Object
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用 &gt; [fastConvertToJSObject&lt;sup&gt;14+&lt;/sup&gt;](#fastconverttojsobject)替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [fastConvertToJSObject&lt;sup&gt;14+&lt;/sup&gt;](#fastconverttojsobject)替代。
 > 
 > 在Windows环境中，通常以回车符（CR）和换行符（LF）一对字符来表示换行。本接口转换后的对象以换行符（LF）表示换行。
 
@@ -95,7 +96,8 @@ convertToJSObject(xml: string, options?: ConvertOptions): Object
 
 > **说明：**
 > 
-> 从API version 9开始支持，从API version 14开始废弃，建议使用 &gt; [fastConvertToJSObject&lt;sup&gt;14+&lt;/sup&gt;](#fastconverttojsobject)替代。
+> 从API version 9开始支持，从API version 14开始废弃，建议使用
+> [fastConvertToJSObject&lt;sup&gt;14+&lt;/sup&gt;](#fastconverttojsobject)替代。
 > 
 > 在Windows环境中，通常以回车符（CR）和换行符（LF）一对字符来表示换行。本接口转换后的对象以换行符（LF）表示换行。
 
@@ -182,7 +184,8 @@ fastConvertToJSObject(xml: string, options?: ConvertOptions): Object
 > **说明：**
 > 
 > 该接口无法满足解析单元素文本内容超过10M的XML文件，当单元素文本内容超过10M时，会输出异常日志信息并返回一个仅包含XML声明的基础Object对象。
-> 如需解析单元素文本内容超过10M的XML文本，建议使用[largeConvertToJSObject&lt;sup&gt;23+&lt;/sup&gt;](#largeconverttojsobject) &gt; 替代。
+> 如需解析单元素文本内容超过10M的XML文本，建议使用[largeConvertToJSObject&lt;sup&gt;23+&lt;/sup&gt;](#largeconverttojsobject)
+> 替代。
 > 
 > 在Windows环境中，通常以回车符（CR）和换行符（LF）一对字符来表示换行。fastConvertToJSObject接口转换后的对象以换行符（LF）表示换行。
 

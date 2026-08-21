@@ -16,7 +16,9 @@ Obtains the request callback from Want.
 
 > **NOTE：**
 > 
-> This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes, &gt; the request callback can be obtained from Want. If this API is used in other scenarios, no return value is &gt; obtained.
+> This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes,
+> the request callback can be obtained from Want. If this API is used in other scenarios, no return value is
+> obtained.
 
 **Since:** 23
 
@@ -28,7 +30,7 @@ Obtains the request callback from Want.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want passed in the request for a modal dialog box. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want passed in the request for a modal dialog box. |
 
 **Return value:**
 

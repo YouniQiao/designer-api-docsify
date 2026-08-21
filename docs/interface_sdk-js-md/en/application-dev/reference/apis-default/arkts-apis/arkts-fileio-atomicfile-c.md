@@ -133,7 +133,7 @@ Obtains the file object through the AtomicFile object. The FD needs to be closed
 
 | Type | Description |
 | --- | --- |
-| [File](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-file-i.md) | File object opened. |
+| [File](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-file-i.md) | File object opened. |
 
 **Error codes:**
 
@@ -164,7 +164,7 @@ Creates a ReadStream instance.
 
 | Type | Description |
 | --- | --- |
-| [ReadStream](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-readstream-c.md) | ReadStream instance obtained. |
+| [ReadStream](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-readstream-c.md) | ReadStream instance obtained. |
 
 **Error codes:**
 
@@ -224,7 +224,7 @@ Starts to write new file data in the WriteStream object returned. If the file do
 
 | Type | Description |
 | --- | --- |
-| [WriteStream](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-writestream-c.md) | Returns the file write stream. |
+| [WriteStream](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-writestream-c.md) | Returns the file write stream. |
 
 **Error codes:**
 

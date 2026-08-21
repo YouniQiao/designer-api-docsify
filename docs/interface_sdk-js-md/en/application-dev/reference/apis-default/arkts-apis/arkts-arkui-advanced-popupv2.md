@@ -17,6 +17,6 @@
 
 | Name | Description |
 | --- | --- |
-| [PopupV2Button](arkts-arkui-advanced-popupv2-popupv2button-i.md) | Defines the popup button |
-| [PopupV2InitInfo](arkts-arkui-advanced-popupv2-popupv2initinfo-i.md) | Defines the popup init info. |
+| [PopupV2Button](arkts-arkuiadvancedpopupv2-popupv2button-i.md) | Defines the popup button |
+| [PopupV2InitInfo](arkts-arkuiadvancedpopupv2-popupv2initinfo-i.md) | Defines the popup init info. |
 

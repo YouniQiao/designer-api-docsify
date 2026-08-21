@@ -427,9 +427,11 @@ Called to return a response to **sendMessageRequest()**. The server processes th
 
 > **NOTE：**
 > 
-> - You are advised to overload **onRemoteMessageRequest** preferentially, which implements synchronous and &gt; asynchronous message processing.
+> - You are advised to overload **onRemoteMessageRequest** preferentially, which implements synchronous and
+> asynchronous message processing.
 > 
-> - If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only &gt; **onRemoteMessageRequest()** takes effect.
+> - If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only
+> **onRemoteMessageRequest()** takes effect.
 
 **Since:** 23
 
@@ -470,8 +472,10 @@ Provides a response to **sendMessageRequest()**. The server processes the reques
 
 > **NOTE：**
 > 
-> You are advised to overload the **onRemoteMessageRequest** method with the **CallingInfo** parameter to &gt; implement synchronous and asynchronous message processing.
-> If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only &gt; **onRemoteMessageRequest()** takes effect.
+> You are advised to overload the **onRemoteMessageRequest** method with the **CallingInfo** parameter to
+> implement synchronous and asynchronous message processing.
+> If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only
+> **onRemoteMessageRequest()** takes effect.
 
 **Since:** 23
 

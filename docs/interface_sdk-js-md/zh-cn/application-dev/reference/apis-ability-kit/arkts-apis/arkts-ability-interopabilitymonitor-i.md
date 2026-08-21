@@ -1,6 +1,6 @@
 # InteropAbilityMonitor
 
-本模块提供监听指定[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)生命周期状态变化的能力。开发者可以将InteropAbilityMonitor作为abilityDelegator. addInteropAbilityMonitorSync 的入参来注册监听。
+本模块提供监听指定[UIAbility](arkts-ability-appabilityuiability-uiability-c.md)生命周期状态变化的能力。开发者可以将InteropAbilityMonitor作为abilityDelegator. addInteropAbilityMonitorSync 的入参来注册监听。
 
 **起始版本：** 26.0.0
 

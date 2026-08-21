@@ -52,7 +52,8 @@ A constructor used to create a **SequenceRunner** instance. This instance repres
 
 > **NOTE：**
 > 
-> - The bottom layer uses the singleton mode to ensure that the same instance is obtained when a serial queue &gt; with the same name is created.
+> - The bottom layer uses the singleton mode to ensure that the same instance is obtained when a serial queue
+> with the same name is created.
 > 
 > - The priority of a serial queue cannot be modified.
 

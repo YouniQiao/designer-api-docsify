@@ -15,13 +15,13 @@
   - [MultiSlotsAdLoadListener](arkts-ads-advertising-multislotsadloadlistener-i.md)
   - [Advertisement](arkts-ads-advertising-advertisement-t.md)
 - [@ohos.advertising.AdComponent](arkts-advertising-adcomponent.md)
-  - [AdComponent](arkts-ads-advertising-adcomponent-adcomponent-s.md)
+  - [AdComponent](arkts-ads-advertisingadcomponent-adcomponent-s.md)
 - [@ohos.advertising.AdsServiceExtensionAbility](arkts-advertising-adsserviceextensionability.md)
   <!--Del-->
-  - [AdsServiceExtensionAbility(system api)](arkts-ads-advertising-adsserviceextensionability-adsserviceextensionability-c-sys.md)<!--DelEnd-->
-  - [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md)
+  - [AdsServiceExtensionAbility(system api)](arkts-ads-advertisingadsserviceextensionability-adsserviceextensionability-c-sys.md)<!--DelEnd-->
+  - [RespCallback](arkts-ads-advertisingadsserviceextensionability-respcallback-i.md)
 - [@ohos.advertising.AutoAdComponent](arkts-advertising-autoadcomponent.md)
-  - [AutoAdComponent](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md)
+  - [AutoAdComponent](arkts-ads-advertisingautoadcomponent-autoadcomponent-s.md)
 - [@ohos.identifier.oaid](arkts-identifier-oaid.md)
   - [getOAID](arkts-ads-identifier-getoaid-f.md)
   <!--Del-->

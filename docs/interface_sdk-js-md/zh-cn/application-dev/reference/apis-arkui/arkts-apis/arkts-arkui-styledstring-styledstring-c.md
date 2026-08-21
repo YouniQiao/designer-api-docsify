@@ -69,7 +69,7 @@ equals(other: StyledString): boolean
 static fromHtml(html: string): Promise<StyledString | undefined>
 ```
 
-将HTML格式字符串转换成属性字符串，使用Promise异步回调。当前支持转换的HTML标签范围：\&lt;p&gt;、\&lt;span&gt;、\&lt;img&gt;、\
+将HTML格式字符串转换成属性字符串，使用Promise异步回调。当前支持转换的HTML标签范围：\<p>、\&lt;span&gt;、\&lt;img&gt;、\
 
 、\&lt;strong&gt;、\&lt;b&gt;、\&lt;a&gt;、\&lt;i&gt;、\&lt;em&gt;、\&lt;s&gt;、\&lt;u&gt;、\&lt;del&gt;、\&lt;sup&gt;、\&lt;sub&gt;、\&lt;cite&gt;、\&lt;dfn&gt;、\&lt;small&gt;、\&lt;h1&gt;、\&lt;h2&gt;、\&lt;h3&gt;、\&lt;h4&gt;、\&lt; h5&gt;、\
 

@@ -79,7 +79,9 @@ Sets the display mode of the **RichEditor** scrollbar.
 
 > **NOTE：**
 > 
-> This API can be called within &gt; [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier) &gt; since API version 18.
+> This API can be called within
+> [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
+> since API version 18.
 
 **Since:** 13
 
@@ -161,7 +163,8 @@ Sets whether to enable punctuation compression at the beginning of a line.
 > 
 > By default, the punctuation at the beginning of a line is not compressed.
 > 
-> For details about the punctuation that supports compression, see the punctuation range of the line header &gt; compression of [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md).
+> For details about the punctuation that supports compression, see the punctuation range of the line header
+> compression of [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 23
 
@@ -230,7 +233,9 @@ By default, the custom keyboard is closed when the input component loses the foc
 
 > **NOTE：**
 > 
-> This API can be called within &gt; [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier) &gt; since API version 23.
+> This API can be called within
+> [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
+> since API version 23.
 
 **Since:** 10
 
@@ -293,7 +298,9 @@ When [disableMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textm
 
 > **NOTE：**
 > 
-> This API can be called within &gt; [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier) &gt; since API version 18.
+> This API can be called within
+> [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
+> since API version 18.
 
 **Since:** 12
 
@@ -381,7 +388,9 @@ Sets whether to enable haptic feedback.
 
 > **NOTE：**
 > 
-> This API can be called in &gt; [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier) &gt; since API version 20.
+> This API can be called in
+> [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
+> since API version 20.
 
 **Since:** 13
 
@@ -409,7 +418,9 @@ Sets whether to enable the input method when the **RichEditor** component obtain
 
 > **NOTE：**
 > 
-> This API can be called within &gt; [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier) &gt; since API version 18.
+> This API can be called within
+> [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
+> since API version 18.
 
 **Since:** 12
 
@@ -437,7 +448,9 @@ Sets whether to enable preview text.
 
 > **NOTE：**
 > 
-> This API can be called within &gt; [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier) &gt; since API version 18.
+> This API can be called within
+> [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
+> since API version 18.
 
 **Since:** 12
 
@@ -747,7 +760,9 @@ This callback is not supported when the **RichEditor** component constructed wit
 
 > **NOTE：**
 > 
-> This API can be called within &gt; [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier) &gt; since API version 18.
+> This API can be called within
+> [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
+> since API version 18.
 
 **Since:** 12
 
@@ -777,7 +792,9 @@ This callback is not supported when the **RichEditor** component constructed wit
 
 > **NOTE：**
 > 
-> This API can be called in &gt; [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier) &gt; since API version 20.
+> This API can be called in
+> [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
+> since API version 20.
 
 **Since:** 12
 
@@ -1013,7 +1030,9 @@ This callback is not supported when the **RichEditor** component constructed wit
 
 > **NOTE：**
 > 
-> This API can be called within &gt; [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier) &gt; since API version 18.
+> This API can be called within
+> [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
+> since API version 18.
 
 **Since:** 12
 
@@ -1063,7 +1082,9 @@ Sets the placeholder text, which is displayed when there is no input.
 
 > **NOTE：**
 > 
-> This API can be called within &gt; [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier) &gt; since API version 18.
+> This API can be called within
+> [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
+> since API version 18.
 
 **Since:** 12
 

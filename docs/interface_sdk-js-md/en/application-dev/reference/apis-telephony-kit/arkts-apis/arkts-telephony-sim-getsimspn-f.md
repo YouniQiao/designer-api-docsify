@@ -14,7 +14,7 @@ function getSimSpn(slotId: int, callback: AsyncCallback<string>): void
 
 Obtains the service provider name (SPN) of the SIM card in a specified slot.
 
-&lt;p&gt;The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered.
+<p>The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered.
 
 **Since:** 23
 
@@ -60,7 +60,7 @@ function getSimSpn(slotId: int): Promise<string>
 
 Obtains the service provider name (SPN) of the SIM card in a specified slot.
 
-&lt;p&gt;The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered.
+<p>The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered.
 
 **Since:** 23
 

@@ -83,7 +83,7 @@ seek(offset: long, whence?: WhenceType): long
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | offset | long | 是 | 相对偏移位置，单位为Byte。 |
-| whence | [WhenceType](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-whencetype-e.md) | 否 | = WhenceType.SEEK_SET] - Where to start the offset. The default value is SEEK_SET, <br>which indicates the beginning of the file. |
+| whence | [WhenceType](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-whencetype-e.md) | 否 | = WhenceType.SEEK_SET] - Where to start the offset. The default value is SEEK_SET, <br>which indicates the beginning of the file. |
 
 **返回值：**
 

@@ -12,18 +12,18 @@ import { Filter, FilterParams, FilterResult, FilterType } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [FilterParams](arkts-arkui-arkui-advanced-filter-filterparams-c.md) | This parameter is used to define the input of each filtering dimension. |
-| [FilterResult](arkts-arkui-arkui-advanced-filter-filterresult-c.md) | This parameter specifies the selection result of a filtering dimension. The index starts from 0. |
+| [FilterParams](arkts-arkui-arkuiadvancedfilter-filterparams-c.md) | This parameter is used to define the input of each filtering dimension. |
+| [FilterResult](arkts-arkui-arkuiadvancedfilter-filterresult-c.md) | This parameter specifies the selection result of a filtering dimension. The index starts from 0. |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [Filter](arkts-arkui-arkui-advanced-filter-filter-s.md) | Declare Filter.The Filter is used in scenarios where multi-dimensional filtering is required. |
+| [Filter](arkts-arkui-arkuiadvancedfilter-filter-s.md) | Declare Filter.The Filter is used in scenarios where multi-dimensional filtering is required. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [FilterType](arkts-arkui-arkui-advanced-filter-filtertype-e.md) | Declare FilterType @enum { FilterType } |
+| [FilterType](arkts-arkui-arkuiadvancedfilter-filtertype-e.md) | Declare FilterType @enum { FilterType } |
 

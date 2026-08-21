@@ -4,7 +4,8 @@
 
 > **说明：**
 > 
-> Swiper组件通用属性[clip](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#clip12)的默认值为 &gt; true。
+> Swiper组件通用属性[clip](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#clip12)的默认值为
+> true。
 
 **继承/实现关系：** SwiperAttribute extends CommonMethod
 

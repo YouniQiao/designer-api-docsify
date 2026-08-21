@@ -1,6 +1,6 @@
 # ShadowAlgorithmType
 
-the type of shadow algorithm
+Enumerates the types of shadow algorithms.
 
 **Since:** 26.0.0
 

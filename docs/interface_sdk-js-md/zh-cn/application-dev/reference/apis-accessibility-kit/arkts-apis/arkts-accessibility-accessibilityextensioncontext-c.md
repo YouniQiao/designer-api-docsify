@@ -479,7 +479,7 @@ injectGesture(gesturePath: GesturePath, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| gesturePath | [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | 是 | 表示手势的路径信息。 |
+| gesturePath | [GesturePath](arkts-accessibility-accessibilitygesturepath-gesturepath-c.md) | 是 | 表示手势的路径信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当注入手势成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -532,7 +532,7 @@ injectGesture(gesturePath: GesturePath): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| gesturePath | [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | 是 | 表示手势的路径信息。 |
+| gesturePath | [GesturePath](arkts-accessibility-accessibilitygesturepath-gesturepath-c.md) | 是 | 表示手势的路径信息。 |
 
 **返回值：**
 
@@ -587,7 +587,7 @@ injectGestureSync(gesturePath: GesturePath): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| gesturePath | [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | 是 | 表示手势的路径信息。 |
+| gesturePath | [GesturePath](arkts-accessibility-accessibilitygesturepath-gesturepath-c.md) | 是 | 表示手势的路径信息。 |
 
 **错误码：**
 

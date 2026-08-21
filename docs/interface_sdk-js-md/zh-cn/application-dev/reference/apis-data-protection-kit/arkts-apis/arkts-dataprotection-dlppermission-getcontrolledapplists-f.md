@@ -16,7 +16,9 @@ function getControlledAppLists(): Promise<Array<string>>
 
 > **说明：**
 > 
-> 该接口仅能查询通过 &gt; [setControlledAppLists](arkts-dataprotection-dlppermission-setcontrolledapplists-f.md) &gt; 设置的受企业DLP控制的应用程序列表。
+> 该接口仅能查询通过
+> [setControlledAppLists](arkts-dataprotection-dlppermission-setcontrolledapplists-f.md)
+> 设置的受企业DLP控制的应用程序列表。
 
 **起始版本：** 26.0.0
 

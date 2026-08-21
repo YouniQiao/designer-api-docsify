@@ -4,7 +4,8 @@
 
 > **说明：**
 > 
-> - 以下API需先使用UIContext中的[getMediaQuery()](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getmediaquery)方法 &gt; 获取到MediaQuery对象，再通过该对象调用对应方法。
+> - 以下API需先使用UIContext中的[getMediaQuery()](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getmediaquery)方法
+> 获取到MediaQuery对象，再通过该对象调用对应方法。
 
 @namespace mediaquery
 

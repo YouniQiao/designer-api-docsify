@@ -24,7 +24,11 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 > **NOTE：**
 > 
-> **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used &gt; only by calling &gt; [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets) &gt; . For details, see &gt; [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
+> **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used
+> only by calling
+> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
+> . For details, see
+> [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
 **Since:** 26.0.0
 
@@ -64,7 +68,11 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 > **NOTE：**
 > 
-> **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used &gt; only by calling &gt; [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets) &gt; . For details, see &gt; [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
+> **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used
+> only by calling
+> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
+> . For details, see
+> [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
 **Since:** 26.0.0
 
@@ -99,7 +107,11 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 > **NOTE：**
 > 
-> **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used &gt; only by calling &gt; [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets) &gt; . For details, see &gt; [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
+> **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used
+> only by calling
+> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
+> . For details, see
+> [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
 **Since:** 26.0.0
 

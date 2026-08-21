@@ -16,22 +16,33 @@ Child components can be dynamically generated using rendering control types [if/
 > 
 > The index increases in ascending order of child components.
 > 
-> In the **if/else** statement, only the child components in the branch where the condition is met participate in the &gt; index calculation.
+> In the **if/else** statement, only the child components in the branch where the condition is met participate in the
+> index calculation.
 > 
 > In the ForEach/LazyForEach and Repeat statements, index values are calculated for all expanded child components.
 > 
-> After changes occur in [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md), &gt; [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), &gt; [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), and &gt; [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md), index values are updated &gt; accordingly for child components.
+> After changes occur in [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md),
+> [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md),
+> [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), and
+> [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md), index values are updated
+> accordingly for child components.
 > 
-> The child component that has the **visibility** attribute set to **Hidden** or **None** is included in the index &gt; calculation.
+> The child component that has the **visibility** attribute set to **Hidden** or **None** is included in the index
+> calculation.
 > 
-> The child component that has the **visibility** attribute set to **None** is not displayed, but still takes up the &gt; corresponding cell.
+> The child component that has the **visibility** attribute set to **None** is not displayed, but still takes up the
+> corresponding cell.
 > 
-> The child component that has the **position** attribute set is displayed in the corresponding cell, offset by the &gt; distance specified by **position** relative to the upper left corner of the grid. This child component does not &gt; scroll with the corresponding cell and is not displayed after the corresponding cell extends beyond the display &gt; range of the grid.
+> The child component that has the **position** attribute set is displayed in the corresponding cell, offset by the
+> distance specified by **position** relative to the upper left corner of the grid. This child component does not
+> scroll with the corresponding cell and is not displayed after the corresponding cell extends beyond the display
+> range of the grid.
 > 
 > When there is a gap between child components, it is filled as much as possible based on the current display area.
 > Therefore, the relative position of grid items may change as the grid scrolls.
 > 
-> Since API version 21, the maximum width and height of a single **Grid** child component are 16777216 px. In API &gt; version 20 and earlier versions, the maximum width and height of a single **Grid** child component are 1000000 px.
+> Since API version 21, the maximum width and height of a single **Grid** child component are 16777216 px. In API
+> version 20 and earlier versions, the maximum width and height of a single **Grid** child component are 1000000 px.
 > Exceeding these limits may result in scrolling or display abnormalities.
 
 ## Grid

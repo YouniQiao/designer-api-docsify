@@ -16,7 +16,8 @@ Starts a ParticleAbility. This API uses an asynchronous callback to return the r
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the FA model, see &gt; [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
+> For details about the startup rules for the components in the FA model, see
+> [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
 
 **Since:** 7
 
@@ -73,7 +74,8 @@ Starts a ParticleAbility. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the FA model, see &gt; [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
+> For details about the startup rules for the components in the FA model, see
+> [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
 
 **Since:** 7
 

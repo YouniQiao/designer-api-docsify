@@ -412,9 +412,12 @@ which can be obtained by calling [getSupportedFrameRates](#getsupportedframerate
 
 > **NOTE：**
 > 
-> This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md) or &gt; [VideoSession](arkts-camera-camera-videosession-i.md) mode.
+> This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md) or
+> [VideoSession](arkts-camera-camera-videosession-i.md) mode.
 > 
-> Before calling this API, call [getActiveFrameRate](#getactiveframerate) to obtain the &gt; current frame rate of the video session. If the delivered frame rate matches the current frame rate, the &gt; delivered frame rate is not applied.
+> Before calling this API, call [getActiveFrameRate](#getactiveframerate) to obtain the
+> current frame rate of the video session. If the delivered frame rate matches the current frame rate, the
+> delivered frame rate is not applied.
 
 **Since:** 23
 

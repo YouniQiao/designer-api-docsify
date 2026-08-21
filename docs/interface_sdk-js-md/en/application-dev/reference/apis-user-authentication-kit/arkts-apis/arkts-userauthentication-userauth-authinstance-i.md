@@ -30,7 +30,8 @@ Cancels this authentication.
 > **NOTE：**
 > 
 > Use the obtained [AuthInstance](#authinstance) object to call this API to cancel authentication.
-> This [AuthInstance](#authinstance) must be the object that is currently performing &gt; authentication.
+> This [AuthInstance](#authinstance) must be the object that is currently performing
+> authentication.
 
 **Type:** () =&gt; void
 
@@ -58,7 +59,8 @@ Unsubscribes from the user authentication events of the specified type.
 
 > **NOTE：**
 > 
-> The [AuthInstance](#authinstance) instance used to invoke this API must be the one used to &gt; subscribe to the event.
+> The [AuthInstance](#authinstance) instance used to invoke this API must be the one used to
+> subscribe to the event.
 
 **Type:** (name: AuthEventKey) =&gt; void
 

@@ -582,7 +582,7 @@ dataSrc ?: AVDataSrcDescriptor
 
 当应用从远端获取音视频媒体文件，在应用未下载完整音视频资源时，可以设置dataSrc提前获取该资源的元数据。
 
-**类型：** [AVDataSrcDescriptor](arkts-media-multimedia-media-avdatasrcdescriptor-i.md)
+**类型：** [AVDataSrcDescriptor](arkts-media-multimediamedia-avdatasrcdescriptor-i.md)
 
 **起始版本：** 23
 
@@ -606,7 +606,7 @@ fdSrc ?: AVFileDescriptor
 
 将资源句柄（fd）传递给AVMetadataExtractor实例之后，不允许通过该资源句柄做其他读写操作，包括但不限于将同一个资源句柄传递给多个AVPlayer/AVMetadataExtractor/ AVImageGenerator/AVTranscoder。同一时间通过同一个资源句柄读写文件时存在竞争关系，将导致音视频元数据获取异常。
 
-**类型：** [AVFileDescriptor](arkts-media-multimedia-media-avfiledescriptor-i.md)
+**类型：** [AVFileDescriptor](arkts-media-multimediamedia-avfiledescriptor-i.md)
 
 **起始版本：** 23
 

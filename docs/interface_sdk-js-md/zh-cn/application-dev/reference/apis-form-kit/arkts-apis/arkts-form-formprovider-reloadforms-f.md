@@ -12,7 +12,7 @@ import { formProvider } from '@kit.FormKit';
 function reloadForms(context: UIAbilityContext, moduleName: string, abilityName: string, formName: string): Promise<int>
 ```
 
-对于当前应用中moduleName、abilityName、formName相同的卡片，每次加桌会分配不同的卡片ID。卡片提供方可通过本接口批量更新这些卡片。与reloadAllForms相比，本接口可精确指定更新特定配置的卡片， 适用于仅需更新特定卡片场景；reloadAllForms更新当前应用所有已加桌卡片，适用于全局刷新场景。本接口在应用主进程中调用，通知FormExtension进程进行批量更新，仅支持在 [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)中使用，使用Promise异步回调。
+对于当前应用中moduleName、abilityName、formName相同的卡片，每次加桌会分配不同的卡片ID。卡片提供方可通过本接口批量更新这些卡片。与reloadAllForms相比，本接口可精确指定更新特定配置的卡片， 适用于仅需更新特定卡片场景；reloadAllForms更新当前应用所有已加桌卡片，适用于全局刷新场景。本接口在应用主进程中调用，通知FormExtension进程进行批量更新，仅支持在 [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiability-uiability-c.md)中使用，使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -28,7 +28,7 @@ function reloadForms(context: UIAbilityContext, moduleName: string, abilityName:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) | 是 | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)的上下文，用于校验应用身份。 |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) | 是 | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiability-uiability-c.md)的上下文，用于校验应用身份。 |
 | moduleName | string | 是 | 指定卡片的moduleName，需与 [form_config.json](../../../form/arkts-ui-widget-configuration.md#配置文件字段说明)中配置的module名称一致。需与abilityName、 formName配合使用，三者必须同时匹配才能定位到对应卡片。 |
 | abilityName | string | 是 | 指定卡片的abilityName，需与 [form_config.json](../../../form/arkts-ui-widget-configuration.md#配置文件字段说明)中配置的ability名称一致。 |
 | formName | string | 是 | 指定卡片在[form_config.json](../../../form/arkts-ui-widget-configuration.md#配置文件字段说明)中配置的卡 片名称。 |

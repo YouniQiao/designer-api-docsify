@@ -16,9 +16,11 @@ Obtains the memory information of the application process. This API is implement
 
 > **NOTE：**
 > 
-> Reading the **\/proc/{pid}/smaps_rollup** node takes a long time. You are advised to use the asynchronous API &gt; [hidebug.getAppNativeMemInfoAsync](arkts-performanceanalysis-hidebug-getappnativememinfoasync-f.md) to avoid frame loss or frame freezing.
+> Reading the **\/proc/{pid}/smaps_rollup** node takes a long time. You are advised to use the asynchronous API
+> [hidebug.getAppNativeMemInfoAsync](arkts-performanceanalysis-hidebug-getappnativememinfoasync-f.md) to avoid frame loss or frame freezing.
 > 
-> You are advised to use the [hidebug.getRssInfo](arkts-performanceanalysis-hidebug-getrssinfo-f.md) API to obtain the RSS information of an &gt; application.
+> You are advised to use the [hidebug.getRssInfo](arkts-performanceanalysis-hidebug-getrssinfo-f.md) API to obtain the RSS information of an
+> application.
 
 **Since:** 23
 

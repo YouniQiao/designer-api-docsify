@@ -44,7 +44,7 @@ Path to the search icon.
 
 Anonymous Object Rectification.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The icon data source can be a local or online image. &lt;ul&gt; &lt;li&gt;The supported formats include PNG, JPG, BMP, SVG, GIF, pixelmap, and HEIF.&lt;/li&gt; &lt;li&gt;The Base64 string is supported in the following format: data:image/[png|jpeg|bmp|webp|heif];base64,[base64 data], where [base64 data] is a Base64 string.&lt;/li&gt; &lt;/ul&gt; <br>If this attribute and the searchIcon attribute are both set, the searchIcon attribute takes precedence. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The icon data source can be a local or online image. &lt;ul&gt; &lt;li&gt;The supported formats include PNG, JPG, BMP, SVG, GIF, pixelmap, and HEIF.&lt;/li&gt; &lt;li&gt;The Base64 string is supported in the following format: data:image/[png|jpeg|bmp|webp|heif];base64,[base64 data], where [base64 data] is a Base64 string.&lt;/li&gt; &lt;/ul&gt; <br>If this attribute and the searchIcon attribute are both set, the searchIcon attribute takes precedence. </p>
 
 **Type:** string
 

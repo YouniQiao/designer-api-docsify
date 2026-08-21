@@ -4,20 +4,30 @@ Implements a sound pool that provides APIs for loading, unloading, playing, and 
 
 > **NOTE：**
 > 
-> - When using the SoundPool instance, you are advised to register the following callbacks to proactively obtain &gt; status changes:
+> - When using the SoundPool instance, you are advised to register the following callbacks to proactively obtain
+> status changes:
 > 
-> - [on('loadComplete')](#onloadcomplete): listens for the &gt; event indicating that the resource loading is finished. You are advised to listen for this callback to ensure that &gt; the audio is played after being loaded.
+> - [on('loadComplete')](#onloadcomplete): listens for the
+> event indicating that the resource loading is finished. You are advised to listen for this callback to ensure that
+> the audio is played after being loaded.
 > 
-> - &gt; [on('playFinishedWithStreamId')](#onloadcomplete):
-> listens for the event indicating that the playback is finished and returns the stream ID of the audio that finishes &gt; playing.
+> -
+> [on('playFinishedWithStreamId')](#onloadcomplete):
+> listens for the event indicating that the playback is finished and returns the stream ID of the audio that finishes
+> playing.
 > 
-> - [on('playFinished')](#onloadcomplete): listens &gt; for the event indicating that the playback is finished.
+> - [on('playFinished')](#onloadcomplete): listens
+> for the event indicating that the playback is finished.
 > 
 > - [on('error')](#onloadcomplete): listens for error events.
 > 
-> - [on('errorOccurred')](#onloadcomplete): listens for &gt; error events and returns [errorInfo](arkts-media-soundpool-errorinfo-i.md).
+> - [on('errorOccurred')](#onloadcomplete): listens for
+> error events and returns [errorInfo](arkts-media-soundpool-errorinfo-i.md).
 > 
-> - Currently, SoundPool does not support audio focus policies such as background playback and audio interruption, or &gt; skipping the silent frames at the beginning and end of an audio file. For details about low-latency playback using &gt; SoundPool, see &gt; [Using SoundPool to Play Short Sounds (ArkTS)](../../../media/media/using-soundpool-for-playback.md).
+> - Currently, SoundPool does not support audio focus policies such as background playback and audio interruption, or
+> skipping the silent frames at the beginning and end of an audio file. For details about low-latency playback using
+> SoundPool, see
+> [Using SoundPool to Play Short Sounds (ArkTS)](../../../media/media/using-soundpool-for-playback.md).
 
 **Since:** 23
 
@@ -39,9 +49,12 @@ This API cannot be used to load resources in the **rawfile** directory. Instead,
 
 > **NOTE：**
 > 
-> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to &gt; the player, do not use the resource handle or path description in read or write operations, including but not &gt; limited to transferring it to multiple players.
+> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to
+> the player, do not use the resource handle or path description in read or write operations, including but not
+> limited to transferring it to multiple players.
 > 
-> - Competition occurs when multiple players use the same resource handle or path description to read and write &gt; files at the same time, resulting in playback errors.
+> - Competition occurs when multiple players use the same resource handle or path description to read and write
+> files at the same time, resulting in playback errors.
 
 **Since:** 23
 
@@ -78,9 +91,12 @@ This API cannot be used to load resources in the **rawfile** directory. Instead,
 
 > **NOTE：**
 > 
-> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to &gt; the player, do not use the resource handle or path description in read or write operations, including but not &gt; limited to transferring it to multiple players.
+> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to
+> the player, do not use the resource handle or path description in read or write operations, including but not
+> limited to transferring it to multiple players.
 > 
-> - Competition occurs when multiple players use the same resource handle or path description to read and write &gt; files at the same time, resulting in playback errors.
+> - Competition occurs when multiple players use the same resource handle or path description to read and write
+> files at the same time, resulting in playback errors.
 
 **Since:** 23
 
@@ -120,9 +136,12 @@ This API uses an asynchronous callback to obtain the resource ID. For the input 
 
 > **NOTE：**
 > 
-> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to &gt; the player, do not use the resource handle or path description in read or write operations, including but not &gt; limited to transferring it to multiple players.
+> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to
+> the player, do not use the resource handle or path description in read or write operations, including but not
+> limited to transferring it to multiple players.
 > 
-> - Competition occurs when multiple players use the same resource handle or path description to read and write &gt; files at the same time, resulting in playback errors.
+> - Competition occurs when multiple players use the same resource handle or path description to read and write
+> files at the same time, resulting in playback errors.
 
 **Since:** 23
 
@@ -159,9 +178,12 @@ This API uses a promise to obtain the resource ID. For the input parameter, reso
 
 > **NOTE：**
 > 
-> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to &gt; the player, do not use the resource handle or path description in read or write operations, including but not &gt; limited to transferring it to multiple players.
+> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to
+> the player, do not use the resource handle or path description in read or write operations, including but not
+> limited to transferring it to multiple players.
 > 
-> - Competition occurs when multiple players use the same resource handle or path description to read and write &gt; files at the same time, resulting in playback errors.
+> - Competition occurs when multiple players use the same resource handle or path description to read and write
+> files at the same time, resulting in playback errors.
 
 **Since:** 23
 

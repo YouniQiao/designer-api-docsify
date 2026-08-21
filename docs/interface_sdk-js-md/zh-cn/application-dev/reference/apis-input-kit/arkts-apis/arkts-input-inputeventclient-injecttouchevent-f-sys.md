@@ -29,7 +29,7 @@ function injectTouchEvent(touchEvent: TouchEventData): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| touchEvent | [TouchEventData](arkts-input-inputeventclient-toucheventdata-i-sys.md) | 是 | 触屏注入描述信息。此参数中[Action](arkts-input-multimodalinput-touchevent-action-e.md)属性不支持设置为 CANCEL。 |
+| touchEvent | [TouchEventData](arkts-input-inputeventclient-toucheventdata-i-sys.md) | 是 | 触屏注入描述信息。此参数中[Action](arkts-input-multimodalinputtouchevent-action-e.md)属性不支持设置为 CANCEL。 |
 
 **错误码：**
 

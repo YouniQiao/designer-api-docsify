@@ -4,7 +4,8 @@ Provides OAuth authenticator callbacks.
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) instead.
 
 **Since:** 8
 

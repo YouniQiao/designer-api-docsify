@@ -913,7 +913,9 @@ onCapturePhotoAvailable(callback: Callback<CapturePhoto>): void
 
 > **说明：**
 > 
-> - 注册监听接口时，不支持在该接口监听的回调方法里调用 &gt; [offCapturePhotoAvailable](#offcapturephotoavailable) &gt; 注销回调。
+> - 注册监听接口时，不支持在该接口监听的回调方法里调用
+> [offCapturePhotoAvailable](#offcapturephotoavailable)
+> 注销回调。
 > 
 > - 拍摄未压缩图（YUV）格式图片时，仅支持使用此接口注册监听。
 

@@ -371,7 +371,7 @@ Replaces matched substrings in the string using a replacement string.
 ## replace
 
 ```TypeScript
-public replace(str: string, replacer: (substr: string, args: Object[]) => string): string
+public replace(str: string, replacer: (substr: string, args: (Object | undefined)[]) => string): string
 ```
 
 Replaces matched substrings in the string using a function.
@@ -382,7 +382,7 @@ Replaces matched substrings in the string using a function.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RegExp-public replace(str: string, replacer: (substr: string, args: Object[]) => string): string--><!--Device-RegExp-public replace(str: string, replacer: (substr: string, args: Object[]) => string): string-End-->
+<!--Device-RegExp-public replace(str: string, replacer: (substr: string, args: (Object | undefined)[]) => string): string--><!--Device-RegExp-public replace(str: string, replacer: (substr: string, args: (Object | undefined)[]) => string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -391,7 +391,7 @@ Replaces matched substrings in the string using a function.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | str | string | Yes | the original string. |
-| replacer | (substr: string, args: Object[]) =&gt; string | Yes | a function used to generate new substrings. |
+| replacer | (substr: string, args: (Object \| undefined)[]) =&gt; string | Yes | a function used to generate new substrings. |
 
 **Return value:**
 

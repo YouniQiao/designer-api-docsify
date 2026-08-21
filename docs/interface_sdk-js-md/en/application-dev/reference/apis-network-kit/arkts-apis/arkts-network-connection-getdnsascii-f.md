@@ -16,11 +16,14 @@ Converts the host name from Unicode to ASCII and controls the conversion behavio
 
 > **NOTE：**
 > 
-> If **conversionProcess** is set to **NO_CONFIGURATION**, only the domain names corresponding to the Unicode &gt; characters that have been officially allocated can be converted.
+> If **conversionProcess** is set to **NO_CONFIGURATION**, only the domain names corresponding to the Unicode
+> characters that have been officially allocated can be converted.
 
-> When **conversionProcess** is set to **ALLOW_UNASSIGNED**, domain names that contain Unicode characters that have &gt; not been assigned meanings can be converted.
+> When **conversionProcess** is set to **ALLOW_UNASSIGNED**, domain names that contain Unicode characters that have
+> not been assigned meanings can be converted.
 
-> If **conversionProcess** is set to **USE_STD3_ASCII_RULES**, the generated ASCII domain name is forcibly checked &gt; based on the STD-3 ASCII rule (RFC 1123 standard) during the conversion.
+> If **conversionProcess** is set to **USE_STD3_ASCII_RULES**, the generated ASCII domain name is forcibly checked
+> based on the STD-3 ASCII rule (RFC 1123 standard) during the conversion.
 
 > Digits and English letters in the input parameters are not transcoded.
 

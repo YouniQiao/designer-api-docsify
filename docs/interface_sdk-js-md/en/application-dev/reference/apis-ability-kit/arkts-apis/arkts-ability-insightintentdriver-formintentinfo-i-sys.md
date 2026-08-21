@@ -42,7 +42,7 @@ Ability name.
 readonly formName: string
 ```
 
-Name of the widget bound to the [FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formextensionability-formextensionability-c.md).
+Name of the widget bound to the [FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-appformformextensionability-formextensionability-c.md).
 
 **Type:** string
 

@@ -20,7 +20,7 @@ Global shadow map resolution, in pixels (px). The default value is undefined, in
 
 **Type:** [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md)
 
-**Default:** { 1024, 1024 }
+**Default:** undefined
 
 **Since:** 23
 

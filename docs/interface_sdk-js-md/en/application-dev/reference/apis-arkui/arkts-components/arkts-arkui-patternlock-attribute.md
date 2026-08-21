@@ -283,7 +283,9 @@ Sets the width and height (same value) of the component. If this attribute is se
 
 > **NOTE：**
 > 
-> When the **PatternLock** component has the universal attribute aspectRatio set &gt; and the ratio is not equal to 1 (the component is constrained to a rectangle), the nine‑grid pattern is still &gt; drawn as a square, which exceeds the component's bounds.
+> When the **PatternLock** component has the universal attribute aspectRatio set
+> and the ratio is not equal to 1 (the component is constrained to a rectangle), the nine‑grid pattern is still
+> drawn as a square, which exceeds the component's bounds.
 
 **Since:** 9
 

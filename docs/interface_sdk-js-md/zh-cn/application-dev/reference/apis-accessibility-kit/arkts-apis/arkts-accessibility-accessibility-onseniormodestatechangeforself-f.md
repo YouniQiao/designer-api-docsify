@@ -24,7 +24,9 @@ function onSeniorModeStateChangeForSelf(callback: Callback<boolean>): void
 > 
 > - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
 > 
-> - 调用此方法后，务必在组件实例销毁前（如aboutToDisappear生命周期中）使用 &gt; [accessibility.offSeniorModeStateChangeForSelf](arkts-accessibility-accessibility-offseniormodestatechangeforself-f.md)取消监听，否则可能会导致 &gt; 崩溃。
+> - 调用此方法后，务必在组件实例销毁前（如aboutToDisappear生命周期中）使用
+> [accessibility.offSeniorModeStateChangeForSelf](arkts-accessibility-accessibility-offseniormodestatechangeforself-f.md)取消监听，否则可能会导致
+> 崩溃。
 
 **起始版本：** 26.0.0
 

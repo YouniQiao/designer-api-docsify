@@ -6,7 +6,7 @@ typedef struct InputMethod_PrivateCommand InputMethod_PrivateCommand
 
 ## Overview
 
-Define the InputMethod_PrivateCommand structure type.The private command between text editor and input method.
+Represents the private data exchanged between the text box and the input method application.
 
 **Since**: 12
 

@@ -62,7 +62,7 @@ overflow?: TextOverflow
 
 Display mode when the text is too long.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: Ineffective when set to MARQUEE. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: Ineffective when set to MARQUEE. </p>
 
 **Type:** [TextOverflow](../../apis-arkui/arkts-apis/arkts-arkui-textoverflow-e.md)
 

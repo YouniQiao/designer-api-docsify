@@ -14,7 +14,7 @@ Enumerates the modes that define how the execution result of an intent is return
 CALLBACK = 0
 ```
 
-The intent execution result is returned through the [onExecuteInUIAbilityForegroundMode](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onexecuteinuiabilityforegroundmode) or [onExecuteInUIExtensionAbility](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onexecuteinuiextensionability) API in the [intent execution base class](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md).
+The intent execution result is returned through the [onExecuteInUIAbilityForegroundMode](arkts-ability-appabilityinsightintentexecutor-insightintentexecutor-c.md#onexecuteinuiabilityforegroundmode) or [onExecuteInUIExtensionAbility](arkts-ability-appabilityinsightintentexecutor-insightintentexecutor-c.md#onexecuteinuiextensionability) API in the [intent execution base class](arkts-ability-appabilityinsightintentexecutor-insightintentexecutor-c.md).
 
 **Since:** 23
 

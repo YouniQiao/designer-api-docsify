@@ -12,23 +12,23 @@ import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainer
 
 | Name | Description |
 | --- | --- |
-| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | Defines the attributes of SelectionContainer. |
-| [SelectionContainerController](arkts-arkui-arkui-components-selectioncontainer-selectioncontainercontroller-c.md) | Defines the controller of the SelectionContainer component. |
+| [SelectionContainerAttribute](arkts-arkui-arkuicomponentsselectioncontainer-selectioncontainerattribute-c.md) | Defines the attributes of SelectionContainer. |
+| [SelectionContainerController](arkts-arkui-arkuicomponentsselectioncontainer-selectioncontainercontroller-c.md) | Defines the controller of the SelectionContainer component. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [SelectionContainerEditMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md) | Defines custom edit menu options for SelectionContainer. |
-| [SelectionContainerInterface](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerinterface-i.md) | Provides a SelectionContainer component interface. |
-| [SelectionContainerMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md) | Defines selection menu options for SelectionContainer. |
-| [SelectionContainerOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontaineroptions-i.md) | Describes the initialization options of the SelectionContainer component. |
+| [SelectionContainerEditMenuOptions](arkts-arkui-arkuicomponentsselectioncontainer-selectioncontainereditmenuoptions-i.md) | Defines custom edit menu options for SelectionContainer. |
+| [SelectionContainerInterface](arkts-arkui-arkuicomponentsselectioncontainer-selectioncontainerinterface-i.md) | Provides a SelectionContainer component interface. |
+| [SelectionContainerMenuOptions](arkts-arkui-arkuicomponentsselectioncontainer-selectioncontainermenuoptions-i.md) | Defines selection menu options for SelectionContainer. |
+| [SelectionContainerOptions](arkts-arkui-arkuicomponentsselectioncontainer-selectioncontaineroptions-i.md) | Describes the initialization options of the SelectionContainer component. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [SelectionContainerTextJoinStyle](arkts-arkui-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md) | Defines text join style for SelectionContainer. |
+| [SelectionContainerTextJoinStyle](arkts-arkui-arkuicomponentsselectioncontainer-selectioncontainertextjoinstyle-e.md) | Defines text join style for SelectionContainer. |
 
 ### Types
 

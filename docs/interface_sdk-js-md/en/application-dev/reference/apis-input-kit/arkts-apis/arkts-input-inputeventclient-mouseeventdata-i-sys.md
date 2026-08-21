@@ -24,7 +24,7 @@ mouseEvent: MouseEvent
 
 Mouse event.
 
-**Type:** [MouseEvent](arkts-input-multimodalinput-mouseevent-mouseevent-i.md)
+**Type:** [MouseEvent](arkts-input-multimodalinputmouseevent-mouseevent-i.md)
 
 **Since:** 23
 

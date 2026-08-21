@@ -489,7 +489,8 @@ updateSync(input: DataBlob): void
 
 > **说明：**
 > 
-> HMAC算法多次调用updateSync更新的代码示例详见 &gt; [消息认证码计算](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#分段hmac)。
+> HMAC算法多次调用updateSync更新的代码示例详见
+> [消息认证码计算](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#分段hmac)。
 
 <br><br>**说明：** <br>建议优先使用异步API，update。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 

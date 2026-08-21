@@ -98,7 +98,9 @@ Obtains information about all clients connected to the server.
 
 > **NOTE：**
 > 
-> This API is called asynchronously. The **await** keyword needs to be used to wait until the asynchronous &gt; operation is complete, ensuring that information about all clients connected to the server can be correctly &gt; obtained.
+> This API is called asynchronously. The **await** keyword needs to be used to wait until the asynchronous
+> operation is complete, ensuring that information about all clients connected to the server can be correctly
+> obtained.
 
 **Since:** 23
 

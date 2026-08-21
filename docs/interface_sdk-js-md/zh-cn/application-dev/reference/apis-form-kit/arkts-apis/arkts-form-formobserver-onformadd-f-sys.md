@@ -12,7 +12,7 @@ import { formObserver } from '@kit.FormKit';
 function onFormAdd(observerCallback: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Listens to the event of add form. &lt;p&gt;You can use this method to listen to the event of add form.&lt;/p&gt;
+Listens to the event of add form. <p>You can use this method to listen to the event of add form.</p>
 
 **起始版本：** 23
 
@@ -45,7 +45,7 @@ Listens to the event of add form. &lt;p&gt;You can use this method to listen to 
 function onFormAdd(hostBundleName: string, observerCallback: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Listens to the event of add form. &lt;p&gt;You can use this method to listen to the event of add form for a particular card host.&lt;/p&gt;
+Listens to the event of add form. <p>You can use this method to listen to the event of add form for a particular card host.</p>
 
 **起始版本：** 23
 

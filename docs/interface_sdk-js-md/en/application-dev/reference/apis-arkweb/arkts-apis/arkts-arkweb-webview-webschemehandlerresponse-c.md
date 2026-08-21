@@ -146,7 +146,7 @@ Obtains the network error code of the response.
 
 | Type | Description |
 | --- | --- |
-| [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | Network error code returned for the Response. |
+| [WebNetErrorList](arkts-arkweb-webneterrorlist-webneterrorlist-e.md) | Network error code returned for the Response. |
 
 ## getStatus
 
@@ -344,7 +344,7 @@ Sets the network error code for this response.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | Yes | Network error code. |
+| code | [WebNetErrorList](arkts-arkweb-webneterrorlist-webneterrorlist-e.md) | Yes | Network error code. |
 
 **Error codes:**
 

@@ -24,7 +24,9 @@ addAccount(name: string, callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [createAccount](#createaccount)替 &gt; 代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [createAccount](#createaccount)替
+> 代。
 
 **起始版本：** 7
 
@@ -63,7 +65,9 @@ addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [createAccount](#createaccount) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [createAccount](#createaccount)
+> 替代。
 
 **起始版本：** 7
 
@@ -103,7 +107,9 @@ addAccount(name: string, extraInfo?: string): Promise<void>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [createAccount](#createaccount) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [createAccount](#createaccount)
+> 替代。
 
 **起始版本：** 7
 
@@ -155,7 +161,9 @@ addAccountImplicitly(
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [createAccountImplicitly](#createaccountimplicitly) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [createAccountImplicitly](#createaccountimplicitly)
+> 替代。
 
 **起始版本：** 8
 
@@ -554,7 +562,9 @@ authenticate(
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [auth](#auth) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [auth](#auth)
+> 替代。
 
 **起始版本：** 8
 
@@ -949,7 +959,9 @@ checkAppAccountSyncEnable(name: string, callback: AsyncCallback<boolean>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [checkDataSyncEnabled](#checkdatasyncenabled) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [checkDataSyncEnabled](#checkdatasyncenabled)
+> 替代。
 
 **起始版本：** 7
 
@@ -994,7 +1006,8 @@ checkAppAccountSyncEnable(name: string): Promise<boolean>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [checkDataSyncEnabled](#checkdatasyncenabled)替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [checkDataSyncEnabled](#checkdatasyncenabled)替代。
 
 **起始版本：** 7
 
@@ -1364,7 +1377,9 @@ checkOAuthTokenVisibility(
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [checkAuthTokenVisibility](#checkauthtokenvisibility) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [checkAuthTokenVisibility](#checkauthtokenvisibility)
+> 替代。
 
 **起始版本：** 8
 
@@ -1410,7 +1425,9 @@ checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): P
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [checkAuthTokenVisibility](#checkauthtokenvisibility) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [checkAuthTokenVisibility](#checkauthtokenvisibility)
+> 替代。
 
 **起始版本：** 8
 
@@ -1970,7 +1987,9 @@ deleteAccount(name: string, callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [removeAccount](#removeaccount)替 &gt; 代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [removeAccount](#removeaccount)替
+> 代。
 
 **起始版本：** 7
 
@@ -2009,7 +2028,9 @@ deleteAccount(name: string): Promise<void>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [removeAccount](#removeaccount)替 &gt; 代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [removeAccount](#removeaccount)替
+> 代。
 
 **起始版本：** 7
 
@@ -2369,7 +2390,9 @@ deleteOAuthToken(name: string, owner: string, authType: string, token: string, c
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [deleteAuthToken](#deleteauthtoken) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [deleteAuthToken](#deleteauthtoken)
+> 替代。
 
 **起始版本：** 8
 
@@ -2416,7 +2439,9 @@ deleteOAuthToken(name: string, owner: string, authType: string, token: string): 
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [deleteAuthToken](#deleteauthtoken) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [deleteAuthToken](#deleteauthtoken)
+> 替代。
 
 **起始版本：** 8
 
@@ -2465,7 +2490,9 @@ disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [setAppAccess](#setappaccess) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [setAppAccess](#setappaccess)
+> 替代。
 
 **起始版本：** 7
 
@@ -2505,7 +2532,9 @@ disableAppAccess(name: string, bundleName: string): Promise<void>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [setAppAccess](#setappaccess) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [setAppAccess](#setappaccess)
+> 替代。
 
 **起始版本：** 7
 
@@ -2552,7 +2581,9 @@ enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>)
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [setAppAccess](#setappaccess) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [setAppAccess](#setappaccess)
+> 替代。
 
 **起始版本：** 7
 
@@ -2596,7 +2627,9 @@ enableAppAccess(name: string, bundleName: string): Promise<void>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [setAppAccess](#setappaccess) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [setAppAccess](#setappaccess)
+> 替代。
 
 **起始版本：** 7
 
@@ -2643,7 +2676,9 @@ getAccountCredential(name: string, credentialType: string, callback: AsyncCallba
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [getCredential](#getcredential) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getCredential](#getcredential)
+> 替代。
 
 **起始版本：** 7
 
@@ -2687,7 +2722,8 @@ getAccountCredential(name: string, credentialType: string): Promise<string>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [getCredential](#getcredential)替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getCredential](#getcredential)替代。
 
 **起始版本：** 7
 
@@ -2734,7 +2770,9 @@ getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [getCustomData](#getcustomdata) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getCustomData](#getcustomdata)
+> 替代。
 
 **起始版本：** 7
 
@@ -2777,7 +2815,8 @@ getAccountExtraInfo(name: string): Promise<string>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [getCustomData](#getcustomdata)替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getCustomData](#getcustomdata)替代。
 
 **起始版本：** 7
 
@@ -2975,7 +3014,9 @@ getAllAccessibleAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [getAllAccounts](#getallaccounts) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getAllAccounts](#getallaccounts)
+> 替代。
 
 **起始版本：** 7
 
@@ -3019,7 +3060,8 @@ getAllAccessibleAccounts(): Promise<Array<AppAccountInfo>>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用[getAllAccounts](#getallaccounts) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用[getAllAccounts](#getallaccounts)
+> 替代。
 
 **起始版本：** 7
 
@@ -3200,7 +3242,9 @@ getAllAccounts(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): v
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [getAccountsByOwner](#getaccountsbyowner) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getAccountsByOwner](#getaccountsbyowner)
+> 替代。
 
 **起始版本：** 7
 
@@ -3246,7 +3290,8 @@ getAllAccounts(owner: string): Promise<Array<AppAccountInfo>>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [getAccountsByOwner](#getaccountsbyowner)替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getAccountsByOwner](#getaccountsbyowner)替代。
 
 **起始版本：** 7
 
@@ -3450,7 +3495,9 @@ getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAu
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [getAllAuthTokens](#getallauthtokens) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [getAllAuthTokens](#getallauthtokens)
+> 替代。
 
 **起始版本：** 8
 
@@ -3495,7 +3542,8 @@ getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [getAllAuthTokens](#getallauthtokens)替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [getAllAuthTokens](#getallauthtokens)替代。
 
 **起始版本：** 8
 
@@ -3543,7 +3591,9 @@ getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): v
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [getCustomData](#getcustomdata) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getCustomData](#getcustomdata)
+> 替代。
 
 **起始版本：** 7
 
@@ -3587,7 +3637,8 @@ getAssociatedData(name: string, key: string): Promise<string>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [getCustomData](#getcustomdata)替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getCustomData](#getcustomdata)替代。
 
 **起始版本：** 7
 
@@ -4162,7 +4213,9 @@ getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<Authenticato
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [getAuthCallback](#getauthcallback) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [getAuthCallback](#getauthcallback)
+> 替代。
 
 **起始版本：** 8
 
@@ -4217,7 +4270,8 @@ getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [getAuthCallback](#getauthcallback)替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [getAuthCallback](#getauthcallback)替代。
 
 **起始版本：** 8
 
@@ -4275,7 +4329,9 @@ getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>):
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [queryAuthenticatorInfo](#queryauthenticatorinfo) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [queryAuthenticatorInfo](#queryauthenticatorinfo)
+> 替代。
 
 **起始版本：** 8
 
@@ -4319,7 +4375,8 @@ getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [queryAuthenticatorInfo](#queryauthenticatorinfo)替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [queryAuthenticatorInfo](#queryauthenticatorinfo)替代。
 
 **起始版本：** 8
 
@@ -4726,7 +4783,9 @@ getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<strin
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [getAuthList](#getauthlist) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [getAuthList](#getauthlist)
+> 替代。
 
 **起始版本：** 8
 
@@ -4770,7 +4829,8 @@ getOAuthList(name: string, authType: string): Promise<Array<string>>
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [getAuthList](#getauthlist)替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [getAuthList](#getauthlist)替代。
 
 **起始版本：** 8
 
@@ -4817,7 +4877,9 @@ getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCall
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [getAuthToken](#getauthtoken) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [getAuthToken](#getauthtoken)
+> 替代。
 
 **起始版本：** 8
 
@@ -4863,7 +4925,9 @@ getOAuthToken(name: string, owner: string, authType: string): Promise<string>
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [getAuthToken](#getauthtoken)替 &gt; 代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [getAuthToken](#getauthtoken)替
+> 代。
 
 **起始版本：** 8
 
@@ -5012,7 +5076,9 @@ off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [off('accountChange')](#offchange) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [off('accountChange')](#offchange)
+> 替代。
 
 **起始版本：** 7
 
@@ -5153,7 +5219,9 @@ on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInf
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [on('accountChange')](#onchange) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [on('accountChange')](#onchange)
+> 替代。
 
 **起始版本：** 7
 
@@ -5670,7 +5738,9 @@ setAccountCredential(name: string, credentialType: string, credential: string, c
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [setCredential](#setcredential) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setCredential](#setcredential)
+> 替代。
 
 **起始版本：** 7
 
@@ -5715,7 +5785,9 @@ setAccountCredential(name: string, credentialType: string, credential: string): 
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [setCredential](#setcredential) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setCredential](#setcredential)
+> 替代。
 
 **起始版本：** 7
 
@@ -5763,7 +5835,9 @@ setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<voi
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [setCustomData](#setcustomdata) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [setCustomData](#setcustomdata)
+> 替代。
 
 **起始版本：** 7
 
@@ -5807,7 +5881,8 @@ setAccountExtraInfo(name: string, extraInfo: string): Promise<void>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [setCustomData](#setcustomdata)替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [setCustomData](#setcustomdata)替代。
 
 **起始版本：** 7
 
@@ -6010,7 +6085,9 @@ setAppAccountSyncEnable(name: string, isEnable: boolean, callback: AsyncCallback
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [setDataSyncEnabled](#setdatasyncenabled) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [setDataSyncEnabled](#setdatasyncenabled)
+> 替代。
 
 **起始版本：** 7
 
@@ -6056,7 +6133,9 @@ setAppAccountSyncEnable(name: string, isEnable: boolean): Promise<void>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [setDataSyncEnabled](#setdatasyncenabled)替代 &gt; 。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [setDataSyncEnabled](#setdatasyncenabled)替代
+> 。
 
 **起始版本：** 7
 
@@ -6105,7 +6184,9 @@ setAssociatedData(name: string, key: string, value: string, callback: AsyncCallb
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [setCustomData](#setcustomdata) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [setCustomData](#setcustomdata)
+> 替代。
 
 **起始版本：** 7
 
@@ -6150,7 +6231,8 @@ setAssociatedData(name: string, key: string, value: string): Promise<void>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [setCustomData](#setcustomdata)替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [setCustomData](#setcustomdata)替代。
 
 **起始版本：** 7
 
@@ -7159,7 +7241,9 @@ setOAuthToken(name: string, authType: string, token: string, callback: AsyncCall
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [setAuthToken](#setauthtoken) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [setAuthToken](#setauthtoken)
+> 替代。
 
 **起始版本：** 8
 
@@ -7204,7 +7288,9 @@ setOAuthToken(name: string, authType: string, token: string): Promise<void>
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [setAuthToken](#setauthtoken)替 &gt; 代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [setAuthToken](#setauthtoken)替
+> 代。
 
 **起始版本：** 8
 
@@ -7258,7 +7344,9 @@ setOAuthTokenVisibility(
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [setAuthTokenVisibility](#setauthtokenvisibility) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [setAuthTokenVisibility](#setauthtokenvisibility)
+> 替代。
 
 **起始版本：** 8
 
@@ -7305,7 +7393,9 @@ setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVi
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用 &gt; [setAuthTokenVisibility](#setauthtokenvisibility) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [setAuthTokenVisibility](#setauthtokenvisibility)
+> 替代。
 
 **起始版本：** 8
 

@@ -13,7 +13,7 @@ import { HashSetCbFn } from '@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [HashSet](arkts-arkts-util-hashset-hashset-c.md) | HashSet is implemented based on HashMap. In HashSet, only the value object is processed. |
+| [HashSet](arkts-arkts-utilhashset-hashset-c.md) | HashSet is implemented based on HashMap. In HashSet, only the value object is processed. |
 
 ### Types
 

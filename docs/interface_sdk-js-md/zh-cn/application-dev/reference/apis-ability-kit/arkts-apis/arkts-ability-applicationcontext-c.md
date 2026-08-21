@@ -24,7 +24,8 @@ clearUpApplicationData(): Promise<void>
 
 > **说明：**
 > 
-> 应用文件路径详见[应用文件目录信息](../../../file-management/app-sandbox-directory.md#应用文件目录与应用文件路径)。图中仅标识了el1~el2目录下的应用文件路径，其他文件 &gt; 加密类型目录下的应用文件路径可以参考el1。
+> 应用文件路径详见[应用文件目录信息](../../../file-management/app-sandbox-directory.md#应用文件目录与应用文件路径)。图中仅标识了el1~el2目录下的应用文件路径，其他文件
+> 加密类型目录下的应用文件路径可以参考el1。
 > 
 > 该接口会停止应用进程，应用进程停止后，后续的所有回调都不会再触发。
 
@@ -74,7 +75,8 @@ clearUpApplicationData(callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 应用文件路径详见[应用文件目录信息](../../../file-management/app-sandbox-directory.md#应用文件目录与应用文件路径)。图中仅标识了el1~el2目录下的应用文件路径，其他文件 &gt; 加密类型目录下的应用文件路径可以参考el1。
+> 应用文件路径详见[应用文件目录信息](../../../file-management/app-sandbox-directory.md#应用文件目录与应用文件路径)。图中仅标识了el1~el2目录下的应用文件路径，其他文件
+> 加密类型目录下的应用文件路径可以参考el1。
 > 
 > 该接口会停止应用进程，应用进程停止后，后续的所有回调都不会再触发。
 
@@ -825,7 +827,7 @@ offApplicationStateChange(callback?: ApplicationStateChangeCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | 否 | 回调函数。取值可以为使用 [ApplicationContext.onApplicationStateChange](#onapplicationstatechange)方法定义的callback回 调，也可以为空。 - 如果传入已定义的回调，则取消该监听。 - 如果未传入参数，则取消当前应用对所有前后台切换事件的监听。 |
+| callback | [ApplicationStateChangeCallback](arkts-ability-appabilityapplicationstatechangecallback-applicationstatechangecallback-i.md) | 否 | 回调函数。取值可以为使用 [ApplicationContext.onApplicationStateChange](#onapplicationstatechange)方法定义的callback回 调，也可以为空。 - 如果传入已定义的回调，则取消该监听。 - 如果未传入参数，则取消当前应用对所有前后台切换事件的监听。 |
 
 **示例**
 
@@ -1017,7 +1019,7 @@ offInteropAbilityLifecycle(callback?: InteropAbilityLifecycleCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [InteropAbilityLifecycleCallback](arkts-ability-app-ability-interopabilitylifecyclecallback-interopabilitylifecyclecallback-i.md) | 否 | 不同ArkTS环境下UIAbility生命周期变化时触发的回调方法。 |
+| callback | [InteropAbilityLifecycleCallback](arkts-ability-appabilityinteropabilitylifecyclecallback-interopabilitylifecyclecallback-i.md) | 否 | 不同ArkTS环境下UIAbility生命周期变化时触发的回调方法。 |
 
 ## offSystemConfigurationUpdated
 
@@ -1025,9 +1027,9 @@ offInteropAbilityLifecycle(callback?: InteropAbilityLifecycleCallback): void
 offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): void
 ```
 
-取消监听系统环境[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)的变化。仅支持主线程调用。
+取消监听系统环境[Configuration](arkts-ability-appabilityconfiguration-configuration-i.md)的变化。仅支持主线程调用。
 
-&lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
+<p>**NOTE：**: <br>It can be called only by the main thread. </p>
 
 **起始版本：** 24
 
@@ -1240,7 +1242,7 @@ off(type: 'applicationStateChange', callback?: ApplicationStateChangeCallback): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | 是 | 此类型表示当前应用进程状态变化，固定为'applicationStateChange'。 |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | 否 | 回调函数。取值可以为使用 [ApplicationContext.on('applicationStateChange')](#onabilitylifecycle) 方法定义的callback回调，也可以为空。<br/>-?如果传入已定义的回调，则取消该监听。 <br/>-?如果未传入参数，则取消所有已注册的该类型事件的监听。 |
+| callback | [ApplicationStateChangeCallback](arkts-ability-appabilityapplicationstatechangecallback-applicationstatechangecallback-i.md) | 否 | 回调函数。取值可以为使用 [ApplicationContext.on('applicationStateChange')](#onabilitylifecycle) 方法定义的callback回调，也可以为空。<br/>-?如果传入已定义的回调，则取消该监听。 <br/>-?如果未传入参数，则取消所有已注册的该类型事件的监听。 |
 
 **错误码：**
 
@@ -1419,7 +1421,7 @@ onAbilityLifecycle(callback: AbilityLifecycleCallback): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AbilityLifecycleCallback](arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md) | 是 | UIAbility生命周期变化时触发的回调方法。 |
+| callback | [AbilityLifecycleCallback](arkts-ability-appabilityabilitylifecyclecallback-abilitylifecyclecallback-c.md) | 是 | UIAbility生命周期变化时触发的回调方法。 |
 
 **返回值：**
 
@@ -1519,7 +1521,7 @@ onApplicationStateChange(callback: ApplicationStateChangeCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | 是 | 应用前后台切换时触发的回调方法。 |
+| callback | [ApplicationStateChangeCallback](arkts-ability-appabilityapplicationstatechangecallback-applicationstatechangecallback-i.md) | 是 | 应用前后台切换时触发的回调方法。 |
 
 **示例**
 
@@ -1577,7 +1579,7 @@ onEnvironment(callback: EnvironmentCallback): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [EnvironmentCallback](../../apis-default/arkts-apis/arkts-app-ability-environmentcallback-environmentcallback-i.md) | 是 | 系统环境变化时触发的回调方法。 |
+| callback | [EnvironmentCallback](../../apis-default/arkts-apis/arkts-appabilityenvironmentcallback-environmentcallback-i.md) | 是 | 系统环境变化时触发的回调方法。 |
 
 **返回值：**
 
@@ -1643,7 +1645,7 @@ onInteropAbilityLifecycle(callback: InteropAbilityLifecycleCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [InteropAbilityLifecycleCallback](arkts-ability-app-ability-interopabilitylifecyclecallback-interopabilitylifecyclecallback-i.md) | 是 | 不同ArkTS环境下UIAbility生命周期变化时触发的回调方法。 |
+| callback | [InteropAbilityLifecycleCallback](arkts-ability-appabilityinteropabilitylifecyclecallback-interopabilitylifecyclecallback-i.md) | 是 | 不同ArkTS环境下UIAbility生命周期变化时触发的回调方法。 |
 
 ## onSystemConfigurationUpdated
 
@@ -1651,7 +1653,7 @@ onInteropAbilityLifecycle(callback: InteropAbilityLifecycleCallback): void
 onSystemConfigurationUpdated(callback: systemConfiguration.UpdatedCallback): void
 ```
 
-注册监听系统环境[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)的变化。使用callback异步回调。仅支持主线程调用。
+注册监听系统环境[Configuration](arkts-ability-appabilityconfiguration-configuration-i.md)的变化。使用callback异步回调。仅支持主线程调用。
 
 > **说明：**
 > 
@@ -1761,7 +1763,7 @@ on(type: 'abilityLifecycle', callback: AbilityLifecycleCallback): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'abilityLifecycle' | 是 | 此类型表示应用内UIAbility的生命周期，固定为'abilityLifecycle'。 |
-| callback | [AbilityLifecycleCallback](arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md) | 是 | UIAbility生命周期变化时触发的回调方法。 |
+| callback | [AbilityLifecycleCallback](arkts-ability-appabilityabilitylifecyclecallback-abilitylifecyclecallback-c.md) | 是 | UIAbility生命周期变化时触发的回调方法。 |
 
 **返回值：**
 
@@ -1875,7 +1877,7 @@ on(type: 'applicationStateChange', callback: ApplicationStateChangeCallback): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | 是 | 此类型表示当前应用进程状态变化，固定为'applicationStateChange'。 |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | 是 | 当前应用进程状态切换时触发的回调方法。 |
+| callback | [ApplicationStateChangeCallback](arkts-ability-appabilityapplicationstatechangecallback-applicationstatechangecallback-i.md) | 是 | 当前应用进程状态切换时触发的回调方法。 |
 
 **错误码：**
 
@@ -1937,9 +1939,15 @@ on(type: 'environment', callback: EnvironmentCallback): number
 
 > **说明：**
 > 
-> - 使用[onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate)也可以实现对系统环境变量的监听。相较 &gt; 于Ability的[onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate)接口，当前接口的使用场景更 &gt; 加灵活，不仅可以在应用组件中使用，还可以在页面中使用，但是支持订阅的环境变量与Ability的 &gt; [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate)接口存在差异，如不支持订阅direction &gt; 、screenDensity、displayId，详见[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)中各个环境变量的说明。
+> - 使用[onConfigurationUpdate](arkts-ability-appabilityability-ability-c.md#onconfigurationupdate)也可以实现对系统环境变量的监听。相较
+> 于Ability的[onConfigurationUpdate](arkts-ability-appabilityability-ability-c.md#onconfigurationupdate)接口，当前接口的使用场景更
+> 加灵活，不仅可以在应用组件中使用，还可以在页面中使用，但是支持订阅的环境变量与Ability的
+> [onConfigurationUpdate](arkts-ability-appabilityability-ability-c.md#onconfigurationupdate)接口存在差异，如不支持订阅direction
+> 、screenDensity、displayId，详见[Configuration](arkts-ability-appabilityconfiguration-configuration-i.md)中各个环境变量的说明。
 > 
-> - 当前接口在实际触发时存在一定限制。例如如果开发者通过[setLanguage](#setlanguage)接口设置应用的语言，即便系统语 &gt; 言发生变化，系统也不再触发当前接口的[callback](../../apis-default/arkts-apis/arkts-app-ability-environmentcallback-environmentcallback-i.md)回调。详见 &gt; [使用场景](../../../application-models/subscribe-system-environment-variable-changes.md#使用场景)。
+> - 当前接口在实际触发时存在一定限制。例如如果开发者通过[setLanguage](#setlanguage)接口设置应用的语言，即便系统语
+> 言发生变化，系统也不再触发当前接口的[callback](../../apis-default/arkts-apis/arkts-appabilityenvironmentcallback-environmentcallback-i.md)回调。详见
+> [使用场景](../../../application-models/subscribe-system-environment-variable-changes.md#使用场景)。
 
 **起始版本：** 9
 
@@ -1956,7 +1964,7 @@ on(type: 'environment', callback: EnvironmentCallback): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'environment' | 是 | 此类型表示系统环境变化，如系统深浅色发生变化，固定为'environment'。 |
-| callback | [EnvironmentCallback](../../apis-default/arkts-apis/arkts-app-ability-environmentcallback-environmentcallback-i.md) | 是 | 系统环境变化时触发的回调方法。 |
+| callback | [EnvironmentCallback](../../apis-default/arkts-apis/arkts-appabilityenvironmentcallback-environmentcallback-i.md) | 是 | 系统环境变化时触发的回调方法。 |
 
 **返回值：**
 
@@ -2033,9 +2041,12 @@ restartApp(want: Want): void
 > 
 > 通过该接口重启应用时，不会触发应用中Ability的onDestroy生命周期回调。
 > 
-> 在原子化服务调用本接口成功后的3秒内，再次调用本接口、 &gt; [restartSelfAtomicService()](arkts-ability-abilitymanager-restartselfatomicservice-f.md) &gt; 或[UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp)接口中的任一接口，系统将返回错误码16000064。
+> 在原子化服务调用本接口成功后的3秒内，再次调用本接口、
+> [restartSelfAtomicService()](arkts-ability-abilitymanager-restartselfatomicservice-f.md)
+> 或[UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp)接口中的任一接口，系统将返回错误码16000064。
 > 
-> 在应用调用本接口成功后的3秒内，若再次调用本接口或[UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp)接口中的任 &gt; 一接口，系统将返回错误码16000064。
+> 在应用调用本接口成功后的3秒内，若再次调用本接口或[UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp)接口中的任
+> 一接口，系统将返回错误码16000064。
 
 **起始版本：** 23
 
@@ -2118,7 +2129,9 @@ setColorMode(colorMode: ConfigurationConstant.ColorMode): void
 
 > **说明：**
 > 
-> 调用该接口前，需要确保窗口已完成创建、且UIAbility对应的页面已完成加载，即在 &gt; [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)生命周期中通过 &gt; [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法加载页面之后调用。
+> 调用该接口前，需要确保窗口已完成创建、且UIAbility对应的页面已完成加载，即在
+> [onWindowStageCreate()](arkts-ability-appabilityuiability-uiability-c.md#onwindowstagecreate)生命周期中通过
+> [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法加载页面之后调用。
 
 **起始版本：** 23
 
@@ -2177,7 +2190,9 @@ setFont(font: string): void
 
 > **说明：**
 > 
-> 调用该接口前，需要确保窗口已完成创建、且UIAbility对应的页面已完成加载，即在 &gt; [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)生命周期中通过 &gt; [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法加载页面之后调用。
+> 调用该接口前，需要确保窗口已完成创建、且UIAbility对应的页面已完成加载，即在
+> [onWindowStageCreate()](arkts-ability-appabilityuiability-uiability-c.md#onwindowstagecreate)生命周期中通过
+> [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法加载页面之后调用。
 
 **起始版本：** 23
 
@@ -2330,7 +2345,9 @@ setLanguage(language: string): void
 
 > **说明：**
 > 
-> 调用该接口前，需要确保窗口已完成创建、且UIAbility对应的页面已完成加载，即在 &gt; [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)生命周期中通过 &gt; [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法加载页面之后调用。
+> 调用该接口前，需要确保窗口已完成创建、且UIAbility对应的页面已完成加载，即在
+> [onWindowStageCreate()](arkts-ability-appabilityuiability-uiability-c.md#onwindowstagecreate)生命周期中通过
+> [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法加载页面之后调用。
 
 **起始版本：** 23
 
@@ -2392,7 +2409,8 @@ setSupportedProcessCache(isSupported : boolean): void
 > 
 > - 该接口仅表示应用自身是否为缓存后快速启动做好了准备，还需综合其他条件来判断最终是否为应用启用快速启动。
 > 
-> - 为了确保该接口在进程退出前生效，调用时机应尽量提前。建议在[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)的`onCreate() &gt; `中调用该接口。
+> - 为了确保该接口在进程退出前生效，调用时机应尽量提前。建议在[AbilityStage](arkts-ability-appabilityabilitystage-abilitystage-c.md)的`onCreate()
+> `中调用该接口。
 > 
 > - 在同一进程多次调用该接口时，会以最后一次调用的结果为准。当存在多个AbilityStage时，为了确保结果符合预期，需要在各个AbilityStage中分别调用该接口并配置相同的取值。
 

@@ -33,7 +33,7 @@ function createMediaSourceWithUrl(url: string, headers?: Record<string, string>)
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) | MediaSource返回值。 |
+| [MediaSource](arkts-media-multimediamedia-mediasource-i.md) | MediaSource返回值。 |
 
 **错误码：**
 
@@ -68,7 +68,7 @@ Creates a media source for streaming media to be pre-downloaded.
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) \| undefined | MediaSource instance if the operation is successful; returns null otherwise. |
+| [MediaSource](arkts-media-multimediamedia-mediasource-i.md) \| undefined | MediaSource instance if the operation is successful; returns null otherwise. |
 
 **错误码：**
 

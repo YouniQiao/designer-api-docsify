@@ -2,11 +2,11 @@
 
 Provides interfaces to monitor a scene for performance measurement.
 
-&lt;p&gt;These interfaces are used to monitor the begin, end, and value changes of finger processes that last for at least 3 ms.
+<p>These interfaces are used to monitor the begin, end, and value changes of finger processes that last for at least 3 ms.
 
-&lt;p&gt;Example: import "@ohos.arkui.performanceMonitor.d.ts" To start scene monitoring that is expected to complete within 5 ms: &lt;pre&gt;{@code performanceMonitor.begin(string, ActionType, string); //scene finished performanceMonitor.end(string); }&lt;/pre&gt;
+<p>Example: import "@ohos.arkui.performanceMonitor.d.ts" To start scene monitoring that is expected to complete within 5 ms: &lt;pre&gt;{@code performanceMonitor.begin(string, ActionType, string); //scene finished performanceMonitor.end(string); }&lt;/pre&gt;
 
-&lt;p&gt;Each {@code begin} matches one {@code end}, and they must have the same scene id.
+<p>Each {@code begin} matches one {@code end}, and they must have the same scene id.
 
 @namespace performanceMonitor
 

@@ -471,7 +471,8 @@ install(hapFilePaths: Array<string>, installParam: InstallParam, callback: Async
 
 > **说明：**
 > 
-> 安装不同分发类型的应用需要申请相应的权限，分发类型可以参考[ApplicationInfo](arkts-ability-applicationinfo-i.md)中的 &gt; appDistributionType字段说明。
+> 安装不同分发类型的应用需要申请相应的权限，分发类型可以参考[ApplicationInfo](arkts-ability-applicationinfo-i.md)中的
+> appDistributionType字段说明。
 
 **起始版本：** 23
 
@@ -604,7 +605,8 @@ install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 安装不同分发类型的应用需要申请相应的权限，分发类型可以参考[ApplicationInfo](arkts-ability-applicationinfo-i.md)中的 &gt; appDistributionType字段说明。
+> 安装不同分发类型的应用需要申请相应的权限，分发类型可以参考[ApplicationInfo](arkts-ability-applicationinfo-i.md)中的
+> appDistributionType字段说明。
 
 **起始版本：** 23
 
@@ -725,7 +727,8 @@ install(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 
 > **说明：**
 > 
-> 安装不同分发类型的应用需要申请相应的权限，分发类型可以参考[ApplicationInfo](arkts-ability-applicationinfo-i.md)中的 &gt; appDistributionType字段说明。
+> 安装不同分发类型的应用需要申请相应的权限，分发类型可以参考[ApplicationInfo](arkts-ability-applicationinfo-i.md)中的
+> appDistributionType字段说明。
 
 **起始版本：** 23
 
@@ -976,7 +979,8 @@ installPreexistingApp(bundleName: string, userId?: int): Promise<void>
 
 > **说明：**
 > 
-> 该接口不支持安装[签名证书的分发类型](arkts-ability-applicationinfo-i.md)为enterprise，enterprise_mdm和 &gt; enterprise_normal的应用。
+> 该接口不支持安装[签名证书的分发类型](arkts-ability-applicationinfo-i.md)为enterprise，enterprise_mdm和
+> enterprise_normal的应用。
 
 **起始版本：** 23
 

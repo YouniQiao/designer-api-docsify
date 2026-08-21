@@ -1,6 +1,6 @@
 # FormEditExtensionContext
 
-*FormEditExtensionContext**, inherited from [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md), is the context of [FormEditExtensionAbility](arkts-form-app-form-formeditextensionability-formeditextensionability-c.md).
+*FormEditExtensionContext**, inherited from [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md), is the context of [FormEditExtensionAbility](arkts-form-appformformeditextensionability-formeditextensionability-c.md).
 
 > **NOTE：**
 
@@ -34,7 +34,7 @@ Starts the widget provider page to be edited. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Information about the editing page that needs to be started by the home screen of a third-party application. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Information about the editing page that needs to be started by the home screen of a third-party application. |
 
 **Return value:**
 
@@ -71,7 +71,7 @@ Starts UIAbility of the application to which a widget belongs. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information of the UIAbility of the application. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Want information of the UIAbility of the application. |
 
 **Return value:**
 

@@ -10,7 +10,8 @@
 
 > - [@ohos.contact (联系人)](../../apis-contacts-kit/arkts-apis/arkts-contact.md)
 
-> - @ohos.geolocation、 &gt; @ohos.geoLocationManager (位置服务)
+> - @ohos.geolocation、
+> @ohos.geoLocationManager (位置服务)
 
 > - [@ohos.multimedia.audio(音频管理)](../../apis-audio-kit/arkts-apis/arkts-multimedia-audio.md)
 

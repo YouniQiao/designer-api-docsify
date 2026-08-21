@@ -111,9 +111,11 @@ tabBar(value: SubTabBarStyle | BottomTabBarStyle)
 
 > **说明：**
 
-> - 子页签（[SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md)）样式：通常为文字+下划线或文字+背板的页签风格，允许设置文本样式，建议放置在顶部或者底部使用。切换页签时默认支持动画跳转效果。适用于资讯 &gt; 类应用的顶部分类（如"关注、视频、数码"）、功能模块的二级导航场景。
+> - 子页签（[SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md)）样式：通常为文字+下划线或文字+背板的页签风格，允许设置文本样式，建议放置在顶部或者底部使用。切换页签时默认支持动画跳转效果。适用于资讯
+> 类应用的顶部分类（如"关注、视频、数码"）、功能模块的二级导航场景。
 > 
-> - 底部页签/侧边页签（[BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md)）样式：无下划线和背板效果，页签样式通常为图标+文字的组合方式。切换页签时默认无动画跳转效果。底部页签通常用于应用 &gt; 主导航（如首页、发现、推荐）。侧边页签适用于宽屏场景，可设置vertical(true)启用纵向布局，让页签在侧边显示，默认左侧显示。
+> - 底部页签/侧边页签（[BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md)）样式：无下划线和背板效果，页签样式通常为图标+文字的组合方式。切换页签时默认无动画跳转效果。底部页签通常用于应用
+> 主导航（如首页、发现、推荐）。侧边页签适用于宽屏场景，可设置vertical(true)启用纵向布局，让页签在侧边显示，默认左侧显示。
 
 **起始版本：** 9
 

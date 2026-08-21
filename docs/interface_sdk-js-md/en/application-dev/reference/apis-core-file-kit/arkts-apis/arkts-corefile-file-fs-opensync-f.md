@@ -35,7 +35,7 @@ Opens a file or directory. This API returns the result synchronously. This API s
 
 | Type | Description |
 | --- | --- |
-| [File](arkts-corefile-file-fs-file-i.md) | File object opened. |
+| [File](arkts-corefile-filefs-file-i.md) | File object opened. |
 
 **Error codes:**
 

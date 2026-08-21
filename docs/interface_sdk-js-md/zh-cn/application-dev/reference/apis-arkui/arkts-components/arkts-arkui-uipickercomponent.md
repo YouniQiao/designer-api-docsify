@@ -11,17 +11,23 @@ UIPickerComponent容器是用于实现用户选择操作的组件。它支持从
 
 > **说明：**
 > 
-> - 开发者在使用Row容器作为子组件时，Row容器中仅支持包含Text、Image、SymbolGlyph基础组件， &gt; 包含其他容器组件可能会影响显示效果或滑动功能异常。
+> - 开发者在使用Row容器作为子组件时，Row容器中仅支持包含Text、Image、SymbolGlyph基础组件，
+> 包含其他容器组件可能会影响显示效果或滑动功能异常。
 > 
 > - 统计子组件的个数时，不包含Row容器内的子组件，Row容器及其子组件共同视为1个子组件。
 > 
-> - 子组件为Text、Image、SymbolGlyph时，height属性不生效，实际高度由 &gt; [itemHeight](arkts-arkui-uipickercomponent-attribute.md#itemheight)属性决定（默认40vp）。子组件内容会在选项区域内显示。
+> - 子组件为Text、Image、SymbolGlyph时，height属性不生效，实际高度由
+> [itemHeight](arkts-arkui-uipickercomponent-attribute.md#itemheight)属性决定（默认40vp）。子组件内容会在选项区域内显示。
 > 
-> - 子组件为Row容器时，Row容器的height属性不生效，实际高度由 &gt; [itemHeight](arkts-arkui-uipickercomponent-attribute.md#itemheight)属性决定（默认40vp）。Row容器内的子组件 &gt; height属性能正常生效，最终显示效果由Row容器决定。
+> - 子组件为Row容器时，Row容器的height属性不生效，实际高度由
+> [itemHeight](arkts-arkui-uipickercomponent-attribute.md#itemheight)属性决定（默认40vp）。Row容器内的子组件
+> height属性能正常生效，最终显示效果由Row容器决定。
 > 
-> - 图文组合类型选项需要使用Row容器包含图片和文本组件。使用图文组合类型选项时， &gt; 建议将图片的height设置为40vp及以下，避免图片较大时被裁剪。
+> - 图文组合类型选项需要使用Row容器包含图片和文本组件。使用图文组合类型选项时，
+> 建议将图片的height设置为40vp及以下，避免图片较大时被裁剪。
 > 
-> - UIPickerComponent容器内所有文本组件（包括Row容器内的文本组件）的fontSize属性默认为20fp。用户设置将覆盖默认值， &gt; 设置异常值时以文本组件fontSize处理的结果为准。建议统一设置或不设置fontSize以保证良好的显示效果。
+> - UIPickerComponent容器内所有文本组件（包括Row容器内的文本组件）的fontSize属性默认为20fp。用户设置将覆盖默认值，
+> 设置异常值时以文本组件fontSize处理的结果为准。建议统一设置或不设置fontSize以保证良好的显示效果。
 
 ## UIPickerComponent
 

@@ -1,4 +1,4 @@
-# DynamicComponent
+# DynamicComponent(System API)
 
 *DynamicComponent** is designed to support the embedding and display of UIs provided by independent .abc files within the current page, with the displayed content running in a worker thread.
 

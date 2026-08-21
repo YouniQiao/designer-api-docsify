@@ -4,7 +4,7 @@
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [showAlertDialog](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#showalertdialog)
+**替代接口：** [showAlertDialog](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#showalertdialog)
 
 <!--Device-unnamed-declare class AlertDialog--><!--Device-unnamed-declare class AlertDialog-End-->
 
@@ -25,15 +25,16 @@ static show(value: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | A
 
 > **说明：**
 
-showAlertDialog需先获取[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)实例后再进行调用。
+showAlertDialog需先获取[UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)实例后再进行调用。
 
-> 从API version 10开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [showAlertDialog](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#showalertdialog)来明确UI的执行上下文。
+> 从API version 10开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)中的
+> [showAlertDialog](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#showalertdialog)来明确UI的执行上下文。
 
 **起始版本：** 7
 
 **废弃版本：** 18
 
-**替代接口：** [showAlertDialog](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#showalertdialog)
+**替代接口：** [showAlertDialog](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#showalertdialog)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

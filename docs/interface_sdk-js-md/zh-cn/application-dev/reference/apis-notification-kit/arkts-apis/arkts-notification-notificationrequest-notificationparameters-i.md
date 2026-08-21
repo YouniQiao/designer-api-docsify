@@ -14,7 +14,7 @@
 wantAction?:string
 ```
 
-应用在创建wantAgent时，传入的want的action字段，具体含义请参考[action](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)。
+应用在创建wantAgent时，传入的want的action字段，具体含义请参考[action](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)。
 
 **类型：** string
 
@@ -32,7 +32,7 @@ wantAction?:string
 wantParameters?:Record<string, RecordData>
 ```
 
-应用在创建wantAgent时，传入的want的parameters字段，具体含义请参考[parameters](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)。
+应用在创建wantAgent时，传入的want的parameters字段，具体含义请参考[parameters](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)。
 
 **类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
@@ -50,7 +50,7 @@ wantParameters?:Record<string, RecordData>
 wantUri?:string
 ```
 
-应用在创建wantAgent时，传入的want的uri字段，具体含义请参考[uri](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)。
+应用在创建wantAgent时，传入的want的uri字段，具体含义请参考[uri](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)。
 
 **类型：** string
 

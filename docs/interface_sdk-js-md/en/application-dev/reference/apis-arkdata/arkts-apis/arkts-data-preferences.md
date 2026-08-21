@@ -4,7 +4,8 @@ The **Preferences** module provides APIs for processing data in the form of key-
 
 > **NOTE：**
 > 
-> Preferences are not thread-safe and may cause file damage and data loss when used in multi-process scenarios. Do &gt; not use preferences in multi-process scenarios.
+> Preferences are not thread-safe and may cause file damage and data loss when used in multi-process scenarios. Do
+> not use preferences in multi-process scenarios.
 
 **Since:** 23
 

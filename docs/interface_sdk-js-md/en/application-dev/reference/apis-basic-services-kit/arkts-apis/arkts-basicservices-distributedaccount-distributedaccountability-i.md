@@ -122,7 +122,9 @@ Queries the distributed account information. This API uses an asynchronous callb
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getOsAccountDistributedInfo](#getosaccountdistributedinfo) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getOsAccountDistributedInfo](#getosaccountdistributedinfo)
+> instead.
 
 **Since:** 7
 
@@ -168,7 +170,9 @@ Queries the distributed account information. This API uses a promise to return t
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getOsAccountDistributedInfo](#getosaccountdistributedinfo) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getOsAccountDistributedInfo](#getosaccountdistributedinfo)
+> instead.
 
 **Since:** 7
 
@@ -326,7 +330,9 @@ Updates the distributed account information. This API uses an asynchronous callb
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setOsAccountDistributedInfo](#setosaccountdistributedinfo) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [setOsAccountDistributedInfo](#setosaccountdistributedinfo)
+> instead.
 
 **Since:** 7
 
@@ -374,7 +380,9 @@ Updates the distributed account information. This API uses a promise to return t
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setOsAccountDistributedInfo](#setosaccountdistributedinfo) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [setOsAccountDistributedInfo](#setosaccountdistributedinfo)
+> instead.
 
 **Since:** 7
 

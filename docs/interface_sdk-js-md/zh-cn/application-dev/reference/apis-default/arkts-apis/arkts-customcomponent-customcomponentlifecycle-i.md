@@ -1,6 +1,6 @@
 # CustomComponentLifecycle
 
-CustomComponentLifecycle用于监控自定义组件生命周期的变化，开发者可以通过 [UIUtils.getLifecycle](../../apis-arkui/arkts-apis/arkts-arkui-arkui-statemanagement-uiutils-c.md#getlifecycle)获取CustomComponentLifecycle实例。
+CustomComponentLifecycle用于监控自定义组件生命周期的变化，开发者可以通过 [UIUtils.getLifecycle](../../apis-arkui/arkts-apis/arkts-arkui-arkuistatemanagement-uiutils-c.md#getlifecycle)获取CustomComponentLifecycle实例。
 
 **起始版本：** 24
 

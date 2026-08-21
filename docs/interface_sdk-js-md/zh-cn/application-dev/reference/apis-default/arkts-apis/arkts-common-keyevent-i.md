@@ -76,7 +76,7 @@ intentionCode: IntentionCode
 
 Intention code of a key or modifier keys.
 
-**类型：** [IntentionCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-intentioncode-intentioncode-e.md)
+**类型：** [IntentionCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputintentioncode-intentioncode-e.md)
 
 **默认值：** IntentionCode.INTENTION_UNKNOWN
 

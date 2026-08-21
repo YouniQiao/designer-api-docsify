@@ -31,7 +31,7 @@ No permission is required for obtaining the caller's own information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want containing the bundle name to query. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want containing the bundle name to query. |
 | extensionAbilityType | [ExtensionAbilityType](arkts-ability-bundlemanager-extensionabilitytype-e.md) | Yes | Type of the ExtensionAbility. |
 | extensionAbilityFlags | int | Yes | Type of the ExtensionAbility information to obtain. |
 | userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The default value is the user ID of the caller. The value must be greater than or equal to 0. |
@@ -129,7 +129,7 @@ No permission is required for obtaining the caller's own information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want containing the bundle name to query. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want containing the bundle name to query. |
 | extensionAbilityType | string | Yes | Type of the custom ExtensionAbility. |
 | extensionAbilityFlags | int | Yes | Information flags to be contained in the returned ExtensionAbilityInfo object. |
 | userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The default value is the user ID of the caller. The value must be greater than or equal to 0. |

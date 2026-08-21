@@ -16,9 +16,11 @@ Connects this ability to a ServiceAbility.
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the FA model, see &gt; [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
+> For details about the startup rules for the components in the FA model, see
+> [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
 > 
-> To connect to a ServiceAbility of another application, the target application must be configured with &gt; associated startup (**AssociateWakeUp** set to **true**).
+> To connect to a ServiceAbility of another application, the target application must be configured with
+> associated startup (**AssociateWakeUp** set to **true**).
 
 **Since:** 7
 
@@ -32,7 +34,7 @@ Connects this ability to a ServiceAbility.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | ServiceAbility to connect. |
+| request | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | ServiceAbility to connect. |
 | options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | Yes | Connection options. |
 
 **Return value:**

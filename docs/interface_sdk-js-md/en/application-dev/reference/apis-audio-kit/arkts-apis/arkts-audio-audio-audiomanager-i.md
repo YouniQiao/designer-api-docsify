@@ -134,7 +134,7 @@ Obtains the audio scene. This API returns the result synchronously.
 getDebuggingManager(): AudioDebuggingManager
 ```
 
-Obtains an AudioDebuggingManager instance. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: The [AudioDebuggingManager](arkts-audio-audio-audiodebuggingmanager-i.md) instance is a singleton. &lt;/p&gt;
+Obtains an AudioDebuggingManager instance. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: The [AudioDebuggingManager](arkts-audio-audio-audiodebuggingmanager-i.md) instance is a singleton. </p>
 
 **Since:** 26.0.0
 
@@ -795,7 +795,7 @@ Mutes a volume type. This method uses an asynchronous callback to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
+**Substitutes:** [AVVolumePanel](arkts-audio-multimediaavvolumepanel-avvolumepanel-s.md)
 
 <!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>): void--><!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -821,7 +821,7 @@ Mutes a volume type. This method uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
+**Substitutes:** [AVVolumePanel](arkts-audio-multimediaavvolumepanel-avvolumepanel-s.md)
 
 <!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>--><!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>-End-->
 
@@ -1262,7 +1262,7 @@ Sets the volume for a volume type. This method uses an asynchronous callback to 
 
 **Deprecated since:** 9
 
-**Substitutes:** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
+**Substitutes:** [AVVolumePanel](arkts-audio-multimediaavvolumepanel-avvolumepanel-s.md)
 
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -1290,7 +1290,7 @@ Sets the volume for a volume type. This method uses a promise to return the resu
 
 **Deprecated since:** 9
 
-**Substitutes:** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
+**Substitutes:** [AVVolumePanel](arkts-audio-multimediaavvolumepanel-avvolumepanel-s.md)
 
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
 

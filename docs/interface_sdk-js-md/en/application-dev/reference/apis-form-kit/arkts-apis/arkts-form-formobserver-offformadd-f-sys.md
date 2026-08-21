@@ -12,7 +12,7 @@ import { formObserver } from '@kit.FormKit';
 function offFormAdd(hostBundleName?: string, observerCallback?: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Cancels listening to the event of add form. &lt;p&gt;You can use this method to cancel listening to the event of add form.&lt;/p&gt;
+Cancels listening to the event of add form. <p>You can use this method to cancel listening to the event of add form.</p>
 
 **Since:** 23
 

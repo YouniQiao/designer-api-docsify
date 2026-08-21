@@ -69,9 +69,11 @@ When the custom menu is too long, it is recommended that nest a Scroll component
 > 
 > This API cannot be called within attributeModifier.
 > 
-> When [editMenuOptions](#editmenuoptions) is used for configuring the text selection menu, the &gt; system's default style and trigger conditions are preserved.
+> When [editMenuOptions](#editmenuoptions) is used for configuring the text selection menu, the
+> system's default style and trigger conditions are preserved.
 > 
-> In contrast, when [bindSelectionMenu](#bindselectionmenu) is used, both the menu style and the &gt; trigger conditions are fully customizable.
+> In contrast, when [bindSelectionMenu](#bindselectionmenu) is used, both the menu style and the
+> trigger conditions are fully customizable.
 
 **Since:** 11
 
@@ -128,7 +130,8 @@ Sets whether to enable leading punctuation compression.
 > 
 > - Leading punctuation is not compressed by default.
 > 
-> - For the range of punctuation marks that support leading compression, see &gt; [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md).
+> - For the range of punctuation marks that support leading compression, see
+> [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 23
 
@@ -242,8 +245,11 @@ Style and color of the text decorative line.
 
 > **NOTE：**
 > 
-> When the bottom contour of a character intersects with the decoration, underline avoidance is triggered, commonly &gt; affecting characters like "g", "j", "y", "q", and "p." &gt;
-> If the decoration color is set to **Color.Transparent**, it inherits the text color of the first character in &gt; each line. If the decoration color is set to **"#00FFFFFF"**, the line becomes fully transparent.
+> When the bottom contour of a character intersects with the decoration, underline avoidance is triggered, commonly
+> affecting characters like "g", "j", "y", "q", and "p."
+> 
+> If the decoration color is set to **Color.Transparent**, it inherits the text color of the first character in
+> each line. If the decoration color is set to **"#00FFFFFF"**, the line becomes fully transparent.
 
 **Since:** 7
 
@@ -301,9 +307,11 @@ When [disableMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textm
 
 > **NOTE：**
 > 
-> When [editMenuOptions](#editmenuoptions) is used for configuring the text selection menu, the &gt; system's default style and trigger conditions are preserved.
+> When [editMenuOptions](#editmenuoptions) is used for configuring the text selection menu, the
+> system's default style and trigger conditions are preserved.
 > 
-> In contrast, when [bindSelectionMenu](#bindselectionmenu) is used, both the menu style and the &gt; trigger conditions are fully customizable.
+> In contrast, when [bindSelectionMenu](#bindselectionmenu) is used, both the menu style and the
+> trigger conditions are fully customizable.
 
 **Since:** 12
 
@@ -387,7 +395,8 @@ The style of detected entities is as follows: the font color is changed to blue,
 > 
 > - This API takes effect only when the device has an underlying text detection capability.
 > 
-> - When [textOverflow](#textoverflow) is set to **TextOverflow.MARQUEE**, text special entity &gt; detection is not performed.
+> - When [textOverflow](#textoverflow) is set to **TextOverflow.MARQUEE**, text special entity
+> detection is not performed.
 
 <!--RP2--><!--RP2End-->
 
@@ -612,15 +621,25 @@ For example, the input format for monospaced clock fonts is "ss01" on.
 
 > **NOTE：**
 > 
-> The **Text** component cannot contain both text and the child component **Span** or **ImageSpan**. If both of &gt; them exist, only the content in **Span** or **ImageSpan** is displayed.
+> The **Text** component cannot contain both text and the child component **Span** or **ImageSpan**. If both of
+> them exist, only the content in **Span** or **ImageSpan** is displayed.
 > 
-> The typesetting engine rounds down the value of width to ensure that &gt; the value is an integer. If the typesetting engine rounds up the value instead, the right side of the text may be &gt; clipped.
+> The typesetting engine rounds down the value of width to ensure that
+> the value is an integer. If the typesetting engine rounds up the value instead, the right side of the text may be
+> clipped.
 > 
-> When multiple **Text** components are placed in the Row container with no specific layout or space &gt; allocation settings configured, the components are laid out based on the maximum size of the container. To make &gt; sure the sum of the components' main axis sizes does not exceed the main axis size of the container, you can set &gt; layoutWeight or use the flex layout.
+> When multiple **Text** components are placed in the Row container with no specific layout or space
+> allocation settings configured, the components are laid out based on the maximum size of the container. To make
+> sure the sum of the components' main axis sizes does not exceed the main axis size of the container, you can set
+> layoutWeight or use the flex layout.
 > 
-> The system's default font supports the following ligatures: Th, fb, ff, fb, ffb, ffh, ffi, ffk, ffl, fh, fi, fk, &gt; fl, rf, rt, rv, rx, ry. These ligatures may cause unexpected effects of spans and styled strings. Disabling the &gt; ligature feature can avoid this issue.
+> The system's default font supports the following ligatures: Th, fb, ff, fb, ffb, ffh, ffi, ffk, ffl, fh, fi, fk,
+> fl, rf, rt, rv, rx, ry. These ligatures may cause unexpected effects of spans and styled strings. Disabling the
+> ligature feature can avoid this issue.
 > 
-> Text rendering behavior is closely tied to the font file in use. For instance, the system's default font supports &gt; 8-punctuation compression only for left-side punctuation marks. Right-side punctuation, including exclamation &gt; marks, enumeration commas, and question marks, is not affected by this feature.
+> Text rendering behavior is closely tied to the font file in use. For instance, the system's default font supports
+> 8-punctuation compression only for left-side punctuation marks. Right-side punctuation, including exclamation
+> marks, enumeration commas, and question marks, is not affected by this feature.
 
 **Since:** 12
 
@@ -933,7 +952,9 @@ If the value is less than or equal to **0**, the line height is unrestricted and
 
 > **NOTE：**
 > 
-> If certain characters have significantly taller glyphs than others in the same line, layout anomalies such as &gt; clipping, overlapping, or misalignment may occur. In this case, adjust component attributes such as height and &gt; line height to ensure proper layout rendering.
+> If certain characters have significantly taller glyphs than others in the same line, layout anomalies such as
+> clipping, overlapping, or misalignment may occur. In this case, adjust component attributes such as height and
+> line height to ensure proper layout rendering.
 
 **Since:** 7
 
@@ -963,7 +984,8 @@ The line height equals the input parameter **value** multiplied by **fontHeight*
 
 > **NOTE：**
 > 
-> When both this API and [lineHeight](#lineheight) are set, only **lineHeightMultiple** takes &gt; effect.
+> When both this API and [lineHeight](#lineheight) are set, only **lineHeightMultiple** takes
+> effect.
 
 **Since:** 22
 
@@ -1607,7 +1629,7 @@ tailIndents(value: Optional<LengthMetrics | Array<LengthMetrics>>)
 
 Specify the tail indentation for each line in a text block.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When a single LengthMetrics value is provided, all lines share the same tail indent. <br>When an array is provided, the i-th element specifies the tail indent for the i-th line. If the number of text lines exceeds the array length, the last element in the array is used for the remaining lines. <br>Negative values are treated as 0. <br>If the value is set to undefined, the default value 0 is used. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When a single LengthMetrics value is provided, all lines share the same tail indent. <br>When an array is provided, the i-th element specifies the tail indent for the i-th line. If the number of text lines exceeds the array length, the last element in the array is used for the remaining lines. <br>Negative values are treated as 0. <br>If the value is set to undefined, the default value 0 is used. </p>
 
 **Since:** 26.0.0
 
@@ -1643,7 +1665,9 @@ When **textAlign** is set to **TextAlign.JUSTIFY**, the [wordBreak](#wordbreak) 
 
 > **NOTE：**
 > 
-> **textAlign** only adjusts the overall text layout and does not affect character display order. For character &gt; display order adjustment, see &gt; [Bidirectional Text Layout and Alignment](../../../ui/arkts-internationalization.md#bidirectional-text-layout-and-alignment).
+> **textAlign** only adjusts the overall text layout and does not affect character display order. For character
+> display order adjustment, see
+> [Bidirectional Text Layout and Alignment](../../../ui/arkts-internationalization.md#bidirectional-text-layout-and-alignment).
 
 **Since:** 7
 
@@ -1857,10 +1881,15 @@ Sets the vertical alignment of the text.
 
 > **NOTE：**
 > 
-> - When this API and [halfLeading](#halfleading) are both set, **halfLeading** does not take &gt; effect.
+> - When this API and [halfLeading](#halfleading) are both set, **halfLeading** does not take
+> effect.
 > 
-> - The effect of this attribute is noticeable only when the same font size is used in a paragraph and &gt; [lineHeight](#lineheight) is set, or when different font sizes are mixed in a paragraph.
-> Otherwise, the effect is the same regardless of whether this attribute is set or which enum value is used. The &gt; **SuperscriptStyle** in TextStyle takes effect only when the value of &gt; TextVerticalAlign is set to **TextVerticalAlign.BASELINE**. In other vertical &gt; alignment modes, the superscript and subscript texts are displayed in the same way as the normal text.
+> - The effect of this attribute is noticeable only when the same font size is used in a paragraph and
+> [lineHeight](#lineheight) is set, or when different font sizes are mixed in a paragraph.
+> Otherwise, the effect is the same regardless of whether this attribute is set or which enum value is used. The
+> **SuperscriptStyle** in TextStyle takes effect only when the value of
+> TextVerticalAlign is set to **TextVerticalAlign.BASELINE**. In other vertical
+> alignment modes, the superscript and subscript texts are displayed in the same way as the normal text.
 
 **Since:** 20
 

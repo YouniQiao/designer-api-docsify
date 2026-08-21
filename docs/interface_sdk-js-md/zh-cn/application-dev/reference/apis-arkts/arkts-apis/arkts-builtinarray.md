@@ -268,8 +268,8 @@
 | [sort](arkts-arkts-builtinarray-sort-f.md) | 使用比较函数重新排列`this`中的元素。 |
 | [sort](arkts-arkts-builtinarray-sort-f.md) | 使用比较函数重新排列当前数组中的元素。 |
 | [sort](arkts-arkts-builtinarray-sort-f.md) | 使用比较函数重新排列`this`中的元素。 |
-| [sort_default](arkts-arkts-builtinarray-sort-default-f.md#sort_default) | 使用默认排序方式对`arr`中的元素排序。 |
-| [sort_stable](arkts-arkts-builtinarray-sort-stable-f.md#sort_stable) | 使用稳定排序算法对`arr`中的元素排序。 |
+| [sort_default](arkts-arkts-builtinarray-sortdefault-f.md#sort_default) | 使用默认排序方式对`arr`中的元素排序。 |
+| [sort_stable](arkts-arkts-builtinarray-sortstable-f.md#sort_stable) | 使用稳定排序算法对`arr`中的元素排序。 |
 | [toLocaleString](arkts-arkts-builtinarray-tolocalestring-f.md) | 返回表示数组元素的字符串。数组元素通过各自的toLocaleString 方法转换为字符串。 |
 | [toLocaleString](arkts-arkts-builtinarray-tolocalestring-f.md) | 返回表示数组元素的字符串。数组元素通过各自的toLocaleString 方法转换为字符串。 |
 | [toLocaleString](arkts-arkts-builtinarray-tolocalestring-f.md) | 返回表示数组元素的字符串。数组元素通过各自的toLocaleString 方法转换为字符串。 |

@@ -107,7 +107,7 @@ Create and add the OH_EffectFilter to the OH_ImageEffect
 
 | Type | Description |
 | -- | -- |
-| OH_EffectFilter * | Returns a pointer to an OH_EffectFilter instance if the filter name is valid, otherwise returns nullptr |
+| [OH_EffectFilter *](capi-imageeffect-oh-effectfilter.md) | Returns a pointer to an OH_EffectFilter instance if the filter name is valid, otherwise returns nullptr |
 
 ### OH_ImageEffect_AddFilterByFilter()
 
@@ -128,7 +128,7 @@ Add the OH_EffectFilter to the OH_ImageEffect by the OH_EffectFilter instance po
 | Parameter | Description |
 | -- | -- |
 | [OH_ImageEffect](capi-imageeffect-oh-imageeffect.md) *imageEffect | Encapsulate OH_ImageEffect structure instance pointer |
-| OH_EffectFilter *filter | Indicates the filter instance that created by invoking OH_EffectFilter_Create |
+| [OH_EffectFilter](capi-imageeffect-oh-effectfilter.md) *filter | Indicates the filter instance that created by invoking OH_EffectFilter_Create |
 
 **Returns**:
 
@@ -162,7 +162,7 @@ Create and add the OH_EffectFilter to the OH_ImageEffect by specified position
 
 | Type | Description |
 | -- | -- |
-| OH_EffectFilter * | Returns a pointer to an OH_EffectFilter instance if the index and filter name is valid, otherwise returns  nullptr |
+| [OH_EffectFilter *](capi-imageeffect-oh-effectfilter.md) | Returns a pointer to an OH_EffectFilter instance if the index and filter name is valid, otherwise returns  nullptr |
 
 ### OH_ImageEffect_InsertFilterByFilter()
 
@@ -184,7 +184,7 @@ Insert the OH_EffectFilter to the OH_ImageEffect by the OH_EffectFilter instance
 | -- | -- |
 | [OH_ImageEffect](capi-imageeffect-oh-imageeffect.md) *imageEffect | Encapsulate OH_ImageEffect structure instance pointer |
 | uint32_t index | Indicates the position of the OH_EffectFilter witch is added |
-| OH_EffectFilter *filter | Indicates the filter instance that created by invoking OH_EffectFilter_Create |
+| [OH_EffectFilter](capi-imageeffect-oh-effectfilter.md) *filter | Indicates the filter instance that created by invoking OH_EffectFilter_Create |
 
 **Returns**:
 
@@ -272,7 +272,7 @@ Create and replace the OH_EffectFilter in the OH_ImageEffect by the filter name
 
 | Type | Description |
 | -- | -- |
-| OH_EffectFilter * | Returns a pointer to an OH_EffectFilter instance if the index and filter name is valid, otherwise returns  nullptr |
+| [OH_EffectFilter *](capi-imageeffect-oh-effectfilter.md) | Returns a pointer to an OH_EffectFilter instance if the index and filter name is valid, otherwise returns  nullptr |
 
 ### OH_ImageEffect_ReplaceFilterByFilter()
 
@@ -294,7 +294,7 @@ Replace the OH_EffectFilter in the OH_ImageEffect by the OH_EffectFilter instanc
 | -- | -- |
 | [OH_ImageEffect](capi-imageeffect-oh-imageeffect.md) *imageEffect | Encapsulate OH_ImageEffect structure instance pointer |
 | uint32_t index | Indicates the position of the OH_EffectFilter witch is replaced |
-| OH_EffectFilter *filter | Indicates the filter instance that created by invoking OH_EffectFilter_Create |
+| [OH_EffectFilter](capi-imageeffect-oh-effectfilter.md) *filter | Indicates the filter instance that created by invoking OH_EffectFilter_Create |
 
 **Returns**:
 
@@ -353,7 +353,7 @@ Get an OH_EffectFilter instance that add to OH_ImageEffect by the index
 
 | Type | Description |
 | -- | -- |
-| OH_EffectFilter * | Returns a pointer to an OH_EffectFilter instance if the index is valid, otherwise returns nullptr |
+| [OH_EffectFilter *](capi-imageeffect-oh-effectfilter.md) | Returns a pointer to an OH_EffectFilter instance if the index is valid, otherwise returns nullptr |
 
 ### OH_ImageEffect_Configure()
 
@@ -618,7 +618,7 @@ Set input picture that contains the image information. It should be noted that t
 | Parameter | Description |
 | -- | -- |
 | [OH_ImageEffect](capi-imageeffect-oh-imageeffect.md) *imageEffect | Encapsulate OH_ImageEffect structure instance pointer |
-| [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) *picture | Indicates the OH_PictureNative that contains the image information |
+| OH_PictureNative *picture | Indicates the OH_PictureNative that contains the image information |
 
 **Returns**:
 
@@ -645,7 +645,7 @@ Set output picture that contains the image information
 | Parameter | Description |
 | -- | -- |
 | [OH_ImageEffect](capi-imageeffect-oh-imageeffect.md) *imageEffect | Encapsulate OH_ImageEffect structure instance pointer |
-| [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) *picture | Indicates the OH_PictureNative that contains the image information |
+| OH_PictureNative *picture | Indicates the OH_PictureNative that contains the image information |
 
 **Returns**:
 

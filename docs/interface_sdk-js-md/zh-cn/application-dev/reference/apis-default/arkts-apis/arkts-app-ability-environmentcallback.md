@@ -11,5 +11,5 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [EnvironmentCallback](arkts-app-ability-environmentcallback-environmentcallback-i.md) | EnvironmentCallback模块提供对系统环境变化监听回调的能力。 |
+| [EnvironmentCallback](arkts-appabilityenvironmentcallback-environmentcallback-i.md) | EnvironmentCallback模块提供对系统环境变化监听回调的能力。 |
 

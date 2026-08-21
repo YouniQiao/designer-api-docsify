@@ -36,46 +36,46 @@ import { formObserver } from '@kit.FormKit';
 | [getRunningFormInfosByFilter](arkts-form-formobserver-getrunningforminfosbyfilter-f-sys.md) | Obtains the RunningFormInfo objects by FormProviderFilter. |
 | [getRunningFormInfosByFilter](arkts-form-formobserver-getrunningforminfosbyfilter-f-sys.md) | Obtains the RunningFormInfo objects by FormProviderFilter. |
 | [offCall](arkts-form-formobserver-offcall-f-sys.md) | Unregister form call event Listening. |
-| [offFormAdd](arkts-form-formobserver-offformadd-f-sys.md) | Cancels listening to the event of add form. &lt;p&gt;You can use this method to cancel listening to the event of add form.&lt;/p&gt; |
-| [offFormRemove](arkts-form-formobserver-offformremove-f-sys.md) | Cancels listening to the event of remove form. &lt;p&gt;You can use this method to cancel listening to the event of remove form.&lt;/p&gt; |
+| [offFormAdd](arkts-form-formobserver-offformadd-f-sys.md) | Cancels listening to the event of add form. <p>You can use this method to cancel listening to the event of add form.</p> |
+| [offFormRemove](arkts-form-formobserver-offformremove-f-sys.md) | Cancels listening to the event of remove form. <p>You can use this method to cancel listening to the event of remove form.</p> |
 | [offMessage](arkts-form-formobserver-offmessage-f-sys.md) | Unregister form message event Listening. |
-| [offNotifyInvisible](arkts-form-formobserver-offnotifyinvisible-f-sys.md) | Cancels listening to the event of notifyInvisible type change. &lt;p&gt;You can use this method to cancel listening to the event of notifyInvisible type change.&lt;/p&gt; |
-| [offNotifyVisible](arkts-form-formobserver-offnotifyvisible-f-sys.md) | Cancels listening to the event of notifyVisible type change. &lt;p&gt;You can use this method to cancel listening to the event of notifyVisible type change.&lt;/p&gt; |
+| [offNotifyInvisible](arkts-form-formobserver-offnotifyinvisible-f-sys.md) | Cancels listening to the event of notifyInvisible type change. <p>You can use this method to cancel listening to the event of notifyInvisible type change.</p> |
+| [offNotifyVisible](arkts-form-formobserver-offnotifyvisible-f-sys.md) | Cancels listening to the event of notifyVisible type change. <p>You can use this method to cancel listening to the event of notifyVisible type change.</p> |
 | [offRouter](arkts-form-formobserver-offrouter-f-sys.md) | Unregister form router event Listening. |
 | [off_call](arkts-form-formobserver-offcall-f-sys.md) | Unregister form call event Listening. |
-| [off_formAdd](arkts-form-formobserver-offformadd-f-sys.md) | Cancels listening to the event of add form. &lt;p&gt;You can use this method to cancel listening to the event of add form.&lt;/p&gt; |
-| [off_formRemove](arkts-form-formobserver-offformremove-f-sys.md) | Cancels listening to the event of remove form. &lt;p&gt;You can use this method to cancel listening to the event of remove form.&lt;/p&gt; |
+| [off_formAdd](arkts-form-formobserver-offformadd-f-sys.md) | Cancels listening to the event of add form. <p>You can use this method to cancel listening to the event of add form.</p> |
+| [off_formRemove](arkts-form-formobserver-offformremove-f-sys.md) | Cancels listening to the event of remove form. <p>You can use this method to cancel listening to the event of remove form.</p> |
 | [off_message](arkts-form-formobserver-offmessage-f-sys.md) | Unregister form message event Listening. |
-| [off_notifyInvisible](arkts-form-formobserver-offnotifyinvisible-f-sys.md) | Cancels listening to the event of notifyInvisible type change. &lt;p&gt;You can use this method to cancel listening to the event of notifyInvisible type change.&lt;/p&gt; |
-| [off_notifyVisible](arkts-form-formobserver-offnotifyvisible-f-sys.md) | Cancels listening to the event of notifyVisible type change. &lt;p&gt;You can use this method to cancel listening to the event of notifyVisible type change.&lt;/p&gt; |
+| [off_notifyInvisible](arkts-form-formobserver-offnotifyinvisible-f-sys.md) | Cancels listening to the event of notifyInvisible type change. <p>You can use this method to cancel listening to the event of notifyInvisible type change.</p> |
+| [off_notifyVisible](arkts-form-formobserver-offnotifyvisible-f-sys.md) | Cancels listening to the event of notifyVisible type change. <p>You can use this method to cancel listening to the event of notifyVisible type change.</p> |
 | [off_router](arkts-form-formobserver-offrouter-f-sys.md) | Unregister form router event Listening. |
-| [onCall](arkts-form-formobserver-oncall-f-sys.md) | Call event listening in registered form. &lt;p&gt;This interface requires permission to receive callback.&lt;/p&gt; |
-| [onCall](arkts-form-formobserver-oncall-f-sys.md) | Call event listening in registered form. &lt;p&gt;This interface requires permission to receive callback.&lt;/p&gt; |
-| [onFormAdd](arkts-form-formobserver-onformadd-f-sys.md) | Listens to the event of add form. &lt;p&gt;You can use this method to listen to the event of add form.&lt;/p&gt; |
-| [onFormAdd](arkts-form-formobserver-onformadd-f-sys.md) | Listens to the event of add form. &lt;p&gt;You can use this method to listen to the event of add form for a particular card host.&lt;/p&gt; |
-| [onFormRemove](arkts-form-formobserver-onformremove-f-sys.md) | Listens to the event of remove form. &lt;p&gt;You can use this method to listen to the event of remove form.&lt;/p&gt; |
-| [onFormRemove](arkts-form-formobserver-onformremove-f-sys.md) | Listens to the event of remove form. &lt;p&gt;You can use this method to listen to the event of remove form for a particular card host.&lt;/p&gt; |
-| [onMessage](arkts-form-formobserver-onmessage-f-sys.md) | Message event listening in registered form. &lt;p&gt;This interface requires permission to receive callback.&lt;/p&gt; |
-| [onMessage](arkts-form-formobserver-onmessage-f-sys.md) | Message event listening in registered form. &lt;p&gt;This interface requires permission to receive callback.&lt;/p&gt; |
-| [onNotifyInvisible](arkts-form-formobserver-onnotifyinvisible-f-sys.md) | Listens to the event of notifyInvisible type change. &lt;p&gt;You can use this method to listen to the event of notifyInvisible type change.&lt;/p&gt; |
-| [onNotifyInvisible](arkts-form-formobserver-onnotifyinvisible-f-sys.md) | Listens to the event of notifyInvisible type change. &lt;p&gt;You can use this method to listen to the event of notifyInvisible type change for a particular card host.&lt;/p&gt; |
-| [onNotifyVisible](arkts-form-formobserver-onnotifyvisible-f-sys.md) | Listens to the event of notifyVisible type change. &lt;p&gt;You can use this method to listen to the event of notifyVisible type change.&lt;/p&gt; |
-| [onNotifyVisible](arkts-form-formobserver-onnotifyvisible-f-sys.md) | Listens to the event of notifyVisible type change. &lt;p&gt;You can use this method to listen to the event of notifyVisible type change for a particular card host.&lt;/p&gt; |
-| [onRouter](arkts-form-formobserver-onrouter-f-sys.md) | Router event listening in registered form. &lt;p&gt;This interface requires permission to receive callback.&lt;/p&gt; |
-| [onRouter](arkts-form-formobserver-onrouter-f-sys.md) | Router event listening in registered form. &lt;p&gt;This interface requires permission to receive callback.&lt;/p&gt; |
-| [on_call](arkts-form-formobserver-oncall-f-sys.md) | Call event listening in registered form. &lt;p&gt;This interface requires permission to receive callback.&lt;/p&gt; |
-| [on_call](arkts-form-formobserver-oncall-f-sys.md) | Call event listening in registered form. &lt;p&gt;This interface requires permission to receive callback.&lt;/p&gt; |
-| [on_formAdd](arkts-form-formobserver-onformadd-f-sys.md) | Listens to the event of add form. &lt;p&gt;You can use this method to listen to the event of add form.&lt;/p&gt; |
-| [on_formAdd](arkts-form-formobserver-onformadd-f-sys.md) | Listens to the event of add form. &lt;p&gt;You can use this method to listen to the event of add form for a particular card host.&lt;/p&gt; |
-| [on_formRemove](arkts-form-formobserver-onformremove-f-sys.md) | Listens to the event of remove form. &lt;p&gt;You can use this method to listen to the event of remove form.&lt;/p&gt; |
-| [on_formRemove](arkts-form-formobserver-onformremove-f-sys.md) | Listens to the event of remove form. &lt;p&gt;You can use this method to listen to the event of remove form for a particular card host.&lt;/p&gt; |
-| [on_message](arkts-form-formobserver-onmessage-f-sys.md) | Message event listening in registered form. &lt;p&gt;This interface requires permission to receive callback.&lt;/p&gt; |
-| [on_message](arkts-form-formobserver-onmessage-f-sys.md) | Message event listening in registered form. &lt;p&gt;This interface requires permission to receive callback.&lt;/p&gt; |
-| [on_notifyInvisible](arkts-form-formobserver-onnotifyinvisible-f-sys.md) | Listens to the event of notifyInvisible type change. &lt;p&gt;You can use this method to listen to the event of notifyInvisible type change.&lt;/p&gt; |
-| [on_notifyInvisible](arkts-form-formobserver-onnotifyinvisible-f-sys.md) | Listens to the event of notifyInvisible type change. &lt;p&gt;You can use this method to listen to the event of notifyInvisible type change for a particular card host.&lt;/p&gt; |
-| [on_notifyVisible](arkts-form-formobserver-onnotifyvisible-f-sys.md) | Listens to the event of notifyVisible type change. &lt;p&gt;You can use this method to listen to the event of notifyVisible type change.&lt;/p&gt; |
-| [on_notifyVisible](arkts-form-formobserver-onnotifyvisible-f-sys.md) | Listens to the event of notifyVisible type change. &lt;p&gt;You can use this method to listen to the event of notifyVisible type change for a particular card host.&lt;/p&gt; |
-| [on_router](arkts-form-formobserver-onrouter-f-sys.md) | Router event listening in registered form. &lt;p&gt;This interface requires permission to receive callback.&lt;/p&gt; |
-| [on_router](arkts-form-formobserver-onrouter-f-sys.md) | Router event listening in registered form. &lt;p&gt;This interface requires permission to receive callback.&lt;/p&gt; |
+| [onCall](arkts-form-formobserver-oncall-f-sys.md) | Call event listening in registered form. <p>This interface requires permission to receive callback.</p> |
+| [onCall](arkts-form-formobserver-oncall-f-sys.md) | Call event listening in registered form. <p>This interface requires permission to receive callback.</p> |
+| [onFormAdd](arkts-form-formobserver-onformadd-f-sys.md) | Listens to the event of add form. <p>You can use this method to listen to the event of add form.</p> |
+| [onFormAdd](arkts-form-formobserver-onformadd-f-sys.md) | Listens to the event of add form. <p>You can use this method to listen to the event of add form for a particular card host.</p> |
+| [onFormRemove](arkts-form-formobserver-onformremove-f-sys.md) | Listens to the event of remove form. <p>You can use this method to listen to the event of remove form.</p> |
+| [onFormRemove](arkts-form-formobserver-onformremove-f-sys.md) | Listens to the event of remove form. <p>You can use this method to listen to the event of remove form for a particular card host.</p> |
+| [onMessage](arkts-form-formobserver-onmessage-f-sys.md) | Message event listening in registered form. <p>This interface requires permission to receive callback.</p> |
+| [onMessage](arkts-form-formobserver-onmessage-f-sys.md) | Message event listening in registered form. <p>This interface requires permission to receive callback.</p> |
+| [onNotifyInvisible](arkts-form-formobserver-onnotifyinvisible-f-sys.md) | Listens to the event of notifyInvisible type change. <p>You can use this method to listen to the event of notifyInvisible type change.</p> |
+| [onNotifyInvisible](arkts-form-formobserver-onnotifyinvisible-f-sys.md) | Listens to the event of notifyInvisible type change. <p>You can use this method to listen to the event of notifyInvisible type change for a particular card host.</p> |
+| [onNotifyVisible](arkts-form-formobserver-onnotifyvisible-f-sys.md) | Listens to the event of notifyVisible type change. <p>You can use this method to listen to the event of notifyVisible type change.</p> |
+| [onNotifyVisible](arkts-form-formobserver-onnotifyvisible-f-sys.md) | Listens to the event of notifyVisible type change. <p>You can use this method to listen to the event of notifyVisible type change for a particular card host.</p> |
+| [onRouter](arkts-form-formobserver-onrouter-f-sys.md) | Router event listening in registered form. <p>This interface requires permission to receive callback.</p> |
+| [onRouter](arkts-form-formobserver-onrouter-f-sys.md) | Router event listening in registered form. <p>This interface requires permission to receive callback.</p> |
+| [on_call](arkts-form-formobserver-oncall-f-sys.md) | Call event listening in registered form. <p>This interface requires permission to receive callback.</p> |
+| [on_call](arkts-form-formobserver-oncall-f-sys.md) | Call event listening in registered form. <p>This interface requires permission to receive callback.</p> |
+| [on_formAdd](arkts-form-formobserver-onformadd-f-sys.md) | Listens to the event of add form. <p>You can use this method to listen to the event of add form.</p> |
+| [on_formAdd](arkts-form-formobserver-onformadd-f-sys.md) | Listens to the event of add form. <p>You can use this method to listen to the event of add form for a particular card host.</p> |
+| [on_formRemove](arkts-form-formobserver-onformremove-f-sys.md) | Listens to the event of remove form. <p>You can use this method to listen to the event of remove form.</p> |
+| [on_formRemove](arkts-form-formobserver-onformremove-f-sys.md) | Listens to the event of remove form. <p>You can use this method to listen to the event of remove form for a particular card host.</p> |
+| [on_message](arkts-form-formobserver-onmessage-f-sys.md) | Message event listening in registered form. <p>This interface requires permission to receive callback.</p> |
+| [on_message](arkts-form-formobserver-onmessage-f-sys.md) | Message event listening in registered form. <p>This interface requires permission to receive callback.</p> |
+| [on_notifyInvisible](arkts-form-formobserver-onnotifyinvisible-f-sys.md) | Listens to the event of notifyInvisible type change. <p>You can use this method to listen to the event of notifyInvisible type change.</p> |
+| [on_notifyInvisible](arkts-form-formobserver-onnotifyinvisible-f-sys.md) | Listens to the event of notifyInvisible type change. <p>You can use this method to listen to the event of notifyInvisible type change for a particular card host.</p> |
+| [on_notifyVisible](arkts-form-formobserver-onnotifyvisible-f-sys.md) | Listens to the event of notifyVisible type change. <p>You can use this method to listen to the event of notifyVisible type change.</p> |
+| [on_notifyVisible](arkts-form-formobserver-onnotifyvisible-f-sys.md) | Listens to the event of notifyVisible type change. <p>You can use this method to listen to the event of notifyVisible type change for a particular card host.</p> |
+| [on_router](arkts-form-formobserver-onrouter-f-sys.md) | Router event listening in registered form. <p>This interface requires permission to receive callback.</p> |
+| [on_router](arkts-form-formobserver-onrouter-f-sys.md) | Router event listening in registered form. <p>This interface requires permission to receive callback.</p> |
 <!--DelEnd-->
 

@@ -16,7 +16,8 @@ function createTimer(options: TimerOptions, callback: AsyncCallback<long>): void
 
 > **注意：**
 > 
-> 需与[systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md)结合使用，否则会造 &gt; 成内存泄漏
+> 需与[systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md)结合使用，否则会造
+> 成内存泄漏
 
 **起始版本：** 23
 
@@ -99,7 +100,8 @@ function createTimer(options: TimerOptions): Promise<long>
 
 > **注意：**
 > 
-> 需与[systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md)结合使用，否则会造 &gt; 成内存泄漏
+> 需与[systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md)结合使用，否则会造
+> 成内存泄漏
 
 **起始版本：** 23
 

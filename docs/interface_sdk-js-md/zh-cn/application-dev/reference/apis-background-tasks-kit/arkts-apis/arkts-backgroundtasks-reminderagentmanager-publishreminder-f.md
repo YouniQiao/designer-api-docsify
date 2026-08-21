@@ -16,7 +16,9 @@ function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<i
 
 > **说明：**
 > 
-> 该接口需要申请通知弹窗权限 &gt; [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md) &gt; 后调用。 &gt;
+> 该接口需要申请通知弹窗权限
+> [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md)
+> 后调用。 &gt;
 
 **起始版本：** 23
 
@@ -98,7 +100,9 @@ function publishReminder(reminderReq: ReminderRequest): Promise<int>
 
 > **说明：**
 > 
-> 该接口需要申请通知弹窗权限 &gt; [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md) &gt; 后调用。 &gt;
+> 该接口需要申请通知弹窗权限
+> [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md)
+> 后调用。 &gt;
 
 **起始版本：** 23
 

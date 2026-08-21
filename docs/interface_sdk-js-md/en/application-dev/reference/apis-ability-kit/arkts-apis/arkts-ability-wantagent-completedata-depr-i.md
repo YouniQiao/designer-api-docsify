@@ -113,7 +113,7 @@ want: Want
 
 Existing Want that is triggered.
 
-**Type:** [Want](arkts-ability-app-ability-want-want-c.md)
+**Type:** [Want](arkts-ability-appabilitywant-want-c.md)
 
 **Since:** 7
 

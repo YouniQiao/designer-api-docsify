@@ -28,7 +28,7 @@ Defines SecurityUIExtensionComponent Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want object |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Want object |
 | options | [SecurityUIExtensionOptions](arkts-securityuiextensioncomponent-securityuiextensionoptions-i-sys.md) | No | The options |
 | content_ | [CustomBuilder](../arkts-apis/arkts-custombuilder-t.md) | No | container |
 

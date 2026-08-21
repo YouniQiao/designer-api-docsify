@@ -14,7 +14,7 @@
 FLG_FIXED = 0
 ```
 
-@brief Fixed style. <br> <br>&lt;p&gt;It's provided for the panel with type of SOFT_KEYBOARD. When the flag is set, the soft keyboard is fixed at the bottom of the screen.&lt;/p&gt;
+@brief Fixed style. <br> <br><p>It's provided for the panel with type of SOFT_KEYBOARD. When the flag is set, the soft keyboard is fixed at the bottom of the screen.</p>
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ FLG_FIXED = 0
 FLG_FLOATING
 ```
 
-@brief Floating style. <br> <br>&lt;p&gt;It's provided for the panel with type of SOFT_KEYBOARD. When the flag is set, the soft keyboard is floating.&lt;/p&gt;
+@brief Floating style. <br> <br><p>It's provided for the panel with type of SOFT_KEYBOARD. When the flag is set, the soft keyboard is floating.</p>
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ FLG_FLOATING
 FLAG_CANDIDATE
 ```
 
-@brief Candidate style. <br> <br>&lt;p&gt;It's provided for the panel with type of SOFT_KEYBOARD. When the flag is set, the soft keyboard is a candidate window which will show the possible characters when user types a input code. Panel with candidate style will not be automatically shown or hidden by input method service. Input method application developers are supposed to control the panel status on their own.&lt;/p&gt;
+@brief Candidate style. <br> <br><p>It's provided for the panel with type of SOFT_KEYBOARD. When the flag is set, the soft keyboard is a candidate window which will show the possible characters when user types a input code. Panel with candidate style will not be automatically shown or hidden by input method service. Input method application developers are supposed to control the panel status on their own.</p>
 
 **Since:** 23
 

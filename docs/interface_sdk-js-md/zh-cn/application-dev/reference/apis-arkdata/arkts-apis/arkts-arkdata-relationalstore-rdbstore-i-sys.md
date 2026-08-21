@@ -79,7 +79,8 @@ cloudSync(
 > 
 > 从API version 18开始，手动执行端云同步时，设置谓词条件时新增支持指定资产下载能力。此时，同步模式需要设置为`relationalStore.SyncMode.SYNC_MODE_CLOUD_FIRST`。
 > 
-> 谓词中支持使用主键（必填）和资产（可选）作为同步条件：选择资产作为同步条件时，谓词仅支持[equalTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#equalto)；指定资产的数量较多时（最 &gt; 多支持指定50个资产），建议谓词中仅使用主键作为同步条件。
+> 谓词中支持使用主键（必填）和资产（可选）作为同步条件：选择资产作为同步条件时，谓词仅支持[equalTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#equalto)；指定资产的数量较多时（最
+> 多支持指定50个资产），建议谓词中仅使用主键作为同步条件。
 
 **起始版本：** 23
 
@@ -119,7 +120,8 @@ cloudSync(mode: SyncMode, predicates: RdbPredicates, progress: Callback<Progress
 > 
 > 从API version 18开始，手动执行端云同步时，设置谓词条件时新增支持指定资产下载能力。此时，同步模式需要设置为`relationalStore.SyncMode.SYNC_MODE_CLOUD_FIRST`。
 > 
-> 谓词中支持使用主键（必填）和资产（可选）作为同步条件：选择资产作为同步条件时，谓词仅支持[equalTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#equalto)；指定资产的数量较多时（最 &gt; 多支持指定50个资产），建议谓词中仅使用主键作为同步条件。
+> 谓词中支持使用主键（必填）和资产（可选）作为同步条件：选择资产作为同步条件时，谓词仅支持[equalTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#equalto)；指定资产的数量较多时（最
+> 多支持指定50个资产），建议谓词中仅使用主键作为同步条件。
 
 **起始版本：** 23
 

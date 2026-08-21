@@ -36,7 +36,7 @@ readonly keyAction: int
 readonly keyCode: int
 ```
 
-@brief Key value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md).
+@brief Key value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md).
 
 **Type:** int
 

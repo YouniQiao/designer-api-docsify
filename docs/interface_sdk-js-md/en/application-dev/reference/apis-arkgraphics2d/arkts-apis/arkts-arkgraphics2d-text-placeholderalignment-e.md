@@ -6,7 +6,8 @@ Enumerates the vertical alignment modes of a placeholder relative to the surroun
 
 > **NOTE：**
 > 
-> The figure shows the last three alignment modes. The first three alignment modes are similar in text baseline &gt; alignment, with the comparison reference being the text baseline, indicated by the green line.
+> The figure shows the last three alignment modes. The first three alignment modes are similar in text baseline
+> alignment, with the comparison reference being the text baseline, indicated by the green line.
 > 
 > 
 

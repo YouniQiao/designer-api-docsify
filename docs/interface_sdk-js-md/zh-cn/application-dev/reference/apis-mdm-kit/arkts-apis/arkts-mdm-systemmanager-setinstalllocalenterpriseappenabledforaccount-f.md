@@ -20,7 +20,8 @@ function setInstallLocalEnterpriseAppEnabledForAccount(admin: Want, isEnable: bo
 > 
 > 满足以下任意条件，PC/2in1企业设备在当前用户下即支持本地安装企业应用：
 > 
-> 1. 已通过[setInstallLocalEnterpriseAppEnabled](arkts-mdm-systemmanager-setinstalllocalenterpriseappenabled-f.md)开启离线安装器； &gt;
+> 1. 已通过[setInstallLocalEnterpriseAppEnabled](arkts-mdm-systemmanager-setinstalllocalenterpriseappenabled-f.md)开启离线安装器；
+> 
 > 2. 已通过本接口设置当前用户支持本地安装企业应用。
 
 **起始版本：** 24
@@ -37,7 +38,7 @@ function setInstallLocalEnterpriseAppEnabledForAccount(admin: Want, isEnable: bo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | isEnable | boolean | 是 | 是否支持本地安装企业应用。true表示支持，false表示不支持。 |
 | accountId | number | 是 | 用户ID，取值范围：大于等于0。<br/>accountId可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
 

@@ -2,7 +2,7 @@
 
 Implements a window manager, which manages each basic window unit, that is, [Window](arkts-arkui-window-n.md) instance.
 
-Before calling any of the following APIs, you must use [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) to create a WindowStage instance.
+Before calling any of the following APIs, you must use [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiability-uiability-c.md#onwindowstagecreate) to create a WindowStage instance.
 
 **Since:** 23
 
@@ -135,7 +135,11 @@ Sets the image displayed in the multitasking view and on dock hover. This API us
 
 > **NOTE：**
 > 
-> Before calling this API, you are advised to complete page loading via &gt; [loadContent](arkts-arkui-window-window-i.md#loadcontent) or &gt; [setUIContent](arkts-arkui-window-window-i.md#setuicontent). If this API is called before the application &gt; completes page loading, the intended functionality does not take effect. As a result, only the application's &gt; launch page is displayed in the multitasking view.
+> Before calling this API, you are advised to complete page loading via
+> [loadContent](arkts-arkui-window-window-i.md#loadcontent) or
+> [setUIContent](arkts-arkui-window-window-i.md#setuicontent). If this API is called before the application
+> completes page loading, the intended functionality does not take effect. As a result, only the application's
+> launch page is displayed in the multitasking view.
 
 **Since:** 23
 

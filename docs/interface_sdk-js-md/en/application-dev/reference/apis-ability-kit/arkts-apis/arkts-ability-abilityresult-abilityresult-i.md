@@ -34,7 +34,7 @@ want?: Want
 
 Indicates the data returned after the ability is destroyed. You can define the data returned. This parameter can be null.
 
-**Type:** [Want](arkts-ability-app-ability-want-want-c.md)
+**Type:** [Want](arkts-ability-appabilitywant-want-c.md)
 
 **Since:** 23
 

@@ -98,7 +98,7 @@ paste(): void
 
 Executes the paste operation related to this context menu.
 
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> Permissions need to be configured: ohos.permission.READ_PASTEBOARD. &lt;/p&gt;
+<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> Permissions need to be configured: ohos.permission.READ_PASTEBOARD. </p>
 
 **起始版本：** 23
 
@@ -116,7 +116,7 @@ pasteAndMatchStyle(): void
 
 Executes the paste and match style operation related to this context menu.
 
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> Permissions need to be configured: ohos.permission.READ_PASTEBOARD. &lt;/p&gt;
+<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> Permissions need to be configured: ohos.permission.READ_PASTEBOARD. </p>
 
 **起始版本：** 23
 

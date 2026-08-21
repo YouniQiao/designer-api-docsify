@@ -4,12 +4,15 @@
 
 > **说明：**
 > 
-> 示意图展示文本行排版参数：width（包含左右空格的文本行宽度）、ascent（上升高度最高点）、descent（下降高度最低点）、leading（行间距）、top（当前行最高点）、baseline（字符基线）、bottom（ &gt; 当前行最低点）、next line top（下一行最高点）。
+> 示意图展示文本行排版参数：width（包含左右空格的文本行宽度）、ascent（上升高度最高点）、descent（下降高度最低点）、leading（行间距）、top（当前行最高点）、baseline（字符基线）、bottom（
+> 当前行最低点）、next line top（下一行最高点）。
 > 
->  &gt;
+> 
+> 
 > 示意图展示了字符串为" a b "的排版边界。
 > 
->  &gt;
+> 
+> 
 > 示意图展示了字符串为"j"或"E"的排版边界。
 > 
 > !

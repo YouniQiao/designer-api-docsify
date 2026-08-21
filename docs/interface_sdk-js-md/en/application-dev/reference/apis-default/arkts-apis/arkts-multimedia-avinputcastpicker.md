@@ -11,5 +11,5 @@
 
 | Name | Description |
 | --- | --- |
-| [AVInputCastPicker](arkts-multimedia-avinputcastpicker-avinputcastpicker-s.md) | A picker view to show availale input device list. @struct { AVInputCastPicker } |
+| [AVInputCastPicker](arkts-multimediaavinputcastpicker-avinputcastpicker-s.md) | A picker view to show availale input device list. @struct { AVInputCastPicker } |
 

@@ -1621,7 +1621,8 @@ pause(callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [suspend](#suspend)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [suspend](#suspend)替代。
 
 **起始版本：** 7
 
@@ -1715,7 +1716,8 @@ query(callback: AsyncCallback<DownloadInfo>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [getTaskInfo](#gettaskinfo)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [getTaskInfo](#gettaskinfo)替代。
 
 **起始版本：** 7
 
@@ -1809,7 +1811,8 @@ queryMimeType(callback: AsyncCallback<string>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [getTaskMimeType](#gettaskmimetype)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [getTaskMimeType](#gettaskmimetype)替代。
 
 **起始版本：** 7
 
@@ -1903,7 +1906,8 @@ remove(callback: AsyncCallback<boolean>): void
 
 > **说明：**
 > 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用 &gt; [delete](arkts-basicservices-request-uploadtask-i.md#delete)替代。
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [delete](arkts-basicservices-request-uploadtask-i.md#delete)替代。
 
 **起始版本：** 6
 
@@ -2169,7 +2173,8 @@ resume(callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [restore](#restore)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [restore](#restore)替代。
 
 **起始版本：** 7
 

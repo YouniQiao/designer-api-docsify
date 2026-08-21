@@ -4,7 +4,9 @@ Describes the water flow item sections.
 
 > **NOTE：**
 > 
-> After the section information is modified using **splice**, **push**, and **update**, ensure that the total number &gt; of child nodes in all sections matches the actual total number of child nodes in the **WaterFlow** component. Any &gt; failure to do so may result in layout issues that prevent the **WaterFlow** component from scrolling properly.
+> After the section information is modified using **splice**, **push**, and **update**, ensure that the total number
+> of child nodes in all sections matches the actual total number of child nodes in the **WaterFlow** component. Any
+> failure to do so may result in layout issues that prevent the **WaterFlow** component from scrolling properly.
 
 **Since:** 12
 

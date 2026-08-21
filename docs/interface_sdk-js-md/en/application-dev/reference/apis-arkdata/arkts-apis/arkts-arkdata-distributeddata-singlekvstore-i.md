@@ -1086,9 +1086,11 @@ Deletes data of a device. This API uses an asynchronous callback to return the r
 
 > **NOTE：**
 > 
-> The value of **deviceId** can be obtained by <!--RP1-->
+> The value of **deviceId** can be obtained by <!--RP1--
+> 
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
-> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system &gt; applications.
+> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
+> applications.
 > For details about how to obtain **deviceId**, see [sync()](#sync).
 
 **Since:** 8
@@ -1144,9 +1146,11 @@ Deletes data of a device. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> The value of **deviceId** can be obtained by <!--RP1-->
+> The value of **deviceId** can be obtained by <!--RP1--
+> 
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
-> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system &gt; applications.
+> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
+> applications.
 > For details about how to obtain **deviceId**, see [sync()](#sync).
 
 **Since:** 8
@@ -1294,9 +1298,12 @@ Synchronizes the KV store manually.
 
 > **NOTE：**
 > 
-> **deviceIds** is **networkId** in <!--RP2-->
-> [DeviceInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-deviceinfo-i-sys.md), which can be obtained by &gt; [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
-> <!--RP2End-->The APIs of the **deviceManager** module are system interfaces and available only to system &gt; applications.
+> **deviceIds** is **networkId** in <!--RP2--
+> 
+> [DeviceInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-deviceinfo-i-sys.md), which can be obtained by
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
+> <!--RP2End-->The APIs of the **deviceManager** module are system interfaces and available only to system
+> applications.
 
 **Since:** 7
 

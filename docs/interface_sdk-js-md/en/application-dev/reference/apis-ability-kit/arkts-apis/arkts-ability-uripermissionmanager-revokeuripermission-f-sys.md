@@ -16,9 +16,12 @@ Revokes the URI permission from an application. This API uses an asynchronous ca
 
 > **NOTE：**
 > 
-> - This API can be used to revoke the URI permission of another application obtained by this application or URI &gt; permission granted by this application.
+> - This API can be used to revoke the URI permission of another application obtained by this application or URI
+> permission granted by this application.
 > 
-> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
+> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the
+> system cannot guarantee their functions.
 
 **Since:** 10
 
@@ -78,9 +81,12 @@ Revokes the URI permission from an application. This API uses an asynchronous ca
 
 > **NOTE：**
 > 
-> - This API can be used to revoke the URI permission of another application obtained by this application or URI &gt; permission granted by this application.
+> - This API can be used to revoke the URI permission of another application obtained by this application or URI
+> permission granted by this application.
 > 
-> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
+> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the
+> system cannot guarantee their functions.
 
 **Since:** 23
 
@@ -118,9 +124,12 @@ Revokes the URI permission from an application. This API uses a promise to retur
 
 > **NOTE：**
 > 
-> - This API can be used to revoke the URI permission of another application obtained by this application or URI &gt; permission granted by this application.
+> - This API can be used to revoke the URI permission of another application obtained by this application or URI
+> permission granted by this application.
 > 
-> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
+> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the
+> system cannot guarantee their functions.
 
 **Since:** 10
 
@@ -185,9 +194,12 @@ Revokes the URI permission from an application. This API uses a promise to retur
 
 > **NOTE：**
 > 
-> - This API can be used to revoke the URI permission of another application obtained by this application or URI &gt; permission granted by this application.
+> - This API can be used to revoke the URI permission of another application obtained by this application or URI
+> permission granted by this application.
 > 
-> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
+> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the
+> system cannot guarantee their functions.
 
 **Since:** 23
 
@@ -230,11 +242,15 @@ Revokes the URI permission from an application. This API uses a promise to retur
 
 > **NOTE：**
 > 
-> - This API can be used to revoke the URI permission of another application obtained by this application or URI &gt; permission granted by this application.
+> - This API can be used to revoke the URI permission of another application obtained by this application or URI
+> permission granted by this application.
 > 
-> - This API can be used to revoke the URI permissions granted to a cloned application. You need to specify the &gt; application bundle name and index of the cloned application.
+> - This API can be used to revoke the URI permissions granted to a cloned application. You need to specify the
+> application bundle name and index of the cloned application.
 > 
-> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the &gt; [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the &gt; system cannot guarantee their functions.
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
+> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the
+> system cannot guarantee their functions.
 
 **Since:** 23
 

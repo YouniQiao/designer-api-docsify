@@ -4,8 +4,10 @@ The **usb** module provides USB device management functions, including USB devic
 
 > **NOTE：**
 > 
-> The initial APIs of this module are supported since API version 8. Newly added APIs will be marked with &gt; a superscript to indicate their earliest API version.
-> The APIs provided by this module are no longer maintained since API version 9. You are advised to use &gt; [@ohos.usbManager](arkts-usbmanager.md).
+> The initial APIs of this module are supported since API version 8. Newly added APIs will be marked with
+> a superscript to indicate their earliest API version.
+> The APIs provided by this module are no longer maintained since API version 9. You are advised to use
+> [@ohos.usbManager](arkts-usbmanager.md).
 
 **Since:** 8
 

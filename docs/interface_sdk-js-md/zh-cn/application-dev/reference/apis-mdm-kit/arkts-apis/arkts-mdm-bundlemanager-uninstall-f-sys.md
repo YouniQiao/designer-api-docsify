@@ -16,7 +16,8 @@ function uninstall(admin: Want, bundleName: string, callback: AsyncCallback<void
 
 > **说明：**
 > 
-> 当应用为不可卸载的预置应用或者通过[addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md)接口设置了不 &gt; 允许卸载时，调用此接口卸载应用会返回401错误码。
+> 当应用为不可卸载的预置应用或者通过[addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md)接口设置了不
+> 允许卸载时，调用此接口卸载应用会返回401错误码。
 
 **起始版本：** 10
 
@@ -38,7 +39,7 @@ function uninstall(admin: Want, bundleName: string, callback: AsyncCallback<void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | bundleName | string | 是 | 包名。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当接口调用成功，err为null，否则为错误对象。 |
 
@@ -84,7 +85,8 @@ function uninstall(admin: Want, bundleName: string, userId: number, callback: As
 
 > **说明：**
 > 
-> 当应用为不可卸载的预置应用或者通过[addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md)接口设置了不 &gt; 允许卸载时，调用此接口卸载应用会返回401错误码。
+> 当应用为不可卸载的预置应用或者通过[addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md)接口设置了不
+> 允许卸载时，调用此接口卸载应用会返回401错误码。
 
 **起始版本：** 10
 
@@ -106,7 +108,7 @@ function uninstall(admin: Want, bundleName: string, userId: number, callback: As
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | bundleName | string | 是 | 包名。 |
 | userId | number | 是 | 用户ID，指定具体用户。取值范围：大于等于0。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当接口调用成功，err为null，否则为错误对象。 |
@@ -153,7 +155,8 @@ function uninstall(admin: Want, bundleName: string, isKeepData: boolean, callbac
 
 > **说明：**
 > 
-> 当应用为不可卸载的预置应用或者通过[addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md)接口设置了不 &gt; 允许卸载时，调用此接口卸载应用会返回401错误码。
+> 当应用为不可卸载的预置应用或者通过[addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md)接口设置了不
+> 允许卸载时，调用此接口卸载应用会返回401错误码。
 
 **起始版本：** 10
 
@@ -175,7 +178,7 @@ function uninstall(admin: Want, bundleName: string, isKeepData: boolean, callbac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | bundleName | string | 是 | 包名。 |
 | isKeepData | boolean | 是 | 是否保留包数据，true表示保留，false表示不保留。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当接口调用成功，err为null，否则为错误对象。 |
@@ -222,7 +225,8 @@ function uninstall(admin: Want, bundleName: string, userId: number, isKeepData: 
 
 > **说明：**
 > 
-> 当应用为不可卸载的预置应用或者通过[addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md)接口设置了不 &gt; 允许卸载时，调用此接口卸载应用会返回401错误码。
+> 当应用为不可卸载的预置应用或者通过[addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md)接口设置了不
+> 允许卸载时，调用此接口卸载应用会返回401错误码。
 
 **起始版本：** 10
 
@@ -244,7 +248,7 @@ function uninstall(admin: Want, bundleName: string, userId: number, isKeepData: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | bundleName | string | 是 | 包名。 |
 | userId | number | 是 | 用户ID，指定具体用户。取值范围：大于等于0。 |
 | isKeepData | boolean | 是 | 是否保留包数据，true表示保留，false表示不保留。 |

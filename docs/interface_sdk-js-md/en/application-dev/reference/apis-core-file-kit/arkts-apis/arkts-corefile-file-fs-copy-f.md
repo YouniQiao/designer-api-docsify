@@ -32,7 +32,7 @@ A maximum of 10 cross-device copy tasks are allowed at the same time, and the nu
 | --- | --- | --- | --- |
 | srcUri | string | Yes | URI of the file or directory to copy. |
 | destUri | string | Yes | URI of the destination file or directory. |
-| options | [CopyOptions](arkts-corefile-file-fs-copyoptions-i.md) | No | Callback invoked to provide the copy progress. If this parameter is not set, the callback will not be invoked. |
+| options | [CopyOptions](arkts-corefile-filefs-copyoptions-i.md) | No | Callback invoked to provide the copy progress. If this parameter is not set, the callback will not be invoked. |
 
 **Return value:**
 
@@ -149,7 +149,7 @@ File copy across devices is supported. This API forcibly overwrites the file or 
 | --- | --- | --- | --- |
 | srcUri | string | Yes | URI of the file or directory to copy. |
 | destUri | string | Yes | URI of the destination file or directory. |
-| options | [CopyOptions](arkts-corefile-file-fs-copyoptions-i.md) | Yes | Callback used to return the copy progress. |
+| options | [CopyOptions](arkts-corefile-filefs-copyoptions-i.md) | Yes | Callback used to return the copy progress. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**

@@ -16,7 +16,8 @@ Obtains the uplink traffic of the specified socket (in bytes). This API uses an 
 
 > **NOTE：**
 > 
-> It is recommended to use this API when the socket is connected. Otherwise, the corresponding traffic data cannot &gt; be queried after the socket is closed.
+> It is recommended to use this API when the socket is connected. Otherwise, the corresponding traffic data cannot
+> be queried after the socket is closed.
 
 **Since:** 23
 
@@ -64,7 +65,8 @@ Obtains the uplink traffic (in bytes) of the specified socket. This API uses a p
 
 > **NOTE：**
 > 
-> It is recommended to use this API when the socket is connected. Otherwise, the corresponding traffic data cannot &gt; be queried after the socket is closed.
+> It is recommended to use this API when the socket is connected. Otherwise, the corresponding traffic data cannot
+> be queried after the socket is closed.
 
 **Since:** 23
 

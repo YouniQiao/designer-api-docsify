@@ -17,11 +17,19 @@ Binds the float view and floating ball. You need to create the [float view contr
 
 > **NOTE：**
 > 
-> - After the binding is successful, calling [start()](arkts-arkui-floatview-floatviewcontroller-i.md#start) or &gt; [startFloatingBall()](arkts-arkui-floatingball-floatingballcontroller-i.md#startfloatingball) will &gt; create both a float view and the floating ball window, and trigger the status callback registered for the &gt; corresponding window. However, only one window is displayed at a time, and the display sequence depends on which &gt; controller's start API is called first.
+> - After the binding is successful, calling [start()](arkts-arkui-floatview-floatviewcontroller-i.md#start) or
+> [startFloatingBall()](arkts-arkui-floatingball-floatingballcontroller-i.md#startfloatingball) will
+> create both a float view and the floating ball window, and trigger the status callback registered for the
+> corresponding window. However, only one window is displayed at a time, and the display sequence depends on which
+> controller's start API is called first.
 > 
-> - After the binding is successful, users can switch between the float view and the floating ball window by &gt; clicking.
+> - After the binding is successful, users can switch between the float view and the floating ball window by
+> clicking.
 > 
-> - After the binding is successful, calling the stop API ([stop()](arkts-arkui-floatview-floatviewcontroller-i.md#stop) or &gt; [stopFloatingBall()](arkts-arkui-floatingball-floatingballcontroller-i.md#stopfloatingball)) of &gt; either controller will destroy both the float view and the floating ball window, and trigger the status callback &gt; registered for the corresponding window.
+> - After the binding is successful, calling the stop API ([stop()](arkts-arkui-floatview-floatviewcontroller-i.md#stop) or
+> [stopFloatingBall()](arkts-arkui-floatingball-floatingballcontroller-i.md#stopfloatingball)) of
+> either controller will destroy both the float view and the floating ball window, and trigger the status callback
+> registered for the corresponding window.
 
 **Since:** 26.0.0
 

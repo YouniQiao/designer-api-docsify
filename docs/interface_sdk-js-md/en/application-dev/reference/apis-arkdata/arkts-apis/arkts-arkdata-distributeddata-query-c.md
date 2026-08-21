@@ -124,9 +124,11 @@ Creates a **Query** object with the device ID as the key prefix.
 
 > **NOTE：**
 > 
-> The value of **deviceId** can be obtained by <!--RP1-->
+> The value of **deviceId** can be obtained by <!--RP1--
+> 
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
-> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system &gt; applications.
+> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
+> applications.
 > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8

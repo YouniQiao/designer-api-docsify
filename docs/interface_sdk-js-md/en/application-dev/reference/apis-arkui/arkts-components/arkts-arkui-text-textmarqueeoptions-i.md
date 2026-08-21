@@ -116,7 +116,7 @@ The start policy for marquee.
 marqueeUpdatePolicy?: MarqueeUpdatePolicy
 ```
 
-Marquee scrolling policy after text update. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>This attribute takes effect when the marquee is in the playing state and the text content width exceeds the width of the marquee component. Default value is MarqueeUpdatePolicy.DEFAULT. &lt;/p&gt;
+Marquee scrolling policy after text update. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>This attribute takes effect when the marquee is in the playing state and the text content width exceeds the width of the marquee component. Default value is MarqueeUpdatePolicy.DEFAULT. </p>
 
 **Type:** [MarqueeUpdatePolicy](arkts-arkui-text-marqueeupdatepolicy-e.md)
 
@@ -136,7 +136,7 @@ Marquee scrolling policy after text update. &lt;p&gt;&lt;strong&gt;NOTE&lt;/stro
 spacing?: LengthMetrics
 ```
 
-The spacing between two rounds of marquee. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Default value is 48vp. &lt;/p&gt;
+The spacing between two rounds of marquee. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Default value is 48vp. </p>
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 

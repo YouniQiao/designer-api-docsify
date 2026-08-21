@@ -1,6 +1,6 @@
 # AbilityDelegator
 
-The **AbilityDelegator** module can listen for and manage the lifecycle changes of [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) through [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instances. For example, you can obtain the current state of a UIAbility (for example, whether the UIAbility has been created or is in the foreground), obtain the UIAbility that currently has the focus, wait for the UIAbility to enter a lifecycle node (for example, the **onForeground** state), start a specified UIAbility, and set the timeout mechanism. You can obtain **AbilityDelegator** by calling [getAbilityDelegator](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md).
+The **AbilityDelegator** module can listen for and manage the lifecycle changes of [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) through [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instances. For example, you can obtain the current state of a UIAbility (for example, whether the UIAbility has been created or is in the foreground), obtain the UIAbility that currently has the focus, wait for the UIAbility to enter a lifecycle node (for example, the **onForeground** state), start a specified UIAbility, and set the timeout mechanism. You can obtain **AbilityDelegator** by calling [getAbilityDelegator](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md).
 
 > **NOTE：**
 > 
@@ -362,7 +362,7 @@ Schedules the lifecycle state of an ability to **Background**. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Target ability. |
+| ability | [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) | Yes | Target ability. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability lifecycle state is changed to **Background**, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -412,7 +412,7 @@ Schedules the lifecycle state of an ability to **Background**. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Target ability. |
+| ability | [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) | Yes | Target ability. |
 
 **Return value:**
 
@@ -467,7 +467,7 @@ Schedules the lifecycle state of an ability to **Foreground**. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Target ability. |
+| ability | [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) | Yes | Target ability. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability lifecycle state is changed to **Foreground**, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -517,7 +517,7 @@ Schedules the lifecycle state of an ability to **Foreground**. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Target ability. |
+| ability | [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) | Yes | Target ability. |
 
 **Return value:**
 
@@ -790,7 +790,7 @@ Obtains the lifecycle state of an ability.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Target ability. |
+| ability | [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) | Yes | Target ability. |
 
 **Return value:**
 
@@ -877,7 +877,7 @@ Obtains the top ability of this application. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Yes | Callback used to return the result. If the top ability is obtained, **err** is **undefined** and **data** is the **Ability** instance obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[UIAbility](arkts-ability-appabilityuiability-uiability-c.md)&gt; | Yes | Callback used to return the result. If the top ability is obtained, **err** is **undefined** and **data** is the **Ability** instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -923,7 +923,7 @@ Obtains the top ability of this application. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Promise used to return the top ability. |
+| Promise&lt;[UIAbility](arkts-ability-appabilityuiability-uiability-c.md)&gt; | Promise used to return the top ability. |
 
 **Error codes:**
 
@@ -1462,7 +1462,7 @@ Starts an ability. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want** parameter for starting the ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want** parameter for starting the ability. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability is started, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -1525,7 +1525,7 @@ Starts an ability. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want** parameter for starting the ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want** parameter for starting the ability. |
 
 **Return value:**
 
@@ -1593,7 +1593,7 @@ Waits for the **Ability** instance that matches the **AbilityMonitor** instance 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **Ability** instance obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[UIAbility](arkts-ability-appabilityuiability-uiability-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **Ability** instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1651,7 +1651,7 @@ Waits a period of time for the **Ability** instance that matches the **AbilityMo
 | --- | --- | --- | --- |
 | monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
 | timeout | long | Yes | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[UIAbility](arkts-ability-appabilityuiability-uiability-c.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1715,7 +1715,7 @@ Waits a period of time for the **Ability** instance that matches the **AbilityMo
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Promise used to return the **Ability** instance obtained. |
+| Promise&lt;[UIAbility](arkts-ability-appabilityuiability-uiability-c.md)&gt; | Promise used to return the **Ability** instance obtained. |
 
 **Error codes:**
 
@@ -1767,7 +1767,7 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and data is the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md) instance obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityStage](arkts-ability-appabilityabilitystage-abilitystage-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and data is the [AbilityStage](arkts-ability-appabilityabilitystage-abilitystage-c.md) instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1816,7 +1816,7 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 | --- | --- | --- | --- |
 | monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
 | timeout | long | Yes | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and data is the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md) instance obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityStage](arkts-ability-appabilityabilitystage-abilitystage-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and data is the [AbilityStage](arkts-ability-appabilityabilitystage-abilitystage-c.md) instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1871,7 +1871,7 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Promise used to return the [AbilityStage]{ |
+| Promise&lt;[AbilityStage](arkts-ability-appabilityabilitystage-abilitystage-c.md)&gt; | Promise used to return the [AbilityStage]{ |
 
 **Error codes:**
 

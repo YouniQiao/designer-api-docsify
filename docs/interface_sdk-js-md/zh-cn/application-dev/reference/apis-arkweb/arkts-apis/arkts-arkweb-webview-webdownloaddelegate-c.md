@@ -26,7 +26,10 @@ onBeforeDownload(callback: Callback<WebDownloadItem>): void
 
 > **说明：**
 > 
-> 处于PENDING状态的下载任务会首先将文件保存至临时目录。在调用[WebDownloadItem.start](arkts-arkweb-webview-webdownloaditem-c.md#start)并指定目标路径后，临时文件将被重命名 &gt; 为目标文件名，未完成下载的部分将直接下载到目标路径。若希望避免在调用WebDownloadItem.start前生成临时文件，可先通过 &gt; [WebDownloadItem.cancel](arkts-arkweb-webview-webdownloaditem-c.md#cancel)来取消当前的下载任务，之后再使用 &gt; [WebDownloadManager.resumeDownload](arkts-arkweb-webview-webdownloadmanager-c.md#resumedownload)来恢复被取消的下载任务。
+> 处于PENDING状态的下载任务会首先将文件保存至临时目录。在调用[WebDownloadItem.start](arkts-arkweb-webview-webdownloaditem-c.md#start)并指定目标路径后，临时文件将被重命名
+> 为目标文件名，未完成下载的部分将直接下载到目标路径。若希望避免在调用WebDownloadItem.start前生成临时文件，可先通过
+> [WebDownloadItem.cancel](arkts-arkweb-webview-webdownloaditem-c.md#cancel)来取消当前的下载任务，之后再使用
+> [WebDownloadManager.resumeDownload](arkts-arkweb-webview-webdownloadmanager-c.md#resumedownload)来恢复被取消的下载任务。
 
 **起始版本：** 11
 

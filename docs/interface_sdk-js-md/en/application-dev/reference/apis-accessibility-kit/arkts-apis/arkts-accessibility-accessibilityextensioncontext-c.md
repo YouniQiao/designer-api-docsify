@@ -470,7 +470,7 @@ Injects a gesture, applicable to scenarios where an accessibility app performs t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesturePath | [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | Yes | Path of the gesture to inject. |
+| gesturePath | [GesturePath](arkts-accessibility-accessibilitygesturepath-gesturepath-c.md) | Yes | Path of the gesture to inject. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the gesture injection is successful, **err** is **undefined**; otherwise, it is an error object. |
 
 **Error codes:**
@@ -522,7 +522,7 @@ Injects a gesture, applicable to scenarios where an accessibility app performs t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesturePath | [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | Yes | Path of the gesture to inject. |
+| gesturePath | [GesturePath](arkts-accessibility-accessibilitygesturepath-gesturepath-c.md) | Yes | Path of the gesture to inject. |
 
 **Return value:**
 
@@ -576,7 +576,7 @@ Injects a gesture, applicable to scenarios where an accessibility app performs t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesturePath | [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | Yes | Path of the gesture to inject. |
+| gesturePath | [GesturePath](arkts-accessibility-accessibilitygesturepath-gesturepath-c.md) | Yes | Path of the gesture to inject. |
 
 **Error codes:**
 

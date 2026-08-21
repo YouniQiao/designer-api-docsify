@@ -414,7 +414,8 @@ setFrameRate(minFps: int, maxFps: int): void
 > 
 > 仅在[PhotoSession](arkts-camera-camera-photosession-i.md)或[VideoSession](arkts-camera-camera-videosession-i.md)模式下支持。
 > 
-> 接口调用前，先调用[getActiveFrameRate](#getactiveframerate)接口查询当前VideoSession的帧率，若下发的帧率与当前帧率相等，则 &gt; 下发的帧率不会生效。
+> 接口调用前，先调用[getActiveFrameRate](#getactiveframerate)接口查询当前VideoSession的帧率，若下发的帧率与当前帧率相等，则
+> 下发的帧率不会生效。
 
 **起始版本：** 23
 

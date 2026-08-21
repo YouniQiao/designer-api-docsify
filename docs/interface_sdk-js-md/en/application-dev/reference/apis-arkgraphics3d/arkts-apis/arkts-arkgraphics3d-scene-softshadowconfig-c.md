@@ -1,6 +1,6 @@
 # SoftShadowConfig
 
-param config for soft shadow, control the algorithm type and its configuration
+Abstract base class for soft shadow configuration. It defines the interface for controlling the shadow algorithm type and its parameters.
 
 **Since:** 26.0.0
 

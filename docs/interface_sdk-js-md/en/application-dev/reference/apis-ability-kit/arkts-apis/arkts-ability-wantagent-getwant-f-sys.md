@@ -27,7 +27,7 @@ Obtains the Want in a WantAgent object. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | Target WantAgent object. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Callback used to return the Want. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Want](arkts-ability-appabilitywant-want-c.md)&gt; | Yes | Callback used to return the Want. |
 
 **Error codes:**
 
@@ -65,7 +65,7 @@ Obtains the Want in a WantAgent object. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Promise used to return the Want. |
+| Promise&lt;[Want](arkts-ability-appabilitywant-want-c.md)&gt; | Promise used to return the Want. |
 
 **Error codes:**
 

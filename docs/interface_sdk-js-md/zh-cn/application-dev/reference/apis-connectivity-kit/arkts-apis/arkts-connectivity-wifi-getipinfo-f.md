@@ -17,7 +17,7 @@ function getIpInfo(): IpInfo
 
 获取IP信息。
 
-&lt;p&gt;IP信息包括主机IP地址、网关地址和DNS信息。
+<p>IP信息包括主机IP地址、网关地址和DNS信息。
 
 **起始版本：** 7
 

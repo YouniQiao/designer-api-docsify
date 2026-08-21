@@ -4,9 +4,14 @@
 
 > **NOTE：**
 > 
-> The Path2D object does not support the resetting of an existing path. If a new path &gt; is required, you can create an empty Path2D object.
+> The Path2D object does not support the resetting of an existing path. If a new path
+> is required, you can create an empty Path2D object.
 > 
-> The methods of the Path2D object do not take effect for the paths set in the &gt; [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) &gt; and &gt; [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md) &gt; objects.
+> The methods of the Path2D object do not take effect for the paths set in the
+> [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)
+> and
+> [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md)
+> objects.
 
 @extends CanvasPath
 

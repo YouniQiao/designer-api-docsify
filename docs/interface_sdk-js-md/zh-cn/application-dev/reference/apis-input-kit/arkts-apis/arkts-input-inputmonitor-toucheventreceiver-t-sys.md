@@ -18,7 +18,7 @@ type TouchEventReceiver = (touchEvent: TouchEvent) => boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| touchEvent | [TouchEvent](arkts-input-multimodalinput-touchevent-touchevent-i.md) | 是 | 触屏输入事件。 |
+| touchEvent | [TouchEvent](arkts-input-multimodalinputtouchevent-touchevent-i.md) | 是 | 触屏输入事件。 |
 
 **返回值：**
 

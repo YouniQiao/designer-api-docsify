@@ -1,0 +1,181 @@
+# ToolBarV2ItemOptions
+
+Defines the options for initializing a **ToolBarV2Item** object.
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+<!--Device-unnamed-export interface ToolBarV2ItemOptions--><!--Device-unnamed-export interface ToolBarV2ItemOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+```
+
+## accessibilityDescription
+
+```TypeScript
+accessibilityDescription?: ResourceStr
+```
+
+Accessible description of the toolbar item. You can provide comprehensive text explanations to help users understand the operation they are about to perform and its potential consequences, especially when these cannot be inferred from the component's attributes and accessibility text alone. If a component contains both text information and the accessible description, the text is announced first and then the accessible description, when the component is selected.
+
+Default value: **"Double-tap to activate"**
+
+**Type:** ResourceStr
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ToolBarV2ItemOptions-accessibilityDescription?: ResourceStr--><!--Device-ToolBarV2ItemOptions-accessibilityDescription?: ResourceStr-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## accessibilityLevel
+
+```TypeScript
+accessibilityLevel?: string
+```
+
+Accessibility level of the toolbar item. It determines whether the component can be recognized by accessibility services.
+
+The options are as follows:
+
+**"auto"**: This option is treated as "yes" by the system for this component.
+
+**"yes"**: The component can be recognized by accessibility services.
+
+**"no"**: The component cannot be recognized by accessibility services.
+
+**"no-hide-descendants"**: Neither the component nor its child components can be recognized by accessibility services.
+
+Default value: **"auto"**
+
+**Type:** string
+
+**Default:** "auto".
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ToolBarV2ItemOptions-accessibilityLevel?: string--><!--Device-ToolBarV2ItemOptions-accessibilityLevel?: string-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## accessibilityText
+
+```TypeScript
+accessibilityText?: ResourceStr
+```
+
+Accessibility text, that is, accessible label name, of the toolbar item. If a component does not contain text information, it will not be announced by the screen reader when selected. In this case, the screen reader user cannot know which component is selected. To solve this problem, you can set accessibility text for components without text information. When such a component is selected, the screen reader announces the specified accessibility text, informing the user which component is selected.
+
+Default value: value of **content**
+
+**Type:** ResourceStr
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ToolBarV2ItemOptions-accessibilityText?: ResourceStr--><!--Device-ToolBarV2ItemOptions-accessibilityText?: ResourceStr-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## action
+
+```TypeScript
+action?: ToolBarV2ItemAction
+```
+
+Click event of the toolbar item.
+
+By default, there is no click event.
+
+**Type:** [ToolBarV2ItemAction](../../apis-arkui/arkts-apis/arkts-arkui-toolbarv2itemaction-t.md)
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ToolBarV2ItemOptions-action?: ToolBarV2ItemAction--><!--Device-ToolBarV2ItemOptions-action?: ToolBarV2ItemAction-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## content
+
+```TypeScript
+content: ToolBarV2ItemText
+```
+
+Text of the toolbar item.
+
+**Type:** [ToolBarV2ItemText](../../apis-arkui/arkts-apis/arkts-arkui-arkuiadvancedtoolbarv2-toolbarv2itemtext-c.md)
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ToolBarV2ItemOptions-content: ToolBarV2ItemText--><!--Device-ToolBarV2ItemOptions-content: ToolBarV2ItemText-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## icon
+
+```TypeScript
+icon?: ToolBarV2ItemIconType
+```
+
+Icon of the toolbar item.
+
+By default, there is no icon.
+
+**Type:** [ToolBarV2ItemIconType](../../apis-arkui/arkts-apis/arkts-arkui-toolbarv2itemicontype-t.md)
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ToolBarV2ItemOptions-icon?: ToolBarV2ItemIconType--><!--Device-ToolBarV2ItemOptions-icon?: ToolBarV2ItemIconType-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## state
+
+```TypeScript
+state?: ToolBarV2ItemState
+```
+
+State of the toolbar item.
+
+Default value: **ToolBarV2ItemState.ENABLE**.
+
+**Type:** [ToolBarV2ItemState](../../apis-arkui/arkts-apis/arkts-arkui-arkuiadvancedtoolbarv2-toolbarv2itemstate-e.md)
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ToolBarV2ItemOptions-state?: ToolBarV2ItemState--><!--Device-ToolBarV2ItemOptions-state?: ToolBarV2ItemState-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

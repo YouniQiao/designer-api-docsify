@@ -28,7 +28,7 @@ Open the view of forms belonging to the specified bundle. Client to communicatio
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | The want of the form to open. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | The want of the form to open. |
 
 **错误码：**
 

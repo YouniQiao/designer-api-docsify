@@ -4,7 +4,10 @@ This module provides application management capabilities, including managing the
 
 > **NOTE：**
 > 
-> The APIs of this module can be called only by a device administrator application that is enabled. For details, see &gt; [MDM Kit Development](../../../mdm/mdm-kit-guide.md). The &gt; [applicationManager.isAppKioskAllowed](arkts-mdm-applicationmanager-isappkioskallowed-f.md) API is available to all &gt; applications.
+> The APIs of this module can be called only by a device administrator application that is enabled. For details, see
+> [MDM Kit Development](../../../mdm/mdm-kit-guide.md). The
+> [applicationManager.isAppKioskAllowed](arkts-mdm-applicationmanager-isappkioskallowed-f.md) API is available to all
+> applications.
 
 **Since:** 10
 

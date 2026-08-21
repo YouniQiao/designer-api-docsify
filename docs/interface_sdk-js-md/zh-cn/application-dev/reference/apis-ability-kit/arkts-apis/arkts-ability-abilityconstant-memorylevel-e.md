@@ -1,6 +1,6 @@
 # MemoryLevel
 
-整机可用内存级别，该类型为枚举，可配合UIAbility的[onMemoryLevel()](arkts-ability-app-ability-ability-ability-c.md#onmemorylevel)方法根据level执行不同内 存级别的相应操作。
+整机可用内存级别，该类型为枚举，可配合UIAbility的[onMemoryLevel()](arkts-ability-appabilityability-ability-c.md#onmemorylevel)方法根据level执行不同内 存级别的相应操作。
 
 > **说明：**
 > 
@@ -11,7 +11,9 @@
 > 
 > - LRU：表示按应用最近使用顺序排序的链表。通常将最近使用的应用放在链表头部（位置靠前），将最不常用的应用放在链表尾部（位置靠后）。当内存不足时，位置靠后的应用将优先被清理。
 > 
-> - 当LRU发生变化时，后台应用会根据处于应用使用排序链表（LRU）的位置，触发对应MemoryLevel级别(MEMORY_LEVEL_BACKGROUND_MODERATE、 &gt; MEMORY_LEVEL_BACKGROUND_LOW、MEMORY_LEVEL_BACKGROUND_CRITICAL)的onMemoryLevel回调。如果应用被冻结，则会在应用唤醒时收到对应的onMemoryLevel回 &gt; 调，因此不建议在此回调接口中做耗时操作。
+> - 当LRU发生变化时，后台应用会根据处于应用使用排序链表（LRU）的位置，触发对应MemoryLevel级别(MEMORY_LEVEL_BACKGROUND_MODERATE、
+> MEMORY_LEVEL_BACKGROUND_LOW、MEMORY_LEVEL_BACKGROUND_CRITICAL)的onMemoryLevel回调。如果应用被冻结，则会在应用唤醒时收到对应的onMemoryLevel回
+> 调，因此不建议在此回调接口中做耗时操作。
 
 **起始版本：** 23
 

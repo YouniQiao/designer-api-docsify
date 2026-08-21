@@ -6,11 +6,15 @@
 > 
 > - ResourceManager涉及到的方法，仅限基于TS扩展的声明式开发范式使用。
 > 
-> - 资源文件在工程的resources目录中定义，通过resName、resId、Resource对象等可以获取对应的字符串、字符串数组、颜色等资源值，resName为资源名称，resId可通过`\$r(资源地址).id`的方式 &gt; 获取，例如`\$r('app.string.test').id`。
+> - 资源文件在工程的resources目录中定义，通过resName、resId、Resource对象等可以获取对应的字符串、字符串数组、颜色等资源值，resName为资源名称，resId可通过`\$r(资源地址).id`的方式
+> 获取，例如`\$r('app.string.test').id`。
 > 
-> - 单HAP包获取自身资源、跨HAP/HSP包获取资源，由于入参为Resource的接口相比于入参为resName、resId的接口耗时更长，因此更推荐使用参数为resName或resId的接口。跨HAP/HSP包获取资源， &gt; **需要先使用[createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md)创建对应module的context**， &gt; 再调用参数为resName或resId的接口。更多请参考[资源访问](../../../quick-start/resource-categories-and-access.md#资源访问)。
+> - 单HAP包获取自身资源、跨HAP/HSP包获取资源，由于入参为Resource的接口相比于入参为resName、resId的接口耗时更长，因此更推荐使用参数为resName或resId的接口。跨HAP/HSP包获取资源，
+> **需要先使用[createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md)创建对应module的context**，
+> 再调用参数为resName或resId的接口。更多请参考[资源访问](../../../quick-start/resource-categories-and-access.md#资源访问)。
 > 
-> - 在API version 22及之前版本，中间码HAR、字节码HAR通过资源ID相关接口访问资源时，因ID无效会抛出异常；从API version 23开始，中间码HAR、字节码HAR通过资源ID相关接口可以正常访问资源， &gt; 更多请参考[资源访问](../../../quick-start/resource-categories-and-access.md#资源访问)。
+> - 在API version 22及之前版本，中间码HAR、字节码HAR通过资源ID相关接口访问资源时，因ID无效会抛出异常；从API version 23开始，中间码HAR、字节码HAR通过资源ID相关接口可以正常访问资源，
+> 更多请参考[资源访问](../../../quick-start/resource-categories-and-access.md#资源访问)。
 
 **起始版本：** 23
 
@@ -2008,7 +2012,8 @@ getDoublePluralStringByNameSync(resName: string, num: number, ...args: Array<str
 
 > **说明：**
 > 
-> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 > 
 > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
 
@@ -2098,7 +2103,8 @@ getDoublePluralStringByNameSync(resName: string, num: double, ...args: (string |
 
 > **说明：**
 > 
-> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 > 
 > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
 
@@ -2143,7 +2149,8 @@ getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string
 
 > **说明：**
 > 
-> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 > 
 > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
 
@@ -2260,7 +2267,8 @@ getDoublePluralStringValueSync(resId: long, num: double, ...args: (string | doub
 
 > **说明：**
 > 
-> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 > 
 > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
 
@@ -2305,7 +2313,8 @@ getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<s
 
 > **说明：**
 > 
-> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 18
 
@@ -2418,7 +2427,7 @@ getDrawableDescriptor(resId: long, density?: int, type?: int): DrawableDescripto
 
 | 类型 | 说明 |
 | --- | --- |
-| [DrawableDescriptor](../../apis-default/arkts-apis/arkts-arkui-drawabledescriptor-drawabledescriptor-c.md) | 资源ID值对应的DrawableDescriptor对象。 |
+| [DrawableDescriptor](../../apis-default/arkts-apis/arkts-arkuidrawabledescriptor-drawabledescriptor-c.md) | 资源ID值对应的DrawableDescriptor对象。 |
 
 **错误码：**
 
@@ -2538,7 +2547,7 @@ getDrawableDescriptor(resource: Resource, density?: number, type?: number): Draw
 
 | 类型 | 说明 |
 | --- | --- |
-| [DrawableDescriptor](../../apis-default/arkts-apis/arkts-arkui-drawabledescriptor-drawabledescriptor-c.md) | 资源ID值对应的DrawableDescriptor对象。 |
+| [DrawableDescriptor](../../apis-default/arkts-apis/arkts-arkuidrawabledescriptor-drawabledescriptor-c.md) | 资源ID值对应的DrawableDescriptor对象。 |
 
 **错误码：**
 
@@ -2611,7 +2620,7 @@ getDrawableDescriptorByName(resName: string, density?: int, type?: int): Drawabl
 
 | 类型 | 说明 |
 | --- | --- |
-| [DrawableDescriptor](../../apis-default/arkts-apis/arkts-arkui-drawabledescriptor-drawabledescriptor-c.md) | 资源名称对应的DrawableDescriptor对象。 |
+| [DrawableDescriptor](../../apis-default/arkts-apis/arkts-arkuidrawabledescriptor-drawabledescriptor-c.md) | 资源名称对应的DrawableDescriptor对象。 |
 
 **错误码：**
 
@@ -2811,7 +2820,8 @@ getIntPluralStringByNameSync(resName: string, num: number, ...args: Array<string
 
 > **说明：**
 > 
-> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 > 
 > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
 
@@ -2901,7 +2911,8 @@ getIntPluralStringByNameSync(resName: string, num: int, ...args: (string | doubl
 
 > **说明：**
 > 
-> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 > 
 > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
 
@@ -2946,7 +2957,8 @@ getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | n
 
 > **说明：**
 > 
-> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 > 
 > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
 
@@ -3063,7 +3075,8 @@ getIntPluralStringValueSync(resId: long, num: int,...args: (string | double)[]):
 
 > **说明：**
 > 
-> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 > 
 > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
 
@@ -3108,7 +3121,8 @@ getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<stri
 
 > **说明：**
 > 
-> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 18
 
@@ -6195,7 +6209,8 @@ getPluralString(resId: number, num: number, callback: AsyncCallback<string>): vo
 
 > **说明：**
 > 
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 6
 
@@ -6241,7 +6256,8 @@ getPluralString(resId: number, num: number): Promise<string>
 
 > **说明：**
 > 
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 6
 
@@ -6290,7 +6306,8 @@ getPluralStringByName(resName: string, num: number, callback: _AsyncCallback<str
 
 > **说明：**
 > 
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 9
 
@@ -6369,7 +6386,8 @@ getPluralStringByName(resName: string, num: number): Promise<string>
 
 > **说明：**
 > 
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 9
 
@@ -6453,7 +6471,8 @@ getPluralStringByNameSync(resName: string, num: number): string
 
 > **说明：**
 > 
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 10
 
@@ -6538,7 +6557,8 @@ getPluralStringValue(resource: Resource, num: number, callback: _AsyncCallback<s
 
 > **说明：**
 > 
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 9
 
@@ -6626,7 +6646,8 @@ getPluralStringValue(resource: Resource, num: number): Promise<string>
 
 > **说明：**
 > 
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 9
 
@@ -6718,7 +6739,8 @@ getPluralStringValue(resId: number, num: number, callback: _AsyncCallback<string
 
 > **说明：**
 > 
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 9
 
@@ -6798,7 +6820,8 @@ getPluralStringValue(resId: number, num: number): Promise<string>
 
 > **说明：**
 > 
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 9
 
@@ -6882,7 +6905,8 @@ getPluralStringValueSync(resId: number, num: number): string
 
 > **说明：**
 > 
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 10
 
@@ -6967,7 +6991,8 @@ getPluralStringValueSync(resource: Resource, num: number): string
 
 > **说明：**
 > 
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 10
 
@@ -7060,7 +7085,9 @@ getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void
 
 > **说明：**
 > 
-> 文件描述符（fd）使用完毕后需调用[closeRawFdSync](#closerawfdsync)或 &gt; [closeRawFd](#closerawfd)关闭 &gt; fd，避免资源泄露。
+> 文件描述符（fd）使用完毕后需调用[closeRawFdSync](#closerawfdsync)或
+> [closeRawFd](#closerawfd)关闭
+> fd，避免资源泄露。
 
 **起始版本：** 23
 
@@ -7156,7 +7183,9 @@ getRawFd(path: string): Promise<RawFileDescriptor>
 
 > **说明：**
 > 
-> 文件描述符（fd）使用完毕后需调用[closeRawFdSync](#closerawfdsync)或 &gt; [closeRawFd](#closerawfd)关闭 &gt; fd，避免资源泄露。
+> 文件描述符（fd）使用完毕后需调用[closeRawFdSync](#closerawfdsync)或
+> [closeRawFd](#closerawfd)关闭
+> fd，避免资源泄露。
 
 **起始版本：** 23
 
@@ -7251,7 +7280,9 @@ getRawFdSync(path: string): RawFileDescriptor
 
 > **说明：**
 > 
-> 文件描述符（fd）使用完毕后需调用[closeRawFdSync](#closerawfdsync)或 &gt; [closeRawFd](#closerawfd)关闭 &gt; fd，避免资源泄露。
+> 文件描述符（fd）使用完毕后需调用[closeRawFdSync](#closerawfdsync)或
+> [closeRawFd](#closerawfd)关闭
+> fd，避免资源泄露。
 
 **起始版本：** 23
 

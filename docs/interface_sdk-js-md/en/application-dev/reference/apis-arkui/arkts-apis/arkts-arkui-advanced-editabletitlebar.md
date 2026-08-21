@@ -13,25 +13,25 @@ import { EditableLeftIconTypeV2, EditableTitleBarV2, EditableLeftIconV2, Editabl
 
 | Name | Description |
 | --- | --- |
-| [EditableTitleBarMenuItem](arkts-arkui-arkui-advanced-editabletitlebar-editabletitlebarmenuitem-c.md) | Declaration of the menu item on the right side. |
+| [EditableTitleBarMenuItem](arkts-arkui-arkuiadvancededitabletitlebar-editabletitlebarmenuitem-c.md) | Declaration of the menu item on the right side. |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [EditableTitleBar](arkts-arkui-arkui-advanced-editabletitlebar-editabletitlebar-s.md) | The editable title bar is a title bar that comes with button icons, typically **Cancel** on the left and **Confirm** on the right, on a multi-select or editing page. |
+| [EditableTitleBar](arkts-arkui-arkuiadvancededitabletitlebar-editabletitlebar-s.md) | The editable title bar is a title bar that comes with button icons, typically **Cancel** on the left and **Confirm** on the right, on a multi-select or editing page. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [EditableTitleBarOptions](arkts-arkui-arkui-advanced-editabletitlebar-editabletitlebaroptions-i.md) | Indicates the options of the editable title bar. |
+| [EditableTitleBarOptions](arkts-arkui-arkuiadvancededitabletitlebar-editabletitlebaroptions-i.md) | Indicates the options of the editable title bar. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [EditableLeftIconType](arkts-arkui-arkui-advanced-editabletitlebar-editablelefticontype-e.md) | Declaration of the left icon type. |
+| [EditableLeftIconType](arkts-arkui-arkuiadvancededitabletitlebar-editablelefticontype-e.md) | Declaration of the left icon type. |
 
 ### Types
 

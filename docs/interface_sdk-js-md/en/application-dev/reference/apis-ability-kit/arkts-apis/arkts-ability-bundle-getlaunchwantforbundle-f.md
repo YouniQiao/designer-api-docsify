@@ -44,7 +44,7 @@ Obtains the Want object that launches the specified application. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Callback used to return the Want object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Want](arkts-ability-appabilitywant-want-c.md)&gt; | Yes | Callback used to return the Want object. |
 
 
 ## getLaunchWantForBundle
@@ -75,5 +75,5 @@ Obtains the Want object that launches the specified application. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Returns the Want for starting the application's main ability if any. |
+| Promise&lt;[Want](arkts-ability-appabilitywant-want-c.md)&gt; | Returns the Want for starting the application's main ability if any. |
 

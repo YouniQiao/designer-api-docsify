@@ -12,7 +12,7 @@ import { WithEnv, WithEnvAttribute} from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [WithEnvAttribute(Define the WithEnv component that allows setting environment properties for child components.)](arkts-arkui-arkui-withenv-withenvattribute-c.md) | Define the WithEnv attribute functions. |
+| [WithEnvAttribute(Define the WithEnv component that allows setting environment properties for child components.)](arkts-arkui-arkuiwithenv-withenvattribute-c.md) | Define the WithEnv attribute functions. |
 
 ### Types
 

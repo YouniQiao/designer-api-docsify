@@ -15,7 +15,9 @@ function getRequestInfo(want: Want): RequestInfo
 
 > **NOTE：**
 > 
-> This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes, &gt; the request information can be obtained from Want. If this API is used in other scenarios, no return value is &gt; obtained.
+> This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes,
+> the request information can be obtained from Want. If this API is used in other scenarios, no return value is
+> obtained.
 
 Obtains the request information from Want.
 
@@ -29,7 +31,7 @@ Obtains the request information from Want.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want passed in the request for a modal dialog box. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want passed in the request for a modal dialog box. |
 
 **Return value:**
 

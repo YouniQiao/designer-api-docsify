@@ -4,9 +4,15 @@ This module provides API for creating and displaying toasts, dialog boxes, and a
 
 > **NOTE：**
 > 
-> - This module cannot be used in the file declaration of the [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md). In &gt; other words, the APIs of this module can be used only after a component instance is created; they cannot be called &gt; in the lifecycle of the UIAbility.
+> - This module cannot be used in the file declaration of the [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiability-uiability-c.md). In
+> other words, the APIs of this module can be used only after a component instance is created; they cannot be called
+> in the lifecycle of the UIAbility.
 > 
-> - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used &gt; where [the UI context is ambiguous](../../../ui/arkts-global-interface.md#ambiguous-ui-context). For details, see &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md). It is recommended that you use the dialog box APIs provided by &gt; **UIContext**<!--Del-->, except for UI-less scenarios such as &gt; [ServiceExtensionAbility](../../../application-models/serviceextensionability-sys.md)<!--DelEnd-->.
+> - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used
+> where [the UI context is ambiguous](../../../ui/arkts-global-interface.md#ambiguous-ui-context). For details, see
+> [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md). It is recommended that you use the dialog box APIs provided by
+> **UIContext**<!--Del-->, except for UI-less scenarios such as
+> [ServiceExtensionAbility](../../../application-models/serviceextensionability-sys.md)<!--DelEnd-->.
 
 **Since:** 9
 

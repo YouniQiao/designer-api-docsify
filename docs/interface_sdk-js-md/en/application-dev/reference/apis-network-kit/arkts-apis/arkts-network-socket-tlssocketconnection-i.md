@@ -4,7 +4,8 @@ Defines a **TLSSocketConnection** object, that is, the connection between the TL
 
 > **NOTE：**
 > 
-> The TLSSocket client can call related APIs through the **TLSSocketConnection** object only after a connection is &gt; successfully established between the TLSSocket client and the server.
+> The TLSSocket client can call related APIs through the **TLSSocketConnection** object only after a connection is
+> successfully established between the TLSSocket client and the server.
 
 **Since:** 10
 
@@ -715,9 +716,12 @@ Obtains the file descriptor of a TLSSocketConnection connection. This API uses a
 > 
 > - Call this API only after the **TLSSocketServer** connection is successfully established.
 > 
-> - This API returns **-1** in abnormal cases such as disconnection and socket closed (for example, after the &gt; close API is called).
+> - This API returns **-1** in abnormal cases such as disconnection and socket closed (for example, after the
+> close API is called).
 > 
-> - The lifecycle of the file descriptor is managed by the system. The application can use the &gt; [close](arkts-network-socket-tcpsocketconnection-i.md#close) method to close the socket &gt; connection, instead of directly operating the file descriptor.
+> - The lifecycle of the file descriptor is managed by the system. The application can use the
+> [close](arkts-network-socket-tcpsocketconnection-i.md#close) method to close the socket
+> connection, instead of directly operating the file descriptor.
 
 **Since:** 23
 

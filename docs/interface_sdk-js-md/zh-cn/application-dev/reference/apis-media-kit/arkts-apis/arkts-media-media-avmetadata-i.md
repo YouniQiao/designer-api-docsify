@@ -1,6 +1,6 @@
 # AVMetadata
 
-Defines the audio and video metadata. Parameters that are not declared as read-only in [AVRecorderConfig](arkts-media-multimedia-media-avrecorderconfig-i.md) can be used as input parameters for recording of [AVRecorder](arkts-media-multimedia-media-avrecorder-i.md).
+Defines the audio and video metadata. Parameters that are not declared as read-only in [AVRecorderConfig](arkts-media-multimediamedia-avrecorderconfig-i.md) can be used as input parameters for recording of [AVRecorder](arkts-media-multimediamedia-avrecorder-i.md).
 
 **起始版本：** 23
 
@@ -264,7 +264,7 @@ location?: Location
 
 Geographical location of the media asset.
 
-**类型：** [Location](arkts-media-multimedia-media-location-i.md)
+**类型：** [Location](arkts-media-multimediamedia-location-i.md)
 
 **起始版本：** 23
 
@@ -344,7 +344,7 @@ tracks?: Array<MediaDescription>
 
 Tracks info of the media asset. This parameter is not supported in AVRecorder settings.
 
-**类型：** Array&lt;[MediaDescription](arkts-media-multimedia-media-mediadescription-i.md)&gt;
+**类型：** Array&lt;[MediaDescription](arkts-media-multimediamedia-mediadescription-i.md)&gt;
 
 **起始版本：** 23
 

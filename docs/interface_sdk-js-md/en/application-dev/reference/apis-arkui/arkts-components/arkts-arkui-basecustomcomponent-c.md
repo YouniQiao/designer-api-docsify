@@ -317,7 +317,10 @@ Invoked each time a router-managed page (a custom component decorated with [\@En
 
 > **NOTE：**
 
-> To ensure smooth UI responsiveness, avoid executing time-consuming operations within the callback function that &gt; may block the main thread. For resource-intensive tasks such as camera resource deallocation, consider &gt; implementing asynchronous solutions. For best practices, see &gt; [Reducing Application Latency: Postponing Resource Release](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-application-latency-optimization-cases#section8783201923819).
+> To ensure smooth UI responsiveness, avoid executing time-consuming operations within the callback function that
+> may block the main thread. For resource-intensive tasks such as camera resource deallocation, consider
+> implementing asynchronous solutions. For best practices, see
+> [Reducing Application Latency: Postponing Resource Release](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-application-latency-optimization-cases#section8783201923819).
 
 **Since:** 7
 

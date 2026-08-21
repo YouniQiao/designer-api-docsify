@@ -22,5 +22,5 @@ The type of LinkedList callback function.
 | --- | --- | --- | --- |
 | value | T | Yes | The value of current element |
 | index | int | Yes | The index of current element The value should be an integer. |
-| linkedList | [LinkedList](arkts-arkts-util-linkedlist-linkedlist-c.md)&lt;T&gt; | Yes | The LinkedList instance being traversed |
+| linkedList | [LinkedList](arkts-arkts-utillinkedlist-linkedlist-c.md)&lt;T&gt; | Yes | The LinkedList instance being traversed |
 

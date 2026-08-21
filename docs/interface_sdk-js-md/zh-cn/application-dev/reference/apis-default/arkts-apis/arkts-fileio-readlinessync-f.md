@@ -26,13 +26,13 @@ function readLinesSync(filePath: string, options?: Options): ReaderIterator
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | filePath | string | 是 | 文件的应用沙箱路径。 |
-| options | [Options](arkts-file-fs-options-i.md) | 否 | 可选项。支持以下选项：<br/>- encoding，string类型，当数据是 string 类型时有效，表示数据的编码方式， 默认 'utf-8'，仅支持 'utf-8'。 |
+| options | [Options](arkts-filefs-options-i.md) | 否 | 可选项。支持以下选项：<br/>- encoding，string类型，当数据是 string 类型时有效，表示数据的编码方式， 默认 'utf-8'，仅支持 'utf-8'。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ReaderIterator](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-readeriterator-i.md) | 返回文件读取迭代器。 |
+| [ReaderIterator](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-readeriterator-i.md) | 返回文件读取迭代器。 |
 
 **错误码：**
 

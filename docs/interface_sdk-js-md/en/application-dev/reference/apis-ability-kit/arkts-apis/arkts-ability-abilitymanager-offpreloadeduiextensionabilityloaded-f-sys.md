@@ -12,7 +12,7 @@ import { abilityManager } from '@kit.AbilityKit';
 function offPreloadedUIExtensionAbilityLoaded(callback?: PreloadedUIExtensionAbilityLoadedFn): void
 ```
 
-Unsubscribes from loaded events of a preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance in the current process.
+Unsubscribes from loaded events of a preloaded [UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md) instance in the current process.
 
 **Since:** 23
 

@@ -154,7 +154,7 @@ Sets embedded component options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| loader | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | indicates initialization parameter. |
+| loader | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | indicates initialization parameter. |
 | type | [EmbeddedType](../../apis-arkui/arkts-apis/arkts-arkui-embeddedtype-e.md) | No | indicates type of the EmbeddedComponent. |
 
 **Return value:**
@@ -185,7 +185,7 @@ Sets embedded component options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| loader | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | indicates initialization parameter. |
+| loader | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | indicates initialization parameter. |
 | type | [EmbeddedType](../../apis-arkui/arkts-apis/arkts-arkui-embeddedtype-e.md) | No | indicates type of the EmbeddedComponent. |
 | options | [EmbeddedOptions](arkts-embeddedcomponent-embeddedoptions-i.md) | No | indicates type of the EmbeddedComponent options. |
 

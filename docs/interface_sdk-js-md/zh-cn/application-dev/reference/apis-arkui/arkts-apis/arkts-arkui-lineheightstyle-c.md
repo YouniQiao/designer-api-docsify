@@ -47,7 +47,8 @@ constructor(lineHeight: LengthMetrics, lineHeightMultiple?: number)
 
 > **说明：**
 > 
-> - lineHeightMultiple与lineHeight或[LineSpacingStyle](arkts-arkui-linespacingstyle-c.md)同时设置时，仅lineHeightMultiple生效，行高为该行最高字体高度 &gt; 与倍数的乘积。
+> - lineHeightMultiple与lineHeight或[LineSpacingStyle](arkts-arkui-linespacingstyle-c.md)同时设置时，仅lineHeightMultiple生效，行高为该行最高字体高度
+> 与倍数的乘积。
 > 
 > - lineHeightMultiple小于0或undefined时不生效，使用lineHeight和[LineSpacingStyle](arkts-arkui-linespacingstyle-c.md)设置行高和行间距。
 > 

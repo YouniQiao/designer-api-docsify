@@ -34,7 +34,7 @@ function getDisposedStatusSync(appId: string): Want
 
 | 类型 | 说明 |
 | --- | --- |
-| [Want](arkts-ability-app-ability-want-want-c.md) | 返回应用的处置状态。 |
+| [Want](arkts-ability-appabilitywant-want-c.md) | 返回应用的处置状态。 |
 
 **错误码：**
 

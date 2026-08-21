@@ -3,7 +3,8 @@
 
 > **NOTE：**
 > 
-> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [bundleManager-BundleInfo](#bundleinfo) instead.
+> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
+> [bundleManager-BundleInfo](#bundleinfo) instead.
 
 **Since:** 7
 

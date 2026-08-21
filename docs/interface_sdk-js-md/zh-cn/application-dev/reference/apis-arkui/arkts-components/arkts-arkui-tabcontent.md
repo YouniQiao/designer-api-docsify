@@ -12,7 +12,9 @@
 
 > **说明：**
 > 
-> 可内置系统组件和自定义组件，支持渲染控制类型（[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、 &gt; [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)和 &gt; [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)）。
+> 可内置系统组件和自定义组件，支持渲染控制类型（[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、
+> [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)和
+> [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)）。
 
 ## TabContent
 

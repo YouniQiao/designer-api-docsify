@@ -2,7 +2,7 @@
 
 Implements a WebStorage object to manage the Web SQL database and HTML5 Web Storage APIs. All Web components in an application share a WebStorage object.
 
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> You must load the Web component before calling the APIs in WebStorage. &lt;/p&gt;
+<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> You must load the Web component before calling the APIs in WebStorage. </p>
 
 **起始版本：** 23
 

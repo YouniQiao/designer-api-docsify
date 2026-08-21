@@ -12,18 +12,18 @@ import { AtomicServiceSearch, InputFilterParams, SearchButtonParams, MenuAlignPa
 
 | 名称 | 说明 |
 | --- | --- |
-| [AtomicServiceSearch](arkts-arkui-atomicservice-atomicservicesearch-atomicservicesearch-s.md) | AtomicServiceSearch为开发者提供满足定制化需求的功能，内容包括默认显示的搜索区、可自定义的选择区和功能区（最多两个）。 |
+| [AtomicServiceSearch](arkts-arkui-atomicserviceatomicservicesearch-atomicservicesearch-s.md) | AtomicServiceSearch为开发者提供满足定制化需求的功能，内容包括默认显示的搜索区、可自定义的选择区和功能区（最多两个）。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [InputFilterParams](arkts-arkui-atomicservice-atomicservicesearch-inputfilterparams-i.md) | 搜索框过滤设置项。 |
-| [MenuAlignParams](arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md) | 下拉按钮与下拉菜单间的对齐方式设置项。 |
-| [OperationParams](arkts-arkui-atomicservice-atomicservicesearch-operationparams-i.md) | AtomicServiceSearch中“功能区”的初始化参数。 |
-| [SearchButtonParams](arkts-arkui-atomicservice-atomicservicesearch-searchbuttonparams-i.md) | 搜索框末尾搜索按钮设置项。 |
-| [SearchParams](arkts-arkui-atomicservice-atomicservicesearch-searchparams-i.md) | AtomicServiceSearch中“搜索区”的可选属性。 |
-| [SelectParams](arkts-arkui-atomicservice-atomicservicesearch-selectparams-i.md) | AtomicServiceSearch中“选择区”的可选属性。 |
+| [InputFilterParams](arkts-arkui-atomicserviceatomicservicesearch-inputfilterparams-i.md) | 搜索框过滤设置项。 |
+| [MenuAlignParams](arkts-arkui-atomicserviceatomicservicesearch-menualignparams-i.md) | 下拉按钮与下拉菜单间的对齐方式设置项。 |
+| [OperationParams](arkts-arkui-atomicserviceatomicservicesearch-operationparams-i.md) | AtomicServiceSearch中“功能区”的初始化参数。 |
+| [SearchButtonParams](arkts-arkui-atomicserviceatomicservicesearch-searchbuttonparams-i.md) | 搜索框末尾搜索按钮设置项。 |
+| [SearchParams](arkts-arkui-atomicserviceatomicservicesearch-searchparams-i.md) | AtomicServiceSearch中“搜索区”的可选属性。 |
+| [SelectParams](arkts-arkui-atomicserviceatomicservicesearch-selectparams-i.md) | AtomicServiceSearch中“选择区”的可选属性。 |
 
 ### 类型
 

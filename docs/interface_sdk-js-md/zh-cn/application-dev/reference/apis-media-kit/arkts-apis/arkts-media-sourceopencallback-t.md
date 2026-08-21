@@ -22,7 +22,7 @@ type SourceOpenCallback = (request: MediaSourceLoadingRequest) => long
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | [MediaSourceLoadingRequest](arkts-media-multimedia-media-mediasourceloadingrequest-i.md) | 是 | 打开请求参数，包含请求资源的具体信息和数据推送方式。 |
+| request | [MediaSourceLoadingRequest](arkts-media-multimediamedia-mediasourceloadingrequest-i.md) | 是 | 打开请求参数，包含请求资源的具体信息和数据推送方式。 |
 
 **返回值：**
 

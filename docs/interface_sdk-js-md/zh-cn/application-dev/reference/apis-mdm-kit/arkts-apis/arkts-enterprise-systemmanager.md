@@ -27,7 +27,7 @@ import { systemManager } from '@kit.MDMKit';
 | 名称 | 说明 |
 | --- | --- |
 | [addDisallowedNearLinkProtocols](arkts-mdm-systemmanager-adddisallowednearlinkprotocols-f.md) | 为指定用户添加禁用的星闪协议名单。NearLink Kit（星闪服务）提供一种低功耗、高速率的短距离通信服务，支持星闪设备之间的连接、数据交互。本接口对键盘、手写笔等系统服务和系统应用 不生效。 |
-| [addKeyEventPolicies](arkts-mdm-systemmanager-addkeyeventpolicies-f.md) | 添加按键事件处理策略。系统触发按键事件时，若匹配下发的按键事件策略，将通过 [EnterpriseAdminExtensionAbility.onKeyEvent](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) 回调通知MDM应用，并携带匹配策略的按键事件信息。 |
+| [addKeyEventPolicies](arkts-mdm-systemmanager-addkeyeventpolicies-f.md) | 添加按键事件处理策略。系统触发按键事件时，若匹配下发的按键事件策略，将通过 [EnterpriseAdminExtensionAbility.onKeyEvent](../../apis-default/arkts-apis/arkts-enterpriseenterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) 回调通知MDM应用，并携带匹配策略的按键事件信息。 |
 | [finishLogCollected](arkts-mdm-systemmanager-finishlogcollected-f.md) | 删除本MDM应用在当前用户下收集到的设备日志。 |
 | [getAutoUnlockAfterReboot](arkts-mdm-systemmanager-getautounlockafterreboot-f.md) | 获取设备是否重启自动解锁。适用于需要验证设备重启解锁策略是否正确配置的场景，帮助企业管理员确认设备自动解锁功能状态。 |
 | [getAutoUnlockAfterReboot](arkts-mdm-systemmanager-getautounlockafterreboot-f.md) | 获取设备是否重启自动解锁。适用于需要验证设备重启解锁策略是否正确配置的场景，帮助企业管理员确认设备自动解锁功能状态。 |
@@ -59,7 +59,7 @@ import { systemManager } from '@kit.MDMKit';
 | 名称 | 说明 |
 | --- | --- |
 | [ErrorInfo](arkts-mdm-systemmanager-errorinfo-i.md) | 系统更新错误信息。 |
-| [KeyEvent](arkts-mdm-systemmanager-keyevent-i.md) | 按键事件。 [EnterpriseAdminExtensionAbility.onKeyEvent](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) 按键事件回调触发时，传递当前按键事件信息。 |
+| [KeyEvent](arkts-mdm-systemmanager-keyevent-i.md) | 按键事件。 [EnterpriseAdminExtensionAbility.onKeyEvent](../../apis-default/arkts-apis/arkts-enterpriseenterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) 按键事件回调触发时，传递当前按键事件信息。 |
 | [KeyEventPolicy](arkts-mdm-systemmanager-keyeventpolicy-i.md) | 按键事件处理策略。按键事件发生时，仅拦截响应已下发按键事件处理策略的按键。对于未下发按键事件处理策略的按键事件，系统执行原先的响应逻辑。 |
 | [KeyItem](arkts-mdm-systemmanager-keyitem-i.md) | 其他按键信息。当前[KeyCode](arkts-mdm-systemmanager-keycode-e.md)事件发生时，其他已被按下的按键信息。 |
 | [NotifyDescription](arkts-mdm-systemmanager-notifydescription-i.md) | 企业自定义更新通知说明。 |
@@ -75,7 +75,7 @@ import { systemManager } from '@kit.MDMKit';
 | 名称 | 说明 |
 | --- | --- |
 | [KeyAction](arkts-mdm-systemmanager-keyaction-e.md) | 按键动作。 |
-| [KeyCode](arkts-mdm-systemmanager-keycode-e.md) | 按键编码。添加按键事件处理策略[addKeyEventPolicies](arkts-mdm-systemmanager-addkeyeventpolicies-f.md)、删除按键事件处理策略 [removeKeyEventPolicies](arkts-mdm-systemmanager-removekeyeventpolicies-f.md)、获取按键事件处理策略 [getKeyEventPolicies](arkts-mdm-systemmanager-getkeyeventpolicies-f.md)和按键事件回调 [onKeyEvent](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent)接口通过 按键编码映射到设备对应实际按键。 |
+| [KeyCode](arkts-mdm-systemmanager-keycode-e.md) | 按键编码。添加按键事件处理策略[addKeyEventPolicies](arkts-mdm-systemmanager-addkeyeventpolicies-f.md)、删除按键事件处理策略 [removeKeyEventPolicies](arkts-mdm-systemmanager-removekeyeventpolicies-f.md)、获取按键事件处理策略 [getKeyEventPolicies](arkts-mdm-systemmanager-getkeyeventpolicies-f.md)和按键事件回调 [onKeyEvent](../../apis-default/arkts-apis/arkts-enterpriseenterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent)接口通过 按键编码映射到设备对应实际按键。 |
 | [KeyPolicy](arkts-mdm-systemmanager-keypolicy-e.md) | 按键策略。MDM应用下发按键策略的按键编码与系统按键事件匹配后的系统行为。 |
 | [NearLinkProtocol](arkts-mdm-systemmanager-nearlinkprotocol-e.md) | 星闪协议枚举。 |
 | [PackageType](arkts-mdm-systemmanager-packagetype-e.md) | 系统更新包类型。 |

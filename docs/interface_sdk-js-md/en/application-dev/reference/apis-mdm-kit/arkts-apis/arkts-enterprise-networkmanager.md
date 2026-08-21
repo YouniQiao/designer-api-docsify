@@ -4,7 +4,8 @@ This module provides device network management capabilities, including querying 
 
 > **NOTE：**
 > 
-> The APIs of this module can be called only by a device administrator application that is enabled. For details, see &gt; [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
+> The APIs of this module can be called only by a device administrator application that is enabled. For details, see
+> [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
 
 **Since:** 10
 

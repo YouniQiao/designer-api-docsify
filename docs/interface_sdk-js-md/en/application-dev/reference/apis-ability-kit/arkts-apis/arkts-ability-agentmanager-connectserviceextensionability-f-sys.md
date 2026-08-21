@@ -29,7 +29,7 @@ Connects an AgentExtensionAbility to a ServiceExtensionAbility. If the target se
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [AgentExtensionContext](arkts-ability-agentextensioncontext-c.md) | Yes | The context of the current agent extension ability. |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the service extension ability to connect. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Indicates the service extension ability to connect. |
 | callback | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | Yes | Indicates the callback of connection. |
 
 **Return value:**

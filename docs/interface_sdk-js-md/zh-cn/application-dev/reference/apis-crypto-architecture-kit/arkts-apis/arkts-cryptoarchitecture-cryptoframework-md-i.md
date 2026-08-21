@@ -399,7 +399,8 @@ update(input: DataBlob, callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> Md算法多次调用update更新的代码示例详见开发指导 &gt; [分段摘要算法](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#分段摘要算法)。
+> Md算法多次调用update更新的代码示例详见开发指导
+> [分段摘要算法](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#分段摘要算法)。
 
 **起始版本：** 23
 
@@ -440,7 +441,8 @@ update(input: DataBlob): Promise<void>
 
 > **说明：**
 > 
-> Md算法多次调用update更新的代码示例详见开发指导 &gt; [分段摘要算法](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#分段摘要算法)。
+> Md算法多次调用update更新的代码示例详见开发指导
+> [分段摘要算法](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#分段摘要算法)。
 
 **起始版本：** 23
 
@@ -484,7 +486,8 @@ updateSync(input: DataBlob): void
 
 > **说明：**
 > 
-> Md算法多次调用updateSync更新的代码示例详见开发指导 &gt; [分段摘要算法](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#分段摘要算法)。
+> Md算法多次调用updateSync更新的代码示例详见开发指导
+> [分段摘要算法](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#分段摘要算法)。
 
 <br><br>**说明：** <br>建议优先使用异步API，update。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 

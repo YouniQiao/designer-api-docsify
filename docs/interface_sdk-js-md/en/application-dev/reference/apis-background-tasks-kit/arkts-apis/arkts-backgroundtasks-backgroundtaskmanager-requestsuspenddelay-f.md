@@ -16,7 +16,8 @@ Requests a transient task.
 
 > **NOTE：**
 > 
-> For details about the constraints on requesting and using a transient task, see &gt; [Transient Task (ArkTS)](../../../task-management/transient-task.md#constraints).
+> For details about the constraints on requesting and using a transient task, see
+> [Transient Task (ArkTS)](../../../task-management/transient-task.md#constraints).
 
 **Since:** 23
 

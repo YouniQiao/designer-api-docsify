@@ -20,5 +20,5 @@ export type SelectionMenuOnCutCallback = (event?: EditorEventInfo) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [EditorEventInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-selectionmenu-editoreventinfo-i.md) | 否 | 事件信息。 |
+| event | [EditorEventInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkuiadvancedselectionmenu-editoreventinfo-i.md) | 否 | 事件信息。 |
 

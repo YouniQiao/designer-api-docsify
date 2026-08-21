@@ -19,7 +19,7 @@ Registers the listener for the push event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Information about the push request sender. |
+| source | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Information about the push request sender. |
 | template | [PluginComponentTemplate](../../apis-default/arkts-apis/arkts-plugincomponent-plugincomponenttemplate-i.md) | Yes | Name of the requested component template. |
 | data | [KVObject](../../apis-default/arkts-apis/arkts-plugincomponentmanager-kvobject-t.md) | Yes | Data. |
 | extraData | [KVObject](../../apis-default/arkts-apis/arkts-plugincomponentmanager-kvobject-t.md) | Yes | Extra data. |

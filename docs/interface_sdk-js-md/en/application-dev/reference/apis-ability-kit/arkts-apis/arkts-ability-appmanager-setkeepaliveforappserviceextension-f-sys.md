@@ -16,7 +16,8 @@ Sets or cancels the keep-alive status for an AppServiceExtensionAbility. This AP
 
 > **NOTE：**
 > 
-> - This API takes effect only when the application is installed under the user with **userId** of 1 and the &gt; **mainElement** field in the **module.json5** file of the entry HAP is set to **AppServiceExtensionAbility**.
+> - This API takes effect only when the application is installed under the user with **userId** of 1 and the
+> **mainElement** field in the **module.json5** file of the entry HAP is set to **AppServiceExtensionAbility**.
 
 **Since:** 23
 

@@ -25,7 +25,10 @@ backButtonIcon(value: string | PixelMap | Resource | SymbolGlyphModifier)
 
 > **说明：**
 > 
-> 不支持通过[SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md)对象的 &gt; fontSize属性修改图标大小、 &gt; effectStrategy属性修改动效、 &gt; symbolEffect属性修改动效类型。
+> 不支持通过[SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md)对象的
+> fontSize属性修改图标大小、
+> effectStrategy属性修改动效、
+> symbolEffect属性修改动效类型。
 
 **起始版本：** 9
 
@@ -53,7 +56,10 @@ backButtonIcon(icon: string | PixelMap | Resource | SymbolGlyphModifier, accessi
 > 
 > 该接口不支持在attributeModifier中调用。
 > 
-> 不支持通过[SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md)对象的 &gt; fontSize属性修改图标大小、 &gt; effectStrategy属性修改动效、 &gt; symbolEffect属性修改动效类型。
+> 不支持通过[SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md)对象的
+> fontSize属性修改图标大小、
+> effectStrategy属性修改动效、
+> symbolEffect属性修改动效类型。
 
 **起始版本：** 19
 
@@ -703,7 +709,9 @@ recoverable(recoverable: Optional<boolean>)
 > 
 > 3. 恢复的过程中不可序列化的信息，例如不可序列化的参数与用户设置的onPop等，会被丢弃，无法恢复。
 > 
-> 4. 当应用退到后台，因系统资源不足等原因被系统终止后，如果某页面已配置为可恢复，当应用再次被唤醒至前台时，系统将自动恢复该页面。详细说明请参考 &gt; [UIAbility备份恢复](../../../application-models/ability-recover-guideline.md)，详细使用请参考 &gt; [示例18](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#示例18设置navigation可恢复)。
+> 4. 当应用退到后台，因系统资源不足等原因被系统终止后，如果某页面已配置为可恢复，当应用再次被唤醒至前台时，系统将自动恢复该页面。详细说明请参考
+> [UIAbility备份恢复](../../../application-models/ability-recover-guideline.md)，详细使用请参考
+> [示例18](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#示例18设置navigation可恢复)。
 
 **起始版本：** 14
 

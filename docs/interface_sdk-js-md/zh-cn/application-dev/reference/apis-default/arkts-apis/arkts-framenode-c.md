@@ -205,7 +205,7 @@ FrameNode的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。<br>**起始版本：** 23 |
+| uiContext | [UIContext](arkts-arkuiuicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。<br>**起始版本：** 23 |
 | options | [FrameNodeOptions](arkts-framenode-framenodeoptions-i.md) | 否 | FrameNode创建时的可选参数。默认值：undefined，表示不支持多线程操作。<br>**起始版本：** 24 |
 
 ## convertPosition
@@ -371,7 +371,7 @@ static createFrameNodes(uiContext: UIContext, count: int): FrameNode[]
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| uiContext | [UIContext](arkts-arkuiuicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | count | int | 是 | 指定创建节点的数量，取值范围为大于零的整型。若给定值小于等于0或不是整数，则返回空数组。 <br>取值限定为整数。 |
 
 **返回值：**
@@ -390,9 +390,11 @@ dispose(): void
 
 > **说明：**
 > 
-> - FrameNode对象调用dispose后，由于不对应任何实体FrameNode节点，在调用部分查询接口([getMeasuredSize](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getmeasuredsize)、 &gt; [getLayoutPosition](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getlayoutposition))的时候会导致应用出现jscrash。
+> - FrameNode对象调用dispose后，由于不对应任何实体FrameNode节点，在调用部分查询接口([getMeasuredSize](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getmeasuredsize)、
+> [getLayoutPosition](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getlayoutposition))的时候会导致应用出现jscrash。
 > 
-> - 通过[getUniqueId](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getuniqueid)可以判断当前FrameNode是否对应一个实体FrameNode节点。当UniqueId大于0时表示该对象对应一个实体 &gt; FrameNode节点。
+> - 通过[getUniqueId](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getuniqueid)可以判断当前FrameNode是否对应一个实体FrameNode节点。当UniqueId大于0时表示该对象对应一个实体
+> FrameNode节点。
 
 **起始版本：** 23
 
@@ -1619,7 +1621,7 @@ moveTo(targetParent: FrameNode, index?: int): void
 
 将当前节点移动到目标 FrameNode 中作为其子节点。 若当前 FrameNode 不可修改，将抛出异常。 当 targetParent 为类型节点（typeNode）时，本接口会验证子节点的类型或数量。 若验证失败，将抛出异常。具体限制请参阅 typeNode 说明。 若当前 FrameNode 已被收养，将抛出异常。
 
-&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;： <br>当前移动操作仅支持以下类型的 TypedFrameNode：Stack、XComponent。 &lt;/p&gt;
+<p>&lt;strong&gt;说明&lt;/strong&gt;： <br>当前移动操作仅支持以下类型的 TypedFrameNode：Stack、XComponent。 </p>
 
 **起始版本：** 23
 
@@ -1845,7 +1847,32 @@ setCrossLanguageOptions(value: CrossLanguageOptions): void
 
 > **说明：**
 > 
-> 当前仅支持Scroll, &gt; Swiper， &gt; List， &gt; ListItem， &gt; ListItemGroup， &gt; WaterFlow， &gt; FlowItem， &gt; Grid， &gt; GridItem， &gt; TextInput， &gt; TextArea， &gt; Column， &gt; Row， &gt; Stack， &gt; Flex， &gt; RelativeContainer， &gt; Progress， &gt; LoadingProgress， &gt; Image， &gt; Button， &gt; CheckBox， &gt; Radio， &gt; Slider， &gt; Toggle， &gt; XComponent类型的 &gt; [TypedFrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-typedframenode-i.md)设置跨ArkTS语言访问选项。
+> 当前仅支持Scroll,
+> Swiper，
+> List，
+> ListItem，
+> ListItemGroup，
+> WaterFlow，
+> FlowItem，
+> Grid，
+> GridItem，
+> TextInput，
+> TextArea，
+> Column，
+> Row，
+> Stack，
+> Flex，
+> RelativeContainer，
+> Progress，
+> LoadingProgress，
+> Image，
+> Button，
+> CheckBox，
+> Radio，
+> Slider，
+> Toggle，
+> XComponent类型的
+> [TypedFrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-typedframenode-i.md)设置跨ArkTS语言访问选项。
 
 **起始版本：** 23
 

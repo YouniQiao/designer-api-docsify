@@ -1,4 +1,4 @@
-# DynamicComponent
+# DynamicComponent(System API)
 
 *DynamicComponent**用于支持在本页面内嵌入显示独立Abc（.abc文件）提供的UI，展示的内容在Worker线程中运行。
 

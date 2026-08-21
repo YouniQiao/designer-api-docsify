@@ -54,7 +54,7 @@ ModularObjectExtensionAbility创建时触发的回调函数，用于初始化。
 | 参数项 | 描述 |
 | -- | -- |
 | OH_AbilityRuntime_ModObjExtensionInstanceHandle instance | 指向[OH_AbilityRuntime_ModObjExtensionInstance](capi-abilityruntime-oh-abilityruntime-modularobjectextensioninstance.md)实例的指针。 |
-| AbilityBase_Want \*want | 表示创建ModularObjectExtensionAbility时的Want信息。详细内容参考[AbilityBase_Want](capi-abilitybase-abilitybase-want.md). |
+| [AbilityBase_Want](capi-abilitybase-abilitybase-want.md) \*want | 表示创建ModularObjectExtensionAbility时的Want信息。详细内容参考[AbilityBase_Want](capi-abilitybase-abilitybase-want.md). |
 
 ### OH_AbilityRuntime_ModObjExtensionAbility_OnDestroyFunc()
 
@@ -91,7 +91,7 @@ ModularObjectExtensionAbility被连接时触发的回调函数。
 | 参数项 | 描述 |
 | -- | -- |
 | OH_AbilityRuntime_ModObjExtensionInstanceHandle instance | 指向[OH_AbilityRuntime_ModObjExtensionInstance](capi-abilityruntime-oh-abilityruntime-modularobjectextensioninstance.md)实例的指针。 |
-| AbilityBase_Want \*want | 表示创建ModularObjectExtensionAbility时的Want信息。 |
+| [AbilityBase_Want](capi-abilitybase-abilitybase-want.md) \*want | 表示创建ModularObjectExtensionAbility时的Want信息。 |
 
 ### OH_AbilityRuntime_ModObjExtensionAbility_OnDisconnectFunc()
 
@@ -228,7 +228,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionAbility_GetContextFrom
 | 参数项 | 描述 |
 | -- | -- |
 | OH_AbilityRuntime_ModObjExtensionInstanceHandle instance | 指向[OH_AbilityRuntime_ModObjExtensionInstance](capi-abilityruntime-oh-abilityruntime-modularobjectextensioninstance.md)实例的指针。 |
-| OH_AbilityRuntime_ModObjExtensionContextHandle* context | 指向[OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modularobjectextensioncontext8h.md)的指针，用于接收ExtensionAbility上下文。 |
+| [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modularobjectextensioncontext8h.md)* context | 指向[OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modularobjectextensioncontext8h.md)的指针，用于接收ExtensionAbility上下文。 |
 
 **返回：**
 
@@ -252,7 +252,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionAbility_GetInstanceFro
 
 | 参数项 | 描述 |
 | -- | -- |
-| [AbilityRuntime_ExtensionInstanceHandle](capi-abilityruntime-abilityruntime-extensioninstance8h.md) baseExtensionInstance | 指向[AbilityRuntime_ExtensionInstance](capi-abilityruntime-abilityruntime-extensioninstance.md)的指针。 |
+| AbilityRuntime_ExtensionInstanceHandle baseExtensionInstance | 指向[AbilityRuntime_ExtensionInstance](capi-abilityruntime-abilityruntime-extensioninstance.md)的指针。 |
 | OH_AbilityRuntime_ModObjExtensionInstanceHandle* modObjExtensionInstance | 指向[OH_AbilityRuntime_ModObjExtensionInstance](capi-abilityruntime-oh-abilityruntime-modularobjectextensioninstance.md)的指针，用于接收ModularObjectExtensionAbility实例，作为输出参数。 |
 
 **返回：**

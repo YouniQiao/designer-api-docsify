@@ -201,7 +201,7 @@ Adds a Want record to the PasteData, and adds **MIMETYPE_TEXT_WANT** to **mimeTy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want object. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Want object. |
 
 **Examples**
 
@@ -441,7 +441,7 @@ Obtains the **Want** object of the primary record.
 
 | Type | Description |
 | --- | --- |
-| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Want object. |
+| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Want object. |
 
 **Examples**
 

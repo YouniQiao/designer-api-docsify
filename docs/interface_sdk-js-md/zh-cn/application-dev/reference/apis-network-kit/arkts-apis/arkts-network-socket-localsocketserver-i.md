@@ -24,7 +24,8 @@ LocalSocketServer停止监听并释放通过[listen](#listen)方法绑定的监�
 
 > **说明：**
 > 
-> 该方法不会关闭已有连接。如需关闭，请调用[LocalSocketConnection](arkts-network-socket-localsocketconnection-i.md)的 &gt; [close](arkts-network-socket-localsocket-i.md#close)方法。
+> 该方法不会关闭已有连接。如需关闭，请调用[LocalSocketConnection](arkts-network-socket-localsocketconnection-i.md)的
+> [close](arkts-network-socket-localsocket-i.md#close)方法。
 
 **起始版本：** 20
 

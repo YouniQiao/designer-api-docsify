@@ -14,17 +14,23 @@ Child components can be dynamically generated using rendering control types [if/
 
 > **NOTE：**
 > 
-> When the **visibility** attribute of a child component of **WaterFlow** is set to **None**, this child component is &gt; not displayed in the container, but its **columnsGap**, **rowsGap**, and **margin** settings are still effective.
+> When the **visibility** attribute of a child component of **WaterFlow** is set to **None**, this child component is
+> not displayed in the container, but its **columnsGap**, **rowsGap**, and **margin** settings are still effective.
 > 
-> If there are a large number of child components, you are advised to adopt methods such as lazy loading, data &gt; caching, component reuse, fixed dimensions, and layout optimization to improve performance and reduce memory usage.
-> For best practices, see &gt; [Optimizing Frame Loss for Waterfall Loading](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-waterflow-performance-optimization).
+> If there are a large number of child components, you are advised to adopt methods such as lazy loading, data
+> caching, component reuse, fixed dimensions, and layout optimization to improve performance and reduce memory usage.
+> For best practices, see
+> [Optimizing Frame Loss for Waterfall Loading](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-waterflow-performance-optimization).
 > 
-> In vertical layout mode, **WaterFlow** calculates the cumulative height of child components in each column and &gt; places new child components in the column with the smallest cumulative height to maintain a compact overall layout.
+> In vertical layout mode, **WaterFlow** calculates the cumulative height of child components in each column and
+> places new child components in the column with the smallest cumulative height to maintain a compact overall layout.
 > 
-> If the heights of multiple columns are the same, the leftmost column is prioritized. In RTL mode, the rightmost &gt; column is prioritized.
+> If the heights of multiple columns are the same, the leftmost column is prioritized. In RTL mode, the rightmost
+> column is prioritized.
 > 
 > Starting from API version 21, the maximum width or height for a single child component inside a **WaterFlow**
-> container is 16,777,216 px. In API version 20 and earlier versions, the limit was 1,000,000 px. If a child &gt; component exceeds the applicable size limit, scrolling or display behavior may become abnormal.
+> container is 16,777,216 px. In API version 20 and earlier versions, the limit was 1,000,000 px. If a child
+> component exceeds the applicable size limit, scrolling or display behavior may become abnormal.
 
 ## WaterFlow
 

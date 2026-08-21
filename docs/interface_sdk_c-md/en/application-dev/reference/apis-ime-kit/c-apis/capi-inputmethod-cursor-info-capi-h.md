@@ -2,7 +2,9 @@
 
 ## Overview
 
-Provides interfaces to manage the cursor information.
+Provides methods for creating, destroying, reading, and writing cursor information objects.
+
+**Include**: <inputmethod/inputmethod_cursor_info_capi.h>
 
 **Library**: libohinputmethod.so
 
@@ -18,7 +20,7 @@ Provides interfaces to manage the cursor information.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) | InputMethod_CursorInfo | Define the InputMethod_CursorInfo structure type.The coordinates and width and height information of the cursor. |
+| [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) | InputMethod_CursorInfo | Represents the cursor information, including the coordinates, width, and height of the cursor. |
 
 ### Function
 
@@ -47,10 +49,10 @@ Create a new [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md
 
 | Parameter | Description |
 | -- | -- |
-| double left | The left point of the cursor and must be absolute coordinate of the physical screen. |
-| double top | The top point of the cursor and must be absolute coordinate of the physical screen. |
-| double width | The width of the cursor. |
-| double height | The height of the cursor. |
+| double left | Absolute value of the distance between the cursor's leftmost point and the left edge of the physicalscreen, in px. |
+| double top | Absolute value of the distance between the cursor's top point and the top edge of the physical screen,in px. |
+| double width | The width of the cursor.in px. |
+| double height | The height of the cursor.in px. |
 
 **Returns**:
 
@@ -93,16 +95,16 @@ Set cursor info.
 | Parameter | Description |
 | -- | -- |
 | [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) *cursorInfo | Represents a pointer to an [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) instance. |
-| double left | The left point of the cursor and must be absolute coordinate of the physical screen. |
-| double top | The top point of the cursor and must be absolute coordinate of the physical screen. |
-| double width | The width of the cursor. |
-| double height | The height of the cursor. |
+| double left | Absolute value of the distance between the cursor's leftmost point and the left edge of the physicalscreen, in px. |
+| double top | Absolute value of the distance between the cursor's top point and the top edge of the physical screen,in px. |
+| double width | The width of the cursor.in px. |
+| double height | The height of the cursor.in px. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      <br>[IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      <br>[IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.      <br>Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_CursorInfo_GetRect()
 
@@ -121,15 +123,15 @@ Get cursor info.
 | Parameter | Description |
 | -- | -- |
 | [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) *cursorInfo | Represents a pointer to an [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) instance. |
-| double *left | The left point of the cursor and must be absolute coordinate of the physical screen. |
-| double *top | The top point of the cursor and must be absolute coordinate of the physical screen. |
-| double *width | The width of the cursor. |
-| double *height | The height of the cursor. |
+| double *left | Absolute value of the distance between the cursor's leftmost point and the left edge of the physicalscreen, in px. |
+| double *top | Absolute value of the distance between the cursor's top point and the top edge of the physical screen,in px. |
+| double *width | The width of the cursor.in px. |
+| double *height | The height of the cursor.in px. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      <br>[IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      <br>[IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.      <br>Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 

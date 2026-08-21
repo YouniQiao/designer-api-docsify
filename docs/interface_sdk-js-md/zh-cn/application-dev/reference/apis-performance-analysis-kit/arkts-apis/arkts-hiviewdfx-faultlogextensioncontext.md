@@ -12,5 +12,5 @@ import { FaultLogExtensionContext } from '@kit.PerformanceAnalysisKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [FaultLogExtensionContext](arkts-performanceanalysis-hiviewdfx-faultlogextensioncontext-faultlogextensioncontext-c.md) | FaultLogExtensionContext是 [FaultLogExtensionAbility](arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md)的上下文环境， 继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。 |
+| [FaultLogExtensionContext](arkts-performanceanalysis-hiviewdfxfaultlogextensioncontext-faultlogextensioncontext-c.md) | FaultLogExtensionContext是 [FaultLogExtensionAbility](arkts-performanceanalysis-hiviewdfxfaultlogextensionability-faultlogextensionability-c.md)的上下文环境， 继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。 |
 

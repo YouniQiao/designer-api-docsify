@@ -121,8 +121,10 @@ get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | nu
 
 > **说明：**
 > 
-> 其中deviceId通过调用<!--RP1-->
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) &gt; 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
+> 其中deviceId通过调用<!--RP1--
+> 
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
 > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -172,8 +174,10 @@ get(deviceId: string, key: string): Promise<boolean | string | number | Uint8Arr
 
 > **说明：**
 > 
-> 其中deviceId通过调用<!--RP1-->
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) &gt; 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
+> 其中deviceId通过调用<!--RP1--
+> 
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
 > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -232,8 +236,10 @@ getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>
 
 > **说明：**
 > 
-> 其中deviceId通过调用<!--RP1-->
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) &gt; 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
+> 其中deviceId通过调用<!--RP1--
+> 
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
 > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -296,8 +302,10 @@ getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 
 > **说明：**
 > 
-> 其中deviceId通过调用<!--RP1-->
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) &gt; 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
+> 其中deviceId通过调用<!--RP1--
+> 
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
 > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -499,8 +507,10 @@ getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): vo
 
 > **说明：**
 > 
-> 其中deviceId通过调用<!--RP1-->
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) &gt; 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
+> 其中deviceId通过调用<!--RP1--
+> 
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
 > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -568,8 +578,10 @@ getEntries(deviceId: string, query: Query): Promise<Entry[]>
 
 > **说明：**
 > 
-> 其中deviceId通过调用<!--RP1-->
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) &gt; 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
+> 其中deviceId通过调用<!--RP1--
+> 
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
 > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -644,8 +656,10 @@ getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KvStor
 
 > **说明：**
 > 
-> 其中deviceId通过调用<!--RP1-->
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) &gt; 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
+> 其中deviceId通过调用<!--RP1--
+> 
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
 > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -695,8 +709,10 @@ getResultSet(deviceId: string, keyPrefix: string): Promise<KvStoreResultSet>
 
 > **说明：**
 > 
-> 其中deviceId通过调用<!--RP1-->
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) &gt; 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
+> 其中deviceId通过调用<!--RP1--
+> 
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
 > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -889,8 +905,10 @@ getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KvStoreResu
 
 > **说明：**
 > 
-> 其中deviceId通过调用<!--RP1-->
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) &gt; 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
+> 其中deviceId通过调用<!--RP1--
+> 
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
 > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -957,8 +975,10 @@ getResultSet(deviceId: string, query: Query): Promise<KvStoreResultSet>
 
 > **说明：**
 > 
-> 其中deviceId通过调用<!--RP1-->
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) &gt; 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
+> 其中deviceId通过调用<!--RP1--
+> 
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
 > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -1160,8 +1180,10 @@ getResultSize(deviceId: string, query: Query, callback: AsyncCallback<number>): 
 
 > **说明：**
 > 
-> 其中deviceId通过调用<!--RP1-->
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) &gt; 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
+> 其中deviceId通过调用<!--RP1--
+> 
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
 > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -1223,8 +1245,10 @@ getResultSize(deviceId: string, query: Query): Promise<number>
 
 > **说明：**
 > 
-> 其中deviceId通过调用<!--RP1-->
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) &gt; 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
+> 其中deviceId通过调用<!--RP1--
+> 
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
 > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -1467,8 +1491,10 @@ removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 其中deviceId通过调用<!--RP1-->
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) &gt; 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
+> 其中deviceId通过调用<!--RP1--
+> 
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
 > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -1525,8 +1551,10 @@ removeDeviceData(deviceId: string): Promise<void>
 
 > **说明：**
 > 
-> 其中deviceId通过调用<!--RP1-->
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) &gt; 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
+> 其中deviceId通过调用<!--RP1--
+> 
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
 > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -1590,7 +1618,10 @@ sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 
 > **说明：**
 > 
-> 其中deviceIds为<!--RP2-->[DeviceInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)中的 &gt; networkId, 通过调用 &gt; [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) &gt; 方法得到。<!--RP2End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
+> 其中deviceIds为<!--RP2-->[DeviceInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)中的
+> networkId, 通过调用
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。<!--RP2End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 
 **起始版本：** 8
 

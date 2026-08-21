@@ -16,9 +16,11 @@ Creates a normal system account. A maximum of two normal system accounts ( [osAc
 
 > **NOTE：**
 > 
-> The account creation process is time-consuming. Subsequent calls to other synchronous APIs in the application &gt; main thread must wait for the asynchronous return of this API.
+> The account creation process is time-consuming. Subsequent calls to other synchronous APIs in the application
+> main thread must wait for the asynchronous return of this API.
 > 
-> Creating a system account has a significant impact on device performance. This API is supported only on phones &gt; and tablets with 12 GB or more of RAM.
+> Creating a system account has a significant impact on device performance. This API is supported only on phones
+> and tablets with 12 GB or more of RAM.
 
 **Since:** 26.0.0
 
@@ -34,7 +36,7 @@ Creates a normal system account. A maximum of two normal system accounts ( [osAc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | name | string | Yes | System account name. The system account name must be unique and cannot be empty. Otherwise, error code 9200012 is reported. |
 
 **Return value:**

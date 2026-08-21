@@ -74,7 +74,7 @@ Checks whether this styled string the same as another styled string.
 static fromHtml(html: string): Promise<StyledString>
 ```
 
-Converts an HTML string into a styled string. Currently, the following HTML tags are supported for conversion: \&lt;p&gt; , \&lt;span&gt;, \&lt;img&gt;, \
+Converts an HTML string into a styled string. Currently, the following HTML tags are supported for conversion: \<p> , \&lt;span&gt;, \&lt;img&gt;, \
 
 , \&lt;strong&gt;, \&lt;b&gt;, \&lt;a&gt;, \&lt;i&gt;, \&lt;em&gt;, \&lt;s&gt;, \&lt;u&gt;, \&lt;del&gt;, \&lt;sup&gt;, \&lt;sub&gt;. The **style** attribute within tags can be converted to the corresponding style in the styled string.
 

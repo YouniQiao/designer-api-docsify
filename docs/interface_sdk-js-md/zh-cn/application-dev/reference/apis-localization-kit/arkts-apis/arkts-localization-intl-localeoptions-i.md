@@ -1,7 +1,8 @@
 # LocaleOptions
 
 
-> 从API version 6开始支持，从API version 20开始废弃，以calendar为例， &gt; 区域初始化配置项。从API version 9开始，LocaleOptions属性由必填改为可选。
+> 从API version 6开始支持，从API version 20开始废弃，以calendar为例，
+> 区域初始化配置项。从API version 9开始，LocaleOptions属性由必填改为可选。
 
 > **说明：**
 > 

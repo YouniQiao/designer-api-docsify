@@ -96,7 +96,9 @@ Performs subsequent operations after a value is removed. The subsequent operatio
 
 > **NOTE：**
 > 
-> If the callback method is executed after [clear&lt;sup&gt;9+&lt;/sup&gt;](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#clear) and &gt; [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#updatecapacity) are called and the input **key** and &gt; **value** parameters are of the MapIterator type, perform subsequent operations by referring to example 2.
+> If the callback method is executed after [clear&lt;sup&gt;9+&lt;/sup&gt;](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#clear) and
+> [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#updatecapacity) are called and the input **key** and
+> **value** parameters are of the MapIterator type, perform subsequent operations by referring to example 2.
 
 **Since:** 9
 

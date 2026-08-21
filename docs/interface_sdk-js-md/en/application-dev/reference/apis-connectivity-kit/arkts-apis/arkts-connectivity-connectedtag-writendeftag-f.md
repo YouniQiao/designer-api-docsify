@@ -16,7 +16,8 @@ Writes data to this active tag. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. Use &gt; [connectedTag.write](arkts-connectivity-connectedtag-write-f.md) instead.
+> This API is supported since API version 8 and deprecated since API version 9. Use
+> [connectedTag.write](arkts-connectivity-connectedtag-write-f.md) instead.
 
 **Since:** 8
 
@@ -67,7 +68,8 @@ Writes data to this active tag. This API uses an asynchronous callback to return
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. Use &gt; [connectedTag.write](arkts-connectivity-connectedtag-write-f.md) instead.
+> This API is supported since API version 8 and deprecated since API version 9. Use
+> [connectedTag.write](arkts-connectivity-connectedtag-write-f.md) instead.
 
 **Since:** 8
 

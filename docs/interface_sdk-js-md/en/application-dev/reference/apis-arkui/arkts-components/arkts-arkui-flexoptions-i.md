@@ -122,7 +122,8 @@ wrap?: FlexWrap
 Whether the **Flex** component has a single line or multiple lines. If an invalid value is passed, the default value will be used.   
 > **NOTE：**
 > 
-> When wrapped onto multiple lines, the child elements on the new line are stacked in the direction based on the &gt; cross axis direction. Default value: **FlexWrap.NoWrap**.
+> When wrapped onto multiple lines, the child elements on the new line are stacked in the direction based on the
+> cross axis direction. Default value: **FlexWrap.NoWrap**.
 
 **Type:** FlexWrap
 

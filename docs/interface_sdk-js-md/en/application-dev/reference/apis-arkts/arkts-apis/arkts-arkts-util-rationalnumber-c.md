@@ -170,7 +170,9 @@ Creates a **RationalNumber** object based on the given string.
 
 > **NOTE：**
 > 
-> The **rationalString** parameter must be a string. If a decimal string is passed in, the function is not &gt; intercepted, but the error message "createRationalFromString: The type of Parameter must be integer string" is &gt; displayed.
+> The **rationalString** parameter must be a string. If a decimal string is passed in, the function is not
+> intercepted, but the error message "createRationalFromString: The type of Parameter must be integer string" is
+> displayed.
 
 **Since:** 8
 
@@ -287,7 +289,8 @@ Obtains the greatest common divisor of two specified integers.
 
 > **NOTE：**
 > 
-> The **number1** and **number2** parameters must be integers. If a decimal number is passed in, the function is &gt; not intercepted, but the error message "getCommonFactor: The type of Parameter must be integer" is displayed.
+> The **number1** and **number2** parameters must be integers. If a decimal number is passed in, the function is
+> not intercepted, but the error message "getCommonFactor: The type of Parameter must be integer" is displayed.
 
 **Since:** 9
 
@@ -528,7 +531,9 @@ Creates a **RationalNumber** instance with a given numerator and denominator.
 
 > **NOTE：**
 > 
-> The **numerator** and **denominator** parameters must be integers. If a decimal number is passed in, the &gt; function is not intercepted, but the error message "parseRationalNumber: The type of Parameter must be integer" &gt; is displayed.
+> The **numerator** and **denominator** parameters must be integers. If a decimal number is passed in, the
+> function is not intercepted, but the error message "parseRationalNumber: The type of Parameter must be integer"
+> is displayed.
 
 **Since:** 9
 

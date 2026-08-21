@@ -40,7 +40,7 @@ want?: Want
 
 表示Want类型信息，如ability名称，包名等。
 
-**类型：** [Want](arkts-ability-app-ability-want-want-c.md)
+**类型：** [Want](arkts-ability-appabilitywant-want-c.md)
 
 **起始版本：** 23
 

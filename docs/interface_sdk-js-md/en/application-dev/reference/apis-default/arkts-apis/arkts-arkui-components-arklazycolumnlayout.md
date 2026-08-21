@@ -18,5 +18,5 @@
 
 | Name | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) | Defines the lazy column layout attribute. |
+| [LazyColumnLayoutAttribute](arkts-arkuicomponentsarklazycolumnlayout-lazycolumnlayoutattribute-i.md) | Defines the lazy column layout attribute. |
 

@@ -16,7 +16,8 @@ Initializes the active tag chip.
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. Use &gt; [initialize](arkts-connectivity-connectedtag-initialize-f.md) instead.
+> This API is supported since API version 8 and deprecated since API version 9. Use
+> [initialize](arkts-connectivity-connectedtag-initialize-f.md) instead.
 
 **Since:** 8
 

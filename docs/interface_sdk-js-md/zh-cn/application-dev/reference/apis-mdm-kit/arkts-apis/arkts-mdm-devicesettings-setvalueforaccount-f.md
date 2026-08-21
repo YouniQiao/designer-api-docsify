@@ -28,7 +28,7 @@ function setValueForAccount(admin: Want, item: SettingsItem, accountId: number, 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | item | [SettingsItem](arkts-mdm-devicesettings-settingsitem-e.md) | 是 | 设备设置策略类型。 |
 | accountId | number | 是 | 用户ID，取值范围：大于等于0。<br/>accountId可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
 | value | string | 是 | 策略类型值。<br/>当item为[SettingsItem.DEVICE_NAME](arkts-mdm-devicesettings-settingsitem-e.md)时，value为设备名 称的字符串。 字符串长度范围：大于等于1，小于等于100。只允许设置当前用户的设备名称，设置其他用户的设备名称返回9200012错误码。<br/>当item为 [SettingsItem.FLOATING_NAVIGATION](arkts-mdm-devicesettings-settingsitem-e.md)时，在Phone和Tablet设备中可正常调用，在其他设备中返回801错误码。只允许 设置当前用户的三键导航，设置其他用户的三键导航不会生效，value为三键导航的开关状态。<br/>- '0'：表示开启三键导航（通过接口 [enterKioskMode](../../apis-ability-kit/arkts-apis/arkts-ability-kioskmanager-enterkioskmode-f.md)进入Kiosk模式下，三键导航显示依赖底部手势开启；即三键 导航开关和底部手势开关同时开启时，三键导航才会显示。底部手势可通过接口 [applicationManager.setKioskFeatures](arkts-mdm-applicationmanager-setkioskfeatures-f.md) 设置开启或关闭）。<br/>- '1'：表示关闭三键导航。 |

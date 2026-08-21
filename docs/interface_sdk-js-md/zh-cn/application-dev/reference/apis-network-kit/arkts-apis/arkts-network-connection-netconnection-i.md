@@ -4,9 +4,12 @@
 
 > **说明：**
 > 
-> （1）设备从无网络状态转变为有网络状态时，将触发netAvailable事件、netCapabilitiesChange事件和netConnectionPropertiesChange事件； &gt;
-> （2）接收到netAvailable事件后，若设备从有网络状态转变为无网络状态，将触发netLost事件； &gt;
-> （3）若未接收到netAvailable事件，则将直接接收到netUnavailable事件； &gt;
+> （1）设备从无网络状态转变为有网络状态时，将触发netAvailable事件、netCapabilitiesChange事件和netConnectionPropertiesChange事件；
+> 
+> （2）接收到netAvailable事件后，若设备从有网络状态转变为无网络状态，将触发netLost事件；
+> 
+> （3）若未接收到netAvailable事件，则将直接接收到netUnavailable事件；
+> 
 > （4）设备从WiFi网络切换至蜂窝网络时，将先触发netLost事件（WiFi丢失），随后触发netAvailable事件（蜂窝可用）。
 
 **起始版本：** 23

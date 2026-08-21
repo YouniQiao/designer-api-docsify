@@ -4,7 +4,8 @@
 
 > **NOTE：**
 > 
-> To trigger the pinch gesture again after successful recognition, all fingers must be lifted and then make &gt; contact again to satisfy the recognition criteria.
+> To trigger the pinch gesture again after successful recognition, all fingers must be lifted and then make
+> contact again to satisfy the recognition criteria.
 
 **Inheritance/Implementation:** PinchGestureInterface extends GestureInterface<PinchGestureInterface>
 

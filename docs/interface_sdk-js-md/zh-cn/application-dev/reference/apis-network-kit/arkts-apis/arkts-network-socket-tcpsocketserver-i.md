@@ -24,7 +24,8 @@ TCPSocketServer停止监听并释放通过 [listen](#listen)方法绑定的端�
 
 > **说明：**
 > 
-> 该方法不会关闭已有连接。如需关闭，请调用[TCPSocketConnection](arkts-network-socket-tcpsocketconnection-i.md)的 &gt; [close](arkts-network-socket-tcpsocketconnection-i.md#close)方法。
+> 该方法不会关闭已有连接。如需关闭，请调用[TCPSocketConnection](arkts-network-socket-tcpsocketconnection-i.md)的
+> [close](arkts-network-socket-tcpsocketconnection-i.md#close)方法。
 
 **起始版本：** 20
 
@@ -137,7 +138,8 @@ getSocketFd(): Promise<int>
 
 > **说明：**
 > 
-> - [listen](#listen)方法调用成功后，才可调用 &gt; 此方法。多次调用listen时，会获取最新监听端口绑定的文件描述符。
+> - [listen](#listen)方法调用成功后，才可调用
+> 此方法。多次调用listen时，会获取最新监听端口绑定的文件描述符。
 > 
 > - 监听异常、Socket已关闭（如调用close后）等异常情况下调用本接口会返回-1。
 > 

@@ -16,7 +16,11 @@ function setDefaultFreezeObserver(defaultObserver?: FreezeObserver) : FreezeObse
 
 > **说明：**
 > 
-> 该接口请勿与 &gt; [on('freeze')](arkts-ability-errormanager-onerror-f.md#onerror) &gt; 或 &gt; [off('freeze')](arkts-ability-errormanager-offerror-f.md#offerror) &gt; 接口混用。
+> 该接口请勿与
+> [on('freeze')](arkts-ability-errormanager-onerror-f.md#onerror)
+> 或
+> [off('freeze')](arkts-ability-errormanager-offerror-f.md#offerror)
+> 接口混用。
 
 **起始版本：** 26.0.0
 

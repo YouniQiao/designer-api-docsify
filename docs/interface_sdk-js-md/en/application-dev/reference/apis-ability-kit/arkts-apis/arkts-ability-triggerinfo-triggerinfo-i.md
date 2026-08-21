@@ -84,7 +84,7 @@ want?: Want
 
 Carrier for information transfer between objects (application components).
 
-**Type:** [Want](arkts-ability-app-ability-want-want-c.md)
+**Type:** [Want](arkts-ability-appabilitywant-want-c.md)
 
 **Since:** 23
 

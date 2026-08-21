@@ -1,8 +1,10 @@
 # InputMethodExtensionContext
 
 @brief The **InputMethodExtensionContext** module, inherited from **ExtensionContext**, provides context for **InputMethodExtension** abilities. You can use the APIs of this module to start, terminate, connect, and disconnect abilities. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > The initial APIs of this module are supported since API version 9. Newly added APIs will be marked with a superscript to indicate their earliest API version. The APIs of this module can be used only in the stage model.
 
 **Inheritance/Implementation:** InputMethodExtensionContext extends ExtensionContext
@@ -129,7 +131,7 @@ startAbility(want: Want): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information, including the ability name and bundle name of the target application. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Want information, including the ability name and bundle name of the target application. |
 
 **Return value:**
 

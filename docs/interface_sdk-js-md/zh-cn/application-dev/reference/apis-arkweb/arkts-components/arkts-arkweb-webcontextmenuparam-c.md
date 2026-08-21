@@ -136,7 +136,8 @@ getLinkUrl(): string
 
 > **说明：**
 > 
-> 与getUnfilteredLinkUrl()相比，该方法会对URL进行安全检查；与getSourceUrl()相比，该方法获取的是长按位置处的链接URL，而getSourceUrl()获取的是选中元素的src属性URL（如图 &gt; 像、媒体等资源）。
+> 与getUnfilteredLinkUrl()相比，该方法会对URL进行安全检查；与getSourceUrl()相比，该方法获取的是长按位置处的链接URL，而getSourceUrl()获取的是选中元素的src属性URL（如图
+> 像、媒体等资源）。
 
 **起始版本：** 9
 

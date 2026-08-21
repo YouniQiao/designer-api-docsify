@@ -18,7 +18,8 @@ function getSystemNetPortStates(): Promise<NetPortStatesInfo>
 > 
 > 该接口获取系统当前监听的TCP、UDP端口信息，详细字段包括：
 > 
->   TCP端口字段：本地地址、本地端口、远端地址、远端端口、TCP连接状态、进程PID、进程UID &gt;
+>   TCP端口字段：本地地址、本地端口、远端地址、远端端口、TCP连接状态、进程PID、进程UID
+> 
 >   UDP端口字段：本地地址、本地端口、进程PID 、进程UID
 
 **起始版本：** 24

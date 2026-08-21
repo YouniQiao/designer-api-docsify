@@ -4,7 +4,9 @@ The DataUriUtils module provides APIs to process URI objects. You can use the AP
 
 > **NOTE：**
 > 
-> The APIs of this module are supported since API version 7 and deprecated since API version 9. You are advised to &gt; use [@ohos.app.ability.dataUriUtils](arkts-app-ability-datauriutils.md) instead. Newly added APIs &gt; will be marked with a superscript to indicate their earliest API version.
+> The APIs of this module are supported since API version 7 and deprecated since API version 9. You are advised to
+> use [@ohos.app.ability.dataUriUtils](arkts-app-ability-datauriutils.md) instead. Newly added APIs
+> will be marked with a superscript to indicate their earliest API version.
 
 **Since:** 7
 

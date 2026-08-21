@@ -26,7 +26,7 @@ function getStartupTaskResult(startupTask: string): Object
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| startupTask | string | 是 | 启动任务[StartupTask](../../apis-default/arkts-apis/arkts-app-appstartup-startuptask-startuptask-c.md)的名称或预加载so名称。 |
+| startupTask | string | 是 | 启动任务[StartupTask](../../apis-default/arkts-apis/arkts-appappstartupstartuptask-startuptask-c.md)的名称或预加载so名称。 |
 
 **返回值：**
 
@@ -100,7 +100,7 @@ function getStartupTaskResult(startupTask: string): Any
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| startupTask | string | 是 | 启动任务[StartupTask](../../apis-default/arkts-apis/arkts-app-appstartup-startuptask-startuptask-c.md)的名称或预加载so名称。 |
+| startupTask | string | 是 | 启动任务[StartupTask](../../apis-default/arkts-apis/arkts-appappstartupstartuptask-startuptask-c.md)的名称或预加载so名称。 |
 
 **返回值：**
 

@@ -481,7 +481,9 @@ Unsubscribes from changes in the state of the specified permissions for the toke
 When unsubscribing, if no callback is passed in, all listening callbacks that completely match the tokenIDList and permissionList will be unsubscribed in batches.
 
 > **NOTE：**
-> This API is usually used together with &gt; [onPermissionStateChange](#onpermissionstatechange) &gt; to cancel the listening relationship created by onPermissionStateChange.
+> This API is usually used together with
+> [onPermissionStateChange](#onpermissionstatechange)
+> to cancel the listening relationship created by onPermissionStateChange.
 
 **Since:** 23
 
@@ -589,8 +591,10 @@ Subscribes to changes in the state of specified permissions for the given applic
 Multiple callbacks can be registered for the specified **tokenIDList** and **permissionList**.
 
 > **NOTE：**
-> If a new subscription overlaps with an existing subscription in terms of the tokenID list and permission list, &gt; the same callback cannot be used for subscription.
-> This API is usually used together with &gt; [offPermissionStateChange](#offpermissionstatechange).
+> If a new subscription overlaps with an existing subscription in terms of the tokenID list and permission list,
+> the same callback cannot be used for subscription.
+> This API is usually used together with
+> [offPermissionStateChange](#offpermissionstatechange).
 > When listening is no longer needed, offPermissionStateChange should be called to unsubscribe.
 
 **Since:** 23

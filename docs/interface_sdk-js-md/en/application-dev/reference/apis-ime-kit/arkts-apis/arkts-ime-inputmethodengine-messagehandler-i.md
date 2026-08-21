@@ -1,12 +1,18 @@
 # MessageHandler
 
 @brief Represents a custom communication object. <br> <br>   
-> **NOTE：**<br>
-> <br>
-> You can register this object to receive custom communication data sent by the edit box application attached to the input method application. When the custom communication data is received, the [onMessage](#onmessage) callback in this object is triggered. <br>
-> <br>
-> This object is globally unique. After multiple registrations, only the last registered object is valid and retained, and the [onTerminated](#onterminated) callback of the penultimate registered object is triggered. <br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> You can register this object to receive custom communication data sent by the edit box application attached to the input method application. When the custom communication data is received, the [onMessage](#onmessage) callback in this object is triggered. &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> This object is globally unique. After multiple registrations, only the last registered object is valid and retained, and the [onTerminated](#onterminated) callback of the penultimate registered object is triggered. &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > If this object is unregistered, its [onTerminated](#onterminated) callback will be triggered.
 
 **Since:** 23
@@ -28,10 +34,14 @@ onMessage(msgId: string, msgParam?: ArrayBuffer): void
 ```
 
 @brief Receives the custom data callback sent by the edit box application attached to the input method application. <br> <br>   
-> **NOTE：**<br>
-> <br>
-> This callback is triggered when the registered [MessageHandler](#messagehandler) receives custom communication data sent by the edit box application attached to the input method application. <br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> This callback is triggered when the registered [MessageHandler](#messagehandler) receives custom communication data sent by the edit box application attached to the input method application. &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > The **msgId** parameter is mandatory, and the **msgParam** parameter is optional. If only the custom **msgId** data is received, confirm it with the data sender.
 
 **Since:** 15
@@ -74,10 +84,14 @@ onTerminated(): void
 ```
 
 @brief Listens for MessageHandler termination. <br> <br>   
-> **NOTE：**<br>
-> <br>
-> When an application registers a new [MessageHandler](#messagehandler) object, the [onTerminated](#onterminated) callback of the penultimate registered [MessageHandler](#messagehandler) object is triggered. <br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> When an application registers a new [MessageHandler](#messagehandler) object, the [onTerminated](#onterminated) callback of the penultimate registered [MessageHandler](#messagehandler) object is triggered. &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > When an application unregisters a new [MessageHandler](#messagehandler) object, the [onTerminated](#onterminated) callback of the registered [MessageHandler](#messagehandler) object is triggered.
 
 **Since:** 15
@@ -113,10 +127,14 @@ onMessage: OnMessageCallback
 ```
 
 @brief onMessage(msgId: string, msgParam?: ArrayBuffer): void <br> <br>Receives the custom data callback sent by the edit box application attached to the input method application. <br> <br>   
-> **NOTE：**<br>
-> <br>
-> This callback is triggered when the registered [MessageHandler](#messagehandler) receives custom communication data sent by the edit box application attached to the input method application. <br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> This callback is triggered when the registered [MessageHandler](#messagehandler) receives custom communication data sent by the edit box application attached to the input method application. &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > The **msgId** parameter is mandatory, and the **msgParam** parameter is optional. If only the custom **msgId** data is received, confirm it with the data sender.
 
 **Type:** OnMessageCallback
@@ -134,10 +152,14 @@ onTerminated: Callback<void>
 ```
 
 @brief Listens for MessageHandler termination. <br> <br>   
-> **NOTE：**<br>
-> <br>
-> When an application registers a new [MessageHandler](#messagehandler) object, the [onTerminated](#onterminated) callback of the penultimate registered [MessageHandler](#messagehandler) object is triggered. <br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> When an application registers a new [MessageHandler](#messagehandler) object, the [onTerminated](#onterminated) callback of the penultimate registered [MessageHandler](#messagehandler) object is triggered. &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > When an application unregisters a new [MessageHandler](#messagehandler) object, the [onTerminated](#onterminated) callback of the registered [MessageHandler](#messagehandler) object is triggered.
 
 **Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;

@@ -4,7 +4,10 @@ The **RenderNode** module provides APIs for creating a RenderNode in custom draw
 
 > **NOTE：**
 > 
-> - Avoid modifying RenderNodes in BuilderNode. The FrameNode associated &gt; with BuilderNode is designed solely for mounting the BuilderNode as a child component. Modifying attributes or &gt; operations on the FrameNode's child nodes or their corresponding RenderNodes may lead to undefined behavior, &gt; including display, event handling, and stability issues.
+> - Avoid modifying RenderNodes in BuilderNode. The FrameNode associated
+> with BuilderNode is designed solely for mounting the BuilderNode as a child component. Modifying attributes or
+> operations on the FrameNode's child nodes or their corresponding RenderNodes may lead to undefined behavior,
+> including display, event handling, and stability issues.
 > 
 > - RenderNode objects do not support JSON serialization.
 
@@ -311,7 +314,9 @@ Note: The Canvas provided in the [DrawContext](../../apis-default/arkts-apis/ark
 
 > **NOTE：**
 > 
-> During RenderNode initialization, the **draw** method is invoked twice. The first call occurs when the FrameNode &gt; is initially created, triggering the rendering process. The second call occurs when the modifier is initially &gt; set, which triggers drawing. All subsequent drawing processes are triggered by the modifier.
+> During RenderNode initialization, the **draw** method is invoked twice. The first call occurs when the FrameNode
+> is initially created, triggering the rendering process. The second call occurs when the modifier is initially
+> set, which triggers drawing. All subsequent drawing processes are triggered by the modifier.
 
 **Since:** 11
 

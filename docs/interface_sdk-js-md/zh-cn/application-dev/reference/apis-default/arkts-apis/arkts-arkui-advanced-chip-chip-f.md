@@ -26,5 +26,5 @@ export declare function Chip(options: ChipOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ChipOptions](arkts-arkui-advanced-chip-chipoptions-i.md) | 是 | 定义Chip组件的参数。 |
+| options | [ChipOptions](arkts-arkuiadvancedchip-chipoptions-i.md) | 是 | 定义Chip组件的参数。 |
 

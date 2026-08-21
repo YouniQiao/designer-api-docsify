@@ -17,7 +17,7 @@ function getDeviceConfigs(): Array<WifiDeviceConfig>
 
 获取网络配置。
 
-&lt;p&gt;只能获取本应用创建的网络配置。
+<p>只能获取本应用创建的网络配置。
 
 **起始版本：** 7
 

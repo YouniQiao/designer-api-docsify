@@ -3,7 +3,8 @@
 
 > **NOTE：**
 > 
-> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [bundleManager.BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md) instead.
+> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
+> [bundleManager.BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md) instead.
 
 Enumerates the bundle flags, which indicate the type of bundle information to obtain.
 

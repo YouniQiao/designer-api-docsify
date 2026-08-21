@@ -126,7 +126,7 @@ function createFileAccessHelper(context: Context, wants: Array<Want>): FileAcces
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | Indicates the application context. |
-| wants | Array&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | 是 | Represents the connected data provider. |
+| wants | Array&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)&gt; | 是 | Represents the connected data provider. |
 
 **返回值：**
 

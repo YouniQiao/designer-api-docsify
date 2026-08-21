@@ -11,7 +11,10 @@
 
 > **NOTE：**
 > 
-> - Allowed child component types: built-in and custom components, including rendering control types ( &gt; [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md), &gt; [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), and &gt; [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)).
+> - Allowed child component types: built-in and custom components, including rendering control types (
+> [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md),
+> [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), and
+> [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)).
 > 
 > - Number of child components: multiple.
 

@@ -18,7 +18,7 @@ The options of ActionSheet.
 alignment?: DialogAlignment
 ```
 
-Alignment mode of the dialog box in the vertical direction. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If showInSubWindow is set to true in UIExtension, the dialog box is aligned with the host window based on UIExtension. &lt;/p&gt;
+Alignment mode of the dialog box in the vertical direction. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If showInSubWindow is set to true in UIExtension, the dialog box is aligned with the host window based on UIExtension. </p>
 
 **Type:** [DialogAlignment](arkts-alertdialog-dialogalignment-e.md)
 
@@ -62,7 +62,7 @@ Whether to close the dialog box when the overlay is clicked.
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the dialog box. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Setting this parameter to BlurStyle.NONE disables the background blur. When backgroundBlurStyle is set to a value other than NONE, do not set backgroundColor. If you do, the color display may not produce the expected visual effect. &lt;/p&gt;
+Background blur style of the dialog box. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Setting this parameter to BlurStyle.NONE disables the background blur. When backgroundBlurStyle is set to a value other than NONE, do not set backgroundColor. If you do, the color display may not produce the expected visual effect. </p>
 
 **Type:** [BlurStyle](../../apis-arkui/arkts-components/arkts-arkui-blurstyle-e.md)
 
@@ -104,7 +104,7 @@ Defines the actionSheet's background blur style with options
 backgroundColor?: ResourceColor
 ```
 
-Background color of the dialog box. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When backgroundColor is set to a non-transparent color, backgroundBlurStyle must be set to BlurStyle.NONE; otherwise, the color display may not meet the expected effect. &lt;/p&gt;
+Background color of the dialog box. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When backgroundColor is set to a non-transparent color, backgroundBlurStyle must be set to BlurStyle.NONE; otherwise, the color display may not meet the expected effect. </p>
 
 **Type:** [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -146,7 +146,7 @@ Defines the actionSheet's background effect with options
 borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 ```
 
-Border color of the dialog box. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When borderColor is of type LocalizedEdgeColors, the layout order can be dynamically adjusted based on the user's language settings. &lt;/p&gt;
+Border color of the dialog box. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When borderColor is of type LocalizedEdgeColors, the layout order can be dynamically adjusted based on the user's language settings. </p>
 
 **Type:** [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md) \| [EdgeColors](../../apis-arkui/arkts-apis/arkts-arkui-edgecolors-t.md) \| [LocalizedEdgeColors](../../apis-arkui/arkts-apis/arkts-arkui-localizededgecolors-i.md)
 
@@ -428,7 +428,7 @@ Determine the display order of the dialog.
 levelUniqueId?: int
 ```
 
-Unique ID of the node under the display level for the page-level dialog box. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>This parameter takes effect only when levelMode is set to LevelMode.EMBEDDED. &lt;/p&gt;
+Unique ID of the node under the display level for the page-level dialog box. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>This parameter takes effect only when levelMode is set to LevelMode.EMBEDDED. </p>
 
 **Type:** int
 
@@ -448,7 +448,7 @@ Unique ID of the node under the display level for the page-level dialog box. &lt
 maskRect?: Rectangle
 ```
 
-Mask area of the dialog box. Events outside the mask area are transparently transmitted, and events within the mask area are not. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>maskRect does not take effect when showInSubWindow is set to true. &lt;/p&gt;
+Mask area of the dialog box. Events outside the mask area are transparently transmitted, and events within the mask area are not. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>maskRect does not take effect when showInSubWindow is set to true. </p>
 
 **Type:** [Rectangle](../../apis-arkui/arkts-components/arkts-arkui-rectangle-i.md)
 
@@ -590,7 +590,7 @@ Callback function before the dialog closeAnimation starts.
 onWillDismiss?: Callback<DismissDialogAction>
 ```
 
-Callback for interactive closure of the dialog box. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: 1. If this callback is registered, the dialog box will not be closed immediately after the user touches the mask or the Back button, presses the Esc key, or swipes left or right on the screen. The reason parameter in the callback is used to determine whether the dialog box can be closed. The reason returned by the component does not support the value CLOSE_BUTTON. 2. In the onWillDismiss callback, another onWillDismiss callback is not allowed. &lt;/p&gt;
+Callback for interactive closure of the dialog box. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: 1. If this callback is registered, the dialog box will not be closed immediately after the user touches the mask or the Back button, presses the Esc key, or swipes left or right on the screen. The reason parameter in the callback is used to determine whether the dialog box can be closed. The reason returned by the component does not support the value CLOSE_BUTTON. 2. In the onWillDismiss callback, another onWillDismiss callback is not allowed. </p>
 
 **Type:** [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;[DismissDialogAction](arkts-actionsheet-dismissdialogaction-i.md)&gt;
 
@@ -652,7 +652,7 @@ Options in the dialog box. Each option supports the image, text, and callback.
 showInSubWindow?: boolean
 ```
 
-Whether to show the dialog box in a subwindow when the dialog box needs to be displayed outside the main window. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>A dialog box whose showInSubWindow attribute is true cannot trigger the display of another dialog box whose showInSubWindow attribute is also true. &lt;/p&gt;
+Whether to show the dialog box in a subwindow when the dialog box needs to be displayed outside the main window. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>A dialog box whose showInSubWindow attribute is true cannot trigger the display of another dialog box whose showInSubWindow attribute is also true. </p>
 
 **Type:** boolean
 
@@ -736,7 +736,7 @@ Title of the dialog box.
 transition?: TransitionEffect
 ```
 
-Transition effect for the entrance and exit of the dialog box. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: 1. If this parameter is not set, the default effect is used. 2. Touching the Back button during the entrance animation pauses the entrance animation and starts the exit animation. The final effect is one obtained after the curves of the entrance and exit animations are combined. 3. Touching the Back button during the exit animation does not affect the animation playback. Touching the Back button again closes the application. &lt;/p&gt;
+Transition effect for the entrance and exit of the dialog box. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: 1. If this parameter is not set, the default effect is used. 2. Touching the Back button during the entrance animation pauses the entrance animation and starts the exit animation. The final effect is one obtained after the curves of the entrance and exit animations are combined. 3. Touching the Back button during the exit animation does not affect the animation playback. Touching the Back button again closes the application. </p>
 
 **Type:** [TransitionEffect](../../apis-arkui/arkts-components/arkts-arkui-transitioneffect-c.md)
 

@@ -26,7 +26,13 @@ Invoked to notify the app before the download starts. The app must call **WebDow
 
 > **NOTE：**
 > 
-> For a download task in the PENDING state, the file is first saved to a temporary directory. After &gt; [WebDownloadItem.start](../../apis-default/arkts-apis/arkts-webview-webdownloaditem-c.md#start) is called and the target path is specified, the &gt; temporary file is renamed to the target file name, and the remaining part of the download is saved directly to &gt; the target path. To avoid generating a temporary file before **WebDownloadItem.start** is called, you can first &gt; cancel the current download task through [WebDownloadItem.cancel](../../apis-default/arkts-apis/arkts-webview-webdownloaditem-c.md#cancel), and &gt; then use [WebDownloadManager.resumeDownload](../../apis-default/arkts-apis/arkts-webview-webdownloadmanager-c.md#resumedownload) to resume the &gt; canceled download task.
+> For a download task in the PENDING state, the file is first saved to a temporary directory. After
+> [WebDownloadItem.start](../../apis-default/arkts-apis/arkts-webview-webdownloaditem-c.md#start) is called and the target path is specified, the
+> temporary file is renamed to the target file name, and the remaining part of the download is saved directly to
+> the target path. To avoid generating a temporary file before **WebDownloadItem.start** is called, you can first
+> cancel the current download task through [WebDownloadItem.cancel](../../apis-default/arkts-apis/arkts-webview-webdownloaditem-c.md#cancel), and
+> then use [WebDownloadManager.resumeDownload](../../apis-default/arkts-apis/arkts-webview-webdownloadmanager-c.md#resumedownload) to resume the
+> canceled download task.
 
 **Since:** 11
 

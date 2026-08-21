@@ -16,8 +16,10 @@ Obtains a dataAbilityHelper object.
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the FA model, see &gt; [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
-> To access a DataAbility of another application, the target application must be configured with associated &gt; startup (**AssociateWakeUp** set to **true**).
+> For details about the startup rules for the components in the FA model, see
+> [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
+> To access a DataAbility of another application, the target application must be configured with associated
+> startup (**AssociateWakeUp** set to **true**).
 
 **Since:** 7
 

@@ -241,7 +241,7 @@ onStop(event: Callback<void> | undefined)
 
 Called when scrolling is stopped.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If event is set to undefined, the current event will be unbound. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If event is set to undefined, the current event will be unbound. </p>
 
 **Since:** 26.0.0
 

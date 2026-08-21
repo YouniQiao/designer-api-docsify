@@ -314,7 +314,9 @@ Obtains the file descriptor of the **LocalSocket** object. This API uses a promi
 > 
 > - The file descriptor is allocated by the system kernel to uniquely identify the local socket in use.
 > 
-> - The lifecycle of the file descriptor is managed by the system. The application can use the &gt; [close](#close) method to close the socket connection, instead of directly operating &gt; the file descriptor.
+> - The lifecycle of the file descriptor is managed by the system. The application can use the
+> [close](#close) method to close the socket connection, instead of directly operating
+> the file descriptor.
 
 **Since:** 11
 

@@ -18,7 +18,8 @@ This API checks whether the current system supports the DLP encryption function,
 
 > **NOTE：**
 > 
-> This API is enabled by the [MDM](../../../mdm/mdm-kit-intro.md) kit and is used for enterprise devices. For &gt; other devices (such as consumer devices), this API is inapplicable. Calling it returns **false**.
+> This API is enabled by the [MDM](../../../mdm/mdm-kit-intro.md) kit and is used for enterprise devices. For
+> other devices (such as consumer devices), this API is inapplicable. Calling it returns **false**.
 
 **Since:** 12
 

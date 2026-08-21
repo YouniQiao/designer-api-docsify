@@ -16,5 +16,5 @@ Defines a onAbilityWillSaveState function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Indicates the ability to register for listening. |
+| ability | [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) | Yes | Indicates the ability to register for listening. |
 

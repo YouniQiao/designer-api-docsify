@@ -40,7 +40,7 @@ Whether the slider moves horizontally or vertically.
 max?: double
 ```
 
-Maximum value. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If the value of min is greater than or equal to the value of max, the min value defaults to 0, and the max value defaults to 100. If the value is not within the [min, max] range, the value of min or max is used, whichever is closer. &lt;/p&gt;
+Maximum value. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If the value of min is greater than or equal to the value of max, the min value defaults to 0, and the max value defaults to 100. If the value is not within the [min, max] range, the value of min or max is used, whichever is closer. </p>
 
 **Type:** double
 
@@ -106,7 +106,7 @@ Whether the slider values are reversed. By default, the values increase from lef
 step?: double
 ```
 
-Step of the slider. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If this parameter is set to a value less than 0 or greater than the value of max, the default value is used. &lt;/p&gt;
+Step of the slider. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If this parameter is set to a value less than 0 or greater than the value of max, the default value is used. </p>
 
 **Type:** double
 

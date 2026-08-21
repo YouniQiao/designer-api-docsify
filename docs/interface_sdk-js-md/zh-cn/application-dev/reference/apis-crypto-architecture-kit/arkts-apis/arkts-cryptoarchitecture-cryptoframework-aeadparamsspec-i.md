@@ -9,7 +9,8 @@
 > 在AES-CCM模式下使用AeadParamsSpec加密时：
 > - 如果加密时指定了tag长度，解密时也必须传入相同的长度。
 > 
-> - CCM模式下[update](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#update)与[doFinal](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal)只能调用其 &gt; 中一个进行加密或者解密，且每个方法只能调用一次。
+> - CCM模式下[update](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#update)与[doFinal](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal)只能调用其
+> 中一个进行加密或者解密，且每个方法只能调用一次。
 
 **继承/实现关系：** AeadParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)
 

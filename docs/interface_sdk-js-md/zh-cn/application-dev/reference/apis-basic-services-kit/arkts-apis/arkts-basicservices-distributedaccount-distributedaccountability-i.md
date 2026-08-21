@@ -174,7 +174,9 @@ queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [getOsAccountDistributedInfo](#getosaccountdistributedinfo) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getOsAccountDistributedInfo](#getosaccountdistributedinfo)
+> 替代。
 
 **起始版本：** 7
 
@@ -221,7 +223,9 @@ queryOsAccountDistributedInfo(): Promise<DistributedInfo>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [getOsAccountDistributedInfo](#getosaccountdistributedinfo) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getOsAccountDistributedInfo](#getosaccountdistributedinfo)
+> 替代。
 
 **起始版本：** 7
 
@@ -435,7 +439,9 @@ updateOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCall
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [setOsAccountDistributedInfo](#setosaccountdistributedinfo) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [setOsAccountDistributedInfo](#setosaccountdistributedinfo)
+> 替代。
 
 **起始版本：** 7
 
@@ -485,7 +491,9 @@ updateOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [setOsAccountDistributedInfo](#setosaccountdistributedinfo) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [setOsAccountDistributedInfo](#setosaccountdistributedinfo)
+> 替代。
 
 **起始版本：** 7
 

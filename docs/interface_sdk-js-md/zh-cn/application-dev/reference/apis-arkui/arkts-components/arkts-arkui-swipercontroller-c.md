@@ -50,7 +50,8 @@ changeIndex(index: number, animationMode?: SwiperAnimationMode | boolean)
 
 > **说明：**
 
-> 该接口本身提供了不带动画跳转页面的能力（animationMode设置为false或者SwiperAnimationMode.NO_ANIMATION），不建议使用changeIndex接口启动动画后，直接使用 &gt; finishAnimation接口打断来实现页面不带动画跳转。
+> 该接口本身提供了不带动画跳转页面的能力（animationMode设置为false或者SwiperAnimationMode.NO_ANIMATION），不建议使用changeIndex接口启动动画后，直接使用
+> finishAnimation接口打断来实现页面不带动画跳转。
 
 **起始版本：** 15
 
@@ -101,10 +102,13 @@ fakeDragBy(offset: number): boolean
 
 > - 模拟拖拽的距离需要依赖布局体现，建议接口在布局前调用，拖拽效果可以在当前帧布局后体现。如果在未布局前调用了多次该接口，当前帧布局时只生效最后一次调用传入的拖拽距离。
 > 
-> - 在[loop](arkts-arkui-swiper-attribute.md#loop)设置为true的循环场景下，如果设置的模拟拖拽的距离大于布局总长度，此时模拟拖拽距离会被调整为拖拽到刚好显示第一个子节点（向布局起点拖拽）或者最后一个子 &gt; 节点（向布局终点方向拖拽）的距离。
+> - 在[loop](arkts-arkui-swiper-attribute.md#loop)设置为true的循环场景下，如果设置的模拟拖拽的距离大于布局总长度，此时模拟拖拽距离会被调整为拖拽到刚好显示第一个子节点（向布局起点拖拽）或者最后一个子
+> 节点（向布局终点方向拖拽）的距离。
 > 
-> - [onGestureSwipe](arkts-arkui-swiper-attribute.md#ongestureswipe)事件、 &gt; [onContentWillScroll](arkts-arkui-swiper-attribute.md#oncontentwillscroll)事件在拖拽过程中不触发。
-> [customContentTransition](arkts-arkui-swiper-attribute.md#customcontenttransition)会在布局前触发，由于真实的拖拽距离可能在布局时被调整，在传入拖拽距离过大时，触发事 &gt; 件时的返回的节点显示信息可能与布局结果不一致。
+> - [onGestureSwipe](arkts-arkui-swiper-attribute.md#ongestureswipe)事件、
+> [onContentWillScroll](arkts-arkui-swiper-attribute.md#oncontentwillscroll)事件在拖拽过程中不触发。
+> [customContentTransition](arkts-arkui-swiper-attribute.md#customcontenttransition)会在布局前触发，由于真实的拖拽距离可能在布局时被调整，在传入拖拽距离过大时，触发事
+> 件时的返回的节点显示信息可能与布局结果不一致。
 
 **起始版本：** 23
 

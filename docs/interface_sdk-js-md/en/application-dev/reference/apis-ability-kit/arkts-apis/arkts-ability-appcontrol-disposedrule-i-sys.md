@@ -134,7 +134,7 @@ want: Want
 
 Page displayed when the application is disposed of.
 
-**Type:** [Want](arkts-ability-app-ability-want-want-c.md)
+**Type:** [Want](arkts-ability-appabilitywant-want-c.md)
 
 **Since:** 23
 

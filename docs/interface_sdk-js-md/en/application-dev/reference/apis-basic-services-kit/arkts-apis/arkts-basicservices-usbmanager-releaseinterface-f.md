@@ -17,7 +17,9 @@ Releases the claimed communication interface.
 
 > **NOTE：**
 > 
-> Before calling this API, call the &gt; [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) &gt; API to claim a communication interface.
+> Before calling this API, call the
+> [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md)
+> API to claim a communication interface.
 
 **Since:** 23
 

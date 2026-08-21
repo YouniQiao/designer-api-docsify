@@ -26,7 +26,7 @@ Creates an HdrBrightnessBlender instance for adding an HDR-enabled brightness ef
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [BrightnessBlenderParam](arkts-arkgraphics2d-graphics-uieffect-brightnessblenderparam-i-sys.md) | Yes | The brightness blender parameters, including grayscale adjustment coefficients, saturation, blending ratio, and other configuration items, used to configure the brightness effect. |
+| param | [BrightnessBlenderParam](arkts-arkgraphics2d-graphicsuieffect-brightnessblenderparam-i-sys.md) | Yes | The brightness blender parameters, including grayscale adjustment coefficients, saturation, blending ratio, and other configuration items, used to configure the brightness effect. |
 
 **Return value:**
 

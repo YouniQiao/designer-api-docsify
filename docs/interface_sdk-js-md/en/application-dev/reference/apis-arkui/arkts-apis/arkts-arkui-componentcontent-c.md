@@ -42,7 +42,7 @@ A constructor used to create a **ComponentContent** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
+| uiContext | [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
 | builder | WrappedBuilder&lt;[]&gt; | Yes | WrappedBuilder** object that encapsulates a builder function that has no parameters. |
 
 ## constructor
@@ -67,7 +67,7 @@ A constructor used to create a **ComponentContent** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
+| uiContext | [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
 | builder | WrappedBuilder&lt;[T]&gt; | Yes | WrappedBuilder** object that encapsulates a builder function that has parameters. |
 | args | T | Yes | Parameters of the builder function encapsulated in the **WrappedBuilder** object. |
 
@@ -93,7 +93,7 @@ A constructor used to create a **ComponentContent** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
+| uiContext | [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
 | builder | WrappedBuilder&lt;[T]&gt; | Yes | WrappedBuilder** object that encapsulates a builder function that has parameters. |
 | args | T | Yes | Parameters of the builder function encapsulated in the **WrappedBuilder** object. |
 | options | [BuildOptions](../../apis-default/arkts-apis/arkts-buildernode-buildoptions-i.md) | Yes | Build options, which determine whether to support the behavior of nesting **@Builder** within **@Builder**. |
@@ -169,7 +169,10 @@ Immediately releases the reference relationship between this **ComponentContent*
 
 > **NOTE：**
 > 
-> After calling **dispose()**, the **ComponentContent** object cancels its reference to the backend entity node. If &gt; the frontend object **ComponentContent** cannot be released, memory leaks may occur. To avoid this, be sure to &gt; call **dispose()** on the **ComponentContent** object when you no longer need it. This reduces the complexity of &gt; reference relationships and lowers the risk of memory leaks.
+> After calling **dispose()**, the **ComponentContent** object cancels its reference to the backend entity node. If
+> the frontend object **ComponentContent** cannot be released, memory leaks may occur. To avoid this, be sure to
+> call **dispose()** on the **ComponentContent** object when you no longer need it. This reduces the complexity of
+> reference relationships and lowers the risk of memory leaks.
 
 **Since:** 12
 
@@ -253,7 +256,10 @@ Sets whether the current **ComponentContent** object inherits the freeze policy 
 
 > **NOTE：**
 > 
-> When **inheritFreezeOptions** is set to **true** for **ComponentContent** and the parent component is a custom &gt; component, BuilderNode, ComponentContent, ReactiveBuilderNode, or ReactiveComponentContent, the freeze policy of &gt; the parent component is inherited. If the child component is a custom component, its freeze policy is not &gt; transferred to the child component.
+> When **inheritFreezeOptions** is set to **true** for **ComponentContent** and the parent component is a custom
+> component, BuilderNode, ComponentContent, ReactiveBuilderNode, or ReactiveComponentContent, the freeze policy of
+> the parent component is inherited. If the child component is a custom component, its freeze policy is not
+> transferred to the child component.
 
 **Since:** 20
 
@@ -705,7 +711,7 @@ struct Index {
 updateConfiguration(): void
 ```
 
-Transfers a system environment change event and triggers full update of a node. For details about system environment changes, see [@ohos.app.ability.Configuration (Environment Variables)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md).
+Transfers a system environment change event and triggers full update of a node. For details about system environment changes, see [@ohos.app.ability.Configuration (Environment Variables)](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityconfiguration-configuration-i.md).
 
 > **NOTE：**
 > 

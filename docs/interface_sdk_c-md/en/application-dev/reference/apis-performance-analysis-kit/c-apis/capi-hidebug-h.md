@@ -14,6 +14,12 @@ Defines the APIs for debugging.
 
 ## Summary
 
+### Struct
+
+| Name | typedef keyword | Description |
+| -- | -- | -- |
+| [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) | OH_HiDebug_ProfilerOptions | Forward declaration for resource profiler options. |
+
 ### Function
 
 | Name | typedef keyword | Description |
@@ -52,6 +58,16 @@ Defines the APIs for debugging.
 | [void OH_HiDebug_PushAsyncContext(uint64_t ctx)](#oh_hidebug_pushasynccontext) | - | Profiler helper interfaces, push AsyncContext to the running context. |
 | [void OH_HiDebug_PopAsyncContext(uint64_t ctx)](#oh_hidebug_popasynccontext) | - | Profiler helper interfaces, pop AsyncContext from the running context. |
 | [void OH_HiDebug_ReleaseAsyncContext(uint64_t ctx)](#oh_hidebug_releaseasynccontext) | - | Profiler helper interfaces, release AsyncContext to system. |
+| [OH_HiDebug_ProfilerOptions *OH_HiDebug_CreateProfilerOptions(void)](#oh_hidebug_createprofileroptions) | - | Create Profiler Options. |
+| [HiDebug_ErrorCode OH_HiDebug_DestroyProfilerOptions(OH_HiDebug_ProfilerOptions *opts)](#oh_hidebug_destroyprofileroptions) | - | Destroy Profiler Options. |
+| [HiDebug_ErrorCode OH_HiDebug_SetMaxAsyncNestingDepth(OH_HiDebug_ProfilerOptions *opts, uint32_t depth)](#oh_hidebug_setmaxasyncnestingdepth) | - | Sets the maximum nesting depth for asynchronous invocations. |
+| [HiDebug_ErrorCode OH_HiDebug_SetMaxAsyncTaskStackDepth(OH_HiDebug_ProfilerOptions *opts, uint32_t depth)](#oh_hidebug_setmaxasynctaskstackdepth) | - | Sets the maximum stack depth for each asynchronous task function. |
+| [HiDebug_ErrorCode OH_HiDebug_SetSampleIntervalBytes(OH_HiDebug_ProfilerOptions *opts, uint32_t bytes)](#oh_hidebug_setsampleintervalbytes) | - | Sets the sampling interval in bytes. |
+| [HiDebug_ErrorCode OH_HiDebug_SetStatisticsIntervalSec(OH_HiDebug_ProfilerOptions *opts, uint32_t seconds)](#oh_hidebug_setstatisticsintervalsec) | - | Sets the statistics interval in seconds. |
+| [HiDebug_ErrorCode OH_HiDebug_SetMaxStackDepth(OH_HiDebug_ProfilerOptions *opts, uint32_t depth)](#oh_hidebug_setmaxstackdepth) | - | Sets the maximum backtrace stack depth. |
+| [HiDebug_ErrorCode OH_HiDebug_SetFilterSize(OH_HiDebug_ProfilerOptions *opts, uint32_t size)](#oh_hidebug_setfiltersize) | - | Sets the filter size for allocations. |
+| [HiDebug_ErrorCode OH_HiDebug_SetMaxDurationSec(OH_HiDebug_ProfilerOptions *opts, uint32_t seconds)](#oh_hidebug_setmaxdurationsec) | - | Sets the maximum profiling duration in seconds. |
+| [HiDebug_ErrorCode OH_HiDebug_StartProfilerWithOptions(OH_HiDebug_ResourceType type, OH_HiDebug_ProfilerOptions *opts, OH_HiDebug_ProfilingCallback callback)](#oh_hidebug_startprofilerwithoptions) | - | Starts the profiler with the specified options and resource type. |
 
 ## Function description
 
@@ -759,5 +775,248 @@ Profiler helper interfaces, release AsyncContext to system.
 | Parameter | Description |
 | -- | -- |
 | uint64_t ctx | The context acquired by {@link OH_Hidebug_AcquireAsyncContext}. |
+
+### OH_HiDebug_CreateProfilerOptions()
+
+```c
+OH_HiDebug_ProfilerOptions *OH_HiDebug_CreateProfilerOptions(void)
+```
+
+**Description**
+
+Create Profiler Options.
+
+**Since**: 26.1.0
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [OH_HiDebug_ProfilerOptions *](capi-hidebug-oh-hidebug-profileroptions.md) | Pointer to the OH_HiDebug_ProfilerOptions structure. |
+
+### OH_HiDebug_DestroyProfilerOptions()
+
+```c
+HiDebug_ErrorCode OH_HiDebug_DestroyProfilerOptions(OH_HiDebug_ProfilerOptions *opts)
+```
+
+**Description**
+
+Destroy Profiler Options.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] Pointer to the OH_HiDebug_ProfilerOptions structure. It must not be NULL. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| HiDebug_ErrorCode | Result code.      <ul><li>{@link HIDEBUG_SUCCESS} Success.</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts is a null pointer.</li></ul> |
+
+### OH_HiDebug_SetMaxAsyncNestingDepth()
+
+```c
+HiDebug_ErrorCode OH_HiDebug_SetMaxAsyncNestingDepth(OH_HiDebug_ProfilerOptions *opts, uint32_t depth)
+```
+
+**Description**
+
+Sets the maximum nesting depth for asynchronous invocations.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] Pointer to the OH_HiDebug_ProfilerOptions structure. It must not be NULL. |
+| uint32_t depth | [in] Maximum asynchronous nesting depth allowed. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| HiDebug_ErrorCode | Result code.      <ul><li>{@link HIDEBUG_SUCCESS} Success.</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts is a null pointer.</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_NESTING_DEPTH} Invalid maximum nesting depth.</li></ul> |
+
+### OH_HiDebug_SetMaxAsyncTaskStackDepth()
+
+```c
+HiDebug_ErrorCode OH_HiDebug_SetMaxAsyncTaskStackDepth(OH_HiDebug_ProfilerOptions *opts, uint32_t depth)
+```
+
+**Description**
+
+Sets the maximum stack depth for each asynchronous task function.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] Pointer to the OH_HiDebug_ProfilerOptions structure. It must not be NULL. |
+| uint32_t depth | [in] Maximum asynchronous task stack depth. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| HiDebug_ErrorCode | Result code.      <ul><li>{@link HIDEBUG_SUCCESS} Success.</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts is a null pointer.</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_TASK_STACK_DEPTH} Invalid maximum asynchronous      task stack depth.</li></ul> |
+
+### OH_HiDebug_SetSampleIntervalBytes()
+
+```c
+HiDebug_ErrorCode OH_HiDebug_SetSampleIntervalBytes(OH_HiDebug_ProfilerOptions *opts, uint32_t bytes)
+```
+
+**Description**
+
+Sets the sampling interval in bytes.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] Pointer to the OH_HiDebug_ProfilerOptions structure. It must not be NULL. |
+| uint32_t bytes | [in] Sample interval in bytes. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| HiDebug_ErrorCode | Result code.      <ul><li>{@link HIDEBUG_SUCCESS} Success.</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts is a null pointer.</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_SAMPLE_INTERVAL} Invalid sampling interval.</li></ul> |
+
+### OH_HiDebug_SetStatisticsIntervalSec()
+
+```c
+HiDebug_ErrorCode OH_HiDebug_SetStatisticsIntervalSec(OH_HiDebug_ProfilerOptions *opts, uint32_t seconds)
+```
+
+**Description**
+
+Sets the statistics interval in seconds.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] Pointer to the OH_HiDebug_ProfilerOptions structure. It must not be NULL. |
+| uint32_t seconds | [in] Statistics interval in seconds. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| HiDebug_ErrorCode | Result code.      <ul><li>{@link HIDEBUG_SUCCESS} Success.</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts is a null pointer.</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_STATISTICS_INTERVAL} Invalid statistics interval.</li></ul> |
+
+### OH_HiDebug_SetMaxStackDepth()
+
+```c
+HiDebug_ErrorCode OH_HiDebug_SetMaxStackDepth(OH_HiDebug_ProfilerOptions *opts, uint32_t depth)
+```
+
+**Description**
+
+Sets the maximum backtrace stack depth.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] Pointer to the OH_HiDebug_ProfilerOptions structure. It must not be NULL. |
+| uint32_t depth | [in] Maximum backtrace stack depth. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| HiDebug_ErrorCode | Result code.      <ul><li>{@link HIDEBUG_SUCCESS} Success.</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts is a null pointer.</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_STACK_DEPTH} Invalid maximum backtrace stack depth.</li></ul> |
+
+### OH_HiDebug_SetFilterSize()
+
+```c
+HiDebug_ErrorCode OH_HiDebug_SetFilterSize(OH_HiDebug_ProfilerOptions *opts, uint32_t size)
+```
+
+**Description**
+
+Sets the filter size for allocations.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] Pointer to the OH_HiDebug_ProfilerOptions structure. It must not be NULL. |
+| uint32_t size | [in] Filter size threshold in bytes. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| HiDebug_ErrorCode | Result code.      <ul><li>{@link HIDEBUG_SUCCESS} Success.</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts is a null pointer.</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_FILTER_SIZE} Invalid filter size.</li></ul> |
+
+### OH_HiDebug_SetMaxDurationSec()
+
+```c
+HiDebug_ErrorCode OH_HiDebug_SetMaxDurationSec(OH_HiDebug_ProfilerOptions *opts, uint32_t seconds)
+```
+
+**Description**
+
+Sets the maximum profiling duration in seconds.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] Pointer to the OH_HiDebug_ProfilerOptions structure. It must not be NULL. |
+| uint32_t seconds | [in] Maximum duration in seconds. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| HiDebug_ErrorCode | Result code.      <ul><li>{@link HIDEBUG_SUCCESS} Success.</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts is a null pointer.</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_DURATION} Invalid maximum duration.</li></ul> |
+
+### OH_HiDebug_StartProfilerWithOptions()
+
+```c
+HiDebug_ErrorCode OH_HiDebug_StartProfilerWithOptions(OH_HiDebug_ResourceType type, OH_HiDebug_ProfilerOptions *opts, OH_HiDebug_ProfilingCallback callback)
+```
+
+**Description**
+
+Starts the profiler with the specified options and resource type.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_HiDebug_ResourceType](capi-hidebug-type-h.md#oh_hidebug_resourcetype) type | [in] The resource type to be profiled (OH_HiDebug_ResourceType). |
+| [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] Pointer to the configured OH_HiDebug_ProfilerOptions structure. It must not be NULL. |
+| [OH_HiDebug_ProfilingCallback](capi-hidebug-type-h.md#oh_hidebug_profilingcallback) callback | [in] Callback function to receive profiling results. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| HiDebug_ErrorCode | Result code.      <ul><li>{@link HIDEBUG_RES_PROF_SUCCESS} Profiler started successfully.</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts or callback is a null pointer.</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_DURATION} Maximum duration is invalid.</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_FILTER_SIZE} FilterSize is invalid.</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_STACK_DEPTH} Maximum stack depth is invalid.</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_STATISTICS_INTERVAL} StatisticsInterval is invalid.</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_SAMPLE_INTERVAL} Sample interval is invalid.</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_NESTING_DEPTH} Maximum asynchronous nesting depth      is invalid.</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_TASK_STACK_DEPTH} Maximum asynchronous task stack depth      is invalid.</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_RESOURCE_TYPE} ResourceType is invalid.</li>      <li>{@link HIDEBUG_RES_PROF_PERMISSION_DENIED} Permission denied.</li>      <li>{@link HIDEBUG_RES_PROF_ALREADY_STARTED} Profiler has already been started.</li>      <li>{@link HIDEBUG_RES_PROF_PROCESS_OVERLIMIT} Process exceeds the limit.</li>      <li>{@link HIDEBUG_RES_PROF_CONFLICT} Conflict.</li>      <li>{@link HIDEBUG_RES_PROF_DAILY_QUOTA_EXCEEDED} Daily quota exceeded.</li>      <li>{@link HIDEBUG_RES_PROF_CPU_OVERLOADED} CPU overloaded.</li>      <li>{@link HIDEBUG_RES_PROF_MEM_PRESSURE_CRITICAL} Memory pressure is critical.</li>      <li>{@link HIDEBUG_RES_PROF_STORAGE_PRESSURE_CRITICAL} Storage pressure is critical.</li>      <li>{@link HIDEBUG_RES_PROF_FAILURE} Failed to start the resource profiler.</li></ul> |
 
 

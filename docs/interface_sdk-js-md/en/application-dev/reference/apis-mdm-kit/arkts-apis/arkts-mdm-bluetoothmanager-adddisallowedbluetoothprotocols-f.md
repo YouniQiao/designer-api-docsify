@@ -28,7 +28,7 @@ Adds disallowed Bluetooth protocols. Specified users cannot use the disallowed B
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | accountId | number | Yes | User ID, which must be greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
 | protocols | Array&lt;Protocol&gt; | Yes | Bluetooth protocol array, which has a maximum length of 10,000. |
 
@@ -73,11 +73,18 @@ Adds disallowed Bluetooth protocols. After the setting, specified users cannot u
 
 > **NOTE：**
 > 
-> 1. This API is used to disable the GATT or SPP protocol, which does not take effect for system services and &gt; system applications.
+> 1. This API is used to disable the GATT or SPP protocol, which does not take effect for system services and
+> system applications.
 > 
-> 2. When the SPP protocol is passed, the value of the **policy** parameter can only be &gt; **TransferPolicy.RECEIVE_SEND**. Otherwise, error code 9200012 will be returned.
+> 2. When the SPP protocol is passed, the value of the **policy** parameter can only be
+> **TransferPolicy.RECEIVE_SEND**. Otherwise, error code 9200012 will be returned.
 > 
-> 3. This API and &gt; [addDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#adddisallowedbluetoothprotocols) are &gt; overloaded APIs. This API adds the **policy** parameter to specify the transfer policy, enabling more fine- &gt; grained control over Bluetooth protocol disabling behavior (for example, blocking only sending, only receiving, &gt; or both sending and receiving). If both APIs are used to configure disabling policies, the policies will be &gt; combined and take effect.
+> 3. This API and
+> [addDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#adddisallowedbluetoothprotocols) are
+> overloaded APIs. This API adds the **policy** parameter to specify the transfer policy, enabling more fine-
+> grained control over Bluetooth protocol disabling behavior (for example, blocking only sending, only receiving,
+> or both sending and receiving). If both APIs are used to configure disabling policies, the policies will be
+> combined and take effect.
 
 **Since:** 26.0.0
 
@@ -93,7 +100,7 @@ Adds disallowed Bluetooth protocols. After the setting, specified users cannot u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | accountId | number | Yes | User ID, which must be greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
 | protocols | Array&lt;Protocol&gt; | Yes | Array of Bluetooth protocols to be added to the blocklist. |
 | policy | [TransferPolicy](arkts-mdm-bluetoothmanager-transferpolicy-e.md) | Yes | Transfer policy, which specifies the mode for disabling Bluetooth protocols. The options are **SEND_ONLY** (sending disabled), **RECEIVE_ONLY** (receiving disabled), and **RECEIVE_SEND** ( sending and receiving disabled). |

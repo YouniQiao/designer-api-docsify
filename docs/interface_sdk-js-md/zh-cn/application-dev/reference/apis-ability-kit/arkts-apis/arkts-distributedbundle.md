@@ -4,7 +4,8 @@
 
 > **说明：**
 > 
-> 从API version 9开始，该模块不再维护，建议使用 &gt; [@ohos.bundle.distributedBundleManager](arkts-bundle-distributedbundlemanager.md)替代。
+> 从API version 9开始，该模块不再维护，建议使用
+> [@ohos.bundle.distributedBundleManager](arkts-bundle-distributedbundlemanager.md)替代。
 > 
 > 本模块为系统接口。
 

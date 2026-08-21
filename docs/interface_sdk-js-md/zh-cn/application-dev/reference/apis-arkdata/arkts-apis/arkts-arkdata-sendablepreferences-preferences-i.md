@@ -691,7 +691,9 @@ on(type: 'change', callback: Callback<string>): void
 > 
 > **说明：**
 > 
-> 当调用[removePreferencesFromCache](arkts-arkdata-sendablepreferences-removepreferencesfromcache-f.md)或者 &gt; [deletePreferences](arkts-arkdata-sendablepreferences-deletepreferences-f.md)后，订阅的数据变更会主动取消订阅，在重新 &gt; [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md)后需要重新订阅数据变更。
+> 当调用[removePreferencesFromCache](arkts-arkdata-sendablepreferences-removepreferencesfromcache-f.md)或者
+> [deletePreferences](arkts-arkdata-sendablepreferences-deletepreferences-f.md)后，订阅的数据变更会主动取消订阅，在重新
+> [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md)后需要重新订阅数据变更。
 
 **起始版本：** 12
 
@@ -742,7 +744,9 @@ on(type: 'dataChange', keys: Array<string>, callback: Callback<lang.ISendable>):
 
 > **说明：**
 > 
-> 当调用[removePreferencesFromCache](arkts-arkdata-sendablepreferences-removepreferencesfromcache-f.md)或者 &gt; [deletePreferences](arkts-arkdata-sendablepreferences-deletepreferences-f.md)后，订阅的数据变更会主动取消订阅，在重新 &gt; [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md)后需要重新订阅数据变更。
+> 当调用[removePreferencesFromCache](arkts-arkdata-sendablepreferences-removepreferencesfromcache-f.md)或者
+> [deletePreferences](arkts-arkdata-sendablepreferences-deletepreferences-f.md)后，订阅的数据变更会主动取消订阅，在重新
+> [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md)后需要重新订阅数据变更。
 
 **起始版本：** 12
 
@@ -801,7 +805,9 @@ on(type: 'multiProcessChange', callback: Callback<string>): void
 > 
 > 同一持久化文件在当前进程订阅进程间数据变更的最大数量为50次，超过最大限制后会订阅失败。建议在触发callback回调后及时取消订阅。
 > 
-> 当调用[removePreferencesFromCache](arkts-arkdata-sendablepreferences-removepreferencesfromcache-f.md)或者 &gt; [deletePreferences](arkts-arkdata-sendablepreferences-deletepreferences-f.md)后，订阅的数据变更会主动取消订阅，在重新 &gt; [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md)后需要重新订阅数据变更。
+> 当调用[removePreferencesFromCache](arkts-arkdata-sendablepreferences-removepreferencesfromcache-f.md)或者
+> [deletePreferences](arkts-arkdata-sendablepreferences-deletepreferences-f.md)后，订阅的数据变更会主动取消订阅，在重新
+> [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md)后需要重新订阅数据变更。
 
 **起始版本：** 12
 

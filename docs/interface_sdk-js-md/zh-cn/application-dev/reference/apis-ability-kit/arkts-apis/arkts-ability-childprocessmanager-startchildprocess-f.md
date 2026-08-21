@@ -16,7 +16,8 @@ function startChildProcess(srcEntry: string, startMode: StartMode): Promise<int>
 
 > **说明：**
 > 
-> 调用该接口创建子进程成功会返回子进程pid，然后执行子进程的[ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart)函数 &gt; ，[ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart)函数执行完后子进程会自动销毁。
+> 调用该接口创建子进程成功会返回子进程pid，然后执行子进程的[ChildProcess.onStart](arkts-ability-appabilitychildprocess-childprocess-c.md#onstart)函数
+> ，[ChildProcess.onStart](arkts-ability-appabilitychildprocess-childprocess-c.md#onstart)函数执行完后子进程会自动销毁。
 > 
 > 调用该接口创建的子进程不支持异步ArkTS API调用，仅支持同步ArkTS API调用。
 
@@ -206,7 +207,8 @@ function startChildProcess(srcEntry: string, startMode: StartMode, callback: Asy
 
 > **说明：**
 > 
-> 调用该接口创建子进程成功会返回子进程pid，然后执行子进程的[ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart)函数 &gt; ，[ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart)函数执行完后子进程会自动销毁。
+> 调用该接口创建子进程成功会返回子进程pid，然后执行子进程的[ChildProcess.onStart](arkts-ability-appabilitychildprocess-childprocess-c.md#onstart)函数
+> ，[ChildProcess.onStart](arkts-ability-appabilitychildprocess-childprocess-c.md#onstart)函数执行完后子进程会自动销毁。
 > 
 > 调用该接口创建的子进程不支持异步ArkTS API调用，仅支持同步ArkTS API调用。
 

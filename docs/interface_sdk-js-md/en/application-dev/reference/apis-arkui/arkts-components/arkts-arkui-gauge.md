@@ -10,11 +10,14 @@ This component can contain only one child component.
 
 > **NOTE：**
 > 
-> - Supported child component types: built-in and custom components, including &gt; [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) but excluding &gt; ForEach and LazyForEach.
+> - Supported child component types: built-in and custom components, including
+> [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) but excluding
+> ForEach and LazyForEach.
 > 
 > - You are advised to use the **Text** component to build the current value and auxiliary text.
 > 
-> - If the width and height of the child component are in percentage, the reference range is the rectangle that has &gt; the outer ring as its inscribed circle.
+> - If the width and height of the child component are in percentage, the reference range is the rectangle that has
+> the outer ring as its inscribed circle.
 
 ## Gauge
 

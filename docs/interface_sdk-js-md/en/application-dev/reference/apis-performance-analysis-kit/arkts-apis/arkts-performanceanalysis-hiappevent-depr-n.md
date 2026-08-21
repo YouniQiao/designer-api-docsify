@@ -4,7 +4,8 @@ The **hiAppEvent** module provides the application event logging functions, such
 
 > **NOTE：**
 > 
-> - The APIs provided by this module are deprecated since API version 9. You are advised to use &gt; [@ohos.hiviewdfx.hiAppEvent](arkts-performanceanalysis-hiappevent-n.md).
+> - The APIs provided by this module are deprecated since API version 9. You are advised to use
+> [@ohos.hiviewdfx.hiAppEvent](arkts-performanceanalysis-hiappevent-n.md).
 
 **Since:** 7
 

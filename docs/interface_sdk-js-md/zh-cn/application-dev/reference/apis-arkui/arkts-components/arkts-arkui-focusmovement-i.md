@@ -4,7 +4,9 @@
 
 > **说明：**
 > 
-> 直接使用focusControl可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用getUIContext()获取 &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)实例，并使用 &gt; [getFocusController](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getfocuscontroller)获取绑定实例的focusControl。
+> 直接使用focusControl可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用getUIContext()获取
+> [UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)实例，并使用
+> [getFocusController](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#getfocuscontroller)获取绑定实例的focusControl。
 
 **起始版本：** 18
 

@@ -460,7 +460,9 @@ Creates an **RdbPredicates** object to search for the records that are in the gi
 
 > **NOTE：**
 > 
-> The **value** array cannot be empty; otherwise, this condition becomes invalid. As a result, the operation ( &gt; such as full query, update, or deletion) is performed on all data. Before calling this API, check whether the &gt; **value** array is empty to avoid misoperations.
+> The **value** array cannot be empty; otherwise, this condition becomes invalid. As a result, the operation (
+> such as full query, update, or deletion) is performed on all data. Before calling this API, check whether the
+> **value** array is empty to avoid misoperations.
 
 **Since:** 9
 
@@ -517,8 +519,10 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 
 > **NOTE：**
 > 
-> **devices** can be obtained by using [deviceManager.getAvailableDeviceListSync] &gt; [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync).
-> When calling **sync()**, you need to call **inDevices** to specify the devices. If **inDevices** is not used, &gt; data will be synced to all devices on the network by default.
+> **devices** can be obtained by using [deviceManager.getAvailableDeviceListSync]
+> [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync).
+> When calling **sync()**, you need to call **inDevices** to specify the devices. If **inDevices** is not used,
+> data will be synced to all devices on the network by default.
 
 **Since:** 23
 

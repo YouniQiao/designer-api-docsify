@@ -209,7 +209,7 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: Ke
 
 当设置自定义键盘时，可以通过绑定onKeyPreIme事件规避物理键盘的输入。
 
-从API version 23开始，自定义键盘可以通过 [setCustomKeyboardContinueFeature](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#setcustomkeyboardcontinuefeature)开启接续，在切换至 其他自定义键盘时，会直接切换，不会触发键盘关闭和拉起动画。
+从API version 23开始，自定义键盘可以通过 [setCustomKeyboardContinueFeature](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#setcustomkeyboardcontinuefeature)开启接续，在切换至 其他自定义键盘时，会直接切换，不会触发键盘关闭和拉起动画。
 
 > **说明：**
 > 
@@ -276,7 +276,7 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 设置自定义菜单扩展项，允许用户设置扩展项的文本内容、图标、回调方法。
 
-调用[disableMenuItems](../../apis-default/arkts-apis/arkts-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或 [disableSystemServiceMenuItems](../../apis-default/arkts-apis/arkts-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本 选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。
+调用[disableMenuItems](../../apis-default/arkts-apis/arkts-arkuiuicontext-textmenucontroller-c.md#disablemenuitems)或 [disableSystemServiceMenuItems](../../apis-default/arkts-apis/arkts-arkuiuicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本 选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。
 
 **起始版本：** 12
 
@@ -742,7 +742,8 @@ horizontalScrolling(enabled: Optional<boolean>)
 
 > **说明：**
 > 
-> 以下<!--Del-->任一<!--DelEnd-->场景不支持水平滚动：TextContentStyle为INLINE，即文本框多态样式为内联模式<!--Del-->；启用 &gt; [voiceButton](#voicebutton)<!--DelEnd-->。
+> 以下<!--Del-->任一<!--DelEnd-->场景不支持水平滚动：TextContentStyle为INLINE，即文本框多态样式为内联模式<!--Del-->；启用
+> [voiceButton](#voicebutton)<!--DelEnd-->。
 
 **起始版本：** 24
 
@@ -1445,7 +1446,7 @@ onWillAttachIME(callback: Callback<IMEClient> | undefined)
 
 <!--Del-->
 
-在输入框将要绑定输入法前，可以通过`UIContext`的系统接口 [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c-sys.md#setkeyboardappearanceconfig)设置键盘的样式。&lt;!--DelEnd- -&gt;
+在输入框将要绑定输入法前，可以通过`UIContext`的系统接口 [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-arkuiuicontext-uicontext-c-sys.md#setkeyboardappearanceconfig)设置键盘的样式。&lt;!--DelEnd- -&gt;
 
 从API version 22开始，调用IMEClient的setExtraConfig方法可以设置输入法扩展信息。在绑定输 入法成功后，输入法会收到扩展信息，输入法可以依据此信息实现自定义功能。
 
@@ -1479,8 +1480,10 @@ onWillChange(callback: Callback<EditableTextChangeValue, boolean>)
 > 
 > onWillChange与onChange均监听文本变更，区别在于：
 > 
-> - onWillChange在文本变更前触发，返回false可拦截此次变更；onChange在变更后触发，仅用于通知，无法拦截 &gt;
-> - 需要拦截控制时使用onWillChange，仅需获取变更结果时使用onChange &gt; onWillChange的回调时序晚于onWillInsert、onWillDelete，早于onDidInsert、onDidDelete。
+> - onWillChange在文本变更前触发，返回false可拦截此次变更；onChange在变更后触发，仅用于通知，无法拦截
+> 
+> - 需要拦截控制时使用onWillChange，仅需获取变更结果时使用onChange
+> onWillChange的回调时序晚于onWillInsert、onWillDelete，早于onDidInsert、onDidDelete。
 
 **起始版本：** 15
 
@@ -1580,8 +1583,10 @@ onWillDelete(callback: Callback<DeleteValue, boolean>)
 > 
 > onWillDelete和onDidDelete形成will/did时序模式：
 > 
-> - onWillDelete在删除操作前触发，可通过返回false拦截删除操作；返回true则允许删除，随后触发onDidDelete &gt;
-> - onDidDelete在删除完成后触发，无法拦截 &gt;
+> - onWillDelete在删除操作前触发，可通过返回false拦截删除操作；返回true则允许删除，随后触发onDidDelete
+> 
+> - onDidDelete在删除完成后触发，无法拦截
+> 
 > - 两者可以同时使用，onWillDelete用于拦截控制，onDidDelete用于获取删除结果
 
 **起始版本：** 12

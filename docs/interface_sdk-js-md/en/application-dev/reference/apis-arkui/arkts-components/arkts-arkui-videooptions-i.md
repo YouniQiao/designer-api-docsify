@@ -61,7 +61,8 @@ Video playback speed.
 
 > **NOTE：**
 > 
-> The value of the number type can only be **0.75**, **1.0**, **1.25**, **1.75**, or **2.0**. Values **0.5**, &gt; **1.5**, **3**, **0.25**, and **0.125** are supported since API version 22.
+> The value of the number type can only be **0.75**, **1.0**, **1.25**, **1.75**, or **2.0**. Values **0.5**,
+> **1.5**, **3**, **0.25**, and **0.125** are supported since API version 22.
 
 For the string type, numeric string values, for example, **0.75**, **1.0**, **1.25**, **1.75**, and **2.0**, are supported. Values **"0.5"**, **"1.5"**, **"3"**, **"0.25"**, and **"0.125"** are supported since API version 22.
 

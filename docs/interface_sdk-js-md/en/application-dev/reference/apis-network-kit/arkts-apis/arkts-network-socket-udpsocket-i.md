@@ -269,11 +269,15 @@ Obtains the UDPSocket file descriptor. This API uses a promise to return the res
 
 > **NOTE：**
 > 
-> - This API can be called only after &gt; [bind](#bind) is successfully called.
+> - This API can be called only after
+> [bind](#bind) is successfully called.
 > 
-> - This API returns **-1** in abnormal cases such as bind exceptions or socket closed (for example, after close &gt; is called).
+> - This API returns **-1** in abnormal cases such as bind exceptions or socket closed (for example, after close
+> is called).
 > 
-> - The lifecycle of the file descriptor is managed by the system. The application can use the &gt; [close](#close) method to close the socket connection, &gt; instead of directly operating the file descriptor.
+> - The lifecycle of the file descriptor is managed by the system. The application can use the
+> [close](#close) method to close the socket connection,
+> instead of directly operating the file descriptor.
 
 **Since:** 23
 

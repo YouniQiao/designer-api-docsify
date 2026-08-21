@@ -16,7 +16,9 @@ function off(type: SensorType.SENSOR_TYPE_ID_HALL, callback?: Callback<HallRespo
 
 > **说明：**
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HALL] &gt; [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor) &gt; 替代。
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HALL]
+> [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
+> 替代。
 
 **起始版本：** 8
 

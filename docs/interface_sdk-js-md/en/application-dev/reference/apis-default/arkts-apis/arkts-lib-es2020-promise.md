@@ -11,9 +11,9 @@
 
 | Name | Description |
 | --- | --- |
-| [PromiseConstructor](arkts-lib-es2020-promise-promiseconstructor-i.md) |  |
-| [PromiseFulfilledResult](arkts-lib-es2020-promise-promisefulfilledresult-i.md) |  |
-| [PromiseRejectedResult](arkts-lib-es2020-promise-promiserejectedresult-i.md) |  |
+| [PromiseConstructor](arkts-libes2020promise-promiseconstructor-i.md) |  |
+| [PromiseFulfilledResult](arkts-libes2020promise-promisefulfilledresult-i.md) |  |
+| [PromiseRejectedResult](arkts-libes2020promise-promiserejectedresult-i.md) |  |
 
 ### Types
 

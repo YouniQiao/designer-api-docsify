@@ -13,5 +13,5 @@ import { inputEventClient } from '@kit.InputKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [InputEvent(输入事件)](arkts-input-multimodalinput-inputevent-inputevent-i.md) | 输入事件。 |
+| [InputEvent(输入事件)](arkts-input-multimodalinputinputevent-inputevent-i.md) | 输入事件。 |
 

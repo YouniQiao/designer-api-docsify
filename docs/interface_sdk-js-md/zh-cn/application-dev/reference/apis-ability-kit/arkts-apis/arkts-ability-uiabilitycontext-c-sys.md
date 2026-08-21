@@ -1,6 +1,6 @@
 # UIAbilityContext
 
-UIAbilityContext是需要保存状态的[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)所对应的context，继承自Context，提供 UIAbility的相关配置信息以及操作UIAbility和ServiceExtensionAbility的方法，如启动UIAbility，停止当前UIAbilityContext所属的UIAbility，启动、停止、连接、断开连接 ServiceExtensionAbility等。
+UIAbilityContext是需要保存状态的[UIAbility](arkts-ability-appabilityuiability-uiability-c.md)所对应的context，继承自Context，提供 UIAbility的相关配置信息以及操作UIAbility和ServiceExtensionAbility的方法，如启动UIAbility，停止当前UIAbilityContext所属的UIAbility，启动、停止、连接、断开连接 ServiceExtensionAbility等。
 
 **继承/实现关系：** UIAbilityContext extends Context
 
@@ -40,7 +40,7 @@ connectServiceExtensionAbilityWithAccount(want: Want, accountId: int, options: C
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动UIAbility的Want信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动UIAbility的Want信息。 |
 | accountId | int | 是 | 系统账号的账号ID，可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 接口获取。 |
 | options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | 是 | 与ServiceExtensionAbility建立连接后回调函数的实例。 |
 
@@ -190,7 +190,7 @@ requestModalUIExtension(pickerWant: Want, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pickerWant | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 拉起UIExtension的Want信息。 |
+| pickerWant | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 拉起UIExtension的Want信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当拉起UIExtension成功，err中code为0；否则err会返回对应的错误码和错误信息。 |
 
 **错误码：**
@@ -313,7 +313,7 @@ requestModalUIExtension(pickerWant: Want): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pickerWant | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 拉起UIExtension的Want信息。 |
+| pickerWant | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 拉起UIExtension的Want信息。 |
 
 **返回值：**
 
@@ -425,7 +425,8 @@ requestModalUIExtensionWithAccount(pickerWant: Want, accountId: int): Promise<vo
 > **说明：**
 > 
 > 
-> 关于stage模型中组件的启动规则，请参见 &gt; 【组件启动规则（阶段模型）】(../../../application-models/component-startup-rules.md)。
+> 关于stage模型中组件的启动规则，请参见
+> 【组件启动规则（阶段模型）】(../../../application-models/component-startup-rules.md)。
 
 **起始版本：** 26.0.0
 
@@ -443,7 +444,7 @@ requestModalUIExtensionWithAccount(pickerWant: Want, accountId: int): Promise<vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pickerWant | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 需要用于启动UIExtensionAbility的信息 |
+| pickerWant | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 需要用于启动UIExtensionAbility的信息 |
 | accountId | int | 是 | 要请求的帐户 <br>取值范围为全体整数。 |
 
 **返回值：**
@@ -633,7 +634,7 @@ startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动UIAbility的Want信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动UIAbility的Want信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当接口调用成功，err中code为0；否则err会返回对应的错误码和错误信息。 |
 
 **错误码：**
@@ -718,8 +719,8 @@ startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动UIAbility的Want信息。 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 | 启动UIAbility所携带的参数。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动UIAbility的Want信息。 |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | 是 | 启动UIAbility所携带的参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当接口调用成功，err中code为0；否则err会返回对应的错误码和错误信息。 |
 
 **错误码：**
@@ -805,8 +806,8 @@ startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动UIAbility的Want信息。 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 | 启动UIAbility所携带的参数。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动UIAbility的Want信息。 |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | 否 | 启动UIAbility所携带的参数。 |
 
 **返回值：**
 
@@ -900,14 +901,14 @@ startAbilityByCallWithAccount(want: Want, accountId: int): Promise<Caller>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 传入需要启动的UIAbility的信息，包含abilityName、moduleName、bundleName、deviceId(可选)、parameters(可选)，其中deviceId缺省或 为空表示启动本地UIAbility，parameters缺省或为空表示后台启动UIAbility。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 传入需要启动的UIAbility的信息，包含abilityName、moduleName、bundleName、deviceId(可选)、parameters(可选)，其中deviceId缺省或 为空表示启动本地UIAbility，parameters缺省或为空表示后台启动UIAbility。 |
 | accountId | int | 是 | 系统账号的账号ID，-1表示当前活动用户，可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 接口获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[Caller](arkts-ability-app-ability-uiability-caller-i.md)&gt; | Promise对象，返回要通讯的caller对象。 |
+| Promise&lt;[Caller](arkts-ability-appabilityuiability-caller-i.md)&gt; | Promise对象，返回要通讯的caller对象。 |
 
 **错误码：**
 
@@ -1007,7 +1008,7 @@ startAbilityForResultWithAccount(want: Want, accountId: int, callback: AsyncCall
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动UIAbility的Want信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动UIAbility的Want信息。 |
 | accountId | int | 是 | 系统账号的账号ID，可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 接口获取。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | 是 | 回调函数，当接口调用成功，err中code为0，data为被拉起的UIAbility销毁时的结果码和数据；否则err会返回对应的错误码和错 误信息。 |
 
@@ -1114,9 +1115,9 @@ startAbilityForResultWithAccount(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动UIAbility的Want信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动UIAbility的Want信息。 |
 | accountId | int | 是 | 系统账号的账号ID，可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 接口获取。 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 | 启动UIAbility所携带的参数。 |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | 是 | 启动UIAbility所携带的参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当接口调用成功，err中code为0；否则err会返回对应的错误码和错误信息。 |
 
 **错误码：**
@@ -1219,9 +1220,9 @@ startAbilityForResultWithAccount(want: Want, accountId: int, options?: StartOpti
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动UIAbility的Want信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动UIAbility的Want信息。 |
 | accountId | int | 是 | 系统账号的账号ID，可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 接口获取。 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 | 启动UIAbility所携带的参数。 |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | 否 | 启动UIAbility所携带的参数。 |
 
 **返回值：**
 
@@ -1329,7 +1330,7 @@ startAbilityWithAccount(want: Want, accountId: int, callback: AsyncCallback<void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动UIAbility的Want信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动UIAbility的Want信息。 |
 | accountId | int | 是 | 系统账号的账号ID，可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 接口获取。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当接口调用成功，err中code为0；否则err会返回对应的错误码和错误信息。 |
 
@@ -1430,9 +1431,9 @@ startAbilityWithAccount(want: Want, accountId: int, options: StartOptions, callb
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动UIAbility的Want信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动UIAbility的Want信息。 |
 | accountId | int | 是 | 系统账号的账号ID，可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 接口获取。 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 | 启动UIAbility所携带的参数。 |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | 是 | 启动UIAbility所携带的参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当接口调用成功，err中code为0；否则err会返回对应的错误码和错误信息。 |
 
 **错误码：**
@@ -1535,9 +1536,9 @@ startAbilityWithAccount(want: Want, accountId: int, options?: StartOptions): Pro
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动UIAbility的Want信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动UIAbility的Want信息。 |
 | accountId | int | 是 | 系统账号的账号ID，可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 接口获取。 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 | 启动UIAbility所携带的参数。 |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | 否 | 启动UIAbility所携带的参数。 |
 
 **返回值：**
 
@@ -1648,7 +1649,7 @@ startRecentAbility(want: Want, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 需要启动UIAbility的Want信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 需要启动UIAbility的Want信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当接口调用成功，err中code为0；否则err会返回对应的错误码和错误信息。 |
 
 **错误码：**
@@ -1748,8 +1749,8 @@ startRecentAbility(want: Want, options: StartOptions, callback: AsyncCallback<vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 需要启动UIAbility的Want信息。 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 | 启动UIAbility所携带的参数。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 需要启动UIAbility的Want信息。 |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | 是 | 启动UIAbility所携带的参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当接口调用成功，err中code为0；否则err会返回对应的错误码和错误信息。 |
 
 **错误码：**
@@ -1853,8 +1854,8 @@ startRecentAbility(want: Want, options?: StartOptions): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 需要启动UIAbility的Want信息。 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 | 启动UIAbility所携带的参数。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 需要启动UIAbility的Want信息。 |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | 否 | 启动UIAbility所携带的参数。 |
 
 **返回值：**
 
@@ -1951,7 +1952,7 @@ startServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动ServiceExtensionAbility的Want信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动ServiceExtensionAbility的Want信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当接口调用成功，err中code为0；否则err会返回对应的错误码和错误信息。 |
 
 **错误码：**
@@ -2030,7 +2031,7 @@ startServiceExtensionAbility(want: Want): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动ServiceExtensionAbility的Want信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动ServiceExtensionAbility的Want信息。 |
 
 **返回值：**
 
@@ -2122,7 +2123,7 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: int, callback: As
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动ServiceExtensionAbility的Want信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动ServiceExtensionAbility的Want信息。 |
 | accountId | int | 是 | 系统账号的账号ID，可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 接口获取。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当接口调用成功，err中code为0；否则err会返回对应的错误码和错误信息。 |
 
@@ -2211,7 +2212,7 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动ServiceExtensionAbility的Want信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动ServiceExtensionAbility的Want信息。 |
 | accountId | int | 是 | 系统账号的账号ID，可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 接口获取。 |
 
 **返回值：**
@@ -2297,7 +2298,7 @@ stopServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 停止ServiceExtensionAbility的Want信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 停止ServiceExtensionAbility的Want信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当停止ServiceExtensionAbility的接口调用成功，err中code为0；否则err会返回对应的错误码和错误信息。 |
 
 **错误码：**
@@ -2374,7 +2375,7 @@ stopServiceExtensionAbility(want: Want): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 停止ServiceExtensionAbility的Want信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 停止ServiceExtensionAbility的Want信息。 |
 
 **返回值：**
 
@@ -2460,7 +2461,7 @@ stopServiceExtensionAbilityWithAccount(want: Want, accountId: int, callback: Asy
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 停止ServiceExtensionAbility的Want信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 停止ServiceExtensionAbility的Want信息。 |
 | accountId | int | 是 | 系统账号的账号ID，可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 接口获取。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当停止ServiceExtensionAbility的接口调用成功，err中code为0；否则err会返回对应的错误码和错误信息。 |
 
@@ -2543,7 +2544,7 @@ stopServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 停止ServiceExtensionAbility的Want信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 停止ServiceExtensionAbility的Want信息。 |
 | accountId | int | 是 | 系统账号的账号ID，可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 接口获取。 |
 
 **返回值：**

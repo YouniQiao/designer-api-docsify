@@ -25,11 +25,18 @@ Sets whether nested scrolling is enabled.
 
 > **NOTE：**
 > 
-> When nested scrolling is enabled, the scroll offset is first passed to the inner scrollable component, which &gt; then passes it to the outer parent scrollable component based on the set nested scrolling priority.
+> When nested scrolling is enabled, the scroll offset is first passed to the inner scrollable component, which
+> then passes it to the outer parent scrollable component based on the set nested scrolling priority.
 > 
-> Nested scrolling is not supported when the **WaterFlow** component is in &gt; [WaterFlowLayoutMode.SLIDING_WINDOW](../../../reference/apis-arkui/arkui-ts/ts-container-waterflow.md#waterflowlayoutmode12) &gt; layout mode.
+> Nested scrolling is not supported when the **WaterFlow** component is in
+> [WaterFlowLayoutMode.SLIDING_WINDOW](../../../reference/apis-arkui/arkui-ts/ts-container-waterflow.md#waterflowlayoutmode12)
+> layout mode.
 > 
-> When the nested scrolling mode is set to &gt; [PARALLEL](../../../reference/apis-arkui/arkui-ts/ts-appendix-enums.md#nestedscrollmode10), both the parent &gt; and child components scroll simultaneously. You need to manage the scroll order in the &gt; [onScrollFrameBegin](../../../reference/apis-arkui/arkui-ts/ts-container-scroll.md#onscrollframebegin9) event &gt; according to the desired logic.
+> When the nested scrolling mode is set to
+> [PARALLEL](../../../reference/apis-arkui/arkui-ts/ts-appendix-enums.md#nestedscrollmode10), both the parent
+> and child components scroll simultaneously. You need to manage the scroll order in the
+> [onScrollFrameBegin](../../../reference/apis-arkui/arkui-ts/ts-container-scroll.md#onscrollframebegin9) event
+> according to the desired logic.
 
 **Since:** 14
 

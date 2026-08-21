@@ -15,7 +15,8 @@ Marks the end of a timeslice trace task.
 
 > **NOTE：**
 > 
-> To stop a trace task, the values of name and task ID in **finishTrace** must be the same as those in &gt; **startTrace**.
+> To stop a trace task, the values of name and task ID in **finishTrace** must be the same as those in
+> **startTrace**.
 
 **Since:** 7
 

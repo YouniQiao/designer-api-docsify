@@ -3443,9 +3443,13 @@ removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的 &gt; networkId，通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。
+> 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的
+> networkId，通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
 > 
-> deviceId具体获取方式请参考 &gt; [sync接口示例](#sync)。
+> deviceId具体获取方式请参考
+> [sync接口示例](#sync)。
 
 **起始版本：** -1
 
@@ -3552,9 +3556,13 @@ removeDeviceData(deviceId: string): Promise<void>
 
 > **说明：**
 > 
-> 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的 &gt; networkId，通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。
+> 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的
+> networkId，通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
 > 
-> deviceId具体获取方式请参考 &gt; [sync接口示例](#sync)。
+> deviceId具体获取方式请参考
+> [sync接口示例](#sync)。
 
 **起始版本：** -1
 
@@ -4031,7 +4039,9 @@ setSyncParam(defaultAllowedDelayMs: int, callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 设置默认延时后，调用 &gt; [sync](#sync)接口不会立即触发 &gt; 端端同步，而是等待指定的延时时间后再执行。
+> 设置默认延时后，调用
+> [sync](#sync)接口不会立即触发
+> 端端同步，而是等待指定的延时时间后再执行。
 
 **起始版本：** 23
 
@@ -4105,7 +4115,9 @@ setSyncParam(defaultAllowedDelayMs: int): Promise<void>
 
 > **说明：**
 > 
-> 设置默认延时后，调用 &gt; [sync](#sync)接口不会立即触发 &gt; 端端同步，而是等待指定的延时时间后再执行。
+> 设置默认延时后，调用
+> [sync](#sync)接口不会立即触发
+> 端端同步，而是等待指定的延时时间后再执行。
 
 **起始版本：** 23
 
@@ -4495,7 +4507,10 @@ sync(deviceIds: string[], mode: SyncMode, delayMs?: int): void
 
 > **说明：**
 > 
-> 其中deviceIds为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的 &gt; networkId, 通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。
+> 其中deviceIds为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的
+> networkId, 通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
 
 **起始版本：** 23
 
@@ -4633,7 +4648,10 @@ sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: int): void
 
 > **说明：**
 > 
-> 其中deviceIds为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的 &gt; networkId, 通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。
+> 其中deviceIds为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的
+> networkId, 通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
 
 **起始版本：** 23
 

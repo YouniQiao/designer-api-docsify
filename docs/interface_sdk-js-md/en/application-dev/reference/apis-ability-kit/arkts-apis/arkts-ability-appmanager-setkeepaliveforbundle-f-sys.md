@@ -16,12 +16,15 @@ Sets or cancels the keep-alive status for an application that belongs to a speci
 
 > **NOTE：**
 > 
-> - To support keep-alive, **mainElement** in the &gt; [module.json5](../../../quick-start/module-configuration-file.md) file of the application must be a UIAbility.
+> - To support keep-alive, **mainElement** in the
+> [module.json5](../../../quick-start/module-configuration-file.md) file of the application must be a UIAbility.
 > The system initiates the keep-alive operation only when this mainElement has been launched.
 > 
-> - On 2-in-1 devices, the application must appear in the status bar within 5 seconds of launch. Otherwise, the &gt; system revokes the application's keep-alive status and terminate the restarted process.
+> - On 2-in-1 devices, the application must appear in the status bar within 5 seconds of launch. Otherwise, the
+> system revokes the application's keep-alive status and terminate the restarted process.
 > 
-> - When the kept-alive application process exits, the system attempts to restart it. If three consecutive restart &gt; attempts fail, the system stops restarting the process.
+> - When the kept-alive application process exits, the system attempts to restart it. If three consecutive restart
+> attempts fail, the system stops restarting the process.
 
 **Since:** 23
 

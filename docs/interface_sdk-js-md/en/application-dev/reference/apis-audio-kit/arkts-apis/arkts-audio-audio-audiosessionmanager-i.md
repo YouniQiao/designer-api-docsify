@@ -874,13 +874,18 @@ Selects a media input device. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> - This API is not suitable for VoIP call recording; that is, it does not apply to scenarios where &gt; [SourceType](arkts-audio-audio-sourcetype-e.md) is **SOURCE_TYPE_VOICE_COMMUNICATION**.
+> - This API is not suitable for VoIP call recording; that is, it does not apply to scenarios where
+> [SourceType](arkts-audio-audio-sourcetype-e.md) is **SOURCE_TYPE_VOICE_COMMUNICATION**.
 > 
-> - Before calling this API, call [getAvailableDevices](#getavailabledevices) to &gt; query the list of available input devices and select an input device from the list.
+> - Before calling this API, call [getAvailableDevices](#getavailabledevices) to
+> query the list of available input devices and select an input device from the list.
 > 
-> - If there are recording streams of other applications with higher priorities in the system, the actual input &gt; device used will follow the input device selected by these applications.
+> - If there are recording streams of other applications with higher priorities in the system, the actual input
+> device used will follow the input device selected by these applications.
 > 
-> - Applications can listen for the &gt; [currentInputDeviceChanged](#onaudiosessiondeactivated) &gt; event to find out the actual input device being used.
+> - Applications can listen for the
+> [currentInputDeviceChanged](#onaudiosessiondeactivated)
+> event to find out the actual input device being used.
 
 **Since:** 24
 
@@ -917,7 +922,9 @@ Sets audio session behavior parameters. (Multiple flags can be combined.)
 
 > **NOTE：**
 > 
-> If this API is called while an audio session is active, you must call the &gt; [activateAudioSession](#activateaudiosession) API again &gt; for the settings to take effect.
+> If this API is called while an audio session is active, you must call the
+> [activateAudioSession](#activateaudiosession) API again
+> for the settings to take effect.
 
 **Since:** 24
 
@@ -978,11 +985,15 @@ Sets the preferred device category for recording with Bluetooth or NearLink. Thi
 
 > **NOTE：**
 > 
-> - Applications can set this category before connecting to Bluetooth or NearLink devices, and the system &gt; prioritizes using the device for recording when the device is connected.
+> - Applications can set this category before connecting to Bluetooth or NearLink devices, and the system
+> prioritizes using the device for recording when the device is connected.
 > 
-> - If there are recording streams of other applications with higher priorities in the system, the actual input &gt; device used will follow the input device selected by these applications.
+> - If there are recording streams of other applications with higher priorities in the system, the actual input
+> device used will follow the input device selected by these applications.
 > 
-> - Applications can listen for the &gt; [currentInputDeviceChanged](#onaudiosessiondeactivated) &gt; event to find out the actual input device being used.
+> - Applications can listen for the
+> [currentInputDeviceChanged](#onaudiosessiondeactivated)
+> event to find out the actual input device being used.
 
 **Since:** 24
 
@@ -1053,9 +1064,18 @@ Sets the default audio output device. This API uses a promise to return the resu
 
 > **NOTE：**
 > 
-> - This API applies to the following scenario: When &gt; [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md) is set to **VoIP**, the setting takes &gt; effect immediately after the AudioSession is activated. For non-VoIP scenarios, the setting does not take &gt; effect upon AudioSession activation. Instead, the setting applies when &gt; [StreamUsage](arkts-audio-audio-streamusage-e.md) for playback is voice message, VoIP voice call, &gt; or VoIP video call. Supported devices include the earpiece, speaker, and system default device.
+> - This API applies to the following scenario: When
+> [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md) is set to **VoIP**, the setting takes
+> effect immediately after the AudioSession is activated. For non-VoIP scenarios, the setting does not take
+> effect upon AudioSession activation. Instead, the setting applies when
+> [StreamUsage](arkts-audio-audio-streamusage-e.md) for playback is voice message, VoIP voice call,
+> or VoIP video call. Supported devices include the earpiece, speaker, and system default device.
 > 
-> - This API can be called at any time after an AudioSessionManager instance is created. The system records the &gt; device set by the application. However, the setting takes effect only after the AudioSession is activated. When &gt; the application starts playing, if an external device like Bluetooth headsets or wired headsets is connected, &gt; the system prioritizes audio output through the external device. Otherwise, the system uses the device set by &gt; the application.
+> - This API can be called at any time after an AudioSessionManager instance is created. The system records the
+> device set by the application. However, the setting takes effect only after the AudioSession is activated. When
+> the application starts playing, if an external device like Bluetooth headsets or wired headsets is connected,
+> the system prioritizes audio output through the external device. Otherwise, the system uses the device set by
+> the application.
 
 **Since:** 23
 

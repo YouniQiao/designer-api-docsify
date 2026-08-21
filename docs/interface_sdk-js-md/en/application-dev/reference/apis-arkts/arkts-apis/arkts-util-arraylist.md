@@ -15,7 +15,7 @@ import { ArrayListReplaceCb } from '@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md) | ArrayList is a linear data structure that is implemented based on arrays. ArrayList can dynamically adjust the capacity based on project requirements. It increases the capacity by 50% each time. |
+| [ArrayList](arkts-arkts-utilarraylist-arraylist-c.md) | ArrayList is a linear data structure that is implemented based on arrays. ArrayList can dynamically adjust the capacity based on project requirements. It increases the capacity by 50% each time. |
 
 ### Types
 

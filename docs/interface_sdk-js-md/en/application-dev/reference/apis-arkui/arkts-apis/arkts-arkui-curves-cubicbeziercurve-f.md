@@ -28,9 +28,9 @@ Creates a cubic Bezier curve. The curve values must be between 0 and 1.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x1 | double | Yes | X coordinate of the first point on the Bezier curve.<br>Value range: [0, 1]. &lt;p&gt;**NOTE：**: <br>A value less than 0 is handed as **0**. A value greater than 1 is handed as **1**. &lt;/p&gt; |
+| x1 | double | Yes | X coordinate of the first point on the Bezier curve.<br>Value range: [0, 1]. <p>**NOTE：**: <br>A value less than 0 is handed as **0**. A value greater than 1 is handed as **1**. </p> |
 | y1 | double | Yes | Y coordinate of the first point on the Bezier curve.<br>Value range: (-∞, +∞). |
-| x2 | double | Yes | X coordinate of the second point on the Bezier curve.<br>Value range: [0, 1]. &lt;p&gt;**NOTE：**: <br>A value less than 0 is handed as **0**. A value greater than 1 is handed as **1**. &lt;/p&gt; |
+| x2 | double | Yes | X coordinate of the second point on the Bezier curve.<br>Value range: [0, 1]. <p>**NOTE：**: <br>A value less than 0 is handed as **0**. A value greater than 1 is handed as **1**. </p> |
 | y2 | double | Yes | Y coordinate of the second point on the Bezier curve.<br>Value range: (-∞, +∞). |
 
 **Return value:**

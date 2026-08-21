@@ -18,11 +18,17 @@ ColumnSplit通过分割线限制子组件的高度。初始化时，分割线位
 
 > **说明：**
 > 
-> ColumnSplit组件 &gt; [形状裁剪](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md) &gt; 的默认值为true。
+> ColumnSplit组件
+> [形状裁剪](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md)
+> 的默认值为true。
 > 
-> 与[RowSplit](../../../reference/apis-arkui/arkui-ts/ts-container-rowsplit.md)相同， &gt; ColumnSplit的分割线可调整上下两侧子组件的高度， &gt; 子组件的高度调整范围受其最大最小高度限制。
+> 与[RowSplit](../../../reference/apis-arkui/arkui-ts/ts-container-rowsplit.md)相同，
+> ColumnSplit的分割线可调整上下两侧子组件的高度，
+> 子组件的高度调整范围受其最大最小高度限制。
 > 
-> 支持[clip](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#clip12)、 &gt; [margin](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#margin) &gt; 等通用属性，未设置clip属性时，其默认值为true。
+> 支持[clip](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#clip12)、
+> [margin](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#margin)
+> 等通用属性，未设置clip属性时，其默认值为true。
 
 **起始版本：** 23
 

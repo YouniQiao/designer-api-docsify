@@ -22,7 +22,7 @@ ArrayList中replaceAllElements方法的回调函数。
 | --- | --- | --- | --- |
 | value | T | 是 | 当前遍历到的元素。 |
 | index | int | 是 | 当前遍历到的下标值。 |
-| arrlist | [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md)&lt;T&gt; | 是 | 当前调用replaceAllElements方法的实例对象。 |
+| arrlist | [ArrayList](arkts-arkts-utilarraylist-arraylist-c.md)&lt;T&gt; | 是 | 当前调用replaceAllElements方法的实例对象。 |
 
 **返回值：**
 

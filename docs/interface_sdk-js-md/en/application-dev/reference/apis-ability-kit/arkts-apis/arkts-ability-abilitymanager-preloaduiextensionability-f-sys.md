@@ -12,7 +12,7 @@ import { abilityManager } from '@kit.AbilityKit';
 function preloadUIExtensionAbility(want: Want): Promise<int>
 ```
 
-Preloads a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance and returns the instance ID. This API uses a promise to return the result.
+Preloads a [UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md) instance and returns the instance ID. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -30,7 +30,7 @@ Preloads a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uie
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability. |
 
 **Return value:**
 

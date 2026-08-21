@@ -20,5 +20,5 @@ The type of HashSet callback function.
 | --- | --- | --- | --- |
 | value | T | Yes | The current element being processed |
 | key | T | Yes | [Deprecated] HashSet does not use key-value pairs, this parameter exists only for API compatibility |
-| set | [HashSet](arkts-arkts-util-hashset-hashset-c.md)&lt;T&gt; | Yes | The HashSet instance being traversed |
+| set | [HashSet](arkts-arkts-utilhashset-hashset-c.md)&lt;T&gt; | Yes | The HashSet instance being traversed |
 

@@ -26,7 +26,7 @@ Checks whether the input device supports the specified keys.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | int | Yes | Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change. |
-| keys | Array&lt;[KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md)&gt; | Yes | Keys to be queried. A maximum of five keys can be specified. |
+| keys | Array&lt;[KeyCode](arkts-input-multimodalinputkeycode-keycode-e.md)&gt; | Yes | Keys to be queried. A maximum of five keys can be specified. |
 
 **Return value:**
 

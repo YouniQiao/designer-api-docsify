@@ -17,10 +17,10 @@
 
 | Name | Description |
 | --- | --- |
-| [EditorEventInfo](arkts-arkui-advanced-selectionmenu-editoreventinfo-i.md) | Defines the editor event info. |
-| [EditorMenuOptions](arkts-arkui-advanced-selectionmenu-editormenuoptions-i.md) | Construct parameter types for EditorMenuOptions. |
-| [ExpandedMenuOptions](arkts-arkui-advanced-selectionmenu-expandedmenuoptions-i.md) | Construct parameter types for ExpandedMenuOptions. |
-| [SelectionMenuOptions](arkts-arkui-advanced-selectionmenu-selectionmenuoptions-i.md) | Construct parameter types for SelectionMenuOptions. |
+| [EditorEventInfo](arkts-arkuiadvancedselectionmenu-editoreventinfo-i.md) | Defines the editor event info. |
+| [EditorMenuOptions](arkts-arkuiadvancedselectionmenu-editormenuoptions-i.md) | Construct parameter types for EditorMenuOptions. |
+| [ExpandedMenuOptions](arkts-arkuiadvancedselectionmenu-expandedmenuoptions-i.md) | Construct parameter types for ExpandedMenuOptions. |
+| [SelectionMenuOptions](arkts-arkuiadvancedselectionmenu-selectionmenuoptions-i.md) | Construct parameter types for SelectionMenuOptions. |
 
 ### Types
 

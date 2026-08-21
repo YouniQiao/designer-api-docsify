@@ -4,7 +4,8 @@ Enumerates the canvas clipping modes.
 
 > **NOTE：**
 > 
-> The diagrams show the result of cropping a circle based on different enumerated values after a rectangle is &gt; cropped in INTERSECT mode. The green area is the final area obtained.
+> The diagrams show the result of cropping a circle based on different enumerated values after a rectangle is
+> cropped in INTERSECT mode. The green area is the final area obtained.
 
 **Since:** 23
 

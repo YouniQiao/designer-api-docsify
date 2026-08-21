@@ -4,7 +4,7 @@
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [showAlertDialog](arkts-arkui-arkui-uicontext-uicontext-c.md#showalertdialog)
+**Substitutes:** [showAlertDialog](arkts-arkui-arkuiuicontext-uicontext-c.md#showalertdialog)
 
 <!--Device-unnamed-declare class AlertDialog--><!--Device-unnamed-declare class AlertDialog-End-->
 
@@ -25,13 +25,16 @@ Shows an alert dialog box.
 
 > **NOTE：**
 > 
-> Since API version 10, you can use the &gt; [showAlertDialog](arkts-arkui-arkui-uicontext-uicontext-c.md#showalertdialog) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md), which ensures that the alert dialog box is shown in the intended UI &gt; instance.
+> Since API version 10, you can use the
+> [showAlertDialog](arkts-arkui-arkuiuicontext-uicontext-c.md#showalertdialog) API in
+> [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md), which ensures that the alert dialog box is shown in the intended UI
+> instance.
 
 **Since:** 7
 
 **Deprecated since:** 18
 
-**Substitutes:** [showAlertDialog](arkts-arkui-arkui-uicontext-uicontext-c.md#showalertdialog)
+**Substitutes:** [showAlertDialog](arkts-arkui-arkuiuicontext-uicontext-c.md#showalertdialog)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

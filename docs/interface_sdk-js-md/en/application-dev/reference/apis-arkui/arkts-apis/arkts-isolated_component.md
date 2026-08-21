@@ -39,7 +39,7 @@
 
 | Name | Description |
 | --- | --- |
-| [IsolatedComponent(System API)](arkts-arkui-isolated-component-con-sys.md#isolatedcomponent) | Defines IsolatedComponent Component. |
-| [IsolatedComponentInstance(System API)](arkts-arkui-isolated-component-con-sys.md#isolatedcomponentinstance) | Defines IsolatedComponent Component instance. |
+| [IsolatedComponent(System API)](arkts-arkui-isolatedcomponent-con-sys.md#isolatedcomponent) | Defines IsolatedComponent Component. |
+| [IsolatedComponentInstance(System API)](arkts-arkui-isolatedcomponent-con-sys.md#isolatedcomponentinstance) | Defines IsolatedComponent Component instance. |
 <!--DelEnd-->
 

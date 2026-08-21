@@ -15,7 +15,8 @@ Checks whether the system is undergoing a stability test. This API uses an async
 
 > **NOTE：**
 > 
-> A stability test scenario refers to a specific testing environment designed to verify application reliability &gt; under complex, extreme, or long-term operating conditions.
+> A stability test scenario refers to a specific testing environment designed to verify application reliability
+> under complex, extreme, or long-term operating conditions.
 
 **Since:** 8
 
@@ -58,7 +59,8 @@ Checks whether the system is undergoing a stability test. This API uses a promis
 
 > **NOTE：**
 > 
-> A stability test scenario refers to a specific testing environment designed to verify application reliability &gt; under complex, extreme, or long-term operating conditions.
+> A stability test scenario refers to a specific testing environment designed to verify application reliability
+> under complex, extreme, or long-term operating conditions.
 
 **Since:** 8
 

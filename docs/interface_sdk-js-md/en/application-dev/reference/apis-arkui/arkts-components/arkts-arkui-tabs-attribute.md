@@ -660,7 +660,12 @@ This event is triggered when any of the following occurs:
 
 > **NOTE：**
 > 
-> When a custom tab is used, relying solely on the **onChange** event for synchronization between tabs and swipe &gt; gestures may result in delayed visual updates, since it is triggered after the swipe-triggered tab switching &gt; animation is completed. For smooth animations, listen for the active tab index in &gt; [onAnimationStart](#onanimationstart) and update the tab index accordingly. For details about &gt; the implementation, see &gt; [Example 3](../../../reference/apis-arkui/arkui-ts/ts-container-tabs.md#example-3-implementing-custom-tab-switching-synchronization).
+> When a custom tab is used, relying solely on the **onChange** event for synchronization between tabs and swipe
+> gestures may result in delayed visual updates, since it is triggered after the swipe-triggered tab switching
+> animation is completed. For smooth animations, listen for the active tab index in
+> [onAnimationStart](#onanimationstart) and update the tab index accordingly. For details about
+> the implementation, see
+> [Example 3](../../../reference/apis-arkui/arkui-ts/ts-container-tabs.md#example-3-implementing-custom-tab-switching-synchronization).
 
 **Since:** 7
 
@@ -786,7 +791,8 @@ This event is triggered when any of the following occurs:
 
 > **NOTE：**
 > 
-> In the **onSelected** callback, the index of the current displayed page cannot be set using **index** of &gt; [TabsOptions](arkts-arkui-tabsoptions-i.md), and **TabsController.changeIndex()** cannot be called.
+> In the **onSelected** callback, the index of the current displayed page cannot be set using **index** of
+> [TabsOptions](arkts-arkui-tabsoptions-i.md), and **TabsController.changeIndex()** cannot be called.
 
 **Since:** 18
 

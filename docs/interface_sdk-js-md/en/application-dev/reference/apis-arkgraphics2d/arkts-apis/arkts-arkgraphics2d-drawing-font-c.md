@@ -6,7 +6,8 @@ Describes the attributes used for text rendering, such as size and typeface.
 > 
 > - This module uses the physical pixel unit, px.
 > 
-> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
+> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
+> transitions.
 
 **Since:** 23
 
@@ -913,7 +914,8 @@ Measures the text width.
 
 > **NOTE：**
 > 
-> This API is used to measure the text width of the original string. To measure the text width after typesetting, &gt; call [measure.measureText](../../../reference/apis-arkui/arkts-apis-uicontext-measureutils.md#measuretext12).
+> This API is used to measure the text width of the original string. To measure the text width after typesetting,
+> call [measure.measureText](../../../reference/apis-arkui/arkts-apis-uicontext-measureutils.md#measuretext12).
 
 **Since:** 23
 

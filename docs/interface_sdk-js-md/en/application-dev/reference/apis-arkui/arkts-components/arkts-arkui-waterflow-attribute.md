@@ -428,7 +428,10 @@ Defines whether the **WaterFlow** component supports the generation of empty bra
 
 > **NOTE：**
 > 
-> When [WaterFlowSections](arkts-arkui-waterflowsections-c.md) is set using the [sections](arkts-arkui-waterflowoptions-i.md) parameter, &gt; or when the [SLIDING_WINDOW](arkts-arkui-waterflowlayoutmode-e.md) layout mode is set using the &gt; [layoutMode](arkts-arkui-waterflowoptions-i.md) parameter, the **FlowItem** after the empty branch is displayed regardless &gt; of the **supportEmptyBranchInLazyLoading** setting.
+> When [WaterFlowSections](arkts-arkui-waterflowsections-c.md) is set using the [sections](arkts-arkui-waterflowoptions-i.md) parameter,
+> or when the [SLIDING_WINDOW](arkts-arkui-waterflowlayoutmode-e.md) layout mode is set using the
+> [layoutMode](arkts-arkui-waterflowoptions-i.md) parameter, the **FlowItem** after the empty branch is displayed regardless
+> of the **supportEmptyBranchInLazyLoading** setting.
 
 **Since:** 26.0.0
 

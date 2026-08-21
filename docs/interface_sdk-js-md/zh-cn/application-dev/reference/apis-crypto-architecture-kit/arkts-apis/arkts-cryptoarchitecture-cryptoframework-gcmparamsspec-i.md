@@ -6,8 +6,10 @@
 
 > **说明：**
 > 
-> 1. 传入[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法前需 &gt; 要指定其algName属性（来源于父类[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)）。
-> 2. 如果不需要aad或者aad长度为0，构造GcmParamsSpec时可以将aad的data属性设置为空的Uint8Array， &gt; 即aad: { data: new Uint8Array() }。
+> 1. 传入[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法前需
+> 要指定其algName属性（来源于父类[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)）。
+> 2. 如果不需要aad或者aad长度为0，构造GcmParamsSpec时可以将aad的data属性设置为空的Uint8Array，
+> 即aad: { data: new Uint8Array() }。
 
 **继承/实现关系：** GcmParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)
 

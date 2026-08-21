@@ -1,8 +1,10 @@
 # InputMethodExtensionAbility
 
 @brief The **InputMethodExtensionAbility** module provides APIs for developing input methods and managing the lifecycle of input method extensions. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > The initial APIs of this module are supported since API version 9. Newly added APIs will be marked with a superscript to indicate their earliest API version. The APIs of this module can be used only in the stage model.
 
 **Since:** 23
@@ -37,7 +39,7 @@ onCreate(want: Want): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Information related to the **InputMethodExtensionAbility**, including the ability name and bundle name. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Information related to the **InputMethodExtensionAbility**, including the ability name and bundle name. |
 
 **Examples**
 

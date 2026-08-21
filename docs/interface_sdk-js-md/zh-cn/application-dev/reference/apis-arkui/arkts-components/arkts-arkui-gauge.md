@@ -10,7 +10,8 @@
 
 > **说明：**
 > 
-> - 支持的子组件类型：系统组件和自定义组件，支持条件渲染控制[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)，不支持循环渲染控制 &gt; ForEach和LazyForEach。
+> - 支持的子组件类型：系统组件和自定义组件，支持条件渲染控制[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)，不支持循环渲染控制
+> ForEach和LazyForEach。
 > 
 > - 建议使用文本组件构建当前数值文本和辅助文本。
 > 

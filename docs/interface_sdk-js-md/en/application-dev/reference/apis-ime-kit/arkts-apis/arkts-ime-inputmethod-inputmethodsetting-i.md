@@ -354,10 +354,14 @@ getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProper
 ```
 
 @brief Obtains a list of activated or deactivated input methods. This API uses an asynchronous callback to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
-> An activated input method refers to an input method that is enabled. The default input method is enabled by default. Other input methods can be enabled or disabled as needed. <br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> An activated input method refers to an input method that is enabled. The default input method is enabled by default. Other input methods can be enabled or disabled as needed. &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > The list of activated input methods includes the default input method and enabled input methods. The list of deactivated input methods includes all installed input methods except the enabled ones.
 
 **Since:** 23
@@ -402,10 +406,14 @@ getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>
 ```
 
 @brief Obtains a list of activated or deactivated input methods. This API uses a promise to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
-> An activated input method refers to an input method that is enabled. The default input method is enabled by default. Other input methods can be enabled or disabled as needed. <br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> An activated input method refers to an input method that is enabled. The default input method is enabled by default. Other input methods can be enabled or disabled as needed. &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > The list of activated input methods includes the default input method and enabled input methods. The list of deactivated input methods includes all installed input methods except the enabled ones.
 
 **Since:** 23
@@ -453,10 +461,14 @@ getInputMethodsSync(enable: boolean): Array<InputMethodProperty>
 ```
 
 @brief Obtains a list of activated or deactivated input methods. This API returns the result synchronously. <br> <br>   
-> **NOTE：**<br>
-> <br>
-> An activated input method refers to an input method that is enabled. The default input method is enabled by default. Other input methods can be enabled or disabled as needed. <br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> An activated input method refers to an input method that is enabled. The default input method is enabled by default. Other input methods can be enabled or disabled as needed. &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > The list of activated input methods includes the default input method and enabled input methods. The list of deactivated input methods includes all installed input methods except the enabled ones.
 
 **Since:** 23

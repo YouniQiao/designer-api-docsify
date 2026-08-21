@@ -4,7 +4,7 @@
 export type UIExtensionContext = _UIExtensionContext
 ```
 
-[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)组件上下文，继承自Context。
+[UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md)组件上下文，继承自Context。
 
 **起始版本：** 23
 

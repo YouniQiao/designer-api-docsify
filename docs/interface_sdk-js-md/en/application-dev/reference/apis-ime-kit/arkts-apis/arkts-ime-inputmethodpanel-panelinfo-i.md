@@ -1,0 +1,50 @@
+# PanelInfo
+
+@brief Defines the attributes of the input method panel.
+
+**Since:** 23
+
+<!--Device-unnamed-export interface PanelInfo--><!--Device-unnamed-export interface PanelInfo-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+## Modules to Import
+
+```TypeScript
+import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
+```
+
+## flag
+
+```TypeScript
+flag?: PanelFlag
+```
+
+@brief State type of the input method panel. <br> <br>- The default value is **FLAG_FIXED**. <br>- Currently, this parameter is used to describe the state type of the soft keyboard.
+
+**Type:** [PanelFlag](arkts-ime-inputmethodpanel-panelflag-e.md)
+
+**Default:** FLG_FIXED
+
+**Since:** 23
+
+<!--Device-PanelInfo-flag?: PanelFlag--><!--Device-PanelInfo-flag?: PanelFlag-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+## type
+
+```TypeScript
+type: PanelType
+```
+
+@brief Type of the input method panel.
+
+**Type:** [PanelType](arkts-ime-inputmethodpanel-paneltype-e.md)
+
+**Since:** 23
+
+<!--Device-PanelInfo-type: PanelType--><!--Device-PanelInfo-type: PanelType-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+

@@ -50,7 +50,7 @@ CONTENT_TITLE_KEY = 'ohos.extra.param.key.contentTitle'
 
 表示原子化服务分享的标题。
 
-在跨端分享的[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare)回调中，开发者可通过该字段设置分享的标题。
+在跨端分享的[onShare](arkts-ability-appabilityuiability-uiability-c.md#onshare)回调中，开发者可通过该字段设置分享的标题。
 
 **起始版本：** 23
 
@@ -68,7 +68,7 @@ SHARE_ABSTRACT_KEY = 'ohos.extra.param.key.shareAbstract'
 
 表示原子化服务分享的内容摘要。
 
-在跨端分享的[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare)回调中，开发者可通过该字段设置分享的摘要。
+在跨端分享的[onShare](arkts-ability-appabilityuiability-uiability-c.md#onshare)回调中，开发者可通过该字段设置分享的摘要。
 
 **起始版本：** 23
 
@@ -86,7 +86,7 @@ SHARE_URL_KEY = 'ohos.extra.param.key.shareUrl'
 
 表示原子化服务分享的URL链接。
 
-在跨端分享的[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare)回调中，开发者可通过该字段设置分享的URL链接。
+在跨端分享的[onShare](arkts-ability-appabilityuiability-uiability-c.md#onshare)回调中，开发者可通过该字段设置分享的URL链接。
 
 **起始版本：** 23
 
@@ -134,7 +134,7 @@ SUPPORT_CONTINUE_SOURCE_EXIT_KEY = 'ohos.extra.param.key.supportContinueSourceEx
 SHOW_MODE_KEY = 'ohos.extra.param.key.showMode'
 ```
 
-表示[EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md)的显示模式，值为枚举类型 [ShowMode](arkts-ability-wantconstant-showmode-e.md)
+表示[EmbeddableUIAbility](arkts-ability-appabilityembeddableuiability-embeddableuiability-c.md)的显示模式，值为枚举类型 [ShowMode](arkts-ability-wantconstant-showmode-e.md)
 
 **起始版本：** 23
 

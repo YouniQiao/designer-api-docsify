@@ -24,23 +24,35 @@ Child components can be dynamically generated using rendering control types [if/
 
 > **NOTE：**
 > 
-> If performance lag occurs when you process a large number of child components, consider using lazy loading, list &gt; item caching, dynamic preloading, component reuse, and layout optimization. For best practices, see &gt; [Optimizing Frame Loss for Long List Loading](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-best-practices-long-list).
+> If performance lag occurs when you process a large number of child components, consider using lazy loading, list
+> item caching, dynamic preloading, component reuse, and layout optimization. For best practices, see
+> [Optimizing Frame Loss for Long List Loading](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-best-practices-long-list).
 > 
-> Starting from API version 21, the maximum width or height for a single child component inside a **List** container &gt; is 16,777,216 px. In API version 20 and earlier versions, the limit was 1,000,000 px. If a child component exceeds &gt; the applicable size limit, scrolling or display behavior may become abnormal.
+> Starting from API version 21, the maximum width or height for a single child component inside a **List** container
+> is 16,777,216 px. In API version 20 and earlier versions, the limit was 1,000,000 px. If a child component exceeds
+> the applicable size limit, scrolling or display behavior may become abnormal.
 > 
 > Below are the rules for calculating the indexes of the child components of **List**:
 > 
 > - The index increases in ascending order of child components.
 > 
-> - In the **if/else** statement, only the child components for which the condition evaluates to true participate in &gt; the index calculation.
+> - In the **if/else** statement, only the child components for which the condition evaluates to true participate in
+> the index calculation.
 > 
-> - In the **ForEach**, **LazyForEach**, or **Repeat** statement, the indexes of all expanded subnodes are &gt; calculated.
+> - In the **ForEach**, **LazyForEach**, or **Repeat** statement, the indexes of all expanded subnodes are
+> calculated.
 > 
-> - After changes occur in [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md), &gt; [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), &gt; [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), and &gt; [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md), index values are updated &gt; accordingly for child components.
+> - After changes occur in [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md),
+> [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md),
+> [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), and
+> [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md), index values are updated
+> accordingly for child components.
 > 
-> - Each **ListItemGroup** component is taken as a whole and assigned an index, and the indexes of the list items &gt; within are not included in the index calculation.
+> - Each **ListItemGroup** component is taken as a whole and assigned an index, and the indexes of the list items
+> within are not included in the index calculation.
 > 
-> - Child components of **List** whose **visibility** attribute is set to **Hidden** or **None** are included in the &gt; index calculation.
+> - Child components of **List** whose **visibility** attribute is set to **Hidden** or **None** are included in the
+> index calculation.
 
 ## List
 

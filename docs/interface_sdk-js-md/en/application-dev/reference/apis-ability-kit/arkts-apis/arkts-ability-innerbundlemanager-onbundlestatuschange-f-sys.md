@@ -17,7 +17,9 @@ Registers a callback to receive bundle status changes. This API uses an asynchro
 
 > **NOTE：**
 > 
-> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [on](arkts-ability-bundlemonitor-onbundlechangedevent-f-sys.md#on_bundlechangedevent) &gt; instead.
+> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
+> [on](arkts-ability-bundlemonitor-onbundlechangedevent-f-sys.md#on_bundlechangedevent)
+> instead.
 
 **Since:** 8
 
@@ -52,7 +54,9 @@ Registers a callback to receive bundle status changes. This API uses an asynchro
 
 > **NOTE：**
 > 
-> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [on](arkts-ability-bundlemonitor-onbundlechangedevent-f-sys.md#on_bundlechangedevent) &gt; instead.
+> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
+> [on](arkts-ability-bundlemonitor-onbundlechangedevent-f-sys.md#on_bundlechangedevent)
+> instead.
 
 **Since:** 8
 

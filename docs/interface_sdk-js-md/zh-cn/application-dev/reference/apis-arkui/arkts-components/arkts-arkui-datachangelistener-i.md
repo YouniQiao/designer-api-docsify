@@ -4,7 +4,8 @@
 
 > **说明：**
 > 
-> DataChangeListener除onDatasetChange以外的方法中，当参数包含index且值为负数时，会默认用0来替换。onDatasetChange中，当单个DataOperation参数包含index且值在数据源 &gt; 索引范围之外（DataAddOperation中index可以等于数据源长度），则可能导致渲染异常。
+> DataChangeListener除onDatasetChange以外的方法中，当参数包含index且值为负数时，会默认用0来替换。onDatasetChange中，当单个DataOperation参数包含index且值在数据源
+> 索引范围之外（DataAddOperation中index可以等于数据源长度），则可能导致渲染异常。
 
 **起始版本：** 7
 
@@ -301,7 +302,9 @@ onDatasetChange(dataOperations: DataOperation[]): void
 
 > **说明：**
 > 
-> onDatasetChange接口不能与其他DataChangeListener的更新接口混用。例如，在同一个LazyForEach中，调用过onDataAdd接口后，不能再调用onDatasetChange接口；反之，调用过 &gt; onDatasetChange接口后，也不能调用onDataAdd等其他更新接口。页面中不同LazyForEach之间互不影响。在同一个onDatasetChange批量处理数据时，如果多个DataOperation操作同一个 &gt; index，只有第一个DataOperation生效。
+> onDatasetChange接口不能与其他DataChangeListener的更新接口混用。例如，在同一个LazyForEach中，调用过onDataAdd接口后，不能再调用onDatasetChange接口；反之，调用过
+> onDatasetChange接口后，也不能调用onDataAdd等其他更新接口。页面中不同LazyForEach之间互不影响。在同一个onDatasetChange批量处理数据时，如果多个DataOperation操作同一个
+> index，只有第一个DataOperation生效。
 
 **起始版本：** 12
 

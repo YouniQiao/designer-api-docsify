@@ -4,7 +4,10 @@ Custom layout algorithm class.
 
 > **NOTE：**
 > 
-> The object of the **CustomLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as &gt; the input parameter of the &gt; [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the &gt; layout algorithm.
+> The object of the **CustomLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as
+> the input parameter of the
+> [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the
+> layout algorithm.
 
 **Inheritance/Implementation:** CustomLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md)
 
@@ -24,7 +27,14 @@ Customizes the position of the child component to be arranged. When the position
 
 > **NOTE：**
 > 
-> In this callback, you can call &gt; getChild() of &gt; FrameNode to obtain the child &gt; component **FrameNode** and call &gt; layout() of &gt; FrameNode to set the position of the &gt; child component. For details, see &gt; [Example 1](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md#example-1-implementing-waterfall-layout-using-a-custom-layout-algorithm).
+> In this callback, you can call
+> getChild() of
+> FrameNode to obtain the child
+> component **FrameNode** and call
+> layout() of
+> FrameNode to set the position of the
+> child component. For details, see
+> [Example 1](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md#example-1-implementing-waterfall-layout-using-a-custom-layout-algorithm).
 
 **Since:** 24
 
@@ -55,7 +65,14 @@ Customizes the size of the child component to be measured. When the size of the 
 
 > **NOTE：**
 > 
-> In this callback, you can call &gt; getChild() of &gt; FrameNode to obtain the child &gt; component **FrameNode** and call &gt; measure() of &gt; FrameNode to measure the size of the &gt; child component. For details, see &gt; [Example 1](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md#example-1-implementing-waterfall-layout-using-a-custom-layout-algorithm).
+> In this callback, you can call
+> getChild() of
+> FrameNode to obtain the child
+> component **FrameNode** and call
+> measure() of
+> FrameNode to measure the size of the
+> child component. For details, see
+> [Example 1](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md#example-1-implementing-waterfall-layout-using-a-custom-layout-algorithm).
 
 **Since:** 24
 

@@ -25,8 +25,10 @@ acceptButtonStyle?: PickerDialogButtonStyle
 
 > **说明：**
 > 
-> 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效， &gt; 保持默认值false。
-> 2. 按钮高度默认40vp，borderRadius单位为vp。在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形 &gt; ROUNDED_RECTANGLE，呈现效果依然是胶囊型按钮Capsule。
+> 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，
+> 保持默认值false。
+> 2. 按钮高度默认40vp，borderRadius单位为vp。在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形
+> ROUNDED_RECTANGLE，呈现效果依然是胶囊型按钮Capsule。
 
 **类型：** PickerDialogButtonStyle
 
@@ -76,7 +78,8 @@ backgroundBlurStyle?: BlurStyle
 
 > **说明：**
 > 
-> 1. 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor， &gt; 否则显示的颜色将不符合预期效果。
+> 1. 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，
+> 否则显示的颜色将不符合预期效果。
 > 
 > 2. 从API版本26.0.0开始，设置systemMaterial后该属性不生效。
 
@@ -130,7 +133,8 @@ backgroundColor?: ResourceColor
 
 > **说明：**
 > 
-> 1. 当设置了backgroundColor为非透明色时，backgroundBlurStyle需要设置为BlurStyle.NONE，不要设置backgroundBlurStyle为非NONE值， &gt; 否则显示的颜色将不符合预期效果。
+> 1. 当设置了backgroundColor为非透明色时，backgroundBlurStyle需要设置为BlurStyle.NONE，不要设置backgroundBlurStyle为非NONE值，
+> 否则显示的颜色将不符合预期效果。
 > 
 > 2. 从API版本26.0.0开始，设置systemMaterial后该属性不生效。
 
@@ -158,7 +162,8 @@ backgroundEffect?: BackgroundEffectOptions
 
 > **说明：**
 > 
-> 未设置时不生效，此时弹窗背景模糊效果由backgroundBlurStyle决定；设置后将覆盖backgroundBlurStyle的效果。从API版本26.0.0开始， &gt; 设置systemMaterial后backgroundEffect与backgroundBlurStyle均不生效。
+> 未设置时不生效，此时弹窗背景模糊效果由backgroundBlurStyle决定；设置后将覆盖backgroundBlurStyle的效果。从API版本26.0.0开始，
+> 设置systemMaterial后backgroundEffect与backgroundBlurStyle均不生效。
 
 **类型：** BackgroundEffectOptions
 
@@ -208,9 +213,11 @@ cancelButtonStyle?: PickerDialogButtonStyle
 
 > **说明：**
 > 
-> 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效， &gt; 保持默认值false。
+> 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，
+> 保持默认值false。
 > 
-> 2. 按钮高度默认40vp，borderRadius单位为vp。在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形 &gt; ROUNDED_RECTANGLE，呈现效果依然是胶囊型按钮Capsule。
+> 2. 按钮高度默认40vp，borderRadius单位为vp。在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形
+> ROUNDED_RECTANGLE，呈现效果依然是胶囊型按钮Capsule。
 
 **类型：** PickerDialogButtonStyle
 
@@ -284,7 +291,8 @@ disableTextStyleAnimation?: boolean
 
 > **说明：**
 > 
-> 设置为true时，滑动过程中无字号、字重、字体颜色等变化动效，且文本均显示为defaultTextStyle属性设置的样式。如未设置defaultTextStyle， &gt; 则显示为Text组件默认样式。
+> 设置为true时，滑动过程中无字号、字重、字体颜色等变化动效，且文本均显示为defaultTextStyle属性设置的样式。如未设置defaultTextStyle，
+> 则显示为Text组件默认样式。
 
 **类型：** boolean
 
@@ -310,7 +318,13 @@ disappearTextStyle?: PickerTextStyle
 
 > 默认值：
 > 
-> <br>{ &gt; <br>color: '#ff182431', &gt; <br>font: { &gt; <br>size: '14fp', &gt; <br>weight: FontWeight.Regular &gt; <br>} &gt; <br>}
+> <br>{
+> <br>color: '#ff182431',
+> <br>font: {
+> <br>size: '14fp',
+> <br>weight: FontWeight.Regular
+> <br>}
+> <br>}
 
 **类型：** PickerTextStyle
 
@@ -579,7 +593,8 @@ onEnterSelectedArea?: Callback<TextPickerResult>
 
 > **说明：**
 > 
-> 在多列联动场景中，不建议使用该回调，由于该回调标识的是滑动过程中选项进入分割线区域内的节点，而跟随变化的选项并不涉及滑动，因此， &gt; 回调的返回值中，仅当前滑动列的值会正常变化，其余未滑动列的值保持不变。
+> 在多列联动场景中，不建议使用该回调，由于该回调标识的是滑动过程中选项进入分割线区域内的节点，而跟随变化的选项并不涉及滑动，因此，
+> 回调的返回值中，仅当前滑动列的值会正常变化，其余未滑动列的值保持不变。
 
 **类型：** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
@@ -677,7 +692,10 @@ selectedBackgroundStyle?: PickerBackgroundStyle
 
 > 默认值：
 > 
-> <br>{ &gt; <br>color: \$r('sys.color.comp_background_tertiary'), &gt; <br>borderRadius: \$r('sys.float.corner_radius_level12') &gt; <br>}
+> <br>{
+> <br>color: \$r('sys.color.comp_background_tertiary'),
+> <br>borderRadius: \$r('sys.float.corner_radius_level12')
+> <br>}
 
 **类型：** [PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)
 
@@ -703,7 +721,13 @@ selectedTextStyle?: PickerTextStyle
 
 > 默认值：
 > 
-> <br>{ &gt; <br>color: '#ff007dff', &gt; <br>font: { &gt; <br>size: '20fp', &gt; <br>weight: FontWeight.Medium &gt; <br>} &gt; <br>}
+> <br>{
+> <br>color: '#ff007dff',
+> <br>font: {
+> <br>size: '20fp',
+> <br>weight: FontWeight.Medium
+> <br>}
+> <br>}
 
 **类型：** PickerTextStyle
 
@@ -749,7 +773,13 @@ textStyle?: PickerTextStyle
 
 > 默认值：
 > 
-> <br>{ &gt; <br>color: '#ff182431', &gt; <br>font: { &gt; <br>size: '16fp', &gt; <br>weight: FontWeight.Regular &gt; <br>} &gt; <br>}
+> <br>{
+> <br>color: '#ff182431',
+> <br>font: {
+> <br>size: '16fp',
+> <br>weight: FontWeight.Regular
+> <br>}
+> <br>}
 
 **类型：** PickerTextStyle
 

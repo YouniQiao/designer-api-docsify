@@ -34,7 +34,7 @@ Starts a **ServiceExtensionAbility**. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Information about the **Want** used for starting an ability. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Information about the **Want** used for starting an ability. |
 
 **Return value:**
 
@@ -112,7 +112,7 @@ Stops a **ServiceExtensionAbility**. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Information about the **Want** used for stopping an ability. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Information about the **Want** used for stopping an ability. |
 
 **Return value:**
 

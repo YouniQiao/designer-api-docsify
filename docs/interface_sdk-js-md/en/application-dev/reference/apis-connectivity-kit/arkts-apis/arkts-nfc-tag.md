@@ -8,9 +8,16 @@ Foreground mode: A foreground application has priority to read the NFC tag disco
 
 > **NOTE：**
 > 
-> 2. Since API version 26.0.0, it is more accurate to determine whether a device supports NFC by calling both &gt; [canIUse("SystemCapability.Communication.NFC.Tag")](../../../reference/common/init.md#caniuse) and &gt; [nfcController.isNfcSupported](arkts-connectivity-nfccontroller-isnfcsupported-f.md). If the device does not &gt; support NFC, the application stability may be affected. For details, see &gt; [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).
+> 2. Since API version 26.0.0, it is more accurate to determine whether a device supports NFC by calling both
+> [canIUse("SystemCapability.Communication.NFC.Tag")](../../../reference/common/init.md#caniuse) and
+> [nfcController.isNfcSupported](arkts-connectivity-nfccontroller-isnfcsupported-f.md). If the device does not
+> support NFC, the application stability may be affected. For details, see
+> [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).
 > 
-> 3. If an error is reported while importing the tag module editor, the capabilities of a specific device model may &gt; exceed the capability set defined for the default device. To use these capabilities, configure a custom SysCap by &gt; following instructions in &gt; [SystemCapability](https://developer.huawei.com/consumer/en/doc/harmonyos-references/syscap).
+> 3. If an error is reported while importing the tag module editor, the capabilities of a specific device model may
+> exceed the capability set defined for the default device. To use these capabilities, configure a custom SysCap by
+> following instructions in
+> [SystemCapability](https://developer.huawei.com/consumer/en/doc/harmonyos-references/syscap).
 
 ## Modules to Import
 

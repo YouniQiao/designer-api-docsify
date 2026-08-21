@@ -382,7 +382,8 @@ Stops device-cloud sync. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> Calling **stop** will stop the sync process. To resume the sync, call &gt; [start](#start).
+> Calling **stop** will stop the sync process. To resume the sync, call
+> [start](#start).
 
 **Since:** 23
 
@@ -432,7 +433,8 @@ Stops device-cloud sync. This API uses an asynchronous callback to return the re
 
 > **NOTE：**
 > 
-> Calling **stop** will stop the sync process. To resume the sync, call &gt; [start](#start).
+> Calling **stop** will stop the sync process. To resume the sync, call
+> [start](#start).
 
 **Since:** 23
 

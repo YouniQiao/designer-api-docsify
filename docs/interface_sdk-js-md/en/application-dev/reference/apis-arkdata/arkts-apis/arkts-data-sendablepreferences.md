@@ -4,7 +4,8 @@ The **sendablePreferences** module provides APIs for processing data in the form
 
 > **NOTE：**
 > 
-> The shared user preferences are not thread-safe and may cause file damage and data loss when used in multi-process &gt; scenarios. Do not use it in multi-process scenarios.
+> The shared user preferences are not thread-safe and may cause file damage and data loss when used in multi-process
+> scenarios. Do not use it in multi-process scenarios.
 
 **Since:** 12
 

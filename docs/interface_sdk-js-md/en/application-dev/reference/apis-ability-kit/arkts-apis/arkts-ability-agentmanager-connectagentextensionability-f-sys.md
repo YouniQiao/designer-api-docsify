@@ -31,7 +31,7 @@ Connects to an AgentExtensionAbility.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the want info to connect. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Indicates the want info to connect. |
 | agentId | string | Yes | The agent id to connect. |
 | callback | [AgentExtensionConnectCallback](arkts-ability-agentextensionconnectcallback-i-sys.md) | Yes | The callback of connection. |
 

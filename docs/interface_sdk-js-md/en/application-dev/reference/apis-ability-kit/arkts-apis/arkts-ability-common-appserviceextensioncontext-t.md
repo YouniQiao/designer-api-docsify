@@ -4,7 +4,7 @@
 export type AppServiceExtensionContext = _AppServiceExtensionContext
 ```
 
-Defines the context environment for the [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md) . It inherits from Context.
+Defines the context environment for the [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md) . It inherits from Context.
 
 **Since:** 23
 

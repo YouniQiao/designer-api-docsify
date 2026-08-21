@@ -16,7 +16,8 @@ Obtains the information of all widgets that have been added to the home screen o
 
 > **NOTE：**
 > 
-> This field is supported since API version 18 and deprecated since API version 20. You are advised to use &gt; [getPublishedRunningFormInfos](arkts-form-formprovider-getpublishedrunningforminfos-f.md) instead.
+> This field is supported since API version 18 and deprecated since API version 20. You are advised to use
+> [getPublishedRunningFormInfos](arkts-form-formprovider-getpublishedrunningforminfos-f.md) instead.
 
 **Since:** 18
 

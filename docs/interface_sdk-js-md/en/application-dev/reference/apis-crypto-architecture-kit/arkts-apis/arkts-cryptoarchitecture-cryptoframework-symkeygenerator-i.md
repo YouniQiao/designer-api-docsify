@@ -26,7 +26,9 @@ Converts specified data into a symmetric key. This API uses an asynchronous call
 
 > **NOTE：**
 > 
-> For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified &gt; when the symmetric key generator is created, the binary key data passed in must match the hash length (for &gt; example, a 256-bit key for SHA256).
+> For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified
+> when the symmetric key generator is created, the binary key data passed in must match the hash length (for
+> example, a 256-bit key for SHA256).
 
 If no hash algorithm is specified when the symmetric key generator is created (for example, only **HMAC** is specified), any binary key data with a length of 1 to 4,096 bytes is supported.
 
@@ -153,7 +155,11 @@ Converts specified data into a symmetric key.
 
 > **NOTE：**
 > 
-> For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified &gt; when the symmetric key generator is created, the binary key data passed in must match the hash length (for &gt; example, a 256-bit key for SHA256). If no hash algorithm is specified when the symmetric key generator is &gt; created (for example, only **HMAC** is specified), any binary key data with a length of 1 to 4,096 bytes is &gt; supported.
+> For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified
+> when the symmetric key generator is created, the binary key data passed in must match the hash length (for
+> example, a 256-bit key for SHA256). If no hash algorithm is specified when the symmetric key generator is
+> created (for example, only **HMAC** is specified), any binary key data with a length of 1 to 4,096 bytes is
+> supported.
 
 <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, convertKey. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
@@ -214,7 +220,11 @@ Generates a random key using this symmetric key generator. This API uses an asyn
 
 > **NOTE：**
 > 
-> For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified &gt; when the symmetric key generator is created, a binary key matching the hash length (for example, a 256-bit key) &gt; will be randomly generated. If no hash algorithm is specified, for example, only **HMAC** is specified, random &gt; symmetric key generation is not supported. You can generate symmetric key data using &gt; [convertKey](#convertkey).
+> For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified
+> when the symmetric key generator is created, a binary key matching the hash length (for example, a 256-bit key)
+> will be randomly generated. If no hash algorithm is specified, for example, only **HMAC** is specified, random
+> symmetric key generation is not supported. You can generate symmetric key data using
+> [convertKey](#convertkey).
 
 **Since:** 23
 
@@ -306,7 +316,9 @@ Generates a random key using this symmetric key generator. This API returns the 
 
 > **NOTE：**
 > 
-> For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified &gt; when the symmetric key generator is created, a binary key matching the hash length (for example, a 256-bit key) &gt; will be randomly generated.
+> For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified
+> when the symmetric key generator is created, a binary key matching the hash length (for example, a 256-bit key)
+> will be randomly generated.
 
 If no hash algorithm is specified, for example, only **HMAC** is specified, random symmetric key generation is not supported. You can generate symmetric key data using [convertKeySync](#convertkeysync).
 

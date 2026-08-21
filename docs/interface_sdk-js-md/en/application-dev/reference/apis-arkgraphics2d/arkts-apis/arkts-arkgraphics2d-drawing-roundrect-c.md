@@ -8,7 +8,8 @@ Rounded rectangle.
 > 
 > - This module uses the physical pixel unit, px.
 > 
-> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
+> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
+> transitions.
 
 **Since:** 23
 

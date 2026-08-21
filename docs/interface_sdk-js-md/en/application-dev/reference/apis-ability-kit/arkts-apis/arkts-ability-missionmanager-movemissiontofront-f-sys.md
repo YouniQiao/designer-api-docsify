@@ -86,7 +86,7 @@ Switches a given mission to the foreground, with the startup parameters for the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | missionId | int | Yes | Mission ID. |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Startup parameters, which are used to specify the window mode and device ID for switching the mission to the foreground. |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | Yes | Startup parameters, which are used to specify the window mode and device ID for switching the mission to the foreground. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -144,7 +144,7 @@ Switches a given mission to the foreground, with the startup parameters for the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | missionId | int | Yes | Mission ID. |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Startup parameters, which are used to specify the window mode and device ID for switching the mission to the foreground. By default, no value is passed in, indicating that the default startup parameters are used. |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | No | Startup parameters, which are used to specify the window mode and device ID for switching the mission to the foreground. By default, no value is passed in, indicating that the default startup parameters are used. |
 
 **Return value:**
 

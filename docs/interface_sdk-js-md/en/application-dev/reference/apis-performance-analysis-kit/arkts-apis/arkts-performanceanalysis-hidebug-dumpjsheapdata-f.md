@@ -16,7 +16,8 @@ Dumps VM heap data.
 
 > **NOTE：**
 > 
-> Exporting the VM heap is time-consuming, and this API is a synchronous API. Therefore, you are advised not to &gt; call this API in the release version. Otherwise, the application screen may freeze, affecting user experience.
+> Exporting the VM heap is time-consuming, and this API is a synchronous API. Therefore, you are advised not to
+> call this API in the release version. Otherwise, the application screen may freeze, affecting user experience.
 
 **Since:** 26.1.0
 

@@ -28,7 +28,7 @@ function setSwitchStatus(admin: Want, key: SwitchKey, status: SwitchStatus): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | key | [SwitchKey](arkts-mdm-devicesettings-switchkey-e.md) | 是 | 开关的名称，应用申请权限 ohos.permission.PERSONAL_MANAGE_RESTRICTIONS 并通过接口 [startAdminProvision](arkts-mdm-adminmanager-startadminprovision-f.md)激活为自带设备管理应用，可以使用此接口设 置以下开关：星闪、蓝牙、Wi-Fi。设置NFC开关时会报错误码9200002。 |
 | status | [SwitchStatus](arkts-mdm-devicesettings-switchstatus-e.md) | 是 | 开关的状态，应用申请权限 ohos.permission.PERSONAL_MANAGE_RESTRICTIONS 并通过接口 [startAdminProvision](arkts-mdm-adminmanager-startadminprovision-f.md)激活为自带设备管理应用，可以使用此接口设 置以下状态：ON、OFF。设置为FORCE_ON状态时会报错误码9200002。 |
 

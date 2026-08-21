@@ -20,5 +20,5 @@ The type of LightWeightMap callback function.
 | --- | --- | --- | --- |
 | value | V | Yes | The value of the current entry |
 | key | K | Yes | The key of the current entry |
-| map | [LightWeightMap](arkts-arkts-util-lightweightmap-lightweightmap-c.md)&lt;K, V&gt; | Yes | The LightWeightMap instance being traversed |
+| map | [LightWeightMap](arkts-arkts-utillightweightmap-lightweightmap-c.md)&lt;K, V&gt; | Yes | The LightWeightMap instance being traversed |
 

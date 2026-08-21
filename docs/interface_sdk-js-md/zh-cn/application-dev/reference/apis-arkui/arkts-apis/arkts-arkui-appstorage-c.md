@@ -4,7 +4,10 @@ AppStorage是与应用进程绑定的全局UI状态存储中心，由UI框架在
 
 > **说明：**
 > 
-> 从API version 12开始，AppStorage支持[Map](../../../ui/state-management/arkts-appstorage.md#装饰map类型变量)、 &gt; [Set](../../../ui/state-management/arkts-appstorage.md#装饰set类型变量)、 &gt; [Date类型](../../../ui/state-management/arkts-appstorage.md#装饰date类型变量)，支持null、undefined以及 &gt; [联合类型](../../../ui/state-management/arkts-appstorage.md#appstorage支持联合类型)。
+> 从API version 12开始，AppStorage支持[Map](../../../ui/state-management/arkts-appstorage.md#装饰map类型变量)、
+> [Set](../../../ui/state-management/arkts-appstorage.md#装饰set类型变量)、
+> [Date类型](../../../ui/state-management/arkts-appstorage.md#装饰date类型变量)，支持null、undefined以及
+> [联合类型](../../../ui/state-management/arkts-appstorage.md#appstorage支持联合类型)。
 
 **起始版本：** 7
 

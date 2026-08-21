@@ -281,7 +281,8 @@ Sets the maximum value.
 
 > **NOTE：**
 > 
-> This attribute is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; **max** instead. **max** is an attribute of [SliderOptions](arkts-arkui-slideroptions-i.md).
+> This attribute is supported since API version 7 and deprecated since API version 9. You are advised to use
+> **max** instead. **max** is an attribute of [SliderOptions](arkts-arkui-slideroptions-i.md).
 
 **Since:** 7
 
@@ -309,7 +310,8 @@ Sets the minimum value.
 
 > **NOTE：**
 > 
-> This attribute is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; **min** instead. **min** is an attribute of [SliderOptions](arkts-arkui-slideroptions-i.md).
+> This attribute is supported since API version 7 and deprecated since API version 9. You are advised to use
+> **min** instead. **min** is an attribute of [SliderOptions](arkts-arkui-slideroptions-i.md).
 
 **Since:** 7
 

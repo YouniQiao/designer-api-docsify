@@ -4,7 +4,8 @@ Intended only for the **UIExtensionComponent** that has process isolation requir
 
 > **NOTE：**
 > 
-> No new function will be added to this module. Related functions will be provided in the &gt; [uiExtension](arkts-arkui-uiextension.md) interface.
+> No new function will be added to this module. Related functions will be provided in the
+> [uiExtension](arkts-arkui-uiextension.md) interface.
 > 
 > The APIs provided by this module are system APIs.
 

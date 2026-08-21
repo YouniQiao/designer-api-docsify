@@ -1,9 +1,9 @@
 # ArkTS API<!--arkts-distributedservicekit-->
 
 - [@ohos.application.DistributedExtensionAbility](arkts-application-distributedextensionability.md)
-  - [DistributedExtensionAbility](arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md)
+  - [DistributedExtensionAbility](arkts-distributedservice-applicationdistributedextensionability-distributedextensionability-c.md)
 - [@ohos.application.DistributedExtensionContext](arkts-application-distributedextensioncontext.md)
-  - [DistributedExtensionContext](arkts-distributedservice-application-distributedextensioncontext-distributedextensioncontext-c.md)
+  - [DistributedExtensionContext](arkts-distributedservice-applicationdistributedextensioncontext-distributedextensioncontext-c.md)
 <!--Del-->
 - [@ohos.cooperate](arkts-cooperate.md)<!--DelEnd-->
   <!--Del-->

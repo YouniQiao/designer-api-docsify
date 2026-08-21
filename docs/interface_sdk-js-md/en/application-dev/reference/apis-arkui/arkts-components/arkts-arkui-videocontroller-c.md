@@ -111,7 +111,8 @@ Sets the video playback position.
 
 > **NOTE：**
 > 
-> To start playback from a specific position, disable autoplay, wait for video preparation to complete, and then &gt; seek to the target position.
+> To start playback from a specific position, disable autoplay, wait for video preparation to complete, and then
+> seek to the target position.
 
 **Since:** 7
 

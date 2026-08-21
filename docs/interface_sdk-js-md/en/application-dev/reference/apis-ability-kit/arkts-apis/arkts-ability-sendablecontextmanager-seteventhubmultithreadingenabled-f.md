@@ -16,7 +16,8 @@ Enables the cross-thread data transfer feature of [EventHub](arkts-ability-event
 
 > **NOTE：**
 > 
-> - When multiple Context objects communicate, you need to call this API to set each Context object to support &gt; EventHub cross-thread data transfer.
+> - When multiple Context objects communicate, you need to call this API to set each Context object to support
+> EventHub cross-thread data transfer.
 
 **Since:** 20
 

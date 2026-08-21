@@ -4,7 +4,8 @@ Defines the struct for a HUKS handle.
 
 > **NOTE：**
 > 
-> This API is deprecated since API version 9. You are advised to use &gt; [HuksSessionHandle&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-hukssessionhandle-i.md).
+> This API is deprecated since API version 9. You are advised to use
+> [HuksSessionHandle&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-hukssessionhandle-i.md).
 
 **Since:** 8
 

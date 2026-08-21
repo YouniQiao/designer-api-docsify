@@ -29,7 +29,8 @@ cancel: () => void
 
 > **说明：**
 > 
-> 使用获取到的[AuthInstance](#authinstance)对象调用该接口进行取消认证，此[AuthInstance](#authinstance)需要是正 &gt; 在进行认证的对象。
+> 使用获取到的[AuthInstance](#authinstance)对象调用该接口进行取消认证，此[AuthInstance](#authinstance)需要是正
+> 在进行认证的对象。
 
 **类型：** () =&gt; void
 

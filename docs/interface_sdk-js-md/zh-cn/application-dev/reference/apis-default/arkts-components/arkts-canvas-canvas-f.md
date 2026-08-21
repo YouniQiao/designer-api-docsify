@@ -48,11 +48,13 @@ export declare function Canvas(
 
 > **说明：**
 > 
-> - 使用本接口创建的Canvas组件将在onReady回调的入参中返回一个 &gt; DrawingRenderingContext对象，可用于在该Canvas组件上进行绘制。
+> - 使用本接口创建的Canvas组件将在onReady回调的入参中返回一个
+> DrawingRenderingContext对象，可用于在该Canvas组件上进行绘制。
 > 
 > - 使用这个接口创建的Canvas组件在组件不可见时将不响应绘制指令。
 > 
-> - 不可见场景主要包括组件所在的页面进入后台、组件滑到窗口外、 &gt; 设置visibility属性为隐藏等，不包括组件被其他组件或是其他窗口遮挡导致不可见的场景。
+> - 不可见场景主要包括组件所在的页面进入后台、组件滑到窗口外、
+> 设置visibility属性为隐藏等，不包括组件被其他组件或是其他窗口遮挡导致不可见的场景。
 
 **起始版本：** 23
 

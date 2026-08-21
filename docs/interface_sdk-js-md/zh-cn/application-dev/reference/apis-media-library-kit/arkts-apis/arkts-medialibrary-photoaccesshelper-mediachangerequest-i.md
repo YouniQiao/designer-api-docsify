@@ -4,7 +4,8 @@
 
 > **注意**：
 > 
-> 媒体变更请求需要在调用[applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges)后才会 &gt; 提交生效。
+> 媒体变更请求需要在调用[applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges)后才会
+> 提交生效。
 
 **起始版本：** 23
 

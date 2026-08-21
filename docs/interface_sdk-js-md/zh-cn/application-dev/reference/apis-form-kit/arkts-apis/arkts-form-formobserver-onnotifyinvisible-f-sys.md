@@ -12,7 +12,7 @@ import { formObserver } from '@kit.FormKit';
 function onNotifyInvisible(observerCallback: Callback<Array<formInfo.RunningFormInfo>>): void
 ```
 
-Listens to the event of notifyInvisible type change. &lt;p&gt;You can use this method to listen to the event of notifyInvisible type change.&lt;/p&gt;
+Listens to the event of notifyInvisible type change. <p>You can use this method to listen to the event of notifyInvisible type change.</p>
 
 **起始版本：** 23
 
@@ -48,7 +48,7 @@ function onNotifyInvisible(
   ): void
 ```
 
-Listens to the event of notifyInvisible type change. &lt;p&gt;You can use this method to listen to the event of notifyInvisible type change for a particular card host.&lt;/p&gt;
+Listens to the event of notifyInvisible type change. <p>You can use this method to listen to the event of notifyInvisible type change for a particular card host.</p>
 
 **起始版本：** 23
 

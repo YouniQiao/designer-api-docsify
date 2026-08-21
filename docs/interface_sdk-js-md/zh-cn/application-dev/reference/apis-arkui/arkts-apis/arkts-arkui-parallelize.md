@@ -19,5 +19,5 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ParallelOption](arkts-arkui-arkui-parallelize-paralleloption-i.md) | 使用ParallelizeUI并行化创建UI时的可选参数。 |
+| [ParallelOption](arkts-arkui-arkuiparallelize-paralleloption-i.md) | 使用ParallelizeUI并行化创建UI时的可选参数。 |
 

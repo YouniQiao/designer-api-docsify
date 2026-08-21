@@ -17,7 +17,7 @@ function scan(): boolean
 
 Scans Wi-Fi hotspot.
 
-&lt;p&gt;This API works in asynchronous mode.&lt;/p&gt;
+<p>This API works in asynchronous mode.</p>
 
 **Since:** 6
 

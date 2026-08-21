@@ -16,7 +16,8 @@ Opens NFC.
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. Use &gt; [enableNfc](arkts-connectivity-nfccontroller-enablenfc-f.md) instead.
+> This API is supported since API version 7 and deprecated since API version 9. Use
+> [enableNfc](arkts-connectivity-nfccontroller-enablenfc-f.md) instead.
 
 **Since:** 7
 

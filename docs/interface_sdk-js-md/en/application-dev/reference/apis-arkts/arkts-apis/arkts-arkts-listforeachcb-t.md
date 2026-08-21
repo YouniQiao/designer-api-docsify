@@ -20,5 +20,5 @@ The type of List callback function.
 | --- | --- | --- | --- |
 | value | T | Yes | The value of current element |
 | index | int | Yes | The index of current element The value should be an integer. |
-| list | [List](arkts-arkts-util-list-list-c.md)&lt;T&gt; | Yes | The List instance being traversed |
+| list | [List](arkts-arkts-utillist-list-c.md)&lt;T&gt; | Yes | The List instance being traversed |
 

@@ -160,7 +160,8 @@ Converts an XML text to an object of the object type.
 
 > **NOTE：**
 > 
-> - This API cannot parse XML files with a large amount of data. If the text content of a single element exceeds &gt; 10 MB, an error message is displayed and an object that contains only the XML tag header will be returned.
+> - This API cannot parse XML files with a large amount of data. If the text content of a single element exceeds
+> 10 MB, an error message is displayed and an object that contains only the XML tag header will be returned.
 > 
 > - In Windows, a newline is usually represented by the carriage return (CR) followed by the line feed (LF).
 > However, the object obtained by calling this API uses only the LF to indicate a new line.

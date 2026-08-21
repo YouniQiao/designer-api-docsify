@@ -17,7 +17,9 @@ Obtains an array of the launcher ability information based on a given bundle nam
 
 > **NOTE：**
 > 
-> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md) &gt; instead.
+> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md)
+> instead.
 
 **Since:** 8
 
@@ -52,7 +54,9 @@ Obtains an array of the launcher ability information based on a given bundle nam
 
 > **NOTE：**
 > 
-> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md) &gt; instead.
+> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md)
+> instead.
 
 **Since:** 8
 

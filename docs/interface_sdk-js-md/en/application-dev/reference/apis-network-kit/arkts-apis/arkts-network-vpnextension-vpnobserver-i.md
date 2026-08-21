@@ -24,7 +24,9 @@ Unregisters a listener for the user authorization result.
 
 > **NOTE：**
 > 
-> If you have called onAuthorizationResult multiple times to register &gt; listeners and want to unregister the listener, you need to pass the callback passed in the last call or pass no &gt; parameter.
+> If you have called onAuthorizationResult multiple times to register
+> listeners and want to unregister the listener, you need to pass the callback passed in the last call or pass no
+> parameter.
 
 **Since:** 26.0.0
 

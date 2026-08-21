@@ -16,7 +16,9 @@ Uninstalls a specified bundle of the current or specified user. The **isKeepData
 
 > **NOTE：**
 > 
-> Error code **401** will be returned if this API is called to uninstall an application that is either a non- &gt; removable pre-installed application or one configured as non-uninstallable via the &gt; [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md) API.
+> Error code **401** will be returned if this API is called to uninstall an application that is either a non-
+> removable pre-installed application or one configured as non-uninstallable via the
+> [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md) API.
 
 **Since:** 12
 
@@ -32,7 +34,7 @@ Uninstalls a specified bundle of the current or specified user. The **isKeepData
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | bundleName | string | Yes | Bundle name of an application. |
 | userId | number | No | User ID, which must be greater than or equal to 0. <br> - If **userId** is passed in, this API applies to the specified user. <br> - If **userId** is not passed in, this API applies to the current user. |
 | isKeepData | boolean | No | Whether to retain the bundle data. The value **true** means to retain the bundle data; the value **false** means the opposite. |

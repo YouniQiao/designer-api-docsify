@@ -8,7 +8,9 @@ Implements a **WebStorage** object to manage the Web SQL database and HTML5 Web 
 > 
 > - You must load the **Web** component before calling the APIs in **WebStorage**.
 > 
-> - After the ArkWeb kernel is upgraded to M132, the Web SQL database management becomes invalid because the &gt; kernel discards Web SQL. For details about the ArkWeb kernel version, see &gt; [Constraints](../../../web/web-component-overview.md#constraints).
+> - After the ArkWeb kernel is upgraded to M132, the Web SQL database management becomes invalid because the
+> kernel discards Web SQL. For details about the ArkWeb kernel version, see
+> [Constraints](../../../web/web-component-overview.md#constraints).
 
 **Since:** 23
 

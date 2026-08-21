@@ -528,7 +528,8 @@ Reads data from the shared file associated with this **Ashmem** object.
 
 > **NOTE：**
 > 
-> - Before writing an **Ashmem** object, you need to call &gt; [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
+> - Before writing an **Ashmem** object, you need to call
+> [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
 
 **Since:** 9
 
@@ -591,7 +592,8 @@ Reads data from the shared file associated with this **Ashmem** object.
 
 > **NOTE：**
 > 
-> Before writing an **Ashmem** object, you need to call &gt; [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
+> Before writing an **Ashmem** object, you need to call
+> [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
 
 **Since:** 23
 
@@ -656,7 +658,8 @@ Reads data from the shared file associated with this **Ashmem** object.
 
 > **NOTE：**
 > 
-> - Before writing an **Ashmem** object, you need to call &gt; [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
+> - Before writing an **Ashmem** object, you need to call
+> [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
 
 **Since:** 8
 
@@ -829,7 +832,8 @@ Writes data to the shared file associated with this **Ashmem** object.
 
 > **NOTE：**
 > 
-> - Before writing an **Ashmem** object, you need to call &gt; [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
+> - Before writing an **Ashmem** object, you need to call
+> [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
 
 **Since:** 9
 
@@ -885,7 +889,8 @@ Writes data to the shared file associated with this **Ashmem** object.
 
 > **NOTE：**
 > 
-> Before writing an **Ashmem** object, you need to call &gt; [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
+> Before writing an **Ashmem** object, you need to call
+> [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
 
 **Since:** 23
 
@@ -942,7 +947,8 @@ Writes data to the shared file associated with this **Ashmem** object.
 
 > **NOTE：**
 > 
-> - Before writing an **Ashmem** object, you need to call &gt; [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
+> - Before writing an **Ashmem** object, you need to call
+> [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
 
 **Since:** 8
 

@@ -16,7 +16,9 @@ Obtains the size of the private dirty memory of a process. This API is implement
 
 > **NOTE：**
 > 
-> Reading the **\/proc/{pid}/smaps_rollup** node is time-consuming. Therefore, you are advised not to use this API &gt; in the main thread. You can use this API in the asynchronous thread started by calling &gt; [@ohos.taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md) or [@ohos.worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md) to avoid frame freezing.
+> Reading the **\/proc/{pid}/smaps_rollup** node is time-consuming. Therefore, you are advised not to use this API
+> in the main thread. You can use this API in the asynchronous thread started by calling
+> [@ohos.taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md) or [@ohos.worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md) to avoid frame freezing.
 
 **Since:** 23
 

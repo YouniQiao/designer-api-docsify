@@ -20,5 +20,5 @@ Deque中forEach方法的回调函数。
 | --- | --- | --- | --- |
 | value | T | 是 | 当前遍历到的元素。 |
 | index | int | 是 | 当前遍历到的下标值。 |
-| deque | [Deque](arkts-arkts-util-deque-deque-c.md)&lt;T&gt; | 是 | 当前调用forEach方法的实例对象。 |
+| deque | [Deque](arkts-arkts-utildeque-deque-c.md)&lt;T&gt; | 是 | 当前调用forEach方法的实例对象。 |
 

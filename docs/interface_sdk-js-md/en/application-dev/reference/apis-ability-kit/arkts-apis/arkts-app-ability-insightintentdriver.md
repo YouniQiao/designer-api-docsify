@@ -4,7 +4,9 @@ The module provides APIs for executing intent calls. The system executes intent 
 
 > **NOTE：**
 > 
-> Starting from API version 20, this module supports application navigation using intents defined by the &gt; @InsightIntentLink &gt; decorator.
+> Starting from API version 20, this module supports application navigation using intents defined by the
+> @InsightIntentLink
+> decorator.
 
 **Since:** 23
 
@@ -43,14 +45,14 @@ import { insightIntentDriver } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [FunctionIntentInfo](arkts-ability-insightintentdriver-functionintentinfo-i.md) | Defines the parameter type of the @InsightIntentFunctionMethod decorator. All parameters inherit from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md). |
+| [FunctionIntentInfo](arkts-ability-insightintentdriver-functionintentinfo-i.md) | Defines the parameter type of the @InsightIntentFunctionMethod decorator. All parameters inherit from [IntentDecoratorInfo](arkts-ability-appabilityinsightintentdecorator-intentdecoratorinfo-i.md). |
 
 <!--Del-->
 ### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
-| [EntityInfo](arkts-ability-insightintentdriver-entityinfo-i-sys.md) | EntityInfo inherits from [IntentEntityDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intententitydecoratorinfo-i.md) and is used to describe the information about the intent entity defined by the @InsightIntentEntity decorator. |
+| [EntityInfo](arkts-ability-insightintentdriver-entityinfo-i-sys.md) | EntityInfo inherits from [IntentEntityDecoratorInfo](arkts-ability-appabilityinsightintentdecorator-intententitydecoratorinfo-i.md) and is used to describe the information about the intent entity defined by the @InsightIntentEntity decorator. |
 | [EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md) | Describes the parameters supported by the @InsightIntentForm decorator, such as the widget name. It also describes the widget information bound to the [intent developed using a configuration file](../../../application-models/insight-intent-config-development.md). |
 | [ExecuteParam](arkts-ability-insightintentdriver-executeparam-i-sys.md) | Defines the parameter used to execute an intent call. |
 | [FormIntentInfo](arkts-ability-insightintentdriver-formintentinfo-i-sys.md) | Describes the parameters supported by the @InsightIntentForm decorator, such as the widget name. It also describes the widget information bound to the [intent developed using a configuration file](../../../application-models/insight-intent-config-development.md). |

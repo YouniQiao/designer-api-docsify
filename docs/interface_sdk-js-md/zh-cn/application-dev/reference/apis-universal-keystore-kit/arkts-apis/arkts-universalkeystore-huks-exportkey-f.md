@@ -17,7 +17,9 @@ function exportKey(keyAlias: string, options: HuksOptions, callback: AsyncCallba
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用 &gt; [huks.exportKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-exportkeyitem-f.md) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [huks.exportKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-exportkeyitem-f.md)
+> 替代。
 
 **起始版本：** 8
 
@@ -62,7 +64,8 @@ function exportKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用 &gt; [huks.exportKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-exportkeyitem-f.md)替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [huks.exportKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-exportkeyitem-f.md)替代。
 
 **起始版本：** 8
 

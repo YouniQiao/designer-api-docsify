@@ -1,6 +1,6 @@
 # FormEditExtensionContext
 
-FormEditExtensionContext是 [FormEditExtensionAbility](arkts-form-app-form-formeditextensionability-formeditextensionability-c.md)的上下文，继承自 [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md)。用于管理卡片编辑场景的上下文环境，支持拉起卡片提供方页面和所属应用UIAbility，适用于卡片编 辑流程中需要与卡片提供方交互的场景。
+FormEditExtensionContext是 [FormEditExtensionAbility](arkts-form-appformformeditextensionability-formeditextensionability-c.md)的上下文，继承自 [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md)。用于管理卡片编辑场景的上下文环境，支持拉起卡片提供方页面和所属应用UIAbility，适用于卡片编 辑流程中需要与卡片提供方交互的场景。
 
 **继承/实现关系：** FormEditExtensionContext extends UIExtensionContext
 
@@ -32,7 +32,7 @@ startSecondPage(want: Want): Promise<AbilityResult>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 需要拉起的编辑页面信息。必须包含bundleName字段，且parameters中需包含secPageAbilityName。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 需要拉起的编辑页面信息。必须包含bundleName字段，且parameters中需包含secPageAbilityName。 |
 
 **返回值：**
 
@@ -134,7 +134,7 @@ startUIAbility(want: Want): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 用于指定要拉起的UIAbility的Want信息。必须包含abilityName字段。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 用于指定要拉起的UIAbility的Want信息。必须包含abilityName字段。 |
 
 **返回值：**
 

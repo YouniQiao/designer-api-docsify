@@ -92,7 +92,9 @@
 
 > **说明：**
 > 
-> - 使用本接口创建的Canvas组件将在 &gt; [onReady&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-canvasattribute-c.md#onready) &gt; 回调的入参中返回一个DrawingRenderingContext&lt;sup&gt;12+&lt;/sup&gt;对象，可用于在该Canvas组件上进行绘制。
+> - 使用本接口创建的Canvas组件将在
+> [onReady&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-canvasattribute-c.md#onready)
+> 回调的入参中返回一个DrawingRenderingContext&lt;sup&gt;12+&lt;/sup&gt;对象，可用于在该Canvas组件上进行绘制。
 > 
 > - 使用本接口创建的Canvas组件在组件不可见时将不响应绘制指令。
 > 

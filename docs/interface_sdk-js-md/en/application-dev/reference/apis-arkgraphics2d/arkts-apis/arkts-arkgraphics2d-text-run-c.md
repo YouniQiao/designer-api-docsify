@@ -257,7 +257,8 @@ Obtains the image boundaries of the typographic unit. Equivalent to visual bound
 > 
 > The figure shows the image boundaries for the string " a b ".
 > 
->  &gt;
+> 
+> 
 > The figure shows the image boundaries for the string "j" or "E".
 > 
 > 
@@ -596,7 +597,8 @@ Obtains the typographic boundaries of the typographic unit. These boundaries are
 > 
 > The figure shows the typesetting boundaries for the string " a b ".
 > 
->  &gt;
+> 
+> 
 > The figure shows the typesetting boundaries for the string "j" or "E".
 > 
 > !

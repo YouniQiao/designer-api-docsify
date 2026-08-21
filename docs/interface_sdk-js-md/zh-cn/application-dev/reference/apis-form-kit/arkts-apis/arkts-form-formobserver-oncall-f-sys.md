@@ -12,7 +12,7 @@ import { formObserver } from '@kit.FormKit';
 function onCall(observerCallback: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Call event listening in registered form. &lt;p&gt;This interface requires permission to receive callback.&lt;/p&gt;
+Call event listening in registered form. <p>This interface requires permission to receive callback.</p>
 
 **起始版本：** 23
 
@@ -45,7 +45,7 @@ Call event listening in registered form. &lt;p&gt;This interface requires permis
 function onCall(hostBundleName: string, observerCallback: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Call event listening in registered form. &lt;p&gt;This interface requires permission to receive callback.&lt;/p&gt;
+Call event listening in registered form. <p>This interface requires permission to receive callback.</p>
 
 **起始版本：** 23
 

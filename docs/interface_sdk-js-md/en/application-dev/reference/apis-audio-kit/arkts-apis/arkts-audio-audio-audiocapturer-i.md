@@ -1327,7 +1327,9 @@ Sets the independent audio session strategy and behavior parameters.
 
 > **NOTE：**
 > 
-> If this API is called while an audio capturer is running, you must call the &gt; [start](#start) API again for &gt; the settings to take effect.
+> If this API is called while an audio capturer is running, you must call the
+> [start](#start) API again for
+> the settings to take effect.
 
 **Since:** 24
 

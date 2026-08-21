@@ -28,7 +28,7 @@ Requests to publish a widget to the widget host. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Publish request, which must contain the following fields: <br>**bundleName**: bundle name of the target widget. <br>**abilityName**: ability of the target widget. <br>parameters: <br>- **ohos.extra.param.key.form_dimension**: dimension of the target widget. <br>- **ohos.extra.param.key.form_name**: name of the target widget. <br>- **ohos.extra.param.key.module_name**: module name of the target widget. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Publish request, which must contain the following fields: <br>**bundleName**: bundle name of the target widget. <br>**abilityName**: ability of the target widget. <br>parameters: <br>- **ohos.extra.param.key.form_dimension**: dimension of the target widget. <br>- **ohos.extra.param.key.form_name**: name of the target widget. <br>- **ohos.extra.param.key.module_name**: module name of the target widget. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the widget ID. |
 
 **Error codes:**
@@ -68,7 +68,7 @@ Requests to publish a widget to the widget host. This API uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Publish request, which must contain the following fields: <br>**bundleName**: bundle name of the target widget. <br>**abilityName**: ability of the target widget. <br>parameters: <br>- **ohos.extra.param.key.form_dimension**: dimension of the target widget. <br>- **ohos.extra.param.key.form_name**: name of the target widget. <br>- **ohos.extra.param.key.module_name**: module name of the target widget. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Publish request, which must contain the following fields: <br>**bundleName**: bundle name of the target widget. <br>**abilityName**: ability of the target widget. <br>parameters: <br>- **ohos.extra.param.key.form_dimension**: dimension of the target widget. <br>- **ohos.extra.param.key.form_name**: name of the target widget. <br>- **ohos.extra.param.key.module_name**: module name of the target widget. |
 
 **Return value:**
 

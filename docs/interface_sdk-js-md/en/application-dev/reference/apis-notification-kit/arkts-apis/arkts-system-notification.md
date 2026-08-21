@@ -12,12 +12,12 @@ import { Notification, ActionResult, ShowNotificationOptions } from '@kit.Notifi
 
 | Name | Description |
 | --- | --- |
-| [Notification](arkts-notification-system-notification-notification-c.md) | Manages notifications. |
+| [Notification](arkts-notification-systemnotification-notification-c.md) | Manages notifications. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ActionResult](arkts-notification-system-notification-actionresult-i.md) |  |
-| [ShowNotificationOptions](arkts-notification-system-notification-shownotificationoptions-i.md) |  |
+| [ActionResult](arkts-notification-systemnotification-actionresult-i.md) |  |
+| [ShowNotificationOptions](arkts-notification-systemnotification-shownotificationoptions-i.md) |  |
 

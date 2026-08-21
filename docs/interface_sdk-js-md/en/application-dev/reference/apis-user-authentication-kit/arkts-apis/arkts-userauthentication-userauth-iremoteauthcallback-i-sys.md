@@ -1,6 +1,6 @@
 # IRemoteAuthCallback (System API)
 
-Defines the remote authentication callback API. This API is used in remote authentication scenarios and provides the callback capabilities for obtaining remote authentication widget parameters and returning authentication results.
+Defines the callback of remote authentication. This API is used in remote authentication scenarios to obtain parameters of the remote authentication page and return the authentication result.
 
 **Since:** 26.0.0
 
@@ -23,7 +23,7 @@ import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 onGetRemoteAuthWidgetParam: WidgetParamCallback
 ```
 
-Callback for obtaining remote authentication widget parameters. When a remote device initiates an authentication request, the system invokes this callback to obtain the authentication widget configuration parameters.
+Callback triggered to obtain remote authentication page parameters. When a remote device initiates an authentication request, the system calls this callback to obtain the configuration parameters on the authentication page.
 
 **Type:** [WidgetParamCallback](arkts-userauthentication-userauth-widgetparamcallback-t-sys.md)
 
@@ -43,7 +43,7 @@ Callback for obtaining remote authentication widget parameters. When a remote de
 onRemoteAuthResult: ResultCallback
 ```
 
-Callback for returning remote authentication results. After the remote authentication is complete, the system invokes this callback to return the authentication result to the initiator.
+Callback triggered to return the remote authentication result. After remote authentication is complete, the system calls this callback to return the authentication result to the initiator.
 
 **Type:** [ResultCallback](arkts-userauthentication-userauth-resultcallback-t-sys.md)
 

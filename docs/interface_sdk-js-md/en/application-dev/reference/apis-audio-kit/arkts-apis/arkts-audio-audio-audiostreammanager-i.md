@@ -125,7 +125,8 @@ Obtains the information about this audio capturer. This API uses an asynchronous
 
 > **NOTE：**
 > 
-> The audio capturer information returned by this API may include internal audio recording streams, such as voice &gt; wakeup and cellular calls.
+> The audio capturer information returned by this API may include internal audio recording streams, such as voice
+> wakeup and cellular calls.
 
 **Since:** 23
 
@@ -149,7 +150,8 @@ Obtains the information about this audio capturer. This API uses a promise to re
 
 > **NOTE：**
 > 
-> The audio capturer information returned by this API may include internal audio recording streams, such as voice &gt; wakeup and cellular calls.
+> The audio capturer information returned by this API may include internal audio recording streams, such as voice
+> wakeup and cellular calls.
 
 **Since:** 23
 
@@ -173,7 +175,8 @@ Obtains the information about this audio capturer. This API returns the result s
 
 > **NOTE：**
 > 
-> The audio capturer information returned by this API may include internal audio recording streams, such as voice &gt; wakeup and cellular calls.
+> The audio capturer information returned by this API may include internal audio recording streams, such as voice
+> wakeup and cellular calls.
 
 **Since:** 23
 
@@ -197,7 +200,8 @@ Obtains the information about this audio renderer. This API uses an asynchronous
 
 > **NOTE：**
 > 
-> The audio renderer information returned by this API may include internal audio playback streams, such as &gt; cellular calls and ultrasonic streams.
+> The audio renderer information returned by this API may include internal audio playback streams, such as
+> cellular calls and ultrasonic streams.
 
 **Since:** 23
 
@@ -221,7 +225,8 @@ Obtains the information about this audio renderer. This API uses a promise to re
 
 > **NOTE：**
 > 
-> The audio renderer information returned by this API may include internal audio playback streams, such as &gt; cellular calls and ultrasonic streams.
+> The audio renderer information returned by this API may include internal audio playback streams, such as
+> cellular calls and ultrasonic streams.
 
 **Since:** 23
 
@@ -245,7 +250,8 @@ Obtains the information about this audio renderer. This API returns the result s
 
 > **NOTE：**
 > 
-> The audio renderer information returned by this API may include internal audio playback streams, such as &gt; cellular calls and ultrasonic streams.
+> The audio renderer information returned by this API may include internal audio playback streams, such as
+> cellular calls and ultrasonic streams.
 
 **Since:** 23
 
@@ -718,7 +724,8 @@ Unsubscribes from the audio capturer change event. This API uses an asynchronous
 
 > **NOTE：**
 > 
-> The audio capturer information returned by this API may include internal audio recording streams, such as voice &gt; wakeup and cellular calls.
+> The audio capturer information returned by this API may include internal audio recording streams, such as voice
+> wakeup and cellular calls.
 
 **Since:** 9
 
@@ -749,7 +756,8 @@ Unsubscribes from the audio renderer change event. This API uses an asynchronous
 
 > **NOTE：**
 > 
-> The audio renderer information returned by this API may include internal audio playback streams, such as &gt; cellular calls and ultrasonic streams.
+> The audio renderer information returned by this API may include internal audio playback streams, such as
+> cellular calls and ultrasonic streams.
 
 **Since:** 9
 
@@ -832,7 +840,8 @@ Subscribes to the audio capturer change event, which is triggered when the audio
 
 > **NOTE：**
 > 
-> The audio capturer information returned by this API may include internal audio recording streams, such as voice &gt; wakeup and cellular calls.
+> The audio capturer information returned by this API may include internal audio recording streams, such as voice
+> wakeup and cellular calls.
 
 **Since:** 9
 
@@ -864,7 +873,8 @@ Subscribes to the audio renderer change event, which is triggered when the audio
 
 > **NOTE：**
 > 
-> The audio renderer information returned by this API may include internal audio playback streams, such as &gt; cellular calls and ultrasonic streams.
+> The audio renderer information returned by this API may include internal audio playback streams, such as
+> cellular calls and ultrasonic streams.
 
 **Since:** 9
 

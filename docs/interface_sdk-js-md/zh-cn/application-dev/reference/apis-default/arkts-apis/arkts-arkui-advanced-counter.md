@@ -11,24 +11,24 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [CommonOptions](arkts-arkui-advanced-counter-commonoptions-c.md) | Defines the common options. |
-| [CounterOptions](arkts-arkui-advanced-counter-counteroptions-c.md) | Defines the counter options. |
-| [DateData](arkts-arkui-advanced-counter-datedata-c.md) | Defines the date data. |
-| [DateStyleOptions](arkts-arkui-advanced-counter-datestyleoptions-c.md) | DateStyleOptions定义了日期内联型Counter的属性和事件。 |
-| [InlineStyleOptions](arkts-arkui-advanced-counter-inlinestyleoptions-c.md) | InlineStyleOptions定义了数值内联型Counter的属性和事件。 |
-| [NumberStyleOptions](arkts-arkui-advanced-counter-numberstyleoptions-c.md) | NumberStyleOptions定义了列表型和紧凑型Counter的属性和事件。 |
+| [CommonOptions](arkts-arkuiadvancedcounter-commonoptions-c.md) | Defines the common options. |
+| [CounterOptions](arkts-arkuiadvancedcounter-counteroptions-c.md) | Defines the counter options. |
+| [DateData](arkts-arkuiadvancedcounter-datedata-c.md) | Defines the date data. |
+| [DateStyleOptions](arkts-arkuiadvancedcounter-datestyleoptions-c.md) | DateStyleOptions定义了日期内联型Counter的属性和事件。 |
+| [InlineStyleOptions](arkts-arkuiadvancedcounter-inlinestyleoptions-c.md) | InlineStyleOptions定义了数值内联型Counter的属性和事件。 |
+| [NumberStyleOptions](arkts-arkuiadvancedcounter-numberstyleoptions-c.md) | NumberStyleOptions定义了列表型和紧凑型Counter的属性和事件。 |
 
 ### 结构体
 
 | 名称 | 说明 |
 | --- | --- |
-| [CounterComponent](arkts-arkui-advanced-counter-countercomponent-s.md) | CounterComponent({&nbsp;options:&nbsp;CounterOptions&nbsp;}) |
+| [CounterComponent](arkts-arkuiadvancedcounter-countercomponent-s.md) | CounterComponent({&nbsp;options:&nbsp;CounterOptions&nbsp;}) |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [CounterType](arkts-arkui-advanced-counter-countertype-e.md) | CounterType指定Counter类型。 |
+| [CounterType](arkts-arkuiadvancedcounter-countertype-e.md) | CounterType指定Counter类型。 |
 
 ### 类型
 

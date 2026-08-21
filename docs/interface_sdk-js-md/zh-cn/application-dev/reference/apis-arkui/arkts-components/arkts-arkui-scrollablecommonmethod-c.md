@@ -105,7 +105,7 @@ clipContent(clip: ContentClipMode | RectShape): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| clip | [ContentClipMode](arkts-arkui-contentclipmode-e.md) \| [RectShape](arkts-arkui-rectshape-t.md) | 是 | 裁剪只针对滚动容器的内容，即其子节点，背景不受影响。通过RectShape传入自定义矩形区域时仅支持设置宽高和相对于组件左上角的 [offset](../arkts-apis/arkts-arkui-arkui-shape-commonshapemethod-c.md#offset)，不支持圆角。 <br>默认值：Grid、Scroll的默认值为ContentClipMode.BOUNDARY，List、WaterFlow的默认值为ContentClipMode.CONTENT_ONLY。 |
+| clip | [ContentClipMode](arkts-arkui-contentclipmode-e.md) \| [RectShape](arkts-arkui-rectshape-t.md) | 是 | 裁剪只针对滚动容器的内容，即其子节点，背景不受影响。通过RectShape传入自定义矩形区域时仅支持设置宽高和相对于组件左上角的 [offset](../arkts-apis/arkts-arkui-arkuishape-commonshapemethod-c.md#offset)，不支持圆角。 <br>默认值：Grid、Scroll的默认值为ContentClipMode.BOUNDARY，List、WaterFlow的默认值为ContentClipMode.CONTENT_ONLY。 |
 
 **返回值：**
 
@@ -310,11 +310,27 @@ fadingEdge(enabled: Optional<boolean>, options?: FadingEdgeOptions): T
 
 > **说明：**
 > 
-> fadingEdge是通过设置[overlay](arkts-arkui-commonmethod-c.md#overlay)属性和 &gt; [blendMode](arkts-arkui-commonmethod-c.md#blendmode)属性（参数值为BlendMode.SRC_OVER， &gt; BlendApplyType.OFFSCREEN）实现的。当fadingEdge生效时，会覆盖原组件的.overlay()属性和.blendMode()属性，并将导致当前组件和其子组件需要截屏的接口无法截取到正确的画面。需要截 &gt; 屏的接口有：[blur](arkts-arkui-commonmethod-c.md#blur)、 &gt; [linearGradientBlur](arkts-arkui-commonmethod-c.md#lineargradientblur)、 &gt; [brightness](arkts-arkui-commonmethod-c.md#brightness)、[visualEffect](arkts-arkui-commonmethod-c.md#visualeffect)、 &gt; [grayscale](arkts-arkui-commonmethod-c.md#grayscale)、[saturate](arkts-arkui-commonmethod-c.md#saturate)、 &gt; [contrast](arkts-arkui-commonmethod-c.md#contrast)、 &gt; [invert](arkts-arkui-commonmethod-c.md#invert)、 &gt; [sepia](arkts-arkui-commonmethod-c.md#sepia)、 &gt; [hueRotate](arkts-arkui-commonmethod-c.md#huerotate)、 &gt; [colorBlend](arkts-arkui-commonmethod-c.md#colorblend)、 &gt; [lightUpEffect](arkts-arkui-commonmethod-c.md#lightupeffect)、 &gt; [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect)、 &gt; [blendMode](arkts-arkui-commonmethod-c.md#blendmode)、 &gt; [backgroundBrightness](arkts-arkui-commonmethod-c.md#backgroundbrightness)。
+> fadingEdge是通过设置[overlay](arkts-arkui-commonmethod-c.md#overlay)属性和
+> [blendMode](arkts-arkui-commonmethod-c.md#blendmode)属性（参数值为BlendMode.SRC_OVER，
+> BlendApplyType.OFFSCREEN）实现的。当fadingEdge生效时，会覆盖原组件的.overlay()属性和.blendMode()属性，并将导致当前组件和其子组件需要截屏的接口无法截取到正确的画面。需要截
+> 屏的接口有：[blur](arkts-arkui-commonmethod-c.md#blur)、
+> [linearGradientBlur](arkts-arkui-commonmethod-c.md#lineargradientblur)、
+> [brightness](arkts-arkui-commonmethod-c.md#brightness)、[visualEffect](arkts-arkui-commonmethod-c.md#visualeffect)、
+> [grayscale](arkts-arkui-commonmethod-c.md#grayscale)、[saturate](arkts-arkui-commonmethod-c.md#saturate)、
+> [contrast](arkts-arkui-commonmethod-c.md#contrast)、
+> [invert](arkts-arkui-commonmethod-c.md#invert)、
+> [sepia](arkts-arkui-commonmethod-c.md#sepia)、
+> [hueRotate](arkts-arkui-commonmethod-c.md#huerotate)、
+> [colorBlend](arkts-arkui-commonmethod-c.md#colorblend)、
+> [lightUpEffect](arkts-arkui-commonmethod-c.md#lightupeffect)、
+> [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect)、
+> [blendMode](arkts-arkui-commonmethod-c.md#blendmode)、
+> [backgroundBrightness](arkts-arkui-commonmethod-c.md#backgroundbrightness)。
 > 
 > fadingEdge生效时，建议不在设置fadingEdge属性的组件上设置[background](arkts-arkui-commonmethod-c.md#background)相关属性，会影响渐隐的显示效果。
 > 
-> fadingEdge生效时，建议不在设置fadingEdge属性的组件以及其子组件上设置[systemMaterial](arkts-arkui-commonmethod-c.md#systemmaterial)相关属性，会影响系统材质的显示效果， &gt; 导致材质效果与预期效果不一致。
+> fadingEdge生效时，建议不在设置fadingEdge属性的组件以及其子组件上设置[systemMaterial](arkts-arkui-commonmethod-c.md#systemmaterial)相关属性，会影响系统材质的显示效果，
+> 导致材质效果与预期效果不一致。
 > 
 > fadingEdge生效时，设置fadingEdge属性的组件会裁剪到边界，在该组件上设置[clip](arkts-arkui-commonmethod-c.md#clip)属性为false不生效。
 
@@ -615,7 +631,8 @@ onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void): T
 
 > **说明：**
 > 
-> 从API version 11开始支持，从API version 12开始废弃。List、Grid和WaterFlow &gt; 组件的onScroll事件在布局之后触发，
+> 从API version 11开始支持，从API version 12开始废弃。List、Grid和WaterFlow
+> 组件的onScroll事件在布局之后触发，
 
 **起始版本：** 11
 
@@ -797,7 +814,9 @@ onWillStartFling(handler: VoidCallback): T
 > 
 > - 如果惯性动效通过fling方法触发，则onWillStartFling不触发。
 > 
-> - 惯性动效的触发场景参考 &gt; [flingSpeedLimit](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#flingspeedlimit11)方法的 &gt; 说明。
+> - 惯性动效的触发场景参考
+> [flingSpeedLimit](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#flingspeedlimit11)方法的
+> 说明。
 
 **起始版本：** 21
 
@@ -957,7 +976,9 @@ scrollBarHeight(height: LengthMetrics | undefined): T
 
 > **说明：**
 > 
-> 应确保scrollBarHeight与 &gt; [scrollBarMargin](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#scrollbarmargin20)的设定 &gt; 值之和不超过滚动组件高度，否则滚动条可能无法正常显示。
+> 应确保scrollBarHeight与
+> [scrollBarMargin](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#scrollbarmargin20)的设定
+> 值之和不超过滚动组件高度，否则滚动条可能无法正常显示。
 
 **起始版本：** 26.0.0
 

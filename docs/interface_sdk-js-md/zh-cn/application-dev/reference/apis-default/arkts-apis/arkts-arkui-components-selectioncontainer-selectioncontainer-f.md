@@ -34,7 +34,7 @@ export declare function SelectionContainer(content_?: CustomBuilder): SelectionC
 
 | 类型 | 说明 |
 | --- | --- |
-| [SelectionContainerAttribute](arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) |  |
+| [SelectionContainerAttribute](arkts-arkuicomponentsselectioncontainer-selectioncontainerattribute-i.md) |  |
 
 
 ## SelectionContainer
@@ -62,11 +62,11 @@ export declare function SelectionContainer(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | CustomBuilderT&lt;[SelectionContainerAttribute](arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md)&gt; | 是 | 设置SelectionContainer属性的回调。 |
+| style | CustomBuilderT&lt;[SelectionContainerAttribute](arkts-arkuicomponentsselectioncontainer-selectioncontainerattribute-i.md)&gt; | 是 | 设置SelectionContainer属性的回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SelectionContainerAttribute](arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkuicomponentsselectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
 

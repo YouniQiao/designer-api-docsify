@@ -92,7 +92,7 @@ preferredBufferDuration?: int
 
 Chooses a preferred buffer duration.
 
-&lt;p&gt;The preferred buffer duration in the playback policy, is used to set the buffer size. For details, see Online Video Frame Freezing Optimization Practice.&lt;/p&gt;
+<p>The preferred buffer duration in the playback policy, is used to set the buffer size. For details, see Online Video Frame Freezing Optimization Practice.</p>
 
 **Type:** int
 

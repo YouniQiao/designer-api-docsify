@@ -1,7 +1,7 @@
 # ArkTS API<!--arkts-networkkit-->
 
 - [@ohos.app.ability.VpnExtensionAbility](arkts-app-ability-vpnextensionability.md)
-  - [VpnExtensionAbility](arkts-network-app-ability-vpnextensionability-vpnextensionability-c.md)
+  - [VpnExtensionAbility](arkts-network-appabilityvpnextensionability-vpnextensionability-c.md)
 - [@ohos.net.connection](arkts-net-connection.md)
   - [addCustomDnsRule](arkts-network-connection-addcustomdnsrule-f.md)
   <!--Del-->
@@ -544,11 +544,11 @@
   - [ResponseHeaders](arkts-network-websocket-responseheaders-t.md)
   - [TlsProtocol](arkts-network-websocket-tlsprotocol-e.md)
 - [@system.fetch](arkts-system-fetch.md)
-  - [Fetch](arkts-network-system-fetch-fetch-depr-c.md)
-  - [FetchResponse](arkts-network-system-fetch-fetchresponse-depr-i.md)
+  - [Fetch](arkts-network-systemfetch-fetch-depr-c.md)
+  - [FetchResponse](arkts-network-systemfetch-fetchresponse-depr-i.md)
 - [@system.network](arkts-system-network.md)
-  - [Network](arkts-network-system-network-network-depr-c.md)
-  - [NetworkResponse](arkts-network-system-network-networkresponse-depr-i.md)
+  - [Network](arkts-network-systemnetwork-network-depr-c.md)
+  - [NetworkResponse](arkts-network-systemnetwork-networkresponse-depr-i.md)
 - application<!--arkts-networkkit-application-->
   - [VpnExtensionContext](arkts-vpnextensioncontext.md)
     - [VpnExtensionContext](arkts-network-vpnextensioncontext-c.md)

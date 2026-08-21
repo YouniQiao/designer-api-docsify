@@ -52,7 +52,7 @@ want: Want
 
 启动Ability的want信息。
 
-**类型：** [Want](arkts-ability-app-ability-want-want-c.md)
+**类型：** [Want](arkts-ability-appabilitywant-want-c.md)
 
 **起始版本：** 6
 

@@ -20,7 +20,7 @@ The callback of onPhotoBrowserChanged event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| browserItemInfo | [BaseItemInfo](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md) | Yes |  |
+| browserItemInfo | [BaseItemInfo](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-filephotopickercomponent-baseiteminfo-c.md) | Yes |  |
 
 **Return value:**
 

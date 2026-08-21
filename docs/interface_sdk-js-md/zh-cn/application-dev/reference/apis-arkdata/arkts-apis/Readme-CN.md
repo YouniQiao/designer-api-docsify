@@ -3,7 +3,7 @@
 <!--Del-->
 - [@ohos.application.DataShareExtensionAbility](arkts-application-datashareextensionability.md)<!--DelEnd-->
   <!--Del-->
-  - [DataShareExtensionAbility(系统接口)](arkts-arkdata-application-datashareextensionability-datashareextensionability-c-sys.md)<!--DelEnd-->
+  - [DataShareExtensionAbility(系统接口)](arkts-arkdata-applicationdatashareextensionability-datashareextensionability-c-sys.md)<!--DelEnd-->
   <!--Del-->
   - [BatchInsertFn(系统接口)](arkts-arkdata-batchinsertfn-t-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -27,12 +27,12 @@
 <!--Del-->
 - [@ohos.data.DataShareResultSet](arkts-data-datashareresultset.md)<!--DelEnd-->
   <!--Del-->
-  - [DataShareResultSet(系统接口)](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md)<!--DelEnd-->
+  - [DataShareResultSet(系统接口)](arkts-arkdata-datadatashareresultset-datashareresultset-i-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [DataType(系统接口)](arkts-arkdata-data-datashareresultset-datatype-e-sys.md)<!--DelEnd-->
+  - [DataType(系统接口)](arkts-arkdata-datadatashareresultset-datatype-e-sys.md)<!--DelEnd-->
 - [@ohos.data.UdmfComponents](arkts-data-udmfcomponents.md)
-  - [ContentFormCard](arkts-arkdata-data-udmfcomponents-contentformcard-s.md)
-  - [FormType](arkts-arkdata-data-udmfcomponents-formtype-e.md)
+  - [ContentFormCard](arkts-arkdata-dataudmfcomponents-contentformcard-s.md)
+  - [FormType](arkts-arkdata-dataudmfcomponents-formtype-e.md)
 - [@ohos.data.ValuesBucket](arkts-data-valuesbucket.md)
   - [ValuesBucket](arkts-arkdata-valuesbucket-t.md)
   - [ValueType](arkts-arkdata-valuetype-t.md)
@@ -495,11 +495,11 @@
   - [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md)
   - [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)
 - [@system.storage](arkts-system-storage.md)
-  - [Storage](arkts-arkdata-system-storage-storage-c.md)
-  - [ClearStorageOptions](arkts-arkdata-system-storage-clearstorageoptions-i.md)
-  - [DeleteStorageOptions](arkts-arkdata-system-storage-deletestorageoptions-i.md)
-  - [GetStorageOptions](arkts-arkdata-system-storage-getstorageoptions-i.md)
-  - [SetStorageOptions](arkts-arkdata-system-storage-setstorageoptions-i.md)
+  - [Storage](arkts-arkdata-systemstorage-storage-c.md)
+  - [ClearStorageOptions](arkts-arkdata-systemstorage-clearstorageoptions-i.md)
+  - [DeleteStorageOptions](arkts-arkdata-systemstorage-deletestorageoptions-i.md)
+  - [GetStorageOptions](arkts-arkdata-systemstorage-getstorageoptions-i.md)
+  - [SetStorageOptions](arkts-arkdata-systemstorage-setstorageoptions-i.md)
 - data<!--arkts-arkdata-data-->
   - [resultSet](arkts-resultset.md)
     - [ResultSet](arkts-arkdata-resultset-resultset-depr-i.md)

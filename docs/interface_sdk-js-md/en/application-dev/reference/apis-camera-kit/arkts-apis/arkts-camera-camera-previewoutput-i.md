@@ -29,7 +29,9 @@ Before enabling this feature, you can call [isBandwidthCompressionSupported](#is
 
 > **NOTE：**
 > 
-> This function must be called prior to &gt; [Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig). Otherwise, the &gt; preview output stream format will be affected.
+> This function must be called prior to
+> [Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig). Otherwise, the
+> preview output stream format will be affected.
 
 **Since:** 23
 
@@ -494,7 +496,8 @@ which can be obtained by calling [getSupportedFrameRates](#getsupportedframerate
 
 > **NOTE：**
 > 
-> This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md) or &gt; [VideoSession](arkts-camera-camera-videosession-i.md) mode.
+> This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md) or
+> [VideoSession](arkts-camera-camera-videosession-i.md) mode.
 
 **Since:** 23
 

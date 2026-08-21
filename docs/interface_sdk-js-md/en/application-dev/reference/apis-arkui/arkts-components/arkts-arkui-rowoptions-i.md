@@ -5,7 +5,8 @@ Sets the spacing between child components of the **Row** component.
 > **NOTE：**
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While starting version information is preserved for historical anonymous objects, there may be cases where the &gt; outer element's
+> While starting version information is preserved for historical anonymous objects, there may be cases where the
+> outer element's
 
 **Since:** 18
 

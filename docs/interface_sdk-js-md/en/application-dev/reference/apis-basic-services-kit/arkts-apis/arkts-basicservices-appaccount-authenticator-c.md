@@ -29,7 +29,9 @@ Adds an application account implicitly based on the specified authentication typ
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; createAccountImplicitly &gt; instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> createAccountImplicitly
+> instead.
 
 **Since:** 8
 
@@ -112,7 +114,8 @@ Authenticates an application account to obtain the OAuth token. This API uses an
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; auth instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> auth instead.
 
 **Since:** 8
 

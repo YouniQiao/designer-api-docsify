@@ -2,9 +2,11 @@
 
 Enumerates the result codes.
 
-> **NOTE：**<br>
+> **NOTE：**&lt;br
+&gt; 
 > 
-> This API is supported since API version 8 and deprecated since API version 9. For details, see &gt; [Account Management Error Codes](../errorcode-account.md).
+> This API is supported since API version 8 and deprecated since API version 9. For details, see
+> [Account Management Error Codes](../errorcode-account.md).
 
 **Since:** 8
 

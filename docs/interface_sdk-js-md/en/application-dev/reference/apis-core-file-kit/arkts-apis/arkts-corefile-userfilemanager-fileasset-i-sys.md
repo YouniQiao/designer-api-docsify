@@ -445,7 +445,9 @@ For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/ar
 
 > **NOTE：**
 > 
-> This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all_exif and &gt; [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md).USER_COMMENT. The two fields need to be passed to &gt; **fetchColumns**.
+> This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all_exif and
+> [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md).USER_COMMENT. The two fields need to be passed to
+> **fetchColumns**.
 
 **Since:** 10
 
@@ -527,7 +529,9 @@ For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/ar
 
 > **NOTE：**
 > 
-> This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all_exif and &gt; [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md).USER_COMMENT. The two fields need to be passed to &gt; **fetchColumns**.
+> This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all_exif and
+> [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md).USER_COMMENT. The two fields need to be passed to
+> **fetchColumns**.
 
 **Since:** 10
 
@@ -770,7 +774,8 @@ Opens this file asset. This API uses an asynchronous callback to return the resu
 
 > **NOTE：**
 > 
-> The write operations are mutually exclusive. After a write operation is complete, you must call **close** to &gt; close the file.
+> The write operations are mutually exclusive. After a write operation is complete, you must call **close** to
+> close the file.
 
 **Since:** 9
 
@@ -823,7 +828,8 @@ Opens this file asset. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> The write operations are mutually exclusive. After a write operation is complete, you must call **close** to &gt; close the file.
+> The write operations are mutually exclusive. After a write operation is complete, you must call **close** to
+> close the file.
 
 **Since:** 9
 

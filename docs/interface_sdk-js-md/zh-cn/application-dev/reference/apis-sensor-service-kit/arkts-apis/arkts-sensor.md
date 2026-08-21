@@ -4,7 +4,10 @@
 
 > **说明：**
 
-> 本模块首批接口从API version 8开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。订阅前可使用 &gt; [getSingleSensor](arkts-sensorservice-sensor-getsinglesensor-f.md) &gt; 接口获取该传感器的信息，获取该传感器信息成功时可正常订阅传感器，异常情况详见 &gt; [getSingleSensor](arkts-sensorservice-sensor-getsinglesensor-f.md)错误码说明。
+> 本模块首批接口从API version 8开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。订阅前可使用
+> [getSingleSensor](arkts-sensorservice-sensor-getsinglesensor-f.md)
+> 接口获取该传感器的信息，获取该传感器信息成功时可正常订阅传感器，异常情况详见
+> [getSingleSensor](arkts-sensorservice-sensor-getsinglesensor-f.md)错误码说明。
 > 订阅传感器数据时确保on订阅和off取消订阅成对出现。sensor模块提供传感器数据订阅与查询能力，核心使用流程如下：
 
 1. 使用[sensor.getSingleSensor](arkts-sensorservice-sensor-getsinglesensor-f.md) 或[sensor.getSensorListSync](arkts-sensorservice-sensor-getsensorlistsync-f.md)查询传感器信息，确认设备支持目标传感器。 2. 使用sensor.on接口订阅传感器数据，持续接收数据回调。 3. 使用sensor.once接口获取一次传感器数据，适用于无需持续监听的场景。 4. 使用sensor.off接口取消订阅，确保on和off成对调用。 sensor.on与sensor.once的区别：

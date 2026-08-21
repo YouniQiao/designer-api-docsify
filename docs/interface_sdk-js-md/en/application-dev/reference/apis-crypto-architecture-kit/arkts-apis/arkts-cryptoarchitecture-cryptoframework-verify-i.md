@@ -531,15 +531,24 @@ Updates the data for signature verification. This API uses an asynchronous callb
 
 > **NOTE：**
 > 
-> You can call **update** multiple times or do not use **update** (call &gt; [verify](#verify) &gt; after [init](#init)), depending on &gt; the data volume.
+> You can call **update** multiple times or do not use **update** (call
+> [verify](#verify)
+> after [init](#init)), depending on
+> the data volume.
 > 
-> The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a &gt; large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This &gt; prevents too much memory from being requested at a time.
+> The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a
+> large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This
+> prevents too much memory from being requested at a time.
 > 
-> For details about the sample code for calling **update()** multiple times in signature verification, see &gt; Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) &gt; . The operations of other algorithms are similar.
+> For details about the sample code for calling **update()** multiple times in signature verification, see
+> Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)
+> . The operations of other algorithms are similar.
 > 
-> **OnlyVerify** cannot be used with **update()**. If **OnlyVerify** is specified, use **verify()** to pass in &gt; data.
+> **OnlyVerify** cannot be used with **update()**. If **OnlyVerify** is specified, use **verify()** to pass in
+> data.
 > 
-> If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is &gt; not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
+> If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is
+> not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
 **Since:** 23
 
@@ -580,15 +589,23 @@ Updates the data for signature verification. This API uses a promise to return t
 
 > **NOTE：**
 > 
-> You can call **update** multiple times or do not use **update** (call &gt; [verify](#verify) after &gt; [init](#init)), depending on the data volume.
+> You can call **update** multiple times or do not use **update** (call
+> [verify](#verify) after
+> [init](#init)), depending on the data volume.
 
-> The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a &gt; large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This &gt; prevents too much memory from being requested at a time.
+> The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a
+> large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This
+> prevents too much memory from being requested at a time.
 
-> For details about the sample code for calling **update()** multiple times in signature verification, see &gt; Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) &gt; . The operations of other algorithms are similar.
+> For details about the sample code for calling **update()** multiple times in signature verification, see
+> Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)
+> . The operations of other algorithms are similar.
 
-> **OnlyVerify** cannot be used with **update()**. If **OnlyVerify** is specified, use **verify()** to pass in &gt; data.
+> **OnlyVerify** cannot be used with **update()**. If **OnlyVerify** is specified, use **verify()** to pass in
+> data.
 
-> If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is &gt; not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
+> If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is
+> not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
 **Since:** 23
 
@@ -634,14 +651,20 @@ Updates the data for signature verification. This API returns the result synchro
 
 > **NOTE：**
 > 
-> You can call **updateSync** multiple times or do not use **updateSync** (call &gt; [verifySync](#verifysync) after [initSync](#initsync)), &gt; depending on the data volume.
+> You can call **updateSync** multiple times or do not use **updateSync** (call
+> [verifySync](#verifysync) after [initSync](#initsync)),
+> depending on the data volume.
 
-> The amount of the data to be passed in by **updateSync** (one-time or accumulative) is not limited. If there is &gt; a large amount of data, you are advised to call **updateSync** multiple times to pass in the data by segment.
+> The amount of the data to be passed in by **updateSync** (one-time or accumulative) is not limited. If there is
+> a large amount of data, you are advised to call **updateSync** multiple times to pass in the data by segment.
 > This prevents too much memory from being requested at a time.
 
-> For details about the sample code for calling **updateSync** multiple times in signature verification, see &gt; Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) &gt; . The operations of other algorithms are similar.
+> For details about the sample code for calling **updateSync** multiple times in signature verification, see
+> Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)
+> . The operations of other algorithms are similar.
 
-> **OnlyVerify** cannot be used with **updateSync()**. If **OnlyVerify** is specified, use **verifySync()** to pass &gt; in data.
+> **OnlyVerify** cannot be used with **updateSync()**. If **OnlyVerify** is specified, use **verifySync()** to pass
+> in data.
 
 > If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **updateSync**
 > is not supported. If **updateSync** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.

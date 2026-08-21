@@ -16,7 +16,8 @@ export function getSystemResourceManager(): ResourceManager
 
 > **说明：**
 > 
-> 该接口获取到的系统资源管理ResourceManager对象中的Configuration为默认值。默认值如下：{"locale": "", "direction": -1, "deviceType": -1, " &gt; screenDensity": 0, "colorMode": 1, "mcc": 0, "mnc": 0}。
+> 该接口获取到的系统资源管理ResourceManager对象中的Configuration为默认值。默认值如下：{"locale": "", "direction": -1, "deviceType": -1, "
+> screenDensity": 0, "colorMode": 1, "mcc": 0, "mnc": 0}。
 
 **起始版本：** 10
 

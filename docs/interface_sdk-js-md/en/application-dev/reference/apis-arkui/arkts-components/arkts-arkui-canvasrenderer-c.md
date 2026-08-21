@@ -4,12 +4,18 @@ After the **CanvasRenderingContext2D** object is bound to the **Canvas** compone
 
 > **NOTE：**
 > 
-> It is recommended that the **CanvasRenderingContext2D** object and the **Canvas** component be &gt; encapsulated into the same custom component, ensuring a one-to-one correspondence and consistent &gt; lifecycle between them.
+> It is recommended that the **CanvasRenderingContext2D** object and the **Canvas** component be
+> encapsulated into the same custom component, ensuring a one-to-one correspondence and consistent
+> lifecycle between them.
 > 
 > When you call drawing APIs in this module, the commands are stored in the associated **Canvas**
-> component's command queue. These commands are only executed when the current frame enters the rendering &gt; phase and the associated **Canvas** component is visible. Therefore, when the **Canvas** component is &gt; invisible (for example, off-screen or hidden), avoid frequent drawing calls to prevent command queue &gt; buildup and excessive memory usage.
+> component's command queue. These commands are only executed when the current frame enters the rendering
+> phase and the associated **Canvas** component is visible. Therefore, when the **Canvas** component is
+> invisible (for example, off-screen or hidden), avoid frequent drawing calls to prevent command queue
+> buildup and excessive memory usage.
 > 
-> When the width or height of the **Canvas** component exceeds 8000 px, rendering via the CPU causes &gt; significant performance degradation.
+> When the width or height of the **Canvas** component exceeds 8000 px, rendering via the CPU causes
+> significant performance degradation.
 
 @extends CanvasPath
 
@@ -767,8 +773,13 @@ Restores the saved drawing context.
 
 > **NOTE：**
 > 
-> When the number of calls to **restore()** does not exceed the number of calls to **save()**, &gt; this API pops the saved drawing state from the stack and restores the attributes, clipping &gt; path, and transformation matrix of the **CanvasRenderingContext2D** object.<br>
-> If the number of calls to **restore()** exceeds the number of calls to **save()**, this API &gt; does nothing.<br>
+> When the number of calls to **restore()** does not exceed the number of calls to **save()**,
+> this API pops the saved drawing state from the stack and restores the attributes, clipping
+> path, and transformation matrix of the **CanvasRenderingContext2D** object.&lt;br
+&gt; 
+> If the number of calls to **restore()** exceeds the number of calls to **save()**, this API
+> does nothing.&lt;br
+&gt; 
 > If there is no saved state, this API does nothing.
 
 **Since:** 8
@@ -940,12 +951,14 @@ Resets the existing transformation matrix and creates a new transformation matri
 
 > **NOTE：**
 > 
-> The coordinates of each point in the graph after transformation can be calculated &gt; using the following formula:
+> The coordinates of each point in the graph after transformation can be calculated
+> using the following formula:
 > 
 > **x** and **y** represent coordinates before transformation, and **x'** and **y'**
 > represent coordinates after transformation.
 > 
-> - x' = `a x + c y + e` &gt;
+> - x' = `a x + c y + e`
+> 
 > - y' = `b x + d y + f`
 
 **Since:** 8
@@ -1123,12 +1136,14 @@ Defines a transformation matrix. To transform a graph, you only need to set para
 
 > **NOTE：**
 > 
-> The coordinates of each point in the graph after transformation can be calculated &gt; using the following formula:
+> The coordinates of each point in the graph after transformation can be calculated
+> using the following formula:
 > 
 > **x** and **y** represent coordinates before transformation, and **x'** and **y'**
 > represent coordinates after transformation.
 > 
-> - x' = `a x + c y + e` &gt;
+> - x' = `a x + c y + e`
+> 
 > - y' = `b x + d y + f`
 
 **Since:** 8
@@ -1277,7 +1292,11 @@ Sets the filter for an image. Any number of filters can be combined. This attrib
 > 
 > The resources used in this example are not located in the **src**
 > **main**
-> **resource** directory. Starting &gt; from DevEco Studio 6.0.0 Beta2, the resources that are located outside the **resources** directory are not &gt; packaged by default when a project or module is created. To package these resources, go to **buildOption** in the &gt; module's **build-profile.json5** file &gt; **resOptions**
+> **resource** directory. Starting
+> from DevEco Studio 6.0.0 Beta2, the resources that are located outside the **resources** directory are not
+> packaged by default when a project or module is created. To package these resources, go to **buildOption** in the
+> module's **build-profile.json5** file
+> **resOptions**
 > **copyCodeResource**, and set **enable** to **true**.
 > For details, see the description of copyCodeResource.
 
@@ -1402,7 +1421,11 @@ Indicates whether to apply image smoothing adjustments when drawing images. The 
 > 
 > The resources used in this example are not located in the **src**
 > **main**
-> **resource** directory. Starting &gt; from DevEco Studio 6.0.0 Beta2, the resources that are located outside the **resources** directory are not &gt; packaged by default when a project or module is created. To package these resources, go to **buildOption** in the &gt; module's **build-profile.json5** file &gt; **resOptions**
+> **resource** directory. Starting
+> from DevEco Studio 6.0.0 Beta2, the resources that are located outside the **resources** directory are not
+> packaged by default when a project or module is created. To package these resources, go to **buildOption** in the
+> module's **build-profile.json5** file
+> **resOptions**
 > **copyCodeResource**, and set **enable** to **true**.
 > For details, see the description of copyCodeResource in **resOptions**.
 
@@ -1431,7 +1454,11 @@ Sets the image smoothing quality when **imageSmoothingEnabled** is set to **true
 > 
 > The resources used in this example are not located in the **src**
 > **main**
-> **resource** directory. Starting &gt; from DevEco Studio 6.0.0 Beta2, the resources that are located outside the **resources** directory are not &gt; packaged by default when a project or module is created. To package these resources, go to **buildOption** in the &gt; module's **build-profile.json5** file &gt; **resOptions**
+> **resource** directory. Starting
+> from DevEco Studio 6.0.0 Beta2, the resources that are located outside the **resources** directory are not
+> packaged by default when a project or module is created. To package these resources, go to **buildOption** in the
+> module's **build-profile.json5** file
+> **resOptions**
 > **copyCodeResource**, and set **enable** to **true**.
 > For details, see the description of copyCodeResource in **resOptions**.
 

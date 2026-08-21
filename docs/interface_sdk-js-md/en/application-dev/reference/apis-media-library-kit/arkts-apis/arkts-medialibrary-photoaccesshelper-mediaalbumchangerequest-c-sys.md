@@ -245,7 +245,8 @@ Permanently deletes assets from the trash.
 
 > **NOTE：**
 > 
-> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this &gt; operation.
+> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
+> operation.
 
 **Since:** 23
 
@@ -318,7 +319,8 @@ Permanently deletes assets from the trash.
 
 > **NOTE：**
 > 
-> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this &gt; operation.
+> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
+> operation.
 
 **Since:** 23
 

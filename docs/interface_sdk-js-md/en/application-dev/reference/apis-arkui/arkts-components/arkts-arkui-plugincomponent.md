@@ -1,4 +1,4 @@
-# PluginComponent
+# PluginComponent(System API)
 
 The **PluginComponent** allows an application to display external UI from another application. To implement update through inter-process communication (IPC), see [@ohos.pluginComponent](../../apis-default/arkts-apis/arkts-plugincomponentmanager-n.md).
 

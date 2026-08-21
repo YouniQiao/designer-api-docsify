@@ -6,8 +6,11 @@ Encapsulates the parameters for encryption or decryption using the GCM AEAD mode
 
 > **NOTE：**
 > 
-> 1. Before passing a value to &gt; [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init), specify &gt; **algName** for its parent class [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md).
-> 2. If **aad** is not required or the **aad** length is 0, you can set its **data** attribute to an empty &gt; Uint8Array in the **aad: { data: new Uint8Array() }** format when constructing **GcmParamsSpec**.
+> 1. Before passing a value to
+> [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init), specify
+> **algName** for its parent class [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md).
+> 2. If **aad** is not required or the **aad** length is 0, you can set its **data** attribute to an empty
+> Uint8Array in the **aad: { data: new Uint8Array() }** format when constructing **GcmParamsSpec**.
 
 **Inheritance/Implementation:** GcmParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)
 

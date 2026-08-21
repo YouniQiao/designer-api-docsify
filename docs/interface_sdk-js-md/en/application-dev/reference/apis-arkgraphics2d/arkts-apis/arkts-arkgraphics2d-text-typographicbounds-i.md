@@ -4,12 +4,17 @@ Describes the typographic boundaries of a text line. These boundaries depend on 
 
 > **NOTE：**
 > 
-> The figure shows the text line typesetting parameters: width (the width of the text line including left and right &gt; spaces), ascent (the highest point of the ascent), descent (the lowest point of the descent), leading (line &gt; spacing), top (the highest point of the current line), baseline (the character baseline), bottom (the lowest &gt; point of the current line), and next line top (the highest point of the next line).
+> The figure shows the text line typesetting parameters: width (the width of the text line including left and right
+> spaces), ascent (the highest point of the ascent), descent (the lowest point of the descent), leading (line
+> spacing), top (the highest point of the current line), baseline (the character baseline), bottom (the lowest
+> point of the current line), and next line top (the highest point of the next line).
 > 
->  &gt;
+> 
+> 
 > The figure shows the typesetting boundaries for the string " a b ".
 > 
->  &gt;
+> 
+> 
 > The figure shows the typesetting boundaries for the string "j" or "E".
 > 
 > !

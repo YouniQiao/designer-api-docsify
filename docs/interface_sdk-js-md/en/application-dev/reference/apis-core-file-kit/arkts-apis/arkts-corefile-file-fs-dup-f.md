@@ -32,7 +32,7 @@ Duplicates the file descriptor and returns the corresponding **File** object.
 
 | Type | Description |
 | --- | --- |
-| [File](arkts-corefile-file-fs-file-i.md) | File object opened. |
+| [File](arkts-corefile-filefs-file-i.md) | File object opened. |
 
 **Error codes:**
 

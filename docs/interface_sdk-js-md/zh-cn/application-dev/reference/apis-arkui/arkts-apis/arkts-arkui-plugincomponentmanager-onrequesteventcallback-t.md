@@ -18,7 +18,7 @@ type OnRequestEventCallback = (source: Want, name: string, data: KVObject) => Re
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | request请求发送方相关信息。 |
+| source | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | request请求发送方相关信息。 |
 | name | string | 是 | 请求的组件名称。 |
 | data | [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md) | 是 | request事件中传递的数据内容，以键值对形式存储，键和值类型由业务定义。 |
 

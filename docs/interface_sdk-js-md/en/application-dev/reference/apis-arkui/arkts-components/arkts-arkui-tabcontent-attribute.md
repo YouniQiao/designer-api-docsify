@@ -109,9 +109,16 @@ Sets the content displayed on the tab bar. The bottom tab style does not include
 
 > **NOTE：**
 > 
-> - [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md): text + underline or text + board. The text style can be set. It is &gt; recommended that the subtab be placed at the top or bottom. By default, the animation transition effect is &gt; displayed when a tab is switched. This style is applicable to the top categories (such as Following, Video, &gt; Digital) of information apps and level-2 navigation scenarios of functional modules.
+> - [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md): text + underline or text + board. The text style can be set. It is
+> recommended that the subtab be placed at the top or bottom. By default, the animation transition effect is
+> displayed when a tab is switched. This style is applicable to the top categories (such as Following, Video,
+> Digital) of information apps and level-2 navigation scenarios of functional modules.
 > 
-> - [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md): icon + text, without underline or board. By default, no animation &gt; transition effect is displayed when a tab is switched. Bottom tabs are usually used for the main navigation of an &gt; app (such as Home, Discover, and Recommended). Side tabs are applicable to wide-screen scenarios. You can set &gt; **vertical(true)** to enable the vertical layout so that the tabs are displayed on the side. By default, the tabs &gt; are displayed on the left.
+> - [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md): icon + text, without underline or board. By default, no animation
+> transition effect is displayed when a tab is switched. Bottom tabs are usually used for the main navigation of an
+> app (such as Home, Discover, and Recommended). Side tabs are applicable to wide-screen scenarios. You can set
+> **vertical(true)** to enable the vertical layout so that the tabs are displayed on the side. By default, the tabs
+> are displayed on the left.
 
 **Since:** 9
 

@@ -517,7 +517,10 @@ getText(): Promise<string>
 
 > **说明：**
 > 
-> 如果控件的无障碍属性 &gt; [accessibilityLevel](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel) &gt; 设置为'no'或'no-hide-descendants'，无法使用本接口获取控件的文本信息，可以使用[Component.getOriginalText()](#getoriginaltext) &gt; 获取控件的文本信息。
+> 如果控件的无障碍属性
+> [accessibilityLevel](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel)
+> 设置为'no'或'no-hide-descendants'，无法使用本接口获取控件的文本信息，可以使用[Component.getOriginalText()](#getoriginaltext)
+> 获取控件的文本信息。
 
 **起始版本：** 23
 

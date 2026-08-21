@@ -14,7 +14,7 @@ function createPanel(ctx: Context, info: PanelInfo): Promise<Panel>
 
 Creates a word selection panel, which is used to display the service-related operation UI or text processing result. After the panel is used, call [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f-sys.md) to destroy the panel and release resources. This API uses a promise to return the result.
 
-Only one [MENU_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e-sys.md) and one [MAIN_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e-sys.md) can be created for one word selection application.
+Only one [MENU_PANEL](arkts-basicservices-selectioninputselectionpanel-paneltype-e-sys.md) and one [MAIN_PANEL](arkts-basicservices-selectioninputselectionpanel-paneltype-e-sys.md) can be created for one word selection application.
 
 **Since:** 24
 
@@ -31,7 +31,7 @@ Only one [MENU_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltyp
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ctx | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context that the current word selection panel depends on, which is provided by **SelectionExtensionAbility**. |
-| info | [PanelInfo](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i-sys.md) | Yes | Configuration information of the word selection panel, which is used to specify the panel type, position, width, and height. Only one **MENU_PANEL** and one **MAIN_PANEL** can be created for one word selection app. |
+| info | [PanelInfo](arkts-basicservices-selectioninputselectionpanel-panelinfo-i-sys.md) | Yes | Configuration information of the word selection panel, which is used to specify the panel type, position, width, and height. Only one **MENU_PANEL** and one **MAIN_PANEL** can be created for one word selection app. |
 
 **Return value:**
 

@@ -14,9 +14,11 @@
 > 
 > Tabs子组件设置了通用属性visibility的值为None，或者设置值为Hidden时，对应子组件不显示，但依然会在视窗内占位。
 > 
-> 已经显示的Tabs子组件TabContent后续隐藏时不会被销毁，若需要页面懒加载和释放，可以参考 &gt; [示例13](../../../reference/apis-arkui/arkui-ts/ts-container-tabs.md#示例13页面懒加载和释放)。
+> 已经显示的Tabs子组件TabContent后续隐藏时不会被销毁，若需要页面懒加载和释放，可以参考
+> [示例13](../../../reference/apis-arkui/arkui-ts/ts-container-tabs.md#示例13页面懒加载和释放)。
 > 
-> Tabs设置height为auto时，可根据子组件高度自适应高度大小。设置 &gt; width为auto时，可根据子组件宽度自适应宽度大小。
+> Tabs设置height为auto时，可根据子组件高度自适应高度大小。设置
+> width为auto时，可根据子组件宽度自适应宽度大小。
 
 ## Tabs
 

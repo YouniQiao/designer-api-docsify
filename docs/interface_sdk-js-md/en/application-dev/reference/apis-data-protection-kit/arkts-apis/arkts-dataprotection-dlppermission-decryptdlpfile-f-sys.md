@@ -18,7 +18,8 @@ This API decrypts DLP files into plaintext files, which is applicable to exporti
 
 > **NOTE：**
 > 
-> This API can be called only by enterprise accounts. Enterprises need to set up their own enterprise account &gt; servers. The enterprise server determines whether an account is authorized to decrypt DLP files.
+> This API can be called only by enterprise accounts. Enterprises need to set up their own enterprise account
+> servers. The enterprise server determines whether an account is authorized to decrypt DLP files.
 
 **Since:** 20
 

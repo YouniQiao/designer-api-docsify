@@ -3,7 +3,8 @@
 
 > **NOTE：**
 > 
-> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [bundleManager-ShortcutInfo](#shortcutinfo) instead.
+> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
+> [bundleManager-ShortcutInfo](#shortcutinfo) instead.
 
 **Since:** 7
 

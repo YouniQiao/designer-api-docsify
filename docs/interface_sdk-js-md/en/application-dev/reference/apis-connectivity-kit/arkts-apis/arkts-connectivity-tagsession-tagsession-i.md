@@ -4,7 +4,10 @@ The **tagSession** module provides common APIs for establishing connections and 
 
 > **NOTE：**
 > 
-> If an error is reported while importing the tag module editor, the capabilities of a specific device model may &gt; exceed the capability set defined for the default device. To use these capabilities, configure a custom SysCap by &gt; following instructions in &gt; [SystemCapability](https://developer.huawei.com/consumer/en/doc/harmonyos-references/syscap).
+> If an error is reported while importing the tag module editor, the capabilities of a specific device model may
+> exceed the capability set defined for the default device. To use these capabilities, configure a custom SysCap by
+> following instructions in
+> [SystemCapability](https://developer.huawei.com/consumer/en/doc/harmonyos-references/syscap).
 
 **Since:** 23
 
@@ -64,7 +67,8 @@ Connects to this tag. Call this API to set up a connection before reading data f
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. Use &gt; [tagSession.connect](#connect) instead.
+> This API is supported since API version 7 and deprecated since API version 9. Use
+> [tagSession.connect](#connect) instead.
 
 **Since:** 7
 
@@ -106,7 +110,8 @@ Obtains the maximum length of the data that can be sent to this tag.
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. Use &gt; [tagSession.getMaxTransmitSize](#getmaxtransmitsize) instead.
+> This API is supported since API version 7 and deprecated since API version 9. Use
+> [tagSession.getMaxTransmitSize](#getmaxtransmitsize) instead.
 
 **Since:** 7
 
@@ -196,7 +201,8 @@ Obtains the timeout period for sending data to this tag, in milliseconds.
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. Use &gt; [tagSession.getTimeout](#gettimeout) instead.
+> This API is supported since API version 7 and deprecated since API version 9. Use
+> [tagSession.getTimeout](#gettimeout) instead.
 
 **Since:** 7
 
@@ -238,7 +244,8 @@ Obtains the **tagInfo** object provided by the NFC service when the tag is dispa
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. Use &gt; [tag.getTagInfo](arkts-connectivity-tag-gettaginfo-f.md) instead.
+> This API is supported since API version 7 and deprecated since API version 9. Use
+> [tag.getTagInfo](arkts-connectivity-tag-gettaginfo-f.md) instead.
 
 **Since:** 7
 
@@ -372,7 +379,8 @@ Checks whether the tag is connected.
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. Use &gt; [tagSession.isConnected](#isconnected) instead.
+> This API is supported since API version 7 and deprecated since API version 9. Use
+> [tagSession.isConnected](#isconnected) instead.
 
 **Since:** 7
 
@@ -412,7 +420,8 @@ Resets the connection to this tag.
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. Use &gt; [tagSession.resetConnection](#resetconnection) instead.
+> This API is supported since API version 7 and deprecated since API version 9. Use
+> [tagSession.resetConnection](#resetconnection) instead.
 
 **Since:** 7
 
@@ -489,7 +498,8 @@ Sends data to the tag. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. Use &gt; [tagSession.transmit](#transmit) instead.
+> This API is supported since API version 7 and deprecated since API version 9. Use
+> [tagSession.transmit](#transmit) instead.
 
 **Since:** 7
 
@@ -552,7 +562,8 @@ Sends data to the tag. This API uses an asynchronous callback to return the resu
 
 > **NOTE：**
 > 
-> This parameter is supported since API version 7 and deprecated since API version 9. Use &gt; [tagSession.transmit](#transmit) instead.
+> This parameter is supported since API version 7 and deprecated since API version 9. Use
+> [tagSession.transmit](#transmit) instead.
 
 **Since:** 7
 
@@ -611,7 +622,8 @@ Sets the maximum time allowed for sending data to this tag, in ms.
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. Use &gt; [tagSession.setTimeout](#settimeout) instead.
+> This API is supported since API version 7 and deprecated since API version 9. Use
+> [tagSession.setTimeout](#settimeout) instead.
 
 **Since:** 7
 

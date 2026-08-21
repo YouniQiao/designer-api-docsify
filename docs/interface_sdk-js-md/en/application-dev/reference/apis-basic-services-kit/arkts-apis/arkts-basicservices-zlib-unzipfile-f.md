@@ -16,7 +16,8 @@ Unzips a file. The execution result is returned after the decompression is compl
 
 > **NOTE：**
 > 
-> The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise, &gt; the error code -1 is returned.
+> The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise,
+> the error code -1 is returned.
 
 **Since:** 7
 

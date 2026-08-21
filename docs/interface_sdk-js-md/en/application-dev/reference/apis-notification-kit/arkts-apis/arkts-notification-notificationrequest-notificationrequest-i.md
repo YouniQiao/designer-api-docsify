@@ -248,7 +248,7 @@ Extended parameters, used to provide custom services for applications. This para
 
 The key value is assigned by the system. Manual modification does not take effect. The system automatically changes the value to the actual value during data transmission.
 
-- **ohos.notificationManager.wantUri**: **uri** field in the [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) object, which is passed to the application when the user taps a notification. This field can be obtained via the [getActiveNotifications](arkts-notification-notification-getactivenotifications-depr-f.md#getactivenotifications) API call.
+- **ohos.notificationManager.wantUri**: **uri** field in the [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) object, which is passed to the application when the user taps a notification. This field can be obtained via the [getActiveNotifications](arkts-notification-notification-getactivenotifications-depr-f.md#getactivenotifications) API call.
 
 **Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 

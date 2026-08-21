@@ -24,7 +24,7 @@ touchEvent: TouchEvent
 
 触屏输入事件。
 
-**类型：** [TouchEvent](arkts-input-multimodalinput-touchevent-touchevent-i.md)
+**类型：** [TouchEvent](arkts-input-multimodalinputtouchevent-touchevent-i.md)
 
 **起始版本：** 23
 

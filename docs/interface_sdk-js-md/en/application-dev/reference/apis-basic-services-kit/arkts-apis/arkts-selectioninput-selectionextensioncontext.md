@@ -13,6 +13,6 @@ import { SelectionExtensionContext } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [SelectionExtensionContext](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c-sys.md) | *SelectionExtensionContext** is the context of [SelectionExtensionAbility](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c-sys.md), which inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md). |
+| [SelectionExtensionContext](arkts-basicservices-selectioninputselectionextensioncontext-selectionextensioncontext-c-sys.md) | *SelectionExtensionContext** is the context of [SelectionExtensionAbility](arkts-basicservices-selectioninputselectionextensionability-selectionextensionability-c-sys.md), which inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md). |
 <!--DelEnd-->
 

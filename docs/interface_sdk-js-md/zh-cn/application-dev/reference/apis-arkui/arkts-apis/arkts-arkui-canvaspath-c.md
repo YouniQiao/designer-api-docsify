@@ -205,7 +205,7 @@ moveTo(x: number, y: number): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | x | number | 是 | 目标点X轴坐标。<br>API version 18之前，设置NaN或Infinity时，整条路径不显示； 设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时 当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
-| y | number | 是 | 目标点Y轴坐标。<br>API version 18之前，设置NaN或Infinity时，整条路径不显示； 设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时 当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp  > **说明：** >  > API version 18之前，如果没有调用**moveTo**接口或传入无效参数，路径从(0,0)开始。 >  > API version 18及以后，如果没有调用**moveTo**接口或传入无效参数，路径将从第一个有效调用的 &gt; **lineTo**、**arcTo**、**bezierCurveTo**或**quadraticCurveTo**的起始点开始。 |
+| y | number | 是 | 目标点Y轴坐标。<br>API version 18之前，设置NaN或Infinity时，整条路径不显示； 设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时 当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp  > **说明：** >  > API version 18之前，如果没有调用**moveTo**接口或传入无效参数，路径从(0,0)开始。 >  > API version 18及以后，如果没有调用**moveTo**接口或传入无效参数，路径将从第一个有效调用的 > **lineTo**、**arcTo**、**bezierCurveTo**或**quadraticCurveTo**的起始点开始。 |
 
 ## quadraticCurveTo
 

@@ -60,7 +60,8 @@ Enables OCSP check. Checks the certificate status using the Online Certificate S
 
 > **NOTE：**
 > 
-> - Always verify the validity period of the OCSP response against the current system time, and allow a time &gt; tolerance of ±5 minutes.
+> - Always verify the validity period of the OCSP response against the current system time, and allow a time
+> tolerance of ±5 minutes.
 > - The validity period of the OCSP signature certificate chain is always verified using the current system time.
 > - Allows ocsp response to be missing nonce and nextUpdate.
 

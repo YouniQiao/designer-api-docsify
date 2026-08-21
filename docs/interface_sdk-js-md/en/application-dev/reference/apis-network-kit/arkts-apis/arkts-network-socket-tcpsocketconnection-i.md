@@ -4,7 +4,8 @@ Defines a **TCPSocketConnection** object, that is, the connection between the TC
 
 > **NOTE：**
 > 
-> The TCPSocket client can call related APIs through the **TCPSocketConnection** object only after a connection is &gt; successfully established between the TCPSocket client and the server.
+> The TCPSocket client can call related APIs through the **TCPSocketConnection** object only after a connection is
+> successfully established between the TCPSocket client and the server.
 
 **Since:** 10
 
@@ -294,9 +295,12 @@ Obtains the file descriptor of a TCPSocketConnection connection. This API uses a
 > 
 > - This API can be called only after a connection with the client is set up.
 > 
-> - This API returns **-1** in abnormal cases such as disconnection and socket closed (for example, after the &gt; close API is called).
+> - This API returns **-1** in abnormal cases such as disconnection and socket closed (for example, after the
+> close API is called).
 > 
-> - The lifecycle of the file descriptor is managed by the system. The application can use the &gt; [close](#close) method to close the socket &gt; connection, instead of directly operating the file descriptor.
+> - The lifecycle of the file descriptor is managed by the system. The application can use the
+> [close](#close) method to close the socket
+> connection, instead of directly operating the file descriptor.
 
 **Since:** 23
 

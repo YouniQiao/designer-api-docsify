@@ -110,7 +110,8 @@ Obtains the public key data that complies with the ASN.1 syntax and DER encoding
 > 
 > The difference between [Key.getEncoded()](arkts-cryptoarchitecture-cryptoframework-key-i.md#getencoded) and this API is as follows:
 > 1. You can specify the format of the data to be obtained in this API.
-> 2. The format of the key to be obtained cannot be specified in &gt; [Key.getEncoded()](arkts-cryptoarchitecture-cryptoframework-key-i.md#getencoded).
+> 2. The format of the key to be obtained cannot be specified in
+> [Key.getEncoded()](arkts-cryptoarchitecture-cryptoframework-key-i.md#getencoded).
 
 **Since:** 23
 

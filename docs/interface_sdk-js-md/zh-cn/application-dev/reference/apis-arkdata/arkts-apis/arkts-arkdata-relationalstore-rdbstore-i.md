@@ -1118,23 +1118,36 @@ cloudSyncEx(config: CloudSyncConfig, progress: Callback<ProgressDetails>): Promi
 > 
 > [CloudSyncConfig](arkts-arkdata-relationalstore-cloudsyncconfig-i.md)中仅支持以下谓词：
 > 
-> - [beginWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#beginwrap) &gt;
-> - [endWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#endwrap) &gt;
-> - [or](arkts-arkdata-relationalstore-rdbpredicates-c.md#or) &gt;
-> - [and](arkts-arkdata-relationalstore-rdbpredicates-c.md#and) &gt;
+> - [beginWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#beginwrap)
+> 
+> - [endWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#endwrap)
+> 
+> - [or](arkts-arkdata-relationalstore-rdbpredicates-c.md#or)
+> 
+> - [and](arkts-arkdata-relationalstore-rdbpredicates-c.md#and)
+> 
 > - 以下谓词的数据字段类型[ValueType](arkts-arkdata-relationalstore-valuetype-t.md)仅支持number类型的整数和string：
 > 
-> - [equalTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#equalto) &gt;
-> - [notEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#notequalto) &gt;
-> - [in](arkts-arkdata-relationalstore-rdbpredicates-c.md#in) &gt;
-> - [notIn](arkts-arkdata-relationalstore-rdbpredicates-c.md#notin) &gt;
+> - [equalTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#equalto)
+> 
+> - [notEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#notequalto)
+> 
+> - [in](arkts-arkdata-relationalstore-rdbpredicates-c.md#in)
+> 
+> - [notIn](arkts-arkdata-relationalstore-rdbpredicates-c.md#notin)
+> 
 > - 以下谓词的数据字段类型[ValueType](arkts-arkdata-relationalstore-valuetype-t.md)仅支持number类型的整数：
 > 
-> - [greaterThan](arkts-arkdata-relationalstore-rdbpredicates-c.md#greaterthan) &gt;
-> - [lessThan](arkts-arkdata-relationalstore-rdbpredicates-c.md#lessthan) &gt;
-> - [greaterThanOrEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#greaterthanorequalto) &gt;
-> - [lessThanOrEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#lessthanorequalto) &gt;
-> 谓词中支持使用主键（必填）和资产（可选）作为同步条件：当选择资产作为同步条件时，同步模式需要设置为relationalStore.SyncMode.SYNC_MODE_CLOUD_FIRST；指定资产的数量较多时（最多支持 &gt; 指定50个资产），建议谓词中仅使用主键作为同步条件。
+> - [greaterThan](arkts-arkdata-relationalstore-rdbpredicates-c.md#greaterthan)
+> 
+> - [lessThan](arkts-arkdata-relationalstore-rdbpredicates-c.md#lessthan)
+> 
+> - [greaterThanOrEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#greaterthanorequalto)
+> 
+> - [lessThanOrEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#lessthanorequalto)
+> 
+> 谓词中支持使用主键（必填）和资产（可选）作为同步条件：当选择资产作为同步条件时，同步模式需要设置为relationalStore.SyncMode.SYNC_MODE_CLOUD_FIRST；指定资产的数量较多时（最多支持
+> 指定50个资产），建议谓词中仅使用主键作为同步条件。
 
 **起始版本：** 26.0.0
 
@@ -2499,7 +2512,9 @@ obtainDistributedTableName(device: string, table: string, callback: AsyncCallbac
 
 > **说明：**
 > 
-> 其中device通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。
+> 其中device通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
 
 **起始版本：** 23
 
@@ -2536,7 +2551,9 @@ obtainDistributedTableName(device: string, table: string): Promise<string>
 
 > **说明：**
 > 
-> 其中device通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。
+> 其中device通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
 
 **起始版本：** 23
 
@@ -3941,7 +3958,9 @@ remoteQuery(
 
 > **说明：**
 > 
-> 其中device通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。
+> 其中device通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
 
 **起始版本：** 23
 
@@ -3978,7 +3997,9 @@ remoteQuery(device: string, table: string, predicates: RdbPredicates, columns: A
 
 > **说明：**
 > 
-> 其中device通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。
+> 其中device通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
 
 **起始版本：** 23
 

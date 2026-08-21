@@ -35,7 +35,7 @@ Defines ArcListItem Component.
 
 | Type | Description |
 | --- | --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |  |
+| [ArcListItemAttribute](arkts-arkui-arkuiarclist-arclistitemattribute-c.md) |  |
 
 
 ## ArcListItem
@@ -64,12 +64,12 @@ Defines ArcListItem Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | CustomBuilderT&lt;[ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md)&gt; | Yes | The style to create an ArcListItem. |
+| style_ | CustomBuilderT&lt;[ArcListItemAttribute](arkts-arkui-arkuiarclist-arclistitemattribute-c.md)&gt; | Yes | The style to create an ArcListItem. |
 | content_ | CustomBuilder | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) | The attribute of the ArcListItem. |
+| [ArcListItemAttribute](arkts-arkui-arkuiarclist-arclistitemattribute-c.md) | The attribute of the ArcListItem. |
 

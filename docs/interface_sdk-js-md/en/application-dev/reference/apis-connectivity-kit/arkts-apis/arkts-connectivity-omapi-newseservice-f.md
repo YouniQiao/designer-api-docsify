@@ -18,7 +18,8 @@ The returned **SEService** instance is available only when **true** is returned 
 
 > **NOTE：**
 > 
-> This API is supported since API version 10 and deprecated since API version 12. Use &gt; [createService](arkts-connectivity-omapi-createservice-f.md) instead.
+> This API is supported since API version 10 and deprecated since API version 12. Use
+> [createService](arkts-connectivity-omapi-createservice-f.md) instead.
 
 **Since:** 10
 

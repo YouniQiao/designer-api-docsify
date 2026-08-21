@@ -1,7 +1,7 @@
 # ArkTS API<!--arkts-driverdevelopmentkit-->
 
 - [@ohos.app.ability.DriverExtensionAbility](arkts-app-ability-driverextensionability.md)
-  - [DriverExtensionAbility](arkts-driverdevelopment-app-ability-driverextensionability-driverextensionability-c.md)
+  - [DriverExtensionAbility](arkts-driverdevelopment-appabilitydriverextensionability-driverextensionability-c.md)
   - [DriverExtensionContext](arkts-driverdevelopment-driverextensioncontext-t.md)
 - [@ohos.driver.deviceManager](arkts-driver-devicemanager.md)
   - [bindDevice](arkts-driverdevelopment-devicemanager-binddevice-f.md)

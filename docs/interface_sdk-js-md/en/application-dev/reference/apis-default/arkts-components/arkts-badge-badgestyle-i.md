@@ -4,7 +4,11 @@ Describes the badge style. It includes the font color, font size, badge color, b
 
 > **NOTE：**
 > 
-> - When **borderWidth** is set to a value greater than 0 and **borderColor** is different from **badgeColor**, the &gt; badge is drawn before the border. Edge pixels are anti-aliased, which produces semi-transparent pixels. This causes &gt; the border in **badgeColor** to become visible at the four corners. To implement related scenarios, it is &gt; recommended that you use the Text component with its &gt; outline attribute instead of the **Badge** component.
+> - When **borderWidth** is set to a value greater than 0 and **borderColor** is different from **badgeColor**, the
+> badge is drawn before the border. Edge pixels are anti-aliased, which produces semi-transparent pixels. This causes
+> the border in **badgeColor** to become visible at the four corners. To implement related scenarios, it is
+> recommended that you use the Text component with its
+> outline attribute instead of the **Badge** component.
 
 **Since:** 23
 
@@ -128,7 +132,7 @@ Font color. Default value: Color.White.
 enableAutoAvoidance?: boolean
 ```
 
-Enable auto-avoidance for text in badge. Default value: false. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: 1. The avoidance effect is that the text of the corner mark extends to the interior of the component. 2. When the width of the outer stroke is greater than 0, the extension start point of the corner mark is the inner side of the outer stroke. 3. When position is set to a specific coordinate value, corner marks are not avoided.
+Enable auto-avoidance for text in badge. Default value: false. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: 1. The avoidance effect is that the text of the corner mark extends to the interior of the component. 2. When the width of the outer stroke is greater than 0, the extension start point of the corner mark is the inner side of the outer stroke. 3. When position is set to a specific coordinate value, corner marks are not avoided.
 
 **Type:** boolean
 

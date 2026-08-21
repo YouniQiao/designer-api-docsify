@@ -90,7 +90,8 @@ bindToNestedScrollable(scrollInfos: Array<NestedScrollInfo>)
 
 > - 只有NavDestination的标题栏或工具栏设置为可见时，联动效果才会生效。
 > 
-> - 当多个可滚动容器组件绑定了同一个NavDestination组件时，滚动任何一个容器都会触发标题栏和工具栏的显示或隐藏效果。且当任何一个可滚动容器组件滑动到底部或顶部位置时，会立即触发标题栏和工具栏的显示动效。因此，为了获 &gt; 得最佳用户体验，不建议同时触发多个可滚动容器组件的滚动事件。
+> - 当多个可滚动容器组件绑定了同一个NavDestination组件时，滚动任何一个容器都会触发标题栏和工具栏的显示或隐藏效果。且当任何一个可滚动容器组件滑动到底部或顶部位置时，会立即触发标题栏和工具栏的显示动效。因此，为了获
+> 得最佳用户体验，不建议同时触发多个可滚动容器组件的滚动事件。
 > 
 > - 从API version 22开始，该接口支持在attributeModifier中调用。
 
@@ -122,7 +123,8 @@ bindToScrollable(scrollers: Array<Scroller>)
 
 > - 只有NavDestination的标题栏或工具栏设置为可见时，联动效果才会生效。
 > 
-> - 当多个可滚动容器组件绑定了同一个NavDestination组件时，滚动任何一个容器都会触发标题栏和工具栏的显示或隐藏效果。且当任何一个可滚动容器组件滑动到底部或顶部位置时，会立即触发标题栏和工具栏的显示动效。因此，为了获 &gt; 得最佳用户体验，不建议同时触发多个可滚动容器组件的滚动事件。
+> - 当多个可滚动容器组件绑定了同一个NavDestination组件时，滚动任何一个容器都会触发标题栏和工具栏的显示或隐藏效果。且当任何一个可滚动容器组件滑动到底部或顶部位置时，会立即触发标题栏和工具栏的显示动效。因此，为了获
+> 得最佳用户体验，不建议同时触发多个可滚动容器组件的滚动事件。
 > 
 > - 从API version 22开始，该接口支持在attributeModifier中调用。
 
@@ -184,7 +186,9 @@ enableNavigationIndicator(enabled: Optional<boolean>)
 
 > 该属性满足如下全部条件时才生效：
 
-> 设置系统导航条的实际效果依赖于具体的设备支持情况，具体参考窗口的 &gt; [setSpecificSystemBarEnabled](../../../reference/apis-arkui/arkts-apis-window-Window.md#setspecificsystembarenabled) &gt; 接口。
+> 设置系统导航条的实际效果依赖于具体的设备支持情况，具体参考窗口的
+> [setSpecificSystemBarEnabled](../../../reference/apis-arkui/arkts-apis-window-Window.md#setspecificsystembarenabled)
+> 接口。
 
 **起始版本：** 19
 
@@ -214,12 +218,17 @@ enableStatusBar(enabled: Optional<boolean>, animated?: boolean)
 
 > - 该属性满足如下全部条件时才生效：
 > 
-> 1. NavDestination属于应用主窗口页面，并且主窗口为全屏窗口； &gt;
-> 2. NavDestination所属的Navigation的大小占满整个页面； &gt;
-> 3. NavDestination的大小占满整个Navigation组件； &gt;
+> 1. NavDestination属于应用主窗口页面，并且主窗口为全屏窗口；
+> 
+> 2. NavDestination所属的Navigation的大小占满整个页面；
+> 
+> 3. NavDestination的大小占满整个Navigation组件；
+> 
 > 4. NavDestination类型为[NavDestinationMode](arkts-arkui-navdestinationmode-e.md).STANDARD。
 > 
-> - 设置系统状态栏的实际效果依赖于具体的设备支持情况，具体参考窗口的 &gt; [setSpecificSystemBarEnabled](../../../reference/apis-arkui/arkts-apis-window-Window.md#setspecificsystembarenabled) &gt; 接口。
+> - 设置系统状态栏的实际效果依赖于具体的设备支持情况，具体参考窗口的
+> [setSpecificSystemBarEnabled](../../../reference/apis-arkui/arkts-apis-window-Window.md#setspecificsystembarenabled)
+> 接口。
 
 **起始版本：** 19
 
@@ -596,7 +605,8 @@ onNewParam(callback: Optional<Callback<ESObject>>)
 
 > **说明：**
 
-> - replacePath、 &gt; replaceDestination不会触发该回调。
+> - replacePath、
+> replaceDestination不会触发该回调。
 > 
 > - 从API version 22开始，该接口支持在attributeModifier中调用。
 
@@ -872,11 +882,15 @@ preferredOrientation(orientation: Optional<Orientation>)
 
 > - 该属性满足如下全部条件时才有效：
 > 
-> 1. NavDestination属于应用主窗口页面，并且主窗口为全屏窗口； &gt;
-> 2. NavDestination所属的Navigation的大小占满整个应用页面； &gt;
+> 1. NavDestination属于应用主窗口页面，并且主窗口为全屏窗口；
+> 
+> 2. NavDestination所属的Navigation的大小占满整个应用页面；
+> 
 > 3. NavDestination类型为[NavDestinationMode](arkts-arkui-navdestinationmode-e.md).STANDARD。
 > 
-> - 设置显示方向的实际效果依赖于具体的设备支持情况，具体参考窗口的 &gt; [setPreferredOrientation](../../../reference/apis-arkui/arkts-apis-window-Window.md#setpreferredorientation9-1)接 &gt; 口。
+> - 设置显示方向的实际效果依赖于具体的设备支持情况，具体参考窗口的
+> [setPreferredOrientation](../../../reference/apis-arkui/arkts-apis-window-Window.md#setpreferredorientation9-1)接
+> 口。
 
 **起始版本：** 19
 

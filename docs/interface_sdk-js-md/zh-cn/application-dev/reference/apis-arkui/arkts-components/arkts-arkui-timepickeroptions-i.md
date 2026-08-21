@@ -6,10 +6,13 @@
 
 > Date对象用于处理日期和时间，使用方式如下。
 > 
-> - 方式1：new Date() &gt; 获取系统当前日期和时间。
+> - 方式1：new Date()
+> 获取系统当前日期和时间。
 > 
-> - 方式2：new Date(value: number | string) &gt;
-> - 方式3：new Date(year: number, monthIndex: number, date?: number, hours?: number, minutes?: number, &gt; seconds?: number, ms?: number)
+> - 方式2：new Date(value: number | string)
+> 
+> - 方式3：new Date(year: number, monthIndex: number, date?: number, hours?: number, minutes?: number,
+> seconds?: number, ms?: number)
 
 > **起始时间和结束时间的异常情形说明：**
 > - 起始时间晚于结束时间：起始时间、结束时间都为默认值。

@@ -26,9 +26,12 @@ Resumes a failed download task. You need to obtain the deserialized object throu
 
 > **NOTE：**
 > 
-> - Before calling this API, if the Web component has not been created and the initializeWebEngine method has not &gt; been executed to complete web kernel initialization, you must call the initializeWebEngine method for &gt; initialization first. Otherwise, calling this API is invalid.
+> - Before calling this API, if the Web component has not been created and the initializeWebEngine method has not
+> been executed to complete web kernel initialization, you must call the initializeWebEngine method for
+> initialization first. Otherwise, calling this API is invalid.
 > 
-> - You must call [setDownloadDelegate](../../apis-default/arkts-apis/arkts-webview-webdownloadmanager-c.md#setdownloaddelegate) to set the download &gt; delegate first. Otherwise, error code 17100018 will be thrown.
+> - You must call [setDownloadDelegate](../../apis-default/arkts-apis/arkts-webview-webdownloadmanager-c.md#setdownloaddelegate) to set the download
+> delegate first. Otherwise, error code 17100018 will be thrown.
 
 **Since:** 11
 
@@ -60,7 +63,9 @@ Sets the delegate used to receive download progress triggered by WebDownloadMana
 
 > **NOTE：**
 > 
-> - Before calling this API, if the Web component has not been created and the &gt; [initializeWebEngine](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#initializewebengine) method has not been executed, you &gt; must call this method to initialize the web kernel first. Otherwise, calling this API is invalid.
+> - Before calling this API, if the Web component has not been created and the
+> [initializeWebEngine](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#initializewebengine) method has not been executed, you
+> must call this method to initialize the web kernel first. Otherwise, calling this API is invalid.
 
 **Since:** 11
 

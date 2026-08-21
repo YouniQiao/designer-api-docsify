@@ -12,5 +12,5 @@ import { FaultLogExtensionContext } from '@kit.PerformanceAnalysisKit';
 
 | Name | Description |
 | --- | --- |
-| [FaultLogExtensionContext](arkts-performanceanalysis-hiviewdfx-faultlogextensioncontext-faultlogextensioncontext-c.md) | FaultLogExtensionContext is the context of [FaultLogExtensionAbility](arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md) and inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md). |
+| [FaultLogExtensionContext](arkts-performanceanalysis-hiviewdfxfaultlogextensioncontext-faultlogextensioncontext-c.md) | FaultLogExtensionContext is the context of [FaultLogExtensionAbility](arkts-performanceanalysis-hiviewdfxfaultlogextensionability-faultlogextensionability-c.md) and inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md). |
 

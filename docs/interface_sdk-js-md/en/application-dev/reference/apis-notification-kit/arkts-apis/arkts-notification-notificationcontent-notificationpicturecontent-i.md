@@ -4,9 +4,15 @@ Describes the picture-attached notification. This API is inherited from Notifica
 
 > **NOTE：**
 > 
-> - When this notification type forms a group notification with other notifications, its display effect defaults &gt; to the collapsed state, and the displayed title and body are the **title** and **text** inherited from &gt; NotificationBasicContent. When this notification type is displayed alone and does not form a group notification &gt; with other notifications, its display effect defaults to the expanded state, where the displayed title is the &gt; expanded title **expandedTitle**, and the displayed body is the **text** inherited from &gt; NotificationBasicContent and the picture content **picture** of this type.
+> - When this notification type forms a group notification with other notifications, its display effect defaults
+> to the collapsed state, and the displayed title and body are the **title** and **text** inherited from
+> NotificationBasicContent. When this notification type is displayed alone and does not form a group notification
+> with other notifications, its display effect defaults to the expanded state, where the displayed title is the
+> expanded title **expandedTitle**, and the displayed body is the **text** inherited from
+> NotificationBasicContent and the picture content **picture** of this type.
 > 
-> - When a user taps a group notification to view the notification details, the display effect of this &gt; notification changes to the expanded state.
+> - When a user taps a group notification to view the notification details, the display effect of this
+> notification changes to the expanded state.
 > 
 > - The actual display effect depends on the device capabilities and the notification center UI style.
 

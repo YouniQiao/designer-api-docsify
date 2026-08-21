@@ -5,7 +5,8 @@
 > **说明：**
 > 
 > - 本模块仅支持PC/2in1设备。开发者可通过canIUse('SystemCapability.SelectionInput.Selection')判断当前设备是否支持该功能。
-> - 仅支持集成了划词扩展的应用调用，划词扩展的实现请参见 &gt; [SelectionExtensionAbility](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c-sys.md)。
+> - 仅支持集成了划词扩展的应用调用，划词扩展的实现请参见
+> [SelectionExtensionAbility](arkts-basicservices-selectioninputselectionextensionability-selectionextensionability-c-sys.md)。
 
 **起始版本：** 24
 

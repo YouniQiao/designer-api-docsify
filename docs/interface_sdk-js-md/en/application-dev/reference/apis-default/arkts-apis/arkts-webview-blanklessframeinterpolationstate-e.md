@@ -2,7 +2,7 @@
 
 Enumerates the frame interpolation states.
 
-&lt;strong&gt;ArkWeb Dual Web Engine Versioning Convention&lt;/strong&gt;: &lt;p&gt;See [ArkWeb Dual Web Engine Versioning Convention] for switching between Legacy and Evergreen Web Engine.
+&lt;strong&gt;ArkWeb Dual Web Engine Versioning Convention&lt;/strong&gt;: <p>See [ArkWeb Dual Web Engine Versioning Convention] for switching between Legacy and Evergreen Web Engine.
 
 Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 

@@ -136,7 +136,9 @@ Obtains the URL link address that has passed the security check. This can be use
 
 > **NOTE：**
 > 
-> Compared with getUnfilteredLinkUrl(), this method performs a security check on the URL. Compared with &gt; getSourceUrl(), this method obtains the link URL at the long press position, whereas getSourceUrl() obtains the &gt; URL of the **src** attribute of the selected element (such as images, media, and other resources).
+> Compared with getUnfilteredLinkUrl(), this method performs a security check on the URL. Compared with
+> getSourceUrl(), this method obtains the link URL at the long press position, whereas getSourceUrl() obtains the
+> URL of the **src** attribute of the selected element (such as images, media, and other resources).
 
 **Since:** 9
 
@@ -162,7 +164,8 @@ Obtains the media type of the web element.
 
 > **NOTE：**
 > 
-> Since API version 22, [getContextMenuMediaType](#getcontextmenumediatype) provides &gt; richer media type identification capabilities.
+> Since API version 22, [getContextMenuMediaType](#getcontextmenumediatype) provides
+> richer media type identification capabilities.
 
 **Since:** 9
 

@@ -411,7 +411,8 @@ Stops AI image analysis. The content displayed by the AI image analyzer will be 
 
 > **NOTE：**
 
-> If this API is called when the **startImageAnalyzer** API has not yet returned any result, an error callback is &gt; triggered.
+> If this API is called when the **startImageAnalyzer** API has not yet returned any result, an error callback is
+> triggered.
 > 
 > This feature depends on device capabilities.
 

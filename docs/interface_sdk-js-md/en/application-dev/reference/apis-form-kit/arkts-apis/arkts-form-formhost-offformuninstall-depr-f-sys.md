@@ -15,7 +15,8 @@ Unsubscribes from widget uninstall events. This API uses an asynchronous callbac
 
 > **NOTE：**
 > 
-> Widget uninstall is different from widget removal. When an application is uninstalled, the corresponding widget &gt; is automatically uninstalled.
+> Widget uninstall is different from widget removal. When an application is uninstalled, the corresponding widget
+> is automatically uninstalled.
 
 **Since:** 8
 

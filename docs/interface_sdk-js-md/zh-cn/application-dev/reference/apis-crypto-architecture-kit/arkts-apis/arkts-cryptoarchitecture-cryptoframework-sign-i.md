@@ -851,11 +851,15 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 根据数据量，可以不调用update（即[init](#init)完成后直接调用 &gt; [sign](#sign)）或多次调用update。
+> 根据数据量，可以不调用update（即[init](#init)完成后直接调用
+> [sign](#sign)）或多次调用update。
 > 
-> 算法库目前没有对update（单次或累计）的数据量设置大小限制，建议对于大数据量的签名操作，采用多次update的方式传入数据，避免一次性申请 &gt; 过大内存。
+> 算法库目前没有对update（单次或累计）的数据量设置大小限制，建议对于大数据量的签名操作，采用多次update的方式传入数据，避免一次性申请
+> 过大内存。
 > 
-> 签名使用多次update操作的示例代码详见 &gt; [使用RSA密钥对分段签名验签](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)， &gt; 其余算法操作类似。
+> 签名使用多次update操作的示例代码详见
+> [使用RSA密钥对分段签名验签](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)，
+> 其余算法操作类似。
 
 > OnlySign模式下，不支持update操作，需要直接使用sign传入数据。
 
@@ -900,10 +904,15 @@ update(data: DataBlob): Promise<void>
 
 > **说明：**
 > 
-> 根据数据量，可以不调用update（即[init](#init) &gt; 完成后直接调用[sign](#sign)） &gt; 或多次调用update。
+> 根据数据量，可以不调用update（即[init](#init)
+> 完成后直接调用[sign](#sign)）
+> 或多次调用update。
 > 
-> 算法库不对单次或累计的update数据量设置大小限制。建议在处理大数据量的签名操作时，采用多次update方式传入数据，以避免一次性申请过大内 &gt; 存。
-> 签名使用多次update操作的示例代码详见 &gt; [使用RSA密钥对分段签名验签](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)， &gt; 其余算法操作类似。
+> 算法库不对单次或累计的update数据量设置大小限制。建议在处理大数据量的签名操作时，采用多次update方式传入数据，以避免一次性申请过大内
+> 存。
+> 签名使用多次update操作的示例代码详见
+> [使用RSA密钥对分段签名验签](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)，
+> 其余算法操作类似。
 > 
 > OnlySign模式下，不支持update操作，需要直接使用sign传入数据。
 > 
@@ -953,11 +962,15 @@ updateSync(data: DataBlob): void
 
 > **说明：**
 > 
-> 根据数据量，可以不调用updateSync（即[initSync](#initsync)完成后直接调用 &gt; [signSync](#signsync)）或多次调用updateSync。
+> 根据数据量，可以不调用updateSync（即[initSync](#initsync)完成后直接调用
+> [signSync](#signsync)）或多次调用updateSync。
 > 
-> 算法库目前没有对updateSync（单次或累计）的数据量设置大小限制，建议对于大数据量的签名操作，采用多次updateSync的方式传入数据，避免 &gt; 一次性申请过大内存。
+> 算法库目前没有对updateSync（单次或累计）的数据量设置大小限制，建议对于大数据量的签名操作，采用多次updateSync的方式传入数据，避免
+> 一次性申请过大内存。
 > 
-> 签名使用多次updateSync操作的示例代码详见 &gt; [使用RSA密钥对分段签名验签](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)， &gt; 其余算法操作类似。
+> 签名使用多次updateSync操作的示例代码详见
+> [使用RSA密钥对分段签名验签](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)，
+> 其余算法操作类似。
 > 
 > OnlySign模式下，不支持updateSync操作，需要直接使用signSync传入数据。
 > 

@@ -4,7 +4,8 @@ Implements the scroll controller of the **List** component. A **List** component
 
 > **NOTE：**
 > 
-> **ListScroller** inherits from Scroller and has all methods of &gt; Scroller.
+> **ListScroller** inherits from Scroller and has all methods of
+> Scroller.
 
 **Inheritance/Implementation:** ListScroller extends Scroller
 

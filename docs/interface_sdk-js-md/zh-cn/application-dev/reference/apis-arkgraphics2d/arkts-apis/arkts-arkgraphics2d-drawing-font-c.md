@@ -913,7 +913,8 @@ measureText(text: string, encoding: TextEncoding): double
 
 > **说明：**
 > 
-> 此接口用于测量原始字符串的文本宽度，若想测量排版后的文本宽度，建议使用 &gt; [measure.measureText](../../../reference/apis-arkui/arkts-apis-uicontext-measureutils.md#measuretext12)替代。
+> 此接口用于测量原始字符串的文本宽度，若想测量排版后的文本宽度，建议使用
+> [measure.measureText](../../../reference/apis-arkui/arkts-apis-uicontext-measureutils.md#measuretext12)替代。
 
 **起始版本：** 23
 

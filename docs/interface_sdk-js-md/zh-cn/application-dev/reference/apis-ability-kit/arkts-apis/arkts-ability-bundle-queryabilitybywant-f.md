@@ -46,7 +46,7 @@ function queryAbilityByWant(want: Want,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 指示包含要查询的应用Bundle名称的意图。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 指示包含要查询的应用Bundle名称的意图。 |
 | bundleFlags | number | 是 | 用于指定返回abilityInfo信息。取值范围：参考[BundleFlag说明](arkts-ability-bundle-bundleflag-e.md)中Ability信息相关flag。 |
 | userId | number | 是 | 用户ID。取值范围：大于等于0。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt;&gt; | 是 | 程序启动作为入参的回调函数，返回Ability信息。 |
@@ -98,7 +98,7 @@ function queryAbilityByWant(want: Want, bundleFlags: number, callback: AsyncCall
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 指示包含要查询的应用Bundle名称的意图。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 指示包含要查询的应用Bundle名称的意图。 |
 | bundleFlags | number | 是 | 用于指定返回abilityInfo信息。取值范围：参考[BundleFlag说明](arkts-ability-bundle-bundleflag-e.md)中Ability信息相关flag。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt;&gt; | 是 | 程序启动作为入参的回调函数，返回Ability信息。 |
 
@@ -148,7 +148,7 @@ function queryAbilityByWant(want: Want, bundleFlags: number, userId?: number): P
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 包含要查询的应用Bundle名称的意图。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 包含要查询的应用Bundle名称的意图。 |
 | bundleFlags | number | 是 | 用于指定返回abilityInfo信息。取值范围：参考[BundleFlag说明](arkts-ability-bundle-bundleflag-e.md)中Ability信息相关flag。 |
 | userId | number | 否 | 用户ID。默认值：调用方所在用户，取值范围：大于等于0。 |
 

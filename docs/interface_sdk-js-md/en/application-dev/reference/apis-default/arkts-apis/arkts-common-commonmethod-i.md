@@ -1486,7 +1486,7 @@ clipShape(value: CircleShape | EllipseShape | PathShape | RectShape | undefined)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CircleShape](arkts-arkui-shape-circleshape-c.md) \| [EllipseShape](arkts-arkui-shape-ellipseshape-c.md) \| [PathShape](arkts-arkui-shape-pathshape-c.md) \| [RectShape](arkts-arkui-shape-rectshape-c.md) \| undefined | Yes |  |
+| value | [CircleShape](arkts-arkuishape-circleshape-c.md) \| [EllipseShape](arkts-arkuishape-ellipseshape-c.md) \| [PathShape](arkts-arkuishape-pathshape-c.md) \| [RectShape](arkts-arkuishape-rectshape-c.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -2734,7 +2734,7 @@ maskShape(value: CircleShape | EllipseShape | PathShape | RectShape | undefined)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CircleShape](arkts-arkui-shape-circleshape-c.md) \| [EllipseShape](arkts-arkui-shape-ellipseshape-c.md) \| [PathShape](arkts-arkui-shape-pathshape-c.md) \| [RectShape](arkts-arkui-shape-rectshape-c.md) \| undefined | Yes |  |
+| value | [CircleShape](arkts-arkuishape-circleshape-c.md) \| [EllipseShape](arkts-arkuishape-ellipseshape-c.md) \| [PathShape](arkts-arkuishape-pathshape-c.md) \| [RectShape](arkts-arkuishape-rectshape-c.md) \| undefined | Yes |  |
 
 **Return value:**
 

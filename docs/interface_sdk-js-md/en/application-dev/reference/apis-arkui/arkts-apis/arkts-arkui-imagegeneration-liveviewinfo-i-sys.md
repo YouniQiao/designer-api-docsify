@@ -70,7 +70,7 @@ Get the Want object for LiveView.
 
 | Type | Description |
 | --- | --- |
-| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Returns the Want object. |
+| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Returns the Want object. |
 
 ## isLiveViewNeeded
 

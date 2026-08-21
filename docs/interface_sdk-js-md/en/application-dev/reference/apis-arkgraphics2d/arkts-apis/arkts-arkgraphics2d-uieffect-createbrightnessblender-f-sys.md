@@ -28,7 +28,7 @@ Creates a BrightnessBlender instance for adding a brightness effect to a compone
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [BrightnessBlenderParam](arkts-arkgraphics2d-graphics-uieffect-brightnessblenderparam-i-sys.md) | Yes | The brightness blender parameters, including grayscale adjustment coefficients, saturation, blending ratio, and other configuration items. |
+| param | [BrightnessBlenderParam](arkts-arkgraphics2d-graphicsuieffect-brightnessblenderparam-i-sys.md) | Yes | The brightness blender parameters, including grayscale adjustment coefficients, saturation, blending ratio, and other configuration items. |
 
 **Return value:**
 

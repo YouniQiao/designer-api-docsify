@@ -16,7 +16,9 @@ function vibrate(duration: number, callback?: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用 &gt; [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md) &gt; 替代。
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md)
+> 替代。
 
 **起始版本：** 8
 
@@ -63,7 +65,8 @@ function vibrate(duration: number): Promise<void>
 
 > **说明：**
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用 &gt; [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md)替代。
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md)替代。
 
 **起始版本：** 8
 
@@ -113,7 +116,8 @@ function vibrate(effectId: EffectId): Promise<void>
 
 > **说明：**
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用 &gt; [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md)替代。
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md)替代。
 
 **起始版本：** 8
 
@@ -163,7 +167,9 @@ function vibrate(effectId: EffectId, callback?: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用 &gt; [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md) &gt; 替代。
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md)
+> 替代。
 
 **起始版本：** 8
 

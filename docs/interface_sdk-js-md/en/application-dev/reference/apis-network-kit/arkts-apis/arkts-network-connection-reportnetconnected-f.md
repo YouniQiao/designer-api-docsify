@@ -16,7 +16,9 @@ Reports the network availability to the network management module. This API uses
 
 > **NOTE：**
 > 
-> This API is used by the browser to connect to the portal network. After the network authentication is successful, &gt; the browser reports the network connection success to the network management module. The network management &gt; module then triggers network detection and updates the network status.
+> This API is used by the browser to connect to the portal network. After the network authentication is successful,
+> the browser reports the network connection success to the network management module. The network management
+> module then triggers network detection and updates the network status.
 > **Permission required**: ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
 **Since:** 8

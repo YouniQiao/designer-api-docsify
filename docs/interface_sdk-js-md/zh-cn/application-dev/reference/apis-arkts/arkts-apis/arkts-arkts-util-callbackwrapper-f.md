@@ -58,7 +58,9 @@ function callbackWrapper(original: Function): (err: Object, value: Object) => vo
 > 当original的Promise返回resolve时，入参的回调函数的第一个参数为null，第二个参数为resolve的值。
 > 当original的Promise返回reject时，入参的回调函数的第一个参数为错误对象，第二个参数为null。
 > 
-> 由于此方法返回类型的声明为`(err: Object, value: Object) =&gt; void`，TypeScript编译器会按照该声明进行参数数量校验， &gt; 因此当original为无入参的函数时，此接口返回的函数第一个入参需传入一个无效的占位参数。
+> 由于此方法返回类型的声明为`(err: Object, value: Object) =
+> void`，TypeScript编译器会按照该声明进行参数数量校验，
+> 因此当original为无入参的函数时，此接口返回的函数第一个入参需传入一个无效的占位参数。
 > 当original为多个入参的函数时，此接口返回的函数当前仅支持传入一个参数，可使用array等容器进行多个入参的传入调用（参照下方示例代码）。
 
 **起始版本：** 7

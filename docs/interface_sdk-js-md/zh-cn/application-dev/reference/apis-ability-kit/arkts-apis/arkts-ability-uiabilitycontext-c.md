@@ -1,6 +1,6 @@
 # UIAbilityContext
 
-UIAbilityContext是需要保存状态的[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)所对应的context，继承自Context，提供 UIAbility的相关配置信息以及操作UIAbility和ServiceExtensionAbility的方法，如启动UIAbility，停止当前UIAbilityContext所属的UIAbility，启动、停止、连接、断开连接 ServiceExtensionAbility等。
+UIAbilityContext是需要保存状态的[UIAbility](arkts-ability-appabilityuiability-uiability-c.md)所对应的context，继承自Context，提供 UIAbility的相关配置信息以及操作UIAbility和ServiceExtensionAbility的方法，如启动UIAbility，停止当前UIAbilityContext所属的UIAbility，启动、停止、连接、断开连接 ServiceExtensionAbility等。
 
 **继承/实现关系：** UIAbilityContext extends Context
 
@@ -286,11 +286,15 @@ export default class EntryAbility extends UIAbility {
 connectAppServiceExtensionAbility(want: Want, callback: ConnectOptions): long
 ```
 
-将当前UIAbility连接到 [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md) 。通过返回的proxy与AppServiceExtensionAbility进行通信，以使用AppServiceExtensionAbility对外提供的能力。仅支持在主线程调用。 该接口仅在PC/2in1设备中可正常调用，在其他设备中返回801错误码。
+将当前UIAbility连接到 [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md) 。通过返回的proxy与AppServiceExtensionAbility进行通信，以使用AppServiceExtensionAbility对外提供的能力。仅支持在主线程调用。 该接口仅在PC/2in1设备中可正常调用，在其他设备中返回801错误码。
 
 > **说明：**
 > 
-> 如果 &gt; [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md) &gt; 实例未启动，该接口的调用方必须为AppServiceExtensionAbility所属应用或者在AppServiceExtensionAbility支持的应用清单（即 &gt; [extensionAbilities标签](../../../quick-start/module-configuration-file.md#extensionabilities标签)的 &gt; appIdentifierAllowList属性）中的应用。
+> 如果
+> [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md)
+> 实例未启动，该接口的调用方必须为AppServiceExtensionAbility所属应用或者在AppServiceExtensionAbility支持的应用清单（即
+> [extensionAbilities标签](../../../quick-start/module-configuration-file.md#extensionabilities标签)的
+> appIdentifierAllowList属性）中的应用。
 
 **起始版本：** 23
 
@@ -304,7 +308,7 @@ connectAppServiceExtensionAbility(want: Want, callback: ConnectOptions): long
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 连接 [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md) 的Want信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 连接 [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md) 的Want信息。 |
 | callback | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | 是 | ConnectOptions类型的回调函数，返回服务连接成功、连接失败、断开的信息。 |
 
 **返回值：**
@@ -438,7 +442,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 连接ServiceExtensionAbility的Want信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 连接ServiceExtensionAbility的Want信息。 |
 | options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | 是 | 回调对象，返回服务连接成功、连接失败、断开的信息。 |
 
 **返回值：**
@@ -585,7 +589,7 @@ connectUIServiceExtensionAbility(want: Want, callback: UIServiceExtensionConnect
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 连接UIServiceExtensionAbility的必要信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 连接UIServiceExtensionAbility的必要信息。 |
 | callback | [UIServiceExtensionConnectCallback](arkts-ability-uiserviceextensionconnectcallback-i.md) | 是 | 连接UIServiceExtensionAbility回调。 |
 
 **返回值：**
@@ -751,7 +755,7 @@ struct UIServiceExtensionAbility {
 disconnectAppServiceExtensionAbility(connection: long): Promise<void>
 ```
 
-断开与 [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md) 的连接。仅支持在主线程调用。使用Promise异步回调。 断开连接之后，为了防止使用可能失效的remote对象进行通信，建议将连接成功时返回的remote对象设置为null。 该接口仅在PC/2in1设备中可正常调用，在其他设备中返回801错误码。
+断开与 [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md) 的连接。仅支持在主线程调用。使用Promise异步回调。 断开连接之后，为了防止使用可能失效的remote对象进行通信，建议将连接成功时返回的remote对象设置为null。 该接口仅在PC/2in1设备中可正常调用，在其他设备中返回801错误码。
 
 **起始版本：** 23
 
@@ -1589,7 +1593,7 @@ openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<Abilit
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | appId | string | 是 | 应用的唯一标识，由云端统一分配。 |
-| options | [AtomicServiceOptions](arkts-ability-app-ability-atomicserviceoptions-atomicserviceoptions-c.md) | 否 | 启动原子化服务所携带的参数。 |
+| options | [AtomicServiceOptions](arkts-ability-appabilityatomicserviceoptions-atomicserviceoptions-c.md) | 否 | 启动原子化服务所携带的参数。 |
 
 **返回值：**
 
@@ -1676,7 +1680,7 @@ openLink(link: string, options?: OpenLinkOptions, callback?: AsyncCallback<Abili
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | link | string | 是 | 指示要打开的标准格式URL。 |
-| options | [OpenLinkOptions](arkts-ability-app-ability-openlinkoptions-openlinkoptions-i.md) | 否 | 打开URL的选项参数。 |
+| options | [OpenLinkOptions](arkts-ability-appabilityopenlinkoptions-openlinkoptions-i.md) | 否 | 打开URL的选项参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | 否 | 回调函数，包含返回给拉起方的信息。 |
 
 **返回值：**
@@ -1902,7 +1906,7 @@ requestDialogService(want: Want, result: AsyncCallback<dialogRequest.RequestResu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动ServiceExtensionAbility的Want信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动ServiceExtensionAbility的Want信息。 |
 | result | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;dialogRequest.RequestResult&gt; | 是 | 回调函数，当启动一个支持模态弹框的ServiceExtensionAbility成功，err中code为0， data为模态弹框请求结果；否则err会返回对应的错误码和错误信息。 |
 
 **错误码：**
@@ -1986,7 +1990,7 @@ requestDialogService(want: Want): Promise<dialogRequest.RequestResult>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动ServiceExtensionAbility的Want信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动ServiceExtensionAbility的Want信息。 |
 
 **返回值：**
 
@@ -2062,9 +2066,14 @@ restartApp(want: Want): Promise<void>
 > 
 > 通过该接口重启进程时，不会触发进程中Ability的onDestroy生命周期回调。
 > 
-> 在原子化服务调用本接口成功后的3秒内，再次调用本接口、 &gt; [restartSelfAtomicService()](arkts-ability-abilitymanager-restartselfatomicservice-f.md)或 &gt; [ApplicationContext.restartApp()](arkts-ability-applicationcontext-c.md#restartapp)接口中的任一接口，系统将 &gt; 返回错误码16000064。
+> 在原子化服务调用本接口成功后的3秒内，再次调用本接口、
+> [restartSelfAtomicService()](arkts-ability-abilitymanager-restartselfatomicservice-f.md)或
+> [ApplicationContext.restartApp()](arkts-ability-applicationcontext-c.md#restartapp)接口中的任一接口，系统将
+> 返回错误码16000064。
 > 
-> 在应用调用本接口成功后的3秒内，若再次调用本接口或 &gt; [ApplicationContext.restartApp()](arkts-ability-applicationcontext-c.md#restartapp)接口中的任一接口，系统将 &gt; 返回错误码16000064。
+> 在应用调用本接口成功后的3秒内，若再次调用本接口或
+> [ApplicationContext.restartApp()](arkts-ability-applicationcontext-c.md#restartapp)接口中的任一接口，系统将
+> 返回错误码16000064。
 
 **起始版本：** 23
 
@@ -2080,7 +2089,7 @@ restartApp(want: Want): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | Want类型参数，传入需要启动的UIAbility的信息，校验bundleName、abilityName。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | Want类型参数，传入需要启动的UIAbility的信息，校验bundleName、abilityName。 |
 
 **返回值：**
 
@@ -2377,11 +2386,17 @@ setColorMode(colorMode: ConfigurationConstant.ColorMode): void
 
 > **说明：**
 > 
-> - 调用该接口前，需要确保窗口已完成创建、且UIAbility对应的页面已完成加载，即在 &gt; [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)生命周期中通过 &gt; [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法加载页面之后调用。
+> - 调用该接口前，需要确保窗口已完成创建、且UIAbility对应的页面已完成加载，即在
+> [onWindowStageCreate()](arkts-ability-appabilityuiability-uiability-c.md#onwindowstagecreate)生命周期中通过
+> [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法加载页面之后调用。
 > 
 > - 调用该接口后会创建新的资源管理器对象，如果此前有缓存资源管理器，需要进行更新。
 > 
-> - 深浅色模式生效的优先级：UIAbility的深浅色模式 &gt; 应用的深浅色模式（ &gt; [ApplicationContext.setColorMode](arkts-ability-applicationcontext-c.md#setcolormode)）&gt; 系统的深浅色模 &gt; 式。
+> - 深浅色模式生效的优先级：UIAbility的深浅色模式
+> 应用的深浅色模式（
+> [ApplicationContext.setColorMode](arkts-ability-applicationcontext-c.md#setcolormode)）
+> 系统的深浅色模
+> 式。
 
 **起始版本：** 23
 
@@ -2701,7 +2716,10 @@ setMissionWindowIcon(windowIcon: image.PixelMap): Promise<void>
 
 > **说明：**
 > 
-> setMissionWindowIcon<!--Del-->、 &gt; [setMissionIcon](arkts-ability-uiabilitycontext-c-sys.md#setmissionicon) &gt; <!--DelEnd-->和 &gt; [setAbilityInstanceInfo](#setabilityinstanceinfo)之间不存在调用优先级关系。
+> setMissionWindowIcon<!--Del-->、
+> [setMissionIcon](arkts-ability-uiabilitycontext-c-sys.md#setmissionicon)
+> <!--DelEnd-->和
+> [setAbilityInstanceInfo](#setabilityinstanceinfo)之间不存在调用优先级关系。
 > 当多个接口被依次调用时，后一次调用的接口所设置的图标信息将覆盖之前调用接口所设置的内容，最终生效的图标以最后一次调用的接口为准。
 
 **起始版本：** 23
@@ -2774,11 +2792,12 @@ export default class EntryAbility extends UIAbility {
 setOnNewWantSkipScenarios(scenarios: int): Promise<void>
 ```
 
-在特定场景下拉起UIAbility时，如果不需要触发[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)生命周期回调，可以通过该接口设置。仅支持在主线 程调用。使用Promise异步回调。
+在特定场景下拉起UIAbility时，如果不需要触发[onNewWant](arkts-ability-appabilityuiability-uiability-c.md#onnewwant)生命周期回调，可以通过该接口设置。仅支持在主线 程调用。使用Promise异步回调。
 
 > **说明：**
 > 
-> 该接口通常用于[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)生命周期回调中。入参取值建议包含所有的 &gt; [Scenarios](arkts-ability-contextconstant-scenarios-e.md)枚举值。详见下方示例代码。
+> 该接口通常用于[onCreate](arkts-ability-appabilityuiability-uiability-c.md#oncreate)生命周期回调中。入参取值建议包含所有的
+> [Scenarios](arkts-ability-contextconstant-scenarios-e.md)枚举值。详见下方示例代码。
 
 **起始版本：** 23
 
@@ -3131,7 +3150,7 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动UIAbility的必要信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动UIAbility的必要信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当接口调用成功，err中code为0，message为空字符串；否则err会返回对应的错误码和错误信息。 |
 
 **错误码：**
@@ -3226,8 +3245,8 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动UIAbility的必要信息。 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 | 启动UIAbility所携带的参数。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动UIAbility的必要信息。 |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | 是 | 启动UIAbility所携带的参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当接口调用成功，err中code为0，message为空字符串；否则err会返回对应的错误码和错误信息。 |
 
 **错误码：**
@@ -3329,8 +3348,8 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动UIAbility的必要信息。 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 | 启动UIAbility所携带的参数。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动UIAbility的必要信息。 |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | 否 | 启动UIAbility所携带的参数。 |
 
 **返回值：**
 
@@ -3417,7 +3436,7 @@ export default class EntryAbility extends UIAbility {
 startAbilityByCall(want: Want): Promise<Caller>
 ```
 
-该接口用于获取[Caller](arkts-ability-app-ability-uiability-caller-i.md)通信对象，以便于与 [Callee](arkts-ability-app-ability-uiability-callee-i.md)进行通信。如果指定UIAbility未启动，则会将UIAbility启动至前台或后台。使用Promise异步回调。仅支持在主线程调 用。 该接口不支持拉起启动模式为[specified模式](../../../application-models/uiability-launch-type.md#specified启动模式)的UIAbility。
+该接口用于获取[Caller](arkts-ability-appabilityuiability-caller-i.md)通信对象，以便于与 [Callee](arkts-ability-appabilityuiability-callee-i.md)进行通信。如果指定UIAbility未启动，则会将UIAbility启动至前台或后台。使用Promise异步回调。仅支持在主线程调 用。 该接口不支持拉起启动模式为[specified模式](../../../application-models/uiability-launch-type.md#specified启动模式)的UIAbility。
 
 > **说明：**
 > 
@@ -3425,7 +3444,8 @@ startAbilityByCall(want: Want): Promise<Caller>
 > 
 > - 同设备场景下，要求调用方与目标方为不同应用，且调用方具备ohos.permission.ABILITY_BACKGROUND_COMMUNICATION权限（该权限仅系统应用可申请）。
 > 
-> - 此外如果应用需要在后台调用该接口，需要具备ohos.permission.START_ABILITIES_FROM_BACKGROUND（该权限仅系统应用可申请）。更多的组件启动规则详见 &gt; [组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
+> - 此外如果应用需要在后台调用该接口，需要具备ohos.permission.START_ABILITIES_FROM_BACKGROUND（该权限仅系统应用可申请）。更多的组件启动规则详见
+> [组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 > 
 > **说明：**
 > 
@@ -3449,13 +3469,13 @@ startAbilityByCall(want: Want): Promise<Caller>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 传入需要启动的UIAbility信息，包含abilityName、moduleName、bundleName、deviceId、parameters（可选）。将parameters中的' ohos.aafwk.param.callAbilityToForeground'配置为true可将UIAbility拉起到前台；否则表示将UIAbility拉起到后台。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 传入需要启动的UIAbility信息，包含abilityName、moduleName、bundleName、deviceId、parameters（可选）。将parameters中的' ohos.aafwk.param.callAbilityToForeground'配置为true可将UIAbility拉起到前台；否则表示将UIAbility拉起到后台。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[Caller](arkts-ability-app-ability-uiability-caller-i.md)&gt; | Promise对象，获取要通讯的caller对象。 |
+| Promise&lt;[Caller](arkts-ability-appabilityuiability-caller-i.md)&gt; | Promise对象，获取要通讯的caller对象。 |
 
 **错误码：**
 
@@ -3696,7 +3716,7 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
     abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void
 ```
 
-通过type隐式启动[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)。使用callback异步回调。仅支持在主线 程调用，仅支持处于前台的应用调用。
+通过type隐式启动[UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md)。使用callback异步回调。仅支持在主线 程调用，仅支持处于前台的应用调用。
 
 **起始版本：** 11
 
@@ -3766,7 +3786,7 @@ startAbilityByType(type: string, wantParam: Record<string, RecordData>,
     abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void
 ```
 
-通过type隐式启动[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)。使用callback异步回调。仅支持在主线 程调用，仅支持处于前台的应用调用。
+通过type隐式启动[UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md)。使用callback异步回调。仅支持在主线 程调用，仅支持处于前台的应用调用。
 
 **起始版本：** 23
 
@@ -3835,7 +3855,7 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
     abilityStartCallback: AbilityStartCallback): Promise<void>
 ```
 
-通过type隐式启动[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)。使用Promise异步回调。仅支持在主线程 调用，仅支持处于前台的应用调用。
+通过type隐式启动[UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md)。使用Promise异步回调。仅支持在主线程 调用，仅支持处于前台的应用调用。
 
 **起始版本：** 11
 
@@ -3909,7 +3929,7 @@ startAbilityByType(type: string, wantParam: Record<string, RecordData>,
     abilityStartCallback: AbilityStartCallback): Promise<void>
 ```
 
-通过type隐式启动[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)。使用Promise异步回调。仅支持在主线程 调用，仅支持处于前台的应用调用。
+通过type隐式启动[UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md)。使用Promise异步回调。仅支持在主线程 调用，仅支持处于前台的应用调用。
 
 **起始版本：** 23
 
@@ -4003,7 +4023,7 @@ startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的必要信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动Ability的必要信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | 是 | 回调函数，当接口调用成功，err中code为0，data为被拉起方退出时的结果码和数据；否则err会返回对应的错误码和错误信息。 |
 
 **错误码：**
@@ -4102,8 +4122,8 @@ startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的必要信息。 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 | 启动Ability所携带的参数。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动Ability的必要信息。 |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | 是 | 启动Ability所携带的参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | 是 | 回调函数，当接口调用成功，err中code为0，data为被拉起方退出时的结果码和数据；否则err会返回对应的错误码和错误信息。 |
 
 **错误码：**
@@ -4205,8 +4225,8 @@ startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的必要信息。 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 | 启动Ability所携带的参数。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动Ability的必要信息。 |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | 否 | 启动Ability所携带的参数。 |
 
 **返回值：**
 
@@ -4289,11 +4309,15 @@ export default class EntryAbility extends UIAbility {
 startAppServiceExtensionAbility(want: Want): Promise<void>
 ```
 
-启动 [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md) 实例。使用Promise异步回调。 该接口仅在PC/2in1设备中可正常调用，在其他设备中返回801错误码。
+启动 [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md) 实例。使用Promise异步回调。 该接口仅在PC/2in1设备中可正常调用，在其他设备中返回801错误码。
 
 > **说明：**
 > 
-> 该接口的调用方必须为 &gt; [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md) &gt; 所属应用或者在AppServiceExtensionAbility支持的应用清单（即 &gt; [extensionAbilities标签](../../../quick-start/module-configuration-file.md#extensionabilities标签)的 &gt; appIdentifierAllowList属性）中的应用。
+> 该接口的调用方必须为
+> [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md)
+> 所属应用或者在AppServiceExtensionAbility支持的应用清单（即
+> [extensionAbilities标签](../../../quick-start/module-configuration-file.md#extensionabilities标签)的
+> appIdentifierAllowList属性）中的应用。
 
 **起始版本：** 23
 
@@ -4307,7 +4331,7 @@ startAppServiceExtensionAbility(want: Want): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动 [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md) 的Want信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动 [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md) 的Want信息。 |
 
 **返回值：**
 
@@ -4381,15 +4405,20 @@ startSelfUIAbilityInCurrentProcess(want: Want, specifiedFlag: string, options?: 
 > 
 > - 只能冷启动目标UIAbility，如果目标UIAbility实例已经启动过，则启动失败。
 > 
-> - 通过该接口启动的UIAbility实例，将运行在调用方所在的进程中。其他关于目标UIAbility的进程相关的策略（例如在 &gt; [module.json5配置文件](../../../quick-start/module-configuration-file.md)中通过isolationProcess或isolationMode字段来指定进程），均 &gt; 不会生效。
+> - 通过该接口启动的UIAbility实例，将运行在调用方所在的进程中。其他关于目标UIAbility的进程相关的策略（例如在
+> [module.json5配置文件](../../../quick-start/module-configuration-file.md)中通过isolationProcess或isolationMode字段来指定进程），均
+> 不会生效。
 
 > **说明：**
 > 
 > 
-> -目标UIAability只能是冷启动的。如果目标UIAability的实例已经 &gt; 启动，启动失败。
+> -目标UIAability只能是冷启动的。如果目标UIAability的实例已经
+> 启动，启动失败。
 > 
 > 
-> -通过此API启动的UIAbility实例与调用方在同一进程中运行。其他流程相关 &gt; 目标UIAability的策略（例如通过**隔离进程**或**隔离模式**指定的策略） &gt; [module.json5](../../../quick-start/module-configuration-file.md)文件中的字段不生效。
+> -通过此API启动的UIAbility实例与调用方在同一进程中运行。其他流程相关
+> 目标UIAability的策略（例如通过**隔离进程**或**隔离模式**指定的策略）
+> [module.json5](../../../quick-start/module-configuration-file.md)文件中的字段不生效。
 
 **起始版本：** 23
 
@@ -4403,9 +4432,9 @@ startSelfUIAbilityInCurrentProcess(want: Want, specifiedFlag: string, options?: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的必要信息。只支持 [显式启动](../../../application-models/explicit-implicit-want-mappings.md#显式want匹配原理)，不支持 [隐式启动](../../../application-models/explicit-implicit-want-mappings.md#隐式want匹配原理)。 |
-| specifiedFlag | string | 是 | UIAbility的ID。此ID不得与任何已运行的ID重复 - 开发者自定义的UIAbility标识。该标识不能与已启动的UIAbility标识相同，否则将返回错误。 <br>**说明：**<br>当通过该接口拉起启动模式为 [specified](../../../application-models/uiability-launch-type.md#specified启动模式)的UIAbility时，将不会触发 [onAcceptWant](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onacceptwant)回调。 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 | 启动Ability所携带的参数。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动Ability的必要信息。只支持 [显式启动](../../../application-models/explicit-implicit-want-mappings.md#显式want匹配原理)，不支持 [隐式启动](../../../application-models/explicit-implicit-want-mappings.md#隐式want匹配原理)。 |
+| specifiedFlag | string | 是 | UIAbility的ID。此ID不得与任何已运行的ID重复 - 开发者自定义的UIAbility标识。该标识不能与已启动的UIAbility标识相同，否则将返回错误。 <br>**说明：**<br>当通过该接口拉起启动模式为 [specified](../../../application-models/uiability-launch-type.md#specified启动模式)的UIAbility时，将不会触发 [onAcceptWant](arkts-ability-appabilityabilitystage-abilitystage-c.md#onacceptwant)回调。 |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | 否 | 启动Ability所携带的参数。 |
 
 **返回值：**
 
@@ -4489,7 +4518,7 @@ startUIServiceExtensionAbility(want: Want): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动UIServiceExtensionAbility的必要信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动UIServiceExtensionAbility的必要信息。 |
 
 **返回值：**
 
@@ -4607,11 +4636,15 @@ struct Index {
 stopAppServiceExtensionAbility(want: Want): Promise<void>
 ```
 
-停止 [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md) 实例。使用Promise异步回调。 该接口仅在PC/2in1设备中可正常调用，在其他设备中返回801错误码。
+停止 [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md) 实例。使用Promise异步回调。 该接口仅在PC/2in1设备中可正常调用，在其他设备中返回801错误码。
 
 > **说明：**
 > 
-> 该接口的调用方必须为 &gt; [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md) &gt; 所属应用或者在AppServiceExtensionAbility支持的应用清单（即 &gt; [extensionAbilities标签](../../../quick-start/module-configuration-file.md#extensionabilities标签)的 &gt; appIdentifierAllowList属性）中的应用。
+> 该接口的调用方必须为
+> [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md)
+> 所属应用或者在AppServiceExtensionAbility支持的应用清单（即
+> [extensionAbilities标签](../../../quick-start/module-configuration-file.md#extensionabilities标签)的
+> appIdentifierAllowList属性）中的应用。
 
 **起始版本：** 23
 
@@ -4625,7 +4658,7 @@ stopAppServiceExtensionAbility(want: Want): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 停止 [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md) 的Want信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 停止 [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md) 的Want信息。 |
 
 **返回值：**
 
@@ -4693,7 +4726,8 @@ terminateSelf(callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 调用该接口后，任务中心的任务默认不会清理，如需清理，需要配置 &gt; [removeMissionAfterTerminate](../../../quick-start/module-configuration-file.md#abilities标签)为true。
+> 调用该接口后，任务中心的任务默认不会清理，如需清理，需要配置
+> [removeMissionAfterTerminate](../../../quick-start/module-configuration-file.md#abilities标签)为true。
 
 **起始版本：** 23
 
@@ -4780,7 +4814,8 @@ terminateSelf(): Promise<void>
 
 > **说明：**
 > 
-> 调用该接口后，任务中心的任务默认不会清理，如需清理，需要配置 &gt; [removeMissionAfterTerminate](../../../quick-start/module-configuration-file.md#abilities标签)为true。
+> 调用该接口后，任务中心的任务默认不会清理，如需清理，需要配置
+> [removeMissionAfterTerminate](../../../quick-start/module-configuration-file.md#abilities标签)为true。
 
 **起始版本：** 23
 
@@ -4866,7 +4901,8 @@ terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>)
 
 > **说明：**
 > 
-> 调用该接口后，任务中心的任务默认不会清理，如需清理，需要配置 &gt; [removeMissionAfterTerminate](../../../quick-start/module-configuration-file.md#abilities标签)为true。
+> 调用该接口后，任务中心的任务默认不会清理，如需清理，需要配置
+> [removeMissionAfterTerminate](../../../quick-start/module-configuration-file.md#abilities标签)为true。
 
 **起始版本：** 23
 
@@ -4947,7 +4983,8 @@ terminateSelfWithResult(parameter: AbilityResult): Promise<void>
 
 > **说明：**
 > 
-> 调用该接口后，任务中心的任务默认不会清理，如需清理，需要配置 &gt; [removeMissionAfterTerminate](../../../quick-start/module-configuration-file.md#abilities标签)为true。
+> 调用该接口后，任务中心的任务默认不会清理，如需清理，需要配置
+> [removeMissionAfterTerminate](../../../quick-start/module-configuration-file.md#abilities标签)为true。
 
 **起始版本：** 23
 
@@ -5051,7 +5088,7 @@ config: Configuration
 
 应用运行时的环境变量，如语言、颜色模式等。
 
-**类型：** [Configuration](arkts-ability-app-ability-configuration-configuration-i.md)
+**类型：** [Configuration](arkts-ability-appabilityconfiguration-configuration-i.md)
 
 **起始版本：** 23
 

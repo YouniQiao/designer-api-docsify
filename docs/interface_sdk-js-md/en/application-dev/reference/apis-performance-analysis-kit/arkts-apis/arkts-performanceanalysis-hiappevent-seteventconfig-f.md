@@ -20,7 +20,9 @@ Configuration items vary depending on events. Currently, only the following even
 
 > **NOTE：**
 > 
-> Since API version 26.0.0, all settings of this API are supported by &gt; [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md). You are advised to use &gt; [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md).
+> Since API version 26.0.0, all settings of this API are supported by
+> [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md). You are advised to use
+> [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md).
 
 **Since:** 23
 

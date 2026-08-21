@@ -32,6 +32,7 @@
     - [OH_HiDebug_ResProfilerConfig](capi-hidebug-oh-hidebug-resprofilerconfig.md)
     - [OH_HiDebug_ProfilingResult](capi-hidebug-oh-hidebug-profilingresult.md)
     - [HiDebug_Backtrace_Object__*](capi-hidebug-hidebug-backtrace-object--8h.md)
+    - [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md)
     - [HiAppEvent_AppEventInfo](capi-hiappevent-hiappevent-appeventinfo.md)
     - [HiAppEvent_AppEventGroup](capi-hiappevent-hiappevent-appeventgroup.md)
     - [ParamListNode*](capi-hiappevent-paramlistnode8h.md)

@@ -14,7 +14,7 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 declare function fdopenStreamSync(fd: number, mode: string): Stream
 ```
 
-Opens a stream based on an FD. This API returns the result synchronously. To close the stream, use **close()** of [Stream](arkts-corefile-file-fs-stream-i.md).
+Opens a stream based on an FD. This API returns the result synchronously. To close the stream, use **close()** of [Stream](arkts-corefile-filefs-stream-i.md).
 
 **Since:** 9
 
@@ -35,7 +35,7 @@ Opens a stream based on an FD. This API returns the result synchronously. To clo
 
 | Type | Description |
 | --- | --- |
-| [Stream](arkts-corefile-file-fs-stream-i.md) | File stream. |
+| [Stream](arkts-corefile-filefs-stream-i.md) | File stream. |
 
 **Error codes:**
 

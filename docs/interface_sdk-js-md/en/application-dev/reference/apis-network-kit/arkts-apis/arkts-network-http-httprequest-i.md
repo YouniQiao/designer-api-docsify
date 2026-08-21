@@ -58,9 +58,11 @@ Sets whether to automatically carry and share cookies. That is, whether to autom
 > 
 > (1) The default value is **false**, indicating that cookies are not automatically carried.
 
-> (2) If the value is changed from **false** to **true**, the setting takes effect when the **request** API is &gt; called to initiate a request, and cookies are automatically shared.
+> (2) If the value is changed from **false** to **true**, the setting takes effect when the **request** API is
+> called to initiate a request, and cookies are automatically shared.
 
-> (3) If the value is changed from **true** to **false**, the cookie sharing status stored in the current &gt; instance is cleared.
+> (3) If the value is changed from **true** to **false**, the cookie sharing status stored in the current
+> instance is cleared.
 
 **Since:** 26.0.0
 
@@ -667,11 +669,17 @@ Initiates an HTTP request to a given URL. This API uses an asynchronous callback
 
 > **NOTE：**
 > 
-> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set &gt; **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call &gt; [requestInStream](#requestinstream) to &gt; initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions &gt; earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold &gt; will fail to be received.
+> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set
+> **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call
+> [requestInStream](#requestinstream) to
+> initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions
+> earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold
+> will fail to be received.
 
 > (2) If you need to pass in cookies, add them to the **options** parameter.
 
-> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an &gt; HTTP request.
+> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an
+> HTTP request.
 
 **Since:** 23
 
@@ -775,11 +783,17 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 > **NOTE：**
 > 
-> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set &gt; **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call &gt; [requestInStream](#requestinstream) to &gt; initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions &gt; earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold &gt; will fail to be received.
+> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set
+> **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call
+> [requestInStream](#requestinstream) to
+> initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions
+> earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold
+> will fail to be received.
 
 > (2) If you need to pass in cookies, add them to the **options** parameter.
 
-> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an &gt; HTTP request.
+> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an
+> HTTP request.
 
 **Since:** 23
 
@@ -930,11 +944,17 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 > **NOTE：**
 > 
-> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set &gt; **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call &gt; [requestInStream](#requestinstream) to &gt; initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions &gt; earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold &gt; will fail to be received.
+> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set
+> **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call
+> [requestInStream](#requestinstream) to
+> initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions
+> earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold
+> will fail to be received.
 
 > (2) If you need to pass in cookies, add them to the **options** parameter.
 
-> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an &gt; HTTP request.
+> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an
+> HTTP request.
 
 **Since:** 23
 
@@ -1432,7 +1452,8 @@ Initiates an HTTP network request based on the URL and related configuration opt
 
 > (2) If you need to pass in cookies, add them to the **options** parameter.
 
-> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an &gt; HTTP request.
+> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an
+> HTTP request.
 
 > (4) This API is synchronous and blocks the current thread until an HTTP response or error code is returned.
 

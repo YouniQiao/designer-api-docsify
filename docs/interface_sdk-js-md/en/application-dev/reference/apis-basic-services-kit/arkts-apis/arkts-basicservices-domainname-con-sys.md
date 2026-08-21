@@ -8,7 +8,7 @@ const USER_SECURITY: string
 
 Provide the domain name for user security property.
 
-&lt;p&gt;This constants is a domain name for user security level key.
+<p>This constants is a domain name for user security level key.
 
 **Since:** 23
 

@@ -16,7 +16,9 @@ function getShortcutInfos(bundleName: string, callback: AsyncCallback<Array<Shor
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用 &gt; [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md)
+> 替代。
 
 **起始版本：** 8
 
@@ -50,7 +52,9 @@ function getShortcutInfos(bundleName: string): Promise<Array<ShortcutInfo>>
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用 &gt; [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md)
+> 替代。
 
 **起始版本：** 8
 

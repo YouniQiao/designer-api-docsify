@@ -4,7 +4,10 @@ This module encapsulates the data and attributes carried when a common event is 
 
 > **NOTE：**
 > 
-> If there is no restriction, any app can subscribe to common events and read the &gt; information carried by the event. In this case, sensitive information should not be &gt; carried in common events. The **subscriberPermissions** and **bundleName** parameters &gt; of this module can be used to restrict the receiving scope of common events.
+> If there is no restriction, any app can subscribe to common events and read the
+> information carried by the event. In this case, sensitive information should not be
+> carried in common events. The **subscriberPermissions** and **bundleName** parameters
+> of this module can be used to restrict the receiving scope of common events.
 
 **Since:** 23
 

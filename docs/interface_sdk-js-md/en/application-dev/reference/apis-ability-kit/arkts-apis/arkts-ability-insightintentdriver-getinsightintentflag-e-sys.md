@@ -4,12 +4,35 @@ Enumerates the flags of intent information ([InsightIntentInfo](arkts-ability-in
 
 > **NOTE：**
 > 
-> - For intents developed using a configuration file, the full and brief information queried through the preceding &gt; APIs are the same.
+> - For intents developed using a configuration file, the full and brief information queried through the preceding
+> APIs are the same.
 > 
-> - For intents developed using a decorator, the full and brief information queried through the preceding APIs are &gt; different, as described below.
+> - For intents developed using a decorator, the full and brief information queried through the preceding APIs are
+> different, as described below.
 > 
-> Table 1 Differences between full intent information and brief intent information &gt;
-> | Name| Included in Full Intent Information| Included in Brief Intent Information| &gt; | -------- | -------- | -------- | &gt; | bundleName | Yes| Yes| &gt; | moduleName | Yes| Yes| &gt; | intentName | Yes| Yes| &gt; | domain | Yes| No| &gt; | intentVersion | Yes| No| &gt; | displayName | Yes| Yes| &gt; | displayDescription | Yes| No| &gt; | schema | Yes| No| &gt; | icon | Yes| No| &gt; | llmDescription | Yes| No| &gt; | keywords | Yes| No| &gt; | intentType | Yes| Yes| &gt; | subIntentInfo | Yes| Yes| &gt; | parameters | Yes| Yes| &gt; | entities | No| No| &gt; | developType&lt;sup&gt;23+&lt;/sup&gt; | Yes| Yes| &gt; | subIntentInfoForConfiguration&lt;sup&gt;23+&lt;/sup&gt; | No| No|
+> Table 1 Differences between full intent information and brief intent information
+> 
+> | Name| Included in Full Intent Information| Included in Brief Intent Information|
+> | -------- | -------- | -------- |
+> | bundleName | Yes| Yes|
+> | moduleName | Yes| Yes|
+> | intentName | Yes| Yes|
+> | domain | Yes| No|
+> | intentVersion | Yes| No|
+> | displayName | Yes| Yes|
+> | displayDescription | Yes| No|
+> | schema | Yes| No|
+> | icon | Yes| No|
+> | llmDescription | Yes| No|
+> | keywords | Yes| No|
+> | intentType | Yes| Yes|
+> | subIntentInfo | Yes| Yes|
+> | parameters | Yes| Yes|
+> | entities | No| No|
+> | developType&lt;sup&gt;23+&lt;/sup
+&gt; | Yes| Yes|
+> | subIntentInfoForConfiguration&lt;sup&gt;23+&lt;/sup
+&gt; | No| No|
 
 **Since:** 23
 

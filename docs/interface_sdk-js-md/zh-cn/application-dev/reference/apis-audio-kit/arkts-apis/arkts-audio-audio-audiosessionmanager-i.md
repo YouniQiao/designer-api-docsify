@@ -876,11 +876,14 @@ selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>
 > 
 > - 本接口不适用于VoIP通话录音，即[SourceType](arkts-audio-audio-sourcetype-e.md)为SOURCE_TYPE_VOICE_COMMUNICATION的场景不适用。
 > 
-> - 本接口调用前需要先调用[getAvailableDevices](#getavailabledevices)接口查询到当前可用输入设备列表，从列表中选择输入 &gt; 设备。
+> - 本接口调用前需要先调用[getAvailableDevices](#getavailabledevices)接口查询到当前可用输入设备列表，从列表中选择输入
+> 设备。
 > 
 > - 当系统中存在其他更高优先级的应用录音流时，实际使用的输入设备会跟随其他高优先级应用所选的输入设备。
 > 
-> - 应用程序可以监听 &gt; [currentInputDeviceChanged](#onaudiosessiondeactivated) &gt; 事件来获得实际的输入设备。
+> - 应用程序可以监听
+> [currentInputDeviceChanged](#onaudiosessiondeactivated)
+> 事件来获得实际的输入设备。
 
 **起始版本：** 24
 
@@ -982,7 +985,9 @@ setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPre
 > 
 > - 当系统中存在其他更高优先级的应用录音流时，实际使用的输入设备会跟随其他高优先级应用所选的输入设备。
 > 
-> - 应用程序可以监听 &gt; [currentInputDeviceChanged](#onaudiosessiondeactivated) &gt; 事件来获得实际的输入设备。
+> - 应用程序可以监听
+> [currentInputDeviceChanged](#onaudiosessiondeactivated)
+> 事件来获得实际的输入设备。
 
 **起始版本：** 24
 
@@ -1061,9 +1066,12 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 
 > **说明：**
 > 
-> - 本接口适用于以下情况：当设置的[AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md)为VoIP场景时，激活AudioSession后立即生效。若 &gt; [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md)为非VoIP场景，激活AudioSession时不会生效，仅在启动播放的 &gt; [StreamUsage](arkts-audio-audio-streamusage-e.md)为语音消息、VoIP语音通话或VoIP视频通话时才生效。支持听筒、扬声器和系统默认设备。
+> - 本接口适用于以下情况：当设置的[AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md)为VoIP场景时，激活AudioSession后立即生效。若
+> [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md)为非VoIP场景，激活AudioSession时不会生效，仅在启动播放的
+> [StreamUsage](arkts-audio-audio-streamusage-e.md)为语音消息、VoIP语音通话或VoIP视频通话时才生效。支持听筒、扬声器和系统默认设备。
 > 
-> - 本接口允许在AudioSessionManager创建后随时调用，系统会记录应用设置的默认本机内置发声设备。但只有激活AudioSession后才能生效。应用启动播放时，若外接设备如蓝牙耳机或有线耳机已接入，系统优先从 &gt; 外接设备发声。否则，系统遵循应用设置的默认本机内置发声设备。
+> - 本接口允许在AudioSessionManager创建后随时调用，系统会记录应用设置的默认本机内置发声设备。但只有激活AudioSession后才能生效。应用启动播放时，若外接设备如蓝牙耳机或有线耳机已接入，系统优先从
+> 外接设备发声。否则，系统遵循应用设置的默认本机内置发声设备。
 
 **起始版本：** 23
 
@@ -1103,7 +1111,8 @@ setMediaOutputDevice(deviceType: DeviceType): Promise<void>
 > 
 > - 本接口仅适用于媒体播放场景，并且会作用于应用内发起的所有媒体流。
 > 
-> - 若存在更高优先级的并发播放流或用户手动选择输出设备，则应用程序实际使用的输出设备将与本接口设置的设备不同。应用程序可通过监听 &gt; [CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)事件获取当前活跃的输出设备。
+> - 若存在更高优先级的并发播放流或用户手动选择输出设备，则应用程序实际使用的输出设备将与本接口设置的设备不同。应用程序可通过监听
+> [CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)事件获取当前活跃的输出设备。
 > 
 > - 当应用程序需要清除之前通过接口设置的扬声器输出配置时，可通过调用接口将媒体输出设备设置为DEFAULT（系统默认设备）来实现。该设置仅在应用程序运行期间有效，当应用程序退出时，此接口的设置将自动清除。
 

@@ -4,7 +4,8 @@ The module provides element name information, which can be obtained through Cont
 
 > **NOTE：**
 > 
-> The APIs of this module have been deprecated since API version 9. You are advised to use &gt; [bundleManager-ElementName](#elementname) instead.
+> The APIs of this module have been deprecated since API version 9. You are advised to use
+> [bundleManager-ElementName](#elementname) instead.
 
 **Since:** 7
 

@@ -20,7 +20,11 @@ Ensure that the target window can gain focus (configurable by calling [setWindow
 
 > **NOTE：**
 > 
-> Before calling **shiftAppWindowFocus()**, ensure that the target window has called &gt; [loadContent()](arkts-arkui-window-window-i.md#loadcontent) &gt; or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent) &gt; and these operations have been effective. Otherwise, an invisible window may gain focus, causing function &gt; exceptions or affecting user experience.
+> Before calling **shiftAppWindowFocus()**, ensure that the target window has called
+> [loadContent()](arkts-arkui-window-window-i.md#loadcontent)
+> or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent)
+> and these operations have been effective. Otherwise, an invisible window may gain focus, causing function
+> exceptions or affecting user experience.
 
 **Since:** 23
 

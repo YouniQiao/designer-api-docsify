@@ -35,7 +35,7 @@ export declare function ArcListItem(
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md) |  |
+| [ArcListItemAttribute](arkts-arkui-arkuiarclist-arclistitemattribute-i.md) |  |
 
 
 ## ArcListItem
@@ -64,12 +64,12 @@ export declare function ArcListItem(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | CustomBuilderT&lt;[ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md)&gt; | 是 | 创建ArcListItem的样式 |
+| style_ | CustomBuilderT&lt;[ArcListItemAttribute](arkts-arkui-arkuiarclist-arclistitemattribute-i.md)&gt; | 是 | 创建ArcListItem的样式 |
 | content_ | CustomBuilder | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md) | ArcListItem的属性。 |
+| [ArcListItemAttribute](arkts-arkui-arkuiarclist-arclistitemattribute-i.md) | ArcListItem的属性。 |
 

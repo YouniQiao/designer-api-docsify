@@ -16,7 +16,9 @@ Sets a watermark policy for a specified application of a specified user. Current
 
 > **NOTE：**
 > 
-> 1. This API is intended for setting watermarks on third-party applications in enterprise scenarios to reduce the &gt; risk of information leakage. You are not advised to set watermarks for system applications (such as the home &gt; screen application), as unknown exceptions may occur.
+> 1. This API is intended for setting watermarks on third-party applications in enterprise scenarios to reduce the
+> risk of information leakage. You are not advised to set watermarks for system applications (such as the home
+> screen application), as unknown exceptions may occur.
 > 
 > 2. The watermark image will be tiled repeatedly to cover the entire application interface.
 
@@ -34,7 +36,7 @@ Sets a watermark policy for a specified application of a specified user. Current
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | bundleName | string | Yes | Bundle name of the application for which the watermark is set. |
 | source | string \| image.PixelMap | Yes | string** indicates the image path, which is the path that the app has the permission to access, such as the app sandbox path. For details about the mapping between the app sandbox path and the actual physical path, see [Mappings Between App Sandbox Paths and Physical Paths](../../../file-management/app-sandbox-directory.md#mappings-between-application-sandbox-paths-and-physical-paths). <br>**image.PixelMap** indicates the image object. <br>The size of the image pixel data cannot exceed 500 KB. <br>The size of the image pixel data is calculated as follows: Image width (pixels) × Image height (pixels) × Number of bytes per pixel (typically 4). For example, the size of a 100 × 100 image is 100 × 100 × 4 = 40,000 bytes. |
 | accountId | number | Yes | User ID. You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of **@ohos.account.osAccount** to obtain the user ID. |
@@ -82,11 +84,22 @@ Sets a watermark policy for a specified application of a specified user. Current
 
 > **NOTE：**
 > 
-> This API is intended for setting watermarks on third-party applications in enterprise scenarios to reduce the &gt; risk of information leakage. You are not advised to set watermarks for system applications (such as the home &gt; screen application), as unknown exceptions may occur.
+> This API is intended for setting watermarks on third-party applications in enterprise scenarios to reduce the
+> risk of information leakage. You are not advised to set watermarks for system applications (such as the home
+> screen application), as unknown exceptions may occur.
 > 
-> The row and column parameters in the watermark [properties](arkts-mdm-securitymanager-watermarkproperties-i.md) must be &gt; integers in the range [1, 255]. If a value less than 1 or greater than 255 is passed, the API returns error code &gt; 9200012.
+> The row and column parameters in the watermark [properties](arkts-mdm-securitymanager-watermarkproperties-i.md) must be
+> integers in the range [1, 255]. If a value less than 1 or greater than 255 is passed, the API returns error code
+> 9200012.
 > 
-> When both the row count and column count are set to **1**, a single watermark image is displayed at the center of &gt; the screen. When the row count is set to **m** and the column count to **n**, m × n watermark images are &gt; displayed in an m-by-n grid layout. If the specified row and column counts are too large for the grid layout to &gt; fit within the window, the watermark will be repeatedly tiled across the entire application window, starting from &gt; the top-left corner. Any part of the watermark image that exceeds the right or bottom edges of the window will be &gt; clipped. (For example, for a screen size of 1260 × 2720 pixels and a watermark image of 100 × 100 pixels, if the &gt; row count exceeds 27 or the column count exceeds 12, the watermark will be repeatedly tiled to cover the entire &gt; application window.)
+> When both the row count and column count are set to **1**, a single watermark image is displayed at the center of
+> the screen. When the row count is set to **m** and the column count to **n**, m × n watermark images are
+> displayed in an m-by-n grid layout. If the specified row and column counts are too large for the grid layout to
+> fit within the window, the watermark will be repeatedly tiled across the entire application window, starting from
+> the top-left corner. Any part of the watermark image that exceeds the right or bottom edges of the window will be
+> clipped. (For example, for a screen size of 1260 × 2720 pixels and a watermark image of 100 × 100 pixels, if the
+> row count exceeds 27 or the column count exceeds 12, the watermark will be repeatedly tiled to cover the entire
+> application window.)
 
 **Since:** 26.0.0
 
@@ -102,7 +115,7 @@ Sets a watermark policy for a specified application of a specified user. Current
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | bundleName | string | Yes | Bundle name of the application for which the watermark is set. |
 | source | string \| image.PixelMap | Yes | string** indicates the image path, which is the path that the app has the permission to access, such as the app sandbox path. For details about the mapping between the app sandbox path and the actual physical path, see [Mappings Between App Sandbox Paths and Physical Paths](../../../file-management/app-sandbox-directory.md#mappings-between-application-sandbox-paths-and-physical-paths). <br>**image.PixelMap** indicates the image object. <br>The size of the image pixel data cannot exceed 500 KB. <br>The size of the image pixel data is calculated as follows: Image width (pixels) × Image height (pixels) × Number of bytes per pixel (typically 4). For example, the size of a 100 × 100 image is 100 × 100 × 4 = 40,000 bytes. |
 | accountId | number | Yes | User ID, which must be greater than or equal to 0. You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of **@ohos.account.osAccount** to obtain the user ID. |

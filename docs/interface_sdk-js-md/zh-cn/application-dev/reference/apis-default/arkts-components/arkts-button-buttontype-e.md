@@ -4,19 +4,25 @@
 
 > **说明：**
 > 
-> - 按钮圆角通过 &gt; 通用属性borderRadius设置。
+> - 按钮圆角通过
+> 通用属性borderRadius设置。
 > 
 > - 当按钮类型为Capsule时，borderRadius设置不生效，按钮圆角始终为宽、高中较小值的一半。
 > 
-> - 当按钮类型为Circle时，若同时设置了宽和高，则borderRadius不生效，且按钮半径为宽高中较小值的一半；若只设置宽、高中的一个，则borderRadius不生效，且按钮半径为所设宽或所设高值的一半；若不设置宽高，则 &gt; borderRadius为按钮半径；若borderRadius的值为负，则borderRadius的值按照0处理。
+> - 当按钮类型为Circle时，若同时设置了宽和高，则borderRadius不生效，且按钮半径为宽高中较小值的一半；若只设置宽、高中的一个，则borderRadius不生效，且按钮半径为所设宽或所设高值的一半；若不设置宽高，则
+> borderRadius为按钮半径；若borderRadius的值为负，则borderRadius的值按照0处理。
 > 
-> - 按钮文本通过[fontSize](arkts-button-attribute.md#fontsize)、[fontColor](arkts-button-attribute.md#fontcolor)、[fontStyle](arkts-button-attribute.md#fontstyle)、 &gt; [fontFamily](arkts-button-attribute.md#fontfamily)、[fontWeight](arkts-button-attribute.md#fontweight)进行设置。
+> - 按钮文本通过[fontSize](arkts-button-attribute.md#fontsize)、[fontColor](arkts-button-attribute.md#fontcolor)、[fontStyle](arkts-button-attribute.md#fontstyle)、
+> [fontFamily](arkts-button-attribute.md#fontfamily)、[fontWeight](arkts-button-attribute.md#fontweight)进行设置。
 > 
 > - 设置颜色渐变需先设置backgroundColor为透明色。
 > 
-> - 在不设置borderRadius时，圆角矩形按钮的圆角大小保持默认值不变。圆角大小不会随按钮高度变化而变化，和controlSize属性有关，controlSize为NORMAL时圆角大小20vp，controlSize为 &gt; SMALL时圆角大小14vp。
+> - 在不设置borderRadius时，圆角矩形按钮的圆角大小保持默认值不变。圆角大小不会随按钮高度变化而变化，和controlSize属性有关，controlSize为NORMAL时圆角大小20vp，controlSize为
+> SMALL时圆角大小14vp。
 > 
-> - 设置Button的border时，会有默认的 &gt; borderRadius值。如果同时使用 &gt; `border`和`borderRadius`，需将`borderRadius`放在`border`之后，以确保`borderRadius`不会被`border`中的默认`radius`覆盖。
+> - 设置Button的border时，会有默认的
+> borderRadius值。如果同时使用
+> `border`和`borderRadius`，需将`borderRadius`放在`border`之后，以确保`borderRadius`不会被`border`中的默认`radius`覆盖。
 
 **起始版本：** 23
 

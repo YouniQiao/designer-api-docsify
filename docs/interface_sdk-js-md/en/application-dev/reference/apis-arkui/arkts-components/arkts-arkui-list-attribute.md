@@ -105,7 +105,9 @@ When **cachedCount** is set for the list, the system preloads and lays out the *
 
 > **NOTE：**
 > 
-> You are advised to set cachedCount to n/2 (n indicates the number of list items displayed on one screen). You &gt; also need to consider other factors to balance the experience and memory usage. For best practices, see &gt; [Cache List Items](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-best-practices-long-list#section11667144010222).
+> You are advised to set cachedCount to n/2 (n indicates the number of list items displayed on one screen). You
+> also need to consider other factors to balance the experience and memory usage. For best practices, see
+> [Cache List Items](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-best-practices-long-list#section11667144010222).
 
 **Since:** 14
 
@@ -144,7 +146,13 @@ Default behavior: The **count** parameter is of the **number** type by default, 
 
 > **NOTE：**
 > 
-> You are advised to set cachedCount to n/2 (n indicates the number of list items displayed on one screen). You &gt; also need to consider other factors to balance the experience and memory usage. Starting from API version 22, &gt; setting both minimum and maximum cache counts is supported. The maximum cache count can be set to a moderately &gt; higher value, such as twice the minimum cache count, to utilize the UI thread's idle time for node creation. This &gt; reduces the need to create nodes during scrolling for preloading and enhances scrolling smoothness. For best &gt; practices, see &gt; [Cache List Items](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-best-practices-long-list#section11667144010222).
+> You are advised to set cachedCount to n/2 (n indicates the number of list items displayed on one screen). You
+> also need to consider other factors to balance the experience and memory usage. Starting from API version 22,
+> setting both minimum and maximum cache counts is supported. The maximum cache count can be set to a moderately
+> higher value, such as twice the minimum cache count, to utilize the UI thread's idle time for node creation. This
+> reduces the need to create nodes during scrolling for preloading and enhances scrolling smoothness. For best
+> practices, see
+> [Cache List Items](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-best-practices-long-list#section11667144010222).
 
 **Since:** 22
 
@@ -175,14 +183,18 @@ Sets whether to enable the chain linkage effect for the current **List** compone
 
 > **NOTE：**
 > 
-> - The chain linkage effect refers to the interaction where, during finger swiping, the dragged **ListItem** acts &gt; as the driving object, while adjacent items are driven objects. The driving object drives the linkage of the &gt; driven objects, following a physics-based spring animation.
+> - The chain linkage effect refers to the interaction where, during finger swiping, the dragged **ListItem** acts
+> as the driving object, while adjacent items are driven objects. The driving object drives the linkage of the
+> driven objects, following a physics-based spring animation.
 > 
-> - The driving effect of the chain linkage effect is reflected in the spacing between **ListItem**s. The spacing &gt; in the static state can be set by using the **space** parameter of the **List** component. If the **space**
+> - The driving effect of the chain linkage effect is reflected in the spacing between **ListItem**s. The spacing
+> in the static state can be set by using the **space** parameter of the **List** component. If the **space**
 > parameter is not set and the chain linkage effect is enabled, the spacing is 20 vp by default.
 > 
 > - After the chain linkage effect is enabled, the divider of the **List** component is not displayed.
 > 
-> - The chain linkage effect takes effect only when the **List** component is in single-column mode and the edge &gt; effect is of the **EdgeEffect.Spring** type.
+> - The chain linkage effect takes effect only when the **List** component is in single-column mode and the edge
+> effect is of the **EdgeEffect.Spring** type.
 
 **Since:** 7
 
@@ -210,11 +222,22 @@ Sets the size information of the child components of a **List** component along 
 
 > **NOTE：**
 > 
-> - This attribute provides the **List** component with the size of all child components in the main-axis &gt; direction. This ensures that the **List** component can maintain the accuracy of the scrolling position in &gt; scenarios such as varying main-axis sizes among child components, adding or removing child components, or using &gt; [scrollToIndex. In this way, scrollTo can accurately &gt; jump to the specified position, currentOffset can obtain the accurate scroll &gt; position, and the built-in scroll bar can be smoothly moved without jumps.
+> - This attribute provides the **List** component with the size of all child components in the main-axis
+> direction. This ensures that the **List** component can maintain the accuracy of the scrolling position in
+> scenarios such as varying main-axis sizes among child components, adding or removing child components, or using
+> [scrollToIndex. In this way, scrollTo can accurately
+> jump to the specified position, currentOffset can obtain the accurate scroll
+> position, and the built-in scroll bar can be smoothly moved without jumps.
 > 
-> - If a child component is **ListItemGroup**, the overall size of **ListItemGroup** in the main-axis direction &gt; needs to be accurately calculated based on the column count of **ListItemGroup**, the spacing between list items &gt; in **ListItemGroup** in the main-axis direction, and the size of the header, footer, and **ListItem** components &gt; in **ListItemGroup**. This calculated size must then be passed to the **List** component.
+> - If a child component is **ListItemGroup**, the overall size of **ListItemGroup** in the main-axis direction
+> needs to be accurately calculated based on the column count of **ListItemGroup**, the spacing between list items
+> in **ListItemGroup** in the main-axis direction, and the size of the header, footer, and **ListItem** components
+> in **ListItemGroup**. This calculated size must then be passed to the **List** component.
 > 
-> - If a child component contains **ListItemGroup** components, the &gt; childrenMainSize attribute must be set for each &gt; **ListItemGroup** component. The **List** component and each **ListItemGroup** component must be bound to a &gt; **ChildrenMainSize** object through the **childrenMainSize** attribute in one-to-one mode.
+> - If a child component contains **ListItemGroup** components, the
+> childrenMainSize attribute must be set for each
+> **ListItemGroup** component. The **List** component and each **ListItemGroup** component must be bound to a
+> **ChildrenMainSize** object through the **childrenMainSize** attribute in one-to-one mode.
 > 
 > - For a multi-column list where child components are generated using **LazyForEach**, ensure that **LazyForEach**
 > generates either all **ListItemGroup** components or all **ListItem** components.
@@ -381,7 +404,9 @@ Sets the effect used when the scroll boundary is reached.
 
 > **NOTE：**
 > 
-> By default, this component can produce a bounce effect only when there is more than one screen of content. To &gt; produce a bounce effect when there is less than one screen of content, set the **options** parameter of the &gt; **edgeEffect** attribute to **{ alwaysEnabled: true }**.
+> By default, this component can produce a bounce effect only when there is more than one screen of content. To
+> produce a bounce effect when there is less than one screen of content, set the **options** parameter of the
+> **edgeEffect** attribute to **{ alwaysEnabled: true }**.
 
 **Since:** 7
 
@@ -1206,7 +1231,9 @@ Sets whether to pin the header to the top or the footer to the bottom in the lis
 
 > **NOTE：**
 > 
-> Occasionally, after **sticky** is set, floating-point calculation precision may result in small gaps appearing &gt; during scrolling. To address this issue, you can apply the pixelRound attribute &gt; to the current component, which rounds down the pixel values and help eliminate the gaps.
+> Occasionally, after **sticky** is set, floating-point calculation precision may result in small gaps appearing
+> during scrolling. To address this issue, you can apply the pixelRound attribute
+> to the current component, which rounds down the pixel values and help eliminate the gaps.
 
 **Since:** 9
 

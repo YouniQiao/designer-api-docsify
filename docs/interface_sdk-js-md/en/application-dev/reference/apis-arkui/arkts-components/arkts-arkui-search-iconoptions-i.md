@@ -38,7 +38,7 @@ size?: Length
 
 Set the icon size
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>It cannot be set in percentage. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>It cannot be set in percentage. </p>
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

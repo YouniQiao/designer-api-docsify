@@ -28,7 +28,7 @@ function createAVRecorder(callback: AsyncCallback<AVRecorder>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVRecorder](arkts-media-multimedia-media-avrecorder-i.md)&gt; | 是 | 回调函数，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVRecorder](arkts-media-multimediamedia-avrecorder-i.md)&gt; | 是 | 回调函数，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
 
 **错误码：**
 
@@ -71,7 +71,7 @@ function createAVRecorder(callback: AsyncCallback<AVRecorder | undefined>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVRecorder](arkts-media-multimedia-media-avrecorder-i.md) \| undefined&gt; | 是 | 回调函数，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVRecorder](arkts-media-multimediamedia-avrecorder-i.md) \| undefined&gt; | 是 | 回调函数，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
 
 **错误码：**
 
@@ -104,7 +104,7 @@ function createAVRecorder(): Promise<AVRecorder>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AVRecorder](arkts-media-multimedia-media-avrecorder-i.md)&gt; | Promise对象，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
+| Promise&lt;[AVRecorder](arkts-media-multimediamedia-avrecorder-i.md)&gt; | Promise对象，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
 
 **错误码：**
 
@@ -148,7 +148,7 @@ function createAVRecorder(): Promise<AVRecorder | undefined>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AVRecorder](arkts-media-multimedia-media-avrecorder-i.md) \| undefined&gt; | Promise对象，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
+| Promise&lt;[AVRecorder](arkts-media-multimediamedia-avrecorder-i.md) \| undefined&gt; | Promise对象，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
 
 **错误码：**
 

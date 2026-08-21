@@ -16,7 +16,9 @@ Creates a timer. This API uses an asynchronous callback to return the result.
 
 > **NOTE：**
 > 
-> This API must be used together with &gt; [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md). Otherwise &gt; , memory leakage occurs.
+> This API must be used together with
+> [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md). Otherwise
+> , memory leakage occurs.
 
 **Since:** 23
 
@@ -74,7 +76,9 @@ Creates a timer. This API uses a promise to return the timer ID.
 
 > **NOTE：**
 > 
-> This API must be used together with &gt; [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md). Otherwise &gt; , memory leakage occurs.
+> This API must be used together with
+> [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md). Otherwise
+> , memory leakage occurs.
 
 **Since:** 23
 

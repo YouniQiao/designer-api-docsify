@@ -156,7 +156,12 @@ Inserts a direct rule, specifying that URLs matching the schemeFilter condition 
 
 > **NOTE：**
 > 
-> - Both [insertBypassRule](../../apis-default/arkts-apis/arkts-webview-proxyconfig-c.md#insertbypassrule) and &gt; [bypassHostnamesWithoutPeriod](../../apis-default/arkts-apis/arkts-webview-proxyconfig-c.md#bypasshostnameswithoutperiod) can also implement &gt; direct URL connection. The difference lies in the matching dimension: this method matches by protocol type &gt; through schemeFilter; insertBypassRule matches by URL pattern through a bypassRule string; &gt; bypassHostnamesWithoutPeriod requires no parameters and automatically enables direct connection for hostnames &gt; without a period. You can choose the appropriate method based on the URL range that needs direct connection.
+> - Both [insertBypassRule](../../apis-default/arkts-apis/arkts-webview-proxyconfig-c.md#insertbypassrule) and
+> [bypassHostnamesWithoutPeriod](../../apis-default/arkts-apis/arkts-webview-proxyconfig-c.md#bypasshostnameswithoutperiod) can also implement
+> direct URL connection. The difference lies in the matching dimension: this method matches by protocol type
+> through schemeFilter; insertBypassRule matches by URL pattern through a bypassRule string;
+> bypassHostnamesWithoutPeriod requires no parameters and automatically enables direct connection for hostnames
+> without a period. You can choose the appropriate method based on the URL range that needs direct connection.
 
 **Since:** 15
 

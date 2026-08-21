@@ -4,7 +4,8 @@
 
 > **说明：**
 > 
-> - 本模块功能依赖UI的执行上下文，不可在[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的地方使用，参见 &gt; [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)说明。
+> - 本模块功能依赖UI的执行上下文，不可在[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的地方使用，参见
+> [UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)说明。
 > 
 > - 示例效果请以真机运行为准，当前 DevEco Studio预览器不支持。
 

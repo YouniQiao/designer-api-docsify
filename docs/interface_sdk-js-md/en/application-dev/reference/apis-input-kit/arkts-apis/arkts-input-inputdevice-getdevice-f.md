@@ -17,7 +17,8 @@ Obtains the information about the input device with the specified ID. This API u
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. Use &gt; [inputDevice.getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md) instead.
+> This API is supported since API version 8 and deprecated since API version 9. Use
+> [inputDevice.getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md) instead.
 
 **Since:** 8
 
@@ -74,7 +75,8 @@ Obtains the information about the input device with the specified ID. This API u
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. Use &gt; [inputDevice.getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md) instead.
+> This API is supported since API version 8 and deprecated since API version 9. Use
+> [inputDevice.getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md) instead.
 
 **Since:** 8
 

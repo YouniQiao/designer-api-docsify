@@ -29,7 +29,7 @@ function startShortcut(shortcutInfo: ShortcutInfo, options?: StartOptions): Prom
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | shortcutInfo | ShortcutInfo | 是 | 应用的快捷方式信息。 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 | 启动参数选项，用于指定任务切到前台时的窗口模式，设备ID等。 |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | 否 | 启动参数选项，用于指定任务切到前台时的窗口模式，设备ID等。 |
 
 **返回值：**
 

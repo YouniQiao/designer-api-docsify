@@ -28,7 +28,7 @@ Sets a browser sub-policy for a specified browser. This API is applicable to sce
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | appId | string | Yes | Application ID, which uniquely identifies an application. This ID is used to specify the browser. For details, see [What Is appid](../../../quick-start/common-problem-of-application.md#what-is-appid). |
 | policyName | string | Yes | Browser sub-policy name, which is agreed upon by the API caller and the specified browser. If the value is an empty string, the browser policy corresponding to **appId** is to be set. |
 | policyValue | string | Yes | Browser sub-policy value, which is agreed upon by the API caller and the specified browser. If the value is an empty string, the policy corresponding to the policy name is removed. |

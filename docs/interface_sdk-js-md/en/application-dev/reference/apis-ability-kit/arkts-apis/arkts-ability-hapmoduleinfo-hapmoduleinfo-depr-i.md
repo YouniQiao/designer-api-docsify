@@ -4,7 +4,8 @@ The HapModuleInfo module provides information about an HAP module. Unless otherw
 
 > **NOTE：**
 > 
-> The APIs of this module have been deprecated since API version 9. You are advised to use &gt; [bundleManager-HapModuleInfo](#hapmoduleinfo) instead.
+> The APIs of this module have been deprecated since API version 9. You are advised to use
+> [bundleManager-HapModuleInfo](#hapmoduleinfo) instead.
 
 **Since:** 7
 

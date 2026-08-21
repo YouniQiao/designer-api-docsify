@@ -17,7 +17,7 @@ function enableHotspot(): boolean
 
 使能热点。
 
-&lt;p&gt;该方法是异步的。使能热点后，WLAN可能会被去使能。
+<p>该方法是异步的。使能热点后，WLAN可能会被去使能。
 
 **起始版本：** 7
 

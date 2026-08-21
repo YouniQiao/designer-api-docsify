@@ -16,18 +16,27 @@ function addNetFirewallRule(rule: NetFirewallRule): Promise<int>
 
 > **说明：**
 > 
-> 1. 防火墙规则优先级说明（[setNetFirePolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md)和 &gt; [addNetFirewallRule](#addnetfirewallrule)无调用顺序要求）：
+> 1. 防火墙规则优先级说明（[setNetFirePolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md)和
+> [addNetFirewallRule](#addnetfirewallrule)无调用顺序要求）：
 > 
-> - 调用[setNetFirePolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md)设置默认策略为阻止，调用 &gt; [addNetFirewallRule](#addnetfirewallrule)新增显式规则，规则优先级由高到低为：
+> - 调用[setNetFirePolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md)设置默认策略为阻止，调用
+> [addNetFirewallRule](#addnetfirewallrule)新增显式规则，规则优先级由高到低为：
 > 
-> - 显式阻止规则 &gt;
-> - 显式允许规则 &gt;
-> - 默认阻止策略 &gt;
-> - 调用[setNetFirePolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md)设置默认策略为允许，调用 &gt; [addNetFirewallRule](#addnetfirewallrule)新增显式规则，规则优先级由高到低为：
+> - 显式阻止规则
 > 
-> - 显式允许规则 &gt;
-> - 显式阻止规则 &gt;
-> - 默认允许策略 &gt;
+> - 显式允许规则
+> 
+> - 默认阻止策略
+> 
+> - 调用[setNetFirePolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md)设置默认策略为允许，调用
+> [addNetFirewallRule](#addnetfirewallrule)新增显式规则，规则优先级由高到低为：
+> 
+> - 显式允许规则
+> 
+> - 显式阻止规则
+> 
+> - 默认允许策略
+> 
 > - 防火墙IP规则和域名规则冲突时（域名解析的IP与IP规则的IP相同，规则行为冲突）：
 > 
 > - 若以域名方式访问，则域名规则优先级高于IP规则，不受域名解析出的IP的规则影响。
@@ -44,7 +53,8 @@ function addNetFirewallRule(rule: NetFirewallRule): Promise<int>
 > 
 > - 当addNetFirewallRule的入参rule.type配置为RULE_IP时：
 > 
-> - 若rule.action为RULE_ALLOW，且rule.localIps、rule.remoteIps均不配置，规则生效为全IP段允许通行； &gt;
+> - 若rule.action为RULE_ALLOW，且rule.localIps、rule.remoteIps均不配置，规则生效为全IP段允许通行；
+> 
 > - 若rule.action 为RULE_DENY，且rule.localIps、rule.remoteIps均不配置，规则生效为全IP段拦截。
 > 
 > - 当addNetFirewallRule的入参rule.type配置为RULE_DOMAIN时，若rule.domains未配置，该规则不生效。

@@ -101,9 +101,12 @@ get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | lo
 
 > **说明：**
 > 
-> 其中deviceId通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。
+> 其中deviceId通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
 > 
-> deviceId具体获取方式请参考 &gt; [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
 
@@ -140,9 +143,12 @@ get(deviceId: string, key: string): Promise<boolean | string | long | double | U
 
 > **说明：**
 > 
-> 其中deviceId通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。
+> 其中deviceId通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
 > 
-> deviceId具体获取方式请参考 &gt; [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
 
@@ -413,9 +419,12 @@ getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>
 
 > **说明：**
 > 
-> 其中deviceId通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。
+> 其中deviceId通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
 > 
-> deviceId具体获取方式请参考 &gt; [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
 
@@ -537,9 +546,12 @@ getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 
 > **说明：**
 > 
-> 其中deviceId通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。
+> 其中deviceId通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
 > 
-> deviceId具体获取方式请参考 &gt; [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
 
@@ -900,9 +912,12 @@ getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): vo
 
 > **说明：**
 > 
-> 其中deviceId通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。
+> 其中deviceId通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
 > 
-> deviceId具体获取方式请参考 &gt; [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
 
@@ -1033,9 +1048,12 @@ getEntries(deviceId: string, query: Query): Promise<Entry[]>
 
 > **说明：**
 > 
-> 其中deviceId通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。
+> 其中deviceId通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
 > 
-> deviceId具体获取方式请参考 &gt; [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
 
@@ -1376,9 +1394,12 @@ getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KVStor
 
 > **说明：**
 > 
-> 其中deviceId通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。
+> 其中deviceId通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
 > 
-> deviceId具体获取方式请参考 &gt; [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
 
@@ -1495,9 +1516,12 @@ getResultSet(deviceId: string, keyPrefix: string): Promise<KVStoreResultSet>
 
 > **说明：**
 > 
-> 其中deviceId通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。
+> 其中deviceId通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
 > 
-> deviceId具体获取方式请参考 &gt; [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
 
@@ -1823,9 +1847,12 @@ getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KVStoreResu
 
 > **说明：**
 > 
-> 其中deviceId通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。
+> 其中deviceId通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
 > 
-> deviceId具体获取方式请参考 &gt; [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
 
@@ -1967,9 +1994,12 @@ getResultSet(deviceId: string, query: Query): Promise<KVStoreResultSet>
 
 > **说明：**
 > 
-> 其中deviceId通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。
+> 其中deviceId通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
 > 
-> deviceId具体获取方式请参考 &gt; [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
 
@@ -2328,9 +2358,12 @@ getResultSize(deviceId: string, query: Query, callback: AsyncCallback<int>): voi
 
 > **说明：**
 > 
-> 其中deviceId通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。
+> 其中deviceId通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
 > 
-> deviceId具体获取方式请参考 &gt; [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
 
@@ -2450,9 +2483,12 @@ getResultSize(deviceId: string, query: Query): Promise<int>
 
 > **说明：**
 > 
-> 其中deviceId通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。
+> 其中deviceId通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
 > 
-> deviceId具体获取方式请参考 &gt; [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
 

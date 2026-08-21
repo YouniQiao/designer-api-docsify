@@ -4,11 +4,13 @@ This module implements virtual private network (VPN) management, such as startin
 
 > **NOTE：**
 > 
-> The following modules cannot be referenced in the VpnExtensionAbility, as doing so may cause the program to exit &gt; abnormally:
+> The following modules cannot be referenced in the VpnExtensionAbility, as doing so may cause the program to exit
+> abnormally:
 
 > - [@ohos.contact (Contacts)](../../apis-contacts-kit/arkts-apis/arkts-contact.md)
 
-> - [@ohos.geolocation](../../apis-location-kit/arkts-apis/arkts-geolocation.md), &gt; [@ohos.geoLocationManager (Geolocation Manager)](../../apis-location-kit/arkts-apis/arkts-geolocationmanager.md)
+> - [@ohos.geolocation](../../apis-location-kit/arkts-apis/arkts-geolocation.md),
+> [@ohos.geoLocationManager (Geolocation Manager)](../../apis-location-kit/arkts-apis/arkts-geolocationmanager.md)
 
 > - [@ohos.multimedia.audio (Audio Management)](../../apis-audio-kit/arkts-apis/arkts-multimedia-audio.md)
 

@@ -29,7 +29,9 @@ Sets the icon of the back button on the title bar.
 
 > - This API can be called within attributeModifier since API version 12.
 > 
-> - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the &gt; **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or &gt; changing the animation effect type through the **symbolEffect** attribute.
+> - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the
+> **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or
+> changing the animation effect type through the **symbolEffect** attribute.
 
 **Since:** 11
 
@@ -59,7 +61,9 @@ Sets the icon and accessibility text for the back button on the title bar.
 
 > - This API cannot be called within attributeModifier.
 > 
-> - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the &gt; **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or &gt; changing the animation effect type through the **symbolEffect** attribute.
+> - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the
+> **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or
+> changing the animation effect type through the **symbolEffect** attribute.
 
 **Since:** 19
 
@@ -88,9 +92,14 @@ Binds the **NavDestination** component with a nested scrollable container, which
 
 > **NOTE：**
 
-> - The connection between the scrolling actions and the animations for showing or hiding the title bar and toolbar &gt; of the **NavDestination** component takes effect only when the title bar or toolbar is visible.
+> - The connection between the scrolling actions and the animations for showing or hiding the title bar and toolbar
+> of the **NavDestination** component takes effect only when the title bar or toolbar is visible.
 > 
-> - If a **NavDestination** component is bound to multiple scrollable containers, scrolling in any of these &gt; containers triggers the display or hiding animations of the title bar and toolbar. Specifically, when any &gt; scrollable container reaches either the bottom or the top, the display animation for the title bar and toolbar is &gt; triggered without delay. As such, to ensure the optimal user experience, avoid triggering scroll events of &gt; multiple scrollable containers simultaneously.
+> - If a **NavDestination** component is bound to multiple scrollable containers, scrolling in any of these
+> containers triggers the display or hiding animations of the title bar and toolbar. Specifically, when any
+> scrollable container reaches either the bottom or the top, the display animation for the title bar and toolbar is
+> triggered without delay. As such, to ensure the optimal user experience, avoid triggering scroll events of
+> multiple scrollable containers simultaneously.
 > 
 > - This API can be called in attributeModifier since API version 22.
 
@@ -120,9 +129,14 @@ Binds the **NavDestination** component with a scrollable container, which can be
 
 > **NOTE：**
 
-> - The connection between the scrolling actions and the animations for showing or hiding the title bar and toolbar &gt; of the **NavDestination** component takes effect only when the title bar or toolbar is visible.
+> - The connection between the scrolling actions and the animations for showing or hiding the title bar and toolbar
+> of the **NavDestination** component takes effect only when the title bar or toolbar is visible.
 > 
-> - If a **NavDestination** component is bound to multiple scrollable containers, scrolling in any of these &gt; containers triggers the display or hiding animations of the title bar and toolbar. Specifically, when any &gt; scrollable container reaches either the bottom or the top, the display animation for the title bar and toolbar is &gt; triggered without delay. As such, to ensure the optimal user experience, avoid triggering scroll events of &gt; multiple scrollable containers simultaneously.
+> - If a **NavDestination** component is bound to multiple scrollable containers, scrolling in any of these
+> containers triggers the display or hiding animations of the title bar and toolbar. Specifically, when any
+> scrollable container reaches either the bottom or the top, the display animation for the title bar and toolbar is
+> triggered without delay. As such, to ensure the optimal user experience, avoid triggering scroll events of
+> multiple scrollable containers simultaneously.
 > 
 > - This API can be called in attributeModifier since API version 22.
 
@@ -154,7 +168,8 @@ Sets a custom transition animation for the **NavDestination** component.
 
 > - This API cannot be called within attributeModifier.
 > 
-> - If both this attribute and [systemTransition](#systemtransition) are set, &gt; whichever is set later takes effect.
+> - If both this attribute and [systemTransition](#systemtransition) are set,
+> whichever is set later takes effect.
 
 **Since:** 15
 
@@ -184,7 +199,8 @@ Sets whether to show or hide the system navigation bar when entering this **NavD
 
 > This attribute is effective only if the following conditions are all met:
 
-> The actual effect of setting the system navigation bar depends on the specific device support. For details, see &gt; [setSpecificSystemBarEnabled](../../../reference/apis-arkui/arkts-apis-window-Window.md#setspecificsystembarenabled).
+> The actual effect of setting the system navigation bar depends on the specific device support. For details, see
+> [setSpecificSystemBarEnabled](../../../reference/apis-arkui/arkts-apis-window-Window.md#setspecificsystembarenabled).
 
 **Since:** 19
 
@@ -214,7 +230,8 @@ Sets whether to show or hide the system status bar when entering this **NavDesti
 
 > - This attribute is effective only if the following conditions are all met:
 > 
-> 1. The **NavDestination** component belongs to the application's main window page, and the main window is a &gt; full-screen window.
+> 1. The **NavDestination** component belongs to the application's main window page, and the main window is a
+> full-screen window.
 > 
 > 2. The **Navigation** container containing the **NavDestination** component occupies the entire page area.
 > 
@@ -222,7 +239,8 @@ Sets whether to show or hide the system status bar when entering this **NavDesti
 > 
 > 4. The type of **NavDestination** is [NavDestinationMode](arkts-arkui-navdestinationmode-e.md).STANDARD.
 > 
-> - The actual effect of setting the system status bar depends on the specific device support. For details, see &gt; [setSpecificSystemBarEnabled](../../../reference/apis-arkui/arkts-apis-window-Window.md#setspecificsystembarenabled).
+> - The actual effect of setting the system status bar depends on the specific device support. For details, see
+> [setSpecificSystemBarEnabled](../../../reference/apis-arkui/arkts-apis-window-Window.md#setspecificsystembarenabled).
 
 **Since:** 19
 
@@ -375,11 +393,15 @@ Ignores the layout safe area by allowing the component to extend into the non-sa
 
 > - Prerequisites for the **ignoreLayoutSafeArea** attribute to take effect:
 > 
-> When **LayoutSafeAreaType.SYSTEM** is set, the component can extend into the non-safe area if its boundaries &gt; overlap with the non-safe area.
+> When **LayoutSafeAreaType.SYSTEM** is set, the component can extend into the non-safe area if its boundaries
+> overlap with the non-safe area.
 > 
-> - If the component extends into the non-safe area, events triggered within that area (such as click events) might &gt; be intercepted by the system. This allows the system to prioritize responses to system components such as the &gt; status bar.
+> - If the component extends into the non-safe area, events triggered within that area (such as click events) might
+> be intercepted by the system. This allows the system to prioritize responses to system components such as the
+> status bar.
 > 
-> - To allow a component to extend into non-safe areas, the title bar and toolbar must be hidden or set to &gt; STACK mode.
+> - To allow a component to extend into non-safe areas, the title bar and toolbar must be hidden or set to
+> STACK mode.
 
 **Since:** 12
 
@@ -410,7 +432,9 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 
 > - This API can be called within attributeModifier since API version 14.
 > 
-> - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the &gt; **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or &gt; changing the animation effect type through the **symbolEffect** attribute.
+> - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the
+> **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or
+> changing the animation effect type through the **symbolEffect** attribute.
 
 **Since:** 12
 
@@ -440,7 +464,9 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 
 > - This API cannot be called within attributeModifier.
 > 
-> - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the &gt; **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or &gt; changing the animation effect type through the **symbolEffect** attribute.
+> - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the
+> **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or
+> changing the animation effect type through the **symbolEffect** attribute.
 
 **Since:** 19
 
@@ -603,7 +629,9 @@ Triggered when a **NavDestination** page that already exists in the stack is mov
 
 > **NOTE：**
 
-> - This callback is not triggered by &gt; replacePath or &gt; replaceDestination.
+> - This callback is not triggered by
+> replacePath or
+> replaceDestination.
 > 
 > - This API can be called in attributeModifier since API version 22.
 
@@ -879,13 +907,16 @@ Sets the display orientation for the **NavDestination** component. After the tra
 
 > - This attribute is effective only if the following conditions are all met:
 > 
-> 1. The **NavDestination** component belongs to the application's main window page, and the main window is a &gt; full-screen window.
+> 1. The **NavDestination** component belongs to the application's main window page, and the main window is a
+> full-screen window.
 > 
-> 2. The **Navigation** container containing the **NavDestination** component occupies the entire application &gt; page area.
+> 2. The **Navigation** container containing the **NavDestination** component occupies the entire application
+> page area.
 > 
 > 3. The type of **NavDestination** is [NavDestinationMode](arkts-arkui-navdestinationmode-e.md).STANDARD.
 > 
-> - The actual effect of setting the display orientation depends on the specific device support. For details, see &gt; [setPreferredOrientation](../../../reference/apis-arkui/arkts-apis-window-Window.md#setpreferredorientation9-1).
+> - The actual effect of setting the display orientation depends on the specific device support. For details, see
+> [setPreferredOrientation](../../../reference/apis-arkui/arkts-apis-window-Window.md#setpreferredorientation9-1).
 
 **Since:** 19
 
@@ -913,7 +944,8 @@ Sets whether the **NavDestination** component is recoverable. If set to recovera
 
 > **NOTE：**
 
-> This API must be used together with the recoverable API of &gt; **Navigation**.
+> This API must be used together with the recoverable API of
+> **Navigation**.
 
 **Since:** 14
 
@@ -939,9 +971,11 @@ Sets the style of the system status bar when this **NavDestination** page is dis
 
 > **NOTE：**
 
-> - The setting takes effect only when the **NavDestination** component is used in conjunction with the &gt; **Navigation** component.
+> - The setting takes effect only when the **NavDestination** component is used in conjunction with the
+> **Navigation** component.
 > 
-> - For other usage restrictions, see the description of systemBarStyle &gt; for the **Navigation** component.
+> - For other usage restrictions, see the description of systemBarStyle
+> for the **Navigation** component.
 > 
 > - This API can be called within attributeModifier since API version 20.
 
@@ -1025,7 +1059,9 @@ Sets the content of the toolbar. If this API is not called, the toolbar remains 
 
 > - This API can be called within attributeModifier since API version 20.
 > 
-> - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the &gt; **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or &gt; changing the animation effect type through the **symbolEffect** attribute.
+> - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the
+> **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or
+> changing the animation effect type through the **symbolEffect** attribute.
 
 **Since:** 13
 

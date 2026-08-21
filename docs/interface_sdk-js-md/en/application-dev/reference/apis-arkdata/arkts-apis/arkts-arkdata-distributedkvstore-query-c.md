@@ -122,7 +122,9 @@ Creates a **Query** object with the device ID as the key prefix.
 
 > **NOTE：**
 > 
-> **deviceId** can be obtained by &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; .
+> **deviceId** can be obtained by
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> .
 > 
 > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
@@ -222,7 +224,9 @@ Creates a **Query** object to match the specified field whose value is equal to 
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV &gt; store using the **getKVStore()** method in &gt; [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
 
@@ -301,7 +305,9 @@ Creates a **Query** object to match the specified field whose value is greater t
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV &gt; store using the **getKVStore()** method in &gt; [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
 
@@ -342,7 +348,9 @@ Creates a **Query** object to match the specified field whose value is greater t
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV &gt; store using the **getKVStore()** method in &gt; [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
 
@@ -383,7 +391,9 @@ Creates a **Query** object to match the specified field whose value is within th
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV &gt; store using the **getKVStore()** method in &gt; [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
 
@@ -424,7 +434,9 @@ Creates a **Query** object to match the specified field whose value is within th
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV &gt; store using the **getKVStore()** method in &gt; [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
 
@@ -483,7 +495,9 @@ Creates a **Query** object to match the specified field whose value is not **nul
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV &gt; store using the **getKVStore()** method in &gt; [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
 
@@ -541,7 +555,9 @@ Creates a **Query** object to match the specified field whose value is **null**.
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV &gt; store using the **getKVStore()** method in &gt; [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
 
@@ -599,7 +615,9 @@ Creates a **Query** object to match the specified field whose value is less than
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV &gt; store using the **getKVStore()** method in &gt; [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
 
@@ -640,7 +658,9 @@ Creates a **Query** object to match the specified field whose value is less than
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV &gt; store using the **getKVStore()** method in &gt; [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
 
@@ -681,7 +701,9 @@ Creates a **Query** object to match the specified field whose value is similar t
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV &gt; store using the **getKVStore()** method in &gt; [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
 
@@ -796,7 +818,9 @@ Creates a **Query** object to match the specified field whose value is not equal
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV &gt; store using the **getKVStore()** method in &gt; [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
 
@@ -837,7 +861,9 @@ Creates a **Query** object to match the specified field whose value is not withi
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV &gt; store using the **getKVStore()** method in &gt; [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
 
@@ -878,7 +904,9 @@ Creates a **Query** object to match the specified field whose value is not withi
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV &gt; store using the **getKVStore()** method in &gt; [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
 
@@ -978,7 +1006,9 @@ Creates a **Query** object to sort the query results in ascending order.
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV &gt; store using the **getKVStore()** method in &gt; [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
 
@@ -1037,7 +1067,9 @@ Creates a **Query** object to sort the query results in descending order.
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV &gt; store using the **getKVStore()** method in &gt; [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
 
@@ -1243,7 +1275,9 @@ Creates a **Query** object to match the specified field whose value is not simil
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV &gt; store using the **getKVStore()** method in &gt; [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
 

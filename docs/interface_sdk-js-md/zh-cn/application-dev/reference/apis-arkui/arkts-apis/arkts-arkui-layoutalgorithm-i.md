@@ -4,7 +4,8 @@
 
 > **说明：**
 > 
-> 该类型变量可以赋值具体的布局算法类对象，如[CustomLayoutAlgorithm](../../apis-default/arkts-apis/arkts-layoutalgorithm-customlayoutalgorithm-c.md)类对象、 &gt; [RowLayoutAlgorithm](../../apis-default/arkts-apis/arkts-layoutalgorithm-rowlayoutalgorithm-c.md)类对象等。
+> 该类型变量可以赋值具体的布局算法类对象，如[CustomLayoutAlgorithm](../../apis-default/arkts-apis/arkts-layoutalgorithm-customlayoutalgorithm-c.md)类对象、
+> [RowLayoutAlgorithm](../../apis-default/arkts-apis/arkts-layoutalgorithm-rowlayoutalgorithm-c.md)类对象等。
 
 **起始版本：** 24
 

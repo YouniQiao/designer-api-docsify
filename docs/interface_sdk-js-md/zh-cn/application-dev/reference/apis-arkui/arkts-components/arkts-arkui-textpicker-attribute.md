@@ -491,11 +491,20 @@ onEnterSelectedArea(callback: TextPickerEnterSelectedAreaCallback)
 
 > **说明：**
 > 
-> - 与 &gt; onChange &gt; 事件的差别在于，该事件的触发时机早于 &gt; onChange &gt; 事件。onEnterSelectedArea在滑动过程中选项进入选中区域时触发，适合实时获取索引值变化，适用于需要快速响应用户滑动的场景；onChange在滑 &gt; 动结束且选中项归位后触发，适合获取最终确认的选中值，适用于需要获取用户最终选择的场景。
+> - 与
+> onChange
+> 事件的差别在于，该事件的触发时机早于
+> onChange
+> 事件。onEnterSelectedArea在滑动过程中选项进入选中区域时触发，适合实时获取索引值变化，适用于需要快速响应用户滑动的场景；onChange在滑
+> 动结束且选中项归位后触发，适合获取最终确认的选中值，适用于需要获取用户最终选择的场景。
 > 
-> - 与[onScrollStop](#onscrollstop)事件的差别在于， &gt; onEnterSelectedArea关注的是选项进入选中区域的逻辑状态，onScrollStop关注的是滚动行为完全停止。需要更早响应索引变化时使用 &gt; onEnterSelectedArea，需要确认滚动完全停止时使用 &gt; [onScrollStop](#onscrollstop)。
+> - 与[onScrollStop](#onscrollstop)事件的差别在于，
+> onEnterSelectedArea关注的是选项进入选中区域的逻辑状态，onScrollStop关注的是滚动行为完全停止。需要更早响应索引变化时使用
+> onEnterSelectedArea，需要确认滚动完全停止时使用
+> [onScrollStop](#onscrollstop)。
 > 
-> - 在多列联动场景中，不建议使用该回调。该回调标识的是滑动过程中选项进入分割线区域内的节点；跟随变化的选项并不涉及滑动，因此回调返回值中仅当 &gt; 前滑动列的值会正常变化，其余未滑动列的值保持不变。
+> - 在多列联动场景中，不建议使用该回调。该回调标识的是滑动过程中选项进入分割线区域内的节点；跟随变化的选项并不涉及滑动，因此回调返回值中仅当
+> 前滑动列的值会正常变化，其余未滑动列的值保持不变。
 > 
 > - 该接口不支持在attributeModifier中调用。
 
@@ -527,7 +536,10 @@ onScrollStop(callback: TextPickerScrollStopCallback)
 
 > **说明：**
 > 
-> - 与[onEnterSelectedArea](#onenterselectedarea)事件的差别在于，onScrollStop关注的 &gt; 是滚动行为完全停止，onEnterSelectedArea关注的是选项进入选中区域的逻辑状态。onEnterSelectedArea能更早响应索引变化， &gt; 适合实时反馈场景，建议使用[onEnterSelectedArea](#onenterselectedarea)；若需确认滚动行为完全停止， &gt; 则使用onScrollStop。
+> - 与[onEnterSelectedArea](#onenterselectedarea)事件的差别在于，onScrollStop关注的
+> 是滚动行为完全停止，onEnterSelectedArea关注的是选项进入选中区域的逻辑状态。onEnterSelectedArea能更早响应索引变化，
+> 适合实时反馈场景，建议使用[onEnterSelectedArea](#onenterselectedarea)；若需确认滚动行为完全停止，
+> 则使用onScrollStop。
 > 
 > - 从API version 20开始，该接口支持在attributeModifier中调用。
 
@@ -559,7 +571,9 @@ onScrollStop(callback: Optional<TextPickerScrollStopCallback>)
 
 > **说明：**
 > 
-> - 与[onEnterSelectedArea](#onenterselectedarea)事件的差别在于，onScrollStop关注的是滚动行为完全 &gt; 停止，onEnterSelectedArea关注的是选项进入选中区域的逻辑状态。onEnterSelectedArea能更早响应索引变化，适合实时反馈场景，建议使用 &gt; [onEnterSelectedArea](#onenterselectedarea)；若需确认滚动行为完全停止，则使用onScrollStop。
+> - 与[onEnterSelectedArea](#onenterselectedarea)事件的差别在于，onScrollStop关注的是滚动行为完全
+> 停止，onEnterSelectedArea关注的是选项进入选中区域的逻辑状态。onEnterSelectedArea能更早响应索引变化，适合实时反馈场景，建议使用
+> [onEnterSelectedArea](#onenterselectedarea)；若需确认滚动行为完全停止，则使用onScrollStop。
 > 
 > - 从API version 20开始，该接口支持在attributeModifier中调用。
 

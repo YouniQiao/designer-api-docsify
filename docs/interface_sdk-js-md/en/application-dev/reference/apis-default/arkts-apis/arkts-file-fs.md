@@ -19,20 +19,20 @@ FileIO
 
 | Name | Description |
 | --- | --- |
-| [ConflictFiles](arkts-file-fs-conflictfiles-i.md) | Defines conflicting file information used in **copyDir()** or **moveDir()**. |
-| [FileFilter](arkts-file-fs-filefilter-i.md) | Describes a file name filter, which can be used to customize file name filtering rules. |
-| [Filter](arkts-file-fs-filter-i.md) | Defines the file filtering configuration used by **listFile()**. |
-| [ListFileExtOptions](arkts-file-fs-listfileextoptions-i.md) | Defines the options used in **listFileExt**. |
-| [ListFileOptions](arkts-file-fs-listfileoptions-i.md) | Defines the options used in **listFile()**. |
-| [Options](arkts-file-fs-options-i.md) | Defines the options used in **readLines()**. |
-| [RandomAccessFileOptions](arkts-file-fs-randomaccessfileoptions-i.md) | Defines the options used in **createRandomAccessFile()**. |
-| [ReadOptions](arkts-file-fs-readoptions-i.md) | Defines the options used in **read()**. |
-| [ReadStreamOptions](arkts-file-fs-readstreamoptions-i.md) | Defines the options used in **createReadStream()**. |
-| [ReadTextOptions](arkts-file-fs-readtextoptions-i.md) | Defines the options used in **readText()**. It inherits from [ReadOptions](arkts-file-fs-readoptions-i.md). |
-| [ReaderIteratorResult](arkts-file-fs-readeriteratorresult-i.md) | Represents the information obtained by the **ReaderIterator** object. |
-| [WatchEvent](arkts-file-fs-watchevent-i.md) | Defines the event to observe. |
-| [WriteOptions](arkts-file-fs-writeoptions-i.md) | Defines the options used in **write()**. It inherits from [Options](arkts-file-fs-options-i.md). |
-| [WriteStreamOptions](arkts-file-fs-writestreamoptions-i.md) | Defines the options used in **createWriteStream()**. |
+| [ConflictFiles](arkts-filefs-conflictfiles-i.md) | Defines conflicting file information used in **copyDir()** or **moveDir()**. |
+| [FileFilter](arkts-filefs-filefilter-i.md) | Describes a file name filter, which can be used to customize file name filtering rules. |
+| [Filter](arkts-filefs-filter-i.md) | Defines the file filtering configuration used by **listFile()**. |
+| [ListFileExtOptions](arkts-filefs-listfileextoptions-i.md) | Defines the options used in **listFileExt**. |
+| [ListFileOptions](arkts-filefs-listfileoptions-i.md) | Defines the options used in **listFile()**. |
+| [Options](arkts-filefs-options-i.md) | Defines the options used in **readLines()**. |
+| [RandomAccessFileOptions](arkts-filefs-randomaccessfileoptions-i.md) | Defines the options used in **createRandomAccessFile()**. |
+| [ReadOptions](arkts-filefs-readoptions-i.md) | Defines the options used in **read()**. |
+| [ReadStreamOptions](arkts-filefs-readstreamoptions-i.md) | Defines the options used in **createReadStream()**. |
+| [ReadTextOptions](arkts-filefs-readtextoptions-i.md) | Defines the options used in **readText()**. It inherits from [ReadOptions](arkts-filefs-readoptions-i.md). |
+| [ReaderIteratorResult](arkts-filefs-readeriteratorresult-i.md) | Represents the information obtained by the **ReaderIterator** object. |
+| [WatchEvent](arkts-filefs-watchevent-i.md) | Defines the event to observe. |
+| [WriteOptions](arkts-filefs-writeoptions-i.md) | Defines the options used in **write()**. It inherits from [Options](arkts-filefs-options-i.md). |
+| [WriteStreamOptions](arkts-filefs-writestreamoptions-i.md) | Defines the options used in **createWriteStream()**. |
 
 ### Types
 

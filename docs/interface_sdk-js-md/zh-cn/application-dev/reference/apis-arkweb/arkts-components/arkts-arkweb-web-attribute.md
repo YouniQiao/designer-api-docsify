@@ -58,7 +58,9 @@ allowWindowOpenMethod(flag : boolean)
 > 
 > - 该属性的默认值与系统属性`persist.web.allowWindowOpenMethod.enabled`保持一致，如果未设置系统属性则默认值为false。
 > 
-> - 通过`hdc shell param get persist.web.allowWindowOpenMethod.enabled` 检查是否开启系统属性 &gt; `persist.web.allowWindowOpenMethod.enabled`。若属性值为1代表开启系统属性；若属性值为0或不存在，代表未开启系统属性，可通过命令 &gt; `hdc shell param set persist.web.allowWindowOpenMethod.enabled 1` 开启系统属性。
+> - 通过`hdc shell param get persist.web.allowWindowOpenMethod.enabled` 检查是否开启系统属性
+> `persist.web.allowWindowOpenMethod.enabled`。若属性值为1代表开启系统属性；若属性值为0或不存在，代表未开启系统属性，可通过命令
+> `hdc shell param set persist.web.allowWindowOpenMethod.enabled 1` 开启系统属性。
 
 **起始版本：** 10
 
@@ -244,7 +246,8 @@ copyOptions(value: CopyOptions)
 
 > **说明：**
 > 
-> 当设置为CopyOptions.None时，[dataDetectorConfig](#datadetectorconfig)中的enablePreviewMenu配置项无效。当 &gt; [enableDataDetector](#enabledatadetector)设置为true且此属性设置为CopyOptions.LocalDevice时，AI菜单功能将被激活。
+> 当设置为CopyOptions.None时，[dataDetectorConfig](#datadetectorconfig)中的enablePreviewMenu配置项无效。当
+> [enableDataDetector](#enabledatadetector)设置为true且此属性设置为CopyOptions.LocalDevice时，AI菜单功能将被激活。
 
 **起始版本：** 11
 
@@ -320,7 +323,8 @@ databaseAccess(databaseAccess: boolean)
 
 > **说明：**
 > 
-> - 本接口在ArkWeb内核升级到M132版本后因内核废弃Web SQL，对Web SQL数据库的控制失效。ArkWeb内核版本参考ArkWeb简介 &gt; [约束与限制](../../../web/web-component-overview.md#约束与限制)。
+> - 本接口在ArkWeb内核升级到M132版本后因内核废弃Web SQL，对Web SQL数据库的控制失效。ArkWeb内核版本参考ArkWeb简介
+> [约束与限制](../../../web/web-component-overview.md#约束与限制)。
 
 **起始版本：** 8
 
@@ -505,8 +509,10 @@ enableDataDetector(enable: boolean)
 
 > **说明：**
 > 
-> [dataDetectorConfig](#datadetectorconfig)和 &gt; [enableSelectedDataDetector](#enableselecteddatadetector)等属性依赖此属性开启时才能正常生效。
-> 当enableDataDetector设置为true，同时不设置[dataDetectorConfig](#datadetectorconfig)属性时，默认识别所有类型的实体，所识别实体的 &gt; color和decoration会被更改为如下样式：
+> [dataDetectorConfig](#datadetectorconfig)和
+> [enableSelectedDataDetector](#enableselecteddatadetector)等属性依赖此属性开启时才能正常生效。
+> 当enableDataDetector设置为true，同时不设置[dataDetectorConfig](#datadetectorconfig)属性时，默认识别所有类型的实体，所识别实体的
+> color和decoration会被更改为如下样式：
 
 <!--code_no_check-->
 
@@ -716,7 +722,8 @@ enableNativeEmbedMode(enabled: boolean)
 
 > **说明：**
 > 
-> [registerNativeEmbedRule](#registernativeembedrule)和 &gt; [nativeEmbedOptions](#nativeembedoptions)等接口依赖此属性开启时才生效。
+> [registerNativeEmbedRule](#registernativeembedrule)和
+> [nativeEmbedOptions](#nativeembedoptions)等接口依赖此属性开启时才生效。
 
 **起始版本：** 11
 
@@ -969,7 +976,8 @@ horizontalScrollBarAccess(horizontalScrollBar: boolean)
 
 > **说明：**
 > 
-> - 通过[@State](../../../ui/state-management/arkts-state.md)变量控制横向滚动条的隐藏/显示后，需要调用 &gt; [controller.refresh()](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh)生效。
+> - 通过[@State](../../../ui/state-management/arkts-state.md)变量控制横向滚动条的隐藏/显示后，需要调用
+> [controller.refresh()](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh)生效。
 > 
 > - 通过[@State](../../../ui/state-management/arkts-state.md)变量频繁动态改变时，建议切换开关变量和Web组件一一对应。
 
@@ -1099,7 +1107,8 @@ javaScriptOnDocumentStart(scripts: Array<ScriptItem>)
 > 
 > - 网页文档根元素（HTML Element）创建后、但尚未加载任何其他内容之前注入脚本。
 > 
-> - 该脚本按照字典序执行，非数组本身顺序，若需数组本身顺序，建议使用[runJavaScriptOnDocumentStart](#runjavascriptondocumentstart) &gt; 接口。
+> - 该脚本按照字典序执行，非数组本身顺序，若需数组本身顺序，建议使用[runJavaScriptOnDocumentStart](#runjavascriptondocumentstart)
+> 接口。
 > 
 > - 内容相同的脚本多次注入时将被静默去重，不展示，不提醒，使用首次注入时的scriptRules。
 > 
@@ -1131,13 +1140,17 @@ javaScriptProxy(javaScriptProxy: JavaScriptProxy)
 
 > **说明：**
 > 
-> javaScriptProxy接口需要和 &gt; [deleteJavaScriptRegister&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#deletejavascriptregister) &gt; 接口配合使用，防止内存泄漏。
+> javaScriptProxy接口需要和
+> [deleteJavaScriptRegister&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#deletejavascriptregister)
+> 接口配合使用，防止内存泄漏。
 > 
 > javaScriptProxy对象的所有参数不支持更新。
 > 
 > 注册javaScriptProxy对象时，同步与异步列表请至少选择一项不为空，可同时注册两类方法。
 > 
-> 此接口只支持注册一个对象，若需要注册多个对象请使用 &gt; [registerJavaScriptProxy&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#registerjavascriptproxy) &gt; 。
+> 此接口只支持注册一个对象，若需要注册多个对象请使用
+> [registerJavaScriptProxy&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#registerjavascriptproxy)
+> 。
 
 **起始版本：** 8
 
@@ -1183,7 +1196,7 @@ keyboardAvoidMode(mode: WebKeyboardAvoidMode)
 
 Web组件自定义软件键盘避让模式。
 
-当UIContext设置的键盘避让模式为[KeyboardAvoidMode.RESIZE](../../apis-default/arkts-apis/arkts-arkui-uicontext-keyboardavoidmode-e.md)模式时，该接口功能不生效。
+当UIContext设置的键盘避让模式为[KeyboardAvoidMode.RESIZE](../../apis-default/arkts-apis/arkts-arkuiuicontext-keyboardavoidmode-e.md)模式时，该接口功能不生效。
 
 **起始版本：** 12
 
@@ -1209,16 +1222,20 @@ layoutMode(mode: WebLayoutMode)
 
 > **说明：**
 > 
-> 目前只支持两种Web布局模式，分别为 &gt;
+> 目前只支持两种Web布局模式，分别为
+> 
 > - Web布局跟随系统（`WebLayoutMode.NONE`）。
 > 
 > - Web组件高度基于前端页面高度的自适应网页布局（`WebLayoutMode.FIT_CONTENT`）。
 > 
 > Web组件高度基于前端页面自适应布局有如下限制：
 > 
-> - 当layoutMode设置为WebLayoutMode.FIT_CONTENT &gt;
-> - [forceDisplayScrollBar](#forcedisplayscrollbar)不支持常驻 &gt;
-> - [blankScreenDetectionConfig](#blankscreendetectionconfig)不生效 &gt;
+> - 当layoutMode设置为WebLayoutMode.FIT_CONTENT
+> 
+> - [forceDisplayScrollBar](#forcedisplayscrollbar)不支持常驻
+> 
+> - [blankScreenDetectionConfig](#blankscreendetectionconfig)不生效
+> 
 > - 如果Web组件宽或长度超过7680px，请在Web组件创建的时候指定`RenderMode.SYNC_RENDER`模式，否则会整个白屏。
 > 
 > - Web组件创建后不支持动态切换layoutMode模式。
@@ -1311,7 +1328,8 @@ metaViewport(enabled: boolean)
 
 > **说明：**
 > 
-> - 当前通过User-Agent中是否含有"Mobile"字段来判断是否开启前端HTML页面中meta标签的viewport属性。当User-Agent中不含有"Mobile"字段时，meta标签中viewport属性默认关 &gt; 闭，此时可通过显式设置metaViewport属性为true来覆盖关闭状态。
+> - 当前通过User-Agent中是否含有"Mobile"字段来判断是否开启前端HTML页面中meta标签的viewport属性。当User-Agent中不含有"Mobile"字段时，meta标签中viewport属性默认关
+> 闭，此时可通过显式设置metaViewport属性为true来覆盖关闭状态。
 
 **起始版本：** 12
 
@@ -1457,11 +1475,14 @@ nestedScroll(value: NestedScrollOptions | NestedScrollOptionsExt)
 > 
 > - 可以设置上下左右四个方向，或者设置向前、向后两个方向的嵌套滚动模式，实现与父组件的滚动联动。
 > 
-> - 支持嵌套滚动的容器：Grid、List、Scroll、Swiper、 &gt; Tabs、WaterFlow、Refresh、 &gt; bindSheet。
+> - 支持嵌套滚动的容器：Grid、List、Scroll、Swiper、
+> Tabs、WaterFlow、Refresh、
+> bindSheet。
 > 
 > - 支持嵌套滚动的输入事件：使用手势、鼠标、触控板。
 > 
-> - 嵌套滚动场景下，由于Web滚动到边缘时会优先触发过滚动的过界回弹效果，建议设置[overScrollMode](#overscrollmode)为 &gt; `OverScrollMode.NEVER`，避免影响此场景的用户体验。
+> - 嵌套滚动场景下，由于Web滚动到边缘时会优先触发过滚动的过界回弹效果，建议设置[overScrollMode](#overscrollmode)为
+> `OverScrollMode.NEVER`，避免影响此场景的用户体验。
 
 **起始版本：** 11
 
@@ -1487,7 +1508,8 @@ Web页面触发window.open(url, name)时，会根据name查找是否存在已绑
 
 > **说明：**
 > 
-> - 通过name绑定Web实例‌：需在[onWindowNew](#onwindownew)回调中调用event.handler.setWebController方法，并传入新Web实例的 &gt; controller，以完成绑定。
+> - 通过name绑定Web实例‌：需在[onWindowNew](#onwindownew)回调中调用event.handler.setWebController方法，并传入新Web实例的
+> controller，以完成绑定。
 > 
 > - name‌命名需符合正则表达式[a-zA-Z0-9_]+。当该name被用作\&lt;a&gt;或\&lt;form&gt;标签的target属性值时，已绑定的Web实例同样会触发此回调。
 
@@ -1635,9 +1657,12 @@ onClientAuthenticationRequest(callback: Callback<OnClientAuthenticationEvent>)
 
 > **说明：**
 > 
-> - Web组件有三种响应方式：[ClientAuthenticationHandler.confirm](arkts-arkweb-clientauthenticationhandler-c.md#confirm)（ &gt; 继续）、[ClientAuthenticationHandler.cancel](arkts-arkweb-clientauthenticationhandler-c.md#cancel)（取消）或 &gt; [ClientAuthenticationHandler.ignore](arkts-arkweb-clientauthenticationhandler-c.md#ignore)（忽略）。
+> - Web组件有三种响应方式：[ClientAuthenticationHandler.confirm](arkts-arkweb-clientauthenticationhandler-c.md#confirm)（
+> 继续）、[ClientAuthenticationHandler.cancel](arkts-arkweb-clientauthenticationhandler-c.md#cancel)（取消）或
+> [ClientAuthenticationHandler.ignore](arkts-arkweb-clientauthenticationhandler-c.md#ignore)（忽略）。
 > 
-> - 如果调用ClientAuthenticationHandler.confirm或ClientAuthenticationHandler.cancel，ArkWeb会将认证结果存储在内存中（在应用程序的生命周期内），并且不会 &gt; 对相同的主机和端口再次调用onClientAuthenticationRequest()。如果调用onClientAuthenticationRequest.ignore，ArkWeb则不会存储该认证结果。
+> - 如果调用ClientAuthenticationHandler.confirm或ClientAuthenticationHandler.cancel，ArkWeb会将认证结果存储在内存中（在应用程序的生命周期内），并且不会
+> 对相同的主机和端口再次调用onClientAuthenticationRequest()。如果调用onClientAuthenticationRequest.ignore，ArkWeb则不会存储该认证结果。
 > 
 > - 需配置"ohos.permission.ACCESS_CERT_MANAGER"权限。
 
@@ -1959,7 +1984,8 @@ onFirstScreenPaint(callback: OnFirstScreenPaintCallback)
 
 > **说明：**
 > 
-> - 首屏渲染（First Screen Paint，FSP），记录了视口内图片、文本或视频元素完成渲染所需的时间，是衡量页面首次加载到渲染完成的核心性能指标。当一定时间内视口内没有可见元素超出历史绘制区域时，将视口内元素绘制的 &gt; 历史最大的时刻视为首屏渲染完成时刻。
+> - 首屏渲染（First Screen Paint，FSP），记录了视口内图片、文本或视频元素完成渲染所需的时间，是衡量页面首次加载到渲染完成的核心性能指标。当一定时间内视口内没有可见元素超出历史绘制区域时，将视口内元素绘制的
+> 历史最大的时刻视为首屏渲染完成时刻。
 > 
 > - 接口在首屏绘制完成后，需要等待一定时间没有新的渲染信息需要处理后，才会上报回调。接口回调时刻和首屏渲染完成时刻不同。
 > 
@@ -2285,7 +2311,10 @@ onLoadIntercept(callback: Callback<OnLoadInterceptEvent, boolean>)
 
 > **说明：**
 > 
-> - onLoadIntercept无法获取到完整的headers，如需获取完整headers建议在[onInterceptRequest](#oninterceptrequest)或者通过 &gt; WebSchemeHandler的 &gt; onRequestStart &gt; 中获取。
+> - onLoadIntercept无法获取到完整的headers，如需获取完整headers建议在[onInterceptRequest](#oninterceptrequest)或者通过
+> WebSchemeHandler的
+> onRequestStart
+> 中获取。
 
 **起始版本：** 10
 
@@ -2529,9 +2558,14 @@ onOverrideErrorPage(callback: OnOverrideErrorPageCallback)
 
 > **说明：**
 > 
-> - 该功能需通过调用 &gt; [setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled)&lt;sup &gt; &gt;20+&lt;/sup&gt;启用mainframe错误页功能后才会生效。如需同时启用subframe错误页功能，请调用 &gt; [setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled) &gt; 接口并将includeSubframe设置为true。
+> - 该功能需通过调用
+> [setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled)&lt;sup
+&gt; &gt;20+&lt;/sup&gt;启用mainframe错误页功能后才会生效。如需同时启用subframe错误页功能，请调用
+> [setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled)
+> 接口并将includeSubframe设置为true。
 > 
-> - 通过[errorPageEvent.request.isMainFrame()](arkts-arkweb-webresourcerequest-c.md#ismainframe)判断请求来源是mainframe还是subframe，以便在回调中 &gt; 分别设置对应的自定义错误页。
+> - 通过[errorPageEvent.request.isMainFrame()](arkts-arkweb-webresourcerequest-c.md#ismainframe)判断请求来源是mainframe还是subframe，以便在回调中
+> 分别设置对应的自定义错误页。
 > 
 > - 通过[errorPageEvent.error.getErrorCode()](arkts-arkweb-webresourceerror-c.md#geterrorcode)获取的错误码大于0代表http协议错误，小于0代表网络错误。
 
@@ -2561,7 +2595,8 @@ onOverrideUrlLoading(callback: OnOverrideUrlLoadingCallback)
 > 
 > - iframe加载HTTP(s)协议或about:blank时不会触发该回调，而加载非HTTP(s)协议的跳转会触发；调用loadUrl(url: string)主动触发的跳转不会触发该回调。
 > 
-> - 不要在回调中使用相同的URL调用loadUrl(url: string)方法，然后返回true。 这样会不必要地中止当前加载，并用相同的URL发起一次新的加载。 要继续加载当前请求URL的正确做法是直接返回false，而不 &gt; 是调用loadUrl(url: string)。
+> - 不要在回调中使用相同的URL调用loadUrl(url: string)方法，然后返回true。 这样会不必要地中止当前加载，并用相同的URL发起一次新的加载。 要继续加载当前请求URL的正确做法是直接返回false，而不
+> 是调用loadUrl(url: string)。
 
 **起始版本：** 12
 
@@ -3133,7 +3168,9 @@ onSslErrorEventReceive(callback: Callback<OnSslErrorEventReceiveEvent>)
 > 
 > - 子资源：主资源中引用的依赖文件，由主资源解析过程中遇到特定标签时触发加载。
 > 
-> - 应用程序需要调用[handler.handleCancel()](arkts-arkweb-sslerrorhandler-c.md#handlecancel)或 &gt; [handler.handleConfirm()](arkts-arkweb-sslerrorhandler-c.md#handleconfirm)处理该回调，如果没有处理该回调则默认取消资源加载。handleConfirm()或者 &gt; handleCancel()的行为可能会被记录下来，以便为将来的SSL错误做出响应。
+> - 应用程序需要调用[handler.handleCancel()](arkts-arkweb-sslerrorhandler-c.md#handlecancel)或
+> [handler.handleConfirm()](arkts-arkweb-sslerrorhandler-c.md#handleconfirm)处理该回调，如果没有处理该回调则默认取消资源加载。handleConfirm()或者
+> handleCancel()的行为可能会被记录下来，以便为将来的SSL错误做出响应。
 > 
 > - 应用程序可以用于显示自定义错误页面或静默记录问题。
 

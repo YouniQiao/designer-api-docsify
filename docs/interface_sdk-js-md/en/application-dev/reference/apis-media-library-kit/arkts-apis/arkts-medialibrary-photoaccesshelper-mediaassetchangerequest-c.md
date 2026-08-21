@@ -26,7 +26,8 @@ Adds resources from the application sandbox based on the file URI. For details a
 
 > **NOTE：**
 > 
-> For the same asset change request, this API cannot be repeatedly called after the resource is successfully &gt; added. For a moving photo, you can call this API twice to add the image and video resources.
+> For the same asset change request, this API cannot be repeatedly called after the resource is successfully
+> added. For a moving photo, you can call this API twice to add the image and video resources.
 
 **Since:** 23
 
@@ -62,7 +63,8 @@ Adds a resource using **ArrayBuffer** data.
 
 > **NOTE：**
 > 
-> For the same asset change request, this API cannot be repeatedly called after the resource is successfully &gt; added. For a moving photo, you can call this API twice to add the image and video resources.
+> For the same asset change request, this API cannot be repeatedly called after the resource is successfully
+> added. For a moving photo, you can call this API twice to add the image and video resources.
 
 **Since:** 23
 
@@ -483,7 +485,9 @@ Obtains the asset in this asset change request.
 
 > **NOTE：**
 > 
-> For the change request used to create an asset, this API returns **null** before &gt; [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) is called &gt; to apply the changes.
+> For the change request used to create an asset, this API returns **null** before
+> [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) is called
+> to apply the changes.
 
 **Since:** 11
 
@@ -544,7 +548,8 @@ Obtains the handler used for writing a file to cache. This API uses a promise to
 
 > **NOTE：**
 > 
-> For the same asset change request, this API cannot be repeatedly called after a temporary file write handle is &gt; successfully obtained.
+> For the same asset change request, this API cannot be repeatedly called after a temporary file write handle is
+> successfully obtained.
 
 **Since:** 23
 

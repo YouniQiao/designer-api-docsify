@@ -607,7 +607,8 @@ offPermissionStateChange(
 取消订阅时，若不传入callback，则批量取消与tokenIDList和permissionList完全匹配的所有监听回调。
 
 > **说明：**
-> 该接口通常与[onPermissionStateChange](#onpermissionstatechange) &gt; 配套使用，用于取消通过onPermissionStateChange创建的监听关系。
+> 该接口通常与[onPermissionStateChange](#onpermissionstatechange)
+> 配套使用，用于取消通过onPermissionStateChange创建的监听关系。
 
 **起始版本：** 23
 

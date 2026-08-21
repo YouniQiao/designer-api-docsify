@@ -2,7 +2,7 @@
 
 Indicates the {@code ValueType}.
 
-&lt;p&gt;{@code ValueType} is obtained based on the value.
+<p>{@code ValueType} is obtained based on the value.
 
 **Since:** 23
 

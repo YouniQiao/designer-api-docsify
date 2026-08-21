@@ -23,6 +23,6 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 
 | 名称 | 说明 |
 | --- | --- |
-| [BrightnessBlenderParam](arkts-arkgraphics2d-graphics-uieffect-brightnessblenderparam-i-sys.md) | BrightnessBlender的参数列表，用于配置提亮效果的各项属性，包括灰度调整系数、饱和度和混合比例等参数。 |
+| [BrightnessBlenderParam](arkts-arkgraphics2d-graphicsuieffect-brightnessblenderparam-i-sys.md) | BrightnessBlender的参数列表，用于配置提亮效果的各项属性，包括灰度调整系数、饱和度和混合比例等参数。 |
 <!--DelEnd-->
 

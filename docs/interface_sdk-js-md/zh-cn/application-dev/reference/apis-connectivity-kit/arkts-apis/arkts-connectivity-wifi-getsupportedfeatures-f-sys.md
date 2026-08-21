@@ -17,7 +17,7 @@ function getSupportedFeatures(): number
 
 查询设备支持的特性。
 
-&lt;p&gt;检查设备是否支持指定特性。
+<p>检查设备是否支持指定特性。
 
 **起始版本：** 7
 

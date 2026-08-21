@@ -28,7 +28,7 @@ function getRequestInfo(want: Want): RequestInfo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 表示发起方请求弹框时传入的want信息。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 表示发起方请求弹框时传入的want信息。 |
 
 **返回值：**
 

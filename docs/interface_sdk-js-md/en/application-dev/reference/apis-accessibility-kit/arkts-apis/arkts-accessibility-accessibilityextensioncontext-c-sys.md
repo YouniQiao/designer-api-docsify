@@ -796,7 +796,7 @@ Starts a foreground page. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want type parameter, which passes in the information about the ability to start, such as the ability name and bundle name. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Want type parameter, which passes in the information about the ability to start, such as the ability name and bundle name. |
 
 **Return value:**
 

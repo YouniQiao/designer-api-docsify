@@ -24,7 +24,9 @@ Stops listening for events of the **TCPSocketServer** object and releases the po
 
 > **NOTE：**
 > 
-> This API does not close existing connections. To close connections, call the &gt; [close](arkts-network-socket-tcpsocketconnection-i.md#close) API of &gt; [TCPSocketConnection](arkts-network-socket-tcpsocketconnection-i.md).
+> This API does not close existing connections. To close connections, call the
+> [close](arkts-network-socket-tcpsocketconnection-i.md#close) API of
+> [TCPSocketConnection](arkts-network-socket-tcpsocketconnection-i.md).
 
 **Since:** 20
 
@@ -137,11 +139,17 @@ Obtains the file descriptor bound to the TCPSocketServer listening port. This AP
 
 > **NOTE：**
 > 
-> - This method can be called only after the &gt; [listen](#listen) method is &gt; successfully called. When listen is called for multiple times, the file descriptor bound to the latest &gt; listening port is obtained.
+> - This method can be called only after the
+> [listen](#listen) method is
+> successfully called. When listen is called for multiple times, the file descriptor bound to the latest
+> listening port is obtained.
 > 
-> - This API returns **-1** in abnormal cases such as listening exceptions or socket closed (for example, after &gt; close is called).
+> - This API returns **-1** in abnormal cases such as listening exceptions or socket closed (for example, after
+> close is called).
 > 
-> - The lifecycle of the file descriptor is managed by the system. The application can use the &gt; [close](#close) method to close the socket connection, instead of directly &gt; operating the file descriptor.
+> - The lifecycle of the file descriptor is managed by the system. The application can use the
+> [close](#close) method to close the socket connection, instead of directly
+> operating the file descriptor.
 
 **Since:** 23
 

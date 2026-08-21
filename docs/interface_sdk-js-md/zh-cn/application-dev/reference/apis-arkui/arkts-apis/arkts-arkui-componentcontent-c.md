@@ -42,7 +42,7 @@ ComponentContent的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需要的UI上下文。 |
+| uiContext | [UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md) | 是 | 创建对应节点时所需要的UI上下文。 |
 | builder | WrappedBuilder&lt;[]&gt; | 是 | 封装不带参builder函数的WrappedBuilder对象。 |
 
 ## constructor
@@ -67,7 +67,7 @@ ComponentContent的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需要的UI上下文。 |
+| uiContext | [UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md) | 是 | 创建对应节点时所需要的UI上下文。 |
 | builder | WrappedBuilder&lt;[T]&gt; | 是 | 封装带参builder函数的WrappedBuilder对象。 |
 | args | T | 是 | WrappedBuilder对象封装的builder函数的参数，类型T需与`WrappedBuilder&lt;[T]&gt;`中指定的参数类型保持一致，用于将外部数据传递给builder函数以构建UI 内容。 |
 
@@ -93,7 +93,7 @@ ComponentContent的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需要的UI上下文。 |
+| uiContext | [UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md) | 是 | 创建对应节点时所需要的UI上下文。 |
 | builder | WrappedBuilder&lt;[T]&gt; | 是 | 封装带参builder函数的WrappedBuilder对象。 |
 | args | T | 是 | WrappedBuilder对象封装的builder函数的参数，类型T需与`WrappedBuilder&lt;[T]&gt;`中指定的参数类型保持一致，用于将外部数据传递给builder函数以构建UI 内容。 |
 | options | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | 是 | 构建配置参数，用于配置Builder的构建行为，BuildOptions中所有属性都是可选的。 |
@@ -212,7 +212,9 @@ dispose(): void
 
 > **说明：**
 > 
-> 当ComponentContent对象调用dispose之后，会与后端实体节点解除引用关系。调用dispose后再次调用该对象的其他接口可能会出现crash或返回默认值，建议在操作节点前通过 &gt; [isDisposed](#isdisposed)接口检查其有效性。若前端对象ComponentContent无法释放，容易导致内存泄漏。建议在不再需要操作该 &gt; ComponentContent对象时，开发者主动调用dispose释放后端节点，以减少引用关系的复杂性，降低内存泄漏的风险。
+> 当ComponentContent对象调用dispose之后，会与后端实体节点解除引用关系。调用dispose后再次调用该对象的其他接口可能会出现crash或返回默认值，建议在操作节点前通过
+> [isDisposed](#isdisposed)接口检查其有效性。若前端对象ComponentContent无法释放，容易导致内存泄漏。建议在不再需要操作该
+> ComponentContent对象时，开发者主动调用dispose释放后端节点，以减少引用关系的复杂性，降低内存泄漏的风险。
 
 **起始版本：** 12
 
@@ -296,7 +298,8 @@ inheritFreezeOptions(enabled: boolean): void
 
 > **说明：**
 > 
-> ComponentContent设置inheritFreezeOptions为true，且父组件为自定义组件、BuilderNode、ComponentContent、ReactiveBuilderNode或 &gt; ReactiveComponentContent时，会继承父组件的冻结策略。当子组件为自定义组件时，ComponentContent的冻结策略不会传递给该子组件。
+> ComponentContent设置inheritFreezeOptions为true，且父组件为自定义组件、BuilderNode、ComponentContent、ReactiveBuilderNode或
+> ReactiveComponentContent时，会继承父组件的冻结策略。当子组件为自定义组件时，ComponentContent的冻结策略不会传递给该子组件。
 
 **起始版本：** 20
 
@@ -827,7 +830,7 @@ struct Index {
 updateConfiguration(): void
 ```
 
-传递系统环境变化事件，触发节点的全量更新。适用于系统深浅色模式切换、语言变更、字体大小调整等需要节点响应系统配置变化的场景。系统环境变化的相关信息请参见 [@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md)。
+传递系统环境变化事件，触发节点的全量更新。适用于系统深浅色模式切换、语言变更、字体大小调整等需要节点响应系统配置变化的场景。系统环境变化的相关信息请参见 [@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityconfiguration-configuration-i.md)。
 
 > **说明：**
 > 

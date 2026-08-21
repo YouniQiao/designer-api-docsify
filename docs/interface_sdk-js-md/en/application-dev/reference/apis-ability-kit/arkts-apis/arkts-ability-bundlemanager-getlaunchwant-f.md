@@ -26,7 +26,7 @@ Obtains the **Want** parameters of the [entry UIAbility](../../../quick-start/ap
 
 | Type | Description |
 | --- | --- |
-| [Want](arkts-ability-app-ability-want-want-c.md) | Want object that contains only the bundle name and ability name. |
+| [Want](arkts-ability-appabilitywant-want-c.md) | Want object that contains only the bundle name and ability name. |
 
 **Error codes:**
 

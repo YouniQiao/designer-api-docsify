@@ -1,11 +1,11 @@
 # ArkTS API<!--arkts-connectivitykit-->
 
 - [@ohos.FusionConnectivity.PartnerAgentExtensionAbility](arkts-fusionconnectivity-partneragentextensionability.md)
-  - [PartnerAgentExtensionAbility](arkts-connectivity-fusionconnectivity-partneragentextensionability-partneragentextensionability-c.md)
+  - [PartnerAgentExtensionAbility](arkts-connectivity-fusionconnectivitypartneragentextensionability-partneragentextensionability-c.md)
   - [PartnerAgentExtensionAbilityDestroyReason](arkts-connectivity-partneragentextensionabilitydestroyreason-t.md)
   - [PartnerDeviceAddress](arkts-connectivity-partnerdeviceaddress-t.md)
 - [@ohos.FusionConnectivity.PartnerAgentExtensionContext](arkts-fusionconnectivity-partneragentextensioncontext.md)
-  - [PartnerAgentExtensionContext](arkts-connectivity-fusionconnectivity-partneragentextensioncontext-partneragentextensioncontext-c.md)
+  - [PartnerAgentExtensionContext](arkts-connectivity-fusionconnectivitypartneragentextensioncontext-partneragentextensioncontext-c.md)
 - [@ohos.FusionConnectivity.partnerAgent](arkts-fusionconnectivity-partneragent.md)
   - [bindDevice](arkts-connectivity-partneragent-binddevice-f.md)
   <!--Del-->
@@ -1209,12 +1209,12 @@
   - [setPowerModel](arkts-connectivity-wifiext-setpowermodel-f.md)
   - [PowerModel](arkts-connectivity-wifiext-powermodel-e.md)
 - [@system.bluetooth](arkts-system-bluetooth.md)
-  - [Bluetooth](arkts-connectivity-system-bluetooth-bluetooth-c.md)
-  - [BLEFoundResponse](arkts-connectivity-system-bluetooth-blefoundresponse-i.md)
-  - [BluetoothDevice](arkts-connectivity-system-bluetooth-bluetoothdevice-i.md)
-  - [StartBLEScanOptions](arkts-connectivity-system-bluetooth-startblescanoptions-i.md)
-  - [StopBLEScanOptions](arkts-connectivity-system-bluetooth-stopblescanoptions-i.md)
-  - [SubscribeBLEFoundOptions](arkts-connectivity-system-bluetooth-subscribeblefoundoptions-i.md)
+  - [Bluetooth](arkts-connectivity-systembluetooth-bluetooth-c.md)
+  - [BLEFoundResponse](arkts-connectivity-systembluetooth-blefoundresponse-i.md)
+  - [BluetoothDevice](arkts-connectivity-systembluetooth-bluetoothdevice-i.md)
+  - [StartBLEScanOptions](arkts-connectivity-systembluetooth-startblescanoptions-i.md)
+  - [StopBLEScanOptions](arkts-connectivity-systembluetooth-stopblescanoptions-i.md)
+  - [SubscribeBLEFoundOptions](arkts-connectivity-systembluetooth-subscribeblefoundoptions-i.md)
 - tag<!--arkts-connectivitykit-tag-->
   - [nfctech](arkts-nfctech.md)
     - [BarcodeTag](arkts-connectivity-nfctech-barcodetag-i.md)

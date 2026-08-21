@@ -4,7 +4,9 @@ Blend mode.
 
 > **NOTE：**
 > 
-> In the **blendMode** enums, **s** indicates the source pixel, **d** indicates the target pixel, **sa** indicates &gt; the opacity of the source pixel, **da** indicates the opacity of the target pixel, **r** indicates the pixel after &gt; blending, and **ra** indicates the opacity of the pixel after blending.
+> In the **blendMode** enums, **s** indicates the source pixel, **d** indicates the target pixel, **sa** indicates
+> the opacity of the source pixel, **da** indicates the opacity of the target pixel, **r** indicates the pixel after
+> blending, and **ra** indicates the opacity of the pixel after blending.
 
 **Since:** 11
 

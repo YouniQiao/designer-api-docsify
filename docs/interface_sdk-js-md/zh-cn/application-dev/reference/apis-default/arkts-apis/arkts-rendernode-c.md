@@ -4,7 +4,8 @@
 
 > **说明：**
 > 
-> - 不建议对[BuilderNode](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-c.md)中的RenderNode进行修改操作。BuilderNode中持有的FrameNode仅用于将该 &gt; BuilderNode作为子节点挂载到其他FrameNode上，对该FrameNode或对应的RenderNode进行属性设置与子节点操作可能会产生未定义行为，包括但不限于显示异常、事件异常、稳定性问题等。
+> - 不建议对[BuilderNode](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-c.md)中的RenderNode进行修改操作。BuilderNode中持有的FrameNode仅用于将该
+> BuilderNode作为子节点挂载到其他FrameNode上，对该FrameNode或对应的RenderNode进行属性设置与子节点操作可能会产生未定义行为，包括但不限于显示异常、事件异常、稳定性问题等。
 > 
 > - RenderNode对象不支持使用JSON序列化。
 

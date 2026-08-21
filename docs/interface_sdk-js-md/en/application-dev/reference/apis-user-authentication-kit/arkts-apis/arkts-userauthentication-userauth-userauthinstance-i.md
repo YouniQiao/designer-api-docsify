@@ -6,7 +6,8 @@ Before using the APIs of **UserAuthInstance**, you must obtain a **UserAuthInsta
 
 > **NOTE：**
 
-> Each **UserAuthInstance** can be used for only one authentication process. To perform authentication again, you &gt; must obtain a new **UserAuthInstance** instance.
+> Each **UserAuthInstance** can be used for only one authentication process. To perform authentication again, you
+> must obtain a new **UserAuthInstance** instance.
 
 **Since:** 23
 
@@ -104,7 +105,8 @@ Unsubscribes from the event for intermediate authentication status.
 
 > **NOTE：**
 
-> The [UserAuthInstance](#userauthinstance) instance used to invoke this API must be the one used &gt; to subscribe to the event.
+> The [UserAuthInstance](#userauthinstance) instance used to invoke this API must be the one used
+> to subscribe to the event.
 
 **Since:** 23
 
@@ -134,9 +136,10 @@ Unsubscribes from the user authentication result.
 
 > **NOTE：**
 
-> The [UserAuthInstance](#userauthinstance) instance used to invoke this API must be the one used &gt; to subscribe to the event.
+> The [UserAuthInstance](#userauthinstance) instance used to invoke this API must be the one used
+> to subscribe to the event.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The UserAuthInstance instance used to invoke this API must be the one used to subscribe to the event. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The UserAuthInstance instance used to invoke this API must be the one used to subscribe to the event. </p>
 
 **Since:** 23
 
@@ -167,7 +170,8 @@ Unsubscribes from the authentication tip information. This API is commonly used 
 
 > **NOTE：**
 
-> The [UserAuthInstance](#userauthinstance) instance used to invoke this API must be the one used &gt; to subscribe to the event.
+> The [UserAuthInstance](#userauthinstance) instance used to invoke this API must be the one used
+> to subscribe to the event.
 
 **Since:** 20
 
@@ -242,7 +246,8 @@ Unsubscribes from the user authentication result. This API is commonly used in t
 
 > **NOTE：**
 
-> The [UserAuthInstance](#userauthinstance) instance used to invoke this API must be the one used &gt; to subscribe to the event.
+> The [UserAuthInstance](#userauthinstance) instance used to invoke this API must be the one used
+> to subscribe to the event.
 
 **Since:** 10
 
@@ -373,7 +378,12 @@ Subscribes to authentication tip information. This API is used to obtain the wid
 
 > **NOTE：**
 
-> On PCs/2-in-1 devices, if an application initiates authentication in an application modal dialog (that is, a &gt; valid **uiContext** is passed when the user API parameter [widgetParam](arkts-userauthentication-userauth-widgetparam-i.md) is &gt; configured) and receives the authentication result, and if other windows need to be displayed, the application &gt; needs to obtain the flag message released by the component pop-up window and subscribe to the component release &gt; message (**authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED**) through the &gt; [on('authTip')](#onresult) API.
+> On PCs/2-in-1 devices, if an application initiates authentication in an application modal dialog (that is, a
+> valid **uiContext** is passed when the user API parameter [widgetParam](arkts-userauthentication-userauth-widgetparam-i.md) is
+> configured) and receives the authentication result, and if other windows need to be displayed, the application
+> needs to obtain the flag message released by the component pop-up window and subscribe to the component release
+> message (**authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED**) through the
+> [on('authTip')](#onresult) API.
 
 **Since:** 20
 
@@ -451,7 +461,12 @@ Subscribes to the user authentication result. This API is used to obtain the fin
 
 > **NOTE：**
 
-> On PCs/2-in-1 devices, if an application initiates authentication in an application modal dialog (that is, a &gt; valid **uiContext** is passed when the user API parameter [widgetParam](arkts-userauthentication-userauth-widgetparam-i.md) is &gt; configured) and receives the authentication result, and if other windows need to be displayed, the application &gt; needs to obtain the flag message released by the component pop-up window and subscribe to the component release &gt; message (**authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED**) through the &gt; [on('authTip')](#onresult) API.
+> On PCs/2-in-1 devices, if an application initiates authentication in an application modal dialog (that is, a
+> valid **uiContext** is passed when the user API parameter [widgetParam](arkts-userauthentication-userauth-widgetparam-i.md) is
+> configured) and receives the authentication result, and if other windows need to be displayed, the application
+> needs to obtain the flag message released by the component pop-up window and subscribe to the component release
+> message (**authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED**) through the
+> [on('authTip')](#onresult) API.
 
 **Since:** 10
 
@@ -485,7 +500,8 @@ Starts authentication. This API is commonly used in the following service scenar
 
 > **NOTE：**
 
-> Each **UserAuthInstance** can be used for authentication only once. To perform authentication again, you must &gt; obtain a new **UserAuthInstance**.
+> Each **UserAuthInstance** can be used for authentication only once. To perform authentication again, you must
+> obtain a new **UserAuthInstance**.
 
 **Since:** 23
 

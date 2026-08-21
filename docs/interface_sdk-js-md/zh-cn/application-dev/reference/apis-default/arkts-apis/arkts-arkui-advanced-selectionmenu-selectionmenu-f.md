@@ -28,5 +28,5 @@ export declare function SelectionMenu(options: SelectionMenuOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [SelectionMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-selectionmenu-selectionmenuoptions-i.md) | 是 | 文本选择菜单可选项。 |
+| options | [SelectionMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkuiadvancedselectionmenu-selectionmenuoptions-i.md) | 是 | 文本选择菜单可选项。 |
 

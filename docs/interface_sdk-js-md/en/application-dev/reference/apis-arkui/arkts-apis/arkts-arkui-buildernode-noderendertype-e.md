@@ -4,14 +4,59 @@ Enumerates the node rendering types.
 
 > **NOTE：**
 > 
-> - Currently, the **RENDER_TYPE_TEXTURE** type takes effect only for the &gt; [XComponentNode](arkts-arkui-xcomponentnode-c.md) and the [BuilderNode](../../apis-default/arkts-apis/arkts-buildernode-c.md) holding a &gt; component tree whose root node is a custom component.
+> - Currently, the **RENDER_TYPE_TEXTURE** type takes effect only for the
+> [XComponentNode](arkts-arkui-xcomponentnode-c.md) and the [BuilderNode](../../apis-default/arkts-apis/arkts-buildernode-c.md) holding a
+> component tree whose root node is a custom component.
 > 
-> - The following custom components currently support texture export as root nodes in &gt; [BuilderNode](../../apis-default/arkts-apis/arkts-buildernode-c.md) scenarios: Badge, &gt; Blank, Button, &gt; CanvasGradient, &gt; CanvasPattern, &gt; CanvasRenderingContext2D, &gt; Canvas, CheckboxGroup, &gt; Checkbox, Circle, &gt; ColumnSplit, Column, &gt; ContainerSpan, &gt; Counter, DataPanel, &gt; Divider, Ellipse, &gt; Flex, Gauge, &gt; Hyperlink, ImageBitmap, &gt; ImageData, Image, &gt; Line, &gt; LoadingProgress, &gt; Marquee, Matrix2D, &gt; OffscreenCanvasRenderingContext2D, &gt; OffscreenCanvas, Path2D, &gt; Path, PatternLock, &gt; Polygon, Polyline, &gt; Progress, QRCode, &gt; Radio, Rating, &gt; Rect, &gt; RelativeContainer, &gt; RowSplit, Row, &gt; Shape, Slider, &gt; Span, Stack, &gt; TextArea, TextClock, &gt; TextInput, TextTimer, &gt; Text, Toggle, &gt; Video (excluding full-screen playback), &gt; Web, XComponent.
+> - The following custom components currently support texture export as root nodes in
+> [BuilderNode](../../apis-default/arkts-apis/arkts-buildernode-c.md) scenarios: Badge,
+> Blank, Button,
+> CanvasGradient,
+> CanvasPattern,
+> CanvasRenderingContext2D,
+> Canvas, CheckboxGroup,
+> Checkbox, Circle,
+> ColumnSplit, Column,
+> ContainerSpan,
+> Counter, DataPanel,
+> Divider, Ellipse,
+> Flex, Gauge,
+> Hyperlink, ImageBitmap,
+> ImageData, Image,
+> Line,
+> LoadingProgress,
+> Marquee, Matrix2D,
+> OffscreenCanvasRenderingContext2D,
+> OffscreenCanvas, Path2D,
+> Path, PatternLock,
+> Polygon, Polyline,
+> Progress, QRCode,
+> Radio, Rating,
+> Rect,
+> RelativeContainer,
+> RowSplit, Row,
+> Shape, Slider,
+> Span, Stack,
+> TextArea, TextClock,
+> TextInput, TextTimer,
+> Text, Toggle,
+> Video (excluding full-screen playback),
+> Web, XComponent.
 > 
 > - Since API version 12, the following components also support texture export:
-> DatePicker, ForEach, &gt; Grid, &gt; [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md), &gt; LazyForEach, List, &gt; Scroll, Swiper, &gt; TimePicker, custom components decorated with &gt; [@Component](../../../ui/state-management/arkts-create-custom-components.md#component), &gt; NodeContainer, and FrameNode and &gt; [RenderNode](arkts-arkui-rendernode-c.md) mounted to &gt; NodeContainer.
+> DatePicker, ForEach,
+> Grid,
+> [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md),
+> LazyForEach, List,
+> Scroll, Swiper,
+> TimePicker, custom components decorated with
+> [@Component](../../../ui/state-management/arkts-create-custom-components.md#component),
+> NodeContainer, and FrameNode and
+> [RenderNode](arkts-arkui-rendernode-c.md) mounted to
+> NodeContainer.
 > 
-> - For details, see &gt; [Rendering and Drawing Video and Button Components at the Same Layer](../../../web/web-same-layer.md).
+> - For details, see
+> [Rendering and Drawing Video and Button Components at the Same Layer](../../../web/web-same-layer.md).
 
 **Since:** 11
 

@@ -16,7 +16,8 @@ function setDisallowedPermission(admin: Want, permission: string, disallow: bool
 
 > **说明：**
 > 
-> 1.只能禁用[权限APL等级](../../../security/AccessToken/app-permission-mgmt-overview.md#权限机制中的基本概念)为normal或system_basic的权 &gt; 限，否则返回错误码9201045。
+> 1.只能禁用[权限APL等级](../../../security/AccessToken/app-permission-mgmt-overview.md#权限机制中的基本概念)为normal或system_basic的权
+> 限，否则返回错误码9201045。
 > 
 > 2.单个用户下最多可以禁用200个权限。
 > 
@@ -36,7 +37,7 @@ function setDisallowedPermission(admin: Want, permission: string, disallow: bool
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | permission | string | 是 | 权限名称。 |
 | disallow | boolean | 是 | 是否禁用。true表示禁用，false表示取消禁用。 |
 | accountId | number | 是 | 用户ID，指定具体用户，取值范围：大于等于0。accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。*@ohos.account.osAccount** to obtain the user ID. |

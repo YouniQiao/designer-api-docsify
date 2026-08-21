@@ -16,9 +16,16 @@ Sets the media query condition. This API returns the corresponding media query l
 
 > **NOTE：**
 > 
-> - This API is supported since API version 7 and deprecated since API version 18. You are advised to use &gt; [matchMediaSync](arkts-arkui-arkui-uicontext-mediaquery-c.md#matchmediasync) instead. Before calling this API, you &gt; need to obtain the [MediaQuery](arkts-arkui-arkui-uicontext-mediaquery-c.md) object using the &gt; [getMediaQuery](arkts-arkui-arkui-uicontext-uicontext-c.md#getmediaquery) method in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md).
+> - This API is supported since API version 7 and deprecated since API version 18. You are advised to use
+> [matchMediaSync](arkts-arkui-arkuiuicontext-mediaquery-c.md#matchmediasync) instead. Before calling this API, you
+> need to obtain the [MediaQuery](arkts-arkui-arkuiuicontext-mediaquery-c.md) object using the
+> [getMediaQuery](arkts-arkui-arkuiuicontext-uicontext-c.md#getmediaquery) method in
+> [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md).
 > 
-> - Since API version 10, you can use the &gt; [getMediaQuery](arkts-arkui-arkui-uicontext-uicontext-c.md#getmediaquery) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the &gt; [MediaQuery](arkts-arkui-arkui-uicontext-mediaquery-c.md) object associated with the current UI context.
+> - Since API version 10, you can use the
+> [getMediaQuery](arkts-arkui-arkuiuicontext-uicontext-c.md#getmediaquery) API in
+> [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) to obtain the
+> [MediaQuery](arkts-arkui-arkuiuicontext-mediaquery-c.md) object associated with the current UI context.
 
 **Since:** 7
 

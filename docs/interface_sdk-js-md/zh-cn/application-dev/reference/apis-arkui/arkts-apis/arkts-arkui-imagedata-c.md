@@ -123,7 +123,8 @@ readonly width: number
 
 > **说明：**
 > 
-> 可使用[px2vp](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#px2vp12) &gt; 接口进行单位转换。
+> 可使用[px2vp](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#px2vp12)
+> 接口进行单位转换。
 
 **类型：** number
 

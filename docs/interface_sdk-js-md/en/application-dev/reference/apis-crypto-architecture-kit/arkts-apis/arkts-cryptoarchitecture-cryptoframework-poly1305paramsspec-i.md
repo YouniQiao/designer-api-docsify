@@ -6,9 +6,17 @@ Encapsulates the parameters for encryption or decryption using the ChaCha20-Poly
 
 > **NOTE：**
 > 
-> Before passing a value to &gt; [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init), specify &gt; **algName** for its parent class [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md).
+> Before passing a value to
+> [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init), specify
+> **algName** for its parent class [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md).
 > 
-> When the Poly1305 mode is used for encryption, you need to extract the last 16 bytes from the &gt; [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) returned by &gt; [doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal) or &gt; [doFinalSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinalsync) and use them as **authTag** in &gt; [Poly1305ParamsSpec](#poly1305paramsspec) for &gt; [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) or &gt; [initSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#initsync) during decryption.
+> When the Poly1305 mode is used for encryption, you need to extract the last 16 bytes from the
+> [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) returned by
+> [doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal) or
+> [doFinalSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinalsync) and use them as **authTag** in
+> [Poly1305ParamsSpec](#poly1305paramsspec) for
+> [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) or
+> [initSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#initsync) during decryption.
 
 **Inheritance/Implementation:** Poly1305ParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)
 

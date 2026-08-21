@@ -338,7 +338,7 @@ readonly location: LocationType
 
 文件的位置，表示该文件是本地文件或者云端文件。
 
-**类型：** [LocationType](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-locationtype-e.md)
+**类型：** [LocationType](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-locationtype-e.md)
 
 **起始版本：** 23
 

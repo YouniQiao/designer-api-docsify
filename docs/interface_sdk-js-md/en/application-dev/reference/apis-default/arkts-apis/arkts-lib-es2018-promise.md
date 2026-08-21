@@ -11,5 +11,5 @@
 
 | Name | Description |
 | --- | --- |
-| [Promise](arkts-lib-es2018-promise-promise-i.md) | Represents the completion of an asynchronous operation |
+| [Promise](arkts-libes2018promise-promise-i.md) | Represents the completion of an asynchronous operation |
 

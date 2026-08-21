@@ -16,6 +16,6 @@ type OnWindowStageWillRestoreFn = (ability: UIAbility, windowStage: window.Windo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 当前Ability对象。 |
+| ability | [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) | 是 | 当前Ability对象。 |
 | windowStage | window.WindowStage | 是 | 当前WindowStage对象。 |
 

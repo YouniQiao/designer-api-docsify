@@ -4,7 +4,7 @@
 type OnAcquireFormStateFn = (want: Want) => formInfo.FormState
 ```
 
-Called to return a FormState object. &lt;p&gt;You must override this callback if you want this ability to return the actual form state. Otherwise, this method returns DEFAULT by default.&lt;/p&gt;
+Called to return a FormState object. <p>You must override this callback if you want this ability to return the actual form state. Otherwise, this method returns DEFAULT by default.</p>
 
 **起始版本：** 23
 
@@ -20,7 +20,7 @@ Called to return a FormState object. &lt;p&gt;You must override this callback if
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Indicates the description of the form for which the FormState is obtained. The description covers the bundle name, ability name, module name, form name, and form dimensions. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | Indicates the description of the form for which the FormState is obtained. The description covers the bundle name, ability name, module name, form name, and form dimensions. |
 
 **返回值：**
 

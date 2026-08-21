@@ -4,7 +4,8 @@ The **bytrace** module implements performance tracing for processes.
 
 > **NOTE：**
 > 
-> - The APIs provided by this module are deprecated since API version 8. You are advised to use the new APIs &gt; [@ohos.hiTraceMeter](arkts-hitracemeter.md) instead.
+> - The APIs provided by this module are deprecated since API version 8. You are advised to use the new APIs
+> [@ohos.hiTraceMeter](arkts-hitracemeter.md) instead.
 
 **Since:** 7
 

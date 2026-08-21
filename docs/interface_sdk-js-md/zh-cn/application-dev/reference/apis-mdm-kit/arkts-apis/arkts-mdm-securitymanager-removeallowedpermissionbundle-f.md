@@ -16,7 +16,8 @@ function removeAllowedPermissionBundle(admin: Want, permission: string, applicat
 
 > **说明：**
 > 
-> 必须先通过[setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md)接口禁用权限后，才能从权限使用例外名单移除应用，否则返回错误码92010 &gt; 44。
+> 必须先通过[setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md)接口禁用权限后，才能从权限使用例外名单移除应用，否则返回错误码92010
+> 44。
 
 **起始版本：** 26.0.0
 
@@ -32,7 +33,7 @@ function removeAllowedPermissionBundle(admin: Want, permission: string, applicat
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | permission | string | 是 | 权限名称。 |
 | applicationInstance | common.ApplicationInstance | 是 | 需从权限使用例外名单移除的应用实例信息。 |
 

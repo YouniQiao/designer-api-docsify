@@ -16,7 +16,8 @@ Uninitializes the active tag resources.
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. Use &gt; [uninitialize](arkts-connectivity-connectedtag-uninitialize-f.md) instead.
+> This API is supported since API version 8 and deprecated since API version 9. Use
+> [uninitialize](arkts-connectivity-connectedtag-uninitialize-f.md) instead.
 
 **Since:** 8
 

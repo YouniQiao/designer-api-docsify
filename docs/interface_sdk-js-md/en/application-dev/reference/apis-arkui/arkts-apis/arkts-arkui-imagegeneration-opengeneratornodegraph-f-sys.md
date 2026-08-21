@@ -30,7 +30,7 @@ Open the AI node graph Sheet.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | the context of dialog for ui display. |
+| uiContext | [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | the context of dialog for ui display. |
 | options | [GeneratorNodeGraphOptions](arkts-arkui-imagegeneration-generatornodegraphoptions-i-sys.md) | No | node graph task parameters. |
 
 **Return value:**

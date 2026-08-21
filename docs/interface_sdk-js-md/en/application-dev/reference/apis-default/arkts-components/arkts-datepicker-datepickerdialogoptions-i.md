@@ -22,7 +22,7 @@ acceptButtonStyle?: PickerDialogButtonStyle
 
 Style of accept button.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>In the acceptButtonStyle and cancelButtonStyle configurations, <br>only one primary field can be set to true at most. <br>If both the primary fields are set to true, neither will take effect. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>In the acceptButtonStyle and cancelButtonStyle configurations, <br>only one primary field can be set to true at most. <br>If both the primary fields are set to true, neither will take effect. </p>
 
 **Type:** [PickerDialogButtonStyle](../../apis-arkui/arkts-components/arkts-arkui-pickerdialogbuttonstyle-i.md)
 
@@ -172,7 +172,7 @@ cancelButtonStyle?: PickerDialogButtonStyle
 
 Style of cancel button.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>In the acceptButtonStyle and cancelButtonStyle configurations, <br>only one primary field can be set to true at most. <br>If both the primary fields are set to true, neither will take effect. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>In the acceptButtonStyle and cancelButtonStyle configurations, <br>only one primary field can be set to true at most. <br>If both the primary fields are set to true, neither will take effect. </p>
 
 **Type:** [PickerDialogButtonStyle](../../apis-arkui/arkts-components/arkts-arkui-pickerdialogbuttonstyle-i.md)
 
@@ -194,7 +194,7 @@ dateTimeOptions?: DateTimeOptions
 
 Whether to display a leading zero for the hours and minutes.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Currently only the configuration of the hour and minute parameters is supported. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Currently only the configuration of the hour and minute parameters is supported. </p>
 
 **Type:** DateTimeOptions
 
@@ -436,7 +436,7 @@ onDateAccept?: Callback<Date>
 
 Callback invoked when the OK button in the dialog box is clicked.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When showTime is set to true, the hour and minute in the value returned by <br>the callback are the hour and minute selected in the picker. Otherwise, <br>the hour and minute are the hour and minute of the system time. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When showTime is set to true, the hour and minute in the value returned by <br>the callback are the hour and minute selected in the picker. Otherwise, <br>the hour and minute are the hour and minute of the system time. </p>
 
 **Type:** [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;Date&gt;
 
@@ -458,7 +458,7 @@ onDateChange?: Callback<Date>
 
 Callback invoked when the selected item in the picker changes. Anonymous Object Rectification.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When showTime is set to true, the hour and minute in the value returned by <br>the callback are the hour and minute selected in the picker. Otherwise, <br>the hour and minute are the hour and minute of the system time. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When showTime is set to true, the hour and minute in the value returned by <br>the callback are the hour and minute selected in the picker. Otherwise, <br>the hour and minute are the hour and minute of the system time. </p>
 
 **Type:** [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;Date&gt;
 
@@ -480,7 +480,7 @@ onDidAppear?: VoidCallback
 
 Event callback when the dialog box appears.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt; onWillDisappear &gt; onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in onDidAppear. The settings take effect next time the dialog box appears. <br>3. If the user closes the dialog box immediately after it appears, onWillDisappear is invoked before onDidAppear. <br>4. If the dialog box is closed before its entrance animation is finished, this callback is not invoked. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt; onWillDisappear &gt; onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in onDidAppear. The settings take effect next time the dialog box appears. <br>3. If the user closes the dialog box immediately after it appears, onWillDisappear is invoked before onDidAppear. <br>4. If the dialog box is closed before its entrance animation is finished, this callback is not invoked. </p>
 
 **Type:** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
 
@@ -502,7 +502,7 @@ onDidDisappear?: VoidCallback
 
 Event callback when the dialog box disappears.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; <br>(onDateAccept/onCancel/onDateChange) &gt; onWillDisappear &gt; onDidDisappear. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; <br>(onDateAccept/onCancel/onDateChange) &gt; onWillDisappear &gt; onDidDisappear. </p>
 
 **Type:** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
 
@@ -524,7 +524,7 @@ onWillAppear?: VoidCallback
 
 Event callback when the dialog box is about to appear.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt; onWillDisappear &gt; onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in onWillAppear. The settings take effect next time the dialog box appears. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt; onWillDisappear &gt; onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in onWillAppear. The settings take effect next time the dialog box appears. </p>
 
 **Type:** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
 
@@ -546,7 +546,7 @@ onWillDisappear?: VoidCallback
 
 Event callback when the dialog box is about to disappear.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt; onWillDisappear &gt; onDidDisappear. <br>2. If the user closes the dialog box immediately after it appears, onWillDisappear is invoked before onDidAppear. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt; onWillDisappear &gt; onDidDisappear. <br>2. If the user closes the dialog box immediately after it appears, onWillDisappear is invoked before onDidAppear. </p>
 
 **Type:** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
 
@@ -610,7 +610,7 @@ showTime?: boolean
 
 Whether to display the time item. The value true means to display the time item, and false means the opposite.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>With showTime=true, the mode parameter has no effect and the default three columns for year, <br>month, and day are displayed. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>With showTime=true, the mode parameter has no effect and the default three columns for year, <br>month, and day are displayed. </p>
 
 **Type:** boolean
 
@@ -676,7 +676,7 @@ useMilitaryTime?: boolean
 
 Whether to display time in 24-hour format. The value true means to display time in 24-hour format, and false means the opposite.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When the display time is in 12-hour format, the AM/PM zone does not change depending on the hour portion. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When the display time is in 12-hour format, the AM/PM zone does not change depending on the hour portion. </p>
 
 **Type:** boolean
 

@@ -18,7 +18,9 @@ function addAllowedDistributeAbilityConnBundles(admin: Want, appIdentifiers: Arr
 
 > **说明：**
 > 
-> 1.如果要设置允许使用特定分布式业务的应用名单，在调用本接口前必须已经通过 &gt; [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md)接口 &gt; 禁用了向其他设备传输数据的设备间单向传输数据的能力，否则会抛出错误码9201043。
+> 1.如果要设置允许使用特定分布式业务的应用名单，在调用本接口前必须已经通过
+> [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md)接口
+> 禁用了向其他设备传输数据的设备间单向传输数据的能力，否则会抛出错误码9201043。
 
 > 2.当向其他设备传输数据的设备间单向传输数据的能力被解除禁用时，通过本接口设置的允许使用特定分布式业务的应用名单会被同步清除。
 
@@ -36,7 +38,7 @@ function addAllowedDistributeAbilityConnBundles(admin: Want, appIdentifiers: Arr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | appIdentifiers | Array&lt;string&gt; | 是 | 应用[唯一标识符](../../apis-ability-kit/arkts-apis/arkts-ability-bundleinfo-signatureinfo-i.md)的数组，可以通过接口 [bundleManager.getBundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfo-f.md)获取 bundleInfo.signatureInfo.appIdentifier。允许列表总数不能超过200个。 |
 | serviceType | ServiceType | 是 | 分布式业务类型。 |
 | accountId | number | 是 | 用户ID，取值范围：大于等于0的整数。 <br> accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |

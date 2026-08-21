@@ -1,11 +1,11 @@
 # ArkTS API<!--arkts-formkit-->
 
 - [@ohos.app.form.FormEditExtensionAbility](arkts-app-form-formeditextensionability.md)
-  - [FormEditExtensionAbility](arkts-form-app-form-formeditextensionability-formeditextensionability-c.md)
+  - [FormEditExtensionAbility](arkts-form-appformformeditextensionability-formeditextensionability-c.md)
 - [@ohos.app.form.FormExtensionAbility](arkts-app-form-formextensionability.md)
-  - [FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md)
+  - [FormExtensionAbility](arkts-form-appformformextensionability-formextensionability-c.md)
   <!--Del-->
-  - [FormExtensionAbility(系统接口)](arkts-form-app-form-formextensionability-formextensionability-c-sys.md)<!--DelEnd-->
+  - [FormExtensionAbility(系统接口)](arkts-form-appformformextensionability-formextensionability-c-sys.md)<!--DelEnd-->
   <!--Del-->
   - [OnAcquireFormDataFn(系统接口)](arkts-form-onacquireformdatafn-t-sys.md)<!--DelEnd-->
   - [OnAcquireFormStateFn](arkts-form-onacquireformstatefn-t.md)
@@ -13,8 +13,8 @@
   - [OnShareFormFn(系统接口)](arkts-form-onshareformfn-t-sys.md)<!--DelEnd-->
   - [OnStopFn](arkts-form-onstopfn-t.md)
 - [@ohos.app.form.LiveFormExtensionAbility](arkts-app-form-liveformextensionability.md)
-  - [LiveFormExtensionAbility](arkts-form-app-form-liveformextensionability-liveformextensionability-c.md)
-  - [LiveFormInfo](arkts-form-app-form-liveformextensionability-liveforminfo-i.md)
+  - [LiveFormExtensionAbility](arkts-form-appformliveformextensionability-liveformextensionability-c.md)
+  - [LiveFormInfo](arkts-form-appformliveformextensionability-liveforminfo-i.md)
 <!--Del-->
 - [@ohos.app.form.formAgent](arkts-app-form-formagent.md)<!--DelEnd-->
   <!--Del-->

@@ -137,7 +137,7 @@ constructor(type: string, value: ValueType)
 
 当参数value为[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)类型时，参数type必须对应为 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)中 OPENHARMONY_PIXEL_MAP的值；
 
-当参数value为[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)类型时，参数type必须对应为 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)中OPENHARMONY_WANT的 值。
+当参数value为[Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)类型时，参数type必须对应为 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)中OPENHARMONY_WANT的 值。
 
 **起始版本：** 23
 

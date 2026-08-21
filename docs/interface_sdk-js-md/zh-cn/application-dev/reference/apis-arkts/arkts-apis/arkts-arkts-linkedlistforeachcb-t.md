@@ -22,5 +22,5 @@ LinkedList的回调函数类型。
 | --- | --- | --- | --- |
 | value | T | 是 | 当前元素的值。 |
 | index | int | 是 | 当前元素的下标。 该值为整数。 |
-| linkedList | [LinkedList](arkts-arkts-util-linkedlist-linkedlist-c.md)&lt;T&gt; | 是 | 当前正在遍历的LinkedList实例。 |
+| linkedList | [LinkedList](arkts-arkts-utillinkedlist-linkedlist-c.md)&lt;T&gt; | 是 | 当前正在遍历的LinkedList实例。 |
 

@@ -24,7 +24,9 @@ Creates a VPN based on the specified configuration. This API uses a promise to r
 
 > **NOTE：**
 > 
-> You are advised to call [destroy()](#destroy) or &gt; [destroy(vpnId: string)](#destroy) to destroy the VPN and clear &gt; resources when the VPN is not needed.
+> You are advised to call [destroy()](#destroy) or
+> [destroy(vpnId: string)](#destroy) to destroy the VPN and clear
+> resources when the VPN is not needed.
 
 **Since:** 11
 

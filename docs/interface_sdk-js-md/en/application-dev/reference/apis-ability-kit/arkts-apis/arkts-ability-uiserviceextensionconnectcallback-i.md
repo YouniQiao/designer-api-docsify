@@ -22,7 +22,8 @@ Called to receive data when a connection to the UIServiceExtensionAbility is est
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 14
 
@@ -158,7 +159,8 @@ Called when the connection to the UIServiceExtensionAbility is interrupted.
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 

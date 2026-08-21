@@ -49,7 +49,8 @@ static getContext2DFromDrawingContext(drawingContext: DrawingRenderingContext, o
 
 > **说明：**
 > 
-> - 从该接口获取的CanvasRenderingContext2D对象不允许作为参数创建Canvas组件， &gt; 否则会导致应用崩溃。
+> - 从该接口获取的CanvasRenderingContext2D对象不允许作为参数创建Canvas组件，
+> 否则会导致应用崩溃。
 > 
 > - 当入参的DrawingRenderingContext对象未绑定Canvas组件时，将返回错误码。
 
@@ -153,10 +154,12 @@ onAttach(callback: VoidCallback): void
 > **说明：**
 > 
 > CanvasRenderingContext2D对象在同一时间只能与一个Canvas组件绑定。
-> 当CanvasRenderingContext2D对象和Canvas组件发生绑定时，会触发'onAttach'回调， &gt; 表示可以获取到canvas。
+> 当CanvasRenderingContext2D对象和Canvas组件发生绑定时，会触发'onAttach'回调，
+> 表示可以获取到canvas。
 > 避免在'onAttach'中执行绘制方法，应保证Canvas组件已经'onReady'再进行绘制。
 > 触发'onAttach'回调的一般场景：
-> 1、Canvas组件创建时绑定CanvasRenderingContext2D对象; &gt; 2、CanvasRenderingContext2D对象新绑定一个Canvas组件时。
+> 1、Canvas组件创建时绑定CanvasRenderingContext2D对象;
+> 2、CanvasRenderingContext2D对象新绑定一个Canvas组件时。
 
 **起始版本：** 23
 
@@ -190,9 +193,11 @@ onDetach(callback: VoidCallback): void
 
 > **说明：**
 > 
-> 当CanvasRenderingContext2D对象和Canvas组件解除绑定时，会触发'onDetach'回调， &gt; 表示应停止绘制行为。
+> 当CanvasRenderingContext2D对象和Canvas组件解除绑定时，会触发'onDetach'回调，
+> 表示应停止绘制行为。
 > 触发'onDetach'回调的一般场景：
-> 1、Canvas组件销毁时解除绑定CanvasRenderingContext2D对象; &gt; 2、CanvasRenderingContext2D对象新绑定一个Canvas组件，会先解除已有的绑定。
+> 1、Canvas组件销毁时解除绑定CanvasRenderingContext2D对象;
+> 2、CanvasRenderingContext2D对象新绑定一个Canvas组件，会先解除已有的绑定。
 
 **起始版本：** 23
 

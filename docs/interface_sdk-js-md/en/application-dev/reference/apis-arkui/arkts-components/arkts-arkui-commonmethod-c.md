@@ -179,7 +179,7 @@ Sets the accessibility description. <br>This attribute provides additional conte
 accessibilityDescription(description: Resource): T
 ```
 
-Sets the accessibility description, with support for resource references using Resource. <br>This attribute provides additional context and explanation for the component, helping users understand its <br>functionality and purpose. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Reference resource of the accessibility description. You can specify further explanation <br>of the current component, for example, possible operation consequences, especially those that <br>cannot be learned from component attributes and accessibility text. If a component contains <br>both text information and the accessibility description, the text is read first and then the <br>accessibility description, when the component is selected.&lt;/p&gt;
+Sets the accessibility description, with support for resource references using Resource. <br>This attribute provides additional context and explanation for the component, helping users understand its <br>functionality and purpose. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Reference resource of the accessibility description. You can specify further explanation <br>of the current component, for example, possible operation consequences, especially those that <br>cannot be learned from component attributes and accessibility text. If a component contains <br>both text information and the accessibility description, the text is read first and then the <br>accessibility description, when the component is selected.</p>
 
 **Since:** 12
 
@@ -245,7 +245,7 @@ accessibilityGroup(value: boolean): T
 
 Sets whether to enable accessibility grouping.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>Whether to enable accessibility grouping. When accessibility grouping is enabled, <br>the component and all its children are treated as a single selectable unit, and the accessibility <br>service will no longer focus on the individual child components.&lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>Whether to enable accessibility grouping. When accessibility grouping is enabled, <br>the component and all its children are treated as a single selectable unit, and the accessibility <br>service will no longer focus on the individual child components.</p>
 
 **Since:** 12
 
@@ -279,9 +279,9 @@ accessibilityGroup(isGroup: boolean, accessibilityOptions: AccessibilityOptions)
 
 Sets whether to enable accessibility grouping.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>If accessibility grouping is enabled and the component does not contain a universal text attribute <br>or an accessibility text attribute, the system will concatenate the universal text attributes of <br>its child components to form a merged text for the component. If a child component lacks a universal <br>text attribute, it will be ignored in the concatenation process.
+<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>If accessibility grouping is enabled and the component does not contain a universal text attribute <br>or an accessibility text attribute, the system will concatenate the universal text attributes of <br>its child components to form a merged text for the component. If a child component lacks a universal <br>text attribute, it will be ignored in the concatenation process.
 
-<br>When accessibilityPreferred is set to true, the system will prioritize concatenating the accessibility <br>text attributes of the child components to form the merged text. If a child component lacks an <br>accessibility text attribute, the system will continue to concatenate its universal text attribute. <br>If a child component lacks both, it will be ignored.&lt;/p&gt;
+<br>When accessibilityPreferred is set to true, the system will prioritize concatenating the accessibility <br>text attributes of the child components to form the merged text. If a child component lacks an <br>accessibility text attribute, the system will continue to concatenate its universal text attribute. <br>If a child component lacks both, it will be ignored.</p>
 
 **Since:** 14
 
@@ -314,7 +314,7 @@ Sets whether to enable accessibility grouping.
 accessibilityLevel(value: string): T
 ```
 
-Sets the accessibility level. This property determines whether the component can be recognized by accessibility services. &lt;p&gt; Accessibility level, which is used to decide whether a component can be identified by the accessibility service. <br>The options are as follows: <br>"auto": The component's recognizability is determined by the accessibility grouping service and ArkUI. <br>"yes": The component can be recognized by accessibility services. <br>"no": The component cannot be recognized by accessibility services. <br>"no-hide-descendants": Neither the component nor its child components can be recognized by accessibility services. &lt;strong&gt;NOTE&lt;/strong&gt; <br>When accessibilityLevel is set to "auto", the component's recognizability depends on the following factors: <br>1. The accessibility service internally determines whether the component can be recognized. <br>2. If the parent component's accessibilityGroup property has isGroup set to true, the accessibility service will <br>not focus on its child components, making them unrecognizable. <br>3. If the parent component's accessibilityLevel is set to "no-hide-descendants", the component will not be <br>recognized by accessibility services.&lt;/p&gt;
+Sets the accessibility level. This property determines whether the component can be recognized by accessibility services. <p> Accessibility level, which is used to decide whether a component can be identified by the accessibility service. <br>The options are as follows: <br>"auto": The component's recognizability is determined by the accessibility grouping service and ArkUI. <br>"yes": The component can be recognized by accessibility services. <br>"no": The component cannot be recognized by accessibility services. <br>"no-hide-descendants": Neither the component nor its child components can be recognized by accessibility services. &lt;strong&gt;NOTE&lt;/strong&gt; <br>When accessibilityLevel is set to "auto", the component's recognizability depends on the following factors: <br>1. The accessibility service internally determines whether the component can be recognized. <br>2. If the parent component's accessibilityGroup property has isGroup set to true, the accessibility service will <br>not focus on its child components, making them unrecognizable. <br>3. If the parent component's accessibilityLevel is set to "no-hide-descendants", the component will not be <br>recognized by accessibility services.</p>
 
 **Since:** 12
 
@@ -606,7 +606,7 @@ accessibilityText(text: Resource): T
 
 Sets the accessibility text.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; If a component has both text content and accessibility text, only the accessibility text is announced. <br>If a component is grouped for accessibility purposes but lacks both text content and accessibility <br>text, the screen reader will concatenate text from its child components (depth-first traversal). <br>To prioritize accessibility text concatenation, set accessibilityPreferred in accessibilityGroup. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt; If a component has both text content and accessibility text, only the accessibility text is announced. <br>If a component is grouped for accessibility purposes but lacks both text content and accessibility <br>text, the screen reader will concatenate text from its child components (depth-first traversal). <br>To prioritize accessibility text concatenation, set accessibilityPreferred in accessibilityGroup. </p>
 
 **Since:** 12
 
@@ -952,7 +952,10 @@ Sets a property animation for the component.
 
 > **NOTE：**
 > 
-> - When a single page contains a large number of components with animations, use &gt; [renderGroup](#rendergroup) to minimize frame freezing and improve animation &gt; performance. For best practices, see &gt; [Animation Usage Guide – Using RenderGroup](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-fair-use-animation#section1223162922415).
+> - When a single page contains a large number of components with animations, use
+> [renderGroup](#rendergroup) to minimize frame freezing and improve animation
+> performance. For best practices, see
+> [Animation Usage Guide – Using RenderGroup](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-fair-use-animation#section1223162922415).
 > 
 > 
 > - This API cannot be called within [attributeModifier](#attributemodifier).
@@ -1492,7 +1495,10 @@ Sets the background effect of the component, including the blur radius, brightne
 
 > **NOTE：**
 > 
-> **backgroundEffect** performs real-time rendering per frame, resulting in high performance overhead. When the &gt; background blur effect remains unchanged, it is recommended that you use the static blur API &gt; [blur](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-effectkit-filter-i.md#blur). For best practices, see &gt; [Image Blurring Optimization – When to Use](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-fuzzy-scene-performance-optimization#section4945532519).
+> **backgroundEffect** performs real-time rendering per frame, resulting in high performance overhead. When the
+> background blur effect remains unchanged, it is recommended that you use the static blur API
+> [blur](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-effectkit-filter-i.md#blur). For best practices, see
+> [Image Blurring Optimization – When to Use](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-fuzzy-scene-performance-optimization#section4945532519).
 
 **Since:** 19
 
@@ -1825,7 +1831,7 @@ Binds a context menu to the component, whose visibility is subject to the isShow
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShown | boolean | Yes | true means display content, false means hide content, default is false. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. To trigger dragging by long presses is not supported. &lt;/p&gt; |
+| isShown | boolean | Yes | true means display content, false means hide content, default is false. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. To trigger dragging by long presses is not supported. </p> |
 | content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Indicates the content of context menu. |
 | options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No | Indicates the options of context menu. |
 
@@ -1857,7 +1863,7 @@ Binds a context menu to the component, whose visibility is subject to the isShow
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShow | boolean | Yes | true means display content, false means hide content, default is false. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. Dragging via long press is not supported. &lt;/p&gt;. |
+| isShow | boolean | Yes | true means display content, false means hide content, default is false. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. Dragging via long press is not supported. </p>. |
 | content | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| Array&lt;[MenuElement](arkts-arkui-menuelement-i.md)&gt; | Yes | Indicates the content of context menu. |
 | options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No | Indicates the options of context menu. |
 
@@ -2030,7 +2036,7 @@ Menu control
 bindPopup(show: boolean, popup: PopupOptions | CustomPopupOptions): T
 ```
 
-Popup control &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The popup can be displayed only after the entire page is fully constructed. Therefore, to avoid incorrect display positions and shapes, do not set this parameter to true while the page is still being constructed. &lt;/p&gt;
+Popup control <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The popup can be displayed only after the entire page is fully constructed. Therefore, to avoid incorrect display positions and shapes, do not set this parameter to true while the page is still being constructed. </p>
 
 **Since:** 7
 
@@ -2792,11 +2798,13 @@ Clips this component according to the specified shape (which may include positio
 
 > **NOTE：**
 > 
-> Different shapes support different ranges of attributes. A path is one type of shape, along with others like &gt; ellipses and rectangles.
+> Different shapes support different ranges of attributes. A path is one type of shape, along with others like
+> ellipses and rectangles.
 > 
-> Path shapes do not support setting width and height attributes. For details about the supported attributes, see &gt; the specific shape documentation.
+> Path shapes do not support setting width and height attributes. For details about the supported attributes, see
+> the specific shape documentation.
 > 
-> The [fill](../../apis-default/arkts-apis/arkts-arkui-shape-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape**
+> The [fill](../../apis-default/arkts-apis/arkts-arkuishape-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape**
 > API.
 
 **Since:** 12
@@ -2833,11 +2841,13 @@ Clips this component according to the specified shape (which may include positio
 
 > **NOTE：**
 > 
-> Different shapes support different ranges of attributes. A path is one type of shape, along with others like &gt; ellipses and rectangles.
+> Different shapes support different ranges of attributes. A path is one type of shape, along with others like
+> ellipses and rectangles.
 > 
-> Path shapes do not support setting width and height attributes. For details about the supported attributes, see &gt; the specific shape documentation.
+> Path shapes do not support setting width and height attributes. For details about the supported attributes, see
+> the specific shape documentation.
 > 
-> The [fill](../../apis-default/arkts-apis/arkts-arkui-shape-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape**
+> The [fill](../../apis-default/arkts-apis/arkts-arkuishape-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape**
 > API.
 
 **Since:** 18
@@ -3099,7 +3109,8 @@ Specifies whether to set this component as the default focus of the current [hie
 
 > **NOTE：**
 > 
-> This setting applies to pages that support routing or modal-type container components, such as **Page**, &gt; **NaviDestination**, **NavBar**, **PopUp**, and **Dialog**.
+> This setting applies to pages that support routing or modal-type container components, such as **Page**,
+> **NaviDestination**, **NavBar**, **PopUp**, and **Dialog**.
 
 **Since:** 9
 
@@ -3443,29 +3454,46 @@ Expands the safe area.
 
 > **NOTE：**
 > 
-> - When using **expandSafeArea** to expand the drawing of a component, avoid setting fixed width and height values &gt; (except percentages). If fixed width and height values are set (including **'auto'**), the edges for expanding the &gt; safe area can only be **[SafeAreaEdge.TOP, SafeAreaEdge.START]**, and the size of the component remains unchanged &gt; after safe area expansion.
+> - When using **expandSafeArea** to expand the drawing of a component, avoid setting fixed width and height values
+> (except percentages). If fixed width and height values are set (including **'auto'**), the edges for expanding the
+> safe area can only be **[SafeAreaEdge.TOP, SafeAreaEdge.START]**, and the size of the component remains unchanged
+> after safe area expansion.
 > 
 > - The safe area does not restrict the layout or size of components inside, nor does it clip the components.
 > 
 > - If the parent container is a scrollable container, the component does not extend after the **expandSafeArea**
-> attribute is set, but it can still trigger updates to the extension range of its child nodes that have &gt; **expandSafeArea** set.
+> attribute is set, but it can still trigger updates to the extension range of its child nodes that have
+> **expandSafeArea** set.
 > 
 > - When **expandSafeArea()** is set without parameters, default values are applied. When **expandSafeArea([],[])**
 > is used with empty arrays, the setting has no effect.
 > 
 > - Prerequisites for the **expandSafeArea** attribute to take effect:
-> 1. When **type** is set to **SafeAreaType.KEYBOARD**, the settings take effect by default. This behaves as the &gt; component not avoiding the virtual keyboard.
-> 2. When **type** is set to any other value, the settings take effect only if its boundaries overlap with the &gt; safe area. For example, if the height of the status bar is 100, the absolute position of the component on the &gt; screen must be 0 &lt;= y <= 100 for the settings to take effect.
+> 1. When **type** is set to **SafeAreaType.KEYBOARD**, the settings take effect by default. This behaves as the
+> component not avoiding the virtual keyboard.
+> 2. When **type** is set to any other value, the settings take effect only if its boundaries overlap with the
+> safe area. For example, if the height of the status bar is 100, the absolute position of the component on the
+> screen must be 0 &lt;= y <= 100 for the settings to take effect.
 > 
-&gt; - When a component extends into a non-safe area, events in the non-safe area (such as click events) may be &gt; intercepted by the system. Built-in components like the status bar will be given priority to respond to these &gt; events.
+&gt; - When a component extends into a non-safe area, events in the non-safe area (such as click events) may be
+> intercepted by the system. Built-in components like the status bar will be given priority to respond to these
+> events.
 > 
-> - Avoid setting the **expandSafeArea** attribute for components within scrollable containers. If you do set it, &gt; you must apply the **expandSafeArea** attribute to all direct nodes from the current node to the scrollable &gt; ancestor container, following the component nesting relationship. Otherwise, the **expandSafeArea** attribute may &gt; become ineffective after scrolling.
+> - Avoid setting the **expandSafeArea** attribute for components within scrollable containers. If you do set it,
+> you must apply the **expandSafeArea** attribute to all direct nodes from the current node to the scrollable
+> ancestor container, following the component nesting relationship. Otherwise, the **expandSafeArea** attribute may
+> become ineffective after scrolling.
 > 
-> - The **expandSafeArea** attribute only affects the current component and does not propagate to parent or child &gt; components. Therefore, all relevant components must be configured individually.
+> - The **expandSafeArea** attribute only affects the current component and does not propagate to parent or child
+> components. Therefore, all relevant components must be configured individually.
 > 
-> - When both **expandSafeArea** and **position** attributes are set, the **position** attribute takes effect first, &gt; followed by the **expandSafeArea** attribute. For components that do not have **position**, **offset**, or other &gt; rendering attributes set, such as dialog boxes and sheets, the **expandSafeArea** attribute will not take effect if &gt; their boundaries do not overlap with the non-safe area.
+> - When both **expandSafeArea** and **position** attributes are set, the **position** attribute takes effect first,
+> followed by the **expandSafeArea** attribute. For components that do not have **position**, **offset**, or other
+> rendering attributes set, such as dialog boxes and sheets, the **expandSafeArea** attribute will not take effect if
+> their boundaries do not overlap with the non-safe area.
 > 
-> - In scenarios where the **expandSafeArea** attribute is ineffective, and you need to place a component in the &gt; safe area, you will need to manually adjust the component's coordinates.
+> - In scenarios where the **expandSafeArea** attribute is ineffective, and you need to place a component in the
+> safe area, you will need to manually adjust the component's coordinates.
 
 **Since:** 10
 
@@ -4556,13 +4584,19 @@ Ignores the safe area for component layout.
 
 > **NOTE：**
 > 
-> - For a component that ignores layout safe area edges: If its width or height is set to &gt; [LayoutPolicy.matchParent](arkts-arkui-layoutpolicy-c.md#matchparent), both its size and position &gt; will change; otherwise, only its position will change.
+> - For a component that ignores layout safe area edges: If its width or height is set to
+> [LayoutPolicy.matchParent](arkts-arkui-layoutpolicy-c.md#matchparent), both its size and position
+> will change; otherwise, only its position will change.
 > 
-> - Based on the **safeAreaPadding** accumulation feature, a component can expand its safe area edges to all &gt; detectable continuous safe areas.
+> - Based on the **safeAreaPadding** accumulation feature, a component can expand its safe area edges to all
+> detectable continuous safe areas.
 > 
-> - When child elements of scrollable components ignore layout safe area edges, the safe areas of the scrollable &gt; component itself and its parent components are not considered in the scrolling direction. Scrollable components &gt; include **List**, **ArcListItem**, **Grid**, **WaterFlow**, **Swiper**, and **Tabs**.
+> - When child elements of scrollable components ignore layout safe area edges, the safe areas of the scrollable
+> component itself and its parent components are not considered in the scrolling direction. Scrollable components
+> include **List**, **ArcListItem**, **Grid**, **WaterFlow**, **Swiper**, and **Tabs**.
 > 
-> - When both the layout safe area ignore attribute (**.ignoreLayoutSafeArea**) and the rendering safe area ignore &gt; attribute (**.expandSafeArea**) are set: **.ignoreLayoutSafeArea** takes effect first, and **.expandSafeArea**
+> - When both the layout safe area ignore attribute (**.ignoreLayoutSafeArea**) and the rendering safe area ignore
+> attribute (**.expandSafeArea**) are set: **.ignoreLayoutSafeArea** takes effect first, and **.expandSafeArea**
 > takes effect on the basis of the former.
 
 **Since:** 20
@@ -5276,15 +5310,21 @@ Applies a motion blur effect to the component being scaled or moved.
 
 > **NOTE：**
 > 
-> - Do not use this API in intra-component transitions, shared element transitions, implicit element transitions, &gt; or particle animations. Doing so may cause unexpected results.
+> - Do not use this API in intra-component transitions, shared element transitions, implicit element transitions,
+> or particle animations. Doing so may cause unexpected results.
 > 
-> - The **radius** parameter of **motionBlur** must be set to **0** for the initial state. Otherwise, there may be &gt; unexpected results during a cold start.
+> - The **radius** parameter of **motionBlur** must be set to **0** for the initial state. Otherwise, there may be
+> unexpected results during a cold start.
 > 
-> - This API must be used together with the **onFinish** parameter of **AnimateParam**. Its **radius** parameter &gt; must be set to **0** when the animation ends; otherwise, there may be unexpected results.
+> - This API must be used together with the **onFinish** parameter of **AnimateParam**. Its **radius** parameter
+> must be set to **0** when the animation ends; otherwise, there may be unexpected results.
 > 
-> - When using this API, do not frequently change the blur radius of the same component; otherwise, there may be &gt; unexpected results. For example, if you frequently click the image in the example, the blur effect may not work &gt; sometimes.
+> - When using this API, do not frequently change the blur radius of the same component; otherwise, there may be
+> unexpected results. For example, if you frequently click the image in the example, the blur effect may not work
+> sometimes.
 > 
-> - To avoid unexpected results, make sure the coordinates of the motion blur anchor point are the same as those of &gt; the animation scaling anchor point.
+> - To avoid unexpected results, make sure the coordinates of the motion blur anchor point are the same as those of
+> the animation scaling anchor point.
 > 
 > - To avoid unexpected results, set the blur radius to a value less than 1.
 
@@ -5670,7 +5710,10 @@ This event is not triggered for render attribute changes caused by re-rendering,
 
 > **NOTE：**
 > 
-> When a component is bound to both the **onAreaChange** event and the [position](#position) &gt; attribute, the **onAreaChange** event responds to changes in the **position** attribute of type &gt; Position, but does not respond to changes in the **position** attribute of type &gt; Edges or LocalizedEdges.
+> When a component is bound to both the **onAreaChange** event and the [position](#position)
+> attribute, the **onAreaChange** event responds to changes in the **position** attribute of type
+> Position, but does not respond to changes in the **position** attribute of type
+> Edges or LocalizedEdges.
 
 **Since:** 8
 
@@ -5735,7 +5778,8 @@ Triggered when this component is mounted to the component tree. Due to the follo
 > 
 > - This callback is triggered before the component layout and rendering process.
 > 
-> - Modifying the component tree within the callback is prohibited, including initiating animations or altering the &gt; component structure through conditional statements like **if-else**.
+> - Modifying the component tree within the callback is prohibited, including initiating animations or altering the
+> component structure through conditional statements like **if-else**.
 
 **Since:** 12
 
@@ -5827,7 +5871,8 @@ Allows the current component to customize the hit test and control child compone
 
 > **NOTE：**
 > 
-> - The array of child node information only includes information about named nodes, that is, nodes for which the &gt; **id** attribute is explicitly set.
+> - The array of child node information only includes information about named nodes, that is, nodes for which the
+> **id** attribute is explicitly set.
 > 
 > - This API can be called in [attributeModifier](#attributemodifier) since API version 20.
 
@@ -6747,9 +6792,17 @@ Triggered when the component size changes due to layout updates.
 
 > **NOTE：**
 > 
-> 1. This API is triggered upon layout changes. Due to calculation precision limitations, the return value may &gt; deviate slightly from the actual physical size.
+> 1. This API is triggered upon layout changes. Due to calculation precision limitations, the return value may
+> deviate slightly from the actual physical size.
 > 
-> 2. **onSizeChange** is a synchronous callback triggered during the layout process. Directly modifying state &gt; variables within **onSizeChange** may cause the changes to be included in the animation closure. Specifically, &gt; animations compare the layout state before the animation starts with the state after the animation closure is &gt; executed. If the **onSizeChange** callback is triggered synchronously during the pre-animation layout phase, the &gt; changes made in this callback will be processed as part of the animation, along with the changes in the animation &gt; closure. To avoid this issue, you can use [setTimeout](../arkts-apis/arkts-arkui-global-settimeout-f.md) or &gt; [postFrameCallback](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback) (with a 0 ms delay) inside &gt; **onSizeChange** to defer the UI processing logic to asynchronous execution.
+> 2. **onSizeChange** is a synchronous callback triggered during the layout process. Directly modifying state
+> variables within **onSizeChange** may cause the changes to be included in the animation closure. Specifically,
+> animations compare the layout state before the animation starts with the state after the animation closure is
+> executed. If the **onSizeChange** callback is triggered synchronously during the pre-animation layout phase, the
+> changes made in this callback will be processed as part of the animation, along with the changes in the animation
+> closure. To avoid this issue, you can use [setTimeout](../arkts-apis/arkts-arkui-global-settimeout-f.md) or
+> [postFrameCallback](../arkts-apis/arkts-arkui-arkuiuicontext-uicontext-c.md#postframecallback) (with a 0 ms delay) inside
+> **onSizeChange** to defer the UI processing logic to asynchronous execution.
 
 **Since:** 12
 
@@ -6910,13 +6963,22 @@ Called when the visible area of the component changes. For details about the dev
 > 
 > - This API can be called in [attributeModifier](#attributemodifier) since API version 20.
 > 
-> - This API only takes into account the relative clipped area ratio of the component with respect to all ancestor &gt; nodes (up to the window boundary) and its own area.
+> - This API only takes into account the relative clipped area ratio of the component with respect to all ancestor
+> nodes (up to the window boundary) and its own area.
 > 
-> - The following calculation scenarios are not supported: clipping by sibling nodes, clipping by siblings of any &gt; ancestor node, window-level occlusion, and component rotation. Examples include layouts using &gt; [Stack](../../apis-default/arkts-apis/arkts-lib-es5-error-i.md#stack), [z-order control](#zindex), and &gt; [rotate](#rotate) transformations.
+> - The following calculation scenarios are not supported: clipping by sibling nodes, clipping by siblings of any
+> ancestor node, window-level occlusion, and component rotation. Examples include layouts using
+> [Stack](../../apis-default/arkts-apis/arkts-libes5-error-i.md#stack), [z-order control](#zindex), and
+> [rotate](#rotate) transformations.
 > 
-> - It does not support visibility change calculations for nodes that are not in the component tree. For example, &gt; preloaded nodes or custom nodes mounted using the &gt; [overlay](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#overlay) capability.
+> - It does not support visibility change calculations for nodes that are not in the component tree. For example,
+> preloaded nodes or custom nodes mounted using the
+> [overlay](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#overlay) capability.
 > 
-> - This API does not support the [scale](#scale) attribute. To enable &gt; support for the [scale](#scale) attribute, use &gt; [onVisibleAreaChange&lt;sup&gt;22+&lt;/sup&gt;](#onvisibleareachange) &gt; and set **measureFromViewport** to **true**.
+> - This API does not support the [scale](#scale) attribute. To enable
+> support for the [scale](#scale) attribute, use
+> [onVisibleAreaChange&lt;sup&gt;22+&lt;/sup&gt;](#onvisibleareachange)
+> and set **measureFromViewport** to **true**.
 
 **Since:** 9
 
@@ -7363,7 +7425,12 @@ Adds an overlay to this component, which can be text, a custom component, or [Co
 
 > **NOTE：**
 > 
-> The overlay places the floating layer component above the bound component, blocking all user interactions with &gt; components beneath it. To enable interaction with underlying components, refer to &gt; [Example 2: Setting an Overlay Using a Custom Builder](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#example-2-setting-an-overlay-using-a-custom-builder) &gt; and apply **.hitTestBehavior(HitTestMode.Transparent)** to the outermost component in the overlay builder. This &gt; configuration is particularly crucial for watermark implementations, where the overlay must not interfere with &gt; user interaction with the underlying content.
+> The overlay places the floating layer component above the bound component, blocking all user interactions with
+> components beneath it. To enable interaction with underlying components, refer to
+> [Example 2: Setting an Overlay Using a Custom Builder](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#example-2-setting-an-overlay-using-a-custom-builder)
+> and apply **.hitTestBehavior(HitTestMode.Transparent)** to the outermost component in the overlay builder. This
+> configuration is particularly crucial for watermark implementations, where the overlay must not interfere with
+> user interaction with the underlying content.
 
 **Since:** 7
 
@@ -7461,9 +7528,13 @@ Sets the pixel rounding policy for the current component in the specified direct
 
 > **NOTE：**
 > 
-> - In API version 11, this API uses half-pixel alignment (that is, 0-0.25 rounds to 0, 0.25-0.75 rounds to 0.5, &gt; 0.75-1.0 rounds to 1). Since API version 12, this API rounds pixels to the nearest integers and allows you to &gt; disable pixel rounding for individual components.
+> - In API version 11, this API uses half-pixel alignment (that is, 0-0.25 rounds to 0, 0.25-0.75 rounds to 0.5,
+> 0.75-1.0 rounds to 1). Since API version 12, this API rounds pixels to the nearest integers and allows you to
+> disable pixel rounding for individual components.
 > 
-> - This API can be called within &gt; [attributeModifier](#attributemodifier) &gt; since API version 12.
+> - This API can be called within
+> [attributeModifier](#attributemodifier)
+> since API version 12.
 
 In normal calculations, the vertical direction (top and bottom) correspond to the component height, and the horizontal direction (the starting direction of mirroring is considered "left") correspond to the component width. For ease of description, these two sets of directions are referred to as top-left and bottom-right.
 
@@ -8066,11 +8137,18 @@ Sets the safe area padding. This allows the container to add a component-level s
 
 > **NOTE：**
 > In API version 18, this API can be invoked in attributeModifier.
-> When parent and ancestor containers define component-level safe areas, child components can detect and utilize &gt; these areas, referred to as Accumulated Safe Area Expansion (SAE), which represents the maximum extendable length &gt; in each direction.
-> When ancestor containers have contiguous safeAreaPadding (undivided by margin, border, or padding), &gt; SAE accumulates recursively outward until no adjacent outer safeAreaPadding exists or the recursion extends &gt; beyond the page container.
-> System-level avoid areas (status bar, navigation bar, notch areas, and more) are treated as the page container's &gt; inherent safeAreaPadding and participate in SAE calculations.
-> For details about the avoid areas, see Safe Area. These component-level safe areas can be leveraged by combining &gt; with other attributes.
-> For example, setting the ignoreLayoutSafeArea attribute on a child component allows it to extend its layout into &gt; the SAE region.
+> When parent and ancestor containers define component-level safe areas, child components can detect and utilize
+> these areas, referred to as Accumulated Safe Area Expansion (SAE), which represents the maximum extendable length
+> in each direction.
+> When ancestor containers have contiguous safeAreaPadding (undivided by margin, border, or padding),
+> SAE accumulates recursively outward until no adjacent outer safeAreaPadding exists or the recursion extends
+> beyond the page container.
+> System-level avoid areas (status bar, navigation bar, notch areas, and more) are treated as the page container's
+> inherent safeAreaPadding and participate in SAE calculations.
+> For details about the avoid areas, see Safe Area. These component-level safe areas can be leveraged by combining
+> with other attributes.
+> For example, setting the ignoreLayoutSafeArea attribute on a child component allows it to extend its layout into
+> the SAE region.
 
 **Since:** 14
 
@@ -8685,7 +8763,8 @@ Sets the tab navigation order of the component in sequential focus navigation wi
 
 > **NOTE：**
 > 
-> - **tabIndex** only customizes **Tab** key navigation. For arrow key navigation customization, use &gt; [nextFocus](#nextfocus).
+> - **tabIndex** only customizes **Tab** key navigation. For arrow key navigation customization, use
+> [nextFocus](#nextfocus).
 
 **Since:** 9
 
@@ -9289,7 +9368,7 @@ Sets the width of the component. By default, the width required to fully hold th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Length | Yes | Width of the component to set.<br>Unit: vp &gt; **NOTE：** >  > - In the TextInput component, setting **width** to **auto** means that &gt; the width adapts to the width of the text content. >  > - In the AlphabetIndexer component, setting **width** to **auto** > means that the width adapts to the maximum width of index entries. |
+| value | Length | Yes | Width of the component to set.<br>Unit: vp &gt; **NOTE：** >  > - In the TextInput component, setting **width** to **auto** means that > the width adapts to the width of the text content. >  > - In the AlphabetIndexer component, setting **width** to **auto** > means that the width adapts to the maximum width of index entries. |
 
 **Return value:**
 

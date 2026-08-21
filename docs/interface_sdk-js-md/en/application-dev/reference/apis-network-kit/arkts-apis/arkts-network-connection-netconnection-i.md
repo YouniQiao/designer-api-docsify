@@ -4,13 +4,17 @@ Represents the network connection object type.
 
 > **NOTE：**
 > 
-> (1) When the network transitions from unavailable to available, the **netAvailable**, **netCapabilitiesChange**, &gt; and **netConnectionPropertiesChange** events are triggered.
+> (1) When the network transitions from unavailable to available, the **netAvailable**, **netCapabilitiesChange**,
+> and **netConnectionPropertiesChange** events are triggered.
 > 
-> (2) If the network transitions from available to unavailable after a **netAvailable** event is received, a &gt; **netLost** event is triggered.
+> (2) If the network transitions from available to unavailable after a **netAvailable** event is received, a
+> **netLost** event is triggered.
 > 
 > (3) If no **netAvailable** event is received, a **netUnavailable** event is directly triggered.
 > 
-> (4) When the network transitions from Wi-Fi to cellular, a **netLost** event is first triggered to indicate that &gt; the Wi-Fi network is lost and then a **netAvailable** event is triggered to indicate that the cellular network is &gt; available.
+> (4) When the network transitions from Wi-Fi to cellular, a **netLost** event is first triggered to indicate that
+> the Wi-Fi network is lost and then a **netAvailable** event is triggered to indicate that the cellular network is
+> available.
 
 **Since:** 23
 

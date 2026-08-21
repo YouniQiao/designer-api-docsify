@@ -18,7 +18,8 @@ This API can be used to install only applications of the **enterprise_mdm** (MDM
 
 > **NOTE：**
 > 
-> This API is time-consuming. Subsequent calls to other synchronous APIs in the application main thread must wait &gt; for the asynchronous return of this API.
+> This API is time-consuming. Subsequent calls to other synchronous APIs in the application main thread must wait
+> for the asynchronous return of this API.
 
 **Since:** 26.0.0
 
@@ -34,7 +35,7 @@ This API can be used to install only applications of the **enterprise_mdm** (MDM
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | hapFilePaths | Array&lt;string&gt; | Yes | Applications to install. The app bundle must be stored in the path that the app has the permission to access, such as the app sandbox path. For details about the mapping between the app sandbox path and the actual physical path, see [Mappings Between App Sandbox Paths and Physical Paths](../../../file-management/app-sandbox-directory.md#mappings-between-application-sandbox-paths-and-physical-paths). |
 | installParam | InstallParam | No | Application installation parameters. |
 

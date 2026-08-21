@@ -16,11 +16,15 @@ Adds applications to the notification trustlist. After the notification trustlis
 
 > **NOTE：**
 > 
-> 1. If both the Kiosk mode and the notification trustlist policy are set, applications in the Kiosk mode and those &gt; in the notification trustlist can send notifications.
+> 1. If both the Kiosk mode and the notification trustlist policy are set, applications in the Kiosk mode and those
+> in the notification trustlist can send notifications.
 
-> 2. If the device notification capability has been disabled via &gt; [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md), calling this API to &gt; set the notification trustlist will trigger error code 9200010.
+> 2. If the device notification capability has been disabled via
+> [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md), calling this API to
+> set the notification trustlist will trigger error code 9200010.
 
-> 3. The notification trustlist does not apply to system services, which can always send notifications. System &gt; applications are controlled by the notification trustlist.
+> 3. The notification trustlist does not apply to system services, which can always send notifications. System
+> applications are controlled by the notification trustlist.
 
 > 4. Cross-user settings are supported. The settings take effect immediately.
 
@@ -38,7 +42,7 @@ Adds applications to the notification trustlist. After the notification trustlis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | bundleNames | Array&lt;string&gt; | Yes | Application bundle name array, which specifies the applications that are allowed to send notifications. A maximum of 200 applications are supported. |
 | accountId | number | Yes | Account ID, which must be greater than or equal to 0. <br>You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
 

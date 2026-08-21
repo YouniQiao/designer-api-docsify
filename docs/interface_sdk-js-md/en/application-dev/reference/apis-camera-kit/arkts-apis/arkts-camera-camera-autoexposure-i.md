@@ -29,7 +29,8 @@ Obtains the exposure mode in use.
 
 > **NOTE：**
 > 
-> This API directly returns an invalid value if you have not set the exposure mode using &gt; [setExposureMode](#setexposuremode).
+> This API directly returns an invalid value if you have not set the exposure mode using
+> [setExposureMode](#setexposuremode).
 
 **Since:** 23
 

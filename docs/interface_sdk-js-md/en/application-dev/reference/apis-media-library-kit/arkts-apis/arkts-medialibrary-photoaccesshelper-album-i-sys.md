@@ -26,7 +26,8 @@ Deletes image or video assets from the trash. Before the operation, ensure that 
 
 > **NOTE：**
 > 
-> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this &gt; operation.
+> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
+> operation.
 
 **Since:** 10
 
@@ -101,7 +102,8 @@ Deletes image or video assets from the trash. Before the operation, ensure that 
 
 > **NOTE：**
 > 
-> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this &gt; operation.
+> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
+> operation.
 
 **Since:** 10
 

@@ -57,7 +57,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the ReactiveBuilderNode |
+| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | uiContext used to create the ReactiveBuilderNode |
 | options | [RenderOptions](arkts-buildernode-renderoptions-i.md) | No | Render options of the ReactiveBuilderNode |
 
 ## dispose
@@ -217,7 +217,7 @@ postTouchEvent(event: TouchEvent): boolean
 
 Dispatch the touchEvent to the FrameNode in the current ReactiveBuilderNode. postTouchEvent dispatches the event from a middle node in the component tree downwards. To ensure the event is dispatched correctly, it needs to be transformed into the coordinate system of the parent component.
 
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; <br>The coordinates you pass in need to be converted to pixel values (px). If the ReactiveBuilderNode has any <br>affine transformations applied to it, they must be taken into account and combined with the touch event <br>coordinates. In Webview, coordinate system transformations are already handled internally, so you can <br>directly dispatch the touch event without additional adjustments. <br>The postTouchEvent API can be called only once for the same timestamp. <br>UIExtensionComponent is not supported. &lt;/p&gt;
+<p>&lt;strong&gt;Note:&lt;/strong&gt; <br>The coordinates you pass in need to be converted to pixel values (px). If the ReactiveBuilderNode has any <br>affine transformations applied to it, they must be taken into account and combined with the touch event <br>coordinates. In Webview, coordinate system transformations are already handled internally, so you can <br>directly dispatch the touch event without additional adjustments. <br>The postTouchEvent API can be called only once for the same timestamp. <br>UIExtensionComponent is not supported. </p>
 
 **Since:** 26.0.0
 

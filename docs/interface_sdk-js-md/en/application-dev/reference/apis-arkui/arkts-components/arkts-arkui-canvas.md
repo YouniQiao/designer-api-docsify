@@ -61,11 +61,18 @@ Creates a **Canvas** component that does not cache commands using **CanvasParams
 
 > **NOTE：**
 > 
-> The **Canvas** component created using this API will return a DrawingRenderingContext &gt; object in the input parameter of the onReady callback, which can be used for drawing on the &gt; **Canvas** component.
+> The **Canvas** component created using this API will return a DrawingRenderingContext
+> object in the input parameter of the onReady callback, which can be used for drawing on the
+> **Canvas** component.
 > 
-> The **Canvas** component created using this API will not respond to drawing commands &gt; when it is not visible.
+> The **Canvas** component created using this API will not respond to drawing commands
+> when it is not visible.
 > 
-> Scenarios where the component is not visible mainly include: the page containing the &gt; component moves to the background, the component slides outside the window, or the &gt; visibility &gt; attribute is set to hidden. This does not include scenarios where the component is obscured &gt; by other components or windows.
+> Scenarios where the component is not visible mainly include: the page containing the
+> component moves to the background, the component slides outside the window, or the
+> visibility
+> attribute is set to hidden. This does not include scenarios where the component is obscured
+> by other components or windows.
 
 **Since:** 23
 

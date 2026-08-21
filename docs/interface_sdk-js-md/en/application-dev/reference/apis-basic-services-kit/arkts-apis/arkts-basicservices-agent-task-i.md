@@ -4,7 +4,8 @@ Implements an upload or download task. Before using this API, you must obtain a 
 
 > **NOTE：**
 > 
-> The **Task** object and its mounting callback function are released and automatically reclaimed by the system &gt; after the **remove** method is called.
+> The **Task** object and its mounting callback function are released and automatically reclaimed by the system
+> after the **remove** method is called.
 
 **Since:** 23
 
@@ -209,7 +210,9 @@ Unsubscribes from task completion events.
 
 > **NOTE：**
 > 
-> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 10
 
@@ -243,7 +246,9 @@ Unsubscribes from task failure events.
 
 > **NOTE：**
 > 
-> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 10
 
@@ -277,7 +282,9 @@ Unsubscribes from task failure events.
 
 > **NOTE：**
 > 
-> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 20
 
@@ -308,7 +315,9 @@ Unsubscribes from the foreground task pause event.
 
 > **NOTE：**
 > 
-> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 11
 
@@ -339,7 +348,9 @@ Unsubscribes from task progress events.
 
 > **NOTE：**
 > 
-> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 10
 
@@ -373,7 +384,9 @@ Unsubscribes from the task removal event.
 
 > **NOTE：**
 > 
-> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 11
 
@@ -404,7 +417,9 @@ Unsubscribes from task response headers.
 
 > **NOTE：**
 > 
-> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 12
 
@@ -437,7 +452,9 @@ Unsubscribes from foreground task resume events.
 
 > **NOTE：**
 > 
-> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 11
 
@@ -468,7 +485,9 @@ Unsubscribes from task waiting events.
 
 > **NOTE：**
 > 
-> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 20
 
@@ -679,7 +698,9 @@ Subscribes to task completion events. This API uses an asynchronous callback to 
 
 > **NOTE：**
 > 
-> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 10
 
@@ -713,7 +734,9 @@ Subscribes to task failure events. This API uses an asynchronous callback to ret
 
 > **NOTE：**
 > 
-> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 10
 
@@ -747,7 +770,9 @@ Subscribes to task failure events. This API uses a callback to return the result
 
 > **NOTE：**
 > 
-> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 20
 
@@ -778,7 +803,9 @@ Subscribes to task pause events. This API uses an asynchronous callback to retur
 
 > **NOTE：**
 > 
-> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 11
 
@@ -809,7 +836,9 @@ Subscribes to task progress changes. This API uses an asynchronous callback to r
 
 > **NOTE：**
 > 
-> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 10
 
@@ -843,7 +872,9 @@ Subscribes to task removal events. This API uses an asynchronous callback to ret
 
 > **NOTE：**
 > 
-> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 11
 
@@ -874,7 +905,9 @@ Subscribes to task response headers. This API uses an asynchronous callback to r
 
 > **NOTE：**
 > 
-> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 12
 
@@ -907,7 +940,9 @@ Subscribes to task resume events. This API uses an asynchronous callback to retu
 
 > **NOTE：**
 > 
-> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 11
 
@@ -938,7 +973,9 @@ Subscribes to task wait events. This API uses a callback to return the result.
 
 > **NOTE：**
 > 
-> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 20
 
@@ -1124,7 +1161,9 @@ Tasks in the following states can be started:
 
 > **NOTE：**
 > 
-> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 23
 
@@ -1164,7 +1203,9 @@ Tasks in the following states can be started:
 
 > **NOTE：**
 > 
-> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 23
 

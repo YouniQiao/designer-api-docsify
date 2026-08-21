@@ -84,7 +84,7 @@ panelFlag: PanelFlag
 
 输入法软键盘面板的面板标志。
 
-**类型：** [PanelFlag](arkts-ime-inputmethod-panel-panelflag-e.md)
+**类型：** [PanelFlag](arkts-ime-inputmethodpanel-panelflag-e.md)
 
 **起始版本：** 26.0.0
 

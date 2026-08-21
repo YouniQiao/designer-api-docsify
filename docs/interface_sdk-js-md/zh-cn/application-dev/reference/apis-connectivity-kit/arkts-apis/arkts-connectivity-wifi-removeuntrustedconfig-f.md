@@ -17,7 +17,7 @@ function removeUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>
 
 移除不可信网络配置，使用Promise异步回调。
 
-&lt;p&gt;该方法一次移除一个配置。
+<p>该方法一次移除一个配置。
 
 **起始版本：** 7
 
@@ -85,7 +85,7 @@ function removeUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback
 
 移除不可信网络配置，使用callback异步回调。
 
-&lt;p&gt;该方法一次移除一个配置。
+<p>该方法一次移除一个配置。
 
 **起始版本：** 7
 

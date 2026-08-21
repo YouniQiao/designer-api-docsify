@@ -6,7 +6,8 @@ An application with the overlay feature contains an overlay resource package. Fo
 
 > **NOTE：**
 > 
-> The APIs provided by this module apply only to the stage model and &gt; [static overlay](../../../quick-start/resource-categories-and-access.md#using-overlay-in-static-mode) mode.
+> The APIs provided by this module apply only to the stage model and
+> [static overlay](../../../quick-start/resource-categories-and-access.md#using-overlay-in-static-mode) mode.
 
 **Since:** 23
 

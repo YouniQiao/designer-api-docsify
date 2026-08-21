@@ -48,9 +48,9 @@ drawable?: DrawableDescriptor
 
 下划线的图源。
 
-支持[DrawableDescriptor](../arkts-apis/arkts-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)、 [PixelMapDrawableDescriptor](../arkts-apis/arkts-arkui-drawabledescriptor-pixelmapdrawabledescriptor-c.md)、 [LayeredDrawableDescriptor](../arkts-apis/arkts-arkui-drawabledescriptor-layereddrawabledescriptor-c.md)和 [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)类型。当传入无效图源时将显示 默认的实线型下划线。
+支持[DrawableDescriptor](../arkts-apis/arkts-arkuidrawabledescriptor-drawabledescriptorloadedresult-i.md)、 [PixelMapDrawableDescriptor](../arkts-apis/arkts-arkuidrawabledescriptor-pixelmapdrawabledescriptor-c.md)、 [LayeredDrawableDescriptor](../arkts-apis/arkts-arkuidrawabledescriptor-layereddrawabledescriptor-c.md)和 [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkuidrawabledescriptor-animateddrawabledescriptor-c.md)类型。当传入无效图源时将显示 默认的实线型下划线。
 
-**类型：** [DrawableDescriptor](../arkts-apis/arkts-arkui-drawabledescriptor-drawabledescriptor-c.md)
+**类型：** [DrawableDescriptor](../arkts-apis/arkts-arkuidrawabledescriptor-drawabledescriptor-c.md)
 
 **起始版本：** 23
 

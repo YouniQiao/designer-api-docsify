@@ -16,11 +16,18 @@ Creates an AVPlayer instance. This API uses an asynchronous callback to return t
 
 > **NOTE：**
 > 
-> - You are advised to create a maximum of 16 AVPlayer instances for an application in both audio and video &gt; playback scenarios.<!--Del-->
+> - You are advised to create a maximum of 16 AVPlayer instances for an application in both audio and video
+> playback scenarios.&lt;!--Del--
+&gt; 
 > 
-> - The actual number of instances that can be created may be different. It depends on the specifications of the &gt; device chip in use. For example, in the case of RK3568, you are advised to create a maximum of 6 AVPlayer &gt; instances for an application in audio and video playback scenarios.<!--DelEnd-->
+> - The actual number of instances that can be created may be different. It depends on the specifications of the
+> device chip in use. For example, in the case of RK3568, you are advised to create a maximum of 6 AVPlayer
+> instances for an application in audio and video playback scenarios.&lt;!--DelEnd--
+&gt; 
 > 
-> - Applications must properly manage AVPlayer instances according to their specific needs, creating and freeing &gt; them when necessary. Holding too many AVPlayer instances can lead to high memory usage, and in some cases, the &gt; system might terminate applications to free up resources.
+> - Applications must properly manage AVPlayer instances according to their specific needs, creating and freeing
+> them when necessary. Holding too many AVPlayer instances can lead to high memory usage, and in some cases, the
+> system might terminate applications to free up resources.
 
 **Since:** 9
 
@@ -98,11 +105,18 @@ Creates an AVPlayer instance. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> - You are advised to create a maximum of 16 AVPlayer instances for an application in both audio and video &gt; playback scenarios.<!--Del-->
+> - You are advised to create a maximum of 16 AVPlayer instances for an application in both audio and video
+> playback scenarios.&lt;!--Del--
+&gt; 
 > 
-> - The actual number of instances that can be created may be different. It depends on the specifications of the &gt; device chip in use. For example, in the case of RK3568, you are advised to create a maximum of 6 AVPlayer &gt; instances for an application in audio and video playback scenarios.<!--DelEnd-->
+> - The actual number of instances that can be created may be different. It depends on the specifications of the
+> device chip in use. For example, in the case of RK3568, you are advised to create a maximum of 6 AVPlayer
+> instances for an application in audio and video playback scenarios.&lt;!--DelEnd--
+&gt; 
 > 
-> - Applications should reasonably use AVPlayer objects in accordance with actual service requirements, create them &gt; on demand, and release them in a timely manner. This avoids excessive memory consumption caused by holding too &gt; many AVPlayer instances, which may result in the system terminating the application.
+> - Applications should reasonably use AVPlayer objects in accordance with actual service requirements, create them
+> on demand, and release them in a timely manner. This avoids excessive memory consumption caused by holding too
+> many AVPlayer instances, which may result in the system terminating the application.
 
 **Since:** 9
 

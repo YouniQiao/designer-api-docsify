@@ -489,8 +489,10 @@ getAsset(): PhotoAsset
 
 > **注意：**
 > 
-> 对于创建资产的变更请求，在调用接口 &gt;
-> [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) &gt;
+> 对于创建资产的变更请求，在调用接口
+> 
+> [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges)
+> 
 > 的提交生效之前，该接口会返回null。
 
 **起始版本：** 11

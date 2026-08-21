@@ -23,9 +23,13 @@ static close()
 
 > **说明：**
 > 
-> 从API version 18开始废弃，建议使用[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [getContextMenuController](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcontextmenucontroller)获取 &gt; [ContextMenuController](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)实例，再通过此实例调用替代方法 &gt; [close](../../apis-default/arkts-apis/arkts-arkui-uicontext-contextmenucontroller-c.md#close)。
+> 从API version 18开始废弃，建议使用[UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)中的
+> [getContextMenuController](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#getcontextmenucontroller)获取
+> [ContextMenuController](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)实例，再通过此实例调用替代方法
+> [close](../../apis-default/arkts-apis/arkts-arkuiuicontext-contextmenucontroller-c.md#close)。
 > 
-> 从API version 12开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [getContextMenuController](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcontextmenucontroller)来明确UI的执行上下文。
+> 从API version 12开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)中的
+> [getContextMenuController](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#getcontextmenucontroller)来明确UI的执行上下文。
 
 **起始版本：** 8
 

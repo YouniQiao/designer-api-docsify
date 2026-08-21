@@ -17,5 +17,5 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [DynamicLayoutAttribute](arkts-arkui-components-arkdynamiclayout-dynamiclayoutattribute-i.md) | 动态布局容器组件，支持在运行时动态切换不同的布局算法，不改变子组件的状态。 |
+| [DynamicLayoutAttribute](arkts-arkuicomponentsarkdynamiclayout-dynamiclayoutattribute-i.md) | 动态布局容器组件，支持在运行时动态切换不同的布局算法，不改变子组件的状态。 |
 

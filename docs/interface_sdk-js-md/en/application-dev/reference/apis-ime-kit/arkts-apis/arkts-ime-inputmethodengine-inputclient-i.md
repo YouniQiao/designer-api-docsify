@@ -289,8 +289,10 @@ finishTextPreview(): Promise<void>
 ```
 
 @brief Finishes the text preview. This API uses a promise to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > If there is preview text in the current text box, calling this API will display the preview text on the screen.
 
 **Since:** 23
@@ -331,8 +333,10 @@ finishTextPreviewSync(): void
 ```
 
 @brief Finishes the text preview. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > If there is preview text in the current text box, calling this API will display the preview text on the screen.
 
 **Since:** 23
@@ -547,8 +551,10 @@ getCallingWindowInfo(): Promise<WindowInfo>
 ```
 
 @brief Obtains information about the application window, in which the input box that starts an input method is located. This API uses a promise to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > This API applies only to the input method applications that use [Panel](arkts-ime-inputmethodengine-panel-i.md) as the soft keyboard window.
 
 **Since:** 12
@@ -1426,10 +1432,14 @@ recvMessage(msgHandler?: MessageHandler): void
 ```
 
 @brief Registers or unregisters MessageHandler. <br> <br>   
-> **NOTE：**<br>
-> <br>
-> The [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) object is globally unique. After multiple registrations, only the last registered object is valid and retained, and the [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback of the penultimate registered object is triggered. <br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> The [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) object is globally unique. After multiple registrations, only the last registered object is valid and retained, and the [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback of the penultimate registered object is triggered. &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback will be triggered.
 
 **Since:** 23
@@ -1723,10 +1733,14 @@ sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void
 ```
 
 @brief Sends an extended edit action. This API uses an asynchronous callback to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
-> The input method applications call this API to send extended edit actions to the edit box. The edit box listens for the corresponding event using on('handleExtendAction') for further processing. <br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> The input method applications call this API to send extended edit actions to the edit box. The edit box listens for the corresponding event using on('handleExtendAction') for further processing. &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md), the edit box application needs to apply for the [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) permission.
 
 **Since:** 23
@@ -1771,10 +1785,14 @@ sendExtendAction(action: ExtendAction): Promise<void>
 ```
 
 @brief Sends an extended edit action. This API uses a promise to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
-> The input method applications call this API to send extended edit actions to the edit box. The edit box listens for the corresponding event using [on('handleExtendAction')] on for further processing. <br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> The input method applications call this API to send extended edit actions to the edit box. The edit box listens for the corresponding event using [on('handleExtendAction')] on for further processing. &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md), the edit box application needs to apply for the [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) permission.
 
 **Since:** 23
@@ -1920,10 +1938,14 @@ sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 ```
 
 @brief Sends the custom communication to the edit box application attached to the input method application. This API uses a promise to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
-> This API can be called only when the edit box is attached to the input method and enter the edit mode, and the input method application is in full experience mode. <br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> This API can be called only when the edit box is attached to the input method and enter the edit mode, and the input method application is in full experience mode. &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > The maximum length of **msgId** is 256 B, and the maximum length of **msgParam** is 128 KB.
 
 **Since:** 23
@@ -1977,12 +1999,18 @@ sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>
 ```
 
 @brief Sends private data to the system component that needs to communicate with the input method application. This API uses a promise to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
-> - The private data channel allows communication between the system preset input method application and specific system components (such as a text box or a home screen application). It is usually used to implement custom input on a specific device. <br>
-> <br>
-> - The total size of the private data is 32 KB, and the maximum number of private data records is 5. <br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> - The private data channel allows communication between the system preset input method application and specific system components (such as a text box or a home screen application). It is usually used to implement custom input on a specific device. &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> - The total size of the private data is 32 KB, and the maximum number of private data records is 5. &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > - Private data is sent to the text box by default. To send it to a desktop application, add a data entry `{'sys_cmd':1}` to the private data.
 
 **Since:** 23

@@ -16,7 +16,9 @@ Creates a **NetConnection** object, which can be used to listen for the network 
 
 > **NOTE：**
 > 
-> To listen for the network status, after creating a **NetConnection** object, you need to call &gt; [register](arkts-network-connection-netconnection-i.md#register) to register the notification of the specified network status &gt; change.
+> To listen for the network status, after creating a **NetConnection** object, you need to call
+> [register](arkts-network-connection-netconnection-i.md#register) to register the notification of the specified network status
+> change.
 
 **Since:** 23
 

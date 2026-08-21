@@ -12,7 +12,7 @@ import { abilityManager } from '@kit.AbilityKit';
 function acquireShareData(missionId: int, callback: AsyncCallback<Record<string, Object>>): void
 ```
 
-Called by a system dialog box to obtain shared data, which is set by the target UIAbility through [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare). This API uses an asynchronous callback to return the result.
+Called by a system dialog box to obtain shared data, which is set by the target UIAbility through [onShare](arkts-ability-appabilityuiability-uiability-c.md#onshare). This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -75,7 +75,7 @@ Acquire the shared data from target ability.
 function acquireShareData(missionId: int): Promise<Record<string, Object>>
 ```
 
-Called by a system dialog box to obtain shared data, which is set by the target UIAbility through [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare). This API uses a promise to return the result.
+Called by a system dialog box to obtain shared data, which is set by the target UIAbility through [onShare](arkts-ability-appabilityuiability-uiability-c.md#onshare). This API uses a promise to return the result.
 
 **Since:** 10
 

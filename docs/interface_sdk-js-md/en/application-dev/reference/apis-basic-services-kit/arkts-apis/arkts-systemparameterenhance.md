@@ -6,7 +6,8 @@ The **SystemParameter** module provides system services with easy access to key-
 > 
 > - The APIs provided by this module are system APIs.
 > 
-> - Third-party applications cannot use the APIs provided by this module because system parameters each require &gt; specific discretionary access control (DAC) and mandatory access control (MAC) permissions.
+> - Third-party applications cannot use the APIs provided by this module because system parameters each require
+> specific discretionary access control (DAC) and mandatory access control (MAC) permissions.
 
 **Since:** 23
 

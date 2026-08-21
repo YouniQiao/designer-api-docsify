@@ -22,7 +22,8 @@ This module can be used together with [@ohos.window.floatingBall](arkts-window-f
 
 > **NOTE：**
 > 
-> - Use canIUse() to check whether the device supports the &gt; system capability SystemCapability.Window.SessionManager and the corresponding APIs.
+> - Use canIUse() to check whether the device supports the
+> system capability SystemCapability.Window.SessionManager and the corresponding APIs.
 > 
 > - The APIs of this module can be used only in the stage model.
 

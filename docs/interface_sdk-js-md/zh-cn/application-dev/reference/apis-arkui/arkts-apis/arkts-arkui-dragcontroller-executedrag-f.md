@@ -46,7 +46,7 @@ Execute a drag event.
 
 **示例**
 
-推荐通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的[getDragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI上下文关联的DragController对象。
+推荐通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的[getDragController](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#getdragcontroller)方法获取当前UI上下文关联的DragController对象。
 
 ```TypeScript
 import { dragController } from '@kit.ArkUI';
@@ -136,7 +136,9 @@ function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo): 
 
 > **说明：**
 > 
-> 从API version 11开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [getDragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI &gt; 上下文关联的[DragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-dragcontroller-c.md)对象。
+> 从API version 11开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)中的
+> [getDragController](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#getdragcontroller)方法获取当前UI
+> 上下文关联的[DragController](../../apis-default/arkts-apis/arkts-arkuiuicontext-dragcontroller-c.md)对象。
 
 **起始版本：** 10
 
@@ -175,7 +177,7 @@ function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo): 
 
 **示例**
 
-推荐通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的[getDragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI上下文关联的DragController对象。
+推荐通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的[getDragController](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#getdragcontroller)方法获取当前UI上下文关联的DragController对象。
 
 ```TypeScript
 import { dragController } from '@kit.ArkUI';

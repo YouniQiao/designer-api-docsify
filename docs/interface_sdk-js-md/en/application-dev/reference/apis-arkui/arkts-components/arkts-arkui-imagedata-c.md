@@ -4,7 +4,10 @@ An **ImageData** object stores pixel data rendered on a canvas.
 
 > **NOTE：**
 > 
-> A constructor used to create an **ImageData** object. To ensure successful drawing, &gt; make sure the object's area does not exceed 16000 x 16000, with its width and height &gt; not greater than 16384 px. If the created area exceeds 536870911 px, the returned &gt; width and height are both 0 px, and **data** is **undefined**.
+> A constructor used to create an **ImageData** object. To ensure successful drawing,
+> make sure the object's area does not exceed 16000 x 16000, with its width and height
+> not greater than 16384 px. If the created area exceeds 536870911 px, the returned
+> width and height are both 0 px, and **data** is **undefined**.
 
 **Since:** 8
 
@@ -126,7 +129,8 @@ The unit is px.
 
 > **NOTE：**
 > 
-> The px2vp &gt; API can be used for unit conversion.
+> The px2vp
+> API can be used for unit conversion.
 
 **Type:** number
 

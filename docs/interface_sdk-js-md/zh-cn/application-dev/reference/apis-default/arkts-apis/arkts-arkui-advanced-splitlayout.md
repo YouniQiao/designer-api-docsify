@@ -11,5 +11,5 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [SplitLayout](arkts-arkui-advanced-splitlayout-splitlayout-s.md) | 声明SplitLayout。SplitLayout用于上下图文布局。 @struct { SplitLayout } |
+| [SplitLayout](arkts-arkuiadvancedsplitlayout-splitlayout-s.md) | 声明SplitLayout。SplitLayout用于上下图文布局。 @struct { SplitLayout } |
 

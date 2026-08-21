@@ -12,14 +12,14 @@ import { UIExtensionContentSession } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | UIExtensionContentSession is the UI operation class for the UIExtensionAbility. It provides control over page loading and allows configuration of the window privacy mode of the host application. |
+| [UIExtensionContentSession](arkts-ability-appabilityuiextensioncontentsession-uiextensioncontentsession-c.md) | UIExtensionContentSession is the UI operation class for the UIExtensionAbility. It provides control over page loading and allows configuration of the window privacy mode of the host application. |
 
 <!--Del-->
 ### Classes(System API)
 
 | Name | Description |
 | --- | --- |
-| [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md) | UIExtensionContentSession is the UI operation class for the UIExtensionAbility. It provides control over page loading and allows configuration of the window privacy mode of the host application. |
+| [UIExtensionContentSession](arkts-ability-appabilityuiextensioncontentsession-uiextensioncontentsession-c-sys.md) | UIExtensionContentSession is the UI operation class for the UIExtensionAbility. It provides control over page loading and allows configuration of the window privacy mode of the host application. |
 <!--DelEnd-->
 
 <!--Del-->

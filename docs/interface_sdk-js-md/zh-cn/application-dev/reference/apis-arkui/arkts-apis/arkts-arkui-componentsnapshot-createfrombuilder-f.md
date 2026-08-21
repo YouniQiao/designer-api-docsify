@@ -17,7 +17,9 @@ function createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image
 
 > **说明：**
 > 
-> - 从API version 12开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [getComponentSnapshot](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)方法 &gt; 获取当前UI上下文关联的[ComponentSnapshot](../../apis-default/arkts-apis/arkts-arkui-uicontext-componentsnapshot-c.md)对象。
+> - 从API version 12开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)中的
+> [getComponentSnapshot](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#getcomponentsnapshot)方法
+> 获取当前UI上下文关联的[ComponentSnapshot](../../apis-default/arkts-apis/arkts-arkuiuicontext-componentsnapshot-c.md)对象。
 > 
 > - 由于需要等待组件构建、渲染成功，离屏截图的回调有500ms以内的延迟。
 > 
@@ -131,7 +133,9 @@ function createFromBuilder(builder: CustomBuilder, delay?: number,
 
 > **说明：**
 > 
-> - 从API version 12开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [getComponentSnapshot](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)方法 &gt; 获取当前UI上下文关联的[ComponentSnapshot](../../apis-default/arkts-apis/arkts-arkui-uicontext-componentsnapshot-c.md)对象。
+> - 从API version 12开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)中的
+> [getComponentSnapshot](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#getcomponentsnapshot)方法
+> 获取当前UI上下文关联的[ComponentSnapshot](../../apis-default/arkts-apis/arkts-arkuiuicontext-componentsnapshot-c.md)对象。
 > 
 > - 由于需要等待组件构建、渲染成功，离屏截图的回调有500ms以内的延迟。
 > 

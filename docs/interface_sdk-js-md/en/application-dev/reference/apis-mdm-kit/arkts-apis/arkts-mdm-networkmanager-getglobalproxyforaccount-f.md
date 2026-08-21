@@ -17,7 +17,8 @@ Obtains the network proxy for a specified user. This API is suitable for network
 > **NOTE：**
 > 
 > This API is used to obtain the proxy configuration of a specified user set by the **setGlobalProxyForAccount**
-> API. To obtain the global proxy configuration that applies to all users, you are advised to use the &gt; [getGlobalProxySync](arkts-mdm-networkmanager-getglobalproxysync-f.md) API.
+> API. To obtain the global proxy configuration that applies to all users, you are advised to use the
+> [getGlobalProxySync](arkts-mdm-networkmanager-getglobalproxysync-f.md) API.
 
 **Since:** 15
 
@@ -33,7 +34,7 @@ Obtains the network proxy for a specified user. This API is suitable for network
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application.<br>**Since:** 20 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application.<br>**Since:** 20 |
 | accountId | number | Yes | User ID, which must be greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of **@ohos.account.osAccount** to obtain the user ID. |
 
 **Return value:**

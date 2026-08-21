@@ -2,7 +2,9 @@
 
 ## Overview
 
-Provides the input method attach options.
+Provides methods for creating, destroying, reading, and writing the option object bound to the input method.
+
+**Include**: <inputmethod/inputmethod_attach_options_capi.h>
 
 **Library**: libohinputmethod.so
 
@@ -18,7 +20,7 @@ Provides the input method attach options.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md) | InputMethod_AttachOptions | Define the InputMethod_AttachOptions structure type.The options when attaching input method. |
+| [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md) | InputMethod_AttachOptions | Options for binding the input method.The options when attaching input method. |
 
 ### Function
 
@@ -28,7 +30,7 @@ Provides the input method attach options.
 | [InputMethod_AttachOptions *OH_AttachOptions_CreateWithRequestKeyboardReason(bool showKeyboard, InputMethod_RequestKeyboardReason requestKeyboardReason)](#oh_attachoptions_createwithrequestkeyboardreason) | Create a new [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md) instance. |
 | [void OH_AttachOptions_Destroy(InputMethod_AttachOptions *options)](#oh_attachoptions_destroy) | Delete a [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md) instance. |
 | [InputMethod_ErrorCode OH_AttachOptions_IsShowKeyboard(InputMethod_AttachOptions *options, bool *showKeyboard)](#oh_attachoptions_isshowkeyboard) | Get showKeyboard value from [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md). |
-| [InputMethod_ErrorCode OH_AttachOptions_GetRequestKeyboardReason(InputMethod_AttachOptions *options, int *requestKeyboardReason)](#oh_attachoptions_getrequestkeyboardreason) | Get showKeyboard value from [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md). |
+| [InputMethod_ErrorCode OH_AttachOptions_GetRequestKeyboardReason(InputMethod_AttachOptions *options, int *requestKeyboardReason)](#oh_attachoptions_getrequestkeyboardreason) | Obtains the reason that triggers the input method from [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md). |
 
 ## Function description
 
@@ -48,7 +50,7 @@ Create a new [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachopti
 
 | Parameter | Description |
 | -- | -- |
-| bool showKeyboard | Represents whether to show the keyboard. |
+| bool showKeyboard | Pointer to whether to display the keyboard during binding.true: The keyboard is displayed after the binding is complete.false: The keyboard is hidden after the binding is complete. |
 
 **Returns**:
 
@@ -73,7 +75,7 @@ Create a new [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachopti
 | Parameter | Description |
 | -- | -- |
 | bool showKeyboard | Represents whether to show the keyboard. |
-| [InputMethod_RequestKeyboardReason](capi-inputmethod-types-capi-h.md#inputmethod_requestkeyboardreason) requestKeyboardReason |  the reason for showKeyboard. |
+| [InputMethod_RequestKeyboardReason](capi-inputmethod-types-capi-h.md#inputmethod_requestkeyboardreason) requestKeyboardReason |  Reason for requesting the keyboard. |
 
 **Returns**:
 
@@ -122,7 +124,7 @@ Get showKeyboard value from [InputMethod_AttachOptions](capi-inputmethod-inputme
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      <br>[IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      <br>[IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.      <br>Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_AttachOptions_GetRequestKeyboardReason()
 
@@ -132,7 +134,7 @@ InputMethod_ErrorCode OH_AttachOptions_GetRequestKeyboardReason(InputMethod_Atta
 
 **Description**
 
-Get showKeyboard value from [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md).
+Obtains the reason that triggers the input method from [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md).
 
 **Since**: 15
 
@@ -141,12 +143,12 @@ Get showKeyboard value from [InputMethod_AttachOptions](capi-inputmethod-inputme
 | Parameter | Description |
 | -- | -- |
 | [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md) *options | Represents a pointer to an [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md) instance which will be get value from. |
-| int *requestKeyboardReason |  Represents a pointer to an {@link InputMethodRequestKeyboardReason} instance which willbe get value from. |
+| int *requestKeyboardReason |  Pointer to the reason for requesting the keyboard. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer. If options is NULL, or requestKeyboardReason is NULL.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      <br>[IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      <br>[IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer. If options is NULL, or requestKeyboardReason is NULL.      <br>Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 

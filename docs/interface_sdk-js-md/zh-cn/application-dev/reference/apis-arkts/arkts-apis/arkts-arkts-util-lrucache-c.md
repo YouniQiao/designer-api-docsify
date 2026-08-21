@@ -96,7 +96,9 @@ afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void
 
 > **NOTE：**
 > 
-> 如果在调用 [clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) 和 &gt; [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updatecapacity) 后执行回调方法，并且输入的 **key** 和 &gt; **value** 参数为 MapIterator 类型，请参考示例 2 执行后续操作。
+> 如果在调用 [clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) 和
+> [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updatecapacity) 后执行回调方法，并且输入的 **key** 和
+> **value** 参数为 MapIterator 类型，请参考示例 2 执行后续操作。
 
 **起始版本：** 9
 

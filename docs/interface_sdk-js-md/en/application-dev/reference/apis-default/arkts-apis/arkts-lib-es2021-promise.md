@@ -11,7 +11,7 @@
 
 | Name | Description |
 | --- | --- |
-| [AggregateError](arkts-lib-es2021-promise-aggregateerror-i.md) |  |
-| [AggregateErrorConstructor](arkts-lib-es2021-promise-aggregateerrorconstructor-i.md) |  |
-| [PromiseConstructor](arkts-lib-es2021-promise-promiseconstructor-i.md) | Represents the completion of an asynchronous operation |
+| [AggregateError](arkts-libes2021promise-aggregateerror-i.md) |  |
+| [AggregateErrorConstructor](arkts-libes2021promise-aggregateerrorconstructor-i.md) |  |
+| [PromiseConstructor](arkts-libes2021promise-promiseconstructor-i.md) | Represents the completion of an asynchronous operation |
 

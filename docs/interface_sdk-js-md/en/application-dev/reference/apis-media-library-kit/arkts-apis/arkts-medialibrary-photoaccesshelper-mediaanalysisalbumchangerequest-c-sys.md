@@ -134,7 +134,8 @@ Creates a change request for the **Analysis** album.
 > 
 > - The album name string length ranges from 1 to 255.
 > 
-> - The album name cannot contain any of the following characters:.. \ / : ? " ' ` &lt; &gt; | { } [ ]
+> - The album name cannot contain any of the following characters:.. \ / : ? " ' ` &lt;
+&gt; | { } [ ]
 
 **Since:** 23
 

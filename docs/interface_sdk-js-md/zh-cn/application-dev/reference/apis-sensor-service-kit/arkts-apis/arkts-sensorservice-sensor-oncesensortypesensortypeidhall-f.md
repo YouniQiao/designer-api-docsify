@@ -16,7 +16,9 @@ function once(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallRespo
 
 > **说明：**
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HALL] &gt; once &gt; 替代。
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HALL]
+> once
+> 替代。
 
 **起始版本：** 8
 

@@ -4,9 +4,16 @@
 
 > **说明：**
 > 
-> OffscreenCanvasRenderingContext2D无法在ServiceExtensionAbility中使用， &gt; ServiceExtensionAbility中建议使用 &gt; [Drawing模块](../../../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing.md) &gt; 进行离屏绘制。
+> OffscreenCanvasRenderingContext2D无法在ServiceExtensionAbility中使用，
+> ServiceExtensionAbility中建议使用
+> [Drawing模块](../../../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing.md)
+> 进行离屏绘制。
 > 
-> beginPath、moveTo、lineTo、closePath、bezierCurveTo、quadraticCurveTo、arc、arcTo、ellipse、rect和 &gt; roundRect接口只能对OffscreenCanvasRenderingContext2D中的路径生效，无法对 &gt; [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md) &gt; 和[Path2D](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-path2d.md) &gt; 对象中设置的路径生效。
+> beginPath、moveTo、lineTo、closePath、bezierCurveTo、quadraticCurveTo、arc、arcTo、ellipse、rect和
+> roundRect接口只能对OffscreenCanvasRenderingContext2D中的路径生效，无法对
+> [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)
+> 和[Path2D](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-path2d.md)
+> 对象中设置的路径生效。
 
 **起始版本：** 8
 

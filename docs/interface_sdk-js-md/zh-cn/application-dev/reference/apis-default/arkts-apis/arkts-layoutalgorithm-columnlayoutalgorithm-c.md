@@ -4,7 +4,8 @@
 
 > **说明：**
 > 
-> ColumnLayoutAlgorithm类对象可以作为 &gt; [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md)组件的入参指定布局算法。
+> ColumnLayoutAlgorithm类对象可以作为
+> [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md)组件的入参指定布局算法。
 
 @implements LayoutAlgorithm
 

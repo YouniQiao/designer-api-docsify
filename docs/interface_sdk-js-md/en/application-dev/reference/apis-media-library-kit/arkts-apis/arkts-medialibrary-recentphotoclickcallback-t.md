@@ -18,7 +18,7 @@ Called when the recent image or video is selected. No special processing is perf
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recentPhotoInfo | [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md) | Yes | Information about the recent image or video. |
+| recentPhotoInfo | [BaseItemInfo](arkts-medialibrary-filephotopickercomponent-baseiteminfo-c.md) | Yes | Information about the recent image or video. |
 
 **Return value:**
 

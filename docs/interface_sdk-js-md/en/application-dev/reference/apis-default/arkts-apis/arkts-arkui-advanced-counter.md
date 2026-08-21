@@ -11,24 +11,24 @@
 
 | Name | Description |
 | --- | --- |
-| [CommonOptions](arkts-arkui-advanced-counter-commonoptions-c.md) | Defines the common options. |
-| [CounterOptions](arkts-arkui-advanced-counter-counteroptions-c.md) | Defines the counter options. |
-| [DateData](arkts-arkui-advanced-counter-datedata-c.md) | Defines the date data. |
-| [DateStyleOptions](arkts-arkui-advanced-counter-datestyleoptions-c.md) | Defines the date style options. |
-| [InlineStyleOptions](arkts-arkui-advanced-counter-inlinestyleoptions-c.md) | Defines the inline style options. |
-| [NumberStyleOptions](arkts-arkui-advanced-counter-numberstyleoptions-c.md) | Defines the number style options. |
+| [CommonOptions](arkts-arkuiadvancedcounter-commonoptions-c.md) | Defines the common options. |
+| [CounterOptions](arkts-arkuiadvancedcounter-counteroptions-c.md) | Defines the counter options. |
+| [DateData](arkts-arkuiadvancedcounter-datedata-c.md) | Defines the date data. |
+| [DateStyleOptions](arkts-arkuiadvancedcounter-datestyleoptions-c.md) | Defines the date style options. |
+| [InlineStyleOptions](arkts-arkuiadvancedcounter-inlinestyleoptions-c.md) | Defines the inline style options. |
+| [NumberStyleOptions](arkts-arkuiadvancedcounter-numberstyleoptions-c.md) | Defines the number style options. |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [CounterComponent](arkts-arkui-advanced-counter-countercomponent-s.md) | Defines Counter Component. |
+| [CounterComponent](arkts-arkuiadvancedcounter-countercomponent-s.md) | Defines Counter Component. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [CounterType](arkts-arkui-advanced-counter-countertype-e.md) | Enum for the counter type. |
+| [CounterType](arkts-arkuiadvancedcounter-countertype-e.md) | Enum for the counter type. |
 
 ### Types
 

@@ -4,7 +4,10 @@ Enumerates the preset vibration effect IDs. This parameter is needed when you ca
 
 > **NOTE：**
 > 
-> Preset effects vary according to devices. You are advised to call &gt; [vibrator.isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md)&lt;sup&gt;10+&lt;/sup&gt; to check whether the &gt; device supports the preset effect before use.
+> Preset effects vary according to devices. You are advised to call
+> [vibrator.isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md)&lt;sup&gt;10+&lt;/sup
+&gt; to check whether the
+> device supports the preset effect before use.
 
 **Since:** 23
 

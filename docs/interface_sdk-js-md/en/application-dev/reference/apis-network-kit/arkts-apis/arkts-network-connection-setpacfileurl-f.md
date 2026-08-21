@@ -16,9 +16,12 @@ Sets the URL of the Proxy Auto-Configuration Script (PAC) and enables the PAC pr
 
 > **NOTE：**
 > 
-> 1. This API can parse scripts and enable the PAC proxy capability on **PC/2in1&lt;sup&gt;20+&lt;/sup&gt;**, &gt; **Phone&lt;sup&gt;23+&lt;/sup&gt;**, **Tablet&lt;sup&gt;23+&lt;/sup&gt;** and **TV&lt;sup&gt;23+&lt;/sup&gt;** devices. For wearable devices, only &gt; the script address is saved, and the PAC proxy capability is not enabled.
+> 1. This API can parse scripts and enable the PAC proxy capability on **PC/2in1&lt;sup&gt;20+&lt;/sup&gt;**,
+> **Phone&lt;sup&gt;23+&lt;/sup&gt;**, **Tablet&lt;sup&gt;23+&lt;/sup&gt;** and **TV&lt;sup&gt;23+&lt;/sup&gt;** devices. For wearable devices, only
+> the script address is saved, and the PAC proxy capability is not enabled.
 
-> 2. This API does not verify the URL authenticity. If the URL is incorrect when the PAC proxy is enabled, the &gt; proxy fails to be enabled and error code 2100002 is returned.
+> 2. This API does not verify the URL authenticity. If the URL is incorrect when the PAC proxy is enabled, the
+> proxy fails to be enabled and error code 2100002 is returned.
 
 **Since:** 20
 

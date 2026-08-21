@@ -16,7 +16,9 @@ function getAltitude(seaPressure: number, currentPressure: number, callback: Asy
 
 > **说明：**
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用 &gt; [sensor.getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md) &gt; 替代。
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md)
+> 替代。
 
 **起始版本：** 8
 
@@ -62,7 +64,8 @@ function getAltitude(seaPressure: number, currentPressure: number): Promise<numb
 
 > **说明：**
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用 &gt; [sensor.getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md)替代。
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md)替代。
 
 **起始版本：** 8
 

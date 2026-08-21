@@ -16,7 +16,8 @@ Checks whether the application with the specified bundle name and application cl
 
 > **NOTE：**
 > 
-> If the application is not installed for the current user, error code 16000073 is returned. If the application is &gt; installed for the current user, the system checks whether the application is running across all users.
+> If the application is not installed for the current user, error code 16000073 is returned. If the application is
+> installed for the current user, the system checks whether the application is running across all users.
 
 **Since:** 23
 

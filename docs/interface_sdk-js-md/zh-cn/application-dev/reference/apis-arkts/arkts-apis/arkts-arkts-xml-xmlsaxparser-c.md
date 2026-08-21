@@ -28,7 +28,9 @@ constructor(inputStream: stream.Readable, encoding?: string)
 
 > **说明：**
 > 
-> - `inputStream`参数必须传入继承自[Readable](arkts-arkts-stream-readable-c.md)且实现 &gt; [Doread](arkts-arkts-stream-readable-c.md#doread)的类。可以传入其他模块中满足该条件的类，如 &gt; [ReadStream](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-readstream-c.md)。
+> - `inputStream`参数必须传入继承自[Readable](arkts-arkts-stream-readable-c.md)且实现
+> [Doread](arkts-arkts-stream-readable-c.md#doread)的类。可以传入其他模块中满足该条件的类，如
+> [ReadStream](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-readstream-c.md)。
 
 **起始版本：** 24
 
@@ -95,9 +97,10 @@ parse(xmlSAXHandler: XmlSAXHandler): void
 
 > **说明：**
 > 
-> - 在调用parse函数后，用户可以通过控制流的方式来控制解析进度。任意数据块被推入后，解析器会解析相应的进度。具体流控制方式详见 &gt; [@ohos.util.stream (数据流基类stream)](arkts-util-stream.md)。
+> - 在调用parse函数后，用户可以通过控制流的方式来控制解析进度。任意数据块被推入后，解析器会解析相应的进度。具体流控制方式详见
+> [@ohos.util.stream (数据流基类stream)](arkts-util-stream.md)。
 > 
-> - 可以配合自动控制数据的流使用，如[ReadStream](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-readstream-c.md)，此时用户不再需要手动控制数据。
+> - 可以配合自动控制数据的流使用，如[ReadStream](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-readstream-c.md)，此时用户不再需要手动控制数据。
 > 
 > - parse接口注册了流的on监听器，会自动读取流中的数据。不建议再对流的监听器进行操作或者读取数据，以免发生冲突导致接口能力失效。
 

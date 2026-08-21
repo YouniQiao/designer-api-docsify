@@ -460,7 +460,9 @@ The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-ap
 
 > **NOTE：**
 > 
-> This API returns a JSON string consisting of Exif tags. The complete Exif data consists of **all_exif** and &gt; [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md). These two fields must be passed in via &gt; [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md).fetchColumns.
+> This API returns a JSON string consisting of Exif tags. The complete Exif data consists of **all_exif** and
+> [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md). These two fields must be passed in via
+> [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md).fetchColumns.
 
 **Since:** 23
 
@@ -535,7 +537,9 @@ The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-ap
 
 > **NOTE：**
 > 
-> This API returns a JSON string consisting of Exif tags. The complete Exif data consists of **all_exif** and &gt; [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md). These two fields must be passed in via &gt; [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md).fetchColumns.
+> This API returns a JSON string consisting of Exif tags. The complete Exif data consists of **all_exif** and
+> [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md). These two fields must be passed in via
+> [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md).fetchColumns.
 
 **Since:** 23
 
@@ -897,7 +901,8 @@ The returned FD must be closed when it is not required.
 
 > **NOTE：**
 > 
-> This API is supported since API version 10 and deprecated since API version 11. For security purposes, the API &gt; for obtaining the media file handle is no longer provided.
+> This API is supported since API version 10 and deprecated since API version 11. For security purposes, the API
+> for obtaining the media file handle is no longer provided.
 
 **Since:** 10
 
@@ -962,7 +967,8 @@ The returned FD must be closed when it is not required.
 
 > **NOTE：**
 > 
-> This API is supported since API version 10 and deprecated since API version 11. For security purposes, the API &gt; for obtaining the media file handle is no longer provided.
+> This API is supported since API version 10 and deprecated since API version 11. For security purposes, the API
+> for obtaining the media file handle is no longer provided.
 
 **Since:** 10
 

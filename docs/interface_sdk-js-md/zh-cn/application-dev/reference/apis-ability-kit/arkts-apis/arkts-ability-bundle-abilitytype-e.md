@@ -3,7 +3,8 @@
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [bundleManager.AbilityType](arkts-ability-bundlemanager-abilitytype-e.md)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [bundleManager.AbilityType](arkts-ability-bundlemanager-abilitytype-e.md)替代。
 
 Ability组件类型。
 

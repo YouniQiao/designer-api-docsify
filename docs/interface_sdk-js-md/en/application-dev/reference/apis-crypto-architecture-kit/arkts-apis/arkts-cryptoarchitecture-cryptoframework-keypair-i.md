@@ -6,7 +6,8 @@ Defines an asymmetric key pair, which includes a public key and a private key.
 
 > **NOTE：**
 > 
-> The **pubKey** and **priKey** objects are members of the **KeyPair** object. When the **KeyPair** object is out &gt; of the scope, its **pubKey** and **priKey** objects will be destructed.
+> The **pubKey** and **priKey** objects are members of the **KeyPair** object. When the **KeyPair** object is out
+> of the scope, its **pubKey** and **priKey** objects will be destructed.
 > 
 > The service must reference the **KeyPair** object instead of the internal **pubKey** or **priKey** object.
 

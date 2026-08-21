@@ -42,7 +42,7 @@ theme?: CustomTheme
 
 默认值：undefined，缺省样式跟随系统[token默认样式](../../../ui/theme_skinning.md#系统缺省token色值)。
 
-**类型：** [CustomTheme](../arkts-apis/arkts-arkui-arkui-theme-customtheme-i.md)
+**类型：** [CustomTheme](../arkts-apis/arkts-arkui-arkuitheme-customtheme-i.md)
 
 **起始版本：** 23
 

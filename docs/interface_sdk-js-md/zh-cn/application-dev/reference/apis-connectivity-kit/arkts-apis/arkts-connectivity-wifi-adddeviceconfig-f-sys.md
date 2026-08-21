@@ -17,7 +17,7 @@ function addDeviceConfig(config: WifiDeviceConfig): Promise<number>
 
 添加网络配置，使用Promise异步回调。
 
-&lt;p&gt;添加配置后，配置将被更新。&lt;/p&gt;
+<p>添加配置后，配置将被更新。</p>
 
 **起始版本：** 6
 
@@ -87,7 +87,7 @@ function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<numbe
 
 添加网络配置，使用callback异步回调。
 
-&lt;p&gt;添加配置后，配置将被更新。&lt;/p&gt;
+<p>添加配置后，配置将被更新。</p>
 
 **起始版本：** 6
 

@@ -31,7 +31,9 @@ effectStrategy(value: SymbolEffectStrategy)
 > 
 > - 动效属性，仅支持使用effectStrategy属性或单个symbolEffect属性，不支持多种动效属性混合使用。
 > 
-> - 本接口仅支持NONE、SCALE、HIERARCHICAL三种预置动效类型，设置后动效自动播放。如需使用更丰富的动效类型（如出现、消失、弹跳、替换、脉冲动效等）或控制动效的播放状态和触发时机，请使用 &gt; [symbolEffect](#symboleffect)接口。两者不可同时使 &gt; 用，详见[symbolEffect](#symboleffect)接口说明。
+> - 本接口仅支持NONE、SCALE、HIERARCHICAL三种预置动效类型，设置后动效自动播放。如需使用更丰富的动效类型（如出现、消失、弹跳、替换、脉冲动效等）或控制动效的播放状态和触发时机，请使用
+> [symbolEffect](#symboleffect)接口。两者不可同时使
+> 用，详见[symbolEffect](#symboleffect)接口说明。
 
 **起始版本：** 11
 

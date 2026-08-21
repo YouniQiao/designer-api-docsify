@@ -58,7 +58,7 @@ readonly drawableDescriptor: DrawableDescriptor | null
 
 Indicates the drawable descriptor of this bundle icon
 
-**类型：** [DrawableDescriptor](../../apis-default/arkts-apis/arkts-arkui-drawabledescriptor-drawabledescriptor-c.md) \| null
+**类型：** [DrawableDescriptor](../../apis-default/arkts-apis/arkts-arkuidrawabledescriptor-drawabledescriptor-c.md) \| null
 
 **起始版本：** 23
 

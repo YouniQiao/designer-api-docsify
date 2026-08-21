@@ -20,9 +20,11 @@ Callbacks are stored in the application process. A maximum of 10 callbacks can b
 
 > **NOTE：**
 > 
-> If the callback contains time-consuming operations, the registration or deregistration will be blocked (waiting &gt; for the callback execution to complete) when the callback is executed.
+> If the callback contains time-consuming operations, the registration or deregistration will be blocked (waiting
+> for the callback execution to complete) when the callback is executed.
 > 
-> Therefore, you are advised not to register or deregister callbacks containing time-consuming operations in the &gt; main thread of the application to avoid application freeze.
+> Therefore, you are advised not to register or deregister callbacks containing time-consuming operations in the
+> main thread of the application to avoid application freeze.
 
 **Since:** 23
 

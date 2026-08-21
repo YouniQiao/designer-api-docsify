@@ -335,7 +335,8 @@ flush(callback: AsyncCallback<void>): void
 > 
 > 当数据未修改或修改后的数据与缓存数据一致时，不会刷新持久化文件。
 > 
-> 只在XML存储模式下使用，在GSKV存储模式下无需调用，因为当选择该模式时首选项对数据的操作会实时落盘。Preferences存储模式可见 &gt; [存储模式说明](../../../database/data-persistence-by-preferences.md#存储模式说明)。
+> 只在XML存储模式下使用，在GSKV存储模式下无需调用，因为当选择该模式时首选项对数据的操作会实时落盘。Preferences存储模式可见
+> [存储模式说明](../../../database/data-persistence-by-preferences.md#存储模式说明)。
 
 **起始版本：** 23
 
@@ -400,7 +401,8 @@ flush(): Promise<void>
 > 
 > 当数据未修改或修改后的数据与缓存数据一致时，不会刷新持久化文件。
 > 
-> 只在XML存储模式下使用，在GSKV存储模式下无需调用，因为当选择该模式时首选项对数据的操作会实时落盘。Preferences存储模式可见 &gt; [存储模式说明](../../../database/data-persistence-by-preferences.md#存储模式说明)。
+> 只在XML存储模式下使用，在GSKV存储模式下无需调用，因为当选择该模式时首选项对数据的操作会实时落盘。Preferences存储模式可见
+> [存储模式说明](../../../database/data-persistence-by-preferences.md#存储模式说明)。
 
 **起始版本：** 23
 
@@ -1504,11 +1506,14 @@ on(type: 'change', callback: Callback<string>): void
 > 
 > - on('multiProcessChange')：订阅多进程数据变化，适合多进程共享同一首选项文件的场景。
 > 
-> **选取建议：** 单进程应用推荐使用on('change')或on('dataChange')；多进程数据同步时使用on('multiProcessChange')；需要精确知道特定Key变化并获取新值时使用on(' &gt; dataChange')。
+> **选取建议：** 单进程应用推荐使用on('change')或on('dataChange')；多进程数据同步时使用on('multiProcessChange')；需要精确知道特定Key变化并获取新值时使用on('
+> dataChange')。
 > 
 > **说明：**
 > 
-> 当调用[removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md)或 &gt; [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md)后，订阅的数据变更会主动取消订阅，在重新 &gt; [getPreferences](arkts-arkdata-preferences-getpreferences-f.md)后需要重新订阅数据变更。
+> 当调用[removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md)或
+> [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md)后，订阅的数据变更会主动取消订阅，在重新
+> [getPreferences](arkts-arkdata-preferences-getpreferences-f.md)后需要重新订阅数据变更。
 
 **起始版本：** 9
 
@@ -1561,7 +1566,9 @@ on(type: 'dataChange', keys: Array<string>, callback: Callback<Record<string, Va
 
 > **说明：**
 > 
-> 当调用[removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md)或 &gt; [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md)后，订阅的数据变更会主动取消订阅，在重新 &gt; [getPreferences](arkts-arkdata-preferences-getpreferences-f.md)后需要重新订阅数据变更。
+> 当调用[removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md)或
+> [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md)后，订阅的数据变更会主动取消订阅，在重新
+> [getPreferences](arkts-arkdata-preferences-getpreferences-f.md)后需要重新订阅数据变更。
 
 **起始版本：** 12
 
@@ -1624,7 +1631,9 @@ on(type: 'multiProcessChange', callback: Callback<string>): void
 > 
 > 同一持久化文件在当前进程对多进程数据变更订阅的最大数量为50次，超过最大限制后订阅会失败。建议在触发callback回调后及时取消订阅。
 > 
-> 当调用[removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md)或 &gt; [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md)后，订阅的数据变更会主动取消订阅，在重新 &gt; [getPreferences](arkts-arkdata-preferences-getpreferences-f.md)后需要重新订阅数据变更。
+> 当调用[removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md)或
+> [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md)后，订阅的数据变更会主动取消订阅，在重新
+> [getPreferences](arkts-arkdata-preferences-getpreferences-f.md)后需要重新订阅数据变更。
 
 **起始版本：** 10
 

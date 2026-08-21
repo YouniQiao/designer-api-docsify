@@ -2404,7 +2404,8 @@ getSerialNumber(): number
 
 > **说明：**
 > 
-> 从API version 9开始支持，从API version 10开始废弃，建议使用 &gt; [X509Cert.getCertSerialNumber()](#getcertserialnumber)替代。
+> 从API version 9开始支持，从API version 10开始废弃，建议使用
+> [X509Cert.getCertSerialNumber()](#getcertserialnumber)替代。
 
 **起始版本：** 9
 
@@ -3197,7 +3198,8 @@ getSubjectName(encodingType?: EncodingType): DataBlob
 > **说明：**
 > 
 > - 若不设置encodingType参数，获取的证书主体名称末尾包含一个NUL终止符（值为0），请根据业务需求决定是否去除该终止符。
-> - 若不设置encodingType参数，获取的证书主体名称为ASCII编码，转换为字符串后，是以斜杠（/）开始，以斜杠（/）分隔相对可分辨名称的 &gt; 可分辨名称字符串。
+> - 若不设置encodingType参数，获取的证书主体名称为ASCII编码，转换为字符串后，是以斜杠（/）开始，以斜杠（/）分隔相对可分辨名称的
+> 可分辨名称字符串。
 > - 建议设置encodingType参数为EncodingType.ENCODING_UTF8，获取的证书主体名称是以逗号（,）分隔相对可分辨名称的可分辨名称字符串。
 
 **起始版本：** 23

@@ -22,5 +22,5 @@ The type of PlainArray callback function.
 | --- | --- | --- | --- |
 | value | T | Yes | The value of current element |
 | key | int | Yes | The key of current element The value should be an integer. |
-| PlainArray | [PlainArray](arkts-arkts-util-plainarray-plainarray-c.md)&lt;T&gt; | Yes | The PlainArray instance being traversed |
+| PlainArray | [PlainArray](arkts-arkts-utilplainarray-plainarray-c.md)&lt;T&gt; | Yes | The PlainArray instance being traversed |
 

@@ -609,7 +609,8 @@ getSocketFd(callback: AsyncCallback<int>): void
 > 
 > - bind或connect方法调用成功后，才可调用此方法。
 > 
-> - 文件描述符的生命周期由系统管理，应用可以通过[close](arkts-network-socket-udpsocket-i.md#close)方法关闭Socket连接，避免直接操作 &gt; 文件描述符进行关闭。
+> - 文件描述符的生命周期由系统管理，应用可以通过[close](arkts-network-socket-udpsocket-i.md#close)方法关闭Socket连接，避免直接操作
+> 文件描述符进行关闭。
 
 **起始版本：** 10
 
@@ -662,7 +663,8 @@ getSocketFd(): Promise<int>
 > 
 > - bind或connect方法调用成功后，才可调用此方法。
 > 
-> - 文件描述符的生命周期由系统管理，应用可以通过[close](arkts-network-socket-udpsocket-i.md#close)方法关闭Socket连接，避免直接操作 &gt; 文件描述符进行关闭。
+> - 文件描述符的生命周期由系统管理，应用可以通过[close](arkts-network-socket-udpsocket-i.md#close)方法关闭Socket连接，避免直接操作
+> 文件描述符进行关闭。
 
 **起始版本：** 10
 

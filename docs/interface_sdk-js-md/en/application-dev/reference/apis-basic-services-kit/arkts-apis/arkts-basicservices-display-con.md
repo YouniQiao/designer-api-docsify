@@ -8,7 +8,7 @@ const ANIMATOR_DURATION_SCALE: string
 
 Indicates the scaling factor for the animation duration.
 
-&lt;p&gt;This affects the start delay and duration of all such animations. If the value is {@code 0}, the animation ends immediately. The default value is {@code 1}.
+<p>This affects the start delay and duration of all such animations. If the value is {@code 0}, the animation ends immediately. The default value is {@code 1}.
 
 **Since:** 23
 
@@ -26,7 +26,7 @@ const AUTO_SCREEN_BRIGHTNESS: string
 
 Specifies whether automatic screen brightness adjustment is enabled.
 
-&lt;p&gt;If the value is {@code 1}, automatic adjustment is enabled. If the value is {@code 0}, automatic adjustment is disabled.
+<p>If the value is {@code 1}, automatic adjustment is enabled. If the value is {@code 0}, automatic adjustment is disabled.
 
 **Since:** 23
 
@@ -56,7 +56,7 @@ const DEFAULT_SCREEN_ROTATION: string
 
 Indicates the screen rotation when no other policy is available.
 
-&lt;p&gt;This constant is invalid when auto-rotation is enabled. When auto-rotation is disabled, the following values are available:
+<p>This constant is invalid when auto-rotation is enabled. When auto-rotation is disabled, the following values are available:
 
 &lt;ul&gt; &lt;li&gt;{@code 0} - The screen rotates 0 degrees. &lt;li&gt;{@code 1} - The screen rotates 90 degrees. &lt;li&gt;{@code 2} - The screen rotates 180 degrees. &lt;li&gt;{@code 3} - The screen rotates 270 degrees. &lt;/ul&gt;
 
@@ -76,7 +76,7 @@ const DISPLAY_INVERSION_STATUS: string
 
 Specifies whether display color inversion is enabled.
 
-&lt;p&gt;If the value is {@code 1}, display color inversion is enabled. If the value is {@code 0}, display color inversion is disabled.
+<p>If the value is {@code 1}, display color inversion is enabled. If the value is {@code 0}, display color inversion is disabled.
 
 **Since:** 23
 

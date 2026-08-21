@@ -14,7 +14,7 @@ import { TreeSetComparator } from '@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [TreeSet](arkts-arkts-util-treeset-treeset-c.md) | TreeSet is implemented based on TreeMap. In TreeSet, only value objects are processed. TreeSet can be used to store values, each of which must be unique. |
+| [TreeSet](arkts-arkts-utiltreeset-treeset-c.md) | TreeSet is implemented based on TreeMap. In TreeSet, only value objects are processed. TreeSet can be used to store values, each of which must be unique. |
 
 ### Types
 

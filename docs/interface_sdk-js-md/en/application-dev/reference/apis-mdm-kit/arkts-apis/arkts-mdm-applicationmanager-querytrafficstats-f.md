@@ -22,13 +22,17 @@ Queries the data usage of a specified application within a specified period for 
 
 > **NOTE：**
 > 
-> The input network type (**networkInfo.type**) can only be **connection.NetBearType.BEARER_CELLULAR** or &gt; **connection.NetBearType.BEARER_WIFI**. If any other value is passed, the API returns error code 9200012.
+> The input network type (**networkInfo.type**) can only be **connection.NetBearType.BEARER_CELLULAR** or
+> **connection.NetBearType.BEARER_WIFI**. If any other value is passed, the API returns error code 9200012.
 > 
-> The input start time (**networkInfo.startTime**) and end time (**networkInfo.endTime**) are second-level &gt; timestamps. If the input start time and end time are negative numbers or the start time is later than the end &gt; time, the API returns error code 9200012.
+> The input start time (**networkInfo.startTime**) and end time (**networkInfo.endTime**) are second-level
+> timestamps. If the input start time and end time are negative numbers or the start time is later than the end
+> time, the API returns error code 9200012.
 > 
 > If the input user ID (**accountId**) is not the ID of the current user, the API returns error code 9200012.
 > 
-> It is advised that the query interval (end time – start time) be 1 to 30 days. If the interval is too short, the &gt; query result may be inaccurate. If the interval is too long, the query will take a long time.
+> It is advised that the query interval (end time – start time) be 1 to 30 days. If the interval is too short, the
+> query result may be inaccurate. If the interval is too long, the query will take a long time.
 
 **Since:** 26.0.0
 
@@ -44,7 +48,7 @@ Queries the data usage of a specified application within a specified period for 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | bundleName | string | Yes | Bundle name of the application. |
 | appIndex | number | Yes | Index of the application clone. The value is an integer greater than or equal to 0. <br> You can call [getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getappcloneidentity-f.md) of @ohos.bundle.bundleManager to obtain the index. |
 | accountId | number | Yes | Account ID. The value is an integer greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ohos.account.osAccount to obtain the ID. |

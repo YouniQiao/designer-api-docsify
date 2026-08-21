@@ -27,7 +27,8 @@ Component generator. When the return value of [.templateId()](#templateid) does 
 > 
 > - The **each** property is mandatory. If it is omitted, runtime errors will occur.
 > 
-> - The **itemGenerator** parameter is of the **RepeatItem** type, which combines **item** and **index**. Do not &gt; destructure **RepeatItem**.
+> - The **itemGenerator** parameter is of the **RepeatItem** type, which combines **item** and **index**. Do not
+> destructure **RepeatItem**.
 > 
 > - This API cannot be called within attributeModifier.
 

@@ -244,7 +244,8 @@ connect(url: string, callback: AsyncCallback<boolean>): void
 
 > **说明：**
 > 
-> callback中返回的boolean值仅表示连接请求创建是否成功。如需感知WebSocket是否连接成功，需要在调用该接口前调用 &gt; [on('open')](#onopen)订阅open事件。
+> callback中返回的boolean值仅表示连接请求创建是否成功。如需感知WebSocket是否连接成功，需要在调用该接口前调用
+> [on('open')](#onopen)订阅open事件。
 > 
 > **注意：**
 > 
@@ -325,7 +326,8 @@ connect(url: string, options: WebSocketRequestOptions, callback: AsyncCallback<b
 
 > **说明：**
 > 
-> callback中返回的boolean值仅表示连接请求创建是否成功。如需感知WebSocket是否连接成功，需要在调用该接口前调用 &gt; [on('open')](#onopen)订阅open事件。
+> callback中返回的boolean值仅表示连接请求创建是否成功。如需感知WebSocket是否连接成功，需要在调用该接口前调用
+> [on('open')](#onopen)订阅open事件。
 > 
 > **注意：**
 > 
@@ -440,7 +442,8 @@ connect(url: string, options?: WebSocketRequestOptions): Promise<boolean>
 
 > **说明：**
 > 
-> callback中返回的boolean值仅表示连接请求创建是否成功。如需感知WebSocket是否连接成功，需要在调用该接口前调用 &gt; [on('open')](#onopen)订阅open事件。
+> callback中返回的boolean值仅表示连接请求创建是否成功。如需感知WebSocket是否连接成功，需要在调用该接口前调用
+> [on('open')](#onopen)订阅open事件。
 > 
 > **注意：**
 > 

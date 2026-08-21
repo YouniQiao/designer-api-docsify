@@ -19,7 +19,9 @@ huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用 &gt; [huks.finishSession&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-finishsession-f.md) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [huks.finishSession&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-finishsession-f.md)
+> 替代。
 
 **起始版本：** 8
 
@@ -52,7 +54,9 @@ huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用 &gt; [huks.finishSession&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-finishsession-f.md) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [huks.finishSession&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-finishsession-f.md)
+> 替代。
 
 **起始版本：** 8
 

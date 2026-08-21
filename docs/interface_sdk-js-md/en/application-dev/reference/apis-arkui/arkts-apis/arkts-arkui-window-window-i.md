@@ -98,9 +98,11 @@ Enables conversion between window orientation, screen orientation, and screen an
 Window orientation refers to the direction of the screen where the window resides, using the Window module's definitions for portrait and landscape modes. Window orientations are represented by the digits 0, 1, 2, and 3, corresponding to portrait, reverse landscape, reverse portrait, and landscape, respectively. These definitions match those in [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md) and the [Orientation](arkts-arkui-window-orientation-e.md) enum. For example, setting **Orientation** to **LANDSCAPE** indicates a landscape window orientation.   
 > **NOTE：**
 > 
-> The following figure and table show the relationship between the window orientation, screen orientation, and &gt; screen angle of a bar-type device.
+> The following figure and table show the relationship between the window orientation, screen orientation, and
+> screen angle of a bar-type device.
 > 
->  &gt; | Screen Angle| Screen Orientation| Window Orientation| | ------- | ------- | ------- | | 0 | PORTRAIT | PORTRAIT | | 90 | LANDSCAPE | LANDSCAPE_INVERTED | | 180 | PORTRAIT_INVERTED | PORTRAIT_INVERTED | | 270 | LANDSCAPE_INVERTED | LANDSCAPE |
+> 
+> | Screen Angle| Screen Orientation| Window Orientation| | ------- | ------- | ------- | | 0 | PORTRAIT | PORTRAIT | | 90 | LANDSCAPE | LANDSCAPE_INVERTED | | 180 | PORTRAIT_INVERTED | PORTRAIT_INVERTED | | 270 | LANDSCAPE_INVERTED | LANDSCAPE |
 
 **Since:** 23
 
@@ -773,7 +775,7 @@ Obtains a UIContext instance.
 
 | Type | Description |
 | --- | --- |
-| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | UIContext instance obtained. |
+| [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) | UIContext instance obtained. |
 
 **Error codes:**
 
@@ -799,7 +801,7 @@ Global floating window, modal window, or system window:
 
 This API is generally applicable to the following scenarios:
 
-- In the [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) callback, this API is used to obtain the initial layout avoid area when the application starts. - This API is used when a child window needs to temporarily display content and requires layout adjustments to avoid certain areas.
+- In the [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiability-uiability-c.md#onwindowstagecreate) callback, this API is used to obtain the initial layout avoid area when the application starts. - This API is used when a child window needs to temporarily display content and requires layout adjustments to avoid certain areas.
 
 **Since:** 23
 
@@ -1144,7 +1146,12 @@ Obtains the mode of this window.
 
 > **NOTE：**
 > 
-> In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, when the window is &gt; maximized (covering the entire screen, with a dock bar and status bar on 2-in-1 devices, and a status bar on &gt; tablets), the return value differs based on the &gt; [targetAPIVersion](../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) setting. For &gt; versions below 14, the return value is **WindowStatusType::FULL_SCREEN**. For versions 14 and above, the return &gt; value is **WindowStatusType::MAXIMIZE**.
+> In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, when the window is
+> maximized (covering the entire screen, with a dock bar and status bar on 2-in-1 devices, and a status bar on
+> tablets), the return value differs based on the
+> [targetAPIVersion](../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) setting. For
+> versions below 14, the return value is **WindowStatusType::FULL_SCREEN**. For versions 14 and above, the return
+> value is **WindowStatusType::MAXIMIZE**.
 
 **Since:** 23
 
@@ -2275,15 +2282,23 @@ Moves this window. This API uses a promise to return the result. A value is retu
 
 > **NOTE：**
 > 
-> - This API is best suited for the floating window mode (when the window mode is &gt; **window.WindowStatusType.FLOATING**, which you can check using &gt; [getWindowStatus()](#getwindowstatus)). You are not advised to use it in other window modes.
+> - This API is best suited for the floating window mode (when the window mode is
+> **window.WindowStatusType.FLOATING**, which you can check using
+> [getWindowStatus()](#getwindowstatus)). You are not advised to use it in other window modes.
 > 
-> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, the window moves &gt; relative to the upper-left corner of the screen. In non-freeform window mode, the window moves relative to &gt; the upper-left corner of its parent window.
+> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, the window moves
+> relative to the upper-left corner of the screen. In non-freeform window mode, the window moves relative to
+> the upper-left corner of its parent window.
 > 
-> - To move the window relative to the top-left corner of the screen while in non-freeform window mode, call &gt; [moveWindowToGlobal()](#movewindowtoglobal) &gt; .
+> - To move the window relative to the top-left corner of the screen while in non-freeform window mode, call
+> [moveWindowToGlobal()](#movewindowtoglobal)
+> .
 > 
 > - This API does not work for the main window in non-freeform window mode.
 > 
-> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, &gt; if the title bar of the main window or a child window is moved out of the screen's visible area, &gt; the system will automatically snap the window back to ensure the title bar is visible.
+> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
+> if the title bar of the main window or a child window is moved out of the screen's visible area,
+> the system will automatically snap the window back to ensure the title bar is visible.
 
 **Since:** 23
 
@@ -2324,15 +2339,23 @@ Moves this window. This API uses an asynchronous callback to return the result. 
 
 > **NOTE：**
 > 
-> - This API is best suited for the floating window mode (when the window mode is &gt; **window.WindowStatusType.FLOATING**, which can obtained using &gt; [getWindowStatus()](#getwindowstatus)). You are advised not to use it in other window modes.
+> - This API is best suited for the floating window mode (when the window mode is
+> **window.WindowStatusType.FLOATING**, which can obtained using
+> [getWindowStatus()](#getwindowstatus)). You are advised not to use it in other window modes.
 > 
-> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, the window moves &gt; relative to the upper-left corner of the screen. In non-freeform window mode, the window moves relative to &gt; the upper-left corner of its parent window.
+> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, the window moves
+> relative to the upper-left corner of the screen. In non-freeform window mode, the window moves relative to
+> the upper-left corner of its parent window.
 > 
-> - To move the window relative to the top-left corner of the screen while in non-freeform window mode, call &gt; [moveWindowToGlobal()](#movewindowtoglobal) &gt; .
+> - To move the window relative to the top-left corner of the screen while in non-freeform window mode, call
+> [moveWindowToGlobal()](#movewindowtoglobal)
+> .
 > 
 > - This API does not work for the main window in non-freeform window mode.
 > 
-> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, &gt; if the title bar of the main window or a child window is moved out of the screen's visible area, &gt; the system will automatically snap the window back to ensure the title bar is visible.
+> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
+> if the title bar of the main window or a child window is moved out of the screen's visible area,
+> the system will automatically snap the window back to ensure the title bar is visible.
 
 **Since:** 23
 
@@ -2370,7 +2393,9 @@ This API takes effect only when the window is in floating window mode (**window.
 
 > **NOTE：**
 > 
-> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, &gt; if the title bar of the main window or a child window is moved out of the screen's visible area, &gt; the system will automatically snap the window back to ensure the title bar is visible.
+> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
+> if the title bar of the main window or a child window is moved out of the screen's visible area,
+> the system will automatically snap the window back to ensure the title bar is visible.
 
 **Since:** 23
 
@@ -2416,7 +2441,9 @@ This API takes effect only when the window is in floating window mode (**window.
 
 > **NOTE：**
 > 
-> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, &gt; if the title bar of the main window or a child window is moved out of the screen's visible area, &gt; the system will automatically snap the window back to ensure the title bar is visible.
+> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
+> if the title bar of the main window or a child window is moved out of the screen's visible area,
+> the system will automatically snap the window back to ensure the title bar is visible.
 
 **Since:** 23
 
@@ -2461,9 +2488,12 @@ This API takes effect only when the window is in floating window mode (**window.
 
 > **NOTE：**
 > 
-> - When the main window is in floating window mode, this API does not take effect or return an error if called &gt; in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
+> - When the main window is in floating window mode, this API does not take effect or return an error if called
+> in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 > 
-> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, &gt; if the title bar of the main window or a child window is moved out of the screen's visible area, &gt; the system will automatically snap the window back to ensure the title bar is visible.
+> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
+> if the title bar of the main window or a child window is moved out of the screen's visible area,
+> the system will automatically snap the window back to ensure the title bar is visible.
 
 **Since:** 23
 
@@ -2507,9 +2537,12 @@ This API takes effect only when the window is in floating window mode (**window.
 
 > **NOTE：**
 > 
-> - When the main window is in floating window mode, this API does not take effect or return an error if called &gt; in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
+> - When the main window is in floating window mode, this API does not take effect or return an error if called
+> in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 > 
-> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, &gt; if the title bar of the main window or a child window is moved out of the screen's visible area, &gt; the system will automatically snap the window back to ensure the title bar is visible.
+> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
+> if the title bar of the main window or a child window is moved out of the screen's visible area,
+> the system will automatically snap the window back to ensure the title bar is visible.
 
 **Since:** 23
 
@@ -2554,11 +2587,15 @@ This API takes effect only when the window is in floating window mode (**window.
 
 > **NOTE：**
 > 
-> - When the main window is in floating window mode, this API does not take effect or return an error if called &gt; in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
+> - When the main window is in floating window mode, this API does not take effect or return an error if called
+> in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 > 
-> - After a window is moved, if it spans multiple screens, the window will belong to the screen with which it &gt; has the largest overlapping area.
+> - After a window is moved, if it spans multiple screens, the window will belong to the screen with which it
+> has the largest overlapping area.
 > 
-> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, &gt; if the title bar of the main window or a child window is moved out of the screen's visible area, &gt; the system will automatically snap the window back to ensure the title bar is visible.
+> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
+> if the title bar of the main window or a child window is moved out of the screen's visible area,
+> the system will automatically snap the window back to ensure the title bar is visible.
 
 **Since:** 23
 
@@ -4929,7 +4966,12 @@ After the listening is enabled using this API, multiple callbacks will be receiv
 
 > **NOTE：**
 > 
-> In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, when the window is &gt; maximized (covering the entire screen, with a dock bar and status bar on 2-in-1 devices, and a status bar on &gt; tablets), the return value differs based on the &gt; [targetAPIVersion](../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) setting. For &gt; versions below 14, the return value is **WindowStatusType::FULL_SCREEN**. For versions 14 and above, the return &gt; value is **WindowStatusType::MAXIMIZE**.
+> In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, when the window is
+> maximized (covering the entire screen, with a dock bar and status bar on 2-in-1 devices, and a status bar on
+> tablets), the return value differs based on the
+> [targetAPIVersion](../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) setting. For
+> versions below 14, the return value is **WindowStatusType::FULL_SCREEN**. For versions 14 and above, the return
+> value is **WindowStatusType::MAXIMIZE**.
 
 **Since:** 23
 
@@ -5850,7 +5892,12 @@ After the listening is enabled using this API, multiple callbacks will be receiv
 
 > **NOTE：**
 > 
-> In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, when the window is &gt; maximized (covering the entire screen, with a dock bar and status bar on 2-in-1 devices, and a status bar on &gt; tablets), the return value differs based on the &gt; [targetAPIVersion](../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) setting. For &gt; versions below 14, the return value is **WindowStatusType::FULL_SCREEN**. For versions 14 and above, the return &gt; value is **WindowStatusType::MAXIMIZE**.
+> In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, when the window is
+> maximized (covering the entire screen, with a dock bar and status bar on 2-in-1 devices, and a status bar on
+> tablets), the return value differs based on the
+> [targetAPIVersion](../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) setting. For
+> versions below 14, the return value is **WindowStatusType::FULL_SCREEN**. For versions 14 and above, the return
+> value is **WindowStatusType::MAXIMIZE**.
 
 **Since:** 11
 
@@ -6270,7 +6317,8 @@ This API takes effect only when the window is in floating window mode (**window.
 
 > **NOTE：**
 > 
-> - When the main window is in floating window mode, this API does not take effect or return an error if called &gt; in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
+> - When the main window is in floating window mode, this API does not take effect or return an error if called
+> in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Since:** 23
 
@@ -6321,7 +6369,8 @@ If the window width or height is greater than the maximum width or height limit,
 
 > **NOTE：**
 > 
-> - When the main window is in floating window mode, this API does not take effect or return an error if called &gt; in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
+> - When the main window is in floating window mode, this API does not take effect or return an error if called
+> in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Since:** 23
 
@@ -6369,7 +6418,8 @@ This API takes effect only when the window is in floating window mode (**window.
 
 > **NOTE：**
 > 
-> - In non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, &gt; this API does not work for the main window.
+> - In non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
+> this API does not work for the main window.
 
 **Since:** 23
 
@@ -6481,11 +6531,17 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 
 > **NOTE：**
 > 
-> - When the window size is set by using other APIs such as &gt; [resize](#resize) and &gt; [resizeAsync](#resizeasync), the window size is not restricted by **ratio**.
+> - When the window size is set by using other APIs such as
+> [resize](#resize) and
+> [resizeAsync](#resizeasync), the window size is not restricted by **ratio**.
 > 
-> - This setting is available only for the main window and takes effect only in floating window mode ( &gt; **window.WindowStatusType.FLOATING** mode). The aspect ratio is saved persistently, which means that the &gt; setting is valid in floating window mode even after the application is closed or the device is restarted.
+> - This setting is available only for the main window and takes effect only in floating window mode (
+> **window.WindowStatusType.FLOATING** mode). The aspect ratio is saved persistently, which means that the
+> setting is valid in floating window mode even after the application is closed or the device is restarted.
 > 
-> - After the aspect ratio is set for a main window of an application, the aspect ratio is used for subsequent &gt; main windows. If you need to set the aspect ratio for just one main window, use &gt; [setContentAspectRatio](#setcontentaspectratio) instead.
+> - After the aspect ratio is set for a main window of an application, the aspect ratio is used for subsequent
+> main windows. If you need to set the aspect ratio for just one main window, use
+> [setContentAspectRatio](#setcontentaspectratio) instead.
 
 **Since:** 23
 
@@ -6520,11 +6576,17 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 
 > **NOTE：**
 > 
-> - When the window size is set by using other APIs such as &gt; [resize](#resize) and &gt; [resizeAsync](#resizeasync), the window size is not restricted by **ratio**.
+> - When the window size is set by using other APIs such as
+> [resize](#resize) and
+> [resizeAsync](#resizeasync), the window size is not restricted by **ratio**.
 > 
-> - This setting is available only for the main window and takes effect only in floating window mode ( &gt; **window.WindowStatusType.FLOATING** mode). The aspect ratio is saved persistently, which means that the &gt; setting is valid in floating window mode even after the application is closed or the device is restarted.
+> - This setting is available only for the main window and takes effect only in floating window mode (
+> **window.WindowStatusType.FLOATING** mode). The aspect ratio is saved persistently, which means that the
+> setting is valid in floating window mode even after the application is closed or the device is restarted.
 > 
-> - After the aspect ratio is set for a main window of an application, the aspect ratio is used for subsequent &gt; main windows. If you need to set the aspect ratio for just one main window, use &gt; [setContentAspectRatio](#setcontentaspectratio) instead.
+> - After the aspect ratio is set for a main window of an application, the aspect ratio is used for subsequent
+> main windows. If you need to set the aspect ratio for just one main window, use
+> [setContentAspectRatio](#setcontentaspectratio) instead.
 
 **Since:** 23
 
@@ -6733,13 +6795,19 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 
 > **NOTE：**
 > 
-> - When you adjust the window width and height using the same **ratio** parameter, the window size adapts to &gt; changes in the border decoration size or visibility.
+> - When you adjust the window width and height using the same **ratio** parameter, the window size adapts to
+> changes in the border decoration size or visibility.
 > 
-> - When the window title bar is set to invisible by using &gt; [setWindowDecorVisible](#setwindowdecorvisible), the window content area takes over the &gt; space that was previously used by the title bar.
+> - When the window title bar is set to invisible by using
+> [setWindowDecorVisible](#setwindowdecorvisible), the window content area takes over the
+> space that was previously used by the title bar.
 > 
-> - When the window size is set by using other APIs such as &gt; [resize](#resize) and &gt; [resizeAsync](#resizeasync), the window size is not restricted by **ratio**.
+> - When the window size is set by using other APIs such as
+> [resize](#resize) and
+> [resizeAsync](#resizeasync), the window size is not restricted by **ratio**.
 > 
-> - This setting is available only for the main window and takes effect only in floating window mode ( &gt; **window.WindowStatusType.FLOATING** mode).
+> - This setting is available only for the main window and takes effect only in floating window mode (
+> **window.WindowStatusType.FLOATING** mode).
 
 **Since:** 23
 
@@ -7162,7 +7230,10 @@ Non-full-screen mode means that the layout avoids the status bar and <!--RP15-->
 
 > **NOTE：**
 > 
-> This API is supported since API version 6 and deprecated since API version 9. You are advised to use &gt; [setWindowSystemBarEnable()](#setwindowsystembarenable) &gt; and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen) &gt; to implement the full-screen mode.
+> This API is supported since API version 6 and deprecated since API version 9. You are advised to use
+> [setWindowSystemBarEnable()](#setwindowsystembarenable)
+> and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)
+> to implement the full-screen mode.
 
 **Since:** 6
 
@@ -7195,7 +7266,10 @@ Non-full-screen mode means that the layout avoids the status bar and <!--RP15-->
 
 > **NOTE：**
 > 
-> This API is supported since API version 6 and deprecated since API version 9. You are advised to use &gt; [setWindowSystemBarEnable()](#setwindowsystembarenable) &gt; and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen) &gt; to implement the full-screen mode.
+> This API is supported since API version 6 and deprecated since API version 9. You are advised to use
+> [setWindowSystemBarEnable()](#setwindowsystembarenable)
+> and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)
+> to implement the full-screen mode.
 
 **Since:** 6
 
@@ -7418,7 +7492,8 @@ setOutsideTouchable(touchable: boolean): Promise<void>
 
 Sets whether the area outside the child window is touchable. This API uses a promise to return the result.
 
-> Starting from API version 9, the area outside the child window is touchable by default. This API is no longer &gt; supported and no substitute API is provided.
+> Starting from API version 9, the area outside the child window is touchable by default. This API is no longer
+> supported and no substitute API is provided.
 
 **Since:** 7
 
@@ -7448,7 +7523,8 @@ setOutsideTouchable(touchable: boolean, callback: AsyncCallback<void>): void
 
 Sets whether the area outside the child window is touchable. This API uses an asynchronous callback to return the result.
 
-> Starting from API version 9, the area outside the child window is touchable by default. This API is no longer &gt; supported and no substitute API is provided.
+> Starting from API version 9, the area outside the child window is touchable by default. This API is no longer
+> supported and no substitute API is provided.
 
 **Since:** 7
 
@@ -9866,7 +9942,12 @@ Shows this window. This API uses an asynchronous callback to return the result. 
 
 > **NOTE：**
 > 
-> Before calling this API, you are advised to load the page by using &gt; [loadContent](#loadcontent) or &gt; [setUIContent](#setuicontent). If the main window has not &gt; finished loading and you call this API directly, the starting window keeps showing. Similarly, if the system &gt; window, application child window, modal window, or global floating window has finished loading and you call &gt; this API directly, the window is in the foreground but is not visible.
+> Before calling this API, you are advised to load the page by using
+> [loadContent](#loadcontent) or
+> [setUIContent](#setuicontent). If the main window has not
+> finished loading and you call this API directly, the starting window keeps showing. Similarly, if the system
+> window, application child window, modal window, or global floating window has finished loading and you call
+> this API directly, the window is in the foreground but is not visible.
 
 **Since:** 23
 
@@ -9898,7 +9979,12 @@ Shows this window. This API uses a promise to return the result. This API takes 
 
 > **NOTE：**
 > 
-> Before calling this API, you are advised to load the page by using &gt; [loadContent](#loadcontent) or &gt; [setUIContent](#setuicontent). If the main window has not &gt; finished loading and you call this API directly, the starting window keeps showing. Similarly, if the system &gt; window, application child window, modal window, or global floating window has finished loading and you call &gt; this API directly, the window is in the foreground but is not visible.
+> Before calling this API, you are advised to load the page by using
+> [loadContent](#loadcontent) or
+> [setUIContent](#setuicontent). If the main window has not
+> finished loading and you call this API directly, the starting window keeps showing. Similarly, if the system
+> window, application child window, modal window, or global floating window has finished loading and you call
+> this API directly, the window is in the foreground but is not visible.
 
 **Since:** 23
 
@@ -9932,7 +10018,12 @@ This API can be used only for application child windows, application main window
 
 > **NOTE：**
 > 
-> Before calling this API, you are advised to load the page by using &gt; [loadContent](#loadcontent) or &gt; [setUIContent](#setuicontent). If the main window has not &gt; finished loading and you call this API directly, the starting window keeps showing. Similarly, if the system &gt; window, application child window, or global floating window has finished loading and you call this API directly &gt; , the window is in the foreground but is not visible.
+> Before calling this API, you are advised to load the page by using
+> [loadContent](#loadcontent) or
+> [setUIContent](#setuicontent). If the main window has not
+> finished loading and you call this API directly, the starting window keeps showing. Similarly, if the system
+> window, application child window, or global floating window has finished loading and you call this API directly
+> , the window is in the foreground but is not visible.
 
 **Since:** 23
 

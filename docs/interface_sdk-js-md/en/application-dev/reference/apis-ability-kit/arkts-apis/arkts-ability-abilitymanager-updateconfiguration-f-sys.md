@@ -28,7 +28,7 @@ Updates the configuration. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | Yes | New configuration. You only need to configure the items to be updated. |
+| config | [Configuration](arkts-ability-appabilityconfiguration-configuration-i.md) | Yes | New configuration. You only need to configure the items to be updated. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined**. Otherwise, **err** is an error object. You can perform error handling or other custom processing. |
 
 **Error codes:**
@@ -63,7 +63,7 @@ Updates the configuration. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | Yes | New configuration. You only need to configure the items to be updated. |
+| config | [Configuration](arkts-ability-appabilityconfiguration-configuration-i.md) | Yes | New configuration. You only need to configure the items to be updated. |
 
 **Return value:**
 

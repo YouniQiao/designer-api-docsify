@@ -15,11 +15,13 @@ The **loadNativeModule** API is used to synchronously and dynamically load a nat
 
 > **NOTE：**
 > 
-> The name of the module loaded by **loadNativeModule** is the name provided in **dependencies** in the &gt; **oh-package.json5** file of the dependency.
+> The name of the module loaded by **loadNativeModule** is the name provided in **dependencies** in the
+> **oh-package.json5** file of the dependency.
 > 
 > **loadNativeModule** can be used only to load native modules in the UI main thread.
 > 
-> Dependencies must be configured for the API call regardless of whether the parameter is a constant string or &gt; variable expression.
+> Dependencies must be configured for the API call regardless of whether the parameter is a constant string or
+> variable expression.
 
 **Since:** 12
 

@@ -32,7 +32,7 @@ declare function copy(srcUri: string, destUri: string, options?: CopyOptions): P
 | --- | --- | --- | --- |
 | srcUri | string | 是 | 待复制文件或目录的URI。 |
 | destUri | string | 是 | 目标文件或目录的URI。 |
-| options | [CopyOptions](arkts-corefile-file-fs-copyoptions-i.md) | 否 | options中提供拷贝进度回调。不填该参数则无拷贝进度回调。 |
+| options | [CopyOptions](arkts-corefile-filefs-copyoptions-i.md) | 否 | options中提供拷贝进度回调。不填该参数则无拷贝进度回调。 |
 
 **返回值：**
 
@@ -153,7 +153,7 @@ declare function copy(srcUri: string, destUri: string, options: CopyOptions, cal
 | --- | --- | --- | --- |
 | srcUri | string | 是 | 待复制文件或目录的URI。 |
 | destUri | string | 是 | 目标文件或目录的URI。 |
-| options | [CopyOptions](arkts-corefile-file-fs-copyoptions-i.md) | 是 | 拷贝进度回调。 |
+| options | [CopyOptions](arkts-corefile-filefs-copyoptions-i.md) | 是 | 拷贝进度回调。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当拷贝成功，err为undefined，否则为错误对象。 |
 
 **错误码：**

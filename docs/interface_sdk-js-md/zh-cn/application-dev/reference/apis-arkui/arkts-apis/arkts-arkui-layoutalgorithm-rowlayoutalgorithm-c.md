@@ -4,7 +4,8 @@
 
 > **说明：**
 > 
-> RowLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为DynamicLayout组件的入参 &gt; 指定布局算法。
+> RowLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为DynamicLayout组件的入参
+> 指定布局算法。
 
 **继承/实现关系：** RowLayoutAlgorithm implements [LayoutAlgorithm](../../apis-default/arkts-apis/arkts-layoutalgorithm-i.md)
 

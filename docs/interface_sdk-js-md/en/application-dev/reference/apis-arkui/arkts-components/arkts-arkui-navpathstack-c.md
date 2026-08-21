@@ -6,13 +6,17 @@ Starting from API version 12, **NavPathStack** is inheritable. Objects of a deri
 
 > **NOTE：**
 > 
-> 1. When multiple navigation controller operations are triggered in succession, the intermediate states are &gt; bypassed, and only the final result of the operations is rendered.
+> 1. When multiple navigation controller operations are triggered in succession, the intermediate states are
+> bypassed, and only the final result of the operations is rendered.
 
-> For example, if a Page1 is popped and then immediately pushed back, the system considers that the states before and &gt; after these operations are identical, leading to no actual change in the stack. To ensure that a new instance of &gt; Page1 is pushed onto the stack despite the consecutive operations, use the **NEW_INSTANCE** mode.
+> For example, if a Page1 is popped and then immediately pushed back, the system considers that the states before and
+> after these operations are identical, leading to no actual change in the stack. To ensure that a new instance of
+> Page1 is pushed onto the stack despite the consecutive operations, use the **NEW_INSTANCE** mode.
 > 
 > 2. Avoid relying on lifecycle event listeners as a means to manage the navigation controller.
 > 
-> 3. When the application is in the background, calling stack operation APIs of **NavPathStack** will trigger a &gt; refresh upon the application's return to the foreground.
+> 3. When the application is in the background, calling stack operation APIs of **NavPathStack** will trigger a
+> refresh upon the application's return to the foreground.
 
 **Since:** 10
 
@@ -321,7 +325,9 @@ Pops the top element out of the routing stack.
 
 > **NOTE：**
 > 
-> When multiple navigation controller methods are called consecutively, any pages popped during the sequence are &gt; cached. If a page with the same name is later pushed, the system reuses the cached instance instead of &gt; instantiating a new page.
+> When multiple navigation controller methods are called consecutively, any pages popped during the sequence are
+> cached. If a page with the same name is later pushed, the system reuses the cached instance instead of
+> instantiating a new page.
 
 > Example:
 
@@ -371,7 +377,9 @@ Pops the top element out of the routing stack and invokes the **onPop** callback
 
 > **NOTE：**
 > 
-> When multiple navigation controller methods are called consecutively, any pages popped during the sequence are &gt; cached. If a page with the same name is later pushed, the system reuses the cached instance instead of &gt; instantiating a new page.
+> When multiple navigation controller methods are called consecutively, any pages popped during the sequence are
+> cached. If a page with the same name is later pushed, the system reuses the cached instance instead of
+> instantiating a new page.
 
 > Example:
 
@@ -575,7 +583,9 @@ Pushes the navigation destination page specified by **info** onto the routing st
 
 > **NOTE：**
 > 
-> You are not advised to use stack operations in aboutToAppear, as the &gt; page has not yet finished building at this stage, which may lead to issues such as white screens or navigation &gt; failures.
+> You are not advised to use stack operations in aboutToAppear, as the
+> page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
+> failures.
 
 **Since:** 11
 
@@ -619,7 +629,9 @@ Pushes the navigation destination page specified by **info** onto the routing st
 
 > **NOTE：**
 > 
-> You are not advised to use stack operations in aboutToAppear, as the &gt; page has not yet finished building at this stage, which may lead to issues such as white screens or navigation &gt; failures.
+> You are not advised to use stack operations in aboutToAppear, as the
+> page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
+> failures.
 
 **Since:** 12
 
@@ -663,7 +675,9 @@ Pushes the navigation destination page specified by **name**, with the data spec
 
 > **NOTE：**
 > 
-> You are not advised to use stack operations in aboutToAppear, as the &gt; page has not yet finished building at this stage, which may lead to issues such as white screens or navigation &gt; failures.
+> You are not advised to use stack operations in aboutToAppear, as the
+> page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
+> failures.
 
 **Since:** 11
 
@@ -708,7 +722,9 @@ Pushes the navigation destination page specified by **name**, with the data spec
 
 > **NOTE：**
 > 
-> You are not advised to use stack operations in aboutToAppear, as the &gt; page has not yet finished building at this stage, which may lead to issues such as white screens or navigation &gt; failures.
+> You are not advised to use stack operations in aboutToAppear, as the
+> page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
+> failures.
 
 **Since:** 11
 
@@ -1087,13 +1103,19 @@ Updates the array of route page information in this routing stack to the specifi
 
 > **NOTE：**
 > 
-> 1. You can add or remove pages in batches based on the existing stack. Among the pages added in batches, only the &gt; visible pages will trigger creation; other pages, although added to the stack, will not be created immediately.
+> 1. You can add or remove pages in batches based on the existing stack. Among the pages added in batches, only the
+> visible pages will trigger creation; other pages, although added to the stack, will not be created immediately.
 > They will only be created when they become visible.
 > 
-> 2. For routing stacks updated through the batch push functionality, the lifecycle events of each page are &gt; triggered from the top to the bottom of the stack. This differs from the triggering order of other push APIs, &gt; which are triggered from the bottom to the top of the stack.
+> 2. For routing stacks updated through the batch push functionality, the lifecycle events of each page are
+> triggered from the top to the bottom of the stack. This differs from the triggering order of other push APIs,
+> which are triggered from the bottom to the top of the stack.
 > 
 > 3. You can operate existing pages using **navDestinationId** (unique ID) in [NavPathInfo](arkts-arkui-navpathinfo-c.md).
-> This ID is system-generated and globally unique (it can be obtained using the &gt; [getPathStack](#getpathstack) API and should not be manually reassigned). If the specified ID &gt; does not exist in the current routing stack, it indicates a new page. If it exists and the corresponding name is &gt; the same, it indicates reuse of an existing page.
+> This ID is system-generated and globally unique (it can be obtained using the
+> [getPathStack](#getpathstack) API and should not be manually reassigned). If the specified ID
+> does not exist in the current routing stack, it indicates a new page. If it exists and the corresponding name is
+> the same, it indicates reuse of an existing page.
 
 **Since:** 19
 

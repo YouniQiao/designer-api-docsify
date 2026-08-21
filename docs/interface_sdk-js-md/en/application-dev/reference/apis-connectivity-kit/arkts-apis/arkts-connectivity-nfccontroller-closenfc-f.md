@@ -16,7 +16,8 @@ Closes NFC.
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. Use &gt; [disableNfc](arkts-connectivity-nfccontroller-disablenfc-f.md) instead.
+> This API is supported since API version 7 and deprecated since API version 9. Use
+> [disableNfc](arkts-connectivity-nfccontroller-disablenfc-f.md) instead.
 
 **Since:** 7
 

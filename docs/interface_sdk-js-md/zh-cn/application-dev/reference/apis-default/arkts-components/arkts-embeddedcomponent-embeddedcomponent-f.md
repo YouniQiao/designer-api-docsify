@@ -25,7 +25,7 @@ export declare function EmbeddedComponent(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| loader | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 要加载的EmbeddedUIExtensionAbility。 |
+| loader | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 要加载的EmbeddedUIExtensionAbility。 |
 | type | [EmbeddedType](../../apis-arkui/arkts-apis/arkts-arkui-embeddedtype-e.md) | 否 | 提供方的类型，当前支持值为EmbeddedType.EMBEDDED_UI_EXTENSION， 表示嵌入的是EmbeddedUIExtensionAbility提供的UI。 |
 
 **返回值：**
@@ -60,7 +60,7 @@ export declare function EmbeddedComponent(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| loader | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 要加载的EmbeddedUIExtensionAbility。 |
+| loader | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 要加载的EmbeddedUIExtensionAbility。 |
 | type | [EmbeddedType](../../apis-arkui/arkts-apis/arkts-arkui-embeddedtype-e.md) | 否 | 提供方的类型，当前支持值为EmbeddedType.EMBEDDED_UI_EXTENSION， 表示嵌入的是EmbeddedUIExtensionAbility提供的UI。 |
 | options | [EmbeddedOptions](arkts-embeddedcomponent-embeddedoptions-i.md) | 否 | 嵌入式组件的可选配置项，用于设置占位符、DPI跟随策略、窗口模式跟随策略等。详见EmbeddedOptions。 |
 

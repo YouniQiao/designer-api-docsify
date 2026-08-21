@@ -106,7 +106,8 @@ Deletes text within a specified range in the editable content.
 > 
 > - This API does not work when the text is being dragged.
 > 
-> - **deleteText** only affects the UI performance within the application and has no effect on the internal logic &gt; of the input method application. Therefore, avoid calling this API for the preview text.
+> - **deleteText** only affects the UI performance within the application and has no effect on the internal logic
+> of the input method application. Therefore, avoid calling this API for the preview text.
 
 **Since:** 15
 
@@ -136,13 +137,17 @@ Obtains the position information of the caret.
 > 
 > - If this API is called when the caret position is updated in the current frame, it will not take effect.
 > 
-> - For the **Search** component, the returned position information is the offset of the first character relative &gt; to the search icon in the component.
+> - For the **Search** component, the returned position information is the offset of the first character relative
+> to the search icon in the component.
 > 
-> - If no text is entered in the **Search** component, the return value contains the position information relative &gt; to the component.
+> - If no text is entered in the **Search** component, the return value contains the position information relative
+> to the component.
 > 
 > - The location information in the return value is the location of the caret relative to the editable component.
 > 
-> - If the caret position cannot be obtained (for example, when the &gt; TextInputController is not bound to the TextInput component), &gt; **null** is returned.
+> - If the caret position cannot be obtained (for example, when the
+> TextInputController is not bound to the TextInput component),
+> **null** is returned.
 
 **Since:** 11
 

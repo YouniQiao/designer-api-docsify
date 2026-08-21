@@ -16,7 +16,8 @@ Obtains the total uplink traffic (in bytes) of the specified application from th
 
 > **NOTE：**
 > 
-> If the application has not generated any traffic consumption after the restart, error code 2103005 will be &gt; thrown.
+> If the application has not generated any traffic consumption after the restart, error code 2103005 will be
+> thrown.
 
 **Since:** 23
 
@@ -68,7 +69,8 @@ Obtains the total uplink traffic of the specified application from the last star
 
 > **NOTE：**
 > 
-> If the application has not generated any traffic consumption after the restart, error code 2103005 will be &gt; thrown.
+> If the application has not generated any traffic consumption after the restart, error code 2103005 will be
+> thrown.
 
 **Since:** 23
 

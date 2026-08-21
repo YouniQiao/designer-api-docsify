@@ -17,13 +17,19 @@ Renders a custom component in the application background and outputs its snapsho
 
 > **NOTE：**
 > 
-> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot) &gt; API in [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md) &gt; object associated with the current UI context.
+> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkuiuicontext-uicontext-c.md#getcomponentsnapshot)
+> API in [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) to obtain the [ComponentSnapshot](arkts-arkui-arkuiuicontext-componentsnapshot-c.md)
+> object associated with the current UI context.
 > 
-> - To account for the time spent in awaiting component building and rendering, the callback of offscreen snapshots &gt; has a delay of less than 500 ms.
+> - To account for the time spent in awaiting component building and rendering, the callback of offscreen snapshots
+> has a delay of less than 500 ms.
 > 
-> - Components in the builder do not support the setting of animation-related attributes, such as &gt; transition.
+> - Components in the builder do not support the setting of animation-related attributes, such as
+> transition.
 > 
-> - If a component is on a time-consuming task, for example, an Image or Web component &gt; that is loading online images, its loading may be still in progress when this API is called. In this case, the &gt; output snapshot does not represent the component in the way it looks when the loading is successfully completed.
+> - If a component is on a time-consuming task, for example, an Image or Web component
+> that is loading online images, its loading may be still in progress when this API is called. In this case, the
+> output snapshot does not represent the component in the way it looks when the loading is successfully completed.
 
 **Since:** 10
 
@@ -131,13 +137,19 @@ Renders a custom component in the application background and outputs its snapsho
 
 > **NOTE：**
 > 
-> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot) &gt; API in [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md) &gt; object associated with the current UI context.
+> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkuiuicontext-uicontext-c.md#getcomponentsnapshot)
+> API in [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) to obtain the [ComponentSnapshot](arkts-arkui-arkuiuicontext-componentsnapshot-c.md)
+> object associated with the current UI context.
 > 
-> - To account for the time spent in awaiting component building and rendering, the callback of offscreen snapshots &gt; has a delay of less than 500 ms.
+> - To account for the time spent in awaiting component building and rendering, the callback of offscreen snapshots
+> has a delay of less than 500 ms.
 > 
-> - Components in the builder do not support the setting of animation-related attributes, such as &gt; transition.
+> - Components in the builder do not support the setting of animation-related attributes, such as
+> transition.
 > 
-> - If a component is on a time-consuming task, for example, an Image or Web component &gt; that is loading online images, its loading may be still in progress when this API is called. In this case, the &gt; output snapshot does not represent the component in the way it looks when the loading is successfully completed.
+> - If a component is on a time-consuming task, for example, an Image or Web component
+> that is loading online images, its loading may be still in progress when this API is called. In this case, the
+> output snapshot does not represent the component in the way it looks when the loading is successfully completed.
 
 **Since:** 10
 

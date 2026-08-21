@@ -16,5 +16,5 @@ Listener used to observe the copy progress.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | [Progress](arkts-corefile-file-fs-progress-i.md) | Yes | indicates the progress data of copyFile |
+| progress | [Progress](arkts-corefile-filefs-progress-i.md) | Yes | indicates the progress data of copyFile |
 

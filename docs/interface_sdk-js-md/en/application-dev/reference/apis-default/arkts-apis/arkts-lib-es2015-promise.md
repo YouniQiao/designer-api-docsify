@@ -11,5 +11,5 @@
 
 | Name | Description |
 | --- | --- |
-| [PromiseConstructor](arkts-lib-es2015-promise-promiseconstructor-i.md) |  |
+| [PromiseConstructor](arkts-libes2015promise-promiseconstructor-i.md) |  |
 

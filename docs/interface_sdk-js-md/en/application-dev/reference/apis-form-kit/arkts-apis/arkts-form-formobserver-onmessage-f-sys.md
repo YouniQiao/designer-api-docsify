@@ -12,7 +12,7 @@ import { formObserver } from '@kit.FormKit';
 function onMessage(observerCallback: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Message event listening in registered form. &lt;p&gt;This interface requires permission to receive callback.&lt;/p&gt;
+Message event listening in registered form. <p>This interface requires permission to receive callback.</p>
 
 **Since:** 23
 
@@ -45,7 +45,7 @@ Message event listening in registered form. &lt;p&gt;This interface requires per
 function onMessage(hostBundleName: string, observerCallback: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Message event listening in registered form. &lt;p&gt;This interface requires permission to receive callback.&lt;/p&gt;
+Message event listening in registered form. <p>This interface requires permission to receive callback.</p>
 
 **Since:** 23
 

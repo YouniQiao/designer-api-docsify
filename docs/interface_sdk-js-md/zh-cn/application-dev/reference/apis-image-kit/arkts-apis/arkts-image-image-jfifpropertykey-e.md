@@ -5,7 +5,9 @@
 > **说明：**
 > 
 > 返回字段类型具体参考[JfifMetadata](../../../reference/apis-image-kit/arkts-apis-image-JfifMetadata.md)。
-> | 名称 | 值 | 说明 | &gt; | ---- | -- | ---- | &gt; | DENSITY_UNIT | 'JfifDensityUnit' | 用于定义JfifXDensity（水平像素密度）和JfifYDensity（垂直像素密度）的物理度量单位。
+> | 名称 | 值 | 说明 |
+> | ---- | -- | ---- |
+> | DENSITY_UNIT | 'JfifDensityUnit' | 用于定义JfifXDensity（水平像素密度）和JfifYDensity（垂直像素密度）的物理度量单位。
 
 - 0表示无单位（仅像素宽高比）。 - 1表示每英寸像素数（DPI）。 - 2表示每厘米像素数（DPC）。
 

@@ -36,7 +36,7 @@ pressKey(keyCode: KeyCode): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyCode | [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md) | 是 | 要按下的按键键码。 |
+| keyCode | [KeyCode](arkts-input-multimodalinputkeycode-keycode-e.md) | 是 | 要按下的按键键码。 |
 
 **返回值：**
 
@@ -107,7 +107,7 @@ releaseKey(keyCode: KeyCode): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyCode | [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md) | 是 | 要抬起的按键键码。 |
+| keyCode | [KeyCode](arkts-input-multimodalinputkeycode-keycode-e.md) | 是 | 要抬起的按键键码。 |
 
 **返回值：**
 

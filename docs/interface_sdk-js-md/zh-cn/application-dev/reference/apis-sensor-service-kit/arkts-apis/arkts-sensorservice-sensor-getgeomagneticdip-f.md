@@ -16,7 +16,9 @@ function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCall
 
 > **说明：**
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用 &gt; [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md) &gt; 替代。
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md)
+> 替代。
 
 **起始版本：** 8
 
@@ -61,7 +63,8 @@ function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>
 
 > **说明：**
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用 &gt; [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md)替代。
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md)替代。
 
 **起始版本：** 8
 

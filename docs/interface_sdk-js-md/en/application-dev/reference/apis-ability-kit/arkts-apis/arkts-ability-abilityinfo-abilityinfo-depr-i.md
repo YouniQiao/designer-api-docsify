@@ -4,7 +4,8 @@ The module provides information about an ability. Unless otherwise specified, th
 
 > **NOTE：**
 > 
-> The APIs of this module have been deprecated since API version 9. You are advised to use &gt; [bundleManager-AbilityInfo](#abilityinfo) instead.
+> The APIs of this module have been deprecated since API version 9. You are advised to use
+> [bundleManager-AbilityInfo](#abilityinfo) instead.
 
 **Since:** 7
 

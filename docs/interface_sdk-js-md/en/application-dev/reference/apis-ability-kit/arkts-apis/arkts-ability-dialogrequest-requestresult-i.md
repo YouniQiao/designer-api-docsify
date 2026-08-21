@@ -40,7 +40,7 @@ want?: Want
 
 Want information, such as the ability name and bundle name.
 
-**Type:** [Want](arkts-ability-app-ability-want-want-c.md)
+**Type:** [Want](arkts-ability-appabilitywant-want-c.md)
 
 **Since:** 23
 

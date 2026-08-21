@@ -16,9 +16,11 @@ function addAllowedPermissionBundle(admin: Want, permission: string, application
 
 > **说明：**
 > 
-> 1.必须先通过[setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md)接口禁用权限后，才能添加应用到权限使用例外名单，否则返回错误码920 &gt; 1044。
+> 1.必须先通过[setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md)接口禁用权限后，才能添加应用到权限使用例外名单，否则返回错误码920
+> 1044。
 > 
-> 2.应用实际未申请指定权限时，不可将应用添加到权限使用例外名单中。例如相机权限被禁用时，A应用实际未申请相机权限，则不能添加A应用到相机权限使用例外名单中，返回错误码9200012。可以通过 &gt; [bm dump](../../../tools/bm-tool.md#查询应用信息命令dump)命令查询应用是否申请指定权限。
+> 2.应用实际未申请指定权限时，不可将应用添加到权限使用例外名单中。例如相机权限被禁用时，A应用实际未申请相机权限，则不能添加A应用到相机权限使用例外名单中，返回错误码9200012。可以通过
+> [bm dump](../../../tools/bm-tool.md#查询应用信息命令dump)命令查询应用是否申请指定权限。
 > 
 > 3.当指定权限通过[setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md)接口取消禁用后，该权限对应的权限使用例外名单会同步清理。
 > 
@@ -40,7 +42,7 @@ function addAllowedPermissionBundle(admin: Want, permission: string, application
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | permission | string | 是 | 权限名称。 |
 | applicationInstance | common.ApplicationInstance | 是 | 需添加到权限使用例外名单的应用实例信息。 |
 

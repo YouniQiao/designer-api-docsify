@@ -24,7 +24,7 @@ closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 
 将EXPANDED状态的ListItem收起，并设置回调事件。
 
-&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;： <br>-一个&lt;em&gt;ListScroller&lt;/em&gt;必须绑定到&lt;em&gt;List&lt;/em&gt;组件。 &lt;/p&gt;
+<p>&lt;strong&gt;注意&lt;/strong&gt;： <br>-一个&lt;em&gt;ListScroller&lt;/em&gt;必须绑定到&lt;em&gt;List&lt;/em&gt;组件。 </p>
 
 **起始版本：** 23
 
@@ -57,7 +57,7 @@ getItemRectInGroup(index: int, indexInGroup: int): RectResult
 
 获取ListItemGroup中的ListItem的大小和相对于List的位置。
 
-&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;： <br>-&lt;em&gt;index&lt;/em&gt;的值必须是显示区域中可见的子组件的索引。 否则，该值将被视为无效值。 <br>-设置&lt;em&gt;index&lt;/em&gt;的子组件必须是列表项组。否则， &lt;em&gt;index &lt;/em&gt;值被认为是无效的。 <br>-&lt;em&gt;indexInGroup&lt;/em&gt;的值必须是列表项组中某个列表项的索引 在显示区域中可见。否则，该值将被视为无效值。 <br>-当&lt;em&gt;index&lt;/em&gt;或&lt;em&gt;indexInGroup&lt;/em&gt;设置为无效值时，返回的大小和位置均为&lt;em&gt;0&lt;/em&gt;。 &lt;/p&gt;
+<p>&lt;strong&gt;注意&lt;/strong&gt;： <br>-&lt;em&gt;index&lt;/em&gt;的值必须是显示区域中可见的子组件的索引。 否则，该值将被视为无效值。 <br>-设置&lt;em&gt;index&lt;/em&gt;的子组件必须是列表项组。否则， &lt;em&gt;index &lt;/em&gt;值被认为是无效的。 <br>-&lt;em&gt;indexInGroup&lt;/em&gt;的值必须是列表项组中某个列表项的索引 在显示区域中可见。否则，该值将被视为无效值。 <br>-当&lt;em&gt;index&lt;/em&gt;或&lt;em&gt;indexInGroup&lt;/em&gt;设置为无效值时，返回的大小和位置均为&lt;em&gt;0&lt;/em&gt;。 </p>
 
 **起始版本：** 23
 
@@ -97,7 +97,7 @@ getVisibleListContentInfo(x: double, y: double): VisibleListContentInfo
 
 根据坐标获取子组件的索引信息。
 
-&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;： <br>-如果提供的&lt;em&gt;x&lt;/em&gt;或&lt;em&gt;y&lt;/em&gt;的值无效， 返回的VisibleListContentInfo对象的&lt;em&gt;index&lt;/em&gt;属性设置为&lt;em&gt;-1&lt;/em&gt;。 且&lt;em&gt;itemGroupArea&lt;/em&gt;和&lt;em&gt;itemIndexInGroup&lt;/em&gt;均为&lt;em&gt;未定义&lt;/em&gt;。 &lt;/p&gt;
+<p>&lt;strong&gt;注意&lt;/strong&gt;： <br>-如果提供的&lt;em&gt;x&lt;/em&gt;或&lt;em&gt;y&lt;/em&gt;的值无效， 返回的VisibleListContentInfo对象的&lt;em&gt;index&lt;/em&gt;属性设置为&lt;em&gt;-1&lt;/em&gt;。 且&lt;em&gt;itemGroupArea&lt;/em&gt;和&lt;em&gt;itemIndexInGroup&lt;/em&gt;均为&lt;em&gt;未定义&lt;/em&gt;。 </p>
 
 **起始版本：** 23
 

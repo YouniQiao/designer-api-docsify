@@ -28,7 +28,8 @@ Obtains the byte stream of the key data. This API returns the result synchronous
 
 > **NOTE：**
 > 
-> When the RSA algorithm generates a private key using key parameters, **getEncoded** is available for the &gt; private key object.
+> When the RSA algorithm generates a private key using key parameters, **getEncoded** is available for the
+> private key object.
 
 **Since:** 23
 

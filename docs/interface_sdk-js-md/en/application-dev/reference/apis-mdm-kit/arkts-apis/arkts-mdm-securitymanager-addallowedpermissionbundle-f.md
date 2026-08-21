@@ -16,11 +16,19 @@ Adds an application to the permission usage exception list. Applications in the 
 
 > **NOTE：**
 > 
-> 1. The permission must first be disabled via the &gt; [setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md) API before an application can be added &gt; to the permission usage exception list. Otherwise, error code 9201044 is returned.
+> 1. The permission must first be disabled via the
+> [setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md) API before an application can be added
+> to the permission usage exception list. Otherwise, error code 9201044 is returned.
 > 
-> 2. An application cannot be added to the permission usage exception list if it has not actually requested the &gt; specified permission. For example, if the camera permission is disabled and application A has not requested the &gt; camera permission, it cannot be added to the exception list for the camera permission, and error code 9200012 is &gt; returned. You can use the [bm dump](../../../tools/bm-tool.md#dump) command to check whether an application has &gt; requested a specific permission.
+> 2. An application cannot be added to the permission usage exception list if it has not actually requested the
+> specified permission. For example, if the camera permission is disabled and application A has not requested the
+> camera permission, it cannot be added to the exception list for the camera permission, and error code 9200012 is
+> returned. You can use the [bm dump](../../../tools/bm-tool.md#dump) command to check whether an application has
+> requested a specific permission.
 > 
-> 3. When a specified permission is enabled via the &gt; [setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md) API, the corresponding permission usage &gt; exception list is cleared synchronously.
+> 3. When a specified permission is enabled via the
+> [setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md) API, the corresponding permission usage
+> exception list is cleared synchronously.
 > 
 > 4. For any given permission, a maximum of 1024 applications can be added to the exception list across all users.
 > 
@@ -40,7 +48,7 @@ Adds an application to the permission usage exception list. Applications in the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | permission | string | Yes | Name of the permission. |
 | applicationInstance | common.ApplicationInstance | Yes | Information about the application instance to be added to the permission exception list. |
 

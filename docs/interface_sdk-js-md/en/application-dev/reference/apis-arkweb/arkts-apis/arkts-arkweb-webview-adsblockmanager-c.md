@@ -28,9 +28,12 @@ Adds an array of domain names to the AllowedList of this AdsBlockManager object.
 > 
 > - The domain names set by this API are not persistent; they need to be set again after the app is restarted.
 > 
-> - The AllowedList has a higher priority than the DisallowedList. For example, if ['example.com'] is configured &gt; in the DisallowedList, ad filtering is disabled for all web pages under the example.com domain. To enable ad &gt; filtering for 'news.example.com', you can use addAdsBlockAllowedList(['news.example.com']).
+> - The AllowedList has a higher priority than the DisallowedList. For example, if ['example.com'] is configured
+> in the DisallowedList, ad filtering is disabled for all web pages under the example.com domain. To enable ad
+> filtering for 'news.example.com', you can use addAdsBlockAllowedList(['news.example.com']).
 > 
-> - Starting from API version 18, calling this API on a device that does not support the ad filtering feature &gt; will throw an 801 exception.
+> - Starting from API version 18, calling this API on a device that does not support the ad filtering feature
+> will throw an 801 exception.
 
 **Since:** 12
 
@@ -65,9 +68,13 @@ Adds an array of domain names to the disallowed list of this **AdsBlockManager**
 > 
 > - The domain names set by this API are not persistent; they need to be set again after the app is restarted.
 > 
-> - The ad filtering feature uses suffix matching to determine whether the domainSuffix matches the URL of the &gt; current site. For example, if the website opened in the current Web component is https://www.example.com and &gt; the DisallowedList contains 'example.com' or 'www.example.com', the suffix match succeeds, ad filtering will be &gt; disabled for this website, and ad filtering will also be disabled when accessing 'https://m.example.com'.
+> - The ad filtering feature uses suffix matching to determine whether the domainSuffix matches the URL of the
+> current site. For example, if the website opened in the current Web component is https://www.example.com and
+> the DisallowedList contains 'example.com' or 'www.example.com', the suffix match succeeds, ad filtering will be
+> disabled for this website, and ad filtering will also be disabled when accessing 'https://m.example.com'.
 > 
-> - Starting from API version 18, calling this API on a device that does not support the ad filtering feature &gt; will throw an 801 exception.
+> - Starting from API version 18, calling this API on a device that does not support the ad filtering feature
+> will throw an 801 exception.
 
 **Since:** 12
 
@@ -102,7 +109,8 @@ Clears the allowed list of this **AdsBlockManager** object.
 > 
 > - The AllowedList of AdsBlockManager is not persistent; it needs to be set again after the app is restarted.
 > 
-> - Starting from API version 18, calling this API on a device that does not support the ad filtering feature &gt; will throw an 801 exception.
+> - Starting from API version 18, calling this API on a device that does not support the ad filtering feature
+> will throw an 801 exception.
 
 **Since:** 12
 
@@ -130,7 +138,8 @@ Clears the disallowed list of this **AdsBlockManager** object.
 > 
 > - The DisallowedList of AdsBlockManager is not persistent; it needs to be set again after the app is restarted.
 > 
-> - Starting from API version 18, calling this API on a device that does not support the ad filtering feature &gt; will throw an 801 exception.
+> - Starting from API version 18, calling this API on a device that does not support the ad filtering feature
+> will throw an 801 exception.
 
 **Since:** 12
 
@@ -159,7 +168,8 @@ Removes an array of domain names from the allowed list of this **AdsBlockManager
 > - The AllowedList of AdsBlockManager is not persistent; it needs to be set again after the app is restarted.
 > Removing an entry that does not exist does not trigger an exception.
 > 
-> - Starting from API version 18, calling this API on a device that does not support the ad filtering feature &gt; will throw an 801 exception.
+> - Starting from API version 18, calling this API on a device that does not support the ad filtering feature
+> will throw an 801 exception.
 
 **Since:** 12
 
@@ -195,7 +205,8 @@ Removes an array of domain names from the disallowed list of this **AdsBlockMana
 > - The DisallowedList of AdsBlockManager is not persistent; it needs to be set again after the app is restarted.
 > Removing an entry that does not exist does not trigger an exception.
 > 
-> - Starting from API version 18, calling this API on a device that does not support the ad filtering feature &gt; will throw an 801 exception.
+> - Starting from API version 18, calling this API on a device that does not support the ad filtering feature
+> will throw an 801 exception.
 
 **Since:** 12
 
@@ -228,9 +239,11 @@ Sets a custom ad filtering configuration file that conforms to the universal Eas
 
 > **NOTE：**
 > 
-> - The ad filtering rules set by this API will be persistently stored after successful internal parsing; you do &gt; not need to set them again after the app is restarted.
+> - The ad filtering rules set by this API will be persistently stored after successful internal parsing; you do
+> not need to set them again after the app is restarted.
 > 
-> - Starting from API version 18, calling this API on a device that does not support the ad filtering feature &gt; will throw an 801 exception.
+> - Starting from API version 18, calling this API on a device that does not support the ad filtering feature
+> will throw an 801 exception.
 
 **Since:** 12
 

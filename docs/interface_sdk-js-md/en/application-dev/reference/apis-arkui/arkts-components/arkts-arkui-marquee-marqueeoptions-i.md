@@ -66,7 +66,7 @@ Set the number of times the scroll is repeated, infinite loop if it is less than
 
 Anonymous Object Rectification.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If the value is less than or equal to 0, the marquee will scroll continuously. <br>Regardless of the value, the marquee scrolls only once on an ArkTS widget. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If the value is less than or equal to 0, the marquee will scroll continuously. <br>Regardless of the value, the marquee scrolls only once on an ArkTS widget. </p>
 
 **Type:** int
 
@@ -136,7 +136,7 @@ Control whether the running lamp enters the playing state.
 
 Anonymous Object Rectification.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>&lt;em&gt;true&lt;/em&gt;: Start scrolling. <br>&lt;em&gt;false&lt;/em&gt;: Do not start scrolling. <br>This parameter cannot be used to restart scrolling that has been completed. <br>In Marquee component, the default value is false. Set to `undefined` will restore it to the default value. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>&lt;em&gt;true&lt;/em&gt;: Start scrolling. <br>&lt;em&gt;false&lt;/em&gt;: Do not start scrolling. <br>This parameter cannot be used to restart scrolling that has been completed. <br>In Marquee component, the default value is false. Set to `undefined` will restore it to the default value. </p>
 
 **Type:** boolean \| undefined
 
@@ -162,7 +162,7 @@ Anonymous Object Rectification.
 
 Unit: vp. Default value: 6.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If the value is greater than the text width of the marquee, the default value is used. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If the value is greater than the text width of the marquee, the default value is used. </p>
 
 **Type:** double
 

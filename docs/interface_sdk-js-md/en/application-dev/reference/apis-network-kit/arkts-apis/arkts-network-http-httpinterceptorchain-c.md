@@ -24,7 +24,8 @@ Adds an interceptor to the HTTP client.
 
 > **NOTE：**
 > 
-> An interceptor chain cannot contain interceptor instances of the same type. If interceptors of the same type &gt; are passed in, the error code **2300802** (Duplicated interceptor type in the chain) is reported.
+> An interceptor chain cannot contain interceptor instances of the same type. If interceptors of the same type
+> are passed in, the error code **2300802** (Duplicated interceptor type in the chain) is reported.
 
 **Since:** 22
 
@@ -64,11 +65,18 @@ Adds an interceptor chain to the target HTTP request. Each HTTP request instance
 
 > **NOTE：**
 > 
-> After an interceptor chain is attached to an [HttpRequest](arkts-network-http-httprequest-i.md) instance, when the instance &gt; initiates an HTTP request, interceptors of the corresponding type in the attached interceptor chain are &gt; triggered.
+> After an interceptor chain is attached to an [HttpRequest](arkts-network-http-httprequest-i.md) instance, when the instance
+> initiates an HTTP request, interceptors of the corresponding type in the attached interceptor chain are
+> triggered.
 
-> For more information about how to trigger interceptors using HTTP requests, see &gt; [HTTP Interceptor Function Code Example](../../../network/http-request.md#http-interceptor).
+> For more information about how to trigger interceptors using HTTP requests, see
+> [HTTP Interceptor Function Code Example](../../../network/http-request.md#http-interceptor).
 
-> The HTTP interceptor feature is supported only by &gt; [HttpRequest.request](arkts-network-http-httprequest-i.md#request) APIs, &gt; and is not supported by &gt; [HttpRequest.requestInStream](arkts-network-http-httprequest-i.md#requestinstream) &gt; APIs (streaming transmission).
+> The HTTP interceptor feature is supported only by
+> [HttpRequest.request](arkts-network-http-httprequest-i.md#request) APIs,
+> and is not supported by
+> [HttpRequest.requestInStream](arkts-network-http-httprequest-i.md#requestinstream)
+> APIs (streaming transmission).
 
 **Since:** 22
 

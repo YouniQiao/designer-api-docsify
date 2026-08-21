@@ -21,7 +21,8 @@ Obtains key properties. This API uses an asynchronous callback to return the res
 
 > **NOTE：**
 > 
-> Getting properties of SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) &gt; requires the ohos.permission.ACCESS_SE_KEY permission.
+> Getting properties of SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)
+> requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
 
@@ -91,7 +92,8 @@ Obtains key properties. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> Getting properties of SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) &gt; requires the ohos.permission.ACCESS_SE_KEY permission.
+> Getting properties of SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)
+> requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
 

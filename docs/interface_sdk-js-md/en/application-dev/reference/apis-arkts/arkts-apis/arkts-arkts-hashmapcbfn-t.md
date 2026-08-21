@@ -20,5 +20,5 @@ The type of HashMap callback function.
 | --- | --- | --- | --- |
 | value | V | Yes | The value of the current entry |
 | key | K | Yes | The key of the current entry |
-| map | [HashMap](arkts-arkts-util-hashmap-hashmap-c.md)&lt;K, V&gt; | Yes | The HashMap instance being traversed |
+| map | [HashMap](arkts-arkts-utilhashmap-hashmap-c.md)&lt;K, V&gt; | Yes | The HashMap instance being traversed |
 

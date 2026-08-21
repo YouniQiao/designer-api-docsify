@@ -24,7 +24,8 @@ Stops listening for events of the **LocalSocketServer** object and releases the 
 
 > **NOTE：**
 > 
-> This API does not close existing connections. To close the connection, call the [close] (#close11-1) API of &gt; [LocalSocketConnection] (#localsocketconnection11).
+> This API does not close existing connections. To close the connection, call the [close] (#close11-1) API of
+> [LocalSocketConnection] (#localsocketconnection11).
 
 **Since:** 20
 
@@ -197,11 +198,15 @@ Obtains the file descriptor bound to the LocalSocketServer listening port. This 
 
 > **NOTE：**
 > 
-> - This method can be called only after the [listen](#listen) method is &gt; successfully called.
+> - This method can be called only after the [listen](#listen) method is
+> successfully called.
 > 
-> - This API returns **-1** in abnormal cases such as listening exceptions or socket closed (for example, after &gt; close is called).
+> - This API returns **-1** in abnormal cases such as listening exceptions or socket closed (for example, after
+> close is called).
 > 
-> - The lifecycle of the file descriptor is managed by the system. The application can use the &gt; [close](arkts-network-socket-tcpsocketserver-i.md#close) method to close the socket connection, instead of directly &gt; operating the file descriptor.
+> - The lifecycle of the file descriptor is managed by the system. The application can use the
+> [close](arkts-network-socket-tcpsocketserver-i.md#close) method to close the socket connection, instead of directly
+> operating the file descriptor.
 
 **Since:** 23
 
@@ -303,7 +308,8 @@ Binds the address of the local socket file. The server listens to and accepts lo
 
 > **NOTE：**
 > 
-> The server uses this API to complete the **bind**, **listen**, and **accept** operations. If the address of the &gt; local socket file is passed for binding, a socket file is automatically created when this API is called.
+> The server uses this API to complete the **bind**, **listen**, and **accept** operations. If the address of the
+> local socket file is passed for binding, a socket file is automatically created when this API is called.
 
 **Since:** 11
 

@@ -4,7 +4,8 @@
 
 > **说明：**
 > 
-> [registerPlugin](arkts-dataprotection-dlppermission-dlpconnmanager-c.md#registerplugin)接口的参数需要继承该接口， &gt; [connectServer](#connectserver)由SA（System Ability）侧调用，通过callback进行回传参数。
+> [registerPlugin](arkts-dataprotection-dlppermission-dlpconnmanager-c.md#registerplugin)接口的参数需要继承该接口，
+> [connectServer](#connectserver)由SA（System Ability）侧调用，通过callback进行回传参数。
 
 **起始版本：** 21
 

@@ -98,7 +98,11 @@ Sets the mesh effect. An image is divided into (row + 1) × (column + 1) meshes.
 
 > **NOTE：**
 > 
-> **mesh** takes effect only when a **pixelMap** object is passed to the shape, and the effect applies to the &gt; passed **pixelMap** object. It produces the same result as &gt; [drawPixelMapMesh&lt;sup&gt;12+&lt;/sup&gt;](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md#drawpixelmapmesh) in the &gt; [drawing module](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-drawing.md). It is recommended that you use &gt; **drawPixelMapMesh**.
+> **mesh** takes effect only when a **pixelMap** object is passed to the shape, and the effect applies to the
+> passed **pixelMap** object. It produces the same result as
+> [drawPixelMapMesh&lt;sup&gt;12+&lt;/sup&gt;](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md#drawpixelmapmesh) in the
+> [drawing module](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-drawing.md). It is recommended that you use
+> **drawPixelMapMesh**.
 
 **Since:** 8
 

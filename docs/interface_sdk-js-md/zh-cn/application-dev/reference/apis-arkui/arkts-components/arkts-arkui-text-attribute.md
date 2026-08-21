@@ -312,7 +312,7 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 设置自定义菜单扩展项，允许用户设置扩展项的文本内容、图标、回调方法。
 
-调用[disableMenuItems](../../apis-default/arkts-apis/arkts-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或 [disableSystemServiceMenuItems](../../apis-default/arkts-apis/arkts-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本 选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。
+调用[disableMenuItems](../../apis-default/arkts-apis/arkts-arkuiuicontext-textmenucontroller-c.md#disablemenuitems)或 [disableSystemServiceMenuItems](../../apis-default/arkts-apis/arkts-arkuiuicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本 选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。
 
 > **说明：**
 > 
@@ -641,7 +641,8 @@ fontFeature(value: string)
 > 
 > 字体排版引擎会对开发者传入的宽度width进行向下取整，保证是整型像素后进行排版。如果向上取整，可能会出现文字右侧被截断。
 > 
-> 当多个Text组件在Row容器内布局且没有设置具体的布局分配信息时，Text会以Row的最大尺寸进行布局。如果需要子组件主轴累加的尺寸不超过Row容器主轴的尺寸，可以设置 &gt; layoutWeight或者是以Flex布局来约束子组件的主轴尺寸。
+> 当多个Text组件在Row容器内布局且没有设置具体的布局分配信息时，Text会以Row的最大尺寸进行布局。如果需要子组件主轴累加的尺寸不超过Row容器主轴的尺寸，可以设置
+> layoutWeight或者是以Flex布局来约束子组件的主轴尺寸。
 > 
 > 系统默认字体支持的liga连字：Th fb ff fb ffb ffh ffi ffk ffl fh fi fk fl rf rt rv rx ry。常导致Span、属性字符串的效果不符合预期，关闭liga连字特性可以规避。
 > 
@@ -1000,8 +1001,10 @@ lineHeightMultiple(value: number | undefined)
 
 > **说明：**
 > 
-> 当lineHeightMultiple使用有效值和[lineHeight](#lineheight)或 &gt; [lineSpacing](#linespacing)同时设置时，仅lineHeightMultiple生效。
-> lineHeightMultiple小于0时，lineHeightMultiple不生效，使用[lineHeight](#lineheight)和 &gt; [lineSpacing](#linespacing)设置行高和行间距。
+> 当lineHeightMultiple使用有效值和[lineHeight](#lineheight)或
+> [lineSpacing](#linespacing)同时设置时，仅lineHeightMultiple生效。
+> lineHeightMultiple小于0时，lineHeightMultiple不生效，使用[lineHeight](#lineheight)和
+> [lineSpacing](#linespacing)设置行高和行间距。
 
 **起始版本：** 22
 
@@ -1907,7 +1910,9 @@ textVerticalAlign(textVerticalAlign: Optional<TextVerticalAlign>)
 > 
 > - 与[halfLeading](#halfleading)同时配置时，halfLeading不生效。
 > 
-> - 一个段落下使用同一字号必须同时设置行高[lineHeight](#lineheight)或者同一个段落不同字号文本混排时才有效果差异，否则设置了该属性任意枚举值和未设置该属性都是一样的 &gt; 排版效果。属性字符串TextStyle中的SuperscriptStyle上下角标样式仅在TextVerticalAlign属性值为 &gt; TextVerticalAlign.BASELINE时生效，其余垂直对齐方式下上下角标文本和普通文本表现一致，无上下角标效果。
+> - 一个段落下使用同一字号必须同时设置行高[lineHeight](#lineheight)或者同一个段落不同字号文本混排时才有效果差异，否则设置了该属性任意枚举值和未设置该属性都是一样的
+> 排版效果。属性字符串TextStyle中的SuperscriptStyle上下角标样式仅在TextVerticalAlign属性值为
+> TextVerticalAlign.BASELINE时生效，其余垂直对齐方式下上下角标文本和普通文本表现一致，无上下角标效果。
 
 **起始版本：** 20
 

@@ -32,7 +32,7 @@ Constructor of ReactiveComponentContent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
+| uiContext | [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
 | builder | WrappedBuilder&lt;T&gt; | Yes | Encapsulates the WrappedBuilder object of the @Builder function with parameters. |
 | config | [BuildOptions](../../apis-default/arkts-apis/arkts-buildernode-buildoptions-i.md) | Yes | Configures the build behavior of the builder. All attributes in BuildOptions are optional. The default value is the corresponding default value in BuildOptions. |
 | args | T | Yes | Parameters of the builder function encapsulated in the **WrappedBuilder** object. Transfers external data to the WrappedBuilder&lt;T&gt and build functions specified in the constructor. Multiple input parameters are supported. The default value is **undefined**. |
@@ -109,7 +109,10 @@ Immediately releases the reference relationship between this **ReactiveComponent
 
 > **NOTE：**
 > 
-> After calling **dispose**, the **ReactiveComponentContent** object cancels its reference to the backend entity &gt; node. If the frontend object **ReactiveComponentContent** cannot be released, memory leaks may occur. To avoid &gt; this, be sure to call **dispose** on the **ReactiveComponentContent** object when you no longer need it. This &gt; reduces the complexity of reference relationships and lowers the risk of memory leaks.
+> After calling **dispose**, the **ReactiveComponentContent** object cancels its reference to the backend entity
+> node. If the frontend object **ReactiveComponentContent** cannot be released, memory leaks may occur. To avoid
+> this, be sure to call **dispose** on the **ReactiveComponentContent** object when you no longer need it. This
+> reduces the complexity of reference relationships and lowers the risk of memory leaks.
 
 **Since:** 22
 
@@ -365,7 +368,10 @@ Sets whether the current **ReactiveComponentContent** object inherits the freeze
 
 > **NOTE：**
 > 
-> When **inheritFreezeOptions** is set to **true** for a **ReactiveComponentContent** object, and its parent &gt; component is a custom component, **BuilderNode**, **ComponentContent**, **ReactiveBuilderNode**, or &gt; **ReactiveComponentContent**, it will inherit the parent component's freeze policy. If the child component is a &gt; custom component, its freeze policy is not transferred to the child component.
+> When **inheritFreezeOptions** is set to **true** for a **ReactiveComponentContent** object, and its parent
+> component is a custom component, **BuilderNode**, **ComponentContent**, **ReactiveBuilderNode**, or
+> **ReactiveComponentContent**, it will inherit the parent component's freeze policy. If the child component is a
+> custom component, its freeze policy is not transferred to the child component.
 
 **Since:** 22
 
@@ -967,7 +973,7 @@ For details, see the example in [recycle](#recycle).
 updateConfiguration(): void
 ```
 
-Transfers a system environment change event and triggers full update of a node. This event can be used to notify the object of the update. Whether the system environment used by the object is updated depends on the current system environment change of the application. For details about system environment changes, see [@ohos.app.ability.Configuration (Environment Variables)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md).
+Transfers a system environment change event and triggers full update of a node. This event can be used to notify the object of the update. Whether the system environment used by the object is updated depends on the current system environment change of the application. For details about system environment changes, see [@ohos.app.ability.Configuration (Environment Variables)](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityconfiguration-configuration-i.md).
 
 **Since:** 22
 

@@ -16,8 +16,10 @@ Removes applications from the home screen icon hide list.
 
 > **NOTE：**
 > 
-> After unhiding, applications will be placed in the first available slot starting from the second screen of the &gt; home screen. If no empty slot is found on screens 2 to 18, it will search for an empty slot on the first screen.
-> If no empty slot is available on the first screen, a small folder will be created at the position of the first &gt; application on the second screen to contain the applications.
+> After unhiding, applications will be placed in the first available slot starting from the second screen of the
+> home screen. If no empty slot is found on screens 2 to 18, it will search for an empty slot on the first screen.
+> If no empty slot is available on the first screen, a small folder will be created at the position of the first
+> application on the second screen to contain the applications.
 
 **Since:** 26.0.0
 
@@ -33,7 +35,7 @@ Removes applications from the home screen icon hide list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | bundleNames | Array&lt;string&gt; | Yes | Application bundle name array, which specifies the applications to be unhidden. A maximum of 500 applications are supported. |
 
 **Error codes:**

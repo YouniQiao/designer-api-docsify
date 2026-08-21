@@ -1,6 +1,6 @@
 # AVMetadata
 
-Defines the audio and video metadata. Parameters that are not declared as read-only in [AVRecorderConfig](arkts-media-multimedia-media-avrecorderconfig-i.md) can be used as input parameters for recording of [AVRecorder](arkts-media-multimedia-media-avrecorder-i.md).
+Defines the audio and video metadata. Parameters that are not declared as read-only in [AVRecorderConfig](arkts-media-multimediamedia-avrecorderconfig-i.md) can be used as input parameters for recording of [AVRecorder](arkts-media-multimediamedia-avrecorder-i.md).
 
 **起始版本：** 23
 

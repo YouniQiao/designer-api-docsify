@@ -12,7 +12,7 @@ import { formObserver } from '@kit.FormKit';
 function onFormRemove(observerCallback: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Listens to the event of remove form. &lt;p&gt;You can use this method to listen to the event of remove form.&lt;/p&gt;
+Listens to the event of remove form. <p>You can use this method to listen to the event of remove form.</p>
 
 **起始版本：** 23
 
@@ -45,7 +45,7 @@ Listens to the event of remove form. &lt;p&gt;You can use this method to listen 
 function onFormRemove(hostBundleName: string, observerCallback: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Listens to the event of remove form. &lt;p&gt;You can use this method to listen to the event of remove form for a particular card host.&lt;/p&gt;
+Listens to the event of remove form. <p>You can use this method to listen to the event of remove form for a particular card host.</p>
 
 **起始版本：** 23
 

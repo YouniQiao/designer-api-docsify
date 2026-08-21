@@ -34,7 +34,7 @@ Adds an account in the background.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | name | string | Yes | User ID, which must be greater than or equal to 0. |
 | type | osAccount.OsAccountType | Yes | Type of the account to add. <br>The value can be any of the following: <br>· **ADMIN**: administrator account. <br>· **NORMAL**: normal account. <br>· **GUEST**: guest account. |
 

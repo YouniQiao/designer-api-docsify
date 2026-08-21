@@ -16,7 +16,7 @@ Defines the properties for controlling the cached count behavior.
 independent?: boolean
 ```
 
-Whether cachedCount is independent of group calculation. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When set to true, cachedCount is calculated by actual child component count, independent of displayCount group calculation. <br>When swipeByGroup is enabled and this is false, cachedCount is calculated by group. &lt;/p&gt;
+Whether cachedCount is independent of group calculation. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When set to true, cachedCount is calculated by actual child component count, independent of displayCount group calculation. <br>When swipeByGroup is enabled and this is false, cachedCount is calculated by group. </p>
 
 **Type:** boolean
 

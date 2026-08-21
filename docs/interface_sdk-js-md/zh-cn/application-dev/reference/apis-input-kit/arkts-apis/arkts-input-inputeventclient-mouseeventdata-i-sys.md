@@ -24,7 +24,7 @@ mouseEvent: MouseEvent
 
 鼠标事件。
 
-**类型：** [MouseEvent](arkts-input-multimodalinput-mouseevent-mouseevent-i.md)
+**类型：** [MouseEvent](arkts-input-multimodalinputmouseevent-mouseevent-i.md)
 
 **起始版本：** 23
 

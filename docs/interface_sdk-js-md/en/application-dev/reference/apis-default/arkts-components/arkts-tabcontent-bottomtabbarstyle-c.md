@@ -194,7 +194,7 @@ padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle
 
 Set the padding of the bottom tab bar
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>It cannot be set in percentage. <br>When the parameter is of the Dimension type, the value applies to all sides. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>It cannot be set in percentage. <br>When the parameter is of the Dimension type, the value applies to all sides. </p>
 
 **Since:** 23
 
@@ -226,7 +226,7 @@ symmetricExtensible(value: boolean): BottomTabBarStyle
 
 Sets whether the images and text on the bottom tab can be symmetrically extended by the minimum value of the available space on the left and right bottom tabs.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>This parameter is valid only between bottom tabs in fixed horizontal mode. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>This parameter is valid only between bottom tabs in fixed horizontal mode. </p>
 
 **Since:** 23
 

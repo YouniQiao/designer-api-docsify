@@ -67,9 +67,14 @@ Requests notification to be enabled for this application. You can call this API 
 
 > **NOTE：**
 > 
-> - This API can be called only after the application UI is loaded (that is, &gt; [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent) is &gt; successfully called).
+> - This API can be called only after the application UI is loaded (that is,
+> [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent) is
+> successfully called).
 > 
-> - When an application uses **requestEnableNotification()** to display a dialog box for notification authorization &gt; and the user rejects the authorization, the application cannot use this API to open the dialog box again. However &gt; , it can call [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md) &gt; to open the notification management dialog box.
+> - When an application uses **requestEnableNotification()** to display a dialog box for notification authorization
+> and the user rejects the authorization, the application cannot use this API to open the dialog box again. However
+> , it can call [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md)
+> to open the notification management dialog box.
 
 **Since:** 23
 
@@ -193,9 +198,14 @@ Requests notification to be enabled for this application. You can call this API 
 
 > **NOTE：**
 > 
-> - This API can be called only after the application UI is loaded (that is, &gt; [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent) is &gt; successfully called).
+> - This API can be called only after the application UI is loaded (that is,
+> [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent) is
+> successfully called).
 > 
-> - When an application uses **requestEnableNotification()** to display a dialog box for notification authorization &gt; and the user rejects the authorization, the application cannot use this API to open the dialog box again. However &gt; , it can call [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md) &gt; to open the notification management dialog box.
+> - When an application uses **requestEnableNotification()** to display a dialog box for notification authorization
+> and the user rejects the authorization, the application cannot use this API to open the dialog box again. However
+> , it can call [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md)
+> to open the notification management dialog box.
 
 **Since:** 23
 

@@ -12,15 +12,15 @@ import { Geolocation, GeolocationResponse, GetLocationOption, GetLocationTypeOpt
 
 | Name | Description |
 | --- | --- |
-| [Geolocation](arkts-location-system-geolocation-geolocation-c.md) |  |
+| [Geolocation](arkts-location-systemgeolocation-geolocation-c.md) |  |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [GeolocationResponse](arkts-location-system-geolocation-geolocationresponse-i.md) |  |
-| [GetLocationOption](arkts-location-system-geolocation-getlocationoption-i.md) |  |
-| [GetLocationTypeOption](arkts-location-system-geolocation-getlocationtypeoption-i.md) |  |
-| [GetLocationTypeResponse](arkts-location-system-geolocation-getlocationtyperesponse-i.md) |  |
-| [SubscribeLocationOption](arkts-location-system-geolocation-subscribelocationoption-i.md) |  |
+| [GeolocationResponse](arkts-location-systemgeolocation-geolocationresponse-i.md) |  |
+| [GetLocationOption](arkts-location-systemgeolocation-getlocationoption-i.md) |  |
+| [GetLocationTypeOption](arkts-location-systemgeolocation-getlocationtypeoption-i.md) |  |
+| [GetLocationTypeResponse](arkts-location-systemgeolocation-getlocationtyperesponse-i.md) |  |
+| [SubscribeLocationOption](arkts-location-systemgeolocation-subscribelocationoption-i.md) |  |
 

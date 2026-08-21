@@ -16,7 +16,9 @@ Obtains the information about all launcher abilities. This API uses an asynchron
 
 > **NOTE：**
 > 
-> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md) &gt; instead.
+> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md)
+> instead.
 
 **Since:** 8
 
@@ -50,7 +52,9 @@ Obtains the information about all launcher abilities. This API uses a promise to
 
 > **NOTE：**
 > 
-> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md) &gt; instead.
+> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md)
+> instead.
 
 **Since:** 8
 

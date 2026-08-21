@@ -59,7 +59,9 @@ Updates the progress of this interactive transition animation. (Non-interactive 
 
 > **NOTE：**
 > 
-> You are not advised to use stack operations in aboutToAppear, as the &gt; page has not yet finished building at this stage, which may lead to issues such as white screens or navigation &gt; failures.
+> You are not advised to use stack operations in aboutToAppear, as the
+> page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
+> failures.
 
 **Since:** 12
 

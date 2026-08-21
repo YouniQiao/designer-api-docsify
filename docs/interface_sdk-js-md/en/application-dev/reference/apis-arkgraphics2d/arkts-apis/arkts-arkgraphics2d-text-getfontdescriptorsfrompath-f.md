@@ -16,9 +16,13 @@ Obtains an array of font descriptors by font file path. This API uses a promise 
 
 > **NOTE：**
 > 
-> - An empty array is returned if the font file is not found, the font file path is invalid, the font file does not &gt; have the required permission, or the file is not in the font format.
+> - An empty array is returned if the font file is not found, the font file path is invalid, the font file does not
+> have the required permission, or the file is not in the font format.
 > 
-> - The **weight** field in [FontDescriptor](arkts-arkgraphics2d-text-fontdescriptor-i.md) does not exactly correspond to the weight &gt; value in the font file. Instead, the actual weight value in the font file is rounded off and mapped to the &gt; [FontWeight](arkts-arkgraphics2d-text-fontweight-e.md) enum value. For example, the weight value 350 in the font file is mapped to 4 &gt; 00, and the corresponding enum value is W400.
+> - The **weight** field in [FontDescriptor](arkts-arkgraphics2d-text-fontdescriptor-i.md) does not exactly correspond to the weight
+> value in the font file. Instead, the actual weight value in the font file is rounded off and mapped to the
+> [FontWeight](arkts-arkgraphics2d-text-fontweight-e.md) enum value. For example, the weight value 350 in the font file is mapped to 4
+> 00, and the corresponding enum value is W400.
 
 **Since:** 23
 

@@ -6,13 +6,20 @@ For details about the development process, see [Using HiTraceMeter (ArkTS)](../.
 
 > **NOTE：**
 > 
-> You are advised to use the performance tracing APIs of API version 19. The &gt; [startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md), [finishTrace()](arkts-performanceanalysis-hitracemeter-finishtrace-f.md), and &gt; [traceByValue()](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md) APIs will be deprecated.
+> You are advised to use the performance tracing APIs of API version 19. The
+> [startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md), [finishTrace()](arkts-performanceanalysis-hitracemeter-finishtrace-f.md), and
+> [traceByValue()](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md) APIs will be deprecated.
 > 
-> The trace output level cannot be specified in the [startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md), &gt; [finishTrace()](arkts-performanceanalysis-hitracemeter-finishtrace-f.md) and [traceByValue()](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md) APIs. By &gt; default, the trace output level is **COMMERCIAL**.
+> The trace output level cannot be specified in the [startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md),
+> [finishTrace()](arkts-performanceanalysis-hitracemeter-finishtrace-f.md) and [traceByValue()](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md) APIs. By
+> default, the trace output level is **COMMERCIAL**.
 > 
-> The vertical bar (|) is used as the separator in &gt; [user-mode trace format](../../../dfx/hitracemeter-view.md#user-mode-trace-format). Therefore, the string &gt; parameters passed by the performance tracing APIs must exclude this character to avoid trace parsing exceptions.
+> The vertical bar (|) is used as the separator in
+> [user-mode trace format](../../../dfx/hitracemeter-view.md#user-mode-trace-format). Therefore, the string
+> parameters passed by the performance tracing APIs must exclude this character to avoid trace parsing exceptions.
 > 
-> The maximum length of a [user-mode trace](../../../dfx/hitracemeter-view.md#user-mode-trace-format) is 512 &gt; characters. Excess characters will be truncated.
+> The maximum length of a [user-mode trace](../../../dfx/hitracemeter-view.md#user-mode-trace-format) is 512
+> characters. Excess characters will be truncated.
 
 **Since:** 23
 

@@ -4,7 +4,8 @@ The module provides application information. Unless otherwise specified, the inf
 
 > **NOTE：**
 > 
-> The APIs of this module have been deprecated since API version 9. You are advised to use &gt; [bundleManager-ApplicationInfo](#applicationinfo) instead.
+> The APIs of this module have been deprecated since API version 9. You are advised to use
+> [bundleManager-ApplicationInfo](#applicationinfo) instead.
 
 **Since:** 7
 

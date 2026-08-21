@@ -34,7 +34,7 @@ Obtains detailed attribute information of a file or directory. This API returns 
 
 | Type | Description |
 | --- | --- |
-| [Stat](arkts-corefile-file-fs-stat-i.md) | Detailed information of a file or directory. |
+| [Stat](arkts-corefile-filefs-stat-i.md) | Detailed information of a file or directory. |
 
 **Error codes:**
 

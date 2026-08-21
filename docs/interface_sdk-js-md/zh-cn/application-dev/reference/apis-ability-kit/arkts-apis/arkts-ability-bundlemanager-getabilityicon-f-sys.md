@@ -18,7 +18,9 @@ function getAbilityIcon(bundleName: string, moduleName: string, abilityName: str
 
 > **说明：**
 > 
-> 从API version 9开始支持，从API version 10开始废弃，建议使用 &gt; [getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent) &gt; 替代。
+> 从API version 9开始支持，从API version 10开始废弃，建议使用
+> [getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent)
+> 替代。
 
 **起始版本：** 9
 
@@ -95,7 +97,9 @@ function getAbilityIcon(bundleName: string, moduleName: string, abilityName: str
 
 > **说明：**
 > 
-> 从API version 9开始支持，从API version 10开始废弃，建议使用 &gt; [getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent) &gt; 替代。
+> 从API version 9开始支持，从API version 10开始废弃，建议使用
+> [getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent)
+> 替代。
 
 **起始版本：** 9
 

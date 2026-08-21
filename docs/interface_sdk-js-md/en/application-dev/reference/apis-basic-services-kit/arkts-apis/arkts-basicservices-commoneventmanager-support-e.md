@@ -2864,8 +2864,14 @@ When the (Ethernet, Wi-Fi, or cellular) network connection state changes (discon
 The following table lists the enum values and their corresponding connection status.
 
 > **NOTE：**
-> The following table lists the enum values and their corresponding connection status &gt;
-> | Value | Connection State | &gt; | ------ | ---------- | &gt; | 2 | Connecting. | &gt; | 3 | Connected. | &gt; | 4 | Disconnecting.| &gt; | 5 | Disconnected. |.
+> The following table lists the enum values and their corresponding connection status
+> 
+> | Value | Connection State |
+> | ------ | ---------- |
+> | 2 | Connecting. |
+> | 3 | Connected. |
+> | 4 | Disconnecting.|
+> | 5 | Disconnected. |.
 
 **Since:** 23
 

@@ -1,7 +1,7 @@
 # ArkTS API<!--arkts-mdmkit-->
 
 - [@ohos.enterprise.EnterpriseAdminExtensionAbility](arkts-enterprise-enterpriseadminextensionability.md)
-  - [EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md)
+  - [EnterpriseAdminExtensionAbility](arkts-mdm-enterpriseenterpriseadminextensionability-enterpriseadminextensionability-c.md)
 - [@ohos.enterprise.accountManager](arkts-enterprise-accountmanager.md)
   - [activateOsAccount](arkts-mdm-accountmanager-activateosaccount-f.md)
   <!--Del-->

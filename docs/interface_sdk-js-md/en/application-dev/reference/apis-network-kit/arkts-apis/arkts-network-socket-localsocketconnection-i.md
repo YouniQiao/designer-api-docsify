@@ -4,7 +4,8 @@ Defines a local socket connection, that is, the session between the local socket
 
 > **NOTE：**
 > 
-> The LocalSocketConnection client can call related APIs through the **LocalSocketConnection** object only after a &gt; connection is successfully established between the local socket client and the server.
+> The LocalSocketConnection client can call related APIs through the **LocalSocketConnection** object only after a
+> connection is successfully established between the local socket client and the server.
 
 **Since:** 11
 
@@ -133,9 +134,12 @@ Obtains the file descriptor of a LocalSocketConnection connection. This API uses
 > 
 > - This method can be called only after a connection is set up.
 > 
-> - This API returns **-1** in abnormal cases such as disconnection and socket closed (for example, after the &gt; close API is called).
+> - This API returns **-1** in abnormal cases such as disconnection and socket closed (for example, after the
+> close API is called).
 > 
-> - The lifecycle of the file descriptor is managed by the system. The application can use the &gt; [close](arkts-network-socket-localsocket-i.md#close) method to close the socket connection, instead of directly operating &gt; the file descriptor.
+> - The lifecycle of the file descriptor is managed by the system. The application can use the
+> [close](arkts-network-socket-localsocket-i.md#close) method to close the socket connection, instead of directly operating
+> the file descriptor.
 
 **Since:** 23
 

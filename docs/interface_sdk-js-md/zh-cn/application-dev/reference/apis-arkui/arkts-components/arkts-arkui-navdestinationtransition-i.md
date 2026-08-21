@@ -91,7 +91,7 @@ duration?: number
 event: Callback<void>
 ```
 
-指定转场动效的闭包函数，系统会根据闭包中对组件UI状态的修改，生成对应的过渡动画。参见[animateTo](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#animatetoimmediately)中 的event。
+指定转场动效的闭包函数，系统会根据闭包中对组件UI状态的修改，生成对应的过渡动画。参见[animateTo](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#animatetoimmediately)中 的event。
 
 **类型：** Callback&lt;void&gt;
 

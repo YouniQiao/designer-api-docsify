@@ -20,7 +20,10 @@
 > 
 > ForEach/LazyForEach和Repeat语句中，会计算展开所有子组件索引值。
 > 
-> [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、 &gt; [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)、 &gt; [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和 &gt; [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)发生变化以后，会更新子组件索引值。
+> [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、
+> [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)、
+> [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和
+> [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)发生变化以后，会更新子组件索引值。
 > 
 > Grid子组件的visibility属性设置为Hidden或None时依然会计算索引值。
 > 

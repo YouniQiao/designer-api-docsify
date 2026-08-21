@@ -24,9 +24,13 @@ Clears up all data in the application file path and revokes the permissions that
 
 > **NOTE：**
 > 
-> For details about the application file path, see &gt; [Application File Directory and Application File Path](../../../file-management/app-sandbox-directory.md#application-file-directory-and-application-file-path) &gt; . The figure shows only the application file paths in the EL1 and EL2 directories. For the application file paths &gt; in other directories, refer to EL1.
+> For details about the application file path, see
+> [Application File Directory and Application File Path](../../../file-management/app-sandbox-directory.md#application-file-directory-and-application-file-path)
+> . The figure shows only the application file paths in the EL1 and EL2 directories. For the application file paths
+> in other directories, refer to EL1.
 > 
-> This API stops the application process. After the application process is stopped, all subsequent callbacks will &gt; not be triggered.
+> This API stops the application process. After the application process is stopped, all subsequent callbacks will
+> not be triggered.
 
 **Since:** 23
 
@@ -72,9 +76,13 @@ Clears up all data in the application file path and revokes the permissions that
 
 > **NOTE：**
 > 
-> For details about the application file path, see &gt; [Application File Directory and Application File Path](../../../file-management/app-sandbox-directory.md#application-file-directory-and-application-file-path) &gt; . The figure shows only the application file paths in the EL1 and EL2 directories. For the application file paths &gt; in other directories, refer to EL1.
+> For details about the application file path, see
+> [Application File Directory and Application File Path](../../../file-management/app-sandbox-directory.md#application-file-directory-and-application-file-path)
+> . The figure shows only the application file paths in the EL1 and EL2 directories. For the application file paths
+> in other directories, refer to EL1.
 > 
-> This API stops the application process. After the application process is stopped, all subsequent callbacks will &gt; not be triggered.
+> This API stops the application process. After the application process is stopped, all subsequent callbacks will
+> not be triggered.
 
 **Since:** 23
 
@@ -123,7 +131,7 @@ disableDelayedProcessExit(): Promise<void>
 
 Disables delayed process exit for the current process.
 
-&lt;p&gt;&lt;b&gt;NOTE&lt;/b&gt;: <br>This API can be called only by the main thread. <br>Calling this API cancels the effect of [enableDelayedProcessExit](#enabledelayedprocessexit).&lt;/p&gt;
+<p>&lt;b&gt;NOTE&lt;/b&gt;: <br>This API can be called only by the main thread. <br>Calling this API cancels the effect of [enableDelayedProcessExit](#enabledelayedprocessexit).</p>
 
 **Since:** 26.0.0
 
@@ -153,7 +161,7 @@ Disables delayed process exit for the current process.
 enableDelayedProcessExit(): Promise<void>
 ```
 
-Enable delayed exit for the current process. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. <br>Under normal circumstances, the process exits after the last UIAbility within the application process has exited. After calling this interface, the process will delay its exit for 10 seconds after the last UIAbility exits. If a new Ability is started within the 10 seconds in the current process, the process no longer exits.&lt;/p&gt;
+Enable delayed exit for the current process. <p>**NOTE：**: <br>It can be called only by the main thread. <br>Under normal circumstances, the process exits after the last UIAbility within the application process has exited. After calling this interface, the process will delay its exit for 10 seconds after the last UIAbility exits. If a new Ability is started within the 10 seconds in the current process, the process no longer exits.</p>
 
 **Since:** 26.0.0
 
@@ -489,7 +497,7 @@ getUIAbilityByInstanceId(instanceId: string): UIAbility
 
 Get the UIAbility instance by the instance Id.
 
-&lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
+<p>**NOTE：**: <br>It can be called only by the main thread. </p>
 
 **Since:** 26.0.0
 
@@ -509,7 +517,7 @@ Get the UIAbility instance by the instance Id.
 
 | Type | Description |
 | --- | --- |
-| [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | The UIAbility instance. |
+| [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) | The UIAbility instance. |
 
 **Error codes:**
 
@@ -529,7 +537,8 @@ Kills all processes of this application. The application will not execute the no
 
 > **NOTE：**
 > 
-> This API is used to forcibly exit an application in abnormal scenarios. To exit an application properly, call &gt; [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself).
+> This API is used to forcibly exit an application in abnormal scenarios. To exit an application properly, call
+> [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself).
 
 **Since:** 23
 
@@ -577,7 +586,8 @@ Kills all processes of this application. The application will not execute the no
 
 > **NOTE：**
 > 
-> This API is used to forcibly exit an application in abnormal scenarios. To exit an application properly, call &gt; [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself).
+> This API is used to forcibly exit an application in abnormal scenarios. To exit an application properly, call
+> [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself).
 
 **Since:** 23
 
@@ -633,7 +643,8 @@ Kills all processes of this application. The application will not execute the no
 
 > **NOTE：**
 > 
-> This API is used to forcibly exit an application in abnormal scenarios. To exit an application properly, call &gt; [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself).
+> This API is used to forcibly exit an application in abnormal scenarios. To exit an application properly, call
+> [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself).
 
 **Since:** 23
 
@@ -706,7 +717,7 @@ offAbilityLifecycle(callbackId: int): Promise<void>
 
 Unregisters the listener that monitors the ability lifecycle of the application. This API uses a promise to return the result.
 
-&lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
+<p>**NOTE：**: <br>It can be called only by the main thread. </p>
 
 **Since:** 23
 
@@ -748,7 +759,7 @@ Unregister applicationStateChange callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | No | The applicationStateChange callback. |
+| callback | [ApplicationStateChangeCallback](arkts-ability-appabilityapplicationstatechangecallback-applicationstatechangecallback-c.md) | No | The applicationStateChange callback. |
 
 ## offEnvironment
 
@@ -809,7 +820,7 @@ offInteropAbilityLifecycle(callback?: InteropAbilityLifecycleCallback): void
 
 Unregisters the listener that monitors the ability lifecycle of the application for interoperability.
 
-&lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
+<p>**NOTE：**: <br>It can be called only by the main thread. </p>
 
 **Since:** 23
 
@@ -823,7 +834,7 @@ Unregisters the listener that monitors the ability lifecycle of the application 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [InteropAbilityLifecycleCallback](arkts-ability-app-ability-interopabilitylifecyclecallback-interopabilitylifecyclecallback-i.md) | No | Callback used to be unregistered. |
+| callback | [InteropAbilityLifecycleCallback](arkts-ability-appabilityinteropabilitylifecyclecallback-interopabilitylifecyclecallback-i.md) | No | Callback used to be unregistered. |
 
 ## offSystemConfigurationUpdated
 
@@ -833,7 +844,7 @@ offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): v
 
 unregisters a listener for system configuration updated.
 
-&lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
+<p>**NOTE：**: <br>It can be called only by the main thread. </p>
 
 **Since:** 24
 
@@ -991,7 +1002,7 @@ Unregisters the listener for application process state changes. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | Yes | Application process state change. The value is fixed at **'applicationStateChange'**. |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | No | Callback used to return the result. The value can be a callback defined by [ApplicationContext.on('applicationStateChange')](#onabilitylifecycle) or empty.<br>- If a defined callback is passed in, the listener for that callback is unregistered.<br>- If no value is passed in, all the listeners for the corresponding event are unregistered. |
+| callback | [ApplicationStateChangeCallback](arkts-ability-appabilityapplicationstatechangecallback-applicationstatechangecallback-c.md) | No | Callback used to return the result. The value can be a callback defined by [ApplicationContext.on('applicationStateChange')](#onabilitylifecycle) or empty.<br>- If a defined callback is passed in, the listener for that callback is unregistered.<br>- If no value is passed in, all the listeners for the corresponding event are unregistered. |
 
 **Error codes:**
 
@@ -1165,7 +1176,7 @@ Registers a listener to monitor the ability lifecycle of the application. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AbilityLifecycleCallback](arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md) | Yes | Callback triggered when the UIAbility lifecycle changes. |
+| callback | [AbilityLifecycleCallback](arkts-ability-appabilityabilitylifecyclecallback-abilitylifecyclecallback-c.md) | Yes | Callback triggered when the UIAbility lifecycle changes. |
 
 **Return value:**
 
@@ -1193,7 +1204,7 @@ Register applicationStateChange callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | Yes | The applicationStateChange callback. |
+| callback | [ApplicationStateChangeCallback](arkts-ability-appabilityapplicationstatechangecallback-applicationstatechangecallback-c.md) | Yes | The applicationStateChange callback. |
 
 ## onEnvironment
 
@@ -1215,7 +1226,7 @@ Register environment callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | Yes | The environment callback. |
+| callback | [EnvironmentCallback](arkts-ability-appabilityenvironmentcallback-environmentcallback-c.md) | Yes | The environment callback. |
 
 **Return value:**
 
@@ -1231,7 +1242,7 @@ onInteropAbilityLifecycle(callback: InteropAbilityLifecycleCallback): void
 
 Registers a listener to monitor the ability lifecycle of the application for interoperability.
 
-&lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
+<p>**NOTE：**: <br>It can be called only by the main thread. </p>
 
 **Since:** 23
 
@@ -1245,7 +1256,7 @@ Registers a listener to monitor the ability lifecycle of the application for int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [InteropAbilityLifecycleCallback](arkts-ability-app-ability-interopabilitylifecyclecallback-interopabilitylifecyclecallback-i.md) | Yes | Callback used to be registered as the listener. |
+| callback | [InteropAbilityLifecycleCallback](arkts-ability-appabilityinteropabilitylifecyclecallback-interopabilitylifecyclecallback-i.md) | Yes | Callback used to be registered as the listener. |
 
 ## onSystemConfigurationUpdated
 
@@ -1255,7 +1266,7 @@ onSystemConfigurationUpdated(callback: systemConfiguration.UpdatedCallback): voi
 
 Registers a listener for system configuration updated.
 
-&lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
+<p>**NOTE：**: <br>It can be called only by the main thread. </p>
 
 **Since:** 24
 
@@ -1296,7 +1307,7 @@ Registers a listener for the lifecycle of a UIAbility within the application. Th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'abilityLifecycle' | Yes | Lifecycle of the UIAbility within the application. The value is fixed at **'abilityLifecycle'**. |
-| callback | [AbilityLifecycleCallback](arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md) | Yes | Callback triggered when the UIAbility lifecycle changes. |
+| callback | [AbilityLifecycleCallback](arkts-ability-appabilityabilitylifecyclecallback-abilitylifecyclecallback-c.md) | Yes | Callback triggered when the UIAbility lifecycle changes. |
 
 **Return value:**
 
@@ -1390,7 +1401,7 @@ Registers a listener for application process state changes. This API uses an asy
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | Yes | Application process state change. The value is fixed at **'applicationStateChange'**. |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | Yes | Callback triggered when the application process state is changed. |
+| callback | [ApplicationStateChangeCallback](arkts-ability-appabilityapplicationstatechangecallback-applicationstatechangecallback-c.md) | Yes | Callback triggered when the application process state is changed. |
 
 **Error codes:**
 
@@ -1439,9 +1450,20 @@ Registers a listener for system environment changes. This API uses an asynchrono
 
 > **NOTE：**
 > 
-> - You can also use [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate) to &gt; listen for system environment changes. Unlike &gt; [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate) of **Ability**, this &gt; API offers greater flexibility. It can be used both within application components and pages. However, the &gt; environment variables that can be subscribed to are different from those of &gt; [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate). For example, this &gt; API cannot be used to subscribe to direction, screen density, and display ID changes. For details, see the &gt; description of each environment variable in &gt; [Configuration](arkts-ability-app-ability-configuration-configuration-i.md).
+> - You can also use [onConfigurationUpdate](arkts-ability-appabilityability-ability-c.md#onconfigurationupdate) to
+> listen for system environment changes. Unlike
+> [onConfigurationUpdate](arkts-ability-appabilityability-ability-c.md#onconfigurationupdate) of **Ability**, this
+> API offers greater flexibility. It can be used both within application components and pages. However, the
+> environment variables that can be subscribed to are different from those of
+> [onConfigurationUpdate](arkts-ability-appabilityability-ability-c.md#onconfigurationupdate). For example, this
+> API cannot be used to subscribe to direction, screen density, and display ID changes. For details, see the
+> description of each environment variable in
+> [Configuration](arkts-ability-appabilityconfiguration-configuration-i.md).
 > 
-> - There are certain restrictions when this API is triggered. For example, if you set the application language by &gt; calling [setLanguage](#setlanguage), the system does not trigger the &gt; callback for the current API even if the system language changes. For details, see &gt; [When to Use](../../../application-models/subscribe-system-environment-variable-changes.md#when-to-use).
+> - There are certain restrictions when this API is triggered. For example, if you set the application language by
+> calling [setLanguage](#setlanguage), the system does not trigger the
+> callback for the current API even if the system language changes. For details, see
+> [When to Use](../../../application-models/subscribe-system-environment-variable-changes.md#when-to-use).
 
 **Since:** 9
 
@@ -1458,7 +1480,7 @@ Registers a listener for system environment changes. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'environment' | Yes | System environment change, for example, system dark/light color mode change. The value is fixed at **'environment'**. |
-| callback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | Yes | Callback triggered when the system environment changes. |
+| callback | [EnvironmentCallback](arkts-ability-appabilityenvironmentcallback-environmentcallback-c.md) | Yes | Callback triggered when the system environment changes. |
 
 **Return value:**
 
@@ -1514,11 +1536,17 @@ Restarts the application and starts the specified UIAbility. This API can be cal
 
 > **NOTE：**
 > 
-> When this API is called to restart the application, the **onDestroy** lifecycle callback of the ability in the &gt; application is not triggered.
+> When this API is called to restart the application, the **onDestroy** lifecycle callback of the ability in the
+> application is not triggered.
 > 
-> If an atomic service calls this API, &gt; [restartSelfAtomicService()](arkts-ability-abilitymanager-restartselfatomicservice-f.md) &gt; , or [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds after a &gt; successful call to this API, the system returns error code 16000064.
+> If an atomic service calls this API,
+> [restartSelfAtomicService()](arkts-ability-abilitymanager-restartselfatomicservice-f.md)
+> , or [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds after a
+> successful call to this API, the system returns error code 16000064.
 > 
-> If an application calls this API or &gt; [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds after a &gt; successful call to this API, the system returns error code 16000064.
+> If an application calls this API or
+> [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds after a
+> successful call to this API, the system returns error code 16000064.
 
 **Since:** 23
 
@@ -1534,7 +1562,7 @@ Restarts the application and starts the specified UIAbility. This API can be cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the UIAbility to start. No verification is performed on the bundle name passed in. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the UIAbility to start. No verification is performed on the bundle name passed in. |
 
 **Error codes:**
 
@@ -1600,7 +1628,10 @@ Sets the dark/light color mode for the application. This API can be called only 
 
 > **NOTE：**
 > 
-> Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has &gt; been loaded (using the &gt; [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the &gt; [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) lifecycle).
+> Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has
+> been loaded (using the
+> [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the
+> [onWindowStageCreate()](arkts-ability-appabilityuiability-uiability-c.md#onwindowstagecreate) lifecycle).
 
 **Since:** 23
 
@@ -1657,7 +1688,10 @@ Sets the font for this application. This API can be called only on the main thre
 
 > **NOTE：**
 > 
-> Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has &gt; been loaded (using the &gt; [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the &gt; [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) lifecycle).
+> Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has
+> been loaded (using the
+> [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the
+> [onWindowStageCreate()](arkts-ability-appabilityuiability-uiability-c.md#onwindowstagecreate) lifecycle).
 
 **Since:** 23
 
@@ -1767,7 +1801,10 @@ Sets the language for the application. This API can be called only on the main t
 
 > **NOTE：**
 > 
-> Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has &gt; been loaded (using the &gt; [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the &gt; [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) lifecycle).
+> Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has
+> been loaded (using the
+> [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the
+> [onWindowStageCreate()](arkts-ability-appabilityuiability-uiability-c.md#onwindowstagecreate) lifecycle).
 
 **Since:** 23
 
@@ -1827,11 +1864,16 @@ This API can be properly called only on phones and 2-in-1 devices. If it is call
 
 > **NOTE：**
 > 
-> - This API only sets the application to be ready for quick startup after caching. It does not mean that quick &gt; startup will be triggered. Other conditions must be considered to determine whether to trigger quick startup.
+> - This API only sets the application to be ready for quick startup after caching. It does not mean that quick
+> startup will be triggered. Other conditions must be considered to determine whether to trigger quick startup.
 > 
-> - To ensure that this API is effective before the process exits, it should be called as soon as possible. You are &gt; advised to call this API within the **onCreate()** callback of the &gt; [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md).
+> - To ensure that this API is effective before the process exits, it should be called as soon as possible. You are
+> advised to call this API within the **onCreate()** callback of the
+> [AbilityStage](arkts-ability-appabilityabilitystage-abilitystage-c.md).
 > 
-> - If this API is called multiple times within the same process, the outcome of the final call is used. In cases &gt; where there are multiple AbilityStage instances, to achieve the desired result, this API must be called and &gt; configured with the same value in each AbilityStage.
+> - If this API is called multiple times within the same process, the outcome of the final call is used. In cases
+> where there are multiple AbilityStage instances, to achieve the desired result, this API must be called and
+> configured with the same value in each AbilityStage.
 
 **Since:** 23
 
@@ -1896,7 +1938,7 @@ Starts a UIAbility of the current application during the delayed-exit window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the UIAbility to start. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Indicates the UIAbility to start. |
 
 **Return value:**
 

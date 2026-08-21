@@ -55,7 +55,8 @@ Sets a callback to be executed after the follow-hand morph drop animation is com
 
 > **NOTE：**
 > 
-> 1. This API takes effect only when [dragAnimationType](#draganimationtype) is &gt; set to **DragAnimationType.FOLLOW_HAND_MORPH**.
+> 1. This API takes effect only when [dragAnimationType](#draganimationtype) is
+> set to **DragAnimationType.FOLLOW_HAND_MORPH**.
 > 
 > 2. Do not implement logic unrelated to the animation in the callback to avoid affecting execution efficiency.
 

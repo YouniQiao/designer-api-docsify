@@ -12,7 +12,7 @@ import { formObserver } from '@kit.FormKit';
 function onRouter(observerCallback: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Router event listening in registered form. &lt;p&gt;This interface requires permission to receive callback.&lt;/p&gt;
+Router event listening in registered form. <p>This interface requires permission to receive callback.</p>
 
 **起始版本：** 23
 
@@ -45,7 +45,7 @@ Router event listening in registered form. &lt;p&gt;This interface requires perm
 function onRouter(hostBundleName: string, observerCallback: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Router event listening in registered form. &lt;p&gt;This interface requires permission to receive callback.&lt;/p&gt;
+Router event listening in registered form. <p>This interface requires permission to receive callback.</p>
 
 **起始版本：** 23
 

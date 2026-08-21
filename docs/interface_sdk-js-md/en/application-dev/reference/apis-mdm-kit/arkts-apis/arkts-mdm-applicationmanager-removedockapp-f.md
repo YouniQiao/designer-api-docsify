@@ -16,7 +16,8 @@ Removes an application from the shortcut bar.
 
 > **NOTE：**
 > 
-> The following applications cannot be removed from the shortcut bar using this API: Application Center, Task &gt; Center, Files, and Recycle Bin. Otherwise, error code 9201018 will be reported.
+> The following applications cannot be removed from the shortcut bar using this API: Application Center, Task
+> Center, Files, and Recycle Bin. Otherwise, error code 9201018 will be reported.
 
 **Since:** 24
 
@@ -32,7 +33,7 @@ Removes an application from the shortcut bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | bundleName | string | Yes | Bundle name of the application. |
 | abilityName | string | Yes | Ability name of the application. |
 

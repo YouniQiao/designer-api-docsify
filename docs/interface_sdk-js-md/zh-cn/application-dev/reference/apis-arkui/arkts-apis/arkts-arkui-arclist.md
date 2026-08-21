@@ -21,9 +21,9 @@ import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@k
 
 | 名称 | 说明 |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) | 除支持通用属性外，还支持以下属性： |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md) | 除支持通用属性外，还支持以下属性： |
-| [ArkListOptions](arkts-arkui-arkui-arclist-arklistoptions-i.md) | 包含创建ArcList组件的基础参数。 |
+| [ArcListAttribute](arkts-arkui-arkuiarclist-arclistattribute-i.md) | 除支持通用属性外，还支持以下属性： |
+| [ArcListItemAttribute](arkts-arkui-arkuiarclist-arclistitemattribute-i.md) | 除支持通用属性外，还支持以下属性： |
+| [ArkListOptions](arkts-arkui-arkuiarclist-arklistoptions-i.md) | 包含创建ArcList组件的基础参数。 |
 
 ### 类型
 

@@ -57,7 +57,8 @@ Obtains the value of an environment variable.
 
 > **NOTE：**
 > 
-> Obtains the value of an environment variable. If the environment variable does not exist, **undefined** is &gt; returned.
+> Obtains the value of an environment variable. If the environment variable does not exist, **undefined** is
+> returned.
 
 **Since:** 9
 

@@ -775,7 +775,8 @@ setQualityPrioritization(quality: QualityPrioritization): void
 > 
 > - 默认为高录像质量，设置为功耗平衡将降低录像质量以减少功耗。实际功耗收益因平台而异。
 > 
-> - 建议该接口在[commitConfig](arkts-camera-camera-session-i.md#commitconfig)和 &gt; [start](arkts-camera-camera-session-i.md#start)之间调用。
+> - 建议该接口在[commitConfig](arkts-camera-camera-session-i.md#commitconfig)和
+> [start](arkts-camera-camera-session-i.md#start)之间调用。
 
 **起始版本：** 23
 

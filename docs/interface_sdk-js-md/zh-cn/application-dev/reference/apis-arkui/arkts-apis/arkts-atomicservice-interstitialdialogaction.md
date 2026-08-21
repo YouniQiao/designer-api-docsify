@@ -12,19 +12,19 @@ import { InterstitialDialogAction, IconStyle, TitlePosition, BottomOffset } from
 
 | 名称 | 说明 |
 | --- | --- |
-| [InterstitialDialogAction](arkts-arkui-atomicservice-interstitialdialogaction-interstitialdialogaction-c.md) | InterstitialDialogAction弹框在原子化服务中用于在保持当前的上下文环境时，临时展示用户需关注的信息或待处理的操作，用户点击弹框的不同区域可以触发对应的回调动作。 |
+| [InterstitialDialogAction](arkts-arkui-atomicserviceinterstitialdialogaction-interstitialdialogaction-c.md) | InterstitialDialogAction弹框在原子化服务中用于在保持当前的上下文环境时，临时展示用户需关注的信息或待处理的操作，用户点击弹框的不同区域可以触发对应的回调动作。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [DialogOptions](arkts-arkui-atomicservice-interstitialdialogaction-dialogoptions-i.md) | 设置弹框特有的属性以及提供给用户自定义的点击触发动作。 |
+| [DialogOptions](arkts-arkui-atomicserviceinterstitialdialogaction-dialogoptions-i.md) | 设置弹框特有的属性以及提供给用户自定义的点击触发动作。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [BottomOffset](arkts-arkui-atomicservice-interstitialdialogaction-bottomoffset-e.md) | 设置不同情景模式下弹框距离底部的距离，判断依据为是否存在菜单栏，默认显示为不存在菜单栏情况下的距离。 |
-| [IconStyle](arkts-arkui-atomicservice-interstitialdialogaction-iconstyle-e.md) | 设置关闭按钮的色调样式，默认为亮色调。 |
-| [TitlePosition](arkts-arkui-atomicservice-interstitialdialogaction-titleposition-e.md) | 设置主副标题之间的上下相对位置，默认设置为主标题在副标题之上。 |
+| [BottomOffset](arkts-arkui-atomicserviceinterstitialdialogaction-bottomoffset-e.md) | 设置不同情景模式下弹框距离底部的距离，判断依据为是否存在菜单栏，默认显示为不存在菜单栏情况下的距离。 |
+| [IconStyle](arkts-arkui-atomicserviceinterstitialdialogaction-iconstyle-e.md) | 设置关闭按钮的色调样式，默认为亮色调。 |
+| [TitlePosition](arkts-arkui-atomicserviceinterstitialdialogaction-titleposition-e.md) | 设置主副标题之间的上下相对位置，默认设置为主标题在副标题之上。 |
 

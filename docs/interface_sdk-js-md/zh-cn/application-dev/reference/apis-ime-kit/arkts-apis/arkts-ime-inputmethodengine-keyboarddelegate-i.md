@@ -559,7 +559,7 @@ if (inputMethodEngineDelegate) {
 onKeyEvent(callback: InputKeyEventCallback): void
 ```
 
-@brief 订阅硬键盘（即物理键盘）事件。使用callback异步回调。 <br> | 参数名 | 类型 | 必填 | 说明 | | -------- | ------ | ---- | ------------------------------------------------------------ | | callback | [InputKeyEventCallback](arkts-ime-inputmethodengine-inputkeyeventcallback-t.md) | 是 | 回调函数，入参为按键事件信息，返回值类型为布尔类型。 -&nbsp;入参按键事件信息的数据类型为[InputKeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md)。 -&nbsp;若按键事件被事件订阅者消费，则callback应返回true，否则返回false。 |
+@brief 订阅硬键盘（即物理键盘）事件。使用callback异步回调。 <br> | 参数名 | 类型 | 必填 | 说明 | | -------- | ------ | ---- | ------------------------------------------------------------ | | callback | [InputKeyEventCallback](arkts-ime-inputmethodengine-inputkeyeventcallback-t.md) | 是 | 回调函数，入参为按键事件信息，返回值类型为布尔类型。 -&nbsp;入参按键事件信息的数据类型为[InputKeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeyevent-keyevent-i.md)。 -&nbsp;若按键事件被事件订阅者消费，则callback应返回true，否则返回false。 |
 
 **起始版本：** 23
 
@@ -811,7 +811,7 @@ on(type: 'keyEvent', callback: (event: InputKeyEvent) => boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'keyEvent' | 是 | 设置监听类型，固定取值为'keyEvent'。 |
-| callback | (event: InputKeyEvent) =&gt; boolean | 是 | 回调函数，入参为按键事件信息，返回值类型为布尔类型。<br/>- 入参按键事件信息的数据类型为 [InputKeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md)。<br/>- 若按键事件被事件订阅者消费，则callback应返回true，否则返回 false。 |
+| callback | (event: InputKeyEvent) =&gt; boolean | 是 | 回调函数，入参为按键事件信息，返回值类型为布尔类型。<br/>- 入参按键事件信息的数据类型为 [InputKeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeyevent-keyevent-i.md)。<br/>- 若按键事件被事件订阅者消费，则callback应返回true，否则返回 false。 |
 
 **示例**
 

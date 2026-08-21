@@ -4,7 +4,9 @@ This module provides essential functionalities for floating balls. It lets you c
 
 > **NOTE：**
 > 
-> - For the system capability SystemCapability.Window.SessionManager, use &gt; canIUse() to check whether the device supports this system &gt; capability and the corresponding APIs.
+> - For the system capability SystemCapability.Window.SessionManager, use
+> canIUse() to check whether the device supports this system
+> capability and the corresponding APIs.
 
 **Since:** 23
 

@@ -115,7 +115,8 @@ Checks whether an OS account is activated. This API uses an asynchronous callbac
 
 > **NOTE：**
 > 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available &gt; only to system applications.
+> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
+> only to system applications.
 
 **Since:** 9
 
@@ -154,7 +155,8 @@ Checks whether an OS account is activated. This API uses a promise to return the
 
 > **NOTE：**
 > 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available &gt; only to system applications.
+> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
+> only to system applications.
 
 **Since:** 9
 
@@ -198,7 +200,8 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 
 > **NOTE：**
 > 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available &gt; only to system applications.
+> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
+> only to system applications.
 
 **Since:** 9
 
@@ -238,7 +241,8 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 
 > **NOTE：**
 > 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available &gt; only to system applications.
+> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
+> only to system applications.
 
 **Since:** 9
 
@@ -374,7 +378,8 @@ Checks whether this OS account is unlocked. This API uses an asynchronous callba
 
 > **NOTE：**
 > 
-> This API is supported since API version 9 and deprecated since API version 11. You are advised to use &gt; [isOsAccountUnlocked](#isosaccountunlocked) instead.
+> This API is supported since API version 9 and deprecated since API version 11. You are advised to use
+> [isOsAccountUnlocked](#isosaccountunlocked) instead.
 
 **Since:** 9
 
@@ -428,7 +433,8 @@ Checks whether this OS account has been verified. This API uses a promise to ret
 
 > **NOTE：**
 > 
-> This API is supported since API version 9 and deprecated since API version 11. You are advised to use &gt; [isOsAccountUnlocked](#isosaccountunlocked) instead.
+> This API is supported since API version 9 and deprecated since API version 11. You are advised to use
+> [isOsAccountUnlocked](#isosaccountunlocked) instead.
 
 **Since:** 9
 
@@ -480,7 +486,8 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 
 > **NOTE：**
 > 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available &gt; only to system applications.
+> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
+> only to system applications.
 
 **Since:** 9
 
@@ -540,7 +547,8 @@ Checks whether an OS account has been verified. This API uses a promise to retur
 
 > **NOTE：**
 > 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available &gt; only to system applications.
+> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
+> only to system applications.
 
 **Since:** 9
 
@@ -697,7 +705,8 @@ Obtains the number of OS accounts created. This API uses an asynchronous callbac
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getOsAccountCount](#getosaccountcount) instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getOsAccountCount](#getosaccountcount) instead.
 
 **Since:** 7
 
@@ -742,7 +751,8 @@ Obtains the number of OS accounts created. This API uses a promise to return the
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getOsAccountCount](#getosaccountcount) instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getOsAccountCount](#getosaccountcount) instead.
 
 **Since:** 7
 
@@ -785,7 +795,8 @@ Obtains information about the OS account to which the current process belongs. T
 
 > **NOTE：**
 > 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available &gt; only to system applications.
+> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
+> only to system applications.
 
 **Since:** 9
 
@@ -842,7 +853,8 @@ Obtains information about the OS account to which the current process belongs. T
 
 > **NOTE：**
 > 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available &gt; only to system applications.
+> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
+> only to system applications.
 
 **Since:** 9
 
@@ -897,7 +909,9 @@ Obtains the ID of a distributed virtual device. This API uses an asynchronous ca
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [queryDistributedVirtualDeviceId](#querydistributedvirtualdeviceid) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [queryDistributedVirtualDeviceId](#querydistributedvirtualdeviceid)
+> instead.
 
 **Since:** 7
 
@@ -942,7 +956,8 @@ Obtains the ID of this distributed virtual device. This API uses a promise to re
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [queryDistributedVirtualDeviceId](#querydistributedvirtualdeviceid) instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [queryDistributedVirtualDeviceId](#querydistributedvirtualdeviceid) instead.
 
 **Since:** 7
 
@@ -1029,7 +1044,8 @@ Obtains all constraints enabled for an OS account. This API uses an asynchronous
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available &gt; only to system applications.
+> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
+> only to system applications.
 
 **Since:** 7
 
@@ -1060,7 +1076,8 @@ Obtains all constraints enabled for an OS account. This API uses a promise to re
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available &gt; only to system applications.
+> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
+> only to system applications.
 
 **Since:** 7
 
@@ -1096,7 +1113,8 @@ Obtains all constraints enabled for an OS account. This API uses an asynchronous
 
 > **NOTE：**
 > 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available &gt; only to system applications.
+> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
+> only to system applications.
 
 **Since:** 9
 
@@ -1135,7 +1153,8 @@ Obtains all constraints enabled for an OS account. This API uses a promise to re
 
 > **NOTE：**
 > 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available &gt; only to system applications.
+> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
+> only to system applications.
 
 **Since:** 9
 
@@ -1459,7 +1478,9 @@ Obtains the OS account ID based on the SN. This API uses an asynchronous callbac
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber) &gt; instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber)
+> instead.
 
 **Since:** 8
 
@@ -1488,7 +1509,9 @@ Obtains the OS account ID based on the SN. This API uses a promise to return the
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber) &gt; instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber)
+> instead.
 
 **Since:** 8
 
@@ -1794,7 +1817,9 @@ Obtains the OS account ID based on the domain account information. This API uses
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain) &gt; instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain)
+> instead.
 
 **Since:** 8
 
@@ -1841,7 +1866,9 @@ Obtains the OS account ID based on the domain account information. This API uses
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain) &gt; instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain)
+> instead.
 
 **Since:** 8
 
@@ -1891,7 +1918,9 @@ Obtains the ID of the OS account to which the current process belongs. This API 
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getOsAccountLocalId](#getosaccountlocalid) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getOsAccountLocalId](#getosaccountlocalid)
+> instead.
 
 **Since:** 7
 
@@ -1934,7 +1963,8 @@ Obtains the ID of the OS account to which the current process belongs. This API 
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getOsAccountLocalId](#getosaccountlocalid) instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getOsAccountLocalId](#getosaccountlocalid) instead.
 
 **Since:** 7
 
@@ -1975,7 +2005,9 @@ Obtains the OS account ID based on the process UID. This API uses an asynchronou
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getOsAccountLocalIdForUid](#getosaccountlocalidforuid) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getOsAccountLocalIdForUid](#getosaccountlocalidforuid)
+> instead.
 
 **Since:** 7
 
@@ -2004,7 +2036,8 @@ Obtains the OS account ID based on the process UID. This API uses a promise to r
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getOsAccountLocalIdForUid](#getosaccountlocalidforuid) instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getOsAccountLocalIdForUid](#getosaccountlocalidforuid) instead.
 
 **Since:** 7
 
@@ -2261,7 +2294,9 @@ Obtains the type of the account to which the current process belongs. This API u
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getOsAccountType](#getosaccounttype) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getOsAccountType](#getosaccounttype)
+> instead.
 
 **Since:** 7
 
@@ -2304,7 +2339,8 @@ Obtains the type of the account to which the current process belongs. This API u
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getOsAccountType](#getosaccounttype) instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getOsAccountType](#getosaccounttype) instead.
 
 **Since:** 7
 
@@ -2345,7 +2381,9 @@ Obtains the SN of an OS account based on the account ID. This API uses an asynch
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid) &gt; instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid)
+> instead.
 
 **Since:** 8
 
@@ -2374,7 +2412,9 @@ Obtains the SN of an OS account based on the account ID. This API uses a promise
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid) &gt; instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid)
+> instead.
 
 **Since:** 8
 
@@ -2473,7 +2513,9 @@ Checks whether multiple OS accounts are supported. This API uses an asynchronous
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [checkMultiOsAccountEnabled](#checkmultiosaccountenabled) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [checkMultiOsAccountEnabled](#checkmultiosaccountenabled)
+> instead.
 
 **Since:** 7
 
@@ -2516,7 +2558,8 @@ Checks whether multiple OS accounts are supported. This API uses a promise to re
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [checkMultiOsAccountEnabled](#checkmultiosaccountenabled) instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [checkMultiOsAccountEnabled](#checkmultiosaccountenabled) instead.
 
 **Since:** 7
 
@@ -2557,7 +2600,8 @@ Checks whether an OS account is activated. This API uses an asynchronous callbac
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available &gt; only to system applications.
+> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
+> only to system applications.
 
 **Since:** 7
 
@@ -2588,7 +2632,8 @@ Checks whether an OS account is activated. This API uses a promise to return the
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available &gt; only to system applications.
+> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
+> only to system applications.
 
 **Since:** 7
 
@@ -2624,7 +2669,8 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available &gt; only to system applications.
+> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
+> only to system applications.
 
 **Since:** 7
 
@@ -2656,7 +2702,8 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available &gt; only to system applications.
+> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
+> only to system applications.
 
 **Since:** 7
 
@@ -2770,7 +2817,9 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [checkOsAccountVerified](#checkosaccountverified) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [checkOsAccountVerified](#checkosaccountverified)
+> instead.
 
 **Since:** 7
 
@@ -2815,7 +2864,8 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available &gt; only to system applications.
+> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
+> only to system applications.
 
 **Since:** 7
 
@@ -2862,7 +2912,8 @@ Checks whether an OS account has been verified. This API uses a promise to retur
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available &gt; only to system applications.
+> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
+> only to system applications.
 
 **Since:** 7
 
@@ -2911,7 +2962,9 @@ Checks whether this OS account is a test account. This API uses an asynchronous 
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [checkOsAccountTestable](#checkosaccounttestable) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [checkOsAccountTestable](#checkosaccounttestable)
+> instead.
 
 **Since:** 7
 
@@ -2954,7 +3007,8 @@ Checks whether this OS account is a test account. This API uses a promise to ret
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [checkOsAccountTestable](#checkosaccounttestable) instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [checkOsAccountTestable](#checkosaccounttestable) instead.
 
 **Since:** 7
 
@@ -2995,7 +3049,9 @@ Obtains information about all activated OS accounts. This API uses an asynchrono
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getActivatedOsAccountLocalIds](#getactivatedosaccountlocalids) &gt; instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getActivatedOsAccountLocalIds](#getactivatedosaccountlocalids)
+> instead.
 
 **Since:** 8
 
@@ -3041,7 +3097,8 @@ Obtains information about all activated OS accounts. This API uses a promise to 
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getActivatedOsAccountLocalIds](#getactivatedosaccountlocalids) instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getActivatedOsAccountLocalIds](#getactivatedosaccountlocalids) instead.
 
 **Since:** 8
 
@@ -3082,7 +3139,8 @@ Obtains information about the OS account to which the current process belongs. T
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available &gt; only to system applications.
+> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
+> only to system applications.
 
 **Since:** 7
 
@@ -3127,7 +3185,8 @@ Obtains information about the OS account to which the current process belongs. T
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available &gt; only to system applications.
+> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
+> only to system applications.
 
 **Since:** 7
 

@@ -60,7 +60,7 @@ Offset on the y-axis. Unit: vp.
 radius?: double | Resource
 ```
 
-Shadow blur radius. Unit: vp. &lt;p&gt;**NOTE：**: <br>A value less than or equal to 0 is handled as the default value. &lt;/p&gt;
+Shadow blur radius. Unit: vp. <p>**NOTE：**: <br>A value less than or equal to 0 is handled as the default value. </p>
 
 **类型：** double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 

@@ -14,7 +14,7 @@ function getSimOperatorNumericSync(slotId: int): string
 
 Obtains the home PLMN number of the SIM card in a specified slot.
 
-&lt;p&gt;The value is recorded in the SIM card and is irrelevant to the network with which the SIM card is currently registered.
+<p>The value is recorded in the SIM card and is irrelevant to the network with which the SIM card is currently registered.
 
 **起始版本：** 23
 

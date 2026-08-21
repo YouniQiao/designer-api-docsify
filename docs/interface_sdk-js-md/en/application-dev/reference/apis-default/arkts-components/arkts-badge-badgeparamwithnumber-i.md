@@ -20,7 +20,7 @@ count: int
 
 Number of notifications.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: The value must be an integer within [-2147483648,2147483647]. Value constraint: If the value is out of the range, 4294967296 is added or subtracted to ensure that the value is still in the range. If the value is not an integer, the decimal part is rounded off and the integer part is taken. For example, 5 is taken in 5.5.
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: The value must be an integer within [-2147483648,2147483647]. Value constraint: If the value is out of the range, 4294967296 is added or subtracted to ensure that the value is still in the range. If the value is not an integer, the decimal part is rounded off and the integer part is taken. For example, 5 is taken in 5.5.
 
 **Type:** int
 
@@ -40,7 +40,7 @@ Number of notifications.
 maxCount?: int
 ```
 
-Maximum number of notifications. When the maximum number is reached, only maxCount+ is displayed. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: Value range: [-2147483648, 2147483647]. Value constraint: If the value is out of the range, 4294967296 is added or subtracted to ensure that the value is still in the range. If the value is not an integer, the decimal part is rounded off and the integer part is taken. For example, 5 is taken in 5.5.. Default value: 99.
+Maximum number of notifications. When the maximum number is reached, only maxCount+ is displayed. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: Value range: [-2147483648, 2147483647]. Value constraint: If the value is out of the range, 4294967296 is added or subtracted to ensure that the value is still in the range. If the value is not an integer, the decimal part is rounded off and the integer part is taken. For example, 5 is taken in 5.5.. Default value: 99.
 
 **Type:** int
 

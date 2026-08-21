@@ -19,7 +19,8 @@
 > 
 > - 从API version 12开始，ScrollBar组件没有子节点时，支持显示默认样式的滚动条。
 > 
-> - ScrollBar组件的显隐是通过BarState设置，组件内部会自动根据BarState设置调整opacity来控制显隐，因此ScrollBar组件设置 &gt; [opacity](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-opacity.md#opacity18)属性不生效。
+> - ScrollBar组件的显隐是通过BarState设置，组件内部会自动根据BarState设置调整opacity来控制显隐，因此ScrollBar组件设置
+> [opacity](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-opacity.md#opacity18)属性不生效。
 **原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。  
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full  
 | 名称 | 类型 | 只读 | 可选 | 说明 | | -------- | -------- | -------- | -- | -------- | | scroller | [Scroller](arkts-arkui-scroller-c.md) | 否 | 否 | 可滚动组件的控制器。用于与可滚动组件进行绑定。 | | direction | [ScrollBarDirection](../../../reference/apis-arkui/arkui-ts/ts-basic-components-scrollbar.md#scrollbardirection枚举说明) | 否 | 是 | 滚动条的方向，控制可滚动组件对应方向的滚动。<br/>默认值：ScrollBarDirection.Vertical | | state | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 否 | 是 | 滚动条状态。<br/>默认值：BarState.Auto |

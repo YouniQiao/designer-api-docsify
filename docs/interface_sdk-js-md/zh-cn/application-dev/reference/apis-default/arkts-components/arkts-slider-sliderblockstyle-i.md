@@ -40,7 +40,7 @@ shape?: CircleShape | EllipseShape | PathShape | RectShape
 
 设置滑块使用的自定义形状。
 
-**类型：** [CircleShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-circleshape-c.md) \| [EllipseShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-ellipseshape-c.md) \| [PathShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-pathshape-c.md) \| [RectShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-rectshape-c.md)
+**类型：** [CircleShape](../../apis-arkui/arkts-apis/arkts-arkui-arkuishape-circleshape-c.md) \| [EllipseShape](../../apis-arkui/arkts-apis/arkts-arkui-arkuishape-ellipseshape-c.md) \| [PathShape](../../apis-arkui/arkts-apis/arkts-arkui-arkuishape-pathshape-c.md) \| [RectShape](../../apis-arkui/arkts-apis/arkts-arkui-arkuishape-rectshape-c.md)
 
 **起始版本：** 23
 

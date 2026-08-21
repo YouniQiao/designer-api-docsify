@@ -30,6 +30,6 @@
 
 | Name | Description |
 | --- | --- |
-| [WithTheme(Defines WithTheme component.)](arkts-arkui-with-theme-con.md#withtheme) | Defines WithTheme Logic Component. |
-| [WithThemeInstance(Defines WithTheme component.)](arkts-arkui-with-theme-con.md#withthemeinstance) | Defines WithTheme Logic Component Instance. |
+| [WithTheme(Defines WithTheme component.)](arkts-arkui-withtheme-con.md#withtheme) | Defines WithTheme Logic Component. |
+| [WithThemeInstance(Defines WithTheme component.)](arkts-arkui-withtheme-con.md#withthemeinstance) | Defines WithTheme Logic Component Instance. |
 

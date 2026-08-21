@@ -8,7 +8,8 @@ Text组件用于显示文本内容，支持设置字体样式、文本对齐、�
 
 > **说明：**
 > 
-> 使用[子组件](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#子组件)实现 &gt; [图文混排](../../../ui/arkts-text-image-layout.md)场景。
+> 使用[子组件](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#子组件)实现
+> [图文混排](../../../ui/arkts-text-image-layout.md)场景。
 
 ## Text
 

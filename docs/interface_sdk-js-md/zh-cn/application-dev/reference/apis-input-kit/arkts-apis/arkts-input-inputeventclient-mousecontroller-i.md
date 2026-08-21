@@ -36,7 +36,7 @@ beginAxis(axis: Axis, value: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | 是 | 轴类型。 |
+| axis | [Axis](arkts-input-multimodalinputmouseevent-axis-e.md) | 是 | 轴类型。 |
 | value | int | 是 | 轴值。 |
 
 **返回值：**
@@ -112,7 +112,7 @@ endAxis(axis: Axis): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | 是 | 轴类型。 |
+| axis | [Axis](arkts-input-multimodalinputmouseevent-axis-e.md) | 是 | 轴类型。 |
 
 **返回值：**
 
@@ -223,7 +223,7 @@ pressButton(button: Button): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| button | [Button](arkts-input-multimodalinput-mouseevent-button-e.md) | 是 | 要按下的鼠标按键。 |
+| button | [Button](arkts-input-multimodalinputmouseevent-button-e.md) | 是 | 要按下的鼠标按键。 |
 
 **返回值：**
 
@@ -294,7 +294,7 @@ releaseButton(button: Button): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| button | [Button](arkts-input-multimodalinput-mouseevent-button-e.md) | 是 | 要抬起的鼠标按键。 |
+| button | [Button](arkts-input-multimodalinputmouseevent-button-e.md) | 是 | 要抬起的鼠标按键。 |
 
 **返回值：**
 
@@ -336,7 +336,7 @@ updateAxis(axis: Axis, value: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | 是 | 轴类型。 |
+| axis | [Axis](arkts-input-multimodalinputmouseevent-axis-e.md) | 是 | 轴类型。 |
 | value | int | 是 | 轴值。 |
 
 **返回值：**

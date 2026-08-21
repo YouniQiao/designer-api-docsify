@@ -256,9 +256,13 @@ Displays the dialog box for the first time for the user to confirm whether to sa
 
 > **NOTE：**
 > 
-> - After the user agrees to save the asset, the API returns the URI of the created asset that has the save &gt; permission. The application can use the URI to write the image or video.
+> - After the user agrees to save the asset, the API returns the URI of the created asset that has the save
+> permission. The application can use the URI to write the image or video.
 > 
-> - Within 5 minutes after the user agrees to save the asset, if the same application calls this API again, the &gt; system directly returns the authorized URI for the application to save the image or video without displaying a &gt; confirmation dialog box. Exiting the application will terminate the authorization, and the user need to re- &gt; trigger the dialog box for authorization confirmation when the application is re-launched.
+> - Within 5 minutes after the user agrees to save the asset, if the same application calls this API again, the
+> system directly returns the authorized URI for the application to save the image or video without displaying a
+> confirmation dialog box. Exiting the application will terminate the authorization, and the user need to re-
+> trigger the dialog box for authorization confirmation when the application is re-launched.
 
 **Since:** 26.0.0
 
@@ -1451,11 +1455,15 @@ Displays a dialog box for the user to confirm whether to save the images or vide
 
 > **NOTE：**
 > 
-> - If the user agrees, the list of created URIs with the save permission granted is returned. The list is &gt; permanently valid and supports image or video writing. If the user rejects, an empty list is returned.
+> - If the user agrees, the list of created URIs with the save permission granted is returned. The list is
+> permanently valid and supports image or video writing. If the user rejects, an empty list is returned.
 > 
-> - The application name and icon need to be displayed in the dialog box. The name and icon need to be configured &gt; in the **label** and **icon** items in the **abilities** tag of the &gt; [module.json5 configuration file](../../../quick-start/module-configuration-file.md).
+> - The application name and icon need to be displayed in the dialog box. The name and icon need to be configured
+> in the **label** and **icon** items in the **abilities** tag of the
+> [module.json5 configuration file](../../../quick-start/module-configuration-file.md).
 > 
-> - When the passed URI is a sandbox path, images or videos can be saved properly, but the preview is not &gt; displayed.
+> - When the passed URI is a sandbox path, images or videos can be saved properly, but the preview is not
+> displayed.
 
 **Since:** 26.1.0
 
@@ -1496,9 +1504,14 @@ Displays a dialog box for the user to confirm whether to save an image or video.
 
 > **NOTE：**
 > 
-> - If the user agrees to save the images or videos, this API returns a URI that has been created and granted &gt; with the save permission (this URI is permanent), and the application can use this URI to write the image or &gt; video. If the user declines to save the image or video, this API returns an empty string.
+> - If the user agrees to save the images or videos, this API returns a URI that has been created and granted
+> with the save permission (this URI is permanent), and the application can use this URI to write the image or
+> video. If the user declines to save the image or video, this API returns an empty string.
 > 
-> - The dialog box must display the application name, but this cannot be directly obtained. Therefore, before &gt; calling this API, ensure that the **label** and **icon** items are configured in the **abilities** tag in the &gt; [module.json5 configuration file](../../../quick-start/module-configuration-file.md). Note that the icon is &gt; not affected by the **icon** item in the **abilities** tag and cannot be modified.
+> - The dialog box must display the application name, but this cannot be directly obtained. Therefore, before
+> calling this API, ensure that the **label** and **icon** items are configured in the **abilities** tag in the
+> [module.json5 configuration file](../../../quick-start/module-configuration-file.md). Note that the icon is
+> not affected by the **icon** item in the **abilities** tag and cannot be modified.
 > 
 > - If the passed URI is a sandbox path, images or videos can be saved but cannot be previewed.
 

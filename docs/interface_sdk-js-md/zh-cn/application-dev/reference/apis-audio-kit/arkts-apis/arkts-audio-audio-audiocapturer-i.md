@@ -1369,7 +1369,9 @@ setMuteHint(mute: boolean): Promise<void>
 > 
 > - 该接口仅在录音流处于运行态时允许调用，否则返回错误码6800103。
 > 
-> - 同一录音流同时设置流级静音提示接口（本接口）和会话级静音提示接口 &gt; [AudioSessionManager.setCapturerMuteHint](arkts-audio-audio-audiosessionmanager-i.md#setcapturermutehint)时，流级 &gt; [setMuteHint](#setmutehint)优先级更高，数值以流级设置值为准。
+> - 同一录音流同时设置流级静音提示接口（本接口）和会话级静音提示接口
+> [AudioSessionManager.setCapturerMuteHint](arkts-audio-audio-audiosessionmanager-i.md#setcapturermutehint)时，流级
+> [setMuteHint](#setmutehint)优先级更高，数值以流级设置值为准。
 
 **起始版本：** 24
 

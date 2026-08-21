@@ -18,15 +18,15 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [SelectionContainerAttribute](arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | 支持[通用属性](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md)。 |
-| [SelectionContainerEditMenuOptions](arkts-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md) | SelectionContainer自定义编辑菜单选项。 |
-| [SelectionContainerMenuOptions](arkts-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md) | 配置选择菜单中的选项。 |
+| [SelectionContainerAttribute](arkts-arkuicomponentsselectioncontainer-selectioncontainerattribute-i.md) | 支持[通用属性](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md)。 |
+| [SelectionContainerEditMenuOptions](arkts-arkuicomponentsselectioncontainer-selectioncontainereditmenuoptions-i.md) | SelectionContainer自定义编辑菜单选项。 |
+| [SelectionContainerMenuOptions](arkts-arkuicomponentsselectioncontainer-selectioncontainermenuoptions-i.md) | 配置选择菜单中的选项。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [SelectionContainerTextJoinStyle](arkts-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md) | 文本聚合拼接方式。 |
+| [SelectionContainerTextJoinStyle](arkts-arkuicomponentsselectioncontainer-selectioncontainertextjoinstyle-e.md) | 文本聚合拼接方式。 |
 
 ### 类型
 

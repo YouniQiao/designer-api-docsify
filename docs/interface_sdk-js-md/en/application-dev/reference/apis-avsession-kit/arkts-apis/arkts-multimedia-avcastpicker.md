@@ -13,5 +13,5 @@ import { AVCastPickerState, AVCastPickerStyle, AVCastPickerColorMode } from '@ki
 
 | Name | Description |
 | --- | --- |
-| [AVCastPicker](arkts-avsession-multimedia-avcastpicker-avcastpicker-s.md) | A picker view to show available streaming device list. |
+| [AVCastPicker](arkts-avsession-multimediaavcastpicker-avcastpicker-s.md) | A picker view to show available streaming device list. |
 

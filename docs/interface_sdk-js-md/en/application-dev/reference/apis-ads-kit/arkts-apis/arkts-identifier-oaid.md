@@ -4,7 +4,9 @@ This module provides the capability of obtaining and resetting the Open Anonymou
 
 > **NOTE：**
 
-> To use the API for obtaining the OAID, you need to &gt; [request user authorization](../../../security/AccessToken/request-user-authorization.md) (the permission is &gt; enabled by default): ohos.permission.APP_TRACKING_CONSENT.
+> To use the API for obtaining the OAID, you need to
+> [request user authorization](../../../security/AccessToken/request-user-authorization.md) (the permission is
+> enabled by default): ohos.permission.APP_TRACKING_CONSENT.
 
 **Since:** 10
 

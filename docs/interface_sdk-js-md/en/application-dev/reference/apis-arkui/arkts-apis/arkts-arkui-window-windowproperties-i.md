@@ -320,7 +320,7 @@ Window type.
 windowRect: Rect
 ```
 
-Window size, which can be obtained from the page lifecycle onPageShow or the application lifecycle [onForeground](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onforeground).
+Window size, which can be obtained from the page lifecycle onPageShow or the application lifecycle [onForeground](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiability-uiability-c.md#onforeground).
 
 **Type:** Rect
 

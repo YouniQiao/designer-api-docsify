@@ -29,7 +29,8 @@ enableBandwidthCompression(enabled: boolean): void
 
 > **说明：**
 > 
-> 该接口只能在使用[Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig)接口之前调用，否则会影响预览流 &gt; 出流格式。
+> 该接口只能在使用[Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig)接口之前调用，否则会影响预览流
+> 出流格式。
 
 **起始版本：** 23
 

@@ -4,9 +4,13 @@ Provides the AI image analysis options.
 
 > **NOTE：**
 > 
-> The **types** parameter of this API has a higher priority than that of &gt; [ImageAnalyzerConfig](arkts-arkui-imageanalyzerconfig-i.md). This means that, if both parameters are set, the value set by &gt; this API takes precedence.
+> The **types** parameter of this API has a higher priority than that of
+> [ImageAnalyzerConfig](arkts-arkui-imageanalyzerconfig-i.md). This means that, if both parameters are set, the value set by
+> this API takes precedence.
 > 
-> This API depends on device capabilities and must be used together with the &gt; enableAnalyzer API of the corresponding component (for example, the &gt; Image component).
+> This API depends on device capabilities and must be used together with the
+> enableAnalyzer API of the corresponding component (for example, the
+> Image component).
 
 **Since:** 12
 

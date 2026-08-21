@@ -24,7 +24,7 @@ buttonDirection?: DialogButtonOrientation
 
 The arrangement of buttons.
 
-**Type:** [DialogButtonOrientation](arkts-arkui-arkui-dialog-dialogbuttonorientation-e.md)
+**Type:** [DialogButtonOrientation](arkts-arkui-arkuidialog-dialogbuttonorientation-e.md)
 
 **Default:** DialogButtonOrientation.AUTO
 

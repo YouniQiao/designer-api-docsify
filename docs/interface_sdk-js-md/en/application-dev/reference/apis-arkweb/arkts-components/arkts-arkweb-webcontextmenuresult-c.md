@@ -64,7 +64,8 @@ Performs the copy text operation.
 
 > **NOTE：**
 > 
-> After the operation is complete, [closeContextMenu](#closecontextmenu) should be called &gt; to close the menu. Failure to do so may result in menu resources not being properly released.
+> After the operation is complete, [closeContextMenu](#closecontextmenu) should be called
+> to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 9
 
@@ -84,7 +85,8 @@ When **WebContextMenuParam** contains image content, this method is used to copy
 
 > **NOTE：**
 > 
-> After the operation is complete, [closeContextMenu](#closecontextmenu) should be called &gt; to close the menu. Failure to do so may result in menu resources not being properly released.
+> After the operation is complete, [closeContextMenu](#closecontextmenu) should be called
+> to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 9
 
@@ -104,7 +106,8 @@ Performs the cut operation.
 
 > **NOTE：**
 > 
-> After the operation is complete, [closeContextMenu](#closecontextmenu) should be called &gt; to close the menu. Failure to do so may result in menu resources not being properly released.
+> After the operation is complete, [closeContextMenu](#closecontextmenu) should be called
+> to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 9
 
@@ -124,9 +127,12 @@ Performs the paste operation, preserving the original format. If you need to pas
 
 > **NOTE：**
 > 
-> After the operation is complete, [closeContextMenu](#closecontextmenu) should be called &gt; to close the menu. Failure to do so may result in menu resources not being properly released.
+> After the operation is complete, [closeContextMenu](#closecontextmenu) should be called
+> to close the menu. Failure to do so may result in menu resources not being properly released.
 > 
-> The permission &gt; [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) &gt; must be declared.
+> The permission
+> [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard)
+> must be declared.
 
 **Since:** 9
 
@@ -146,9 +152,12 @@ Performs the paste operation related to this context menu. The pasted content ma
 
 > **NOTE：**
 > 
-> After the operation is complete, [closeContextMenu](#closecontextmenu) should be called &gt; to close the menu. Failure to do so may result in menu resources not being properly released.
+> After the operation is complete, [closeContextMenu](#closecontextmenu) should be called
+> to close the menu. Failure to do so may result in menu resources not being properly released.
 > 
-> The permission &gt; [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) &gt; must be declared.
+> The permission
+> [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard)
+> must be declared.
 
 **Since:** 20
 
@@ -166,7 +175,8 @@ Performs the redo operation, which re-executes the revoked operation.
 
 > **NOTE：**
 > 
-> After the operation is complete, [closeContextMenu](#closecontextmenu) should be called &gt; to close the menu. Failure to do so may result in menu resources not being properly released.
+> After the operation is complete, [closeContextMenu](#closecontextmenu) should be called
+> to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 20
 
@@ -184,7 +194,8 @@ Requests the username or password data in the password vault to be automatically
 
 > **NOTE：**
 > 
-> After the operation is complete, [closeContextMenu](#closecontextmenu) should be called &gt; to close the menu. Failure to do so may result in menu resources not being properly released.
+> After the operation is complete, [closeContextMenu](#closecontextmenu) should be called
+> to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 23
 
@@ -202,7 +213,8 @@ Saves the image related to this context menu. Calling this method triggers the d
 
 > **NOTE：**
 > 
-> After the operation is complete, [closeContextMenu](#closecontextmenu) should be called &gt; to close the menu. Failure to do so may result in menu resources not being properly released.
+> After the operation is complete, [closeContextMenu](#closecontextmenu) should be called
+> to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 24
 
@@ -222,7 +234,8 @@ Performs the select all operation.
 
 > **NOTE：**
 > 
-> After the operation is complete, [closeContextMenu](#closecontextmenu) should be called &gt; to close the menu. Failure to do so may result in menu resources not being properly released.
+> After the operation is complete, [closeContextMenu](#closecontextmenu) should be called
+> to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 9
 
@@ -242,7 +255,8 @@ Performs the undo operation, which undoes the last editing operation.
 
 > **NOTE：**
 > 
-> After the operation is complete, [closeContextMenu](#closecontextmenu) should be called &gt; to close the menu. Failure to do so may result in menu resources not being properly released.
+> After the operation is complete, [closeContextMenu](#closecontextmenu) should be called
+> to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 20
 

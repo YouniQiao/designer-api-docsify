@@ -248,7 +248,7 @@ Sets the status code of the resource response.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | Status code of the resource response to set. If the resource request fails or the response status is an error status, refer to [@ohos.web.netErrorList](../arkts-apis/arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) to set the corresponding error code. Common error code scenarios: 404 indicates that the resource does not exist. Check the resource path. 500 indicates an internal server error. Check the server status. 403 indicates no access permission. Apply for the corresponding access permission. 401 indicates unauthorized access. Check the authentication information. Check the network configuration, server status, or resource access permission based on the error code. Avoid setting the error code to ERR_IO_PENDING, which may cause XMLHttpRequest synchronous requests to be blocked. |
+| code | number | Yes | Status code of the resource response to set. If the resource request fails or the response status is an error status, refer to [@ohos.web.netErrorList](../arkts-apis/arkts-arkweb-webneterrorlist-webneterrorlist-e.md) to set the corresponding error code. Common error code scenarios: 404 indicates that the resource does not exist. Check the resource path. 500 indicates an internal server error. Check the server status. 403 indicates no access permission. Apply for the corresponding access permission. 401 indicates unauthorized access. Check the authentication information. Check the network configuration, server status, or resource access permission based on the error code. Avoid setting the error code to ERR_IO_PENDING, which may cause XMLHttpRequest synchronous requests to be blocked. |
 
 ## setResponseData
 
@@ -326,9 +326,12 @@ Sets whether the resource response data is ready.
 
 > **NOTE：**
 > 
-> - In resource request interception scenarios, call setResponseData(), setResponseEncoding(), setResponseMimeType( &gt; ), setResponseHeader(), setResponseCode(), setReasonMessage(), and other methods first to set the response &gt; attributes. Finally, call setResponseIsReady(true) to trigger resource return.
+> - In resource request interception scenarios, call setResponseData(), setResponseEncoding(), setResponseMimeType(
+> ), setResponseHeader(), setResponseCode(), setReasonMessage(), and other methods first to set the response
+> attributes. Finally, call setResponseIsReady(true) to trigger resource return.
 > 
-> - Asynchronous data scenario: Call setResponseIsReady(false) first. After the data is ready, call setResponseData &gt; () and other setting methods, and finally call setResponseIsReady(true) to trigger resource return.
+> - Asynchronous data scenario: Call setResponseIsReady(false) first. After the data is ready, call setResponseData
+> () and other setting methods, and finally call setResponseIsReady(true) to trigger resource return.
 > 
 > - If the calling sequence is incorrect, XMLHttpRequest synchronous requests may be blocked.
 

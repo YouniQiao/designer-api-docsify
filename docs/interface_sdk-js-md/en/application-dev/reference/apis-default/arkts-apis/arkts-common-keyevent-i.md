@@ -76,7 +76,7 @@ intentionCode: IntentionCode
 
 Intention code of a key or modifier keys.
 
-**Type:** [IntentionCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-intentioncode-intentioncode-e.md)
+**Type:** [IntentionCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputintentioncode-intentioncode-e.md)
 
 **Default:** IntentionCode.INTENTION_UNKNOWN
 

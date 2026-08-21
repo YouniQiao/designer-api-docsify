@@ -635,7 +635,8 @@ static sendData(...args: Object[]): void
 > 
 > - 避免在回调函数中调用该方法，否则可能导致消息无法传递到宿主线程。
 > 
-> - 避免在异步函数中调用该方法，否则可能导致消息无法传递到宿主线程。如果在异步函数中使用， &gt; 则需要使用**await**来确保该异步函数在任务中同步执行完成。
+> - 避免在异步函数中调用该方法，否则可能导致消息无法传递到宿主线程。如果在异步函数中使用，
+> 则需要使用**await**来确保该异步函数在任务中同步执行完成。
 > 
 > - 调用该接口时，请确保处理数据的回调函数已在宿主线程注册。
 
@@ -731,7 +732,8 @@ setCloneList(cloneList: Object[] | ArrayBuffer[]): void
 > 
 > - 此接口与[setTransferList](#settransferlist)互斥：同一个ArrayBuffer不能同时设置在transfer列表和clone列表中。
 > 
-> 该接口需搭配 &gt; [@Sendable装饰器](../../../arkts-utils/arkts-sendable.md#sendable装饰器)使用，否则会抛异常。建议开发者使用该装饰器以避免异常。
+> 该接口需搭配
+> [@Sendable装饰器](../../../arkts-utils/arkts-sendable.md#sendable装饰器)使用，否则会抛异常。建议开发者使用该装饰器以避免异常。
 
 **起始版本：** 11
 
@@ -894,7 +896,8 @@ setTransferList(transfer?: ArrayBuffer[]): void
 > 
 > - 此接口与[setCloneList](#setclonelist)互斥：同一个ArrayBuffer不能同时设置在transfer列表和clone列表中。
 > 
-> 此接口可以设置任务池中ArrayBuffer的transfer列表，transfer列表中的ArrayBuffer对象在传输时不会复制buffer内容到工作线程， &gt; 而是转移buffer控制权至工作线程，传输后当前的ArrayBuffer失效。若ArrayBuffer为空，则不会transfer转移。
+> 此接口可以设置任务池中ArrayBuffer的transfer列表，transfer列表中的ArrayBuffer对象在传输时不会复制buffer内容到工作线程，
+> 而是转移buffer控制权至工作线程，传输后当前的ArrayBuffer失效。若ArrayBuffer为空，则不会transfer转移。
 
 **起始版本：** 10
 

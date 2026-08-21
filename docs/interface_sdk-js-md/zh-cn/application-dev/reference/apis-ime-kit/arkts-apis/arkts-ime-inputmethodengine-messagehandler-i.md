@@ -1,14 +1,22 @@
 # MessageHandler
 
 @brief 自定义通信对象。 <br> <br>   
-> **说明：** <br>
-> <br>
-> 开发者可通过注册此对象来接收已绑定当前输入法应用的编辑框应用所发送的自定义通信数据，接收到自定义通信数据时会触发此对象中 <br>
-> [onMessage](#onmessage)回调函数。 <br>
-> <br>
-> 此对象全局唯一，多次注册仅保留最后一次注册的对象及有效性，并触发上一个已注册对象的[onTerminated](#onterminated)回调函 <br>
-> 数。 <br>
-> <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 开发者可通过注册此对象来接收已绑定当前输入法应用的编辑框应用所发送的自定义通信数据，接收到自定义通信数据时会触发此对象中 &lt;br
+&gt; 
+> [onMessage](#onmessage)回调函数。 &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 此对象全局唯一，多次注册仅保留最后一次注册的对象及有效性，并触发上一个已注册对象的[onTerminated](#onterminated)回调函 &lt;br
+&gt; 
+> 数。 &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > 若取消注册全局已注册的对象时，会触发被取消对象中[onTerminated](#onterminated)回调函数。
 
 **起始版本：** 23
@@ -30,10 +38,14 @@ onMessage(msgId: string, msgParam?: ArrayBuffer): void
 ```
 
 @brief 接收已绑定当前输入法应用的编辑框应用发送的自定义数据回调函数。 <br> <br>   
-> **说明：** <br>
-> <br>
-> 当已注册的[MessageHandler](#messagehandler)接收到来自已绑定当前输入法应用的编辑框应用所发送的自定义通信数据时，会触发该回调函数。 <br>
-> <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 当已注册的[MessageHandler](#messagehandler)接收到来自已绑定当前输入法应用的编辑框应用所发送的自定义通信数据时，会触发该回调函数。 &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > msgId为必选参数，msgParam为可选参数。存在收到仅有msgId自定义数据的可能，需与数据发送方确认自定义数据。
 
 **起始版本：** 15
@@ -74,10 +86,14 @@ onTerminated(): void
 ```
 
 @brief 监听对象终止回调函数。 <br> <br>   
-> **说明：** <br>
-> <br>
-> 当应用注册新的[MessageHandler](#messagehandler)对象时，会触发上一个已注册[MessageHandler](#messagehandler)对象的[onTerminated](#onterminated)回调函数。 <br>
-> <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 当应用注册新的[MessageHandler](#messagehandler)对象时，会触发上一个已注册[MessageHandler](#messagehandler)对象的[onTerminated](#onterminated)回调函数。 &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > 当应用取消注册时，会触发当前已注册[MessageHandler](#messagehandler)对象的[onTerminated](#onterminated)回调函数。
 
 **起始版本：** 15
@@ -111,10 +127,14 @@ onMessage: OnMessageCallback
 ```
 
 @brief 接收已绑定当前输入法应用的编辑框应用发送的自定义数据回调函数。 <br> <br>   
-> **说明：** <br>
-> <br>
-> 当已注册的[MessageHandler](#messagehandler)接收到来自已绑定当前输入法应用的编辑框应用所发送的自定义通信数据时，会触发该回调函数。 <br>
-> <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 当已注册的[MessageHandler](#messagehandler)接收到来自已绑定当前输入法应用的编辑框应用所发送的自定义通信数据时，会触发该回调函数。 &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > msgId为必选参数，msgParam为可选参数。存在收到仅有msgId自定义数据的可能，需与数据发送方确认自定义数据。
 
 **类型：** OnMessageCallback
@@ -132,13 +152,20 @@ onTerminated: Callback<void>
 ```
 
 @brief 监听对象终止回调函数。 <br> <br>   
-> **说明：** <br>
-> <br>
-> 当应用注册新的[MessageHandler](#messagehandler)对象时，会触发上一个已注册 <br>
-> [MessageHandler](#messagehandler)对象的 <br>
-> [onTerminated](#onterminated)回调函数。 <br>
-> <br>
-> 当应用取消注册时，会触发当前已注册[MessageHandler](#messagehandler)对象的 <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 当应用注册新的[MessageHandler](#messagehandler)对象时，会触发上一个已注册 &lt;br
+&gt; 
+> [MessageHandler](#messagehandler)对象的 &lt;br
+&gt; 
+> [onTerminated](#onterminated)回调函数。 &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 当应用取消注册时，会触发当前已注册[MessageHandler](#messagehandler)对象的 &lt;br
+&gt; 
 > [onTerminated](#onterminated)回调函数。
 
 **类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;

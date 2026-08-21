@@ -16,7 +16,7 @@
 canOverScroll?: boolean
 ```
 
-设置滚动动画滚动到边界后，是否转换成越界回弹动画。 &lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;。 <br>仅在设置为true，且组件的edgeEffect设置为EdgeEffect.Spring时，使用动画滚动到边界会转换为越界回弹动画， 设置为false时，滚动到边界会直接停止动画，不会转换为越界回弹动画。 &lt;/p&gt;
+设置滚动动画滚动到边界后，是否转换成越界回弹动画。 <p>&lt;strong&gt;说明&lt;/strong&gt;。 <br>仅在设置为true，且组件的edgeEffect设置为EdgeEffect.Spring时，使用动画滚动到边界会转换为越界回弹动画， 设置为false时，滚动到边界会直接停止动画，不会转换为越界回弹动画。 </p>
 
 **类型：** boolean
 
@@ -60,7 +60,7 @@ curve?: Curve | ICurve
 duration?: int
 ```
 
-设置滚动时长。 &lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;。 取值限定为整数。 <br>设置为小于0的值时，按默认值显示。 &lt;/p&gt;
+设置滚动时长。 <p>&lt;strong&gt;说明&lt;/strong&gt;。 取值限定为整数。 <br>设置为小于0的值时，按默认值显示。 </p>
 
 **类型：** int
 

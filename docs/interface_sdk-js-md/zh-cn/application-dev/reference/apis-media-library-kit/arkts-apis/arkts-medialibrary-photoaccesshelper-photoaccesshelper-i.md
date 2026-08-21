@@ -1465,7 +1465,8 @@ showAssetsCreationDialogEx(srcFileUris: Array<string>, creationSettings: Array<C
 > 
 > - 用户同意后，返回已创建并授予保存权限的URI列表，该列表永久有效，支持写入图片/视频。用户拒绝时，返回空列表。
 > 
-> - 弹框需显示应用名称，名称和图标需在[module.json5配置文件](../../../quick-start/module-configuration-file.md)的`abilities`标签中配置 &gt; `label`和`icon`项。
+> - 弹框需显示应用名称，名称和图标需在[module.json5配置文件](../../../quick-start/module-configuration-file.md)的`abilities`标签中配置
+> `label`和`icon`项。
 > 
 > - 当传入URI为沙箱路径时，可正常保存图片或视频，但不显示界面预览。
 
@@ -1510,7 +1511,8 @@ showSingleAssetCreationDialogEx(srcFileUri: string, creationSetting: CreationSet
 > 
 > - 如果用户同意保存，将返回一个已创建并授予保存权限的URI（此URI永久生效），应用可使用这个URI写入图片或视频。如果用户拒绝保存，将返回一个空字符串。
 > 
-> - 弹框需显示应用名称，但无法直接获取。因此，调用此接口时，请确保[module.json5配置文件](../../../quick-start/module-configuration-file.md)中的 &gt; `abilities`标签已配置`label`和`icon`项。需要注意的是，图标不受`abilities`标签中的`icon`项影响，不支持修改。
+> - 弹框需显示应用名称，但无法直接获取。因此，调用此接口时，请确保[module.json5配置文件](../../../quick-start/module-configuration-file.md)中的
+> `abilities`标签已配置`label`和`icon`项。需要注意的是，图标不受`abilities`标签中的`icon`项影响，不支持修改。
 > 
 > - 当传入URI为沙箱路径时，可正常保存图片/视频，但无界面预览。
 

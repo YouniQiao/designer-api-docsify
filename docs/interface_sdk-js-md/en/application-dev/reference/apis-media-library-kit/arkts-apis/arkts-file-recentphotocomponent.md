@@ -12,20 +12,20 @@ import { RecentPhotoComponent, RecentPhotoCheckResultCallback, RecentPhotoInfo, 
 
 | Name | Description |
 | --- | --- |
-| [RecentPhotoInfo](arkts-medialibrary-file-recentphotocomponent-recentphotoinfo-c.md) | Represents information about the recent image or video. |
-| [RecentPhotoOptions](arkts-medialibrary-file-recentphotocomponent-recentphotooptions-c.md) | Represents the configuration of the recent image or video. |
+| [RecentPhotoInfo](arkts-medialibrary-filerecentphotocomponent-recentphotoinfo-c.md) | Represents information about the recent image or video. |
+| [RecentPhotoOptions](arkts-medialibrary-filerecentphotocomponent-recentphotooptions-c.md) | Represents the configuration of the recent image or video. |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [RecentPhotoComponent](arkts-medialibrary-file-recentphotocomponent-recentphotocomponent-s.md) | RecentPhotoComponent({ recentPhotoOptions?: RecentPhotoOptions, onRecentPhotoCheckResult?: RecentPhotoCheckResultCallback, onRecentPhotoClick: RecentPhotoClickCallback, onRecentPhotoCheckInfo?: RecentPhotoCheckInfoCallback, }) |
+| [RecentPhotoComponent](arkts-medialibrary-filerecentphotocomponent-recentphotocomponent-s.md) | RecentPhotoComponent({ recentPhotoOptions?: RecentPhotoOptions, onRecentPhotoCheckResult?: RecentPhotoCheckResultCallback, onRecentPhotoClick: RecentPhotoClickCallback, onRecentPhotoCheckInfo?: RecentPhotoCheckInfoCallback, }) |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [PhotoSource](arkts-medialibrary-file-recentphotocomponent-photosource-e.md) | Enumerates the sources of the image or video data. |
+| [PhotoSource](arkts-medialibrary-filerecentphotocomponent-photosource-e.md) | Enumerates the sources of the image or video data. |
 
 ### Types
 

@@ -4,7 +4,8 @@ The **inputConsumer** module implements listening for combination key events as 
 
 > **NOTE：**
 > 
-> - Global shortcut keys are combination keys defined by the system or application. System shortcut keys are defined &gt; by the system, and application shortcut keys are defined by applications.
+> - Global shortcut keys are combination keys defined by the system or application. System shortcut keys are defined
+> by the system, and application shortcut keys are defined by applications.
 
 **Since:** 23
 

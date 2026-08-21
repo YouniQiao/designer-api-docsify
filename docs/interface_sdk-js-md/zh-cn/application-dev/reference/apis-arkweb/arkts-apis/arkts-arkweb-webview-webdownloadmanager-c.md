@@ -60,7 +60,8 @@ static setDownloadDelegate(delegate: WebDownloadDelegate): void
 
 > **说明：**
 > 
-> - 在调用本接口前，若尚未创建Web组件且未执行[initializeWebEngine](arkts-arkweb-webview-webviewcontroller-c.md#initializewebengine)方法，必须先调用该方法完成 &gt; Web内核初始化，否则接口调用无效。
+> - 在调用本接口前，若尚未创建Web组件且未执行[initializeWebEngine](arkts-arkweb-webview-webviewcontroller-c.md#initializewebengine)方法，必须先调用该方法完成
+> Web内核初始化，否则接口调用无效。
 
 **起始版本：** 11
 

@@ -4,7 +4,8 @@ Inherits from the [StyledString](arkts-arkui-styledstring-c.md) class.
 
 > **An exception is thrown in the following cases:**
 > 
-> If the values of **start** and **length** are out of the acceptable range or if any mandatory parameter is passed &gt; as **undefined**, an exception is thrown.
+> If the values of **start** and **length** are out of the acceptable range or if any mandatory parameter is passed
+> as **undefined**, an exception is thrown.
 > 
 > **styledKey** or **styledValue** is set to an invalid value or they do not match.
 

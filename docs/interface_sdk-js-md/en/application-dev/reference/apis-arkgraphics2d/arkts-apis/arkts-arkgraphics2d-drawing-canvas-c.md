@@ -6,10 +6,12 @@ A carrier that carries the drawn content and drawing status.
 > 
 > - This module uses the physical pixel unit, px.
 > 
-> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
+> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
+> transitions.
 > 
 > 
-> The canvas comes with a default brush. The brush is black, has anti-aliasing enabled, and has no other style &gt; effects. This default brush is used when no brush or pen is actively set in the canvas.
+> The canvas comes with a default brush. The brush is black, has anti-aliasing enabled, and has no other style
+> effects. This default brush is used when no brush or pen is actively set in the canvas.
 
 **Since:** 23
 
@@ -33,7 +35,8 @@ Attaches a brush to the canvas. When you draw on the canvas, the brush's style i
 
 > **NOTE：**
 > 
-> If the brush effect changes after this API is called, you must call the API again if you want to use the new &gt; effect in the subsequent drawing.
+> If the brush effect changes after this API is called, you must call the API again if you want to use the new
+> effect in the subsequent drawing.
 
 **Since:** 23
 
@@ -63,7 +66,8 @@ Attaches a pen to the canvas. When you draw on the canvas, the pen's style is us
 
 > **NOTE：**
 > 
-> If the pen effect changes after this API is called, you must call the API again if you want to use the new &gt; effect in the subsequent drawing.
+> If the pen effect changes after this API is called, you must call the API again if you want to use the new
+> effect in the subsequent drawing.
 
 **Since:** 23
 

@@ -4,10 +4,18 @@ Use **OffscreenCanvasRenderingContext2D** to draw shapes, images, and text offsc
 
 > **NOTE：**
 > 
-> **OffscreenCanvasRenderingContext2D** cannot be used in **ServiceExtensionAbility**. It is &gt; recommended that you use the &gt; [drawing module](../../../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing.md) &gt; for offscreen rendering in **ServiceExtensionAbility**.
+> **OffscreenCanvasRenderingContext2D** cannot be used in **ServiceExtensionAbility**. It is
+> recommended that you use the
+> [drawing module](../../../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing.md)
+> for offscreen rendering in **ServiceExtensionAbility**.
 > 
-> The following path-related APIs apply only to paths created within &gt; **OffscreenCanvasRenderingContext2D** and do not affect paths defined in &gt; [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) &gt; or [Path2D](arkts-arkui-path2d-c.md):
-> [beginPath](#beginpath), [moveTo](#moveto), [lineTo](#lineto), [closePath](#closepath), &gt; [bezierCurveTo](#beziercurveto), [quadraticCurveTo](#quadraticcurveto), [arc](#arc), &gt; [arcTo](#arcto), [ellipse](#ellipse), [rect](#rect), and [roundRect](#roundrect20).
+> The following path-related APIs apply only to paths created within
+> **OffscreenCanvasRenderingContext2D** and do not affect paths defined in
+> [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)
+> or [Path2D](arkts-arkui-path2d-c.md):
+> [beginPath](#beginpath), [moveTo](#moveto), [lineTo](#lineto), [closePath](#closepath),
+> [bezierCurveTo](#beziercurveto), [quadraticCurveTo](#quadraticcurveto), [arc](#arc),
+> [arcTo](#arcto), [ellipse](#ellipse), [rect](#rect), and [roundRect](#roundrect20).
 
 **Inheritance/Implementation:** OffscreenCanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md)
 

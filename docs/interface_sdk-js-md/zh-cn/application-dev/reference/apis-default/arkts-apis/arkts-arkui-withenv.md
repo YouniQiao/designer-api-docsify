@@ -17,5 +17,5 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [WithEnvAttribute](arkts-arkui-withenv-withenvattribute-i.md) | 定义WithEnv组件的属性功能。 |
+| [WithEnvAttribute](arkts-arkuiwithenv-withenvattribute-i.md) | 定义WithEnv组件的属性功能。 |
 

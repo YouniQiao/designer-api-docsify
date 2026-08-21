@@ -706,7 +706,10 @@ Specifies the text content and text matching pattern of the component.
 
 > **NOTE：**
 > 
-> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel) &gt; of a component is set to **no** or **no-hide-descendants**, this API can be used to specify the text attribute of &gt; the target component for searching for the component. In this case, the [On.text()](#text) API does not &gt; take effect.
+> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel)
+> of a component is set to **no** or **no-hide-descendants**, this API can be used to specify the text attribute of
+> the target component for searching for the component. In this case, the [On.text()](#text) API does not
+> take effect.
 
 **Since:** 23
 
@@ -840,7 +843,10 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 
 > **NOTE：**
 > 
-> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel) &gt; of a component is set to **no** or **no-hide-descendants**, this API cannot be used to specify the text attribute &gt; of the target component for searching for the component. In this case, you can use the &gt; [On.originalText()](#originaltext) API.
+> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel)
+> of a component is set to **no** or **no-hide-descendants**, this API cannot be used to specify the text attribute
+> of the target component for searching for the component. In this case, you can use the
+> [On.originalText()](#originaltext) API.
 
 **Since:** 23
 

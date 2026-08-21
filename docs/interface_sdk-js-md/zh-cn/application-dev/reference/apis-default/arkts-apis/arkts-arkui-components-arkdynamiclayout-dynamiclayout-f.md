@@ -38,5 +38,5 @@ export declare function DynamicLayout (
 
 | 类型 | 说明 |
 | --- | --- |
-| [DynamicLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutattribute-c.md) |  |
+| [DynamicLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkuicomponentsarkdynamiclayout-dynamiclayoutattribute-c.md) |  |
 

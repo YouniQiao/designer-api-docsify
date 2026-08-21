@@ -234,7 +234,7 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined,
 
 默认在输入控件失去焦点时，关闭自定义键盘。
 
-自定义键盘支持接续功能，使用 [setCustomKeyboardContinueFeature](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#setcustomkeyboardcontinuefeature)接口，可以设置自定 义键盘之间切换时是否接续。
+自定义键盘支持接续功能，使用 [setCustomKeyboardContinueFeature](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#setcustomkeyboardcontinuefeature)接口，可以设置自定 义键盘之间切换时是否接续。
 
 > **说明：**
 > 
@@ -299,7 +299,7 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 与[bindSelectionMenu](#bindselectionmenu)的区别：editMenuOptions在系统默认菜单风格基础上添加扩展项，触发条件不变，适合仅需扩展 菜单项的场景；bindSelectionMenu完全自定义菜单风格和触发条件，适合需要深度自定义菜单的场景。
 
-调用[disableMenuItems](../../apis-default/arkts-apis/arkts-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或 [disableSystemServiceMenuItems](../../apis-default/arkts-apis/arkts-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本 选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。
+调用[disableMenuItems](../../apis-default/arkts-apis/arkts-arkuiuicontext-textmenucontroller-c.md#disablemenuitems)或 [disableSystemServiceMenuItems](../../apis-default/arkts-apis/arkts-arkuiuicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本 选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。
 
 > **说明：**
 > 
@@ -1007,7 +1007,7 @@ onWillAttachIME(callback: Callback<IMEClient> | undefined)
 
 <!--Del-->
 
-从API版本26.0.0开始，在输入框将要绑定输入法前，可以通过`UIContext`的系统接口 [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c-sys.md#setkeyboardappearanceconfig)设置键盘的样式。&lt;!--DelEnd- -&gt;
+从API版本26.0.0开始，在输入框将要绑定输入法前，可以通过`UIContext`的系统接口 [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-arkuiuicontext-uicontext-c-sys.md#setkeyboardappearanceconfig)设置键盘的样式。&lt;!--DelEnd- -&gt;
 
 **起始版本：** 22
 

@@ -16,7 +16,9 @@ function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCall
 
 > **说明：**
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用 &gt; [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md) &gt; 替代。
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)
+> 替代。
 
 **起始版本：** 8
 
@@ -64,7 +66,8 @@ function createRotationMatrix(rotationVector: Array<number>): Promise<Array<numb
 
 > **说明：**
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用 &gt; [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)替代。
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)替代。
 
 **起始版本：** 8
 
@@ -116,7 +119,9 @@ function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>
 
 > **说明：**
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用 &gt; [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md) &gt; 替代。
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)
+> 替代。
 
 **起始版本：** 8
 
@@ -163,7 +168,8 @@ function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>
 
 > **说明：**
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用 &gt; [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)替代。
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)替代。
 
 **起始版本：** 8
 

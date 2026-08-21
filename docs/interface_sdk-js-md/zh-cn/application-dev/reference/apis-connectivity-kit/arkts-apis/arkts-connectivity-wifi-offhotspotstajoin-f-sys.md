@@ -17,7 +17,7 @@ function off(type: 'hotspotStaJoin', callback?: Callback<StationInfo>): void
 
 取消订阅WLAN热点STA加入事件。
 
-&lt;p&gt;如果没有指定callback参数，将取消注册该事件关联的所有回调函数。&lt;/p&gt;
+<p>如果没有指定callback参数，将取消注册该事件关联的所有回调函数。</p>
 
 **起始版本：** 7
 

@@ -11,20 +11,20 @@
 
 | Name | Description |
 | --- | --- |
-| [RecentPhotoInfo](arkts-file-recentphotocomponent-recentphotoinfo-c.md) | Recent photo info |
-| [RecentPhotoOptions](arkts-file-recentphotocomponent-recentphotooptions-c.md) | RecentPhotoOptions Object |
+| [RecentPhotoInfo](arkts-filerecentphotocomponent-recentphotoinfo-c.md) | Recent photo info |
+| [RecentPhotoOptions](arkts-filerecentphotocomponent-recentphotooptions-c.md) | RecentPhotoOptions Object |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [RecentPhotoComponent](arkts-file-recentphotocomponent-recentphotocomponent-s.md) | Declare struct RecentPhotoComponent |
+| [RecentPhotoComponent](arkts-filerecentphotocomponent-recentphotocomponent-s.md) | Declare struct RecentPhotoComponent |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [PhotoSource](arkts-file-recentphotocomponent-photosource-e.md) | Enumeration of PhotoSource type |
+| [PhotoSource](arkts-filerecentphotocomponent-photosource-e.md) | Enumeration of PhotoSource type |
 
 ### Types
 

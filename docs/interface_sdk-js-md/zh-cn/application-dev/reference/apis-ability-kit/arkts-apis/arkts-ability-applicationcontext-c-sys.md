@@ -225,7 +225,7 @@ registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallb
 
 注册监听应用内UIAbility的生命周期。使用callback异步回调。
 
-&lt;p&gt;**说明：**: <br>仅支持主线程调用。 &lt;/p&gt;
+<p>**说明：**: <br>仅支持主线程调用。 </p>
 
 **起始版本：** 9
 
@@ -245,7 +245,7 @@ registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallb
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| abilityLifecycleCallback | [AbilityLifecycleCallback](arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md) | 是 | UIAbility生命周期变化时触发的回调方法。 |
+| abilityLifecycleCallback | [AbilityLifecycleCallback](arkts-ability-appabilityabilitylifecyclecallback-abilitylifecyclecallback-c.md) | 是 | UIAbility生命周期变化时触发的回调方法。 |
 
 **返回值：**
 
@@ -261,7 +261,7 @@ registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number
 
 注册对系统环境变化的监听。使用callback异步回调。
 
-&lt;p&gt;**说明：**: <br>仅支持主线程调用。 &lt;/p&gt;
+<p>**说明：**: <br>仅支持主线程调用。 </p>
 
 **起始版本：** 9
 
@@ -281,7 +281,7 @@ registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| environmentCallback | [EnvironmentCallback](../../apis-default/arkts-apis/arkts-app-ability-environmentcallback-environmentcallback-i.md) | 是 | 系统环境变化时触发的回调方法。 |
+| environmentCallback | [EnvironmentCallback](../../apis-default/arkts-apis/arkts-appabilityenvironmentcallback-environmentcallback-i.md) | 是 | 系统环境变化时触发的回调方法。 |
 
 **返回值：**
 
@@ -297,7 +297,7 @@ unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<v
 
 取消监听应用内UIAbility的生命周期。使用callback异步回调。
 
-&lt;p&gt;**说明：**: <br>仅支持主线程调用。 &lt;/p&gt;
+<p>**说明：**: <br>仅支持主线程调用。 </p>
 
 **起始版本：** 9
 
@@ -328,7 +328,7 @@ unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>
 
 取消监听应用内UIAbility的生命周期。使用Promise异步回调。
 
-&lt;p&gt;**说明：**: <br>仅支持主线程调用。 &lt;/p&gt;
+<p>**说明：**: <br>仅支持主线程调用。 </p>
 
 **起始版本：** 9
 
@@ -370,7 +370,7 @@ unregisterEnvironmentCallback(callbackId: number, envcallback: AsyncCallback<voi
 
 取消对系统环境变化的监听。使用callback异步回调。
 
-&lt;p&gt;**说明：**: <br>仅支持主线程调用。 &lt;/p&gt;
+<p>**说明：**: <br>仅支持主线程调用。 </p>
 
 **起始版本：** 9
 

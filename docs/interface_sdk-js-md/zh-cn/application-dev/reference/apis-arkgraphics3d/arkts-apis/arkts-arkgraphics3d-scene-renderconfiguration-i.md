@@ -20,7 +20,7 @@ shadowResolution?: Vec2
 
 **类型：** [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md)
 
-**默认值：** { 1024, 1024 }
+**默认值：** undefined
 
 **起始版本：** 23
 

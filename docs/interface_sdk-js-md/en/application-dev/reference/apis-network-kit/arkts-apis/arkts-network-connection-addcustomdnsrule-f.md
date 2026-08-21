@@ -16,7 +16,9 @@ Adds custom DNS rules for the specified host of the current application. This AP
 
 > **NOTE：**
 > 
-> You can call [removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md) to delete a custom DNS rule or call &gt; [clearCustomDnsRules](arkts-network-connection-clearcustomdnsrules-f.md) to delete all custom DNS rules of the current &gt; application.
+> You can call [removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md) to delete a custom DNS rule or call
+> [clearCustomDnsRules](arkts-network-connection-clearcustomdnsrules-f.md) to delete all custom DNS rules of the current
+> application.
 
 **Since:** 11
 
@@ -72,7 +74,9 @@ Adds custom DNS rules for the specified host of the current application. This AP
 
 > **NOTE：**
 > 
-> You can call [removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md) to delete a custom DNS rule or call &gt; [clearCustomDnsRules](arkts-network-connection-clearcustomdnsrules-f.md) to delete all custom DNS rules of the current &gt; application.
+> You can call [removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md) to delete a custom DNS rule or call
+> [clearCustomDnsRules](arkts-network-connection-clearcustomdnsrules-f.md) to delete all custom DNS rules of the current
+> application.
 
 **Since:** 11
 

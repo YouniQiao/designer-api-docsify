@@ -4,7 +4,8 @@
 
 > **说明：**
 > 
-> ColumnLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为DynamicLayout组件 &gt; 的入参指定布局算法。
+> ColumnLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为DynamicLayout组件
+> 的入参指定布局算法。
 
 **继承/实现关系：** ColumnLayoutAlgorithm implements [LayoutAlgorithm](../../apis-default/arkts-apis/arkts-layoutalgorithm-i.md)
 

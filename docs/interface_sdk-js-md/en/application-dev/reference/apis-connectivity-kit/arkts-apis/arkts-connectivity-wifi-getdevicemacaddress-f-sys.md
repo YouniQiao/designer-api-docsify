@@ -17,7 +17,7 @@ function getDeviceMacAddress(): string[]
 
 Obtains the MAC address of a Wi-Fi device. Wi-Fi must be enabled.
 
-&lt;p&gt;The MAC address is unique and cannot be changed.
+<p>The MAC address is unique and cannot be changed.
 
 **Since:** 7
 

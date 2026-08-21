@@ -4,7 +4,9 @@ TypedFrameNode继承自[FrameNode](arkts-framenode-framenodeoptions-i.md)，用�
 
 > **说明：**
 > 
-> commonAttribute仅在CustomFrameNode上生效，TypedFrameNode上commonAttribute行为未定义。建议使用 &gt; attribute接口而非 &gt; commonAttribute接口进行通用属性设置，如node.attribute.backgroundColor(Color.Pink)。
+> commonAttribute仅在CustomFrameNode上生效，TypedFrameNode上commonAttribute行为未定义。建议使用
+> attribute接口而非
+> commonAttribute接口进行通用属性设置，如node.attribute.backgroundColor(Color.Pink)。
 
 **继承/实现关系：** TypedFrameNode extends [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md)
 

@@ -179,8 +179,10 @@ hideKeyboard(callback: AsyncCallback<void>): void
 ```
 
 @brief 隐藏输入法。使用callback异步回调。 <br> <br>   
-> **说明：** <br>
-> <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > 从 API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
@@ -220,8 +222,10 @@ hideKeyboard(): Promise<void>
 ```
 
 @brief 隐藏输入法。使用promise异步回调。 <br> <br>   
-> **说明：** <br>
-> <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > 从 API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8

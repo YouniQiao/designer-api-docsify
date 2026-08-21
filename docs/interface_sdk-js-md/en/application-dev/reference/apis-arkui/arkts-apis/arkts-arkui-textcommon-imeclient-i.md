@@ -32,7 +32,7 @@ Used to set extra config to the input component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [InputMethodExtraConfig](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-extraconfig-inputmethodextraconfig-i.md) | Yes | The extra config object. |
+| config | [InputMethodExtraConfig](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodextraconfig-inputmethodextraconfig-i.md) | Yes | The extra config object. |
 
 ## nodeId
 

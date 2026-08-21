@@ -47,9 +47,12 @@ A constructor used to create a text line height and multiple.
 
 > **NOTE：**
 > 
-> - When **lineHeightMultiple** is set together with **lineHeight** or [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md), &gt; only **lineHeightMultiple** takes effect. The line height is the product of the highest font height in the line &gt; and the multiplier.
+> - When **lineHeightMultiple** is set together with **lineHeight** or [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md),
+> only **lineHeightMultiple** takes effect. The line height is the product of the highest font height in the line
+> and the multiplier.
 > 
-> - When **lineHeightMultiple** is less than 0 or **undefined**, it does not take effect. Use **lineHeight** and &gt; [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md) to set the line height and line spacing.
+> - When **lineHeightMultiple** is less than 0 or **undefined**, it does not take effect. Use **lineHeight** and
+> [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md) to set the line height and line spacing.
 > 
 > - When **lineHeightMultiple** is set to 0, it is equivalent to setting it to 1.
 

@@ -342,7 +342,8 @@ Displays the Picker once more after the screen capture starts, allowing for dyna
 > 
 > - The ongoing capture process remains uninterrupted while updating the recording source.
 > 
-> - Following the dynamic update of the recording source through the Picker, the capture proceeds with the newly &gt; selected source.
+> - Following the dynamic update of the recording source through the Picker, the capture proceeds with the newly
+> selected source.
 
 **Since:** 23
 

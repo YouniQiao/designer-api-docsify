@@ -184,7 +184,8 @@ destroy(callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [destroyWindow()](#destroywindow)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [destroyWindow()](#destroywindow)替代。
 
 **起始版本：** 7
 
@@ -808,7 +809,7 @@ getUIContext() : UIContext
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | 返回UIContext实例对象。 |
+| [UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md) | 返回UIContext实例对象。 |
 
 **错误码：**
 
@@ -834,7 +835,7 @@ getWindowAvoidArea(type: AvoidAreaType): AvoidArea
 
 该接口一般适用于两种场景：
 
-- 在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)方法中，获取应用启动时的初始布局避让区域时可 调用该接口。 - 当应用内子窗需要临时显示，对显示内容做布局避让时可调用该接口。
+- 在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiability-uiability-c.md#onwindowstagecreate)方法中，获取应用启动时的初始布局避让区域时可 调用该接口。 - 当应用内子窗需要临时显示，对显示内容做布局避让时可调用该接口。
 
 **起始版本：** 23
 
@@ -1181,7 +1182,11 @@ getWindowStatus(): WindowStatusType
 
 > **说明：**
 > 
-> 在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，应用的 &gt; [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置小于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有 &gt; dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::FULL_SCREEN。应用的 &gt; [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置大于等于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有 &gt; dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::MAXIMIZE。
+> 在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，应用的
+> [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置小于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有
+> dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::FULL_SCREEN。应用的
+> [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置大于等于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有
+> dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::MAXIMIZE。
 
 **起始版本：** 23
 
@@ -1586,7 +1591,8 @@ isSupportWideGamut(): Promise<boolean>
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用 &gt; [isWindowSupportWideGamut()](#iswindowsupportwidegamut)替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [isWindowSupportWideGamut()](#iswindowsupportwidegamut)替代。
 
 **起始版本：** 8
 
@@ -1614,7 +1620,8 @@ isSupportWideGamut(callback: AsyncCallback<boolean>): void
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用 &gt; [isWindowSupportWideGamut()](#iswindowsupportwidegamut)替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [isWindowSupportWideGamut()](#iswindowsupportwidegamut)替代。
 
 **起始版本：** 8
 
@@ -1904,7 +1911,8 @@ loadContent(path: string, callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [setUIContent()](#setuicontent)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setUIContent()](#setuicontent)替代。
 
 **起始版本：** 7
 
@@ -2308,7 +2316,8 @@ moveTo(x: number, y: number, callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [moveWindowTo()](#movewindowto)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [moveWindowTo()](#movewindowto)替代。
 
 **起始版本：** 7
 
@@ -2338,11 +2347,14 @@ moveWindowTo(x: int, y: int): Promise<void>
 
 > **说明：**
 > 
-> - 不建议在除自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，WindowStatusType可通过 &gt; [getWindowStatus()](#getwindowstatus)获取）外的其他窗口模式下使用。
+> - 不建议在除自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，WindowStatusType可通过
+> [getWindowStatus()](#getwindowstatus)获取）外的其他窗口模式下使用。
 > 
 > - 在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，窗口相对于屏幕左上顶点移动；在非自由窗口状态下，窗口相对于父窗口左上顶点移动。
 > 
-> - 若需在非自由窗口状态下实现相对于屏幕左上顶点的移动，请使用 &gt; [moveWindowToGlobal()](#movewindowtoglobal) &gt; 。
+> - 若需在非自由窗口状态下实现相对于屏幕左上顶点的移动，请使用
+> [moveWindowToGlobal()](#movewindowtoglobal)
+> 。
 > 
 > - 该方法对非自由窗口状态下的主窗口无效。
 > 
@@ -2387,11 +2399,14 @@ moveWindowTo(x: int, y: int, callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> - 不建议在除自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，WindowStatusType可通过 &gt; [getWindowStatus()](#getwindowstatus)获取）外的其他窗口模式下使用。
+> - 不建议在除自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，WindowStatusType可通过
+> [getWindowStatus()](#getwindowstatus)获取）外的其他窗口模式下使用。
 > 
 > - 在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，窗口相对于屏幕左上顶点移动；在非自由窗口状态下，窗口相对于父窗口左上顶点移动。
 > 
-> - 若需在非自由窗口状态下实现相对于屏幕左上顶点的移动，请使用 &gt; [moveWindowToGlobal()](#movewindowtoglobal) &gt; 。
+> - 若需在非自由窗口状态下实现相对于屏幕左上顶点的移动，请使用
+> [moveWindowToGlobal()](#movewindowtoglobal)
+> 。
 > 
 > - 该方法对非自由窗口状态下的主窗口无效。
 > 
@@ -3923,7 +3938,9 @@ off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [off('avoidAreaChange')](#offrotationchange) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [off('avoidAreaChange')](#offrotationchange)
+> 替代。
 
 **起始版本：** 7
 
@@ -4954,7 +4971,11 @@ onWindowStatusChange(callback: Callback<WindowStatusType>): void
 
 > **说明：**
 > 
-> 在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，应用的 &gt; [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置小于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有 &gt; dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::FULL_SCREEN。应用的 &gt; [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置大于等于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有 &gt; dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::MAXIMIZE。
+> 在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，应用的
+> [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置小于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有
+> dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::FULL_SCREEN。应用的
+> [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置大于等于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有
+> dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::MAXIMIZE。
 
 **起始版本：** 23
 
@@ -5633,7 +5654,9 @@ on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [on('avoidAreaChange')](#onrotationchange)替 &gt; 代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [on('avoidAreaChange')](#onrotationchange)替
+> 代。
 
 **起始版本：** 7
 
@@ -5879,7 +5902,11 @@ on(type: 'windowStatusChange', callback: Callback<WindowStatusType>): void
 
 > **说明：**
 > 
-> 在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，应用的 &gt; [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置小于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有 &gt; dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::FULL_SCREEN。应用的 &gt; [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置大于等于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有 &gt; dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::MAXIMIZE。
+> 在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，应用的
+> [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置小于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有
+> dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::FULL_SCREEN。应用的
+> [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置大于等于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有
+> dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::MAXIMIZE。
 
 **起始版本：** 11
 
@@ -6264,7 +6291,8 @@ resetSize(width: number, height: number, callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [resize()](#resize)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [resize()](#resize)替代。
 
 **起始版本：** 7
 
@@ -6519,11 +6547,13 @@ setAspectRatio(ratio: double, callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> - 通过其他接口如[resize](#resize)、 &gt; [resizeAsync](#resizeasync)设置窗口大小时，不受ratio约束。
+> - 通过其他接口如[resize](#resize)、
+> [resizeAsync](#resizeasync)设置窗口大小时，不受ratio约束。
 > 
 > - 仅主窗可设置，且仅在自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下生效。此比例参数将持久化保存，关闭应用或重启设备后，切换到自由悬浮窗口模式时，设置的比例仍然生效。
 > 
-> - 当同一应用的某个主窗口调用此接口设置宽高比生效后，后续打开的主窗口均会沿用该宽高比。若需为单个主窗口单独设置宽高比，请使用 &gt; [setContentAspectRatio](#setcontentaspectratio)。
+> - 当同一应用的某个主窗口调用此接口设置宽高比生效后，后续打开的主窗口均会沿用该宽高比。若需为单个主窗口单独设置宽高比，请使用
+> [setContentAspectRatio](#setcontentaspectratio)。
 
 **起始版本：** 23
 
@@ -6558,11 +6588,13 @@ setAspectRatio(ratio: double): Promise<void>
 
 > **说明：**
 > 
-> - 通过其他接口如[resize](#resize)、 &gt; [resizeAsync](#resizeasync)设置窗口大小时，不受ratio约束。
+> - 通过其他接口如[resize](#resize)、
+> [resizeAsync](#resizeasync)设置窗口大小时，不受ratio约束。
 > 
 > - 仅主窗可设置，且仅在自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下生效。此比例参数将持久化保存，关闭应用或重启设备后，切换到自由悬浮窗口模式时，设置的比例仍然生效。
 > 
-> - 当同一应用的某个主窗口调用此接口设置宽高比生效后，后续打开的主窗口均会沿用该宽高比。若需为单个主窗口单独设置宽高比，请使用 &gt; [setContentAspectRatio](#setcontentaspectratio)。
+> - 当同一应用的某个主窗口调用此接口设置宽高比生效后，后续打开的主窗口均会沿用该宽高比。若需为单个主窗口单独设置宽高比，请使用
+> [setContentAspectRatio](#setcontentaspectratio)。
 
 **起始版本：** 23
 
@@ -6602,7 +6634,8 @@ setBackgroundColor(color: string): Promise<void>
 
 > **说明：**
 > 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用 &gt; [setWindowBackgroundColor()](#setwindowbackgroundcolor)替代。
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [setWindowBackgroundColor()](#setwindowbackgroundcolor)替代。
 
 **起始版本：** 6
 
@@ -6636,7 +6669,8 @@ setBackgroundColor(color: string, callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用 &gt; [setWindowBackgroundColor()](#setwindowbackgroundcolor)替代。
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [setWindowBackgroundColor()](#setwindowbackgroundcolor)替代。
 
 **起始版本：** 6
 
@@ -6667,7 +6701,8 @@ setBrightness(brightness: number): Promise<void>
 
 > **说明：**
 > 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用 &gt; [setWindowBrightness()](#setwindowbrightness)替代。
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [setWindowBrightness()](#setwindowbrightness)替代。
 
 **起始版本：** 6
 
@@ -6703,7 +6738,9 @@ setBrightness(brightness: number, callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用 &gt; [setWindowBrightness()](#setwindowbrightness) &gt; 替代。
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [setWindowBrightness()](#setwindowbrightness)
+> 替代。
 
 **起始版本：** 6
 
@@ -6732,7 +6769,8 @@ setColorSpace(colorSpace: ColorSpace): Promise<void>
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用 &gt; [setWindowColorSpace()](#setwindowcolorspace)替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [setWindowColorSpace()](#setwindowcolorspace)替代。
 
 **起始版本：** 8
 
@@ -6766,7 +6804,9 @@ setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用 &gt; [setWindowColorSpace()](#setwindowcolorspace) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [setWindowColorSpace()](#setwindowcolorspace)
+> 替代。
 
 **起始版本：** 8
 
@@ -6799,7 +6839,8 @@ setContentAspectRatio(ratio: double, isPersistent?: boolean, needUpdateRect?: bo
 > 
 > - 通过[setWindowDecorVisible](#setwindowdecorvisible)将窗口标题栏设置为不可见时，窗口内容区域将占据原本标题栏的高度空间。
 > 
-> - 通过其他接口如[resize](#resize)、 &gt; [resizeAsync](#resizeasync)设置窗口大小时，不受ratio约束。
+> - 通过其他接口如[resize](#resize)、
+> [resizeAsync](#resizeasync)设置窗口大小时，不受ratio约束。
 > 
 > - 仅主窗可设置，且仅在自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下生效。
 
@@ -7081,7 +7122,8 @@ setFocusable(isFocusable: boolean): Promise<void>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [setWindowFocusable()](#setwindowfocusable)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowFocusable()](#setwindowfocusable)替代。
 
 **起始版本：** 7
 
@@ -7115,7 +7157,9 @@ setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [setWindowFocusable()](#setwindowfocusable) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowFocusable()](#setwindowfocusable)
+> 替代。
 
 **起始版本：** 7
 
@@ -7240,7 +7284,10 @@ setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 从API version 6开始支持，从API version 9开始废弃，建议联合使用 &gt; [setWindowSystemBarEnable()](#setwindowsystembarenable) &gt; 和[setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代实现全 &gt; 屏。
+> 从API version 6开始支持，从API version 9开始废弃，建议联合使用
+> [setWindowSystemBarEnable()](#setwindowsystembarenable)
+> 和[setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代实现全
+> 屏。
 
 **起始版本：** 6
 
@@ -7273,7 +7320,10 @@ setFullScreen(isFullScreen: boolean): Promise<void>
 
 > **说明：**
 > 
-> 从API version 6开始支持，从API version 9开始废弃，建议联合使用 &gt; [setWindowSystemBarEnable()](#setwindowsystembarenable) &gt; 和[setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代实现全 &gt; 屏。
+> 从API version 6开始支持，从API version 9开始废弃，建议联合使用
+> [setWindowSystemBarEnable()](#setwindowsystembarenable)
+> 和[setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代实现全
+> 屏。
 
 **起始版本：** 6
 
@@ -7380,7 +7430,8 @@ setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 
 > **说明：**
 > 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用 &gt; [setWindowKeepScreenOn()](#setwindowkeepscreenon)替代。
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [setWindowKeepScreenOn()](#setwindowkeepscreenon)替代。
 
 **起始版本：** 6
 
@@ -7414,7 +7465,9 @@ setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用 &gt; [setWindowKeepScreenOn()](#setwindowkeepscreenon) &gt; 替代。
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [setWindowKeepScreenOn()](#setwindowkeepscreenon)
+> 替代。
 
 **起始版本：** 6
 
@@ -7447,7 +7500,8 @@ setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>):
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代。
 
 **起始版本：** 7
 
@@ -7480,7 +7534,8 @@ setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代。
 
 **起始版本：** 7
 
@@ -7722,7 +7777,8 @@ setPrivacyMode(isPrivacyMode: boolean): Promise<void>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [setWindowPrivacyMode()](#setwindowprivacymode)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowPrivacyMode()](#setwindowprivacymode)替代。
 
 **起始版本：** 7
 
@@ -7756,7 +7812,9 @@ setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [setWindowPrivacyMode()](#setwindowprivacymode) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowPrivacyMode()](#setwindowprivacymode)
+> 替代。
 
 **起始版本：** 7
 
@@ -8273,7 +8331,9 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallbac
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [setWindowSystemBarEnable()](#setwindowsystembarenable) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowSystemBarEnable()](#setwindowsystembarenable)
+> 替代。
 
 **起始版本：** 7
 
@@ -8306,7 +8366,9 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [setWindowSystemBarEnable()](#setwindowsystembarenable) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowSystemBarEnable()](#setwindowsystembarenable)
+> 替代。
 
 **起始版本：** 7
 
@@ -8342,7 +8404,9 @@ setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: Async
 
 > **说明：**
 > 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用 &gt; [setWindowSystemBarProperties()](#setwindowsystembarproperties) &gt; 替代。
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [setWindowSystemBarProperties()](#setwindowsystembarproperties)
+> 替代。
 
 **起始版本：** 6
 
@@ -8373,7 +8437,9 @@ setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>
 
 > **说明：**
 > 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用 &gt; [setWindowSystemBarProperties()](#setwindowsystembarproperties) &gt; 替代。
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [setWindowSystemBarProperties()](#setwindowsystembarproperties)
+> 替代。
 
 **起始版本：** 6
 
@@ -8444,7 +8510,8 @@ setTouchable(isTouchable: boolean): Promise<void>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [setWindowTouchable()](#setwindowtouchable)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowTouchable()](#setwindowtouchable)替代。
 
 **起始版本：** 7
 
@@ -8478,7 +8545,9 @@ setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [setWindowTouchable()](#setwindowtouchable) &gt; 替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowTouchable()](#setwindowtouchable)
+> 替代。
 
 **起始版本：** 7
 
@@ -9117,7 +9186,8 @@ setWindowLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<v
 
 > **说明：**
 > 
-> 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的 &gt; [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代。
+> 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的
+> [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代。
 
 **起始版本：** 9
 
@@ -9200,9 +9270,14 @@ setWindowLimits(windowLimits: WindowLimits): Promise<WindowLimits>
 
 > **说明：**
 > 
-> - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，处于自由悬浮窗口模式（即窗口模式为 &gt; window.WindowStatusType.FLOATING）的窗口在尺寸变化时受[WindowLimits](arkts-arkui-window-windowlimits-i.md)约束。触发场景包括：应用主动 &gt; 改变窗口大小（如调用[resize()](#resize)）；系统调节窗 &gt; 口大小（如分辨率变化、显示大小缩放系数变化）；用户拖拽缩放窗口。
+> - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，处于自由悬浮窗口模式（即窗口模式为
+> window.WindowStatusType.FLOATING）的窗口在尺寸变化时受[WindowLimits](arkts-arkui-window-windowlimits-i.md)约束。触发场景包括：应用主动
+> 改变窗口大小（如调用[resize()](#resize)）；系统调节窗
+> 口大小（如分辨率变化、显示大小缩放系数变化）；用户拖拽缩放窗口。
 > 
-> - 非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，主窗口尺寸不受 &gt; [WindowLimits](arkts-arkui-window-windowlimits-i.md)约束，其他类型窗口仍受 &gt; [WindowLimits](arkts-arkui-window-windowlimits-i.md)约束。
+> - 非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，主窗口尺寸不受
+> [WindowLimits](arkts-arkui-window-windowlimits-i.md)约束，其他类型窗口仍受
+> [WindowLimits](arkts-arkui-window-windowlimits-i.md)约束。
 
 **起始版本：** 23
 
@@ -9248,9 +9323,14 @@ setWindowLimits(windowLimits: WindowLimits, isForcible: boolean): Promise<Window
 
 > **说明：**
 > 
-> - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，处于自由悬浮窗口模式（即窗口模式为 &gt; window.WindowStatusType.FLOATING）的窗口在尺寸变化时受[WindowLimits](arkts-arkui-window-windowlimits-i.md)约束。触发场景包括：应用主动 &gt; 改变窗口大小（如调用[resize()](#resize)）；系统调节窗 &gt; 口大小（如分辨率变化、显示大小缩放系数变化）；用户拖拽缩放窗口。
+> - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，处于自由悬浮窗口模式（即窗口模式为
+> window.WindowStatusType.FLOATING）的窗口在尺寸变化时受[WindowLimits](arkts-arkui-window-windowlimits-i.md)约束。触发场景包括：应用主动
+> 改变窗口大小（如调用[resize()](#resize)）；系统调节窗
+> 口大小（如分辨率变化、显示大小缩放系数变化）；用户拖拽缩放窗口。
 > 
-> - 非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，主窗口尺寸不受 &gt; [WindowLimits](arkts-arkui-window-windowlimits-i.md)约束，其他类型窗口仍受 &gt; [WindowLimits](arkts-arkui-window-windowlimits-i.md)约束。
+> - 非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，主窗口尺寸不受
+> [WindowLimits](arkts-arkui-window-windowlimits-i.md)约束，其他类型窗口仍受
+> [WindowLimits](arkts-arkui-window-windowlimits-i.md)约束。
 
 **起始版本：** 23
 
@@ -9529,7 +9609,9 @@ setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncC
 
 > **说明：**
 > 
-> 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的 &gt; [setWindowSystemBarEnable()](#setwindowsystembarenable) &gt; 替代。
+> 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的
+> [setWindowSystemBarEnable()](#setwindowsystembarenable)
+> 替代。
 
 **起始版本：** 9
 
@@ -9608,7 +9690,9 @@ setWindowSystemBarProperties(systemBarProperties: SystemBarProperties, callback:
 
 > **说明：**
 > 
-> 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的 &gt; [setWindowSystemBarProperties()](#setwindowsystembarproperties) &gt; 替代。
+> 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的
+> [setWindowSystemBarProperties()](#setwindowsystembarproperties)
+> 替代。
 
 **起始版本：** 9
 
@@ -9942,7 +10026,8 @@ show(callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [showWindow()](#showwindow)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [showWindow()](#showwindow)替代。
 
 **起始版本：** 7
 
@@ -9998,7 +10083,9 @@ showWindow(callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 调用该接口前，建议先通过[loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法或者 &gt; [setUIContent](#setuicontent)方法完成页面加载。如果应用主窗口没有完成页面加载，直接调用该接口，界面会 &gt; 一直显示启动界面；如果系统窗口、应用子窗口、模态窗和全局悬浮窗没有完成页面加载，直接调用该接口，窗口会处于前台，但不可见。
+> 调用该接口前，建议先通过[loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法或者
+> [setUIContent](#setuicontent)方法完成页面加载。如果应用主窗口没有完成页面加载，直接调用该接口，界面会
+> 一直显示启动界面；如果系统窗口、应用子窗口、模态窗和全局悬浮窗没有完成页面加载，直接调用该接口，窗口会处于前台，但不可见。
 
 **起始版本：** 23
 
@@ -10030,7 +10117,9 @@ showWindow(): Promise<void>
 
 > **说明：**
 > 
-> 调用该接口前，建议优先通过[loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法或者 &gt; [setUIContent](#setuicontent)方法完成页面加载。如果应用主窗口没有完成页面加载，直接调用该接口，界面会 &gt; 一直显示启动界面；如果系统窗口、应用子窗口、模态窗和全局悬浮窗没有完成页面加载，直接调用该接口，窗口会处于前台，但不可见。
+> 调用该接口前，建议优先通过[loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法或者
+> [setUIContent](#setuicontent)方法完成页面加载。如果应用主窗口没有完成页面加载，直接调用该接口，界面会
+> 一直显示启动界面；如果系统窗口、应用子窗口、模态窗和全局悬浮窗没有完成页面加载，直接调用该接口，窗口会处于前台，但不可见。
 
 **起始版本：** 23
 
@@ -10064,7 +10153,9 @@ showWindow(options: ShowWindowOptions): Promise<void>
 
 > **说明：**
 > 
-> 调用该接口前，建议优先通过[loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法或者 &gt; [setUIContent](#setuicontent)方法完成页面加载。如果应用主窗口没有完成页面加载，直接调用该接口，界面会 &gt; 一直显示启动界面；如果系统窗口、应用子窗口和全局悬浮窗没有完成页面加载，直接调用该接口，窗口会处于前台，但不可见。
+> 调用该接口前，建议优先通过[loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法或者
+> [setUIContent](#setuicontent)方法完成页面加载。如果应用主窗口没有完成页面加载，直接调用该接口，界面会
+> 一直显示启动界面；如果系统窗口、应用子窗口和全局悬浮窗没有完成页面加载，直接调用该接口，窗口会处于前台，但不可见。
 
 **起始版本：** 23
 

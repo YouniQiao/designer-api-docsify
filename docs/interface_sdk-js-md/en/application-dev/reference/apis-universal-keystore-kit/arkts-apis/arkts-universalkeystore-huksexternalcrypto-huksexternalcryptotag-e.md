@@ -28,7 +28,7 @@ Tag of the PIN.
 HUKS_EXT_CRYPTO_TAG_ABILITY_NAME = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200002
 ```
 
-Name of [CryptoExtensionAbility](arkts-universalkeystore-security-cryptoextensionability-cryptoextensionability-c.md).
+Name of [CryptoExtensionAbility](arkts-universalkeystore-securitycryptoextensionability-cryptoextensionability-c.md).
 
 **Since:** 22
 

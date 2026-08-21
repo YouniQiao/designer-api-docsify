@@ -92,7 +92,11 @@ abstract makeNode(uiContext: UIContext): FrameNode | null
 
 > **说明：**
 > 
-> NodeContainer不支持跨实例复用。如果出现跨实例复用 &gt; NodeContainer，传入 &gt; NodeContainer的[NodeController](#nodecontroller)触发 &gt; [makeNode](#makenode)回调方法时，入参中的[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)对象可能为undefined，此时需要开发者 &gt; 判断该对象是否为undefined，防止后续使用此入参时出现[UIContext无效的JS异常](../../../ui/arkts-wrong-uicontext-debug.md#定位uicontext错误问题)。
+> NodeContainer不支持跨实例复用。如果出现跨实例复用
+> NodeContainer，传入
+> NodeContainer的[NodeController](#nodecontroller)触发
+> [makeNode](#makenode)回调方法时，入参中的[UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)对象可能为undefined，此时需要开发者
+> 判断该对象是否为undefined，防止后续使用此入参时出现[UIContext无效的JS异常](../../../ui/arkts-wrong-uicontext-debug.md#定位uicontext错误问题)。
 
 **起始版本：** 11
 
@@ -108,7 +112,7 @@ abstract makeNode(uiContext: UIContext): FrameNode | null
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | 是 | 回调该方法时，绑定NodeContainer的UI上下文。跨实 例复用NodeContainer时，该参数可能为undefined，需要开发者自行判断。 |
+| uiContext | [UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md) | 是 | 回调该方法时，绑定NodeContainer的UI上下文。跨实 例复用NodeContainer时，该参数可能为undefined，需要开发者自行判断。 |
 
 **返回值：**
 
@@ -292,7 +296,8 @@ rebuild(): void
 > 
 > 由于rebuild方法为应用主动调用的方法，且该操作与UI相关，需要开发者自行保证调用该接口时UI上下文有效，即与绑定的NodeContainer保持UI上下文一致。
 > 
-> 监听回调等[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)时，可以通过[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)的 &gt; [runScopedTask](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#runscopedtask)方法明确调用时的UI上下文。
+> 监听回调等[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)时，可以通过[UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)的
+> [runScopedTask](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#runscopedtask)方法明确调用时的UI上下文。
 
 **起始版本：** 11
 

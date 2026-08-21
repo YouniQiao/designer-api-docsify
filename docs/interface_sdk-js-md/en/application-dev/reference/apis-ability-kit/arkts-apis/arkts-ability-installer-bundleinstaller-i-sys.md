@@ -356,7 +356,9 @@ Installs an application. This API uses an asynchronous callback to return the re
 
 > **NOTE：**
 > 
-> To install applications of different distribution types, the appropriate permissions must be requested. For &gt; details on distribution types, see the **appDistributionType** field in &gt; [ApplicationInfo](arkts-ability-applicationinfo-i.md).
+> To install applications of different distribution types, the appropriate permissions must be requested. For
+> details on distribution types, see the **appDistributionType** field in
+> [ApplicationInfo](arkts-ability-applicationinfo-i.md).
 
 **Since:** 23
 
@@ -454,7 +456,9 @@ Installs an application. This API uses an asynchronous callback to return the re
 
 > **NOTE：**
 > 
-> To install applications of different distribution types, the appropriate permissions must be requested. For &gt; details on distribution types, see the **appDistributionType** field in &gt; [ApplicationInfo](arkts-ability-applicationinfo-i.md).
+> To install applications of different distribution types, the appropriate permissions must be requested. For
+> details on distribution types, see the **appDistributionType** field in
+> [ApplicationInfo](arkts-ability-applicationinfo-i.md).
 
 **Since:** 23
 
@@ -545,7 +549,9 @@ Installs an application. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> To install applications of different distribution types, the appropriate permissions must be requested. For &gt; details on distribution types, see the **appDistributionType** field in &gt; [ApplicationInfo](arkts-ability-applicationinfo-i.md).
+> To install applications of different distribution types, the appropriate permissions must be requested. For
+> details on distribution types, see the **appDistributionType** field in
+> [ApplicationInfo](arkts-ability-applicationinfo-i.md).
 
 **Since:** 23
 
@@ -731,7 +737,9 @@ Installs an application. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> This API does not support the installation of applications whose &gt; [distribution type of the application signing certificate](arkts-ability-applicationinfo-i.md) &gt; is set to **enterprise**, **enterprise_mdm**, or **enterprise_normal**.
+> This API does not support the installation of applications whose
+> [distribution type of the application signing certificate](arkts-ability-applicationinfo-i.md)
+> is set to **enterprise**, **enterprise_mdm**, or **enterprise_normal**.
 
 **Since:** 23
 

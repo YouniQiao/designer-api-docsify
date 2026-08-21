@@ -18,7 +18,9 @@ Obtains the current font weight scale factor.
 
 > **NOTE：**
 
-> This API is a system API in API version 19 and earlier. Using this API requires the &gt; [ohos.permission.UPDATE_CONFIGURATION](../../../security/AccessToken/permissions-for-system-apps.md#ohospermissionupdate_configuration) &gt; permission.
+> This API is a system API in API version 19 and earlier. Using this API requires the
+> [ohos.permission.UPDATE_CONFIGURATION](../../../security/AccessToken/permissions-for-system-apps.md#ohospermissionupdate_configuration)
+> permission.
 
 <!--DelEnd-->
 

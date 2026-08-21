@@ -164,6 +164,9 @@ Defines an enum for the resource profiler types.
 | OH_RES_TYPE_NATIVE |  |
 | OH_RES_TYPE_GPU |  |
 | OH_RES_TYPE_GLOBAL_HANDLE |  |
+| OH_RES_TYPE_DMA | DMA memory.<br>**Since**: 26.1.0 |
+| OH_RES_TYPE_ASHMEM | Anonymous Shared Memory.<br>**Since**: 26.1.0 |
+| OH_RES_TYPE_COMPOSITE_HEAP | Composite heap.<br>**Since**: 26.1.0 |
 
 ### OH_HiDebug_MemListenerType
 

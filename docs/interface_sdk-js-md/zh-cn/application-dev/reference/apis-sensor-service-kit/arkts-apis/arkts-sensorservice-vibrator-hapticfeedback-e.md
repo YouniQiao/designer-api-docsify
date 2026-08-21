@@ -4,7 +4,9 @@
 
 > **说明：**
 > 
-> 由于设备存在多样性，建议使用预置效果前先使用 &gt; [vibrator.isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md)&lt; &gt; sup&gt;10+&lt;/sup&gt;或[vibrator.isSupportEffectSync](arkts-sensorservice-vibrator-issupporteffectsync-f.md)接口查询当前设备是否支持该预置效果。
+> 由于设备存在多样性，建议使用预置效果前先使用
+> [vibrator.isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md)&lt;
+&gt; sup&gt;10+&lt;/sup&gt;或[vibrator.isSupportEffectSync](arkts-sensorservice-vibrator-issupporteffectsync-f.md)接口查询当前设备是否支持该预置效果。
 
 **起始版本：** 23
 

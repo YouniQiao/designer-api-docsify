@@ -23,13 +23,16 @@ Shows a date picker dialog box.
 
 > **NOTE：**
 > 
-> Since API version 10, you can use the &gt; [showDatePickerDialog](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#showdatepickerdialog) API &gt; in [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md), which ensures that the date picker dialog box is shown in the &gt; intended UI instance.
+> Since API version 10, you can use the
+> [showDatePickerDialog](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#showdatepickerdialog) API
+> in [UIContext](../arkts-apis/arkts-arkui-arkuiuicontext-uicontext-c.md), which ensures that the date picker dialog box is shown in the
+> intended UI instance.
 
 **Since:** 8
 
 **Deprecated since:** 18
 
-**Substitutes:** [showDatePickerDialog](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#showdatepickerdialog)
+**Substitutes:** [showDatePickerDialog](../arkts-apis/arkts-arkui-arkuiuicontext-uicontext-c.md#showdatepickerdialog)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -92,7 +92,7 @@ Obtains the selected track by the specified media type. This API can be called o
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| trackType | [MediaType](arkts-media-multimedia-media-mediatype-e.md) | 是 | specified media Type, see MediaType. |
+| trackType | [MediaType](arkts-media-multimediamedia-mediatype-e.md) | 是 | specified media Type, see MediaType. |
 
 **返回值：**
 

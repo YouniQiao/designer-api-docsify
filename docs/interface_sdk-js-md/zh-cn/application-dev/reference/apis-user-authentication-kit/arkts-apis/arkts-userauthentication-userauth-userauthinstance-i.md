@@ -616,7 +616,10 @@ on(type: 'authTip', callback: AuthTipCallback): void
 
 > **说明：**
 > 
-> 在PC/2in1设备上，应用如果使用模应用弹窗方式发起认证（即配置用户界面参数[widgetParam](arkts-userauthentication-userauth-widgetparam-i.md)时传入了有效的uiContext），收到认证结果后，若需弹出其 &gt; 他窗口，应先获取控件弹窗释放的标志消息，通过 &gt; [on('authTip')](#onresult)接口订阅控件释放消息（ &gt; authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED）。
+> 在PC/2in1设备上，应用如果使用模应用弹窗方式发起认证（即配置用户界面参数[widgetParam](arkts-userauthentication-userauth-widgetparam-i.md)时传入了有效的uiContext），收到认证结果后，若需弹出其
+> 他窗口，应先获取控件弹窗释放的标志消息，通过
+> [on('authTip')](#onresult)接口订阅控件释放消息（
+> authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED）。
 
 **起始版本：** 20
 
@@ -694,7 +697,10 @@ on(type: 'result', callback: IAuthCallback): void
 
 > **说明：**
 > 
-> 在PC/2in1设备上，应用如果使用模应用弹窗方式发起认证（即配置用户界面参数[widgetParam](arkts-userauthentication-userauth-widgetparam-i.md)时传入了有效的uiContext），收到认证结果后，若需弹出其 &gt; 他窗口，应先获取控件弹窗释放的标志消息，通过 &gt; [on('authTip')](#onresult)接口订阅控件释放消息（ &gt; authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED）。
+> 在PC/2in1设备上，应用如果使用模应用弹窗方式发起认证（即配置用户界面参数[widgetParam](arkts-userauthentication-userauth-widgetparam-i.md)时传入了有效的uiContext），收到认证结果后，若需弹出其
+> 他窗口，应先获取控件弹窗释放的标志消息，通过
+> [on('authTip')](#onresult)接口订阅控件释放消息（
+> authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED）。
 
 **起始版本：** 10
 

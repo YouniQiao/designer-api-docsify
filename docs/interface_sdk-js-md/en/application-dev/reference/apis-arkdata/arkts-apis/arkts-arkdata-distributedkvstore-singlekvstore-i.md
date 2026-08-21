@@ -1999,7 +1999,7 @@ Register a callback to the database and when data in the distributed database ha
 onSyncComplete(syncCallback: Callback<Array<[string, int]>>): void
 ```
 
-Register a databases synchronization callback to the database. &lt;p&gt; Sync result is returned through asynchronous callback.
+Register a databases synchronization callback to the database. <p> Sync result is returned through asynchronous callback.
 
 **Since:** 23
 
@@ -2372,7 +2372,11 @@ Deletes data of a device. This API uses an asynchronous callback to return the r
 
 > **NOTE：**
 > 
-> **deviceId** is **networkId** in &gt; [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md), which can be &gt; obtained by &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; .
+> **deviceId** is **networkId** in
+> [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md), which can be
+> obtained by
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> .
 > 
 > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
@@ -2440,7 +2444,11 @@ Deletes data of a device. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> **deviceId** is **networkId** in &gt; [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md), which can be &gt; obtained by &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; .
+> **deviceId** is **networkId** in
+> [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md), which can be
+> obtained by
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> .
 > 
 > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
@@ -2741,7 +2749,8 @@ Sets the default delay for cross-device data sync. This API uses an asynchronous
 
 > **NOTE：**
 > 
-> After the default delay is set, calling [sync](arkts-arkdata-distributedkvstore-syncmode-e.md) will not trigger the cross- &gt; device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
+> After the default delay is set, calling [sync](arkts-arkdata-distributedkvstore-syncmode-e.md) will not trigger the cross-
+> device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
 
 **Since:** 23
 
@@ -2794,7 +2803,8 @@ Sets the default delay for cross-device data sync. This API uses a promise to re
 
 > **NOTE：**
 > 
-> After the default delay is set, calling [sync](arkts-arkdata-distributedkvstore-syncmode-e.md) will not trigger the cross- &gt; device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
+> After the default delay is set, calling [sync](arkts-arkdata-distributedkvstore-syncmode-e.md) will not trigger the cross-
+> device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
 
 **Since:** 23
 
@@ -3085,7 +3095,11 @@ Starts cross-device data sync manually. For details about the sync modes of KV s
 
 > **NOTE：**
 > 
-> **deviceIds** is **networkId** in &gt; [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md), which can be &gt; obtained by &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; .
+> **deviceIds** is **networkId** in
+> [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md), which can be
+> obtained by
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> .
 
 **Since:** 23
 
@@ -3178,7 +3192,11 @@ Starts cross-device data sync manually. This API returns the result synchronousl
 
 > **NOTE：**
 > 
-> **deviceIds** is **networkId** in &gt; [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md), which can be &gt; obtained by &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; .
+> **deviceIds** is **networkId** in
+> [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md), which can be
+> obtained by
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> .
 
 **Since:** 23
 

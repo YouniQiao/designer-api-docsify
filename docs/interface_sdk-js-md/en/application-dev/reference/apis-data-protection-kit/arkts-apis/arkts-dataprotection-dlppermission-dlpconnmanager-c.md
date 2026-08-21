@@ -4,7 +4,8 @@ Calls **registerPlugin** and **unregisterPlugin** to register or unregister call
 
 > **NOTE：**
 > 
-> **registerPlugin** registers callback capabilities in the SA, and **unregisterPlugin** unregisters callback &gt; capabilities from the SA.
+> **registerPlugin** registers callback capabilities in the SA, and **unregisterPlugin** unregisters callback
+> capabilities from the SA.
 
 **Since:** 21
 

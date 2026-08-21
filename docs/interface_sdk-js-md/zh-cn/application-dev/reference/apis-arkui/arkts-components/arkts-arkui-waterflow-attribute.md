@@ -430,7 +430,9 @@ supportEmptyBranchInLazyLoading(supported: boolean | undefined)
 
 > **说明：**
 > 
-> 当通过[sections](arkts-arkui-waterflowoptions-i.md)参数设置了[WaterFlowSections](arkts-arkui-waterflowsections-c.md)分组，或通过 &gt; [layoutMode](arkts-arkui-waterflowoptions-i.md)设置[SLIDING_WINDOW](arkts-arkui-waterflowlayoutmode-e.md)布局模式时，无论 &gt; supportEmptyBranchInLazyLoading设为何值或未设置，空分支后的FlowItem都会显示。
+> 当通过[sections](arkts-arkui-waterflowoptions-i.md)参数设置了[WaterFlowSections](arkts-arkui-waterflowsections-c.md)分组，或通过
+> [layoutMode](arkts-arkui-waterflowoptions-i.md)设置[SLIDING_WINDOW](arkts-arkui-waterflowlayoutmode-e.md)布局模式时，无论
+> supportEmptyBranchInLazyLoading设为何值或未设置，空分支后的FlowItem都会显示。
 
 **起始版本：** 26.0.0
 

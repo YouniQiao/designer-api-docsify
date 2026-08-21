@@ -16,7 +16,9 @@ function getAllLauncherAbilityInfos(userId: number, callback: AsyncCallback<Arra
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用 &gt; [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md)
+> 替代。
 
 **起始版本：** 8
 
@@ -50,7 +52,9 @@ function getAllLauncherAbilityInfos(userId: number): Promise<Array<LauncherAbili
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用 &gt; [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md)
+> 替代。
 
 **起始版本：** 8
 

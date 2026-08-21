@@ -37,7 +37,9 @@ enableAnalyzer(enable: boolean): CanvasAttribute
 
 > **说明：**
 > 
-> 从API version 20开始，该接口支持在 &gt; attributeModifier &gt; 中调用。
+> 从API version 20开始，该接口支持在
+> attributeModifier
+> 中调用。
 
 **起始版本：** 12
 

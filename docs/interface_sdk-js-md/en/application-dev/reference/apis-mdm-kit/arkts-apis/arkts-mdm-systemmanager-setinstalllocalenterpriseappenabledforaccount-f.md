@@ -18,9 +18,11 @@ Only enterprise applications signed with the **enterprise_normal** or **enterpri
 
 > **NOTE：**
 > 
-> A PC/2-in-1 enterprise device supports local installation of enterprise applications for the current user if any &gt; of the following conditions is met:
+> A PC/2-in-1 enterprise device supports local installation of enterprise applications for the current user if any
+> of the following conditions is met:
 > 
-> 1. The offline installer has been enabled by calling &gt; [setInstallLocalEnterpriseAppEnabled](arkts-mdm-systemmanager-setinstalllocalenterpriseappenabled-f.md).
+> 1. The offline installer has been enabled by calling
+> [setInstallLocalEnterpriseAppEnabled](arkts-mdm-systemmanager-setinstalllocalenterpriseappenabled-f.md).
 > 
 > 2. Local installation of enterprise applications is enabled for the current user by calling this API.
 
@@ -38,7 +40,7 @@ Only enterprise applications signed with the **enterprise_normal** or **enterpri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | isEnable | boolean | Yes | Whether local installation of enterprise applications is supported. The value **true** indicates that the local installation of enterprise applications is supported, and the value **false** indicates the opposite. |
 | accountId | number | Yes | User ID, which must be greater than or equal to 0. <br>**accountId** can be obtained via APIs such as [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
 

@@ -13,11 +13,16 @@ function connectAgentExtensionAbility(want: Want, agentId: string,
     callback: AgentExtensionConnectCallback): Promise<AgentProxy>
 ```
 
-将当前调用方组件连接到 [AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md)。通过返回的 [AgentProxy](arkts-ability-agentproxy-i-sys.md)与 [AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md)进行通信，以使用 AgentExtensionAbility对外提供的能力。
+将当前调用方组件连接到 [AgentExtensionAbility](arkts-ability-appagentagentextensionability-agentextensionability-c.md)。通过返回的 [AgentProxy](arkts-ability-agentproxy-i-sys.md)与 [AgentExtensionAbility](arkts-ability-appagentagentextensionability-agentextensionability-c.md)进行通信，以使用 AgentExtensionAbility对外提供的能力。
 
 > **说明：**
 > 
-> - 当目标Agent的AgentCard为 &gt; LOW_CODE &gt; 类型时，AgentExtensionAbility的 &gt; [onConnect](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md#onconnect)只在此类Agent连接 &gt; 成功时回调；后续连接的此类Agent，只回调 &gt; [onAgentInvoked](arkts-ability-app-agent-agentextensionability-agentextensionability-c-sys.md#onagentinvoked)。
+> - 当目标Agent的AgentCard为
+> LOW_CODE
+> 类型时，AgentExtensionAbility的
+> [onConnect](arkts-ability-appagentagentextensionability-agentextensionability-c.md#onconnect)只在此类Agent连接
+> 成功时回调；后续连接的此类Agent，只回调
+> [onAgentInvoked](arkts-ability-appagentagentextensionability-agentextensionability-c-sys.md#onagentinvoked)。
 > 
 > - 同一个AgentExtensionAbility中，最多只能同时运行100个LOW_CODE类型的Agent，否则会报35600003错误码。
 > 
@@ -39,9 +44,9 @@ function connectAgentExtensionAbility(want: Want, agentId: string,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | [AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md)所属的Want 信息，通常需要包括bundle名称、ability名称。 |
-| agentId | string | 是 | [AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md)所属的 agentId。 |
-| callback | [AgentExtensionConnectCallback](arkts-ability-agentextensionconnectcallback-i-sys.md) | 是 | 连接回调函数，包含接收 [AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md)服务端的数据、 安全认证数据以及断开连接事件的回调接口。 |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | [AgentExtensionAbility](arkts-ability-appagentagentextensionability-agentextensionability-c.md)所属的Want 信息，通常需要包括bundle名称、ability名称。 |
+| agentId | string | 是 | [AgentExtensionAbility](arkts-ability-appagentagentextensionability-agentextensionability-c.md)所属的 agentId。 |
+| callback | [AgentExtensionConnectCallback](arkts-ability-agentextensionconnectcallback-i-sys.md) | 是 | 连接回调函数，包含接收 [AgentExtensionAbility](arkts-ability-appagentagentextensionability-agentextensionability-c.md)服务端的数据、 安全认证数据以及断开连接事件的回调接口。 |
 
 **返回值：**
 

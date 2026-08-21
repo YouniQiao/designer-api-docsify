@@ -28,7 +28,7 @@ image?: image.PixelMap
 
 Image decoding information for preview in the page of ImageGeneratorDialog.
 
-&lt;p&gt;**NOTE：**: Displayed within the canvas in the ImageGeneratorDialog; if not provided, the image will be decoded from the url. &lt;/p&gt;
+<p>**NOTE：**: Displayed within the canvas in the ImageGeneratorDialog; if not provided, the image will be decoded from the url. </p>
 
 **Type:** image.PixelMap
 
@@ -52,7 +52,7 @@ isHandwrite?: boolean
 
 whether the image type is a hand-drawn line art.
 
-&lt;p&gt;**NOTE：**: it is recommended to be provided in Hand-drawn line art scenarios to achieve better results. &lt;/p&gt;
+<p>**NOTE：**: it is recommended to be provided in Hand-drawn line art scenarios to achieve better results. </p>
 
 **Type:** boolean
 
@@ -76,7 +76,7 @@ rect?: common2D.Rect
 
 The size and position of the container used to display images in the preview canvas.
 
-&lt;p&gt;**NOTE：**: it is recommended to be provided in multi-image fusion scenarios to achieve better results. &lt;/p&gt;
+<p>**NOTE：**: it is recommended to be provided in multi-image fusion scenarios to achieve better results. </p>
 
 **Type:** common2D.Rect
 
@@ -100,7 +100,7 @@ rotation?: componentUtils.Rotation2D
 
 The rotation of the container used to display images in the preview canvas.
 
-&lt;p&gt;**NOTE：**: it is recommended to be provided in multi-image fusion scenarios to achieve better results. &lt;/p&gt;
+<p>**NOTE：**: it is recommended to be provided in multi-image fusion scenarios to achieve better results. </p>
 
 **Type:** componentUtils.Rotation2D
 
@@ -124,7 +124,7 @@ url?: ResourceStr
 
 Original image path information for image generation;
 
-&lt;p&gt;**NOTE：**: for high-resolution scenarios, it is best to provide the original image path; if not provided, the image.PixelMap will be used for image generation. &lt;/p&gt;
+<p>**NOTE：**: for high-resolution scenarios, it is best to provide the original image path; if not provided, the image.PixelMap will be used for image generation. </p>
 
 **Type:** ResourceStr
 
@@ -148,7 +148,7 @@ zIndex?: int
 
 In scenarios with multiple images, information about image rendering hierarchy.
 
-&lt;p&gt;**NOTE：**: it is recommended to be provided in multi-image fusion scenarios to achieve better results. &lt;/p&gt;
+<p>**NOTE：**: it is recommended to be provided in multi-image fusion scenarios to achieve better results. </p>
 
 **Type:** int
 

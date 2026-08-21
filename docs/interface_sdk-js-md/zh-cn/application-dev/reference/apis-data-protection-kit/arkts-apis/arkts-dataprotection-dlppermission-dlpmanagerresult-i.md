@@ -40,7 +40,7 @@ want: Want
 
 表示打开DLP权限管理应用并退出后返回的数据。
 
-**类型：** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
+**类型：** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)
 
 **起始版本：** 11
 

@@ -16,7 +16,8 @@ function addCustomDnsRule(host: string, ip: Array<string>, callback: AsyncCallba
 
 > **说明：**
 > 
-> 不需要时可调用[removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md)删除某一条自定义规则或调用 &gt; [clearCustomDnsRules](arkts-network-connection-clearcustomdnsrules-f.md)删除当前应用程序的所有的自定义DNS规则 。
+> 不需要时可调用[removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md)删除某一条自定义规则或调用
+> [clearCustomDnsRules](arkts-network-connection-clearcustomdnsrules-f.md)删除当前应用程序的所有的自定义DNS规则 。
 
 **起始版本：** 11
 
@@ -88,7 +89,8 @@ function addCustomDnsRule(host: string, ip: Array<string>): Promise<void>
 
 > **说明：**
 > 
-> 不需要时可调用[removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md)删除某一条自定义规则或调用 &gt; [clearCustomDnsRules](arkts-network-connection-clearcustomdnsrules-f.md)删除当前应用程序的所有的自定义DNS规则 。
+> 不需要时可调用[removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md)删除某一条自定义规则或调用
+> [clearCustomDnsRules](arkts-network-connection-clearcustomdnsrules-f.md)删除当前应用程序的所有的自定义DNS规则 。
 
 **起始版本：** 11
 

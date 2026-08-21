@@ -19,7 +19,8 @@ The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** mus
 
 > **NOTE：**
 > 
-> Initializing a session for SE security level keys defined in &gt; [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) requires the ohos.permission.ACCESS_SE_KEY permission.
+> Initializing a session for SE security level keys defined in
+> [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
 
@@ -74,7 +75,8 @@ The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** mus
 
 > **NOTE：**
 > 
-> Initializing a session for SE security level keys defined in &gt; [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) requires the ohos.permission.ACCESS_SE_KEY permission.
+> Initializing a session for SE security level keys defined in
+> [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
 

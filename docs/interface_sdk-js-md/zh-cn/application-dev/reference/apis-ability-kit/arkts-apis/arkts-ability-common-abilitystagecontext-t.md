@@ -4,7 +4,7 @@
 export type AbilityStageContext = _AbilityStageContext
 ```
 
-[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)组件上下文，继承自Context。
+[AbilityStage](arkts-ability-appabilityabilitystage-abilitystage-c.md)组件上下文，继承自Context。
 
 **起始版本：** 23
 

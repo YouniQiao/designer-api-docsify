@@ -16,9 +16,11 @@ Obtains information about the running processes of the current application. This
 
 > **NOTE：**
 > 
-> - In versions earlier than API version 11, this API requires the ohos.permission.GET_RUNNING_INFO permission, &gt; which is available only for system applications.
+> - In versions earlier than API version 11, this API requires the ohos.permission.GET_RUNNING_INFO permission,
+> which is available only for system applications.
 > 
-> - Starting from API version 11, this API is used only to obtain the process information of the caller. No &gt; permission is required.
+> - Starting from API version 11, this API is used only to obtain the process information of the caller. No
+> permission is required.
 
 **Since:** 23
 
@@ -67,9 +69,11 @@ Obtains information about the running processes of the current application. This
 
 > **NOTE：**
 > 
-> - In versions earlier than API version 11, this API requires the ohos.permission.GET_RUNNING_INFO permission, &gt; which is available only for system applications.
+> - In versions earlier than API version 11, this API requires the ohos.permission.GET_RUNNING_INFO permission,
+> which is available only for system applications.
 > 
-> - Starting from API version 11, this API is used only to obtain the process information of the caller. No &gt; permission is required.
+> - Starting from API version 11, this API is used only to obtain the process information of the caller. No
+> permission is required.
 
 **Since:** 23
 

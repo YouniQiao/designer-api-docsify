@@ -18,7 +18,10 @@ Attests a key. This API uses an asynchronous callback to return the result.
 <!--RP6-->   
 > **NOTE：**
 > 
-> The certificate chain generated during non-anonymous certificate key attestation may contain the device &gt; identifier (confirm the specific implementation with the vendor). If the device identifier is included, you can &gt; determine its use, retention, and destruction. It is recommended that you describe the use purpose, retention &gt; policy, and destruction method in the privacy statement. <!--RP6End-->
+> The certificate chain generated during non-anonymous certificate key attestation may contain the device
+> identifier (confirm the specific implementation with the vendor). If the device identifier is included, you can
+> determine its use, retention, and destruction. It is recommended that you describe the use purpose, retention
+> policy, and destruction method in the privacy statement. <!--RP6End-->
 
 **Since:** 9
 
@@ -157,7 +160,10 @@ Attests a key. This API uses a promise to return the result.
 <!--RP6-->   
 > **NOTE：**
 > 
-> The certificate chain generated during non-anonymous certificate key attestation may contain the device &gt; identifier (confirm the specific implementation with the vendor). If the device identifier is included, you can &gt; determine its use, retention, and destruction. It is recommended that you describe the use purpose, retention &gt; policy, and destruction method in the privacy statement. <!--RP6End-->
+> The certificate chain generated during non-anonymous certificate key attestation may contain the device
+> identifier (confirm the specific implementation with the vendor). If the device identifier is included, you can
+> determine its use, retention, and destruction. It is recommended that you describe the use purpose, retention
+> policy, and destruction method in the privacy statement. <!--RP6End-->
 
 **Since:** 9
 

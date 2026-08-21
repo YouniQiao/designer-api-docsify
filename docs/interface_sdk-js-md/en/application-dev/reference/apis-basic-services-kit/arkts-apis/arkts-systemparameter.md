@@ -6,11 +6,13 @@ For details about the system parameter design principles and definitions, see [P
 
 > **NOTE：**
 > 
-> - The APIs of this module are no longer maintained since API version 9. You are advised to use &gt; [@ohos.systemParameterEnhance](arkts-systemparameterenhance.md) instead.
+> - The APIs of this module are no longer maintained since API version 9. You are advised to use
+> [@ohos.systemParameterEnhance](arkts-systemparameterenhance.md) instead.
 > 
 > - The APIs provided by this module are system APIs.
 > 
-> - Third-party applications cannot use the APIs provided by this module because system parameters each require &gt; specific discretionary access control (DAC) and mandatory access control (MAC) permissions.
+> - Third-party applications cannot use the APIs provided by this module because system parameters each require
+> specific discretionary access control (DAC) and mandatory access control (MAC) permissions.
 
 **Since:** 6
 

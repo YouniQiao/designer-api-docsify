@@ -2,15 +2,15 @@
 
 <!--Del-->
 - [@ohos.app.ability.MediaControlExtensionAbility](arkts-app-ability-mediacontrolextensionability.md)<!--DelEnd-->
-  - [MediaControlExtensionAbility](arkts-avsession-app-ability-mediacontrolextensionability-mediacontrolextensionability-c.md)
+  - [MediaControlExtensionAbility](arkts-avsession-appabilitymediacontrolextensionability-mediacontrolextensionability-c.md)
 - [@ohos.multimedia.avCastPicker](arkts-multimedia-avcastpicker.md)
-  - [AVCastPicker](arkts-avsession-multimedia-avcastpicker-avcastpicker-s.md)
+  - [AVCastPicker](arkts-avsession-multimediaavcastpicker-avcastpicker-s.md)
 - [@ohos.multimedia.avCastPickerParam](arkts-multimedia-avcastpickerparam.md)
-  - [AVCastPickerColorMode](arkts-avsession-multimedia-avcastpickerparam-avcastpickercolormode-e.md)
-  - [AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)
-  - [AVCastPickerStyle](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstyle-e.md)
+  - [AVCastPickerColorMode](arkts-avsession-multimediaavcastpickerparam-avcastpickercolormode-e.md)
+  - [AVCastPickerState](arkts-avsession-multimediaavcastpickerparam-avcastpickerstate-e.md)
+  - [AVCastPickerStyle](arkts-avsession-multimediaavcastpickerparam-avcastpickerstyle-e.md)
 - [@ohos.multimedia.avInputCastPicker](arkts-multimedia-avinputcastpicker.md)
-  - [AVInputCastPicker](arkts-avsession-multimedia-avinputcastpicker-avinputcastpicker-s.md)
+  - [AVInputCastPicker](arkts-avsession-multimediaavinputcastpicker-avinputcastpicker-s.md)
   - [OnPickerStateCallback](arkts-avsession-onpickerstatecallback-t.md)
 - [@ohos.multimedia.avMusicTemplate](arkts-multimedia-avmusictemplate.md)
   - [createAVMusicTemplate](arkts-avsession-avmusictemplate-createavmusictemplate-f.md)

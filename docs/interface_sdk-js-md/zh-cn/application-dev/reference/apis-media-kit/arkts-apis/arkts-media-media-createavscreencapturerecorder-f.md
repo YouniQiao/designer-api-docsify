@@ -24,7 +24,7 @@ function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AVScreenCaptureRecorder](arkts-media-multimedia-media-avscreencapturerecorder-i.md)&gt; | Promise对象，返回AVScreenCaptureRecorder实例，失败时返回null。可用于进行屏幕录制。 |
+| Promise&lt;[AVScreenCaptureRecorder](arkts-media-multimediamedia-avscreencapturerecorder-i.md)&gt; | Promise对象，返回AVScreenCaptureRecorder实例，失败时返回null。可用于进行屏幕录制。 |
 
 **错误码：**
 
@@ -69,7 +69,7 @@ Creates an **AVScreenCaptureRecorder** instance. This API uses a promise to retu
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AVScreenCaptureRecorder](arkts-media-multimedia-media-avscreencapturerecorder-i.md) \| undefined&gt; | Promise used to return the result. If the operation is successful, an **AVScreenCaptureRecorder** instance is returned; otherwise, **null** is returned. The instance can be used for screen capture. |
+| Promise&lt;[AVScreenCaptureRecorder](arkts-media-multimediamedia-avscreencapturerecorder-i.md) \| undefined&gt; | Promise used to return the result. If the operation is successful, an **AVScreenCaptureRecorder** instance is returned; otherwise, **null** is returned. The instance can be used for screen capture. |
 
 **错误码：**
 

@@ -4,7 +4,8 @@ PermissionRequest 是 Web 组件用于授权或拒绝权限请求的对象。当
 
 > **说明：**
 > 
-> - [grant](#grant)()与 [deny](#deny)() 方法互斥，对于同一个 PermissionRequest 对象， &gt; 只能调用其中一个方法。
+> - [grant](#grant)()与 [deny](#deny)() 方法互斥，对于同一个 PermissionRequest 对象，
+> 只能调用其中一个方法。
 > 
 > - 调用 grant() 或 deny() 后，该 PermissionRequest 对象已完成响应，不允许重复调用。
 > 

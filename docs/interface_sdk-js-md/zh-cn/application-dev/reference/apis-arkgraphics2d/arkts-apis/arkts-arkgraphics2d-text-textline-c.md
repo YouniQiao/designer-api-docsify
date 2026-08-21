@@ -308,7 +308,8 @@ getImageBounds(): common2D.Rect
 > 
 > 示意图展示了字符串为" a b "的图像边界。
 > 
->  &gt;
+> 
+> 
 > 示意图展示了字符串为"j"或"E"的图像边界。
 > 
 > 
@@ -470,7 +471,8 @@ getTypographicBounds(): TypographicBounds
 > 
 > 示意图展示了字符串为" a b "的排版边界。
 > 
->  &gt;
+> 
+> 
 > 示意图展示了字符串为"j"或"E"的排版边界。
 > 
 > !

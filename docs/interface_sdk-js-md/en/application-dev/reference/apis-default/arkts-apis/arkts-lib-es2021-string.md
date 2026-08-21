@@ -11,5 +11,5 @@
 
 | Name | Description |
 | --- | --- |
-| [String](arkts-lib-es2021-string-string-i.md) |  |
+| [String](arkts-libes2021string-string-i.md) |  |
 

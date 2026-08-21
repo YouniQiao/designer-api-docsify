@@ -31,7 +31,7 @@ Duplicates the file descriptor and returns the corresponding **File** object.
 
 | Type | Description |
 | --- | --- |
-| [File](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-file-i.md) | File object opened. |
+| [File](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-file-i.md) | File object opened. |
 
 **Error codes:**
 

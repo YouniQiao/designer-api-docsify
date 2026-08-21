@@ -16,7 +16,8 @@ Obtains the total uplink traffic (in bytes) of the NIC corresponding to the curr
 
 > **NOTE：**
 > 
-> It is recommended to call this API when the cellular network is in the connected state. Otherwise, error code 210 &gt; 3012 will be thrown.
+> It is recommended to call this API when the cellular network is in the connected state. Otherwise, error code 210
+> 3012 will be thrown.
 
 **Since:** 23
 
@@ -63,7 +64,8 @@ Obtains the total uplink traffic (in bytes) of the NIC corresponding to the curr
 
 > **NOTE：**
 > 
-> It is recommended to call this API when the cellular network is in the connected state. Otherwise, error code 210 &gt; 3012 will be thrown.
+> It is recommended to call this API when the cellular network is in the connected state. Otherwise, error code 210
+> 3012 will be thrown.
 
 **Since:** 23
 

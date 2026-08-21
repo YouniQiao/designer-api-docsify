@@ -16,7 +16,8 @@ function uninstall(admin: Want, bundleName: string, userId?: number, isKeepData?
 
 > **说明：**
 > 
-> 当应用为不可卸载的预置应用或者通过[addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md)接口设置了不 &gt; 允许卸载时，调用此接口卸载应用会返回401错误码。
+> 当应用为不可卸载的预置应用或者通过[addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md)接口设置了不
+> 允许卸载时，调用此接口卸载应用会返回401错误码。
 
 **起始版本：** 12
 
@@ -32,7 +33,7 @@ function uninstall(admin: Want, bundleName: string, userId?: number, isKeepData?
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | bundleName | string | 是 | 应用程序包名。 |
 | userId | number | 否 | 用户ID，取值范围：大于等于0。 <br> - 调用接口时，若传入userId，表示指定用户。 <br> - 调用接口时，若未传入userId，表示当前用户。 |
 | isKeepData | boolean | 否 | 是否保留包数据，true表示保留，false表示不保留。 |

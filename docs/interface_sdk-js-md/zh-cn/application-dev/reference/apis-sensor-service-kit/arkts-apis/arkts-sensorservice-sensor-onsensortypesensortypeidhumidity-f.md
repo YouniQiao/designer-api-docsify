@@ -17,7 +17,9 @@ function on(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<Humidit
 
 > **说明：**
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HUMIDITY] &gt; [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor) &gt; 替代。
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HUMIDITY]
+> [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+> 替代。
 
 **起始版本：** 8
 

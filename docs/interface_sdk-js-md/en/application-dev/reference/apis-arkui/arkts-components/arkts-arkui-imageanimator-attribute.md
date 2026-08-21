@@ -287,7 +287,8 @@ Sets the number of images to be pre-decoded.
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. Currently, no substitute is &gt; available.
+> This API is supported since API version 7 and deprecated since API version 9. Currently, no substitute is
+> available.
 
 **Since:** 7
 

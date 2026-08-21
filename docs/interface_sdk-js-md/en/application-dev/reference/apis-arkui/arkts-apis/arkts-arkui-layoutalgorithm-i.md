@@ -4,7 +4,8 @@ Basic layout algorithm of the [DynamicLayout](../../../reference/apis-arkui/arku
 
 > **NOTE：**
 > 
-> This type of variable can be assigned a specific layout algorithm class object, such as an object of the &gt; CustomLayoutAlgorithm or RowLayoutAlgorithm class.
+> This type of variable can be assigned a specific layout algorithm class object, such as an object of the
+> CustomLayoutAlgorithm or RowLayoutAlgorithm class.
 
 **Since:** 24
 

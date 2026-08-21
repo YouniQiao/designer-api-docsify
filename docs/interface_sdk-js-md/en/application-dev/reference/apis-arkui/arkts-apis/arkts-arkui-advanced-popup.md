@@ -19,8 +19,8 @@ import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [PopupButtonOptions](arkts-arkui-arkui-advanced-popup-popupbuttonoptions-i.md) | Defines the button attributes and events. |
-| [PopupIconOptions](arkts-arkui-arkui-advanced-popup-popupiconoptions-i.md) | Defines the icon options. |
-| [PopupOptions](arkts-arkui-arkui-advanced-popup-popupoptions-i.md) | Defines the style parameters of the popup. |
-| [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md) | Provides text style settings. |
+| [PopupButtonOptions](arkts-arkui-arkuiadvancedpopup-popupbuttonoptions-i.md) | Defines the button attributes and events. |
+| [PopupIconOptions](arkts-arkui-arkuiadvancedpopup-popupiconoptions-i.md) | Defines the icon options. |
+| [PopupOptions](arkts-arkui-arkuiadvancedpopup-popupoptions-i.md) | Defines the style parameters of the popup. |
+| [PopupTextOptions](arkts-arkui-arkuiadvancedpopup-popuptextoptions-i.md) | Provides text style settings. |
 

@@ -20,7 +20,10 @@ function shiftAppWindowFocus(sourceWindowId: int, targetWindowId: int): Promise<
 
 > **说明：**
 > 
-> 在调用shiftAppWindowFocus()前，建议确保目标窗口已调用 &gt; [loadContent()](arkts-arkui-window-window-i.md#loadcontent) &gt; 或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)并生效， &gt; 否则可能会导致不可见窗口获取焦点，造成功能异常或影响用户体验。
+> 在调用shiftAppWindowFocus()前，建议确保目标窗口已调用
+> [loadContent()](arkts-arkui-window-window-i.md#loadcontent)
+> 或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)并生效，
+> 否则可能会导致不可见窗口获取焦点，造成功能异常或影响用户体验。
 
 **起始版本：** 23
 

@@ -27,7 +27,7 @@ Defines UIExtensionComponent Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | The want. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | The want. |
 | options | [UIExtensionOptions](arkts-uiextensioncomponent-uiextensionoptions-i-sys.md) | No | The options. |
 
 **Return value:**

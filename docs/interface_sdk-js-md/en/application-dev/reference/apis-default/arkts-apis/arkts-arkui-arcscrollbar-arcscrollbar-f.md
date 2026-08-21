@@ -29,14 +29,14 @@ Defines ArcScrollBar Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ArcScrollBarOptions](arkts-arkui-arcscrollbar-arcscrollbaroptions-i.md) | Yes |  |
+| options | [ArcScrollBarOptions](arkts-arkuiarcscrollbar-arcscrollbaroptions-i.md) | Yes |  |
 | content_ | CustomBuilder | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcScrollBarAttribute](arkts-arkui-arcscrollbar-arcscrollbarattribute-i.md) |  |
+| [ArcScrollBarAttribute](arkts-arkuiarcscrollbar-arcscrollbarattribute-i.md) |  |
 
 
 ## ArcScrollBar
@@ -65,12 +65,12 @@ Defines ArcScrollBar Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | CustomBuilderT&lt;[ArcScrollBarAttribute](arkts-arkui-arcscrollbar-arcscrollbarattribute-i.md)&gt; | Yes | The style to create an ArcScrollBar. |
+| style_ | CustomBuilderT&lt;[ArcScrollBarAttribute](arkts-arkuiarcscrollbar-arcscrollbarattribute-i.md)&gt; | Yes | The style to create an ArcScrollBar. |
 | content_ | CustomBuilder | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcScrollBarAttribute](arkts-arkui-arcscrollbar-arcscrollbarattribute-i.md) | The attribute of the ArcScrollBar. |
+| [ArcScrollBarAttribute](arkts-arkuiarcscrollbar-arcscrollbarattribute-i.md) | The attribute of the ArcScrollBar. |
 

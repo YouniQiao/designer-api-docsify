@@ -155,7 +155,7 @@ Obtains the MIME type of files. This method should be implemented by a Data abil
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the path of the files to obtain. |
-| mimeTypeFilter | string | Yes | Indicates the MIME type of the files to obtain. This parameter cannot be set to {@code null}. &lt;p&gt;1. "&ast;/*": Obtains all types supported by a Data ability. &lt;p&gt;2. "image/*": Obtains files whose main type is image of any subtype. &lt;p&gt;3. "&ast;/jpg": Obtains files whose subtype is JPG of any main type. |
+| mimeTypeFilter | string | Yes | Indicates the MIME type of the files to obtain. This parameter cannot be set to {@code null}. <p>1. "&ast;/*": Obtains all types supported by a Data ability. <p>2. "image/*": Obtains files whose main type is image of any subtype. <p>3. "&ast;/jpg": Obtains files whose subtype is JPG of any main type. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | function specified by framework to receive the result, developer should call this function to return the result to framework. |
 
 ## getType
@@ -164,7 +164,7 @@ Obtains the MIME type of files. This method should be implemented by a Data abil
 getType?(uri: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the MIME type matching the data specified by the URI of the Data ability. This method should be implemented by a Data ability. &lt;p&gt;Data abilities supports general data types, including text, HTML, and JPEG.&lt;/p&gt;
+Obtains the MIME type matching the data specified by the URI of the Data ability. This method should be implemented by a Data ability. <p>Data abilities supports general data types, including text, HTML, and JPEG.</p>
 
 **Since:** 7
 

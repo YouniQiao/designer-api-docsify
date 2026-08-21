@@ -6,7 +6,8 @@
 
 > **说明：**
 
-> - 从API Version 9开始，该接口不再维护，推荐使用新接口 &gt; [`@ohos.data.distributedKVStore`](arkts-data-distributedkvstore.md)。
+> - 从API Version 9开始，该接口不再维护，推荐使用新接口
+> [`@ohos.data.distributedKVStore`](arkts-data-distributedkvstore.md)。
 
 > - 本模块中所有需要获取deviceId的接口，都仅系统应用可用。
 

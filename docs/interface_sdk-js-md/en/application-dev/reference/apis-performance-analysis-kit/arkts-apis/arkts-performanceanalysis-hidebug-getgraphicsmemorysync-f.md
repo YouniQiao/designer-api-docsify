@@ -16,7 +16,8 @@ Obtains the total GPU memory size (GL + graph) of an application in synchronous 
 
 > **NOTE：**
 > 
-> This API involves multiple cross-process communications, which may take seconds. To avoid performance problems, &gt; you are advised to use the asynchronous API **getGraphicsMemory** instead of this API in the main thread.
+> This API involves multiple cross-process communications, which may take seconds. To avoid performance problems,
+> you are advised to use the asynchronous API **getGraphicsMemory** instead of this API in the main thread.
 
 **Since:** 23
 

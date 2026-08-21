@@ -83,7 +83,8 @@ Updates the data of the referenced property in [AppStorage](../../../ui/state-ma
 
 > **NOTE：**
 
-> Since API version 12, AppStorage and LocalStorage support the Map, Set, Date types, as well as **null**, &gt; **undefined**, and union types.
+> Since API version 12, AppStorage and LocalStorage support the Map, Set, Date types, as well as **null**,
+> **undefined**, and union types.
 
 **Since:** 12
 

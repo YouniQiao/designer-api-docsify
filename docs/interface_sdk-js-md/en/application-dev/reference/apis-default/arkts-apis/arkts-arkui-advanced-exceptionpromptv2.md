@@ -11,25 +11,25 @@
 
 | Name | Description |
 | --- | --- |
-| [PromptOptionsV2](arkts-arkui-advanced-exceptionpromptv2-promptoptionsv2-c.md) | Configuration parameter of ExceptionPromptV2. Use @ObservedV2 and @Trace to support deep observation and dynamic refresh of properties. |
+| [PromptOptionsV2](arkts-arkuiadvancedexceptionpromptv2-promptoptionsv2-c.md) | Configuration parameter of ExceptionPromptV2. Use @ObservedV2 and @Trace to support deep observation and dynamic refresh of properties. |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [ExceptionPromptV2](arkts-arkui-advanced-exceptionpromptv2-exceptionpromptv2-s.md) | Declare struct ExceptionPromptV2 higher-order component. The exception prompt component is used to show an error message when an error arises. @struct { ExceptionPromptV2 } |
+| [ExceptionPromptV2](arkts-arkuiadvancedexceptionpromptv2-exceptionpromptv2-s.md) | Declare struct ExceptionPromptV2 higher-order component. The exception prompt component is used to show an error message when an error arises. @struct { ExceptionPromptV2 } |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [PromptOptionsV2Config](arkts-arkui-advanced-exceptionpromptv2-promptoptionsv2config-i.md) | Configuration information interface for PromptOptionsV2. Used to construct PromptOptionsV2 object. |
+| [PromptOptionsV2Config](arkts-arkuiadvancedexceptionpromptv2-promptoptionsv2config-i.md) | Configuration information interface for PromptOptionsV2. Used to construct PromptOptionsV2 object. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [MarginTypeV2](arkts-arkui-advanced-exceptionpromptv2-margintypev2-e.md) | Control margin status of ExceptionPromptV2. |
+| [MarginTypeV2](arkts-arkuiadvancedexceptionpromptv2-margintypev2-e.md) | Control margin status of ExceptionPromptV2. |
 
 ### Types
 

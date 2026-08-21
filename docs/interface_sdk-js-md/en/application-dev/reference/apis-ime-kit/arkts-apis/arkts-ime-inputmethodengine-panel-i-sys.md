@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 offSizeUpdate(callback?: SizeUpdateCallback): void
 ```
 
-@brief Unsubscribe 'sizeUpdate' event. <br> <br>&lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.&lt;/p&gt;
+@brief Unsubscribe 'sizeUpdate' event. <br> <br><p>It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.</p>
 
 **Since:** 23
 
@@ -43,8 +43,10 @@ off(type: 'sizeUpdate', callback?: SizeUpdateCallback): void
 ```
 
 @brief Disables listening for the panel size change. This API uses an asynchronous callback to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. When you call [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) to adjust the panel size, the system calculates the final value based on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain the actual panel size to refresh the panel layout.
 
 **Since:** 14
@@ -78,7 +80,7 @@ panel.off('sizeUpdate', (windowSize: window.Size, keyboardArea: inputMethodEngin
 onSizeUpdate(callback: SizeUpdateCallback): void
 ```
 
-@brief Subscribe 'sizeUpdate' event. <br> <br>&lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.&lt;/p&gt;
+@brief Subscribe 'sizeUpdate' event. <br> <br><p>It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.</p>
 
 **Since:** 23
 
@@ -101,8 +103,10 @@ on(type: 'sizeUpdate', callback: SizeUpdateCallback): void
 ```
 
 @brief Listens for the panel size change. This API uses an asynchronous callback to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. When you call [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) to adjust the panel size, the system calculates the final value based on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain the actual panel size to refresh the panel layout.
 
 **Since:** 14
@@ -138,7 +142,8 @@ setShadow(radius: double, color: string, offsetX: double, offsetY: double): void
 ```
 
 @brief Sets the shadow effect of the input method window. <br> <br>   
-> **NOTE：**<br>
+> **NOTE：**&lt;br
+&gt; 
 > <br>
 > Panels whose [PanelType](arkts-ime-inputmethodengine-paneltype-e.md) is **SOFT_KEYBOARD** and [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) is **FLG_FIXED** are not supported.
 

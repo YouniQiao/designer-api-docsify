@@ -67,7 +67,9 @@ Whether to re-create the component when it is being built.
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. Whether to re-create the component &gt; is automatically determined based on the component attributes and child component changes. No manual &gt; configuration is required.
+> This API is supported since API version 7 and deprecated since API version 9. Whether to re-create the component
+> is automatically determined based on the component attributes and child component changes. No manual
+> configuration is required.
 
 **Since:** 7
 

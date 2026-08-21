@@ -67,9 +67,13 @@ function requestEnableNotification(context: UIAbilityContext, callback: AsyncCal
 
 > **说明：**
 > 
-> - 仅当应用界面加载完成后（即调用 &gt; [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent)成功），方可使用该接口 &gt; 。
+> - 仅当应用界面加载完成后（即调用
+> [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent)成功），方可使用该接口
+> 。
 > 
-> - 在使用该接口拉起通知授权弹窗后，如果用户拒绝授权，将无法使用该接口再次拉起弹窗。开发者可以调用 &gt; [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md)二次申请授权，拉起通知管理弹窗 &gt; 。
+> - 在使用该接口拉起通知授权弹窗后，如果用户拒绝授权，将无法使用该接口再次拉起弹窗。开发者可以调用
+> [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md)二次申请授权，拉起通知管理弹窗
+> 。
 
 **起始版本：** 23
 
@@ -215,9 +219,13 @@ function requestEnableNotification(context: UIAbilityContext): Promise<void>
 
 > **说明：**
 > 
-> - 仅当应用界面加载完成后（即调用 &gt; [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent)成功），方可使用该接口 &gt; 。
+> - 仅当应用界面加载完成后（即调用
+> [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent)成功），方可使用该接口
+> 。
 > 
-> - 在使用该接口拉起通知授权弹窗后，如果用户拒绝授权，将无法使用该接口再次拉起弹窗。开发者可以调用 &gt; [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md)二次申请授权，拉起通知管理弹窗 &gt; 。
+> - 在使用该接口拉起通知授权弹窗后，如果用户拒绝授权，将无法使用该接口再次拉起弹窗。开发者可以调用
+> [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md)二次申请授权，拉起通知管理弹窗
+> 。
 
 **起始版本：** 23
 

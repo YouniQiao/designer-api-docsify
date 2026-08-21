@@ -4,9 +4,11 @@
 
 > **说明：**
 > 
-> WaterFlow组件使用通用属性clip&lt;sup&gt;12+&lt;/sup&gt;和通用属性 &gt; clip&lt;sup&gt;18+&lt;/sup&gt;时默认值都为true。
+> WaterFlow组件使用通用属性clip&lt;sup&gt;12+&lt;/sup&gt;和通用属性
+> clip&lt;sup&gt;18+&lt;/sup&gt;时默认值都为true。
 > 
-> WaterFlow组件内容裁剪模式ContentClipMode&lt;sup&gt;14+&lt;/sup&gt;枚举说明为ContentClipMode.CONTENT_ONLY，padding区域会 &gt; 被裁剪不显示。
+> WaterFlow组件内容裁剪模式ContentClipMode&lt;sup&gt;14+&lt;/sup&gt;枚举说明为ContentClipMode.CONTENT_ONLY，padding区域会
+> 被裁剪不显示。
 
 **继承/实现关系：** WaterFlowAttribute extends ScrollableCommonMethod
 

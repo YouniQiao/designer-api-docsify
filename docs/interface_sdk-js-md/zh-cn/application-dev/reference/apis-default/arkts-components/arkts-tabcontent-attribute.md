@@ -52,7 +52,9 @@ onWillHide(event: VoidCallback | undefined): this
 
 > **说明：**
 > 
-> 从API version 20开始，该接口支持在 &gt; [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier) &gt; 中调用。
+> 从API version 20开始，该接口支持在
+> [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
+> 中调用。
 
 **起始版本：** 23
 
@@ -86,7 +88,9 @@ onWillShow(event: VoidCallback | undefined): this
 
 > **说明：**
 > 
-> 从API version 20开始，该接口支持在 &gt; [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier) &gt; 中调用。
+> 从API version 20开始，该接口支持在
+> [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
+> 中调用。
 
 **起始版本：** 23
 

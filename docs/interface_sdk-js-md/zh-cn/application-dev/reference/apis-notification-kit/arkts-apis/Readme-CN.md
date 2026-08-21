@@ -1,9 +1,9 @@
 # ArkTS API<!--arkts-notificationkit-->
 
 - [@ohos.application.NotificationSubscriberExtensionAbility](arkts-application-notificationsubscriberextensionability.md)
-  - [NotificationSubscriberExtensionAbility](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md)
+  - [NotificationSubscriberExtensionAbility](arkts-notification-applicationnotificationsubscriberextensionability-notificationsubscriberextensionability-c.md)
 - [@ohos.application.NotificationSubscriberExtensionContext](arkts-application-notificationsubscriberextensioncontext.md)
-  - [NotificationSubscriberExtensionContext](arkts-notification-application-notificationsubscriberextensioncontext-notificationsubscriberextensioncontext-c.md)
+  - [NotificationSubscriberExtensionContext](arkts-notification-applicationnotificationsubscriberextensioncontext-notificationsubscriberextensioncontext-c.md)
 - [@ohos.notification](arkts-notification.md)
   - [addSlot](arkts-notification-notification-addslot-depr-f.md)
   <!--Del-->
@@ -437,9 +437,9 @@
   <!--Del-->
   - [RemoveReason(系统接口)](arkts-notification-notificationsubscribe-removereason-e-sys.md)<!--DelEnd-->
 - [@system.notification](arkts-system-notification.md)
-  - [Notification](arkts-notification-system-notification-notification-c.md)
-  - [ActionResult](arkts-notification-system-notification-actionresult-i.md)
-  - [ShowNotificationOptions](arkts-notification-system-notification-shownotificationoptions-i.md)
+  - [Notification](arkts-notification-systemnotification-notification-c.md)
+  - [ActionResult](arkts-notification-systemnotification-actionresult-i.md)
+  - [ShowNotificationOptions](arkts-notification-systemnotification-shownotificationoptions-i.md)
 - notification<!--arkts-notificationkit-notification-->
   - [NotificationCommonDef](arkts-notificationcommondef.md)
     - [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md)

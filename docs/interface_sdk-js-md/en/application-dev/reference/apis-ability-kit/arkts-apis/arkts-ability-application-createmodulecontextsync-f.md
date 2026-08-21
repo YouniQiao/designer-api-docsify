@@ -16,7 +16,9 @@ Creates the context for a module. The [resourceManager.Configuration](../../apis
 
 > **NOTE：**
 > 
-> Creating a module context involves resource querying and initialization, which can be time-consuming. In &gt; scenarios where application fluidity is critical, avoid frequently or repeatedly calling the &gt; **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
+> Creating a module context involves resource querying and initialization, which can be time-consuming. In
+> scenarios where application fluidity is critical, avoid frequently or repeatedly calling the
+> **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
 
 **Since:** 26.1.0
 

@@ -17,7 +17,7 @@ Obtains the Context object associated with a component on the page.
 
 **Deprecated since:** 18
 
-**Substitutes:** [getHostContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#gethostcontext)
+**Substitutes:** [getHostContext](../arkts-apis/arkts-arkui-arkuiuicontext-uicontext-c.md#gethostcontext)
 
 **Model restriction:** This API can be used only in the stage model.
 

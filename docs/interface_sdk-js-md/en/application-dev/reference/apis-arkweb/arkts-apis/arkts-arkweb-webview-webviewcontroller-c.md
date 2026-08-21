@@ -27,9 +27,14 @@ You can use [getBackForwardEntries](../../apis-default/arkts-apis/arkts-webview-
 > **NOTE：**
 > 
 > If [setCustomUserAgent](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setcustomuseragent) is called when the **Web**
-> component is loaded for the first time, the value of **accessBackward** may be **false** when there are &gt; multiple historical entries. That is, there is no backward entry. You are advised to call the &gt; **setCustomUserAgent** method to set a user agent before using **loadUrl** to load a specific page.
+> component is loaded for the first time, the value of **accessBackward** may be **false** when there are
+> multiple historical entries. That is, there is no backward entry. You are advised to call the
+> **setCustomUserAgent** method to set a user agent before using **loadUrl** to load a specific page.
 > 
-> Causes: When the **Web** component is loaded for the first time, calling &gt; [setCustomUserAgent](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setcustomuseragent) causes the component to reload and &gt; retain the initial history entry. Then the new entry replaces the initial history entry and no new history &gt; entry is generated. As a result, the value of **accessBackward** is false.
+> Causes: When the **Web** component is loaded for the first time, calling
+> [setCustomUserAgent](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setcustomuseragent) causes the component to reload and
+> retain the initial history entry. Then the new entry replaces the initial history entry and no new history
+> entry is generated. As a result, the value of **accessBackward** is false.
 
 **Since:** 9
 
@@ -155,11 +160,17 @@ Sets the bottom avoidance height of the visible viewport on the web page.
 
 > **NOTE：**
 > 
-> - The valid value range of **avoidHeight** is [0, height of the **Web** component]. Values outside this range &gt; are adjusted to the nearest boundary.
+> - The valid value range of **avoidHeight** is [0, height of the **Web** component]. Values outside this range
+> are adjusted to the nearest boundary.
 > 
-> - When a non-zero value is specified for **avoidHeight**, the position and size of the **Web** component remain &gt; unchanged, but the visible viewport shift upwards by the specified height, lifting the web page content by the &gt; **avoidHeight**. This API is used to customize the avoidance area at the bottom of a web page. It is not &gt; recommended that this API be used when the editable area of the web page is tapped to pull up the keyboard. If &gt; this API is used in this scenario, the keyboard avoidance mode is set to **OVERLAYS_CONTENT**.
+> - When a non-zero value is specified for **avoidHeight**, the position and size of the **Web** component remain
+> unchanged, but the visible viewport shift upwards by the specified height, lifting the web page content by the
+> **avoidHeight**. This API is used to customize the avoidance area at the bottom of a web page. It is not
+> recommended that this API be used when the editable area of the web page is tapped to pull up the keyboard. If
+> this API is used in this scenario, the keyboard avoidance mode is set to **OVERLAYS_CONTENT**.
 > 
-> - When the height of this API is set to **0**, the web page content can be restored, and the keyboard avoidance &gt; mode is specified by keyboardAvoidMode().
+> - When the height of this API is set to **0**, the web page content can be restored, and the keyboard avoidance
+> mode is specified by keyboardAvoidMode().
 
 **Since:** 20
 
@@ -517,13 +528,20 @@ Constructs a **WebviewController** object.
 
 > **NOTE：**
 > 
-> - No parameter: new webview.WebviewController() indicates an empty constructor. No parameter is required when &gt; the C API is not used.
+> - No parameter: new webview.WebviewController() indicates an empty constructor. No parameter is required when
+> the C API is not used.
 > 
-> - Parameter is a valid string: new webview.WebviewController("xxx"), used for developers to distinguish &gt; multiple instances and call methods under the corresponding instance.
+> - Parameter is a valid string: new webview.WebviewController("xxx"), used for developers to distinguish
+> multiple instances and call methods under the corresponding instance.
 > 
-> - Empty parameter: new webview.WebviewController("") or new webview.WebviewController(undefined). In this &gt; scenario, the parameter is meaningless and cannot distinguish multiple instances. **undefined** is returned &gt; directly, and developers need to check whether the return value is normal.
+> - Empty parameter: new webview.WebviewController("") or new webview.WebviewController(undefined). In this
+> scenario, the parameter is meaningless and cannot distinguish multiple instances. **undefined** is returned
+> directly, and developers need to check whether the return value is normal.
 > 
-> After the **Web** component is destroyed, it is unbound from WebViewController. Subsequently, calling non- &gt; static methods of WebviewController will throw a &gt; [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) &gt; exception. Pay attention to the call timing and catch exceptions to prevent abnormal process exit.
+> After the **Web** component is destroyed, it is unbound from WebViewController. Subsequently, calling non-
+> static methods of WebviewController will throw a
+> [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component)
+> exception. Pay attention to the call timing and catch exceptions to prevent abnormal process exit.
 
 **Since:** 11
 
@@ -805,7 +823,8 @@ Disables specific web engine capabilities by configuring security feature option
 
 > **NOTE：**
 > 
-> - This API is a global static API. It only needs to be called once during the entire app lifecycle and does not &gt; need to be called repeatedly.
+> - This API is a global static API. It only needs to be called once during the entire app lifecycle and does not
+> need to be called repeatedly.
 > 
 > - It must be called before [initializeWebEngine()](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#initializewebengine).
 > Otherwise, the setting does not take effect.
@@ -962,7 +981,9 @@ Executes `AIPageCommand` asynchronously. This API uses a promise to return the r
 
 > **NOTE：**
 > 
-> - The return format varies for different commands. For details, see &gt; [AIPageCommand](../../../reference/apis-arkweb/arkts-apis-webview-AIPageCommand.md) and &gt; [AIPageInteraction](../../../reference/apis-arkweb/arkts-apis-webview-AIPageInteraction.md).
+> - The return format varies for different commands. For details, see
+> [AIPageCommand](../../../reference/apis-arkweb/arkts-apis-webview-AIPageCommand.md) and
+> [AIPageInteraction](../../../reference/apis-arkweb/arkts-apis-webview-AIPageInteraction.md).
 > 
 > - When a command cannot be dispatched or has no result to return, the promise may return an empty string.
 > 
@@ -1067,7 +1088,9 @@ Obtains the historical information list of the current WebView.
 
 > **NOTE：**
 > 
-> onLoadIntercept is triggered when the loading starts. At this time, no &gt; historical node is generated. Therefore, the historical stack obtained by calling **getBackForwardEntries** in &gt; **onLoadIntercept** does not include the page that is being loaded.
+> onLoadIntercept is triggered when the loading starts. At this time, no
+> historical node is generated. Therefore, the historical stack obtained by calling **getBackForwardEntries** in
+> **onLoadIntercept** does not include the page that is being loaded.
 
 **Since:** 9
 
@@ -1099,16 +1122,28 @@ Obtains the prediction information about blankless loading (for details, see [Bl
 
 > **NOTE：**
 > 
-> - The default size of the persistent cache capacity is 30 MB (about 30 pages). You can set the cache capacity &gt; by calling [setBlanklessLoadingCacheCapacity](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setblanklessloadingcachecapacity) &gt; . For details, see the description of this API. When the maximum capacity is exceeded, the cache is updated &gt; based on the Least Recently Used (LRU) mechanism. The persistent cache data that has been stored for more than &gt; seven days is automatically cleared. After the cache is cleared, the optimization effect appears when the page &gt; is loaded for the third time.
+> - The default size of the persistent cache capacity is 30 MB (about 30 pages). You can set the cache capacity
+> by calling [setBlanklessLoadingCacheCapacity](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setblanklessloadingcachecapacity)
+> . For details, see the description of this API. When the maximum capacity is exceeded, the cache is updated
+> based on the Least Recently Used (LRU) mechanism. The persistent cache data that has been stored for more than
+> seven days is automatically cleared. After the cache is cleared, the optimization effect appears when the page
+> is loaded for the third time.
 > 
-> - If the snapshot similarity (**similarity** in [BlanklessInfo](../../apis-default/arkts-apis/arkts-webview-blanklessinfo-i.md)) &gt; is extremely low, check whether the **key** value is correct.
+> - If the snapshot similarity (**similarity** in [BlanklessInfo](../../apis-default/arkts-apis/arkts-webview-blanklessinfo-i.md))
+> is extremely low, check whether the **key** value is correct.
 > 
-> - After this API is called, page loading snapshot detection and transition frame generation calculation are &gt; enabled, which generates certain resource overhead.
+> - After this API is called, page loading snapshot detection and transition frame generation calculation are
+> enabled, which generates certain resource overhead.
 > 
-> - Blankless loading consumes certain resources, which depends on the resolution of the **Web** component. When &gt; the width and height of the resolution are respectively **w** and **h**, the peak memory usage increases by &gt; about **12 × w × h** B in the page-opening phase. After the page is opened, the memory is reclaimed, which does &gt; not affect the stable memory usage. When the size of the solid-state application cache is increased, the &gt; increased cache of each page is about **w × h/10** B and the cache is located in the application cache.
+> - Blankless loading consumes certain resources, which depends on the resolution of the **Web** component. When
+> the width and height of the resolution are respectively **w** and **h**, the peak memory usage increases by
+> about **12 × w × h** B in the page-opening phase. After the page is opened, the memory is reclaimed, which does
+> not affect the stable memory usage. When the size of the solid-state application cache is increased, the
+> increased cache of each page is about **w × h/10** B and the cache is located in the application cache.
 > 
 > - Add the **ohos.permission.INTERNET** and **ohos.permission.GET_NETWORK_INFO** permissions to **module.json5**
-> . For details, see &gt; [Declaring Permissions in the Configuration File](../../../security/AccessToken/declare-permissions.md#declaring-permissions-in-the-configuration-file).
+> . For details, see
+> [Declaring Permissions in the Configuration File](../../../security/AccessToken/declare-permissions.md#declaring-permissions-in-the-configuration-file).
 
 **Since:** 20
 
@@ -1741,7 +1776,8 @@ Obtains the ID of the surface corresponding to ArkWeb. The ID can be used to cap
 
 > **NOTE：**
 > 
-> This API is valid only when the **Web** component rendering mode is **ASYNC_RENDER**. The value of &gt; **getSurfaceId** can be obtained only after the **Web** component is initialized.
+> This API is valid only when the **Web** component rendering mode is **ASYNC_RENDER**. The value of
+> **getSurfaceId** can be obtained only after the **Web** component is initialized.
 
 **Since:** 12
 
@@ -2254,13 +2290,18 @@ If **encoding** is not base64 (including null values), ASCII encoding is used fo
 
 > **NOTE：**
 > 
-> - To load a local image, you can assign a space to either **baseUrl** or **historyUrl**. For details, see the &gt; sample code.
+> - To load a local image, you can assign a space to either **baseUrl** or **historyUrl**. For details, see the
+> sample code.
 > 
-> - In the scenario of loading a local image, **baseUrl** and **historyUrl** cannot be both empty. Otherwise, the &gt; image cannot be loaded.
+> - In the scenario of loading a local image, **baseUrl** and **historyUrl** cannot be both empty. Otherwise, the
+> image cannot be loaded.
 > 
-> - If the rich text in HTML contains special characters such as hash (#), you are advised to set the values of &gt; **baseUrl** and **historyUrl** to spaces.
+> - If the rich text in HTML contains special characters such as hash (#), you are advised to set the values of
+> **baseUrl** and **historyUrl** to spaces.
 > 
-> - To load texts, you need to set &gt; `&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"&gt;` to avoid inconsistent &gt; font sizes.
+> - To load texts, you need to set
+> `&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"&gt;` to avoid inconsistent
+> font sizes.
 
 **Since:** 9
 
@@ -2550,7 +2591,8 @@ Pauses microphone capture on the current web page.
 > 
 > Differences from resumeMicrophone and stopMicrophone:
 > 
-> pauseMicrophone only pauses microphone capture and can be restored through resumeMicrophone; stopMicrophone &gt; stops capture and releases resources.
+> pauseMicrophone only pauses microphone capture and can be restored through resumeMicrophone; stopMicrophone
+> stops capture and releases resources.
 
 **Since:** 23
 
@@ -2673,17 +2715,21 @@ Prefetches resources in the background for a page that is likely to be accessed 
 
 > **NOTE：**
 > 
-> - The downloaded page resources are cached for about five minutes. After this period, the **Web** component &gt; automatically releases them.
+> - The downloaded page resources are cached for about five minutes. After this period, the **Web** component
+> automatically releases them.
 > 
 > - **prefetchPage** can also normally prefetch 302 redirect pages.
 > 
-> - When **prefetchPage** is executed first and then the page is loaded, the prefetched resources are loaded &gt; directly from the cache.
+> - When **prefetchPage** is executed first and then the page is loaded, the prefetched resources are loaded
+> directly from the cache.
 > 
 > - When multiple URLs are prefetched consecutively with **prefetchPage**, only the first one takes effect.
 > 
 > - **prefetchPage** has a time limit. Multiple prefetches cannot be performed within 500 ms.
 > 
-> - **prefetchPage** caches all resources except those with the Cache-Control: no-store header. If a Vary &gt; response header or Cache-Control: no-store header exists, or the downloaded page resources have been cached for &gt; more than five minutes, the resources are revalidated before use.
+> - **prefetchPage** caches all resources except those with the Cache-Control: no-store header. If a Vary
+> response header or Cache-Control: no-store header exists, or the downloaded page resources have been cached for
+> more than five minutes, the resources are revalidated before use.
 
 **Since:** 10
 
@@ -2717,13 +2763,17 @@ Prefetches resources in the background for a page that is likely to be accessed 
 
 > **NOTE：**
 > 
-> - The downloaded page resources are cached for about five minutes. After this period, the **Web** component &gt; automatically releases them.
+> - The downloaded page resources are cached for about five minutes. After this period, the **Web** component
+> automatically releases them.
 > 
 > - **prefetchPage** can also normally prefetch 302 redirect pages.
 > 
-> - When **prefetchPage** is executed first and then the page is loaded, the prefetched resources are loaded &gt; directly from the cache.
+> - When **prefetchPage** is executed first and then the page is loaded, the prefetched resources are loaded
+> directly from the cache.
 > 
-> - **prefetchPage** caches all resources except those with the Cache-Control: no-store header. If a Vary &gt; response header or Cache-Control: no-store header exists, or the downloaded page resources have been cached for &gt; more than five minutes, the resources are revalidated before use.
+> - **prefetchPage** caches all resources except those with the Cache-Control: no-store header. If a Vary
+> response header or Cache-Control: no-store header exists, or the downloaded page resources have been cached for
+> more than five minutes, the resources are revalidated before use.
 
 **Since:** 21
 
@@ -2873,18 +2923,28 @@ For the example, see [Invoking Application Functions on the Frontend Page](../..
 
 > **NOTE：**
 > 
-> - The **registerJavaScriptProxy** API must be used together with the **deleteJavaScriptRegister** API to &gt; prevent memory leak.
+> - The **registerJavaScriptProxy** API must be used together with the **deleteJavaScriptRegister** API to
+> prevent memory leak.
 > 
-> - It is recommended that **registerJavaScriptProxy** be used only with trusted URLs and over secure HTTPS &gt; connections. Injecting JavaScript objects into untrusted web components can expose your application to &gt; malicious attacks.
+> - It is recommended that **registerJavaScriptProxy** be used only with trusted URLs and over secure HTTPS
+> connections. Injecting JavaScript objects into untrusted web components can expose your application to
+> malicious attacks.
 > 
-> - After **registerJavaScriptProxy** is called, the application exposes the registered JavaScript object to all &gt; page frames.
+> - After **registerJavaScriptProxy** is called, the application exposes the registered JavaScript object to all
+> page frames.
 > 
-> - If a **registerJavaScriptProxy** is both registered in the synchronous and asynchronous lists, it is called &gt; asynchronously by default.
+> - If a **registerJavaScriptProxy** is both registered in the synchronous and asynchronous lists, it is called
+> asynchronously by default.
 > 
 > - You should register **registerJavaScriptProxy** either in synchronous list or in asynchronous list.
 > Otherwise, this API fails to be registered.
 > 
-> - After the HTML5 thread submits an asynchronous JavaScript task to the ETS main thread, the HTML5 thread can &gt; continue to execute subsequent tasks without waiting for the task execution to complete and return a result. In &gt; this way, scenarios where the HTML5 thread is blocked due to long-running JavaScript tasks or a congested ETS &gt; thread can be effectively reduced. However, an asynchronous JavaScript task cannot return a value, and a task &gt; execution sequence cannot be ensured. Therefore, you should determine whether to use a synchronous or &gt; asynchronous function based on a specific scenario.
+> - After the HTML5 thread submits an asynchronous JavaScript task to the ETS main thread, the HTML5 thread can
+> continue to execute subsequent tasks without waiting for the task execution to complete and return a result. In
+> this way, scenarios where the HTML5 thread is blocked due to long-running JavaScript tasks or a congested ETS
+> thread can be effectively reduced. However, an asynchronous JavaScript task cannot return a value, and a task
+> execution sequence cannot be ensured. Therefore, you should determine whether to use a synchronous or
+> asynchronous function based on a specific scenario.
 > 
 > - The injected object does not appear in JavaScript until the page is reloaded.
 
@@ -3124,15 +3184,19 @@ Executes a JavaScript script asynchronously in the context of the current page. 
 
 > **NOTE：**
 > 
-> - The JavaScript status is no longer retained during navigation operations (such as **loadUrl**). For example, &gt; the global variables and functions defined before **loadUrl** is called do not exist in the loaded page.
+> - The JavaScript status is no longer retained during navigation operations (such as **loadUrl**). For example,
+> the global variables and functions defined before **loadUrl** is called do not exist in the loaded page.
 > 
-> - It is recommended that the app use **registerJavaScriptProxy** to ensure that the JavaScript status can be &gt; retained across page navigation.
+> - It is recommended that the app use **registerJavaScriptProxy** to ensure that the JavaScript status can be
+> retained across page navigation.
 > 
 > - Currently, passing objects is not supported. Passing structs is supported.
 > 
-> - Executing asynchronous methods cannot obtain return values. Determine whether to use synchronous or &gt; asynchronous methods based on the specific context.
+> - Executing asynchronous methods cannot obtain return values. Determine whether to use synchronous or
+> asynchronous methods based on the specific context.
 > 
-> - The string data type passed from the frontend page to the app side is treated as JSON-formatted data and &gt; needs to be deserialized with JSON.parse.
+> - The string data type passed from the frontend page to the app side is treated as JSON-formatted data and
+> needs to be deserialized with JSON.parse.
 
 **Since:** 9
 
@@ -3172,15 +3236,19 @@ Executes a JavaScript script asynchronously in the context of the current page. 
 
 > **NOTE：**
 > 
-> - The JavaScript status is no longer retained during navigation operations (such as **loadUrl**). For example, &gt; the global variables and functions defined before **loadUrl** is called do not exist in the loaded page.
+> - The JavaScript status is no longer retained during navigation operations (such as **loadUrl**). For example,
+> the global variables and functions defined before **loadUrl** is called do not exist in the loaded page.
 > 
-> - It is recommended that the app use **registerJavaScriptProxy** to ensure that the JavaScript status can be &gt; retained across page navigation.
+> - It is recommended that the app use **registerJavaScriptProxy** to ensure that the JavaScript status can be
+> retained across page navigation.
 > 
 > - Currently, passing objects is not supported. Passing structs is supported.
 > 
-> - Executing asynchronous methods cannot obtain return values. Determine whether to use synchronous or &gt; asynchronous methods based on the specific context.
+> - Executing asynchronous methods cannot obtain return values. Determine whether to use synchronous or
+> asynchronous methods based on the specific context.
 > 
-> - The string data type passed from the frontend page to the app side is treated as JSON-formatted data and &gt; needs to be deserialized with JSON.parse.
+> - The string data type passed from the frontend page to the app side is treated as JSON-formatted data and
+> needs to be deserialized with JSON.parse.
 
 **Since:** 9
 
@@ -3215,7 +3283,8 @@ Executes a JavaScript script asynchronously and returns the script execution res
 
 > **NOTE：**
 > 
-> - The string data type passed from the frontend page to the app side is treated as JSON-formatted data and &gt; needs to be deserialized with JSON.parse.
+> - The string data type passed from the frontend page to the app side is treated as JSON-formatted data and
+> needs to be deserialized with JSON.parse.
 
 **Since:** 10
 
@@ -3254,7 +3323,8 @@ Executes a JavaScript script. This API uses an asynchronous callback to return t
 
 > **NOTE：**
 > 
-> - The string data type passed from the frontend page to the app side is treated as JSON-formatted data and &gt; needs to be deserialized with JSON.parse.
+> - The string data type passed from the frontend page to the app side is treated as JSON-formatted data and
+> needs to be deserialized with JSON.parse.
 
 **Since:** 10
 
@@ -3472,7 +3542,8 @@ Sets the ArkWeb kernel version. If the system does not support the specified ver
 > 
 > - **setActiveWebEngineVersion** cannot be called in an asynchronous thread.
 > 
-> - **setActiveWebEngineVersion** takes effect globally and needs to be called only once in an application &gt; lifecycle.
+> - **setActiveWebEngineVersion** takes effect globally and needs to be called only once in an application
+> lifecycle.
 
 **Since:** 20
 
@@ -3629,14 +3700,16 @@ Sets whether to enable blankless loading. This API must be used together with [g
 
 > **NOTE：**
 > 
-> - This API must be called after the page loading API is triggered. Other restrictions are the same as those of &gt; [getBlanklessInfoWithKey](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getblanklessinfowithkey).
+> - This API must be called after the page loading API is triggered. Other restrictions are the same as those of
+> [getBlanklessInfoWithKey](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getblanklessinfowithkey).
 > 
 > - The page must be loaded in the component that calls this API.
 > 
 > - When the similarity is low, the system will deem the scene change too abrupt and frame insertion will fail.
 > 
 > - Add the **ohos.permission.INTERNET** and **ohos.permission.GET_NETWORK_INFO** permissions to **module.json5**
-> . For details, see &gt; [Declaring Permissions in the Configuration File](../../../security/AccessToken/declare-permissions.md#declaring-permissions-in-the-configuration-file).
+> . For details, see
+> [Declaring Permissions in the Configuration File](../../../security/AccessToken/declare-permissions.md#declaring-permissions-in-the-configuration-file).
 
 **Since:** 20
 
@@ -3674,13 +3747,16 @@ Sets the configuration parameters for frame interpolation during blankless loadi
 
 > **NOTE：**
 > 
-> - This API must be called after the page loading API is triggered. Other restrictions are the same as those of &gt; [getBlanklessInfoWithKey](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getblanklessinfowithkey).
+> - This API must be called after the page loading API is triggered. Other restrictions are the same as those of
+> [getBlanklessInfoWithKey](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getblanklessinfowithkey).
 > 
 > - The page must be loaded in the component that calls this API.
 > 
 > - When the similarity is low, the system will deem the scene change too abrupt and frame insertion will fail.
 > 
-> - Add the **ohos.permission.INTERNET** and **ohos.permission.GET_NETWORK_INFO** permissions to &gt; **module.json5**. For details, see &gt; [Declaring Permissions in the Configuration File](../../../security/AccessToken/declare-permissions.md#declaring-permissions-in-the-configuration-file).
+> - Add the **ohos.permission.INTERNET** and **ohos.permission.GET_NETWORK_INFO** permissions to
+> **module.json5**. For details, see
+> [Declaring Permissions in the Configuration File](../../../security/AccessToken/declare-permissions.md#declaring-permissions-in-the-configuration-file).
 
 **Since:** 23
 
@@ -3747,14 +3823,18 @@ Sets a custom user agent, which will overwrite the default user agent.
 
 > **NOTE：**
 > 
-> - When **src** of the **Web** component is set to a URL, it is recommended to set **User-Agent** in the &gt; onControllerAttached callback. Do not set it in the &gt; **onLoadIntercept** callback, as this may cause the setting to fail or lead to unexpected results.
+> - When **src** of the **Web** component is set to a URL, it is recommended to set **User-Agent** in the
+> onControllerAttached callback. Do not set it in the
+> **onLoadIntercept** callback, as this may cause the setting to fail or lead to unexpected results.
 > 
-> - If **User-Agent** is not set in the **onControllerAttached** callback, calling **setCustomUserAgent** later &gt; may cause an anomaly where the loaded page does not match the actually set **User-Agent**.
+> - If **User-Agent** is not set in the **onControllerAttached** callback, calling **setCustomUserAgent** later
+> may cause an anomaly where the loaded page does not match the actually set **User-Agent**.
 > 
 > - When **src** of the **Web** component is not set to a URL, it is recommended to call **setCustomUserAgent**
 > to set **User-Agent** first, and then use **loadUrl** to load a specific page.
 > 
-> - For the definition and usage scenarios of the default **User-Agent**, see &gt; User-Agent Development Guide.
+> - For the definition and usage scenarios of the default **User-Agent**, see
+> User-Agent Development Guide.
 
 **Since:** 10
 
@@ -3845,11 +3925,16 @@ When **enable** is set to **true**, an error page is displayed when a mainframe 
 
 > **NOTE：**
 > 
-> - When **enable** is set to **false**, the error page feature for both mainframe and subframe is disabled &gt; regardless of the value of **includeSubframe**.
+> - When **enable** is set to **false**, the error page feature for both mainframe and subframe is disabled
+> regardless of the value of **includeSubframe**.
 > 
-> - When **includeSubframe** is set to **false**, the behavior of this API is the same as that of &gt; [setErrorPageEnabled](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#seterrorpageenabled)&lt;sup&gt;20+&lt;/sup&gt;, that &gt; is, only the mainframe error page feature is enabled, and the subframe error page feature is not enabled.
+> - When **includeSubframe** is set to **false**, the behavior of this API is the same as that of
+> [setErrorPageEnabled](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#seterrorpageenabled)&lt;sup&gt;20+&lt;/sup&gt;, that
+> is, only the mainframe error page feature is enabled, and the subframe error page feature is not enabled.
 > 
-> - You can use errorPageEvent.request.isMainFrame() to determine whether &gt; the error source is a mainframe or a subframe, so as to set the corresponding custom error page in the &gt; **onOverrideErrorPage** callback.
+> - You can use errorPageEvent.request.isMainFrame() to determine whether
+> the error source is a mainframe or a subframe, so as to set the corresponding custom error page in the
+> **onOverrideErrorPage** callback.
 
 **Since:** 26.0.0
 
@@ -4104,9 +4189,11 @@ Sets the global scrollbar mode in the web page. When this API is not explicitly 
 
 > **NOTE：**
 > 
-> - You can set whether to always display the web scrollbar of the current application based on the scrollbar &gt; mode.
+> - You can set whether to always display the web scrollbar of the current application based on the scrollbar
+> mode.
 > 
-> - If the forceDisplayScrollBar API is set at the same time as this &gt; API, the setting of **forceDisplayScrollBar** does not take effect.
+> - If the forceDisplayScrollBar API is set at the same time as this
+> API, the setting of **forceDisplayScrollBar** does not take effect.
 > 
 > - This API must be called before WebViewController is bound to a **Web** component.
 
@@ -4302,7 +4389,8 @@ Sets whether to enable the User-Agent Client Hints feature.
 > **NOTE：**
 > 
 > User-Agent Client Hints (UA-CH) is a privacy protection mechanism that replaces the traditional **User-Agent**
-> string. It transfers client information through on-demand requests and structured data, reducing the risk of &gt; excessive tracking.
+> string. It transfers client information through on-demand requests and structured data, reducing the risk of
+> excessive tracking.
 > 
 > If this method is not used, the User-Agent Client Hints feature is disabled by default.
 
@@ -4353,13 +4441,17 @@ Sets the **UserAgentMetadata** corresponding to the **User-Agent**.
 
 > **NOTE：**
 > 
-> User-Agent Metadata is used to populate user agent client hints. It can provide the brand and version &gt; information of the client, the brand and major version of the underlying operating system, and detailed &gt; information about the underlying device.
+> User-Agent Metadata is used to populate user agent client hints. It can provide the brand and version
+> information of the client, the brand and major version of the underlying operating system, and detailed
+> information about the underlying device.
 > 
 > The user agent can be set through setCustomUserAgent, setAppCustomUserAgent, or setUserAgentForHosts.
 > 
-> If no UserAgentMetadata is found based on the overridden User-Agent, and the overridden User-Agent contains the &gt; system default User-Agent, the system default value is used.
+> If no UserAgentMetadata is found based on the overridden User-Agent, and the overridden User-Agent contains the
+> system default User-Agent, the system default value is used.
 > 
-> If no UserAgentMetadata is found based on the overridden User-Agent, but the overridden User-Agent does not &gt; contain the system default user agent, only low-level user agent client hints are generated.
+> If no UserAgentMetadata is found based on the overridden User-Agent, but the overridden User-Agent does not
+> contain the system default user agent, only low-level user agent client hints are generated.
 
 **Since:** 24
 
@@ -4447,7 +4539,13 @@ Sets the destroy mode of the **Web** component. The destroy mode of the **Web** 
 
 > **NOTE：**
 > 
-> [WebDestroyMode.FAST_MODE](../../apis-default/arkts-apis/arkts-webview-webdestroymode-e.md) changes the time when the **Web** component is &gt; destroyed. When it is used, pay attention to the incorrect implementation that depends on the destroy time of &gt; the **Web** component. For example, when a **WebViewController** is called in fast mode rather than using &gt; [WebDestroyMode.NORMAL_MODE](../../apis-default/arkts-apis/arkts-webview-webdestroymode-e.md), the unbinding exception (**17100001**) is more &gt; likely to be triggered. In this case, the application needs to capture the exception, or use &gt; [getAttachState](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getattachstate) to obtain the attach state to avoid stability &gt; problems.
+> [WebDestroyMode.FAST_MODE](../../apis-default/arkts-apis/arkts-webview-webdestroymode-e.md) changes the time when the **Web** component is
+> destroyed. When it is used, pay attention to the incorrect implementation that depends on the destroy time of
+> the **Web** component. For example, when a **WebViewController** is called in fast mode rather than using
+> [WebDestroyMode.NORMAL_MODE](../../apis-default/arkts-apis/arkts-webview-webdestroymode-e.md), the unbinding exception (**17100001**) is more
+> likely to be triggered. In this case, the application needs to capture the exception, or use
+> [getAttachState](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getattachstate) to obtain the attach state to avoid stability
+> problems.
 
 **Since:** 20
 
@@ -4851,7 +4949,8 @@ Obtains the full drawing result of the web page.
 > 
 > - Only supports taking snapshots of resources on the rendering process: static images and text.
 > 
-> - If the page contains a video, a placeholder image of the video is displayed in the snapshot. If there is no &gt; placeholder image, a blank area is displayed.
+> - If the page contains a video, a placeholder image of the video is displayed in the snapshot. If there is no
+> placeholder image, a blank area is displayed.
 
 **Since:** 12
 

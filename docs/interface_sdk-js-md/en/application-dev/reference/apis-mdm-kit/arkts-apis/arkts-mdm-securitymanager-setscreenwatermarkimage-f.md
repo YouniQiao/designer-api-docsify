@@ -16,9 +16,12 @@ Sets a screen watermark policy, which takes effect for all users.
 
 > **NOTE：**
 > 
-> 1. The screen watermark policy tiles the configured image across the entire screen. It is advised to use an image &gt; with transparency to ensure that the device screen content remains visible.
+> 1. The screen watermark policy tiles the configured image across the entire screen. It is advised to use an image
+> with transparency to ensure that the device screen content remains visible.
 > 
-> 2. If the watermark image size is smaller than the screen, the image will be stretched. If the watermark image &gt; size is larger than the screen, the image will be compressed. This implementation differs from the repeated &gt; tiling approach used for application-level watermarks.
+> 2. If the watermark image size is smaller than the screen, the image will be stretched. If the watermark image
+> size is larger than the screen, the image will be compressed. This implementation differs from the repeated
+> tiling approach used for application-level watermarks.
 
 **Since:** 26.0.0
 
@@ -34,7 +37,7 @@ Sets a screen watermark policy, which takes effect for all users.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | pixelMap | image.PixelMap | Yes | Image object. The image width must not exceed twice the screen width, and the image height must not exceed twice the screen height. The size of the image pixel data cannot exceed 128 MB. The size of the image pixel data is calculated as follows: Image width (pixels) × Image height (pixels) × Number of bytes per pixel (typically 4). For example, the size of a 100 × 100 image is 100 × 100 × 4 = 40,000 bytes. For a 1920 × 1080 screen, using an image of the same resolution results in a pixel data size of 1920 × 1 080 × 4 = 8,294,400 bytes (approximately 7.9 MB). |
 
 **Error codes:**

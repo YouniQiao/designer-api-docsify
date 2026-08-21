@@ -20,7 +20,8 @@ StepperItem()
 
 > **说明：**
 
-> 从API version 8开始支持，从API version 22开始废弃，建议使用 &gt; [Swiper](../../../reference/apis-arkui/arkui-ts/ts-container-swiper.md#属性)替代。
+> 从API version 8开始支持，从API version 22开始废弃，建议使用
+> [Swiper](../../../reference/apis-arkui/arkui-ts/ts-container-swiper.md#属性)替代。
 
 **起始版本：** 8
 

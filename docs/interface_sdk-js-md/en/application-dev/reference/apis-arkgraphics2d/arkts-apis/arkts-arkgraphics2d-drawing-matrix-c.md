@@ -8,7 +8,8 @@ Implements a matrix. A 3 x 3 matrix is shown as below.  Elements in the matrix f
 > 
 > - This module uses the physical pixel unit, px.
 > 
-> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
+> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
+> transitions.
 
 **Since:** 23
 

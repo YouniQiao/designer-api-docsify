@@ -77,7 +77,8 @@ strokeWidth(value: number | string)
 > 
 > - 分割线的宽度不支持百分比设置。
 > 
-> - 使用水平分割线时，strokeWidth控制高度，优先级低于通用属性height；使用垂直分割线时，strokeWidth控制宽度，优 &gt; 先级低于通用属性width。
+> - 使用水平分割线时，strokeWidth控制高度，优先级低于通用属性height；使用垂直分割线时，strokeWidth控制宽度，优
+> 先级低于通用属性width。
 > 
 > - 超过通用属性设置大小时，按照通用属性进行裁切。
 > 

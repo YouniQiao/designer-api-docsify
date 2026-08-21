@@ -26,7 +26,9 @@ onClick(event: PasteButtonCallback)
 Triggered when the paste button is clicked, returning the authorization result. Upon successful authorization, the application obtains temporary permission to read clipboard content.
 
 > **NOTE：**
-> - You may want to learn the &gt; [restrictions on security component styles](../../../security/AccessToken/security-component-overview.md#constraints) &gt; to avoid authorization failures caused by incompliant styles.
+> - You may want to learn the
+> [restrictions on security component styles](../../../security/AccessToken/security-component-overview.md#constraints)
+> to avoid authorization failures caused by incompliant styles.
 
 **Since:** 10
 

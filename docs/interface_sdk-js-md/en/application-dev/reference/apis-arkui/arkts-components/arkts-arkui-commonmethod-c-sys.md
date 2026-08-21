@@ -72,7 +72,7 @@ edgeLight(params: EdgeLightParams | undefined): T
 
 Sets the edge light effect for the component.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The edge light effect creates a glowing light effect along the component's edges, starting from the specified position and extending along the edge. <br>This effect can enhance the visual appeal and highlight important components. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The edge light effect creates a glowing light effect along the component's edges, starting from the specified position and extending along the edge. <br>This effect can enhance the visual appeal and highlight important components. </p>
 
 **Since:** 26.0.0
 
@@ -110,7 +110,15 @@ If this attribute is not set, the current component and its children are not rem
 
 > **NOTE：**
 > 
-> The drawing content of the component with **excludeFromRenderGroup** set to **true** and its children cannot the &gt; component's own boundary range. Otherwise, the displayed content may be clipped. For example, if the child &gt; component exceeds the boundary range of the current component due to attributes such as &gt; [translate](arkts-arkui-commonmethod-c.md#translate) or &gt; [scale](arkts-arkui-commonmethod-c.md#scale), or the drawing content extend beyond its boundaries &gt; because the current component has attributes such as &gt; [shadow](arkts-arkui-commonmethod-c.md#shadow) and &gt; [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect), the displayed &gt; content may be clipped. In such scenarios, **excludeFromRenderGroup** should not be set to **true**.
+> The drawing content of the component with **excludeFromRenderGroup** set to **true** and its children cannot the
+> component's own boundary range. Otherwise, the displayed content may be clipped. For example, if the child
+> component exceeds the boundary range of the current component due to attributes such as
+> [translate](arkts-arkui-commonmethod-c.md#translate) or
+> [scale](arkts-arkui-commonmethod-c.md#scale), or the drawing content extend beyond its boundaries
+> because the current component has attributes such as
+> [shadow](arkts-arkui-commonmethod-c.md#shadow) and
+> [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect), the displayed
+> content may be clipped. In such scenarios, **excludeFromRenderGroup** should not be set to **true**.
 
 **Since:** 22
 

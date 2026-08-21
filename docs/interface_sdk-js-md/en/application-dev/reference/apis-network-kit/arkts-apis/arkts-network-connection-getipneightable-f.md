@@ -16,7 +16,8 @@ Obtains information about entries in the IP neighbor table of the local device, 
 
 > **NOTE：**
 > 
-> This interface is used to obtain the cached data of the IP neighbor table, not the data of all connections on the &gt; LAN.
+> This interface is used to obtain the cached data of the IP neighbor table, not the data of all connections on the
+> LAN.
 > 
 > This API is used to check network exceptions and parse the mapping between IP addresses and MAC addresses.
 

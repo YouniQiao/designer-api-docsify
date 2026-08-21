@@ -53,7 +53,9 @@ onBreakpointChange(callback: (breakpoints: string) => void)
 
 > **说明：**
 > 
-> - 当[断点参照物](../../../reference/apis-arkui/arkui-ts/ts-container-gridrow.md#breakpointsreference枚举说明)设置为 &gt; BreakpointsReference.ComponentSize时，不要在onBreakpointChange回调中动态修改GridRow组件的padding或 &gt; margin属性值，否则可能导致组件尺寸计算循环触发、布局抖动或渲染性能下降。
+> - 当[断点参照物](../../../reference/apis-arkui/arkui-ts/ts-container-gridrow.md#breakpointsreference枚举说明)设置为
+> BreakpointsReference.ComponentSize时，不要在onBreakpointChange回调中动态修改GridRow组件的padding或
+> margin属性值，否则可能导致组件尺寸计算循环触发、布局抖动或渲染性能下降。
 
 **起始版本：** 9
 

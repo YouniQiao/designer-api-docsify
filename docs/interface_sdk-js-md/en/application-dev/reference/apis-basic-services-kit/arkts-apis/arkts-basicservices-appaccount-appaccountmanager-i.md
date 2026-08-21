@@ -24,7 +24,9 @@ Adds an application account with the given name. This API uses an asynchronous c
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [createAccount](#createaccount) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [createAccount](#createaccount)
+> instead.
 
 **Since:** 7
 
@@ -63,7 +65,9 @@ Adds an application account name and additional information. This API uses an as
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [createAccount](#createaccount) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [createAccount](#createaccount)
+> instead.
 
 **Since:** 7
 
@@ -103,7 +107,9 @@ Adds an application account name and additional information. This API uses a pro
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [createAccount](#createaccount) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [createAccount](#createaccount)
+> instead.
 
 **Since:** 7
 
@@ -155,7 +161,9 @@ Adds an application account implicitly based on the specified owner. This API us
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [createAccountImplicitly](#createaccountimplicitly) &gt; instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [createAccountImplicitly](#createaccountimplicitly)
+> instead.
 
 **Since:** 8
 
@@ -405,7 +413,9 @@ Authenticates an application account. This API uses an asynchronous callback to 
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [auth](#auth) &gt; instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [auth](#auth)
+> instead.
 
 **Since:** 8
 
@@ -656,7 +666,9 @@ Checks whether data synchronization is enabled for an application account. This 
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [checkDataSyncEnabled](#checkdatasyncenabled) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [checkDataSyncEnabled](#checkdatasyncenabled)
+> instead.
 
 **Since:** 7
 
@@ -701,7 +713,8 @@ Checks whether data synchronization is enabled for an application account. This 
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [checkDataSyncEnabled](#checkdatasyncenabled) instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [checkDataSyncEnabled](#checkdatasyncenabled) instead.
 
 **Since:** 7
 
@@ -970,7 +983,9 @@ Checks the visibility of an authorization token of the specified authentication 
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [checkAuthTokenVisibility](#checkauthtokenvisibility) &gt; instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [checkAuthTokenVisibility](#checkauthtokenvisibility)
+> instead.
 
 **Since:** 8
 
@@ -1016,7 +1031,9 @@ Checks the visibility of an authorization token of the specified authentication 
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [checkAuthTokenVisibility](#checkauthtokenvisibility) &gt; instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [checkAuthTokenVisibility](#checkauthtokenvisibility)
+> instead.
 
 **Since:** 8
 
@@ -1391,7 +1408,9 @@ Deletes an application account. This API uses an asynchronous callback to return
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [removeAccount](#removeaccount) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [removeAccount](#removeaccount)
+> instead.
 
 **Since:** 7
 
@@ -1430,7 +1449,9 @@ Deletes an application account. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [removeAccount](#removeaccount) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [removeAccount](#removeaccount)
+> instead.
 
 **Since:** 7
 
@@ -1691,7 +1712,9 @@ Deletes the authorization token of the specified authentication type for an appl
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [deleteAuthToken](#deleteauthtoken) &gt; instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [deleteAuthToken](#deleteauthtoken)
+> instead.
 
 **Since:** 8
 
@@ -1738,7 +1761,9 @@ Deletes the authorization token of the specified authentication type for an appl
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [deleteAuthToken](#deleteauthtoken) &gt; instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [deleteAuthToken](#deleteauthtoken)
+> instead.
 
 **Since:** 8
 
@@ -1787,7 +1812,9 @@ Disables an application account from accessing an application. This API uses an 
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setAppAccess](#setappaccess) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [setAppAccess](#setappaccess)
+> instead.
 
 **Since:** 7
 
@@ -1827,7 +1854,9 @@ Disables an application account from accessing an application. This API uses a p
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setAppAccess](#setappaccess) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [setAppAccess](#setappaccess)
+> instead.
 
 **Since:** 7
 
@@ -1874,7 +1903,9 @@ Enables an application account to access an application. This API uses an asynch
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setAppAccess](#setappaccess) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [setAppAccess](#setappaccess)
+> instead.
 
 **Since:** 7
 
@@ -1918,7 +1949,9 @@ Enables an application account to access an application. This API uses a promise
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setAppAccess](#setappaccess) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [setAppAccess](#setappaccess)
+> instead.
 
 **Since:** 7
 
@@ -1965,7 +1998,9 @@ Obtains the credential of an application account. This API uses an asynchronous 
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getCredential](#getcredential) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getCredential](#getcredential)
+> instead.
 
 **Since:** 7
 
@@ -2009,7 +2044,9 @@ Obtains the credential of an application account. This API uses a promise to ret
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getCredential](#getcredential) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getCredential](#getcredential)
+> instead.
 
 **Since:** 7
 
@@ -2056,7 +2093,9 @@ Obtains additional information of an application account. Additional information
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getCustomData](#getcustomdata) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getCustomData](#getcustomdata)
+> instead.
 
 **Since:** 7
 
@@ -2099,7 +2138,8 @@ Obtains additional information of an application account. Additional information
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getCustomData](#getcustomdata) instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getCustomData](#getcustomdata) instead.
 
 **Since:** 7
 
@@ -2246,7 +2286,9 @@ Obtains information about all accessible application accounts. This API uses an 
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getAllAccounts](#getallaccounts) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getAllAccounts](#getallaccounts)
+> instead.
 
 **Since:** 7
 
@@ -2290,7 +2332,8 @@ Obtains information about all accessible application accounts. This API uses a p
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getAllAccounts](#getallaccounts) instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getAllAccounts](#getallaccounts) instead.
 
 **Since:** 7
 
@@ -2421,7 +2464,9 @@ Obtains the application accounts that can be accessed by the invoker based on th
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getAccountsByOwner](#getaccountsbyowner) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getAccountsByOwner](#getaccountsbyowner)
+> instead.
 
 **Since:** 7
 
@@ -2467,7 +2512,8 @@ Obtains the application accounts that can be accessed by the invoker based on th
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getAccountsByOwner](#getaccountsbyowner) instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getAccountsByOwner](#getaccountsbyowner) instead.
 
 **Since:** 7
 
@@ -2621,7 +2667,9 @@ Obtains all tokens visible to the invoker for an application account. This API u
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAllAuthTokens](#getallauthtokens) &gt; instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getAllAuthTokens](#getallauthtokens)
+> instead.
 
 **Since:** 8
 
@@ -2666,7 +2714,8 @@ Obtains all tokens visible to the invoker for an application account. This API u
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAllAuthTokens](#getallauthtokens) instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getAllAuthTokens](#getallauthtokens) instead.
 
 **Since:** 8
 
@@ -2714,7 +2763,9 @@ Obtains the associated data of an application account based on the specified key
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getCustomData](#getcustomdata) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getCustomData](#getcustomdata)
+> instead.
 
 **Since:** 7
 
@@ -2758,7 +2809,8 @@ Obtains data associated with an application account. This API uses a promise to 
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [getCustomData](#getcustomdata) instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getCustomData](#getcustomdata) instead.
 
 **Since:** 7
 
@@ -3151,7 +3203,9 @@ Obtains the authenticator callback for an authentication session. This API uses 
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAuthCallback](#getauthcallback) &gt; instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getAuthCallback](#getauthcallback)
+> instead.
 
 **Since:** 8
 
@@ -3206,7 +3260,8 @@ Obtains the authenticator callback for an authentication session. This API uses 
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAuthCallback](#getauthcallback) instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getAuthCallback](#getauthcallback) instead.
 
 **Since:** 8
 
@@ -3264,7 +3319,9 @@ Obtains the authenticator information of an application. This API uses an asynch
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [queryAuthenticatorInfo](#queryauthenticatorinfo) &gt; instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [queryAuthenticatorInfo](#queryauthenticatorinfo)
+> instead.
 
 **Since:** 8
 
@@ -3308,7 +3365,8 @@ Obtains the authenticator information of an application. This API uses a promise
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [queryAuthenticatorInfo](#queryauthenticatorinfo) instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [queryAuthenticatorInfo](#queryauthenticatorinfo) instead.
 
 **Since:** 8
 
@@ -3616,7 +3674,9 @@ Obtains the authorization list of the specified authentication type for an appli
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAuthList](#getauthlist) &gt; instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getAuthList](#getauthlist)
+> instead.
 
 **Since:** 8
 
@@ -3660,7 +3720,8 @@ Obtains the authorization list of the specified authentication type for an appli
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAuthList](#getauthlist) instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getAuthList](#getauthlist) instead.
 
 **Since:** 8
 
@@ -3707,7 +3768,9 @@ Obtains the authorization token of the specified authentication type for an appl
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAuthToken](#getauthtoken) &gt; instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getAuthToken](#getauthtoken)
+> instead.
 
 **Since:** 8
 
@@ -3753,7 +3816,9 @@ Obtains the authorization token of the specified authentication type for an appl
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [getAuthToken](#getauthtoken) &gt; instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getAuthToken](#getauthtoken)
+> instead.
 
 **Since:** 8
 
@@ -3879,7 +3944,9 @@ Unsubscribes from account information changes.
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [off('accountChange')](#offchange) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [off('accountChange')](#offchange)
+> instead.
 
 **Since:** 7
 
@@ -4003,7 +4070,9 @@ Subscribes to account information changes of apps.
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [on('accountChange')](#onchange) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [on('accountChange')](#onchange)
+> instead.
 
 **Since:** 7
 
@@ -4365,7 +4434,9 @@ Sets a credential for an application account. This API uses an asynchronous call
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setCredential](#setcredential) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [setCredential](#setcredential)
+> instead.
 
 **Since:** 7
 
@@ -4410,7 +4481,9 @@ Sets a credential for an application account. This API uses a promise to return 
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setCredential](#setcredential) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [setCredential](#setcredential)
+> instead.
 
 **Since:** 7
 
@@ -4458,7 +4531,9 @@ Sets additional information for an application account. This API uses an asynchr
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setCustomData](#setcustomdata) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [setCustomData](#setcustomdata)
+> instead.
 
 **Since:** 7
 
@@ -4502,7 +4577,9 @@ Sets additional information for an application account. This API uses a promise 
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setCustomData](#setcustomdata) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [setCustomData](#setcustomdata)
+> instead.
 
 **Since:** 7
 
@@ -4656,7 +4733,9 @@ Sets data synchronization for an application account. This API uses an asynchron
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setDataSyncEnabled](#setdatasyncenabled) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [setDataSyncEnabled](#setdatasyncenabled)
+> instead.
 
 **Since:** 7
 
@@ -4702,7 +4781,9 @@ Sets data synchronization for an application account. This API uses a promise to
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setDataSyncEnabled](#setdatasyncenabled) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [setDataSyncEnabled](#setdatasyncenabled)
+> instead.
 
 **Since:** 7
 
@@ -4751,7 +4832,9 @@ Sets data to be associated with an application account. This API uses an asynchr
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setCustomData](#setcustomdata) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [setCustomData](#setcustomdata)
+> instead.
 
 **Since:** 7
 
@@ -4796,7 +4879,9 @@ Sets data to be associated with an application account. This API uses a promise 
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [setCustomData](#setcustomdata) &gt; instead.
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [setCustomData](#setcustomdata)
+> instead.
 
 **Since:** 7
 
@@ -5499,7 +5584,9 @@ Sets an authorization token of the specific authentication type for an applicati
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [setAuthToken](#setauthtoken) &gt; instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [setAuthToken](#setauthtoken)
+> instead.
 
 **Since:** 8
 
@@ -5544,7 +5631,9 @@ Sets an authorization token of the specific authentication type for an applicati
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [setAuthToken](#setauthtoken) &gt; instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [setAuthToken](#setauthtoken)
+> instead.
 
 **Since:** 8
 
@@ -5598,7 +5687,9 @@ Sets the visibility of an authorization token to an application. This API uses a
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [setAuthTokenVisibility](#setauthtokenvisibility) &gt; instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [setAuthTokenVisibility](#setauthtokenvisibility)
+> instead.
 
 **Since:** 8
 
@@ -5645,7 +5736,9 @@ Sets the visibility of an authorization token to an application. This API uses a
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [setAuthTokenVisibility](#setauthtokenvisibility) &gt; instead.
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [setAuthTokenVisibility](#setauthtokenvisibility)
+> instead.
 
 **Since:** 8
 

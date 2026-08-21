@@ -20,7 +20,7 @@ The callback of onRecentPhotoClick event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recentPhotoInfo | [BaseItemInfo](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md) | Yes | The item information of recent photo |
+| recentPhotoInfo | [BaseItemInfo](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-filephotopickercomponent-baseiteminfo-c.md) | Yes | The item information of recent photo |
 
 **Return value:**
 

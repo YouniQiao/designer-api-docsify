@@ -106,7 +106,10 @@ Reads the latest image from the ImageReceiver instance. This API uses a promise 
 
 > **NOTE：**
 > 
-> This API can be called to receive data only after the [on](#onimagearrival) callback is &gt; triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md) object returned by this API is no longer needed, &gt; call [release](arkts-image-sendableimage-pixelmap-i.md#release) to release the object. New data can be received only after &gt; the release.
+> This API can be called to receive data only after the [on](#onimagearrival) callback is
+> triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md) object returned by this API is no longer needed,
+> call [release](arkts-image-sendableimage-pixelmap-i.md#release) to release the object. New data can be received only after
+> the release.
 
 **Since:** 12
 
@@ -151,7 +154,10 @@ Reads the next image from the ImageReceiver instance. This API uses a promise to
 
 > **NOTE：**
 > 
-> This API can be called to receive data only after the [on](#onimagearrival) callback is &gt; triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md) object returned by this API is no longer needed, &gt; call [release](arkts-image-sendableimage-pixelmap-i.md#release) to release the object. New data can be received only after &gt; the release.
+> This API can be called to receive data only after the [on](#onimagearrival) callback is
+> triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md) object returned by this API is no longer needed,
+> call [release](arkts-image-sendableimage-pixelmap-i.md#release) to release the object. New data can be received only after
+> the release.
 
 **Since:** 12
 

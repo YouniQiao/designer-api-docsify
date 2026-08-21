@@ -46,7 +46,7 @@ listFile(filter?: Filter): FileIterator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | [Filter](../../apis-default/arkts-apis/arkts-file-fs-filter-i.md) | 否 | Indicates the filter of file. |
+| filter | [Filter](../../apis-default/arkts-apis/arkts-filefs-filter-i.md) | 否 | Indicates the filter of file. |
 
 **返回值：**
 
@@ -151,7 +151,7 @@ scanFile(filter?: Filter): FileIterator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | [Filter](../../apis-default/arkts-apis/arkts-file-fs-filter-i.md) | 否 | Indicates the filter of file. |
+| filter | [Filter](../../apis-default/arkts-apis/arkts-filefs-filter-i.md) | 否 | Indicates the filter of file. |
 
 **返回值：**
 

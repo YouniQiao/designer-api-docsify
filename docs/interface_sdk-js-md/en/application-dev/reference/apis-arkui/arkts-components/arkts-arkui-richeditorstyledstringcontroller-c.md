@@ -97,9 +97,11 @@ Sets the styled string displayed in the **RichEditor** component.
 
 > **NOTE：**
 > 
-> - When this interface is called, the StyledString of the rich text component is fully replaced and rendered &gt; again.
+> - When this interface is called, the StyledString of the rich text component is fully replaced and rendered
+> again.
 > 
-> - When the content exceeds the component area, the component automatically scrolls up until the content is &gt; visible at the end.
+> - When the content exceeds the component area, the component automatically scrolls up until the content is
+> visible at the end.
 
 **Since:** 12
 

@@ -17,7 +17,7 @@ function getSupportedFeatures(): number
 
 Obtains the features supported by this device.
 
-&lt;p&gt;To check whether this device supports a specified feature.
+<p>To check whether this device supports a specified feature.
 
 **Since:** 7
 

@@ -201,7 +201,7 @@ addWantRecord(want: Want): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Want对象内容。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | Want对象内容。 |
 
 **示例**
 
@@ -463,7 +463,7 @@ getPrimaryWant(): Want
 
 | 类型 | 说明 |
 | --- | --- |
-| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Want对象内容。剪贴板内容对象中没有Want内容时，默认返回为undefined。 |
+| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Want对象内容。剪贴板内容对象中没有Want内容时，默认返回为undefined。 |
 
 **示例**
 

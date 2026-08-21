@@ -17,7 +17,8 @@ Exports a key. This API uses an asynchronous callback to return the result.
 
 > **NOTE：**
 > 
-> Exporting SE security level public keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) &gt; requires the ohos.permission.ACCESS_SE_KEY permission.
+> Exporting SE security level public keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)
+> requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
 
@@ -89,7 +90,8 @@ Exports a key. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> Exporting SE security level public keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) &gt; requires the ohos.permission.ACCESS_SE_KEY permission.
+> Exporting SE security level public keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)
+> requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
 

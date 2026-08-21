@@ -45,7 +45,8 @@ Upgrades a **TCPSocket** connection to a **TLSSocket** connection.
 
 > **NOTE：**
 > 
-> Before calling **constructTLSSocketInstance**, ensure that a **TCPSocket** connection has been established and no &gt; data is transmitted. After a successful upgrade, you do not need to call the **close** API for the **TCPSocket**
+> Before calling **constructTLSSocketInstance**, ensure that a **TCPSocket** connection has been established and no
+> data is transmitted. After a successful upgrade, you do not need to call the **close** API for the **TCPSocket**
 > object.
 
 **Since:** 12

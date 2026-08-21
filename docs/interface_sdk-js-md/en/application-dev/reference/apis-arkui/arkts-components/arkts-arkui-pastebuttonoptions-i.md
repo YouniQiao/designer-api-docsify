@@ -9,7 +9,9 @@ Defines options for the paste button, including icon, text and button type.
 > - If neither **icon** nor **text** is specified, **PasteButton** is created with default styles as follows:
 > **PasteIconStyle** defaults to **LINES**, **PasteDescription** to **PASTE**, and **ButtonType** to **Capsule**.
 
-> - The **icon**, **text**, and **buttonType** parameters do not support dynamic modification. Styles and properties &gt; of security components are verified by the system upon creation. Dynamic changes may cause the component to &gt; violate specifications for security components and invalidate authorization.
+> - The **icon**, **text**, and **buttonType** parameters do not support dynamic modification. Styles and properties
+> of security components are verified by the system upon creation. Dynamic changes may cause the component to
+> violate specifications for security components and invalidate authorization.
 
 **Since:** 10
 

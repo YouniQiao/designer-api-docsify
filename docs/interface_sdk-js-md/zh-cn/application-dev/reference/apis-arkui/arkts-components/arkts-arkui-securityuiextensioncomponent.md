@@ -1,4 +1,4 @@
-# SecurityUIExtensionComponent
+# SecurityUIExtensionComponent(System API)
 
 *SecurityUIExtensionComponent**用于将其他应用提供的UI嵌入到当前页面中。显示的内容运行在另一个进程中，当前应用不参与其布局和渲染。
 

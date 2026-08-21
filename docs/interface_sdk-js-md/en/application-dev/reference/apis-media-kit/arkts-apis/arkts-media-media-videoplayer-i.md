@@ -548,7 +548,8 @@ Sets a surface ID. This API uses an asynchronous callback to return the result.
 
 > **NOTE：**
 > 
-> - **SetDisplaySurface** must be called between the URL setting and the calling of **prepare**. A surface must &gt; be set for video streams without audio. Otherwise, the calling of **prepare** fails.
+> - **SetDisplaySurface** must be called between the URL setting and the calling of **prepare**. A surface must
+> be set for video streams without audio. Otherwise, the calling of **prepare** fails.
 
 **Since:** 8
 
@@ -577,7 +578,8 @@ Sets a surface ID. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> - **SetDisplaySurface** must be called between the URL setting and the calling of **prepare**. A surface must &gt; be set for video streams without audio. Otherwise, the calling of **prepare** fails.
+> - **SetDisplaySurface** must be called between the URL setting and the calling of **prepare**. A surface must
+> be set for video streams without audio. Otherwise, the calling of **prepare** fails.
 
 **Since:** 8
 

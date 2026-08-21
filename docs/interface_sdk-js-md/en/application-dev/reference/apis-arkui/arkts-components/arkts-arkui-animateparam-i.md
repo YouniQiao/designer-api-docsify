@@ -239,11 +239,17 @@ Default value: **PlayMode.Normal**
 
 > **Notes about PlayMode**:
 > 
-> - **PlayMode.Normal** and **PlayMode.Alternate** are recommended. Under these settings, the first round of the &gt; animation is played forwards. If **PlayMode.Reverse** or **PlayMode.AlternateReverse** is used, the first round of &gt; the animation is played backwards. In this case, the animation jumps to the end state and then starts from there.
+> - **PlayMode.Normal** and **PlayMode.Alternate** are recommended. Under these settings, the first round of the
+> animation is played forwards. If **PlayMode.Reverse** or **PlayMode.AlternateReverse** is used, the first round of
+> the animation is played backwards. In this case, the animation jumps to the end state and then starts from there.
 > 
-> - When using **PlayMode.Alternate** or **PlayMode.AlternateReverse**, make sure the final state of the animation is &gt; the same as the value of the state variable. In other words, make sure the last round of the animation is played &gt; forwards. When **PlayMode.Alternate** is used, **iterations** must be set to an odd number. When &gt; **PlayMode.AlternateReverse** is used, **iterations** must be set to an even number.
+> - When using **PlayMode.Alternate** or **PlayMode.AlternateReverse**, make sure the final state of the animation is
+> the same as the value of the state variable. In other words, make sure the last round of the animation is played
+> forwards. When **PlayMode.Alternate** is used, **iterations** must be set to an odd number. When
+> **PlayMode.AlternateReverse** is used, **iterations** must be set to an even number.
 > 
-> - **PlayMode.Reverse** is not recommended. Under this setting, the animation jumps to the end state at the &gt; beginning, and its final state will be different from the value of the state variable.
+> - **PlayMode.Reverse** is not recommended. Under this setting, the animation jumps to the end state at the
+> beginning, and its final state will be different from the value of the state variable.
 
 **Type:** PlayMode
 

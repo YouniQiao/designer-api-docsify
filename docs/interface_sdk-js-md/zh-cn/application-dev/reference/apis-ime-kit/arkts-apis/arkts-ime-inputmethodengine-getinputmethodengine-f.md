@@ -13,8 +13,10 @@ function getInputMethodEngine(): InputMethodEngine
 ```
 
 @brief 获取输入法应用客户端实例[InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md)（输入法引擎）。 <br> <br>输入法应用获取该实例后，可订阅软键盘显示/隐藏请求事件等。 <br> <br>   
-> **说明：** <br>
-> <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > 从 API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8

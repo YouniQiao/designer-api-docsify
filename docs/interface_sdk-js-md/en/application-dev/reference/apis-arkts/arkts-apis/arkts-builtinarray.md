@@ -268,8 +268,8 @@
 | [sort](arkts-arkts-builtinarray-sort-f.md) | Reorders elements of `this` using comparator function. |
 | [sort](arkts-arkts-builtinarray-sort-f.md) | Reorders elements of this array using comparator function. |
 | [sort](arkts-arkts-builtinarray-sort-f.md) | Reorders elements of `this` using comparator function. |
-| [sort_default](arkts-arkts-builtinarray-sort-default-f.md#sort_default) | Sorts elements of `arr` using default sort. |
-| [sort_stable](arkts-arkts-builtinarray-sort-stable-f.md#sort_stable) | Sorts elements of `arr` using stable sort algorithm. |
+| [sort_default](arkts-arkts-builtinarray-sortdefault-f.md#sort_default) | Sorts elements of `arr` using default sort. |
+| [sort_stable](arkts-arkts-builtinarray-sortstable-f.md#sort_stable) | Sorts elements of `arr` using stable sort algorithm. |
 | [toLocaleString](arkts-arkts-builtinarray-tolocalestring-f.md) | Returns a string representing the elements of the array. The elements are converted to Strings using their toLocaleString methods. |
 | [toLocaleString](arkts-arkts-builtinarray-tolocalestring-f.md) | Returns a string representing the elements of the array. The elements are converted to Strings using their toLocaleString methods. |
 | [toLocaleString](arkts-arkts-builtinarray-tolocalestring-f.md) | Returns a string representing the elements of the array. The elements are converted to Strings using their toLocaleString methods. |

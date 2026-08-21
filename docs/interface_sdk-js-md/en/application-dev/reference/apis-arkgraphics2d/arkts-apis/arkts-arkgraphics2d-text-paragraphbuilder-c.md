@@ -361,7 +361,9 @@ Restores the previous text style.
 
 > **NOTE：**
 > 
-> This method must be called after [pushStyle()](#pushstyle). After it is called, &gt; subsequently added text will use the text style before the pop operation. If the style stack is empty, the &gt; textStyle in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) will be used as the default style.
+> This method must be called after [pushStyle()](#pushstyle). After it is called,
+> subsequently added text will use the text style before the pop operation. If the style stack is empty, the
+> textStyle in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) will be used as the default style.
 
 **Since:** 23
 

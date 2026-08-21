@@ -4,9 +4,11 @@ This module provides device Bluetooth management capabilities, including setting
 
 > **NOTE：**
 > 
-> The APIs of this module can be called only by a device administrator application that is enabled. For details, see &gt; [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
+> The APIs of this module can be called only by a device administrator application that is enabled. For details, see
+> [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
 > 
-> The global restriction policies are provided by **restrictions**. To disable Bluetooth globally, see &gt; [@ohos.enterprise.restrictions](arkts-enterprise-restrictions.md).
+> The global restriction policies are provided by **restrictions**. To disable Bluetooth globally, see
+> [@ohos.enterprise.restrictions](arkts-enterprise-restrictions.md).
 
 **Since:** 11
 

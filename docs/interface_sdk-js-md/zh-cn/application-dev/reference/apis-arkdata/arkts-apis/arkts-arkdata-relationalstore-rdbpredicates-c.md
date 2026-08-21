@@ -517,9 +517,13 @@ inDevices(devices: Array<string>): RdbPredicates
 
 > **说明：**
 > 
-> 其中devices通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。
+> 其中devices通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
 > 
-> 调用 &gt; [sync](arkts-arkdata-relationalstore-rdbstore-i.md#sync) &gt; 接口同步数据库时，在入参谓词中调用inDevices接口以选择设备。如果不调用inDevices接口，则默认连接组网内所有的设备。
+> 调用
+> [sync](arkts-arkdata-relationalstore-rdbstore-i.md#sync)
+> 接口同步数据库时，在入参谓词中调用inDevices接口以选择设备。如果不调用inDevices接口，则默认连接组网内所有的设备。
 
 **起始版本：** 23
 

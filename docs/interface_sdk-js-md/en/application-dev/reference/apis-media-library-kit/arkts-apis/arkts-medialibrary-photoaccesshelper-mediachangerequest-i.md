@@ -4,7 +4,8 @@ Media change request, which is the parent class of the asset change request and 
 
 > **NOTE：**
 > 
-> The media change request takes effect only after &gt; [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) is called.
+> The media change request takes effect only after
+> [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) is called.
 
 **Since:** 23
 

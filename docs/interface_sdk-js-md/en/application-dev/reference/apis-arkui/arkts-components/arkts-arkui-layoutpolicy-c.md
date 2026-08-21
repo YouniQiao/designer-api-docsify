@@ -4,18 +4,25 @@ Enumerates the layout policies for component width and height.
 
 > **NOTE：**
 > 
-> - **LayoutPolicy** supports three layout policies: **matchParent** (adapts to the parent component's layout), &gt; **wrapContent** (adapts to content but does not exceed the parent component's size), **fixAtIdealSize**
+> - **LayoutPolicy** supports three layout policies: **matchParent** (adapts to the parent component's layout),
+> **wrapContent** (adapts to content but does not exceed the parent component's size), **fixAtIdealSize**
 > (adapts to content and may exceed the parent component's size).
 > 
 > - For **wrapContent** and **fixAtIdealSize**:
-> If the component's size cannot be determined by its content, it uses the default size (if available); &gt; otherwise, it calculates the size as (0, 0).
+> If the component's size cannot be determined by its content, it uses the default size (if available);
+> otherwise, it calculates the size as (0, 0).
 > 
 > - When a container is set to **wrapContent** and contains child components set to **matchParent**
-> (including cases where only one side is set to **matchParent**): (1) The container is first expanded by &gt; child components with determinate sizes. (2) Child components set to **matchParent** then adapt to the &gt; container's size. (3) If no child components have determinate sizes, both the container and its child &gt; components have a zero size.
+> (including cases where only one side is set to **matchParent**): (1) The container is first expanded by
+> child components with determinate sizes. (2) Child components set to **matchParent** then adapt to the
+> container's size. (3) If no child components have determinate sizes, both the container and its child
+> components have a zero size.
 > 
 > - **LayoutPolicy** has lower priority than **constraintSize**.
 > 
-> - Since API version 15, only the width and height attributes of **Row** and **Column** components support &gt; the **LayoutPolicy** type. Setting **LayoutPolicy** on other components produces the same behavior as having &gt; no width or height specified. Since API version 20, all basic components support the **LayoutPolicy** type.
+> - Since API version 15, only the width and height attributes of **Row** and **Column** components support
+> the **LayoutPolicy** type. Setting **LayoutPolicy** on other components produces the same behavior as having
+> no width or height specified. Since API version 20, all basic components support the **LayoutPolicy** type.
 
 **Since:** 15
 

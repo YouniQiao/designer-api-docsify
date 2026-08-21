@@ -16,7 +16,9 @@ Unregisters the callback that receives bundle status changes. This API uses an a
 
 > **NOTE：**
 > 
-> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [off](arkts-ability-bundlemonitor-offbundlechangedevent-f-sys.md#off_bundlechangedevent) &gt; instead.
+> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
+> [off](arkts-ability-bundlemonitor-offbundlechangedevent-f-sys.md#off_bundlechangedevent)
+> instead.
 
 **Since:** 8
 
@@ -50,7 +52,9 @@ Unregisters the callback that receives bundle status changes. This API uses an a
 
 > **NOTE：**
 > 
-> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [off](arkts-ability-bundlemonitor-offbundlechangedevent-f-sys.md#off_bundlechangedevent) &gt; instead.
+> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
+> [off](arkts-ability-bundlemonitor-offbundlechangedevent-f-sys.md#off_bundlechangedevent)
+> instead.
 
 **Since:** 8
 

@@ -25,7 +25,8 @@ Sets the size information of the child components of a **ListItemGroup** compone
 
 > **NOTE：**
 > 
-> - The **childrenMainSize** attribute of the **List** component must be set at the same time for the attribute to &gt; take effect.
+> - The **childrenMainSize** attribute of the **List** component must be set at the same time for the attribute to
+> take effect.
 
 **Since:** 12
 

@@ -27,7 +27,8 @@ Called when a request starts. In this callback, you can determine whether to int
 
 > **NOTE：**
 > 
-> - Redirected URLs cannot be intercepted individually. To intercept a redirected URL, you must also intercept &gt; the original request URL.
+> - Redirected URLs cannot be intercepted individually. To intercept a redirected URL, you must also intercept
+> the original request URL.
 
 **Since:** 12
 

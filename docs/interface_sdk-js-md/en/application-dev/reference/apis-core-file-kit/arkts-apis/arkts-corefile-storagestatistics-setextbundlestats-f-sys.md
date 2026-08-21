@@ -16,7 +16,8 @@ Reports the space usage of system applications or system services. This API uses
 
 > **NOTE：**
 > 
-> If the value of **flag** in **stats** is **false**, the value of **businessName** must be the bundle name of an &gt; application.
+> If the value of **flag** in **stats** is **false**, the value of **businessName** must be the bundle name of an
+> application.
 
 **Since:** 23
 

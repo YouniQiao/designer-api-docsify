@@ -123,7 +123,8 @@ Sets whether to enable leading punctuation compression.
 > 
 > - Leading punctuation is not compressed by default.
 > 
-> - For the list of punctuation marks that support compression, see the punctuation range at the beginning of a &gt; line in [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md).
+> - For the list of punctuation marks that support compression, see the punctuation range at the beginning of a
+> line in [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 23
 
@@ -727,7 +728,9 @@ Sets whether to enable horizontal scrolling when the text is wider than the view
 > **NOTE：**
 > 
 > Horizontal scrolling is not supported in the following scenarios:
-> [inline mode](../../../ui/arkts-common-components-text-input.md#inline-mode)<!--Del-->; &gt; [voiceButton](../../../reference/apis-arkui/arkui-ts/ts-basic-components-textarea-sys.md#voicebutton23) enabled&lt; &gt; !--DelEnd--&gt;.
+> [inline mode](../../../ui/arkts-common-components-text-input.md#inline-mode)<!--Del-->;
+> [voiceButton](../../../reference/apis-arkui/arkui-ts/ts-basic-components-textarea-sys.md#voicebutton23) enabled&lt;
+&gt; !--DelEnd--&gt;.
 
 **Since:** 24
 
@@ -1420,7 +1423,7 @@ Called when the input box is about to be bound to an input method.
 
 <!--Del-->
 
-Before the input box is bound to an input method, you can use the [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c-sys.md#setkeyboardappearanceconfig) API of **UIContext** to set the keyboard style.<!--DelEnd-->
+Before the input box is bound to an input method, you can use the [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-arkuiuicontext-uicontext-c-sys.md#setkeyboardappearanceconfig) API of **UIContext** to set the keyboard style.<!--DelEnd-->
 
 From API version 22, the setExtraConfig method of IMEClient can be called to set input method extension information. After the input method is bound, it receives this extension information which can be used to implement custom functionality.
 
@@ -1768,7 +1771,8 @@ Sets the text shader style, such as linear gradient or radial gradient.
 
 > **NOTE：**
 > 
-> When both **shaderStyle** and [strokeWidth](#strokewidth) are set, **shaderStyle** does &gt; not take effect.
+> When both **shaderStyle** and [strokeWidth](#strokewidth) are set, **shaderStyle** does
+> not take effect.
 > 
 > **shaderStyle** has a higher priority than [fontColor](#fontcolor).
 
@@ -2037,7 +2041,8 @@ If **textOverflow** is set to **TextOverflow.None**, **TextOverflow.Clip**, or *
 
 > **NOTE：**
 > 
-> The **TextArea** component does not support the **TextOverflow.MARQUEE** mode. If this attribute is set to &gt; **TextOverflow.MARQUEE**, **TextOverflow.Clip** is used instead.
+> The **TextArea** component does not support the **TextOverflow.MARQUEE** mode. If this attribute is set to
+> **TextOverflow.MARQUEE**, **TextOverflow.Clip** is used instead.
 
 **Since:** 12
 

@@ -219,7 +219,9 @@ Updates the message digest status. This API uses an asynchronous callback to ret
 
 > **NOTE：**
 > 
-> For details about the code for calling **update** multiple times in a message digest operation, see &gt; [Generating an MD by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#generating-an-md-by-passing-in-data-by-segment) &gt; .
+> For details about the code for calling **update** multiple times in a message digest operation, see
+> [Generating an MD by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#generating-an-md-by-passing-in-data-by-segment)
+> .
 
 **Since:** 23
 
@@ -260,7 +262,9 @@ Updates the message digest status. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> For details about the code for calling **update** multiple times in a message digest operation, see &gt; [Generating an MD by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#generating-an-md-by-passing-in-data-by-segment) &gt; .
+> For details about the code for calling **update** multiple times in a message digest operation, see
+> [Generating an MD by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#generating-an-md-by-passing-in-data-by-segment)
+> .
 
 **Since:** 23
 
@@ -304,7 +308,9 @@ Updates the message digest status. This API returns the result synchronously. **
 
 > **NOTE：**
 > 
-> For details about the code for calling **updateSync** multiple times in a message digest operation, see &gt; [Generating an MD by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#generating-an-md-by-passing-in-data-by-segment) &gt; .
+> For details about the code for calling **updateSync** multiple times in a message digest operation, see
+> [Generating an MD by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#generating-an-md-by-passing-in-data-by-segment)
+> .
 
 <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 

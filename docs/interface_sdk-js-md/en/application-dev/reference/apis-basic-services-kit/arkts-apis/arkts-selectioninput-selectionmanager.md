@@ -4,8 +4,12 @@ This module provides word selection management capabilities, including creating,
 
 > **NOTE：**
 > 
-> - This module is supported only on PCs/2-in-1 devices. You can use &gt; **canIUse('SystemCapability.SelectionInput.Selection')** to check whether the current device supports this &gt; function.
-> - APIs of this module can be called only by apps that integrate the extension ability for word selection. For &gt; details about how to implement the extension ability for word selection, see &gt; [SelectionExtensionAbility](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c-sys.md).
+> - This module is supported only on PCs/2-in-1 devices. You can use
+> **canIUse('SystemCapability.SelectionInput.Selection')** to check whether the current device supports this
+> function.
+> - APIs of this module can be called only by apps that integrate the extension ability for word selection. For
+> details about how to implement the extension ability for word selection, see
+> [SelectionExtensionAbility](arkts-basicservices-selectioninputselectionextensionability-selectionextensionability-c-sys.md).
 
 **Since:** 24
 

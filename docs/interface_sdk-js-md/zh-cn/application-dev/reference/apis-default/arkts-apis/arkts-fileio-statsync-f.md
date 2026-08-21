@@ -31,7 +31,7 @@ function statSync(file: string | int): Stat
 
 | 类型 | 说明 |
 | --- | --- |
-| [Stat](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-stat-i.md) | 表示文件或目录的具体信息。 |
+| [Stat](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-stat-i.md) | 表示文件或目录的具体信息。 |
 
 **错误码：**
 

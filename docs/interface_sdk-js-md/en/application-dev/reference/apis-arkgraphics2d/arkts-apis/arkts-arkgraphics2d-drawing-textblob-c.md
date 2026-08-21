@@ -6,7 +6,8 @@ Defines a block consisting of one or more characters with the same font.
 > 
 > - This module uses the physical pixel unit, px.
 > 
-> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
+> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
+> transitions.
 
 **Since:** 23
 

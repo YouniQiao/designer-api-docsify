@@ -12,33 +12,33 @@ import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, Ope
 
 | 名称 | 说明 |
 | --- | --- |
-| [ContentItemV2](arkts-arkui-arkui-advanced-composelistitemv2-contentitemv2-c.md) | 列表左侧显示的图标、图标大小以及中间元素文字内容。 |
-| [OperateButtonV2](arkts-arkui-arkui-advanced-composelistitemv2-operatebuttonv2-c.md) | 列表项右侧按钮元素的类型。 |
-| [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md) | 列表项右侧元素为Switch、CheckBox、Radio的类型。当列表项右侧元素需要使用Switch、CheckBox、Radio时，可通过该类型配置对应属性。 |
-| [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md) | 列表项右侧图标元素的类型。 |
-| [OperateItemV2](arkts-arkui-arkui-advanced-composelistitemv2-operateitemv2-c.md) | 列表项右侧显示的元素类型。 |
+| [ContentItemV2](arkts-arkui-arkuiadvancedcomposelistitemv2-contentitemv2-c.md) | 列表左侧显示的图标、图标大小以及中间元素文字内容。 |
+| [OperateButtonV2](arkts-arkui-arkuiadvancedcomposelistitemv2-operatebuttonv2-c.md) | 列表项右侧按钮元素的类型。 |
+| [OperateCheckV2](arkts-arkui-arkuiadvancedcomposelistitemv2-operatecheckv2-c.md) | 列表项右侧元素为Switch、CheckBox、Radio的类型。当列表项右侧元素需要使用Switch、CheckBox、Radio时，可通过该类型配置对应属性。 |
+| [OperateIconV2](arkts-arkui-arkuiadvancedcomposelistitemv2-operateiconv2-c.md) | 列表项右侧图标元素的类型。 |
+| [OperateItemV2](arkts-arkui-arkuiadvancedcomposelistitemv2-operateitemv2-c.md) | 列表项右侧显示的元素类型。 |
 
 ### 结构体
 
 | 名称 | 说明 |
 | --- | --- |
-| [ComposeListItemV2](arkts-arkui-arkui-advanced-composelistitemv2-composelistitemv2-s.md) | 该组件用于展示一系列宽度相同的列表项，适用于展示连续、多行的同类数据组合（如图片与文本）。 |
+| [ComposeListItemV2](arkts-arkui-arkuiadvancedcomposelistitemv2-composelistitemv2-s.md) | 该组件用于展示一系列宽度相同的列表项，适用于展示连续、多行的同类数据组合（如图片与文本）。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [ContentItemV2Options](arkts-arkui-arkui-advanced-composelistitemv2-contentitemv2options-i.md) | ContentItemV2构造函数的参数选项。 |
-| [OperateButtonV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operatebuttonv2options-i.md) | OperateButtonV2构造函数的参数选项。 |
-| [OperateCheckV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2options-i.md) | OperateCheckV2构造函数的参数选项。 |
-| [OperateIconV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2options-i.md) | OperateIconV2构造函数的参数选项。 |
-| [OperateItemV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operateitemv2options-i.md) | OperateItemV2构造函数的参数选项。 |
+| [ContentItemV2Options](arkts-arkui-arkuiadvancedcomposelistitemv2-contentitemv2options-i.md) | ContentItemV2构造函数的参数选项。 |
+| [OperateButtonV2Options](arkts-arkui-arkuiadvancedcomposelistitemv2-operatebuttonv2options-i.md) | OperateButtonV2构造函数的参数选项。 |
+| [OperateCheckV2Options](arkts-arkui-arkuiadvancedcomposelistitemv2-operatecheckv2options-i.md) | OperateCheckV2构造函数的参数选项。 |
+| [OperateIconV2Options](arkts-arkui-arkuiadvancedcomposelistitemv2-operateiconv2options-i.md) | OperateIconV2构造函数的参数选项。 |
+| [OperateItemV2Options](arkts-arkui-arkuiadvancedcomposelistitemv2-operateitemv2options-i.md) | OperateItemV2构造函数的参数选项。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [IconTypeV2](arkts-arkui-arkui-advanced-composelistitemv2-icontypev2-e.md) | 列表左侧图标类型。 |
+| [IconTypeV2](arkts-arkui-arkuiadvancedcomposelistitemv2-icontypev2-e.md) | 列表左侧图标类型。 |
 
 ### 类型
 

@@ -4,9 +4,11 @@ The **deviceInfo** module provides terminal device information query, which cann
 
 > **NOTE：**
 > 
-> The initial APIs of this module are supported since API version 6. Newly added APIs &gt; will be marked with a superscript to indicate their earliest API version.
+> The initial APIs of this module are supported since API version 6. Newly added APIs
+> will be marked with a superscript to indicate their earliest API version.
 > Some parameters whose return value is the default value are not yet available.
-> The APIs of this module return information about device getants. You are not expected to call these APIs &gt; frequently.
+> The APIs of this module return information about device getants. You are not expected to call these APIs
+> frequently.
 
 **Since:** 24
 

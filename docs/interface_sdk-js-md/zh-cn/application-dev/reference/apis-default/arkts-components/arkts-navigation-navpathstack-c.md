@@ -8,7 +8,8 @@ Navigation导航控制器，以栈的数据结构管理Navigation中所有的子
 > 
 > 1.连续调用多个导航控制器操作方法时，中间过程会被忽略，显示最终的栈操作结果。
 
-> 例如：在Page1页面先pop再push一个Page1，系统会认为操作前和操作后的结果一致而不进行任何操作，如果需要强行push一个Page1实例，可以设置 &gt; [NavigationOption](arkts-navigation-navigationoptions-i.md)中的launchMode属性值为LaunchMode.NEW_INSTANCE模式。
+> 例如：在Page1页面先pop再push一个Page1，系统会认为操作前和操作后的结果一致而不进行任何操作，如果需要强行push一个Page1实例，可以设置
+> [NavigationOption](arkts-navigation-navigationoptions-i.md)中的launchMode属性值为LaunchMode.NEW_INSTANCE模式。
 > 
 > 2.不建议开发者通过监听页面生命周期的方式管理自己的导航控制器。
 > 
@@ -533,7 +534,8 @@ pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>
 
 > **说明：**
 > 
-> 不建议在[aboutToAppear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear)中使用栈 &gt; 操作，此时的页面还未构建完成，会导致白屏或跳转失败等问题。
+> 不建议在[aboutToAppear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear)中使用栈
+> 操作，此时的页面还未构建完成，会导致白屏或跳转失败等问题。
 
 **起始版本：** 23
 
@@ -577,7 +579,8 @@ pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 
 > **说明：**
 > 
-> 不建议在[aboutToAppear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear)中使用栈 &gt; 操作，此时的页面还未构建完成，会导致白屏或跳转失败等问题。
+> 不建议在[aboutToAppear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear)中使用栈
+> 操作，此时的页面还未构建完成，会导致白屏或跳转失败等问题。
 
 **起始版本：** 23
 
@@ -621,7 +624,8 @@ pushDestinationByName(name: string, param: Object, animated?: boolean): Promise<
 
 > **说明：**
 > 
-> 不建议在[aboutToAppear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear)中使用栈 &gt; 操作，此时的页面还未构建完成，会导致白屏或跳转失败等问题。
+> 不建议在[aboutToAppear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear)中使用栈
+> 操作，此时的页面还未构建完成，会导致白屏或跳转失败等问题。
 
 **起始版本：** 23
 
@@ -666,7 +670,8 @@ pushDestinationByName(name: string, param: Object, onPop: Callback<PopInfo>, ani
 
 > **说明：**
 > 
-> 不建议在[aboutToAppear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear)中使用栈 &gt; 操作，此时的页面还未构建完成，会导致白屏或跳转失败等问题。
+> 不建议在[aboutToAppear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear)中使用栈
+> 操作，此时的页面还未构建完成，会导致白屏或跳转失败等问题。
 
 **起始版本：** 23
 

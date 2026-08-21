@@ -2,7 +2,7 @@
 
 <!--Del-->
 - [@ohos.app.ability.UserAuthExtensionAbility](arkts-app-ability-userauthextensionability.md)<!--DelEnd-->
-  - [UserAuthExtensionAbility](arkts-userauthentication-app-ability-userauthextensionability-userauthextensionability-c.md)
+  - [UserAuthExtensionAbility](arkts-userauthentication-appabilityuserauthextensionability-userauthextensionability-c.md)
 <!--Del-->
 - [@ohos.userIAM.companionDeviceAuth](arkts-useriam-companiondeviceauth.md)<!--DelEnd-->
   <!--Del-->
@@ -134,4 +134,4 @@
   - [WindowModeType(系统接口)](arkts-userauthentication-userauth-windowmodetype-e-sys.md)<!--DelEnd-->
   - [常量](arkts-userauthentication-userauth-con.md)
 - [@ohos.userIAM.userAuthIcon](arkts-useriam-userauthicon.md)
-  - [UserAuthIcon](arkts-userauthentication-useriam-userauthicon-userauthicon-s.md)
+  - [UserAuthIcon](arkts-userauthentication-useriamuserauthicon-userauthicon-s.md)

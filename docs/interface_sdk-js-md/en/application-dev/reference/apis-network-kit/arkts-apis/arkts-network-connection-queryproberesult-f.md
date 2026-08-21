@@ -16,7 +16,8 @@ Queries network probe results. If an exception (for example, network disconnecti
 
 > **NOTE：**
 > 
-> This API is used to perform network probe on a target host for a period of time to obtain the packet loss rate &gt; and RTT information.
+> This API is used to perform network probe on a target host for a period of time to obtain the packet loss rate
+> and RTT information.
 
 **Since:** 26.0.0
 

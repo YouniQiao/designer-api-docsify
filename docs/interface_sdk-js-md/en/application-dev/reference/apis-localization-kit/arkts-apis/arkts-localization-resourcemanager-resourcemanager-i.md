@@ -4,14 +4,25 @@ Provides the capability of accessing application resources and system resources.
 
 > **NOTE：**
 > 
-> - The methods involved in **ResourceManager** are applicable only to the TypeScript-based declarative &gt; development paradigm.
+> - The methods involved in **ResourceManager** are applicable only to the TypeScript-based declarative
+> development paradigm.
 > 
-> - Resource files are defined in the **resources** directory of the project. You can obtain resource values such &gt; as strings, string arrays, and colors based on the specified **resName**, **resId**, or **Resource** object.
-> **resName** indicates the resource name, **resId** indicates the resource ID, which can be obtained through &gt; `\$r(*resource-address*).id`, for example, `\$r('app.string.test').id`.
+> - Resource files are defined in the **resources** directory of the project. You can obtain resource values such
+> as strings, string arrays, and colors based on the specified **resName**, **resId**, or **Resource** object.
+> **resName** indicates the resource name, **resId** indicates the resource ID, which can be obtained through
+> `\$r(*resource-address*).id`, for example, `\$r('app.string.test').id`.
 > 
-> - No matter whether resources are in the same HAP or different HAPs or HSPs, you are advised to use the API with &gt; **resName** or **resId** specified. Using the **Resource** object will take a longer time. If the resources are &gt; in different HAPs or HSPs, you first need to use &gt; [createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md) to create the context &gt; of the corresponding module and then call the API with **resName** or **resId** specified. For more information, &gt; see [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources).
+> - No matter whether resources are in the same HAP or different HAPs or HSPs, you are advised to use the API with
+> **resName** or **resId** specified. Using the **Resource** object will take a longer time. If the resources are
+> in different HAPs or HSPs, you first need to use
+> [createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md) to create the context
+> of the corresponding module and then call the API with **resName** or **resId** specified. For more information,
+> see [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources).
 > 
-> - In API version 22 and earlier versions, an exception is thrown due to an invalid ID when the intermediate-code &gt; HAR or bytecode HAR accesses resources through resource ID-related APIs. From API version 23, the intermediate- &gt; code HAR or bytecode HAR can properly access resources through resource ID-related APIs. For details, see &gt; [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources).
+> - In API version 22 and earlier versions, an exception is thrown due to an invalid ID when the intermediate-code
+> HAR or bytecode HAR accesses resources through resource ID-related APIs. From API version 23, the intermediate-
+> code HAR or bytecode HAR can properly access resources through resource ID-related APIs. For details, see
+> [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources).
 
 **Since:** 23
 
@@ -1495,9 +1506,11 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 > **NOTE：**
 > 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 > 
-> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for &gt; example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
+> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
+> example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 18
 
@@ -1585,7 +1598,8 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 > **NOTE：**
 > 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 23
 
@@ -1628,9 +1642,11 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 > **NOTE：**
 > 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 > 
-> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for &gt; example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
+> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
+> example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 18
 
@@ -1718,9 +1734,11 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 > **NOTE：**
 > 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 > 
-> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for &gt; example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
+> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
+> example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 23
 
@@ -1763,7 +1781,8 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 > **NOTE：**
 > 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 18
 
@@ -1876,7 +1895,7 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object corresponding to the specified resource ID. |
+| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkuidrawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object corresponding to the specified resource ID. |
 
 **Error codes:**
 
@@ -1957,7 +1976,7 @@ Obtains a **DrawableDescriptor** object for icon display based on the specified 
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object corresponding to the specified resource ID. |
+| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkuidrawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object corresponding to the specified resource ID. |
 
 **Error codes:**
 
@@ -2030,7 +2049,7 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object. |
+| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkuidrawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object. |
 
 **Error codes:**
 
@@ -2159,9 +2178,11 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 > **NOTE：**
 > 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 > 
-> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for &gt; example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
+> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
+> example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 18
 
@@ -2249,9 +2270,11 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 > **NOTE：**
 > 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 > 
-> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for &gt; example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
+> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
+> example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 23
 
@@ -2294,9 +2317,11 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 > **NOTE：**
 > 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 > 
-> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for &gt; example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
+> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
+> example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 18
 
@@ -2384,7 +2409,8 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 > **NOTE：**
 > 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 23
 
@@ -2427,7 +2453,8 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 > **NOTE：**
 > 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 18
 
@@ -5007,7 +5034,8 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 > **NOTE：**
 > 
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 6
 
@@ -5053,7 +5081,8 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 > **NOTE：**
 > 
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 6
 
@@ -5102,7 +5131,8 @@ Obtains the plural string based on the specified resource name and the specified
 
 > **NOTE：**
 > 
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 9
 
@@ -5181,7 +5211,8 @@ Obtains the plural string based on the specified resource name and the specified
 
 > **NOTE：**
 > 
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 9
 
@@ -5265,7 +5296,8 @@ Obtains singular/plural strings based on the specified quantity and resource nam
 
 > **NOTE：**
 > 
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 10
 
@@ -5350,7 +5382,8 @@ Obtains the plural string based on the specified resource information and the sp
 
 > **NOTE：**
 > 
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 9
 
@@ -5438,7 +5471,8 @@ Obtains the plural string based on the specified resource information and the sp
 
 > **NOTE：**
 > 
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 9
 
@@ -5530,7 +5564,8 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 > **NOTE：**
 > 
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 9
 
@@ -5610,7 +5645,8 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 > **NOTE：**
 > 
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 9
 
@@ -5694,7 +5730,8 @@ Obtains singular/plural strings based on the specified resource ID and quantity.
 
 > **NOTE：**
 > 
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 10
 
@@ -5779,7 +5816,8 @@ Obtains singular/plural strings based on the specified quantity and resource obj
 
 > **NOTE：**
 > 
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 10
 
@@ -5872,7 +5910,9 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 
 > **NOTE：**
 > 
-> To prevent resource leakage, call [closeRawFdSync](#closerawfdsync) or &gt; [closeRawFd](#closerawfd) &gt; to close the fd after use.
+> To prevent resource leakage, call [closeRawFdSync](#closerawfdsync) or
+> [closeRawFd](#closerawfd)
+> to close the fd after use.
 
 **Since:** 23
 
@@ -5935,7 +5975,9 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 
 > **NOTE：**
 > 
-> To prevent resource leakage, call [closeRawFdSync](#closerawfdsync) or &gt; [closeRawFd](#closerawfd) &gt; to close the fd after use.
+> To prevent resource leakage, call [closeRawFdSync](#closerawfdsync) or
+> [closeRawFd](#closerawfd)
+> to close the fd after use.
 
 **Since:** 23
 
@@ -6001,7 +6043,9 @@ Obtains the file descriptor (fd) of the HAP where the rawfile file in the resour
 
 > **NOTE：**
 > 
-> To prevent resource leakage, call [closeRawFdSync](#closerawfdsync) or &gt; [closeRawFd](#closerawfd) &gt; to close the fd after use.
+> To prevent resource leakage, call [closeRawFdSync](#closerawfdsync) or
+> [closeRawFd](#closerawfd)
+> to close the fd after use.
 
 **Since:** 23
 
@@ -6404,7 +6448,8 @@ Obtains the list of directories and files in the specified subdirectory under **
 
 > **NOTE：**
 > 
-> If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the &gt; directory, the list of the folders and files is returned.
+> If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the
+> directory, the list of the folders and files is returned.
 
 **Since:** 23
 
@@ -6460,7 +6505,8 @@ Obtains the list of directories and files in the specified subdirectory under **
 
 > **NOTE：**
 > 
-> If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the &gt; directory, the list of the folders and files is returned.
+> If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the
+> directory, the list of the folders and files is returned.
 
 **Since:** 23
 
@@ -6521,7 +6567,8 @@ Obtains the list of directories and files in the specified subdirectory under **
 
 > **NOTE：**
 > 
-> If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the &gt; directory, the list of the folders and files is returned.
+> If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the
+> directory, the list of the folders and files is returned.
 
 **Since:** 23
 

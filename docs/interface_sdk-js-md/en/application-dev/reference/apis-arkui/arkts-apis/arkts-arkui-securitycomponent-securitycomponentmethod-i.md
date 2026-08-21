@@ -50,7 +50,7 @@ accessibilityDescription(description: string | Resource | undefined): this
 
 Sets the accessibility description.
 
-This property provides additional context or explanation for the component, helping users understand its actions or functions. &lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: You can provide further explanation for the current component, such as the potential consequences of an operation, especially those not implicitly conveyed by the component's text or role type. If a component includes text information, a role type (other than ROLE_NONE), and an accessibility description, the system reads them when the component is selected.
+This property provides additional context or explanation for the component, helping users understand its actions or functions. <p>&lt;strong&gt;Note&lt;/strong&gt;: You can provide further explanation for the current component, such as the potential consequences of an operation, especially those not implicitly conveyed by the component's text or role type. If a component includes text information, a role type (other than ROLE_NONE), and an accessibility description, the system reads them when the component is selected.
 
 **Since:** 26.0.0
 

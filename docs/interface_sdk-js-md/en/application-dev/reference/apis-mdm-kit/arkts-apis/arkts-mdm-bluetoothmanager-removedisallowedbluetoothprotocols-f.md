@@ -28,7 +28,7 @@ Removes disallowed Bluetooth protocols. After removing some protocols, the user 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | accountId | number | Yes | User ID, which must be greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
 | protocols | Array&lt;Protocol&gt; | Yes | Bluetooth protocol array. |
 
@@ -73,9 +73,15 @@ Removes Bluetooth protocols from the blocklist. After the setting, specified use
 
 > **NOTE：**
 > 
-> 1. When the SPP protocol is passed, the value of the **policy** parameter can only be &gt; **TransferPolicy.RECEIVE_SEND**. Otherwise, error code 9200012 will be returned.
+> 1. When the SPP protocol is passed, the value of the **policy** parameter can only be
+> **TransferPolicy.RECEIVE_SEND**. Otherwise, error code 9200012 will be returned.
 > 
-> 2. This API and &gt; [removeDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#removedisallowedbluetoothprotocols) are &gt; overloaded APIs. This API adds the **policy** parameter to remove the disallowing configuration based on the &gt; transfer policy. If the same protocol has been blocked under different policies via the two APIs, calling this &gt; API removes only the blocking configuration for the corresponding policy, while blocking configurations of other &gt; policies remain effective.
+> 2. This API and
+> [removeDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#removedisallowedbluetoothprotocols) are
+> overloaded APIs. This API adds the **policy** parameter to remove the disallowing configuration based on the
+> transfer policy. If the same protocol has been blocked under different policies via the two APIs, calling this
+> API removes only the blocking configuration for the corresponding policy, while blocking configurations of other
+> policies remain effective.
 
 **Since:** 26.0.0
 
@@ -91,7 +97,7 @@ Removes Bluetooth protocols from the blocklist. After the setting, specified use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | accountId | number | Yes | User ID, which must be greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
 | protocols | Array&lt;Protocol&gt; | Yes | Array of Bluetooth protocols to be removed from the blocklist. |
 | policy | [TransferPolicy](arkts-mdm-bluetoothmanager-transferpolicy-e.md) | Yes | Transfer policy. |

@@ -809,7 +809,12 @@ Sets the value of the property corresponding to **propName** in [AppStorage](../
 
 > **NOTE：**
 
-> Since API version 12, AppStorage supports &gt; [Map](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-map-type), &gt; [Set](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-set-type), &gt; [Date](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-date-type), **null**, &gt; **undefined**, and [union](../../../ui/state-management/arkts-appstorage.md#using-union-types-in-appstorage) &gt; types.
+> Since API version 12, AppStorage supports
+> [Map](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-map-type),
+> [Set](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-set-type),
+> [Date](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-date-type), **null**,
+> **undefined**, and [union](../../../ui/state-management/arkts-appstorage.md#using-union-types-in-appstorage)
+> types.
 
 **Since:** 10
 
@@ -850,7 +855,12 @@ Similar to the [link](#link) API, establishes a two-way data binding with the pr
 
 > **NOTE：**
 
-> Since API version 12, AppStorage supports &gt; [Map](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-map-type), &gt; [Set](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-set-type), &gt; [Date](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-date-type), **null**, &gt; **undefined**, and [union](../../../ui/state-management/arkts-appstorage.md#using-union-types-in-appstorage) &gt; types.
+> Since API version 12, AppStorage supports
+> [Map](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-map-type),
+> [Set](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-set-type),
+> [Date](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-date-type), **null**,
+> **undefined**, and [union](../../../ui/state-management/arkts-appstorage.md#using-union-types-in-appstorage)
+> types.
 
 **Since:** 10
 
@@ -891,7 +901,12 @@ Similar to the [prop](#prop) API, establishes a one-way data binding with the pr
 
 > **NOTE：**
 
-> Since API version 12, AppStorage supports &gt; [Map](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-map-type), &gt; [Set](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-set-type), &gt; [Date](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-date-type), **null**, &gt; **undefined**, and [union](../../../ui/state-management/arkts-appstorage.md#using-union-types-in-appstorage) &gt; types.
+> Since API version 12, AppStorage supports
+> [Map](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-map-type),
+> [Set](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-set-type),
+> [Date](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-date-type), **null**,
+> **undefined**, and [union](../../../ui/state-management/arkts-appstorage.md#using-union-types-in-appstorage)
+> types.
 
 **Since:** 10
 
@@ -933,7 +948,12 @@ This API is similar to [setAndLink](#setandlink) but does not require manually r
 
 > **NOTE：**
 
-> Since API version 12, AppStorage supports &gt; [Map](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-map-type), &gt; [Set](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-set-type), &gt; [Date](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-date-type), **null**, &gt; **undefined**, and [union](../../../ui/state-management/arkts-appstorage.md#using-union-types-in-appstorage) &gt; types.
+> Since API version 12, AppStorage supports
+> [Map](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-map-type),
+> [Set](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-set-type),
+> [Date](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-date-type), **null**,
+> **undefined**, and [union](../../../ui/state-management/arkts-appstorage.md#using-union-types-in-appstorage)
+> types.
 
 **Since:** 12
 
@@ -976,7 +996,12 @@ If the property does not exist, this API creates it with the value of **newValue
 
 > **NOTE：**
 
-> Since API version 12, AppStorage supports &gt; [Map](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-map-type), &gt; [Set](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-set-type), &gt; [Date](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-date-type), **null**, &gt; **undefined**, and [union](../../../ui/state-management/arkts-appstorage.md#using-union-types-in-appstorage) &gt; types.
+> Since API version 12, AppStorage supports
+> [Map](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-map-type),
+> [Set](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-set-type),
+> [Date](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-date-type), **null**,
+> **undefined**, and [union](../../../ui/state-management/arkts-appstorage.md#using-union-types-in-appstorage)
+> types.
 
 **Since:** 10
 

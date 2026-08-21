@@ -1,0 +1,64 @@
+# ReaderIterator
+
+Provides a **ReaderIterator** object. Before calling APIs of **ReaderIterator**, you need to use **readLines()** to create a **ReaderIterator** instance.
+
+**Since:** 11
+
+<!--Device-unnamed-declare interface ReaderIterator--><!--Device-unnamed-declare interface ReaderIterator-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+## Modules to Import
+
+```TypeScript
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+```
+
+## next
+
+```TypeScript
+next(): ReaderIteratorResult
+```
+
+Obtains the **ReaderIterator** result.
+
+**Since:** 11
+
+<!--Device-ReaderIterator-next(): ReaderIteratorResult--><!--Device-ReaderIterator-next(): ReaderIteratorResult-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [ReaderIteratorResult](../../apis-default/arkts-apis/arkts-filefs-readeriteratorresult-i.md) | ReaderIteratorResult** object obtained. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900037 | No data available |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo as fs, Options } from '@kit.CoreFileKit';
+let filePath = pathDir + "/test.txt";
+let options: Options = {
+  encoding: 'utf-8'
+};
+fs.readLines(filePath, options).then((readerIterator: fs.ReaderIterator) => {
+  for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
+    console.info("content: " + it.value);
+  }
+}).catch((err: BusinessError) => {
+  console.error("readLines failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+

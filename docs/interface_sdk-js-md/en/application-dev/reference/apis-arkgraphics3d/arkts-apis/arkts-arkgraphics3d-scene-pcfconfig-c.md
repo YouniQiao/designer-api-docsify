@@ -1,6 +1,6 @@
 # PCFConfig
 
-param config for pcf soft shadow
+Configuration class for soft shadows using the Percentage-Closer Filtering (PCF) algorithm.
 
 **Inheritance/Implementation:** PCFConfig extends [SoftShadowConfig](arkts-arkgraphics3d-scene-softshadowconfig-c.md)
 

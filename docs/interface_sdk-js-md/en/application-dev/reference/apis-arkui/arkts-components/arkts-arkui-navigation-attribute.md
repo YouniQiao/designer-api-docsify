@@ -25,7 +25,9 @@ Sets the icon of the back button in the title bar.
 
 > **NOTE：**
 > 
-> The following are not allowed: modify the icon size through the **fontSize** attribute of the &gt; **SymbolGlyphModifier** object, change the animation effects through the **effectStrategy** attribute, or change &gt; the type of animation effects through the **symbolEffect** attribute.
+> The following are not allowed: modify the icon size through the **fontSize** attribute of the
+> **SymbolGlyphModifier** object, change the animation effects through the **effectStrategy** attribute, or change
+> the type of animation effects through the **symbolEffect** attribute.
 
 **Since:** 9
 
@@ -53,7 +55,9 @@ Sets the icon and accessibility text for the back button on the title bar.
 > 
 > This API cannot be called within attributeModifier.
 > 
-> The following are not allowed: modify the icon size through the **fontSize** attribute of the &gt; **SymbolGlyphModifier** object, change the animation effects through the **effectStrategy** attribute, or change &gt; the type of animation effects through the **symbolEffect** attribute.
+> The following are not allowed: modify the icon size through the **fontSize** attribute of the
+> **SymbolGlyphModifier** object, change the animation effects through the **effectStrategy** attribute, or change
+> the type of animation effects through the **symbolEffect** attribute.
 
 **Since:** 19
 
@@ -397,11 +401,15 @@ Ignores the layout safe area by allowing the component to extend into the non-sa
 > 
 > - Prerequisites for the **ignoreLayoutSafeArea** attribute to take effect:
 > 
-> When **LayoutSafeAreaType.SYSTEM** is set, the component can extend into the non-safe area if its boundaries &gt; overlap with it.
+> When **LayoutSafeAreaType.SYSTEM** is set, the component can extend into the non-safe area if its boundaries
+> overlap with it.
 > 
-> - If the component extends into the non-safe area, events triggered within that area (such as click events) might &gt; be intercepted by the system. This allows the system to prioritize responses to system components such as the &gt; status bar.
+> - If the component extends into the non-safe area, events triggered within that area (such as click events) might
+> be intercepted by the system. This allows the system to prioritize responses to system components such as the
+> status bar.
 > 
-> - To allow a component to extend into non-safe areas, the title bar and toolbar must be hidden or set to &gt; [STACK](arkts-arkui-barstyle-e.md) mode.
+> - To allow a component to extend into non-safe areas, the title bar and toolbar must be hidden or set to
+> [STACK](arkts-arkui-barstyle-e.md) mode.
 
 **Since:** 12
 
@@ -430,7 +438,9 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 
 &gt; **NOTE：**
 > 
-> The following are not allowed: modify the icon size through the **fontSize** attribute of the &gt; **SymbolGlyphModifier** object, change the animation effects through the **effectStrategy** attribute, or change &gt; the type of animation effects through the **symbolEffect** attribute.
+> The following are not allowed: modify the icon size through the **fontSize** attribute of the
+> **SymbolGlyphModifier** object, change the animation effects through the **effectStrategy** attribute, or change
+> the type of animation effects through the **symbolEffect** attribute.
 
 **Since:** 8
 
@@ -458,7 +468,9 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 > 
 > This API cannot be called within attributeModifier.
 > 
-> The following are not allowed: modify the icon size through the **fontSize** attribute of the &gt; **SymbolGlyphModifier** object, change the animation effects through the **effectStrategy** attribute, or change &gt; the type of animation effects through the **symbolEffect** attribute.
+> The following are not allowed: modify the icon size through the **fontSize** attribute of the
+> **SymbolGlyphModifier** object, change the animation effects through the **effectStrategy** attribute, or change
+> the type of animation effects through the **symbolEffect** attribute.
 
 **Since:** 19
 
@@ -699,13 +711,21 @@ Sets whether the **Navigation** component is recoverable. If set to recoverable,
 
 > **NOTE：**
 > 
-> 1. For this API to work properly, you must first set the universal attribute id of the &gt; **Navigation** component.
+> 1. For this API to work properly, you must first set the universal attribute id of the
+> **Navigation** component.
 > 
-> 2. This API must be used together with the recoverable API of &gt; **NavDestination**.
+> 2. This API must be used together with the recoverable API of
+> **NavDestination**.
 > 
-> 3. Non-serializable information, such as non-serializable parameters and custom **onPop**, is discarded and &gt; cannot be restored during the recovery process.
+> 3. Non-serializable information, such as non-serializable parameters and custom **onPop**, is discarded and
+> cannot be restored during the recovery process.
 > 
-> 4. If an application is terminated due to insufficient system resources after it is switched to the background, &gt; any page configured as recoverable will be automatically restored when the application is revived to the &gt; foreground. For details, see &gt; [UIAbility Backup and Restore](../../../application-models/ability-recover-guideline.md). For the usage example, &gt; see &gt; [Example 18: Setting Navigation as Recoverable](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-18-setting-navigation-as-recoverable).
+> 4. If an application is terminated due to insufficient system resources after it is switched to the background,
+> any page configured as recoverable will be automatically restored when the application is revived to the
+> foreground. For details, see
+> [UIAbility Backup and Restore](../../../application-models/ability-recover-guideline.md). For the usage example,
+> see
+> [Example 18: Setting Navigation as Recoverable](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-18-setting-navigation-as-recoverable).
 
 **Since:** 14
 
@@ -782,20 +802,28 @@ Sets the style of the system status bar when the home page of the **Navigation**
 > **NOTE：**
 > 
 > 1. Avoid using the **systemBarStyle** attribute in conjunction with the status bar style APIs in the **Window**
-> module, such as &gt; [setWindowSystemBarProperties](../../../reference/apis-arkui/arkts-apis-window-Window.md#setwindowsystembarproperties).
+> module, such as
+> [setWindowSystemBarProperties](../../../reference/apis-arkui/arkts-apis-window-Window.md#setwindowsystembarproperties).
 > 
 > 
-> 2. When you first set the **systemBarStyle** attribute for a **Navigation** or **NavDestination** component, the &gt; current status bar style is saved for potential future restoration.
+> 2. When you first set the **systemBarStyle** attribute for a **Navigation** or **NavDestination** component, the
+> current status bar style is saved for potential future restoration.
 > 
-> 3. **Navigation** always uses the status bar style defined by the home page (when no **NavDestination** exists in &gt; the routing stack) or the top **NavDestination** in the stack.
+> 3. **Navigation** always uses the status bar style defined by the home page (when no **NavDestination** exists in
+> the routing stack) or the top **NavDestination** in the stack.
 > 
-> 4. If the home page or any top **NavDestination** page has a valid **systemBarStyle** set, that style will be &gt; used. If no style is set, and there is a previously saved style available, the saved style will be used. If no &gt; style has been set or saved, no changes will be made.
+> 4. If the home page or any top **NavDestination** page has a valid **systemBarStyle** set, that style will be
+> used. If no style is set, and there is a previously saved style available, the saved style will be used. If no
+> style has been set or saved, no changes will be made.
 > 
-> 5. In [Split](arkts-arkui-navigationmode-e.md) mode, if there is no **NavDestination** in the content area, the settings of &gt; the **Navigation** home page will apply. Otherwise, the settings of the top **NavDestination** page on the &gt; routing stack will apply.
+> 5. In [Split](arkts-arkui-navigationmode-e.md) mode, if there is no **NavDestination** in the content area, the settings of
+> the **Navigation** home page will apply. Otherwise, the settings of the top **NavDestination** page on the
+> routing stack will apply.
 > 
 > 6. The **systemBarStyle** attribute is effective only for the main page of the main window.
 > 
-> 7. The set style will only take effect if the **Navigation** component spans the entire page. If it does not, and &gt; there is a previously saved style available, the saved style will be used instead.
+> 7. The set style will only take effect if the **Navigation** component spans the entire page. If it does not, and
+> there is a previously saved style available, the saved style will be used instead.
 > 
 > 8. When different styles are set for pages, the new style takes effect at the start of the page transition.
 > 
@@ -906,7 +934,9 @@ Sets the content of the toolbar. If this attribute is not set, no toolbar is dis
 > 
 > This API can be called in attributeModifier since API version 20.
 > 
-> The following are not allowed: modify the icon size through the **fontSize** attribute of the &gt; **SymbolGlyphModifier** object, change the animation effects through the **effectStrategy** attribute, or change &gt; the type of animation effects through the **symbolEffect** attribute.
+> The following are not allowed: modify the icon size through the **fontSize** attribute of the
+> **SymbolGlyphModifier** object, change the animation effects through the **effectStrategy** attribute, or change
+> the type of animation effects through the **symbolEffect** attribute.
 
 **Since:** 10
 

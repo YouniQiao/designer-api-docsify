@@ -20,7 +20,7 @@ export declare type TypeDecorator = <T>(type: TypeConstructor<T>) => PropertyDec
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [TypeConstructor](arkts-arkui-arkui-statemanagement-typeconstructor-i.md)&lt;T&gt; | 是 | 标记类属性的类型，仅支持自定义class类型，传入其他类型会导致持久化失败。 |
+| type | [TypeConstructor](arkts-arkui-arkuistatemanagement-typeconstructor-i.md)&lt;T&gt; | 是 | 标记类属性的类型，仅支持自定义class类型，传入其他类型会导致持久化失败。 |
 
 **返回值：**
 

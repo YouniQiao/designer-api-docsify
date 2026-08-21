@@ -29,7 +29,9 @@ Enables or disables automatic camera switch. You can use [isAutoDeviceSwitchSupp
 
 > **NOTE：**
 > 
-> This API is used only for foldable devices with multiple front cameras. In different fold states, the system &gt; can automatically switch to an available front camera. It does not enable automatic switching between front and &gt; rear cameras.
+> This API is used only for foldable devices with multiple front cameras. In different fold states, the system
+> can automatically switch to an available front camera. It does not enable automatic switching between front and
+> rear cameras.
 
 **Since:** 23
 

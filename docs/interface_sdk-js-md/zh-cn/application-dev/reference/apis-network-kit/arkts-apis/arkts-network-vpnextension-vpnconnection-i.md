@@ -61,7 +61,8 @@ create(config: VpnConfig): Promise<int>
 
 > **说明：**
 > 
-> 建议在不需要VPN网络的时候配对调用[destroy()](#destroy)或 &gt; [destroy(vpnId: string)](#destroy)接口销毁启动的VPN网络，并执行资源清理等操作。
+> 建议在不需要VPN网络的时候配对调用[destroy()](#destroy)或
+> [destroy(vpnId: string)](#destroy)接口销毁启动的VPN网络，并执行资源清理等操作。
 
 **起始版本：** 11
 

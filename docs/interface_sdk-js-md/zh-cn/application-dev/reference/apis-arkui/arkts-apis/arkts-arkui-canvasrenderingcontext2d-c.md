@@ -6,9 +6,13 @@ CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上�
 > 
 > 建议使用时将CanvasRenderingContext2D对象与Canvas组件封装到同一个自定义组件中，保证两者一一对应且生命周期保持一致。
 > 
-> 本文绘制接口在调用时会存入被关联的Canvas组件的指令队列中。仅当当前帧进入渲染阶段且关联的Canvas组件处于可见状态时， &gt; 这些指令才会从队列中被提取并执行。因此，在Canvas组件不可见的情况下，应尽量避免频繁调用绘制接口， &gt; 以防止指令在队列中堆积，从而避免内存占用过大的问题。
+> 本文绘制接口在调用时会存入被关联的Canvas组件的指令队列中。仅当当前帧进入渲染阶段且关联的Canvas组件处于可见状态时，
+> 这些指令才会从队列中被提取并执行。因此，在Canvas组件不可见的情况下，应尽量避免频繁调用绘制接口，
+> 以防止指令在队列中堆积，从而避免内存占用过大的问题。
 > 
-> beginPath、moveTo、lineTo、closePath、bezierCurveTo、quadraticCurveTo、arc、arcTo、ellipse、rect和 &gt; roundRect接口只能对CanvasRenderingContext2D中的路径生效，无法对OffscreenCanvasRenderingContext2D和 &gt; Path2D对象中设置的路径生效。
+> beginPath、moveTo、lineTo、closePath、bezierCurveTo、quadraticCurveTo、arc、arcTo、ellipse、rect和
+> roundRect接口只能对CanvasRenderingContext2D中的路径生效，无法对OffscreenCanvasRenderingContext2D和
+> Path2D对象中设置的路径生效。
 > 
 > Canvas组件的宽或高超过8000px时使用CPU渲染，会导致性能明显下降。
 
@@ -192,10 +196,14 @@ on(type: 'onAttach', callback: Callback<void>): void
 > **说明：**
 > 
 > CanvasRenderingContext2D对象在同一时间只能与一个Canvas组件绑定。
-> 当CanvasRenderingContext2D对象和Canvas组件发生绑定时，会触发'onAttach'回调， &gt; 表示可以获取到[canvas](#canvas)。
-> 避免在'onAttach'中执行绘制方法，应保证Canvas组件已经 &gt; [onReady](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-canvas.md) &gt; 再进行绘制。
+> 当CanvasRenderingContext2D对象和Canvas组件发生绑定时，会触发'onAttach'回调，
+> 表示可以获取到[canvas](#canvas)。
+> 避免在'onAttach'中执行绘制方法，应保证Canvas组件已经
+> [onReady](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-canvas.md)
+> 再进行绘制。
 > 触发'onAttach'回调的一般场景：
-> 1、Canvas组件创建时绑定CanvasRenderingContext2D对象； &gt; 2、CanvasRenderingContext2D对象新绑定一个Canvas组件时。
+> 1、Canvas组件创建时绑定CanvasRenderingContext2D对象；
+> 2、CanvasRenderingContext2D对象新绑定一个Canvas组件时。
 
 **起始版本：** 13
 
@@ -230,9 +238,11 @@ on(type: 'onDetach', callback: Callback<void>): void
 
 > **说明：**
 > 
-> 当CanvasRenderingContext2D对象和Canvas组件解除绑定时，会触发'onDetach'回调， &gt; 表示应停止绘制行为。
+> 当CanvasRenderingContext2D对象和Canvas组件解除绑定时，会触发'onDetach'回调，
+> 表示应停止绘制行为。
 > 触发'onDetach'回调的一般场景：
-> 1、Canvas组件销毁时解除绑定CanvasRenderingContext2D对象； &gt; 2、CanvasRenderingContext2D对象新绑定一个Canvas组件，会先解除已有的绑定。
+> 1、Canvas组件销毁时解除绑定CanvasRenderingContext2D对象；
+> 2、CanvasRenderingContext2D对象新绑定一个Canvas组件，会先解除已有的绑定。
 
 **起始版本：** 13
 

@@ -12,7 +12,7 @@ import { abilityManager } from '@kit.AbilityKit';
 function acquireShareData(missionId: int, callback: AsyncCallback<Record<string, Object>>): void
 ```
 
-系统弹框通过该接口发起原子化服务分享，触发目标UIAbility的 [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare)回调并返回分享数据。使用 callback异步回调。
+系统弹框通过该接口发起原子化服务分享，触发目标UIAbility的 [onShare](arkts-ability-appabilityuiability-uiability-c.md#onshare)回调并返回分享数据。使用 callback异步回调。
 
 **起始版本：** 10
 
@@ -75,7 +75,7 @@ function acquireShareData(missionId: int, callback: AsyncCallback<Record<string,
 function acquireShareData(missionId: int): Promise<Record<string, Object>>
 ```
 
-系统弹框通过该接口发起原子化服务分享，触发目标UIAbility的 [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare)回调并返回分享数据。使用 Promise异步回调。
+系统弹框通过该接口发起原子化服务分享，触发目标UIAbility的 [onShare](arkts-ability-appabilityuiability-uiability-c.md#onshare)回调并返回分享数据。使用 Promise异步回调。
 
 **起始版本：** 10
 

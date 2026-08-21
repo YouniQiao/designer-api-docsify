@@ -34,7 +34,7 @@ Sets the power policy.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | powerScene | [PowerScene](arkts-mdm-devicesettings-powerscene-e-sys.md) | Yes | Scenario to which the power policy applies. Currently, only the timeout scenario is supported. |
 | powerPolicy | [PowerPolicy](arkts-mdm-devicesettings-powerpolicy-i-sys.md) | Yes | Power policy. |
 

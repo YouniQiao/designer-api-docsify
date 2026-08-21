@@ -11,7 +11,7 @@
 
 | Name | Description |
 | --- | --- |
-| [AsyncGenerator](arkts-lib-es2018-asyncgenerator-asyncgenerator-i.md) |  |
-| [AsyncGeneratorFunction](arkts-lib-es2018-asyncgenerator-asyncgeneratorfunction-i.md) |  |
-| [AsyncGeneratorFunctionConstructor](arkts-lib-es2018-asyncgenerator-asyncgeneratorfunctionconstructor-i.md) |  |
+| [AsyncGenerator](arkts-libes2018asyncgenerator-asyncgenerator-i.md) |  |
+| [AsyncGeneratorFunction](arkts-libes2018asyncgenerator-asyncgeneratorfunction-i.md) |  |
+| [AsyncGeneratorFunctionConstructor](arkts-libes2018asyncgenerator-asyncgeneratorfunctionconstructor-i.md) |  |
 

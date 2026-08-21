@@ -11,5 +11,5 @@
 
 | Name | Description |
 | --- | --- |
-| [Number](arkts-lib-es2020-number-number-i.md) |  |
+| [Number](arkts-libes2020number-number-i.md) |  |
 

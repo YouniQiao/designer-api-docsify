@@ -105,7 +105,8 @@ List设置cachedCount后，显示区域外上下各会预加载并布局cachedCo
 
 > **说明：**
 > 
-> 通常建议设置cachedCount=n/2（n代表一屏显示的列表项数量），同时需考虑其他因素以实现体验和内存使用的平衡。最佳实践请参考 &gt; [优化长列表加载慢丢帧问题-缓存列表项](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-best-practices-long-list#section11667144010222)
+> 通常建议设置cachedCount=n/2（n代表一屏显示的列表项数量），同时需考虑其他因素以实现体验和内存使用的平衡。最佳实践请参考
+> [优化长列表加载慢丢帧问题-缓存列表项](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-best-practices-long-list#section11667144010222)
 
 **起始版本：** 14
 
@@ -144,7 +145,9 @@ cachedCount(count: number | CacheCountInfo, show: boolean)
 
 > **说明：**
 > 
-> 通常建议设置cachedCount=n/2（n代表一屏显示的列表项数量），同时需考虑其他因素以实现体验和内存使用的平衡。从API version 22开始，支持设置最大最小缓存数，可以将最大缓存数设置稍大，如设置为最小缓存数的 &gt; 两倍，利用UI线程空闲时间创建节点，减少滚动过程中预加载创建节点，提升滚动流畅性。最佳实践请参考 &gt; [优化长列表加载慢丢帧问题-缓存列表项](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-best-practices-long-list#section11667144010222)
+> 通常建议设置cachedCount=n/2（n代表一屏显示的列表项数量），同时需考虑其他因素以实现体验和内存使用的平衡。从API version 22开始，支持设置最大最小缓存数，可以将最大缓存数设置稍大，如设置为最小缓存数的
+> 两倍，利用UI线程空闲时间创建节点，减少滚动过程中预加载创建节点，提升滚动流畅性。最佳实践请参考
+> [优化长列表加载慢丢帧问题-缓存列表项](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-best-practices-long-list#section11667144010222)
 
 **起始版本：** 22
 
@@ -209,9 +212,12 @@ childrenMainSize(value: ChildrenMainSize)
 
 > **说明：**
 > 
-> - 该属性通过向List组件提供所有子组件在主轴方向的大小信息，确保在面对子组件主轴大小不一致、增删子组件、使用[scrollToIndex等场景时，List组件能 &gt; 够维护其滑动位置准确性。这样，scrollTo可以准确地跳转到指定位置，currentOffset可以获取到 &gt; 当前准确的滑动位置，内置滚动条可以实现平滑移动无跳变。
+> - 该属性通过向List组件提供所有子组件在主轴方向的大小信息，确保在面对子组件主轴大小不一致、增删子组件、使用[scrollToIndex等场景时，List组件能
+> 够维护其滑动位置准确性。这样，scrollTo可以准确地跳转到指定位置，currentOffset可以获取到
+> 当前准确的滑动位置，内置滚动条可以实现平滑移动无跳变。
 > 
-> - 当子组件是ListItemGroup时，需要根据ListItemGroup的列数、ListItemGroup中ListItem在主轴方向的间距以及ListItemGroup中header、footer和ListItem的大 &gt; 小，来准确计算出ListItemGroup在主轴方向的整体大小，并传递给List组件。
+> - 当子组件是ListItemGroup时，需要根据ListItemGroup的列数、ListItemGroup中ListItem在主轴方向的间距以及ListItemGroup中header、footer和ListItem的大
+> 小，来准确计算出ListItemGroup在主轴方向的整体大小，并传递给List组件。
 > 
 > - 如果子组件有ListItemGroup，必须为每一个ListItemGroup设置childrenMainSize属性。
 > List组件和每一个ListItemGroup组件都要通过childrenMainSize属性接口一对一绑定一个ChildrenMainSize对象。
@@ -409,7 +415,8 @@ editMode(value: boolean)
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。此接口已完全移除，无替代接口。如需实现编辑状态切换和删除列表项，可通过自定义状态变量控制删除按钮的显示与隐藏，并在删除按钮的点击事件中更新数据源，具体 &gt; 实现方式请参考[示例3](../../../reference/apis-arkui/arkui-ts/ts-container-list.md#示例3自定义编辑和删除模式)。
+> 从API version 7开始支持，从API version 9开始废弃。此接口已完全移除，无替代接口。如需实现编辑状态切换和删除列表项，可通过自定义状态变量控制删除按钮的显示与隐藏，并在删除按钮的点击事件中更新数据源，具体
+> 实现方式请参考[示例3](../../../reference/apis-arkui/arkui-ts/ts-container-list.md#示例3自定义编辑和删除模式)。
 
 **起始版本：** 7
 
@@ -731,7 +738,8 @@ onItemDelete(event: (index: number) => boolean)
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。此接口已完全移除，无替代接口。如需实现删除列表项，可在自定义删除按钮的点击事件中更新数据源，具体实现方式请参考 &gt; [示例3](../../../reference/apis-arkui/arkui-ts/ts-container-list.md#示例3自定义编辑和删除模式)。
+> 从API version 7开始支持，从API version 9开始废弃。此接口已完全移除，无替代接口。如需实现删除列表项，可在自定义删除按钮的点击事件中更新数据源，具体实现方式请参考
+> [示例3](../../../reference/apis-arkui/arkui-ts/ts-container-list.md#示例3自定义编辑和删除模式)。
 
 **起始版本：** 7
 
@@ -951,7 +959,8 @@ onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void)
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 12开始废弃，建议使用 &gt; [onDidScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12)替代。
+> 从API version 7开始支持，从API version 12开始废弃，建议使用
+> [onDidScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12)替代。
 
 **起始版本：** 7
 
@@ -1017,7 +1026,8 @@ onScrollIndex(event: (start: number, end: number, center: number) => void)
 
 > **说明：**
 > 
-> 与[onScrollVisibleContentChange](#onscrollvisiblecontentchange)相比，onScrollIndex将ListItemGroup整体 &gt; 计为一个索引值，且回调仅返回首尾及中间索引值。如需获取ListItemGroup内部header、footer或ListItem的详细索引信息，请使用onScrollVisibleContentChange。
+> 与[onScrollVisibleContentChange](#onscrollvisiblecontentchange)相比，onScrollIndex将ListItemGroup整体
+> 计为一个索引值，且回调仅返回首尾及中间索引值。如需获取ListItemGroup内部header、footer或ListItem的详细索引信息，请使用onScrollVisibleContentChange。
 > List的边缘效果为弹簧效果时，在List划动到边缘继续划动和松手回弹过程不会触发onScrollIndex事件。
 
 触发该事件的条件：列表初始化时会触发一次，List显示区域内第一个子组件的索引值或最后一个子组件的索引值有变化时会触发。

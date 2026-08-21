@@ -3,7 +3,8 @@
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用 &gt; [bundleManager.BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [bundleManager.BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md)替代。
 
 包信息标志，指示需要获取的包信息的内容。
 

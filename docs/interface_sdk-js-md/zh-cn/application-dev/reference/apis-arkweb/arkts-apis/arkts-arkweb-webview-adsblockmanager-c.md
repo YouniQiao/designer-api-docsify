@@ -28,7 +28,8 @@ static addAdsBlockAllowedList(domainSuffixes: Array<string>): void
 > 
 > - 此接口设置的域名不会持久化，应用重启需要重新设置。
 > 
-> - AllowedList的优先级比DisallowedList高，例如，DisallowedList中配置了['example.com']，禁用了所有example.com域名下的网页，此时如果需要开启' &gt; news.example.com'下的广告过滤，可以使用addAdsBlockAllowedList(['news.example.com'])。
+> - AllowedList的优先级比DisallowedList高，例如，DisallowedList中配置了['example.com']，禁用了所有example.com域名下的网页，此时如果需要开启'
+> news.example.com'下的广告过滤，可以使用addAdsBlockAllowedList(['news.example.com'])。
 
 **起始版本：** 12
 
@@ -63,7 +64,8 @@ static addAdsBlockDisallowedList(domainSuffixes: Array<string>): void
 > 
 > - 此接口设置的域名不会持久化，应用重启需要重新设置。
 > 
-> - 广告过滤特性会使用后缀匹配的方式判断domainSuffix和当前站点的url是否能匹配，例如，当前Web组件打开的网站是https://www.example.com，设置的DisallowedList中有' &gt; example.com'或者'www.example.com'，后缀匹配成功，此网站将禁用广告过滤，访问'https://m.example.com'也将禁用广告过滤。
+> - 广告过滤特性会使用后缀匹配的方式判断domainSuffix和当前站点的url是否能匹配，例如，当前Web组件打开的网站是https://www.example.com，设置的DisallowedList中有'
+> example.com'或者'www.example.com'，后缀匹配成功，此网站将禁用广告过滤，访问'https://m.example.com'也将禁用广告过滤。
 
 **起始版本：** 12
 

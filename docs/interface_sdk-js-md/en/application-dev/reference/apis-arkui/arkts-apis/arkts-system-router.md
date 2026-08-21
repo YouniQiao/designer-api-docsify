@@ -19,17 +19,17 @@ import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, Ena
 
 | Name | Description |
 | --- | --- |
-| [Router(Page Routing)](arkts-arkui-system-router-router-c.md) | The **Router** module provides APIs to access pages through URIs. |
+| [Router(Page Routing)](arkts-arkui-systemrouter-router-c.md) | The **Router** module provides APIs to access pages through URIs. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [BackRouterOptions(Page Routing)](arkts-arkui-system-router-backrouteroptions-i.md) | Defines the parameters for routing back. |
-| [DisableAlertBeforeBackPageOptions(Page Routing)](arkts-arkui-system-router-disablealertbeforebackpageoptions-i.md) | Defines the **DisableAlertBeforeBackPage** parameter. |
-| [EnableAlertBeforeBackPageOptions(Page Routing)](arkts-arkui-system-router-enablealertbeforebackpageoptions-i.md) | Defines the **EnableAlertBeforeBackPage** parameter. |
-| [RouterOptions(Page Routing)](arkts-arkui-system-router-routeroptions-i.md) | Defines the page routing parameters. |
-| [RouterState(Page Routing)](arkts-arkui-system-router-routerstate-i.md) | Defines the routing state. |
+| [BackRouterOptions(Page Routing)](arkts-arkui-systemrouter-backrouteroptions-i.md) | Defines the parameters for routing back. |
+| [DisableAlertBeforeBackPageOptions(Page Routing)](arkts-arkui-systemrouter-disablealertbeforebackpageoptions-i.md) | Defines the **DisableAlertBeforeBackPage** parameter. |
+| [EnableAlertBeforeBackPageOptions(Page Routing)](arkts-arkui-systemrouter-enablealertbeforebackpageoptions-i.md) | Defines the **EnableAlertBeforeBackPage** parameter. |
+| [RouterOptions(Page Routing)](arkts-arkui-systemrouter-routeroptions-i.md) | Defines the page routing parameters. |
+| [RouterState(Page Routing)](arkts-arkui-systemrouter-routerstate-i.md) | Defines the routing state. |
 
 ### Types
 

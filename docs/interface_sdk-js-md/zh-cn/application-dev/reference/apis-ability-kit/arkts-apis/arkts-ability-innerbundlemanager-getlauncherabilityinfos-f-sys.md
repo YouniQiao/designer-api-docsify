@@ -17,7 +17,9 @@ function getLauncherAbilityInfos(bundleName: string,
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用 &gt; [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md)
+> 替代。
 
 **起始版本：** 8
 
@@ -52,7 +54,9 @@ function getLauncherAbilityInfos(bundleName: string, userId: number): Promise<Ar
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用 &gt; [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md) &gt; 替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md)
+> 替代。
 
 **起始版本：** 8
 

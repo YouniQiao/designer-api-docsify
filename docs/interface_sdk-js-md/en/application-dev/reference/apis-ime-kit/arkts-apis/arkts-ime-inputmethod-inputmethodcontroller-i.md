@@ -26,10 +26,14 @@ attach(showKeyboard: boolean, textConfig: TextConfig, callback: AsyncCallback<vo
 ```
 
 @brief Attaches a self-drawing component to the input method. This API uses an asynchronous callback to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
-> An input method can use the following features only when it has a self-drawing component attached to it: showing or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving the configuration information, and listening for and processing the information or commands sent by the input method. <br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> An input method can use the following features only when it has a self-drawing component attached to it: showing or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving the configuration information, and listening for and processing the information or commands sent by the input method. &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > If the window where the self-drawing component is located is set to be non-focusable via [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable), the system cannot guarantee proper interaction between the self-drawing input component and the input method. If you want to draw an input box in a non-focusable window, refer to [Input Box and Input Method Interaction in Non-Focusable Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md).
 
 **Since:** 23
@@ -80,10 +84,14 @@ attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>
 ```
 
 @brief Attaches a self-drawing component to the input method. This API uses a promise to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
-> An input method can use the following features only when it has a self-drawing component attached to it: showing or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving the configuration information, and listening for and processing the information or commands sent by the input method. <br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> An input method can use the following features only when it has a self-drawing component attached to it: showing or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving the configuration information, and listening for and processing the information or commands sent by the input method. &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > If the window where the self-drawing component is located is set to be non-focusable via [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable), the system cannot guarantee proper interaction between the self-drawing input component and the input method. If you want to draw an input box in a non-focusable window, refer to [Input Box and Input Method Interaction in Non-Focusable Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md).
 
 **Since:** 23
@@ -137,10 +145,14 @@ attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: Req
 ```
 
 @brief Attaches a self-drawing component to the input method. This API uses a promise to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
-> An input method can use the following features only when it has a self-drawing component attached to it: showing or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving the configuration information, and listening for and processing the information or commands sent by the input method. <br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> An input method can use the following features only when it has a self-drawing component attached to it: showing or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving the configuration information, and listening for and processing the information or commands sent by the input method. &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > If the window where the self-drawing component is located is set to be non-focusable via [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable), the system cannot guarantee proper interaction between the self-drawing input component and the input method. If you want to draw an input box in a non-focusable window, refer to [Input Box and Input Method Interaction in Non-Focusable Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md).
 
 **Since:** 23
@@ -197,8 +209,10 @@ attachWithUIContext(uiContext: UIContext, textConfig: TextConfig, attachOptions?
 ```
 
 @brief Attaches a self-drawing component to the input method. This API uses a promise to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > An input method can use the following features only when it has a self-drawing component attached to it: showing or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving the configuration information, and listening for and processing the information or commands sent by the input method.
 
 **Since:** 23
@@ -213,7 +227,7 @@ attachWithUIContext(uiContext: UIContext, textConfig: TextConfig, attachOptions?
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UIContext** instance. |
+| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | UIContext** instance. |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | Configuration of the edit box. |
 | attachOptions | AttachOptions | No | Additional options for binding. |
 
@@ -432,8 +446,10 @@ discardTypingText(): Promise<void>
 ```
 
 @brief Discards the text that is being typed. This API uses a promise to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > This API can be called after the edit box is attached to an input method.
 
 **Since:** 23
@@ -475,8 +491,10 @@ hideSoftKeyboard(callback: AsyncCallback<void>): void
 ```
 
 @brief Hides the soft keyboard. This API uses an asynchronous callback to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to hide the soft keyboard only when the edit box is focused.
 
 **Since:** 23
@@ -522,8 +540,10 @@ hideSoftKeyboard(): Promise<void>
 ```
 
 @brief Hides the soft keyboard. This API uses a promise to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to hide the soft keyboard only when the edit box is focused.
 
 **Since:** 23
@@ -567,10 +587,14 @@ hideTextInput(callback: AsyncCallback<void>): void
 ```
 
 @brief Exits the text editing mode. This API uses an asynchronous callback to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
-> If the soft keyboard is displayed when this API is called, it will be hidden. <br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> If the soft keyboard is displayed when this API is called, it will be hidden. &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > Calling this API does not detach the edit box from the input method. The edit box can call [showTextInput](#showtextinput) again to reenter the text editing mode.
 
 **Since:** 23
@@ -614,10 +638,14 @@ hideTextInput(): Promise<void>
 ```
 
 @brief Exits the text editing mode. This API uses a promise to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
-> If the soft keyboard is displayed when this API is called, it will be hidden. <br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> If the soft keyboard is displayed when this API is called, it will be hidden. &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > Calling this API does not detach the edit box from the input method. The edit box can call [showTextInput](#showtextinput) again to reenter the text editing mode.
 
 **Since:** 23
@@ -1504,7 +1532,7 @@ onDeleteRight(callback: Callback<int>): void
 onFinishTextPreview(callback: Callback<void>): void
 ```
 
-@brief &lt;p&gt;Subscribe 'finishTextPreview' event.&lt;/p&gt; <br>&lt;p&gt;To support the preview text feature, developers should subscribe to this event before calling attach.&lt;/p&gt;
+@brief <p>Subscribe 'finishTextPreview' event.</p> <br><p>To support the preview text feature, developers should subscribe to this event before calling attach.</p>
 
 **Since:** 23
 
@@ -1772,7 +1800,7 @@ onSendKeyboardStatus(callback: Callback<KeyboardStatus>): void
 onSetPreviewText(callback: SetPreviewTextCallback): void
 ```
 
-@brief &lt;p&gt;Subscribe 'setPreviewText' event.&lt;/p&gt; &lt;p&gt;To support the preview text feature, developers should subscribe to this event before calling attach.&lt;/p&gt;
+@brief <p>Subscribe 'setPreviewText' event.</p> <p>To support the preview text feature, developers should subscribe to this event before calling attach.</p>
 
 **Since:** 23
 
@@ -1865,8 +1893,10 @@ on(type: 'finishTextPreview', callback: Callback<void>): void
 ```
 
 @brief Subscribes to the event of finishing text preview. This API uses an asynchronous callback to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > To use the text preview function, you need to subscribe to this event before calling [attach](#attach) and subscribe to this event together with [on('setPreviewText')](#onselectbyrange).
 
 **Since:** 17
@@ -2297,8 +2327,10 @@ on(type: 'setPreviewText', callback: SetPreviewTextCallback): void
 ```
 
 @brief Subscribes to the event for text preview operations in an input method application. This API uses an asynchronous callback to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > To use the text preview function, you need to subscribe to this event before calling [attach](#attach) and subscribe to this event together with [on('finishTextPreview')](#onselectbyrange).
 
 **Since:** 17
@@ -2351,10 +2383,14 @@ recvMessage(msgHandler?: MessageHandler): void
 ```
 
 @brief Registers or unregisters MessageHandler. <br> <br>   
-> **NOTE：**<br>
-> <br>
-> The [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) object is globally unique. After multiple registrations, only the last registered object is valid and retained, and the [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated) callback of the penultimate registered object is triggered. <br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> The [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) object is globally unique. After multiple registrations, only the last registered object is valid and retained, and the [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated) callback of the penultimate registered object is triggered. &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated) callback will be triggered.
 
 **Since:** 23
@@ -2401,10 +2437,14 @@ sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 ```
 
 @brief Sends the custom communication to the input method application. This API uses a promise to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
-> This API can be called only when the edit box is attached to the input method and enter the edit mode, and the input method application is in full experience mode. <br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> This API can be called only when the edit box is attached to the input method and enter the edit mode, and the input method application is in full experience mode. &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > The maximum length of **msgId** is 256 B, and the maximum length of **msgParam** is 128 KB.
 
 **Since:** 23
@@ -2458,8 +2498,10 @@ setCallingWindow(windowId: int, callback: AsyncCallback<void>): void
 ```
 
 @brief Sets the window to be avoided by the input method. This API uses an asynchronous callback to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > After the window ID of the application bound to the input method is passed in the API, the input method window will not cover the window holding the application.
 
 **Since:** 23
@@ -2506,8 +2548,10 @@ setCallingWindow(windowId: int): Promise<void>
 ```
 
 @brief Sets the window to be avoided by the input method. This API uses a promise to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > After the window ID of the application bound to the input method is passed in the API, the input method window will not cover the window holding the application.
 
 **Since:** 23
@@ -2557,8 +2601,10 @@ showSoftKeyboard(callback: AsyncCallback<void>): void
 ```
 
 @brief Shows the soft keyboard. This API uses an asynchronous callback to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to show the soft keyboard only when the edit box is focused.
 
 **Since:** 23
@@ -2604,8 +2650,10 @@ showSoftKeyboard(): Promise<void>
 ```
 
 @brief Shows the soft keyboard. This API uses a promise to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to show the soft keyboard only when the edit box is focused.
 
 **Since:** 23
@@ -2649,8 +2697,10 @@ showTextInput(callback: AsyncCallback<void>): void
 ```
 
 @brief Enters the text editing mode. This API uses an asynchronous callback to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > After the edit box is attached to an input method, this API can be called to start the soft keyboard and enter the text editing state.
 
 **Since:** 23
@@ -2694,8 +2744,10 @@ showTextInput(): Promise<void>
 ```
 
 @brief Enters the text editing mode. This API uses a promise to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > After the edit box is attached to an input method, this API can be called to start the soft keyboard and enter the text editing state.
 
 **Since:** 23
@@ -2737,8 +2789,10 @@ showTextInput(requestKeyboardReason: RequestKeyboardReason): Promise<void>
 ```
 
 @brief Enters the text editing mode. This API uses a promise to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > After the edit box is attached to an input method, this API can be called to start the soft keyboard and enter the text editing state.
 
 **Since:** 23
@@ -2788,8 +2842,10 @@ stopInput(callback: AsyncCallback<boolean>): void
 ```
 
 @brief Ends this input session. This API uses an asynchronous callback to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to end the input session only when the edit box is focused.
 
 **Since:** 6
@@ -2833,8 +2889,10 @@ stopInput(): Promise<boolean>
 ```
 
 @brief Ends this input session. This API uses a promise to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to end the input session only when the edit box is focused.
 
 **Since:** 6
@@ -2876,8 +2934,10 @@ stopInputSession(callback: AsyncCallback<boolean>): void
 ```
 
 @brief Ends this input session. This API uses an asynchronous callback to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to end the input session only when the edit box is focused.
 
 **Since:** 23
@@ -2924,8 +2984,10 @@ stopInputSession(): Promise<boolean>
 ```
 
 @brief Ends this input session. This API uses a promise to return the result. <br> <br>   
-> **NOTE：**<br>
-> <br>
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to end the input session only when the edit box is focused.
 
 **Since:** 23

@@ -12,25 +12,25 @@ import { MarginTypeV2, PromptOptionsV2, PromptOptionsV2Config, ExceptionPromptV2
 
 | 名称 | 说明 |
 | --- | --- |
-| [PromptOptionsV2](arkts-arkui-arkui-advanced-exceptionpromptv2-promptoptionsv2-c.md) | PromptOptionsV2用于定义异常提示组件的配置信息。 |
+| [PromptOptionsV2](arkts-arkui-arkuiadvancedexceptionpromptv2-promptoptionsv2-c.md) | PromptOptionsV2用于定义异常提示组件的配置信息。 |
 
 ### 结构体
 
 | 名称 | 说明 |
 | --- | --- |
-| [ExceptionPromptV2](arkts-arkui-arkui-advanced-exceptionpromptv2-exceptionpromptv2-s.md) | 异常提示V2组件，适用于有异常需要提示异常内容的情况。 |
+| [ExceptionPromptV2](arkts-arkui-arkuiadvancedexceptionpromptv2-exceptionpromptv2-s.md) | 异常提示V2组件，适用于有异常需要提示异常内容的情况。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [PromptOptionsV2Config](arkts-arkui-arkui-advanced-exceptionpromptv2-promptoptionsv2config-i.md) | PromptOptionsV2Config定义用于构造PromptOptionsV2对象的配置信息接口。 |
+| [PromptOptionsV2Config](arkts-arkui-arkuiadvancedexceptionpromptv2-promptoptionsv2config-i.md) | PromptOptionsV2Config定义用于构造PromptOptionsV2对象的配置信息接口。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [MarginTypeV2](arkts-arkui-arkui-advanced-exceptionpromptv2-margintypev2-e.md) | 异常提示的边距样式类型。 |
+| [MarginTypeV2](arkts-arkui-arkuiadvancedexceptionpromptv2-margintypev2-e.md) | 异常提示的边距样式类型。 |
 
 ### 类型
 

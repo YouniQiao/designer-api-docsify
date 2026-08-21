@@ -12,7 +12,7 @@ import { abilityManager } from '@kit.AbilityKit';
 function clearPreloadedUIExtensionAbilities(): Promise<void>
 ```
 
-Clears all preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instances in the current process. This API uses a promise to return the result.
+Clears all preloaded [UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md) instances in the current process. This API uses a promise to return the result.
 
 **Since:** 23
 

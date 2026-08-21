@@ -17,7 +17,9 @@ Downloads a file. This API uses an asynchronous callback to return the result. H
 
 > **NOTE：**
 > 
-> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 23
 
@@ -80,7 +82,9 @@ Downloads a file. This API uses a promise to return the result. HTTP is supporte
 
 > **NOTE：**
 > 
-> For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 23
 

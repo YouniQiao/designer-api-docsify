@@ -1320,7 +1320,8 @@ Checks whether this PixelMap object is released. If released, any attempt to acc
 
 > **NOTE：**
 > 
-> Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied &gt; by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
+> Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied
+> by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
 
 **Since:** 23
 
@@ -1799,7 +1800,8 @@ Releases this PixelMap instance. After the release, any attempt to access the in
 
 > **NOTE：**
 > 
-> Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied &gt; by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
+> Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied
+> by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
 
 **Since:** 23
 
@@ -1827,7 +1829,8 @@ Releases this PixelMap instance. After the release, any attempt to access the in
 
 > **NOTE：**
 > 
-> Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied &gt; by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
+> Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied
+> by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
 
 **Since:** 23
 

@@ -2392,7 +2392,7 @@ query(
 | uri | string | 是 | 要查询的数据的路径。 |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。&lt;br /&gt;query接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB目前仅支 持inKeys和prefixKey。静默场景下谓词内方法为空时，默认全表查询。非静默场景下规格由数据提供方制定。 |
 | columns | Array&lt;string&gt; | 是 | 要查询的列。如果此参数为空，则查询所有列。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataShareResultSet](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md)&gt; | 是 | 回调函数。当查询数据库中的数据成功，err为undefined，data为获取到的查询到的结果集；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataShareResultSet](arkts-arkdata-datadatashareresultset-datashareresultset-i-sys.md)&gt; | 是 | 回调函数。当查询数据库中的数据成功，err为undefined，data为获取到的查询到的结果集；否则为错误对象。 |
 
 **错误码：**
 
@@ -2469,7 +2469,7 @@ query(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[DataShareResultSet](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md)&gt; | Promise对象。返回查询到的结果集。 |
+| Promise&lt;[DataShareResultSet](arkts-arkdata-datadatashareresultset-datashareresultset-i-sys.md)&gt; | Promise对象。返回查询到的结果集。 |
 
 **错误码：**
 

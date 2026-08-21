@@ -32,7 +32,7 @@ declare function dup(fd: number): File
 
 | 类型 | 说明 |
 | --- | --- |
-| [File](arkts-corefile-file-fs-file-i.md) | 打开的File对象。 |
+| [File](arkts-corefile-filefs-file-i.md) | 打开的File对象。 |
 
 **错误码：**
 

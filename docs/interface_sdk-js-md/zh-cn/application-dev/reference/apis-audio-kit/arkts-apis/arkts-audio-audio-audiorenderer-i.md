@@ -439,7 +439,8 @@ getLatency(type: AudioLatencyType): int
 > 
 > - 由于时延未计入实时缓冲区，建议仅在音频播放开始时获取，避免频繁调用，否则可能因路由切换而阻塞该接口调用。
 > 
-> - 音频输出到硬件后的音画同步建议使用[getAudioTimestampInfo](#getaudiotimestampinfo)或 &gt; [getAudioTimestampInfoSync](#getaudiotimestampinfosync)完成。
+> - 音频输出到硬件后的音画同步建议使用[getAudioTimestampInfo](#getaudiotimestampinfo)或
+> [getAudioTimestampInfoSync](#getaudiotimestampinfosync)完成。
 
 **起始版本：** 23
 
@@ -1809,7 +1810,8 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 > 
 > - 本接口仅适用于[StreamUsage](arkts-audio-audio-streamusage-e.md)为语音消息、VoIP语音通话或者VoIP视频通话的场景，支持听筒、扬声器和系统默认设备。
 > 
-> - 本接口允许在AudioRenderer创建后随时调用，系统会记录应用设置的默认本机内置发声设备。应用启动播放时，若外接设备如蓝牙耳机或有线耳机已接入，系统优先从外接设备发声；否则，系统遵循应用设置的默认本机内置发声设 &gt; 备。
+> - 本接口允许在AudioRenderer创建后随时调用，系统会记录应用设置的默认本机内置发声设备。应用启动播放时，若外接设备如蓝牙耳机或有线耳机已接入，系统优先从外接设备发声；否则，系统遵循应用设置的默认本机内置发声设
+> 备。
 
 **起始版本：** 23
 
@@ -1955,7 +1957,8 @@ setLoudnessGain(loudnessGain: double): Promise<void>
 
 > **说明：**
 > 
-> - 该接口仅支持类型为[STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md)、[STREAM_USAGE_MOVIE](arkts-audio-audio-streamusage-e.md)或 &gt; [STREAM_USAGE_AUDIOBOOK](arkts-audio-audio-streamusage-e.md)的音频流。
+> - 该接口仅支持类型为[STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md)、[STREAM_USAGE_MOVIE](arkts-audio-audio-streamusage-e.md)或
+> [STREAM_USAGE_AUDIOBOOK](arkts-audio-audio-streamusage-e.md)的音频流。
 > 
 > - 该接口不支持高清通路的响度设置。
 > 

@@ -16,7 +16,9 @@ Sets the application-level HTTP proxy configuration.
 
 > **NOTE：**
 > 
-> If you want to use the proxy information configured by this API, set **usingProxy** in &gt; [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) to **true** to enable proxy forwarding. This &gt; API is used only for configuring proxy rules. It does not verify the validity of the proxy service.
+> If you want to use the proxy information configured by this API, set **usingProxy** in
+> [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) to **true** to enable proxy forwarding. This
+> API is used only for configuring proxy rules. It does not verify the validity of the proxy service.
 
 **Since:** 23
 

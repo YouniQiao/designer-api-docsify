@@ -5,7 +5,8 @@
 > **说明：**
 > 
 > 任务被取消后，有如下两种情况：
-> - 如果当前任务处于等待阶段，则result为undefined，error与BusinessError的message字段一致； &gt; - 如果当前任务正在运行且有异常抛出，则result为undefined，error为抛出的异常信息；没有异常时，result为任务执行完成后的结果，error与BusinessError的message字段一致。
+> - 如果当前任务处于等待阶段，则result为undefined，error与BusinessError的message字段一致；
+> - 如果当前任务正在运行且有异常抛出，则result为undefined，error为抛出的异常信息；没有异常时，result为任务执行完成后的结果，error与BusinessError的message字段一致。
 
 **起始版本：** 20
 

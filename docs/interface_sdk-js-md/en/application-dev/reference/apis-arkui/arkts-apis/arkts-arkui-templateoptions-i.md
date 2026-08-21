@@ -4,11 +4,16 @@ When **cachedCount** is set to the maximum number of nodes in the display area o
 
 > **NOTE：**
 > 
-> The **.cachedCount()** attribute of the scrollable container component and the **cachedCount** parameter of the &gt; **.template()** method of **Repeat** are used to balance performance and memory, but their meanings are different.
+> The **.cachedCount()** attribute of the scrollable container component and the **cachedCount** parameter of the
+> **.template()** method of **Repeat** are used to balance performance and memory, but their meanings are different.
 > 
-> - **.cachedCount()** of the scrollable container component: size of the preloading area outside the display area of &gt; the container component. The child component nodes in this area are located in the component tree. The scrollable &gt; container component renders nodes in these preloading areas, improving the list scrolling performance.
+> - **.cachedCount()** of the scrollable container component: size of the preloading area outside the display area of
+> the container component. The child component nodes in this area are located in the component tree. The scrollable
+> container component renders nodes in these preloading areas, improving the list scrolling performance.
 > 
-> - cachedCount in .template(): size of the cache pool for each template in the **Repeat** component. When rendering &gt; a new child component, **Repeat** checks whether there are available nodes in the cache pool for the corresponding &gt; template. If yes, the nodes are reused. If no, new nodes are created.
+> - cachedCount in .template(): size of the cache pool for each template in the **Repeat** component. When rendering
+> a new child component, **Repeat** checks whether there are available nodes in the cache pool for the corresponding
+> template. If yes, the nodes are reused. If no, new nodes are created.
 
 **Since:** 12
 

@@ -16,7 +16,8 @@ Sets the URL of the system-level Proxy Auto Config (PAC) script.
 
 > **NOTE：**
 > 
-> Only the script address can be set. The proxy function cannot be parsed or enabled. To set the script and enable &gt; the proxy, call the [setPacFileUrl](arkts-network-connection-setpacfileurl-f.md) API.
+> Only the script address can be set. The proxy function cannot be parsed or enabled. To set the script and enable
+> the proxy, call the [setPacFileUrl](arkts-network-connection-setpacfileurl-f.md) API.
 
 **Since:** 15
 

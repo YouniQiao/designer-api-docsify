@@ -170,7 +170,8 @@ static createRationalFromString(rationalString: string): RationalNumber
 
 > **NOTE：**
 > 
-> **rationalString** 参数必须为字符串。如果传入小数字符串，该函数不会被拦截，但会显示错误信息 &gt; "createRationalFromString: The type of Parameter must be integer string"。
+> **rationalString** 参数必须为字符串。如果传入小数字符串，该函数不会被拦截，但会显示错误信息
+> "createRationalFromString: The type of Parameter must be integer string"。
 
 **起始版本：** 8
 
@@ -281,7 +282,8 @@ static getCommonFactor(number1: number, number2: number): number
 
 > **NOTE：**
 > 
-> **number1** 和 **number2** 参数必须为整数。如果传入小数，该函数不会被拦截，但会显示错误信息 &gt; "getCommonFactor: The type of Parameter must be integer"。
+> **number1** 和 **number2** 参数必须为整数。如果传入小数，该函数不会被拦截，但会显示错误信息
+> "getCommonFactor: The type of Parameter must be integer"。
 
 **起始版本：** 9
 
@@ -522,7 +524,8 @@ static parseRationalNumber(numerator: number, denominator: number): RationalNumb
 
 > **NOTE：**
 > 
-> **numerator** 和 **denominator** 参数必须为整数。如果传入小数，该函数不会被拦截，但会显示错误信息 &gt; "parseRationalNumber: The type of Parameter must be integer"。
+> **numerator** 和 **denominator** 参数必须为整数。如果传入小数，该函数不会被拦截，但会显示错误信息
+> "parseRationalNumber: The type of Parameter must be integer"。
 
 **起始版本：** 9
 

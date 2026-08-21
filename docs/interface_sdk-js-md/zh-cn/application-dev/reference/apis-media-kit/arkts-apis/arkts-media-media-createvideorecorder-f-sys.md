@@ -26,7 +26,7 @@ function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoRecorder](arkts-media-multimedia-media-videorecorder-i-sys.md)&gt; | 是 | 回调函数，返回VideoRecorder实例，失败时返回null。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoRecorder](arkts-media-multimediamedia-videorecorder-i-sys.md)&gt; | 是 | 回调函数，返回VideoRecorder实例，失败时返回null。 |
 
 **错误码：**
 
@@ -72,7 +72,7 @@ function createVideoRecorder(callback: AsyncCallback<VideoRecorder | undefined>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoRecorder](arkts-media-multimedia-media-videorecorder-i-sys.md) \| undefined&gt; | 是 | 回调函数，返回VideoRecorder实例，失败时返回null。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoRecorder](arkts-media-multimediamedia-videorecorder-i-sys.md) \| undefined&gt; | 是 | 回调函数，返回VideoRecorder实例，失败时返回null。 |
 
 **错误码：**
 
@@ -102,7 +102,7 @@ function createVideoRecorder(): Promise<VideoRecorder>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[VideoRecorder](arkts-media-multimedia-media-videorecorder-i-sys.md)&gt; | Promise对象，返回VideoRecorder实例，失败时返回null。 |
+| Promise&lt;[VideoRecorder](arkts-media-multimediamedia-videorecorder-i-sys.md)&gt; | Promise对象，返回VideoRecorder实例，失败时返回null。 |
 
 **错误码：**
 
@@ -150,7 +150,7 @@ function createVideoRecorder(): Promise<VideoRecorder | undefined>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[VideoRecorder](arkts-media-multimedia-media-videorecorder-i-sys.md) \| undefined&gt; | Promise对象，返回VideoRecorder实例，失败时返回null。 |
+| Promise&lt;[VideoRecorder](arkts-media-multimediamedia-videorecorder-i-sys.md) \| undefined&gt; | Promise对象，返回VideoRecorder实例，失败时返回null。 |
 
 **错误码：**
 

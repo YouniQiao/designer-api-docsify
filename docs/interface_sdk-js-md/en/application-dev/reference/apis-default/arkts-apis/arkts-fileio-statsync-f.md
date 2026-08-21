@@ -31,7 +31,7 @@ Obtains detailed attributes of a file or directory synchronously. The returned *
 
 | Type | Description |
 | --- | --- |
-| [Stat](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-stat-i.md) | Detailed information of a file or directory. |
+| [Stat](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-stat-i.md) | Detailed information of a file or directory. |
 
 **Error codes:**
 

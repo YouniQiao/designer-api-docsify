@@ -154,7 +154,7 @@ setEmbeddedComponentOptions(loader: Want, type?: EmbeddedType, options?: Embedde
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| loader | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 表示初始化参数。 |
+| loader | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 表示初始化参数。 |
 | type | [EmbeddedType](../../apis-arkui/arkts-apis/arkts-arkui-embeddedtype-e.md) | 否 | 表示EmbeddedComponent的类型。 |
 | options | [EmbeddedOptions](arkts-embeddedcomponent-embeddedoptions-i.md) | 否 | 表示EmbeddedComponent选项的类型。 |
 
@@ -186,7 +186,7 @@ setEmbeddedComponentOptions(loader: Want, type?: EmbeddedType): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| loader | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 表示初始化参数。 |
+| loader | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 表示初始化参数。 |
 | type | [EmbeddedType](../../apis-arkui/arkts-apis/arkts-arkui-embeddedtype-e.md) | 否 | 表示EmbeddedComponent的类型。 |
 
 **返回值：**

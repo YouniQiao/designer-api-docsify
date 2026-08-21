@@ -281,7 +281,8 @@ Deletes image or video assets from the recycle bin. Before the operation, ensure
 
 > **NOTE：**
 > 
-> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this &gt; operation.
+> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
+> operation.
 
 **Since:** 10
 
@@ -352,7 +353,8 @@ Deletes image or video assets from the recycle bin. Before the operation, ensure
 
 > **NOTE：**
 > 
-> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this &gt; operation.
+> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
+> operation.
 
 **Since:** 10
 

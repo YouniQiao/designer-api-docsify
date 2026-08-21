@@ -1,6 +1,6 @@
 # UIServiceHostProxy（系统接口）
 
-UIServiceHostProxy提供代理能力，可以将数据从 [UIServiceExtension](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md)服务端发送到客户端。
+UIServiceHostProxy提供代理能力，可以将数据从 [UIServiceExtension](arkts-ability-appabilityuiserviceextensionability-uiserviceextensionability-c-sys.md)服务端发送到客户端。
 
 > **说明：**
 > 
@@ -20,7 +20,7 @@ UIServiceHostProxy提供代理能力，可以将数据从 [UIServiceExtension](a
 sendData(data: Record<string, Object>): void
 ```
 
-从[UIServiceExtension](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md)服务端给客户端发送数据。
+从[UIServiceExtension](arkts-ability-appabilityuiserviceextensionability-uiserviceextensionability-c-sys.md)服务端给客户端发送数据。
 
 **起始版本：** 14
 
@@ -36,7 +36,7 @@ sendData(data: Record<string, Object>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | 待发送到 [UIServiceExtension](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md)客户端的数据。 |
+| data | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | 待发送到 [UIServiceExtension](arkts-ability-appabilityuiserviceextensionability-uiserviceextensionability-c-sys.md)客户端的数据。 |
 
 **错误码：**
 
@@ -80,7 +80,7 @@ export default class MyUiServiceExtensionAbility extends UIServiceExtensionAbili
 sendData(data: Record<string, RecordData>): void
 ```
 
-从[UIServiceExtension](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md)服务端给客户端发送数据。
+从[UIServiceExtension](arkts-ability-appabilityuiserviceextensionability-uiserviceextensionability-c-sys.md)服务端给客户端发送数据。
 
 **起始版本：** 23
 
@@ -96,7 +96,7 @@ sendData(data: Record<string, RecordData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | 待发送到 [UIServiceExtension](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md)客户端的数据。 |
+| data | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | 待发送到 [UIServiceExtension](arkts-ability-appabilityuiserviceextensionability-uiserviceextensionability-c-sys.md)客户端的数据。 |
 
 **错误码：**
 

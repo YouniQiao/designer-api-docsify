@@ -17,7 +17,9 @@ function on(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<W
 
 > **说明：**
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.WEAR_DETECTION] &gt; [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor) &gt; 替代。
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.WEAR_DETECTION]
+> [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+> 替代。
 
 **起始版本：** 8
 

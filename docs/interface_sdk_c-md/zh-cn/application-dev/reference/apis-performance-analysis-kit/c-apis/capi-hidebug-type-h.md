@@ -164,6 +164,9 @@ enum OH_HiDebug_ResourceType
 | OH_RES_TYPE_NATIVE |  |
 | OH_RES_TYPE_GPU |  |
 | OH_RES_TYPE_GLOBAL_HANDLE |  |
+| OH_RES_TYPE_DMA | DMA内存<br>**起始版本：** 26.1.0 |
+| OH_RES_TYPE_ASHMEM | 匿名共享内存<br>**起始版本：** 26.1.0 |
+| OH_RES_TYPE_COMPOSITE_HEAP | 组合堆<br>**起始版本：** 26.1.0 |
 
 ### OH_HiDebug_MemListenerType
 

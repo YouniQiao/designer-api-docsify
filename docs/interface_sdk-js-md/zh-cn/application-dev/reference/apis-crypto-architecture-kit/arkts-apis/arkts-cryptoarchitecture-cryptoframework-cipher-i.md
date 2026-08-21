@@ -71,12 +71,16 @@ doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void
 
 > **说明：**
 > 
-> 1. 对称加解密中，调用**doFinal**标志着一次加解密流程已经完成，即[Cipher](#cipher)实例的状态被清除， &gt; 因此当后续开启新一轮加解密流程时，需要重新调用**init**并传入完整的参数列表进行初始化。即使是对同一个Cipher实例，采用同样的对称 &gt; 密钥，进行加密然后解密，则解密中调用**init**的时候仍需填写params参数，而不能直接省略为null。
+> 1. 对称加解密中，调用**doFinal**标志着一次加解密流程已经完成，即[Cipher](#cipher)实例的状态被清除，
+> 因此当后续开启新一轮加解密流程时，需要重新调用**init**并传入完整的参数列表进行初始化。即使是对同一个Cipher实例，采用同样的对称
+> 密钥，进行加密然后解密，则解密中调用**init**的时候仍需填写params参数，而不能直接省略为null。
 > 如果遇到解密失败，需检查加解密数据和**init**时的参数是否匹配，包括GCM模式下加密得到的authTag是否填入解密时的GcmParamsSpec等。
 > **doFinal**的结果可能为null，因此使用.data字段访问**doFinal**结果的具体数据前，请记得先判断结果是否为null，避免产生异常。
 > 2. 对于加密，CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null。
-> 3. 对于解密，GCM、CCM、CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null；对于解密，其他模式，如果明文是加密块大小的 &gt; 整倍数，调用**update**传入所有密文，调用**doFinal**传null，则返回结果为null。
-> 4. 非对称加解密时多次**doFinal**操作的示例代码请参阅 &gt; [使用RSA非对称密钥对按段加密和解密](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md)。
+> 3. 对于解密，GCM、CCM、CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null；对于解密，其他模式，如果明文是加密块大小的
+> 整倍数，调用**update**传入所有密文，调用**doFinal**传null，则返回结果为null。
+> 4. 非对称加解密时多次**doFinal**操作的示例代码请参阅
+> [使用RSA非对称密钥对按段加密和解密](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md)。
 > SM2和RSA的操作类似。
 
 **起始版本：** 10
@@ -224,12 +228,16 @@ doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob | null>): void
 
 > **说明：**
 > 
-> 1. 对称加解密中，调用**doFinal**标志着一次加解密流程已经完成，即[Cipher](#cipher)实例的状态被清除， &gt; 因此当后续开启新一轮加解密流程时，需要重新调用**init**并传入完整的参数列表进行初始化。即使是对同一个Cipher实例，采用同样的对称 &gt; 密钥，进行加密然后解密，则解密中调用**init**的时候仍需填写params参数，而不能直接省略为null。
+> 1. 对称加解密中，调用**doFinal**标志着一次加解密流程已经完成，即[Cipher](#cipher)实例的状态被清除，
+> 因此当后续开启新一轮加解密流程时，需要重新调用**init**并传入完整的参数列表进行初始化。即使是对同一个Cipher实例，采用同样的对称
+> 密钥，进行加密然后解密，则解密中调用**init**的时候仍需填写params参数，而不能直接省略为null。
 > 如果遇到解密失败，需检查加解密数据和**init**时的参数是否匹配，包括GCM模式下加密得到的authTag是否填入解密时的GcmParamsSpec等。
 > **doFinal**的结果可能为null，因此使用.data字段访问**doFinal**结果的具体数据前，请记得先判断结果是否为null，避免产生异常。
 > 2. 对于加密，CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null。
-> 3. 对于解密，GCM、CCM、CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null；对于解密，其他模式，如果明文是加密块大小的 &gt; 整倍数，调用**update**传入所有密文，调用**doFinal**传null，则返回结果为null。
-> 4. 非对称加解密时多次**doFinal**操作的示例代码请参阅 &gt; [使用RSA非对称密钥对按段加密和解密](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md)。
+> 3. 对于解密，GCM、CCM、CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null；对于解密，其他模式，如果明文是加密块大小的
+> 整倍数，调用**update**传入所有密文，调用**doFinal**传null，则返回结果为null。
+> 4. 非对称加解密时多次**doFinal**操作的示例代码请参阅
+> [使用RSA非对称密钥对按段加密和解密](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md)。
 > SM2和RSA的操作类似。
 
 **起始版本：** 23
@@ -311,12 +319,16 @@ doFinal(data: DataBlob | null): Promise<DataBlob>
 
 > **说明：**
 > 
-> 1. 对称加解密中，调用**doFinal**标志着一次加解密流程已经完成，即[Cipher](#cipher)实例的状态被清除， &gt; 因此当后续开启新一轮加解密流程时，需要重新调用**init**并传入完整的参数列表进行初始化。即使是对同一个Cipher实例，采用同样的对称 &gt; 密钥，进行加密然后解密，则解密中调用**init**的时候仍需填写params参数，而不能直接省略为null。
+> 1. 对称加解密中，调用**doFinal**标志着一次加解密流程已经完成，即[Cipher](#cipher)实例的状态被清除，
+> 因此当后续开启新一轮加解密流程时，需要重新调用**init**并传入完整的参数列表进行初始化。即使是对同一个Cipher实例，采用同样的对称
+> 密钥，进行加密然后解密，则解密中调用**init**的时候仍需填写params参数，而不能直接省略为null。
 > 如果遇到解密失败，需检查加解密数据和**init**时的参数是否匹配，包括GCM模式下加密得到的authTag是否填入解密时的GcmParamsSpec等。
 > **doFinal**的结果可能为null，因此使用.data字段访问**doFinal**结果的具体数据前，请记得先判断结果是否为null，避免产生异常。
 > 2. 对于加密，CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null。
-> 3. 对于解密，GCM、CCM、CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null；对于解密，其他模式，如果明文是加密块大小的 &gt; 整倍数，调用**update**传入所有密文，调用**doFinal**传null，则返回结果为null。
-> 4. 非对称加解密时多次**doFinal**操作的示例代码请参阅 &gt; [使用RSA非对称密钥对按段加密和解密](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md)。
+> 3. 对于解密，GCM、CCM、CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null；对于解密，其他模式，如果明文是加密块大小的
+> 整倍数，调用**update**传入所有密文，调用**doFinal**传null，则返回结果为null。
+> 4. 非对称加解密时多次**doFinal**操作的示例代码请参阅
+> [使用RSA非对称密钥对按段加密和解密](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md)。
 > SM2和RSA的操作类似。
 
 **起始版本：** 10
@@ -455,12 +467,16 @@ doFinal(data: DataBlob | null): Promise<DataBlob | null>
 
 > **说明：**
 > 
-> 1. 对称加解密中，调用**doFinal**标志着一次加解密流程已经完成，即[Cipher](#cipher)实例的状态被清除， &gt; 因此当后续开启新一轮加解密流程时，需要重新调用**init**并传入完整的参数列表进行初始化。即使是对同一个Cipher实例，采用同样的对称 &gt; 密钥，进行加密然后解密，则解密中调用**init**的时候仍需填写params参数，而不能直接省略为null。
+> 1. 对称加解密中，调用**doFinal**标志着一次加解密流程已经完成，即[Cipher](#cipher)实例的状态被清除，
+> 因此当后续开启新一轮加解密流程时，需要重新调用**init**并传入完整的参数列表进行初始化。即使是对同一个Cipher实例，采用同样的对称
+> 密钥，进行加密然后解密，则解密中调用**init**的时候仍需填写params参数，而不能直接省略为null。
 > 如果遇到解密失败，需检查加解密数据和**init**时的参数是否匹配，包括GCM模式下加密得到的authTag是否填入解密时的GcmParamsSpec等。
 > **doFinal**的结果可能为null，因此使用.data字段访问**doFinal**结果的具体数据前，请记得先判断结果是否为null，避免产生异常。
 > 2. 对于加密，CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null。
-> 3. 对于解密，GCM、CCM、CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null；对于解密，其他模式，如果明文是加密块大小的 &gt; 整倍数，调用**update**传入所有密文，调用**doFinal**传null，则返回结果为null。
-> 4. 非对称加解密时多次**doFinal**操作的示例代码请参阅 &gt; [使用RSA非对称密钥对按段加密和解密](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md)。
+> 3. 对于解密，GCM、CCM、CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null；对于解密，其他模式，如果明文是加密块大小的
+> 整倍数，调用**update**传入所有密文，调用**doFinal**传null，则返回结果为null。
+> 4. 非对称加解密时多次**doFinal**操作的示例代码请参阅
+> [使用RSA非对称密钥对按段加密和解密](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md)。
 > SM2和RSA的操作类似。
 
 **起始版本：** 23
@@ -988,14 +1004,20 @@ update(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 
 > **说明：**
 > 
-> 1. 在进行对称加解密操作时，如果开发者对各分组模式不够熟悉，建议每次调用**update**和**doFinal**后，都判断结果是否为null。如果结果 &gt; 不为null，则取出其中的数据进行拼接，以形成完整的密文或明文。这是因为选择的分组模式等各项规格可能会影响**update**和**doFinal**的 &gt; 结果。
-> <br>例如，对于ECB和CBC模式，不论**update**传入的数据是否为分组长度的整数倍，都会以分组作为基本单位进行加密或解密，并输出本次 &gt; **update**新产生的加密或解密分组结果。
-> <br>可以理解为，**update**只要凑满一个新的分组就会有输出，如果没有凑满则此次**update**输出为null，把当前还没被加密或解密的数据留着， &gt; 等下一次**update**或**doFinal**传入数据的时候，拼接起来继续凑分组。
-> <br>最后**doFinal**的时候，会把剩下的还没加/解密的数据，根据[createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md)时设置的 &gt; padding模式进行填充，补齐到分组的整数倍长度，再输出剩余加解密结果。
+> 1. 在进行对称加解密操作时，如果开发者对各分组模式不够熟悉，建议每次调用**update**和**doFinal**后，都判断结果是否为null。如果结果
+> 不为null，则取出其中的数据进行拼接，以形成完整的密文或明文。这是因为选择的分组模式等各项规格可能会影响**update**和**doFinal**的
+> 结果。
+> <br>例如，对于ECB和CBC模式，不论**update**传入的数据是否为分组长度的整数倍，都会以分组作为基本单位进行加密或解密，并输出本次
+> **update**新产生的加密或解密分组结果。
+> <br>可以理解为，**update**只要凑满一个新的分组就会有输出，如果没有凑满则此次**update**输出为null，把当前还没被加密或解密的数据留着，
+> 等下一次**update**或**doFinal**传入数据的时候，拼接起来继续凑分组。
+> <br>最后**doFinal**的时候，会把剩下的还没加/解密的数据，根据[createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md)时设置的
+> padding模式进行填充，补齐到分组的整数倍长度，再输出剩余加解密结果。
 > <br>而对于可以将分组密码转化为流模式实现的模式，还可能出现密文长度和明文长度相同的情况等。
 > 2. 根据数据量，可以不调用**update**（即**init**完成后直接调用**doFinal**）或多次调用**update**。
 > <br>算法库目前没有对**update**（单次或累计）的数据量设置大小限制，建议对于大数据量的对称加解密，可以采用多次**update**的方式传入数据。
-> <br>有关在多次**update()**调用中传递数据的示例代码的详细信息，请参见 &gt; [使用AES对称密钥分段加密和解密（GCM模式）](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md)。
+> <br>有关在多次**update()**调用中传递数据的示例代码的详细信息，请参见
+> [使用AES对称密钥分段加密和解密（GCM模式）](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md)。
 > 3. RSA或SM2非对称加解密不支持**update()**。
 > 4. 对于CCM模式的对称加解密算法，加密时只能调用1次**update**接口加密数据并调用**doFinal**接口获取tag，或直接调用**doFinal**
 > 接口加密数据并获取tag，解密时只能调用1次**update**接口或调用1次**doFinal**接口解密数据并验证tag。
@@ -1037,14 +1059,20 @@ update(data: DataBlob, callback: AsyncCallback<DataBlob | null>): void
 
 > **说明：**
 > 
-> 1. 在进行对称加解密操作时，如果开发者对各分组模式不够熟悉，建议每次调用**update**和**doFinal**后，都判断结果是否为null。如果结果 &gt; 不为null，则取出其中的数据进行拼接，以形成完整的密文或明文。这是因为选择的分组模式等各项规格可能会影响**update**和**doFinal**的 &gt; 结果。
-> <br>例如，对于ECB和CBC模式，不论**update**传入的数据是否为分组长度的整数倍，都会以分组作为基本单位进行加密或解密，并输出本次 &gt; **update**新产生的加密或解密分组结果。
-> <br>可以理解为，**update**只要凑满一个新的分组就会有输出，如果没有凑满则此次**update**输出为null，把当前还没被加密或解密的数据留着， &gt; 等下一次**update**或**doFinal**传入数据的时候，拼接起来继续凑分组。
-> <br>最后**doFinal**的时候，会把剩下的还没加/解密的数据，根据[createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md)时设置的 &gt; padding模式进行填充，补齐到分组的整数倍长度，再输出剩余加解密结果。
+> 1. 在进行对称加解密操作时，如果开发者对各分组模式不够熟悉，建议每次调用**update**和**doFinal**后，都判断结果是否为null。如果结果
+> 不为null，则取出其中的数据进行拼接，以形成完整的密文或明文。这是因为选择的分组模式等各项规格可能会影响**update**和**doFinal**的
+> 结果。
+> <br>例如，对于ECB和CBC模式，不论**update**传入的数据是否为分组长度的整数倍，都会以分组作为基本单位进行加密或解密，并输出本次
+> **update**新产生的加密或解密分组结果。
+> <br>可以理解为，**update**只要凑满一个新的分组就会有输出，如果没有凑满则此次**update**输出为null，把当前还没被加密或解密的数据留着，
+> 等下一次**update**或**doFinal**传入数据的时候，拼接起来继续凑分组。
+> <br>最后**doFinal**的时候，会把剩下的还没加/解密的数据，根据[createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md)时设置的
+> padding模式进行填充，补齐到分组的整数倍长度，再输出剩余加解密结果。
 > <br>而对于可以将分组密码转化为流模式实现的模式，还可能出现密文长度和明文长度相同的情况等。
 > 2. 根据数据量，可以不调用**update**（即**init**完成后直接调用**doFinal**）或多次调用**update**。
 > <br>算法库目前没有对**update**（单次或累计）的数据量设置大小限制，建议对于大数据量的对称加解密，可以采用多次**update**的方式传入数据。
-> <br>有关在多次**update()**调用中传递数据的示例代码的详细信息，请参见 &gt; [使用AES对称密钥分段加密和解密（GCM模式）](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md)。
+> <br>有关在多次**update()**调用中传递数据的示例代码的详细信息，请参见
+> [使用AES对称密钥分段加密和解密（GCM模式）](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md)。
 > 3. RSA或SM2非对称加解密不支持**update()**。
 > 4. 对于CCM模式的对称加解密算法，加密时只能调用1次**update**接口加密数据并调用**doFinal**接口获取tag，或直接调用**doFinal**
 > 接口加密数据并获取tag，解密时只能调用1次**update**接口或调用1次**doFinal**接口解密数据并验证tag。
@@ -1086,14 +1114,20 @@ update(data: DataBlob): Promise<DataBlob>
 
 > **说明：**
 > 
-> 1. 在进行对称加解密操作时，如果开发者对各分组模式不够熟悉，建议每次调用**update**和**doFinal**后，都判断结果是否为null。如果结果 &gt; 不为null，则取出其中的数据进行拼接，以形成完整的密文或明文。这是因为选择的分组模式等各项规格可能会影响**update**和**doFinal**的 &gt; 结果。
-> <br>例如，对于ECB和CBC模式，不论**update**传入的数据是否为分组长度的整数倍，都会以分组作为基本单位进行加密或解密，并输出本次 &gt; **update**新产生的加密或解密分组结果。
-> <br>可以理解为，**update**只要凑满一个新的分组就会有输出，如果没有凑满则此次**update**输出为null，把当前还没被加密或解密的数据留着， &gt; 等下一次**update**或**doFinal**传入数据的时候，拼接起来继续凑分组。
-> <br>最后**doFinal**的时候，会把剩下的还没加/解密的数据，根据[createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md)时设置的 &gt; padding模式进行填充，补齐到分组的整数倍长度，再输出剩余加解密结果。
+> 1. 在进行对称加解密操作时，如果开发者对各分组模式不够熟悉，建议每次调用**update**和**doFinal**后，都判断结果是否为null。如果结果
+> 不为null，则取出其中的数据进行拼接，以形成完整的密文或明文。这是因为选择的分组模式等各项规格可能会影响**update**和**doFinal**的
+> 结果。
+> <br>例如，对于ECB和CBC模式，不论**update**传入的数据是否为分组长度的整数倍，都会以分组作为基本单位进行加密或解密，并输出本次
+> **update**新产生的加密或解密分组结果。
+> <br>可以理解为，**update**只要凑满一个新的分组就会有输出，如果没有凑满则此次**update**输出为null，把当前还没被加密或解密的数据留着，
+> 等下一次**update**或**doFinal**传入数据的时候，拼接起来继续凑分组。
+> <br>最后**doFinal**的时候，会把剩下的还没加/解密的数据，根据[createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md)时设置的
+> padding模式进行填充，补齐到分组的整数倍长度，再输出剩余加解密结果。
 > <br>而对于可以将分组密码转化为流模式实现的模式，还可能出现密文长度和明文长度相同的情况等。
 > 2. 根据数据量，可以不调用**update**（即**init**完成后直接调用**doFinal**）或多次调用**update**。
 > <br>算法库目前没有对**update**（单次或累计）的数据量设置大小限制，建议对于大数据量的对称加解密，可以采用多次**update**的方式传入数据。
-> <br>有关在多次**update()**调用中传递数据的示例代码的详细信息，请参见 &gt; [使用AES对称密钥分段加密和解密（GCM模式）](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md)。
+> <br>有关在多次**update()**调用中传递数据的示例代码的详细信息，请参见
+> [使用AES对称密钥分段加密和解密（GCM模式）](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md)。
 > 3. RSA或SM2非对称加解密不支持**update()**。
 > 4. 对于CCM模式的对称加解密算法，加密时只能调用1次**update**接口加密数据并调用**doFinal**接口获取tag，或直接调用**doFinal**
 > 接口加密数据并获取tag，解密时只能调用1次**update**接口或调用1次**doFinal**接口解密数据并验证tag。
@@ -1140,14 +1174,20 @@ update(data: DataBlob): Promise<DataBlob | null>
 
 > **说明：**
 > 
-> 1. 在进行对称加解密操作时，如果开发者对各分组模式不够熟悉，建议每次调用**update**和**doFinal**后，都判断结果是否为null。如果结果 &gt; 不为null，则取出其中的数据进行拼接，以形成完整的密文或明文。这是因为选择的分组模式等各项规格可能会影响**update**和**doFinal**的 &gt; 结果。
-> <br>例如，对于ECB和CBC模式，不论**update**传入的数据是否为分组长度的整数倍，都会以分组作为基本单位进行加密或解密，并输出本次 &gt; **update**新产生的加密或解密分组结果。
-> <br>可以理解为，**update**只要凑满一个新的分组就会有输出，如果没有凑满则此次**update**输出为null，把当前还没被加密或解密的数据留着， &gt; 等下一次**update**或**doFinal**传入数据的时候，拼接起来继续凑分组。
-> <br>最后**doFinal**的时候，会把剩下的还没加/解密的数据，根据[createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md)时设置的 &gt; padding模式进行填充，补齐到分组的整数倍长度，再输出剩余加解密结果。
+> 1. 在进行对称加解密操作时，如果开发者对各分组模式不够熟悉，建议每次调用**update**和**doFinal**后，都判断结果是否为null。如果结果
+> 不为null，则取出其中的数据进行拼接，以形成完整的密文或明文。这是因为选择的分组模式等各项规格可能会影响**update**和**doFinal**的
+> 结果。
+> <br>例如，对于ECB和CBC模式，不论**update**传入的数据是否为分组长度的整数倍，都会以分组作为基本单位进行加密或解密，并输出本次
+> **update**新产生的加密或解密分组结果。
+> <br>可以理解为，**update**只要凑满一个新的分组就会有输出，如果没有凑满则此次**update**输出为null，把当前还没被加密或解密的数据留着，
+> 等下一次**update**或**doFinal**传入数据的时候，拼接起来继续凑分组。
+> <br>最后**doFinal**的时候，会把剩下的还没加/解密的数据，根据[createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md)时设置的
+> padding模式进行填充，补齐到分组的整数倍长度，再输出剩余加解密结果。
 > <br>而对于可以将分组密码转化为流模式实现的模式，还可能出现密文长度和明文长度相同的情况等。
 > 2. 根据数据量，可以不调用**update**（即**init**完成后直接调用**doFinal**）或多次调用**update**。
 > <br>算法库目前没有对**update**（单次或累计）的数据量设置大小限制，建议对于大数据量的对称加解密，可以采用多次**update**的方式传入数据。
-> <br>有关在多次**update()**调用中传递数据的示例代码的详细信息，请参见 &gt; [使用AES对称密钥分段加密和解密（GCM模式）](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md)。
+> <br>有关在多次**update()**调用中传递数据的示例代码的详细信息，请参见
+> [使用AES对称密钥分段加密和解密（GCM模式）](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md)。
 > 3. RSA或SM2非对称加解密不支持**update()**。
 > 4. 对于CCM模式的对称加解密算法，加密时只能调用1次**update**接口加密数据并调用**doFinal**接口获取tag，或直接调用**doFinal**
 > 接口加密数据并获取tag，解密时只能调用1次**update**接口或调用1次**doFinal**接口解密数据并验证tag。

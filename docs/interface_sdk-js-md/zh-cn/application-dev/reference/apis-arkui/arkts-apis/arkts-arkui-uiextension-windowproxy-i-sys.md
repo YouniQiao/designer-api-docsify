@@ -24,9 +24,12 @@ hideNonSecureWindows(shouldHide: boolean): Promise<void>
 
 > **说明：**
 > 
-> - 不安全窗口是指可能遮挡EmbeddedComponent（或 &gt; UIExtensionComponent）组件的窗口，如全局悬浮窗、宿主子窗口和宿主创建的Dialog窗口 &gt; （不包括系统应用创建的上述类型窗口）。
+> - 不安全窗口是指可能遮挡EmbeddedComponent（或
+> UIExtensionComponent）组件的窗口，如全局悬浮窗、宿主子窗口和宿主创建的Dialog窗口
+> （不包括系统应用创建的上述类型窗口）。
 > 
-> - 当EmbeddedComponent（或UIExtensionComponent）组件被用来显示敏感操作提示内容时，可以选择隐藏不安全窗口，保护敏感操作提示内容不会被遮挡。当EmbeddedComponent（或 &gt; UIExtensionComponent）组件不显示或销毁时，不安全窗口会重新显示。
+> - 当EmbeddedComponent（或UIExtensionComponent）组件被用来显示敏感操作提示内容时，可以选择隐藏不安全窗口，保护敏感操作提示内容不会被遮挡。当EmbeddedComponent（或
+> UIExtensionComponent）组件不显示或销毁时，不安全窗口会重新显示。
 > 
 > - 针对PC/2in1设备，当调用hideNonSecureWindows(true)时，不安全窗口中的全局悬浮窗不会被隐藏。
 

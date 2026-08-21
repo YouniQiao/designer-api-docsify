@@ -16,7 +16,8 @@ Dumps the original heap snapshot of the VM for the current thread and generates 
 
 > **NOTE：**
 > 
-> This API is resource-consuming. Therefore, the calling frequency and times are strictly limited. You need to &gt; delete the files immediately after processing them.
+> This API is resource-consuming. Therefore, the calling frequency and times are strictly limited. You need to
+> delete the files immediately after processing them.
 > 
 > This API is valid only when the **Developer options** is enabled.
 

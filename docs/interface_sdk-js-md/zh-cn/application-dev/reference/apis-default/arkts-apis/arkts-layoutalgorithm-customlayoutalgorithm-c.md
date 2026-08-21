@@ -4,7 +4,8 @@
 
 > **说明：**
 > 
-> CustomLayoutAlgorithm类对象可以作为 &gt; [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md)组件的入参指定布局算法。
+> CustomLayoutAlgorithm类对象可以作为
+> [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md)组件的入参指定布局算法。
 
 @implements LayoutAlgorithm
 
@@ -28,7 +29,13 @@ onLayout(self: FrameNode, position: NodePosition): void
 
 > **说明：**
 > 
-> 在此函数中，开发者可以调用 &gt; FrameNode的 &gt; getChild()方法获取子组件FrameNode， &gt; 调用FrameNode的 &gt; layout()方法设置子组件位置， &gt; 参考DynamicLayout组件 &gt; [示例1（自定义布局算法实现瀑布流布局）](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md#示例1自定义布局算法实现瀑布流布局)。
+> 在此函数中，开发者可以调用
+> FrameNode的
+> getChild()方法获取子组件FrameNode，
+> 调用FrameNode的
+> layout()方法设置子组件位置，
+> 参考DynamicLayout组件
+> [示例1（自定义布局算法实现瀑布流布局）](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md#示例1自定义布局算法实现瀑布流布局)。
 
 **起始版本：** 24
 
@@ -55,7 +62,13 @@ onMeasure(self: FrameNode, constraint: LayoutConstraint): void
 
 > **说明：**
 > 
-> 在此函数中，开发者可以调用 &gt; FrameNode的 &gt; getChild()方法获取子组件FrameNode， &gt; 调用FrameNode的 &gt; measure()方法测量子组件大小， &gt; 参考DynamicLayout组件 &gt; [示例1（自定义布局算法实现瀑布流布局）](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md#示例1自定义布局算法实现瀑布流布局)。
+> 在此函数中，开发者可以调用
+> FrameNode的
+> getChild()方法获取子组件FrameNode，
+> 调用FrameNode的
+> measure()方法测量子组件大小，
+> 参考DynamicLayout组件
+> [示例1（自定义布局算法实现瀑布流布局）](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md#示例1自定义布局算法实现瀑布流布局)。
 
 **起始版本：** 24
 

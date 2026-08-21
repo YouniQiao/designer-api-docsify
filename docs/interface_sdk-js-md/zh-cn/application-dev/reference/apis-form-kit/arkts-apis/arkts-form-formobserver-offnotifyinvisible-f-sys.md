@@ -15,7 +15,7 @@ function offNotifyInvisible(
   ): void
 ```
 
-Cancels listening to the event of notifyInvisible type change. &lt;p&gt;You can use this method to cancel listening to the event of notifyInvisible type change.&lt;/p&gt;
+Cancels listening to the event of notifyInvisible type change. <p>You can use this method to cancel listening to the event of notifyInvisible type change.</p>
 
 **起始版本：** 23
 

@@ -12,11 +12,15 @@ Supported
 
 > **NOTE：**
 > 
-> - Allowed child component types: built-in and custom components, excluding rendering control types ( &gt; [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md), &gt; [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), and &gt; [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)).
+> - Allowed child component types: built-in and custom components, excluding rendering control types (
+> [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md),
+> [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), and
+> [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)).
 > 
 > - This component must contain two child components.
 > 
-> - If there are three or more child components, only the first and second child components are displayed. If there &gt; is only one child component, the sidebar is displayed, and the content area is blank.
+> - If there are three or more child components, only the first and second child components are displayed. If there
+> is only one child component, the sidebar is displayed, and the content area is blank.
 > 
 > - The focus navigation is performed in the content area and then in the sidebar of the **SideBarContainer**
 > component.

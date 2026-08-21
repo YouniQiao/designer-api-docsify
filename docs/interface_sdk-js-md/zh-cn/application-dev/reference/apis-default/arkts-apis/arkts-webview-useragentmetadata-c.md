@@ -263,7 +263,7 @@ setArchitecture(arch: string): void
 
 Sets User-Agent metadata architecture.
 
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> The default value is empty string which means the system default value will be used. &lt;/p&gt;
+<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> The default value is empty string which means the system default value will be used. </p>
 
 **起始版本：** 24
 
@@ -313,7 +313,7 @@ setBrandVersionList(brandVersionList: Array<UserAgentBrandVersion>): void
 
 Sets User-Agent metadata brands and their versions.
 
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> The default value is an empty list which means the system default User-Agent metadata brands and versions will be used to generate the User-Agent client hints. &lt;/p&gt;
+<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> The default value is an empty list which means the system default User-Agent metadata brands and versions will be used to generate the User-Agent client hints. </p>
 
 **起始版本：** 24
 
@@ -339,7 +339,7 @@ setFormFactors(formFactors: Array<UserAgentFormFactor>): void
 
 Sets User-Agent metadata form factors.
 
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> The default value is empty list which means the system default value will be used. Form factor value should be one or more of DESKTOP, AUTOMOTIVE, MOBILE, TABLET, XR, EINK, WATCH. &lt;/p&gt;
+<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> The default value is empty list which means the system default value will be used. Form factor value should be one or more of DESKTOP, AUTOMOTIVE, MOBILE, TABLET, XR, EINK, WATCH. </p>
 
 **起始版本：** 24
 
@@ -365,7 +365,7 @@ setFullVersion(fullVersion: string): void
 
 Sets User-Agent metadata full version.
 
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> The default value is empty string which means the system default value will be used. &lt;/p&gt;
+<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> The default value is empty string which means the system default value will be used. </p>
 
 **起始版本：** 24
 
@@ -415,7 +415,7 @@ setModel(model: string): void
 
 Sets User-Agent metadata model.
 
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> The default value is empty string which means the system default value will be used. &lt;/p&gt;
+<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> The default value is empty string which means the system default value will be used. </p>
 
 **起始版本：** 24
 
@@ -441,7 +441,7 @@ setPlatform(platform: string): void
 
 Sets User-Agent metadata platform.
 
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> The default value is empty string which means the system default value will be used. &lt;/p&gt;
+<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> The default value is empty string which means the system default value will be used. </p>
 
 **起始版本：** 24
 
@@ -467,7 +467,7 @@ setPlatformVersion(platformVersion: string): void
 
 Sets User-Agent metadata platform version.
 
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> The default value is empty string which means the system default value will be used. &lt;/p&gt;
+<p>&lt;strong&gt;API Note&lt;/strong&gt;:<br> The default value is empty string which means the system default value will be used. </p>
 
 **起始版本：** 24
 

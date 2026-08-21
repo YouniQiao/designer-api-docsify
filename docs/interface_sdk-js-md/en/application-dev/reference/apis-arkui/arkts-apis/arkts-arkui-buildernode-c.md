@@ -6,23 +6,45 @@ Compared with **BuilderNode**, **ReactiveBuilderNode** can generate a component 
 
 > **NOTE：**
 > 
-> - If the root node of the provided Builder is a syntax node ( &gt; [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)/ &gt; [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)/ &gt; [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)/ &gt; [ContentSlot](../../../ui/rendering-control/arkts-rendering-control-contentslot.md)...), &gt; Span, ContainerSpan, &gt; SymbolSpan, or a custom component, an additional &gt; FrameNode is generated and displayed as BuilderProxyNode in the node tree. This structural &gt; change affects the propagation of certain events. For details, see &gt; [BuilderProxyNode in BuilderNode Causes Tree Structure Changes](../../../ui/arkts-user-defined-arktsNode-builderNode.md#builderproxynode-in-buildernode-causes-tree-structure-changes).
+> - If the root node of the provided Builder is a syntax node (
+> [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)/
+> [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)/
+> [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)/
+> [ContentSlot](../../../ui/rendering-control/arkts-rendering-control-contentslot.md)...),
+> Span, ContainerSpan,
+> SymbolSpan, or a custom component, an additional
+> FrameNode is generated and displayed as BuilderProxyNode in the node tree. This structural
+> change affects the propagation of certain events. For details, see
+> [BuilderProxyNode in BuilderNode Causes Tree Structure Changes](../../../ui/arkts-user-defined-arktsNode-builderNode.md#builderproxynode-in-buildernode-causes-tree-structure-changes).
 > 
-> - If you encounter display issues when reusing a BuilderNode across pages, see &gt; [Cross-Page Reuse Considerations](../../../ui/arkts-user-defined-arktsNode-builderNode.md#cross-page-reuse-considerations) &gt; for guidance.
+> - If you encounter display issues when reusing a BuilderNode across pages, see
+> [Cross-Page Reuse Considerations](../../../ui/arkts-user-defined-arktsNode-builderNode.md#cross-page-reuse-considerations)
+> for guidance.
 > 
 > - **BuilderNode** is not available in DevEco Studio Previewer.
 > 
-> - Custom components under **BuilderNode** can use the [@Prop](../../../ui/state-management/arkts-prop.md) &gt; decorator. The [@Link](../../../ui/state-management/arkts-link.md) decorator cannot be used to synchronize &gt; external data and status across **BuilderNode** boundaries.
+> - Custom components under **BuilderNode** can use the [@Prop](../../../ui/state-management/arkts-prop.md)
+> decorator. The [@Link](../../../ui/state-management/arkts-link.md) decorator cannot be used to synchronize
+> external data and status across **BuilderNode** boundaries.
 > 
-> - If a BuilderNode contains custom components as child nodes, these custom components cannot use the &gt; [@Reusable](../../../ui/state-management/arkts-reusable.md) decorator. For details, see &gt; [Using the @Reusable Decorator with BuilderNode Child Components](../../../ui/arkts-user-defined-arktsNode-builderNode.md#using-the-reusable-decorator-with-buildernode-child-components).
+> - If a BuilderNode contains custom components as child nodes, these custom components cannot use the
+> [@Reusable](../../../ui/state-management/arkts-reusable.md) decorator. For details, see
+> [Using the @Reusable Decorator with BuilderNode Child Components](../../../ui/arkts-user-defined-arktsNode-builderNode.md#using-the-reusable-decorator-with-buildernode-child-components).
 > 
-> - Since API version 12, custom components can receive &gt; [LocalStorage](../../../ui/state-management/arkts-localstorage.md) instances. You can use LocalStorage related &gt; decorators such as [@LocalStorageProp](../../../ui/state-management/arkts-localstorage.md#localstorageprop) and &gt; [@LocalStorageLink](../../../ui/state-management/arkts-localstorage.md#localstoragelink) by &gt; [passing LocalStorage instances](../../../ui/state-management/arkts-localstorage.md#providing-a-custom-component-with-access-to-a-localstorage-instance).
+> - Since API version 12, custom components can receive
+> [LocalStorage](../../../ui/state-management/arkts-localstorage.md) instances. You can use LocalStorage related
+> decorators such as [@LocalStorageProp](../../../ui/state-management/arkts-localstorage.md#localstorageprop) and
+> [@LocalStorageLink](../../../ui/state-management/arkts-localstorage.md#localstoragelink) by
+> [passing LocalStorage instances](../../../ui/state-management/arkts-localstorage.md#providing-a-custom-component-with-access-to-a-localstorage-instance).
 > 
-> - Since API version 20, when configured with [BuildOptions](../../apis-default/arkts-apis/arkts-buildernode-buildoptions-i.md), custom components within a &gt; BuilderNode can access the host page's [@Provide](../../../ui/state-management/arkts-provide-and-consume.md) data &gt; through their [@Consume](../../../ui/state-management/arkts-provide-and-consume.md) decorated attributes.
+> - Since API version 20, when configured with [BuildOptions](../../apis-default/arkts-apis/arkts-buildernode-buildoptions-i.md), custom components within a
+> BuilderNode can access the host page's [@Provide](../../../ui/state-management/arkts-provide-and-consume.md) data
+> through their [@Consume](../../../ui/state-management/arkts-provide-and-consume.md) decorated attributes.
 > 
 > - The behavior of other decorators is undefined. Avoid using those decorators.
 > 
-> - [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) can be used only in custom &gt; components.
+> - [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) can be used only in custom
+> components.
 > 
 > - BuilderNode objects do not support JSON serialization.
 
@@ -48,12 +70,18 @@ Custom components are allowed.
 > 
 > - The outermost @Builder supports only one input parameter.
 > 
-> - The build parameter uses the pass-by-value semantics. To implement state updates, you must explicitly use the &gt; [update](../../apis-default/arkts-apis/arkts-buildernode-c.md#update) API.
+> - The build parameter uses the pass-by-value semantics. To implement state updates, you must explicitly use the
+> [update](../../apis-default/arkts-apis/arkts-buildernode-c.md#update) API.
 > 
 > - To operate objects in a BuilderNode, ensure that the reference to the BuilderNode is not garbage collected.
-> When a BuilderNode object is garbage collected by the virtual machine, the associated &gt; FrameNode and [RenderNode](arkts-arkui-rendernode-c.md) objects are also dereferenced from &gt; the backend node tree. This means that any FrameNode objects obtained from a BuilderNode will no longer &gt; correspond to any actual node if the BuilderNode is garbage collected.
+> When a BuilderNode object is garbage collected by the virtual machine, the associated
+> FrameNode and [RenderNode](arkts-arkui-rendernode-c.md) objects are also dereferenced from
+> the backend node tree. This means that any FrameNode objects obtained from a BuilderNode will no longer
+> correspond to any actual node if the BuilderNode is garbage collected.
 > 
-> - The BuilderNode object maintains references to its underlying entity nodes. When the BuilderNode frontend &gt; object is no longer required for managing backend nodes, call the [dispose](../../apis-default/arkts-apis/arkts-buildernode-c.md#dispose) API to &gt; release node references and unbind frontend and backend nodes.
+> - The BuilderNode object maintains references to its underlying entity nodes. When the BuilderNode frontend
+> object is no longer required for managing backend nodes, call the [dispose](../../apis-default/arkts-apis/arkts-buildernode-c.md#dispose) API to
+> release node references and unbind frontend and backend nodes.
 
 **Since:** 11
 
@@ -84,7 +112,8 @@ Custom components are allowed. Compared with the [build(builder: WrappedBuilder\
 
 > **NOTE：**
 
-> - For details about the creation and update using @Builder, see &gt; [@Builder](../../../ui/state-management/arkts-builder.md).
+> - For details about the creation and update using @Builder, see
+> [@Builder](../../../ui/state-management/arkts-builder.md).
 > 
 > - The outermost @Builder supports only one input parameter.
 
@@ -191,7 +220,7 @@ When content generated by BuilderNode is embedded within another RenderNode for 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context. For details about how to obtain it, see Obtaining UI Context. |
+| uiContext | [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | UI context. For details about how to obtain it, see Obtaining UI Context. |
 | options | [RenderOptions](../../apis-default/arkts-apis/arkts-buildernode-renderoptions-i.md) | No | Parameters for creating a BuilderNode.<br>Default value: **undefined**. |
 
 ## dispose
@@ -204,7 +233,11 @@ Immediately releases the reference relationship between this BuilderNode object 
 
 > **NOTE：**
 > 
-> After calling **dispose()**, the BuilderNode object cancels its reference to the backend entity node. If the &gt; frontend object BuilderNode cannot be released, memory leaks may occur. To avoid this, be sure to call &gt; **dispose()** on the BuilderNode when you no longer need it. This reduces the complexity of reference &gt; relationships and lowers the risk of memory leaks. For details, see &gt; [Memory Leak Caused by Circular Reference Between BuilderNode Frontend and Backend](../../../ui/arkts-user-defined-node-faq.md#memory-leak-caused-by-circular-reference-between-buildernode-frontend-and-backend).
+> After calling **dispose()**, the BuilderNode object cancels its reference to the backend entity node. If the
+> frontend object BuilderNode cannot be released, memory leaks may occur. To avoid this, be sure to call
+> **dispose()** on the BuilderNode when you no longer need it. This reduces the complexity of reference
+> relationships and lowers the risk of memory leaks. For details, see
+> [Memory Leak Caused by Circular Reference Between BuilderNode Frontend and Backend](../../../ui/arkts-user-defined-node-faq.md#memory-leak-caused-by-circular-reference-between-buildernode-frontend-and-backend).
 
 **Since:** 12
 
@@ -250,7 +283,10 @@ Sets whether the current **BuilderNode** object inherits the freeze policy from 
 
 > **NOTE：**
 > 
-> When **inheritFreezeOptions** is set to **true** for **BuilderNode** and the parent component is a custom &gt; component, BuilderNode, ComponentContent, ReactiveBuilderNode, or ReactiveComponentContent, the freeze policy of &gt; the parent component is inherited. If the child component is a custom component, its freeze policy is not &gt; transferred to the child component.
+> When **inheritFreezeOptions** is set to **true** for **BuilderNode** and the parent component is a custom
+> component, BuilderNode, ComponentContent, ReactiveBuilderNode, or ReactiveComponentContent, the freeze policy of
+> the parent component is inherited. If the child component is a custom component, its freeze policy is not
+> transferred to the child component.
 
 **Since:** 20
 
@@ -619,19 +655,32 @@ Dispatches the specified input event to the target node.
 
 > **NOTE：**
 > 
-> - The passed coordinates must be converted to the unit of px. The sample code below demonstrates how to perform &gt; such coordinate conversion.
+> - The passed coordinates must be converted to the unit of px. The sample code below demonstrates how to perform
+> such coordinate conversion.
 > 
-> - Mouse left-click events are automatically converted to touch events. Avoid binding both touch and mouse events &gt; at the outer layer, as this may cause coordinate offsets. This is because the **SourceType** remains unchanged &gt; during event conversion. For details, see onTouch.
+> - Mouse left-click events are automatically converted to touch events. Avoid binding both touch and mouse events
+> at the outer layer, as this may cause coordinate offsets. This is because the **SourceType** remains unchanged
+> during event conversion. For details, see onTouch.
 > 
-> - When an axis event event is injected, it cannot trigger &gt; rotation gestures, because the axis event does not include rotation &gt; axis information.
+> - When an axis event event is injected, it cannot trigger
+> rotation gestures, because the axis event does not include rotation
+> axis information.
 > 
-> - A forwarded event undergoes touch testing in the target component's subtree and triggers corresponding &gt; gestures. The original event also triggers gestures in the source component tree. There is no guaranteed outcome &gt; for gesture competition between these two types of gestures.
+> - A forwarded event undergoes touch testing in the target component's subtree and triggers corresponding
+> gestures. The original event also triggers gestures in the source component tree. There is no guaranteed outcome
+> for gesture competition between these two types of gestures.
 > 
-> - For developer-constructed events, mandatory fields must be assigned values, such as the **touches** field for &gt; touch events and the **scrollStep** field for axis events Ensure the completeness of the event, for example, both &gt; **DOWN** and **UP** TouchType states must be included for a touch event to prevent undefined &gt; behavior.
+> - For developer-constructed events, mandatory fields must be assigned values, such as the **touches** field for
+> touch events and the **scrollStep** field for axis events Ensure the completeness of the event, for example, both
+> **DOWN** and **UP** TouchType states must be included for a touch event to prevent undefined
+> behavior.
 > 
-> - [webview](../../apis-default/arkts-apis/arkts-web-webview.md) has already handled coordinate system transformation, so events can &gt; be dispatched.
+> - [webview](../../apis-default/arkts-apis/arkts-web-webview.md) has already handled coordinate system transformation, so events can
+> be dispatched.
 > 
-> - The **postTouchEvent** API needs to provide the gesture coordinates relative to the local coordinates of the &gt; target component, and the **postInputEvent** API needs to provide the gesture coordinates relative to the window &gt; coordinates of the target component.
+> - The **postTouchEvent** API needs to provide the gesture coordinates relative to the local coordinates of the
+> target component, and the **postInputEvent** API needs to provide the gesture coordinates relative to the window
+> coordinates of the target component.
 > 
 > - Avoid forwarding a single event multiple times.
 
@@ -675,15 +724,26 @@ Before calling this API, you need to convert the value of **event** to the corre
 
 > **NOTE：**
 > 
-> - The passed coordinates must be converted to the unit of px. The sample code below demonstrates how to perform &gt; such coordinate conversion.
+> - The passed coordinates must be converted to the unit of px. The sample code below demonstrates how to perform
+> such coordinate conversion.
 > 
-> - When processing a mouse left-click event, the system converts the event to a touch event. When forwarding the &gt; event, do not bind the touch event and mouse event at the outer layer at the same time, as this may cause &gt; coordinate offsets. This is because TouchType does not change during the event conversion. For &gt; details about the specifications, see onTouch.
+> - When processing a mouse left-click event, the system converts the event to a touch event. When forwarding the
+> event, do not bind the touch event and mouse event at the outer layer at the same time, as this may cause
+> coordinate offsets. This is because TouchType does not change during the event conversion. For
+> details about the specifications, see onTouch.
 > 
-> - When an axis event event is injected, it cannot trigger &gt; rotation gestures, because the axis event does not include rotation &gt; axis information.
+> - When an axis event event is injected, it cannot trigger
+> rotation gestures, because the axis event does not include rotation
+> axis information.
 > 
-> - The forwarded event is posted to the target component and its child components for processing, and triggers the &gt; corresponding gesture. You can use input parameters to control whether the gestures of the current component and &gt; the target component are in a competitive relationship.
+> - The forwarded event is posted to the target component and its child components for processing, and triggers the
+> corresponding gesture. You can use input parameters to control whether the gestures of the current component and
+> the target component are in a competitive relationship.
 > 
-> - If the event is converted to a developer-constructed event, mandatory fields must be assigned values, for &gt; example, the **touches** field of a touch event and the **scrollStep** field of an axis event. Ensure the &gt; completeness of the event. For example, TouchType of a touch event must contain both the &gt; **DOWN** and **UP** fields to prevent program exceptions or unexpected crashes.
+> - If the event is converted to a developer-constructed event, mandatory fields must be assigned values, for
+> example, the **touches** field of a touch event and the **scrollStep** field of an axis event. Ensure the
+> completeness of the event. For example, TouchType of a touch event must contain both the
+> **DOWN** and **UP** fields to prevent program exceptions or unexpected crashes.
 > 
 > - The same event can be forwarded multiple times.
 
@@ -726,9 +786,11 @@ Posts a raw touch event to the FrameNode created by this BuilderNode.
 
 > **NOTE：**
 > 
-> - The coordinates you pass in need to be converted to pixel values (px). If the BuilderNode has any affine &gt; transformations applied to it, they must be taken into account and combined with the touch event coordinates.
+> - The coordinates you pass in need to be converted to pixel values (px). If the BuilderNode has any affine
+> transformations applied to it, they must be taken into account and combined with the touch event coordinates.
 > 
-> - In [Webview](../../apis-default/arkts-apis/arkts-web-webview.md), coordinate system transformations are already handled &gt; internally, so you can directly dispatch the touch event without additional adjustments.
+> - In [Webview](../../apis-default/arkts-apis/arkts-web-webview.md), coordinate system transformations are already handled
+> internally, so you can directly dispatch the touch event without additional adjustments.
 > 
 > - The **postTouchEvent** API can be called only once for the same timestamp.
 
@@ -853,7 +915,9 @@ Triggers recycling of custom components under this BuilderNode. Component recycl
 
 > **NOTE：**
 > 
-> The BuilderNode completes the reuse event transfer between internal and external custom components through &gt; **reuse** and **recycle**. For specific usage scenarios, see &gt; [Implementing Node Reuse with the BuilderNode reuse and recycle APIs](../../../ui/arkts-user-defined-arktsNode-builderNode.md#implementing-node-reuse-with-the-buildernode-reuse-and-recycle-apis).
+> The BuilderNode completes the reuse event transfer between internal and external custom components through
+> **reuse** and **recycle**. For specific usage scenarios, see
+> [Implementing Node Reuse with the BuilderNode reuse and recycle APIs](../../../ui/arkts-user-defined-arktsNode-builderNode.md#implementing-node-reuse-with-the-buildernode-reuse-and-recycle-apis).
 
 **Since:** 12
 
@@ -1015,11 +1079,12 @@ struct Index {
 updateConfiguration(): void
 ```
 
-Transfers a system environment change event and triggers full update of a node. For details about system environment changes, see [@ohos.app.ability.Configuration (Environment Variables)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md).
+Transfers a system environment change event and triggers full update of a node. For details about system environment changes, see [@ohos.app.ability.Configuration (Environment Variables)](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityconfiguration-configuration-i.md).
 
 > **NOTE：**
 > 
-> The **updateConfiguration** API is used to instruct an object to update, with the system environment used for &gt; the update being determined by the changes in the application's current system environment.
+> The **updateConfiguration** API is used to instruct an object to update, with the system environment used for
+> the update being determined by the changes in the application's current system environment.
 
 **Since:** 12
 

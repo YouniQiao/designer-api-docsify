@@ -2110,7 +2110,7 @@ When this API is used to query database data, if the query content exceeds the r
 | uri | string | Yes | URI of the data to query. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for querying data.The predicate methods supported by **query()** vary depending on the database used. For example, the KVDB supports only **inKeys** and **prefixKey**. If this parameter is left empty, the entire table will be queried by default. |
 | columns | Array&lt;string&gt; | Yes | Column to query. If this parameter is left empty, all columns will be queried. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DataShareResultSet](../../apis-default/arkts-apis/arkts-data-datashareresultset-datashareresultset-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the result set obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DataShareResultSet](../../apis-default/arkts-apis/arkts-datadatashareresultset-datashareresultset-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the result set obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2187,7 +2187,7 @@ When this API is used to query database data, if the query content exceeds the r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[DataShareResultSet](../../apis-default/arkts-apis/arkts-data-datashareresultset-datashareresultset-i-sys.md)&gt; | Promise used to return the result set obtained. |
+| Promise&lt;[DataShareResultSet](../../apis-default/arkts-apis/arkts-datadatashareresultset-datashareresultset-i-sys.md)&gt; | Promise used to return the result set obtained. |
 
 **Error codes:**
 

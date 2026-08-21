@@ -28,13 +28,13 @@ function createMediaSourceWithFd(fdSrc: AVFileDescriptor): MediaSource | undefin
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fdSrc | [AVFileDescriptor](arkts-media-multimedia-media-avfiledescriptor-i.md) | 是 | 媒体文件描述符。 |
+| fdSrc | [AVFileDescriptor](arkts-media-multimediamedia-avfiledescriptor-i.md) | 是 | 媒体文件描述符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) \| undefined | 返回MediaSource，用于媒体资源设置。 |
+| [MediaSource](arkts-media-multimediamedia-mediasource-i.md) \| undefined | 返回MediaSource，用于媒体资源设置。 |
 
 **示例**
 

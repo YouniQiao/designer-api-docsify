@@ -4,7 +4,9 @@
 
 > **说明：**
 > 
-> 在Row、Column、 &gt; RelativeContainer组件中，width、height设置auto表示自适应子组件。在 &gt; TextInput组件中，width设置auto表示自适应文本宽度。
+> 在Row、Column、
+> RelativeContainer组件中，width、height设置auto表示自适应子组件。在
+> TextInput组件中，width设置auto表示自适应文本宽度。
 
 @interface ConstraintSizeOptions
 

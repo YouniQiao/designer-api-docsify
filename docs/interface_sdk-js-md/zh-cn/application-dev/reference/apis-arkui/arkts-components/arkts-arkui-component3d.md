@@ -1,4 +1,4 @@
-# Component3D
+# Component3D(Defines 3D component)
 
 定义Component3D组件.
 

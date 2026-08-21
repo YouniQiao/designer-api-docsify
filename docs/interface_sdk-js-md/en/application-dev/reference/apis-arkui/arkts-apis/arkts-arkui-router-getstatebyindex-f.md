@@ -16,13 +16,16 @@ Obtains the status information about a page by its index.
 
 > **NOTE：**
 > 
-> - Since API version 12, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
+> - Since API version 12, you can use the
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
+> [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkuiuicontext-uicontext-c.md) object associated
+> with the current UI context.
 
 **Since:** 12
 
 **Deprecated since:** 18
 
-**Substitutes:** [getStateByIndex](arkts-arkui-arkui-uicontext-router-c.md#getstatebyindex)
+**Substitutes:** [getStateByIndex](arkts-arkui-arkuiuicontext-router-c.md#getstatebyindex)
 
 **Model restriction:** This API can be used only in the stage model.
 

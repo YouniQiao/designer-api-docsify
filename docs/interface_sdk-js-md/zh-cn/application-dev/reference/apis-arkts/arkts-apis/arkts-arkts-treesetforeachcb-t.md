@@ -20,5 +20,5 @@ TreeSet的回调函数类型。
 | --- | --- | --- | --- |
 | value | T | 是 | 当前元素的值。 |
 | key | T | 是 | 当前元素的键（与value相同）。 |
-| set | [TreeSet](arkts-arkts-util-treeset-treeset-c.md)&lt;T&gt; | 是 | 当前正在遍历的TreeSet实例。 |
+| set | [TreeSet](arkts-arkts-utiltreeset-treeset-c.md)&lt;T&gt; | 是 | 当前正在遍历的TreeSet实例。 |
 

@@ -6,7 +6,8 @@ dialogRequest模块用于处理模态弹框的能力，包括获取RequestInfo�
 
 > **说明：**
 > 
-> - 本模块接口可以在ServiceExtensionAbility下使用，如果ServiceExtensionAbility实现了模态弹框，则可以使用本模块的接口获取请求方的RequestInfo、RequestCallback并 &gt; 返回请求结果。
+> - 本模块接口可以在ServiceExtensionAbility下使用，如果ServiceExtensionAbility实现了模态弹框，则可以使用本模块的接口获取请求方的RequestInfo、RequestCallback并
+> 返回请求结果。
 
 **起始版本：** 23
 

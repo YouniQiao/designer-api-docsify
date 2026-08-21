@@ -17,7 +17,7 @@ function addDeviceConfig(config: WifiDeviceConfig): Promise<number>
 
 Adds Wi-Fi connection configuration to the device.
 
-&lt;p&gt;The configuration will be updated when the configuration is added.&lt;/p&gt;
+<p>The configuration will be updated when the configuration is added.</p>
 
 **Since:** 6
 
@@ -87,7 +87,7 @@ function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<numbe
 
 Adds Wi-Fi connection configuration to the device.
 
-&lt;p&gt;The configuration will be updated when the configuration is added.&lt;/p&gt;
+<p>The configuration will be updated when the configuration is added.</p>
 
 **Since:** 6
 

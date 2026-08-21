@@ -16,7 +16,8 @@ Initiates a call. You can set call options as needed. This API uses an asynchron
 
 > **NOTE：**
 > 
-> This API is supported since API version 6 and deprecated since API version 9. The substitute API is available &gt; only for system applications.
+> This API is supported since API version 6 and deprecated since API version 9. The substitute API is available
+> only for system applications.
 
 **Since:** 6
 
@@ -62,7 +63,8 @@ Initiates a call. You can set call options as needed. This API uses a promise to
 
 > **NOTE：**
 > 
-> This API is supported since API version 6 and deprecated since API version 9. The substitute API is available &gt; only for system applications.
+> This API is supported since API version 6 and deprecated since API version 9. The substitute API is available
+> only for system applications.
 
 **Since:** 6
 
@@ -115,7 +117,8 @@ Initiates a call. This API uses an asynchronous callback to return the result.
 
 > **NOTE：**
 > 
-> This API is supported since API version 6 and deprecated since API version 9. The substitute API is available &gt; only for system applications.
+> This API is supported since API version 6 and deprecated since API version 9. The substitute API is available
+> only for system applications.
 
 **Since:** 6
 

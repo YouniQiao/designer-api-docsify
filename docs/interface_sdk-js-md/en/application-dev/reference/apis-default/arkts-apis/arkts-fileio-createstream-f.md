@@ -32,7 +32,7 @@ Creates a stream based on a file path. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Stream](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-stream-i.md)&gt; | Promise used to return the stream result. |
+| Promise&lt;[Stream](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-stream-i.md)&gt; | Promise used to return the stream result. |
 
 **Error codes:**
 
@@ -89,7 +89,7 @@ Creates a stream based on a file path. To close the stream, use **close()** of [
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the file. |
 | mode | string | Yes | r**: Open a file for reading. The file must exist. <br>- **r+**: Open a file for both reading and writing. The file must exist. <br>- **w**: Open a file for writing. If the file exists, clear its content. If the file does not exist, create a file. <br>- **w+**: Open a file for both reading and writing. If the file exists, clear its content. If the file does not exist, create a file. <br>- **a**: Open a file in append mode for writing at the end of the file. If the file does not exist, create a file. If the file exists, write data to the end of the file (the original content of the file is reserved). <br>- **a+**: Open a file in append mode for reading or updating at the end of the file. If the file does not exist, create a file. If the file exists, write data to the end of the file (the original content of the file is reserved). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Stream](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-stream-i.md)&gt; | Yes | Callback used to return the **Stream** object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Stream](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-stream-i.md)&gt; | Yes | Callback used to return the **Stream** object. |
 
 **Error codes:**
 

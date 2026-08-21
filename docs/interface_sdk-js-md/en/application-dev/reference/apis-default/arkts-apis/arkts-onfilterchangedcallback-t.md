@@ -20,5 +20,5 @@ Callback method after a user clicks a filter item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filterResults | Array&lt;[FilterResult](arkts-arkui-advanced-filter-filterresult-i.md)&gt; | Yes | The result of filter. |
+| filterResults | Array&lt;[FilterResult](arkts-arkuiadvancedfilter-filterresult-i.md)&gt; | Yes | The result of filter. |
 

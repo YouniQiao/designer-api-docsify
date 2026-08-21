@@ -16,9 +16,12 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 
 > **NOTE：**
 > 
-> If the child process is created successfully, its PID is returned, and its &gt; [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart) function is executed. Once the &gt; function is done, the child process is automatically destroyed.
+> If the child process is created successfully, its PID is returned, and its
+> [ChildProcess.onStart](arkts-ability-appabilitychildprocess-childprocess-c.md#onstart) function is executed. Once the
+> function is done, the child process is automatically destroyed.
 > 
-> The child process started by calling this API does not support asynchronous ArkTS API calls. It supports only &gt; synchronous ArkTS API calls.
+> The child process started by calling this API does not support asynchronous ArkTS API calls. It supports only
+> synchronous ArkTS API calls.
 
 **Since:** 23
 
@@ -95,9 +98,12 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 
 > **NOTE：**
 > 
-> If the child process is created successfully, its PID is returned, and its &gt; [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart) function is executed. Once the &gt; function is done, the child process is automatically destroyed.
+> If the child process is created successfully, its PID is returned, and its
+> [ChildProcess.onStart](arkts-ability-appabilitychildprocess-childprocess-c.md#onstart) function is executed. Once the
+> function is done, the child process is automatically destroyed.
 > 
-> The child process started by calling this API does not support asynchronous ArkTS API calls. It supports only &gt; synchronous ArkTS API calls.
+> The child process started by calling this API does not support asynchronous ArkTS API calls. It supports only
+> synchronous ArkTS API calls.
 
 **Since:** 23
 

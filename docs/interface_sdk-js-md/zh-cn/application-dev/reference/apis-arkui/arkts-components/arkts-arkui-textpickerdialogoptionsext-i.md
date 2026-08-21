@@ -25,9 +25,11 @@ acceptButtonStyle?: PickerDialogButtonStyle
 
 > **说明：**
 > 
-> 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效， &gt; 保持默认值false。
+> 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，
+> 保持默认值false。
 > 
-> 2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形 &gt; ROUNDED_RECTANGLE，呈现效果依然是胶囊型按钮Capsule。
+> 2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形
+> ROUNDED_RECTANGLE，呈现效果依然是胶囊型按钮Capsule。
 
 **类型：** PickerDialogButtonStyle
 
@@ -75,7 +77,8 @@ backgroundBlurStyle?: BlurStyle
 
 > **说明：**
 > 
-> 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor， &gt; 否则显示的颜色将不符合预期效果。
+> 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，
+> 否则显示的颜色将不符合预期效果。
 
 **类型：** BlurStyle
 
@@ -153,7 +156,8 @@ backgroundEffect?: BackgroundEffectOptions
 
 > **说明：**
 > 
-> 未设置时不生效，此时弹窗背景模糊效果由backgroundBlurStyle决定；设置后将覆盖backgroundBlurStyle的效果。从API版本26.0.0开始， &gt; 设置systemMaterial后backgroundEffect与backgroundBlurStyle均不生效。
+> 未设置时不生效，此时弹窗背景模糊效果由backgroundBlurStyle决定；设置后将覆盖backgroundBlurStyle的效果。从API版本26.0.0开始，
+> 设置systemMaterial后backgroundEffect与backgroundBlurStyle均不生效。
 
 **类型：** BackgroundEffectOptions
 
@@ -203,9 +207,11 @@ cancelButtonStyle?: PickerDialogButtonStyle
 
 > **说明：**
 > 
-> 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效， &gt; 保持默认值false。
+> 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，
+> 保持默认值false。
 > 
-> 2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形 &gt; ROUNDED_RECTANGLE，呈现效果依然是胶囊型按钮Capsule。
+> 2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形
+> ROUNDED_RECTANGLE，呈现效果依然是胶囊型按钮Capsule。
 
 **类型：** PickerDialogButtonStyle
 
@@ -281,7 +287,8 @@ disableTextStyleAnimation?: boolean
 
 > **说明：**
 > 
-> 设置为true时，滑动过程中无字号、字重、字体颜色等变化动效，且文本均显示为defaultTextStyle属性设置的样式。如未设置defaultTextStyle， &gt; 则显示为Text组件默认样式。
+> 设置为true时，滑动过程中无字号、字重、字体颜色等变化动效，且文本均显示为defaultTextStyle属性设置的样式。如未设置defaultTextStyle，
+> 则显示为Text组件默认样式。
 
 **类型：** boolean
 
@@ -305,7 +312,16 @@ disappearTextStyle?: TextPickerTextStyle
 
 > 默认值：
 > 
-> <br>{ &gt; <br>color: '#ff182431', &gt; <br>font: { &gt; <br>size: '14fp', &gt; <br>weight: FontWeight.Regular &gt; <br>}, &gt; <br>minFontSize: 0, &gt; <br>maxFontSize: 0, &gt; <br>overflow: TextOverflow.CLIP &gt; <br>}
+> <br>{
+> <br>color: '#ff182431',
+> <br>font: {
+> <br>size: '14fp',
+> <br>weight: FontWeight.Regular
+> <br>},
+> <br>minFontSize: 0,
+> <br>maxFontSize: 0,
+> <br>overflow: TextOverflow.CLIP
+> <br>}
 
 **类型：** [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)
 
@@ -574,7 +590,8 @@ onEnterSelectedArea?: Callback<TextPickerResult>
 
 > **说明：**
 > 
-> 在多列联动场景中，不建议使用该回调，由于该回调标识的是滑动过程中选项进入分割线区域内的节点，而跟随变化的选项并不涉及滑动，因此， &gt; 回调的返回值中，仅当前滑动列的值会正常变化，其余未滑动列的值保持不变。
+> 在多列联动场景中，不建议使用该回调，由于该回调标识的是滑动过程中选项进入分割线区域内的节点，而跟随变化的选项并不涉及滑动，因此，
+> 回调的返回值中，仅当前滑动列的值会正常变化，其余未滑动列的值保持不变。
 
 **类型：** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
@@ -672,7 +689,10 @@ selectedBackgroundStyle?: PickerBackgroundStyle
 
 > 默认值：
 > 
-> <br>{ &gt; <br>color: \$r('sys.color.comp_background_tertiary'), &gt; <br>borderRadius: \$r('sys.float.corner_radius_level12') &gt; <br>}
+> <br>{
+> <br>color: \$r('sys.color.comp_background_tertiary'),
+> <br>borderRadius: \$r('sys.float.corner_radius_level12')
+> <br>}
 
 **类型：** [PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)
 
@@ -698,7 +718,16 @@ selectedTextStyle?: TextPickerTextStyle
 
 > 默认值：
 > 
-> <br>{ &gt; <br>color: '#ff007dff', &gt; <br>font: { &gt; <br>size: '20fp', &gt; <br>weight: FontWeight.Medium &gt; <br>}, &gt; <br>minFontSize: 0, &gt; <br>maxFontSize: 0, &gt; <br>overflow: TextOverflow.CLIP &gt; <br>}
+> <br>{
+> <br>color: '#ff007dff',
+> <br>font: {
+> <br>size: '20fp',
+> <br>weight: FontWeight.Medium
+> <br>},
+> <br>minFontSize: 0,
+> <br>maxFontSize: 0,
+> <br>overflow: TextOverflow.CLIP
+> <br>}
 
 **类型：** [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)
 
@@ -746,7 +775,12 @@ systemMaterial?: SystemUiMaterial
 > 
 > - 默认值为ImmersiveOptions的style为ImmersiveStyle.ULTRA_THICK的ImmersiveMaterial对象，设置undefined时与默认值保持一致。
 > 不同的材质具有不同的效果。
-> - 该接口影响背景色backgroundColor、背景模糊 &gt; [backgroundBlurStyle] &gt; backgroundBlurStyle &gt; 、背景效果backgroundEffect、边框颜色 &gt; borderColor、边框宽度borderWidth、阴影 &gt; shadow，当设置系统材质时，上述接口不生效。
+> - 该接口影响背景色backgroundColor、背景模糊
+> [backgroundBlurStyle]
+> backgroundBlurStyle
+> 、背景效果backgroundEffect、边框颜色
+> borderColor、边框宽度borderWidth、阴影
+> shadow，当设置系统材质时，上述接口不生效。
 
 **类型：** SystemUiMaterial
 

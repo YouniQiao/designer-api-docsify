@@ -28,7 +28,7 @@ function createBrightnessBlender(param: BrightnessBlenderParam): BrightnessBlend
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | [BrightnessBlenderParam](arkts-arkgraphics2d-graphics-uieffect-brightnessblenderparam-i-sys.md) | 是 | 实现提亮效果的参数，包含灰度调整系数、饱和度、混合比例等配置项。 |
+| param | [BrightnessBlenderParam](arkts-arkgraphics2d-graphicsuieffect-brightnessblenderparam-i-sys.md) | 是 | 实现提亮效果的参数，包含灰度调整系数、饱和度、混合比例等配置项。 |
 
 **返回值：**
 

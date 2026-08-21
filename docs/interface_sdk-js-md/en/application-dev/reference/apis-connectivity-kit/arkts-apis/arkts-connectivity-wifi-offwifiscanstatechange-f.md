@@ -17,7 +17,7 @@ function off(type: 'wifiScanStateChange', callback?: Callback<number>): void
 
 Unsubscribe Wi-Fi scan status change events.
 
-&lt;p&gt;All callback functions will be deregistered If there is no specific callback parameter.&lt;/p&gt;
+<p>All callback functions will be deregistered If there is no specific callback parameter.</p>
 
 **Since:** 7
 

@@ -424,7 +424,7 @@ Restores the main window of the application and loads the specified page. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want used for loading the specified page. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Want used for loading the specified page. |
 
 **Return value:**
 

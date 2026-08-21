@@ -205,7 +205,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode |
+| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode |
 | options | [FrameNodeOptions](arkts-framenode-framenodeoptions-i.md) | No | Options for configuring FrameNode creation<br>**Since:** 26.0.0 |
 
 ## convertPosition
@@ -375,7 +375,7 @@ Create a specified number of FrameNode objects and return them.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode |
+| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode |
 | count | int | Yes | the number of FrameNode objects to create. Returns an empty array if count &lt;= 0 or is not an integer. |
 
 **Return value:**
@@ -1629,7 +1629,7 @@ moveTo(targetParent: FrameNode, index?: int): void
 
 Move node to the target Framenode as child. If this FrameNode is not modifiable, an exception is thrown. When targetParent is a typeNode, the API validates the type or number of child nodes. If the validation fails, an exception is thrown. For specific limitations, see typeNode. If this FrameNode is adopted, an exception is thrown.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Currently, only the following types of TypedFrameNode are supported for the movement operations: Stack, XComponent. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Currently, only the following types of TypedFrameNode are supported for the movement operations: Stack, XComponent. </p>
 
 **Since:** 23
 

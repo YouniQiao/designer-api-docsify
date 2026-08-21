@@ -924,7 +924,8 @@ remove(callback: AsyncCallback<boolean>): void
 
 > **说明：**
 > 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用 &gt; [delete](#delete)替代。
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [delete](#delete)替代。
 
 **起始版本：** 6
 

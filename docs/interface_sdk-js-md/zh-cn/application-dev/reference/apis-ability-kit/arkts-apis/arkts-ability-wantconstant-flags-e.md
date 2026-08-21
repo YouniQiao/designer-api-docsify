@@ -78,7 +78,7 @@ FLAG_INSTALL_ON_DEMAND = 0x00000800
 FLAG_ABILITY_ON_COLLABORATE = 0x00002000
 ```
 
-在多设备协同场景下，调用方应用通过DMS系统发起请求并且通过Flags字段携带此标志，协同方应用才会触发生命周期回调方法 [onCollaborate()](arkts-ability-app-ability-uiability-uiability-c.md#oncollaborate)。
+在多设备协同场景下，调用方应用通过DMS系统发起请求并且通过Flags字段携带此标志，协同方应用才会触发生命周期回调方法 [onCollaborate()](arkts-ability-appabilityuiability-uiability-c.md#oncollaborate)。
 
 **起始版本：** 23
 

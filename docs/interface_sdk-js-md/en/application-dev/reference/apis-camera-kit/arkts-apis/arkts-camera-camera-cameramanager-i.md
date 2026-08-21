@@ -559,7 +559,8 @@ Obtains the complete output capabilities supported by a specified camera in a sp
 
 > **NOTE：**
 > 
-> Before using YUV, HEIF, or HDR, you need to explicitly call this method to ensure that the complete output &gt; capabilities are obtained.
+> Before using YUV, HEIF, or HDR, you need to explicitly call this method to ensure that the complete output
+> capabilities are obtained.
 
 **Since:** 23
 

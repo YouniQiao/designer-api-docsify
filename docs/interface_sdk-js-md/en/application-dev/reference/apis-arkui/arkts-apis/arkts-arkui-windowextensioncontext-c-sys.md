@@ -2,11 +2,12 @@
 
 The WindowExtensionContext module provides the context environment for the WindowExtensionAbility. It inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
 
-The module provides the capabilities of the [WindowExtensionAbility](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md), including starting the ability.
+The module provides the capabilities of the [WindowExtensionAbility](arkts-arkui-applicationwindowextensionability-windowextensionability-c-sys.md), including starting the ability.
 
 > **NOTE：**
 > 
-> - This module is deprecated since API version 21. You are advised to use &gt; [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md) instead.
+> - This module is deprecated since API version 21. You are advised to use
+> [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md) instead.
 > 
 > - The APIs provided by this module are system APIs.
 > 
@@ -48,8 +49,8 @@ Starts an ability. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-application-want-want-depr-c.md) | Yes | Want information about the target ability. |
-| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Parameters used for starting the ability. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-applicationwant-want-depr-c.md) | Yes | Want information about the target ability. |
+| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitystartoptions-startoptions-c.md) | Yes | Parameters used for starting the ability. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -123,8 +124,8 @@ Starts an ability. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-application-want-want-depr-c.md) | Yes | Want information about the target ability, such as the ability name and bundle name. |
-| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Parameters used for starting the ability. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-applicationwant-want-depr-c.md) | Yes | Want information about the target ability, such as the ability name and bundle name. |
+| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitystartoptions-startoptions-c.md) | No | Parameters used for starting the ability. |
 
 **Return value:**
 

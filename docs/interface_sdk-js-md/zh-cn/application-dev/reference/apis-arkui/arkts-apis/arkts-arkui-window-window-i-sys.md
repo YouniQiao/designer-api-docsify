@@ -32,9 +32,14 @@ attachLayoutToParentWindow(anchorInfo?: WindowAnchorInfo, attachOptions?: SubWin
 > 
 > - 只支持一级子窗调用该接口，子窗需处于自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）。
 > 
-> - 当子窗调用该接口后，立即使其显示位置跟随主窗并保持相对位置不变，并且可以监听主窗大小及模式切换。除非调用 &gt; [detachLayoutToParentWindow()](#detachlayouttoparentwindow)接口解绑，否则效果将持续。
+> - 当子窗调用该接口后，立即使其显示位置跟随主窗并保持相对位置不变，并且可以监听主窗大小及模式切换。除非调用
+> [detachLayoutToParentWindow()](#detachlayouttoparentwindow)接口解绑，否则效果将持续。
 > 
-> - 当子窗调用该接口后，再调用 &gt; [moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto)、 &gt; [maximize()](arkts-arkui-window-window-i.md#maximize)、 &gt; [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setfollowparentwindowlayoutenabled)等修改窗 &gt; 口位置的接口，或通过鼠标/触摸操作对子窗进行拖拽移动、拖拽缩放时将不生效。
+> - 当子窗调用该接口后，再调用
+> [moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto)、
+> [maximize()](arkts-arkui-window-window-i.md#maximize)、
+> [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setfollowparentwindowlayoutenabled)等修改窗
+> 口位置的接口，或通过鼠标/触摸操作对子窗进行拖拽移动、拖拽缩放时将不生效。
 
 **起始版本：** 24
 
@@ -462,7 +467,11 @@ detachLayoutToParentWindow(): Promise<void>
 > 
 > - 调用接口解除协同后，子窗将保持协同时的位置，可对子窗进行拖拽以修改子窗大小和位置。
 > 
-> - 解除协同后，调用 &gt; [moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto)、 &gt; [maximize()](arkts-arkui-window-window-i.md#maximize)、 &gt; [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setfollowparentwindowlayoutenabled)修改窗口 &gt; 位置的接口，或通过鼠标/触摸操作对子窗进行拖拽移动、拖拽缩放时将生效。
+> - 解除协同后，调用
+> [moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto)、
+> [maximize()](arkts-arkui-window-window-i.md#maximize)、
+> [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setfollowparentwindowlayoutenabled)修改窗口
+> 位置的接口，或通过鼠标/触摸操作对子窗进行拖拽移动、拖拽缩放时将生效。
 
 **起始版本：** 24
 
@@ -2866,17 +2875,28 @@ setRotationLocked(locked: boolean): Promise<void>
 
 > **说明：**
 > 
-> - 如果在锁定期间主窗口通过 &gt; [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation) &gt; 设置显示方向属性，则解除旋转锁定后该窗口在前台还原最后一次的方向请求。
+> - 如果在锁定期间主窗口通过
+> [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation)
+> 设置显示方向属性，则解除旋转锁定后该窗口在前台还原最后一次的方向请求。
 > 
-> - 如果在锁定期间系统窗口通过 &gt; [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation) &gt; 设置显示方向属性，则解除旋转锁定后该窗口在前台且层级最高时还原最后一次的方向请求。低层级窗口通过setRotationLocked设置旋转锁定不会影响高层级系统窗口调用 &gt; [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation) &gt; 设置显示方向。
+> - 如果在锁定期间系统窗口通过
+> [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation)
+> 设置显示方向属性，则解除旋转锁定后该窗口在前台且层级最高时还原最后一次的方向请求。低层级窗口通过setRotationLocked设置旋转锁定不会影响高层级系统窗口调用
+> [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation)
+> 设置显示方向。
 > 
 > - 如果在锁定期间sensor方向发生了变化，则解除旋转锁定后还原到最后一次的sensor方向。
 > 
-> - 如果在锁定期间应用调用 &gt; [setOrientation()](arkts-arkui-screen-screen-i-sys.md#setorientation) &gt; 设置屏幕方向，忽略该次屏幕方向设置。
+> - 如果在锁定期间应用调用
+> [setOrientation()](arkts-arkui-screen-screen-i-sys.md#setorientation)
+> 设置屏幕方向，忽略该次屏幕方向设置。
 > 
-> - 解除锁定时，根据主窗口的显示方向属性 &gt; [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation) &gt; 、sensor方向等决定应用显示方向，具体见[窗口旋转简介](../../../windowmanager/window-rotation.md#窗口旋转简介)。
+> - 解除锁定时，根据主窗口的显示方向属性
+> [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation)
+> 、sensor方向等决定应用显示方向，具体见[窗口旋转简介](../../../windowmanager/window-rotation.md#窗口旋转简介)。
 > 
-> - 不影响应用[module.json5配置文件中的abilities标签](../../../quick-start/module-configuration-file.md#abilities标签) &gt; orientation属性设置的启动方向。
+> - 不影响应用[module.json5配置文件中的abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)
+> orientation属性设置的启动方向。
 
 **起始版本：** 23
 

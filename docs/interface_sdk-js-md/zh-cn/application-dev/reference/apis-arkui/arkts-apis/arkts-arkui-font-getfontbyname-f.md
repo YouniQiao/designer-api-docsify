@@ -16,9 +16,14 @@ function getFontByName(fontName: string): FontInfo
 
 > **说明：**
 > 
-> -getFontByName需要先通过[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont)方法获取 &gt; [Font](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)对象，然后通过该对象进行调用。且直接使用getFontByName可能导致 &gt; [UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。
+> -getFontByName需要先通过[UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)中的
+> [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont)方法获取
+> [Font](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)对象，然后通过该对象进行调用。且直接使用getFontByName可能导致
+> [UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。
 > 
-> - 从API version 10开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)中的 &gt; [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont)方法获取当前UI上下文关联的 &gt; [Font](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)对象。
+> - 从API version 10开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)中的
+> [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont)方法获取当前UI上下文关联的
+> [Font](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)对象。
 
 **起始版本：** 10
 

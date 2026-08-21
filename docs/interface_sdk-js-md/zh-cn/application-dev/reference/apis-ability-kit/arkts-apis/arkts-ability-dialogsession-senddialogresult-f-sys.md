@@ -29,7 +29,7 @@ function sendDialogResult(dialogSessionId: string, targetWant: Want, isAllowed: 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | dialogSessionId | string | 是 | 用户请求会话ID。 |
-| targetWant | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 用户请求目标。 |
+| targetWant | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 用户请求目标。 |
 | isAllowed | boolean | 是 | 是否允许拉起目标Ability。true表示允许，false表示不允许。 |
 
 **返回值：**
@@ -72,7 +72,7 @@ function sendDialogResult(dialogSessionId: string, targetWant: Want, isAllowed: 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | dialogSessionId | string | 是 | 用户请求会话ID。 |
-| targetWant | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 用户请求目标。 |
+| targetWant | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 用户请求目标。 |
 | isAllowed | boolean | 是 | 是否允许拉起目标Ability。true表示允许，false表示不允许。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当发送用户请求成功，err为undefined，否则为错误对象。 |
 

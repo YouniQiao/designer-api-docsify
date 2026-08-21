@@ -137,7 +137,7 @@ Creates an effect object based on the effect parameters. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Effect](arkts-arkgraphics3d-sceneresources-effect-i.md)&gt; | Promise used to return the Environment object created. |
+| Promise&lt;[Effect](arkts-arkgraphics3d-sceneresources-effect-i.md)&gt; | Promise used to return the Effect object created. |
 
 **Examples**
 

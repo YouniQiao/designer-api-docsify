@@ -4,9 +4,14 @@ Data loss prevention (DLP) is a system solution provided to prevent data disclos
 
 > **NOTE：**
 > 
-> - The initial APIs of this module are supported since API version 10. Newly added APIs will be marked with a &gt; superscript to indicate their earliest API version.
+> - The initial APIs of this module are supported since API version 10. Newly added APIs will be marked with a
+> superscript to indicate their earliest API version.
 > 
-> - The kit to which **@ohos.dlpPermission** belongs has been changed from `DataLossPreventionKit` to ` &gt; DataProtectionKit`. You are advised to use the new module name `@ &gt; kit.DataProtectionKit` to import the module. If `@ &gt; kit.DataLossPreventionKit` is imported, only the APIs before the change can be called and the APIs after the change &gt; cannot be used.
+> - The kit to which **@ohos.dlpPermission** belongs has been changed from `DataLossPreventionKit` to `
+> DataProtectionKit`. You are advised to use the new module name `@
+> kit.DataProtectionKit` to import the module. If `@
+> kit.DataLossPreventionKit` is imported, only the APIs before the change can be called and the APIs after the change
+> cannot be used.
 
 **Since:** 10
 
@@ -57,7 +62,7 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 | [setRetentionState](arkts-dataprotection-dlppermission-setretentionstate-f.md) | Sets the retention state for sandbox applications. By default, when a DLP file is opened, the system automatically creates a sandbox environment. After the file is closed, the sandbox is automatically destroyed. After the retention state is set, the sandbox environment is retained even if the DLP file is closed, allowing the system to quickly reopen the same DLP file. This is applicable to scenarios where the same DLP file needs to be frequently operated, improving the file opening efficiency. This API uses a promise to return the result. |
 | [setRetentionState](arkts-dataprotection-dlppermission-setretentionstate-f.md) | Sets the retention state for sandbox applications. By default, when a DLP file is opened, the system automatically creates a sandbox environment. After the file is closed, the sandbox is automatically destroyed. After the retention state is set, the sandbox environment is retained even if the DLP file is closed, allowing the system to quickly reopen the same DLP file. This is applicable to scenarios where the same DLP file needs to be frequently operated, improving the file opening efficiency. |
 | [setSandboxAppConfig](arkts-dataprotection-dlppermission-setsandboxappconfig-f.md) | Sets the configuration information of the sandbox application. The configuration information is in JSON string format and can be set by the application. After the API is successfully called, the sandbox application runs based on the configuration information. This API uses a promise to return the result. This API can be called only in non-DLP sandbox applications. |
-| [startDLPManagerForResult](arkts-dataprotection-dlppermission-startdlpmanagerforresult-f.md) | Starts the DLP manager application on the current [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md) page in borderless mode. This API uses a promise to return the result. |
+| [startDLPManagerForResult](arkts-dataprotection-dlppermission-startdlpmanagerforresult-f.md) | Starts the DLP manager application on the current [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiability-uiability-c.md) page in borderless mode. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions(System API)

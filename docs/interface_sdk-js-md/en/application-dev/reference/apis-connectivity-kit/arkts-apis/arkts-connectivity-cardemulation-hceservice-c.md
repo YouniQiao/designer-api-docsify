@@ -263,7 +263,8 @@ Sends a response to the peer card reader.
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. Use &gt; [transmit](#transmit) instead.
+> This API is supported since API version 8 and deprecated since API version 9. Use
+> [transmit](#transmit) instead.
 
 **Since:** 8
 
@@ -329,7 +330,8 @@ Starts HCE, including enabling this application to run in the foreground prefere
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. Use &gt; [start](#start) instead.
+> This API is supported since API version 8 and deprecated since API version 9. Use
+> [start](#start) instead.
 
 **Since:** 8
 
@@ -400,7 +402,8 @@ Stops HCE, including exiting the current application from the foreground, releas
 
 > **NOTE：**
 > 
-> This API is supported since API version 8 and deprecated since API version 9. Use &gt; [stop](#stop) instead.
+> This API is supported since API version 8 and deprecated since API version 9. Use
+> [stop](#stop) instead.
 
 **Since:** 8
 

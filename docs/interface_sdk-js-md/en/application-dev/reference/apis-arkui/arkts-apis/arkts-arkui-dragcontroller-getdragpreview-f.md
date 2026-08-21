@@ -16,7 +16,9 @@ Obtains the **DragPreview** object, which represents the preview displayed durin
 
 > **NOTE：**
 > 
-> Since API version 11, you can use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) object &gt; associated with the current UI context.
+> Since API version 11, you can use the [getDragController](arkts-arkui-arkuiuicontext-uicontext-c.md#getdragcontroller) API in
+> [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) to obtain the [DragController](arkts-arkui-arkuiuicontext-dragcontroller-c.md) object
+> associated with the current UI context.
 
 **Since:** 11
 

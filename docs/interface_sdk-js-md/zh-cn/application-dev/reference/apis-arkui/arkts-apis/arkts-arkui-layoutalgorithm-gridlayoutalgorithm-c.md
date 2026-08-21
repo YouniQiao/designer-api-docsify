@@ -4,7 +4,8 @@
 
 > **说明：**
 > 
-> GridLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为DynamicLayout组件的入 &gt; 参指定布局算法。
+> GridLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为DynamicLayout组件的入
+> 参指定布局算法。
 
 **继承/实现关系：** GridLayoutAlgorithm implements [LayoutAlgorithm](../../apis-default/arkts-apis/arkts-layoutalgorithm-i.md)
 

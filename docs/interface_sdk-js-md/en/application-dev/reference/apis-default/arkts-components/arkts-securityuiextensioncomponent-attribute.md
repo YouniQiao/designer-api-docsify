@@ -30,7 +30,7 @@ setSecurityUIExtensionComponentOptions(want: Want, options?: SecurityUIExtension
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |  |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes |  |
 | options | [SecurityUIExtensionOptions](arkts-securityuiextensioncomponent-securityuiextensionoptions-i-sys.md) | No |  |
 
 **Return value:**

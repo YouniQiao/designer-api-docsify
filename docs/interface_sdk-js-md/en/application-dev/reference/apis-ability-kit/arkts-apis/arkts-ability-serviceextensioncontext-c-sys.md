@@ -28,7 +28,8 @@ Connects this ability to a ServiceExtensionAbility. This API can be called only 
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -44,7 +45,7 @@ Connects this ability to a ServiceExtensionAbility. This API can be called only 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability, such as the ability name and bundle name. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability, such as the ability name and bundle name. |
 | options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | Yes | Callback used to return the information indicating that the connection is successful, interrupted, or failed. |
 
 **Return value:**
@@ -123,7 +124,8 @@ This API can be properly called on phones and tablets. If it is called on other 
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 > 
 > Permission verification is not required when **accountId** specifies the current user.
 
@@ -143,7 +145,7 @@ This API can be properly called on phones and tablets. If it is called on other 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability. |
 | accountId | int | Yes | ID of the target system account. |
 | options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | Yes | Remote object instance. |
 
@@ -362,7 +364,8 @@ Starts an atomic service based on an application ID. This API uses a promise to 
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -379,7 +382,7 @@ Starts an atomic service based on an application ID. This API uses a promise to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appId | string | Yes | Unique ID of the application, which is allocated by the cloud. |
-| options | [AtomicServiceOptions](arkts-ability-app-ability-atomicserviceoptions-atomicserviceoptions-c.md) | No | Parameter carried in the request for starting the atomic service in jump-out mode. |
+| options | [AtomicServiceOptions](arkts-ability-appabilityatomicserviceoptions-atomicserviceoptions-c.md) | No | Parameter carried in the request for starting the atomic service in jump-out mode. |
 
 **Return value:**
 
@@ -445,7 +448,8 @@ If an input parameter is invalid, for example, a mandatory parameter is not set 
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -462,7 +466,7 @@ If an input parameter is invalid, for example, a mandatory parameter is not set 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | link | string | Yes | URL to open, which must be in the standard format. |
-| options | [OpenLinkOptions](arkts-ability-app-ability-openlinkoptions-openlinkoptions-i.md) | No | Options of the URL. |
+| options | [OpenLinkOptions](arkts-ability-appabilityopenlinkoptions-openlinkoptions-i.md) | No | Options of the URL. |
 
 **Return value:**
 
@@ -637,7 +641,8 @@ Before starting the UIExtensionAbility, ensure that the focused application has 
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -653,7 +658,7 @@ Before starting the UIExtensionAbility, ensure that the focused application has 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pickerWant | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information used to start the UIExtensionAbility. |
+| pickerWant | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information used to start the UIExtensionAbility. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the UIExtensionAbility is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -720,7 +725,8 @@ Before starting the UIExtensionAbility, ensure that the focused application has 
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -736,7 +742,7 @@ Before starting the UIExtensionAbility, ensure that the focused application has 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pickerWant | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information used to start the UIExtensionAbility. |
+| pickerWant | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information used to start the UIExtensionAbility. |
 
 **Return value:**
 
@@ -808,7 +814,8 @@ Before starting the UIExtensionAbility, ensure that the focused application has 
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 26.0.0
 
@@ -826,7 +833,7 @@ Before starting the UIExtensionAbility, ensure that the focused application has 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pickerWant | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information used to start the UIExtensionAbility. |
+| pickerWant | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information used to start the UIExtensionAbility. |
 | accountId | int | Yes | The account to request. |
 
 **Return value:**
@@ -865,7 +872,7 @@ Starts an ability. This API can be called only on the main thread. It uses an as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability, such as the ability name and bundle name. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability, such as the ability name and bundle name. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -952,8 +959,8 @@ Starts an ability. This API can be called only on the main thread. It uses an as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Parameters used for starting the ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability. |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | Yes | Parameters used for starting the ability. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -1044,8 +1051,8 @@ Starts an ability. This API can be called only on the main thread. It uses a pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability, such as the ability name and bundle name. |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Parameters used for starting the ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability, such as the ability name and bundle name. |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | No | Parameters used for starting the ability. |
 
 **Return value:**
 
@@ -1128,7 +1135,8 @@ Starts an ability with the caller information specified. The caller information 
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -1144,7 +1152,7 @@ Starts an ability with the caller information specified. The caller information 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -1213,7 +1221,8 @@ Starts an ability with the caller information and start options specified. The c
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -1229,8 +1238,8 @@ Starts an ability with the caller information and start options specified. The c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Parameters used for starting the ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability. |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | Yes | Parameters used for starting the ability. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -1301,7 +1310,8 @@ Starts an ability with the start options specified. The caller information is ca
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -1317,8 +1327,8 @@ Starts an ability with the start options specified. The caller information is ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Parameters used for starting the ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability. |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | No | Parameters used for starting the ability. |
 
 **Return value:**
 
@@ -1417,13 +1427,13 @@ Observe the following when using this API:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Information about the ability to start, including **abilityName**, **moduleName**, **bundleName**, **deviceId**, and **parameters** (optional). If **parameters** is left blank or null, the ability is started in the background. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Information about the ability to start, including **abilityName**, **moduleName**, **bundleName**, **deviceId**, and **parameters** (optional). If **parameters** is left blank or null, the ability is started in the background. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Caller](arkts-ability-app-ability-uiability-caller-i.md)&gt; | Promise used to return the caller object to communicate with. |
+| Promise&lt;[Caller](arkts-ability-appabilityuiability-caller-i.md)&gt; | Promise used to return the caller object to communicate with. |
 
 **Error codes:**
 
@@ -1546,14 +1556,14 @@ Observe the following when using this API:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Information about the ability to start, including **abilityName**, **moduleName**, **bundleName**, **deviceId** (optional), and **parameters** (optional). If **deviceId** is left blank or null, the local ability is started. If **parameters** is left blank or null, the ability is started in the background. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Information about the ability to start, including **abilityName**, **moduleName**, **bundleName**, **deviceId** (optional), and **parameters** (optional). If **deviceId** is left blank or null, the local ability is started. If **parameters** is left blank or null, the ability is started in the background. |
 | accountId | int | Yes | ID of the target system account. The value **-1** indicates the current user. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Caller](arkts-ability-app-ability-uiability-caller-i.md)&gt; | Promise used to return the caller object to communicate with. |
+| Promise&lt;[Caller](arkts-ability-appabilityuiability-caller-i.md)&gt; | Promise used to return the caller object to communicate with. |
 
 **Error codes:**
 
@@ -1625,7 +1635,8 @@ Starts an ability with the account ID specified. This API can be called only on 
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -1643,7 +1654,7 @@ Starts an ability with the account ID specified. This API can be called only on 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability. |
 | accountId | int | Yes | ID of the target system account. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
@@ -1722,7 +1733,8 @@ Starts an ability with the account ID and start options specified. This API can 
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -1740,9 +1752,9 @@ Starts an ability with the account ID and start options specified. This API can 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability. |
 | accountId | int | Yes | ID of the target system account. |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Parameters used for starting the ability. |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | Yes | Parameters used for starting the ability. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -1823,7 +1835,8 @@ Starts an ability with the account ID specified. This API can be called only on 
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -1841,9 +1854,9 @@ Starts an ability with the account ID specified. This API can be called only on 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability. |
 | accountId | int | Yes | ID of the target system account. |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Parameters used for starting the ability. |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | No | Parameters used for starting the ability. |
 
 **Return value:**
 
@@ -1929,7 +1942,8 @@ Starts an ability. If the ability has multiple instances, the latest instance is
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -1945,7 +1959,7 @@ Starts an ability. If the ability has multiple instances, the latest instance is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -2022,7 +2036,8 @@ You can use this API to carry start options.
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -2038,8 +2053,8 @@ You can use this API to carry start options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Parameters used for starting the ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability. |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | Yes | Parameters used for starting the ability. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -2118,7 +2133,8 @@ Starts an ability. If the ability has multiple instances, the latest instance is
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -2134,8 +2150,8 @@ Starts an ability. If the ability has multiple instances, the latest instance is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Parameters used for starting the ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability. |
+| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | No | Parameters used for starting the ability. |
 
 **Return value:**
 
@@ -2230,7 +2246,7 @@ Starts a ServiceExtensionAbility. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ServiceExtensionAbility is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -2307,7 +2323,7 @@ Starts a ServiceExtensionAbility. This API uses a promise to return the result a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability. |
 
 **Return value:**
 
@@ -2377,7 +2393,8 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses an
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 > 
 > Permission verification is not required when **accountId** specifies the current user.
 
@@ -2397,7 +2414,7 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability. |
 | accountId | int | Yes | ID of the target system account. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ServiceExtensionAbility is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
@@ -2464,7 +2481,8 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses a 
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 > 
 > Permission verification is not required when **accountId** specifies the current user.
 
@@ -2484,7 +2502,7 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability. |
 | accountId | int | Yes | ID of the target system account. |
 
 **Return value:**
@@ -2560,7 +2578,8 @@ This API can be properly called on phones and tablets. If it is called on other 
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -2576,7 +2595,7 @@ This API can be properly called on phones and tablets. If it is called on other 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantList | Array&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | List of launch parameters for multiple UIAbility components to be started simultaneously. A maximum of four Want objects can be passed. The **Want** parameter does not support implicit launch, cross-user launch, distributed launch, instant installation, or on-demand loading. By default, the main application is launched unless specified otherwise. |
+| wantList | Array&lt;[Want](arkts-ability-appabilitywant-want-c.md)&gt; | Yes | List of launch parameters for multiple UIAbility components to be started simultaneously. A maximum of four Want objects can be passed. The **Want** parameter does not support implicit launch, cross-user launch, distributed launch, instant installation, or on-demand loading. By default, the main application is launched unless specified otherwise. |
 
 **Return value:**
 
@@ -2648,11 +2667,12 @@ export default class EntryServiceExtAbility extends ServiceExtensionAbility {
 startUIServiceExtensionAbility(want: Want): Promise<void>
 ```
 
-Starts a new [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md). This API uses a promise to return the result asynchronously.
+Starts a new [UIServiceExtensionAbility](arkts-ability-appabilityuiserviceextensionability-uiserviceextensionability-c-sys.md). This API uses a promise to return the result asynchronously.
 
 > **NOTE：**
 > 
-> For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -2668,7 +2688,7 @@ Starts a new [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceexte
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the want info to start. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Indicates the want info to start. |
 
 **Return value:**
 
@@ -2740,7 +2760,7 @@ Stops a ServiceExtensionAbility. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ServiceExtensionAbility is stopped, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -2813,7 +2833,7 @@ Stops a ServiceExtensionAbility. This API uses a promise to return the result as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability. |
 
 **Return value:**
 
@@ -2897,7 +2917,7 @@ Stops a ServiceExtensionAbility with the specified account. This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability. |
 | accountId | int | Yes | ID of the target system account. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ServiceExtensionAbility is stopped, **err** is **undefined**; otherwise, **err** is an error object. |
 
@@ -2978,7 +2998,7 @@ Stops a ServiceExtensionAbility with the specified account. This API uses a prom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
+| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability. |
 | accountId | int | Yes | ID of the target system account. |
 
 **Return value:**

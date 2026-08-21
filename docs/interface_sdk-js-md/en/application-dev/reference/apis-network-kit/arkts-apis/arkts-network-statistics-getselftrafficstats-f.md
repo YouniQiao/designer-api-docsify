@@ -18,7 +18,8 @@ Obtains the traffic statistics of the specified application on the specified net
 > 
 > - Currently, only cellular and Wi-Fi traffic usage can be obtained.
 
-> - Currently, only traffic usage within the last 31 days can be obtained. If the timestamp passed in the parameter &gt; is earlier than 31 days before the current system time, error code 2103019 will be returned.
+> - Currently, only traffic usage within the last 31 days can be obtained. If the timestamp passed in the parameter
+> is earlier than 31 days before the current system time, error code 2103019 will be returned.
 > 
 > - This API may take some time to execute. Do not call it frequently.
 

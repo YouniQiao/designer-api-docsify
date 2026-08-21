@@ -389,7 +389,8 @@ Stops downloading a cloud file. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> Calling **stop** will terminate the download of the current file and clear the cache file. You can use &gt; **start** to start the download again.
+> Calling **stop** will terminate the download of the current file and clear the cache file. You can use
+> **start** to start the download again.
 
 **Since:** 23
 
@@ -446,7 +447,8 @@ Stops downloading a cloud file. This API uses an asynchronous callback to return
 
 > **NOTE：**
 > 
-> Calling **stop** will terminate the download of the current file and clear the cache file. You can use &gt; **start** to start the download again.
+> Calling **stop** will terminate the download of the current file and clear the cache file. You can use
+> **start** to start the download again.
 
 **Since:** 23
 

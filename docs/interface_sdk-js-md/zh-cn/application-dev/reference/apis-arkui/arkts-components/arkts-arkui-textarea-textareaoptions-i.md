@@ -38,7 +38,7 @@ placeholder?: ResourceStr
 
 The place holder text string. Text displayed when there is no input.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When only the placeholder attribute is set, the text selection handle is still available. <br>The caret stays at the beginning of the placeholder text when the handle is released. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When only the placeholder attribute is set, the text selection handle is still available. <br>The caret stays at the beginning of the placeholder text when the handle is released. </p>
 
 **类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 

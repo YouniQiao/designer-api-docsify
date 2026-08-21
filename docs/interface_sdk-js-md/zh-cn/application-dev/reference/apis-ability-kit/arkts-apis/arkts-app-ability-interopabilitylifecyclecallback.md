@@ -12,7 +12,7 @@ import { InteropAbilityLifecycleCallback } from '@kit.AbilityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [InteropAbilityLifecycleCallback](arkts-ability-app-ability-interopabilitylifecyclecallback-interopabilitylifecyclecallback-i.md) | 互操作Ability生命周期回调，用于监听Ability的生命周期状态变化。 |
+| [InteropAbilityLifecycleCallback](arkts-ability-appabilityinteropabilitylifecyclecallback-interopabilitylifecyclecallback-i.md) | 互操作Ability生命周期回调，用于监听Ability的生命周期状态变化。 |
 
 ### 类型
 

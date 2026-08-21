@@ -30,7 +30,7 @@ function createAVTranscoder(): Promise<AVTranscoder>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AVTranscoder](arkts-media-multimedia-media-avtranscoder-i.md)&gt; | Promise对象。异步返回AVTranscoder实例，失败时返回null。可用于视频转码。 |
+| Promise&lt;[AVTranscoder](arkts-media-multimediamedia-avtranscoder-i.md)&gt; | Promise对象。异步返回AVTranscoder实例，失败时返回null。可用于视频转码。 |
 
 **错误码：**
 
@@ -79,7 +79,7 @@ A maximum of 2 **AVTranscoder** instances can be created.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AVTranscoder](arkts-media-multimedia-media-avtranscoder-i.md) \| undefined&gt; | Promise used to return the result. If the operation is successful, an **AVTranscoder** instance is returned; otherwise, **null** is returned. The instance can be used for video transcoding. |
+| Promise&lt;[AVTranscoder](arkts-media-multimediamedia-avtranscoder-i.md) \| undefined&gt; | Promise used to return the result. If the operation is successful, an **AVTranscoder** instance is returned; otherwise, **null** is returned. The instance can be used for video transcoding. |
 
 **错误码：**
 

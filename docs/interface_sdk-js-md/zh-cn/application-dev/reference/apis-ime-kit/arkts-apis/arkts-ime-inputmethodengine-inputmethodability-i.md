@@ -23,15 +23,24 @@ createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): 
 ```
 
 @brief 创建输入法面板，仅支持输入法应用在 [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md)（输入法扩展能力）类中调用。使 用callback异步回调。 <br> <br>配对调用： <br> <br>- 调用createPanel()创建面板后，必须在使用完毕后调用 [destroyPanel](#destroypanel) 销毁面板以释放资源。 <br>- 未调用destroyPanel()会导致面板资源泄漏，影响系统资源使用。 <br>- 单个输入法应用仅允许创建一个软键盘类型和一个状态栏类型的面板。 <br> <br>   
-> **说明：** <br>
-> <br>
-> 单个输入法应用仅允许创建一个[软键盘类型](arkts-ime-inputmethodengine-paneltype-e.md)和一个[状态栏类型](arkts-ime-inputmethodengine-paneltype-e.md)的面板。 <br>
-> <br>
-> 输入法面板不支持创建子窗口。例如：不支持使用window.createWindow[设置应用子窗口](../../../windowmanager/application-window-fa.md#设置应用子窗口)、 <br>
-> bindContextMenu <br>
-> 、CustomDialog等接口创建子窗口弹窗。建议开发者采用非子窗的替代方案，如 <br>
-> 弹出框、 <br>
-> bindMenu或设置 <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 单个输入法应用仅允许创建一个[软键盘类型](arkts-ime-inputmethodengine-paneltype-e.md)和一个[状态栏类型](arkts-ime-inputmethodengine-paneltype-e.md)的面板。 &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 输入法面板不支持创建子窗口。例如：不支持使用window.createWindow[设置应用子窗口](../../../windowmanager/application-window-fa.md#设置应用子窗口)、 &lt;br
+&gt; 
+> bindContextMenu &lt;br
+&gt; 
+> 、CustomDialog等接口创建子窗口弹窗。建议开发者采用非子窗的替代方案，如 &lt;br
+&gt; 
+> 弹出框、 &lt;br
+&gt; 
+> bindMenu或设置 &lt;br
+&gt; 
 > showInSubwindow为false。
 
 **起始版本：** 23
@@ -94,15 +103,24 @@ createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 ```
 
 @brief 创建输入法面板，仅支持输入法应用在 [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md)类中调用。使用promise异 步回调。 <br> <br>   
-> **说明：** <br>
-> <br>
-> 单个输入法应用仅允许创建一个[软键盘类型](arkts-ime-inputmethodengine-paneltype-e.md)和一个[状态栏类型](arkts-ime-inputmethodengine-paneltype-e.md)的面板。 <br>
-> <br>
-> 输入法面板不支持创建子窗口。例如：不支持使用window.createWindow[设置应用子窗口](../../../windowmanager/application-window-fa.md#设置应用子窗口)、 <br>
-> bindContextMenu <br>
-> 、CustomDialog等接口创建子窗口弹窗。建议开发者采用非子窗的替代方案，如 <br>
-> 弹出框、 <br>
-> bindMenu或设置 <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 单个输入法应用仅允许创建一个[软键盘类型](arkts-ime-inputmethodengine-paneltype-e.md)和一个[状态栏类型](arkts-ime-inputmethodengine-paneltype-e.md)的面板。 &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 输入法面板不支持创建子窗口。例如：不支持使用window.createWindow[设置应用子窗口](../../../windowmanager/application-window-fa.md#设置应用子窗口)、 &lt;br
+&gt; 
+> bindContextMenu &lt;br
+&gt; 
+> 、CustomDialog等接口创建子窗口弹窗。建议开发者采用非子窗的替代方案，如 &lt;br
+&gt; 
+> 弹出框、 &lt;br
+&gt; 
+> bindMenu或设置 &lt;br
+&gt; 
 > showInSubwindow为false。
 
 **起始版本：** 23

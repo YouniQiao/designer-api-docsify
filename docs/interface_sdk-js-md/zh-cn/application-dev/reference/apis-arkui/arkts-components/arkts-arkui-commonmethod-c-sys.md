@@ -72,7 +72,9 @@ edgeLight(params: EdgeLightParams | undefined): T
 
 > **说明：**
 > 
-> - 仅设置edgeLight不会产生边缘流光效果，需结合 &gt; [animateTo](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto)更改position参数达到流光效果。可参考 &gt; [示例4（设置组件边缘流光效果）](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect-sys.md#示例4设置组件边缘流光效果)。
+> - 仅设置edgeLight不会产生边缘流光效果，需结合
+> [animateTo](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto)更改position参数达到流光效果。可参考
+> [示例4（设置组件边缘流光效果）](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect-sys.md#示例4设置组件边缘流光效果)。
 > 
 > 
 > - 当position参数以对角线方式变更时，边缘流光将沿倾斜角45°的方式运行。
@@ -111,7 +113,12 @@ excludeFromRenderGroup(exclude: boolean | undefined): T
 
 > **说明：**
 > 
-> 设置excludeFromRenderGroup为true的组件及其子组件的绘制内容不能超过该组件本身的边界范围，否则会出现显示内容被裁剪的问题。例如当子组件通过 &gt; [translate](arkts-arkui-commonmethod-c.md#translate)或 &gt; [scale](arkts-arkui-commonmethod-c.md#scale)等属性导致子组件超出当前组件范围，或当前组件上有 &gt; [shadow](arkts-arkui-commonmethod-c.md#shadow)、 &gt; [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect)等属性导致当前组件的绘制内容超出组件 &gt; 边界时，可能出现显示内容被裁剪的问题。此类场景不应设置excludeFromRenderGroup属性为true。
+> 设置excludeFromRenderGroup为true的组件及其子组件的绘制内容不能超过该组件本身的边界范围，否则会出现显示内容被裁剪的问题。例如当子组件通过
+> [translate](arkts-arkui-commonmethod-c.md#translate)或
+> [scale](arkts-arkui-commonmethod-c.md#scale)等属性导致子组件超出当前组件范围，或当前组件上有
+> [shadow](arkts-arkui-commonmethod-c.md#shadow)、
+> [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect)等属性导致当前组件的绘制内容超出组件
+> 边界时，可能出现显示内容被裁剪的问题。此类场景不应设置excludeFromRenderGroup属性为true。
 
 **起始版本：** 22
 

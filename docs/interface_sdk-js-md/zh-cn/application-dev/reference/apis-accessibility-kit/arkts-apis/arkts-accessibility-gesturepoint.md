@@ -16,5 +16,5 @@ import { GesturePoint } from '@kit.AccessibilityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [GesturePoint(手势触摸点)](arkts-accessibility-accessibility-gesturepoint-gesturepoint-c.md) | 表示手势触摸点，是构成GesturePath路径节点的基本单元，用于定义辅助功能注入手势轨迹中的触摸位置。详细使用方式请参见[GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md)。 |
+| [GesturePoint(手势触摸点)](arkts-accessibility-accessibilitygesturepoint-gesturepoint-c.md) | 表示手势触摸点，是构成GesturePath路径节点的基本单元，用于定义辅助功能注入手势轨迹中的触摸位置。详细使用方式请参见[GesturePath](arkts-accessibility-accessibilitygesturepath-gesturepath-c.md)。 |
 

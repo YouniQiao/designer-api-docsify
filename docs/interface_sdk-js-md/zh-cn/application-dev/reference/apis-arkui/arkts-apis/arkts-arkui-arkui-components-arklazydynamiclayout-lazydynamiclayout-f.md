@@ -34,5 +34,5 @@ export declare function LazyDynamicLayout(algorithm: LazyLayoutAlgorithm): LazyD
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyDynamicLayoutAttribute](../../apis-default/arkts-apis/arkts-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-i.md) |  |
+| [LazyDynamicLayoutAttribute](../../apis-default/arkts-apis/arkts-arkuicomponentsarklazydynamiclayout-lazydynamiclayoutattribute-i.md) |  |
 

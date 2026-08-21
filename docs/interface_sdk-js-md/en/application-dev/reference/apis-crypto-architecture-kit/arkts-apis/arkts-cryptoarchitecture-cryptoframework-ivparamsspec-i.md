@@ -6,7 +6,9 @@ Encapsulates the parameters for encryption or decryption using a block cipher mo
 
 > **NOTE：**
 > 
-> Before passing a value to &gt; [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init), specify &gt; **algName** for its parent class [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md).
+> Before passing a value to
+> [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init), specify
+> **algName** for its parent class [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md).
 
 **Inheritance/Implementation:** IvParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)
 

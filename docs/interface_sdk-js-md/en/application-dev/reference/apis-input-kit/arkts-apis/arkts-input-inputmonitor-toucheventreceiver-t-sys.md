@@ -18,7 +18,7 @@ Callback used to return the touch event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| touchEvent | [TouchEvent](arkts-input-multimodalinput-touchevent-touchevent-i.md) | Yes | Touch event. |
+| touchEvent | [TouchEvent](arkts-input-multimodalinputtouchevent-touchevent-i.md) | Yes | Touch event. |
 
 **Return value:**
 

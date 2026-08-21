@@ -5,7 +5,8 @@ Registers the callback capability with the system ability (SA). This API is used
 > **NOTE：**
 > 
 > [registerPlugin](arkts-dataprotection-dlppermission-dlpconnmanager-c.md#registerplugin) requires identical parameters to this API.
-> [connectServer](#connectserver) is called by the SA and the parameters are &gt; returned through the callback.
+> [connectServer](#connectserver) is called by the SA and the parameters are
+> returned through the callback.
 
 **Since:** 21
 

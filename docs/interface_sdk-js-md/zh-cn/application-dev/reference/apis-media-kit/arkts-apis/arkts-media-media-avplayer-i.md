@@ -157,7 +157,7 @@ getLoadedTimeRanges(): Promise<Array<Range>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[Range](arkts-media-multimedia-media-range-i.md)&gt;&gt; | Promise对象，返回播放器当前已加载的时间区间段的列表。 <br>时间区间段以播放时间轴上的[start, end]位置表示，单位为毫秒。 |
+| Promise&lt;Array&lt;[Range](arkts-media-multimediamedia-range-i.md)&gt;&gt; | Promise对象，返回播放器当前已加载的时间区间段的列表。 <br>时间区间段以播放时间轴上的[start, end]位置表示，单位为毫秒。 |
 
 ## getPlaybackInfo
 
@@ -177,7 +177,7 @@ getPlaybackInfo(): Promise<PlaybackInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PlaybackInfo](arkts-media-multimedia-media-playbackinfo-i.md)&gt; | Promise对象，返回播放器信息PlaybackInfo。 |
+| Promise&lt;[PlaybackInfo](arkts-media-multimediamedia-playbackinfo-i.md)&gt; | Promise对象，返回播放器信息PlaybackInfo。 |
 
 ## getPlaybackRate
 
@@ -245,7 +245,7 @@ getSeekableTimeRanges(): Promise<Array<Range>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[Range](arkts-media-multimedia-media-range-i.md)&gt;&gt; | Promise对象，返回播放器当前可跳转的时间区间段的列表。 <br>时间区间段以播放时间轴上的[start, end]位置表示，单位为毫秒。 |
+| Promise&lt;Array&lt;[Range](arkts-media-multimediamedia-range-i.md)&gt;&gt; | Promise对象，返回播放器当前可跳转的时间区间段的列表。 <br>时间区间段以播放时间轴上的[start, end]位置表示，单位为毫秒。 |
 
 ## getSelectedTracks
 
@@ -295,7 +295,7 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-multimedia-media-mediadescription-i.md)&gt;&gt; | 是 | 回调函数，当获取音视频轨道信息成功，err为undefined，data为获取到的 MediaDescription数组；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-multimediamedia-mediadescription-i.md)&gt;&gt; | 是 | 回调函数，当获取音视频轨道信息成功，err为undefined，data为获取到的 MediaDescription数组；否则为错误对象。 |
 
 **错误码：**
 
@@ -323,7 +323,7 @@ getTrackDescription(): Promise<Array<MediaDescription>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[MediaDescription](arkts-media-multimedia-media-mediadescription-i.md)&gt;&gt; | Promise对象，返回音视频轨道信息MediaDescription数组。 |
+| Promise&lt;Array&lt;[MediaDescription](arkts-media-multimediamedia-mediadescription-i.md)&gt;&gt; | Promise对象，返回音视频轨道信息MediaDescription数组。 |
 
 **错误码：**
 
@@ -670,7 +670,7 @@ seek(timeMs: int, mode?: SeekMode): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | timeMs | int | 是 | 指定的跳转时间节点，单位毫秒（ms），取值范围为 [0, [duration](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md)]。<br>当模式为 SEEK_CONTINUOUS时，可以取值-1，表示SEEK_CONTINUOUS模式结束。该值必须为整数。 |
-| mode | [SeekMode](arkts-media-multimedia-media-seekmode-e.md) | 否 | 基于视频I帧的跳转模式，默认为SEEK_PREV_SYNC模式，**仅在视频资源播放时设置**。 |
+| mode | [SeekMode](arkts-media-multimediamedia-seekmode-e.md) | 否 | 基于视频I帧的跳转模式，默认为SEEK_PREV_SYNC模式，**仅在视频资源播放时设置**。 |
 
 ## seekToDefaultPosition
 
@@ -717,7 +717,7 @@ selectTrack(index: int, mode?: SwitchMode): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | index | int | 是 | 多音视频资源的轨道索引。该值必须为整数。<br>取值约束：可通过 [getTrackDescription](#gettrackdescription)接口返回的音视频轨道信息 MediaDescription中读取的key为MD_KEY_TRACK_INDEX所对应的值。<br>每个 key值的Object类型和范围，请参考MediaDescriptionKey对应Key值的说明。 |
-| mode | [SwitchMode](arkts-media-multimedia-media-switchmode-e.md) | 否 | 切换轨道的模式。<br>取值约束：该模式仅适用于视频轨道的切换。<br>默认值：SMOOTH模式，在片段末尾进行切换，以确保视频播放的连续性。 **仅在DASH/HLS协议网络流视频轨切换时生效。**<br>从API版本26.0.0开始支持HLS协议网络流视频。<br>**起始版本：** 26.0.0 |
+| mode | [SwitchMode](arkts-media-multimediamedia-switchmode-e.md) | 否 | 切换轨道的模式。<br>取值约束：该模式仅适用于视频轨道的切换。<br>默认值：SMOOTH模式，在片段末尾进行切换，以确保视频播放的连续性。 **仅在DASH/HLS协议网络流视频轨切换时生效。**<br>从API版本26.0.0开始支持HLS协议网络流视频。<br>**起始版本：** 26.0.0 |
 
 **返回值：**
 
@@ -754,7 +754,7 @@ setMediaMuted(mediaType: MediaType, muted: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mediaType | [MediaType](arkts-media-multimedia-media-mediatype-e.md) | 是 | 媒体类型枚举。<br>**API version 12-19**：仅支持设置MEDIA_TYPE_AUD。<br>**API version 20及以后**：增 加支持设置MEDIA_TYPE_VID。 |
+| mediaType | [MediaType](arkts-media-multimediamedia-mediatype-e.md) | 是 | 媒体类型枚举。<br>**API version 12-19**：仅支持设置MEDIA_TYPE_AUD。<br>**API version 20及以后**：增 加支持设置MEDIA_TYPE_VID。 |
 | muted | boolean | 是 | API version 12-19**：仅支持设置音频播放策略，表示音频是否静音播放。true为静音播放，false为取消静音播放。<br> **API version 20及以后**：增加支持设置视频播放策略，表示视频画面是否关闭。true为关闭画面，false为恢复画面。 |
 
 **返回值：**
@@ -790,8 +790,8 @@ setMediaSource(src: MediaSource, strategy?: PlaybackStrategy): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | [MediaSource](arkts-media-multimedia-media-mediasource-i.md) | 是 | 流媒体预下载媒体来源。 |
-| strategy | [PlaybackStrategy](arkts-media-multimedia-media-playbackstrategy-i.md) | 否 | 流媒体预下载播放策略。 |
+| src | [MediaSource](arkts-media-multimediamedia-mediasource-i.md) | 是 | 流媒体预下载媒体来源。 |
+| strategy | [PlaybackStrategy](arkts-media-multimediamedia-playbackstrategy-i.md) | 否 | 流媒体预下载播放策略。 |
 
 **返回值：**
 
@@ -826,7 +826,7 @@ setPlaybackStrategy(strategy: PlaybackStrategy): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strategy | [PlaybackStrategy](arkts-media-multimedia-media-playbackstrategy-i.md) | 是 | 播放策略。 |
+| strategy | [PlaybackStrategy](arkts-media-multimediamedia-playbackstrategy-i.md) | 是 | 播放策略。 |
 
 **返回值：**
 

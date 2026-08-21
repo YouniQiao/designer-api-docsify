@@ -17,7 +17,8 @@ Obtains an **AuthInstance** instance for user authentication.
 
 > **NOTE：**
 > 
-> Each **AuthInstance** can perform authentication only once. To perform authentication again, obtain a new &gt; **AuthInstance**.
+> Each **AuthInstance** can perform authentication only once. To perform authentication again, obtain a new
+> **AuthInstance**.
 
 **Since:** 9
 

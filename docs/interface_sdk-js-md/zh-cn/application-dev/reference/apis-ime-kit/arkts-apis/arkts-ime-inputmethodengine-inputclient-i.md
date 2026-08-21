@@ -160,9 +160,12 @@ deleteBackwardSync(length: int): void
 ```
 
 @brief 删除光标后固定长度的文本。 <br> <br>   
-> **说明：** <br>
-> <br>
-> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 &lt;br
+&gt; 
 > [deleteBackward](#deletebackward)。
 
 **起始版本：** 23
@@ -347,10 +350,14 @@ deleteForwardSync(length: int): void
 ```
 
 @brief 删除光标前固定长度的文本。 <br> <br>   
-> **说明：** <br>
-> <br>
-> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 <br>
-> [deleteForward](#deleteforward) <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 &lt;br
+&gt; 
+> [deleteForward](#deleteforward) &lt;br
+&gt; 
 > 。
 
 **起始版本：** 23
@@ -396,8 +403,10 @@ finishTextPreview(): Promise<void>
 ```
 
 @brief 结束预上屏。使用promise异步回调。 <br> <br>   
-> **说明：** <br>
-> <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > 若当前输入框已有预上屏状态文本，调用此接口后，预上屏内容将被系统正式上屏。
 
 **起始版本：** 23
@@ -438,11 +447,16 @@ finishTextPreviewSync(): void
 ```
 
 @brief 结束预上屏。 <br> <br>   
-> **说明：** <br>
-> <br>
-> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 <br>
-> [finishTextPreview](#finishtextpreview)。 <br>
-> <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 &lt;br
+&gt; 
+> [finishTextPreview](#finishtextpreview)。 &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > 若当前输入框已有预上屏状态文本，调用此接口后，预上屏内容将被系统正式上屏。
 
 **起始版本：** 23
@@ -647,9 +661,12 @@ getBackwardSync(length: int): string
 ```
 
 @brief 获取光标后固定长度的文本。 <br> <br>   
-> **说明：** <br>
-> <br>
-> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 &lt;br
+&gt; 
 > [getBackward](#getbackward)。
 
 **起始版本：** 23
@@ -703,8 +720,10 @@ getCallingWindowInfo(): Promise<WindowInfo>
 ```
 
 @brief 获取当前拉起输入法的输入框所在应用窗口信息。使用promise异步回调。 <br> <br>   
-> **说明：** <br>
-> <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > 本接口仅适用于适配使用[Panel](arkts-ime-inputmethodengine-panel-i.md)作为软键盘窗口的输入法应用。
 
 **起始版本：** 12
@@ -747,8 +766,10 @@ getCallingWindowInfo(): Promise<WindowInfo | null>
 ```
 
 @brief 获取当前拉起输入法的输入框所在应用窗口信息。使用promise异步回调。 <br> <br>   
-> **说明：** <br>
-> <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > 本接口仅适用于适配使用[Panel](arkts-ime-inputmethodengine-panel-i.md)作为软键盘窗口的输入法应用。
 
 **起始版本：** 23
@@ -910,10 +931,14 @@ getEditorAttributeSync(): EditorAttribute
 ```
 
 @brief 获取编辑框属性值。 <br> <br>   
-> **说明：** <br>
-> <br>
-> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 <br>
-> [getEditorAttribute](#geteditorattribute) <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 &lt;br
+&gt; 
+> [getEditorAttribute](#geteditorattribute) &lt;br
+&gt; 
 > 。
 
 **起始版本：** 10
@@ -949,10 +974,14 @@ getEditorAttributeSync(): EditorAttribute | null
 ```
 
 @brief 获取编辑框属性值。 <br> <br>   
-> **说明：** <br>
-> <br>
-> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 <br>
-> [getEditorAttribute](#geteditorattribute) <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 &lt;br
+&gt; 
+> [getEditorAttribute](#geteditorattribute) &lt;br
+&gt; 
 > 。
 
 **起始版本：** 23
@@ -1103,9 +1132,12 @@ getForwardSync(length: int): string
 ```
 
 @brief 获取光标前固定长度的文本。 <br> <br>   
-> **说明：** <br>
-> <br>
-> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口[getForward](#getforward) <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口[getForward](#getforward) &lt;br
+&gt; 
 > 。
 
 **起始版本：** 23
@@ -1269,9 +1301,12 @@ getTextIndexAtCursorSync(): int
 ```
 
 @brief 获取光标所在处的文本索引。 <br> <br>   
-> **说明：** <br>
-> <br>
-> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 &lt;br
+&gt; 
 > [getTextIndexAtCursor](#gettextindexatcursor)。
 
 **起始版本：** 23
@@ -1414,9 +1449,12 @@ insertTextSync(text: string): void
 ```
 
 @brief 插入文本。 <br> <br>   
-> **说明：** <br>
-> <br>
-> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 &lt;br
+&gt; 
 > [insertText](#inserttext)。
 
 **起始版本：** 23
@@ -1539,9 +1577,12 @@ moveCursorSync(direction: int): void
 ```
 
 @brief 移动光标。 <br> <br>   
-> **说明：** <br>
-> <br>
-> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 &lt;br
+&gt; 
 > [moveCursor](#movecursor)。
 
 **起始版本：** 23
@@ -1731,12 +1772,18 @@ recvMessage(msgHandler?: MessageHandler): void
 ```
 
 @brief 注册或取消注册Messagehandler。 <br> <br>   
-> **说明：** <br>
-> <br>
-> [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md)对象全局唯一，多次注册仅保留最后一次注册的对象及有效性，并触发上一个已注册对象的 <br>
-> [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated)回调函数。 <br>
-> <br>
-> 未填写参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md)，并会触发被取消注册对象中 <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md)对象全局唯一，多次注册仅保留最后一次注册的对象及有效性，并触发上一个已注册对象的 &lt;br
+&gt; 
+> [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated)回调函数。 &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 未填写参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md)，并会触发被取消注册对象中 &lt;br
+&gt; 
 > [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated)回调函数。
 
 **起始版本：** 23
@@ -1875,9 +1922,12 @@ selectByMovementSync(movement: Movement): void
 ```
 
 @brief 根据光标移动方向选中文本。 <br> <br>   
-> **说明：** <br>
-> <br>
-> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 &lt;br
+&gt; 
 > [selectByMovement](#selectbymovement)。
 
 **起始版本：** 23
@@ -2007,10 +2057,14 @@ selectByRangeSync(range: Range): void
 ```
 
 @brief 根据索引范围选中文本。 <br> <br>   
-> **说明：** <br>
-> <br>
-> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 <br>
-> [selectByRange](#selectbyrange) <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口 &lt;br
+&gt; 
+> [selectByRange](#selectbyrange) &lt;br
+&gt; 
 > 。
 
 **起始版本：** 23
@@ -2048,14 +2102,22 @@ sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void
 ```
 
 @brief 发送扩展编辑操作。使用callback异步回调。 <br> <br>使用场景：输入法应用需要触发编辑框的扩展编辑功能。例如：用户点击键盘上的剪切按钮时发送CUT操作；用户点击复制按钮时发送COPY操作；用户点击粘贴按钮时发送PASTE操作；用户点击全选按钮时发送SELECT_ALL操作；自定义 <br> <br>工具栏中集成编辑快捷操作。 <br> <br>   
-> **说明：**<br>
-> <br>
-> 输入法应用调用该接口向编辑框发送扩展编辑操作，编辑框监听相应事件 <br>
-> on('handleExtendAction') <br>
-> ，从而进一步做出处理。 <br>
-> <br>
-> 编辑框响应[ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md)的PASTE命令时，需要编辑框应用申请 <br>
-> [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) <br>
+> **说明：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 输入法应用调用该接口向编辑框发送扩展编辑操作，编辑框监听相应事件 &lt;br
+&gt; 
+> on('handleExtendAction') &lt;br
+&gt; 
+> ，从而进一步做出处理。 &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 编辑框响应[ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md)的PASTE命令时，需要编辑框应用申请 &lt;br
+&gt; 
+> [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) &lt;br
+&gt; 
 > 权限。
 
 **起始版本：** 23
@@ -2100,14 +2162,22 @@ sendExtendAction(action: ExtendAction): Promise<void>
 ```
 
 @brief 发送扩展编辑操作。使用promise异步回调。 <br> <br>   
-> **说明：**<br>
-> <br>
-> 输入法应用调用该接口向编辑框发送扩展编辑操作，编辑框监听相应事件 <br>
-> on('handleExtendAction') <br>
-> ，从而进一步做出处理。 <br>
-> <br>
-> 编辑框响应[ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md)的PASTE命令时，需要编辑框应用申请 <br>
-> [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) <br>
+> **说明：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 输入法应用调用该接口向编辑框发送扩展编辑操作，编辑框监听相应事件 &lt;br
+&gt; 
+> on('handleExtendAction') &lt;br
+&gt; 
+> ，从而进一步做出处理。 &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 编辑框响应[ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md)的PASTE命令时，需要编辑框应用申请 &lt;br
+&gt; 
+> [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) &lt;br
+&gt; 
 > 权限。
 
 **起始版本：** 23
@@ -2294,10 +2364,14 @@ sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 ```
 
 @brief 发送自定义通信至已绑定当前输入法应用的编辑框应用。使用Promise异步回调。 <br> <br>   
-> **说明：** <br>
-> <br>
-> 该接口需要编辑框与输入法绑定并进入编辑状态，且输入法应用处于完整体验模式时才能调用。 <br>
-> <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 该接口需要编辑框与输入法绑定并进入编辑状态，且输入法应用处于完整体验模式时才能调用。 &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > msgId最大限制256B，msgParam最大限制128KB。
 
 **起始版本：** 23
@@ -2351,12 +2425,18 @@ sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>
 ```
 
 @brief 发送私有数据至需要与输入法应用通信的系统其他部分。使用promise异步回调。 <br> <br>   
-> **说明:** <br>
-> <br>
-> - 私有数据通道是系统预置输入法应用与系统特定组件（如文本框、桌面应用等）的通信机制，常用于设备级厂商在特定设备上实现自定义的输入法功能。 <br>
-> <br>
-> - 私有数据规格限制：总大小32KB，数量限制5条。 <br>
-> <br>
+> **说明:** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> - 私有数据通道是系统预置输入法应用与系统特定组件（如文本框、桌面应用等）的通信机制，常用于设备级厂商在特定设备上实现自定义的输入法功能。 &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> - 私有数据规格限制：总大小32KB，数量限制5条。 &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > - 私有数据默认发送给文本框，如果需要发送给桌面应用，请在私有数据中携带一条`{'sys_cmd':1}`数据。
 
 **起始版本：** 23
@@ -2462,8 +2542,10 @@ setPreviewTextSync(text: string, range: Range): void
 ```
 
 @brief 设置预上屏文本。 <br> <br>   
-> **说明：** <br>
-> <br>
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
 > 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口[setPreviewText](#setpreviewtext)。
 
 **起始版本：** 23

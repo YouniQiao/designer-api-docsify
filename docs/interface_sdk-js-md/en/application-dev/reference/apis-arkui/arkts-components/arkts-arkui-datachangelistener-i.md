@@ -4,7 +4,10 @@ Listener for data changes.
 
 > **NOTE：**
 > 
-> In APIs of **DataChangeListener** other than **onDatasetChange**, if the value of **index** is negative, the value &gt; is treated as **0** by default. In **onDatasetChange**, if the specified index in a **DataOperation** is outside &gt; the data source index range, the corresponding **DataOperation** does not take effect. (In **DataAddOperation**, &gt; the value of **index** can equal the data source length.)
+> In APIs of **DataChangeListener** other than **onDatasetChange**, if the value of **index** is negative, the value
+> is treated as **0** by default. In **onDatasetChange**, if the specified index in a **DataOperation** is outside
+> the data source index range, the corresponding **DataOperation** does not take effect. (In **DataAddOperation**,
+> the value of **index** can equal the data source length.)
 
 **Since:** 7
 
@@ -49,7 +52,8 @@ Invoked when data is added to the position indicated by the specified index.
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 8. Use &gt; [onDataAdd](#ondataadd) instead.
+> This API is supported since API version 7 and deprecated since API version 8. Use
+> [onDataAdd](#ondataadd) instead.
 
 **Since:** 7
 
@@ -99,7 +103,8 @@ Invoked when data in the position indicated by the specified index is changed.
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 8. Use &gt; [onDataChange](#ondatachange) instead.
+> This API is supported since API version 7 and deprecated since API version 8. Use
+> [onDataChange](#ondatachange) instead.
 
 **Since:** 7
 
@@ -154,7 +159,8 @@ Invoked when data is deleted from the position indicated by the specified index.
 
 > **NOTE：**
 > 
-> This API is supported since API version 7 and deprecated since API version 8. Use &gt; [onDataDelete](#ondatadelete) instead.
+> This API is supported since API version 7 and deprecated since API version 8. Use
+> [onDataDelete](#ondatadelete) instead.
 
 **Since:** 7
 
@@ -182,7 +188,8 @@ Invoked when data is moved, that is, when data is swapped between the **from** a
 
 > **NOTE：**
 > 
-> The ID must remain unchanged before and after data movement. If the ID changes, APIs for deleting and adding data &gt; must be called.
+> The ID must remain unchanged before and after data movement. If the ID changes, APIs for deleting and adding data
+> must be called.
 
 **Since:** 8
 
@@ -209,9 +216,11 @@ Invoked when data is moved, that is, when data is swapped between the **from** a
 
 > **NOTE：**
 > 
-> - This API is supported since API version 7 and deprecated since API version 8. Use &gt; [onDataMove](#ondatamove) instead.
+> - This API is supported since API version 7 and deprecated since API version 8. Use
+> [onDataMove](#ondatamove) instead.
 > 
-> - The ID must remain unchanged before and after data movement. If the ID changes, APIs for deleting and adding &gt; data must be called.
+> - The ID must remain unchanged before and after data movement. If the ID changes, APIs for deleting and adding
+> data must be called.
 
 **Since:** 7
 
@@ -280,8 +289,12 @@ Invoked when data is processed in batches to notify the component of refreshing.
 
 > **NOTE：**
 > 
-> This API cannot be used together with other data operation APIs of **DataChangeListener**. For example, in the &gt; same **LazyForEach**, if you have called **onDataAdd**, do not call **onDatasetChange**; if you have called &gt; **onDatasetChange**, do not call **onDataAdd** or other data operation APIs. Different **LazyForEach** instances &gt; on the page do not affect each other. When data is processed in batches within the same **onDatasetChange**
-> callback, if multiple **DataOperation** instances target the same index, only the first **DataOperation** will &gt; take effect.
+> This API cannot be used together with other data operation APIs of **DataChangeListener**. For example, in the
+> same **LazyForEach**, if you have called **onDataAdd**, do not call **onDatasetChange**; if you have called
+> **onDatasetChange**, do not call **onDataAdd** or other data operation APIs. Different **LazyForEach** instances
+> on the page do not affect each other. When data is processed in batches within the same **onDatasetChange**
+> callback, if multiple **DataOperation** instances target the same index, only the first **DataOperation** will
+> take effect.
 
 **Since:** 12
 

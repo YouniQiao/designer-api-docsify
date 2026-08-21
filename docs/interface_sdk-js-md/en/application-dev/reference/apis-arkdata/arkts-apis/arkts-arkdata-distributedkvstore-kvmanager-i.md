@@ -347,7 +347,11 @@ Creates and obtains a distributed KV store based on the specified **options** an
 
 > **NOTE：**
 > 
-> If the database file cannot be opened (for example, the file header is damaged) when an existing distributed KV &gt; store is obtained, the automatic rebuild logic will be triggered to return a newly created distributed KV &gt; store instance. For important data that cannot be regenerated, you are advised to use the backup and restore &gt; feature to prevent data loss. For details, see &gt; [Database Backup and Restoration](../../../database/data-backup-and-restore.md).
+> If the database file cannot be opened (for example, the file header is damaged) when an existing distributed KV
+> store is obtained, the automatic rebuild logic will be triggered to return a newly created distributed KV
+> store instance. For important data that cannot be regenerated, you are advised to use the backup and restore
+> feature to prevent data loss. For details, see
+> [Database Backup and Restoration](../../../database/data-backup-and-restore.md).
 
 **Since:** 23
 
@@ -416,7 +420,11 @@ Creates and obtains a distributed KV store based on the specified **options** an
 
 > **NOTE：**
 > 
-> If the database file cannot be opened (for example, the file header is damaged) when an existing distributed KV &gt; store is obtained, the automatic rebuild logic will be triggered to return a newly created distributed KV &gt; store instance. For important data that cannot be regenerated, you are advised to use the backup and restore &gt; feature to prevent data loss. For details, see &gt; [Database Backup and Restoration](../../../database/data-backup-and-restore.md).
+> If the database file cannot be opened (for example, the file header is damaged) when an existing distributed KV
+> store is obtained, the automatic rebuild logic will be triggered to return a newly created distributed KV
+> store instance. For important data that cannot be regenerated, you are advised to use the backup and restore
+> feature to prevent data loss. For details, see
+> [Database Backup and Restoration](../../../database/data-backup-and-restore.md).
 
 **Since:** 23
 
@@ -480,7 +488,7 @@ try {
 offDistributedDataServiceDie(deathCallback?: Callback<void>): void
 ```
 
-Unregister the death callback. Not notification will be received when the data manager service is terminated. &lt;p&gt;The unregistered death callback must be a registered death callback of the database. If no death callback parameter is passed, all database death callbacks will be unregistered.
+Unregister the death callback. Not notification will be received when the data manager service is terminated. <p>The unregistered death callback must be a registered death callback of the database. If no death callback parameter is passed, all database death callbacks will be unregistered.
 
 **Since:** 23
 
@@ -546,7 +554,7 @@ try {
 onDistributedDataServiceDie(deathCallback: Callback<void>): void
 ```
 
-Register a death callback to get notification when the data manager service is terminated. &lt;p&gt;If the data manager service is terminated,you need to re-subscribe to data change notifications and synchronization completion notifications, and calling the sync method will return a failure.
+Register a death callback to get notification when the data manager service is terminated. <p>If the data manager service is terminated,you need to re-subscribe to data change notifications and synchronization completion notifications, and calling the sync method will return a failure.
 
 **Since:** 23
 

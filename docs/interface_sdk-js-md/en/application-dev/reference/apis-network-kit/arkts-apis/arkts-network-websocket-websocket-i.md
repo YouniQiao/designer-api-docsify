@@ -181,12 +181,16 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 
 > **NOTE：**
 > 
-> The boolean value returned in the callback indicates only whether the connection request is created &gt; successfully. To detect whether the WebSocket connection is successful, you need to subscribe to the **open**
-> event via [on('open')](#onopen) before &gt; calling this API.
+> The boolean value returned in the callback indicates only whether the connection request is created
+> successfully. To detect whether the WebSocket connection is successful, you need to subscribe to the **open**
+> event via [on('open')](#onopen) before
+> calling this API.
 > 
 > **NOTE：**
 > 
-> The URL cannot contain more than 1024 characters. Otherwise, the connection fails. Since API version 15, the &gt; maximum length of URLs is changed from 1024 characters to 2048 characters. Since API version 26, the maximum &gt; length of URLs is changed from 2048 characters to 8196 characters.
+> The URL cannot contain more than 1024 characters. Otherwise, the connection fails. Since API version 15, the
+> maximum length of URLs is changed from 1024 characters to 2048 characters. Since API version 26, the maximum
+> length of URLs is changed from 2048 characters to 8196 characters.
 
 **Since:** 23
 
@@ -244,12 +248,16 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 
 > **NOTE：**
 > 
-> The boolean value returned in the callback indicates only whether the connection request is created &gt; successfully. To detect whether the WebSocket connection is successful, you need to subscribe to the **open**
-> event via [on('open')](#onopen) before &gt; calling this API.
+> The boolean value returned in the callback indicates only whether the connection request is created
+> successfully. To detect whether the WebSocket connection is successful, you need to subscribe to the **open**
+> event via [on('open')](#onopen) before
+> calling this API.
 > 
 > **NOTE：**
 > 
-> The URL cannot contain more than 1024 characters. Otherwise, the connection fails. Since API version 15, the &gt; maximum length of URLs is changed from 1024 characters to 2048 characters. Since API version 26, the maximum &gt; length of URLs is changed from 2048 characters to 8196 characters.
+> The URL cannot contain more than 1024 characters. Otherwise, the connection fails. Since API version 15, the
+> maximum length of URLs is changed from 1024 characters to 2048 characters. Since API version 26, the maximum
+> length of URLs is changed from 2048 characters to 8196 characters.
 
 **Since:** 23
 
@@ -332,12 +340,16 @@ Establishes a WebSocket connection to a given URL. This API uses a promise to re
 
 > **NOTE：**
 > 
-> The boolean value returned in the callback indicates only whether the connection request is created &gt; successfully. To detect whether the WebSocket connection is successful, you need to subscribe to the **open**
-> event via [on('open')](#onopen) before &gt; calling this API.
+> The boolean value returned in the callback indicates only whether the connection request is created
+> successfully. To detect whether the WebSocket connection is successful, you need to subscribe to the **open**
+> event via [on('open')](#onopen) before
+> calling this API.
 > 
 > **NOTE：**
 > 
-> The URL cannot contain more than 1024 characters. Otherwise, the connection fails. Since API version 15, the &gt; maximum length of URLs is changed from 1024 characters to 2048 characters. Since API version 26, the maximum &gt; length of URLs is changed from 2048 characters to 8196 characters.
+> The URL cannot contain more than 1024 characters. Otherwise, the connection fails. Since API version 15, the
+> maximum length of URLs is changed from 1024 characters to 2048 characters. Since API version 26, the maximum
+> length of URLs is changed from 2048 characters to 8196 characters.
 
 **Since:** 23
 

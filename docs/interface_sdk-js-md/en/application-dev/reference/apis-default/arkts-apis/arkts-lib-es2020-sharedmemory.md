@@ -11,5 +11,5 @@
 
 | Name | Description |
 | --- | --- |
-| [Atomics](arkts-lib-es2020-sharedmemory-atomics-i.md) |  |
+| [Atomics](arkts-libes2020sharedmemory-atomics-i.md) |  |
 

@@ -12,7 +12,7 @@ import { abilityManager } from '@kit.AbilityKit';
 function isEmbeddedOpenAllowed(context: Context, appId: string): Promise<boolean>
 ```
 
-判断是否允许嵌入式拉起[EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md)。使用Promise异步回调。
+判断是否允许嵌入式拉起[EmbeddableUIAbility](arkts-ability-appabilityembeddableuiability-embeddableuiability-c.md)。使用Promise异步回调。
 
 **起始版本：** 23
 

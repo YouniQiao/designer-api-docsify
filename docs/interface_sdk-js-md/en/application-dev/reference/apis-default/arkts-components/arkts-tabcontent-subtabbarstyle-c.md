@@ -18,7 +18,7 @@ board(value: BoardStyle): SubTabBarStyle
 
 Sets the background style (board style) of the selected subtab.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>It takes effect only in the horizontal layout. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>It takes effect only in the horizontal layout. </p>
 
 **Since:** 23
 
@@ -224,7 +224,7 @@ padding(value: Padding | Dimension): SubTabBarStyle
 
 Set the padding of the sub tab bar
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>It cannot be set in percentage. <br>When the parameter is of the Dimension type, the value applies to all sides. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>It cannot be set in percentage. <br>When the parameter is of the Dimension type, the value applies to all sides. </p>
 
 **Since:** 23
 
@@ -256,7 +256,7 @@ padding(padding: LocalizedPadding): SubTabBarStyle
 
 Set the padding of the sub tab bar
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>This API supports mirroring but does not support percentage-based settings. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>This API supports mirroring but does not support percentage-based settings. </p>
 
 **Since:** 23
 
@@ -288,7 +288,7 @@ selectedMode(value: SelectedMode): SubTabBarStyle
 
 Sets the display mode of the selected subtab.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>It takes effect only in the horizontal layout. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>It takes effect only in the horizontal layout. </p>
 
 **Since:** 23
 

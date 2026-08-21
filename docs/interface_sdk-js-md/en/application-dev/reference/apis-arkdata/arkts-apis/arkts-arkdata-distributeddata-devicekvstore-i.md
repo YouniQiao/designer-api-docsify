@@ -121,9 +121,11 @@ Obtains a string value that matches the specified device ID and key. This API us
 
 > **NOTE：**
 > 
-> The value of **deviceId** can be obtained by <!--RP1-->
+> The value of **deviceId** can be obtained by <!--RP1--
+> 
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
-> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system &gt; applications.
+> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
+> applications.
 > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
@@ -172,9 +174,11 @@ Obtains a string value that matches the specified device ID and key. This API us
 
 > **NOTE：**
 > 
-> The value of **deviceId** can be obtained by <!--RP1-->
+> The value of **deviceId** can be obtained by <!--RP1--
+> 
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
-> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system &gt; applications.
+> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
+> applications.
 > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
@@ -232,9 +236,11 @@ Obtains all KV pairs that match the specified device ID and key prefix. This API
 
 > **NOTE：**
 > 
-> The value of **deviceId** can be obtained by <!--RP1-->
+> The value of **deviceId** can be obtained by <!--RP1--
+> 
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
-> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system &gt; applications.
+> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
+> applications.
 > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
@@ -296,9 +302,11 @@ Obtains all KV pairs that match the specified device ID and key prefix. This API
 
 > **NOTE：**
 > 
-> The value of **deviceId** can be obtained by <!--RP1-->
+> The value of **deviceId** can be obtained by <!--RP1--
+> 
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
-> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system &gt; applications.
+> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
+> applications.
 > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
@@ -499,9 +507,11 @@ Obtains the KV pairs that match the specified device ID and **Query** object. Th
 
 > **NOTE：**
 > 
-> The value of **deviceId** can be obtained by <!--RP1-->
+> The value of **deviceId** can be obtained by <!--RP1--
+> 
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
-> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system &gt; applications.
+> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
+> applications.
 > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
@@ -568,9 +578,11 @@ Obtains the KV pairs that match the specified device ID and **Query** object. Th
 
 > **NOTE：**
 > 
-> The value of **deviceId** can be obtained by <!--RP1-->
+> The value of **deviceId** can be obtained by <!--RP1--
+> 
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
-> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system &gt; applications.
+> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
+> applications.
 > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
@@ -644,9 +656,11 @@ Obtains a **KvStoreResultSet** object that matches the specified device ID and k
 
 > **NOTE：**
 > 
-> The value of **deviceId** can be obtained by <!--RP1-->
+> The value of **deviceId** can be obtained by <!--RP1--
+> 
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
-> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system &gt; applications.
+> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
+> applications.
 > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
@@ -695,9 +709,11 @@ Obtains a **KvStoreResultSet** object that matches the specified device ID and k
 
 > **NOTE：**
 > 
-> The value of **deviceId** can be obtained by <!--RP1-->
+> The value of **deviceId** can be obtained by <!--RP1--
+> 
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
-> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system &gt; applications.
+> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
+> applications.
 > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
@@ -889,9 +905,11 @@ Obtains a **KvStoreResultSet** object that matches the specified device ID and *
 
 > **NOTE：**
 > 
-> The value of **deviceId** can be obtained by <!--RP1-->
+> The value of **deviceId** can be obtained by <!--RP1--
+> 
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
-> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system &gt; applications.
+> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
+> applications.
 > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
@@ -957,9 +975,11 @@ Obtains a **KvStoreResultSet** object that matches the specified device ID and *
 
 > **NOTE：**
 > 
-> The value of **deviceId** can be obtained by <!--RP1-->
+> The value of **deviceId** can be obtained by <!--RP1--
+> 
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
-> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system &gt; applications.
+> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
+> applications.
 > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
@@ -1160,9 +1180,11 @@ Obtains the number of results that match the specified device ID and **Query** o
 
 > **NOTE：**
 > 
-> The value of **deviceId** can be obtained by <!--RP1-->
+> The value of **deviceId** can be obtained by <!--RP1--
+> 
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
-> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system &gt; applications.
+> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
+> applications.
 > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
@@ -1223,9 +1245,11 @@ Obtains the number of results that match the specified device ID and **Query** o
 
 > **NOTE：**
 > 
-> The value of **deviceId** can be obtained by <!--RP1-->
+> The value of **deviceId** can be obtained by <!--RP1--
+> 
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
-> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system &gt; applications.
+> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
+> applications.
 > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
@@ -1467,9 +1491,11 @@ Deletes data of the specified device from this KV store. This API uses an asynch
 
 > **NOTE：**
 > 
-> The value of **deviceId** can be obtained by <!--RP1-->
+> The value of **deviceId** can be obtained by <!--RP1--
+> 
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
-> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system &gt; applications.
+> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
+> applications.
 > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
@@ -1525,9 +1551,11 @@ Deletes data of the specified device from this KV store. This API uses a promise
 
 > **NOTE：**
 > 
-> The value of **deviceId** can be obtained by <!--RP1-->
+> The value of **deviceId** can be obtained by <!--RP1--
+> 
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
-> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system &gt; applications.
+> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
+> applications.
 > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
@@ -1590,9 +1618,12 @@ Synchronizes the KV store manually.
 
 > **NOTE：**
 > 
-> **deviceIds** is **networkId** in <!--RP2-->
-> [DeviceInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-deviceinfo-i-sys.md), which can be obtained by &gt; [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
-> <!--RP2End-->The APIs of the **deviceManager** module are system interfaces and available only to system &gt; applications.
+> **deviceIds** is **networkId** in <!--RP2--
+> 
+> [DeviceInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-deviceinfo-i-sys.md), which can be obtained by
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
+> <!--RP2End-->The APIs of the **deviceManager** module are system interfaces and available only to system
+> applications.
 
 **Since:** 8
 

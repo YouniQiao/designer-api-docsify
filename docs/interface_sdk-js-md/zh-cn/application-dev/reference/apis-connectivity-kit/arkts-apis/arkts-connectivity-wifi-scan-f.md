@@ -17,7 +17,7 @@ function scan(): boolean
 
 启动WLAN扫描。
 
-&lt;p&gt;该接口工作在异步模式。&lt;/p&gt;
+<p>该接口工作在异步模式。</p>
 
 **起始版本：** 6
 

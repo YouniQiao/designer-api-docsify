@@ -15,9 +15,9 @@ Defines the namespace of focus controller.
 
 | 名称 | 说明 |
 | --- | --- |
-| [$$](arkts-common-$$-f.md#) | Convert to a bindable property. |
-| [$r](arkts-common-$r-f.md) | global \\$r function |
-| [$rawfile](arkts-common-$rawfile-f.md) | global \\$rawfile function |
+| [$$](arkts-common--f.md#) | Convert to a bindable property. |
+| [$r](arkts-common-r-f.md#r) | global \\$r function |
+| [$rawfile](arkts-common-rawfile-f.md#rawfile) | global \\$rawfile function |
 | [animateToImmediately](arkts-common-animatetoimmediately-f.md) | Define animation functions for immediate distribution. This interface depends on the UI context and cannot be used when the UI context is unclear. It is recommended to use animateToImmediately to explicitly specify the UI context. |
 | [applyStyles](arkts-common-applystyles-f.md) | Apply style function on this CommonMethod. |
 | [makeBindable](arkts-common-makebindable-f.md) | Create a bindable property instance. |

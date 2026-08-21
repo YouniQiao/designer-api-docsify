@@ -19,7 +19,8 @@ Based on the principle that the key cannot be transferred out of [Trusted Execut
 
 > **NOTE：**
 > 
-> Generating SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) &gt; requires the ohos.permission.ACCESS_SE_KEY permission.
+> Generating SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)
+> requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
 
@@ -196,7 +197,8 @@ Generates a key. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> Generating SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) &gt; requires the ohos.permission.ACCESS_SE_KEY permission.
+> Generating SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)
+> requires the ohos.permission.ACCESS_SE_KEY permission.
 
 Based on the principle that the key cannot be transferred out of [Trusted Execution Environment (TEE)](../../../security/UniversalKeystoreKit/huks-concepts.md#tee), the key material content is not returned through this API and is only used to indicate whether the call is successful.
 

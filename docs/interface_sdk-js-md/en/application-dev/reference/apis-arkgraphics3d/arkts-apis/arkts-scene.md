@@ -6,9 +6,9 @@
 
 | Name | Description |
 | --- | --- |
-| [PCFConfig](arkts-arkgraphics3d-scene-pcfconfig-c.md) | param config for pcf soft shadow |
+| [PCFConfig](arkts-arkgraphics3d-scene-pcfconfig-c.md) | Configuration class for soft shadows using the Percentage-Closer Filtering (PCF) algorithm. |
 | [Scene](arkts-arkgraphics3d-scene-c.md) | Describes a scene. |
-| [SoftShadowConfig](arkts-arkgraphics3d-scene-softshadowconfig-c.md) | param config for soft shadow, control the algorithm type and its configuration |
+| [SoftShadowConfig](arkts-arkgraphics3d-scene-softshadowconfig-c.md) | Abstract base class for soft shadow configuration. It defines the interface for controlling the shadow algorithm type and its parameters. |
 
 <!--Del-->
 ### Classes(System API)

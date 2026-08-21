@@ -22,7 +22,8 @@ Attaches a FrameNode to a NodeAdapter. Each node can be bound to only one NodeAd
 
 > **NOTE：**
 > 
-> The following components can be bound: **Column**, **Row**, **Stack**, **GridRow**, **Flex**, **Swiper**, &gt; **RelativeContainer**, **List**, **ListItemGroup**, **WaterFlow**, and **Grid**.
+> The following components can be bound: **Column**, **Row**, **Stack**, **GridRow**, **Flex**, **Swiper**,
+> **RelativeContainer**, **List**, **ListItemGroup**, **WaterFlow**, and **Grid**.
 
 **Since:** 12
 
@@ -219,10 +220,18 @@ Called when a FrameNode is attached to the NodeAdapter.
 
 > **NOTE：**
 > 
-> In versions earlier than API version 26.0.0, this callback is triggered when the host node is attached to the &gt; main tree. If you set this callback by dynamically assigning a value, you can complete the setting after calling &gt; [attachNodeAdapter](../../apis-default/arkts-apis/arkts-framenode-nodeadapter-c.md#attachnodeadapter) and before the host node is attached to the main tree.
+> In versions earlier than API version 26.0.0, this callback is triggered when the host node is attached to the
+> main tree. If you set this callback by dynamically assigning a value, you can complete the setting after calling
+> [attachNodeAdapter](../../apis-default/arkts-apis/arkts-framenode-nodeadapter-c.md#attachnodeadapter) and before the host node is attached to the main tree.
 > In this case, you will receive this callback when the host node is attached to the main tree.
 > 
-> In API version 26.0.0 and later, this callback is triggered immediately when the NodeAdapter is bound to the host &gt; node, instead of when the host node is attached to the main tree. In this case, the host node may not have been &gt; attached to the main tree. If the node on which the callback logic depends has been mounted (for example, &gt; accessing layout information or executing animation), you are advised to register &gt; onAppear in the callback and place the related logic in **onAppear** for &gt; execution. If you set this callback by dynamically assigning a value, complete the setting before calling &gt; [attachNodeAdapter](../../apis-default/arkts-apis/arkts-framenode-nodeadapter-c.md#attachnodeadapter). Otherwise, the callback may fail to be triggered.
+> In API version 26.0.0 and later, this callback is triggered immediately when the NodeAdapter is bound to the host
+> node, instead of when the host node is attached to the main tree. In this case, the host node may not have been
+> attached to the main tree. If the node on which the callback logic depends has been mounted (for example,
+> accessing layout information or executing animation), you are advised to register
+> onAppear in the callback and place the related logic in **onAppear** for
+> execution. If you set this callback by dynamically assigning a value, complete the setting before calling
+> [attachNodeAdapter](../../apis-default/arkts-apis/arkts-framenode-nodeadapter-c.md#attachnodeadapter). Otherwise, the callback may fail to be triggered.
 
 **Since:** 12
 

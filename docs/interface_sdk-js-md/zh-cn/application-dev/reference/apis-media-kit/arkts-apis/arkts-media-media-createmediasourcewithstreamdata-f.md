@@ -26,13 +26,13 @@ function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSour
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| streams | Array&lt;[MediaStream](arkts-media-multimedia-media-mediastream-i.md)&gt; | 是 | 可设置MediaStream数组，支持的流媒体格式：HTTP-FLV。 |
+| streams | Array&lt;[MediaStream](arkts-media-multimediamedia-mediastream-i.md)&gt; | 是 | 可设置MediaStream数组，支持的流媒体格式：HTTP-FLV。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) | 返回MediaSource，用于媒体资源设置。 |
+| [MediaSource](arkts-media-multimediamedia-mediasource-i.md) | 返回MediaSource，用于媒体资源设置。 |
 
 **示例**
 
@@ -63,11 +63,11 @@ Creates a multi-bitrate media source for streaming media. Currently, only the HT
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| streams | Array&lt;[MediaStream](arkts-media-multimedia-media-mediastream-i.md)&gt; | 是 | Array of MediaStream objects. The supported streaming media format is HTTP-FLV. |
+| streams | Array&lt;[MediaStream](arkts-media-multimediamedia-mediastream-i.md)&gt; | 是 | Array of MediaStream objects. The supported streaming media format is HTTP-FLV. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) \| undefined | MediaSource instance if the operation is successful; returns null otherwise. |
+| [MediaSource](arkts-media-multimediamedia-mediasource-i.md) \| undefined | MediaSource instance if the operation is successful; returns null otherwise. |
 

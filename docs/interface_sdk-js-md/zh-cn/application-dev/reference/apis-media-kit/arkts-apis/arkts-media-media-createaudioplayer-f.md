@@ -16,7 +16,8 @@ function createAudioPlayer(): AudioPlayer
 
 > **说明：**
 > 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用 &gt; [createAVPlayer](arkts-media-media-createavplayer-f.md)替代。
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [createAVPlayer](arkts-media-media-createavplayer-f.md)替代。
 
 **起始版本：** 6
 
@@ -32,7 +33,7 @@ function createAudioPlayer(): AudioPlayer
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioPlayer](arkts-media-multimedia-media-audioplayer-i.md) | 返回AudioPlayer类实例，失败时返回null。可用于音频播放、暂停、停止等操作。 |
+| [AudioPlayer](arkts-media-multimediamedia-audioplayer-i.md) | 返回AudioPlayer类实例，失败时返回null。可用于音频播放、暂停、停止等操作。 |
 
 **示例**
 

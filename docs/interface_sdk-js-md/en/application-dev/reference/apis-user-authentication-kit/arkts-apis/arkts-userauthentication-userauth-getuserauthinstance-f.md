@@ -17,7 +17,9 @@ Obtains a [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-
 
 > **NOTE：**
 
-> Each **UserAuthInstance** can be used for authentication only once. To perform authentication again, you must &gt; obtain a new **UserAuthInstance**. After the authentication is complete (regardless of whether it is successful &gt; or fails), the instance cannot be used again.
+> Each **UserAuthInstance** can be used for authentication only once. To perform authentication again, you must
+> obtain a new **UserAuthInstance**. After the authentication is complete (regardless of whether it is successful
+> or fails), the instance cannot be used again.
 
 **Since:** 23
 

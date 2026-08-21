@@ -25,7 +25,10 @@ Unlike [accessibility.onSeniorModeStateChange](arkts-accessibility-accessibility
 > - The callback parameter for registering a listener must use a named function instead of an anonymous function.
 > Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
-> - After calling this method, ensure that &gt; [accessibility.offSeniorModeStateChangeForSelf](arkts-accessibility-accessibility-offseniormodestatechangeforself-f.md) is used to &gt; unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear** lifecycle &gt; callback). Otherwise, a crash may occur.
+> - After calling this method, ensure that
+> [accessibility.offSeniorModeStateChangeForSelf](arkts-accessibility-accessibility-offseniormodestatechangeforself-f.md) is used to
+> unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear** lifecycle
+> callback). Otherwise, a crash may occur.
 
 **Since:** 26.0.0
 

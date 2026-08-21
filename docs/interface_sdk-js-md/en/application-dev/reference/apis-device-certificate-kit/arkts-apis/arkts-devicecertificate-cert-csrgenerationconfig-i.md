@@ -8,9 +8,11 @@ Configuration parameters for generating a CSR, including the subject name, diges
 > 
 > - mdName indicates the digest algorithm name. Currently, SHA1, SHA256, SHA384, and SHA512 are supported.
 > 
-> - attributes is an optional parameter that specifies the attribute types and attribute values specified in &gt; PKCS #9 to generate a CSR. For example, challengePassword.
+> - attributes is an optional parameter that specifies the attribute types and attribute values specified in
+> PKCS #9 to generate a CSR. For example, challengePassword.
 > 
-> - outFormat specifies the format of the output CSR. If the format is not specified, the PEM format is used by &gt; default.
+> - outFormat specifies the format of the output CSR. If the format is not specified, the PEM format is used by
+> default.
 
 **Since:** 23
 

@@ -20,7 +20,7 @@ columnWidths?: LengthMetrics[]
 
 Width of each column in the picker.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If the text length exceeds the column width, the text will be truncated. &lt;/p&gt;
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If the text length exceeds the column width, the text will be truncated. </p>
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-graphics-lengthmetrics-c.md)[]
 

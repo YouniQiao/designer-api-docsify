@@ -14,7 +14,7 @@
   - [getId](arkts-ability-datauriutils-getid-depr-f.md)
   - [updateId](arkts-ability-datauriutils-updateid-depr-f.md)
 - [@ohos.ability.errorCode](arkts-ability-errorcode.md)
-  - [ErrorCode](arkts-ability-ability-errorcode-errorcode-e.md)
+  - [ErrorCode](arkts-ability-abilityerrorcode-errorcode-e.md)
 - [@ohos.ability.featureAbility](arkts-ability-featureability.md)
   - [acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md)
   - [connectAbility](arkts-ability-featureability-connectability-f.md)
@@ -134,7 +134,7 @@
   <!--Del-->
   - [Role(system api)](arkts-ability-abilitytoolaccessctrl-role-e-sys.md)<!--DelEnd-->
 - [@ohos.app.ability.Ability](arkts-app-ability-ability.md)
-  - [Ability](arkts-ability-app-ability-ability-ability-c.md)
+  - [Ability](arkts-ability-appabilityability-ability-c.md)
 - [@ohos.app.ability.AbilityConstant](arkts-app-ability-abilityconstant.md)
   - [LastExitDetailInfo](arkts-ability-abilityconstant-lastexitdetailinfo-i.md)
   - [LaunchParam](arkts-ability-abilityconstant-launchparam-i.md)
@@ -152,7 +152,7 @@
   - [WindowMode(system api)](arkts-ability-abilityconstant-windowmode-e-sys.md)<!--DelEnd-->
   - [Constants](arkts-ability-abilityconstant-con.md)
 - [@ohos.app.ability.AbilityLifecycleCallback](arkts-app-ability-abilitylifecyclecallback.md)
-  - [AbilityLifecycleCallback](arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md)
+  - [AbilityLifecycleCallback](arkts-ability-appabilityabilitylifecyclecallback-abilitylifecyclecallback-c.md)
   - [OnAbilitySaveStateFn](arkts-ability-onabilitysavestatefn-t.md)
   - [OnAbilityWillBackgroundFn](arkts-ability-onabilitywillbackgroundfn-t.md)
   - [OnAbilityWillContinueFn](arkts-ability-onabilitywillcontinuefn-t.md)
@@ -167,108 +167,108 @@
   - [OnWindowStageWillDestroyFn](arkts-ability-onwindowstagewilldestroyfn-t.md)
   - [OnWindowStageWillRestoreFn](arkts-ability-onwindowstagewillrestorefn-t.md)
 - [@ohos.app.ability.AbilityStage](arkts-app-ability-abilitystage.md)
-  - [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)
+  - [AbilityStage](arkts-ability-appabilityabilitystage-abilitystage-c.md)
 - [@ohos.app.ability.ActionExtensionAbility](arkts-app-ability-actionextensionability.md)
-  - [ActionExtensionAbility](arkts-ability-app-ability-actionextensionability-actionextensionability-c.md)
+  - [ActionExtensionAbility](arkts-ability-appabilityactionextensionability-actionextensionability-c.md)
 - [@ohos.app.ability.AppServiceExtensionAbility](arkts-app-ability-appserviceextensionability.md)
-  - [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md)
+  - [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md)
 - [@ohos.app.ability.ApplicationStateChangeCallback](arkts-app-ability-applicationstatechangecallback.md)
-  - [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md)
+  - [ApplicationStateChangeCallback](arkts-ability-appabilityapplicationstatechangecallback-applicationstatechangecallback-c.md)
 - [@ohos.app.ability.ApplicationStateChangeCallback](arkts-app-ability-applicationstatechangecallback.md)
-  - [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md)
+  - [ApplicationStateChangeCallback](arkts-ability-appabilityapplicationstatechangecallback-applicationstatechangecallback-i.md)
 - [@ohos.app.ability.AtomicServiceOptions](arkts-app-ability-atomicserviceoptions.md)
-  - [AtomicServiceOptions](arkts-ability-app-ability-atomicserviceoptions-atomicserviceoptions-c.md)
+  - [AtomicServiceOptions](arkts-ability-appabilityatomicserviceoptions-atomicserviceoptions-c.md)
 <!--Del-->
 - [@ohos.app.ability.AutoFillExtensionAbility](arkts-app-ability-autofillextensionability.md)<!--DelEnd-->
   <!--Del-->
-  - [AutoFillExtensionAbility(system api)](arkts-ability-app-ability-autofillextensionability-autofillextensionability-c-sys.md)<!--DelEnd-->
+  - [AutoFillExtensionAbility(system api)](arkts-ability-appabilityautofillextensionability-autofillextensionability-c-sys.md)<!--DelEnd-->
 - [@ohos.app.ability.ChildProcess](arkts-app-ability-childprocess.md)
-  - [ChildProcess](arkts-ability-app-ability-childprocess-childprocess-c.md)
+  - [ChildProcess](arkts-ability-appabilitychildprocess-childprocess-c.md)
 - [@ohos.app.ability.ChildProcessArgs](arkts-app-ability-childprocessargs.md)
-  - [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md)
+  - [ChildProcessArgs](arkts-ability-appabilitychildprocessargs-childprocessargs-i.md)
 - [@ohos.app.ability.ChildProcessOptions](arkts-app-ability-childprocessoptions.md)
-  - [ChildProcessOptions](arkts-ability-app-ability-childprocessoptions-childprocessoptions-i.md)
+  - [ChildProcessOptions](arkts-ability-appabilitychildprocessoptions-childprocessoptions-i.md)
 - [@ohos.app.ability.CompletionHandler](arkts-app-ability-completionhandler.md)
-  - [CompletionHandler](arkts-ability-app-ability-completionhandler-completionhandler-c.md)
+  - [CompletionHandler](arkts-ability-appabilitycompletionhandler-completionhandler-c.md)
   - [OnRequestFailureFn](arkts-ability-onrequestfailurefn-t.md)
   - [OnRequestSuccessFn](arkts-ability-onrequestsuccessfn-t.md)
 - [@ohos.app.ability.CompletionHandlerForAbilityStartCallback](arkts-app-ability-completionhandlerforabilitystartcallback.md)
-  - [CompletionHandlerForAbilityStartCallback](arkts-ability-app-ability-completionhandlerforabilitystartcallback-completionhandlerforabilitystartcallback-c.md)
+  - [CompletionHandlerForAbilityStartCallback](arkts-ability-appabilitycompletionhandlerforabilitystartcallback-completionhandlerforabilitystartcallback-c.md)
   - [OnRequestFailureFn](arkts-ability-onrequestfailurefn-t.md)
   - [OnRequestSuccessFn](arkts-ability-onrequestsuccessfn-t.md)
-  - [AbilityStartFailureCode](arkts-ability-app-ability-completionhandlerforabilitystartcallback-abilitystartfailurecode-e.md)
+  - [AbilityStartFailureCode](arkts-ability-appabilitycompletionhandlerforabilitystartcallback-abilitystartfailurecode-e.md)
 - [@ohos.app.ability.CompletionHandlerForAtomicService](arkts-app-ability-completionhandlerforatomicservice.md)
-  - [CompletionHandlerForAtomicService](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md)
-  - [FailureCode](arkts-ability-app-ability-completionhandlerforatomicservice-failurecode-e.md)
+  - [CompletionHandlerForAtomicService](arkts-ability-appabilitycompletionhandlerforatomicservice-completionhandlerforatomicservice-c.md)
+  - [FailureCode](arkts-ability-appabilitycompletionhandlerforatomicservice-failurecode-e.md)
 - [@ohos.app.ability.CompletionHandlerForAtomicService](arkts-app-ability-completionhandlerforatomicservice.md)
-  - [CompletionHandlerForAtomicService](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md)
+  - [CompletionHandlerForAtomicService](arkts-ability-appabilitycompletionhandlerforatomicservice-completionhandlerforatomicservice-c.md)
   - [OnAtomicServiceRequestFailureFn](arkts-ability-onatomicservicerequestfailurefn-t.md)
   - [OnAtomicServiceRequestSuccessFn](arkts-ability-onatomicservicerequestsuccessfn-t.md)
-  - [FailureCode](arkts-ability-app-ability-completionhandlerforatomicservice-failurecode-e.md)
+  - [FailureCode](arkts-ability-appabilitycompletionhandlerforatomicservice-failurecode-e.md)
 - [@ohos.app.ability.Configuration](arkts-app-ability-configuration.md)
-  - [Configuration](arkts-ability-app-ability-configuration-configuration-i.md)
+  - [Configuration](arkts-ability-appabilityconfiguration-configuration-i.md)
 - [@ohos.app.ability.ConfigurationConstant](arkts-app-ability-configurationconstant.md)
   - [ColorMode](arkts-ability-configurationconstant-colormode-e.md)
   - [Direction](arkts-ability-configurationconstant-direction-e.md)
   - [ScreenDensity](arkts-ability-configurationconstant-screendensity-e.md)
 - [@ohos.app.ability.EmbeddableUIAbility](arkts-app-ability-embeddableuiability.md)
-  - [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md)
+  - [EmbeddableUIAbility](arkts-ability-appabilityembeddableuiability-embeddableuiability-c.md)
 - [@ohos.app.ability.EmbeddedUIExtensionAbility](arkts-app-ability-embeddeduiextensionability.md)
-  - [EmbeddedUIExtensionAbility](arkts-ability-app-ability-embeddeduiextensionability-embeddeduiextensionability-c.md)
+  - [EmbeddedUIExtensionAbility](arkts-ability-appabilityembeddeduiextensionability-embeddeduiextensionability-c.md)
 - [@ohos.app.ability.EnvironmentCallback](arkts-app-ability-environmentcallback.md)
-  - [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md)
+  - [EnvironmentCallback](arkts-ability-appabilityenvironmentcallback-environmentcallback-c.md)
 - [@ohos.app.ability.ExtensionAbility](arkts-app-ability-extensionability.md)
-  - [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)
+  - [ExtensionAbility](arkts-ability-appabilityextensionability-extensionability-c.md)
 - [@ohos.app.ability.InsightIntentContext](arkts-app-ability-insightintentcontext.md)
-  - [InsightIntentContext](arkts-ability-app-ability-insightintentcontext-insightintentcontext-c.md)
+  - [InsightIntentContext](arkts-ability-appabilityinsightintentcontext-insightintentcontext-c.md)
 - [@ohos.app.ability.InsightIntentDecorator](arkts-app-ability-insightintentdecorator.md)
-  - [EntryIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-entryintentdecoratorinfo-i.md)
-  - [FormIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-formintentdecoratorinfo-i.md)
-  - [FunctionIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-functionintentdecoratorinfo-i.md)
-  - [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)
-  - [IntentEntityDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intententitydecoratorinfo-i.md)
-  - [LinkIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-linkintentdecoratorinfo-i.md)
-  - [LinkIntentParamMapping](arkts-ability-app-ability-insightintentdecorator-linkintentparammapping-i.md)
-  - [PageIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-pageintentdecoratorinfo-i.md)
-  - [LinkParamCategory](arkts-ability-app-ability-insightintentdecorator-linkparamcategory-e.md)
+  - [EntryIntentDecoratorInfo](arkts-ability-appabilityinsightintentdecorator-entryintentdecoratorinfo-i.md)
+  - [FormIntentDecoratorInfo](arkts-ability-appabilityinsightintentdecorator-formintentdecoratorinfo-i.md)
+  - [FunctionIntentDecoratorInfo](arkts-ability-appabilityinsightintentdecorator-functionintentdecoratorinfo-i.md)
+  - [IntentDecoratorInfo](arkts-ability-appabilityinsightintentdecorator-intentdecoratorinfo-i.md)
+  - [IntentEntityDecoratorInfo](arkts-ability-appabilityinsightintentdecorator-intententitydecoratorinfo-i.md)
+  - [LinkIntentDecoratorInfo](arkts-ability-appabilityinsightintentdecorator-linkintentdecoratorinfo-i.md)
+  - [LinkIntentParamMapping](arkts-ability-appabilityinsightintentdecorator-linkintentparammapping-i.md)
+  - [PageIntentDecoratorInfo](arkts-ability-appabilityinsightintentdecorator-pageintentdecoratorinfo-i.md)
+  - [LinkParamCategory](arkts-ability-appabilityinsightintentdecorator-linkparamcategory-e.md)
 - [@ohos.app.ability.InsightIntentEntryExecutor](arkts-app-ability-insightintententryexecutor.md)
-  - [InsightIntentEntryExecutor](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md)
+  - [InsightIntentEntryExecutor](arkts-ability-appabilityinsightintententryexecutor-insightintententryexecutor-c.md)
 - [@ohos.app.ability.InsightIntentExecutor](arkts-app-ability-insightintentexecutor.md)
-  - [InsightIntentExecutor](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md)
+  - [InsightIntentExecutor](arkts-ability-appabilityinsightintentexecutor-insightintentexecutor-c.md)
 - [@ohos.app.ability.InteropAbilityLifecycleCallback](arkts-app-ability-interopabilitylifecyclecallback.md)
-  - [InteropAbilityLifecycleCallback](arkts-ability-app-ability-interopabilitylifecyclecallback-interopabilitylifecyclecallback-i.md)
+  - [InteropAbilityLifecycleCallback](arkts-ability-appabilityinteropabilitylifecyclecallback-interopabilitylifecyclecallback-i.md)
   - [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md)
   - [WindowStageCallbackFn](arkts-ability-windowstagecallbackfn-t.md)
 - [@ohos.app.ability.OpenLinkOptions](arkts-app-ability-openlinkoptions.md)
-  - [OpenLinkOptions](arkts-ability-app-ability-openlinkoptions-openlinkoptions-i.md)
+  - [OpenLinkOptions](arkts-ability-appabilityopenlinkoptions-openlinkoptions-i.md)
 - [@ohos.app.ability.PhotoEditorExtensionAbility](arkts-app-ability-photoeditorextensionability.md)
-  - [PhotoEditorExtensionAbility](arkts-ability-app-ability-photoeditorextensionability-photoeditorextensionability-c.md)
+  - [PhotoEditorExtensionAbility](arkts-ability-appabilityphotoeditorextensionability-photoeditorextensionability-c.md)
 <!--Del-->
 - [@ohos.app.ability.ServiceExtensionAbility](arkts-app-ability-serviceextensionability.md)<!--DelEnd-->
   <!--Del-->
-  - [ServiceExtensionAbility(system api)](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md)<!--DelEnd-->
+  - [ServiceExtensionAbility(system api)](arkts-ability-appabilityserviceextensionability-serviceextensionability-c-sys.md)<!--DelEnd-->
 - [@ohos.app.ability.ShareExtensionAbility](arkts-app-ability-shareextensionability.md)
-  - [ShareExtensionAbility](arkts-ability-app-ability-shareextensionability-shareextensionability-c.md)
+  - [ShareExtensionAbility](arkts-ability-appabilityshareextensionability-shareextensionability-c.md)
 - [@ohos.app.ability.StartOptions](arkts-app-ability-startoptions.md)
-  - [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md)
+  - [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md)
   <!--Del-->
-  - [StartOptions(system api)](arkts-ability-app-ability-startoptions-startoptions-c-sys.md)<!--DelEnd-->
+  - [StartOptions(system api)](arkts-ability-appabilitystartoptions-startoptions-c-sys.md)<!--DelEnd-->
 - [@ohos.app.ability.UIAbility](arkts-app-ability-uiability.md)
-  - [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)
-  - [Callee](arkts-ability-app-ability-uiability-callee-i.md)
-  - [CalleeCallback](arkts-ability-app-ability-uiability-calleecallback-i.md)
-  - [Caller](arkts-ability-app-ability-uiability-caller-i.md)
-  - [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md)
-  - [OnRemoteStateChangeCallback](arkts-ability-app-ability-uiability-onremotestatechangecallback-i.md)
+  - [UIAbility](arkts-ability-appabilityuiability-uiability-c.md)
+  - [Callee](arkts-ability-appabilityuiability-callee-i.md)
+  - [CalleeCallback](arkts-ability-appabilityuiability-calleecallback-i.md)
+  - [Caller](arkts-ability-appabilityuiability-caller-i.md)
+  - [OnReleaseCallback](arkts-ability-appabilityuiability-onreleasecallback-i.md)
+  - [OnRemoteStateChangeCallback](arkts-ability-appabilityuiability-onremotestatechangecallback-i.md)
   - [CalleeCallback](arkts-ability-calleecallback-t.md)
   - [OnReleaseCallback](arkts-ability-onreleasecallback-t.md)
   - [OnRemoteStateChangeCallback](arkts-ability-onremotestatechangecallback-t.md)
 - [@ohos.app.ability.UIExtensionAbility](arkts-app-ability-uiextensionability.md)
-  - [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)
+  - [UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md)
 - [@ohos.app.ability.UIExtensionContentSession](arkts-app-ability-uiextensioncontentsession.md)
-  - [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md)
+  - [UIExtensionContentSession](arkts-ability-appabilityuiextensioncontentsession-uiextensioncontentsession-c.md)
   <!--Del-->
-  - [UIExtensionContentSession(system api)](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md)<!--DelEnd-->
+  - [UIExtensionContentSession(system api)](arkts-ability-appabilityuiextensioncontentsession-uiextensioncontentsession-c-sys.md)<!--DelEnd-->
   <!--Del-->
   - [OnReceiveDataCallback(system api)](arkts-ability-onreceivedatacallback-t-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -276,9 +276,9 @@
 <!--Del-->
 - [@ohos.app.ability.UIServiceExtensionAbility](arkts-app-ability-uiserviceextensionability.md)<!--DelEnd-->
   <!--Del-->
-  - [UIServiceExtensionAbility(system api)](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md)<!--DelEnd-->
+  - [UIServiceExtensionAbility(system api)](arkts-ability-appabilityuiserviceextensionability-uiserviceextensionability-c-sys.md)<!--DelEnd-->
 - [@ohos.app.ability.Want](arkts-app-ability-want.md)
-  - [Want](arkts-ability-app-ability-want-want-c.md)
+  - [Want](arkts-ability-appabilitywant-want-c.md)
 - [@ohos.app.ability.abilityManager](arkts-app-ability-abilitymanager.md)
   <!--Del-->
   - [acquireShareData(system api)](arkts-ability-abilitymanager-acquiresharedata-f-sys.md)<!--DelEnd-->
@@ -877,11 +877,11 @@
   - [Params(system api)](arkts-ability-wantconstant-params-e-sys.md)<!--DelEnd-->
   - [ShowMode](arkts-ability-wantconstant-showmode-e.md)
 - [@ohos.app.agent.AgentExtensionAbility](arkts-app-agent-agentextensionability.md)
-  - [AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md)
+  - [AgentExtensionAbility](arkts-ability-appagentagentextensionability-agentextensionability-c.md)
   <!--Del-->
-  - [AgentExtensionAbility(system api)](arkts-ability-app-agent-agentextensionability-agentextensionability-c-sys.md)<!--DelEnd-->
+  - [AgentExtensionAbility(system api)](arkts-ability-appagentagentextensionability-agentextensionability-c-sys.md)<!--DelEnd-->
 - [@ohos.app.agent.AgentUIExtensionAbility](arkts-app-agent-agentuiextensionability.md)
-  - [AgentUIExtensionAbility](arkts-ability-app-agent-agentuiextensionability-agentuiextensionability-c.md)
+  - [AgentUIExtensionAbility](arkts-ability-appagentagentuiextensionability-agentuiextensionability-c.md)
 - [@ohos.app.agent.agentConstant](arkts-app-agent-agentconstant.md)
   - [AgentCardType](arkts-ability-agentconstant-agentcardtype-e.md)
   <!--Del-->
@@ -911,14 +911,14 @@
   <!--Del-->
   - [updateAgentCard(system api)](arkts-ability-agentmanager-updateagentcard-f-sys.md)<!--DelEnd-->
 - [@ohos.app.appstartup.StartupConfig](arkts-app-appstartup-startupconfig.md)
-  - [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md)
+  - [StartupConfig](arkts-ability-appappstartupstartupconfig-startupconfig-i.md)
 - [@ohos.app.appstartup.StartupConfigEntry](arkts-app-appstartup-startupconfigentry.md)
-  - [StartupConfigEntry](arkts-ability-app-appstartup-startupconfigentry-startupconfigentry-c.md)
+  - [StartupConfigEntry](arkts-ability-appappstartupstartupconfigentry-startupconfigentry-c.md)
 - [@ohos.app.appstartup.StartupListener](arkts-app-appstartup-startuplistener.md)
-  - [StartupListener](arkts-ability-app-appstartup-startuplistener-startuplistener-c.md)
+  - [StartupListener](arkts-ability-appappstartupstartuplistener-startuplistener-c.md)
   - [OnCompletedFn](arkts-ability-oncompletedfn-t.md)
 - [@ohos.app.appstartup.StartupTask](arkts-app-appstartup-startuptask.md)
-  - [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md)
+  - [StartupTask](arkts-ability-appappstartupstartuptask-startuptask-c.md)
 - [@ohos.app.appstartup.startupManager](arkts-app-appstartup-startupmanager.md)
   - [getStartupTaskResult](arkts-ability-startupmanager-getstartuptaskresult-f.md)
   - [isStartupTaskInitialized](arkts-ability-startupmanager-isstartuptaskinitialized-f.md)
@@ -976,11 +976,11 @@
   <!--Del-->
   - [InvokeResult(system api)](arkts-ability-functionmanager-invokeresult-i-sys.md)<!--DelEnd-->
 - [@ohos.application.Configuration](arkts-application-configuration.md)
-  - [Configuration](arkts-ability-application-configuration-configuration-depr-i.md)
+  - [Configuration](arkts-ability-applicationconfiguration-configuration-depr-i.md)
 - [@ohos.application.ConfigurationConstant](arkts-application-configurationconstant.md)
   - [ColorMode](arkts-ability-configurationconstant-colormode-depr-e.md)
 - [@ohos.application.Want](arkts-application-want.md)
-  - [Want](arkts-ability-application-want-want-depr-c.md)
+  - [Want](arkts-ability-applicationwant-want-depr-c.md)
 <!--Del-->
 - [@ohos.application.abilityManager](arkts-application-abilitymanager.md)<!--DelEnd-->
   <!--Del-->
@@ -1712,9 +1712,9 @@
     - [WantAgentFlags](arkts-ability-wantagent-wantagentflags-depr-e.md)
   - [WantAgent](arkts-ability-wantagent-depr-t.md)
 - [@system.package](arkts-system-package.md)
-  - [Package](arkts-ability-system-package-package-c.md)
-  - [CheckPackageHasInstalledOptions](arkts-ability-system-package-checkpackagehasinstalledoptions-i.md)
-  - [CheckPackageHasInstalledResponse](arkts-ability-system-package-checkpackagehasinstalledresponse-i.md)
+  - [Package](arkts-ability-systempackage-package-c.md)
+  - [CheckPackageHasInstalledOptions](arkts-ability-systempackage-checkpackagehasinstalledoptions-i.md)
+  - [CheckPackageHasInstalledResponse](arkts-ability-systempackage-checkpackagehasinstalledresponse-i.md)
 - [lifecycle](arkts-lifecycle.md)
   - [LifecycleApp](arkts-ability-lifecycle-lifecycleapp-i.md)
   <!--Del-->

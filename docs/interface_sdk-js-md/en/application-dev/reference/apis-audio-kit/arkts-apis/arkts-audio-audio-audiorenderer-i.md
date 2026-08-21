@@ -443,9 +443,12 @@ Obtains the estimated latency of the current audio route.
 > 
 > - The estimated latency of a wireless audio device may be inaccurate. The result is for reference only.
 > 
-> - Since the latency is not counted in the real-time buffer, you are advised to obtain the latency only when the &gt; audio playback starts to avoid frequent calls. Otherwise, the API call may be blocked due to route switching.
+> - Since the latency is not counted in the real-time buffer, you are advised to obtain the latency only when the
+> audio playback starts to avoid frequent calls. Otherwise, the API call may be blocked due to route switching.
 > 
-> - You are advised to use [getAudioTimestampInfo](#getaudiotimestampinfo) or &gt; [getAudioTimestampInfoSync](#getaudiotimestampinfosync) to implement audio and video &gt; synchronization after the audio is output to the hardware.
+> - You are advised to use [getAudioTimestampInfo](#getaudiotimestampinfo) or
+> [getAudioTimestampInfoSync](#getaudiotimestampinfosync) to implement audio and video
+> synchronization after the audio is output to the hardware.
 
 **Since:** 23
 
@@ -1843,7 +1846,9 @@ Sets the independent audio session strategy and behavior parameters.
 
 > **NOTE：**
 > 
-> If this API is called while an audio renderer is running, you must call the &gt; [start](#start) API again for &gt; the settings to take effect.
+> If this API is called while an audio renderer is running, you must call the
+> [start](#start) API again for
+> the settings to take effect.
 
 **Since:** 24
 

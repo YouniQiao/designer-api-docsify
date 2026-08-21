@@ -18,12 +18,12 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) | 除支持通用属性外，还支持以下属性： |
-| [ArcAlphabetIndexerInitInfo](arkts-arkui-arcalphabetindexer-arcalphabetindexerinitinfo-i.md) | 定义弧形字母索引条的初始化参数。 |
+| [ArcAlphabetIndexerAttribute](arkts-arkuiarcalphabetindexer-arcalphabetindexerattribute-i.md) | 除支持通用属性外，还支持以下属性： |
+| [ArcAlphabetIndexerInitInfo](arkts-arkuiarcalphabetindexer-arcalphabetindexerinitinfo-i.md) | 定义弧形字母索引条的初始化参数。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [OnSelectCallback](arkts-onselectcallback-t.md) | 定义[onSelect](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md#onselect)中使用的回调类型。 |
+| [OnSelectCallback](arkts-onselectcallback-t.md) | 定义[onSelect](../../apis-arkui/arkts-apis/arkts-arkui-arkuiarcalphabetindexer-arcalphabetindexerattribute-c.md#onselect)中使用的回调类型。 |
 

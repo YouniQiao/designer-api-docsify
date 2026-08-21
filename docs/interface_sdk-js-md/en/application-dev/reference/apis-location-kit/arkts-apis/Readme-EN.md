@@ -1,10 +1,10 @@
 # ArkTS API<!--arkts-locationkit-->
 
 - [@ohos.app.ability.FenceExtensionAbility](arkts-app-ability-fenceextensionability.md)
-  - [FenceExtensionAbility](arkts-location-app-ability-fenceextensionability-fenceextensionability-c.md)
+  - [FenceExtensionAbility](arkts-location-appabilityfenceextensionability-fenceextensionability-c.md)
 - [@ohos.app.ability.FenceExtensionContext](arkts-app-ability-fenceextensioncontext.md)
   <!--Del-->
-  - [FenceExtensionContext(system api)](arkts-location-app-ability-fenceextensioncontext-fenceextensioncontext-c-sys.md)<!--DelEnd-->
+  - [FenceExtensionContext(system api)](arkts-location-appabilityfenceextensioncontext-fenceextensioncontext-c-sys.md)<!--DelEnd-->
 - [@ohos.geoLocationManager](arkts-geolocationmanager.md)
   - [addBeaconFence](arkts-location-geolocationmanager-addbeaconfence-f.md)
   <!--Del-->
@@ -254,9 +254,9 @@
   - [LocationRequestPriority](arkts-location-geolocation-locationrequestpriority-e.md)
   - [LocationRequestScenario](arkts-location-geolocation-locationrequestscenario-e.md)
 - [@system.geolocation](arkts-system-geolocation.md)
-  - [Geolocation](arkts-location-system-geolocation-geolocation-c.md)
-  - [GeolocationResponse](arkts-location-system-geolocation-geolocationresponse-i.md)
-  - [GetLocationOption](arkts-location-system-geolocation-getlocationoption-i.md)
-  - [GetLocationTypeOption](arkts-location-system-geolocation-getlocationtypeoption-i.md)
-  - [GetLocationTypeResponse](arkts-location-system-geolocation-getlocationtyperesponse-i.md)
-  - [SubscribeLocationOption](arkts-location-system-geolocation-subscribelocationoption-i.md)
+  - [Geolocation](arkts-location-systemgeolocation-geolocation-c.md)
+  - [GeolocationResponse](arkts-location-systemgeolocation-geolocationresponse-i.md)
+  - [GetLocationOption](arkts-location-systemgeolocation-getlocationoption-i.md)
+  - [GetLocationTypeOption](arkts-location-systemgeolocation-getlocationtypeoption-i.md)
+  - [GetLocationTypeResponse](arkts-location-systemgeolocation-getlocationtyperesponse-i.md)
+  - [SubscribeLocationOption](arkts-location-systemgeolocation-subscribelocationoption-i.md)

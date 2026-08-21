@@ -149,7 +149,8 @@ Synchronizes data of the entire file mapping area to the disk file synchronously
 
 > **NOTE：**
 > 
-> If the file is not stored on the local device, calling this API does not ensure that all changes are stored &gt; persistently.
+> If the file is not stored on the local device, calling this API does not ensure that all changes are stored
+> persistently.
 
 **Since:** 26.0.0
 
@@ -188,7 +189,8 @@ Synchronizes data in the specified range of the file mapping area to the disk fi
 
 > **NOTE：**
 > 
-> If the file is not stored on the local device, calling this API does not ensure that all changes are stored &gt; persistently.
+> If the file is not stored on the local device, calling this API does not ensure that all changes are stored
+> persistently.
 
 **Since:** 26.0.0
 
@@ -234,7 +236,8 @@ Synchronizes data of the entire file mapping area to the disk file synchronously
 
 > **NOTE：**
 > 
-> If the file is not stored on the local device, calling this API does not ensure that all changes are stored &gt; persistently.
+> If the file is not stored on the local device, calling this API does not ensure that all changes are stored
+> persistently.
 
 **Since:** 26.0.0
 
@@ -267,7 +270,8 @@ Synchronizes data in the specified range of the file mapping area to the disk fi
 
 > **NOTE：**
 > 
-> If the file is not stored on the local device, calling this API does not ensure that all changes are stored &gt; persistently.
+> If the file is not stored on the local device, calling this API does not ensure that all changes are stored
+> persistently.
 
 **Since:** 26.0.0
 

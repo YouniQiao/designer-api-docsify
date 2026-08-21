@@ -4,7 +4,8 @@ Custom menu extension item.
 
 > **NOTE：**
 > 
-> This API is supported from API version 12 and deprecated from API version 20. You are advised to use &gt; [editMenuOptions](arkts-arkweb-web-attribute.md#editmenuoptions) instead.
+> This API is supported from API version 12 and deprecated from API version 20. You are advised to use
+> [editMenuOptions](arkts-arkweb-web-attribute.md#editmenuoptions) instead.
 
 **Since:** 12
 
